@@ -24,7 +24,8 @@
     ],
     "resource": [
       {
-        "files": [ "articles/images/**"]
+        "files": [ "articles/images/**"],
+        "dest": [ "articles/azure/images/**"]
       }
     ],
     "overwrite": "specs/*.md",
