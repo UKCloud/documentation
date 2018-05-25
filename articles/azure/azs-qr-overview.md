@@ -126,18 +126,20 @@ When designing your Sovereign Azure applications using our BETA service, you sho
    - IaaSDiagnostics v1.10.1.1
    - MicrosoftMonitoringAgent v1.0.10900.0
 
-   > Note! For an up-to-date list of the supported extensions, perform the following steps:
-   
-    First, ensure that you've installed the relevant Azure PowerShell tools from the following links:
+> [!NOTE] 
+> For an up-to-date list of the supported extensions, perform the following steps:
 
-    https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install
-    https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download
+First, ensure that you've installed the relevant Azure PowerShell tools from the following links:
 
-    Then run the following commands:
+https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install
+https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download
 
-    ```
-    Add-AzureRMEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com" Login-AzureRmAccount -EnvironmentName "AzureStackAdmin" Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageType | ` Get-AzureRmVMExtensionImage | ` Select Type, Version | ` Format-Table -Property * -AutoSize
-    ```
+Then run the following commands:
+
+```powershell
+Add-AzureRMEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com" Login-AzureRmAccount -EnvironmentName "AzureStackAdmin" Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageType | ` Get-AzureRmVMExtensionImage | ` Select Type, Version | ` Format-Table -Property * -AutoSize
+```
+
 - Use load balancers to make the best use of IP address quota.
 - Azure Stack API may be a couple of releases behind Azure.
 - Single region and single state set (affects availability).
