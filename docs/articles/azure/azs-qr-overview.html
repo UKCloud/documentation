@@ -8,7 +8,7 @@
     <title>Understanding Sovereign Azure BETA | UKCloud Ltd | docfx seed website </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Understanding Sovereign Azure BETA | UKCloud Ltd | docfx seed website ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.36.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -292,9 +292,8 @@
 <p>When designing your Sovereign Azure applications using our BETA service, you should consider the following:</p>
 <h3 id="compute-1">Compute</h3>
 <ul>
-<li><p>Resource restrictions—UKCloud will provide BETA customers with an amount of useable compute resource (which will be advised upon onboarding). Customers will be able to use this resource as they wish—but will not be able to exceed this resource. Consider the VM sizes required to prove the functionality required.</p>
-</li>
-<li><p>Azure Stack supports a subset of Azure VM extensions; Sovereign Azure currently supports the following:</p>
+<li>Resource restrictions—UKCloud will provide BETA customers with an amount of useable compute resource (which will be advised upon onboarding). Customers will be able to use this resource as they wish—but will not be able to exceed this resource. Consider the VM sizes required to prove the functionality required.</li>
+<li>Azure Stack supports a subset of Azure VM extensions; Sovereign Azure currently supports the following:
 <ul>
 <li>BGInfo v2.1</li>
 <li>CustomScriptExtension v1.8</li>
@@ -309,26 +308,24 @@
 <li>IaaSDiagnostics v1.10.1.1</li>
 <li>MicrosoftMonitoringAgent v1.0.10900.0</li>
 </ul>
-<blockquote>
-<p>Note! For an up-to-date list of the supported extensions, perform the following steps:</p>
-</blockquote>
+</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For an up-to-date list of the supported extensions, perform the following steps:</p>
+</div>
 <p>First, ensure that you've installed the relevant Azure PowerShell tools from the following links:</p>
 <p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install</a>
 <a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download</a></p>
 <p>Then run the following commands:</p>
-<pre><code>Add-AzureRMEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot; Login-AzureRmAccount -EnvironmentName &quot;AzureStackAdmin&quot; Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageType | ` Get-AzureRmVMExtensionImage | ` Select Type, Version | ` Format-Table -Property * -AutoSize
+<pre><code class="lang-powershell">Add-AzureRMEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot; Login-AzureRmAccount -EnvironmentName &quot;AzureStackAdmin&quot; Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageType | ` Get-AzureRmVMExtensionImage | ` Select Type, Version | ` Format-Table -Property * -AutoSize
 </code></pre>
-</li>
-<li><p>Use load balancers to make the best use of IP address quota.</p>
-</li>
-<li><p>Azure Stack API may be a couple of releases behind Azure.</p>
-</li>
-<li><p>Single region and single state set (affects availability).</p>
-</li>
-<li><p>VM sets don't support auto-scale, so consider how to handle load.</p>
-</li>
-<li><p>Check Azure Resource Manager (ARM) templates to see if they're compatible with Azure Stack.</p>
-</li>
+<ul>
+<li>Use load balancers to make the best use of IP address quota.</li>
+<li>Azure Stack API may be a couple of releases behind Azure.</li>
+<li>Single region and single state set (affects availability).</li>
+<li>VM sets don't support auto-scale, so consider how to handle load.</li>
+<li>Check Azure Resource Manager (ARM) templates to see if they're compatible with Azure Stack.</li>
 </ul>
 <h3 id="storage-1">Storage</h3>
 <p>Azure Stack storage is all served from the same pool of disks and doesn't provide &quot;limitless&quot; storage, so you should consider the following:</p>
