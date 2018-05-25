@@ -1,0 +1,6 @@
+name: Users
+items:
+- name: Guides
+  items:
+  - name: Getting started guide for Sovereign Azure BETA
+    href: azs-gs.md
