@@ -19,14 +19,28 @@
         "dest": "api"
       },
       {
-        "files": [ "articles/**/*.md", "*.md", "toc.yml", "restapi/**", "articles/**/toc.yml", "articles/azure/index.yml" ]
+        "files": [ "articles/**/*.md", "*.md", "toc.yml", "restapi/**", "articles/**/toc.yml" ]
       }
     ],
     "resource": [
       {
-        "files": [ "articles/images/**"],
-        "dest": [ "articles/azure/images/**"]
-      }
+        "files": [ "articles/images/**"]
+      },
+        {
+          "files": [
+            "**/images/*.svg",
+            "**/images/*.png",
+            "**/images/*.jpg",
+            "**/images/*.jpeg",
+            "**/images/*.gif"
+          ],
+          "exclude": [
+            "**/obj/**",
+            "**/_themes/**"
+          ],
+          "src": "articles",
+          "dest": "articles"
+       }
     ],
     "overwrite": "specs/*.md",
     "globalMetadata": {
