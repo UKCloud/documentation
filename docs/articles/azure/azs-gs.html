@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Azure Stack Update Procedure | UKCloud Ltd | docfx seed website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Azure Stack Update Procedure | UKCloud Ltd | docfx seed website ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started-guide-for-sovereign-azure-beta">Getting started guide for Sovereign Azure BETA</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>UKCloud's Sovereign Azure service provides you with new options to harness Microsoft Azure alongside other cloud platform, including Oracle, VMware and OpenStack. This gives you the flexibility to accommodate diverse workloads within a low-latency, accredited platform with native connectivity to non-cloud workloads in Crown Hosting and the networks that are vital to the Public Sector: from PSN Protected to HSCN and RLI.</p>
+<p>This getting started guide provides you with the information you need to get up and running with your Sovereign Azure service.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide, you must have access to UKCloud's Azure Stack portal.</p>
+<h2 id="sovereign-azure-overview">Sovereign Azure overview</h2>
+<p>At UKCloud, we understand that there is no &quot;one size fits all&quot; solution. There are usually many factors to consider when looking to move your applications to the cloud, including existing technology investment and skills. Additionallredffrfjdfjdy, while some applications can easily move to the public cloud, there are others that for various reasons (latency, connectivity, security, regulation) must run on-premises.</p>
+<p>Microsoft Azure Stack is an extension of Azure that provides on-premises Infrastructure-as-a-Service (IaaS) and Platform-as-a-Service (PaaS), enabling you to leverage the benefits of cloud in an on-premises environment. The Sovereign Azure service brings the advantages of the Microsoft Cloud platform to our assured UK-sovereign platform, helping you realise the benefits that a true hybrid cloud environment has to offer, while balancing the right amount of flexibility and control.</p>
+<p>With Sovereign Azure, you can:</p>
+<ul>
+<li>Leverage existing Azure investment, knowledge and skills</li>
+<li>Use Azure Stack alongside other technologies, for example, VMware, OpenStack or Oracle</li>
+<li>Connect to government community networks, including PSN, HSCN, Janet and RLI</li>
+<li>Meet specific compliance directives, such as data sovereignty or security</li>
+</ul>
+<p>The two main delivery models provided by our Sovereign Azure service are:</p>
+<ul>
+<li>A multi-tenant IaaS and PaaS platform available in both UKCloud security domains (Assured OFFICIAL and Elevated OFFICIAL), connected to government community networks with UKCloud's award-winning support</li>
+<li>Private cloud deployment of Sovereign Azure dedicated to a single customer</li>
+</ul>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>You should have received your Sovereign Azure login credentials from your Sovereign Azure administrator. If you're the administrator, your Customer Success Manager (CSM) will have provided you with your credentials.</p>
+<h2 id="logging-in-to-the-microsoft-azure-stack-portal">Logging in to the Microsoft Azure Stack portal</h2>
+<p>To manage your Sovereign Azure service, you need to log in to UKCloud's Azure Stack portal. The portal provides access to all your Sovereign Azure resources.</p>
+<p><strong>To log in to the Azure Stack portal:</strong></p>
+<ol>
+<li><p>In your browser, go to the following URL:</p>
+<p><a href="http://portal.frn00006.azure.ukcloud.com/">http://portal.frn00006.azure.ukcloud.com/</a></p>
+</li>
+<li><p>In the login dialog box, enter the email address for your Sovereign Azure account and click <strong>Next</strong>, or pick your account.</p>
+</li>
+<li><p>Enter your password and click <strong>Sign in</strong>.</p>
+</li>
+<li><p>After you log in, you'll see the main Azure Stack portal home page.</p>
+<p><img src="images/azsp_home.png" alt="Azure Stack Portal home page"></p>
+</li>
+</ol>
+<p>On this page you'll see:</p>
+<p><strong>A</strong>—<strong>Favourites panel</strong> Quickly access your most used resources (see link)</p>
+<p><strong>B</strong>—<strong>Dashboard</strong> Access information about your Sovereign Azure resources (see link)</p>
+<p><strong>C</strong>—<strong>Settings</strong> Change your portal settings, such as theme and language</p>
+<p><strong>D</strong>—<strong>Notifications</strong> View useful alerts about your Sovereign Azure environment</p>
+<p><strong>E</strong>—<strong>New</strong> Create new resources</p>
+<h2 id="understanding-subscriptions-offers-and-plans">Understanding subscriptions, offers and plans</h2>
+<p>Your Sovereign Azure environment is provisioned with a subscription that determines the services you have access to, and your quotas for those services.</p>
+<ul>
+<li>A <strong>subscription</strong> is a mechanism for signing up to an <em>offer</em></li>
+<li>An <strong>offer</strong> is a collection of one or more <em>plans</em></li>
+<li>A <strong>plan</strong> is a collection of one or more <em>services</em>, with associated <em>quotas</em></li>
+</ul>
+<h2 id="customising-your-favourites">Customising your favourites</h2>
+<p>In the Azure Stack portal, down the left-hand side, you can see a list of your favourite resources. You can customise this list to include the resources that you access most frequently.</p>
+<ol>
+<li><p>In the favourites panel of the Azure Stack portal, click the <strong>More services</strong> link.</p>
+<p><img src="images/azsp_moreservices.png" alt="More services link"></p>
+</li>
+<li><p>In the list of resources available to your subscription, resources that are included in your favourites panel are indicated by a yellow star icon.</p>
+<p><img src="images/azsp_favouriteserviceselected.png" alt="Favourite resources marked with yellow star"></p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Tip!</strong> You can use the <strong>Filter</strong> field to filter the list of resources. You can order the list <strong>By category</strong> or <strong>By name</strong>.</p>
+</blockquote>
+<ol start="3">
+<li><p>Click the grey star icon next to the resource that you want to add to your list of favourites.</p>
+<p><img src="images/azsp_favouriteservice.png" alt="Remove from favourites"></p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Tip!</strong> To remove a resource from the favourites panel, click the yellow star next to the service.</p>
+</blockquote>
+<ol start="4">
+<li><p>When you're done, close the list of resources.</p>
+<p><img src="images/azsp_closeservices.png" alt="Close list of resources"></p>
+</li>
+<li><p>You can now see the newly added resource in your favourites panel.</p>
+<p><img src="images/azsp_newfavouriteservice.png" alt="New resource in favourites panel"></p>
+</li>
+<li><p>You can reorder the resources in your favourites panel by dragging and dropping them.</p>
+<p><img src="images/azsp_reorderservices.png" alt="Reorder resources in favourites panel"></p>
+</li>
+</ol>
+<h2 id="customising-and-adding-dashboards">Customising and adding dashboards</h2>
+<p>An Azure Stack dashboard consists of tiles that provide access to the resources available to your subscription. You can create multiple dashboards to provide different views of your resources.</p>
+<p><strong>To customise a dashboard:</strong></p>
+<ol>
+<li><p>In the Azure Stack portal, select the dashboard that you want to customise.</p>
+<p><img src="images/azsp_selectdashboard.png" alt="Select dashboard from list"></p>
+</li>
+<li><p>Click the <strong>Edit dashboard</strong> option.</p>
+<p><img src="images/azsp_editdashboard_btn.png" alt="Edit dashboard option"></p>
+</li>
+<li><p>Drag the tiles you want to add to the dashboard from the <em>Tile Gallery</em> onto the dashboard.</p>
+<p><img src="images/azsp_dashboard_addtile.png" alt="Drag tile to dashboard"></p>
+</li>
+<li><p>To change the layout of a tile on the dashboard, hover your mouse over the tile, click the <strong>Context menu</strong> icon and select the new layout.</p>
+<p><img src="images/azsp_dashboard_tilelayout.png" alt="Layout options for dashboard tile"></p>
+</li>
+<li><p>Drag tiles to rearrange them on the dashboard.</p>
+</li>
+<li><p>To delete a tile from the dashboard, hover your mouse over the tile and click the <strong>Unpin</strong> icon.</p>
+<p><img src="images/azsp_dashboard_tileunpin.png" alt="Unpin a dashboard tile"></p>
+</li>
+<li><p>When you're done, click <strong>Done customizing</strong>.</p>
+<p><img src="images/azsp_dashboard_done.png" alt="Done customizing button"></p>
+</li>
+<li><p>To create a new dashboard, click the <strong>New dashboard</strong> option.</p>
+<p><img src="images/azsp_newdashboard_btn.png" alt="New dashboard option"></p>
+</li>
+<li><p>Enter a name for the dashboard.</p>
+<p><img src="images/azsp_dashboard_name.png" alt="Naming a dashboard"></p>
+</li>
+<li><p>Add and arrange tiles as described above and, when you're done, click <strong>Done customizing</strong>.</p>
+</li>
+</ol>
+<h2 id="configuring-the-azure-cli">Configuring the Azure CLI</h2>
+<p>Azure provides a command line interface (CLI) that you can use to manage your Sovereign Azure resources. For example, you can use the Azure CLI to create virtual machines and deploy Azure Resource Manager templates.</p>
+<p>For more information, including steps for setting up the Azure CLI with Sovereign Azure and a list of known issues, see:</p>
+<p><a href="https://github.com/UKCloud/AzureStack/tree/master/AzureCLI/Tenants">https://github.com/UKCloud/AzureStack/tree/master/AzureCLI/Tenants</a></p>
+<h2 id="configuring-the-azure-stack-powershell-client">Configuring the Azure Stack PowerShell client</h2>
+<p>You can use PowerShell to manage your Sovereign Azure resources. For example, you can create virtual machines and deploy Azure Resource Manager templates.</p>
+<p>For more information, including steps and scripts for setting up Azure PowerShell with Sovereign Azure and a list of known issues, see:</p>
+<p><a href="https://github.com/UKCloud/AzureStack/tree/master/PowerShell/Tenants">https://github.com/UKCloud/AzureStack/tree/master/PowerShell/Tenants</a></p>
+<h2 id="next-steps">Next steps</h2>
+<p>Congratulations! In this getting started guide, you've learned the basics about Sovereign Azure and the Azure Stack portal. For more information about Sovereign Azure, see the following articles in the UKCloud Knowledge Centre:</p>
+<ul>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/0d8e3486-3190-458e-8166-98697c2a7161">Sovereign Azure BETA</a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/de19b410-f844-419b-afd0-bb3dbab0a217">Sovereign Azure BETA FAQs</a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/18899044-5dcd-41fa-ba64-d467d1b43605">How to grant users access to Sovereign Azure</a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/65699e21-ac82-4bca-b777-229035cbe28b">How to use the Azure Stack API</a></li>
+</ul>
+<h2 id="glossary">Glossary</h2>
+<p>This section provides a glossary of terms specific to Sovereign Azure.</p>
+<p><strong>Azure Active Directory</strong> The service that provides identity management within Sovereign Azure.</p>
+<p><strong>cloud operator</strong> An entity that provides services, via subscriptions, on Azure Stack. UKCloud is a cloud operator.</p>
+<p><strong>Microsoft Azure</strong> Microsoft's public cloud service.</p>
+<p><strong>Microsoft Azure Stack</strong> An extension of Azure that provides cloud computing to an on-premises environment.</p>
+<p><strong>resource</strong> An object within Azure Stack, such as a virtual machine, network or storage.</p>
+<p><strong>resource group</strong> A collection of resources, services and applications.</p>
+<p><strong>subscription</strong> A mechanism for organising resources and services for tenants to consume.</p>
+<p><strong>Sovereign Azure</strong> A UKCloud IaaS and PaaS service that works as an extension of Microsoft's own Azure Public Cloud, delivered from our assured sovereign data centres.</p>
+<p><strong>tenant</strong> An entity that consumes services from cloud operators in Sovereign Azure.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document, or any other aspect of your UKCloud experience, send them to feedback@ukcloud.com.</p>
+<p>(c) UKCloud Ltd, 2018. All Rights Reserved.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-gs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
