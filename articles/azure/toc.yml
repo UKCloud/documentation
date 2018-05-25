@@ -8,4 +8,13 @@
     items:
     - name: Understanding Sovereign Azure BETA
       href: azs-qr-overview.md
- 
+  - name: Getting Started
+    items:
+    - name: Getting started guide for Sovereign Azure BETA
+      href: azs-gs.md
+- name: Operators
+  items:
+  - name: How To
+    items:
+    - name: Update Azure Stack Procedure
+      href: azs-how-ps-update-azure-stack.md

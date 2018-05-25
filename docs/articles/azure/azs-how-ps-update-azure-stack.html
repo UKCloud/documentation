@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Azure Stack Update Procedure | UKCloud Ltd | docfx seed website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Azure Stack Update Procedure | UKCloud Ltd | docfx seed website ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="azure-stack-update-procedure">Azure Stack Update Procedure</h1>
+
+<p>This guide is intended to provide a reference on how can we perform Azure Stack Updates.</p>
+<p>Loosely based on <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-apply-updates">Azure Stack Apply Updates</a>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Prerequisites from a Windows-based external client.</p>
+<ul>
+<li><p>PowerShell 5.1</p>
+</li>
+<li><p>Azure Stack PowerShell Modules -&gt; <a href="https://github.com/UKCloud/AzureStack/blob/master/docs/Tenants/PowerShell/ConfigurePowerShellEnvironment.md">Azure Stack Modules Install Guide</a></p>
+</li>
+</ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Always consult Microsoft documentation for your specific Update Version</p>
+<p>Example -&gt; <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-update-1802">1802 Update</a></p>
+</div>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>In the 1802 example you can see that you need to install a Hotfix before you apply the upgrade. That is one of the many reasons why you should always check the official documentation.</p>
+</div>
+<h1 id="high-level-overview-of-the-process">High Level Overview of the process</h1>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>We strongly recommend that you notify users of any maintenance operations, and that you schedule normal maintenance windows during non-business hours as much as possible. Maintenance operations may affect both user workloads and portal operations.</p>
+</div>
+<ol>
+<li><p>Raise a pre-emptive case with Microsoft prior to starting the Update.</p>
+</li>
+<li><p>Download required packages.</p>
+</li>
+</ol>
+<ul>
+<li>Full Manual procedure can be found here -&gt; <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-apply-updates#import-and-install-updates">more</a>
+<ul>
+<li>Download link -&gt; <a href="https://aka.ms/azurestackupdatedownload">download</a></li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li><p>Upload the packages to Azure Stack.</p>
+</li>
+<li><p>Start Update process.</p>
+</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Automatic Update Guide to follow</p>
+<p>Code for Automatic Update can be found here -&gt; <a href="https://github.com/UKCloud/AZS_dev_black/tree/master/docs/code/powershell/Update">more</a></p>
+</div>
+<h1 id="automated-update-guide">Automated Update Guide</h1>
+<ol>
+<li></li>
+</ol>
+<p>(c) UKCloud Ltd, 2018. All Rights Reserved.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-ps-update-azure-stack.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

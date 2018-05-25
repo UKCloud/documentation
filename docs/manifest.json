@@ -37,6 +37,42 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-ps-configure.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-ps-configure.html",
+          "hash": "KDE/4QBOOj/67x8JdbuAZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-ps-update-azure-stack.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-ps-update-azure-stack.html",
+          "hash": "9XBwSGKshqzcSn2XDqhaFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-qr-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-qr-overview.html",
+          "hash": "aavXcIbRmpkfSJ/h6Hyg4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "articles/azure/images/azsp_closeservices.png",
       "output": {
@@ -361,7 +397,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "g9drjx0DN/mcycGuvaFn7Q=="
+          "hash": "0oAiPaMJwZwADSYUxwQXiw=="
         }
       },
       "is_incremental": false,
@@ -432,7 +468,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "eKoVjuA5oiJVe5Jv/D5Rkw=="
+          "hash": "Yez4Wghwb1BvVuur0byUww=="
         }
       },
       "is_incremental": false,
@@ -495,11 +531,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "RestApiDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -507,6 +538,11 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "TocDocumentProcessor": {

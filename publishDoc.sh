@@ -10,6 +10,9 @@
 echo "Delete _site and obj folders before re-creating them"
 rm -rf _site/ obj/
 
+echo "Create new TOC"
+powershell /c/repos/AZS_dev_black/docs/code/powershell/GitHubPages/CreateTOC-Andy.ps1
+
 echo "Rebuild the page"
 docfx docfx.json
 
@@ -20,9 +23,6 @@ echo "Copy documentation into the repo"
 #cp -r $SOURCE_DIR/docs/_site/* .
 cp -r $SOURCE_DIR/_site/* ./docs/
 #cp -r $SOURCE_DIR/docfx/* ./docs/*
-
-echo "Create new TOC"
-powershell /c/repos/AZS_dev_black/docs/code/powershell/GitHubPages/CreateTOC-Andy.ps1
 
 echo "Push the new docs to the remote branch"
 git add . -A
