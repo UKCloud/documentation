@@ -1,9 +1,5 @@
-﻿- name: Home
-  href: index.md
-- name: Articles
-  href: articles/
-  homepage: articles/docfx_getting_started.md
-- name: API Documentation
-  href: obj/api/
-- name: REST API
-  href: restapi/
+﻿- name: UKCloud for Microsoft Azure
+  href: azure/
+  homepage: azure/index.yml
+- name: UKCloud for VMware
+  href: vmware/
