@@ -1,6 +1,11 @@
 - name: Users
   items:
-  - name: Guides
+  - name: How To
     items:
-    - name: Getting started guide for Sovereign Azure BETA
-      href: azs-gs.md
+    - name: Configure the Azure Stack user's PowerShell environment
+      href: azs-how-ps-configure.md
+  - name: Reference
+    items:
+    - name: Understanding Sovereign Azure BETA
+      href: azs-qr-overview.md
+ 

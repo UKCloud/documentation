@@ -21,6 +21,9 @@ echo "Copy documentation into the repo"
 cp -r $SOURCE_DIR/_site/* ./docs/
 #cp -r $SOURCE_DIR/docfx/* ./docs/*
 
+echo "Create new TOC"
+powershell /c/repos/AZS_dev_black/docs/code/powershell/GitHubPages/CreateTOC-Andy.ps1
+
 echo "Push the new docs to the remote branch"
 git add . -A
 git commit -m "Update generated documentation"

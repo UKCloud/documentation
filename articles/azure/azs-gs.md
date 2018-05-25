@@ -5,7 +5,7 @@ services: azure
 author: Sue Highmoor
 
 toc_rootlink: Users
-toc_sub1: Guides
+toc_sub1: Getting Started
 toc_sub2:
 toc_sub3:
 toc_sub4:
