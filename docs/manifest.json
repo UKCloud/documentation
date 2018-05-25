@@ -25,15 +25,331 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-gs.html",
           "hash": "ZZApUvZq5VsrPytvL6oT+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_closeservices.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_closeservices.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_computeblade.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_computeblade.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_createvm_basics.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_createvm_basics.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_createvm_deployment.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_createvm_deployment.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_createvm_deployment_success.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_createvm_deployment_success.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_createvm_progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_createvm_progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_createvm_settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_createvm_settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_createvm_size.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_createvm_size.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_createvm_summary.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_createvm_summary.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_dashboard_addtile.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_dashboard_addtile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_dashboard_done.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_dashboard_done.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_dashboard_name.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_dashboard_name.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_dashboard_tilelayout.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_dashboard_tilelayout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_dashboard_tileunpin.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_dashboard_tileunpin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_deploymentblade.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_deploymentblade.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_editdashboard_btn.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_editdashboard_btn.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_favouriteservice.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_favouriteservice.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_favouriteserviceselected.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_favouriteserviceselected.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_home.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_home.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_moreservices.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_moreservices.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_newblade.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_newblade.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_newdashboard_btn.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_newdashboard_btn.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_newfavouriteservice.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_newfavouriteservice.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_newmenu.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_newmenu.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_reorderservices.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_reorderservices.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_selectdashboard.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_selectdashboard.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_vmdetails.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_vmdetails.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_vmslist.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_vmslist.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azsp_vmsmenu.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azsp_vmsmenu.png"
         }
       },
       "is_incremental": false,
@@ -82,325 +398,6 @@
         ".html": {
           "relative_path": "articles/engineering_guidelines.html",
           "hash": "cAOwF3BsDCOrLg78JzIdiw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_closeservices.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_closeservices.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_computeblade.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_computeblade.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_createvm_basics.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_createvm_basics.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_createvm_deployment.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_createvm_deployment.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_createvm_deployment_success.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_createvm_deployment_success.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_createvm_progress.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_createvm_progress.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_createvm_settings.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_createvm_settings.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_createvm_size.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_createvm_size.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_createvm_summary.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_createvm_summary.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_dashboard_addtile.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_dashboard_addtile.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_dashboard_done.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_dashboard_done.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_dashboard_name.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_dashboard_name.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_dashboard_tilelayout.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_dashboard_tilelayout.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_dashboard_tileunpin.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_dashboard_tileunpin.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_deploymentblade.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_deploymentblade.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_editdashboard_btn.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_editdashboard_btn.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_favouriteservice.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_favouriteservice.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_favouriteserviceselected.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_favouriteserviceselected.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_home.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_home.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_moreservices.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_moreservices.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_newblade.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_newblade.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_newdashboard_btn.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_newdashboard_btn.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_newfavouriteservice.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_newfavouriteservice.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_newmenu.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_newmenu.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_reorderservices.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_reorderservices.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_selectdashboard.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_selectdashboard.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_vmdetails.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_vmdetails.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_vmslist.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_vmslist.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/images/azsp_vmsmenu.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/images/azsp_vmsmenu.png"
         }
       },
       "is_incremental": false,
@@ -503,11 +500,6 @@
           "details": "Processor RestApiDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -515,6 +507,11 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
