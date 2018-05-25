@@ -1,5 +1,5 @@
 ﻿- name: UKCloud for Microsoft Azure
   href: azure/
-  homepage: azure/index.yml
+  homepage: articles/azure/azs-gs.md
 - name: UKCloud for VMware
   href: vmware/
