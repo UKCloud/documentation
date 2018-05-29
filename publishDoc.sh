@@ -11,7 +11,7 @@ echo "Delete _site and obj folders before re-creating them"
 rm -rf _site/ obj/
 
 echo "Create new TOC"
-powershell /c/repos/AZS_dev_black/docs/code/powershell/GitHubPages/CreateTOC-Andy.ps1
+powershell ./CreateTOC.ps1
 
 echo "Rebuild the page"
 docfx docfx.json
