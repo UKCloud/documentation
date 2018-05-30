@@ -451,23 +451,23 @@
       "version": ""
     },
     {
-      "type": "Toc",
+      "type": "Resource",
       "source_relative_path": "articles/images/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/images/toc.html",
-          "hash": "b84zk5/psIQCA6fB0jhsYA=="
+        "resource": {
+          "relative_path": "articles/images/toc.yml"
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "type": "Resource",
+      "type": "Toc",
       "source_relative_path": "articles/images/toc.yml",
       "output": {
-        "resource": {
-          "relative_path": "articles/images/toc.yml"
+        ".html": {
+          "relative_path": "articles/images/toc.html",
+          "hash": "b84zk5/psIQCA6fB0jhsYA=="
         }
       },
       "is_incremental": false,
@@ -486,12 +486,58 @@
       "version": ""
     },
     {
+      "type": "Toc",
+      "source_relative_path": "articles/vmware/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/toc.html",
+          "hash": "hLhbO3ym5R8RzxxMx7iWqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-ps-configure.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-ps-configure.html",
+          "hash": "7x8k1SPj5SK98GIVyZ5WbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
           "hash": "c/N2BSYt+HXYi5E7AvETuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
         }
       },
       "is_incremental": false,
@@ -539,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "R3es0HYibFXuEdlog6DI6w=="
+          "hash": "H1CkcBC1rXjs6h4ZiYjNVw=="
         }
       },
       "is_incremental": false,
@@ -554,23 +600,23 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build"
-        },
         "RestApiDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor RestApiDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
