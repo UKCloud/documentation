@@ -26,6 +26,9 @@
       {
         "files": [ "articles/images/**"]
       },
+      {
+        "files": [ "favicon.ico", "logo.svg"]
+      },
         {
           "files": [
             "**/images/*.svg",
@@ -45,6 +48,8 @@
     "overwrite": "specs/*.md",
     "globalMetadata": {
       "_appTitle": "docfx seed website",
+      "_appFaviconPath": "favicon.ico",
+      "_appLogoPath": "logo.svg",
       "_enableSearch": true
     },
     "markdownEngineName": "markdig",
