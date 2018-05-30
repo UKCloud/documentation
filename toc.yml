@@ -1,5 +1,6 @@
 ﻿- name: UKCloud for Microsoft Azure
   href: azure/
-  homepage: articles/azure/azs-gs.md
+  topicHref: articles/azure/azs-gs.md
 - name: UKCloud for VMware
   href: vmware/
+  topicHref: articles/vmware/vmw-how-ps-configure.md
