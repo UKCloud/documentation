@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/cblack/ukrepos/documentation",
+  "source_base_path": "C:/repos/documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "fFX01tu7H1Te8LrdMyFD9g=="
+          "hash": "legytLuIjzsNIhW/+YZmfQ=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-gs.html",
-          "hash": "EXXHEH+rMQV/jdmdPyASiw=="
+          "hash": "3/bCu4QytROyeJ6OyACL0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-create-vm.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-create-vm.html",
+          "hash": "1DqlObEZlo+tkYPJBh+HIQ=="
         }
       },
       "is_incremental": false,
@@ -42,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-ps-configure.html",
-          "hash": "smFsnJVXm0VhgahgGqotUw=="
+          "hash": "KDE/4QBOOj/67x8JdbuAZA=="
         }
       },
       "is_incremental": false,
@@ -54,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-ps-update-azure-stack.html",
-          "hash": "PtwL90frhfaPaTCyISFqcQ=="
+          "hash": "9XBwSGKshqzcSn2XDqhaFQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-qr-overview.html",
-          "hash": "eQ3KswvPZfq3qbw2rxBHmw=="
+          "hash": "KepjiOkZRLYtqsHI1S7ejg=="
         }
       },
       "is_incremental": false,
@@ -397,7 +409,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "Hv7X901hdjkbQq46PmDkbg=="
+          "hash": "3QAnCsF8skd1R20H8g79ww=="
         }
       },
       "is_incremental": false,
@@ -409,7 +421,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/csharp_coding_standards.html",
-          "hash": "vRlbr3QeBIvuC3SXRYld3g=="
+          "hash": "hoq6eHJQ7mIwYelt/kjmNQ=="
         }
       },
       "is_incremental": false,
@@ -421,7 +433,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/docfx_getting_started.html",
-          "hash": "7VUAshC4t+wvxqO9Aje21g=="
+          "hash": "JODtfNr59LWsGx+JEQ7Xew=="
         }
       },
       "is_incremental": false,
@@ -433,7 +445,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/engineering_guidelines.html",
-          "hash": "f0nJpOKKsyJahGaCS4WbrA=="
+          "hash": "cAOwF3BsDCOrLg78JzIdiw=="
         }
       },
       "is_incremental": false,
@@ -503,7 +515,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-ps-configure.html",
-          "hash": "7x8k1SPj5SK98GIVyZ5WbQ=="
+          "hash": "MXpwhPLzN70jj/R2Yfn2DA=="
         }
       },
       "is_incremental": false,
@@ -526,7 +538,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "c/N2BSYt+HXYi5E7AvETuw=="
+          "hash": "Yez4Wghwb1BvVuur0byUww=="
         }
       },
       "is_incremental": false,
@@ -549,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "restapi/contacts.html",
-          "hash": "0AOjJwem8RIdQkqhpuOhAA=="
+          "hash": "sdNZZmhGf9onHrjIojo4Tw=="
         }
       },
       "is_incremental": false,
@@ -561,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "restapi/petstore.html",
-          "hash": "8J6hiBbuM8SJYExbT9fMVA=="
+          "hash": "QJWyUmHTpcEmRvpM5pNP1Q=="
         }
       },
       "is_incremental": false,
@@ -600,11 +612,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "RestApiDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor RestApiDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -612,6 +619,11 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "TocDocumentProcessor": {

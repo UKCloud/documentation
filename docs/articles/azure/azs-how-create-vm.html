@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to create a virtual machine from the Azure Marketplace | docfx seed website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to create a virtual machine from the Azure Marketplace | docfx seed website ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="how-to-create-a-virtual-machine-from-the-azure-marketplace">How to create a virtual machine from the Azure Marketplace</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>With UKCloud's Sovereign Azure cloud, you can leverage the power of Microsoft Azure to create virtual machines (VMs) for your on-premises applications. As Sovereign Azure is built on UKCloud's assured, UK-sovereign multi-cloud platform, those applications can work alongside other cloud platforms, such as Oracle, VMware and OpenStack, and benefit from native connectivity to non-cloud workloads in Crown Hosting and government community networks, including PSN, HSCN and RLI.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide, you must have appropriate access to a subscription in the UKCloud Azure Stack portal.</p>
+<h2 id="creating-a-sovereign-azure-virtual-machine">Creating a Sovereign Azure virtual machine</h2>
+<p>VMs provide the basic compute building blocks in Azure Stack. You can create VMs using the Azure Marketplace, which provides access to pre-created images to quickly deploy the VMs you need to build your applications.</p>
+<p><strong>To create a VM from the Azure Marketplace:</strong></p>
+<ol>
+<li><p>Log in to the UKCloud Azure Stack portal.</p>
+<p>For more detailed instructions, see the <a href="https://portal.ukcloud.com/support/knowledge_centre/87af49fe-ce0f-475d-8d5f-dca53f256b64">Getting Started Guide for Sovereign Azure</a>.</p>
+</li>
+<li><p>In the favourites panel, select <strong>New</strong>.</p>
+<p><img src="images/azsp_newmenu.png" alt="New option in favourites panel"></p>
+</li>
+<li><p>In the <em>New</em> blade, select <strong>Compute</strong>.</p>
+<p><img src="images/azsp_newblade.png" alt="Compute option in New blade"></p>
+</li>
+<li><p>In the <em>Compute</em> blade, select the image that you want to use for your VM, for example, <strong>Ubuntu Server 17.0</strong>.</p>
+<p><img src="images/azsp_computeblade.png" alt="List of VM images in Compute blade"></p>
+<p><strong><em>anything in particular we want to point out here?</em></strong></p>
+</li>
+<li><p>In the <em>Deployment</em> blade, click <strong>Create</strong> to confirm your VM image selection.</p>
+<p><img src="images/azsp_deploymentblade.png" alt="Deployment blade"></p>
+</li>
+<li><p>In the <em>Create virtual machine</em> blade, in the <em>Basics</em> step, enter general information about the VM, including a name, credentials and resource group, then click <strong>OK</strong>.</p>
+<p><img src="images/azsp_createvm_basics.png" alt="Create virtual machine &gt; Basics"></p>
+</li>
+<li><p>In the <em>Size</em> step, select the appropriate size for your VM, depending on its purpose, then click <strong>Select</strong>.</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>vCPU</th>
+<th>Memory (GiB)</th>
+<th>Temp storage (GiB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard_D1_v2</td>
+<td>1</td>
+<td>3.5</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Standard_D2_v2</td>
+<td>2</td>
+<td>7</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Standard_D3_v2</td>
+<td>4</td>
+<td>14</td>
+<td>200</td>
+</tr>
+<tr>
+<td>Standard_D4_v2</td>
+<td>8</td>
+<td>28</td>
+<td>400</td>
+</tr>
+<tr>
+<td>Standard_A0</td>
+<td>1</td>
+<td>0.768</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Standard_A1</td>
+<td>1</td>
+<td>1.75</td>
+<td>70</td>
+</tr>
+<tr>
+<td>Standard_A2</td>
+<td>2</td>
+<td>3.5</td>
+<td>135</td>
+</tr>
+<tr>
+<td>Standard_A3</td>
+<td>4</td>
+<td>7</td>
+<td>285</td>
+</tr>
+<tr>
+<td>Standard_A4</td>
+<td>8</td>
+<td>14</td>
+<td>605</td>
+</tr>
+<tr>
+<td>Standard_A5</td>
+<td>2</td>
+<td>14</td>
+<td>135</td>
+</tr>
+<tr>
+<td>Standard_A6</td>
+<td>4</td>
+<td>28</td>
+<td>285</td>
+</tr>
+<tr>
+<td>A0\Basic_A0</td>
+<td>1</td>
+<td>768 MB</td>
+<td>20 GB</td>
+</tr>
+<tr>
+<td>A1\Basic_A1</td>
+<td>1</td>
+<td>1.74 GB</td>
+<td>40 GB</td>
+</tr>
+<tr>
+<td>A2\Basic_A2</td>
+<td>2</td>
+<td>3.5 GB</td>
+<td>60 GB</td>
+</tr>
+<tr>
+<td>A3\Basic_A3</td>
+<td>4</td>
+<td>7 GB</td>
+<td>120 GB</td>
+</tr>
+<tr>
+<td>A4\Basic_A4</td>
+<td>8</td>
+<td>14 GB</td>
+<td>240 GB</td>
+</tr>
+<tr>
+<td>Standard_DS11_v2</td>
+<td>2</td>
+<td>14</td>
+<td>28</td>
+</tr>
+<tr>
+<td>Standard_DS12_v2</td>
+<td>4</td>
+<td>28</td>
+<td>56</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>need to confirm list above is correct and up to date</em></strong></p>
+<blockquote>
+<p>Tip! By default, the list shows a selection of recommended VM sizes. To see all available VM sizes, click <strong>View all</strong>.</p>
+</blockquote>
+<pre><code>![Create virtual machine &gt; Size](images/azsp_createvm_size.png)
+</code></pre>
+<ol start="8">
+<li><p>In the <em>Settings</em> step, change any of the optional settings as required for your VM, then click <strong>OK</strong>.</p>
+<p><strong><em>any recommendations or best practices we want to suggest here?</em></strong></p>
+<p><img src="images/azsp_createvm_settings.png" alt="Create virtual machine &gt; Settings"></p>
+</li>
+<li><p>In the <em>Summary</em> step, review the selections you've made and then click <strong>OK</strong> to start the deployment.</p>
+</li>
+<li><p>You can monitor the progress of your VM's deployment by clicking the <strong>Notifications</strong> icon.</p>
+<p><img src="images/azsp_createvm_progress.png" alt="Notification showing VM deployment in progress"></p>
+</li>
+<li><p>Click the deployment notification for the deployment to view details of the deployment of the VM and its resources.</p>
+<p><img src="images/azsp_createvm_deployment.png" alt="Status of VM deployment"></p>
+</li>
+<li><p>When the deployment is finished, the notification wil change to <strong>Deployment succeeded</strong>.</p>
+<p><img src="images/azsp_createvm_deployment_success.png" alt="Notification showing successful VM deployment"></p>
+</li>
+<li><p>After your VM has deployed, you can view it by clicking <strong>Virtual machines</strong> in the favourites panel.</p>
+<p><img src="images/azsp_vmsmenu.png" alt="Virtual machines option in favourites panel"></p>
+</li>
+<li><p>Select your VM from the list.</p>
+<p><img src="images/azsp_vmslist.png" alt="List of deployed VMs"></p>
+</li>
+<li><p>In the blade for your VM, you can view and monitor the VM, change its settings and perform diagnostics and troubleshooting.</p>
+<p><img src="images/azsp_vmdetails.png" alt="Virtual machine details"></p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>For more information about our Sovereign Azure cloud, see:</p>
+<ul>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/87af49fe-ce0f-475d-8d5f-dca53f256b64">Getting Started Guide for Sovereign Azure</a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/de19b410-f844-419b-afd0-bb3dbab0a217">Sovereign Azure BETA FAQs</a></li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this article, or any other aspect of your UKCloud experience, send them to feedback@ukcloud.com.</p>
+<p>(c) UKCloud Ltd, 2018. All Rights Reserved.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-create-vm.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -8,6 +8,8 @@
     items:
     - name: Configure the Azure Stack user's PowerShell environment
       href: azs-how-ps-configure.md
+    - name: Create a virtual machine
+      href: azs-how-create-vm.md
   - name: Reference
     items:
     - name: Understanding Sovereign Azure BETA
