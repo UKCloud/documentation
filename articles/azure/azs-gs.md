@@ -95,7 +95,7 @@ To log in to the Azure Stack portal:
 
 4. After you log in, you'll see the main Azure Stack portal home page.
 
-    ![Azure Stack portal home page](images/azs_portal_home.png)
+    ![Azure Stack portal home page](images/azs-portal-home.png)
 
     On this page, you'll see:
 
@@ -134,13 +134,13 @@ resources that you access most frequently.
 
 1. In the favourites list, click the **More services** link.
 
-    ![More services link](images/azs_portal_moreservices.png)
+    ![More services link](images/azs-portal-more-services.png)
 
 2. In the list of resources available to your subscription, resources
     that are included in your favourites list are indicated by a yellow
     star icon.
 
-    ![Favourite resources](images/azs_portal_favouriteserviceselected.png)
+    ![Favourite resources](images/azs-portal-favourite-service-selected.png)
 
     > [!TIP]
     > You can use the **Filter** field to filter the list of resources. You can order the list **By category** or **By name**.
@@ -148,23 +148,23 @@ resources that you access most frequently.
 3. Click the grey star icon next to the resource that you want to add
     to your list of favourites.
 
-    ![Select favourite](images/azs_portal_favouriteservice.png)
+    ![Select favourite](images/azs-portal-favourite-service.png)
 
     > [!TIP]
     > To remove a resource from your favourites list, click the yellow star icon next to the service.
 
 4. When you're done close the list of resources.
 
-    ![Close list of resources](images/azs_portal_closeservices.png)
+    ![Close list of resources](images/azs-portal-close-services.png)
 
 5. You can now see the newly added resource in your favourites list.
 
-    ![New resource in favourites list](images/azs_portal_newfavouriteservice.png)
+    ![New resource in favourites list](images/azs-portal-new-favourite-service.png)
 
 6. You can reorder the resources in your favourites list by dragging
     and dropping them.
 
-    ![Drag and drop favourites](images/azs_portal_reorderservices.png)
+    ![Drag and drop favourites](images/azs-portal-reorder-services.png)
 
 ## Customising and adding dashboards
 
@@ -177,41 +177,41 @@ To customise a dashboard:
 1. In the Azure Stack portal, select the dashboard that you want to
     customise.
 
-    ![Select dashboard](images/azs_portal_selectdashboard.png)
+    ![Select dashboard](images/azs-portal-select-dashboard.png)
 
 2. Click the **Edit dashboard** option.
 
-    ![Edit dashboard option](images/azs_portal_editdashboard_btn.png)
+    ![Edit dashboard option](images/azs-portal-edit-dashboard-btn.png)
 
 3. Drag the tiles you want to add to the dashboard from the *Tile
     Gallery* onto the dashboard.
 
-    ![Drag tiles onto dashboard](images/azs_portal_dashboard_addtile.png)
+    ![Drag tiles onto dashboard](images/azs-portal-dashboard-add-tile.png)
 
 4. To change the layout of a tile on the dashboard, hover your mouse
     over the tile, click the **Context menu** icon and select the new
     layout.
 
-    ![Context menu icon](images/azs_portal_dashboard_tilelayout.png)
+    ![Context menu icon](images/azs-portal-dashboard-tile-layout.png)
 
 5. Drag tiles to rearrange them on the dashboard.
 
 6. To delete a tile from the dashboard, hover your mouse over the tile
     and click the **Unpin** icon.
 
-    ![Unpin icon](images/azs_portal_dashboard_tileunpin.png)
+    ![Unpin icon](images/azs-portal-dashboard-tile-unpin.png)
 
 7. When you're done, click **Done customizing**.
 
-    ![Done customizing button](images/azs_portal_dashboard_done.png)
+    ![Done customizing button](images/azs-portal-dashboard-done.png)
 
 8. To create a new dashboard, click the **New dashboard** option.
 
-    ![New dashboard option](images/azs_portal_newdashboard_btn.png)
+    ![New dashboard option](images/azs-portal-new-dashboard-btn.png)
 
 9. Enter a name for the dashboard.
 
-    ![Dashboard name](images/azs_portal_dashboard_name.png)
+    ![Dashboard name](images/azs-portal-dashboard-name.png)
 
 10. Add and arrange tiles as described above and when you're done, click
     **Done customizing**.
