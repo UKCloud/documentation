@@ -1,0 +1,279 @@
+---
+title: Getting Started Guide for UKCloud for VMware | UKCloud Ltd
+description: Provides information to get up and running with UKCloud for VMware
+services: vmware
+author: Sue Highmoor
+
+toc_rootlink: Getting Started
+toc_sub1:
+toc_sub2:
+toc_sub3:
+toc_sub4:
+toc_title: UKCloud for VMware
+toc_fullpath: Getting Started/vmw-gs.md
+toc_mdlink: vmw-gs.md
+---
+
+# Getting Started Guide for UKCloud for VMware
+
+## Overview
+
+If you're new to UKCloud, you'll probably have received this guide as part of your welcome email. It will help you to get started using UKCloud for VMware.
+
+The *Getting Started Guide* provides an overview of UKCloud for VMware and gives you basic information about how to log in and set up your environment.
+
+### Intended audience
+
+To complete the steps in this guide you must have access to the UKCloud Portal and vCloud Director. To build compute services and virtual data centres (VDCs) you must be a vCloud Director administrator.
+
+## Before you begin
+
+You should have received your UKCloud Portal login credentials from your Customer Success Manager (CSM).
+
+We recommend that you use the Mozilla Firefox ESR 32-bit browser as this is supported by both the UKCloud Portal and by the Web Console for the version of vCloud Director used by UKCloud for VMware.
+
+**More information!** [*Browser requirements for services on the UKCloud Platform*](https://portal.ukcloud.com/support/knowledge_centre/0887a898-826b-4605-9c2e-dcde0da06c00)
+
+## Introductions to UKCloud for VMware
+
+We understand that each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is highly configurable, and gives you the flexibility to use different service levels, VM sizes, security
+domains, connectivity and data protection options.
+
+You can build completely tailored solutions by mixing and matching service options. The choice doesn't lock you to one service or size and you can always change it later.
+
+Services within UKCloud belong to an account, which in turn belongs to a company. A company can own multiple accounts. You can use accounts to create separate environments for different projects or, in the case of UKCloud partners, to create separate environments for different customers. Within an account you can have multiple UKCloud services, one of which could be UKCloud for VMware. You can have multiple instances of a service within an account.
+
+![UKCloud account organisation](images/vmw-organisation.png)
+
+## Logging in to the UKCloud Portal
+
+The first thing you need to do to get started with UKCloud for VMware is to log in to the UKCloud Portal.
+
+1. Go to the appropriate URL, depending on the security domain in which your service is located:
+
+    - **Assured OFFICIAL:** <https://portal.ukcloud.com>
+    - **Elevated OFFICIAL:** <https://portal.ukcloud.gsi.gov.uk>
+
+2. On the *Log in* page, enter your credentials and click **Sign in**.
+
+    ![UKCloud Portal Log in page](images/vmw-portal-login.png)
+
+    > [!TIP]
+    > If you have forgotten your password, click the **Forgotten password?** link to request a password reset.
+
+    If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or CSM. You'll be prompted to change this temporary password.
+
+3. If your Portal administrator has enabled memorable word authentication or Google Two Factor Authentication (2FA), you'll be prompted for the second step of your authentication process.
+
+    For example, for memorable word authentication, you'll be prompted to enter three randomly‑selected letters from your memorable word. (If this is the first time you've logged in, you'll be prompted to create a memorable word.)
+
+    ![Memorable word dialog box](images/vmw-portal-memorable-word.png)
+
+    For more information about the UKCloud Portal and all the functionality it provides, see the [*Getting Started Guide for UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/0887a898-826b-4605-9c2e-dcde0da06c00).
+
+## Creating your UKCloud for VMware estate
+
+When you first access UKCloud for VMware, you'll need to create a compute service (sometimes called a vOrg) to act as a top-level container for your cloud resources. As your estate grows, you can add more compute services to logically organise your resources.
+
+Within your compute service, you create VDCs to contain your VMs. VMs in the same VDC share workload characteristics and have access to the same resources, such as networking infrastructure, storage and external connectivity. We recommend that you organise related VMs within vApps to make your applications easier to manage. For example, you can start all
+the VMs within a vApp with a single operation, rather than having to start up each VM separately. vApps are also useful to help maintain crash‑consistency within an application in the event of a disaster.
+
+![Organisation of UKCloud for VMware estate](images/vmw-estate.png)
+
+### Building a compute service
+
+If you have the appropriate permissions, you can use the Portal to create a compute service in your account, without having to raise a support ticket.
+
+1. In the UKCloud Portal, select the account in which you want to create the compute service.
+
+2. In the navigation panel, expand **Tools** and then select **Create Compute Service**.
+
+    ![Create Compute Service menu option](images/vmw-portal-mnu-create-compute-service.png)
+
+3. On the *Build Compute Service* page, from the **Zone** radio buttons, select the zone in which you want to create the new compute service.
+
+    > [!NOTE]
+    > In the Portal, you can create compute services only in zones in regions 5 and 6.
+
+4. Enter a **Compute Service Name**.
+
+    > [!TIP]
+    > The name can be up to 32 characters long and can include any character except +.
+
+    ![Build Compute Service page](images/vmw-portal-build-compute-service.png)
+
+5. Click **Build**.
+
+6. The *Build Compute Service Status* page displays information about the compute service you're building and lets you know how the build is progressing.
+
+    > [!TIP]
+    > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the *ECC Build History* report.
+
+    ![Build Compute Service Status page](images/vmw-portal-build-compute-service-status.png)
+
+7. When the build is complete, the page displays either a success or fail message.
+
+    If the build is successful, you can start building VDCs in your compute service (see [Building a virtual data centre](#building_a_virtual_data_centre)).
+
+    ![Build Compute Service Status - success](images/vmw-portal-build-compute-service-success.png)
+
+    If the build is unsuccessful, raise a support ticket (quoting the **Build ID**) to resolve any issues.
+
+    ![Build Compute Service Status - failed](images/vmw-portal-build-compute-service-fail.png)
+
+### Building a virtual data centre
+
+After creating your compute service, the next step is to create one or more VDCs.
+
+> [!NOTE]
+> You can build VDCs in any of your compute services in regions 5 and 6, including those created by support tickets or the Portal API, not just those you created using the Portal.
+
+1. In the Portal navigation panel, expand **ECC (VMware)** and then select the compute service in which you want to create the VDC.
+
+    > [!NOTE]
+    > To create a VDC using the Portal, the compute service must be in region 5 or 6.
+
+    ![Compute services menu option](images/vmw-portal-mnu-select-compute-service.png)
+
+2. From the **Actions** menu, select **Build VDC**.
+
+    > [!NOTE]
+    > If this option is greyed out, either you do not have the appropriate permissions or your compute service is not in region 5 or 6.
+
+    ![Build VDC menu option](images/vmw-portal-mnu-build-vdc.png)
+
+3. On the *Build VDC* page, from the **VM Type** radio buttons, select the option that describes the characteristics of the workload of the VDC:
+
+    - **ESSENTIAL**---For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload        receives the requested performance.
+    - **POWER**---For key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is enabled to pre-emptively optimise performance and availability.
+    - **PRIORITY**---For critical workloads that handle important business processes that benefit from a steady state of operation. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is configured to reduce workload movement around the platform.
+
+4. Enter a **VDC Name**.
+
+    > [!TIP]
+    > The name can be up to 32 characters long and can include any character except +.
+
+    ![Build VDC page](images/vmw-portal-build-vdc.png)
+
+5. Click **Build**.
+
+6. The *VDC Build Status* page displays information about the VDC you're building and lets you know how the build is progressing.
+
+    > [!TIP]
+    > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the *ECC Build History* report.
+
+    ![Build VDC Status page](images/vmw-portal-build-vdc-status.png)
+
+7.  When the build is complete, the page displays either a success or fail message.
+
+    If the build is successful, you can start building VMs. To provide external access to the VDC, you'll need to create an edge gateway (see [*How to build your Enterprise Compute Cloud estate using the UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/99f82d51-11f1-4c76-8cdb-3048067ae0f3)).
+
+    ![Build VDC Status - success](images/vmw-portal-build-vdc-success.png)
+
+    If the build is unsuccessful, raise a support ticket (quoting the **Build ID**) to resolve any issues.
+
+![Build VDC Status - failed](images/vmw-portal-build-vdc-fail.png)
+
+## Logging in to vCloud Director
+
+After you've created your compute service and VDC, you can start to build up your applications. To do this, you must log in to vCloud Director, which you can access from the UKCloud Portal.
+
+1. In the Portal navigation panel expand **ECC (VMware)** then select your compute service.
+
+    ![Compute services menu option](images/vmw-portal-mnu-compute-services.png)
+
+2. On the **vCloud Director** tab, for additional security, re-enter your UKCloud Portal password, then click **Confirm**.
+
+    ![vCloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
+
+3. vCloud Director launches in your browser window.
+
+    > [!NOTE]
+    > If this is the first time you've opened vCloud Director, you may be requested to download the vCloud Director Web Console plugin.
+
+    ![vCloud Director Home page](images/vmw-vcd-home.png)
+
+    > [!TIP]
+    > If you encounter any issues, make sure you're using the Firefox ESR 32-bit browser. For more information, see [*Browser requirements for services on the UKCloud Platform*](https://portal.ukcloud.com/support/knowledge_centre/0887a898-826b-4605-9c2e-dcde0da06c00).
+
+4. The tasks you can perform in vCloud Director will depend on the permissions you have been granted.
+
+    **More information!** [*Configuring permissions for vCloud Director*](https://portal.ukcloud.com/support/knowledge_centre/5c261fe3-d8ba-4fe4-8159-87ced5fd13b1)
+
+5. To return to the UKCloud platform, click the **Logout** link in the top right corner of vCloud Director.
+
+    ![vCloud Director Logout option](images/vmw-vcd-logout.png)
+
+## Next steps
+
+In this *Getting Started Guide*, you've learned:
+
+- About your UKCloud for VMware environment and how your estate is organised
+- How to log in to the UKCloud Portal
+- How to create a compute service and VDC to set up your environment
+- How to log in to vCloud Director so that you can start to build your applications
+
+Now that you've set up your basic environment, you can start building your applications. If you want to get up and running quickly, you can take a look at [*Building virtual machines with Enterprise Compute Cloud*](https://portal.ukcloud.com/support/knowledge_centre/eb14aec9-5248-4cd4-a714-511389ec186e),
+which provides a quick walkthrough of the process.
+
+For more detailed information about the different aspects of your UKCloud for VMware environment, see:
+
+- To create virtual machines to define your applications:
+
+  - [*Creating VMs from scratch*](https://portal.ukcloud.com/support/knowledge_centre/7fc8c6b7-0f88-4072-a0c5-fde174d47dac)
+  - [*Creating VMs from a template*](https://portal.ukcloud.com/support/knowledge_centre/8728fad6-76f1-4836-ad4b-5dc48dc4aa43)
+
+- To create a VDC network to enable your virtual machines to communicate with each other and the outside world:
+
+  - [*Creating routed Org VDC networks*](https://portal.ukcloud.com/support/knowledge_centre/2b989ddd-c018-4289-8a06-0482f0674bc1)
+  - [*Creating isolated Org VDC networks*](https://portal.ukcloud.com/support/knowledge_centre/8f839d6b-a2f1-46ef-8762-15be2923d8c8)
+
+- To configure your edge gateway to control access to your VMs:
+
+  - [*Firewall*](https://portal.ukcloud.com/support/knowledge_centre/e8ec5a0b-e5c7-4e44-b353-ab89505fefbe)
+  - [*NAT*](https://portal.ukcloud.com/support/knowledge_centre/89cbf32e-eb48-4145-b7dc-6bb0c5f1bcc3)
+  - [*DHCP*](https://portal.ukcloud.com/support/knowledge_centre/76fceb40-dd43-499b-8d2a-ea1a8ab50af8)
+  - [*IPsec VPN*](https://portal.ukcloud.com/support/knowledge_centre/43f064b6-0e0e-4985-89f5-46a869a16f81)
+  - [*Load balancer*](https://portal.ukcloud.com/support/knowledge_centre/9b4f5898-9464-4ea6-8a64-6bacb686bd0e)
+  - [*Static routing*](https://portal.ukcloud.com/support/knowledge_centre/a5a0f2be-f83f-48e5-8e6b-72f5f963b2a7)
+
+## Glossary
+
+This section provides a glossary of terms specific to UKCloud for VMware.
+
+**account**&nbsp;&nbsp;Within the UKCloud for VMware environment there are two types of account:
+
+- **customer account** --- A collection of related compute services associated with a particular customer or partner.
+- **user account** --- The account you use to log in to the UKCloud Portal or authenticate with the Portal API. Your user account determines which customer accounts you have access to. Each user account can be associated with multiple customer accounts.
+
+**company**&nbsp;&nbsp;A UKCloud construct to organise business accounts. Each company can own
+multiple accounts.
+
+**compute service**&nbsp;&nbsp;A top-level container within a customer account that includes a vCloud Director organization and its VDCs, catalogues, users and resources.
+
+**UKCloud for VMware**&nbsp;&nbsp;A UKCloud IaaS service that provides a compute infrastructure
+specifically designed to deliver traditional enterprise applications to the cloud.
+
+**ESSENTIAL**&nbsp;&nbsp;A type of VM that may have contended resource allocation. Automated
+rebalancing is enabled to ensure the workload receives the requested performance.
+
+**POWER**&nbsp;&nbsp;A type of VM with uncontended compute resource allocation. Automated
+balancing is enabled to pre-emptively optimise performance and availablility.
+
+**PRIORITY**&nbsp;&nbsp;A type of VM with uncontended compute resource allocation. Automated
+balancing is configured to reduce workload movement around the platform, reducing workload disruption.
+
+**vApp**&nbsp;&nbsp;A container for VMs that enables you to group related VMs together to
+manage them in one place.
+
+**virtual data centre (VDC)**&nbsp;&nbsp;A container for VMs, where each VM has the same workload characteristics and access to the same resources, such as networking infrastructure,
+storage and external connectivity.
+
+**virtual machine (VM)**&nbsp;&nbsp;Software that emulates the functionality of a physical computer, running an operating system and applications. Customers can define a VM's
+resource requirements and the UKCloud platform optimises its placement to ensure it receives the requested resources.
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+
+&copy; [UKCloud Ltd](http://ukcloud.com), 2018. All Rights Reserved. UKC-GEN-41
