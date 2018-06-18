@@ -81,10 +81,6 @@ token.
 
     You must send this token in a header with any subsequent requests to authenticate yourself with the vCloud API.
 
-## Using a REST client
-
-You can use a REST client to access the vCloud API. The steps below show how to obtain the authorisation token using the RESTClient plugin for Firefox. For information about installing this plugin, see [How to install a REST client to access the vCloud API](vmw-how-to-install-vcloud-api-rest-client.md).
-
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
