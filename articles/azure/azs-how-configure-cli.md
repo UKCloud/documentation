@@ -9,7 +9,7 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Configure the Azure Stack user's PowerShell environment
+toc_title: Connect to Azure Stack with CLI environment for UKCloud
 toc_fullpath: Users/How To/azs-how-configure-cli.md
 toc_mdlink: azs-how-configure-cli.md
 ---

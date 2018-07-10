@@ -7,9 +7,9 @@
   - name: How To
     items:
     - name: Configure the Azure Stack user's PowerShell environment
-      href: azs-how-configure-cli.md
-    - name: Configure the Azure Stack user's PowerShell environment
       href: azs-how-configure-powershell-users.md
+    - name: Connect to Azure Stack with CLI environment for UKCloud
+      href: azs-how-configure-cli.md
     - name: Create a virtual machine
       href: azs-how-create-vm.md
     - name: Grant users access to UKCloud for Microsoft Azure
