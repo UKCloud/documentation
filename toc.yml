@@ -1,6 +1,15 @@
-﻿- name: UKCloud for Microsoft Azure
+﻿- name: Microsoft Azure
   href: azure/
   topicHref: articles/azure/azs-gs.md
-- name: UKCloud for VMware
+- name: VMware
   href: vmware/
   topicHref: articles/vmware/vmw-how-ps-configure.md
+- name: OpenStack
+  href: openstack/
+  topicHref: articles/openstack/ostack-gs.md
+- name: OpenShift
+  href: openshift/
+  topicHref: articles/openshift/oshift-gs.md
+- name: Oracle
+  href: oracle/
+  topicHref: articles/openshift/orcl-gs.md
