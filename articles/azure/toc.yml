@@ -22,7 +22,7 @@
   items:
   - name: How To
     items:
-    - name: Configure the Azure Stack user's PowerShell environment
-      href: azs-how-configure-powershell-operator.md
+    - name: Configure the Azure Stack operator's PowerShell environment
+      href: azs-how-configure-powershell-operators.md
     - name: Update Azure Stack Procedure
       href: azs-how-ps-update-azure-stack.md

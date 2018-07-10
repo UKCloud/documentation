@@ -9,9 +9,9 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Configure the Azure Stack user's PowerShell environment
-toc_fullpath: Operators/How To/azs-how-configure-powershell-operator.md
-toc_mdlink: azs-how-configure-powershell-operator.md
+toc_title: Configure the Azure Stack operator's PowerShell environment
+toc_fullpath: Operators/How To/azs-how-configure-powershell-operators.md
+toc_mdlink: azs-how-configure-powershell-operators.md
 ---
 
 # Configure the Azure Stack operator's PowerShell environment
