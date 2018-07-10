@@ -1,5 +1,5 @@
 ---
-title: How to create a virtual machine from the Azure Marketplace
+title: How to create a virtual machine from the Azure Marketplace| UKCloud Ltd
 description: Create a virtual machine in UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor

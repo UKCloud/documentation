@@ -32,7 +32,7 @@ You should have received your UKCloud Portal login credentials from your Custome
 
 We recommend that you use the Mozilla Firefox ESR 32-bit browser as this is supported by both the UKCloud Portal and by the Web Console for the version of vCloud Director used by UKCloud for VMware.
 
-**More information!** [*Browser requirements for services on the UKCloud Platform*](https://portal.ukcloud.com/support/knowledge_centre/0887a898-826b-4605-9c2e-dcde0da06c00)
+**More information!** [*Browser requirements for services on the UKCloud Platform*](../other/other-ref-browsers.md)
 
 ## Introductions to UKCloud for VMware
 
@@ -69,14 +69,13 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
 
     ![Memorable word dialog box](images/vmw-portal-memorable-word.png)
 
-    For more information about the UKCloud Portal and all the functionality it provides, see the [*Getting Started Guide for UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/0887a898-826b-4605-9c2e-dcde0da06c00).
+    For more information about the UKCloud Portal and all the functionality it provides, see the [*Getting Started Guide for UKCloud Portal*](../portal/ptl-gs.md).
 
 ## Creating your UKCloud for VMware estate
 
 When you first access UKCloud for VMware, you'll need to create a compute service (sometimes called a vOrg) to act as a top-level container for your cloud resources. As your estate grows, you can add more compute services to logically organise your resources.
 
-Within your compute service, you create VDCs to contain your VMs. VMs in the same VDC share workload characteristics and have access to the same resources, such as networking infrastructure, storage and external connectivity. We recommend that you organise related VMs within vApps to make your applications easier to manage. For example, you can start all
-the VMs within a vApp with a single operation, rather than having to start up each VM separately. vApps are also useful to help maintain crash‑consistency within an application in the event of a disaster.
+Within your compute service, you create VDCs to contain your VMs. VMs in the same VDC share workload characteristics and have access to the same resources, such as networking infrastructure, storage and external connectivity. We recommend that you organise related VMs within vApps to make your applications easier to manage. For example, you can start all the VMs within a vApp with a single operation, rather than having to start up each VM separately. vApps are also useful to help maintain crash‑consistency within an application in the event of a disaster.
 
 ![Organisation of UKCloud for VMware estate](images/vmw-estate.png)
 
@@ -107,7 +106,7 @@ If you have the appropriate permissions, you can use the Portal to create a comp
 6. The *Build Compute Service Status* page displays information about the compute service you're building and lets you know how the build is progressing.
 
     > [!TIP]
-    > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the *ECC Build History* report.
+    > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the *VMware Cloud Build History* report.
 
     ![Build Compute Service Status page](images/vmw-portal-build-compute-service-status.png)
 
@@ -128,7 +127,7 @@ After creating your compute service, the next step is to create one or more VDCs
 > [!NOTE]
 > You can build VDCs in any of your compute services in regions 5 and 6, including those created by support tickets or the Portal API, not just those you created using the Portal.
 
-1. In the Portal navigation panel, expand **ECC (VMware)** and then select the compute service in which you want to create the VDC.
+1. In the Portal navigation panel, expand **VMware Cloud** and then select the compute service in which you want to create the VDC.
 
     > [!NOTE]
     > To create a VDC using the Portal, the compute service must be in region 5 or 6.
@@ -160,25 +159,25 @@ After creating your compute service, the next step is to create one or more VDCs
 6. The *VDC Build Status* page displays information about the VDC you're building and lets you know how the build is progressing.
 
     > [!TIP]
-    > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the *ECC Build History* report.
+    > You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the *VMware Cloud Build History* report.
 
     ![Build VDC Status page](images/vmw-portal-build-vdc-status.png)
 
-7.  When the build is complete, the page displays either a success or fail message.
+7. When the build is complete, the page displays either a success or fail message.
 
-    If the build is successful, you can start building VMs. To provide external access to the VDC, you'll need to create an edge gateway (see [*How to build your Enterprise Compute Cloud estate using the UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/99f82d51-11f1-4c76-8cdb-3048067ae0f3)).
+    If the build is successful, you can start building VMs. To provide external access to the VDC, you'll need to create an edge gateway (see [*How to build an edge gateway using the UKCloud Portal*](../vmware/vmw-how-build-edge.md)).
 
     ![Build VDC Status - success](images/vmw-portal-build-vdc-success.png)
 
     If the build is unsuccessful, raise a support ticket (quoting the **Build ID**) to resolve any issues.
 
-![Build VDC Status - failed](images/vmw-portal-build-vdc-fail.png)
+    ![Build VDC Status - failed](images/vmw-portal-build-vdc-fail.png)
 
 ## Logging in to vCloud Director
 
 After you've created your compute service and VDC, you can start to build up your applications. To do this, you must log in to vCloud Director, which you can access from the UKCloud Portal.
 
-1. In the Portal navigation panel expand **ECC (VMware)** then select your compute service.
+1. In the Portal navigation panel expand **VMware Cloud** then select your compute service.
 
     ![Compute services menu option](images/vmw-portal-mnu-compute-services.png)
 

@@ -162,6 +162,35 @@ To customise a dashboard:
 
 10. Add and arrange tiles as described above and when you're done, click **Done customizing**.
 
+## Granting users access to UKCloud for Microsoft Azure
+
+To work with UKCloud for Microsoft Azure, users must have the appropriate Azure Stack permissions. We provide the following three groups to get you started:
+
+- **AzureStackOperators** - Members of this group have Owner permissions and have full access to all resources and can manage access to resources
+- **AzureStackUsers** - Members of this group have Contributor permissions and can create and manage all resources but cannot manage access to resources
+- **AzureStackReadOnly** - Members of this group have Reader permissions and can view everything but cannot be any changes
+
+To grant a user access to UKCloud for Microsoft Azure:
+
+1. Log in to the Azure portal as a global administrator:
+
+    <https//portal.azure.com>
+
+2. Navigate to the **Azure Active Directory**.
+
+    > [!TIP]
+    > You can find the Azure Active Directory by selecting **All services** and scrolling down to the *Security + Identity* section.
+
+3. Select **Groups** and then **All groups**.
+
+4. In the **Name** field, enter `azurestack`.
+
+5. Select the group to which you want to add the user depending on the level of permissions you want the user to have.
+
+6. Select **Members** then click **Add members**.
+
+7. Select the user thatyou want to add to the group and click **Select**.
+
 ## Configuring the Azure CLI
 
 Azure provides a command line interface (CLI) that you can use to manage your Azure resources. For example, you can use the Azure CLI to create virtual machines and deploy Azure Resource Manager templates.
@@ -214,4 +243,4 @@ This section provides a glossary of terms specific to UKCloud for Microsoft Azur
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
 
-&copy; [UKCloud Ltd](http://ukcloud.com), 2018. All Rights Reserved. UKC-GEN-738
+&copy; [UKCloud Ltd](http://ukcloud.com), 2018. All Rights Reserved.
