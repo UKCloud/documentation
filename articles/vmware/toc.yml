@@ -22,9 +22,3 @@
       href: vmw-gs-journaling.md
     - name: UKCloud for VMware
       href: vmw-gs.md
-- name: Users
-  items:
-  - name: How To
-    items:
-    - name: Configure the VMware user's PowerShell environment
-      href: vmw-how-ps-configure.md

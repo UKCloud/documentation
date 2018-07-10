@@ -3,7 +3,7 @@
   topicHref: articles/azure/azs-gs.md
 - name: VMware
   href: vmware/
-  topicHref: articles/vmware/vmw-how-ps-configure.md
+  topicHref: articles/vmware/vmw-gs.md
 - name: OpenStack
   href: openstack/
   topicHref: articles/openstack/ostack-gs.md
@@ -12,4 +12,4 @@
   topicHref: articles/openshift/oshift-gs.md
 - name: Oracle
   href: oracle/
-  topicHref: articles/openshift/orcl-gs.md
+  topicHref: articles/oracle/orcl-gs.md
