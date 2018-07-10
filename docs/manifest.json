@@ -514,15 +514,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "EmptyTocItemName"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/cdsz/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/toc.html",
-          "hash": "EwJ40inKQzcCgGny/DdfVw=="
+          "hash": "fcFN03a71CdPT0Rcy5j2fQ=="
         }
       },
       "is_incremental": false,
@@ -708,15 +705,14 @@
     },
     {
       "log_codes": [
-        "InvalidFileLink",
-        "EmptyTocItemName"
+        "InvalidFileLink"
       ],
       "type": "Toc",
       "source_relative_path": "articles/cloud-storage/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/toc.html",
-          "hash": "VNOl4i10nmPm/hnKsmZwyQ=="
+          "hash": "muaIWp+Km3bTvRchxX3Vng=="
         }
       },
       "is_incremental": false,
@@ -922,15 +918,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "EmptyTocItemName"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/email/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/email/toc.html",
-          "hash": "+NrfV8kxDyPrrSAf31RhQA=="
+          "hash": "qP2e4I687pIZxT99BLk7Tg=="
         }
       },
       "is_incremental": false,
@@ -1126,15 +1119,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "EmptyTocItemName"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/gpu/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/gpu/toc.html",
-          "hash": "G/XWYOTa9YJhkSAl/GkN8w=="
+          "hash": "DAGO5qh9uJMI5WYb/FD12g=="
         }
       },
       "is_incremental": false,
@@ -1209,15 +1199,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "EmptyTocItemName"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/openshift/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "lx454wpImYliX7/CALWh4A=="
+          "hash": "TueP/IW2v8/y7nFt4+n7BQ=="
         }
       },
       "is_incremental": false,
@@ -1709,15 +1696,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "EmptyTocItemName"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/openstack/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "PabvzCMQoov/Immv+0e62w=="
+          "hash": "FREPjQCbkXv8LJ3ejLr+zQ=="
         }
       },
       "is_incremental": false,
@@ -1934,15 +1918,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "EmptyTocItemName"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/oracle/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/oracle/toc.html",
-          "hash": "E5WMjxDuiDqJ+z6v8svWzg=="
+          "hash": "QcJFy7/0IMJH0UpbY4guZQ=="
         }
       },
       "is_incremental": false,
@@ -1961,15 +1942,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "EmptyTocItemName"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/other/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "gjS0Ax1jRdQqdA6a4lVv6A=="
+          "hash": "5ER6OPTioVqj4lz5EzaZkw=="
         }
       },
       "is_incremental": false,
@@ -2065,15 +2043,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "EmptyTocItemName"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/portal/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "Kg3/Gz2HBlrZtsl7FE7MLQ=="
+          "hash": "P0qPGTIuZsVkCwcs8WsSwg=="
         }
       },
       "is_incremental": false,
@@ -2802,15 +2777,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "EmptyTocItemName"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/vmware/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "c2ZHtBHbEE41T3EELuHcFg=="
+          "hash": "dA9gUQ+7kQi/pNqlUXil3g=="
         }
       },
       "is_incremental": false,
@@ -3009,16 +2981,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "RestApiDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -3026,6 +2988,16 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

@@ -1,7 +1,4 @@
 - name: Reference
   items:
-  - name: 
+  - name: Reference Other
     href: other-ref-browsers.md
-    items:
-      name: 
-      href: other-ref-browsers.md
