@@ -1,6 +1,4 @@
 - name: Getting Started
   items:
-  - name: 
-    items:
-    - name: Cross Domain Security Zone Walled Garden
-      href: cdsz-gs-walled-garden.md
+  - name: Cross Domain Security Zone Walled Garden
+    href: cdsz-gs-walled-garden.md

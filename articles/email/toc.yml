@@ -1,6 +1,4 @@
 - name: Getting Started
   items:
-  - name: 
-    items:
-    - name: Email and Collaboration as a Service
-      href: email-gs.md
+  - name: Email and Collaboration as a Service
+    href: email-gs.md

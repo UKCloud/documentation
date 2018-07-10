@@ -107,9 +107,18 @@ ForEach ($FolderB in $FoldersFromBase) {
     
                 # Add new Sub1 level if necessary
                 If ($exists -eq $false) {
+                    # If sub1 is empty, add this article under rootlink
+                    If (([string]::IsNullOrEmpty($($File.Sub1)))) {
+                        $TOCS.items += [ordered] @{
+                            name = $($File.Title)
+                            href = $($File.MDlink)
+                        }
+                    }
+                    Else {
                     $TOCS.items += [ordered] @{
                         name  = $($File.Sub1)
                         items = @()
+                        }
                     }
                 }
     

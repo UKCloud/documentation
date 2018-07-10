@@ -1,6 +1,4 @@
 - name: Getting Started
   items:
-  - name: 
-    items:
-    - name: UKCloud for OpenStack
-      href: ostack-gs.md
+  - name: UKCloud for OpenStack
+    href: ostack-gs.md
