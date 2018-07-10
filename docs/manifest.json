@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/repos/documentation",
+  "source_base_path": "C:/Users/cblack/ukrepos/documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "legytLuIjzsNIhW/+YZmfQ=="
+          "hash": "qryXJZM5OlzdioznLlkJvw=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-gs.html",
-          "hash": "3/bCu4QytROyeJ6OyACL0A=="
+          "hash": "fS0pWKIWUe8Q0YdYG3LmFA=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,31 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm.html",
-          "hash": "1DqlObEZlo+tkYPJBh+HIQ=="
+          "hash": "Eb5Xp6mP8LDmYBx2F0vhtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-grant-access.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-grant-access.html",
+          "hash": "jK+MKa9Fh8Va4S7ANkoZ2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-ps-configure-operator.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-ps-configure-operator.html",
+          "hash": "FKrPu68XiJREF/IfJvxwfA=="
         }
       },
       "is_incremental": false,
@@ -54,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-ps-configure.html",
-          "hash": "KDE/4QBOOj/67x8JdbuAZA=="
+          "hash": "2wpDdC15lv++AfHiPErFYQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-ps-update-azure-stack.html",
-          "hash": "9XBwSGKshqzcSn2XDqhaFQ=="
+          "hash": "IdrafNARWurtNg3rSuXDhA=="
         }
       },
       "is_incremental": false,
@@ -74,11 +98,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/azure/azs-qr-overview.md",
+      "source_relative_path": "articles/azure/azs-ref-overview.md",
       "output": {
         ".html": {
-          "relative_path": "articles/azure/azs-qr-overview.html",
-          "hash": "KepjiOkZRLYtqsHI1S7ejg=="
+          "relative_path": "articles/azure/azs-ref-overview.html",
+          "hash": "ISsbyPNaMvlYvxs2Zqz0ZA=="
         }
       },
       "is_incremental": false,
@@ -86,10 +110,186 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_closeservices.png",
+      "source_relative_path": "articles/azure/images/azs-portal-add-group.png",
       "output": {
         "resource": {
-          "relative_path": "articles/azure/images/azsp_closeservices.png"
+          "relative_path": "articles/azure/images/azs-portal-add-group.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-close-services.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-close-services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-dashboard-add-tile.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-dashboard-add-tile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-dashboard-done.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-dashboard-done.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-dashboard-name.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-dashboard-name.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-dashboard-tile-layout.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-dashboard-tile-layout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-dashboard-tile-unpin.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-dashboard-tile-unpin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-edit-dashboard-btn.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-edit-dashboard-btn.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-favourite-service-selected.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-favourite-service-selected.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-favourite-service.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-favourite-service.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-home.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-home.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-more-services.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-more-services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-new-dashboard-btn.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-new-dashboard-btn.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-new-favourite-service.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-new-favourite-service.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-reorder-services.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-reorder-services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal-select-dashboard.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal-select-dashboard.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-portal_add-permissions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-portal_add-permissions.png"
         }
       },
       "is_incremental": false,
@@ -185,120 +385,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_dashboard_addtile.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azsp_dashboard_addtile.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_dashboard_done.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azsp_dashboard_done.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_dashboard_name.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azsp_dashboard_name.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_dashboard_tilelayout.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azsp_dashboard_tilelayout.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_dashboard_tileunpin.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azsp_dashboard_tileunpin.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/azure/images/azsp_deploymentblade.png",
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azsp_deploymentblade.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_editdashboard_btn.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azsp_editdashboard_btn.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_favouriteservice.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azsp_favouriteservice.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_favouriteserviceselected.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azsp_favouriteserviceselected.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_home.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azsp_home.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_moreservices.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azsp_moreservices.png"
         }
       },
       "is_incremental": false,
@@ -317,54 +407,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_newdashboard_btn.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azsp_newdashboard_btn.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_newfavouriteservice.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azsp_newfavouriteservice.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/azure/images/azsp_newmenu.png",
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azsp_newmenu.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_reorderservices.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azsp_reorderservices.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/azsp_selectdashboard.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azsp_selectdashboard.png"
         }
       },
       "is_incremental": false,
@@ -404,12 +450,258 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/azure/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "3QAnCsF8skd1R20H8g79ww=="
+          "hash": "5ZnRFcC6NGalvz+rHaIX8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/cdsz/cdsz-gs-walled-garden.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cdsz/cdsz-gs-walled-garden.html",
+          "hash": "TjfNdc42sezuPDbrbSVVAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cdsz/images/cdsz-snat-dnat.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cdsz/images/cdsz-snat-dnat.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cdsz/images/cdsz-static-routes-snat.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cdsz/images/cdsz-static-routes-snat.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "EmptyTocItemName"
+      ],
+      "type": "Toc",
+      "source_relative_path": "articles/cdsz/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cdsz/toc.html",
+          "hash": "EwJ40inKQzcCgGny/DdfVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/cloud-storage/cs-gs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cloud-storage/cs-gs.html",
+          "hash": "OrXeK6HDDv0Vp3xdVlrWzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/cloud-storage/cs-how-view-info-portal.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cloud-storage/cs-how-view-info-portal.html",
+          "hash": "K8lLtoxDr76Wlyo53nkAMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-namespace-buckets.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-namespace-buckets.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-btn-buckets.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-btn-buckets.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-btn-edit-contact.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-btn-edit-contact.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-btn-users.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-btn-users.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-buckets.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-buckets.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-consumption.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-consumption.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-mnu-all-contacts.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-mnu-all-contacts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-mnu-cloud-storage.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-mnu-cloud-storage.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-namespaces.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-namespaces.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-new-key.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-new-key.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-permissions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-reset-secret.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-reset-secret.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-tab-permissions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-tab-permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-users.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-users.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink",
+        "EmptyTocItemName"
+      ],
+      "type": "Toc",
+      "source_relative_path": "articles/cloud-storage/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cloud-storage/toc.html",
+          "hash": "VNOl4i10nmPm/hnKsmZwyQ=="
         }
       },
       "is_incremental": false,
@@ -421,7 +713,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/csharp_coding_standards.html",
-          "hash": "hoq6eHJQ7mIwYelt/kjmNQ=="
+          "hash": "wbGK9zgUR3Kow7ts8qpV6w=="
         }
       },
       "is_incremental": false,
@@ -433,7 +725,221 @@
       "output": {
         ".html": {
           "relative_path": "articles/docfx_getting_started.html",
-          "hash": "JODtfNr59LWsGx+JEQ7Xew=="
+          "hash": "nbkqHE0DzNCHXuuxzdJoWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/email/email-gs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/email/email-gs.html",
+          "hash": "lPWOZYvLnsSxNzGKfhV3Mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-outlook-connector-download.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-outlook-connector-download.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-outlook-new-account.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-outlook-new-account.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-outlook-zimbra-config.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-outlook-zimbra-config.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-outlook-zimbra.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-outlook-zimbra.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-tbird-account-setup.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-tbird-account-setup.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zimbra-admin-mnu-new-account.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zimbra-admin-mnu-new-account.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zimbra-admin-new-account-aliases.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zimbra-admin-new-account-aliases.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zimbra-admin-new-account-contact-info.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zimbra-admin-new-account-contact-info.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zimbra-admin-new-account-forwarding.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zimbra-admin-new-account-forwarding.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zimbra-admin-new-account-member-of.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zimbra-admin-new-account-member-of.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zimbra-admin-new-account-password.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zimbra-admin-new-account-password.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zimbra-admin-new-account.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zimbra-admin-new-account.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zimbra-desktop-client.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zimbra-desktop-client.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zimbra-desktop-new-account-created.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zimbra-desktop-new-account-created.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zimbra-desktop-new-account.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zimbra-desktop-new-account.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zimbra-web-client.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zimbra-web-client.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zimbra-web-sign-in.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zimbra-web-sign-in.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "EmptyTocItemName"
+      ],
+      "type": "Toc",
+      "source_relative_path": "articles/email/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/email/toc.html",
+          "hash": "+NrfV8kxDyPrrSAf31RhQA=="
         }
       },
       "is_incremental": false,
@@ -445,7 +951,211 @@
       "output": {
         ".html": {
           "relative_path": "articles/engineering_guidelines.html",
-          "hash": "cAOwF3BsDCOrLg78JzIdiw=="
+          "hash": "rGQchFV6gzm0YSWOc5+kuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/gpu/gpu-gs-compute.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/gpu/gpu-gs-compute.html",
+          "hash": "L62cmYpEMuLFlQxDlmktuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/gpu/gpu-gs-visualisation.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/gpu/gpu-gs-visualisation.html",
+          "hash": "VI+8HUv0fjSYgAj/6iKthg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-nvidia-licence-acquired.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-nvidia-licence-acquired.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-nvidia-manage-license.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-nvidia-manage-license.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-nvidia-win-install-driver.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-nvidia-win-install-driver.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-portal-my-vms.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-portal-my-vms.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-portal-vcd-password.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-portal-vcd-password.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-vcd-add-firewall-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-vcd-add-firewall-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-vcd-add-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-vcd-add-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-vcd-vapp-all-templates.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-vcd-vapp-all-templates.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-vcd-vapp-name.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-vcd-vapp-name.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-vcd-vapp-networking.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-vcd-vapp-networking.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-vcd-vapp-public-catalog.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-vcd-vapp-public-catalog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-vcd-vapp-resources.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-vcd-vapp-resources.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-vcd-vapp-search.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-vcd-vapp-search.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-vcd-vm-insert-cd.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-vcd-vm-insert-cd.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/gpu/images/gpu-vcd-vm-mnu-insert-cd.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/gpu/images/gpu-vcd-vm-mnu-insert-cd.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "EmptyTocItemName"
+      ],
+      "type": "Toc",
+      "source_relative_path": "articles/gpu/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/gpu/toc.html",
+          "hash": "G/XWYOTa9YJhkSAl/GkN8w=="
         }
       },
       "is_incremental": false,
@@ -486,6 +1196,1028 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-overview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-pods-containers.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-pods-containers.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-gs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-gs.html",
+          "hash": "zW/j4SqZfVOJD763vAItDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "EmptyTocItemName"
+      ],
+      "type": "Toc",
+      "source_relative_path": "articles/openshift/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/toc.html",
+          "hash": "lx454wpImYliX7/CALWh4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-cli-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-cli-example.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-cli-flavor-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-cli-flavor-list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-access-security-key-pairs.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-access-security-key-pairs.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-access-security.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-access-security.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-add-interface.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-add-interface.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-add-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-add-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-allocate-floating-ip.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-allocate-floating-ip.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-btn-add-interface.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-btn-add-interface.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-btn-create-network.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-btn-create-network.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-btn-create-router.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-btn-create-router.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-btn-download-rc-file.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-btn-download-rc-file.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-btn-launch-stack.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-btn-launch-stack.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-change-volume-type.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-change-volume-type.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-create-key-pair.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-create-key-pair.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-create-network-network.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-create-network-network.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-create-network-subnet-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-create-network-subnet-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-create-network-subnet.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-create-network-subnet.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-create-router.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-create-router.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-create-volume.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-create-volume.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-images.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-images.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-import-key-pair.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-import-key-pair.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-instance-associate-ip.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-instance-associate-ip.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-launch-instance-access-security.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-launch-instance-access-security.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-launch-instance-details-image.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-launch-instance-details-image.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-launch-instance-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-launch-instance-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-launch-instance-networking.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-launch-instance-networking.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-launch-instance.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-launch-instance.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-launch-stack.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-launch-stack.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-login.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-login.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-manage-floating-ip-success.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-manage-floating-ip-success.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-manage-floating-ip.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-manage-floating-ip.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-manage-volume-attachments-detach.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-manage-volume-attachments-detach.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-manage-volume-attachments.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-manage-volume-attachments.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-mnu-access-security.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-mnu-access-security.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-mnu-change-volume-type.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-mnu-change-volume-type.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-mnu-manage-attachments.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-mnu-manage-attachments.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-mnu-network-topology.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-mnu-network-topology.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-mnu-stacks.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-mnu-stacks.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-network-topology.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-network-topology.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-select-template.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-select-template.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-welcome.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-welcome.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-puttygen-generate-key.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-puttygen-generate-key.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-puttygen-import-key.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-puttygen-import-key.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-gs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-gs.html",
+          "hash": "Ajjq04hg3wUgrJ6iJErKsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "EmptyTocItemName"
+      ],
+      "type": "Toc",
+      "source_relative_path": "articles/openstack/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/toc.html",
+          "hash": "PabvzCMQoov/Immv+0e62w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-architecture.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-architecture.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-accessibility-preference.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-accessibility-preference.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-change-password.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-change-password.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-cloud-services.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-cloud-services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-ico-nofications.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-ico-nofications.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-login.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-login.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-mnu-change-password.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-mnu-change-password.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-mnu-logout.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-mnu-logout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-mnu-notification-center.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-mnu-notification-center.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-mnu-portal-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-mnu-portal-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-mnu-preferences-accessibility.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-mnu-preferences-accessibility.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-mnu-preferences-broadcast.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-mnu-preferences-broadcast.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-mnu-user-account.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-mnu-user-account.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-notification-center.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-notification-center.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-preferences-general.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-preferences-general.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-preferences-vms.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-preferences-vms.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-console-system-broadcast.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-console-system-broadcast.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-estate.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-estate.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/oracle/orcl-gs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/oracle/orcl-gs.html",
+          "hash": "am/B7wMXbA/EUU4DmGMigA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "EmptyTocItemName"
+      ],
+      "type": "Toc",
+      "source_relative_path": "articles/oracle/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/oracle/toc.html",
+          "hash": "E5WMjxDuiDqJ+z6v8svWzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-browsers.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-browsers.html",
+          "hash": "VIeH8jRSIZAXjmq9dqzMNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "EmptyTocItemName"
+      ],
+      "type": "Toc",
+      "source_relative_path": "articles/other/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/toc.html",
+          "hash": "gjS0Ax1jRdQqdA6a4lVv6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-home-page.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-home-page.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-login.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-login.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-memorable-word.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-memorable-word.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mnu-customer-account.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mnu-customer-account.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mnu-logout.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mnu-logout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mnu-user-account.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mnu-user-account.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-navigation-panel.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-navigation-panel.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-gs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-gs.html",
+          "hash": "gN0Zpxw+dM2Pc6lpsXd1dg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "EmptyTocItemName"
+      ],
+      "type": "Toc",
+      "source_relative_path": "articles/portal/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/toc.html",
+          "hash": "Kg3/Gz2HBlrZtsl7FE7MLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/sra/images/sra-windows-anyconnect-client.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/sra/images/sra-windows-anyconnect-client.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/sra/images/sra-windows-anyconnect-select-certificate.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/sra/images/sra-windows-anyconnect-select-certificate.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/sra/images/sra-windows-certificate-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/sra/images/sra-windows-certificate-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/sra/images/sra-windows-certificate-general.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/sra/images/sra-windows-certificate-general.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/sra/images/sra-windows-certificate-path.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/sra/images/sra-windows-certificate-path.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/sra/images/sra-windows-certificate-store.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/sra/images/sra-windows-certificate-store.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/sra/sra-gs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/sra/sra-gs.html",
+          "hash": "Wn/pPLw9M40/QmPYs3IPCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "articles/sra/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/sra/toc.html",
+          "hash": "gPbIVVVtxctwnbGGUgLkqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/support-docs/sup-dfx-file-names.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/support-docs/sup-dfx-file-names.html",
+          "hash": "LF1auLxcicK6TRcR3ggrtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/support-docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/support-docs/toc.html",
+          "hash": "0KgXFZ+4LCicL//7Ri8MeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/toc.md",
       "output": {
@@ -498,12 +2230,722 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-estate.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-estate.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-firefox-find-add-ons.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-firefox-find-add-ons.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-firefox-restclient-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-firefox-restclient-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-firefox-restclient-icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-firefox-restclient-icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-firefox-restclient-install.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-firefox-restclient-install.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-firefox-restclient.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-firefox-restclient.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-firefox-results-restclient.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-firefox-results-restclient.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-organisation.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-organisation.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-api-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-api-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-build-compute-service-fail.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-build-compute-service-fail.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-build-compute-service-status.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-build-compute-service-status.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-build-compute-service-success.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-build-compute-service-success.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-build-compute-service.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-build-compute-service.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-build-vdc-fail.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-build-vdc-fail.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-build-vdc-status.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-build-vdc-status.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-build-vdc-success.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-build-vdc-success.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-build-vdc.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-build-vdc.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-login.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-login.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-memorable-word.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-memorable-word.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-mnu-api.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-mnu-api.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-mnu-build-vdc.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-mnu-build-vdc.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-mnu-compute-services.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-mnu-compute-services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-mnu-create-compute-service.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-mnu-create-compute-service.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-mnu-select-compute-service.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-mnu-select-compute-service.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-vcd-login.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-vcd-login.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-accept-header.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-accept-header.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-api-url.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-api-url.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-authentication-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-authentication-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-authentication-header.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-authentication-header.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-authentication-token.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-authentication-token.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-basic-authentication-remove.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-basic-authentication-remove.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-basic-authentication.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-basic-authentication.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-custom-header.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-custom-header.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-get-vorg-url.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-get-vorg-url.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-get-vorg.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-get-vorg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-method-get.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-method-get.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-request-headers-token.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-request-headers-token.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-request-headers.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-request-headers.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-restclient-request-method-post.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-restclient-request-method-post.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-admin-routed-network.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-admin-routed-network.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-home.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-home.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-ico-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-ico-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-logout.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-logout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-openvpn-advanced-networking.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-openvpn-advanced-networking.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-openvpn-btn-vapp-from-ovf.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-openvpn-btn-vapp-from-ovf.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-syslog-firewall-default-action.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-syslog-firewall-default-action.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-syslog-firewall-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-syslog-firewall-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-syslog-load-balancer.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-syslog-load-balancer.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-tab-admin.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-tab-admin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-tab-edge-gateways.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-tab-edge-gateways.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-tab-my-cloud.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-tab-my-cloud.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-tab-vdc-networks.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-tab-vdc-networks.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-draas.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-draas.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-journaling.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-journaling.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-zerto-recovery.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-zerto-recovery.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "EmptyTocItemName"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/vmware/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "hLhbO3ym5R8RzxxMx7iWqA=="
+          "hash": "eszsCwpqf8DmN2GjWY7pxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-gs-draas.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-gs-draas.html",
+          "hash": "CCBiuFimZbXu1/Vord0gEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-gs-journaling.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-gs-journaling.html",
+          "hash": "aTi+YqF1gr4KdWOHNx8U1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-gs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-gs.html",
+          "hash": "gVxSq5NmxcQwS6f09DCvgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-access-syslog-data.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-access-syslog-data.html",
+          "hash": "lTAwT9HFz33WI+I1VfXmqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-access-vcloud-api.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-access-vcloud-api.html",
+          "hash": "YkH5p+wODAuFG8vl3W1OZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-api-ipsec-vpn.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-api-ipsec-vpn.html",
+          "hash": "rFxsPJ/BwcK2SWB1DrFfzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-install-openvpn.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-install-openvpn.html",
+          "hash": "oO+Tas4tKuptjGus4DiTkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-install-vcloud-api-rest-client.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-install-vcloud-api-rest-client.html",
+          "hash": "It46x4LaL5YXBVGrAN92mA=="
         }
       },
       "is_incremental": false,
@@ -515,7 +2957,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-ps-configure.html",
-          "hash": "MXpwhPLzN70jj/R2Yfn2DA=="
+          "hash": "an1Rmb7qUtb2D8zuKYgfxw=="
         }
       },
       "is_incremental": false,
@@ -538,7 +2980,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "Yez4Wghwb1BvVuur0byUww=="
+          "hash": "FdWxNE3bEBb8yVgG6tSoag=="
         }
       },
       "is_incremental": false,
@@ -561,7 +3003,7 @@
       "output": {
         ".html": {
           "relative_path": "restapi/contacts.html",
-          "hash": "sdNZZmhGf9onHrjIojo4Tw=="
+          "hash": "CMzwdshPrzvx27o1bNtFog=="
         }
       },
       "is_incremental": false,
@@ -573,7 +3015,7 @@
       "output": {
         ".html": {
           "relative_path": "restapi/petstore.html",
-          "hash": "QJWyUmHTpcEmRvpM5pNP1Q=="
+          "hash": "KL8oo8LFMi2UOvLIjKJ+0w=="
         }
       },
       "is_incremental": false,
@@ -617,13 +3059,13 @@
           "details": "Processor RestApiDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         },
         "TocDocumentProcessor": {

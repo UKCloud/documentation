@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to access vCloud Director through the vCloud API | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to access vCloud Director through the vCloud API | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="how-to-access-vcloud-director-through-the-vcloud-api">How to access vCloud Director through the vCloud API</h1>
+
+<h2 id="overview">Overview</h2>
+<p>To perform some tasks within your UKCloud for VMware environment, you may need to access vCloud Director through the vCloud API. This guide shows you how to access the vCloud API.</p>
+<h2 id="finding-your-vcloud-api-credentials">Finding your vCloud API credentials</h2>
+<p>Before using the vCloud API, you first need to find your API credentials.</p>
+<ol>
+<li><p>Log in to the UKCloud Portal.</p>
+<p>For more detailed instructions, see the <a href="https://portal.ukcloud.com/support/knowledge_centre/0435318d-a94b-41bb-a4ff-a52adbe863e5"><em>Getting Started Guide for UKCloud Portal</em></a>.</p>
+</li>
+<li><p>Select your account.</p>
+</li>
+<li><p>In the top right corner of the page, click your username and then select <strong>API</strong>.</p>
+<p><img src="images/vmw-portal-mnu-api.png" alt="API menu option in UKCloud Portal"></p>
+</li>
+<li><p>The <em>API</em> page provides a view of your personal credentials for accessing the vCloud API. In particular, the page provides the following information for each compute service:</p>
+<ul>
+<li><p><strong>API URL</strong> --- Use this URL at the beginning of your calls to the vCloud API.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This URL will be different depending on the region in which your compute service is located.</p>
+</div>
+</li>
+<li><p><strong>API Username</strong> --- The user ID to use to authenticate yourself with the vCloud API.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The compute service ID is appended to the end of the username. This is because you may have access to multiple compute services.</p>
+</div>
+</li>
+<li><p><strong>Username</strong> --- The API username without the appended compute service ID.</p>
+</li>
+<li><p><strong>Org ID</strong> --- Use this to uniquely identify the compute service (or vOrg) when using the vCloud API.</p>
+</li>
+<li><p><strong>Password</strong> --- For authentication with the vCloud API. This password is the same as the one you use to log in to the UKCloud Portal.</p>
+</li>
+</ul>
+<p><img src="images/vmw-portal-api-details.png" alt="API page"></p>
+</li>
+<li><p>Make a note of the <strong>Org ID</strong>, the <strong>API URL</strong> and your <strong>API Username</strong>.</p>
+</li>
+</ol>
+<h2 id="obtaining-an-authorisation-token">Obtaining an authorisation token</h2>
+<p>Now that you have your API credentials, you can start interacting with
+the vCloud API. First you need to obtain an <code>x-vcloud-authorization</code>
+token.</p>
+<ol>
+<li><p>Send the following request to the vCloud API:</p>
+<pre><code> POST https://&lt;vcloud_api_url&gt;/api/sessions Authorization: Basic &lt;encoded_credentials&gt; Accept: application/*+xml; version=5.6
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vcloud_api_url</code></td>
+<td>The URL you use to access the vCloud API that you noted in <a href="#finding-your-vcloud-api-credentials">Finding your vCloud API credentials</a></td>
+<td><code>api.vcd.portal.skyscapecloud.com</code></td>
+</tr>
+<tr>
+<td><code>encoded_credentials</code></td>
+<td>Your login credentials that you noted in <a href="#finding-your-vcloud-api-credentials">Finding your vCloud API credentials</a> in the format:<br><code>&lt;username&gt;@&lt;compute_service_id&gt;:&lt;password&gt;</code></br>These credentials must be supplied in a MIME Base64 encoding, as specified in RFC 1421</td>
+<td><code>auser@mycompute:pA5#word</code></td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<pre><code> POST https://api.vcd.portal.skyscapecloud.com/api/sessions Authoriziation: Basic dXN1cjpwYXNzCg== Accept: application/*+xml; version=5.6
+</code></pre>
+</li>
+<li><p>The vCloud API response includes your <code>x-vcloud-authorization</code> token, for example:</p>
+<pre><code> x-vcloud-authorization: cn9uYmdugN8E2j96+5Lqrc3YBvFsEgDHXzyfJrJ/6bM=\ Content-Type: application/vnd.vmware.vcloud.session+xml;version=5.6
+</code></pre>
+<p>You must send this token in a header with any subsequent requests to authenticate yourself with the vCloud API.</p>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>© <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-access-vcloud-api.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started Guide for Journaling Protection | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started Guide for Journaling Protection | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started-guide-for-journaling-protection">Getting Started Guide for Journaling Protection</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Journaling Protection is a powerful, self-service replication and recovery tool that can help you improve your organisational resilience. By adopting UKCloud's Journaling Protection solution, you can protect your UKCloud for VMware applications by replicating them to another UKCloud for VMware‑enabled zone. This ensures that you can meet your disaster recovery requirements --- including any aggressive recovery point or recovery time objectives.</p>
+<p>Our Journaling Protection solution is powered by Zerto, a leading provider of disaster recovery software for the cloud.</p>
+<p>This guide covers the tasks you need to perform to get Journaling Protection up and running in your environment.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This guide is intended for any user who needs to create and manage Journaling Protection for UKCloud for VMware. To complete the steps in this guide you need to have access to the Zerto Self-Service Portal.</p>
+<h2 id="introduction-to-journaling-protection">Introduction to Journaling Protection</h2>
+<p>You can protect your VMs by adding Journaling Protection to the vApp that contains those VMs. When you add Journaling Protection to a vApp, if a VM in that vApp is compromised, for example by a virus attack or bad software update, you can quickly recover the VM to a point in time before that attack or update took place.</p>
+<p>You enable Journaling Protection by adding the vApp to a virtual protection group (VPG). Each VM in the protected vApp is synchronised to the recovery site and a journal is created. After this initial synchronisation, each subsequent write operation to the VM is processed as normal on the source site and a copy is asynchronously sent to the recovery site and written to the journal.</p>
+<p><img src="images/vmw-zerto-journaling.png" alt="Journaling process"></p>
+<p>Each journal entry exists in the journal for a specified number of days (the journal history). When the journal history is reached, as new journal entries are created, older entries are written to the recovery VM's virtual disks.</p>
+<p>Every few seconds, a checkpoint is written to every journal for each VM in the VPG to ensure crash-consistency between the VMs. If you need to recover a VM, you select a checkpoint to recover to. For example, in the case of a virus, you could recover to a checkpoint from before the attack. During recovery, the vApp and its VMs are created on the recovery site and the recovery disks for each VM are attached to the recovered VM. Information in the journal is then promoted to the VM to bring it up to the date and time of the selected checkpoint.</p>
+<p><img src="images/vmw-zerto-recovery.png" alt="Recovery process"></p>
+<p>Two terms you may hear in connection with Journaling Protection are recovery point objective (RPO) and recovery time objective (RTO).</p>
+<ul>
+<li>The RPO indicates the amount of data you can afford to lose in the event of an outage. For example, if your application data changes fairly infrequently, your RPO can be higher as the data remains fairly static. However, if your application data is constantly changing, you'll need your RPO to be smaller to avoid significant loss of data in the event of an outage.</li>
+<li>The RTO is the amount of time you can tolerate your application being unavailable in the event of an outage. For example, if your application provides critical functionality, you'll need to bring it back online very quickly. However, for a less critical application, you may be able to tolerate a longer outage.</li>
+</ul>
+<p>Because of the use of regular checkpoints (every few seconds), our Zerto‑powered Journaling Protection option provides a minimal RPO. The ability to use recovered VMs even before all the journal data has been promoted provides a good RTO as well.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>When you request Journaling Protection for your VMs, UKCloud provides you with:</p>
+<ul>
+<li>A ZORG ID to identify your environment within Zerto</li>
+<li>Access to the Zerto Self-Service Portal (ZSSP), where you can create and manage your VPGs</li>
+</ul>
+<p>You should consider the following:</p>
+<ul>
+<li>Journaling Protection is provided on a vApp basis (not for individual VMs). When designing your application, you should use vApps to group related VMs together to ensure crash consistency between VMs in the event of a failover.</li>
+<li>VMs must be powered on to be synchronised.</li>
+<li>The operating system used by the protected VMs must also be supported in the recovery site.</li>
+<li>Our Journaling Protection service option captures every action. When a VM is deleted from your vApp, the associated journal is also deleted. If you want to keep historic records of VMs that are no longer running on the platform, consider UKCloud's Snapshot Protection service option.</li>
+<li>We provide a single default service profile. The details of this are available in the <a href="https://portal.ukcloud.com/support/knowledge_centre/ab9ba9e1-58e5-4c5c-b642-4def2e8f5914"><em>Journaling Protection service scope</em></a>. We do not currently provide the option for you to create custom profiles.</li>
+</ul>
+<h2 id="getting-journaling-protection-up-and-running">Getting Journaling Protection up and running</h2>
+<p>To get Journaling Protection up and running for your VMs, follow the steps below:</p>
+<ol>
+<li><a href="#create-a-recovery-vdc">Create a recovery VDC</a></li>
+<li><a href="#configure-networking-on-the-recovery-site">Configure networking on the recovery site</a></li>
+<li><a href="#create-a-virtual-protection-group">Create a virutal protection group</a></li>
+<li><a href="#perform-a-test-failover">Perform a test failover</a></li>
+</ol>
+<h3 id="create-a-recovery-vdc">Create a recovery VDC</h3>
+<p>To recover your VMs to a different UKCloud site, you must have a VDC in the intended recovery site. If you already have a compute service in the recovery site, you can use an existing VDC or you can create a new one using:</p>
+<ul>
+<li>The UKCloud Portal (for more information see <a href="https://portal.ukcloud.com/support/knowledge_centre/99f82d51-11f1-4c76-8cdb-3048067ae0f3"><em>How to build your Enterprise Compute Cloud estate using the UKCloud Portal</em></a>)</li>
+<li>The UKCloud Portal API (for more information see the <a href="https://portal.ukcloud.com/support/knowledge_centre/18ec05eb-0271-4ff0-bb10-f377a2f29af7"><em>How to use the UKCloud Portal API</em></a>)</li>
+</ul>
+<p>If you don't already have a compute service in the recovery site or you'd prefer UKCloud to create the VDC for you, you can request this as part of your Journaling Protection Service Request.</p>
+<h3 id="configure-networking-on-the-recovery-site">Configure networking on the recovery site</h3>
+<p>You must configure any internally and externally routed networks in your recovery site to duplicate those in the source site. You must also configure the edge gateway with the same firewall, NAT and other rules.</p>
+<p>You'll create the mapping between these networks when you create your VPG (see <a href="https://portal.ukcloud.com/support/knowledge_centre/44437fac-2833-446d-b52b-67ca46d461b1"><em>How to create a virtual protection group</em></a>).</p>
+<p>In the event of a failover, external access to the recovery site will be via a different IP address. You'll need to account for any required DNS changes and external connectivity configuration (such as VPNs), to ensure continued external access. Utilising UKCloud's VMware cloud, you can configure this in advance. Alternatively, you can use load balancing technologies to manage a seamless switch between environments.</p>
+<p>You do not need to configure vApp networks in advance as they will be replicated within the VPG.</p>
+<h3 id="create-a-virtual-protection-group">Create a virtual protection group</h3>
+<p>A virtual protection group (VPG) is a collection of VMs that are grouped together for protection purposes. The UKCloud Journaling Protection service option protects VMs on a vApp basis. When you create a VPG, you specify the vApp to protect and all the VMs in that vApp are protected.
+For example, in a standard three-tier application, you will likely have three VMs: one for your application, one for the database and one for the web server. As best practice, you should create these three related VMs in a single vApp, which you can then add to a VPG so that all the
+VMs are replicated (and recovered) together.</p>
+<p>For more information, see <a href="https://portal.ukcloud.com/support/knowledge_centre/44437fac-2833-446d-b52b-67ca46d461b1"><em>How to create a virtual protection group</em></a>.</p>
+<h3 id="perform-a-test-failover">Perform a test failover</h3>
+<p>After you create your VPG, we recommend that you perform a test failover to confirm that your VMs will be recovered correctly in the event of a live failover.</p>
+<p>You should also run test failovers periodically to ensure that your VMs can still be recovered successfully.</p>
+<p>For more information, see <a href="https://portal.ukcloud.com/support/knowledge_centre/539bef19-1a0b-4953-be4c-48c2830ed5e9"><em>How to perform a failover</em></a>.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>You have now performed all the steps needed to set up Journaling Protection for your VMs.</p>
+<p>If you experience a disaster, such as a virus attack, you can perform a live failover to recover your VMs to a specific point in time before the disaster occurred and continue operation as usual. For more information, see <a href="https://portal.ukcloud.com/support/knowledge_centre/539bef19-1a0b-4953-be4c-48c2830ed5e9"><em>How to perform a failover</em></a>.</p>
+<h2 id="glossary">Glossary</h2>
+<p>This glossary provides definitions of terms specific to Journaling Protection.</p>
+<p><strong>failover</strong>  When an application switches to an alternative environment in order to
+ensure continued operation.</p>
+<p><strong>journal</strong>  A repository of write operations performed on a protected VM after the
+initial synchronisation.</p>
+<p><strong>source site</strong>  The UKCloud site where your live VMs are located.</p>
+<p><strong>recovery point objective (RPO)</strong>  The amount of data you can afford to lose in the event of an outage.</p>
+<p><strong>recovery site</strong>  The UKCloud site to which your VMs are replicated for protection.
+Sometimes also called the target site.</p>
+<p><strong>recovery time objective (RTO)</strong>  The amount of time you can tolerate your application being unavailable in the event of an outage.</p>
+<p><strong>virtual protection group (VPG)</strong>  A collection of VMs that are grouped together for protection purposes.</p>
+<p><strong>Zerto</strong>  The third party software vendor used by UKCloud to power our Journaling
+Protection solution.</p>
+<p><strong>Zerto Self-Service Portal (ZSSP)</strong>  The web-based graphical interface you use to create and manage your VPGs.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>© <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved. UKC-GEN-452</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-gs-journaling.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

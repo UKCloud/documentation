@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started Guide for Email and Collaboration as a Service | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started Guide for Email and Collaboration as a Service | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started-guide-for-email-and-collaboration-as-a-service">Getting Started Guide for Email and Collaboration as a Service</h1>
+
+<h2 id="overview">Overview</h2>
+<p>UKCloud offers an Email and Collaboration service, powered by Zimbra, to enable you to have a cloud hosted, secure email service, connected to government networks or the internet. You can connect this mail service
+through you normal mail applications (for example, Microsoft Outlook), to send and receive mail as well as use lightweight collaborative features.</p>
+<p>This Getting Started Guide walks you through the process of configuring your Email and Collaboration service.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This guide is intended for users who want to set up their Email and Collaboration as a Service. To complete the steps in this guide you must have login credentials for an administrator account and access to the
+Zimbra administration console.</p>
+<h2 id="introduction-to-email-and-collaboration-as-a-service">Introduction to Email and Collaboration as a Service</h2>
+<p>The Zimbra Collaboration Suite that underpins UKCloud's email offering provides a wide range of client connectivity options.</p>
+<ul>
+<li>An advanced webmail client allows the full feature set within the suite to be accessed from anywhere that internet connectivity is available and from virtually any platform via a wide-range of supported browsers</li>
+<li>A cross-platform desktop application is provided extending the functionality of the web client by enabling email to be read and composed while offline</li>
+<li>IMAP and POP3 clients are supported</li>
+<li>Calendar and contacts can be accessed via the CalDav and CardDav protocols</li>
+<li>Full Microsoft Outlook integration is supported using the Zimbra Collaboration Suite Connector for Outlook, which utilizes a full MAPI provider that leverages the Microsoft-standard MAPI interface for contacts, calendar, and other functionality not supported by IMAP or POP</li>
+</ul>
+<p>The service provides enterprise-class functionality for end-users, on a per-mailbox, per- month pricing model. It offers several options for mailbox access, including POP3, IMAP4 and SMTP --- all with TLS (SSL)
+encryption --- as well as HTTPS. Exchange ActiveSync is also supported.</p>
+<p>Although the service was designed with end-users in mind, there's nothing to stop you using the supported protocols to allow an application to access a mailbox in order to send or receive email. This will generally be achieved via SMTP or POP3 over TLS.</p>
+<p>It's worth noting that there's a minimum commitment of 25 mailboxes with this service --- but they don't all have to be used.</p>
+<h3 id="before-you-begin">Before you begin</h3>
+<p>To start using the Email and Collaboration service, you first need to decide on a domain name, which must be a real-world, registered domain name. You can use a new domain name, or simply delegate a sub-domain of
+your organisation's existing domain name.</p>
+<p>You'll need to configure your chosen domain's MX record as <code>mail.skyscapecs.net</code>.</p>
+<p>Once you've decided on a domain name and submitted your service request, UKCloud will configure your domain name on our platform and create an administrator account. You'll receive a welcome email with details of your administrator account with delegated rights for your email domain. This account will usually be in the following format:</p>
+<p><code>admin@</code><em><code>yourdomain</code></em></p>
+<p>For example:</p>
+<p><code>admin@example.com</code></p>
+<p>You'll receive the account details as part of the onboarding process; we recommend that you change the account's password immediately. This is the account you'll use to create mailboxes on the platform. You'll need to create a mailbox for each email address you want to be able to send or receive from.</p>
+<h3 id="supported-browsers">Supported browsers</h3>
+<p>Refer to the <em>Zimbra Collaboration Supported Systems</em> document for the most up to date list, at:</p>
+<p><a href="https://wiki.zimbra.com/wiki/Zimbra_Releases/8.7.0/Supported_Systems">https://wiki.zimbra.com/wiki/Zimbra_Releases/8.7.0/Supported_Systems</a></p>
+<ul>
+<li>Firefox and Chrome on Windows, Mac, Linux</li>
+<li>Internet Explorer on Windows</li>
+<li>Safari on Mac and Windows</li>
+</ul>
+<h2 id="accessing-the-zimbra-administration-console">Accessing the Zimbra administration console</h2>
+<p>The Zimbra administration console is a browser-based user interface for managing your mailbox server and mailbox accounts.</p>
+<p>The way you access the administration console depends on which security domain you use:</p>
+<ul>
+<li>The Assured OFFICIAL console is accessible from the internet or via the PSN Assured network (depending on the service selected)</li>
+<li>The Elevated OFFICIAL console is accessible only via the PSN Protected network (and other interconnecting networks)</li>
+</ul>
+<p>We'll provide you with the URL for the administration console along with your account details.</p>
+<h2 id="creating-a-user-account">Creating a user account</h2>
+<p>Creating a user account sets up the appropriate entries in the LDAP directory server. When the user logs in for the first time, or when the first email is delivered to the user's account, the mailbox is created on the mailbox server.</p>
+<p>To create a user account:</p>
+<ol>
+<li><p>In the administration console, select <strong>Manage</strong> and then <strong>Accounts</strong>.</p>
+</li>
+<li><p>Click the gear symbol in the top-right of the main panel and select <strong>New</strong>.</p>
+<p><img src="images/email-zimbra-admin-mnu-new-account.png" alt="New account menu option"></p>
+</li>
+<li><p>Enter an <strong>Account name</strong> and the user's <strong>Last name</strong>. (The other fields are optional.)</p>
+</li>
+<li><p>If the new account will be an administrator, select the <strong>Administrator</strong> checkbox in the <em>Account Setup</em> section.</p>
+<p><img src="images/email-zimbra-admin-new-account.png" alt="New Account dialog box"></p>
+</li>
+<li><p>Scroll down to set the initial <strong>Password</strong> then click <strong>Next</strong>.</p>
+<p><img src="images/email-zimbra-admin-new-account-password.png" alt="New Account initial password"></p>
+</li>
+<li><p>Enter the new user's contact information then click <strong>Next</strong>.</p>
+<p><img src="images/email-zimbra-admin-new-account-contact-info.png" alt="New Account Contact Information"></p>
+</li>
+<li><p>Enter any aliases required for the account then click <strong>Next</strong>.</p>
+<p><img src="images/email-zimbra-admin-new-account-aliases.png" alt="New Account Aliases"></p>
+</li>
+<li><p>Add the account to any required distribution lists then click <strong>Next</strong>.</p>
+<p>If the account is an administrator account, you need to add it to the administration group at this point, to grant the necessary rights within the domain. To do this:</p>
+<ul>
+<li>In the <strong>Find</strong> field under <em>Add distribution lists to the account</em>, enter <code>admingroup</code> and click <strong>Search</strong>.</li>
+<li>Select the resulting <code>admingroup@yourdomain</code>.</li>
+<li>Click <strong>Add</strong> at the bottom of the dialog box to make the new account a member of the group.</li>
+</ul>
+<p><img src="images/email-zimbra-admin-new-account-member-of.png" alt="New Account Member Of"></p>
+</li>
+<li><p>Specify any forwarding rules.</p>
+<p><img src="images/email-zimbra-admin-new-account-forwarding.png" alt="New Account Forwarding"></p>
+</li>
+<li><p>Click <strong>Finish</strong> to complete creation of the account.</p>
+</li>
+</ol>
+<p>The user can log in to and use the account immediately. It will take up to an hour to add the account to the Global Address List, during which time the account name won't be listed as an auto-complete option for users composing emails.</p>
+<h2 id="getting-to-know-the-zimbra-web-client">Getting to know the Zimbra web client</h2>
+<p>Zimbra offers standard HTML, advanced JavaScript, and mobile web clients that you can log into. The web clients include mail, calendar, address book, and task functionality. You can select the client to use when you log in.</p>
+<ul>
+<li>The advanced web client includes Ajax capability and offers a full set of web collaboration features. This web client works best with newer browsers and fast internet connections.</li>
+<li>The standard web client is a good option when internet connections are slow or if you prefer HTML-based messaging for navigating within your mailbox.</li>
+<li>The mobile web client provides an experience optimized for smaller screen formats available on mobile devices.</li>
+</ul>
+<p>Typically when you log in, you'll see the advanced Zimbra web client. You can switch to a different version if you prefer by using the <strong>Version</strong> list on the login screen. If the Zimbra web client detects that the screen resolution is 800x600, you're automatically redirected to the standard web client. You can still select the advanced web client but will see a warning message suggesting the use of the standard client for a better screen view. When connecting to Zimbra using a mobile web browser, Zimbra will automatically detect and default to the mobile web
+client.</p>
+<p>To access the Zimbra web client:</p>
+<ol>
+<li><p>Go to the following location:</p>
+<p><a href="https://mail.skyscapecs.net/">https://mail.skyscapecs.net/</a></p>
+<p><img src="images/email-zimbra-web-sign-in.png" alt="Zimbra web client sign in page"></p>
+</li>
+<li><p>Log in using your account's email address and password.</p>
+<p><img src="images/email-zimbra-web-client.png" alt="Zimbra web client"></p>
+</li>
+</ol>
+<h2 id="installing-the-zimbra-desktop-client">Installing the Zimbra desktop client</h2>
+<p>The Zimbra desktop client delivers a consistent user experience offline, so email, social media, calendar, contacts, files and documents are synchronized and locally accessible when on the road. Zimbra Desktop aggregates information across accounts (Zimbra, Yahoo! Mail, Gmail,
+Hotmail, etc.) and social networks (Facebook, Digg, Twitter, etc.) to help make communicating and sharing information easier than ever.</p>
+<ol>
+<li><p>Download Zimbra Desktop from:</p>
+<p><a href="https://www.zimbra.com/downloads/zimbra-desktop/">https://www.zimbra.com/downloads/zimbra-desktop/</a></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The desktop client is supported on Windows, Mac and Linux.</p>
+</div>
+</li>
+<li><p>Once installed open the client and click the <strong>Add New Account</strong> button.</p>
+</li>
+<li><p>From the <strong>Account Type</strong> list, select <strong>Zimbra</strong> and complete the form as shown in the image below, substituting the <strong>Email Address</strong> and <strong>Password</strong> with your account details.</p>
+<p><img src="images/email-zimbra-desktop-new-account.png" alt="Zimbra desktop client New Account dialog box"></p>
+</li>
+<li><p>When you're done, click <strong>Validate and Save</strong>.</p>
+</li>
+<li><p>The new account will be listed.</p>
+<p><img src="images/email-zimbra-desktop-new-account-created.png" alt="New Account"></p>
+</li>
+<li><p>Click <strong>Launch Desktop</strong>.</p>
+<p><img src="images/email-zimbra-desktop-client.png" alt="Zimbra desktop client"></p>
+</li>
+</ol>
+<h2 id="configuring-imap-and-pop3-clients">Configuring IMAP and POP3 clients</h2>
+<p>A wide variety of IMAP and POP3 clients are available natively, or for download and use within Windows, Mac, Linux, Android, iOS and BlackBerry. There are far too many to cover in detail so examples of setting up the more common desktop applications will be detailed here.</p>
+<p>The following settings should work with any application that adheres to the IMAP or POP3 protocol standards. IMAP is the preferred protocol and should be used if available.</p>
+<p><strong>Incoming mail server (IMAP):</strong> mail.skyscapecs.net<br>
+<strong>Encrypted connection type:</strong> SSL<br>
+<strong>IMAP/S port:</strong> 993</p>
+<p><strong>Incoming mail server (POP3):</strong> mail.skyscapecs.net<br>
+<strong>Encrypted connection type:</strong> SSL<br>
+<strong>POP3/S port:</strong> 995</p>
+<p><strong>Outgoing mail server (SMTP):</strong> mail.skyscapecs.net<br>
+<strong>Encrypted connection type:</strong> SSL/TLS<br>
+<strong>SMTP/S port:</strong> 465</p>
+<h3 id="configuring-microsoft-outlook">Configuring Microsoft Outlook</h3>
+<p>To configure Outlook:</p>
+<ol>
+<li><p>In Outlook, select <strong>File</strong> then <strong>Add Account</strong>.</p>
+</li>
+<li><p>Select <strong>Manually configure server settings or additional server types</strong>.</p>
+</li>
+<li><p>Select <strong>Internet E-mail</strong>.</p>
+</li>
+<li><p>Enter <strong>Your Name</strong> and <strong>E-mail Address</strong>.</p>
+</li>
+<li><p>From the <strong>Account Type</strong> list, select <strong>IMAP</strong>.</p>
+</li>
+<li><p>Set both the <strong>Incoming mail server</strong> and <strong>Outgoing mail server (SMTP)</strong> to <code>mail.skyscapecs.net</code>.</p>
+</li>
+<li><p>In the <strong>User Name</strong> field, enter your full email address.</p>
+</li>
+<li><p>Enter your <strong>Password</strong>.</p>
+<p><img src="images/email-outlook-new-account.png" alt="Microsoft Outlook Add New Account"></p>
+</li>
+<li><p>Click the <strong>More Settings</strong> button.</p>
+</li>
+<li><p>Select the <em>Outgoing Server</em> tab.</p>
+</li>
+<li><p>Select the <strong>My outgoing server (SMTP) requires authentication</strong> checkbox.</p>
+</li>
+<li><p>Make sure the <strong>Use the same settings as my incoming mail server</strong> checkbox is selected.</p>
+</li>
+<li><p>Select the <em>Advanced</em> tab.</p>
+</li>
+<li><p>Change the server port numbers as follows:</p>
+<ul>
+<li><p><strong>Incoming server (IMAP):</strong> 993<br>
+<strong>Use the following type of encrypted connection:</strong> SSL</p>
+</li>
+<li><p><strong>Outgoing server (SMTP):</strong> 465<br>
+<strong>Use the following type of encrypted connection:</strong> SSL</p>
+</li>
+</ul>
+</li>
+<li><p>Click <strong>Next</strong> to test the account settings and to add the account to Outlook.</p>
+</li>
+</ol>
+<h3 id="configuring-mozilla-thunderbird">Configuring Mozilla Thunderbird</h3>
+<p>To configure Thunderbird:</p>
+<ol>
+<li><p>In Thunderbird, select <strong>Options</strong> then <strong>Account Settings</strong>.</p>
+</li>
+<li><p>Select <strong>Account Actions</strong> and then <strong>Add Mail Account</strong>.</p>
+</li>
+<li><p>Enter your <strong>Name</strong>, <strong>Email address</strong> and <strong>Password</strong> then click <strong>Continue</strong>.</p>
+</li>
+<li><p>Click the <strong>Manual Config</strong> button.</p>
+</li>
+<li><p>Configure the connection as follows:</p>
+<ul>
+<li><p><strong>Incoming:</strong> IMAP<br>
+<strong>Server hostname:</strong> mail.skyscapecs.net<br>
+<strong>Port:</strong> 993<br>
+<strong>SSL:</strong> SSL/TLS<br>
+<strong>Authentication:</strong> Normal Password</p>
+</li>
+<li><p><strong>Outgoing:</strong> SMTP<br>
+<strong>Server hostname:</strong> mail.skyscapecs.net<br>
+<strong>Port:</strong> 465<br>
+<strong>SSL:</strong> SSL/TLS<br>
+<strong>Authentication:</strong> Normal Password</p>
+</li>
+</ul>
+</li>
+<li><p>In the <strong>Username</strong> field, enter your full email address.</p>
+</li>
+<li><p><strong>Re-test</strong> the connection and click <strong>Done</strong> to complete the account setup.</p>
+<p><img src="images/email-tbird-account-setup.png" alt="Mozilla Thunderbird Mail Account Setup"></p>
+</li>
+</ol>
+<h2 id="installing-the-zimbra-collaboration-suite-connector-for-microsoft-outlook">Installing the Zimbra Collaboration Suite Connector for Microsoft Outlook</h2>
+<p>The Zimbra Connector for Microsoft Outlook (ZCO) provides real-time, two-way synchronization of mail, contacts, tasks, and calendar between Outlook and the Zimbra server.</p>
+<p>Before you begin, check the <em>Zimbra Connector for Microsoft Outlook Administrator Guide</em> to verify that the target version of Microsoft Outlook is supported by the Zimbra connector:</p>
+<p><a href="https://files.zimbra.com/website/docs/8.7/ZCS_Connector_For_Outlook_Admin_Guide_8.7.0.pdf">https://files.zimbra.com/website/docs/8.7/ZCS_Connector_For_Outlook_Admin_Guide_8.7.0.pdf</a></p>
+<p>To install the Zimbra Connector for Outlook:</p>
+<ol>
+<li><p>Log in to the Zimbra administration console using an administrator account in your email domain.</p>
+</li>
+<li><p>In the left-hand menu, select <strong>Tools and Migration</strong>.</p>
+</li>
+<li><p>Under <strong>Downloads for End Users</strong>, select and download the appropriate version of the <strong>Zimbra Connector for Outlook</strong> for your environment (either 32-bit or 64-bit).</p>
+<p><img src="images/email-outlook-connector-download.png" alt="Download Zimbra Connector for Outlook"></p>
+</li>
+<li><p>Install the MSI onto your machine.</p>
+</li>
+<li><p>Open Microsoft Outlook.</p>
+</li>
+<li><p>When prompted, enter the following details:</p>
+<ul>
+<li><strong>Server Name</strong> is mail.skyscapecs.net</li>
+<li>Select the <strong>Use Secure Connection</strong> checkbox</li>
+<li>Enter the <strong>Email Address</strong> and <strong>Password</strong> of your account</li>
+</ul>
+<p><img src="images/email-outlook-zimbra-config.png" alt="Zimbra Server Configuration Settings"></p>
+</li>
+<li><p>Click <strong>OK</strong> to complete the installation and Outlook will begin to synchronise email, contacts, tasks and calendar events with the UKCloud server.</p>
+<p><img src="images/email-outlook-zimbra.png" alt="Zimbra server in Outlook"></p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>In this guide, you've learned how to:</p>
+<ul>
+<li>Access the Zimbra administration console and create new mailbox accounts</li>
+<li>Access your mailbox using the Zimbra web and desktop clients</li>
+<li>Configure IMAP and POP3 clients</li>
+<li>Install the Zimbra Connector for Outlook</li>
+</ul>
+<p>For more information about using Email and Collaboration as a Service, see the following articles on the Knowledge Centre:</p>
+<ul>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/1a96ce7d-dd65-4e2b-a107-4cce0f4317ef"><em>How to use UKCloud's email service with your application</em></a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/394a87d6-03a3-43c3-905e-64b35ddcd61b"><em>How to set up Email and Collaboration on an iPhone or iPad</em></a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/6b12262b-74f2-4e0d-9430-c73605f98637"><em>How to setup Email on Android, Windows or BlackBerry mobile devices</em></a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/de75551e-eedc-4caa-895c-347e20671f7d"><em>Sending email from the Elevated environment</em></a></li>
+</ul>
+<h2 id="glossary">Glossary</h2>
+<p>This section provides a glossary of terms specific to Email and Collaboration as a Service.</p>
+<p><strong>alias</strong>  An email alias is simply a forwarding email address.</p>
+<p><strong>distribution list</strong>  A distribution list is a feature of email client programs that allows a user to maintain a list of email addresses and send messages to all of them at once. This can be referred to as an electronic mailshot.</p>
+<p><strong>IMAP</strong>  The Internet Message Access Protocol (IMAP) is a mail protocol used for accessing email on a remote web server from a local client.</p>
+<p><strong>LDAP</strong>  Lightweight Directory Access Protocol is an Internet protocol that email and other programs use to look up information from a server. LDAP is mostly used by medium-to-large organisations.</p>
+<p><strong>POP</strong>  POP stands for Post Office Protocol. POP3 is version 3 of the protocol. When an e-mail is sent to your address, it is stored on the mail server until it is downloaded via your e-mail client (Outlook, your mobile, etc.) using POP3. After the e-mail has been downloaded to your client, it is removed from the server altogether.</p>
+<p><strong>SMTP</strong>  Simple Mail Transfer Protocol. SMTP is used when email is delivered from an email client, such as Outlook Express, to an email server or when email is delivered from one email server to another. SMTP uses port 25.</p>
+<p><strong>TLS</strong>  Transport Layer Security (TLS) and its predecessor, Secure Sockets Layer (SSL), both frequently referred to as &quot;SSL&quot;, are cryptographic protocols that provide communications security over a computer network.</p>
+<p><strong>Zimbra</strong>  An enterprise-class email, calendar and collaboration solution built for the cloud, both public and private.</p>
+<p><strong>Zimbra Connector for Microsoft Outlook</strong>  Allows users to synchronise Mailbox, Calendar, Contacts and Tasks with Microsoft Outlook.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>© <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved. UKC-GEN-237</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/email/email-gs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

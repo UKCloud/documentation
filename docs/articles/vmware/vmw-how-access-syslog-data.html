@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to access syslog data for your edge gateway | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to access syslog data for your edge gateway | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="how-to-access-syslog-data-for-your-edge-gateway">How to access syslog data for your edge gateway</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Your edge gateway is globally configured to send syslog messages to a specific IP address (<code>100.127.255.250</code>). By configuring a new network or IP address within your virtual data centre (VDC) and deploying a collector with the syslog IP address, you can access your edge gateway
+syslog data. You can then use this data to check:</p>
+<ul>
+<li>Allowed and denied network traffic</li>
+<li>Load balancer statistics</li>
+<li>Load balancer health</li>
+</ul>
+<p>This guide explains the network configuration required to provision a syslog collector within your VDC to receive syslog information direct from your edge gateway.</p>
+<h2 id="collecting-syslog-data-for-a-single-edge-gateway">Collecting syslog data for a single edge gateway</h2>
+<p>The simplest scenario is to gather syslog data from a single edge gateway into one collector. To do this you need to create a routable location for the syslog IP address, by either:</p>
+<h3 id="adding-the-syslog-ip-address-to-an-existing-network-interface-card-nic-on-a-routed-subnet">Adding the syslog IP address to an existing network interface card (NIC) on a routed subnet</h3>
+<ol>
+<li><p>Add the syslog IP address to a subnet on the routed network.</p>
+<p>For example, if your existing monitoring server has a NIC on <strong>eth0</strong> (for example, <code>10.0.1.10</code>), on routed Org VDC network <code>10.0.1.0/24</code>, you'd add the syslog IP address to <strong>eth0</strong>.</p>
+</li>
+<li><p>Add a route on the vCNS Edge that routes the syslog IP address via the subnet.</p>
+<p>For example, route <code>100.127.255.250 MASK 255.255.255.255</code> via <code>10.0.1.10</code>.</p>
+</li>
+<li><p>Configure the software on your existing monitoring server to capture data from the IP address of the vCNS edge.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The steps to achieve this depend on your operating system and chosen syslog server.</p>
+</div>
+</li>
+</ol>
+<h3 id="configuring-a-new-routed-network">Configuring a new routed network</h3>
+<ol>
+<li><p>Create a new routed network with the following details:</p>
+<ul>
+<li><strong>Org Network Name:</strong> Customer defined</li>
+<li><strong>Gateway:</strong> <code>100.127.255.249</code></li>
+<li><strong>Subnet Mask:</strong> <code>255.255.255.248</code></li>
+<li><strong>DNS:</strong> Customer defined</li>
+<li><strong>Static IP Pool:</strong> <code>100.127.255.250 -- 100.127.255.254</code></li>
+</ul>
+<p>You can find more detailed steps for creating a routed network in <a href="https://portal.ukcloud.com/support/knowledge_centre/2b989ddd-c018-4289-8a06-0482f0674bc1"><em>Creating routed Org VDC networks</em></a>.</p>
+</li>
+<li><p>Deploy a new syslog server connected to the new routed network with a static address of <code>100.127.255.250</code> and install and configure the syslog server's edge gateway.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The steps to achieve this depend on your operating system and chosen syslog server.</p>
+</div>
+</li>
+</ol>
+<h2 id="collecting-syslog-data-for-multiple-edge-gateways">Collecting syslog data for multiple edge gateways</h2>
+<p>If you have multiple edge gateways under a single NFT you can gather the data from all those edges into the same syslog collector.</p>
+<ol>
+<li><p>Set up a single syslog collector for one of your vCNS Edges as described in the previous section.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We'll refer to this edge gateway as the <em>syslog edge</em> and all the other edge gateways as <em>source edges</em>.</p>
+</div>
+</li>
+<li><p>Confirm that you can see the local syslog traffic from the local syslog edge.</p>
+</li>
+<li><p>Create a firewall rule on the syslog edge to allow syslog traffic from the source edges' TRANSIT IPs (<code>172.26.</code><em><code>x</code></em><code>.</code><em><code>x</code></em> in Assured or <code>172.26.</code><em><code>LOWER OCTET</code></em><code>.</code><em><code>x</code></em> in Elevated) through to the syslog server IP.</p>
+<p>You can create individual rules using the following suggestions:</p>
+<ul>
+<li><em><code>SOURCE TRANSIT IP</code></em><code>:Any</code> to <code>100.127.255.250</code> on UDP</li>
+<li><code>Any:Any</code> to <code>100.127.255.250:514</code> on UDP</li>
+<li><em><code>NFT TRANSIT CIDR/SUBNET</code></em><code>:Any</code> to <code>100.127.255.250:514</code> on UDP</li>
+</ul>
+</li>
+<li><p>On each of the source edges, create a static route to direct traffic to the syslog edge. Use the following settings:</p>
+<ul>
+<li><strong>Applied On:</strong> <em><code>nft_network</code></em></li>
+<li><strong>Name:</strong> Syslog traffic (or any other name you prefer)</li>
+<li><strong>Network:</strong> <code>100.127.255.248/29</code></li>
+<li><strong>Next Hop IP:</strong> The TRANSIT IP address of the syslog edge</li>
+</ul>
+<p>Syslog packets from each source edge will now be forwarded to the syslog edge, with the source of the syslog traffic being the TRANSIT IP of the source edge.</p>
+</li>
+<li><p>Perform a packet capture on the syslog collector to confirm it's receiving packets from the source edges.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You may have to enable or disable logging on firewall rules to trigger syslog traffic.</p>
+</div>
+</li>
+<li><p>When you've confirmed that your syslog collector is receiving the syslog data, configure your syslog server to capture packets from the new syslog source.</p>
+</li>
+</ol>
+<h2 id="enabling-logging">Enabling logging</h2>
+<p>After setting up your syslog collector, you need to make sure that your edge gateway sends network traffic to the log.</p>
+<ol>
+<li><p>Edit your vCNS Edge firewall settings to log firewall rules:</p>
+<ul>
+<li><p>You must log each rule individually by selecting the <strong>Log network traffic for firewall rule</strong> option:</p>
+<p><img src="images/vmw-vcd-syslog-firewall-rule.png" alt="Add Firewall Rule dialog box"></p>
+</li>
+<li><p>To log data for actions not covered by individual rules, select the <strong>Log</strong> option next to the <strong>Default action</strong> setting:</p>
+<p><img src="images/vmw-vcd-syslog-firewall-default-action.png" alt="Default logging action for firewall rules"></p>
+<p>You can find more detailed steps for editing firewall settings in *<a href="https://portal.ukcloud.com/support/knowledge_centre/e8ec5a0b-e5c7-4e44-b353-ab89505fefbe">vCNS Edge services: firewall*</a>.</p>
+</li>
+</ul>
+</li>
+<li><p>Edit your load balancer settings to log virtual servers:</p>
+<p><img src="images/vmw-vcd-syslog-load-balancer.png" alt="Add Virtual Server dialog box"></p>
+<p>You can find more detailed steps for editing load balancer settings in <a href="https://portal.ukcloud.com/support/knowledge_centre/9b4f5898-9464-4ea6-8a64-6bacb686bd0e"><em>vCNS Edge services: load balancer</em></a>.</p>
+</li>
+</ol>
+<h2 id="sample-syslog-captures">Sample syslog captures</h2>
+<h3 id="firewall-denied">Firewall denied</h3>
+<p><code>firewall[]: [073ab562-9147-428c-bf0c-33139c6ec51e]:**DROP**_131073IN= OUT=vNic_0 SRC=192.168.33.13 DST=10.80.115.2 LEN=44 TOS=0x00 PREC=0x00 TTL=254 ID=25689 PROTO=ICMP TYPE=8 CODE=0 ID=7 SEQ=62584 MARK=0x207</code></p>
+<h3 id="firewall-allowed">Firewall allowed</h3>
+<p><code>firewall[]: [073ab562-9147-428c-bf0c-33139c6ec51e]: **ACCEPT**_319IN= OUT=vNic_4 SRC=192.168.31.10 DST=192.168.32.10 LEN=36 TOS=0x00 PREC=0x00 TTL=63 ID=0 DF PROTO=ICMP TYPE=8 CODE=0 ID=27693 SEQ=1 MARK=0x6</code></p>
+<h3 id="load-balancer-statistics">Load balancer statistics</h3>
+<p><code>loadbalancer[5899]: [073ab562-9147-428c-bf0c-33139c6ec51e]: xx.xxx.xxx.xxx:51699 [23/May/2016:14:43:38.242] TEST_CONN_8040_1625_HTTP TEST CONN_UAT_8040_1625_HTTP/TEST CONN_UAT_8040_1625_HTTP_192.168.32.15 0/0/0/1/1 200 2127 - - --VN 12/5/4/2/0 0/0 &quot;GET /OA_MEDIA/FNDSSCORP.gif HTTP/1.1&quot;</code></p>
+<p>Refer to
+<a href="http://cbonte.github.io/haproxy-dconv/1.5/configuration.html#8">http://cbonte.github.io/haproxy-dconv/1.5/configuration.html#8</a> for information about how to interpret the load balancer logs.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>© <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved. UKC-GEN-450</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-access-syslog-data.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

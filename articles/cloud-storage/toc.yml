@@ -1,0 +1,12 @@
+- name: Getting Started
+  items:
+  - name: 
+    items:
+    - name: Cloud Storage
+      href: cs-gs.md
+- name: How To
+  items:
+  - name: 
+    items:
+    - name: View Cloud Storage information in the UKCloud Portal
+      href: cs-how-view-info-portals.md

@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started Guide for Cloud GPU Visualisation | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started Guide for Cloud GPU Visualisation | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started-guide-for-cloud-gpu-visualisation">Getting Started Guide for Cloud GPU Visualisation</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>Cloud GPU enables you to supplement your on-platform compute resources with GPU capabilities.</p>
+<p>This service enables you to use UKCloud's main infrastructure platforms to meet the specialist requirements of some advanced applications, with the benefits of a cloud environment. It supports the following types of
+workloads:</p>
+<ul>
+<li><strong>Compute workloads.</strong> GPUs have become prevalent in a world that needs a lot of data processing, fast. The parallel nature of GPU cores lends itself perfectly to supporting initiatives such as deep or machine learning and large-scale mathematical modelling.</li>
+<li><strong>Visualisation workloads.</strong> Describes the traditional use cases for GPU processing --- these include simulation, powering desktop applications with graphics content (such as computer aided design), video encoding, rendering or streaming.</li>
+</ul>
+<p>This Getting Started Guide provides an introduction for how to use Cloud GPU for visualisation workloads and describes the tasks you need to perform to get the service up and running.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide you must have access to the UKCloud Portal and vCloud Director.</p>
+<h2 id="cloud-gpu-overview">Cloud GPU overview</h2>
+<p>We offer two GPU variants for use with our cloud platform:</p>
+<table>
+<thead>
+<tr>
+<th>Use case</th>
+<th>Compute</th>
+<th>Visualisation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Likely card</td>
+<td>NVIDIA® Tesla® P100</td>
+<td>NVIDIA M60 Series Card with GRID™</td>
+</tr>
+<tr>
+<td>Overview</td>
+<td>NVIDIA Tesla P100 GPU accelerators are the most advanced ever built. Designed to accelerate the compute-intensive elements of applications, they are ideal if you're looking to deliver deep learning, analytics or HPC solutions.</td>
+<td>NVIDIA GRID is designed to share virtual GPUs (vGPUs) across multiple virtual desktop and applications instances. This enables you to deliver graphically intensive applications such as design software and video streaming.</td>
+</tr>
+<tr>
+<td>Precision</td>
+<td>Double precision</td>
+<td>Single precision</td>
+</tr>
+<tr>
+<td>Delivery model</td>
+<td>vGPU</td>
+<td>vGPU</td>
+</tr>
+</tbody>
+</table>
+<p>With Cloud GPU Visualisation, you can:</p>
+<ul>
+<li><p><strong>Bring any application to the cloud</strong> --- Applications that have previously struggled to transition to the cloud because of GPU requirements can now be moved, improving manageability of your data and applications, while increasing collaborative opportunities.</p>
+</li>
+<li><p><strong>Centralise your applications</strong> --- Cloud GPU enables you to centralise your applications to improve access to them. By doing so, users can access the tools they need from anywhere, anytime on commodity devices.</p>
+</li>
+<li><p><strong>Visualise data in real-time</strong> --- Improved visualisation capabilities provided by Cloud GPU Visualisation enables you to visualise data in real-time to render virtualised environments when you need them. This helps you to:</p>
+<ul>
+<li>Design using Computer Aided Design applications in a centralised environment, enabling ease of collaboration</li>
+<li>Create and run simulations</li>
+<li>Render and analyse high resolution images and video</li>
+</ul>
+</li>
+</ul>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>When using our Cloud GPU service for visualisation workloads, you should consider the following:</p>
+<ul>
+<li><p>Before requesting your Cloud GPU Visualisation service:</p>
+<ul>
+<li><p>You must create a virtual machine (VM) for the service.</p>
+<p>You can use any template for the VM, but bear in mind that the operating system must be compatible with the vGPU profile that you select for the service (see table in <a href="#provisioning-your-cloud-gpu-service">Provisioning your Cloud GPU service</a>).</p>
+</li>
+<li><p>Your Cloud GPU VM must be in a PRIORITY virtual data centre (VDC).</p>
+</li>
+<li><p>Your Cloud GPU VM should be using hardware version 11 (to upgrade the hardware version, right-click the VM and select <strong>Upgrade Virtual Hardware Version</strong>).</p>
+</li>
+<li><p>You must power off the vApp that contains your Cloud GPU VM so that UKCloud can migrate the VM to a GPU-enabled server.</p>
+</li>
+</ul>
+</li>
+<li><p>Snapshot Protection is not available for your VM, so you must implement your own backup solution.</p>
+</li>
+<li><p>Currently, there is no high availability or disaster recovery option; your VM cannot be migrated to a different host in the event of host failure. In the event of a host failure, you must wait for the host to be returned to service.</p>
+</li>
+</ul>
+<h2 id="provisioning-your-cloud-gpu-service">Provisioning your Cloud GPU service</h2>
+<p>When your VM is ready, make sure it is powered off and then use My Calls in the UKCloud Portal to raise a service request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can
+complete the setup of your service:</p>
+<ul>
+<li>Service type: GPU -- Visualisation</li>
+<li>VDC name</li>
+<li>vApp name</li>
+<li>VM name</li>
+<li>vGPU profile that you want to use (see table below)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>vGPU profile</th>
+<th>Intended use case</th>
+<th>Frame buffer (Mbytes)</th>
+<th>Virtual display heads</th>
+<th>Maximum resolution per display head</th>
+<th>Effective number of vGPUs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M60-8Q*</td>
+<td>Designer</td>
+<td>8192</td>
+<td>4</td>
+<td>4096x2160</td>
+<td>8</td>
+</tr>
+<tr>
+<td>M60-4Q*</td>
+<td>Designer</td>
+<td>4096</td>
+<td>4</td>
+<td>4096x2160</td>
+<td>4</td>
+</tr>
+<tr>
+<td>M60-2Q*</td>
+<td>Designer</td>
+<td>2048</td>
+<td>4</td>
+<td>4096x2160</td>
+<td>2</td>
+</tr>
+<tr>
+<td>M60-1Q*</td>
+<td>Power User, Designer</td>
+<td>1024</td>
+<td>2</td>
+<td>4096x2160</td>
+<td>1</td>
+</tr>
+<tr>
+<td>M60-8A</td>
+<td>Virtual Application User</td>
+<td>8192</td>
+<td>1</td>
+<td>1280x1024</td>
+<td>8</td>
+</tr>
+<tr>
+<td>M60-4A</td>
+<td>Virtual Application User</td>
+<td>4096</td>
+<td>1</td>
+<td>1280x1024</td>
+<td>4</td>
+</tr>
+<tr>
+<td>M60-2A</td>
+<td>Virtual Application User</td>
+<td>2048</td>
+<td>1</td>
+<td>1280x1024</td>
+<td>2</td>
+</tr>
+<tr>
+<td>M60-1A</td>
+<td>Virtual Application User</td>
+<td>1024</td>
+<td>1</td>
+<td>1280x1024</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>* M60-Q profiles are for 64-bit Linux</p>
+<p>UKCloud will confirm that you've set up your VM correctly and that it meets all the necessary prerequisites. If the VM meets all requirements, UKCloud will migrate the VM to a GPU‑enabled host and attach the GPU
+card to your VM.</p>
+<h2 id="installing-nvidia-drivers">Installing NVIDIA drivers</h2>
+<p>When UKCloud has provisioned your Cloud GPU server, you can install the appropriate NVIDIA drivers.</p>
+<p>To install NVIDIA drivers:</p>
+<ol>
+<li><p>Power on your VM.</p>
+</li>
+<li><p>Right-click your VM and select <strong>Insert CD/DVD from Catalog</strong>.</p>
+<p><img src="images/gpu-vcd-vm-mnu-insert-cd.png" alt="Insert CD/DVD from Catalog menu option"></p>
+</li>
+<li><p>In the <em>Insert CD</em> dialog box, in the search field, enter vGPU and click the <strong>Refresh</strong> icon.</p>
+<p><img src="images/gpu-vcd-vm-insert-cd.png" alt="Insert CD dialog box"></p>
+</li>
+<li><p>Select the vGPU driver ISO and click <strong>Insert</strong>.</p>
+</li>
+<li><p>Check the console of VM to ensure that the ISO is mounted.</p>
+</li>
+<li><p>Run the appropriate executable (Windows) or binary (Linux).</p>
+<p><strong>On Windows:</strong></p>
+<ul>
+<li><p>From Explorer, double click the driver installer file (NVIDIA*.*.exe).</p>
+</li>
+<li><p>Select <strong>Custom (Advanced)</strong>.</p>
+</li>
+<li><p>Select <strong>Perform a clean installation</strong>.</p>
+<p><img src="images/gpu-nvidia-win-install-driver.png" alt="Custom installation options in NVIDIA Installer"></p>
+</li>
+<li><p>Click <strong>Next</strong>.</p>
+</li>
+<li><p>Restart and connect to the VM.</p>
+</li>
+</ul>
+<p><strong>On Linux:</strong></p>
+<ul>
+<li><p>Update the system:</p>
+<pre><code>  \# yum update
+</code></pre>
+</li>
+<li><p>Install gcc with Kernel Modules:</p>
+<pre><code>  \# yum install kernel-devel gcc
+</code></pre>
+</li>
+<li><p>Make the driver package executable:</p>
+<pre><code>  \# chmod +x NVIDIA-Linux-x86\_64-384.73-grid.run
+</code></pre>
+</li>
+<li><p>Run the driver installer:</p>
+<pre><code>  \# ./NVIDIA-Linux-x86\_64-384.73-grid.run
+</code></pre>
+</li>
+<li><p>Accept the defaults.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you don't have a GUI installed, you can ignore the messages relating to X.</p>
+</div>
+</li>
+<li><p>Confirm that the driver is installed and the card is detected:</p>
+<pre><code>\# nvidia-smi
+Thu Oct 5 14:57:43 2017
++------------------------------------------------------------------------------+
+| NVIDIA-SMI 384.73                 Driver Version: 384.73                     |
+|------------------------------------------------------------------------------|
+| GPU  Name        Persistence-M| Bus-Id        Disp.A |  Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage |   GPU-Util Compute M. |
+|===============================+======================+=======================|
+|   0  GRID P100-16Q       On   | 00000000:02:01.0 Off |                   N/A |
+| N/A   N/A    P0    N/A /  N/A |   1040MiB / 16383MiB |        0%     Default |
+|-------------------------------+----------------------------------------------|
+|------------------------------------------------------------------------------|
+| Processes:                                                       GPU Memory  |
+|  GPU       PID    Type    Process name                           Usage       |
+|==============================================================================|
+| No running processes found                                                   |
++------------------------------------------------------------------------------+
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="licensing-your-vm-for-cloud-gpu">Licensing your VM for Cloud GPU</h2>
+<p>To enable full functionality of the NVIDIA GPU card, your VM must obtain a valid licence from   The NVIDIA GRID License Server. To do this, you must configure your edge gateway to allow  traffic to and from the license server.</p>
+<h4 id="configuring-the-edge-gateway">Configuring the edge gateway</h4>
+<p>To enable access to the NVIDIA GRID License Server from your network, you must create the following firewall rule on your edge gateway:</p>
+<ul>
+<li><strong>Source/Source Port:</strong> as appropriate for your source network</li>
+<li><strong>Destination:</strong> 51:179.197.53</li>
+<li><strong>Destination Port:</strong> 7070</li>
+<li><strong>Protocol:</strong> TCP</li>
+<li><strong>Action:</strong> Allow</li>
+</ul>
+<p><img src="images/gpu-vcd-add-firewall-rule.png" alt="Add firewall rule dialog box"></p>
+<p>If you need more detailed instructions for creating firewall rules, see <a href="https://portal.ukcloud.com/support/knowledge_centre/e8ec5a0b-e5c7-4e44-b353-ab89505fefbe"><em>vCNS Edge services: firewall</em></a>.</p>
+<h4 id="retrieving-a-licence-windows">Retrieving a licence (Windows)</h4>
+<p>To license GRID Virtual GPU on Windows:</p>
+<ol>
+<li><p>Right-click on the desktop and select <strong>Nvidia Control Panel</strong>.</p>
+</li>
+<li><p>In the <em>NVIDIA Control Panel</em>, under <strong>Licensing</strong>, select <strong>Manage License</strong>.</p>
+<p><img src="images/gpu-nvidia-manage-license.png" alt="Manage License page"></p>
+</li>
+<li><p>In the <strong>License Server</strong> field, enter <code>gpuls.ukcloud.com</code>.</p>
+</li>
+<li><p>Leave the <strong>Port Number</strong> field empty to default to port 7070, which is the default port number used by the NVIDIA GRID License Server.</p>
+</li>
+<li><p>Click <strong>Apply</strong>.</p>
+</li>
+<li><p>The server will attempt to connect to the license server and pull a licence from the available pool.</p>
+<p><img src="images/gpu-nvidia-licence-acquired.png" alt="License acquired message"></p>
+</li>
+<li><p>Once configured, licensing settings persist across reboots.</p>
+</li>
+</ol>
+<h4 id="retrieving-a-licence-linux">Retrieving a licence (Linux)</h4>
+<p>To license GRID Virtual GPU on Linux</p>
+<ol>
+<li><p>Copy the template grid licensing config file:</p>
+<pre><code> \# cp /etc/nvidia/gridd.conf.template /etc/nvidia/gridd.conf
+</code></pre>
+</li>
+<li><p>Edit the file and set the following values:</p>
+<ul>
+<li>ServerAddress=gpuls.ukcloud.com</li>
+<li>ServerPort=7070</li>
+<li>FeatureType=1</li>
+</ul>
+</li>
+<li><p>Save your changes.</p>
+</li>
+<li><p>Restart the GRID service:</p>
+<pre><code> \# service nvidia-gridd restart
+</code></pre>
+</li>
+<li><p>Check the log messages to confirm the licence is enabled (this may take a minute or two):</p>
+<pre><code>\#tail -f /var/log/messages
+
+Oct 5 15:04:45 localhost systemd: Starting NVIDIA Grid Daemon\...\
+Oct 5 15:04:45 localhost nvidia-gridd: Started (16224)\
+Oct 5 15:04:45 localhost systemd: Started NVIDIA Grid Daemon.\
+Oct 5 15:05:16 localhost nvidia-gridd: Service provider detection complete.\
+Oct 5 15:05:17 localhost nvidia-gridd: License acquired successfully. Server URL : http://51.179.209.134:7070/request\
+Oct 5 15:05:17 localhost nvidia-gridd: Your system is licensed for GRID vGPU.
+</code></pre>
+</li>
+<li><p>Alternatively, if you have the GUI installed, you can set up the details for the license server in the NVIDIA Settings dialog box.</p>
+<ul>
+<li><p>Open the settings tools from your desktop or from the command line:</p>
+<pre><code>  \# nvidia-settings
+</code></pre>
+</li>
+<li><p>Select Manage License and input the following server details:</p>
+<ul>
+<li><strong>License Server:</strong> gpuls.ukcloud.com</li>
+<li><strong>Port Number:</strong> 7070</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="choosing-a-remote-desktop-application">Choosing a remote desktop application</h3>
+<p>For a list of remote desktop applications that utilise GPU acceleration and can support the high resolution and frame rate required by graphically intensive workloads, see the following NVIDIA support page:</p>
+<p><a href="http://nvidia.custhelp.com/app/answers/detail/a_id/4187/%7E/nvidia-grid-nvenc-availability-for-hardware-accelerated-protocol-encode-%E2%80%93-rgs%2C">http://nvidia.custhelp.com/app/answers/detail/a_id/4187/~/nvidia-grid-nvenc-availability-for-hardware-accelerated-protocol-encode-%E2%80%93-rgs%2C</a></p>
+<p>We've tested the following applications against our Cloud GPU service to confirm that they work successfully:</p>
+<ul>
+<li>VMware Blast Extreme</li>
+<li>HP Remote Graphics Software</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Citrix XenDesktop is not supported on the UKCloud platform. We've not yet tested NICE DVC, so cannot currently confirm if it works successfully.</p>
+</div>
+<h2 id="next-steps">Next steps</h2>
+<p>In this guide, you've learned how to set up your environment to enable the provisioning of your Cloud GPU service and you can now start creating your GPU‑powered applications.</p>
+<p>For information about NVIDIA virtual GPU software specific to your OS, see:</p>
+<p><a href="https://docs.nvidia.com/grid/latest/index.html">https://docs.nvidia.com/grid/latest/index.html</a></p>
+<h2 id="glossary">Glossary</h2>
+<p>This section provides a glossary of terms specific to Cloud GPU.</p>
+<p><strong>Cloud GPU</strong>  A UKCloud IaaS service that enables you to supplement your on-platform
+compute resources with GPU capabilities that help meet specialist requirements of advanced applications, such as visualisation workloads or large-scale mathematical modelling.</p>
+<p><strong>GPU</strong>  Graphics processing unit.</p>
+<p><strong>NVIDIA GRID</strong>  The software that enables the GPU card to be exposed as a shared PCI
+device.</p>
+<p><strong>PRIORITY VM</strong>  An Enterprise Compute Cloud VM type with uncontended compute resource
+allocation (CPU/RAM). Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>© <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved. UKC-GEN-635</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/gpu/gpu-gs-visualisation.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

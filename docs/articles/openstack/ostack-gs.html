@@ -1,0 +1,580 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started Guide for UKCloud for OpenStack | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started Guide for UKCloud for OpenStack | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started-guide-for-ukcloud-for-openstack">Getting Started Guide for UKCloud for OpenStack</h1>
+
+<h2 id="overview">Overview</h2>
+<p>If you're new to UKCloud, you'll probably have received this guide as part of your welcome email.</p>
+<p>This Getting Started Guide covers basic topics like where to find your instances (virtual machines, or VMs, in VMware terminology), as well as more in-depth topics such as instance storage choice (ephemeral or
+volume storage) and its implications.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This guide is intended for users who want to learn more about UKCloud for OpenStack.</p>
+<h2 id="logging-in-to-the-openstack-horizon-dashboard">Logging in to the OpenStack Horizon dashboard</h2>
+<p>The first thing you need to do is to log in to the OpenStack Horizon dashboard.</p>
+<ol>
+<li><p>Go to the URL provided in your welcome email.</p>
+<p>The examples in this guide use <code>https://cor00005.cni.ukcloud.com/</code>.</p>
+</li>
+<li><p>Enter your login credentials and click <strong>Connect</strong>.</p>
+<p><img src="images/ostack-horizon-login.png" alt="Horizon log in page"></p>
+</li>
+<li><p>After logging in, the first screen you'll see is the <em>Overview</em> page.</p>
+<p>From here you can get an immediate summary of your project and show your resource usage against the quotas on the project.</p>
+<p><img src="images/ostack-horizon-welcome.png" alt="Horizon Overview page"></p>
+</li>
+</ol>
+<h2 id="creating-your-network-infrastructure">Creating your network infrastructure</h2>
+<p>Before you can begin creating instances, you must first build out the underlying network infrastructure. In a freshly provisioned project, the only resource that will exist initially is a shared external network
+called <code>internet</code>.</p>
+<p>You need to create the following minimum set of resources:</p>
+<ul>
+<li>A router using the internet external network</li>
+<li>A network and associated subnet, specifying the network address using CIDR notation (for example, 192.168.1.0/24), and DHCP settings for DNS, static routes, and so on.</li>
+<li>A router interface to connect the router to your new subnet</li>
+</ul>
+<p>When you have created these elements, you can view them in the <em>Network Topology</em> page in the Horizon dashboard.</p>
+<p><img src="images/ostack-horizon-network-topology.png" alt="Horizon Network Topology page"></p>
+<p>You can create your network infrastructure in one of the following ways:</p>
+<ul>
+<li>Using Horizon to manually create your infrastructure (see <a href="#using-horizon-to-manually-create-your-infrastructure">Using Horizon to manually create your     infrastructure</a>)</li>
+<li>Using the OpenStack Heat orchestration tool to create stacks (see <a href="#using-the-openstack-heat-orchestration-tool-to-create-stacks">Using the OpenStack Heat orchestration tool to create stacks</a>)</li>
+<li>Using the OpenStack API and automation (see <a href="#_Using_the_OpenStack_1">Using the OpenStack API and automation</a>)</li>
+</ul>
+<h3 id="using-horizon-to-manually-create-your-infrastructure">Using Horizon to manually create your infrastructure</h3>
+<p>The <em>Network Topology</em> page is a useful page to get started with. This page provides a resizable, moveable and interactive view of your OpenStack project, along with easily accessible buttons for manually creating routers and networks and for launching instances.</p>
+<p>To create your network infrastructure:</p>
+<ol>
+<li><p>In the Horizon dashboard, expand the <strong>Network</strong> menu on the left side of the screen and select <strong>Network Topology</strong>.</p>
+<p><img src="images/ostack-horizon-mnu-network-topology.png" alt="Network Topology menu option"></p>
+</li>
+<li><p>On the <em>Network Topology</em> page, click the <strong>Create Router</strong> button.</p>
+<p><img src="images/ostack-horizon-btn-create-router.png" alt="Create Router button"></p>
+</li>
+<li><p>In the <em>Create Router</em> dialog box, enter a <strong>Router Name</strong>.</p>
+</li>
+<li><p>From the <strong>Admin State</strong> list, ensure that <strong>UP</strong> is selected so that the router is online at the point of creation.</p>
+</li>
+<li><p>From the <strong>External Network</strong> list, select the external network to which you want to attach your router.</p>
+<p><img src="images/ostack-horizon-create-router.png" alt="Create Router page"></p>
+</li>
+<li><p>Click <strong>Create Router</strong>.</p>
+</li>
+<li><p>Back on the <em>Network Topology</em> page, click the <strong>Create Network</strong> button.</p>
+<p><img src="images/ostack-horizon-btn-create-network.png" alt="Create Network button"></p>
+</li>
+<li><p>On the <em>Network</em> page of the <em>Create Network</em> wizard, enter a <strong>Network Name</strong> and click <strong>Next</strong>.</p>
+<p><img src="images/ostack-horizon-create-network-network.png" alt="Network page of Create Network wizard"></p>
+</li>
+<li><p>On the <em>Subnet</em> page, enter a <strong>Subnet Name</strong>.</p>
+</li>
+<li><p>In the <strong>Network Address</strong> field, allocate your network a suitable address space.</p>
+</li>
+<li><p>In the <strong>Gateway IP</strong> field, enter an IP address from the address space for the router you created earlier to use to access the network.</p>
+<p><img src="images/ostack-horizon-create-network-subnet.png" alt="Subnet page of Create Network wizard"></p>
+</li>
+<li><p>Click <strong>Next</strong>.</p>
+</li>
+<li><p>On the <em>Subnet Details</em> page, the only field you'll probably want to change is <strong>DNS Name Servers</strong>.</p>
+<p>UKCloud does not provide DNS as a service, so to start with you could make use of Google's public 8.8.8.8 service. You can update this field later if you intend to run your own DNS caching service.</p>
+</li>
+<li><p>If you leave the <strong>Allocation Pools</strong> field blank, then by default the whole address space is used for the pool.</p>
+<p><img src="images/ostack-horizon-create-network-subnet-details.png" alt="Subnet Details page of Create Network wizard"></p>
+</li>
+<li><p>Click <strong>Create</strong>.</p>
+</li>
+<li><p>To add the router interface to link your new network to the router, on the <em>Network Topology</em> page, select the router and click the <strong>Add Interface</strong> button.</p>
+<p><img src="images/ostack-horizon-btn-add-interface.png" alt="Add Interface button"></p>
+</li>
+<li><p>In the <em>Add Interface</em> dialog box, from the <strong>Subnet</strong> list, select your subnet and then click <strong>Add Interface</strong>.</p>
+<p><img src="images/ostack-horizon-add-interface.png" alt="Add Interface page"></p>
+</li>
+</ol>
+<h2 id="understanding-access-and-security">Understanding access and security</h2>
+<h3 id="security-groups">Security groups</h3>
+<p>In OpenStack, rather than deploying a perimeter firewall to protect your network from the outside world, every instance is protected by its own firewall. This instance firewall is applied at the network level, independent of any additional firewall the guest operating system may be using. The instance firewall is controlled by applying one or more <em>security groups</em> to the instance, either at instance creation or real-time at any point during the lifecycle of the instance. Where multiple security groups are specified, the firewall rules are the result of compounding all the rules together.</p>
+<p><img src="images/ostack-horizon-access-security.png" alt="Access &amp; security settings"></p>
+<p>A security group consists of one or more rules. Each rule is composed of
+five elements:</p>
+<ul>
+<li><strong>Role</strong> --- Custom or predefined protocol type (for example, TCP, UDP or ICMP)</li>
+<li><strong>Direction</strong> --- Ingress or Egress</li>
+<li><strong>Open Port or Port Range</strong> --- Open either a single port or a range of ports</li>
+<li><strong>Remote</strong> --- The source of the traffic to be allowed via this rule (source address for an inbound rule, or destination address for an outbound rule)</li>
+<li>The ether type (that is IPv4 or IPv6) --- Not currently available</li>
+</ul>
+<p><img src="images/ostack-horizon-add-rule.png" alt="Add Rule page"></p>
+<p>When adding a new rule to a security group, you can choose from a pre-populated list of common rules, for example, SSH, DNS, HTTP or SMTP, or you can specify your own custom rule.</p>
+<h3 id="ssh-key-pairs">SSH key pairs</h3>
+<p>Another change if you're used to using vCloud Director, is the authenticated access to your instances. OpenStack, like most other cloud providers, doesn't use templates that allow password controlled access.
+The standard cloud method of authenticating access to a new instance is to use SSH key pair authentication --- your SSH client uses the private key and OpenStack injects the public key into your new instance using
+the cloud-init package pre-installed in the instance image.</p>
+<p>Before you launch any instances on OpenStack, you need to set up at least one SSH key pair. You can use OpenStack to create a new key pair for you, or if you have an existing SSH key pair, you can import the
+public key so that OpenStack can use it to inject into new instances.</p>
+<p>To see what public keys have already been set up for your use:</p>
+<ol>
+<li><p>In the Horizon dashboard, expand the <strong>Compute</strong> menu on the left side of the screen and select <strong>Access &amp; Security</strong>.</p>
+<p><img src="images/ostack-horizon-mnu-access-security.png" alt="Access &amp; Security menu option"></p>
+</li>
+<li><p>Select the <em>Key Pairs</em> tab.</p>
+<p><img src="images/ostack-horizon-access-security-key-pairs.png" alt="Key Pairs tab of Access &amp; Security page"></p>
+</li>
+<li><p>If you want OpenStack to create a key pair for you:</p>
+<ul>
+<li><p>Click the <strong>Create Key Pair</strong> button.</p>
+</li>
+<li><p>In the <em>Create Key Pair</em> dialog box, enter a <strong>Key Pair Name</strong> and then click <strong>Create Key Pair</strong>.</p>
+<p>OpenStack creates the key pair and downloads it in your web browser. Save the file somewhere safe as you will need it when connecting your SSH client to your instances.</p>
+<p><img src="images/ostack-horizon-create-key-pair.png" alt="Create Key Pair page"></p>
+</li>
+</ul>
+</li>
+<li><p>To import an existing public key:</p>
+<ul>
+<li><p>On the <em>Key Pairs</em> tab of the <em>Access &amp; Security</em> page, click the <strong>Import Key Pair</strong> button.</p>
+</li>
+<li><p>In the <em>Import Key Pair</em> dialog box, enter a <strong>Key Pair Name</strong> and paste the contents of your existing public key file into the <strong>Public Key</strong> field.</p>
+<p><img src="images/ostack-horizon-import-key-pair.png" alt="Import Key Pair page"></p>
+</li>
+<li><p>Click <strong>Import Key Pair</strong>.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="note-for-windows-users">Note for Windows users</h4>
+<p>If you're using a Windows desktop environment, the chances are that you're using the PuTTY program for your SSH client. The PuTTY SSH client doesn't use OpenSSH format files for the key pair files. It does however provide a PuTTYgen program that can import and export in the correct format as outlined below.</p>
+<ul>
+<li><p>If you want OpenStack to create your key pair:</p>
+<ol>
+<li><p>Open PuTTYgen.</p>
+</li>
+<li><p>From the <strong>Conversions</strong> menu select <strong>Import key</strong>.</p>
+<p><img src="images/ostack-puttygen-import-key.png" alt="Import key option of PuTTY Key Generator"></p>
+</li>
+<li><p>Select the downloaded private key file generated by OpenStack.</p>
+</li>
+<li><p>Click the <strong>Save private key</strong> button to save the imported key as a <code>ppk</code> file that PuTTY can use for authentication.</p>
+</li>
+</ol>
+</li>
+<li><p>If you want to import an existing key:</p>
+<ol>
+<li><p>Open PuTTYgen.</p>
+</li>
+<li><p>Click the <strong>Generate</strong> button.</p>
+</li>
+<li><p>Copy the public key from the top of the dialog box.</p>
+<p><img src="images/ostack-puttygen-generate-key.png" alt="Generating key with PuTTy Key Generator"></p>
+</li>
+<li><p>Paste the public key into the <strong>Public Key</strong> field in Horizon's <em>Import Key Pair</em> dialog box.</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="launching-your-instances">Launching your instances</h2>
+<p>Now that you've considered security, created a network and a subnet, and you've connected them to your external network with a router, you can start to think about launching some instances attached to the network. There are a few choices you need to make when launching your instances. The following sections outline how to achieve this task via the Horizon dashboard, however you can also use HEAT templates or the OpenStack API.</p>
+<h3 id="choosing-your-image">Choosing your image</h3>
+<p>When you create an instance in OpenStack, its disk is cloned from an <em>image</em> managed by OpenStack. The image may be a custom image that has been developed for a specific purpose and uploaded to your project. It
+may also be a custom image that has been specifically shared between two projects. More likely, you'll start by using one of the public images that we provide and manage on our platform.</p>
+<p>You can see the images that are available for you to use by expanding the <strong>Compute</strong> menu on the left side of the Horizon dashboard and clicking <strong>Images</strong>.</p>
+<p><img src="images/ostack-horizon-images.png" alt="Images page"></p>
+<h3 id="choosing-your-instance-size">Choosing your instance size</h3>
+<p>If you're already familiar with UKCloud's vCloud Director-based Enterprise Compute Cloud service, then you may be used to being able to choose exactly how many vCPUs and how much memory a VM is allocated.</p>
+<p>In OpenStack, you choices are restricted to a number of pre-defined <em>flavors</em> that define how many vCPUs, how much memory and how much storage an instance may use. Although full details for each flavor are
+available through the Horizon UI, there's no overall list available showing all the different flavors and sizes of instances. However, if you've installed the OpenStack CLI tools (see
+<a href="http://docs.openstack.org/user-guide/common/cli-install-openstack-command-line-clients.html">http://docs.openstack.org/user-guide/common/cli-install-openstack-command-line-clients.html</a>),
+you can run the following command to retrieve a list of the flavors and their makeup</p>
+<pre><code>\&gt; openstack flavor list
+</code></pre>
+<p><img src="images/ostack-cli-flavor-list.png" alt="List of OpenStack flavors from CLI"></p>
+<h3 id="choosing-your-storage-type">Choosing your storage type</h3>
+<p>There are two storage options available for use with your instances:</p>
+<ul>
+<li>Ephemeral storage (default)</li>
+<li>Persistent volume storage</li>
+</ul>
+<h4 id="ephemeral-storage">Ephemeral storage</h4>
+<p>When you create an instance, the default behaviour is to clone your chosen disk image onto the physical disk attached to the host that will be running the instance. This is not dedicated locally attached storage
+to your instance, but rather a RAID array of fast SSD disks that is shared by all the instances running on the host hypervisor.</p>
+<p>The performance of the ephemeral storage makes for very fast disk access. However, as the disk image is stored locally on the host hypervisor, you're at risk of data loss in the event of hardware failure
+on the host. For scheduled maintenance on the host, you can live‑migrate instances onto other hosts with minimal interruption. If the host were to suffer a hardware failure, it's likely that you'd lose the data
+stored on the disk image, so you should architect your application to expect and be able to recover from failure.</p>
+<h4 id="persistent-volume-storage">Persistent volume storage</h4>
+<p>As an alternative to ephemeral storage you can clone your chosen disk image to an OpenStack <em>volume</em>, which is a persistent storage option backed by a Ceph storage array. The volume is then network mounted onto the host hypervisor and the instance booted from the network attached storage. For scheduled maintenance on the host, these instances are more easily managed onto other hosts. In the event of a hardware failure on the host, the volume can just be mounted to another host and the instance restarted without any data loss.</p>
+<p>For more information about volumes, see <a href="#working-with-volumes">Working with volumes</a>.</p>
+<h3 id="creating-an-instance">Creating an instance</h3>
+<p>You can create a new instance in the Horizon UI.</p>
+<ol>
+<li><p>Click or select <strong>Launch Instance</strong> on one of the following pages:</p>
+<ul>
+<li><em>Images</em> page (under the <strong>Compute</strong> menu)</li>
+<li><em>Instances</em> page (under the <strong>Compute</strong> menu)</li>
+<li><em>Network Topology</em> page (under the <strong>Networks</strong> menu)</li>
+</ul>
+</li>
+<li><p>On the <em>Details</em> tab of the <em>Launch Instance</em> dialog box, enter an <strong>Instance Name</strong> and select a <strong>Flavor</strong>.</p>
+<p>As you select a flavor from the list, the dialog box updates to reflect the <strong>VCPUs</strong>, <strong>Disk</strong> and <strong>RAM</strong> that the selected flavour gives you and the green bars under <strong>Project Limits</strong> update to show what your usage would be after launching the instance. If you select a flavour that would take you over your project's quota, the bar is red rather than green.</p>
+<p><img src="images/ostack-horizon-launch-instance-details.png" alt="Details tab of Launch Instance page"></p>
+</li>
+<li><p>From the <strong>Instance Boot Source</strong> list, select:</p>
+<ul>
+<li><strong>Boot from image</strong> to create an instance that boots from the local ephemeral storage.</li>
+<li><strong>Boot from image (creates a new volume)</strong> to create an instance that boots from a volume</li>
+</ul>
+</li>
+<li><p>From the <strong>Image Name</strong> list, select your preferred image.</p>
+<p>If you're creating an image that boots from a volume, you can choose what size to create the boot disk without being restricted to the disk allocation specified by the selected flavour.</p>
+<p><img src="images/ostack-horizon-launch-instance-details-image.png" alt="Select an image"></p>
+</li>
+<li><p>On the <em>Access &amp; Security</em> tab, from the <strong>Key Pair</strong> list, select the SSH key pair you want to inject into your new instance.</p>
+<p>If there is only one SSH key pair configured in your project, it will be automatically selected.</p>
+</li>
+<li><p>Select one or more <strong>Security Groups</strong> to apply to the instance.</p>
+<p><img src="images/ostack-horizon-launch-instance-access-security.png" alt="Access &amp; Security tab of Launch Instance page"></p>
+</li>
+<li><p>On the <em>Networking</em> tab, from the <strong>Available networks</strong> list, select the network that you want to create the new instance on.</p>
+<p>If your project has only a single network defined, that network will already be listed under <strong>Selected networks</strong>.</p>
+<p><img src="images/ostack-horizon-launch-instance-networking.png" alt="Networking tab of Launch Instance page"></p>
+</li>
+<li><p>Click <strong>Launch</strong> and OpenStack reports that your new instance is launching.</p>
+<p><img src="images/ostack-horizon-launch-instance.png" alt="Launching new instance"></p>
+</li>
+</ol>
+<h3 id="accessing-your-instance">Accessing your instance</h3>
+<p>Having successfully launched your new instance, you'll want to log in and start installing your applications. To access your new instance from the outside world, you have to associate a <em>floating IP address</em> to the instance.</p>
+<p>A floating IP address is a public routable address that is allocated to your project. Having allocated an address to your project, you can then choose to associate it to a particular instance. When you've done this, a DNAT rule is automatically created on the router you created earlier to forward all incoming traffic to your chosen instance.</p>
+<p>To associate a floating IP address to your new instance:</p>
+<ol>
+<li><p>On the <em>Instances</em> page, from the <strong>Actions</strong> list for your instance, select <strong>Associate Floating IP</strong>.</p>
+<p><img src="images/ostack-horizon-instance-associate-ip.png" alt="Associate Floating IP option"></p>
+</li>
+<li><p>In the <em>Manage Floating IP Associations</em> dialog box, from the <strong>IP Address</strong> list, select the floating IP address that you want to allocate to the instance.</p>
+<p>If you don't have any spare floating IP addresses allocated to your project, you can click the <strong>+</strong> button next to the <strong>IP Address</strong> list to allocate a new address.</p>
+<p><img src="images/ostack-horizon-manage-floating-ip.png" alt="Manage Floating IP Associations page"></p>
+<ul>
+<li><p>In the <em>Allocate Floating IP</em> dialog box, from the <strong>Pool</strong> list, select the pool from which to allocate the floating IP address.</p>
+<p>Currently the only option is <strong>internet</strong>, but the list will expand as additional networks come online.</p>
+<p><img src="images/ostack-horizon-allocate-floating-ip.png" alt="Allocate Floating IP page"></p>
+</li>
+<li><p>Click <strong>Allocate IP</strong> to allocate the new floating IP address to your project.</p>
+</li>
+<li><p>Back in the <em>Manage Floating IP Associations</em> dialog box, associate the new address with your instance.</p>
+</li>
+</ul>
+</li>
+<li><p>Click <strong>Allocate IP</strong>.</p>
+<p><img src="images/ostack-horizon-manage-floating-ip-success.png" alt="Success message for allocating floating IP"></p>
+</li>
+<li><p>You can use your SSH client to connect to the floating IP address, authenticating the connection with the private key that matches the key pair you selected when you launched the instance.</p>
+</li>
+</ol>
+<p>You can find more information about using and controlling instances and images on OpenStack in the Red Hat documentation at <a href="https://access.redhat.com/documentation/en/red-hat-openstack-platform/8/instances-and-images-guide/instances-and-images-guide">https://access.redhat.com/documentation/en/red-hat-openstack-platform/8/instances-and-images-guide/instances-and-images-guide</a>.</p>
+<h2 id="working-with-volumes">Working with volumes</h2>
+<h3 id="creating-a-volume">Creating a volume</h3>
+<p>Volumes are block devices that you can attach to instances. Because volumes are replicated across OpenStack's storage array, effectively providing three copies of data from a resilience perspective, they provide the basis of our persistent storage offering.</p>
+<ol>
+<li><p>In the Horizon dashboard, expand the <strong>Compute</strong> menu on the left side of the screen and select <strong>Volumes</strong>.</p>
+</li>
+<li><p>On the <em>Volumes</em> page, click the <strong>Create Volume</strong> button.</p>
+</li>
+<li><p>In the <em>Create Volume</em> dialog box, enter a <strong>Volume Name</strong> and <strong>Description</strong>.</p>
+</li>
+<li><p>From the <strong>Volume Source</strong> list, select:</p>
+<ul>
+<li><strong>No source, empty volume</strong> to create a totally empty volume for customer to populate with their data (this is the default option)</li>
+<li><strong>Image</strong> to enable customer to create a prepopulated volume from a previously created image</li>
+</ul>
+</li>
+<li><p>From the Volume Type list, select:</p>
+<ul>
+<li><strong>Tier 1</strong> for our most performant block storage for workloads requiring consistently higher disk throughput</li>
+<li><strong>Tier 2</strong> for block storage with typical performance characteristics for use by production applications or storage (this is the default option)</li>
+</ul>
+</li>
+<li><p>From the <strong>Size</strong> list, select the size of your volume in GiB.</p>
+</li>
+<li><p>From the <strong>Availability Zone</strong> list, select the availability zone to which you want to target your volume.</p>
+<p><img src="images/ostack-horizon-create-volume.png" alt="Create Volume page"></p>
+</li>
+<li><p>Create <strong>Create Volume</strong>.</p>
+</li>
+</ol>
+<h3 id="retyping-a-volume">Retyping a volume</h3>
+<p>You can retype a volume to take an existing volume of a particular volume type and converting it to another (that is, from Tier 1 to Tier 2 or vice versa).</p>
+<h4 id="retyping-a-volume-attached-to-an-instance">Retyping a volume attached to an instance</h4>
+<p>Due to a dependency on the underlying hypervisor, it is not currently possible to retype a volume that is attached to an instance. If you want to retype a volume that is attached to an instance, you must first detach the volume from the instance.</p>
+<ol>
+<li><p>To detach the volume from the instance, in the Horizon dashboard, expand the <strong>Compute</strong> menu on the left side of the screen and select <strong>Volumes</strong>.</p>
+</li>
+<li><p>On the <em>Volumes</em> page, for the volume that you want to detach, from the list on the far right of the page, select <strong>Manage Attachments</strong>.</p>
+<p><img src="images/ostack-horizon-mnu-manage-attachments.png" alt="Manage Attachments option"></p>
+</li>
+<li><p>In the <em>Manage Volume Attachments</em> dialog box, click the <strong>Detach Volume</strong> button.</p>
+<p><img src="images/ostack-horizon-manage-volume-attachments-detach.png" alt="Detach Volume button on Manage Volume Attachments page"></p>
+</li>
+<li><p>Retype the volume by following the steps in <a href="#retyping-an-independent-volume">Retyping an independent volume</a>.</p>
+</li>
+<li><p>On the <em>Volumes</em> page, for the volume that you want to reattach, from the list on the far right, select <strong>Manage Attachments</strong>.</p>
+</li>
+<li><p>In the <em>Manage Volume Attachments</em> dialog box, from the <strong>Attach to Instance</strong> list, select the instance to which you want to reattach the volume and click the <strong>Attach Volume</strong> button.</p>
+<p><img src="images/ostack-horizon-manage-volume-attachments.png" alt="Manage Volume Attachments page"></p>
+</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you attempt to retype a volume that is still attached to an instance, the process will attempt to run but will fail without notification.</p>
+</div>
+<h4 id="retyping-an-independent-volume">Retyping an independent volume</h4>
+<p>If the volume that you want to retype is not attached to an instance, you can retype it.</p>
+<ol>
+<li><p>Ensure that the volume is detached from any instances.</p>
+<p>For information about how to detach an volume from an instance, see <a href="#retyping-a-volume-attached-to-an-instance">Retyping a volume attached to an instance</a>.</p>
+</li>
+<li><p>In the Horizon dashboard, expand the <strong>Compute</strong> menu on the left side of the screen and select <strong>Volumes</strong>.</p>
+</li>
+<li><p>On the <em>Volumes</em> page, for the volume that you want to retype, from the list on the far right of the page, select <strong>Change Volume Type</strong>.</p>
+<p><img src="images/ostack-horizon-mnu-change-volume-type.png" alt="Change Volume Type option"></p>
+</li>
+<li><p>In the <em>Change Volume Type</em> dialog box, from the <strong>Type</strong> drop down list, select the new type for the volume.</p>
+</li>
+<li><p>From the <strong>Migration Policy</strong> list, ensure that you select <strong>On Demand</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If any other option is selected, the retyping process will not work.</p>
+</div>
+<p><img src="images/ostack-horizon-change-volume-type.png" alt="Change Volume Type page"></p>
+</li>
+<li><p>Click <strong>Change Volume Type</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You may notice duplicate volumes while the retyping process is running. These duplicate volumes will disappear when the process has completed.</p>
+</div>
+<blockquote>
+<p>[IMPORTANT!]
+Do not attach a retyped volume to an instance until the retyping process has completed successfully.</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="retyping-an-independent-volume-using-the-openstack-cli">Retyping an independent volume using the OpenStack CLI</h4>
+<p>To retype a volume using the OpenStack CLI, use the following command:</p>
+<pre><code>\&gt; cinder retype *volume* *volume-type*
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><em><code>volume</code></em> is the name or ID of the volume that you want to retype</li>
+<li><em><code>volume-type</code></em> is the new volume type</li>
+</ul>
+<h2 id="working-with-the-api-and-automation">Working with the API and automation</h2>
+<h3 id="using-the-openstack-heat-orchestration-tool-to-create-stacks">Using the OpenStack Heat orchestration tool to create stacks</h3>
+<p>OpenStack provides an orchestration tool out of the box. The Heat tool enables you to describe your infrastructure as a text file, referred to as a <em>Heat template</em>, defining one or more resources using a YAML format. Having defined your resources in your Heat template, you then
+use the template to create a <em>stack</em>. The stack contains the instantiation of the resources defined in the YAML file, along with a history of events and operations that have happened to the resources in the stack.</p>
+<p>For an example of what a basic Heat template looks like, take a look at <a href="https://github.com/UKCloud/automation_examples/blob/master/heat/example.yaml">https://github.com/UKCloud/automation_examples/blob/master/heat/example.yaml</a></p>
+<p>The example.yaml template creates the same router, network, subnet and router interface that you created manually above. In addition, the template defines an SSH key pair, security groups and launch instances. We'll look at these other resource elements in more detail later.</p>
+<p>To use a template to create a stack in your project:</p>
+<ol>
+<li><p>In the Horizon dashboard, expand the <strong>Orchestration</strong> menu on the left side of the screen and select <strong>Stacks</strong>.</p>
+<p><img src="images/ostack-horizon-mnu-stacks.png" alt="Stacks menu option"></p>
+</li>
+<li><p>On the <em>Stacks</em> page, click the <strong>Launch Stack</strong> button.</p>
+<p><img src="images/ostack-horizon-btn-launch-stack.png" alt="Launch Stack button on Stacks page"></p>
+</li>
+<li><p>On the <em>Select Template</em> page, from the <strong>Template Source</strong> list, select <strong>URL</strong>.</p>
+</li>
+<li><p>In the <strong>Template URL</strong> field, enter the URL of the Raw version of the template that you want to use (for example, the example.yaml template).</p>
+<p><img src="images/ostack-horizon-select-template.png" alt="Select Template page"></p>
+</li>
+<li><p>Click <strong>Next</strong>.</p>
+</li>
+<li><p>On the <em>Launch Stack</em> page, enter a <strong>Stack Name</strong> and select the <strong>flavour</strong> and <strong>image</strong> as required.</p>
+<p><img src="images/ostack-horizon-launch-stack.png" alt="Launch Stack page"></p>
+</li>
+<li><p>Click <strong>Launch</strong> to start creating the stack resources in the background.</p>
+<p>You can go back to the <em>Stacks</em> page to view progress, drill down into the resources defined in the stack and see the events as they happen.</p>
+</li>
+</ol>
+<p>You can also use an updated Heat template to apply an update to resources in a stack. You can also destroy an entire stack, cleaning up all the resources that you previously created. This makes Heat a very powerful tool for creating short‑lived test and preproduction environments on‑demand that may form part of a continuous delivery pipeline.</p>
+<h2 id="using-the-openstack-api-and-automation">Using the OpenStack API and automation</h2>
+<p>OpenStack also provides a fully functional API to enable programmatic control over your project. The Horizon UI you used earlier is itself a client that makes calls to this underlying API.</p>
+<p>Although you can write your own code to interact with the API, there are a number of different libraries already available covering most popular programming languages.</p>
+<p>Alternatively, there is also a growing number of DevOps automation tools available (for example, Terraform and Ansible) that interact with the OpenStack API to orchestrate the creation and ongoing management of your infrastructure.</p>
+<p>For an example Terraform configuration to create a similar network infrastructure to the one you created in the previous examples, take a look at <a href="https://github.com/UKCloud/automation_examples/tree/master/terraform-os">https://github.com/UKCloud/automation_examples/tree/master/terraform-os</a>.</p>
+<p>Whatever library or automation tools you choose to use, you'll need to know a few important details to make a connection to and authenticate against the API.</p>
+<ol>
+<li><p>In the Horizon dashboard, expand the <strong>Compute</strong> menu on the left side of the screen and select <strong>Access &amp; Security</strong>.</p>
+<p><img src="images/ostack-horizon-mnu-access-security.png" alt="Access &amp; Security menu option"></p>
+</li>
+<li><p>On the <em>Access and Security</em> page, select the <em>API Access</em> tab.</p>
+</li>
+<li><p>On the <em>API Access</em> tab, you can see all the relevant API endpoints for making connections to the various OpenStack subsystems, including the <strong>Identify</strong> endpoint, which provides the initial authentication process, that you'll typically need when configuring connections.</p>
+<p>You can also download your user's OpenStack RC file for use in the following section.</p>
+<p><img src="images/ostack-horizon-btn-download-rc-file.png" alt="Download OpenStack RC File button on Access &amp; Security page"></p>
+</li>
+</ol>
+<h2 id="using-the-openstack-command-line-client">Using the OpenStack command-line client</h2>
+<p>The OpenStack project provides a command‑line client that enables you to access the project API through easy‑to‑use commands. For example, the Compute service provides a NOVA command‑line client.</p>
+<p>You can run the commands from the command line, or include the commands in scripts to automate tasks. If you provide OpenStack credentials, such as your user name and password, you can run these commands on any computer.</p>
+<p>The following file is a bash shell script format file that sets up all the relevant environment variables in the Linux shell session so that you can use the OpenStack CLI tools. The OpenStack CLI tools, just like the Horizon UI, also communicate with the OpenStack API. This means you
+can examine the contents of the RC file to find the settings that you may need to pass into, for example, a Terraform provider definition when configuring it to manage your OpenStack project.</p>
+<p><img src="images/ostack-cli-example.png" alt="OpenStack CLI example"></p>
+<p>The key values to note here are the <code>OS\_AUTH\_URL</code>, <code>OS\_TENANT\_NAME</code> and <code>OS\_USERNAME</code> environment variables, as these will be common to any API authentication request.</p>
+<p>In addition, creating the line export <code>OS\_INTERFACE=public</code> in the RC file should address any issues you may have accessing the Admin API endpoints.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>In this Getting Started Guide, you've learned how to use the OpenStack Horizon UI to set up UKCloud for OpenStack and create new instances. You've also learned about the other tools available including the OpenStack API and command-line client.</p>
+<p>You can find additional information in the following places:</p>
+<ul>
+<li><strong>OpenStack API</strong> --- For more information about using the API, see the OpenStack documentation at <a href="http://developer.openstack.org/api-guide/quick-start/">http://developer.openstack.org/api-guide/quick-start/</a></li>
+<li><strong>OpenStack Client</strong> --- For more information about using the OpenStack Client, see the OpenStack documentation at <a href="http://docs.openstack.org/user-guide/cli.html">http://docs.openstack.org/user-guide/cli.html</a></li>
+<li><strong>HEAT templates</strong> --- You can find more information about the Heat orchestration tool and the resources you can use in the YAML format templates in the OpenStack documentation at <a href="https://wiki.openstack.org/wiki/Heat">https://wiki.openstack.org/wiki/Heat</a> and <a href="http://docs.openstack.org/developer/heat/template_guide/index.html">http://docs.openstack.org/developer/heat/template_guide/index.html</a></li>
+<li><strong>Terraform</strong> --- For information about using Terraform and the OpenStack provider, see the Terraform documentation at <a href="https://www.terraform.io/intro/">https://www.terraform.io/intro/</a> and <a href="https://www.terraform.io/docs/providers/openstack/index.html">https://www.terraform.io/docs/providers/openstack/index.html</a></li>
+<li><strong>Ansible</strong> --- For information on Ansible's support for working with OpenStack resources, see the Ansible documentation at <a href="http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack">http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack</a></li>
+</ul>
+<h2 id="glossary">Glossary</h2>
+<p>This section provides a glossary of terms specific to UKCloud for OpenStack.</p>
+<p><strong>UKCloud for OpenStack</strong>  A UKCloud IaaS service that provides a cloud platform specifically designed around the needs of digital communities, and engineered to facilitate true cloud-native applications.</p>
+<p><strong>ephemeral storage</strong>  A UKCloud for OpenStack storage option that exists only as long as the associated OpenStack instance exists.</p>
+<p><strong>flavor</strong>  An OpenStack construct that defines how many vCPUs, how much memory and
+how much storage an instance may use.</p>
+<p><strong>floating IP address</strong>  A public routable address that is allocated to your project and can then be associated to an instance to route external traffic to the instance.</p>
+<p><strong>Heat template</strong>  A YAML‑formatted text file that defines your infrastructure.</p>
+<p><strong>image</strong>  A file containing a virtual disk with a bootable operating system, used
+to create virtual machine instances within UKCloud for OpenStack.</p>
+<p><strong>instance</strong>  A customer provisioned compute resource within OpenStack, similar to the
+virtual machine concept within VMware.</p>
+<p><strong>persistent volume storage</strong>  A UKCloud for OpenStack block storage option that is always available, regardless of the state of the VM.</p>
+<p><strong>private key</strong>  The part of the SSH key pair that your SSH client uses to authenticate
+with an instance.</p>
+<p><strong>public key</strong>  The part of the SSH key pair that is stored in the instance.</p>
+<p><strong>security group</strong>  An OpenStack construct that consists of one or more rules that control access to an instance.</p>
+<p><strong>SSH key pair</strong>  A method of authentication used by OpenStack to authenticate access to instances that includes a public key and a private key. The SSH client uses a private key that is paired to a public key in the instance.</p>
+<p><strong>stack</strong>  An OpenStack construct that contains the resources created from a Heat
+template.</p>
+<p><strong>volume</strong>  A persistent storage option backed by a Ceph storage array that is
+network mounted onto the host hypervisor.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your
+UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>© <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved. UKC-GEN-427</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-gs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

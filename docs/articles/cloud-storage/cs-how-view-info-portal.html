@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to view Cloud Storage information in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to view Cloud Storage information in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="how-to-view-cloud-storage-information-in-the-ukcloud-portal">How to view Cloud Storage information in the UKCloud Portal</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Cloud Storage is UKCloud's object storage solution based on Dell EMC Elastic Cloud Storage (ECS). Although you'll mostly interact with Cloud Storage through the API, the UKCloud Portal provides access to some information about your service.</p>
+<p>Within the UKCloud Portal you can:</p>
+<ul>
+<li>View information about the namespaces within your Cloud Storage environment</li>
+<li>View a list of users with access to a namespace</li>
+<li>Reset the secret key for a Cloud Storage user</li>
+<li>View information about the buckets within a namespace</li>
+<li>View a graphical representation of the storage consumed over the last 30 days</li>
+</ul>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide you must have been granted access to the relevant namespace.</p>
+<h2 id="granting-portal-permissions-for-cloud-storage">Granting Portal permissions for Cloud Storage</h2>
+<p>To view Cloud Storage information in the Portal, users must be granted access to the relevant namespace. Once access is granted, the user will be able to see the namespace, list the buckets in the namespace and reset the secret key. They will also be able to see consumption data for
+namespaces and buckets, with a graphical representation of average consumption for buckets.</p>
+<p>To grant Portal permissions for Cloud Storage:</p>
+<ol>
+<li><p>Log in to the UKCloud Portal and select your account.</p>
+<p>For more detailed instructions, see the <a href="https://portal.ukcloud.com/support/knowledge_centre/0435318d-a94b-41bb-a4ff-a52adbe863e5"><em>Getting Started Guide for UKCloud Portal</em></a>.</p>
+</li>
+<li><p>In the Portal navigation panel, expand the <strong>CONTACTS</strong> option and select <strong>All Contacts</strong>.</p>
+<p><img src="images/cs-portal-mnu-all-contacts.png" alt="All Contacts menu option in UKCloud Portal"></p>
+</li>
+<li><p>Find the contact for whom you want to grant permissions and click the <strong>Edit</strong> button.</p>
+<p><img src="images/cs-portal-btn-edit-contact.png" alt="Edit contact button"></p>
+</li>
+<li><p>Click the <em>Permissions</em> tab.</p>
+<p><img src="images/cs-portal-tab-permissions.png" alt="Permissions tab"></p>
+</li>
+<li><p>Scroll down to the <em>Permissions for Cloud Storage</em> section and select the <strong>Access</strong> check box for the relevant namespace.</p>
+<p><img src="images/cs-portal-permissions.png" alt="Cloud Storage permissions"></p>
+</li>
+</ol>
+<h2 id="viewing-namespace-and-bucket-information">Viewing namespace and bucket information</h2>
+<p>In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down through your namespaces to see the allocated buckets available in your Cloud Storage service. You can also view storage consumption over the last 30 days.</p>
+<p><img src="images/cs-namespace-buckets.png" alt="Structure of objects in ECS"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>It's not possible to view objects within the UKCloud Portal.</p>
+</div>
+<ol>
+<li><p>Log in to the UKCloud Portal and select your account.</p>
+<p>For more detailed instructions, see the <a href="https://portal.ukcloud.com/support/knowledge_centre/0435318d-a94b-41bb-a4ff-a52adbe863e5"><em>Getting Started Guide for UKCloud Portal</em></a>.</p>
+</li>
+<li><p>In the Portal navigation panel, expand the <strong>Cloud Storage</strong> option and select <strong>ECS</strong>.</p>
+<p><img src="images/cs-portal-mnu-cloud-storage.png" alt="Cloud Storage menu option in UKCloud Portal"></p>
+</li>
+<li><p>The <em>Storage</em> tab lists the namespaces within the currently selected account. You can see:</p>
+<ul>
+<li>The number of buckets in the namespace</li>
+<li>The total amount of storage (in GiB) currently consumed by the objects in all the buckets in the namespace</li>
+<li>The service level of the namespace:
+<ul>
+<li>STANDARD --- data is stored in a single data centre</li>
+<li>ENHANCED --- data is stored in a primary named data centre and copied to a second geographically remote data centre</li>
+</ul>
+</li>
+</ul>
+<p><img src="images/cs-portal-namespaces.png" alt="Namespaces page"></p>
+</li>
+<li><p>To list the buckets in a namespace, click the <strong>Buckets</strong> button for the namespace.</p>
+<p><img src="images/cs-portal-btn-buckets.png" alt="Buckets button"></p>
+</li>
+<li><p>On the <em>Buckets</em> tab, you can see the following information for each bucket in the selected namespace:</p>
+<ul>
+<li>The type of bucket: S3 or ATMOS</li>
+<li>The total amount of storage (in GiB) currently consumed by the objects in the bucket</li>
+<li>The number of objects in the bucket</li>
+</ul>
+<p><img src="images/cs-portal-buckets.png" alt="Buckets page"></p>
+</li>
+<li><p>To view a graph that shows the amount of storage (in GiB) consumed by the objects in the bucket over the last 30 days, click the <strong>Show Consumption</strong> button for the bucket.</p>
+<p><img src="images/cs-portal-consumption.png" alt="Consumption information"></p>
+</li>
+</ol>
+<h2 id="resetting-your-secret-key">Resetting your secret key</h2>
+<p>Each user who can access Cloud Storage has an associated secret key to enable secure authentication. When attempting to access Cloud Storage, you must specify the appropriate secret key. If you forget the secret key for your user ID, you can reset it in the UKCloud Portal.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For security purposes, the UKCloud Portal does not display secret keys, if you forget your secret key, you must reset it to generate a new one.</p>
+</div>
+<ol>
+<li><p>Log in to the UKCloud Portal and select your account.</p>
+<p>For more detailed instructions, see the <a href="https://portal.ukcloud.com/support/knowledge_centre/0435318d-a94b-41bb-a4ff-a52adbe863e5"><em>Getting Started Guide for UKCloud Portal</em></a>.</p>
+</li>
+<li><p>In the Portal navigation panel, expand the <strong>Cloud Storage</strong> option and select <strong>ECS</strong>.</p>
+<p><img src="images/cs-portal-mnu-cloud-storage.png" alt="Cloud Storage menu option in UKCloud Portal"></p>
+</li>
+<li><p>Click the <strong>Users</strong> button for the namespace for which you want to reset the secret key.</p>
+<p><img src="images/cs-portal-btn-users.png" alt="Users button"></p>
+</li>
+<li><p>The <em>Users</em> tab lists the different user IDs associated with the namespace.</p>
+<p><img src="images/cs-portal-users.png" alt="Users page"></p>
+</li>
+<li><p>Click the <strong>Reset Secret</strong> button next to the appropriate user ID.</p>
+</li>
+<li><p>Click <strong>OK</strong> to confirm that you want to reset the secret key.</p>
+<p><img src="images/cs-portal-reset-secret.png" alt="Reset Secret dialog box"></p>
+</li>
+<li><p>Stay on the current page until a popup dialog box displays the new secret key.</p>
+<p><img src="images/cs-portal-new-key.png" alt="New secret key"></p>
+</li>
+<li><p>Make a note of the key and then click <strong>Close</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>After you close this dialog box, you will not be able to see the secret key again in the UKCloud Portal. If you do not make a note of the secret key or if you forget or lose it, you will need to reset it again.</p>
+</div>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>This guide has shown you how you can view information about your Cloud Storage service in the UKCloud Portal. For information about how to use the service, see the following articles in the Knowledge Centre:</p>
+<ul>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/e07b908f-e93e-42f8-b833-aff391511862"><em>Getting Started Guide for Cloud Storage</em></a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/85dc54ff-7d21-43ac-9cfa-88e87de7ba27"><em>Blueprint -- Using storage gateways with Cloud Storage</em></a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/ba19c6c0-a123-4d0b-bc56-b3fdc3513cb0"><em>Blueprint -- Using file browsers with Cloud Storage</em></a></li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>© <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved. UKC-GEN-581</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/cloud-storage/cs-how-view-info-portal.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

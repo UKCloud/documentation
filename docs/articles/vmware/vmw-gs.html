@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started Guide for UKCloud for VMware | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started Guide for UKCloud for VMware | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started-guide-for-ukcloud-for-vmware">Getting Started Guide for UKCloud for VMware</h1>
+
+<h2 id="overview">Overview</h2>
+<p>If you're new to UKCloud, you'll probably have received this guide as part of your welcome email. It will help you to get started using UKCloud for VMware.</p>
+<p>The <em>Getting Started Guide</em> provides an overview of UKCloud for VMware and gives you basic information about how to log in and set up your environment.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide you must have access to the UKCloud Portal and vCloud Director. To build compute services and virtual data centres (VDCs) you must be a vCloud Director administrator.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>You should have received your UKCloud Portal login credentials from your Customer Success Manager (CSM).</p>
+<p>We recommend that you use the Mozilla Firefox ESR 32-bit browser as this is supported by both the UKCloud Portal and by the Web Console for the version of vCloud Director used by UKCloud for VMware.</p>
+<p><strong>More information!</strong> <a href="../other/other-ref-browsers.html"><em>Browser requirements for services on the UKCloud Platform</em></a></p>
+<h2 id="introductions-to-ukcloud-for-vmware">Introductions to UKCloud for VMware</h2>
+<p>We understand that each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is highly configurable, and gives you the flexibility to use different service levels, VM sizes, security
+domains, connectivity and data protection options.</p>
+<p>You can build completely tailored solutions by mixing and matching service options. The choice doesn't lock you to one service or size and you can always change it later.</p>
+<p>Services within UKCloud belong to an account, which in turn belongs to a company. A company can own multiple accounts. You can use accounts to create separate environments for different projects or, in the case of UKCloud partners, to create separate environments for different customers. Within an account you can have multiple UKCloud services, one of which could be UKCloud for VMware. You can have multiple instances of a service within an account.</p>
+<p><img src="images/vmw-organisation.png" alt="UKCloud account organisation"></p>
+<h2 id="logging-in-to-the-ukcloud-portal">Logging in to the UKCloud Portal</h2>
+<p>The first thing you need to do to get started with UKCloud for VMware is to log in to the UKCloud Portal.</p>
+<ol>
+<li><p>Go to the appropriate URL, depending on the security domain in which your service is located:</p>
+<ul>
+<li><strong>Assured OFFICIAL:</strong> <a href="https://portal.ukcloud.com">https://portal.ukcloud.com</a></li>
+<li><strong>Elevated OFFICIAL:</strong> <a href="https://portal.ukcloud.gsi.gov.uk">https://portal.ukcloud.gsi.gov.uk</a></li>
+</ul>
+</li>
+<li><p>On the <em>Log in</em> page, enter your credentials and click <strong>Sign in</strong>.</p>
+<p><img src="images/vmw-portal-login.png" alt="UKCloud Portal Log in page"></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you have forgotten your password, click the <strong>Forgotten password?</strong> link to request a password reset.</p>
+</div>
+<p>If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or CSM. You'll be prompted to change this temporary password.</p>
+</li>
+<li><p>If your Portal administrator has enabled memorable word authentication or Google Two Factor Authentication (2FA), you'll be prompted for the second step of your authentication process.</p>
+<p>For example, for memorable word authentication, you'll be prompted to enter three randomly‑selected letters from your memorable word. (If this is the first time you've logged in, you'll be prompted to create a memorable word.)</p>
+<p><img src="images/vmw-portal-memorable-word.png" alt="Memorable word dialog box"></p>
+<p>For more information about the UKCloud Portal and all the functionality it provides, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for UKCloud Portal</em></a>.</p>
+</li>
+</ol>
+<h2 id="creating-your-ukcloud-for-vmware-estate">Creating your UKCloud for VMware estate</h2>
+<p>When you first access UKCloud for VMware, you'll need to create a compute service (sometimes called a vOrg) to act as a top-level container for your cloud resources. As your estate grows, you can add more compute services to logically organise your resources.</p>
+<p>Within your compute service, you create VDCs to contain your VMs. VMs in the same VDC share workload characteristics and have access to the same resources, such as networking infrastructure, storage and external connectivity. We recommend that you organise related VMs within vApps to make your applications easier to manage. For example, you can start all the VMs within a vApp with a single operation, rather than having to start up each VM separately. vApps are also useful to help maintain crash‑consistency within an application in the event of a disaster.</p>
+<p><img src="images/vmw-estate.png" alt="Organisation of UKCloud for VMware estate"></p>
+<h3 id="building-a-compute-service">Building a compute service</h3>
+<p>If you have the appropriate permissions, you can use the Portal to create a compute service in your account, without having to raise a support ticket.</p>
+<ol>
+<li><p>In the UKCloud Portal, select the account in which you want to create the compute service.</p>
+</li>
+<li><p>In the navigation panel, expand <strong>Tools</strong> and then select <strong>Create Compute Service</strong>.</p>
+<p><img src="images/vmw-portal-mnu-create-compute-service.png" alt="Create Compute Service menu option"></p>
+</li>
+<li><p>On the <em>Build Compute Service</em> page, from the <strong>Zone</strong> radio buttons, select the zone in which you want to create the new compute service.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>In the Portal, you can create compute services only in zones in regions 5 and 6.</p>
+</div>
+</li>
+<li><p>Enter a <strong>Compute Service Name</strong>.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The name can be up to 32 characters long and can include any character except +.</p>
+</div>
+<p><img src="images/vmw-portal-build-compute-service.png" alt="Build Compute Service page"></p>
+</li>
+<li><p>Click <strong>Build</strong>.</p>
+</li>
+<li><p>The <em>Build Compute Service Status</em> page displays information about the compute service you're building and lets you know how the build is progressing.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the <em>VMware Cloud Build History</em> report.</p>
+</div>
+<p><img src="images/vmw-portal-build-compute-service-status.png" alt="Build Compute Service Status page"></p>
+</li>
+<li><p>When the build is complete, the page displays either a success or fail message.</p>
+<p>If the build is successful, you can start building VDCs in your compute service (see <a href="#building_a_virtual_data_centre">Building a virtual data centre</a>).</p>
+<p><img src="images/vmw-portal-build-compute-service-success.png" alt="Build Compute Service Status - success"></p>
+<p>If the build is unsuccessful, raise a support ticket (quoting the <strong>Build ID</strong>) to resolve any issues.</p>
+<p><img src="images/vmw-portal-build-compute-service-fail.png" alt="Build Compute Service Status - failed"></p>
+</li>
+</ol>
+<h3 id="building-a-virtual-data-centre">Building a virtual data centre</h3>
+<p>After creating your compute service, the next step is to create one or more VDCs.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can build VDCs in any of your compute services in regions 5 and 6, including those created by support tickets or the Portal API, not just those you created using the Portal.</p>
+</div>
+<ol>
+<li><p>In the Portal navigation panel, expand <strong>VMware Cloud</strong> and then select the compute service in which you want to create the VDC.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>To create a VDC using the Portal, the compute service must be in region 5 or 6.</p>
+</div>
+<p><img src="images/vmw-portal-mnu-select-compute-service.png" alt="Compute services menu option"></p>
+</li>
+<li><p>From the <strong>Actions</strong> menu, select <strong>Build VDC</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If this option is greyed out, either you do not have the appropriate permissions or your compute service is not in region 5 or 6.</p>
+</div>
+<p><img src="images/vmw-portal-mnu-build-vdc.png" alt="Build VDC menu option"></p>
+</li>
+<li><p>On the <em>Build VDC</em> page, from the <strong>VM Type</strong> radio buttons, select the option that describes the characteristics of the workload of the VDC:</p>
+<ul>
+<li><strong>ESSENTIAL</strong>---For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload        receives the requested performance.</li>
+<li><strong>POWER</strong>---For key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is enabled to pre-emptively optimise performance and availability.</li>
+<li><strong>PRIORITY</strong>---For critical workloads that handle important business processes that benefit from a steady state of operation. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is configured to reduce workload movement around the platform.</li>
+</ul>
+</li>
+<li><p>Enter a <strong>VDC Name</strong>.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The name can be up to 32 characters long and can include any character except +.</p>
+</div>
+<p><img src="images/vmw-portal-build-vdc.png" alt="Build VDC page"></p>
+</li>
+<li><p>Click <strong>Build</strong>.</p>
+</li>
+<li><p>The <em>VDC Build Status</em> page displays information about the VDC you're building and lets you know how the build is progressing.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the <em>VMware Cloud Build History</em> report.</p>
+</div>
+<p><img src="images/vmw-portal-build-vdc-status.png" alt="Build VDC Status page"></p>
+</li>
+<li><p>When the build is complete, the page displays either a success or fail message.</p>
+<p>If the build is successful, you can start building VMs. To provide external access to the VDC, you'll need to create an edge gateway (see <a href="../vmware/vmw-how-build-edge.md"><em>How to build an edge gateway using the UKCloud Portal</em></a>).</p>
+<p><img src="images/vmw-portal-build-vdc-success.png" alt="Build VDC Status - success"></p>
+<p>If the build is unsuccessful, raise a support ticket (quoting the <strong>Build ID</strong>) to resolve any issues.</p>
+<p><img src="images/vmw-portal-build-vdc-fail.png" alt="Build VDC Status - failed"></p>
+</li>
+</ol>
+<h2 id="logging-in-to-vcloud-director">Logging in to vCloud Director</h2>
+<p>After you've created your compute service and VDC, you can start to build up your applications. To do this, you must log in to vCloud Director, which you can access from the UKCloud Portal.</p>
+<ol>
+<li><p>In the Portal navigation panel expand <strong>VMware Cloud</strong> then select your compute service.</p>
+<p><img src="images/vmw-portal-mnu-compute-services.png" alt="Compute services menu option"></p>
+</li>
+<li><p>On the <strong>vCloud Director</strong> tab, for additional security, re-enter your UKCloud Portal password, then click <strong>Confirm</strong>.</p>
+<p><img src="images/vmw-portal-vcd-login.png" alt="vCloud Director tab in UKCloud Portal"></p>
+</li>
+<li><p>vCloud Director launches in your browser window.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If this is the first time you've opened vCloud Director, you may be requested to download the vCloud Director Web Console plugin.</p>
+</div>
+<p><img src="images/vmw-vcd-home.png" alt="vCloud Director Home page"></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you encounter any issues, make sure you're using the Firefox ESR 32-bit browser. For more information, see <a href="https://portal.ukcloud.com/support/knowledge_centre/0887a898-826b-4605-9c2e-dcde0da06c00"><em>Browser requirements for services on the UKCloud Platform</em></a>.</p>
+</div>
+</li>
+<li><p>The tasks you can perform in vCloud Director will depend on the permissions you have been granted.</p>
+<p><strong>More information!</strong> <a href="https://portal.ukcloud.com/support/knowledge_centre/5c261fe3-d8ba-4fe4-8159-87ced5fd13b1"><em>Configuring permissions for vCloud Director</em></a></p>
+</li>
+<li><p>To return to the UKCloud platform, click the <strong>Logout</strong> link in the top right corner of vCloud Director.</p>
+<p><img src="images/vmw-vcd-logout.png" alt="vCloud Director Logout option"></p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>In this <em>Getting Started Guide</em>, you've learned:</p>
+<ul>
+<li>About your UKCloud for VMware environment and how your estate is organised</li>
+<li>How to log in to the UKCloud Portal</li>
+<li>How to create a compute service and VDC to set up your environment</li>
+<li>How to log in to vCloud Director so that you can start to build your applications</li>
+</ul>
+<p>Now that you've set up your basic environment, you can start building your applications. If you want to get up and running quickly, you can take a look at <a href="https://portal.ukcloud.com/support/knowledge_centre/eb14aec9-5248-4cd4-a714-511389ec186e"><em>Building virtual machines with Enterprise Compute Cloud</em></a>,
+which provides a quick walkthrough of the process.</p>
+<p>For more detailed information about the different aspects of your UKCloud for VMware environment, see:</p>
+<ul>
+<li><p>To create virtual machines to define your applications:</p>
+<ul>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/7fc8c6b7-0f88-4072-a0c5-fde174d47dac"><em>Creating VMs from scratch</em></a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/8728fad6-76f1-4836-ad4b-5dc48dc4aa43"><em>Creating VMs from a template</em></a></li>
+</ul>
+</li>
+<li><p>To create a VDC network to enable your virtual machines to communicate with each other and the outside world:</p>
+<ul>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/2b989ddd-c018-4289-8a06-0482f0674bc1"><em>Creating routed Org VDC networks</em></a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/8f839d6b-a2f1-46ef-8762-15be2923d8c8"><em>Creating isolated Org VDC networks</em></a></li>
+</ul>
+</li>
+<li><p>To configure your edge gateway to control access to your VMs:</p>
+<ul>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/e8ec5a0b-e5c7-4e44-b353-ab89505fefbe"><em>Firewall</em></a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/89cbf32e-eb48-4145-b7dc-6bb0c5f1bcc3"><em>NAT</em></a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/76fceb40-dd43-499b-8d2a-ea1a8ab50af8"><em>DHCP</em></a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/43f064b6-0e0e-4985-89f5-46a869a16f81"><em>IPsec VPN</em></a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/9b4f5898-9464-4ea6-8a64-6bacb686bd0e"><em>Load balancer</em></a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/a5a0f2be-f83f-48e5-8e6b-72f5f963b2a7"><em>Static routing</em></a></li>
+</ul>
+</li>
+</ul>
+<h2 id="glossary">Glossary</h2>
+<p>This section provides a glossary of terms specific to UKCloud for VMware.</p>
+<p><strong>account</strong>  Within the UKCloud for VMware environment there are two types of account:</p>
+<ul>
+<li><strong>customer account</strong> --- A collection of related compute services associated with a particular customer or partner.</li>
+<li><strong>user account</strong> --- The account you use to log in to the UKCloud Portal or authenticate with the Portal API. Your user account determines which customer accounts you have access to. Each user account can be associated with multiple customer accounts.</li>
+</ul>
+<p><strong>company</strong>  A UKCloud construct to organise business accounts. Each company can own
+multiple accounts.</p>
+<p><strong>compute service</strong>  A top-level container within a customer account that includes a vCloud Director organization and its VDCs, catalogues, users and resources.</p>
+<p><strong>UKCloud for VMware</strong>  A UKCloud IaaS service that provides a compute infrastructure
+specifically designed to deliver traditional enterprise applications to the cloud.</p>
+<p><strong>ESSENTIAL</strong>  A type of VM that may have contended resource allocation. Automated
+rebalancing is enabled to ensure the workload receives the requested performance.</p>
+<p><strong>POWER</strong>  A type of VM with uncontended compute resource allocation. Automated
+balancing is enabled to pre-emptively optimise performance and availablility.</p>
+<p><strong>PRIORITY</strong>  A type of VM with uncontended compute resource allocation. Automated
+balancing is configured to reduce workload movement around the platform, reducing workload disruption.</p>
+<p><strong>vApp</strong>  A container for VMs that enables you to group related VMs together to
+manage them in one place.</p>
+<p><strong>virtual data centre (VDC)</strong>  A container for VMs, where each VM has the same workload characteristics and access to the same resources, such as networking infrastructure,
+storage and external connectivity.</p>
+<p><strong>virtual machine (VM)</strong>  Software that emulates the functionality of a physical computer, running an operating system and applications. Customers can define a VM's
+resource requirements and the UKCloud platform optimises its placement to ensure it receives the requested resources.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>© <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved. UKC-GEN-41</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-gs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

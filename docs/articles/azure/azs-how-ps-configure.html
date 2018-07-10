@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Configure the Azure Stack user's PowerShell environment for UKCloud |  based on Microsoft Docs | docfx seed website </title>
+    <title>Configure the Azure Stack user's PowerShell environment for UKCloud |  based on Microsoft Docs | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Configure the Azure Stack user's PowerShell environment for UKCloud |  based on Microsoft Docs | docfx seed website ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="title" content="Configure the Azure Stack user's PowerShell environment for UKCloud |  based on Microsoft Docs | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -79,30 +79,34 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="configure-the-azure-stack-users-powershell-environment">Configure the Azure Stack user's PowerShell environment</h1>
 
-<p>As an Azure Stack user, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates,  etc. This topic is scoped to use with the user environments only. In order to interact with Azure Stack PowerShell you will need to set up your enviroment. To do so follow the below guide:</p>
+<p>As an Azure Stack user, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates,  etc. This topic is scoped to use with the user environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Run the following prerequisites from a Windows-based external client.</p>
-<h3 id="install-azure-stack-powershell">Install Azure Stack PowerShell</h3>
+<p>Prerequisites from a Windows-based external client.</p>
+<ul>
+<li><p>PowerShell 5.1</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The following steps require PowerShell 5.0. To check your version, run $PSVersionTable.PSVersion and compare the &quot;Major&quot; version.
-For &quot;legacy&quot; Operating Systems like Windows Server 2008 R2 and Windows 7, or Windows Server 2012 R2, Windows Server 2012, and Windows 8.1
-Download the <a href="https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure">Windows Management Framework 5.1</a></p>
+<p>To check your version, run $PSVersionTable.PSVersion and compare the &quot;Major&quot; version.</p>
+<p>For &quot;legacy&quot; Operating Systems like Windows Server 2008 R2 and Windows 7, or Windows Server 2012 R2, Windows Server 2012, and Windows 8.1</p>
+<p>Download the <a href="https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure">Windows Management Framework 5.1</a></p>
 </div>
+</li>
+</ul>
+<h3 id="install-azure-stack-powershell">Install Azure Stack PowerShell</h3>
 <pre><code class="lang-powershell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
 # PowerShell commands for Azure Stack are installed through the PowerShell gallery. To register the PSGallery repository, open an elevated PowerShell session from the development kit # or  from a Windows-based external client if you are connected through VPN and run the following command:
 Set-PSRepository -Name &quot;PSGallery&quot; -InstallationPolicy Trusted
 # Uninstall existing versions of PowerShell
 Get-Module -ListAvailable | where-Object {$_.Name -like “Azure*”} | Uninstall-Module
-# Install the AzureRM.Bootstrapper module. Select Yes when prompted to install NuGet 
+# Install the AzureRM.Bootstrapper module. Select Yes when prompted to install NuGet
 Install-Module -Name AzureRm.BootStrapper
 # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
 Use-AzureRmProfile -Profile 2017-03-09-profile -Force
-Install-Module -Name AzureStack -RequiredVersion 1.2.11
+Install-Module -Name AzureStack -RequiredVersion 1.3.0
 </code></pre>
 <h2 id="configure-the-user-environment-and-sign-in-to-azure-stack">Configure the user environment and sign in to Azure Stack</h2>
-<p>UKCloud FRN00006 Region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the AADTenantName, GraphAudience endpoint, and ArmEndpoint values as per your environment configuration):</p>
+<p>UKCloud FRN00006 Region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the  $AzsUsername and  $AzsPassword values)</p>
 <h3 id="azure-active-directory-aad-based-deployments">Azure Active Directory (AAD) based deployments</h3>
 <pre><code class="lang-powershell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
@@ -121,13 +125,13 @@ Set-ExecutionPolicy RemoteSigned
 Add-AzureRMEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
 
 # Create your Credentials
-$AZSusername =  &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;.onmicrosoft.com&quot;
-$AZSpassword = '&lt;your password&gt;'
-  $AZSuserPassword = ConvertTo-SecureString &quot;$AZSpassword&quot; -AsPlainText -Force
-  $AZScred = new-object -typename System.Management.Automation.PSCredential -argumentlist $AZSusername,$AZSuserPassword
+$AzsUsername =  &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;.onmicrosoft.com&quot;
+$AzsPassword = '&lt;your password&gt;'
+  $AzsUserPassword = ConvertTo-SecureString &quot;$AzsPassword&quot; -AsPlainText -Force
+  $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
 
 # Sign in to your environment
-Login-AzureRmAccount -Credential $AZScred -EnvironmentName &quot;AzureStackUser&quot;
+Login-AzureRmAccount -Credential $AzsCred -EnvironmentName &quot;AzureStackUser&quot;
 </code></pre>
 <h2 id="test-the-connectivity">Test the connectivity</h2>
 <p>Now that we've got everything set-up, let's use PowerShell to create resources within Azure Stack. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named &quot;MyResourceGroup&quot;:</p>
@@ -165,8 +169,8 @@ Login-AzureRmAccount -Credential $AZScred -EnvironmentName &quot;AzureStackUser&
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br>Generated by <strong>DocFX</strong></span>
             
-            <span>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>
@@ -175,5 +179,15 @@ Login-AzureRmAccount -Credential $AZScred -EnvironmentName &quot;AzureStackUser&
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
-  </body>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
 </html>

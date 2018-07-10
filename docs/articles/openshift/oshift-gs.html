@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started Guide for UKCloud for OpenShift | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started Guide for UKCloud for OpenShift | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started-guide-for-ukcloud-for-openshift">Getting Started Guide for UKCloud for OpenShift</h1>
+
+<h2 id="overview">Overview</h2>
+<p>UKCloud for OpenShift delivers a secure, private deployment of Red Hat™ OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks, including PSN, N3 and Janet.</p>
+<p>UKCloud provides a fully provisioned, single-tenant OpenShift instance to each customer, enabling developers to totally focus on delivering business value, without having to worry about any infrastructure considerations.</p>
+<p>This Getting Started Guide provides an overview of the functionality available with UKCloud for OpenShift and includes links to OpenShift documentation for further detail.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This guide is intended for developers who want to leverage the benefits of Docker and Kubernetes containerisation technologies as part of their development, continuous integration or continuous delivery cycles.</p>
+<h2 id="introduction-to-ukcloud-for-openshift">Introduction to UKCloud for OpenShift</h2>
+<p>IT projects are traditionally complex, requiring careful management of server hardware, storage, networking, operating systems, middleware, as well as development of the actual application. UKCloud for OpenShift removes complexity and enables you to focus on creating business value through development, testing and scaling of your applications.</p>
+<p>UKCloud deploys, scales and monitors the platform, which frees up your DevOps resource to focus on adding value further up the stack --- for example, in automated software testing or tuning autoscaling.</p>
+<p><img src="images/oshift-overview.png" alt="PaaS overview"></p>
+<p>You can use UKCloud for OpenShift to:</p>
+<ul>
+<li><p>Host front-end web applications services to ensure that your environment:</p>
+<ul>
+<li>Can scale to handle any demands placed on it</li>
+<li>Will auto-heal in the event of problems to maintain high levels of availability</li>
+</ul>
+</li>
+<li><p>Create an Internet of Things (IoT) endpoint enabling internet devices to talk to your cloud applications, with all the benefits described above</p>
+</li>
+<li><p>Provide an elastic analytics platform for capturing and analysing machine data and social media feeds, to generate valuable intelligence such as sentiment analysis</p>
+</li>
+<li><p>Support modern microservice architecture and bring manageability and scalability to your applications</p>
+</li>
+</ul>
+<h3 id="ukcloud-deployed-red-hat-openshift-container-platform">UKCloud-deployed Red Hat OpenShift Container Platform</h3>
+<p>OpenShift Container Platform is an open source PaaS, developed and supported by Red Hat and based around common technologies such as Docker containers and the Kubernetes container cluster manager for enterprise application development.</p>
+<p>UKCloud for OpenShift provides a full Red Hat OpenShift Container Platform that has been deployed by UKCloud and is ready to consume without delay. We deploy an OpenShift project in which you can run multiple pods, with each pod containing a group of related Docker
+containers.</p>
+<p><img src="images/oshift-pods-containers.png" alt="OpenShift pods and containers"></p>
+<p><strong>OpenShift documentation:</strong>
+<a href="https://docs.openshift.com/container-platform/3.5/architecture/index.html"><em>Architecture</em></a>
+and <a href="https://docs.openshift.com/container-platform/3.5/security/index.html"><em>Container Security Guide</em></a></p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>To complete the steps in this guide, you must have access to an OpenShift environment, along with an internet-enabled device capable of running an HTML5 capable browser.</p>
+<p>As part of your onboarding, UKCloud will provide you with a URL and credentials to access your OpenShift environment.</p>
+<p>In addition, we recommend the installation of the OpenShift CLI on your device.</p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/3.5/cli_reference/get_started_cli.html"><em>Get Started with the CLI</em></a></p>
+<h2 id="initial-environment">Initial environment</h2>
+<p>UKCloud will provision you with an OpenShift Starter Pack, providing you with 32GiB of container resources to deploy your applications.</p>
+<p>You can expand the Starter Pack in increments of 16GiB, to a maximum OpenShift environment of 176GiB. These Expansion Packs are deployed by UKCloud via a service request within the UKCloud Portal.</p>
+<h2 id="using-the-web-console">Using the web console</h2>
+<p>The OpenShift Container Platform web console is a user interface accessible from a web browser. Developers can use the web console to visualize, browse, and manage the contents of projects.</p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/3.5/getting_started/developers_console.html"><em>Web Console Walkthrough</em></a></p>
+<h2 id="using-the-command-line-interface">Using the command-line interface</h2>
+<p>With the OpenShift Container Platform command line interface (CLI), you can create applications and manage OpenShift Container Platform projects from a terminal.</p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/3.5/getting_started/developers_cli.html"><em>Basic Walkthrough Using the CLI</em></a>
+and <a href="https://docs.openshift.com/container-platform/3.5/cli_reference/index.html"><em>CLI Reference</em></a></p>
+<h2 id="using-the-api">Using the API</h2>
+<p>The OpenShift Container Platform distribution of Kubernetes includes the Kubernetes v1 REST API and the OpenShift v1 REST API. These are RESTful APIs accessible via HTTP(s) on the OpenShift Container Platform master servers.</p>
+<p>These REST APIs can be used to manage end-user applications, the cluster, and the users of the cluster.</p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/3.5/rest_api/index.html"><em>REST API Reference</em></a></p>
+<h2 id="developing-and-deploying-applications">Developing and deploying applications</h2>
+<p>OpenShift Container Platform is designed for building and deploying applications. You can begin your application's development from scratch using OpenShift Container Platform directly or develop locally then use OpenShift Container Platform to deploy your fully developed application.</p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/3.5/dev_guide/index.html"><em>Developer Guide</em></a></p>
+<h2 id="creating-and-using-images">Creating and using images</h2>
+<p>Containers in OpenShift Container Platform are based on Docker-formatted container images. An image is a binary that includes all the requirements for running a single container, as well as metadata describing its needs and capabilities. Containers only have access to resources defined in the image unless you give the container additional access when creating it.</p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/3.5/creating_images/index.html"><em>Creating images</em></a>
+and <a href="https://docs.openshift.com/container-platform/3.5/using_images/index.html"><em>Using images</em></a></p>
+<h2 id="next-steps">Next steps</h2>
+<p>In this Getting Started Guide, you've learned the basics about UKCloud for OpenShift. For more information, see the OpenShift documentation at:</p>
+<ul>
+<li><a href="https://docs.openshift.com/container-platform/3.5/welcome/index.html"><em>OpenShift Container Platform 3.5 Documentation</em></a></li>
+</ul>
+<h2 id="glossary">Glossary</h2>
+<p>This section provides a glossary of terms specific to UKCloud for OpenShift.</p>
+<p><strong>cluster</strong>  One or more masters and a set of nodes.</p>
+<p><strong>container</strong>  A lightweight mechanism for isolating running processes so that they are
+limited to interacting with only their designated resources</p>
+<p><strong>Docker</strong>  A software container platform for building and managing containerised
+applications.</p>
+<p><strong>image</strong>  A binary that includes all of the requirements for running a single
+container, as well as metadata describing its needs and capabilities.</p>
+<p><strong>Kubernetes</strong>  Manages containerized applications across a set of containers or hosts
+and provides mechanisms for deployment, maintenance, and application-scaling.</p>
+<p><strong>master server</strong>  The host or hosts that contain the master components, including the API server, controller manager server, and etcd. The master manages nodes in its Kubernetes cluster and schedules pods to run on nodes.</p>
+<p><strong>microservices</strong>  A method of developing an application as a collection of smaller
+independent services.</p>
+<p><strong>node</strong>  Provides the runtime environment for a container. Each node in a
+Kubernetes cluster has the required services to be managed by the master. Nodes also have the required services to run pods, including the Docker service, a kubelet, and a service proxy.</p>
+<p><strong>OpenShift</strong>  Red Hat's secure and comprehensive enterprise-grade container platform
+based on industry standards, Docker and Kubernetes.</p>
+<p><strong>PaaS</strong>  Platform-as-a-Service. The capability provided to the consumer is to
+deploy onto the cloud infrastructure consumer-created or acquired applications created using programming languages, libraries, services, and tools supported by the provider. The consumer does not manage or control the underlying cloud infrastructure including network, servers, operating systems, or storage, but has control over the deployed applications and possibly configuration settings for the application-hosting environment.</p>
+<p><strong>pod</strong>  A group of related containers placed onto the same host.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>© <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved. UKC-GEN-587</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-gs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

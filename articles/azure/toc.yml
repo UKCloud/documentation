@@ -2,7 +2,7 @@
   items:
   - name: Getting Started
     items:
-    - name: Getting started guide for Sovereign Azure BETA
+    - name: UKCloud for Microsoft Azure
       href: azs-gs.md
   - name: How To
     items:
@@ -10,6 +10,8 @@
       href: azs-how-ps-configure.md
     - name: Create a virtual machine
       href: azs-how-create-vm.md
+    - name: Grant users access to UKCloud for Microsoft Azure
+      href: azs-how-grant-access.md
   - name: Reference
     items:
     - name: Understanding Sovereign Azure BETA
@@ -18,5 +20,7 @@
   items:
   - name: How To
     items:
+    - name: Configure the Azure Stack user's PowerShell environment
+      href: azs-how-ps-configure-operator.md
     - name: Update Azure Stack Procedure
       href: azs-how-ps-update-azure-stack.md

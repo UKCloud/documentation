@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to grant users access to UKCloud for Microsoft Azure | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to grant users access to UKCloud for Microsoft Azure | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="how-to-grant-users-access-to-ukcloud-for-microsoft-azure">How to grant users access to UKCloud for Microsoft Azure</h1>
+
+<h2 id="overview">Overview</h2>
+<p>UKCloud for Microsoft Azure provides you with new options to harness Microsoft Azure alongside other cloud platforms, including Oracle, VMware and OpenStack. This gives you the flexibility to accommodate diverse workloads within a low latency, accredited platform with native connectivity to non-cloud workloads in Crown Hosting and the networks that are vital to the public sector: from PSN Protected to N3/HSCN and RLI.</p>
+<p>To work with UKCloud for Microsoft Azure, users must have the appropriate Azure Stack permissions. This article provides the steps for granting this access.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide you must have global administrator access to the Azure portal and Owner access to the Azure Stack portal.</p>
+<h2 id="creating-a-group-for-azure-users">Creating a group for Azure users</h2>
+<p>Rather than granting permissions to each individual user, you should first create a group and add your Azure users to that group.</p>
+<p>To create a group in the Azure portal:</p>
+<ol>
+<li><p>Log in to the Azure portal as a global administrator:</p>
+<p><a href="https://portal.azure.com">https://portal.azure.com</a></p>
+</li>
+<li><p>Navigate to the <strong>Azure Active Directory</strong>.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can find the Azure Active Directory by selecting <strong>All services</strong> and scrolling down to the <em>Security + Identity</em> section.</p>
+</div>
+</li>
+<li><p>Select <strong>Groups</strong> and then <strong>All groups</strong>.</p>
+</li>
+<li><p>Click the <strong>New group</strong> option.</p>
+</li>
+<li><p>From the <strong>Group type</strong> list, select <strong>Security</strong>.</p>
+</li>
+<li><p>In the <strong>Group name</strong> field, enter a name for the group, for example, <code>AzureStackUsers</code>.</p>
+</li>
+<li><p>In the <strong>Group description</strong> field, enter a brief, but meaningful description for the group.</p>
+</li>
+<li><p>From the <strong>Membership type</strong> list, select <strong>Assigned</strong>.</p>
+<p><img src="images/azs-portal-add-group.png" alt="Group blade"></p>
+</li>
+<li><p>Click <strong>Create</strong>.</p>
+</li>
+<li><p>To add users to the group, open the group, select <strong>Members</strong> then click <strong>Add members</strong>.</p>
+</li>
+</ol>
+<h2 id="granting-azure-permissions">Granting Azure permissions</h2>
+<p>After setting up the user group in Azure, you need to go to the Azure Stack portal to grant the appropriate permissions to the group.</p>
+<p>To grant Azure permissions to a group:</p>
+<ol>
+<li><p>Log in to the Azure Stack portal:</p>
+<p><a href="https://portal.frn00006.azure.ukcloud.com/">https://portal.frn00006.azure.ukcloud.com/</a></p>
+</li>
+<li><p>Navigate to <strong>Subscriptions</strong>.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you can't see Subscriptions in your favourites panel, click <strong>More services</strong> and then <strong>Subscriptions</strong>. You can add Subscriptions to your favourites panel by clicking the star icon.</p>
+</div>
+</li>
+<li><p>Select your subscription for UKCloud for Microsoft Azure.</p>
+</li>
+<li><p>Select <strong>Access control (IAM)</strong>.</p>
+</li>
+<li><p>Click the <strong>Add</strong> option.</p>
+</li>
+<li><p>From the <strong>Role</strong> list, select the appropriate role that you want to assign to the group:</p>
+<ul>
+<li><strong>Owner</strong>---Members of the group have full access to all resources and can manage access to resources</li>
+<li><strong>Contributor</strong>---Members of the group can create and manage all resources but cannot manage access to resources</li>
+<li><strong>Reader</strong>---Members of the group can view everything but cannot make any changes</li>
+</ul>
+</li>
+<li><p>In the <strong>Select</strong> field, enter the name of the group you created in <a href="#creating-a-group-for-azure-users">Creating a group for UKCloud for Microsoft Azure users</a>.</p>
+<p><img src="images/azs-portal_add-permissions.png" alt="Add permissions blade"></p>
+</li>
+<li><p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>For more information about Azure Stack, see the following Microsoft resources:</p>
+<ul>
+<li><a href="https://azure.microsoft.com/en-gb/get-started/"><em>Get started with Azure</em></a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-stack/"><em>Azure Stack Operator Documentation</em></a></li>
+</ul>
+<p>For more information about UKCloud for Microsoft Azure, see:</p>
+<ul>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/87af49fe-ce0f-475d-8d5f-dca53f256b64"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a></li>
+<li><a href="https://portal.ukcloud.com/support/knowledge_centre/de19b410-f844-419b-afd0-bb3dbab0a217"><em>UKCloud for Microsoft Azure FAQs</em></a></li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>© <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved. UKC-GEN- 730</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-grant-access.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br>Generated by <strong>DocFX</strong></span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>
