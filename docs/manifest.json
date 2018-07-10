@@ -37,6 +37,45 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "invalid-note-section"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-configure-cli.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-configure-cli.html",
+          "hash": "ozvmJX1zIMsGZBXt6aaBNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-configure-powershell-operators.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-configure-powershell-operators.html",
+          "hash": "cny23CuTxDODItj3FzMsJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-configure-powershell-users.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-configure-powershell-users.html",
+          "hash": "lBMZNXgukWY8tcRpYSDCKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-create-vm.md",
       "output": {
@@ -55,30 +94,6 @@
         ".html": {
           "relative_path": "articles/azure/azs-how-grant-access.html",
           "hash": "jK+MKa9Fh8Va4S7ANkoZ2A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/azure/azs-how-ps-configure-operator.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/azure/azs-how-ps-configure-operator.html",
-          "hash": "FKrPu68XiJREF/IfJvxwfA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/azure/azs-how-ps-configure.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/azure/azs-how-ps-configure.html",
-          "hash": "2wpDdC15lv++AfHiPErFYQ=="
         }
       },
       "is_incremental": false,
@@ -458,7 +473,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "5ZnRFcC6NGalvz+rHaIX8A=="
+          "hash": "wq4lofq5LvOwVfbnJG7DYQ=="
         }
       },
       "is_incremental": false,
@@ -3059,13 +3074,13 @@
           "details": "Processor RestApiDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
           "incrementalPhase": "build"
         },
         "TocDocumentProcessor": {
