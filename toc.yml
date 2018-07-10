@@ -1,15 +1,10 @@
 ﻿- name: Microsoft Azure
   href: azure/
-  topicHref: articles/azure/azs-gs.md
 - name: VMware
   href: vmware/
-  topicHref: articles/vmware/vmw-gs.md
 - name: OpenStack
   href: openstack/
-  topicHref: articles/openstack/ostack-gs.md
 - name: OpenShift
   href: openshift/
-  topicHref: articles/openshift/oshift-gs.md
 - name: Oracle
   href: oracle/
-  topicHref: articles/oracle/orcl-gs.md

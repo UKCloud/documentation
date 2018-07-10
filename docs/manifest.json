@@ -2994,7 +2994,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "+Fj2tJluSBJfYdxG85czvQ=="
+          "hash": "wEUSo+ThmEmoR4jpiQIAbQ=="
         }
       },
       "is_incremental": false,
@@ -3014,13 +3014,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build"
-        },
         "RestApiDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor RestApiDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         },
         "TocDocumentProcessor": {
