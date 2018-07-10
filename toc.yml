@@ -1,15 +1,15 @@
 ﻿- name: Microsoft Azure
-  href: azure/
-  topicHref: articles/azure/azs-how-configure-powershell-users.md
+  href: articles/azure/
+  topicHref: articles/azure/azs-gs.md
 - name: VMware
-  href: vmware/
+  href: articles/vmware/
   topicHref: articles/vmware/vmw-gs.md
 - name: OpenStack
-  href: openstack/
+  href: articles/openstack/
   topicHref: articles/openstack/ostack-gs.md
 - name: OpenShift
-  href: openshift/
+  href: articles/openshift/
   topicHref: articles/openshift/oshift-gs.md
 - name: Oracle
-  href: oracle/
+  href: articles/oracle/
   topicHref: articles/oracle/orcl-gs.md
