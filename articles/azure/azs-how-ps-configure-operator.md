@@ -1,22 +1,23 @@
 ---
-title: Configure the Azure Stack user's PowerShell environment for UKCloud |  based on Microsoft Docs
-description: Configure the Azure Stack user's PowerShell environment
+title: Configure the Azure Stack operator's PowerShell environment for UKCloud |  based on Microsoft Docs
+description: Configure the Azure Stack operator's PowerShell environment
 services: azure-stack
 author: Chris Black
 
-toc_rootlink: Users
+toc_rootlink: Operators
 toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Configure the Azure Stack user's PowerShell environment
-toc_fullpath: Users/How To/azs-how-ps-configure.md
-toc_mdlink: azs-how-ps-configure.md
+toc_fullpath: Users/How To/azs-how-ps-configure-operator.md
+toc_mdlink: azs-how-ps-configure-operator.md
+---
 ---
 
-# Configure the Azure Stack user's PowerShell environment
+# Configure the Azure Stack operator's PowerShell environment
 
-As an Azure Stack user, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates,  etc. This topic is scoped to use with the user environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:
+As an Azure Stack operator, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates,  etc. This topic is scoped to use with the operator environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:
 
 ## Prerequisites
 
@@ -47,7 +48,7 @@ Prerequisites from a Windows-based external client.
   Install-Module -Name AzureStack -RequiredVersion 1.3.0
   ```
 
-## Configure the user environment and sign in to Azure Stack
+## Configure the operator environment and sign in to Azure Stack
 
 UKCloud FRN00006 Region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the  $AzsUsername and  $AzsPassword values)
 
@@ -58,10 +59,10 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
   Set-ExecutionPolicy RemoteSigned
 
   # Register an AzureRM environment that targets your Azure Stack instance
-  Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+  Add-AzureRMEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://adminmanagement.frn00006.azure.ukcloud.com"
 
   # Sign in to your environment
-  Login-AzureRmAccount -EnvironmentName "AzureStackUser"
+  Login-AzureRmAccount -EnvironmentName "AzureStackAdmin"
    ```
 
 ### Azure Active Directory (AAD) based deployments - Embedded Credentials
@@ -71,7 +72,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
   Set-ExecutionPolicy RemoteSigned
 
   # Register an AzureRM environment that targets your Azure Stack instance
-  Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+  Add-AzureRMEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://adminmanagement.frn00006.azure.ukcloud.com"
 
   # Create your Credentials
   $AzsUsername =  "<username>@<myDirectoryTenantName>.onmicrosoft.com"
@@ -80,18 +81,13 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
     $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
 
   # Sign in to your environment
-  Login-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackUser"
+  Login-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackAdmin"
    ```
 
 ## Test the connectivity
 
-Now that we've got everything set-up, let's use PowerShell to create resources within Azure Stack. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named "MyResourceGroup":
+Now that we've got everything set-up, let's use PowerShell to list resources within Azure Stack. For example, you can list resource groups. Use the following command list all resource groups:
 
 ```powershell
-New-AzureRmResourceGroup -Name "MyResourceGroup" -Location "frn00006"
+Get-AzureRmResourceGroup -Location "frn00006"
 ```
-
-## Next steps
-
-* [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
-* [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
