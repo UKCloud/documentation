@@ -115,9 +115,9 @@ ForEach ($FolderB in $FoldersFromBase) {
                         }
                     }
                     Else {
-                    $TOCS.items += [ordered] @{
-                        name  = $($File.Sub1)
-                        items = @()
+                        $TOCS.items += [ordered] @{
+                            name  = $($File.Sub1)
+                            items = @()
                         }
                     }
                 }
