@@ -57,7 +57,8 @@
     "dest": "_site",
     "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
     "template": [
-        "_exported_templates\/default"
+        "_exported_templates\/default",
+        "custom_template"
     ]
   }
 }
