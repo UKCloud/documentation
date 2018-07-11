@@ -1,0 +1,72 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
+<style type="text/css">
+  .sideaffix.shiftup { bottom: unset; }
+  p { font-size: 22px; }
+</style>
+
+<products>
+  <div class="container">
+    <div class="product_grid-1">
+      <div class="product_grid-2 child-1">
+        <a href="#">VMware</a>
+      </div>
+      <div class="product_grid-2 child-2">
+        <a href="#">OpenStack</a>
+      </div>
+      <div class="product_grid-2 child-3">
+        <a href="#">Azure</a>
+      </div>
+      <div class="product_grid-2 child-4">
+        <a href="#">Oracle</a>
+      </div>
+      <div class="product_grid-2 child-5">
+        <a href="#">OpenShift</a>
+      </div>
+      <div class="product_grid-2 child-6">
+        <a href="#">Cloud Storage</a>
+      </div>
+      <div class="product_grid-2 child-7">
+        <a href="#">Cloud GPU</a>
+      </div>
+      <div class="product_grid-2 child-8">
+        <a href="#">High Performance Compute</a>
+      </div>
+      <div class="product_grid-2 child-9">
+        <a href="#">Cross Domain Security Zone</a>
+      </div>
+      <div class="product_grid-2 child-10">
+        <a href="#">Secure Remote Access</a>
+      </div>
+      <div class="product_grid-2 child-11">
+        <a href="#">Email and Collaboration</a>
+      </div>
+      <div class="product_grid-2 child-12">
+        <a href="#">Disaster Recovery as a Service</a>
+      </div>
+      <div class="product_grid-2 child-13">
+        <a href="#">Migration to the Cloud</a>
+      </div>
+      <div class="product_grid-2 child-14">
+        <a href="#">Private Cloud - Compute</a>
+      </div>
+      <div class="product_grid-2 child-15">
+        <a href="#">Private Cloud - Storage</a>
+      </div>
+      <div class="product_grid-2 child-16">
+        <a href="#">Connectivity</a>
+      </div>
+      <div class="product_grid-2 child-17">
+        <a href="#">Cloud Enablement</a>
+      </div>
+      <div class="product_grid-2 child-18">
+        <a href="#">UKCloud Portal</a>
+      </div>
+      <div class="product_grid-2 child-19">
+        <a href="#">Support</a>
+      </div>
+      <div class="product_grid-2 child-20">
+        <a href="#"></a>
+      </div>
+    </div>
+  </div>
+</products>
