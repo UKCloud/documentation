@@ -3,13 +3,13 @@ title: UKCloud for Microsoft Azure FAQs | UKCloud Ltd
 description: Frequently asked questions for the UKCloud for Microsoft Azure service
 services: azure
 author: Matt Warner
-toc_rootlink: FAQs
-toc_sub1: 
+toc_rootlink: Users
+toc_sub1: FAQs
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: 
-toc_fullpath: FAQs/azs-faq.md
+toc_title: UKCloud for Microsoft Azure FAQs
+toc_fullpath: Users/FAQs/azs-faq.md
 toc_mdlink: azs-faq.md
 ---
 
