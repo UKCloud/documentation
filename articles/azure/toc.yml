@@ -1,3 +1,10 @@
+- name: FAQs
+  items:
+  - name: 
+    href: azs-faq.md
+    items:
+      name: 
+      href: azs-faq.md
 - name: Users
   items:
   - name: Getting Started
@@ -16,8 +23,8 @@
       href: azs-how-grant-access.md
   - name: Reference
     items:
-    - name: Understanding Sovereign Azure BETA
-      href: azs-qr-overview.md
+    - name: Understanding UKCloud for Microsoft Azure
+      href: azs-ref-overview.md
 - name: Operators
   items:
   - name: How To
