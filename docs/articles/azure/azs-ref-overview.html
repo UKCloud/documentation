@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Understanding Sovereign Azure BETA | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Understanding UKCloud for Microsoft Azure | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Understanding Sovereign Azure BETA | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="title" content="Understanding UKCloud for Microsoft Azure | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -77,174 +77,30 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="understanding-sovereign-azure-beta">Understanding Sovereign Azure BETA</h1>
+<h1 id="understanding-ukcloud-for-microsoft-azure">Understanding UKCloud for Microsoft Azure</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>UKCloud's Sovereign Azure cloud provides you with new options to harness Microsoft Azure alongside other cloud platforms, including Oracle, VMware and OpenStack. This gives you the flexibility to accommodate diverse workloads within a low latency, accredited platform with native connectivity to non-cloud workloads in Crown Hosting and the networks that are vital to the public sector: from PSN Protected to N3/HSCN and RLI.</p>
-<p>This article provides an introduction to the Sovereign Azure cloud and helps you get up and running with the demonstrator units that we're providing as a BETA environment.</p>
-<h2 id="about-sovereign-azure">About Sovereign Azure</h2>
-<p>At UKCloud, we understand that there is no &quot;one cloud fits all&quot; solution. There are usually many factors to consider when looking to move your applications to the cloud, including existing technology investment and skills. Additionally, while some applications can easily move to the public cloud, there are others that for various reasons (latency, connectivity, security, regulation) must run on-premises.</p>
-<p>Microsoft Azure Stack is an extension of Azure that provides on-premises Infrastructure-as-a-Service (IaaS) and Platform-as-a-Service (PaaS) that enables you to leverage the benefits of cloud in an on-premises environment. The Sovereign Azure cloud brings the advantages of the Microsoft Cloud platform to our assured UK-sovereign platform, helping you realise the benefits that a true hybrid cloud environment has to offer, while balancing the right amount of flexibility and control.</p>
-<p>With Sovereign Azure, you can:</p>
-<ul>
-<li>Leverage existing Azure investment, knowledge and skills</li>
-<li>Use Azure Stack alongside other technologies, for example, VMware, OpenStack and Oracle</li>
-<li>Connect to government community networks, including PSN, N3/HSCN, Janet and RLI</li>
-<li>Meet specific compliance directives, such as data sovereignty or security</li>
-</ul>
-<p>The two main delivery models provided by our Sovereign Azure cloud are:</p>
-<ul>
-<li>A multi-tenant IaaS and PaaS platform available in both UKCloud security domains (Assured OFFICIAL and Elevated OFFICIAL), connected to government community networks with UKCloud's award-winning support</li>
-<li>Private cloud deployment of Sovereign Azure dedicated to a single customer</li>
-</ul>
+<p>UKCloud for Microsoft Azure provides you with new options to harness Microsoft Azure alongside other cloud platforms, including Oracle, VMware and OpenStack. This gives you the flexibility to accommodate diverse workloads within a low latency, accredited platform with native connectivity to non-cloud workloads in Crown Hosting and the networks that are vital to the public sector: from PSN Protected to N3/HSCN and RLI.</p>
+<p>This article provides an introduction to UKCloud for Microsoft Azure and helps you get up and running.</p>
 <h2 id="supported-features">Supported features</h2>
-<p>Our Sovereign Azure cloud is currently offered as a BETA opportunity for our customers to familiarise themselves with our Azure service. This is intended as a first look—with the service evolving throughout the BETA to represent the live production service. Subsequently, some features may be added, altered or withdrawn throughout the BETA as our understanding evolves.</p>
-<p>At initial launch, Sovereign Azure BETA supports the following Azure Stack IaaS features:</p>
+<p>UKCloud for Microsoft Azure supports the following Azure Stack IaaS features:</p>
 <h3 id="compute">Compute</h3>
-<p>Virtual machines (VMs) provide the basic compute building blocks in Azure Stack. The table below lists the VM sizes available.</p>
-<table>
-<thead>
-<tr>
-<th>Size</th>
-<th>vCPU</th>
-<th>Memory (GiB)</th>
-<th>Temp storage (GiB)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Standard_D1_v2</td>
-<td>1</td>
-<td>3.5</td>
-<td>50</td>
-</tr>
-<tr>
-<td>Standard_D2_v2</td>
-<td>2</td>
-<td>7</td>
-<td>100</td>
-</tr>
-<tr>
-<td>Standard_D3_v2</td>
-<td>4</td>
-<td>14</td>
-<td>200</td>
-</tr>
-<tr>
-<td>Standard_D4_v2</td>
-<td>8</td>
-<td>28</td>
-<td>400</td>
-</tr>
-<tr>
-<td>Standard_A0</td>
-<td>1</td>
-<td>0.768</td>
-<td>20</td>
-</tr>
-<tr>
-<td>Standard_A1</td>
-<td>1</td>
-<td>1.75</td>
-<td>70</td>
-</tr>
-<tr>
-<td>Standard_A2</td>
-<td>2</td>
-<td>3.5</td>
-<td>135</td>
-</tr>
-<tr>
-<td>Standard_A3</td>
-<td>4</td>
-<td>7</td>
-<td>285</td>
-</tr>
-<tr>
-<td>Standard_A4</td>
-<td>8</td>
-<td>14</td>
-<td>605</td>
-</tr>
-<tr>
-<td>Standard_A5</td>
-<td>2</td>
-<td>14</td>
-<td>135</td>
-</tr>
-<tr>
-<td>Standard_A6</td>
-<td>4</td>
-<td>28</td>
-<td>285</td>
-</tr>
-<tr>
-<td>A0\Basic_A0</td>
-<td>1</td>
-<td>768 MB</td>
-<td>20 GB</td>
-</tr>
-<tr>
-<td>A1\Basic_A1</td>
-<td>1</td>
-<td>1.74 GB</td>
-<td>40 GB</td>
-</tr>
-<tr>
-<td>A2\Basic_A2</td>
-<td>2</td>
-<td>3.5 GB</td>
-<td>60 GB</td>
-</tr>
-<tr>
-<td>A3\Basic_A3</td>
-<td>4</td>
-<td>7 GB</td>
-<td>120 GB</td>
-</tr>
-<tr>
-<td>A4\Basic_A4</td>
-<td>8</td>
-<td>14 GB</td>
-<td>240 GB</td>
-</tr>
-<tr>
-<td>Standard_DS11_v2</td>
-<td>2</td>
-<td>14</td>
-<td>28</td>
-</tr>
-<tr>
-<td>Standard_DS12_v2</td>
-<td>4</td>
-<td>28</td>
-<td>56</td>
-</tr>
-</tbody>
-</table>
-<p><strong><em>need to confirm list above is correct and up to date</em></strong></p>
+<p>Virtual machines (VMs) provide the basic building block providing compute in Azure Stack. For a list of available VM sizes, see: <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes">https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes</a>.</p>
 <p>You can deploy VMs using the Azure Stack portal and other tooling. VMs have the following support:</p>
 <ul>
-<li><p>API</p>
-</li>
-<li><p>Azure Stack Marketplace—provides access to pre-created images which help speed up application delivery</p>
-</li>
-<li><p>Azure Resource Manager—enables you to write templates to deploy, update and delete Azure Stack resources in a single coordinated operation</p>
-<p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-vm-considerations">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-vm-considerations</a></p>
-</li>
+<li>API</li>
+<li>Azure Stack Marketplace - Provides access to pre-created images that help speed up application delivery</li>
+<li>Azure Resource Manager - Enables you to write templates to deploy, update and delete Azure Stack resources in a single co-ordinated operation</li>
 </ul>
+<p><a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-considerations">https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-considerations</a></p>
 <h3 id="network">Network</h3>
 <ul>
-<li><p>Virtual networks—Configure virtual private clouds, create and manage your private address space within Azure; you can configure this via the UI, API and other tooling</p>
-</li>
-<li><p>Load balancers (IPv4 only)—Deploy basic load balancers</p>
-</li>
-<li><p>VPN gateway—Create site-to-site VPNs to remote infrastructure with the Azure Stack VPN gateway</p>
-</li>
-<li><p>Routing—Configure basic custom-defined routing on virtual networks; Vnet to Vnet peering is not yet supported</p>
-<p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-network-differences">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-network-differences</a></p>
-</li>
+<li>Virtual networks - Azure Stack enables you to configure virtual private clouds, create and manage your private address space within Azure; you can configure this via the UI, API and other tooling</li>
+<li>Load balancers (IPv4 only) — You can deploy basic load balancers</li>
+<li>VPN gateway — You can use the Azure Stack VPN gateway to create site-to-site VPNs to remote infrastructure</li>
+<li>Routing — You can configure basic custom defined routing on virtual networks; Vnet to Vnet peering is not yet supported</li>
 </ul>
+<p><a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-network-differences">https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-network-differences</a></p>
 <h3 id="storage">Storage</h3>
 <table>
 <thead>
@@ -262,18 +118,18 @@
 </tr>
 <tr>
 <td>Azure Blob Storage (page)</td>
-<td>Used to support VM disks; good for randomly accessed large files</td>
+<td>Used to support virtual machine disks; good for randomly accessed large files</td>
 <td></td>
 </tr>
 <tr>
 <td>Azure Blob Storage (append)</td>
 <td>Used for log files</td>
-<td></td>
+<td> </td>
 </tr>
 <tr>
 <td>Azure Queue Storage</td>
 <td>Message queue as a service to provide asynchronous scale out micro-services, among other things</td>
-<td></td>
+<td> </td>
 </tr>
 <tr>
 <td>Azure Table Storage</td>
@@ -284,16 +140,14 @@
 </table>
 <h3 id="advanced-features">Advanced features</h3>
 <ul>
-<li><p>Key Vault—Azure Stack provides crytographic secret storage for applications and services. These services can be consumed by both the portal and API.</p>
-<p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-kv-intro">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-kv-intro</a></p>
-</li>
+<li>Key Vault — Azure Stack provides cryptographic secret storage for applications and services. These services can be consumed by both portal and API.</li>
 </ul>
+<p><a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-kv-intro">https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-kv-intro</a></p>
 <h2 id="design-considerations">Design considerations</h2>
-<p>When designing your Sovereign Azure applications using our BETA service, you should consider the following:</p>
+<p>When designing your UKCloud for Microsoft Azure applications, consider the following:</p>
 <h3 id="compute-1">Compute</h3>
 <ul>
-<li>Resource restrictions—UKCloud will provide BETA customers with an amount of useable compute resource (which will be advised upon onboarding). Customers will be able to use this resource as they wish—but will not be able to exceed this resource. Consider the VM sizes required to prove the functionality required.</li>
-<li>Azure Stack supports a subset of Azure VM extensions; Sovereign Azure currently supports the following:
+<li><p>Azure Stack supports a subset of Azure VM extensions; UKCloud for Microsoft Azure currently supports the following:</p>
 <ul>
 <li>BGInfo v2.1</li>
 <li>CustomScriptExtension v1.8</li>
@@ -308,27 +162,29 @@
 <li>IaaSDiagnostics v1.10.1.1</li>
 <li>MicrosoftMonitoringAgent v1.0.10900.0</li>
 </ul>
+<p>For an up-to-date list of the supported extensions, perform the following steps:</p>
+<p>First, ensure that you've installed the relevant Azure PowerShell tools from the following links:</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install</a></p>
+<p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download</a></p>
+<p>Then run the following commands:</p>
+<pre><code class="lang-powershell">Add-AzureRMEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+Login-AzureRmAccount -EnvironmentName &quot;AzureStackAdmin&quot;
+Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageType | ` Get-AzureRmVMExtensionImage | ` Select Type, Version | ` Format-Table -Property * -AutoSize
+</code></pre>
+</li>
+<li><p>Use load balancers to make the best use of IP address quota</p>
+</li>
+<li><p>Azure Stack API may be a couple of releases behind Azure</p>
+</li>
+<li><p>Single region and single state set (affects availability)</p>
+</li>
+<li><p>VM sets don't support auto-scale, so consider how to handle load</p>
+</li>
+<li><p>Check Azure Resource Manager (ARM) templates to see if they're compatible with Azure Stack</p>
 </li>
 </ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>For an up-to-date list of the supported extensions, perform the following steps:</p>
-</div>
-<p>First, ensure that you've installed the relevant Azure PowerShell tools from the following links:</p>
-<p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install</a>
-<a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download</a></p>
-<p>Then run the following commands:</p>
-<pre><code class="lang-powershell">Add-AzureRMEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot; Login-AzureRmAccount -EnvironmentName &quot;AzureStackAdmin&quot; Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageType | ` Get-AzureRmVMExtensionImage | ` Select Type, Version | ` Format-Table -Property * -AutoSize
-</code></pre>
-<ul>
-<li>Use load balancers to make the best use of IP address quota.</li>
-<li>Azure Stack API may be a couple of releases behind Azure.</li>
-<li>Single region and single state set (affects availability).</li>
-<li>VM sets don't support auto-scale, so consider how to handle load.</li>
-<li>Check Azure Resource Manager (ARM) templates to see if they're compatible with Azure Stack.</li>
-</ul>
 <h3 id="storage-1">Storage</h3>
-<p>Azure Stack storage is all served from the same pool of disks and doesn't provide &quot;limitless&quot; storage, so you should consider the following:</p>
+<p>Azure Stack storage is all served from the same pool of disks and does not provide “limitless” storage, so you should consider the following:</p>
 <ul>
 <li>Use blob storage (object storage) to support the application; not for multiple petabytes of data storage</li>
 <li>Put large volume data on UKCloud's Cloud Storage</li>
@@ -338,18 +194,23 @@
 <li>No guarantees around IOPs</li>
 <li>Use blob storage for queues to help deliver scalable micro-services</li>
 </ul>
-<h2 id="accessing-sovereign-azure-demonstrator-units">Accessing Sovereign Azure demonstrator units</h2>
-<p>You can access Sovereign Azure from the following location:</p>
+<h2 id="accessing-ukcloud-for-microsoft-azure">Accessing UKCloud for Microsoft Azure</h2>
+<p>You can access UKCloud for Microsoft Azure from the following location:</p>
 <p><a href="https://portal.frn00006.azure.ukcloud.com/">https://portal.frn00006.azure.ukcloud.com/</a></p>
 <h2 id="further-information">Further information</h2>
 <p>For more information about Azure Stack, see the following Microsoft resources:</p>
-<p><a href="https://azure.microsoft.com/en-gb/get-started/">Get Started with Azure</a>
-<a href="https://docs.microsoft.com/en-us/azure/azure-stack/">Azure Stack Operator Documentation</a></p>
-<p>For more information about our Sovereign Azure service, see:</p>
-<p><a href="https://portal.ukcloud.com/support/knowledge_centre/de19b410-f844-419b-afd0-bb3dbab0a217">Sovereign Azure BETA FAQs</a></p>
+<ul>
+<li><a href="https://azure.microsoft.com/en-gb/get-started/"><em>Get Started with Azure</em></a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-stack/"><em>Azure Stack Operator Documentation</em></a></li>
+</ul>
+<p>For more information about UKCloud for Microsoft Azure, see:</p>
+<ul>
+<li><a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a></li>
+<li><a href="azs-faq.html"><em>UKCloud for Microsoft Azure FAQs</em></a></li>
+</ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this article, or any other aspect of your UKCloud experience, send them to feedback@ukcloud.com.</p>
-<p>(c) UKCloud Ltd, 2018. All Rights Reserved.</p>
+<p>If you have any comments on this article, or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>© UKCloud Ltd, 2018. All Rights Reserved.</p>
 
             </article>
           </div>

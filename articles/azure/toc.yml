@@ -1,12 +1,9 @@
-- name: FAQs
-  items:
-  - name: 
-    href: azs-faq.md
-    items:
-      name: 
-      href: azs-faq.md
 - name: Users
   items:
+  - name: FAQs
+    items:
+    - name: UKCloud for Microsoft Azure FAQs
+      href: azs-faq.md
   - name: Getting Started
     items:
     - name: UKCloud for Microsoft Azure
