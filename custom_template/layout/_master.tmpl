@@ -23,7 +23,7 @@
         {{>partials/searchResults}}
       </div>
         {{/_enableSearch}}
-      <div role="main" class="container body-content hide-when-search">
+      <div role="main" class="container-fluid body-content hide-when-search">
         {{^_disableToc}}
         {{>partials/toc}}
         <div class="article row grid-right">
@@ -35,18 +35,26 @@
           <div class="col-md-12">
             {{/_disableAffix}}
             {{^_disableAffix}}
-          <div class="col-md-10">
-            {{/_disableAffix}}
-            <article class="content wrap" id="_content" data-uid="{{uid}}">
-              {{!body}}
-              {{#_showGrid}}
-              {{>partials/products}}
-              {{/_showGrid}}
-            </article>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                {{/_disableAffix}}
+                <article class="content wrap" id="_content" data-uid="{{uid}}">
+                  {{#_showGrid}}<div class="col-md-offset-2">{{/_showGrid}}{{!body}}{{#_showGrid}}</div>{{/_showGrid}}
+                  <div class="row">
+                    <div class="col-md-offset-2 col-md-10">
+                      {{#_showGrid}}
+                      {{>partials/products}}
+                      {{/_showGrid}}
+                    </div>
+                  </div>
+                </article>
+              </div>
+              {{^_disableAffix}}
+              {{>partials/affix}}
+              {{/_disableAffix}}
+            </div>
           </div>
-          {{^_disableAffix}}
-          {{>partials/affix}}
-          {{/_disableAffix}}
         </div>
       </div>
       {{^_disableFooter}}
