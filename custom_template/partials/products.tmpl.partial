@@ -8,64 +8,64 @@
   <div class="container">
     <div class="product_grid-1">
       <a href="http://docs.ukcloud.com/articles/vmware/vmw-gs.html">
-        <div class="product_grid-2 child-1">VMware</div>
+        <div class="product_grid-2 child-1 border-main">VMware</div>
       </a>
       <a href="http://docs.ukcloud.com/articles/openstack/ostack-gs.html">
-        <div class="product_grid-2 child-2">OpenStack</div>
+        <div class="product_grid-2 child-2 border-main">OpenStack</div>
       </a>
       <a href="http://docs.ukcloud.com/articles/azure/azs-gs.html">
-        <div class="product_grid-2 child-3">Azure</div>
+        <div class="product_grid-2 child-3 border-main">Azure</div>
       </a>
       <a href="http://docs.ukcloud.com/articles/oracle/orcl-gs.html">
-        <div class="product_grid-2 child-4">Oracle</div>
+        <div class="product_grid-2 child-4 border-main">Oracle</div>
       </a>
       <a href="http://docs.ukcloud.com/articles/openshift/oshift-gs.html">
-        <div class="product_grid-2 child-5">OpenShift</div>
+        <div class="product_grid-2 child-5 border-main border-right">OpenShift</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-6">Cloud Storage</div>
+        <div class="product_grid-2 child-6 border-main">Cloud Storage</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-7">Cloud GPU</div>
+        <div class="product_grid-2 child-7 border-main">Cloud GPU</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-8">High Performance Compute</div>
+        <div class="product_grid-2 child-8 border-main">High Performance Compute</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-9">Cross Domain Security Zone</div>
+        <div class="product_grid-2 child-9 border-main">Cross Domain Security Zone</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-10">Secure Remote Access</div>
+        <div class="product_grid-2 child-10 border-main border-right">Secure Remote Access</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-11">Email and Collaboration</div>
+        <div class="product_grid-2 child-11 border-main">Email and Collaboration</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-12">Disaster Recovery as a Service</div>
+        <div class="product_grid-2 child-12 border-main">Disaster Recovery as a Service</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-13">Migration to the Cloud</div>
+        <div class="product_grid-2 child-13 border-main">Migration to the Cloud</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-14">Private Cloud - Compute</div>
+        <div class="product_grid-2 child-14 border-main">Private Cloud - Compute</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-15">Private Cloud - Storage</div>
+        <div class="product_grid-2 child-15 border-main border-right">Private Cloud - Storage</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-16">Connectivity</div>
+        <div class="product_grid-2 child-16 border-main border-bottom">Connectivity</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-17">Cloud Enablement</div>
+        <div class="product_grid-2 child-17 border-main border-bottom">Cloud Enablement</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-18">UKCloud Portal</div>
+        <div class="product_grid-2 child-18 border-main border-bottom">UKCloud Portal</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-19">Support</div>
+        <div class="product_grid-2 child-19 border-main border-bottom">Support</div>
       </a>
       <a href="">
-        <div class="product_grid-2 child-20"></div>
+        <div class="product_grid-2 child-20 border-main border-right border-bottom"></div>
       </a>
     </div>
   </div>
