@@ -112,7 +112,7 @@ If you have the appropriate permissions, you can use the Portal to create a comp
 
 7. When the build is complete, the page displays either a success or fail message.
 
-    If the build is successful, you can start building VDCs in your compute service (see [Building a virtual data centre](#building_a_virtual_data_centre)).
+    If the build is successful, you can start building VDCs in your compute service (see [Building a virtual data centre](#building-a-virtual-data-centre)).
 
     ![Build Compute Service Status - success](images/vmw-portal-build-compute-service-success.png)
 
@@ -165,7 +165,7 @@ After creating your compute service, the next step is to create one or more VDCs
 
 7. When the build is complete, the page displays either a success or fail message.
 
-    If the build is successful, you can start building VMs. To provide external access to the VDC, you'll need to create an edge gateway (see [*How to build an edge gateway using the UKCloud Portal*](../vmware/vmw-how-build-edge.md)).
+    If the build is successful, you can start building VMs. To provide external access to the VDC, you'll need to create an edge gateway (see [*How to build an edge gateway using the UKCloud Portal*](vmw-how-build-edge.md)).
 
     ![Build VDC Status - success](images/vmw-portal-build-vdc-success.png)
 
