@@ -426,8 +426,7 @@ If the volume that you want to retype is not attached to an instance, you can re
 
     > [!NOTE]
     > You may notice duplicate volumes while the retyping process is running. These duplicate volumes will disappear when the process has completed.
-
-    > [IMPORTANT!]
+    > [!IMPORTANT]
     > Do not attach a retyped volume to an instance until the retyping process has completed successfully.
 
 #### Retyping an independent volume using the OpenStack CLI
@@ -532,6 +531,7 @@ You can find additional information in the following places:
 - **Ansible** --- For information on Ansible's support for working with OpenStack resources, see the Ansible documentation at <http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack>
 
 ## Glossary
+
 This section provides a glossary of terms specific to UKCloud for OpenStack.
 
 **UKCloud for OpenStack**&nbsp;&nbsp;A UKCloud IaaS service that provides a cloud platform specifically designed around the needs of digital communities, and engineered to facilitate true cloud-native applications.
@@ -572,5 +572,3 @@ network mounted onto the host hypervisor.
 
 If you have any comments on this document or any other aspect of your
 UKCloud experience, send them to <products@ukcloud.com>.
-
-&copy; [UKCloud Ltd](http://ukcloud.com), 2018. All Rights Reserved. UKC-GEN-427

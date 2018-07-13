@@ -323,5 +323,3 @@ GPG 13.
 
 For more information about this service, see our [Protective Monitoring
 FAQs](https://portal.skyscapecloud.com/support/knowledge_centre/712f70cc-e20b-4848-bbf5-3546d34aee51).
-
-&copy; [UKCloud Ltd](http://ukcloud.com), 2018. All Rights Reserved.
