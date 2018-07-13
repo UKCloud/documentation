@@ -189,23 +189,23 @@ To grant a user access to UKCloud for Microsoft Azure:
 
 6. Select **Members** then click **Add members**.
 
-7. Select the user thatyou want to add to the group and click **Select**.
+7. Select the user that you want to add to the group and click **Select**.
 
 ## Configuring the Azure CLI
 
 Azure provides a command line interface (CLI) that you can use to manage your Azure resources. For example, you can use the Azure CLI to create virtual machines and deploy Azure Resource Manager templates.
 
-For more information, including steps for setting up the Azure CLI with UKCloud for Microsoft Azure and a list of known issues, see:
+For more information, including steps for setting up the Azure CLI with UKCloud for Microsoft Azure, see:
 
-<https://github.com/UKCloud/AzureStack/blob/master/docs/Tenants/AzureCLI/ConfigureAzureCLIEnvironment.md>
+- [Configure AzureCLI Environment](azs-how-configure-cli.md)
 
 ## Configuring the Azure Stack PowerShell client
 
 You can use PowerShell to manage your Azure resources. For example, you can create virtual machines and deploy Azure Resource Manager templates.
 
-For more information, including steps and scripts for setting up Azure PowerShell with UKCloud for Microsoft Azure and a list of known issues, see:
+For more information, including steps and scripts for setting up Azure PowerShell with UKCloud for Microsoft Azure, see:
 
-<https://github.com/UKCloud/AzureStack/blob/master/docs/Tenants/PowerShell/ConfigurePowerShellEnvironment.md>
+- [Configure PowerShell Environment](azs-how-configure-powershell-users.md)
 
 ## Next steps
 
