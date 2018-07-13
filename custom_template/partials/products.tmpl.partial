@@ -7,19 +7,19 @@
 <products>
   <div class="container">
     <div class="product_grid-1">
-      <a href="http://docs.ukcloud.com/articles/vmware/vmw-gs.html">
+      <a href="/articles/vmware/vmw-gs.html">
         <div class="product_grid-2 child-1 border-main">VMware</div>
       </a>
-      <a href="http://docs.ukcloud.com/articles/openstack/ostack-gs.html">
+      <a href="/articles/openstack/ostack-gs.html">
         <div class="product_grid-2 child-2 border-main">OpenStack</div>
       </a>
-      <a href="http://docs.ukcloud.com/articles/azure/azs-gs.html">
+      <a href="/articles/azure/azs-gs.html">
         <div class="product_grid-2 child-3 border-main">Azure</div>
       </a>
-      <a href="http://docs.ukcloud.com/articles/oracle/orcl-gs.html">
+      <a href="/articles/oracle/orcl-gs.html">
         <div class="product_grid-2 child-4 border-main">Oracle</div>
       </a>
-      <a href="http://docs.ukcloud.com/articles/openshift/oshift-gs.html">
+      <a href="/articles/openshift/oshift-gs.html">
         <div class="product_grid-2 child-5 border-main border-right">OpenShift</div>
       </a>
       <a href="">
