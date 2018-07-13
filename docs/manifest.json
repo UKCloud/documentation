@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "HHcjahdsVfFXoYSVkF7IiA=="
+          "hash": "M/dd9xrfaOwnZtxibn87Yg=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "CbKPfZvPvoZ/6+sM+jP0/A=="
+          "hash": "t8OdZX0uYioUfzDA6idO4g=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-gs.html",
-          "hash": "TdF0l5HoeLogk9q56wPB7A=="
+          "hash": "RJcLzKei75e08BVfowwSag=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-cli.html",
-          "hash": "XjerH0huTNGLZh9Kk5Tehw=="
+          "hash": "VVjcuje8iyg7xoJjIw/W2w=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-powershell-operators.html",
-          "hash": "fCTy/PyCURiuJJvwhGHQWw=="
+          "hash": "XdlFlQSiWTaK+OfePES+KA=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-powershell-users.html",
-          "hash": "3CsF1B/rTcKXSKMCAXr6AA=="
+          "hash": "ux3EHlNCqBhqHBDS8U10Aw=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm.html",
-          "hash": "jTLcbP+G7HAPyCBBuzLNRw=="
+          "hash": "yZUdg9W97AKbGnxtd845zA=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-grant-access.html",
-          "hash": "y2i7P2DpXcU01HWv2HDNnQ=="
+          "hash": "1DrymCD14cNX+dRCYaTbUw=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-ps-update-azure-stack.html",
-          "hash": "RQfoORHstjsabXWo4iVySQ=="
+          "hash": "pmM4RYzVzBE4ciURfyLY5w=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-overview.html",
-          "hash": "4nmhqdROJMI4FwqwkaK8uQ=="
+          "hash": "nUTrmdyXJD2gWiAjzKnStQ=="
         }
       },
       "is_incremental": false,
@@ -494,7 +494,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-gs-walled-garden.html",
-          "hash": "xt0EGuEV5DJhu5WsHlNI0g=="
+          "hash": "w87DYgKWMiKUo00FLD3Ndg=="
         }
       },
       "is_incremental": false,
@@ -540,7 +540,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-gs.html",
-          "hash": "SGahmehe/+V4ZuNLEhkUbQ=="
+          "hash": "dwufYUmgUtOLZ/q8FKEb/w=="
         }
       },
       "is_incremental": false,
@@ -552,7 +552,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-view-info-portal.html",
-          "hash": "i8pG0YkyeDugUFoH3W5BYg=="
+          "hash": "cKIy69GK/UAd4Jmhg4n6UA=="
         }
       },
       "is_incremental": false,
@@ -757,7 +757,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-gs.html",
-          "hash": "1+LPMXklcYoG8OJ0mX2C/g=="
+          "hash": "wcyrgR16Ypj1oOttxOmtSw=="
         }
       },
       "is_incremental": false,
@@ -980,7 +980,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/gpu-gs-compute.html",
-          "hash": "VmoClp+/jtpwh2waZ7VKwg=="
+          "hash": "EwtvdONMEAQBYLShd4en+w=="
         }
       },
       "is_incremental": false,
@@ -992,7 +992,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/gpu-gs-visualisation.html",
-          "hash": "xaqOaEFKKyH6sBswP5UPVw=="
+          "hash": "rm8K/GTEbp0PeNpi+7bN+Q=="
         }
       },
       "is_incremental": false,
@@ -1187,23 +1187,23 @@
       "version": ""
     },
     {
-      "type": "Toc",
+      "type": "Resource",
       "source_relative_path": "articles/images/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/images/toc.html",
-          "hash": "b84zk5/psIQCA6fB0jhsYA=="
+        "resource": {
+          "relative_path": "articles/images/toc.yml"
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "type": "Resource",
+      "type": "Toc",
       "source_relative_path": "articles/images/toc.yml",
       "output": {
-        "resource": {
-          "relative_path": "articles/images/toc.yml"
+        ".html": {
+          "relative_path": "articles/images/toc.html",
+          "hash": "b84zk5/psIQCA6fB0jhsYA=="
         }
       },
       "is_incremental": false,
@@ -1249,7 +1249,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-gs.html",
-          "hash": "dBQtoMUETxSpl2ov3XC5+w=="
+          "hash": "PM6tHKUQBW0o4mW6PfCSiw=="
         }
       },
       "is_incremental": false,
@@ -1746,7 +1746,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-gs.html",
-          "hash": "0nh7iC6lBXgtEeEBrdWSaQ=="
+          "hash": "SfEDCadDwMTPkK63ELMVRg=="
         }
       },
       "is_incremental": false,
@@ -1968,7 +1968,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-gs.html",
-          "hash": "YLNPZiLgJjDgzfaim4us7A=="
+          "hash": "8Ian2KieF11PDKI5Mf20Tw=="
         }
       },
       "is_incremental": false,
@@ -1992,7 +1992,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-browsers.html",
-          "hash": "SPYvvJuqSVfr3RV6QlcgpA=="
+          "hash": "ZDN2ABVqCqPL6IHaN+sCBw=="
         }
       },
       "is_incremental": false,
@@ -2093,7 +2093,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "mXGXQJpXc1es7WmBiSpORw=="
+          "hash": "oJ1A0PXhuKCwNXneLmQ1wQ=="
         }
       },
       "is_incremental": false,
@@ -2207,7 +2207,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-gs.html",
-          "hash": "IQeok/vtg7tfwqHUetBhtg=="
+          "hash": "Qp5LwnYRC9CsGmWDpRqjuQ=="
         }
       },
       "is_incremental": false,
@@ -2234,7 +2234,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/support-docs/sup-dfx-file-names.html",
-          "hash": "swWS25SM6ZK7tfX8UgdcZg=="
+          "hash": "DA7uPPwuZF+a7VC6F4d5oQ=="
         }
       },
       "is_incremental": false,
@@ -2875,7 +2875,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs-draas.html",
-          "hash": "ZW/SN8FFnwlqQjblVk882A=="
+          "hash": "/U3Prkv6Di0XQ20HesK+gg=="
         }
       },
       "is_incremental": false,
@@ -2887,7 +2887,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs-journaling.html",
-          "hash": "QqY0/qiDKKT2LNhERz6PmA=="
+          "hash": "X2C+GwaLDEnynH1mqZX5PQ=="
         }
       },
       "is_incremental": false,
@@ -2902,7 +2902,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "VE1882I+IF6WwCA5cVuShQ=="
+          "hash": "DleAuap+P60frUa3YzcKwg=="
         }
       },
       "is_incremental": false,
@@ -2914,7 +2914,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-syslog-data.html",
-          "hash": "pMIZ7UcZ8fvguVZLKZMwhg=="
+          "hash": "A9rErLVfUrCr6qECYdWFzw=="
         }
       },
       "is_incremental": false,
@@ -2926,7 +2926,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-vcloud-api.html",
-          "hash": "1CIjtAxMgTs0uZFjoq3t3A=="
+          "hash": "ESYqUPC1R9zq8BPENiVJxg=="
         }
       },
       "is_incremental": false,
@@ -2941,7 +2941,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-api-ipsec-vpn.html",
-          "hash": "EWUQcwIxDZhOBLhQdY6dLA=="
+          "hash": "3QRq3UAdiS2ooF2XstVgKQ=="
         }
       },
       "is_incremental": false,
@@ -2953,7 +2953,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-install-openvpn.html",
-          "hash": "11JtL6pq+5HT9rXXzdJFeA=="
+          "hash": "XX8v6UAB5OHmuYYYj4x4rQ=="
         }
       },
       "is_incremental": false,
@@ -2965,7 +2965,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-install-vcloud-api-rest-client.html",
-          "hash": "foT+Z5GRRZhPWdG+wGx4xA=="
+          "hash": "4B5BrOjIi20NjCA2mYR+xw=="
         }
       },
       "is_incremental": false,
@@ -2988,7 +2988,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "mwAVJKF4/4xjxTQA6mi9EQ=="
+          "hash": "i+ueV53QJLDBhcc/M+vNGA=="
         }
       },
       "is_incremental": false,
@@ -3011,7 +3011,7 @@
       "output": {
         ".html": {
           "relative_path": "restapi/contacts.html",
-          "hash": "rVKvyN+HMMP2l+rLzIraZQ=="
+          "hash": "+6L8LOOO3rRJqcrYg1d42g=="
         }
       },
       "is_incremental": false,
@@ -3023,7 +3023,7 @@
       "output": {
         ".html": {
           "relative_path": "restapi/petstore.html",
-          "hash": "oTWqGF0ifBvbcEfrW5VldQ=="
+          "hash": "d9sUVeYOtUabLwlwGR8w7w=="
         }
       },
       "is_incremental": false,
