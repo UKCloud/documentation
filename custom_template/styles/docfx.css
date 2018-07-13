@@ -743,7 +743,7 @@ footer {
     display: inline-block;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   #mobile-indicator {
     display: block;
   }
@@ -787,7 +787,7 @@ footer {
   .toc .level1 > li {
     display: block;
   }
-  
+
   .toc .level1 > li:after {
     display: none;
   }
