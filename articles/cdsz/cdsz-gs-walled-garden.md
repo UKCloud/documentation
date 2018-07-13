@@ -162,5 +162,3 @@ with self-service access to the CSDZ so that you can design, implement and manag
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
-
-&copy; [UKCloud Ltd](http://ukcloud.com), 2018. All Rights Reserved. UKC-GEN-484

@@ -324,7 +324,6 @@ For more detailed information about building Oracle applications in your UKCloud
 - [*vCNS Edge services: load balancer*](https://portal.ukcloud.com/support/knowledge_centre/9b4f5898-9464-4ea6-8a64-6bacb686bd0e)
 
 ### Virtual machines
-----------------
 
 -   [*How to build an Oracle virtual machine*](https://portal.ukcloud.com/support/knowledge_centre/c576fb57-ab2d-46aa-b116-8c7b873fdc45)
 
@@ -366,5 +365,3 @@ resource requirements and the UKCloud platform optimises its placement to ensure
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
-
-&copy; [UKCloud Ltd](http://ukcloud.com), 2018. All Rights Reserved. UKC-GEN-548
