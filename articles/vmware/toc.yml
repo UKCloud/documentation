@@ -1,3 +1,11 @@
+- name: Getting Started
+  items:
+  - name: Disaster Recovery as a Service
+    href: vmw-gs-draas.md
+  - name: Journaling Protection
+    href: vmw-gs-journaling.md
+  - name: UKCloud for VMware
+    href: vmw-gs.md
 - name: How To
   items:
   - name: Access syslog data for your edge gateway
@@ -10,11 +18,3 @@
     href: vmw-how-install-vcloud-api-rest-client.md
   - name: Install and configure OpenVPN
     href: vmw-how-install-openvpn.md
-- name: Getting Started
-  items:
-  - name: Disaster Recovery as a Service
-    href: vmw-gs-draas.md
-  - name: Journaling Protection
-    href: vmw-gs-journaling.md
-  - name: UKCloud for VMware
-    href: vmw-gs.md
