@@ -32,7 +32,7 @@ Use cases:
 
 ## Before you begin
 
-Before using the vCloud API to view and update IPsec VPN settings, we recommend that you install a REST client that enables you to access the API. The steps in this article use a Firefox plugin called RESTClient. For information about how to install this plugin, see [How to install a REST client to access the vCloud API](vmw-how-to-install-vcloud-api-rest-client.md).
+Before using the vCloud API to view and update IPsec VPN settings, we recommend that you install a REST client that enables you to access the API. The steps in this article use a Firefox plugin called RESTClient. For information about how to install this plugin, see [How to install a REST client to access the vCloud API](vmw-how-install-vcloud-api-rest-client.md).
 
 You also need to find your API credentials. For more information, see [How to access vCloud Director through the vCloud API](https://portal.ukcloud.com/support/knowledge_centre/0e0865ef-b6c5-4664-ab85-2d9f5cfe54c0)
 

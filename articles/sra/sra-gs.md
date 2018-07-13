@@ -1,17 +1,17 @@
 ---
-title: Getting Started Guide for UKCloud for Microsoft Azure | UKCloud Ltd
-description: Provides information to get up and running with UKCloud for Microsoft Azure
-services: azure
+title: Getting Started Guide for Secure Remote Access | UKCloud Ltd
+description: Provides information to get up and running with Secure Remote Access
+services: sra
 author: Sue Highmoor
 
-toc_rootlink: Users
-toc_sub1: Getting Started
+toc_rootlink: Getting Started
+toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for Microsoft Azure
-toc_fullpath: Users/Getting Started/azs-gs.md
-toc_mdlink: azs-gs.md
+toc_title: Secure Remote Access
+toc_fullpath: Getting Started/sra-gs.md
+toc_mdlink: sra-gs.md
 ---
 
 # Getting Started Guide for Secure Remote Access

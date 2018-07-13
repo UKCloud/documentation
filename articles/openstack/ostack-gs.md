@@ -64,7 +64,7 @@ You can create your network infrastructure in one of the following ways:
 
 - Using Horizon to manually create your infrastructure (see [Using Horizon to manually create your     infrastructure](#using-horizon-to-manually-create-your-infrastructure))
 - Using the OpenStack Heat orchestration tool to create stacks (see [Using the OpenStack Heat orchestration tool to create stacks](#using-the-openstack-heat-orchestration-tool-to-create-stacks))
-- Using the OpenStack API and automation (see [Using the OpenStack API and automation](#_Using_the_OpenStack_1))
+- Using the OpenStack API and automation (see [Using the OpenStack API and automation](#using the-openstack-api-and-automation))
 
 ### Using Horizon to manually create your infrastructure
 
