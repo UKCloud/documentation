@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "mKUf+0PRow4L5gWkD29+IA=="
+          "hash": "LiVP8i+BLqdWj6tDIn1xSA=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "fPh380QusHkEkrYJ/Tvk4g=="
+          "hash": "8Nr23R9b/X4P8wfZaxDRaw=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-gs.html",
-          "hash": "IVcEAhy42XFoHEcvKXsf2Q=="
+          "hash": "cg8k3pFFhP7J9ui5Tlix2w=="
         }
       },
       "is_incremental": false,
@@ -60,7 +60,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-cli.html",
-          "hash": "aMHuhPJ2SgShi4Fbl7GSIw=="
+          "hash": "FiYKqPr1yfI1ZICOeq+6YQ=="
         }
       },
       "is_incremental": false,
@@ -72,7 +72,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-powershell-operators.html",
-          "hash": "sx67nfBp8q0eJ27P7Efqsg=="
+          "hash": "Y6n5CQCN4sQ4RIB1yHLPGA=="
         }
       },
       "is_incremental": false,
@@ -84,7 +84,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-powershell-users.html",
-          "hash": "+ef6FNmWHViEE5ekWZ8uzA=="
+          "hash": "2NUi4tF9t86LUdIS1gXj1w=="
         }
       },
       "is_incremental": false,
@@ -96,7 +96,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm.html",
-          "hash": "YBANcI7T84BehJY+vULWNw=="
+          "hash": "KXtensuRSUR8KBNbQjBC5g=="
         }
       },
       "is_incremental": false,
@@ -108,7 +108,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-grant-access.html",
-          "hash": "oq+tMmD87O/fdOZi2ja1Zw=="
+          "hash": "w4WBb6VPmLkzL18Nzi7NYw=="
         }
       },
       "is_incremental": false,
@@ -120,7 +120,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-ps-update-azure-stack.html",
-          "hash": "73QokMRO4NF4dh4tS7M1FQ=="
+          "hash": "+ZYf0A9rhCuv1OkLvld60g=="
         }
       },
       "is_incremental": false,
@@ -132,7 +132,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-overview.html",
-          "hash": "UbOlFequnJFJNg60/lx5Ig=="
+          "hash": "31tDdQIifJN2DplYoXN5eQ=="
         }
       },
       "is_incremental": false,
@@ -497,7 +497,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-gs-walled-garden.html",
-          "hash": "NZkCbqQzQPuq6xGhh8OWrg=="
+          "hash": "mVzl5LDMjcD5+Mkx3QrPmQ=="
         }
       },
       "is_incremental": false,
@@ -543,7 +543,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-gs.html",
-          "hash": "FNypbKsIThMVb0KFbQiRpg=="
+          "hash": "0iwUE1KZNWjXO/CTatvzvg=="
         }
       },
       "is_incremental": false,
@@ -555,7 +555,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-view-info-portal.html",
-          "hash": "C3BFIm8vbZwYwZPA8xEpyQ=="
+          "hash": "Is163AxHGng7HBNAF335tg=="
         }
       },
       "is_incremental": false,
@@ -760,7 +760,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-gs.html",
-          "hash": "2GAxis3SVjSy/6keVAXLwg=="
+          "hash": "vHEWVlByc2q3AYLzJddxzw=="
         }
       },
       "is_incremental": false,
@@ -983,7 +983,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/gpu-gs-compute.html",
-          "hash": "MsUKKW02fSBkKAeOQvgO0A=="
+          "hash": "rtWvOP2BedTBETeDfVlG3g=="
         }
       },
       "is_incremental": false,
@@ -995,7 +995,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/gpu-gs-visualisation.html",
-          "hash": "Na5wShvnxsjVmQt6QzuS3g=="
+          "hash": "V57Z0NqYLFAyH806c4kNow=="
         }
       },
       "is_incremental": false,
@@ -1252,7 +1252,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-gs.html",
-          "hash": "96o/bryl0tioLZCmej5f+Q=="
+          "hash": "NiE/MtDoIQ0zMSO/hLd+Hg=="
         }
       },
       "is_incremental": false,
@@ -1749,7 +1749,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-gs.html",
-          "hash": "IHRpupCFP9eErbzr3BGc6w=="
+          "hash": "6RqEf5e+UW1tTO/+aQ3NzA=="
         }
       },
       "is_incremental": false,
@@ -1971,7 +1971,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-gs.html",
-          "hash": "jtKg2NUrzJXuKdo8FpC2Xg=="
+          "hash": "DASovH/1dKl6o/1ouUO7ow=="
         }
       },
       "is_incremental": false,
@@ -1995,7 +1995,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-browsers.html",
-          "hash": "Sktn3OkJ1DKQo0pVrWbVAQ=="
+          "hash": "FO700btNyLYMAu+MjtVwxQ=="
         }
       },
       "is_incremental": false,
@@ -2096,7 +2096,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "VH0z855KD+VjR21Yor5OKQ=="
+          "hash": "bfyrrlRYHOJxDYpmYPP9Pg=="
         }
       },
       "is_incremental": false,
@@ -2210,7 +2210,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-gs.html",
-          "hash": "4j3No5Ir+QkOdoNJZq1RaQ=="
+          "hash": "PGSMVX5PaO78ycmgYjS3sw=="
         }
       },
       "is_incremental": false,
@@ -2237,7 +2237,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/support-docs/sup-dfx-file-names.html",
-          "hash": "W8IAfUekj4VuIPoODV22OA=="
+          "hash": "9nsndAfgd90SwVSNQzBp2Q=="
         }
       },
       "is_incremental": false,
@@ -2878,7 +2878,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs-draas.html",
-          "hash": "gGFCiVAbFmlcZPntVeBPWA=="
+          "hash": "PFJkZRnjpcszZIQpji0Rng=="
         }
       },
       "is_incremental": false,
@@ -2890,7 +2890,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs-journaling.html",
-          "hash": "uh3v0Pa1UFW6CuwleoTAKQ=="
+          "hash": "qxxjvrIAsTtN3WkDfAs0oQ=="
         }
       },
       "is_incremental": false,
@@ -2905,7 +2905,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "vox4uz0tG89PesWe6Ea5Kw=="
+          "hash": "Iqrm/LMYXElVo0jog1ZLJw=="
         }
       },
       "is_incremental": false,
@@ -2917,7 +2917,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-syslog-data.html",
-          "hash": "J7bjlkXwJu76LIk2WoSMRA=="
+          "hash": "0/UaeWTReJXibXyN+hHzng=="
         }
       },
       "is_incremental": false,
@@ -2929,7 +2929,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-vcloud-api.html",
-          "hash": "rAsklaaAXEEtJJGNudyrkA=="
+          "hash": "W8BrcuQcjhZySVMevQVLNg=="
         }
       },
       "is_incremental": false,
@@ -2944,7 +2944,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-api-ipsec-vpn.html",
-          "hash": "Dy2xkH+bg6xPui0pOFUC8g=="
+          "hash": "hmmsDr2gs+KWvuSwUEW8eQ=="
         }
       },
       "is_incremental": false,
@@ -2956,7 +2956,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-install-openvpn.html",
-          "hash": "RPQLlZtqDoCJpOxONgKRAQ=="
+          "hash": "l/j8Davw1R6zw60r6QtOsg=="
         }
       },
       "is_incremental": false,
@@ -2968,7 +2968,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-install-vcloud-api-rest-client.html",
-          "hash": "XmIbX91Biukws101aD06ZA=="
+          "hash": "D1hXRcBih/ATGz407tLxVg=="
         }
       },
       "is_incremental": false,
@@ -2991,7 +2991,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "o0P3PUzhOJjtnhUMscwJhA=="
+          "hash": "R6A+5YHk/oKbwHvC2Rd+gw=="
         }
       },
       "is_incremental": false,
@@ -3003,42 +3003,6 @@
       "output": {
         "resource": {
           "relative_path": "logo.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "restapi/contacts_swagger2.json",
-      "output": {
-        ".html": {
-          "relative_path": "restapi/contacts.html",
-          "hash": "3XkEwP3mo6k8wFeSvv7/qw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "restapi/petstore.swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "restapi/petstore.html",
-          "hash": "97RIiaua7fqIedCaqqm8pg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "restapi/toc.md",
-      "output": {
-        ".html": {
-          "relative_path": "restapi/toc.html",
-          "hash": "z3pdu07k6E8ct1OjoameuA=="
         }
       },
       "is_incremental": false,
@@ -3070,18 +3034,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "RestApiDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
