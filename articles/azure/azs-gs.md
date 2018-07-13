@@ -189,7 +189,7 @@ To grant a user access to UKCloud for Microsoft Azure:
 
 6. Select **Members** then click **Add members**.
 
-7. Select the user thatyou want to add to the group and click **Select**.
+7. Select the user that you want to add to the group and click **Select**.
 
 ## Configuring the Azure CLI
 
