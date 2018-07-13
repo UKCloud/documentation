@@ -195,7 +195,7 @@ To grant a user access to UKCloud for Microsoft Azure:
 
 Azure provides a command line interface (CLI) that you can use to manage your Azure resources. For example, you can use the Azure CLI to create virtual machines and deploy Azure Resource Manager templates.
 
-For more information, including steps for setting up the Azure CLI with UKCloud for Microsoft Azure and a list of known issues, see:
+For more information, including steps for setting up the Azure CLI with UKCloud for Microsoft Azure, see:
 
 - [Configure AzureCLI Environment](azs-how-configure-cli.md)
 
@@ -203,7 +203,7 @@ For more information, including steps for setting up the Azure CLI with UKCloud 
 
 You can use PowerShell to manage your Azure resources. For example, you can create virtual machines and deploy Azure Resource Manager templates.
 
-For more information, including steps and scripts for setting up Azure PowerShell with UKCloud for Microsoft Azure and a list of known issues, see:
+For more information, including steps and scripts for setting up Azure PowerShell with UKCloud for Microsoft Azure, see:
 
 - [Configure PowerShell Environment](azs-how-configure-powershell-users.md)
 
