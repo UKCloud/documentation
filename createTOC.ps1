@@ -56,7 +56,7 @@ ForEach ($FolderB in $FoldersFromBase) {
     $TOCArrayPropertiesCustom = @()
     ForEach ($MDArticle in $MDArticles) {
         $TOCProp = $MDArticle | Select-String -Pattern "toc_"  | Select-Object -ExpandProperty Line
-        $TOCArrayProperties += $TOCProp 
+        $TOCArrayProperties += $TOCProp
         
         # Read values from the header of the .md file
         $ourObject = [PSCustomObject]@{
@@ -68,7 +68,7 @@ ForEach ($FolderB in $FoldersFromBase) {
             Title    = ($MDArticle | Select-String -Pattern "toc_title"  | Select-Object -ExpandProperty Line) -replace "toc_title:\s?", ""
             MDlink   = ($MDArticle | Select-String -Pattern "toc_mdlink"  | Select-Object -ExpandProperty Line) -replace "toc_mdlink:\s?", ""
         }
-        $TOCArrayPropertiesCustom += $ourObject 
+        $TOCArrayPropertiesCustom += $ourObject
     }
     
     # Sort Objects so that Rootlink Users is first shown.
@@ -92,7 +92,7 @@ ForEach ($FolderB in $FoldersFromBase) {
         # Add new top level if necessary
         If ($exists -eq $false) {
             $TOCStruct += @{ 
-                name  = $($File.Rootlink) 
+                name  = $($File.Rootlink)
                 items = @() 
             }
         }
