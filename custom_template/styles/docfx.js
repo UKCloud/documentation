@@ -397,7 +397,7 @@ $(function () {
             }
           }
         });
-        renderNavbar();
+        //renderNavbar();
       });
     }
   }
