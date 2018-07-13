@@ -178,11 +178,12 @@ SQL2016SP1-WS2016  MicrosoftSQLServer      Standard                         Micr
 <p>For Example, you can create a CentOS VM using the following command:</p>
 <pre><code class="lang-azurecli">az vm create --resource-group testRG --name testVM --image OpenLogic:CentOS:6.9:6.9.20180105 --use-unmanaged-disk --admin-username username --admin-password 'Password1234!'
 </code></pre>
-<blockquote>
-<p>[!NOTE] Azure Stack does not support Managed Disks hence we add  <em>--use-unmanaged-disk</em> parameter.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Azure Stack does not support Managed Disks hence we add  <em>--use-unmanaged-disk</em> parameter.</p>
 <p>Also, you need to create your Resource Group first.</p>
 <p>admin-username and admin-password are given as examples above - these are the credentials which must be used to login to the VM once it is created.</p>
-</blockquote>
+</div>
 <h2 id="known-issues">Known issues</h2>
 <p>There are some known issues that you must be aware of when using CLI in Azure Stack:</p>
 <ul>
