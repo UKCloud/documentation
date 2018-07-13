@@ -72,8 +72,13 @@ ForEach ($FolderB in $FoldersFromBase) {
     }
     
     # Sort Objects so that Rootlink Users is first shown.
-    $SortedCustom = $TOCArrayPropertiesCustom  | Sort-Object -Property Rootlink -Descending | Sort-Object -Property Rootlink, Sub1, Sub2, Sub3, Sub4, Title, MDlink
-    
+    If ($TOCArrayPropertiesCustom.Rootlink -like "Users" -or $TOCArrayPropertiesCustom.Rootlink -like "Operators") {
+        $SortedCustom = $TOCArrayPropertiesCustom  | Sort-Object -Property Rootlink -Descending | Sort-Object -Property Sub1, Sub2, Sub3, Sub4, Title, MDlink
+    }
+    Else {
+        $SortedCustom = $TOCArrayPropertiesCustom  | Sort-Object -Property Rootlink -Descending | Sort-Object -Property Rootlink, Sub1, Sub2, Sub3, Sub4, Title, MDlink
+    }
+
     ForEach ($File in $SortedCustom) {
     
         # Work out if we need to add a new Top Level item
