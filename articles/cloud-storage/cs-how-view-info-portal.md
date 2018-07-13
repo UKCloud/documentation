@@ -10,8 +10,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: View Cloud Storage information in the UKCloud Portal
-toc_fullpath: How To/cs-how-view-info-portals.md
-toc_mdlink: cs-how-view-info-portals.md
+toc_fullpath: How To/cs-how-view-info-portal.md
+toc_mdlink: cs-how-view-info-portal.md
 ---
 
 # How to view Cloud Storage information in the UKCloud Portal
