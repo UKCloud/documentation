@@ -391,7 +391,9 @@ $(function () {
               }
             }
             if (isActive) {
-              $(e).addClass(active);
+              if (window.location.pathname != '/index.html') {
+                $(e).addClass(active);
+              }
             }
           }
         });
