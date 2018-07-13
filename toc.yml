@@ -16,15 +16,9 @@
 - name: More
   nav_dropdown: true
   items:
-  - name: 1
-    topicHref: #
-  - name: 2
-    topicHref: #
-  - name: 3
-    topicHref: #
-  - name: 4
-    topicHref: #
-  - name: 5
-    topicHref: #
-  - name: 6
-    topicHref: #
+  - name: articles/cdsz
+    topicHref: articles/cdsz/cdsz-gs-walled-garden.md
+  - name: articles/cloud-storage
+    topicHref: articles/cloud-storage/cs-gs.md
+  - name: articles/portal/
+    topicHref: articles/portal/ptl-gs.md
