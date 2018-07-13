@@ -16,9 +16,9 @@
 - name: More
   nav_dropdown: true
   items:
-  - name: articles/cdsz
+  - name: Cross Domain Security Zone
     topicHref: articles/cdsz/cdsz-gs-walled-garden.md
-  - name: articles/cloud-storage
+  - name: Private Cloud - Storage
     topicHref: articles/cloud-storage/cs-gs.md
-  - name: articles/portal/
+  - name: UKCloud Portal
     topicHref: articles/portal/ptl-gs.md
