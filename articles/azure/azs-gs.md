@@ -197,7 +197,7 @@ Azure provides a command line interface (CLI) that you can use to manage your Az
 
 For more information, including steps for setting up the Azure CLI with UKCloud for Microsoft Azure and a list of known issues, see:
 
-<https://github.com/UKCloud/AzureStack/blob/master/docs/Tenants/AzureCLI/ConfigureAzureCLIEnvironment.md>
+- [Configure AzureCLI Environment](azs-how-configure-cli.md)
 
 ## Configuring the Azure Stack PowerShell client
 
@@ -205,7 +205,7 @@ You can use PowerShell to manage your Azure resources. For example, you can crea
 
 For more information, including steps and scripts for setting up Azure PowerShell with UKCloud for Microsoft Azure and a list of known issues, see:
 
-<https://github.com/UKCloud/AzureStack/blob/master/docs/Tenants/PowerShell/ConfigurePowerShellEnvironment.md>
+- [Configure PowerShell Environment](azs-how-configure-powershell-users.md)
 
 ## Next steps
 
