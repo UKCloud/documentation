@@ -87,9 +87,9 @@ a:hover {
 
 @media (min-width: 1480px) {
   .navbar-margin-left {
-    margin-left: 280px;
+    margin-left: 270px;
     padding-left: 15px;
-    margin-right: 255px;
+    margin-right: 245px;
     padding-right: 15px;
   }
 }
