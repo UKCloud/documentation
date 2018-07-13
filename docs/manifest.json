@@ -37,15 +37,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-gs.html",
-          "hash": "cg8k3pFFhP7J9ui5Tlix2w=="
+          "hash": "JW8nuI2h2LKs02pq77f6AQ=="
         }
       },
       "is_incremental": false,
@@ -1715,7 +1712,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-gs.html",
-          "hash": "Q/5q/1ys8KDJAJIoQjmALQ=="
+          "hash": "REbCKpOUbYfSqgRDUARw5Q=="
         }
       },
       "is_incremental": false,
@@ -2176,22 +2173,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-gs.html",
-          "hash": "3Hl6Jieu9VBLx6LTezY0DA=="
+          "hash": "qdHXg+jVW89m8WC7Cgtudg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/sra/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/sra/toc.html",
-          "hash": "gPbIVVVtxctwnbGGUgLkqA=="
+          "hash": "IfCOPZPca0iukk2MLqdZCw=="
         }
       },
       "is_incremental": false,
@@ -2871,7 +2865,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "Iqrm/LMYXElVo0jog1ZLJw=="
+          "hash": "4BCPJJyXuzq7RRqnTDEAgw=="
         }
       },
       "is_incremental": false,
@@ -2902,15 +2896,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-api-ipsec-vpn.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-api-ipsec-vpn.html",
-          "hash": "/t1S+7HRAhwJAQBbJd24IQ=="
+          "hash": "vdLombO2DS3/ORViwR0kSA=="
         }
       },
       "is_incremental": false,

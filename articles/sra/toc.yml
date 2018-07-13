@@ -1,6 +1,4 @@
-- name: Users
+- name: Getting Started
   items:
-  - name: Getting Started
-    items:
-    - name: UKCloud for Microsoft Azure
-      href: azs-gs.md
+  - name: Secure Remote Access
+    href: sra-gs.md
