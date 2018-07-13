@@ -285,3 +285,7 @@ products .container {
 .product_grid-2.child-20 {
   background-color: #574f77;
 }
+
+article {
+  font-family: Arial, sans-serif;
+}
