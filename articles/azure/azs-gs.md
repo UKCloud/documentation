@@ -174,7 +174,7 @@ To grant a user access to UKCloud for Microsoft Azure:
 
 1. Log in to the Azure portal as a global administrator:
 
-    <https//portal.azure.com>
+    [https//portal.azure.com](https//portal.azure.com)
 
 2. Navigate to the **Azure Active Directory**.
 
@@ -242,5 +242,3 @@ This section provides a glossary of terms specific to UKCloud for Microsoft Azur
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
-
-&copy; [UKCloud Ltd](http://ukcloud.com), 2018. All Rights Reserved.
