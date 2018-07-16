@@ -41,7 +41,7 @@ To enable HA:
 
 2. On the *Infrastructure -- Oracle VM Cloud Services* page, click the **Servers** icon.
 
-    ![Servers icon](images/orcl-oem-ico-servers)
+    ![Servers icon](images/orcl-oem-ico-servers.png)
 
 3. The *Servers* page lists the servers (VMs) you've requested.
 
