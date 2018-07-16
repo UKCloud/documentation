@@ -28,9 +28,9 @@ To complete the steps in this guide you must have access to the Azure Stack port
 
 ## Introduction to UKCloud for Microsoft Azure
 
-At UKCloud, we understand that there is no "one cloud fits all" solution. There are usually many factors to consider when looking to move your applications to the cloud, including existing technology investment and skills. Additionally, while some applications can easily move to the public cloud, there are others that for various reasons (latency, connectivity, security, regulation) must run on-premises. 
+At UKCloud, we understand that there is no "one cloud fits all" solution. There are usually many factors to consider when looking to move your applications to the cloud, including existing technology investment and skills. Additionally, while some applications can easily move to the public cloud, there are others that for various reasons (latency, connectivity, security, regulation) must run on-premises.
 
-Microsoft Azure Stack is an extension of Azure that provides on-premises Infrastructure-as-a-Service (IaaS) and Platform-as-a-Service (PaaS), enabling you to leverage the benefits of cloud in an on-premises environment. UKCloud for Microsoft Azure brings the advantages of the Microsoft Cloud platform to our assured UK-sovereign platform, helping you realise the benefits that a true hybrid cloud environment has to offer, while balancing the right amount of flexibility and control. 
+Microsoft Azure Stack is an extension of Azure that provides on-premises Infrastructure-as-a-Service (IaaS) and Platform-as-a-Service (PaaS), enabling you to leverage the benefits of cloud in an on-premises environment. UKCloud for Microsoft Azure brings the advantages of the Microsoft Cloud platform to our assured UK-sovereign platform, helping you realise the benefits that a true hybrid cloud environment has to offer, while balancing the right amount of flexibility and control.
 
 With UKCloud for Microsoft Azure you can:
 
@@ -41,7 +41,7 @@ With UKCloud for Microsoft Azure you can:
 
 The two main delivery models provided by UKCloud for Microsoft Azure are:
 
-- A multi-tenant IaaS and PaaS platform available in both UKCloud security domains (Assured OFFICAL and Elevated OFFICIAL), connected to government community networks with UKCloud's award-winning support
+- A multi-tenant IaaS and PaaS platform available in both UKCloud security domains (Assured OFFICIAL and Elevated OFFICIAL), connected to government community networks with UKCloud's award-winning support
 - Private cloud deployment of UKCloud for Microsoft Azure dedicated to a single customer
 
 ## Before you begin
@@ -68,15 +68,15 @@ To log in to the Azure Stack portal:
 
     On this page, you'll see:
 
-    A.  **Favourites**---quickly access your most used resources (see [Customising your favourites](#customising-your-favourites))
+    A.  **Favourites** - quickly access your most used resources (see [Customising your favourites](#customising-your-favourites))
 
-    B.  **Dashboard**---access information about your Azure resources (see [Customising and adding dashboards](#customising-and-adding-dashboards))
+    B.  **Dashboard** - access information about your Azure resources (see [Customising and adding dashboards](#customising-and-adding-dashboards))
 
-    C.  **Settings**---change your portal settings, for example, theme and language
+    C.  **Settings** - change your portal settings, for example, theme and language
 
-    D.  **Notifications**---view useful alerts about your Azure environment
+    D.  **Notifications** - view useful alerts about your Azure environment
 
-    E.  **New**---create new resources, such as virtual machines (see [*How to create a virtual machine from the Azure Marketplace*](https://portal.ukcloud.com/support/knowledge_centre/fe999430-c1e0-47e0-a503-bdc6c8c0de9b))
+    E.  **New** - create new resources, such as virtual machines (see [*How to create a virtual machine from the Azure Marketplace*](azs-how-create-vm.md))
 
 ## Understanding subscriptions, offers and plans
 
@@ -211,11 +211,11 @@ For more information, including steps and scripts for setting up Azure PowerShel
 
 In this Getting Started Guide, you've learned the basics about UKCloud for Microsoft Azure and the Azure Stack portal. For more information about UKCloud for Microsoft Azure, see the following articles in the Knowledge Centre:
 
-- [*Understanding UKCloud for Microsoft Azure*](https://portal.ukcloud.com/support/knowledge_centre/0d8e3486-3190-458e-8166-98697c2a7161)
-- [*UKCloud for Microsoft Azure FAQs*](https://portal.ukcloud.com/support/knowledge_centre/de19b410-f844-419b-afd0-bb3dbab0a217)
-- [*How to create a virtual machine from the Azure Marketplace*](https://portal.ukcloud.com/support/knowledge_centre/fe999430-c1e0-47e0-a503-bdc6c8c0de9b)
-- [*How to grant users access to UKCloud for Microsoft Azure*](https://portal.ukcloud.com/support/knowledge_centre/18899044-5dcd-41fa-ba64-d467d1b43605)
-- [*How to use the Azure Stack API*](https://portal.ukcloud.com/support/knowledge_centre/65699e21-ac82-4bca-b777-229035cbe28b)
+- [*Understanding UKCloud for Microsoft Azure*](azs-ref-overview.md)
+- [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
+- [*How to create a virtual machine from the Azure Marketplace*](azs-how-create-vm.md)
+- [*How to create an Azure user group*](azs-how-create-azure-group.md)
+- [*How to use the Azure Stack API*](azs-how-use-azure-api.md)
 
 ## Glossary
 
