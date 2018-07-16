@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Browser requirements for services on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>VM compatibility with UKCloud for Oracle Software | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Browser requirements for services on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="VM compatibility with UKCloud for Oracle Software | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,52 +82,72 @@
               <div class="col-md-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="browser-requirements-for-services-on-the-ukcloud-platform">Browser requirements for services on the UKCloud platform</h1>
+<h1 id="vm-compatibility-with-ukcloud-for-oracle-software">VM compatibility with UKCloud for Oracle Software</h1>
 
-<h2 id="overview">Overview</h2>
-<p>To get the best interaction with the UKCloud platform, it's important to use a browser that is compatible with all aspects of the services with which you interact.</p>
-<p>This document outlines the browser requirement for UKCloud services.</p>
-<h2 id="ukcloud-for-vmware">UKCloud for VMware</h2>
-<p>For UKCloud for VMware, we recommend that you use the Mozilla Firefox Extended Support Release (ESR 52) 32-bit browser. This browser is supported by both the UKCloud Portal and by the Web Console for vCloud Director 8.20 (the version used by UKCloud for VMware).</p>
-<p>Firefox ESR 52 is an older version of Firefox, updated with new security patches, that remains compatible with the plugin type that the vCloud Director Web Console uses on our platform. You can find Firefox ESR at:</p>
-<p><a href="https://www.mozilla.org/en-US/firefox/organizations/">https://www.mozilla.org/en-US/firefox/organizations/</a></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Make sure you download ESR 52, which is the last ESR release to support legacy add-ons. Support for ESR 52 ends in August 2018, but by this time we will have upgraded UKCloud for VMware to vCloud Director 9.1, which will eliminate the need for the Web Console plugin. For more information, see <a href="https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/">https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/</a>. You should also make sure that you download the 32-bit version of the browser.</p>
-</div>
-<p>Although Internet Explorer 8.<em>x</em> , 9.<em>x</em> and 10.<em>x</em> are supported by the vCloud Director 8.20 Web Console, if you've applied any group policy restrictions you may encounter problems.</p>
-<p>The vCloud Director Web Console has the following additional requirements:</p>
+<h2 id="introduction">Introduction</h2>
+<p>This article outlines what you need to do to make sure your Oracle VMs
+(OVMs) are compatible with UKCloud for Oracle Software service. You may find this useful if you're moving VMs from
+UKCloud for VMware to UKCloud for Oracle Software.</p>
+<h2 id="ovf-and-vmdk">OVF and VMDK</h2>
+<p>OVF and VMDK files are not compatible with Oracle Enterprise Manager
+(OEM), the management plane that's used to deploy and manage your UKCloud for Oracle Software
+environment. To make sure your VMs are compatible with UKCloud for Oracle Software you may need
+to transform your VMs.</p>
+<p>OVA files (Assembly option) and tar.gz/tgz (Template option) are the
+only accepted file formats.</p>
+<h2 id="ova">OVA</h2>
+<p>If you select the <strong>Assembly</strong> option on the upload page, then the
+uploader will expect an OVA Assembly package file (ova file). Your .ova
+file should contain the following files (in the exact order listed):</p>
 <ul>
-<li><p>Adobe Flash Player version 11.2 or later (32-bit version only)</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>This is a known issue with Adobe Flash Player version 27.0.0.170. If you encounter problems, make sure you update to version 27.0.0.183 or later.</p>
-</div>
+<li><p><em>MyVM</em>.ovf --- the OVF descriptor file, which contains all VM specs
+metadata and links to the embedded virtual disk image file (with a
+.vmdk extension)</p>
 </li>
-<li><p>JRE 1.6.0 update 10 or later installed and enabled (32-bit version only)</p>
+<li><p><em>MyVM</em>.mf --- contains metadata that is used for integrity and
+authenticity checks; this data must be correct for the .ova file to
+be accepted in most cases</p>
+</li>
+<li><p><em>MyVM</em>.vmdk --- the embedded virtual disk image file</p>
 </li>
 </ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>VMware are redeveloping the Flash-based UI for vCloud Director and replacing it with a fully-featured HTML5-based interface. The first part of this redeveloped UI (provding HTML5 options for advanced networking features) has been made available in vCloud Director 8.20. More features will move to an HTML5-based UI in future releases.</p>
-</div>
-<h2 id="ukcloud-for-openstack">UKCloud for OpenStack</h2>
-<p>UKCloud for OpenStack is powered by OpenStack and uses the Horizon project to provide its dashboard capabilities. Horizon is built around modern HTML5 standards and requires no auxiliary plugins to operate. Therefore, it is compatible with all latest browser versions.</p>
-<h2 id="ukcloud-for-microsoft-azure">UKCloud for Microsoft Azure</h2>
-<p>Interaction with UKCloud for Microsoft Azure is through the Azure Stack portal. Microsoft recommends using the most up-to-date browser for your operating system.</p>
-<h2 id="cloud-gpu">Cloud GPU</h2>
-<p>Cloud GPU has the same browser requirements as <a href="#ukcloud-for-vmware">UKCloud for VMware</a>.</p>
-<h2 id="high-performance-compute">High Performance Compute</h2>
-<p>High Performance Compute has the same browser requirements as <a href="#ukcloud-for-vmware">UKCloud for VMware</a>.</p>
-<p>#Email and Collaboration as a Service</p>
-<p>For the most up to date list of supported browsers for Email and Collaboration as a Service, refer to the <a href="https://wiki.zimbra.com/wiki/Zimbra_Releases/8.7.0/Supported_Systems"><em>Zimbra Collaboration Supported Systems</em></a> document.</p>
+<p>As the exported .ova file also contains file hashes that are unique to
+the files included in the package, simply creating a tar file with these
+contents will not work in most cases. For most virtualisation platforms,
+it's best to use the export functionality from the source
+virtualisation platform to generate the .ova file.</p>
+<p>One way of converting your VMs to an .ova file would be to use the OVF
+Tool, for example:</p>
+<p>ovftool &quot;original.ovf&quot; &quot;original.ova&quot;</p>
+<p><strong>Tip!</strong> Make sure you include the quotation marks (&quot;).</p>
+<p>You can download the OVF Tool from:</p>
+<p><a href="https://my.vmware.com/web/vmware/details?downloadGroup=OVFTOOL400&amp;productId=353">https://my.vmware.com/web/vmware/details?downloadGroup=OVFTOOL400&amp;productId=353</a></p>
+<h2 id="tar">TAR</h2>
+<p>If you select the <strong>Template</strong> option on the upload page, then the
+uploader will expect an Oracle VM Template file (either a .tgz or
+.tar.gz file). This gzipped tarball file normally contains the following
+files (in the exact order listed):</p>
 <ul>
-<li>Firefox and Chrome on Windows, Mac, Linux</li>
-<li>Internet Explorer on Windows</li>
-<li>Safari on Mac and Windows</li>
+<li><p><em>MyVM</em>.cfg --- contains the VM specs metadata and links to the
+embedded RAW disk image file, normally named system.img</p>
+</li>
+<li><p>system.img --- the embedded RAW disk image file, either exported
+from another XEN platform or converted from other virtual disk
+formats</p>
+</li>
 </ul>
+<h2 id="upload-size">Upload size</h2>
+<p>For any uploads larger than 500 MB, you'll need to allow sufficient time
+for the upload to complete before clicking the <strong>Upload</strong> button or it
+will fail and the item will not appear in your software library. There
+is currently no upload progress indicator on OEM. Oracle is aware of
+this but are treating it as an enhancement request therefore there's
+currently no indication of when the upload progress indicator will be
+added on future releases of the platform software.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you have any comments on this document or any other aspect of your
+UKCloud experience, please send them to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+<p>© <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.</p>
 
 
                   <div class="row">
@@ -140,7 +160,7 @@
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-browsers.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/oracle/orcl-ref-vm-compatibility.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>

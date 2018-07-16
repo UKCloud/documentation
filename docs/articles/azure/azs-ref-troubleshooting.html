@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Browser requirements for services on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Troubleshooting - UKCloud for Microsoft Azure | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Browser requirements for services on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="Troubleshooting - UKCloud for Microsoft Azure | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,50 +82,44 @@
               <div class="col-md-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="browser-requirements-for-services-on-the-ukcloud-platform">Browser requirements for services on the UKCloud platform</h1>
+<h1 id="ukcloud-for-microsoft-azure-troubleshooting">UKCloud for Microsoft Azure Troubleshooting</h1>
 
 <h2 id="overview">Overview</h2>
-<p>To get the best interaction with the UKCloud platform, it's important to use a browser that is compatible with all aspects of the services with which you interact.</p>
-<p>This document outlines the browser requirement for UKCloud services.</p>
-<h2 id="ukcloud-for-vmware">UKCloud for VMware</h2>
-<p>For UKCloud for VMware, we recommend that you use the Mozilla Firefox Extended Support Release (ESR 52) 32-bit browser. This browser is supported by both the UKCloud Portal and by the Web Console for vCloud Director 8.20 (the version used by UKCloud for VMware).</p>
-<p>Firefox ESR 52 is an older version of Firefox, updated with new security patches, that remains compatible with the plugin type that the vCloud Director Web Console uses on our platform. You can find Firefox ESR at:</p>
-<p><a href="https://www.mozilla.org/en-US/firefox/organizations/">https://www.mozilla.org/en-US/firefox/organizations/</a></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Make sure you download ESR 52, which is the last ESR release to support legacy add-ons. Support for ESR 52 ends in August 2018, but by this time we will have upgraded UKCloud for VMware to vCloud Director 9.1, which will eliminate the need for the Web Console plugin. For more information, see <a href="https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/">https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/</a>. You should also make sure that you download the 32-bit version of the browser.</p>
-</div>
-<p>Although Internet Explorer 8.<em>x</em> , 9.<em>x</em> and 10.<em>x</em> are supported by the vCloud Director 8.20 Web Console, if you've applied any group policy restrictions you may encounter problems.</p>
-<p>The vCloud Director Web Console has the following additional requirements:</p>
+<p>This guide describes some of the issues you may encounter when using UKCloud for Microsoft Azure:</p>
 <ul>
-<li><p>Adobe Flash Player version 11.2 or later (32-bit version only)</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>This is a known issue with Adobe Flash Player version 27.0.0.170. If you encounter problems, make sure you update to version 27.0.0.183 or later.</p>
-</div>
+<li><p><a href="#login-results-in-server-error">Login results in server error</a></p>
 </li>
-<li><p>JRE 1.6.0 update 10 or later installed and enabled (32-bit version only)</p>
+<li><p><a href="#azure-stack-portal-does-not-show-any-resources">Azure Stack portal does not show any resources</a></p>
+</li>
+<li><p><a href="#diagnostics-do-not-work-for-linux-vms">Diagnostics do not work for Linux VMs</a></p>
+</li>
+<li><p><a href="#virtual-machine-disk-size-is-not-showing-in-the-gui-or-cli">Virtual machine disk size is not showing in the GUI or CLI</a></p>
 </li>
 </ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>VMware are redeveloping the Flash-based UI for vCloud Director and replacing it with a fully-featured HTML5-based interface. The first part of this redeveloped UI (provding HTML5 options for advanced networking features) has been made available in vCloud Director 8.20. More features will move to an HTML5-based UI in future releases.</p>
-</div>
-<h2 id="ukcloud-for-openstack">UKCloud for OpenStack</h2>
-<p>UKCloud for OpenStack is powered by OpenStack and uses the Horizon project to provide its dashboard capabilities. Horizon is built around modern HTML5 standards and requires no auxiliary plugins to operate. Therefore, it is compatible with all latest browser versions.</p>
-<h2 id="ukcloud-for-microsoft-azure">UKCloud for Microsoft Azure</h2>
-<p>Interaction with UKCloud for Microsoft Azure is through the Azure Stack portal. Microsoft recommends using the most up-to-date browser for your operating system.</p>
-<h2 id="cloud-gpu">Cloud GPU</h2>
-<p>Cloud GPU has the same browser requirements as <a href="#ukcloud-for-vmware">UKCloud for VMware</a>.</p>
-<h2 id="high-performance-compute">High Performance Compute</h2>
-<p>High Performance Compute has the same browser requirements as <a href="#ukcloud-for-vmware">UKCloud for VMware</a>.</p>
-<p>#Email and Collaboration as a Service</p>
-<p>For the most up to date list of supported browsers for Email and Collaboration as a Service, refer to the <a href="https://wiki.zimbra.com/wiki/Zimbra_Releases/8.7.0/Supported_Systems"><em>Zimbra Collaboration Supported Systems</em></a> document.</p>
-<ul>
-<li>Firefox and Chrome on Windows, Mac, Linux</li>
-<li>Internet Explorer on Windows</li>
-<li>Safari on Mac and Windows</li>
-</ul>
+<h2 id="login-results-in-server-error">Login results in server error</h2>
+<h3 id="cause">Cause</h3>
+<p>When first logging in to the Azure Stack portal, you may see the following error:</p>
+<p><code>Server Error in '/' Application.</code></p>
+<p><img src="images/azs-login-error.png" alt="Server Error"></p>
+<h3 id="solution">Solution</h3>
+<p>Refresh the page and the login should work.</p>
+<h2 id="azure-stack-portal-does-not-show-any-resources">Azure Stack portal does not show any resources</h2>
+<h3 id="cause-1">Cause</h3>
+<p>If your firewall ports are not open to enable outbound communication with Azure Stack, your Azure Stack portal will not show any resources.</p>
+<p><img src="images/azs-firewall-ports.png" alt="Microsoft Azure Stack Dashboard"></p>
+<h3 id="solution-1">Solution</h3>
+<p>In your firewall, ensure that the appropriate ports are open for communication, as listed in <em>Portal (user)</em> row of the <em>Ports and protocols (inbound)</em> table in the following article: <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-integrate-endpoints#ports-and-protocols-inbound">https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-integrate-endpoints#ports-and-protocols-inbound</a></p>
+<h2 id="diagnostics-do-not-work-for-linux-vms">Diagnostics do not work for Linux VMs</h2>
+<h3 id="cause-2">Cause</h3>
+<p>If you enable Microsoft Insights for your subscription (<strong>Subscriptions &gt; Resource providers &gt; Microsoft.Insights</strong> and subscribe), you'll have access to Azure Monitoring for Windows VMs only. This feature is not yet available for Linux VMs as documented at: <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/azure-stack-update-1802">https://docs.microsoft.com/en-gb/azure/azure-stack/azure-stack-update-1802</a></p>
+<h3 id="solution-2">Solution</h3>
+<p>There is currently no workaround for this issue.</p>
+<h2 id="virtual-machine-disk-size-is-not-showing-in-the-gui-or-cli">Virtual machine disk size is not showing in the GUI or CLI</h2>
+<h3 id="cause-3">Cause</h3>
+<p>You cannot see the virtual machine disk size in the GUI or CLI.</p>
+<h3 id="solution-3">Solution</h3>
+<p>To view your disk size, navigate to <strong>Storage accounts &gt; &lt;storage_account_name&gt; &gt; Blob service &gt; vhds</strong> and find your disk there:</p>
+<p><img src="images/azs-disk-size.png" alt="VM Size in GUI"></p>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
@@ -140,7 +134,7 @@
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-browsers.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-ref-troubleshooting.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Browser requirements for services on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Oracle licensing on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Browser requirements for services on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="Oracle licensing on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,50 +82,41 @@
               <div class="col-md-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="browser-requirements-for-services-on-the-ukcloud-platform">Browser requirements for services on the UKCloud platform</h1>
+<h1 id="oracle-licensing-on-the-ukcloud-platform">Oracle licensing on the UKCloud platform</h1>
 
 <h2 id="overview">Overview</h2>
-<p>To get the best interaction with the UKCloud platform, it's important to use a browser that is compatible with all aspects of the services with which you interact.</p>
-<p>This document outlines the browser requirement for UKCloud services.</p>
-<h2 id="ukcloud-for-vmware">UKCloud for VMware</h2>
-<p>For UKCloud for VMware, we recommend that you use the Mozilla Firefox Extended Support Release (ESR 52) 32-bit browser. This browser is supported by both the UKCloud Portal and by the Web Console for vCloud Director 8.20 (the version used by UKCloud for VMware).</p>
-<p>Firefox ESR 52 is an older version of Firefox, updated with new security patches, that remains compatible with the plugin type that the vCloud Director Web Console uses on our platform. You can find Firefox ESR at:</p>
-<p><a href="https://www.mozilla.org/en-US/firefox/organizations/">https://www.mozilla.org/en-US/firefox/organizations/</a></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Make sure you download ESR 52, which is the last ESR release to support legacy add-ons. Support for ESR 52 ends in August 2018, but by this time we will have upgraded UKCloud for VMware to vCloud Director 9.1, which will eliminate the need for the Web Console plugin. For more information, see <a href="https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/">https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/</a>. You should also make sure that you download the 32-bit version of the browser.</p>
-</div>
-<p>Although Internet Explorer 8.<em>x</em> , 9.<em>x</em> and 10.<em>x</em> are supported by the vCloud Director 8.20 Web Console, if you've applied any group policy restrictions you may encounter problems.</p>
-<p>The vCloud Director Web Console has the following additional requirements:</p>
+<p>Due to the licensing rules regarding Oracle, it is not possible to install and run Oracle software on the UKCloud public cloud platform. However, there are currently two ways for customers to install and run Oracle software with UKCloud:</p>
 <ul>
-<li><p>Adobe Flash Player version 11.2 or later (32-bit version only)</p>
+<li><strong>Private Cloud for Compute</strong>. This is a dedicated hardware solution that limits the number of cores, RAM and storage that would require Oracle licensing. Note that this may not be financially efficient for all customers, and this will be a bare metal environment that has not been prepared for Oracle.</li>
+<li><strong>UKCloud for Oracle Software</strong>. This is a solution specifically designed to host Oracle solutions on a separate platform. This enables Oracle licensing to be used correctly, and is also financially efficient.</li>
+</ul>
+<p>The remainder of this article is regarding general Oracle licensing.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Licensing rules from vendors such as Oracle can change frequently and so customers should validate their specific requirement with Oracle at the time of ordering. This information is correct as of June 2015.</p>
+</div>
+<p>For customers wishing to licence Oracle software on virtual machines within the UKCloud platform, there are some important issues to consider with regards to the four licencing options available which are described below.</p>
+<h2 id="named-user">Named User</h2>
+<p>By implementing this licencing option, the customer can run as many Oracle servers as they want for a fixed fee ‘per named user’. As this license model is independent of the size or number of servers, it is preferable for use in multi-tenant cloud environments such as the UKCloud platform.</p>
+<p>UKCloud appreciate that this solution may not be valid for customers that already have ‘per processor” licencing.</p>
+<h2 id="per-processor">Per Processor</h2>
+<p>This type of license allows the customer to have as many users as they need for a fixed cost ‘per processor’ that the servers run on.</p>
+<p>In a traditional physical or virtualised estate, it is possible to isolate a small subset of the overall physical servers to specifically run Oracle. In this way, only those specific servers need to be licensed for Oracle.</p>
+<p>In most multi-tenant cloud environments such as the UKCloud platform, the per processor virtual machines can run on any physical server and so, practically, Oracle requires all of those servers to be licensed – which is simply not cost effective.</p>
+<p>Oracle software within a cloud based environment can also be licensed via the per-processor option if the cloud environment is running Oracle Virtual Machine (OVM) as the hypervisor. However, due to the design of the cloud environment, this is not something UKCloud can provide or support.</p>
+<p>Oracle has negotiated an agreement with a few public cloud providers (at the time of writing, only Amazon Web Services and Microsoft Azure) to allow customers to license only specific host servers, but this is not yet a widely available licencing agreement.</p>
+<h3 id="dedicated-compute-platform">Dedicated Compute platform</h3>
+<p>Customers can take advantage of the 'per processor' licencing model, by using the UKCloud Dedicated Compute platform which will provide the customer with a set hardware configuration. The Dedicated Compute option enables a customer to specify a dedicated hardware cluster of a certain number of physical servers, and this option can help customers who need more certainty as to the configuration and capacity of the cluster which underpins part of their application, whilst being also able to accommodate the compromises of having a dedicated cluster with regards to reduced levels of agility and flexibility.</p>
+<h2 id="application-specific-full-use-licensing">Application Specific Full Use Licensing</h2>
+<p>An Application Specific Full Use (ASFU) license is a restricted type of license sold by a Solution Provider in conjunction with its third-party Application Package.</p>
+<p>For example, you can buy an ASFU license from SAP AG to use Oracle with the SAP/R3 system. This license would then be application specific and cannot be used for anything else.</p>
+<h2 id="embedded-software-license">Embedded Software License</h2>
+<p>An Embedded Software License (ESL) is a very restrictive license type available from Independent Software Vendors (ISVs) who embed Oracle technology into their product. An end-user may not even be aware that the software package contains Oracle technology and should not be able to access it directly as a developer or system administrator.</p>
+<p>An example of this licensing model in use may be a Point of Sale system that requires a database to log transactions.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>This is a known issue with Adobe Flash Player version 27.0.0.170. If you encounter problems, make sure you update to version 27.0.0.183 or later.</p>
+<p>The ASFU and ESL licencing options are outside the scope of UKCloud control.</p>
 </div>
-</li>
-<li><p>JRE 1.6.0 update 10 or later installed and enabled (32-bit version only)</p>
-</li>
-</ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>VMware are redeveloping the Flash-based UI for vCloud Director and replacing it with a fully-featured HTML5-based interface. The first part of this redeveloped UI (provding HTML5 options for advanced networking features) has been made available in vCloud Director 8.20. More features will move to an HTML5-based UI in future releases.</p>
-</div>
-<h2 id="ukcloud-for-openstack">UKCloud for OpenStack</h2>
-<p>UKCloud for OpenStack is powered by OpenStack and uses the Horizon project to provide its dashboard capabilities. Horizon is built around modern HTML5 standards and requires no auxiliary plugins to operate. Therefore, it is compatible with all latest browser versions.</p>
-<h2 id="ukcloud-for-microsoft-azure">UKCloud for Microsoft Azure</h2>
-<p>Interaction with UKCloud for Microsoft Azure is through the Azure Stack portal. Microsoft recommends using the most up-to-date browser for your operating system.</p>
-<h2 id="cloud-gpu">Cloud GPU</h2>
-<p>Cloud GPU has the same browser requirements as <a href="#ukcloud-for-vmware">UKCloud for VMware</a>.</p>
-<h2 id="high-performance-compute">High Performance Compute</h2>
-<p>High Performance Compute has the same browser requirements as <a href="#ukcloud-for-vmware">UKCloud for VMware</a>.</p>
-<p>#Email and Collaboration as a Service</p>
-<p>For the most up to date list of supported browsers for Email and Collaboration as a Service, refer to the <a href="https://wiki.zimbra.com/wiki/Zimbra_Releases/8.7.0/Supported_Systems"><em>Zimbra Collaboration Supported Systems</em></a> document.</p>
-<ul>
-<li>Firefox and Chrome on Windows, Mac, Linux</li>
-<li>Internet Explorer on Windows</li>
-<li>Safari on Mac and Windows</li>
-</ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
@@ -140,7 +131,7 @@
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-browsers.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/oracle/orcl-ref-licensing.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>

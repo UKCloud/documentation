@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to build an Oracle virtual machine | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to build an Oracle virtual machine | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-build-an-oracle-virtual-machine">How to build an Oracle virtual machine</h1>
+
+<h2 id="overview">Overview</h2>
+<p>UKCloud for Oracle Software provides Infrastructure-as-a-Service (IaaS), powered by Oracle VM (OVM) technology, that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide you must have access to Oracle Enterprise Manager Cloud Control.</p>
+<h2 id="viewing-information-about-your-oracle-vms">Viewing information about your Oracle VMs</h2>
+<p>To view information about your Oracle VMs, go to the <em>Oracle VM Cloud Services</em> page of the OEM Cloud Control console.</p>
+<p><img src="images/orcl-oem-cloud-services.png" alt="Oracle VM Cloud Services page"></p>
+<p>On the <em>Oracle VM Cloud Services</em> page you can:</p>
+<ol>
+<li><p>Click the <strong>Requests</strong> icon to view and manage all your requests.</p>
+</li>
+<li><p>Click the <strong>Servers</strong> icon to view and manage all your VM instances.</p>
+</li>
+<li><p>Click the <strong>Storage</strong> icon to view and manage all the storage associated with your VMs.</p>
+</li>
+<li><p>Click the <strong>Chargeback</strong> icon to view billing details.</p>
+</li>
+<li><p>Click the <strong>Library</strong> icon to view all public templates and templates that you own.</p>
+</li>
+<li><p>Click the <strong>Policies</strong> icon to view policies and schedules that you can apply to your VMs.</p>
+</li>
+<li><p>The <em>Notifications</em> section provides useful information about what's happening in your UKCloud for Oracle Software environment.</p>
+</li>
+<li><p>The <em>Usage</em> section displays the currently available quotas for VMs, CPUs, memory and storage.</p>
+</li>
+<li><p>The <em>10 Last Requested Servers</em> section lists the last ten VMs that you've requested. If you own more than 10 VMs, click the <strong>Servers</strong> icon to view them all.</p>
+</li>
+<li><p>The <em>10 Latest Requests</em> section lists the details and status of the last ten requests you've made. To view all requests, click the <strong>Requests</strong> icon.</p>
+</li>
+<li><p>Click the <strong>Home</strong> icon at any point to return to the <em>Oracle VM Cloud Services</em> page.</p>
+</li>
+</ol>
+<h2 id="building-an-oracle-vm">Building an Oracle VM</h2>
+<p>To build an Oracle VM, you need to raise a server request. Each request can include one or more VM instances.</p>
+<ol>
+<li><p>Log in to the Oracle Enterprise Manager Cloud Control console at:</p>
+<p><a href="https://ecco.r00006.frn.ukcloud.com/em">https://ecco.r00006.frn.ukcloud.com/em</a></p>
+<p>For more detailed instructions, see the <a href="orcl-gs.html"><em>Getting Started Guide for UKCloud for Oracle Software</em></a>.</p>
+</li>
+<li><p>On the <em>Oracle VM Cloud Services</em> page, click the <strong>Servers</strong> icon.</p>
+<p><img src="images/orcl-oem-ico-servers.png" alt="Servers icon"></p>
+</li>
+<li><p>The <em>Servers</em> page lists all the servers you've requested, grouped by zone. You can also view template deployments.</p>
+<p><img src="images/orcl-oem-servers.png" alt="Servers page in OEM console"></p>
+</li>
+<li><p>To create a VM, click the <strong>Request Servers</strong> icon.</p>
+<p><img src="images/orcl-oem-ico-request-servers.png" alt="Request Servers icon"></p>
+</li>
+<li><p>In the <em>New Server Request</em> wizard, on the <em>General</em> page:</p>
+<ul>
+<li><p>Enter a <strong>Name</strong> for the request. This is displayed on the Requests page to help you identify your request and track its progress.</p>
+</li>
+<li><p>From the <strong>Zone</strong> list, select the UKCloud zone in which you want to create the VM.</p>
+</li>
+<li><p>In the <strong>Source</strong> field, specify the template that you want to use for the VM, for example, <strong>OL6u9_x86_64_HVMPVOL6u9_x86_64_HVMPV</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can choose from public templates (provided by UKCloud) or templates that you've created yourself. Use the search icon next to the field to help locate the required template if necessary.</p>
+</div>
+</li>
+<li><p>Click <strong>Next</strong>.</p>
+</li>
+</ul>
+<p><img src="images/orcl-oem-new-server-general.png" alt="General page of New Server Request wizard"></p>
+</li>
+<li><p>On the <em>Deployment Configuration</em> page:</p>
+<ul>
+<li><p>You can create multiple VMs in a single request. From the <strong>Number Of Servers</strong> list, select the number of VMs that you want to create.</p>
+</li>
+<li><p>If you're creating more than one VM, click <strong>Configure Individual Servers</strong> if you want to configure each VM separately. If you do not click this link, the configuration you specify is applied to all VMs in the request.</p>
+</li>
+<li><p>Enter a <strong>Name</strong> for the VM. If there are multiple VMs in the request, a number is added to the end of each VM to ensure uniqueness</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Click <strong>Configure Individual Servers</strong> to name each VM individually.</p>
+</div>
+</li>
+<li><p>Select <strong>Enable High Availability</strong> to enable high availability for the VM.</p>
+</li>
+<li><p>From the <strong>Keymap</strong> list, select the keyboard type for the VM.</p>
+</li>
+<li><p>In the <strong>Tags</strong> field, enter tags to identify the VM. This helps to find VMs during searches.</p>
+</li>
+<li><p>From the <strong>Server Size</strong> list, select a pre-configured option or select <strong>Custom</strong> if you want to specify your own settings.</p>
+<p>If you select <strong>Custom</strong>, specify the <strong>Maximum Memory</strong>, <strong>Memory</strong>, <strong>Maximum Number of CPUs</strong> and <strong>Number of CPUs</strong> settings for the VM(s).</p>
+</li>
+<li><p>In the <em>Networks</em> section, click <strong>Add</strong> and select the network interface card to use for the VM(s).</p>
+</li>
+<li><p>The <em>Storage</em> section shows the disk used for VM storage.</p>
+</li>
+<li><p>Click <strong>Next</strong>.</p>
+</li>
+</ul>
+<p><img src="images/orcl-oem-new-server-deployment-config.png" alt="Deployment Configuration page of New Server Request wizard"></p>
+</li>
+<li><p>On the <em>Schedule</em> page, you can choose to start request immediately or schedule it for a later time. You can also select to allow the request to run indefinitely or to end it by a specified time. When you're done, click <strong>Next</strong>.</p>
+<p><img src="images/orcl-oem-new-server-schedule.png" alt="Schedule page of New Server Request wizard"></p>
+</li>
+<li><p>On the <em>Review</em> page, check the details of your request and then click <strong>Finish</strong>. If you want to change any details, use the <strong>Back</strong> button to return to the previous steps of the request.</p>
+<p><img src="images/orcl-oem-new-server-review.png" alt="Review page of New Server Request wizard"></p>
+<p>You can click <strong>Save as Deployment Plan</strong> to save the request as deployment plan that you can use as a template for other requests.</p>
+</li>
+<li><p>A Confirmation notification lets you know that your request has been submitted. You can track the request on the <em>Oracle VM Cloud Services</em> or <em>Requests</em> pages.</p>
+<p><strong>More information!</strong> <a href="#monitoring-your-vm-requests">Monitoring your VM requests</a></p>
+<p><img src="images/orcl-oem-msg-new-server-confirm.png" alt="Confirmation message for submission of new server request"></p>
+</li>
+</ol>
+<h2 id="monitoring-your-vm-requests">Monitoring your VM requests</h2>
+<p>On the <em>Requests</em> page, you can view and edit all requests.</p>
+<ol>
+<li><p>Log in to the Oracle Enterprise Manager Cloud Control console at:</p>
+<p><a href="https://ecco.r00006.frn.ukcloud.com/em">https://ecco.r00006.frn.ukcloud.com/em</a></p>
+<p>For more detailed instructions, see the <a href="orcl-gs.html"><em>Getting Started Guide for UKCloud for Oracle Software</em></a>.</p>
+</li>
+<li><p>On the <em>Oracle VM Cloud Services</em> page, click the <strong>Requests</strong> icon.</p>
+<p><img src="images/orcl-oem-ico-requests.png" alt="Requests icon"></p>
+</li>
+<li><p>On the <em>Requests</em> page, you can view the following information for each request, including:</p>
+<ul>
+<li>The type of request</li>
+<li>The current status of the request: Successful, Partially Successful, In Progress, Scheduled, Error Scheduling, Execution Error, Error Ending, Ended</li>
+<li>The dates when the request was submitted, started and completed.</li>
+<li>The number of servers included in the request</li>
+<li>The total CPU, memory (in MB) and storage (in GB) consumed by the request across all servers</li>
+</ul>
+<p><img src="images/orcl-oem-requests.png" alt="Requests page in OEM console"></p>
+</li>
+<li><p>To edit a request, select the request and click the <strong>Edit</strong> icon. The request must have a status of <strong>Scheduled</strong>.</p>
+</li>
+<li><p>To delete a request, select the request and click the <strong>Delete</strong> icon. For auditing purposes the request must have a status of <strong>Scheduled</strong>, <strong>Error Scheduling</strong>, <strong>Execution Error</strong> or <strong>Error Ending</strong>.</p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>For a general overview of UKCloud for Oracle Software, see the <a href="orcl-gs.html"><em>Getting Started Guide for UKCloud for Oracle Software</em></a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/oracle/orcl-how-build-vm.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

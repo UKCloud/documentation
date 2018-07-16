@@ -8,7 +8,7 @@
     <title>How to create a virtual machine from the Azure Marketplace| UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual machine from the Azure Marketplace| UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.37.0.0">
+    <meta name="generator" content="docfx 2.36.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -84,16 +84,16 @@
                   
 <h1 id="how-to-create-a-virtual-machine-from-the-azure-marketplace">How to create a virtual machine from the Azure Marketplace</h1>
 
-<h2 id="introduction">Introduction</h2>
-<p>With UKCloud's Sovereign Azure cloud, you can leverage the power of Microsoft Azure to create virtual machines (VMs) for your on-premises applications. As Sovereign Azure is built on UKCloud's assured, UK-sovereign multi-cloud platform, those applications can work alongside other cloud platforms, such as Oracle, VMware and OpenStack, and benefit from native connectivity to non-cloud workloads in Crown Hosting and government community networks, including PSN, HSCN and RLI.</p>
+<h2 id="overview">Overview</h2>
+<p>With UKCloud for Microsoft Azure, you can leverage the power of Microsoft Azure to create virtual machines (VMs) for your on-premises applications. As UKCloud for Microsoft Azure is built on UKCloud’s assured, UK-sovereign multi-cloud platform, those applications can work alongside other cloud platforms, such as Oracle, VMware and OpenStack, and benefit from native connectivity to non-cloud workloads in Crown Hosting and government community networks, including PSN, HSCN and RLI.</p>
 <h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this guide, you must have appropriate access to a subscription in the UKCloud Azure Stack portal.</p>
-<h2 id="creating-a-sovereign-azure-virtual-machine">Creating a Sovereign Azure virtual machine</h2>
+<h2 id="creating-a-virtual-machine">Creating a virtual machine</h2>
 <p>VMs provide the basic compute building blocks in Azure Stack. You can create VMs using the Azure Marketplace, which provides access to pre-created images to quickly deploy the VMs you need to build your applications.</p>
 <p><strong>To create a VM from the Azure Marketplace:</strong></p>
 <ol>
 <li><p>Log in to the UKCloud Azure Stack portal.</p>
-<p>For more detailed instructions, see the <a href="https://portal.ukcloud.com/support/knowledge_centre/87af49fe-ce0f-475d-8d5f-dca53f256b64">Getting Started Guide for Sovereign Azure</a>.</p>
+<p>For more detailed instructions, see the <a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a>.</p>
 </li>
 <li><p>In the favourites panel, select <strong>New</strong>.</p>
 <p><img src="images/azsp_newmenu.png" alt="New option in favourites panel"></p>
@@ -103,7 +103,6 @@
 </li>
 <li><p>In the <em>Compute</em> blade, select the image that you want to use for your VM, for example, <strong>Ubuntu Server 17.0</strong>.</p>
 <p><img src="images/azsp_computeblade.png" alt="List of VM images in Compute blade"></p>
-<p><strong><em>anything in particular we want to point out here?</em></strong></p>
 </li>
 <li><p>In the <em>Deployment</em> blade, click <strong>Create</strong> to confirm your VM image selection.</p>
 <p><img src="images/azsp_deploymentblade.png" alt="Deployment blade"></p>
@@ -112,137 +111,14 @@
 <p><img src="images/azsp_createvm_basics.png" alt="Create virtual machine &gt; Basics"></p>
 </li>
 <li><p>In the <em>Size</em> step, select the appropriate size for your VM, depending on its purpose, then click <strong>Select</strong>.</p>
+<p>For information about the different available VM sizes, see <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes">https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes</a></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>By default, the list shows a selection of recommended VM sizes. To see all available VM sizes, click <strong>View all</strong>.</p>
+</div>
+<p><img src="images/azsp_createvm_size.png" alt="Create virtual machine &gt; Size"></p>
 </li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>Size</th>
-<th>vCPU</th>
-<th>Memory (GiB)</th>
-<th>Temp storage (GiB)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Standard_D1_v2</td>
-<td>1</td>
-<td>3.5</td>
-<td>50</td>
-</tr>
-<tr>
-<td>Standard_D2_v2</td>
-<td>2</td>
-<td>7</td>
-<td>100</td>
-</tr>
-<tr>
-<td>Standard_D3_v2</td>
-<td>4</td>
-<td>14</td>
-<td>200</td>
-</tr>
-<tr>
-<td>Standard_D4_v2</td>
-<td>8</td>
-<td>28</td>
-<td>400</td>
-</tr>
-<tr>
-<td>Standard_A0</td>
-<td>1</td>
-<td>0.768</td>
-<td>20</td>
-</tr>
-<tr>
-<td>Standard_A1</td>
-<td>1</td>
-<td>1.75</td>
-<td>70</td>
-</tr>
-<tr>
-<td>Standard_A2</td>
-<td>2</td>
-<td>3.5</td>
-<td>135</td>
-</tr>
-<tr>
-<td>Standard_A3</td>
-<td>4</td>
-<td>7</td>
-<td>285</td>
-</tr>
-<tr>
-<td>Standard_A4</td>
-<td>8</td>
-<td>14</td>
-<td>605</td>
-</tr>
-<tr>
-<td>Standard_A5</td>
-<td>2</td>
-<td>14</td>
-<td>135</td>
-</tr>
-<tr>
-<td>Standard_A6</td>
-<td>4</td>
-<td>28</td>
-<td>285</td>
-</tr>
-<tr>
-<td>A0\Basic_A0</td>
-<td>1</td>
-<td>768 MB</td>
-<td>20 GB</td>
-</tr>
-<tr>
-<td>A1\Basic_A1</td>
-<td>1</td>
-<td>1.74 GB</td>
-<td>40 GB</td>
-</tr>
-<tr>
-<td>A2\Basic_A2</td>
-<td>2</td>
-<td>3.5 GB</td>
-<td>60 GB</td>
-</tr>
-<tr>
-<td>A3\Basic_A3</td>
-<td>4</td>
-<td>7 GB</td>
-<td>120 GB</td>
-</tr>
-<tr>
-<td>A4\Basic_A4</td>
-<td>8</td>
-<td>14 GB</td>
-<td>240 GB</td>
-</tr>
-<tr>
-<td>Standard_DS11_v2</td>
-<td>2</td>
-<td>14</td>
-<td>28</td>
-</tr>
-<tr>
-<td>Standard_DS12_v2</td>
-<td>4</td>
-<td>28</td>
-<td>56</td>
-</tr>
-</tbody>
-</table>
-<p><strong><em>need to confirm list above is correct and up to date</em></strong></p>
-<blockquote>
-<p>Tip! By default, the list shows a selection of recommended VM sizes. To see all available VM sizes, click <strong>View all</strong>.</p>
-</blockquote>
-<pre><code>![Create virtual machine &gt; Size](images/azsp_createvm_size.png)
-</code></pre>
-<ol start="8">
 <li><p>In the <em>Settings</em> step, change any of the optional settings as required for your VM, then click <strong>OK</strong>.</p>
-<p><strong><em>any recommendations or best practices we want to suggest here?</em></strong></p>
 <p><img src="images/azsp_createvm_settings.png" alt="Create virtual machine &gt; Settings"></p>
 </li>
 <li><p>In the <em>Summary</em> step, review the selections you've made and then click <strong>OK</strong> to start the deployment.</p>
@@ -267,19 +143,17 @@
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
-<p>For more information about our Sovereign Azure cloud, see:</p>
+<p>For more information about UKCloud for Microsoft Azure, see:</p>
 <ul>
-<li><a href="https://portal.ukcloud.com/support/knowledge_centre/87af49fe-ce0f-475d-8d5f-dca53f256b64">Getting Started Guide for Sovereign Azure</a></li>
-<li><a href="https://portal.ukcloud.com/support/knowledge_centre/de19b410-f844-419b-afd0-bb3dbab0a217">Sovereign Azure BETA FAQs</a></li>
+<li><a href="azs-ref-overview.html"><em>Understanding UKCloud for Microsoft Azure</em></a></li>
+<li><a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a></li>
+<li><a href="azs-faq.html"><em>UKCloud for Microsoft Azure FAQs</em></a></li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this article, or any other aspect of your UKCloud experience, send them to feedback@ukcloud.com.</p>
-<p>(c) UKCloud Ltd, 2018. All Rights Reserved.</p>
+<p>If you have any comments on this article, or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
-                    <div class="col-md-offset-2 col-md-10">
-                    </div>
                   </div>
                 </article>
               </div>

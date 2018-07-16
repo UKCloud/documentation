@@ -1,10 +1,7 @@
 - name: FAQs
   items:
-  - name: 
+  - name: Oracle Software FAQs
     href: orcl-faq.md
-    items:
-      name: 
-      href: orcl-faq.md
 - name: Getting Started
   items:
   - name: UKCloud for Oracle Software

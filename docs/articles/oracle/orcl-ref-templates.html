@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>docfx-seed | UKCloud Knowledge Centre </title>
+    <title>UKCloud for Oracle Software templates | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="docfx-seed | UKCloud Knowledge Centre ">
+    <meta name="title" content="UKCloud for Oracle Software templates | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.0.0">
     
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles/docfx.vendor.css">
-    <link rel="stylesheet" href="styles/docfx.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <meta property="docfx:navrel" content="toc.html">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
-    <meta property="docfx:rel" content="">
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -35,8 +35,8 @@
                   <span class="icon-bar"></span>
                 </button>
                 
-                <a class="navbar-brand" href="index.html">
-                  <img id="logo" class="svg" src="logo.png" alt="">
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -69,48 +69,38 @@
         </div>
       </div>
       <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
         <div class="article row grid-right">
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="docfx-seed">docfx-seed</h1>
+<h1 id="ukcloud-for-oracle-software-templates">UKCloud for Oracle Software templates</h1>
 
-<p><a href="https://ci.appveyor.com/project/qinezh/docfx-seed"><img src="https://ci.appveyor.com/api/projects/status/psjd5g56kr0vayiw?svg=true" alt="Build status"></a></p>
-<h2 id="description">Description</h2>
-<p>This is a sample docfx documentation project. It contains .NET source code and markdown files.
-<code>docfx.json</code> is the configuration file for running <code>docfx</code>.
-<code>docfx</code> will generate a static website as similar to <a href="http://docascode.github.io/docfx-seed/index.html">http://docascode.github.io/docfx-seed/index.html</a></p>
-<h2 id="how-to-run">How to run</h2>
-<h3 id="under-windows">Under Windows</h3>
-<h4 id="install-from-nuget">Install from Nuget</h4>
+<p>Enterprise Compute Cloud for Oracle provides several templates in a public library to help you build your Oracle virtual machines (VMs). An Oracle VM template is a fully pre-installed, pre-configured VM image that you can use to quickly create new VMs without having to worry about OS installation and configuration.</p>
+<p>UKCloud provides the following templates:</p>
 <ul>
-<li>Install <a href="https://dist.nuget.org/index.html">Nuget.exe</a></li>
-<li>Create a folder, e.g. <em>C:\Tools\docfx</em>, under the folder, <code>nuget install docfx.console</code></li>
-<li>Open command line:</li>
+<li>Oracle Linux 6.9 64-bit</li>
+<li>Oracle Linux 7.3 64-bit</li>
+<li>Red Hat Enterprise Linux 6.9 64-bit</li>
+<li>Red Hat Enterprise Linux 7.3 64-bit</li>
+<li>CentOS 6.9 64-bit</li>
+<li>CentOS 7.3 64-bit</li>
+<li>Debian 8.8 Jessie 64-bit</li>
+<li>Debian 7.11 Wheezy 64-bit</li>
+<li>Solaris for x86 11.3 64-bit</li>
+<li>Ubuntu 16.04 LTS Xaniel Xerus 64-bit</li>
+<li>Microsoft Windows Server 2016 DataCenter Edition 64-bit</li>
+<li>Microsoft Windows Server 2012 R2 DataCenter Edition 64-bit</li>
 </ul>
-<pre><code class="lang-batch">set PATH=%PATH%;C:\Tools\docfx\docfx.console\tools
-docfx docfx-seed\docfx.json --serve
-</code></pre>
-<h4 id="install-from-choco">Install from choco</h4>
-<ul>
-<li>Install <a href="https://chocolatey.org/install">chocolatey</a></li>
-<li>Open command line:</li>
-</ul>
-<pre><code class="lang-batch">choco install docfx
-docfx docfx-seed\docfx.json --serve
-</code></pre>
-<h3 id="cross-platform">Cross platform</h3>
-<ul>
-<li>Install <a href="http://www.mono-project.com/download/#download-lin">Mono</a></li>
-<li>Install <a href="https://dist.nuget.org/index.html">Nuget.exe</a></li>
-</ul>
-<pre><code class="lang-sh">&gt; mono nuget.exe install docfx.console
-&gt; mono docfx.console/tools/docfx.exe docfx-seed/docfx.json
-</code></pre>
-<h2 id="further-information-about-docfx">Further information about <code>docfx</code></h2>
-<p><code>docfx</code> is a tool to generate documentation towards .NET source code and markdown files. Please refer to <a href="http://dotnet.github.io/docfx/tutorial/docfx_getting_started.html">docfx</a> to get start. The <code>docfx</code> website itself is generated by <code>docfx</code>!</p>
+<p>© <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.</p>
 
 
                   <div class="row">
@@ -123,7 +113,7 @@ docfx docfx-seed\docfx.json --serve
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/README.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/oracle/orcl-ref-templates.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>
@@ -151,9 +141,9 @@ docfx docfx-seed\docfx.json --serve
       </footer>
     </div>
     
-    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="styles/docfx.js"></script>
-    <script type="text/javascript" src="styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
     
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

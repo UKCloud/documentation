@@ -23,6 +23,13 @@ a:hover {
   transition: all .2s ease;
 }
 
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: #00d2b3;
+  color: #ffffff;
+  transition: all .2s ease;
+}
+
 .navbar-inverse {
   background-color: #ffffff;
   border-color: #e7e7e7;
@@ -200,6 +207,8 @@ products .container {
 
 .product_grid-1 {
   margin-top: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .product_grid-1::after {
@@ -312,4 +321,11 @@ products .container {
 
 article {
   font-family: Arial, sans-serif;
+}
+
+.affix ul > li.active > ul,
+.affix ul > li.active > a:before,
+.affix ul > li > a:hover:before {
+  display: block;
+  white-space: normal;
 }
