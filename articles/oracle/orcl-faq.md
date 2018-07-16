@@ -8,7 +8,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: 
+toc_title: Oracle Software FAQs
 toc_fullpath: FAQs/orcl-faq.md
 toc_mdlink: orcl-faq.md
 ---
