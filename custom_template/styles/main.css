@@ -207,6 +207,8 @@ products .container {
 
 .product_grid-1 {
   margin-top: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .product_grid-1::after {
