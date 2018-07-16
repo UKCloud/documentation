@@ -131,11 +131,9 @@ For more information about Azure Stack, see the following Microsoft resources:
 
 For more information about UKCloud for Microsoft Azure, see:
 
-- [*Getting Started Guide for UKCloud for Microsoft Azure*](../azure/azs-gs.md)
-- [*UKCloud for Microsoft Azure FAQs*](../azure/azs-faq.md)
+- [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md)
+- [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
 
 ## Feedback
 
 If you have any comments on this article, or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
-
-&copy; UKCloud Ltd, 2018. All Rights Reserved.

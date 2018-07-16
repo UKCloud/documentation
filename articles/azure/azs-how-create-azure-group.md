@@ -1,5 +1,5 @@
 ---
-title: How to grant users access to UKCloud for Microsoft Azure | UKCloud Ltd
+title: How to create an Azure user group | UKCloud Ltd
 description: Describes how to apply the appropriate Azure Stack permissions to your UKCloud for Microsoft Azure users
 services: azure
 author: Sue Highmoor
@@ -9,18 +9,22 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Grant users access to UKCloud for Microsoft Azure
-toc_fullpath: Users/How To/azs-how-grant-access.md
-toc_mdlink: azs-how-grant-access.md
+toc_title: Create an Azure user group
+toc_fullpath: Users/How To/azs-how-create-azure-group.md
+toc_mdlink: azs-how-create-azure-group.md
 ---
 
-# How to grant users access to UKCloud for Microsoft Azure
+# How to create an Azure user group
 
 ## Overview
 
-UKCloud for Microsoft Azure provides you with new options to harness Microsoft Azure alongside other cloud platforms, including Oracle, VMware and OpenStack. This gives you the flexibility to accommodate diverse workloads within a low latency, accredited platform with native connectivity to non-cloud workloads in Crown Hosting and the networks that are vital to the public sector: from PSN Protected to N3/HSCN and RLI.
+UKCloud for Microsoft Azure provides you with three default user groups to get you started:
 
-To work with UKCloud for Microsoft Azure, users must have the appropriate Azure Stack permissions. This article provides the steps for granting this access.
+- **AzureStackOperators** - Members of this group have Owner permissions and have full access to all resources and can manage access to resources
+- **AzureStackUsers** - Members of this group have Contributor permissions and can create and manage all resources but cannot manage access to resources
+- **AzureStackReadOnly** - Members of this group have Reader permissions and can view everything but cannot make changes
+
+If these default groups do not meet your requirements, for example, if you've created a custom role and want to grant users the permissions specified by that role, you can create new groups and assign roles and permissions to them.
 
 ### Intended audience
 
@@ -28,7 +32,7 @@ To complete the steps in this guide you must have global administrator access to
 
 ## Creating a group for Azure users
 
-Rather than granting permissions to each individual user, you should first create a group and add your Azure users to that group.
+Rather than granting permissions to individual users, we recommend that you first create a group and add your Azure users to that group.
 
 To create a group in the Azure portal:
 
@@ -47,7 +51,7 @@ To create a group in the Azure portal:
 
 5. From the **Group type** list, select **Security**.
 
-6. In the **Group name** field, enter a name for the group, for example, `AzureStackUsers`.
+6. In the **Group name** field, enter a name for the group, for example, `AzureStackGroup`.
 
 7. In the **Group description** field, enter a brief, but meaningful description for the group.
 
@@ -80,11 +84,7 @@ To grant Azure permissions to a group:
 
 5. Click the **Add** option.
 
-6. From the **Role** list, select the appropriate role that you want to assign to the group:
-
-    - **Owner**---Members of the group have full access to all resources and can manage access to resources
-    - **Contributor**---Members of the group can create and manage all resources but cannot manage access to resources
-    - **Reader**---Members of the group can view everything but cannot make any changes
+6. From the **Role** list, select the appropriate role that you want to assign to the group.
 
 7. In the **Select** field, enter the name of the group you created in [Creating a group for UKCloud for Microsoft Azure users](#creating-a-group-for-azure-users).
 
@@ -101,8 +101,8 @@ For more information about Azure Stack, see the following Microsoft resources:
 
 For more information about UKCloud for Microsoft Azure, see:
 
-- [*Getting Started Guide for UKCloud for Microsoft Azure*](https://portal.ukcloud.com/support/knowledge_centre/87af49fe-ce0f-475d-8d5f-dca53f256b64)
-- [*UKCloud for Microsoft Azure FAQs*](https://portal.ukcloud.com/support/knowledge_centre/de19b410-f844-419b-afd0-bb3dbab0a217)
+- [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md)
+- [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
 
 ## Feedback
 

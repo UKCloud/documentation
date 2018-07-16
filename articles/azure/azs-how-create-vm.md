@@ -16,15 +16,15 @@ toc_mdlink: azs-how-create-vm.md
 
 # How to create a virtual machine from the Azure Marketplace
 
-## Introduction
+## Overview
 
-With UKCloud's Sovereign Azure cloud, you can leverage the power of Microsoft Azure to create virtual machines (VMs) for your on-premises applications. As Sovereign Azure is built on UKCloud's assured, UK-sovereign multi-cloud platform, those applications can work alongside other cloud platforms, such as Oracle, VMware and OpenStack, and benefit from native connectivity to non-cloud workloads in Crown Hosting and government community networks, including PSN, HSCN and RLI.
+With UKCloud for Microsoft Azure, you can leverage the power of Microsoft Azure to create virtual machines (VMs) for your on-premises applications. As UKCloud for Microsoft Azure is built on UKCloud’s assured, UK-sovereign multi-cloud platform, those applications can work alongside other cloud platforms, such as Oracle, VMware and OpenStack, and benefit from native connectivity to non-cloud workloads in Crown Hosting and government community networks, including PSN, HSCN and RLI.
 
 ### Intended audience
 
 To complete the steps in this guide, you must have appropriate access to a subscription in the UKCloud Azure Stack portal.
 
-## Creating a Sovereign Azure virtual machine
+## Creating a virtual machine
 
 VMs provide the basic compute building blocks in Azure Stack. You can create VMs using the Azure Marketplace, which provides access to pre-created images to quickly deploy the VMs you need to build your applications.
 
@@ -32,21 +32,19 @@ VMs provide the basic compute building blocks in Azure Stack. You can create VMs
 
 1. Log in to the UKCloud Azure Stack portal.
 
-   For more detailed instructions, see the [Getting Started Guide for Sovereign Azure](https://portal.ukcloud.com/support/knowledge_centre/87af49fe-ce0f-475d-8d5f-dca53f256b64).
+   For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
 2. In the favourites panel, select **New**.
 
     ![New option in favourites panel](images/azsp_newmenu.png)
 
-3. In the _New_ blade, select **Compute**.
+3. In the *New* blade, select **Compute**.
 
     ![Compute option in New blade](images/azsp_newblade.png)
 
 4. In the *Compute* blade, select the image that you want to use for your VM, for example, **Ubuntu Server 17.0**.
 
     ![List of VM images in Compute blade](images/azsp_computeblade.png)
-
-   **_anything in particular we want to point out here?_**
 
 5. In the *Deployment* blade, click **Create** to confirm your VM image selection.
 
@@ -58,40 +56,19 @@ VMs provide the basic compute building blocks in Azure Stack. You can create VMs
 
 7. In the *Size* step, select the appropriate size for your VM, depending on its purpose, then click **Select**.
 
-Size | vCPU | Memory (GiB) | Temp storage (GiB)
------|------|--------------|-------------------
-Standard_D1_v2 | 1 | 3.5 | 50
-Standard_D2_v2 | 2 | 7 | 100
-Standard_D3_v2 | 4 | 14 | 200
-Standard_D4_v2 | 8 | 28 | 400
-Standard_A0 | 1 | 0.768 | 20
-Standard_A1 | 1 | 1.75 | 70
-Standard_A2 | 2 | 3.5 | 135
-Standard_A3 | 4 | 7 | 285
-Standard_A4 | 8 | 14 | 605
-Standard_A5 | 2 | 14 | 135
-Standard_A6 | 4 | 28 | 285
-A0\Basic_A0 | 1 | 768 MB | 20 GB
-A1\Basic_A1 | 1 | 1.74 GB | 40 GB
-A2\Basic_A2 | 2 | 3.5 GB | 60 GB
-A3\Basic_A3 | 4 | 7 GB | 120 GB
-A4\Basic_A4 | 8 | 14 GB | 240 GB
-Standard_DS11_v2 | 2 | 14 | 28
-Standard_DS12_v2 | 4 | 28 | 56
+    For information about the different available VM sizes, see <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>
 
-**_need to confirm list above is correct and up to date_**
-
-   > Tip! By default, the list shows a selection of recommended VM sizes. To see all available VM sizes, click **View all**.
+    > [!TIP]
+    > By default, the list shows a selection of recommended VM sizes. To see all available VM sizes, click **View all**.
 
     ![Create virtual machine > Size](images/azsp_createvm_size.png)
 
 8. In the *Settings* step, change any of the optional settings as required for your VM, then click **OK**.
 
-   **_any recommendations or best practices we want to suggest here?_**
-
     ![Create virtual machine > Settings](images/azsp_createvm_settings.png)
 
 9. In the *Summary* step, review the selections you've made and then click **OK** to start the deployment.
+
 10. You can monitor the progress of your VM's deployment by clicking the **Notifications** icon.
 
     ![Notification showing VM deployment in progress](images/azsp_createvm_progress.png)
@@ -118,13 +95,12 @@ Standard_DS12_v2 | 4 | 28 | 56
 
 ## Next steps
 
-For more information about our Sovereign Azure cloud, see:
+For more information about UKCloud for Microsoft Azure, see:
 
-- [Getting Started Guide for Sovereign Azure](https://portal.ukcloud.com/support/knowledge_centre/87af49fe-ce0f-475d-8d5f-dca53f256b64)
-- [Sovereign Azure BETA FAQs](https://portal.ukcloud.com/support/knowledge_centre/de19b410-f844-419b-afd0-bb3dbab0a217)
+- [*Understanding UKCloud for Microsoft Azure*](azs-ref-overview.md)
+- [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md)
+- [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
 
 ## Feedback
 
-If you have any comments on this article, or any other aspect of your UKCloud experience, send them to feedback@ukcloud.com.
-
-(c) UKCloud Ltd, 2018. All Rights Reserved.
+If you have any comments on this article, or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
