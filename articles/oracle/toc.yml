@@ -1,6 +1,6 @@
 - name: FAQs
   items:
-  - name: Oracle Software FAQs
+  - name: UKCloud for Oracle Software FAQs
     href: orcl-faq.md
 - name: Getting Started
   items:
@@ -14,13 +14,13 @@
     href: orcl-how-enable-ha.md
 - name: Reference
   items:
-  - name: Oracle licensing
+  - name: Oracle licensing on the UKCloud platform
     href: orcl-ref-licensing.md
-  - name: Oracle Software templates
+  - name: UKCloud for Oracle Software templates
     href: orcl-ref-templates.md
   - name: VM compatibility with UKCloud for Oracle Software
     href: orcl-ref-vm-compatibility.md
 - name: Service Scope
   items:
-  - name: Oracle Software Service Scope
+  - name: UKCloud for Oracle Software Service Scope
     href: orcl-sco.md
