@@ -17,11 +17,12 @@
     href: orcl-how-enable-ha.md
 - name: Reference
   items:
-  - name: 
+  - name: Oracle licensing
     href: orcl-ref-licensing.md
-    items:
-      name: 
-      href: orcl-ref-licensing.md
+  - name: Oracle Software templates
+    href: orcl-ref-templates.md
+  - name: VM compatibility with UKCloud for Oracle Software
+    href: orcl-ref-vm-compatibility.md
 - name: Service Scope
   items:
   - name: 
