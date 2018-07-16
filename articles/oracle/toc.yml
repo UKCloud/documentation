@@ -25,8 +25,5 @@
     href: orcl-ref-vm-compatibility.md
 - name: Service Scope
   items:
-  - name: 
+  - name: Oracle Software Service Scope
     href: orcl-sco.md
-    items:
-      name: 
-      href: orcl-sco.md
