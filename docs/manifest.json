@@ -2187,15 +2187,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/oracle/orcl-how-enable-ha.md",
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-how-enable-ha.html",
-          "hash": "dLoEMuXea3hEj788EP3rdA=="
+          "hash": "fUOv01K6EyBWhe4Q1UT0rw=="
         }
       },
       "is_incremental": false,
