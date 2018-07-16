@@ -16,10 +16,14 @@
       href: azs-how-configure-cli.md
     - name: Create a virtual machine
       href: azs-how-create-vm.md
-    - name: Grant users access to UKCloud for Microsoft Azure
-      href: azs-how-grant-access.md
+    - name: Create an Azure user group
+      href: azs-how-create-azure-group.md
+    - name: Use the Azure Stack API
+      href: azs-how-use-azure-api.md
   - name: Reference
     items:
+    - name: UKCloud for Microsoft Azure Troubleshooting
+      href: azs-ref-troubleshooting.md
     - name: Understanding UKCloud for Microsoft Azure
       href: azs-ref-overview.md
 - name: Operators

@@ -1,4 +1,31 @@
+- name: FAQs
+  items:
+  - name: 
+    href: orcl-faq.md
+    items:
+      name: 
+      href: orcl-faq.md
 - name: Getting Started
   items:
   - name: UKCloud for Oracle Software
     href: orcl-gs.md
+- name: How To
+  items:
+  - name: Build an Oracle virtual machine
+    href: orcl-how-build-vm.md
+  - name: Enable high availability for your Oracle VMs
+    href: orcl-how-enable-ha.md
+- name: Reference
+  items:
+  - name: 
+    href: orcl-ref-licensing.md
+    items:
+      name: 
+      href: orcl-ref-licensing.md
+- name: Service Scope
+  items:
+  - name: 
+    href: orcl-sco.md
+    items:
+      name: 
+      href: orcl-sco.md

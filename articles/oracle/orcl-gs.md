@@ -32,8 +32,7 @@ Many applications running in the UK public sector today have a backbone powered 
 
 Oracle solutions have traditionally been subject to licensing and technical requirements that have made it challenging to carry out cloud transition projects and meet the government's Cloud First policy.
 
-UKCloud for Oracle Software enables you to start your cloud journey with your Oracle applications. It overcomes the licensing and technical barriers, and provides the trusted, connected and flexible Assured OFFICIAL and non-internet-connected Elevated OFFICIAL cloud
-platforms you need to deliver your critical Oracle applications in the cloud. UKCloud for Oracle Software can help you achieve the business goals at the centre of your strategy, without risking your operational ability to execute.
+UKCloud for Oracle Software enables you to start your cloud journey with your Oracle applications. It overcomes the licensing and technical barriers, and provides the trusted, connected and flexible Assured OFFICIAL and non-internet-connected Elevated OFFICIAL cloud platforms you need to deliver your critical Oracle applications in the cloud. UKCloud for Oracle Software can help you achieve the business goals at the centre of your strategy, without risking your operational ability to execute.
 
 The service has been designed and tested for compatibility with the most popular Oracle applications used in citizen‑facing solutions today, including:
 
@@ -98,9 +97,7 @@ To manage your UKCloud for Oracle Software environment, you need to log in to th
 
 ## Getting to know the Cloud Control console
 
-After you log in, you'll be taken to the
-*Infrastructure -- Oracle VM Cloud Services* page of the OEM Cloud
-Control console.
+After you log in, you'll be taken to the *Infrastructure -- Oracle VM Cloud Services* page of the OEM Cloud Control console.
 
 ![Oracle VM Cloud Services page](images/orcl-console-cloud-services.png)
 
@@ -112,7 +109,7 @@ On this page, you can:
 
 3. Click the **Servers** icon to view and manage all your VM instances.
 
-    **More information!** [*How to build an Oracle virtual machine*](https://portal.ukcloud.com/support/knowledge_centre/c576fb57-ab2d-46aa-b116-8c7b873fdc45)
+    **More information!** [*How to build an Oracle virtual machine*](orcl-how-build-vm.md)
 
 4. Click the **Storage** icon to view and manage all the storage associated with your VMs.
 
@@ -122,19 +119,19 @@ On this page, you can:
 
 7. Click the **Policies** icon to view policies and schedules that you can apply to your VMs.
 
-1. The *Notifications* section provides useful alerts about your UKCloud for Oracle Software environment.
+8. The *Notifications* section provides useful alerts about your UKCloud for Oracle Software environment.
 
 9. The *Usage* section displays the currently available quotas for VMs, CPUs, memory and storage.
 
 10. The *10 Last Requested Servers* section lists the last ten VMs that you've requested. If you own more than 10 VMs, click the **Servers** icon to view them all. You can click the **Request Servers** icon to create a new VM.
 
-    **More information!** [*How to build an Oracle virtual machine*](https://portal.ukcloud.com/support/knowledge_centre/c576fb57-ab2d-46aa-b116-8c7b873fdc45)
+    **More information!** [*How to build an Oracle virtual machine*](orcl-how-build-vm.md)
 
 11. The *10 Latest Requests* section lists the details and status of the last ten requests you've made. To view all requests, click the **Requests** icon.
 
 12. Click the **All Cloud Services** icon at any point to go to the *All Cloud Services* page. On the *All Cloud Services* page, click **Infrastructure -- Oracle VM Cloud Services** to return to the *Infrastructure -- Oracle VM Cloud Services* page.
 
-1. Click the **Notification Center** icon to access the *Notification Center* where you can view alerts about the objects within your UKCloud for Oracle Software environment.
+13. Click the **Notification Center** icon to access the *Notification Center* where you can view alerts about the objects within your UKCloud for Oracle Software environment.
 
     **More information!** [Viewing notifications](#viewing-notifications)
 
@@ -213,7 +210,7 @@ You can change your accessibility preferences to indicate any assistive technolo
 System broadcasts are popup messages sent by the UKCloud administrator to immediately notify users with important information.
 
 > [!NOTE]
-> We highly recommend that you do not change these settings. If you do change these settings, you may miss important information about your UKCloud for ORacle Software environment.
+> We highly recommend that you do not change these settings. If you do change these settings, you may miss important information about your UKCloud for Oracle Software environment.
 
 1. In the Cloud Control console, click your username and select **Preferences** and then **System Broadcast**.
 
@@ -227,8 +224,7 @@ System broadcasts are popup messages sent by the UKCloud administrator to immedi
 
 ### Changing your console settings
 
-You can set various options to personalise your experience in the Cloud Control console. For example, you can choose when to receive VM request, expiry and quota notifications and specify an email address to receive selected notifications. You can also define the default values to use
-when creating VMs.
+You can set various options to personalise your experience in the Cloud Control console. For example, you can choose when to receive VM request, expiry and quota notifications and specify an email address to receive selected notifications. You can also define the default values to use when creating VMs.
 
 1. In the Cloud Control console, click your username and select **Preferences** and then **SSA Portal Settings**.
 
@@ -250,7 +246,7 @@ Your Oracle applications will consist of one or more VMs. In the Cloud Console, 
 
 On the *Infrastructure -- Oracle VM Cloud Services* page you can view and manage all your Oracle VMs.
 
-**More information!** [*How to build an Oracle virtual machine*](https://portal.ukcloud.com/support/knowledge_centre/c576fb57-ab2d-46aa-b116-8c7b873fdc45)
+**More information!** [*How to build an Oracle virtual machine*](orcl-how-build-vm.md)
 
 ## Setting up your network
 
@@ -263,9 +259,9 @@ Networking and connectivity for UKCloud for Oracle Software is managed within vC
 
 There are two types of network:
 
-- An isolated (internally connected) network provides access only to the VMs within the Oracle tenant (see [*Creating isolated Org VDC networks*](https://portal.ukcloud.com/support/knowledge_centre/8f839d6b-a2f1-46ef-8762-15be2923d8c8)).
+- An isolated (internally connected) network provides access only to the VMs within the Oracle tenant (see [*How to create an isolated VDC network*](../vmware/vmw-how-create-isolated-network.md)).
 
-- A routed (externally connected) network provides access to machines and networks outside the Oracle tenant via the edge gateway. You can have up to nine usable routed networks per tenant: one for each connectivity type (see [*Creating routed Org VDC networks*](https://portal.ukcloud.com/support/knowledge_centre/2b989ddd-c018-4289-8a06-0482f0674bc1)).
+- A routed (externally connected) network provides access to machines and networks outside the Oracle tenant via the edge gateway. You can have up to nine usable routed networks per tenant: one for each connectivity type (see [*How to create a routed VDC network*](../vmware/vmw-how-create-routed-network.md)).
 
 ## Configuring your edge gateway
 
@@ -275,17 +271,17 @@ The tools for configuring your edge gateway are provided within vCloud Director,
 
 Your edge gateway provides the following services:
 
-- **Dynamic Host Configuration Protocol (DHCP)** --- The edge gateway can act as a DHCP server for VMs connected to VDC networks connected to an edge (see [*vCNS Edge services: DHCP*](https://portal.ukcloud.com/support/knowledge_centre/76fceb40-dd43-499b-8d2a-ea1a8ab50af8)).
+- **Dynamic Host Configuration Protocol (DHCP)** --- The edge gateway can act as a DHCP server for VMs connected to VDC networks connected to an edge (see [*How to create a DHCP pool*](../vmware/vmw-how-create-dhcp-pool.md)).
 
-- **Network address translation (NAT)** --- NAT rules determine where to direct inbound and outbound traffic (see [*vCNS Edge services: NAT*](https://portal.ukcloud.com/support/knowledge_centre/89cbf32e-eb48-4145-b7dc-6bb0c5f1bcc3)).
+- **Network address translation (NAT)** --- NAT rules determine where to direct inbound and outbound traffic (see [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md)).
 
-- **Firewall** --- The firewall controls which networks and ports can communicate through the edge gateway (see [*vCNS Edge services: firewall*](https://portal.ukcloud.com/support/knowledge_centre/e8ec5a0b-e5c7-4e44-b353-ab89505fefbe)).
+- **Firewall** --- The firewall controls which networks and ports can communicate through the edge gateway (see [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md)).
 
-- **Static routing** --- Provides static routes from the edge gateway to other networks, for example, networks in other VDCs in your compute service (see [*vCNS Edge services: static routing*](https://portal.ukcloud.com/support/knowledge_centre/a5a0f2be-f83f-48e5-8e6b-72f5f963b2a7)).
+- **Static routing** --- Provides static routes from the edge gateway to other networks, for example, networks in other VDCs in your compute service (see [*How to create a static route*](../vmware/vmw-how-create-static-route.md)).
 
-- **VPN** --- IPsec site-to-site VPN is available on the edge gateway (see [*vCNS Edge services: IPsec VPN*](https://portal.ukcloud.com/support/knowledge_centre/43f064b6-0e0e-4985-89f5-46a869a16f81)).
+- **VPN** --- IPsec site-to-site VPN is available on the edge gateway (see [*How to configure IPsec VPN*](../vmware/vmw-how-configure-ipsec-vpn.md)).
 
-- **Load balancing** --- The edge gateway provides simple HTTP and HTTPS load balancing using round robin (see [*vCNS Edge services: load balancer*](https://portal.ukcloud.com/support/knowledge_centre/9b4f5898-9464-4ea6-8a64-6bacb686bd0e)).
+- **Load balancing** --- The edge gateway provides simple HTTP and HTTPS load balancing using round robin (see [*How to configure a load balancer*](../vmware/vmw-how-configure-load-balancer.md)).
 
 ## Logging out of the Cloud Control console
 
@@ -299,63 +295,57 @@ To log out of the Cloud Control console, click your user name and select **Log O
 
 In this Getting Started Guide, you've learned the basics about UKCloud for Oracle Software.
 
-For more detailed information about building Oracle applications in your UKCloud for Oracle Software estate, see the following articles in the Knowledge Centre:
+For more detailed information about building Oracle applications in your UKCloud for Oracle Software estate, see the following articles:
 
 ### VM networking
 
-- [*How to create an isolated VDC network*](https://portal.ukcloud.com/support/knowledge_centre/8f839d6b-a2f1-46ef-8762-15be2923d8c8)
+- [*How to create an isolated VDC network*](../vmware/vmw-how-create-isolated-network.md)
 
-- [*How to create a routed VDC network*](https://portal.ukcloud.com/support/knowledge_centre/2b989ddd-c018-4289-8a06-0482f0674bc1)
+- [*How to create a routed VDC network*](../vmware/vmw-how-create-routed-network.md)
 
 ### Edge gateway services
 
-- [*How to view your allocated external IP addresses*](https://portal.ukcloud.com/support/knowledge_centre/8d3d214e-b8f7-4f6d-9c88-e47168627133)
+- [*How to find your allocated external IP addresses*](../vmware/vmw-how-find-ip-addresses.md)
 
-- [*vCNS Edge services: DHCP*](https://portal.ukcloud.com/support/knowledge_centre/76fceb40-dd43-499b-8d2a-ea1a8ab50af8)
+- [*How to create a DHCP pool*](../vmware/vmw-how-create-dhcp-pool.md)
 
-- [*vCNS Edge services: NAT*](https://portal.ukcloud.com/support/knowledge_centre/89cbf32e-eb48-4145-b7dc-6bb0c5f1bcc3)
+- [*How to create NAT rules*](../vmware/vmw-how-create-nat-rules.md)
 
-- [*vCNS Edge services: firewall*](https://portal.ukcloud.com/support/knowledge_centre/e8ec5a0b-e5c7-4e44-b353-ab89505fefbe)
+- [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md)
 
-- [*vCNS Edge services: static routing*](https://portal.ukcloud.com/support/knowledge_centre/a5a0f2be-f83f-48e5-8e6b-72f5f963b2a7)
+- [*How to create a static route*](../vmware/vmw-how-create-static-route.md)
 
-- [*vCNS Edge services: IPsec VPN*](https://portal.ukcloud.com/support/knowledge_centre/43f064b6-0e0e-4985-89f5-46a869a16f81)
+- [*How to configure IPsec VPN*](../vmware/vmw-how-configure-ipsec-vpn.md)
 
-- [*vCNS Edge services: load balancer*](https://portal.ukcloud.com/support/knowledge_centre/9b4f5898-9464-4ea6-8a64-6bacb686bd0e)
+- [*How to configure a load balancer*](../vmware/vmw-how-configure-load-balancer.md)
 
 ### Virtual machines
 
--   [*How to build an Oracle virtual machine*](https://portal.ukcloud.com/support/knowledge_centre/c576fb57-ab2d-46aa-b116-8c7b873fdc45)
+- [*How to build an Oracle virtual machine*](orcl-how-build-vm.md)
 
 ## Glossary
 
 This section provides a glossary of terms specific to UKCloud for Oracle Software.
 
-**assembly**&nbsp;&nbsp;A kind of infrastructure template containing a configuration of multiple
-virtual machines with their virtual disks and even the inter connectivity between them. Assemblies can be created as a set of .ovf (Open Virtualization Format) and .img (disk image) files, or may all be contained in a single .ova (Open Virtualization Format Archive) file.
+**assembly**&nbsp;&nbsp;A kind of infrastructure template containing a configuration of multiple virtual machines with their virtual disks and even the inter connectivity between them. Assemblies can be created as a set of .ovf (Open Virtualization Format) and .img (disk image) files, or may all be contained in a single .ova (Open Virtualization Format Archive) file.
 
 **Assured OFFICIAL**&nbsp;&nbsp;A security domain on the UKCloud platform that provides access to public networks, such as the internet, PSN Assured, N3 or Janet.
 
-**Cloud Console**&nbsp;&nbsp;System management software from Oracle that delivers centralized
-monitoring, administration, and life-cycle management functionality for the complete IT infrastructure, including systems running Oracle and non-Oracle technologies.
+**Cloud Console**&nbsp;&nbsp;System management software from Oracle that delivers centralized monitoring, administration, and life-cycle management functionality for the complete IT infrastructure, including systems running Oracle and non-Oracle technologies.
 
-**Customer Success Manager (CSM)**&nbsp;&nbsp;A UKCloud Customer Services role aimed at providing you with any assistance you require during onboarding and the first 90 days of using
-a UKCloud service.
+**Customer Success Manager (CSM)**&nbsp;&nbsp;A UKCloud Customer Services role aimed at providing you with any assistance you require during onboarding and the first 90 days of using a UKCloud service.
 
-**edge gateway**&nbsp;&nbsp;A virtual router that provides VDC network services such as DHCP,
-firewall, NAT, static routing, VPN and load balancing.
+**edge gateway**&nbsp;&nbsp;A virtual router that provides VDC network services such as DHCP, firewall, NAT, static routing, VPN and load balancing.
 
 **Elevated OFFICIAL**&nbsp;&nbsp;A security domain on the UKCloud platform that provides secure access to restricted networks such as PSN Protected.
 
-**Oracle Enterprise Manager (OEM)**&nbsp;&nbsp;Oracle's on-premises management platform, providing a single pane of glass for managing all of a customer\'s Oracle deployments, whether in
-their data centres or in the Oracle Cloud. OEM provides management and automation support for Oracle applications, databases, middleware, hardware and engineered systems.
+**Oracle Enterprise Manager (OEM)**&nbsp;&nbsp;Oracle's on-premises management platform, providing a single pane of glass for managing all of a customer's Oracle deployments, whether in their data centres or in the Oracle Cloud. OEM provides management and automation support for Oracle applications, databases, middleware, hardware and engineered systems.
 
 **Oracle tenant**&nbsp;&nbsp;A top-level container for VMs that contains one or more VMs and owns all the virtual resources used by those VMs.
 
 **Oracle VM (OVM)**&nbsp;&nbsp;Oracle's server virtualisation technology, used by UKCloud for Oracle Software to ensure compliance with the compatibility and licensing requirements of Oracle-based enterprise applications.
 
-**server**&nbsp;&nbsp;A customer provisioned compute resource within Oracle Enterprise Manager
-Cloud Control. Similar to the virtual machine concept within VMware or instances within OpenStack.
+**server**&nbsp;&nbsp;A customer provisioned compute resource within Oracle Enterprise Manager Cloud Control. Similar to the virtual machine concept within VMware or instances within OpenStack.
 
 **virtual machine (VM)**&nbsp;&nbsp;Software that emulates the functionality of a physical computer, running an operating system and applications. Customers can define a VM's
 resource requirements and the UKCloud platform optimises its placement to ensure it receives the requested resources.
