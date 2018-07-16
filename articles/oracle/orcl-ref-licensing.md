@@ -8,7 +8,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Oracle licensing
+toc_title: Oracle licensing on the UKCloud platform
 toc_fullpath: Reference/orcl-ref-licensing.md
 toc_mdlink: orcl-ref-licensing.md
 ---
@@ -27,17 +27,17 @@ The remainder of this article is regarding general Oracle licensing.
 > [!IMPORTANT]
 > Licensing rules from vendors such as Oracle can change frequently and so customers should validate their specific requirement with Oracle at the time of ordering. This information is correct as of June 2015.
 
-For customers wishing to licence Oracle software on virtual machines within the UKCloud platform, there are some important issues to consider with regards to the four licencing options available which are described below.
+For customers wishing to licence Oracle software on virtual machines within the UKCloud platform, there are some important issues to consider with regards to the four licensing options available which are described below.
 
 ## Named User
 
-By implementing this licencing option, the customer can run as many Oracle servers as they want for a fixed fee ‘per named user’. As this license model is independent of the size or number of servers, it is preferable for use in multi-tenant cloud environments such as the UKCloud platform.
+By implementing this licensing option, the customer can run as many Oracle servers as they want for a fixed fee ‘per named user’. As this licence model is independent of the size or number of servers, it is preferable for use in multi-tenant cloud environments such as the UKCloud platform.
 
-UKCloud appreciate that this solution may not be valid for customers that already have ‘per processor” licencing.
+UKCloud appreciate that this solution may not be valid for customers that already have ‘per processor” licensing.
 
 ## Per Processor
 
-This type of license allows the customer to have as many users as they need for a fixed cost ‘per processor’ that the servers run on.
+This type of licence allows the customer to have as many users as they need for a fixed cost ‘per processor’ that the servers run on.
 
 In a traditional physical or virtualised estate, it is possible to isolate a small subset of the overall physical servers to specifically run Oracle. In this way, only those specific servers need to be licensed for Oracle.
 
@@ -45,26 +45,26 @@ In most multi-tenant cloud environments such as the UKCloud platform, the per pr
 
 Oracle software within a cloud based environment can also be licensed via the per-processor option if the cloud environment is running Oracle Virtual Machine (OVM) as the hypervisor. However, due to the design of the cloud environment, this is not something UKCloud can provide or support.
 
-Oracle has negotiated an agreement with a few public cloud providers (at the time of writing, only Amazon Web Services and Microsoft Azure) to allow customers to license only specific host servers, but this is not yet a widely available licencing agreement.
+Oracle has negotiated an agreement with a few public cloud providers (at the time of writing, only Amazon Web Services and Microsoft Azure) to allow customers to license only specific host servers, but this is not yet a widely available licensing agreement.
 
 ### Dedicated Compute platform
 
-Customers can take advantage of the 'per processor' licencing model, by using the UKCloud Dedicated Compute platform which will provide the customer with a set hardware configuration. The Dedicated Compute option enables a customer to specify a dedicated hardware cluster of a certain number of physical servers, and this option can help customers who need more certainty as to the configuration and capacity of the cluster which underpins part of their application, whilst being also able to accommodate the compromises of having a dedicated cluster with regards to reduced levels of agility and flexibility.
+Customers can take advantage of the 'per processor' licensing model, by using the UKCloud Dedicated Compute platform which will provide the customer with a set hardware configuration. The Dedicated Compute option enables a customer to specify a dedicated hardware cluster of a certain number of physical servers, and this option can help customers who need more certainty as to the configuration and capacity of the cluster which underpins part of their application, whilst being also able to accommodate the compromises of having a dedicated cluster with regards to reduced levels of agility and flexibility.
 
 ## Application Specific Full Use Licensing
 
-An Application Specific Full Use (ASFU) license is a restricted type of license sold by a Solution Provider in conjunction with its third-party Application Package.
+An Application Specific Full Use (ASFU) licence is a restricted type of licence sold by a Solution Provider in conjunction with its third-party Application Package.
 
-For example, you can buy an ASFU license from SAP AG to use Oracle with the SAP/R3 system. This license would then be application specific and cannot be used for anything else.
+For example, you can buy an ASFU licence from SAP AG to use Oracle with the SAP/R3 system. This licence would then be application specific and cannot be used for anything else.
 
 ## Embedded Software License
 
-An Embedded Software License (ESL) is a very restrictive license type available from Independent Software Vendors (ISVs) who embed Oracle technology into their product. An end-user may not even be aware that the software package contains Oracle technology and should not be able to access it directly as a developer or system administrator.
+An Embedded Software License (ESL) is a very restrictive licence type available from Independent Software Vendors (ISVs) who embed Oracle technology into their product. An end-user may not even be aware that the software package contains Oracle technology and should not be able to access it directly as a developer or system administrator.
 
 An example of this licensing model in use may be a Point of Sale system that requires a database to log transactions.
 
 > [!NOTE]
-> The ASFU and ESL licencing options are outside the scope of UKCloud control.
+> The ASFU and ESL licensing options are outside the scope of UKCloud control.
 
 ## Feedback
 
