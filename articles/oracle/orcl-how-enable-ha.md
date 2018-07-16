@@ -61,7 +61,7 @@ To enable HA:
 
 ## Next steps
 
-For more information about Enterprise Compute Cloud for Oracle, see:
+For more information about UKCloud for Oracle Software, see:
 
 - [*Getting Started Guide for UKCloud for Oracle Software*](orcl-gs.md).
 
