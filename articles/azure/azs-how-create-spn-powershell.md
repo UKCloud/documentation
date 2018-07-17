@@ -1,5 +1,5 @@
 ---
-title: Create a Service Principal Name for Azure Stack
+title: How to create a Service Principal Name for Azure Stack
 description: Learn how to create SPN to manage your Azure Stack
 services: azure-stack
 author: Chris Black
