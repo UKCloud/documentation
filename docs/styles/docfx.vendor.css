@@ -1452,6 +1452,7 @@ td.visible-print,th.visible-print{display:table-cell!important}
 .hidden-print{display:none!important}
 }
 .hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}
+/*
 .hljs-comment,.hljs-meta{color:#969896}
 .hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}
 .hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}
@@ -1461,4 +1462,18 @@ td.visible-print,th.visible-print{display:table-cell!important}
 .hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}
 .hljs-addition{color:#55a532;background-color:#eaffea}
 .hljs-deletion{color:#bd2c00;background-color:#ffecec}
-.hljs-link{text-decoration:underline}
+.hljs-link{text-decoration:underline}*/
+
+.hljs-comment {color: green}
+.hljs-built_in,.hljs-keyword,.hljs-name,.hljs-pscommand,.hljs-selector-tag,.hljs-tag {color: #0101fd}
+.hljs-literal {color: #07704a}
+.hljs-code,.hljs-deletion,.hljs-section,.hljs-string,.hljs-template-tag,.hljs-template-variable {color: #a31515}
+.hljs-addition,.hljs-attribute,.hljs-meta,.hljs-parameter,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-title,.hljs-type {color: #007d9a}
+.hljs-doctag {color: #737373}
+.hljs-attr {color: #0451a5}
+.hljs-control {color: #af00db}
+.hljs-helper {color: #795e26}
+.hljs-bullet,.hljs-link,.hljs-symbol {color: #00b0e8}
+.hljs-emphasis {font-style: italic}
+.hljs-strong {font-weight: 600}
+.hljs-constant,.hljs-reserved {color: #cd3131}
