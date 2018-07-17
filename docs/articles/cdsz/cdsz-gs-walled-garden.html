@@ -8,7 +8,7 @@
     <title>Getting Started Guide for the Cross Domain Security Zone Walled Garden | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for the Cross Domain Security Zone Walled Garden | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.36.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -84,7 +84,7 @@
                   
 <h1 id="getting-started-guide-for-the-cross-domain-security-zone-walled-garden">Getting Started Guide for the Cross Domain Security Zone Walled Garden</h1>
 
-<h2 id="introduction">Introduction</h2>
+<h2 id="overview">Overview</h2>
 <p>The UKCloud Walled Garden provides self-service access to the Cross Domain Security Zone (CDSZ) so that you can design, implement and manage your own cross‑domain solution, using technology and application services of your choice. UKCloud provides an assurance wrap by managing firewalls between the security domains and ensuring you use appropriate risk management to understand and mitigate identified risks.</p>
 <p>The Walled Garden is ideal if you require more control and flexibility over what is passed between security domains, to support a wider range of use cases.</p>
 <p>This guide covers the steps you need to follow to get your Walled Garden up and running.</p>
@@ -95,8 +95,8 @@
 <li>Been approved to have a Base Implementation of the Walled Garden to allow data to pass between the Assured and Elevated security domains on the UKCloud platform</li>
 </ul>
 <h2 id="before-you-begin">Before you begin</h2>
-<p>Before you can start to implement a walled garden, you must have completed and passed the appropriate assurance wrap. For more information, see the <a href="https://portal.ukcloud.com/support/knowledge_centre/ecc6d8fd-ef63-44f6-bb33-b2b9b0af41f3"><em>UKCloud Walled Garden assurance wrap and application form</em></a>.</p>
-<p>After your Walled Garden assurance wrap has been approved, a service request is raised to implement the Walled Garden virtual data centre (VDC) and, if necessary, Elevated and Assured VDCs.</p>
+<p>Before you can start to implement a walled garden, you must have completed and passed the appropriate application process. For more information, see the <a href="cdsz-application-process.html"><em>UKCloud Cross Domain Security Zone application process</em></a>.</p>
+<p>After your Walled Garden application has been approved, a service request is raised to implement the Walled Garden virtual data centre (VDC) and, if necessary, Elevated and Assured VDCs.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If a service request for this implementation already exists, the existing request is used and a new one is not raised.</p>
@@ -104,7 +104,7 @@
 <p>You can track the progress of the service request in the <a href="https://portal.ukcloud.com/support/my_calls">My Calls</a> section of the UKCloud Portal.</p>
 <p>During the provisioning of the Walled Garden service, we'll ask you for some additional information via the service request:</p>
 <ul>
-<li><p>The customer account in which you would like the Walled Garden VDC to be provisioned, if different from the customer completing the Walled Garden application form.</p>
+<li><p>The customer account in which you would like the Walled Garden VDC to be provisioned, if different from the customer completing the Walled Garden application.</p>
 </li>
 <li><p>Whether you plan to have a single or dual site solution.</p>
 </li>
@@ -127,12 +127,9 @@
 <li>Complete an IT Health Check</li>
 <li>Present your evidence pack to the customer and UKCloud SIROs</li>
 </ul>
-<p>It is important to remember that while the UKCloud Portal for the Assured security domain is accessible from the internet, the Portal for the Elevated security domain and Walled Garden services is accessible only through the PSN Protected network or through UKCloud's Secure
-Remote Access service.</p>
+<p>It is important to remember that while the UKCloud Portal for the Assured security domain is accessible from the internet, the Portal for the Elevated security domain and Walled Garden services is accessible only through the PSN Protected network or through UKCloud's Secure Remote Access (SRA) service.</p>
 <h3 id="setting-up-your-networking">Setting up your networking</h3>
-<p>First, you need to replicate the networking that you set out in your Walled Garden application form diagrams. This involves the creation of external and internal networking, as well as the creation of rules on the virtual firewall within your environment. For information about
-creating networks and firewall rules, see the <a href="https://portal.ukcloud.com/support/knowledge_centre/eb14aec9-5248-4cd4-a714-511389ec186e"><em>How to build a virtual machines with UKCloud for VMware</em></a>
-and <a href="https://portal.ukcloud.com/support/knowledge_centre/e9e2a0a4-70ba-4ace-a8bf-913d052d7003"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
+<p>First, you need to replicate the networking that you set out in your Walled Garden application diagrams. This involves the creation of external and internal networking, as well as the creation of rules on the virtual firewall within your environment. For information about creating networks and firewall rules, see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a> and <a href="../vmware/vmw-how-build-vm.md"><em>How to build a virtual machine with UKCloud for VMware</em></a>.</p>
 <p>You also need to create the rules that allow connectivity between the different VDCs through the Walled Garden. This involves the creation of firewall rules, static routes and/or NAT rules.</p>
 <h4 id="networking-examples">Networking examples</h4>
 <p>There are two options for networking between the VDCs in the Walled Garden service:</p>
@@ -155,16 +152,13 @@ and <a href="https://portal.ukcloud.com/support/knowledge_centre/e9e2a0a4-70ba-4
 <p><img src="images/cdsz-static-routes-snat.jpg" alt="Option 1 example: Static routes &amp; SNAT in Elevated"></p>
 <p><img src="images/cdsz-snat-dnat.jpg" alt="Option 2 example: SNAT/DNAT transit address"></p>
 <h3 id="building-your-virtual-machines">Building your virtual machines</h3>
-<p>The next step is to build the VMs that you outlined in the Walled Garden application form. This involves deploying the VMs from either the vCloud Director catalog or from template VMs as OVF files. The VMs must be able to access UKCloud services, such as OS repositories, the network time
-server, the Key Management Server (KMS), and so on. You may also need to access external services, such as antivirus repositories. You must configure this access in your VDC networking. For more information about creating VMs and accessing UKCloud services, see the <a href="https://portal.ukcloud.com/support/knowledge_centre/e9e2a0a4-70ba-4ace-a8bf-913d052d7003"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
+<p>The next step is to build the VMs that you outlined in the Walled Garden application. This involves deploying the VMs from either the vCloud Director catalog or from template VMs as OVF files. The VMs must be able to access UKCloud services, such as OS repositories, the network time server, the Key Management Server (KMS), and so on. You may also need to access external services, such as antivirus repositories. You must configure this access in your VDC networking. For more information about creating VMs and accessing UKCloud services, see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
 <h3 id="testing-your-environment">Testing your environment</h3>
 <p>When you've built your VMs and networking, you can start to test the environment. If you've configured the networking correctly, your VMs should be able to talk to each other across the Walled Garden. If you have any issues, check your network rules.</p>
 <h3 id="performing-the-it-health-check">Performing the IT Health Check</h3>
 <p>As part of the Base Implementation, you're required to conduct an IT Health Check (ITHC) of the environment. The ITHC must be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NSCS). You can search for appropriate providers on the <a href="https://www.ncsc.gov.uk/index/professional-service?f%5B0%5D=field_assurance_status%3AAssured&amp;f%5B1%5D=field_assurance_scheme%3A213">NSCS web site</a>.</p>
-<p>Before beginning the ITHC, notify UKCloud by raising a service request in My Calls and completing the <a href="https://portal.ukcloud.com/support/knowledge_centre/4f052cee-0400-4e12-9e90-827a768ea7ad"><em>External Security Review Test (ESRT) application form</em></a>.
-Ideally, we require five working days' notice before the work is due to be carried out.</p>
-<p>The ITHC scope should be relevant to the environment. For example, if you're using the Walled Garden to pull application and antivirus updates from the internet, then security controls relevant to facilitate this should be in scope. Bear in mind that the end customer accreditor may
-dictate the scope of the ITHC.</p>
+<p>Before beginning the ITHC, notify UKCloud by raising a service request in My Calls and completing the <a href="https://portal.ukcloud.com/support/knowledge_centre/4f052cee-0400-4e12-9e90-827a768ea7ad"><em>External Security Review Test (ESRT) application form</em></a>. Ideally, we require five working days' notice before the work is due to be carried out.</p>
+<p>The ITHC scope should be relevant to the environment. For example, if you're using the Walled Garden to pull application and antivirus updates from the internet, then security controls relevant to facilitate this should be in scope. Bear in mind that the end customer accreditor may dictate the scope of the ITHC.</p>
 <h3 id="presenting-your-results">Presenting your results</h3>
 <p>When you've conducted your ITHC, with no results higher than Medium, present your evidence pack to the UKCloud SIRO. The evidence pack comprises the Walled Garden assurance wrap form and the following, as detailed in sections (a) to (c) in section 3.7 of the Walled Garden assurance wrap form:</p>
 <p>(a) Evidence of protective monitoring aligning with the 12 Protective Monitoring Controls (PMCs) in Good Practice Guide 13 (GPG13). The protective monitoring will need to span both sides of the Walled Garden as well as the Walled Garden itself. You can provide this by explaining how each of the PMCs is met by the protective monitoring solution in place.</p>
@@ -178,17 +172,15 @@ Garden.</p>
 <p><strong>Assured OFFICIAL</strong>  A security domain on the UKCloud platform that provides access to public networks, such as PSN Assured or the internet.</p>
 <p><strong>Base Implementation</strong>  A limited instantiation of a service for the purpose of building, testing and providing evidence of appropriate security checks for a customer-defined solution on the UKCloud platform.</p>
 <p><strong>Cross Domain Security Zone (CDSZ)</strong>  A UKCloud IaaS service that provides the ability to securely transfer data between our Assured OFFICIAL and Elevated OFFICIAL security domains using CESG-approved cross-domain security patterns and our Secure Remote Access service.</p>
-<p><strong>Elevated OFFICIAL</strong>  A security domain on the UKCloud platform that provides secure access to restricted networks such as PSN Protected, N3 or Janet.</p>
+<p><strong>Elevated OFFICIAL</strong>  A security domain on the UKCloud platform that provides secure access to restricted networks such as PSN Protected, HSCN or Janet.</p>
 <p><strong>evidence pack</strong>  A collection of evidence to prove that a customer-defined solution on the UKCloud platform aligns with all appropriate security measures and risk mitigation, including the 12 PMCs of GPG13.</p>
 <p><strong>Good Practice Guide 13 (GPG13)</strong>  A set of controls covering protective monitoring, such as event log management and intrusion detection and prevention systems, required to prevent accidental or malicious data loss. Also referred to as Protective Monitoring Controls (PMCs).</p>
 <p><strong>IT Health Check (ITHC)</strong>  An IT security assessment, performed by an independent security organisation, to confirm that a service provides the appropriate level of security required by the UK government.</p>
 <p><strong>Live Implementation</strong>  A full instantiation of a service after it has passed all stages of the assurance wrap and been approved by the UKCloud SIRO.</p>
-<p><strong>National Cyber Security Centre (NCSC)</strong>  A department of GCHQ that acts as a bridge between industry and government to help reduce the cyber security risk to the UK by providing
-cyber security advice and cyber incident management.</p>
+<p><strong>National Cyber Security Centre (NCSC)</strong>  A department of GCHQ that acts as a bridge between industry and government to help reduce the cyber security risk to the UK by providing cyber security advice and cyber incident management.</p>
 <p><strong>Protective Monitoring Controls (PMC)</strong>  <em>See</em> GPG13.</p>
 <p><strong>Senior Information Risk Owner (SIRO)</strong>  The person within an organisation who owns the organisation's information risk policy.</p>
-<p><strong>Walled Garden</strong>  A Cross Domain Security Zone (CDSZ) service option that provides you
-with self-service access to the CSDZ so that you can design, implement and manage your own cross-domain solution, using technology and application services of your choice.</p>
+<p><strong>Walled Garden</strong>  A Cross Domain Security Zone (CDSZ) service option that provides you with self-service access to the CSDZ so that you can design, implement and manage your own cross-domain solution, using technology and application services of your choice.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 

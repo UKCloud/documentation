@@ -14,6 +14,8 @@
       href: azs-how-configure-powershell-users.md
     - name: Connect to Azure Stack with CLI environment for UKCloud
       href: azs-how-configure-cli.md
+    - name: Create a Service Principal Name for Azure Stack
+      href: azs-how-create-spn-powershell.md
     - name: Create a virtual machine
       href: azs-how-create-vm.md
     - name: Create an Azure user group

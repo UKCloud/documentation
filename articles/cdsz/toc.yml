@@ -1,4 +1,16 @@
+- name: FAQs
+  items:
+  - name: Cross Domain Security Zone FAQs
+    href: cdsz-faq.md
 - name: Getting Started
   items:
   - name: Cross Domain Security Zone Walled Garden
     href: cdsz-gs-walled-garden.md
+- name: How To
+  items:
+  - name: Access UKCloud services from Walled Garden and Secure Remote Access
+    href: cdsz-how-access-services-walled-garden.md
+- name: Reference
+  items:
+  - name: UKCloud Cross Domain Security Zone application process
+    href: cdsz-application-process.md

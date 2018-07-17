@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Browser requirements for services on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to access UKCloud services from Walled Garden and Secure Remote Access | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Browser requirements for services on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to access UKCloud services from Walled Garden and Secure Remote Access | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,49 +82,43 @@
               <div class="col-md-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="browser-requirements-for-services-on-the-ukcloud-platform">Browser requirements for services on the UKCloud platform</h1>
+<h1 id="how-to-access-ukcloud-services-from-walled-garden-and-secure-remote-access">How to access UKCloud services from Walled Garden and Secure Remote Access</h1>
 
 <h2 id="overview">Overview</h2>
-<p>To get the best interaction with the UKCloud platform, it's important to use a browser that is compatible with all aspects of the services with which you interact.</p>
-<p>This document outlines the browser requirement for UKCloud services.</p>
-<h2 id="ukcloud-for-vmware">UKCloud for VMware</h2>
-<p>For UKCloud for VMware, we recommend that you use the Mozilla Firefox Extended Support Release (ESR 52) 32-bit browser. This browser is supported by both the UKCloud Portal and by the Web Console for vCloud Director 8.20 (the version used by UKCloud for VMware).</p>
-<p>Firefox ESR 52 is an older version of Firefox, updated with new security patches, that remains compatible with the plugin type that the vCloud Director Web Console uses on our platform. You can find Firefox ESR at:</p>
-<p><a href="https://www.mozilla.org/en-US/firefox/organizations/">https://www.mozilla.org/en-US/firefox/organizations/</a></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Make sure you download ESR 52, which is the last ESR release to support legacy add-ons. Support for ESR 52 ends in August 2018, but by this time we will have upgraded UKCloud for VMware to vCloud Director 9.1, which will eliminate the need for the Web Console plugin. For more information, see <a href="https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/">https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/</a>. You should also make sure that you download the 32-bit version of the browser.</p>
-</div>
-<p>Although Internet Explorer 8.<em>x</em> , 9.<em>x</em> and 10.<em>x</em> are supported by the vCloud Director 8.20 Web Console, if you've applied any group policy restrictions you may encounter problems.</p>
-<p>The vCloud Director Web Console has the following additional requirements:</p>
+<p>If you've implemented either Secure Remote Access (SRA) or a Cross Domain Security Zone (CDSZ) Walled Garden solution and want to access UKCloud services (such as WSUS, KMS or Red Hat Update Service), you'll need to edit your edge gateway settings to enable access.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide you must have vCloud Director administrator access to a virtual data centre (VDC) in the Elevated OFFICIAL security domain.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>Before making network changes to your environment, you'll need the following information:</p>
 <ul>
-<li><p>Adobe Flash Player version 11.2 or later (32-bit version only)</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>This is a known issue with Adobe Flash Player version 27.0.0.170. If you encounter problems, make sure you update to version 27.0.0.183 or later.</p>
-</div>
-</li>
-<li><p>JRE 1.6.0 update 10 or later installed and enabled (32-bit version only)</p>
-</li>
+<li>The Transit IP for the Elevated edge gateway of your CDSZ or SRA VDC</li>
+<li>The Transit IP for the edge gateway of your Elevated VDC</li>
+<li>The IP of the service you require.</li>
 </ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>VMware are redeveloping the Flash-based UI for vCloud Director and replacing it with a fully-featured HTML5-based interface. The first part of this redeveloped UI (provding HTML5 options for advanced networking features) has been made available in vCloud Director 8.20. More features will move to an HTML5-based UI in future releases.</p>
-</div>
-<h2 id="ukcloud-for-openstack">UKCloud for OpenStack</h2>
-<p>UKCloud for OpenStack is powered by OpenStack and uses the Horizon project to provide its dashboard capabilities. Horizon is built around modern HTML5 standards and requires no auxiliary plugins to operate. Therefore, it is compatible with all latest browser versions.</p>
-<h2 id="ukcloud-for-microsoft-azure">UKCloud for Microsoft Azure</h2>
-<p>Interaction with UKCloud for Microsoft Azure is through the Azure Stack portal. Microsoft recommends using the most up-to-date browser for your operating system.</p>
-<h2 id="cloud-gpu">Cloud GPU</h2>
-<p>Cloud GPU has the same browser requirements as <a href="#ukcloud-for-vmware">UKCloud for VMware</a>.</p>
-<h2 id="high-performance-compute">High Performance Compute</h2>
-<p>High Performance Compute has the same browser requirements as <a href="#ukcloud-for-vmware">UKCloud for VMware</a>.</p>
-<p>#Email and Collaboration as a Service</p>
-<p>For the most up to date list of supported browsers for Email and Collaboration as a Service, refer to the <a href="https://wiki.zimbra.com/wiki/Zimbra_Releases/8.7.0/Supported_Systems"><em>Zimbra Collaboration Supported Systems</em></a> document.</p>
+<p>To get the last two octets of the IP addresses for the service you require, please raise a support ticket on the UKCloud Elevated Portal.</p>
+<h2 id="setting-up-access-to-ukcloud-services">Setting up access to UKCloud services</h2>
+<p>The diagrams below show that you need to add two static routes and an SNAT rule on two edge gateways.</p>
+<ol>
+<li><p>In vCloud Director, locate the edge gateway that is attached to the Elevated side in your CDSZ or SRA VDC.</p>
+</li>
+<li><p>Create a static route that directs traffic for the service you need via the Transit IP of your Elevated edge gateway.</p>
+<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-static-route.md"><em>How to create a static route</em></a>.</p>
+</li>
+<li><p>Create an SNAT rule on your Elevated VDC to allow the private IP range from your CDSZ or SRA to have external access.</p>
+<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-nat-rules.md"><em>How to create NAT rules</em></a>.</p>
+</li>
+<li><p>Amend the firewall to allow the private IP range access to the service you require on your Elevated VDC.</p>
+<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-firewall-rules.md"><em>How to create firewall rules</em></a></p>
+</li>
+<li><p>Add a static route for the return traffic on your Elevated VDC to point to the Transit IP of your CDSZ or SRA VDC.</p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>Now that you've set up access to UKCloud services, you can register your VMs with those services. For more information, see:</p>
 <ul>
-<li>Firefox and Chrome on Windows, Mac, Linux</li>
-<li>Internet Explorer on Windows</li>
-<li>Safari on Mac and Windows</li>
+<li><a href="../vmware/vmw-how-setup-kms.md"><em>How to license Windows VMs using the UKCloud Key Management Server</em></a></li>
+<li><a href="../vmware/vmw-how-connect-windows-update"><em>How to connect to the UKCloud Windows Server Update Services (WSUS)</em></a></li>
+<li><a href="../vmware/vmw-how-install-rhui.md"><em>How to install Red Hat Update Infrastructure on an existing virtual machine</em></a></li>
 </ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
@@ -140,7 +134,7 @@
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-browsers.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/cdsz/cdsz-how-access-services-walled-garden.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>

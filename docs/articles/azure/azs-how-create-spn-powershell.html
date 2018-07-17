@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to create a Service Principal Name for Azure Stack | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to create a Service Principal Name for Azure Stack | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-create-a-service-principal-name-for-azure-stack">How to create a Service Principal Name for Azure Stack</h1>
+
+<p>This document explains how to create a Service Principal Name to manage Azure and Azure Stack.</p>
+<p>It will guide you through the creation of:</p>
+<ul>
+<li>an Azure application</li>
+<li>a Service Principal Name</li>
+<li>role assignment</li>
+<li>permissions</li>
+</ul>
+<h2 id="what-is-a-service-principal-name">What is a Service Principal Name?</h2>
+<p>An Azure Service Principal Name (SPN) is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.</p>
+<p>To log in and manage your resources via SPN you'll need to create an Azure application and then assign SPN to it. Only then will you be able to perform tasks against your environment.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Prerequisites from a Windows-based external client are:</p>
+<ul>
+<li><p>PowerShell 5.1, AzureStack and Azure AD PowerShell Modules</p>
+<ul>
+<li><p><a href="azs-how-configure-powershell-users.html">Configure PowerShell Environment and Azure Stack Modules</a></p>
+</li>
+<li><p>Azure AD PowerShell Module</p>
+</li>
+</ul>
+<pre><code class="lang-powershell">Install-Module AzureAD -Force -Verbose
+</code></pre>
+</li>
+<li><p>Active Azure <em>Subscription</em> (required to create SPN)</p>
+</li>
+</ul>
+<h2 id="overview-of-the-creation-process">Overview of the creation process</h2>
+<ol>
+<li><p>Declare your variables accordingly.</p>
+</li>
+<li><p>Log in to your Azure Public <em>Subscription</em>.</p>
+</li>
+<li><p>Create your Azure application.</p>
+</li>
+<li><p>Create a new Service Principal Name for the Azure application.</p>
+</li>
+<li><p>Assign the appropriate <strong>Role</strong> to your Service Principal Name.</p>
+</li>
+<li><p>Grant Azure AD permissions to your Azure application.</p>
+</li>
+<li><p>Log in to the Azure Public Cloud using the SPN account.</p>
+</li>
+<li><p>Create a new resource group using the SPN account in the Azure Public Cloud.</p>
+</li>
+<li><p>Remove the resource group you just created from the Azure Public Cloud.</p>
+</li>
+<li><p>Create your Azure Stack environment.</p>
+</li>
+<li><p>Log in to your Azure Stack <em>Subscription</em> with administrator user credentials (needs to have <strong>Owner</strong> role).</p>
+</li>
+<li><p>Assign the appropriate <strong>Role</strong> to your Azure application inside your Azure Stack <em>Subscription</em>.</p>
+</li>
+<li><p>Log in to your Azure Stack <em>Subscription</em> using the SPN account.</p>
+</li>
+<li><p>Create a new resource group using the SPN account in Azure Stack.</p>
+</li>
+<li><p>Remove the resource group you just created from Azure Stack.</p>
+</li>
+</ol>
+<h2 id="create-an-spn-account-for-azure-and-azure-stack-code">Create an SPN account for Azure and Azure Stack code</h2>
+<p>Change the required variables as per your environment and run the following script:</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Credential variables to change:</p>
+<p>$AzureUsernameAdmin, $AzurePasswordAdmin, $AzsUsernameAdmin, $AzsPasswordAdmin</p>
+</div>
+<pre><code class="lang-powershell"># Declare Variables
+$AppName = &quot;TestApp&quot;
+$AppURL = &quot;https://test.app&quot;
+$AppPassword = '&lt;your password&gt;' # e.g. &quot;Password123!&quot;
+
+$TenantDomain = &quot;&lt;myDirectoryTenantName&gt;&quot;
+$ArmEndpoint = &quot;https://management.frn00006.azure.ukcloud.com&quot;
+
+$AzureStackEnvironment = &quot;AzureStackUser&quot;
+
+$ResourceGroupAzurePublic = &quot;RGTest01&quot;
+$ResourceGroupAzureStack = &quot;RGTest01&quot;
+
+$RegionPublicAzure = &quot;ukwest&quot;
+$RegionAzureStack = &quot;frn00006&quot;
+
+$Role = &quot;Owner&quot;
+
+# Create your Public Azure Admin Credentials 
+# in order to log in to your Azure Subscription you will be creating you SPN on
+$AzureUsernameAdmin =  &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;&quot;
+$AzurePasswordAdmin = '&lt;your password&gt;'
+  $AzureUserPasswordAdmin = ConvertTo-SecureString &quot;$AzurePasswordAdmin&quot; -AsPlainText -Force
+  $AzureCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzureUsernameAdmin,$AzureUserPasswordAdmin
+
+# Log in to your Azure Subscription you will be creating you SPN on
+Login-AzureRmAccount -Credential $AzureCredAdmin
+
+# List subscriptions
+$SubId = Get-AzureRmSubscription | Select-Object -Property SubscriptionId, TenantId
+
+# Set Contexts to be your active Subscription
+Get-AzureRmSubscription -SubscriptionId $SubId.Id -TenantId $SubId.TenantId | Set-AzureRmContext
+
+# Create an Azure AD application, this is an Object that you need in order to set SPN record against.
+# Record ApplicationId from output.
+$App = New-AzureRmADApplication –DisplayName $AppName –HomePage $AppURL –IdentifierUris $AppURL –Password $AppPassword
+$AppGet = Get-AzureRmADApplication -ApplicationId $App.ApplicationId.Guid
+$AppGet
+
+# Create a Service Principal Name (SPN) for an application you created earlier.
+## Note: Get-AzureRmADServicePrincipal -ApplicationId $App.ApplicationId.Guid ### Needs new PS ARM Module as this is not a param in the current version
+$SPN = New-AzureRmADServicePrincipal –ApplicationId $AppGet.ApplicationId.Guid
+$SPNGet = Get-AzureRmADServicePrincipal -SearchString &quot;$($AppGet.DisplayName)&quot;
+$SPNGet
+
+# Assign the Service Principal Name a role i.e. Owner, Contributor, Reader, etc. - In Public Azure
+#### Requires a few seconds... before it can be run
+Write-Output &quot;Wait 10s to finish Service Principal Name creation&quot;
+Start-Sleep -Seconds 10
+$RoleAssignment = New-AzureRmRoleAssignment –RoleDefinitionName $Role –ServicePrincipalName $AppGet.ApplicationId.Guid
+
+# Connect to Azure Active Directory as your Azure Global Admin
+Connect-AzureAD -Credential $AzureCredAdmin -TenantId $TenantDomain
+
+# Grant Permission to Azure Active Directory to SPN
+$req = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.RequiredResourceAccess&quot;
+$req.ResourceAppId = &quot;00000002-0000-0000-c000-000000000000&quot;
+$acc1 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;5778995a-e1bf-45b8-affa-663a9f3f4d04&quot;,&quot;Role&quot;
+$acc2 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;abefe9df-d5a9-41c6-a60b-27b38eac3efb&quot;,&quot;Role&quot;
+$acc3 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;78c8a3c8-a07e-4b9e-af1b-b5ccab50a175&quot;,&quot;Role&quot;
+$acc4 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;1138cb37-bd11-4084-a2b7-9f71582aeddb&quot;,&quot;Role&quot;
+$acc5 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;9728c0c4-a06b-4e0e-8d1b-3d694e8ec207&quot;,&quot;Role&quot;
+$acc6 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;824c81eb-e3f8-4ee6-8f6d-de7f50d565b7&quot;,&quot;Role&quot;
+$acc7 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;1cda74f2-2616-4834-b122-5cb1b07f8a59&quot;,&quot;Role&quot;
+$acc8 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;aaff0dfd-0295-48b6-a5cc-9f465bc87928&quot;,&quot;Role&quot;
+$acc9 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;a42657d6-7f20-40e3-b6f0-cee03008a62a&quot;,&quot;Scope&quot;
+$acc10 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;5778995a-e1bf-45b8-affa-663a9f3f4d04&quot;,&quot;Scope&quot;
+$acc11 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;78c8a3c8-a07e-4b9e-af1b-b5ccab50a175&quot;,&quot;Scope&quot;
+$acc12 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;970d6fa6-214a-4a9b-8513-08fad511e2fd&quot;,&quot;Scope&quot;
+$acc13 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;6234d376-f627-4f0f-90e0-dff25c5211a3&quot;,&quot;Scope&quot;
+$acc14 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;c582532d-9d9e-43bd-a97c-2667a28ce295&quot;,&quot;Scope&quot;
+$acc15 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;cba73afc-7f69-4d86-8450-4978e04ecd1a&quot;,&quot;Scope&quot;
+$acc16 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;311a71cc-e848-46a1-bdf8-97ff7156d8e6&quot;,&quot;Scope&quot;
+$acc17 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;2d05a661-f651-4d57-a595-489c91eda336&quot;,&quot;Scope&quot;
+$req.ResourceAccess = $acc1,$acc2,$acc3,$acc4,$acc5,$acc6,$acc7,$acc8,$acc9,$acc10,$acc11,$acc12,$acc13,$acc14,$acc15,$acc16,$acc17
+
+$AzureADPermissions = Set-AzureADApplication -ObjectId $AppGet.ObjectId.Guid -RequiredResourceAccess $req
+$AzureADPermissionsGet = Get-AzureADApplication -ObjectId $AppGet.ObjectId.Guid | Select-Object -Property *
+$AzureADPermissionsGet
+
+# Create your SPN  Credentials Login
+# Note: (Username is &quot;&lt;ApplicationId&gt;@&lt;AAD Domain&gt;&quot;)
+$AzsUsername = $AppGet.ApplicationId.Guid + &quot;@&quot; + $TenantDomain
+$AzsPassword = $AppPassword
+  $AzsUserPassword = ConvertTo-SecureString &quot;$AzsPassword&quot; -AsPlainText -Force
+  $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
+
+
+# Log in to Public Azure using SPN account
+Login-AzureRmAccount -Credential $AzsCred -ServicePrincipal –TenantId $SubId.TenantId
+
+# Test your SPN account by creating a new Resource Group in Public Azure
+New-AzureRMResourceGroup -Name $ResourceGroupAzurePublic -Location $RegionPublicAzure
+
+## Remove test Resource Group
+Remove-AzureRmResourceGroup -Name $ResourceGroupAzurePublic -Force
+
+# Create Azure Stack Environment so that you can log in to it
+Add-AzureRMEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
+
+# Create your Azure Stack Admin (Subscription Owner) Credentials
+# Note: This account CAN but does not have to be, the same as your Public Azure Account
+$AzsUsernameAdmin =  &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;&quot;
+$AzsPasswordAdmin = '&lt;your password&gt;'
+  $AzsUserPasswordAdmin = ConvertTo-SecureString &quot;$AzsPasswordAdmin&quot; -AsPlainText -Force
+  $AzsCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsernameAdmin,$AzsUserPasswordAdmin
+
+# Login to Azure Stack as Admin (Subscription Owner)
+Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCredAdmin
+
+# Find Application details from Azure AD
+$AzsApp = Get-AzureRmADApplication -DisplayNameStartWith &quot;$($AppGet.DisplayName)&quot;
+
+# Find Object Id of your Service Principal Name in Azure Stack
+$SPNAzsGet = Get-AzureRmADServicePrincipal -SearchString &quot;$($AzsApp.DisplayName)&quot;
+$SPNAzsGet
+
+# Assign the Service Principal Name a role i.e. Owner, Contributor, Reader, etc. - In Azure Stack
+$RoleAssignmentAzs = New-AzureRmRoleAssignment –RoleDefinitionName $Role –ServicePrincipalName $AzsApp.ApplicationId.Guid
+$RoleAssignmentGet = Get-AzureRmRoleAssignment -ObjectId $SPNAzsGet.Id.Guid
+$RoleAssignmentGet
+
+# Log in to Azure Stack using SPN account
+Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal –TenantId $SubId.TenantId
+
+# Test your SPN account by creating a new Resource Group in Azure Stack
+New-AzureRMResourceGroup -Name $ResourceGroupAzureStack -Location $RegionAzureStack
+
+## Remove test Resource Group
+Remove-AzureRMResourceGroup -Name $ResourceGroupAzureStack -Force
+
+# Export Data of your SPN
+$Arm_Endpoint = $ArmEndpoint
+$Subscription_id = $SubId.Id
+$Client_Id = $AppGet.ApplicationId.Guid + &quot;@&quot; + $TenantDomain
+$Client_Secret = $AppPassword
+$Tenant_Id = $SubId.TenantId
+
+
+$OutputObject = [PSCustomObject]@{
+  arm_endpoint = $Arm_Endpoint
+  subscription_id = $Subscription_id
+  client_id = $Client_Id
+  client_secret = $Client_Secret
+  tenant_id  = $Tenant_Id
+}
+
+$OutputObject
+</code></pre>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-create-spn-powershell.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>
