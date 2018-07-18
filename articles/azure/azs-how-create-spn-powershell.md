@@ -125,13 +125,13 @@ Get-AzureRmSubscription -SubscriptionId $SubId.SubscriptionId -TenantId $SubId.T
 
 # Create an Azure AD application, this is an Object that you need in order to set SPN record against.
 # Record ApplicationId from output.
-$App = New-AzureRmADApplication –DisplayName $AppName –HomePage $AppURL –IdentifierUris $AppURL –Password $AppPassword
+$App = New-AzureRmADApplication -DisplayName $AppName -HomePage $AppURL -IdentifierUris $AppURL -Password $AppPassword
 $AppGet = Get-AzureRmADApplication -ApplicationId $App.ApplicationId.Guid
 $AppGet
 
 # Create a Service Principal Name (SPN) for an application you created earlier.
 ## Note: Get-AzureRmADServicePrincipal -ApplicationId $App.ApplicationId.Guid ### Needs new PS ARM Module as this is not a param in the current version
-$SPN = New-AzureRmADServicePrincipal –ApplicationId $AppGet.ApplicationId.Guid
+$SPN = New-AzureRmADServicePrincipal -ApplicationId $AppGet.ApplicationId.Guid
 $SPNGet = Get-AzureRmADServicePrincipal -SearchString "$($AppGet.DisplayName)"
 $SPNGet
 
@@ -139,7 +139,7 @@ $SPNGet
 #### Requires a few seconds... before it can be run
 Write-Output "Wait 10s to finish Service Principal Name creation"
 Start-Sleep -Seconds 10
-$RoleAssignment = New-AzureRmRoleAssignment –RoleDefinitionName $Role –ServicePrincipalName $AppGet.ApplicationId.Guid
+$RoleAssignment = New-AzureRmRoleAssignment -RoleDefinitionName $Role -ServicePrincipalName $AppGet.ApplicationId.Guid
 
 # Connect to Azure Active Directory as your Azure Global Admin
 Connect-AzureAD -Credential $AzureCredAdmin -TenantId $TenantDomain
@@ -179,7 +179,7 @@ $AzsPassword = $AppPassword
 
 
 # Log in to Public Azure using SPN account
-Login-AzureRmAccount -Credential $AzsCred -ServicePrincipal –TenantId $SubId.TenantId
+Login-AzureRmAccount -Credential $AzsCred -ServicePrincipal -TenantId $SubId.TenantId
 
 # Test your SPN account by creating a new Resource Group in Public Azure
 New-AzureRMResourceGroup -Name $ResourceGroupAzurePublic -Location $RegionPublicAzure
@@ -208,12 +208,12 @@ $SPNAzsGet = Get-AzureRmADServicePrincipal -SearchString "$($AzsApp.DisplayName)
 $SPNAzsGet
 
 # Assign the Service Principal Name a role i.e. Owner, Contributor, Reader, etc. - In Azure Stack
-$RoleAssignmentAzs = New-AzureRmRoleAssignment –RoleDefinitionName $Role –ServicePrincipalName $AzsApp.ApplicationId.Guid
+$RoleAssignmentAzs = New-AzureRmRoleAssignment -RoleDefinitionName $Role -ServicePrincipalName $AzsApp.ApplicationId.Guid
 $RoleAssignmentGet = Get-AzureRmRoleAssignment -ObjectId $SPNAzsGet.Id.Guid
 $RoleAssignmentGet
 
 # Log in to Azure Stack using SPN account
-Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal –TenantId $SubId.TenantId
+Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $SubId.TenantId
 
 # Test your SPN account by creating a new Resource Group in Azure Stack
 New-AzureRMResourceGroup -Name $ResourceGroupAzureStack -Location $RegionAzureStack
@@ -308,13 +308,13 @@ Get-AzureRmSubscription -SubscriptionId $SubId.SubscriptionId -TenantId $SubId.T
 
 # Create an Azure AD application, this is an Object that you need in order to set SPN record against.
 # Record ApplicationId from output.
-$App = New-AzureRmADApplication –DisplayName $AppName –HomePage $AppURL –IdentifierUris $AppURL –Password $AppPassword
+$App = New-AzureRmADApplication -DisplayName $AppName -HomePage $AppURL -IdentifierUris $AppURL -Password $AppPassword
 $AppGet = Get-AzureRmADApplication -ApplicationId $App.ApplicationId.Guid
 $AppGet
 
 # Create a Service Principal Name (SPN) for an application you created earlier.
 ## Note: Get-AzureRmADServicePrincipal -ApplicationId $App.ApplicationId.Guid ### Needs new PS ARM Module as this is not a param in the current version
-$SPN = New-AzureRmADServicePrincipal –ApplicationId $AppGet.ApplicationId.Guid
+$SPN = New-AzureRmADServicePrincipal -ApplicationId $AppGet.ApplicationId.Guid
 $SPNGet = Get-AzureRmADServicePrincipal -SearchString "$($AppGet.DisplayName)"
 $SPNGet
 
@@ -322,7 +322,7 @@ $SPNGet
 #### Requires a few seconds... before it can be run
 Write-Output "Wait 10s to finish Service Principal Name creation"
 Start-Sleep -Seconds 10
-$RoleAssignment = New-AzureRmRoleAssignment –RoleDefinitionName $Role –ServicePrincipalName $AppGet.ApplicationId.Guid
+$RoleAssignment = New-AzureRmRoleAssignment -RoleDefinitionName $Role -ServicePrincipalName $AppGet.ApplicationId.Guid
 
 
 # Find Application details
@@ -333,7 +333,7 @@ $SPNAzsGet = Get-AzureRmADServicePrincipal -SearchString "$($AzsApp.DisplayName)
 $SPNAzsGet
 
 # Assign the Service Principal Name a role i.e. Owner, Contributor, Reader, etc. - In Azure Stack
-$RoleAssignmentAzs = New-AzureRmRoleAssignment –RoleDefinitionName $Role –ServicePrincipalName $AzsApp.ApplicationId.Guid
+$RoleAssignmentAzs = New-AzureRmRoleAssignment -RoleDefinitionName $Role -ServicePrincipalName $AzsApp.ApplicationId.Guid
 $RoleAssignmentGet = Get-AzureRmRoleAssignment -ObjectId $SPNAzsGet.Id.Guid
 $RoleAssignmentGet
 
@@ -345,7 +345,7 @@ $AzsPassword = $AppPassword
   $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
 
 # Log in to Azure Stack using SPN account
-Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal –TenantId $SubId.TenantId
+Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $SubId.TenantId
 
 # Test your SPN account by creating a new Resource Group in Azure Stack
 New-AzureRMResourceGroup -Name $ResourceGroupAzureStack -Location $RegionAzureStack
