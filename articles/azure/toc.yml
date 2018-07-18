@@ -18,6 +18,8 @@
       href: azs-how-create-spn-powershell.md
     - name: Create a virtual machine
       href: azs-how-create-vm.md
+    - name: Create a VM using Terraform on Azure Stack
+      href: azs-how-create-vm-terraform.md
     - name: Create an Azure user group
       href: azs-how-create-azure-group.md
     - name: Use the Azure Stack API

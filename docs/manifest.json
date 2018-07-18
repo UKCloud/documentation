@@ -113,6 +113,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-create-vm-terraform.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-create-vm-terraform.html",
+          "hash": "8qoqNJJrNSAqQoCQs+mWqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-create-vm.md",
       "output": {
         ".html": {
@@ -551,7 +563,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "D9mjmtJIsutSPCZ55rUOTw=="
+          "hash": "DHTaQV2ziJPT0chFKtZmXg=="
         }
       },
       "is_incremental": false,

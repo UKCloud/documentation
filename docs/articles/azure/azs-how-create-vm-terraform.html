@@ -1,0 +1,572 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to create a VM using Terraform on Azure Stack | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to create a VM using Terraform on Azure Stack | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-create-a-vm-using-terraform-on-azure-stack">How to create a VM using Terraform on Azure Stack</h1>
+
+<p>This document explains how to create a VM using <strong>azurestack</strong> Terraform provider with Service Principal Name authentication.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Prerequisites from a Windows-based external client.</p>
+<ul>
+<li><p>Terraform executable</p>
+<ul>
+<li><a href="https://www.terraform.io/downloads.html">Download Terraform</a></li>
+</ul>
+</li>
+<li><p>Active Azure <em>Subscription</em> (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)</p>
+</li>
+<li><p>Service Principal Name</p>
+<ul>
+<li><a href="azs-how-create-spn-powershell.html">How To create Service Principal Name for Azure Stack</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="official-documentation">Official Documentation</h2>
+<ul>
+<li><p><a href="https://www.terraform.io/docs/providers/azurestack">Azure Stack Provider Website</a></p>
+</li>
+<li><p><a href="https://github.com/terraform-providers/terraform-provider-azurestack">Azure Stack Provider GitHub Repository</a></p>
+</li>
+</ul>
+<h1 id="how-to-use-terraform-with-azure-stack">How to use Terraform with Azure Stack</h1>
+<h2 id="authentication">Authentication</h2>
+<p>In order to authenticate with Terraform you will need to have valid Service Principal Name (SPN) - how to create one is described in <a href="#Prerequsites">prerequisites</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You only need your Service Principal Name (SPN) to be assigned to Azure Stack subscription despite what official Terraform documentation says.</p>
+</div>
+<p>The process of authentication can be handled in one of two ways, either as <strong>Environment Variables</strong> or in the <strong>Provider Block</strong>.</p>
+<p><a href="#example-of-environment-variables">Environment Variables Option</a> - you can create your <strong>terraform plan</strong> by putting only the plan itself into <code>example.tf</code> and then keep <code>variables.tf</code> separately. You have to declare the actual values in <code>terraform.tfvars</code> file. It is this file that you will need to populate with your actual credential details.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can also put content of <code>variables.tf</code> in the <code>example.tf</code> at the top of the file.</p>
+</div>
+<p><a href="#example-of-provider-block">Provider Block Option</a> - you can create your <strong>terraform plan</strong> by putting everything in one <code>example.tf</code> file which then contains your Provider settings explicitly in said plan.</p>
+<p>Official <a href="https://www.terraform.io/intro/getting-started/variables.html">Variables Guide</a></p>
+<h3 id="example-of-environment-variables">Example of Environment Variables</h3>
+<ul>
+<li><p><code>variables.tf</code></p>
+<pre><code class="lang-hcl">variable &quot;arm_endpoint&quot; {}
+variable &quot;subscription_id&quot; {}
+variable &quot;client_id&quot; {}
+variable &quot;client_secret&quot; {}
+variable &quot;tenant_id&quot; {}
+</code></pre>
+</li>
+<li><p><code>example.tf</code></p>
+<pre><code class="lang-hcl">provider &quot;azurestack&quot; {
+  arm_endpoint    = &quot;${var.arm_endpoint}&quot;
+  subscription_id = &quot;${var.subscription_id}&quot;
+  client_id       = &quot;${var.client_id}&quot;
+  client_secret   = &quot;${var.client_secret}&quot;
+  tenant_id       = &quot;${var.tenant_id}&quot;
+}
+</code></pre>
+</li>
+<li><p><code>terraform.tfvars</code></p>
+<pre><code class="lang-hcl"># Configure the Azure Stack Provider
+arm_endpoint    = &quot;https://management.{region}.{domain}&quot;
+subscription_id = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
+client_id       = &quot;{applicationId}@{tenantDomain}&quot;
+client_secret   = &quot;{applicationSecret}&quot;
+tenant_id       = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
+</code></pre>
+</li>
+</ul>
+<h3 id="example-of-provider-block">Example of Provider Block</h3>
+<ul>
+<li><p><code>example.tf</code></p>
+<pre><code class="lang-hcl"># Configure the Azure Stack Provider
+provider &quot;azurestack&quot; {
+  arm_endpoint    = &quot;https://management.{region}.{domain}&quot;
+  subscription_id = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
+  client_id       = &quot;{applicationId}@{tenantDomain}&quot;
+  client_secret   = &quot;{applicationPassword}&quot;
+  tenant_id       = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
+}
+</code></pre>
+</li>
+</ul>
+<h4 id="argument-reference">Argument Reference</h4>
+<ul>
+<li><code>arm_endpoint</code> - The Azure Resource Manager API Endpoint for
+your Azure Stack instance, eq <code>https://management.{region}.{domain}</code>.</li>
+</ul>
+<p>For UKCloud Region it is <strong><code>https://management.frn00006.azure.ukcloud.com</code></strong>.</p>
+<ul>
+<li><p><code>subscription_id</code> - The ID of your Azure Stack Subscription.</p>
+</li>
+<li><p><code>client_id</code> - The Application GUID that you configured your Service Principal Name (SPN) to use.</p>
+</li>
+<li><p><code>client_secret</code> - The Application password that you configured your Service Principal Name (SPN) to use.</p>
+</li>
+<li><p><code>tenant_id</code> - The tenant ID of your Azure Active Directory tenant domain. It can either be the actual GUID or your Azure Active Directory tenant domain name.</p>
+</li>
+</ul>
+<h2 id="create-a-vm-with-public-ip-template---using-environment-variables-option">Create a VM with Public IP template - using <strong>Environment Variables</strong> option</h2>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>This is only <code>example.tf</code> file you still need <code>variables.tf</code> and <code>terraform.tfvars</code> in your folder.</p>
+</div>
+<pre><code class="lang-hcl">provider &quot;azurestack&quot; {
+  arm_endpoint    = &quot;${var.arm_endpoint}&quot;
+  subscription_id = &quot;${var.subscription_id}&quot;
+  client_id       = &quot;${var.client_id}&quot;
+  client_secret   = &quot;${var.client_secret}&quot;
+  tenant_id       = &quot;${var.tenant_id}&quot;
+}
+
+# Create a resource group
+resource &quot;azurestack_resource_group&quot; &quot;test&quot; {
+  name     = &quot;rg01&quot;
+  location = &quot;frn00006&quot;
+}
+
+resource &quot;azurestack_public_ip&quot; &quot;test&quot; {
+  name                         = &quot;acceptanceTestPublicIp1&quot;
+  location                     = &quot;${azurestack_resource_group.test.location}&quot;
+  resource_group_name          = &quot;${azurestack_resource_group.test.name}&quot;
+  public_ip_address_allocation = &quot;static&quot;
+
+  tags {
+    environment = &quot;Production&quot;
+  }
+}
+
+resource &quot;azurestack_virtual_network&quot; &quot;test&quot; {
+  name                = &quot;acctvn&quot;
+  address_space       = [&quot;10.0.0.0/16&quot;]
+  location            = &quot;${azurestack_resource_group.test.location}&quot;
+  resource_group_name = &quot;${azurestack_resource_group.test.name}&quot;
+}
+
+resource &quot;azurestack_subnet&quot; &quot;test&quot; {
+  name                 = &quot;acctsub&quot;
+  resource_group_name  = &quot;${azurestack_resource_group.test.name}&quot;
+  virtual_network_name = &quot;${azurestack_virtual_network.test.name}&quot;
+  address_prefix       = &quot;10.0.2.0/24&quot;
+}
+
+resource &quot;azurestack_network_interface&quot; &quot;test&quot; {
+  name                = &quot;acctni&quot;
+  location            = &quot;${azurestack_resource_group.test.location}&quot;
+  resource_group_name = &quot;${azurestack_resource_group.test.name}&quot;
+
+  ip_configuration {
+    name                          = &quot;testconfiguration1&quot;
+    subnet_id                     = &quot;${azurestack_subnet.test.id}&quot;
+    private_ip_address_allocation = &quot;dynamic&quot;
+    public_ip_address_id          = &quot;${azurestack_public_ip.test.id}&quot;
+  }
+}
+
+resource &quot;azurestack_storage_account&quot; &quot;test&quot; {
+  name                     = &quot;accsa001&quot;
+  resource_group_name      = &quot;${azurestack_resource_group.test.name}&quot;
+  location                 = &quot;${azurestack_resource_group.test.location}&quot;
+  account_tier             = &quot;Standard&quot;
+  account_replication_type = &quot;LRS&quot;
+
+  tags {
+    environment = &quot;staging&quot;
+  }
+}
+
+resource &quot;azurestack_storage_container&quot; &quot;test&quot; {
+  name                  = &quot;vhds&quot;
+  resource_group_name   = &quot;${azurestack_resource_group.test.name}&quot;
+  storage_account_name  = &quot;${azurestack_storage_account.test.name}&quot;
+  container_access_type = &quot;private&quot;
+}
+
+resource &quot;azurestack_virtual_machine&quot; &quot;test&quot; {
+  name                  = &quot;acctvm&quot;
+  location              = &quot;${azurestack_resource_group.test.location}&quot;
+  resource_group_name   = &quot;${azurestack_resource_group.test.name}&quot;
+  network_interface_ids = [&quot;${azurestack_network_interface.test.id}&quot;]
+  vm_size               = &quot;Standard_D2_v2&quot;
+
+  # Uncomment this line to delete the OS disk automatically when deleting the VM
+  # delete_os_disk_on_termination = true
+
+  # Uncomment this line to delete the data disks automatically when deleting the VM
+  # delete_data_disks_on_termination = true
+
+  storage_image_reference {
+    publisher = &quot;Canonical&quot;
+    offer     = &quot;UbuntuServer&quot;
+    sku       = &quot;16.04-LTS&quot;
+    version   = &quot;latest&quot;
+  }
+
+  storage_os_disk {
+    name          = &quot;myosdisk1&quot;
+    vhd_uri       = &quot;${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd&quot;
+    caching       = &quot;ReadWrite&quot;
+    create_option = &quot;FromImage&quot;
+  }
+
+  # Optional data disks
+  storage_data_disk {
+    name          = &quot;datadisk0&quot;
+    vhd_uri       = &quot;${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/datadisk0.vhd&quot;
+    disk_size_gb  = &quot;1023&quot;
+    create_option = &quot;Empty&quot;
+    lun           = 0
+  }
+
+  os_profile {
+    computer_name  = &quot;hostname&quot;
+    admin_username = &quot;testadmin&quot;
+    admin_password = &quot;Password1234!&quot;
+  }
+
+  os_profile_linux_config {
+    disable_password_authentication = false
+  }
+
+  tags {
+    environment = &quot;staging&quot;
+  }
+}
+</code></pre>
+<h2 id="create-a-vm-with-public-ip-template---using-provider-block-option">Create a VM with Public IP template - using <strong>Provider Block</strong> option</h2>
+<pre><code class="lang-hcl">provider &quot;azurestack&quot; {
+  arm_endpoint    = &quot;https://management.{region}.{domain}&quot;
+  subscription_id = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
+  client_id       = &quot;{applicationId}@{tenantDomain}&quot;
+  client_secret   = &quot;{applicationPassword}&quot;
+  tenant_id       = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
+}
+
+# Create a resource group
+resource &quot;azurestack_resource_group&quot; &quot;test&quot; {
+  name     = &quot;rg01&quot;
+  location = &quot;frn00006&quot;
+}
+
+resource &quot;azurestack_public_ip&quot; &quot;test&quot; {
+  name                         = &quot;acceptanceTestPublicIp1&quot;
+  location                     = &quot;${azurestack_resource_group.test.location}&quot;
+  resource_group_name          = &quot;${azurestack_resource_group.test.name}&quot;
+  public_ip_address_allocation = &quot;static&quot;
+
+  tags {
+    environment = &quot;Production&quot;
+  }
+}
+
+resource &quot;azurestack_virtual_network&quot; &quot;test&quot; {
+  name                = &quot;acctvn&quot;
+  address_space       = [&quot;10.0.0.0/16&quot;]
+  location            = &quot;${azurestack_resource_group.test.location}&quot;
+  resource_group_name = &quot;${azurestack_resource_group.test.name}&quot;
+}
+
+resource &quot;azurestack_subnet&quot; &quot;test&quot; {
+  name                 = &quot;acctsub&quot;
+  resource_group_name  = &quot;${azurestack_resource_group.test.name}&quot;
+  virtual_network_name = &quot;${azurestack_virtual_network.test.name}&quot;
+  address_prefix       = &quot;10.0.2.0/24&quot;
+}
+
+resource &quot;azurestack_network_interface&quot; &quot;test&quot; {
+  name                = &quot;acctni&quot;
+  location            = &quot;${azurestack_resource_group.test.location}&quot;
+  resource_group_name = &quot;${azurestack_resource_group.test.name}&quot;
+
+  ip_configuration {
+    name                          = &quot;testconfiguration1&quot;
+    subnet_id                     = &quot;${azurestack_subnet.test.id}&quot;
+    private_ip_address_allocation = &quot;dynamic&quot;
+    public_ip_address_id          = &quot;${azurestack_public_ip.test.id}&quot;
+  }
+}
+
+resource &quot;azurestack_storage_account&quot; &quot;test&quot; {
+  name                     = &quot;accsa001&quot;
+  resource_group_name      = &quot;${azurestack_resource_group.test.name}&quot;
+  location                 = &quot;${azurestack_resource_group.test.location}&quot;
+  account_tier             = &quot;Standard&quot;
+  account_replication_type = &quot;LRS&quot;
+
+  tags {
+    environment = &quot;staging&quot;
+  }
+}
+
+resource &quot;azurestack_storage_container&quot; &quot;test&quot; {
+  name                  = &quot;vhds&quot;
+  resource_group_name   = &quot;${azurestack_resource_group.test.name}&quot;
+  storage_account_name  = &quot;${azurestack_storage_account.test.name}&quot;
+  container_access_type = &quot;private&quot;
+}
+
+resource &quot;azurestack_virtual_machine&quot; &quot;test&quot; {
+  name                  = &quot;acctvm&quot;
+  location              = &quot;${azurestack_resource_group.test.location}&quot;
+  resource_group_name   = &quot;${azurestack_resource_group.test.name}&quot;
+  network_interface_ids = [&quot;${azurestack_network_interface.test.id}&quot;]
+  vm_size               = &quot;Standard_D2_v2&quot;
+
+  # Uncomment this line to delete the OS disk automatically when deleting the VM
+  # delete_os_disk_on_termination = true
+
+  # Uncomment this line to delete the data disks automatically when deleting the VM
+  # delete_data_disks_on_termination = true
+
+  storage_image_reference {
+    publisher = &quot;Canonical&quot;
+    offer     = &quot;UbuntuServer&quot;
+    sku       = &quot;16.04-LTS&quot;
+    version   = &quot;latest&quot;
+  }
+
+  storage_os_disk {
+    name          = &quot;myosdisk1&quot;
+    vhd_uri       = &quot;${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd&quot;
+    caching       = &quot;ReadWrite&quot;
+    create_option = &quot;FromImage&quot;
+  }
+
+  # Optional data disks
+  storage_data_disk {
+    name          = &quot;datadisk0&quot;
+    vhd_uri       = &quot;${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/datadisk0.vhd&quot;
+    disk_size_gb  = &quot;1023&quot;
+    create_option = &quot;Empty&quot;
+    lun           = 0
+  }
+
+  os_profile {
+    computer_name  = &quot;hostname&quot;
+    admin_username = &quot;testadmin&quot;
+    admin_password = &quot;Password1234!&quot;
+  }
+
+  os_profile_linux_config {
+    disable_password_authentication = false
+  }
+
+  tags {
+    environment = &quot;staging&quot;
+  }
+}
+</code></pre>
+<h2 id="how-to-execute-a-plan---using-environment-variables-option">How to execute a plan - using <strong>Environment Variables</strong> option</h2>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Terraform by default scans your execution directory and is looking for all <code>tf</code> files.</p>
+</div>
+<p>From PowerShell prompt navigate to the directory you have all your <code>tf</code> files in and run:</p>
+<pre><code class="lang-powershell"># Check if your environment is setup correctly
+.\terraform.exe init
+
+Initializing provider plugins...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = &quot;...&quot; constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.azurestack: version = &quot;~&gt; 0.1&quot;
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running &quot;terraform plan&quot; to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+</code></pre>
+<pre><code class="lang-PowerShell"># Verify your plan
+.\terraform.exe plan -var-file=C:\&lt;DirectoryName&gt;\testvars.tfvars
+# Apply your plan
+.\terraform.exe apply -var-file=C:\&lt;DirectoryName&gt;\testvars.tfvars
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can also add <code>-auto-approve</code> to apply command for it not to ask you to apply changes for full automation.</p>
+</div>
+<h2 id="how-to-execute-a-plan---using-provider-block-option">How to execute a plan - using <strong>Provider Block</strong> option</h2>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Terraform by default scans your execution directory and is looking for all <code>tf</code> files.</p>
+</div>
+<p>From PowerShell prompt navigate to the directory you have all your <code>tf</code> files in and run:</p>
+<pre><code class="lang-powershell"># Check if your environment is setup correctly
+.\terraform.exe init
+
+Initializing provider plugins...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = &quot;...&quot; constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.azurestack: version = &quot;~&gt; 0.1&quot;
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running &quot;terraform plan&quot; to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+</code></pre>
+<pre><code class="lang-PowerShell"># Verify your plan
+.\terraform.exe plan
+# Apply your plan
+.\terraform.exe apply
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can also add <code>-auto-approve</code> to apply command for it not to ask you to apply changes for full automation.</p>
+</div>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-create-vm-terraform.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>
