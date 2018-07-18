@@ -1,20 +1,96 @@
 - name: Getting Started
   items:
-  - name: Disaster Recovery as a Service
-    href: vmw-gs-draas.md
   - name: Journaling Protection
     href: vmw-gs-journaling.md
   - name: UKCloud for VMware
     href: vmw-gs.md
 - name: How To
   items:
+  - name: Access syslog data for your advanced gateway
+    href: vmw-how-access-syslog-data-adv.md
   - name: Access syslog data for your edge gateway
     href: vmw-how-access-syslog-data.md
+  - name: Access the Zerto Self-Service Portal
+    href: vmw-how-zerto-access-zssp.md
   - name: Access vCloud Director through the vCloud API
     href: vmw-how-access-vcloud-api.md
+  - name: Bring your own Red Hat licensing
+    href: vmw-how-license-red-hat.md
+  - name: Build a virtual machine with UKCloud for VMware
+    href: vmw-how-build-vm.md
+  - name: Build an edge gateway using the UKCloud Portal
+    href: vmw-how-build-edge.md
   - name: Change IPsec VPN settings via the vCloud API
-    href: vmw-how-api-ipsec-vpn.md
+    href: vmw-how-change-ipsec-vpn-api.md
+  - name: Configure a load balancer
+    href: vmw-how-configure-load-balancer.md
+  - name: Configure IPsec VPN
+    href: vmw-how-configure-ipsec-vpn.md
+  - name: Connect to the UKCloud Windows Server Update Services (WSUS)
+    href: vmw-how-connect-windows-update.md
+  - name: Convert your edge to an advanced gateway
+    href: vmw-how-convert-edge.md
+  - name: Create a catalog
+    href: vmw-how-create-catalog.md
+  - name: Create a DHCP pool
+    href: vmw-how-create-dhcp-pool.md
+  - name: Create a routed VDC network
+    href: vmw-how-create-routed-network.md
+  - name: Create a static route
+    href: vmw-how-create-static-route.md
+  - name: Create a vApp
+    href: vmw-how-create-vapp.md
+  - name: Create a vApp network
+    href: vmw-how-create-vapp-network.md
+  - name: Create a virtual machine from a template
+    href: vmw-how-create-vm-from-template.md
+  - name: Create a virtual machine from scratch
+    href: vmw-how-create-vm-from-scratch.md
+  - name: Create a virtual protection group
+    href: vmw-how-upgrade-edge.md
+  - name: Create an isolated VDC network
+    href: vmw-how-create-isolated-network.md
+  - name: Create find your allocated external IP addresses
+    href: vmw-vmw-how-find-ip-addresses.md
+  - name: Create firewall rules
+    href: vmw-how-create-firewall-rules.md
+  - name: Create NAT rules
+    href: vmw-how-create-nat-rules.md
+  - name: Deploy an FTPS server for data transfer
+    href: vmw-how-deploy-ftps.md
+  - name: Export edge gateway configuration data using PowerShell
+    href: vmw-how-ps-export-edge-data.md
   - name: Install a REST client to access the vCloud API
     href: vmw-how-install-vcloud-api-rest-client.md
   - name: Install and configure OpenVPN
     href: vmw-how-install-openvpn.md
+  - name: Install and configure Zerto in your local environment
+    href: vmw-how-zerto-install-local.md
+  - name: Install Red Hat Update Infrastructure on an existing virtual machine
+    href: vmw-how-install-rhui.md
+  - name: Licence Microsoft applications/software on the UKCloud platform
+    href: vmw-how-license-microsoft.md
+  - name: License Windows VMs using the UKCloud Key Management Server
+    href: vmw-how-setup-kms.md
+  - name: Locate your virtual data centre on the UKCloud platform
+    href: vmw-how-locate-vdc.md
+  - name: Manage permissions for vCloud Director
+    href: vmw-how-manage-vcd-permissions.md
+  - name: Manage Snapshot Protection for your VMs
+    href: vmw-how-manage-snapshot-protection.md
+  - name: Migrate your workloads between UKCloud regions
+    href: vmw-how-zerto-migrate-between-regions.md
+  - name: Perform a failover
+    href: vmw-how-zerto-perform-failover.md
+  - name: Retrieve utilisation metrics for your virtual machines
+    href: vmw-how-retrieve-utilisation-metrics.md
+  - name: Securely manage permissions for a specific vApp
+    href: vmw-how-manage-vapp-permissions.md
+  - name: Upgrade your edge gateway
+    href: vmw-how-upgrade-edge.md
+  - name: Use the VMware OVF Tool
+    href: vmw-use-ovf-tool.md
+  - name: Use VM location in vCloud Director
+    href: vmw-how-use-vm-location.md
+  - name: View your VMs in the UKCloud Portal
+    href: vmw-how-portal-view-vms.md

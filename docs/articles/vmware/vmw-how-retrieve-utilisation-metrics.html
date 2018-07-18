@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to retrieve utilisation metrics for your virtual machines | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to retrieve utilisation metrics for your virtual machines | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-retrieve-utilisation-metrics-for-your-virtual-machines">How to retrieve utilisation metrics for your virtual machines</h1>
+
+<h2 id="overview">Overview</h2>
+<p>You can use the vCloud API to retrieve current or historic utilisation metrics for a virtual machine (VM). You can retrieve the following utilisation metrics:</p>
+<ul>
+<li>Average CPU usage (%)</li>
+<li>Maximum CPU usage (%)</li>
+<li>Average CPU usage (MHz)</li>
+<li>Average memory usage (%)</li>
+<li>Average disk write speed (KBps)</li>
+<li>Average disk read speed (KBps)</li>
+<li>Amount of disk provisioned (KB)</li>
+<li>Amount of disk used (KB)</li>
+</ul>
+<p>You can retrieve current utilisation metrics for VMs in all UKCloud regions; you can retrieve historic metrics for VMs in regions 5 and 6.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To retrieve the utilisation metrics using the API, you must be logged into the vCloud API as an administrator, Catalog Author or vApp Author.</p>
+<h2 id="retrieving-current-utilisation-metrics">Retrieving current utilisation metrics</h2>
+<p>Current metrics are values collected at the time the request is processed by the server. You can use the vCloud API to retrieve a list of current metric values, one for each category.</p>
+<p>You can retrieve current utilisation metrics for VMs in all regions.</p>
+<ol>
+<li><p>Log in to the vCloud API.</p>
+<p>For more information, see <a href="vmw-how-access-vcloud-api.html">How to access vCloud Director through the vCloud API</a>.</p>
+</li>
+<li><p>Send the following request to the vCloud API to retrieve the current utilisation metrics for the VM.</p>
+<pre><code> GET https://&lt;vcloud_api_url&gt;/api/vApp/&lt;vm_id&gt;/metrics/current
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vcloud_api_url</code></td>
+<td>The URL you use to access the vCloud API</td>
+<td><code>api.vcd.portal.skyscapecloud.com</code></td>
+</tr>
+<tr>
+<td><code>vm_id</code></td>
+<td>The GUID of the VM for which you want to retrieve utilisation metrics</td>
+<td><code>vm-12345678-aaaa-bbbb-cccc-1234567890ab</code></td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<pre><code> GET https://api.vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
+</code></pre>
+</li>
+<li><p>The vCloud API response includes each of the current metric values, for example:</p>
+<pre><code> ```
+ &lt;CurrentUsage xmlns=&quot;http://www.vmware.com/vcloud/v1.5&quot; ...&gt;
+
+     &lt;Link
+         rel=&quot;up&quot;
+         href=&quot;https://api.vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab&quot;
+         type=&quot;application/vnd.vmware.vcloud.vm+xml&quot;&gt;
+
+     &lt;Metric name=&quot;cpu.usage.average&quot;
+         unit=&quot;PERCENT&quot;
+         value=&quot;0.1&quot;/&gt;
+     &lt;Metric name=&quot;cpu.usage.maximum&quot;
+         unit=&quot;PERCENT&quot;
+         value=&quot;0.1&quot;/&gt;
+     &lt;Metric name=&quot;cpu.usagemhz.average&quot;
+         unit=&quot;MEGAHERTZ&quot;
+         value=&quot;2.0&quot;/&gt;
+     &lt;Metric name=&quot;mem.usage.average&quot;
+         unit=&quot;PERCENT&quot;
+         value=&quot;0.0&quot;/&gt;
+     &lt;Metric name=&quot;disk.write.average&quot;
+         unit=&quot;KILOBYTES_PER_SECOND&quot;
+         value=&quot;0.0&quot;/&gt;
+     &lt;Metric name=&quot;disk.read.average&quot;
+         unit=&quot;KILOBYTES_PER_SECOND&quot;
+         value=&quot;0.0&quot;/&gt;
+     &lt;Metric name=&quot;disk.provisioned.latest&quot;
+         unit=&quot;KILOBYTE&quot;
+         value=&quot;45410433&quot;/&gt;
+     &lt;Metric name=&quot;disk.used.latest&quot;
+         unit=&quot;KILOBYTE&quot;
+         value=&quot;111744.0&quot;/&gt;
+ &lt;/CurrentUsage&gt;
+ ```
+</code></pre>
+</li>
+</ol>
+<h2 id="curl-example">Curl example</h2>
+<pre><code>curl -i -XGET -H 'Accept: application/*+xml;version=5.6' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://api.vcd.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/current
+</code></pre>
+<h2 id="retrieving-historic-utilisation-metrics">Retrieving historic utilisation metrics</h2>
+<p>Historic metrics are collected and stored for three months. You can retrieve historic metrics for the last 24 hours of metric history.</p>
+<p>You can retrieve historic utilisation metrics for VMs in regions 5 and 6 only.</p>
+<ol>
+<li><p>Log in to the vCloud API.</p>
+<p>For more information, see <a href="vmw-how-access-vcloud-api.html">How to access vCloud Director through the vCloud API</a>.</p>
+</li>
+<li><p>Send the following request to the vCloud API to retrieve the historic utilisation metrics for the VM.</p>
+<pre><code> GET https://&lt;vcloud_api_url&gt;/api/vApp/&lt;vm_id&gt;/metrics/historic
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vcloud_api_url</code></td>
+<td>The URL you use to access the vCloud API</td>
+<td><code>api.vcd.pod0000b.sys00005.portal.skyscapecloud.com</code></td>
+</tr>
+<tr>
+<td><code>vm_id</code></td>
+<td>The GUID of the VM for which you want to retrieve utilisation metrics</td>
+<td><code>vm-12345678-aaaa-bbbb-cccc-1234567890ab</code></td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<pre><code> GET https://api.vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
+</code></pre>
+</li>
+<li><p>The vCloud API response includes historic metric values for the last 24 hours, for example:</p>
+<pre><code>&lt;HistoricUsage xmlns=&quot;http://www.vmware.com/vcloud/v1.5&quot; ...&gt;
+
+    &lt;Link
+        rel=&quot;up&quot;
+        href=&quot;https://api.vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab&quot;
+        type=&quot;application/vnd.vmware.vcloud.vm+xml&quot;&gt;
+
+    &lt;MetricSeries
+        expectedInterval=&quot;1800&quot;
+        name=&quot;disk.provisioned.latest&quot;
+        unit=&quot;KILOBYTE&quot;&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:00:00.000Z&quot;
+            value=&quot;875295.0&quot;/&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:30:00.000Z&quot;
+            value=&quot;741388.0&quot;/&gt;
+        &lt;Sample ... /&gt;
+    &lt;/MetricSeries&gt;
+    &lt;MetricSeries
+        expectedInterval=&quot;300&quot;
+        name=&quot;cpu.usagemhz.average&quot;
+        unit=&quot;MEGAHERTZ&quot;&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:03:20.000Z&quot;
+            value=&quot;505.0&quot;/&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:06:40.000Z&quot;
+            value=&quot;122.93333333333334&quot;/&gt;
+        &lt;Sample ... /&gt;
+    &lt;/MetricSeries&gt;
+    &lt;MetricSeries
+        expectedInterval=&quot;300&quot;
+        name=&quot;disk.read.average&quot;
+        unit=&quot;KILOBYTES_PER_SECOND&quot;&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:03:20.000Z
+            value=&quot;208.7&quot;/&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:06:40.000Z&quot;
+            value=&quot;0.0&quot;/&gt;
+        &lt;Sample ... /&gt;
+    &lt;/MetricSeries&gt;
+    &lt;MetricSeries
+        expectedInterval=&quot;300&quot;
+        name=&quot;mem.usage.average&quot;
+        unit=&quot;PERCENT&quot;&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:03:00.000Z&quot;
+            value=&quot;55.26272895119407&quot;/&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:06:40.000Z&quot;
+            value=&quot;47.19066823323568&quot;/&gt;
+        &lt;Sample ... /&gt;
+    &lt;/MetricSeries&gt;
+    &lt;MetricSeries
+        expectedInterval=&quot;300&quot;
+        name=&quot;cpu.usage.average&quot;
+        unit=&quot;PERCENT&quot;&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:03:20.000Z&quot;
+            value=&quot;24.07100028991699&quot;/&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:06:40.000Z&quot;
+            value=&quot;5.87066666285197&quot;/&gt;
+        &lt;Sample ... /&gt;
+    &lt;/MetricSeries&gt;
+    &lt;MetricSeries
+        expectedInterval=&quot;1800&quot;
+        name=&quot;disk.used.latest&quot;
+        unit=&quot;KILOBYTE&quot;&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:00:00.000Z&quot;
+            value=&quot;262154.0&quot;/&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:30:00.000Z&quot;
+            value=&quot;373779.0&quot;/&gt;
+        &lt;Sample ... /&gt;
+    &lt;/MetricSeries&gt;
+    &lt;MetricSeries
+        expectedInterval=&quot;300&quot;
+        name=&quot;disk.write.average&quot;
+        unit=&quot;KILOBYTES_PER_SECOND&quot;&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:03:20.000Z&quot;
+            value=&quot;30.3&quot;/&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:06:40.000Z&quot;
+            value=&quot;0.5333333333333333&quot;/&gt;
+        &lt;Sample ... /&gt;
+    &lt;/MetricSeries&gt;
+    &lt;MetricSeries
+        expectedInterval=&quot;300&quot;
+        name=&quot;cpu.usage.maximum&quot;
+        unit=&quot;PERCENT&quot;&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:03:20.000Z&quot;
+            value=&quot;24.07100028991699&quot;/&gt;
+        &lt;Sample
+            timestamp=&quot;2013-12-02T20:06:40.000Z&quot;
+            value=&quot;5.87066666285197&quot;/&gt;
+        &lt;Sample ... /&gt;
+    &lt;/MetricSeries&gt;
+&lt;/HistoricUsage/&gt;
+</code></pre>
+</li>
+</ol>
+<h2 id="curl-example-1">Curl example</h2>
+<pre><code>curl -i -XGET -H 'Accept: application/*+xml;version=5.6' -H 'x-vcloud-authorization: 1234567890abcdef1234567890abcdef' https://api.vcd.pod0000b.sys00005.portal.skyscapecloud.com/api/vApp/vm-12345678-aaaa-bbbb-cccc-1234567890ab/metrics/historic
+</code></pre>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-retrieve-utilisation-metrics.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

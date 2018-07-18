@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to create NAT rules | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to create NAT rules | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-create-nat-rules">How to create NAT rules</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Network Address Translation (NAT) allows the source or destination IP address to be changed to enable traffic to transition through a router or gateway.</p>
+<p>You can use two types of NAT within your edge gateway:</p>
+<ul>
+<li>Destination NAT (DNAT) - changes the destination IP of the packet</li>
+<li>Source NAT (SNAT) - changes the source IP of the packet</li>
+</ul>
+<p>For a virtual machine (VM) to access an external network resource from its virtual data centre (VDC), the IP address of its network needs to NAT to one of the following:</p>
+<ul>
+<li>The public internet IP addresses provided by UKCloud</li>
+<li>The private transit networks provided by UKCloud for PSN and HSCN connectivity</li>
+</ul>
+<p>It's worth noting that for both DNAT and SNAT:</p>
+<ul>
+<li>The NAT rule will be applied to the edge gateway, rather than to the internal VDC network</li>
+<li>The firewall needs to be open for NAT rules</li>
+</ul>
+<p>The steps for creating NAT rules vary depending on what type of edge gateway you're working with:</p>
+<ul>
+<li><a href="#creating-nat-rules-for-an-advanced-gateway">Creating NAT rules for an advanced gateway</a></li>
+<li><a href="#creating-nat-rules-for-a-standard-edge">Creating nat rules for a standard edge</a></li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We recommend that you convert your edge to an advanced gateway to access the latest vCloud Director functionality. For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
+</div>
+<h2 id="creating-nat-rules-for-an-advanced-gateway">Creating NAT rules for an advanced gateway</h2>
+<h3 id="creating-a-dnat-rule-for-an-advanced-gateway">Creating a DNAT rule for an advanced gateway</h3>
+<p>DNAT changes the destination IP address of a packet and performs the reverse function for any replies. You can use DNAT to publish a service located in a private network on a public IP address.</p>
+<p>To create a DNAT rule on your advanced gateway:</p>
+<ol>
+<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
+<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
+</li>
+<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
+</li>
+<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
+</li>
+<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
+</li>
+<li><p>Select the <strong>NAT</strong> tab.</p>
+<p><img src="images/vmw-vcd-adv-edge-tab-nat.png" alt="NAT tab"></p>
+</li>
+<li><p>Click <strong>+ DNAT Rule</strong>.</p>
+<p><img src="images/vmw-vcd-btn-add-dnat-adv.png" alt="Add DNAT Rule button"></p>
+</li>
+<li><p>In the <em>Add DNAT Rule</em> dialog box, from the <strong>Applied On</strong> list, select the interface on which to apply the rule.</p>
+</li>
+<li><p>Enter an <strong>Original IP/Range</strong> and a <strong>Translated IP/Range</strong>.</p>
+</li>
+<li><p>Select the <strong>Protocol</strong>, <strong>Original Port</strong> and <strong>Translated Port</strong>.</p>
+</li>
+<li><p>Make sure the <strong>Enabled</strong> toggle is selected and then click <strong>Keep</strong>.</p>
+<p><img src="images/vmw-vcd-add-dnat-adv.png" alt="Add DNAT Rule dialog box"></p>
+</li>
+<li><p>Click <strong>Save changes</strong>.</p>
+</li>
+</ol>
+<h3 id="creating-an-snat-rule-for-an-advanced-gateway">Creating an SNAT rule for an advanced gateway</h3>
+<p>SNAT changes the source IP address of a packet and performs the reverse function for any replies.</p>
+<p>When connecting to an external network, such as the internet, to access services (for example, DNS), you need to define an SNAT rule to translate your internal address into something available on the external network (for example, PSN, internet).</p>
+<p>To create an SNAT rule on your advanced gateway:</p>
+<ol>
+<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
+<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
+</li>
+<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
+</li>
+<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
+</li>
+<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
+</li>
+<li><p>Select the <strong>NAT</strong> tab.</p>
+<p><img src="images/vmw-vcd-adv-edge-tab-nat.png" alt="NAT tab"></p>
+</li>
+<li><p>Click <strong>+ SNAT Rule</strong>.</p>
+<p><img src="images/vmw-vcd-btn-add-snat-adv.png" alt="Add SNAT Rule button"></p>
+</li>
+<li><p>In the <em>Add SNAT Rule</em> dialog box, from the <strong>Applied On</strong> list, select the interface on which to apply the rule.</p>
+</li>
+<li><p>Enter an <strong>Original Source IP/Range</strong> and a <strong>Translated Source IP/Range</strong>.</p>
+</li>
+<li><p>Make sure the <strong>Enabled</strong> toggle is selected and then click <strong>Keep</strong>.</p>
+<p><img src="images/vmw-vcd-add-snat-adv.png" alt="Add SNAT Rule dialog box"></p>
+</li>
+<li><p>Click <strong>Save changes</strong>.</p>
+</li>
+</ol>
+<h2 id="creating-nat-rules-for-a-standard-edge">Creating NAT rules for a standard edge</h2>
+<h3 id="creating-a-dnat-rule-for-a-standard-edge">Creating a DNAT rule for a standard edge</h3>
+<p>DNAT changes the destination IP address of a packet and performs the reverse function for any replies. You can use DNAT to publish a service located in a private network on a public IP address.</p>
+<p>To create a DNAT rule on your edge gateway:</p>
+<ol>
+<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
+<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
+</li>
+<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
+</li>
+<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
+</li>
+<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
+</li>
+<li><p>Select the <strong>NAT</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-nat-reg.png" alt="NAT tab"></p>
+</li>
+<li><p>Click <strong>Add DNAT</strong>.</p>
+<p><img src="images/vmw-vcd-btn-add-dnat-reg.png" alt="Add DNAT button"></p>
+</li>
+<li><p>In the <em>Add Destination NAT Rule</em> dialog box, enter an <strong>Original (External) IP/range</strong> and a <strong>Translated (Internal) IP/range</strong>.</p>
+<blockquote>
+<p>![TIP]
+You should have multiple external IP addresses to use. For how to find them, see <a href="vmw-how-find-ip-addresses.html"><em>How to find your allocated external IP addresses</em></a>.</p>
+</blockquote>
+</li>
+<li><p>Select the <strong>Protocol</strong> and <strong>Original port</strong> type.</p>
+<p><img src="images/vmw-vcd-add-dnat-rule-reg.png" alt="Add Destination NAT Rule dialog box"></p>
+</li>
+<li><p>When you're finished, click <strong>OK</strong>.</p>
+</li>
+</ol>
+<h3 id="creating-an-snat-rule-for-a-standard-edge">Creating an SNAT rule for a standard edge</h3>
+<p>Source NAT changes the source IP address of a packet and performs the reverse function for any replies.</p>
+<p>When connecting to an external network, such as the internet, to access services (for example, DNS), you need to define an SNAT rule to translate your internal address into something available on the external network (for example, PSN, internet).</p>
+<p>To create an SNAT rule on your edge gateway:</p>
+<ol>
+<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
+<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
+</li>
+<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
+</li>
+<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
+</li>
+<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
+</li>
+<li><p>Select the <strong>NAT</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-nat-reg.png" alt="NAT tab"></p>
+</li>
+<li><p>Click <strong>Add SNAT</strong>.</p>
+<p><img src="images/vmw-vcd-btn-add-snat-reg.png" alt="Add SNAT button"></p>
+</li>
+<li><p>In the <em>Add Source NAT Rule</em> dialog box, enter an <strong>Original (Internal) source IP/range</strong> and a <strong>Translated (External) source IP/range</strong>.</p>
+<blockquote>
+<p>![TIP]
+You should have multiple external IP addresses to use. For how to find them, see <a href="vmw-how-find-ip-addresses.html"><em>How to find your allocated external IP addresses</em></a>.</p>
+</blockquote>
+</li>
+<li><p>For SNAT there are no options for specifying the protocol or originating port type.</p>
+<p><img src="images/vmw-vcd-add-dnat-rule-reg.png" alt="Add Destination NAT Rule dialog box"></p>
+</li>
+<li><p>When you're finished, click <strong>OK</strong>.</p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>In this article you've learned how to create DNAT and SNAT rules. For other edge gateway configuration tasks, see:</p>
+<ul>
+<li><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></li>
+<li><a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></li>
+<li><a href="vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a></li>
+<li><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></li>
+<li><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-nat-rules.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

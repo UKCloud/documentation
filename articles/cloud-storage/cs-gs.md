@@ -36,7 +36,7 @@ Cloud Storage:
 - Is based on object storage technology that is natively optimised for cloud storage in terms of scale, resilience and accessibility
 - Removes the complexity of capacity management by utilising a pay‑as‑you‑go model, so you pay for what you use, when you use it, scaling indefinitely and on demand
 - Natively enables application deduplication and redundancy to ensure the highest level of data availability, while reducing the cost and management of on-premises storage solutions
-- Provides easy access to storage anywhere, anytime, to any device, using HTTP(S) to simplify the integration of object storage systems into cloud‑based solutions by removing the need to rely on the availability of web, file or FTP servers
+- Provides easy access to storage anywhere, any time, to any device, using HTTP(S) to simplify the integration of object storage systems into cloud‑based solutions by removing the need to rely on the availability of web, file or FTP servers
 - Offloads objects (files, media, images) from compute resources, reducing the load on server resources
 - Automatically replicates and distributes objects to give high levels of data durability and availability, eliminating the need for cloud backup and recovery
 
@@ -54,7 +54,7 @@ The key differences between the two APIs are:
 
 The low cost of cloud storage per GB, as well as its almost unlimited scalability, means there\'s a large variety of use cases for it. For example, it\'s ideal for data archives, backups, log files, and media repositories.
 
-We anticipate that most web applications can make good use of cloud storage for static content, such as images and downloadable binaries. Storing these items in cloud storage --- rather than in primary storage attached to web servers, inside the database or on a traditional file share --- can provide significant benefits in terms of cost savings, agility and performance.
+We anticipate that most web applications can make good use of cloud storage for static content, such as images and downloadable binaries. Storing these items in cloud storage&mdash;rather than in primary storage attached to web servers, inside the database or on a traditional file share&mdash;can provide significant benefits in terms of cost savings, agility and performance.
 
 For example, with an internet-facing application that enables users to download forms and guides in PDF, these items are often stored in primary storage attached to the web servers, which creates several challenges:
 
@@ -109,15 +109,15 @@ Contact UKCloud support if you are unsure which endpoint to use.
 
 The S3-compatible API is at:
 
-`https://`*`api_endpoint`*
+`https://<api_endpoint>`
 
-Check which *`api_endpoint`* to use in [Before you begin](#before-you-begin), for example:
+Check which `api_endpoint` to use in [Before you begin](#before-you-begin), for example:
 
 `https://cas.cor00005.ukcloud.com`
 
 To help get you started, you can find developer resources on the Amazon web site at:
 
-[http://aws.amazon.com/documentation/s3/](https://aws.amazon.com/documentation/s3/)
+<https://aws.amazon.com/documentation/s3/>
 
 For details of the supported and unsupported S3 operations on ECS, see:
 
@@ -144,26 +144,32 @@ To use S3Curl:
 
 2. Install the following required dependency:
 
-        sudo apt-get install libdigest-hmac-perl
-        yum install perl-Digest-HMAC
+    ```
+    sudo apt-get install libdigest-hmac-perl
+    yum install perl-Digest-HMAC
+    ```
 
 3. Create a file named .s3curl in the home directory containing your credentials. For example:
 
-        %awsSecretAccessKeys = (
-            UKCloud => {
-                id => '*user_id*',
-                key => '*secret_key*',
-            },
-        );
+    ```
+    %awsSecretAccessKeys = (
+        UKCloud => {
+            id => '<user_id>',
+            key => '<secret_key>',
+        },
+    );
+    ```
 
     Where:
 
-    - *`user_id`* is your User ID (you can find this in the Storage section of the UKCloud Portal)
-    - *`secret_key`* is your secret key (If you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)
+    - `user_id` is your User ID (you can find this in the Storage section of the UKCloud Portal)
+    - `secret_key` is your secret key (If you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)
 
 4. Change the permissions, otherwise the Perl script will refuse to run.
 
-        chmod 600 .s3curl
+    ```
+    chmod 600 .s3curl
+    ```
 
 5. Make the following small modification to the script itself so that it will work correctly with ECS:
 
@@ -171,39 +177,51 @@ To use S3Curl:
 
     - Scroll down until you find the following comment:
 
-            # begin customizing here
+        ```
+        # begin customizing here
+        ```
 
     - The S3 endpoints are defined below this line, so add your Cloud Storage host name to this list as follows:
 
-            my @endpoints = ('*api_endpoint*', 's3.amazonaws.com', ...
+        ```
+        my @endpoints = ('<api_endpoint>', 's3.amazonaws.com', ...
+        ```
 
         For example:
 
-            #begin customizing here
-            my @endpoints = ('cas.cor00005.ukcloud.com',
-            's3.amazonaws.com', ...
+        ```
+        #begin customizing here
+        my @endpoints = ('cas.cor00005.ukcloud.com',
+        's3.amazonaws.com', ...
+        ```
 
     - Save the file.
 
 6. S3Curl is now ready to use, so you can call it as follows:
 
-        perl s3curl.pl --id UKCloud -- *curl_arguments*
+    ```
+    perl s3curl.pl --id UKCloud -- <curl_arguments>
+    ```
 
-    The *`curl_arguments`* need to contain the host name and port number. For example, to list your buckets, you could use:
+    The `curl_arguments` need to contain the host name and port number. For example, to list your buckets, you could use:
 
-        perl s3curl.pl --id UKCloud -- https://cas.cor00005.ukcloud.com/
+    ```
+    perl s3curl.pl --id UKCloud -- https://cas.cor00005.ukcloud.com/
+    ```
 
     Or to delete a file named `Lighthouse.jpg` in `/bucket2`:
 
-        perl s3curl.pl --id UKCloud -- -X DELETE https://cas.cor00005.ukcloud.com/bucket2/Lighthouse.jpg
+    ```
+    perl s3curl.pl --id UKCloud -- -X DELETE https://cas.cor00005.ukcloud.com/bucket2/Lighthouse.jpg
+    ```
 
 ## Using the ECS Atmos API
 
 The Atmos API is at:
 
-`https://`*`api_endpoint`*
+`https://<api_endpoint>`
 
-Check which *api_endpoint* to use in [Before you begin](#before-you-begin), for example:
+Check which `api_endpoint` to use in [Before you begin](#before-you-begin), for example:
 
 `https://atmos.cas.cor00005.ukcloud.com`
 
@@ -229,7 +247,7 @@ You may also find the *Elastic Cloud Storage (ECS)* *Data Access Guide* useful:
 
 Interacting with Cloud Storage via the API directly is ideal for web-based applications, but having access from the command line can help developers with testing and provide scripting access to Cloud Storage.
 
-Command‑line interface (CLI) tools enable access from the command line by translating commands into the relevant API calls. There are lots of CLI tools to choose from --- this guide examines two for the S3 API: one each for Linux and Windows. Remember that the APIs are not interchangeable, so if you use the Atmos API in your application, you won\'t be able to see the data using the S3 CLI.
+Command‑line interface (CLI) tools enable access from the command line by translating commands into the relevant API calls. There are lots of CLI tools to choose from --- this guide examines two for the S3 API: one each for Linux and Windows. Remember that the APIs are not interchangeable, so if you use the Atmos API in your application, you won't be able to see the data using the S3 CLI.
 
 ### Using S3cmd --- a Linux CLI for the S3 API
 
@@ -243,7 +261,9 @@ To use S3cmd:
 
 2. Create the required configuration files by running the following command:
 
-        s3cmd ---configure
+    ```
+    s3cmd ---configure
+    ```
 
 3. When prompted, provide the following information:
 
@@ -257,12 +277,12 @@ To use S3cmd:
 
 5. Edit the `~/.s3cfg` file and confirm that the `host_base` and `host_bucket` lines look like the following:
 
-    `host_base` = *`api_endpoint`*
+    `host_base` = `<api_endpoint>`
 
-    `host_bucket` = `%(bucket)s.`*`api_endpoint`*
+    `host_bucket` = `%(bucket)s.<api_endpoint>`
 
     > [!NOTE]
-    > Ensure that you use the appropriate *`api_endpoint`*, as shown in [Before you begin](#before-you-begin), for example:</br>
+    > Ensure that you use the appropriate `api_endpoint`, as shown in [Before you begin](#before-you-begin), for example:</br>
     > `host_base` = `cas.cor00005.ukcloud.com`</br>
     > `host_bucket` = `%(bucket)s.cas.cor00005.ukcloud.com`
 
@@ -270,7 +290,9 @@ To use S3cmd:
 
 7. The S3cmd tool is now ready to use. To list your buckets, run the following command:
 
-        s3cmd ls
+    ```
+    s3cmd ls
+    ```
 
 8.  You can find detailed instructions for using the tool in the accompanying README file.
 
@@ -286,21 +308,23 @@ To use S3Express:
 
 2. Use the following commands to configure the tool to access Cloud Storage:
 
-    `saveauth` *`user_id`* *`secret_key`* `UKCloud`
+    `saveauth <user_id> <secret_key> UKCloud`
 
-    `setopt --endpoint:`*`api_endpoint`*
+    `setopt --endpoint:<api_endpoint>`
 
     Where:
 
-    - *`user_id`* is your User ID (you can find this in the Storage section of the UKCloud Portal)
-    - *`secret_key`* is your secret key (If you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)
-    - *`api_endpoint`* is the appropriate endpoint, as shown in [Before you begin](#before-you-begin), for example:
+    - `user_id` is your User ID (you can find this in the Storage section of the UKCloud Portal)
+    - `secret_key` is your secret key (if you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)
+    - `api_endpoint` is the appropriate endpoint, as shown in [Before you begin](#before-you-begin), for example:
 
         `setopt --endpoint:cas.cor00005.ukcloud.com`
 
 3. The S3Express tool is now ready to use. To list your buckets, run the following command:
 
-        ls
+    ```
+    ls
+    ```
 
 4. For detailed instructions, refer to the Windows help file, which is installed along with the tool.
 
@@ -325,17 +349,15 @@ Although you will mostly interact with your Cloud Storage service through the AP
 
 - View a graphical representation of the storage consumed by a bucket over the last 30 days
 
-**More information!** [*How to view Cloud Storage information in the UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/b64121be-c1a2-48ef-a593-ac29ac47b91c)
+**More information!** [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
 
 To access your Cloud Storage service in the UKCloud Portal:
 
 1. Log in to the UKCloud Portal and select your account.
 
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/0435318d-a94b-41bb-a4ff-a52adbe863e5).
+    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
 
-2. In the Portal navigation panel, expand the **STORAGE** option and select **ECS**.
-
-    ![Cloud Storage option in UKCloud Portal](images/cs-portal-mnu-cloud-storage.png)
+2. In the Portal navigation panel, expand the **Cloud Storage** option and select **ECS**.
 
 3. You can now browse the namespaces, buckets and users in your Cloud Storage service.
 
@@ -345,9 +367,9 @@ To access your Cloud Storage service in the UKCloud Portal:
 
 In this Getting Started Guide, you've learned the basics about the Cloud Storage service. For more detailed information, see the following articles in the Knowledge Centre:
 
-- [*How to view Cloud Storage information in the UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/b64121be-c1a2-48ef-a593-ac29ac47b91c)
-- [*Blueprint -- Using storage gateways with Cloud Storage (ECS)*](https://portal.ukcloud.com/support/knowledge_centre/85dc54ff-7d21-43ac-9cfa-88e87de7ba27)
-- [*Blueprint -- Using file browsers with Cloud Storage (ECS)*](https://portal.ukcloud.com/support/knowledge_centre/ba19c6c0-a123-4d0b-bc56-b3fdc3513cb0)
+- [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
+- [*Blueprint -- Using storage gateways with Cloud Storage (ECS)*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf)
+- [*Blueprint -- Using file browsers with Cloud Storage (ECS)*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-575-Blueprint-Using-file-browsers-with-Cloud-Storage-ECS-v1.pdf)
 
 ## Glossary
 

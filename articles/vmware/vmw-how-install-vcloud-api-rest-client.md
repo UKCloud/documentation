@@ -18,7 +18,7 @@ toc_mdlink: vmw-how-install-vcloud-api-rest-client.md
 
 ## Overview
 
-This guide covers the installation and basic usage of a Firefox plugin called REST Client. Using this plugin, you can access the vCloud API to work programmaticvally with your UKCloud for VMware environment.
+This guide covers the installation and basic usage of a Firefox plugin called REST Client. Using this plugin, you can access the vCloud API to work programmatically with your UKCloud for VMware environment.
 
 ## Installing RESTClient
 

@@ -2,3 +2,5 @@
   items:
   - name: Reference Other
     href: other-ref-browsers.md
+  - name: Services by region
+    href: other-ref-services-by-region.md

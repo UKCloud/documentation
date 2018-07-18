@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to connect to the UKCloud Windows Server Update Services (WSUS) | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to connect to the UKCloud Windows Server Update Services (WSUS) | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-connect-to-the-ukcloud-windows-server-update-services-wsus">How to connect to the UKCloud Windows Server Update Services (WSUS)</h1>
+
+<h2 id="overview">Overview</h2>
+<p>When you create a virtual machine (VM) running a Windows Server operating system, you need to register it with the UKCloud Windows Server Update Services to receive updates for it.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>UKCloud provides Windows updates for server operating systems and SQL.</p>
+</div>
+<p>Before you establish a connection to the update services, you need to ensure your VMs can communicate with the update server, which exists outside your cloud organisation. This may involve editing the NAT and firewall settings on your edge gateway to allow traffic to traverse out of your virtual data centre (VDC). You'll need to open ports <code>443</code> and <code>80</code> on your firewall to the update server. For more information on how to do this, see <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a> and <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
+<h2 id="configuring-windows-update">Configuring Windows update</h2>
+<p>In this section you'll need to replace the IP addresses of <code>x.x.x.x</code> with the IP address for the update server you're targeting. The IP address depends on whether your VMs are on the Assured OFFICIAL or Elevated OFFICIAL security domain. To get the IP addresses for the update servers, raise a service via My Calls in the UKCloud Portal.</p>
+<ol>
+<li><p>Open a console to the VM you want to update.</p>
+</li>
+<li><p>Test connectivity to the update servers by opening an Internet Explorer browser window, then opening a connection to one of the update servers on <code>https://x.x.x.x</code>.</p>
+</li>
+<li><p>Confirm that a certificate error displays.</p>
+<p>If it doesn't, connectivity hasn't been established and you'll need to troubleshoot the NAT and firewall rules before you continue.</p>
+</li>
+<li><p>Confirm the certificate error, then click the certificate icon in the browser and select <strong>Show Certificate</strong> to show the <strong>Issued to: <em>servername</em></strong>. Make a note of this <strong><em>servername</em></strong> for use in the next steps.</p>
+</li>
+<li><p>Create the host file entry for <code>x.x.x.x</code> to resolve to the <strong><em>servername</em></strong> from the step above.</p>
+</li>
+<li><p>Restart IE and open a connection to <code>https://servername</code>. Confirm that a certificate error displays, and confirm the certificate error.</p>
+</li>
+<li><p>Click the certificate icon to display the certificate and click <strong>Install certificate</strong>.</p>
+</li>
+<li><p><strong>For Windows Server 2008:</strong><br>
+Select Place all certificates in the following store.</br>
+In the Select Certificate Store select the option Show Physical Stores.<br>
+Install the certificate into Trusted Root Certification authorities/local PC.</br>
+<br>
+<strong>For Windows Server 2012:</strong></br>
+On the welcome screen of the Certificate import wizard, select Local Machine, then click Next.<br>
+Select Place all certificates in the following store, and click Browse.</br>
+Highlight Trusted Root Certification Authorities and click OK.<br>
+Click Next and confirm the import settings, then click Finish.</p>
+</li>
+<li><p>Restart your browser and open a connection to <code>https://servername</code>.</p>
+</li>
+<li><p>Confirm that no certificate warnings appear, and that the certificate icon in IE is green.</p>
+</li>
+<li><p>Run <code>gpedit.msc</code>.</p>
+</li>
+<li><p>In the Group Policy Management Editor, expand and navigate to Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Update.</p>
+</li>
+<li><p>Enable and configure the following settings:</p>
+<ul>
+<li>Specify intranet Microsoft update service location --- enter <code>https://servername</code> in both boxes</li>
+<li>Configure Automatic Updates --- enter required settings</li>
+<li>Enable client-side targeting --- enter <code>client</code> in the group name field</li>
+</ul>
+</li>
+<li><p>Open an elevated command prompt and enter <code>gpupdate /force</code>.</p>
+</li>
+<li><p>Open Windows update and click Check for updates.</p>
+</li>
+</ol>
+<h2 id="replicating-settings-to-other-windows-vms">Replicating settings to other Windows VMs</h2>
+<p>To quickly replicate the settings defined above to other windows VMs in your environment:</p>
+<ol>
+<li><p>Copy the update server record in the host file to the additional VMs.</p>
+</li>
+<li><p>Export the certificate from the trusted root folder to a file and import it to the additional VMs.</p>
+</li>
+<li><p>Export from the registry the key</p>
+<pre><code> KEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
+</code></pre>
+<p>and import it onto the additional VMs.</p>
+</li>
+<li><p>Restart the Windows update service on the additional VMs.</p>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-connect-windows-update.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

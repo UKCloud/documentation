@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to create a catalog | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to create a catalog | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-create-a-catalog">How to create a catalog</h1>
+
+<p>Overview</p>
+<p>UKCloud provides a public catalogue for you to use that contains standard virtual machine (VM) sizes and operating systems. The public catalogue is a good place to start when you first deploy VMs into the UKCloud platform. However, you may want to create your own catalogues, containing specific applications or gold images, which you can then use to deploy VMs quickly.</p>
+<p>The first step is to create an empty catalogue.</p>
+<h2 id="creating-a-catalog">Creating a catalog</h2>
+<p>To create an empty catalogue:</p>
+<ol>
+<li><p>In vCloud Director, select the <em>Catalogs</em> tab.</p>
+<p><img src="images/vmw-vcd-tab-catalogs.png" alt="Catalogs tab in vCloud Director"></p>
+</li>
+<li><p>Click the <strong>+</strong> button to add a new catalogue.</p>
+<p><img src="images/vmw-vcd-btn-add-catalog.png" alt="Add catalog icon"></p>
+</li>
+<li><p>Name the catalogue and give it a description if needed.</p>
+<p>There's also an option to add a Subscribed Catalog, a read-only copy of an externally published catalogue. If you want to do this, you'll need to know the URL, and the password if there is one.</p>
+<p><img src="images/vmw-vcd-new-catalog.png" alt="Name this Catalog page of New Catalog dialog box"></p>
+</li>
+<li><p>When you're done, click <strong>Next</strong>.</p>
+</li>
+<li><p>You now have the option to select the storage type used to store the catalog.</p>
+<ul>
+<li>The default is <strong>Use any storage</strong>. Leave this selected if you don't need to store catalog items on specific storage.</li>
+<li>Alternatively, you can indicate where your catalog items should be stored if they need to be stored on a specific storage policy.</li>
+</ul>
+<p><img src="images/vmw-vcd-new-catalog-storage.png" alt="Select Storage Type options"></p>
+</li>
+<li><p>When you're done, click <strong>Next</strong>.</p>
+</li>
+<li><p>To make the catalog visible to others, add specific people or your entire organisation.</p>
+<p><img src="images/vmw-vcd-new-catalog-sharing.png" alt="Sharing catalog options"></p>
+</li>
+<li><p>Click the <strong>Add Members</strong> button to add everyone in the organisation or individual users. You can give individuals different access levels.</p>
+<p><img src="images/vmw-vcd-new-catalog-add-members.png" alt="Add members options"></p>
+</li>
+<li><p>When you've added all the people who can access the catalogue, click <strong>OK</strong>, then review each individual's access level and adjust it if needed.</p>
+</li>
+<li><p>When you're done, click <strong>Next</strong>.</p>
+</li>
+<li><p>You now have the choice to publish your catalog for the use of external organisations.</p>
+<ul>
+<li><p>To enable external publishing, select the checkbox and add a password if needed.</p>
+</li>
+<li><p>If you don't want to share your catalog externally, just click <strong>Next</strong>.</p>
+</li>
+</ul>
+<p><img src="images/vmw-vcd-new-catalog-publish.png" alt="Publish settings"></p>
+</li>
+<li><p>Review the settings and click <strong>Finish</strong>.</p>
+</li>
+</ol>
+<h2 id="populating-a-catalog">Populating a catalog</h2>
+<p>There are two ways to populate a catalog:</p>
+<ul>
+<li>By <a href="#uploading-an-ovf-package">uploading an OVF package</a></li>
+<li>By <a href="#adding-an-existing-vapp">creating a template from an existing vApp</a></li>
+</ul>
+<h3 id="uploading-an-ovf-package">Uploading an OVF package</h3>
+<p>To upload an OVF package and assign it to a catalogue:</p>
+<ol>
+<li><p>On the <em>Catalogs</em> tab, select the <em>vApp Templates</em> tab.</p>
+<p><img src="images/vmw-vcd-tab-vapp-templates.png" alt="vApp Templates tab"></p>
+</li>
+<li><p>Click the <strong>Upload</strong> button to open an OVF upload window.</p>
+<p><img src="images/vmw-vcd-btn-upload.png" alt="Upload button"></p>
+</li>
+<li><p>In the <em>Upload OVF package as a vApp Template</em> dialog box, select the source of the OVF: either a <strong>URL</strong> or a <strong>Local file</strong>.</p>
+</li>
+<li><p>Give a destination for the OVF, and give the OVF a name.</p>
+</li>
+<li><p>From the <strong>Catalog</strong> list, select the catalog you want to put the OVF in.</p>
+<p><img src="images/vmw-vcd-upload-ovf.png" alt="Upload OVF package as a vApp Template dialog box"></p>
+</li>
+<li><p>When you're done, click <strong>Upload</strong> to import the OVF into the catalog.</p>
+<p>Depending on template size and network speed, the upload may take some time.</p>
+</li>
+</ol>
+<h3 id="adding-an-existing-vapp">Adding an existing vApp</h3>
+<p>To create a catalog from an existing vApp:</p>
+<ol>
+<li><p>In vCloud Director, select the <em>My Cloud</em> tab.</p>
+<p><img src="images/vmw-vcd-tab-my-cloud.png" alt="My Cloud tab in vCloud Director"></p>
+</li>
+<li><p>Right-click the vApp you want to add to the catalog and select <strong>Add to Catalog</strong>.</p>
+<p>You can add both running and stopped vApps to the catalog, although it's worth noting that creating a catalog image from a running vApp could affect performance.</p>
+</li>
+<li><p>You can now choose the catalog you want to add the vApp to, give the vApp a new name, assign a storage lease, and define whether vApps deployed using this template are identical or customisable.</p>
+<p>You can also overwrite an existing catalog item. If the catalog you are adding the vApp to is published externally, you'll see a warning.</p>
+<p><img src="images/vmw-vcd-add-to-catalog.png" alt="Add to Catalog dialog box"></p>
+</li>
+<li><p>When you're done, click <strong>OK</strong>.</p>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-catalog.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

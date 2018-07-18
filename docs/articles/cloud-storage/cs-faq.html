@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Cloud Storage FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Cloud Storage FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="cloud-storage-faqs">Cloud Storage FAQs</h1>
+
+<h2 id="service">Service</h2>
+<h3 id="what-is-the-service">What is the service?</h3>
+<p>Cloud Storage from UKCloud is a secure next-generation storage platform designed to address a wide variety of use cases. It's based on Dell EMC Elastic Cloud Storage (ECS), which is an object storage technology natively optimised for cloud storage in terms of scale, resilience and accessibility.</p>
+<h3 id="where-will-my-data-be-physically-stored">Where will my data be physically stored?</h3>
+<p>Data will be stored in one or both of our highly resilient tier 3, UK-sovereign data centres, which are separated by over 100km.</p>
+<h3 id="how-much-data-can-i-store">How much data can I store?</h3>
+<p>Our Cloud Storage solution can scale to multi-Petabytes across multiple sites, meeting the most demanding storage requirements.</p>
+<h3 id="how-many-copies-of-my-data-are-included">How many copies of my data are included?</h3>
+<p>Object storage technology works in a slightly different way to traditional local storage solutions that tend to use RAID as a method to provide data durability.</p>
+<p>Instead, Cloud Storage provides data resilience using the Reed Solomon 12 + 4 erasure coding scheme, which splits an object into 12 data fragments and 4 coding fragments. These fragments are spread across multiple nodes in the data centre and the storage engine can reconstruct an object from any of the 12 data fragments, providing protection in the event of a disk or node failure.</p>
+<p>The ENHANCED service level stores an additional copy of your data in our second, geographically remote data centre.</p>
+<h2 id="management">Management</h2>
+<h3 id="how-do-i-access-the-platform">How do I access the platform?</h3>
+<p>The service is Application Programming Interface (API) accessible, so is an ideal target for customer applications. It can also be used by existing systems.</p>
+<p>In addition, the platform can be accessed using a variety of software tools such as cloud storage gateways, file browsers and other software products.</p>
+<p>Documentation on ways to interact with the platform is available from the <a href="cs-gs.html">Knowledge Centre</a>.</p>
+<h3 id="is-data-accessible-via-the-psn-assured-connection-also-accessible-via-the-internet">Is data accessible via the PSN Assured connection also accessible via the internet?</h3>
+<p>Cloud Storage in our Assured OFFICAL domain uses the same environment for both PSN Assured and internet connections. Although it is not possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.</p>
+<h3 id="which-apis-are-supported-by-the-platform">Which APIs are supported by the platform?</h3>
+<p>Our Cloud Storage supports an Elastic Cloud Storage S3-compatible API and the native ATMOS RESTful API.</p>
+<p>Documentation and user manuals for <a href="cs-gs.html">supported API calls</a> are available from the Knowledge Centre.</p>
+<h3 id="how-frequently-can-i-back-up-data">How frequently can I back up data?</h3>
+<p>The frequency of data backup is defined and managed by your organisation administrator.</p>
+<p>UKCloud's object storage is however highly durable and can automatically recover from disk and node failure, negating the need for a backup.</p>
+<h3 id="what-reports-can-i-get-about-storage-usage">What reports can I get about storage usage? </h3>
+<p>We provide tools for monitoring used capacity and storage growth via the UKCloud Portal.</p>
+<h3 id="what-software-tools-are-provided">What software tools are provided? </h3>
+<p>UKCloud does not provide software tools for accessing the platform as storage is accessed via APIs, supporting S3 and Native ATMOS.</p>
+<p>You can however directly connect any S3 compatible tools to your storage (for example, S3 Browser and Cyberduck).</p>
+<h3 id="how-do-i-encrypt-my-data-at-rest">How do I encrypt my data-at-rest?</h3>
+<p>Data at rest encryption is an optional feature of our Cloud Storage product, with no additional cost. There are three options available to Cloud Storage customers looking to encrypt their data:</p>
+<ol>
+<li><p>Customer managed encryption. The Customer encrypts their data prior to moving it into UKCloud Cloud Storage. This avoids having to do any additional development against the ECS S3 API and ensures the customer retains the keys used to encrypt the data.</p>
+</li>
+<li><p>Server-side encryption at rest with system generated keys. The customer enables server-side encryption in the request headers when creating buckets using the S3-compatible API, without specifying the keys. In this case the keys are auto-generated by ECS, simplifying key management. However, customers should be aware that the public and private keys used at the top of the hierarchy are shared between all customers encrypting their data through this method. See page 37 of <a href="http://dellemcevents.com/uploads/Dell-EMC-Elastic-Cloud-Storage-ECS-Overview-and-Architecture.pdf">the ECS Architecture whitepaper</a> for more information on this encryption method.</p>
+</li>
+<li><p>Server-side encryption at rest with user-supplied keys. The customer enables server-side encryption in the request header with user-supplied keys when creating buckets using the S3-compatible API. This increases complexity but ensures the customer retains control of their keys when using server-side encryption. There is an example of this method on page 14 of the <a href="https://support.emc.com/docu86300_ECS-3.1-Security-Configuration-Guide.pdf?language=en_US">ECS Security Configuration guide</a>.</p>
+</li>
+</ol>
+<p>Ultimately, it is down to the customer to select which encryption methodology should be used and understand the possible risks involved.</p>
+<h3 id="how-do-i-create-new-cloud-storage-users">How do I create new Cloud Storage users?</h3>
+<p>To create additional users, you must raise a service request through the UKCloud Portal. When requesting additional users, you can specify whether they should have read-write or read-only access to your buckets.</p>
+<h2 id="support">Support</h2>
+<h3 id="how-do-i-raise-a-support-ticket">How do I raise a support ticket?</h3>
+<p>UKCloud's secure online Portal provides the most common service management functionality, enabling you to raise support tickets through <a href="https://portal.skyscapecloud.com/support/my_calls">My Calls</a>. Alternatively, you can contact support by phone or email.</p>
+<h3 id="how-do-i-manage-my-services">How do I manage my services?</h3>
+<p>Cloud Storage on the Assured OFFICIAL domain can be managed over the internet (or other connectivity) via the UKCloud Portal.</p>
+<p>For the Elevated OFFICIAL domain, security requirements are stricter and require either a PSN-approved connection, UKCloud Secure Remote Access or CAPS-approved encryption.</p>
+<h3 id="what-are-your-service-maintenance-windows">What are your service maintenance windows?</h3>
+<p>As far as possible, planned maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on a Saturday or Sunday. We provide customers with at least 14 days' advance notice of planned maintenance.</p>
+<p>As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours advance notice of emergency maintenance.</p>
+<h3 id="does-the-cloud-storage-solution-support-browser-based-form-post-upload">Does the Cloud Storage solution support browser-based form POST upload?</h3>
+<p>Cloud Storage fully supports standard REST API commands (Post, Put, Get, Delete, and Head).</p>
+<p>Cloud Storage's RESTful APIs support the use of HTML forms to create and update objects.</p>
+<h3 id="is-cloud-storage-object-synchronisation-for-example-protection-offered-at-each-vm-type-synchronous-or-asynchronous">Is Cloud Storage object synchronisation (for example, protection offered at each VM type) synchronous or asynchronous?</h3>
+<p>Protection is asynchronous - a single copy is created, and subsequent copies of the data are created when bandwidth allows.</p>
+<p>During busy periods, this protection can take longer to complete.</p>
+<h2 id="onboarding">Onboarding</h2>
+<h3 id="how-can-i-get-started-with-the-service">How can I get started with the service?</h3>
+<p>Within five days of accepting your order, we'll create your primary administrator account and send you a welcome pack, which includes the URL for the UKCloud Portal and associated authentication details.</p>
+<p>Once you've signed up to the service, you can access your unique credentials (User ID, Subtenant ID, resolvable hostname and shared secret) through the UKCloud Portal, which you simply enter into an EMC Cloud Tiering Appliance or other compatible automated solution.</p>
+<h3 id="why-cant-i-see-my-secret-key-in-the-ukcloud-portal">Why can't I see my secret key in the UKCloud Portal?</h3>
+<p>For security reasons, the UKCloud Portal only displays a secret key for a short amount of time after it is set. After this time, the secret key is replaced with the text [FILTERED]. If you forget your secret key, or if it is compromised, you can reset it by clicking the <strong>Reset secret</strong> button in the Storage section of the Portal. When you reset your secret key, you'll be able to see it in the Portal for up to 24 hours before it is hidden.</p>
+<h2 id="billing-and-legal">Billing and legal</h2>
+<h3 id="what-is-the-smallest-unit-of-time-i-will-be-billed-for">What is the smallest unit of time I will be billed for?</h3>
+<p>Storage is billed on a per-GiB per-month basis, and is based on utilisation of the storage platform across the month. The minimum amount of time is one month.</p>
+<h3 id="how-is-my-storage-bill-calculated">How is my storage bill calculated?</h3>
+<p>Used storage is calculated on a daily basis. The data for a month is collected, and the average consumption calculated and rounded up to the next whole number to provide the number of GiB consumed in a month.</p>
+<h3 id="how-can-i-view-billing-information">How can I view billing information?</h3>
+<p>Billing information is provided in an evidence file on the first working day of the month for your previous months spend.</p>
+<h3 id="how-do-i-pay-for-the-service-and-what-are-the-termination-fees">How do I pay for the service and what are the termination fees?</h3>
+<p>Billing for the service is one month in arrears and payment can be made by direct bank transfer.</p>
+<p>There are no termination fees for the service. You are responsible for extracting your own data from the platform if required.</p>
+<p>UKCloud may make an additional charge for transferring data out of the service.</p>
+<h3 id="is-there-a-free-trial">Is there a free trial?</h3>
+<p>Yes, we offer a 30-day free trial so that you can test and evaluate our service without commitment. Your trial provides you with a live environment on the UKCloud platform to test our services and verify whether they are suited to your needs.</p>
+<h2 id="security">Security</h2>
+<h3 id="what-data-is-suitable-for-our-cloud">What data is suitable for our cloud?</h3>
+<p>The service is hosted in the UK and operated by security-cleared staff. It has extensive independent validation (including NCSC design reviews) that is fully aligned with the 14 NCSC Cloud Security Principles, and is therefore ideal for all data classified at Assured OFFICIAL and Elevated OFFICIAL (including OFFICIAL SENSITIVE).</p>
+<h3 id="can-systems-on-different-ukcloud-platforms-communicate-with-one-another">Can systems on different UKCloud platforms communicate with one another?</h3>
+<p>UKCloud's Cross Domain Security Zone allows customers to use the UKCloud-defined and managed UKCloud Guard or a customer-designed and managed Walled Garden to enable communication between platforms.</p>
+<p>For more information, see the <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/781113344072781-service-definition-document-2018-05-21-1257.pdf"><em>Cross Domain Security Zone Service Definition</em></a> on the Digital Marketplace.</p>
+<h3 id="is-there-a-protective-monitoring-service">Is there a protective monitoring service?</h3>
+<p>Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in our <a href="../other/other-faq-promon.md">Protective Monitoring FAQs.</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/cloud-storage/cs-faq.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

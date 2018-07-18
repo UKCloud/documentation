@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to install and configure Zerto in your local environment | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to install and configure Zerto in your local environment | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-install-and-configure-zerto-in-your-local-environment">How to install and configure Zerto in your local environment</h1>
+
+<h2 id="overview">Overview</h2>
+<p>If you want to use UKCloud's Disaster Recovery as a Service or Migration to the Cloud services, there are some tasks that you must perform to prepare your local environment.</p>
+<ul>
+<li>UKCloud's Disaster Recovery as a Service enables you to provide a secure, scalable disaster recovery solution for your on-premises environment by replicating your workloads on the UKCloud platform</li>
+<li>Migration to the Cloud enables you to move your workloads from a local, on-premises environment onto the UKCloud platform.</li>
+</ul>
+<p>Our Disaster Recovery as a Service and Migration to the Cloud services are powered by Zerto, a leading provider of disaster recovery software for the cloud, so you'll need to install Zerto software in your local environment to enable the replication of your workloads to the UKCloud platform. You'll also need to create a IPsec VPN to connect your local environment to the UKCloud.</p>
+<p><img src="images/configure-zerto-image-1.png" alt="IPsec"></p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide, you must have administrator access to the vCenter Server that hosts the VMs that you want to protect or migrate.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>When you raise a Service Request for Disaster Recovery as a Service or Migration to the Cloud, UKCloud provides you with:</p>
+<ul>
+<li>A ZORG ID to identify your environment within Zerto</li>
+<li>A link to the appropriate version of Zerto Virtual Manager (ZVM) for you to deploy in your local environment as well as a site address and port for licensing purposes</li>
+<li>The IP address (from the IP range you provided to UKCloud) of the Zerto Cloud Connector (ZCC) deployed in your target VDC (for recovery or migration); you'll need this to complete the setup of the site-to-site VPN between your local environment and your target VDC</li>
+<li>Access to the Zerto Self-Service Portal (ZSSP) in the UKCloud zone where your target VDC is located</li>
+</ul>
+<h2 id="installing-and-configuring-zerto-virtual-manager-in-your-local-environment">Installing and configuring Zerto Virtual Manager in your local environment</h2>
+<p>As UKCloud's Disaster Recovery as a Service and  Migration to the Cloud services are powered by Zerto, you need to set up Zerto Virtual Manager (ZVM) in your local environment to enable your VMs to be replicated on the UKCloud platform. ZVM is responsible for all the Zerto configuration for a site and performs the replication tasks.</p>
+<p>UKCloud provides a version of ZVM that is compatible with the Zerto software on the UKCloud platform.</p>
+<ol>
+<li><p>Download and run the executable file from the link provided by UKCloud.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Install ZVM on a Windows 2008r2 or 2012r2 server, ideally with nothing else running on it.</p>
+</div>
+</li>
+<li><p>On the <em>Welcome</em> page of the <em>Zerto Virtual Replication Installation for VMware vSphere</em> wizard, read the information provided then click <strong>NEXT</strong>.</p>
+</li>
+<li><p>On the <em>License Agreement</em> page, accept the agreement and then click <strong>NEXT</strong>.</p>
+</li>
+<li><p>On the <em>Select Installation Folder/Directory</em> page, change the location if necessary and then click <strong>NEXT</strong>.</p>
+</li>
+<li><p>On the <em>Choose Installation Type</em> page, select <strong>Express installation</strong> and then click <strong>NEXT</strong>.</p>
+</li>
+<li><p>On the <em>vCenter Server Connectivity</em> page, in the <strong>IP / Host Name</strong> field, enter the address of the vCenter Server that hosts the VMs that you want to protect or migrate.</p>
+</li>
+<li><p>In the <strong>Username</strong> and <strong>Password</strong> fields, enter the administrator credentials for the vCenter Server.</p>
+</li>
+<li><p>In the <strong>Site Name</strong> field, enter a name to identify the location of this installation of ZVM and then click <strong>NEXT</strong>.</p>
+</li>
+<li><p>On the <em>Validation</em> page, fix any issues if necessary and then click <strong>RUN</strong>.</p>
+</li>
+<li><p>After ZVM has finished installing, on the <em>Install Complete</em> page, select the <strong>Open the Zerto Virtual Manager interface</strong> checkbox and then click <strong>DONE</strong>.</p>
+</li>
+<li><p>Log in to the Virtual Manager Web Client using your vCenter Server administrator credentials.</p>
+</li>
+<li><p>The first time you log in, you'll need to enter licensing details.</p>
+<p>As you are using ZVM as part of a UKCloud service, select <strong>Pair to a site with a license</strong> and enter the <strong>Site Address</strong> and <strong>Port</strong>     provided by UKCloud.</p>
+</li>
+<li><p>Click <strong>START</strong>.</p>
+</li>
+<li><p>In ZVM, select the <strong>SETUP</strong> tab.</p>
+</li>
+<li><p>Click <strong>NEW VRA</strong>.</p>
+<p>The Virtual Replication Appliance (VRA) manages the replication of VMs across the two sites.</p>
+</li>
+<li><p>In the <em>Configure and Install VRA</em> dialog, from the <strong>Host</strong> list, select the IP address of the server that hosts the VMs that you want to protect or migrate.</p>
+</li>
+<li><p>In the <strong>Host Root Password</strong> field, enter the root password of the VM host server.</p>
+</li>
+<li><p>Complete the other fields in the <em>Host Details</em> section as required.</p>
+</li>
+<li><p>In the <em>VRA Network Details</em> section, enter a static IP address and the gateway details of the network for the VRA to use.</p>
+</li>
+<li><p>Click <strong>Install</strong>.</p>
+</li>
+<li><p>After the VRA has finished installing, you should be able to see your new VRA in the <strong>SETUP</strong> tab.</p>
+</li>
+</ol>
+<h2 id="creating-a-vpn-between-your-local-environment-and-ukcloud">Creating a VPN between your local environment and UKCloud</h2>
+<p>As you'll be replicating your VMs from your local environment onto the UKCloud platform, you need to create a secure connection between the two sites. You can do this by creating a site-to-site VPN.</p>
+<p>For information about how to create a site-to-site VPN, see <a href="vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a>.</p>
+<p>The following table lists the minimum firewall rules required for Zerto to pair and replicate with the UKCloud platform.</p>
+<table>
+<thead>
+<tr>
+<th>Source device</th>
+<th>Target service</th>
+<th>Port</th>
+<th>Direction</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customer ZVM</td>
+<td>Service Provider ZCC</td>
+<td>TCP 9081</td>
+<td>Bi-directional</td>
+<td>ZVM to ZCC communication</td>
+</tr>
+<tr>
+<td>Customer VRA</td>
+<td>Service Provider ZCC</td>
+<td>TCP 4007, 9082 and up^</td>
+<td>Bi-directional</td>
+<td>TCP control communication between source and target VRAs and ZCC</td>
+</tr>
+<tr>
+<td>Customer VRA</td>
+<td>Service Provider ZCC</td>
+<td>TCP 4008, 9082 and up^</td>
+<td>Bi-directional</td>
+<td>TCP communication to pass data between source and target VRAs and ZCC</td>
+</tr>
+</tbody>
+</table>
+<p>^ We recommend that you use ports 9082 to 9200 to allow for increase in VRA on source and target sites</p>
+<h2 id="next-steps">Next steps</h2>
+<p>Now that you have prepared your local environment for Disaster Recovery as a Service or  Migration to the Cloud, you can create a virtual protection group (VPG) to identify the VMs that you want to protect or migrate. For more information, see <a href="vmw-how-zerto-create-vpg.html"><em>How to create a virtual protection group</em></a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-zerto-install-local.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

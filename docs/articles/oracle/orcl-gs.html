@@ -8,7 +8,7 @@
     <title>Getting Started Guide for UKCloud for Oracle Software | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for UKCloud for Oracle Software | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -277,9 +277,9 @@
 </div>
 <p>There are two types of network:</p>
 <ul>
-<li><p>An isolated (internally connected) network provides access only to the VMs within the Oracle tenant (see <a href="../vmware/vmw-how-create-isolated-network.md"><em>How to create an isolated VDC network</em></a>).</p>
+<li><p>An isolated (internally connected) network provides access only to the VMs within the Oracle tenant (see <a href="../vmware/vmw-how-create-isolated-network.html"><em>How to create an isolated VDC network</em></a>).</p>
 </li>
-<li><p>A routed (externally connected) network provides access to machines and networks outside the Oracle tenant via the edge gateway. You can have up to nine usable routed networks per tenant: one for each connectivity type (see <a href="../vmware/vmw-how-create-routed-network.md"><em>How to create a routed VDC network</em></a>).</p>
+<li><p>A routed (externally connected) network provides access to machines and networks outside the Oracle tenant via the edge gateway. You can have up to nine usable routed networks per tenant: one for each connectivity type (see <a href="../vmware/vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a>).</p>
 </li>
 </ul>
 <h2 id="configuring-your-edge-gateway">Configuring your edge gateway</h2>
@@ -287,17 +287,17 @@
 <p>The tools for configuring your edge gateway are provided within vCloud Director, which you access through the UKCloud Portal rather than Enterprise Manager Cloud Control.</p>
 <p>Your edge gateway provides the following services:</p>
 <ul>
-<li><p><strong>Dynamic Host Configuration Protocol (DHCP)</strong> --- The edge gateway can act as a DHCP server for VMs connected to VDC networks connected to an edge (see <a href="../vmware/vmw-how-create-dhcp-pool.md"><em>How to create a DHCP pool</em></a>).</p>
+<li><p><strong>Dynamic Host Configuration Protocol (DHCP)</strong> --- The edge gateway can act as a DHCP server for VMs connected to VDC networks connected to an edge (see <a href="../vmware/vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a>).</p>
 </li>
-<li><p><strong>Network address translation (NAT)</strong> --- NAT rules determine where to direct inbound and outbound traffic (see <a href="../vmware/vmw-how-create-nat-rules.md"><em>How to create NAT rules</em></a>).</p>
+<li><p><strong>Network address translation (NAT)</strong> --- NAT rules determine where to direct inbound and outbound traffic (see <a href="../vmware/vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>).</p>
 </li>
-<li><p><strong>Firewall</strong> --- The firewall controls which networks and ports can communicate through the edge gateway (see <a href="../vmware/vmw-how-create-firewall-rules.md"><em>How to create firewall rules</em></a>).</p>
+<li><p><strong>Firewall</strong> --- The firewall controls which networks and ports can communicate through the edge gateway (see <a href="../vmware/vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>).</p>
 </li>
-<li><p><strong>Static routing</strong> --- Provides static routes from the edge gateway to other networks, for example, networks in other VDCs in your compute service (see <a href="../vmware/vmw-how-create-static-route.md"><em>How to create a static route</em></a>).</p>
+<li><p><strong>Static routing</strong> --- Provides static routes from the edge gateway to other networks, for example, networks in other VDCs in your compute service (see <a href="../vmware/vmw-how-create-static-route.html"><em>How to create a static route</em></a>).</p>
 </li>
-<li><p><strong>VPN</strong> --- IPsec site-to-site VPN is available on the edge gateway (see <a href="../vmware/vmw-how-configure-ipsec-vpn.md"><em>How to configure IPsec VPN</em></a>).</p>
+<li><p><strong>VPN</strong> --- IPsec site-to-site VPN is available on the edge gateway (see <a href="../vmware/vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a>).</p>
 </li>
-<li><p><strong>Load balancing</strong> --- The edge gateway provides simple HTTP and HTTPS load balancing using round robin (see <a href="../vmware/vmw-how-configure-load-balancer.md"><em>How to configure a load balancer</em></a>).</p>
+<li><p><strong>Load balancing</strong> --- The edge gateway provides simple HTTP and HTTPS load balancing using round robin (see <a href="../vmware/vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a>).</p>
 </li>
 </ul>
 <h2 id="logging-out-of-the-cloud-control-console">Logging out of the Cloud Control console</h2>
@@ -309,26 +309,26 @@
 <p>For more detailed information about building Oracle applications in your UKCloud for Oracle Software estate, see the following articles:</p>
 <h3 id="vm-networking">VM networking</h3>
 <ul>
-<li><p><a href="../vmware/vmw-how-create-isolated-network.md"><em>How to create an isolated VDC network</em></a></p>
+<li><p><a href="../vmware/vmw-how-create-isolated-network.html"><em>How to create an isolated VDC network</em></a></p>
 </li>
-<li><p><a href="../vmware/vmw-how-create-routed-network.md"><em>How to create a routed VDC network</em></a></p>
+<li><p><a href="../vmware/vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a></p>
 </li>
 </ul>
 <h3 id="edge-gateway-services">Edge gateway services</h3>
 <ul>
-<li><p><a href="../vmware/vmw-how-find-ip-addresses.md"><em>How to find your allocated external IP addresses</em></a></p>
+<li><p><a href="../vmware/vmw-how-find-ip-addresses.html"><em>How to find your allocated external IP addresses</em></a></p>
 </li>
-<li><p><a href="../vmware/vmw-how-create-dhcp-pool.md"><em>How to create a DHCP pool</em></a></p>
+<li><p><a href="../vmware/vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></p>
 </li>
-<li><p><a href="../vmware/vmw-how-create-nat-rules.md"><em>How to create NAT rules</em></a></p>
+<li><p><a href="../vmware/vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a></p>
 </li>
-<li><p><a href="../vmware/vmw-how-create-firewall-rules.md"><em>How to create firewall rules</em></a></p>
+<li><p><a href="../vmware/vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></p>
 </li>
-<li><p><a href="../vmware/vmw-how-create-static-route.md"><em>How to create a static route</em></a></p>
+<li><p><a href="../vmware/vmw-how-create-static-route.html"><em>How to create a static route</em></a></p>
 </li>
-<li><p><a href="../vmware/vmw-how-configure-ipsec-vpn.md"><em>How to configure IPsec VPN</em></a></p>
+<li><p><a href="../vmware/vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a></p>
 </li>
-<li><p><a href="../vmware/vmw-how-configure-load-balancer.md"><em>How to configure a load balancer</em></a></p>
+<li><p><a href="../vmware/vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></p>
 </li>
 </ul>
 <h3 id="virtual-machines">Virtual machines</h3>

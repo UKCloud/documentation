@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to build an edge gateway using the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to build an edge gateway using the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-build-an-edge-gateway-using-the-ukcloud-portal">How to build an edge gateway using the UKCloud Portal</h1>
+
+<h2 id="overview">Overview</h2>
+<p>To enable your end users to access your VDC, you need to create an edge gateway to provide connectivity. The UKCloud Portal provides the ability to build an edge gateway, without having to raise a service request.</p>
+<p>You can also create edge gateways using the
+Portal API. For more information, see the <a href="../portal/ptl-ref-portal-api.md"><em>UKCloud Portal API User Guide</em></a>.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide, you must be a vCloud Director administrator.</p>
+<h2 id="building-an-edge-gateway">Building an edge gateway</h2>
+<p>If your VDC is located on the Assured OFFICIAL security domain, its edge gateway provides access to the internet. If your VDC is located on the Elevated OFFICIAL security domain, its edge gateway provides access to your other VDCs in the Elevated OFFICIAL domain.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can build edge gateways in any of your compute services in regions 5 or 6, not just those you created using the Portal. For information about building compute services and VDCs, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
+</div>
+<ol>
+<li><p>Log in to the UKCloud Portal.</p>
+<p>For more detailed steps, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
+</li>
+<li><p>In the Portal navigation panel, expand <strong>VMware Cloud</strong> and then select the compute service in which you want to create the edge gateway.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>To create an edge gateway using the Portal, the compute service must be in region 5 or 6.</p>
+</div>
+<p><img src="images/vmw-portal-mnu-select-compute-service.png" alt="Compute services menu option"></p>
+</li>
+<li><p>From the <strong>Actions</strong> menu, select <strong>Build Edge Gateway</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If this option is greyed out, either you do not have the appropriate permissions or your compute service is not in region 5 or 6.</p>
+</div>
+<p><img src="images/vmw-portal-mnu-build-edge.png" alt="Build Edge Gateway menu option"></p>
+</li>
+<li><p>On the <em>Build Edge Gateway</em> page, from the <strong>Associated VDC</strong> list, select the VDC for which you are creating the edge gateway.</p>
+<p>The VDC names in the list include information about the security domain in which the VDC is located and the VM type of the VDC.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The list of VDCs includes all VDCs in the compute service, whether or not they already have an edge gateway. If you select a VDC that already has an edge gateway of the same type, you will get an error.</p>
+</div>
+<p><img src="images/vmw-portal-build-edge.png" alt="Build Edge Gateway page"></p>
+</li>
+<li><p>Click <strong>Build</strong>.</p>
+</li>
+<li><p>The <em>Edge Gateway Build Status</em> page displays information about the edge gateway you're building and lets you know how the build is progressing.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the <em>VMware Cloud Build History</em> report.</p>
+</div>
+<p><img src="images/vmw-portal-build-edge-gateway-status.png" alt="Build Edge Gateway Status page"></p>
+</li>
+<li><p>When the build is complete, the page displays either a success or fail message.</p>
+<p>If the build is successful, you can now start configuring the edge gateway. For a quick guide on how to do this, see <a href="vmw-how-build-vm.html"><em>How to build a virtual machine with UKCloud for VMware</em></a>.</p>
+<p><img src="images/vmw-portal-build-edge-success.png" alt="Build VDC Status - success"></p>
+<p>If the build is unsuccessful, raise a support ticket (quoting the <strong>Build ID</strong>) to resolve any issues.</p>
+<p><img src="images/vmw-portal-build-edge-fail.png" alt="Build VDC Status - failed"></p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>After you create your edge gateway, we recommend that you convert it to an advanced gateway to access the latest vCloud Director functionality. For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
+<p>For information about how to configure your new edge gateway, see:</p>
+<ul>
+<li><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></li>
+<li><a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a></li>
+<li><a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></li>
+<li><a href="vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a></li>
+<li><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></li>
+<li><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-build-edge.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to use the VMware OVF Tool | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to use the VMware OVF Tool | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-use-the-vmware-ovf-tool">How to use the VMware OVF Tool</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The VMware OVF Tool is a conversion program freely downloadable from VMware that assists in the distribution of virtual machines (VMs) and vApps, converting them between OVF, VMX and OVA formats. It also includes a command‑line facility to import and export OVF packages between environments or from third party suppliers. The OVF Tool is a command‑line interface (CLI) tool only.</p>
+<ul>
+<li><p><strong>OVF (Open Virtualisation Format)</strong> is a packaging standard created by leading virtualisation vendors. It is a platform independent, efficient, open packaging and distribution format for virtual machines.</p>
+</li>
+<li><p><strong>VMX (the VM configuration file)</strong> is a simple text file with various parameters relating to the guest Virtual Machine.</p>
+</li>
+<li><p><strong>The OVA file extension</strong> is associated with Open Virtual Machine Format. Compared to the OVF file format, the OVA format contains all VM files and *.ovf files compressed into one single OVA archive file instead of many files in a folder.</p>
+</li>
+</ul>
+<h2 id="downloading-the-ovf-tool">Downloading the OVF Tool</h2>
+<p>You can download the OVF Tool via the following link:</p>
+<p><a href="https://my.vmware.com/group/vmware/details?downloadGroup=OVFTOOL420&amp;productId=491">https://my.vmware.com/group/vmware/details?downloadGroup=OVFTOOL420&amp;productId=491</a></p>
+<p>You must have a VMware account to download the tool. You can download the OVF Tool for Windows 32-bit and 64-bit, Linux 32-bit and 64-bit, or Mac OS X.</p>
+<p>After downloading and installing the OVF Tool, you must then go to the directory in which you installed the tool to run it. There is no icon or program logo on your desktop for the OVF Tool, so to launch it, you must use the command prompt. Go to the installation folder and run:</p>
+<pre><code>ovftool
+</code></pre>
+<h2 id="getting-started-with-the-ovf-tool">Getting started with the OVF Tool</h2>
+<p>The OVF Tool is a CLI tool, so some level of familiarity with CMD commands helps in using the tool. There are a number of help commands, which are a good source of information:</p>
+<pre><code>ovftool --help
+ovftool --help examples
+ovftool --help locators
+ovftool --help config
+</code></pre>
+<p>You can also find the OVF Tool User Guide at:</p>
+<p><a href="https://www.vmware.com/support/developer/ovf/">https://www.vmware.com/support/developer/ovf/</a></p>
+<h2 id="basic-import-and-export-commands">Basic import and export commands</h2>
+<p>You'll mainly use the OVF Tool to import (deploy) and export VMs or appliances into and out of your UKCloud environment.</p>
+<p>The basic syntax to do this using the OVF Tool is:</p>
+<pre><code>ovftool &lt;source&gt; &lt;target&gt;
+</code></pre>
+<p>Refer to the OVF Tool User Guide for further commands and switches.</p>
+<h2 id="importing-a-vmx-file-to-a-vapp-template-in-vcloud-director">Importing a .vmx file to a vApp template in vCloud Director</h2>
+<p>To import a <code>.vmx</code> file:</p>
+<ol>
+<li><p>In your UKCloud environment, create a catalogue to contain the vApp template.</p>
+<p><img src="images/ovf-image-1.png" alt="catalogue"></p>
+</li>
+<li><p>Make sure you are in the correct directory, that is, the directory containing the file you want to import.</p>
+</li>
+<li><p>Run the following command:</p>
+<pre><code> ovftool --vCloudTemplate --acceptAllEulas --overwrite &lt;filename&gt; &quot;vcloud://&lt;username&gt;@&lt;apiURL&gt;?org=&lt;computeServiceID&gt;&amp;vappTemplate=&lt;newTemplate&gt;&amp;catalog=&lt;catalogID&gt;&quot;
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><p><code>vCloudTemplate</code> indicates that you're uploading a new vApp template</p>
+</li>
+<li><p><code>acceptAllEulas</code> indicates that you accept all end user licence agreements</p>
+</li>
+<li><p><code>overwrite</code> indicates that you're replacing an existing vApp with the new one being uploaded</p>
+</li>
+<li><p><code>filename</code> is the name of the <code>.vmx</code> file that are importing</p>
+</li>
+<li><p><code>username</code> is your UKCloud Portal user ID</p>
+</li>
+<li><p><code>apiURL</code> is your vCloud Director API URL. This URL is different depending on the region in which your environment is located. For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access vCloud Director through the vCloud API</em></a>.</p>
+</li>
+<li><p><code>computeServiceID</code> is the ID of your UKCloud compute service (sometimes also called an org or vOrg)</p>
+</li>
+<li><p><code>vappTemplate</code> is the ID of the vApp template</p>
+</li>
+<li><p><code>catalogID</code> is the ID of the catalog in which the vApp template is located</p>
+</li>
+</ul>
+<p>For example:</p>
+<pre><code>   ovftool --vCloudTemplate --acceptAllEulas --overwrite centos71.vmx &quot;vcloud://auser@api.vcd.portal.skyscapecloud.com:443?org=1-2-3-a4b56c&amp; vappTemplate=centos71&amp;catalog=OVFTool-test&quot;
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Make sure you use double quotes (<code>&quot;</code>) rather than single quotes (<code>'</code>).</p>
+</div>
+</li>
+<li><p>The <code>.vmx</code> file is uploaded as a vApp template into your environment.</p>
+<p><img src="images/ovf-image-2.png" alt="template"></p>
+<p><img src="images/ovf-image-3.png" alt="template 2"></p>
+<p>In the vCloud Director 9.<em>x</em> HTML5 tenant portal, click the clipboard icon to see task status.</p>
+<p><img src="images/vmw-vcd-tp-ico-status.png" alt="clipboard icon"></p>
+</li>
+</ol>
+<h2 id="importing-an-iso-file-to-a-vapp-template-in-vcloud-director">Importing an .iso file to a vApp template in vCloud Director</h2>
+<p>To upload an ISO image:</p>
+<ol>
+<li><p>Make sure you are in the correct directory, that is, the directory containing the ISO file you want to import.</p>
+</li>
+<li><p>Run the following command:</p>
+<pre><code> ovftool -sourceType=&quot;ISO&quot; &quot;&lt;path&gt;\&lt;filename&gt;.iso&quot; &quot;vcloud://&lt;username&gt;@&lt;apiURL&gt;?vdc=&lt;targetVDC&gt;&amp;org=&lt;computeServiceID&gt; &amp;media=&lt;name&gt;&amp;catalog=&lt;catalogID&gt;&quot;
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><p><code>sourceType</code> (or <code>st</code>) indicates the type of the source file: <code>ISO</code></p>
+</li>
+<li><p><code>path\filename.iso</code> is the full location of the source <code>.iso</code> file you want to import</p>
+</li>
+<li><p><code>username</code> is your UKCloud Portal user ID</p>
+</li>
+<li><p><code>apiURL</code> is your vCloud Director API URL. This URL is different depending on the region in which your environment is located. For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access vCloud Director through the vCloud API</em></a>.</p>
+</li>
+<li><p><code>targetVDC</code> is the VDC where you want to upload the file</p>
+</li>
+<li><p><code>computeServiceID</code> is the ID of your UKCloud compute service (sometimes also called an org or vOrg)</p>
+</li>
+<li><p><code>name</code> is the name to display for the file in vCloud Director</p>
+</li>
+<li><p><code>catalogID</code> is the ID of the catalog to which you want to upload the file</p>
+</li>
+</ul>
+<p>For example:</p>
+<pre><code>   ovftool -st=&quot;ISO&quot; &quot;C:\example.iso\&quot; &quot;vcloud://auser@api.vcd.portal.skyscapecloud.com:443?vdc=myVDC&amp;org=1-2-3-a4b56c&amp;media=CentOS_ISO&amp;catalog=OVFTool-test&quot;
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Make sure you use double quotes (<code>&quot;</code>) rather than single quotes (<code>'</code>).</p>
+</div>
+</li>
+<li><p>When the <code>ovftool</code> command has finished, the source and target locations are listed and then you're prompted for your username and password. When you are authenticated, the upload process is initiated.</p>
+</li>
+<li><p>The following example shows an upload in progress on the UKCloud target VDC.</p>
+<p><img src="images/ovf-image-4.png" alt="catalogue"></p>
+</li>
+<li><p>The next example shows an upload in progress on the UKCloud target catalog under the <strong>Media &amp; Other</strong> tab.</p>
+<p><img src="images/ovf-image-5.png" alt="catalogue"></p>
+</li>
+<li><p>In the vCloud Director 9.<em>x</em> HTML5 tenant portal, you will see this under <strong>Libraries</strong>.</p>
+<p><img src="images/vmw-vcd-tp-mnu-libraries.png" alt="Libraries option"></p>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-use-ovf-tool.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

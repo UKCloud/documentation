@@ -1,0 +1,517 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to manage permissions for vCloud Director | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to manage permissions for vCloud Director | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-manage-permissions-for-vcloud-director">How to manage permissions for vCloud Director</h1>
+
+<h2 id="configuring-permissions">Configuring permissions</h2>
+<p>To configure permissions for a portal user:</p>
+<ol>
+<li><p>Log in to the UKCloud Portal as an administrator.</p>
+<p>For more detailed instructions, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a></p>
+</li>
+<li><p>In the Portal navigation panel, expand the <strong>Contacts</strong> option and select <strong>All Contacts</strong>.</p>
+<p><img src="images/ptl-menu-all-contacts.png" alt="All Contacts menu option in UKCloud Portal"></p>
+</li>
+<li><p>On the <em>Contacts</em> page, use the <strong>Search</strong> field to find the user to whom you want to assign or revoke vCloud Director permissions and then click the <strong>Edit</strong> button.</p>
+<p><img src="images/ptl-contacts-btn-edit.png" alt="Edit button for Portal contact"></p>
+</li>
+<li><p>On the <em>Edit contact</em> page, select the <strong>Permissions</strong> tab.</p>
+<p><img src="images/ptl-contacts-tab-permissions.png" alt="Permissions tab for Portal contact"></p>
+</li>
+<li><p>In the <em>Permissions for UKCloud for VMware</em> section, you'll see a list of virtual data centres (VDCs) and the associated permissions available for the portal user.</p>
+<p>Select the permission level you want to assign to the user, then scroll to the bottom of the page and click <strong>Save</strong>.</p>
+</li>
+</ol>
+<h2 id="user-types-and-privileges">User types and privileges</h2>
+<p>The first table shows the user types (operations); the second table shows the exact privileges each user type has.</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Allows the user administrative access to the given vCloud Director organisation with:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Console Only (CO)</td>
+<td>Permissions for Console access only</td>
+</tr>
+<tr>
+<td>vApp User (VU)</td>
+<td>Permissions for a vApp User</td>
+</tr>
+<tr>
+<td>vApp Author (VA)</td>
+<td>Permissions for a vApp Author</td>
+</tr>
+<tr>
+<td>Catalogue Author (CA)</td>
+<td>Permissions for a Catalogue Author</td>
+</tr>
+<tr>
+<td>Admin (ADM)</td>
+<td>All permissions</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Privilege</th>
+<th>CO</th>
+<th>VU</th>
+<th>VA</th>
+<th>CA</th>
+<th>ADM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Catalog</td>
+<td>Add a vApp from My Cloud</td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Change Owner</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Create/Delete a new Catalog</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Edit Catalog Properties</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Publish a Catalog</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Share a Catalog</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>View Private and Shared Catalogs</td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>View Published Catalogs</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Catalog Item</td>
+<td>Add to My Cloud</td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Copy/Move a vApp Template/Media</td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Create/Upload a vApp Template/Media</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Enable vApp Template Download</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Edit vApp Template / Media Properties</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>View vApp Templates/Media</td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Disk</td>
+<td>Change Owner</td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Create a Disk</td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Delete a Disk</td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Edit Disk Properties</td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>View Disk Properties</td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>vApp</td>
+<td>Access to VM Console</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Change Owner</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Copy a vApp</td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Create/Reconfigure a vApp</td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Create/Revert/Remove a Snapshot</td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Delete a vApp</td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Edit vApp Properties</td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Edit VM CPU</td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Edit VM Hard Disk</td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Edit VM Memory</td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Edit VM Network</td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Edit VM Properties</td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Manage VM Password Settings</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Share a vApp</td>
+<td> </td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td> </td>
+<td>Start/Stop/Suspend/Reset a vApp</td>
+<td> </td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-manage-vcd-permissions.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to create a vApp network | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to create a vApp network | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-create-a-vapp-network">How to create a vApp network</h1>
+
+<h2 id="overview">Overview</h2>
+<p>In addition to virtual data centre (VDC) networking, you can create individual vApp networks to have even greater control over your network infrastructure.</p>
+<p>vApp networks enable you to create smaller networks within individual vApps that have a vApp edge, similar to the edge gateway on your VDC. Although a vApp edge isn't as feature rich as a VDC edge, it enables you to create firewall and NAT rules to separate your VDC networks from your vApp virtual machines (VMs). This means you can create some quite complex networks to satisfy application needs.</p>
+<p>The example of a vApp network, below, shows the vApp edge.</p>
+<p><img src="images/vmw-vapp-network.png" alt="vApp network"></p>
+<h2 id="creating-a-vapp-network">Creating a vApp network</h2>
+<p>There are two ways to create a vApp network within vCloud Director:</p>
+<ul>
+<li><a href="#creating-a-vapp-network-during-vapp-creation"><em>During vApp creation</em></a></li>
+<li><a href="#creating-a-vapp-network-after-vapp-creation"><em>After vApp creation</em></a></li>
+</ul>
+<h3 id="creating-a-vapp-network-during-vapp-creation">Creating a vApp network during vApp creation</h3>
+<ol>
+<li><p>Follow the steps for creating a new vApp as shown in <a href="vmw-how-create-vapp.html"><em>How to create a vApp</em></a>.</p>
+</li>
+<li><p>When you get to the <em>Configure Virtual Machines</em> page, where you select the network you want your VMs to connect to, from the <strong>Network</strong> list, select <strong>Add Network</strong>.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The <strong>Add Network</strong> option is at the bottom of the <strong>Network</strong> list, so you may have to scroll down the list to find it.</p>
+</div>
+<p><img src="images/vmw-vcd-vapp-add-network.png" alt="Add Network option"></p>
+</li>
+<li><p>On the <em>Network Specification</em> page of the <em>New vApp Network Wizard</em>, fill out the fields as required for your network then click <strong>Next</strong>.</p>
+<p>Some options are pre-populated by default; you can change them if you want.</p>
+<p><img src="images/vmw-vcd-vapp-network-specification.png" alt="Network Specification page of New vApp Network Wizard"></p>
+</li>
+<li><p>On the <em>General</em> page, enter a <strong>Network name</strong> and <strong>Description</strong>, then click <strong>Next</strong> and <strong>Finish</strong>.</p>
+<p>Your newly created vApp network is now included in the <strong>Network</strong> list.</p>
+<p><img src="images/vmw-vcd-vapp-network-general.png" alt="General page"></p>
+</li>
+<li><p>Your newly created vApp network is now included in the <strong>Network</strong> list.</p>
+<p><img src="images/vmw-vcd-vapp-new-network.png" alt="Newly created vApp network"></p>
+</li>
+<li><p>If you want to connect multiple VMs within the vApp to the new vApp network, go through and make sure they will all connect to it. When you're done, click <strong>Next</strong>.</p>
+</li>
+<li><p>On the <em>Configure Networking</em> page, to connect the vApp network to an external VDC network, from the <strong>Connection</strong> list, select the VDC network that you want to connect to.</p>
+</li>
+<li><p>In the <strong>Routing</strong> column, select whether to apply <strong>NAT</strong> and <strong>Firewall</strong> rules to the vApp edge (you can always change this later), then click <strong>Next</strong>.</p>
+<p><img src="images/vmw-vcd-vapp-vdc-network.png" alt="Configure Networking page of New vApp wizard"></p>
+</li>
+<li><p>On the <em>Ready to Complete</em> page, review your configuration, then click <strong>Finish</strong> to deploy the vApp.</p>
+</li>
+</ol>
+<h3 id="creating-a-vapp-network-after-vapp-creation">Creating a vApp network after vApp creation</h3>
+<p>If you've created a vApp that is connected to a VDC network, and now you want to convert it to a vApp with an internal network:</p>
+<ol>
+<li><p>On the <strong>My Cloud</strong> tab, double-click the vApp to open it.</p>
+</li>
+<li><p>As you're going to be changing network settings, all VMs within the vApp must be powered off, so, if necessary, on the <strong>Virtual Machines</strong> tab, right-click each VM and select <strong>Power Off</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-vm-power-off.png" alt="Power Off menu option"></p>
+</li>
+<li><p>Select the <strong>Networking</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-vapp-networking.png" alt="vApp Networking tab"></p>
+</li>
+<li><p>Click the green <strong>+</strong> icon to add a new network.</p>
+<p><img src="images/vmw-vcd-ico-add-vapp-network.png" alt="Add vApp network icon"></p>
+</li>
+<li><p>On the <em>Network Type</em> page of the <em>New vApp Network Wizard</em>, select <strong>vApp network</strong> then click <strong>Next</strong>.</p>
+<p><img src="images/vmw-vcd-vapp-network-type.png" alt="Network Type page of New vApp Network Wizard"></p>
+</li>
+<li><p>On the <em>Network Specification</em> page of the <em>New vApp Network Wizard</em>, fill out the fields as required for your network then click <strong>Next</strong>.</p>
+<p>Some options are pre-populated by default; you can change them if you want.</p>
+<p><img src="images/vmw-vcd-vapp-network-specification2.png" alt="Network Specification page of New vApp Network Wizard"></p>
+</li>
+<li><p>On the <em>General</em> page, enter a <strong>Network name</strong> and <strong>Description</strong>, then click <strong>Next</strong> and <strong>Finish</strong>.</p>
+<p>Your newly created vApp network is now included in the <strong>Network</strong> list.</p>
+<p><img src="images/vmw-vcd-vapp-network-general2.png" alt="General page"></p>
+</li>
+<li><p>To connect the vApp network to an external VDC network, from the <strong>Connection</strong> list, select the VDC network that you want to connect to.</p>
+</li>
+<li><p>In the <strong>Routing</strong> column, select whether to apply <strong>NAT</strong> and <strong>Firewall</strong> rules to the vApp edge (you can always change this later), then click <strong>Next</strong>.</p>
+<p><img src="images/vmw-vcd-vapp-vdc-network2.png" alt="vApp Configure Networking page"></p>
+</li>
+<li><p>When you're done, click <strong>Apply</strong> at the bottom of the page.</p>
+<p><img src="images/vmw-vcd-btn-vapp-networking-apply.png" alt="Apply button"></p>
+</li>
+<li><p>If your vApp is already populated with VMs that are connected to a VDC network, you may want to move them over to the vApp network.</p>
+</li>
+<li><p>To change the network a VM connects to, on the <strong>vApp Diagram</strong> tab, right-click the VM and select <strong>Properties</strong>.</p>
+</li>
+<li><p>In the <em>Virtual Machine Properties</em> dialog box, select the <strong>Hardware</strong> tab.</p>
+<p><img src="images/vmw-vcd-vm-properties.png" alt="Hardware tab of Virtual Machine Properties dialog box"></p>
+</li>
+<li><p>In the <em>NICs</em> section, from the <strong>Networks</strong> list, select the vApp network to connect the VM to.</p>
+<p><img src="images/vmw-vcd-vm-properties-network.png" alt="Select network for VM"></p>
+</li>
+<li><p>If you want to dual-home your VM, click the <strong>Add</strong> button to add a second network.</p>
+</li>
+<li><p>When you're done, click <strong>OK</strong>.</p>
+<p>You can go back to the VM properties to see the new IP address assigned to the VM.</p>
+</li>
+</ol>
+<h2 id="viewing-and-adjusting-vapp-network-settings">Viewing and adjusting vApp network settings</h2>
+<p>When you've created your vApp network and assigned VMs to it, you may want to review the vApp network settings and adjust them if needed.</p>
+<ol>
+<li><p>On the <strong>My Cloud</strong> tab, open the vApp you want to work with then select the <strong>Networking</strong> tab.</p>
+<p><img src="images/vmw-vcd-vapp-vdc-network2.png" alt="vApp Configure Networking page"></p>
+</li>
+<li><p>Right-click the vApp network and select <strong>Configure Services</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-vapp-configure-services.png" alt="Configure Services menu option"></p>
+</li>
+<li><p>You can now view the default network services and change them if necessary.</p>
+</li>
+</ol>
+<h3 id="enabling-dhcp">Enabling DHCP</h3>
+<p>DHCP isn't enabled by default. To enable it, on the <em>DHCP</em> page of the <em>Configure Services</em> dialog box, select the <strong>Enable DHCP</strong> check box, enter appropriate information then click <strong>OK</strong>.</p>
+<p><img src="images/vmw-vcd-vapp-configure-services-dhcp.png" alt="DHCP page of Configure Services dialog box"></p>
+<p>For more information about DHCP, see <a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a>.</p>
+<h3 id="creating-firewall-rules">Creating firewall rules</h3>
+<p>There will be a rule in place to allow any traffic to traverse the firewall. You can amend or delete this rule, or create new rules.</p>
+<p><img src="images/vmw-vcd-vapp-configure-services-firewall.png" alt="Firewall page of Configure Services dialog box"></p>
+<p>On the <em>Firewall</em> page of the <em>Configure Services</em> dialog box, select the rule you want to edit, then click <strong>Edit</strong></p>
+<p>For more about firewall rules, see <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
+<h3 id="creating-nat-rules">Creating NAT rules</h3>
+<p>NAT rules, enabled by default, enable mapping between internal VM interfaces and external IP addresses. To edit the mapping rules for a VM:</p>
+<ol>
+<li><p>On the <em>NAT</em> page of the <em>Configure Services</em> dialog box, select the rule you want to edit and click <strong>Edit</strong>.</p>
+<p><img src="images/vmw-vcd-vapp-configure-services-nat.png" alt="NAT page of Configure Services dialog box"></p>
+</li>
+<li><p>In the <em>Edit IP Translation Rule</em> dialog box, select the VM interface for which you want to edit the NAT rule.</p>
+</li>
+<li><p>From the <strong>Mapping Mode</strong> list, select the mapping mode.</p>
+<p>The default mapping is <strong>Automatic</strong>. You can change this to <strong>Manual</strong>, in which case, enter an <strong>External IP</strong> address to which the VM can map.</p>
+</li>
+<li><p>When you're done, click <strong>OK</strong>.</p>
+<p>The external IP address will be on the same subnet as the VDC network that connects to the vApp Edge.</p>
+<p><img src="images/vmw-vcd-vapp-ip-translation-rule.png" alt="Edit IP Translation Rule dialog box"></p>
+</li>
+</ol>
+<p>For more information about NAT rules, see <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>.</p>
+<h3 id="creating-static-routes">Creating static routes</h3>
+<p>Static routing at the vApp network level allows traffic to route between different vApp networks, across the VDC networks.</p>
+<p>The prerequisites for static routing are as follows:</p>
+<ul>
+<li>Static routing must be enabled for the VDC network you're connecting to (see <a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a>).</li>
+<li>The two vApp networks must be routed to the same VDC network.</li>
+<li>The vApp networks must be in vApps that have been started at least once.</li>
+</ul>
+<p>To add a static route:</p>
+<ol>
+<li><p>On the <em>Static Routing</em> page of the <em>Configure Services</em> dialog box, click <strong>Add</strong></p>
+</li>
+<li><p>In the <em>Add Static Route</em> dialog box, enter a <strong>Name</strong> for the static route.</p>
+</li>
+<li><p>Enter the following details:</p>
+<ul>
+<li><strong>Network</strong> - The address of the first vApp network to which you're adding a static route</li>
+<li><strong>Next Hop IP</strong> - The external IP address of that vApp network's router</li>
+</ul>
+<p><img src="images/vmw-vcd-vapp-static-route.png" alt="Add Static Route dialog box"></p>
+</li>
+<li><p>When you're done, click <strong>OK</strong>.</p>
+</li>
+<li><p>Repeat for the second vApp network.</p>
+</li>
+</ol>
+<p>The tables below provides examples of the settings needed to create a static route between two vApps.</p>
+<h4 id="network-information">Network Information</h4>
+<table>
+<thead>
+<tr>
+<th>Network name</th>
+<th>Network specification</th>
+<th>Router external IP address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vApp network 1</td>
+<td><code>192.168.1.0/24</code></td>
+<td><code>192.168.0.100</code></td>
+</tr>
+<tr>
+<td>vApp network 2</td>
+<td><code>192.168.2.0/24</code></td>
+<td><code>192.168.0.101</code></td>
+</tr>
+<tr>
+<td>VDC network shared</td>
+<td><code>192.168.0.0/24</code></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h4 id="static-routing-settings">Static routing settings</h4>
+<table>
+<thead>
+<tr>
+<th>Static route to network</th>
+<th>Route name</th>
+<th>Network</th>
+<th>Next hop IP address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vApp network 1</td>
+<td>To-vapp1</td>
+<td><code>192.168.1.0/24</code></td>
+<td><code>192.168.0.100</code></td>
+</tr>
+<tr>
+<td>vApp network 2</td>
+<td>To-vapp2</td>
+<td><code>192.168.2.0/24</code></td>
+<td><code>192.168.0.101</code></td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Make sure your firewall rules allow traffic on the static routes.</p>
+</div>
+<h2 id="vapp-fencing">vApp fencing</h2>
+<p>Fencing a vApp allows identical VMs within different vApps to be powered on without conflict, by isolating the MAC and IP addresses of the VMs. This feature is particularly useful if you are copying vApps or creating catalog images of vApps where these details can't be altered.</p>
+<p>vApp fencing can be done during or after vApp creation. It is done when the VMs within the vApp sit on the VDC network, rather than on their own vApp network.</p>
+<p>To apply vApp fencing during vApp creation, select the <strong>Fence vApp</strong> check box on the <em>Configure Networking</em> page of the <em>New vApp</em> wizard.</p>
+<p><img src="images/vmw-vcd-vapp-fence-new.png" alt="Fence vApp check box in New vApp wizard"></p>
+<p>If you're converting a vApp after creation, on the <strong>My Cloud</strong> tab, open the vApp you want to fence, then, on the <strong>Networking</strong> tab, select the <strong>Fence vApp</strong> checkbox. Make sure you click <strong>Apply</strong> when you're done to save any changes.</p>
+<p><img src="images/vmw-vcd-vapp-fence-convert.png" alt="Fence vApp check box on vApp Networking tab"></p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-vapp-network.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

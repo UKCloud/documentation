@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to create a virtual machine from a template | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to create a virtual machine from a template | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-create-a-vm-from-a-template">How to create a VM from a template</h1>
+
+<h2 id="overview">Overview</h2>
+<p>To simplify the process of creating a VM, you can use a pre-built VM template from a catalog.</p>
+<p>For information about creating a VM from scratch, see <a href="vmw-how-create-vm-from-scratch.html"><em>How to create a VM from scratch</em></a>.</p>
+<h2 id="creating-a-vm-from-a-template">Creating a VM from a template</h2>
+<ol>
+<li><p>In vCloud Director, select the <strong>My Cloud</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-my-cloud.png" alt="My Cloud tab in vCloud Director"></p>
+</li>
+<li><p>Open the vApp in which you want to create the VM.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To create a new vApp, see <a href="vmw-how-create-vapp.html"><em>How to create a vApp</em></a></p>
+</div>
+</li>
+<li><p>On the <strong>Virtual Machines</strong> tab, click the <strong>Add VM</strong> icon.</p>
+<p><img src="images/vmw-vcd-ico-add-vm.png" alt="Add VM icon"></p>
+</li>
+<li><p>On the <em>Add Virtual Machines</em> page, you can create a VM using a template in your own organisation's catalog (creating vApp catalogs is covered in <a href="vmw-how-create-catalog.html"><em>How to create a vApp catalog</em></a>) or from UKCloud's public catalog.</p>
+<p>For example, to create a VM from the UKCloud public catalog, from the <strong>Look in</strong> list, select <strong>Public Catalogs</strong>.</p>
+<p><img src="images/vmw-vcd-vm-public-catalog.png" alt="Public Catalogs option"></p>
+</li>
+<li><p>Select the template you want to use depending on the operating system and VM size.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can use the search field to find the template you're looking for, or use the arrows to scroll through the available choices.</p>
+</div>
+</li>
+<li><p>When you've found the template you want to use, click <strong>Add</strong> to add a VM based on that template to the vApp. The VM should now be visible in the lower box.</p>
+<p><img src="images/vmw-vcd-vm-add-vm-template.png" alt="Add VM button"></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can add multiple VMs to the vApp at the same time using the catalogs.</p>
+</div>
+</li>
+<li><p>When you've finished adding VMs, click <strong>Next</strong>.</p>
+</li>
+<li><p>On the <em>Configure Resources</em> page, in the <strong>Virtual Machine</strong> field, enter a name your VM.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This is the name of the VM, not the actual OS host name.</p>
+</div>
+</li>
+<li><p>From the *<em>Storage Policy</em> list, select a storage policy to assign the VM to.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We recommend using the <code>*-*-*-Any</code> option as this will ensure your VMs are balanced evenly cross all storage pools. However, you could use this option to specifically separate VMs on different storage if required for high availability purposes. For example, you could specifically place VMs on <code>*.*.*-Storage1</code> as opposed to <code>*.*.*-Storage2</code>. For more information, visit the Knowledge Centre.</p>
+</div>
+<p><img src="images/vmw-vcd-vm-configure-resources.png" alt="Configure Resources page"></p>
+</li>
+<li><p>Click <strong>Next</strong>.</p>
+</li>
+<li><p>On the <em>Configure Virtual Machines</em> page, in the <strong>Computer Name</strong> field, define the host name of the VM.</p>
+</li>
+<li><p>From the <strong>Network</strong> list, select the network to connect the VM to.</p>
+</li>
+<li><p>From the <strong>IP Assignment</strong> list, select:</p>
+<ul>
+<li><strong>Static - IP Pool</strong> (the usual method) to inject an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a checkbox to keep
+IP address assignments elsewhere within the UI once the VMs are created.</li>
+<li><strong>Static - Manual</strong> to specify a valid IP address from the pool that the VM will then keep.</li>
+<li><strong>DHCP</strong> to specify that vCloud Director should interact with the OS via VMware Tools to
+use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway.</li>
+</ul>
+<p><img src="images/vmw-vcd-vm-configure-vms.png" alt="Configure Virtual Machines page"></p>
+</li>
+<li><p>Click <strong>Next</strong>.</p>
+</li>
+<li><p>On the <em>Configure Networking</em> page, configure the networking for your VM and then click <strong>Next</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For information about vApp network fencing, see <a href="vmw-how-create-vapp-network.html"><em>How to create a vApp network</em></a>.</p>
+</div>
+<p><img src="images/vmw-vcd-vm-configure-networking.png" alt="Configure Networking tab"></p>
+</li>
+<li><p>On the summary page, review your settings and then click <strong>Finish</strong>.</p>
+<p>The platform will start creating your VM.</p>
+</li>
+<li><p>When your VM has finished deploying, right-click the newly created VM within the vApp and select <strong>Power On</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-vm-power-on.png" alt="Power On menu option for VM"></p>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-vm-from-template.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>
