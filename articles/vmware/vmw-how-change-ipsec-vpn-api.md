@@ -10,8 +10,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Change IPsec VPN settings via the vCloud API
-toc_fullpath: How To/vmw-how-api-ipsec-vpn.md
-toc_mdlink: vmw-how-api-ipsec-vpn.md
+toc_fullpath: How To/vmw-how-change-ipsec-vpn-api.md
+toc_mdlink: vmw-how-change-ipsec-vpn-api.md
 ---
 
 # How to change IPsec VPN settings via the vCloud Director API
@@ -34,7 +34,7 @@ Use cases:
 
 Before using the vCloud API to view and update IPsec VPN settings, we recommend that you install a REST client that enables you to access the API. The steps in this article use a Firefox plugin called RESTClient. For information about how to install this plugin, see [How to install a REST client to access the vCloud API](vmw-how-install-vcloud-api-rest-client.md).
 
-You also need to find your API credentials. For more information, see [How to access vCloud Director through the vCloud API](https://portal.ukcloud.com/support/knowledge_centre/0e0865ef-b6c5-4664-ab85-2d9f5cfe54c0)
+You also need to find your API credentials. For more information, see [How to access vCloud Director through the vCloud API](vmw-how-access-vcloud-api.md)
 
 ## Obtaining an authorisation token
 
@@ -88,7 +88,7 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 
     ![API response with authentication token](images/vmw-restclient-authentication-token.png)
 
-14. The `x-vcloud-authorization` token will replace the Basic Authentication header added earlier. To do this highlight and copy the string of characters displayed after the word     `x-vcloud-authorization`.
+14. The `x-vcloud-authorization` token will replace the Basic Authentication header added earlier. To do this highlight and copy the string of characters displayed after the word `x-vcloud-authorization`.
 
     > [!NOTE]
     > If at any point while following the instructions in this guide, the output displayed in the REST Client does not look similar to that shown in the images, you can use the value of the **Status Code** field to determine what went wrong and needs investigation. In this case above, **Status Code** received was HTTP 200 OK, which means that the request succeeded. For a list of HTTP response codes, see [HTTP Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
@@ -163,8 +163,7 @@ To retrieve details of the edge gateway configuration:
 
         https://<api_url>/api/admin/edgeGateway/
 
-4. Appended to the end of the URL will be a unique identifier for the
-    edge gateway within the VDC. Copy this link, paste it into the URL field and then click **Send**.
+4. Appended to the end of the URL will be a unique identifier for the edge gateway within the VDC. Copy this link, paste it into the URL field and then click **Send**.
 
     After a short amount of time the current configuration of the edge gateway will be displayed in a block of XML.
 
@@ -322,7 +321,7 @@ You can add additional local subnets to the IPsec VPN tunnel. This involves addi
 
 You can use the same process to add or remove peer subnets
 
-#### *Orginal
+#### Original
 
     <PeerSubnet>
     <Name>192.168.2.0/24</Name>

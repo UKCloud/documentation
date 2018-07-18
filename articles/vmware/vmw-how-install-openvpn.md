@@ -25,13 +25,29 @@ If you require a more flexible or scalable solution, you can deploy your own cho
 This article details the steps required to obtain, deploy and configure an OpenVPN virtual appliance to obtain remote access to your virtual data centres (VDCs) running on the UKCloud platform.
 
 > [!NOTE]
-> OpenVPN is a licensed product. Without a licence key, you are limited to only two concurrent VPN connections. If you require additional concurrent connections, you’ll need to obtain and install a licence key.
+> OpenVPN is a licensed product. Without a licence key, you are limited to only two concurrent VPN connections. If you require additional concurrent connections, you'll need to obtain and install a licence key.
 
 ## Preparing your virtual data centre
 
 To secure your environment, we recommend that you deploy the OpenVPN appliance into a new, routed VDC network. Ideally, no other virtual machines (VMs) should connect to this network. This enables you to tightly control access from VPN clients to the VMs in your environment using firewall rules on the edge gateway. However, if you're approaching the network interface limit of your edge gateway, it's possible to deploy the OpenVPN appliance into an existing network.
 
 ### Create a new VDC network
+
+#### Using the HTML5 tenant portal in vCloud Director 9.1
+
+1. In vCloud Director, go to the VDC and in the Network section, click **Add**.
+
+2. Fill in the required fields and select the edge to route through.
+
+3. Provide a gateway, subnet mask and DNS.
+
+4. Create a static pool in the format of: `192.168.1.2-192.168.1.100` and click **Add**.
+
+    ![Add Org VDC Network dialog box](images/vmw-vcd-tp-add-network-openvpn.png)
+
+5. When you're done, click **Save**.
+
+#### Using the Flex-based UI in vCloud Director 8.20
 
 To create a new VDC network:
 
@@ -53,7 +69,7 @@ To create a new VDC network:
 
 5. Provide the network addressing information requested in the rest of the dialog box and then click **Finish**.
 
-**More information!** [*Creating routed Org VDC networks*](https://portal.ukcloud.com/support/knowledge_centre/2b989ddd-c018-4289-8a06-0482f0674bc1)
+**More information!** [*How to create a routed VDC network*](vmw-how-create-routed-network.md)
 
 ### Configuring the edge gateway
 
@@ -86,7 +102,7 @@ To configure the edge gateway:
 
     - One or more firewall rules to allow access from trusted environments to the OpenVPN appliance on the admin port (port `943` by default, but can be changed)
 
-**More information!** [*vCNS Edge Services: NAT*](https://portal.ukcloud.com/support/knowledge_centre/89cbf32e-eb48-4145-b7dc-6bb0c5f1bcc3) and [*vCNS Edge Services: Firewall*](https://portal.ukcloud.com/support/knowledge_centre/e8ec5a0b-e5c7-4e44-b353-ab89505fefbe)
+**More information!** [*How to create firewall rules*](vmw-how-create-firewall-rules.md) and [*How to create NAT rules*](vmw-how-create-nat-rules.md)
 
 ## Obtaining the latest OpenVPN appliance
 
@@ -97,11 +113,46 @@ To ensure you're running the latest release of OpenVPN, we recommend that you do
     <https://swupdate.openvpn.org/appliances/AS2.ova>
 
 2. In vCloud Director, select the **Catalogs** tab.
-3. In the left navigation panel, select **My Organization's Catalogs**
+
+3. In the left navigation panel, select **My Organization's Catalogs**.
+
 4. Open the catalog you'd like to add the appliance to, or create a new catalog.
+
 5. Click the **Upload** button and upload the OVA file to the catalog.
 
 ## Deploying the OpenVPN appliance
+
+### Using the HTML5 tenant portal in vCloud Director 9.1
+
+To deploy the OpenVPN appliance:
+
+1. In vCloud Director, go to your VDC and select **vApps**.
+
+2. Click **Add vApp from OVF**.
+
+    ![Add vApp from OVF option](images/vmw-vcd-tp-vapp-from-ovf.png)
+
+3. Select the OVA that you downloaded then click **Next**.
+
+4. Review the details of the OVA to confirm that it's the right images then click **Next**.
+
+5. The appliance will be deployed as a single VM inside a vApp. Provide a name for the vApp then click **Next**.
+
+6. Provide a valid NetBIOS host name and your desired storage policy then click **Next**.
+
+7. Configure the network by selecting **Switch to advanced networking workflow**.
+
+    ![Configure Networking page of Create vApp from OVF wizard](images/vmw-vcd-tp-vapp-from-ovf-network.png)
+
+8. Select the network adapter type, network and IP pool assignment (**Manual**) then click **Next**.
+
+9. Select the number of vCPUs, sockets and memory this appliance will have then click **Next**.
+
+10. Review the details then click **Finish** to deploy the vApp and appliance.
+
+11. When the vApp has deployed and is powered on, you'll need to reset (reboot) the VM before logging in for the first time to force the networking changes made during VMWare's guest customisations to take effect before you start configuring OpenVPN.
+
+### Using the Flex-based UI in vCloud Director 8.20
 
 To deploy the OpenVPN appliance:
 
@@ -110,6 +161,7 @@ To deploy the OpenVPN appliance:
     ![vCloud Director My Cloud tab](images/vmw-vcd-tab-my-cloud.png)
 
 2. In the left navigation panel, select **vApps**.
+
 3. In the toolbar, click the **Add vApp from OVF** icon.
 
     ![Add vApp from OVF button](images/vmw-vcd-openvpn-btn-vapp-from-ovf.png)
@@ -126,7 +178,7 @@ To deploy the OpenVPN appliance:
 
 8. On the *Configure Resources* page, select your desired storage policy and then click **Next**.
 
-9. ON the *Configure Networking* page, provide a name for the VM.
+9. On the *Configure Networking* page, provide a name for the VM.
 
 10. Select the **Switch to the advanced networking workflow** check box.
 
@@ -143,9 +195,12 @@ To deploy the OpenVPN appliance:
 To perform initial configuration:
 
 1. In vCloud Director, right-click your OpenVPN VM and select **Popout Console**.
+
 2. Log in to the VM as the root user.
+
     > [!TIP]
     > To obtain the root password, right-click the VM, select **Properties**, click the **Guest OS Customization** tab and make a note of the password.
+
 3. You'll be prompted to answer a series of questions:
 
     - **Licence agreement:** --- Enter `yes` to accept.
@@ -166,7 +221,7 @@ To perform initial configuration:
 
         #passwd openvpn
 
-6. Press **^D** to log off the console, but before you do so, there are some additional system configurations, detailed in the following sections, that you might want to perform shile you're connected to the console.
+6. Press **^D** to log off the console, but before you do so, there are some additional system configurations, detailed in the following sections, that you might want to perform while you're connected to the console.
 
 ### Check the DNS resolver configuration is in place
 
@@ -229,7 +284,7 @@ To configure administration options:
 
 1. Log on to the admin interface at:
 
-    `https://`*`ip_address`*`/admin`
+    `https://<ip_address>/admin`
 
 2. To set the hostname, under *Configuration*, select **Server Network Settings** and then set the **Hostname or IP Address** to either a public IP address or a fully qualified domain name (FQDN) that your client will be able to resolve.
 3. Save the settings on this page.
@@ -246,7 +301,7 @@ To configure administration options:
 
 You can download the VPN client software and connection profiles directly from the appliance by browsing to the following location and logging in with a valid user name and password:
 
-`https://`*`ip_address`*`/`
+`https://<ip_address>/`
 
 The downloaded client software and profile includes the client certificate that is required for authentication.
 
@@ -261,6 +316,7 @@ We strongly recommend that you further secure the appliance by making the change
 If you've not already done so, change the root password to something more secure.
 
 1. Log in to the OpenVPN VM console as the root user.
+
 2. Enter the following command:
 
         # passwd
@@ -277,12 +333,12 @@ You can enable two-factor authentication via the OpenVPN administration interfac
 
 1. Log on to the administration interface with the default account at:
 
-    `https://`*`ip_address`*`/admin`
+    `https://<ip_address>/admin`
 
 2. Under *Configuration*, select **Client Settings** then click the checkbox to enable Google Authenticator support.
 
     > [!NOTE] 
-    > Users will need to enter or scan the Google Authenticator secret by logging into the client portal (`http://`*`ip_address`*`/`). When they've configured the secret, they should click the **I scanned the QR code** button to enforce two-factor authentication.
+    > Users will need to enter or scan the Google Authenticator secret by logging into the client portal (`http://<ip_address>/`). When they've configured the secret, they should click the **I scanned the QR code** button to enforce two-factor authentication.
 
 ### Lock down the Admin Web UI and Client Web UI
 
@@ -297,7 +353,7 @@ To lock down the administration and client interfaces:
 
 1. Log on to the administration interface with the default account at:
 
-    `https://`*`ip_address`*`/admin`
+    `https://<ip_address>/admin`
 
 2. Under *Configuration*, select **Server Network Settings**.
 3. Under *Service Forwarding* in the *VPN Server* section, clear the check boxes for **Admin Web Server** and **Client Web Server**.
