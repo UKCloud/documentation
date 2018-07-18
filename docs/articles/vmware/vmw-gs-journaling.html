@@ -8,7 +8,7 @@
     <title>Getting Started Guide for Journaling Protection | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for Journaling Protection | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -115,40 +115,39 @@
 <li>VMs must be powered on to be synchronised.</li>
 <li>The operating system used by the protected VMs must also be supported in the recovery site.</li>
 <li>Our Journaling Protection service option captures every action. When a VM is deleted from your vApp, the associated journal is also deleted. If you want to keep historic records of VMs that are no longer running on the platform, consider UKCloud's Snapshot Protection service option.</li>
-<li>We provide a single default service profile. The details of this are available in the <a href="https://portal.ukcloud.com/support/knowledge_centre/ab9ba9e1-58e5-4c5c-b642-4def2e8f5914"><em>Journaling Protection service scope</em></a>. We do not currently provide the option for you to create custom profiles.</li>
+<li>We provide a single default service profile. The details of this are available in the <a href="vmw-sco-journaling-protection"><em>Journaling Protection Service Scope</em></a>. We do not currently provide the option for you to create custom profiles.</li>
 </ul>
 <h2 id="getting-journaling-protection-up-and-running">Getting Journaling Protection up and running</h2>
 <p>To get Journaling Protection up and running for your VMs, follow the steps below:</p>
 <ol>
 <li><a href="#create-a-recovery-vdc">Create a recovery VDC</a></li>
 <li><a href="#configure-networking-on-the-recovery-site">Configure networking on the recovery site</a></li>
-<li><a href="#create-a-virtual-protection-group">Create a virutal protection group</a></li>
+<li><a href="#create-a-virtual-protection-group">Create a virtual protection group</a></li>
 <li><a href="#perform-a-test-failover">Perform a test failover</a></li>
 </ol>
 <h3 id="create-a-recovery-vdc">Create a recovery VDC</h3>
 <p>To recover your VMs to a different UKCloud site, you must have a VDC in the intended recovery site. If you already have a compute service in the recovery site, you can use an existing VDC or you can create a new one using:</p>
 <ul>
-<li>The UKCloud Portal (for more information see <a href="https://portal.ukcloud.com/support/knowledge_centre/99f82d51-11f1-4c76-8cdb-3048067ae0f3"><em>How to build your Enterprise Compute Cloud estate using the UKCloud Portal</em></a>)</li>
-<li>The UKCloud Portal API (for more information see the <a href="https://portal.ukcloud.com/support/knowledge_centre/18ec05eb-0271-4ff0-bb10-f377a2f29af7"><em>How to use the UKCloud Portal API</em></a>)</li>
+<li>The UKCloud Portal (for more information see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>)</li>
+<li>The UKCloud Portal API (for more information see the <a href="../portal/ptl-how-use-api.md"><em>How to use the UKCloud Portal API</em></a>)</li>
 </ul>
 <p>If you don't already have a compute service in the recovery site or you'd prefer UKCloud to create the VDC for you, you can request this as part of your Journaling Protection Service Request.</p>
 <h3 id="configure-networking-on-the-recovery-site">Configure networking on the recovery site</h3>
 <p>You must configure any internally and externally routed networks in your recovery site to duplicate those in the source site. You must also configure the edge gateway with the same firewall, NAT and other rules.</p>
-<p>You'll create the mapping between these networks when you create your VPG (see <a href="https://portal.ukcloud.com/support/knowledge_centre/44437fac-2833-446d-b52b-67ca46d461b1"><em>How to create a virtual protection group</em></a>).</p>
+<p>You'll create the mapping between these networks when you create your VPG (see <a href="vmw-how-zerto-create-vpg.html"><em>How to create a virtual protection group</em></a>).</p>
 <p>In the event of a failover, external access to the recovery site will be via a different IP address. You'll need to account for any required DNS changes and external connectivity configuration (such as VPNs), to ensure continued external access. Utilising UKCloud's VMware cloud, you can configure this in advance. Alternatively, you can use load balancing technologies to manage a seamless switch between environments.</p>
 <p>You do not need to configure vApp networks in advance as they will be replicated within the VPG.</p>
 <h3 id="create-a-virtual-protection-group">Create a virtual protection group</h3>
-<p>A virtual protection group (VPG) is a collection of VMs that are grouped together for protection purposes. The UKCloud Journaling Protection service option protects VMs on a vApp basis. When you create a VPG, you specify the vApp to protect and all the VMs in that vApp are protected.
-For example, in a standard three-tier application, you will likely have three VMs: one for your application, one for the database and one for the web server. As best practice, you should create these three related VMs in a single vApp, which you can then add to a VPG so that all the
-VMs are replicated (and recovered) together.</p>
-<p>For more information, see <a href="https://portal.ukcloud.com/support/knowledge_centre/44437fac-2833-446d-b52b-67ca46d461b1"><em>How to create a virtual protection group</em></a>.</p>
+<p>A virtual protection group (VPG) is a collection of VMs that are grouped together for protection purposes. The UKCloud Journaling Protection service option protects VMs on a vApp basis. When you create a VPG, you specify the vApp to protect and all the VMs in that vApp are protected.</p>
+<p>For example, in a standard three-tier application, you will likely have three VMs: one for your application, one for the database and one for the web server. As best practice, you should create these three related VMs in a single vApp, which you can then add to a VPG so that all the VMs are replicated (and recovered) together.</p>
+<p>For more information, see <a href="vmw-how-zerto-create-vpg.html"><em>How to create a virtual protection group</em></a>.</p>
 <h3 id="perform-a-test-failover">Perform a test failover</h3>
 <p>After you create your VPG, we recommend that you perform a test failover to confirm that your VMs will be recovered correctly in the event of a live failover.</p>
 <p>You should also run test failovers periodically to ensure that your VMs can still be recovered successfully.</p>
-<p>For more information, see <a href="https://portal.ukcloud.com/support/knowledge_centre/539bef19-1a0b-4953-be4c-48c2830ed5e9"><em>How to perform a failover</em></a>.</p>
+<p>For more information, see <a href="vmw-how-zerto-perform-failover.html"><em>How to perform a failover</em></a>.</p>
 <h2 id="next-steps">Next steps</h2>
 <p>You have now performed all the steps needed to set up Journaling Protection for your VMs.</p>
-<p>If you experience a disaster, such as a virus attack, you can perform a live failover to recover your VMs to a specific point in time before the disaster occurred and continue operation as usual. For more information, see <a href="https://portal.ukcloud.com/support/knowledge_centre/539bef19-1a0b-4953-be4c-48c2830ed5e9"><em>How to perform a failover</em></a>.</p>
+<p>If you experience a disaster, such as a virus attack, you can perform a live failover to recover your VMs to a specific point in time before the disaster occurred and continue operation as usual. For more information, see <a href="vmw-how-zerto-perform-failover.html"><em>How to perform a failover</em></a>.</p>
 <h2 id="glossary">Glossary</h2>
 <p>This glossary provides definitions of terms specific to Journaling Protection.</p>
 <p><strong>failover</strong>  When an application switches to an alternative environment in order to

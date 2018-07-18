@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to migrate your workloads between UKCloud regions | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to migrate your workloads between UKCloud regions | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-migrate-your-workloads-between-ukcloud-regions">How to migrate your workloads between UKCloud regions</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Journaling Protection is a powerful, self-service replication and recovery tool that can help you improve your organisational resilience. However, you can also use UKCloud's Journaling Protection solution to migrate your UKCloud for VMware applications into another UKCloud for VMware-enabled zone. This enables you to move your workloads into the regions within the UKCloud platform that are best suited for their requirements.</p>
+<p>Our Migration service is powered by Zerto, a leading provider of disaster recovery software for the cloud.</p>
+<p>The migration of VMs within the UKCloud platform is very closely aligned to the disaster recovery of VMs within UKCloud; the small difference being that when you have failed-over the VMs from one region into another, you don't then failback to your primary region. As such, you'll find that the articles linked to from this article refer to disaster recovery and failover, however the steps also apply to migration.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide, you need to have access to the Zerto Self-Service Portal.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>When you request Journaling Protection to migrate a workload within the UKCloud platform, UKCloud provides you with:</p>
+<ul>
+<li>A ZORG ID to identify your environment within Zerto</li>
+<li>Access to the Zerto Self-Service Portal (ZSSP), where you can create and manage your VPGs</li>
+</ul>
+<p>You should consider the following:</p>
+<ul>
+<li>Migration is provided on a vApp basis (not for individual VMs). This is worth considering if you intend to migrate only some parts of your vApps.</li>
+<li>VMs must be powered on to be synchronised prior to migration.</li>
+<li>Our Journaling Protection service option captures every action. When a VM is deleted from your vApp, the associated journal is also deleted. This means if you delete a VM before migrating it, that VM will not exist in your target region.</li>
+<li>We provide a single default service profile. The details of this are available in the <a href="vmw-sco-journaling-protection"><em>Journaling Protection Service Scope</em></a>. We do not currently provide the option for you to create custom profiles</li>
+</ul>
+<h2 id="migrating-workloads-between-ukcloud-regions">Migrating workloads between UKCloud regions</h2>
+<p>You begin the migration process for your VMs by adding Journaling Protection to the vApp that contains those VMs. This creates something called a virtual protection group (VPG). Each VM in the protected vApp is synchronised to the target migration region and a journal is created. After this initial synchronisation, each subsequent write operation to the VM is processed as normal on the source region and a copy is asynchronously sent to the target region and written to the journal.</p>
+<p><img src="images/migrate-zerto-image-1.png" alt="Add Journaling Protection"></p>
+<p>Each journal entry exists in the journal for a specified number of days (the journal history). When the journal history is reached, as new journal entries are created, older entries are written to the migration
+target VM's virtual disks.</p>
+<p>Every few seconds, a checkpoint is written to every journal for each VM in the VPG to ensure crash-consistency between the VMs. When you're ready to migrate a VM, you select a checkpoint to recover to. This isn't strictly necessary for workload migration, but is a feature associated with the Journaling Protection aspect of Zerto. It means that you'll have a known point at which the VM will be restarted from in the new region.</p>
+<p>During migration, the vApp and its VMs are created on the target region and the recovery disks for each VM are attached to the migrated VM. Information in the journal is then promoted to the VM to bring it up to the date and time of the selected checkpoint.</p>
+<p><img src="images/migrate-zerto-image-2.png" alt="VM journal"></p>
+<p>The process for getting Journaling Protection up and running ready for workload migration within the UKCloud platform is as follows:</p>
+<ol>
+<li><a href="#create-a-migration-vdc">Create a migration VDC</a></li>
+<li><a href="#configure-networking-in-the-migration-target-vdc">Configure networking in the migration target VDC</a></li>
+<li><a href="#create-a-virtual-protection-group-in-the-primary-region">Create a virtual protection group in the primary region</a></li>
+<li><a href="#perform-a-test-migration">Perform a test migration</a></li>
+<li><a href="#migrate-your-workloads">Migrate your workloads</a></li>
+</ol>
+<h2 id="create-a-migration-vdc">Create a migration VDC</h2>
+<p>To migrate your workloads to a different UKCloud region, you must have a VDC in the intended target region. If you already have a compute service in the target region, you can use an existing VDC or you can create a new one using:</p>
+<ul>
+<li>The UKCloud Portal - For more information see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></li>
+<li>The UKCloud Portal API -- For more information see <a href="../portal/ptl-how-use-api.md"><em>How to use the UKCloud Portal API</em></a></li>
+</ul>
+<p>If you don't already have a compute service in the target region or you'd prefer UKCloud to create the VDC for you, you can request this as part of your Journaling Protection service request.</p>
+<h2 id="configure-networking-in-the-migration-target-vdc">Configure networking in the migration target VDC</h2>
+<p>You must configure any internally and externally routed networks in your migration target environment to duplicate those in the source region. You must also configure the edge gateway with the same firewall, NAT and other rules.</p>
+<p>You'll create the mapping between these networks when you create your VPG; see <a href="vmw-how-zerto-create-vpg.html"><em>How to create a virtual protection group</em></a>.</p>
+<p>When you initially migrate your workloads, external access to the target region will be via a different IP address. If you want to keep the same IP addresses for your new environment, you'll need to request an IP move from UKCloud. We'll move the IPs from your old edge to your new edge. Note that you should raise this service request in good time so we can move the IPs as soon as you need us to.</p>
+<p>Alternatively, you can use the new allocation of IP addresses in your new environment.</p>
+<p>You don't need to configure vApp networks in advance as they'll be replicated within the VPG.</p>
+<h2 id="create-a-virtual-protection-group-in-the-primary-region">Create a virtual protection group in the primary region</h2>
+<p>A VPG is a collection of VMs that are grouped together for migration. As workload migration within the UKCloud platform uses Journaling Protection, VPGs are created from vApps. When you create a VPG, you specify the vApp you want to migrate and all the VMs in that vApp are replicated. For example, in a standard three-tier application, you'll likely have three VMs: one for your application, one for the database and one for the web server. As best practice, you should create these three related VMs in a single vApp, which you can then add to a VPG so that all the VMs are migrated together.</p>
+<p>For more information, see <a href="vmw-how-zerto-create-vpg.html"><em>How to create a virtual protection group</em></a>. This guide is the same for both failovers and migrations.</p>
+<h2 id="perform-a-test-migration">Perform a test migration</h2>
+<p>After you create your VPG, we recommend that you perform a test migration to confirm that your VMs will be recovered correctly when you do the real migration.</p>
+<p>For more information, see <a href="vmw-how-zerto-perform-failover.html"><em>How to perform a failover</em></a>. This guide is the same for both failovers and migrations.</p>
+<h2 id="migrate-your-workloads">Migrate your workloads</h2>
+<p>If you are happy with your test migration, you can now choose when to migrate your environment from your primary region into your new region. You don't have to migrate everything in one go; you can choose which VPGs you migrate and you can perform a staged migration.</p>
+<p>Within Zerto, you have two options for migrating your workloads:</p>
+<ul>
+<li>Move the VPG to the target region. This method performs and end-to-end migration, including removing the VMs from the source region after they've been moved. For more information, see the steps below.</li>
+<li>Perform a live migration. This method provides more flexibility for you to control what happens in the primary region after you move the VMs to the target region. For more information, see <a href="vmw-how-zerto-perform-failover.html"><em>How to perform a     failover</em></a>.</li>
+</ul>
+<p>To move a VPG:</p>
+<ol>
+<li><p>Log in to ZSSP.</p>
+<p>If you need more detailed instructions, see <a href="vmw-how-zerto-access-zssp.html"><em>How to access the Zerto Self-Service Portal</em></a>. Use the ZSSP login link for the zone in which your target VDC is located.</p>
+</li>
+<li><p>From the <strong>ACTIONS</strong> menu at the bottom of the page, choose <strong>MOVE VPG</strong>.</p>
+<p><img src="images/migrate-zerto-image-4.png" alt="Actions"></p>
+</li>
+<li><p>In the <em>Move</em> wizard, on the <em>Select VPGs</em> page, select one or more VPGs that you want to move then click <strong>NEXT</strong>.</p>
+<p><img src="images/migrate-zerto-image-5.png" alt="next"></p>
+</li>
+<li><p>On the <em>EXECUTION PARAMETERS</em> page, the commit policy gives you the opportunity to check the integrity of the migrated VMs before committing the move. To change the commit policy, select the <strong>Commit Policy</strong> field and choose:</p>
+<ul>
+<li><strong>Auto-Commit</strong> if you want to automatically commit the move after a specified amount of time if there is no user interaction. Set the amount of time in the <strong>After</strong> field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately committed, enter 0.</li>
+<li><strong>Auto-Rollback</strong> if you want to automatically roll back the move after a specified amount of time if there is no user interaction. Set the amount of time in the <strong>After</strong> field, up to a maximum of 1440  minutes (24 hours). If you want the move to be immediately rolled back, enter 0.</li>
+<li><strong>None</strong> if you do not want to apply a commit policy. You must manually commit or roll back the move.</li>
+</ul>
+</li>
+<li><p>The source VMs must be powered off before they can be migrated. If the VMs cannot be gracefully shut down, you can force a shutdown. To force shutdown, select the <strong>Force Shutdown</strong> check box. If you do not select this option and the VMs cannot be gracefully shut down, the move process fails.</p>
+</li>
+<li><p>Reverse protection ensures that when the source VMs are migrated to the target region, the source region becomes the new target region. Reverse protection is enabled by default, but you should disable it by clicking the <strong>Reverse Protection</strong> field and deselecting the <strong>REVERSE</strong> check box.</p>
+<p><img src="images/migrate-zerto-image-6.png" alt="reverse"></p>
+</li>
+<li><p>Click <strong>NEXT</strong>.</p>
+</li>
+<li><p>On the <em>MOVE</em> page, review the diagram to see the number of VPGs and VMs included in the move and where they will be moved to, then click <strong>START MOVE</strong>.</p>
+<p>The move process creates the VMs in the target region.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If a VM already exists on the target region with the same name as one of the source VMs, a number is added to the end of the target VM name to ensure that it is unique.</p>
+</div>
+</li>
+<li><p>If you set a commit policy with a time greater than zero, you can check the integrity of the migrated VMs before committing (or rolling back) the migration. When you've finished testing, you can either wait for the time to elapse before the auto commit or auto rollback, or on the <em>VPGs</em> tab, click the <strong>VPG Name</strong> and then click the <strong>Commit</strong> or <strong>Rollback</strong> icon as required.</p>
+<p>After the migrated VMs are up and running and committed in the target region, the powered off VMs in the source region are removed from the source region and data from the journal is promoted to the migrated VMs. You should have disabled reverse protection to stop your migrated VMs from being protected on the source region.</p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>After you've completed the migration, you can continue working with your applications as before. If you used failover to migrate your workloads, when you've determined that the migration has been successful, you should remove the original VMs from the source region to remove any workloads that are no longer required.</p>
+<p>You can use Journaling Protection to protect your newly migrated VMs by replicating to another region within UKCloud.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>While you can set up Journaling Protection for migration purposes in regions 1 and 2, the target environment for Journaling Protection for failover is available only in regions 5 and 6.</p>
+</div>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-zerto-migrate-between-regions.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

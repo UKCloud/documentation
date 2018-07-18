@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to create a static route | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to create a static route | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-create-a-static-route">How to create a static route</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Static routing allows you to configure your edge gateway to indicate to other networks how to get to further networks. It's particularly useful if you need to route between virtual data  centres (VDCs) in the same vOrg. Static routing is the only option in vCloud Director; routing protocol cannot be used.</p>
+<p>As an example, you may have a vApp network <code>192.168.8.0/24</code> routed to a VDC network called <code>Front end network</code>. You could create a static route to enable traffic to get to the outside IP of the vApp edge at <code>192.168.4.33</code> (a NAT will exist there).</p>
+<p>The steps for creating a static route vary depending on what type of edge gateway you're working with:</p>
+<ul>
+<li><p><a href="#creating-a-static-route-for-an-advanced-gateway">Creating a static route for an advanced gateway</a></p>
+</li>
+<li><p><a href="#creating-a-static-route-for-a-standard-edge">Creating a static route for a standard edge</a></p>
+</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We recommend that you convert your edge to an advanced gateway to access the latest vCloud Director functionality. For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
+</div>
+<h2 id="creating-a-static-route-for-an-advanced-gateway">Creating a static route for an advanced gateway</h2>
+<p>To create a static route on your advanced gateway:</p>
+<ol>
+<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
+<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
+</li>
+<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
+</li>
+<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
+</li>
+<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
+</li>
+<li><p>Select the <strong>Routing</strong> tab.</p>
+<p><img src="images/vmw-vcd-adv-edg-tab-routing.png" alt="Routing tab"></p>
+</li>
+<li><p>On the <strong>Static Routes</strong> tab, click the <strong>+</strong> button.</p>
+<p><img src="images/vmw-vcd-adv-edg-btn-add-static-route.png" alt="Add static route button"></p>
+</li>
+<li><p>In the <em>Add Static Route</em> dialog box, fill in the details of the network range, next hop (edge IP) and select the network interface to which you want to apply the static route.</p>
+<p><img src="images/vmw-vcd-adv-edg-add-static-route.png" alt="Add Static Route dialog box"></p>
+</li>
+<li><p>When you're done, click <strong>Keep</strong> then click <strong>Save changes</strong>.</p>
+</li>
+<li><p>Repeat the steps for the second VDC.</p>
+</li>
+</ol>
+<h2 id="creating-a-static-route-for-a-standard-edge">Creating a static route for a standard edge</h2>
+<p>To create a static route on your standard edge:</p>
+<ol>
+<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
+<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
+</li>
+<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
+</li>
+<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
+</li>
+<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
+</li>
+<li><p>Select the <strong>Static Routing</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-static-routing-reg.png" alt="Static Routing tab"></p>
+</li>
+<li><p>Click <strong>Add</strong>.</p>
+<p><img src="images/vmw-vcd-btn-add-static-route-reg.png" alt="Add static route button"></p>
+</li>
+<li><p>Choose the network to which you want to apply the static route, give the static route a name, then fill in the network details.</p>
+<p><img src="images/vmw-vcd-add-static-route-reg.png" alt="Add Static Route dialog box"></p>
+</li>
+<li><p>When you're finished, click <strong>OK</strong>.</p>
+</li>
+<li><p>Repeat the steps for the second VDC.</p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>In this article you've learned how to create a static route. For other edge gateway configuration tasks, see:</p>
+<ul>
+<li><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></li>
+<li><a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a></li>
+<li><a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></li>
+<li><a href="vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a></li>
+<li><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-static-route.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

@@ -8,7 +8,7 @@
     <title>How to access vCloud Director through the vCloud API | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to access vCloud Director through the vCloud API | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -90,7 +90,7 @@
 <p>Before using the vCloud API, you first need to find your API credentials.</p>
 <ol>
 <li><p>Log in to the UKCloud Portal.</p>
-<p>For more detailed instructions, see the <a href="https://portal.ukcloud.com/support/knowledge_centre/0435318d-a94b-41bb-a4ff-a52adbe863e5"><em>Getting Started Guide for UKCloud Portal</em></a>.</p>
+<p>For more detailed instructions, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
 </li>
 <li><p>Select your account.</p>
 </li>
@@ -99,23 +99,23 @@
 </li>
 <li><p>The <em>API</em> page provides a view of your personal credentials for accessing the vCloud API. In particular, the page provides the following information for each compute service:</p>
 <ul>
-<li><p><strong>API URL</strong> --- Use this URL at the beginning of your calls to the vCloud API.</p>
+<li><p><strong>API URL</strong> - Use this URL at the beginning of your calls to the vCloud API.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>This URL will be different depending on the region in which your compute service is located.</p>
 </div>
 </li>
-<li><p><strong>API Username</strong> --- The user ID to use to authenticate yourself with the vCloud API.</p>
+<li><p><strong>API Username</strong> - The user ID to use to authenticate yourself with the vCloud API.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The compute service ID is appended to the end of the username. This is because you may have access to multiple compute services.</p>
 </div>
 </li>
-<li><p><strong>Username</strong> --- The API username without the appended compute service ID.</p>
+<li><p><strong>Username</strong> - The API username without the appended compute service ID.</p>
 </li>
-<li><p><strong>Org ID</strong> --- Use this to uniquely identify the compute service (or vOrg) when using the vCloud API.</p>
+<li><p><strong>Org ID</strong> - Use this to uniquely identify the compute service (or vOrg) when using the vCloud API.</p>
 </li>
-<li><p><strong>Password</strong> --- For authentication with the vCloud API. This password is the same as the one you use to log in to the UKCloud Portal.</p>
+<li><p><strong>Password</strong> - For authentication with the vCloud API. This password is the same as the one you use to log in to the UKCloud Portal.</p>
 </li>
 </ul>
 <p><img src="images/vmw-portal-api-details.png" alt="API page"></p>
@@ -124,9 +124,7 @@
 </li>
 </ol>
 <h2 id="obtaining-an-authorisation-token">Obtaining an authorisation token</h2>
-<p>Now that you have your API credentials, you can start interacting with
-the vCloud API. First you need to obtain an <code>x-vcloud-authorization</code>
-token.</p>
+<p>Now that you have your API credentials, you can start interacting with the vCloud API. First you need to obtain an <code>x-vcloud-authorization</code> token.</p>
 <ol>
 <li><p>Send the following request to the vCloud API:</p>
 <pre><code> POST https://&lt;vcloud_api_url&gt;/api/sessions Authorization: Basic &lt;encoded_credentials&gt; Accept: application/*+xml; version=5.6

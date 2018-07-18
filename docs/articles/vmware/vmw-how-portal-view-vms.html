@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to view your VMs in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to view your VMs in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-view-your-vms-in-the-ukcloud-portal">How to view your VMs in the UKCloud Portal</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The My VMs page in the UKCloud Portal enables you to see, at a glance, the services currently operational within your environment. My VMs doesn't just cover virtual machines (VMs); it also covers deployed vApps, edge gateway settings and bandwidth monitoring.</p>
+<p>If your system administrator has enabled billing for your account, you can also look at near real-time costs; both current month-to-date and an estimated monthly cost. You can see costs on a per-VM and per-vApp
+basis.</p>
+<h2 id="accessing-the-my-vms-page">Accessing the My VMs page</h2>
+<p>To go to the My VMs page:</p>
+<ol>
+<li><p>Log in to the UKCloud Portal.</p>
+<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
+</li>
+<li><p>In the Portal navigation panel, expand <strong>VMware Cloud</strong> and then select the compute service with which you want to work.</p>
+<p><img src="images/vmw-portal-mnu-select-compute-service.png" alt="VMware Cloud menu option"></p>
+</li>
+<li><p>Click the <strong>My VMs</strong> tab.</p>
+<p><img src="images/ptl-tab-myvms.png" alt="My VMs tab in the UKCloud Portal"></p>
+</li>
+<li><p>From the <strong>Currently viewing for VDC</strong> list, select the virtual data centre (VDC) you want to work with to see its settings and, if billing is enabled, estimated and actual costs.</p>
+<p><img src="images/ptl-myvms-select-vdc.png" alt="Select VDC"></p>
+</li>
+</ol>
+<h2 id="viewing-information-about-vapps">Viewing information about vApps</h2>
+<p>The <strong>vApps</strong> tab shows a list of the vApps within the selected VDC. The information displayed includes the number of VMs within the vApp and the cost associated with the vApp, which can be shown in either month-to-date or estimated monthly cost.</p>
+<p><img src="images/ptl-myvms-vapps.png" alt="vApps tab of the My VMs page"></p>
+<ol>
+<li><p>Select the <strong>vApps</strong> tab.</p>
+</li>
+<li><p>Click a vApp name to view additional information about that vApp in the <strong>Info</strong> tab.</p>
+<p><img src="images/ptl-myvms-vapp-info.png" alt="vApp Info tab"></p>
+</li>
+<li><p>Select the <strong>VMs</strong> tab to see a list of the VMs within the selected vApp and their properties.</p>
+<p><img src="images/ptl-myvms-vapp-vms.png" alt="vApp VMs tab"></p>
+</li>
+<li><p>One useful property that you can see is the backup status.</p>
+<p>In the example above, there is no backup policy for these VMs so the backup icon is greyed out. If backups are successful there will be a green icon, if backups have failed there will be a red icon.</p>
+</li>
+<li><p>Click a VM name to see additional information about it, including backup logs.</p>
+<p>If you need to manage your backups for a VM, click the <strong>Manage</strong> button. For more information, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
+</li>
+<li><p>Click <strong>Back to vApps</strong> to return to the main <em>My VMs</em> page.</p>
+</li>
+</ol>
+<h2 id="viewing-information-about-vms">Viewing information about VMs</h2>
+<p>The <strong>VMs</strong> tab displays a list of all VMs within your environment.</p>
+<p><img src="images/ptl-myvms-vms.png" alt="VMs tab of the My VMs page"></p>
+<ol>
+<li><p>Select the <strong>VMs</strong> tab.</p>
+</li>
+<li><p>Click a VM to view its additional properties in the <strong>Info</strong> tab.</p>
+<p><img src="images/ptl-myvms-vm-info.png" alt="VM Info tab"></p>
+</li>
+<li><p>Click <strong>Back to VMs</strong> to return to the main <em>My VMs</em> page.</p>
+</li>
+</ol>
+<h2 id="viewing-information-about-edge-gateways">Viewing information about edge gateways</h2>
+<p>The <strong>Edge Gateways</strong> tab shows properties associates with the edge gateways that are deployed in your VDCs.</p>
+<ol>
+<li><p>Select the <strong>Edge Gateway</strong> tab.</p>
+</li>
+<li><p>From the <strong>Select Edge</strong> list, select the edge gateway you want to work with.</p>
+<ul>
+<li>The <strong>Config</strong> tab shows basic configuration information for the edge</li>
+<li>The <strong>Firewall</strong> tab shows you information about the firewall rules configured for the edge.</li>
+<li>The <strong>NAT</strong> tab shows you information about the NAT rules configured for the edge.</li>
+<li>The <strong>VPN</strong> tab displays any VPNs that have been created against the selected edge</li>
+<li>The <strong>Events</strong> tab displays any events associated with the edge.</li>
+</ul>
+</li>
+</ol>
+<h2 id="viewing-bandwidth-monitoring-information">Viewing bandwidth monitoring information</h2>
+<p>The <strong>Bandwidth Monitoring</strong> tab displays bandwidth statistics for the edge gateways within your VDCs.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Bandwidth Monitoring is not available on the Elevated OFFICIAL security platform.</p>
+</div>
+<ol>
+<li><p>Select the <strong>Bandwidth Monitoring</strong> tab.</p>
+</li>
+<li><p>From the <strong>Select Edge</strong> list, select the edge gateway you want to work with.</p>
+</li>
+<li><p>Select the appropriate tab to view different bandwidth statistics.</p>
+</li>
+</ol>
+<h2 id="viewing-snapshot-protection-information">Viewing snapshot protection information</h2>
+<p>The <strong>Snapshot Protection</strong> tab enables you to specify a snapshot retention policy to apply to all the VMs in a VDC. You can apply the policy to all new VMs or to all new and existing
+VMs.</p>
+<p>For more information about snapshot protection, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-portal-view-vms.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

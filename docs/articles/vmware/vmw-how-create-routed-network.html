@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to create a routed VDC network | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to create a routed VDC network | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-create-a-routed-vdc-network">How to create a routed VDC network</h1>
+
+<h2 id="overview">Overview</h2>
+<p>An organisation virtual data centre network enables its virtual machines (VMs) to communicate with each other or to provide access to external networks. A single VDC can have multiple networks.</p>
+<p>There are two network flavours, isolated and routed:</p>
+<ul>
+<li>An isolated (internally connected) network is one that only VMs within the VDC can connect to. Creation of isolated networks is described in <a href="vmw-how-create-isolated-network.html"><em>How to create an isolated VDC network</em></a>.</li>
+<li>A routed network (externally connected) provides access to machines and networks outside the VDC via the edge gateway. You can have up to nine usable routed networks per VDC. This guide describes how to create a routed VDC network.</li>
+</ul>
+<h2 id="creating-a-routed-vdc-network">Creating a routed VDC network</h2>
+<p>To create a routed Org vDC network:</p>
+<ol>
+<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
+<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
+</li>
+<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
+</li>
+<li><p>Select the <strong>Org VDC Networks</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-vdc-networks.png" alt="Org VDC Networks tab in vCloud Director"></p>
+</li>
+<li><p>Click the green <strong>+</strong> icon (or right-click an empty row and select <strong>Add Network</strong>)</p>
+</li>
+<li><p>Select the option to <strong>Create a routed network</strong>.</p>
+<p><img src="images/vmw-vcd-admin-routed-network-select.png" alt="Routed network option"></p>
+</li>
+<li><p>Select the edge gateway that you want your network to connect to and then click <strong>Next</strong>.</p>
+<p><img src="images/vmw-vcd-admin-vdc-network-edge.png" alt="Select edge gateway"></p>
+ <!-- add info about what the Create as subinterface checkbox is for -->
+</li>
+<li><p>In the <em>Configure Network</em> page, create a network <strong>Gateway address</strong> and <strong>Network mask</strong>, and add a <strong>DNS</strong> if possible.</p>
+<p><img src="images/vmw-vcd-admin-vdc-network-gateway.png" alt="Network settings for routed VDC network"></p>
+</li>
+<li><p>The <strong>Static IP pool</strong> is similar to DHCP in the sense that it's a range of IP addresses to be consumed by the VMs connecting to the network. When a VM is configured it will have a static manual or a static IP pool address assigned to it.</p>
+<ul>
+<li>For static manual, enter the address manually. This must be a valid address for the pool. The VM will keep this address for as long as it exists.</li>
+<li>For static IP pool, enter a range of addresses. A free address from the IP pool will be allocated to the machine automatically.</li>
+</ul>
+<p>As an example, if you give the gateway address as <code>192.168.1.1</code>, you may then want to give a static IP pool of <code>192.168.1.10</code> to <code>192.168.1.100</code>. This will give you a pool of 91 IP  addresses to assign to machines within your network. You can always increase this later if needed.</p>
+<p><img src="images/vmw-vcd-admin-routed-network-ip.png" alt="IP pool for routed network"></p>
+</li>
+<li><p>Click <strong>Next</strong>.</p>
+</li>
+<li><p>Give the network a <strong>Name</strong> and <strong>Description</strong>.</p>
+</li>
+<li><p>If you want to make the network shareable with other VDCs, select the <strong>Share this network</strong> check box.</p>
+</li>
+<li><p>Click <strong>Next</strong> to review your settings, and then click <strong>Finish</strong>.</p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>Now you've created your network to connect your VDC with the outside world, may want to configure your edge gateway to control what traffic is allowed into and out of your VDC. You may also wan to start building some VMs. For a quick guide on how to do this, see <a href="vmw-how-build-vm.html"><em>How to build a virtual machine with UKCloud for VMware</em></a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-routed-network.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>how to locate your virtual data centre on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="how to locate your virtual data centre on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-locate-your-virtual-data-centre-on-the-ukcloud-platform">How to locate your virtual data centre on the UKCloud platform</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Each virtual data centre (VDC) exists in a particular location within the UKCloud platform. UKCloud stores metadata against each VDC to indicate where within the platform the VDC resides. Using this metadata, you can locate your VDC by site, region and zone. For more information about the organisation of the UKCloud platform, see <a href="../other/other-ref-sites-regions-zones.md"><em>Understanding sites, regions and zones</em></a>.</p>
+<p>Knowing where your VDCs are located can be useful for:</p>
+<ul>
+<li>Determining how resilient your applications are</li>
+<li>Determining how scheduled or emergency maintenance or an unplanned outage may affect your applications</li>
+<li>Providing additional information to help with support call resolution</li>
+</ul>
+<p>This guide describes how to use vCloud Director to find out where your VDC is within the UKCloud platform. You can use the vCloud Director UI or the API.</p>
+<p>The information provided by the VDC metadata is read-only. If you want to change the location of a VDC, raise a Support Request from the <a href="https://portal.skyscapecloud.com/support/my_calls">My Calls</a> section of the UKCloud Portal.</p>
+<h2 id="finding-the-location-of-a-vdc-via-the-portal">Finding the location of a VDC via the Portal</h2>
+<ol>
+<li><p>Log in to the UKCloud Portal.</p>
+</li>
+<li><p>Select the account to which the VDC belongs.</p>
+</li>
+<li><p>In the dashboard, click <strong>My VMs</strong>.</p>
+<p><img src="images/locate-image-1.png" alt="My VMs"></p>
+</li>
+<li><p>Click the compute service to which the VDC belongs.</p>
+</li>
+<li><p>On the <strong>vCloud Director</strong> tab, enter your password and then click <strong>Confirm</strong>.</p>
+<p><img src="images/locate-image-2.png" alt="vCloud Director"></p>
+</li>
+<li><p>Click <strong>Administration</strong>.</p>
+<p><img src="images/locate-image-3.png" alt="Administration"></p>
+</li>
+<li><p>Right-click the VDC and select <strong>Properties</strong>.</p>
+</li>
+<li><p>Click the <strong>Metadata</strong> tab.</p>
+<p><img src="images/locate-image-4.png" alt="Metadata"></p>
+</li>
+<li><p>The following fields indicate the location of your VDC:</p>
+<ul>
+<li><p><strong>provider-site</strong> - indicates the site in which your VDC is located: <strong>Farnborough</strong> or <strong>Corsham</strong></p>
+</li>
+<li><p><strong>provider-region</strong> - indicates the region in which your VDC is located, for example <strong>1</strong> or <strong>5</strong>.</p>
+</li>
+<li><p><strong>provider-zone</strong> - indicates the zone in which your VDC is located, for example <strong>1(AF1)</strong> or <strong>B</strong></p>
+</li>
+</ul>
+<p><img src="images/locate-image-5.png" alt="Metadata information"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you set up your VDC to use synchronous protection, then the VDC is stretched across multiple sites. The metadata indicates this as follows:</p>
+<ul>
+<li><strong>provider-protection-synchronous</strong> is <strong>Yes</strong></li>
+<li><strong>provider-site</strong> - indicates that your VDC is stretched across both sites: <strong>Farnborough or Corsham</strong></li>
+<li><strong>provider-region</strong> - indicates that your VDC is stretched across multiple regions, for example <strong>1 or 2</strong></li>
+<li><strong>provider-zone</strong> - indicates that your VDC is stretched across multiple zones, for example <strong>1(AE1) or 2(AE2)</strong></li>
+</ul>
+</div>
+<p>You can use VM Location to locate individual VMs within the VDC. For more information, see <a href="https://portal.ukcloud.com/support/knowledge_centre/4e69cbb9-b56c-4af6-a775-88c9fc11eefa">How to use VM Location in vCloud Director</a>.</p>
+</li>
+<li><p>When you're done, click <strong>Cancel</strong>.</p>
+</li>
+</ol>
+<h2 id="finding-the-location-of-a-vdc-via-the-vcloud-director-api">Finding the location of a VDC via the vCloud Director API</h2>
+<p>You can also find the location of your VDC by calling the vCloud Director API. For more information about the vCloud Director API, see <a href="https://code.vmware.com/apis/287/vcloud">vCloud Director API Guide</a>.</p>
+<p>For example, to retrieve all the metadata for a specified VDC, call the <code>GET /vcd/&lt;id&gt;/metadata</code> endpoint.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-locate-vdc.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

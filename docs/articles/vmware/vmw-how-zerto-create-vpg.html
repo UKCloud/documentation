@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to create a virtual protection group | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to create a virtual protection group | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-create-a-virtual-protection-group">How to create a virtual protection group</h1>
+
+<h2 id="overview">Overview</h2>
+<p>A virtual protection group (VPG) is a collection of virtual machines (VMs) that are grouped together for some purpose, for example data protection, disaster recovery or workload migration. When you create a VPG, a replica virtual disk is created on the target site (for recovery or migration) for each VM in the VPG. These replica disks are then populated with the data in the source VMs by synchronising the VMs with the target site replicas.</p>
+<p>After the initial synchronisation completes, any writes to disk from the VMs in the source site are sent to the target site. These writes are stored in the target site in journals.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This guide is intended for users who are:</p>
+<ul>
+<li>Setting up Disaster Recovery as a Service</li>
+<li>Setting up Journaling Protection</li>
+<li>Migrating workloads onto the UKCloud platform</li>
+</ul>
+<p>For Journaling Protection, you must have access to the Zerto Self-Service Portal in the UKCloud zone in which the VMs that you want to protect are located.</p>
+<p>For Disaster Recovery as a Service or Migration to the Cloud, you must have access to the Zerto Virtual Manager Web Client in the local environment in which the VMs that you want to protect or migrate are located.</p>
+<h2 id="creating-a-virtual-protection-group-in-the-zerto-self-service-portal-journaling-protection">Creating a virtual protection group in the Zerto Self-Service Portal (Journaling Protection)</h2>
+<p>If you're creating a VPG for Journaling Protection, you specify the vApp to protect and all the VMs in that vApp are included in the VPG.</p>
+<ol>
+<li><p>Log in to the ZSSP.</p>
+<p>For more detailed instructions, see <a href="vmw-how-zerto-access-zssp.html"><em>How to access the Zerto Self-Service Portal</em></a>.</p>
+<p>Use the ZSSP login link for the zone in which the VMs that you want to protect are located.</p>
+</li>
+<li><p>Select the <em>VPGs</em> tab and then click <strong>NEW VPG</strong>.</p>
+<p><img src="images/vpg-image-1.png" alt="VPGs"></p>
+</li>
+<li><p>In the <em>Create VPG</em> dialog, specify the <strong>VPG Name</strong>.</p>
+<p>The name must be unique and contain no more than 80 characters.</p>
+</li>
+<li><p>From the <strong>Available VMs</strong> list, select the vApp that contains the VMs that you want to protect.</p>
+</li>
+<li><p>From the <strong>Recovery Site</strong> list, choose your target site.</p>
+</li>
+<li><p>From the <strong>Org vDC</strong> list, choose the VDC in which you want to replicate the VMs.</p>
+</li>
+<li><p>UKCloud provides a single <strong>Service Profile</strong>: <strong>System Service Profile</strong>.</p>
+<p><img src="images/vpg-image-2.png" alt="profile"></p>
+</li>
+<li><p>Click <strong>SAVE</strong>.</p>
+<p>At this point, the selected VMs are synchronised to the target site. This synchronisation between the source site and target site may take some time, depending on the size of the VMs.</p>
+<p>After the initial synchronisation, all the VMs in the VPG are fully protected and all write operations to those VMs are sent to the journal.</p>
+</li>
+<li><p>After the initial creation of your VPG, you need to edit it to determine what happens during disaster recovery.</p>
+</li>
+<li><p>On the <em>VPGs</em> tab, click the pencil icon next to your <strong>VPG Name</strong>.</p>
+<p><img src="images/vpg-image-3.png" alt="VPG name"></p>
+</li>
+<li><p>From the <strong>Priority</strong> list, choose the priority of transferring data from the source site to the target site for this VPG when there is limited bandwidth and more than one VPG is defined on the source site.</p>
+<ul>
+<li><strong>High</strong> - Updates from VPGs with high priority are passed over the WAN first</li>
+<li><strong>Medium</strong> - Updates from VPGs with medium priority use whatever bandwidth is left after the high priority VPGs have used it</li>
+<li><strong>Low</strong> - Updates from VPGs with low priority use whatever bandwidth is left after the medium VPGs have used it</li>
+</ul>
+<p><img src="images/vpg-image-4.png" alt="priority list"></p>
+</li>
+<li><p>Click <strong>NEXT</strong>.</p>
+</li>
+<li><p>In the <em>VMs</em> page, you can see the VMs that are included in the VPG.</p>
+<p><img src="images/vpg-image-5.png" alt="VMs page"></p>
+</li>
+<li><p>Click <strong>NEXT</strong>.</p>
+</li>
+<li><p>In the <em>REPLICATION</em> page, you can see the options you selected for the <strong>Recovery Site</strong> and <strong>Recovery Org vDC</strong>.</p>
+<p><img src="images/vpg-image-6.png" alt="recovery"></p>
+</li>
+<li><p>To change the <strong>Storage Profile</strong> used for the VMs in the VPG, click <strong>VM SETTINGS</strong>.</p>
+<p>You cannot change the <strong>Journal Size</strong> or <strong>Journal Warning Threshold</strong>.</p>
+<p>Click <strong>OK</strong> when you're done.</p>
+<p><img src="images/vpg-image-7.png" alt="journal size"></p>
+</li>
+<li><p>Click <strong>NEXT</strong>.</p>
+</li>
+<li><p>The <em>STORAGE</em> page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).</p>
+<p><img src="images/vpg-image-8.png" alt="storage"></p>
+<p>If you want to edit the storage settings for a VM, select the VM and then click <strong>EDIT SELECTED</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Make sure that the <strong>Thin</strong> checkbox is selected for all VMs.</p>
+</div>
+</li>
+<li><p>When you've finished setting the options for each of the VMs, click <strong>NEXT</strong>.</p>
+</li>
+<li><p>In the <em>RECOVERY</em> page, from the <strong>Failover/Move Network</strong> list, choose the network to use in the target site for a live failover.</p>
+</li>
+<li><p>From the <strong>Failover Test Network</strong> list, choose the network to use in the target site for a test failover of VMs.</p>
+<p>If you select <strong>Isolated</strong>, the network interface controller (NIC) will not be connected to the VM when it's brought up in the target site.</p>
+</li>
+<li><p><strong>vCD Guest Customization</strong> controls whether the failed‑over VM is subject to guest customization to set its IP address inside its operating system.</p>
+<p><img src="images/vpg-image-9.png" alt="customization"></p>
+</li>
+<li><p>Click <strong>NEXT</strong>.</p>
+</li>
+<li><p>In the <em>NICs</em> page, specify the network interface controller (NIC) to use for the VMs after a live or test failover.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you specify different IP addresses (or use <strong>IP Pool</strong>) for the IP addresses here, you must enable <strong>vCD Guest Customization</strong> on the <em>RECOVERY</em> page.</p>
+</div>
+<p><img src="images/vpg-image-10.png" alt="Ip pool"></p>
+</li>
+<li><p>Click <strong>NEXT</strong>.</p>
+</li>
+<li><p>The System Service Profile does not permit Backup Services, so click <strong>NEXT</strong> again.</p>
+</li>
+<li><p>In the <em>SUMMARY</em> page, review the options you have selected for the VPG and click <strong>DONE</strong> to create the VPG.</p>
+</li>
+</ol>
+<h2 id="creating-a-virtual-protection-group-in-zerto-virtual-manager-disaster-recovery-as-a-service-and-migration-to-the-cloud">Creating a virtual protection group in Zerto Virtual Manager (Disaster Recovery as a Service and Migration to the Cloud)</h2>
+<p>If you're creating a VPG for Disaster Recovery as a Service or Migration to the Cloud, use the ZVM Web Client in your local environment. When you create the VPG, you specify the individual VMs that you want to protect or migrate.</p>
+<ol>
+<li><p>Log in to the ZVM Web Client.</p>
+</li>
+<li><p>Select the <strong>VPGs</strong> tab and then click <strong>NEW VPG</strong>.</p>
+</li>
+<li><p>On the <em>NEW VPG</em> page of the <em>Create VPG</em> dialog, specify the <strong>VPG Name</strong>.</p>
+</li>
+<li><p>From the <strong>Priority</strong> list, choose the priority of transferring data from the source site to the target site for this VPG when there is limited bandwidth and more than one VPG is defined on the source site.</p>
+<ul>
+<li><strong>High</strong> - Updates from VPGs with high priority are passed over the WAN first</li>
+<li><strong>Medium</strong> - Updates from VPGs with medium priority use whatever bandwidth is left after the high priority VPGs have used it</li>
+<li><strong>Low</strong> - Updates from VPGs with low priority use whatever bandwidth is left after the medium VPGs have used it</li>
+</ul>
+</li>
+<li><p>Click <strong>NEXT</strong>.</p>
+</li>
+<li><p>On the <em>VMs</em> page, select the VMs that you want to protect or migrate and then click <strong>NEXT</strong>.</p>
+</li>
+<li><p>On the <em>REPLICATION</em> tab, from the <strong>Recovery Site</strong> list, choose your UKCloud target site.</p>
+</li>
+<li><p>From the <strong>Recovery Org vDC</strong> list, choose the VDC in which you want to replicate the VMs.</p>
+</li>
+<li><p>UKCloud provides a single <strong>Service Profile</strong>: <strong>System Service Profile</strong>.</p>
+</li>
+<li><p>Click <strong>NEXT</strong>.</p>
+</li>
+<li><p>The <em>STORAGE</em> page displays the storage used for the VM data (by default, this is the same storage as that used for the VM definition).</p>
+</li>
+<li><p>To change the <strong>Storage Profile</strong> used for the VMs in the VPG, click <strong>VM SETTINGS</strong>.</p>
+<p>If you want to edit the storage settings for a VM, select the VM and then click <strong>EDIT SELECTED</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Make sure that the <strong>Thin</strong> checkbox is selected for all VMs.</p>
+</div>
+</li>
+<li><p>When you've finished setting the options for each of the VMs, click <strong>NEXT</strong>.</p>
+</li>
+<li><p>In the <em>RECOVERY</em> page, from the <strong>Failover/Move Network</strong> list, choose the network to use in the target site for a live failover or move operation.</p>
+</li>
+<li><p>From the <strong>Failover Test Network</strong> list, choose the network to use in the target site for a test failover of VMs.</p>
+</li>
+<li><p>Click <strong>NEXT</strong>.</p>
+</li>
+<li><p>In the <em>NICs</em> page, specify the network interface controller (<strong>NIC</strong>) to use for the VMs after a live or test failover, or a move operation.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you encounter issues with MAC addresses, edit each VM and set the <strong>MAC Address</strong> to <strong>Reset</strong> for both the <strong>Failover/Move</strong> and <strong>Test</strong> networks to assign a new address on failover or move.</p>
+</div>
+</li>
+<li><p>At this point, you can click <strong>DONE</strong> to create the VPG.</p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>For Disaster Recovery as a Service and Journaling Protection, we recommend that you run a test failover to verify that, in the case of an actual disaster, your VMs can be recovered successfully. For information about how to do this, as well as how to perform an actual failover, see <a href="vmw-how-zerto-perform-failover.html"><em>How to perform a failover</em></a>.</p>
+<p>For Migration to the Cloud, you can now migrate your selected VMs to the UKCloud platform. For more information, see <a href="../migration/migr-how-zerto-migrate-to-ukcloud.md"><em>How to migrate your workloads to the UKCloud platform</em></a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-zerto-create-vpg.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

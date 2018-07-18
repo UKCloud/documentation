@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Cloud Storage Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Cloud Storage Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="cloud-storage-service-scope">Cloud Storage Service Scope</h1>
+
+<h2 id="about-this-document">About this document</h2>
+<p>This document describes the boundaries of the Cloud Storage service, along with the division of responsibilities between UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.</p>
+<h2 id="about-cloud-storage">About Cloud Storage</h2>
+<p>Cloud Storage from UKCloud is a secure and highly adaptable storage platform designed to address a wide variety of use cases. As an object storage platform based on Dell EMC's Elastic Cloud Storage (ECS), it is natively optimised for cloud storage in terms of scale, resilience and accessibility.</p>
+<h2 id="service-options">Service options</h2>
+<p>Organisations can choose from two service levels:</p>
+<p><strong>STANDARD</strong> - data is stored in a single named UK-sovereign data centre with data protection using erasure coding. This provides fault tolerance by storing three copies of the data across separate nodes, thus improving data durability.</p>
+<p><strong>ENHANCED</strong> - data is stored in two UK-sovereign data centres, with a copy maintained in a primary named UK data centre and copied to a geographically remote UK data centre. This provides a greater degree of fault tolerance than the STANDARD service level by storing an additional copy of the data in a separate site.</p>
+<p>If you want more control and visibility of your disaster recovery solution, you can design your solution to write data independently to each data centre at our STANDARD service level, instead of using our ENHANCED service level.</p>
+<p>Full details of the available service options are outlined in the Service Definition (<a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/946099568360634-service-definition-document-2018-05-21-1258.pdf">Elevated</a>).</p>
+<h2 id="service-availability">Service availability</h2>
+<p>UKCloud platform availability is based on the service level you purchase.</p>
+<p>The service level agreement (SLA) for the STANDARD service level guarantees 99.95% availability.</p>
+<p>The ENHANCED service level SLA guarantees 99.99% availability. In the event of a site failure, there will be an outage to objects created on the failed site. UKCloud will bring these objects online in the other site within 15 minutes.</p>
+<p>You are entitled to claim Service Credits for outages to services that take you out of SLA. For more about how we calculate SLAs, see the <a href="../other/other-ref-sla-definition.md"><em>SLA Definition</em></a>.</p>
+<h2 id="service-background">Service background</h2>
+<p>We actively capacity-manage the cloud platform to ensure you have access to the resources you request.</p>
+<p>The UKCloud platform is designed using sites, regions and zones. The relationship between them is shown below:</p>
+<p><img src="images/cloud-storage-image-1.png" alt="Geographical diversity"></p>
+<p>You can specify Farnborough or Corsham as the site where you would like to have your service provisioned. We will try to accommodate requests and will advise you if we are unable do so.</p>
+<p>We control the deployed versions of technology on the platform. This covers internal platform-supporting technologies, and any technology versions available to you.</p>
+<h1 id="platform-management">Platform management</h1>
+<p>Users can access, manage and view their Cloud Storage service, in any of the following ways:</p>
+<ul>
+<li><p><strong>APIs.</strong> You can use either the ECS S3-compatible API or the ECS Atmos API. The APIs are not interchangeable, so you need to choose carefully which API you want to use. Refer to the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf">EMC ECS Data Access Guide</a> for more information on the features of both APIs.</p>
+</li>
+<li><p><strong>Command Line Interface (CLI).</strong> CLI tools enable access from the command line by translating commands into the relevant API calls.</p>
+</li>
+<li><p><strong>Storage Gateways.</strong> These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. See <a href="https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf"><em>Blueprint -- Using Storage Gateways with Cloud Storage</em></a> for more information.</p>
+</li>
+<li><p><strong>UKCloud Portal.</strong> Contains information about the namespaces and users within your Cloud Storage environment, as well as a graphical representation of your storage consumption. For more information on the Portal functionality, see <a href="cs-how-view-info-portal.html"><em>How to view Cloud Storage information in the UKCloud Portal</em></a>.</p>
+</li>
+</ul>
+<p>To create additional namespaces or users, you must raise a service request. When requesting additional users, you can specify whether you want these users to have read-write or read-only permissions.</p>
+<p>We do not currently offer access as an NFS or a HDFS.</p>
+<p>You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the ECS Portal.</p>
+<h2 id="protection">Protection</h2>
+<p>You can protect against accidental deletion or modification of data by using retention policies or versioning.</p>
+<p><strong>Retention policies</strong> add a layer of protection by preventing files from being modified or deleted for a specified period of time, making them best suited to static data. Retention policies cannot be applied at the object level -- these API requests will be rejected.</p>
+<p><strong>Versioning</strong> can protect against accidental deletion and modification by keeping multiple variants of an object. When versioning is enabled, any operation that would have overwritten an object retains the old version of the object, enabling you to retrieve or restore to a previous version using the S3 API. Each version of an object will be billable for the storage it consumes, so you may want to implement versioning expiration policies to manage your storage footprint.</p>
+<p><strong>Encryption at rest</strong> can be enabled when creating a new namespace or bucket. This encrypts data inline, using an AES 256-bit algorithm, before it is stored on drives. If you want your data to be encrypted at the namespace level, you must request this functionality before your namespace is created, as encryption cannot be enabled or disabled after a namespace is created.</p>
+<h2 id="networks">Networks</h2>
+<p>Cloud Storage is available on a range of Assured and Elevated networks. An overview of the available networks in each region is available in <a href="../other/other-ref-services-by-region.html"><em>UKCloud Services By Region</em></a>.</p>
+<p>Cloud Storage in our Assured OFFICAL domain uses the same environment for both PSN Assured and internet connections. Although it isn't possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.</p>
+<p>We manage the physical firewalls that face public and secure networks.</p>
+<h2 id="protective-monitoring">Protective monitoring</h2>
+<p>We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the perimeter of your estate.</p>
+<p>We don't provide Protective Monitoring services within your estate - it is your responsibility to act at this level.</p>
+<p>In line with UKCloud's SISP, we provide notification of customer-impacting security incidents. It is your responsibility to report similar incidents to us.</p>
+<h2 id="service-migration">Service migration</h2>
+<p>You can request a migration through a Service Request. Migrations may be between:</p>
+<ul>
+<li>Services (for example, STANDARD to ENHANCED)</li>
+<li>UKCloud sites or availability zones</li>
+<li>The Assured and Elevated platforms</li>
+</ul>
+<h2 id="customer-service">Customer service</h2>
+<p><strong>Customer Success Manager (CSM).</strong> For the first 90 days of the service, you have access to a UKCloud Customer Success Manager, who will help you with your adoption of the UKCloud Cloud Storage service, including finding relevant systems and using UKCloud tools and processes.</p>
+<p><strong>Cloud Architects.</strong> UKCloud Cloud Architects support you during the design of solutions for the cloud platform. UKCloud Cloud Architects are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions.</p>
+<p><strong>Technical Account Managers (TAM).</strong> You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.</p>
+<p><strong>Support.</strong> After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the <a href="https://ukcloud.com/wp-content/uploads/2017/07/UKCloud-Factsheet-Customer-Care.pdf"><em>Customer Engagement Factsheet</em></a>.</p>
+<h2 id="customer-responsibilities">Customer responsibilities</h2>
+<ul>
+<li>Assessing whether the UKCloud platform can support the various requirements of your application and storage needs.</li>
+<li>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.</li>
+<li>If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.</li>
+<li>The customer is also responsible for ensuring only lawful data that supports the UK public sector is stored and processed by applications on this environment, and that they fully comply with the UKCloud Security Operating Procedures (SyOPs) and other information assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.</li>
+</ul>
+<h2 id="service-provisioning">Service provisioning</h2>
+<p>Within 1 day of accepting an order (shorter deployment times are typically achieved and can be prioritised upon request), UKCloud will create the customer's Primary Administrator account and send a Welcome Pack which includes the URL for the UKCloud Customer Portal, and the getting started guide.</p>
+<p>The customer can then use these details to configure their application (for example GeoDrive, CIFS-ECS, Cloud Tiering Appliance and Documentum) or access Cloud Storage via the API to begin using the service.</p>
+<p>UKCloud has created a number of videos, help guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the Knowledge Centre, accessed via the UKCloud Portal.</p>
+<p>UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud would be pleased to introduce you to the right partner to suit your needs.</p>
+<h2 id="service-constraints">Service constraints</h2>
+<p>UKCloud will adhere to the following in terms of maintenance windows:</p>
+<p>&quot;Planned Maintenance&quot; means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, UKCloud shall provide affected customers with at least fourteen (14) days'
+notice of the Planned Maintenance.</p>
+<p>If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered.</p>
+<p>&quot;Emergency Maintenance&quot; means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud shall:</p>
+<p>a)  provide affected customers with at least six (6) hours' advance notice and</p>
+<p>b)  carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.</p>
+<p>If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.</p>
+<h2 id="supporting-documents-and-resources">Supporting documents and resources</h2>
+<p>The following documents contain more information about Cloud Storage and the service options:</p>
+<ul>
+<li><p><em>Cloud Storage Service Definition</em> (<a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/946099568360634-service-definition-document-2018-05-21-1258.pdf">Elevated</a>)</p>
+</li>
+<li><p><a href="cs-faq.html"><em>Cloud Storage FAQ</em></a></p>
+</li>
+<li><p><a href="cs-gs.html"><em>Getting Started Guide for Cloud Storage</em></a></p>
+</li>
+<li><p><a href="cs-how-view-info-portal.html"><em>How to view Cloud Storage information in the UKCloud Portal</em></a></p>
+</li>
+<li><p><a href="https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf"><em>Blueprint -- Using Storage Gateways with Cloud Storage</em></a></p>
+</li>
+<li><p><a href="https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-575-Blueprint-Using-file-browsers-with-Cloud-Storage-ECS-v1.pdf"><em>Blueprint -- Using File Browsers with Cloud Storage</em></a></p>
+</li>
+</ul>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/cloud-storage/cs-sco.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

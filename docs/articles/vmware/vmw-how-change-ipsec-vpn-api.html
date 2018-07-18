@@ -1,0 +1,514 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to change IPsec VPN settings via the vCloud API | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to change IPsec VPN settings via the vCloud API | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-change-ipsec-vpn-settings-via-the-vcloud-director-api">How to change IPsec VPN settings via the vCloud Director API</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This guide shows you how to retrieve, modify, and submit blocks of XML that represent the configuration of the IPsec VPN tunnels. The guide covers modifications to the local and peer IP addresses, local and peer IDs as well the addition or removal of local and peer subnets. In addition to this, the guide also outlines the steps required to modify the shared secret key used on a given IPsec VPN tunnel.</p>
+<p>Use cases:</p>
+<ul>
+<li><p>Enabling customers to quickly amend IPsec configurations</p>
+<p>Modifications of this nature are not possible in the vCloud Director graphical user interface without first deleting the existing IPsec VPN configuration entirely and re-entering the settings. Depending on the number of tunnels, this can be a lengthy task. Making changes to the IPsec VPN configuration via the vCloud API can greatly speed up this process.</p>
+</li>
+<li><p>Edge gateway configuration data</p>
+<p>You can also use the steps in this guide to obtain a backup of the current configuration applied to an edge gateway. You can then use this to restore the configuration of the edge gateway at a later point in time. By following the instructions in this guide you can make amendments to the IPsec VPN configuration without first needing to engage with UKCloud Support.</p>
+</li>
+</ul>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>Before using the vCloud API to view and update IPsec VPN settings, we recommend that you install a REST client that enables you to access the API. The steps in this article use a Firefox plugin called RESTClient. For information about how to install this plugin, see <a href="vmw-how-install-vcloud-api-rest-client.html">How to install a REST client to access the vCloud API</a>.</p>
+<p>You also need to find your API credentials. For more information, see <a href="vmw-how-access-vcloud-api.html">How to access vCloud Director through the vCloud API</a></p>
+<h2 id="obtaining-an-authorisation-token">Obtaining an authorisation token</h2>
+<p>To start interacting with the vCloud API, you first need to obtain an <code>x-vcloud-authorization</code> token; to do this you need to adjust some settings in RESTClient.</p>
+<ol>
+<li><p>In your browser, click the <strong>RESTClient</strong> icon.</p>
+<p><img src="images/vmw-firefox-restclient-icon.png" alt="RESTClient icon"></p>
+</li>
+<li><p>From the <strong>Method</strong> menu, select <strong>POST</strong>.</p>
+<p><img src="images/vmw-restclient-request-method-post.png" alt="POST request method"></p>
+</li>
+<li><p>In the <strong>API</strong> field, enter the API URL you recorded earlier and append the following to the end of the URL:</p>
+<pre><code> /api/sessions
+</code></pre>
+<p><img src="images/vmw-restclient-api-url.png" alt="API URL"></p>
+</li>
+<li><p>Next add a Basic Authentication header. To do this, from the <strong>Authentication</strong> menu at the top of the REST Client, select <strong>Basic Authentication</strong>.</p>
+<p><img src="images/vmw-restclient-basic-authentication.png" alt="Basic Authentication menu option"></p>
+</li>
+<li><p>In the <em>Basic Authentication</em> dialog box, in the <strong>Username</strong> field, enter your API username recorded earlier from the API page.</p>
+</li>
+<li><p>In the <strong>Password</strong> field enter your UKCloud Portal password and then click <strong>Okay</strong>.</p>
+<p><img src="images/vmw-restclient-authentication-details.png" alt="Basic Authentication dialog box"></p>
+</li>
+<li><p>The <em>Request</em> section now includes an Authorization header.</p>
+<p><img src="images/vmw-restclient-authentication-header.png" alt="Authorization header"></p>
+</li>
+<li><p>Next add an Accept header. To do this, from the <strong>Headers</strong> menu, select <strong>Custom Header</strong>.</p>
+<p><img src="images/vmw-restclient-custom-header.png" alt="Custom Header menu option"></p>
+</li>
+<li><p>In the <em>Request Header</em> dialog box, in the <strong>Name</strong> field, enter <code>Accept</code></p>
+</li>
+<li><p>In the <strong>Value</strong> field enter <code>application/*+xml;version=5.5</code> and then click <strong>Okay</strong>.</p>
+<p><img src="images/vmw-restclient-request-headers.png" alt="Request Headers dialog box"></p>
+</li>
+<li><p>The <em>Headers</em> section should now be displayed, containing the Accept header.</p>
+<p><img src="images/vmw-restclient-accept-header.png" alt="Headers section with Accept header"></p>
+</li>
+<li><p>The RESTClient has now got all the required settings in place to make a request to the vCloud API to obtain a <code>x-vcloud-authorization</code> token, so click the <strong>Send</strong> button.</p>
+</li>
+<li><p>When a response is received the <strong>Headers</strong> tab in the <em>Response</em> section will be populated, including an <code>x-vcloud-authorization</code> token.</p>
+<p><img src="images/vmw-restclient-authentication-token.png" alt="API response with authentication token"></p>
+</li>
+<li><p>The <code>x-vcloud-authorization</code> token will replace the Basic Authentication header added earlier. To do this highlight and copy the string of characters displayed after the word <code>x-vcloud-authorization</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If at any point while following the instructions in this guide, the output displayed in the REST Client does not look similar to that shown in the images, you can use the value of the <strong>Status Code</strong> field to determine what went wrong and needs investigation. In this case above, <strong>Status Code</strong> received was HTTP 200 OK, which means that the request succeeded. For a list of HTTP response codes, see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP Response Codes</a>.</p>
+</div>
+</li>
+<li><p>To add an <code>x-vcloud-authorization</code> header, from the <strong>Headers</strong> menu, select <strong>Custom Header</strong>.</p>
+</li>
+<li><p>In the <em>Request Header</em> dialog box, in the <strong>Name</strong> field enter <code>x-vcloud-authorization</code>.</p>
+</li>
+<li><p>In the <strong>Value</strong> field, paste the string of characters copied in the previous step, then click <strong>Okay</strong>.</p>
+<p><img src="images/vmw-restclient-request-headers-token.png" alt="Authorization token in request headers"></p>
+</li>
+<li><p>Now that you've obtained an <code>x-vcloud-authorization</code> token, you can remove the Basic Authentication Header. Click the <strong>x</strong> in the upper right-hand corner of the header.</p>
+<p><img src="images/vmw-restclient-basic-authentication-remove.png" alt="Remove basic authentication">## Retrieving organisation details via the API</p>
+</li>
+</ol>
+<h2 id="retrieving-organisation-details-via-the-api">Retrieving organisation details via the API</h2>
+<p>Now that you've obtained an <code>x-vcloud-authorization</code> token, you can call the vCloud API to retrieve the information that you need about your organisation to set up your IPsec VPN.</p>
+<ol>
+<li><p>Set the <strong>Method</strong> to <strong>GET</strong>.</p>
+<p><img src="images/vmw-restclient-method-get.png" alt="GET request method"></p>
+</li>
+<li><p>In the <em>Response</em> section, select the <strong>Preview</strong> tab.</p>
+<p>This view lists the links that you can use to drill down into the various objects exposed via the vCloud API. Of interest in the output below is a link that will, when queried, return details about the organisation and the objects contained within it.</p>
+<p><img src="images/vmw-restclient-get-vorg.png" alt="Link for retrieving compute service details"></p>
+<p>The link should look something like:</p>
+<pre><code> https://&lt;api_url&gt;/api/org/&lt;org_id&gt;
+</code></pre>
+</li>
+<li><p>Copy the URL and paste it into the Request <strong>URL</strong> field.</p>
+<p><img src="images/vmw-restclient-get-vorg-url.png" alt="API call to get compute service details"></p>
+</li>
+<li><p>Click <strong>Send</strong>.</p>
+<p>After a short amount of time the contents of the Response <strong>Preview</strong> tab will be updated to reflect the response from the vCloud API to your latest request, including links to each VDC in the organisation.</p>
+</li>
+</ol>
+<h2 id="retrieving-virtual-data-centre-details-via-the-api">Retrieving virtual data centre details via the API</h2>
+<p>To retrieve details about the VDCs in an organisation:</p>
+<ol>
+<li><p>Copy the link for the VDC containing the target edge gateway for your IPsec VPN.</p>
+<p>The link should look something like:</p>
+<pre><code> https&gt;//&lt;api_url&gt;/api/vdc/&lt;vdc_id&gt;
+</code></pre>
+</li>
+<li><p>Click <strong>Send</strong>.</p>
+<p>The contents of the Response <strong>Preview</strong> tab will be updated again.</p>
+</li>
+</ol>
+<h2 id="retrieving-edge-gateway-configuration-via-the-api">Retrieving edge gateway configuration via the API</h2>
+<p>To retrieve details of the edge gateway configuration:</p>
+<ol>
+<li><p>The response this time will probably be quite long. To easily locate a specific section in the response, use your browser's search utility. You can invoke this in Firefox by pressing <strong>CTRL+F</strong>. In the search dialog window at the bottom of the screen enter <code>edgeGateways</code>, and then click the down arrow button to locate a section that looks similar to the one shown below:</p>
+<pre><code> &lt;Link rel=&quot;edgeGateways&quot; href=&quot;https://api.vcd.portal.skyscapecloud.com/api/admin/vdc/&lt;vdc_id&gt;/edgeGateways&quot; type=&quot;application/vnd.vmware.vcloud.query.records+xml&quot; /&gt;
+</code></pre>
+</li>
+<li><p>Copy the link ending in <code>/edgeGateways</code> and paste it into the URL field at the top of the RESTClient. Ensure that the <strong>Method</strong> drop down is set to <strong>GET</strong> and click <strong>Send</strong>.</p>
+<p>If this request is successful, the response will contain a link to the edge gateway which, when queried, will return the configuration of the edge gateway. Once you have received a response, use your browser's search utility to locate the <code>EdgeGatewayRecord</code> section within the response.</p>
+<pre><code> &lt;EdgeGatewayRecord gatewayStatus=&quot;READY&quot; haStatus=&quot;UP&quot; isBusy=&quot;false&quot; name=&quot;UKCloud Gateway (nft00002i2)&quot; numberOfExtNetworks=&quot;1&quot; numberOfOrgNetworks=&quot;8&quot; vdc=&quot;https://api.vcd.portal.skyscapecloud.com/api/vdc/&lt;vdc_id&gt;&quot; href=&quot;https://api.vcd.portal.skyscapecloud.com/api/admin/edgeGateway/&lt;edge_id&gt;&quot;     task=&quot;https://api.vcd.portal.skyscapecloud.com/api/task/&lt;task_id&gt;&quot; isSyslogServerSettingInSync=&quot;true&quot; taskOperation=&quot;networkConfigureEdgeGatewayServices&quot; taskStatus=&quot;success&quot; taskDetails=&quot; &quot; /&gt;
+</code></pre>
+</li>
+<li><p>Within the <code>EdgeGatewayRecord</code> section of the above from the response, locate the link to the edge gateway that starts with the following:</p>
+<pre><code> https://&lt;api_url&gt;/api/admin/edgeGateway/
+</code></pre>
+</li>
+<li><p>Appended to the end of the URL will be a unique identifier for the edge gateway within the VDC. Copy this link, paste it into the URL field and then click <strong>Send</strong>.</p>
+<p>After a short amount of time the current configuration of the edge gateway will be displayed in a block of XML.</p>
+</li>
+</ol>
+<h2 id="reviewing-the-edge-gateway-configuration">Reviewing the edge gateway configuration</h2>
+<p>The edge configuration information is contained between an opening <code>&lt;Configuration&gt;</code> and closing <code>&lt;/Configuration&gt;</code> tag.</p>
+<p>This block of XML is split into sections which detail the configuration settings applied to a specific item, function or service available on the edge gateway. There are twelve sections in total; however only the configuration settings contained under the <code>&lt;GatewayIpsecVpnService&gt;</code> tags will be discussed in this guide.</p>
+<p>The example below shows a high‑level overview of the structure of the XML block returned, including the <code>&lt;GatewayIpsecVpnServices&gt;</code> tags.</p>
+<pre><code>&lt;EdgeGateway&gt;
+   &lt;Configuration&gt;
+      &lt;GatewayBackingConfig&gt;
+      &lt;/GatewayBackingConfig&gt;
+      &lt;GatewayInterfaces&gt;
+      &lt;/GatewayInterfaces&gt;
+      &lt;EdgeGatewayServiceConfiguration&gt;
+         &lt;FirewallService&gt;
+         &lt;/FirewallService&gt;
+         &lt;NatService&gt;
+         &lt;/NatService&gt;
+         &lt;GatewayIpsecVpnService&gt;
+         &lt;/GatewayIpsecVpnService&gt;
+         &lt;StaticRoutingService&gt;
+         &lt;/StaticRoutingService&gt;
+         &lt;LoadBalancerService&gt;
+         &lt;/LoadBalancerService&gt;
+      &lt;/EdgeGatewayServiceConfiguration&gt;
+      &lt;HaEnabled&gt;
+      &lt;/HaEnabled&gt;
+      &lt;UseDefaultRouteForDnsRelay&gt;
+      &lt;/UseDefaultRouteForDnsRelay&gt;
+   &lt;/Configuration&gt;
+&lt;/EdgeGateway\&gt;
+</code></pre>
+<p>Before making any changes to the edge gateway via the API it is highly recommended to keep a copy of the XML returned. You can then use this backup to restore the configuration of the edge gateway to a known working configuration if the need arises.</p>
+<p>To copy the XML:</p>
+<ol>
+<li><p>Select the Response <strong>Preview</strong> tab of the RESTClient.</p>
+</li>
+<li><p>Scroll down to the opening <code>&lt;Configuration&gt;</code> tag and highlight     everything up to and including the closing <code>&lt;\Configuration&gt;</code> tag. The length of the XML to copy is dependent on the number of NAT, firewall rules and another configuration applied to the edge gateway.</p>
+</li>
+<li><p>With the contents of the <code>&lt;Configuration&gt;</code> tags highlighted, right click and select <strong>Copy</strong>.</p>
+</li>
+<li><p>Paste the configuration into a text editor, saving the file to a known location on your computer. Using a text editor that offers syntax highlighting such as Notepad++ will simplify the editing process.</p>
+</li>
+</ol>
+<h3 id="locating-the-ipsec-vpn-settings-in-the-returned-xml">Locating the IPsec VPN settings in the returned XML</h3>
+<p>To locate the IPsec VPN settings, open a new text editor window and copy and paste the contents between the opening <code>&lt;GatewayIpsecVpnService&gt;</code> and closing <code>&lt;/GatewayIpsecVpnService&gt;</code> tags. The contents should look similar to the XML block shown below:</p>
+<pre><code>&lt;GatewayIpsecVpnService&gt;
+   &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+   &lt;Endpoint&gt;
+      &lt;Network type=&quot;application/vnd.vmware.admin.network+xml&quot; href=&quot;https://api.vcd.portal.ukcloud.com/api/admin/network/3c284ec8-2850- ba77-098c-7f697a3d8769&quot;/&gt;
+      &lt;PublicIp&gt;37.26.88.73&lt;/PublicIp&gt;
+   &lt;/Endpoint&gt;
+   &lt;Tunnel&gt;
+      &lt;Name&gt;UKCloud IPSEC VPN Demo&lt;/Name&gt;
+      &lt;Description/&gt;
+      &lt;IpsecVpnThirdPartyPeer&gt;
+         &lt;PeerId&gt;134.170.188.221&lt;/PeerId&gt;
+      &lt;/IpsecVpnThirdPartyPeer&gt;
+      &lt;PeerIpAddress&gt;134.170.188.221&lt;/PeerIpAddress&gt;
+      &lt;PeerId&gt;134.170.188.221&lt;/PeerId&gt;
+      &lt;LocalIpAddress&gt;172.26.45.97&lt;/LocalIpAddress&gt;
+      &lt;LocalId&gt;172.26.45.97&lt;/LocalId&gt;
+      &lt;LocalSubnet&gt;
+         &lt;Name&gt;VPN Test Network 1&lt;/Name&gt;
+         &lt;Gateway&gt;192.168.1.254&lt;/Gateway&gt;
+         &lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
+      &lt;/LocalSubnet&gt;
+      &lt;PeerSubnet&gt;
+         &lt;Name&gt;192.168.2.0/24&lt;/Name&gt;
+         &lt;Gateway&gt;192.168.2.254&lt;/Gateway&gt;
+         &lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
+      &lt;/PeerSubnet&gt;
+      &lt;SharedSecret&gt;UKCloudIPSECVPNDemoSharedSecretKey&lt;/SharedSecret&gt;
+      &lt;SharedSecretEncrypted&gt;false&lt;/SharedSecretEncrypted&gt;
+      &lt;EncryptionProtocol&gt;AES256&lt;/EncryptionProtocol&gt;
+      &lt;Mtu&gt;1500&lt;/Mtu&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsOperational&gt;true&lt;/IsOperational&gt;
+   &lt;/Tunnel&gt;
+&lt;/GatewayIpsecVpnService&gt;
+</code></pre>
+<h2 id="modifying-the-ipsec-vpn-configuration">Modifying the IPsec VPN configuration</h2>
+<p>This section outlines common tasks performed via the API to manipulate the IPsec VPN configuration applied to a given edge gateway.</p>
+<h3 id="modifying-the-local-endpoint-ip-and-local-id">Modifying the local endpoint IP and local ID</h3>
+<p>You can change the local IP and local ID by editing the contents between the opening <code>&lt;localIpAddress&gt;</code> and closing <code>&lt;/localIpAddress&gt;</code> and
+<code>&lt;localId&gt;</code> and <code>&lt;/localId&gt;</code> tags as shown below.</p>
+<h4 id="original">Original</h4>
+<pre><code>&lt;LocalIpAddress&gt;172.26.45.97&lt;/LocalIpAddress&gt;
+&lt;LocalId&gt;172.26.45.97&lt;/LocalId&gt;
+</code></pre>
+<h4 id="modified">Modified</h4>
+<pre><code>&lt;LocalIpAddress&gt;37.26.88.73&lt;/LocalIpAddress&gt;
+&lt;LocalId&gt;37.26.88.73&lt;/LocalId&gt;
+</code></pre>
+<p>This is by far the most commonly performed modification to the IPsec VPN configuration via the vCloud API. You can use this to change the local IP address from the IP address assigned to the edge gateway on the transit network to the IP address assigned to the edge gateways on the public network. For the tunnel to come up successfully, the local IP address must be set to the edge gateway's public IP address. The local ID must also match the public IP address specified.</p>
+<h3 id="modifying-the-peer-endpoint-ip-and-peer-id">Modifying the peer endpoint IP and peer ID</h3>
+<p>If you need to move the remote endpoint of the tunnel to a new device or IP address, then you can adjust the following as required.</p>
+<h4 id="original-1">Original</h4>
+<pre><code>&lt;PeerIpAddress&gt;134.170.188.221&lt;/PeerIpAddress&gt;
+&lt;PeerId&gt;134.170.188.221&lt;/PeerId&gt;
+</code></pre>
+<h4 id="modified-1">Modified</h4>
+<pre><code>&lt;PeerIpAddress&gt;212.58.244.18&lt;/PeerIpAddress&gt;
+&lt;PeerId&gt;212.58.244.18&lt;/PeerId&gt;
+</code></pre>
+<p>When changing the peer IP address of the tunnel you must ensure that the peer ID is also updated to match the new peer IP address.</p>
+<h3 id="adding-or-removing-local-subnets">Adding or removing local subnets</h3>
+<p>You can add additional local subnets to the IPsec VPN tunnel. This involves adding a new local subnet definition to the IPsec VPN config.</p>
+<h4 id="original-2">Original</h4>
+<pre><code>&lt;LocalSubnet&gt;
+&lt;Name&gt;VPN Test Network&lt;/Name&gt;
+&lt;Gateway&gt;192.168.1.254&lt;/Gateway&gt;
+&lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
+&lt;/LocalSubnet&gt;
+</code></pre>
+<h4 id="modified-2">Modified</h4>
+<pre><code>&lt;LocalSubnet&gt;
+&lt;Name&gt;VPN Test Network 1&lt;/Name&gt;
+&lt;Gateway&gt;192.168.1.254&lt;/Gateway&gt;
+&lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
+&lt;/LocalSubnet&gt;
+&lt;LocalSubnet&gt;
+&lt;Name&gt;VPN Test Network 2&lt;/Name&gt;
+&lt;Gateway&gt;192.168.3.254&lt;/Gateway&gt;
+&lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
+&lt;/LocalSubnet&gt;
+</code></pre>
+<h3 id="adding-or-removing-peer-subnets">Adding or removing peer subnets</h3>
+<p>You can use the same process to add or remove peer subnets</p>
+<h4 id="original-3">Original</h4>
+<pre><code>&lt;PeerSubnet&gt;
+&lt;Name&gt;192.168.2.0/24&lt;/Name&gt;
+&lt;Gateway&gt;192.168.2.254&lt;/Gateway&gt;
+&lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
+&lt;/PeerSubnet&gt;
+</code></pre>
+<h4 id="modified-3">Modified</h4>
+<pre><code>&lt;PeerSubnet&gt;
+&lt;Name&gt;192.168.2.0/24&lt;/Name&gt;
+&lt;Gateway&gt;192.168.2.254&lt;/Gateway&gt;
+&lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
+&lt;/PeerSubnet&gt;
+&lt;PeerSubnet&gt;
+&lt;Name&gt;192.168.4.0/24&lt;/Name&gt;
+&lt;Gateway&gt;192.168.4.254&lt;/Gateway&gt;
+&lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
+&lt;/PeerSubnet&gt;
+</code></pre>
+<h3 id="amending-the-shared-secret">Amending the shared secret</h3>
+<p>If you need to update or amend the shared secret on an IPsec VPN, edit the value between the opening <code>&lt;SharedSecret&gt;</code> and closing <code>&lt;/SharedSecret&gt;</code> tags.</p>
+<h4 id="original-4">Original</h4>
+<pre><code>&lt;SharedSecret&gt;UKCloudIPSECVPNDemoSharedSecretKey&lt;/SharedSecret&gt;
+</code></pre>
+<h4 id="modified-4">Modified</h4>
+<pre><code>&lt;SharedSecret&gt;4dae850771fbe3f06588b49772c0b8eb&lt;/SharedSecret&gt;
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The shared secret must be at least 32 characters in length. To enhance the security of the tunnel, we highly recommend that you avoid using dictionary words in the shared secret key.</p>
+</div>
+<h2 id="applying-the-new-configuration">Applying the new configuration</h2>
+<p>When you've updated the relevant sections of the configuration, you can apply it to the edge gateway.</p>
+<ol>
+<li><p>Enclose the new configuration in a pair of <code>&lt;EdgeGatewayServiceConfiguration&gt;</code> tags, as shown in the following example.</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;EdgeGatewayServiceConfiguration xmlns=&quot;http://www.vmware.com/vcloud/v1.5&quot;&gt;
+   &lt;GatewayIpsecVpnService&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;Endpoint&gt;
+         &lt;Network type=&quot;application/vnd.vmware.admin.network+xml&quot; href=&quot;https://api.vcd.portal.ukcloud.com/api/admin/network/3c284ec8-2850- ba77-098c-7f697a3d8769\&quot;/\&gt;
+         &lt;PublicIp&gt;37.26.88.73&lt;/PublicIp&gt;
+      &lt;/Endpoint\&gt;
+      &lt;Tunnel\&gt;
+         &lt;Name&gt;ukcloud IPSEC VPN Demo&lt;/Name&gt;
+         &lt;Description/&gt;
+         &lt;IpsecVpnThirdPartyPeer&gt;
+            &lt;PeerId&gt;212.58.244.18&lt;/PeerId&gt;
+         &lt;/IpsecVpnThirdPartyPeer&gt;
+         &lt;PeerIpAddress&gt;212.58.244.18&lt;/PeerIpAddress&gt;
+         &lt;PeerId&gt;212.58.244.18&lt;/PeerId&gt;
+         &lt;LocalIpAddress&gt;37.26.88.73&lt;/LocalIpAddress&gt;
+         &lt;LocalId&gt;37.26.88.73&lt;/LocalId&gt;
+         &lt;LocalSubnet&gt;
+         &lt;Name&gt;VPN Test Network 1&lt;/Name&gt;
+         &lt;Gateway&gt;192.168.1.254&lt;/Gateway&gt;
+         &lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
+         &lt;/LocalSubnet\&gt;
+         &lt;LocalSubnet&gt;
+            &lt;Name&gt;VPN Test Network 2&lt;/Name&gt;
+            &lt;Gateway&gt;192.168.3.254&lt;/Gateway&gt;
+            &lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
+         &lt;/LocalSubnet&gt;
+         &lt;PeerSubnet\&gt;
+            &lt;Name&gt;192.168.2.0/24&lt;/Name&gt;
+            &lt;Gateway&gt;192.168.2.254&lt;/Gateway&gt;
+            &lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
+         &lt;/PeerSubnet&gt;
+         &lt;PeerSubnet&gt;
+            &lt;Name&gt;192.168.4.0/24&lt;/Name&gt;
+            &lt;Gateway&gt;192.168.4.254&lt;/Gateway&gt;
+            &lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
+         &lt;/PeerSubnet&gt;
+         &lt;SharedSecret&gt;4dae850771fbe3f06588b49772c0b8eb&lt;/SharedSecret&gt;
+         &lt;SharedSecretEncrypted&gt;false&lt;/SharedSecretEncrypted&gt;
+         &lt;EncryptionProtocol&gt;AES256&lt;/EncryptionProtocol&gt;
+         &lt;Mtu&gt;1500&lt;/Mtu&gt;
+         &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+         &lt;IsOperational&gt;true&lt;/IsOperational&gt;
+      &lt;/Tunnel&gt;
+   &lt;/GatewayIpsecVpnService&gt;
+&lt;/EdgeGatewayServiceConfiguration\&gt;**
+</code></pre>
+</li>
+<li><p>Copy and paste this configuration into the Request <em>Body</em> section of the RESTClient.</p>
+</li>
+<li><p>From the <strong>Method</strong> list, select <strong>POST</strong>.</p>
+</li>
+<li><p>Append the following to the URL in the <strong>URL</strong> field:</p>
+<pre><code> /action/configureServices
+</code></pre>
+<p>For example, if the original contents of the URL were:</p>
+<pre><code> https://&lt;api_url&gt;/api/admin/edgeGateway/48fbb9e-2e90-c055-aa46-86f18766f5b1
+</code></pre>
+<p>The updated URL would be:</p>
+<pre><code> https://&lt;api_url&gt;/api/admin/edgeGateway/48fbb9e-2e90-c055-aa46-86f18766f5b1/action/configureServices
+</code></pre>
+</li>
+<li><p>You must also add one more Header to the RESTClient prior to submitting the new configuration. From the <strong>Headers</strong> menu at the top of the REST Client select <strong>Custom Header</strong>.</p>
+</li>
+<li><p>In the <strong>Name</strong> field, enter <strong>Content-Type</strong>.</p>
+</li>
+<li><p>In the <strong>Attribute Value</strong> field enter the following:</p>
+<pre><code> application/vnd.vmware.admin.edgeGatewayServiceConfiguration+xml
+</code></pre>
+</li>
+<li><p>Click <strong>Okay</strong>.</p>
+</li>
+<li><p>To submit the new configuration, click <strong>Send</strong>.</p>
+</li>
+<li><p>The status of the edge gateway as viewed from vCloud Director will briefly show as <strong>Updating Configuration</strong>. Once this process has completed, right click the edge gateway and select <strong>Configure Services</strong>.</p>
+</li>
+<li><p>In the <em>Configure Services</em> window select the <strong>VPN</strong> tab.</p>
+</li>
+<li><p>You should see the new configuration settings. Verify the status of the IPsec VPN tunnel on your remote device to ensure that the tunnel has been established successfully.</p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>If you need any further assistance, or if you want to discuss any aspect of this service or settings specific to your domain, log a support ticket via the UKCloud Portal.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-change-ipsec-vpn-api.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

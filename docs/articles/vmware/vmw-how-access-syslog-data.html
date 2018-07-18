@@ -8,7 +8,7 @@
     <title>How to access syslog data for your edge gateway | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to access syslog data for your edge gateway | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -120,7 +120,7 @@ syslog data. You can then use this data to check:</p>
 <li><strong>DNS:</strong> Customer defined</li>
 <li><strong>Static IP Pool:</strong> <code>100.127.255.250 -- 100.127.255.254</code></li>
 </ul>
-<p>You can find more detailed steps for creating a routed network in <a href="https://portal.ukcloud.com/support/knowledge_centre/2b989ddd-c018-4289-8a06-0482f0674bc1"><em>Creating routed Org VDC networks</em></a>.</p>
+<p>You can find more detailed steps for creating a routed network in <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a>.</p>
 </li>
 <li><p>Deploy a new syslog server connected to the new routed network with a static address of <code>100.127.255.250</code> and install and configure the syslog server's edge gateway.</p>
 <div class="NOTE">
@@ -143,14 +143,14 @@ syslog data. You can then use this data to check:</p>
 <li><p>Create a firewall rule on the syslog edge to allow syslog traffic from the source edges' TRANSIT IPs (<code>172.26.</code><em><code>x</code></em><code>.</code><em><code>x</code></em> in Assured or <code>172.26.</code><em><code>LOWER OCTET</code></em><code>.</code><em><code>x</code></em> in Elevated) through to the syslog server IP.</p>
 <p>You can create individual rules using the following suggestions:</p>
 <ul>
-<li><em><code>SOURCE TRANSIT IP</code></em><code>:Any</code> to <code>100.127.255.250</code> on UDP</li>
+<li><code>&lt;SOURCE TRANSIT IP&gt;:Any</code> to <code>100.127.255.250</code> on UDP</li>
 <li><code>Any:Any</code> to <code>100.127.255.250:514</code> on UDP</li>
-<li><em><code>NFT TRANSIT CIDR/SUBNET</code></em><code>:Any</code> to <code>100.127.255.250:514</code> on UDP</li>
+<li><code>&lt;NFT TRANSIT CIDR/SUBNET&gt;:Any</code> to <code>100.127.255.250:514</code> on UDP</li>
 </ul>
 </li>
 <li><p>On each of the source edges, create a static route to direct traffic to the syslog edge. Use the following settings:</p>
 <ul>
-<li><strong>Applied On:</strong> <em><code>nft_network</code></em></li>
+<li><strong>Applied On:</strong> <code>&lt;nft_network&gt;</code></li>
 <li><strong>Name:</strong> Syslog traffic (or any other name you prefer)</li>
 <li><strong>Network:</strong> <code>100.127.255.248/29</code></li>
 <li><strong>Next Hop IP:</strong> The TRANSIT IP address of the syslog edge</li>
@@ -176,13 +176,13 @@ syslog data. You can then use this data to check:</p>
 </li>
 <li><p>To log data for actions not covered by individual rules, select the <strong>Log</strong> option next to the <strong>Default action</strong> setting:</p>
 <p><img src="images/vmw-vcd-syslog-firewall-default-action.png" alt="Default logging action for firewall rules"></p>
-<p>You can find more detailed steps for editing firewall settings in *<a href="https://portal.ukcloud.com/support/knowledge_centre/e8ec5a0b-e5c7-4e44-b353-ab89505fefbe">vCNS Edge services: firewall*</a>.</p>
+<p>You can find more detailed steps for editing firewall settings in <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
 </li>
 </ul>
 </li>
 <li><p>Edit your load balancer settings to log virtual servers:</p>
 <p><img src="images/vmw-vcd-syslog-load-balancer.png" alt="Add Virtual Server dialog box"></p>
-<p>You can find more detailed steps for editing load balancer settings in <a href="https://portal.ukcloud.com/support/knowledge_centre/9b4f5898-9464-4ea6-8a64-6bacb686bd0e"><em>vCNS Edge services: load balancer</em></a>.</p>
+<p>You can find more detailed steps for editing load balancer settings in <a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a>.</p>
 </li>
 </ol>
 <h2 id="sample-syslog-captures">Sample syslog captures</h2>

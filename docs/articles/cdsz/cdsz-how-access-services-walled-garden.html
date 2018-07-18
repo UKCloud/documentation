@@ -8,7 +8,7 @@
     <title>How to access UKCloud services from Walled Garden and Secure Remote Access | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to access UKCloud services from Walled Garden and Secure Remote Access | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -102,13 +102,13 @@
 <li><p>In vCloud Director, locate the edge gateway that is attached to the Elevated side in your CDSZ or SRA VDC.</p>
 </li>
 <li><p>Create a static route that directs traffic for the service you need via the Transit IP of your Elevated edge gateway.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-static-route.md"><em>How to create a static route</em></a>.</p>
+<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-static-route.html"><em>How to create a static route</em></a>.</p>
 </li>
 <li><p>Create an SNAT rule on your Elevated VDC to allow the private IP range from your CDSZ or SRA to have external access.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-nat-rules.md"><em>How to create NAT rules</em></a>.</p>
+<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>.</p>
 </li>
 <li><p>Amend the firewall to allow the private IP range access to the service you require on your Elevated VDC.</p>
-<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-firewall-rules.md"><em>How to create firewall rules</em></a></p>
+<p>For more detailed instructions, see <a href="../vmware/vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></p>
 </li>
 <li><p>Add a static route for the return traffic on your Elevated VDC to point to the Transit IP of your CDSZ or SRA VDC.</p>
 </li>
@@ -116,9 +116,9 @@
 <h2 id="next-steps">Next steps</h2>
 <p>Now that you've set up access to UKCloud services, you can register your VMs with those services. For more information, see:</p>
 <ul>
-<li><a href="../vmware/vmw-how-setup-kms.md"><em>How to license Windows VMs using the UKCloud Key Management Server</em></a></li>
+<li><a href="../vmware/vmw-how-setup-kms.html"><em>How to license Windows VMs using the UKCloud Key Management Server</em></a></li>
 <li><a href="../vmware/vmw-how-connect-windows-update"><em>How to connect to the UKCloud Windows Server Update Services (WSUS)</em></a></li>
-<li><a href="../vmware/vmw-how-install-rhui.md"><em>How to install Red Hat Update Infrastructure on an existing virtual machine</em></a></li>
+<li><a href="../vmware/vmw-how-install-rhui.html"><em>How to install Red Hat Update Infrastructure on an existing virtual machine</em></a></li>
 </ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>

@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to use VM location in vCloud Director | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to use VM location in vCloud Director | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-use-vm-location-in-vcloud-director">How to use VM location in vCloud Director</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The VM location function, now available within vCloud Director, enables you to identify where a specific virtual machine (VM) within your organisation is located within the UKCloud platform.</p>
+<p>This guide describes the step-by-step instructions for obtaining this information which is available for VMs in both the Assured OFFICIAL and Elevated OFFICIAL platforms.</p>
+<p>With regards to the supplied location, this is standardised to the following options:</p>
+<ul>
+<li>Corsham (located in the Corsham data centre)</li>
+<li>Farnborough (located in the Farnborough data centre)</li>
+<li>ENHANCED-Corsham (replicated in both data centres. Active in Corsham and standby in Farnborough)</li>
+<li>ENHANCED-Farnborough (replicated in both data centres. Active in Farnborough and standby in Corsham)</li>
+</ul>
+<p>This feature is designed to show the location of VMs to assist you in optimising your infrastructure with regard to performance and availability. If you wish to change the location of a specific or group
+of VMs, please raise a support request from the &quot;My Calls&quot; section of the UKCloud Portal.</p>
+<h2 id="how-to-obtain-the-location-of-a-specific-vm-via-the-portal">How to obtain the location of a specific VM via the Portal</h2>
+<h3 id="using-the-html5-tenant-portal-in-vcloud-director-91">Using the HTML5 tenant portal in vCloud Director 9.1</h3>
+<ol>
+<li><p>Login to the UKCloud Portal.</p>
+<p>For more detailed steps, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
+</li>
+<li><p>If necessary, switch to the appropriate account.</p>
+</li>
+<li><p>In the Portal navigation panel expand <strong>VMware Cloud</strong> then select your compute service.</p>
+<p><img src="images/vmw-portal-mnu-compute-services.png" alt="Compute services menu option"></p>
+</li>
+<li><p>On the <strong>vCloud Director</strong> tab, enter your UKCloud Portal password and then click <strong>Confirm</strong>.</p>
+<p><img src="images/conver-image-2.png" alt="vCloud Director"></p>
+</li>
+<li><p>Select the <strong>VDC</strong> your VM is in and select <strong>Virtual Machines</strong>.</p>
+<p><img src="images/vmw-vcd-tp-vms.png" alt="Virtual Machines menu option"></p>
+<p>You can change the view from cards or list. If you need to search for the VM, click on the filter icon and enter the name of the VM.</p>
+<p><img src="images/vmw-vcd-tp-vms-filter.png" alt="Filter virtual machines"></p>
+</li>
+<li><p>Click the VM <strong>Name</strong> to view details about location.</p>
+</li>
+<li><p>Expand the <strong>Advanced</strong> section of VM properties to see <em>Metadata</em> information at the bottom.</p>
+<p><img src="images/vmw-vcd-tp-vm-metadata.png" alt="VM properties -- Metadata"></p>
+<p>The location of the VM is displayed in the <strong>Value</strong> column.</p>
+</li>
+</ol>
+<h3 id="using-the-flex-based-ui-in-vcloud-director-820">Using the Flex-based UI in vCloud Director 8.20</h3>
+<ol>
+<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
+<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
+</li>
+<li><p>Select the VM you want to find the location of.</p>
+<p><img src="images/vmw-vcd-vms.png.png" alt="List of virtual machines"></p>
+</li>
+<li><p>Right click your VM and select <strong>Properties</strong>.</p>
+</li>
+<li><p>Select the <strong>Metadata</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-vm-metatdata.png" alt="Metadata tab in VM Properties dialog box"></p>
+<p>The location of the VM is displayed in the <strong>Value</strong> column.</p>
+</li>
+</ol>
+<h2 id="how-to-obtain-the-location-of-a-specific-vm-via-the-api">How to obtain the location of a specific VM via the API</h2>
+<p>You can also obtain the location of a VM via the via the API, looking at the metadata against the applicable VM.</p>
+<p>The following has been created as an example script to obtain the VM location:</p>
+<p><a href="https://api.vcd.portal.ukcloud.com/api/vApp/vm-xxxxxxxx/metadata">https://api.vcd.portal.ukcloud.com/api/vApp/vm-xxxxxxxx/metadata</a></p>
+<p>Replace the &quot;xxxxxxxx&quot; with the relevant VM ID.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-use-vm-location.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>
