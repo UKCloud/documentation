@@ -11,10 +11,3 @@
     items:
       name: 
       href: vmw-how-install-rhui.md
-- name: Reference
-  items:
-  - name: 
-    href: vmw-how-deploy-ftps.md
-    items:
-      name: 
-      href: vmw-how-deploy-ftps.md
