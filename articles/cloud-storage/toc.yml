@@ -1,3 +1,7 @@
+- name: FAQs
+  items:
+  - name: Cloud Storage FAQs
+    href: cs-faq.md
 - name: Getting Started
   items:
   - name: Cloud Storage
@@ -6,3 +10,11 @@
   items:
   - name: View Cloud Storage information in the UKCloud Portal
     href: cs-how-view-info-portal.md
+- name: Reference
+  items:
+  - name: S3-compatible API examples
+    href: cs-s3-examples.md
+- name: Service Scope
+  items:
+  - name: Cloud Storage Service Scope
+    href: cs-sco.md

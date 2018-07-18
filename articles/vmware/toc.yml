@@ -1,20 +1,20 @@
 - name: Getting Started
   items:
-  - name: Disaster Recovery as a Service
-    href: vmw-gs-draas.md
   - name: Journaling Protection
     href: vmw-gs-journaling.md
   - name: UKCloud for VMware
     href: vmw-gs.md
 - name: How To
   items:
-  - name: Access syslog data for your edge gateway
-    href: vmw-how-access-syslog-data.md
-  - name: Access vCloud Director through the vCloud API
-    href: vmw-how-access-vcloud-api.md
-  - name: Change IPsec VPN settings via the vCloud API
-    href: vmw-how-api-ipsec-vpn.md
-  - name: Install a REST client to access the vCloud API
-    href: vmw-how-install-vcloud-api-rest-client.md
-  - name: Install and configure OpenVPN
-    href: vmw-how-install-openvpn.md
+  - name: 
+    href: vmw-how-install-rhui.md
+    items:
+      name: 
+      href: vmw-how-install-rhui.md
+- name: Reference
+  items:
+  - name: 
+    href: vmw-how-deploy-ftps.md
+    items:
+      name: 
+      href: vmw-how-deploy-ftps.md
