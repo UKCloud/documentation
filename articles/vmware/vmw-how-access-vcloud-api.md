@@ -26,7 +26,7 @@ Before using the vCloud API, you first need to find your API credentials.
 
 1. Log in to the UKCloud Portal.
 
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/0435318d-a94b-41bb-a4ff-a52adbe863e5).
+    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
 
 2. Select your account.
 
@@ -36,21 +36,21 @@ Before using the vCloud API, you first need to find your API credentials.
 
 4. The *API* page provides a view of your personal credentials for accessing the vCloud API. In particular, the page provides the following information for each compute service:
 
-    - **API URL** --- Use this URL at the beginning of your calls to the vCloud API.
+    - **API URL** - Use this URL at the beginning of your calls to the vCloud API.
 
         > [!NOTE]
         > This URL will be different depending on the region in which your compute service is located.
 
-    - **API Username** --- The user ID to use to authenticate yourself with the vCloud API.
+    - **API Username** - The user ID to use to authenticate yourself with the vCloud API.
 
         > [!NOTE]
         > The compute service ID is appended to the end of the username. This is because you may have access to multiple compute services.
 
-    - **Username** --- The API username without the appended compute service ID.
+    - **Username** - The API username without the appended compute service ID.
 
-    - **Org ID** --- Use this to uniquely identify the compute service (or vOrg) when using the vCloud API.
+    - **Org ID** - Use this to uniquely identify the compute service (or vOrg) when using the vCloud API.
 
-    - **Password** --- For authentication with the vCloud API. This password is the same as the one you use to log in to the UKCloud Portal.
+    - **Password** - For authentication with the vCloud API. This password is the same as the one you use to log in to the UKCloud Portal.
 
     ![API page](images/vmw-portal-api-details.png)
 
@@ -58,9 +58,7 @@ Before using the vCloud API, you first need to find your API credentials.
 
 ## Obtaining an authorisation token
 
-Now that you have your API credentials, you can start interacting with
-the vCloud API. First you need to obtain an `x-vcloud-authorization`
-token.
+Now that you have your API credentials, you can start interacting with the vCloud API. First you need to obtain an `x-vcloud-authorization` token.
 
 1. Send the following request to the vCloud API:
 

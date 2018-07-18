@@ -1,0 +1,107 @@
+---
+title: How to create a virtual machine from a template | UKCloud Ltd
+description: Shows how to create virtual machines from a template within vCloud Director
+services: vmware
+author: Sue Highmoor
+
+toc_rootlink: How To
+toc_sub1:
+toc_sub2:
+toc_sub3:
+toc_sub4:
+toc_title: Create a virtual machine from a template
+toc_fullpath: How To/vmw-how-create-vm-from-template.md
+toc_mdlink: vmw-how-create-vm-from-template.md
+---
+
+# How to create a VM from a template
+
+## Overview
+
+To simplify the process of creating a VM, you can use a pre-built VM template from a catalog.
+
+For information about creating a VM from scratch, see [*How to create a VM from scratch*](vmw-how-create-vm-from-scratch.md).
+
+## Creating a VM from a template
+
+1. In vCloud Director, select the **My Cloud** tab.
+
+    ![My Cloud tab in vCloud Director](images/vmw-vcd-tab-my-cloud.png)
+
+2. Open the vApp in which you want to create the VM.
+
+    > [!TIP]
+    > To create a new vApp, see [*How to create a vApp*](vmw-how-create-vapp.md)
+
+3. On the **Virtual Machines** tab, click the **Add VM** icon.
+
+    ![Add VM icon](images/vmw-vcd-ico-add-vm.png)
+
+4. On the *Add Virtual Machines* page, you can create a VM using a template in your own organisation's catalog (creating vApp catalogs is covered in [*How to create a vApp catalog*](vmw-how-create-catalog.md)) or from UKCloud's public catalog.
+
+    For example, to create a VM from the UKCloud public catalog, from the **Look in** list, select **Public Catalogs**.
+
+    ![Public Catalogs option](images/vmw-vcd-vm-public-catalog.png)
+
+5. Select the template you want to use depending on the operating system and VM size.
+
+    > [!TIP]
+    > You can use the search field to find the template you're looking for, or use the arrows to scroll through the available choices.
+
+6. When you've found the template you want to use, click **Add** to add a VM based on that template to the vApp. The VM should now be visible in the lower box.
+
+    ![Add VM button](images/vmw-vcd-vm-add-vm-template.png)
+
+    > [!TIP]
+    > You can add multiple VMs to the vApp at the same time using the catalogs.
+
+7. When you've finished adding VMs, click **Next**.
+
+8. On the *Configure Resources* page, in the **Virtual Machine** field, enter a name your VM.
+
+    > [!NOTE]
+    > This is the name of the VM, not the actual OS host name.
+
+9. From the **Storage Policy* list, select a storage policy to assign the VM to.
+
+    > [!NOTE]
+    > We recommend using the `*-*-*-Any` option as this will ensure your VMs are balanced evenly cross all storage pools. However, you could use this option to specifically separate VMs on different storage if required for high availability purposes. For example, you could specifically place VMs on `*.*.*-Storage1` as opposed to `*.*.*-Storage2`. For more information, visit the Knowledge Centre.
+
+    ![Configure Resources page](images/vmw-vcd-vm-configure-resources.png)
+
+10. Click **Next**.
+
+11. On the *Configure Virtual Machines* page, in the **Computer Name** field, define the host name of the VM.
+
+12. From the **Network** list, select the network to connect the VM to.
+
+13. From the **IP Assignment** list, select:
+
+    - **Static - IP Pool** (the usual method) to inject an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a checkbox to keep
+    IP address assignments elsewhere within the UI once the VMs are created.
+    - **Static - Manual** to specify a valid IP address from the pool that the VM will then keep.
+    - **DHCP** to specify that vCloud Director should interact with the OS via VMware Tools to
+    use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway.
+
+    ![Configure Virtual Machines page](images/vmw-vcd-vm-configure-vms.png)
+
+14. Click **Next**.
+
+15. On the *Configure Networking* page, configure the networking for your VM and then click **Next**.
+
+    > [!NOTE]
+    > For information about vApp network fencing, see [*How to create a vApp network*](vmw-how-create-vapp-network.md).
+
+    ![Configure Networking tab](images/vmw-vcd-vm-configure-networking.png)
+
+16. On the summary page, review your settings and then click **Finish**.
+
+    The platform will start creating your VM.
+
+17. When your VM has finished deploying, right-click the newly created VM within the vApp and select **Power On**.
+
+    ![Power On menu option for VM](images/vmw-vcd-mnu-vm-power-on.png)
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.

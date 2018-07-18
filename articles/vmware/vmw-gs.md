@@ -36,8 +36,7 @@ We recommend that you use the Mozilla Firefox ESR 32-bit browser as this is supp
 
 ## Introductions to UKCloud for VMware
 
-We understand that each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is highly configurable, and gives you the flexibility to use different service levels, VM sizes, security
-domains, connectivity and data protection options.
+We understand that each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is highly configurable, and gives you the flexibility to use different service levels, VM sizes, security domains, connectivity and data protection options.
 
 You can build completely tailored solutions by mixing and matching service options. The choice doesn't lock you to one service or size and you can always change it later.
 
@@ -59,7 +58,7 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
     ![UKCloud Portal Log in page](images/vmw-portal-login.png)
 
     > [!TIP]
-    > If you have forgotten your password, click the **Forgotten password?** link to request a password reset.
+    > If you've forgotten your password, click the **Forgotten password?** link to request a password reset.
 
     If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or CSM. You'll be prompted to change this temporary password.
 
@@ -69,7 +68,7 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
 
     ![Memorable word dialog box](images/vmw-portal-memorable-word.png)
 
-    For more information about the UKCloud Portal and all the functionality it provides, see the [*Getting Started Guide for UKCloud Portal*](../portal/ptl-gs.md).
+    For more information about the UKCloud Portal and all the functionality it provides, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
 
 ## Creating your UKCloud for VMware estate
 
@@ -143,7 +142,7 @@ After creating your compute service, the next step is to create one or more VDCs
 
 3. On the *Build VDC* page, from the **VM Type** radio buttons, select the option that describes the characteristics of the workload of the VDC:
 
-    - **ESSENTIAL**---For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload        receives the requested performance.
+    - **ESSENTIAL**---For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload receives the requested performance.
     - **POWER**---For key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is enabled to pre-emptively optimise performance and availability.
     - **PRIORITY**---For critical workloads that handle important business processes that benefit from a steady state of operation. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is configured to reduce workload movement around the platform.
 
@@ -193,11 +192,11 @@ After you've created your compute service and VDC, you can start to build up you
     ![vCloud Director Home page](images/vmw-vcd-home.png)
 
     > [!TIP]
-    > If you encounter any issues, make sure you're using the Firefox ESR 32-bit browser. For more information, see [*Browser requirements for services on the UKCloud Platform*](https://portal.ukcloud.com/support/knowledge_centre/0887a898-826b-4605-9c2e-dcde0da06c00).
+    > If you encounter any issues, make sure you're using the Firefox ESR 32-bit browser. For more information, see [*Browser requirements for services on the UKCloud Platform*](../other/other-ref-browsers.md).
 
 4. The tasks you can perform in vCloud Director will depend on the permissions you have been granted.
 
-    **More information!** [*Configuring permissions for vCloud Director*](https://portal.ukcloud.com/support/knowledge_centre/5c261fe3-d8ba-4fe4-8159-87ced5fd13b1)
+    **More information!** [*How to manage permissions for vCloud Director*](vmw-how-manage-vcd-permissions.md)
 
 5. To return to the UKCloud platform, click the **Logout** link in the top right corner of vCloud Director.
 
@@ -212,29 +211,28 @@ In this *Getting Started Guide*, you've learned:
 - How to create a compute service and VDC to set up your environment
 - How to log in to vCloud Director so that you can start to build your applications
 
-Now that you've set up your basic environment, you can start building your applications. If you want to get up and running quickly, you can take a look at [*Building virtual machines with Enterprise Compute Cloud*](https://portal.ukcloud.com/support/knowledge_centre/eb14aec9-5248-4cd4-a714-511389ec186e),
-which provides a quick walkthrough of the process.
+Now that you've set up your basic environment, you can start building your applications. If you want to get up and running quickly, you can take a look at [*How to build a virtual machine with UKCloud for VMware*](vmw-how-build-vm.md), which provides a quick walkthrough of the process.
 
 For more detailed information about the different aspects of your UKCloud for VMware environment, see:
 
 - To create virtual machines to define your applications:
 
-  - [*Creating VMs from scratch*](https://portal.ukcloud.com/support/knowledge_centre/7fc8c6b7-0f88-4072-a0c5-fde174d47dac)
-  - [*Creating VMs from a template*](https://portal.ukcloud.com/support/knowledge_centre/8728fad6-76f1-4836-ad4b-5dc48dc4aa43)
+  - [*How to create a virtual machine from scratch*](vmw-how-create-vm-from-scratch.md)
+  - [*How to create a virtual machine from a template*](vmw-how-create-vm-from-template.md)
 
 - To create a VDC network to enable your virtual machines to communicate with each other and the outside world:
 
-  - [*Creating routed Org VDC networks*](https://portal.ukcloud.com/support/knowledge_centre/2b989ddd-c018-4289-8a06-0482f0674bc1)
-  - [*Creating isolated Org VDC networks*](https://portal.ukcloud.com/support/knowledge_centre/8f839d6b-a2f1-46ef-8762-15be2923d8c8)
+  - [*How to create a routed VDC network*](vmw-how-create-routed-network.md)
+  - [*How to create an isolated VDC networks](vmw-how-create-isolated-network.md)
 
 - To configure your edge gateway to control access to your VMs:
 
-  - [*Firewall*](https://portal.ukcloud.com/support/knowledge_centre/e8ec5a0b-e5c7-4e44-b353-ab89505fefbe)
-  - [*NAT*](https://portal.ukcloud.com/support/knowledge_centre/89cbf32e-eb48-4145-b7dc-6bb0c5f1bcc3)
-  - [*DHCP*](https://portal.ukcloud.com/support/knowledge_centre/76fceb40-dd43-499b-8d2a-ea1a8ab50af8)
-  - [*IPsec VPN*](https://portal.ukcloud.com/support/knowledge_centre/43f064b6-0e0e-4985-89f5-46a869a16f81)
-  - [*Load balancer*](https://portal.ukcloud.com/support/knowledge_centre/9b4f5898-9464-4ea6-8a64-6bacb686bd0e)
-  - [*Static routing*](https://portal.ukcloud.com/support/knowledge_centre/a5a0f2be-f83f-48e5-8e6b-72f5f963b2a7)
+  - [*How to create firewall rules*](vmw-how-create-firewall-rules.md)
+  - [*How to create NAT rules*](vmw-how-create-nat-rules.md)
+  - [*How to create a DHCP pool*](vmw-how-create-dhcp-pool.md)
+  - [*How to configure IPsec VPN*](vmw-how-configure-ipsec-vpn.md)
+  - [*How to configure a load balancer*](vmw-how-configure-load-balancer.md)
+  - [*How to create a static route*](vmw-how-create-static-route.md)
 
 ## Glossary
 
@@ -257,7 +255,7 @@ specifically designed to deliver traditional enterprise applications to the clou
 rebalancing is enabled to ensure the workload receives the requested performance.
 
 **POWER**&nbsp;&nbsp;A type of VM with uncontended compute resource allocation. Automated
-balancing is enabled to pre-emptively optimise performance and availablility.
+balancing is enabled to pre-emptively optimise performance and availability.
 
 **PRIORITY**&nbsp;&nbsp;A type of VM with uncontended compute resource allocation. Automated
 balancing is configured to reduce workload movement around the platform, reducing workload disruption.
