@@ -10,10 +10,6 @@
       href: azs-gs.md
   - name: How To
     items:
-    - name: Configure the Azure Stack user's PowerShell environment
-      href: azs-how-configure-powershell-users.md
-    - name: Connect to Azure Stack with CLI environment for UKCloud
-      href: azs-how-configure-cli.md
     - name: Create a virtual machine
       href: azs-how-create-vm.md
     - name: Create a VM using Terraform on Azure Stack
@@ -22,6 +18,12 @@
       href: azs-how-create-azure-group.md
     - name: Use the Azure Stack API
       href: azs-how-use-azure-api.md
+    - name: Configure Environment
+      items:
+      - name: Configure the Azure Stack user's Azure CLI environment
+        href: azs-how-configure-cli.md
+      - name: Configure the Azure Stack user's PowerShell environment
+        href: azs-how-configure-powershell-users.md
     - name: Service Principal Name
       items:
       - name: Create a Service Principal Name for Azure Stack - CLI
@@ -38,7 +40,9 @@
   items:
   - name: How To
     items:
-    - name: Configure the Azure Stack operator's PowerShell environment
-      href: azs-how-configure-powershell-operators.md
     - name: Update Azure Stack Procedure
       href: azs-how-ps-update-azure-stack.md
+    - name: Configure Environment
+      items:
+      - name: Configure the Azure Stack operator's PowerShell environment
+        href: azs-how-configure-powershell-operators.md

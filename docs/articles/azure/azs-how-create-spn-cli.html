@@ -8,7 +8,7 @@
     <title>How to create a Service Principal Name for Azure Stack - CLI | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a Service Principal Name for Azure Stack - CLI | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.36.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -149,11 +149,20 @@
 </li>
 </ol>
 <h2 id="create-service-principal-name-spn-for-azure-stack-with-set-password">Create Service Principal Name (SPN) for Azure Stack with <strong>Set Password</strong></h2>
-<pre><code class="lang-azurecli" data-interactive="azurecli"># Set Azure Stack Environment
+<pre><code class="lang-azurecli" data-interactive="azurecli"># Create your environment
+az cloud register -n AzureStackUser --endpoint-resource-manager &quot;https://management.frn00006.azure.ukcloud.com&quot; --suffix-storage-endpoint &quot;frn00006.azure.ukcloud.com&quot; --suffix-keyvault-dns &quot;.vault.frn00006.azure.ukcloud.com&quot; --endpoint-active-directory-graph-resource-id &quot;https://graph.windows.net/&quot; --profile 2017-03-09-profile
+
+# Set your environment
+az cloud set -n AzureStackUser
+
+# Log in to Azure Stack with user credentials
+az login -u &quot;&lt;username&gt;@&lt;tenantDomain&gt;&quot; -p '&lt;password&gt;'
+
+# Set Azure Stack Environment
 az cloud set --n AzureStackUser
 
 # Log in to Azure Stack using your Administrator account
-az login -u &lt;username&gt;@&lt;tenantDomain&gt; -p &lt;password&gt;
+az login -u &quot;&lt;username&gt;@&lt;tenantDomain&gt;&quot; -p '&lt;password&gt;'
 
 # Create Service Principal Name
 az ad sp create-for-rbac --name &quot;ServicePrincipalName&quot; --password 'Password1234!' --role=&quot;Owner&quot;
@@ -187,7 +196,7 @@ az group delete --name rg01 -y
 <div class="TIP">
 <h5>Tip</h5>
 <p>You can also run the create-for-rbac command without password and then you can pick the automatically generated password from the output variable:</p>
-<pre><code class="lang-azurecli">az ad sp create-for-rbac --name &quot;ServicePrincipalName&quot; --role=&quot;Owner&quot;
+<pre><code class="lang-azurecli" data-interactive="azurecli">az ad sp create-for-rbac --name &quot;ServicePrincipalName&quot; --role=&quot;Owner&quot;
 {
 &quot;appId&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,
 &quot;displayName&quot;: &quot;azure-cli-2017-06-05-10-41-15&quot;,

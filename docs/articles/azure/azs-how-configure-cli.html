@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Connect to Azure Stack with CLI environment for UKCloud |  based on Microsoft Docs | UKCloud Knowledge Centre </title>
+    <title>Configure the Azure Stack user's Azure CLI environment |  based on Microsoft Docs | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Connect to Azure Stack with CLI environment for UKCloud |  based on Microsoft Docs | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="title" content="Configure the Azure Stack user's Azure CLI environment |  based on Microsoft Docs | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -85,9 +85,16 @@
 <h1 id="install-and-configure-cli-for-use-with-azure-stack">Install and configure CLI for use with Azure Stack</h1>
 
 <p>In this article, we will guide you through the process of installing and using the Azure command-line interface (CLI) to manage Azure Stack. Azure CLI can be used to manage resources such as create virtual machines, deploy Azure Resource Manager templates, etc.</p>
+<h2 id="official-documentation">Official Documentation</h2>
+<p><a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-2017-03-09-profile">Azure CLI Command Reference for 2017-03-09 Profile</a></p>
+<p><a href="https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-command-line.md">Deploy templates with Azure CLI</a></p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Azure Stack works with very specific <strong>API Profiles</strong> - you need to use <code>2017-03-09-profile</code> in order to interact with it. The biggest caveat is that it only support as small subset of commands from the <code>latest profile</code>.</p>
+</div>
 <h2 id="install-cli">Install CLI</h2>
 <p>Sign in to your development workstation and install CLI. Azure Stack requires the 2.0 version of Azure CLI. You can install that by using the steps described in the <a href="https://docs.microsoft.com/cli/azure/install-azure-cli">Install Azure CLI 2.0</a> article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:</p>
-<pre><code class="lang-azurecli">az --version
+<pre><code class="lang-azurecli" data-interactive="azurecli">az --version
 </code></pre>
 <p>You should see the version of Azure CLI and other dependent libraries that are installed on your computer.</p>
 <h2 id="connect-to-azure-stack">Connect to Azure Stack</h2>
@@ -95,7 +102,7 @@
 <ol>
 <li><p>Register your Azure Stack environment by running the <code>az cloud register</code> command.</p>
 <p>To register the <em>user</em> environment, use:</p>
-<pre><code class="lang-azurecli">az cloud register \ 
+<pre><code class="lang-azurecli" data-interactive="azurecli">az cloud register \ 
   -n AzureStackUser \ 
   --endpoint-resource-manager &quot;https://management.frn00006.azure.ukcloud.com&quot; \ 
   --suffix-storage-endpoint &quot;frn00006.azure.ukcloud.com&quot; \ 
@@ -103,16 +110,16 @@
   --endpoint-active-directory-graph-resource-id &quot;https://graph.windows.net/&quot; \
 </code></pre>
 <p>To register the <em>user</em> environment - One Liner:</p>
-<pre><code class="lang-azurecli">az cloud register -n AzureStackUser --endpoint-resource-manager &quot;https://management.frn00006.azure.ukcloud.com&quot; --suffix-storage-endpoint &quot;frn00006.azure.ukcloud.com&quot; --suffix-keyvault-dns &quot;.vault.frn00006.azure.ukcloud.com&quot; --endpoint-active-directory-graph-resource-id &quot;https://graph.windows.net/&quot; --endpoint-vm-image-alias-doc &lt;URI of the document which contains virtual machine image aliases&gt;
+<pre><code class="lang-azurecli" data-interactive="azurecli">az cloud register -n AzureStackUser --endpoint-resource-manager &quot;https://management.frn00006.azure.ukcloud.com&quot; --suffix-storage-endpoint &quot;frn00006.azure.ukcloud.com&quot; --suffix-keyvault-dns &quot;.vault.frn00006.azure.ukcloud.com&quot; --endpoint-active-directory-graph-resource-id &quot;https://graph.windows.net/&quot; 
 </code></pre>
 </li>
 <li><p>Set the active environment by using the following commands.</p>
 <p>For the <em>user</em> environment, use:</p>
-<pre><code class="lang-azurecli">az cloud set -n AzureStackUser
+<pre><code class="lang-azurecli" data-interactive="azurecli">az cloud set -n AzureStackUser
 </code></pre>
 </li>
 <li><p>Update your environment configuration to use the Azure Stack specific API version profile. To update the configuration, run the following command:</p>
-<pre><code class="lang-azurecli">az cloud update --profile 2017-03-09-profile
+<pre><code class="lang-azurecli" data-interactive="azurecli">az cloud update --profile 2017-03-09-profile
 </code></pre>
 </li>
 <li><p>Sign in to your Azure Stack environment by using the <code>az login</code> command. You can sign in to the Azure Stack environment either as a user or as a <a href="https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects">service principal</a>.</p>
@@ -120,15 +127,15 @@
 <li><p>Sign in as a <em>user</em>: You can either specify the username and password directly within the <code>az login</code> command or authenticate by using a browser. You have to do the latter if your account has multi-factor authentication enabled.</p>
 </li>
 <li><p>Example of <em>username</em>: Active directory global administrator or user account i.e. username@<aadtenant>.onmicrosoft.com or username@domain.com<p>
-<pre><code class="lang-azurecli">az login -u username@&lt;aadtenant&gt;.onmicrosoft.com -p &lt;password&gt;
+<pre><code class="lang-azurecli" data-interactive="azurecli">az login -u &quot;&lt;username&gt;@&lt;tenantDomain&gt;&quot; -p '&lt;password&gt;'
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If your user account has multi-factor authentication enabled, you can use the <code>az login command</code> without providing the <code>-u</code> parameter. Running the command gives you a URL and a code that you must use to authenticate.</p>
 </div>
 </aadtenant></li>
-<li><p>Sign in as a <em>service principal</em>: Before you sign in, <a href="https://github.com/UKCloud/AzureStack/blob/master/AzureCLI/Tenants/CreateServicePrincipalWithAzureCLI.md">create a service principal through the Azure portal</a> or CLI and assign it a role. Now, sign in by using the following command:</p>
-<pre><code class="lang-azurecli">az login \
+<li><p>Sign in as a <em>service principal</em>: Before you sign in, <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal">create a service principal through the Azure portal</a> or <a href="azs-how-create-spn-cli.html">CLI</a>) and assign it a role. Now, sign in by using the following command:</p>
+<pre><code class="lang-azurecli" data-interactive="azurecli">az login \
    --tenant &lt;Azure Active Directory Tenant name. For example: myazurestack.onmicrosoft.com&gt; \
    --service-principal \
    -u &lt;Application Id of the Service Principal&gt; \
@@ -138,45 +145,59 @@
 </ul>
 </li>
 <li><p>Verify that your environment is set correctly to and that AzureStackUser is the active cloud.</p>
-<pre><code class="lang-azurecli">az cloud list --output table
+<pre><code class="lang-azurecli" data-interactive="azurecli">az cloud list --output table
 </code></pre>
 </li>
 <li><p>To list command subgroups run:</p>
-<pre><code class="lang-azurecli">az --help
+<pre><code class="lang-azurecli" data-interactive="azurecli">az --help
 </code></pre>
 </li>
 <li><p>To list commands for specific subgroup run:</p>
-<pre><code class="lang-azurecli">az &lt;subgroupname&gt; --help
+<pre><code class="lang-azurecli" data-interactive="azurecli">az &lt;subgroupname&gt; --help
 </code></pre>
 </li>
 </ol>
+<h2 id="connect-to-azure-stack---quick-reference-guide">Connect to Azure Stack - Quick Reference Guide</h2>
+<pre><code class="lang-azurecli" data-interactive="azurecli"># Create your environment
+az cloud register -n AzureStackUser --endpoint-resource-manager &quot;https://management.frn00006.azure.ukcloud.com&quot; --suffix-storage-endpoint &quot;frn00006.azure.ukcloud.com&quot; --suffix-keyvault-dns &quot;.vault.frn00006.azure.ukcloud.com&quot; --endpoint-active-directory-graph-resource-id &quot;https://graph.windows.net/&quot; --profile 2017-03-09-profile
+
+# Set your environment
+az cloud set -n AzureStackUser
+
+# Log in to Azure Stack with user credentials
+az login -u &quot;&lt;username&gt;@&lt;tenantDomain&gt;&quot; -p '&lt;password&gt;'
+</code></pre>
 <h2 id="test-the-connectivity">Test the connectivity</h2>
 <p>Now that we've got everything setup, let's use CLI to create resources within Azure Stack. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named &quot;MyResourceGroup&quot;:</p>
-<pre><code class="lang-azurecli">az group create -n MyResourceGroup -l frn00006
+<pre><code class="lang-azurecli" data-interactive="azurecli">az group create -n MyResourceGroup -l frn00006
 </code></pre>
 <p>If the resource group is created successfully, the previous command outputs the following properties of the newly created resource:</p>
 <p><img src="https://docs.microsoft.com/en-us/azure/azure-stack/user/media/azure-stack-connect-cli/image1.png" alt="Resource group create output"></p>
 <h2 id="get-the-virtual-machine-urns">Get the virtual machine URNs</h2>
-<p>Because of the known issue with Image Aliases we have not published the alias.json file yet. Instead please use the following command to obtain releveant image URNs for your VM deployment.</p>
-<pre><code class="lang-azurecli">az vm image list --all --output table
+<p>Because of the known issue with Image Aliases we have not published the alias.json file yet. Instead please use the following command to obtain relevant image URNs for your VM deployment.</p>
+<pre><code class="lang-azurecli" data-interactive="azurecli">az vm image list --all --output table
 You are retrieving all the images from server which could take more than a minute. To shorten the wait, provide '--publisher', '--offer' or '--sku'. Partial name search is supported.
 Offer              Publisher               Sku                              Urn                                                                                     Version
 -----------------  ----------------------  -------------------------------  --------------------------------------------------------------------------------------  -----------------
-UbuntuServer       Canonical               14.04.5-LTS                      Canonical:UbuntuServer:14.04.5-LTS:14.04.201801100                                      14.04.201801100
-WindowsServer      MicrosoftWindowsServer  2016-Datacenter-Server-Core      MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core:2016.127.20171215      2016.127.20171215
+UbuntuServer       Canonical               17.10                            Canonical:UbuntuServer:17.10:17.10.201805090                                            17.10.201805090
+WindowsServer      MicrosoftWindowsServer  2016-Datacenter-with-Containers  MicrosoftWindowsServer:WindowsServer:2016-Datacenter-with-Containers:2016.127.20180412  2016.127.20180412
 jenkins            bitnami                 1-650                            bitnami:jenkins:1-650:2.46.21                                                           2.46.21
-Server             UKCloud                 MobyLinux                        UKCloud:Server:MobyLinux:1.0.0                                                          1.0.0
-CentOS             OpenLogic               6.9                              OpenLogic:CentOS:6.9:6.9.20180105                                                       6.9.20180105
-UbuntuServer       Canonical               16.04-LTS                        Canonical:UbuntuServer:16.04-LTS:16.04.201801120                                        16.04.201801120
-WindowsServer      MicrosoftWindowsServer  2016-Datacenter-with-Containers  MicrosoftWindowsServer:WindowsServer:2016-Datacenter-with-Containers:2016.127.20171215  2016.127.20171215
-UbuntuServer       Canonical               17.10                            Canonical:UbuntuServer:17.10:17.10.201801090                                            17.10.201801090
-WindowsServer      MicrosoftWindowsServer  2016-Datacenter                  MicrosoftWindowsServer:WindowsServer:2016-Datacenter:2016.127.20171216                  2016.127.20171216
+CentOS             OpenLogic               7.4                              OpenLogic:CentOS:7.4:7.4.20180118                                                       7.4.20180118
+UbuntuServer       Canonical               14.04.5-LTS                      Canonical:UbuntuServer:14.04.5-LTS:14.04.201805090                                      14.04.201805090
+WindowsServer      MicrosoftWindowsServer  2016-Datacenter-Server-Core      MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core:2016.127.20180412      2016.127.20180412
+CentOS             OpenLogic               6.9                              OpenLogic:CentOS:6.9:6.9.20180118                                                       6.9.20180118
+UbuntuServer       Canonical               18.04-LTS                        Canonical:UbuntuServer:18.04-LTS:18.04.201804262                                        18.04.201804262
 nginxstack         bitnami                 1-9                              bitnami:nginxstack:1-9:1.10.14                                                          1.10.14
-WindowsServer      MicrosoftWindowsServer  2012-R2-Datacenter               MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:4.127.20171216                  4.127.20171216
+WindowsServer      MicrosoftWindowsServer  2016-Datacenter                  MicrosoftWindowsServer:WindowsServer:2016-Datacenter:2016.127.20180412                  2016.127.20180412
+CentOS             OpenLogic               7.3                              OpenLogic:CentOS:7.3:7.3.20170925                                                       7.3.20170925
+UbuntuServer       Canonical               16.04-LTS                        Canonical:UbuntuServer:16.04-LTS:16.04.201804270                                        16.04.201804270
+WindowsServer      MicrosoftWindowsServer  2012-Datacenter                  MicrosoftWindowsServer:WindowsServer:2012-Datacenter:3.127.20180216                     3.127.20180216
+SQL2016SP1-WS2016  MicrosoftSQLServer      Enterprise                       MicrosoftSQLServer:SQL2016SP1-WS2016:Enterprise:13.1.900302                             13.1.900302
 SQL2016SP1-WS2016  MicrosoftSQLServer      Standard                         MicrosoftSQLServer:SQL2016SP1-WS2016:Standard:13.1.900302                               13.1.900302
+
 </code></pre>
 <p>For Example, you can create a CentOS VM using the following command:</p>
-<pre><code class="lang-azurecli">az vm create --resource-group testRG --name testVM --image OpenLogic:CentOS:6.9:6.9.20180105 --use-unmanaged-disk --admin-username username --admin-password 'Password1234!'
+<pre><code class="lang-azurecli" data-interactive="azurecli">az vm create --resource-group testRG --name testVM --image OpenLogic:CentOS:6.9:6.9.20180105 --use-unmanaged-disk --admin-username username --admin-password 'Password1234!'
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
@@ -190,11 +211,7 @@ SQL2016SP1-WS2016  MicrosoftSQLServer      Standard                         Micr
 <li>The CLI interactive mode i.e the <code>az interactive</code> command is not yet supported in Azure Stack.</li>
 <li>To get the list of virtual machine images available in Azure Stack, use the <code>az vm images list --all</code> command instead of the <code>az vm image list</code> command. Specifying the <code>--all</code> option makes sure that response returns only the images that are available in your Azure Stack environment.</li>
 <li>Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the <code>az vm images list</code> command.</li>
-<li>By default, CLI 2.0 uses “Standard_DS1_v2” as the default virtual machine image size. However, this size is not yet available in Azure Stack, so, you need to specify the <code>--size</code> parameter explicitly when creating a virtual machine. You can get the list of virtual machine sizes that are available in Azure Stack by using the <code>az vm list-sizes --location frn00006</code> command.</li>
 </ul>
-<h2 id="useful-links">Useful links</h2>
-<p><a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">Azure CLI Command Reference</a></p>
-<p><a href="https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-command-line.md">Deploy templates with Azure CLI</a></p>
 
 
                   <div class="row">
