@@ -87,10 +87,13 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 ```azurecli-interactive
 # Set Azure Stack Environment
 az cloud set --n AzureStackUser
+
 # Log in to Azure Stack using your Administrator account
 az login -u <username>@<tenantDomain> -p <password>
+
 # Create Service Principal Name
 az ad sp create-for-rbac --name "ServicePrincipalName" --password 'Password1234!' --role="Owner"
+
 # This command will output five values
 {
   "appId": "00000000-0000-0000-0000-000000000000",
@@ -99,11 +102,14 @@ az ad sp create-for-rbac --name "ServicePrincipalName" --password 'Password1234!
   "password": "Password1234!",
   "tenant": "00000000-0000-0000-0000-000000000000"
 }
+
 # Log in to Azure Stack using Service Principal Name (SPN)
 ## Note, CLIENT_ID=appId, CLIENT_SECRET=password, TENANT_ID=tenant
 az login --service-principal -u CLIENT_ID -p CLIENT_SECRET --tenant TENANT_ID
+
 # Test your SPN account by creating a new Resource Group in Azure Stack
 az group create --name rg01 --location frn00006
+
 # Remove test Resource Group
 az group delete --name rg01 -y
 ```
