@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to access the Zerto Self-Service Portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Cloud GPU FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to access the Zerto Self-Service Portal | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="Cloud GPU FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,72 +82,48 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-access-the-zerto-self-service-portal">How to access the Zerto Self-Service Portal</h1>
+<h1 id="cloud-gpu-faqs">Cloud GPU FAQs</h1>
 
-<h2 id="overview">Overview</h2>
-<p>UKCloud uses Zerto to power the following services:</p>
+<h2 id="general">General</h2>
+<h3 id="what-is-cloud-gpu">What is Cloud GPU?</h3>
+<p>It is a supplementary Graphics Processing Unit (GPU) option that enables customers to meet the specialist compute requirements of certain advanced applications. This falls into two categories:</p>
 <ul>
-<li>Disaster Recovery to the Cloud</li>
-<li>Journaling Protection for UKCloud for VMware</li>
-<li>Workload Migration from a local, on-premises environment to the UKCloud platform</li>
-</ul>
-<p>The Zerto Self-Service Portal (ZSSP) provides access to all the tools you need to:</p>
-<ul>
-<li>Create and manage virtual protection groups (VPGs) for Journaling Protection</li>
-<li>Perform test and live failovers</li>
-<li>Move VPGs to migrate workloads from your local environment to the UKCloud platform</li>
-</ul>
-<h3 id="intended-audience">Intended audience</h3>
-<p>To complete the steps in this guide you must have log in details for the appropriate ZSSP.</p>
-<h2 id="which-zerto-self-service-portal-should-i-use">Which Zerto Self-Service Portal should I use?</h2>
-<p>The ZSSP you use depends on what you are trying to do:</p>
-<ul>
-<li><p>To create a VPG for Journaling Protection, use the ZSSP in the zone where the VMs you are protecting are located</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>To create a VPG for Disaster Recovery to the Cloud or Workload Migration, use the Zerto Virtual Manager (ZVM) Web Client in your local environment.</p>
-</div>
+<li><p>Visualisation workloads - taking advantage of the traditional use of GPU for powerful desktop/server applications which use graphically intensive content, such as computer-aided design (CAD), simulations and video encoding, rendering or streaming.</p>
 </li>
-<li><p>To perform a test or live failover for Disaster Recovery to the Cloud, Journaling Protection or Workload Migration, use the ZSSP in the zone where your target VDC (for recovery or migration) is located</p>
-</li>
-<li><p>To move a VPG for Workload Migration, use the ZSSP in the UKCloud zone where your target VDC is located</p>
+<li><p>Computational workloads - The parallel nature of general purpose Graphics Processing Unit (GPGPU) cores enables initiatives such as deep learning, analytics and large-scale mathematical modelling.</p>
 </li>
 </ul>
-<h2 id="accessing-the-zerto-self-service-portal">Accessing the Zerto Self-Service Portal</h2>
-<p>If you want to create a VPG for Journaling Protection, run a test or live failover, or move a VPG, access the ZSSP in the appropriate UKCloud zone.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>If you want to create a VPG for Disaster Recovery to the Cloud or Workload Migration, use the ZVM Web Client in your local environment.</p>
-</div>
-<ol>
-<li><p>Log in to the UKCloud Portal.</p>
-<p>For detailed instructions, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
-</li>
-<li><p>In the navigation panel, expand <strong>TOOLS</strong> and then select <strong>Journaling Protection (Zerto)</strong>.</p>
-<p><img src="images/vmw-portal-mnu-journaling.png" alt="Journaling Protection menu option in UKCloud Portal"></p>
-</li>
-<li><p>On the <em>Journaling Protection (Zerto)</em> page, click the <strong>Go to Zerto Login Page</strong> link for the appropriate UKCloud zone (for more information, see <a href="#which-zerto-self-service-portal-should-i-use"><em>Which Zerto Self-Service Portal should I use?</em></a>).</p>
-<p><img src="images/vmw-portal-journaling.png" alt="Journaling Protection page in UKCloud Portal"></p>
-</li>
-<li><p>Enter your log in credentials, including your <strong>ZORG</strong> name.</p>
-<p><img src="images/vmw-zerto-login.png" alt="Zerto log in page"></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>These credentials are different from the ones you use to log in to the UKCloud Portal. If you're not sure what they are, raise a service request through My Calls.</p>
-</div>
-</li>
-<li><p>After you log in, you'll see the main ZSSP page.</p>
-<p><img src="images/vmw-zerto-dashboard.png" alt="Zerto dashboard"></p>
-</li>
-</ol>
-<h2 id="next-steps">Next steps</h2>
-<p>After you have logged in to the ZSSP, you can:</p>
+<h3 id="what-technology-does-cloud-gpu-use">What technology does Cloud GPU use?</h3>
+<p>The service is provisioned using NVIDIA cards in the required hosts. Different cards are utilised depending on the use case:</p>
 <ul>
-<li>Create and manage VPGs to identify the VMs that you want to protect (see <a href="vmw-how-zerto-create-vpg.html"><em>How to create a virtual protection group</em></a>)</li>
-<li>Perform a test failover to verify that your VMs will be recovered correctly in the event of a disaster (see <a href="vmw-how-zerto-perform-failover.html"><em>How to perform a failover</em></a>)</li>
-<li>Perform a live failover to recover after a disaster or migrate workloads (see <a href="vmw-how-zerto-perform-failover.html"><em>How to perform a failover</em></a>)</li>
-<li>Move a VPG to migrate workloads (see <a href="../migration/migr-how-zerto-migrate-to-ukcloud.html"><em>How to migrate your workloads to the UKCloud platform</em></a>)</li>
+<li><p>Visualisation - NVIDIA <a href="http://www.nvidia.com/object/tesla-m60.html">M60</a> cards with GRID are designed to share virtual GPUs across multiple virtual desktop and application instances</p>
+</li>
+<li><p>Computational (GPGPU) - NVIDIA Tesla <a href="http://www.nvidia.com/object/tesla-p100.html">P100</a> cards are designed to accelerate the compute-intensive elements of applications.</p>
+</li>
 </ul>
+<h3 id="how-does-cloud-gpu-work">How does Cloud GPU work?</h3>
+<p>Cloud GPU utilises NVIDIA's GRID engine to expose GPU resources to client virtual machines (VMs). The GPU card is exposed as a shared PCI device which can then be used by the customer's VM.</p>
+<h3 id="are-there-any-prerequisites">Are there any prerequisites?</h3>
+<p>Yes. To take advantage of the Cloud GPU service, you must also have UKCloud for VMware VMs running on the UKCloud platform. These VMs must be running in a 'Priority' virtual data centre as the GPU mapping requires 100% memory allocation to the VM. Further to this, VMs wishing to utilise GPGPUs (NVIDIA Tesla P100) must be built from specific GPGPU enabled templates providing specific BIOS settings.</p>
+<h3 id="does-ukcloud-require-specific-nvidia-driver-versions">Does UKCloud require specific NVIDIA driver versions?</h3>
+<p>Yes. VMs utilising the NVIDIA GRID solution must use the GRID driver matching the driver installed on the vSphere hosts (currently 385.41). This driver can be downloaded from the <a href="https://portal.skyscapecloud.com/support/knowledge_centre/76dcd09f-3bd4-411f-8343-9fb21be0ceb1">UKCloud Knowledge Centre</a>.</p>
+<h3 id="which-compute-platforms-support-cloud-gpu">Which Compute platforms support Cloud GPU?</h3>
+<p>Currently, Cloud GPU only supports environments provisioned on UKCloud for VMware in regions 5 and 6. There are future plans to enable the service on UKCloud for OpenStack and High Performance Compute.</p>
+<h3 id="how-is-it-billed">How is it billed?</h3>
+<p>Cloud GPU is billed per card per hour for GPGPU, and per vGPU per hour for visualisation. Please note that this is in addition to the UKCloud for VMware VM charge. You have the option to power off Cloud GPU when not required to avoid unnecessary costs. All usage is billed and invoiced at the end of each month.</p>
+<h3 id="where-can-i-find-more-information-on-nvidia-grid">Where can I find more information on NVIDIA GRID?</h3>
+<p>The full NVIDIA GRID documentation is available on the NVIDIA website <a href="http://www.nvidia.co.uk/object/grid-enterprise-resources-uk.html">here</a>.</p>
+<h3 id="where-can-i-find-more-information-on-nvidia-cuda">Where can I find more information on NVIDIA CUDA?</h3>
+<p>You can find the latest information regarding CUDA on the NVIDIA website <a href="http://www.nvidia.co.uk/object/cuda-parallel-computing-uk.html">here</a>.</p>
+<h3 id="what-is-the-sla">What is the SLA?</h3>
+<p>The SLA for Cloud GPU is 99.90%. Full details regarding the SLA can be found on page 6 of the <em>Cloud GPU Service Definition</em> (<a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/619924782710146-service-definition-document-2018-05-21-1304.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/906087077560438-service-definition-document-2018-05-21-1303.pdf">Elevated</a>).</p>
+<h3 id="what-happens-if-the-card-fails">What happens if the card fails?</h3>
+<p>If a card failure occurs, our support team will identify the issue and re-instantiate your service on another GPU-enabled host.</p>
+<h3 id="can-i-have-multiple-gpus-associated-with-a-single-vm">Can I have multiple GPUs associated with a single VM?</h3>
+<p>Yes.</p>
+<h3 id="can-the-gpu-service-be-added-to-one-of-our-existing-servers-or-would-it-require-a-new-server">Can the GPU service be added to one of our existing servers or would it require a new server?</h3>
+<p>If you are using the GPU for Visualisation then yes, it could be added to an existing server, if the VM is in a GPU-enabled region. If your existing VM is not in the correct region then we would need to move it to a new server before enabling GPU for Visualisation on it.</p>
+<p>If you are planning on using GPU for Compute then you would need a new VM as a different BIOS is required.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
@@ -162,7 +138,7 @@
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-zerto-access-zssp.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/gpu/gpu-faq.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>

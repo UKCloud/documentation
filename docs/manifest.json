@@ -921,12 +921,12 @@
       "version": ""
     },
     {
-      "type": "Toc",
-      "source_relative_path": "articles/connectivity/toc.yml",
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-faq.md",
       "output": {
         ".html": {
-          "relative_path": "articles/connectivity/toc.html",
-          "hash": "b84zk5/psIQCA6fB0jhsYA=="
+          "relative_path": "articles/connectivity/conn-faq.html",
+          "hash": "JIbLFU1ZeR2hKH+YVV9K0w=="
         }
       },
       "is_incremental": false,
@@ -934,11 +934,63 @@
     },
     {
       "type": "Toc",
+      "source_relative_path": "articles/connectivity/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/toc.html",
+          "hash": "fe6Z+epGlLDmvNNINKgRtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/draas/draas-gs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/draas/draas-gs.html",
+          "hash": "mXLpbu6qlDAk1E1l4v/izA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/draas/images/draas-zerto-draas.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/draas/images/draas-zerto-draas.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/draas/images/draas-zerto-recovery.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/draas/images/draas-zerto-recovery.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
       "source_relative_path": "articles/draas/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/draas/toc.html",
-          "hash": "b84zk5/psIQCA6fB0jhsYA=="
+          "hash": "7sgLFwqN4QQ7NmfO6B/IWg=="
         }
       },
       "is_incremental": false,
@@ -1156,12 +1208,39 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-ref-services.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-ref-services.html",
+          "hash": "1FkQjMEm6khTqRk3tsInzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/enablement/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/enablement/toc.html",
-          "hash": "b84zk5/psIQCA6fB0jhsYA=="
+          "hash": "eyYZkYY+ObtD+HSKN8yGJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/gpu/gpu-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/gpu/gpu-faq.html",
+          "hash": "mgbPr2q65E0Y298dylw3Nw=="
         }
       },
       "is_incremental": false,
@@ -1362,7 +1441,79 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/toc.html",
-          "hash": "qXBFuCiYsv/Snu7hKeu6Iw=="
+          "hash": "iECEgyComUUNSir7RqMLSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/hpc/hpc-ref-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/hpc/hpc-ref-overview.html",
+          "hash": "mOMmx7LCk6YNquTQXDrTmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/hpc/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/hpc/toc.html",
+          "hash": "/H5p6LpCIaEtog2qqn0U8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/migration/images/migr-zerto-move-execution-parameters.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/migration/images/migr-zerto-move-execution-parameters.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/migration/images/migr-zerto-move-select-vpg.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/migration/images/migr-zerto-move-select-vpg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/migration/images/migr-zerto_move-vpg.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/migration/images/migr-zerto_move-vpg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/migration/migr-how-zerto-migrate-to-ukcloud.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/migration/migr-how-zerto-migrate-to-ukcloud.html",
+          "hash": "NzjncM/9IMrlKJPDDOPUYA=="
         }
       },
       "is_incremental": false,
@@ -1374,7 +1525,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/migration/toc.html",
-          "hash": "b84zk5/psIQCA6fB0jhsYA=="
+          "hash": "2FVp4Jmo2WOnF1E5Zk1kbQ=="
         }
       },
       "is_incremental": false,
@@ -3146,12 +3297,36 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/private-compute/prc-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/private-compute/prc-faq.html",
+          "hash": "Kc/oXwEjK0jYPprr3gm4pw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/private-compute/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/private-compute/toc.html",
-          "hash": "b84zk5/psIQCA6fB0jhsYA=="
+          "hash": "NtSoMaELOr+T50JLwj8WVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/private-storage/prs-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/private-storage/prs-faq.html",
+          "hash": "AIjcwS79ykNyQlwJ+oYWoQ=="
         }
       },
       "is_incremental": false,
@@ -3163,7 +3338,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-storage/toc.html",
-          "hash": "b84zk5/psIQCA6fB0jhsYA=="
+          "hash": "rKZ8x+XtUJxqf3kF42n1zw=="
         }
       },
       "is_incremental": false,
@@ -7932,30 +8107,24 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-zerto-access-zssp.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-access-zssp.html",
-          "hash": "ivpn3kOyYrx8ptcDOqETNg=="
+          "hash": "07Gja+0pUCsLYGDHkJqZdA=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-zerto-create-vpg.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-create-vpg.html",
-          "hash": "zW1L2D/ESe8xbsyM5hgTWg=="
+          "hash": "zyISxQ8880oBU9YeKz0Mcw=="
         }
       },
       "is_incremental": false,

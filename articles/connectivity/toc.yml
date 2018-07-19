@@ -1,1 +1,4 @@
-[]
+- name: FAQs
+  items:
+  - name: General connectivity FAQs
+    href: conn-faq.md

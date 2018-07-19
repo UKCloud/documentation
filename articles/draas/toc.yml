@@ -1,1 +1,4 @@
-[]
+- name: Getting Started
+  items:
+  - name: Disaster Recovery as a Service
+    href: vmw-gs-draas.md
