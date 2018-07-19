@@ -198,6 +198,11 @@ az group delete --name rg01 -y
 </code></pre>
 <p>This is yet another difference between PowerShell creation as there is no auto-generation of passwords built-in</p>
 </div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Given the fact that Azure CLI under Profile 2017-03-09 does <strong>NOT</strong> allow you to lsit your Service Principal Name unlike the <a href="https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-list">latest profile</a> vs <a href="https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2017-03-09-profile#az-ad-sp-list">206-03-09 profile</a>, its use for Azure Stack is highly limited.</p>
+<p>As a rule of thumb use PowerShell wherever possible.</p>
+</div>
 
 
                   <div class="row">
