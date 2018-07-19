@@ -14,8 +14,6 @@
       href: azs-how-configure-powershell-users.md
     - name: Connect to Azure Stack with CLI environment for UKCloud
       href: azs-how-configure-cli.md
-    - name: Create a Service Principal Name for Azure Stack
-      href: azs-how-create-spn-powershell.md
     - name: Create a virtual machine
       href: azs-how-create-vm.md
     - name: Create a VM using Terraform on Azure Stack
@@ -24,6 +22,12 @@
       href: azs-how-create-azure-group.md
     - name: Use the Azure Stack API
       href: azs-how-use-azure-api.md
+    - name: Service Principal Name
+      items:
+      - name: Create a Service Principal Name for Azure Stack - CLI
+        href: azs-how-create-spn-cli.md
+      - name: Create a Service Principal Name for Azure Stack - PowerShell
+        href: azs-how-create-spn-powershell.md
   - name: Reference
     items:
     - name: UKCloud for Microsoft Azure Troubleshooting
