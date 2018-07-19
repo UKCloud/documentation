@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/cblack/ukrepos/documentation",
+  "source_base_path": "C:/repos/documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "1pFJzawNW2T8oakLCroX3g=="
+          "hash": "XbxE6Ll/CZ1T0rk24TRAaw=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "ueRJytYGW8ltohZG54RBQA=="
+          "hash": "iBXipTBdfJEIRgjIZ5L23A=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-gs.html",
-          "hash": "J4NXMSby012rWiMoZTNKzw=="
+          "hash": "slQu6TOWHtBOi/M9PNzH6g=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-cli.html",
-          "hash": "j4FTimZY8jZ0zL2MbkbqGA=="
+          "hash": "HE4VvlALKMEPJjAfE4p/nA=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-powershell-operators.html",
-          "hash": "lGSv5TvsNDR4HQOVSGALKw=="
+          "hash": "Y+vu/c3CeTPK+Ubyi/PgwQ=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-powershell-users.html",
-          "hash": "TgR1o4rgnG8e5WNEyHizyQ=="
+          "hash": "RqKTJ2ECNps8ZNZcmN0gOg=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-azure-group.html",
-          "hash": "io6A10V8cNCeVgNJpT4aWg=="
+          "hash": "rit11ILQxxyfT0zTR669/A=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-spn-cli.html",
-          "hash": "bBVw7gR5eeK1uxY2MneQyA=="
+          "hash": "M32To5zWcsiijHn2rWNsgA=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-spn-powershell.html",
-          "hash": "YBcwFGZ8wZ0oWUce1nL6Qg=="
+          "hash": "EF7wvOrKb06jH6DQ5sYgKA=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-terraform.html",
-          "hash": "zJdC13Mv0ULBFCvs0dqkxg=="
+          "hash": "fUYnfBrHSGeNdKJmFNO6SA=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm.html",
-          "hash": "bTSQU4FyyCoAYf4iqj0F6A=="
+          "hash": "Ocgh9Y8RjpL2qjWb2HFLvg=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-ps-update-azure-stack.html",
-          "hash": "5JDbbJAw7fpG8iFSmFAckw=="
+          "hash": "RupDjAqXL6iMWm4RRGRCxg=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-use-azure-api.html",
-          "hash": "lrTUOAIBJ/DQrTJyHvEAog=="
+          "hash": "EsypjH8DStY4bX+aLO2uiQ=="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-overview.html",
-          "hash": "B04CMh7CJ5zugedIxCYFug=="
+          "hash": "CPhuAh3kH2QfmZYsa1ZOag=="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-troubleshooting.html",
-          "hash": "YNUuIBzxyK4lIuRY/dGTOQ=="
+          "hash": "ExxjzVJrZKlJBaqiCMyazg=="
         }
       },
       "is_incremental": false,
@@ -587,7 +587,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-application-process.html",
-          "hash": "Mm9VqEfJKNO0/1DXA1+MxA=="
+          "hash": "PlopJLlTJileBEgFrH91Mw=="
         }
       },
       "is_incremental": false,
@@ -599,7 +599,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-faq.html",
-          "hash": "FNDkaxAYlvIrXk2e0QOPug=="
+          "hash": "ZYZh1i5xg12BPxhnfjeKCw=="
         }
       },
       "is_incremental": false,
@@ -611,7 +611,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-gs-walled-garden.html",
-          "hash": "6pmlkL49zKiqM84r4+JgQQ=="
+          "hash": "SxYR4irUmG0ADTb9x3qRSw=="
         }
       },
       "is_incremental": false,
@@ -626,7 +626,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-how-access-services-walled-garden.html",
-          "hash": "3LezJDadIhBewqtcCtLyaA=="
+          "hash": "OcUfR4cX1xjvj4gKxdCqxA=="
         }
       },
       "is_incremental": false,
@@ -686,7 +686,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-faq.html",
-          "hash": "EQ/B6nJSfwGA9Oqt09hUTQ=="
+          "hash": "USUywunoifRPXT/tiIoi2g=="
         }
       },
       "is_incremental": false,
@@ -698,7 +698,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-gs.html",
-          "hash": "sd3BtIiqL2UoA/2jrSse+Q=="
+          "hash": "HbwwN4ox5x9IJZhqlyIYEA=="
         }
       },
       "is_incremental": false,
@@ -710,7 +710,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-view-info-portal.html",
-          "hash": "Rb9kqshQHH4WJxHR9eJ99A=="
+          "hash": "LTkhf4qMiDsLt5mavtrb2A=="
         }
       },
       "is_incremental": false,
@@ -722,7 +722,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-s3-examples.html",
-          "hash": "s3RvxjF/f4/G4s01d7g1dg=="
+          "hash": "UkFfwwgAke0gZgYIL03FTQ=="
         }
       },
       "is_incremental": false,
@@ -737,7 +737,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-sco.html",
-          "hash": "KM36AVsWM58J9whRgrH2UA=="
+          "hash": "zexpFHuGIXeRQaAo2bNN7A=="
         }
       },
       "is_incremental": false,
@@ -950,7 +950,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-gs.html",
-          "hash": "wOiGxgWCP38yG7Lu84f0RA=="
+          "hash": "Pzuz7OuiOUXHwNTIYn932Q=="
         }
       },
       "is_incremental": false,
@@ -1173,7 +1173,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/gpu-gs-compute.html",
-          "hash": "3k2Hr3wHeIpnWPgwR4MgtQ=="
+          "hash": "l+tOuB4RbUt69eSfu7QMXg=="
         }
       },
       "is_incremental": false,
@@ -1185,7 +1185,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/gpu-gs-visualisation.html",
-          "hash": "jK2QnMirFAhwLxHu16dvnw=="
+          "hash": "gqy0X1iM73TdqMZwe66Vuw=="
         }
       },
       "is_incremental": false,
@@ -1408,7 +1408,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-gs.html",
-          "hash": "qUhCRuCiIXdmiGC9YEw8dQ=="
+          "hash": "o6/l15GzgmAdtWywCxKE9w=="
         }
       },
       "is_incremental": false,
@@ -1421,6 +1421,39 @@
         ".html": {
           "relative_path": "articles/openshift/toc.html",
           "hash": "OjNoOCwWHYs63bww662/XA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/boot_times.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/boot_times.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/mongodb.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/mongodb.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/network_performance.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/network_performance.PNG"
         }
       },
       "is_incremental": false,
@@ -1443,6 +1476,28 @@
       "output": {
         "resource": {
           "relative_path": "articles/openstack/images/ostack-cli-flavor-list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-cli-results-autorestart-on.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-cli-results-autorestart-on.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-glance-image-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-glance-image-list.png"
         }
       },
       "is_incremental": false,
@@ -1637,6 +1692,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-download-rc-file.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-download-rc-file.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-horizon-images.png",
       "output": {
         "resource": {
@@ -1729,6 +1795,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/openstack/images/ostack-horizon-launch-stack.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-log-in.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-log-in.png"
         }
       },
       "is_incremental": false,
@@ -1857,6 +1934,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-restartonfail-off.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-restartonfail-off.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-restartonfail-on.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-restartonfail-on.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-restartonfail-true.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-restartonfail-true.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-horizon-select-template.png",
       "output": {
         "resource": {
@@ -1868,10 +1978,241 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-update-instance-metadata-restartonfail.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-update-instance-metadata-restartonfail.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-horizon-welcome.png",
       "output": {
         "resource": {
           "relative_path": "articles/openstack/images/ostack-horizon-welcome.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-neutron-floatingip-associate.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-neutron-floatingip-associate.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-neutron-floatingip-create.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-neutron-floatingip-create.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-neutron-net-create.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-neutron-net-create.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-neutron-port-create.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-neutron-port-create.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-neutron-port-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-neutron-port-list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-neutron-router-interface-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-neutron-router-interface-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-neutron-router-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-neutron-router-list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-neutron-subnet-create.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-neutron-subnet-create.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-neutron-update-port.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-neutron-update-port.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-neutron-update-port2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-neutron-update-port2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-nova-availability-zone-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-nova-availability-zone-list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-nova-boot.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-nova-boot.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-nova-boot2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-nova-boot2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-nova-flavor-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-nova-flavor-list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-pip-installed.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-pip-installed.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-portal-menu-openstack.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-portal-menu-openstack.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-portal-permissions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-portal-permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-portal-select-region.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-portal-select-region.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-portal-synchronise-password.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-portal-synchronise-password.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-ps-openrc-unblock.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-ps-openrc-unblock.png"
         }
       },
       "is_incremental": false,
@@ -1900,12 +2241,270 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-windows-advanced-system-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-windows-advanced-system-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-windows-btn-environment-variables.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-windows-btn-environment-variables.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-windows-edit-path.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-windows-edit-path.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-windows-environment-variables-path.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-windows-environment-variables-path.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-windows-mnu-computer-properties.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-windows-mnu-computer-properties.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ptl-contacts-btn-edit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ptl-contacts-btn-edit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ptl-contacts-btn-remove.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ptl-contacts-btn-remove.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ptl-contacts-tab-permissions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ptl-contacts-tab-permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ptl-menu-all-contacts.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ptl-menu-all-contacts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ptl-mnu-add-new-contact.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ptl-mnu-add-new-contact.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ptl-mnu-change-password.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ptl-mnu-change-password.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ptl-new-contact.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ptl-new-contact.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ptl-update-password.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ptl-update-password.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/random_io.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/random_io.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/sequential_io.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/sequential_io.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-faq.html",
+          "hash": "Fh4JS1kzrYfQbXzZY/2Kfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-gs.html",
-          "hash": "WqR3GkGRC/tuevSjY7XaEg=="
+          "hash": "2isNiwjVIFiHJWWP6V9QlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-create-load-balancer.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-create-load-balancer.html",
+          "hash": "zvEJzcr19E5vL9ja6viBgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-manage-accounts-portal.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-manage-accounts-portal.html",
+          "hash": "hFYn2ZHOW3j4NhIiud2U6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-recover-instance.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-recover-instance.html",
+          "hash": "qb+StXagBbRjkBJJ15sNEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-use-cli.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-use-cli.html",
+          "hash": "lz3xZ21If+uGfOKaBtdSCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-ref-ukcloud-outperforms.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-ref-ukcloud-outperforms.html",
+          "hash": "O0sj88T8a6DoJHkWcx5vRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-sco.html",
+          "hash": "gcSlIVrNrH2G22Uu7W9dTA=="
         }
       },
       "is_incremental": false,
@@ -1917,7 +2516,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "OG0AMB/4r/7JzYfuLJ+BKw=="
+          "hash": "hQ3PMtE3iuUYjOLDx6vB3A=="
         }
       },
       "is_incremental": false,
@@ -2292,7 +2891,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-faq.html",
-          "hash": "FGoICsLW7K8I1oe8GZxARQ=="
+          "hash": "hiRhSrV0w58TBfgfY61RNg=="
         }
       },
       "is_incremental": false,
@@ -2304,7 +2903,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-gs.html",
-          "hash": "BW8dAST0AReeTNpG22LgGA=="
+          "hash": "yOJtnYynngBSzC6vp2uuoQ=="
         }
       },
       "is_incremental": false,
@@ -2316,7 +2915,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-how-build-vm.html",
-          "hash": "VlSL7asr/tC8aQ93uqsI7w=="
+          "hash": "ERGf6RbcVWpDPs7WjX6/NQ=="
         }
       },
       "is_incremental": false,
@@ -2328,7 +2927,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-how-enable-ha.html",
-          "hash": "Yo0Lsavr7Vf79ONe9L3rPw=="
+          "hash": "tPIX8Ef4LPRI30h4nZkjBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/oracle/orcl-ref-bug-self-service.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/oracle/orcl-ref-bug-self-service.html",
+          "hash": "+IQDeohqt7ZkP88Bzwtnkw=="
         }
       },
       "is_incremental": false,
@@ -2340,7 +2951,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-licensing.html",
-          "hash": "YcevDLciR75eiAtgyeuhUQ=="
+          "hash": "FK3a2vZR0xRj0OPvung/zQ=="
         }
       },
       "is_incremental": false,
@@ -2352,7 +2963,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-templates.html",
-          "hash": "cLP5rghy6yIruSv4m9h0lQ=="
+          "hash": "zmRfhUsJLwOA6bNaEdOWmw=="
         }
       },
       "is_incremental": false,
@@ -2364,7 +2975,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-vm-compatibility.html",
-          "hash": "sqs5G42NnXR9SlI7Wvg8gA=="
+          "hash": "hwMn7eg2ll1aiO+dx3aXYw=="
         }
       },
       "is_incremental": false,
@@ -2379,7 +2990,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco.html",
-          "hash": "9/nnsmaZ2LKy8QiruJh1tw=="
+          "hash": "S5xxLls9tAiAkzsP1Y+gqw=="
         }
       },
       "is_incremental": false,
@@ -2391,7 +3002,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/toc.html",
-          "hash": "f/V56ej091NJ//3ImNvnRQ=="
+          "hash": "MRo4xqESDGRJ6N+lNchhrQ=="
         }
       },
       "is_incremental": false,
@@ -2403,7 +3014,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-browsers.html",
-          "hash": "H5s/gNtso4rutksY6keeSw=="
+          "hash": "76P8vVS9P0/MypVRFnf+WA=="
         }
       },
       "is_incremental": false,
@@ -2415,7 +3026,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-services-by-region.html",
-          "hash": "cFK1JjtOuWFOMPvOyzve6w=="
+          "hash": "iE4MoqHDY6H4MYRpIZGAhw=="
         }
       },
       "is_incremental": false,
@@ -2516,7 +3127,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "qNLWlpaUYHr47W/7uPjRmw=="
+          "hash": "tKkSdxUPO+tTKvSaD4kI9A=="
         }
       },
       "is_incremental": false,
@@ -2630,7 +3241,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-gs.html",
-          "hash": "LnWJWClduqs7dyIwk+vYXQ=="
+          "hash": "K66EPYRgM27F0p+JQqUHdA=="
         }
       },
       "is_incremental": false,
@@ -2654,7 +3265,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/support-docs/sup-dfx-file-names.html",
-          "hash": "Y7Lk20ZZyG/8Y8dyICt+Bg=="
+          "hash": "WRwy/YQ2OUxt4OqpUbZ//w=="
         }
       },
       "is_incremental": false,
@@ -6777,7 +7388,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs-journaling.html",
-          "hash": "NTLUyQF8c9rcJFRLo6sGlQ=="
+          "hash": "EDomAN7DaT/W/w3UpXtTiw=="
         }
       },
       "is_incremental": false,
@@ -6789,7 +7400,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "g7NttKQIbJFqekZYuNt1Yw=="
+          "hash": "g4XfqZZI1HYhmKK5NcXbCA=="
         }
       },
       "is_incremental": false,
@@ -6804,7 +7415,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-centos-update-servers.html",
-          "hash": "dPrjoC/zk5RKuoVKb87Vdg=="
+          "hash": "LuE4SAnVggzCeW2XpUOi7g=="
         }
       },
       "is_incremental": false,
@@ -6816,7 +7427,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-syslog-data-adv.html",
-          "hash": "OlCEsn0T+vxz8pV3TTpvoA=="
+          "hash": "beM1n4TX33h7geJxR6qO2w=="
         }
       },
       "is_incremental": false,
@@ -6828,7 +7439,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-syslog-data.html",
-          "hash": "f6h/RMbUDzgc+pSAiGDrig=="
+          "hash": "al5qgNocgVzb72J2NqaBjA=="
         }
       },
       "is_incremental": false,
@@ -6843,7 +7454,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-ubuntu-update-servers.html",
-          "hash": "SKLOPq4gDkmSRLoJx6nv5w=="
+          "hash": "yV6ejGoXSN0pw7mMjAaLJw=="
         }
       },
       "is_incremental": false,
@@ -6855,7 +7466,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-vcloud-api.html",
-          "hash": "AWoGhtkYlNUmDh+YoK+oXg=="
+          "hash": "i+tT4uo9E6sMDIysBVqtRw=="
         }
       },
       "is_incremental": false,
@@ -6870,7 +7481,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-build-edge.html",
-          "hash": "VBj3+f8M30bdse1gpM7XGw=="
+          "hash": "TLhKHh+tIbtyHiYx9ZHiOQ=="
         }
       },
       "is_incremental": false,
@@ -6885,7 +7496,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-build-vm.html",
-          "hash": "0xtWa8AmNbZ4RGeUAk19fw=="
+          "hash": "j1gh88XkM7w2JuX052CRAQ=="
         }
       },
       "is_incremental": false,
@@ -6897,7 +7508,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-change-ipsec-vpn-api.html",
-          "hash": "gzLvPowiq9f370JFVYB4ow=="
+          "hash": "KhPCiLartW76PLfdRT7/DA=="
         }
       },
       "is_incremental": false,
@@ -6912,7 +7523,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-ipsec-vpn.html",
-          "hash": "8ScXgE9c/Asba0P4efYLkA=="
+          "hash": "AalKsL04uZtg0nHw2Xx6CQ=="
         }
       },
       "is_incremental": false,
@@ -6924,7 +7535,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-load-balancer.html",
-          "hash": "9nCpWC4YKE5oQ2mk/tzIDg=="
+          "hash": "Fovxcr083SFcRXY89iMIjg=="
         }
       },
       "is_incremental": false,
@@ -6936,7 +7547,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-connect-windows-update.html",
-          "hash": "BwV82hPTBe/EZVEwaIAx5g=="
+          "hash": "Wd7IWrTethrpmi69re0o3w=="
         }
       },
       "is_incremental": false,
@@ -6948,7 +7559,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-convert-edge.html",
-          "hash": "UMZmFjB3x3wjI+1Y47z4tg=="
+          "hash": "Du9Cm4NK6QzGN+TYDCDmJg=="
         }
       },
       "is_incremental": false,
@@ -6960,7 +7571,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-catalog.html",
-          "hash": "NflhJF8I8Q0syjdva1DXZw=="
+          "hash": "xA1vu9k1Tt0fqhLSV2TlmA=="
         }
       },
       "is_incremental": false,
@@ -6972,7 +7583,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-dhcp-pool.html",
-          "hash": "3wusSq50trqOqDyTiMrwrQ=="
+          "hash": "qQLfkC9WS2OEv2oT9csZBw=="
         }
       },
       "is_incremental": false,
@@ -6984,7 +7595,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-firewall-rules.html",
-          "hash": "MZCXcCHoOSk9SdAnVidxqA=="
+          "hash": "bkIGsDEZg/29MYC+1hYJ4Q=="
         }
       },
       "is_incremental": false,
@@ -6996,7 +7607,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-isolated-network.html",
-          "hash": "FIvOnbBmpfaN6RBecCf8Tw=="
+          "hash": "4qJt2oGvASz0AR0l1+Rf/w=="
         }
       },
       "is_incremental": false,
@@ -7008,7 +7619,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-nat-rules.html",
-          "hash": "iGB03F0hX0VYFbGjv6o/2w=="
+          "hash": "KPVmEW82LekxLhkqCrEriA=="
         }
       },
       "is_incremental": false,
@@ -7023,7 +7634,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-routed-network.html",
-          "hash": "QFzHOD8pSkPjTsITDa8Sqg=="
+          "hash": "oC68XJvh3xA5laXQmQMaxw=="
         }
       },
       "is_incremental": false,
@@ -7035,7 +7646,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-static-route.html",
-          "hash": "lo7pxydMewF5+E4+ZD4foQ=="
+          "hash": "22H25TjB5qD//kSIv9Yxxw=="
         }
       },
       "is_incremental": false,
@@ -7047,7 +7658,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vapp-network.html",
-          "hash": "l0tVQxw88saBu4ke0JhXnw=="
+          "hash": "rJgWO4hEvk32PTpAKjr/Xg=="
         }
       },
       "is_incremental": false,
@@ -7059,7 +7670,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vapp.html",
-          "hash": "P62vAo/vHG4PHoE0MIMd7A=="
+          "hash": "sD93Yw2fM627bl0KOcOrzA=="
         }
       },
       "is_incremental": false,
@@ -7071,7 +7682,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vm-from-scratch.html",
-          "hash": "kvCpWJZ38B+Fpx1PbP7Hag=="
+          "hash": "0OHCIgZyqSDROc2N0f/Gvg=="
         }
       },
       "is_incremental": false,
@@ -7083,7 +7694,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vm-from-template.html",
-          "hash": "LgB+HyGth7erPPbO434Gjg=="
+          "hash": "dIPGoRnMTuOpBj5mn0SGvA=="
         }
       },
       "is_incremental": false,
@@ -7098,7 +7709,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-deploy-ftps.html",
-          "hash": "/9p5fX3CJ2gvkwvdVXb2yA=="
+          "hash": "g21EDwEcf559zx8Pau4oCA=="
         }
       },
       "is_incremental": false,
@@ -7110,7 +7721,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-find-ip-addresses.html",
-          "hash": "t3m2x+AFz8eI6UT9O5RCYA=="
+          "hash": "bzxRzkQB2W2UYH1TPuN37w=="
         }
       },
       "is_incremental": false,
@@ -7122,7 +7733,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-install-openvpn.html",
-          "hash": "vgQza8CTshE9gEqEoFF5NQ=="
+          "hash": "tf/GNeAV82pVh4vBZ3cPHA=="
         }
       },
       "is_incremental": false,
@@ -7134,7 +7745,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-install-rhui.html",
-          "hash": "5xU6EvJCxghbQNoTODNguA=="
+          "hash": "L+jj2MQ717O6zbja27Wq9g=="
         }
       },
       "is_incremental": false,
@@ -7146,7 +7757,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-install-vcloud-api-rest-client.html",
-          "hash": "6jNbWQKp9aOgVTjAxucLkA=="
+          "hash": "yTCwxke1GxDuW4h6uMQUXg=="
         }
       },
       "is_incremental": false,
@@ -7158,7 +7769,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-license-microsoft.html",
-          "hash": "G2bKqL+3BJq8C676kbDIGw=="
+          "hash": "0CGQOevJ/57qi8mUFmyo8A=="
         }
       },
       "is_incremental": false,
@@ -7170,7 +7781,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-license-red-hat.html",
-          "hash": "3nnTFyylSC4xMyDmkvspYQ=="
+          "hash": "BYCdRbX1vhXIYJyh+Sqrng=="
         }
       },
       "is_incremental": false,
@@ -7185,7 +7796,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-locate-vdc.html",
-          "hash": "zsnVfpXQielVdXvu6ivm8Q=="
+          "hash": "sJoB58ZouwiQ8o1qeitOtA=="
         }
       },
       "is_incremental": false,
@@ -7200,7 +7811,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-manage-snapshot-protection.html",
-          "hash": "q/DQ1ztFHi5LcZPzGfkmhQ=="
+          "hash": "Lw9KuWhdU7nOoEEaYmbUiw=="
         }
       },
       "is_incremental": false,
@@ -7212,7 +7823,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-manage-vapp-permissions.html",
-          "hash": "wkOEvtyhqSN0C47RxB5KPA=="
+          "hash": "Uwxsd2xM6ZaBKrYuq65+fQ=="
         }
       },
       "is_incremental": false,
@@ -7224,7 +7835,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-manage-vcd-permissions.html",
-          "hash": "zfQ+5Z3JofbbXHU6iXXF8Q=="
+          "hash": "4skVjVUBC3KqW5LFylS/Iw=="
         }
       },
       "is_incremental": false,
@@ -7236,7 +7847,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-portal-view-vms.html",
-          "hash": "8pVNV/fZTU97zp1zROgB3Q=="
+          "hash": "IW8eLV+BOLxjK6nisCuc/Q=="
         }
       },
       "is_incremental": false,
@@ -7248,7 +7859,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-ps-export-edge-data.html",
-          "hash": "/MZ/F06H82kOnBPXgE1j2A=="
+          "hash": "GXbnhxv1iPaDdRpR5sE/Vw=="
         }
       },
       "is_incremental": false,
@@ -7260,7 +7871,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-retrieve-utilisation-metrics.html",
-          "hash": "E13CX2kxfXkEjSXUG/VFww=="
+          "hash": "Ag6wI8r6ch6GYDE5pFqzQA=="
         }
       },
       "is_incremental": false,
@@ -7272,7 +7883,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-setup-kms.html",
-          "hash": "5gyhVjC4K4F47+Afhm71SA=="
+          "hash": "XNmSVIW7fFDrRKilaUWoWw=="
         }
       },
       "is_incremental": false,
@@ -7284,7 +7895,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-upgrade-edge.html",
-          "hash": "3i5gQ8/Y2x3pwGK0Jl3Mew=="
+          "hash": "AwhvmzoGvT5bTu1vC8lvFw=="
         }
       },
       "is_incremental": false,
@@ -7296,7 +7907,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-ovf-tool.html",
-          "hash": "o9+q4SXNm6G1j1g8CJwqTg=="
+          "hash": "Mjx+2mlPYAT04symbWqMbw=="
         }
       },
       "is_incremental": false,
@@ -7311,7 +7922,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-vm-location.html",
-          "hash": "uS5REcNgsFjvb+7X+gzj3Q=="
+          "hash": "RUiHZtM3Q/iCDeTlDaRprA=="
         }
       },
       "is_incremental": false,
@@ -7326,7 +7937,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-access-zssp.html",
-          "hash": "uLkJR4rtTvorKYs4dJWv6A=="
+          "hash": "ivpn3kOyYrx8ptcDOqETNg=="
         }
       },
       "is_incremental": false,
@@ -7341,7 +7952,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-create-vpg.html",
-          "hash": "sB+UFWlDSqNotrQGaOFu8w=="
+          "hash": "zW1L2D/ESe8xbsyM5hgTWg=="
         }
       },
       "is_incremental": false,
@@ -7353,7 +7964,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-install-local.html",
-          "hash": "/W8sW4uGigN9z7n9csiNHQ=="
+          "hash": "o0XZ1wHV2uEj/vp0jubl5w=="
         }
       },
       "is_incremental": false,
@@ -7368,7 +7979,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-migrate-between-regions.html",
-          "hash": "UO/2p+9RNBPrToZx0CNh7g=="
+          "hash": "aKmL3RKYy8LMYLPby9IYqg=="
         }
       },
       "is_incremental": false,
@@ -7383,7 +7994,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-perform-failover.html",
-          "hash": "pmp+H/6N0gjRnEycJgg7Gw=="
+          "hash": "QR2Ch5m1wnQ2ZJNVmJpqqw=="
         }
       },
       "is_incremental": false,
@@ -7395,7 +8006,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-access-to-vms.html",
-          "hash": "Z9oCleXeYcbsCAzEkwBhuQ=="
+          "hash": "XZBal6NZNc6WG07WlE0vxA=="
         }
       },
       "is_incremental": false,
@@ -7407,7 +8018,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-block-vcd-calls.html",
-          "hash": "876i249L2t55a2Z4DQ+Zvw=="
+          "hash": "yk2VyaCA4n5s+Lk9zQF2Vw=="
         }
       },
       "is_incremental": false,
@@ -7422,7 +8033,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-byof-working-firewalls.html",
-          "hash": "NY2wyBIlc0B0LfD11j2U6w=="
+          "hash": "fORXUk/fRqD7H4VciB09mg=="
         }
       },
       "is_incremental": false,
@@ -7437,7 +8048,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-cant-manage-edge.html",
-          "hash": "6mAfLbHXurAH3EfJjJsB9A=="
+          "hash": "6pcWbUw6HRjhJ/WSQLnoJA=="
         }
       },
       "is_incremental": false,
@@ -7449,7 +8060,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-cloning-vapps.html",
-          "hash": "hRFZVZLaAJy/sYwebYm6AA=="
+          "hash": "TTNJvVI9vhFSWsrmSvUQKA=="
         }
       },
       "is_incremental": false,
@@ -7461,7 +8072,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-connectivity-options.html",
-          "hash": "6VPusdC2AZwzCRnwQMh/MA=="
+          "hash": "3/e/lrzy/Le+3+HR+ZsyFA=="
         }
       },
       "is_incremental": false,
@@ -7473,7 +8084,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-edge-ha.html",
-          "hash": "kYbdPKM3YQDLCl+hNbSKwg=="
+          "hash": "+YKjkaracjGEq6Vuwh+V4g=="
         }
       },
       "is_incremental": false,
@@ -7485,7 +8096,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-fix-unable-to-vapps.html",
-          "hash": "/gp5FKyE7yNnUOkxfo9lCQ=="
+          "hash": "JpQSY5uXb20wLL7DbsXwmQ=="
         }
       },
       "is_incremental": false,
@@ -7500,7 +8111,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-managing-portal-api.html",
-          "hash": "IeeYnq2ktunEDdVXMHqAbA=="
+          "hash": "HnUJwcEBPNVfKw3VORDxDw=="
         }
       },
       "is_incremental": false,
@@ -7512,7 +8123,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-network-time-server.html",
-          "hash": "/GsYVTspBVIXbzuHk3oRiw=="
+          "hash": "YEhMUVB58gjk47OFe5wBZA=="
         }
       },
       "is_incremental": false,
@@ -7524,7 +8135,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-oversized-vms.html",
-          "hash": "RYlOL31w3Yn3UJb4GveK+w=="
+          "hash": "ZjQIBIjeP4bGqx6D3gSC7A=="
         }
       },
       "is_incremental": false,
@@ -7536,7 +8147,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-powercli-vcloud.html",
-          "hash": "vOaMQDRPqXwROQw5c4PfEw=="
+          "hash": "Utf2w0CuZ1mG/V4pxhIW+g=="
         }
       },
       "is_incremental": false,
@@ -7548,7 +8159,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-rhui.html",
-          "hash": "pPZXBiUOuJ01BkX5SDQfHQ=="
+          "hash": "lhHqBO1QB/hLfvIV4oSSbA=="
         }
       },
       "is_incremental": false,
@@ -7560,7 +8171,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-service-options.html",
-          "hash": "9eG2ACwBhEC6Pc3LQULgWg=="
+          "hash": "bCCmfuxuAoL7ZFXT9FwhjA=="
         }
       },
       "is_incremental": false,
@@ -7572,7 +8183,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-shared-secret-issues.html",
-          "hash": "gqjKIC+j9bn3/bDcC1dJYQ=="
+          "hash": "FJN7mLRWtH3P9OOU8a8fKw=="
         }
       },
       "is_incremental": false,
@@ -7584,7 +8195,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-storage-policies.html",
-          "hash": "T29CRYowWsZ4y71XRfQIsA=="
+          "hash": "yAIOg9DmE/5oKzVgGiXT5Q=="
         }
       },
       "is_incremental": false,
@@ -7596,7 +8207,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-system-center.html",
-          "hash": "0A0gc8sX0WPYDuw5mERBJA=="
+          "hash": "tNONrbNNFYINs/oJhYlPXw=="
         }
       },
       "is_incremental": false,
@@ -7608,7 +8219,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-tier1-storage.html",
-          "hash": "Jfym7905YL98unFKznK8wg=="
+          "hash": "ogsGuqBAPW17uKr3YAp6vA=="
         }
       },
       "is_incremental": false,
@@ -7620,7 +8231,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-tools-installation.html",
-          "hash": "UxRV/nJUSOu0ovahvZPz5w=="
+          "hash": "Pr+P9F3Omm63E8q8VfMmrg=="
         }
       },
       "is_incremental": false,
@@ -7632,7 +8243,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-two-factor-auth.html",
-          "hash": "uTIzWOWK7F9M9UNnHh2f+g=="
+          "hash": "ohIfKrWn8kK6JScjpgattg=="
         }
       },
       "is_incremental": false,
@@ -7644,7 +8255,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-twreuse.html",
-          "hash": "/zrRbpVSZC+6HM+A5upgEw=="
+          "hash": "aUyKDMErOsI/Os1+kYLkqw=="
         }
       },
       "is_incremental": false,
@@ -7656,7 +8267,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcd-820.html",
-          "hash": "OVMW4x4AkA1lpc68r0MaSg=="
+          "hash": "KHV59lW0e6JufNfMP2/Gvg=="
         }
       },
       "is_incremental": false,
@@ -7668,7 +8279,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcd-91.html",
-          "hash": "FhhADFe3MQhM/8Q1SLs5kw=="
+          "hash": "3AS5bULcjUx0BWMNgw6ntg=="
         }
       },
       "is_incremental": false,
@@ -7680,7 +8291,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcd-healthcheck.html",
-          "hash": "GPiMF+qL3G/OerrL1fJM7Q=="
+          "hash": "CDQO3JuFOUfYZ5nEPyF1Kw=="
         }
       },
       "is_incremental": false,
@@ -7692,7 +8303,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcloud-connector.html",
-          "hash": "EU3HupgGTkDQHKT/E43BGA=="
+          "hash": "UFd157nKWwBmsMT+K/ttSw=="
         }
       },
       "is_incremental": false,
@@ -7707,7 +8318,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-virtual-hardware-v11.html",
-          "hash": "0LizrLD8PPqjf/8ni9uPFg=="
+          "hash": "AgoqQraV8sonO3q+5BQsEA=="
         }
       },
       "is_incremental": false,
@@ -7719,7 +8330,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vm-data-recovery.html",
-          "hash": "ns7D2gK6xOU4ItOf5OB01Q=="
+          "hash": "OHYBOgHtNdy9mlVwYR9pSg=="
         }
       },
       "is_incremental": false,
@@ -7731,7 +8342,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vmdk-limits.html",
-          "hash": "BJZICik4GvT08MygF1ncDA=="
+          "hash": "JB1f1rJxfh7pTre8xzdBHA=="
         }
       },
       "is_incremental": false,
@@ -7754,7 +8365,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "1VVIw+Gt4J8Na1l7vGOLTw=="
+          "hash": "EUD/mEpyFXw+y5xvr+OJJw=="
         }
       },
       "is_incremental": false,
@@ -7792,14 +8403,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

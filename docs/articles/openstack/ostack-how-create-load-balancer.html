@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to create load balancing services on UKCloud for OpenStack | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to create load balancing services on UKCloud for OpenStack | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="creating-load-balancing-services-on-ukcloud-for-openstack">Creating load-balancing services on UKCloud for OpenStack</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Although OpenStack's Neutron project does support load-balancing natively, our testing has shown that this is not a highly available solution which could result in the loss of traffic flow to a project in the event of a host failure, this view has been echoed by many other OpenStack vendors. In order to mitigate against this scenario, we have created the following article, which enables you to easily deploy our load-balancing solution within your OpenStack projects.</p>
+<p>Benefits of this solution include:</p>
+<ul>
+<li>Highly Available implementation of an OpenStack load-balancing solution</li>
+<li>Advanced load-balancing services provided by HAProxy (for example, SSL support, session stickiness)</li>
+<li>Fully scripted repeatable deployment (HEAT template available on the UKCloud Knowledge Centre alongside this article)</li>
+</ul>
+<h2 id="caveats">Caveats</h2>
+<p>This solution utilises HAProxy and keepalived, both of which are complicated software products. This guide will help you set up UKCloud for OpenStack to enable you to deploy a load-balancing solution based on keepalived and haProxy, but additional tuning and configuration may be required depending on your intended setup. Please take a moment to have a read through the documentation for both the keepalived project -
+<a href="http://www.keepalived.org/documentation.html">http://www.keepalived.org/documentation.html</a> and the HAProxy project - <a href="http://www.haproxy.org">http://www.haproxy.org</a>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This guide assumes that you have the following already configured in your environment:</p>
+<ul>
+<li>A router connected to the internet external network.</li>
+<li>A jump server with required security groups to allow you to SSH to that server and to SSH inside your environment.</li>
+<li>At least two servers inside your environment running a web server to test the HAProxy configuration against.</li>
+<li>The Ubuntu 16.04 amd64 image (id: <code>b8617599-495f-4d00-abf9-57b431caeb4c</code>) has been used throughout this document.</li>
+</ul>
+<h2 id="implementation-steps">Implementation steps</h2>
+<ol>
+<li><p>Create the network in which your front edge load balancers sit.</p>
+<p><strong>Command:</strong> <code>neutron net-create &lt;network-name&gt;</code></p>
+<p><strong>Example:</strong> <code>neutron net-create FrontEdge</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-neutron-net-create.png" alt="Results of net-create command"></p>
+</li>
+<li><p>Create the subnet in which your load-balancers will be placed (we recommend creating a <code>/28</code>, as four addresses will be used internally by OpenStack).</p>
+<p><strong>Command:</strong> <code>neutron subnet-create --name &lt;subnetName&gt; &lt;networkName&gt; &lt;cidr&gt;</code></p>
+<p><strong>Example:</strong> <code>neutron subnet-create --name FrontEdge FrontEdge 192.168.0.0/28</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-neutron-subnet-create.png" alt="Results of subnet-create command"></p>
+</li>
+<li><p>Attach your internet router to the newly created network.</p>
+<ul>
+<li><p>Locate your router.</p>
+<p><strong>Command:</strong> <code>neutron router-list</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-neutron-router-list.png" alt="Results of router-list command"></p>
+</li>
+<li><p>Add the Interface to the router.</p>
+<p><strong>Command:</strong> <code>neutron router-interface-add &lt;RouterName&gt; &lt;NetworkName&gt;</code></p>
+<p><strong>Example:</strong> <code>neutron router-interface-add R1 FrontEdge</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-neutron-router-interface-add.png" alt="Results of router-inteface-add command"></p>
+</li>
+</ul>
+</li>
+<li><p>Create a port to be used as the VIP addresses.</p>
+<p><strong>Command:</strong> <code>neutron port-create --fixed-ip subnet_id=&lt;subnetName&gt;,ip_address=&lt;vipIP&gt; &lt;NetworkName&gt;</code></p>
+<p><strong>Example:</strong> <code>neutron port-create --fixed-ip subnet_id=FrontEdge,ip_address=192.168.0.5 FrontEdge</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-neutron-port-create.png" alt="Results of port-create command"></p>
+<p>Make a note of the ID and the IP you set as you will need this information later.</p>
+</li>
+<li><p>Associate Floating IP with newly created VIP port.</p>
+<ul>
+<li><p>Get a new floating IP.</p>
+<p><strong>Command:</strong> <code>neutron floatingip-create &lt;floatingIPPoolName&gt;</code></p>
+<p><strong>Example:</strong> <code>neutron floatingip-create internet</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-neutron-floatingip-create.png" alt="Results of floatingip_create command"></p>
+<p>Make a note of the ID you will need it in the next step.</p>
+</li>
+<li><p>Associate the floating IP to VIP port-create.</p>
+<p><strong>Command:</strong> <code>neutron floatingip-associate &lt;floatingIPID&gt; &lt;portID&gt;</code></p>
+<p><strong>Example:</strong> <code>neutron floatingip-associate 247b7001-f145-4a61-8988-7bdf61915e4f6653ae36-6a30-4eed-8c5a-da567c92610d</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-neutron-floatingip-associate.png" alt="Results of floatingip-associate command"></p>
+</li>
+</ul>
+</li>
+<li><p>Create and boot the two load-balancer instances.</p>
+<ul>
+<li><p>Get a list of availability zones to ensure resilience of the LB pair.</p>
+<p><strong>Command:</strong> <code>nova availability-zone-list</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-nova-availability-zone-list.png" alt="Results for availability-zone-list command"></p>
+<p>Make a note of available zones, as you'll want to boot one server into one zone and the other into the other.</p>
+</li>
+<li><p>Get available flavours.</p>
+<p><strong>Command:</strong> <code>nova flavor-list</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-nova-flavor-list.png" alt="Results of flavor-list command"></p>
+<p>Make a note of the ID of the flavour you want to use.</p>
+</li>
+<li><p>Get available images.</p>
+<p><strong>Command:</strong> <code>glance image-list</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-glance-image-list.png" alt="Results of image-list command"></p>
+<p>Make a note of the ID of the image you want to boot.</p>
+</li>
+<li><p>Boot the first server.</p>
+<p><strong>Command:</strong> <code>nova boot --flavor &lt;flavorID&gt; --image &lt;imageID&gt; --key-name &lt;keyName&gt; --availability-zone &lt;availabilityZone&gt; --nic net-name=&lt;networkName&gt;,v4-fixed-ip=&lt;fixedIP&gt; &lt;name&gt;</code></p>
+<p><strong>Example:</strong> <code>nova boot --flavor 43746228-0c64-4e33-b39d-c3f91bedb7cc --image b8617599-495f-4d00-abf9-57b431caeb4c --key-name user-laptop --availability-zone 0000c-1 --nic net-name=FrontEdge,v4-fixed-ip=192.168.0.6 LB1-node1</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-nova-boot.png" alt="Results of boot command"></p>
+</li>
+<li><p>Boot the second server, remembering to change the availability zone and the IP address of the server.</p>
+<p><strong>Command:</strong> <code>nova boot --flavor &lt;flavorID&gt; --image &lt;imageID&gt; --key-name &lt;key-name&gt; --availability-zone &lt;availability-zone&gt; --nic net-name=&lt;networkName&gt;,v4-fixed-ip=&lt;fixedIP&gt; &lt;name&gt;</code></p>
+<p><strong>Example:</strong> <code>nova boot --flavor 43746228-0c64-4e33-b39d-c3f91bedb7cc --image b8617599-495f-4d00-abf9-57b431caeb4c --key-name user-laptop --availability-zone 0000c-2 --nic net-name=FrontEdge,v4-fixed-ip=192.168.0.7 LB1-node2</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-nova-boot.png" alt="Results of second boot command"></p>
+</li>
+</ul>
+</li>
+<li><p>Update ports to allow traffic to be sent via VIP IP.</p>
+<ul>
+<li><p>Get the port IDs that need updating.</p>
+<p><strong>Command:</strong> <code>neutron port-list network-id &lt;network-id&gt;</code></p>
+<p><strong>Example:</strong> <code>neutron port-list --network-id e1909abc-9ce6-45e7-8a3a-9c53d7c4af2b</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-neutron-port-list.png" alt="Results of port-list command"></p>
+<p>You need to locate the ports that are attached to your load-balancer instances. Once you've located them, note down the IDs as you'll need them in the next steps.</p>
+</li>
+<li><p>Update the first port to allow traffic to pass on VIP IP.</p>
+<p><strong>Command:</strong> <code>neutron update-port &lt;portID&gt; --allowed_address_pairs list=true type=dict ip_address=&lt;VIPIP&gt;</code></p>
+<p><strong>Example:</strong> <code>neutron port-update cbe044c6-8501-4e9f-9b68-7bedc45cd0ee -allowed_address_pairs list=true type=dict ip_address=192.168.0.5</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-neutron-update-port.png" alt="Results of update-port command"></p>
+</li>
+<li><p>Update the second port to allow traffic to pass on VIP IP.</p>
+<p><strong>Command:</strong> <code>neutron update-port &lt;portID&gt; --allowed_address_pairs list=true type=dict ip_address=&lt;VIPIP&gt;</code></p>
+<p><strong>Example:</strong> <code>neutron port-update 4dd06a59-6c18-4996-b80f-7c1577a1595e -allowed_address_pairs list=true type=dict ip_address=192.168.0.5</code></p>
+<p><strong>Result:</strong></p>
+<p><img src="images/ostack-neutron-update-port2.png" alt="Results of second update-port command"></p>
+</li>
+</ul>
+</li>
+<li><p>Patch and install keepalived and HAProxy.</p>
+<ul>
+<li><p>SSH to your jump server, and then through to the first load-balancer.</p>
+</li>
+<li><p>Run a system update.</p>
+<pre><code> sudo apt-get update -y
+ sudo apt-get upgrade -y
+</code></pre>
+</li>
+<li><p>Install keepalived and HAProxy.</p>
+<pre><code> sudo apt-get install haproxy keepalived -y
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Configure keepalived.</p>
+<ul>
+<li><p>Copy example configuration to keepalive config directory.</p>
+<pre><code> sudo cp /usr/share/doc/keepalived/samples/keepalived.conf.vrrp /etc/keepalived/keepalivd.conf
+</code></pre>
+</li>
+<li><p>Delete lines 36 through 79 in <code>/etc/keepalived/keepalived.conf</code>.</p>
+</li>
+<li><p>Set the email address you want to receive notifications in the <code>Notification_email</code> section.</p>
+</li>
+<li><p>Set the <code>notification_email_from</code> email addresses.</p>
+</li>
+<li><p>Set the SMTP server IP.</p>
+</li>
+<li><p>Set the interface name to be the name of the first network interface on the server (not loopback).</p>
+</li>
+<li><p>Set the <code>Router_ID</code> to a description of the router's function.</p>
+</li>
+<li><p>Set the <code>auth_pass</code> to a new secure password (avoid special characters).</p>
+</li>
+<li><p>Remove all items inside the <code>virtual_ipaddress</code> section.</p>
+</li>
+<li><p>Add the VIP IP from earlier to the <code>virtual_ipaddress</code> section (This is the internal IP NOT the floating IP).</p>
+</li>
+<li><p>Save and exit the file.</p>
+</li>
+<li><p>Take a copy of the file, and transfer it to the second load balancer machine.</p>
+</li>
+</ul>
+</li>
+<li><p>Enable non-local IP binding on the first load balancer.</p>
+<ul>
+<li><p>Add <code>net.ipv4.ip_forward = 1</code> to <code>/etc/sysctl.conf</code></p>
+</li>
+<li><p>Add <code>net.ipv4.ip_nonlocal_bind = 1</code> to <code>/etc/sysctl.conf</code></p>
+</li>
+<li><p><code>sudo sysctl -p</code></p>
+</li>
+</ul>
+</li>
+<li><p>Configure the second load balancer.</p>
+<ul>
+<li><p>Place a copy of the first load balancer's <code>keepalived.conf</code> into <code>/etc/keepalived/keepalived.conf</code>.</p>
+</li>
+<li><p>Edit <code>/etc/keepalived/keepalived.conf</code> and make the following changes</p>
+<ul>
+<li>Change state to BACKUP</li>
+<li>Change priority to 90</li>
+<li>Save and exit the file</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Enable non-local IP binding on the second server.</p>
+<ul>
+<li>Add <code>net.ipv4.ip_forward = 1</code> to <code>/etc/sysctl.conf</code></li>
+<li><code>sudo sysctl -p</code></li>
+</ul>
+</li>
+<li><p>Start keepalived on first load balancer.</p>
+<pre><code>sudo service keepalived start
+</code></pre>
+</li>
+<li><p>Start keepalived on the second load balancer.</p>
+<pre><code>sudo service keepalived start
+</code></pre>
+</li>
+<li><p>Check to ensure that the VIP IP has come up on the first load balancer.</p>
+<pre><code>ip add -4 -o a
+</code></pre>
+<p>You should see the VIP showing up in the resulting list.</p>
+</li>
+<li><p>Fail the first load balancer and ensure that the VIP moves to the second load balancer.</p>
+</li>
+<li><p>Configure HAProxy on the first load balancer by adding a frontend and     backend</p>
+<ul>
+<li><p>Edit <code>/etc/haproxy/haproxy.conf</code></p>
+</li>
+<li><p>Add the following section to the bottom of the file:</p>
+<pre><code>  frontend localnodes
+          bind &lt;VIPIP&gt;:80
+          mode http
+          default_backend nodes
+</code></pre>
+</li>
+<li><p>Add the following section below the frontend section:</p>
+<pre><code>  backend nodes
+         mode http
+         balance roundrobin
+         option forwardfor
+         server &lt;Name&gt; &lt;ServerIP&gt;:&lt;serverPort&gt; check
+  server &lt;Name&gt; &lt;ServerIP&gt;:&lt;serverPort&gt; check
+</code></pre>
+</li>
+<li><p>Copy the changes from the first load balancer to the second load balancer.</p>
+</li>
+<li><p>On both load balancers issue a reload command to hot restart HAProxy and load in the new changes.</p>
+<pre><code>  sudo service haproxy reload
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Set up security groups required for your application, and apply them to the load-balancer servers. You will also need to apply security groups to your backend servers to allow the required traffic to pass from the load-balancer nodes to the required ports on the back-end servers.</p>
+</li>
+<li><p>Testing - Once HAProxy has reloaded on both servers, you should be able to connect to your floating IP address and the content hosted on your web servers should now be visible. Try disabling keepalived on the first load-balancer after a few seconds traffic should flow through to the second load-balancer and your content should still be available.</p>
+</li>
+</ol>
+<h2 id="post-installation">Post installation</h2>
+<p>Depending on the amount of traffic you expect to see, you may need to make  additional tuning changes to your load balancer systems. Usually these changes take the form of increasing the number of available ephemeral ports, and the enablement of <code>tcp_tw_reuse</code>. Please do careful research on these settings before making changes. We recommend making these changes on a non-live system and testing before applying these changes to a production system.</p>
+<p>You may also wish to investigate keepalived ability to monitor applications on the local system and force a fail over if an application crashes. For example, keepalived can be made to monitor HAProxy and to fail over if HAProxy stops or fails. Instructions on how to do this can be found in the keepalived  documentation.</p>
+<h2 id="first-free-load-balancer">First free load balancer</h2>
+<p>To meet the UKCloud for OpenStack G-Cloud Service Definition commitment of one free load balancer per per project, we will credit the first two instances in a project which match the following criteria:</p>
+<table>
+<thead>
+<tr>
+<th>Region</th>
+<th>Flavor ID</th>
+<th>Image ID</th>
+<th>Instance name prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COR00005</td>
+<td>43746228-0c64-4e33-b39d-c3f91bedb7cc</td>
+<td>b8617599-495f-4d00-abf9-57b431caeb4c</td>
+<td>LB1-</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<p>UKCloud has the right to remove this free solution with 30 days notice once the default OpenStack LBaaS service has been made available.</p>
+</div>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-how-create-load-balancer.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

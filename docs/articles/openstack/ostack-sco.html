@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UKCloud for OpenStack Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UKCloud for OpenStack Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="ukcloud-for-openstack-service-scope">UKCloud for OpenStack Service Scope</h1>
+
+<h2 id="about-this-document">About this document</h2>
+<p>This document is for customers considering purchasing our UKCloud for OpenStack service.</p>
+<p>It describes the boundaries of the service, along with the division of responsibilities between UKCloud and the customer to facilitate the changes required.</p>
+<h2 id="about-ukcloud-for-openstack">About UKCloud for OpenStack</h2>
+<p>UKCloud for OpenStack is UKCloud's OpenStack powered cloud compute platform.</p>
+<p>This service is designed for customers who:</p>
+<ul>
+<li><p>Require a cloud platform engineered specifically for cloud native applications</p>
+</li>
+<li><p>Want a self-service cloud platform that can be programmatically controlled via a familiar API</p>
+</li>
+<li><p>Want to recycle existing investment in AWS CloudFormation Infrastructure as Code via OpenStack's HEAT templates</p>
+</li>
+</ul>
+<h2 id="openstack-services-available-in-ukcloud-for-openstack">OpenStack services available in UKCloud for OpenStack</h2>
+<p>The following OpenStack projects/services are available with UKCloud for OpenStack:</p>
+<ul>
+<li>Nova Compute</li>
+<li>Glance Image Service</li>
+<li>Cinder Block Storage</li>
+<li>Keystone authentication</li>
+<li>Neutron Networking Services</li>
+</ul>
+<p>UKCloud will look to add additional OpenStack projects to this service through future releases.</p>
+<h2 id="default-setup">Default setup</h2>
+<p>UKCloud for OpenStack is delivered as a multi-tenant cloud platform.</p>
+<p>Each customer will be provided with an OpenStack Project within which they can build their cloud solutions.</p>
+<p>By default, only a single user account will be created per Project, this user can then create additional users within the Project.</p>
+<h2 id="ukcloud-for-openstack-instance-options">UKCloud for OpenStack instance options</h2>
+<table>
+<thead>
+<tr>
+<th>Notes</th>
+<th>Ephemeral</th>
+<th>Persistent boot from block</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Use case</strong></td>
+<td>Disposable VMs used in environments that can tolerate the failure of a VM and its associated data</td>
+<td>VMs serving mission-critical data and needing a higher level of data resilience and persistence</td>
+</tr>
+<tr>
+<td><strong>VM placement</strong></td>
+<td>Choice of multiple regions</td>
+<td>Choice of multiple regions</td>
+</tr>
+<tr>
+<td><strong>Internet IP addresses included per project</strong></td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Automated disaster recovery between data centres</strong></td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Storage included (GiB)</strong></td>
+<td>60</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Storage type</strong></td>
+<td>Ephemeral (non-persistent)</td>
+<td>Persistent block storage - Tier 1 or Tier 2</td>
+</tr>
+<tr>
+<td><strong>Effective number of file copies</strong></td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>VM protection option</strong></td>
+<td>Snapshot to persistent block storage</td>
+<td>Snapshot to persistent block storage</td>
+</tr>
+</tbody>
+</table>
+<h2 id="storage-options">Storage options</h2>
+<p>In addition to the free ephemeral storage that is provided to all OpenStack instances, UKCloud provides the following persistent block storage options:</p>
+<table>
+<thead>
+<tr>
+<th>Notes</th>
+<th>Tier 1 Persistent block storage</th>
+<th>Tier 2 Persistent block storage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Overview</strong></td>
+<td>Provides our most performant block storage for workloads requiring consistently higher disk throughput</td>
+<td>Block storage with typical performance characteristics for use by production applications or storage</td>
+</tr>
+<tr>
+<td><strong>Number of file copies</strong></td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Use cases</strong></td>
+<td>Data warehouses, High-performance NoSQL databases such as MongoDB or Cassandra &amp; Randomly executing workloads</td>
+<td>Production-level system and application workloads with mid-range traffic loads (for example Apache Web Server)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="platform-management">Platform management</h2>
+<p>UKCloud for OpenStack is managed directly by the customer, using OpenStack's Horizon dashboard, the UKCloud Portal, and APIs associated with both.</p>
+<h2 id="service-provisioning">Service provisioning</h2>
+<p>You can request UKCloud for OpenStack via your Technical Account Manager or by using the My Calls section of the UKCloud Portal.</p>
+<p>Within 4 business hours of accepting an order, UKCloud will create the customer's Primary Administrator account and send a Welcome Pack which includes the URL for the UKCloud Portal, and the Getting Started Guide.</p>
+<h2 id="customer-responsibilities">Customer responsibilities</h2>
+<p>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as N3/HSCN, Janet, RLI or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.</p>
+<p>Self-managing the environment including VM deployment, virtual network configuration, storage management, and so on.</p>
+<p>Maintaining a master copy or backup copy of the data used in the UKCloud for OpenStack service.</p>
+<p>Ensuring only appropriate data (for example OFFICIAL) is stored and processed by applications on this environment and that they comply with the UKCloud Security Operating Procedures (SyOps) and other Information Assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.</p>
+<h2 id="default-network-limits">Default network limits</h2>
+<p>By default, we will place the following network limitations per project:</p>
+<ul>
+<li>3 x Floating IP Addresses</li>
+<li>2 x Network Routers</li>
+</ul>
+<p>Customers with requirements beyond these limits can raise a service request via My Calls to have these limits per project considered for raising.</p>
+<h2 id="compute-virtual-resource-limits">Compute virtual resource limits</h2>
+<p>By default, we will place the following virtual resource limitations per project:</p>
+<ul>
+<li>100 Instances</li>
+<li>100 vCPU</li>
+<li>200 GiB RAM</li>
+<li>2 TiB Persistent block storage</li>
+</ul>
+<p>Customers with requirements beyond these limits can raise a service request via My Calls to have these limits per project considered for raising.</p>
+<h2 id="platform-operation-request-limits">Platform Operation Request Limits</h2>
+<p>Although designed to be a large-scale cloud platform, we strongly advise that when performing operations/requests against UKCloud for OpenStack you perform these actions in batches of no more than 30 (for example, only creating batches of up to 30 new instances in a single request). Additional requests can then be made to the platform for subsequent batches.</p>
+<h2 id="published-features-not-currently-available">Published features not currently available</h2>
+<p>The following features published in the UKCloud for OpenStack Service Definition are not currently available:</p>
+<ul>
+<li>Janet &amp; RLI connectivity</li>
+<li>UKCloud provided Red Hat licences</li>
+</ul>
+<p>We are actively working on delivering these features and aim to have them delivered by Q4 2018.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-sco.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

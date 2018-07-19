@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to manage UKCloud for OpenStack accounts in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to manage UKCloud for OpenStack accounts in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-manage-ukcloud-for-openstack-accounts-in-the-ukcloud-portal">How to manage UKCloud for OpenStack accounts in the UKCloud Portal</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This guide shows how UKCloud Portal administrators can use the Portal to create user accounts for UKCloud for OpenStack and set access permissions.</p>
+<p>The guide also shows how OpenStack users can reset their own passwords in the Portal to activate account replication and synchronise their Portal and OpenStack passwords.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To create user accounts and set permissions, you must be a UKCloud Portal administrator for the account that includes the OpenStack project. Any Portal user can reset their own password.</p>
+<h2 id="creating-a-new-openstack-user">Creating a new OpenStack user</h2>
+<p>To give a user access to an OpenStack project, you first need to create them a user account in the UKCloud Portal.</p>
+<p>To create a new OpenStack user:</p>
+<ol>
+<li><p>Log in to the UKCloud Portal.</p>
+<p>For more detailed instructions, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You must log in as a Portal administrator for the account that includes the OpenStack project.</p>
+</div>
+</li>
+<li><p>If necessary, switch to the account that includes the OpenStack project.</p>
+</li>
+<li><p>In the Portal navigation panel, expand the <strong>Contacts</strong> option and select <strong>All Contacts</strong>.</p>
+<p><img src="images/ptl-menu-all-contacts.png" alt="All Contacts menu option in UKCloud Portal"></p>
+</li>
+<li><p>Select the <strong>Actions</strong> menu and then select <strong>Add new contact</strong> from the dropdown list.</p>
+<p><img src="images/ptl-mnu-add-new-contact.png" alt="Add New contact action"></p>
+</li>
+<li><p>On the <em>New contact</em> page, provide information about the user's name and contact information, then click <strong>Save</strong>.</p>
+<p><img src="images/ptl-new-contact.png" alt="New Contact page"></p>
+</li>
+<li><p>After you've created the user account, you can grant access to OpenStack projects using the steps in <a href="#assigning-and-revoking-openstack-permissions">Assigning and revoking OpenStack permissions</a>.</p>
+</li>
+</ol>
+<h2 id="assigning-and-revoking-openstack-permissions">Assigning and revoking OpenStack permissions</h2>
+<p>To enable a user to work with an OpenStack project you must assign them permission to access the project. You can also revoke permission to remove a user's OpenStack access.</p>
+<p>To assign or revoke OpenStack permissions:</p>
+<ol>
+<li><p>In the UKCloud Portal, if necessary, switch to the account that includes the OpenStack project.</p>
+</li>
+<li><p>In the Portal navigation panel, expand <strong>Contacts</strong> option and select <strong>All Contacts</strong>.</p>
+<p><img src="images/ptl_menu_all-contacts.png" alt="All Contacts menu option in UKCloud Portal"></p>
+</li>
+<li><p>On the <em>Contacts</em> page, use the <strong>Search</strong> field to find the user to whom you want to assign or revoke OpenStack permissions and then click the <strong>Edit</strong> button.</p>
+<p><img src="images/ptl-contacts-btn-edit.png" alt="Edit button for Portal contact"></p>
+</li>
+<li><p>On the <em>Edit contact</em> page, select the <strong>Permissions</strong> tab.</p>
+<p><img src="images/ptl-contacts-tab-permissions.png" alt="Permissions tab for Portal contact"></p>
+</li>
+<li><p>In the <em>Permissions for UKCloud for OpenStack</em> section, you'll see a list of the OpenStack projects within your organisation.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You may need to scroll down the <strong>Permissions</strong> tab to get to the <em>UKCloud for OpenStack</em> section.</p>
+</div>
+</li>
+<li><p>For the project to which you want to grant the user access, select the check box for the region in which the project is located. If the project is available in both OpenStack regions (cor00005 or frn00006), you can grant access in just one region or in both.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you grant a user access to a region in which the project is not available, the user will not be able to log in to that OpenStack region.</p>
+</div>
+<p>Deselect the check box to revoke access permissions.</p>
+<p><img src="images/ostack-portal-permissions.png" alt="Check box for granting permissions to an OpenStack region"></p>
+</li>
+<li><p>When you're done, click the <strong>Save</strong> button.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>It takes approximately five minutes for any changes you make within the UKCloud Portal to replicate to OpenStack.</p>
+</div>
+</li>
+<li><p>The first time a new OpenStack user accesses their account, they must reset their UKCloud Portal password as shown in <a href="#synchronising-your-openstack-password">Synchronising your OpenStack password</a>.</p>
+</li>
+</ol>
+<h2 id="synchronising-your-openstack-password">Synchronising your OpenStack password</h2>
+<p>The first time you log in to UKCloud Portal to access your OpenStack projects, you must reset your password to activate account replication and synchronise your Portal and OpenStack passwords.</p>
+<p>To synchronise your OpenStack password:</p>
+<ol>
+<li><p>In the UKCloud Portal, in the top right corner of the page, click your user name and then select <strong>Change Password</strong>.</p>
+<p><img src="images/ptl-mnu-change-password.png" alt="Change password menu option"></p>
+</li>
+<li><p>Enter your <strong>Current Password</strong> and <strong>New password</strong> then click <strong>Save</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Your password must be at least eight characters and include at least one each of: uppercase letter, lowercase letter, number and special character.</p>
+</div>
+<p><img src="images/ptl-update-password.png" alt="Update Password and Memorable Word page"></p>
+</li>
+<li><p>When the new password has been successfully replicated to OpenStack, you'll see a checkmark next to the region name and a <strong>Close</strong> button.</p>
+<p><img src="images/ostack-portal-synchronise-password.png" alt="Portal and OpenStack passwords synchronised"></p>
+</li>
+</ol>
+<h2 id="accessing-openstack-from-the-ukcloud-portal">Accessing OpenStack from the UKCloud Portal</h2>
+<p>After your OpenStack account has been set up, you'll see a <strong>OpenStack Cloud</strong> option in the Portal navigation panel. This option links through to the OpenStack Horizon dashboard.</p>
+<p>To access OpenStack:</p>
+<ol>
+<li><p>In the UKCloud Portal, if necessary, switch to the account that includes the OpenStack project.</p>
+</li>
+<li><p>In the Portal navigation panel, select <strong>OpenStack Cloud</strong>.</p>
+<p><img src="images/ostack-portal-menu-openstack.png" alt="OpenStack menu option in UKCloud Portal"></p>
+</li>
+<li><p>From the dropdown list, select the OpenStack region that contains the project you want to access then click <strong>Go</strong>.</p>
+<p><img src="images/ostack-portal-select-region.png" alt="Select OpenStack region"></p>
+</li>
+<li><p>On the OpenStack Horizon <em>Log in</em> page, enter your UKCloud Portal <strong>User Name</strong> and <strong>Password</strong> and click <strong>Connect</strong>.</p>
+<p><img src="images/ostack-horizon-log-in.png" alt="Log in page for OpenStack Horizon"></p>
+</li>
+<li><p>You can now work with your OpenStack projects within the OpenStack Horizon dashboard.</p>
+</li>
+</ol>
+<h2 id="removing-an-openstack-account-via-the-ukcloud-portal">Removing an OpenStack account via the UKCloud Portal</h2>
+<p>If you want to remove an OpenStack user account, you must first revoke the user's permissions to all OpenStack projects before deleting the account.</p>
+<p>To remove an OpenStack account:</p>
+<ol>
+<li><p>Follow the steps in <a href="#assigning-and-revoking-openstack-permissions">Assigning and revoking OpenStack permissions</a> to revoke the user's access permissions for all OpenStack projects.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>It takes approximately five minutes for any changes you make within the UKCloud Portal to replicate to OpenStack.</p>
+</div>
+</li>
+<li><p>After waiting five minutes for the changes to replicate to OpenStack, return to the <em>Contacts</em> list, locate the user again and click the <strong>Remove</strong> button.</p>
+<p><img src="images/ptl-contacts-btn-remove.png" alt="Remove button for Portal contact"></p>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>For more information about UKCloud for OpenStack, see the following articles in the Knowledge Centre:</p>
+<ul>
+<li><a href="ostack-gs.html"><em>Getting Started Guide for UKCloud for OpenStack</em></a></li>
+<li><a href="ostack-faq.html"><em>UKCloud for OpenStack FAQs</em></a></li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-how-manage-accounts-portal.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

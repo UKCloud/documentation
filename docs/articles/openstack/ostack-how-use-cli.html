@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to use the OpenStack Command Line Client on Microsoft operating systems | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to use the OpenStack Command Line Client on Microsoft operating systems | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-use-the-openstack-command-line-client-on-microsoft-operating-systems">How to use the OpenStack Command Line Client on Microsoft operating systems</h1>
+
+<h2 id="overview">Overview</h2>
+<p>OpenStack has been designed and built specifically for the Linux community utilising the Python programming language. Despite this, it's still possible to use the OpenStack Command Line Client on a Microsoft operating system using PowerShell, and this document outlines the six simple steps to achieve this.</p>
+<ol>
+<li><p><a href="#install-python-runtime-and-libraries">Install Python runtime and libraries</a></p>
+</li>
+<li><p><a href="#set-the-environmental-variables">Set Windows environmental variables</a></p>
+</li>
+<li><p><a href="#install-pip">Install pip - Python packaging manager</a></p>
+</li>
+<li><p><a href="#install-the-openstack-command-line-client">Install the OpenStack Command Line Client</a></p>
+</li>
+<li><p><a href="#bind-your-openstack-credentials">Bind your OpenStack credentials using the OpenStack RC file</a></p>
+</li>
+<li><p><a href="#test-your-configuration">Test your configuration</a></p>
+</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This document assumes you're running a version of Windows from XP upwards and that Windows PowerShell is already installed and available.</p>
+<p>All details outlined in this document have been tested against Windows 7 SP1 Enterprise.</p>
+<h2 id="installation-steps">Installation Steps</h2>
+<h3 id="install-python-runtime-and-libraries">Install Python runtime and libraries</h3>
+<ol>
+<li><p>Download the latest Python 2 release from the Python website:</p>
+<p><a href="http://python.org/downloads/windows/">http://python.org/downloads/windows/</a></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The OpenStack client currently only supports Python 2.7, Python 3+ is unsupported).</p>
+</div>
+</li>
+<li><p>After clicking the most recent Python 2 release, download the Windows X86-64 MSI Installer.</p>
+</li>
+<li><p>Install Python by double-clicking the MSI package that you just downloaded and completing the installation wizard.</p>
+</li>
+</ol>
+<h3 id="set-the-environmental-variables">Set the environmental variables</h3>
+<p>For Windows to be aware of Python you need to declare its path as follows:</p>
+<ol>
+<li><p>Open the Computer settings.</p>
+<p><img src="images/ostack-windows-mnu-computer-properties.png" alt="Computer Properties menu option"></p>
+</li>
+<li><p>Select <strong>Advanced system settings</strong>.</p>
+<p><img src="images/ostack-windows-advanced-system-settings.png" alt="Advanced system settings option"></p>
+</li>
+<li><p>Select <strong>Environment variables</strong>.</p>
+<p><img src="images/ostack-windows-btn-environment-variables.png" alt="Environment variables button"></p>
+</li>
+<li><p>In the <em>Environment Variables</em> dialog box, find the Path variable in the <strong>System variables</strong> list and click <strong>Edit</strong>.</p>
+<p><img src="images/ostack-windows-environment-variables-path.png" alt="Path variable in Environment Variables dialog box"></p>
+</li>
+<li><p>In the <em>Edit System Variable</em> dialog box, in the <strong>Variable</strong> value field, add the following to the end of the value (make sure to include the semicolons):</p>
+<pre><code> ;C:\Python27;C:\Python27\Scripts
+</code></pre>
+</li>
+<li><p>Click <strong>OK</strong></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Update the above paths if you choose to change the Python installer defaults.</p>
+</div>
+<p><img src="images/ostack-windows-edit-path.png" alt="Updated Path variable"></p>
+</li>
+<li><p>Close the remaining windows.</p>
+</li>
+</ol>
+<h3 id="install-pip">Install pip</h3>
+<ol>
+<li><p>Open a command prompt with Admin rights by right-clicking on the command prompt icon (when you get a login prompt, enter your admin credentials).</p>
+</li>
+<li><p>Install pip by entering the following command:</p>
+<pre><code> easy_install pip
+</code></pre>
+</li>
+<li><p>If successful, you should see a screen like the following:</p>
+<p><img src="images/ostack-pip-installed.png" alt="Successful installation of pip"></p>
+<p>[!IMPORTANT]</p>
+<blockquote>
+<p>Leave the command prompt open for the next step.</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="install-the-openstack-command-line-client">Install the OpenStack Command Line client</h3>
+<ol>
+<li><p>Install pip with the following command:</p>
+<pre><code> pip install python-openstackclient
+</code></pre>
+</li>
+<li><p>Installing the client may take between 1 to 5 minutes depending upon your machine.</p>
+</li>
+</ol>
+<h3 id="bind-your-openstack-credentials">Bind your OpenStack credentials</h3>
+<p>After successful installation, you'll have to download the OpenStack RC file for the project you want to manage.</p>
+<ol>
+<li><p>Log in to the OpenStack Horizon dashboard.</p>
+</li>
+<li><p>Open the project you want to manage.</p>
+</li>
+<li><p>From the menu, select <strong>Access &amp; Security</strong> and then select the <strong>API Access</strong> tab.</p>
+</li>
+<li><p>Click <strong>Download OpenStack RC File</strong> and save the file in a convenient place.</p>
+<p><img src="images/ostack-horizon-download-rc-file.png" alt="Download OpenStack RC File button in Horizon dashboard"></p>
+</li>
+<li><p>Download the <a href="https://raw.githubusercontent.com/naturalis/powershell/master/Source-OpenRC.ps1">Source-OpenRC.ps1</a> PowerShell script and save it locally.</p>
+</li>
+<li><p>As the downloaded PowerShell script is unsigned, you'll need to unblock it by right-clicking the file, selecting <strong>Properties</strong>, then clicking the <strong>Unblock</strong> button and clicking <strong>OK</strong>.</p>
+<p><img src="images/ostack-ps-openrc-unblock.png" alt="Unblock button for OpenRC PowerShell script"></p>
+</li>
+<li><p>Start Windows PowerShell from the Start menu.</p>
+</li>
+<li><p>Run the downloaded PowerShell script, and give the path to the downloaded RC file as an argument, for example:</p>
+<pre><code> C:\Downloads\Source-OpenRC.ps1 C:\Downloads\project-openrc.sh
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Replace <code>Downloads</code> with the directory you saved your files to and replace  <code>project-openrc.sh</code> with the <code>openrc.sh</code> filename you downloaded.</p>
+</div>
+</li>
+<li><p>When prompted, enter your OpenStack project password.</p>
+</li>
+</ol>
+<h3 id="test-your-configuration">Test your configuration</h3>
+<p>Now you've installed and configured the everything, you can start using the command line tools.</p>
+<ol>
+<li><p>Start Windows PowerShell.</p>
+</li>
+<li><p>Test if everything is working with a simple list command:</p>
+<pre><code> nova list
+</code></pre>
+</li>
+<li><p>If you've started with an empty project, you'll get output similar to the following:</p>
+<pre><code>+----+------+--------+------------+-------------+----------+
+| ID | Name | Status | Task State | Power State | Networks |
++----+------+--------+------------+-------------+----------+
++----+------+--------+------------+-------------+----------+
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You'll need to run the PowerShell script defined above, and provide your OpenStack project credentials every time you relaunch PowerShell.</p>
+</div>
+</li>
+</ol>
+<h2 id="upgrading-clients">Upgrading clients</h2>
+<p>The community regularly releases updates to the OpenStack CLI, therefore we suggest you check for updates to the client to ensure you have access to all the latest features; this can also help to resolve errors you experience when using the OpenStack CLI.</p>
+<h3 id="upgrade-pip">Upgrade pip</h3>
+<ol>
+<li><p>Open a command prompt with Admin rights by right-clicking on the command prompt icon (when you get a login prompt, enter your admin credentials).</p>
+</li>
+<li><p>Upgrade pip by entering the following command:</p>
+<pre><code> python -m pip install --upgrade pip
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Once successfully upgraded, leave the command prompt open for the next step.</p>
+</div>
+</li>
+</ol>
+<h3 id="upgrade-the-openstack-command-line-client">Upgrade the OpenStack Command Line client</h3>
+<ol>
+<li><p>Install pip with the following command:</p>
+<pre><code> pip install --upgrade python-openstackclient
+</code></pre>
+</li>
+<li><p>Installing the client may take between 1 to 5 minutes depending upon your machine.</p>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-how-use-cli.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

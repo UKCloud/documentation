@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How the UKCloud OpenStack platform outperforms hyperscalers | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How the UKCloud OpenStack platform outperforms hyperscalers | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-the-ukcloud-openstack-platform-outperforms-hyperscalers">How the UKCloud OpenStack platform outperforms hyperscalers</h1>
+
+<h2 id="the-evolution-of-ukcloud">The evolution of UKCloud</h2>
+<p>UKCloud has long been known for its VMware powered UKCloud for VMware service, which has enabled hundreds of UK Public Sector workloads to be moved to the cloud. In response to increasing demand from customers creating genuine cloud native (12-Factor) applications, we have developed and launched our UKCloud for OpenStack service, powered by OpenStack – the leading open-source alternative to the proprietary global public cloud platforms.</p>
+<p>The OpenStack service that is available today has been vastly improved in terms of reliability, functionality and performance. Although there are several cloud providers available to the UK Public Sector, UKCloud maintains its position as the number one choice for security assured citizen-facing services with UK data centres and UK-based security cleared staff.</p>
+<p>There are several factors to consider when choosing a cloud provider, such as price, performance, reliability, suitability for workloads, sovereignty and assurance. Value for money will often be at the forefront of the decision-making process. However, at UKCloud we are competitive on more than just price and believe performance is an important metric to consider.</p>
+<p>This document will concentrate on performance benchmarking and introduces a comparison of performance on our OpenStack platform against other public cloud providers.</p>
+<h2 id="based-on-our-innovative-next-generation-infrastructure">Based on our innovative, next generation infrastructure</h2>
+<p>Our OpenStack platform is deployed on our innovative, next generation infrastructure. Rather than a SAN-based converged infrastructure, our next generation infrastructure is built on commodity hardware and leverages software defined data centre (SDDC) technology including software defined networking (Cisco ACI and OpenStack Neutron) and software defined storage (Red Hat Ceph).</p>
+<p>This new infrastructure is designed to deliver much greater levels of scalability via multiple fault domains to improve availability and resilience. As bottlenecks such as the storage array and network functions are replaced with highly distributed resources, the new infrastructure is designed to deliver much greater levels of performance compared with our previous infrastructure.</p>
+<h2 id="why-does-performance-matter">Why does performance matter?</h2>
+<p>These results are important for several reasons:</p>
+<ul>
+<li><p><strong>Cost control</strong> – the superior performance of the UKCloud platform means that you can do more with less. To match our performance using the public cloud providers, you would need bigger instances, more instances or both – significantly increasing the cost of those platforms. A platform that appears 20% cheaper but has half the performance may mean you end up paying 60% more for the same performance.</p>
+</li>
+<li><p><strong>Developer productivity</strong> – our OpenStack platform has been designed specifically for agile software development projects where there is a real demand for environments to be provisioned rapidly and destroyed when no longer needed. Superior performance means that pipeline automation happens quickly and reliably so your developers aren't blocked waiting for the infrastructure to be ready.</p>
+</li>
+<li><p><strong>User experience</strong> – as digital systems are increasingly used directly by millions of potential users (for example, citizens), it's important that your platform can deliver superior performance when your users need it.</p>
+</li>
+</ul>
+<h2 id="our-approach-to-benchmarking">Our approach to benchmarking</h2>
+<p>To validate the performance of our platform, UKCloud has been running automated tests to compare the performance of UKCloud for OpenStack against two leading proprietary public cloud platforms, Amazon Web Services and Microsoft Azure.</p>
+<p>The benchmarking was based on the PerfKit Benchmarker tool which was originally developed by Google and made available to the open-source community. PerfKit is designed to provide a repeatable, consistent and open way of measuring cloud performance.</p>
+<p>PerfKit was configured to specifically compare the UKCloud Region 5, Zone C UKCloud for OpenStack platform with AWS EU-West 2 (London) region and the Azure London region. The benchmarks ran throughout August 2017 and average values for the month are reported below.</p>
+<h2 id="benchmark-results">Benchmark results</h2>
+<p>UKCloud performed a suite of tests to assess the performance of various components of the platform, as well as some end-to-end system tests. The following pages provide more detail regarding each of the benchmark results.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For the graphs shown in this document, apart from instance boot time where a lower result is better, a higher result indicates superior performance. (UKCloud outperforms both AWS and Azure on 90% of benchmarks performed).</p>
+</div>
+<h3 id="instance-boot-time">Instance boot time</h3>
+<p>Instance boot time refers to the amount of time taken for an instance to boot from a powered off state. The graph below shows that UKCloud instances on the UKCloud for OpenStack platform boot 1.5 times faster than AWS and almost 7 times faster than Azure.</p>
+<p>This means that you will benefit from reduced delay in loading the instances and the end user is able to quickly access the applications within them.</p>
+<p><img src="images%5Cboot_times.png" alt="Instance boot time (seconds) for UKCloud, AWS and Azure"></p>
+<h3 id="mongodb">MongoDB</h3>
+<p>MongoDB is an open-source database developed by MongoDB, Inc. Unlike relational databases, it stores data in JSON format that can vary in structure. This data model gives you the ability to represent hierarchical relationships and other complex structures easily. MongoDB was designed with high availability and scalability and therefore includes out-of-the-box replication and auto-scaling.</p>
+<p>The performance of MongoDB running on the UKCloud for OpenStack platform is 2 times faster than AWS and almost 2 times faster than Azure meaning that MongoDB performs over twice as many operations per second on the UKCloud platform.</p>
+<p>This results in better database performance with UKCloud and means there is higher data availability to applications, which in turn affects the service that a customer consumes, resulting in a better customer experience.</p>
+<p><img src="images%5Cmongodb.png" alt="mongoDB performance (ops/sec) for UKCloud, AWS and Azure"></p>
+<h3 id="network-performance">Network performance</h3>
+<p>The networking performance test is a commonly used benchmark that can create TCP and UDP data streams and measures the throughput of a network that is carrying them. The values shown in the graph below indicate the maximum throughput of the respective networks.</p>
+<p>UKCloud has a maximum throughput almost 12 times higher than AWS and almost 19 times higher than Azure.</p>
+<p>This is important for customers who are moving large sets of data or need quick access to their data over the network. This results in less time spent waiting for data transfers to be completed, which allows applications to access their data more quickly. Ultimately meaning applications can run faster, giving a better user experience.</p>
+<p><img src="images%5Cnetwork_performance.png" alt="network performance (Mbit/s) for UKCloud, AWS and Azure"></p>
+<h3 id="random-io-performance">Random IO performance</h3>
+<p>Random read is a measure of how quickly multiple small files can be read from random areas on a disk. Random read performance is measured in input-output operations per second with the number shown below an indication of the maximum number of reads. Random write uses the same disk pattern as random read but data is written to the disk rather than read.</p>
+<p>The graph below shows that the UKCloud for OpenStack platform performs over 5 times more random read IOPs than AWS and over 34 times more than Azure. For random write, the UKCloud platform performs over 4 times more IOPs than AWS and over 27 times more than Azure.</p>
+<p>This means that enterprise applications such as relational databases which are disk-intensive (require high I/O), perform better on the UKCloud platform.</p>
+<p>Databases and applications that are disk intensive are often slowed down by their storage, hence the increased popularity of Solid State Drives (SSD). However, as the graph below shows, UKCloud provides fast storage access allowing applications to rapidly access and process data, resulting in faster applications compared to AWS and Azure's equivalent storage option.</p>
+<p><img src="images%5Crandom_io.png" alt="random IO performance for UKCloud, AWS and Azure"></p>
+<h3 id="sequential-io-performance">Sequential IO performance</h3>
+<p>Sequential read is a disk access pattern in which large continuous blocks of data are read from adjacent locations on the disk. Sequential write is the same pattern, but data is written to the disk rather than read. These kinds of disk access patterns are common when accessing large multimedia files such as music, video and images. They are also important for data warehouses and analytical applications.</p>
+<p>The graph below shows that for sequential read the UKCloud platform performs almost 11 times better than AWS and over 5 times better than Azure. For sequential write, the UKCloud platform has a maximum IO over 10 times higher than AWS and over 6 times higher than Azure.</p>
+<p>As with databases, these kinds of applications are often slowed down by their storage, hence the increased popularity of Solid State Drives (SSD). However, as the graph below shows, UKCloud provides fast storage access allowing applications to rapidly access and process data, resulting in faster applications compared to AWS and Azure's equivalent storage option. High sequential IO performance is vital for data analysis and specifically for data warehouses which are a core component of business intelligence and thus guide key management decisions.</p>
+<p><img src="images%5Csequential_io.png" alt="random IO performance for UKCloud, AWS and Azure"></p>
+<h2 id="where-does-the-ukcloud-openstack-platform-outperform-both-hyperscalers">Where does the UKCloud OpenStack platform outperform both hyperscalers?</h2>
+<p>The data in the benchmark results section shows that the UKCloud for OpenStack platform consistently outperforms both hyperscalers across a variety of benchmarks including:</p>
+<ul>
+<li><p>Instance Boot Time</p>
+<ul>
+<li>1.5 times faster than AWS</li>
+<li>Almost 7 times faster than Azure</li>
+<li><strong>Reduced delay in loading the instances means that users are able to readily access the applications within them</strong></li>
+</ul>
+</li>
+<li><p>Networking Performance</p>
+<ul>
+<li>Almost 12 times higher than AWS</li>
+<li>Almost 19 times higher than Azure</li>
+<li><strong>Users spend less time transferring data on the network, allowing applications to access their data faster and thus running faster</strong></li>
+</ul>
+</li>
+<li><p>MongoDB</p>
+<ul>
+<li>2 times faster than AWS</li>
+<li>Almost 2 times faster than Azure</li>
+<li><strong>Better database performance allows for higher data availability to applications, therefore resulting in a better customer experience</strong></li>
+</ul>
+</li>
+<li><p>Random I/O Performance</p>
+<ul>
+<li>Random Read is over 5 times faster than AWS and over 34 times faster than Azure</li>
+<li>Random Write is over 4 times faster than AWS and over 27 times faster than Azure</li>
+<li><strong>Faster storage access allows applications to rapidly access and process data and thus results in faster applications</strong></li>
+</ul>
+</li>
+<li><p>Sequential I/O Performance</p>
+<ul>
+<li>Sequential Read is almost 11 times better than AWS and over 4 times better than Azure</li>
+<li>Sequential Write is over 10 times higher than AWS and over 6 times higher than Azure</li>
+<li><strong>High sequential IO performance is vital for data analysis and specifically for data warehouses, it is a core component of business intelligence and thus guides key management decisions</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>Although a platform may appear cheaper, if it has half the performance this may mean you could end up paying significantly more for the same performance.</p>
+<p>Using UKCloud's OpenStack platform means that you can do ‘more for less’ as you can save money with simple usage-based billing and benefit from the greater performance the platform offers.</p>
+<p>While actual performance may vary based upon numerous real-world factors such as internet latency, application-tuning and a minimal risk of multi-tenant contention, we are confident that these benchmark results truly reflect the greater performance that UKCloud for OpenStack delivers over the nearest equivalent region and VM sizes of both AWS and Azure</p>
+<p>We are continuously investigating ways to improve the performance of our UKCloud for OpenStack platform through using the latest versions of OpenStack, software-defined storage and networking, coupled with adaptive storage and network tuning as the platform is consumed. All of this will reassure our customers that the greater performance delivered today, will remain in the future.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-ref-ukcloud-outperforms.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

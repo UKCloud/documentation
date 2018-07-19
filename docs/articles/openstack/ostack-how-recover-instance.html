@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to manage how your instance recovers from a host failure | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to manage how your instance recovers from a host failure | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-manage-how-your-instance-recovers-from-a-host-failure">How to manage how your instance recovers from a host failure</h1>
+
+<h2 id="overview">Overview</h2>
+<p>UKCloud monitors UKCloud for OpenStack at regular intervals, checking for issues with the hardware or services supporting OpenStack. When a host experiences problems, our engineers will take steps to live migrate any instances on the affected host to an alternative one, however there may be cases where a host needs to be rebooted prior to any live migrations being successfully actioned.</p>
+<p>This guide outlines UKCloud's policy for handling OpenStack instances in the event of a service interruption to the availability of a host. The guide also describes how you can control the running state instances return when a host has been recovered.</p>
+<h2 id="how-does-instance-recovery-work">How does instance recovery work?</h2>
+<p>If a host restarts, or if we have to reboot a host before live migrating your instances, any instances running on that host will be shut off. When we recover a host, there are two options for the recovery state of any instances that may have been affected:</p>
+<ul>
+<li>Manual restart of instance (default) - you must restart any affected instances when the host has been recovered</li>
+<li>Automatic restart of an instance - UKCloud will automatically restart any shut off instances on a recovered host</li>
+</ul>
+<p>You can set the recovery option for each of your instances in the instance metadata.</p>
+<h2 id="using-the-openstackclient-command-line-interface">Using the OpenStackClient command-line interface</h2>
+<p>You can use the OpenStackClient command-line interface (CLI) to view and set the instance recovery option as follows:</p>
+<h3 id="checking-the-recovery-option-for-an-instance-cli">Checking the recovery option for an instance (CLI)</h3>
+<p>To use the OpenStackClient CLI to check the recovery option for an instance:</p>
+<ol>
+<li><p>Run the following command from the OpenStackClient CLI:</p>
+<pre><code> openstack server show &lt;instance_ID_or_name&gt;
+</code></pre>
+</li>
+<li><p>If the <code>properties</code> field in the results includes <code>RestartOnFail='True'</code> (as shown below), then your instance is set to automatically restart when the host has been recovered.</p>
+<p><img src="images/ostack-cli-results-autorestart-on.png" alt="RestartOnFail property set to True"></p>
+</li>
+<li><p>If the <code>properties</code> field does not include <code>RestartOnFail</code>, then your instance will remain in a shut off state when the host has been recovered and you'll have to manually restart it.</p>
+</li>
+</ol>
+<h3 id="setting-the-recovery-option-for-an-instance-cli">Setting the recovery option for an instance (CLI)</h3>
+<p>To use the OpenStackClient CLI to set the recovery option for an instance:</p>
+<ol>
+<li><p>To set the recovery option so that the instance is automatically restarted when the host has been recovered, run the following command:</p>
+<pre><code> openstack server set -- property RestartOnFail=True &lt;instance_ID_or_name&gt;
+</code></pre>
+</li>
+<li><p>To set the recovery option so that you must manually restart the instance when the host has been recovered, run the following command:</p>
+<pre><code> openstack server unset -- property RestartOnFail &lt;instance_ID_or_name&gt;
+</code></pre>
+</li>
+</ol>
+<h2 id="using-the-openstack-horizon-dashboard">Using the OpenStack Horizon dashboard</h2>
+<p>If you prefer, you can use the OpenStack Horizon dashboard to view and set the recovery option for an instance.</p>
+<h3 id="checking-the-recovery-option-for-an-instance-horizon">Checking the recovery option for an instance (Horizon)</h3>
+<p>To use the Horizon dashboard to check the recovery option for an instance:</p>
+<ol>
+<li><p>In the left side of the Horizon dashboard, expand the <strong>Compute</strong> menu and click <strong>Instances</strong>.</p>
+</li>
+<li><p>On the <em>Instances</em> page, from the <strong>Actions</strong> list for your instance, select <strong>Update Metadata</strong>.</p>
+</li>
+<li><p>In the <em>Update Instance Metadata</em> dialog box, if the <em>Existing Metadata</em> section includes the RestartOnFail='True' (as shown below), then your instance is set to automatically restart when the host has been recovered.</p>
+<p><img src="images/ostack-horizon-update-instance-metadata-restartonfail.png" alt="RestartOnFail in Update Instance Metadata dialog box"></p>
+</li>
+<li><p>If the <em>Existing Metadata</em> section does not include the <code>RestartOnFail</code> tag, then your instance will remain in a shut off state when the host has been recovered and you'll have to manually restart it.</p>
+</li>
+</ol>
+<h3 id="setting-the-recovery-option-for-an-instance-horizon">Setting the recovery option for an instance (Horizon)</h3>
+<p>To use the Horizon dashboard to set the recovery option for an instance:</p>
+<ol>
+<li><p>In the left side of the Horizon dashboard, expand the <strong>Compute</strong> menu and click <strong>Instances</strong>.</p>
+</li>
+<li><p>On the <em>Instances</em> page, from the <strong>Actions</strong> list for your instance, select <strong>Update Metadata</strong>.</p>
+</li>
+<li><p>In the <em>Update Instance Metadata</em> dialog box:</p>
+<ul>
+<li><p>To set the recovery option so that the instance is automatically restarted when the host has been recovered, in the <strong>Custom</strong> field, enter <code>RestartOnFail</code> and click the <strong>+</strong> button.</p>
+<p><img src="images/ostack-horizon-restartonfail-on.png" alt="Add RestartOnFail metadata"></p>
+<p>Then, in the <strong>RestartOnFail</strong> field, enter <strong>True</strong>.</p>
+<p><img src="images/ostack-horizon-restartonfail-true.png" alt="Set value of RestartOnFail metadata"></p>
+</li>
+<li><p>To set the recovery option so that you must manually restart the instance when the host has been recovered, next to the <strong>RestartOnFail</strong> field, click the <strong>–</strong> button.</p>
+<p><img src="images/ostack-horizon-restartonfail-off.png" alt="Remove RestartOnFail metadata"></p>
+</li>
+</ul>
+</li>
+<li><p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+<h2 id="exclusions-to-ukcloud-managed-instance-recovery">Exclusions to UKCloud-managed instance recovery</h2>
+<p>Although we've designed UKCloud for OpenStack to provide a level of hardware resilience, UKCloud, like most true cloud vendors, cannot guarantee total automated recovery of virtual resources in the event of infrastructure failures.</p>
+<p>As a result, you must ensure that the applications you deploy on OpenStack have been engineered to tolerate any infrastructure issues or failures through utilising multiple instances deployed across different zones to help ensure the overall availability of your solution.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>For more information about UKCloud for OpenStack, see the following articles in the Knowledge Centre:</p>
+<ul>
+<li><a href="ostack-gs.html"><em>Getting Started Guide for UKCloud for OpenStack</em></a></li>
+<li><a href="ostack-faq.html"><em>UKCloud for OpenStack FAQs</em></a></li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-how-recover-instance.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>
