@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Red Hat Update Infrastructure overview | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Red Hat Update Infrastructure overview | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="red-hat-update-infrastructure-overview">Red Hat Update Infrastructure overview</h1>
+
+<p>The Red Hat Update Infrastructure enables the patching of a Red Hat virtual machine without any requirement for registering the virtual machine on the Red Hat network. To achieve this, each Red Hat Enterprise Linux (RHEL) virtual machine must have an RPM installed that configures the RHUI repository servers and provides the required certificates.</p>
+<p>The RHUI services consist of:</p>
+<ul>
+<li>Red Hat Update Appliance (RHUA), which builds and manages the repositories</li>
+<li>Content Distribution Servers (CDS), which serve content to clients</li>
+</ul>
+<p>The UKCloud RHUI service supplies access to the following repository groups, each group is installed by an RPM. You can only have one RPM installed per RHUI client virtual machine.</p>
+<h2 id="rhel5-standard">RHEL5-Standard</h2>
+<ul>
+<li>Red Hat Enterprise Linux 5 Server - RH Common from RHUI (RPMs) (5Server-i386)</li>
+<li>Red Hat Enterprise Linux 5 Server - RH Common from RHUI (RPMs) (5Server-x86_64)</li>
+<li>Red Hat Enterprise Linux 5 Server from RHUI (RPMs) (5Server-i386)</li>
+<li>Red Hat Enterprise Linux 5 Server from RHUI (RPMs) (5Server-x86_64)</li>
+<li>Red Hat Enterprise Linux 5 Server - Supplementary from RHUI (RPMs) (5Server-i386)</li>
+<li>Red Hat Enterprise Linux 5 Server - Supplementary from RHUI (RPMs) (5Server-x86_64)</li>
+</ul>
+<h2 id="rhel6-standard">RHEL6-Standard</h2>
+<ul>
+<li>Red Hat Enterprise Linux 6 Server - Extras from RHUI (RPMs) (i386)</li>
+<li>Red Hat Enterprise Linux 6 Server - Extras from RHUI (RPMs) (x86_64)</li>
+<li>Red Hat Enterprise Linux 6 Server - Optional from RHUI (RPMs) (6Server-i386)</li>
+<li>Red Hat Enterprise Linux 6 Server - Optional from RHUI (RPMs) (6Server-x86_64)</li>
+<li>Red Hat Enterprise Linux 6 Server - RH Common from RHUI (RPMs) (6Server-i386)</li>
+<li>Red Hat Enterprise Linux 6 Server - RH Common from RHUI (RPMs) (6Server-x86_64)</li>
+<li>Red Hat Enterprise Linux 6 Server from RHUI (RPMs) (6Server-i386)</li>
+<li>Red Hat Enterprise Linux 6 Server from RHUI (RPMs) (6Server-x86_64)</li>
+<li>Red Hat Enterprise Linux 6 Server - Supplementary from RHUI (RPMs) (6Server-i386)</li>
+<li>Red Hat Enterprise Linux 6 Server - Supplementary from RHUI (RPMs) (6Server-x86_64)</li>
+<li>Red Hat Software Collections for RHEL Server from RHUI (RPMs) (6Server-i386)</li>
+<li>Red Hat Software Collections for RHEL Server from RHUI (RPMs) (6Server-x86_64)</li>
+</ul>
+<h2 id="rhel7-standard">RHEL7-Standard</h2>
+<ul>
+<li>Red Hat Enterprise Linux 7 Server - Extras from RHUI (RPMs) (x86_64)</li>
+<li>Red Hat Enterprise Linux 7 Server - Optional from RHUI (RPMs) (7Server-x86_64)</li>
+<li>Red Hat Enterprise Linux 7 Server - RH Common from RHUI (RPMs) (7Server-x86_64)</li>
+<li>Red Hat Enterprise Linux 7 Server from RHUI (RPMs) (7Server-x86_64)</li>
+<li>Red Hat Enterprise Linux 7 Server - Supplementary from RHUI (RPMs) (7Server-x86_64)</li>
+<li>Red Hat Software Collections RPMs for Red Hat Enterprise Linux 7 Server from RHUI (7Server-x86_64)</li>
+</ul>
+<h2 id="high-availability-and-extended-update-support">High Availability and Extended Update Support</h2>
+<p>High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services. Customers will need to notify UKCloud for access to these repositories or will need to bring their own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a UKCloud Support service request directly via the My Calls feature and it will be uploaded to your private catalogue.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-rhui.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

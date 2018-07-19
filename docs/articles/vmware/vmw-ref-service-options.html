@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UKCloud for VMware options | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UKCloud for VMware options | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="ukcloud-for-vmware-options">UKCloud for VMware options</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>Each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is completely configurable, and gives you the flexibility to use different service levels, virtual machine (VM) sizes, security domains, connectivity and data protection options.</p>
+<p><img src="images/vmw-vmware-options.png" alt="UKCloud for VMware options"></p>
+<p>^ All workloads include 60GB of Tier 2 storage for free, all storage is persistent and resilient to local hardware failures. Workloads can use multiple storage profiles</p>
+<p>^^ All customers can use catalogue and template-based recovery</p>
+<h2 id="security-domain">Security domain</h2>
+<p>The UKCloud provides two security domains:</p>
+<ul>
+<li><p>Assured OFFICIAL provides access to public networks, such as the internet, PSN Assured, N3/HCSN and Janet</p>
+</li>
+<li><p>Elevated OFFICIAL provides access to restricted networks such as PSN Protected</p>
+</li>
+</ul>
+<p>Choose the security domain your workload needs to use.</p>
+<h2 id="workload-vm-type">Workload (VM) type</h2>
+<p>Some workloads require the highest levels of resilience and performance, some are sensitive to changing conditions, whereas others merely require a reliable infrastructure. Tailor the compute characteristics of the VM to support the requirements of your workload.</p>
+<p>Choose the workload type that best suits your application:</p>
+<ul>
+<li><p><strong>ESSENTIAL</strong> - For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload receives the requested performance.</p>
+</li>
+<li><p><strong>POWER</strong> - For key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is enabled to pre-emptively optimise performance and availability.</p>
+</li>
+<li><p><strong>PRIORITY</strong> - For critical workloads that handle important business processes that benefit  from a steady state of operation. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is configured to reduce workload movement around the platform.</p>
+</li>
+</ul>
+<h2 id="storage-options">Storage options</h2>
+<p>You can choose from a variety of options, depending on whether your workload requires high performance or longer-term retention storage. You can even deploy mixed environments to deliver exactly what you need.</p>
+<p>Choose any additional storage needed to support your application and add as many storage options as you need for the different aspects of your application. For example, you could use Tier 1 storage for the high I/O database application and Tier 2 to store seldom-accessed media.</p>
+<ul>
+<li><p><strong>Tier 1</strong> storage provides fast block storage, optimised for data warehouses, busy transactional databases and other high IO workloads.</p>
+</li>
+<li><p><strong>Tier 2</strong> storage provides general all-purpose block storage, providing a balance of performance and cost.</p>
+</li>
+<li><p><strong>Geo-Resilient</strong> storage works in combination with synchronous protection to replicate storage across a SAN that spans both UKCloud sites.</p>
+</li>
+</ul>
+<h2 id="data-protection-options">Data protection options</h2>
+<p>Whether you're driven by recovery point (RPO) or recovery time (RTO), you can choose the right level of automated, on-platform protection for your environments.</p>
+<p>The UKCloud for VMware service offers three different protection options for your VMs.</p>
+<ul>
+<li><p><strong>Catalogue and template-based recovery</strong> is a configuration management solution that can reprovision stateless servers to a new VM when required, using standard and catalogue-based VM templates.</p>
+</li>
+<li><p><strong>Snapshot Protection</strong> provides a daily backup of your VMs. You can select a retention period of either 14 or 28 days.</p>
+</li>
+<li><p><strong>Journaling Protection</strong> uses journals to store all write operations made to your VMs on a separate UKCloud site.</p>
+</li>
+<li><p><strong>Synchronous Protection</strong> provides geographical protection of your live environments across both UKCloud sites by synchronously replicating VMs between both sites. This ensures that any changes made to your environment are committed to both arrays in both sites simultaneously.</p>
+</li>
+</ul>
+<p>Choose the application and data protection needed for your solution. You can choose only one protection option to cover both VMs and storage. For example, if you choose Journaling Protection for your VMs, you cannot then choose 14-day Snapshot Protection for your storage; Journaling Protection will apply to both.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-service-options.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

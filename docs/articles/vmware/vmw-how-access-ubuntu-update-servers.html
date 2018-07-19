@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to access Ubuntu update servers  | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to access Ubuntu update servers  | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-access-ubuntu-update-servers">How to access Ubuntu update servers</h1>
+
+<h2 id="overview">Overview</h2>
+<p>When you create a virtual machine (VM) with an Ubuntu licence on it, you need to register the VM in order to receive updates for it. This guide explains how to access the Ubuntu repository servers to receive updates. Depending on whether your VM is on UKCloud's Assured OFFICIAL or Elevated OFFICIAL platform, there's a different process to follow.</p>
+<p>Before you attempt to establish connections to an Ubuntu repository server, you need to make sure your VMs can communicate with the Ubuntu server which exists outside of your cloud organisation. This may involve editing the NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a> and <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
+<h2 id="assured-official-platform">Assured OFFICIAL platform</h2>
+<p>UKCloud's Assured OFFICIAL platform is internet facing, so you can simply configure your VM to connect to the internet, and use standard update tools such as apt-get to talk directly to the publicly available Ubuntu repositories.</p>
+<h2 id="elevated-official-platform">Elevated OFFICIAL platform</h2>
+<p>UKCloud's Elevated OFFICIAL platform doesn't natively connect to the internet, and the PSN Protected network doesn't have any Ubuntu repository servers. To connect to an Ubuntu repository server for updates, you can use UKCloud-managed repository servers or a UKCloud Walled Garden.</p>
+<h3 id="ukcloud-managed-repository-servers">UKCloud-managed repository servers</h3>
+<p>We provide Ubuntu repositories for the 12.04 and 14.04 LTS versions of Ubuntu on our Elevated OFFICIAL platform, so that customers with Ubuntu VMs can get software updates. To do this, issue the appropriate command for your release of Ubuntu to download a repository list file to your apt sources directory.</p>
+<ul>
+<li><p>For 12.04:</p>
+<pre><code>  sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_precise.list
+</code></pre>
+</li>
+<li><p>For 14.04:</p>
+<pre><code>  sudo wget -P /etc/apt/sources.list.d http://x.y.89.96/repos/ukcloud_trusty.list
+</code></pre>
+</li>
+</ul>
+<p>We also recommend that you rename the default <code>/etc/apt/sources.list</code> file to reduce the likelihood of errors during the update process that stem from attempts to access the internet-based Canonical Partner repositories. To do this, use the following command:</p>
+<pre><code>sudo mv /etc/apt/sources.list /etc/apt/sources.list.old
+</code></pre>
+<p>Replace x.y with the first two octets of the Elevated OFFICIAL public IP addresses. If you're not sure what these are, contact UKCloud Support.</p>
+<h3 id="walled-garden">Walled Garden</h3>
+<p>Choose this option only if you want full control of Ubuntu updates and are already thinking of deploying a UKCloud Walled Garden. This option involves pulling updates into the Assured platform, and using UKCloud's Walled Garden to move them to the Elevated platform.</p>
+<p>It's a much more complex solution than using UKCloud-managed repository servers, and you have sole responsibility for deploying and managing it.</p>
+<p>For more information about the Walled Garden, see the <a href="../cdsz/cdsz-gs.md"><em>Getting Started Guide for Cross Domain Security Zone</em></a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-access-ubuntu-update-servers.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

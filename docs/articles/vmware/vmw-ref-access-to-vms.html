@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Access to virtual machines on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Access to virtual machines on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="access-to-virtual-machines-on-the-ukcloud-platform">Access to virtual machines on the UKCloud platform</h1>
+
+<h2 id="what-access-does-ukcloud-have-to-our-running-virtual-machines-and-the-memory-they-are-using">What access does UKCloud have to our running virtual machines and the memory they are using?</h2>
+<p>Our default policy is that no UKCloud personnel have access to any of our customer’s environments. We would need a specific, customer approved change ticket in order to gain access to a customers’ environment if we are to assist them with resolving any issues.</p>
+<p>UKCloud provides compute in line with the NIST defined IaaS cloud delivery model, which means that we manage the components up to and including the hypervisor, but we do not manage the virtual machine (VM) or anything within it (for example, the operating system or local disks). Each customer has complete autonomy in provisioning their VMs and therefore has exclusive control over the security credentials they use for each VM. As UKCloud does not have access to these security credentials, our personnel have no ability to authenticate and gain access to customer VMs.</p>
+<p>UKCloud personnel do have access to the vSphere hypervisors, physical servers and storage in which customer VMs run, so that they can effectively manage and maintain the cloud platform. This does not give them access to individual VMs, but rather the underlying resource pool.</p>
+<h2 id="what-controls-do-you-have-in-place-to-prevent-access-to-our-data-either-on-disk-or-in-memory">What controls do you have in place to prevent access to our data, either on disk or in memory?</h2>
+<p>UKCloud was one of the first cloud service providers to achieve NCSC Pan Government Accreditation to host government data classified up to and including UK RESTRICTED (IL3 under the Government Protective Marking Scheme) and is one of the few cloud service providers who maintain PSN Accreditation, as well as the approval of the Health and Social Care Information Commission (HSCIC) to provide access to N3/HSCN and Personally Identifiable Data. This heritage means that we have mature and well developed security controls throughout our organisation. This encompasses robust and multi-tiered physical, logical and technical security systems and controls.</p>
+<p>Given the low-level access that UKCloud personnel have to the cloud platform, we have implemented a variety of interconnected controls which include people, process and technology.</p>
+<p>We have a comprehensive Role Based Access Control (RBAC) system, which ensures that only authorised personnel can access appropriate elements of the cloud platform as required to undertake the authorised tasks of their role</p>
+<p>In addition, UKCloud is subject to regular ITSC CHECK Tests which provide a comprehensive and in-depth independent assessment of technical and security configurations, and check alignment of the assurance of UKCloud to Service Definitions, published RMADS and appropriate UK Government and industry standards.</p>
+<p>UKCloud maintains a protective monitoring service aligned with NCSC Good Practice Guidance GPG13 and the prescribed protective monitoring controls PMC1-12. This ensures that UKCloud has a comprehensive and detailed audit log, tracking which personnel have accessed and performed tasks on the cloud platform.</p>
+<p>All UKCloud personnel are appropriately vetted and security cleared so that customers can be assured that engineers with access to the underlying infrastructure are operating at the highest levels of trust (for example, through vetting and clearance frameworks including like BPSS, SC, DV and NPPV).</p>
+<p>UKCloud benefits from a full-time internal compliance function, which regularly audits company functions and processes to assess whether they are being correctly followed (for example by maintaining clear evidence where customers request and permit UKCloud to access their VMs). Any non-conformance is documented, reported to Board Level, and followed up to ensure that effective remedial actions are implemented.</p>
+<p>Finally, to complement the high levels of security inherent within the UKCloud platform, UKCloud recommends that customers use appropriate controls within the VM or application, such as data at rest encryption (for example, Bitlocker or Becrypt), session encryption (for example, HTTPS or VPN), and the implementation of appropriate protective monitoring.</p>
+<p>UKCloud has produced extensive security collateral to explain how we provide an assured cloud platform, including our <a href="https://ukcloud.com/wp-content/uploads/2016/08/UKCloud_WhitePaper_RGB_Digital_Government_Security_Classifications_policy.pdf">Government Security Classification Policy</a> whitepaper, relevant evidence packs and RMADS. If you would like to discuss this further, we can arrange for an Account Director, a Cloud Architect or a member of the Compliance Team to contact you.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-access-to-vms.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

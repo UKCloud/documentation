@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Fix for customers unable to upload and download vApps or catalog items | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Fix for customers unable to upload and download vApps or catalog items | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="fix-for-customers-unable-to-upload-and-download-vapps-or-catalog-items">Fix for customers unable to upload and download vApps or catalog items</h1>
+
+<p>This article is divided into two sections: A Windows and MAC set of instructions:</p>
+<h2 id="fix-for-customers-unable-to-upload-and-download-vapps-of-catalog-items-in-windows">Fix for customers unable to upload and download vApps of catalog items in Windows</h2>
+<p>The client integration plugin requires to be updated on the client machine performing the upload/download.</p>
+<h3 id="step-1">Step 1</h3>
+<p>Close all internet browsers.</p>
+<h3 id="step-2">Step 2</h3>
+<p>Go to control panel and uninstall: VMware Client Integration Plug-in 5.5.0</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Remove the file <code>.csp_ovftool_settings.js</code> located in <code>C:\users\&lt;username&gt;</code></p>
+</div>
+<h3 id="step-3">Step 3</h3>
+<p>Connect to the UKCloud Portal and log in to vCloud Director. Right click the vApp and select download, the following screen will appear:</p>
+<p><img src="images/integration_plugin.jpg" alt="Client Integration Plug-in download page"></p>
+<p>Download and install this plugin.</p>
+<h3 id="step-4">Step 4</h3>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Close all browsers prior to install.</p>
+</div>
+<p>Once installed, log back in to the Portal.</p>
+<p>You should now find you are able to initialise a vApp download.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This is the same fix for catalog item upload/download.</p>
+</div>
+<h2 id="fix-for-customers-unable-to-upload-and-download-vapps-of-catalog-items-in-mac-os">Fix for customers unable to upload and download vApps of catalog items in Mac OS</h2>
+<h3 id="step-1-1">Step 1</h3>
+<p>Shut down all browsers.</p>
+<h3 id="step-2-1">Step 2</h3>
+<p>Remove the installed plugin with this command:</p>
+<pre><code>sudo rm -rf '/Library/Internet Plug-Ins/VMwareClientSupportPlugin55.plugin
+</code></pre>
+<h3 id="step-3-1">Step 3</h3>
+<p>Remove local settings created by the plugin:</p>
+<pre><code>rm ~/.csp_ovftool_settings.js
+</code></pre>
+<h3 id="step-4-1">Step 4</h3>
+<p>Re-install the plugin.</p>
+<h3 id="step-5">Step 5</h3>
+<p>Ensure the plugin is set to &quot;Always activate&quot; in about:addons.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This plugin only works in Firefox. It does not work in Safari, and no longer works in Chrome as it requires NPAPI extensions.</p>
+</div>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-fix-unable-to-vapps.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

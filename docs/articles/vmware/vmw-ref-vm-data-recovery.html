@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Virtual machine data recovery options | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Virtual machine data recovery options | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="virtual-machine-data-recovery-options">Virtual machine data recovery options</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>There are three methods of creating a recovery point for your virtual machines (VMs):</p>
+<ul>
+<li><p>VM snapshot - provides the ability to rollback or recover from a change. We recommend that snapshots on a single VM do not span more than 14 days for performance reasons elaborated on below.</p>
+</li>
+<li><p>VM copy - creates a master image to clone additional VMs from an existing VM.</p>
+</li>
+<li><p>VM backup - provides disaster recovery from file corruption or deletion.</p>
+</li>
+</ul>
+<p>Each of these methods is discussed below to ensure that you are able to backup and recover your data in the most efficient and appropriate way.</p>
+<h2 id="vm-snapshot">VM snapshot</h2>
+<p>When you create a VM snapshot, you grab a VM and all its data and configuration at a specific point in time (a snapshot). This is achieved by locking the main image of the VM, writing all subsequent updates, creations or deletions to a separate file (a delta) outside of your main image.</p>
+<p><img src="images/snapshot.png" alt="Delta over time"></p>
+<h3 id="use-case">Use case</h3>
+<p>When planning to deploy a kernel upgrade in Linux, take a snapshot prior to performing the upgrade. When you have applied and successfully tested the upgrade, you should remove the snapshot. If the upgrade is not successful or does not pass the quality check, you can simply rollback the changes by reverting to the snapshot.</p>
+<h3 id="pros">Pros</h3>
+<p>You are able to complete this task autonomously, without intervention by UKCloud. You can create a temporary recovery point while the VM is still running and then quickly rollback from any changes or updates made to the VM, should undesirable outcomes occur (for example, during a Windows Update).</p>
+<h3 id="cons">Cons</h3>
+<p>You can create only one snapshot for each VM, with each subsequent snapshot overwriting the previous one. You should use snapshots only as a temporary solution, as the longer the snapshot is running, the more changes will be lost should the snapshot be restored. In addition, due to the way that snapshots capture all changes to a separate file, storage costs will increase as a result of having to store both the original master VM image and you may also encounter a negative impact to the overall performance of the VM.</p>
+<h3 id="how-to-create-a-vm-snapshot">How to create a VM snapshot</h3>
+<p>You can create a VM snapshot within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to create a snapshot for and selecting <strong>Create Snapshot</strong>.</p>
+<p><img src="images/vcd_snapshot.png" alt="Snapshot creation in vCloud Director"></p>
+<h2 id="vm-copy">VM copy</h2>
+<p>When you copy a VM, you create an exact replica of the VM in either the same vApp or a different vApp.</p>
+<p><img src="images/vcd_copy.png" alt="VM copy in vCloud Director"></p>
+<h3 id="use-case-1">Use case</h3>
+<p>When creating a web application that can scale across multiple VMs of the same configuration, you can build an image to the required specification and then copy that VM to create a master image (gold build). When required, you can deploy subsequent VMs from this gold build in a consistent fashion, enabling swift scaling of your environment.</p>
+<h3 id="pros-1">Pros</h3>
+<p>You can easily create a gold build of VMs, thereby creating one image that you can then use to create additional VMs in a controlled and consistent fashion, without having to build each VM completely from scratch.</p>
+<h3 id="cons-1">Cons</h3>
+<p>You must power down the VM prior to taking a copy. Each additional copy will consume as much storage as the original and consume additional memory and CPU cycles while the VMs are running.</p>
+<h3 id="how-to-create-a-vm-copy">How to create a VM copy</h3>
+<p>You can create a VM copy within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to copy and selecting <strong>Copy to</strong>.</p>
+<p><img src="images/copy.png" alt="How Master and copy images differ with changes over time"></p>
+<h2 id="vm-backup">VM backup</h2>
+<p>You should view backup as a disaster recovery mechanism, whereby you can restore entire environments or individual files in the event of the original becoming unavailable as a result of corruption or accidental deletion.</p>
+<p>You can add any VM to the automated snapshot backup schedule so that it is automatically backed up on a daily basis. You can choose to retain snapshot backups for either 14 or 28 days. Data is backed up at the hypervisor level and provides a crash‑consistent image.</p>
+<h3 id="use-case-2">Use case</h3>
+<p>If you accidentally delete or amend a file that should not be modified, you can restore the file in question from backup by raising a Service Request via the UKCloud Portal.</p>
+<h3 id="pros-2">Pros</h3>
+<p>You gain peace of mind that data is backed up nightly for a rolling period of 14 or 28 days without any manual intervention.</p>
+<h3 id="cons-2">Cons</h3>
+<p>Time taken for a restoration request to be completed (dependent on the amount of data to be restored).</p>
+<h3 id="how-to-add-a-vm-to-the-automated-snapshot-backup-schedule">How to add a VM to the automated snapshot backup schedule</h3>
+<p>For information about how to add a VM to the automated backup schedule, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage snapshot protection for your VMs</em></a>
+in the Knowledge Centre.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-vm-data-recovery.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>
