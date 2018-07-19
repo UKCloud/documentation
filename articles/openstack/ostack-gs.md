@@ -62,7 +62,7 @@ When you have created these elements, you can view them in the *Network Topology
 
 You can create your network infrastructure in one of the following ways:
 
-- Using Horizon to manually create your infrastructure (see [Using Horizon to manually create your     infrastructure](#using-horizon-to-manually-create-your-infrastructure))
+- Using Horizon to manually create your infrastructure (see [Using Horizon to manually create your infrastructure](#using-horizon-to-manually-create-your-infrastructure))
 - Using the OpenStack Heat orchestration tool to create stacks (see [Using the OpenStack Heat orchestration tool to create stacks](#using-the-openstack-heat-orchestration-tool-to-create-stacks))
 - Using the OpenStack API and automation (see [Using the OpenStack API and automation](#using the-openstack-api-and-automation))
 
@@ -426,6 +426,7 @@ If the volume that you want to retype is not attached to an instance, you can re
 
     > [!NOTE]
     > You may notice duplicate volumes while the retyping process is running. These duplicate volumes will disappear when the process has completed.
+
     > [!IMPORTANT]
     > Do not attach a retyped volume to an instance until the retyping process has completed successfully.
 
@@ -570,5 +571,4 @@ network mounted onto the host hypervisor.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your
-UKCloud experience, send them to <products@ukcloud.com>.
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
