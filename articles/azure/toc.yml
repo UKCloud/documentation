@@ -26,8 +26,8 @@
       items:
       - name: Create a Service Principal Name for Azure Stack - CLI
         href: azs-how-create-spn-cli.md
-      - name: Create a Service Principal Name for Azure Stack - PowerShell
-        href: azs-how-create-spn-powershell.md
+      - name: Create a Service Principal Name for Azure Stack - CLI
+        href: azs-how-create-spn-cli.md
   - name: Reference
     items:
     - name: UKCloud for Microsoft Azure Troubleshooting
