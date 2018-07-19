@@ -6,7 +6,7 @@ author: Chris Black
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2:
+toc_sub2: Configure Environment
 toc_sub3:
 toc_sub4:
 toc_title: Configure the Azure Stack user's PowerShell environment

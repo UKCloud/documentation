@@ -85,11 +85,20 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 ## Create Service Principal Name (SPN) for Azure Stack with **Set Password**
 
 ```azurecli-interactive
+# Create your environment
+az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" --suffix-storage-endpoint "frn00006.azure.ukcloud.com" --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2017-03-09-profile
+
+# Set your environment
+az cloud set -n AzureStackUser
+
+# Log in to Azure Stack with user credentials
+az login -u "<username>@<tenantDomain>" -p '<password>'
+
 # Set Azure Stack Environment
 az cloud set --n AzureStackUser
 
 # Log in to Azure Stack using your Administrator account
-az login -u <username>@<tenantDomain> -p <password>
+az login -u "<username>@<tenantDomain>" -p '<password>'
 
 # Create Service Principal Name
 az ad sp create-for-rbac --name "ServicePrincipalName" --password 'Password1234!' --role="Owner"
@@ -125,7 +134,7 @@ az group delete --name rg01 -y
 
 > [!TIP]
 > You can also run the create-for-rbac command without password and then you can pick the automatically generated password from the output variable:
-> ```azurecli
+> ```azurecli-interactive
 > az ad sp create-for-rbac --name "ServicePrincipalName" --role="Owner"
 > {
 > "appId": "00000000-0000-0000-0000-000000000000",
