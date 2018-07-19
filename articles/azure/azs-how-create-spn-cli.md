@@ -95,13 +95,13 @@ az login -u <username>@<tenantDomain> -p <password>
 az ad sp create-for-rbac --name "ServicePrincipalName" --password 'Password1234!' --role="Owner"
 
 # This command will output five values
-{
-  "appId": "00000000-0000-0000-0000-000000000000",
-  "displayName": "azure-cli-2017-06-05-10-41-15",
-  "name": "http://azure-cli-2017-06-05-10-41-15",
-  "password": "Password1234!",
-  "tenant": "00000000-0000-0000-0000-000000000000"
-}
+#  {
+#    "appId": "00000000-0000-0000-0000-000000000000",
+#    "displayName": "azure-cli-2017-06-05-10-41-15",
+#    "name": "http://azure-cli-2017-06-05-10-41-15",
+#    "password": "Password1234!",
+#    "tenant": "00000000-0000-0000-0000-000000000000"
+#  }
 
 # Log in to Azure Stack using Service Principal Name (SPN)
 ## Note, CLIENT_ID=appId, CLIENT_SECRET=password, TENANT_ID=tenant
