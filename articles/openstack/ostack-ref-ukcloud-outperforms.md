@@ -8,7 +8,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: 
+toc_title: How the UKCloud OpenStack platform outperforms hyperscalers
 toc_fullpath: Reference/ostack-ref-ukcloud-outperforms.md
 toc_mdlink: ostack-ref-ukcloud-outperforms.md
 ---
