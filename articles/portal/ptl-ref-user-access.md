@@ -9,8 +9,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Portal user access
-toc_fullpath: Reference/other-ref-user-access.md
-toc_mdlink: other-ref-user-access.md
+toc_fullpath: Reference/ptl-ref-user-access.md
+toc_mdlink: ptl-ref-user-access.md
 ---
 
 # Portal user access

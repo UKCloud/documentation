@@ -8,7 +8,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title:
+toc_title: An overview of Portal permissions
 toc_fullpath: Reference/ptl-overview-permissions.md
 toc_mdlink: ptl-overview-permissions.md
 ---

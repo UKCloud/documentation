@@ -9,8 +9,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Portal release notes
-toc_fullpath: Reference/portal-ref-release-notes.md
-toc_mdlink: portal-ref-release-notes.md
+toc_fullpath: Reference/ptl-ref-release-notes.md
+toc_mdlink: ptl-ref-release-notes.md
 ---
 
 # Portal release notes
