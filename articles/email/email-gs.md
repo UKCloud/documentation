@@ -54,7 +54,7 @@ You'll need to configure your chosen domain's MX record as `mail.skyscapecs.net`
 
 Once you've decided on a domain name and submitted your service request, UKCloud will configure your domain name on our platform and create an administrator account. You'll receive a welcome email with details of your administrator account with delegated rights for your email domain. This account will usually be in the following format:
 
-`admin@`*`yourdomain`*
+`admin@<yourdomain>`
 
 For example:
 
@@ -129,7 +129,7 @@ To create a user account:
 
 10. Click **Finish** to complete creation of the account.
 
-The user can log in to and use the account immediately. It will take up to an hour to add the account to the Global Address List, during which time the account name won\'t be listed as an auto-complete option for users composing emails.
+The user can log in to and use the account immediately. It will take up to an hour to add the account to the Global Address List, during which time the account name won't be listed as an auto-complete option for users composing emails.
 
 ## Getting to know the Zimbra web client
 
@@ -319,10 +319,10 @@ In this guide, you've learned how to:
 
 For more information about using Email and Collaboration as a Service, see the following articles on the Knowledge Centre:
 
-- [*How to use UKCloud's email service with your application*](https://portal.ukcloud.com/support/knowledge_centre/1a96ce7d-dd65-4e2b-a107-4cce0f4317ef)
-- [*How to set up Email and Collaboration on an iPhone or iPad*](https://portal.ukcloud.com/support/knowledge_centre/394a87d6-03a3-43c3-905e-64b35ddcd61b)
-- [*How to setup Email on Android, Windows or BlackBerry mobile devices*](https://portal.ukcloud.com/support/knowledge_centre/6b12262b-74f2-4e0d-9430-c73605f98637)
-- [*Sending email from the Elevated environment*](https://portal.ukcloud.com/support/knowledge_centre/de75551e-eedc-4caa-895c-347e20671f7d)
+- [*How to use UKCloud's email service with your application*](email-how-use-with-app.md)
+- [*How to set up Email and Collaboration on an iPhone or iPad*](email-how-setup-iphone.md)
+- [*How to setup Email on Android, Windows or BlackBerry mobile devices*](email-how-setup-android.md)
+- [*Sending email from the Elevated environment*](email-how-send-email-elevated.md)
 
 ## Glossary
 
