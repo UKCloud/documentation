@@ -8712,7 +8712,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "nv+46anEKJYX65V+Zkx7MA=="
+          "hash": "kRkWLwVxmQ48roSpmX5Bxg=="
         }
       },
       "is_incremental": false,
@@ -8730,15 +8730,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "3+y6E+hwjQ8cQzWEkhhOlw=="
+          "hash": "aA45TrN2aJob7AjS+Ytybg=="
         }
       },
       "is_incremental": false,
