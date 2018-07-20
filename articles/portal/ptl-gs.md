@@ -29,7 +29,7 @@ The UKCloud Portal is the gateway to your UKCloud services. In the Portal, you c
 
 This Getting Started Guide provides an overview of the functionality available within the Portal.
 
-### Intended audience
+## Intended audience
 
 This Getting Started Guide is intended for any user with access to the Portal.
 
@@ -42,7 +42,7 @@ You should have received your Portal login credentials from your Portal administ
 
 The Portal works with Google Chrome, Microsoft Internet Explorer and Mozilla Firefox. However, if you'll be using vCloud Director, we recommend that you use the Firefox ESR browser as this is also supported by the Web Console for the version of vCloud Director used by UKCloud for VMware.
 
-**More information!** [*Browser requirements for services on the UKCloud platform*](https://portal.ukcloud.com/support/knowledge_centre/0887a898-826b-4605-9c2e-dcde0da06c00)
+**More information!** [*Browser requirements for services on the UKCloud platform*](../other/other-ref-browsers.md)
 
 ## Logging in to the UKCloud Portal
 
@@ -94,23 +94,23 @@ In the toolbar, you can also click your username to access the following options
 
 ![User menu](images/ptl-mnu-user-account.png)
 
-- **Notifications** --- List all Portal notifications. Unread notifications are displayed in bold. Click the **View** button next to a notification to see more details. When you've finished reading a notification, select the **Notifications** tab to return to the list. If you want to quickly mark all your unread notifications as read, click the **Mark all as Read** button at the top of the page.
+- **Notifications** - List all Portal notifications. Unread notifications are displayed in bold. Click the **View** button next to a notification to see more details. When you've finished reading a notification, select the **Notifications** tab to return to the list. If you want to quickly mark all your unread notifications as read, click the **Mark all as Read** button at the top of the page.
 
     > [!TIP]
     > The number next to the **Notifications** menu option (and next to your username in the toolbar) shows how many unread notifications you have.
 
-- **Update contact details** --- Change your name, email address and telephone numbers. You can also opt to have Portal notifications sent to your email address.
+- **Update contact details** - Change your name, email address and telephone numbers. You can also opt to have Portal notifications sent to your email address.
 
-- **Change Password** --- Change your password or memorable word. We recommend that you change your password at least every 90 days (see [*How to reset your UKCloud Portal password or     memorable word*](https://portal.ukcloud.com/support/knowledge_centre/d2a8e8aa-2eb3-4fbb-a2b7-abde91f68cb7)).
+- **Change Password** --- Change your password or memorable word. We recommend that you change your password at least every 90 days (see [*How to reset your UKCloud Portal password or memorable word*](ptl-how-reset-password.md)).
 
     > [!NOTE]
     > Your Portal administrator may have implemented a password expiration period; in which case, you'll be prompted to change your password after the specified number of days.
 
-- **API** --- View the information you need to use the vCloud API (see [*How to access vCloud Director through the vCloud API*](https://portal.ukcloud.com/support/knowledge_centre/0e0865ef-b6c5-4664-ab85-2d9f5cfe54c0)).
+- **API** - View the information you need to use the vCloud API (see [*How to access vCloud Director through the vCloud API*](../vmware/vmw-how-access-vcloud-api.md)).
 
-- **Feedback** --- Send an email to UKCloud with feedback on the Portal or any other aspect of your UKCloud experience.
+- **Feedback** - Send an email to UKCloud with feedback on the Portal or any other aspect of your UKCloud experience.
 
-- **Log out** --- Log out of the Portal.
+- **Log out** - Log out of the Portal.
 
 > [!TIP]
 > Click the UKCloud logo in the toolbar on any page to return to the *Home* page. If you hover your mouse over the UKCloud logo, a tooltip displays the current Portal version.
@@ -126,51 +126,51 @@ The Portal navigation panel provides access to all the functionality available i
 > [!NOTE]
 > The options you can see in the navigation panel depend on your Portal permissions and the services associated with your account.
 
-- **Home** --- Return to the Portal *Home* page. You can also return to the *Home* page by clicking the UKCloud icon in the toolbar.
+- **Home** - Return to the Portal *Home* page. You can also return to the *Home* page by clicking the UKCloud icon in the toolbar.
 
-- **Reports** --- Provides access to the following reports:
+- **Reports** - Provides access to the following reports:
 
-  - **Login History** --- Lists everyone who has logged in to the Portal over the last 30 days (see [*Viewing login information*](https://portal.ukcloud.com/support/knowledge_centre/4f0bc496-c4f3-4748-8c38-97faf6530518)).
+  - **Login History** - Lists everyone who has logged in to the Portal over the last 30 days (see [*Viewing login information*](ptl-how-view-login-info.md)).
 
-  - **ECC Build History** --- Lists recent compute service, VDC and edge gateway builds initiated from the Portal and the Portal API (see [*How to build your Enterprise Compute Cloud estate using the UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/99f82d51-11f1-4c76-8cdb-3048067ae0f3)).
+  - **VMware Cloud Build History** - Lists recent compute service, VDC and edge gateway builds initiated from the Portal and the Portal API (see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md) and [*How to build an edge gateway*](../vmware/vmw-how-build-edge.md)).
 
-  - **Service Reports** --- Lists all the service reports for the account. Click a link to download a PDF file of a specific report. Service reports provide information about the your VMs, support tickets and service availability.
+  - **Service Reports** - Lists all the service reports for the account. Click a link to download a PDF file of a specific report. Service reports provide information about the your VMs, support tickets and service availability.
 
-  - **Backup Summary** --- Provides access to summary reports of Snapshot Protection status for each of the account's compute services (see [*How to manage Snapshot Protection for your VMs*](https://portal.ukcloud.com/support/knowledge_centre/4e446d25-ef40-41d8-86b0-85bdda4ed614)).
+  - **Backup Summary** - Provides access to summary reports of Snapshot Protection status for each of the account's compute services (see [*How to manage Snapshot Protection for your VMs*](../vmware/vmw-how-manage-snapshot-protection.md)).
 
-- **Settings** --- Change various Portal settings, including key contacts, password expiration period, two factor authentication and IP address restrictions (Portal administrators only).
+- **Settings** - Change various Portal settings, including key contacts, password expiration period, two factor authentication and IP address restrictions (Portal administrators only).
 
-- **Contacts** --- Lists the user accounts with access to the current customer account. You can view a list of all user accounts (**All Contacts**) or just those with administration permissions (**Admin Contacts**). Portal administrators can create new users, reset other users' passwords and change other users' Portal permissions (see [*An Overview of Portal Permissions*](https://portal.ukcloud.com/support/knowledge_centre/4ab95e72-1089-4a1f-8e45-f1fec8a6e30b)).
+- **Contacts** - Lists the user accounts with access to the current customer account. You can view a list of all user accounts (**All Contacts**) or just those with administration permissions (**Admin Contacts**). Portal administrators can create new users, reset other users' passwords and change other users' Portal permissions (see [*An Overview of Portal Permissions*](ptl-overview-permissions.md)).
 
-- **VMware** --- Provides access to UKCloud for VMware compute services. Expand this option and then select the compute service with which you want to work (see [*Getting Started Guide for Enterprise Compute Cloud*](https://portal.ukcloud.com/support/knowledge_centre/e9e2a0a4-70ba-4ace-a8bf-913d052d7003)).
+- **VMware Cloud** - Provides access to UKCloud for VMware compute services. Expand this option and then select the compute service with which you want to work (see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md)).
 
-- **Oracle** --- Provides access to the OEM Cloud Control console for UKCloud for Oracle Software (see [*Getting Started Guide for Enterprise Compute Cloud for Oracle*](https://portal.ukcloud.com/support/knowledge_centre/69bdb68c-b4e4-41bb-9116-9dc1fbcacf03)).
+- **Oracle Cloud** - Provides access to the OEM Cloud Control console for UKCloud for Oracle Software (see the [*Getting Started Guide for UKCloud for Oracle Software*](../oracle/orcl-gs.md)).
 
-- **OpenStack** --- Provides access to the OpenStack Horizon dashboard for UKCloud for OpenStack (see [*Getting Started Guide for Cloud Native Infrastructure*](https://portal.ukcloud.com/support/knowledge_centre/220c3d5d-ce57-4ba1-95df-46c9f2922a64)).
+- **OpenStack Cloud** - Provides access to the OpenStack Horizon dashboard for UKCloud for OpenStack (see the [*Getting Started Guide for UKCloud for OpenStack*](../openstack/ostack-gs.md)).
 
-- **OpenShift** --- Provides information about UKCloud for OpenShift (see [*Getting Started Guide for Cloud Native Application Platform*](https://portal.ukcloud.com/support/knowledge_centre/06634d6c-dfc4-4be6-a15a-b7dc0380207f)).
+- **OpenShift** - Provides information about UKCloud for OpenShift (see the [*Getting Started Guide for UKCloud for OpenShift*](../openshift/oshift-gs.md)).
 
-- **Microsoft Azure** --- Provides access to the Azure Stack portal for UKCloud for Microsoft Azure (see [*Getting Started Guide for UKCloud for Microsoft Azure*](https://portal.ukcloud.com/support/knowledge_centre/87af49fe-ce0f-475d-8d5f-dca53f256b64)).
+- **Azure Cloud** - Provides access to the Azure Stack portal for UKCloud for Microsoft Azure (see the [*Getting Started Guide for UKCloud for Microsoft Azure*](../azure/azs-gs.md)).
 
-- **Cloud Storage** --- View information about your Cloud Storage service, including secret keys and storage consumption (see [*Getting Started Guide for Cloud Storage*](https://portal.ukcloud.com/support/knowledge_centre/e07b908f-e93e-42f8-b833-aff391511862)).
+- **Cloud Storage** - View information about your Cloud Storage service, including secret keys and storage consumption (see the [*Getting Started Guide for Cloud Storage*](../cloud-storage/cs-gs.md)).
 
-- **Monitoring** --- Provides access to:
+- **Monitoring** - Provides access to:
 
-  - The Cyber Security News page where you can view general threat briefs and security news (see [*Understanding the Cyber Security News page*](https://portal.ukcloud.com/support/knowledge_centre/feb59292-1852-4c3e-b771-b53fba5e0112)).
-  - My Security Events, which displays security events specific to your environment (see [*Understanding UKCloud's Protective Monitoring Portal showback*](https://portal.ukcloud.com/support/knowledge_centre/d6bf8b7e-1497-4d7b-b4f4-f3c8c1fbe089))
+  - The **Cyber Security News** page where you can view general threat briefs and security news (see [*Understanding the Cyber Security News page*](https://portal.ukcloud.com/support/knowledge_centre/feb59292-1852-4c3e-b771-b53fba5e0112)).
+  - **My Security Events**, which displays security events specific to your environment (see [*Understanding UKCloud's Protective Monitoring Portal showback*](../other/other-ref-cyber-security-news.md))
 
-- **Support** --- Provides access to:
+- **Support** - Provides access to:
 
   - The Knowledge Centre
-  - My Calls (see [*How to use My Calls in the UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/63c4ea0b-46fc-476c-b2d1-5f044281c886))
+  - My Calls (see [*How to use My Calls in the UKCloud Portal*](ptl-how-use-my-calls.md))
   - Service status information
 
-- **Tools** --- Provides access to:
+- **Tools** - Provides access to:
 
-  - Self-service creation of compute services (see [*How to build your Enterprise Compute Cloud estate using the UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/99f82d51-11f1-4c76-8cdb-3048067ae0f3)).
-  - The Zerto Self-Service Portal (ZSSP) where you can manage Journaling Protection, Disaster Recovery to the Cloud and Workload Migration to the Cloud (see [*How to perform a failover*](https://portal.ukcloud.com/support/knowledge_centre/539bef19-1a0b-4953-be4c-48c2830ed5e9)).
+  - Self-service creation of compute services (see [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md)).
+  - The Zerto Self-Service Portal (ZSSP) where you can manage Journaling Protection, Disaster Recovery to the Cloud and Workload Migration to the Cloud (see [*How to perform a failover*](../vmware/vmw-how-zerto-perform-failover.md)).
 
-- **Communities** --- Access the UKCloud site on GitHub and UKCloud Ideas.
+- **Communities** - Access the UKCloud site on GitHub and UKCloud Ideas.
 
 ### Content area
 
@@ -197,9 +197,9 @@ The entry point URL for the Portal API is:
 
 https://portal.skyscapecloud.com/api
 
-For reference information about the various endpoints offered by the Portal API, see the [*Portal API User Guide*](https://portal.ukcloud.com/support/knowledge_centre/c931089a-009b-4fe3-af8e-36ba75cb1c76).
+For reference information about the various endpoints offered by the Portal API, see the [*UKCloud Portal API User Guide*](ptl-ref-portal-api.md).
 
-For more information about how to use the API, including examples showing how to use the API to create a VDC and edge gateway, see [*How to use the UKCloud Portal API*](https://portal.ukcloud.com/support/knowledge_centre/18ec05eb-0271-4ff0-bb10-f377a2f29af7).
+For more information about how to use the API, including examples showing how to use the API to create a VDC and edge gateway, see [*How to use the UKCloud Portal API*](ptl-how-use-api.md).
 
 ## Next steps
 
@@ -211,8 +211,8 @@ This section provides a glossary of terms specific to the UKCloud Portal.
 
 **account**&nbsp;&nbsp;Within the UKCloud VMware environment there are two types of account:
 
-- **customer account** --- A collection of related compute services associated with a particular customer or partner.
-- **user account** --- The account you use to log in to the Portal or authenticate with the Portal API. Your user account determines which customer accounts you have access to. Each user account can be associated with multiple customer accounts.
+- **customer account** - A collection of related compute services associated with a particular customer or partner.
+- **user account** - The account you use to log in to the Portal or authenticate with the Portal API. Your user account determines which customer accounts you have access to. Each user account can be associated with multiple customer accounts.
 
 **compute service**&nbsp;&nbsp;An Enterprise Compute Cloud top-level container within a customer
 account that includes a vCloud Director organization and its VDCs, catalogues, users and resources.
