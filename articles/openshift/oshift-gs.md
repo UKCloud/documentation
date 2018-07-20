@@ -32,7 +32,7 @@ This guide is intended for developers who want to leverage the benefits of Docke
 
 IT projects are traditionally complex, requiring careful management of server hardware, storage, networking, operating systems, middleware, as well as development of the actual application. UKCloud for OpenShift removes complexity and enables you to focus on creating business value through development, testing and scaling of your applications.
 
-UKCloud deploys, scales and monitors the platform, which frees up your DevOps resource to focus on adding value further up the stack --- for example, in automated software testing or tuning autoscaling.
+UKCloud deploys, scales and monitors the platform, which frees up your DevOps resource to focus on adding value further up the stack - for example, in automated software testing or tuning autoscaling.
 
 ![PaaS overview](images/oshift-overview.png)
 
@@ -58,9 +58,7 @@ containers.
 
 ![OpenShift pods and containers](images/oshift-pods-containers.png)
 
-**OpenShift documentation:**
-[*Architecture*](https://docs.openshift.com/container-platform/3.5/architecture/index.html)
-and [*Container Security Guide*](https://docs.openshift.com/container-platform/3.5/security/index.html)
+**OpenShift documentation:** [*Architecture*](https://docs.openshift.com/container-platform/3.5/architecture/index.html) and [*Container Security Guide*](https://docs.openshift.com/container-platform/3.5/security/index.html)
 
 ## Before you begin
 
@@ -109,14 +107,11 @@ OpenShift Container Platform is designed for building and deploying applications
 
 Containers in OpenShift Container Platform are based on Docker-formatted container images. An image is a binary that includes all the requirements for running a single container, as well as metadata describing its needs and capabilities. Containers only have access to resources defined in the image unless you give the container additional access when creating it.
 
-**OpenShift documentation:** [*Creating images*](https://docs.openshift.com/container-platform/3.5/creating_images/index.html)
-and [*Using images*](https://docs.openshift.com/container-platform/3.5/using_images/index.html)
+**OpenShift documentation:** [*Creating images*](https://docs.openshift.com/container-platform/3.5/creating_images/index.html) and [*Using images*](https://docs.openshift.com/container-platform/3.5/using_images/index.html)
 
 ## Next steps
 
-In this Getting Started Guide, you've learned the basics about UKCloud for OpenShift. For more information, see the OpenShift documentation at:
-
-- [*OpenShift Container Platform 3.5 Documentation*](https://docs.openshift.com/container-platform/3.5/welcome/index.html)
+In this Getting Started Guide, you've learned the basics about UKCloud for OpenShift. For more information, see the OpenShift documentation at [*OpenShift Container Platform 3.5 Documentation*](https://docs.openshift.com/container-platform/3.5/welcome/index.html)
 
 ## Glossary
 
@@ -124,31 +119,23 @@ This section provides a glossary of terms specific to UKCloud for OpenShift.
 
 **cluster**&nbsp;&nbsp;One or more masters and a set of nodes.
 
-**container**&nbsp;&nbsp;A lightweight mechanism for isolating running processes so that they are
-limited to interacting with only their designated resources
+**container**&nbsp;&nbsp;A lightweight mechanism for isolating running processes so that they are limited to interacting with only their designated resources.
 
-**Docker**&nbsp;&nbsp;A software container platform for building and managing containerised
-applications.
+**Docker**&nbsp;&nbsp;A software container platform for building and managing containerised applications.
 
-**image**&nbsp;&nbsp;A binary that includes all of the requirements for running a single
-container, as well as metadata describing its needs and capabilities.
+**image**&nbsp;&nbsp;A binary that includes all of the requirements for running a single container, as well as metadata describing its needs and capabilities.
 
-**Kubernetes**&nbsp;&nbsp;Manages containerized applications across a set of containers or hosts
-and provides mechanisms for deployment, maintenance, and application-scaling.
+**Kubernetes**&nbsp;&nbsp;Manages containerized applications across a set of containers or hosts and provides mechanisms for deployment, maintenance, and application-scaling.
 
 **master server**&nbsp;&nbsp;The host or hosts that contain the master components, including the API server, controller manager server, and etcd. The master manages nodes in its Kubernetes cluster and schedules pods to run on nodes.
 
-**microservices**&nbsp;&nbsp;A method of developing an application as a collection of smaller
-independent services.
+**microservices**&nbsp;&nbsp;A method of developing an application as a collection of smaller independent services.
 
-**node**&nbsp;&nbsp;Provides the runtime environment for a container. Each node in a
-Kubernetes cluster has the required services to be managed by the master. Nodes also have the required services to run pods, including the Docker service, a kubelet, and a service proxy.
+**node**&nbsp;&nbsp;Provides the runtime environment for a container. Each node in a Kubernetes cluster has the required services to be managed by the master. Nodes also have the required services to run pods, including the Docker service, a kubelet, and a service proxy.
 
-**OpenShift**&nbsp;&nbsp;Red Hat's secure and comprehensive enterprise-grade container platform
-based on industry standards, Docker and Kubernetes.
+**OpenShift**&nbsp;&nbsp;Red Hat's secure and comprehensive enterprise-grade container platform based on industry standards, Docker and Kubernetes.
 
-**PaaS**&nbsp;&nbsp;Platform-as-a-Service. The capability provided to the consumer is to
-deploy onto the cloud infrastructure consumer-created or acquired applications created using programming languages, libraries, services, and tools supported by the provider. The consumer does not manage or control the underlying cloud infrastructure including network, servers, operating systems, or storage, but has control over the deployed applications and possibly configuration settings for the application-hosting environment.
+**PaaS**&nbsp;&nbsp;Platform-as-a-Service. The capability provided to the consumer is to deploy onto the cloud infrastructure consumer-created or acquired applications created using programming languages, libraries, services, and tools supported by the provider. The consumer does not manage or control the underlying cloud infrastructure including network, servers, operating systems, or storage, but has control over the deployed applications and possibly configuration settings for the application-hosting environment.
 
 **pod**&nbsp;&nbsp;A group of related containers placed onto the same host.
 
