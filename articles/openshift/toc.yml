@@ -1,4 +1,14 @@
+- name: FAQs
+  items:
+  - name: UKCloud for OpenShift FAQs
+    href: oshift-faq.md
 - name: Getting Started
   items:
   - name: UKCloud for OpenShift
     href: oshift-gs.md
+- name: How To
+  items:
+  - name: Monitor your OpenShift cluster
+    href: oshift-how-monitor-cluster.md
+  - name: Obtain usage metrics to use for OpenShift capacity management
+    href: oshift-how-obtain-usage-metrics.md

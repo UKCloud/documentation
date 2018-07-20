@@ -92,7 +92,7 @@
 <p>This guide is intended for developers who want to leverage the benefits of Docker and Kubernetes containerisation technologies as part of their development, continuous integration or continuous delivery cycles.</p>
 <h2 id="introduction-to-ukcloud-for-openshift">Introduction to UKCloud for OpenShift</h2>
 <p>IT projects are traditionally complex, requiring careful management of server hardware, storage, networking, operating systems, middleware, as well as development of the actual application. UKCloud for OpenShift removes complexity and enables you to focus on creating business value through development, testing and scaling of your applications.</p>
-<p>UKCloud deploys, scales and monitors the platform, which frees up your DevOps resource to focus on adding value further up the stack --- for example, in automated software testing or tuning autoscaling.</p>
+<p>UKCloud deploys, scales and monitors the platform, which frees up your DevOps resource to focus on adding value further up the stack - for example, in automated software testing or tuning autoscaling.</p>
 <p><img src="images/oshift-overview.png" alt="PaaS overview"></p>
 <p>You can use UKCloud for OpenShift to:</p>
 <ul>
@@ -114,9 +114,7 @@
 <p>UKCloud for OpenShift provides a full Red Hat OpenShift Container Platform that has been deployed by UKCloud and is ready to consume without delay. We deploy an OpenShift project in which you can run multiple pods, with each pod containing a group of related Docker
 containers.</p>
 <p><img src="images/oshift-pods-containers.png" alt="OpenShift pods and containers"></p>
-<p><strong>OpenShift documentation:</strong>
-<a href="https://docs.openshift.com/container-platform/3.5/architecture/index.html"><em>Architecture</em></a>
-and <a href="https://docs.openshift.com/container-platform/3.5/security/index.html"><em>Container Security Guide</em></a></p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/3.5/architecture/index.html"><em>Architecture</em></a> and <a href="https://docs.openshift.com/container-platform/3.5/security/index.html"><em>Container Security Guide</em></a></p>
 <h2 id="before-you-begin">Before you begin</h2>
 <p>To complete the steps in this guide, you must have access to an OpenShift environment, along with an internet-enabled device capable of running an HTML5 capable browser.</p>
 <p>As part of your onboarding, UKCloud will provide you with a URL and credentials to access your OpenShift environment.</p>
@@ -141,33 +139,21 @@ and <a href="https://docs.openshift.com/container-platform/3.5/cli_reference/ind
 <p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/3.5/dev_guide/index.html"><em>Developer Guide</em></a></p>
 <h2 id="creating-and-using-images">Creating and using images</h2>
 <p>Containers in OpenShift Container Platform are based on Docker-formatted container images. An image is a binary that includes all the requirements for running a single container, as well as metadata describing its needs and capabilities. Containers only have access to resources defined in the image unless you give the container additional access when creating it.</p>
-<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/3.5/creating_images/index.html"><em>Creating images</em></a>
-and <a href="https://docs.openshift.com/container-platform/3.5/using_images/index.html"><em>Using images</em></a></p>
+<p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/3.5/creating_images/index.html"><em>Creating images</em></a> and <a href="https://docs.openshift.com/container-platform/3.5/using_images/index.html"><em>Using images</em></a></p>
 <h2 id="next-steps">Next steps</h2>
-<p>In this Getting Started Guide, you've learned the basics about UKCloud for OpenShift. For more information, see the OpenShift documentation at:</p>
-<ul>
-<li><a href="https://docs.openshift.com/container-platform/3.5/welcome/index.html"><em>OpenShift Container Platform 3.5 Documentation</em></a></li>
-</ul>
+<p>In this Getting Started Guide, you've learned the basics about UKCloud for OpenShift. For more information, see the OpenShift documentation at <a href="https://docs.openshift.com/container-platform/3.5/welcome/index.html"><em>OpenShift Container Platform 3.5 Documentation</em></a></p>
 <h2 id="glossary">Glossary</h2>
 <p>This section provides a glossary of terms specific to UKCloud for OpenShift.</p>
 <p><strong>cluster</strong>  One or more masters and a set of nodes.</p>
-<p><strong>container</strong>  A lightweight mechanism for isolating running processes so that they are
-limited to interacting with only their designated resources</p>
-<p><strong>Docker</strong>  A software container platform for building and managing containerised
-applications.</p>
-<p><strong>image</strong>  A binary that includes all of the requirements for running a single
-container, as well as metadata describing its needs and capabilities.</p>
-<p><strong>Kubernetes</strong>  Manages containerized applications across a set of containers or hosts
-and provides mechanisms for deployment, maintenance, and application-scaling.</p>
+<p><strong>container</strong>  A lightweight mechanism for isolating running processes so that they are limited to interacting with only their designated resources.</p>
+<p><strong>Docker</strong>  A software container platform for building and managing containerised applications.</p>
+<p><strong>image</strong>  A binary that includes all of the requirements for running a single container, as well as metadata describing its needs and capabilities.</p>
+<p><strong>Kubernetes</strong>  Manages containerized applications across a set of containers or hosts and provides mechanisms for deployment, maintenance, and application-scaling.</p>
 <p><strong>master server</strong>  The host or hosts that contain the master components, including the API server, controller manager server, and etcd. The master manages nodes in its Kubernetes cluster and schedules pods to run on nodes.</p>
-<p><strong>microservices</strong>  A method of developing an application as a collection of smaller
-independent services.</p>
-<p><strong>node</strong>  Provides the runtime environment for a container. Each node in a
-Kubernetes cluster has the required services to be managed by the master. Nodes also have the required services to run pods, including the Docker service, a kubelet, and a service proxy.</p>
-<p><strong>OpenShift</strong>  Red Hat's secure and comprehensive enterprise-grade container platform
-based on industry standards, Docker and Kubernetes.</p>
-<p><strong>PaaS</strong>  Platform-as-a-Service. The capability provided to the consumer is to
-deploy onto the cloud infrastructure consumer-created or acquired applications created using programming languages, libraries, services, and tools supported by the provider. The consumer does not manage or control the underlying cloud infrastructure including network, servers, operating systems, or storage, but has control over the deployed applications and possibly configuration settings for the application-hosting environment.</p>
+<p><strong>microservices</strong>  A method of developing an application as a collection of smaller independent services.</p>
+<p><strong>node</strong>  Provides the runtime environment for a container. Each node in a Kubernetes cluster has the required services to be managed by the master. Nodes also have the required services to run pods, including the Docker service, a kubelet, and a service proxy.</p>
+<p><strong>OpenShift</strong>  Red Hat's secure and comprehensive enterprise-grade container platform based on industry standards, Docker and Kubernetes.</p>
+<p><strong>PaaS</strong>  Platform-as-a-Service. The capability provided to the consumer is to deploy onto the cloud infrastructure consumer-created or acquired applications created using programming languages, libraries, services, and tools supported by the provider. The consumer does not manage or control the underlying cloud infrastructure including network, servers, operating systems, or storage, but has control over the deployed applications and possibly configuration settings for the application-hosting environment.</p>
 <p><strong>pod</strong>  A group of related containers placed onto the same host.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>

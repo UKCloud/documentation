@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to monitor your OpenShift cluster | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to monitor your OpenShift cluster | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-monitor-your-openshift-cluster">How to monitor your OpenShift cluster</h1>
+
+<h2 id="overview">Overview</h2>
+<p>UKCloud for OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.</p>
+<p>This guide explains how you can set up a simple system to monitor an OpenShift cluster.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This guide assumes familiarity with the Linux command line, and with the <code>oc</code> command set to manage an OpenShift cluster.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>To complete the steps in this guide, you must have the <code>oc</code> command installed and have a suitable account on your OpenShift cluster. Specifically, it is assumed you know the authentication credentials that need to be supplied to <code>oc</code> login.</p>
+<h2 id="generating-an-authentication-token">Generating an authentication token</h2>
+<p>The first step is to create a service account within your OpenShift cluster that your monitoring system can use, and create an authentication token for it.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The token may have already been created, so it's worth checking first.</p>
+</div>
+<ol>
+<li><p>Log in to OpenShift on the command line:</p>
+<pre><code>oc login ...
+oc project openshift-infra
+</code></pre>
+</li>
+<li><p>Check if a monitoring account already exists:</p>
+<pre><code>oc get serviceaccount --all-namespaces | grep infra | \
+grep monitoring
+</code></pre>
+<p>If the account exists, the command above prints the name, and you can move on to <a href="#reading-the-authentication-token">Reading the authentication token</a>. If it prints nothing, you need to create the account as described in the remaining steps below.</p>
+</li>
+<li><p>Create the monitoring account if it does not exist:</p>
+<pre><code>oc create serviceaccount monitoring
+</code></pre>
+</li>
+<li><p>Add the role cluster-reader to the account:</p>
+<pre><code>oc adm policy add-cluster-role-to-user cluster-reader \
+system:serviceaccount:openshift-infra:monitoring
+</code></pre>
+</li>
+</ol>
+<h2 id="reading-the-authentication-token">Reading the authentication token</h2>
+<p>Next, you need to retrieve the authentication token that you created in the previous step.</p>
+<ol>
+<li><p>If you haven't already done so, ensure you are logged in to OpenShift and connected to the right project:</p>
+<pre><code>oc login ...
+oc project openshift-infra
+</code></pre>
+</li>
+<li><p>Find the name of the monitoring account's token IDs:</p>
+<pre><code>oc describe serviceaccount monitoring
+</code></pre>
+<p>This lists the IDs of one or more token names, for example, <code>monitoring-token-1abc2</code>.</p>
+</li>
+<li><p>Find the actual authentication token by querying the secret by the name given in the previous step, for example:</p>
+<pre><code>oc describe secret &lt;monitoring-token&gt;
+</code></pre>
+<p>Where <code>monitoring-token</code> is the token name you found in the previous step.</p>
+<p>This lists a few values, including the 179-character authentication token.</p>
+</li>
+</ol>
+<h2 id="using-the-authentication-token">Using the authentication token</h2>
+<p>The OpenShift API provides a way of determining the health of the cluster; the data required to do this is obtainable by requesting the API at <code>/api/vi/nodes</code>. You must supply the authentication token in the HTTP <code>Authorization</code> header.</p>
+<p>The following example shows how to query this data from a shell command using curl.</p>
+<pre><code>$ token=&quot;&lt;authentication_token&gt;&quot;
+$ endpoint= https://ocp.&lt;my-cluster-url&gt;.ukcloud.com:8443
+$ curl -k -H &quot;Authorization: Bearer ${token}&quot; \
+  -H 'Accept: application/json' ${endpoint}/api/v1/nodes
+</code></pre>
+<p>You'll need to customise the query above by providing the correct values for endpoint and token.</p>
+<p>This API call returns a reasonable amount of JSON-encoded data, which may be hard to parse using shell commands. It's also necessary to fetch items from various places within this data. The Python program in the following section shows you how to accomplish this.</p>
+<h2 id="using-the-openshift-api-to-obtain-cluster-status">Using the OpenShift API to obtain cluster status</h2>
+<p>The code example below uses the OpenShift API to obtain information about the health of the cluster, and prints a summary showing if each node is healthy.</p>
+<pre><code class="lang-python">#!/usr/bin/env python3
+import urllib.request
+import json
+import ssl
+
+def get_all_nodes(endpoint, token):
+    &quot;&quot;&quot;Fetch the nodes data from the openshift cluster&quot;&quot;&quot;
+    request = urllib.request.Request(endpoint + &quot;/api/v1/nodes&quot;)
+    request.add_header('Authorization', 'Bearer ' + token)
+    request.add_header('Accept', 'application/json')
+    ssl_context = None  # or ssl._create_unverified_context()
+    result = urllib.request.urlopen(request, context=ssl_context)
+    return result.read()
+
+def get_status_from_node(data_item):
+    &quot;&quot;&quot; Extract the status conditions from the data&quot;&quot;&quot;
+    addresses = data_item['status']['addresses']
+    address = None
+    for addr in addresses:
+        if addr['type'] == 'Hostname':
+            address = addr['address']
+    return {'hostname': address,
+            'conditions': data_item['status']['conditions']}
+
+def find_faults(cond_data):
+    &quot;&quot;&quot; find whether each node is in a failed state&quot;&quot;&quot;
+    cells = []
+    for node in cond_data:
+        hostname = node['hostname']
+        state = 'OK  '
+        for cond in node['conditions']:
+            if cond['status'] != &quot;False&quot; and cond['type'] != &quot;Ready&quot;:
+                state = 'FAIL'
+            elif cond['status'] != &quot;True&quot; and cond['type'] == &quot;Ready&quot;:
+                state = 'FAIL'
+        cells.append('{} {} '.format(state, hostname))
+    return cells
+
+def main():
+    all_nodes = json.loads(get_all_nodes(ENDPOINT, TOKEN))
+    all_conditions = []
+    for node in all_nodes['items']:
+        all_conditions.append(get_status_from_node(node))
+    print(&quot;Status of Cluster at {}&quot;.format(ENDPOINT))
+    for node in find_faults(all_conditions):
+        print(node)
+
+ENDPOINT = 'https://ocp.my-cluster-url.ukcloud.com:8443'
+TOKEN = 'eyJhb...the.179.char.token'
+main()
+</code></pre>
+<blockquote>
+<p>[!TIP] If you encounter problems copying and pasting the source code above, we also provide the code in the following blog post:</p>
+</blockquote>
+<p><a href="https://ukcloud.com/news-resources/news/blog/simple-openshift-monitoring">https://ukcloud.com/news-resources/news/blog/simple-openshift-monitoring</a></p>
+<h2 id="next-steps">Next steps</h2>
+<p>For more information about UKCloud for OpenShift service, see:</p>
+<ul>
+<li><a href="oshift-gs.html"><em>Getting Started Guide for UKCloud for OpenShift</em></a></li>
+<li><a href="oshift-faq.html"><em>UKCloud for OpenShift FAQs</em></a></li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-monitor-cluster.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>

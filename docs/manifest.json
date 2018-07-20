@@ -1533,6 +1533,61 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-adm-top.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-adm-top.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-architecture.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-architecture.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-desc-node.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-desc-node.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-get-nodes.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-get-nodes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-get-pv.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-get-pv.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openshift/images/oshift-overview.png",
       "output": {
         "resource": {
@@ -1555,11 +1610,50 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-faq.html",
+          "hash": "d8HUTda2Kel4Zk/2QuQIgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-gs.html",
-          "hash": "o6/l15GzgmAdtWywCxKE9w=="
+          "hash": "PUpbloi4WPLLYPk5Rx/INA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "invalid-note-section"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-how-monitor-cluster.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-how-monitor-cluster.html",
+          "hash": "DGRCEjhtuCP8pp5UGC06yA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-how-obtain-usage-metrics.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-how-obtain-usage-metrics.html",
+          "hash": "/5j4yL7mRkEhAgTnESmJSg=="
         }
       },
       "is_incremental": false,
@@ -1571,7 +1665,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "OjNoOCwWHYs63bww662/XA=="
+          "hash": "tA0ETSa/gpf1ie9bcHnL+A=="
         }
       },
       "is_incremental": false,
@@ -8580,13 +8674,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }

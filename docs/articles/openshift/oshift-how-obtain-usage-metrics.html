@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to obtain usage metrics to use for OpenShift capacity management | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to obtain usage metrics to use for OpenShift capacity management | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-obtain-usage-metrics-to-use-for-openshift-capacity-management">How to obtain usage metrics to use for OpenShift capacity management</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This article provides examples of the self-service commands you can execute against your UKCloud for OpenShift cluster to gain usage metrics and statistics to help manage your ongoing capacity requirements.</p>
+<p>A UKCloud deployed OpenShift cluster comprises a single Starter Pack, plus a number of Runtime Packs as required by your workload demands.</p>
+<ul>
+<li><p><strong>Starter Pack</strong> - Provides the foundation OpenShift services to support the orchestration and management of the container runtime environments, along with additional infrastructure nodes to support services such as log aggregation and metric collection.</p>
+<p>Each customer environment requires only a single Starter Pack.</p>
+</li>
+<li><p><strong>Runtime Pack</strong> - Nodes on which your containerised applications and services run. You have the choice of difference size Runtime Packs.</p>
+<p>You can call off Runtime Packs individually, however, we strongly recommend the initial deployment of two or more Runtime Packs for production environments to provide resilience to your workloads in the event of the failure of a single Runtime Pack.</p>
+<p>To add or remove Runtime Packs, raise a Service Request via the UKCloud Portal.</p>
+</li>
+</ul>
+<p>The sections in this guide, show you how to obtain various statistics about the platform, including:</p>
+<ul>
+<li>Overall status of each node in the cluster</li>
+<li>Uptime per node</li>
+<li>CPU usage</li>
+<li>Memory usage</li>
+<li>Block storage consumption (used by persistent volumes)</li>
+<li>Object storage consumption (used by the registry)</li>
+</ul>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide you must have access to and a working knowledge of <code>oc</code>, the OpenStack command-line client (CLI). For more information, see OpenShift's <a href="https://docs.openshift.com/container-platform/3.7/cli_reference/get_started_cli.html"><em>Get Started with the CLI</em></a>.</p>
+<h2 id="identifying-capacity-statistics">Identifying capacity statistics</h2>
+<p>The OpenStack CLI provides the ability to list the nodes in your cluster and then retrieve status information about a specific node. You can use this information to determine if the nodes in your cluster have enough available disk space and memory.</p>
+<ol>
+<li><p>To obtain the list of nodes that make up the OpenStack cluster, enter the following command:</p>
+<pre><code>oc get nodes
+</code></pre>
+</li>
+<li><p>The results show you the overall readiness of each node and how long they've been running. For example:</p>
+<p><img src="images/oshift-get-nodes.png" alt="Results of oc get nodes command"></p>
+</li>
+<li><p>To find the detailed status of a node, enter the following command:</p>
+<pre><code>oc describe node &lt;nodename&gt;
+</code></pre>
+</li>
+<li><p>The results show a large amount of information about disk status (pressure and out-of-disk), memory pressure and usage, CPU usage and resource consumption from any running pods. For example:</p>
+<p><img src="images/oshift-desc-node.png" alt="Results of oc describe node command"></p>
+</li>
+<li><p>You can also obtain some of the above information via the REST API, by using something like:</p>
+<pre><code>curl -H &quot;Authorization: Bearer $token&quot; -H 'Accept: application/json' https://ocp.\$clustername:8443/api/v1/nodes
+</code></pre>
+</li>
+</ol>
+<p>For more information about accessing this data, see <a href="oshift-how-monitor-cluster.html"><em>How to monitor your OpenShift cluster</em></a>.</p>
+<h2 id="identifying-block-storage-consumption">Identifying block storage consumption</h2>
+<p>For capacity management, it's also useful to know much block storage your cluster is using.</p>
+<ol>
+<li><p>To obtain block storage consumption (persistent volumes) information, enter the following command:</p>
+<pre><code>oc get pv
+</code></pre>
+</li>
+<li><p>The results will look similar to the following, where we can see there is one item consuming 50 GB of storage.</p>
+<p><img src="images/oshift-get-pv.png" alt="Results of oc get pv command"></p>
+</li>
+</ol>
+<h2 id="identifying-object-storage-consumption">Identifying object storage consumption</h2>
+<p>Object storage is used only for the OpenShift registry, therefore, you can calculate how much object storage your cluster is using by adding up the resources in the registry.</p>
+<ol>
+<li><p>To obtain information about resources in the registry, enter the following two commands:</p>
+<pre><code>oc adm top imagestreams
+oc adm top images
+</code></pre>
+</li>
+<li><p>The output from these commands will look something like the following:</p>
+<p><img src="images/oshift-adm-top.png" alt="Results of oc adm top commands"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For the <code>oc adm top</code> command to work, Hawkular must be running in your cluster. This command can also report on nodes and pods.</p>
+</div>
+</li>
+<li><p>The appendix at the end of this guide provides some sample Python code to sum the sizes of resources from these two <code>oc adm top</code> commands.</p>
+</li>
+</ol>
+<h2 id="other-monitoring-options">Other monitoring options</h2>
+<p>You can find a simple example of a custom monitoring application, using the REST API described above, in <a href="oshift-how-monitor-cluster.html"><em>How to monitor your OpenShift cluster</em></a> and as a <a href="https://ukcloud.com/news-resources/news/blog/simple-openshift-monitoring">UKCloud blog post</a>.</p>
+<p>You can also perform monitoring using Hawkular, which is built into the product. You can access Hawkular from the browser-based console at:</p>
+<p><code>https://ocp.&lt;your-deployment-name&gt;.cna.ukcloud.com:8443</code></p>
+<p>Or directly at:</p>
+<p><code>https://hawkular-metrics.&lt;your-deployment-name&gt;.cna.ukcloud.com/hawkular/metrics</code></p>
+<h2 id="next-steps">Next steps</h2>
+<p>Further cluster capacity management options are discussed at:</p>
+<p><a href="https://blog.openshift.com/full-cluster-capacity-management-monitoring-openshift">https://blog.openshift.com/full-cluster-capacity-management-monitoring-openshift</a></p>
+<h2 id="appendix---example-code-for-adding-up-storage-contents">Appendix - Example code for adding up storage contents</h2>
+<p>You can use the following code to add up the values from <code>oc adm top</code>.</p>
+<pre><code class="lang-python">#!/usr/bin/env python3
+
+&quot;&quot;&quot;
+Add up storage values.
+
+oc adm top imagestreams gives us storage usage for each storage use for each imagestream, and oc adm top images gives us the same for images
+
+Storage is suffixed with 'MiB' or 'GiB', so each value needs converting to a number before we can add them up.
+
+Output from oc adm top is tabulated, so input-processing is needed.
+&quot;&quot;&quot;
+
+import re
+import subprocess
+import sys
+
+VERBOSE = False
+
+def add_sizes(command_output, size_column):
+    sum_sizes = 0
+    for row in command_output.split(&quot;\n&quot;):
+        if row == '' or re.match('NAME\t+', row):
+            continue
+        values = re.split('\t+', row)
+        storage = values[size_column]
+
+        if 'MiB' in storage:
+            multiplier = 1
+        elif 'GiB' in storage:
+            multiplier = 1024
+        else:
+            print(&quot;ERROR: Found unexpected storage size {}&quot;.format(storage))
+            sys.exit(1)
+
+        mtch = re.match('([\d.]+)[MG]iB$', storage)
+        if mtch:
+            size = float(mtch.group(1)) * multiplier
+            sum_sizes += size
+            if VERBOSE:
+                print(&quot;{}\t{} &quot;.format(storage, size))
+            else:
+                print(&quot;Did not match -- {}&quot;.format(storage))
+    return sum_sizes
+
+output = subprocess.run(['oc', 'adm', 'top', 'imagestreams'],
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE) 
+imagestream_size = add_sizes(output.stdout.decode('utf-8'), 1)
+</code></pre>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-obtain-usage-metrics.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>
