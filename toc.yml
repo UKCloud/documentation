@@ -16,9 +16,31 @@
 - name: More
   nav_dropdown: true
   items:
+  - name: Cloud Storage
+    topicHref: articles/cloud-storage/cs-gs.md
+  - name: Cloud GPU
+    topicHref: articles/gpu/gpu-faq.md
+  - name: High Performance Compute
+    topicHref: articles/hpc/hpc-ref-overview.md
   - name: Cross Domain Security Zone
     topicHref: articles/cdsz/cdsz-gs-walled-garden.md
-  - name: Private Cloud - Storage
-    topicHref: articles/cloud-storage/cs-gs.md
+  - name: Secure Remote Access
+    topicHref: articles/sra/sra-gs.md
+  - name: Email and Collaboration 
+    topicHref: articles/email/email-gs.md
+  - name: Disaster Recovery as a Service
+    topicHref: articles/draas/draas-gs.md
+  - name: Migration to the Cloud 
+    topicHref: articles/migration/migr-how-zerto-migrate-to-ukcloud.md
+  - name: Private Cloud for Compute
+    topicHref: articles/private-cloud/prc-faq.md
+  - name: Private Cloud for Storage
+    topicHref: articles/private-storage/prs-faq.md
+  - name: Connectivity 
+    topicHref: articles/connectivity/conn-faq.md
+  - name: Cloud Enablement
+    topicHref: articles/enablement/enbl-ref-services.md
   - name: UKCloud Portal
     topicHref: articles/portal/ptl-gs.md
+  - name: Other
+    topicHref: articles/other/other-ref-services-by-region.md
