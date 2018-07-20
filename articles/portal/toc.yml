@@ -10,8 +10,11 @@
     href: ptl-how-use-api.md
 - name: Reference
   items:
-  - name: 
+  - name: An overview of Portal permissions
     href: ptl-overview-permissions.md
-    items:
-      name: 
-      href: ptl-overview-permissions.md
+  - name: API Reference Guide
+    href: ptl-ref-portal-api.md
+  - name: Portal release notes
+    href: ptl-ref-release-notes.md
+  - name: Portal user access
+    href: ptl-ref-user-access.md
