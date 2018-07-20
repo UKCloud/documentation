@@ -1,0 +1,216 @@
+---
+title: How to migrate from N3 to HSCN | UKCloud Ltd
+description: This article describes UKCloud's migration strategy for HSCN
+services: migration
+author: Dan Baker
+toc_rootlink: How To
+toc_sub1: 
+toc_sub2:
+toc_sub3:
+toc_sub4:
+toc_title: Migrate from N3 to HSCN
+toc_fullpath: How To/conn-how-migrate-n3-hscn.md
+toc_mdlink: conn-how-migrate-n3-hscn.md
+---
+
+# How to migrate from N3 to HSCN
+
+## Overview
+
+As of March 2019, NHS Digital will be decommissioning the N3 network, replacing it with the new Health and Social Care Network (HSCN). As a result, UKCloud will be decommissioning our N3 connectivity in January 2019 and users of the N3 network on our platform must migrate their workloads to the HSCN network by then. The two networks (N3 and HSCN) will run in parallel to enable all our customers to migrate off the N3 network.
+
+Our migration strategy from N3 to HSCN will migrate all the services in a single VDC/project at the same time. An alternative option enables you to migrate individual workloads one at a time, but this will require considerably more configuration on your side.
+
+Traffic can traverse the N3 and HSCN networks, so any services on N3 will be able to access HSCN and vice versa.
+
+## UKCloud changes
+
+With the migration to HSCN, there are a few changes to the way UKCloud will present the HSCN network to our customers.
+
+Unlike existing N3 connections for VMware in regions 1 and 2, HSCN addresses will be presented directly down to your VMware edges. This enables you to have more visibility and control over the your assigned HSCN IP addresses. The addresses will be visible on your edges within vCloud, and you'll be able to create your own NAT and firewall rules against these addresses. For VMware and OpenStack customers in Regions 5 and 6, HSCN addresses will be presented to your edges in the same way as your existing N3 connectivity.
+
+Your allocated HSCN addresses for the HSCN network will be different from those you used on the N3 network. If you've previously purchased your own N3 addresses and brought them onto the UKCloud platform, raise a service request via the UKCloud Portal to discuss this further.
+
+## VMware migration plan
+
+The following information outlines the migration process set by UKCloud to facilitate moving your VMware services from N3 to HSCN.
+
+### Migration overview
+
+When you request a migration, UKCloud will deploy an HSCN edge gateway into your N3 connected VDCs. The required number of HSCN IP addresses will be assigned to this edge. You can then perform testing over the HSCN network in preparation for your migration. When you've completed your testing, you have the following two options:
+
+- **Option 1:** UKCloud will remove the HSCN test edge and then apply the HSCN interface to the existing N3 edge, with the HSCN IPs you were assigned during testing
+
+    or
+
+- **Option 2:** You retain the HSCN edge you used for testing and connect all of your N3 VMs to it
+
+You can create a VM free of charge for testing HSCN connectivity for one month from the date you were provided with the HSCN edge. You can continue testing for longer than a month, however you'll be charged for the VM after the initial month. You should inform UKCloud of the VMs used for HSCN connectivity so that these can be excluded from billing.
+
+While both options do require you to make changes in your configuration yourself, Option 1 is the easier method of migration. See the instructions below for more details.
+
+#### Option 1: Add an HSCN interface to the existing N3 edge
+
+If you choose this option, UKCloud will add an HSCN interface to your existing N3 edge and assign the same HSCN IP addresses you've been using as part of your testing. The newly built HSCN edge will be removed from the VDC prior to this to allow for the IP addresses to be added to the N3 edge. At the time of migration, UKCloud will change the default gateway of the edge to route via the HSCN interface rather than the N3 interface.
+
+##### Adding an HSCN interface: UKCloud actions
+
+1. When you confirm that you're ready to begin testing HSCN connectivity in preparation for your migration, UKCloud will deploy an HSCN edge gateway into the N3-connected VDC.
+
+2. When you confirm that your testing is complete, UKCloud will delete the new HSCN edge and add an HSCN interface to the existing N3 edge.The HSCN IP addresses used for testing will be moved to the old N3 edge.
+
+3. At the time of migration, UKCloud will change the default gateway of the edge to route via the HSCN interface.
+
+4. When you confirm that your new services are successfully working on HSCN, UKCloud will then remove the N3 interface from the edge and update any references of N3 to HSCN, for example, edge names. You'll then stop being billed for N3 connectivity.
+
+##### Adding an HSCN interface: Customer actions
+
+1. When you're ready to begin testing on the HSCN network, log a service request with UKCloud to deploy an HSCN Edge into your environment.
+
+2. Create an Org VDC network and connect any required VMs to perform testing.
+
+    > [!IMPORTANT]
+    > UKCloud highly recommends creating new vApps and VMs for HSCN testing purposes. When removing the HSCN edge after testing has been completed, any vApps that have been connected to the HSCN edge will need to be powered off for the edge to successfully be deleted.
+
+3. Perform any required testing to ensure that after the migration, all services will work successfully over HSCN rather than N3.
+
+4. When you've completed your testing and UKCloud have added the HSCN interface to the N3 edge, you'll need to add new HSCN NAT and firewall rules to the N3 edge (in a DISABLED state, so that the running N3 service is not affected). You may also need to amend operating system firewalls.
+
+    > [!IMPORTANT]
+    > Due to less traffic restrictions being blocked by UKCloud on the HSCN network, it is your responsibility to block or permit traffic on your edge firewalls.
+
+5. At the time of migration, you should disable any NAT or firewall rules that are no longer required and enable the newly created HSCN NAT and firewall rules.
+
+6. UKCloud will change the default gateway of the edge and you should perform further testing to ensure that your services are working successfully post migration on the HSCN network.
+
+#### Option 2: A new HSCN edge
+
+You can continue to use the HSCN edge that UKCloud deploys into your N3-connected VDCs for testing to connect your VMs to the HSCN network. This option requires you to perform a considerable amount of reconfiguration.
+
+##### New HSCN edge: UKCloud actions
+
+1. When you confirm that you're ready to begin testing HSCN connectivity in preparation for your migration, UKCloud will deploy an HSCN edge gateway into the N3-connected VDC.
+
+##### New HSCN edge: Customer actions
+
+1. When you're ready to begin testing on the HSCN network, log a service request with UKCloud to deploy an HSCN Edge into your environment.
+
+2. Create an Org VDC network connected the HSCN edge and connect any VMs to perform testing to ensure that after the migration, all services will work successfully over HSCN rather than N3.
+
+    > [!IMPORTANT]
+    > UKCloud highly recommends creating new vApps and VMs for HSCN testing purposes.
+
+3. When you've completed your testing, connect the required VMs to the HSCN Org VDC network. This will require adding additional NICs to each of the VMs. You'll also need to amend the routing table on each of the VMs to route any N3 and HSCN traffic out of the HSCN interface.
+
+4. Apply any required firewall and NAT rules on the HSCN edge, and amend any operating system firewalls.
+
+5. Inform UKCloud that the migration is complete. UKCloud will then remove N3 access from the environment and stop any billing for N3 connectivity.
+
+### OpenStack migration plan
+
+UKCloud will give you access to an HSCN network in your OpenStack project and assign you the same number of HSCN addresses as you have on N3.
+
+#### OpenStack migration plan: UKCloud actions
+
+UKCloud will perform these required tasks prior to the migration. These tasks will not cause any disruption to your existing service.
+
+1. UKCloud will add the HSCN network to your OpenStack project.
+
+2. UKCloud will allocate you the same number of HSCN addresses as you have on N3 (addresses will be pre-allocated).
+
+#### OpenStack migration plan: Customer actions
+
+1. Examine all security groups to ensure that they'll only permit the required access via the HSCN networks.
+
+2. Add an HSCN router, connect it to the correct networks (for example, the same networks that have a connection to the N3 router) and add any required routes to the new HSCN router (equivalent to the existing N3 router).
+
+3. To test HSCN, add a new network connected to the HSCN router and build an instance on that network containing the tools and applications that can be used to confirm the connectivity requirements for your production platform.
+
+    > [!IMPORTANT]
+    >  UKCloud highly recommends creating new instances for HSCN testing purposes.
+
+4. When the migration is due to start, perform the following for each instance:
+
+    - Add an HSCN address to the instance as a floating IP (only for instances that currently have a N3 floating IP).
+
+    - When appropriate, remove the N3 floating IP from the instance.
+
+    - When appropriate, change the default gateway in each instance to point to the HSCN router rather than the N3 router.
+
+    - When the migration is completed, disconnect the old N3 router from all networks and edit the subnets for all the networks such that the HSCN router is used as default gateway for new instances.
+
+5. When you've confirmed functionality on HSCN, disconnect the old N3 router from all networks and delete the N3 router.
+
+6. Inform UKCloud that the migration is complete. UKCloud will then remove N3 access from the project and stop any billing for N3 connectivity.
+
+### HSCN firewall implementation
+
+UKCloud will be replacing the existing N3 firewalls with new next generation firewall devices for the HSCN network. UKCloud will not be blocking any ports but will have IDS, IPS and malware detection running across all ports as directed by NHS Digital. If you encounter any issues with legitimate packets being dropped or blocked, raise a service request so we can investigate, and if needed, update the next generation firewall rules.
+
+> [!NOTE]
+> You should ensure that your firewall rules are suitable for controlling all traffic traversing them, and should not rely on UKCloud to control traffic to your environments.
+
+### Additional changes
+
+The above steps are changes that need to be made to be able to connect your VMs to the HSCN network. You may also need to perform additional steps to migrate your services to the HSCN network including DNS changes and any changes at an application level. As UKCloud does not have visibility at this level, it is your responsibility to identify any additional steps required. UKCloud can help as and where required if the request is within scope of our service.
+
+### NHS Digital guidance on DNS changes
+
+To request a DNS change, email <dnsteam@nhs.net> with following information:
+
+- Domains that you want to change
+
+- Old IP address(es)
+
+- New IP address(es)
+
+- Date and time of change
+
+We recommend giving NHS Digital a couple of days lead time as there may be scheduling issues, though these can be waived in emergencies.
+
+> [!NOTE]
+> IP changes are NOT instantaneous and may take some time to propagate fully. NHS Digital can do out-of-hours changes for NHS customers.
+
+### UKCloud services
+
+UKCloud's public services are currently presented on N3 but will also be migrated onto HSCN.
+
+> [!NOTE]
+> We'll issue a Portal notification when these services will be migrated. You'll need to amend your firewall rules and host files so you can continue to reach these services when we've migrated these services to HSCN. Do not change these details until after we notify you via the Portal.
+
+Service | URL | N3 | HSCN
+--------|-----|----|-----
+ UKCloud Portal | portal.skyscapecloud.com |10.218.237.65 | 10.200.40.1
+ vCloud Director | vcd.portal.skyscapecloud.com | 10.218.237.121 | 10.200.40.2
+ vCloud API | api.vcd.portal.skyscapecloud.com | 10.218.237.121 | 10.200.40.2
+ vCloud VM Console | console.vcd.portal.skyscapecloud.com | 10.218.237.122 | 10.200.40.3
+ Service Status | status.skyscapecloud.com | 10.218.237.123 | 10.200.40.4
+ Farnborough NTP Server | N/A | 10.218.237.124 | 10.200.40.5
+ Corsham NTP Server | N/A | 10.219.149.253 | 10.200.41.1
+ KMS | kms.ukcloud.com | 10.218.237.64 | 10.200.40.8
+ Farnborough WSUS | N/A | 10.218.237.125 | 10.200.40.6
+ Corsham WSUS | N/A | 10.219.149.254 | 10.200.41.2
+ Red Hat Update Infrastructure | rhua.ukcloud.com | 10.218.237.126 | 10.200.40.7
+
+### Cloud Storage
+
+Cloud Storage will continue to be accessible over N3 but will also be presented to HSCN.
+
+When you've migrated to HSCN, you should consider using the HSCN-facing Cloud Storage when possible, as this will improve communication between your VMs and Cloud Storage.
+
+You'll need to update your firewall and host file records to continue to use this service.
+
+Service | URL | N3 | HSCN 
+--------|-----|----|---------
+Regions 1&6 Cloud Storage | cas.frn00006.ukcloud.thirdparty.nhs.uk | 10.207.196.42 | 10.200.82.2
+Regions 2&5 Cloud Storage | cas.cor00005.ukcloud.thirdparty.nhs.uk | 10.207.197.66 | 10.200.83.2
+
+Raise a service request when you want to move to using HSCN Cloud Storage so we can help you make sure your migration is successful, and to ensure we remove the N3 connectivity so you are no longer billed for it.
+
+### Next steps
+
+For more information about HSCN, see the [*HSCN connectivity FAQs*](conn-faq-hscn.md).
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <feedback@ukcloud.com>.

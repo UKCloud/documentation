@@ -13,7 +13,7 @@ toc_fullpath: FAQs/conn-faq.md
 toc_mdlink: conn-faq.md
 ---
 
-# General connectivity
+# General connectivity FAQs
 
 ## What options do I have to connect to my solution hosted on the UKCloud Assured OFFICIAL (previously PGA IL2) cloud platform?
 
