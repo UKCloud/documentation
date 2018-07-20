@@ -166,7 +166,7 @@ def add_sizes(command_output, size_column):
                 print("{}\t{} ".format(storage, size))
             else:
                 print("Did not match -- {}".format(storage))
-    return sum\_sizes
+    return sum_sizes
 
 output = subprocess.run(['oc', 'adm', 'top', 'imagestreams'],
                         stdout=subprocess.PIPE,
