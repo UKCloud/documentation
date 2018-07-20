@@ -44,7 +44,7 @@ will depend on the level of permissions you have.
 
 1. Log in to the UKCloud Portal.
 
-    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/0435318d-a94b-41bb-a4ff-a52adbe863e5).
+    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md).
 
 2. In the Portal navigation panel, expand the **Support** option and select **My Calls**.
 
@@ -75,7 +75,7 @@ If you're experiencing a fault or outage with your service, raise an incident re
 
     ![Reporting a fault/outage](images/ptl-my-calls-incident.png)
 
-3. From the **Select Product** list, select the UKCloud service or product with which you want to raise the ticket, for example **Enterprise Compute Cloud (VMware)** or **Snapshot Protection**.
+3. From the **Select Product** list, select the UKCloud service or product with which you want to raise the ticket, for example **VMware Cloud** or **Snapshot Protection**.
 
 4. In the remaining fields, provide as much information as you can to enable our support team to resolve the incident as quickly and effectively as possible.
 
@@ -93,7 +93,7 @@ If you want to request a new service, make changes to an existing service or req
 
     ![Raising a service request](images/ptl-my-calls-request.png)
 
-3. From the **Select Product** list, select the UKCloud service or product for which you want to raise the ticket, for example **Enterprise Compute Cloud (VMware)** or **Journaling Protection (Powered by Zerto)**.
+3. From the **Select Product** list, select the UKCloud service or product for which you want to raise the ticket, for example **VMware Cloud** or **Journaling Protection (Powered by Zerto)**.
 
 4. From the **What is the nature of your query?** list select the option that best matches your request. The options in this list are dependent on the selected service or product.
 
@@ -135,11 +135,8 @@ After raising a support ticket, you can view the ticket to monitor progress, add
 
 ## Next steps
 
-For more information about what you can do in the UKCloud Portal, see
-the [*Getting Started Guide for the UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/0435318d-a94b-41bb-a4ff-a52adbe863e5).
+For more information about what you can do in the UKCloud Portal, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md).
 
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
-
-&copy; [UKCloud Ltd](http://ukcloud.com), 2018. All Rights Reserved.

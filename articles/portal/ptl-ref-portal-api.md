@@ -27,7 +27,7 @@ The entry point URL for the Portal API is:
 
 `https://portal.skyscapecloud.com/api`
 
-For information and examples about how to use the Portal API, see [*How to use the UKCloud Portal API*](../portal/ptl-how-use-api.md).
+For information and examples about how to use the Portal API, see [*How to use the UKCloud Portal API*](ptl-how-use-api.md).
 
 ## Response HTTP status codes
 
@@ -236,7 +236,7 @@ None
 #### Example request (Curl)
 
 ```
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my\_calls?for=user
+curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls?for=user
 ```
 
 #### Example request (Ruby)

@@ -22,12 +22,12 @@ The UKCloud Portal API enables you to interact programmatically with your UKClou
 
 This guide shows you how to use the API by providing a worked example that steps through the process of creating a new virtual data centre (VDC).
 
-For more information about any of the API endpoints used in this guide, see the [*UKCloud Portal API User Guide*](https://portal.ukcloud.com/support/knowledge_centre/c931089a-009b-4fe3-af8e-36ba75cb1c76).
+For more information about any of the API endpoints used in this guide, see the [*UKCloud Portal API User Guide*](ptl-ref-portal-api.md).
 
 ## About the examples in this guide
 
 The examples in this guide use endpoints that are available only in regions 5 and 6 of the UKCloud platform. If your environment is in a different region, you won't be able to use these endpoints yourself, however you should still find the guide useful as a reference for how to
-use the Portal API. For more information about UKCloud regions, see the [*Understanding sites, regions and zones Quick Ref Guide*](https://portal.skyscapecloud.com/support/knowledge_centre/b92d5e0d-05f0-45b2-9aad-ac133f424839).
+use the Portal API. For more information about UKCloud regions, see [*Understanding sites, regions and zones*](../other/other-ref-sites-regions-zones.md).
 
 The examples in this guide are shown as curl commands, but you may find it easier to work with the API by installing a REST client (for example, Insomnia).
 
@@ -404,13 +404,10 @@ Now that you have your VDC URN, you can use the Portal API to create your edge g
 
 ## Next steps
 
-For more information about any of the API endpoints used in this guide,
-see the [*UKCloud Portal API User Guide*](https://portal.ukcloud.com/support/knowledge_centre/c931089a-009b-4fe3-af8e-36ba75cb1c76).
+For more information about any of the API endpoints used in this guide, see the [*UKCloud Portal API User Guide*](ptl-ref-portal-api.md).
 
 If you need any further assistance, contact our support team via the My Calls area of the UKCloud Portal.
 
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
-
-&copy; [UKCloud Ltd](http://ukcloud.com), 2018. All Rights Reserved.
