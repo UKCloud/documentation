@@ -309,7 +309,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 </tbody>
 </table>
 <h4 id="example-request-curl-2">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my\_calls?for=user
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls?for=user
 </code></pre>
 <h4 id="example-request-ruby-2">Example request (Ruby)</h4>
 <pre><code>resp = conn.get('/api/my_calls') { |req| req.headers['cookie'] = cookies }

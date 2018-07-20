@@ -3367,12 +3367,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "OHVFOGyuHCUA0FQv4xzzyg=="
+          "hash": "Rm35Ogewdr/gW2iTJhEp7g=="
         }
       },
       "is_incremental": false,
@@ -3391,12 +3394,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-use-api.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-api.html",
-          "hash": "V9+1wmX7Ms5te60YphF9mA=="
+          "hash": "AZXMPYrkMEA7DrD4Ru14uw=="
         }
       },
       "is_incremental": false,
@@ -3411,7 +3417,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-my-calls.html",
-          "hash": "E5CG0HYLylmrZ0Y6wx1Txg=="
+          "hash": "K1qeU6Sz3/DfaUmxRTYIKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-how-view-login-info.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-how-view-login-info.html",
+          "hash": "zozW4x4V6W7IWo1dkxD9Dg=="
         }
       },
       "is_incremental": false,
@@ -3426,7 +3444,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-overview-permissions.html",
-          "hash": "Obm3KvJc9+xVS5rA7SARPw=="
+          "hash": "h5kkjho2I8D54YkDT9i5iw=="
         }
       },
       "is_incremental": false,
@@ -3441,7 +3459,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-portal-api.html",
-          "hash": "AlfMZJFEPks5L7pzzJC+sg=="
+          "hash": "1xEPOii9zGPyVQvjCt3TBQ=="
         }
       },
       "is_incremental": false,
@@ -3449,11 +3467,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/portal/ptl-ref-portal-release-notes.md",
+      "source_relative_path": "articles/portal/ptl-ref-release-notes.md",
       "output": {
         ".html": {
-          "relative_path": "articles/portal/ptl-ref-portal-release-notes.html",
-          "hash": "Yl/3ndFFJ+t1rUaZSSeHKg=="
+          "relative_path": "articles/portal/ptl-ref-release-notes.html",
+          "hash": "LETKu4hO+nrrogxvpxh3cQ=="
         }
       },
       "is_incremental": false,
@@ -3472,15 +3490,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/portal/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "uU4BTd8D2922NYXyCU8Drw=="
+          "hash": "IRfJIecBDTuRP7oqIvJCUQ=="
         }
       },
       "is_incremental": false,
@@ -8762,6 +8777,11 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -8769,11 +8789,6 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
