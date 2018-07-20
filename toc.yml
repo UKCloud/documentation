@@ -33,7 +33,11 @@
   - name: Migration to the Cloud 
     topicHref: articles/migration/migr-how-zerto-migrate-to-ukcloud.md
   - name: Private Cloud for Compute
+<<<<<<< HEAD
     topicHref: articles/private-cloud/prc-faq.md
+=======
+    topicHref: articles/private-compute/prc-faq.md
+>>>>>>> 6b51e87af88f4549d38a167712a864d63c42f392
   - name: Private Cloud for Storage
     topicHref: articles/private-storage/prs-faq.md
   - name: Connectivity 

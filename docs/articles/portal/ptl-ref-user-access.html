@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to build an edge gateway using the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Portal user access | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to build an edge gateway using the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="Portal user access | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,73 +82,42 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-build-an-edge-gateway-using-the-ukcloud-portal">How to build an edge gateway using the UKCloud Portal</h1>
+<h1 id="portal-user-access">Portal user access</h1>
 
-<h2 id="overview">Overview</h2>
-<p>To enable your end users to access your VDC, you need to create an edge gateway to provide connectivity. The UKCloud Portal provides the ability to build an edge gateway, without having to raise a service request.</p>
-<p>You can also create edge gateways using the
-Portal API. For more information, see the <a href="../portal/ptl-ref-portal-api.html"><em>UKCloud Portal API User Guide</em></a>.</p>
-<h3 id="intended-audience">Intended audience</h3>
-<p>To complete the steps in this guide, you must be a vCloud Director administrator.</p>
-<h2 id="building-an-edge-gateway">Building an edge gateway</h2>
-<p>If your VDC is located on the Assured OFFICIAL security domain, its edge gateway provides access to the internet. If your VDC is located on the Elevated OFFICIAL security domain, its edge gateway provides access to your other VDCs in the Elevated OFFICIAL domain.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>You can build edge gateways in any of your compute services in regions 5 or 6, not just those you created using the Portal. For information about building compute services and VDCs, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
-</div>
-<ol>
-<li><p>Log in to the UKCloud Portal.</p>
-<p>For more detailed steps, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
-</li>
-<li><p>In the Portal navigation panel, expand <strong>VMware Cloud</strong> and then select the compute service in which you want to create the edge gateway.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>To create an edge gateway using the Portal, the compute service must be in region 5 or 6.</p>
-</div>
-<p><img src="images/vmw-portal-mnu-select-compute-service.png" alt="Compute services menu option"></p>
-</li>
-<li><p>From the <strong>Actions</strong> menu, select <strong>Build Edge Gateway</strong>.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>If this option is greyed out, either you do not have the appropriate permissions or your compute service is not in region 5 or 6.</p>
-</div>
-<p><img src="images/vmw-portal-mnu-build-edge.png" alt="Build Edge Gateway menu option"></p>
-</li>
-<li><p>On the <em>Build Edge Gateway</em> page, from the <strong>Associated VDC</strong> list, select the VDC for which you are creating the edge gateway.</p>
-<p>The VDC names in the list include information about the security domain in which the VDC is located and the VM type of the VDC.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>The list of VDCs includes all VDCs in the compute service, whether or not they already have an edge gateway. If you select a VDC that already has an edge gateway of the same type, you will get an error.</p>
-</div>
-<p><img src="images/vmw-portal-build-edge.png" alt="Build Edge Gateway page"></p>
-</li>
-<li><p>Click <strong>Build</strong>.</p>
-</li>
-<li><p>The <em>Edge Gateway Build Status</em> page displays information about the edge gateway you're building and lets you know how the build is progressing.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>You can stay on this page until the build is finished, or you can leave this page and check the status of the build later by going to the <em>VMware Cloud Build History</em> report.</p>
-</div>
-<p><img src="images/vmw-portal-build-edge-gateway-status.png" alt="Build Edge Gateway Status page"></p>
-</li>
-<li><p>When the build is complete, the page displays either a success or fail message.</p>
-<p>If the build is successful, you can now start configuring the edge gateway. For a quick guide on how to do this, see <a href="vmw-how-build-vm.html"><em>How to build a virtual machine with UKCloud for VMware</em></a>.</p>
-<p><img src="images/vmw-portal-build-edge-success.png" alt="Build VDC Status - success"></p>
-<p>If the build is unsuccessful, raise a support ticket (quoting the <strong>Build ID</strong>) to resolve any issues.</p>
-<p><img src="images/vmw-portal-build-edge-fail.png" alt="Build VDC Status - failed"></p>
-</li>
-</ol>
-<h2 id="next-steps">Next steps</h2>
-<p>After you create your edge gateway, we recommend that you convert it to an advanced gateway to access the latest vCloud Director functionality. For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
-<p>For information about how to configure your new edge gateway, see:</p>
+<p>For all customers in the UKCloud Portal there is a concept of companies, business accounts and services, which allows for different levels of segregation.</p>
+<p>When a customer starts using UKCloud's Portal, we create the initial administrator username that enables access prior to any customer data or systems being provisioned on our platforms.</p>
+<p>Security of our services is paramount and we provide the facilities to enable customers to manage user access; this is also because we have no means of verifying the identity, roles and access rights of an individual user.</p>
+<h2 id="administrator-responsibilities">Administrator responsibilities</h2>
+<p>Customers need to allocate administrators who are responsible for:</p>
 <ul>
-<li><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></li>
-<li><a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a></li>
-<li><a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></li>
-<li><a href="vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a></li>
-<li><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></li>
-<li><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></li>
+<li>Adding and deleting new user accounts</li>
+<li>Maintaining the appropriate permissions and access for users</li>
+<li>Activating and locking individual user accounts where required</li>
+<li>Resetting passwords and memorable words</li>
+<li>Ensuring that only appropriate users are listed as administrators</li>
 </ul>
+<p>To avoid a situation where all administrators are unable to access services, UKCloud recommends that each customer assigns multiple administrators and ensures that memorable words are maintained.</p>
+<h2 id="ukcloud-support">UKCloud Support</h2>
+<p>There are a number of Access Management activities which UKCloud can assist with. These are:</p>
+<ul>
+<li><p><strong>Enabling access to multiple business accounts for individual users.</strong> This can be provided through a Service Request raised by a user from the business account for which access will be enabled.</p>
+</li>
+<li><p><strong>VPN set up on a secondary vShield Edge.</strong> Customers are able to configure and manage an edge gateway VPN on their primary edge gateway; however where a secondary edge gateway is used, UKCloud will assist in establishing the VPN and administering VPN accounts and passwords. Customers can also choose to install and self-manage an alternative VPN product.</p>
+</li>
+<li><p><strong>Password reset and account unlock for an administrator.</strong> In this scenario the administrator will need to provide details from their memorable word. UKCloud Support will send credentials to the telephone number registered to the administrator's user account.</p>
+</li>
+<li><p><strong>Provide a listing of user account permissions.</strong> We recognise that customers may wish to undertake an audit of the permissions of Portal users. Permission for each user are visible under <strong>Contacts</strong> and we can also provide an extract of these.</p>
+</li>
+</ul>
+<h3 id="password-reset">Password reset</h3>
+<p>In the event that you need to reset your password:</p>
+<ul>
+<li><p>For the Assured OFFICIAL Portal, a self-service facility is available from the log on page. Alternatively your administrator can change your password or memorable word.</p>
+</li>
+<li><p>For the Elevated OFFICIAL Portal, your password or memorable word will need to be changed by your administrator.</p>
+</li>
+</ul>
+<p>UKCloud Support will advise you of the names of your administrators if required.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
@@ -163,7 +132,7 @@ Portal API. For more information, see the <a href="../portal/ptl-ref-portal-api.
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-build-edge.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/portal/ptl-ref-user-access.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>

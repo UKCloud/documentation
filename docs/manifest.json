@@ -945,15 +945,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/draas/draas-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-gs.html",
-          "hash": "mXLpbu6qlDAk1E1l4v/izA=="
+          "hash": "bJe8zb7ggnlIsbjQ1ehxFQ=="
         }
       },
       "is_incremental": false,
@@ -997,12 +994,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/email/email-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/email/email-gs.html",
-          "hash": "Pzuz7OuiOUXHwNTIYn932Q=="
+          "hash": "lgVNGWxAbkYeH4OehO4xnA=="
         }
       },
       "is_incremental": false,
@@ -1513,7 +1513,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/migration/migr-how-zerto-migrate-to-ukcloud.html",
-          "hash": "NzjncM/9IMrlKJPDDOPUYA=="
+          "hash": "KaMR3zFSy4Ygwqp/uUt6IA=="
         }
       },
       "is_incremental": false,
@@ -3379,12 +3379,96 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-how-use-api.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-how-use-api.html",
+          "hash": "Pr3k+Ciho+924js8x8LBSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-how-use-my-calls.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-how-use-my-calls.html",
+          "hash": "1oE+iDYHC3nUwZuoJGZAlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-overview-permissions.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-overview-permissions.html",
+          "hash": "eJ9X4ch5GlfSyx57qLOqxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-ref-portal-api.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-ref-portal-api.html",
+          "hash": "vIyqAJMPd5R9mkWuIFaxYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-ref-portal-release-notes.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-ref-portal-release-notes.html",
+          "hash": "3xgBs/tlXiV2b38vwS+Z6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-ref-user-access.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-ref-user-access.html",
+          "hash": "T/a/UQ9gejL5nhIqaTPovA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/portal/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "sf+b4wLClx0JHL+Smzc6gg=="
+          "hash": "XYLrUo6Gjap3/3Y5u5Gs0w=="
         }
       },
       "is_incremental": false,
@@ -7657,7 +7741,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs-journaling.html",
-          "hash": "EDomAN7DaT/W/w3UpXtTiw=="
+          "hash": "85fI1kPz2rprCWgCua4vlA=="
         }
       },
       "is_incremental": false,
@@ -7742,15 +7826,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-build-edge.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-build-edge.html",
-          "hash": "TLhKHh+tIbtyHiYx9ZHiOQ=="
+          "hash": "hwBWcDRdzaMu94rgiqCqJA=="
         }
       },
       "is_incremental": false,
@@ -8245,7 +8326,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-migrate-between-regions.html",
-          "hash": "aKmL3RKYy8LMYLPby9IYqg=="
+          "hash": "UTgoshWrTMQqsSykpftoAw=="
         }
       },
       "is_incremental": false,
@@ -8631,7 +8712,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "EUD/mEpyFXw+y5xvr+OJJw=="
+          "hash": "kRkWLwVxmQ48roSpmX5Bxg=="
         }
       },
       "is_incremental": false,
@@ -8654,7 +8735,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "vdIdoNNwR2R5U529QooNrw=="
+          "hash": "aA45TrN2aJob7AjS+Ytybg=="
         }
       },
       "is_incremental": false,
@@ -8669,6 +8750,11 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -8676,11 +8762,6 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

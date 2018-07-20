@@ -2,3 +2,19 @@
   items:
   - name: UKCloud Portal
     href: ptl-gs.md
+- name: How To
+  items:
+  - name: Use My Calls in the UKCloud Portal
+    href: ptl-how-use-my-calls.md
+  - name: Use the UKCloud Portal API
+    href: ptl-how-use-api.md
+- name: Reference
+  items:
+  - name: An overview of Portal permissions
+    href: ptl-overview-permissions.md
+  - name: API Reference Guide
+    href: ptl-ref-portal-api.md
+  - name: Portal release notes
+    href: ptl-ref-release-notes.md
+  - name: Portal user access
+    href: ptl-ref-user-access.md

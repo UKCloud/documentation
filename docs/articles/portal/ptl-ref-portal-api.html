@@ -1,0 +1,3976 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UKCloud Portal API Reference Guide | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UKCloud Portal API Reference Guide | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="ukcloud-portal-api-reference-guide">UKCloud Portal API Reference Guide</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This is an application programmer's guide designed for those wanting to interact with the UKCloud Portal via use of an application programming interface (API).</p>
+<p>We will update this document with API calls as they become available.</p>
+<h2 id="accessing-the-portal-api">Accessing the Portal API</h2>
+<p>The entry point URL for the Portal API is:</p>
+<p><code>https://portal.skyscapecloud.com/api</code></p>
+<p>For information and examples about how to use the Portal API, see <a href="ptl-how-use-api.html"><em>How to use the UKCloud Portal API</em></a>.</p>
+<h2 id="response-http-status-codes">Response HTTP status codes</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>All OK</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created resource OK</td>
+</tr>
+<tr>
+<td>202</td>
+<td>Accepted</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad request</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Authorization error</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+</tr>
+<tr>
+<td>404</td>
+<td>URL resource not found</td>
+</tr>
+<tr>
+<td>422</td>
+<td>Unprocessable entity</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Error with operation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="post-apiauthenticate">POST /api/authenticate</h2>
+<p>Authenticates your API session.</p>
+<h3 id="api-version">API version</h3>
+<p>v1</p>
+<h3 id="request">Request</h3>
+<h4 id="request-body">Request body</h4>
+<pre><code>{&quot;email&quot;: &quot;email@example.com&quot;, &quot;password&quot;: &quot;password&quot;}
+</code></pre>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>User's email address</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>password</td>
+<td>User's password</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="uri-parameters">URI parameters</h4>
+<p>None</p>
+<h4 id="example-request-curl">Example request (Curl)</h4>
+<pre><code>curl -c /tmp/cookies.txt -X POST -H 'Accept: application/json\' -H 'Content-Type: application/json' -d \'{&quot;email&quot;: &quot;email\@example.com&quot;, &quot;password&quot;: &quot;password&quot;}' https://portal.skyscapecloud.com/api/authenticate
+</code></pre>
+<h4 id="example-request-ruby">Example request (Ruby)</h4>
+<pre><code>conn = Faraday.new('https://portal.skyscapecloud.com') { |f| f.request :json }
+resp = conn.post('/api/authenticate', {'email' =&gt; 'email@example.com', 'password' =&gt; 'password'})
+cookies = resp.env[:response_headers]['set-cookie']
+</code></pre>
+<h3 id="response">Response</h3>
+<h4 id="successful-http-response">Successful HTTP response</h4>
+<p>201 Created --- The authentication request was successful</p>
+<h4 id="unsuccessful-http-response">Unsuccessful HTTP response</h4>
+<p>400 Bad request --- The email and password was not provided</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<h4 id="response-body">Response body</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>expire_after</td>
+<td>String</td>
+<td>Amount of time (in seconds) that the session is valid for</td>
+<td>900</td>
+</tr>
+</tbody>
+</table>
+<p>The endpoint also returns a session cookie that provides authentication for your API calls. You must send this cookie with any subsequent authenticated call, for example:</p>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts
+</code></pre>
+<h4 id="example-response">Example response</h4>
+<pre><code>{&quot;expire_after&quot;: 900}
+</code></pre>
+<h2 id="get-apimy_vm">GET /api/my_vm</h2>
+<p>Returns a list of up to 10 VMs with billing data.</p>
+<h3 id="api-version-1">API version</h3>
+<p>v1</p>
+<h3 id="request-1">Request</h3>
+<h4 id="request-body-1">Request body</h4>
+<p>None</p>
+<h4 id="parameters-1">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-1">URI parameters</h4>
+<p>None</p>
+<h4 id="example-request-curl-1">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my\vm
+</code></pre>
+<h4 id="example-request-ruby-1">Example request (Ruby)</h4>
+<pre><code>resp = conn.get('/api/my_vm') { |req| req.headers['cookie'] = cookies }
+</code></pre>
+<h3 id="response-1">Response</h3>
+<h4 id="successful-http-response-1">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-1">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<h4 id="response-body-1">Response body</h4>
+<p>Returns a response with a list of up to 10 VMs</p>
+<h4 id="example-response-1">Example response</h4>
+<pre><code>{&quot;account&quot;:
+  {&quot;vapps&quot;:
+    [&quot;_id&quot;:1,
+     &quot;urn&quot;:&quot;urn:vcloud:vapp:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;,
+     &quot;name&quot;:&quot;My vApp&quot;,
+     &quot;ps&quot;:&quot;On&quot;,
+     &quot;total_vms&quot;:1,
+     &quot;month_to_date&quot;:&quot;£0.15&quot;,
+     &quot;estimated_monthly_total&quot;:&quot;£0.34&quot;
+    ],
+    &quot;vms&quot;:
+    [&quot;_id&quot;:1,
+     &quot;urn&quot;:&quot;urn:vcloud:vm:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;,
+     &quot;name&quot;:&quot;My VM&quot;,
+     &quot;size&quot;:&quot;small&quot;,
+     &quot;ps&quot;:&quot;On&quot;,
+     &quot;os&quot;:&quot;Microsoft Windows Server 2008 R2 (64-bit)&quot;,
+     &quot;cpu&quot;:&quot;2x2GHz&quot;,
+     &quot;mem&quot;:&quot;4096MB&quot;,
+     &quot;storage&quot;:&quot;50GB&quot;,
+     &quot;created_at&quot;:&quot;01/01/2015 09:00&quot;,
+     &quot;updated_at&quot;:&quot;01/01/2015 09:00&quot;,
+     &quot;month_to_date&quot;:&quot;£0.15&quot;,
+     &quot;estimated_monthly_total&quot;:&quot;£0.34&quot;,
+     &quot;comment&quot;:null,
+     &quot;last_backup_status&quot;:&quot;Successful&quot;,
+     &quot;in_backup&quot;:true,
+     &quot;last_backup&quot;:&quot;Completed on the night of: 01/01/2015&quot;,
+     &quot;retention_length&quot;:14,
+     &quot;billed_hours_powered_on&quot;:8,
+     &quot;billed_hours_powered_off&quot;:14,
+     &quot;backups&quot;:
+     [{&quot;status&quot;:&quot;Completed&quot;,
+       &quot;backup_slot&quot;:&quot;night of: 01/01/2015&quot;,
+       &quot;backup_start&quot;:&quot;01/01/2015 23:23&quot;,
+       &quot;backup_end&quot;:&quot;01/01/2015 23:31&quot;,
+       &quot;snapshot_removal_start&quot;:&quot;01/01/2015 23:33&quot;,
+       &quot;snapshot_removal_end&quot;:&quot;01/01/2015 23:38&quot;
+     }]
+    ]
+  }
+}
+</code></pre>
+<h2 id="get-apimy_calls">GET /api/my_calls</h2>
+<p>Returns a complete list of support calls (similar to the MyCalls view in the UKCloud Portal).</p>
+<h3 id="api-version-2">API version</h3>
+<p>v1</p>
+<h3 id="request-2">Request</h3>
+<h4 id="request-body-2">Request body</h4>
+<p>None</p>
+<h4 id="parameters-2">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-2">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>for</td>
+<td>User or account</td>
+<td>String</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-2">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my\_calls?for=user
+</code></pre>
+<h4 id="example-request-ruby-2">Example request (Ruby)</h4>
+<pre><code>resp = conn.get('/api/my_calls') { |req| req.headers['cookie'] = cookies }
+</code></pre>
+<h3 id="response-2">Response</h3>
+<h4 id="successful-http-response-2">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-2">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<h4 id="response-body-2">Response body</h4>
+<p>Returns a structure of tickets with the following keys:</p>
+<pre><code>ticket_id,.summary, submitted, status
+</code></pre>
+<h4 id="example-response-2">Example response</h4>
+<pre><code>[{&quot;ticket_id&quot;:&quot;INC1002183&quot;,&quot;summary&quot;:&quot;Test incident (Compute)&quot;,&quot;submitted&quot;:&quot;28/08/2014 15:42&quot;, &quot;status&quot;:&quot;Awaiting Review&quot;}, ...]
+</code></pre>
+<h2 id="get-apimy_callsticket_id">GET /api/my_calls/:ticket_id</h2>
+<p>Returns a single ticket and its updates and changes.</p>
+<h3 id="api-version-3">API version</h3>
+<p>v1</p>
+<h3 id="request-3">Request</h3>
+<h4 id="request-body-3">Request body</h4>
+<p>None</p>
+<h4 id="parameters-3">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-3">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ticket_id</td>
+<td>The unique ID of the ticket</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>for</td>
+<td>User or account</td>
+<td>String</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-3">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001?for=user
+</code></pre>
+<h4 id="example-request-ruby-3">Example request (Ruby)</h4>
+<pre><code>resp = conn.get('/api/my_calls/INC10001') { |req| req.headers['cookie'] = cookies }
+</code></pre>
+<h3 id="response-3">Response</h3>
+<h4 id="successful-http-response-3">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-3">Unsuccessful HTTP response</h4>
+<p>400 Bad request --- The ticket could not be found</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<h4 id="response-body-3">Response body</h4>
+<p>Returns a hash with ticket, updates and changes.</p>
+<h4 id="example-response-3">Example response</h4>
+<pre><code>{'ticket': {ticket details}, 'updates': [{updates}], 'changes': [{changes}]}
+</code></pre>
+<h2 id="put-apimy_callsticket_id">PUT /api/my_calls/:ticket_id</h2>
+<p>Adds a new note to a ticket.</p>
+<h3 id="api-version-4">API version</h3>
+<p>v1</p>
+<h3 id="request-4">Request</h3>
+<h4 id="request-body-4">Request body</h4>
+<pre><code>{&quot;description&quot;: &quot;My new update&quot;}
+</code></pre>
+<h4 id="parameters-4">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>description</td>
+<td>The note to add</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="uri-parameters-4">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ticket_id</td>
+<td>The unique ID of the ticket</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-4">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/my_calls/INC10001 -X PUT --d '{&quot;description&quot;: &quot;My new update&quot;}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+</code></pre>
+<h4 id="example-request-ruby-4">Example request (Ruby)</h4>
+<pre><code>resp = conn.put('/api/my_calls/INC10001') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;description&quot;: &quot;My new update&quot;}' }
+</code></pre>
+<h3 id="response-4">Response</h3>
+<h4 id="successful-http-response-4">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-4">Unsuccessful HTTP response</h4>
+<p>400 Bad request --- The ticket could not be found</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>422 Unprocessable entity --- There was an error saving the updated</p>
+<h4 id="response-body-4">Response body</h4>
+<p>Returns all notes including your new note</p>
+<h2 id="post-apimy_calls">POST /api/my_calls</h2>
+<p>Adds a new ticket.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you encounter any problems making changes to a ticket after initial creation, for example, closing or cancelling an incorrect ticket, this is probably because the ticket is waiting for approval from a Customer Support Engineer. Check the status of your ticket and try performing the action again later.</p>
+</div>
+<h3 id="api-version-5">API version</h3>
+<p>v1</p>
+<h3 id="request-5">Request</h3>
+<h4 id="request-body-5">Request body</h4>
+<pre><code>{&quot;incident&quot;: {&quot;problem_area&quot;: &quot;compute&quot;, &quot;service&quot;: &quot;My Service&quot;, &quot;classification&quot;: &quot;Production Service &gt; unavailable or unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_details&quot;: &quot;My further details&quot;}}
+</code></pre>
+<p>Or</p>
+<pre><code>{&quot;service&quot;: {&quot;problem_area&quot;: &quot;compute&quot;, &quot;service&quot;: &quot;My Service&quot;, &quot;query_nature&quot;: &quot;Change a Configuration&quot;, &quot;summary&quot;: &quot;My Request&quot;, &quot;further_details&quot;: &quot;My further details&quot;}}
+</code></pre>
+<h4 id="parameters-5">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>incident</td>
+<td>If the ticket is an incident, then pass the following key/values</td>
+<td>Hash/Object</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>problem_area | One of:<br>- compute</br>- storage<br>- email and collaboration</br>- other | String | Y
+service | The name of the service | String | Y
+classification | One of:<br>- Production Service &gt; unavailable or unresponsive</br>- Production Service &gt; available but performance degraded<br>- Production Service &gt; available, but client access to service restricted</br>- Test/Dev Service &gt; unavailable or unresponsive<br>- Test/Dev Service &gt; available, but performance degraded</br>- Test/Dev Service &gt; available, but client access to service restricted<br>- Service available, part of redundant infrastructure unavailable</br>- Confirmed data loss or breach<br>- Possible data loss or breach</br>- Other incident | String | Y
+summary | A summary of the incident | String | Y
+further_details | A more complete description of the incident | String | Y
+service | If the ticket is a service request, then pass the following key/values | Hash/Object | N
+problem_area | One of:<br>- compute</br>- storage<br>- email and collaboration</br>- Connectivity PSN or GSI<br>- Connectivity Leased Line</br>- Cloud Enablement Services<br>- IP Addresses</br>- Other | String | Y
+service | The name of the service | String | Y
+query_nature | One of:<br>- Change a Configuration</br>- Add a New Service<br>- Claim Service Credits</br>- Expand an Existing Service<br>- Information Required</br>- Other | String | Y
+summary | A summary of the service request | String | Y
+further_details | A more complete description of the service request | String | Y</p>
+</blockquote>
+<h4 id="uri-parameters-5">URI parameters</h4>
+<p>None</p>
+<h4 id="example-request-curl-5">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/my_calls -X POST --d '{&quot;incident&quot;: {&quot;problem_area&quot;: &quot;compute&quot;, &quot;service&quot;: &quot;My Service&quot;, &quot;classification&quot;: &quot;Production Service &gt;
+unavailable or unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_details&quot;: &quot;My further details&quot;}}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+</code></pre>
+<h4 id="example-request-ruby-5">Example request (Ruby)</h4>
+<pre><code>conn.post('/api/my_calls') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;incident&quot;: {&quot;problem_area&quot;: &quot;compute&quot;, &quot;service&quot;, &quot;classification&quot;: &quot;Production Service &gt; unavailable or
+unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_details&quot;: &quot;My further details&quot;}}' }
+</code></pre>
+<h3 id="response-5">Response</h3>
+<h4 id="successful-http-response-5">Successful HTTP response</h4>
+<p>201 Created --- The ticket was successfully created</p>
+<h4 id="unsuccessful-http-response-5">Unsuccessful HTTP response</h4>
+<p>400 Bad request --- The ticket could not be found</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>422 Unprocessable entity --- There was an error saving the update</p>
+<h4 id="response-body-5">Response body</h4>
+<p>Returns the ticket created.</p>
+<h2 id="put-apimy_callsticket_idsubscribe">PUT /api/my_calls/:ticket_id/subscribe</h2>
+<p>Subscribes a user to a ticket.</p>
+<h3 id="api-version-6">API version</h3>
+<p>v1</p>
+<h3 id="request-6">Request</h3>
+<h4 id="request-body-6">Request body</h4>
+<pre><code>{&quot;email&quot;: &quot;myemail@example.com&quot;}
+</code></pre>
+<h4 id="parameters-6">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>The email address of the user to add; the email address must exist as a user in your account</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="uri-parameters-6">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ticket_id</td>
+<td>The unique ID of the ticket</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-6">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' --d '{&quot;email&quot;: &quot;myemail@example.com&quot;}' https://portal.skyscapecloud.com/api/my_calls/INC10001/subscribe
+</code></pre>
+<h4 id="example-request-ruby-6">Example request (Ruby)</h4>
+<pre><code>resp = conn.put('/api/my_calls/INC10001/subscribe') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;description&quot;: &quot;My new update&quot;}' }
+</code></pre>
+<h3 id="response-6">Response</h3>
+<h4 id="successful-http-response-6">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-6">Unsuccessful HTTP response</h4>
+<p>400 Bad request --- The ticket or user could not be found</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>422 Unprocessable entity --- There was an error saving the update</p>
+<h4 id="response-body-6">Response body</h4>
+<p>None --- Check the response status code</p>
+<h2 id="put-apimy_callsticket_idunsubscribe">PUT /api/my_calls/:ticket_id/unsubscribe</h2>
+<p>Unsubscribes a user from a ticket.</p>
+<h3 id="api-version-7">API version</h3>
+<p>v1</p>
+<h3 id="request-7">Request</h3>
+<h4 id="request-body-7">Request body</h4>
+<pre><code>{&quot;email&quot;: &quot;myemail@example.com&quot;}
+</code></pre>
+<h4 id="parameters-7">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>The email address of the user to remove</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="uri-parameters-7">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ticket_id</td>
+<td>The unique ID of the ticket</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-7">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' --d '{&quot;email&quot;: &quot;myemail@example.com&quot;}' https://portal.skyscapecloud.com/api/my_calls/INC10001/subscribe
+</code></pre>
+<h4 id="example-request-ruby-7">Example request (Ruby)</h4>
+<pre><code>resp = conn.put('/api/my_calls/INC10001/unsubscribe') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;email&quot;: &quot;myemail@example.com&quot;}' }
+</code></pre>
+<h3 id="response-7">Response</h3>
+<h4 id="successful-http-response-7">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-7">Unsuccessful HTTP response</h4>
+<p>400 Bad request --- The ticket or user could not be found</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>422 Unprocessable entity --- There was an error saving the update</p>
+<h4 id="response-body-7">Response body</h4>
+<p>None --- Check the response status code.</p>
+<h2 id="put-apimy_callsticket_idreopen">PUT /api/my_calls/:ticket_id/reopen</h2>
+<p>Reopens a ticket.</p>
+<h3 id="api-version-8">API version</h3>
+<p>v1</p>
+<h3 id="request-8">Request</h3>
+<h4 id="request-body-8">Request body</h4>
+<p>None</p>
+<h4 id="parameters-8">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-8">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ticket_id</td>
+<td>The unique ID of the ticket</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-8">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/reopen
+</code></pre>
+<h4 id="example-request-ruby-8">Example request (Ruby)</h4>
+<pre><code>resp = conn.put('/api/my_calls/INC10001/reopen') { |req| req.headers['cookie'] = cookies}
+</code></pre>
+<h3 id="response-8">Response</h3>
+<h4 id="successful-http-response-8">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-8">Unsuccessful HTTP response</h4>
+<p>400 Bad request --- The ticket or user could not be found</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>422 Unprocessable entity --- There was an error saving the update</p>
+<h4 id="response-body-8">Response body</h4>
+<p>None --- Check the response status code</p>
+<h2 id="put-apimy_callsticket_idchange_owner">PUT /api/my_calls/:ticket_id/change_owner</h2>
+<p>Change the owner of a ticket.</p>
+<h3 id="api-version-9">API version</h3>
+<p>v1</p>
+<h3 id="request-9">Request</h3>
+<h4 id="request-body-9">Request body</h4>
+<pre><code>{&quot;email&quot;: &quot;myemail@example.com&quot;}
+</code></pre>
+<h4 id="parameters-9">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>The email address of the new owner for the ticket</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="uri-parameters-9">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ticket_id</td>
+<td>The unique ID of the ticket</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-9">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' --d '{&quot;email&quot;: &quot;myemail@example.com&quot;}' https://portal.skyscapecloud.com/api/my_calls/INC10001/change_owner
+</code></pre>
+<h4 id="example-request-ruby-9">Example request (Ruby)</h4>
+<pre><code>resp = conn.put('/api/my_calls/INC10001/change_owner') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;email&quot;: &quot;myemail@example.com&quot;}' }
+</code></pre>
+<h3 id="response-9">Response</h3>
+<h4 id="successful-http-response-9">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-9">Unsuccessful HTTP response</h4>
+<p>400 Bad request --- The ticket or user could not be found</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>422 Unprocessable entity --- There was an error saving the update</p>
+<h4 id="response-body-9">Response body</h4>
+<p>None -- Check the response status code</p>
+<h2 id="put-apimy_callsticket_idcancel">PUT /api/my_calls/:ticket_id/cancel</h2>
+<p>Cancels a ticket.</p>
+<h3 id="api-version-10">API version</h3>
+<p>v1</p>
+<h3 id="request-10">Request</h3>
+<h4 id="request-body-10">Request body</h4>
+<p>None</p>
+<h4 id="parameters-10">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-10">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ticket_id</td>
+<td>The unique ID of the ticket</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-10">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/cancel
+</code></pre>
+<h3 id="example-request-ruby-10">Example request (Ruby)</h3>
+<pre><code>resp = conn.put('/api/my_calls/INC10001/cancel') { |req| req.headers['cookie'] = cookies}
+</code></pre>
+<h3 id="response-10">Response</h3>
+<h4 id="successful-http-response-10">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-10">Unsuccessful HTTP response</h4>
+<p>400 Bad request --- The ticket or user could not be found</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>422 Unprocessable entity --- There was an error saving the update</p>
+<h4 id="response-body-10">Response body</h4>
+<p>None -- Check the response status code</p>
+<h2 id="put-apimy_callsticket_idclose">PUT /api/my_calls/:ticket_id/close</h2>
+<p>Closes a ticket.</p>
+<h3 id="api-version-11">API version</h3>
+<p>v1</p>
+<h3 id="request-11">Request</h3>
+<h4 id="request-body-11">Request body</h4>
+<p>None</p>
+<h4 id="parameters-11">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-11">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ticket_id</td>
+<td>The unique ID of the ticket</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-11">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/close
+</code></pre>
+<h4 id="example-request-ruby-11">Example request (Ruby)</h4>
+<pre><code>resp = conn.put('/api/my_calls/INC10001/close') { |req| req.headers['cookie'] = cookies}
+</code></pre>
+<h3 id="response-11">Response</h3>
+<h4 id="successful-http-response-11">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-11">Unsuccessful HTTP response</h4>
+<p>400 Bad request --- The ticket or user could not be found</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>422 Unprocessable entity --- There was an error saving the update</p>
+<h4 id="response-body-11">Response body</h4>
+<p>None -- Check the response status code.</p>
+<h2 id="get-apiping">GET /api/ping</h2>
+<p>An endpoint to test API functionality.</p>
+<h3 id="api-version-12">API version</h3>
+<p>v1</p>
+<h3 id="request-12">Request</h3>
+<h4 id="request-body-12">Request body</h4>
+<p>None</p>
+<h4 id="parameters-12">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-12">URI parameters</h4>
+<p>None</p>
+<h4 id="example-request-curl-12">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/ping
+</code></pre>
+<h4 id="example-request-ruby-12">Example request (Ruby)</h4>
+<pre><code>resp = conn.get('/api/ping') { |req| req.headers['cookie'] = cookies }
+</code></pre>
+<h3 id="response-12">Response</h3>
+<h4 id="successful-http-response-12">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-12">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<h4 id="response-body-12">Response body</h4>
+<p>Returns OK if the user has been authenticated.</p>
+<h4 id="example-response-4">Example response</h4>
+<pre><code>{&quot;response&quot;:&quot;OK&quot;}
+</code></pre>
+<h2 id="get-apiaccounts">GET /api/accounts</h2>
+<p>Returns a list of accounts associated with the current user.</p>
+<h3 id="api-version-13">API version</h3>
+<p>v1</p>
+<h3 id="request-13">Request</h3>
+<h4 id="request-body-13">Request body</h4>
+<p>None</p>
+<h4 id="parameters-13">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-13">URI parameters</h4>
+<p>None</p>
+<h4 id="example-request-curl-13">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts
+</code></pre>
+<h4 id="example-request-ruby-13">Example request (Ruby)</h4>
+<pre><code>resp = conn.get('/api/accounts') { |req| req.headers['cookie'] = cookies }
+</code></pre>
+<h3 id="response-13">Response</h3>
+<h4 id="successful-http-response-13">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-13">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<h4 id="response-body-13">Response body</h4>
+<p>Returns an array of accounts with the ID and name.</p>
+<h4 id="example-response-5">Example response</h4>
+<pre><code>[{&quot;name&quot;:&quot;UKCloud Development Team&quot;,&quot;id&quot;:48},{&quot;name&quot;:&quot;Demo&quot;,&quot;id&quot;:1}]
+</code></pre>
+<h3 id="json-schema">JSON schema</h3>
+<pre><code>{
+&quot;description&quot;: &quot;The Portal accounts that your user has access to&quot;,
+&quot;items&quot;: {
+&quot;properties&quot;: {
+&quot;id&quot;: {
+&quot;description&quot;: &quot;The ID of the account&quot;,
+&quot;type&quot;: &quot;integer&quot;
+},
+&quot;name&quot;: {
+&quot;description&quot;: &quot;The name of the account&quot;,
+&quot;type&quot;: &quot;string&quot;
+}
+},
+&quot;required&quot;: [
+&quot;id&quot;,
+&quot;name&quot;
+],
+&quot;type&quot;: &quot;object&quot;
+},
+&quot;title&quot;: &quot;GET /api/accounts/&quot;,
+&quot;type&quot;: &quot;array&quot;,
+&quot;uniqueItems&quot;: true
+}
+</code></pre>
+<h2 id="get-apiaccountsaccount_idcompute_services">GET /api/accounts/:account_id/compute_services</h2>
+<p>Returns a list of compute services (vOrgs), VDCs, vApps and VMs associated with the specified account.</p>
+<h3 id="api-version-14">API version</h3>
+<p>v1</p>
+<h3 id="request-14">Request</h3>
+<h4 id="request-body-14">Request body</h4>
+<p>None</p>
+<h4 id="parameters-14">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-14">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_id</td>
+<td>The ID of your account</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>per_page</td>
+<td>The number or records (vOrgs) to display per page of results</td>
+<td>Integer</td>
+<td>N (25)</td>
+</tr>
+<tr>
+<td>page</td>
+<td>The specific page of results to display</td>
+<td>Integer</td>
+<td>N (1)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-14">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/compute_services?page=10&amp;per_page=20
+</code></pre>
+<h4 id="example-request-ruby-14">Example request (Ruby)</h4>
+<pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/compute_services?page=10&amp;per_page=20&quot;) { |req| req.headers['cookie'] = cookies }
+</code></pre>
+<h3 id="response-14">Response</h3>
+<h4 id="successful-http-response-14">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-14">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
+<h4 id="response-body-14">Response body</h4>
+<p>Returns an array of compute services.</p>
+<p>To specify how many vOrgs to display per page of results, set the <code>per_page</code> URL parameter in the query string. To return a specific page of results, set the page parameter. If you do not set these parameters, all results are returned.</p>
+<h4 id="example-response-6">Example response</h4>
+<pre><code>{
+  &quot;account&quot;: {
+    &quot;id&quot;: 1
+  },
+  &quot;vOrgs&quot;: [
+    {
+      &quot;VDCs&quot;: [
+        {
+          &quot;name&quot;: &quot;UKCloud (IL0-PROD-BASIC)&quot;,
+          &quot;urn&quot;: &quot;urn:vcloud:vdc:3f78f9db-be9b-4517-a013-f1a6e39d5f5d&quot;,
+          &quot;vApps&quot;: [
+            {
+              &quot;VMs&quot;: [
+                {
+                  “_id”: 2
+                  &quot;billedHoursPoweredOff&quot;: 443,
+                  &quot;billedHoursPoweredOn&quot;: 0,
+                  &quot;estimatedMonthlyTotal&quot;: &quot;4.88&quot;,
+                  &quot;memory&quot;: 16384,
+                  &quot;monthToDate&quot;: &quot;2.91&quot;,
+                  &quot;name&quot;: &quot;RedHat-v6.4-x86_64&quot;,
+                  &quot;numberOfCPUs&quot;: 4,
+                  &quot;operatingSystem&quot;: &quot;Red Hat Enterprise Linux 6 (64-bit)&quot;,
+                  &quot;powerStatus&quot;: &quot;POWERED_OFF&quot;,
+                  &quot;storage&quot;: 65536,
+                  &quot;urn&quot;: &quot;urn:vcloud:vm:3272ed5b-8e59-4ce4-bc10-5b575fd25787&quot;,
+                  &quot;inBackup&quot;: true,
+                  &quot;lastBackupStatus&quot;: &quot;Successful&quot;,
+                  &quot;lastBackup&quot;: &quot;Completed on the night of: 23/06/2015&quot;,
+                  &quot;inBackup&quot;: true,
+                  &quot;lastBackupStatus&quot;: &quot;Successful&quot;,
+                  &quot;retentionLength&quot;:28,
+                  &quot;backups&quot;:[
+                    {
+                      &quot;status&quot;:&quot;Completed&quot;,&quot;backupSlot&quot;:&quot;night of: 23/06/2015&quot;,
+                      &quot;backupStart&quot;:&quot;24/06/2015 01:32&quot;,
+                      &quot;backupEnd&quot;:&quot;24/06/2015 01:35&quot;,
+                      &quot;snapshotRemovalStart&quot;:&quot;24/06/2015 01:34&quot;,
+                      &quot;snapshotRemovalEnd&quot;:&quot;24/06/2015 01:35&quot;
+                    }
+                  ]
+                }]
+              &quot;name&quot;: &quot;Demo vApp 2&quot;,
+              &quot;urn&quot;: &quot;urn:vcloud:vapp:ca8517e8-e4f5-4289-8563-3afb86577972&quot;
+            }
+          ]
+        }
+      ],
+      &quot;name&quot;: &quot;UKCloud Demo vCloud&quot;,
+      &quot;serviceId&quot;: &quot;1-1-1-9836cf&quot;,
+      &quot;urn&quot;: &quot;urn:vcloud:org:66bf4c1d-24de-4793-8bdf-95f4fd3d737f&quot;
+    }
+  ]
+}
+
+</code></pre>
+<h3 id="json-schema-1">JSON schema</h3>
+<pre><code>{
+  &quot;description&quot;:&quot;The compute services (vOrgs), VDCs, vApps, VMs within your account&quot;,
+  &quot;properties&quot;:{
+    &quot;account&quot;:{
+      &quot;properties&quot;:{
+        &quot;id&quot;:{
+          &quot;type&quot;:&quot;integer&quot;
+        }
+      },
+      &quot;required&quot;:[
+        &quot;id&quot;
+      ],
+      &quot;type&quot;:&quot;object&quot;
+    },
+    &quot;vOrgs&quot;:{
+      &quot;items&quot;:{
+        &quot;description&quot;:&quot;A compute service (vOrg)&quot;,
+        &quot;properties&quot;:{
+          &quot;VDCs&quot;:{
+            &quot;items&quot;:{
+              &quot;description&quot;:&quot;A virtual data center (VDC)&quot;,
+              &quot;properties&quot;:{
+                &quot;name&quot;:{
+                  &quot;type&quot;:&quot;string&quot;
+                },
+                &quot;urn&quot;:{
+                  &quot;pattern&quot;:&quot;^urn:vcloud:vdc:[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$&quot;,
+                  &quot;type&quot;:&quot;string&quot;
+                },
+                &quot;vApps&quot;:{
+                  &quot;items&quot;:{
+                    &quot;description&quot;:&quot;A virtual app (vApp)&quot;,
+                    &quot;properties&quot;:{
+                      &quot;VMs&quot;:{
+                        &quot;items&quot;:{
+                          &quot;description&quot;:&quot;A virtual machine (VM)&quot;,
+                          &quot;properties&quot;:{
+                            &quot;_id&quot;:{
+                              &quot;type&quot;:&quot;integer&quot;
+                            },
+                            &quot;billedHoursPoweredOff&quot;:{
+                              &quot;description&quot;:&quot;The number of hours the virtual machine has been powered off this month, as used in the billing calculation.&quot;,
+                              &quot;minimum&quot;:0,
+                              &quot;type&quot;:&quot;integer&quot;
+                            },
+                            &quot;billedHoursPoweredOn&quot;:{
+                              &quot;description&quot;:&quot;The number of hours the virtual machine has been powered on this month, as used in the billing calculation.&quot;,
+                              &quot;minimum&quot;:0,
+                              &quot;type&quot;:&quot;integer&quot;
+                            },
+                            &quot;estimatedMonthlyTotal&quot;:{
+                              &quot;anyOf&quot;:[
+                                {
+                                  &quot;pattern&quot;:&quot;^\\d+\\.\\d{2}$&quot;,
+                                  &quot;type&quot;:&quot;string&quot;
+                                },
+                                {
+                                  &quot;type&quot;:&quot;null&quot;
+                                }
+                              ],
+                              &quot;description&quot;:&quot;The estimated cost of the virtual machine for this month. In pound sterling (GBP \u00a3). Will be null at the beginning of the month.&quot;
+                            },
+                            &quot;memory&quot;:{
+                              &quot;description&quot;:&quot;The amount of memory allocated to the virtual machine in MiB (1MiB = 1024KiB = 1024 \u2715 1024B).&quot;,
+                              &quot;minimum&quot;:0,
+                              &quot;type&quot;:&quot;integer&quot;
+                            },
+                            &quot;monthToDate&quot;:{
+                              &quot;description&quot;:&quot;The cost of the virtual machine so far this month. In pound sterling (GBP \u00a3).&quot;,
+                              &quot;pattern&quot;:&quot;^\\d+\\.\\d{2}$&quot;,
+                              &quot;type&quot;:&quot;string&quot;
+                            },
+                            &quot;name&quot;:{
+                              &quot;type&quot;:&quot;string&quot;
+                            },
+                            &quot;numberOfCPUs&quot;:{
+                              &quot;type&quot;:&quot;integer&quot;
+                            },
+                            &quot;operatingSystem&quot;:{
+                              &quot;type&quot;:&quot;string&quot;
+                            },
+                            &quot;powerStatus&quot;:{
+                              &quot;enum&quot;:[
+                                &quot;POWERED_ON&quot;,
+                                &quot;POWERED_OFF&quot;,
+                                &quot;UNKNOWN&quot;
+                              ],
+                              &quot;type&quot;:&quot;string&quot;
+                            },
+                            &quot;storage&quot;:{
+                              &quot;description&quot;:&quot;The amount of storage allocated to the virtual machine.&quot;,
+                              &quot;minimum&quot;:0,
+                              &quot;type&quot;:&quot;integer&quot;
+                            },
+                            &quot;size&quot;:{
+                              &quot;description&quot;:&quot;The name of the virtual machine size.&quot;,
+                              &quot;oneOf&quot;:[
+                                {
+                                  &quot;enum&quot;:[
+                                    &quot;Micro&quot;,
+                                    &quot;Tiny&quot;,
+                                    &quot;Small&quot;,
+                                    &quot;Medium&quot;,
+                                    &quot;Medium High Memory&quot;,
+                                    &quot;Large&quot;,
+                                    &quot;Large High Memory&quot;,
+                                    &quot;Tier 1 App Small&quot;,
+                                    &quot;Tier 1 App Medium&quot;,
+                                    &quot;Tier 1 App Large&quot;
+                                  ],
+                                  &quot;type&quot;:&quot;string&quot;
+                                },
+                                {
+                                  &quot;type&quot;:&quot;null&quot;
+                                }
+                              ]
+                            },
+                            &quot;lastBackupStatus&quot;:{
+                              &quot;description&quot;:&quot;A description of the status of the last backup.&quot;,
+                              &quot;enum&quot;:[
+                                &quot;No data for last backup&quot;,
+                                &quot;Excluded from backup&quot;,
+                                &quot;Successful&quot;,
+                                &quot;Failed&quot;,
+                                &quot;Not in policy&quot;
+                              ],
+                              &quot;type&quot;:&quot;string&quot;
+                            },
+                            &quot;inBackup&quot;:{
+                              &quot;description&quot;:&quot;False if the virtual machine is excluded from backup.&quot;,
+                              &quot;type&quot;:&quot;boolean&quot;
+                            },
+                            &quot;lastBackup&quot;:{
+                              &quot;description&quot;:&quot;If there is a backup, a human-readable sentence containing its status and backupSlot.&quot;,
+                              &quot;oneOf&quot;:[
+                                {
+                                  &quot;pattern&quot;:&quot;^.+ on the night of: [0-9]{2}\/[0-9]{2}\/[0-9]{4}$&quot;,
+                                  &quot;type&quot;:&quot;string&quot;
+                                },
+                                {
+                                  &quot;enum&quot;:[
+                                    &quot;No backup&quot;
+                                  ],
+                                  &quot;type&quot;:&quot;string&quot;
+                                }
+                              ]
+                            },
+                            &quot;retentionLength&quot;:{
+                              &quot;description&quot;:&quot;Number of days for which the backup will be retained.&quot;,
+                              &quot;type&quot;:&quot;integer&quot;
+                            },
+                            &quot;urn&quot;:{
+                              &quot;pattern&quot;:&quot;^urn:vcloud:vm:[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$&quot;,
+                              &quot;type&quot;:&quot;string&quot;
+                            },
+                            &quot;backups&quot;:{
+                              &quot;items&quot;:{
+                                &quot;properties&quot;:{
+                                  &quot;status&quot;:{
+                                    &quot;description&quot;:&quot;The final status of the backup. Possible values include 'Completed', 'Completed w/Exception(s)', and 'Failed'&quot;,
+                                    &quot;type&quot;:&quot;string&quot;
+                                  },
+                                  &quot;backupSlot&quot;:{
+                                    &quot;description&quot;:&quot;Human-readable description of the date and approximate time slot for the backup.&quot;,
+                                    &quot;pattern&quot;:&quot;^night of: [0-9]{2}\/[0-9]{2}\/[0-9]{4}$&quot;,
+                                    &quot;type&quot;:&quot;string&quot;
+                                  },
+                                  &quot;backupStart&quot;:{
+                                    &quot;description&quot;:&quot;The date and time the backup started.&quot;,
+                                    &quot;oneOf&quot;:[
+                                      {
+                                        &quot;pattern&quot;:&quot;^[0-9]{2}\/[0-9]{2}\/[0-9]{4} [0-2][0-9]:[0-5][0-9]$&quot;,
+                                        &quot;type&quot;:&quot;string&quot;
+                                      },
+                                      {
+                                        &quot;type&quot;:&quot;null&quot;
+                                      }
+                                    ]
+                                  },
+                                  &quot;backupEnd&quot;:{
+                                    &quot;description&quot;:&quot;The date and time the backup ended.&quot;,
+                                    &quot;oneOf&quot;:[
+                                      {
+                                        &quot;pattern&quot;:&quot;^[0-9]{2}\/[0-9]{2}\/[0-9]{4} [0-2][0-9]:[0-5][0-9]$&quot;,
+                                        &quot;type&quot;:&quot;string&quot;
+                                      },
+                                      {
+                                        &quot;type&quot;:&quot;null&quot;
+                                      }
+                                    ]
+                                  },
+                                  &quot;snapshotRemovalStart&quot;:{
+                                    &quot;description&quot;:&quot;The date and time the VM's hard disk drive was stunned for consolidation.&quot;,
+                                    &quot;oneOf&quot;:[
+                                      {
+                                        &quot;pattern&quot;:&quot;^[0-9]{2}\/[0-9]{2}\/[0-9]{4} [0-2][0-9]:[0-5][0-9]$&quot;,
+                                        &quot;type&quot;:&quot;string&quot;
+                                      },
+                                      {
+                                        &quot;type&quot;:&quot;null&quot;
+                                      }
+                                    ]
+                                  },
+                                  &quot;snapshotRemovalEnd&quot;:{
+                                    &quot;description&quot;:&quot;The date and time the VM's hard disk drive returned to normal service.&quot;,
+                                    &quot;oneOf&quot;:[
+                                      {
+                                        &quot;pattern&quot;:&quot;^[0-9]{2}\/[0-9]{2}\/[0-9]{4} [0-2][0-9]:[0-5][0-9]$&quot;,
+                                        &quot;type&quot;:&quot;string&quot;
+                                      },
+                                      {
+                                        &quot;type&quot;:&quot;null&quot;
+                                      }
+                                    ]
+                                  }
+                                },
+                                &quot;required&quot;:[
+                                  &quot;status&quot;,
+                                  &quot;backupSlot&quot;,
+                                  &quot;backupStart&quot;,
+                                  &quot;backupEnd&quot;,
+                                  &quot;snapshotRemovalStart&quot;,
+                                  &quot;snapshotRemovalEnd&quot;
+                                ],
+                                &quot;type&quot;:&quot;object&quot;
+                              },
+                              &quot;type&quot;:&quot;array&quot;
+                            }
+                          },
+                          &quot;required&quot;:[
+                            &quot;_id&quot;,
+                            &quot;name&quot;,
+                            &quot;urn&quot;,
+                            &quot;monthToDate&quot;,
+                            &quot;estimatedMonthlyTotal&quot;,
+                            &quot;billedHoursPoweredOn&quot;,
+                            &quot;billedHoursPoweredOff&quot;,
+                            &quot;powerStatus&quot;,
+                            &quot;operatingSystem&quot;,
+                            &quot;numberOfCPUs&quot;,
+                            &quot;memory&quot;,
+                            &quot;storage&quot;,
+                            &quot;size&quot;,
+                            &quot;lastBackupStatus&quot;,
+                            &quot;inBackup&quot;,
+                            &quot;lastBackup&quot;,
+                            &quot;retentionLength&quot;,
+                            &quot;backups&quot;
+                          ],
+                          &quot;type&quot;:&quot;object&quot;
+                        },
+                        &quot;type&quot;:&quot;array&quot;
+                      },
+                      &quot;name&quot;:{
+                        &quot;type&quot;:&quot;string&quot;
+                      },
+                      &quot;urn&quot;:{
+                        &quot;pattern&quot;:&quot;^urn:vcloud:vapp:[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$&quot;,
+                        &quot;type&quot;:&quot;string&quot;
+                      }
+                    },
+                    &quot;required&quot;:[
+                      &quot;name&quot;,
+                      &quot;VMs&quot;,
+                      &quot;urn&quot;
+                    ],
+                    &quot;type&quot;:&quot;object&quot;
+                  },
+                  &quot;type&quot;:&quot;array&quot;
+                }
+              },
+              &quot;required&quot;:[
+                &quot;name&quot;,
+                &quot;vApps&quot;,
+                &quot;urn&quot;
+              ],
+              &quot;type&quot;:&quot;object&quot;
+            },
+            &quot;type&quot;:&quot;array&quot;
+          },
+          &quot;name&quot;:{
+            &quot;type&quot;:&quot;string&quot;
+          },
+          &quot;serviceId&quot;:{
+            &quot;pattern&quot;:&quot;^\\d+-\\d+-\\d+-[a-zA-Z0-9]{5,6}$&quot;,
+            &quot;type&quot;:&quot;string&quot;
+          },
+          &quot;urn&quot;:{
+            &quot;pattern&quot;:&quot;^urn:vcloud:org:[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$&quot;,
+            &quot;type&quot;:&quot;string&quot;
+          }
+        },
+        &quot;required&quot;:[
+          &quot;name&quot;,
+          &quot;VDCs&quot;,
+          &quot;serviceId&quot;,
+          &quot;urn&quot;
+        ],
+        &quot;type&quot;:&quot;object&quot;
+      },
+      &quot;type&quot;:&quot;array&quot;
+    }
+  },
+  &quot;required&quot;:[
+    &quot;account&quot;,
+    &quot;vOrgs&quot;
+  ],
+  &quot;title&quot;:&quot;GET /api/accounts/:account_id/compute_services&quot;,
+  &quot;type&quot;:&quot;object&quot;
+}
+</code></pre>
+<h2 id="get-apiaccountsaccount_idcompute_servicesvorg_id">GET /api/accounts/:account_id/compute_services/:vorg_id</h2>
+<p>Returns information about the VDCs, vApps and VMs associated with the specified compute service (vOrg).</p>
+<h3 id="api-version-15">API version</h3>
+<p>v1</p>
+<h3 id="request-15">Request</h3>
+<h4 id="request-body-15">Request body</h4>
+<p>None</p>
+<h4 id="parameters-15">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-15">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_id</td>
+<td>The ID of your account</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>vorg_id</td>
+<td>The ID of the vOrg about which you want to retrieve information</td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p>For information about how to find the vOrg ID, see <a href="#get-apiaccountsaccount_idvorgs"><em>GET /api/accounts/:account_id/vorgs</em></a></p>
+<h4 id="example-request-curl-15">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/compute_services/12
+</code></pre>
+<h3 id="response-15">Response</h3>
+<h4 id="successful-http-response-15">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-15">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
+<p>404 Not Found --- The vOrg does not exist in the specified account</p>
+<h4 id="response-body-15">Response body</h4>
+<p>Returns a list of VDCs, vApps and VMs.</p>
+<h4 id="example-response-7">Example response</h4>
+<pre><code>{&quot;compute_service_id&quot;: 12,
+  &quot;name&quot;: &quot;Example Service Name&quot;,
+  &quot;serviceId&quot;: &quot;Service ID&quot;,
+  &quot;urn&quot;: &quot;urn&quot;,
+  &quot;VDCs&quot;: [
+    {
+      &quot;name&quot;: &quot;Example VDC Name (IL2-PROD)&quot;,
+      &quot;urn&quot;: &quot;urn&quot;,
+      &quot;vApps&quot;: [
+        {
+          &quot;name&quot;: &quot;Example vAPP name&quot;,
+          &quot;urn&quot;: &quot;urn&quot;,
+          &quot;VMs&quot;: [
+            {
+              &quot;_id&quot;: VM ID,
+              &quot;name&quot;: &quot;testVm&quot;,
+              &quot;urn&quot;: &quot;urn&quot;,
+              &quot;size&quot;: null,
+              &quot;monthToDate&quot;: &quot;0.00&quot;,
+              &quot;estimatedMonthlyTotal&quot;: &quot;0.00&quot;,
+              &quot;billedHoursPoweredOn&quot;: 0,
+              &quot;billedHoursPoweredOff&quot;: 0,
+              &quot;powerStatus&quot;: &quot;POWERED_ON&quot;,
+              &quot;operatingSystem&quot;: &quot;Ubuntu&quot;,
+              &quot;numberOfCPUs&quot;: 1,
+              &quot;memory&quot;: 512,
+              &quot;storage&quot;: 1024,
+              &quot;lastBackupStatus&quot;: &quot;Excluded from backup&quot;,
+              &quot;inBackup&quot;: false,
+              &quot;lastBackup&quot;: &quot;No backup&quot;,
+              &quot;retentionLength&quot;: 0,
+              &quot;backups&quot;: []
+            }
+          ]
+        },
+      ]
+      },
+  ]
+}
+</code></pre>
+<h2 id="get-apiaccountsaccount_idapi_credentials">GET /api/accounts/:account_id/api_credentials</h2>
+<p>Returns a list of vCloud API credentials associated with the specified account.</p>
+<h3 id="api-version-16">API version</h3>
+<p>v1</p>
+<h3 id="request-16">Request</h3>
+<h4 id="request-body-16">Request body</h4>
+<p>None</p>
+<h4 id="parameters-16">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-16">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_id</td>
+<td>The ID of your account</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-16">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H \'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/api_credentials
+</code></pre>
+<h4 id="example-request-ruby-15">Example request (Ruby)</h4>
+<pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/api_credentials&quot;) { |req| req.headers['cookie'] = cookies }
+</code></pre>
+<h3 id="response-16">Response</h3>
+<h4 id="successful-http-response-16">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-16">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
+<h4 id="response-body-16">Response body</h4>
+<p>Returns an array of vCloud Director API credentials.</p>
+<h4 id="example-response-8">Example response</h4>
+<pre><code>{
+  &quot;UKCloud Demo (1-1-1-9836cf)&quot;: {
+    &quot;service_id&quot;: &quot;1-1-1-9836cf&quot;,
+    &quot;username&quot;: &quot;11.12.132f4c@1-1-1-9836cf&quot;
+  },
+  &quot;UKCloud Test (1-1-2-883623)&quot;: {
+    &quot;service_id&quot;: &quot;1-1-2-883623&quot;,
+    &quot;username&quot;: &quot;11.12.132f4c@1-1-2-883623&quot;
+  }
+}
+</code></pre>
+<h3 id="json-schema-2">JSON schema</h3>
+<pre><code>{
+  &quot;description&quot;:&quot;The vCloud Director API credentials for a given account&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;patternProperties&quot;: {
+    &quot;^.*\\(\\d+-\\d+-\\d+-[a-zA-Z0-9]{5,6}\\)$&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;service_id&quot;: {
+          &quot;pattern&quot;:&quot;^\\d+-\\d+-\\d+-[a-zA-Z0-9]{5,6}$&quot;,
+          &quot;type&quot;:&quot;string&quot;
+        },
+        &quot;username&quot;: {
+          &quot;pattern&quot;:&quot;^\\d+.\\d+.[a-zA-Z0-9]{6}@\\d+-\\d+-\\d+-[a-zA-Z0-9]{5,6}$&quot;,
+          &quot;type&quot;:&quot;string&quot;
+        }
+      },
+      &quot;required&quot;: [&quot;service_id&quot;, &quot;username&quot;]
+    }
+  }
+}
+</code></pre>
+<h2 id="get-apiaccountsaccount_idvorgs">GET /api/accounts/:account_id/vorgs</h2>
+<p>Returns a list of basic information about VMware compute services (vOrgs) associated with the specified account.</p>
+<h3 id="api-version-17">API version</h3>
+<p>v1</p>
+<h3 id="request-17">Request</h3>
+<h4 id="request-body-17">Request body</h4>
+<p>None</p>
+<h4 id="parameters-17">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-17">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_id</td>
+<td>The ID of your account</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-17">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs
+</code></pre>
+<h4 id="example-request-ruby-16">Example request (Ruby)</h4>
+<pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/vorgs&quot;) { |req| req.headers['cookie'] = cookies }
+</code></pre>
+<h3 id="response-17">Response</h3>
+<h4 id="successful-http-response-17">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-17">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
+<h4 id="response-body-17">Response body</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>The ID of the compute service</td>
+<td>42-56</td>
+</tr>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>vOrg</td>
+<td> </td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the compute service</td>
+<td>Proof of Concept</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-response-9">Example response</h4>
+<pre><code>{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;42-56&quot;,
+            &quot;type&quot;: &quot;vOrg&quot;,
+            &quot;attributes&quot;: {
+                &quot;name&quot;: &quot;Proof of Concept&quot;
+            }
+        },
+        {
+            &quot;id&quot;: &quot;42-57&quot;,
+            &quot;type&quot;: &quot;vOrg&quot;,
+            &quot;attributes&quot;: {
+                &quot;name&quot;: &quot;Second vOrg&quot;
+            }
+        }
+    ]
+}
+</code></pre>
+<h3 id="json-schema-3">JSON schema</h3>
+<pre><code>{
+    &quot;title&quot;:&quot;GET /api/accounts/:account_id/vorgs&quot;,
+    &quot;description&quot;:&quot;The vOrgs within your account&quot;,
+    &quot;oneOf&quot;: [
+        {
+            &quot;$ref&quot;: &quot;#/definitions/success&quot;
+        },
+        {
+            &quot;$ref&quot;: &quot;#/definitions/failure&quot;
+        }
+    ],
+    &quot;definitions&quot;: {
+        &quot;success&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;required&quot;: [
+                &quot;data&quot;
+            ],
+            &quot;properties&quot;: {
+                &quot;data&quot;: {
+                    &quot;$ref&quot;: &quot;#/definitions/data&quot;
+                }
+            }
+        },
+        &quot;failure&quot;: {
+            &quot;$ref&quot;: &quot;#/definitions/error&quot;
+        },
+        &quot;data&quot;:{
+            &quot;type&quot;:&quot;array&quot;,
+            &quot;items&quot;:{
+                &quot;title&quot;:&quot;vOrgs&quot;,
+                &quot;type&quot;:&quot;object&quot;,
+                &quot;properties&quot;:{
+                    &quot;id&quot;:{
+                        &quot;type&quot;:&quot;string&quot;,
+                        &quot;pattern&quot;:&quot;^\\d+-\\d+$&quot;
+                    },
+                    &quot;type&quot;:{
+                        &quot;type&quot;:&quot;string&quot;,
+                        &quot;enum&quot;:[&quot;vOrg&quot;]
+                    },
+                    &quot;attributes&quot;:{
+                        &quot;type&quot;: &quot;object&quot;,
+                        &quot;properties&quot;:{
+                            &quot;name&quot;: {
+                                &quot;type&quot;:&quot;string&quot;
+                            }
+                        },
+                        &quot;required&quot;:[
+                            &quot;name&quot;
+                        ]
+                    }
+                },
+                &quot;required&quot;:[
+                    &quot;id&quot;,
+                    &quot;type&quot;,
+                    &quot;attributes&quot;
+                ]
+            }
+        },
+        &quot;error&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+                &quot;error&quot;: {
+                    &quot;description&quot;: &quot;A short, human-readable summary of the problem.&quot;,
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;detail&quot;: {
+                    &quot;description&quot;: &quot;A human-readable explanation of the problem.&quot;,
+                    &quot;type&quot;: &quot;string&quot;
+                }
+            },
+            &quot;required&quot;:[
+                &quot;error&quot;
+            ]
+        }
+    }
+}
+</code></pre>
+<h2 id="post-apiaccountsaccount_idvorgs">POST /api/accounts/:account_id/vorgs</h2>
+<p>Creates a vOrg in the specified account in the specified zone.</p>
+<p>The authenticated user who creates the vOrg is automatically granted full administrative control of the compute service, enabling creation of VDCs and edge gateways immediately via the Portal API.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This API endpoint is available only in Regions 5 and 6 (for information about regions, see <a href="../other/other-ref-sites-regions-zones.md"><em>Understanding sites, regions and zones</em></a>).</p>
+</div>
+<h3 id="api-version-18">API version</h3>
+<p>v1</p>
+<h3 id="request-18">Request</h3>
+<h4 id="request-body-18">Request body</h4>
+<pre><code>{&quot;data&quot;: {&quot;type&quot;: &quot;Vorg&quot;, &quot;attributes&quot;: {&quot;zoneId&quot;: &quot;B&quot;, &quot;name&quot;: &quot;DEMO&quot;}}}
+</code></pre>
+<h4 id="parameters-18">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>The object type; must be Vorg</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>name</td>
+<td>The name of the vOrg</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>zone id</td>
+<td>The zone in which to create the vOrg<br>Valid values:</br>- B (for Region 5, Assured)<br>- D (for Region 5, Elevated)</br>- F (for Region 6, Assured)<br>- 12 (for Region 6, Elevated)</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="uri-parameters-18">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_id</td>
+<td>The ID of your account</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-18">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs -X POST -d '{&quot;data&quot;: {&quot;type&quot;: &quot;Vorg&quot;, &quot;attributes&quot;: {&quot;zoneId&quot;: &quot;B&quot;, &quot;name&quot;: &quot;DEMO&quot;}}}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+</code></pre>
+<h3 id="response-18">Response</h3>
+<h4 id="successful-http-response-18">Successful HTTP response</h4>
+<p>202 Accepted --- Includes a location header (for example Location: /api/vorg-builds/10)</p>
+<h4 id="unsuccessful-http-response-18">Unsuccessful HTTP response</h4>
+<p>400 Invalid --- The data uploaded does not match the expected schema or there is a validation problem</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>403 Forbidden --- The user is not an administrator for the account</p>
+<p>404 Not Found --- The user does not have access to the account or the account does not exist</p>
+<p>500 Server Error --- There was a problem creating the vOrg in the specified zone, either because the specified zone was not valid or because of a problem with UKCloud's systems</p>
+<h4 id="response-body-18">Response body</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>Vorg-build</td>
+<td> </td>
+</tr>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>The unique identifier of the build</td>
+<td>10</td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td>Date</td>
+<td>The date and time when the build was created</td>
+<td>2016-07-08T10:42:14+01:00</td>
+</tr>
+<tr>
+<td>createdBy</td>
+<td>String</td>
+<td>The user who created the build</td>
+<td>auser@example. com</td>
+</tr>
+<tr>
+<td>state</td>
+<td>String</td>
+<td>The state of the build<br>Valid values:</br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created</br>- completed -- vOrg has been successfully created<br>-   failed -- vOrg creation has failed (raise a Service Request to resolve and rerun)</td>
+<td> </td>
+</tr>
+<tr>
+<td>serviceName</td>
+<td>String</td>
+<td>The name of the vOrg (as specified in the build request)</td>
+<td>My compute service</td>
+</tr>
+<tr>
+<td>zoneId</td>
+<td>String</td>
+<td>The zone in which the vOrg is located (as specified in the build request)</td>
+<td>B</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-response-10">Example response</h3>
+<pre><code>{
+  &quot;data&quot;:{
+    &quot;type&quot;: &quot;Vorg-build&quot;,
+    &quot;id&quot;: &quot;10&quot;,
+    &quot;attributes&quot;:{
+      &quot;createdAt&quot;: &quot;2016-07-08T10:42:14+01:00&quot;,
+      &quot;createdBy&quot;: &quot;auser@example.com&quot;,
+      &quot;state&quot;: &quot;approved&quot;,
+      &quot;serviceName&quot;: &quot;My Compute Service&quot;,
+      &quot;zoneId&quot;: &quot;B&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="json-schema-4">JSON schema</h3>
+<pre><code>{
+  &quot;title&quot;: &quot;vOrg-build&quot;,
+  &quot;description&quot;: &quot;Progress of a Vorg-build&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;data&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;type&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;Vorg-build&quot;
+          ]
+        },
+        &quot;id&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;pattern&quot;: &quot;^[0-9]+$&quot;
+        },
+        &quot;attributes&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;createdAt&quot;: {
+              &quot;description&quot;: &quot;When the request for the build was received by the Portal.&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;format&quot;: &quot;date-time&quot;
+            },
+            &quot;createdBy&quot;: {
+              &quot;description&quot;: &quot;The email address of the user to request the build from the Portal.&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;format&quot;: &quot;email&quot;
+            },
+            &quot;state&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;enum&quot;: [
+                &quot;approved&quot;,
+                &quot;running&quot;,
+                &quot;completed&quot;,
+                &quot;failed&quot;
+              ]
+            },
+            &quot;serviceName&quot;: {
+              &quot;description&quot;: &quot;The name that was submitted for the compute service as part of the build request.&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            &quot;zoneId&quot;: {
+              &quot;description&quot;: &quot;The zone in which the vOrg was requested to be built&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;pattern&quot;: &quot;^[A-F0-9]+$&quot;
+            }
+          },
+          &quot;required&quot;: [
+            &quot;createdAt&quot;,
+            &quot;createdBy&quot;,
+            &quot;state&quot;,
+            &quot;serviceName&quot;,
+            &quot;zoneId&quot;
+          ]
+        }
+      },
+      &quot;required&quot;: [
+
+</code></pre>
+<h2 id="get-apivorg-buildsbuild_id">GET /api/vorg-builds/:build_id</h2>
+<p>Returns information about the progress of a specific vOrg build.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This API endpoint is available only in Region 5 and 6 (for information about regions, see <a href="../other/other-ref-sites-regions-zones.md"><em>Understanding sites, regions and zones</em></a>).</p>
+</div>
+<h3 id="api-version-19">API version</h3>
+<p>v1</p>
+<h3 id="request-19">Request</h3>
+<h4 id="request-body-19">Request body</h4>
+<p>None</p>
+<h4 id="uri-parameters-19">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>build_id</td>
+<td>The unique ID of the vOrg build</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request">Example request</h4>
+<pre><code>curl -b /tmp/cookies.txt -H 'Accept: application/json' --H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/vorg-builds/10 -X GET
+</code></pre>
+<h3 id="response-19">Response</h3>
+<h4 id="successful-http-response-19">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-19">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>404 Not Found --- The vOrg build could not be found or the user does not have access to the vOrg build</p>
+<h4 id="response-body-19">Response body</h4>
+<p>Attribute | Type | Value | Example
+type | String | Vorg-build |  
+id | String | The unique identifier of the build | 10
+createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
+createdBy | String | The user who created the build | auser@example.com
+state | String | The state of the build<br>Valid values:</br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created</br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) |  
+serviceName | String | The name of the vOrg (as specified in the build request) | My compute service
+zoneId | String | The zone in which the vOrg is located (as specified in the build request) | B</p>
+<h4 id="example-response-11">Example response</h4>
+<pre><code>{
+  &quot;data&quot;:{
+    &quot;type&quot;: &quot;Vorg-build&quot;,
+    &quot;id&quot;: &quot;10&quot;,
+    &quot;attributes&quot;:{
+      &quot;createdAt&quot;: &quot;2016-07-08T10:42:14+01:00&quot;,
+      &quot;createdBy&quot;: &quot;auser@example.com&quot;,
+      &quot;state&quot;: &quot;approved&quot;,
+      &quot;serviceName&quot;: &quot;My Compute Service&quot;,
+      &quot;zoneId&quot;: &quot;B&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="json-schema-5">JSON schema</h3>
+<pre><code>{
+  &quot;title&quot;: &quot;vOrg-build&quot;,
+  &quot;description&quot;: &quot;Progress of a Vorg-build&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;data&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;type&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;Vorg-build&quot;
+          ]
+        },
+        &quot;id&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;pattern&quot;: &quot;^[0-9]+$&quot;
+        },
+        &quot;attributes&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;createdAt&quot;: {
+              &quot;description&quot;: &quot;When the request for the build was received by the Portal.&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;format&quot;: &quot;date-time&quot;
+            },
+            &quot;createdBy&quot;: {
+              &quot;description&quot;: &quot;The email address of the user to request the build from the Portal.&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;format&quot;: &quot;email&quot;
+            },
+            &quot;state&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;enum&quot;: [
+                &quot;approved&quot;,
+                &quot;running&quot;,
+                &quot;completed&quot;,
+                &quot;failed&quot;
+              ]
+            },
+            &quot;serviceName&quot;: {
+              &quot;description&quot;: &quot;The name that was submitted for the compute service as part of the build request.&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            &quot;zoneId&quot;: {
+              &quot;description&quot;: &quot;The zone in which the vOrg was requested to be built&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;pattern&quot;: &quot;^[A-F0-9]+$&quot;
+            }
+          },
+          &quot;required&quot;: [
+            &quot;createdAt&quot;,
+            &quot;createdBy&quot;,
+            &quot;state&quot;,
+            &quot;serviceName&quot;,
+            &quot;zoneId&quot;
+          ]
+        }
+      },
+      &quot;required&quot;: [
+        &quot;type&quot;,
+        &quot;attributes&quot;,
+        &quot;id&quot;
+      ]
+    }
+  },
+  &quot;required&quot;: [
+    &quot;data&quot;
+  ]
+}
+</code></pre>
+<h2 id="get-apiaccountsaccount_idvorg-builds">GET /api/accounts/:account_id/vorg-builds</h2>
+<p>Returns information about all self-service vOrg builds for an account.</p>
+<h3 id="api-version-20">API version</h3>
+<p>v1</p>
+<h3 id="request-20">Request</h3>
+<h4 id="request-body-20">Request body</h4>
+<p>None</p>
+<h4 id="uri-parameters-20">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_id</td>
+<td>The ID of your account</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-19">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorg-builds
+</code></pre>
+<h4 id="example-request-ruby-17">Example request (Ruby)</h4>
+<pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/vorg-builds&quot;) {|req| Req.headers['cookie'] = cookies }
+</code></pre>
+<h3 id="response-20">Response</h3>
+<h4 id="successful-http-response-20">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-20">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
+<h4 id="response-body-20">Response body</h4>
+<p>Returns an array of vOrg builds</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>Vorg-build</td>
+<td> </td>
+</tr>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>The unique identifier of the build</td>
+<td>10</td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td>Date</td>
+<td>The date and time when the build was created</td>
+<td>2016-07-08T10:42:14+01:00</td>
+</tr>
+<tr>
+<td>createdBy</td>
+<td>String</td>
+<td>The user who created the build</td>
+<td>auser@example.com</td>
+</tr>
+<tr>
+<td>state</td>
+<td>String</td>
+<td>The state of the build<br>Valid values:</br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created</br>- completed -- vOrg has been successfully created<br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun)</td>
+<td> </td>
+</tr>
+<tr>
+<td>serviceName</td>
+<td>String</td>
+<td>The name of the vOrg (as specified in the build request)</td>
+<td>My compute service</td>
+</tr>
+<tr>
+<td>zoneId</td>
+<td>String</td>
+<td>The zone in which the vOrg is located (as specified in the build request)</td>
+<td>B</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-response-12">Example response</h4>
+<pre><code>{
+  &quot;data&quot;: [
+    {
+      &quot;type&quot;: &quot;Vorg-build&quot;,
+      &quot;id&quot;: &quot;10&quot;,
+      &quot;attributes&quot;:{
+        &quot;createdAt&quot;: &quot;2016-07-08T10:42:14+01:00&quot;,
+        &quot;createdBy&quot;: &quot;auser@example.com&quot;,
+        &quot;state&quot;: &quot;approved&quot;,
+        &quot;serviceName&quot;: &quot;My Compute Service&quot;,
+        &quot;zoneId&quot;: &quot;B&quot;
+      }
+    },
+    {
+      &quot;type&quot;: &quot;Vorg-build&quot;,
+      &quot;id&quot;: &quot;11&quot;,
+      &quot;attributes&quot;:{
+        &quot;createdAt&quot;: &quot;2016-07-09T10:42:14+01:00&quot;,
+        &quot;createdBy&quot;: &quot;auser@example.com&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;serviceName&quot;: &quot;My Compute Service&quot;,
+        &quot;zoneId&quot;: &quot;B&quot;
+
+      }
+    }
+    ...
+  ]
+}
+</code></pre>
+<h3 id="json-schema-6">JSON schema</h3>
+<pre><code>{
+  &quot;title&quot;: &quot;GET /api/accounts/:account_id/vorg-builds&quot;,
+  &quot;description&quot;: &quot;The vOrg builds within this account&quot;,
+  &quot;oneOf&quot;: [
+    {
+      &quot;$ref&quot;: &quot;#/definitions/success&quot;
+    },
+    {
+      &quot;$ref&quot;: &quot;#/definitions/failure&quot;
+    }
+  ],
+  &quot;definitions&quot;: {
+    &quot;success&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [
+        &quot;data&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;data&quot;: {
+          &quot;$ref&quot;: &quot;#/definitions/data&quot;
+        }
+      }
+    },
+    &quot;failure&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/error&quot;
+    },
+    &quot;data&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;type&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;enum&quot;: [
+              &quot;Vorg-build&quot;
+            ]
+          },
+          &quot;id&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;pattern&quot;: &quot;^[0-9]+$&quot;
+          },
+          &quot;attributes&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;createdAt&quot;: {
+                &quot;description&quot;: &quot;When the request for the build was received by the Portal.&quot;,
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;format&quot;: &quot;date-time&quot;
+              },
+              &quot;createdBy&quot;: {
+                &quot;description&quot;: &quot;The email address of the user to request the build from the Portal.&quot;,
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;format&quot;: &quot;email&quot;
+              },
+              &quot;state&quot;: {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;enum&quot;: [
+                  &quot;approved&quot;,
+                  &quot;running&quot;,
+                  &quot;completed&quot;,
+                  &quot;failed&quot;
+                ]
+              },
+              &quot;serviceName&quot;: {
+                &quot;description&quot;: &quot;The name that was submitted for the compute service as part of the build request.&quot;,
+                &quot;type&quot;: &quot;string&quot;
+              },
+              &quot;zoneId&quot;: {
+                &quot;description&quot;: &quot;The zone in which the vOrg was requested to be built&quot;,
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;pattern&quot;: &quot;^[A-F0-9]+$&quot;
+              }
+            },
+            &quot;required&quot;: [
+              &quot;createdAt&quot;,
+              &quot;createdBy&quot;,
+              &quot;state&quot;,
+              &quot;serviceName&quot;,
+              &quot;zoneId&quot;
+            ]
+          }
+        },
+        &quot;required&quot;: [
+          &quot;type&quot;,
+          &quot;attributes&quot;,
+          &quot;id&quot;
+        ]
+      }
+    },
+    &quot;error&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;error&quot;: {
+          &quot;description&quot;: &quot;A short, human-readable summary of the problem.&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;detail&quot;: {
+          &quot;description&quot;: &quot;A human-readable explanation of the problem.&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        }
+      },
+      &quot;required&quot;: [
+        &quot;error&quot;
+      ]
+    }
+  }
+}
+</code></pre>
+<h2 id="get-apiaccountsaccount_idvorgsvorg_idvdcs">GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs</h2>
+<p>Returns a list of basic information about the virtual data centres (VDCs) in the specified account under the specified vOrg.</p>
+<h3 id="api-version-21">API version</h3>
+<p>v1</p>
+<h3 id="request-21">Request</h3>
+<h4 id="request-body-21">Request body</h4>
+<p>None</p>
+<h4 id="parameters-19">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-21">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_id</td>
+<td>The ID of your account</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>vorg_id</td>
+<td>The ID of the vOrg in which the VDC resides</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-20">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs
+</code></pre>
+<h3 id="response-21">Response</h3>
+<h4 id="successful-http-response-21">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-21">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>403 Forbidden --- The user does not have permissions for the vOrg</p>
+<p>404 Not Found --- The user does not have access to the account, the account does not exist or the vOrg does not exist</p>
+<h4 id="response-body-21">Response body</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>The ID of the VDC</td>
+<td>53-12-3</td>
+</tr>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>VDC</td>
+<td> </td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the VDC</td>
+<td>My VDC</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-response-13">Example response</h4>
+<pre><code>{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;53-12-3&quot;,
+            &quot;type&quot;: &quot;VDC&quot;,
+            &quot;attributes&quot;: {
+                &quot;name&quot;: &quot;My VDC&quot;
+            }
+        },
+        {
+            &quot;id&quot;: &quot;53-12-5&quot;,
+            &quot;type&quot;: &quot;VDC&quot;,
+            &quot;attributes&quot;: {
+                &quot;name&quot;: &quot;My Second VDC&quot;
+            }
+        }
+    ]
+}
+</code></pre>
+<h3 id="json-schema-7">JSON schema</h3>
+<pre><code>{
+    &quot;title&quot;:&quot;GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs&quot;,
+    &quot;description&quot;:&quot;The VDCs within this vOrg&quot;,
+    &quot;oneOf&quot;: [
+        {
+            &quot;$ref&quot;: &quot;#/definitions/success&quot;
+        },
+        {
+            &quot;$ref&quot;: &quot;#/definitions/failure&quot;
+        }
+    ],
+    &quot;definitions&quot;: {
+        &quot;success&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;required&quot;: [
+                &quot;data&quot;
+            ],
+            &quot;properties&quot;: {
+                &quot;data&quot;: {
+                    &quot;$ref&quot;: &quot;#/definitions/data&quot;
+                }
+            }
+        },
+        &quot;failure&quot;: {
+            &quot;$ref&quot;: &quot;#/definitions/error&quot;
+        },
+        &quot;data&quot;:{
+            &quot;type&quot;:&quot;array&quot;,
+            &quot;items&quot;:{
+                &quot;title&quot;:&quot;VDCs&quot;,
+                &quot;type&quot;:&quot;object&quot;,
+                &quot;properties&quot;:{
+                    &quot;id&quot;:{
+                        &quot;type&quot;:&quot;string&quot;,
+                        &quot;pattern&quot;:&quot;^urn:vcloud:vdc:[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$&quot;
+                    },
+                    &quot;type&quot;:{
+                        &quot;type&quot;:&quot;string&quot;,
+                        &quot;enum&quot;:[&quot;VDC&quot;]
+                    },
+                    &quot;attributes&quot;:{
+                        &quot;type&quot;: &quot;object&quot;,
+                        &quot;properties&quot;:{
+                            &quot;name&quot;: {
+                                &quot;type&quot;:&quot;string&quot;
+                            }
+                        },
+                        &quot;required&quot;:[
+                            &quot;name&quot;
+                        ]
+                    }
+                },
+                &quot;required&quot;:[
+                    &quot;id&quot;,
+                    &quot;type&quot;,
+                    &quot;attributes&quot;
+                ]
+            }
+        },
+        &quot;error&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+                &quot;error&quot;: {
+                    &quot;description&quot;: &quot;A short, human-readable summary of the problem.&quot;,
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;detail&quot;: {
+                    &quot;description&quot;: &quot;A human-readable explanation of the problem.&quot;,
+                    &quot;type&quot;: &quot;string&quot;
+                }
+            },
+            &quot;required&quot;:[
+                &quot;error&quot;
+            ]
+        }
+    }
+}
+</code></pre>
+<h2 id="post-apiaccountsaccount_idvorgsvorg_idvdcs">POST /api/accounts/:account_id/vorgs/:vorg_id/vdcs</h2>
+<p>Creates a VDC in the specified account under the specified compute service (vOrg).</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This API endpoint is available only in Region 5 and 6 (for information about regions, see <a href="../other/other-ref-sites-regions-zones.md"><em>Understanding sites, regions and zones</em></a>).</p>
+</div>
+<h3 id="api-version-22">API version</h3>
+<p>v1</p>
+<h3 id="request-22">Request</h3>
+<h4 id="request-body-22">Request body</h4>
+<pre><code>{&quot;data&quot;: {&quot;type&quot;: &quot;VDC&quot;, &quot;attributes&quot;: {&quot;vmType&quot;: &quot;POWER&quot;, &quot;name&quot;: &quot;DEMO&quot;}}}
+</code></pre>
+<h4 id="parameters-20">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vmType</td>
+<td>The type of VM workloads used in the VDC<br>Valid values:</br>- POWER<br>- ESSENTIAL</br>- PRIORITY</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>name</td>
+<td>The name of the VDC<br>The name can be up to 32 characters long and can include any character except +</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="uri-parameters-22">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_id</td>
+<td>The ID of your account</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>vorg_id</td>
+<td>The ID of the vOrg in which you want to create the VDC</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-21">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs -X POST -d '{&quot;data&quot;: {&quot;type&quot;: &quot;VDC&quot;, &quot;attributes&quot;: {&quot;vmType&quot;: &quot;POWER&quot;, &quot;name&quot;: &quot;DEMO&quot;}}}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+</code></pre>
+<h3 id="response-22">Response</h3>
+<h4 id="successful-http-response-22">Successful HTTP response</h4>
+<p>202 Accepted --- Includes a location header (for example Location: /api/vdc-builds/10)</p>
+<h4 id="unsuccessful-http-response-22">Unsuccessful HTTP response</h4>
+<p>400 Invalid --- The data uploaded does not match the expected schema or there is a validation problem</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>403 Forbidden --- The user is not an administrator for the vOrg</p>
+<p>404 Not Found --- The VDC could not be found, the user does not have access to the account or the account does not exist</p>
+<h4 id="response-body-22">Response body</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>VDC-build</td>
+<td> </td>
+</tr>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>The unique identifier of the build</td>
+<td>10</td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td>Date</td>
+<td>The date and time when the build was created</td>
+<td>2016-07-08T10:42:14+01:00</td>
+</tr>
+<tr>
+<td>createdBy</td>
+<td>String</td>
+<td>The user who created the build</td>
+<td>auser@example.com</td>
+</tr>
+<tr>
+<td>state</td>
+<td>String</td>
+<td>The state of the build<br>Valid valudes:</br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun)</td>
+<td> </td>
+</tr>
+<tr>
+<td>vdcName</td>
+<td>String</td>
+<td>The name of the VDC (as specified in the build request)</td>
+<td>My VDC</td>
+</tr>
+<tr>
+<td>vmType</td>
+<td>String</td>
+<td>The type of VM workloads in the VDC (as specified in the build request)<br>Valid values:</br>- POWER<br>- ESSENTIAL</br>- PRIORITY</td>
+<td>POWER</td>
+</tr>
+<tr>
+<td>serviceName</td>
+<td>String</td>
+<td>The name of the vOrg to which the VDC belongs</td>
+<td>My Compute Service</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-response-14">Example response</h4>
+<pre><code>{
+  &quot;data&quot;:{
+    &quot;type&quot;: &quot;VDC-build&quot;,
+    &quot;id&quot;: &quot;10&quot;,
+    &quot;attributes&quot;:{
+      &quot;createdAt&quot;: &quot;2016-07-08T10:42:14+01:00&quot;,
+      &quot;createdBy&quot;: &quot;auser@example.com&quot;,
+      &quot;state&quot;: &quot;approved&quot;&quot;,
+      &quot;vdcName&quot;: &quot;My VDC&quot;,
+      &quot;vmType&quot;: &quot;POWER&quot;,
+      &quot;serviceName&quot;: &quot;My Compute Sercice&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="json-schema-8">JSON schema</h3>
+<pre><code>{
+  &quot;title&quot;: &quot;VDC-build&quot;,
+  &quot;description&quot;: &quot;Progress of a VDC-build&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;data&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;type&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;VDC-build&quot;
+          ]
+        },
+        &quot;id&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;pattern&quot;: &quot;^[0-9]+$&quot;
+        },
+        &quot;attributes&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;createdAt&quot;: {
+              &quot;description&quot;: &quot;When the request for the build was received by the Portal.&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;format&quot;: &quot;date-time&quot;
+            },
+            &quot;createdBy&quot;: {
+              &quot;description&quot;: &quot;The email address of the user to request the build from the Portal.&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;format&quot;: &quot;email&quot;
+            },
+            &quot;state&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;enum&quot;: [
+                &quot;approved&quot;,
+                &quot;running&quot;,
+                &quot;completed&quot;,
+                &quot;failed&quot;
+              ]
+            },
+            &quot;vdcName&quot;: {
+              &quot;description&quot;: &quot;The name that was submitted for the VDC as part of the build request.&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            &quot;vmType&quot;: {
+              &quot;description&quot;: &quot;The VM type that was submitted for the VDC as part of the build request.&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;enum&quot;: [
+                &quot;ESSENTIAL&quot;,
+                &quot;POWER&quot;,
+                &quot;PRIORITY&quot;
+              ]
+            },
+            &quot;serviceName&quot;: {
+              &quot;oneOf&quot;: [
+                { &quot;type&quot;: &quot;string&quot; },
+                { &quot;type&quot;: &quot;null&quot; }
+              ]
+            }
+          },
+          &quot;required&quot;: [
+            &quot;createdAt&quot;,
+            &quot;createdBy&quot;,
+            &quot;state&quot;,
+            &quot;vdcName&quot;,
+            &quot;vmType&quot;,
+            &quot;serviceName&quot;
+          ]
+        }
+      },
+      &quot;required&quot;: [
+        &quot;type&quot;,
+        &quot;attributes&quot;,
+        &quot;id&quot;
+      ]
+    }
+  },
+  &quot;required&quot;: [
+    &quot;data&quot;
+  ]
+}
+</code></pre>
+<h2 id="get-apivdc-buildsbuild_id">GET /api/vdc-builds/:build_id</h2>
+<p>Returns information about the progress of a specific VDC build.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This API endpoint is available only in Region 5 and 6 (for information about regions, see <a href="../other/other-ref-sites-regions-zones.md"><em>Understanding sites, regions and zones</em></a>).</p>
+</div>
+<h3 id="api-version-23">API version</h3>
+<p>v1</p>
+<h3 id="request-23">Request</h3>
+<h4 id="request-body-23">Request body</h4>
+<p>None</p>
+<h4 id="parameters-21">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-23">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>build_id</td>
+<td>The unique ID of the VDC build</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-22">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -H 'Accept: application/json' --H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/vdc-builds/10 -X GET
+</code></pre>
+<h3 id="response-23">Response</h3>
+<h4 id="successful-http-response-23">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-23">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>404 Not Found --- The VDC build cannot be found or the user does not have access to the VDC build</p>
+<h4 id="response-body-23">Response body</h4>
+<p>Attribute | Type | Value | Example
+type | String | VDC-build |  
+id | String | The unique identifier of the build | 10
+createdAt | Date | The date and time when the build was created    | 2016-07-08T10:42:14+01:00
+createdBy | String | The user who created the build | auser@example.com
+state | String | The state of the build<br>Valid values:</br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) |  
+vdcName | String | The name of the VDC (as specified in the build request) | My VDC
+vmType | String | The type of VM workloads used in the VDC (as specified in the build request)</br>Valid values:<br>- POWER</br>- ESSENTIAL<br>- PRIORITY  | POWER
+serviceName | String | The name of the vOrg to which the VDC belongs | My Compute Service</p>
+<h4 id="example-response-15">Example response</h4>
+<pre><code>{
+  &quot;data&quot;:{
+    &quot;type&quot;: &quot;VDC-build&quot;,
+    &quot;id&quot;: &quot;10&quot;,
+    &quot;attributes&quot;:{
+      &quot;createdAt&quot;: &quot;2016-07-08T10:42:14+01:00&quot;,
+      &quot;createdBy&quot;: &quot;auser@example.com&quot;,
+      &quot;state&quot;: &quot;completed&quot;,
+      &quot;vdcName&quot;: &quot;My VDC&quot;,
+      &quot;vmType&quot;: &quot;POWER&quot;,
+      &quot;serviceName&quot;: &quot;My Compute Service&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="json-schema-9">JSON schema</h3>
+<pre><code>{
+  &quot;title&quot;: &quot;VDC-build&quot;,
+  &quot;description&quot;: &quot;Progress of a VDC-build&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;data&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;type&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [
+            &quot;VDC-build&quot;
+          ]
+        },
+        &quot;id&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;pattern&quot;: &quot;^[0-9]+$&quot;
+        },
+        &quot;attributes&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;createdAt&quot;: {
+              &quot;description&quot;: &quot;When the request for the build was received by the Portal.&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;format&quot;: &quot;date-time&quot;
+            },
+            &quot;createdBy&quot;: {
+              &quot;description&quot;: &quot;The email address of the user to request the build from the Portal.&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;format&quot;: &quot;email&quot;
+            },
+            &quot;state&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;enum&quot;: [
+                &quot;approved&quot;,
+                &quot;running&quot;,
+                &quot;completed&quot;,
+                &quot;failed&quot;
+              ]
+            },
+            &quot;vdcName&quot;: {
+              &quot;description&quot;: &quot;The name that was submitted for the VDC as part of the build request.&quot;,
+              &quot;type&quot;: &quot;string&quot;
+            },
+            &quot;vmType&quot;: {
+              &quot;description&quot;: &quot;The VM type that was submitted for the VDC as part of the build request.&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;enum&quot;: [
+                &quot;ESSENTIAL&quot;,
+                &quot;POWER&quot;,
+                &quot;PRIORITY&quot;
+              ]
+            },
+            &quot;serviceName&quot;: {
+              &quot;oneOf&quot;: [
+                { &quot;type&quot;: &quot;string&quot; },
+                { &quot;type&quot;: &quot;null&quot; }
+              ]
+            }
+          },
+          &quot;required&quot;: [
+            &quot;createdAt&quot;,
+            &quot;createdBy&quot;,
+            &quot;state&quot;,
+            &quot;vdcName&quot;,
+            &quot;vmType&quot;,
+            &quot;serviceName&quot;
+          ]
+        }
+      },
+      &quot;required&quot;: [
+        &quot;type&quot;,
+        &quot;attributes&quot;,
+        &quot;id&quot;
+      ]
+    }
+  },
+  &quot;required&quot;: [
+    &quot;data&quot;
+  ]
+}
+</code></pre>
+<h2 id="get-apiaccountsaccount_idvdc-builds">GET /api/accounts/:account_id/vdc-builds</h2>
+<p>Returns information about all self-service VDC builds for an account.</p>
+<h3 id="api-version-24">API version</h3>
+<p>v1</p>
+<h3 id="request-24">Request</h3>
+<h4 id="request-body-24">Request body</h4>
+<p>None</p>
+<h4 id="uri-parameters-24">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_id</td>
+<td>The ID of your account</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-23">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vdc-builds
+</code></pre>
+<h4 id="example-request-ruby-18">Example request (Ruby)</h4>
+<pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/vdc-builds&quot;) {|req| Req.headers['cookie'] = cookies }
+</code></pre>
+<h3 id="response-24">Response</h3>
+<h4 id="successful-http-response-24">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-24">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
+<h4 id="response-body-24">Response body</h4>
+<p>Returns an array of VDC builds</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>VDC-build</td>
+<td> </td>
+</tr>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>The unique identifier of the build</td>
+<td>10</td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td>Date</td>
+<td>The date and time when the build was created</td>
+<td>2016-07-08T10:42:14+01:00</td>
+</tr>
+<tr>
+<td>createdBy</td>
+<td>String</td>
+<td>The user who created the build</td>
+<td>auser@example.com</td>
+</tr>
+<tr>
+<td>state</td>
+<td>String</td>
+<td>The state of the build<br>Valid values:</br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun)</td>
+<td> </td>
+</tr>
+<tr>
+<td>vdcName</td>
+<td>String</td>
+<td>The name of the VDC (as specified in the build request)</td>
+<td>My VDC</td>
+</tr>
+<tr>
+<td>vmType</td>
+<td>String</td>
+<td>The type of VM workloads used in the VDC (as specified in the build request)<br>Valid values:</br>- POWER<br>- ESSENTIAL</br>- PRIORITY</td>
+<td>POWER</td>
+</tr>
+<tr>
+<td>serviceName</td>
+<td>String</td>
+<td>The name of the vOrg to which the VDC belongs</td>
+<td>My Compute Service</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-response-16">Example response</h4>
+<pre><code>{
+  &quot;data&quot;: [
+    {
+      &quot;type&quot;: &quot;VDC-build&quot;,
+      &quot;id&quot;: &quot;10&quot;,
+      &quot;attributes&quot;:{
+        &quot;createdAt&quot;: &quot;2016-07-08T10:42:14+01:00&quot;,
+        &quot;createdBy&quot;: &quot;auser@example.com&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;vdcName&quot;: &quot;My VDC&quot;,
+        &quot;vmType&quot;: &quot;POWER&quot;,
+        &quot;serviceName&quot;: &quot;My Compute Service&quot;
+      }
+    },
+    {
+      &quot;type&quot;: &quot;VDC-build&quot;,
+      &quot;id&quot;: &quot;11&quot;,
+      &quot;attributes&quot;:{
+        &quot;createdAt&quot;: &quot;2016-07-09T10:42:14+01:00&quot;,
+        &quot;createdBy&quot;: &quot;auser@example.com&quot;,
+        &quot;state&quot;: &quot;completed&quot;,
+        &quot;vdcName&quot;: &quot;My VDC&quot;,
+        &quot;vmType&quot;: &quot;POWER&quot;,
+        &quot;serviceName&quot;: &quot;My Compute Service&quot;
+      }
+    }
+    ...
+  ]
+}
+</code></pre>
+<h3 id="json-schema-10">JSON schema</h3>
+<pre><code>{
+  &quot;title&quot;: &quot;GET /api/accounts/:account_id/vdc-builds&quot;,
+  &quot;description&quot;: &quot;The VDC builds within this account&quot;,
+  &quot;oneOf&quot;: [
+    {
+      &quot;$ref&quot;: &quot;#/definitions/success&quot;
+    },
+    {
+      &quot;$ref&quot;: &quot;#/definitions/failure&quot;
+    }
+  ],
+  &quot;definitions&quot;: {
+    &quot;success&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [
+        &quot;data&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;data&quot;: {
+          &quot;$ref&quot;: &quot;#/definitions/data&quot;
+        }
+      }
+    },
+    &quot;failure&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/error&quot;
+    },
+    &quot;data&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;type&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;enum&quot;: [
+              &quot;VDC-build&quot;
+            ]
+          },
+          &quot;id&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;pattern&quot;: &quot;^[0-9]+$&quot;
+          },
+          &quot;attributes&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;createdAt&quot;: {
+                &quot;description&quot;: &quot;When the request for the build was received by the Portal.&quot;,
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;format&quot;: &quot;date-time&quot;
+              },
+              &quot;createdBy&quot;: {
+                &quot;description&quot;: &quot;The email address of the user to request the build from the Portal.&quot;,
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;format&quot;: &quot;email&quot;
+              },
+              &quot;state&quot;: {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;enum&quot;: [
+                  &quot;approved&quot;,
+                  &quot;running&quot;,
+                  &quot;completed&quot;,
+                  &quot;failed&quot;
+                ]
+              },
+              &quot;vdcName&quot;: {
+                &quot;description&quot;: &quot;The name that was submitted for the VDC as part of the build request.&quot;,
+                &quot;type&quot;: &quot;string&quot;
+              },
+              &quot;vmType&quot;: {
+                &quot;description&quot;: &quot;The VM type that was submitted for the VDC as part of the build request.&quot;,
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;enum&quot;: [
+                  &quot;ESSENTIAL&quot;,
+                  &quot;POWER&quot;,
+                  &quot;PRIORITY&quot;
+                ]
+              },
+              &quot;serviceName&quot;: {
+                &quot;oneOf&quot;: [
+                  { &quot;type&quot;: &quot;string&quot; },
+                  { &quot;type&quot;: &quot;null&quot; }
+                ]
+              }
+            },
+            &quot;required&quot;: [
+              &quot;createdAt&quot;,
+              &quot;createdBy&quot;,
+              &quot;state&quot;,
+              &quot;vdcName&quot;,
+              &quot;vmType&quot;,
+              &quot;serviceName&quot;
+            ]
+          }
+        },
+        &quot;required&quot;: [
+          &quot;type&quot;,
+          &quot;attributes&quot;,
+          &quot;id&quot;
+        ]
+      }
+    },
+    &quot;error&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;error&quot;: {
+          &quot;description&quot;: &quot;A short, human-readable summary of the problem.&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;detail&quot;: {
+          &quot;description&quot;: &quot;A human-readable explanation of the problem.&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        }
+      },
+      &quot;required&quot;: [
+        &quot;error&quot;
+      ]
+    }
+  }
+}
+</code></pre>
+<h2 id="get-apiaccountsaccount_idvorgsvorg_idvdcsvdc_urnedge-gateways">GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways</h2>
+<p>Returns basic information about the edge gateways in the specified account under the specified VDC.</p>
+<h3 id="api-version-25">API version</h3>
+<p>v1</p>
+<h3 id="request-25">Request</h3>
+<h4 id="request-body-25">Request body</h4>
+<p>None</p>
+<h4 id="parameters-22">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-25">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_id</td>
+<td>The ID of your account</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>vorg_id</td>
+<td>The ID of the vOrg in which the edge gateway resides</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>vdc_urn</td>
+<td>The full URN of the VDC in which the edge gateway resides, including the urn:vcloud:vdc: prefix</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-24">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways
+</code></pre>
+<h3 id="response-25">Response</h3>
+<h4 id="successful-http-response-25">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-25">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>403 Forbidden --- The user does not have permissions for the vOrg</p>
+<p>404 Not Found --- The user does not have access to the account, the account does not exist or the vOrg does not exist</p>
+<h4 id="response-body-25">Response body</h4>
+<p>If the call returns an empty list, check that the specified VDC URN is correct.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>EdgeGateway</td>
+<td> </td>
+</tr>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>The ID of the edge gateway</td>
+<td>urn:vcloud:gateway:90693edd-c94b-4bf0-9544-d9123a77720c</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the edge gateway</td>
+<td>My Edge - nft00002i2 SL3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-response-17">Example response</h4>
+<pre><code>{
+    &quot;data&quot;: [
+        {
+            &quot;type&quot;: &quot;EdgeGateway&quot;,
+            &quot;id&quot;: &quot;urn:vcloud:gateway:90693edd-c94b-4bf0-9544-d9123a77720c&quot;,
+            &quot;attributes&quot;: {
+                &quot;name&quot;: &quot;My Edge - nft00002i2 SL3&quot;
+            }
+        }
+    ]
+}
+</code></pre>
+<h3 id="json-schema-11">JSON schema</h3>
+<pre><code>{
+    &quot;title&quot;:&quot;GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways&quot;,
+    &quot;description&quot;:&quot;The edge-gateways within this VDC.&quot;,
+    &quot;oneOf&quot;: [
+        {
+            &quot;$ref&quot;: &quot;#/definitions/success&quot;
+        },
+        {
+            &quot;$ref&quot;: &quot;#/definitions/failure&quot;
+        }
+    ],
+    &quot;definitions&quot;: {
+        &quot;success&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;required&quot;: [
+                &quot;data&quot;
+            ],
+            &quot;properties&quot;: {
+                &quot;data&quot;: {
+                    &quot;$ref&quot;: &quot;#/definitions/data&quot;
+                }
+            }
+        },
+        &quot;failure&quot;: {
+            &quot;$ref&quot;: &quot;#/definitions/error&quot;
+        },
+        &quot;data&quot;:{
+            &quot;type&quot;:&quot;array&quot;,
+            &quot;items&quot;:{
+                &quot;title&quot;:&quot;Edge Gateways&quot;,
+                &quot;type&quot;:&quot;object&quot;,
+                &quot;properties&quot;:{
+                    &quot;id&quot;:{
+                        &quot;type&quot;:&quot;string&quot;,
+                        &quot;pattern&quot;:&quot;^urn:vcloud:gateway:[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$&quot;
+                    },
+                    &quot;type&quot;:{
+                        &quot;type&quot;:&quot;string&quot;,
+                        &quot;enum&quot;:[&quot;EdgeGateway&quot;]
+                    },
+                    &quot;attributes&quot;:{
+                        &quot;type&quot;: &quot;object&quot;,
+                        &quot;properties&quot;:{
+                            &quot;name&quot;: {
+                                &quot;type&quot;:&quot;string&quot;
+                            }
+                        },
+                        &quot;required&quot;:[
+                            &quot;name&quot;
+                        ]
+                    }
+                },
+                &quot;required&quot;:[
+                    &quot;id&quot;,
+                    &quot;type&quot;,
+                    &quot;attributes&quot;
+                ]
+            }
+        },
+        &quot;error&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+                &quot;error&quot;: {
+                    &quot;description&quot;: &quot;A short, human-readable summary of the problem.&quot;,
+                    &quot;type&quot;: &quot;string&quot;
+                },
+                &quot;detail&quot;: {
+                    &quot;description&quot;: &quot;A human-readable explanation of the problem.&quot;,
+                    &quot;type&quot;: &quot;string&quot;
+                }
+            },
+            &quot;required&quot;:[
+                &quot;error&quot;
+            ]
+        }
+    }
+}
+</code></pre>
+<h2 id="post-apiaccountsaccount_idvorgsvorg_idvdcsvdc_urnedge-gateways">POST /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways</h2>
+<p>Creates an edge gateway in the specified account under the specified organisation and VDC.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This API endpoint is available only in Region 5 and 6 (for information about regions, see <a href="../other/other-ref-sites-regions-zones.md"><em>Understanding sites, regions and zones</em></a>).</p>
+</div>
+<h3 id="api-version-26">API version</h3>
+<p>v1</p>
+<h3 id="request-26">Request</h3>
+<h4 id="request-body-26">Request body</h4>
+<pre><code>{&quot;data&quot;: {&quot;type&quot;: &quot;EdgeGateway&quot;, &quot;attributes&quot;: {&quot;connectivityType&quot;: &quot;Internet&quot;}}}
+</code></pre>
+<h4 id="parameters-23">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>EdgeGateway</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>connectivityType</td>
+<td>The type of connection<br>Valid values:</br>- Internet (in the Assured security domain)<br>- External (in the Elevated security domain)</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="uri-parameters-26">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_id</td>
+<td>The ID of your account</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>vorg_id</td>
+<td>The ID of the vOrg in which you want to create the edge gateway</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>vdc_urn</td>
+<td>The full URN of the VDC in which you want to create the edge gateway, including the urn:vcloud:vdc: prefix</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-25">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs/urn:vcloud:vdc:345a5d90-1c8c-4fb2-bf4f-f480de82c594/edge-gateways -X POST -d '{&quot;data&quot;: {&quot;type&quot;: &quot;EdgeGateway&quot;, &quot;attributes&quot;: {&quot;connectivityType&quot;: &quot;Internet&quot;}}}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+</code></pre>
+<h3 id="response-26">Response</h3>
+<h4 id="successful-http-response-26">Successful HTTP response</h4>
+<p>202 Accepted --- Includes a location header (for example Location: /api/edge-gateway-builds/23)</p>
+<h4 id="unsuccessful-http-response-26">Unsuccessful HTTP response</h4>
+<p>400 Invalid --- The data uploaded does not match the expected schema or there is a validation problem</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>403 Forbidden --- The user is not an administrator for the vOrg</p>
+<p>404 Not Found --- The VDC could not be found, the user does not have access to the account or the account does not exist</p>
+<h4 id="response-body-26">Response body</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>EdgeGateway-build</td>
+<td> </td>
+</tr>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>The unique identifier of the build</td>
+<td>23</td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td>Date</td>
+<td>The date and time when the build was created</td>
+<td>2016-07-08T10:42:14+01:00</td>
+</tr>
+<tr>
+<td>createdBy</td>
+<td>String</td>
+<td>The user who created the build</td>
+<td>auser@example.com</td>
+</tr>
+<tr>
+<td>state</td>
+<td>String</td>
+<td>The state of the build<br>Valid values:</br>-approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>completed</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-response-18">Example response</h4>
+<pre><code>{
+  &quot;data&quot;:{
+    &quot;type&quot;: &quot;EdgeGateway-build&quot;,
+    &quot;id&quot;: &quot;23&quot;,
+    &quot;attributes&quot;:{
+      &quot;createdAt&quot;: &quot;2016-07-08T10:42:14+01:00&quot;,
+      &quot;createdBy&quot;: &quot;auser@example.com&quot;,
+      &quot;state&quot;: &quot;approved&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="json-schema-12">JSON schema</h3>
+<pre><code>{
+  &quot;title&quot;: &quot;EdgeGateway-build&quot;,
+  &quot;description&quot;: &quot;Progress of an EdgeGateway-build&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;data&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;type&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [&quot;EdgeGateway-build&quot;]
+        },
+        &quot;id&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;pattern&quot;: &quot;^[0-9]+$&quot;
+        },
+        &quot;attributes&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;createdAt&quot;: {
+              &quot;description&quot;: &quot;When the request for the build was received by the Portal.&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;format&quot;: &quot;date-time&quot;
+            },
+            &quot;createdBy&quot;: {
+              &quot;description&quot;: &quot;The email address of the user to request the build from the Portal.&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;format&quot;: &quot;email&quot;
+            },
+            &quot;state&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;enum&quot;: [&quot;approved&quot;, &quot;running&quot;, &quot;completed&quot;, &quot;failed&quot;]
+            }
+          },
+          &quot;required&quot;: [&quot;createdAt&quot;, &quot;createdBy&quot;, &quot;state&quot;]
+        }
+      },
+      &quot;required&quot;: [&quot;type&quot;, &quot;attributes&quot;, &quot;id&quot;]
+    },
+  },
+  &quot;required&quot;: [&quot;data&quot;]
+}
+</code></pre>
+<h2 id="get-apiedge-gateway-buildsbuild_id">GET /api/edge-gateway-builds/:build_id</h2>
+<p>Provides information about the progress of a specific edge gateway build.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This API endpoint is available only in Region 5 and 6 (for information about regions, see <a href="../other/other-ref-sites-regions-zones.md"><em>Understanding sites, regions and zones</em></a>).</p>
+</div>
+<h3 id="api-version-27">API version</h3>
+<p>v1</p>
+<h3 id="request-27">Request</h3>
+<h4 id="request-body-27">Request body</h4>
+<p>None</p>
+<h4 id="parameters-24">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-27">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>build_id</td>
+<td>The unique ID of the edge gateway build</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-26">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -H 'Accept: application/json' --H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/edge-gateway-builds/23 -X GET
+</code></pre>
+<h3 id="response-27">Response</h3>
+<h4 id="successful-http-response-27">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-27">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>404 Not Found --- The edge gateway build could not be found or the user does not have access to the edge gateway build</p>
+<h4 id="response-body-27">Response body</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>EdgeGateway-build</td>
+<td> </td>
+</tr>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>The unique identifier of the build</td>
+<td>23</td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td>Date</td>
+<td>The date and time when the build was created</td>
+<td>2016-07-08T10:42:14+01:00</td>
+</tr>
+<tr>
+<td>createdBy</td>
+<td>String</td>
+<td>The user who created the build</td>
+<td>auser@example.com</td>
+</tr>
+<tr>
+<td>state</td>
+<td>String</td>
+<td>The state of the build<br>Valid values:</br>- approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>completed</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-response-19">Example response</h4>
+<pre><code>{
+  &quot;data&quot;:{
+    &quot;type&quot;: &quot;EdgeGateway-build&quot;,
+    &quot;id&quot;: &quot;23&quot;,
+    &quot;attributes&quot;:{
+      &quot;createdAt&quot;: &quot;2016-07-08T10:42:14+01:00&quot;,
+      &quot;createdBy&quot;: &quot;auser@example.com&quot;,
+      &quot;state&quot;: &quot;completed&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="json-schema-13">JSON schema</h3>
+<pre><code>{
+  &quot;title&quot;: &quot;EdgeGateway-build&quot;,
+  &quot;description&quot;: &quot;Progress of an EdgeGateway-build&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;data&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;type&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;enum&quot;: [&quot;EdgeGateway-build&quot;]
+        },
+        &quot;id&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;pattern&quot;: &quot;^[0-9]+$&quot;
+        },
+        &quot;attributes&quot;: {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;properties&quot;: {
+            &quot;createdAt&quot;: {
+              &quot;description&quot;: &quot;When the request for the build was received by the Portal.&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;format&quot;: &quot;date-time&quot;
+            },
+            &quot;createdBy&quot;: {
+              &quot;description&quot;: &quot;The email address of the user to request the build from the Portal.&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;format&quot;: &quot;email&quot;
+            },
+            &quot;state&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;enum&quot;: [&quot;approved&quot;, &quot;running&quot;, &quot;completed&quot;, &quot;failed&quot;]
+            }
+          },
+          &quot;required&quot;: [&quot;createdAt&quot;, &quot;createdBy&quot;, &quot;state&quot;]
+        }
+      },
+      &quot;required&quot;: [&quot;type&quot;, &quot;attributes&quot;, &quot;id&quot;]
+    },
+  },
+  &quot;required&quot;: [&quot;data&quot;]
+}
+</code></pre>
+<h2 id="get-apiaccountsaccount_idedge-gateway-builds">GET /api/accounts/:account_id/edge-gateway-builds</h2>
+<p>Returns information about all self-service edge gateway builds for an account.</p>
+<h3 id="api-version-28">API version</h3>
+<p>v1</p>
+<h3 id="request-28">Request</h3>
+<h4 id="request-body-28">Request body</h4>
+<p>None</p>
+<h4 id="uri-parameters-28">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_id</td>
+<td>The ID of your account</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-27">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/edge-gateway-builds
+</code></pre>
+<h4 id="example-request-ruby-19">Example request (Ruby)</h4>
+<pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/edge-gateway-builds&quot;) {|req| Req.headers['cookie'] = cookies }
+</code></pre>
+<h3 id="response-28">Response</h3>
+<h4 id="successful-http-response-28">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-28">Unsuccessful HTTP response</h4>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
+<h4 id="response-body-28">Response body</h4>
+<p>Returns an array of edge gateway builds</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>EdgeGateway-build</td>
+<td> </td>
+</tr>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>The unique identifier of the build</td>
+<td>23</td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td>Date</td>
+<td>The date and time when the build was created</td>
+<td>2016-07-08T10:42:14+01:00</td>
+</tr>
+<tr>
+<td>createdBy</td>
+<td>String</td>
+<td>The user who created the build</td>
+<td>auser@example.com</td>
+</tr>
+<tr>
+<td>state</td>
+<td>String</td>
+<td>The state of the build<br>Valid values:</br>- approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>completed</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-response-20">Example response</h4>
+<pre><code>{
+  &quot;data&quot;: [
+    {
+      &quot;type&quot;: &quot;EdgeGateway-build&quot;,
+      &quot;id&quot;: &quot;23&quot;,
+        &quot;attributes&quot;:{
+        &quot;createdAt&quot;: &quot;2016-07-08T10:42:14+01:00&quot;,
+        &quot;createdBy&quot;: &quot;auser@example.com&quot;,
+        &quot;state&quot;: &quot;completed&quot;
+      }
+    },
+    {
+      &quot;type&quot;: &quot;EdgeGateway-build&quot;,
+      &quot;id&quot;: &quot;24&quot;,
+        &quot;attributes&quot;:{
+        &quot;createdAt&quot;: &quot;2016-07-09T10:42:14+01:00&quot;,
+        &quot;createdBy&quot;: &quot;auser@example.com&quot;,
+        &quot;state&quot;: &quot;completed&quot;
+      }
+    }
+    ...
+  ]
+}
+</code></pre>
+<h3 id="json-schema-14">JSON schema</h3>
+<pre><code>{
+  &quot;title&quot;: &quot;GET /api/accounts/:account_id/edge-gateway-builds&quot;,
+  &quot;description&quot;: &quot;The Edge gateway builds within this account&quot;,
+  &quot;oneOf&quot;: [
+    {
+      &quot;$ref&quot;: &quot;#/definitions/success&quot;
+    },
+    {
+      &quot;$ref&quot;: &quot;#/definitions/failure&quot;
+    }
+  ],
+  &quot;definitions&quot;: {
+    &quot;success&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;required&quot;: [
+        &quot;data&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;data&quot;: {
+          &quot;$ref&quot;: &quot;#/definitions/data&quot;
+        }
+      }
+    },
+    &quot;failure&quot;: {
+      &quot;$ref&quot;: &quot;#/definitions/error&quot;
+    },
+    &quot;data&quot;: {
+      &quot;type&quot;: &quot;array&quot;,
+      &quot;items&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;type&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;enum&quot;: [
+              &quot;EdgeGateway-build&quot;
+            ]
+          },
+          &quot;id&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;pattern&quot;: &quot;^[0-9]+$&quot;
+          },
+          &quot;attributes&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;createdAt&quot;: {
+                &quot;description&quot;: &quot;When the request for the build was received by the Portal.&quot;,
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;format&quot;: &quot;date-time&quot;
+              },
+              &quot;createdBy&quot;: {
+                &quot;description&quot;: &quot;The email address of the user to request the build from the Portal.&quot;,
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;format&quot;: &quot;email&quot;
+              },
+              &quot;state&quot;: {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;enum&quot;: [
+                  &quot;approved&quot;,
+                  &quot;running&quot;,
+                  &quot;completed&quot;,
+                  &quot;failed&quot;
+                ]
+              }
+            },
+            &quot;required&quot;: [
+              &quot;createdAt&quot;,
+              &quot;createdBy&quot;,
+              &quot;state&quot;
+            ]
+          }
+        },
+        &quot;required&quot;: [
+          &quot;type&quot;,
+          &quot;attributes&quot;,
+          &quot;id&quot;
+        ]
+      }
+    },
+    &quot;error&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;error&quot;: {
+          &quot;description&quot;: &quot;A short, human-readable summary of the problem.&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        },
+        &quot;detail&quot;: {
+          &quot;description&quot;: &quot;A human-readable explanation of the problem.&quot;,
+          &quot;type&quot;: &quot;string&quot;
+        }
+      },
+      &quot;required&quot;: [
+        &quot;error&quot;
+      ]
+    }
+  }
+}
+</code></pre>
+<h2 id="get-apiaccountsaccount_idplatform_visibilityvmotion_events">GET /api/accounts/:account_id/platform_visibility/vmotion_events</h2>
+<p>Returns a list of VMotion events that occurred in the specified account over the last 12 hours.</p>
+<h3 id="api-version-29">API version</h3>
+<p>v1</p>
+<h3 id="request-29">Request</h3>
+<h4 id="request-body-29">Request body</h4>
+<p>None</p>
+<h4 id="parameters-25">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-29">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_id</td>
+<td>The ID of your account</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-28">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/platform_visibility/vmotion_events
+</code></pre>
+<h4 id="example-request-ruby-20">Example request (Ruby)</h4>
+<pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/platform_visibility/vmotion_events&quot;) { |req| req.headers['cookie'] = cookies }
+</code></pre>
+<h3 id="response-29">Response</h3>
+<h4 id="successful-http-response-29">Successful HTTP response</h4>
+<p>200 OK --- The request was successful</p>
+<h4 id="unsuccessful-http-response-29">Unsuccessful HTTP response</h4>
+<p>403 Forbidden --- The user does not have access to the account or any compute services</p>
+<h4 id="response-body-29">Response body</h4>
+<p>Returns an array of VMotion events for the last 12 hours.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The maximum number of characters displayed for the VM and vApp names is 32 characters. If your VM or vApp names are longer than this, only the first 32 characters will be shown.</p>
+</div>
+<h4 id="example-response-21">Example response</h4>
+<pre><code>{
+    &quot;event_created_time&quot;: &quot;2016-10-04T00:08:01+01:00&quot;,
+    &quot;service_id&quot;: 12,
+    &quot;user_name&quot;: &quot;System&quot;,
+    &quot;virtual_machine&quot;: &quot;abc0001a (abcdedfg-abcd-abcd-abcd-abcdefghijkl)&quot;,
+    &quot;vdc_name&quot;: &quot;MyVDCName&quot;,
+    &quot;vapp_name&quot;: &quot;My VAPP Name&quot;
+}
+</code></pre>
+<h3 id="json-schema-15">JSON schema</h3>
+<pre><code>{
+    &quot;description&quot;: &quot;vMotion events for the last 12 hours within your account&quot;,
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;properties&quot;: {
+      &quot;event_created_time&quot;: {
+        &quot;type&quot;: &quot;string&quot;
+      },
+      &quot;service_id&quot;: {
+        &quot;type&quot;: &quot;integer&quot;,
+      },
+      &quot;user_name&quot;: {
+        &quot;enum&quot;: [
+          &quot;System&quot;,
+          &quot;Administrator&quot;,
+          &quot;UKCloud User&quot;
+        ]
+        &quot;type&quot;: &quot;string&quot;
+      },
+      &quot;virtual_machine&quot;: {
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;maxLength&quot;: 32
+      },
+      &quot;vdc_name&quot;: {
+        &quot;type&quot;: &quot;string&quot;,
+      },
+      &quot;vapp_name&quot;: {
+        &quot;type&quot;: &quot;string&quot;,
+        &quot;maxLength&quot;: 32
+      }
+    }
+</code></pre>
+<h2 id="get-apibillingcloud-storage-report">GET /api/billing/cloud-storage-report</h2>
+<p>Returns billing information for Cloud Storage.</p>
+<h3 id="api-version-30">API version</h3>
+<p>v1</p>
+<h3 id="request-30">Request</h3>
+<h4 id="request-body-30">Request body</h4>
+<p>None</p>
+<h4 id="parameters-26">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-30">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>date</td>
+<td>The date for which you require the monthly report</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>org-id</td>
+<td>The ID of the compute service for which you want the billing report</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-29">Example request (Curl)</h4>
+<pre><code>curl -b /tmp/cookies.txt -X GET -H &quot;Accept: application/json&quot; -k https://portal.skyscapecloud.com/api/billing/cloud-storage-report?date=2018-01-01&amp; org-id=xx-xx-xx-xxxxxxx
+</code></pre>
+<h4 id="example-request-ruby-21">Example request (Ruby)</h4>
+<pre><code>resp = conn.get(&quot;/api/billing/cloud-storage-report?date=#{date}&amp;org-id=#{org-id}&quot;) { |req| req.headers['cookie'] = cookies }
+</code></pre>
+<h3 id="response-30">Response</h3>
+<h4 id="successful-http-response-30">Successful HTTP response</h4>
+<p>200 OK --- The request was successful<br>Content-Type (text/csv)</p>
+<h4 id="unsuccessful-http-response-30">Unsuccessful HTTP response</h4>
+<p>400 Bad Request</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<h4 id="response-body-30">Response body</h4>
+<p>Returns a CSV report for the whole month specified including the date provided.</p>
+<table>
+<thead>
+<tr>
+<th>CSV header</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Org Id</td>
+<td>Customer identifier</td>
+</tr>
+<tr>
+<td>Company Id</td>
+<td>Company identifier</td>
+</tr>
+<tr>
+<td>Account Id</td>
+<td>Account identifier</td>
+</tr>
+<tr>
+<td>Service Id</td>
+<td>Service identifier</td>
+</tr>
+<tr>
+<td>Bucket Name</td>
+<td>Name given to the storage bucket</td>
+</tr>
+<tr>
+<td>Service Level</td>
+<td>Grade of service charged</td>
+</tr>
+<tr>
+<td>Consumption (GB)</td>
+<td>Average storage used over the month in gigabytes</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>Amount that would be charged if this were for a whole month (in pounds)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="further-information">Further information</h2>
+<p>If you want to discuss any aspect of the service or settings specific to your domain, log a Service Request via the <a href="https://portal.ukcloud.com/support/my_calls">My Calls</a> section of the UKCloud Portal.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/portal/ptl-ref-portal-api.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-99241001-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+  </body>
+</html>
