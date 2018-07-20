@@ -1,4 +1,56 @@
 - name: FAQs
   items:
+  - name: Application-tuned DDoS protection FAQs
+    href: conn-faq-app-ddos.md
+  - name: Bandwidth monitoring FAQs
+    href: conn-faq-bandwidth-monitoring.md
+  - name: DDoS mitigation service FAQs
+    href: conn-faq-ddos.md
+  - name: Emergency Services Network FAQs
+    href: conn-faq-esn.md
   - name: General connectivity FAQs
     href: conn-faq.md
+  - name: Global load balancing FAQs
+    href: conn-faq-glb.md
+  - name: HSCN connectivity FAQs
+    href: conn-faq-hscn.md
+  - name: HybridConnect FAQs
+    href: conn-faq-hybridconnect.md
+  - name: Janet connectivity FAQs
+    href: conn-faq-janet.md
+  - name: N3 connectivity FAQs
+    href: conn-faq-n3.md
+  - name: PSN connectivity FAQs
+    href: conn-faq-psn.md
+  - name: PSN for Policing and enhanced regime FAQs
+    href: conn-faq-psn-police.md
+- name: How To
+  items:
+  - name: Migrate from N3 to HSCN
+    href: conn-how-migrate-n3-hscn.md
+- name: Reference
+  items:
+  - name: DDoS mitigation causing VPN failures and slow applications
+    href: conn-ref-ddos-mitigation.md
+  - name: Internet - permitted standard ports in regions 1 and 2
+    href: conn-ref-internet-permitted-ports.md
+  - name: Internet access to the Elevated OFFICIAL security domain
+    href: conn-ref-internet-access-elevated.md
+  - name: Network configuration for Janet and internet access
+    href: conn-ref-janet-config-internet.md
+  - name: Protection for Distributed Denial of Service (DDoS) attacks
+    href: conn-ref-ddos-protection.md
+  - name: PSN Assured - permitted standard ports
+    href: conn-ref-psn-permitted-ports.md
+  - name: Telecommunications Service Provider engagement
+    href: conn-ref-telco-enagagement.md
+  - name: Understanding PSN core services
+    href: conn-ref-psn-core-services.md
+  - name: What Intrusion Detection System (IDS) does UKCloud provide?
+    href: conn-ids.md
+- name: Service Scope
+  items:
+  - name: Application-tuned DDoS protection Service Scope
+    href: conn-sco-app-ddos.md
+  - name: Global load balancing Service Scope
+    href: conn-sco-glb.md

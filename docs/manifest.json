@@ -922,11 +922,354 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-faq-app-ddos.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-faq-app-ddos.html",
+          "hash": "t9zQl3Qtg4LGW3ABbXtukA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-faq-bandwidth-monitoring.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-faq-bandwidth-monitoring.html",
+          "hash": "Jg9b8K3MqeC1Vl4S3oxT7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-faq-ddos.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-faq-ddos.html",
+          "hash": "52naWM5LHXk7zp4iIMcU8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-faq-esn.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-faq-esn.html",
+          "hash": "5wpG0EDaQKgMEn1cTz1B/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-faq-glb.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-faq-glb.html",
+          "hash": "cjl3S3ZvZ626Fw0Q+/c2pg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-faq-hscn.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-faq-hscn.html",
+          "hash": "LmcCcl6BijkuApvUkf3YCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-faq-hybridconnect.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-faq-hybridconnect.html",
+          "hash": "WVyRsS9MlkPr70kaooCePw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-faq-janet.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-faq-janet.html",
+          "hash": "4ieCQwyy4cNrt6yTstI7IA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-faq-n3.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-faq-n3.html",
+          "hash": "xp3+LaVYsGzovt292loguQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-faq-psn-police.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-faq-psn-police.html",
+          "hash": "TYQ+9RVbN7xS62IEs975aQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-faq-psn.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-faq-psn.html",
+          "hash": "+e4xQM85OlE4EIGxhCqfAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/connectivity/conn-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq.html",
-          "hash": "OEn2wPkex3QCwABqjvAMuw=="
+          "hash": "lKbGTfb5oh66Xa3Y/xakyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-how-migrate-n3-hscn.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-how-migrate-n3-hscn.html",
+          "hash": "hRFjXkVSOyfXqQS7QpxT3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ids.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ids.html",
+          "hash": "1Cw6ahkegjaxp4x9O7HbFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-ddos-mitigation.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-ddos-mitigation.html",
+          "hash": "TAcoJtPJ0zaAuWAHQOei1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-ddos-protection.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-ddos-protection.html",
+          "hash": "bhEs0H9BG3S3X2v2cQyFfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-internet-access-elevated.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-internet-access-elevated.html",
+          "hash": "uFrJtIktVlcBfOym17em+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-internet-permitted-ports.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-internet-permitted-ports.html",
+          "hash": "I25U3MoRgPg1J0/X8qSFeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-janet-config-internet.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-janet-config-internet.html",
+          "hash": "+NGeR89eLZNk50cwIMAoWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-psn-core-services.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-psn-core-services.html",
+          "hash": "8hnXadMScaNC+d0F4PuMpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-psn-permitted-ports.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-psn-permitted-ports.html",
+          "hash": "jq0Z9TYuNSlNjVHo/T7+Pw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "invalid-yaml-header"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-telco-enagagement.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-telco-enagagement.html",
+          "hash": "SgD9Gr1zdrelfJvFVcBNhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-sco-app-ddos.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-sco-app-ddos.html",
+          "hash": "0R5u+yutCxMv+68IXAbiSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-sco-glb.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-sco-glb.html",
+          "hash": "0vrY49Eh0/HCF9zCuwEq1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/connectivity/images/data-flow.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/connectivity/images/data-flow.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/connectivity/images/ddos_protection.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/connectivity/images/ddos_protection.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/connectivity/images/psn_assured_whitelist_ports.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/connectivity/images/psn_assured_whitelist_ports.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/connectivity/images/topology_scalable.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/connectivity/images/topology_scalable.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/connectivity/images/topology_simple.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/connectivity/images/topology_simple.png"
         }
       },
       "is_incremental": false,
@@ -938,7 +1281,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/toc.html",
-          "hash": "fe6Z+epGlLDmvNNINKgRtQ=="
+          "hash": "fs1SAupxI4QkFcI3Jt5eYw=="
         }
       },
       "is_incremental": false,
@@ -8777,14 +9120,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

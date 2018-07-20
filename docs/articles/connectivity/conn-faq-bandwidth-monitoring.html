@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bandwidth monitoring FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Bandwidth monitoring FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="bandwidth-monitoring-faqs">Bandwidth monitoring FAQs</h1>
+
+<h2 id="what-bandwidth-monitoring-is-available">What bandwidth monitoring is available?</h2>
+<p>You can currently find out how much internet bandwidth you are consuming either via the UKCloud Portal or <a href="../portal/ptl-ref-portal-api.html">Portal API</a>.</p>
+<h2 id="where-can-i-view-the-internet-usage-reporting-on-the-ukcloud-portal">Where can I view the internet usage reporting on the UKCloud Portal?</h2>
+<p>Within the My VMs section on the UKCloud Portal, select the vOrg you are interested in. Then, click on the &quot;My VMs&quot; tab and then select the &quot;Bandwidth Monitoring&quot; option. You can then select the edge gateway you wish to retrieve usage metrics for. Alternatively, the Bandwidth Monitoring section can be accessed via the Compute dropdown and by selecting the appropriate vOrg.</p>
+<h2 id="what-information-does-the-report-provide">What information does the report provide?</h2>
+<p>You will have visibility of usage per edge gateway, where you have the options for Hourly Average/Peak, Interval Average/Peak, Hourly Total Usage and Interval Total Usage.</p>
+<h2 id="i-clicked-on-the-edge-gateway-and-i-cant-see-any-usage-information">I clicked on the edge gateway and I can't see any usage information?</h2>
+<p>If your edge gateway does not have a connection to the internet you will not be able to see any usage information. If your VDC has just been provisioned, it can take up to 4 hours to show utilisation metrics. If these cases do not apply to you, please contact us by raising a Service Request.</p>
+<h2 id="are-other-bandwidth-monitoring-types-available">Are other bandwidth monitoring types available?</h2>
+<p>We have just released a new &quot;per internet-connected edge gateway&quot; internet bandwidth report through the UKCloud Portal and we're investigating bandwidth reporting for edge gateways connected to other networks such as N3 (HSCN) and PSN which are on our backlog.</p>
+<h2 id="we-have-been-using-the-bandwidth-monitoring-reporting-for-some-time-what-has-changed">We have been using the bandwidth monitoring reporting for some time, what has changed?</h2>
+<p>As part of our continued programme of platform upgrades, we have recently enhanced our internet bandwidth reporting capability, moving to a software- based solution to enable enhanced functionality and increased features for our customers.</p>
+<h2 id="what-regions-is-bandwidth-monitoring-available-for">What regions is bandwidth monitoring available for?</h2>
+<p>Regions 1,2,5 &amp; 6 with edge gateways connected to the internet will show bandwidth usage.</p>
+<h2 id="can-i-use-the-application-programming-interface-api-to-view-my-internet-bandwidth-usage">Can I use the application programming interface (API) to view my internet bandwidth usage?</h2>
+<p>Yes, as well as viewing your internet bandwidth usage via the UKCloud Portal, we have also enabled the use of the API. For examples
+on how to use the Portal API, please see the <a href="../portal/ptl-ref-portal-api.html"><em>UKCloud Portal API Reference Guide</em></a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/connectivity/conn-faq-bandwidth-monitoring.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>
