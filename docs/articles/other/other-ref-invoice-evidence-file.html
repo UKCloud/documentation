@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Understanding your invoice evidence file | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Understanding your invoice evidence file | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="understanding-your-invoice-evidence-file">Understanding your invoice evidence file</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>The UKCloud evidence file is a CSV file provided with your invoice that contains data on your VMs per month and corroborates how the totals invoiced are derived.</p>
+<h2 id="viewing-information-about-charges">Viewing information about charges</h2>
+<p>The evidence file includes information to help you understand how your usage of the UKCloud platform determines how the totals in your invoice are calculated. For a quick look at the different charges that contribute to the overall cost, see the columns listed in the table below.</p>
+<table>
+<thead>
+<tr>
+<th>Charge</th>
+<th>CSV column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Independent Disks and Media</td>
+<td>H</td>
+<td>Specifies charges for UKCloud for VMware Independent Disk or Media</td>
+</tr>
+<tr>
+<td>Compute VM</td>
+<td>U</td>
+<td>The cost for the compute resources based on the amount of time it was powered on, security domain, workload type and VM size</td>
+</tr>
+<tr>
+<td>Cloud GPU</td>
+<td>V, W, X and Y</td>
+<td>Details and cost for  Cloud GPU compute resources. (Cost will be shown in column Y)</td>
+</tr>
+<tr>
+<td>vCloud snapshot</td>
+<td>AA, AG and AM</td>
+<td>Charges associated with manually taking a snapshot in vCloud Director</td>
+</tr>
+<tr>
+<td>Block Storage</td>
+<td>AE and/or AK and/or AQ</td>
+<td>The cost of storage based on the type of block storage used by the VM</td>
+</tr>
+<tr>
+<td>Protection costs</td>
+<td>AT, AX, AY and AZ</td>
+<td>AT – the cost of protection for the compute element <br> AX – the cost of protecting Tier 1 storage <br> AY – the cost of protecting Tier 2 storage <br> AZ – the cost of protecting Geo-Resilient storage</td>
+</tr>
+<tr>
+<td>Protection Option</td>
+<td>BA</td>
+<td>The cost of the selected protection option applied to the VM</td>
+</tr>
+<tr>
+<td>Licensing</td>
+<td>BC</td>
+<td>Any licensing costs associated with the VM</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>BD</td>
+<td>The total cost</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-changes-to-the-evidence-file-november-2017-onwards">Key changes to the Evidence File (November 2017 onwards)</h2>
+<p>From November 2017, you will see the following changes to your evidence file. You'll receive the Evidence File for November at the start of December 2017, detailing your consumption during November.</p>
+<p>The key changes to the evidence file are as follows:</p>
+<p><strong>New column</strong></p>
+<ul>
+<li>Column H - UKCloud for VMware Independent Disks and Media charges</li>
+</ul>
+<h2 id="previous-changes">Previous changes</h2>
+<h3 id="october-2017">October 2017</h3>
+<p><strong>Added new columns:</strong></p>
+<ul>
+<li><p><strong>Metadata</strong> (column I) - if an UKCloud for VMware VM is tagged with metadata, the data will appear here. Please note -- the VM metadata will appear on the subsequent day in the Evidence File. For example, if it is tagged on the 3rd, the metadata will appear on the 4th, unless a VM power cycle occurs on the 3rd (This is currently available for UKCloud for VMware VMs only).</p>
+</li>
+<li><p><strong>Cloud GPU</strong> (columns V, W, X and Y) - will include details and a breakdown of Cloud GPU compute charges.</p>
+</li>
+<li><p><strong>vCloud Snapshot storage</strong> (columns AA, AG and AM) - charges will appear in this column if a VM is manually snapshotted in vCloud Director. Charges for the storage will not be applied for October, though values may appear in these columns. Billing will commence from November 1 2017.</p>
+</li>
+<li><p><strong>Breakdown of protection costs</strong> (columns AT, AX, AY and AZ) - new columns added to better understand the breakdown of protecting each storage option.</p>
+</li>
+</ul>
+<h3 id="september-2017">September 2017</h3>
+<ul>
+<li><p><strong>More columns</strong> --- Providing better understanding of the breakdown of individual charges for a VM between compute, storage, protection and licence.</p>
+</li>
+<li><p><strong>Common format</strong> --- The new Evidence File provides a consistent format for our UKCloud for VMware and UKCloud for OpenStack services.</p>
+</li>
+<li><p><strong>Categorisation of service type</strong> --- The first UKCloud for VMware evidence file using the new format will cover the following service types:</p>
+<ul>
+<li><p>Enterprise Compute VM</p>
+</li>
+<li><p>Enterprise Compute Dedicated VM</p>
+</li>
+<li><p>Compute Intensive Infrastructure</p>
+</li>
+<li><p>Secure Remote Access</p>
+</li>
+<li><p>CDSZ Walled Garden</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Time standardised on UTC</strong> --- Each day is treated as 24 hours, with no daylight savings changes applied to the reported times, resulting in no variation to charges when daylight savings are in effect.</p>
+</li>
+<li><p><strong>Inclusion of power state changes for ECC</strong> --- All relevant information is included in a single file, removing the need for a separate Power Events CSV file.</p>
+</li>
+</ul>
+<h2 id="future-enhancements">Future enhancements</h2>
+<p>These initial changes to the Evidence File will be followed by further enhancements over the coming months to add more products and services. Future enhancements include:</p>
+<ul>
+<li><p>Metadata for UKCloud for OpenStack instances</p>
+</li>
+<li><p>Population of Cloud GPU columns</p>
+</li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any feedback on the new format of the evidence file, or want to make suggestions for additional features or improvements, make your suggestions via the <a href="http://ideas.ukcloud.com/">UKCloud Ideas</a> web site.</p>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-invoice-evidence-file.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

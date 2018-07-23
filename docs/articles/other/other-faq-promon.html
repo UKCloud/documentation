@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Protective Monitoring FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Protective Monitoring FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="protective-monitoring-faqs">Protective Monitoring FAQs</h1>
+
+<h2 id="general">General</h2>
+<h3 id="what-is-protective-monitoring">What is protective monitoring?</h3>
+<p>Protective monitoring is a term that comes from the National Cyber Security Centre (NCSC), CESG guidance, listed in the Good Practice Guide 13 (GPG-13). It provides a set of guidance as to what controls, and what depth of controls should be implemented to make sure that the data being stored or transported in an IT estate is protected against cyber threats.</p>
+<h3 id="does-ukcloud-utilise-protective-monitoring-on-their-cloud-platforms">Does UKCloud utilise Protective Monitoring on their cloud platforms?</h3>
+<p>Yes. As part of our security activity to maintain the security of our platforms, we adhere to protective monitoring best practice from the NCSC.</p>
+<h3 id="what-is-the-scope-of-ukclouds-protective-monitoring">What is the scope of UKCloud's Protective Monitoring?</h3>
+<p>The scope of our Protective Monitoring activity covers all assets that provide our products to customers, including all hosting infrastructure, networking and management applications.</p>
+<p>In the case of our compute products (UKCloud for VMware, UKCloud for OpenStack and UKCloud for Oracle Software) we protectively monitor up to the hypervisor, the component that provides the virtual machines. Components above this infrastructure (for example, your own virtual machines, appliances and applications), are your own responsibility to provide an appropriate protective monitoring capability.</p>
+<p>The following demonstrates the scope of UKCloud's Protective Monitoring;</p>
+<ul>
+<li><p><strong>External connectivity, for example, internet, PSN, N3/HSCN, Janet, RLI, leased lines</strong> - responsibility of the Telecommunications provider.</p>
+</li>
+<li><p><strong>Perimeter Routes/Firewalls</strong> - UKCloud protectively monitors and regularly assesses any potential vulnerabilities at the perimeter, alongside other mitigations including DDoS^ and active vulnerability scanning.</p>
+</li>
+<li><p><strong>Customer VDC, vApps, VMs, Virtual Network Appliance and Customer Networks</strong> - This is your responsibility to monitor.</p>
+</li>
+<li><p><strong>Compute Hypervisor, UKCloud Networks and Physical Infrastructure</strong> - UKCloud protectively monitor and regularly assess vulnerabilities across all components of the hosting estate (for example, hypervisors, hosting infrastructure, servers, networking and management applications).</p>
+</li>
+</ul>
+<p>^ For more information about UKCloud's Volumetric DDoS Protection, please read our <a href="../conn/conn-faq-ddos.md"><em>DDoS mitigation service FAQs</em></a>.</p>
+<h3 id="is-protective-monitoring-implemented-on-both-the-assured-official-and-elevated-official-platforms">Is Protective Monitoring implemented on both the Assured OFFICIAL and Elevated OFFICIAL platforms?</h3>
+<p>Yes. We protect both Assured OFFICIAL and Elevated OFFICIAL platforms with resilient, 24/7 enhanced protective monitoring, vulnerability scanning and assessment.</p>
+<h3 id="am-i-able-to-get-a-feed-from-the-ukcloud-protective-monitoring-system">Am I able to get a feed from the UKCloud Protective Monitoring system?</h3>
+<p>No. We do not share a feed from our platform protective monitoring to customers. You can however get access to log data for all traffic traversing your virtual boundary firewall.</p>
+<h3 id="can-i-connect-my-security-operations-centre-soc-to-your-protective-monitoring-data">Can I connect my Security Operations Centre (SOC) to your protective monitoring data?</h3>
+<p>No. As we do not share a feed from our platform to customers, you are not able to connect your SOC to the Protective Monitoring data. You can however get access to log data for all traffic traversing your virtual boundary firewall.</p>
+<h3 id="are-there-any-enhancements-or-changes-planned-to-be-introduced-to-ukclouds-protective-monitoring">Are there any enhancements or changes planned to be introduced to UKCloud's Protective Monitoring?</h3>
+<p>Yes. We have an active project working to expose some threat and intelligence information to customers both through the UKCloud customer portal and its associated API. This data will initially be focussed on general intelligence information about activity in the wild (for example, a new vulnerability) and subsequently where we have been able to specifically attribute information to an individual customer.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-faq-promon.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

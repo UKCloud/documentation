@@ -1,10 +1,48 @@
+- name: FAQs
+  items:
+  - name: G-Cloud 10 services FAQs
+    href: other-faq-g10.md
+  - name: MISO rebate FAQs
+    href: other-faq-miso-rebate.md
+  - name: Protective Monitoring FAQs
+    href: other-faq-promon.md
+  - name: Service Level Agreement FAQs
+    href: other-faq-sla.md
 - name: How To
   items:
   - name: Contribute to the UKCloud Knowledge Centre
     href: other-how-contribute-knowledge.md
 - name: Reference
   items:
-  - name: Reference Other
+  - name: Browser requirements for services on the UKCloud platform
     href: other-ref-browsers.md
+  - name: Cloud economics
+    href: other-ref-cloud-economics.md
+  - name: Current infrastructure patch versions
+    href: other-ref-platform-patches.md
+  - name: Customer administration page
+    href: other-ref-customer-admin.md
+  - name: Data centre advance notice requirements
+    href: other-ref-dc-notice.md
   - name: Services by region
     href: other-ref-services-by-region.md
+  - name: Sites, regions and zones map and reference table
+    href: other-ref-srz-table.md
+  - name: SLA definition
+    href: other-ref-sla-definition.md
+  - name: UKCloud Ideas
+    href: other-ref-ideas.md
+  - name: UKCloud response to Spectre and Meltdown
+    href: other-ref-spectre-meltdown.md
+  - name: Understanding sites, regions and zones
+    href: other-ref-sites-regions-zones.md
+  - name: Understanding the Cyber Security News page
+    href: other-ref-cyber-security-news.md
+  - name: Understanding your invoice evidence file
+    href: conn-ref-invoice-evidence-file.md
+  - name: Windows Server 2016 templates
+    href: other-ref-windows-2016-templates.md
+- name: Service Scope
+  items:
+  - name: Free trials Service Scope
+    href: other-sco-free-trials.md

@@ -4,6 +4,8 @@
     href: ptl-gs.md
 - name: How To
   items:
+  - name: Raise and escalate incidents and service requests
+    href: ptl-how-raise-escalate-service-request.md
   - name: Reset your UKCloud Portal password or memorable word
     href: ptl-how-reset-password.md
   - name: Use My Calls in the UKCloud Portal

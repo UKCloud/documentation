@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Understanding sites, regions and zones | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Understanding sites, regions and zones | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="understanding-sites-regions-and-zones">Understanding sites, regions and zones</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>This guide explains how we've designed the UKCloud platform using sites, regions and zones to enable you to design a highly-available and disaster-tolerant cloud solution that meets your specific requirements for resilience. The diagram below shows the relationship between sites, regions and zones and provides a broad indication the purpose of each.</p>
+<p><img src="images/fig1_platform_overview.png" alt="Platform overview"></p>
+<p>We've engineered our cloud platform to tolerate inevitable failures at or below the infrastructure layer (for example, hardware failures and power or cooling interruptions) to ensure that the platform remains available. To ensure your applications and the services they deliver are highly available, we encourage you to design for failure and build disaster recovery capabilities into your applications. Depending on the type of failure you are trying to mitigate, our platform enables you to use sites, regions and zones to implement appropriate resilience into your solution.</p>
+<p>For specific services, such as UKCloud for OpenStack or UKCloud for VMware, we provide more detailed design guides and blueprints to explore the design choices you have with our platform. Additionally, you can always engage a Cloud Architect who can work with you to deploy the right architecture on our platform.</p>
+<h2 id="understanding-sites">Understanding sites</h2>
+<p><img src="images/fig2_sites.png" alt="Sites: Corsham and Farnborough"></p>
+<h3 id="what-is-a-site">What is a site?</h3>
+<p>A site is a geographically specific location. UKCloud has two UK‑based sites, separated by 100 km, in Farnborough and Corsham (see diagram above). Sites provide:</p>
+<ul>
+<li><p>Independent power, security, geography and infrastructure</p>
+</li>
+<li><p>Independent WAN connections from multiple service providers</p>
+</li>
+<li><p>Local maintenance and platform support teams</p>
+</li>
+<li><p>Shared UKCloud service support and management teams</p>
+</li>
+</ul>
+<h3 id="how-do-sites-help-me-mitigate-against-failure">How do sites help me mitigate against failure?</h3>
+<p>Building your solution across multiple sites provides resilience against scenarios such as natural disasters, targeted terrorist attacks or mass WAN failure. If an event affects a particular site, your system can continue running on the other site. The separation of UKCloud's two sites aligns with CESG's published guidance on architecting for disaster avoidance.</p>
+<h3 id="what-else-should-i-consider">What else should I consider?</h3>
+<p>Although we operate secure, high‑bandwidth and low‑latency interconnects between our sites, the latency of transporting data within the same site will always be lower. If you deploy your solution across sites, you should always perform thorough testing to ensure that any increase in latency (particularly storage latency) is within tolerable levels and does not impede the performance of your solution under heavy load.</p>
+<h2 id="understanding-regions">Understanding regions</h2>
+<p><img src="images/fig3_regions.png" alt="Regions 2 and 5"></p>
+<h3 id="what-is-a-region">What is a region?</h3>
+<p>Within each site, our platform provides a number of independent regions (see diagram above). Each region is a physically segregated part of the platform with its own power infrastructure, management services and networking components. This enables you to design resilient solutions that are contained entirely within a single site.</p>
+<p>Each region provides a particular subset of UKCloud services, for example UKCloud for VMware, UKCloud for OpenStack or Cloud Storage, so the regions that you can use for your solution depend on where your selected (and prospective) UKCloud services are available. For example, in Figure 4 you can see that UKCloud for VMware is provided in regions 2 and 5, however UKCloud for OpenStack is provided only in region 5.</p>
+<p><img src="images/fig4_services_in_regions.png" alt="Services in regions 2 and 5"></p>
+<h3 id="how-do-regions-help-me-mitigate-against-failure">How do regions help me mitigate against failure?</h3>
+<p>By architecting for separate regions, you can improve resilience to outages that affect:</p>
+<ul>
+<li><p>The control and management of your VMs</p>
+</li>
+<li><p>Network connectivity to your VMs</p>
+</li>
+<li><p>The power infrastructure within the data centre.</p>
+</li>
+</ul>
+<p>The impact of an outage on your environment depends on the services you consume and how you have architected your environment at the region level. For example, the impact of a region‑affecting outage for UKCloud for VMware may be different than for UKCloud for OpenStack.</p>
+<h3 id="what-else-should-i-consider-1">What else should I consider?</h3>
+<p>Certain product features --- such as on-platform protection technologies like snapshot protection or journaling --- may be available only in certain regions. Check <a href="other-ref-services-by-region.html"><em>UKCloud services by region</em></a> for further details.</p>
+<p>In addition, some common service features --- such as VM image catalogues, access to storage pools, and so on --- may be available only to solutions running within that region, and not replicated by UKCloud across multiple regions. This may require you to duplicate some of your management tools and services. You should consider which services are available across multiple regions when designing your solutions.</p>
+<h2 id="understanding-zones">Understanding zones</h2>
+<p><img src="images/fig5_zones.png" alt="zones in region 2"></p>
+<h3 id="what-is-a-zone">What is a zone?</h3>
+<p>A zone is a distinct hardware installation within a region (Figure 5), utilising common networking infrastructure but having independent server and storage infrastructure.</p>
+<p>Ordinarily, each zone hosts only one UKCloud service, but each service, for example UKCloud for VMware or UKCloud for OpenStack, may be provided in multiple zones in each site (see diagram below).</p>
+<p><img src="images/fig6_services_in_zones.png" alt="services instances by zone in regions 2 and 5"></p>
+<p>Each zone is part of a particular security domain: either Assured OFFICIAL or Elevated OFFICIAL (see diagram below).</p>
+<p><img src="images/fig7_security_domains.png" alt="security domains in zones"></p>
+<h3 id="how-do-zones-help-me-mitigate-against-failure">How do zones help me mitigate against failure?</h3>
+<p>You can utilise zones to provide additional confidence in your ability to tolerate outages and mitigate against:</p>
+<ul>
+<li><p>Cluster-wide component outages caused by logical configuration errors</p>
+</li>
+<li><p>Significant hardware failures</p>
+</li>
+<li><p>Issues occurring within the hypervisor or virtual SAN</p>
+</li>
+</ul>
+<p>For example, you can load-balance across two zones to ensure that your service stays online in the event of a zone outage.</p>
+<h3 id="what-else-should-i-consider-2">What else should I consider?</h3>
+<p>Designing your solutions to make use of zones rather than regions and sites achieves the lowest latency, helping to reduce the risk of data inconsistency while optimising the IO performance across your solution.</p>
+<p>Depending on the services you consume, each zone may have its own management interface, so the complexity of managing your environment potentially increases with each additional zone. You should also be aware that the zones within a region operate on a shared network, therefore any issues on that network affect all the zones in the region. If you want to mitigate against potential network outages, you should consider designing your solution across multiple regions, but you should carefully assess the risk that the highly unlikely event of a loss of region or site presents and how this may influence your overall solution.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-sites-regions-zones.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

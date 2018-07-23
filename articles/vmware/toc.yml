@@ -156,3 +156,9 @@
     href: vmw-vmware-tools-installation.md
   - name: VMware vCloud Connector
     href: vmw-ref-vcloud-connector.md
+  - name: Windows Server activation
+    href: vmw-windows-server-activation.md
+- name: Service Scope
+  items:
+  - name: Bring Your Own Firewall Service Scope
+    href: vmw-sco-byof.md

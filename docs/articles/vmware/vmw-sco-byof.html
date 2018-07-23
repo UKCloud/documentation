@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bring Your Own Firewall Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Bring Your Own Firewall Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="bring-your-own-firewall-service-scope">Bring Your Own Firewall Service Scope</h1>
+
+<h2 id="about-this-document">About this document</h2>
+<p>This document is intended for UKCloud customers who might be considering an alternative virtual firewall or virtual appliance to the presently integrated VMWare vCNS firewall device within vCloud Director.</p>
+<p>The scope of the document is not to provide step by step detail on how to setup or install an alternative virtual firewall but rather the key points that a customer should consider when choosing an alternative product.</p>
+<p>The document describes the responsibilities of both UKCloud and the customer in order to facilitate the changes required.</p>
+<h2 id="about-bring-your-own-firewall">About Bring Your Own Firewall</h2>
+<p>Bring your own firewall allows customers to customise their networking infrastructure by installing their own virtual firewall appliance in place of the vCNS device UKCloud includes as standard with its compute services.</p>
+<p>This can allow customers to leverage their own in-house expertise with a particular technology or can provide access to some higher level networking functionality not natively available in the vCNS device.</p>
+<h2 id="default-setup">Default setup</h2>
+<p>Presently UKCloud only offers a &quot;bring your own firewall&quot; installation to new VDCs.</p>
+<p>In a BYOF implementation, UKCloud present an external network directly to the customer, who can then install the firewall instance of their choice.</p>
+<h2 id="ukcloud-responsibilities">UKCloud responsibilities</h2>
+<p>Upon a customer's request, UKCloud will:</p>
+<ul>
+<li><p>Deploy a new VDC without a vCNS device</p>
+</li>
+<li><p>Present the external network to the customer for them to install their own firewall device</p>
+</li>
+</ul>
+<p>Once the customer has installed their own firewall device, UKCloud will continue to:</p>
+<ul>
+<li><p>Manage platform availability</p>
+</li>
+<li><p>Manage the external network</p>
+</li>
+</ul>
+<h2 id="customer-responsibilities">Customer responsibilities</h2>
+<p>By requesting to have the edge gateway device removed and their own firewall technology installed, the customer accepts that:</p>
+<ul>
+<li><p>Customers are responsible for sourcing their own licensing arrangement with the 3rd party firewall provider.</p>
+</li>
+<li><p>Customers are responsible for installing and configuring the firewall device. Guidance on how this might be done can be found in the <a href="https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-310-Bring-Your-Own-Firewall-Blueprint.pdf"><em>UKCloud Blueprint</em></a>.</p>
+</li>
+<li><p>UKCloud do not offer any support of customer installed firewall replacements. This includes but not limited to install, configuration and troubleshooting issues.</p>
+</li>
+<li><p>UKCloud will not be able to perform any network diagnostic tasks on the customer side of the firewall (inside the VDC).</p>
+</li>
+<li><p>Outages caused by the customers new firewall will not be liable to service credit claims.</p>
+</li>
+<li><p>Customers lose the visibility of the IP address assignments which are currently easily referenced within vCloud Director.</p>
+</li>
+<li><p>Customers lose the integrated functionality of configuring the edge gateway device through vCloud Director. Access to the new firewall replacement is only available via the console or from within the customer VDC (based on setup).</p>
+</li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-sco-byof.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>
