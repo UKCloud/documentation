@@ -8,7 +8,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Reference Other
+toc_title: Browser requirements for services on the UKCloud platform
 toc_fullpath: Reference/other-ref-browsers.md
 toc_mdlink: other-ref-browsers.md
 ---
@@ -62,7 +62,7 @@ Cloud GPU has the same browser requirements as [UKCloud for VMware](#ukcloud-for
 
 High Performance Compute has the same browser requirements as [UKCloud for VMware](#ukcloud-for-vmware).
 
-#Email and Collaboration as a Service
+# Email and Collaboration as a Service
 
 For the most up to date list of supported browsers for Email and Collaboration as a Service, refer to the [*Zimbra Collaboration Supported Systems*](https://wiki.zimbra.com/wiki/Zimbra_Releases/8.7.0/Supported_Systems) document.
 
