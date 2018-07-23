@@ -1,3 +1,7 @@
+- name: How To
+  items:
+  - name: Contribute to the UKCloud Knowledge Centre
+    href: other-how-contribute-knowledge.md
 - name: Reference
   items:
   - name: Reference Other
