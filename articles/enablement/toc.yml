@@ -1,4 +1,24 @@
+- name: How To
+  items:
+  - name: Use the Data Transfer Facility
+    href: enbl-how-use-data-transfer-facility.md
 - name: Reference
   items:
   - name: Cloud Enablement services
     href: enbl-ref-services.md
+- name: Service Scope
+  items:
+  - name: Cloud Enablement - CAPS/CPA-approved VPN Service Scope
+    href: enbl-sco-capscpa.md
+  - name: Cloud Enablement - Server/Storage Hosting Service Scope
+    href: enbl-sco-hosting.md
+  - name: Cloud Enablement - VPN solutions Service Scope
+    href: enbl-sco-vpn.md
+  - name: Data Transfer Facility Service Scope
+    href: enbl-sco-dtf.md
+  - name: Mass Transfer Facility - HDD Service Scope
+    href: enbl-sco-mtf-hdd.md
+  - name: Mass Transfer Facility - NAS Service Scope
+    href: enbl-sco-mtf-nas.md
+  - name: Smart Hands Service Scope
+    href: enbl-sco-smart-hands.md

@@ -1551,15 +1551,331 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-how-use-data-transfer-facility.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-how-use-data-transfer-facility.html",
+          "hash": "1QKe6gz5oOGd/AejkR4a9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/enablement/enbl-ref-services.md",
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-ref-services.html",
-          "hash": "r6c6QP8fi4F3+UqgYqfOaQ=="
+          "hash": "24uZajH3+AUFqaXgZKpqwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-sco-capscpa.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-sco-capscpa.html",
+          "hash": "xWrJbC1ldhErLQtrdgmqrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-sco-dtf.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-sco-dtf.html",
+          "hash": "C1le/sfgdCuD6UsMNW1tvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-sco-hosting.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-sco-hosting.html",
+          "hash": "kgTB2PbMkEzI1Fasfjcdrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-sco-mtf-hdd.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-sco-mtf-hdd.html",
+          "hash": "GgLlz/4gkkg9KQ+jWaQinA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-sco-mtf-nas.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-sco-mtf-nas.html",
+          "hash": "9DB7VosyhSzjF6XSnbaEdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-sco-smart-hands.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-sco-smart-hands.html",
+          "hash": "JhO/t1UyMPBSdjIVyKK1cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/enablement/enbl-sco-vpn.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/enablement/enbl-sco-vpn.html",
+          "hash": "jvHz/Fl9Q6tJyDDdrom6Mw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-configure-services-btn-add-dnat.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-configure-services-btn-add-dnat.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-configure-services-btn-add-firewall-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-configure-services-btn-add-firewall-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-dtf-btn-firewall-rule-adv.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-dtf-btn-firewall-rule-adv.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-dtf-btn-nat-rule-adv.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-dtf-btn-nat-rule-adv.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-dtf-firewall-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-dtf-firewall-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-dtf-ip_address.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-dtf-ip_address.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-dtf-nat-rule-adv.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-dtf-nat-rule-adv.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-dtf-nat-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-dtf-nat-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-dtf-select-template.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-dtf-select-template.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-edge-properties-ip-allocation.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-edge-properties-ip-allocation.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-ico-add-vapp-ovf.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-ico-add-vapp-ovf.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-ico-add-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-ico-add-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-open-file.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-open-file.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-ovf-progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-ovf-progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-tab-admin.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-tab-admin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-tab-edge-gateways.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-tab-edge-gateways.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-tab-my-cloud.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-tab-my-cloud.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-tp-btn-new-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-tp-btn-new-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-tp-create-vm-ftps.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-tp-create-vm-ftps.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/vmw-vcd-tp-vapps.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/vmw-vcd-tp-vapps.png"
         }
       },
       "is_incremental": false,
@@ -1571,7 +1887,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/toc.html",
-          "hash": "eyYZkYY+ObtD+HSKN8yGJA=="
+          "hash": "qzSRGk8dOktyL74iFfnPnw=="
         }
       },
       "is_incremental": false,
@@ -9176,14 +9492,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
