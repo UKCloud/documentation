@@ -18,6 +18,7 @@ target/
 /**/_site/
 .vscode/
 .vs/
+_exported_templates/
 
 ###############
 #  temp file  #
