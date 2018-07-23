@@ -30,6 +30,10 @@
         href: azs-how-create-spn-cli.md
       - name: Create a Service Principal Name for Azure Stack - PowerShell
         href: azs-how-create-spn-powershell.md
+    - name: Templates
+      items:
+      - name: Deploy a SQL template to Azure Stack - PowerShell
+        href: azs-how-deploy-sql-template-powershell.md
   - name: Reference
     items:
     - name: UKCloud for Microsoft Azure Troubleshooting
