@@ -1371,9 +1371,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/email/email-how-setup-android.md",
       "output": {
@@ -1422,15 +1419,89 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "invalid-yaml-header"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/email/email-ref-upgrade-to-86.md",
       "output": {
         ".html": {
           "relative_path": "articles/email/email-ref-upgrade-to-86.html",
-          "hash": "0TZtIwzRjJapjLYwqO48Cw=="
+          "hash": "soHykcuQjYbpCOz9bUSycA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-android-account-setup-email.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-android-account-setup-email.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-android-account-setup-incoming-server.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-android-account-setup-incoming-server.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-android-account-setup-options.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-android-account-setup-options.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-android-account-setup-type-exchange.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-android-account-setup-type-exchange.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-android-ico-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-android-ico-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-android-mnu-add-account.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-android-mnu-add-account.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-android-mnu-corporate.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-android-mnu-corporate.png"
         }
       },
       "is_incremental": false,
@@ -1695,6 +1766,39 @@
       "output": {
         "resource": {
           "relative_path": "articles/email/images/email-tbird-account-setup.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zcs-install-complete.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zcs-install-complete.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zcs-install-progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zcs-install-progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-zcs-install-welcome.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-zcs-install-welcome.png"
         }
       },
       "is_incremental": false,
@@ -9333,15 +9437,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-gs-journaling.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs-journaling.html",
-          "hash": "pKRtDma/Bq+pi1h2iqM6/w=="
+          "hash": "MMLO+oe9/Z/A4ZUvZsHZpQ=="
         }
       },
       "is_incremental": false,
@@ -9888,15 +9989,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-zerto-migrate-between-regions.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-zerto-migrate-between-regions.html",
-          "hash": "S8TInM6qiUIPPk5qTzE+oA=="
+          "hash": "FnhcHP2XdLOYDcCBYDgA1g=="
         }
       },
       "is_incremental": false,
@@ -10353,6 +10451,11 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -10360,11 +10463,6 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
