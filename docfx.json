@@ -40,6 +40,9 @@
     "dest": "_site",
     "template": [
         "custom_template"
-    ]
+    ],
+    "sitemap":{
+      "baseUrl": "https://docs.ukcloud.com/"
+    }
   }
 }
