@@ -8,7 +8,7 @@
     <title>How to deploy an FTPS server for data transfer | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to deploy an FTPS server for data transfer | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -87,7 +87,11 @@
 <h2 id="deploy-template">Deploy Template</h2>
 <ol>
 <li><p>Login to vCloud Director via the UKCloud Portal.</p>
-<p><img src="images/my_cloud" alt="My Cloud"></p>
+</li>
+<li><p>Select the My Cloud tab.</p>
+<p><img src="images/vmw-vcd-tab-my-cloud.png" alt="My Cloud tab in vCloud Director">.</p>
+</li>
+<li><p>Click the <strong>Add vApp from Catalog</strong> icon.</p>
 </li>
 <li><p>Select <strong>Public Catalogs</strong> from the drop down and select <strong>All templates</strong> and search for <strong>ftps</strong>.</p>
 </li>
@@ -103,9 +107,10 @@
 <li><p>Select <strong>Power On</strong> and click <strong>Finish</strong>.</p>
 </li>
 <li><p>When the deployment is complete open the vApp and take note of the private IP address.</p>
-<p><img src="images/vapp_ip_address.jpg" alt="vApp IP Address"></p>
 </li>
 </ol>
+<pre><code>![vApp IP Address](images/vapp_ip_address.jpg)
+</code></pre>
 <h2 id="configure-firewall">Configure Firewall</h2>
 <p>Determine your cloud IP addresses:</p>
 <ol>

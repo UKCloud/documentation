@@ -8,7 +8,7 @@
     <title>How to perform a failover | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to perform a failover | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,8 +82,9 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="overview">Overview</h1>
+<h1 id="how-to-perform-a-failover">How to perform a failover</h1>
 
+<h2 id="overview">Overview</h2>
 <p>You may want to perform a failover in the following circumstances:</p>
 <ul>
 <li>To recover virtual machines (VMs) after a disaster, if you're using Disaster Recovery as a Service or the UKCloud for VMware Journaling Protection option</li>
@@ -94,7 +95,7 @@
 <h5>Important</h5>
 <p>During the failover process, any change in the configuration or state of the live or failed‑over VMs (for example, power on or power off) will cause failure of the failover and may corrupt the VPG. This could make a full resync necessary and, in a disaster recovery situation, could prevent failover completely.</p>
 </div>
-<h2 id="intended-audience">Intended audience</h2>
+<h3 id="intended-audience">Intended audience</h3>
 <p>To perform the steps in this guide you need access to the Zerto Self-Service Portal (ZSSP) in the target zone.</p>
 <h2 id="running-a-test-failover">Running a test failover</h2>
 <p>If you use Disaster Recovery as a Service or Journaling Protection, you should periodically run test failovers to verify that, in the case of a live failover, your VMs can be recovered successfully.</p>
@@ -105,7 +106,7 @@
 </div>
 <ol>
 <li><p>Log in to the ZSSP.</p>
-<p>For more detailed instructions, see <a href="vmw-how-zerto-access.zssp.md"><em>How to access the Zerto Self-Service Portal</em></a>.</p>
+<p>For more detailed instructions, see <a href="vmw-how-zerto-access-zssp.html"><em>How to access the Zerto Self-Service Portal</em></a>.</p>
 <p>Use the ZSSP login link for the zone in which your target VDC is located.</p>
 </li>
 <li><p>At the bottom of the page, make sure that the failover toggle is set to <strong>TEST</strong> and click <strong>FAILOVER</strong>.</p>
