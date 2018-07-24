@@ -25,7 +25,7 @@ Our Data Transfer Facility enables customers to use the secure network connectio
 
 It's useful if, for example, you don't have enough network bandwidth, or you're waiting for appropriately accredited connectivity to be installed.
 
-If you want to bring in more than 500GiB of VMs, we also offer a Mass Transfer facility, see the appropriate Service Scope for [NAS](enbl-sco_mtf-nas.md) or [HDD](enbl-sco_mtf-hdd.md).
+If you want to bring in more than 500GiB of VMs, we also offer a Mass Transfer facility, see the appropriate Service Scope for [NAS](enbl-sco-mtf-nas.md) or [HDD](enbl-sco-mtf-hdd.md).
 
 ## Booking and booking conditions
 

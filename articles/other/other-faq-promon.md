@@ -41,7 +41,7 @@ The following demonstrates the scope of UKCloud's Protective Monitoring;
 
 - **Compute Hypervisor, UKCloud Networks and Physical Infrastructure** - UKCloud protectively monitor and regularly assess vulnerabilities across all components of the hosting estate (for example, hypervisors, hosting infrastructure, servers, networking and management applications).
 
-^ For more information about UKCloud's Volumetric DDoS Protection, please read our [*DDoS mitigation service FAQs*](../conn/conn-faq-ddos.md).
+^ For more information about UKCloud's Volumetric DDoS Protection, please read our [*DDoS mitigation service FAQs*](../connectivity/conn-faq-ddos.md).
 
 ### Is Protective Monitoring implemented on both the Assured OFFICIAL and Elevated OFFICIAL platforms?
 

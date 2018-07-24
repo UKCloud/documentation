@@ -266,7 +266,7 @@ To verify the tunnel status in vCloud Director:
     - Select the **Statistics** tab and then the **IPsec VPN** tab.
     - For each configured tunnel, if you can see a tick, the tunnel is up and running and operational. If any other status is shown, you'll need to review your configuration and any firewall rules.
 
-    ![IPsec VPN Statistics tab](images/vmw-vcd-adv-edg-vpn-config.png)
+    ![IPsec VPN Statistics tab](images/vmw-vcd-adv-edge-ipsec-vpn-config.png)
 
   For standard edges:
 

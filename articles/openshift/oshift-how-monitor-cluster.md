@@ -153,7 +153,8 @@ TOKEN = 'eyJhb...the.179.char.token'
 main()
 ```
 
-> [!TIP] If you encounter problems copying and pasting the source code above, we also provide the code in the following blog post:
+> [!TIP]
+> If you encounter problems copying and pasting the source code above, we also provide the code in the following blog post:
 
 <https://ukcloud.com/news-resources/news/blog/simple-openshift-monitoring>
 

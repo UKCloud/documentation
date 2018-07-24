@@ -1,5 +1,5 @@
 ---
-title: Quick ref guide: Telecommunications Service Provider engagement | UKCloud Ltd
+title: Telecommunications Service Provider engagement | UKCloud Ltd
 description: Outlines the engagement process, demarcation points and responsibilities of all parties  regarding provisioning connectivity into UKCloud via HybridConnect
 services: connectivity
 author: Sue Highmoor
@@ -13,7 +13,7 @@ toc_fullpath: Reference/conn-ref-telco-enagagement.md
 toc_mdlink: conn-ref-telco-enagagement.md
 ---
 
-# Telco engagement
+# Telecommunications Service Provider engagement
 
 ## Overview
 
@@ -104,7 +104,7 @@ Telcos are responsible for all telco owned equipment. This equipment **must** be
 
 Ark are responsible for the connection between the telco kit and the patch panel for onward connectivity to UKCloud.
 
-UKCloud are responsible for the connection between the patch panel in the UKCloud datacentre suites and the customer collocated equipment (if Cloud Enablement is being used) and/or the UKCloud infrastructure.
+UKCloud are responsible for the connection between the patch panel in the UKCloud data centre suites and the customer collocated equipment (if Cloud Enablement is being used) and/or the UKCloud infrastructure.
 
 The customer/partner is responsible for any customer owned equipment that has been installed in a UKCloud rack as part of a Cloud Enablement service. This includes installation, ongoing maintenance and emergency maintenance.
 

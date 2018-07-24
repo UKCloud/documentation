@@ -23,7 +23,7 @@ The below links should help you with administering your environment, however ple
 
 ## UKCloud for VMware
 
-[*Getting Started Guide for UKCloud for VMware*](../vmware/vm-gs.md)
+[*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md)
 
 *VMware vCloud Director API Programming Guide* [8.20](https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_sp_api_guide_27_0.pdf) | [9.1](https://code.vmware.com/doc/preview?id=6899)
 

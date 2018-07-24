@@ -34,7 +34,7 @@ If however, you see a response that gives the error “The activation server det
 
 The above command will display the current licensing information along with activation status. Once you have run this command you will see a similar message (The message should state “VOLUME_KMSCLIENT channel”)
 
-![KMS Client info](images\kms_client_info.png)
+![KMS Client info](images/kms_client_info.png)
 
 If the above message differs and references “RETAIL”, then the Windows license you have is not compatible and cannot be activated by the KMS server, and as such will require you to convert the current retail license to a volume activation license.
 

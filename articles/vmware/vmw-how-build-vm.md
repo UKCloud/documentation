@@ -82,7 +82,7 @@ First, you need to create a network that can connect to external networks outsid
 
     The example below uses `192.168.1.1` for the gateway, `255.255.255.0` for the mask and `8.8.8.8` for the DNS.
 
-    ![Network settings for routed VDC network](images/vmw-vcd-admin-routed-network-gateway.png)
+    ![Network settings for routed VDC network](images/vmw-vcd-admin-vdc-network-gateway.png)
 
 12. A VM needs an IP address to identify it on the network. Use the **Static IP pool** field to identify the IP addresses that VMs connecting to this network can use. You can specify either individual IP addresses (static manual) or a range of IP addresses (static IP pool):
 
@@ -90,7 +90,7 @@ First, you need to create a network that can connect to external networks outsid
 
     - For static IP pool, enter the range of IP addresses to use and click **Add**. For example, if your default gateway is `192.168.1.1`, you can use the `192.168.1.10-192.168.1.100` range for your static IP pool, giving 91 usable internal IP addresses.
 
-    ![IP pool for routed network](images/vmw-vcd-admin-routed-network-ip.png)
+    ![IP pool for routed network](images/vmw-vcd-admin-vdc-network-ip.png)
 
 13. Click **Next**.
 
