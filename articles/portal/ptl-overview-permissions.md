@@ -19,7 +19,7 @@ toc_mdlink: ptl-overview-permissions.md
 
 System administrators are presented with several options to control user permissions through the UKCloud Portal. The information below is intended as a brief guide to which permissions are applied using each setting.
 
-![Portal permissions page](images\portal_permissions.png)
+![Portal permissions page](images/portal_permissions.png)
 
 ## User is admin?
 

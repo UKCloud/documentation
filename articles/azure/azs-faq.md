@@ -166,7 +166,7 @@ Yes, we offer a 30-day trial for this service.
 
 ### How do I request a trial?
 
-This can be requested via the [UKCloud website trial page,](https://ukcloud.com/free-trial-sign-up) or via your Technical Account Manager if you an existing customer.
+This can be requested via the [UKCloud website trial page](https://ukcloud.com/free-trial-sign-up) or via your Technical Account Manager if you an existing customer.
 
 ### What do I do when my trial comes to an end?
 
@@ -214,4 +214,4 @@ For more information, see our Cross Domain Security Zone documentation.
 
 Protective monitoring is included for our all our services and follows GPG 13.
 
-For more information about this service, see our [Protective Monitoring FAQs](../other/other-faq-promon.md).
+For more information about this service, see our [*Protective Monitoring FAQs*](../other/other-faq-promon.md).

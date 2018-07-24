@@ -32,7 +32,7 @@ If you require access outside of the standard whitelist, you can request this vi
 
 The following diagram shows the status of standard internet ports. The permitted ports are also listed in the sections below.
 
-![Internet whitelist ports (regions 1 and 2)](images/internet_whitelist_ports_v1.3.png)
+![Internet whitelist ports (regions 1 and 2)](images/internet_whitelist_ports_v1_3.png)
 
 ## Inbound access from the internet to your edge gateway
 

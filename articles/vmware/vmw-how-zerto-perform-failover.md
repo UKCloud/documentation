@@ -13,7 +13,9 @@ toc_fullpath: How To/vmw-how-zerto-perform-failover.md
 toc_mdlink: vmw-how-zerto-perform-failover.md
 ---
 
-# Overview
+# How to perform a failover
+
+## Overview
 
 You may want to perform a failover in the following circumstances:
 
@@ -25,7 +27,7 @@ With Disaster Recovery as a Service and Journaling Protection, you can also run 
 > [!IMPORTANT]
 > During the failover process, any change in the configuration or state of the live or failed‑over VMs (for example, power on or power off) will cause failure of the failover and may corrupt the VPG. This could make a full resync necessary and, in a disaster recovery situation, could prevent failover completely.
 
-## Intended audience
+### Intended audience
 
 To perform the steps in this guide you need access to the Zerto Self-Service Portal (ZSSP) in the target zone.
 
@@ -40,7 +42,7 @@ When you run a test failover, a test VM is created for each of your protected VM
 
 1. Log in to the ZSSP.
 
-    For more detailed instructions, see [*How to access the Zerto Self-Service Portal*](vmw-how-zerto-access.zssp.md).
+    For more detailed instructions, see [*How to access the Zerto Self-Service Portal*](vmw-how-zerto-access-zssp.md).
 
     Use the ZSSP login link for the zone in which your target VDC is located.
 

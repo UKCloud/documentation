@@ -62,7 +62,7 @@ Instance boot time refers to the amount of time taken for an instance to boot fr
 
 This means that you will benefit from reduced delay in loading the instances and the end user is able to quickly access the applications within them.
 
-![Instance boot time (seconds) for UKCloud, AWS and Azure](images\boot_times.png)
+![Instance boot time (seconds) for UKCloud, AWS and Azure](images/boot_times.png)
 
 ### MongoDB
 
@@ -72,7 +72,7 @@ The performance of MongoDB running on the UKCloud for OpenStack platform is 2 ti
 
 This results in better database performance with UKCloud and means there is higher data availability to applications, which in turn affects the service that a customer consumes, resulting in a better customer experience.
 
-![mongoDB performance (ops/sec) for UKCloud, AWS and Azure](images\mongodb.png)
+![mongoDB performance (ops/sec) for UKCloud, AWS and Azure](images/mongodb.png)
 
 ### Network performance
 
@@ -82,7 +82,7 @@ UKCloud has a maximum throughput almost 12 times higher than AWS and almost 19 t
 
 This is important for customers who are moving large sets of data or need quick access to their data over the network. This results in less time spent waiting for data transfers to be completed, which allows applications to access their data more quickly. Ultimately meaning applications can run faster, giving a better user experience.
 
-![network performance (Mbit/s) for UKCloud, AWS and Azure](images\network_performance.png)
+![network performance (Mbit/s) for UKCloud, AWS and Azure](images/network_performance.png)
 
 ### Random IO performance
 
@@ -94,7 +94,7 @@ This means that enterprise applications such as relational databases which are d
 
 Databases and applications that are disk intensive are often slowed down by their storage, hence the increased popularity of Solid State Drives (SSD). However, as the graph below shows, UKCloud provides fast storage access allowing applications to rapidly access and process data, resulting in faster applications compared to AWS and Azure's equivalent storage option.
 
-![random IO performance for UKCloud, AWS and Azure](images\random_io.png)
+![random IO performance for UKCloud, AWS and Azure](images/random_io.png)
 
 ### Sequential IO performance
 
@@ -104,7 +104,7 @@ The graph below shows that for sequential read the UKCloud platform performs alm
 
 As with databases, these kinds of applications are often slowed down by their storage, hence the increased popularity of Solid State Drives (SSD). However, as the graph below shows, UKCloud provides fast storage access allowing applications to rapidly access and process data, resulting in faster applications compared to AWS and Azure's equivalent storage option. High sequential IO performance is vital for data analysis and specifically for data warehouses which are a core component of business intelligence and thus guide key management decisions.
 
-![random IO performance for UKCloud, AWS and Azure](images\sequential_io.png)
+![random IO performance for UKCloud, AWS and Azure](images/sequential_io.png)
 
 ## Where does the UKCloud OpenStack platform outperform both hyperscalers?
 

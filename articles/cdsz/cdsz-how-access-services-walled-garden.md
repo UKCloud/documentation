@@ -59,7 +59,7 @@ The diagrams below show that you need to add two static routes and an SNAT rule 
 Now that you've set up access to UKCloud services, you can register your VMs with those services. For more information, see:
 
 - [*How to license Windows VMs using the UKCloud Key Management Server*](../vmware/vmw-how-setup-kms.md)
-- [*How to connect to the UKCloud Windows Server Update Services (WSUS)*](../vmware/vmw-how-connect-windows-update)
+- [*How to connect to the UKCloud Windows Server Update Services (WSUS)*](../vmware/vmw-how-connect-windows-update.md)
 - [*How to install Red Hat Update Infrastructure on an existing virtual machine*](../vmware/vmw-how-install-rhui.md)
 
 ## Feedback

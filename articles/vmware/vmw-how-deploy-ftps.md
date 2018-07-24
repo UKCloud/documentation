@@ -19,23 +19,27 @@ toc_mdlink: vmw-how-deploy-ftps.md
 
 1. Login to vCloud Director via the UKCloud Portal.
 
-    ![My Cloud](images/my_cloud)
+2. Select the My Cloud tab.
 
-2. Select **Public Catalogs** from the drop down and select **All templates** and search for **ftps**.
+    ![My Cloud tab in vCloud Director](images/vmw-vcd-tab-my-cloud.png).
 
-3. Select the template **UKCloud_Centos_6_FTPS_...** and click **Next**.
+3. Click the **Add vApp from Catalog** icon.
+
+4. Select **Public Catalogs** from the drop down and select **All templates** and search for **ftps**.
+
+5. Select the template **UKCloud_Centos_6_FTPS_...** and click **Next**.
 
     ![Public Catalogs](images/public_catalogs.jpg)
 
-4. Name the vApp and choose the data centre you want to deploy to.
+6. Name the vApp and choose the data centre you want to deploy to.
 
-5. Select the network you want to deploy to (this network must be connected to the internet).
+7. Select the network you want to deploy to (this network must be connected to the internet).
 
-6. Click **Next*
+8. Click **Next*
 
-7. Select **Power On** and click **Finish**.
+9. Select **Power On** and click **Finish**.
 
-8. When the deployment is complete open the vApp and take note of the private IP address.
+10.  When the deployment is complete open the vApp and take note of the private IP address.
 
     ![vApp IP Address](images/vapp_ip_address.jpg)
 

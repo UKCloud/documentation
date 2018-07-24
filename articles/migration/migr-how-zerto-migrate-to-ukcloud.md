@@ -78,7 +78,7 @@ For a complete list of hypervisor features supported when using Workload Migrati
 
 To migrate your workloads to the UKCloud platform, you must have a VDC in the intended target site. If you already have a compute service in the UKCloud site, you can use an existing VDC or you can create a new one using:
 
-- The UKCloud Portal (for more information see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vm-gs.md))
+- The UKCloud Portal (for more information see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md))
 - The UKCloud Portal API (for more information see the [*How to use the UKCloud Portal API*](../portal/ptl-how-use-api.md))
 
 If you don't already have a compute service in the UKCloud site or you'd prefer UKCloud to create the VDC for you, you can request this as part of your Workload Migration Service Request.

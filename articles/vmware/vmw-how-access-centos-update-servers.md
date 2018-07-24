@@ -85,7 +85,7 @@ Choose this option only if you want full control of CentOS updates and are alrea
 
 It's a much more complex solution than using UKCloud-managed repository servers, and you have sole responsibility for deploying and managing it.
 
-For more information about the Walled Garden, see the [*Getting Started Guide for Cross Domain Security Zone*](../cdsz/cdsz-gs.md).
+For more information about the Walled Garden, see the [*Getting Started Guide for Cross Domain Security Zone*](../cdsz/cdsz-gs-walled-garden.md).
 
 ## Feedback
 

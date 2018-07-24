@@ -44,7 +44,7 @@ You can resolve this issue (or prevent it occurring if your region has not yet b
 
 To redeploy your edge gateway, right-click the edge gateway and select **Re-Deploy**.
 
-![Redeploy edge option in vCloud Director](images\vcd_redeploymenu.png)
+![Redeploy edge option in vCloud Director](images/vcd_redeploymenu.png)
 
 If the edge gateway is already affected by the known VMware bug where the default gateway is missing or not configured in vCloud, we advise that you contact the Support team before attempting to redeploy your edge gateway. To validate if this is an issue, right-click your edge gateway and select **Properties**, then select the **Configure Default Gateway** tab. If the **Configure default gateway** checkbox is not selected, contact the Support team.
 

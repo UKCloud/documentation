@@ -75,7 +75,7 @@ of VMs, please raise a support request from the "My Calls" section of the UKClou
 
 2. Select the VM you want to find the location of.
 
-    ![List of virtual machines](images/vmw-vcd-vms.png.png)
+    ![List of virtual machines](images/vmw-vcd-vms.png)
 
 3. Right click your VM and select **Properties**.
 

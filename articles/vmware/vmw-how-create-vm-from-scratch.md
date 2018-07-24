@@ -127,7 +127,7 @@ For information about creating a VM from a template, see [*How to create a VM fr
 
     After a short while the VM will start the boot process and pick up the CD/DVD. Resize the VM window if necessary to see the whole screen.
 
-7. Carry out the operating system install as normal. When you've finished, remember to install VMware Tools (for more information, see [*VMware Tools Installation*](vmw-ref-tools-installation.md).
+7. Carry out the operating system install as normal. When you've finished, remember to install VMware Tools (for more information, see [*VMware Tools Installation*](vmw-ref-vmware-tools-installation.md).
 
 ## Feedback
 

@@ -25,7 +25,7 @@ This whitelist policy applies to the Assured OFFICIAL platform only where connec
 
 If you require access outside of the standard whitelist this can be requested via the support section of the UKCloud Portal.
 
-![PSN assured whitelisted ports](images\psn_assured_whitelist_ports.png)
+![PSN assured whitelisted ports](images/psn_assured_whitelist_ports.png)
 
 ## Inbound access from the Internet to your vShield Edge Gateway
 

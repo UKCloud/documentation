@@ -85,7 +85,7 @@ UKCloud's Cloud Storage can be used as an S3-addressable target for Oracle prote
 
 UKCloud for Oracle Software offers an SLA guarantee of 99.95% availability.
 
-You are entitled to claim Service Credits for outages to services that take you out of the SLA. For more about how we calculate SLAs, see the [SLA Definition](../other/other-ref-sla-definition.md) document.
+You are entitled to claim Service Credits for outages to services that take you out of the SLA. For more about how we calculate SLAs, see the [*SLA Definition*](../other/other-ref-sla-definition.md) document.
 
 Our SLA does not cover faults within your control, such as client application issues, or faults within external connectivity providers (for example, internet, PSN or N3/HSCN).
 

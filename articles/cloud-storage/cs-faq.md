@@ -171,4 +171,4 @@ For more information, see the [*Cross Domain Security Zone Service Definition*](
 
 ### Is there a protective monitoring service?
 
-Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in our [Protective Monitoring FAQs.](../other/other-faq-promon.md).
+Yes, protective monitoring is included for our IaaS platform and follows GPG 13, more information can be found in our [*Protective Monitoring FAQs*](../other/other-faq-promon.md).

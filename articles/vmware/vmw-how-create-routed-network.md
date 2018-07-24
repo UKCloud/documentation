@@ -49,7 +49,7 @@ To create a routed Org vDC network:
 
 6. Select the edge gateway that you want your network to connect to and then click **Next**.
 
-    ![Select edge gateway](images/vmw-vcd-admin-vdc-network-edge.png)
+    ![Select edge gateway](images/vmw-vcd-admin-routed-network-edge.png)
 
     <!-- add info about what the Create as subinterface checkbox is for -->
 
@@ -64,7 +64,7 @@ To create a routed Org vDC network:
 
     As an example, if you give the gateway address as `192.168.1.1`, you may then want to give a static IP pool of `192.168.1.10` to `192.168.1.100`. This will give you a pool of 91 IP  addresses to assign to machines within your network. You can always increase this later if needed.
 
-    ![IP pool for routed network](images/vmw-vcd-admin-routed-network-ip.png)
+    ![IP pool for routed network](images/vmw-vcd-admin-vdc-network-ip.png)
 
 9. Click **Next**.
 

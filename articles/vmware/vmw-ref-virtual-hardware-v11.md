@@ -47,7 +47,7 @@ Prior to upgrading the Virtual Hardware version the following should be noted:
 4. Select a virtual machine, right-click, and select Upgrade Virtual Hardware Version.
 5. Click Yes.
 
-![virtual machine properties](images\HWVersion.jpg)
+![virtual machine properties](images/HWVersion.jpg)
 
 ## Q. Are there precautions I need to be aware of?
 
