@@ -40,7 +40,7 @@ Prerequisites from a Windows-based external client.
 
 ## Authentication
 
-In order to authenticate with Terraform you will need to have valid Service Principal Name (SPN) - how to create one is described in [Prerequisites](#prerequsites).
+In order to authenticate with Terraform you will need to have valid Service Principal Name (SPN) - how to create one is described in [Prerequisites](#prerequisites).
 
 > [!NOTE]
 > You only need your Service Principal Name (SPN) to be assigned to Azure Stack subscription despite what official Terraform documentation says.

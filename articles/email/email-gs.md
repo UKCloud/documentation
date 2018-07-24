@@ -256,16 +256,16 @@ To configure Thunderbird:
 
 5. Configure the connection as follows:
 
-    - **Incoming:** IMAP\
-        **Server hostname:** mail.skyscapecs.net\
-        **Port:** 993\
-        **SSL:** SSL/TLS\
+    - **Incoming:** IMAP<br>
+        **Server hostname:** mail.skyscapecs.net<br>
+        **Port:** 993<br>
+        **SSL:** SSL/TLS<br>
         **Authentication:** Normal Password
 
-    - **Outgoing:** SMTP\
-        **Server hostname:** mail.skyscapecs.net\
-        **Port:** 465\
-        **SSL:** SSL/TLS\
+    - **Outgoing:** SMTP<br>
+        **Server hostname:** mail.skyscapecs.net<br>
+        **Port:** 465<br>
+        **SSL:** SSL/TLS<br>
         **Authentication:** Normal Password
 
 6. In the **Username** field, enter your full email address.
@@ -322,7 +322,7 @@ For more information about using Email and Collaboration as a Service, see the f
 - [*How to use UKCloud's email service with your application*](email-how-use-with-app.md)
 - [*How to set up Email and Collaboration on an iPhone or iPad*](email-how-setup-iphone.md)
 - [*How to setup Email on Android, Windows or BlackBerry mobile devices*](email-how-setup-android.md)
-- [*Sending email from the Elevated environment*](email-how-send-email-elevated.md)
+- [*Sending email from the Elevated environment*](email-ref-elevated.md)
 
 ## Glossary
 

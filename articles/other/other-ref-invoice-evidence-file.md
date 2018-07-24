@@ -9,8 +9,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Understanding your invoice evidence file
-toc_fullpath: Reference/conn-ref-invoice-evidence-file.md
-toc_mdlink: conn-ref-invoice-evidence-file.md
+toc_fullpath: Reference/other-ref-invoice-evidence-file.md
+toc_mdlink: other-ref-invoice-evidence-file.md
 ---
 
 # Understanding your invoice evidence file

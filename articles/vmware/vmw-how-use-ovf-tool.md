@@ -9,8 +9,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Use the VMware OVF Tool
-toc_fullpath: How To/vmw-use-ovf-tool.md
-toc_mdlink: vmw-use-ovf-tool.md
+toc_fullpath: How To/vmw-how-use-ovf-tool.md
+toc_mdlink: vmw-how-use-ovf-tool.md
 ---
 
 # How to use the VMware OVF Tool

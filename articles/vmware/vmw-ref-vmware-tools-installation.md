@@ -9,8 +9,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: VMware Tools installation
-toc_fullpath: Reference/vmw-vmware-tools-installation.md
-toc_mdlink: vmw-vmware-tools-installation.md
+toc_fullpath: Reference/vmw-ref-vmware-tools-installation.md
+toc_mdlink: vmw-ref-vmware-tools-installation.md
 ---
 
 # VMware Tools installation

@@ -9,8 +9,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Windows Server activation
-toc_fullpath: Reference/vmw-windows-server-activation.md
-toc_mdlink: vmw-windows-server-activation.md
+toc_fullpath: Reference/vmw-ref-windows-server-activation.md
+toc_mdlink: vmw-ref-windows-server-activation.md
 ---
 
 # Windows Server activation

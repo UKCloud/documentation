@@ -10,8 +10,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Disaster Recovery as a Service
-toc_fullpath: Getting Started/vmw-gs-draas.md
-toc_mdlink: vmw-gs-draas.md
+toc_fullpath: Getting Started/draas-gs.md
+toc_mdlink: draas-gs.md
 ---
 
 # Getting Started Guide for Disaster Recovery as a Service
