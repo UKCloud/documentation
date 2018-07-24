@@ -39,31 +39,27 @@ To submit changes or new articles you must have a GitHub account.
 
 4. If necessary, log in to GitHub.
 
-5. Click the **Edit this file** (pencil) icon.
+5. Click the **Edit the file** (pencil) icon.
 
     ![Edit this file icon in GitHub](images/other-github-ico-edit.png)
 
 6. Edit the article as required.
 
-7. When you're done, at the bottom of the page, select **Create a new branch for this commit and start a pull request.**
+7. When you're done, at the bottom of the page, enter a short descriptive name for your change and, optionally, a longer description to provide more detail.
 
-    ![Create new branch option](images/other-github-new-branch.png)
+8. Click **Propose file change**.
 
-8. Enter a name for the branch that helps identify the change you made, for example:
+    ![Propose file change](images/other-github-propose-change.png)
 
-       fix-typo-step-4
+9. Review the changes you've made.
 
-9. Click **Propose file change**.
+10. Click **Create pull request**.
 
-10. Review the changes you've made.
-
-11. On the **Write** tab, provide more details about the change you've made.
-
-12. Click **Create pull request**.
+10. On the **Write** tab, provide more details about the change you've made, if necessary, then click **Create pull request**.
 
     ![Create pull request](images/other-github-pull-request.png)
 
-13. The pull request is submitted to UKCloud to review and merge into the master branch if appropriate. We may contact you to discuss the details of your changes if required.
+12. The pull request is submitted to UKCloud to review and merge into the master branch if appropriate. We may contact you to discuss the details of your changes if required.
 
 ## Submitting larger changes to an article or creating new articles
 
