@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Journaling Protection Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Journaling Protection Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="journaling-protection-service-scope">Journaling Protection Service Scope</h1>
+
+<h2 id="about-this-document">About this document</h2>
+<p>This document explains what is and isn't included in the scope of the Journaling Protection service option.</p>
+<p>Journaling Protection is one of a variety of on‑platform protection options available from UKCloud. Use this Service Scope to understand Journaling Protection and whether it will meet your own recovery point (RPO) or recovery time (RTO) objectives.</p>
+<h2 id="about-journaling-protection">About Journaling Protection</h2>
+<p>Journaling Protection (powered by Zerto) is a powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between UKCloud's enabled regions.</p>
+<p>You can protect your Virtual Machines(VMs) by adding Journaling Protection to the vApp that contains those VMs. When you add Journaling Protection to a vApp, every write operation to the VMs in that vApp is copied and stored in a journal on the recovery site. This means that in the event of a VM being compromised, (for example, by a virus attack or bad software update) you can quickly recover the VM to a point in time before the event.</p>
+<p>You can add Journaling Protection to a vApp by adding it to a virtual protection group (VPG). Each VM in the protected vApp is synchronised to the recovery site and a journal is created. After this initial sync, each subsequent write operation to the VM is processed as normal on the protected site and a copy is asynchronously sent to the recovery site and written to the journal.</p>
+<p>When the specified journal history is reached (for example, 14 days), as new journal entries are created, older entries are written to the recovery VM's virtual disks.</p>
+<p>Every few seconds a checkpoint is written to every journal for each VM in the VPG to ensure crash-consistency between the VMs. If you need to recover a VM, you select a checkpoint to recover to. For example, in the case of a virus, you could recover to a checkpoint from before the virus attack. During recovery, the vApp and its VMs are created on the recovery site and the recovery disks for each VM are attached to the recovered VM. Information in the journal is then promoted to the VM to bring it up to the date and time of the selected checkpoint.</p>
+<h2 id="frequency-and-timing">Frequency and timing</h2>
+<p>UKCloud's Journaling Protection service is designed to provide customers with recovery points that are as little as seconds behind the running VM.</p>
+<p>UKCloud's standard journaling profile provides:</p>
+<ul>
+<li><p>Target RPO of 5 Minutes</p>
+</li>
+<li><p>Journal history of 2, 7, 14 or 28 days</p>
+</li>
+</ul>
+<p>At present, UKCloud have not enabled the ability for customers to configure custom profiles.</p>
+<p>If the target RPO is exceeded, the customer and UKCloud will be notified via the Zerto self-service portal.</p>
+<p>Factors that can affect the RPO are:</p>
+<ul>
+<li><p><strong>Rate of change of the data on a VM.</strong> VMs with a large rate of change in the data will potentially achieve slightly longer RPO's than those VMs that have a lower rate of change</p>
+</li>
+<li><p><strong>Any network latency or storage performance challenges.</strong> UKCloud monitors its estate to ensure that network and storage performance are in line with platform expectations. Any deviations are alerted to our technical teams to resolve.</p>
+</li>
+</ul>
+<p>Additionally, the service will also alert if a customer's journal exceeds 75% in size of the original VM. This alert is utilised to understand if the customer's solution is being protected adequately.</p>
+<p>Journaling Protection only works for VM's currently on the platform -- it will only capture data whilst a VM is turned on. If a VM is deleted in vCloud Director -- Journaling Protection will IMMEDIATELY delete the associated journal.</p>
+<h3 id="what-sla-do-you-offer-on-snapshot-success">What SLA do you offer on snapshot success?</h3>
+<p>UKCloud do not offer an SLA around the VMs protected by UKCloud's Journaling Protection solution. However, the status of journaled VM's is monitored continuously, and the UKCloud support team investigates all failures or service degradation.</p>
+<h3 id="other">Other</h3>
+<p>The service is not backed by service credits.</p>
+<p>On occasion, planned maintenance may disrupt the operation of the Journaling Protection service. This may lead to the service being unavailable, or a temporary increase to the RPO a customer may be able to achieve on the platform.</p>
+<p>If there's a potential disruption, we'll highlight this to you via the service <a href="http://status.ukcloud.com/">status page</a> and UKCloud Portal notifications system.</p>
+<h2 id="journaling-protection-management">Journaling Protection management</h2>
+<p>Customers of the Journaling Protection service are able to self-manage their protected environment via the self-service portal. This portal allows customers to:</p>
+<ul>
+<li><p>Configure virtual protection groups</p>
+</li>
+<li><p>Opt vApps into the VPGs</p>
+</li>
+<li><p>Monitor the performance of their platform</p>
+</li>
+<li><p>View the current RPO of their applications and current available history</p>
+</li>
+<li><p>Perform test failovers</p>
+</li>
+<li><p>Perform live failovers</p>
+</li>
+</ul>
+<p>UKCloud have disabled some areas of the self-service portal as they are for services we do not presently support. These include:</p>
+<ul>
+<li>Backup to external systems. At present, customers are unable to export their journal to external backup targets (such as UKCloud Cloud Storage). We have identified a compliance issue with this solution which we are working to address. Until this is addressed, the feature will remain unavailable.</li>
+</ul>
+<p>Additionally, the following scenario cannot be supported:</p>
+<ul>
+<li>Organisation network IP subnets can only be different in the protected and recovery sites if IP Pool or DHCP address assignment is used in both sites. If manually assigned IPs are used in the protected site, the configured recovery organisation network on the recovery site must have the same IP subnet as on the protected site.</li>
+</ul>
+<h2 id="alerting-and-reporting">Alerting and reporting</h2>
+<p>The self-service portal provides live real time reporting of your solution and the current level of protection being provided to your vApp.</p>
+<p>The self-service portal will also provide customers with alerts should the target RPO of their VPG exceed the threshold, or the associated journal size grows beyond the expected size. In both these scenarios, UKCloud will also receive a platform monitoring alert and investigate the cause.</p>
+<p>Additionally, the self-service portal provides visibility of an activity log of the actions against a particular VM and a list of any errors captured on the platform.</p>
+<h2 id="failover">Failover</h2>
+<p>The Zerto self-service portal allows customers the ability to failover to their recovery site.</p>
+<p>When this is initiated, the Journaling Protection service will failover the VMs inside a vApp, restoring the data and state of the VMs to the desired point from inside the Journal. The Journaling Protection service can also replicate any internal networking rules.</p>
+<p>The customer will need to manually configure:</p>
+<ul>
+<li><p>External networking configurations - including configuring VPNs and making any external firewall or DNS changes</p>
+</li>
+<li><p>Check for application consistency</p>
+</li>
+</ul>
+<h2 id="licensing">Licensing</h2>
+<p>All licensing is provided by UKCloud. At present, customers cannot bring their own licensing.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-sco-journaling-protection.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

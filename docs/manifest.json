@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-terraform.html",
-          "hash": "DDQU1YUY5Q8XRs9ROIy9sw=="
+          "hash": "t3wm4rVBtkSj/gnlY46SaA=="
         }
       },
       "is_incremental": false,
@@ -1335,15 +1335,36 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/draas/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/draas/toc.html",
-          "hash": "7sgLFwqN4QQ7NmfO6B/IWg=="
+          "hash": "GONa3ShBfO4Y6iHDrgiJ1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/email/email-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/email/email-faq.html",
+          "hash": "EvAs5njXT2/a0cx0mK+a3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/email/email-gs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/email/email-gs.html",
+          "hash": "+6nrv4c1SERDfXlxPxIkeQ=="
         }
       },
       "is_incremental": false,
@@ -1354,11 +1375,249 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "articles/email/email-gs.md",
+      "source_relative_path": "articles/email/email-how-setup-android.md",
       "output": {
         ".html": {
-          "relative_path": "articles/email/email-gs.html",
-          "hash": "MgxME8M50bzfAKZCc57nuw=="
+          "relative_path": "articles/email/email-how-setup-android.html",
+          "hash": "pFFng09gLvk1dc4T8Vhf0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/email/email-how-setup-iphone.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/email/email-how-setup-iphone.html",
+          "hash": "lHD1kxVDNZPzh1Nv/wotGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/email/email-how-use-with-app.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/email/email-how-use-with-app.html",
+          "hash": "4pGpjXzSxVCz02H4jBAvdA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/email/email-ref-elevated.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/email/email-ref-elevated.html",
+          "hash": "rQImCq74B8Gekf+sIm3CRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "invalid-yaml-header"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/email/email-ref-upgrade-to-86.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/email/email-ref-upgrade-to-86.html",
+          "hash": "0TZtIwzRjJapjLYwqO48Cw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-console-new-account.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-console-new-account.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-elevated.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-elevated.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-internet.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-internet.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-iphone-account-info.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-iphone-account-info.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-iphone-add-account.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-iphone-add-account.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-iphone-exchange.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-iphone-exchange.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-iphone-home.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-iphone-home.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-iphone-keep-contacts.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-iphone-keep-contacts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-iphone-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-iphone-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-iphone-sync-filter.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-iphone-sync-filter.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-iphone-synchronise.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-iphone-synchronise.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-iphone-zimbra-client-inbox.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-iphone-zimbra-client-inbox.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-iphone-zimbra-client-mail.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-iphone-zimbra-client-mail.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-iphone-zimbra-client.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-iphone-zimbra-client.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-iphone-zimbra-settings.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-iphone-zimbra-settings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-iphone-zimbra-touch.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-iphone-zimbra-touch.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-legacy.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-legacy.png"
         }
       },
       "is_incremental": false,
@@ -1403,6 +1662,28 @@
       "output": {
         "resource": {
           "relative_path": "articles/email/images/email-outlook-zimbra.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-psn-protected.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-psn-protected.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/email/images/email-stunnel.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/email/images/email-stunnel.png"
         }
       },
       "is_incremental": false,
@@ -1557,7 +1838,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/toc.html",
-          "hash": "vStpKeVno8lJY+uhTXre2Q=="
+          "hash": "KC4lgvCkcSh6gblnu7zw5g=="
         }
       },
       "is_incremental": false,
@@ -4315,6 +4596,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-promon-showback.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-promon-showback.html",
+          "hash": "l5zRAViZN+4t0lPfI0dJpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-services-by-region.md",
       "output": {
         ".html": {
@@ -4350,15 +4643,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-spectre-meltdown.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-spectre-meltdown.html",
-          "hash": "xtq29h7XftKWIobPlvpbjw=="
+          "hash": "T2TS4aUI48250e+2YWmhgA=="
         }
       },
       "is_incremental": false,
@@ -4401,15 +4691,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/other/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "3Opad/xl0sK4/w3n2LbrGA=="
+          "hash": "bJkDNx4A3Rw/dYcBJX62dQ=="
         }
       },
       "is_incremental": false,
@@ -4432,6 +4719,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/portal_permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-contact-details-notifications.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-contact-details-notifications.png"
         }
       },
       "is_incremental": false,
@@ -4465,6 +4763,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-memorable-word.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mnu-contact-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mnu-contact-details.png"
         }
       },
       "is_incremental": false,
@@ -4603,15 +4912,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "K4aEjtEBOlXbFLIOjTbcCg=="
+          "hash": "0fql2dXUx+z6i1fHZh6rbQ=="
         }
       },
       "is_incremental": false,
@@ -4636,6 +4942,18 @@
         ".html": {
           "relative_path": "articles/portal/ptl-how-reset-password.html",
           "hash": "ZepHImfdLOpc7Pe2aHVfWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-how-signup-notifications.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-how-signup-notifications.html",
+          "hash": "GkH+6PSeDZWx82NnQXlgiQ=="
         }
       },
       "is_incremental": false,
@@ -4731,7 +5049,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "dDbSPzDIDrQXaQ1yqWDIHw=="
+          "hash": "FVQPXZUcJQUX8wi4tp0FRA=="
         }
       },
       "is_incremental": false,
@@ -9003,15 +9321,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/vmware/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "NbCw5pPP0q3ogmqyqWGhcw=="
+          "hash": "imsfy+s/t+lMlPrVVjJnng=="
         }
       },
       "is_incremental": false,
@@ -9417,15 +9732,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-manage-snapshot-protection.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-manage-snapshot-protection.html",
-          "hash": "u5AnIIzDrBNYM0Hi+la69Q=="
+          "hash": "E1ctw3MrMLdHFOrnsLyEZg=="
         }
       },
       "is_incremental": false,
@@ -9957,6 +10269,30 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-byof.html",
           "hash": "NuKi9JdOsoeySkMtZ+K+OQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-sco-journaling-protection.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-sco-journaling-protection.html",
+          "hash": "Suv4iqKFMKt/5CL5cXTM8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-sco-snapshot-protection.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-sco-snapshot-protection.html",
+          "hash": "SSadSxbgU06mJjG5Z3tZtA=="
         }
       },
       "is_incremental": false,

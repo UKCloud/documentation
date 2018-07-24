@@ -24,6 +24,8 @@
     href: other-ref-customer-admin.md
   - name: Data centre advance notice requirements
     href: other-ref-dc-notice.md
+  - name: Protective Monitoring information in the UKCloud Portal
+    href: other-ref-platform-patches.md
   - name: Services by region
     href: other-ref-services-by-region.md
   - name: Sites, regions and zones map and reference table
@@ -39,7 +41,7 @@
   - name: Understanding the Cyber Security News page
     href: other-ref-cyber-security-news.md
   - name: Understanding your invoice evidence file
-    href: conn-ref-invoice-evidence-file.md
+    href: other-ref-invoice-evidence-file.md
   - name: Windows Server 2016 templates
     href: other-ref-windows-2016-templates.md
 - name: Service Scope

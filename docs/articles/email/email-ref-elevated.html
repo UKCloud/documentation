@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sending email from the Elevated environment | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Sending email from the Elevated environment | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="sending-email-from-the-elevated-environment">Sending email from the Elevated environment</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The UKCloud Elevated OFFICIAL platform is connected to the PSN Protected network. This means that we can provide cloud services on that network to our whole range of partners and direct public sector customers.</p>
+<p>PSN Protected is a closed, controlled, encrypted and heavily regulated network that connects many public sector bodies together. With this in mind, it presents the UK government with security and control of their data, but also presents solution providers and partners with extra planning and consideration when deploying solutions or applications for public sector customers.</p>
+<p>Email is used extensively throughout most solutions. Use cases range from monitoring and alerting for back end systems to releasing information and data such as invoices and records. Whatever the use case is for email, it's a tool that solution providers have come to rely upon.</p>
+<h2 id="email-and-collaboration-as-a-service">Email and Collaboration as a Service</h2>
+<p>It's common for public sector customers to require email as-a-service, and as such, we have a solution available. Email and Collaboration-as-a-Service is a Zimbra based email solution that is available on both the Assured OFFICIAL and Elevated OFFICIAL platforms and is available on PSN Assured and PSN Protected. The advantages of our email solution is that it can be provisioned quickly, is hosted on our cloud platform and can be scaled as your requirements change. For more information on this solution, please see the service definition on the Digital Marketplace.</p>
+<h2 id="what-the-elevated-topology-looks-like">What the Elevated topology looks like</h2>
+<p>We provision a platform for use on PSN Protected, and you can utilise our Email and Collaboration-as-a-Service, to deploy an email solution of your own. Our Email and Collaboration-as-a-Service is an email domain that you control and configure, and enables you to create mailboxes for a wide range of uses depending on your required solution.</p>
+<p>The PSN Authority uses change management forms to control access and rules on PSN Protected. If you need to make any changes or requests, you must complete a GCF Request for Change Form in the necessary format (check for the latest version <a href="https://www.gov.uk/government/publications/public-services-network-psn-gcf-customer-change-form">here</a>). The GCF form provides guidance there are third party contract incumbents who have support services on hand to provide further guidance.</p>
+<p>Depending on where you need to exchange emails depends upon what happens on PSN Protected (routing and gateway forwarding) and what rule sets you need to follow for antivirus, content inspection, recipient addresses and other settings. Note that there may be additional services you need to consider or procure, or there may be PSN Protected rule sets in place that mean you are unable to move data in the format you originally planned (for example, encrypted ZIP files).</p>
+<p><img src="images/email-elevated.png" alt="Elevated Email topology"></p>
+<h2 id="email-domain-naming">Email Domain naming</h2>
+<p>Email uses DNS to route emails to their intended destination. All DNS record requests have to go through the Cabinet Office in the form of GDS (Government Digital Services). They maintain all records and rules for who and what is eligible for a name (for example, <code>.gov.uk</code> and <code>.nhs.uk</code> addresses).</p>
+<p>All information regarding this process is available from <a href="https://www.gov.uk/government/publications/public-services-network-psn-gcf-customer-change-form">GOV.UK</a>. The latest authorisation and request forms are available there to download.</p>
+<p>UKCloud cannot help in the procurement or authorisation of any DNS address as this is solely a GDS service.</p>
+<h2 id="email-to-psn-protected">Email to PSN Protected</h2>
+<p>When you have a DNS namespace allocated, you can create your mail domain (UKCloud's Email and Collaboration-as-a-Service or self-built). Once built or provisioned, you must use the PSN Authority managed email relays and DNS servers, and point your email domain application at these services. For information about configuring Email and Collaboration as-a-Service to do this, see <a href="email-how-use-with-app.html"><em>How to use UKCloud's email service with your application</em></a>. If you are connected to PSN Protected, you can request DNS and IP address information from us over secure communication channels via <a href="https://portal.ukcloud.com/support/my_calls">My Calls</a>.</p>
+<p>When you are connected and configured, you can establish email to PSN Protected connected customers as shown below:</p>
+<p><img src="images/email-psn-protected.png" alt="Email to PSN Protected"></p>
+<p>The PSN Protected DNS service routes all email to its known destination. You do not need to deploy a virus scanning facility for your email release as the PSN Authority does this for all traffic.</p>
+<h2 id="email-to-legacy-connected-networks">Email to legacy connected networks</h2>
+<p>Not all public sector bodies have migrated over to the PSN Protected currently and networks such as GSI, GSE, PNN and CJX still have an active user base who have requirements to exchange emails with PSN Protected services. All routing to these networks are reliant upon the PSN Authority and the partners to provide gateway services to these areas.</p>
+<p>All configuration from the application and solution sides are the same as the changes happen on PSN Protected itself.</p>
+<p><img src="images/email-legacy.png" alt="Email to legacy connected networks"></p>
+<p>Instead of releasing the email to an address on PSN Protected, the PSN Protected mail relay uses DNS to route the email through a gateway to another DNS service local to that network. When the record is found, it is routed to its intended addressee.</p>
+<p>The legacy network you are connecting to determines the rule set for email release, AV control, and content inspection used by the gateway. For the latest rule set, use GOV.UK and contact GDS for advice.</p>
+<p>You can procure these extra services, if needed, from the current third party contract incumbent.</p>
+<h2 id="email-to-the-internet">Email to the internet</h2>
+<p>The most common and restricted use case for email is to and from the internet. Configuration of any email application or service remains the same; the routing changes as does the behaviour and delivery of email. In  addition, email release to the internet means that you will need to procure extra services from the third party contract incumbent.</p>
+<p>DNS forwards emails addressed for the internet to the internet email gateway. All content is rule checked, whitelisted, and scanned for viruses against PSN Authority schemes. For a current list and guidance of what is and is not allowed, we recommend that you consult with GDS or the PSN Authority directly.</p>
+<p><img src="images/email-internet.png" alt="Email to the internet"></p>
+<p>If you are designing a solution that requires email usage, consult UKCloud for advice on how to get information and from which resource. As email routing and release to a controlled network is outside our jurisdiction, you must ensure that you have the most current information from the <a href="https://www.gov.uk/government/publications/public-services-network-psn-gcf-customer-change-form">GOV.UK</a> website or directly from <a href="https://gds.blog.gov.uk/">GDS</a> or the Cabinet Office.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/email/email-ref-elevated.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

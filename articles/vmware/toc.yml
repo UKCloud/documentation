@@ -51,7 +51,7 @@
   - name: Create an isolated VDC network
     href: vmw-how-create-isolated-network.md
   - name: Create find your allocated external IP addresses
-    href: vmw-vmw-how-find-ip-addresses.md
+    href: vmw-how-find-ip-addresses.md
   - name: Create firewall rules
     href: vmw-how-create-firewall-rules.md
   - name: Create NAT rules
@@ -93,7 +93,7 @@
   - name: Upgrade your edge gateway
     href: vmw-how-upgrade-edge.md
   - name: Use the VMware OVF Tool
-    href: vmw-use-ovf-tool.md
+    href: vmw-how-use-ovf-tool.md
   - name: Use VM location in vCloud Director
     href: vmw-how-use-vm-location.md
   - name: View your VMs in the UKCloud Portal
@@ -153,12 +153,16 @@
   - name: Virtual machine disk limits and considerations
     href: vmw-ref-vmdk-limits.md
   - name: VMware Tools installation
-    href: vmw-vmware-tools-installation.md
+    href: vmw-ref-vmware-tools-installation.md
   - name: VMware vCloud Connector
     href: vmw-ref-vcloud-connector.md
   - name: Windows Server activation
-    href: vmw-windows-server-activation.md
+    href: vmw-ref-windows-server-activation.md
 - name: Service Scope
   items:
   - name: Bring Your Own Firewall Service Scope
     href: vmw-sco-byof.md
+  - name: Journaling Protection Service Scope
+    href: vmw-sco-journaling-protection.md
+  - name: Snapshot Protection Service Scope
+    href: vmw-sco-snapshot-protection.md
