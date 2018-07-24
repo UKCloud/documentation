@@ -39,7 +39,7 @@ You should consider the following:
 - Migration is provided on a vApp basis (not for individual VMs). This is worth considering if you intend to migrate only some parts of your vApps.
 - VMs must be powered on to be synchronised prior to migration.
 - Our Journaling Protection service option captures every action. When a VM is deleted from your vApp, the associated journal is also deleted. This means if you delete a VM before migrating it, that VM will not exist in your target region.
-- We provide a single default service profile. The details of this are available in the [*Journaling Protection Service Scope*](vmw-sco-journaling-protection). We do not currently provide the option for you to create custom profiles
+- We provide a single default service profile. The details of this are available in the [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md). We do not currently provide the option for you to create custom profiles
 
 ## Migrating workloads between UKCloud regions
 

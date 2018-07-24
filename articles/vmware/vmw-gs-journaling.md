@@ -62,7 +62,7 @@ You should consider the following:
 - VMs must be powered on to be synchronised.
 - The operating system used by the protected VMs must also be supported in the recovery site.
 - Our Journaling Protection service option captures every action. When a VM is deleted from your vApp, the associated journal is also deleted. If you want to keep historic records of VMs that are no longer running on the platform, consider UKCloud's Snapshot Protection service option.
-- We provide a single default service profile. The details of this are available in the [*Journaling Protection Service Scope*](vmw-sco-journaling-protection). We do not currently provide the option for you to create custom profiles.
+- We provide a single default service profile. The details of this are available in the [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md). We do not currently provide the option for you to create custom profiles.
 
 ## Getting Journaling Protection up and running
 
