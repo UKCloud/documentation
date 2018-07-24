@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-terraform.html",
-          "hash": "UGKtLuYqVn3GIpM0Kx4nSw=="
+          "hash": "DDQU1YUY5Q8XRs9ROIy9sw=="
         }
       },
       "is_incremental": false,
@@ -1187,15 +1187,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "invalid-yaml-header"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/connectivity/conn-ref-telco-enagagement.md",
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-telco-enagagement.html",
-          "hash": "SgD9Gr1zdrelfJvFVcBNhA=="
+          "hash": "aBkUkmhAe6jvNOTfczeDkA=="
         }
       },
       "is_incremental": false,
@@ -1603,15 +1600,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/enablement/enbl-sco-dtf.md",
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-dtf.html",
-          "hash": "C1le/sfgdCuD6UsMNW1tvQ=="
+          "hash": "8y6ykReGmw+HwDwxxqv7SQ=="
         }
       },
       "is_incremental": false,
@@ -2305,15 +2299,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "invalid-note-section"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-how-monitor-cluster.md",
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-monitor-cluster.html",
-          "hash": "XkX+2fC9LeJtmFZgSTYmgQ=="
+          "hash": "ztUhYFZ56IbtrCJy0mBLgw=="
         }
       },
       "is_incremental": false,
@@ -4191,15 +4182,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-faq-promon.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-promon.html",
-          "hash": "j3fVvkFv+0E5g1cY0KKUgw=="
+          "hash": "s/9hcQTs6fKGCA8WAxb71Q=="
         }
       },
       "is_incremental": false,
@@ -4254,15 +4242,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-customer-admin.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-customer-admin.html",
-          "hash": "eR3nakNgM2xIgYXdSgML/w=="
+          "hash": "AR8S2cdN9Pzs9ATsB1CJTg=="
         }
       },
       "is_incremental": false,
@@ -4281,15 +4266,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-dc-notice.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-dc-notice.html",
-          "hash": "SQquSNIEtjf0VVV8SSdjQA=="
+          "hash": "cersl2T3ZmSCLJrB4x7D1Q=="
         }
       },
       "is_incremental": false,
@@ -4439,6 +4421,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/portal-my-calls-new-ticket.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/portal_permissions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/portal_permissions.png"
         }
       },
       "is_incremental": false,
@@ -4685,9 +4678,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-overview-permissions.md",
       "output": {
@@ -5234,6 +5224,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/ip_properties.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/kms_client_info.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/kms_client_info.png"
         }
       },
       "is_incremental": false,
@@ -8991,6 +8992,17 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/windows_activation.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/windows_activation.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -9105,15 +9117,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-build-vm.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-build-vm.html",
-          "hash": "sENNVTbT+OTnBVb0ZV1YOg=="
+          "hash": "DUuLKtSl+0Fjkv7e1p7CNA=="
         }
       },
       "is_incremental": false,
@@ -9132,15 +9141,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-configure-ipsec-vpn.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-ipsec-vpn.html",
-          "hash": "07qUV4txREZh4vzR9XFCFg=="
+          "hash": "5lJqO2yU3ik539E14THNfA=="
         }
       },
       "is_incremental": false,
@@ -9621,15 +9627,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "invalid-yaml-header"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-byof-working-firewalls.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-byof-working-firewalls.html",
-          "hash": "nZw4Ej4N2GYoCmsnheMbTw=="
+          "hash": "4rXK0qC2kAJwDzAaADXQVQ=="
         }
       },
       "is_incremental": false,
@@ -9936,15 +9939,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-windows-server-activation.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-windows-server-activation.html",
-          "hash": "q0Qz8mWjGHc5dHRVEqaiSA=="
+          "hash": "4RWMdjpR9WbEfbd8PoxSqg=="
         }
       },
       "is_incremental": false,
