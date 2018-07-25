@@ -25,7 +25,7 @@
   - name: Data centre advance notice requirements
     href: other-ref-dc-notice.md
   - name: Protective Monitoring information in the UKCloud Portal
-    href: other-ref-platform-patches.md
+    href: other-ref-promon-showback.md
   - name: Services by region
     href: other-ref-services-by-region.md
   - name: Sites, regions and zones map and reference table

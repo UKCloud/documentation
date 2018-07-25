@@ -186,7 +186,7 @@ complete the setup of your service:</p>
 </thead>
 <tbody>
 <tr>
-<td>M60-8Q*</td>
+<td>M60-8Q^</td>
 <td>Designer</td>
 <td>8192</td>
 <td>4</td>
@@ -194,7 +194,7 @@ complete the setup of your service:</p>
 <td>8</td>
 </tr>
 <tr>
-<td>M60-4Q*</td>
+<td>M60-4Q^</td>
 <td>Designer</td>
 <td>4096</td>
 <td>4</td>
@@ -202,7 +202,7 @@ complete the setup of your service:</p>
 <td>4</td>
 </tr>
 <tr>
-<td>M60-2Q*</td>
+<td>M60-2Q^</td>
 <td>Designer</td>
 <td>2048</td>
 <td>4</td>
@@ -210,7 +210,7 @@ complete the setup of your service:</p>
 <td>2</td>
 </tr>
 <tr>
-<td>M60-1Q*</td>
+<td>M60-1Q^</td>
 <td>Power User, Designer</td>
 <td>1024</td>
 <td>2</td>
@@ -251,7 +251,7 @@ complete the setup of your service:</p>
 </tr>
 </tbody>
 </table>
-<p>* M60-Q profiles are for 64-bit Linux</p>
+<p>^ M60-Q profiles are for 64-bit Linux</p>
 <p>UKCloud will confirm that you've set up your VM correctly and that it meets all the necessary prerequisites. If the VM meets all requirements, UKCloud will migrate the VM to a GPU‑enabled host and attach the GPU
 card to your VM.</p>
 <h2 id="installing-nvidia-drivers">Installing NVIDIA drivers</h2>
@@ -288,19 +288,19 @@ card to your VM.</p>
 <p><strong>On Linux:</strong></p>
 <ul>
 <li><p>Update the system:</p>
-<pre><code>  \# yum update
+<pre><code>  # yum update
 </code></pre>
 </li>
 <li><p>Install gcc with Kernel Modules:</p>
-<pre><code>  \# yum install kernel-devel gcc
+<pre><code>  # yum install kernel-devel gcc
 </code></pre>
 </li>
 <li><p>Make the driver package executable:</p>
-<pre><code>  \# chmod +x NVIDIA-Linux-x86\_64-384.73-grid.run
+<pre><code>  # chmod +x NVIDIA-Linux-x86_64-384.73-grid.run
 </code></pre>
 </li>
 <li><p>Run the driver installer:</p>
-<pre><code>  \# ./NVIDIA-Linux-x86\_64-384.73-grid.run
+<pre><code>  # ./NVIDIA-Linux-x86_64-384.73-grid.run
 </code></pre>
 </li>
 <li><p>Accept the defaults.</p>
@@ -310,7 +310,7 @@ card to your VM.</p>
 </div>
 </li>
 <li><p>Confirm that the driver is installed and the card is detected:</p>
-<pre><code>\# nvidia-smi
+<pre><code># nvidia-smi
 Thu Oct 5 14:57:43 2017
 +------------------------------------------------------------------------------+
 | NVIDIA-SMI 384.73                 Driver Version: 384.73                     |
@@ -338,13 +338,13 @@ Thu Oct 5 14:57:43 2017
 <p>To enable access to the NVIDIA GRID License Server from your network, you must create the following firewall rule on your edge gateway:</p>
 <ul>
 <li><strong>Source/Source Port:</strong> as appropriate for your source network</li>
-<li><strong>Destination:</strong> 51:179.197.53</li>
-<li><strong>Destination Port:</strong> 7070</li>
-<li><strong>Protocol:</strong> TCP</li>
-<li><strong>Action:</strong> Allow</li>
+<li><strong>Destination:</strong> <code>51:179.197.53</code></li>
+<li><strong>Destination Port:</strong> <code>7070</code></li>
+<li><strong>Protocol:</strong> <code>TCP</code></li>
+<li><strong>Action:</strong> <code>Allow</code></li>
 </ul>
 <p><img src="images/gpu-vcd-add-firewall-rule.png" alt="Add firewall rule dialog box"></p>
-<p>If you need more detailed instructions for creating firewall rules, see <a href="https://portal.ukcloud.com/support/knowledge_centre/e8ec5a0b-e5c7-4e44-b353-ab89505fefbe"><em>vCNS Edge services: firewall</em></a>.</p>
+<p>If you need more detailed instructions for creating firewall rules, see <a href="../vmware/vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
 <h4 id="retrieving-a-licence-windows">Retrieving a licence (Windows)</h4>
 <p>To license GRID Virtual GPU on Windows:</p>
 <ol>
@@ -355,7 +355,7 @@ Thu Oct 5 14:57:43 2017
 </li>
 <li><p>In the <strong>License Server</strong> field, enter <code>gpuls.ukcloud.com</code>.</p>
 </li>
-<li><p>Leave the <strong>Port Number</strong> field empty to default to port 7070, which is the default port number used by the NVIDIA GRID License Server.</p>
+<li><p>Leave the <strong>Port Number</strong> field empty to default to port <code>7070</code>, which is the default port number used by the NVIDIA GRID License Server.</p>
 </li>
 <li><p>Click <strong>Apply</strong>.</p>
 </li>
@@ -369,43 +369,43 @@ Thu Oct 5 14:57:43 2017
 <p>To license GRID Virtual GPU on Linux</p>
 <ol>
 <li><p>Copy the template grid licensing config file:</p>
-<pre><code> \# cp /etc/nvidia/gridd.conf.template /etc/nvidia/gridd.conf
+<pre><code> # cp /etc/nvidia/gridd.conf.template /etc/nvidia/gridd.conf
 </code></pre>
 </li>
 <li><p>Edit the file and set the following values:</p>
 <ul>
-<li>ServerAddress=gpuls.ukcloud.com</li>
-<li>ServerPort=7070</li>
-<li>FeatureType=1</li>
+<li><code>ServerAddress=gpuls.ukcloud.com</code></li>
+<li><code>ServerPort=7070</code></li>
+<li><code>FeatureType=1</code></li>
 </ul>
 </li>
 <li><p>Save your changes.</p>
 </li>
 <li><p>Restart the GRID service:</p>
-<pre><code> \# service nvidia-gridd restart
+<pre><code> # service nvidia-gridd restart
 </code></pre>
 </li>
 <li><p>Check the log messages to confirm the licence is enabled (this may take a minute or two):</p>
-<pre><code>\#tail -f /var/log/messages
+<pre><code>#tail -f /var/log/messages
 
-Oct 5 15:04:45 localhost systemd: Starting NVIDIA Grid Daemon\...\
-Oct 5 15:04:45 localhost nvidia-gridd: Started (16224)\
-Oct 5 15:04:45 localhost systemd: Started NVIDIA Grid Daemon.\
-Oct 5 15:05:16 localhost nvidia-gridd: Service provider detection complete.\
-Oct 5 15:05:17 localhost nvidia-gridd: License acquired successfully. Server URL : http://51.179.209.134:7070/request\
+Oct 5 15:04:45 localhost systemd: Starting NVIDIA Grid Daemon...
+Oct 5 15:04:45 localhost nvidia-gridd: Started (16224)
+Oct 5 15:04:45 localhost systemd: Started NVIDIA Grid Daemon.
+Oct 5 15:05:16 localhost nvidia-gridd: Service provider detection complete.
+Oct 5 15:05:17 localhost nvidia-gridd: License acquired successfully. Server URL : http://51.179.209.134:7070/request
 Oct 5 15:05:17 localhost nvidia-gridd: Your system is licensed for GRID vGPU.
 </code></pre>
 </li>
 <li><p>Alternatively, if you have the GUI installed, you can set up the details for the license server in the NVIDIA Settings dialog box.</p>
 <ul>
 <li><p>Open the settings tools from your desktop or from the command line:</p>
-<pre><code>  \# nvidia-settings
+<pre><code>  # nvidia-settings
 </code></pre>
 </li>
 <li><p>Select Manage License and input the following server details:</p>
 <ul>
-<li><strong>License Server:</strong> gpuls.ukcloud.com</li>
-<li><strong>Port Number:</strong> 7070</li>
+<li><strong>License Server:</strong> <code>gpuls.ukcloud.com</code></li>
+<li><strong>Port Number:</strong> <code>7070</code></li>
 </ul>
 </li>
 </ul>
@@ -429,13 +429,11 @@ Oct 5 15:05:17 localhost nvidia-gridd: Your system is licensed for GRID vGPU.
 <p><a href="https://docs.nvidia.com/grid/latest/index.html">https://docs.nvidia.com/grid/latest/index.html</a></p>
 <h2 id="glossary">Glossary</h2>
 <p>This section provides a glossary of terms specific to Cloud GPU.</p>
-<p><strong>Cloud GPU</strong>  A UKCloud IaaS service that enables you to supplement your on-platform
-compute resources with GPU capabilities that help meet specialist requirements of advanced applications, such as visualisation workloads or large-scale mathematical modelling.</p>
+<p><strong>Cloud GPU</strong>  A UKCloud IaaS service that enables you to supplement your on-platform compute resources with GPU capabilities that help meet specialist requirements of advanced applications, such as visualisation workloads or large-scale mathematical modelling.</p>
 <p><strong>GPU</strong>  Graphics processing unit.</p>
 <p><strong>NVIDIA GRID</strong>  The software that enables the GPU card to be exposed as a shared PCI
 device.</p>
-<p><strong>PRIORITY VM</strong>  An Enterprise Compute Cloud VM type with uncontended compute resource
-allocation (CPU/RAM). Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption.</p>
+<p><strong>PRIORITY VM</strong>  A UKCloud for VMware type with uncontended compute resource allocation (CPU/RAM). Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
