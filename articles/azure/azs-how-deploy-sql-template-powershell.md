@@ -280,3 +280,31 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupAzureStack -
 > Message : Deployment template validation failed: 'The provided value 'Standard_A4' for the template parameter 'sqlVMSize' at line '31' and column '23' is not valid. The parameter value is not part of the allowed value(s): > 'Standard_A1,Standard_A2,Standard_A3'.'.
 > Details :
 > ```
+
+#### Known Issues
+
+- Sometimes Domain Account does not get correctly created and you will get the following error:
+ 
+ ```powershell
+"statusMessage":
+"{\"status\":\"Failed\",\"error\":{\"code\":\"ResourceDeploymentFailure\",\"message\":\"The
+resource operation completed with terminal provisioning state 'Failed'.\",\"details\":{\"code\":\"VMExtensionProvisioningError\",\"message\":\"VM
+has reported a failure when processing extension 'sqlAOPrepare'. Error
+message: DSC Configuration 'PrepareAlwaysOnSqlServer' completed with error(s). Following arethe first few: FindDomainForAccount: Call to DsGetDcNameWithAccountW failed with return value0x0000054B Could not find account SQL-AYQE0\\r\\n The PowerShell DSC resource '[xSqlServerConfigureSqlServerWithAlwaysOn' with SourceInfo'C:\\\\Packages\\\\Plugins\\\\Microsoft.Powershell.DSC\\\\2.76.00\\\\DSCWork\\\\PrepareAlwaysOnSqlServer.ps1.0\\\\PrepareAlwaysOnSqlServerps1::205::9::xSqlServer'
+threw one or more non-terminating errors while running the Set-TargetResource functionality.These errors are logged to the ETW channel called Microsoft-Windows-DSC/Operational. Refer tothis channel for more details.\"}]}}"
+ ```
+  If that happens, you can just **redeploy** and it should be fine.
+
+##### Troubleshooting DSC Extensions
+
+- [PowerShell DSC Extension](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-overview)
+  - `C:\WindowsAzure\Logs\Plugins\Microsoft.Powershell.DSC\<version number>` 
+- [DSC Configuration](https://powershell.org/2017/10/10/using-azure-desired-state-configuration-part-iv/) and [cmdlets](https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmdscextensionstatus?view=azurermps-6.5.0)
+  - To view Status of the DSC deployment run:
+
+    ```powershell
+    Get-AzureRmVMDscExtension -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>"
+    Get-AzureRmVMDscExtensionStatus  -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>" | select -ExpandProperty DscConfigurationLog
+    ```
+- [Event Viewer Logs](http://www.codewrecks.com/blog/index.php/2014/06/15/deploying-web-site-with-powershell-dsc-part-3/)
+  -  Errors are located in: `Application And Service Logs / Microsoft / Windows / Desired State Configuration`
