@@ -284,15 +284,16 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupAzureStack -
 #### Known Issues
 
 - Sometimes Domain Account does not get correctly created and you will get the following error:
- 
- ```powershell
-"statusMessage":
-"{\"status\":\"Failed\",\"error\":{\"code\":\"ResourceDeploymentFailure\",\"message\":\"The
-resource operation completed with terminal provisioning state 'Failed'.\",\"details\":{\"code\":\"VMExtensionProvisioningError\",\"message\":\"VM
-has reported a failure when processing extension 'sqlAOPrepare'. Error
-message: DSC Configuration 'PrepareAlwaysOnSqlServer' completed with error(s). Following arethe first few: FindDomainForAccount: Call to DsGetDcNameWithAccountW failed with return value0x0000054B Could not find account SQL-AYQE0\\r\\n The PowerShell DSC resource '[xSqlServerConfigureSqlServerWithAlwaysOn' with SourceInfo'C:\\\\Packages\\\\Plugins\\\\Microsoft.Powershell.DSC\\\\2.76.00\\\\DSCWork\\\\PrepareAlwaysOnSqlServer.ps1.0\\\\PrepareAlwaysOnSqlServerps1::205::9::xSqlServer'
-threw one or more non-terminating errors while running the Set-TargetResource functionality.These errors are logged to the ETW channel called Microsoft-Windows-DSC/Operational. Refer tothis channel for more details.\"}]}}"
- ```
+
+  ```powershell
+  "statusMessage":
+  "{\"status\":\"Failed\",\"error\":{\"code\":\"ResourceDeploymentFailure\",\"message\":\"The
+  resource operation completed with terminal provisioning state 'Failed'.\",\"details\":{\"code\":\"VMExtensionProvisioningError\",\"message\":\"VM
+  has reported a failure when processing extension 'sqlAOPrepare'. Error
+  message: DSC Configuration 'PrepareAlwaysOnSqlServer' completed with error(s). Following arethe first few: FindDomainForAccount: Call to DsGetDcNameWithAccountW failed with return value0x0000054B Could not find account SQL-AYQE0\\r\\n The PowerShell DSC resource '[xSqlServerConfigureSqlServerWithAlwaysOn' with SourceInfo'C:\\\\Packages\\\\Plugins\\\\Microsoft.Powershell.DSC\\\\2.76.00\\\\DSCWork\\\\PrepareAlwaysOnSqlServer.ps1.0\\\\PrepareAlwaysOnSqlServerps1::205::9::xSqlServer'
+  threw one or more non-terminating errors while running the Set-TargetResource functionality.These errors are logged to the ETW channel called Microsoft-Windows-DSC/Operational. Refer tothis channel for more details.\"}]}}"
+  ```
+
   If that happens, you can just **redeploy** and it should be fine.
 
 ##### Troubleshooting DSC Extensions
