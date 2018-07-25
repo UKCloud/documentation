@@ -86,16 +86,16 @@ complete the setup of your service:
 
 vGPU profile | Intended use case | Frame buffer (Mbytes) | Virtual display heads | Maximum resolution per display head | Effective number of vGPUs
 -------------|-------------------|-----------------------|-----------------------|-------------------------------------|--------------------------
-M60-8Q* | Designer | 8192 | 4 | 4096x2160 | 8
-M60-4Q* | Designer | 4096 | 4 | 4096x2160 | 4
-M60-2Q* | Designer | 2048 | 4 | 4096x2160 | 2
-M60-1Q* | Power User, Designer | 1024 | 2 | 4096x2160 | 1
+M60-8Q^ | Designer | 8192 | 4 | 4096x2160 | 8
+M60-4Q^ | Designer | 4096 | 4 | 4096x2160 | 4
+M60-2Q^ | Designer | 2048 | 4 | 4096x2160 | 2
+M60-1Q^ | Power User, Designer | 1024 | 2 | 4096x2160 | 1
 M60-8A | Virtual Application User | 8192 | 1 | 1280x1024 | 8
 M60-4A | Virtual Application User | 4096 | 1 | 1280x1024 | 4
 M60-2A | Virtual Application User | 2048 | 1 | 1280x1024 | 2
 M60-1A | Virtual Application User | 1024 | 1 | 1280x1024 | 1
 
-\* M60-Q profiles are for 64-bit Linux
+^ M60-Q profiles are for 64-bit Linux
 
 UKCloud will confirm that you've set up your VM correctly and that it meets all the necessary prerequisites. If the VM meets all requirements, UKCloud will migrate the VM to a GPU‑enabled host and attach the GPU
 card to your VM.
@@ -124,7 +124,7 @@ To install NVIDIA drivers:
 
     **On Windows:**
 
-    - From Explorer, double click the driver installer file (NVIDIA\*.\*.exe).
+    - From Explorer, double click the driver installer file (NVIDIA*.*.exe).
     - Select **Custom (Advanced)**.
     - Select **Perform a clean installation**.
 
@@ -137,19 +137,19 @@ To install NVIDIA drivers:
 
     - Update the system:
 
-            \# yum update
+            # yum update
 
     - Install gcc with Kernel Modules:
 
-            \# yum install kernel-devel gcc
+            # yum install kernel-devel gcc
 
     - Make the driver package executable:
 
-            \# chmod +x NVIDIA-Linux-x86\_64-384.73-grid.run
+            # chmod +x NVIDIA-Linux-x86_64-384.73-grid.run
 
     - Run the driver installer:
 
-            \# ./NVIDIA-Linux-x86\_64-384.73-grid.run
+            # ./NVIDIA-Linux-x86_64-384.73-grid.run
 
     - Accept the defaults.
 
@@ -159,7 +159,7 @@ To install NVIDIA drivers:
     - Confirm that the driver is installed and the card is detected:
 
         ```
-        \# nvidia-smi
+        # nvidia-smi
         Thu Oct 5 14:57:43 2017
         +------------------------------------------------------------------------------+
         | NVIDIA-SMI 384.73                 Driver Version: 384.73                     |
@@ -187,14 +187,14 @@ To enable full functionality of the NVIDIA GPU card, your VM must obtain a valid
 To enable access to the NVIDIA GRID License Server from your network, you must create the following firewall rule on your edge gateway:
 
 - **Source/Source Port:** as appropriate for your source network
-- **Destination:** 51:179.197.53
-- **Destination Port:** 7070
-- **Protocol:** TCP
-- **Action:** Allow
+- **Destination:** `51:179.197.53`
+- **Destination Port:** `7070`
+- **Protocol:** `TCP`
+- **Action:** `Allow`
 
 ![Add firewall rule dialog box](images/gpu-vcd-add-firewall-rule.png)
 
-If you need more detailed instructions for creating firewall rules, see [*vCNS Edge services: firewall*](https://portal.ukcloud.com/support/knowledge_centre/e8ec5a0b-e5c7-4e44-b353-ab89505fefbe).
+If you need more detailed instructions for creating firewall rules, see [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
 
 #### Retrieving a licence (Windows)
 
@@ -208,7 +208,7 @@ To license GRID Virtual GPU on Windows:
 
 3. In the **License Server** field, enter `gpuls.ukcloud.com`.
 
-4. Leave the **Port Number** field empty to default to port 7070, which is the default port number used by the NVIDIA GRID License Server.
+4. Leave the **Port Number** field empty to default to port `7070`, which is the default port number used by the NVIDIA GRID License Server.
 
 5. Click **Apply**.
 
@@ -224,30 +224,30 @@ To license GRID Virtual GPU on Linux
 
 1. Copy the template grid licensing config file:
 
-        \# cp /etc/nvidia/gridd.conf.template /etc/nvidia/gridd.conf
+        # cp /etc/nvidia/gridd.conf.template /etc/nvidia/gridd.conf
 
 2. Edit the file and set the following values:
 
-    - ServerAddress=gpuls.ukcloud.com
-    - ServerPort=7070
-    - FeatureType=1
+    - `ServerAddress=gpuls.ukcloud.com`
+    - `ServerPort=7070`
+    - `FeatureType=1`
 
 3. Save your changes.
 
 4. Restart the GRID service:
 
-        \# service nvidia-gridd restart
+        # service nvidia-gridd restart
 
 5. Check the log messages to confirm the licence is enabled (this may take a minute or two):
 
     ```
-    \#tail -f /var/log/messages
+    #tail -f /var/log/messages
 
-    Oct 5 15:04:45 localhost systemd: Starting NVIDIA Grid Daemon\...\
-    Oct 5 15:04:45 localhost nvidia-gridd: Started (16224)\
-    Oct 5 15:04:45 localhost systemd: Started NVIDIA Grid Daemon.\
-    Oct 5 15:05:16 localhost nvidia-gridd: Service provider detection complete.\
-    Oct 5 15:05:17 localhost nvidia-gridd: License acquired successfully. Server URL : http://51.179.209.134:7070/request\
+    Oct 5 15:04:45 localhost systemd: Starting NVIDIA Grid Daemon...
+    Oct 5 15:04:45 localhost nvidia-gridd: Started (16224)
+    Oct 5 15:04:45 localhost systemd: Started NVIDIA Grid Daemon.
+    Oct 5 15:05:16 localhost nvidia-gridd: Service provider detection complete.
+    Oct 5 15:05:17 localhost nvidia-gridd: License acquired successfully. Server URL : http://51.179.209.134:7070/request
     Oct 5 15:05:17 localhost nvidia-gridd: Your system is licensed for GRID vGPU.
     ```
 
@@ -255,12 +255,12 @@ To license GRID Virtual GPU on Linux
 
     - Open the settings tools from your desktop or from the command line:
 
-            \# nvidia-settings
+            # nvidia-settings
 
     - Select Manage License and input the following server details:
 
-      - **License Server:** gpuls.ukcloud.com
-      - **Port Number:** 7070
+      - **License Server:** `gpuls.ukcloud.com`
+      - **Port Number:** `7070`
 
 ### Choosing a remote desktop application
 
@@ -288,16 +288,14 @@ For information about NVIDIA virtual GPU software specific to your OS, see:
 
 This section provides a glossary of terms specific to Cloud GPU.
 
-**Cloud GPU**&nbsp;&nbsp;A UKCloud IaaS service that enables you to supplement your on-platform
-compute resources with GPU capabilities that help meet specialist requirements of advanced applications, such as visualisation workloads or large-scale mathematical modelling.
+**Cloud GPU**&nbsp;&nbsp;A UKCloud IaaS service that enables you to supplement your on-platform compute resources with GPU capabilities that help meet specialist requirements of advanced applications, such as visualisation workloads or large-scale mathematical modelling.
 
 **GPU**&nbsp;&nbsp;Graphics processing unit.
 
 **NVIDIA GRID**&nbsp;&nbsp;The software that enables the GPU card to be exposed as a shared PCI
 device.
 
-**PRIORITY VM**&nbsp;&nbsp;An Enterprise Compute Cloud VM type with uncontended compute resource
-allocation (CPU/RAM). Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption.
+**PRIORITY VM**&nbsp;&nbsp;A UKCloud for VMware type with uncontended compute resource allocation (CPU/RAM). Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption.
 
 ## Feedback
 

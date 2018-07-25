@@ -1,6 +1,6 @@
 ---
 title: Protective Monitoring information in the UKCloud Portal | UKCloud Ltd
-description: Describes the showback information you can view in the UKCloud Portal about the different clouds, networks and security domains supported by UKCloud’s Protective Monitoring service
+description: Describes the showback information you can view in the UKCloud Portal about the different clouds, networks and security domains supported by UKCloud's Protective Monitoring service
 services: other
 author: Matt Warner
 toc_rootlink: Reference
@@ -9,8 +9,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Protective Monitoring information in the UKCloud Portal
-toc_fullpath: Reference/other-ref-platform-patches.md
-toc_mdlink: other-ref-platform-patches.md
+toc_fullpath: Reference/other-ref-promon-showback.md
+toc_mdlink: other-ref-promon-showback.md
 ---
 
 # Protective Monitoring information in the UKCloud Portal

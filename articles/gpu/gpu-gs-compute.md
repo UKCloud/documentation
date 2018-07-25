@@ -40,7 +40,7 @@ We offer two GPU variants for use with our cloud platform:
 Use case | Compute | Visualisation
 ---------|---------|--------------
 Likely card | NVIDIA&reg; Tesla&reg; P100 | NVIDIA M60 Series Card with GRID&trade;
-Overview | NVIDIA Tesla P100 GPU accelerators are the most advanced ever built. Designed to accelerate the compute-intensive elements of applications, they are ideal if you\'re looking to deliver deep learning, analytics or HPC solutions. | NVIDIA GRID is designed to share virtual GPUs (vGPUs) across multiple virtual desktop and applications instances. This enables you to deliver graphically intensive applications such as design software and video streaming.
+Overview | NVIDIA Tesla P100 GPU accelerators are the most advanced ever built. Designed to accelerate the compute-intensive elements of applications, they are ideal if you're looking to deliver deep learning, analytics or HPC solutions. | NVIDIA GRID is designed to share virtual GPUs (vGPUs) across multiple virtual desktop and applications instances. This enables you to deliver graphically intensive applications such as design software and video streaming.
 Precision | Double precision | Single precision
 Delivery model | vGPU | vGPU
 
@@ -64,8 +64,7 @@ With Cloud GPU, you can:
   - Create and run simulations
   - Render and analyse high resolution images and video
 
-Before you begin
-================
+## Before you begin
 
 When using our Cloud GPU service for compute workloads, you should consider the following:
 
@@ -81,7 +80,7 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
 1. Log in to the UKCloud Portal.
 
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/0435318d-a94b-41bb-a4ff-a52adbe863e5).
+    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
 
 2. If necessary, switch to the appropriate account.
 
@@ -92,7 +91,7 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 4. Click the compute service (vOrg) that contains the VDC in which you want to create the VM.
 
     > [!IMPORTANT]
-    > You must create your VM in a PRIORITY VDC. If you don't already have a VDC for this type of workload, you can create one using the steps in [*How to build your Enterprise Compute Cloud estate using the UKCloud Portal*](https://portal.ukcloud.com/support/knowledge_centre/99f82d51-11f1-4c76-8cdb-3048067ae0f3).
+    > You must create your VM in a PRIORITY VDC. If you don't already have a VDC for this type of workload, you can create one using the steps in the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md).
 
 5. On the *vCloud Director* tab, enter your password and click **Confirm**.
 
@@ -185,7 +184,7 @@ To install NVIDIA drivers:
 
     **On Windows:**
 
-    - From Explorer, double click the driver installer file (NVIDIA\*.\*.exe).
+    - From Explorer, double click the driver installer file (NVIDIA*.*.exe).
     - Select **Custom (Advanced)**.
     - Select **Perform a clean installation**.
 
@@ -198,19 +197,19 @@ To install NVIDIA drivers:
 
     - Update the system:
 
-            \# yum update
+            # yum update
 
     - Install gcc with Kernel Modules:
 
-            \# yum install kernel-devel gcc
+            # yum install kernel-devel gcc
 
     - Make the driver package executable:
 
-            \# chmod +x NVIDIA-Linux-x86\_64-384.73-grid.run
+            # chmod +x NVIDIA-Linux-x86\_64-384.73-grid.run
 
     - Run the driver installer:
 
-            \# ./NVIDIA-Linux-x86\_64-384.73-grid.run
+            # ./NVIDIA-Linux-x86_64-384.73-grid.run
 
     - Accept the defaults.
 
@@ -220,7 +219,7 @@ To install NVIDIA drivers:
     - Confirm that the driver is installed and the card is detected:
 
         ```
-        \# nvidia-smi
+        # nvidia-smi
         Thu Oct 5 14:57:43 2017
         +------------------------------------------------------------------------------+
         | NVIDIA-SMI 384.73                 Driver Version: 384.73                     |
@@ -248,14 +247,14 @@ To enable full functionality of the NVIDIA GPU card, your VM must obtain a valid
 To enable access to the NVIDIA GRID License Server from your network, you must create the following firewall rule on your edge gateway:
 
 - **Source/Source Port:** as appropriate for your source network
-- **Destination:** 51:179.197.53
-- **Destination Port:** 7070
-- **Protocol:** TCP
-- **Action:** Allow
+- **Destination:** `51:179.197.53`
+- **Destination Port:** `7070`
+- **Protocol:** `TCP`
+- **Action:** `Allow`
 
 ![Add firewall rule dialog box](images/gpu-vcd-add-firewall-rule.png)
 
-If you need more detailed instructions for creating firewall rules, see [*vCNS Edge services: firewall*](https://portal.ukcloud.com/support/knowledge_centre/e8ec5a0b-e5c7-4e44-b353-ab89505fefbe).
+For more detailed instructions for creating firewall rules, see [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
 
 #### Retrieving a licence (Windows)
 
@@ -269,7 +268,7 @@ To license GRID Virtual GPU on Windows:
 
 3. In the **License Server** field, enter `gpuls.ukcloud.com`.
 
-4. Leave the **Port Number** field empty to default to port 7070, which is the default port number used by the NVIDIA GRID License Server.
+4. Leave the **Port Number** field empty to default to port `7070`, which is the default port number used by the NVIDIA GRID License Server.
 
 5. Click **Apply**.
 
@@ -285,30 +284,30 @@ To license GRID Virtual GPU on Linux
 
 1. Copy the template grid licensing config file:
 
-        \# cp /etc/nvidia/gridd.conf.template /etc/nvidia/gridd.conf
+        # cp /etc/nvidia/gridd.conf.template /etc/nvidia/gridd.conf
 
 2. Edit the file and set the following values:
 
-    - ServerAddress=gpuls.ukcloud.com
-    - ServerPort=7070
-    - FeatureType=1
+    - `ServerAddress=gpuls.ukcloud.com`
+    - `ServerPort=7070`
+    - `FeatureType=1`
 
 3. Save your changes.
 
 4. Restart the GRID service:
 
-        \# service nvidia-gridd restart
+        # service nvidia-gridd restart
 
 5. Check the log messages to confirm the licence is enabled (this may take a minute or two):
 
     ```
-    \#tail -f /var/log/messages
+    #tail -f /var/log/messages
 
-    Oct 5 15:04:45 localhost systemd: Starting NVIDIA Grid Daemon\...\
-    Oct 5 15:04:45 localhost nvidia-gridd: Started (16224)\
-    Oct 5 15:04:45 localhost systemd: Started NVIDIA Grid Daemon.\
-    Oct 5 15:05:16 localhost nvidia-gridd: Service provider detection complete.\
-    Oct 5 15:05:17 localhost nvidia-gridd: License acquired successfully. Server URL : http://51.179.209.134:7070/request\
+    Oct 5 15:04:45 localhost systemd: Starting NVIDIA Grid Daemon...
+    Oct 5 15:04:45 localhost nvidia-gridd: Started (16224)
+    Oct 5 15:04:45 localhost systemd: Started NVIDIA Grid Daemon.
+    Oct 5 15:05:16 localhost nvidia-gridd: Service provider detection complete.
+    Oct 5 15:05:17 localhost nvidia-gridd: License acquired successfully. Server URL : http://51.179.209.134:7070/request
     Oct 5 15:05:17 localhost nvidia-gridd: Your system is licensed for GRID vGPU.
     ```
 
@@ -316,12 +315,12 @@ To license GRID Virtual GPU on Linux
 
     - Open the settings tools from your desktop or from the command line:
 
-            \# nvidia-settings
+            # nvidia-settings
 
     - Select Manage License and input the following server details:
 
-      - **License Server:** gpuls.ukcloud.com
-      - **Port Number:** 7070
+      - **License Server:** `gpuls.ukcloud.com`
+      - **Port Number:** `7070`
 
 ## Next steps
 
@@ -335,16 +334,14 @@ For information about NVIDIA virtual GPU software specific to your OS, see:
 
 This section provides a glossary of terms specific to Cloud GPU.
 
-**Cloud GPU**&nbsp;&nbsp;A UKCloud IaaS service that enables you to supplement your on-platform
-compute resources with GPU capabilities that help meet specialist requirements of advanced applications, such as visualisation workloads or large-scale mathematical modelling.
+**Cloud GPU**&nbsp;&nbsp;A UKCloud IaaS service that enables you to supplement your on-platform compute resources with GPU capabilities that help meet specialist requirements of advanced applications, such as visualisation workloads or large-scale mathematical modelling.
 
 **GPU**&nbsp;&nbsp;Graphics processing unit.
 
 **NVIDIA GRID**&nbsp;&nbsp;The software that enables the GPU card to be exposed as a shared PCI
 device.
 
-**PRIORITY VM**&nbsp;&nbsp;An Enterprise Compute Cloud VM type with uncontended compute resource
-allocation (CPU/RAM). Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption.
+**PRIORITY VM**&nbsp;&nbsp;A UKCloud for VMware VM type with uncontended compute resource allocation (CPU/RAM). Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption.
 
 ## Feedback
 
