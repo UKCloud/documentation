@@ -549,7 +549,7 @@ threw one or more non-terminating errors while running the Set-TargetResource fu
 <ul>
 <li><p>To view Status of the DSC deployment run:</p>
 <pre><code class="lang-powershell">Get-AzureRmVMDscExtension -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot;
-Get-AzureRmVMDscExtensionStatus  -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot; | select -ExpandProperty DscConfigurationLog
+Get-AzureRmVMDscExtensionStatus -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot; | select -ExpandProperty DscConfigurationLog
 </code></pre>
 </li>
 </ul>
