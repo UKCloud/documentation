@@ -60,17 +60,17 @@ SQL Always On Repository - [sql-2016-ha](https://github.com/Azure/AzureStack-Qui
 
 - From an elevated (run as adminstrator) PowerShell prompt run:
 
-```powershell
-cd c:\
-mkdir RepoDirectory
-cd RepoDirectory
-git init
-git config core.sparseCheckout true
-git remote add origin -f "https://github.com/Azure/AzureStack-QuickStart-Templates"
-"sql-2016-ha/*" | Out-File -FilePath .git/info/sparse-checkout -Encoding ASCII
-cat .git/info/sparse-checkout
-git checkout master
-```
+  ```powershell
+  cd c:\
+  mkdir RepoDirectory
+  cd RepoDirectory
+  git init
+  git config core.sparseCheckout true
+  git remote add origin -f "https://github.com/Azure/AzureStack-QuickStart-Templates"
+  "sql-2016-ha/*" | Out-File -FilePath .git/info/sparse-checkout -Encoding ASCII
+  cat .git/info/sparse-checkout
+  git checkout master
+  ```
 
 ## What does it deploy?
 
