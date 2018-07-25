@@ -212,7 +212,7 @@ $sqlAuthPassword = '<your password>'
   $sqlAuthPasswordCred = ConvertTo-SecureString "$sqlAuthPassword" -AsPlainText -Force
 $domainName = "<ActiveDirectoryDomainName>"
 $adminUsername = "<adminUsername>"
-$sqlServerServiceAccountUserName "<serviceAccountUsername"
+$sqlServerServiceAccountUserName = "<serviceAccountUsername"
 
 $CustomTemplateJSON = "<directory>\azuredeploy.json"
 $CustomTemplateParamJSON = "<directory>\azuredeploy.parameters.json"
