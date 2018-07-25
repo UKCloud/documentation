@@ -58,6 +58,8 @@ SQL Always On Repository - [sql-2016-ha](https://github.com/Azure/AzureStack-Qui
 >
 > Change the RepoDirectory to the desired folder.
 
+- From an elevated (run as adminstrator) PowerShell prompt run:
+
 ```powershell
 cd c:\
 mkdir RepoDirectory
