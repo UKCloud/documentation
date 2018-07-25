@@ -31,7 +31,7 @@ There are two pre-requisites for performing this operation:
 
     Assured: 37.26.90.194 rhua.ukcloud.com
 
-    Elevated: 172.26.89.98 rhua.psn.ukcloud.com
+    Elevated: Contact UKCloud Support
 
     You can achieve this by configuring an A record on your local DNS, or configuring a `/etc/hosts` file with one of the lines above.
 

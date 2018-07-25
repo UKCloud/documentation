@@ -178,20 +178,6 @@ UKCloud's public services are currently presented on N3 but will also be migrate
 > [!NOTE]
 > We'll issue a Portal notification when these services will be migrated. You'll need to amend your firewall rules and host files so you can continue to reach these services when we've migrated these services to HSCN. Do not change these details until after we notify you via the Portal.
 
-Service | URL | N3 | HSCN
---------|-----|----|-----
- UKCloud Portal | portal.skyscapecloud.com |10.218.237.65 | 10.200.40.1
- vCloud Director | vcd.portal.skyscapecloud.com | 10.218.237.121 | 10.200.40.2
- vCloud API | api.vcd.portal.skyscapecloud.com | 10.218.237.121 | 10.200.40.2
- vCloud VM Console | console.vcd.portal.skyscapecloud.com | 10.218.237.122 | 10.200.40.3
- Service Status | status.skyscapecloud.com | 10.218.237.123 | 10.200.40.4
- Farnborough NTP Server | N/A | 10.218.237.124 | 10.200.40.5
- Corsham NTP Server | N/A | 10.219.149.253 | 10.200.41.1
- KMS | kms.ukcloud.com | 10.218.237.64 | 10.200.40.8
- Farnborough WSUS | N/A | 10.218.237.125 | 10.200.40.6
- Corsham WSUS | N/A | 10.219.149.254 | 10.200.41.2
- Red Hat Update Infrastructure | rhua.ukcloud.com | 10.218.237.126 | 10.200.40.7
-
 ### Cloud Storage
 
 Cloud Storage will continue to be accessible over N3 but will also be presented to HSCN.
@@ -199,11 +185,6 @@ Cloud Storage will continue to be accessible over N3 but will also be presented 
 When you've migrated to HSCN, you should consider using the HSCN-facing Cloud Storage when possible, as this will improve communication between your VMs and Cloud Storage.
 
 You'll need to update your firewall and host file records to continue to use this service.
-
-Service | URL | N3 | HSCN 
---------|-----|----|---------
-Regions 1&6 Cloud Storage | cas.frn00006.ukcloud.thirdparty.nhs.uk | 10.207.196.42 | 10.200.82.2
-Regions 2&5 Cloud Storage | cas.cor00005.ukcloud.thirdparty.nhs.uk | 10.207.197.66 | 10.200.83.2
 
 Raise a service request when you want to move to using HSCN Cloud Storage so we can help you make sure your migration is successful, and to ensure we remove the N3 connectivity so you are no longer billed for it.
 
