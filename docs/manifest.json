@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-deploy-sql-template-powershell.html",
-          "hash": "h5XczZcCxl4JQ2ZbBjFlWA=="
+          "hash": "Qd5KO4OXLoVi/8Oqk4BBxQ=="
         }
       },
       "is_incremental": false,
@@ -10467,13 +10467,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
