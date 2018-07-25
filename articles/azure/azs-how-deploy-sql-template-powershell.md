@@ -94,7 +94,7 @@ The images used to create this deployment are:
 
 > [!WARNING]
 > If you deploy SQL STANDARD your Availability Group has got limitations as per [Basic Availability Groups](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017)
-> ## Limitations  
+> ## Basic Availability Group Limitations
 > Basic availability groups use a subset of features compared to advanced availability groups on SQL Server 2016 Enterprise Edition. Basic availability groups include the following limitations: >
 > - Limit of two replicas (primary and secondary).
 >  
