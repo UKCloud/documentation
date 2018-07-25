@@ -4478,17 +4478,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/other/images/platform_march18.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/platform_march18.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/other/images/searching_filtering.png",
       "output": {
         "resource": {
