@@ -281,7 +281,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupAzureStack -
 > Details :
 > ```
 
-#### Known Issues
+## Known Issues
 
 - Sometimes Domain Account does not get correctly created and you will get the following error:
 
@@ -296,7 +296,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupAzureStack -
 
   If that happens, you can just **redeploy** and it should be fine.
 
-#### Troubleshooting DSC Extensions
+## Troubleshooting DSC Extensions
 
 - [PowerShell DSC Extension](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-overview)
   - `C:\WindowsAzure\Logs\Plugins\Microsoft.Powershell.DSC\<version number>` 
