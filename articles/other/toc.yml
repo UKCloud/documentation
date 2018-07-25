@@ -18,8 +18,6 @@
     href: other-ref-browsers.md
   - name: Cloud economics
     href: other-ref-cloud-economics.md
-  - name: Current infrastructure patch versions
-    href: other-ref-platform-patches.md
   - name: Customer administration page
     href: other-ref-customer-admin.md
   - name: Data centre advance notice requirements
@@ -28,6 +26,8 @@
     href: other-ref-promon-showback.md
   - name: Services by region
     href: other-ref-services-by-region.md
+  - name: Services by zone
+    href: other-ref-services-by-zone.md
   - name: Sites, regions and zones map and reference table
     href: other-ref-srz-table.md
   - name: SLA definition

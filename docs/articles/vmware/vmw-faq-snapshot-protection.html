@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Snapshot Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Snapshot Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="snapshot-protection-faqs">Snapshot Protection FAQs</h1>
+
+<h2 id="general">General</h2>
+<h3 id="what-is-a-protection-technology">What is a protection technology?</h3>
+<p>Protection technologies are tools used to enable you to design resilience into your cloud solutions.</p>
+<p>They protect data and provide you with the ability to recover from system outages - either caused by a disruption to the physical delivery of a service or a result of a corruption of your primary system.</p>
+<h3 id="what-protection-options-does-ukcloud-offer">What protection options does UKCloud offer?</h3>
+<p>By default, VMs deployed on the UKCloud platform do not come with any protection services enabled.</p>
+<p>However, you can opt to utilise one of the platform based protection technologies, such as:</p>
+<ul>
+<li><p>Snapshot protection - automatically takes an image of your VM every 24 hours and stores the image outside the core platform</p>
+</li>
+<li><p>Journaling protection - creates an almost live copy of your VM and records the VM data and state in a data journal</p>
+</li>
+<li><p>Synchronous protection - creates a live copy of your VM in a different geographic site</p>
+</li>
+</ul>
+<p>Additionally, you can implement your own protection technologies.</p>
+<p>Utilising our Cloud Storage service, you can keep secondary copies of your data by:</p>
+<ul>
+<li><p>Manually copying data</p>
+</li>
+<li><p>Using scripts to copy data</p>
+</li>
+<li><p>Using backup applications such as CommVault, Networker and others.</p>
+</li>
+</ul>
+<p>You can replicate data between sites for even greater data protection.</p>
+<h3 id="can-i-use-my-own-protection-client-software">Can I use my own protection client software?</h3>
+<p>Yes, you simply install appropriate backup software within the VM and specify the backup location.</p>
+<p>A typical scenario might involve using a commercial backup solution (such as Symantec NetBackup, CommVault or EMC NetWorker) that points to services such as our Cloud Storage.</p>
+<h2 id="snapshot-protection">Snapshot protection</h2>
+<h3 id="how-does-snapshot-protection-work">How does snapshot protection work?</h3>
+<p>An automated VM snapshot creates a crash‑consistent snapshot of the VM, which is then copied to our dedicated backup system.</p>
+<h3 id="how-do-i-add-snapshot-protection-to-my-vm">How do I add snapshot protection to my VM?</h3>
+<p>Use the UKCloud Portal to add snapshot protection to a VM:</p>
+<ol>
+<li><p>Login to the UKCloud Portal and choose the appropriate account.</p>
+</li>
+<li><p>In the dashboard, click <strong>My VMs</strong>, then click the appropriate vOrg.</p>
+</li>
+<li><p>Click the <strong>My VMs</strong> tab.</p>
+</li>
+<li><p>Choose the appropriate VDC then click the <strong>VMs</strong> tab.</p>
+</li>
+<li><p>In the <strong>Snapshot Protection</strong> column, click the <strong>Manage</strong> button.</p>
+</li>
+<li><p>From the <strong>Select Backup Policy</strong> list, choose the policy level that you require: <strong>14‑day</strong> or <strong>28‑day</strong>, then click <strong>Submit</strong>.</p>
+<p>The button changes to indicate your chosen policy.</p>
+</li>
+<li><p>You can also remove a VM from automated backups by choosing <strong>No Backup</strong> from the <strong>Select Backup Policy</strong> list.</p>
+</li>
+</ol>
+<h3 id="how-long-does-it-take-before-the-first-snapshot-is-taken">How long does it take before the first snapshot is taken?</h3>
+<p>The time it takes to add snapshot protection to a VM varies depending on how many other requests are in the queue. While the request is processed, the button in the <strong>Snapshot Protection</strong> column changes to an amber <strong>Processing</strong> button.</p>
+<p>When the process has completed, the button changes back to green and will indicate the snapshot policy you chose for the VM (<strong>14‑day</strong> or <strong>28‑day</strong>). If the process fails, the button changes to a red <strong>Failed</strong> button. In this situation, contact the UKCloud support team to resolve the issue.</p>
+<p>The first snapshot will be taken in the next available backup window. Backup status information is typically updated daily on the UKCloud Portal by 10:00am, but typically within minutes of the close of the backup window.</p>
+<h3 id="can-i-change-the-snapshot-policy-for-my-vm-at-any-time">Can I change the snapshot policy for my VM at any time?</h3>
+<p>Yes, there are no restrictions. After your changes have been processed, they will be applied to the snapshot taken in the next backup window.</p>
+<h3 id="how-are-my-automated-vm-snapshots-restored">How are my automated VM snapshots restored?</h3>
+<p>If you have access to the support ticketing system, you can request restoration of VMs.</p>
+<p>We'll restore the whole VM image to your virtual data centre (VDC). You can then manage the restoration of individual files or the whole VM.</p>
+<h3 id="do-automated-vm-snapshots-include-my-vdc-configuration">Do automated VM snapshots include my VDC configuration?</h3>
+<p>Configuration of VDC items such as virtual firewalls, load balancers and virtual networks are backed up at a platform level, and cannot be restored on a per‑customer basis.</p>
+<p>You can create an individual backup of these items via the vCloud API.</p>
+<h3 id="what-is-the-automated-vm-snapshot-frequency">What is the automated VM snapshot frequency?</h3>
+<p>Once every 24 hours.</p>
+<h3 id="how-long-can-i-store-a-backup">How long can I store a backup?</h3>
+<p>Data is stored for 14 or 28 days, depending on the retention policy you choose.</p>
+<h3 id="can-i-set-my-own-schedules">Can I set my own schedules?</h3>
+<p>We do not currently support custom schedules.</p>
+<h3 id="can-i-snapshot-a-vm-on-demand">Can I snapshot a VM on demand?</h3>
+<p>Not with the UKCloud automated VM snapshot service.</p>
+<p>If you need to snapshot autonomously, you can install your own protection service and use our Cloud Storage service.</p>
+<h3 id="is-the-automated-vm-snapshot-backup-full-or-incremental">Is the automated VM snapshot backup full or incremental?</h3>
+<p>We take a full automated backup of the VM.</p>
+<h3 id="can-i-recover-individual-files-using-ukclouds-automated-vm-snapshot-backup">Can I recover individual files using UKCloud's automated VM snapshot backup?</h3>
+<p>To restore individual files, you need to extract them from the whole VM image that we restore to a new VM. You can access the new VM, find the data you want and transfer it to the original VM. Standard charges will be incurred for the temporary VM.</p>
+<h3 id="can-i-set-a-global-policy-for-all-vms-within-a-vdc">Can I set a global policy for all VMs within a VDC?</h3>
+<p>Yes. You can apply the global policy to new VMs created in the VDC or to all new and existing VMs.</p>
+<p>For the steps required to do this, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
+<h3 id="can-i-change-the-snapshot-retention-policy-for-a-vm">Can I change the snapshot retention policy for a VM?</h3>
+<p>Yes, you can use the UKCloud Portal to change the snapshot retention policy.</p>
+<p>For the steps required to do this, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
+<h3 id="what-type-of-data-is-the-automated-vm-snapshot-backup-solution-suitable-for">What type of data is the automated VM snapshot backup solution suitable for?</h3>
+<p>The service is suitable for data certified as OFFICIAL and OFFICIAL-SENSITIVE and is available on both UKCloud platforms: Assured OFFICIAL (formerly IL2) and Elevated OFFICIAL (formerly IL3).</p>
+<h3 id="do-large-virtual-disk-2tib-configurations-affect-snapshot-backups">Do large virtual disk (2 TiB+) configurations affect snapshot backups?</h3>
+<p>Yes. Snapshot‑based backups are not supported for large VMs with high change rates, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up.</p>
+<p>You must take an alternative backup approach with VMs of this size.</p>
+<h3 id="can-i-restrict-the-automated-vm-snapshot-backup-to-specific-files-or-directories">Can I restrict the automated VM snapshot backup to specific files or directories?</h3>
+<p>No, this is not currently possible. You can implement your own protection solution if this is a requirement.</p>
+<h3 id="where-is-the-protected-data-stored">Where is the protected data stored?</h3>
+<p>By default, all snapshot backups are stored in the opposite site from the one that the VM is running in; so a VM running in Farnborough stores its snapshot in Corsham.</p>
+<p>You cannot presently request a preference to change the location.</p>
+<h3 id="what-sla-do-you-offer-on-snapshot-backup-success">What SLA do you offer on snapshot backup success?</h3>
+<p>There's currently no SLA associated with the snapshot backup service, although it is monitored 24x7.</p>
+<h3 id="how-do-i-restore-data">How do I restore data?</h3>
+<p>You can request restoration of VMs only if you have access to the support ticketing system.</p>
+<p>To restore data, administrators can access the UKCloud Portal and, using My Calls, create a support ticket stating the VM and the backup schedule they want to restore. UKCloud operations then complete this task, restoring the entire VM image.</p>
+<h3 id="how-quickly-can-you-restore-a-vm">How quickly can you restore a VM?</h3>
+<p>The larger the VM, the longer the restore time:</p>
+<ul>
+<li><p>When restoring over the existing VM, restore times are reduced by the use of change block tracking.</p>
+</li>
+<li><p>When restoring alongside an existing service, data restoration must start from scratch. Depending on the size of the VM, this can take many hours.</p>
+</li>
+</ul>
+<h3 id="do-i-need-to-install-any-software-on-my-vms">Do I need to install any software on my VMs?</h3>
+<p>The automated VM snapshot backup works directly with the cloud platform to capture the entire VM, so there is no need to install any software within the VM.</p>
+<p>If you prefer an application‑consistent backup (rather than a crash‑consistent backup), we recommend that you install VM tools and configure appropriate pre-backup and post-backup scripts.</p>
+<h3 id="if-a-vm-is-deleted-how-long-will-existing-snapshot-backups-be-retained">If a VM is deleted, how long will existing snapshot backups be retained?</h3>
+<p>The UKCloud platform automates the deletion of backups as they reach their retention date. Therefore, 14 or 28 days after the VM is deleted, depending on your chosen profile, the last snapshot backup will automatically be removed from the platform and consequently be unavailable for restore.</p>
+<h3 id="how-and-when-am-i-notified-of-snapshot-backup-failures">How and when am I notified of snapshot backup failures?</h3>
+<p>Backup information, including failures, is updated daily on the UKCloud platform by 10:00am, but typically within minutes of the close of the backup window.</p>
+<p>For the steps required to access the status of a VM's snapshot backup, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
+<p>Note that we do not presently provide real-time alerting on individual VMs.</p>
+<h3 id="what-is-the-process-for-dealing-with-failures">What is the process for dealing with failures?</h3>
+<p>UKCloud's internal monitoring tools provide us with advanced warnings regarding any backup failures.</p>
+<p>The UKCloud support team receives a daily report of snapshot backup failures. We'll raise a service ticket on your behalf and proactively investigate with you when:</p>
+<ul>
+<li><p>Any VM has a failure count of more than two</p>
+</li>
+<li><p>Three or more VMs within the same VDC fail within 14 days</p>
+</li>
+</ul>
+<h3 id="what-does-the-proactive-investigation-consist-of">What does the proactive investigation consist of?</h3>
+<p>UKCloud's proactive corrective measures depend on the nature of the snapshot backup failures, but will generally follow this outline:</p>
+<ul>
+<li><p>We evaluate snapshot backup failures and look for emerging patterns.</p>
+</li>
+<li><p>In the case of a repetitive failure, we'll raise a service request on your behalf.</p>
+</li>
+<li><p>We'll conduct an investigation into the snapshot backup failure, and take appropriate mitigation steps.</p>
+</li>
+<li><p>Should the failure persist, we may suggest a customer review to try to resolve the issue.</p>
+<p>If we identify that the snapshot backup service is incompatible with your application and intended usage, we'll recommend a session with a Technical Account Manager or solution architect to work through alternative protection options.</p>
+</li>
+</ul>
+<h3 id="how-and-when-are-reruns-scheduled">How and when are reruns scheduled?</h3>
+<p>Backups are attempted during the hours of 2000 and 0800.</p>
+<p>A backup will not be reattempted in the same backup window, but will be included as normal in the next window.</p>
+<p>If a snapshot backup attempt is returned as a failure this will be reported to the UKCloud support team, and any remedial actions will be in place for the backup attempt in the next window.</p>
+<h3 id="how-is-the-automated-vm-snapshot-backup-service-charged">How is the automated VM snapshot backup service charged?</h3>
+<p>The service is charged on a per VM basis based on:</p>
+<ul>
+<li><p>The size of the VM you are backing up</p>
+</li>
+<li><p>The amount of additional data you are backing up</p>
+</li>
+<li><p>The length of time those backups are held</p>
+</li>
+</ul>
+<h3 id="if-i-have-an-existing-vdc-that-includes-snapshot-protection-is-protection-automatically-added-to-any-new-vms-i-create">If I have an existing VDC that includes snapshot protection, is protection automatically added to any new VMs I create?</h3>
+<p>Yes, if the service level of your VDC includes snapshot protection (either selected for an Essential, Power or Priority VM or the former &quot;STANDARD&quot; or &quot;ENHANCED&quot;), that protection is automatically applied to any VMs you create within that VDC. You can still use the self‑service backup functionality within the UKCloud Portal to remove snapshot protection from a VM or change the retention policy without having to raise a Service Request.</p>
+<h3 id="can-i-set-retention-policies-at-a-vdc-level">Can I set retention policies at a VDC level?</h3>
+<p>Yes, you can set retention polices at a VDC level, meaning that all VMs within the VDC will inherit the retention policy set.</p>
+<h3 id="what-happens-if-i-add-vms-to-a-vdc-that-has-a-defined-retention-policy">What happens if I add VMs to a VDC that has a defined retention policy?</h3>
+<p>All VMs that are created once a VDC policy is set will be automatically added into the protection policy. If you decide to change the VDC policy, you can choose to apply the new policy to ALL existing VMs in the VDC. Further details can be found in the <a href="vmw-sco-snapshot-protection.html">Snapshot Protection Service Scope</a> and guidance on how to apply protection to VMs and VDCs can be found in the <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
+<h3 id="are-snapshot-policies-automatically-applied-to-vms">Are Snapshot policies automatically applied to VMs?</h3>
+<p>Protection products are not automatically applied to VMs running on the UKCloud platform, therefore you must explicitly select the protection option that best meets your requirements.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-faq-snapshot-protection.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

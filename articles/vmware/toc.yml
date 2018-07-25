@@ -1,3 +1,11 @@
+- name: FAQs
+  items:
+  - name: Journaling Protection FAQs
+    href: vmw-faq-journaling-protection.md
+  - name: Snapshot Protection FAQs
+    href: vmw-faq-snapshot-protection.md
+  - name: UKCloud for VMware FAQs
+    href: vmw-faq.md
 - name: Getting Started
   items:
   - name: Journaling Protection
