@@ -449,7 +449,7 @@ $sqlAuthPassword = '&lt;your password&gt;'
   $sqlAuthPasswordCred = ConvertTo-SecureString &quot;$sqlAuthPassword&quot; -AsPlainText -Force
 $domainName = &quot;&lt;ActiveDirectoryDomainName&gt;&quot;
 $adminUsername = &quot;&lt;adminUsername&gt;&quot;
-$sqlServerServiceAccountUserName &quot;&lt;serviceAccountUsername&quot;
+$sqlServerServiceAccountUserName = &quot;&lt;serviceAccountUsername&quot;
 
 $CustomTemplateJSON = &quot;&lt;directory&gt;\azuredeploy.json&quot;
 $CustomTemplateParamJSON = &quot;&lt;directory&gt;\azuredeploy.parameters.json&quot;
@@ -516,6 +516,40 @@ Message : Deployment template validation failed: 'The provided value 'Standard_A
 Details :
 </code></pre>
 </div>
+<h4 id="known-issues">Known Issues</h4>
+<ul>
+<li>Sometimes Domain Account does not get correctly created and you will get the following error:</li>
+</ul>
+<pre><code class="lang-powershell">&quot;statusMessage&quot;:
+&quot;{\&quot;status\&quot;:\&quot;Failed\&quot;,\&quot;error\&quot;:{\&quot;code\&quot;:\&quot;ResourceDeploymentFailure\&quot;,\&quot;message\&quot;:\&quot;The
+resource operation completed with terminal provisioning state 'Failed'.\&quot;,\&quot;details\&quot;:{\&quot;code\&quot;:\&quot;VMExtensionProvisioningError\&quot;,\&quot;message\&quot;:\&quot;VM
+has reported a failure when processing extension 'sqlAOPrepare'. Error
+message: DSC Configuration 'PrepareAlwaysOnSqlServer' completed with error(s). Following arethe first few: FindDomainForAccount: Call to DsGetDcNameWithAccountW failed with return value0x0000054B Could not find account SQL-AYQE0\\r\\n The PowerShell DSC resource '[xSqlServerConfigureSqlServerWithAlwaysOn' with SourceInfo'C:\\\\Packages\\\\Plugins\\\\Microsoft.Powershell.DSC\\\\2.76.00\\\\DSCWork\\\\PrepareAlwaysOnSqlServer.ps1.0\\\\PrepareAlwaysOnSqlServerps1::205::9::xSqlServer'
+threw one or more non-terminating errors while running the Set-TargetResource functionality.These errors are logged to the ETW channel called Microsoft-Windows-DSC/Operational. Refer tothis channel for more details.\&quot;}]}}&quot;
+</code></pre>
+<p>If that happens, you can just <strong>redeploy</strong> and it should be fine.</p>
+<h5 id="troubleshooting-dsc-extensions">Troubleshooting DSC Extensions</h5>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-overview">PowerShell DSC Extension</a>
+<ul>
+<li><code>C:\WindowsAzure\Logs\Plugins\Microsoft.Powershell.DSC\&lt;version number&gt;</code></li>
+</ul>
+</li>
+<li><a href="https://powershell.org/2017/10/10/using-azure-desired-state-configuration-part-iv/">DSC Configuration</a> and <a href="https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmdscextensionstatus?view=azurermps-6.5.0">cmdlets</a>
+<ul>
+<li><p>To view Status of the DSC deployment run:</p>
+<pre><code class="lang-powershell">Get-AzureRmVMDscExtension -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot;
+Get-AzureRmVMDscExtensionStatus  -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot; | select -ExpandProperty DscConfigurationLog
+</code></pre>
+</li>
+</ul>
+</li>
+<li><a href="http://www.codewrecks.com/blog/index.php/2014/06/15/deploying-web-site-with-powershell-dsc-part-3/">Event Viewer Logs</a>
+<ul>
+<li>Errors are located in: <code>Application And Service Logs / Microsoft / Windows / Desired State Configuration</code></li>
+</ul>
+</li>
+</ul>
 
 
                   <div class="row">
