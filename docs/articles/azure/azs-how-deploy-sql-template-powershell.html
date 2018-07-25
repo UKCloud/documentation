@@ -518,8 +518,7 @@ Details :
 </div>
 <h4 id="known-issues">Known Issues</h4>
 <ul>
-<li>Sometimes Domain Account does not get correctly created and you will get the following error:</li>
-</ul>
+<li><p>Sometimes Domain Account does not get correctly created and you will get the following error:</p>
 <pre><code class="lang-powershell">&quot;statusMessage&quot;:
 &quot;{\&quot;status\&quot;:\&quot;Failed\&quot;,\&quot;error\&quot;:{\&quot;code\&quot;:\&quot;ResourceDeploymentFailure\&quot;,\&quot;message\&quot;:\&quot;The
 resource operation completed with terminal provisioning state 'Failed'.\&quot;,\&quot;details\&quot;:{\&quot;code\&quot;:\&quot;VMExtensionProvisioningError\&quot;,\&quot;message\&quot;:\&quot;VM
@@ -528,6 +527,8 @@ message: DSC Configuration 'PrepareAlwaysOnSqlServer' completed with error(s). F
 threw one or more non-terminating errors while running the Set-TargetResource functionality.These errors are logged to the ETW channel called Microsoft-Windows-DSC/Operational. Refer tothis channel for more details.\&quot;}]}}&quot;
 </code></pre>
 <p>If that happens, you can just <strong>redeploy</strong> and it should be fine.</p>
+</li>
+</ul>
 <h5 id="troubleshooting-dsc-extensions">Troubleshooting DSC Extensions</h5>
 <ul>
 <li><a href="https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-overview">PowerShell DSC Extension</a>
