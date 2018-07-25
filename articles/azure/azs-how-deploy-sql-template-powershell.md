@@ -72,7 +72,7 @@ git checkout master
 
 ## What does it deploy?
 
-This template deploys two SQL Server 2016 SP1 Enterprise/ Developer instances in the Always On Availability Group using the PowerShell DSC Extension. It creates the following resources:
+This template deploys two SQL Server 2016 SP1 Enterprise / Standard / Developer instances in the Always On Availability Group using the PowerShell DSC Extension. It creates the following resources:
 
 - A network security group
 - A Virtual Network
@@ -80,7 +80,7 @@ This template deploys two SQL Server 2016 SP1 Enterprise/ Developer instances in
 - Four public IP address (One for AD, Two for each SQL VM and One for Public LB bound to SQL Always On Listener)
 - One external load balancer for SQL VMs with Public IP bound to SQL always On Listener
 - One VM (WS2016) configured as Domain Controller for a new forest with a single domain
-- Two VM (WS2016) configured as SQL Server 2016 SP1 Enterprise/ Developer and clustered.
+- Two VM (WS2016) configured as SQL Server 2016 SP1 Enterprise / Standard / Developer and clustered.
 - One VM (WS2016) configured as File Share Witness for the cluster.
 
 ### Notes
@@ -91,6 +91,28 @@ The images used to create this deployment are:
 - SQL Server - SQL Server 2016 SP1 on Windows Server 2016 Image
 - SQL IAAS Extension 1.2.18
 - Latest DSC Extension (2.26.0 or higher)
+
+> [!WARNING]
+> If you deploy SQL STANDARD your Availability Group has got limitations as per [Basic Availability Groups](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017)
+> ## Limitations  
+> Basic availability groups use a subset of features compared to advanced availability groups on SQL Server 2016 Enterprise Edition. Basic availability groups include the following limitations: >
+> - Limit of two replicas (primary and secondary).
+>  
+> - No read access on secondary replica.
+>
+> - No backups on secondary replica.
+>
+> - No integrity checks on secondary replicas.
+>
+> - No support for replicas hosted on servers running a version of SQL Server prior to SQL Server > 2016 Community Technology Preview 3 (CTP3).
+>
+> - Support for one availability database.
+>
+> - Basic availability groups cannot be upgraded to advanced availability groups. The group must > be dropped and re-added to a group that contains servers running only SQL Server 2016 Enterprise > Edition.
+>
+> - Basic availability groups are only supported for Standard Edition servers.
+>
+> - Basic availability groups can not be part of a distributed availability group.
 
 ### Configuration
 
@@ -133,7 +155,7 @@ The images used to create this deployment are:
 | sqlAuthUserName                 | The SQL Server Auth Account name                                              |                                                | sqlsa                                                                                      | string       |
 | sqlServerServiceAccountPassword | The SQL Server Service Account password                                       |                                                |                                                                                            | securestring |
 | sqlServerServiceAccountUserName | The SQL Server Service Account name                                           |                                                | sqlservice                                                                                 | string       |
-| sqlServerVersion                | The Sql Server Version                                                        | {SQL2016SP1-WS2016-ENT, SQL2016SP1-WS2016-DEV} | SQL2016SP1-WS2016-ENT                                                                      | string       |
+| sqlServerVersion                | The Sql Server Version                                                        | {SQL2016SP1-WS2016-ENT, SQL2016SP1-WS2016-DEV, SQL2016SP1-WS2016-STD} | SQL2016SP1-WS2016-ENT                                                                      | string       |
 | sqlStorageAccountName           | The name of Sql Server Storage Account                                        |                                                | \[tolower(concat(take(uniqueString(resourceGroup().id),8),'sql'))\]                        | string       |
 | sqlStorageAccountType           | The type of the Sql Server Storage Account created                            | {Premium\_LRS, Standard\_LRS}                  | Standard\_LRS                                                                              | string       |
 | sqlSubnet                       | The address range of the SQL subnet created in the new VNET                   |                                                | 10.0.1.0/26                                                                                | string       |
@@ -166,6 +188,11 @@ Change the required variables as per your environment and run the following scri
 > `dnsSuffix` Should be changed to - "azure.ukcloud.com" otherwise the deployment will fail because it will default to "azurestack.external" and that cannot be resolved externally
 >
 > In the example below it has been already set accordingly.
+>
+> To change which SQL Server Version to deploy set **`$sqlServerVersion`** accordingly: `SQL2016SP1-WS2016-ENT`, `SQL2016SP1-WS2016-DEV`, `SQL2016SP1-WS2016-STD`
+> Current default is set to STANDARD -> **`SQL2016SP1-WS2016-STD`**
+>
+
 
 ```powershell
 # Declare login variables
@@ -193,6 +220,8 @@ $CustomTemplateParamJSON = "<directory>\azuredeploy.parameters.json"
 $dnsSuffix = "azure.ukcloud.com"
 $ResourceGroupName = "SqlAlwaysOnRG01"
 $RegionAzureStack = "frn00006"
+
+$sqlServerVersion  = "SQL2016SP1-WS2016-STD"
 
 # Create Azure Stack Environment so that you can log in to it
 Add-AzureRMEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
@@ -223,10 +252,10 @@ try {
   }
 
 # Test Deployment
-Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupAzureStack -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -domainName $domainName -adminUsername $adminUsername -sqlServerServiceAccountUserName $sqlServerServiceAccountUserName -Verbose
+Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupAzureStack -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -domainName $domainName -adminUsername $adminUsername -sqlServerServiceAccountUserName $sqlServerServiceAccountUserName -sqlServerVersion $sqlServerVersion -Verbose
 
 # Start Deployment
-New-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupAzureStack -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -domainName $domainName -adminUsername $adminUsername -sqlServerServiceAccountUserName $sqlServerServiceAccountUserName -Verbose
+New-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupAzureStack -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -domainName $domainName -adminUsername $adminUsername -sqlServerServiceAccountUserName $sqlServerServiceAccountUserName -sqlServerVersion $sqlServerVersion -Verbose
 ```
 
 > [!TIP]
@@ -239,13 +268,13 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupAzureStack -
 > If Template fails validation and you need to see detailed error message you can do:
 >
 > ```powershell
-> Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupAzureStack -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -sqlVMSize "Standard_A4"
+> Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupAzureStack -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -sqlVMSize "Standard_A4"
 >
 > Code    : MultipleErrorsOccurred
 > Message : Multiple error occurred: BadRequest. Please see details.
 > Details : {Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResourceManagerError}
 >
->(Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupAzureStack -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON  -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -sqlVMSize "Standard_A4").Details
+>(Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupAzureStack -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON  -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -sqlVMSize "Standard_A4").Details
 >
 > Code    : InvalidTemplate
 > Message : Deployment template validation failed: 'The provided value 'Standard_A4' for the template parameter 'sqlVMSize' at line '31' and column '23' is not valid. The parameter value is not part of the allowed value(s): > 'Standard_A1,Standard_A2,Standard_A3'.'.
