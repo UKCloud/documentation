@@ -87,6 +87,26 @@ If you choose this option, UKCloud will add an HSCN interface to your existing N
 
 You can continue to use the HSCN edge that UKCloud deploys into your N3-connected VDCs for testing to connect your VMs to the HSCN network. This option requires you to perform a considerable amount of reconfiguration.
 
+### Regions 1 & 2 – Internet Connectivity
+
+If you currently have internet connectivity in your VDC via the N3 enabled edge, the way this works will change after the migration. Both options provided above are still applicable and can still be used to migrate from N3 to HSCN, however there are some slight changes and some additional steps required in order to maintain your internet connectivity. Please find the additional steps below:
+ 
+### Option 1: Add an HSCN interface to the existing N3 edge
+
+If you chose Option 1 for your migration strategy, the following steps are required to maintain internet connectivity:
+After the migration, your edge will be left with 2 interfaces; one for internet connectivity and one for HSCN connectivity.
+You can decide which interface is used as the default gateway; Internet or HSCN. Depending on your decision, static routes will need to be configured on the edge to route any traffic for the other connectivity type via the additional interface.
+Example:
+If you decide that the default gateway of the edge should route via the internet interface, you will need to configure static routes on the edge for any HSCN addresses you wish to connect to, to route via the HSCN interface.
+
+> [!IMPORTANT]
+> When applying static routes to your edge, these must not conflict with any of your internal ranges. If so, when routing internally, internal traffic could be routed externally to the edge.
+ 
+### Option 2: A new HSCN edge
+
+If you chose Option 2 for your migration strategy, your internet connectivity and HSCN connectivity will be configured on 2 different edges. Whereas in the original Option 2 above, your previous N3 edge is removed from your environment after the migration, if you require Internet connectivity in your VDC, this edge will not be deleted. N3 access via this edge will be removed so that it can solely be used for Internet connectivity.
+Depending on the connectivity types required on each of your VMs, it may be required for you to configure 2 NICs; one for HSCN and one for internet connectivity. The routing table within the OS will also need to be configured to route traffic out of the correct NIC as well.
+
 ##### New HSCN edge: UKCloud actions
 
 1. When you confirm that you're ready to begin testing HSCN connectivity in preparation for your migration, UKCloud will deploy an HSCN edge gateway into the N3-connected VDC.
