@@ -100,6 +100,8 @@
     href: vmw-how-manage-vapp-permissions.md
   - name: Upgrade your edge gateway
     href: vmw-how-upgrade-edge.md
+  - name: Use affinity and anti-affinity rules
+    href: vmw-how-use-affinity-rules.md
   - name: Use the VMware OVF Tool
     href: vmw-how-use-ovf-tool.md
   - name: Use VM location in vCloud Director
