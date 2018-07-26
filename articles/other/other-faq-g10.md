@@ -69,7 +69,7 @@ This includes connectivity to UKCloud for OpenStack, UKCloud for Microsoft Azure
 
 ## Changes
 
-### What changes have been made to the UKCloud forr Oracle Software service?
+### What changes have been made to the UKCloud for Oracle Software service?
 
 The SLA for this service has increased from 99.95% to 99.99%, giving you greater confidence that your mission critical workloads will be secure and available.
 
