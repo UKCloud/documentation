@@ -4522,17 +4522,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/other/images/vapp_ip_address.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/vapp_ip_address.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/other/images/windows_activation.png",
       "output": {
         "resource": {
