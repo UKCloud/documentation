@@ -131,15 +131,15 @@ toc_mdlink: filename.md
 ---
 ```
 
-### `title`
+### Title
 
 This is the full title of the article and will appear in the browser title bar.
 
-### `description`
+### Description
 
 This is a description of the content of the article. Provide information here that will help target the article in internet searches.
 
-### `services`
+### Services
 
 This is the service to which the article belongs. One of:
 
@@ -163,13 +163,13 @@ This is the service to which the article belongs. One of:
 - `vmware`
 - For articles that do belong to a service or that apply to multiple services, use `other`
 
-### `author`
+### Author
 
 This is the name of the person who created the article.
 
-### `toc_rootlink`
+### Rootlink
 
-For most articles, the `toc_rootlink` will be the article type. One of:
+For most articles, the rootlink will be the article type. One of:
 
 - `Getting Started`
 - `How To`
@@ -179,34 +179,30 @@ For most articles, the `toc_rootlink` will be the article type. One of:
 - `Service Scopes`
 
 > [!NOTE]
-> For UKCloud for Microsoft Azure articles, the `toc_rootlink` is either `Users` for articles intended for tenants or `Operators` for articles intended for service providers.
+> For UKCloud for Microsoft Azure articles, the rootlink is either `Users` for articles intended for tenants or `Operators` for articles intended for service providers.
 
-### `toc_sub1`, `toc_sub2`, etc
+### Sub1, Sub2, etc
 
-The `toc_sub1` metadata tag enables you to categorise articles within the root level to group them into related articles. This is useful if the product has lots of articles of the same type.
+The sub1 metadata tag enables you to categorise articles within the root level to group them into related articles. This is useful if the product has lots of articles of the same type.
 
 > [!NOTE]
-> For UKCloud for Microsoft Azure articles, `toc_sub1` should be the article type as listed in [toc_rootlink](#toc-rootlink). 
+> For UKCloud for Microsoft Azure articles, sub1 should be the article type as listed in [Rootlink](#rootlink).
 
-You can use `toc-sub2`, `toc-sub3` and so on to further categorise articles, but it is not recommended to go too many levels deep.
+You can use sub2, sub3 and so on to further categorise articles, but it is not recommended to go too many levels deep.
 
-### `toc_title`
+### TOC Title
 
-This is the title of the article as it will appear in the product topic list. Due to the restricted width of the topic list, the `toc_title` should not be too long, so consider shortening the full title if appropriate. For How To Guides, remove the initial How to and start with the verb. For example, for the topic *How to create a virtual machine from the Azure Marketplace*, you could set the `toc_title` to `Create a virtual machine`.
+This is the title of the article as it will appear in the product topic list. Due to the restricted width of the topic list, the TOC title should not be too long, so consider shortening the full title if appropriate. For How To Guides, remove the initial How to and start with the verb. For example, for the topic *How to create a virtual machine from the Azure Marketplace*, you could set the TOC title to `Create a virtual machine`.
 
-### `toc_fullpath`
+### Full path
 
-This is the full path of the article within the product topic list, in the format:
-
-`toc_rootlink/toc_sub1/toc_sub2/toc_sub3/toc_sub4/filename.md`
-
-Leave out any metadata tags that do not have values. For example:
+This is the full path of the article within the product topic list. For example:
 
 `Getting Started/vmw-gs.md`
 `How To/vmw-how-create-vapp.md`
 `Users/Getting Started/azs-gs.md`
 
-### `toc_mdlink`
+### Markdown file link
 
 This is the file name of the article. This must exactly match the file name and include the `.md` extension.
 
