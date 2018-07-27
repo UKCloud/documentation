@@ -19,8 +19,6 @@ toc_mdlink: conn-ref-janet-config-internet.md
 
 If you want to have connectivity to both the Janet network and the internet for one or more virtual machines (VMs), you'll need to configure custom routing. For smaller implementations you can do this on the VM itself, but for a more scalable solution, we recommend that you configure a virtual network device.
 
-The [Janet routing table](#janet-routing-table) is provided at the end of this document.
-
 ## Small or single instance implementation
 
 If you are confident that your environment will not need to scale much past its original size, you can configure a simple implementation to gain a working connection to the Janet network.
