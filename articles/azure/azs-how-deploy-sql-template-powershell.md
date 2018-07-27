@@ -138,37 +138,39 @@ The images used to create this deployment are:
 
 ## List of the **Parameters** you can define
 
-| Name                            | Description                                                                   | AllowedValues                                  | DefaultValue                                                                               | Type         |
-| ------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------ |
-| adminPassword                   | The password for the Administrator account of the new VMs and Domain          |                                                |                                                                                            | securestring |
-| adminUsername                   | The name of the Administrator of the new VMs and Domain                       |                                                |                                                                                            | string       |
-| adPDCNICIPAddress               | The IP address of the new AD VM                                               |                                                | 10.0.0.4                                                                                   | string       |
-| adVMSize                        | The size of the AD VMs Created                                                | {Standard\_A1, Standard\_A2, Standard\_A3}     | Standard\_A2                                                                               | string       |
-| autoPatchingDay                 | The day of a week for auto patching                                           | {Never, Everyday, Sunday, Monday...}           | Never                                                                                      | string       |
-| autoPatchingStartHour           | The start hour of a day for auto patching                                     | {0, 1, 2, 3...}                                | 2                                                                                          | string       |
-| deploymentPrefix                | The DNS Prefix for the Public IP Address for the Always On Cluster            |                                                | aodns                                                                                      | string       |
-| dnsSuffix                       | The DNS Suffix for reverse lookup of public IPAddresses                       |                                                | azurestack.external                                                                        | string       |
-| domainName                      | The FQDN of the AD Domain created                                             |                                                | contoso.local                                                                              | string       |
-| scriptsBaseUrl                  | DSC Scripts base url                                                          |                                                | https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sql-2016-ha | string       |
-| sqlAOAGName                     | The Sql AlwaysOn Group Name                                                   |                                                | alwayson-ag                                                                                | string       |
-| sqlAOListenerName               | The Sql AG Listener Name                                                      |                                                | \[tolower(concat('aon-listener-' , resourceGroup().name))\]                                | string       |
-| sqlAOListenerPort               | The Sql AG Listener port                                                      |                                                | 1433                                                                                       | string       |
-| sqlAuthPassword                 | The SQL Server Auth Account password                                          |                                                |                                                                                            | securestring |
-| sqlAuthUserName                 | The SQL Server Auth Account name                                              |                                                | sqlsa                                                                                      | string       |
-| sqlServerServiceAccountPassword | The SQL Server Service Account password                                       |                                                |                                                                                            | securestring |
-| sqlServerServiceAccountUserName | The SQL Server Service Account name                                           |                                                | sqlservice                                                                                 | string       |
-| sqlServerVersion                | The Sql Server Version                                                        | {SQL2016SP1-WS2016-ENT, SQL2016SP1-WS2016-DEV, SQL2016SP1-WS2016-STD} | SQL2016SP1-WS2016-ENT                                                                      | string       |
-| sqlStorageAccountName           | The name of Sql Server Storage Account                                        |                                                | \[tolower(concat(take(uniqueString(resourceGroup().id),8),'sql'))\]                        | string       |
-| sqlStorageAccountType           | The type of the Sql Server Storage Account created                            | {Premium\_LRS, Standard\_LRS}                  | Standard\_LRS                                                                              | string       |
-| sqlSubnet                       | The address range of the SQL subnet created in the new VNET                   |                                                | 10.0.1.0/26                                                                                | string       |
-| sqlVMSize                       | The size of the SQL VMs Created                                               | {Standard\_A1, Standard\_A2, Standard\_A3}     | Standard\_A3                                                                               | string       |
-| staticSubnet                    | The address range of the subnet static IPs are allocated from in the new VNET |                                                | 10.0.0.0/24                                                                                | string       |
-| templatesBaseUrl                | Linked Templates base url                                                     |                                                | https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sql-2016-ha | string       |
-| virtualNetworkAddressRange      | The address range of the new VNET in CIDR format                              |                                                | 10.0.0.0/16                                                                                | string       |
-| virtualNetworkName              | Name of virtual network to be created                                         |                                                | autohav2VNET                                                                               | string       |
-| vmDiskSize                      | The size of the VMs data disk in GB.                                          | {128, 256, 512, 1000}                          | 128                                                                                        | string       |
-| witnessVMSize                   | The size of the Witness VM Created                                            | {Standard\_A1, Standard\_A2, Standard\_A3}     | Standard\_A1                                                                               | string       |
-| workloadType                    | The Sql VM work load type: GENERAL - general work load                        | GENERAL                                        | GENERAL                                                                                    | string       |
+Name                            | Description                                                                   | AllowedValues                                                         | DefaultValue                                                                         |
+|---------------------------------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| adminPassword                   | The password for the Administrator account of the new VMs and Domain          |                                                                       |                                                                                      |
+| adminUsername                   | The name of the Administrator of the new VMs and Domain                       |                                                                       |                                                                                      |
+| adPDCNICIPAddress               | The IP address of the new AD VM                                               |                                                                       | 10.0.0.4                                                                             |
+| adVMSize                        | The size of the AD VMs Created                                                | {Standard\_A1, Standard\_A2, Standard\_A3}                            | Standard\_A2                                                                         |
+| autoPatchingDay                 | The day of a week for auto patching                                           | {Never, Everyday, Sunday, Monday...}                                  | Never                                                                                |
+| autoPatchingStartHour           | The start hour of a day for auto patching                                     | {0, 1, 2, 3...}                                                       | 2                                                                                    |
+| deploymentPrefix                | The DNS Prefix for the Public IP Address for the Always On Cluster            |                                                                       | aodns                                                                                |
+| dnsSuffix                       | The DNS Suffix for reverse lookup of public IPAddresses                       |                                                                       | azurestack.external                                                                  |
+| domainName                      | The FQDN of the AD Domain created                                             |                                                                       | contoso.local                                                                        |
+| platformFaultDomainCount        | Fault Domain Count Integer                                                    |                                                                       | 1                                                                                    |
+| platformUpdateDomainCount       | Update Domain Count Integer                                                   |                                                                       | 1                                                                                    |
+| scriptsBaseUrl                  | DSC Scripts base url                                                          |                                                                       | https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sq... |
+| sqlAOAGName                     | The Sql AlwaysOn Group Name                                                   |                                                                       | alwayson-ag                                                                          |
+| sqlAOListenerName               | The Sql AG Listener Name                                                      |                                                                       | \[tolower(concat('aon-listener-' , resourceGroup().name))\]                          |
+| sqlAOListenerPort               | The Sql AG Listener port                                                      |                                                                       | 1433                                                                                 |
+| sqlAuthPassword                 | The SQL Server Auth Account password                                          |                                                                       |                                                                                      |
+| sqlAuthUserName                 | The SQL Server Auth Account name                                              |                                                                       | sqlsa                                                                                |
+| sqlServerServiceAccountPassword | The SQL Server Service Account password                                       |                                                                       |                                                                                      |
+| sqlServerServiceAccountUserName | The SQL Server Service Account name                                           |                                                                       | sqlservice                                                                           |
+| sqlServerVersion                | The Sql Server Version                                                        | {SQL2016SP1-WS2016-ENT, SQL2016SP1-WS2016-DEV, SQL2016SP1-WS2016-STD} | SQL2016SP1-WS2016-ENT                                                                |
+| sqlStorageAccountName           | The name of Sql Server Storage Account                                        |                                                                       | \[tolower(concat(take(uniqueString(resourceGroup().id),8),'sql'))\]                  |
+| sqlStorageAccountType           | The type of the Sql Server Storage Account created                            | {Premium\_LRS, Standard\_LRS}                                         | Standard\_LRS                                                                        |
+| sqlSubnet                       | The address range of the SQL subnet created in the new VNET                   |                                                                       | 10.0.1.0/26                                                                          |
+| sqlVMSize                       | The size of the SQL VMs Created                                               | {Standard\_A1, Standard\_A2, Standard\_A3}                            | Standard\_A3                                                                         |
+| staticSubnet                    | The address range of the subnet static IPs are allocated from in the new VNET |                                                                       | 10.0.0.0/24                                                                          |
+| templatesBaseUrl                | Linked Templates base url                                                     |                                                                       | https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sq... |
+| virtualNetworkAddressRange      | The address range of the new VNET in CIDR format                              |                                                                       | 10.0.0.0/16                                                                          |
+| virtualNetworkName              | Name of virtual network to be created                                         |                                                                       | autohav2VNET                                                                         |
+| vmDiskSize                      | The size of the VMs data disk in GB.                                          | {128, 256, 512, 1000}                                                 | 128                                                                                  |
+| witnessVMSize                   | The size of the Witness VM Created                                            | {Standard\_A1, Standard\_A2, Standard\_A3}                            | Standard\_A1                                                                         |
+| workloadType                    | The Sql VM work load type: GENERAL - general work load                        | GENERAL                                                               | GENERAL                                                                              |
 
 ## Deploy ARM Template code
 
@@ -187,13 +189,17 @@ Change the required variables as per your environment and run the following scri
 >
 > `$domainName, $adminUsername, $sqlServerServiceAccountUserName`
 >
-> `dnsSuffix` Should be changed to - "azure.ukcloud.com" otherwise the deployment will fail because it will default to "azurestack.external" and that cannot be resolved externally
+> **`dnsSuffix`** Should be changed to - "azure.ukcloud.com" otherwise the deployment will fail because it will default to "azurestack.external" and that cannot be resolved externally
 >
 > In the example below it has been already set accordingly.
 >
 > To change which SQL Server Version to deploy set **`$sqlServerVersion`** accordingly: `SQL2016SP1-WS2016-ENT`, `SQL2016SP1-WS2016-DEV`, `SQL2016SP1-WS2016-STD`
 > Current default is set to STANDARD -> **`SQL2016SP1-WS2016-STD`**
 >
+> **`platformFaultDomainCount`** and **`platformUpdateDomainCount`** - below we set them to 3 and 5 accordingly to spread the servers on different hosts.
+>
+> More information on Fault Domains and Update Domains can be found [here](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-key-features#availability-sets-in-azure-stack)
+
 
 
 ```powershell
@@ -224,6 +230,8 @@ $ResourceGroupName = "SqlAlwaysOnRG01"
 $RegionAzureStack = "frn00006"
 
 $sqlServerVersion  = "SQL2016SP1-WS2016-STD"
+$platformFaultDomainCount = 3
+$platformUpdateDomainCount = 5
 $ARMDeploymentName = "SqlAlwaysOnDeployment"
 
 # Create Azure Stack Environment so that you can log in to it
@@ -255,10 +263,11 @@ try {
   }
 
 # Test Deployment
-Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -domainName $domainName -adminUsername $adminUsername -sqlServerServiceAccountUserName $sqlServerServiceAccountUserName -sqlServerVersion $sqlServerVersion -Verbose
+Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -domainName $domainName -adminUsername $adminUsername -sqlServerServiceAccountUserName $sqlServerServiceAccountUserName -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -Verbose
 
 # Start Deployment
-New-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -domainName $domainName -adminUsername $adminUsername -sqlServerServiceAccountUserName $sqlServerServiceAccountUserName -sqlServerVersion $sqlServerVersion -Verbose
+New-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -domainName $domainName -adminUsername $adminUsername -sqlServerServiceAccountUserName $sqlServerServiceAccountUserName -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -Verbose
+
 
 # Verify Deployment
 ## Note: $ARMDeploymentName you can change to query each subdeployment in your GroupDeployment
@@ -275,13 +284,13 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 > If Template fails validation and you need to see detailed error message you can do:
 >
 > ```powershell
-> Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -sqlVMSize "Standard_A4"
+> Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -sqlVMSize "Standard_A4"
 >
 > Code    : MultipleErrorsOccurred
 > Message : Multiple error occurred: BadRequest. Please see details.
 > Details : {Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResourceManagerError}
 >
->(Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON  -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -sqlVMSize "Standard_A4").Details
+>(Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON  -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -sqlVMSize "Standard_A4").Details
 >
 > Code    : InvalidTemplate
 > Message : Deployment template validation failed: 'The provided value 'Standard_A4' for the template parameter 'sqlVMSize' at line '31' and column '23' is not valid. The parameter value is not part of the allowed value(s): > 'Standard_A1,Standard_A2,Standard_A3'.'.
