@@ -101,7 +101,7 @@ If you decide that the default gateway of the edge should route via the internet
 
 > [!IMPORTANT]
 > When applying static routes to your edge, these must not conflict with any of your internal ranges. If so, when routing internally, internal traffic could be routed externally to the edge.
- 
+
 ### Option 2: A new HSCN edge
 
 If you chose Option 2 for your migration strategy, your internet connectivity and HSCN connectivity will be configured on 2 different edges. Whereas in the original Option 2 above, your previous N3 edge is removed from your environment after the migration, if you require Internet connectivity in your VDC, this edge will not be deleted. N3 access via this edge will be removed so that it can solely be used for Internet connectivity.
@@ -147,7 +147,7 @@ UKCloud will perform these required tasks prior to the migration. These tasks wi
 3. To test HSCN, add a new network connected to the HSCN router and build an instance on that network containing the tools and applications that can be used to confirm the connectivity requirements for your production platform.
 
     > [!IMPORTANT]
-    >  UKCloud highly recommends creating new instances for HSCN testing purposes.
+    > UKCloud highly recommends creating new instances for HSCN testing purposes.
 
 4. When the migration is due to start, perform the following for each instance:
 

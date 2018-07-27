@@ -52,7 +52,7 @@ Create a file called il3-repos.repo in /etc/yum.repos.d, and populate it with th
 
     name=UKCloud CentOS Repository - Updates
 
-    baseurl=http://x.y.89.89.96/centos/centos-updates
+    baseurl=http://x.y.89.96/centos/centos-updates
 
     gpgcheck=1
 
