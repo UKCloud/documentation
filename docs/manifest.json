@@ -1156,7 +1156,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-janet-config-internet.html",
-          "hash": "8e80gwVXJVHM6Z51D5XooA=="
+          "hash": "9r9IatbuY9TJaOLU4e+BKA=="
         }
       },
       "is_incremental": false,
@@ -10493,13 +10493,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
