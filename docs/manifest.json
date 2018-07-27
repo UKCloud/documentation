@@ -1156,7 +1156,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-janet-config-internet.html",
-          "hash": "lnKlT6f0IQWd5t8ZFpaL5g=="
+          "hash": "8e80gwVXJVHM6Z51D5XooA=="
         }
       },
       "is_incremental": false,
@@ -5620,17 +5620,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/firewall_rule.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/firewall_rule.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/integration_plugin.jpg",
       "output": {
         "resource": {
@@ -5954,17 +5943,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/myvms.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/nat_rule.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/nat_rule.jpg"
         }
       },
       "is_incremental": false,
@@ -6467,17 +6445,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/sub_allocated_tools.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/sub_allocated_tools.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/tier_1_comparison.PNG",
       "output": {
         "resource": {
@@ -6691,17 +6658,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vapp_clone.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vapp_ip_address.jpg",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vapp_ip_address.jpg"
         }
       },
       "is_incremental": false,
@@ -9535,7 +9491,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-centos-update-servers.html",
-          "hash": "GY4OEJ+2tbiAOyvDncZodw=="
+          "hash": "SyJukUobQkf74TfjlVbE5g=="
         }
       },
       "is_incremental": false,
@@ -9619,7 +9575,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-change-ipsec-vpn-api.html",
-          "hash": "W6zcOvBSA2Zd2uPyhPEKVg=="
+          "hash": "VOm/q4TwDVW843F6HWTBzg=="
         }
       },
       "is_incremental": false,
@@ -9811,7 +9767,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-deploy-ftps.html",
-          "hash": "BcEyHTFbYMQh2QHl8ZzBvg=="
+          "hash": "0hZ82MsN0IJhczkeOrZnOA=="
         }
       },
       "is_incremental": false,
@@ -10532,14 +10488,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

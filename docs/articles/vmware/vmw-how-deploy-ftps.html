@@ -109,8 +109,6 @@
 <li><p>When the deployment is complete open the vApp and take note of the private IP address.</p>
 </li>
 </ol>
-<pre><code>![vApp IP Address](images/vapp_ip_address.jpg)
-</code></pre>
 <h2 id="configure-firewall">Configure Firewall</h2>
 <p>Determine your cloud IP addresses:</p>
 <ol>
@@ -126,12 +124,11 @@
 <li><p>Select the <strong>Sub-Allocated pools</strong> tab and record the IP addresses in the lower corner.</p>
 </li>
 <li><p>Click <strong>OK</strong>.</p>
-<p><img src="images/sub_allocated_tools.jpg" alt="Sub-allocated IP tools"></p>
 </li>
 </ol>
 <h2 id="add-nat-rules">Add NAT rules</h2>
 <ol>
-<li><p>Navigat back to the edge gateway, then right-click it and select <strong>Edge Gateway Services</strong>.</p>
+<li><p>Navigate back to the edge gateway, then right-click it and select <strong>Edge Gateway Services</strong>.</p>
 </li>
 <li><p>Select the <strong>NAT</strong> tab.</p>
 </li>
@@ -144,7 +141,6 @@
 <li><p>Add the port listed in the table below to both original and translated port.</p>
 </li>
 <li><p>Add the private IP address recorded during the virtual machine deployment.</p>
-<p><img src="images/nat_rule.jpg" alt="Destination NAT rule"></p>
 </li>
 <li><p>Repeat this for each port listed in the table below:</p>
 <table>
@@ -203,7 +199,7 @@
 <ul>
 <li>Enabled: Select this</li>
 <li>Name: FTPS</li>
-<li>Source: <code>&quot;</code>37.26.88.70`</li>
+<li>Source: <code>37.26.88.70</code></li>
 <li>Source port: <code>any</code></li>
 <li>Destination: The first address from the Sub-Allocated pool list above</li>
 <li>Destination port: From the list below</li>
@@ -213,7 +209,6 @@
 </ul>
 </li>
 <li><p>Click <strong>OK</strong>.</p>
-<p><img src="images/firewall_rule.jpg" alt="Edit Firewall Rule"></p>
 <table>
 <thead>
 <tr>
@@ -258,9 +253,6 @@
 <ol>
 <li><p>Login to the FTPS server and run the following command.</p>
 <pre><code> /usr/local/bin/setupFTPS.sh &lt;public ip address&gt;
-</code></pre>
-<p>For example:</p>
-<pre><code> /usr/local/bin/setupFTPS.sh 83.56.212.12
 </code></pre>
 </li>
 <li><p>Connect with Filezilla.</p>

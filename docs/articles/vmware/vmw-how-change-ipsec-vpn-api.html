@@ -96,8 +96,8 @@
 </li>
 </ul>
 <h2 id="before-you-begin">Before you begin</h2>
-<p>Before using the vCloud API to view and update IPsec VPN settings, we recommend that you install a REST client that enables you to access the API. The steps in this article use a Firefox plugin called RESTClient. For information about how to install this plugin, see <a href="vmw-how-install-vcloud-api-rest-client.html">How to install a REST client to access the vCloud API</a>.</p>
-<p>You also need to find your API credentials. For more information, see <a href="vmw-how-access-vcloud-api.html">How to access vCloud Director through the vCloud API</a></p>
+<p>Before using the vCloud API to view and update IPsec VPN settings, we recommend that you install a REST client that enables you to access the API. The steps in this article use a Firefox plugin called RESTClient. For information about how to install this plugin, see <a href="vmw-how-install-vcloud-api-rest-client.html"><em>How to install a REST client to access the vCloud API</em></a>.</p>
+<p>You also need to find your API credentials. For more information, see <a href="vmw-how-access-vcloud-api.html"><em>How to access vCloud Director through the vCloud API</em></a></p>
 <h2 id="obtaining-an-authorisation-token">Obtaining an authorisation token</h2>
 <p>To start interacting with the vCloud API, you first need to obtain an <code>x-vcloud-authorization</code> token; to do this you need to adjust some settings in RESTClient.</p>
 <ol>
@@ -290,77 +290,17 @@
 <p>This section outlines common tasks performed via the API to manipulate the IPsec VPN configuration applied to a given edge gateway.</p>
 <h3 id="modifying-the-local-endpoint-ip-and-local-id">Modifying the local endpoint IP and local ID</h3>
 <p>You can change the local IP and local ID by editing the contents between the opening <code>&lt;localIpAddress&gt;</code> and closing <code>&lt;/localIpAddress&gt;</code> and
-<code>&lt;localId&gt;</code> and <code>&lt;/localId&gt;</code> tags as shown below.</p>
-<h4 id="original">Original</h4>
-<pre><code>&lt;LocalIpAddress&gt;172.26.45.97&lt;/LocalIpAddress&gt;
-&lt;LocalId&gt;172.26.45.97&lt;/LocalId&gt;
-</code></pre>
-<h4 id="modified">Modified</h4>
-<pre><code>&lt;LocalIpAddress&gt;37.26.88.73&lt;/LocalIpAddress&gt;
-&lt;LocalId&gt;37.26.88.73&lt;/LocalId&gt;
-</code></pre>
+<code>&lt;localId&gt;</code> and <code>&lt;/localId&gt;</code> tags.</p>
 <p>This is by far the most commonly performed modification to the IPsec VPN configuration via the vCloud API. You can use this to change the local IP address from the IP address assigned to the edge gateway on the transit network to the IP address assigned to the edge gateways on the public network. For the tunnel to come up successfully, the local IP address must be set to the edge gateway's public IP address. The local ID must also match the public IP address specified.</p>
 <h3 id="modifying-the-peer-endpoint-ip-and-peer-id">Modifying the peer endpoint IP and peer ID</h3>
-<p>If you need to move the remote endpoint of the tunnel to a new device or IP address, then you can adjust the following as required.</p>
-<h4 id="original-1">Original</h4>
-<pre><code>&lt;PeerIpAddress&gt;134.170.188.221&lt;/PeerIpAddress&gt;
-&lt;PeerId&gt;134.170.188.221&lt;/PeerId&gt;
-</code></pre>
-<h4 id="modified-1">Modified</h4>
-<pre><code>&lt;PeerIpAddress&gt;212.58.244.18&lt;/PeerIpAddress&gt;
-&lt;PeerId&gt;212.58.244.18&lt;/PeerId&gt;
-</code></pre>
+<p>If you need to move the remote endpoint of the tunnel to a new device or IP address, then you can adjust the <code>&lt;PeerIpAddress&gt;</code> and <code>&lt;PeerId&gt;</code> tags.</p>
 <p>When changing the peer IP address of the tunnel you must ensure that the peer ID is also updated to match the new peer IP address.</p>
 <h3 id="adding-or-removing-local-subnets">Adding or removing local subnets</h3>
-<p>You can add additional local subnets to the IPsec VPN tunnel. This involves adding a new local subnet definition to the IPsec VPN config.</p>
-<h4 id="original-2">Original</h4>
-<pre><code>&lt;LocalSubnet&gt;
-&lt;Name&gt;VPN Test Network&lt;/Name&gt;
-&lt;Gateway&gt;192.168.1.254&lt;/Gateway&gt;
-&lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
-&lt;/LocalSubnet&gt;
-</code></pre>
-<h4 id="modified-2">Modified</h4>
-<pre><code>&lt;LocalSubnet&gt;
-&lt;Name&gt;VPN Test Network 1&lt;/Name&gt;
-&lt;Gateway&gt;192.168.1.254&lt;/Gateway&gt;
-&lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
-&lt;/LocalSubnet&gt;
-&lt;LocalSubnet&gt;
-&lt;Name&gt;VPN Test Network 2&lt;/Name&gt;
-&lt;Gateway&gt;192.168.3.254&lt;/Gateway&gt;
-&lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
-&lt;/LocalSubnet&gt;
-</code></pre>
+<p>You can add additional local subnets to the IPsec VPN tunnel. This involves adding a new <code>&lt;LocalSubnet&gt;</code> definition to the IPsec VPN config.</p>
 <h3 id="adding-or-removing-peer-subnets">Adding or removing peer subnets</h3>
-<p>You can use the same process to add or remove peer subnets</p>
-<h4 id="original-3">Original</h4>
-<pre><code>&lt;PeerSubnet&gt;
-&lt;Name&gt;192.168.2.0/24&lt;/Name&gt;
-&lt;Gateway&gt;192.168.2.254&lt;/Gateway&gt;
-&lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
-&lt;/PeerSubnet&gt;
-</code></pre>
-<h4 id="modified-3">Modified</h4>
-<pre><code>&lt;PeerSubnet&gt;
-&lt;Name&gt;192.168.2.0/24&lt;/Name&gt;
-&lt;Gateway&gt;192.168.2.254&lt;/Gateway&gt;
-&lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
-&lt;/PeerSubnet&gt;
-&lt;PeerSubnet&gt;
-&lt;Name&gt;192.168.4.0/24&lt;/Name&gt;
-&lt;Gateway&gt;192.168.4.254&lt;/Gateway&gt;
-&lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
-&lt;/PeerSubnet&gt;
-</code></pre>
+<p>You can use the same process to add or remove a <code>&lt;PeerSubnet&gt;</code>.</p>
 <h3 id="amending-the-shared-secret">Amending the shared secret</h3>
 <p>If you need to update or amend the shared secret on an IPsec VPN, edit the value between the opening <code>&lt;SharedSecret&gt;</code> and closing <code>&lt;/SharedSecret&gt;</code> tags.</p>
-<h4 id="original-4">Original</h4>
-<pre><code>&lt;SharedSecret&gt;UKCloudIPSECVPNDemoSharedSecretKey&lt;/SharedSecret&gt;
-</code></pre>
-<h4 id="modified-4">Modified</h4>
-<pre><code>&lt;SharedSecret&gt;4dae850771fbe3f06588b49772c0b8eb&lt;/SharedSecret&gt;
-</code></pre>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The shared secret must be at least 32 characters in length. To enhance the security of the tunnel, we highly recommend that you avoid using dictionary words in the shared secret key.</p>
@@ -368,55 +308,7 @@
 <h2 id="applying-the-new-configuration">Applying the new configuration</h2>
 <p>When you've updated the relevant sections of the configuration, you can apply it to the edge gateway.</p>
 <ol>
-<li><p>Enclose the new configuration in a pair of <code>&lt;EdgeGatewayServiceConfiguration&gt;</code> tags, as shown in the following example.</p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;EdgeGatewayServiceConfiguration xmlns=&quot;http://www.vmware.com/vcloud/v1.5&quot;&gt;
-   &lt;GatewayIpsecVpnService&gt;
-      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
-      &lt;Endpoint&gt;
-         &lt;Network type=&quot;application/vnd.vmware.admin.network+xml&quot; href=&quot;https://api.vcd.portal.ukcloud.com/api/admin/network/3c284ec8-2850- ba77-098c-7f697a3d8769\&quot;/\&gt;
-         &lt;PublicIp&gt;37.26.88.73&lt;/PublicIp&gt;
-      &lt;/Endpoint\&gt;
-      &lt;Tunnel\&gt;
-         &lt;Name&gt;ukcloud IPSEC VPN Demo&lt;/Name&gt;
-         &lt;Description/&gt;
-         &lt;IpsecVpnThirdPartyPeer&gt;
-            &lt;PeerId&gt;212.58.244.18&lt;/PeerId&gt;
-         &lt;/IpsecVpnThirdPartyPeer&gt;
-         &lt;PeerIpAddress&gt;212.58.244.18&lt;/PeerIpAddress&gt;
-         &lt;PeerId&gt;212.58.244.18&lt;/PeerId&gt;
-         &lt;LocalIpAddress&gt;37.26.88.73&lt;/LocalIpAddress&gt;
-         &lt;LocalId&gt;37.26.88.73&lt;/LocalId&gt;
-         &lt;LocalSubnet&gt;
-         &lt;Name&gt;VPN Test Network 1&lt;/Name&gt;
-         &lt;Gateway&gt;192.168.1.254&lt;/Gateway&gt;
-         &lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
-         &lt;/LocalSubnet\&gt;
-         &lt;LocalSubnet&gt;
-            &lt;Name&gt;VPN Test Network 2&lt;/Name&gt;
-            &lt;Gateway&gt;192.168.3.254&lt;/Gateway&gt;
-            &lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
-         &lt;/LocalSubnet&gt;
-         &lt;PeerSubnet\&gt;
-            &lt;Name&gt;192.168.2.0/24&lt;/Name&gt;
-            &lt;Gateway&gt;192.168.2.254&lt;/Gateway&gt;
-            &lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
-         &lt;/PeerSubnet&gt;
-         &lt;PeerSubnet&gt;
-            &lt;Name&gt;192.168.4.0/24&lt;/Name&gt;
-            &lt;Gateway&gt;192.168.4.254&lt;/Gateway&gt;
-            &lt;Netmask&gt;255.255.255.0&lt;/Netmask&gt;
-         &lt;/PeerSubnet&gt;
-         &lt;SharedSecret&gt;4dae850771fbe3f06588b49772c0b8eb&lt;/SharedSecret&gt;
-         &lt;SharedSecretEncrypted&gt;false&lt;/SharedSecretEncrypted&gt;
-         &lt;EncryptionProtocol&gt;AES256&lt;/EncryptionProtocol&gt;
-         &lt;Mtu&gt;1500&lt;/Mtu&gt;
-         &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
-         &lt;IsOperational&gt;true&lt;/IsOperational&gt;
-      &lt;/Tunnel&gt;
-   &lt;/GatewayIpsecVpnService&gt;
-&lt;/EdgeGatewayServiceConfiguration\&gt;**
-</code></pre>
+<li><p>Enclose the new configuration in a pair of <code>&lt;EdgeGatewayServiceConfiguration&gt;</code> tags.</p>
 </li>
 <li><p>Copy and paste this configuration into the Request <em>Body</em> section of the RESTClient.</p>
 </li>
@@ -426,10 +318,10 @@
 <pre><code> /action/configureServices
 </code></pre>
 <p>For example, if the original contents of the URL were:</p>
-<pre><code> https://&lt;api_url&gt;/api/admin/edgeGateway/48fbb9e-2e90-c055-aa46-86f18766f5b1
+<pre><code> https://&lt;api_url&gt;/api/admin/edgeGateway/&lt;id&gt;
 </code></pre>
 <p>The updated URL would be:</p>
-<pre><code> https://&lt;api_url&gt;/api/admin/edgeGateway/48fbb9e-2e90-c055-aa46-86f18766f5b1/action/configureServices
+<pre><code> https://&lt;api_url&gt;/api/admin/edgeGateway/&lt;id&gt;/action/configureServices
 </code></pre>
 </li>
 <li><p>You must also add one more Header to the RESTClient prior to submitting the new configuration. From the <strong>Headers</strong> menu at the top of the REST Client select <strong>Custom Header</strong>.</p>
