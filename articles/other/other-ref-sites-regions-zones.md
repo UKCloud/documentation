@@ -57,7 +57,7 @@ Although we operate secure, high‑bandwidth and low‑latency interconnects bet
 
 Within each site, our platform provides a number of independent regions (see diagram above). Each region is a physically segregated part of the platform with its own power infrastructure, management services and networking components. This enables you to design resilient solutions that are contained entirely within a single site.
 
-Each region provides a particular subset of UKCloud services, for example UKCloud for VMware, UKCloud for OpenStack or Cloud Storage, so the regions that you can use for your solution depend on where your selected (and prospective) UKCloud services are available. For example, in Figure 4 you can see that UKCloud for VMware is provided in regions 2 and 5, however UKCloud for OpenStack is provided only in region 5.
+Each region provides a particular subset of UKCloud services, for example UKCloud for VMware, UKCloud for OpenStack or Cloud Storage, so the regions that you can use for your solution depend on where your selected (and prospective) UKCloud services are available. For example, in the diagram below you can see that UKCloud for VMware is provided in regions 2 and 5, however UKCloud for OpenStack is provided only in region 5.
 
 ![Services in regions 2 and 5](images/fig4_services_in_regions.png)
 
