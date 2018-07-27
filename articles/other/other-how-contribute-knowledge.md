@@ -65,6 +65,8 @@ To submit changes or new articles you must have a GitHub account.
 
 If you're familiar with working in GitHub and want to submit more significant changes to an article, or even create a new articles, you may find it easier to [fork the repository](https://help.github.com/articles/fork-a-repo/) and work on your changes there before creating your pull request.
 
+For a template to get you started with a new article, see [*UKCloud Knowledge Centre article template*](other-ref-knowledge-template.md).
+
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
