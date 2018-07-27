@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to create a routed VDC network | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>UKCloud Knowledge Centre article template | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to create a routed VDC network | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="UKCloud Knowledge Centre article template | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,59 +82,105 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-create-a-routed-vdc-network">How to create a routed VDC network</h1>
+<h1 id="ukcloud-knowledge-centre-article-template">UKCloud Knowledge Centre article template</h1>
 
+<p>The first thing in your article after the metadata should be the main article title. Use the following to help you decide on the title for your article</p>
+<ul>
+<li>Titles (and all other headings) should be in sentence caps (that is, the first word should start with an uppercase letter and all other words should be all lowercase unless they are proper nouns)</li>
+<li>Use a single # for the article title (and don't forget the space after the #)</li>
+<li>How To Guide titles should start with How to and then a verb to describe the task described in the article, for example <em>How to create a virtual machine</em>.</li>
+<li>Reference Guides should start with a noun if possible</li>
+</ul>
+<p>Generally, you should not include any text below the article title, but should go straight to the first (<em>Overview</em>) heading. However, if the article is very short and does not require any subheadings, you can include the content directly below the article title.</p>
 <h2 id="overview">Overview</h2>
-<p>An organisation virtual data centre network enables its virtual machines (VMs) to communicate with each other or to provide access to external networks. A single VDC can have multiple networks.</p>
-<p>There are two network flavours, isolated and routed:</p>
+<p>The first section after the article title should be <em>Overview</em> and should provide an introduction to the purpose of the article.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>For How To Guides, if appropriate, you can include an <em>Intended audience</em> subsection below the <em>Overview</em> section to indicate any particular access or permissions a user might need to complete the steps in the task described by the guide.</p>
+<h2 id="further-sections">Further sections</h2>
+<p>Use additional sections to break the article up into manageable chunks to make it easier to read.</p>
+<p>Section headings should be in sentence caps (that is, the first word should start with an uppercase letter and all other words should be all lowercase unless they are proper nouns).</p>
+<p>In How To articles, you may just have a single additional section describing the task being described in the article -- you should use gerunds for the section headings (words ending in -ing). For example <em>Logging into the OpenStack Horizon dashboard</em>. If the article includes multiple tasks, put each task into its own section.</p>
+<p>Reference Guides can include as many sections as necessary to keep the content easy to read. But don't use too many levels of subsections as it can be difficult for users to keep track of where they are if the subsections go too deep.</p>
+<h3 id="bulleted-lists">Bulleted lists</h3>
 <ul>
-<li>An isolated (internally connected) network is one that only VMs within the VDC can connect to. Creation of isolated networks is described in <a href="vmw-how-create-isolated-network.html"><em>How to create an isolated VDC network</em></a>.</li>
-<li>A routed network (externally connected) provides access to machines and networks outside the VDC via the edge gateway. You can have up to nine usable routed networks per VDC. This guide describes how to create a routed VDC network.</li>
+<li><p>Bulleted lists</p>
+</li>
+<li><p>Look</p>
+</li>
+<li><p>Like this</p>
+<ul>
+<li>with sub lists</li>
+<li>if required</li>
 </ul>
-<h2 id="creating-a-routed-vdc-network">Creating a routed VDC network</h2>
-<p>To create a routed Org vDC network:</p>
+</li>
+</ul>
+<h3 id="numbered-lists-for-how-to-guides">Numbered lists for How To Guides</h3>
 <ol>
-<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
-<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
+<li><p>Numbered lists</p>
 </li>
-<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
+<li><p>In a How To Guide</p>
 </li>
-<li><p>Select the <strong>Org VDC Networks</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-vdc-networks.png" alt="Org VDC Networks tab in vCloud Director"></p>
+<li><p>Look</p>
 </li>
-<li><p>Click the green <strong>+</strong> icon (or right-click an empty row and select <strong>Add Network</strong>)</p>
-</li>
-<li><p>Select the option to <strong>Create a routed network</strong>.</p>
-<p><img src="images/vmw-vcd-admin-routed-network-select.png" alt="Routed network option"></p>
-</li>
-<li><p>Select the edge gateway that you want your network to connect to and then click <strong>Next</strong>.</p>
-<p><img src="images/vmw-vcd-admin-routed-network-edge.png" alt="Select edge gateway"></p>
- <!-- add info about what the Create as subinterface checkbox is for -->
-</li>
-<li><p>In the <em>Configure Network</em> page, create a network <strong>Gateway address</strong> and <strong>Network mask</strong>, and add a <strong>DNS</strong> if possible.</p>
-<p><img src="images/vmw-vcd-admin-vdc-network-gateway.png" alt="Network settings for routed VDC network"></p>
-</li>
-<li><p>The <strong>Static IP pool</strong> is similar to DHCP in the sense that it's a range of IP addresses to be consumed by the VMs connecting to the network. When a VM is configured it will have a static manual or a static IP pool address assigned to it.</p>
+<li><p>Like this</p>
 <ul>
-<li>For static manual, enter the address manually. This must be a valid address for the pool. The VM will keep this address for as long as it exists.</li>
-<li>For static IP pool, enter a range of addresses. A free address from the IP pool will be allocated to the machine automatically.</li>
+<li>you can include</li>
+<li>bulleted lists</li>
 </ul>
-<p>As an example, if you give the gateway address as <code>192.168.1.1</code>, you may then want to give a static IP pool of <code>192.168.1.10</code> to <code>192.168.1.100</code>. This will give you a pool of 91 IP  addresses to assign to machines within your network. You can always increase this later if needed.</p>
-<p><img src="images/vmw-vcd-admin-vdc-network-ip.png" alt="IP pool for routed network"></p>
-</li>
-<li><p>Click <strong>Next</strong>.</p>
-</li>
-<li><p>Give the network a <strong>Name</strong> and <strong>Description</strong>.</p>
-</li>
-<li><p>If you want to make the network shareable with other VDCs, select the <strong>Share this network</strong> check box.</p>
-</li>
-<li><p>Click <strong>Next</strong> to review your settings, and then click <strong>Finish</strong>.</p>
 </li>
 </ol>
-<h2 id="next-steps">Next steps</h2>
-<p>Now you've created your network to connect your VDC with the outside world, may want to configure your edge gateway to control what traffic is allowed into and out of your VDC. You may also wan to start building some VMs. For a quick guide on how to do this, see <a href="vmw-how-build-vm.html"><em>How to build a virtual machine with UKCloud for VMware</em></a>.</p>
+<h2 id="more-useful-markdown">More useful markdown</h2>
+<p>Markdown for images looks like:</p>
+<pre><code>![alt-text](images/image-filename.png)
+</code></pre>
+<p>The <code>alt-text</code> is read out by screen readers and provides a brief description of the image to help visually impaired users determine what the image is illustrating. Image files should be located in an <code>images</code> directory underneath the main product directory.</p>
+<p>Links to other topics for the same product look like:</p>
+<pre><code>[*topic-title*](topic-filename.md)
+</code></pre>
+<p>For example:</p>
+<pre><code>[*UKCloud Knowledge Centre guidelines*](other-ref-knowledge-guidelines.md)
+</code></pre>
+<p>Gives you the following link:</p>
+<p><a href="other-ref-knowledge-guidelines.html"><em>UKCloud Knowledge Centre guidelines</em></a></p>
+<p>Links to other topics for a different product look like:</p>
+<pre><code>[*topic-title*](../product/topic-filename.md)
+</code></pre>
+<p>For example:</p>
+<pre><code>[*Getting Started Guide for the UKCloud Portal*](ptl-gs.md)
+</code></pre>
+<p>Gives you the following link:</p>
+<p><a href="ptl-gs.md"><em>Getting Started Guide for the UKCloud Portal</em></a></p>
+<h3 id="tips-notes-and-warnings">Tips, notes and warnings</h3>
+<pre><code>&gt; [!TIP]
+&gt; This is a tip, which provides helpful information for working with a product.
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>This is a tip, which provides helpful information for working with a product.</p>
+</div>
+<pre><code>&gt; [!NOTE]
+&gt; This is a note, which provides important information.
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This is a note, which provides important information.</p>
+</div>
+<pre><code>&gt; [!IMPORTANT]
+&gt; This is an important note, which requires particular attention.
+</code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>This is an important note, which requires particular attention.</p>
+</div>
+<pre><code>&gt; [!WARNING]
+&gt; This is a warning, which provides users with information about something which could cause significant issues if ignored.
+</code></pre>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>This is a warning, which provides users with information about something which could cause significant issues if ignored.</p>
+</div>
 <h2 id="feedback">Feedback</h2>
+<p>Each article should end with a feedback section that includes the following text:</p>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
@@ -148,7 +194,7 @@
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-routed-network.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-knowledge-template.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>

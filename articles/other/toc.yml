@@ -24,6 +24,8 @@
     href: other-ref-dc-notice.md
   - name: Knowledge Centre article template
     href: other-ref-knowledge-template.md
+  - name: Knowledge Centre guidelines
+    href: other-ref-knowledge-guidelines.md
   - name: Protective Monitoring information in the UKCloud Portal
     href: other-ref-promon-showback.md
   - name: Services by region
@@ -46,10 +48,6 @@
     href: other-ref-invoice-evidence-file.md
   - name: Windows Server 2016 templates
     href: other-ref-windows-2016-templates.md
-- name:
-  - Reference
-  - article_type
-  items: []
 - name: Service Scope
   items:
   - name: Free trials Service Scope

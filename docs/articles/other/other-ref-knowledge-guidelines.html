@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UKCloud Knowledge Centre guidelines | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UKCloud Knowledge Centre guidelines | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="ukcloud-knowledge-centre-guidelines">UKCloud Knowledge Centre guidelines</h1>
+
+<p>If you're contributing content to the UKCloud Knowledge Centre, it's important that you follow the guidelines listed in this article.</p>
+<p>For information about how to contribute content, see <a href="other-how-contribute-knowledge.html"><em>How to contribute to the UKCloud Knowledge Centre</em></a>.</p>
+<p>For a template to get you started, see <a href="other-ref-knowledge-template.html"><em>UKCloud Knowledge Centre article template</em></a>.</p>
+<h2 id="sensitive-content">Sensitive content</h2>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Content in the Knowledge Centre is available over the internet to anybody, therefore it is extremely important to ensure that articles do not contain any sensitive information, including, but not limited to, user names, sensitive IP addresses. This includes information that may be in screenshots or images. If you're unsure about whether information in the article is sensitive, consult with a subject matter expert before creating your Pull Request.</p>
+</div>
+<h2 id="submission-of-content">Submission of content</h2>
+<p>By submitting content you are granting UKCloud permission to use your submission in our Knowledge Centre, which is available for public consumption over the internet. In addition, you will also be identified as a contributor to the article in our public GitHub repository.</p>
+<h2 id="images">Images</h2>
+<p>If you add images to the article, <code>.png</code> is the preferred file format.</p>
+<p>You should make sure that you are not violating any copyright laws with any images that you add.</p>
+<p>You should make sure that images, especially screenshots, do not contain any sensitive data, such as user names or IP addresses.</p>
+<p>File names for images in Knowledge Centre articles should use the following file naming convention:</p>
+<p><code>&lt;product&gt;-&lt;tool&gt;-&lt;ui&gt;-&lt;description&gt;.png</code></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Each word in the file name should be separated by a hypen.</p>
+</div>
+<p>where:</p>
+<ul>
+<li><p><code>product</code> indicates which product the image is for (see <a href="#article-file-naming-conventions">Article file naming conventions</a> for a list of products).</p>
+</li>
+<li><p><code>tool</code> (optional) indicates the tool the image is depicting. This will be different for each product.</p>
+<p>For example, <code>vmw-&lt;vcd&gt;-add-dhcp-pool-adv.png</code>, <code>ostack-&lt;horizon&gt;-create-network.png</code></p>
+</li>
+<li><p><code>ui</code> (optional) indicates the UI element the image is depicting, for example, <mnu> for a menu, <btn> for a button, <tab> for a tab.<p>
+<p>For example, <code>vmw-vcd-&lt;btn&gt;-add-static-route.png</code></p>
+</tab></btn></mnu></li>
+<li><p><code>description</code> indicates the purpose of the image. Use as few words as possible and separate words with hyphens.</p>
+<p>For example: <code>vmw-portal-&lt;build-compute-service&gt;.png</code></p>
+</li>
+</ul>
+<h2 id="article-file-naming-conventions">Article file naming conventions</h2>
+<p>If you're creating a new article, use the following file naming convention</p>
+<p><code>&lt;product&gt;-&lt;type&gt;-&lt;description&gt;-&lt;tool&gt;.md</code></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Each word in the file name should be separated by a hypen.</p>
+</div>
+<p>where:</p>
+<ul>
+<li><p><code>product</code> indicates which product the topic is for. One of:</p>
+<ul>
+<li><code>azs</code> for UKCloud for Microsoft Azure</li>
+<li><code>cdsz</code> for Cross Domain Security Zone</li>
+<li><code>conn</code> for Connectivity</li>
+<li><code>cs</code> for Cloud Storage</li>
+<li><code>draas</code> for Disaster Recovery as a Service</li>
+<li><code>email</code> for Email and Collaboration</li>
+<li><code>enbl</code> for Cloud Enablement</li>
+<li><code>gpu</code> for Cloud GPU</li>
+<li><code>migr</code> for Migration to the Cloud</li>
+<li><code>orcl</code> for UKCloud for Oracle Software</li>
+<li><code>oshift</code> for UKCloud for OpenShift</li>
+<li><code>ostack</code> for UKCloud for OpenStack</li>
+<li><code>ptl</code> for the UKCloud Portal</li>
+<li><code>prc</code> for Private Cloud for Compute</li>
+<li><code>pro</code> for Private Cloud for Oracle</li>
+<li><code>prs</code> for Private Cloud for Storage</li>
+<li><code>sra</code> for Secure Remote Access</li>
+<li><code>vmw</code> for UKCloud for VMware</li>
+<li>For articles that do belong to a service or that apply to multiple services, use <code>other</code></li>
+</ul>
+</li>
+<li><p><code>type</code> indicates the article type. One of:</p>
+<ul>
+<li><code>faq</code> for FAQs</li>
+<li><code>gs</code> for Getting Started Guides</li>
+<li><code>how</code> for How To Guides</li>
+<li><code>ref</code> for Reference Guides</li>
+<li><code>sco</code> for Service Scopes</li>
+</ul>
+</li>
+<li><p><code>description</code> indicates the purpose of the article. Use as few words as possible and separate words with hyphens. For Reference Guides start with a noun, for How To guides start with a verb.</p>
+<p>For example: <code>vmw-how-&lt;create-vm-from-template&gt;.md</code>, <code>conn-ref-&lt;psn-core-services&gt;.md</code></p>
+</li>
+<li><p><code>tool</code> (optional) indicates if the topic is specific to a particular tool (for example, a CLI or API).</p>
+<p>For example: <code>ostack-how-manage-accounts-&lt;portal&gt;.md</code>, <code>azs-how-configure-&lt;cli&gt;.md</code></p>
+</li>
+</ul>
+<h2 id="metadata">Metadata</h2>
+<p>If you're creating a new article, you must make sure that it includes the appropriate metadata. The metadata ensures that the article is included properly in the Knowledge Centre and helps with internet searches. Include the following metadata at the top of the article:</p>
+<p>To make sure you use the correct metadata copy it from an existing topic or the <a href="other-ref-knowledge-template.html"><em>UKCloud Knowledge Centre article template</em></a>.</p>
+<h3 id="title">Title</h3>
+<p>This is the full title of the article and will appear in the browser title bar.</p>
+<h3 id="description">Description</h3>
+<p>This is a description of the content of the article. Provide information here that will help target the article in internet searches.</p>
+<h3 id="services">Services</h3>
+<p>This is the service to which the article belongs. One of:</p>
+<ul>
+<li><code>azure</code></li>
+<li><code>cdsz</code></li>
+<li><code>cloud-storage</code></li>
+<li><code>connectivity</code></li>
+<li><code>draas</code></li>
+<li><code>email</code></li>
+<li><code>enablement</code></li>
+<li><code>gpu</code></li>
+<li><code>migration</code></li>
+<li><code>openshift</code></li>
+<li><code>openstack</code></li>
+<li><code>oracle</code></li>
+<li><code>portal</code></li>
+<li><code>private-compute</code></li>
+<li><code>private-oracle</code></li>
+<li><code>private-storage</code></li>
+<li><code>sra</code></li>
+<li><code>vmware</code></li>
+<li>For articles that do belong to a service or that apply to multiple services, use <code>other</code></li>
+</ul>
+<h3 id="author">Author</h3>
+<p>This is the name of the person who created the article.</p>
+<h3 id="rootlink">Rootlink</h3>
+<p>For most articles, the rootlink will be the article type. One of:</p>
+<ul>
+<li><code>Getting Started</code></li>
+<li><code>How To</code></li>
+<li><code>Reference</code></li>
+<li><code>FAQs</code></li>
+<li><code>Blueprints</code></li>
+<li><code>Service Scopes</code></li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For UKCloud for Microsoft Azure articles, the rootlink is either <code>Users</code> for articles intended for tenants or <code>Operators</code> for articles intended for service providers.</p>
+</div>
+<h3 id="sub1-sub2-etc">Sub1, Sub2, etc</h3>
+<p>The sub1 metadata tag enables you to categorise articles within the root level to group them into related articles. This is useful if the product has lots of articles of the same type.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For UKCloud for Microsoft Azure articles, sub1 should be the article type as listed in <a href="#rootlink">Rootlink</a>.</p>
+</div>
+<p>You can use sub2, sub3 and so on to further categorise articles, but it is not recommended to go too many levels deep.</p>
+<h3 id="toc-title">TOC Title</h3>
+<p>This is the title of the article as it will appear in the product topic list. Due to the restricted width of the topic list, the TOC title should not be too long, so consider shortening the full title if appropriate. For How To Guides, remove the initial How to and start with the verb. For example, for the topic <em>How to create a virtual machine from the Azure Marketplace</em>, you could set the TOC title to <code>Create a virtual machine</code>.</p>
+<h3 id="full-path">Full path</h3>
+<p>This is the full path of the article within the product topic list. For example:</p>
+<p><code>Getting Started/vmw-gs.md</code>
+<code>How To/vmw-how-create-vapp.md</code>
+<code>Users/Getting Started/azs-gs.md</code></p>
+<h3 id="markdown-file-link">Markdown file link</h3>
+<p>This is the file name of the article. This must exactly match the file name and include the <code>.md</code> extension.</p>
+<h2 id="markdown">Markdown</h2>
+<p>You should write your article using GitHub markdown. For more information, see <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/"><em>Basic writing and formatting syntax</em></a>.</p>
+<p>As we use DocFX to generate our Knowledge Centre web pages, you can also use DocFX markdown to add additional features to your articles. Specifically, we use DocFX markdown to highlight notes, tips and warnings:</p>
+<p>For tips:</p>
+<pre><code>&gt; [!TIP]
+&gt; This is a tip, which provides helpful information for working with a product.
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>This is a tip, which provides helpful information for working with a product.</p>
+</div>
+<p>For notes:</p>
+<pre><code>&gt; [!NOTE]
+&gt; This is a note, which provides important information.
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This is a note, which provides important information.</p>
+</div>
+<p>For important notes:</p>
+<pre><code>&gt; [!IMPORTANT]
+&gt; This is an important note, which requires particular attention.
+</code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>This is an important note, which requires particular attention.</p>
+</div>
+<p>For warnings:</p>
+<pre><code>&gt; [!WARNING]
+&gt; This is a warning, which provides users with information about something which could cause significant issues if ignored.
+</code></pre>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>This is a warning, which provides users with information about something which could cause significant issues if ignored.</p>
+</div>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-knowledge-guidelines.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>
