@@ -17,7 +17,7 @@ toc_mdlink: other-ref-sites-regions-zones.md
 
 ## Introduction
 
-This guide explains how we've designed the UKCloud platform using sites, regions and zones to enable you to design a highly-available and disaster-tolerant cloud solution that meets your specific requirements for resilience. The diagram below shows the relationship between sites, regions and zones and provides a broad indication the purpose of each.
+This guide explains how we've designed the UKCloud platform using sites, regions and zones to enable you to design a highly-available and disaster-tolerant cloud solution that meets your specific requirements for resilience. The diagram below shows the relationship between sites, regions and zones and provides a broad indication as to the purpose of each.
 
 ![Platform overview](images/fig1_platform_overview.png)
 
