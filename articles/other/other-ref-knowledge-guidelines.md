@@ -114,20 +114,22 @@ where:
 
 If you're creating a new article, you must make sure that it includes the appropriate metadata. The metadata ensures that the article is included properly in the Knowledge Centre and helps with internet searches. Include the following metadata at the top of the article:
 
-    ---
-    title: full_title_of_article | UKCloud Ltd
-    description: use_description_from_KC
-    services: service_name
-    author: your_name
-    toc_rootlink: article_type
-    toc_sub1:
-    toc_sub2:
-    toc_sub3:
-    toc_sub4:
-    toc_title: title_of_article
-    toc_fullpath: rootlink/filename.md
-    toc_mdlink: filename.md
-    ---
+```
+---
+title: full_title_of_article | UKCloud Ltd
+description: use_description_from_KC
+services: service_name
+author: your_name
+toc_rootlink: article_type
+toc_sub1:
+toc_sub2:
+toc_sub3:
+toc_sub4:
+toc_title: title_of_article
+toc_fullpath: rootlink/filename.md
+toc_mdlink: filename.md
+---
+```
 
 ### `title`
 
