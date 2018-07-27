@@ -48,7 +48,7 @@
     href: other-ref-windows-2016-templates.md
 - name:
   - Reference
-  - '    article_type'
+  - article_type
   - '### `toc_rootlink`'
   - 'For most articles, the `toc_rootlink` will be the article type. One of:'
   - '> For UKCloud for Microsoft Azure articles, the `toc_rootlink` is either `Users` for articles intended for tenants or `Operators` for articles intended for service providers.'
