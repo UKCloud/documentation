@@ -8,7 +8,7 @@
     <title>How to deploy a SQL template to Azure Stack - PowerShell | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to deploy a SQL template to Azure Stack - PowerShell | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.37.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -212,7 +212,6 @@ git checkout master
 <th>Description</th>
 <th>AllowedValues</th>
 <th>DefaultValue</th>
-<th>Type</th>
 </tr>
 </thead>
 <tbody>
@@ -221,203 +220,186 @@ git checkout master
 <td>The password for the Administrator account of the new VMs and Domain</td>
 <td></td>
 <td></td>
-<td>securestring</td>
 </tr>
 <tr>
 <td>adminUsername</td>
 <td>The name of the Administrator of the new VMs and Domain</td>
 <td></td>
 <td></td>
-<td>string</td>
 </tr>
 <tr>
 <td>adPDCNICIPAddress</td>
 <td>The IP address of the new AD VM</td>
 <td></td>
 <td>10.0.0.4</td>
-<td>string</td>
 </tr>
 <tr>
 <td>adVMSize</td>
 <td>The size of the AD VMs Created</td>
 <td>{Standard_A1, Standard_A2, Standard_A3}</td>
 <td>Standard_A2</td>
-<td>string</td>
 </tr>
 <tr>
 <td>autoPatchingDay</td>
 <td>The day of a week for auto patching</td>
 <td>{Never, Everyday, Sunday, Monday...}</td>
 <td>Never</td>
-<td>string</td>
 </tr>
 <tr>
 <td>autoPatchingStartHour</td>
 <td>The start hour of a day for auto patching</td>
 <td>{0, 1, 2, 3...}</td>
 <td>2</td>
-<td>string</td>
 </tr>
 <tr>
 <td>deploymentPrefix</td>
 <td>The DNS Prefix for the Public IP Address for the Always On Cluster</td>
 <td></td>
 <td>aodns</td>
-<td>string</td>
 </tr>
 <tr>
 <td>dnsSuffix</td>
 <td>The DNS Suffix for reverse lookup of public IPAddresses</td>
 <td></td>
 <td>azurestack.external</td>
-<td>string</td>
 </tr>
 <tr>
 <td>domainName</td>
 <td>The FQDN of the AD Domain created</td>
 <td></td>
 <td>contoso.local</td>
-<td>string</td>
+</tr>
+<tr>
+<td>platformFaultDomainCount</td>
+<td>Fault Domain Count Integer</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>platformUpdateDomainCount</td>
+<td>Update Domain Count Integer</td>
+<td></td>
+<td>1</td>
 </tr>
 <tr>
 <td>scriptsBaseUrl</td>
 <td>DSC Scripts base url</td>
 <td></td>
-<td><a href="https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sql-2016-ha">https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sql-2016-ha</a></td>
-<td>string</td>
+<td><a href="https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sq..">https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sq..</a>.</td>
 </tr>
 <tr>
 <td>sqlAOAGName</td>
 <td>The Sql AlwaysOn Group Name</td>
 <td></td>
 <td>alwayson-ag</td>
-<td>string</td>
 </tr>
 <tr>
 <td>sqlAOListenerName</td>
 <td>The Sql AG Listener Name</td>
 <td></td>
 <td>[tolower(concat('aon-listener-' , resourceGroup().name))]</td>
-<td>string</td>
 </tr>
 <tr>
 <td>sqlAOListenerPort</td>
 <td>The Sql AG Listener port</td>
 <td></td>
 <td>1433</td>
-<td>string</td>
 </tr>
 <tr>
 <td>sqlAuthPassword</td>
 <td>The SQL Server Auth Account password</td>
 <td></td>
 <td></td>
-<td>securestring</td>
 </tr>
 <tr>
 <td>sqlAuthUserName</td>
 <td>The SQL Server Auth Account name</td>
 <td></td>
 <td>sqlsa</td>
-<td>string</td>
 </tr>
 <tr>
 <td>sqlServerServiceAccountPassword</td>
 <td>The SQL Server Service Account password</td>
 <td></td>
 <td></td>
-<td>securestring</td>
 </tr>
 <tr>
 <td>sqlServerServiceAccountUserName</td>
 <td>The SQL Server Service Account name</td>
 <td></td>
 <td>sqlservice</td>
-<td>string</td>
 </tr>
 <tr>
 <td>sqlServerVersion</td>
 <td>The Sql Server Version</td>
 <td>{SQL2016SP1-WS2016-ENT, SQL2016SP1-WS2016-DEV, SQL2016SP1-WS2016-STD}</td>
 <td>SQL2016SP1-WS2016-ENT</td>
-<td>string</td>
 </tr>
 <tr>
 <td>sqlStorageAccountName</td>
 <td>The name of Sql Server Storage Account</td>
 <td></td>
 <td>[tolower(concat(take(uniqueString(resourceGroup().id),8),'sql'))]</td>
-<td>string</td>
 </tr>
 <tr>
 <td>sqlStorageAccountType</td>
 <td>The type of the Sql Server Storage Account created</td>
 <td>{Premium_LRS, Standard_LRS}</td>
 <td>Standard_LRS</td>
-<td>string</td>
 </tr>
 <tr>
 <td>sqlSubnet</td>
 <td>The address range of the SQL subnet created in the new VNET</td>
 <td></td>
 <td>10.0.1.0/26</td>
-<td>string</td>
 </tr>
 <tr>
 <td>sqlVMSize</td>
 <td>The size of the SQL VMs Created</td>
 <td>{Standard_A1, Standard_A2, Standard_A3}</td>
 <td>Standard_A3</td>
-<td>string</td>
 </tr>
 <tr>
 <td>staticSubnet</td>
 <td>The address range of the subnet static IPs are allocated from in the new VNET</td>
 <td></td>
 <td>10.0.0.0/24</td>
-<td>string</td>
 </tr>
 <tr>
 <td>templatesBaseUrl</td>
 <td>Linked Templates base url</td>
 <td></td>
-<td><a href="https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sql-2016-ha">https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sql-2016-ha</a></td>
-<td>string</td>
+<td><a href="https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sq..">https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sq..</a>.</td>
 </tr>
 <tr>
 <td>virtualNetworkAddressRange</td>
 <td>The address range of the new VNET in CIDR format</td>
 <td></td>
 <td>10.0.0.0/16</td>
-<td>string</td>
 </tr>
 <tr>
 <td>virtualNetworkName</td>
 <td>Name of virtual network to be created</td>
 <td></td>
 <td>autohav2VNET</td>
-<td>string</td>
 </tr>
 <tr>
 <td>vmDiskSize</td>
 <td>The size of the VMs data disk in GB.</td>
 <td>{128, 256, 512, 1000}</td>
 <td>128</td>
-<td>string</td>
 </tr>
 <tr>
 <td>witnessVMSize</td>
 <td>The size of the Witness VM Created</td>
 <td>{Standard_A1, Standard_A2, Standard_A3}</td>
 <td>Standard_A1</td>
-<td>string</td>
 </tr>
 <tr>
 <td>workloadType</td>
 <td>The Sql VM work load type: GENERAL - general work load</td>
 <td>GENERAL</td>
 <td>GENERAL</td>
-<td>string</td>
 </tr>
 </tbody>
 </table>
@@ -431,10 +413,12 @@ git checkout master
 <p><code>adminPassword, sqlServerServiceAccountPassword, sqlAuthPassword</code></p>
 <p>Additional Parameters that you <strong>should</strong> change</p>
 <p><code>$domainName, $adminUsername, $sqlServerServiceAccountUserName</code></p>
-<p><code>dnsSuffix</code> Should be changed to - &quot;azure.ukcloud.com&quot; otherwise the deployment will fail because it will default to &quot;azurestack.external&quot; and that cannot be resolved externally</p>
+<p><strong><code>dnsSuffix</code></strong> Should be changed to - &quot;azure.ukcloud.com&quot; otherwise the deployment will fail because it will default to &quot;azurestack.external&quot; and that cannot be resolved externally</p>
 <p>In the example below it has been already set accordingly.</p>
 <p>To change which SQL Server Version to deploy set <strong><code>$sqlServerVersion</code></strong> accordingly: <code>SQL2016SP1-WS2016-ENT</code>, <code>SQL2016SP1-WS2016-DEV</code>, <code>SQL2016SP1-WS2016-STD</code>
 Current default is set to STANDARD -&gt; <strong><code>SQL2016SP1-WS2016-STD</code></strong></p>
+<p><strong><code>platformFaultDomainCount</code></strong> and <strong><code>platformUpdateDomainCount</code></strong> - below we set them to 3 and 5 accordingly to spread the servers on different hosts.</p>
+<p>More information on Fault Domains and Update Domains can be found <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-key-features#availability-sets-in-azure-stack">here</a></p>
 </div>
 <pre><code class="lang-powershell"># Declare login variables
 $AppGUID = &quot;&lt;GUID of your SPN Application&gt;&quot;
@@ -463,6 +447,8 @@ $ResourceGroupName = &quot;SqlAlwaysOnRG01&quot;
 $RegionAzureStack = &quot;frn00006&quot;
 
 $sqlServerVersion  = &quot;SQL2016SP1-WS2016-STD&quot;
+$platformFaultDomainCount = 3
+$platformUpdateDomainCount = 5
 $ARMDeploymentName = &quot;SqlAlwaysOnDeployment&quot;
 
 # Create Azure Stack Environment so that you can log in to it
@@ -494,10 +480,11 @@ try {
   }
 
 # Test Deployment
-Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -domainName $domainName -adminUsername $adminUsername -sqlServerServiceAccountUserName $sqlServerServiceAccountUserName -sqlServerVersion $sqlServerVersion -Verbose
+Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -domainName $domainName -adminUsername $adminUsername -sqlServerServiceAccountUserName $sqlServerServiceAccountUserName -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -Verbose
 
 # Start Deployment
-New-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -domainName $domainName -adminUsername $adminUsername -sqlServerServiceAccountUserName $sqlServerServiceAccountUserName -sqlServerVersion $sqlServerVersion -Verbose
+New-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -domainName $domainName -adminUsername $adminUsername -sqlServerServiceAccountUserName $sqlServerServiceAccountUserName -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -Verbose
+
 
 # Verify Deployment
 ## Note: $ARMDeploymentName you can change to query each subdeployment in your GroupDeployment
@@ -512,13 +499,13 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 <div class="NOTE">
 <h5>Note</h5>
 <p>If Template fails validation and you need to see detailed error message you can do:</p>
-<pre><code class="lang-powershell">Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -sqlVMSize &quot;Standard_A4&quot;
+<pre><code class="lang-powershell">Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -sqlVMSize &quot;Standard_A4&quot;
 
 Code    : MultipleErrorsOccurred
 Message : Multiple error occurred: BadRequest. Please see details.
 Details : {Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResourceManagerError}
 
-(Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON  -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred  -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -sqlVMSize &quot;Standard_A4&quot;).Details
+(Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON  -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -sqlVMSize &quot;Standard_A4&quot;).Details
 
 Code    : InvalidTemplate
 Message : Deployment template validation failed: 'The provided value 'Standard_A4' for the template parameter 'sqlVMSize' at line '31' and column '23' is not valid. The parameter value is not part of the allowed value(s): &gt; 'Standard_A1,Standard_A2,Standard_A3'.'.
