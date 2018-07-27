@@ -49,11 +49,6 @@
 - name:
   - Reference
   - article_type
-  - '### `toc_rootlink`'
-  - 'For most articles, the `toc_rootlink` will be the article type. One of:'
-  - '> For UKCloud for Microsoft Azure articles, the `toc_rootlink` is either `Users` for articles intended for tenants or `Operators` for articles intended for service providers.'
-  - '> For UKCloud for Microsoft Azure articles, `toc_sub1` should be the article type as listed in [toc_rootlink](#toc-rootlink). '
-  - '`toc_rootlink/toc_sub1/toc_sub2/toc_sub3/toc_sub4/filename.md`'
   items: []
 - name: Service Scope
   items:
