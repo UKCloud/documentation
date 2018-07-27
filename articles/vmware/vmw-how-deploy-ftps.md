@@ -39,9 +39,7 @@ toc_mdlink: vmw-how-deploy-ftps.md
 
 9. Select **Power On** and click **Finish**.
 
-10.  When the deployment is complete open the vApp and take note of the private IP address.
-
-    ![vApp IP Address](images/vapp_ip_address.jpg)
+10. When the deployment is complete open the vApp and take note of the private IP address.
 
 ## Configure Firewall
 
@@ -61,11 +59,9 @@ Determine your cloud IP addresses:
 
 6. Click **OK**.
 
-    ![Sub-allocated IP tools](images/sub_allocated_tools.jpg)
-
 ## Add NAT rules
 
-1. Navigat back to the edge gateway, then right-click it and select **Edge Gateway Services**.
+1. Navigate back to the edge gateway, then right-click it and select **Edge Gateway Services**.
 
 2. Select the **NAT** tab.
 
@@ -78,8 +74,6 @@ Determine your cloud IP addresses:
 6. Add the port listed in the table below to both original and translated port.
 
 7. Add the private IP address recorded during the virtual machine deployment.
-
-    ![Destination NAT rule](images/nat_rule.jpg)
 
 8. Repeat this for each port listed in the table below:
 
@@ -101,7 +95,7 @@ Determine your cloud IP addresses:
 
     - Enabled: Select this
     - Name: FTPS
-    - Source: `"`37.26.88.70`
+    - Source: `37.26.88.70`
     - Source port: `any`
     - Destination: The first address from the Sub-Allocated pool list above
     - Destination port: From the list below
@@ -110,8 +104,6 @@ Determine your cloud IP addresses:
     - Log Network traffic: Select this
 
 5. Click **OK**.
-
-    ![Edit Firewall Rule](images/firewall_rule.jpg)
 
     Name | Source | Protocol | Source port | Internal IP | Translated port
     -----|--------|----------|-------------|-------------|----------------
@@ -124,10 +116,6 @@ Determine your cloud IP addresses:
 1. Login to the FTPS server and run the following command.
 
         /usr/local/bin/setupFTPS.sh <public ip address>
-
-    For example:
-
-        /usr/local/bin/setupFTPS.sh 83.56.212.12
 
 2. Connect with Filezilla.
 
