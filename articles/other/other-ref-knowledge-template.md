@@ -9,7 +9,7 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Knowledge Centre article template
-toc_fullpath: How To/other-ref-knowledge-template.md
+toc_fullpath: Reference/other-ref-knowledge-template.md
 toc_mdlink: other-ref-knowledge-template.md
 ---
 

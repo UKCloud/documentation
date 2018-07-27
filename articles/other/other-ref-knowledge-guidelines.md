@@ -9,7 +9,7 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Knowledge Centre guidelines
-toc_fullpath: How To/other-ref-knowledge-guidelines.md
+toc_fullpath: Reference/other-ref-knowledge-guidelines.md
 toc_mdlink: other-ref-knowledge-guidelines.md
 ---
 
