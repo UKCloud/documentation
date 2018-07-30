@@ -109,7 +109,7 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
 #### Argument Reference
 
 - `arm_endpoint` - The Azure Resource Manager API Endpoint for
- your Azure Stack instance, eq `https://management.{region}.{domain}`.
+ your Azure Stack instance, eg `https://management.{region}.{domain}`.
  
  For UKCloud Region it is **`https://management.frn00006.azure.ukcloud.com`**.
 
