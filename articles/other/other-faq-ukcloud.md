@@ -20,7 +20,9 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 ## UKCloud for VMware
 
 [UKCloud for VMware FAQs](../vmware/vmw-faq.md)
+
 [Journaling Protection FAQs](../vmware/vmw-faq-journaling-protection.md)
+
 [Snapshot Protection FAQs](../vmware/vmw-faq-snapshot-protection.md)
 
 ## UKcloud for OpenStack
@@ -66,23 +68,37 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 ## Connectivity
 
 [General connectivity FAQs](../connectivity/conn-faq.md)
+
 [Application-tuned DDoS protection FAQs](../connectivity/conn-faq-app-ddos.md)
+
 [Bandwidth monitoring FAQs](../connectivity/conn-faq-bandwidth-monitoring.md)
+
 [DDoS mitigation service FAQs](../connectivity/conn-faq-ddos.md)
+
 [Emergency Services Network FAQs](../connectivity/conn-faq-esn.md)
+
 [Global load balancing FAQs](../connectivity/conn-faq-glb.md)
+
 [HSCN connectivity FAQs](../connectivity/conn-faq-hscn.md)
+
 [HybridConnect FAQs](../connectivity/conn-faq-hybridconnect.md)
+
 [Janet connectivity FAQs](../connectivity/conn-faq-janet.md)
+
 [N3 connectivity FAQs](../connectivity/conn-faq-n3.md)
+
 [PSN connectivity FAQs](../connectivity/conn-faq-psn.md)
+
 [PSN for Policing and enhanced regime FAQs](../connectivity/conn-faq-psn-police.md)
 
 ## Other
 
 [G-Cloud 10 services FAQs](other-faq-g10.md)
+
 [MISO rebate FAQs](other-faq-miso-rebate.md)
+
 [Protective Monitoring FAQs](other-faq-promon.md)
+
 [Service Level Agreement FAQs](other-faq-sla.md)
 
 ## Feedback
