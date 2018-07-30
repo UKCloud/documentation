@@ -90,11 +90,11 @@ Links to other topics for a different product look like:
 
 For example:
 
-    [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md)
+    [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
 
 Gives you the following link:
 
-[*Getting Started Guide for the UKCloud Portal*](ptl-gs.md)
+[*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
 
 ### Tips, notes and warnings
 
