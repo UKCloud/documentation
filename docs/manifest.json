@@ -4581,6 +4581,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-faq-ukcloud.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-faq-ukcloud.html",
+          "hash": "PXO4bGskEEFort7r1Vtmgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-how-contribute-knowledge.md",
       "output": {
         ".html": {
@@ -4688,15 +4700,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-knowledge-template.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-knowledge-template.html",
-          "hash": "7c/luqmMVBTfvO9kAaDXlw=="
+          "hash": "IZshbkgTVsk4cbVJK1zbZA=="
         }
       },
       "is_incremental": false,
@@ -4816,7 +4825,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "NI8oJP5qfPmA0wr3KxUeww=="
+          "hash": "FfNe892eCoD1wHN1cKCxJw=="
         }
       },
       "is_incremental": false,
@@ -10509,13 +10518,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
