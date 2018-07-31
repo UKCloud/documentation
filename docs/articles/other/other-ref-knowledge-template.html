@@ -8,7 +8,7 @@
     <title>UKCloud Knowledge Centre article template | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud Knowledge Centre article template | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -130,54 +130,79 @@
 </li>
 </ol>
 <h2 id="more-useful-markdown">More useful markdown</h2>
+<h3 id="images">Images</h3>
 <p>Markdown for images looks like:</p>
 <pre><code>![alt-text](images/image-filename.png)
 </code></pre>
 <p>The <code>alt-text</code> is read out by screen readers and provides a brief description of the image to help visually impaired users determine what the image is illustrating. Image files should be located in an <code>images</code> directory underneath the main product directory.</p>
-<p>Links to other topics for the same product look like:</p>
+<h2 id="links-to-web-pages">Links to web pages</h2>
+<p>To link to a web page, use the following markdown:</p>
+<pre><code>&lt;https://ukcloud.com/&gt;
+</code></pre>
+<p><a href="https://ukcloud.com/">https://ukcloud.com/</a></p>
+<p>To use descriptive text for the link, rather than just the URL, use the following markdown:</p>
+<pre><code>[UKCloud](https://ukcloud.com/)
+</code></pre>
+<p><a href="https://ukcloud.com/">UKCloud</a></p>
+<h2 id="links-to-other-knowledge-centre-articles">Links to other Knowledge Centre articles</h2>
+<p>Links to other articles for the same product look like:</p>
 <pre><code>[*topic-title*](topic-filename.md)
 </code></pre>
 <p>For example:</p>
 <pre><code>[*UKCloud Knowledge Centre guidelines*](other-ref-knowledge-guidelines.md)
 </code></pre>
-<p>Gives you the following link:</p>
 <p><a href="other-ref-knowledge-guidelines.html"><em>UKCloud Knowledge Centre guidelines</em></a></p>
-<p>Links to other topics for a different product look like:</p>
+<p>Links to other articles for a different product look like:</p>
 <pre><code>[*topic-title*](../product/topic-filename.md)
 </code></pre>
 <p>For example:</p>
 <pre><code>[*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
 </code></pre>
-<p>Gives you the following link:</p>
 <p><a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a></p>
 <h3 id="tips-notes-and-warnings">Tips, notes and warnings</h3>
+<h4 id="tips">Tips</h4>
+<p>A tip provides helpful, but not necessarily important, information.</p>
+<p>Markdown:</p>
 <pre><code>&gt; [!TIP]
-&gt; This is a tip, which provides helpful information for working with a product.
+&gt; This is a tip, which provides helpful, but not necessarily important, information.
 </code></pre>
+<p>Looks like:</p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>This is a tip, which provides helpful information for working with a product.</p>
+<p>This is a tip, which provides helpful, but not necessarily important, information.</p>
 </div>
+<h4 id="notes">Notes</h4>
+<p>A note provides important information.</p>
+<p>Markdown:</p>
 <pre><code>&gt; [!NOTE]
 &gt; This is a note, which provides important information.
 </code></pre>
+<p>Looks like:</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>This is a note, which provides important information.</p>
 </div>
+<h4 id="important-notes">Important notes</h4>
+<p>Important notes provide important information that requires particular attention.</p>
+<p>Markdown:</p>
 <pre><code>&gt; [!IMPORTANT]
 &gt; This is an important note, which requires particular attention.
 </code></pre>
+<p>Looks like:</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>This is an important note, which requires particular attention.</p>
 </div>
+<h4 id="warnings">Warnings</h4>
+<p>Warnings provide important information about something which could have significant implications if ignored.</p>
+<p>Markdown:</p>
 <pre><code>&gt; [!WARNING]
-&gt; This is a warning, which provides users with information about something which could cause significant issues if ignored.
+&gt; This is a warning, which provides users with information about something which could have significant implications if ignored.
 </code></pre>
+<p>Looks like:</p>
 <div class="WARNING">
 <h5>Warning</h5>
-<p>This is a warning, which provides users with information about something which could cause significant issues if ignored.</p>
+<p>This is a warning, which provides users with information about something which could have significant implications if ignored.</p>
 </div>
 <h2 id="feedback">Feedback</h2>
 <p>Each article should end with a feedback section that includes the following text:</p>

@@ -8,7 +8,7 @@
     <title>UKCloud Knowledge Centre guidelines | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud Knowledge Centre guidelines | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -86,7 +86,7 @@
 
 <p>If you're contributing content to the UKCloud Knowledge Centre, it's important that you follow the guidelines listed in this article.</p>
 <p>For information about how to contribute content, see <a href="other-how-contribute-knowledge.html"><em>How to contribute to the UKCloud Knowledge Centre</em></a>.</p>
-<p>For a template to get you started, see <a href="other-ref-knowledge-template.html"><em>UKCloud Knowledge Centre article template</em></a>.</p>
+<p>For a template to get you started, see <a href="https://raw.githubusercontent.com/UKCloud/documentation/master/articles/other/other-ref-knowledge-template.md"><em>UKCloud Knowledge Centre article template</em></a>.</p>
 <h2 id="sensitive-content">Sensitive content</h2>
 <div class="IMPORTANT">
 <h5>Important</h5>
@@ -96,8 +96,11 @@
 <p>By submitting content you are granting UKCloud permission to use your submission in our Knowledge Centre, which is available for public consumption over the internet. In addition, you will also be identified as a contributor to the article in our public GitHub repository.</p>
 <h2 id="images">Images</h2>
 <p>If you add images to the article, <code>.png</code> is the preferred file format.</p>
+<div class="NOTE">
+<h5>Note</h5>
 <p>You should make sure that you are not violating any copyright laws with any images that you add.</p>
 <p>You should make sure that images, especially screenshots, do not contain any sensitive data, such as user names or IP addresses.</p>
+</div>
 <p>File names for images in Knowledge Centre articles should use the following file naming convention:</p>
 <p><code>&lt;product&gt;-&lt;tool&gt;-&lt;ui&gt;-&lt;description&gt;.png</code></p>
 <div class="NOTE">
@@ -168,12 +171,24 @@
 </ul>
 <h2 id="metadata">Metadata</h2>
 <p>If you're creating a new article, you must make sure that it includes the appropriate metadata. The metadata ensures that the article is included properly in the Knowledge Centre and helps with internet searches. Include the following metadata at the top of the article:</p>
-<p>To make sure you use the correct metadata copy it from an existing topic or the <a href="other-ref-knowledge-template.html"><em>UKCloud Knowledge Centre article template</em></a>.</p>
-<h3 id="title">Title</h3>
+<pre><code>title: UKCloud Knowledge Centre guidelines | UKCloud Ltd
+description: Provides guidelines for what to consider when creating and editing Knowledge Centre articles
+services: other
+author: A Name
+toc_rootlink: Reference
+toc_sub1: 
+toc_sub2:
+toc_sub3:
+toc_sub4:
+toc_title: Knowledge Centre guidelines
+toc_fullpath: Reference/other-ref-knowledge-guidelines.md
+toc_mdlink: other-ref-knowledge-guidelines.md
+</code></pre>
+<h3 id="title">title</h3>
 <p>This is the full title of the article and will appear in the browser title bar.</p>
-<h3 id="description">Description</h3>
+<h3 id="description">description</h3>
 <p>This is a description of the content of the article. Provide information here that will help target the article in internet searches.</p>
-<h3 id="services">Services</h3>
+<h3 id="services">services</h3>
 <p>This is the service to which the article belongs. One of:</p>
 <ul>
 <li><code>azure</code></li>
@@ -196,10 +211,10 @@
 <li><code>vmware</code></li>
 <li>For articles that do belong to a service or that apply to multiple services, use <code>other</code></li>
 </ul>
-<h3 id="author">Author</h3>
+<h3 id="author">author</h3>
 <p>This is the name of the person who created the article.</p>
-<h3 id="rootlink">Rootlink</h3>
-<p>For most articles, the rootlink will be the article type. One of:</p>
+<h3 id="rootlink">rootlink</h3>
+<p><strong>Mandatory.</strong> For most articles, the rootlink will be the article type. One of:</p>
 <ul>
 <li><code>Getting Started</code></li>
 <li><code>How To</code></li>
@@ -212,53 +227,61 @@
 <h5>Note</h5>
 <p>For UKCloud for Microsoft Azure articles, the rootlink is either <code>Users</code> for articles intended for tenants or <code>Operators</code> for articles intended for service providers.</p>
 </div>
-<h3 id="sub1-sub2-etc">Sub1, Sub2, etc</h3>
+<h3 id="sub1-sub2-etc">sub1, sub2, etc</h3>
 <p>The sub1 metadata tag enables you to categorise articles within the root level to group them into related articles. This is useful if the product has lots of articles of the same type.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>For UKCloud for Microsoft Azure articles, sub1 should be the article type as listed in <a href="#rootlink">Rootlink</a>.</p>
+<p>For UKCloud for Microsoft Azure articles, sub1 should be the article type as listed in <a href="#rootlink">rootlink</a>.</p>
 </div>
 <p>You can use sub2, sub3 and so on to further categorise articles, but it is not recommended to go too many levels deep.</p>
-<h3 id="toc-title">TOC Title</h3>
-<p>This is the title of the article as it will appear in the product topic list. Due to the restricted width of the topic list, the TOC title should not be too long, so consider shortening the full title if appropriate. For How To Guides, remove the initial How to and start with the verb. For example, for the topic <em>How to create a virtual machine from the Azure Marketplace</em>, you could set the TOC title to <code>Create a virtual machine</code>.</p>
-<h3 id="full-path">Full path</h3>
+<h3 id="toc-title">toc title</h3>
+<p><strong>Mandatory.</strong> This is the title of the article as it will appear in the product topic list. Due to the restricted width of the topic list, the TOC title should not be too long, so consider shortening the full title if appropriate. For How To Guides, remove the initial How to and start with the verb. For example, for the topic <em>How to create a virtual machine from the Azure Marketplace</em>, you could set the TOC title to <code>Create a virtual machine</code>.</p>
+<h3 id="fullpath">fullpath</h3>
 <p>This is the full path of the article within the product topic list. For example:</p>
 <p><code>Getting Started/vmw-gs.md</code>
 <code>How To/vmw-how-create-vapp.md</code>
 <code>Users/Getting Started/azs-gs.md</code></p>
-<h3 id="markdown-file-link">Markdown file link</h3>
-<p>This is the file name of the article. This must exactly match the file name and include the <code>.md</code> extension.</p>
+<h3 id="mdlink">mdlink</h3>
+<p><strong>Mandatory.</strong> This is the file name of the article. This must exactly match the file name (see <a href="#article-file-naming-conventions">Article file naming conventions</a>) and include the <code>.md</code> extension.</p>
 <h2 id="markdown">Markdown</h2>
 <p>You should write your article using GitHub markdown. For more information, see <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/"><em>Basic writing and formatting syntax</em></a>.</p>
 <p>As we use DocFX to generate our Knowledge Centre web pages, you can also use DocFX markdown to add additional features to your articles. Specifically, we use DocFX markdown to highlight notes, tips and warnings:</p>
-<p>For tips:</p>
+<h3 id="for-tips">For tips</h3>
+<p>Markdown:</p>
 <pre><code>&gt; [!TIP]
 &gt; This is a tip, which provides helpful information for working with a product.
 </code></pre>
+<p>Looks like:</p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>This is a tip, which provides helpful information for working with a product.</p>
 </div>
-<p>For notes:</p>
+<h3 id="for-notes">For notes</h3>
+<p>Markdown:</p>
 <pre><code>&gt; [!NOTE]
 &gt; This is a note, which provides important information.
 </code></pre>
+<p>Looks like:</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>This is a note, which provides important information.</p>
 </div>
-<p>For important notes:</p>
+<h3 id="for-important-notes">For important notes</h3>
+<p>Markdown:</p>
 <pre><code>&gt; [!IMPORTANT]
 &gt; This is an important note, which requires particular attention.
 </code></pre>
+<p>Looks like:</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>This is an important note, which requires particular attention.</p>
 </div>
-<p>For warnings:</p>
+<h3 id="for-warnings">For warnings</h3>
+<p>Markdown:</p>
 <pre><code>&gt; [!WARNING]
 &gt; This is a warning, which provides users with information about something which could cause significant issues if ignored.
 </code></pre>
+<p>Looks like:</p>
 <div class="WARNING">
 <h5>Warning</h5>
 <p>This is a warning, which provides users with information about something which could cause significant issues if ignored.</p>

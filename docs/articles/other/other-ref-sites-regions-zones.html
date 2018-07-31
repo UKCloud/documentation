@@ -8,7 +8,7 @@
     <title>Understanding sites, regions and zones | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Understanding sites, regions and zones | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -85,7 +85,7 @@
 <h1 id="understanding-sites-regions-and-zones">Understanding sites, regions and zones</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>This guide explains how we've designed the UKCloud platform using sites, regions and zones to enable you to design a highly-available and disaster-tolerant cloud solution that meets your specific requirements for resilience. The diagram below shows the relationship between sites, regions and zones and provides a broad indication the purpose of each.</p>
+<p>This guide explains how we've designed the UKCloud platform using sites, regions and zones to enable you to design a highly-available and disaster-tolerant cloud solution that meets your specific requirements for resilience. The diagram below shows the relationship between sites, regions and zones and provides a broad indication as to the purpose of each.</p>
 <p><img src="images/fig1_platform_overview.png" alt="Platform overview"></p>
 <p>We've engineered our cloud platform to tolerate inevitable failures at or below the infrastructure layer (for example, hardware failures and power or cooling interruptions) to ensure that the platform remains available. To ensure your applications and the services they deliver are highly available, we encourage you to design for failure and build disaster recovery capabilities into your applications. Depending on the type of failure you are trying to mitigate, our platform enables you to use sites, regions and zones to implement appropriate resilience into your solution.</p>
 <p>For specific services, such as UKCloud for OpenStack or UKCloud for VMware, we provide more detailed design guides and blueprints to explore the design choices you have with our platform. Additionally, you can always engage a Cloud Architect who can work with you to deploy the right architecture on our platform.</p>
@@ -111,7 +111,7 @@
 <p><img src="images/fig3_regions.png" alt="Regions 2 and 5"></p>
 <h3 id="what-is-a-region">What is a region?</h3>
 <p>Within each site, our platform provides a number of independent regions (see diagram above). Each region is a physically segregated part of the platform with its own power infrastructure, management services and networking components. This enables you to design resilient solutions that are contained entirely within a single site.</p>
-<p>Each region provides a particular subset of UKCloud services, for example UKCloud for VMware, UKCloud for OpenStack or Cloud Storage, so the regions that you can use for your solution depend on where your selected (and prospective) UKCloud services are available. For example, in Figure 4 you can see that UKCloud for VMware is provided in regions 2 and 5, however UKCloud for OpenStack is provided only in region 5.</p>
+<p>Each region provides a particular subset of UKCloud services, for example UKCloud for VMware, UKCloud for OpenStack or Cloud Storage, so the regions that you can use for your solution depend on where your selected (and prospective) UKCloud services are available. For example, in the diagram below you can see that UKCloud for VMware is provided in regions 2 and 5, however UKCloud for OpenStack is provided only in region 5.</p>
 <p><img src="images/fig4_services_in_regions.png" alt="Services in regions 2 and 5"></p>
 <h3 id="how-do-regions-help-me-mitigate-against-failure">How do regions help me mitigate against failure?</h3>
 <p>By architecting for separate regions, you can improve resilience to outages that affect:</p>
@@ -130,7 +130,7 @@
 <h2 id="understanding-zones">Understanding zones</h2>
 <p><img src="images/fig5_zones.png" alt="zones in region 2"></p>
 <h3 id="what-is-a-zone">What is a zone?</h3>
-<p>A zone is a distinct hardware installation within a region (Figure 5), utilising common networking infrastructure but having independent server and storage infrastructure.</p>
+<p>A zone is a distinct hardware installation within a region, utilising common networking infrastructure but having independent server and storage infrastructure.</p>
 <p>Ordinarily, each zone hosts only one UKCloud service, but each service, for example UKCloud for VMware or UKCloud for OpenStack, may be provided in multiple zones in each site (see diagram below).</p>
 <p><img src="images/fig6_services_in_zones.png" alt="services instances by zone in regions 2 and 5"></p>
 <p>Each zone is part of a particular security domain: either Assured OFFICIAL or Elevated OFFICIAL (see diagram below).</p>
