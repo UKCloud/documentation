@@ -85,7 +85,7 @@ In addition, some common service features --- such as VM image catalogues, acces
 
 ### What is a zone?
 
-A zone is a distinct hardware installation within a region (Figure 5), utilising common networking infrastructure but having independent server and storage infrastructure.
+A zone is a distinct hardware installation within a region, utilising common networking infrastructure but having independent server and storage infrastructure.
 
 Ordinarily, each zone hosts only one UKCloud service, but each service, for example UKCloud for VMware or UKCloud for OpenStack, may be provided in multiple zones in each site (see diagram below).
 
