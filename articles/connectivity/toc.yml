@@ -36,8 +36,6 @@
     href: conn-ref-internet-permitted-ports.md
   - name: Internet access to the Elevated OFFICIAL security domain
     href: conn-ref-internet-access-elevated.md
-  - name: Network configuration for Janet and internet access
-    href: conn-ref-janet-config-internet.md
   - name: Protection for Distributed Denial of Service (DDoS) attacks
     href: conn-ref-ddos-protection.md
   - name: PSN Assured - permitted standard ports

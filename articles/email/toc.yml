@@ -16,7 +16,5 @@
     href: email-how-use-with-app.md
 - name: Reference
   items:
-  - name: Sending email from the Elevated environment
-    href: email-ref-elevated.md
   - name: Upgrade to Email and Collaboration as a Service
     href: email-ref-upgrade-to-86.md

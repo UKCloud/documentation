@@ -1,7 +1,3 @@
-- name: How To
-  items:
-  - name: Use the Data Transfer Facility
-    href: enbl-how-use-data-transfer-facility.md
 - name: Reference
   items:
   - name: Cloud Enablement services
