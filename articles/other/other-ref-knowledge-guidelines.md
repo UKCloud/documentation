@@ -116,21 +116,18 @@ where:
 If you're creating a new article, you must make sure that it includes the appropriate metadata. The metadata ensures that the article is included properly in the Knowledge Centre and helps with internet searches. Include the following metadata at the top of the article:
 
 ```
----
-title: Full title of article | UKCloud Ltd
-description: Description of article content
-services: Service
-author: Your name
-
-toc_rootlink: Article type
-toc_sub1:
+title: UKCloud Knowledge Centre guidelines | UKCloud Ltd
+description: Provides guidelines for what to consider when creating and editing Knowledge Centre articles
+services: other
+author: A Name
+toc_rootlink: Reference
+toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Short title of article
-toc_fullpath: rootlink/sub1/sub2/etc/filename.md
-toc_mdlink: filename.md
----
+toc_title: Knowledge Centre guidelines
+toc_fullpath: Reference/other-ref-knowledge-guidelines.md
+toc_mdlink: other-ref-knowledge-guidelines.md
 ```
 
 ### title
@@ -171,7 +168,7 @@ This is the name of the person who created the article.
 
 ### rootlink
 
-For most articles, the rootlink will be the article type. One of:
+**Mandatory.** For most articles, the rootlink will be the article type. One of:
 
 - `Getting Started`
 - `How To`
@@ -194,7 +191,7 @@ You can use sub2, sub3 and so on to further categorise articles, but it is not r
 
 ### toc title
 
-This is the title of the article as it will appear in the product topic list. Due to the restricted width of the topic list, the TOC title should not be too long, so consider shortening the full title if appropriate. For How To Guides, remove the initial How to and start with the verb. For example, for the topic *How to create a virtual machine from the Azure Marketplace*, you could set the TOC title to `Create a virtual machine`.
+**Mandatory.** This is the title of the article as it will appear in the product topic list. Due to the restricted width of the topic list, the TOC title should not be too long, so consider shortening the full title if appropriate. For How To Guides, remove the initial How to and start with the verb. For example, for the topic *How to create a virtual machine from the Azure Marketplace*, you could set the TOC title to `Create a virtual machine`.
 
 ### fullpath
 
@@ -206,7 +203,7 @@ This is the full path of the article within the product topic list. For example:
 
 ### mdlink
 
-This is the file name of the article. This must exactly match the file name and include the `.md` extension.
+**Mandatory.** This is the file name of the article. This must exactly match the file name (see [Article file naming conventions](#article-file-naming-conventions)) and include the `.md` extension.
 
 ## Markdown
 
@@ -214,34 +211,50 @@ You should write your article using GitHub markdown. For more information, see [
 
 As we use DocFX to generate our Knowledge Centre web pages, you can also use DocFX markdown to add additional features to your articles. Specifically, we use DocFX markdown to highlight notes, tips and warnings:
 
-For tips:
+### For tips
+
+Markdown:
 
     > [!TIP]
     > This is a tip, which provides helpful information for working with a product.
 
+Looks like:
+
 > [!TIP]
 > This is a tip, which provides helpful information for working with a product.
 
-For notes:
+### For notes
+
+Markdown:
 
     > [!NOTE]
     > This is a note, which provides important information.
 
+Looks like:
+
 > [!NOTE]
 > This is a note, which provides important information.
 
-For important notes:
+### For important notes
+
+Markdown:
 
     > [!IMPORTANT]
     > This is an important note, which requires particular attention.
 
+Looks like:
+
 > [!IMPORTANT]
 > This is an important note, which requires particular attention.
 
-For warnings:
+### For warnings
+
+Markdown:
 
     > [!WARNING]
     > This is a warning, which provides users with information about something which could cause significant issues if ignored.
+
+Looks like:
 
 > [!WARNING]
 > This is a warning, which provides users with information about something which could cause significant issues if ignored.

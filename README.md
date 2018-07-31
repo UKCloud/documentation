@@ -18,15 +18,13 @@ To access the Knowledge Centre, go to <https://docs.ukcloud.com>. You can browse
 
 Because our Knowledge Centre is stored in a GitHub repository, anyone with a GitHub account can submit changes to articles.
 
-> [!IMPORTANT]
-> Before making any changes, make sure you're familiar with our [guidelines](https://docs.ukcloud.com/articles/other/other-ref-knowledge-guidelines.html) for contributing to Knowledge Centre articles.
+**Important!**  Before making any changes, make sure you're familiar with our [guidelines](https://docs.ukcloud.com/articles/other/other-ref-knowledge-guidelines.html) for contributing to Knowledge Centre articles.
 
 To contribute updates to an existing Knowledge Centre article, find the article that you want to edit and click the **Improve this Doc** link. In GitHub, click the *Edit* (pencil) icon and make your changes. When you're done, click *Propose file change* and then create a Pull Request to submit your changes for approval by the UKCloud Products team.
 
 For more detailed instructions, see [*How to contribute to the UKCloud Knowledge Centre*](https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html).
 
-> [!NOTE]
-> By submitting content you are granting UKCloud permission to use your submission in our Knowledge Centre, which is available for public consumption over the internet. In addition, you will also be identified as a contributor to the article in our public GitHub repository. For more information, see our [Terms of Use](https://ukcloud.com/terms-and-conditions).
+**Note!** By submitting content you are granting UKCloud permission to use your submission in our Knowledge Centre, which is available for public consumption over the internet. In addition, you will also be identified as a contributor to the article in our public GitHub repository. For more information, see our [Terms of Use](https://ukcloud.com/terms-and-conditions).
 
 If you have suggestions for significant changes to the Knowledge Centre or any of its articles, contact <products@uk.cloud.com> to discuss your ideas.
 

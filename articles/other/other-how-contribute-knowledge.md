@@ -62,6 +62,9 @@ To submit changes or new articles you must have a GitHub account.
 
     ![Create pull request](images/other-github-pull-request.png)
 
+    > [!NOTE]
+    > You must create the Pull Request to submit your changes.
+
 12. The Pull Request is submitted to UKCloud to review and merge into the master branch if appropriate. We may contact you to discuss the details of your changes if required.
 
 ## Submitting larger changes across multiple articles or creating new articles
