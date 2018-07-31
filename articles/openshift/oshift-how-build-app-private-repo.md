@@ -1,4 +1,21 @@
+---
+title: How to build an OpenShift application from a private Github repo | UKCloud Ltd
+description: Shows how to build an OpenShift application where the source code is in a "private" github repository secured with an SSH Key Pair.
+services: openshift
+author: Andy Watkins
+
+toc_rootlink: How To
+toc_sub1:
+toc_sub2:
+toc_sub3:
+toc_sub4:
+toc_title: build an OpenShift application from a private Github repo
+toc_fullpath: How To/oshift-how-build-app-private-repo.md
+toc_mdlink: oshift-how-build-app-private-repo.md
+---
+
 # How to build an OpenShift application from a private Github repo
+
 This guide assumes you have access to the command-line `oc` client, and have
 logged in to your openshift instance with `oc login`
 
