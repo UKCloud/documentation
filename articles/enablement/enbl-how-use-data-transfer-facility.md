@@ -115,7 +115,7 @@ FTPS provides secure transfer using FTP and SSL. The data you transfer is encryp
 
 3. On the **vCloud Director** tab, enter your password and then click **Confirm**.
 
-4. Select the the **My Cloud** tab.
+4. Select the **My Cloud** tab.
 
     ![My Cloud tab in vCloud Director](images/vmw-vcd-tab-my-cloud.png)
 
