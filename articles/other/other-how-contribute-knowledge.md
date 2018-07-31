@@ -21,6 +21,9 @@ Content for the UKCloud Knowledge Center is stored in a GitHub repository, which
 
 This article explains how to submit changes to UKCloud Knowledge Centre articles.
 
+> [!IMPORTANT]
+> Before making any changes, make sure you're familiar with our [guidelines](other-ref-knowledge-guidelines.md) for contributing to Knowledge Centre articles.
+
 ### Intended audience
 
 To submit changes or new articles you must have a GitHub account.
@@ -55,17 +58,21 @@ To submit changes or new articles you must have a GitHub account.
 
 10. Click **Create pull request**.
 
-10. On the **Write** tab, provide more details about the change you've made, if necessary, then click **Create pull request**.
+11. On the **Write** tab, provide more details about the change you've made, if necessary, then click **Create pull request**.
 
     ![Create pull request](images/other-github-pull-request.png)
 
-12. The pull request is submitted to UKCloud to review and merge into the master branch if appropriate. We may contact you to discuss the details of your changes if required.
+12. The Pull Request is submitted to UKCloud to review and merge into the master branch if appropriate. We may contact you to discuss the details of your changes if required.
 
-## Submitting larger changes to an article or creating new articles
+## Submitting larger changes across multiple articles or creating new articles
 
-If you're familiar with working in GitHub and want to submit more significant changes to an article, or even create a new articles, you may find it easier to [fork the repository](https://help.github.com/articles/fork-a-repo/) and work on your changes there before creating your pull request.
+If you're familiar with working in GitHub and want to submit changes to multiple articles, or even create a new article, you may find it easier to [fork the repository](https://help.github.com/articles/fork-a-repo/) and work on your changes there before creating your Pull Request.
 
 For a template to get you started with a new article, see [*UKCloud Knowledge Centre article template*](other-ref-knowledge-template.md).
+
+## Suggesting significant changes
+
+If you want to suggest significant changes to the Knowledge Centre, contact <products@ukcloud.com> to discuss your ideas.
 
 ## Feedback
 
