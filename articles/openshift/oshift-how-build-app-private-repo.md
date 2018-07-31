@@ -9,7 +9,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: build an OpenShift application from a private Github repo
+toc_title: Build an OpenShift app from a private Github repo
 toc_fullpath: How To/oshift-how-build-app-private-repo.md
 toc_mdlink: oshift-how-build-app-private-repo.md
 ---
