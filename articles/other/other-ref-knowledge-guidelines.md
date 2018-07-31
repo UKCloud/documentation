@@ -19,7 +19,7 @@ If you're contributing content to the UKCloud Knowledge Centre, it's important t
 
 For information about how to contribute content, see [*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md).
 
-For a template to get you started, see [*UKCloud Knowledge Centre article template*](other-ref-knowledge-template.md).
+For a template to get you started, see [*UKCloud Knowledge Centre article template*](https://raw.githubusercontent.com/UKCloud/documentation/master/articles/other/other-ref-knowledge-template.md).
 
 ## Sensitive content
 
@@ -34,9 +34,10 @@ By submitting content you are granting UKCloud permission to use your submission
 
 If you add images to the article, `.png` is the preferred file format.
 
-You should make sure that you are not violating any copyright laws with any images that you add.
-
-You should make sure that images, especially screenshots, do not contain any sensitive data, such as user names or IP addresses.
+> [!NOTE]
+> You should make sure that you are not violating any copyright laws with any images that you add.
+>
+> You should make sure that images, especially screenshots, do not contain any sensitive data, such as user names or IP addresses.
 
 File names for images in Knowledge Centre articles should use the following file naming convention:
 
@@ -114,17 +115,33 @@ where:
 
 If you're creating a new article, you must make sure that it includes the appropriate metadata. The metadata ensures that the article is included properly in the Knowledge Centre and helps with internet searches. Include the following metadata at the top of the article:
 
-To make sure you use the correct metadata copy it from an existing topic or the [*UKCloud Knowledge Centre article template*](other-ref-knowledge-template.md).
+```
+---
+title: Full title of article | UKCloud Ltd
+description: Description of article content
+services: Service
+author: Your name
 
-### Title
+toc_rootlink: Article type
+toc_sub1:
+toc_sub2:
+toc_sub3:
+toc_sub4:
+toc_title: Short title of article
+toc_fullpath: rootlink/sub1/sub2/etc/filename.md
+toc_mdlink: filename.md
+---
+```
+
+### title
 
 This is the full title of the article and will appear in the browser title bar.
 
-### Description
+### description
 
 This is a description of the content of the article. Provide information here that will help target the article in internet searches.
 
-### Services
+### services
 
 This is the service to which the article belongs. One of:
 
@@ -148,11 +165,11 @@ This is the service to which the article belongs. One of:
 - `vmware`
 - For articles that do belong to a service or that apply to multiple services, use `other`
 
-### Author
+### author
 
 This is the name of the person who created the article.
 
-### Rootlink
+### rootlink
 
 For most articles, the rootlink will be the article type. One of:
 
@@ -166,20 +183,20 @@ For most articles, the rootlink will be the article type. One of:
 > [!NOTE]
 > For UKCloud for Microsoft Azure articles, the rootlink is either `Users` for articles intended for tenants or `Operators` for articles intended for service providers.
 
-### Sub1, Sub2, etc
+### sub1, sub2, etc
 
 The sub1 metadata tag enables you to categorise articles within the root level to group them into related articles. This is useful if the product has lots of articles of the same type.
 
 > [!NOTE]
-> For UKCloud for Microsoft Azure articles, sub1 should be the article type as listed in [Rootlink](#rootlink).
+> For UKCloud for Microsoft Azure articles, sub1 should be the article type as listed in [rootlink](#rootlink).
 
 You can use sub2, sub3 and so on to further categorise articles, but it is not recommended to go too many levels deep.
 
-### TOC Title
+### toc title
 
 This is the title of the article as it will appear in the product topic list. Due to the restricted width of the topic list, the TOC title should not be too long, so consider shortening the full title if appropriate. For How To Guides, remove the initial How to and start with the verb. For example, for the topic *How to create a virtual machine from the Azure Marketplace*, you could set the TOC title to `Create a virtual machine`.
 
-### Full path
+### fullpath
 
 This is the full path of the article within the product topic list. For example:
 
@@ -187,7 +204,7 @@ This is the full path of the article within the product topic list. For example:
 `How To/vmw-how-create-vapp.md`
 `Users/Getting Started/azs-gs.md`
 
-### Markdown file link
+### mdlink
 
 This is the file name of the article. This must exactly match the file name and include the `.md` extension.
 

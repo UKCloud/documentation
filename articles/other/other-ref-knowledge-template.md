@@ -66,13 +66,31 @@ Reference Guides can include as many sections as necessary to keep the content e
 
 ## More useful markdown
 
+### Images
+
 Markdown for images looks like:
 
     ![alt-text](images/image-filename.png)
 
 The `alt-text` is read out by screen readers and provides a brief description of the image to help visually impaired users determine what the image is illustrating. Image files should be located in an `images` directory underneath the main product directory.
 
-Links to other topics for the same product look like:
+## Links to web pages
+
+To link to a web page, use the following markdown:
+
+    <https://ukcloud.com/>
+
+<https://ukcloud.com/>
+
+To use descriptive text for the link, rather than just the URL, use the following markdown:
+
+    [UKCloud](https://ukcloud.com/)
+
+[UKCloud](https://ukcloud.com/)
+
+## Links to other Knowledge Centre articles
+
+Links to other articles for the same product look like:
 
     [*topic-title*](topic-filename.md)
 
@@ -80,11 +98,9 @@ For example:
 
     [*UKCloud Knowledge Centre guidelines*](other-ref-knowledge-guidelines.md)
 
-Gives you the following link:
-
 [*UKCloud Knowledge Centre guidelines*](other-ref-knowledge-guidelines.md)
 
-Links to other topics for a different product look like:
+Links to other articles for a different product look like:
 
     [*topic-title*](../product/topic-filename.md)
 
@@ -92,35 +108,65 @@ For example:
 
     [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
 
-Gives you the following link:
-
 [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
 
 ### Tips, notes and warnings
 
+#### Tips
+
+A tip provides helpful, but not necessarily important, information.
+
+Markdown:
+
     > [!TIP]
-    > This is a tip, which provides helpful information for working with a product.
+    > This is a tip, which provides helpful, but not necessarily important, information.
+
+Looks like:
 
 > [!TIP]
-> This is a tip, which provides helpful information for working with a product.
+> This is a tip, which provides helpful, but not necessarily important, information.
+
+#### Notes
+
+A note provides important information.
+
+Markdown:
 
     > [!NOTE]
     > This is a note, which provides important information.
 
+Looks like:
+
 > [!NOTE]
 > This is a note, which provides important information.
+
+#### Important notes
+
+Important notes provide important information that requires particular attention.
+
+Markdown:
 
     > [!IMPORTANT]
     > This is an important note, which requires particular attention.
 
+Looks like:
+
 > [!IMPORTANT]
 > This is an important note, which requires particular attention.
 
+#### Warnings
+
+Warnings provide important information about something which could have significant implications if ignored.
+
+Markdown:
+
     > [!WARNING]
-    > This is a warning, which provides users with information about something which could cause significant issues if ignored.
+    > This is a warning, which provides users with information about something which could have significant implications if ignored.
+
+Looks like:
 
 > [!WARNING]
-> This is a warning, which provides users with information about something which could cause significant issues if ignored.
+> This is a warning, which provides users with information about something which could have significant implications if ignored.
 
 ## Feedback
 
