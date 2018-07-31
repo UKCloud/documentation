@@ -60,13 +60,13 @@ ForEach ($FolderB in $FoldersFromBase) {
         
         # Read values from the header of the .md file
         $ourObject = [PSCustomObject]@{
-            Rootlink = ($MDArticle | Select-String -Pattern "toc_rootlink"  | Select-Object -ExpandProperty Line) -replace "toc_rootlink:\s?", ""
-            Sub1     = ($MDArticle | Select-String -Pattern "toc_sub1"  | Select-Object -ExpandProperty Line) -replace "toc_sub1:\s?", ""
-            Sub2     = ($MDArticle | Select-String -Pattern "toc_sub2"  | Select-Object -ExpandProperty Line) -replace "toc_sub2:\s?", ""
-            Sub3     = ($MDArticle | Select-String -Pattern "toc_sub3"  | Select-Object -ExpandProperty Line) -replace "toc_sub3:\s?", ""
-            Sub4     = ($MDArticle | Select-String -Pattern "toc_sub4"  | Select-Object -ExpandProperty Line) -replace "toc_sub4:\s?", ""
-            Title    = ($MDArticle | Select-String -Pattern "toc_title"  | Select-Object -ExpandProperty Line) -replace "toc_title:\s?", ""
-            MDlink   = ($MDArticle | Select-String -Pattern "toc_mdlink"  | Select-Object -ExpandProperty Line) -replace "toc_mdlink:\s?", ""
+            Rootlink = ($MDArticle | Select-String -Pattern "toc_rootlink"  | Select-Object -First 1 -ExpandProperty Line) -replace "toc_rootlink:\s?", ""
+            Sub1     = ($MDArticle | Select-String -Pattern "toc_sub1"  | Select-Object -First 1 -ExpandProperty Line) -replace "toc_sub1:\s?", ""
+            Sub2     = ($MDArticle | Select-String -Pattern "toc_sub2"  | Select-Object -First 1 -ExpandProperty Line) -replace "toc_sub2:\s?", ""
+            Sub3     = ($MDArticle | Select-String -Pattern "toc_sub3"  | Select-Object -First 1 -ExpandProperty Line) -replace "toc_sub3:\s?", ""
+            Sub4     = ($MDArticle | Select-String -Pattern "toc_sub4"  | Select-Object -First 1 -ExpandProperty Line) -replace "toc_sub4:\s?", ""
+            Title    = ($MDArticle | Select-String -Pattern "toc_title"  | Select-Object -First 1 -ExpandProperty Line) -replace "toc_title:\s?", ""
+            MDlink   = ($MDArticle | Select-String -Pattern "toc_mdlink"  | Select-Object -First 1 -ExpandProperty Line) -replace "toc_mdlink:\s?", ""
         }
         $TOCArrayPropertiesCustom += $ourObject
     }
