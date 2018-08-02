@@ -1,3 +1,7 @@
+- name: FAQs
+  items:
+  - name: Disaster Recovery as a Service FAQs
+    href: draas-faq.md
 - name: Getting Started
   items:
   - name: Disaster Recovery as a Service

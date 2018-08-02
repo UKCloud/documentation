@@ -2,8 +2,12 @@
   items:
   - name: Journaling Protection FAQs
     href: vmw-faq-journaling-protection.md
+  - name: Sharing catalogs FAQs
+    href: vmw-faq-sharing-catalogs.md
   - name: Snapshot Protection FAQs
     href: vmw-faq-snapshot-protection.md
+  - name: Synchronous Protection FAQs
+    href: vmw-faq-synchronous-protection.md
   - name: UKCloud for VMware FAQs
     href: vmw-faq.md
 - name: Getting Started
