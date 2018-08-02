@@ -19,17 +19,17 @@ toc_mdlink: ostack-faq.md
 
 ### What is the service?
 
-UKCloud for OpenStack is an OpenStack powered Infrastructure as a Service (IaaS) offering which enables organisations to rapidly provision and scale secure instances (VMs) in seconds, in a flexible and autonomous manner.
+UKCloud for OpenStack is an OpenStack-powered Infrastructure as a Service (IaaS) offering which enables organisations to rapidly provision and scale secure instances (VMs) in seconds, in a flexible and autonomous manner.
 
-UKCloud provides this service across two security domains, Assured OFFICIAL (formerly PGA IL2) and Elevated OFFICIAL (formerly PGA IL3), and with a range of service levels offering up to 99.95% availability. This choice allows customers to precisely match application and user needs to an appropriate security domain, service level and cost, instead of designing to the highest level which may not always be needed.
+UKCloud provides this service across two security domains, Assured OFFICIAL (formerly PGA IL2) and Elevated OFFICIAL (formerly PGA IL3), offering up to 99.95% availability. This choice allows customers to precisely match application and user needs to an appropriate security domain and cost, instead of designing to the highest level which may not always be needed.
 
 ### What hypervisor do you use?
 
-UKCloud for OpenStack is built using Red Hats KVM hypervisor technology, a trusted solution for implementing virtualized environments.
+UKCloud for OpenStack is built using KVM hypervisor technology, a trusted solution for implementing virtualised environments.
 
-### Does UKCloud offer dedicated, bare metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?
+### Does UKCloud offer dedicated, bare-metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?
 
-UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack product. UKCloud offers its 'Private Cloud for Compute' product which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.
+UKCloud currently does not offer dedicated, bare-metal host capabilities with its UKCloud for OpenStack product. UKCloud offers its 'Private Cloud for Compute' product which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.
 
 ### Which Disk formats does UKCloud for OpenStack support?
 
