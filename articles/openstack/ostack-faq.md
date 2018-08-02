@@ -37,23 +37,23 @@ The disk format of a virtual machine image is the format of the underlying disk 
 
 Set the disk format for your image to one of the following values:
 
-**Aki** - An Amazon kernel image
+**aki** - An Amazon kernel image
 
-**Ami** - An Amazon machine image
+**ami** - An Amazon machine image
 
-**Ari** - An Amazon ramdisk image
+**ari** - An Amazon ramdisk image
 
-**Iso** - An archive format for the data contents of an optical disc, such as CD-ROM
+**iso** - An archive format for the data contents of an optical disc, such as CD-ROM
 
 **qcow2** - Supported by the QEMU emulator that can expand dynamically and supports Copy on Write
 
-**Raw** - An unstructured disk image format; if you have a file without an extension it is possibly a raw format
+**raw** - An unstructured disk image format; if you have a file without an extension it is possibly a raw format
 
-**Vdi** - Supported by VirtualBox virtual machine monitor and the QEMU emulator
+**vdi** - Supported by VirtualBox virtual machine monitor and the QEMU emulator
 
-**Vhd** - The VHD disk format, a common disk format used by virtual machine monitors from VMware, Xen, Microsoft, VirtualBox, and others
+**vhd** - The VHD disk format, a common disk format used by virtual machine monitors from VMware, Xen, Microsoft, VirtualBox, and others
 
-**Vmdk** - Common disk format supported by many common virtual machine monitors
+**vmdk** - Common disk format supported by many common virtual machine monitors
 
 ## Instances (VMs)
 
@@ -74,7 +74,7 @@ Yes, as this is a true IaaS cloud service, you have complete control and autonom
 
 ### What Instance sizes are available?
 
-UKCloud offers a variety of flavours to meet customers' needs. The smallest configuration is 512MiB and 1 vCPU. The largest is 64GiB memory with 8 vCPU.
+UKCloud offers a variety of predefined flavours to meet customers' needs. The smallest configuration is 512MiB memory and 1 vCPU. The largest is 64GiB memory with 8 vCPU.
 
 Check the service definition for more details on the currently available sizes.
 
@@ -127,6 +127,8 @@ Additional external PSN IP addresses can be requested via a Service Request shou
 ### What firewall services are available?
 
 UKCloud controls and manages a perimeter firewall on the edge of our Assured cloud platform which securely segregates traffic.
+
+OpenStack includes the concept of "Security Groups" which can be used to implement firewall filtering on the virtual NIC level.
 
 You can also use your preferred software firewall and security appliances deployed within your project.
 
