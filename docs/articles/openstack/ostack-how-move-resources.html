@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to move resources between OpenStack regions | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to move resources between OpenStack regions | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-move-resources-between-openstack-regions">How to move resources between OpenStack regions</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This article provides examples of how to move OpenStack resources (for example, instance images and volumes) between the different independent regions currently offered by UKCloud to help ensure the highest level of application resilience and availability.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>Anyone responsible for the design and implementation of applications and services deployed on UKCloud OpenStack service, and should be familiar with using the OpenStack dashboard and API/CLI.</p>
+<h2 id="background">Background</h2>
+<p>UKCloud's OpenStack service has been engineered specifically for today's modern, digital, cloud based applications. Unlike our VMware service, OpenStack expects applications to be designed with resilience engineered at the application level, rather than relying upon the underlying cloud infrastructure. To cater for this, our OpenStack service offers the following two resiliency concepts:</p>
+<ul>
+<li><p><strong>Regions</strong> - Where applications are served from a choice of multiple regions (for example, data centres) with each region having independent, isolated control (for example, dashboard, API), data (for example, compute workloads) and storage (for example, persistent block volumes) planes. Engineering your applications to span multiple regions offers the greatest level of resilience, however requires effort from a design and implementation perspective.</p>
+</li>
+<li><p><strong>Zones</strong> - Where applications are served from a single region (for example, data centre) and share a single control plane and resilient storage, however the data plane (for example, compute  workloads) can be placed within different fault tolerant failure domains. Zones offer a lower level of resilience when compared to regions, however they require the least effort to utilise.</p>
+</li>
+</ul>
+<p>UKCloud strongly recommends engineering across multiple regions for any production workloads.</p>
+<h2 id="openstack-regions--zones">OpenStack regions &amp; zones</h2>
+<p>The following table outlines the regions and zones that are currently available on the OpenStack service:</p>
+<table>
+<thead>
+<tr>
+<th>Site</th>
+<th>Region</th>
+<th>Zone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Corsham</td>
+<td>00005 (cor00005.cni.ukcloud.com)</td>
+<td>0000c-1</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td>0000c-2</td>
+</tr>
+<tr>
+<td>Farnborough</td>
+<td>00006 (frn00006.cni.ukcloud.com)</td>
+<td>00021-1</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td>00021-2</td>
+</tr>
+</tbody>
+</table>
+<p>Details correct at date of publication. Current details can be found in the UKCloud Knowledge Centre.</p>
+<h2 id="migrating-instances-between-regions">Migrating instances between regions</h2>
+<p>UKCloud has deliberately engineered its regions to be fully independent to allow a high level of isolation and customer control as to which resources and data is shared/distributed. As a result, the only way to share instances between regions is to export them from the current region, then import them into the new region.</p>
+<p>The following provides a code example of how to achieve this export and import of an image using the OpenStack CLI:</p>
+<ol>
+<li><p>To identify the id of the source instance:</p>
+<ul>
+<li><p>Source the originating region's <code>cred rc</code> file</p>
+</li>
+<li><p>Enter the following command:</p>
+<pre><code>openstack server list
+</code></pre>
+</li>
+</ul>
+<p>Note the <code>ID</code> of your source instance as shown in the resulting output.</p>
+</li>
+<li><p>To create the snapshot of the source instance, enter the following command:</p>
+<pre><code> openstack server image create --name &lt;snapshot-name&gt; &lt;id-of-server&gt;
+</code></pre>
+<p>Note the <code>id</code> shown in the resulting output.</p>
+</li>
+<li><p>To check image has finished creating, enter the following command:</p>
+<pre><code> openstack image show &lt;id-of-image&gt;
+</code></pre>
+<p>Once complete, the <code>status</code> field should show as <code>active</code>.</p>
+</li>
+<li><p>To download source image snapshot, enter the following command:</p>
+<pre><code> glance image-download --file &lt;output-location&gt; --progress &lt;id-of-image-to-download&gt;
+</code></pre>
+</li>
+<li><p>To upload source image to the target region:</p>
+<ul>
+<li><p>Source the target region's <code>cred rc</code> file</p>
+</li>
+<li><p>Enter the following command:</p>
+<pre><code>glance image-create --progress --file &lt;path-to-file-to-upload&gt; --disk-format qcow2 --container-format bare --name &lt;name-for-upload&gt;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>You can now start the migrated instance from file you've just uploaded.</p>
+</li>
+</ol>
+<h2 id="migrating-volumes-between-regions">Migrating volumes between regions</h2>
+<p>As with instances, volumes have been engineered to be fully independent across regions. For  moving volumes two options are available.</p>
+<h3 id="option-1---direct-transfer-between-instances">Option 1 - Direct transfer between instances</h3>
+<p>Once instances have been migrated (see above) and are running, data can be copied directly between the instances.</p>
+<p>To achieve this across different regions, the use of a VPN may be required. Details on how to deploy a VPN within the OpenStack platform can be found in <a href="https://ukcloud.com/wp-content/uploads/2017/01/UKC-GEN-476-Configuring-IPsec-VPN-in-Cloud-Native-Infrastructure-Blueprint.pdf"><em>Blueprint: Configuring IPsec VPN in UKCloud for OpenStack</em></a>.</p>
+<h3 id="option-2---export-and-import-of-existing-volumes">Option 2 - Export and import of existing volumes</h3>
+<ol>
+<li><p>Detach the volume to be migrated from all instances to ensure all writes are completed.</p>
+<p>a. To show a list of all volumes in your project:</p>
+<ul>
+<li><p>Source the originating region's <code>cred rc</code> file</p>
+</li>
+<li><p>Enter the following command:</p>
+<pre><code>openstack volume list
+</code></pre>
+<p>If your source volume shows as being Attached to in the resulting output then note the <code>ID</code> of your source volume and proceed to step 1b, otherwise note the <code>ID</code> of your source volume and proceed to step 2.</p>
+</li>
+</ul>
+<p>b. To detach your source volume from an instance, enter the following command:</p>
+<pre><code> openstack server remove volume \&lt;server id\&gt; \&lt;volume id\&gt;
+</code></pre>
+<p>Double check the volume has been detached by running the command in step 1a.</p>
+</li>
+<li><p>Upload the source volume to the OpenStack Glance image repository using the following command:</p>
+<pre><code> cinder --os-volume-api-version 2 upload-to-image &lt;volume id&gt; &lt;name&gt;
+</code></pre>
+</li>
+<li><p>Download the source volume image to your local device using the following command:</p>
+<pre><code> glance image-download --file &lt;output-location&gt; --progress &lt;id-of-image-to-download&gt;
+</code></pre>
+</li>
+<li><p>To upload the source volume image to the target region:</p>
+<ul>
+<li><p>Source the target region's <code>cred rc</code> file</p>
+</li>
+<li><p>Enter the following command:</p>
+<pre><code>glance image-create --progress --file &lt;path-to-file-to-upload&gt; --disk-format qcow2 --container-format bare --name &lt;name-for-upload&gt;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>To create a new volume in the target region based upon the original source volume, enter the following command:</p>
+<pre><code> openstack volume create --image &lt;uploaded-image&gt; --size &lt;size-of-volume-to-create&gt; --type &lt;TIER1/TIER2&gt; &lt;Name&gt;
+</code></pre>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>You can find more information about UKCloud's sites, regions and zones in the following Knowledge Centre articles:</p>
+<ul>
+<li><p><a href="../other/other-ref-sites-regions-zones.html">Understanding sites, regions and zones</a></p>
+</li>
+<li><p><a href="../other/other-ref-srz-table.html">Sites, regions and zones map and reference table</a></p>
+</li>
+</ul>
+<p>You can find full details for the OpenStack command-line interface (OpenStack CLI) at:</p>
+<p><a href="https://access.redhat.com/webassets/avalon/d/Red_Hat_OpenStack_Platform-10-Command-Line_Interface_Reference_Guide-en-US/Red_Hat_OpenStack_Platform-10-Command-Line_Interface_Reference_Guide-en-US.pdf">https://access.redhat.com/webassets/avalon/d/Red_Hat_OpenStack_Platform-10-Command-Line_Interface_Reference_Guide-en-US/Red_Hat_OpenStack_Platform-10-Command-Line_Interface_Reference_Guide-en-US.pdf</a></p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-how-move-resources.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

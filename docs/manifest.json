@@ -16,6 +16,18 @@
       "is_incremental": false
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "CONTRIBUTING.md",
+      "output": {
+        ".html": {
+          "relative_path": "CONTRIBUTING.html",
+          "hash": "sU37LFUCZv2ATzszRjdSkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -2752,6 +2764,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-cli-instance-metadata.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-cli-instance-metadata.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-cli-results-autorestart-on.png",
       "output": {
         "resource": {
@@ -3269,6 +3292,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon_instance_metadata_create.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon_instance_metadata_create.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon_instance_metadata_edit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon_instance_metadata_edit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-neutron-floatingip-associate.png",
       "output": {
         "resource": {
@@ -3724,6 +3769,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-move-resources.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-move-resources.html",
+          "hash": "btJ3j0HyMe0TGIeA1siTvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-how-recover-instance.md",
       "output": {
         ".html": {
@@ -3736,11 +3793,83 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-retrieve-windows-password.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-retrieve-windows-password.html",
+          "hash": "Eqf1kNpooXpTpqaf7Swn1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-how-use-cli.md",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-use-cli.html",
           "hash": "aFnz3M0ErgxX6IYNc948eA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-use-instance-metadata.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-use-instance-metadata.html",
+          "hash": "0k2jQJtccYmaEB1kdtbzZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-ref-auto-scaling.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-ref-auto-scaling.html",
+          "hash": "fuCui3FFY//WZ/QRpRSR7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-ref-cli-clients.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-ref-cli-clients.html",
+          "hash": "2q4OVrNxdz/jDIxUYvxjAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-ref-dashboard.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-ref-dashboard.html",
+          "hash": "jgpJ5g1pEPOVfWgbqVnTSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-ref-public-image-versioning.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-ref-public-image-versioning.html",
+          "hash": "A1FZTkevSf0pPmY02/g1Eg=="
         }
       },
       "is_incremental": false,
@@ -3776,7 +3905,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "hQ3PMtE3iuUYjOLDx6vB3A=="
+          "hash": "Kxh1yvP5SxNa9hNBf6zJiw=="
         }
       },
       "is_incremental": false,
@@ -10465,6 +10594,11 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -10472,11 +10606,6 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
