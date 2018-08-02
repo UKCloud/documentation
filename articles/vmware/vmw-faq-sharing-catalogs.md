@@ -8,7 +8,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: 
+toc_title: Sharing catalogs FAQs
 toc_fullpath: FAQs/vmw-faq-sharing-catalogs.md
 toc_mdlink: vmw-faq-sharing-catalogs.md
 ---
