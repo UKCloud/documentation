@@ -322,7 +322,6 @@ For more information about using Email and Collaboration as a Service, see the f
 - [*How to use UKCloud's email service with your application*](email-how-use-with-app.md)
 - [*How to set up Email and Collaboration on an iPhone or iPad*](email-how-setup-iphone.md)
 - [*How to setup Email on Android, Windows or BlackBerry mobile devices*](email-how-setup-android.md)
-- [*Sending email from the Elevated environment*](email-ref-elevated.md)
 
 ## Glossary
 
