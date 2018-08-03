@@ -310,7 +310,7 @@ The following documents contain more information about UKCloud for VMware and th
 
 - *UKCloud Terms and Conditions* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-terms-and-conditions-2018-05-21-1254.pdf)
 
-- [*SLA Definition*](../other/other-ref-sla-definition)
+- [*SLA Definition*](../other/other-ref-sla-definition.md)
 
 ## Feedback
 

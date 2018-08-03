@@ -130,7 +130,7 @@ UKCloud can also provide Operating Systems (OS) licensing, and is mandatory with
 
 All networks available to the UKCloud for VMware platform are available for GPU-enabled VMs.
 
-A full overview of the connectivity options and network architecture is available in [*Understanding connectivity options in UKCloud for VMware*](../vmware/vmw-ref-connectivity-options).
+A full overview of the connectivity options and network architecture is available in [*Understanding connectivity options in UKCloud for VMware*](../vmware/vmw-ref-connectivity-options.md).
 
 ## Protective monitoring
 
@@ -172,7 +172,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 ## Customer responsibilities
 
-Alongside the responsibilities outlined in the [*UKCloud for VMware Service Scope*](../vmare/vmw-sco.md), you are responsible for assessing whether the UKCloud GPU service can support the various requirements of your application.
+Alongside the responsibilities outlined in the [*UKCloud for VMware Service Scope*](../vmware/vmw-sco.md), you are responsible for assessing whether the UKCloud GPU service can support the various requirements of your application.
 
 ## Service provisioning
 
