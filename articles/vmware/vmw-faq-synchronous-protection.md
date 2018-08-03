@@ -13,7 +13,7 @@ toc_fullpath: FAQs/vmw-faq-synchronous-protection.md
 toc_mdlink: vmw-faq-synchronous-protection.md
 ---
 
-# Synchronous Protection FAQa
+# Synchronous Protection FAQs
 
 ## General
 
