@@ -6095,6 +6095,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/network-image.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/network-image.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/new_policies_definition.JPG",
       "output": {
         "resource": {
@@ -10613,9 +10624,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-sco-synchronous-protection.md",
       "output": {
