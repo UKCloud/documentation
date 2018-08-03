@@ -86,7 +86,7 @@ Ticket priority | Initial response target | Resolution target
 **Priority 1** | **Priority 2**
 A significant outage or disruption to multiple users or locations is in progress</br></br>Compromise, loss or unavailability of data has occurred | Service is available but degraded or restricted for multiple users or locations</br></br>Suspected or potential compromise, loss or unavailability of data
 **Priority 3** | **Priority 4**
-A failure or degradation of redundant or non-critical components of service has occurred</br></br>Failure of a shared service, where alternative services remain available, or service disruption for single users | Documented housekeeping activities</br></br>Administration related requirements or an uncategorised incident
+A failure or degradation of redundant or non-critical components of service has occurred for a single user</br></br>Failure of a shared service, where alternative services remain available, or service disruption for single users | Documented housekeeping activities</br></br>Administration related requirements or an uncategorised incident
 
 ## Viewing tickets and service updates
 
