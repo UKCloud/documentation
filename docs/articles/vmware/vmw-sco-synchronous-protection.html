@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Synchronous Protection Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Synchronous Protection Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="synchronous-protection-service-scope">Synchronous Protection Service Scope</h1>
+
+<h2 id="about-this-document">About this document</h2>
+<p>This Service Scope explains what is and isn't included in the scope of the UKCloud for VMware Synchronous Protection service option.</p>
+<p>Synchronous Protection is one of a variety of on‑platform protection options available from UKCloud. Use this service scope to understand what Synchronous Protection offers and whether it will meet your own recovery point objectives (RPO) and recovery time objectives (RTO).</p>
+<h2 id="about-synchronous-protection">About Synchronous Protection</h2>
+<p>The UKCloud for VMware Synchronous Protection service option is designed to offer geographical protection of your live environments across both of our sites (Farnborough and Corsham; 60 miles apart). To achieve this, we utilise synchronous replication between sites to ensure that any changes made to your environment are committed to arrays in both sites simultaneously.</p>
+<p>Synchronous Protection provides for an instant recovery point (for any data written, and flushed to disk) and then enables the ability to migrate your VMs between the sites while they are running, offering a greater level of protection for live environments.</p>
+<p>Your service is only ever presented out of one of these sites (a VM exists in only one location at a time), but a synchronous copy between the sites ensures that an exact copy is stored in the second site, which can be brought online, with zero data loss, in the event of a failure.</p>
+<h2 id="synchronous-protection-availability">Synchronous Protection availability</h2>
+<p>Synchronous Protection is currently available in regions 1, 2, 7 and 8.</p>
+<h2 id="design">Design</h2>
+<p>Synchronous Protection is an active‑passive designed solution. The solution offers failover to a second UK site, however your VM will be active in only one site at any given time.</p>
+<p>Customers relying on a single virtual firewall in their primary site should be aware that in some circumstances, such as a failure of the inter site network, or of the customer's primary virtual firewall, access to their solution will be lost. If you require an active‑active solution, you can build across both sites and design in load balancing. Contact your Account Manager if you want to investigate this option.</p>
+<p>If a failure affects several VMs, they will be restarted in no particular order. We do not offer any controls to programmatically manage this - in most scenarios, the restart is automatic. If you need your VMs or vApps to be started in a particular order, we recommend that you restart them manually.</p>
+<p>Within each site we've architected a platform with a minimum of N+1 resilience, including routers and switches.</p>
+<h2 id="rpo-and-rto">RPO and RTO</h2>
+<p>Synchronous Protection provides a quickly implemented disaster recovery service with an RPO of almost 0 seconds. The RTO is variable and will be influenced by factors such as your application design and the ability to failover networks.</p>
+<p>For clarity, UKCloud does not use asynchronous replication technologies. The recovery point is the last write to disk with no historical recovery points (there is no ability to &quot;roll back&quot; to a previous version).</p>
+<h2 id="unplanned-failover-process">Unplanned failover process</h2>
+<p>We monitor the underlying physical infrastructure including the blades, routers and switches. There are a variety of scenarios that can trigger an unplanned failover event.</p>
+<p>In the majority of scenarios, failover activities are non-intrusive and automatic. In scenarios such as multiple component failure, including loss of redundancy, in the majority of cases your VMs and edge gateway instances will be automatically brought online, either on an alternative physical device in the same site or in the second site. This is dependent on available resources.</p>
+<p>However, other scenarios can result in a full or partial failover, and in these cases we'll need to react differently.</p>
+<h2 id="manual-failover">Manual failover</h2>
+<p>In some scenarios a full automated failover will not be possible. In each case the remedial actions may be different, and we have a variety of tools, such as VMware vMotion and VMware Storage vMotion, that we can utilise to return your VMs to service.</p>
+<p>In the case that a site failover is not automatically completed, we use the entry criteria below to ascertain if there is a need for a manual failover.</p>
+<p>If a need is established, we review the technical considerations to ensure and validate the decision for a manual failover is both safe and appropriate.</p>
+<table>
+<thead>
+<tr>
+<th>Entry criteria</th>
+<th>Yes/No</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Incident is site specific</td>
+<td></td>
+</tr>
+<tr>
+<td>Outlook for recovery more than two hours</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Technical considerations</th>
+<th>Yes/No</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Control plane availability</td>
+<td></td>
+</tr>
+<tr>
+<td>Storage consistency</td>
+<td></td>
+</tr>
+<tr>
+<td>VM to VM network availability</td>
+<td></td>
+</tr>
+<tr>
+<td>External network availability</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="entry-criteria-explained">Entry criteria explained</h3>
+<p>Are the service conditions met to confirm the need for a manual failover?</p>
+<ul>
+<li><p><strong>Incident is site specific</strong> - An incident must be site specific (either Farnborough or Corsham). In the unlikely event the incident effects both sites, a manual failover will be unlikely to resolve the issue so will not be considered.</p>
+</li>
+<li><p><strong>Outlook for recovery more than two hours</strong> - In the event that a failover is not automatic, we'll conduct an initial technical investigation to identify the cause of the failure. This technical investigation is time‑boxed to two hours (including time to recover the service).</p>
+</li>
+</ul>
+<p>If at any point in this assessment the outlook for recovery of normal service is deemed unlikely by the end of the time box, the issue will undergo technical consideration for a manual failover.</p>
+<h3 id="technical-considerations-explained">Technical considerations explained</h3>
+<p>If a failure meets the entry criteria described in the section above, we'll assess if there are any technical reasons preventing the initialisation of a manual failover.</p>
+<p>If these technical conditions are not met, a manual failover will not be attempted. But we'll continue to work to bring your VMs back online in the shortest possible timeframe.</p>
+<p>At any point in the technical assessment, we may return to considering a manual failover.</p>
+<ul>
+<li><p><strong>Control plane availability</strong> - The control plane is defined as the platform for managing the environment (by us or by you). If the control plane is wholly unavailable, then our ability to execute a failover and manage the infrastructure will be compromised. Therefore, a failover would not be immediately possible.</p>
+</li>
+<li><p><strong>Storage consistency</strong> - This check is to ensure the data is available and consistent. Geo‑resilient storage is distributed evenly across a SAN spanning both UKCloud sites and is managed by vPlex. If the underlying SAN becomes compromised, VMs may lose connectivity with their data store. If the data is not consistent, a failover event will not be initiated.</p>
+</li>
+<li><p><strong>VM to VM network availability</strong> - This check is to ensure inter‑VM communication is functional and consistent.</p>
+<ul>
+<li><p>If a physical appliance such as a host fails, VMs may be relocated to restore connectivity and is unlikely to require a full site failover.</p>
+</li>
+<li><p>If a virtual appliance such as a vShield Manager fails, failover may not resolve the issue and would potentially deviate technical resources from the recovery of the incident.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>External network availability</strong> - This check is to ensure external communication to the wider community is functional and consistent. This is specific to UKCloud connectivity to internet or PSN services. Each site has independent connectivity in addition to cross‑site connections. The failover decision will be dependent on the severity of the outage experienced; if outbound connectivity to the required networks is not available on the second site a failover event will not be initiated.</p>
+<h2 id="example-scenarios-and-suitability-for-site-failover">Example scenarios and suitability for site failover</h2>
+<p>The following are example Major Incidents that would trigger the question on whether to perform a failover.</p>
+<table>
+<thead>
+<tr>
+<th>Incident</th>
+<th>Failover action</th>
+<th>Mitigation to minimise impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DDoS attack</td>
+<td>None</td>
+<td>Always-on hybrid DDoS solution</td>
+</tr>
+<tr>
+<td>Site fire/power outage</td>
+<td>Automatic or manual</td>
+<td>Secure site, fire suppression, standby generators, UPS, offsite backups</td>
+</tr>
+<tr>
+<td>Network connectivity between sites</td>
+<td>None</td>
+<td>Multiple DCI links - geographically diverse, multiple providers</td>
+</tr>
+<tr>
+<td>Compute: minor component failure</td>
+<td>Automatic</td>
+<td>Minimum of N+1 resilience, chassis and blades</td>
+</tr>
+<tr>
+<td>Compute: major component failure</td>
+<td>Automatic or manual</td>
+<td>Spare capacity/modular design/dual site</td>
+</tr>
+<tr>
+<td>Network hardware failure</td>
+<td>Automatic or manual</td>
+<td>Minimum of N+1 resilience, routers and switches</td>
+</tr>
+<tr>
+<td>Split site (OTV networking and management networking)</td>
+<td>Automatic or manual</td>
+<td>Multiple DCI links -- geographically diverse</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failover-timing">Failover timing</h2>
+<p>The amount of time it takes for your services to failover will depend on the failure scenario, but generally the failover will take as long as the VM needs to reboot plus a small amount of additional time to invoke the failover - about 45 seconds. Some scenarios, such as a &quot;split brain&quot;, can take longer, leading to an outage of two hours.</p>
+<h2 id="alerting-and-reporting">Alerting and reporting</h2>
+<p>A failover is a rare event and will normally be a result of a Major Incident. In these cases, we communicate to the wider community via the appropriate Portal and, if you have already reported an incident, via the ticket or by phone.</p>
+<p>You can also receive alerts via email subscription or using the <a href="https://status.ukcloud.com/">Service Status page.</a></p>
+<p>We'll contact you after a failover to inform you that our actions are complete.</p>
+<p>We do not currently provide alerts when a VM is moved to a different site. However, you can check the location of your VMs. For more information, see <a href="vmw-how-use-vm-location.html"><em>How to use VM location in vCloud Director</em></a>.</p>
+<h2 id="networking">Networking</h2>
+<p>For internet‑bound traffic, we manage an autonomous Border Gate Protocol (BGP) service that enables us to intelligently redirect traffic without affecting your IP address allocation.</p>
+<p>The resilience of the external connectivity into the Elevated OFFICIAL security domain depends upon, and is generally provided by, the access network. Behind the router layer, we have designed a network that stretches between our two sites. This allows for network connectivity (if installed in one site) to remain if your virtual firewall and UKCloud's physical firewall are in separate and alternative sites.</p>
+<p>We advise that you consider how additional services such as Cloud Enablement and leased lines will be affected in a disaster recovery scenario, as this falls outside the Synchronous Protection offering.</p>
+<p>UKCloud's firewalls are protected within each site, with the failover between the sites performed via an orchestrated process. We achieve this through a sequence of routing changes within our network (see the figure below).</p>
+<p><img src="images/network-image.png" alt="Network rerouting during failover"></p>
+<h2 id="failover-testing">Failover testing</h2>
+<p>Where possible, we test and prove the infrastructure and documentation with regular checks. In some cases, we cannot do this without impacting customer workloads. For these events, we perform a paper exercise to ensure the procedures are readily available, clearly defined and understood.</p>
+<p>If you want to test your own service, you can test the Synchronous Protection failover function by requesting a Test Scenario. Test Scenarios are designed to test and understand how your applications might react in a failover when the underlying physical hosts have failed (simulated in the scenario) or when the VMs have been migrated in a live state.</p>
+<p>A Test Scenario is not a customisable feature of UKCloud for VMware.</p>
+<h3 id="test-scenario-limitations">Test Scenario limitations</h3>
+<ul>
+<li><p>UKCloud will complete a Test Scenario for a maximum of one VDC (up to 10 VMs). This provides you with an experience similar to a live failover scenario.</p>
+</li>
+<li><p>Test Scenarios take place only during office hours (0900 - 1730).</p>
+</li>
+<li><p>The failover will be deemed a success by UKCloud when we can identify that the VMs are running in the second UKCloud site, using our own monitors and tools.</p>
+</li>
+<li><p>Backups cannot take place during a failover.</p>
+</li>
+<li><p>We will not failover the connectivity and physical firewall during a Test Scenario. You will experience a network latency of a few milliseconds through this firewall.</p>
+</li>
+<li><p>UKCloud do not, at present, offer a &quot;hard failover&quot; test where a physical host is switched off to simulate a hardware fail event.</p>
+</li>
+</ul>
+<h3 id="test-scenario-options">Test Scenario options</h3>
+<p><strong>Option 1. Dynamically moving your VMs between the two sites:</strong> We'll dynamically move your VMs between our sites while the VMs remain online. There will be increased network latency between client VMs that are running in the different sites (around 4 -- 4.5ms).</p>
+<p><strong>Option 2. Restarting your VMs between sites:</strong> Your VMs can be shut down and restarted in the secondary site. If the shutdown is non-graceful (power‑off as opposed to a guest OS shutdown), this simulates the effect of a physical server outage from an individual VM perspective. This is the equivalent of a total site failure.</p>
+<p>As our platform is multi-tenanted, we will not replicate a physical host failure to invoke a disaster recovery scenario as this could affect other customers.</p>
+<p>The failover exercise will be conducted and failed back to the originating site during office hours (0900 - 1730).</p>
+<h3 id="failover-testing-outputs">Failover testing outputs</h3>
+<p>Failover test are generally seamless for customers, making it difficult for you to gauge that it has taken place. To provide assurance that the test was successful, we'll produce a report for each customer that identifies the following:</p>
+<ul>
+<li><p>A sanitised (removing ESX host names) report of the ESX servers that the VMs are located on during the period of the failover test</p>
+</li>
+<li><p>Comments and observations</p>
+</li>
+</ul>
+<h2 id="requesting-a-test-scenario">Requesting a Test Scenario</h2>
+<p>To request a Test Scenario, you need to raise a Service Request within the UKCloud Portal indicating that you want to complete the test and provide the following details:</p>
+<ul>
+<li><p>VDC name</p>
+</li>
+<li><p>VM names (up to 10) you want to failover</p>
+</li>
+<li><p>Start and end time</p>
+</li>
+<li><p>Any other requirements</p>
+</li>
+</ul>
+<p>Note that the start and end times must be within office hours, which are 0900 - 1730.</p>
+<p>When we receive the request, we'll respond either accepting or rejecting it. Note that we require a minimum of five working days notice prior to the request.</p>
+<p>If we accept your request, we'll schedule the work to start at the time you specified as long as it is within office hours (0900 - 1730).</p>
+<h2 id="failover-testing-charges">Failover testing charges</h2>
+<p>We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the SFIA rate card) of £660 per day. Longer testing periods will need to be approved by UKCloud.</p>
+<h2 id="ukcloud-performed-test-evidence-of-synchronous-protection">UKCloud-performed test evidence of synchronous protection</h2>
+<p>We've performed the following tests to provide data that will help you design your solutions around the synchronous protection service option. We make no commitment about how the service will respond in the event of a real‑life failover.</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moving VMs between physical servers within the same site (DC1) <ul><li>vMotion client VM between hosts in DC1</li></ul></td>
+<td>- Success - 1 ping loss</td>
+</tr>
+<tr>
+<td>Moving VMs between the two sites (DC1 / DC2) <ul><li>vMotion client VM between DC1 / DC2</li></ul></td>
+<td>- Success - 15 ping loss (DC1 to DC2) <br> - Success - 1 ping loss (DC2 to DC1) </br> - Success - 1 ping loss (DC1 to DC2) <br> - Success - 1 ping loss (DC2 to DC1) </br><br> <strong>Note 1:</strong> Response time between VMs within DC1 &lt; 1ms</br> <strong>Note 2:</strong> Response time between VMs between DC1/DC2 ~ 4ms</td>
+</tr>
+<tr>
+<td>Moving VMs between physical servers within the same site (DC2) <ul><li>vMotion client VM between hosts in DC2</li></ul></td>
+<td>- Success - 13 ping loss <br> - Success - 1 ping loss </br> - Success - 1 ping loss</td>
+</tr>
+<tr>
+<td>Moving the standby virtual network between the sites <ul><li>vMotion of standby Virtual Networking Supervisors (between sites)</li></ul></td>
+<td>- Failed (Config fault identified and resolved) <br> - Success (ESX1 DC2) </br> - Success (ESX1 DC1) <br> - Rebooted following migration to, ESX1 DC2, remained in standby </br> - Success (ESX1 DC2) <br> - Success (ESX2 DC2)</td>
+</tr>
+<tr>
+<td>Moving the standby virtual network between the sites s vMotion of active Virtual Networking Supervisors (between sites)</td>
+<td>- Success (ESX1 DC2) <br> - Success (ESX1 DC1) </br> - Success (ESX2 DC2)</td>
+</tr>
+<tr>
+<td>Triggering the autonomous failover over of VMs by stopping the physical server <ul><li>HA (High Availability) event (ESX Host) <ul><li>VM running in DC2</li><li>Reboot of all ESX hosts in DC2</li></ul></li></ul></td>
+<td>- Success - HA moves VMs to DC1</td>
+</tr>
+<tr>
+<td>Triggering the autonomous failover over of VMs by stopping the physical servers within a cluster <ul><li>Complete restart (ESX hosts) <ul><li> Reboot of all ESX hosts in the cluster</li></ul></li></ul></td>
+<td>- Success - Virtual Networking supervisor VMs power back online, all networking comes back online <br> - Success - VMware HA restarts all client VMs</td>
+</tr>
+<tr>
+<td>Triggering the autonomous failover of the VM storage <ul><li>HA event (loss of storage) <ul><li> VM running in DC2 </li><li> Removed vPlex LUN presentation in DC2</li></ul></li></ul></td>
+<td>- Failed -- Config fault identified and resolved) <br> - Success - (approx 2 minutes + VM boot time </br> - Success - (approx 2 minutes + VM boot time</td>
+</tr>
+<tr>
+<td>Split site (Management Networking) <ul><li> Shutdown inter_dc link on DC2 firewall </li></ul></td>
+<td>- Success - In this scenario the ESX servers in DC2 were no longer accessible but VMs continued to run in DC2 (able to ping their default gateway/isolation address), communications between VMs continued to run (VXLAN is via an OTV network) <br> - Virtual Networking Supervisors continues in active-standby mode (OTV VLAN is used for comms)</td>
+</tr>
+<tr>
+<td>Split site (OTV networking and Management Networking) <ul><li> Remove OTV uplink trunking in DC2</li></ul></td>
+<td>Removing Virtual Networking Supervisors OTV connectivity <ul><li> Virtual Networking Supervisors go active/active, only one is able to connect to vCenter (so no effect/impact); client comms via vxlan continues </li></ul> Removing VXLAN OTV connectivity <ul><li> Client comms stops if VMs split between sites, no failover (ESX hosts still able to ping gateway/isolation addresses) </li></ul>  Adding connectivity <ul><li>Client comms resumes, VMs move to active/standby (originally active VM as the standby VM)</li></ul></td>
+</tr>
+</tbody>
+</table>
+<h2 id="known-risks-and-mitigations">Known risks and mitigations</h2>
+<p>Known risks and mitigations are detailed below to enable you to review and understand if synchronous protection is suitable for your use.</p>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VMs continue running in the event of a site split on the networking side. Communication is lost between VMs within a client if straddling sites.</td>
+<td>In normal operation all VMs for a client will be within the same site.</td>
+</tr>
+<tr>
+<td>In event of a site split, there will be no management of the ESX hosts in the secondary site.</td>
+<td>Multiple resilient inter-DC links, along with protection of the vCenter server between the sites.</td>
+</tr>
+<tr>
+<td>Virtual Networking Supervisor in the secondary site assumes operation in the event of a site split, but is unable to connect into vCenter. Any attempt to change network connectivity of a VM will fail.</td>
+<td>Multiple resilient inter-DC links, along with protection of the vCenter server between the sites.</td>
+</tr>
+<tr>
+<td>ESX servers in DC2 no longer accessible. VMs continue to run in DC2 (still able to ping their default gateway/isolation address). Communications between VMs continue to run (VXLAN is via an OTV network).</td>
+<td>Multiple resilient inter-DC links, along with protection of the vCenter server between the sites.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-sco-synchronous-protection.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

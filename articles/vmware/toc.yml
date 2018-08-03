@@ -172,7 +172,11 @@
   items:
   - name: Bring Your Own Firewall Service Scope
     href: vmw-sco-byof.md
+  - name: Dedicated Compute Service Scope
+    href: vmw-sco-dedicated-compute.md
   - name: Journaling Protection Service Scope
     href: vmw-sco-journaling-protection.md
   - name: Snapshot Protection Service Scope
     href: vmw-sco-snapshot-protection.md
+  - name: Synchronous Protection Service Scope
+    href: vmw-sco-synchronous-protection.md

@@ -6865,6 +6865,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-dc-contingency1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-dc-contingency1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-dc-contingency2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-dc-contingency2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-estate.png",
       "output": {
         "resource": {
@@ -9564,7 +9586,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "Fu0r5q6dsZplC1Tv++wS+g=="
+          "hash": "1CmKupD2XuTEfd+Kw8d+FA=="
         }
       },
       "is_incremental": false,
@@ -9607,15 +9629,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-faq-synchronous-protection.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq-synchronous-protection.html",
-          "hash": "jaXnScUR/tBfftW3bz7XEg=="
+          "hash": "OlK1gu+zzyjuqa1b9ZoZBA=="
         }
       },
       "is_incremental": false,
@@ -10559,6 +10578,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-sco-dedicated-compute.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-sco-dedicated-compute.html",
+          "hash": "7OPvxLumewudl3gHJ0Uarg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-sco-journaling-protection.md",
       "output": {
         ".html": {
@@ -10576,6 +10607,21 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-snapshot-protection.html",
           "hash": "AF+fA8R5Tgmh8Ag7xx3Iqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-sco-synchronous-protection.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-sco-synchronous-protection.html",
+          "hash": "kNPsefFwWiJbI9bggnVWCA=="
         }
       },
       "is_incremental": false,
@@ -10641,13 +10687,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
