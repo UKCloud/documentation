@@ -1328,6 +1328,18 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/draas/draas-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/draas/draas-sco.html",
+          "hash": "vVkZ2fgfHuoyZVjjUjrHsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "articles/draas/images/draas-zerto-draas.png",
       "output": {
@@ -1355,7 +1367,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/toc.html",
-          "hash": "0X6s3w0tmTcwdc9breq3GA=="
+          "hash": "alqh9SwvDnqEZ8uSfloMuQ=="
         }
       },
       "is_incremental": false,
@@ -2316,6 +2328,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/gpu/gpu-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/gpu/gpu-sco.html",
+          "hash": "BdHBYAaY+VKrUdUF40c0Ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "articles/gpu/images/gpu-nvidia-licence-acquired.png",
       "output": {
@@ -2486,7 +2513,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/toc.html",
-          "hash": "iECEgyComUUNSir7RqMLSA=="
+          "hash": "sJnw8oUwjB6hxysNuv4beg=="
         }
       },
       "is_incremental": false,
@@ -5305,12 +5332,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/private-compute/prc-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/private-compute/prc-sco.html",
+          "hash": "EnRaeh/UnnyFqgRk4/GnCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/private-compute/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/private-compute/toc.html",
-          "hash": "NtSoMaELOr+T50JLwj8WVw=="
+          "hash": "6iKHFBGNhff42hq7Ch9D3Q=="
         }
       },
       "is_incremental": false,
@@ -5329,12 +5368,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/private-storage/prs-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/private-storage/prs-sco.html",
+          "hash": "7b8pbJOvG6WJMTEkiiM+ZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/private-storage/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/private-storage/toc.html",
-          "hash": "rKZ8x+XtUJxqf3kF42n1zw=="
+          "hash": "31KQSiPKFItPOirz3XgqlQ=="
         }
       },
       "is_incremental": false,
@@ -7397,6 +7448,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-restclient-request-method-post.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-srz.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-srz.png"
         }
       },
       "is_incremental": false,
@@ -9597,7 +9659,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "1CmKupD2XuTEfd+Kw8d+FA=="
+          "hash": "cLoffUxIg/vpDKid2dcEcA=="
         }
       },
       "is_incremental": false,
@@ -10630,6 +10692,21 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-synchronous-protection.html",
           "hash": "kNPsefFwWiJbI9bggnVWCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-sco.html",
+          "hash": "8WdInho39wWbraI/Z/iPiw=="
         }
       },
       "is_incremental": false,

@@ -180,3 +180,5 @@
     href: vmw-sco-snapshot-protection.md
   - name: Synchronous Protection Service Scope
     href: vmw-sco-synchronous-protection.md
+  - name: UKCloud for VMware Service Scope
+    href: vmw-sco.md

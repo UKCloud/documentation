@@ -2,3 +2,7 @@
   items:
   - name: Private Cloud for Compute FAQs
     href: prc-faq.md
+- name: Service Scope
+  items:
+  - name: Private Cloud for Compute Service Scope
+    href: prc-sco.md

@@ -6,3 +6,7 @@
   items:
   - name: Disaster Recovery as a Service
     href: draas-gs.md
+- name: Service Scope
+  items:
+  - name: Disaster Recovery as a Service Service Scope
+    href: draas-sco.md

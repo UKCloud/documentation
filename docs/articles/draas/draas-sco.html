@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Disaster Recovery as a Service Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Disaster Recovery as a Service Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="disaster-recovery-as-a-service-service-scope">Disaster Recovery as a Service Service Scope</h1>
+
+<h1 id="about-this-document">About this document</h1>
+<p>This document explains what is and isn't included in the scope of our Disaster Recovery as a Service service.</p>
+<p>Disaster Recovery as a Service provides a seamless way to failover from your own data centre to the UKCloud for VMware service. You can use this service as part of your own business continuity or disaster recovery processes.</p>
+<p>With this service, you're charged for the amount of data that you're protecting and are only charged for VMs when they are powered on during a live or test failover.</p>
+<h2 id="about-disaster-recovery-as-a-service">About Disaster Recovery as a Service</h2>
+<p>Disaster Recovery as a Service is a powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between your local VMware or Hyper-V powered data centre and UKCloud's disaster recovery enabled regions. This means that, in the event of a VM being compromised such as a local hardware failure, a power outage or security incidents such as theft or WAN connectivity disruption, you can quickly recover your VMs to the UKCloud platform and ensure that the disruption to your service is minimised.</p>
+<p>Once configured, you can protect VMs by adding them to a virtual protection group (VPG). Each VM in the VPG is synchronised to your recovery site on UKCloud, and a journal is created. After this initial sync, each subsequent write operation to the VM is processed as normal on your site and a copy is asynchronously sent to the recovery site and written to the journal.</p>
+<p>When the specified journal history length is reached (for example, 14 days), as new journal entries are created, older entries are written to the recovery VM's virtual disks.</p>
+<p>Every few seconds, a checkpoint is written to every journal for each VM in the VPG to ensure crash-consistency between the VMs. If you need to recover your VMs, you select a checkpoint to recover to. For example, in the case of a virus you could recover to a checkpoint from before the virus attack.</p>
+<p>During recovery, the VMs are created on the recovery site and the recovery disks for each VM are attached to the recovered VM. Information in the journal is then promoted to the VM to bring it up to the date and time of the selected checkpoint.</p>
+<p>Note that each VPG recovered into the recovery site will appear as a vApp within UKCloud.</p>
+<h2 id="customers-responsibilities">Customers Responsibilities</h2>
+<p>Given the nature of this service, with part of the solution hosted on your site, you are responsible for the following:</p>
+<ul>
+<li><p>Your environment must meet the minimum specification required by the solution (that you can find <a href="draas-gs.html#system-requirements">here</a>). This covers software versions, limitations around the types of VMs that can be protected and the minimum WAN connectivity speeds</p>
+</li>
+<li><p>Installation and configuration of Zerto components including the ZVM (Zerto Virtual Manager) and ZRA (Zerto Replication Appliance)</p>
+</li>
+<li><p>Creation of a VPN to connect to UKCloud</p>
+</li>
+<li><p>Ensuring that the local instances of Zerto are upgraded to remain compatible with the current version utilised by UKCloud. You will be notified via the notifications section on the UKCloud Portal when the version is upgraded on the UKCloud platform</p>
+</li>
+<li><p>Local network tuning and firewall configurations</p>
+</li>
+</ul>
+<p>We'll work with you to help you identify if any issues encountered are within your estate or on the UKCloud platform.</p>
+<p>You are responsible for troubleshooting issues within your own estate.</p>
+<p>If you require support managing your local Zerto installation, we have a wide ecosystem of partners that can assist.</p>
+<h2 id="frequency-and-timing">Frequency and timing</h2>
+<p>UKCloud's Disaster Recovery as a Service is designed to provide recovery points that are as little as seconds behind the running VM.</p>
+<p>Our standard profile provides:</p>
+<ul>
+<li><p>Target RPO of 5 minutes</p>
+</li>
+<li><p>Journal history of 2, 7, 14 or 28 days</p>
+</li>
+</ul>
+<p>At present, we've not enabled the ability for you to configure custom profiles.</p>
+<p>If the target RPO is exceeded, you and UKCloud will be notified via the Zerto Self-Service Portal.</p>
+<p>Factors that can affect the RPO are:</p>
+<ul>
+<li><p><strong>Rate of change of the data on a VM.</strong> VMs with a large rate of change in the data will potentially achieve a slightly longer RPO than VMs that have a lower rate of change</p>
+</li>
+<li><p><strong>Any network latency or storage performance challenges.</strong> We monitor our estate to ensure that network and storage performance are in line with platform expectations. Any deviations are alerted to our technical teams to resolve.</p>
+</li>
+<li><p><strong>WAN network performance.</strong> Low throughput WAN connections are unlikely to be able to transfer large amounts of data to UKCloud. This can make initial sync challenging for larger VMs.</p>
+</li>
+</ul>
+<p>Additionally, the service raises an alert if the size of a VM's journal exceeds 75% of the original VM. This alert helps to understand if your solution is adequately protected.</p>
+<p>Disaster Recovery as a Service captures data only while a VM is powered on. If a VM is deleted in vCloud Director, it will IMMEDIATELY delete the associated journal.</p>
+<h3 id="what-sla-do-you-offer-on-disaster-recovery-as-a-service">What SLA do you offer on Disaster Recovery as a Service?</h3>
+<p>We don't offer an SLA around the VMs protected by our Disaster Recovery as a Service. However, the status of VMs is monitored continuously, and the UKCloud support team investigates all failures or service degradation.</p>
+<h3 id="other">Other</h3>
+<p>The service is not backed by service credits.</p>
+<p>On occasion, planned maintenance may disrupt the operation of the Disaster Recovery as a Service. This may lead to the service being unavailable, or a temporary increase to the RPO you may be able to achieve on the platform.</p>
+<p>If there's a potential disruption, we'll highlight this to you via the service <a href="http://status.ukcloud.com/">status page</a> and UKCloud Portal notifications system.</p>
+<h2 id="disaster-recovery-as-a-service-management">Disaster Recovery as a Service management</h2>
+<p>You can self-manage your protected environment via the Zerto Self-Service Portal. This portal enables you to:</p>
+<ul>
+<li><p>Configure virtual protection groups</p>
+</li>
+<li><p>Opt VMs into the VPGs</p>
+</li>
+<li><p>Monitor the performance of your platform</p>
+</li>
+<li><p>View the current RPO of your applications and current available history</p>
+</li>
+<li><p>Perform test failovers</p>
+</li>
+<li><p>Perform live failovers</p>
+</li>
+</ul>
+<p>We've disabled some areas of the Zerto Self-Service Portal as they're for services we don't presently support. These include:</p>
+<ul>
+<li>Backup to external systems. At present, you cannot export your journal to external backup targets (such as UKCloud Cloud Storage). We've identified a compliance issue with this solution which we're working to address. Until this is addressed, the feature will remain unavailable.</li>
+</ul>
+<p>Additionally, the following scenarios cannot be protected:</p>
+<ul>
+<li><p>VMs with virtual disks with individual disks greater than 3TB</p>
+</li>
+<li><p>VMs which are clustered using shared virtual disks</p>
+</li>
+</ul>
+<h2 id="alerting-and-reporting">Alerting and reporting</h2>
+<p>The Zerto Self-Service Portal provides live real-time reporting of your solution and the current level of protection being provided to your VMs.</p>
+<p>The portal also raises alerts if the target RPO of your VPG exceed the threshold, or if the associated journal size grows beyond the expected size. In both these scenarios, UKCloud also receives a platform monitoring alert and will investigate the cause.</p>
+<p>Additionally, the portal provides an activity log of the actions against a particular VM and a list of any errors captured on the platform.</p>
+<h2 id="failover">Failover</h2>
+<p>The Zerto Self-Service Portal enables you to failover to your recovery site.</p>
+<p>When this is initiated, Disaster Recovery as a Service fails over the VMs inside a VPG, restoring the data and state of the VMs to the desired point from the journal. Disaster Recovery as a Service can also replicate any internal networking rules.</p>
+<p>You need to:</p>
+<ul>
+<li><p>Manually configure external networking configurations, including configuring VPNs and making any external firewall or DNS changes</p>
+</li>
+<li><p>Check for application consistency</p>
+</li>
+</ul>
+<h2 id="licensing">Licensing</h2>
+<p>UKCloud provides licensing for VMs protected by Zerto that utilise UKCloud as their recovery site. At present, you cannot bring your own licensing.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/draas/draas-sco.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>
