@@ -17,9 +17,9 @@ toc_mdlink: ostack-ref-dashboard.md
 
 UKCloud for OpenStack has been designed specifically for cloud native applications and is powered by Red Hat's Enterprise OpenStack Platform.
 
-For an overview on how to use OpenStack's Horizon dashboard (based upon the Liberty release) to drive the platform, see the following OpenStack document:
+For an overview on how to use OpenStack's Horizon dashboard (based upon the Newton release) to drive the platform, see the following OpenStack document:
 
-[*Red Hat OpenStack Platform 8 Introduction to the OpenStack Dashboard*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/8/pdf/introduction_to_the_openstack_dashboard/Red_Hat_OpenStack_Platform-8-Introduction_to_the_OpenStack_Dashboard-en-US.pdf)
+[*Red Hat OpenStack Platform 8 Introduction to the OpenStack Dashboard*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/pdf/introduction_to_the_openstack_dashboard/Red_Hat_OpenStack_Platform-8-Introduction_to_the_OpenStack_Dashboard-en-US.pdf)
 
 ## Feedback
 
