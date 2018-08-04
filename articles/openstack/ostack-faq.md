@@ -29,7 +29,7 @@ UKCloud for OpenStack is built using Red Hats KVM hypervisor technology, a trust
 
 ### Does UKCloud offer dedicated, bare metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?
 
-UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack product. UKCloud offers its 'Private Cloud for Compute' product which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.
+UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack product. We do however provide "large" instances, with upto 56 vCpus and 440Gb Ram, with no overcommit. UKCloud also offers its 'Private Cloud for Compute' product which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.
 
 ### Which Disk formats does UKCloud for OpenStack support?
 
@@ -66,7 +66,7 @@ UKCloud for OpenStack is a cloud platform built specifically for cloud native ap
 Instances are contended using the default OpenStack ratios against the following resources:
 
 - CPU - 16:1
-- Memory - 1.5:1
+- Memory - 1.1:1
 
 ### Do I get root access onto the instances I deploy?
 
@@ -74,7 +74,7 @@ Yes, as this is a true IaaS cloud service, you have complete control and autonom
 
 ### What Instance sizes are available?
 
-UKCloud offers a variety of flavours to meet customers' needs. The smallest configuration is 512MiB and 1 vCPU. The largest is 64GiB memory with 8 vCPU.
+UKCloud offers a variety of flavours to meet customers' needs. The smallest configuration is 512MiB and 1 vCPU. The largest is 440GiB memory with 56 vCPU.
 
 Check the service definition for more details on the currently available sizes.
 
@@ -138,7 +138,7 @@ To access the infrastructure via the dashboard and API you will need access thro
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
-You can view these on the notifications page on the UKCloud Portal. In addition, Service Status reports are published on the Portal.
+You can view these on the notifications page https://status.ukcloud.com. In addition, Service Status reports are published on the Portal.
 
 ### Do you offer dynamic or static IP addresses?
 
