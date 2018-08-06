@@ -37,6 +37,7 @@ Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic
 
 - General purpose: Basic A series, Standard A & D Series
 - Memory enhanced: DS Series
+- Compute optimised: F Series
 
 #### Storage
 
