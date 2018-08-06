@@ -129,7 +129,7 @@ This service is designed to be managed using the UKCloud for Microsoft Azure por
 
 ### What tools can I use to manage my service?
 
-You can use many common DevOps tools, such as ARM, Ansible and PowerShell, to interface with UKCloud for Microsoft Azure. UKCloud for Microsoft Azure also provides a User Interface (UI) to manage the infrastructure via a browser with the same experience as Azure Public Cloud.
+You can use many common DevOps tools, such as ARM, Ansible, Terraform and PowerShell, to interface with UKCloud for Microsoft Azure. UKCloud for Microsoft Azure also provides a User Interface (UI) to manage the infrastructure via a browser with the same experience as Azure Public Cloud.
 
 ### How long will it take to provision the service?
 
