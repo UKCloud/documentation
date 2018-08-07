@@ -3,7 +3,7 @@
     "baseUrl": "https://docs.ukcloud.com/"
   },
   "homepages": [],
-  "source_base_path": "C:/documentation",
+  "source_base_path": "C:/Users/cblack/ukrepos/documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -48,7 +48,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "mxJbI9Ue+Nh5tTAOEd4rnA=="
+          "hash": "3IsVrFYyeldQ1BxcVU23kw=="
         }
       },
       "is_incremental": false,
@@ -60,7 +60,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-gs.html",
-          "hash": "DimkSPPITWVmjIPRXLxV0w=="
+          "hash": "Yne83kBD84nkace8Jom5IA=="
         }
       },
       "is_incremental": false,
@@ -9704,7 +9704,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq-synchronous-protection.html",
-          "hash": "KdoWnd9+7T0n/rsaIFgCYw=="
+          "hash": "P9WqfqrGWcptbYhXHT501w=="
         }
       },
       "is_incremental": false,
