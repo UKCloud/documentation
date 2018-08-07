@@ -88,22 +88,22 @@
 <p>This Service Scope explains what is and isn't included in the scope of the UKCloud for VMware Synchronous Protection service option.</p>
 <p>Synchronous Protection is one of a variety of on‑platform protection options available from UKCloud. Use this service scope to understand what Synchronous Protection offers and whether it will meet your own recovery point objectives (RPO) and recovery time objectives (RTO).</p>
 <h2 id="about-synchronous-protection">About Synchronous Protection</h2>
-<p>The UKCloud for VMware Synchronous Protection service option is designed to offer geographical protection of your live environments across both of our sites (Farnborough and Corsham; 60 miles apart). To achieve this, we utilise synchronous replication between sites to ensure that any changes made to your environment are committed to arrays in both sites simultaneously.</p>
-<p>Synchronous Protection provides for an instant recovery point (for any data written, and flushed to disk) and then enables the ability to migrate your VMs between the sites while they are running, offering a greater level of protection for live environments.</p>
+<p>The UKCloud for VMware Synchronous Protection service option is designed to offer geographical protection of your live environments across both of our sites (Farnborough and Corsham; 60 miles apart). To achieve this, we utilise synchronous replication between sites to ensure that any changes made to your environment are committed to arrays in both sites before the write is confirmed as being complete to the VM OS.</p>
+<p>Synchronous Protection provides a replica of data (for any data written, and flushed to disk) and then enables the ability to migrate your VMs between the sites while they are running, offering a greater level of protection for live environments.</p>
 <p>Your service is only ever presented out of one of these sites (a VM exists in only one location at a time), but a synchronous copy between the sites ensures that an exact copy is stored in the second site, which can be brought online, with zero data loss, in the event of a failure.</p>
 <h2 id="synchronous-protection-availability">Synchronous Protection availability</h2>
 <p>Synchronous Protection is currently available in regions 1, 2, 7 and 8.</p>
 <h2 id="design">Design</h2>
-<p>Synchronous Protection is an active‑passive designed solution. The solution offers failover to a second UK site, however your VM will be active in only one site at any given time.</p>
-<p>Customers relying on a single virtual firewall in their primary site should be aware that in some circumstances, such as a failure of the inter site network, or of the customer's primary virtual firewall, access to their solution will be lost. If you require an active‑active solution, you can build across both sites and design in load balancing. Contact your Account Manager if you want to investigate this option.</p>
+<p>Synchronous Protection is an active‑passive solution. The solution offers failover to a second UK site, however your VM will be active in only one site at any given time.</p>
+<p>Customers relying on a single virtual firewall in their primary site should be aware that in some circumstances, such as a failure of the inter-site network, or of the customer's primary virtual firewall, access to their solution will be lost. If you require an active‑active solution, you can build across both sites and design in load balancing. Contact your Account Manager if you want to investigate this option.</p>
 <p>If a failure affects several VMs, they will be restarted in no particular order. We do not offer any controls to programmatically manage this - in most scenarios, the restart is automatic. If you need your VMs or vApps to be started in a particular order, we recommend that you restart them manually.</p>
 <p>Within each site we've architected a platform with a minimum of N+1 resilience, including routers and switches.</p>
 <h2 id="rpo-and-rto">RPO and RTO</h2>
-<p>Synchronous Protection provides a quickly implemented disaster recovery service with an RPO of almost 0 seconds. The RTO is variable and will be influenced by factors such as your application design and the ability to failover networks.</p>
-<p>For clarity, UKCloud does not use asynchronous replication technologies. The recovery point is the last write to disk with no historical recovery points (there is no ability to &quot;roll back&quot; to a previous version).</p>
+<p>Synchronous Protection provides a disaster recovery service with an RPO of almost 0 seconds. The RTO is variable and will be influenced by factors such as your application design and the ability to failover networks.</p>
+<p>For clarity, UKCloud does not use asynchronous replication technologies. The recovery point is the last write to disk with no historical recovery points (there is no ability to &quot;roll back&quot; to a previous version). If asynchronous replication with historical recovery points is required, consider <a href="vmw-sco-journaling-protection.html">Journaling Protection</a>.</p>
 <h2 id="unplanned-failover-process">Unplanned failover process</h2>
 <p>We monitor the underlying physical infrastructure including the blades, routers and switches. There are a variety of scenarios that can trigger an unplanned failover event.</p>
-<p>In the majority of scenarios, failover activities are non-intrusive and automatic. In scenarios such as multiple component failure, including loss of redundancy, in the majority of cases your VMs and edge gateway instances will be automatically brought online, either on an alternative physical device in the same site or in the second site. This is dependent on available resources.</p>
+<p>In the majority of scenarios, failover activities are automatic. In scenarios such as multiple component failure, including loss of redundancy, in the majority of cases your VMs and edge gateway instances will be automatically brought online, either on an alternative physical device in the same site or in the second site. This is dependent on available resources.</p>
 <p>However, other scenarios can result in a full or partial failover, and in these cases we'll need to react differently.</p>
 <h2 id="manual-failover">Manual failover</h2>
 <p>In some scenarios a full automated failover will not be possible. In each case the remedial actions may be different, and we have a variety of tools, such as VMware vMotion and VMware Storage vMotion, that we can utilise to return your VMs to service.</p>
@@ -175,7 +175,7 @@
 <ul>
 <li><p>If a physical appliance such as a host fails, VMs may be relocated to restore connectivity and is unlikely to require a full site failover.</p>
 </li>
-<li><p>If a virtual appliance such as a vShield Manager fails, failover may not resolve the issue and would potentially deviate technical resources from the recovery of the incident.</p>
+<li><p>If a virtual appliance such as a vShield Edge fails, failover may not resolve the issue and would potentially deviate technical resources from the recovery of the incident.</p>
 </li>
 </ul>
 </li>
@@ -243,7 +243,6 @@
 <p>UKCloud's firewalls are protected within each site, with the failover between the sites performed via an orchestrated process. We achieve this through a sequence of routing changes within our network (see the figure below).</p>
 <p><img src="images/network-image.png" alt="Network rerouting during failover"></p>
 <h2 id="failover-testing">Failover testing</h2>
-<p>Where possible, we test and prove the infrastructure and documentation with regular checks. In some cases, we cannot do this without impacting customer workloads. For these events, we perform a paper exercise to ensure the procedures are readily available, clearly defined and understood.</p>
 <p>If you want to test your own service, you can test the Synchronous Protection failover function by requesting a Test Scenario. Test Scenarios are designed to test and understand how your applications might react in a failover when the underlying physical hosts have failed (simulated in the scenario) or when the VMs have been migrated in a live state.</p>
 <p>A Test Scenario is not a customisable feature of UKCloud for VMware.</p>
 <h3 id="test-scenario-limitations">Test Scenario limitations</h3>
@@ -291,86 +290,6 @@
 <p>If we accept your request, we'll schedule the work to start at the time you specified as long as it is within office hours (0900 - 1730).</p>
 <h2 id="failover-testing-charges">Failover testing charges</h2>
 <p>We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the SFIA rate card) of £660 per day. Longer testing periods will need to be approved by UKCloud.</p>
-<h2 id="ukcloud-performed-test-evidence-of-synchronous-protection">UKCloud-performed test evidence of synchronous protection</h2>
-<p>We've performed the following tests to provide data that will help you design your solutions around the synchronous protection service option. We make no commitment about how the service will respond in the event of a real‑life failover.</p>
-<table>
-<thead>
-<tr>
-<th>Task</th>
-<th>Response</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Moving VMs between physical servers within the same site (DC1) <ul><li>vMotion client VM between hosts in DC1</li></ul></td>
-<td>- Success - 1 ping loss</td>
-</tr>
-<tr>
-<td>Moving VMs between the two sites (DC1 / DC2) <ul><li>vMotion client VM between DC1 / DC2</li></ul></td>
-<td>- Success - 15 ping loss (DC1 to DC2) <br> - Success - 1 ping loss (DC2 to DC1) </br> - Success - 1 ping loss (DC1 to DC2) <br> - Success - 1 ping loss (DC2 to DC1) </br><br> <strong>Note 1:</strong> Response time between VMs within DC1 &lt; 1ms</br> <strong>Note 2:</strong> Response time between VMs between DC1/DC2 ~ 4ms</td>
-</tr>
-<tr>
-<td>Moving VMs between physical servers within the same site (DC2) <ul><li>vMotion client VM between hosts in DC2</li></ul></td>
-<td>- Success - 13 ping loss <br> - Success - 1 ping loss </br> - Success - 1 ping loss</td>
-</tr>
-<tr>
-<td>Moving the standby virtual network between the sites <ul><li>vMotion of standby Virtual Networking Supervisors (between sites)</li></ul></td>
-<td>- Failed (Config fault identified and resolved) <br> - Success (ESX1 DC2) </br> - Success (ESX1 DC1) <br> - Rebooted following migration to, ESX1 DC2, remained in standby </br> - Success (ESX1 DC2) <br> - Success (ESX2 DC2)</td>
-</tr>
-<tr>
-<td>Moving the standby virtual network between the sites s vMotion of active Virtual Networking Supervisors (between sites)</td>
-<td>- Success (ESX1 DC2) <br> - Success (ESX1 DC1) </br> - Success (ESX2 DC2)</td>
-</tr>
-<tr>
-<td>Triggering the autonomous failover over of VMs by stopping the physical server <ul><li>HA (High Availability) event (ESX Host) <ul><li>VM running in DC2</li><li>Reboot of all ESX hosts in DC2</li></ul></li></ul></td>
-<td>- Success - HA moves VMs to DC1</td>
-</tr>
-<tr>
-<td>Triggering the autonomous failover over of VMs by stopping the physical servers within a cluster <ul><li>Complete restart (ESX hosts) <ul><li> Reboot of all ESX hosts in the cluster</li></ul></li></ul></td>
-<td>- Success - Virtual Networking supervisor VMs power back online, all networking comes back online <br> - Success - VMware HA restarts all client VMs</td>
-</tr>
-<tr>
-<td>Triggering the autonomous failover of the VM storage <ul><li>HA event (loss of storage) <ul><li> VM running in DC2 </li><li> Removed vPlex LUN presentation in DC2</li></ul></li></ul></td>
-<td>- Failed -- Config fault identified and resolved) <br> - Success - (approx 2 minutes + VM boot time </br> - Success - (approx 2 minutes + VM boot time</td>
-</tr>
-<tr>
-<td>Split site (Management Networking) <ul><li> Shutdown inter_dc link on DC2 firewall </li></ul></td>
-<td>- Success - In this scenario the ESX servers in DC2 were no longer accessible but VMs continued to run in DC2 (able to ping their default gateway/isolation address), communications between VMs continued to run (VXLAN is via an OTV network) <br> - Virtual Networking Supervisors continues in active-standby mode (OTV VLAN is used for comms)</td>
-</tr>
-<tr>
-<td>Split site (OTV networking and Management Networking) <ul><li> Remove OTV uplink trunking in DC2</li></ul></td>
-<td>Removing Virtual Networking Supervisors OTV connectivity <ul><li> Virtual Networking Supervisors go active/active, only one is able to connect to vCenter (so no effect/impact); client comms via vxlan continues </li></ul> Removing VXLAN OTV connectivity <ul><li> Client comms stops if VMs split between sites, no failover (ESX hosts still able to ping gateway/isolation addresses) </li></ul>  Adding connectivity <ul><li>Client comms resumes, VMs move to active/standby (originally active VM as the standby VM)</li></ul></td>
-</tr>
-</tbody>
-</table>
-<h2 id="known-risks-and-mitigations">Known risks and mitigations</h2>
-<p>Known risks and mitigations are detailed below to enable you to review and understand if synchronous protection is suitable for your use.</p>
-<table>
-<thead>
-<tr>
-<th>Risk</th>
-<th>Mitigation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>VMs continue running in the event of a site split on the networking side. Communication is lost between VMs within a client if straddling sites.</td>
-<td>In normal operation all VMs for a client will be within the same site.</td>
-</tr>
-<tr>
-<td>In event of a site split, there will be no management of the ESX hosts in the secondary site.</td>
-<td>Multiple resilient inter-DC links, along with protection of the vCenter server between the sites.</td>
-</tr>
-<tr>
-<td>Virtual Networking Supervisor in the secondary site assumes operation in the event of a site split, but is unable to connect into vCenter. Any attempt to change network connectivity of a VM will fail.</td>
-<td>Multiple resilient inter-DC links, along with protection of the vCenter server between the sites.</td>
-</tr>
-<tr>
-<td>ESX servers in DC2 no longer accessible. VMs continue to run in DC2 (still able to ping their default gateway/isolation address). Communications between VMs continue to run (VXLAN is via an OTV network).</td>
-<td>Multiple resilient inter-DC links, along with protection of the vCenter server between the sites.</td>
-</tr>
-</tbody>
-</table>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
