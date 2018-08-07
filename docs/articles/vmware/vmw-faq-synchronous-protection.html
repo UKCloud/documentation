@@ -8,7 +8,7 @@
     <title>Synchronous Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Synchronous Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.37.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -88,7 +88,7 @@
 <h3 id="what-is-the-enhanced-service">What is the ENHANCED service?</h3>
 <p>ENHANCED was a G-Cloud 7 service level option which was subsequently replaced with the product name &quot;Synchronous Protection&quot;. However, for most purposes, <a href="vmw-sco-journaling-protection.html">Journaling Protection</a> is more flexible.</p>
 <h3 id="how-is-the-environment-protected">How is the environment protected?</h3>
-<p>Any data that is written is committed to the underlying storage arrays in both UKCloud sites synchronously. This includes the full content of your VMs and edge gateway instances. For clarity, this is not a asynchronous replication technology and the recovery point is the last write to disk, with no historical recovery points. If asynchronous replication with historical recovery points is required, consider <a href="vmw-sco-journaling-protection.html">Journaling Protection</a>.</p>
+<p>Any data that is written is committed to the underlying storage arrays in both UKCloud sites synchronously. This includes the full content of your VMs and edge gateway instances. For clarity, this is not an asynchronous replication technology and the recovery point is the last write to disk, with no historical recovery points. If asynchronous replication with historical recovery points is required, consider <a href="vmw-sco-journaling-protection.html">Journaling Protection</a>.</p>
 <h3 id="how-is-an-unplanned-failover-event-triggered">How is an unplanned failover event triggered?</h3>
 <p>We monitor the underlying physical infrastructure, including the blades, routers and switches. In the event of multiple component failure, including loss of redundancy, in the majority of cases your VMs and edge gateway instances will be automatically brought online in the alternative site.</p>
 <p>However, other scenarios can result in a full or partial failover, and in these cases we'll need to react differently.</p>

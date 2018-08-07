@@ -8,7 +8,7 @@
     <title>Synchronous Protection Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Synchronous Protection Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.37.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -100,7 +100,7 @@
 <p>Within each site we've architected a platform with a minimum of N+1 resilience, including routers and switches.</p>
 <h2 id="rpo-and-rto">RPO and RTO</h2>
 <p>Synchronous Protection provides a disaster recovery service with an RPO of almost 0 seconds. The RTO is variable and will be influenced by factors such as your application design and the ability to failover networks.</p>
-<p>For clarity, UKCloud does not use asynchronous replication technologies. The recovery point is the last write to disk with no historical recovery points (there is no ability to &quot;roll back&quot; to a previous version). If asynchronous replication with historical recovery points is required, consider <a href="vmw-sco-journaling-protection.html">Journaling Protection</a>.</p>
+<p>For clarity, this product does not use asynchronous replication technologies. The recovery point is the last write to disk with no historical recovery points (there is no ability to &quot;roll back&quot; to a previous version). If asynchronous replication with historical recovery points is required, consider <a href="vmw-sco-journaling-protection.html">Journaling Protection</a>.</p>
 <h2 id="unplanned-failover-process">Unplanned failover process</h2>
 <p>We monitor the underlying physical infrastructure including the blades, routers and switches. There are a variety of scenarios that can trigger an unplanned failover event.</p>
 <p>In the majority of scenarios, failover activities are automatic. In scenarios such as multiple component failure, including loss of redundancy, in the majority of cases your VMs and edge gateway instances will be automatically brought online, either on an alternative physical device in the same site or in the second site. This is dependent on available resources.</p>
