@@ -19,7 +19,7 @@ toc_mdlink: vmw-faq-synchronous-protection.md
 
 ### What is the ENHANCED service?
 
-ENHANCED was a G-Cloud 7 service level option which was subsequently replaced with the product name "Synchronous Protection". It has now been replaced with [Journaling Protection](vmw-sco-journaling-protection.md).
+ENHANCED was a G-Cloud 7 service level option which was subsequently replaced with the product name "Synchronous Protection". However, for most purposes, [Journaling Protection](vmw-sco-journaling-protection.md) is more flexible.
 
 ### How is the environment protected?
 
