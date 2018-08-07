@@ -19,11 +19,11 @@ toc_mdlink: vmw-faq-synchronous-protection.md
 
 ### What is the ENHANCED service?
 
-ENHANCED was a G-Cloud 7 service level option which has now been replaced with a POWER VM with Synchronous Protection and Geo-resilient storage.
+ENHANCED was a G-Cloud 7 service level option which was subsequently replaced with the product name "Synchronous Protection". However, for most purposes, [Journaling Protection](vmw-sco-journaling-protection.md) is more flexible.
 
 ### How is the environment protected?
 
-Any data that is written is committed to the underlying storage arrays in both UKCloud sites simultaneously. This includes the full content of your VMs and edge gateway instances. For clarity, we don't use asynchronous replication technologies. The recovery point is the last write to disk, with no historical recovery points.
+Any data that is written is committed to the underlying storage arrays in both UKCloud sites synchronously. This includes the full content of your VMs and edge gateway instances. For clarity, this is not a asynchronous replication technology and the recovery point is the last write to disk, with no historical recovery points. If asynchronous replication with historical recovery points is required, consider [Journaling Protection](vmw-sco-journaling-protection.md).
 
 ### How is an unplanned failover event triggered?
 
@@ -37,7 +37,7 @@ You need to be aware of what this service offers. The UKCloud Synchronous Protec
 
 - Is not designed to be active‑active. It offers failover to a second UK site. If you need an active‑active solution, you can build across both sites and design in load balancing. Contact your Account Manager if you want to investigate this option.
 
-- Provides a quickly implemented disaster recovery service with an RPO of 0 seconds, and a variable RTO from 1 minute to longer, depending on the scenario.
+- Provides a disaster recovery service with an RPO of 0 seconds, and a variable RTO from 1 minute to longer, depending on the scenario.
 
 ### What will I need to do after an unplanned failover has occurred?
 
@@ -45,7 +45,7 @@ In the event of an unplanned failover, because your VMs are restarted in a crash
 
 ### What is the impact on latency?
 
-A consequence of synchronous replication is that there is a higher write latency (time taken for a write to be acknowledged). This is primarily due to the time taken for the write request to occur between the sites (limited by the speed of light). Typically, this means that writes take 15‑20ms (compared to 5‑10ms if Synchronous Protection is not selected). Depending on the workload, this may have a noticeable impact.
+A consequence of synchronous replication is that there is a higher write latency (time taken for a write to be acknowledged). This is primarily due to the time taken for the write request to occur on both sites. Typically, this means that writes take 15‑20ms (compared to 5‑10ms if Synchronous Protection is not selected). Depending on the workload, this may have a noticeable impact.
 
 If an application performs a large sequence of writes in series (one at a time), then the impact of the higher write latency will be felt. If, on the other hand, the application performs a number of writes in parallel (multiple writes at the same time), then the impact of the higher write latency will be significantly less.
 
@@ -53,7 +53,7 @@ We highly recommend that applications deployed with Synchronous Protection are d
 
 If you are unable to architect your application to make use of parallel writes, and the increased latency cannot be tolerated, then you should consider alternatives to Synchronous Protection, utilising application replication for protection between sites.
 
-For clarity, there is no difference in the read latency.
+For clarity, Synchronous Protection makes no difference to read latency.
 
 ### How is the network rerouted?
 
@@ -79,7 +79,7 @@ You cannot specifically request this as part of the service, but UKCloud retains
 
 ### Can I be alerted when a VM is moved to a different site?
 
-This feature isn't currently supported, but is a consideration for future development.
+This feature isn't currently supported. However, you can check the location of your VMs. For more information, see [*How to use VM location in vCloud Director*](vmw-how-use-vm-location.md).
 
 ## Failover testing
 
@@ -88,49 +88,6 @@ This feature isn't currently supported, but is a consideration for future develo
 You can test the failover function of the service by requesting a Test Scenario from UKCloud.
 
 For more information, see the [*Synchronous Protection Service Scope*](vmw-sco-synchronous-protection.md).
-
-### What is excluded from a Test Scenario?
-
-- We will not fail over the connectivity and physical firewall during a Test Scenario. You'll experience a network latency of a few milliseconds through this firewall.
-
-- We don't currently offer a "hard failover" test, in which a physical host would be switched off to simulate a hardware fail event.
-
-### How do I initiate a Test Scenario?
-
-1. Raise a Support Request indicating you want to complete a Test Scenario. Confirm the VDC and name the VMs (up to 10) you want to have failed over, along with the date, start and end time, and any other requirements. Remember that the start and end times must be during office hours.
-
-2. When we receive your request we will accept or reject it.
-
-3. If we accept it, we will schedule the Test Scenario to start on the date and at the time you specified.
-
-### What test options are available?
-
-Option 1: We dynamically move your VMs between our two sites.
-
-- We will dynamically move your VMs between the sites while the VMs remain online. There will be increased network latency between the VMs running in the different sites (circa 4-4.5 msec).
-
-Option 2: We restart your VMs between the two sites.
-
-- Your VMs can be shut down and restarted in the secondary site. If the shutdown is non‑graceful (power off as opposed to a Guest OS shutdown), this simulates the effect of a physical server outage from an individual VM perspective. This is the equivalent of a total site failure.
-
-- As the UKCloud platform is multi-tenanted, we will not replicate a physical host failure to invoke a DR scenario as this may affect other customers.
-
-- Failovers will last a maximum of 12 hours before being failed back to the originating site.
-
-### What testing outputs are available?
-
-It's highly likely that the testing of a failover will be seamless to you and therefore it will be difficult for you to gauge that the failover has occurred. To provide assurance that the test was successful, we'll produce a report that identifies the following:
-
-- A sanitised (removing ESX host names) report of the ESX servers that the VMs are located on during the period of the failover test
-- Comments and observations
-
-### What if I want to test on a live environment?
-
-You can test a maximum of 10 VMs on a live environment. Your users will experience a minimal outage as a consequence. We do not recommend testing on a live environment.
-
-### Are there charges for a service failover test?
-
-We generally allocate a day's worth of IT Operations effort for a failover test, charged per our SFIA rate card. Longer testing periods will need to be approved by UKCloud.
 
 ## Feedback
 
