@@ -19,7 +19,7 @@ By using pre-defined rules that consider factors such as CPU or memory usage, yo
 
 The following Red Hat document describes how to automatically scale out your compute instances in response to heavy system usage.
 
-[*Red Hat OpenStack Platform 8 Auto Scaling for Compute*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/8/pdf/auto_scaling_for_compute/Red_Hat_OpenStack_Platform-8-Auto_Scaling_for_Compute-en-US.pdf)
+[*Red Hat OpenStack Platform 8 Auto Scaling for Compute*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/pdf/auto_scaling_for_compute/Red_Hat_OpenStack_Platform-8-Auto_Scaling_for_Compute-en-US.pdf)
 
 ## Feedback
 
