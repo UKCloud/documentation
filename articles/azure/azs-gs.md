@@ -193,7 +193,7 @@ To grant a user access to UKCloud for Microsoft Azure:
 
 ## Configuring the Azure CLI
 
-Azure provides a command line interface (CLI) that you can use to manage your Azure resources. For example, you can use the Azure CLI to create virtual machines and deploy Azure Resource Manager templates.
+Microsoft provide a cross platform Azure command line interface (CLI) tool which runs on macOS, Linux and Windows that you can use to manage your Azure resources. For example, you can use the Azure CLI to create virtual machines and deploy Azure Resource Manager templates.
 
 For more information, including steps for setting up the Azure CLI with UKCloud for Microsoft Azure, see:
 
