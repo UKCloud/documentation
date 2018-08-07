@@ -23,7 +23,7 @@ ENHANCED was a G-Cloud 7 service level option which was subsequently replaced wi
 
 ### How is the environment protected?
 
-Any data that is written is committed to the underlying storage arrays in both UKCloud sites synchronously. This includes the full content of your VMs and edge gateway instances. For clarity, this is not a asynchronous replication technology and the recovery point is the last write to disk, with no historical recovery points. If asynchronous replication with historical recovery points is required, consider [Journaling Protection](vmw-sco-journaling-protection.md).
+Any data that is written is committed to the underlying storage arrays in both UKCloud sites synchronously. This includes the full content of your VMs and edge gateway instances. For clarity, this is not an asynchronous replication technology and the recovery point is the last write to disk, with no historical recovery points. If asynchronous replication with historical recovery points is required, consider [Journaling Protection](vmw-sco-journaling-protection.md).
 
 ### How is an unplanned failover event triggered?
 
