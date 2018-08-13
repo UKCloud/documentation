@@ -8,3 +8,7 @@
     href: gpu-gs-compute.md
   - name: Cloud GPU Visualisation
     href: gpu-gs-visualisation.md
+- name: Service Scope
+  items:
+  - name: Cloud GPU Service Scope
+    href: gpu-sco.md

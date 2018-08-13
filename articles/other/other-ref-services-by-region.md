@@ -23,7 +23,7 @@ Security domain | Services
 -----------------|--------
 Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet, HybridConnect<br>*VM type:* ESSENTIAL, POWER<br>*Storage:* Tier 1 (partial), Tier 2 | Geo-resilient<br>*Protection:* Journaling, Snapshot | Synchronous<br>Bring Your Own Firewall<br>Dedicated Compute
 &nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet
-&nbps; | **Email and Collaboration**<br>*Connectivity:* Internet, PSN-A
+&nbsp; | **Email and Collaboration**<br>*Connectivity:* Internet, PSN-A
 
 *Enablement services:* Mass Transfer Facility, Data Transfer Facility, Cloud Enablement, Smart Hands<br>
 *Cross Domain Security Zone:* UKCloud Guard, Walled Garden, Secure Remote Access

@@ -2,3 +2,7 @@
   items:
   - name: Private Cloud for Storage FAQs
     href: prs-faq.md
+- name: Service Scope
+  items:
+  - name: Private Cloud for Storage Service Scope
+    href: prs-sco.md

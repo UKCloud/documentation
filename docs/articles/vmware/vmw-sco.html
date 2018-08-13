@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UKCloud for VMware Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UKCloud for VMware Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.37.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="ukcloud-for-vmware-service-scope">UKCloud for VMware Service Scope</h1>
+
+<h2 id="about-this-document">About this document</h2>
+<p>This document describes the boundaries of the UKCloud for VMware service, along with the division of responsibilities between UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.</p>
+<h2 id="about-ukcloud-for-vmware">About UKCloud for VMware</h2>
+<p>The UKCloud for VMware service provides a secure, scalable and cost-effective platform for hosting virtual machines (VMs) of various sizes with different service levels.</p>
+<p>You can use the platform to build new services quickly and securely; and migrate, augment or transform existing applications. The platform is immediately available so you can provision and scale VMs in minutes.</p>
+<h2 id="service-architecture">Service architecture</h2>
+<p>Your UKCloud service architecture is as follows:</p>
+<p><strong>Company.</strong> Your contract with UKCloud is associated with a company, which provides a single owner for the contract, regardless of how many accounts are created.</p>
+<p><strong>Account.</strong> We use accounts to separate financial ownership. An account could represent an organisation, a customer contract, or a specific project. An account can also have several UKCloud services associated with it, such as UKCloud for VMware, Cloud Storage and UKCloud for OpenStack. You can also use accounts to separate users based on access requirements or permissions.</p>
+<p><strong>Organisation (vOrg).</strong> This represents your UKCloud for VMware service inside vCloud Director and on the UKCloud Portal. There is a 1:1 mapping of service to vOrg.</p>
+<p><strong>Virtual data centre (VDC).</strong> A VDC is where you define your workload type and build your virtual machines (VMs). You can create VDCs through the UKCloud Portal or the Portal API.</p>
+<h2 id="service-options">Service options</h2>
+<p>You can build a tailored solution to meet your requirements by mixing and matching service options. The choice does not lock you to one service or size, allowing you to scale resources up or down as your requirements change.</p>
+<p><strong>Workload type.</strong></p>
+<p>Workload type | Resource allocation | Automated Rebalancing
+-- -----------|---------------------|----------------------
+ESSENTIAL | Contended | Configured to meet requested performance
+POWER | Uncontended (CPU/GiB) | Pre-emptively optimises performance and availability
+PRIORITY |Uncontended (CPU/GiB) | Configured to reduce workload movement around the platform, reducing workload disruption</p>
+<p><strong>VM size.</strong> There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through vCloud Director.</p>
+<p>Full details of the available service options are outlined in the <em>Service Definition</em> <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-service-definition-document-2018-05-21-1254.pdf">Elevated</a>.</p>
+<h2 id="storage-options">Storage options</h2>
+<p>All workloads (except micro) include 60GiB of Tier 2 storage for free, all storage is persistent and resilient to local hardware failures. Micro sized VMs include 10GiB of Tier 2 storage.</p>
+<p>Additional storage can be purchased to support your application. Multiple storage options can be used to support different aspects of the application.</p>
+<ul>
+<li><p><strong>Tier 1.</strong> Our most performant block storage for workloads requiring consistently higher disk throughput.</p>
+</li>
+<li><p><strong>Tier 2.</strong> Persistent block storage with typical performance characteristics for use by production applications or storage.</p>
+</li>
+<li><p><strong>Geo-Resilient.</strong> Works in combination with Synchronous Protection to replicate storage across a SAN that spans site locations.</p>
+</li>
+</ul>
+<h2 id="storage-policies">Storage policies</h2>
+<p>We provide you with access to two storage policies: tier 1 and tier 2.</p>
+<p>Both policies have a 10TiB quota of storage to allow for rapid expansion of services as required.</p>
+<ul>
+<li><p>We do not guarantee storage performance, as it can be affected by many factors</p>
+</li>
+<li><p>We do not provide IOPs figures for our storage offerings</p>
+</li>
+<li><p>Workloads can use multiple storage profiles</p>
+</li>
+<li><p>Micro sized VMs have a fixed allocation of 10GiB of Tier 2 storage which cannot be increased</p>
+</li>
+</ul>
+<h2 id="protection">Protection</h2>
+<p>Customers have a range of automated, on-platform protection options to choose from for their environments:</p>
+<p><strong>Catalogue and template-based recovery.</strong> All customers have access to catalogue and template-based recovery as standard. This is a configuration management solution that can re-provision stateless servers to a new VM when required, using standard, and catalogue-based VM templates.</p>
+<p><strong>Snapshot Protection.</strong> 14-day or 28-day snapshot policies available. Data protected by the snapshot has an RPO of 24 hours, with RTO determined by the time taken to restore the VM after the service request is raised. See the <a href="vmw-sco-snapshot-protection.html"><em>Snapshot Protection Service Scope</em></a> for full details.</p>
+<p><strong>Journaling Protection.</strong> A non-invasive, self-service disaster recovery solution with configurable recovery points, providing near real-time data protection. The standard journaling profile provides a target RPO of 5 minutes and a journal history of 2, 7, 14 or 28 days. The <a href="vmw-sco-journaling-protection.html"><em>Journaling Protection Service Scope</em></a> covers the full details of this protection option.</p>
+<p><strong>Synchronous Protection.</strong> Geographical protection of your live environments across both of our sites.</p>
+<ul>
+<li><p>Currently available in regions 1, 2, 7 and 8.</p>
+</li>
+<li><p>Provides an RPO of almost 0 seconds.</p>
+</li>
+<li><p>The RTO is variable and will be influenced by factors such as your application design and the ability to failover networks. For more information, see theh <a href="vmw-sco-synchronous-protection.html"><em>Synchronous Protection Service Scope</em></a>.</p>
+</li>
+</ul>
+<h2 id="service-availability">Service availability</h2>
+<p>UKCloud platform availability is based on the workload type you purchase.</p>
+<p>The service level agreement (SLA) for POWER workloads guarantees 99.99% availability.</p>
+<p>ESSENTIAL and PRIORITY workload SLAs guarantee 99.95% availability.</p>
+<p>You are entitled to claim Service Credits for outages to services that take you out of SLA. For more about how we calculate SLAs, see the <a href="../other/other-ref-sla-definition.html"><em>SLA Definition</em></a>.</p>
+<h2 id="service-background">Service background</h2>
+<ul>
+<li><p>We maintain the standard VM template sizes that control allocation of CPU and resources.</p>
+</li>
+<li><p>VMs are fully provisioned.</p>
+</li>
+<li><p>The system is configured to automatically balance resources, so your VMs may vMotion between physical hosts. PRIORITY workloads are configured to reduce movement around the platform.</p>
+</li>
+<li><p>To maintain performance across the platform, UKCloud can perform movements/migrations of VMs, vApps or storage within the infrastructure assigned to a service.</p>
+</li>
+<li><p>We actively capacity-manage the cloud platform to ensure you have access to the resources you request.</p>
+<p>The UKCloud platform is designed using sites, regions and zones. The relationship between them is shown below:</p>
+<p><img src="images/vmw-srz.png" alt="Geographical diversity"></p>
+</li>
+<li><p>You can specify Farnborough or Corsham as the site where you would like to have your service provisioned. We will try to accommodate requests and will advise you if we are unable do so.</p>
+</li>
+<li><p>We control the deployed versions of technology on the platform. This covers internal platform-supporting technologies, and any technology versions available to you.</p>
+<ul>
+<li><p>Internally this includes, but isn't limited to, the vSphere and ESX versions, and the hardware version of the platform.</p>
+</li>
+<li><p>Externally this includes the available versions of the edge gateway and vCloud Director.</p>
+</li>
+</ul>
+</li>
+<li><p>Promiscuous mode is disabled.</p>
+</li>
+<li><p>You can set affinity or anti-affinity rules through vCloud Director so that VMs do, or do not, run on the same physical host.</p>
+</li>
+<li><p>You can make additional configurations inside a VM (such as acting as a secondary hypervisor or implementing third-party software technologies). We do not support customer implementations inside a VM.</p>
+</li>
+</ul>
+<h2 id="operating-systems">Operating systems</h2>
+<p><strong>Licensing.</strong> We can provide:</p>
+<ul>
+<li><p>OS licensing through the SPLA and academic frameworks for Microsoft</p>
+</li>
+<li><p>Red Hat Enterprise Linux licensing</p>
+</li>
+</ul>
+<p>For the latest available licences, please check the <em>Service Definition</em> <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-service-definition-document-2018-05-21-1254.pdf">Elevated</a> and the <em>Pricing Guide</em> <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-pricing-document-2018-05-23-0844.pdf">Elevated</a>.</p>
+<p>You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you're providing your own licensing for a retrospective discount.</p>
+<p>For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.</p>
+<p><strong>VM server images.</strong> We provide base VM images for the operating systems (OS) for which we provide licensing. You can access these from vCloud Director.</p>
+<p>You can use your own images for non-Windows and RHEL services, where licensing stipulates that to use the VM on our platform it must be licensed (and reported back to the software vendor) by UKCloud.</p>
+<p><strong>Update services.</strong> We make update repositories available for all software for which we provide licensing. We don't provide software update facilities for non-UKCloud licensed software.</p>
+<p><strong>Anti-virus.</strong> We do not provide anti-virus software as part of the service.</p>
+<h2 id="networks">Networks</h2>
+<p>A full overview of the connectivity options and network architecture is available in <a href="vmw-ref-connectivity-options.html"><em>Understanding connectivity options in UKCloud for VMware</em></a>.</p>
+<p>We manage the physical firewalls that face public and secure networks.</p>
+<p><strong>Internet-facing solutions</strong> have 2 usable public IP addresses. You can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.</p>
+<p><strong>PSN-facing solutions.</strong> You should raise a Service Request or contact your Customer Success Manager (CSM) to be assigned your IP address. Contended bandwidth (uncapped).</p>
+<p><strong>Janet and N3/HSCN solutions</strong> have one usable IP address. You can request additional IP addresses via a Service Request.</p>
+<p>From a customer management experience, you manage all your connectivity rules, such as firewall, IPsec VPN and NAT functionality, through your edge gateway, using either the UKCloud Portal GUI or API.</p>
+<h2 id="edge-gateway-previously-vshield-edge">Edge gateway (previously vShield Edge)</h2>
+<ul>
+<li><p>By default, we assign one edge gateway per connectivity type.</p>
+</li>
+<li><p>For VDCs you create through the Portal API, you are responsible for creating your own edge gateway.</p>
+</li>
+<li><p>You can have up to nine Org VDC networks per edge gateway.</p>
+</li>
+</ul>
+<p><strong>vApp edge.</strong> vApp networks allow you to create smaller networks within individual vApps which have a vApp Edge, similar to the edge gateway on your VDC. Although a vApp Edge isn't as feature rich as an edge gateway, it lets you create firewall and NAT rules to separate your VDC networks from your vApp virtual machines (VMs). See <a href="vmw-how-create-vapp-network.html"><em>vApp networking</em></a> for configuration details.</p>
+<p><strong>Site-to-site IPsec VPN.</strong> You can create IPsec VPN tunnels to connect the services located behind different NFTs. You can also externally configure IPsec VPNs. There is a limit of 64 tunnels per edge gateway.</p>
+<p><strong>SSL VPN.</strong> You can create SSL VPN tunnels that terminate on the edge gateway, providing up to 50 concurrent users with access to that VDC. We recommend you use this for occasional administrative purposes, rather
+than as part of a regular end-user design.</p>
+<p><strong>Load balancing.</strong> The edge gateway acts as a basic layer 3 load balancer, including features such as session persistence and health checks. If you need more advanced load balancing, you should consider a third-party product.</p>
+<h2 id="bring-your-own-firewall">Bring Your Own Firewall</h2>
+<p>Bring Your Own Firewall allows you to customise your networking infrastructure by installing your own virtual firewall appliance in place of the edge gateway included as standard.</p>
+<p>We don't offer a rebate for unused edges. If you choose to bring your own firewall, you are completely responsible for the deployment, configuration and management of that firewall.</p>
+<p>If you change from a UKCloud-provided firewall to your own firewall, we will redeploy your firewall on to a dedicated network and you will need to migrate your environment to that network.</p>
+<p>Full customer and UKCloud responsibilities can be found in the <a href="vmw-sco-byof.html"><em>Bring Your Own Firewall Service Scope</em></a>.</p>
+<h2 id="protective-monitoring">Protective monitoring</h2>
+<p>We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.</p>
+<p>We don't provide Protective Monitoring services above the hypervisor (for example, for your VM) - it is your responsibility to act at this level.</p>
+<p>In line with UKCloud's SISP, we provide notification of customer-impacting security incidents. It is your responsibility to report similar incidents to us.</p>
+<h2 id="platform-management">Platform management</h2>
+<p>Users can access, manage and view the UKCloud for VMware service, accessing only those features allowed by their role, in any of the following ways:</p>
+<ul>
+<li><p><strong>vCloud Director API.</strong> Enables the programmatic creation and management of VMs inside the platform.</p>
+</li>
+<li><p><strong>vCloud Director graphical UI.</strong> Provides a graphical interface to access the vCloud Director environment (depending on assigned permissions).</p>
+</li>
+<li><p><strong>UKCloud Portal.</strong> Enables the creation of compute services and subsequently VDCs and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the Portal.</p>
+</li>
+</ul>
+<p>You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the vSphere environment.</p>
+<h2 id="service-migration">Service migration</h2>
+<p>You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the <em>Pricing Guide</em> <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-pricing-document-2018-05-23-0844.pdf">Elevated</a>.</p>
+<p>Customers are free to migrate their workloads. You can also request a migration through a Service Request. Migrations may be between:</p>
+<ul>
+<li><p>Services (for example, ESSENTIAL to POWER)</p>
+</li>
+<li><p>UKCloud sites or zones</p>
+</li>
+<li><p>The Assured and Elevated security domains</p>
+</li>
+</ul>
+<h2 id="service-reporting">Service reporting</h2>
+<p><strong>Visibility.</strong> We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the Portal.</p>
+<p><strong>Service reporting.</strong> All service reporting is done via the UKCloud Portal.</p>
+<p><strong>Billing.</strong> We provide you with monthly bills covering your monthly spend.</p>
+<h2 id="customer-service">Customer service</h2>
+<p><strong>Customer Success Manager (CSM).</strong> For the first 90 days of the service, you have access to a UKCloud Customer Success Manager, who will help you with your adoption of the UKCloud UKCloud for VMware service,  including finding relevant systems and using UKCloud tools and processes.</p>
+<p><strong>Cloud Architects.</strong> UKCloud Cloud Architects support you during the design of solutions for the cloud platform. UKCloud Cloud Architects are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions, such as those using HybridConnect or a Walled Garden.</p>
+<p><strong>Technical Account Managers (TAM).</strong> You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.</p>
+<p><strong>Support.</strong> After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the <a href="https://ukcloud.com/wp-content/uploads/2017/07/UKCloud-Factsheet-Customer-Care.pdf"><em>Customer Engagement Factsheet</em></a>.</p>
+<h2 id="customer-responsibilities">Customer responsibilities</h2>
+<ul>
+<li><p>You are responsible for assessing whether the UKCloud platform can support the various requirements of your application.</p>
+</li>
+<li><p>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.</p>
+</li>
+<li><p>If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.</p>
+</li>
+<li><p>Management and administration of layers above the hypervisor (OS patching, application performance monitoring, user administration).</p>
+</li>
+<li><p>The customer is also responsible for ensuring only lawful data that supports the UK public sector is stored and processed by applications on this environment, and that they fully comply with the UKCloud Security Operating Procedures (SyOPs) and other information assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.</p>
+</li>
+</ul>
+<h2 id="service-provisioning">Service provisioning</h2>
+<p>Within 4 hours of accepting an order (shorter deployment times are typically achieved and can be prioritised upon request), UKCloud will create the customer's Primary Administrator account and send a Welcome Pack which includes the URL for the UKCloud Customer Portal, and the getting started guide. Customers can self-provision UKCloud for VMware services via the UKCloud Portal or the Portal API.</p>
+<p>UKCloud has created several videos, help guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the <a href="https://docs.ukcloud.com/">Knowledge Centre</a>.</p>
+<p>In addition, you will be assigned a Customer Success Manager (CSM) to provide any assistance required during the first 90 days of the service.</p>
+<p>UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud would be pleased to introduce you to the right partner to suit your needs.</p>
+<h2 id="service-constraints">Service constraints</h2>
+<p>UKCloud will adhere to the following in terms of maintenance windows:</p>
+<p>&quot;Planned Maintenance&quot; means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, UKCloud shall provide affected customers with at least fourteen (14) days' notice of the Planned Maintenance.</p>
+<p>If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. For ESSENTIAL and POWER services this event will count in SLA calculations. For VMs running as a PRIORITY configuration, this time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.</p>
+<p>&quot;Emergency Maintenance&quot; means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud shall:</p>
+<p>a)  provide affected customers with at least six (6) hours' advance notice and</p>
+<p>b)  carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.</p>
+<p>If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.</p>
+<h2 id="supporting-documents-and-resources">Supporting documents and resources</h2>
+<p>The following documents contain more information about UKCloud for VMware and the service options:</p>
+<ul>
+<li><p><em>UKCloud for VMware Service Definition</em> <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-service-definition-document-2018-05-21-1254.pdf">Elevated</a></p>
+</li>
+<li><p><a href="vmw-faq.html"><em>UKCloud for VMware FAQ</em></a></p>
+</li>
+<li><p><a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
+</li>
+<li><p><a href="vmw-sco-snapshot-protection.html"><em>Snapshot Protection Service Scope</em></a></p>
+</li>
+<li><p><a href="vmw-sco-journaling-protection.html"><em>Journaling Protection Service Scope</em></a></p>
+</li>
+<li><p><a href="vmw-sco-synchronous-protection.html"><em>Synchronous Protection Service Scope</em></a></p>
+</li>
+<li><p><a href="vmw-sco-byof.html"><em>Bring Your Own Firewall Service Scope</em></a></p>
+</li>
+<li><p><a href="vmw-ref-connectivity-options.html"><em>Understanding connectivity options in UKCloud for VMware</em></a></p>
+</li>
+<li><p><em>UKCloud Terms and Conditions</em> <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-terms-and-conditions-2018-05-21-1254.pdf">Elevated</a></p>
+</li>
+<li><p><a href="../other/other-ref-sla-definition.html"><em>SLA Definition</em></a></p>
+</li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-sco.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

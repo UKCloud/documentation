@@ -76,6 +76,7 @@ Yes, as this is a true IaaS cloud service, you have complete control and autonom
 
 UKCloud offers a variety of predefined flavours to meet customers' needs. The smallest configuration is 512MiB memory and 1 vCPU. The largest is 440GiB memory with 56 vCPU.
 
+
 Check the service definition for more details on the currently available sizes.
 
 ### Does UKCloud for OpenStack offer GPU optimised instances?

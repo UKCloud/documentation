@@ -8,7 +8,7 @@
     <title>UKCloud for OpenStack FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for OpenStack FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.37.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,7 +91,7 @@
 <h3 id="what-hypervisor-do-you-use">What hypervisor do you use?</h3>
 <p>UKCloud for OpenStack is built using Red Hats KVM hypervisor technology, a trusted solution for implementing virtualized environments.</p>
 <h3 id="does-ukcloud-offer-dedicated-bare-metal-host-capabilities-openstack-ironic-with-ukcloud-for-openstack">Does UKCloud offer dedicated, bare metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?</h3>
-<p>UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack product. UKCloud offers its 'Private Cloud for Compute' product which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.</p>
+<p>UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack product. We do however provide &quot;large&quot; instances, with upto 56 vCpus and 440Gb Ram, with no overcommit. UKCloud also offers its 'Private Cloud for Compute' product which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.</p>
 <h3 id="which-disk-formats-does-ukcloud-for-openstack-support">Which Disk formats does UKCloud for OpenStack support?</h3>
 <p>The disk format of a virtual machine image is the format of the underlying disk image. Virtual appliance vendors have different formats for laying out the information contained in a virtual machine disk image.</p>
 <p>Set the disk format for your image to one of the following values:</p>
@@ -111,12 +111,12 @@
 <p>Instances are contended using the default OpenStack ratios against the following resources:</p>
 <ul>
 <li>CPU - 16:1</li>
-<li>Memory - 1.5:1</li>
+<li>Memory - 1.1:1</li>
 </ul>
 <h3 id="do-i-get-root-access-onto-the-instances-i-deploy">Do I get root access onto the instances I deploy?</h3>
 <p>Yes, as this is a true IaaS cloud service, you have complete control and autonomy over each instance you deploy, and so have full 'root' or administrative access.</p>
 <h3 id="what-instance-sizes-are-available">What Instance sizes are available?</h3>
-<p>UKCloud offers a variety of flavours to meet customers' needs. The smallest configuration is 512MiB and 1 vCPU. The largest is 64GiB memory with 8 vCPU.</p>
+<p>UKCloud offers a variety of flavours to meet customers' needs. The smallest configuration is 512MiB and 1 vCPU. The largest is 440GiB memory with 56 vCPU.</p>
 <p>Check the service definition for more details on the currently available sizes.</p>
 <h3 id="does-ukcloud-for-openstack-offer-gpu-optimised-instances">Does UKCloud for OpenStack offer GPU optimised instances?</h3>
 <p>Currently UKCloud does not offer GPU optimised OpenStack instances.</p>
@@ -148,7 +148,7 @@
 <p>To access the infrastructure via the dashboard and API you will need access through any firewalls on the following ports to the OpenStack endpoints you target.</p>
 <p>13774, 13696, 13776, 13042, 13292, 13777, 13776, 80, 443, 13004, 13386, 13041, 13000</p>
 <h3 id="how-does-ukcloud-provide-urgent-maintenance-notifications-and-incident-reports">How does UKCloud provide urgent maintenance notifications and incident reports?</h3>
-<p>You can view these on the notifications page on the UKCloud Portal. In addition, Service Status reports are published on the Portal.</p>
+<p>You can view these on the notifications page <a href="https://status.ukcloud.com">https://status.ukcloud.com</a>. In addition, Service Status reports are published on the Portal.</p>
 <h3 id="do-you-offer-dynamic-or-static-ip-addresses">Do you offer dynamic or static IP addresses?</h3>
 <p>The external IP addresses are static. Internal IPs can be assigned statically from a pool, manually or dynamically via DHCP.</p>
 <h3 id="are-external-domain-name-system-dns-services-available">Are external Domain Name System (DNS) services available?</h3>

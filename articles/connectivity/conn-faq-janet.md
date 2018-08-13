@@ -49,7 +49,7 @@ No, Janet connections are only available in our Assured OFFICAL security domain.
 
 ## I have multiple vShield Edges and need to configure a specific Janet route. How do I set this up?
 
-To configure specific routing to allow access to each network, a routing table is available to download from the UKCloud Portal within [*Network configuration for Janet and internet access*](conn-ref-janet-config-internet.md).
+To configure specific routing to allow access to each network, a routing table is available from UKCloud support.
 
 ## If I already have a Janet connection, can I use cloud services provided by UKCloud?
 

@@ -14,12 +14,26 @@
     href: ostack-how-recover-instance.md
   - name: Manage UKCloud for OpenStack accounts in the UKCloud Portal
     href: ostack-how-manage-accounts-portal.md
+  - name: Move resources between OpenStack regions
+    href: ostack-how-move-resources.md
+  - name: Retrieve your Windows password on UKCloud for OpenStack
+    href: ostack-how-retrieve-windows-password.md
+  - name: Use OpenStack instance metadata
+    href: ostack-how-use-instance-metadata.md
   - name: Use the OpenStack Command Line Client on Microsoft operating systems
     href: ostack-how-use-cli.md
 - name: Reference
   items:
+  - name: Auto Scaling for UKCloud for OpenStack
+    href: ostack-ref-auto-scaling.md
+  - name: Command-line clients for UKCloud for OpenStack
+    href: ostack-ref-cli-clients.md
   - name: How the UKCloud OpenStack platform outperforms hyperscalers
     href: ostack-ref-ukcloud-outperforms.md
+  - name: Introduction to the OpenStack dashboard
+    href: ostack-ref-dashboard.md
+  - name: OpenStack public image versioning
+    href: ostack-ref-public-image-versioning.md
 - name: Service Scope
   items:
   - name: UKCloud for OpenStack Service Scope

@@ -1,3 +1,7 @@
+- name: FAQs
+  items:
+  - name: Secure Remote Access FAQs
+    href: sra-faq.md
 - name: Getting Started
   items:
   - name: Secure Remote Access
