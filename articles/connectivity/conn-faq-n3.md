@@ -17,17 +17,21 @@ toc_mdlink: conn-faq-n3.md
 
 ## General
 
+### Can I still connect to N3 on UKCloud?
+
+N3 is no longer generally available on UKCloud. HSCN is the replacement for N3 and connectivity is now available on UKCloud. New customers should connect straight to HSCN, existing customers should consider their migration strategy to HSCN before January 2019, when UKCloud will begin decomissioning N3.
+
+For more information about connecting to HSCN, please see the [*HSCN connectivity FAQs*](conn-faq-hscn.md).
+
 ### What is N3?
 
 N3 is the NHS national network for healthcare. Technically the N3 does not exist anymore - officially it is known as the Transition Network, however it is still unofficially called N3. The N3 is being replaced by the Health and Social Care Network (HSCN). For more information, please see the [*HSCN connectivity FAQs*](conn-faq-hscn.md).
 
-The N3 provides hospitals, medical centres and GP practices with access to broadband, collaboration and voice services. In addition to its infrastructure role, the N3 network securely delivers third-party software solutions to front-line patient care organisations. It is a government network like the PSN, but specifically designed for the health and social care community.
-
 ### Considering the Health and Social Care Network (HSCN), when will N3 services cease?
 
-We'll be able to provide HSCN connectivity from early 2018. In the meantime, we can provide you with N3 connectivity and we'll contact you to arrange migration to HSCN.
+HSCN is now avaialble from UKCloud, and N3 is no longer available to purchase except in extenuating circumstances. 
 
-N3 officially ceases to exist in April 2019.
+N3 officially ceases to exist in August 2020, however in line with NHD Digital guidance for private organisations UKCloud will be terminating its N3 connection in January 2019
 
 ### What does 'N3 aggregator' status mean to UKCloud?
 
@@ -67,11 +71,9 @@ Billing for N3 connectivity is monthly in arrears. Charges are included in your 
 
 You can choose how you are charged:
 
-- Pay for the data that is transferred (outbound) via your N3 service each month, beginning with a starter pack at 250GB
+- Per environment connected to N3 - £250 per connected environment
 
-- Pay a set fee per month for unlimited data transfer
-
-We charge for each separate connection on the UKCloud platform.
+- Unlimited connections into environments - £3500 per month
 
 UKCloud pricing is available via the G-Cloud Digital Marketplace.
 
