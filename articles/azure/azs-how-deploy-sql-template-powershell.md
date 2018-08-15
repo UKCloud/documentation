@@ -26,7 +26,7 @@ It will guide you through the process of:
 ## What is an ARM Template?
 
 You can use Azure Resource Manager templates to deploy and provision all the resources for your application in a single, coordinated operation. You can also redeploy templates to make changes to the resources in a resource group.
-These templates can be deployed with the Microsoft Azure Stack portal, PowerShell, the command line, and Visual Studio.
+These templates can be deployed with the Microsoft Azure Stack portal, PowerShell, Azure CLI, REST API and Visual Studio.
 The following quickstart templates are available on [GitHub](http://aka.ms/AzureStackGitHub).
 
 ## Prerequisites
