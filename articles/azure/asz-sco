@@ -23,11 +23,9 @@ This document describes the boundaries of the UKCloud for Microsoft Azure servic
 
 UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure platform and we deliver this service from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners. The service is based on the Microsoft Azure Stack product, which has been developed by Microsoft as an extension of the Azure public cloud.
 
-## Service architecture
+## Service options
 
-[Need to talk plans, offers, etc]
-
-[AAD]
+You can build a tailored solution to meet your requirements by mixing and matching service options. The choice does not lock you to one service or size, allowing you to scale resources up or down as your requirements change.
 
 By default customers will initially have access to:
 
@@ -35,9 +33,7 @@ By default customers will initially have access to:
 - YY GB memory
 - ZZ GB storage
 
-## Service options
-
-You can build a tailored solution to meet your requirements by mixing and matching service options. The choice does not lock you to one service or size, allowing you to scale resources up or down as your requirements change. The options below are all currently available within the service:
+The options below are all currently available within the service:
 
 ## IaaS Compute 
 Virtual machines (VMs) provide the basic building block providing compute resource within UKCloud for Microsoft Azure. Each standard machine has a pre-allocated number of vCPU's, amount of memory and a temporary disk. The available sizes and families of VM's are contiually increasing, broadly, the following machine families are supported:
@@ -146,7 +142,7 @@ Every Marketplace item has:
 
 UKCloud have pre-populated the Marketplace with a variety of images and templates that have been identified as the most useful services. Customers can request additional are added, providing they are approved for use on Microsoft Azure Stack. Here is the full list of [available items](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-marketplace-azure-items)
 
-The customer is repsonsiblke for ensuring that they have in place appropriate licencing and support for any item deployed from the Marketplace not licenced by UKCloud.
+The customer is repsonsible for ensuring that they have in place appropriate licencing and support for any item deployed from the Marketplace not licenced by UKCloud.
 
 ## Operating systems
 
