@@ -1,0 +1,249 @@
+---
+title: UKCloud for Microsoft Azure Service Scope | UKCloud Ltd
+description: Outlines important details regarding UKCloud for Microsoft Azure
+services: Azure
+author: Andy Webb
+toc_rootlink: Service Scope
+toc_sub1: 
+toc_sub2:
+toc_sub3:
+toc_sub4:
+toc_title: UKCloud for Microsoft Azure Service Scope
+toc_fullpath: Service Scope/asz-sco.md
+toc_mdlink: asz-sco.md
+---
+
+# UKCloud for Microsoft Azure Service Scope
+
+## About this document
+
+This document describes the boundaries of the UKCloud for Microsoft Azure service, along with the division of responsibilities between UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.
+
+## About UKCloud for Microsoft Azure
+
+UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure platform and we deliver this service from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners. The service is based on the Microsoft Azure Stack product, which has been developed by Microsoft as an extension of the Azure public cloud.
+
+## Service architecture
+
+Your UKCloud service architecture is as follows:
+
+## Service options
+
+You can build a tailored solution to meet your requirements by mixing and matching service options. The choice does not lock you to one service or size, allowing you to scale resources up or down as your requirements change.
+
+## IaaS Compute 
+Virtual machines (VMs) provide the basic building block providing compute resource within UKCloud for Microsoft Azure. The size and family of VM's are contiually evolving, and the full list of supported machines can be found here:  https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes
+
+Broadly, the following machine families are supported:
+
+- Basic and Standard A-series. Have CPU performance and memory configurations best suited for entry level workloads like development and test.  
+- Standard D and DS Series. Have optimised CPU-to-memory configuration making them suitable for most general-purpose applications. A subset of the D-series VMs also sport higher memory per CPU making them suitable for applications that require higher amounts of memory. 
+- Basic and Standard F series. Are optimised for CPU intensive workloads so have a higher CPU to memory configurations.
+
+Customers can deploy VMs using the UKCloud for Microsoft Azure portal and other tooling.
+
+## Storage Options 
+There are several ways in which storage can be addressed in UKCloud for Microsoft Azure:
+
+- Azure blob storage (Page) ¦ Used to support virtual machine disks. Good for randomly accessed large files 
+- Azure blob storage (block) ¦ Object storage good for storing documents, videos and images 
+- Azure blob storage (Apend) ¦ Used for log files 
+- Azure Queue Storage ¦ Message queue as a service to provide asynchronous scale out micro-services among other things  
+- Azure Table Storage ¦ NoSQL database service, good for highly scalable, eventually consistent database support  
+
+[!NOTE]
+All storage in Azure Stack is taken from a common pool. When designing your service for UKCloud for Microsoft Azure, consider the best usage of your storage. For example, if you have a large object storage requirement, consider using the UKCloud's Cloud storage platform as part of your solution. 
+ 
+## Service Management **
+- API 
+- UKCloud for Microsoft Azure Marketplace – provides access to pre-created images which help speed up application delivery 
+- Azure Resource Manager – allows customers to write templates to deploy, update and delete UKCloud for Microsoft Azure resources in a single coordinated operation 
+- VM Extensions – UKCloud for Microsoft Azure supports virtual machine extensions that provide post deployment management for automation (for example, Docker) 
+ 
+## Network
+
+We manage the physical firewalls that face public and secure networks.
+
+[CB]
+
+**Internet-facing solutions** have 2 usable public IP addresses. You can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.
+
+**PSN-facing solutions.** You should raise a Service Request or contact your Customer Success Manager (CSM) to be assigned your IP address. Contended bandwidth (uncapped).
+
+**Janet and N3/HSCN solutions** have one usable IP address. You can request additional IP addresses via a Service Request.
+
+From a customer management experience, you manage all your connectivity rules, such as firewall, IPsec VPN and NAT functionality, through your gateway, using either the Azure Stack Portal GUI or API.
+Customers can deploy mutliple gateway devices and configure the following:
+
+- Virtual networks – UKCloud for Microsoft Azure allows customers to configure virtual private clouds, and allows them to create and manage their private address space within Azure. This can be configured via the UI, API and other tooling 
+- Load balancers (IPv4 only) – customers can deploy basic load balancers o VPN gateway – the UKCloud for Microsoft Azure VPN gateway can be used to create site-to-site VPNs to remote infrastructure 
+- Routing – basic custom defined routing can be configured on virtual networks 
+- SSL VPN?
+
+## Advanced features 
+- Key Vault. UKCloud for Microsoft Azure provides cryptographic secret storage for applications and services. These services can be consumed by both portal and API.  
+https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-kv-intro  
+
+## Protection options
+
+Customers are responsible for designing their own disaster recovery and backup solutions as part of their adoption of UKCloud for Microsoft Azure.
+
+## Service availability
+
+The availability of your virtual machines in UKCloud for Microsoft Azure follows the same principles of the Microsoft Azure Public Cloud, where customers achieve a higher service level availability based on how they architect the solution. 
+
+The service levels are as follows:
+
+- 99.90% (a single VM deployed as a single instance deployed inside and availability zone)
+- 99.95% (a single VM with two instances deployed inside an availability zone)
+
+[!TIP]
+To qualify for the higher service level, customers are advised to use on platform tools like availability sets that ensures your VMs are provisioned to different hardware in the region.
+
+## Service background
+
+- VMs are fully provisioned.
+
+- The system is configured to automatically balance resources, so your VMs may be moved between physical hosts.
+
+- We actively capacity-manage the cloud platform to ensure you have access to the resources you request.
+
+- You can specify the site where you would like to have your service provisioned (from available sites). 
+
+- The UKCloud for Microsoft Azure service is updated regurllary with the latest code release from Microsoft - typically, this is once a month. The application of these updates is after internal verification of the update. Often these updates bring new features, increased service options, bug fixes or updated API versions.
+
+- We control the deployed versions of technology on the platform. This covers internal platform-supporting technologies, and any technology versions available to you.
+
+- You can set affinity or anti-affinity rules through the Azure Stack portal using availability sets so that VMs do, or do not, run on the same physical host.
+
+- You can make additional configurations inside a VM (such as acting as a secondary hypervisor or implementing third-party software technologies). We do not support customer implementations inside a VM.
+
+## Azure Marketplace
+
+UKCloud for Microsoft Azure includes access to a local version of the Azure Marketplace. As part of this service, UKCloud have pre-popuylated this service with a variety of images and templates that customers have requested.
+UKCloud can add additional templates and images to the Marketplace at a customers request, providing they are approved for use on Microsoft Azure Stack. The full list of approved artciles is found here:
+
+https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-marketplace-azure-items
+
+
+## Operating systems
+
+**Licensing.** We can provide:
+
+- OS licensing for Microsoft
+
+- Red Hat Enterprise Linux licensing
+
+For the latest available licences, please check the *Service Definition* [xxxxx].
+
+You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you're providing your own licensing for a retrospective discount.
+
+For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.
+
+**VM server images.** We provide base VM images for the operating systems (OS) for which we provide licensing. You can access these from the Market Place available within the Azure Stack portal.
+
+You can use your own images for non-Windows and RHEL services, where licensing stipulates that to use the VM on our platform it must be licensed (and reported back to the software vendor) by UKCloud.
+
+
+[CB]
+**Update services.** We make update repositories available for all software for which we provide licensing. We don't provide software update facilities for non-UKCloud licensed software.
+
+**Anti-virus.** We do not provide anti-virus software as part of the service.
+
+## Protective monitoring
+
+We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the hypervisor level and below.
+
+We don't provide Protective Monitoring services above the hypervisor (for example, for your VM) - it is your responsibility to act at this level.
+
+In line with UKCloud's SISP, we provide notification of customer-impacting security incidents. It is your responsibility to report similar incidents to us.
+
+## Platform management
+
+Users can access, manage and view the UKCloud for Microsoft Azure service, accessing only those features allowed by their role, in any of the following ways:
+
+- **Azure Stack API.** Enables the programmatic creation and management of VMs inside the platform.
+
+- **Azure Stack graphical UI.** Provides a graphical interface to access the Azure Stack environment (depending on assigned permissions).
+
+- **UKCloud Portal.** Access to service reporting and incident and request management.
+
+You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware.
+
+## Service reporting
+
+**Visibility.** Customers can utilise the sta
+
+We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the Portal and via the UKCloud status page https://status.ukcloud.com/.
+
+**Billing.** We provide you with monthly bills covering your monthly spend.
+
+## Customer service
+
+[Andy Y]
+**Customer Success Manager (CSM).** For the first 90 days of the service, you have access to a UKCloud Customer Success Manager, who will help you with your adoption of the UKCloud for Microsoft Azure service,  including finding relevant systems and using UKCloud tools and processes.
+
+**Cloud Architects.** UKCloud Cloud Architects support you during the design of solutions for the cloud platform. UKCloud Cloud Architects are ideally placed to help reconcile your requirements with the UKCloud platforms. We recommend engagement with a Cloud Architect when implementing complex solutions, such as those using HybridConnect or a Walled Garden.
+
+**Technical Account Managers (TAM).** You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
+
+**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2017/07/UKCloud-Factsheet-Customer-Care.pdf).
+
+## Customer responsibilities
+
+[CB - AAD]
+
+- You are responsible for assessing whether the UKCloud platform can support the various requirements of your application.
+
+- The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.
+
+- If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.
+
+- Management and administration of layers above the hypervisor (OS patching, application performance monitoring, user administration).
+
+- The customer is also responsible for ensuring only lawful data that supports the UK public sector is stored and processed by applications on this environment, and that they fully comply with the UKCloud Security Operating Procedures (SyOPs) and other information assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.
+
+## Service provisioning
+
+Within 4 hours of accepting an order (shorter deployment times are typically achieved and can be prioritised upon request), UKCloud will create the customer's Primary Administrator account and send a Welcome Pack which includes the URL for the UKCloud Customer Portal, and the getting started guide. Customers can self-provision UKCloud for VMware services via the UKCloud Portal or the Portal API.
+
+UKCloud has created several videos, help guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the [Knowledge Centre](https://docs.ukcloud.com/).
+
+In addition, you will be assigned a Customer Success Manager (CSM) to provide any assistance required during the first 90 days of the service.
+
+UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud would be pleased to introduce you to the right partner to suit your needs.
+
+
+## Service constraints
+
+UKCloud will adhere to the following in terms of maintenance windows:
+
+"Planned Maintenance" means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, UKCloud shall provide affected customers with at least fourteen (14) days' notice of the Planned Maintenance.
+
+If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered. For ESSENTIAL and POWER services this event will count in SLA calculations. For VMs running as a PRIORITY configuration, this time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.
+
+"Emergency Maintenance" means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud shall:
+
+a)  provide affected customers with at least six (6) hours' advance notice and
+
+b)  carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.
+
+If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.
+
+## Supporting documents and resources
+
+The following documents contain more information about UKCloud for VMware and the service options:
+
+- *UKCloud for Microsoft Azure service definition* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-service-definition-document-2018-05-21-1254.pdf)
+
+- [*UKCloud for Microsoft Azure FAQ*](asz-faq.md)
+
+- [*Getting Started Guide for for Microsoft Azure*](asz-gs.md)
+
+- *UKCloud Terms and Conditions* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-terms-and-conditions-2018-05-21-1254.pdf)
+
+- [*SLA Definition*](../other/other-ref-sla-definition.md)
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
