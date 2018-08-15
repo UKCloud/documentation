@@ -31,7 +31,7 @@ N3 is the NHS national network for healthcare. Technically the N3 does not exist
 
 HSCN is now avaialble from UKCloud, and N3 is no longer available to purchase except in extenuating circumstances. 
 
-N3 officially ceases to exist in August 2020, however in line with NHD Digital guidance for private organisations UKCloud will be terminating its N3 connection in January 2019
+N3 officially ceases to exist in August 2020, however in line with NHS Digital guidance for private organisations UKCloud will be terminating its N3 connection in January 2019
 
 ### What does 'N3 aggregator' status mean to UKCloud?
 
