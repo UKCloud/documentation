@@ -46,8 +46,8 @@ The full list of supported machines can be found [here](https://docs.microsoft.c
 
 Customers can deploy VMs using the UKCloud for Microsoft Azure portal and other tooling.
 
-[!warning]
-Each VM contains a temporary disk. The temporary disk provides short-term storage for applications and processes and is intended to only store data such as page or swap files. Data on the temporary disk may be lost during a maintenance event or when you redeploy a VM. 
+> [!Warning]
+> Each VM contains a temporary disk. The temporary disk provides short-term storage for applications and processes and is intended to only store data such as page or swap files. Data on the temporary disk may be lost during a maintenance event or when you redeploy a VM. 
 
 ## Storage Options 
 There are several ways in which storage can be addressed in UKCloud for Microsoft Azure:
@@ -70,8 +70,8 @@ Table storage is a key-attribute store, which means that every value in a table 
 You can use table storage to store flexible datasets, such as user data for web applications, address books, device information, and any other type of metadata that your service requires. For today's Internet-based applications, NoSQL databases like table storage offer a popular alternative to traditional relational databases.
 A storage account can contain any number of tables, and a table can contain any number of entities, up to the capacity limit of the storage account.
 
-[!NOTE]
-All storage in Azure Stack is taken from a common pool. When designing your service for UKCloud for Microsoft Azure, consider the best usage of your storage. For example, if you have a large object storage requirement, consider using the UKCloud's Cloud storage platform as part of your solution. 
+> [!NOTE]
+> All storage in Azure Stack is taken from a common pool. When designing your service for UKCloud for Microsoft Azure, consider the best usage of your storage. For example, if you have a large object storage requirement, consider using the UKCloud's Cloud storage platform as part of your solution. 
  
 ## Service Management
 - API 
@@ -112,8 +112,8 @@ The service levels are as follows:
 - 99.90% (a single VM deployed as a single instance deployed inside and availability zone)
 - 99.95% (a single VM with two instances deployed inside an availability zone)
 
-[!TIP]
-To qualify for the higher service level, customers are advised to use on platform tools like availability sets that ensures your VMs are provisioned to different hardware in the region.
+> [!TIP]
+> To qualify for the higher service level, customers are advised to use on platform tools like availability sets that ensures your VMs are provisioned to different hardware in the region.
 
 ## Service background
 
