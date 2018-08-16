@@ -26,7 +26,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 ## Creating a virtual machine
 
-VMs provide the basic compute building blocks in Azure Stack. You can create VMs using the Azure Marketplace, which provides access to pre-created images to quickly deploy the VMs you need to build your applications.
+VMs provide the basic compute building blocks in Azure Stack. You can create VMs using the Azure Stack Marketplace, which provides access to pre-created images to quickly deploy the VMs you need to build your applications. Microsoft makes Azure Marketplace images available for Azure Stack once they have passed an accreditation process. If you cannot find the image you require in the Azure Stack Marketplace please raise a support call via the UKCloud portal and if possible we will make your requested image available in Azure Stack Marketplace.
 
 **To create a VM from the Azure Marketplace:**
 
