@@ -1,7 +1,7 @@
 ---
 title: How to create a VM using Terraform on Azure Stack
 description: Learn how to create a VM using Terraform on Azure Stack
-services: azure
+services: azure-stack
 author: Chris Black
 
 toc_rootlink: Users

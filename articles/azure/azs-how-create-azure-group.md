@@ -1,7 +1,7 @@
 ---
 title: How to create an Azure user group | UKCloud Ltd
 description: Describes how to apply the appropriate Azure Stack permissions to your UKCloud for Microsoft Azure users
-services: azure
+services: azure-stack
 author: Sue Highmoor
 
 toc_rootlink: Users
