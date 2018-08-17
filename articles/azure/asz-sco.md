@@ -1,15 +1,15 @@
 ---
 title: UKCloud for Microsoft Azure Service Scope | UKCloud Ltd
 description: Outlines important details regarding UKCloud for Microsoft Azure
-services: Azure
+services: azure
 author: Andy Webb
-toc_rootlink: Service Scope
-toc_sub1: 
+toc_rootlink: Users
+toc_sub1: Service Scope
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: UKCloud for Microsoft Azure Service Scope
-toc_fullpath: Service Scope/asz-sco.md
+toc_fullpath: Users/Service Scope/asz-sco.md
 toc_mdlink: asz-sco.md
 ---
 
@@ -245,9 +245,9 @@ The following documents contain more information about UKCloud for VMware and th
 
 - [*UKCloud for Microsoft Azure service definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/630346855069919-service-definition-document-2018-07-30-0941.pdf)
 
-- [*UKCloud for Microsoft Azure FAQ*](asz-faq.md)
+- [*UKCloud for Microsoft Azure FAQ*](azs-faq.md)
 
-- [*Getting Started Guide for for Microsoft Azure*](asz-gs.md)
+- [*Getting Started Guide for for Microsoft Azure*](azs-gs.md)
 
 - [UKCloud Terms and Conditions](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf)
 
