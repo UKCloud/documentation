@@ -1,7 +1,7 @@
 ---
 title: Azure Stack Update Procedure | UKCloud Ltd
 description: Azure Stack Update Procedure Guide for Support
-services: azure-stack
+services: azure
 author: Chris Black
 
 toc_rootlink: Operators

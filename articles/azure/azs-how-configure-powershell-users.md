@@ -1,7 +1,7 @@
 ---
 title: Configure the Azure Stack user's PowerShell environment for UKCloud |  based on Microsoft Docs
 description: Configure the Azure Stack user's PowerShell environment
-services: azure-stack
+services: azure
 author: Chris Black
 
 toc_rootlink: Users
