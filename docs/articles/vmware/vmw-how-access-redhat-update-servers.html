@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to access CentOS Update servers | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to access Red Hat update servers | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to access CentOS Update servers | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to access Red Hat update servers | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,62 +82,30 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-access-centos-update-servers">How to access CentOS Update servers</h1>
+<h1 id="how-to-access-red-hat-update-servers">How to access Red Hat update servers</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Each of the two security domains within the UKCloud cloud presents its own challenges regarding licensing CentOS machines. This document explains how to access the CentOS repository servers to receive updates.</p>
-<p>Before you attempt to establish a connection to the CentOS repo servers, you need to make sure your VMs can communicate with the CentOS server which exists outside of your cloud organisation.</p>
-<p>This may involve editing your NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a> and <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
-<h2 id="assured-official-platform">Assured OFFICIAL platform</h2>
-<p>UKCloud's Assured OFFICIAL security domain is internet facing, so you need to configure your VM to connect to the internet, and use a standard update tool, such as Spacewalk RHN, to get updates for CentOS.</p>
-<h2 id="elevated-official-platform">Elevated OFFICIAL platform</h2>
-<p>Our Elevated OFFICIAL security domain doesn't natively connect to the internet, and the PSN Protected network doesn't have any CentOS repo servers. To receive CentOS updates, you can use UKCloud-managed repository servers or a Walled Garden. Both options are described below.</p>
-<h3 id="option-1-ukcloud-managed-repository-servers">Option 1. UKCloud-managed repository servers</h3>
-<p>We provide repositories for CentOS 6 on our Elevated OFFICIAL security domain. To access them:</p>
-<p>Create a file called <code>il3-repos.repo</code> in <code>/etc/yum.repos.d</code>, and populate it with the following:</p>
-<pre><code>```
-[base]
-
-name=UKCloud CentOS Repository - Base
-
-baseurl=http://&lt;elevated-public-ip-address&gt;/centos/6.5/os/x86_64
-
-gpgcheck=1
-
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
-
-[updates]
-
-name=UKCloud CentOS Repository - Updates
-
-baseurl=http://&lt;elevated-public-ip-address&gt;/centos/centos-updates
-
-gpgcheck=1
-
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
-
-[extras]
-
-name=UKCloud CentOS Repository - Extras
-
-baseurl=http://&lt;elevated-public-ip-address&gt;/centos/centos-extras
-
-gpgcheck=1
-
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
-```
-</code></pre>
-<p>Or use the following command to download the repo file directly from the server:</p>
-<pre><code>```
-wget -P /etc/yum.repos.d http://&lt;elevated-public-ip-address&gt;/repos/ukcloud_centos6.repo
-```
-</code></pre>
-<p>In the above string, replace <code>elevated-public-ip-address</code> with the Elevated OFFICIAL public IP addresses. If you're not sure what this is, contact UKCloud Support.</p>
-<p>Remove all other <code>*.repo</code> files in this directory.</p>
-<h3 id="option-2-walled-garden">Option 2. Walled Garden</h3>
-<p>Choose this option only if you want full control of CentOS updates and are already thinking of deploying a Walled Garden. This option involves pulling updates into the Assured security domain, then using UKCloud's Walled Garden to move them to the Elevated security domain.</p>
-<p>It's a much more complex solution than using UKCloud-managed repository servers, and you have sole responsibility for deploying and managing it.</p>
-<p>For more information about the Walled Garden, see the <a href="../cdsz/cdsz-gs-walled-garden.html"><em>Getting Started Guide for Cross Domain Security Zone</em></a>.</p>
+<p>UKCloud has implemented a Red Hat Update Infrastructure (RHUI) to provide automatic updates to our Red Hat customers in the Assured OFFICIAL and Elevated OFFICIAL security domains. The benefits over the existing system are the reliable availability of patch updates and Red Hat approved OS templates.</p>
+<p>Before you attempt to establish a connection to RHUI, you need to make sure your virtual machines (VMs) can communicate with the RHUI which exists outside of your cloud organisation. This may involve editing the NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the articles for creating <a href="vmw-how-create-nat-rules.html">NAT</a> and <a href="vmw-how-create-firewall-rules.html">firewall</a> rules.</p>
+<h2 id="new-red-hat-vm-templates">New Red Hat VM templates</h2>
+<p>Certain Red Hat templates within the public catalog within vCloud Director are automatically configured to receive updates from UKCloud's RHUI. The templates are:</p>
+<ul>
+<li><strong>RHEL6.6</strong> - UKCloud-RHEL6.6-x86_64-RHUI-Template</li>
+<li><strong>RHEL7.1</strong> - UKCloud-RHEL7.1-x86_64-RHUI-Template</li>
+</ul>
+<p>These templates have the following properties:</p>
+<ul>
+<li>You can find the default root password in the VM Properties Description field (you can set the password using Guest Customization)</li>
+<li>Red Hat Update Infrastructure enabled for standard packages</li>
+<li>VMware Tools / Guest Customization enabled</li>
+<li>32GB disk space / 1 x vCPU / 2GB ram (default, adjust as required)</li>
+</ul>
+<p>You can adjust the VM properties as required and you'll be billed as per the standard VM sizes as described in the UKCloud for VMware Service Definition. You will not be billed on additional storage until you reach the 60GB of provisioned disk space, unless you've chosen geo-resilient.</p>
+<h2 id="old-red-hat-vm-templates">Old Red Hat VM templates</h2>
+<p>If you have already deployed a Red Hat VM using the old templates, you can configure it to access the RHUI by following this guide:</p>
+<p><a href="vmw-how-install-rhui-vm.html">How to install Red Hat Update Infrastructure (RHUI) on an existing virtual machine</a></p>
+<h2 id="additional-resources">Additional resources</h2>
+<p>High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services, you'll need to notify UKCloud for access to these repositories or will need to bring your own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a request via the My Calls section in the UKCloud Portal and it will be uploaded to your private catalog.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
@@ -152,7 +120,7 @@ wget -P /etc/yum.repos.d http://&lt;elevated-public-ip-address&gt;/repos/ukcloud
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-access-centos-update-servers.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-access-redhat-update-servers.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>

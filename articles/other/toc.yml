@@ -16,6 +16,8 @@
     href: other-how-contribute-knowledge.md
 - name: Reference
   items:
+  - name: Best practice customer guide
+    href: other-ref-best-practice-guide.md
   - name: Browser requirements for services on the UKCloud platform
     href: other-ref-browsers.md
   - name: Cloud economics

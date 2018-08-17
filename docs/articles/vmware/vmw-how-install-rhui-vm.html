@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to access CentOS Update servers | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to install Red Hat Update Infrastructure on an existing virtual machine | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to access CentOS Update servers | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to install Red Hat Update Infrastructure on an existing virtual machine | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,62 +82,58 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-access-centos-update-servers">How to access CentOS Update servers</h1>
+<h1 id="how-to-install-red-hat-update-infrastructure-on-an-existing-virtual-machine">How to install Red Hat Update Infrastructure on an existing virtual machine</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Each of the two security domains within the UKCloud cloud presents its own challenges regarding licensing CentOS machines. This document explains how to access the CentOS repository servers to receive updates.</p>
-<p>Before you attempt to establish a connection to the CentOS repo servers, you need to make sure your VMs can communicate with the CentOS server which exists outside of your cloud organisation.</p>
-<p>This may involve editing your NAT and firewall settings within your edge gateway to allow traffic to traverse into your virtual data centre (VDC). For how to do this, see the <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a> and <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
-<h2 id="assured-official-platform">Assured OFFICIAL platform</h2>
-<p>UKCloud's Assured OFFICIAL security domain is internet facing, so you need to configure your VM to connect to the internet, and use a standard update tool, such as Spacewalk RHN, to get updates for CentOS.</p>
-<h2 id="elevated-official-platform">Elevated OFFICIAL platform</h2>
-<p>Our Elevated OFFICIAL security domain doesn't natively connect to the internet, and the PSN Protected network doesn't have any CentOS repo servers. To receive CentOS updates, you can use UKCloud-managed repository servers or a Walled Garden. Both options are described below.</p>
-<h3 id="option-1-ukcloud-managed-repository-servers">Option 1. UKCloud-managed repository servers</h3>
-<p>We provide repositories for CentOS 6 on our Elevated OFFICIAL security domain. To access them:</p>
-<p>Create a file called <code>il3-repos.repo</code> in <code>/etc/yum.repos.d</code>, and populate it with the following:</p>
-<pre><code>```
-[base]
-
-name=UKCloud CentOS Repository - Base
-
-baseurl=http://&lt;elevated-public-ip-address&gt;/centos/6.5/os/x86_64
-
-gpgcheck=1
-
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
-
-[updates]
-
-name=UKCloud CentOS Repository - Updates
-
-baseurl=http://&lt;elevated-public-ip-address&gt;/centos/centos-updates
-
-gpgcheck=1
-
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
-
-[extras]
-
-name=UKCloud CentOS Repository - Extras
-
-baseurl=http://&lt;elevated-public-ip-address&gt;/centos/centos-extras
-
-gpgcheck=1
-
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
-```
+<p>This article provides advice on how to update your existing Red Hat virtual machines (VMs) to target UKCloud's approved Red Hat Update Infrastructure (RHUI).</p>
+<p>As of July 2015, UKCloud implemented an RHUI to provide automatic updates to our Red Hat customers on our Assured OFFICIAL and Elevated OFFICIAL security domains. This provides benefits such as the reliable availability of patch updates and Red Hat approved OS templates.</p>
+<p>This update service replaces the previous repositories, which are no longer updated and were retired on the 31 August 2015.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>There are two pre-requisites for performing this operation:</p>
+<ul>
+<li><p>The host can resolve to the RHUI DNS records (contact Customer Support for the IP addresses and domain names for these records). You can achieve this by configuring an A record on your local DNS, or configuring an <code>/etc/hosts</code> file with the appropriate information.</p>
+</li>
+<li><p>All hosts using the service must be able to access the local RHUA server on port 443 (HTTPS). Ensure that you have configured SNAT and firewall policies on your edge gateway device. If you have any questions on this, contact UKCloud Support.</p>
+</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>You can find the installer RPM files in the UKCloud public catalog under <strong>media</strong>, for example, <strong>UKCloud-RHUI-Standard-Assured</strong>.</p>
+<p>If you require the high availability (HA) package, raise a Service Request directly via the <a href="https://portal.ukcloud.com/support/my_calls">My Calls</a> section of the UKCloud Portal and it will be uploaded to your private catalog.</p>
+<ol>
+<li><p>Mount the <code>UKCloud RHUI-***.iso</code> to the VM (or place the contents in an accessible location such as NFS share, FTP, and so on).</p>
+</li>
+<li><p>Install the relevant RPM.</p>
+<p>For example, for RHEL6: <code>rpm -ivh IL2-Client-RHEL6-Standard-2.0-1.noarch.rpm</code>.</p>
+<p>If you're installing a new RPM, such as replacing standard with HA you need to use the <code>-force</code> flag to overwrite the existing certificates.</p>
+</li>
+<li><p>Clean yum:</p>
+<pre><code>yum clean all
 </code></pre>
-<p>Or use the following command to download the repo file directly from the server:</p>
-<pre><code>```
-wget -P /etc/yum.repos.d http://&lt;elevated-public-ip-address&gt;/repos/ukcloud_centos6.repo
-```
+</li>
+<li><p>Test the RHUI is working:</p>
+<pre><code>yum update
 </code></pre>
-<p>In the above string, replace <code>elevated-public-ip-address</code> with the Elevated OFFICIAL public IP addresses. If you're not sure what this is, contact UKCloud Support.</p>
-<p>Remove all other <code>*.repo</code> files in this directory.</p>
-<h3 id="option-2-walled-garden">Option 2. Walled Garden</h3>
-<p>Choose this option only if you want full control of CentOS updates and are already thinking of deploying a Walled Garden. This option involves pulling updates into the Assured security domain, then using UKCloud's Walled Garden to move them to the Elevated security domain.</p>
-<p>It's a much more complex solution than using UKCloud-managed repository servers, and you have sole responsibility for deploying and managing it.</p>
-<p>For more information about the Walled Garden, see the <a href="../cdsz/cdsz-gs-walled-garden.html"><em>Getting Started Guide for Cross Domain Security Zone</em></a>.</p>
+</li>
+<li><p>The first time you update from RHUI you will be prompted to accept the following two certificates:</p>
+<ul>
+<li>The Red Hat entitlement certificate</li>
+<li>The Client entitlement certificate</li>
+</ul>
+</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>The primary issues you may encounter are:</p>
+<h3 id="dns-failure">DNS Failure</h3>
+<p>Check the DNS lookup is working and you have the correct entry for Assured and Elevated.</p>
+<h3 id="443-not-accessible">443 not accessible</h3>
+<ol>
+<li><p>Check your firewall configuration, including local firewalls (<code>iptables</code>) and edge gateway.</p>
+</li>
+<li><p>Ensure you have the correct destination IP entry for Assured or Elevated.</p>
+</li>
+</ol>
+<h3 id="incorrect-version">Incorrect version</h3>
+<p>Ensure you have installed the correct RPM for your release.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
@@ -152,7 +148,7 @@ wget -P /etc/yum.repos.d http://&lt;elevated-public-ip-address&gt;/repos/ukcloud
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-access-centos-update-servers.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-install-rhui-vm.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>

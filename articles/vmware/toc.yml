@@ -18,6 +18,10 @@
     href: vmw-gs.md
 - name: How To
   items:
+  - name: Access CentOS Update servers
+    href: vmw-how-access-centos-update-servers.md
+  - name: Access Red Hat update servers
+    href: vmw-how-access-redhat-update-servers.md
   - name: Access syslog data for your advanced gateway
     href: vmw-how-access-syslog-data-adv.md
   - name: Access syslog data for your edge gateway
@@ -70,8 +74,6 @@
     href: vmw-how-create-nat-rules.md
   - name: Export edge gateway configuration data using PowerShell
     href: vmw-how-ps-export-edge-data.md
-  - name: How to access CentOS Update servers
-    href: vmw-how-access-centos-update-servers.md
   - name: How to access Ubuntu update servers
     href: vmw-how-access-ubuntu-update-servers.md
   - name: Install a REST client to access the vCloud API
@@ -80,6 +82,8 @@
     href: vmw-how-install-openvpn.md
   - name: Install and configure Zerto in your local environment
     href: vmw-how-zerto-install-local.md
+  - name: Install Red Hat Update Infrastructure on an existing virtual machine
+    href: vmw-how-install-rhui-vm.md
   - name: Licence Microsoft applications/software on the UKCloud platform
     href: vmw-how-license-microsoft.md
   - name: License Windows VMs using the UKCloud Key Management Server
