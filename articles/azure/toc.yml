@@ -1,3 +1,7 @@
+- name: Service Scope
+  items:
+  - name: UKCloud for Microsoft Azure Service Scope
+    href: asz-sco.md
 - name: Users
   items:
   - name: FAQs
