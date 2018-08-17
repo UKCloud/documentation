@@ -1,7 +1,7 @@
 ---
 title: Configure the Azure Stack user's Azure CLI environment |  based on Microsoft Docs
 description: Learn how to use the cross-platform command-line interface (CLI) to manage and deploy resources on Azure Stack
-services: azure-stack
+services: azure
 author: Chris Black
 
 toc_rootlink: Users
