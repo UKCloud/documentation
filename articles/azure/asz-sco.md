@@ -27,12 +27,6 @@ UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure plat
 
 You can build a tailored solution to meet your requirements by mixing and matching service options. The choice does not lock you to one service or size, enabling you to scale resources up or down as your requirements change.
 
-By default you'll initially have access to:
-
-- XX vCPU
-- YY GB memory
-- ZZ GB storage
-
 The options below are all currently available within the service:
 
 ### IaaS compute
