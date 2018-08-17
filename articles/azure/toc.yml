@@ -1,7 +1,3 @@
-- name: Service Scope
-  items:
-  - name: UKCloud for Microsoft Azure Service Scope
-    href: asz-sco.md
 - name: Users
   items:
   - name: FAQs
@@ -44,6 +40,10 @@
       href: azs-ref-troubleshooting.md
     - name: Understanding UKCloud for Microsoft Azure
       href: azs-ref-overview.md
+  - name: Service Scope
+    items:
+    - name: UKCloud for Microsoft Azure Service Scope
+      href: asz-sco.md
 - name: Operators
   items:
   - name: How To

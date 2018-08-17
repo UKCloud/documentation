@@ -40,15 +40,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azure/asz-sco.md",
       "output": {
         ".html": {
           "relative_path": "articles/azure/asz-sco.html",
-          "hash": "J8NgaJiRVHMEUFyzhlEmDA=="
+          "hash": "PWJLSOmiWKm9/+3m7JXYEQ=="
         }
       },
       "is_incremental": false,
@@ -614,7 +611,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "j+wk4GXeaJpDug3epNtncQ=="
+          "hash": "y4st5JPnVLAJ2k2Zj43s9A=="
         }
       },
       "is_incremental": false,
@@ -10790,13 +10787,13 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
