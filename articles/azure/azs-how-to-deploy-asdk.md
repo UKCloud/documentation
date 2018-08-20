@@ -36,7 +36,7 @@ Detailed specs are here - https://docs.microsoft.com/en-us/azure/azure-stack/azu
 >
 >Either create it with Windows Server 2012 and change later or in Configuration Parameters ->  Click Add Row. In the Name column, enter disk.EnableUUID.  In the Value column, enter TRUE. This will show correct disk IDs in Get-PhysicalDisk cmdlets and cluster should build.
 
-**Physical Note:** The first two drives must be setup as a RAID 1, the rest passed through as a JBOD; additionally, you need to specify VLAN ??? as ACCESS in the CIMC
+**Physical Note:** The first two drives must be setup as a RAID 1, the rest passed through as a JBOD; additionally, you need to specify your VLAN as ACCESS in the CIMC
 
 ## Step 2 - Install base operating system
 Install Windows Server 2016 to the OS disk implementing a static IP address.
@@ -61,13 +61,13 @@ Implement the following steps from the guide: https://docs.microsoft.com/en-us/a
 | :---| :----| :----
 |1372| `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'Virtual Disk') {`| `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'null') {`
 
-To edit run:
+To run:
 
  ```
  "C:\AzureStack_Installer\asdk-installer.ps1"  | ForEach {($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object {`$====_.isboot -eq `$true}).Model -match 'null') {") -replace "====",""} | Set-Content "C:\AzureStack_Installer\asdk-installer.ps1" -force
  ```
 
- To verify run:
+ To verify:
 
  ```
  Select-String -Path "C:\AzureStack_Installer\asdk-installer.ps1" -pattern "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'null'\) \`{"
@@ -79,11 +79,13 @@ The following details should be used:
 |NTP | 13.79.239.69
 |DNS Forwarder |8.8.8.8B
 |Drivers | Browse to path of either the extracted Cisco drivers or the extracted VMware tools
-|Computer Name|Anything but "azurestack", we suggest "azurestackhost"
+|Computer Name|Anything but "azurestack", eg: "azurestackhost"
 |Static IP|IP details assigned to the current interface
 
-## Step 4 - Install ASDK
 Once step 3 is complete the box will have been rebooted from the vhdx downloaded above.
+
+## Step 4 - Install ASDK
+
 
 Implement the following steps from the guide: https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script
 
@@ -217,20 +219,16 @@ cd C:\CloudDeployment\Setup
 ```
 If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes after you run the script, you will get prompted for AAD Account - use azurestackadmin@as2ukcloud.onmicrosoft.com - SINT
 
-## Next steps
-
-* [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
-* [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
 ## Step 5 - Exposing the environment to others
 
 **Pre-production (single-node physical environment)**
 
-Testing externally to the team should be done on the pre-production (physical single node) environment. Access to this is via openvpn. An openvpn appliance has already been configured and setup it must be register in hyper-V and connected to the BGPNAT server. Following the VPN details from the repo, https://github.com/UKCloud/AzureStackDeployment.
+Testing externally to the team should be done on the pre-production (physical single node) environment. Access to this is via openvpn. An openvpn appliance has already been configured and setup, it must be registered in hyper-V and connected to the BGPNAT server. Following the VPN details from the repo, https://github.com/UKCloud/AzureStackDeployment.
 
-Add an AD user
+Add an AD user:
 | | |
 | :----| :----
-|Username | 
+|Username | vpn
 |Password|Password123
 
 Extract the root cert
@@ -242,3 +240,7 @@ certutil -encode C:\Users\AzureStackAdmin\Downloads\azurestack.cer C:\Users\Azur
 ```
 ## Step 6 - Registering Azure Stack
 At this point the ASDK is ready and you can start using the same code and guides used for production.
+## Next steps
+
+* [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
+* [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
