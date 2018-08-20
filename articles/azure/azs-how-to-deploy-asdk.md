@@ -163,13 +163,13 @@ Example of Automated Physical Kit Deployment:
 
 ```powershell
 $adminpass = ConvertTo-SecureString 'Password123' -AsPlainText -Force
-$unameS = "azurestackadmin@as2ukcloud.onmicrosoft.com"
+$unameS = "azurestackadmin@<domain>.onmicrosoft.com"
 $credsS = "<password in SINT>"
     $userPasswordS = ConvertTo-SecureString "$credsS" -AsPlainText -Force
     $credentialsS = new-object -typename System.Management.Automation.PSCredential -argumentlist $unameS,$userPasswordS
  
 cd C:\CloudDeployment\Setup
-.\InstallAzureStackPOC.ps1 -AdminPassword $adminpass -InfraAzureDirectoryTenantAdminCredential $credentialsS -InfraAzureDirectoryTenantName as2ukcloud.onmicrosoft.com -NatIPv4Subnet 51.179.198.224/28 -NatIPv4Address 51.179.198.227 -NatIPv4DefaultGateway 51.179.198.225 -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
+.\InstallAzureStackPOC.ps1 -AdminPassword $adminpass -InfraAzureDirectoryTenantAdminCredential $credentialsS -InfraAzureDirectoryTenantName <domain>.onmicrosoft.com -NatIPv4Subnet 51.179.198.224/28 -NatIPv4Address 51.179.198.227 -NatIPv4DefaultGateway 51.179.198.225 -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
 ```
 **Virtualisation Note:** after completing the wizard BUT before clicking install copy the command as the install will fail.
 
@@ -209,15 +209,15 @@ After you modified it, run:
 
 ```powershell
 $adminpass = ConvertTo-SecureString 'Password123'-AsPlainText -Force
-$unameS = "azurestackadmin@as2ukcloud.onmicrosoft.com"
+$unameS = "azurestackadmin@<domain>.onmicrosoft.com"
 $credsS = "<password in SINT>"
     $userPasswordS = ConvertTo-SecureString "$credsS" -AsPlainText -Force
     $credentialsS = new-object -typename System.Management.Automation.PSCredential -argumentlist $unameS,$userPasswordS
  
 cd C:\CloudDeployment\Setup
-.\InstallAzureStackPOC.ps1 -AdminPassword $adminpass -InfraAzureDirectoryTenantAdminCredential $credentialsS -InfraAzureDirectoryTenantName as2ukcloud.onmicrosoft.com -NatIPv4Subnet 10.0.0.0/24 -NatIPv4Address 10.0.0.191 -NatIPv4DefaultGateway 10.0.0.1 -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
+.\InstallAzureStackPOC.ps1 -AdminPassword $adminpass -InfraAzureDirectoryTenantAdminCredential $credentialsS -InfraAzureDirectoryTenantName <domain>.onmicrosoft.com -NatIPv4Subnet 10.0.0.0/24 -NatIPv4Address 10.0.0.191 -NatIPv4DefaultGateway 10.0.0.1 -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
 ```
-If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes after you run the script, you will get prompted for AAD Account - use azurestackadmin@as2ukcloud.onmicrosoft.com - SINT
+If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes after you run the script, you will get prompted for AAD Account - use azurestackadmin@<domain>.onmicrosoft.com - SINT
 
 ## Step 5 - Exposing the environment to others
 
