@@ -24,13 +24,16 @@ This document covers two scenarios, building from scratch and redeploying.
 
 ## Step 1 - Hardware pre-reqs
 Detailed specs are here - https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-deploy
-|Device | Details|
-| :----| :----
-|CPU | >=16 cores
-|RAM |>=128GB
-|OS disks | >=200GB
-|Data disks | >=4 * >=250GB
+
+|Device  |Details  |
+|---------|---------|
+|CPU    |  >=16 cores       |
+|RAM     | >=128GB        |
+|OS Disks |  >=200GB       |
+|Data Disks  | >=4 * >=250G        |
+
 **Virtualisation Note:** VMware HW must be >=11, CPU virtual extension pass-through must be enabled
+
 > [!IMPORTANT]
 > If you deploy your VM with Hardware Version 11 and Operating System Family as Windows Server 2016 you will not be able to create S2D Cluster as disk UUIDs are not exposed.
 >
@@ -57,9 +60,9 @@ Implement the following steps from the guide: https://docs.microsoft.com/en-us/a
 
 **Virtualisation Note:** Before running the installer open, "C:\AzureStack_Installer\asdk-installer.ps1" and edit as follows:
 
-|Line number | Current code|Details|
-| :---| :----| :----
-|1372| `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'Virtual Disk') {`| `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'null') {`
+|Line Number  |Current Code  |Details  |
+|---------|---------|---------|
+|1372     |  `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'Virtual Disk') {`       |  `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'null') {`       |
 
 To run:
 
@@ -74,18 +77,17 @@ To run:
  ```
 The following details should be used:
 
-|Option | Parameter|
-| :----| :----
-|NTP | 13.79.239.69
-|DNS Forwarder |8.8.8.8B
-|Drivers | Browse to path of either the extracted Cisco drivers or the extracted VMware tools
-|Computer Name|Anything but "azurestack", eg: "azurestackhost"
-|Static IP|IP details assigned to the current interface
+|Option |Parameter  |
+|---------|---------|
+|NTP |   13.79.239.69      |
+|DNS Forwarder|  8.8.8.8       |
+|Drivers | Browse to path of either the extracted Cisco drivers or the extracted VMware tools        |
+|Computer Name |Anything but "azurestack", eg: "azurestackhost"         |
+|Static IP | IP details assigned to the current interface        |
 
 Once step 3 is complete the box will have been rebooted from the vhdx downloaded above.
 
 ## Step 4 - Install ASDK
-
 
 Implement the following steps from the guide: https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script
 
@@ -93,12 +95,12 @@ Implement the following steps from the guide: https://docs.microsoft.com/en-us/a
 
 The following details should be used:
 
-|Option | Parameter|
-| :----| :----
-|NTP | 13.79.239.69
-|DNS Forwarder |8.8.8.8B
-|Type | Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack. e.g. joebloggsukcloud.onmicrosoft.com
-|Static IP|Different IP than what you currently have - eg. 10.0.0.101 was my box 10.0.0.191 I set up - or just current IP + 1
+|Option  |Parameter  |
+|---------|---------|
+|NTP |     13.79.239.69    |
+|DNS Forwarder |   8.8.8.8      |
+|Type |    Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack. e.g. joebloggsukcloud.onmicrosoft.com     |
+|Static IP | Different IP than what you currently have - eg. 10.0.0.101 was my box 10.0.0.191 I set up - or just current IP + 1        |
 
 **Physical Note:** Before running the installation, make sure only one network adapter is enabled, otherwise install will fail.
 
@@ -186,10 +188,11 @@ This will just end with nothing.
 Then you need to run the copied InstallAzureStackPOC.ps1 to create the Roles directory.
 
 Open, "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" and edit as follows:
-|Line number | Current code|Details|
-| :---| :----| :----
-|521| `$physicalMachine.IsVirtualMachine | Should Be $false`| `$physicalMachine.IsVirtualMachine | Should Be $true`
-|521| `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan $minimumNumberOfCoresPerMachine`| `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0`
+
+|Line Number |Current code  |Details  |
+|---------|---------|---------|
+|521    |  `$physicalMachine.IsVirtualMachine | Should Be $false`       |  `$physicalMachine.IsVirtualMachine | Should Be $true`       |
+|521     |   `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan $minimumNumberOfCoresPerMachine`      | `($physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0`        |
 
 To edit run:
 
@@ -226,10 +229,10 @@ If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes af
 Testing externally to the team should be done on the pre-production (physical single node) environment. Access to this is via openvpn. An openvpn appliance has already been configured and setup, it must be registered in hyper-V and connected to the BGPNAT server. Following the VPN details from the repo, https://github.com/UKCloud/AzureStackDeployment.
 
 Add an AD user:
-| | |
-| :----| :----
-|Username | vpn
-|Password|Password123
+
+|Username  |vpn  |
+|---------|---------|
+|Password |Password123  |
 
 Extract the root cert
 
