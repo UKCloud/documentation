@@ -222,28 +222,5 @@ cd C:\CloudDeployment\Setup
 ```
 If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes after you run the script, you will get prompted for AAD Account - use azurestackadmin@<domain>.onmicrosoft.com - SINT
 
-## Step 5 - Exposing the environment to others
-
-**Pre-production (single-node physical environment)**
-
-Testing externally to the team should be done on the pre-production (physical single node) environment. Access to this is via openvpn. An openvpn appliance has already been configured and setup, it must be registered in hyper-V and connected to the BGPNAT server. Following the VPN details from the repo, https://github.com/UKCloud/AzureStackDeployment.
-
-Add an AD user:
-
-|Username  |vpn  |
-|---------|---------|
-|Password |Password123  |
-
-Extract the root cert
-
-```powershell
-cd cert:\localmachine\my
-dir | Where-Object {$_.subject -like "*AzureStackSelfSignedRootCert*"} |export-Certificate -filepath C:\Users\AzureStackAdmin\Downloads\azurestack.cer -type CERT -NoClobber
-certutil -encode C:\Users\AzureStackAdmin\Downloads\azurestack.cer C:\Users\AzureStackAdmin\Downloads\azurestack-physical.cer
-```
-## Step 6 - Registering Azure Stack
-At this point the ASDK is ready and you can start using the same code and guides used for production.
-## Next steps
-
 * [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
 * [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
