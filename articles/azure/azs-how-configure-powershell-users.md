@@ -44,7 +44,7 @@ Prerequisites from a Windows-based external client.
   Install-Module -Name AzureRm.BootStrapper
   # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
   Use-AzureRmProfile -Profile 2017-03-09-profile -Force
-  Install-Module -Name AzureStack -RequiredVersion 1.3.0
+  Install-Module -Name AzureStack -RequiredVersion 1.4.0
   ```
 
 ## Configure the user environment and sign in to Azure Stack
