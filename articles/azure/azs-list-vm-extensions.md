@@ -40,4 +40,4 @@ Get-AzureRmVmImagePublisher -Location frn00006 | `
 
 This will produce a table similar to the following:
 
-![List Azure Stack VM Extensions Output](images/azs--list-vm-extensions.png)
+![List Azure Stack VM Extensions Output](images/azs-list-vm-extensions.png)
