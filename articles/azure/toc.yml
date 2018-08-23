@@ -48,6 +48,8 @@
   items:
   - name: How To
     items:
+    - name: Deploy and configure the Azure Stack Development Kit
+      href: azs-how-to-deploy-asdk.md
     - name: Update Azure Stack Procedure
       href: azs-how-ps-update-azure-stack.md
     - name: Configure Environment

@@ -197,6 +197,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-to-deploy-asdk.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-to-deploy-asdk.html",
+          "hash": "tSZ7/xqM3qMtwX86vGqf0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-use-azure-api.md",
       "output": {
         ".html": {
@@ -611,7 +623,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "y4st5JPnVLAJ2k2Zj43s9A=="
+          "hash": "dYKA1OGkdXhvo2Z7IjXvmQ=="
         }
       },
       "is_incremental": false,
