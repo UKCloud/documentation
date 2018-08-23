@@ -24,6 +24,10 @@
         href: azs-how-configure-cli.md
       - name: Configure the Azure Stack user's PowerShell environment
         href: azs-how-configure-powershell-users.md
+    - name: List VM Extensions
+      items:
+      - name: How to list VM extensions in Azure Stack - PowerShell
+        href: azs-list-vm-extensions.md
     - name: Service Principal Name
       items:
       - name: Create a Service Principal Name for Azure Stack - CLI

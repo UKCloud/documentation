@@ -221,6 +221,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-list-vm-extensions.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-list-vm-extensions.html",
+          "hash": "4mojGr4gofPMV/8beA840g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-ref-overview.md",
       "output": {
         ".html": {
@@ -260,6 +272,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-firewall-ports.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-list-vm-extensions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-list-vm-extensions.png"
         }
       },
       "is_incremental": false,
@@ -623,7 +646,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "dYKA1OGkdXhvo2Z7IjXvmQ=="
+          "hash": "Syg+c8Lpffw2tJGNhvxEuA=="
         }
       },
       "is_incremental": false,
