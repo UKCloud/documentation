@@ -185,6 +185,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-identify-global-admins.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-identify-global-admins.html",
+          "hash": "1VM+gmU7gns9sNA9uh9GJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-ps-update-azure-stack.md",
       "output": {
         ".html": {
@@ -257,6 +269,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-ad.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-ad.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-disk-size.png",
       "output": {
         "resource": {
@@ -272,6 +295,28 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-firewall-ports.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-global-admin-group.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-global-admin-group.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-global-admin-members.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-global-admin-members.png"
         }
       },
       "is_incremental": false,
@@ -488,6 +533,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-roles-admins.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-roles-admins.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azsp_computeblade.png",
       "output": {
         "resource": {
@@ -646,7 +702,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "Syg+c8Lpffw2tJGNhvxEuA=="
+          "hash": "kYjONtJIqXJ37HtcaiXkKA=="
         }
       },
       "is_incremental": false,
@@ -10853,14 +10909,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

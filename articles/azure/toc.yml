@@ -16,6 +16,8 @@
       href: azs-how-create-vm-terraform.md
     - name: Create an Azure user group
       href: azs-how-create-azure-group.md
+    - name: Identify your Azure Global Admins
+      href: azs-how-identify-global-admins.md
     - name: Use the Azure Stack API
       href: azs-how-use-azure-api.md
     - name: Configure Environment
