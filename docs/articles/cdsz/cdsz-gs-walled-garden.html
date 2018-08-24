@@ -8,7 +8,7 @@
     <title>Getting Started Guide for the Cross Domain Security Zone Walled Garden | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for the Cross Domain Security Zone Walled Garden | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -121,12 +121,7 @@
 </ul>
 <p>The build phase of the Walled Garden environment can take up to 10 working days depending on the complexity of the deployment. When the environment has been fully provisioned, your Customer Success Manager (CSM) will send you the information you need to access it.</p>
 <h2 id="building-your-walled-garden-service">Building your Walled Garden service</h2>
-<p>As soon as you have access to your environment, you can start to build your Walled Garden services. You then have 42 calendar days to:</p>
-<ul>
-<li>Complete the provisioning of the virtual machines (VMs) and networking</li>
-<li>Complete an IT Health Check</li>
-<li>Present your evidence pack to the customer and UKCloud SIROs</li>
-</ul>
+<p>As soon as you have access to your environment, you can start to build your Walled Garden services.</p>
 <p>It is important to remember that while the UKCloud Portal for the Assured security domain is accessible from the internet, the Portal for the Elevated security domain and Walled Garden services is accessible only through the PSN Protected network or through UKCloud's Secure Remote Access (SRA) service.</p>
 <h3 id="setting-up-your-networking">Setting up your networking</h3>
 <p>First, you need to replicate the networking that you set out in your Walled Garden application diagrams. This involves the creation of external and internal networking, as well as the creation of rules on the virtual firewall within your environment. For information about creating networks and firewall rules, see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a> and <a href="../vmware/vmw-how-build-vm.html"><em>How to build a virtual machine with UKCloud for VMware</em></a>.</p>
@@ -156,15 +151,9 @@
 <h3 id="testing-your-environment">Testing your environment</h3>
 <p>When you've built your VMs and networking, you can start to test the environment. If you've configured the networking correctly, your VMs should be able to talk to each other across the Walled Garden. If you have any issues, check your network rules.</p>
 <h3 id="performing-the-it-health-check">Performing the IT Health Check</h3>
-<p>As part of the Base Implementation, you're required to conduct an IT Health Check (ITHC) of the environment. The ITHC must be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NSCS). You can search for appropriate providers on the <a href="https://www.ncsc.gov.uk/index/professional-service?f%5B0%5D=field_assurance_status%3AAssured&amp;f%5B1%5D=field_assurance_scheme%3A213">NSCS web site</a>.</p>
+<p>As part of the CDSZ application process, you're required to outline any IT Health Check (ITHC) you intend to perform on the environment. The ITHC should be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NCSC). You can search for appropriate providers on the <a href="https://www.ncsc.gov.uk/index/professional-service?f%5B0%5D=field_assurance_status%3AAssured&amp;f%5B1%5D=field_assurance_scheme%3A213">NCSC web site</a>.</p>
 <p>Before beginning the ITHC, notify UKCloud by raising a service request in My Calls and completing the <a href="https://portal.ukcloud.com/support/knowledge_centre/4f052cee-0400-4e12-9e90-827a768ea7ad"><em>External Security Review Test (ESRT) application form</em></a>. Ideally, we require five working days' notice before the work is due to be carried out.</p>
 <p>The ITHC scope should be relevant to the environment. For example, if you're using the Walled Garden to pull application and antivirus updates from the internet, then security controls relevant to facilitate this should be in scope. Bear in mind that the end customer accreditor may dictate the scope of the ITHC.</p>
-<h3 id="presenting-your-results">Presenting your results</h3>
-<p>When you've conducted your ITHC, with no results higher than Medium, present your evidence pack to the UKCloud SIRO. The evidence pack comprises the Walled Garden assurance wrap form and the following, as detailed in sections (a) to (c) in section 3.7 of the Walled Garden assurance wrap form:</p>
-<p>(a) Evidence of protective monitoring aligning with the 12 Protective Monitoring Controls (PMCs) in Good Practice Guide 13 (GPG13). The protective monitoring will need to span both sides of the Walled Garden as well as the Walled Garden itself. You can provide this by explaining how each of the PMCs is met by the protective monitoring solution in place.</p>
-<p>(b) The ITHC results, with no risks higher than a Medium. If you do have results higher than a Medium but you have put a remediation plan in place that has been accepted by the end customer accreditor, then we may accept this depending on the issues raised.</p>
-<p>(c) An approval statement confirming that the end customer accreditor is satisfied with the overall security regime and is happy for the solution to be live.</p>
-<p>If the information provided in the Walled Garden evidence pack is acceptable, the UKCloud SIRO signs off the Live Implementation and any restrictions that have been imposed on the environment by UKCloud Customer Service are lifted.</p>
 <h2 id="glossary">Glossary</h2>
 <p>This section provides a glossary of terms specific to the Cross Domain Security Zone Walled
 Garden.</p>
