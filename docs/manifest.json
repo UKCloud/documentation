@@ -4487,6 +4487,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/oracle/orcl-ref-rac.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/oracle/orcl-ref-rac.html",
+          "hash": "Hlf7gnzCYqJ7E6rTD4s47Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/oracle/orcl-ref-templates.md",
       "output": {
         ".html": {
@@ -4527,7 +4539,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/toc.html",
-          "hash": "MRo4xqESDGRJ6N+lNchhrQ=="
+          "hash": "g0S9RMA6V4w/sIun25ipYw=="
         }
       },
       "is_incremental": false,

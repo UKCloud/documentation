@@ -18,6 +18,8 @@
     href: orcl-ref-bug-self-service.md
   - name: Oracle licensing on the UKCloud platform
     href: orcl-ref-licensing.md
+  - name: RAC on UKCloud for Oracle Software
+    href: orcl-ref-rac.md
   - name: UKCloud for Oracle Software templates
     href: orcl-ref-templates.md
   - name: VM compatibility with UKCloud for Oracle Software
