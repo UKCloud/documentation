@@ -10,8 +10,8 @@ toc_sub2: Client ID via API
 toc_sub3:
 toc_sub4:
 toc_title: How to obtain Client ID via API for Azure Stack - REST API
-toc_fullpath: Users/How To/azs-how-to-get-clientid-via-api.md
-toc_mdlink: azs-how-to-get-clientid-via-api.md
+toc_fullpath: Users/How To/azs-how-to-obtain-clientid-via-api.md
+toc_mdlink: azs-how-to-obtain-clientid-via-api.md
 ---
 
 # How to obtain Client ID via the REST API for Azure Stack
