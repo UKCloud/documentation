@@ -142,7 +142,7 @@ This is a description of the content of the article. Provide information here th
 
 This is the service to which the article belongs. One of:
 
-- `azure`
+- `azure-stack`
 - `cdsz`
 - `cloud-storage`
 - `connectivity`
