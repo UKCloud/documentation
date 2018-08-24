@@ -712,15 +712,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/azure/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "9FbUfn9hiT9QIZ5Ch9yNgA=="
+          "hash": "eAlTg0l+iJoaL0UfeXkx8w=="
         }
       },
       "is_incremental": false,
@@ -10932,13 +10929,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
