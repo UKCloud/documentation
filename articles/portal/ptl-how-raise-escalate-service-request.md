@@ -113,7 +113,7 @@ For onboarding issues, contact your allocated Customer Success Manager (CSM). Fo
 
 ### Escalation 3
 
-- **Head of Live Service**
+- **Head of Cloud Support**
 - Tel: 01252 916 378
 - Mob: 07587 585 156
 - Email: cmuscat@ukcloud.com
