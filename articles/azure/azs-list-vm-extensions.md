@@ -20,7 +20,7 @@ This document explains how to list VM extensions in Azure Stack with PowerShell.
 
 ## Prerequisites
 
-Ensure your Powershell environment is setup as detailed in <https://docs.ukcloud.com/articles/azure/azs-how-configure-powershell-users.html>
+Ensure your Powershell environment is setup as detailed in [*Configure PowerShell Environment and Azure Stack Modules*](azs-how-configure-powershell-users.md).
 
 ## Instructions
 
