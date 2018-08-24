@@ -52,9 +52,9 @@ In order to obtain Access Token you will need to create a request body and use R
 The Authentication/Login Endpoint can be https:/\/login.microsoftonline.com/{tenant id}/oauth2/token or https:/\/login.windows.net/{tenant id}/oauth2/token
 
 > [!IMPORTANT]
-> The  {tenant id}  value in the path of the request can be used to control who can sign into the application.
+> You can use the  {tenant id}  value in the path of the request to control who can sign into the application.
 >
-> The allowed values are tenant identifiers, for example,  8eaef023-2b34-4da1-9baa-8bc8c9d6a490  or  contoso.onmicrosoft.com  or  common  for tenant-independent tokens
+> The allowed values are tenant identifiers, for example,  8eaef023-2b34-4da1-9baa-8bc8c9d6a490  or  contoso.onmicrosoft.com  or  common  for tenant-independent tokens.
 
 **How to obtain Access Token Request Body and Authentication Information**
 
@@ -176,4 +176,4 @@ iIsInN1YiI6ImFSeHhiX01YYU5NOG1KS2p3VzlzWnNvV0xkZnF5bF9jYmJVcEc4aWNHX28iLCJ0aWQiO
     https://graph.windows.net/160f539f-8571-4c96-9361-797645c24e75/applications?$filter=startswith(displayName,%27yourCloudAutomation%27)&api-version=1.6
     ```
     > [!IMPORTANT] 
-    > Application name in this example is yourCloudAutomation
+    > Application name in this example is yourCloudAutomation.
