@@ -34,8 +34,7 @@ Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 Get-AzureRmVmImagePublisher -Location frn00006 | `
   Get-AzureRmVMExtensionImageType | `
   Get-AzureRmVMExtensionImage | `
-  Select Type, Version | `
-  Format-Table -Property * -AutoSize
+  Format-Table -Property Type, Version -AutoSize
 ```
 
 This will produce a table similar to the following:
