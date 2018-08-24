@@ -220,6 +220,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "invalid-note-section"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-to-obtain-clientid-via-api.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-to-obtain-clientid-via-api.html",
+          "hash": "8cPSdGPB5OwX9DAQgY/hbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-use-azure-api.md",
       "output": {
@@ -697,12 +712,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/azure/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "kYjONtJIqXJ37HtcaiXkKA=="
+          "hash": "9FbUfn9hiT9QIZ5Ch9yNgA=="
         }
       },
       "is_incremental": false,
@@ -10909,14 +10927,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

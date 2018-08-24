@@ -20,6 +20,10 @@
       href: azs-how-identify-global-admins.md
     - name: Use the Azure Stack API
       href: azs-how-use-azure-api.md
+    - name: Client ID via API
+      items:
+      - name: How to obtain Client ID via API for Azure Stack - REST API
+        href: azs-how-to-get-clientid-via-api.md
     - name: Configure Environment
       items:
       - name: Configure the Azure Stack user's Azure CLI environment
