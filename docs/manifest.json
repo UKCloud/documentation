@@ -220,15 +220,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "invalid-note-section"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-to-obtain-clientid-via-api.md",
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-to-obtain-clientid-via-api.html",
-          "hash": "Ut9rFH4beaTyj6jXpZGNyg=="
+          "hash": "lT2QSwr7Svs2YChkWsy5qg=="
         }
       },
       "is_incremental": false,
@@ -252,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-list-vm-extensions.html",
-          "hash": "JOpcMwaQqi4K6I1/Fg49qA=="
+          "hash": "0AVbgVGE+QVHVJKODyPVXQ=="
         }
       },
       "is_incremental": false,
@@ -5329,7 +5326,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-raise-escalate-service-request.html",
-          "hash": "Jim8Rp6y2Vv++3JGGBaOQA=="
+          "hash": "0gpX4DzibyVLRo4IZAbnsA=="
         }
       },
       "is_incremental": false,
@@ -10929,13 +10926,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }

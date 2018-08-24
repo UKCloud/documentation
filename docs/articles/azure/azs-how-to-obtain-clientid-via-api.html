@@ -131,9 +131,11 @@
 </table>
 <p>** Request Authentication Endpoint**</p>
 <p>The Authentication/Login Endpoint can be https://login.microsoftonline.com/{tenant id}/oauth2/token or https://login.windows.net/{tenant id}/oauth2/token</p>
-<blockquote>
-<p>[!IMPORTANT] The  {tenant id}  value in the path of the request can be used to control who can sign into the application. The allowed values are tenant identifiers, for example,  8eaef023-2b34-4da1-9baa-8bc8c9d6a490  or  contoso.onmicrosoft.com  or  common  for tenant-independent tokens</p>
-</blockquote>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>You can use the  {tenant id}  value in the path of the request to control who can sign into the application.</p>
+<p>The allowed values are tenant identifiers, for example,  8eaef023-2b34-4da1-9baa-8bc8c9d6a490  or  contoso.onmicrosoft.com  or  common  for tenant-independent tokens.</p>
+</div>
 <p><strong>How to obtain Access Token Request Body and Authentication Information</strong></p>
 <p>a. Grant_type</p>
 <ul>
@@ -286,9 +288,10 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZnl0aEV1THdqcHdBSk9NOW4t
 <p>URI Example</p>
 <pre><code>https://graph.windows.net/160f539f-8571-4c96-9361-797645c24e75/applications?$filter=startswith(displayName,%27yourCloudAutomation%27)&amp;api-version=1.6
 </code></pre>
-<blockquote>
-<p>[!IMPORTANT] Application name in this example is yourCloudAutomation</p>
-</blockquote>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Application name in this example is yourCloudAutomation.</p>
+</div>
 </li>
 </ol>
 
