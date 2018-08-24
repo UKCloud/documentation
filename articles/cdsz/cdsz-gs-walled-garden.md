@@ -57,11 +57,7 @@ The build phase of the Walled Garden environment can take up to 10 working days 
 
 ## Building your Walled Garden service
 
-As soon as you have access to your environment, you can start to build your Walled Garden services. You then have 42 calendar days to:
-
-- Complete the provisioning of the virtual machines (VMs) and networking
-- Complete an IT Health Check
-- Present your evidence pack to the customer and UKCloud SIROs
+As soon as you have access to your environment, you can start to build your Walled Garden services. 
 
 It is important to remember that while the UKCloud Portal for the Assured security domain is accessible from the internet, the Portal for the Elevated security domain and Walled Garden services is accessible only through the PSN Protected network or through UKCloud's Secure Remote Access (SRA) service.
 
@@ -102,23 +98,12 @@ When you've built your VMs and networking, you can start to test the environment
 
 ### Performing the IT Health Check
 
-As part of the Base Implementation, you're required to conduct an IT Health Check (ITHC) of the environment. The ITHC must be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NSCS). You can search for appropriate providers on the [NSCS web site](https://www.ncsc.gov.uk/index/professional-service?f%5B0%5D=field_assurance_status%3AAssured&f%5B1%5D=field_assurance_scheme%3A213).
+As part of the CDSZ application process, you're required to outline any IT Health Check (ITHC) you intend to perform on the environment. The ITHC should be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NCSC). You can search for appropriate providers on the [NCSC web site](https://www.ncsc.gov.uk/index/professional-service?f%5B0%5D=field_assurance_status%3AAssured&f%5B1%5D=field_assurance_scheme%3A213).
 
 Before beginning the ITHC, notify UKCloud by raising a service request in My Calls and completing the [*External Security Review Test (ESRT) application form*](https://portal.ukcloud.com/support/knowledge_centre/4f052cee-0400-4e12-9e90-827a768ea7ad). Ideally, we require five working days' notice before the work is due to be carried out.
 
 The ITHC scope should be relevant to the environment. For example, if you're using the Walled Garden to pull application and antivirus updates from the internet, then security controls relevant to facilitate this should be in scope. Bear in mind that the end customer accreditor may dictate the scope of the ITHC.
 
-### Presenting your results
-
-When you've conducted your ITHC, with no results higher than Medium, present your evidence pack to the UKCloud SIRO. The evidence pack comprises the Walled Garden assurance wrap form and the following, as detailed in sections (a) to (c) in section 3.7 of the Walled Garden assurance wrap form:
-
-(a) Evidence of protective monitoring aligning with the 12 Protective Monitoring Controls (PMCs) in Good Practice Guide 13 (GPG13). The protective monitoring will need to span both sides of the Walled Garden as well as the Walled Garden itself. You can provide this by explaining how each of the PMCs is met by the protective monitoring solution in place.
-
-(b) The ITHC results, with no risks higher than a Medium. If you do have results higher than a Medium but you have put a remediation plan in place that has been accepted by the end customer accreditor, then we may accept this depending on the issues raised.
-
-(c) An approval statement confirming that the end customer accreditor is satisfied with the overall security regime and is happy for the solution to be live.
-
-If the information provided in the Walled Garden evidence pack is acceptable, the UKCloud SIRO signs off the Live Implementation and any restrictions that have been imposed on the environment by UKCloud Customer Service are lifted.
 
 ## Glossary
 
