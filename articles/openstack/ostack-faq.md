@@ -19,15 +19,15 @@ toc_mdlink: ostack-faq.md
 
 ### What is the service?
 
-UKCloud for OpenStack is an OpenStack powered Infrastructure as a Service (IaaS) offering which enables organisations to rapidly provision and scale secure instances (VMs) in seconds, in a flexible and autonomous manner.
+UKCloud for OpenStack is an OpenStack-powered Infrastructure as a Service (IaaS) offering which enables organisations to rapidly provision and scale secure instances (VMs) in seconds, in a flexible and autonomous manner.
 
-UKCloud provides this service across two security domains, Assured OFFICIAL (formerly PGA IL2) and Elevated OFFICIAL (formerly PGA IL3), and with a range of service levels offering up to 99.95% availability. This choice allows customers to precisely match application and user needs to an appropriate security domain, service level and cost, instead of designing to the highest level which may not always be needed.
+UKCloud provides this service across two security domains, Assured OFFICIAL (formerly PGA IL2) and Elevated OFFICIAL (formerly PGA IL3), offering up to 99.95% availability. This choice allows customers to precisely match application and user needs to an appropriate security domain and cost, instead of designing to the highest level which may not always be needed.
 
 ### What hypervisor do you use?
 
-UKCloud for OpenStack is built using Red Hats KVM hypervisor technology, a trusted solution for implementing virtualized environments.
+UKCloud for OpenStack is built using KVM hypervisor technology, a trusted solution for implementing virtualised environments.
 
-### Does UKCloud offer dedicated, bare metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?
+### Does UKCloud offer dedicated, bare-metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?
 
 UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack product. We do however provide "large" instances, with upto 56 vCpus and 440Gb Ram, with no overcommit. UKCloud also offers its 'Private Cloud for Compute' product which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.
 
@@ -37,23 +37,23 @@ The disk format of a virtual machine image is the format of the underlying disk 
 
 Set the disk format for your image to one of the following values:
 
-**Aki** - An Amazon kernel image
+**aki** - An Amazon kernel image
 
-**Ami** - An Amazon machine image
+**ami** - An Amazon machine image
 
-**Ari** - An Amazon ramdisk image
+**ari** - An Amazon ramdisk image
 
-**Iso** - An archive format for the data contents of an optical disc, such as CD-ROM
+**iso** - An archive format for the data contents of an optical disc, such as CD-ROM
 
 **qcow2** - Supported by the QEMU emulator that can expand dynamically and supports Copy on Write
 
-**Raw** - An unstructured disk image format; if you have a file without an extension it is possibly a raw format
+**raw** - An unstructured disk image format; if you have a file without an extension it is possibly a raw format
 
-**Vdi** - Supported by VirtualBox virtual machine monitor and the QEMU emulator
+**vdi** - Supported by VirtualBox virtual machine monitor and the QEMU emulator
 
-**Vhd** - The VHD disk format, a common disk format used by virtual machine monitors from VMware, Xen, Microsoft, VirtualBox, and others
+**vhd** - The VHD disk format, a common disk format used by virtual machine monitors from VMware, Xen, Microsoft, VirtualBox, and others
 
-**Vmdk** - Common disk format supported by many common virtual machine monitors
+**vmdk** - Common disk format supported by many common virtual machine monitors
 
 ## Instances (VMs)
 
@@ -68,13 +68,14 @@ Instances are contended using the default OpenStack ratios against the following
 - CPU - 16:1
 - Memory - 1.1:1
 
-### Do I get root access onto the instances I deploy?
+### Do I get root access to the instances I deploy?
 
 Yes, as this is a true IaaS cloud service, you have complete control and autonomy over each instance you deploy, and so have full 'root' or administrative access.
 
 ### What Instance sizes are available?
 
-UKCloud offers a variety of flavours to meet customers' needs. The smallest configuration is 512MiB and 1 vCPU. The largest is 440GiB memory with 56 vCPU.
+UKCloud offers a variety of predefined flavours to meet customers' needs. The smallest configuration is 512MiB memory and 1 vCPU. The largest is 440GiB memory with 56 vCPU.
+
 
 Check the service definition for more details on the currently available sizes.
 
@@ -82,15 +83,13 @@ Check the service definition for more details on the currently available sizes.
 
 Currently UKCloud does not offer GPU optimised OpenStack instances.
 
-### Can I resize an Instance?
+### Can I resize an instance?
 
-Yes, you can change processor, memory and storage allocations via the self-service Portal and API.
+Yes, you can change instance size (processor, memory and storage allocations) to a different predefined size via the self-service Portal and API.
 
-Processors and memory can be added to or removed from instances if the OS supports the 'hot add' capability.
+Increasing instance size may result in the instance being billed at a higher rate.
 
-Increasing CPU or memory allocations may result in the instance being billed at a higher rate.
-
-Additional instance storage can be allocated instantly and will be billed on a per GiB basis.
+Additional volume storage can be allocated instantly and will be billed on a per GiB basis.
 
 ### What is the speed of each vCPU?
 
@@ -98,7 +97,7 @@ This is set at 2.4 GHz across instances.
 
 ### Does UKCloud offer encryption on instances?
 
-Not by default but, if it's required, you can implement it using a technology of your choice.
+Not by default but, if it's required, you can implement it using a technology of your choice inside the instance OS.
 
 ### Is UKCloud's encryption service available for UKCloud for OpenStack?
 
@@ -114,9 +113,9 @@ You can ask for more external IP addresses via a Service Request in the UKCloud 
 
 ### How many network routers do I get?
 
-You're initially allocated two network routers with each OpenStack project.
+You're initially able to create up to two network routers in each OpenStack project.
 
-You can ask for more external IP addresses via a Service Request in the UKCloud Portal.
+You can ask the router quota to be increased via a Service Request in the UKCloud Portal.
 
 ### How many PSN IP addresses do I get?
 
@@ -128,6 +127,8 @@ Additional external PSN IP addresses can be requested via a Service Request shou
 
 UKCloud controls and manages a perimeter firewall on the edge of our Assured cloud platform which securely segregates traffic.
 
+OpenStack includes the concept of "Security Groups" which can be used to implement firewall filtering on the virtual NIC level.
+
 You can also use your preferred software firewall and security appliances deployed within your project.
 
 ### Which firewall ports do you suggest to open?
@@ -138,21 +139,23 @@ To access the infrastructure via the dashboard and API you will need access thro
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
-You can view these on the notifications page https://status.ukcloud.com. In addition, Service Status reports are published on the Portal.
+Current Service Status reports are published on the [Status Page](https://status.ukcloud.com/). You can view past incident reports on the UKCloud Portal.
 
 ### Do you offer dynamic or static IP addresses?
 
-The external IP addresses are static. Internal IPs can be assigned statically from a pool, manually or dynamically via DHCP.
+The external IP addresses are allocated to the project from a pool and will remain allocated to that project unless you explicitly select to "release" the address.
+
+Internal IPs are assigned to instances from a pool and will remain assigned to that instance/network port until that instance or network port is deleted. Optionally, it is possible to select the IP address assigned during instance/port creation.
 
 ### Are external Domain Name System (DNS) services available?
 
-No, we don't currently offer this service. You can implement your own DNS servers within your solution, or configure your virtual firewall to enable connectivity to an externally hosted DNS server - for example, one hosted on a government secure network such as PSN or N3; or one available on the Internet such as Google 8.8.8.8.
+No, we don't currently offer this service. You can implement your own DNS servers within your solution, or configure your instances to connect to an externally hosted DNS server - for example, one hosted on a government secure network such as PSN or N3; or one available on the Internet such as Google 8.8.8.8.
 
 ### Are domain name registration services available?
 
 No, we don't currently offer this service. Some government secure networks (such as PSN and N3) offer domain name registration and DNS hosting as part of their service.
 
-For internet-facing services a third-party DNS provider will be required.
+For internet-facing services a third-party domain provider will be required.
 
 ### Is Network Time Protocol available for time synchronisation?
 
@@ -166,13 +169,13 @@ Some government secure networks (such as PSN and N3) provide SSL certificates as
 
 ### Do you offer load balancing? 
 
-Due to OpenStack Neutron not supporting highly available load balancing services, UKCloud has created [*How to creating load balancing services on UKCloud for OpenStack*](ostack-how-create-load-balancer.md), which describes how to deploy a HA load balancing solution, of which the first deployed solution is free of charge.
+Due to OpenStack Neutron not supporting highly-available load balancing services, UKCloud has created [*How to creating load balancing services on UKCloud for OpenStack*](ostack-how-create-load-balancer.md), which describes how to deploy a HA load balancing solution, of which the first deployed solution is free of charge.
 
-We will look to include more native OpenStack functionality once a highly available solution is provided by the community.
+We will look to include more native OpenStack functionality once a highly-available solution is provided by the community.
 
 ### Can I deploy my own load balancer?
 
-Yes, you can deploy your own load-balancing virtual appliance (for example, F5, Stingray, Zeus) if support for other algorithms is required.
+Yes, you can deploy your own load balancing virtual appliance provided it is compatible with KVM hypervisor and OpenStack.
 
 ### Do you have an IPSEC VPN connection for uploading sensitive data?
 
@@ -190,21 +193,21 @@ All ephemeral storage is fixed and cannot be increased.
 
 UKCloud for OpenStack is available with persistent block storage options. Persistent block storage is resilient, distributed block storage that can be moved between instances and retain data in the event of an instance becoming destroyed or unavailable.
 
-You can quickly and easily allocate additional persistent block storage via the self-service dashboard or API, which will be charged on a per-GiB basis.
+You can quickly and easily allocate additional persistent block storage volumes via the self-service dashboard or API, which will be charged on a per-GiB basis.
 
 ### Can I reallocate storage across instances?
 
-No, storage pooling isn't possible. Each instance receives the stated allocation.
+Persistent block storage volumes can be detached from one instance then attached to another (except those being used as OS boot volumes). It is not possible for a volume to be attached to multiple instances simulutaneously.
 
-You can quickly and easily allocate additional persistent block storage via the self-service dashboard or API, which will be charged on a per-GiB basis.
+You can allocate additional persistent block storage via the self-service dashboard or API, which will be charged on a per-GiB basis.
 
 ### Is instance storage persistent? 
 
-No, the ephemeral storage provided with each instance is non-persistent and any data stored on it will be deleted at the point an instance is terminated.
+No, the ephemeral storage provided with each instance is non-persistent and any data stored on it will be deleted at the point an instance is terminated. Persistent block storage volumes are persistent. If required, it is possible to deploy an instance using a block storage volume as its boot volume.
 
 ### Is Object Storage (OpenStack Swift) available?
 
-Unfortunately, the OpenStack Object Storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3 compatible Object Storage service which can be used in conjunction with OpenStack; please visit the Digital Market place or contact your Account Director for further details.
+Unfortunately, the OpenStack Object Storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3-compatible Object Storage service which can be used in conjunction with OpenStack; please visit the Digital Market place or contact your Account Director for further details.
 
 ### What is the fastest way of importing large amounts of data onto the UKCloud platform?
 
@@ -219,13 +222,12 @@ If you use FTPS to upload data to or download it from your environment, you can 
 ### How do I access my solutions via the internet?
 
 You can access your instances using:
-
 - The remote console via the OpenStack dashboard
 - Remote access protocols (such as RDP/SSH) over a VPN or secure network
 
 ### How do I access my solutions via government networks (PSN-A, N3/HSCN)?
 
-Although UKCloud allows you to make your customer facing applications accessible via government network connections, the management of your OpenStack environment can only be achieved directly via an internet connection.
+Although UKCloud allows you to make your customer-facing applications accessible via government network connections, the management of your Assured OFFICIAL OpenStack environment can only be achieved directly via an internet connection.
 
 OpenStack environments in our Elevated OFFICIAL security domain can be managed via the PSN-P network.
 
@@ -243,7 +245,7 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 
 ### How do I access support and patches for operating systems that UKCloud licenses?
 
-UKCloud provides a repository of patches for common operating systems for customers to access and update from. Please refer to the onboarding guide or the UKCloud Portal's Knowledge Centre for details.
+UKCloud provides a repository of patches for common operating systems for customers to access and update from. Please refer to the onboarding guide or the Knowledge Centre for details.
 
 For support, you'll need to log a request with UKCloud, who will log the ticket with the relevant supplier. UKCloud will then inform you about any updates. However, UKCloud isn't responsible for the actual resolution of non-IaaS issues.
 
