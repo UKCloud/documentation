@@ -95,7 +95,7 @@ To create a user account:
 
     ![New account menu option](images/email-zimbra-admin-mnu-new-account.png)
 
-3. Enter an **Account name** and the user\'s **Last name**. (The other fields are optional.)
+3. Enter an **Account name** and the user\'s **Last name** (the other fields are optional).
 
 4. If the new account will be an administrator, select the **Administrator** checkbox in the *Account Setup* section.
 
