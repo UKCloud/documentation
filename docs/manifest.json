@@ -4933,6 +4933,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-export-data.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-export-data.html",
+          "hash": "W1vbQ+7trR0Alp25TebYUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-ideas.md",
       "output": {
         ".html": {
@@ -5105,7 +5117,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "gOYof5mEfOeQN1c22/jfEw=="
+          "hash": "ghMcUICQorlwFMSsPT35nw=="
         }
       },
       "is_incremental": false,
@@ -5135,6 +5147,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-account-locked.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-account-locked.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-active-user.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-active-user.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-contact-details-notifications.png",
       "output": {
         "resource": {
@@ -5157,6 +5191,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-locked-user-edit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-locked-user-edit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-locked-user.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-locked-user.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-login.png",
       "output": {
         "resource": {
@@ -5172,6 +5228,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-memorable-word.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mnu-all-contacts.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mnu-all-contacts.png"
         }
       },
       "is_incremental": false,
@@ -5370,6 +5437,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-how-unlock-account.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-how-unlock-account.html",
+          "hash": "uhmZy4sPJAKKSJdJoyHjIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-use-api.md",
       "output": {
         ".html": {
@@ -5458,7 +5537,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "FVQPXZUcJQUX8wi4tp0FRA=="
+          "hash": "8wK7uZVOk30Au16QY1dwwQ=="
         }
       },
       "is_incremental": false,
@@ -8392,6 +8471,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-copy-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-copy-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-edit-syslog-server.png",
       "output": {
         "resource": {
@@ -8634,6 +8724,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-copy-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-mnu-copy-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-move-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-mnu-move-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-vapp-configure-services.png",
       "output": {
         "resource": {
@@ -8660,6 +8772,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-mnu-vm-power-on.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-move-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-move-vapp.png"
         }
       },
       "is_incremental": false,
@@ -9804,7 +9927,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "/S5s63DiQt+vB9R/slZcVQ=="
+          "hash": "8mv9vrl9XIgECULUcJRfMA=="
         }
       },
       "is_incremental": false,
@@ -10304,6 +10427,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-migrate-vapp.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-migrate-vapp.html",
+          "hash": "IcHRLi/LKJnMUo01Y5L7dw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-portal-view-vms.md",
       "output": {
         ".html": {
@@ -10561,6 +10696,18 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-managing-portal-api.html",
           "hash": "25F872im3pNo0wH4hJg5PQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-ref-naming-vms.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-ref-naming-vms.html",
+          "hash": "pe/q93aQlPvXaw60hqtuaw=="
         }
       },
       "is_incremental": false,
@@ -10938,13 +11085,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
