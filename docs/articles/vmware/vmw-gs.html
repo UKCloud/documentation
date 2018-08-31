@@ -115,12 +115,14 @@
 </div>
 <p>If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or CSM. You'll be prompted to change this temporary password.</p>
 </li>
-<li><p>If your Portal administrator has enabled memorable word authentication or Google Two Factor Authentication (2FA), you'll be prompted for the second step of your authentication process.</p>
-<p>For example, for memorable word authentication, you'll be prompted to enter three randomly‑selected letters from your memorable word. (If this is the first time you've logged in, you'll be prompted to create a memorable word.)</p>
+<li><p>If your Portal administrator has enabled memorable word authentication, you'll be prompted to enter three randomly‑selected letters from your memorable word. (If this is the first time you've logged in, you'll be prompted to create a memorable word.)</p>
 <p><img src="images/vmw-portal-memorable-word.png" alt="Memorable word dialog box"></p>
-<p>For more information about the UKCloud Portal and all the functionality it provides, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
+</li>
+<li><p>If your Portal administrator has enabled Two-Factor Authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA.)</p>
+<p><img src="images/vmw-portal-2fa.png" alt="Two-Factor Authentication dialog box"></p>
 </li>
 </ol>
+<p>For more information about the UKCloud Portal and all the functionality it provides, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
 <h2 id="creating-your-ukcloud-for-vmware-estate">Creating your UKCloud for VMware estate</h2>
 <p>When you first access UKCloud for VMware, you'll need to create a compute service (sometimes called a vOrg) to act as a top-level container for your cloud resources. As your estate grows, you can add more compute services to logically organise your resources.</p>
 <p>Within your compute service, you create VDCs to contain your VMs. VMs in the same VDC share workload characteristics and have access to the same resources, such as networking infrastructure, storage and external connectivity. We recommend that you organise related VMs within vApps to make your applications easier to manage. For example, you can start all the VMs within a vApp with a single operation, rather than having to start up each VM separately. vApps are also useful to help maintain crash‑consistency within an application in the event of a disaster.</p>
@@ -222,22 +224,32 @@
 <li><p>On the <strong>vCloud Director</strong> tab, for additional security, re-enter your UKCloud Portal password, then click <strong>Confirm</strong>.</p>
 <p><img src="images/vmw-portal-vcd-login.png" alt="vCloud Director tab in UKCloud Portal"></p>
 </li>
-<li><p>vCloud Director launches in your browser window.</p>
+<li><p>vCloud Director launches in your browser window. What you see will depend on whether your environment uses vCloud Director 8.20 or vCloud Director 9.1.</p>
+<p><strong>vCloud Director 8.20 Home page</strong></p>
+<p><img src="images/vmw-vcd-home.png" alt="vCloud Director 8.20 Home page"></p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If this is the first time you've opened vCloud Director, you may be requested to download the vCloud Director Web Console plugin.</p>
 </div>
-<p><img src="images/vmw-vcd-home.png" alt="vCloud Director Home page"></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>If you encounter any issues, make sure you're using the Firefox ESR 32-bit browser. For more information, see <a href="../other/other-ref-browsers.html"><em>Browser requirements for services on the UKCloud Platform</em></a>.</p>
 </div>
+<p><strong>vCloud Director 9.1 Home page</strong></p>
+<p><img src="images/vmw-vcd-home-91.png" alt="vCloud Director 9.1 Home page"></p>
 </li>
 <li><p>The tasks you can perform in vCloud Director will depend on the permissions you have been granted.</p>
 <p><strong>More information!</strong> <a href="vmw-how-manage-vcd-permissions.html"><em>How to manage permissions for vCloud Director</em></a></p>
 </li>
-<li><p>To return to the UKCloud platform, click the <strong>Logout</strong> link in the top right corner of vCloud Director.</p>
-<p><img src="images/vmw-vcd-logout.png" alt="vCloud Director Logout option"></p>
+<li><p>To return to the UKCloud Portal:</p>
+<ul>
+<li>In vCloud Director 8.20, click the <strong>Logout</strong> link in the top right corner.</li>
+</ul>
+<p><img src="images/vmw-vcd-logout.png" alt="vCloud Director 8.20 Logout option"></p>
+<ul>
+<li>In vCloud Director 9.1, click your user name in the top right corner, and select <strong>Log out</strong>.</li>
+</ul>
+<p><img src="images/vmw-vcd-logout-91.png" alt="vCloud Director 9.1 Logout option"></p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
@@ -260,7 +272,7 @@
 <li><p>To create a VDC network to enable your virtual machines to communicate with each other and the outside world:</p>
 <ul>
 <li><a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a></li>
-<li><a href="vmw-how-create-isolated-network.html">*How to create an isolated VDC networks</a></li>
+<li><a href="vmw-how-create-isolated-network.html"><em>How to create an isolated VDC network</em></a></li>
 </ul>
 </li>
 <li><p>To configure your edge gateway to control access to your VMs:</p>

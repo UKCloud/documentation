@@ -62,13 +62,15 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
 
     If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or CSM. You'll be prompted to change this temporary password.
 
-3. If your Portal administrator has enabled memorable word authentication or Google Two Factor Authentication (2FA), you'll be prompted for the second step of your authentication process.
-
-    For example, for memorable word authentication, you'll be prompted to enter three randomly‑selected letters from your memorable word. (If this is the first time you've logged in, you'll be prompted to create a memorable word.)
+3. If your Portal administrator has enabled memorable word authentication, you'll be prompted to enter three randomly‑selected letters from your memorable word. (If this is the first time you've logged in, you'll be prompted to create a memorable word.)
 
     ![Memorable word dialog box](images/vmw-portal-memorable-word.png)
 
-    For more information about the UKCloud Portal and all the functionality it provides, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
+4. If your Portal administrator has enabled Two-Factor Authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA.)
+
+    ![Two-Factor Authentication dialog box](images/vmw-portal-2fa.png)
+
+For more information about the UKCloud Portal and all the functionality it provides, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
 
 ## Creating your UKCloud for VMware estate
 
@@ -184,23 +186,35 @@ After you've created your compute service and VDC, you can start to build up you
 
     ![vCloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
 
-3. vCloud Director launches in your browser window.
+3. vCloud Director launches in your browser window. What you see will depend on whether your environment uses vCloud Director 8.20 or vCloud Director 9.1.
+
+    **vCloud Director 8.20 Home page**
+
+    ![vCloud Director 8.20 Home page](images/vmw-vcd-home.png)
 
     > [!NOTE]
     > If this is the first time you've opened vCloud Director, you may be requested to download the vCloud Director Web Console plugin.
 
-    ![vCloud Director Home page](images/vmw-vcd-home.png)
-
     > [!TIP]
     > If you encounter any issues, make sure you're using the Firefox ESR 32-bit browser. For more information, see [*Browser requirements for services on the UKCloud Platform*](../other/other-ref-browsers.md).
+
+    **vCloud Director 9.1 Home page**
+
+    ![vCloud Director 9.1 Home page](images/vmw-vcd-home-91.png)
 
 4. The tasks you can perform in vCloud Director will depend on the permissions you have been granted.
 
     **More information!** [*How to manage permissions for vCloud Director*](vmw-how-manage-vcd-permissions.md)
 
-5. To return to the UKCloud platform, click the **Logout** link in the top right corner of vCloud Director.
+5. To return to the UKCloud Portal:
 
-    ![vCloud Director Logout option](images/vmw-vcd-logout.png)
+    - In vCloud Director 8.20, click the **Logout** link in the top right corner.
+
+    ![vCloud Director 8.20 Logout option](images/vmw-vcd-logout.png)
+
+    - In vCloud Director 9.1, click your user name in the top right corner, and select **Log out**.
+
+    ![vCloud Director 9.1 Logout option](images/vmw-vcd-logout-91.png)
 
 ## Next steps
 
@@ -223,7 +237,7 @@ For more detailed information about the different aspects of your UKCloud for VM
 - To create a VDC network to enable your virtual machines to communicate with each other and the outside world:
 
   - [*How to create a routed VDC network*](vmw-how-create-routed-network.md)
-  - [*How to create an isolated VDC networks](vmw-how-create-isolated-network.md)
+  - [*How to create an isolated VDC network*](vmw-how-create-isolated-network.md)
 
 - To configure your edge gateway to control access to your VMs:
 

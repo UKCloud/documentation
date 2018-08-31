@@ -8,6 +8,10 @@
     href: cs-gs.md
 - name: How To
   items:
+  - name: Create a new Cloud Storage user
+    href: cs-how-create-user.md
+  - name: Reset your Cloud Storage secret key
+    href: cs-how-reset-secret-key.md
   - name: View Cloud Storage information in the UKCloud Portal
     href: cs-how-view-info-portal.md
 - name: Reference

@@ -819,7 +819,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-faq.html",
-          "hash": "m2Ju5Nf/HI2zvrUMqvD5Tg=="
+          "hash": "rwJLDTBs16ZMbCm3/vk9sA=="
         }
       },
       "is_incremental": false,
@@ -831,7 +831,31 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-gs.html",
-          "hash": "rw9ClZSb6oV7C6WqOGvGfA=="
+          "hash": "KVklD87uEi8/Ms0gIEr/eQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/cloud-storage/cs-how-create-user.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cloud-storage/cs-how-create-user.html",
+          "hash": "J8cSCeg3o+pO2MMeENczrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/cloud-storage/cs-how-reset-secret-key.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cloud-storage/cs-how-reset-secret-key.html",
+          "hash": "5cr1G0bcYUHYJ0E81j/J6w=="
         }
       },
       "is_incremental": false,
@@ -843,7 +867,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-view-info-portal.html",
-          "hash": "LTjDKTJkY1Hg3f5y/APvlA=="
+          "hash": "mS7sW2LipO09xOc6/np+UA=="
         }
       },
       "is_incremental": false,
@@ -996,6 +1020,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-portal-new-user.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-portal-new-user.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/cloud-storage/images/cs-portal-permissions.png",
       "output": {
         "resource": {
@@ -1055,7 +1090,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/toc.html",
-          "hash": "qQ0kMvZoPMbbi+01N5HpbQ=="
+          "hash": "k4X/IkbDKDF69FZOQnlBPQ=="
         }
       },
       "is_incremental": false,
@@ -7261,6 +7296,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-portal-2fa.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-portal-2fa.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-portal-api-details.png",
       "output": {
         "resource": {
@@ -8548,6 +8594,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-home-91.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-home-91.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-home.png",
       "output": {
         "resource": {
@@ -8706,6 +8763,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-logging-load-balancer.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-logout-91.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-logout-91.png"
         }
       },
       "is_incremental": false,
@@ -10011,7 +10079,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "iLYSN55qyjg89Vy1AxRRwg=="
+          "hash": "k6ufvDIDgX2I9u+2slw2jg=="
         }
       },
       "is_incremental": false,
@@ -10155,7 +10223,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-connect-windows-update.html",
-          "hash": "H9zXNMwBlehxXMux+FrRCA=="
+          "hash": "1JU9CvA9s+0HOHsu27i8UQ=="
         }
       },
       "is_incremental": false,
@@ -11080,6 +11148,11 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -11087,11 +11160,6 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

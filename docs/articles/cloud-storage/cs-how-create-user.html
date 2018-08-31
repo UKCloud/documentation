@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to view Cloud Storage information in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to create a new Cloud Storage user in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to view Cloud Storage information in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to create a new Cloud Storage user in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,82 +82,38 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-view-cloud-storage-information-in-the-ukcloud-portal">How to view Cloud Storage information in the UKCloud Portal</h1>
+<h1 id="how-to-create-a-new-cloud-storage-user-in-the-ukcloud-portal">How to create a new Cloud Storage user in the UKCloud Portal</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Cloud Storage is UKCloud's object storage solution based on Dell EMC Elastic Cloud Storage (ECS). Although you'll mostly interact with Cloud Storage through the API, the UKCloud Portal provides access to some information about your service.</p>
-<p>Within the UKCloud Portal you can view:</p>
-<ul>
-<li>Information about the namespaces within your Cloud Storage environment</li>
-<li>A list of users with access to a namespace</li>
-<li>Information about the buckets within a namespace</li>
-<li>A graphical representation of the storage consumed over the last 30 days</li>
-</ul>
-<p>You can also use the UKCloud Portal to create new Cloud Storage users. For more information, see <a href="cs-how-create-user.html"><em>How to create a new Cloud Storage user in the UKCloud Portal</em></a>.</p>
+<p>Cloud Storage is UKCloud's object storage solution based on Dell EMC Elastic Cloud Storage (ECS). Although you'll mostly interact with Cloud Storage through the API, you can create new Cloud Storage users in the UKCloud Portal.</p>
 <h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this guide you must have been granted access to the relevant namespace.</p>
-<h2 id="granting-portal-permissions-for-cloud-storage">Granting Portal permissions for Cloud Storage</h2>
-<p>To view Cloud Storage information in the Portal, users must be granted access to the relevant namespace. Once access is granted, the user will be able to see the namespace, list the buckets in the namespace and reset the secret key. They will also be able to see consumption data for namespaces and buckets, with a graphical representation of average consumption for buckets.</p>
-<p>To grant Portal permissions for Cloud Storage:</p>
-<ol>
-<li><p>Log in to the UKCloud Portal and select your account.</p>
-<p>For more detailed instructions, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
-</li>
-<li><p>In the Portal navigation panel, expand the <strong>Contacts</strong> option and select <strong>All Contacts</strong>.</p>
-</li>
-<li><p>Find the contact for whom you want to grant permissions and click the <strong>Edit</strong> button.</p>
-<p><img src="images/cs-portal-btn-edit-contact.png" alt="Edit contact button"></p>
-</li>
-<li><p>Click the <em>Permissions</em> tab.</p>
-<p><img src="images/cs-portal-tab-permissions.png" alt="Permissions tab"></p>
-</li>
-<li><p>Scroll down to the <em>Permissions for Cloud Storage</em> section and select the <strong>Access</strong> check box for the relevant namespace.</p>
-<p><img src="images/cs-portal-permissions.png" alt="Cloud Storage permissions"></p>
-</li>
-</ol>
-<h2 id="viewing-namespace-and-bucket-information">Viewing namespace and bucket information</h2>
-<p>In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down through your namespaces to see the allocated buckets available in your Cloud Storage service. You can also view storage consumption over the last 30 days.</p>
-<p><img src="images/cs-namespace-buckets.png" alt="Structure of objects in ECS"></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>It's not possible to view objects within the UKCloud Portal.</p>
-</div>
+<h2 id="creating-a-new-cloud-storage-user">Creating a new Cloud Storage user</h2>
+<p>To create a new Cloud Storage user:</p>
 <ol>
 <li><p>In the Portal navigation panel, expand the <strong>Cloud Storage</strong> option and select <strong>ECS</strong>.</p>
 </li>
-<li><p>The <em>Storage</em> tab lists the namespaces within the currently selected account. You can see:</p>
-<ul>
-<li>The number of buckets in the namespace</li>
-<li>The total amount of storage (in GiB) currently consumed by the objects in all the buckets in the namespace</li>
-<li>The service level of the namespace:
-<ul>
-<li>STANDARD - data is stored in a single data centre</li>
-<li>ENHANCED - data is stored in a primary named data centre and copied to a second geographically remote data centre</li>
-</ul>
+<li><p>On the <em>Storage</em> tab, click the <strong>Users</strong> button for the namespace in which you want to create the new user:</p>
+<p><img src="images/cs-portal-btn-users.png" alt="Users button"></p>
 </li>
-</ul>
-<p><img src="images/cs-portal-namespaces.png" alt="Namespaces page"></p>
+<li><p>The <strong>Users</strong> tab lists the different user IDs associated with the namespace.</p>
+<p><img src="images/cs-portal-users.png" alt="Users page"></p>
 </li>
-<li><p>To list the buckets in a namespace, click the <strong>Buckets</strong> button for the namespace.</p>
-<p><img src="images/cs-portal-btn-buckets.png" alt="Buckets button"></p>
+<li><p>Click the <strong>Add new user</strong> button.</p>
 </li>
-<li><p>On the <em>Buckets</em> tab, you can see the following information for each bucket in the selected namespace:</p>
-<ul>
-<li>The type of bucket: S3 or ATMOS</li>
-<li>The total amount of storage (in GiB) currently consumed by the objects in the bucket</li>
-<li>The number of objects in the bucket</li>
-</ul>
-<p><img src="images/cs-portal-buckets.png" alt="Buckets page"></p>
-</li>
-<li><p>To view a graph that shows the amount of storage (in GiB) consumed by the objects in the bucket over the last 30 days, click the <strong>Show Consumption</strong> button for the bucket.</p>
-<p><img src="images/cs-portal-consumption.png" alt="Consumption information"></p>
+<li><p>In the <em>Create ECS User</em> dialog box, make a note of the <strong>User ID</strong> and <strong>Secret Key</strong> and then click <strong>Close</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>After you close this dialog box, you will not be able to see the secret key again in the UKCloud Portal. If you do not make a note of the secret key or if you forget or lose it, you will need to reset it again. For information about how to do this, see <a href="cs-how-reset-secret-key.html"><em>How to reset your Cloud Storage secret key</em></a>.</p>
+</div>
+<p><img src="images/cs-portal-new-user.png" alt="Create ECS User dialog box"></p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
-<p>This guide has shown you how you can view information about your Cloud Storage service in the UKCloud Portal. For information about how to use the service, see the following articles:</p>
+<p>This guide has shown you how to create a new Cloud Storage user. For more information about how to use the service, see the following articles:</p>
 <ul>
 <li><a href="cs-gs.html"><em>Getting Started Guide for Cloud Storage</em></a></li>
-<li><a href="cs-how-create-user.html"><em>How to create a new Cloud Storage user in the UKCloud Portal</em></a></li>
+<li><a href="cs-how-view-info-portal.html"><em>How to view Cloud Storage information in the UKCloud Portal</em></a></li>
 <li><a href="cs-how-reset-secret-key.html"><em>How to reset your Cloud Storage secret key</em></a></li>
 <li><a href="https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf"><em>Blueprint -- Using storage gateways with Cloud Storage</em></a></li>
 <li><a href="https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-575-Blueprint-Using-file-browsers-with-Cloud-Storage-ECS-v1.pdf"><em>Blueprint -- Using file browsers with Cloud Storage</em></a></li>
@@ -176,7 +132,7 @@
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/cloud-storage/cs-how-view-info-portal.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/cloud-storage/cs-how-create-user.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>
