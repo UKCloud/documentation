@@ -87,7 +87,7 @@ Ultimately, it is down to the customer to select which encryption methodology sh
 
 ### How do I create new Cloud Storage users? 
 
-To create additional users, you must raise a service request through the UKCloud Portal. When requesting additional users, you can specify whether they should have read-write or read-only access to your buckets.
+You can create additional users in the UKCloud Portal. For more information, see [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md).
 
 ## Support
 
