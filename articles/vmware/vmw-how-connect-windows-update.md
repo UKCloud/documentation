@@ -28,22 +28,22 @@ This may involve editing the NAT and firewall settings on your edge gateway to a
 
 ## Configuring Windows update
 
-In this section you'll need to replace `xxx` with `frn` or `cor` depending on the location you'll be targeting.
-
-<!--
-The IP address depends on whether your VMs are on the Assured OFFICIAL or Elevated OFFICIAL security domain. To get the IP addresses for the update servers, raise a service via My Calls in the UKCloud Portal.
--->
+In this section you'll need to use the appropriate address depending on the location you're targeting.
 
 1. Open a console to the VM you want to update.
 
-2. Test connectivity to the update servers by opening an Internet Explorer browser window, then opening a connection to one of the update servers on `https://wsus.xxx.ukcloud.com` (Assured OFFICIAL).
+2. Test connectivity to the update servers by opening an Internet Explorer browser window, then opening a connection to one of the update servers on:
+
+    - `https://wsus.cor.ukcloud.com` (Assured OFFICIAL, Corsham)
+    - `https://wsus.frn.ukcloud.com` (Assured OFFICIAL, Farnborough)
+    - For Elevated OFFICIAL, raise a Service Request via the My Calls section of the UKCloud Portal to get the appropriate IP address
 
     > [!NOTE]
     > Ensure that you can resolve this name via DNS or via a host entry you have manually put into your VMs. If you require details on what IP address you need to put into your host file, raise a Service Request via the My Calls section of the UKCloud Portal.
 
 3. Ensure that you have the full certificate chain installed. If not, you may have to install the certificates into your VM manually.
 
-    Links for Root CA and Issuing CA below:
+    Links for Root CA and Issuing CA:
 
     - <https://www.digicert.com/CACerts/DigiCertGlobalRootCA.crt>
     - <https://www.digicert.com/CACerts/DigiCertSHA2SecureServerCA.crt>
@@ -59,7 +59,7 @@ The IP address depends on whether your VMs are on the Assured OFFICIAL or Elevat
     Highlight Trusted Root Certification Authorities and click OK.</br>
     Click Next and confirm the import settings, then click Finish.
 
-4. Restart your browser and open a connection to http://wsus.xxx.ukcloud.com.
+4. Restart your browser and open a connection to `https://wsus.cor.ukcloud.com`, `https://wsus.frn.ukcloud.com` or the appropriate Elevated IP address.
 
 5. Confirm that no certificate warnings appear and that the full certificate chain is present.
 
@@ -69,11 +69,11 @@ The IP address depends on whether your VMs are on the Assured OFFICIAL or Elevat
 
 8. Enable and configure the following settings:
 
-    - Specify intranet Microsoft update service location — enter `https://wsus.xxx.ukcloud.com` in both boxes
+    - Specify intranet Microsoft update service location —  in both boxes enter `https://wsus.cor.ukcloud.com`, `https://wsus.frn.ukcloud.com` or the appropriate Elevated IP address
     - Configure Automatic Updates — enter required settings
     - Enable client-side targeting — enter `client` in the group name field
 
-9. Open an elevated command prompt and type `gpupdate /force'.
+9. Open an elevated command prompt and type `gpupdate /force`.
 
 10. Open Windows update and click Check for updates.
 
@@ -91,7 +91,7 @@ To quickly replicate the settings defined above to other Windows VMs in your env
 
 4. Restart the Windows update service on the additional VMs.
 
-UKCloud provides a PowerShell script in our public GitHub that changes these settings by changing the registry keys inside the VM that you can use at your own risk.
+UKCloud provides a PowerShell script in our public GitHub that changes these settings by changing the registry keys inside the VM. If you use this script, you do so at your own risk.
 
 Another option is to reference these settings in a Group Policy Object if you have Group Policy running in your environment.
 
@@ -101,66 +101,6 @@ These settings will depend on your current setup. The following article provides
 
 > [!NOTE]
 > UKCloud are not responsible for content published on the URLs in the above guide. If you believe the link is broken or is no longer relevant, contact UKCloud Customer Support via the My Calls section of the UKCloud Portal.
-
-
-
-
-4.  Confirm that a certificate error displays.
-
-    If it doesn't, connectivity hasn't been established and you'll need to troubleshoot the NAT and firewall rules before you continue.
-
-5.  Confirm the certificate error, then click the certificate icon in the browser and select **Show Certificate** to show the **Issued to: _servername_**. Make a note of this **_servername_** for use in the next steps.
-
-6.  Create the host file entry for `x.x.x.x` to resolve to the **_servername_** from the step above.
-
-7.  Restart IE and open a connection to `https://servername`. Confirm that a certificate error displays, and confirm the certificate error.
-
-8.  Click the certificate icon to display the certificate and click **Install certificate**.
-
-9.  **For Windows Server 2008:**</br>
-    Select Place all certificates in the following store.</br>
-    In the Select Certificate Store select the option Show Physical Stores.</br>
-    Install the certificate into Trusted Root Certification authorities/local PC.</br>
-    </br>
-    **For Windows Server 2012:**</br>
-    On the welcome screen of the Certificate import wizard, select Local Machine, then click Next.</br>
-    Select Place all certificates in the following store, and click Browse.</br>
-    Highlight Trusted Root Certification Authorities and click OK.</br>
-    Click Next and confirm the import settings, then click Finish.
-
-10. Restart your browser and open a connection to `https://servername`.
-
-11. Confirm that no certificate warnings appear, and that the certificate icon in IE is green.
-
-12. Run `gpedit.msc`.
-
-13. In the Group Policy Management Editor, expand and navigate to Computer Configuration > Administrative Templates > Windows Components > Windows Update.
-
-14. Enable and configure the following settings:
-
-    - Specify intranet Microsoft update service location --- enter `https://servername` in both boxes
-    - Configure Automatic Updates --- enter required settings
-    - Enable client-side targeting --- enter `client` in the group name field
-
-15. Open an elevated command prompt and enter `gpupdate /force`.
-
-16. Open Windows update and click Check for updates.
-
-## Replicating settings to other Windows VMs
-
-To quickly replicate the settings defined above to other windows VMs in your environment:
-
-1. Copy the update server record in the host file to the additional VMs.
-
-2. Export the certificate from the trusted root folder to a file and import it to the additional VMs.
-
-3. Export from the registry the key
-
-        KEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
-
-    and import it onto the additional VMs.
-
-4. Restart the Windows update service on the additional VMs.
 
 ## Feedback
 
