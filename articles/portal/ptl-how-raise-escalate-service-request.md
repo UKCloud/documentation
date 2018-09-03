@@ -102,7 +102,7 @@ For onboarding issues, contact your allocated Customer Success Manager (CSM). Fo
 
 - **Support Team/Cloud Support Engineer**
 - Tel: 01252 303 300 (option 2)
-- Re-attempt point 1 and email: escalations@ukcloud.com (monitored 24 x 7)
+- Email: escalations@ukcloud.com (monitored 24 x 7)
 
 ### Escalation 2
 
