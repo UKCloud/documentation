@@ -54,7 +54,7 @@ You'll need to configure your chosen domain's MX record as `mail.skyscapecs.net`
 
 Once you've decided on a domain name and submitted your service request, UKCloud will configure your domain name on our platform and create an administrator account. You'll receive a welcome email with details of your administrator account with delegated rights for your email domain. This account will usually be in the following format:
 
-`admin@<yourdomain>`
+`admin@<yourdomain>.com`
 
 For example:
 
