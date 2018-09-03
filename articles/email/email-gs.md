@@ -118,7 +118,7 @@ To create a user account:
     If the account is an administrator account, you need to add it to the administration group at this point, to grant the necessary rights within the domain. To do this:
 
     - In the **Find** field under *Add distribution lists to the account*, enter `admingroup` and click **Search**.
-    - Select the resulting `admingroup@yourdomain.com`.
+    - Select the resulting `admingroup@<yourdomain>`, for example `admingroup@example.com`.
     - Click **Add** at the bottom of the dialog box to make the new account a member of the group.
 
     ![New Account Member Of](images/email-zimbra-admin-new-account-member-of.png)
