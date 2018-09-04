@@ -10019,7 +10019,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "8mv9vrl9XIgECULUcJRfMA=="
+          "hash": "CiKfC1aY2jiAYuGuHOq5mA=="
         }
       },
       "is_incremental": false,
@@ -10915,6 +10915,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-ref-trouble-ipsec-nsx64.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-ref-trouble-ipsec-nsx64.html",
+          "hash": "VLvyBS3+zRV91ZtTJP0kLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-ref-trouble-null-pointer.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-ref-trouble-null-pointer.html",
+          "hash": "xX3yaKQNP5P9sCuEN0Qy1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-two-factor-auth.md",
       "output": {
         ".html": {
@@ -11177,13 +11201,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }

@@ -190,3 +190,9 @@
     href: vmw-sco-synchronous-protection.md
   - name: UKCloud for VMware Service Scope
     href: vmw-sco.md
+- name: Troubleshooting
+  items:
+  - name: Fixing your advanced gateway if you encounter NullPointerException error
+    href: vmw-ref-trouble-null-pointer.md
+  - name: Fixing your IPsec VPN following upgrade to NSX 6.4
+    href: vmw-ref-trouble-ipsec-nsx64.md
