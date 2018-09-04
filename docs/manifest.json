@@ -1487,6 +1487,18 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/draas/drass-ref-troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/draas/drass-ref-troubleshooting.html",
+          "hash": "r3gExUm+Jp3GK2wDAJtPVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "articles/draas/images/draas-zerto-draas.png",
       "output": {
@@ -1514,7 +1526,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/toc.html",
-          "hash": "alqh9SwvDnqEZ8uSfloMuQ=="
+          "hash": "KuYxDk1NGN2rH0om1Y7xOg=="
         }
       },
       "is_incremental": false,
@@ -2733,12 +2745,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/migration/migr-ref-troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/migration/migr-ref-troubleshooting.html",
+          "hash": "DbkoPcDCJt+B6yoi5qSFzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/migration/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/migration/toc.html",
-          "hash": "2FVp4Jmo2WOnF1E5Zk1kbQ=="
+          "hash": "jJmSfdStUdHN8T2JWiaCwg=="
         }
       },
       "is_incremental": false,

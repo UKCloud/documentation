@@ -2,3 +2,7 @@
   items:
   - name: Migrate your workloads to the UKCloud platform
     href: migr-how-zerto-migrate-to-ukcloud.md
+- name: Troubleshooting
+  items:
+  - name: Troubleshooting Migration to the Cloud
+    href: migr-ref-troubleshooting.md
