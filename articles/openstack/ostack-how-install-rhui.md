@@ -62,9 +62,7 @@ You can find the installer RPM files in an ISO image. Before this can be mounted
 
 7. Install the relevant RPM.
 
-    For example, for RHEL6: `rpm -ivh IL2-Client-RHEL6-Standard-2.0-1.noarch.rpm`.
-
-    If you're installing a new RPM, such as replacing standard with HA you need to use the `-force` flag to overwrite the existing certificates.
+    For example, for RHEL7: `rpm -ivh IL2-Client-RHEL7-Standard-2.0-1.noarch.rpm`.
 
 8. Clean yum:
 
