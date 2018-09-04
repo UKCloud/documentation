@@ -9,7 +9,7 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Troubleshooting Disaster Recovery to the Cloud
-toc_fullpath: Troubleshooting/migr-ref-troubleshooting.md
+toc_fullpath: Troubleshooting/draas-ref-troubleshooting.md
 toc_mdlink: drass-ref-troubleshooting.md
 ---
 
