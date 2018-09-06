@@ -9,8 +9,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Install Red Hat Update Infrastructure on an existing OpenStack instance
-toc_fullpath: How To/ostack-how-install-rhui-vm.md
-toc_mdlink: ostack-how-install-rhui-vm.md
+toc_fullpath: How To/ostack-how-install-rhui.md
+toc_mdlink: ostack-how-install-rhui.md
 ---
 
 # How to install Red Hat Update Infrastructure on an existing OpenStack instance
