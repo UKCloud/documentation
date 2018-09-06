@@ -35,7 +35,7 @@ There are two pre-requisites for performing this operation:
  
 You can find the installer RPM files in an ISO image. Before this can be mounted to an existing Instance, you will need to create a volume from the image.
 
-1. In the Horizon Web UI, locate the image "UKCloud-RHUI-Standard-Assured.iso", click the action button and select `Create Volume`:
+1. In the Horizon Web UI, locate the image `UKCloud-RHUI-Standard-Assured.iso`, click the action button and select `Create Volume`:
 
 	![Create Volume](images/ostack-rhui-image.png)
 	
