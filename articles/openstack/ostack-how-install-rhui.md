@@ -35,20 +35,20 @@ There are two pre-requisites for performing this operation:
  
 You can find the installer RPM files in an ISO image. Before this can be mounted to an existing Instance, you will need to create a volume from the image.
 
-1. In the Horizon Web UI, locate the image `UKCloud-RHUI-Standard-Assured.iso`, click the action button and select `Create Volume`:
+1. In the Horizon Web UI, locate the image `UKCloud-RHUI-Standard-Assured.iso`, click the action button and select **Create Volume**:
 
 	![Create Volume](images/ostack-rhui-image.png)
 	
-2. Use the default settings presented by the dialog to copy the ISO to a 1GB TIER2 volume, and click `Create Volume`:
+2. Use the default settings presented by the dialog to copy the ISO to a 1GB TIER2 volume, and click **Create Volume**:
 
 	![Create Volume Dialog](images/ostack-rhui-volumecreate.png)
 	
 	
-3. Locate the Red Hat Instance where you wish to install RHUI support and select `Attach Volume`:
+3. Locate the Red Hat Instance where you wish to install RHUI support and select **Attach Volume**:
 
 	![Instance Action Menu](images/ostack-rhui-volumeattach.png)
 	
-4. Select the newly created volume and then click `Attach Volume`: 
+4. Select the newly created volume and then click **Attach Volume**: 
 
 	![Attach Volume Dialog](images/ostack-rhui-volumeattachdialog.png)
 	
