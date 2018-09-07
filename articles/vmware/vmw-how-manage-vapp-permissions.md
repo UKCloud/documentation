@@ -39,7 +39,7 @@ For each user to whom you want to grant permissions on the vApp, you need the vC
 
 ## Managing permissions for a vApp
 
-### Using the HTML5 tenant portal in vCloud Director 9.1
+<!-- ### Using the HTML5 tenant portal in vCloud Director 9.1
 
 To manage permissions for a specific vApp:
 
@@ -84,7 +84,7 @@ To manage permissions for a specific vApp:
 
 11. When you're done setting permissions for all users, click **Save**.
 
-### Using the Flex-based UI in vCloud Director 8.20
+### Using the Flex-based UI in vCloud Director 8.20 -->
 
 To manage permissions for a specific vApp:
 
