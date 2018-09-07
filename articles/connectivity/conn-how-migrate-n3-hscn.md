@@ -193,10 +193,10 @@ We recommend giving NHS Digital a couple of days lead time as there may be sched
 
 ### UKCloud services
 
-UKCloud's public services are currently presented on N3 but will also be migrated onto HSCN.
+UKCloud's public services are currently presented on N3 and HSCN. You will need to amend VM host files to re-point to the HSCN IPs of any shared services you use when you migrate from N3 to HSCN. A list of the shared service IPs is available within the UKCloud Portal here: https://portal.skyscapecloud.com/notifications/472  (UKCloud Portal log in required)
 
 > [!NOTE]
-> We'll issue a Portal notification when these services will be migrated. You'll need to amend your firewall rules and host files so you can continue to reach these services when we've migrated these services to HSCN. Do not change these details until after we notify you via the Portal.
+> These services will soon be removed from the N3. You'll need to amend your firewall rules and host files so you can continue to reach these services when we've migrated these services to HSCN. As HSCN is routable from N3, if you are currently still on N3 you will be able to reach these services if you amend your N3 firewall and host files.
 
 ### Cloud Storage
 
