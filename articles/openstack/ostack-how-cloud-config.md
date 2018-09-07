@@ -17,7 +17,7 @@ toc_mdlink: ostack-how-cloud-config.md
 
 ## Overview
 
-When you boot an instance in OpenStack it's possible to pass configuration to the instance as cloud-config (sometimes called user-data). This enables you to quickly and easy make configuration changes at boot time.
+When you boot an instance in OpenStack you can pass configuration to the instance as cloud-config (sometimes called user-data). This enables you to quickly and easily make configuration changes at boot time.
 
 ## Use cases
 
