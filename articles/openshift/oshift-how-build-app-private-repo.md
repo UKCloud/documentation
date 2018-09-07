@@ -24,7 +24,7 @@ The way around this is to use a
 [deploy key](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys).
 
 This guide assumes you have access to the command-line `oc` client, and have
-logged in to your OpenShift instance with `oc login`
+logged in to your OpenShift instance with `oc login`.
 
 
 ## Building an OpenShift application from a private GitHub repository
@@ -42,7 +42,7 @@ logged in to your OpenShift instance with `oc login`
 
 2. Add the public key to the repository as a **Deploy key** (instructions
     with screenshots on
-    [GitHub](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys))
+    [GitHub](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys)).
     
 3. Add the private key to your OpenShift instance.
     
@@ -86,14 +86,14 @@ logged in to your OpenShift instance with `oc login`
       sourceSecret:
         name: myGitHubsecret
     ```
-7. Start the build    
+7. Start the build.
 
     ```bash
     oc start-build openshift-simple-monitor
     ```
 
 ## Generating a buildConfig in a file for future use.
-This is optional
+This is optional.
 
 To generate the `buildConfig` in a file for future use, use something like:
 
@@ -102,7 +102,7 @@ oc new-app git@github.com:UKCloud/openshift-simple-monitor.git \
   --name openshift-simple-monitor -o json >> a.json
 ```
 
-you can then create from the file with
+you can then create from the file with:
 
 ```bash
 oc create -f a.json
