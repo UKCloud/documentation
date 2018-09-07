@@ -95,21 +95,21 @@
 <h2 id="preparing-your-virtual-data-centre">Preparing your virtual data centre</h2>
 <p>To secure your environment, we recommend that you deploy the OpenVPN appliance into a new, routed VDC network. Ideally, no other virtual machines (VMs) should connect to this network. This enables you to tightly control access from VPN clients to the VMs in your environment using firewall rules on the edge gateway. However, if you're approaching the network interface limit of your edge gateway, it's possible to deploy the OpenVPN appliance into an existing network.</p>
 <h3 id="create-a-new-vdc-network">Create a new VDC network</h3>
-<h4 id="using-the-html5-tenant-portal-in-vcloud-director-91">Using the HTML5 tenant portal in vCloud Director 9.1</h4>
-<ol>
-<li><p>In vCloud Director, go to the VDC and in the Network section, click <strong>Add</strong>.</p>
-</li>
-<li><p>Fill in the required fields and select the edge to route through.</p>
-</li>
-<li><p>Provide a gateway, subnet mask and DNS.</p>
-</li>
-<li><p>Create a static pool in the format of: <code>192.168.1.2-192.168.1.100</code> and click <strong>Add</strong>.</p>
-<p><img src="images/vmw-vcd-tp-add-network-openvpn.png" alt="Add Org VDC Network dialog box"></p>
-</li>
-<li><p>When you're done, click <strong>Save</strong>.</p>
-</li>
-</ol>
-<h4 id="using-the-flex-based-ui-in-vcloud-director-820">Using the Flex-based UI in vCloud Director 8.20</h4>
+<!-- #### Using the HTML5 tenant portal in vCloud Director 9.1
+
+1. In vCloud Director, go to the VDC and in the Network section, click **Add**.
+
+2. Fill in the required fields and select the edge to route through.
+
+3. Provide a gateway, subnet mask and DNS.
+
+4. Create a static pool in the format of: `192.168.1.2-192.168.1.100` and click **Add**.
+
+    ![Add Org VDC Network dialog box](images/vmw-vcd-tp-add-network-openvpn.png)
+
+5. When you're done, click **Save**.
+
+#### Using the Flex-based UI in vCloud Director 8.20 -->
 <p>To create a new VDC network:</p>
 <ol>
 <li><p>In vCloud Director, select the <strong>Administration</strong> tab.</p>
@@ -176,35 +176,37 @@
 </li>
 </ol>
 <h2 id="deploying-the-openvpn-appliance">Deploying the OpenVPN appliance</h2>
-<h3 id="using-the-html5-tenant-portal-in-vcloud-director-91-1">Using the HTML5 tenant portal in vCloud Director 9.1</h3>
-<p>To deploy the OpenVPN appliance:</p>
-<ol>
-<li><p>In vCloud Director, go to your VDC and select <strong>vApps</strong>.</p>
-</li>
-<li><p>Click <strong>Add vApp from OVF</strong>.</p>
-<p><img src="images/vmw-vcd-tp-vapp-from-ovf.png" alt="Add vApp from OVF option"></p>
-</li>
-<li><p>Select the OVA that you downloaded then click <strong>Next</strong>.</p>
-</li>
-<li><p>Review the details of the OVA to confirm that it's the right images then click <strong>Next</strong>.</p>
-</li>
-<li><p>The appliance will be deployed as a single VM inside a vApp. Provide a name for the vApp then click <strong>Next</strong>.</p>
-</li>
-<li><p>Provide a valid NetBIOS host name and your desired storage policy then click <strong>Next</strong>.</p>
-</li>
-<li><p>Configure the network by selecting <strong>Switch to advanced networking workflow</strong>.</p>
-<p><img src="images/vmw-vcd-tp-vapp-from-ovf-network.png" alt="Configure Networking page of Create vApp from OVF wizard"></p>
-</li>
-<li><p>Select the network adapter type, network and IP pool assignment (<strong>Manual</strong>) then click <strong>Next</strong>.</p>
-</li>
-<li><p>Select the number of vCPUs, sockets and memory this appliance will have then click <strong>Next</strong>.</p>
-</li>
-<li><p>Review the details then click <strong>Finish</strong> to deploy the vApp and appliance.</p>
-</li>
-<li><p>When the vApp has deployed and is powered on, you'll need to reset (reboot) the VM before logging in for the first time to force the networking changes made during VMWare's guest customisations to take effect before you start configuring OpenVPN.</p>
-</li>
-</ol>
-<h3 id="using-the-flex-based-ui-in-vcloud-director-820-1">Using the Flex-based UI in vCloud Director 8.20</h3>
+<!-- ### Using the HTML5 tenant portal in vCloud Director 9.1
+
+To deploy the OpenVPN appliance:
+
+1. In vCloud Director, go to your VDC and select **vApps**.
+
+2. Click **Add vApp from OVF**.
+
+    ![Add vApp from OVF option](images/vmw-vcd-tp-vapp-from-ovf.png)
+
+3. Select the OVA that you downloaded then click **Next**.
+
+4. Review the details of the OVA to confirm that it's the right images then click **Next**.
+
+5. The appliance will be deployed as a single VM inside a vApp. Provide a name for the vApp then click **Next**.
+
+6. Provide a valid NetBIOS host name and your desired storage policy then click **Next**.
+
+7. Configure the network by selecting **Switch to advanced networking workflow**.
+
+    ![Configure Networking page of Create vApp from OVF wizard](images/vmw-vcd-tp-vapp-from-ovf-network.png)
+
+8. Select the network adapter type, network and IP pool assignment (**Manual**) then click **Next**.
+
+9. Select the number of vCPUs, sockets and memory this appliance will have then click **Next**.
+
+10. Review the details then click **Finish** to deploy the vApp and appliance.
+
+11. When the vApp has deployed and is powered on, you'll need to reset (reboot) the VM before logging in for the first time to force the networking changes made during VMWare's guest customisations to take effect before you start configuring OpenVPN.
+
+### Using the Flex-based UI in vCloud Director 8.20 -->
 <p>To deploy the OpenVPN appliance:</p>
 <ol>
 <li><p>In vCloud Director, select the <strong>My Cloud</strong> tab.</p>
