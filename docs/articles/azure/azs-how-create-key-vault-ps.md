@@ -17,30 +17,30 @@ toc_mdlink: azs-how-create-key-vault-ps.md
 
 ## Overview
 
-Key Vault in Azure Stack helps safeguard cryptographic keys and secrets that cloud applications and services use, by using Key Vault, you can encrypt keys and secrets.
+Key Vault in Azure Stack helps safeguard cryptographic keys and secrets that cloud applications and services use. By using Key Vault, you can encrypt keys and secrets.
 
-The following process will show you how to setup a vault within Azure Stacks Key Vault, store a secret in the vault and how to extract the secret.
+The following process shows you how to setup a vault within Azure Stacks Key Vault, store a secret in the vault and how to extract the secret.
 
-### Prerequisites
+## Prerequisites
 
-Ensure your Powershell environment is setup as detailed in [Configure PowerShell Environment and Azure Stack Modules](https://docs.ukcloud.com/articles/azure/azs-how-configure-powershell-users.html) 
+Ensure your Powershell environment is setup as detailed in [Configure PowerShell Environment and Azure Stack Modules](https://docs.ukcloud.com/articles/azure/azs-how-configure-powershell-users.html).
 
 ## Creating a new Key Vault
 
->[!Important]
->Values to be replaced:
+> [!IMPORTANT]
+> Values to be replaced:
 >
->Resource Group Name: <form oninput="result.value=name.value" id="resourcegroup" >
-><input  type="text" id="name" name="name"/></form>
+> Resource Group Name: <form oninput="result.value=name.value" id="resourcegroup" style="display: inline;" >
+> <input  type="text" id="name" name="name" style="display: inline;"/></form>
 >
->Vault Name: <form oninput="result.value=name.value;result2.value=name.value;result3.value=name.value" id="vaultname">
-><input  type="text" id="name" name="name"/></form>
+> Vault Name: <form oninput="result.value=name.value;result2.value=name.value;result3.value=name.value" id="vaultname" style="display: inline;">
+> <input  type="text" id="name" name="name" style="display: inline;" /></form>
 >
->Secret Value: <form oninput="result.value=name.value" id="SecretValue">
-><input  type="text" id="name" name="name"/></form>
+> Secret Value: <form oninput="result.value=name.value" id="SecretValue" style="display: inline;">
+> <input  type="text" id="name" name="name" style="display: inline;" /></form>
 >
->Secret Name: <form oninput="result.value=name.value;result2.value=name.value" id="secretname">
-><input  type="text" id="name" name="name"/></form>
+> Secret Name: <form oninput="result.value=name.value;result2.value=name.value" id="secretname" style="display: inline;">
+> <input  type="text" id="name" name="name" style="display: inline;"/></form>
 
 From your PowerShell window:
 
@@ -52,24 +52,24 @@ Add-AzureRMEnvironment -Name 'AzureStack' -ArmEndpoint 'https://management.frn00
 Login-AzureRmAccount -EnvironmentName 'AzureStack'
 
 # Select Resource Group
-$RGName = '<output form="resourcegroup" name="result">&lt;Resource Group&gt;</output>'
+$RGName = '<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
 
 # Create a new vault in the Resource Group above
-New-AzureRmKeyVault -VaultName '<output form="vaultname" name="result">&lt;Vault Name&gt;</output>' -ResourceGroupName $RGName -Location 'frn00006'
+New-AzureRmKeyVault -VaultName '<output form="vaultname" name="result" style="display: inline;">&lt;Vault Name&gt;</output>' -ResourceGroupName $RGName -Location 'frn00006'
 </code></pre>
 
 This will create a Key Vault in the specified resource group.
 
 ## Storing a secret in the vault
 
-From your PowerShell Window:
+From your PowerShell window:
 
 <pre><code class="language-PowerShell">
 # Create a new secret
-$SecretValue = ConvertTo-SecureString '<output form="SecretValue" name="result">&lt;String&gt;</output>' -AsPlainText -Force
+$SecretValue = ConvertTo-SecureString '<output form="SecretValue" name="result" style="display: inline;">&lt;String&gt;</output>' -AsPlainText -Force
 
 # Store the secret in Azure Key Vault
-$Secret = Set-AzureKeyVaultSecret -VaultName '<output form="vaultname" name="result2">&lt;Vault Name&gt;</output>' -Name '<output form="secretname" name="result">&lt;Secret Name&gt;</output>' -SecretValue $SecretValue
+$Secret = Set-AzureKeyVaultSecret -VaultName '<output form="vaultname" name="result2" style="display: inline;">&lt;Vault Name&gt;</output>' -Name '<output form="secretname" name="result" style="display: inline;">&lt;Secret Name&gt;</output>' -SecretValue $SecretValue
 
 # Display URL
 $Secret.Id
@@ -82,11 +82,11 @@ The secret you created will be stored in your Key Vault.
 
 ## Extracting a Secret from the vault
 
-From your PowerShell Window:
+From your PowerShell window:
 
 <pre><code class="language-PowerShell">
 # Extract the secret key value and store it in a variable
-$ExtractedSecret = (Get-AzureKeyVaultSecret –VaultName '<output form="vaultname" name="result3">&lt;Vault Name&gt;</output>' -Name '<output form="secretname" name="result2">&lt;Secret Name&gt;</output>').SecretValueText
+$ExtractedSecret = (Get-AzureKeyVaultSecret –VaultName '<output form="vaultname" name="result3" style="display: inline;">&lt;Vault Name&gt;</output>' -Name '<output form="secretname" name="result2" style="display: inline;">&lt;Secret Name&gt;</output>').SecretValueText
 
 # Display the secret key value
 $ExtractedSecret
