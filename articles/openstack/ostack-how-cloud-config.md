@@ -1,6 +1,6 @@
 ---
-title: Making use of Cloud-Config to configure instance on OpenStack | UKCloud Ltd
-description: Describes how to use Cloud-Config (user-data) to configure an instance.
+title: How to configure an OpenStack instance using cloud-config | UKCloud Ltd
+description: Describes how to use cloud-config (user-data) to configure an OpenStack instance
 services: openstack
 author: Steve Relf
 toc_rootlink: How To
@@ -8,51 +8,56 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Configuring an instance using Cloud-Config (User-Data)
+toc_title: Configure an instance using cloud-config
 toc_fullpath: How To/ostack-how-cloud-config.md
 toc_mdlink: ostack-how-cloud-config.md
 ---
 
-# How to configure an instance using cloud-config (user-data)
+# How to configure an OpenStack instance using cloud-config
 
 ## Overview
-When you boot an instance in OpenStack its possible to pass configuration to the instance, this configuration is passed into the instance as cloud-config (sometimes called User-Data). This allows you to quickly and easy make configuration changes at boot time.
 
-## Why would I use this
-Setting a default locale
-Setting an instance hostname
-Generating instance SSH private keys
-Adding SSH keys to a user’s .ssh/authorized_keys so they can log in
-Setting up ephemeral mount points
-Configuring network devices
-Running config scripts at startup
-And much much more.
+When you boot an instance in OpenStack it's possible to pass configuration to the instance as cloud-config (sometimes called user-data). This enables you to quickly and easy make configuration changes at boot time.
+
+## Use cases
+
+The following list provides some examples of how you can use cloud-config to configure an instance:
+
+- Setting a default locale
+- Setting an instance hostname
+- Generating instance SSH private keys
+- Adding SSH keys to a user's `.ssh/authorized_keys` so they can log in
+- Setting up ephemeral mount points
+- Configuring network devices
+- Running config scripts at startup
 
 ## Example
-As an example, lets boot an instance and run some arbitry commands at boot time.
 
-cloud-config can be deployed via the command line, or via the horizon GUI. This guide will use the CLI, the same script can be used via the GUI, it will just need to be pasted into the "Configuration" tab.
+You can deploy cloud-config via the command line or via the OpenStack Horizon GUI. In this guide, we use the CLI, but you can use the same script via the GUI by pasting it into the **Configuration** tab.
 
-Create a new text file called, user-data.txt.
+As an example, let's boot an instance and run some arbitrary commands at boot time.
 
-Add the following to it.
+1. Create a new text file called `user-data.txt`.
 
-`
-#cloud-config
-runcmd:
- - mkdir -pv /root/cloud-config-test
- - touch /root/cloud-config-test/boottest
- - echo "boot instance test" >> /root/cloud-config-test/boottest
-`
+2. Add the following to the new file.
 
-Now boot an instance using the cli, and add "--user-data user-data.txt" to the end of the boot command.
+    ```
+    #cloud-config
+    runcmd:
+     - mkdir -pv /root/cloud-config-test
+     - touch /root/cloud-config-test/boottest
+     - echo "boot instance test" >> /root/cloud-config-test/boottest
+    ```
 
-Once the instance has booted, log into the instance, switch to root and look in the directoy, you will see the new file, and it will contain "boot instance test"
+3. Boot an instance using the CLI, and add `--user-data user-data.txt` to the end of the boot command.
 
-This is a very simple example of what can be done with cloud-config, but you can see from this simple example that you can easily start to build fairly complicated setup scripts.
+4. When the instance has booted, log into the instance, switch to root and look in the directoy. You will see the new file, and it will contain `boot instance test`.
 
-## Cloud Config documentation
-The cloud config documentation can be found here;
+This is a very simple example of what you can do with cloud-config, but you can see from this simple example that you can easily start to build fairly complicated setup scripts.
+
+## Next steps
+
+You can find documentation for cloud-config at the following location:
 
 https://cloudinit.readthedocs.io/en/latest/topics/examples.html
 
