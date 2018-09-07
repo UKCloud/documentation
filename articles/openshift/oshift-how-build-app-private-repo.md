@@ -14,7 +14,7 @@ toc_fullpath: How To/oshift-how-build-app-private-repo.md
 toc_mdlink: oshift-how-build-app-private-repo.md
 ---
 
-# How to build an OpenShift application from a private GitHub repo
+# How to build an OpenShift application from a private GitHub repository
 
 ## Overview
 
@@ -40,14 +40,11 @@ logged in to your OpenShift instance with `oc login`
     This will generate both the private and public key files. The public one will
     have a `.pub` suffix.
 
-2. Add the pubic key
-
-    Add the public key to the repository as a **Deploy key** (instructions
-    with screen-shots on 
+2. Add the public key to the repository as a **Deploy key** (instructions
+    with screenshots on
     [GitHub](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys))
     
-3. Add the private key
-    Add the private key to your OpenShift instance. 
+3. Add the private key to your OpenShift instance.
     
     > [!NOTE] 
     > the word `myGitHubsecret` below is the name of your secret, not a password.
@@ -56,9 +53,7 @@ logged in to your OpenShift instance with `oc login`
     oc secrets new-sshauth myGitHubsecret --ssh-privatekey=./my_GitHub_deploy_key
     ```
 
-4. Attempt a build
-
-    Attempt a build, which will fail, but will enable you to add the
+4. Attempt a build, which will fail, but will enable you to add the
     secret in the next step.
      
     ```bash
@@ -76,9 +71,7 @@ logged in to your OpenShift instance with `oc login`
     oc secrets link builder myGitHubsecret
     ```
 
-6. Add the secret to the buildConfig
-
-    Add the secret to the `buildConfig` by editing the file using `oc edit`.
+6. Add the secret to the `buildConfig` by editing the file using `oc edit`.
  
     ```bash
     oc edit bc/openshift-simple-monitor
