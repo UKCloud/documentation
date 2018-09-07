@@ -17,12 +17,12 @@ toc_mdlink: azs-how-resize-unmanaged-disk.md
 
 ## Overview
 
-When deploying a new virtual machine from an Azure Marketplace image, the default drive size is often 127GB or less. Whilst it is recommended to add additional disks for tasks such as installing applications and for CPU intensive workloads, you may need to expand the initial drive for purposes such as migrating from a physical PC to the VM or to support applications which must be installed on the OS drive.
+When deploying a new virtual machine from an Azure Marketplace image, the default drive size is often 127GB or less. While it is recommended to add additional disks for tasks such as installing applications and for CPU intensive workloads, you may need to expand the initial drive for purposes such as migrating from a physical PC to the VM or to support applications that must be installed on the OS drive.
 
 This guide shows you how to resize disks on UKCloud for Microsoft Azure.
 
->[!Note]
->Resizing a disk will cause the virtual machine to restart.
+> [!NOTE]
+> Resizing a disk will cause the virtual machine to restart.
 
 ### Intended audience
 
@@ -32,19 +32,19 @@ To complete the steps in this guide you must have the appropriate permissions on
 
 From your PowerShell window:
 
->[!Important]
->Variables to be changed:
+> [!IMPORTANT]
+> Variables to be changed:
 >
->Resource Group Name: <form oninput="result.value=name.value" id="ResourceGroup" >
-><input  type="text" id="name" name="name"/></form>
+> Resource Group Name: <form oninput="result.value=name.value" id="ResourceGroup" style="display: inline;" >
+> <input  type="text" id="name" name="name" style="display: inline;"/></form>
 >
->VM Name: <form oninput="result.value=name.value" id="VMName" >
-><input  type="text" id="name" name="name"/></form>
+> VM Name: <form oninput="result.value=name.value" id="VMName" style="display: inline;">
+> <input  type="text" id="name" name="name" style="display: inline;"/></form>
 >
->New Disk Size in GB: <form oninput="result.value=name.value" id="DiskSize" >
-><input  type="text" id="name" name="name"/></form>
+> New Disk Size in GB: <form oninput="result.value=name.value" id="DiskSize" style="display: inline;">
+> <input  type="text" id="name" name="name" style="display: inline;"/></form>
 >
-> Please note that the maximum size allowed for OS disks is 2048GB
+> Note that the maximum size allowed for OS disks is 2048GB
 
 <pre><code class="language-PowerShell">
 # Sign in to your Azure Active Directory account in resource management mode
@@ -52,8 +52,8 @@ Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.f
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group name and VM name
-$RGName = '<output form="ResourceGroup" name="result">&lt;Resource Group&gt;</output>'
-$VMName = '<output form="VMName" name="result">&lt;VM Name&gt;</output>'
+$RGName = '<output form="ResourceGroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
+$VMName = '<output form="VMName" name="result" style="display: inline;">&lt;VM Name&gt;</output>'
 
 # Obtain a reference to your VM
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
@@ -62,20 +62,22 @@ $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
 # Set the size of the unmanaged OS disk to the desired value and update the VM
-$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result">&lt;Disk Size&gt;</output>
+$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">&lt;Disk Size&gt;</output>
 Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
 
 # Restart the VM
 Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
 
-After expanding the disk, it is necessary to go into the OS and expand the volume to actually use the newly allocated space. To do so please follow these steps:
+## Expanding the volume
+
+After expanding the disk, you must go into the OS and expand the volume to actually use the newly allocated space. To do so follow these steps:
 
 # [Windows VM](#tab/tabid-1)
 
-1. Open an RDP connection to your VM
+1. Open an RDP connection to your VM.
 
-2. Open a command prompt and type `diskpart`
+2. Open a command prompt and type `diskpart`.
 
 3. At the `DISKPART` prompt, type `list volume`. Take note of the volume you want to extend.
 
