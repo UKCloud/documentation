@@ -186,9 +186,9 @@ After you've created your compute service and VDC, you can start to build up you
 
     ![vCloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
 
-3. vCloud Director launches in your browser window. What you see will depend on whether your environment uses vCloud Director 8.20 or vCloud Director 9.1.
+3. vCloud Director launches in your browser window. <!-- What you see will depend on whether your environment uses vCloud Director 8.20 or vCloud Director 9.1. -->
 
-    **vCloud Director 8.20 Home page**
+    <!-- **vCloud Director 8.20 Home page** -->
 
     ![vCloud Director 8.20 Home page](images/vmw-vcd-home.png)
 
@@ -198,23 +198,21 @@ After you've created your compute service and VDC, you can start to build up you
     > [!TIP]
     > If you encounter any issues, make sure you're using the Firefox ESR 32-bit browser. For more information, see [*Browser requirements for services on the UKCloud Platform*](../other/other-ref-browsers.md).
 
-    **vCloud Director 9.1 Home page**
+    <!-- **vCloud Director 9.1 Home page**
 
-    ![vCloud Director 9.1 Home page](images/vmw-vcd-home-91.png)
+    ![vCloud Director 9.1 Home page](images/vmw-vcd-home-91.png) -->
 
 4. The tasks you can perform in vCloud Director will depend on the permissions you have been granted.
 
     **More information!** [*How to manage permissions for vCloud Director*](vmw-how-manage-vcd-permissions.md)
 
-5. To return to the UKCloud Portal:
-
-    - In vCloud Director 8.20, click the **Logout** link in the top right corner.
+5. To return to the UKCloud Portal click the **Logout** link in the top right corner.
 
     ![vCloud Director 8.20 Logout option](images/vmw-vcd-logout.png)
 
-    - In vCloud Director 9.1, click your user name in the top right corner, and select **Log out**.
+    <!-- - In vCloud Director 9.1, click your user name in the top right corner, and select **Log out**.
 
-    ![vCloud Director 9.1 Logout option](images/vmw-vcd-logout-91.png)
+    ![vCloud Director 9.1 Logout option](images/vmw-vcd-logout-91.png) -->
 
 ## Next steps
 

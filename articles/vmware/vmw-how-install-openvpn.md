@@ -33,7 +33,7 @@ To secure your environment, we recommend that you deploy the OpenVPN appliance i
 
 ### Create a new VDC network
 
-#### Using the HTML5 tenant portal in vCloud Director 9.1
+<!-- #### Using the HTML5 tenant portal in vCloud Director 9.1
 
 1. In vCloud Director, go to the VDC and in the Network section, click **Add**.
 
@@ -47,7 +47,7 @@ To secure your environment, we recommend that you deploy the OpenVPN appliance i
 
 5. When you're done, click **Save**.
 
-#### Using the Flex-based UI in vCloud Director 8.20
+#### Using the Flex-based UI in vCloud Director 8.20 -->
 
 To create a new VDC network:
 
@@ -122,7 +122,7 @@ To ensure you're running the latest release of OpenVPN, we recommend that you do
 
 ## Deploying the OpenVPN appliance
 
-### Using the HTML5 tenant portal in vCloud Director 9.1
+<!-- ### Using the HTML5 tenant portal in vCloud Director 9.1
 
 To deploy the OpenVPN appliance:
 
@@ -152,7 +152,7 @@ To deploy the OpenVPN appliance:
 
 11. When the vApp has deployed and is powered on, you'll need to reset (reboot) the VM before logging in for the first time to force the networking changes made during VMWare's guest customisations to take effect before you start configuring OpenVPN.
 
-### Using the Flex-based UI in vCloud Director 8.20
+### Using the Flex-based UI in vCloud Director 8.20 -->
 
 To deploy the OpenVPN appliance:
 
@@ -287,13 +287,17 @@ To configure administration options:
     `https://<ip_address>/admin`
 
 2. To set the hostname, under *Configuration*, select **Server Network Settings** and then set the **Hostname or IP Address** to either a public IP address or a fully qualified domain name (FQDN) that your client will be able to resolve.
+
 3. Save the settings on this page.
+
 4. Under *Configuration*, select **VPN settings** and, in the *Routing* section, add any additional subnets that your VPN users should have access to. These will usually be the IP subnets configured on all of your VDC networks.
 
     This is the minimum configuration required to be able to establish a VPN connection.
 
-1. If you want to create new user accounts, under *User Management*, select **User Permissions**.
-2. You can configure the password for each account by clicking the **Show** link in the *More Settings* column.
+5. If you want to create new user accounts, under *User Management*, select **User Permissions**.
+
+6. You can configure the password for each account by clicking the **Show** link in the *More Settings* column.
+
     > [!NOTE]
     > Be sure to use complex passwords.
 
@@ -356,6 +360,7 @@ To lock down the administration and client interfaces:
     `https://<ip_address>/admin`
 
 2. Under *Configuration*, select **Server Network Settings**.
+
 3. Under *Service Forwarding* in the *VPN Server* section, clear the check boxes for **Admin Web Server** and **Client Web Server**.
 
 ### Disable root SSH login

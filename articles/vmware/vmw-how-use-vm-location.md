@@ -33,7 +33,7 @@ of VMs, please raise a support request from the "My Calls" section of the UKClou
 
 ## How to obtain the location of a specific VM via the Portal
 
-### Using the HTML5 tenant portal in vCloud Director 9.1
+<!-- ### Using the HTML5 tenant portal in vCloud Director 9.1
 
 1. Login to the UKCloud Portal.
 
@@ -65,7 +65,7 @@ of VMs, please raise a support request from the "My Calls" section of the UKClou
 
     The location of the VM is displayed in the **Value** column.
 
-### Using the Flex-based UI in vCloud Director 8.20
+### Using the Flex-based UI in vCloud Director 8.20 -->
 
 1. In vCloud Director, click the **Administration** tab.
 
