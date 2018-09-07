@@ -30,7 +30,7 @@ Firefox ESR 52 is an older version of Firefox, updated with new security patches
 <https://www.mozilla.org/en-US/firefox/organizations/>
 
 > [!NOTE]
-> Make sure you download ESR 52, which is the last ESR release to support legacy add-ons. Support for ESR 52 ends in August 2018, but by this time we will have upgraded UKCloud for VMware to vCloud Director 9.1, which will eliminate the need for the Web Console plugin. For more information, see <https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/>. You should also make sure that you download the 32-bit version of the browser.
+> Make sure you download ESR 52, which is the last ESR release to support legacy add-ons. Support for ESR 52 ends in August 2018. We plan to upgrade UKCloud for VMware to vCloud Director 9.1, which will eliminate the need for the Web Console plugin. For more information, see <https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/>. You should also make sure that you download the 32-bit version of the browser.
 
 Although Internet Explorer 8.*x* , 9.*x* and 10.*x* are supported by the vCloud Director 8.20 Web Console, if you've applied any group policy restrictions you may encounter problems.
 
