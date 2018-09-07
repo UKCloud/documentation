@@ -1,106 +1,93 @@
 ---
-title: UKCloud for Microsoft Azure Onboarding Guide | UKCloud Ltd
-description: Provides help for getting your UKCloud for Microsoft Azure environment up and running
+title: How to resize an unmanaged disk | UKCloud Ltd
+description: Provides help for resizing an unmanaged disk on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
 toc_rootlink: Users
-toc_sub1: Getting Started
+toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for Microsoft Azure Onboarding Guide
-toc_fullpath: Users/Getting Started/azs-gs-onboarding.md
-toc_mdlink: azs-gs-onboarding.md
+toc_title: How to resize an unmanaged disk
+toc_fullpath: Users/How To/azs-how-resize-unmanaged-disk.md
+toc_mdlink: azs-how-resize-unmanaged-disk.md
 ---
 
-# UKCloud for Microsoft Azure Onboarding Guide
+# How to resize an unmanaged disk
 
 ## Overview
 
-UKCloud for Microsoft Azure provides you with new options to harness Microsoft Azure alongside other cloud platforms, including Oracle, VMware and OpenStack. This gives you the flexibility to accommodate diverse workloads within a low latency, accredited platform with native connectivity to non-cloud workloads in Crown Hosting and the networks that are vital to the public sector: from PSN Protected to HSCN and RLI.
+When deploying a new virtual machine from an Azure Marketplace image, the default drive size is often 127GB or less. While it is recommended to add additional disks for tasks such as installing applications and for CPU intensive workloads, you may need to expand the initial drive for purposes such as migrating from a physical PC to the VM or to support applications that must be installed on the OS drive.
 
-This Onboarding guide provides help for getting your UKCloud for Microsoft Azure environment up and running.
+This guide shows you how to resize disks on UKCloud for Microsoft Azure.
 
-## What is Azure Active Directory and why is it required for UKCloud for Microsoft Azure?
+> [!NOTE]
+> Resizing a disk will cause the virtual machine to restart.
 
-Azure Active Directory is Microsoft's cloud-based Directory and Identity Access Management Service. It provides Single Sign-On and core directory services via a high availability service with automated failover. <abbr title="Azure Active Directory"> AAD</abbr> provides the identity store for UKCloud for Microsoft Azure, supporting features such as two-factor authentication and role based access control.
+### Intended audience
 
-> [!Note]
-> If you do not have an existing Azure Active Directory, please provide a preferred domain name and administrator email address, and UKCloud will create an Azure Active Directory Domain (subject to availability) free of charge.
+To complete the steps in this guide you must have the appropriate permissions on the resource you are trying to access.
 
-## How can I get started with UKCloud for Microsoft Azure?
+## Resizing an unmanaged disk
 
-# [I have an existing Azure Active Directory Domain](#tab/tabid-1)
+From your PowerShell window:
 
-If you have decided that UKCloud for Microsoft Azure is the right environment for you, please contact your CSM who will request the following information:
+> [!IMPORTANT]
+> Variables to be changed:
+>
+> Resource Group Name: <form oninput="result.value=name.value" id="ResourceGroup" style="display: inline;" >
+> <input  type="text" id="name" name="name" style="display: inline;"/></form>
+>
+> VM Name: <form oninput="result.value=name.value" id="VMName" style="display: inline;">
+> <input  type="text" id="name" name="name" style="display: inline;"/></form>
+>
+> New Disk Size in GB: <form oninput="result.value=name.value" id="DiskSize" style="display: inline;">
+> <input  type="text" id="name" name="name" style="display: inline;"/></form>
+>
+> Note that the maximum size allowed for OS disks is 2048GB
 
-- Contact Email Address
-- Azure Active Directory Domain
-- Azure Active Directory Administrator Email Address
+<pre><code class="language-PowerShell">
+# Sign in to your Azure Active Directory account in resource management mode
+Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-For example:
+# Set your resource group name and VM name
+$RGName = '<output form="ResourceGroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
+$VMName = '<output form="VMName" name="result" style="display: inline;">&lt;VM Name&gt;</output>'
 
-    Hi <CSM>
+# Obtain a reference to your VM
+$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
-    Here are the details for our new UKCloud for Microsoft Azure environment as requested:
+# Stop the VM before resizing the disk
+Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
-    Contact Email Address: onboardingukcloud3@ukcloud.com
-    Azure Active Directory Domain: onboardingukcloud3csp.onmicrosoft.com
-    AAD Administrator Email Address: admin@onboardingukcloud3csp.onmicrosoft.com
+# Set the size of the unmanaged OS disk to the desired value and update the VM
+$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">&lt;Disk Size&gt;</output>
+Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
 
-    Kind Regards,
-    John Doe
-    UKCloud
+# Restart the VM
+Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+</code></pre>
 
-Once this information has been provided, UKCloud will proceed to set-up your new UKCloud for Microsoft Azure environment.
+## Expanding the volume
 
-Shortly after submitting your details, you should receive an email asking for permission for UKCloud to be you Microsoft Cloud Solution Provider. An example of this email can be seen below:
+After expanding the disk, you must go into the OS and expand the volume to actually use the newly allocated space. To do so follow these steps:
 
-![Microsoft Azure CSP invitation email](images/azs-email-csp-invitation.png)
+# [Windows VM](#tab/tabid-1)
 
-Once you have received this, please click the "CSP Invitation URL" link and click to sign in:
+1. Open an RDP connection to your VM.
 
-![Microsoft Azure sign in page](images/azs-browser-csp-auth-signin.png)
+2. Open a command prompt and type `diskpart`.
 
-After signing in you will be greeted with the following page. Please tick the checkbox and click "Authorize CSP", then contact your CSM so UKCloud can complete your onboarding process.
+3. At the `DISKPART` prompt, type `list volume`. Take note of the volume you want to extend.
 
-![Microsoft Azure authorize CSP page](images/azs-browser-authorize-csp.png)
+4. At the `DISKPART` prompt, type `select volume <volumenumber>`. This selects the volume that you want to extend into unpartitioned empty space on the same disk.
 
-Subsequent to this, you should receive a welcome email from your CSM containing the details of your new UKCloud for Microsoft Azure environment.
+5. At the `DISKPART` prompt, type `extend`. This extends the selected volume to fill the added space on the disk.
 
-# [I do not have an existing Azure Active Directory](#tab/tabid-2)
+# [Linux VM](#tab/tabid-2)
 
-If you have decided that UKCloud for Microsoft Azure is the right environment for you, please contact your CSM who will request the following information:
-
-- Contact Name
-- Contact Email Address
-- Contact Phone Number
-- Billing Address
-- Preferred Azure Active Directory Domain
-
-For example:
-
-    Hi <CSM>
-
-    Here are the details for our new UKCloud for Microsoft Azure environment as requested:
-
-    Contact Name: John Doe
-    Contact Email Address: onboardingukcloud3@ukcloud.com
-    Contact Phone Number: 01252 303300
-    Address Line 1: Hartham Park
-    Address City: Corsham
-    Address County: Wiltshire
-    Address Country: GB
-    Address Post Code: SN13 0RP
-    Preferred Azure Active Directory Domain: onboardingukcloud3csp.onmicrosoft.com
-
-    Kind Regards,
-    John Doe
-    UKCloud
-
-Once this information has been provided, UKCloud will proceed to set-up your new UKCloud for Microsoft Azure environment.
-
-After providing the above details, you should receive a welcome email shortly from your CSM containing the details of your new UKCloud for Microsoft Azure environment.
+No further action is required.
 
 ***
 
