@@ -1246,7 +1246,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-how-migrate-n3-hscn.html",
-          "hash": "Y3a/K1A4ITqMqKNWnLfmvw=="
+          "hash": "mcLJ1/PsN44A4RV0b4w5og=="
         }
       },
       "is_incremental": false,
@@ -11201,13 +11201,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
