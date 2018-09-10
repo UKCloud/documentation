@@ -34,7 +34,7 @@ VMs provide the basic compute building blocks in Azure Stack. You can create VMs
 
    For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
-2. In the favourites panel, select **New**.
+2. In the favourites panel, select **Create a resource**.
 
     ![New option in favourites panel](images/azsp_newmenu.png)
 
@@ -57,9 +57,6 @@ VMs provide the basic compute building blocks in Azure Stack. You can create VMs
 7. In the *Size* step, select the appropriate size for your VM, depending on its purpose, then click **Select**.
 
     For information about the different available VM sizes, see <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>
-
-    > [!TIP]
-    > By default, the list shows a selection of recommended VM sizes. To see all available VM sizes, click **View all**.
 
     ![Create virtual machine > Size](images/azsp_createvm_size.png)
 
