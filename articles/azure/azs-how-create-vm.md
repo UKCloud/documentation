@@ -42,7 +42,7 @@ VMs provide the basic compute building blocks in Azure Stack. You can create VMs
 
     ![Compute option in New blade](images/azsp_newblade.png)
 
-4. In the *Compute* blade, select the image that you want to use for your VM, for example, **Ubuntu Server 17.0**.
+4. In the *Compute* blade, select the template that you want to use for your VM.
 
     ![List of VM images in Compute blade](images/azsp_computeblade.png)
 
