@@ -81,7 +81,7 @@ First, a virtual network will need to be created. This virtual network will be a
 
 To associate a virtual network with a gateway, it must first contain a valid gateway subnet. The following steps outline how to create a gateway subnet.
 
-1. In the portal, navigate to the virtual network which was created previosuly.
+1. In the portal, navigate to the virtual network which was created previously.
 
 2. In the **Settings** section of the virtual network blade, select **Subnets**
 
