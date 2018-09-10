@@ -1,5 +1,5 @@
 ---
-title: Deploying multiple VMs from a vApp template simultaneously using the API | UKCloud Ltd
+title: How to deploy multiple VMs from a vApp template simultaneously using the API | UKCloud Ltd
 description: Outlines the options for deploying multiple VMs simultaneously from a single vApp template
 services: vmware
 author: Sue Highmoor
@@ -8,12 +8,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: 
+toc_title: Deploy multiple VMs from a vApp template simultaneously using the API
 toc_fullpath: How To/vmw-how-deploy-multiple-vms-from-vapp.md
 toc_mdlink: vmw-how-deploy-multiple-vms-from-vapp.md
 ---
 
-# Deploying multiple VMs from a vApp template simultaneously using the API
+# How to deploy multiple VMs from a vApp template simultaneously using the API
 
 If you intend to deploy multiple VMs simultaneously from a single vApp template, you'll need to raise a request through the UKCloud Portal requesting that Change Block Tracking (CBT) is disabled on your template. Alternatively, if your VMs are in the ESSENTIAL service level then these will not be backed up meaning CBT will not be enabled.
 
