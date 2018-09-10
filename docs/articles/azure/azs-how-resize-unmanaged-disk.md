@@ -46,8 +46,7 @@ From your PowerShell window:
 >
 > Note that the maximum size allowed for OS disks is 2048GB
 
-<pre><code class="language-PowerShell">
-# Sign in to your Azure Active Directory account in resource management mode
+<pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
 Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
