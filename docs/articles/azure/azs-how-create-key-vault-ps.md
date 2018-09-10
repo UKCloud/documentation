@@ -44,8 +44,7 @@ Ensure your Powershell environment is setup as detailed in [Configure PowerShell
 
 From your PowerShell window:
 
-<pre><code class="language-PowerShell">
-# Add environment
+<pre><code class="language-PowerShell"># Add environment
 Add-AzureRMEnvironment -Name 'AzureStack' -ArmEndpoint 'https://management.frn00006.azure.ukcloud.com'
 
 # Login
@@ -64,8 +63,7 @@ This will create a Key Vault in the specified resource group.
 
 From your PowerShell window:
 
-<pre><code class="language-PowerShell">
-# Create a new secret
+<pre><code class="language-PowerShell"># Create a new secret
 $SecretValue = ConvertTo-SecureString '<output form="SecretValue" name="result" style="display: inline;">&lt;String&gt;</output>' -AsPlainText -Force
 
 # Store the secret in Azure Key Vault
@@ -84,8 +82,7 @@ The secret you created will be stored in your Key Vault.
 
 From your PowerShell window:
 
-<pre><code class="language-PowerShell">
-# Extract the secret key value and store it in a variable
+<pre><code class="language-PowerShell"># Extract the secret key value and store it in a variable
 $ExtractedSecret = (Get-AzureKeyVaultSecret –VaultName '<output form="vaultname" name="result3" style="display: inline;">&lt;Vault Name&gt;</output>' -Name '<output form="secretname" name="result2" style="display: inline;">&lt;Secret Name&gt;</output>').SecretValueText
 
 # Display the secret key value
