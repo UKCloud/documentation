@@ -111,7 +111,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
    **Virtual Network** - This is the virtual network that was created earlier
 
-   **Public IP address** - The public IP address that will be assigned to this virtual network gateway. Only dynamic public IP addresses are supported. To create a new Public IP address:
+   **Public IP address** - The public IP address that will be assigned to this virtual network gateway. Only dynamic public IP addresses are supported. To create a new public IP address:
    - Click **Public IP address** on the **Create virtual network gateway** blade.
    - Select **Create new** on the **Choose public IP address** blade.
    - Enter a name for the public IP address and click **OK**.
