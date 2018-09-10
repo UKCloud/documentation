@@ -72,6 +72,8 @@
     href: vmw-how-create-firewall-rules.md
   - name: Create NAT rules
     href: vmw-how-create-nat-rules.md
+  - name: Deploy multiple VMs from a vApp template simultaneously using the API
+    href: vmw-how-deploy-multiple-vms-from-vapp.md
   - name: Export edge gateway configuration data using PowerShell
     href: vmw-how-ps-export-edge-data.md
   - name: How to access Ubuntu update servers
@@ -84,6 +86,8 @@
     href: vmw-how-zerto-install-local.md
   - name: Install Red Hat Update Infrastructure on an existing virtual machine
     href: vmw-how-install-rhui-vm.md
+  - name: Interact with the vCloud REST API using PowerShell and Python
+    href: vmw-how-interact-vcd-api-powershell.md
   - name: Licence Microsoft applications/software on the UKCloud platform
     href: vmw-how-license-microsoft.md
   - name: License Windows VMs using the UKCloud Key Management Server
@@ -106,12 +110,16 @@
     href: vmw-how-manage-vapp-permissions.md
   - name: Upgrade your edge gateway
     href: vmw-how-upgrade-edge.md
+  - name: Upload ISO or FLP media
+    href: vmw-how-upload-media-iso-flp.md
   - name: Use affinity and anti-affinity rules
     href: vmw-how-use-affinity-rules.md
   - name: Use the VMware OVF Tool
     href: vmw-how-use-ovf-tool.md
   - name: Use VM location in vCloud Director
     href: vmw-how-use-vm-location.md
+  - name: View and update virtual machine settings
+    href: vmw-how-update-vm-settings.md
   - name: View your VMs in the UKCloud Portal
     href: vmw-how-portal-view-vms.md
 - name: Reference

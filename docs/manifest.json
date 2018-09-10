@@ -8706,6 +8706,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-ico-upload-media.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-ico-upload-media.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-ico-upload-progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-ico-upload-progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-lb-add-virtual-server-reg.png",
       "output": {
         "resource": {
@@ -9157,6 +9179,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-tab-media.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-tab-media.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-tab-my-cloud.png",
       "output": {
         "resource": {
@@ -9432,10 +9465,43 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-transfer-process.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-transfer-process.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-tunnel-ip-address.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-tunnel-ip-address.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-upload-media-destination.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-upload-media-destination.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-upload-media-source.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-upload-media-source.png"
         }
       },
       "is_incremental": false,
@@ -9762,6 +9828,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-vm-settings-general.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-vm-settings-general.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-vm-settings-guestos-cust.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-vm-settings-guestos-cust.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-vm-settings-hardware.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-vm-settings-hardware.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-vms.png",
       "output": {
         "resource": {
@@ -10019,7 +10118,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "CiKfC1aY2jiAYuGuHOq5mA=="
+          "hash": "/5DknyqgrQ1sczL9vqiKGw=="
         }
       },
       "is_incremental": false,
@@ -10399,6 +10498,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-deploy-multiple-vms-from-vapp.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-deploy-multiple-vms-from-vapp.html",
+          "hash": "4tXx5HPRdNowlNwwlH/XfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-find-ip-addresses.md",
       "output": {
         ".html": {
@@ -10440,6 +10551,18 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-how-install-vcloud-api-rest-client.html",
           "hash": "rZHq5FpFWz1AiOmtU8yjYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-interact-vcd-api-powershell.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-interact-vcd-api-powershell.html",
+          "hash": "sjQXsw1ogh8oe3ME6HLRHA=="
         }
       },
       "is_incremental": false,
@@ -10579,11 +10702,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-update-vm-settings.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-update-vm-settings.html",
+          "hash": "Ihpv74IuTPIW6Z0EVLG7UQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-upgrade-edge.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-upgrade-edge.html",
           "hash": "qg2SAscoV2RY81NgnThd/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-upload-media-iso-flp.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-upload-media-iso-flp.html",
+          "hash": "0EyN9kt288MsPQdWY6vm2A=="
         }
       },
       "is_incremental": false,
