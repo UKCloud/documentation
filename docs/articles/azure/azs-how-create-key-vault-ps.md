@@ -8,7 +8,7 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: How to create a Key Vault - PowerShell
+toc_title: Create a Key Vault - PowerShell
 toc_fullpath: Users/How To/azs-how-create-key-vault-ps.md
 toc_mdlink: azs-how-create-key-vault-ps.md
 ---
@@ -19,11 +19,11 @@ toc_mdlink: azs-how-create-key-vault-ps.md
 
 Key Vault in Azure Stack helps safeguard cryptographic keys and secrets that cloud applications and services use. By using Key Vault, you can encrypt keys and secrets.
 
-The following process shows you how to setup a vault within Azure Stacks Key Vault, store a secret in the vault and how to extract the secret.
+The following process shows you how to setup a vault within Azure Stack's Key Vault, store a secret in the vault and how to extract the secret.
 
 ## Prerequisites
 
-Ensure your Powershell environment is setup as detailed in [Configure PowerShell Environment and Azure Stack Modules](https://docs.ukcloud.com/articles/azure/azs-how-configure-powershell-users.html).
+Ensure your PowerShell environment is setup as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.html).
 
 ## Creating a new Key Vault
 
