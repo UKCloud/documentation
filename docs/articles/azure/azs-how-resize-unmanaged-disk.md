@@ -8,7 +8,7 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: How to resize an unmanaged disk
+toc_title: Resize an unmanaged disk
 toc_fullpath: Users/How To/azs-how-resize-unmanaged-disk.md
 toc_mdlink: azs-how-resize-unmanaged-disk.md
 ---
