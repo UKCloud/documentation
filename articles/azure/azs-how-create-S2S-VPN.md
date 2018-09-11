@@ -59,7 +59,7 @@ First, you'll need to create a virtual network. This virtual network will be abl
 
    - **Address Range** - The subnet's address range in CIDR notation (for example, 192.168.1.0). It must be contained by the address space of the virtual network. The address range of a subnet which is in use can't be edited.
 
-   ![Create new virtual network](images/azs-browser-create-virtual-network.png)
+     ![Create new virtual network](images/azs-browser-create-virtual-network.png)
 
 6. Click **Create**.
 
@@ -124,7 +124,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
 
-   ![Create new virtual network gateway](images/azs-browser-create-Vnetwork-gateway.png)
+     ![Create new virtual network gateway](images/azs-browser-create-Vnetwork-gateway.png)
 
 5. Click **Create**.
 
@@ -164,7 +164,7 @@ The local network gateway refers to your on-premises network. The following step
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
 
-   ![Create new local network gateway](images/azs-browser-create-Lnetwork-gateway.png)
+     ![Create new local network gateway](images/azs-browser-create-Lnetwork-gateway.png)
 
 5. Click **Create**.
 
@@ -198,7 +198,7 @@ Create the Site-to-Site VPN connection between your virtual network gateway and 
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
 
-   ![Add new connection](images/azs-browser-add-connection.png)
+     ![Add new connection](images/azs-browser-add-connection.png)
 
 6. Click **OK**.
 
