@@ -70,7 +70,7 @@ VMs provide the basic compute building blocks in Azure Stack. You can create VMs
 
     ![Status of VM deployment](images/azsp_createvm_deployment.png)
 
-11. When the deployment is finished, the notification wil change to **Deployment succeeded**.
+11. When the deployment is finished, the notification will change to **Deployment succeeded**.
 
     ![Notification showing successful VM deployment](images/azsp_createvm_deployment_success.png)
 
