@@ -29,7 +29,7 @@ Yes. We offer three VM Types: Essential, Power and Priority.
 
 VM characteristics are inherited from the VDC the VM is deployed in. It is not currently possible to have a VDC that has mixed VM types.
 
-However, customers can have multiple VDCS to deliver their solution.
+However, customers can use multiple VDCs to deliver their solution.
 
 ### Are VMs contended?
 
@@ -121,7 +121,7 @@ Alternatively, we offer the Mass Transfer Facility option enabling customers to 
 
 ### Does UKCloud offer encryption on the VM?
 
-Not by default but, if it's required, you can implement it using technology of your choice.
+Not by default but, if it's required, you can implement it using technology of your choice inside the VM's OS.
 
 ### Is UKCloud's encryption service available for UKCloud for VMware?
 
@@ -129,7 +129,7 @@ Not currently, but we are considering this as an option. Provide feedback via [U
 
 ### Is it possible to non-fast-provision vApps, and to convert current vApps into non-fast provisioned ones?
 
-Fast provisioning is done only by customer request - by default, all vApps are non-fast-provisioned. Customers can right-click on a VM and consolidate. This can also be done via a Service Request.
+Fast provisioning is enabled only by customer request - by default, all vApps are non-fast-provisioned. Customers can right-click on a VM and consolidate. This can also be done via a Service Request.
 
 ### What is Dedicated Compute?
 
@@ -203,8 +203,7 @@ You can also use your preferred firewall and security appliances, as long as the
 
 ### How do I create and manage firewall rules?
 
-Your UKCloud-provided dedicated virtual firewall is managed exclusively by you. You can set and manage firewall rules via the UKCloud Portal and
-API.
+Your UKCloud-provided dedicated virtual firewall is managed exclusively by you. You can set and manage firewall rules via the UKCloud Portal and API.
 
 On-boarding guides and associated video tutorials are available to help
 customers configure and manage their firewalls.
@@ -213,11 +212,11 @@ customers configure and manage their firewalls.
 
 Customers can choose to deploy the firewall technology of their choice.
 
-This service, how to order it, and the constraints it may place on operation, is fully documented within our knowledge centre on the UKCloud Portal.
+This service, how to order it, and the constraints it may place on operation, is fully documented within our knowledge centre.
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
-You can view these on the [notifications page](https://portal.ukcloud.com/notifications) on the UKCloud Portal. In addition, Service Status reports are published on the [service status](http://status.skyscapecloud.com/) page.
+You can view these on the [notifications page](https://portal.ukcloud.com/notifications) on the UKCloud Portal. In addition, Service Status reports are published on the [service status](http://status.ukcloud.com/) page.
 
 ### When using fault tolerance on vCNS devices, is the TCP session state replicated between the devices?
 
