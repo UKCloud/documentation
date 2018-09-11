@@ -69,7 +69,7 @@ First, you'll need to create a virtual network. This virtual network will be abl
 
 8. Click the deployment notification for the deployment to view details of the deployment of the virtual network.
 
-9. When the deployment is finished, the notification wil change to **Deployment succeeded**.
+9. When the deployment is finished, the notification will change to **Deployment succeeded**.
 
 10. After your virtual network has deployed, you can view it by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the networking section.
 
@@ -107,7 +107,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
    - **Name** - The name of the virtual network gateway.
 
-   - **SKU** - Route-based VPN gateway types are offered in three SKUs: Basic, Standard, and High performance. You must select Standard or High performance if you are creating the network to coexist with an ExpressRout gateway. You must select High performance SKU to enable active-active mode. You can find more information about SKUs here: [Azure Stack SKUs](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-about-skus-legacy).
+   - **SKU** - Route-based VPN gateway types are offered in three SKUs: Basic, Standard, and High performance. You must select Standard or High performance if you are creating the network to coexist with an ExpressRoute gateway. You must select High performance SKU to enable active-active mode. You can find more information about SKUs here: [Azure Stack SKUs](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-about-skus-legacy).
 
    - **Virtual Network** - This is the virtual network that you created earlier.
 
@@ -172,7 +172,7 @@ The local network gateway refers to your on-premises network. The following step
 
 Create the Site-to-Site VPN connection between your virtual network gateway and your on-premises VPN device:
 
-1. Navigate to your virtual network gateway by clicking on **All services** in the favourites panel, then selecting **Virtual network gateways** under the networking section.
+1. Navigate to your virtual network gateway by clicking **All services** in the favourites panel, then selecting **Virtual network gateways** under the networking section.
 
 2. Select your virtual network gateway from the list.
 
@@ -190,7 +190,7 @@ Create the Site-to-Site VPN connection between your virtual network gateway and 
 
    - **Local network gateway**- Select the local network gateway you created earlier.
 
-   - **Shared Key** - A mixture of letters and numbers, used to establish encryption for the connection. You must use the same shared key in both the virtual network and local network gateways.. If your gateway device doesn't provide one, you can make one up here and provide it to your device.
+   - **Shared Key** - A mixture of letters and numbers, used to establish encryption for the connection. You must use the same shared key in both the virtual network and local network gateways. If your gateway device doesn't provide one, you can make one up here and provide it to your device.
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
@@ -217,7 +217,5 @@ After configuring the VPN device on your local network, you can verify the VPN c
 5. In the blade that has opened, you can view more information about your connection. The connection status will be **Succeeded** or **Connected** if there is a successful connection.
 
 ## Feedback
-
-Each article should end with a feedback section that includes the following text:
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
