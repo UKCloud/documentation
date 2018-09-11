@@ -1,5 +1,5 @@
 ---
-title: Static IP  | UKCloud Ltd
+title: How to create static IPs for OpenStack instances  | UKCloud Ltd
 description: Instructions on how to create static IPs and assign them to instances
 services: openstack
 author: Bryce Nicholls
