@@ -8,26 +8,29 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Create Static IPs for assignment to instances.
+toc_title: Create static IPs for OpenStack instances.
 toc_fullpath: How To/ostack-how-static-ip.md
 toc_mdlink: ostack-how-static-ip.md
 ---
 
-# Creating Static IPs for assignment to instances.
-
-Static IPs  are assigned to instances in openstack by creating ports and adding them to the instance.
+# How to create static IPs for OpenStack instances.
+## Overview
+Static IPs  are assigned to instances in OpenStack by creating ports and adding them to the instance.
 
 A port is a connection point for attaching a single device, such as the NIC of a server, to a network. The port also describes the associated network configuration, such as the MAC and IP addresses to be used on that port.
 
-## Steps
+## Creating a static IP
 
-> ![NOTE]
+> [!NOTE]
 > You will need to source your RC file before you run the commands below.
 
-### Create a network
+1. Create a network by entering the following command in the OpenStack CLI:
 ```
 $ openstack network create testnet
+```
 
+This command will return the following:
+```
 +---------------------------+--------------------------------------+
 | Field                     | Value                                |
 +---------------------------+--------------------------------------+
@@ -60,10 +63,12 @@ $ openstack network create testnet
 | updated_at                | 2018-09-05T12:20:30Z                 |
 +---------------------------+--------------------------------------+
 ```
-### Create a subnet and attach to the network
+2. Create a subnet and attach to the network
 ```
 $ openstack subnet create --network testnet --subnet-range 10.1.1.0/24 testnet-sub
-
+```
+This command will return the following:
+```
 +-------------------+--------------------------------------+
 | Field             | Value                                |
 +-------------------+--------------------------------------+
@@ -90,10 +95,12 @@ $ openstack subnet create --network testnet --subnet-range 10.1.1.0/24 testnet-s
 | updated_at        | 2018-09-05T12:22:46Z                 |
 +-------------------+--------------------------------------+
 ```
-### Create a port and attach to the network & subnet ###
+3. Create a port and attach to the network & subnet 
 ```
 $ openstack port create --network testnet --fixed-ip subnet=testnet-sub,ip-address=10.1.1.10 test-static-ip-1
-
+```
+This command will return the following:
+```
 +-----------------------+--------------------------------------------------------------------------+
 | Field                 | Value                                                                    |
 +-----------------------+--------------------------------------------------------------------------+
@@ -129,10 +136,12 @@ $ openstack port create --network testnet --fixed-ip subnet=testnet-sub,ip-addre
 | updated_at            | 2018-09-05T12:26:55Z                                                     |
 +-----------------------+--------------------------------------------------------------------------+
 ```
-### Launch an instance with the static IP attached
+4. Launch an instance with the static IP attached
 ```
 openstack server create --flavor t1.nano --port test-static-ip-1 --image cirros ukc-test --wait
-
+```
+This command will return the following:
+```
 +-----------------------------+----------------------------------------------------------+`
 | Field                       | Value                                                    |`
 +-----------------------------+----------------------------------------------------------+`
@@ -165,7 +174,7 @@ openstack server create --flavor t1.nano --port test-static-ip-1 --image cirros 
 | volumes_attached            |                                                          |`
 +-----------------------------+----------------------------------------------------------+`
 ```
----
+## Next steps
 The following Red Hat document provides more options for configuring ports when using UKCloud for OpenStack.
 
 [*Red Hat OpenStack Platform 10 Command-Line Interface Reference for configuring ports*](https://docs.openstack.org/python-openstackclient/pike/cli/command-objects/port.html)
