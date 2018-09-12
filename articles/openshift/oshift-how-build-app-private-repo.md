@@ -24,7 +24,7 @@ The way around this is to use a
 [deploy key](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys).
 
 This guide assumes you have access to the command-line `oc` client, and have
-logged in to your OpenShift instance with `oc login`.
+logged in to your OpenShift cluster with `oc login`.
 
 
 ## Building an OpenShift application from a private GitHub repository
@@ -44,7 +44,7 @@ logged in to your OpenShift instance with `oc login`.
     with screenshots on
     [GitHub](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys)).
     
-3. Add the private key to your OpenShift instance.
+3. Add the private key to your OpenShift cluster as a secret.
     
     > [!NOTE] 
     > the word `myGitHubsecret` below is the name of your secret, not a password.
@@ -57,12 +57,13 @@ logged in to your OpenShift instance with `oc login`.
     secret in the next step.
      
     ```bash
-    oc new-app git@github.com:UKCloud/my-private-repo-name.git
+    oc new-app git@github.com:UKCloud/my-private-repo-name.git \
+         --name my-app-name
     ```
     
     The build will fail, with a message "Fetch source failed".
 
-5. Tell OpenShift about your deploy key.
+5. Link your deploy key to your service account
     
     The private key was added as a 'secret' in **Step 3** above. Now add the secret to the `builder`
     service account -- this will allow the builder to fetch the source properly.
@@ -71,10 +72,10 @@ logged in to your OpenShift instance with `oc login`.
     oc secrets link builder myGitHubsecret
     ```
 
-6. Add the secret to the `buildConfig` by editing the file using `oc edit`.
+6. Add the secret to the build by editing the `buildConfig` using `oc edit`.
  
     ```bash
-    oc edit bc/openshift-simple-monitor
+    oc edit bc/my-app-name
     ``` 
     
     Within the editor, add the secret to the `source` section, for example:
@@ -82,30 +83,31 @@ logged in to your OpenShift instance with `oc login`.
     ```yaml
     source:
       git:
-        uri: ssh://git@github.com/UKCloud/openshift-simple-monitor.git
+        uri: ssh://git@github.com/UKCloud/my-private-repo-name.git
       sourceSecret:
         name: myGitHubsecret
     ```
 7. Start the build.
 
     ```bash
-    oc start-build openshift-simple-monitor
+    oc start-build my-app-name
     ```
 
 ## Generating a buildConfig in a file for future use.
 This is optional.
 
-To generate the `buildConfig` in a file for future use, use something like:
+To generate the `buildConfig` in a file for future use, use the `-o` flag
+ to `oc new-app`, like this:
 
 ```bash
-oc new-app git@github.com:UKCloud/openshift-simple-monitor.git \
-  --name openshift-simple-monitor -o json >> a.json
+oc new-app git@github.com:UKCloud/my-private-repo-name.git \
+  --name my-app-name -o json >> buildConfigDefinition.json
 ```
 
 you can then create from the file with:
 
 ```bash
-oc create -f a.json
+oc create -f buildConfigDefinition.json
 oc new-app --template <app-name> 
 ```
 
@@ -113,6 +115,7 @@ oc new-app --template <app-name>
 
 - [blog.openshift.com](https://blog.openshift.com/using-ssh-key-for-s2i-builds/)
 - [blog.lucywyman.me](http://blog.lucywyman.me/deploy-private-git-repo-to-openshift.html)
+- [Openshift documentation on source-clone-secrets](https://docs.openshift.com/container-platform/latest/dev_guide/builds/build_inputs.html#source-clone-secrets)
 
 ## Feedback
 
