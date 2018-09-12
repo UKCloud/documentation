@@ -156,7 +156,7 @@ main()
 > [!TIP]
 > If you encounter problems copying and pasting the source code above, we also provide the code in the following blog post:
 
-<https://ukcloud.com/news-resources/news/blog/simple-openshift-monitoring>
+<https://ukcloud.com/hub/news/simple-openshift-monitoring/>
 
 ## Next steps
 
