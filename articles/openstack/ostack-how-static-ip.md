@@ -95,7 +95,7 @@ This command will return the following:
 | updated_at        | 2018-09-05T12:22:46Z                 |
 +-------------------+--------------------------------------+
 ```
-3. Create a port and attach to the network & subnet 
+3. Create a port and attach to the network & subnet: 
 ```
 $ openstack port create --network testnet --fixed-ip subnet=testnet-sub,ip-address=10.1.1.10 test-static-ip-1
 ```
