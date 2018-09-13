@@ -367,7 +367,7 @@ UKCloud monitors the underlying platform but doesn't monitor customers' OSs or a
 
 ### Do you offer autoscaling?
 
-There's no standard product offering for autoscale, but the platform API can be used to do this with a little developer effort. UKCloud provides blueprints in the Knowledge Centre which offer guidance on this.
+There's no standard product offering for autoscale, but the platform API can be used to do this with a little developer effort. We provide blueprints on the UKCloud web site that offer guidance on this.
 
 ### How quickly can I scale my service up or down?
 
