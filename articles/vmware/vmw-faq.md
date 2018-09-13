@@ -541,7 +541,7 @@ The recovery time objective (RTO) depends on the nature of the disaster or failu
 
 If you need more control and assurance around how data is replicated, the DR service is tested, or the solution handles failover and failback, we recommend you create your own DR solution by using independent sets of VMs in the various regions offered by the UKCloud platform.
 
-An alternative UKCloud solution to acheive DR with a low RPO and RTO is [Journaling Protection](vmw-sco-journaling-protection.md).
+An alternative UKCloud solution to achieve DR with a low RPO and RTO is [Journaling Protection](vmw-sco-journaling-protection.md).
 
 ### How does UKCloud enable customers to create their own DR solutions?
 
