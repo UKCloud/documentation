@@ -26,42 +26,42 @@ A port is a connection point for attaching a single device, such as the NIC of a
 
 1. Create a network by entering the following command in the OpenStack CLI:
 ```
-$ openstack network create testnet
+  $ openstack network create testnet
 ```
 
 This command will return the following:
 ```
-+---------------------------+--------------------------------------+
-| Field                     | Value                                |
-+---------------------------+--------------------------------------+
-| admin_state_up            | UP                                   |
-| availability_zone_hints   |                                      |
-| availability_zones        |                                      |
-| created_at                | 2018-09-05T12:20:30Z                 |
-| description               |                                      |
-| dns_domain                | None                                 |
-| id                        | dd4f624a-1101-4b01-a388-308c5972742a |
-| ipv4_address_scope        | None                                 |
-| ipv6_address_scope        | None                                 |
-| is_default                | None                                 |
-| is_vlan_transparent       | None                                 |
-| mtu                       | 1446                                 |
-| name                      | testnet                              |
-| port_security_enabled     | True                                 |
-| project_id                | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     |
-| provider:network_type     | None                                 |
-| provider:physical_network | None                                 |
-| provider:segmentation_id  | None                                 |
-| qos_policy_id             | None                                 |
-| revision_number           | 3                                    |
-| router:external           | Internal                             |
-| segments                  | None                                 |
-| shared                    | False                                |
-| status                    | ACTIVE                               |
-| subnets                   |                                      |
-| tags                      |                                      |
-| updated_at                | 2018-09-05T12:20:30Z                 |
-+---------------------------+--------------------------------------+
+  +---------------------------+--------------------------------------+
+  | Field                     | Value                                |
+  +---------------------------+--------------------------------------+
+  | admin_state_up            | UP                                   |
+  | availability_zone_hints   |                                      |
+  | availability_zones        |                                      |
+  | created_at                | 2018-09-05T12:20:30Z                 |
+  | description               |                                      |
+  | dns_domain                | None                                 |
+  | id                        | dd4f624a-1101-4b01-a388-308c5972742a |
+  | ipv4_address_scope        | None                                 |
+  | ipv6_address_scope        | None                                 |
+  | is_default                | None                                 |
+  | is_vlan_transparent       | None                                 |
+  | mtu                       | 1446                                 |
+  | name                      | testnet                              |
+  | port_security_enabled     | True                                 |
+  | project_id                | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     |
+  | provider:network_type     | None                                 |
+  | provider:physical_network | None                                 |
+  | provider:segmentation_id  | None                                 |
+  | qos_policy_id             | None                                 |
+  | revision_number           | 3                                    |
+  | router:external           | Internal                             |
+  | segments                  | None                                 |
+  | shared                    | False                                |
+  | status                    | ACTIVE                               |
+  | subnets                   |                                      |
+  | tags                      |                                      |
+  | updated_at                | 2018-09-05T12:20:30Z                 |
+  +---------------------------+--------------------------------------+
 ```
 2. Create a subnet and attach to the network:
 ```
