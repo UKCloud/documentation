@@ -136,7 +136,7 @@ This command will return the following:
 | updated_at            | 2018-09-05T12:26:55Z                                                     |
 +-----------------------+--------------------------------------------------------------------------+
 ```
-4. Launch an instance with the static IP attached
+4. Launch an instance with the static IP attached:
 ```
 openstack server create --flavor t1.nano --port test-static-ip-1 --image cirros ukc-test --wait
 ```
