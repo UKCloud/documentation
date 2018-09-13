@@ -63,7 +63,7 @@ This command will return the following:
 | updated_at                | 2018-09-05T12:20:30Z                 |
 +---------------------------+--------------------------------------+
 ```
-2. Create a subnet and attach to the network
+2. Create a subnet and attach to the network:
 ```
 $ openstack subnet create --network testnet --subnet-range 10.1.1.0/24 testnet-sub
 ```
