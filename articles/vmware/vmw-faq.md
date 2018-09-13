@@ -549,7 +549,7 @@ Although we have engineered our cloud platform to tolerate failures and ensure c
 
 To help this process, the UKCloud platform has been designed to give you the options you need to design a disaster tolerant solution. UKCloud's platform is about providing customers with choice. Clearly, customers need to balance the low probability of these failure scenarios occurring with the cost and complexity involved in mitigating their impact.
 
-Depending on the type of failure you are trying to mitigate, UKCloud services have been developed to allow you design appropriate resilience into your solution.
+Depending on the type of failure you are trying to mitigate, UKCloud services have been developed to enable you to design appropriate resilience into your solution.
 
 At a macro level, UKCloud operate out of two sites. Designing across multiple sites will provide resilience against even the most unlikely of scenarios - including natural disasters and mass WAN failure. UKCloud currently offer two sites:
 
