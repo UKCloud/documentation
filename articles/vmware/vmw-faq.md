@@ -545,7 +545,7 @@ An alternative UKCloud solution to achieve DR with a low RPO and RTO is [Journal
 
 ### How does UKCloud enable customers to create their own DR solutions?
 
-Although we have engineered our cloud platform to tolerate failures and ensure customers services remain available, we encourage all our customers to design for failure and build DR capabilities into the system design, or into the application.
+Although we have engineered our cloud platform to tolerate failures and ensure customers' services remain available, we encourage all our customers to design for failure and build DR capabilities into the system design, or into the application.
 
 To help this process, the UKCloud platform has been designed to give you the options you need to design a disaster tolerant solution. UKCloud's platform is about providing customers with choice. Clearly, customers need to balance the low probability of these failure scenarios occurring with the cost and complexity involved in mitigating their impact.
 
