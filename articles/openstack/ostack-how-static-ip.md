@@ -13,7 +13,7 @@ toc_fullpath: How To/ostack-how-static-ip.md
 toc_mdlink: ostack-how-static-ip.md
 ---
 
-# How to create static IPs for OpenStack instances.
+# How to create static IPs for OpenStack instances
 ## Overview
 Static IPs  are assigned to instances in OpenStack by creating ports and adding them to the instance.
 
