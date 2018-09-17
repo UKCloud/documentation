@@ -21,9 +21,9 @@ This guide shows you how to extend permissions to users for specific vApps, whil
 
 The steps for managing vApp permissions depend on the version of vCloud Director available in your environment:
 
-- [vCloud Director 8.20](#managing-pemissions-for-a-vapp-vcloud-director-820)
+- [vCloud Director 8.20](#managing-permissions-for-a-vapp-vcloud-director-820)
 
-- [vCloud Director 9.1](#managing-pemissions-for-a-vapp-vcloud-director-91)
+- [vCloud Director 9.1](#managing-permissions-for-a-vapp-vcloud-director-91)
 
 ## Prerequisites
 
