@@ -12,6 +12,8 @@
     items:
     - name: Create a Key Vault - PowerShell
       href: azs-how-create-key-vault-ps.md
+    - name: Create a Site-to-Site connection in Azure Stack
+      href: azs-how-create-S2S-VPN.md
     - name: Create a virtual machine
       href: azs-how-create-vm.md
     - name: Create a VM using Terraform on Azure Stack
