@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Portal permissions | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to resize an unmanaged disk | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Portal permissions | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to resize an unmanaged disk | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.39.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,99 +82,82 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="portal-permissions">Portal permissions</h1>
+<h1 id="how-to-resize-an-unmanaged-disk">How to resize an unmanaged disk</h1>
 
 <h2 id="overview">Overview</h2>
-<p>System administrators are presented with several options to control user permissions through the UKCloud Portal. The information below is intended as a brief guide to which permissions are applied using each setting.</p>
-<p><img src="images/portal_permissions.png" alt="Portal permissions page"></p>
-<h2 id="user-is-admin">User is admin?</h2>
-<p>User gets full administrative privileges across the entire account. This includes all of the permissions listed below.</p>
-<h2 id="permissions-for-settings">Permissions for Settings</h2>
-<p><strong>Update:</strong> A user can update all of the account settings. This includes changing the security methods applied to the account, such as updating security restrictions to require memorable word, password timeout and 2FA. These users can also change the details of the accounts primary and secondary contacts.</p>
-<p><strong>All:</strong> Presently this offers the same capability the update permission.</p>
-<p>Leave these boxes unchecked to deny a user these capabilities.</p>
-<h2 id="permissions-for-contacts">Permissions for Contacts</h2>
-<p>Contact and user permissions dictate whether the user is able to make changes to who has access to the account, and their role inside of it.</p>
-<p>A contact is just contact details, they may not necessarily have an actual user account. To enable a contact to have User access, the must be marked as &quot;active&quot;.</p>
-<table>
-<thead>
-<tr>
-<th> </th>
-<th>Create</th>
-<th>Read</th>
-<th>Update</th>
-<th>Delete</th>
-<th>All</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Contact</strong></td>
-<td>Can create a new contact for that account.</td>
-<td>Can view existing contacts in that account.</td>
-<td>Can edit existing contacts but cannot create new ones.</td>
-<td>Can delete existing contacts.</td>
-<td>All of the above.</td>
-</tr>
-<tr>
-<td><strong>User</strong></td>
-<td>Can create a user associated to a contact for that account and assign permissions.</td>
-<td>Can view existing users for contacts.</td>
-<td>Can edit existing users and their permissions.</td>
-<td>Can delete existing users from contacts.</td>
-<td>All of the above.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="permissions-for-support">Permissions for Support</h2>
-<p>Support Permissions dictate whether a user can view and raise support tickets, and whether they can view other users support tickets.</p>
-<table>
-<thead>
-<tr>
-<th> </th>
-<th>Create</th>
-<th>Read</th>
-<th>Update</th>
-<th>All</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>User support tickets</strong></td>
-<td>Can log their own support tickets in their name.</td>
-<td>Can view their own support tickets.</td>
-<td>Can update their own support tickets.</td>
-<td>All of the above.</td>
-</tr>
-<tr>
-<td><strong>Account support tickets</strong></td>
-<td>Can log their own support tickets.</td>
-<td>Can view all tickets logged by users across that account.</td>
-<td>Can update anyone’s support ticket across that account.</td>
-<td>All of the above.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="permissions-for-ukcloud-for-vmware">Permissions for UKCloud for VMware</h2>
-<p>Compute service permissions are based on the vCloud director RBAC (role based access control permissions). These roles are applied on a service by service basis - for example someone might be a catalogue author of one service, and a console only user in a secondary service.</p>
-<p>The roles exposed are:</p>
-<ul>
-<li>Admin</li>
-<li>Catalogue Author</li>
-<li>vApp Author</li>
-<li>vApp User</li>
-<li>Console Only</li>
+<p>When deploying a new virtual machine from an Azure Marketplace image, the default drive size is often 127GB or less. While it is recommended to add additional disks for tasks such as installing applications and for CPU intensive workloads, you may need to expand the initial drive for purposes such as migrating from a physical PC to the VM or to support applications that must be installed on the OS drive.</p>
+<p>This guide shows you how to resize disks on UKCloud for Microsoft Azure.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Resizing a disk will cause the virtual machine to restart.</p>
+</div>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide you must have the appropriate permissions on the resource you are trying to access.</p>
+<h2 id="resizing-an-unmanaged-disk">Resizing an unmanaged disk</h2>
+<p>From your PowerShell window:</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Variables to be changed:</p>
+<p>Resource Group Name: <form oninput="result.value=name.value" id="ResourceGroup" style="display: inline;">
+<input type="text" id="name" name="name" style="display: inline;"></form></p>
+<p>VM Name: <form oninput="result.value=name.value" id="VMName" style="display: inline;">
+<input type="text" id="name" name="name" style="display: inline;"></form></p>
+<p>New Disk Size in GB: <form oninput="result.value=name.value" id="DiskSize" style="display: inline;">
+<input type="text" id="name" name="name" style="display: inline;"></form></p>
+<p>Note that the maximum size allowed for OS disks is 2048GB</p>
+</div>
+<pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
+Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Login-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Set your resource group name and VM name
+$RGName = '<output form="ResourceGroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
+$VMName = '<output form="VMName" name="result" style="display: inline;">&lt;VM Name&gt;</output>'
+
+# Obtain a reference to your VM
+$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+
+# Stop the VM before resizing the disk
+Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+
+# Set the size of the unmanaged OS disk to the desired value and update the VM
+$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">&lt;Disk Size&gt;</output>
+Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
+
+# Restart the VM
+Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+</code></pre>
+<h2 id="expanding-the-volume">Expanding the volume</h2>
+<p>After expanding the disk, you must go into the OS and expand the volume to actually use the newly allocated space. To do so follow these steps:</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Windows VM</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Linux VM</a>
+</li>
 </ul>
-<p>You can find further details of these roles in Chapter 11 of the vCloud Director Administrator's Guide.</p>
-<p>In addition, UKCloud have created an API Only role, that restricts users to accessing vCloud Director solely via the API - no GUI access.</p>
-<h2 id="permissions-for-cloud-storage">Permissions for Cloud Storage</h2>
-<p>Users need to be granted access to the relevant namespace. Once access is granted, the user will be able to see the namespace, list the buckets in the namespace and reset the secret key. The user will also be able to see consumption data for namespaces and buckets.</p>
-<h2 id="permissions-for-ukcloud-for-openstack">Permissions for UKCloud for OpenStack</h2>
-<p>Users need to be granted access to the relevant OpenStack project. Once access is granted, the user can access the Horizon dashboard for the project.</p>
-<h2 id="permissions-for-billing">Permissions for Billing</h2>
-<p>Users can see financial data for their compute services in My VMs. This includes spend to date and estimated spend for the month.</p>
-<h2 id="permissions-for-monitoring">Permissions for Monitoring</h2>
-<p>Users with <strong>Read</strong> permissions can view showback information from the Protective Monitoring service on the <em>My Security Events</em> page.</p>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+
+<ol>
+<li><p>Open an RDP connection to your VM.</p>
+</li>
+<li><p>Open a command prompt and type <code>diskpart</code>.</p>
+</li>
+<li><p>At the <code>DISKPART</code> prompt, type <code>list volume</code>. Take note of the volume you want to extend.</p>
+</li>
+<li><p>At the <code>DISKPART</code> prompt, type <code>select volume &lt;volumenumber&gt;</code>. This selects the volume that you want to extend into unpartitioned empty space on the same disk.</p>
+</li>
+<li><p>At the <code>DISKPART</code> prompt, type <code>extend</code>. This extends the selected volume to fill the added space on the disk.</p>
+</li>
+</ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<p>No further action is required.</p>
+</section>
+</div>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
@@ -189,7 +172,7 @@
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/portal/ptl-overview-permissions.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-resize-unmanaged-disk.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>
