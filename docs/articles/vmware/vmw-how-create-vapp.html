@@ -87,7 +87,14 @@
 <h2 id="overview">Overview</h2>
 <p>vCloud Director uses vApps to make virtual machine (VM) creation and management easy and flexible. vApps are essentially containers for VMs and can be used in many ways. One of the most common uses of a vApp is to group similar VMs together for easy management. Or you can put VMs that form a multi-tier application into the same vApp for greater control. Up to 128 vApps can be created within a virtual data centre (VDC) and intelligently networked to create complex architectures that can be managed easily.</p>
 <p>In this guide we'll look at how to create a vApp from scratch.</p>
-<h2 id="creating-a-vapp">Creating a vApp</h2>
+<p>The steps for creating a vApp depend on the version of vCloud Director available in your environment:</p>
+<ul>
+<li><p><a href="#creating-a-vapp-vcloud-director-820">vCloud Director 8.20</a></p>
+</li>
+<li><p><a href="#creating-a-vapp-vcloud-director-91">vCloud Director 9.1</a></p>
+</li>
+</ul>
+<h2 id="creating-a-vapp-vcloud-director-820">Creating a vApp (vCloud Director 8.20)</h2>
 <ol>
 <li><p>In vCloud Director, on the <em>Home</em> tab, click the Build New vApp button.</p>
 <p><img src="images/vmw-vcd-btn-new-vapp.png" alt="Build New vApp button"></p>
@@ -109,6 +116,33 @@
 <li><p>When you've finished creating your vApp, click <strong>Finish</strong>.</p>
 </li>
 <li><p>When your vApp has finished deploying, on the <em>Home</em> page, right-click the newly created vApp and click <strong>Start</strong> to power it on.</p>
+</li>
+</ol>
+<h2 id="creating-a-vapp-vcloud-director-91">Creating a vApp (vCloud Director 9.1)</h2>
+<ol>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to create the vApp.</p>
+</li>
+<li><p>In the left navigation panel, select <strong>vApps</strong> to view a list of vApps within the VDC.</p>
+<p><img src="images/vmw-vcd91-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
+</li>
+<li><p>Click <strong>Build New vApp</strong>.</p>
+<p><img src="images/vmw-vcd91-btn-new-vapp.png" alt="Build New vApp button"></p>
+</li>
+<li><p>In the <em>Build new vApp</em> dialog box, enter a <strong>Name</strong> and <strong>Description</strong> for your vApp. The name should be something that will easily identify it if you're building a large environment with multiple vApps.</p>
+<p><img src="images/vmw-vcd91-build-vapp.png" alt="Build new vApp dialog box"></p>
+</li>
+<li><p>You can now click <strong>Add Virtual Machine</strong> to populate the vApp with VMs. There are several ways to create a VM:</p>
+<ul>
+<li><p>From an existing template (see <a href="vmw-how-create-vm-from-template.html"><em>How to create a VM from a template</em></a>).</p>
+<p>Catalog creation is covered in <a href="vmw-how-create-catalog.html"><em>How to create a catalog</em></a>.</p>
+</li>
+<li><p>From scratch, without using a template (see <a href="vmw-how-create-vm-from-scratch.html"><em>How to create a virtual machine from scratch</em></a>).</p>
+</li>
+</ul>
+</li>
+<li><p>When you've finished creating your vApp, click <strong>Build</strong>.</p>
+</li>
+<li><p>When your vApp has finished deploying, in the card for the vApp, click <strong>Power</strong> then <strong>Power On</strong> to power it on.</p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
