@@ -68,7 +68,7 @@ The steps for creating a VM depend on the version of vCloud Director available i
     > [!NOTE]
     > This is the name of the VM, not the actual OS host name.
 
-9. From the **Storage Policy* list, select a storage policy to assign the VM to.
+9. From the **Storage Policy** list, select a storage policy to assign the VM to.
 
     > [!NOTE]
     > We recommend using the `*-*-*-Any` option as this will ensure your VMs are balanced evenly across all storage pools. However, you could use this option to specifically separate VMs on different storage if required for high availability purposes. For example, you could specifically place VMs on `*.*.*-Storage1` as opposed to `*.*.*-Storage2`. For more information, visit the Knowledge Centre.
@@ -153,7 +153,7 @@ The steps for creating a VM depend on the version of vCloud Director available i
 
 11. In the card for your new VM, click **Details** then select **General**.
 
-12. On the **General** tab, from the **Storage Policy* list, select a storage policy to assign the VM to.
+12. On the **General** tab, from the **Storage Policy** list, select a storage policy to assign the VM to.
 
     > [!NOTE]
     > We recommend using the `*-*-*-Any` option as this will ensure your VMs are balanced evenly across all storage pools. However, you could use this option to specifically separate VMs on different storage if required for high availability purposes. For example, you could specifically place VMs on `*.*.*-Storage1` as opposed to `*.*.*-Storage2`. For more information, visit the Knowledge Centre.
