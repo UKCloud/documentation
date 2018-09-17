@@ -135,7 +135,7 @@ You can also use your preferred software firewall and security appliances deploy
 
 To access the infrastructure via the dashboard and API you will need access through any firewalls on the following ports to the OpenStack endpoints you target.
 
-13774, 13696, 13776, 13042, 13292, 13777, 13776, 80, 443, 13004, 13386, 13041, 13000
+443, 13000, 13080, 13004, 13776, 13774, 13777, 13696, 13776
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 

@@ -18,10 +18,7 @@ toc_mdlink: ostack-gs.md
 
 ## Overview
 
-If you're new to UKCloud, you'll probably have received this guide as part of your welcome email.
-
-This Getting Started Guide covers basic topics like where to find your instances (virtual machines, or VMs, in VMware terminology), as well as more in-depth topics such as instance storage choice (ephemeral or
-volume storage) and its implications.
+This Getting Started Guide covers basic topics like where to find your instances (virtual machines, or VMs, in VMware terminology), as well as more in-depth topics such as instance storage choice (ephemeral or volume storage) and its implications.
 
 ### Intended audience
 
@@ -29,31 +26,28 @@ This guide is intended for users who want to learn more about UKCloud for OpenSt
 
 ## Logging in to the OpenStack Horizon dashboard
 
-The first thing you need to do is to log in to the OpenStack Horizon dashboard.
-
 1. Go to the URL provided in your welcome email.
 
     The examples in this guide use `https://cor00005.cni.ukcloud.com/`.
 
 2. Enter your login credentials and click **Connect**.
 
-    ![Horizon log in page](images/ostack-horizon-login.png)
+    ![Horizon login page](images/ostack-horizon-login.png)
 
 3. After logging in, the first screen you'll see is the *Overview* page.
 
-    From here you can get an immediate summary of your project and show your resource usage against the quotas on the project.
+    From here you can get a summary of your project and view your resource usage and the quotas configured on the project.
 
     ![Horizon Overview page](images/ostack-horizon-welcome.png)
 
 ## Creating your network infrastructure
 
-Before you can begin creating instances, you must first build out the underlying network infrastructure. In a freshly provisioned project, the only resource that will exist initially is a shared external network
-called `internet`.
+Before you can begin creating instances, you must first build the required network components. In a freshly provisioned project, the only resource that will exist initially is a shared external network called `internet`.
 
 You need to create the following minimum set of resources:
 
 - A router using the internet external network
-- A network and associated subnet, specifying the network address using CIDR notation (for example, 192.168.1.0/24), and DHCP settings for DNS, static routes, and so on.
+- A network and associated subnet, specifying the network address using CIDR notation (for example, 192.168.1.0/24), and DHCP settings for DNS, any static routes, and so on.
 - A router interface to connect the router to your new subnet
 
 When you have created these elements, you can view them in the *Network Topology* page in the Horizon dashboard.
@@ -64,7 +58,8 @@ You can create your network infrastructure in one of the following ways:
 
 - Using Horizon to manually create your infrastructure (see [Using Horizon to manually create your infrastructure](#using-horizon-to-manually-create-your-infrastructure))
 - Using the OpenStack Heat orchestration tool to create stacks (see [Using the OpenStack Heat orchestration tool to create stacks](#using-the-openstack-heat-orchestration-tool-to-create-stacks))
-- Using the OpenStack API and automation (see [Using the OpenStack API and automation](#using the-openstack-api-and-automation))
+- Using the OpenStack API and automation (see [Using the OpenStack API and automation](#using-the-openstack-api-and-automation))
+- Using the OpenStack CLI clients (see [Command-line clients for UKCloud for OpenStack](ostack-ref-cli-clients.md))
 
 ### Using Horizon to manually create your infrastructure
 
@@ -130,7 +125,7 @@ To create your network infrastructure:
 
 ### Security groups
 
-In OpenStack, rather than deploying a perimeter firewall to protect your network from the outside world, every instance is protected by its own firewall. This instance firewall is applied at the network level, independent of any additional firewall the guest operating system may be using. The instance firewall is controlled by applying one or more *security groups* to the instance, either at instance creation or real-time at any point during the lifecycle of the instance. Where multiple security groups are specified, the firewall rules are the result of compounding all the rules together.
+In OpenStack, rather than deploying a perimeter firewall to protect your network from the outside world, every instance is protected by its own firewall. This instance firewall is applied at the network level, independent of any additional firewall the guest operating system may be using. The instance firewall is controlled by applying one or more *security groups* to the instance, either at instance creation or real-time at any point during the lifecycle of the instance. Where multiple security groups are specified, all the firewall rules in those security groups are applied.
 
 ![Access & security settings](images/ostack-horizon-access-security.png)
 
@@ -214,12 +209,11 @@ If you're using a Windows desktop environment, the chances are that you're using
 
 ## Launching your instances
 
-Now that you've considered security, created a network and a subnet, and you've connected them to your external network with a router, you can start to think about launching some instances attached to the network. There are a few choices you need to make when launching your instances. The following sections outline how to achieve this task via the Horizon dashboard, however you can also use HEAT templates or the OpenStack API.
+Now that you've considered security, created a network and a subnet, and you've connected them to your external network with a router, you can start to think about launching some instances attached to the network. There are a few choices you need to make when launching your instances. The following sections outline how to achieve this task via the Horizon dashboard, however you can also use the OpenStack CLI, HEAT templates or the OpenStack API.
 
 ### Choosing your image
 
-When you create an instance in OpenStack, its disk is cloned from an *image* managed by OpenStack. The image may be a custom image that has been developed for a specific purpose and uploaded to your project. It
-may also be a custom image that has been specifically shared between two projects. More likely, you'll start by using one of the public images that we provide and manage on our platform.
+When you create an instance in OpenStack, its disk is cloned from an *image* managed by OpenStack. The image may be a custom image that has been developed for a specific purpose and uploaded to your project. It may also be a custom image that has been specifically shared between two projects. More likely, you'll start by using one of the public images that we provide and manage on our platform.
 
 You can see the images that are available for you to use by expanding the **Compute** menu on the left side of the Horizon dashboard and clicking **Images**.
 
@@ -247,12 +241,9 @@ There are two storage options available for use with your instances:
 
 #### Ephemeral storage
 
-When you create an instance, the default behaviour is to clone your chosen disk image onto the physical disk attached to the host that will be running the instance. This is not dedicated locally attached storage
-to your instance, but rather a RAID array of fast SSD disks that is shared by all the instances running on the host hypervisor.
+When you create an instance, the default behaviour is to clone your chosen disk image onto the physical disk attached to the host that will be running the instance. This is not dedicated locally attached storage to your instance, but rather a RAID array of fast SSD disks that is shared by all the instances running on the host hypervisor.
 
-The performance of the ephemeral storage makes for very fast disk access. However, as the disk image is stored locally on the host hypervisor, you're at risk of data loss in the event of hardware failure
-on the host. For scheduled maintenance on the host, you can live‑migrate instances onto other hosts with minimal interruption. If the host were to suffer a hardware failure, it's likely that you'd lose the data
-stored on the disk image, so you should architect your application to expect and be able to recover from failure.
+The performance of the ephemeral storage makes for very fast disk access. However, as the disk image is stored locally on the host hypervisor, you're at risk of data loss in the event of hardware failure on the host. For scheduled maintenance on the host, you can live‑migrate instances onto other hosts with minimal interruption. If the host were to suffer a hardware failure, it's likely that you'd lose the data stored on the disk image, so you should architect your application to expect and be able to recover from failure.
 
 #### Persistent volume storage
 

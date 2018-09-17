@@ -84,7 +84,7 @@
     href: vmw-how-install-openvpn.md
   - name: Install and configure Zerto in your local environment
     href: vmw-how-zerto-install-local.md
-  - name: Install Red Hat Update Infrastructure on an existing virtual machine
+  - name: Install Red Hat Update Infrastructure on an existing VMware virtual machine
     href: vmw-how-install-rhui-vm.md
   - name: Interact with the vCloud REST API using PowerShell and Python
     href: vmw-how-interact-vcd-api-powershell.md

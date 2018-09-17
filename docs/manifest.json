@@ -125,6 +125,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-create-key-vault-ps.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-create-key-vault-ps.html",
+          "hash": "aj9KCoAF7XkScUSJKyWyjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-create-spn-cli.md",
       "output": {
         ".html": {
@@ -202,6 +214,18 @@
         ".html": {
           "relative_path": "articles/azure/azs-how-ps-update-azure-stack.html",
           "hash": "DDqNlOLudnkUmLnQqzlbKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-resize-unmanaged-disk.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-resize-unmanaged-disk.html",
+          "hash": "XlQdXiefKiv9YTvc1sFfpw=="
         }
       },
       "is_incremental": false,
@@ -292,10 +316,43 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-authorize-csp.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-authorize-csp.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-csp-auth-signin.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-csp-auth-signin.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-disk-size.png",
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-disk-size.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-email-csp-invitation.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-email-csp-invitation.png"
         }
       },
       "is_incremental": false,
@@ -714,7 +771,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "eAlTg0l+iJoaL0UfeXkx8w=="
+          "hash": "FQ0gkS8dRl2wT6wac9BzgA=="
         }
       },
       "is_incremental": false,
@@ -2152,7 +2209,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-dtf.html",
-          "hash": "DHPFa1tlzdg+cubhlb8/cg=="
+          "hash": "6yuJrbJKET0QSITqsqPnwA=="
         }
       },
       "is_incremental": false,
@@ -2875,7 +2932,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-monitor-cluster.html",
-          "hash": "DgugtB04rtjwTO+ixVVaeA=="
+          "hash": "xLqxumnpOjXbTvquRPMKWA=="
         }
       },
       "is_incremental": false,
@@ -3754,6 +3811,72 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-rhui-image.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-rhui-image.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-rhui-mount.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-rhui-mount.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-rhui-volumeattach.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-rhui-volumeattach.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-rhui-volumeattachdialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-rhui-volumeattachdialog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-rhui-volumecreate.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-rhui-volumecreate.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-rhui-volumelocation.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-rhui-volumelocation.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-windows-advanced-system-settings.png",
       "output": {
         "resource": {
@@ -3923,7 +4046,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "zxJN69uBFeiSWqd1QYEk/w=="
+          "hash": "KsbQgPtB0kf4jEtI2/V63w=="
         }
       },
       "is_incremental": false,
@@ -3935,7 +4058,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-gs.html",
-          "hash": "YtNH+vzEDXCS9to9xFgSqw=="
+          "hash": "SpRQjJxknIu9wohiPjacfw=="
         }
       },
       "is_incremental": false,
@@ -3948,6 +4071,18 @@
         ".html": {
           "relative_path": "articles/openstack/ostack-how-create-load-balancer.html",
           "hash": "fAxVYeQ2puCH+yndgbDh7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-install-rhui.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-install-rhui.html",
+          "hash": "/ebsxFdAMLu00m+cRhCVYA=="
         }
       },
       "is_incremental": false,
@@ -4103,7 +4238,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "Kxh1yvP5SxNa9hNBf6zJiw=="
+          "hash": "33YwKlVK5aBWAAdhoTrStg=="
         }
       },
       "is_incremental": false,
@@ -10118,7 +10253,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "/5DknyqgrQ1sczL9vqiKGw=="
+          "hash": "mTD01Txpp9pZ6ChRBV6aDw=="
         }
       },
       "is_incremental": false,
@@ -10178,7 +10313,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "7duzITn0SheF6Lv6tDFfBg=="
+          "hash": "JEoK/yhVGovKWbITxw6pBA=="
         }
       },
       "is_incremental": false,
@@ -10538,7 +10673,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-install-rhui-vm.html",
-          "hash": "f/JP/qOL+2XviKhundtcig=="
+          "hash": "U+8LoL9XlONlipcrCvIgnQ=="
         }
       },
       "is_incremental": false,
@@ -11343,14 +11478,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
