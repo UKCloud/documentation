@@ -10,6 +10,8 @@
   items:
   - name: Create load balancing services
     href: ostack-how-create-load-balancer.md
+  - name: Install Red Hat Update Infrastructure on an existing OpenStack instance
+    href: ostack-how-install-rhui.md
   - name: Manage how your instance recovers from a host failure
     href: ostack-how-recover-instance.md
   - name: Manage UKCloud for OpenStack accounts in the UKCloud Portal
