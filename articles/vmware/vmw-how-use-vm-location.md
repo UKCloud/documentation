@@ -31,47 +31,21 @@ With regards to the supplied location, this is standardised to the following opt
 This feature is designed to show the location of VMs to assist you in optimising your infrastructure with regard to performance and availability. If you wish to change the location of a specific or group
 of VMs, please raise a support request from the "My Calls" section of the UKCloud Portal.
 
-## How to obtain the location of a specific VM via the Portal
+The steps for using VM location depend on the version of vCloud Director available in your environment:
 
-<!-- ### Using the HTML5 tenant portal in vCloud Director 9.1
+- [vCloud Director 8.20](#obtaining-the-location-of-a-specific-vm-vcloud-director-820)
 
-1. Login to the UKCloud Portal.
+- [vCloud Director 9.1](#obtaining-the-location-of-a-specific-vm-vcloud-director-91)
 
-    For more detailed steps, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
+You can also use the [vCloud API](#obtaining-the-location-of-a-specific-vm-vcloud-api).
 
-2. If necessary, switch to the appropriate account.
-
-3. In the Portal navigation panel expand **VMware Cloud** then select your compute service.
-
-    ![Compute services menu option](images/vmw-portal-mnu-compute-services.png)
-
-4. On the **vCloud Director** tab, enter your UKCloud Portal password and then click **Confirm**.
-
-    ![vCloud Director](images/conver-image-2.png)
-
-5. Select the **VDC** your VM is in and select **Virtual Machines**.
-
-    ![Virtual Machines menu option](images/vmw-vcd-tp-vms.png)
-
-    You can change the view from cards or list. If you need to search for the VM, click on the filter icon and enter the name of the VM.
-
-    ![Filter virtual machines](images/vmw-vcd-tp-vms-filter.png)
-
-6. Click the VM **Name** to view details about location.
-
-7. Expand the **Advanced** section of VM properties to see *Metadata* information at the bottom.
-
-    ![VM properties -- Metadata](images/vmw-vcd-tp-vm-metadata.png)
-
-    The location of the VM is displayed in the **Value** column.
-
-### Using the Flex-based UI in vCloud Director 8.20 -->
+## Obtaining the location of a specific VM (vCloud Director 8.20)
 
 1. In vCloud Director, click the **Administration** tab.
 
     ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
 
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
+    For more detailed instructions on accessing vCloud Director, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
 
 2. Select the VM you want to find the location of.
 
@@ -85,7 +59,28 @@ of VMs, please raise a support request from the "My Calls" section of the UKClou
 
     The location of the VM is displayed in the **Value** column.
 
-## How to obtain the location of a specific VM via the API
+## Obtaining the location of a specific VM (vCloud Director 9.1)
+
+1. In vCloud Director, select the **VDC** your VM is in then select **Virtual Machines**.
+
+    ![Virtual Machines menu option](images/vmw-vcd-tp-vms.png)
+
+    For more detailed instructions on accessing vCloud Director, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
+
+    > [!TIP]
+    > You can change the view from cards or list. If you need to search for the VM, click on the filter icon and enter the name of the VM.
+
+    ![Filter virtual machines](images/vmw-vcd-tp-vms-filter.png)
+
+2. In the card for the VM, click **Details**.
+
+3. Expand the **Advanced** section of the VM details to see *Metadata* information at the bottom.
+
+    ![VM details -- Metadata](images/vmw-vcd-tp-vm-metadata.png)
+
+    The location of the VM is displayed in the **Value** column.
+
+## Obtaining the location of a specific VM (vCloud API)
 
 You can also obtain the location of a VM via the via the API, looking at the metadata against the applicable VM.
 
