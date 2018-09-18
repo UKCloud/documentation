@@ -33,7 +33,7 @@ To complete the steps in this guide you must have the appropriate permissions on
 From your PowerShell window:
 
 > [!IMPORTANT]
-> Variables to be changed:
+> Enter details below to provide values for the variables in the scripts in this article:
 >
 > Resource Group Name: <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;" >
 > <input  type="text" id="resourcegroup" name="resourcegroup" style="display: inline;"/></form>
