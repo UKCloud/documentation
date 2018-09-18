@@ -79,15 +79,15 @@ Once this information has been provided, UKCloud will proceed to set-up your new
 
 Shortly after submitting your details, you should receive an email asking for permission for UKCloud to be you Microsoft Cloud Solution Provider. An example of this email can be seen below:
 
-![Microsoft Azure CSP invitation email](images/azs-email-csp-invitation.png)
+![Microsoft Azure CSP invitation email](images/azs-email-csp-invitation.PNG)
 
 Once you have received this, please click the "CSP Invitation URL" link and click to sign in:
 
-![Microsoft Azure sign in page](images/azs-browser-csp-auth-signin.png)
+![Microsoft Azure sign in page](images/azs-browser-csp-auth-signin.PNG)
 
 After signing in you will be greeted with the following page. Please tick the checkbox and click "Authorize CSP", then contact your CSM so UKCloud can complete your onboarding process.
 
-![Microsoft Azure authorize CSP page](images/azs-browser-authorize-csp.png)
+![Microsoft Azure authorize CSP page](images/azs-browser-authorize-csp.PNG)
 
 Subsequent to this, you should receive a welcome email from your CSM containing the details of your new UKCloud for Microsoft Azure environment.
 
