@@ -55,37 +55,23 @@ Azure Active Directory is Microsoft's cloud-based Directory and Identity Access 
 
 # [I have an existing Azure Active Directory Domain](#tab/tabid-1)
 
-If you have decided that UKCloud for Microsoft Azure is the right environment for you, please contact your CSM who will request the following information:
+If you've decided that UKCloud for Microsoft Azure is the right environment for you, contact your CSM with the following information:
 
-- Contact Email Address
-- Azure Active Directory Domain
-- Azure Active Directory Administrator Email Address
+- Contact email address, for example, onboardingukcloud3@ukcloud.com
+- Azure Active Directory Domain, for example, onboardingukcloud3csp.onmicrosoft.com
+- AAD administrator email address, for example, admin@onboardingukcloud3csp.onmicrosoft.com
 
-For example:
+Once you've provided this information, UKCloud will set up your new UKCloud for Microsoft Azure environment.
 
-    Hi <CSM>
-
-    Here are the details for our new UKCloud for Microsoft Azure environment as requested:
-
-    Contact Email Address: onboardingukcloud3@ukcloud.com
-    Azure Active Directory Domain: onboardingukcloud3csp.onmicrosoft.com
-    AAD Administrator Email Address: admin@onboardingukcloud3csp.onmicrosoft.com
-
-    Kind Regards,
-    John Doe
-    UKCloud
-
-Once this information has been provided, UKCloud will proceed to set-up your new UKCloud for Microsoft Azure environment.
-
-Shortly after submitting your details, you should receive an email asking for permission for UKCloud to be you Microsoft Cloud Solution Provider. An example of this email can be seen below:
+After submitting your details, you will receive an email asking for permission for UKCloud to be your Microsoft Cloud Solution Provider (see example below).
 
 ![Microsoft Azure CSP invitation email](images/azs-email-csp-invitation.png)
 
-Once you have received this, please click the "CSP Invitation URL" link and click to sign in:
+Once you have received this, click the **CSP Invitation URL** link and click to sign in:
 
 ![Microsoft Azure sign in page](images/azs-browser-csp-auth-signin.PNG)
 
-After signing in you will be greeted with the following page. Please tick the checkbox and click "Authorize CSP", then contact your CSM so UKCloud can complete your onboarding process.
+After signing in you will be greeted with the following page. Tick the checkbox and click "Authorize CSP", then contact your CSM so UKCloud can complete your onboarding process.
 
 ![Microsoft Azure authorize CSP page](images/azs-browser-authorize-csp.PNG)
 
@@ -93,35 +79,15 @@ Subsequent to this, you should receive a welcome email from your CSM containing 
 
 # [I do not have an existing Azure Active Directory](#tab/tabid-2)
 
-If you have decided that UKCloud for Microsoft Azure is the right environment for you, please contact your CSM who will request the following information:
+If you've decided that UKCloud for Microsoft Azure is the right environment for you, contact your CSM with the following information:
 
-- Contact Name
-- Contact Email Address
-- Contact Phone Number
-- Billing Address
-- Preferred Azure Active Directory Domain
+- Contact name, for example, John Doe
+- Contact email address, for example, onboardingukcloud3@ukcloud.com
+- Contact phone number, 01252 303300
+- Billing address, for example, Hartham Park, Corsham, Wiltshire, SN13 0RP
+- Preferred Azure Active Directory Domain, for example, onboardingukcloud3csp.onmicrosoft.com
 
-For example:
-
-    Hi <CSM>
-
-    Here are the details for our new UKCloud for Microsoft Azure environment as requested:
-
-    Contact Name: John Doe
-    Contact Email Address: onboardingukcloud3@ukcloud.com
-    Contact Phone Number: 01252 303300
-    Address Line 1: Hartham Park
-    Address City: Corsham
-    Address County: Wiltshire
-    Address Country: GB
-    Address Post Code: SN13 0RP
-    Preferred Azure Active Directory Domain: onboardingukcloud3csp.onmicrosoft.com
-
-    Kind Regards,
-    John Doe
-    UKCloud
-
-Once this information has been provided, UKCloud will proceed to set-up your new UKCloud for Microsoft Azure environment.
+Once you've provided this information, UKCloud will set up your new UKCloud for Microsoft Azure environment.
 
 After providing the above details, you should receive a welcome email shortly from your CSM containing the details of your new UKCloud for Microsoft Azure environment.
 
