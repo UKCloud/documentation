@@ -8,7 +8,7 @@
     <title>How to create a Service Principal Name for Azure Stack - PowerShell | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a Service Principal Name for Azure Stack - PowerShell | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.39.2.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -149,12 +149,12 @@
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>Credential variables to change:</p>
-<p>$AzureUsernameAdmin, $AzurePasswordAdmin, $AzsUsernameAdmin, $AzsPasswordAdmin</p>
+<p>$AzureUsernameAdmin, $AzureUserPasswordAdmin, $AzsUsernameAdmin, $AzsUserPasswordAdmin</p>
 </div>
 <pre><code class="lang-powershell"># Declare Variables
 $AppName = &quot;TestApp&quot;
 $AppURL = &quot;https://test.app&quot;
-$AppPassword = '&lt;your password&gt;' # e.g. &quot;Password123!&quot;
+$AppPassword = ConvertTo-SecureString '&lt;your password&gt;' -AsPlainText -Force # e.g. &quot;Password123!&quot;
 
 $TenantDomain = &quot;&lt;myDirectoryTenantName&gt;&quot;
 $ArmEndpoint = &quot;https://management.frn00006.azure.ukcloud.com&quot;
@@ -172,8 +172,7 @@ $Role = &quot;Owner&quot;
 # Create your Public Azure Admin Credentials 
 # in order to log in to your Azure Subscription you will be creating you SPN on
 $AzureUsernameAdmin =  &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;&quot;
-$AzurePasswordAdmin = '&lt;your password&gt;'
-  $AzureUserPasswordAdmin = ConvertTo-SecureString &quot;$AzurePasswordAdmin&quot; -AsPlainText -Force
+$AzureUserPasswordAdmin = ConvertTo-SecureString '&lt;your password&gt;' -AsPlainText -Force
   $AzureCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzureUsernameAdmin,$AzureUserPasswordAdmin
 
 # Log in to your Azure Subscription you will be creating you SPN on
@@ -235,10 +234,8 @@ $AzureADPermissionsGet
 # Create your SPN  Credentials Login
 # Note: (Username is &quot;&lt;ApplicationId&gt;@&lt;AAD Domain&gt;&quot;)
 $AzsUsername = $AppGet.ApplicationId.Guid + &quot;@&quot; + $TenantDomain
-$AzsPassword = $AppPassword
-  $AzsUserPassword = ConvertTo-SecureString &quot;$AzsPassword&quot; -AsPlainText -Force
+$AzsUserPassword = $AppPassword
   $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
-
 
 # Log in to Public Azure using SPN account
 Login-AzureRmAccount -Credential $AzsCred -ServicePrincipal -TenantId $SubId.TenantId
@@ -255,8 +252,7 @@ Add-AzureRMEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 # Create your Azure Stack Admin (Subscription Owner) Credentials
 # Note: This account CAN but does not have to be, the same as your Public Azure Account
 $AzsUsernameAdmin =  &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;&quot;
-$AzsPasswordAdmin = '&lt;your password&gt;'
-  $AzsUserPasswordAdmin = ConvertTo-SecureString &quot;$AzsPasswordAdmin&quot; -AsPlainText -Force
+$AzsUserPasswordAdmin = ConvertTo-SecureString '&lt;your password&gt;' -AsPlainText -Force 
   $AzsCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsernameAdmin,$AzsUserPasswordAdmin
 
 # Login to Azure Stack as Admin (Subscription Owner)
@@ -327,12 +323,12 @@ $OutputObject
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>Credential variables to change:</p>
-<p>$AzsUsernameAdmin, $AzsPasswordAdmin</p>
+<p>$AzsUsernameAdmin, $AzsUserPasswordAdmin</p>
 </div>
 <pre><code class="lang-powershell"># Declare Variables
 $AppName = &quot;TestApp&quot;
 $AppURL = &quot;https://test.app&quot;
-$AppPassword = '&lt;your password&gt;' # e.g. &quot;Password123!&quot;
+$AppPassword = ConvertTo-SecureString '&lt;your password&gt;' -AsPlainText -Force # e.g. &quot;Password123!&quot;
 
 $TenantDomain = &quot;&lt;myDirectoryTenantName&gt;&quot;
 $ArmEndpoint = &quot;https://management.frn00006.azure.ukcloud.com&quot;
@@ -352,8 +348,7 @@ Add-AzureRMEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 # Create your Azure Stack Admin (Subscription Owner) Credentials
 # Note: This account CAN but does not have to be, the same as your Public Azure Account
 $AzsUsernameAdmin =  &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;&quot;
-$AzsPasswordAdmin = '&lt;your password&gt;'
-  $AzsUserPasswordAdmin = ConvertTo-SecureString &quot;$AzsPasswordAdmin&quot; -AsPlainText -Force
+$AzsUserPasswordAdmin = ConvertTo-SecureString '&lt;your password&gt;' -AsPlainText -Force
   $AzsCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsernameAdmin,$AzsUserPasswordAdmin
 
 # Login to Azure Stack as Admin (Subscription Owner)
@@ -399,8 +394,7 @@ $RoleAssignmentGet
 # Create your SPN  Credentials Login
 # Note: (Username is &quot;&lt;ApplicationId&gt;@&lt;AAD Domain&gt;&quot;)
 $AzsUsername = $AppGet.ApplicationId.Guid + &quot;@&quot; + $TenantDomain
-$AzsPassword = $AppPassword
-  $AzsUserPassword = ConvertTo-SecureString &quot;$AzsPassword&quot; -AsPlainText -Force
+$AzsUserPassword = $AppPassword
   $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
 
 # Log in to Azure Stack using SPN account
