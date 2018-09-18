@@ -79,7 +79,7 @@ Once this information has been provided, UKCloud will proceed to set-up your new
 
 Shortly after submitting your details, you should receive an email asking for permission for UKCloud to be you Microsoft Cloud Solution Provider. An example of this email can be seen below:
 
-![Microsoft Azure CSP invitation email](images/azs-email-csp-invitation.PNG)
+![Microsoft Azure CSP invitation email](images/azs-email-csp-invitation.png)
 
 Once you have received this, please click the "CSP Invitation URL" link and click to sign in:
 
