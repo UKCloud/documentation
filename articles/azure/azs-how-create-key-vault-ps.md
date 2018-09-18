@@ -28,19 +28,19 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 ## Creating a new Key Vault
 
 > [!IMPORTANT]
-> Values to be replaced:
+> Enter details below to provide values for the variables in the scripts in this article:
 >
-> Resource Group Name: <form oninput="result.value=name.value" id="resourcegroup" style="display: inline;" >
-> <input  type="text" id="name" name="name" style="display: inline;"/></form>
+> Resource Group Name: <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;" >
+> <input  type="text" id="resourcegroup" name="resourcegroup" style="display: inline;"/></form>
 >
-> Vault Name: <form oninput="result.value=name.value;result2.value=name.value;result3.value=name.value" id="vaultname" style="display: inline;">
-> <input  type="text" id="name" name="name" style="display: inline;" /></form>
+> Vault Name: <form oninput="result.value=vaultname.value;result2.value=vaultname.value;result3.value=vaultname.value" id="vaultname" style="display: inline;">
+> <input  type="text" id="vaultname" name="vaultname" style="display: inline;" /></form>
 >
-> Secret Value: <form oninput="result.value=name.value" id="SecretValue" style="display: inline;">
-> <input  type="text" id="name" name="name" style="display: inline;" /></form>
+> Secret Value: <form oninput="result.value=secretvalue.value" id="secretvalue" style="display: inline;">
+> <input  type="text" id="secretvalue" name="secretvalue" style="display: inline;" /></form>
 >
-> Secret Name: <form oninput="result.value=name.value;result2.value=name.value" id="secretname" style="display: inline;">
-> <input  type="text" id="name" name="name" style="display: inline;"/></form>
+> Secret Name: <form oninput="result.value=secretname.value;result2.value=secretname.value" id="secretname" style="display: inline;">
+> <input  type="text" id="secretname" name="secretname" style="display: inline;"/></form>
 
 From your PowerShell window:
 
@@ -64,7 +64,7 @@ This will create a Key Vault in the specified resource group.
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Create a new secret
-$SecretValue = ConvertTo-SecureString '<output form="SecretValue" name="result" style="display: inline;">&lt;String&gt;</output>' -AsPlainText -Force
+$SecretValue = ConvertTo-SecureString '<output form="secretvalue" name="result" style="display: inline;">&lt;String&gt;</output>' -AsPlainText -Force
 
 # Store the secret in Azure Key Vault
 $Secret = Set-AzureKeyVaultSecret -VaultName '<output form="vaultname" name="result2" style="display: inline;">&lt;Vault Name&gt;</output>' -Name '<output form="secretname" name="result" style="display: inline;">&lt;Secret Name&gt;</output>' -SecretValue $SecretValue
