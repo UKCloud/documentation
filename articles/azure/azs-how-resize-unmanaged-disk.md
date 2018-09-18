@@ -1,5 +1,5 @@
 ---
-title: How to resize an unmanaged disk | UKCloud Ltd
+title: How to resize an unmanaged disk - PowerShell | UKCloud Ltd
 description: Provides help for resizing an unmanaged disk on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
@@ -8,12 +8,12 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Resize an unmanaged disk
+toc_title: Resize an unmanaged disk - PowerShell
 toc_fullpath: Users/How To/azs-how-resize-unmanaged-disk.md
 toc_mdlink: azs-how-resize-unmanaged-disk.md
 ---
 
-# How to resize an unmanaged disk
+# How to resize an unmanaged disk with PowerShell
 
 ## Overview
 
