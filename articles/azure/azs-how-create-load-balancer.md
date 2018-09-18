@@ -60,7 +60,7 @@ In this section we will create a load balancer with a public IP address.
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
 
-     ![Create new load balancer](images/azs-browser-create-load-balancer.png)
+     ![Create new load balancer](images/azs-browser-create-load-balancer.PNG)
 
 6. Click **Create**.
 
