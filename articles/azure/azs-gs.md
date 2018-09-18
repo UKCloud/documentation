@@ -49,7 +49,7 @@ The two main delivery models provided by UKCloud for Microsoft Azure are:
 Azure Active Directory is Microsoft's cloud-based Directory and Identity Access Management Service. It provides Single Sign-On and core directory services via a high availability service with automated failover. <abbr title="Azure Active Directory"> AAD</abbr> provides the identity store for UKCloud for Microsoft Azure, supporting features such as two-factor authentication and role based access control.
 
 > [!Note]
-> If you do not have an existing Azure Active Directory, please provide a preferred domain name and administrator email address, and UKCloud will create an Azure Active Directory Domain (subject to availability) free of charge.
+> If you do not have an existing Azure Active Directory, provide a preferred domain name and administrator email address, and UKCloud will create an Azure Active Directory Domain (subject to availability), free of charge.
 
 ## How can I get started with UKCloud for Microsoft Azure?
 
@@ -71,11 +71,11 @@ Once you have received this, click the **CSP Invitation URL** link and click to 
 
 ![Microsoft Azure sign in page](images/azs-browser-csp-auth-signin.PNG)
 
-After signing in you will be greeted with the following page. Tick the checkbox and click "Authorize CSP", then contact your CSM so UKCloud can complete your onboarding process.
+After signing in you will be greeted with the following page. Tick the checkbox and click **Authorize CSP**, then contact your CSM so UKCloud can complete your onboarding process.
 
 ![Microsoft Azure authorize CSP page](images/azs-browser-authorize-csp.PNG)
 
-Subsequent to this, you should receive a welcome email from your CSM containing the details of your new UKCloud for Microsoft Azure environment.
+Next, you should receive a welcome email from your CSM containing the details of your new UKCloud for Microsoft Azure environment.
 
 # [I do not have an existing Azure Active Directory](#tab/tabid-2)
 
