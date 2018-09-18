@@ -173,7 +173,7 @@ In this section we will create NSG rules to allow inbound traffic.
 
    - **Description** - A description of the security rule.
   
-    ![Add an inbound security rule](images/azs-browser-add-in-security-rule.png)
+    ![Add an inbound security rule](images/azs-browser-add-in-security-rule.PNG)
 
 6. Click **Add**.
 
@@ -272,13 +272,13 @@ A load balancer rule defines how traffic is distributed between VMs. The rule li
 
 After installing the application that is being load-balanced on each of the VMs, the load balancer is ready to test.
 
-1. Navigate to your load balancer by clicking on **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
+1. Navigate to your load balancer by clicking **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
 
-2. Select the load balancer you created earlier from the list.
+2. From the list, select the load balancer you created earlier.
 
 3. Copy the **Public IP address** from the **Overview** section.
 
-4. Test the connection to your app. For example, if the app is a web server, paste the public IP into the address bar of your browser. The home page of the web server should be displayed.
+4. Test the connection to your application. For example, if the app is a web server, paste the public IP into the address bar of your browser. The home page of the web server should be displayed.
 
 ## Feedback
 
