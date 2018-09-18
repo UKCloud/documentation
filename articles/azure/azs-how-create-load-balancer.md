@@ -62,7 +62,7 @@ In this section we will create a load balancer with a public IP address.
 
      ![Create new load balancer](images/azs-browser-create-load-balancer.png)
 
-6. Click **Create**
+6. Click **Create**.
 
 ## Create back-end servers
 
@@ -122,7 +122,7 @@ In this section we will create a virtual network and two virtual machines which 
 
 5. In the *Size* step, select the appropriate size for your VM, depending on its purpose, then click **Select**.
 
-   For information about the different available VM sizes, see <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>
+   For information about the different available VM sizes, see <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>.
 
    > [!TIP]
    > By default, the list shows a selection of recommended VM sizes. To see all available VM sizes, click **View all**.
@@ -133,7 +133,7 @@ In this section we will create a virtual network and two virtual machines which 
 
    - Click **Availability set** on the **Create virtual machine** blade.
    - Select **Create new** on the **Change availability set** blade.
-   - Enter a name for the availability set and the number of fault domains and update domains, then click **OK**
+   - Enter a name for the availability set and the number of fault domains and update domains, then click **OK**.
 
    ![Create virtual machine > Settings](images/azs-browser-vm-settings-as.png)
 
@@ -157,11 +157,11 @@ In this section we will create NSG rules to allow inbound traffic.
 
    - **Source** - The source filter can be Any, an IP address range, or a default tag. It specifies the incoming traffic from a specific source IP address range that will be allowed or denied by this rule.
 
-   - **Source port range** - Provide a single port, such as 80, or a port range, such as 1024-65535. This specifies from which ports traffic will be allowed or denied by this rule. Provide an asterisk (*) to allow traffic on any port.
+   - **Source port range** - Provide a single port, such as 80, or a port range, such as 1024-65535. This specifies from which ports traffic will be allowed or denied by this rule. Use an asterisk (\*) to allow traffic on any port.
 
    - **Destination** - The destination filter can be Any, an IP address range, or a default tag. It specifies the outgoing traffic for a specific destination IP address range that will be allowed or denied by this rule.
 
-   - **Destination port range** - Provide a single port, such as 80, or a port range, such as 1024-65535. This specifies from which ports traffic will be allowed or denied by this rule. Provide an asterisk (*) to allow traffic on any port.
+   - **Destination port range** - Provide a single port, such as 80, or a port range, such as 1024-65535. This specifies from which ports traffic will be allowed or denied by this rule. Use an asterisk (\*) to allow traffic on any port.
 
    - **Protocol** - Specify whether to allow inbound traffic using UDP, TCP or both.
 
@@ -179,11 +179,11 @@ In this section we will create NSG rules to allow inbound traffic.
 
 ### Create a back-end address pool
 
-To spread traffic load across the VMs, a back-end address pool must be created. This pool contains the IP addresses of the VMs.
+To spread traffic load across the VMs, you must create a back-end address pool. This pool contains the IP addresses of the VMs.
 
-1. Navigate to your load balancer by clicking on **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
+1. Navigate to your load balancer by clicking **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
 
-2. Select the load balancer you created earlier from the list.
+2. From the list, select the load balancer you created earlier.
 
 3. In the blade for your load balancer, select **Backend pools** under the **Settings** section.
 
@@ -193,21 +193,21 @@ To spread traffic load across the VMs, a back-end address pool must be created. 
 
 6. Select **Availability set** for the **Associated to** option, then select the availability set that you created in the previous section.
 
-7. Click the **+ Add a target network IP configuration** button, select the first VM you created in the previous section and select the network IP to be associated with the back end pool.
+7. Click the **+ Add a target network IP configuration** button, select the first VM you created in the previous section and select the network IP to be associated with the back-end pool.
 
 8. Repeat step 7 for the second VM.
 
    ![Add a backend pool](images/azs-browser-add-backend-pool.png)
 
-9. Click **OK**
+9. Click **OK**.
 
 ### Create a health probe
 
-When creating a load balancer, a health probe is used to monitor the status of your application. In Azure Stack, the health probe adds and removes VMs from the load balancer backend pool based on their current status.
+When creating a load balancer, you can use a health probe to monitor the status of your application. In Azure Stack, the health probe adds and removes VMs from the load balancer back-end pool based on their current status.
 
-1. Navigate to your load balancer by clicking on **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
+1. Navigate to your load balancer by clicking **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
 
-2. Select the load balancer you created earlier from the list.
+2. From the list, select the load balancer you created earlier.
 
 3. In the blade for your load balancer, select **Health Probes** under the **Settings** section.
 
@@ -219,7 +219,7 @@ When creating a load balancer, a health probe is used to monitor the status of y
 
    - **Protocol** - The protocol that the health probe uses to monitor the status of your VMs.
 
-   - **Port** - The port that the health probe uses to monitor the status of your VMs
+   - **Port** - The port that the health probe uses to monitor the status of your VMs.
 
    - **Interval** - The number of seconds between probe attempts.
 
@@ -231,11 +231,11 @@ When creating a load balancer, a health probe is used to monitor the status of y
 
 ### Create a load balancing rule
 
-A load balancer rule defines how traffic is distributed between VMs. The rule listens for traffic on a frontend IP address, then distributes it among the backend pool.
+A load balancer rule defines how traffic is distributed between VMs. The rule listens for traffic on a front-end IP address, then distributes it among the back-end pool.
 
 1. Navigate to your load balancer by clicking on **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
 
-2. Select the load balancer you created earlier from the list.
+2. From the list, select the load balancer you created earlier.
 
 3. In the blade for your load balancer, select **Load balancing rules** under the **Settings** section.
 
@@ -249,15 +249,18 @@ A load balancer rule defines how traffic is distributed between VMs. The rule li
 
    - **Protocol** - The protocol that the rule redirects traffic for.
 
-   - **Port** - The frontend port that the rule listens on.
+   - **Port** - The front-end port that the rule listens on.
 
-   - **Backend port** - You can choose to route traffic to the virtual machines in the backend pool using a different port than the one clients use to communicate with the load balancer.
+   - **Backend port** - You can choose to route traffic to the virtual machines in the back-end pool using a different port than the one clients use to communicate with the load balancer.
 
-   - **Backend pool** - The virtual machines in the selected backend pool will be the target for the load balanced traffic of this rule. Select the pool that you created in the previous section.
+   - **Backend pool** - The virtual machines in the selected back-end pool will be the target for the load-balanced traffic of this rule. Select the pool that you created in the previous section.
 
-   - **Health probe** - The selected probe is used by this rule to determine which virtual machines in the backend pool are healthy and can receive load balanced traffic. Select the probe that you created in the previous section.
+   - **Health probe** - The selected probe is used by this rule to determine which virtual machines in the back-end pool are healthy and can receive load-balanced traffic. Select the probe that you created in the previous section.
 
-   - **Session Persistence** - Session persistence specifies that traffic from a client should be handled by the same virtual machine in the backend pool for the duration of a session. "None" specifies that successive requests from the same client may be handled by any virtual machine. "Client IP" specifies that successive requests from the same client IP address will be handled by the same virtual machine. "Client IP and protocol" specifies that successive requests from the same client IP address and protocol combination will be handled by the same virtual machine.
+   - **Session Persistence** - Session persistence specifies that traffic from a client should be handled by the same virtual machine in the back-end pool for the duration of a session. 
+      - **None** specifies that successive requests from the same client may be handled by any virtual machine.
+      - **Client IP** specifies that successive requests from the same client IP address will be handled by the same virtual machine. 
+      - **Client IP and protocol** specifies that successive requests from the same client IP address and protocol combination will be handled by the same virtual machine.
 
    - **Idle timeout** - Keep a TCP or HTTP connection open without relying on clients to send keep-alive messages.
 
@@ -267,7 +270,7 @@ A load balancer rule defines how traffic is distributed between VMs. The rule li
 
 ## Test the load balancer
 
-After installing the app that is being load balanced on each of the VMs, the load balancer is ready to test.
+After installing the application that is being load-balanced on each of the VMs, the load balancer is ready to test.
 
 1. Navigate to your load balancer by clicking on **All services** in the favourites panel, then selecting **Load balancers** under the networking section.
 
