@@ -47,15 +47,25 @@ You can create only one snapshot for each VM, with each subsequent snapshot over
 
 ### How to create a VM snapshot
 
+# [Using vCloud Director 8.20](#tab/tabid-1)
+
 You can create a VM snapshot within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to create a snapshot for and selecting **Create Snapshot**.
 
-![Snapshot creation in vCloud Director](images/vcd_snapshot.png)
+![Snapshot creation in vCloud Director 8.20](images/vcd_snapshot.png)
+
+# [Using vCloud Director 9.1](#tab/tabid-2)
+
+In the card for the VM that you want to create a snapshot for, click **More** and select **Create Snapshot**.
+
+![Snapshot creation in vCloud Director 9.1](images/vmw-vcd91-mnu-create-snapshot.png)
+
+***
 
 ## VM copy
 
 When you copy a VM, you create an exact replica of the VM in either the same vApp or a different vApp.
 
-![VM copy in vCloud Director](images/vcd_copy.png)
+![How Master and copy images differ with changes over time](images/copy.png)
 
 ### Use case
 
@@ -71,9 +81,17 @@ You must power down the VM prior to taking a copy. Each additional copy will con
 
 ### How to create a VM copy
 
+# [Using vCloud Director 8.20](#tab/tabid-1)
+
 You can create a VM copy within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to copy and selecting **Copy to**.
 
-![How Master and copy images differ with changes over time](images/copy.png)
+![VM copy in vCloud Director 8.20](images/vcd_copy.png)
+
+# [Using vCloud Director 9.1](#tab/tabid-2)
+
+In the vCloud Director 9.1 tenant portal, you can only copy entire vApps. To copy a single VM, you need to switch to the vCloud Director Web Console and follow the steps for vCloud Director 8.20.
+
+***
 
 ## VM backup
 
