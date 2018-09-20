@@ -50,10 +50,8 @@ Prerequisites from a Windows-based external client.
 > [!NOTE]
 > Automatic Update Guide to follow
 >
-> Code for Automatic Update can be found here -> [more](https://github.com/UKCloud/AZS_dev_black/tree/master/docs/code/powershell/Update)
+> Code for Automatic Update can be found here -> [more](https://github.com/UKCloud/AZS_dev_black/tree/master/docs/code/powershell/UpdateManagement)
 
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
-
-(c) UKCloud Ltd, 2018. All Rights Reserved.
