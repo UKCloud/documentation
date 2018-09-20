@@ -43,14 +43,14 @@ Prerequisites from a Windows-based external client.
 
 1. Raise a pre-emptive case with Microsoft prior to starting the Update.
 
-2. Go to the **Update** blade on the Administration Portal
+2. Go to the **Update** blade on the Administration Portal.
 
-3. Start Update process.
+3. Start the update process.
 
 > [!NOTE]
 > Automatic Update Guide to follow
 >
-> Code for Automatic Update can be found here -> [more](https://github.com/UKCloud/AZS_dev_black/tree/master/docs/code/powershell/UpdateManagement)
+> You can find the code for automatic updates [here](https://github.com/UKCloud/AZS_dev_black/tree/master/docs/code/powershell/UpdateManagement).
 
 ## Feedback
 
