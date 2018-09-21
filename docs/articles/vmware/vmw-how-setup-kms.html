@@ -89,6 +89,17 @@
 <h2 id="setting-up-a-connection-with-the-ukcloud-kms">Setting up a connection with the UKCloud KMS</h2>
 <p>Before product activation, make sure your VMs can communicate with the UKCloud KMS that exists outside your cloud organisation.</p>
 <p>To allow this communication, you need to create a source network address translation (SNAT) and firewall rule on your edge gateway:</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Using vCloud Director 8.20</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Using vCloud Director 9.1</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+
 <ol>
 <li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
 <p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
@@ -101,22 +112,48 @@
 </li>
 <li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
 </li>
-<li><p>Select the <strong>NAT</strong> tab and click <strong>Add SNAT</strong></p>
-<p><img src="images/vmw-vcd-btn-add-snat-reg.png" alt="Add SNAT button"></p>
+<li><p>Select the <strong>NAT</strong> tab and create a new SNAT rule.</p>
 </li>
 <li><p>Make sure that the <strong>Applied On</strong> field is set to reflect your network.</p>
 </li>
 <li><p>For the <strong>Original (Internal) source IP/range</strong>, enter the IP address, CIDR or range of addresses you want to SNAT out.</p>
 </li>
 <li><p>For the translated address, enter the external IP address of your edge gateway or one of your external IP address assignments.</p>
+<p>For more information about creating SNAT rules, see <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>.</p>
 </li>
 <li><p>Select the <strong>Firewall</strong> tab and make sure that an outbound rule exists on your firewall.</p>
-<ul>
-<li><strong>For Assured:</strong> Set the <strong>Destination IP</strong> to <code>37.26.89.8</code> and the <strong>Destination Port</strong> to <code>any</code> or <code>1688</code></li>
-<li><strong>For Elevated:</strong> Set the <strong>Destination IP</strong> to <code>172.26.x.x</code> (contact support for IP) and the <strong>Destination Port</strong> to <code>any</code> or <code>1688</code></li>
-</ul>
+<p>Contact UKCloud Support for details of the <strong>Destination IP</strong> and <strong>Destination Port</strong>.</p>
+<p>For more information about creating firewall rules, see <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
 </li>
 </ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li><p>In vCloud Director, select the VDC for which server activation is required.</p>
+</li>
+<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd91-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+</li>
+<li><p>Select the edge that you want to configure and click the <strong>Configure Services</strong> button.</p>
+<p><img src="images/vmw-vcd91-btn-configure-services.png" alt="Configure Services button"></p>
+</li>
+<li><p>In the <em>Edge Gateway</em> dialog box, select the <strong>NAT</strong> tab and create a new SNAT rule.</p>
+</li>
+<li><p>Make sure that the <strong>Applied On</strong> field is set to reflect your network firewall tenant (NFT).</p>
+</li>
+<li><p>In the <strong>Original Source IP/Range</strong> field, enter the IP address, CIDR or range of addresses you want to SNAT out.</p>
+</li>
+<li><p>For the translated address, enter the external IP address of your edge gateway or one of your external IP address assignments.</p>
+<p>For more information about creating SNAT rules, see <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>.</p>
+</li>
+<li><p>Select the <strong>Firewall</strong> tab and make sure that an outbound rule exists on your firewall.</p>
+<p>Contact UKCloud Support for details of the <strong>Destination IP</strong> and <strong>Destination Port</strong>.</p>
+<p>For more information about creating firewall rules, see <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
+</li>
+</ol>
+</section>
+</div>
 <h2 id="activating-your-windows-licence">Activating your Windows licence</h2>
 <ol>
 <li><p>Open a console to the VM you want to license and activate.</p>
