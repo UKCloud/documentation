@@ -10077,6 +10077,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-add-network-isolated.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-add-network-isolated.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-add-network-routed.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-add-network-routed.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-btn-add-network.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-btn-add-network.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd91-btn-add-vm.png",
       "output": {
         "resource": {
@@ -10169,6 +10202,28 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd91-mnu-reset-vm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-network-ip-pool.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-network-ip-pool.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-tab-network.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-tab-network.png"
         }
       },
       "is_incremental": false,
@@ -10797,7 +10852,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-isolated-network.html",
-          "hash": "PljQgh0PNbWv7x+us1+byQ=="
+          "hash": "jg1DWpMPAHh0WbETDe6uRg=="
         }
       },
       "is_incremental": false,
@@ -10821,7 +10876,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-routed-network.html",
-          "hash": "V6wv5Wn2FC8LnPdLu66Gmw=="
+          "hash": "Ea3eKrG157affIDXm7/xfQ=="
         }
       },
       "is_incremental": false,
