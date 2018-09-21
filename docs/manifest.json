@@ -10239,6 +10239,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-copy-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-copy-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd91-create-catalog.png",
       "output": {
         "resource": {
@@ -10441,6 +10452,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd91-mnu-vapp-templates.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-move-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-move-vapp.png"
         }
       },
       "is_incremental": false,
@@ -11410,7 +11432,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-migrate-vapp.html",
-          "hash": "IcHRLi/LKJnMUo01Y5L7dw=="
+          "hash": "A21zidcK1xY6swrmkLpFcA=="
         }
       },
       "is_incremental": false,
@@ -12119,11 +12141,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -12131,6 +12148,11 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
