@@ -23,9 +23,11 @@ You may find you need to upload ISO (DVD/CD) or FLP (floppy disk) media to vClou
 - Be consumed by users within your organisation
 - Facilitate the creation of VMs from scratch, which can then be saved to your catalog for future deployment
 
-## Uploading media <!-- (vCloud Director 8.20) -->
+## Uploading media
 
 To upload media to the catalog:
+
+# [Using vCloud Director 8.20](#tab/tabid-1)
 
 1. In vCloud Director, select the **Catalogs** tab.
 
@@ -62,7 +64,34 @@ To upload media to the catalog:
 
     ![Transfer process dialog box](images/vmw-vcd-transfer-process.png)
 
-<!-- ## Uploading media (vCloud Director 9.1) -->
+# [Using vCloud Director 9.1](#tab/tabid-2)
+
+1. In vCloud Director, click the menu icon and select **Libraries**.
+
+    ![Libraries menu option in vCloud Director](images/vmw-vcd91-mnu-libraries.png)
+
+2. In the left navigation panel, click **Media & Other**.
+
+    ![Media & Other tab](images/vmw-vcd91-mnu-media.png)
+
+3. Click the **Add** button.
+
+    ![Upload media button](images/vmw-vcd91-btn-add-media.png)
+
+4. In the *Upload Media* dialog box, select the **Catalog** to which you want to upload the media.
+
+5. Click the **Upload** icon and browse to the ISO or FLP file that you want to upload.
+
+    ![Upload Media dialog box](images/vmw-vcd91-upload-media.png)
+
+    > [!TIP]
+    > You can change the **Name** to be more user-friendly if necessary.
+
+6. When you're done, click **OK**.
+
+    In the *Media & Other* page, you can monitor the progress of the upload. You can carry on with other work while the upload takes place.
+
+***
 
 ## Feedback
 
