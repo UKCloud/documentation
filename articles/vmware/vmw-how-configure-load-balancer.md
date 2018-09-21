@@ -34,33 +34,23 @@ The steps for configuring a load balancer vary depending on what type of edge ga
 
 To configure a load balancer for an advanced gateway:
 
-1. In vCloud Director, click the **Administration** tab.
+1. In vCloud Director, access the edge gateway settings.
 
-    ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
+    For more detailed instructions, see [*How to access edge gateway settings*](vmw-how-access-edge.md)
 
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
-
-2. Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select **Open**.
-
-3. Select the **Edge Gateways** tab.
-
-    ![Edge Gateways tab](images/vmw-vcd-tab-edge-gateways.png)
-
-4. Right-click the edge gateway and select **Edge Gateway Services**.
-
-5. Select the **Load Balancer** tab.
+2. Select the **Load Balancer** tab.
 
     ![Load Balancer tab](images/vmw-vcd-adv-edge-tab-load-balancer.png)
 
-6. On the **Global Configuration** tab, select the **Enabled** toggle.
+3. On the **Global Configuration** tab, select the **Enabled** toggle.
 
-7. If you have a syslog server configured, select the **Enable Logging** toggle.
+4. If you have a syslog server configured, select the **Enable Logging** toggle.
 
     For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md)
 
-8. Click **Save changes**.
+5. Click **Save changes**.
 
-9. You need to configure two components of the load balancing service for it to function correctly: [pool servers](#configuring-a-pool-server-for-an-advanced-gateway) and [virtual servers](#configuring-a-virtual-server-for-an-advanced-gateway).
+6. You need to configure two components of the load balancing service for it to function correctly: [pool servers](#configuring-a-pool-server-for-an-advanced-gateway) and [virtual servers](#configuring-a-virtual-server-for-an-advanced-gateway).
 
 ### Configuring a pool server for an advanced gateway
 
