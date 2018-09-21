@@ -1,6 +1,6 @@
 ---
 title: How to create a Virtual Machine - PowerShell | UKCloud Ltd
-description: Provides help for creating a Key Vault on UKCloud for Microsoft Azure
+description: Provides help for creating a virtual machine on UKCloud for Microsoft Azure using PowerShell
 services: azure-stack
 author: Bailey Lawson
 toc_rootlink: Users
