@@ -20,11 +20,9 @@ toc_mdlink: vmw-how-create-catalog.md
 
 UKCloud provides a public catalog for you to use that contains standard virtual machine (VM) sizes and operating systems. The public catalog is a good place to start when you first deploy VMs into the UKCloud platform. However, you may want to create your own catalogues, containing specific applications or gold images, which you can then use to deploy VMs quickly.
 
-The first step is to create an empty catalog.
-
 ## Creating a catalog
 
-To create an empty catalog:
+The first step is to create an empty catalog:
 
 # [Using vCloud Director 8.20](#tab/tabid-1)
 
@@ -177,7 +175,7 @@ To upload an OVF package and assign it to a catalog:
 
 5. Enter a **Name** and **Description** for the template and from the **Catalog** list, select the catalog in which you want to put the OVF. Click **Next** to continue.
 
-    ![Select vApp Template Name step of the Create vApp template from OVF dialog box](images/vmw-create-vapp-template-catalog.pngg)
+    ![Select vApp Template Name step of the Create vApp template from OVF dialog box](images/vmw-create-vapp-template-catalog.png)
 
 6. Review the details of the vApp template and when you're done, click **Finish** to deploy.
 
