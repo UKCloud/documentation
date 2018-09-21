@@ -51,39 +51,29 @@ DNAT changes the destination IP address of a packet and performs the reverse fun
 
 To create a DNAT rule on your advanced gateway:
 
-1. In vCloud Director, click the **Administration** tab.
+1. In vCloud Director, access the edge gateway settings.
 
-    ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
+    For more detailed instructions, see [*How to access edge gateway settings*](vmw-how-access-edge.md)
 
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
-
-2. Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select **Open**.
-
-3. Select the **Edge Gateways** tab.
-
-    ![Edge Gateways tab](images/vmw-vcd-tab-edge-gateways.png)
-
-4. Right-click the edge gateway and select **Edge Gateway Services**.
-
-5. Select the **NAT** tab.
+2. Select the **NAT** tab.
 
     ![NAT tab](images/vmw-vcd-adv-edge-tab-nat.png)
 
-6. Click **+ DNAT Rule**.
+3. Click **+ DNAT Rule**.
 
     ![Add DNAT Rule button](images/vmw-vcd-btn-add-dnat-adv.png)
 
-7. In the *Add DNAT Rule* dialog box, from the **Applied On** list, select the interface on which to apply the rule.
+4. In the *Add DNAT Rule* dialog box, from the **Applied On** list, select the interface on which to apply the rule.
 
-8. Enter an **Original IP/Range** and a **Translated IP/Range**.
+5. Enter an **Original IP/Range** and a **Translated IP/Range**.
 
-9. Select the **Protocol**, **Original Port** and **Translated Port**.
+6. Select the **Protocol**, **Original Port** and **Translated Port**.
 
-10. Make sure the **Enabled** toggle is selected and then click **Keep**.
+7. Make sure the **Enabled** toggle is selected and then click **Keep**.
 
     ![Add DNAT Rule dialog box](images/vmw-vcd-add-dnat-adv.png)
 
-11. Click **Save changes**.
+8. Click **Save changes**.
 
 ### Creating an SNAT rule for an advanced gateway
 
@@ -93,37 +83,27 @@ When connecting to an external network, such as the internet, to access services
 
 To create an SNAT rule on your advanced gateway:
 
-1. In vCloud Director, click the **Administration** tab.
+1. In vCloud Director, access the edge gateway settings.
 
-    ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
+    For more detailed instructions, see [*How to access edge gateway settings*](vmw-how-access-edge.md)
 
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
-
-2. Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select **Open**.
-
-3. Select the **Edge Gateways** tab.
-
-    ![Edge Gateways tab](images/vmw-vcd-tab-edge-gateways.png)
-
-4. Right-click the edge gateway and select **Edge Gateway Services**.
-
-5. Select the **NAT** tab.
+2. Select the **NAT** tab.
 
     ![NAT tab](images/vmw-vcd-adv-edge-tab-nat.png)
 
-6. Click **+ SNAT Rule**.
+3. Click **+ SNAT Rule**.
 
     ![Add SNAT Rule button](images/vmw-vcd-btn-add-snat-adv.png)
 
-7. In the *Add SNAT Rule* dialog box, from the **Applied On** list, select the interface on which to apply the rule.
+4. In the *Add SNAT Rule* dialog box, from the **Applied On** list, select the interface on which to apply the rule.
 
-8. Enter an **Original Source IP/Range** and a **Translated Source IP/Range**.
+5. Enter an **Original Source IP/Range** and a **Translated Source IP/Range**.
 
-9. Make sure the **Enabled** toggle is selected and then click **Keep**.
+6. Make sure the **Enabled** toggle is selected and then click **Keep**.
 
     ![Add SNAT Rule dialog box](images/vmw-vcd-add-snat-adv.png)
 
-10. Click **Save changes**.
+7. Click **Save changes**.
 
 ## Creating NAT rules for a standard edge
 

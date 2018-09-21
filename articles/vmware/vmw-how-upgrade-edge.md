@@ -76,6 +76,8 @@ For more information, see the following VMware Knowledge Base article: <https://
 
 To resolve this issue, before you upgrade your edge gateway, set the load balancer member weight to 1.
 
+# [Using vCloud Director 8.20](#tab/tabid-1)
+
 1. In vCloud Director, select the **Administration** tab.
 
 2. Double-click the VDC that the edge gateway that you want to edit belongs to (or right-click the VDC and select **Open**).
@@ -101,6 +103,37 @@ After you've upgraded the edge gateway, we recommend that you convert it to an a
 > [!IMPORTANT]
 > Before you convert your edge gateway, read [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md) for important known issues relating to APIs, disabling firewalls and firewall rule keywords.
 
+# [Using vCloud Director 9.1](#tab/tabid-2)
+
+1. In the vCloud Director Virtual Datacenters dashboard, select the VDC that the edge gateway you want to edit belongs to.
+
+2. In the left navigation panel, click Edges.
+
+    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
+
+3. Select the edge that you want to configure.
+
+4. Click the **Configure Services** button.
+
+5. Select the **Load Balancer** tab.
+
+6. Select the **Pools** tab.
+
+7. Select the pool you want to edit and click the **Edit** icon.
+
+8. In the *Members* section, select the load balancer member that you want to edit and click the **Edit** icon.
+
+9. In the **Weight** field, enter `1`.
+
+   ![Load balancer member weight](images/vmw-vcd91-load-balancer-member-weight.png)
+
+After you've upgraded the edge gateway, we recommend that you convert it to an advanced gateway, where you can then disable the load balancer member.
+
+> [!IMPORTANT]
+> Before you convert your edge gateway, read [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md) for important known issues relating to APIs, disabling firewalls and firewall rule keywords.
+
+***
+
 ## Upgrading your edge gateway to the latest available version
 
 The following steps show how to upgrade your edge gateway using vCloud Director.
@@ -108,42 +141,29 @@ The following steps show how to upgrade your edge gateway using vCloud Director.
 > [!NOTE]
 > Before you begin the upgrade process, bear in mind that there will be a brief network disruption for the networks that are used by the edge gateway instance.
 
-1. Log in to the UKCloud Portal.
+> [!NOTE]
+> You cannot redeploy edge gateways in the new vCloud Director 9.1 tenant portal. If your environment uses vCloud Director 9.1, you must first switch to the vCloud Director web console. For more information, see [*How to switch to the vCloud Director web console from the tenant portal*](vmw-how-switch-web-console.md).
 
-    For more detailed steps, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
-
-2. If necessary, switch to the appropriate account.
-
-    Click **My VMs**.
-
-    ![Administration My VMs](images/upgrade-image-6.png)
-
-3. Select the compute service (vOrg) that the edge gateway belongs to.
-
-4. Select the **vCloud Director** tab, enter your UKCloud Portal password and then click **Confirm**.
-
-    ![vCloud Director](images/upgrade-image-7.png)
-
-5. In vCloud Director, select the **Administration** tab.
+1. In vCloud Director, select the **Administration** tab.
 
     ![Administration](images/upgrade-image-8.png)
 
-6. Double-click the VDC that the edge gateway that you want to upgrade belongs to (or right-click the VDC and select **Open**).
+2. Double-click the VDC that the edge gateway that you want to upgrade belongs to (or right-click the VDC and select **Open**).
 
-7. Select the **Edge Gateways** tab.
+3. Select the **Edge Gateways** tab.
 
     ![Edge gateways](images/upgrade-image-9.png)
 
-8. Right-click the edge gateway that you want to upgrade and select **Re-Deploy**.
+4. Right-click the edge gateway that you want to upgrade and select **Re-Deploy**.
 
-9. In the confirmation dialog box, click **Yes**.
+5. In the confirmation dialog box, click **Yes**.
 
     > [!IMPORTANT]
     > This step requires downtime as a new VM needs to be deployed for the edge gateway. You should make sure that you have planned for this downtime before proceeding.
 
-10. You can monitor the status in the *Activity Task Detail* dialog box.
+6. You can monitor the status in the *Activity Task Detail* dialog box.
 
-11. After the redeployment has finished, you can check the version of the edge gateway again in the UKCloud Portal to confirm that the upgrade has been successful.
+7. After the redeployment has finished, you can check the version of the edge gateway again in the UKCloud Portal to confirm that the upgrade has been successful.
 
 ## Next steps
 

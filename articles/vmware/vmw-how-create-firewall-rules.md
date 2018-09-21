@@ -39,33 +39,23 @@ The steps for creating firewall rules vary depending on what type of edge gatewa
 
 To create a firewall rule on an advanced gateway:
 
-1. In vCloud Director, click the **Administration** tab.
+1. In vCloud Director, access the edge gateway settings.
 
-    ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
+    For more detailed instructions, see [*How to access edge gateway settings*](vmw-how-access-edge.md)
 
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
-
-2. Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select **Open**.
-
-3. Select the **Edge Gateways** tab.
-
-    ![Edge Gateways tab](images/vmw-vcd-tab-edge-gateways.png)
-
-4. Right-click the edge gateway and select **Edge Gateway Services**.
-
-5. Select the **Firewall** tab.
+2. Select the **Firewall** tab.
 
     ![Firewall tab](images/vmw-vcd-adv-edge-tab-firewall.png)
 
-6. Click the **+** button to add a new row to the firewall rules table.
+3. Click the **+** button to add a new row to the firewall rules table.
 
     ![Add firewall button](images/vmw-vcd-adv-edge-firewall-add.png)
 
-7. For the **New Rule**, specify a **Name**.
+4. For the **New Rule**, specify a **Name**.
 
     ![New firewall rule](images/vmw-vcd-adv-edge-firewall-new-rule.png)
 
-8. In the **Source** and **Destination** fields, specify the source and destination addresses for the firewall rule.
+5. In the **Source** and **Destination** fields, specify the source and destination addresses for the firewall rule.
 
     - To specify an IP address or range, click **IP** and enter the appropriate **Value**. When you're done, click **Keep**.
 
@@ -79,13 +69,13 @@ To create a firewall rule on an advanced gateway:
 
         ![New IP Set dialog box](images/vmw-vcd-adv-edge-firewall-ip-set.png)
 
-9. In the **Service** field, click **+** and, in the *Add Service* dialog box, specify the **Protocol**, **Source Port** and **Destination Port** for the rule. When you're done, click **Keep**.
+6. In the **Service** field, click **+** and, in the *Add Service* dialog box, specify the **Protocol**, **Source Port** and **Destination Port** for the rule. When you're done, click **Keep**.
 
     ![Add Service dialog box](images/vmw-vcd-adv-edge-firewall-add-service.png)
 
-10. Select whether the rule is an **Accept** or **Deny** rule.
+7. Select whether the rule is an **Accept** or **Deny** rule.
 
-11. Click **Save changes**.
+8. Click **Save changes**.
 
     ![Save changes link on Firewall tab](images/vmw-vcd-adv-edge-firewall-save.png)
 
