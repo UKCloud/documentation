@@ -20,6 +20,8 @@
   items:
   - name: Access CentOS Update servers
     href: vmw-how-access-centos-update-servers.md
+  - name: Access edge gateway settings
+    href: vmw-how-access-edge.md
   - name: Access Red Hat update servers
     href: vmw-how-access-redhat-update-servers.md
   - name: Access syslog data for your advanced gateway

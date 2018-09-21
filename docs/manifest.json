@@ -112,6 +112,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-create-S2S-VPN.md",
       "output": {
@@ -387,28 +390,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-csp-auth-signin.PNG"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-browser-networking-create.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azs-browser-networking-create.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-browser-new-networking.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azs-browser-new-networking.png"
         }
       },
       "is_incremental": false,
@@ -10507,7 +10488,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "mTD01Txpp9pZ6ChRBV6aDw=="
+          "hash": "uu6ZiAEJVCO5qB63J3eA4w=="
         }
       },
       "is_incremental": false,
@@ -10610,6 +10591,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-access-edge.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-access-edge.html",
+          "hash": "Do/3ET4CmmNaNNSUfsgEPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-access-redhat-update-servers.md",
       "output": {
@@ -10706,12 +10702,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-configure-ipsec-vpn.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-ipsec-vpn.html",
-          "hash": "ESHQ6GoVJNdvyjmsZsdACg=="
+          "hash": "UNpmUI8xJwkWLPYbQs0LfQ=="
         }
       },
       "is_incremental": false,
@@ -10723,7 +10722,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-load-balancer.html",
-          "hash": "Ers7VAXelpOsg9Rt0TKrCA=="
+          "hash": "8oc3fdwL/Dl5f/AwDTPrHg=="
         }
       },
       "is_incremental": false,
@@ -10742,12 +10741,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-convert-edge.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-convert-edge.html",
-          "hash": "WVQhx5zbM0wpGzwrxtvlIg=="
+          "hash": "BW3GtW9QNuOP2HLQDj2Q1w=="
         }
       },
       "is_incremental": false,
