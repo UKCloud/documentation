@@ -25,9 +25,15 @@ There are two network flavours, isolated and routed:
 - An isolated (internally connected) network is one that only VMs within the VDC can connect to. Creation of isolated networks is described in [*How to create an isolated VDC network*](vmw-how-create-isolated-network.md).
 - A routed network (externally connected) provides access to machines and networks outside the VDC via the edge gateway. You can have up to nine usable routed networks per VDC. This guide describes how to create a routed VDC network.
 
-## Creating a routed VDC network
+The steps for creating a routed VDC network depend on the version of vCloud Director available in your environment:
 
-To create a routed Org vDC network:
+- [vCloud Director 8.20](#creating-a-routed-vdc-network-vcloud-director-820)
+
+- [vCloud Director 9.1](#creating-a-routed-vdc-network-vcloud-director-91)
+
+## Creating a routed VDC network (vCloud Director 8.20)
+
+To create a routed VDC network:
 
 1. In vCloud Director, click the **Administration** tab.
 
@@ -73,6 +79,47 @@ To create a routed Org vDC network:
 11. If you want to make the network shareable with other VDCs, select the **Share this network** check box.
 
 12. Click **Next** to review your settings, and then click **Finish**.
+
+## Creating a routed VDC network (vCloud Director 9.1)
+
+To create a routed VDC network:
+
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC in which you want to create the network.
+
+2. In the left navigation panel, select **Network**.
+
+    ![Network tab in vCloud Director](images/vmw-vcd91-tab-network.png)
+
+3. Click the **Add** button.
+
+    ![Add network button](images/vmw-vcd91-btn-add-network.png)
+
+4. In the *Add Org VDC Network* dialog box, from the **Type** radio buttons, select **Routed network connecting to an existing edge gateway**.
+
+    ![Add Org VDC Network dialog box with Routed network selected](images/vmw-vcd91-add-network-routed.png)
+
+5. Confirm that you're creating the network in the correct **Org VDC**.
+
+6. Enter a **Name** and **Description** for the network.
+
+7. If you want to make the network shareable with other VDCs, select the **Share this network with other VDCs in this organization** check box.
+
+8. Select the **Edge Gateway** that you want your network to connect to.
+
+9. Create a network **Gateway address** and **Network mask**, and add a **DNS** if possible.
+
+10. The **Static IP Pool** is similar to DHCP in the sense that it's a range of IP addresses to be consumed by the VMs connecting to the network. When a VM is configured it will have a static manual or a static IP pool address assigned to it.
+
+    - For static manual, enter the address manually. This must be a valid address for the pool. The VM will keep this address for as long as it exists.
+    - For static IP pool, enter a range of addresses. A free address from the IP pool will be allocated to the machine automatically.
+
+    As an example, if you give the gateway address as `192.168.1.1`, you may then want to create a **Static IP Pool** of `192.168.1.10-192.168.1.100`. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.
+
+    ![Static IP Pool](images/vmw-vcd91-network-ip-pool.png)
+
+    Click **Add** to create the static pool.
+
+11. When you're done, click **Save**.
 
 ## Next steps
 
