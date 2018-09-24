@@ -114,7 +114,7 @@ $nic = New-AzureRmNetworkInterface -Name '<output form="nicname" name="result" s
 > <input  type="text" id="vmusername" name="vmusername" style="display: inline;" placeholder="myUser"/></form>
 >
 > VM Password: <form oninput="result.value=vmpassword.value" id="vmpassword" style="display: inline;">
-> <input  type="text" id="vmpassword" name="vmpassword" style="display: inline;" placeholder="mYP4sSw0rD!"/></form>
+> <input  type="text" id="vmpassword" name="vmpassword" style="display: inline;" placeholder="CorrectHorseBatteryStaple"/></form>
 > 
 > VM Name: <form oninput="result.value=vmname.value;result2.value=vmname.value" id="vmname" style="display: inline;" >
 > <input  type="text" id="vmname" name="vmname" style="display: inline;" placeholder="myVM"/></form>
