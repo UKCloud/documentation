@@ -264,7 +264,7 @@ $Credential=New-Object PSCredential($UserName,$Password)
 $VirtualMachine = New-AzureRmVMConfig -VMName '<output form="vmname" name="result" style="display: inline;">&lt;VM Name&gt;</output>' -VMSize '<output form="vmsize" name="result" style="display: inline;">Basic_A0</output>'
 
 # Set the VM Size and Type
-$VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result2" style="display: inline;">-Linux</output> -ComputerName '<output form="compname" name="result" style="display: inline;">&lt;Computer Name&gt;</output>' -Credential $Credential
+$VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result" style="display: inline;">-Linux</output> -ComputerName '<output form="compname" name="result" style="display: inline;">&lt;Computer Name&gt;</output>' -Credential $Credential
 
 # Get the VM Source Image
 $Image = Get-AzureRMVMImagePublisher -Location 'frn00006' | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | where {$_.Id -like '*<output form="vmimage" name="result" style="display: inline;">/UbuntuServer/Skus/14.04.5-LTS</output>*'}
