@@ -5,11 +5,11 @@ services: azure-stack
 author: Bailey Lawson
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2:
+toc_sub2: Create a Key Vault
 toc_sub3:
 toc_sub4:
 toc_title: Create a Key Vault - PowerShell
-toc_fullpath: Users/How To/azs-how-create-key-vault-ps.md
+toc_fullpath: Users/How To/Create a Key Vault/azs-how-create-key-vault-ps.md
 toc_mdlink: azs-how-create-key-vault-ps.md
 ---
 
