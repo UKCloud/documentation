@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-key-vault-ps.html",
-          "hash": "cQqx8S2LVEqP9vvQHXD71Q=="
+          "hash": "iTE9nJBDGAfCkCrE8HPQcw=="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-resize-unmanaged-disk.html",
-          "hash": "M5AtrO5HZms/fjiXdt8LIQ=="
+          "hash": "hB2aqBhqjK+OMK8rxlz3xg=="
         }
       },
       "is_incremental": false,
