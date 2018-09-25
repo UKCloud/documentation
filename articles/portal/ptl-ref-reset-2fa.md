@@ -9,7 +9,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Resetting Two-Factor Authentication for Single Sign On
+toc_title: Resetting Two-Factor Authentication
 toc_fullpath: Reference/ptl-ref-reset-2fa.md
 toc_mdlink: ptl-ref-reset-2fa.md
 ---
