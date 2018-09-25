@@ -20,6 +20,8 @@
   items:
   - name: Access CentOS Update servers
     href: vmw-how-access-centos-update-servers.md
+  - name: Access edge gateway settings
+    href: vmw-how-access-edge.md
   - name: Access Red Hat update servers
     href: vmw-how-access-redhat-update-servers.md
   - name: Access syslog data for your advanced gateway
@@ -28,6 +30,8 @@
     href: vmw-how-access-syslog-data.md
   - name: Access the Zerto Self-Service Portal
     href: vmw-how-zerto-access-zssp.md
+  - name: Access Ubuntu update servers
+    href: vmw-how-access-ubuntu-update-servers.md
   - name: Access vCloud Director through the vCloud API
     href: vmw-how-access-vcloud-api.md
   - name: Bring your own Red Hat licensing
@@ -66,8 +70,6 @@
     href: vmw-how-upgrade-edge.md
   - name: Create an isolated VDC network
     href: vmw-how-create-isolated-network.md
-  - name: Create find your allocated external IP addresses
-    href: vmw-how-find-ip-addresses.md
   - name: Create firewall rules
     href: vmw-how-create-firewall-rules.md
   - name: Create NAT rules
@@ -76,8 +78,8 @@
     href: vmw-how-deploy-multiple-vms-from-vapp.md
   - name: Export edge gateway configuration data using PowerShell
     href: vmw-how-ps-export-edge-data.md
-  - name: How to access Ubuntu update servers
-    href: vmw-how-access-ubuntu-update-servers.md
+  - name: Find your allocated external IP addresses
+    href: vmw-how-find-ip-addresses.md
   - name: Install a REST client to access the vCloud API
     href: vmw-how-install-vcloud-api-rest-client.md
   - name: Install and configure OpenVPN
@@ -108,6 +110,8 @@
     href: vmw-how-retrieve-utilisation-metrics.md
   - name: Securely manage permissions for a specific vApp
     href: vmw-how-manage-vapp-permissions.md
+  - name: Switch to the vCloud Director web console
+    href: vmw-how-switch-web-console.md
   - name: Upgrade your edge gateway
     href: vmw-how-upgrade-edge.md
   - name: Upload ISO or FLP media

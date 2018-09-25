@@ -8,7 +8,7 @@
     <title>How to convert your edge to an advanced gateway | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to convert your edge to an advanced gateway | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.39.2.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,9 +82,10 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="overview">Overview</h1>
+<h1 id="how-to-convert-your-edge-to-an-advanced-gateway">How to convert your edge to an advanced gateway</h1>
 
-<p>With the upgrade to vCloud Director 8.20, UKCloud for VMware now offers advanced gateways to provide access to new vCloud Director functionality. Some of this functionality is available now, with other features being added following integration testing to assess suitability on our platform (some features may incur additional charges).</p>
+<h2 id="overview">Overview</h2>
+<p>With the upgrade to vCloud Director 8.20 and 9.1, UKCloud for VMware now offers advanced gateways to provide access to new vCloud Director functionality. Some of this functionality is available now, with other features being added following integration testing to assess suitability on our platform (some features may incur additional charges).</p>
 <p>Advanced gateways in UKCloud for VMware provide:</p>
 <ul>
 <li><strong>NSX Tenant Portal</strong> - The new Tenant Portal is a pure HTML5 user interface that you can use in conjunction with the legacy vCloud Director Web Console. This portal provides an initial set of controls to configure Advanced Gateway NSX Edges.</li>
@@ -99,7 +100,7 @@
 <h5>Important</h5>
 <p>After converting your edge to an advanced gateway, you will not be able to enable or disable logging on firewall rules via the advanced gateway GUI. To enable or disable logging, you must either use the API or raise a service request detailing the firewall rules for which you want to enable or disable logging so that we can action it on your behalf. When you convert an edge, the advanced gateway inherits the firewall logging configuration from the original edge. Enabling or disabling logging for NAT or load balancer services is not affected and you can edit those settings from the advanced gateway GUI as normal. For more information about using the API to amend firewall rules, see the <a href="https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf"><em>vCloud Director API for NSX Programming Guide</em></a>.</p>
 </div>
-<h2 id="intended-audience">Intended audience</h2>
+<h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this guide you must have access to the UKCloud Portal and vCloud Director.</p>
 <h2 id="prerequisites-and-known-issues">Prerequisites and known issues</h2>
 <p>Before converting your edge gateway, review the prerequisites and known issues below:</p>
@@ -116,20 +117,18 @@ see <a href="vmw-how-upgrade-edge.html"><em>How to upgrade your edge gateway</em
 <h2 id="converting-your-edge-to-an-advanced-gateway">Converting your edge to an advanced gateway</h2>
 <p>To access the latest vCloud Director networking features, you need to convert your edge to an advanced gateway.</p>
 <p>To convert your edge to an advanced gateway:</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Using vCloud Director 8.20</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Using vCloud Director 9.1</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+
 <ol>
-<li><p>Login to the UKCloud Portal.</p>
-<p>For more detailed steps, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
-</li>
-<li><p>If necessary, switch to the appropriate account.</p>
-</li>
-<li><p>Click <strong>My VMs</strong>.</p>
-<p><img src="images/myvms.png" alt="My VMs"></p>
-</li>
-<li><p>Select the compute service (vOrg) that the edge gateway belongs to.</p>
-</li>
-<li><p>On the <strong>vCloud Director</strong> tab, enter your UKCloud Portal password and then click <strong>Confirm</strong>.</p>
-<p><img src="images/conver-image-2.png" alt="vCloud Director"></p>
-</li>
 <li><p>In vCloud Director, select the <strong>Administration</strong> tab.</p>
 <p><img src="images/conver-image-3.png" alt="Administration tab"></p>
 </li>
@@ -147,6 +146,27 @@ see <a href="vmw-how-upgrade-edge.html"><em>How to upgrade your edge gateway</em
 <p><img src="images/conver-image-4.png" alt="Administration tab"></p>
 </li>
 </ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li><p>In vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway you want to convert.</p>
+</li>
+<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd91-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+</li>
+<li><p>Select the edge that you want to convert and click the <strong>Convert to Advanced</strong> button.</p>
+</li>
+<li><p>Click <strong>Yes</strong> to start the conversion.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>After converting your edge gateway, check the firewall rules to make sure that the <strong>default rule for ingress traffic</strong> is set to <strong>Deny</strong>.</p>
+</div>
+<p><img src="images/conver-image-4.png" alt="Administration tab"></p>
+</li>
+</ol>
+</section>
+</div>
 <h2 id="next-steps">Next steps</h2>
 <p>To find out more about the features provided by advanced gateways, see the following articles:</p>
 <ul>

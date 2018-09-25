@@ -1,5 +1,5 @@
 ---
-title: How to resize an unmanaged disk | UKCloud Ltd
+title: How to resize an unmanaged disk - PowerShell | UKCloud Ltd
 description: Provides help for resizing an unmanaged disk on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
@@ -8,12 +8,12 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Resize an unmanaged disk
+toc_title: Resize an unmanaged disk - PowerShell
 toc_fullpath: Users/How To/azs-how-resize-unmanaged-disk.md
 toc_mdlink: azs-how-resize-unmanaged-disk.md
 ---
 
-# How to resize an unmanaged disk
+# How to resize an unmanaged disk - PowerShell
 
 ## Overview
 
@@ -33,16 +33,16 @@ To complete the steps in this guide you must have the appropriate permissions on
 From your PowerShell window:
 
 > [!IMPORTANT]
-> Variables to be changed:
+> Enter details below to provide values for the variables in the scripts in this article:
 >
-> Resource Group Name: <form oninput="result.value=name.value" id="ResourceGroup" style="display: inline;" >
-> <input  type="text" id="name" name="name" style="display: inline;"/></form>
+> Resource Group Name: <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;" >
+> <input  type="text" id="resourcegroup" name="resourcegroup" style="display: inline;"/></form>
 >
-> VM Name: <form oninput="result.value=name.value" id="VMName" style="display: inline;">
-> <input  type="text" id="name" name="name" style="display: inline;"/></form>
+> VM Name: <form oninput="result.value=vmname.value" id="vmname" style="display: inline;">
+> <input  type="text" id="vmname" name="vmname" style="display: inline;"/></form>
 >
-> New Disk Size in GB: <form oninput="result.value=name.value" id="DiskSize" style="display: inline;">
-> <input  type="text" id="name" name="name" style="display: inline;"/></form>
+> New Disk Size in GB: <form oninput="result.value=disksize.value" id="disksize" style="display: inline;">
+> <input  type="text" id="disksize" name="disksize" style="display: inline;"/></form>
 >
 > Note that the maximum size allowed for OS disks is 2048GB
 
@@ -51,8 +51,8 @@ Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.f
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group name and VM name
-$RGName = '<output form="ResourceGroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
-$VMName = '<output form="VMName" name="result" style="display: inline;">&lt;VM Name&gt;</output>'
+$RGName = '<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
+$VMName = '<output form="vmname" name="result" style="display: inline;">&lt;VM Name&gt;</output>'
 
 # Obtain a reference to your VM
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
@@ -61,7 +61,7 @@ $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
 # Set the size of the unmanaged OS disk to the desired value and update the VM
-$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">&lt;Disk Size&gt;</output>
+$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="disksize" name="result" style="display: inline;">&lt;Disk Size&gt;</output>
 Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
 
 # Restart the VM

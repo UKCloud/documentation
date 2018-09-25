@@ -8,7 +8,7 @@
     <title>How to configure IPsec VPN | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure IPsec VPN | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.39.2.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -92,6 +92,55 @@
 <li>A remote network offering IPsec VPN endpoint capability</li>
 </ul>
 <p>Depending on the type of connection required, you'll need to complete IP addressing for both ends, together with a shared secret, and indicate which VDC networks are allowed to connect to the VPN link.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>Before you start configuring IPsec VPN settings, you'll need to make a note of the IP address of your edge gateway to use as your tunnel endpoint address:</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Using vCloud Director 8.20</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Using vCloud Director 9.1</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+
+<ol>
+<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
+<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
+</li>
+<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
+</li>
+<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
+</li>
+<li><p>Right-click the edge gateway and select <strong>Properties</strong>.</p>
+</li>
+<li><p>In the <em>Edge Gateway Properties</em> dialog box, select the <strong>Configure IP Settings</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-configure-ip-settings.png" alt="Configure IP Settings tab of Edge Gateway Properties dialog box"></p>
+</li>
+<li><p>Make a note of the IP address in the <strong>IP Addresses</strong> column then click <strong>OK</strong>.</p>
+<p><img src="images/vmw-vcd-tunnel-ip-address.png" alt="IP Addresses column"></p>
+</li>
+</ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway you want to configure.</p>
+</li>
+<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd91-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+</li>
+<li><p>Select the edge that you want to configure.</p>
+</li>
+<li><p>In the <em>Edge Gateway Settings</em> section, in the <em>IP Addresses</em> table, make a note of the IP address in the <strong>IP Addresses</strong> column.</p>
+<p><img src="images/vmw-vcd91-edge-ip-addresses.png" alt="IP Addresses column"></p>
+</li>
+</ol>
+</section>
+</div>
 <h2 id="configuring-edge-gateway-ipsec-vpn-settings-for-an-advanced-gateway">Configuring edge gateway IPsec VPN settings for an advanced gateway</h2>
 <p>To configure the IPsec VPN, you first need to configure the VPN settings on your edge gateway.</p>
 <p>The steps for configuring edge gateway IPsec VPN settings vary depending on what type of edge gateway you're working with:</p>
@@ -105,25 +154,8 @@
 </div>
 <h3 id="configuring-edge-gateway-ipsec-vpn-settings-for-an-advanced-gateway-1">Configuring edge gateway IPsec VPN settings for an advanced gateway</h3>
 <ol>
-<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
-<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
-</li>
-<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
-</li>
-<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
-</li>
-<li><p>Right-click the edge gateway and select <strong>Properties</strong>.</p>
-</li>
-<li><p>In the <em>Edge Gateway Properties</em> dialog box, select the <strong>Configure IP Settings</strong></p>
-<p><img src="images/vmw-vcd-tab-configure-ip-settings.png" alt="Configure IP Settings of Edge Gateway Properties dialog box"></p>
-</li>
-<li><p>Make a note of the IP address in the <strong>IP Addresses</strong> column then click <strong>OK</strong>.</p>
-<p>You'll need to use this IP address later to use as your tunnel endpoint address.</p>
-<p><img src="images/vmw-vcd-tunnel-ip-address.png" alt="IP Addresses column"></p>
-</li>
-<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
+<li><p>In vCloud Director, access the edge gateway settings.</p>
+<p>For more detailed instructions, see <a href="vmw-how-access-edge.html"><em>How to access edge gateway settings</em></a></p>
 </li>
 <li><p>Select the <strong>VPN</strong> tab.</p>
 <p><img src="images/vmw-vcd-adv-edge-tab-vpn.png" alt="VPN tab"></p>
@@ -288,16 +320,8 @@ a smaller subnet of that, for example <code>10.20.6.0/25</code></li>
 <p>When you've configured both ends of the IPSec tunnel, the connection should start without any issues.</p>
 <p>To verify the tunnel status in vCloud Director:</p>
 <ol>
-<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
-<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
-</li>
-<li><p>Double-click the virtual data centre (VDC) in which you set up your VPN, or right-click the VDC and select <strong>Open</strong>.</p>
-</li>
-<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
-</li>
-<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
+<li><p>In vCloud Director, access the edge gateway settings.</p>
+<p>For more detailed instructions, see <a href="vmw-how-access-edge.html"><em>How to access edge gateway settings</em></a></p>
 </li>
 <li><p>For advanced gateways:</p>
 <ul>
@@ -315,7 +339,7 @@ a smaller subnet of that, for example <code>10.20.6.0/25</code></li>
 <h5>Note</h5>
 <p>It can take up to two minutes after the tunnel is established to show that the VPN  connection is active.</p>
 </div>
-<ol start="6">
+<ol start="3">
 <li>You should now be able to send traffic via the VPN.</li>
 </ol>
 <div class="NOTE">

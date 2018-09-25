@@ -8,7 +8,7 @@
     <title>How to create a Key Vault - PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a Key Vault - PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.39.2.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -92,15 +92,15 @@
 <h2 id="creating-a-new-key-vault">Creating a new Key Vault</h2>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>Values to be replaced:</p>
-<p>Resource Group Name: <form oninput="result.value=name.value" id="resourcegroup" style="display: inline;">
-<input type="text" id="name" name="name" style="display: inline;"></form></p>
-<p>Vault Name: <form oninput="result.value=name.value;result2.value=name.value;result3.value=name.value" id="vaultname" style="display: inline;">
-<input type="text" id="name" name="name" style="display: inline;"></form></p>
-<p>Secret Value: <form oninput="result.value=name.value" id="SecretValue" style="display: inline;">
-<input type="text" id="name" name="name" style="display: inline;"></form></p>
-<p>Secret Name: <form oninput="result.value=name.value;result2.value=name.value" id="secretname" style="display: inline;">
-<input type="text" id="name" name="name" style="display: inline;"></form></p>
+<p>Enter details below to provide values for the variables in the scripts in this article:</p>
+<p>Resource Group Name: <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;">
+<input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;"></form></p>
+<p>Vault Name: <form oninput="result.value=vaultname.value;result2.value=vaultname.value;result3.value=vaultname.value" id="vaultname" style="display: inline;">
+<input type="text" id="vaultname" name="vaultname" style="display: inline;"></form></p>
+<p>Secret Value: <form oninput="result.value=secretvalue.value" id="secretvalue" style="display: inline;">
+<input type="text" id="secretvalue" name="secretvalue" style="display: inline;"></form></p>
+<p>Secret Name: <form oninput="result.value=secretname.value;result2.value=secretname.value" id="secretname" style="display: inline;">
+<input type="text" id="secretname" name="secretname" style="display: inline;"></form></p>
 </div>
 <p>From your PowerShell window:</p>
 <pre><code class="language-PowerShell"># Add environment
@@ -119,7 +119,7 @@ New-AzureRmKeyVault -VaultName '<output form="vaultname" name="result" style="di
 <h2 id="storing-a-secret-in-the-vault">Storing a secret in the vault</h2>
 <p>From your PowerShell window:</p>
 <pre><code class="language-PowerShell"># Create a new secret
-$SecretValue = ConvertTo-SecureString '<output form="SecretValue" name="result" style="display: inline;">&lt;String&gt;</output>' -AsPlainText -Force
+$SecretValue = ConvertTo-SecureString '<output form="secretvalue" name="result" style="display: inline;">&lt;String&gt;</output>' -AsPlainText -Force
 
 # Store the secret in Azure Key Vault
 $Secret = Set-AzureKeyVaultSecret -VaultName '<output form="vaultname" name="result2" style="display: inline;">&lt;Vault Name&gt;</output>' -Name '<output form="secretname" name="result" style="display: inline;">&lt;Secret Name&gt;</output>' -SecretValue $SecretValue

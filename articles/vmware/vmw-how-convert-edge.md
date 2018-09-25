@@ -13,9 +13,11 @@ toc_fullpath: How To/vmw-how-convert-edge.md
 toc_mdlink: vmw-how-convert-edge.md
 ---
 
-# Overview
+# How to convert your edge to an advanced gateway
 
-With the upgrade to vCloud Director 8.20, UKCloud for VMware now offers advanced gateways to provide access to new vCloud Director functionality. Some of this functionality is available now, with other features being added following integration testing to assess suitability on our platform (some features may incur additional charges).
+## Overview
+
+With the upgrade to vCloud Director 8.20 and 9.1, UKCloud for VMware now offers advanced gateways to provide access to new vCloud Director functionality. Some of this functionality is available now, with other features being added following integration testing to assess suitability on our platform (some features may incur additional charges).
 
 Advanced gateways in UKCloud for VMware provide:
 
@@ -29,7 +31,7 @@ Advanced gateways in UKCloud for VMware provide:
 > [!IMPORTANT]
 > After converting your edge to an advanced gateway, you will not be able to enable or disable logging on firewall rules via the advanced gateway GUI. To enable or disable logging, you must either use the API or raise a service request detailing the firewall rules for which you want to enable or disable logging so that we can action it on your behalf. When you convert an edge, the advanced gateway inherits the firewall logging configuration from the original edge. Enabling or disabling logging for NAT or load balancer services is not affected and you can edit those settings from the advanced gateway GUI as normal. For more information about using the API to amend firewall rules, see the [*vCloud Director API for NSX Programming Guide*](https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf).
 
-## Intended audience
+### Intended audience
 
 To complete the steps in this guide you must have access to the UKCloud Portal and vCloud Director.
 
@@ -52,38 +54,43 @@ To access the latest vCloud Director networking features, you need to convert yo
 
 To convert your edge to an advanced gateway:
 
-1. Login to the UKCloud Portal.
+# [Using vCloud Director 8.20](#tab/tabid-1)
 
-    For more detailed steps, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
-
-2. If necessary, switch to the appropriate account.
-
-3. Click **My VMs**.
-
-    ![My VMs](images/myvms.png)
-
-4. Select the compute service (vOrg) that the edge gateway belongs to.
-
-5. On the **vCloud Director** tab, enter your UKCloud Portal password and then click **Confirm**.
-
-    ![vCloud Director](images/conver-image-2.png)
-
-6. In vCloud Director, select the **Administration** tab.
+1. In vCloud Director, select the **Administration** tab.
 
     ![Administration tab](images/conver-image-3.png)
 
-7. Double-click the VDC that the edge gateway belongs to.
+2. Double-click the VDC that the edge gateway belongs to.
 
-8. Select the **Edge Gateways** tab.
+3. Select the **Edge Gateways** tab.
 
-9. Right-click the edge gateway that you want to convert and select **Convert to Advanced Gateway**.
+4. Right-click the edge gateway that you want to convert and select **Convert to Advanced Gateway**.
 
-10. Click **Yes** to start the conversion.
+5. Click **Yes** to start the conversion.
 
     > [!IMPORTANT]
     > After converting your edge gateway, check the firewall rules to make sure that the **default rule for ingress traffic** is set to **Deny**.
 
     ![Administration tab](images/conver-image-4.png)
+
+# [Using vCloud Director 9.1](#tab/tabid-2)
+
+1. In vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway you want to convert.
+
+2. In the left navigation panel, click **Edges**.
+
+    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
+
+3. Select the edge that you want to convert and click the **Convert to Advanced** button.
+
+4. Click **Yes** to start the conversion.
+
+    > [!IMPORTANT]
+    > After converting your edge gateway, check the firewall rules to make sure that the **default rule for ingress traffic** is set to **Deny**.
+
+    ![Administration tab](images/conver-image-4.png)
+
+***
 
 ## Next steps
 

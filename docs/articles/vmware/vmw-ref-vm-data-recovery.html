@@ -8,7 +8,7 @@
     <title>Virtual machine data recovery options | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Virtual machine data recovery options | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.39.2.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -105,11 +105,29 @@
 <h3 id="cons">Cons</h3>
 <p>You can create only one snapshot for each VM, with each subsequent snapshot overwriting the previous one. You should use snapshots only as a temporary solution, as the longer the snapshot is running, the more changes will be lost should the snapshot be restored. In addition, due to the way that snapshots capture all changes to a separate file, storage costs will increase as a result of having to store both the original master VM image and you may also encounter a negative impact to the overall performance of the VM.</p>
 <h3 id="how-to-create-a-vm-snapshot">How to create a VM snapshot</h3>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Using vCloud Director 8.20</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Using vCloud Director 9.1</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+
 <p>You can create a VM snapshot within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to create a snapshot for and selecting <strong>Create Snapshot</strong>.</p>
-<p><img src="images/vcd_snapshot.png" alt="Snapshot creation in vCloud Director"></p>
+<p><img src="images/vcd_snapshot.png" alt="Snapshot creation in vCloud Director 8.20"></p>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<p>In the card for the VM that you want to create a snapshot for, click <strong>More</strong> and select <strong>Create Snapshot</strong>.</p>
+<p><img src="images/vmw-vcd91-mnu-create-snapshot.png" alt="Snapshot creation in vCloud Director 9.1"></p>
+</section>
+</div>
 <h2 id="vm-copy">VM copy</h2>
 <p>When you copy a VM, you create an exact replica of the VM in either the same vApp or a different vApp.</p>
-<p><img src="images/vcd_copy.png" alt="VM copy in vCloud Director"></p>
+<p><img src="images/copy.png" alt="How Master and copy images differ with changes over time"></p>
 <h3 id="use-case-1">Use case</h3>
 <p>When creating a web application that can scale across multiple VMs of the same configuration, you can build an image to the required specification and then copy that VM to create a master image (gold build). When required, you can deploy subsequent VMs from this gold build in a consistent fashion, enabling swift scaling of your environment.</p>
 <h3 id="pros-1">Pros</h3>
@@ -117,8 +135,25 @@
 <h3 id="cons-1">Cons</h3>
 <p>You must power down the VM prior to taking a copy. Each additional copy will consume as much storage as the original and consume additional memory and CPU cycles while the VMs are running.</p>
 <h3 id="how-to-create-a-vm-copy">How to create a VM copy</h3>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Using vCloud Director 8.20</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-2" data-tab="tabid-2" tabindex="-1">Using vCloud Director 9.1</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-1" role="tabpanel" data-tab="tabid-1">
+
 <p>You can create a VM copy within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to copy and selecting <strong>Copy to</strong>.</p>
-<p><img src="images/copy.png" alt="How Master and copy images differ with changes over time"></p>
+<p><img src="images/vcd_copy.png" alt="VM copy in vCloud Director 8.20"></p>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<p>In the vCloud Director 9.1 tenant portal, you can only copy entire vApps. To copy a single VM, you need to switch to the vCloud Director Web Console and follow the steps for vCloud Director 8.20.</p>
+</section>
+</div>
 <h2 id="vm-backup">VM backup</h2>
 <p>You should view backup as a disaster recovery mechanism, whereby you can restore entire environments or individual files in the event of the original becoming unavailable as a result of corruption or accidental deletion.</p>
 <p>You can add any VM to the automated snapshot backup schedule so that it is automatically backed up on a daily basis. You can choose to retain snapshot backups for either 14 or 28 days. Data is backed up at the hypervisor level and provides a crash‑consistent image.</p>

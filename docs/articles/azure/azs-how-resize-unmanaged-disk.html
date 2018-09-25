@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to resize an unmanaged disk | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to resize an unmanaged disk - PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to resize an unmanaged disk | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.39.2.0">
+    <meta name="title" content="How to resize an unmanaged disk - PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -82,7 +82,7 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-resize-an-unmanaged-disk">How to resize an unmanaged disk</h1>
+<h1 id="how-to-resize-an-unmanaged-disk---powershell">How to resize an unmanaged disk - PowerShell</h1>
 
 <h2 id="overview">Overview</h2>
 <p>When deploying a new virtual machine from an Azure Marketplace image, the default drive size is often 127GB or less. While it is recommended to add additional disks for tasks such as installing applications and for CPU intensive workloads, you may need to expand the initial drive for purposes such as migrating from a physical PC to the VM or to support applications that must be installed on the OS drive.</p>
@@ -97,13 +97,13 @@
 <p>From your PowerShell window:</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>Variables to be changed:</p>
-<p>Resource Group Name: <form oninput="result.value=name.value" id="ResourceGroup" style="display: inline;">
-<input type="text" id="name" name="name" style="display: inline;"></form></p>
-<p>VM Name: <form oninput="result.value=name.value" id="VMName" style="display: inline;">
-<input type="text" id="name" name="name" style="display: inline;"></form></p>
-<p>New Disk Size in GB: <form oninput="result.value=name.value" id="DiskSize" style="display: inline;">
-<input type="text" id="name" name="name" style="display: inline;"></form></p>
+<p>Enter details below to provide values for the variables in the scripts in this article:</p>
+<p>Resource Group Name: <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;">
+<input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;"></form></p>
+<p>VM Name: <form oninput="result.value=vmname.value" id="vmname" style="display: inline;">
+<input type="text" id="vmname" name="vmname" style="display: inline;"></form></p>
+<p>New Disk Size in GB: <form oninput="result.value=disksize.value" id="disksize" style="display: inline;">
+<input type="text" id="disksize" name="disksize" style="display: inline;"></form></p>
 <p>Note that the maximum size allowed for OS disks is 2048GB</p>
 </div>
 <pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
@@ -111,8 +111,8 @@ Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.f
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group name and VM name
-$RGName = '<output form="ResourceGroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
-$VMName = '<output form="VMName" name="result" style="display: inline;">&lt;VM Name&gt;</output>'
+$RGName = '<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
+$VMName = '<output form="vmname" name="result" style="display: inline;">&lt;VM Name&gt;</output>'
 
 # Obtain a reference to your VM
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
@@ -121,7 +121,7 @@ $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
 # Set the size of the unmanaged OS disk to the desired value and update the VM
-$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">&lt;Disk Size&gt;</output>
+$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="disksize" name="result" style="display: inline;">&lt;Disk Size&gt;</output>
 Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
 
 # Restart the VM
