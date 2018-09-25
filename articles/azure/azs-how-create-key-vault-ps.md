@@ -31,16 +31,16 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 > Enter details below to provide values for the variables in the scripts in this article:
 >
 > Resource Group Name: <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;" >
-> <input  type="text" id="resourcegroup" name="resourcegroup" style="display: inline;"/></form>
+> <input  type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="myResourceGroup"/></form>
 >
 > Vault Name: <form oninput="result.value=vaultname.value;result2.value=vaultname.value;result3.value=vaultname.value" id="vaultname" style="display: inline;">
-> <input  type="text" id="vaultname" name="vaultname" style="display: inline;" /></form>
+> <input  type="text" id="vaultname" name="vaultname" style="display: inline;" placeholder="myVault"/></form>
 >
 > Secret Value: <form oninput="result.value=secretvalue.value" id="secretvalue" style="display: inline;">
-> <input  type="text" id="secretvalue" name="secretvalue" style="display: inline;" /></form>
+> <input  type="text" id="secretvalue" name="secretvalue" style="display: inline;" placeholder="mySecretValue"/></form>
 >
 > Secret Name: <form oninput="result.value=secretname.value;result2.value=secretname.value" id="secretname" style="display: inline;">
-> <input  type="text" id="secretname" name="secretname" style="display: inline;"/></form>
+> <input  type="text" id="secretname" name="secretname" style="display: inline;" placeholder="mySecret"/></form>
 
 From your PowerShell window:
 
