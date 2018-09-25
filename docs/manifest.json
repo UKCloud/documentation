@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-S2S-VPN.html",
-          "hash": "NVxoZW4VNiUuPstYnbelnQ=="
+          "hash": "n5YYPp61Zkq1FbpslxlZPA=="
         }
       },
       "is_incremental": false,
@@ -394,10 +394,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-browser-networking-create.PNG",
+      "source_relative_path": "articles/azure/images/azs-browser-networking-create.png",
       "output": {
         "resource": {
-          "relative_path": "articles/azure/images/azs-browser-networking-create.PNG"
+          "relative_path": "articles/azure/images/azs-browser-networking-create.png"
         }
       },
       "is_incremental": false,
@@ -405,10 +405,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-browser-new-networking.PNG",
+      "source_relative_path": "articles/azure/images/azs-browser-new-networking.png",
       "output": {
         "resource": {
-          "relative_path": "articles/azure/images/azs-browser-new-networking.PNG"
+          "relative_path": "articles/azure/images/azs-browser-new-networking.png"
         }
       },
       "is_incremental": false,
@@ -12141,14 +12141,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
