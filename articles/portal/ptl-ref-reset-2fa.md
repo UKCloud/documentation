@@ -1,8 +1,8 @@
 ---
 title: Resetting Two-Factor Authentication | UKCloud Ltd
-description: 
-services: 
-author: 
+description: Explains how to reset Two-Factor Authentication (2FA) to prepare for Single Sign On
+services: portal
+author: Sue Highmoor
 
 toc_rootlink: Reference
 toc_sub1: 
