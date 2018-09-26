@@ -36,13 +36,13 @@ From your PowerShell window:
 > Enter details below to provide values for the variables in the scripts in this article:
 >
 > Resource Group Name: <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;" >
-> <input  type="text" id="resourcegroup" name="resourcegroup" style="display: inline;"/></form>
+> <input  type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="myResourceGroup"/></form>
 >
 > VM Name: <form oninput="result.value=vmname.value" id="vmname" style="display: inline;">
-> <input  type="text" id="vmname" name="vmname" style="display: inline;"/></form>
+> <input  type="text" id="vmname" name="vmname" style="display: inline;" placeholder="myVM"/></form>
 >
 > New Disk Size in GB: <form oninput="result.value=disksize.value" id="disksize" style="display: inline;">
-> <input  type="text" id="disksize" name="disksize" style="display: inline;"/></form>
+> <input  type="text" id="disksize" name="disksize" style="display: inline;" placeholder="1024"/></form>
 >
 > Note that the maximum size allowed for OS disks is 2048GB
 
