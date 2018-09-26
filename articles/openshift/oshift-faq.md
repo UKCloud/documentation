@@ -129,7 +129,7 @@ In order to add new users, you will need to raise a [Service Request](https://po
 
 ### What monitoring of the services is provided by default in a trial?
 
-By default, no specific monitoring service is integrated. However, we recommend external monitoring services such as Datadog or Coscale for production-grade OpenShift hosted applications. Alternatively, a simple monitoring solution can be implemented by the customer themselves - an example is outlined here: [How to monitor your OpenShift cluster](oshift-how-monitor-cluster.md)
+By default, no specific monitoring service is integrated. However, we recommend external monitoring services such as Datadog or Coscale for production-grade OpenShift hosted applications. Alternatively, you can implement your own simple monitoring solution as described in [How to monitor your OpenShift cluster](oshift-how-monitor-cluster.md).
 
 ### What monitoring of the services is provided on a billable service?
 
