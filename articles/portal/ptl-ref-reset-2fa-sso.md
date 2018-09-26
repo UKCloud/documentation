@@ -1,6 +1,6 @@
 ---
-title: Resetting Two-Factor Authentication | UKCloud Ltd
-description: Explains how to reset Two-Factor Authentication (2FA) to prepare for Single Sign On
+title: Resetting Two-Factor Authentication for Single Sign On | UKCloud Ltd
+description: Explains how to reset Two-Factor Authentication (2FA) to prepare for Single Sign On (SSO)
 services: portal
 author: Sue Highmoor
 
@@ -9,9 +9,9 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Resetting Two-Factor Authentication
-toc_fullpath: Reference/ptl-ref-reset-2fa.md
-toc_mdlink: ptl-ref-reset-2fa.md
+toc_title: Resetting Two-Factor Authentication for SSO
+toc_fullpath: Reference/ptl-ref-reset-2fa-sso.md
+toc_mdlink: ptl-ref-reset-2fa-sso.md
 ---
 
 # Resetting Two-Factor Authentication
@@ -21,7 +21,7 @@ With the introduction of our new UKCloud Single Sign On service, we require all 
 - Unified logon across our major multi-cloud offerings, including VMware, OpenStack and OpenShift
 - Roll out of 2FA for technology stacks where this has not previously been an option
 
-If your Portal administrator has enabled 2FA on your Portal account, then next time you log in after September xx 2018 you will see the following information:
+If your Portal administrator has enabled 2FA on your Portal account and you scanned the QR code before August 1 2018, then next time you log in after October 1 2018 you'll see the following information:
 
 ![Reset Two-Factor Authentication dialog box](/images/ptl-2fa-reset.png)
 
