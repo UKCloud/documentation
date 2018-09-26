@@ -14,7 +14,7 @@ toc_fullpath: Reference/ptl-ref-reset-2fa-sso.md
 toc_mdlink: ptl-ref-reset-2fa-sso.md
 ---
 
-# Resetting Two-Factor Authentication
+# Resetting Two-Factor Authentication for Single Sign On
 
 With the introduction of our new UKCloud Single Sign On service, we require all Portal users currently using Two-Factor Authentication (2FA) to reset their 2FA token. Single Sign On is an exciting new service that enables us to provide:
 
@@ -23,7 +23,7 @@ With the introduction of our new UKCloud Single Sign On service, we require all 
 
 If your Portal administrator has enabled 2FA on your Portal account and you scanned the QR code before August 1 2018, then next time you log in after October 1 2018 you'll see the following information:
 
-![Reset Two-Factor Authentication dialog box](/images/ptl-2fa-reset.png)
+![Reset Two-Factor Authentication dialog box](images/ptl-2fa-reset.png)
 
 Follow the steps provided:
 
