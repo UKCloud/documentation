@@ -107,8 +107,8 @@ Get-Module -ListAvailable | where-Object {$_.Name -like “Azure*”} | Uninstal
 # Install the AzureRM.Bootstrapper module. Select Yes when prompted to install NuGet
 Install-Module -Name AzureRm.BootStrapper
 # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
-Use-AzureRmProfile -Profile 2017-03-09-profile -Force
-Install-Module -Name AzureStack -RequiredVersion 1.4.0
+Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
+Install-Module -Name AzureStack -RequiredVersion 1.5.0
 </code></pre>
 <h2 id="configure-the-operator-environment-and-sign-in-to-azure-stack">Configure the operator environment and sign in to Azure Stack</h2>
 <p>UKCloud FRN00006 Region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the  $AzsUsername and  $AzsPassword values)</p>
