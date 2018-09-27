@@ -5229,6 +5229,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-ideas-competition.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-ideas-competition.html",
+          "hash": "inj4Ma08xGhHtVX/sQYOXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-ideas.md",
       "output": {
         ".html": {
@@ -5401,7 +5413,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "ghMcUICQorlwFMSsPT35nw=="
+          "hash": "wU1SHUtN5BjfNBgtIhw/fg=="
         }
       },
       "is_incremental": false,
