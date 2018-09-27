@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "dQHPZLby2MFD+9dgYO8cEg=="
+          "hash": "n2JuSVporUN1YXOejG0NZw=="
         }
       },
       "is_incremental": false,
@@ -5431,6 +5431,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-2fa-reset.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-2fa-reset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-account-locked.png",
       "output": {
         "resource": {
@@ -5805,6 +5816,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-ref-reset-2fa-sso.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-ref-reset-2fa-sso.html",
+          "hash": "U0wdstoJbhew1a3BIP0z+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-ref-user-access.md",
       "output": {
         ".html": {
@@ -5821,7 +5844,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "8wK7uZVOk30Au16QY1dwwQ=="
+          "hash": "A4t/qvigwKGOugq4CvEe1Q=="
         }
       },
       "is_incremental": false,

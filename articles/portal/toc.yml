@@ -28,3 +28,5 @@
     href: ptl-ref-release-notes.md
   - name: Portal user access
     href: ptl-ref-user-access.md
+  - name: Resetting Two-Factor Authentication for SSO
+    href: ptl-ref-reset-2fa-sso.md

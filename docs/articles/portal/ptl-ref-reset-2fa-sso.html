@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Welcome to the UKCloud Knowledge Centre | UKCloud Knowledge Centre </title>
+    <title>Resetting Two-Factor Authentication for Single Sign On | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Welcome to the UKCloud Knowledge Centre | UKCloud Knowledge Centre ">
+    <meta name="title" content="Resetting Two-Factor Authentication for Single Sign On | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.1.0">
     
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles/docfx.vendor.css">
-    <link rel="stylesheet" href="styles/docfx.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <meta property="docfx:navrel" content="toc.html">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
-    <meta property="docfx:rel" content="">
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -35,8 +35,8 @@
                   <span class="icon-bar"></span>
                 </button>
                 
-                <a class="navbar-brand" href="index.html">
-                  <img id="logo" class="svg" src="logo.png" alt="">
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -69,34 +69,41 @@
         </div>
       </div>
       <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
         <div class="article row grid-right">
           <div class="container-fluid">
             <div class="row">
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="welcome-to-the-ukcloud-knowledge-centre">Welcome to the UKCloud Knowledge Centre</h1>
+<h1 id="resetting-two-factor-authentication-for-single-sign-on">Resetting Two-Factor Authentication for Single Sign On</h1>
 
-<h2 id="overview">Overview</h2>
-<p>The UKCloud Knowledge Centre provides over 200 articles to help you understand and work with our platform. Articles include:</p>
+<p>With the introduction of our new UKCloud Single Sign On service, we require all Portal users currently using Two-Factor Authentication (2FA) to reset their 2FA token. Single Sign On is an exciting new service that enables us to provide:</p>
 <ul>
-<li><strong>Getting Started Guides</strong> to introduce you to our services</li>
-<li><strong>How To Guides</strong> to take you step-by-step through common tasks</li>
-<li><strong>Reference Guides</strong> to provide additional details and information</li>
-<li><strong>FAQs</strong> to answer common questions</li>
-<li><strong>Service Scopes</strong> to clarify what is and isn't included in our services and products</li>
+<li>Unified logon across our major multi-cloud offerings, including VMware, OpenStack and OpenShift</li>
+<li>Roll out of 2FA for technology stacks where this has not previously been an option</li>
 </ul>
-<h2 id="accessing-the-knowledge-centre">Accessing the Knowledge Centre</h2>
-<p>To access the Knowledge Centre, go to <a href="https://docs.ukcloud.com">https://docs.ukcloud.com</a>. You can browse by service or use the search box to find the specific information you're looking for.</p>
-<h2 id="contributing-to-the-knowledge-centre">Contributing to the Knowledge Centre</h2>
-<p>Because our Knowledge Centre is stored in a GitHub repository, anyone with a GitHub account can submit changes to articles.</p>
-<p><strong>Important!</strong>  Before making any changes, make sure you're familiar with our <a href="https://docs.ukcloud.com/articles/other/other-ref-knowledge-guidelines.html">guidelines</a> for contributing to Knowledge Centre articles.</p>
-<p>To contribute updates to an existing Knowledge Centre article, find the article that you want to edit and click the <strong>Improve this Doc</strong> link. In GitHub, click the <em>Edit</em> (pencil) icon and make your changes. When you're done, click <em>Propose file change</em> and then create a Pull Request to submit your changes for approval by the UKCloud Products team.</p>
-<p>For more detailed instructions, see <a href="https://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html"><em>How to contribute to the UKCloud Knowledge Centre</em></a>.</p>
-<p><strong>Note!</strong> By submitting content you are granting UKCloud permission to use your submission in our Knowledge Centre, which is available for public consumption over the internet. In addition, you will also be identified as a contributor to the article in our public GitHub repository. For more information, see our <a href="https://ukcloud.com/terms-and-conditions">Terms of Use</a>.</p>
-<p>If you have suggestions for significant changes to the Knowledge Centre or any of its articles, contact <a href="mailto:products@ukcloud.com">products@ukcloud.com</a> to discuss your ideas.</p>
-<h2 id="docfx">DocFX</h2>
-<p>The UKCloud Knowledge Centre web pages are generated by DocFX, used under <a href="https://github.com/UKCloud/documentation/blob/master/LICENSE-DOCFX">the MIT license</a>.</p>
+<p>If your Portal administrator has enabled 2FA on your Portal account and you scanned the QR code before August 1 2018, then next time you log in after October 1 2018 you'll see the following information:</p>
+<p><img src="images/ptl-2fa-reset.png" alt="Reset Two-Factor Authentication dialog box"></p>
+<p>Follow the steps provided:</p>
+<ol>
+<li><p>Open the app that you use to generate the 2FA code and remove the existing UKCloud entry.</p>
+</li>
+<li><p>Scan the QR code provided in the Portal to add the new UKCloud entry.</p>
+</li>
+<li><p>Enter the six digit code generated in your authenticator app into the field in the Portal.</p>
+</li>
+<li><p>You will then be logged into the Portal and the next time you attempt to log in, you'll be prompted for your 2FA code as usual.</p>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -109,7 +116,7 @@
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/README.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/portal/ptl-ref-reset-2fa-sso.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>
@@ -137,10 +144,10 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="styles/docfx.js"></script>
-    <script type="text/javascript" src="styles/main.js"></script>
-    <script type="text/javascript" src="styles/highlight.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
