@@ -20,7 +20,7 @@ Terms and conditions for the UKCloud Ideas competition running from 27th Septemb
 
 1. The competition is open to registered users of the UKCloud Ideas portal except employees or contractors of UKCloud and their close relatives and anyone otherwise connected with the organisation or running of the competition.
 2. There is no entry fee and no purchase necessary to enter this competition.
-3. By entering this competition, an entrant is indicating his/her consent and agreement to be bound by these terms and conditions. If you do not wish to be entered into the competition, please email <info@ukcloud.com> with the subject titled: 'UKCloud ideas non-entrant' and state your registered user name.
+3. By entering this competition, an entrant is indicating his/her consent and agreement to be bound by these terms and conditions. If you do not wish to be entered into the competition, please email <products@ukcloud.com> with the subject titled: 'UKCloud ideas non-entrant' and state your registered user name.
 4. The competition will be run via the UKCloud Ideas portal (<https://ideas.ukcloud.com/>).
 5. A prize will be given to randomly selected user at the end of the competition. Entrants can increase their chances of winning by performing certain activities within the portal. Each activity has a different score attributed to it and each point is equal to one (1) entry.
     - Posting a new idea – 10 points
