@@ -129,7 +129,7 @@ In order to add new users, you will need to raise a [Service Request](https://po
 
 ### What monitoring of the services is provided by default in a trial?
 
-By default, a minimal Zabbix infrastructure gets deployed to enable customer monitoring of the nodes and other services. However, we recommend external monitoring services such as Datadog or Coscale for production-grade OpenShift hosted applications.
+By default, no specific monitoring service is integrated. However, we recommend external monitoring services such as Datadog or Coscale for production-grade OpenShift hosted applications. Alternatively, you can implement your own simple monitoring solution as described in [How to monitor your OpenShift cluster](oshift-how-monitor-cluster.md).
 
 ### What monitoring of the services is provided on a billable service?
 
