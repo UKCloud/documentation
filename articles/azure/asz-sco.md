@@ -147,7 +147,7 @@ We can provide:
 
 - Red Hat Enterprise Linux licensing
 
-For the latest available licences, check the [Service Definition](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/630346855069919-service-definition-document-2018-07-30-0941.pdf).
+For the latest available licences, check the [Service Definition](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/322910045972626-service-definition-document-2018-09-28-1341.pdf).
 
 You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you're providing your own licensing for a retrospective discount.
 
