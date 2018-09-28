@@ -61,7 +61,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 7. You can monitor the progress of your Key Vault's deployment by clicking the **Notifications** icon.
 
-   ![!Notification showing VM deployment in progress](images/azsp_createvm_progress.png)
+   ![!Notification showing vault deployment in progress](images/azsp_createvm_progress.png)
 
 ## Adding a secret to the Key Vault
 
