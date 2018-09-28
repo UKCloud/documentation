@@ -3,7 +3,6 @@ title: How to create a VM using Terraform on Azure Stack
 description: Learn how to create a VM using Terraform on Azure Stack
 services: azure-stack
 author: Chris Black
-
 toc_rootlink: Users
 toc_sub1: How To
 toc_sub2:
@@ -14,9 +13,10 @@ toc_fullpath: Users/How To/azs-how-create-vm-terraform.md
 toc_mdlink: azs-how-create-vm-terraform.md
 ---
 
+
 # How to create a VM using Terraform on Azure Stack
 
-This document explains how to create a VM using **azurestack** Terraform provider with Service Principal Name authentication.
+This document explains how to create a VM using the **azurestack** Terraform provider with Service Principal Name authentication.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ Prerequisites from a Windows-based external client.
 - Terraform executable
     - [Download Terraform](https://www.terraform.io/downloads.html)
 
-- Active Azure *Subscription* (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)
+- An active Azure *Subscription* (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)
 
 - Service Principal Name
     - [How To create Service Principal Name for Azure Stack](azs-how-create-spn-powershell.md)
@@ -40,19 +40,19 @@ Prerequisites from a Windows-based external client.
 
 ## Authentication
 
-In order to authenticate with Terraform you will need to have valid Service Principal Name (SPN) - how to create one is described in [Prerequisites](#prerequisites).
+In order to authenticate with Terraform you will need to have a valid Service Principal Name (SPN) - how to create one is described in [Prerequisites](#prerequisites).
 
 > [!NOTE]
-> You only need your Service Principal Name (SPN) to be assigned to Azure Stack subscription despite what official Terraform documentation says.
+> You only need your Service Principal Name (SPN) to be assigned to your Azure Stack subscription, despite what official Terraform documentation says.
 
 The process of authentication can be handled in one of two ways, either as **Environment Variables** or in the **Provider Block**.
 
-[Environment Variables Option](#example-of-environment-variables) - you can create your **terraform plan** by putting only the plan itself into `example.tf` and then keep `variables.tf` separately. You have to declare the actual values in `terraform.tfvars` file. It is this file that you will need to populate with your actual credential details.
+[Environment Variables Option](#example-of-environment-variables) - you can create your **terraform plan** by putting only the plan itself into `example.tf` and then keep `variables.tf` separate. You have to declare the actual values in the `terraform.tfvars` file. This is the file that you will need to populate with your actual credential details.
 
 > [!NOTE]
-> You can also put content of `variables.tf` in the `example.tf` at the top of the file.
+> You can also put the content of `variables.tf` in the `example.tf` at the top of the file.
 
-[Provider Block Option](#example-of-provider-block) - you can create your **terraform plan** by putting everything in one `example.tf` file which then contains your Provider settings explicitly in said plan.
+[Provider Block Option](#example-of-provider-block) - you can create your **terraform plan** by putting everything in one `example.tf` file, which then contains your Provider settings explicitly in said plan.
 
 Official [Variables Guide](https://www.terraform.io/intro/getting-started/variables.html)
 
@@ -108,10 +108,7 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
 
 #### Argument Reference
 
-- `arm_endpoint` - The Azure Resource Manager API Endpoint for
- your Azure Stack instance, eg `https://management.{region}.{domain}`.
- 
- For UKCloud Region it is **`https://management.frn00006.azure.ukcloud.com`**.
+- `arm_endpoint` - The Azure Resource Manager API Endpoint for your Azure Stack instance. This will be **`https://management.frn00006.azure.ukcloud.com`**.
 
 - `subscription_id` - The ID of your Azure Stack Subscription.
 
@@ -121,12 +118,30 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
 
 - `tenant_id` - The tenant ID of your Azure Active Directory tenant domain. It can either be the actual GUID or your Azure Active Directory tenant domain name.
 
+## I want to create a VM with:
+
+<form id="diskType" onchange="result.value=name.value;result2.value=name.value">
+  <input type="radio" name="name" value=' storage_os_disk {
+    name          = "myosdisk1"
+    vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
+    caching       = "ReadWrite"
+    create_option = "FromImage"
+  }' checked>An Unmanaged Disk
+
+  <input type="radio" name="name" value=' storage_os_disk {
+    name              = "myosdisk1"
+    caching           = "ReadWrite"
+    create_option     = "FromImage"
+    managed_disk_type = "Standard_LRS"
+  }'>A Managed Disk
+</form>
+
 ## Create a VM with Public IP template - using **Environment Variables** option
 
 > [!IMPORTANT]
-> This is only `example.tf` file you still need `variables.tf` and `terraform.tfvars` in your folder.
+> This is only the `example.tf` file. You will still need the `variables.tf` and `terraform.tfvars` files in your folder.
 
-```hcl
+<pre><code class="language-hcl">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
   subscription_id = "${var.subscription_id}"
@@ -218,12 +233,12 @@ resource "azurestack_virtual_machine" "test" {
     version   = "latest"
   }
 
-  storage_os_disk {
+<output form="diskType" name="result" style="display: inline;">  storage_os_disk {
     name          = "myosdisk1"
     vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
     caching       = "ReadWrite"
     create_option = "FromImage"
-  }
+  }</output>
 
   # Optional data disks
   storage_data_disk {
@@ -248,11 +263,11 @@ resource "azurestack_virtual_machine" "test" {
     environment = "staging"
   }
 }
-```
+</code></pre>
 
 ## Create a VM with Public IP template - using **Provider Block** option
 
-```hcl
+<pre><code class="language-hcl">
 provider "azurestack" {
   arm_endpoint    = "https://management.{region}.{domain}"
   subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
@@ -344,12 +359,12 @@ resource "azurestack_virtual_machine" "test" {
     version   = "latest"
   }
 
-  storage_os_disk {
+<output form="diskType" name="result2" style="display: inline;">  storage_os_disk {
     name          = "myosdisk1"
     vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
     caching       = "ReadWrite"
     create_option = "FromImage"
-  }
+  }</output>
 
   # Optional data disks
   storage_data_disk {
@@ -374,14 +389,14 @@ resource "azurestack_virtual_machine" "test" {
     environment = "staging"
   }
 }
-```
+</code></pre>
 
 ## How to execute a plan - using **Environment Variables** option
 
 > [!TIP]
-> Terraform by default scans your execution directory and is looking for all `tf` files.
+> Terraform by default scans your execution directory and is looks for all `tf` files.
 
-From PowerShell prompt navigate to the directory you have all your `tf` files in and run:
+From a PowerShell prompt, navigate to the directory which contains your `tf` files and run the following commands:
 
 ```powershell
 # Check if your environment is setup correctly
@@ -418,14 +433,14 @@ commands will detect it and remind you to do so if necessary.
 ```
 
 > [!NOTE]
-> You can also add `-auto-approve` to apply command for it not to ask you to apply changes for full automation.
+> You can also add `-auto-approve` to the apply command for it to not ask you to apply changes for full automation.
 
 ## How to execute a plan - using **Provider Block** option
 
 > [!TIP]
-> Terraform by default scans your execution directory and is looking for all `tf` files.
+> Terraform by default scans your execution directory and looks for all `tf` files.
 
-From PowerShell prompt navigate to the directory you have all your `tf` files in and run:
+From a PowerShell prompt, navigate to the directory which contains your `tf` files and run the following commands:
 
 ```powershell
 # Check if your environment is setup correctly
@@ -462,4 +477,8 @@ commands will detect it and remind you to do so if necessary.
 ```
 
 > [!NOTE]
-> You can also add `-auto-approve` to apply command for it not to ask you to apply changes for full automation.
+> You can also add `-auto-approve` to the apply command for it to not ask you to apply changes for full automation.
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
