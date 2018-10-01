@@ -13,7 +13,7 @@ toc_fullpath: Users/How To/Create a virtual machine/azs-how-create-vm-ps.md
 toc_mdlink: azs-how-create-vm-ps.md
 ---
 
-# How to create a virtual machine with PowerShell
+# How to create a virtual machine using PowerShell
 
 ## Overview
 
