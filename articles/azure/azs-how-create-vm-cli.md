@@ -9,7 +9,7 @@ toc_sub2: Create a virtual machine
 toc_sub3:
 toc_sub4:
 toc_title: Create a virtual machine - CLI
-toc_fullpath: Users/How To/Create a Virtual Machine/azs-how-create-vm-cli.md
+toc_fullpath: Users/How To/Create a virtual machine/azs-how-create-vm-cli.md
 toc_mdlink: azs-how-create-vm-cli.md
 ---
 
