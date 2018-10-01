@@ -26,6 +26,9 @@ The example of a vApp network, below, shows the vApp edge.
 
 ![vApp network](images/vmw-vapp-network.png)
 
+> [!NOTE]
+> You cannot create vApp networks in the new vCloud Director 9.1 tenant portal. If your environment uses vCloud Director 9.1, you must first switch to the vCloud Director web console. For more information, see [*How to switch to the vCloud Director web console from the tenant portal*](vmw-how-switch-web-console.md).
+
 ## Creating a vApp network
 
 There are two ways to create a vApp network within vCloud Director:
