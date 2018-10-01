@@ -1,19 +1,19 @@
 ---
-title: How to create a Virtual Machine - PowerShell | UKCloud Ltd
+title: How to create a virtual machine using PowerShell | UKCloud Ltd
 description: Provides help for creating a virtual machine on UKCloud for Microsoft Azure using PowerShell
 services: azure-stack
 author: Bailey Lawson
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Create a Virtual Machine
+toc_sub2: Create a virtual machine
 toc_sub3:
 toc_sub4:
-toc_title: Create a Virtual Machine - PowerShell
-toc_fullpath: Users/How To/Create a Virtual Machine/azs-how-create-vm-ps.md
+toc_title: Create a virtual machine - PowerShell
+toc_fullpath: Users/How To/Create a virtual machine/azs-how-create-vm-ps.md
 toc_mdlink: azs-how-create-vm-ps.md
 ---
 
-# How to create a Virtual Machine in Azure Stack with PowerShell
+# How to create a virtual machine with PowerShell
 
 ## Overview
 
