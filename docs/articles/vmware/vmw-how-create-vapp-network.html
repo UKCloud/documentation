@@ -8,7 +8,7 @@
     <title>How to create a vApp network | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a vApp network | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.39.2.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -89,6 +89,10 @@
 <p>vApp networks enable you to create smaller networks within individual vApps that have a vApp edge, similar to the edge gateway on your VDC. Although a vApp edge isn't as feature rich as a VDC edge, it enables you to create firewall and NAT rules to separate your VDC networks from your vApp virtual machines (VMs). This means you can create some quite complex networks to satisfy application needs.</p>
 <p>The example of a vApp network, below, shows the vApp edge.</p>
 <p><img src="images/vmw-vapp-network.png" alt="vApp network"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You cannot create vApp networks in the new vCloud Director 9.1 tenant portal. If your environment uses vCloud Director 9.1, you must first switch to the vCloud Director web console. For more information, see <a href="vmw-how-switch-web-console.html"><em>How to switch to the vCloud Director web console from the tenant portal</em></a>.</p>
+</div>
 <h2 id="creating-a-vapp-network">Creating a vApp network</h2>
 <p>There are two ways to create a vApp network within vCloud Director:</p>
 <ul>
