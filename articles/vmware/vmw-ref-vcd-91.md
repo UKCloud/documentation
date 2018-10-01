@@ -50,6 +50,8 @@ You should be aware of the following end-of-life and end-of-support warnings for
 
 For a list of known issues with vCloud Director 9.1, see the [*vCloud Director 9.1 for Service Providers Release Notes*](https://docs.vmware.com/en/vCloud-Director/9.1/rn/rel_notes_vcloud_director_91.html#knownissues).
 
+Only vShield Edge Gateways which have been converted to Advanced Gateway UI can be managed in the Enhanced HTML-5 tenant portal. To change settings on non-Advanced Gateway Edges, it is necessary to select "See this page in vCloud Director Web Console" in the vApp or Virtual Machine section of the HTML-5 portal to view the previous vCloud web portal.
+
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
