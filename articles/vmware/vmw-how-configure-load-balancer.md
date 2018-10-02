@@ -114,6 +114,9 @@ A virtual server masks the pool of real servers and presents a single IP address
 
 ## Configuring a load balancer for a standard edge
 
+> [!NOTE]
+> You can only manage advanced gateways in the new vCloud Director 9.1 tenant portal. If you're working with a standard edge gateway, you must first switch to the vCloud Director web console to manage the edge. For more information, see [*How to switch to the vCloud Director web console from the tenant portal*](vmw-how-switch-web-console.md).
+
 To configure a load balancer for a standard edge:
 
 1. In vCloud Director, click the **Administration** tab.

@@ -70,7 +70,7 @@ Before you start configuring IPsec VPN settings, you'll need to make a note of t
 
 ***
 
-## Configuring edge gateway IPsec VPN settings for an advanced gateway
+## Configuring edge gateway IPsec VPN settings
 
 To configure the IPsec VPN, you first need to configure the VPN settings on your edge gateway.
 
@@ -126,6 +126,9 @@ The steps for configuring edge gateway IPsec VPN settings vary depending on what
 9. When you're done, click **Keep** to create the edge end of the VPN tunnel then click **Save changes**.
 
 ### Configuring edge gateway IPsec VPN settings for a standard edge
+
+> [!NOTE]
+> You can only manage advanced gateways in the new vCloud Director 9.1 tenant portal. If you're working with a standard edge gateway, you must first switch to the vCloud Director web console to manage the edge. For more information, see [*How to switch to the vCloud Director web console from the tenant portal*](vmw-how-switch-web-console.md).
 
 1. In vCloud Director, click the **Administration** tab.
 
