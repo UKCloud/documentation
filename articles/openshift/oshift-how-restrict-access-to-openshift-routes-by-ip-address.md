@@ -55,7 +55,7 @@ You can even use a mix of IP addresses and a network CIDR:
 
     oc annotate route myroute haproxy.router.openshift.io/ip_whitelist=192.168.1.10 180.5.61.153 192.168.1.0/24 10.0.0.0/8
 
-To delete the IP's from the annotation, you can run the command:
+To delete the IPs from the annotation, you can run the command:
     
     oc annotate route myroute haproxy.router.openshift.io/ip_whitelist=''
 
