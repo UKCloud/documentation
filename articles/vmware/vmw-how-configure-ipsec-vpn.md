@@ -72,8 +72,6 @@ Before you start configuring IPsec VPN settings, you'll need to make a note of t
 
 ## Configuring edge gateway IPsec VPN settings
 
-To configure the IPsec VPN, you first need to configure the VPN settings on your edge gateway.
-
 The steps for configuring edge gateway IPsec VPN settings vary depending on what type of edge gateway you're working with:
 
 - [Configuring edge gateway IPsec VPN settings for an advanced gateway](#configuring-edge-gateway-ipsec-vpn-settings-for-an-advanced-gateway)
