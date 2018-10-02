@@ -25,7 +25,7 @@ OpenShift developers who have already created and deployed services into OpenShi
 
 ## Restricting access to a route
 
-  - After creating and exposing a route in OpenShift in the usual manner, you can then add an annotation to the route specifying the IP address(es) that you would like to whitelist.
+After creating and exposing a route in OpenShift in the usual manner, you can then add an annotation to the route specifying the IP address(es) that you would like to whitelist.
   
 > [!IMPORTANT]
 > Whitelisting a IP address automaticly blacklists everything else.
