@@ -37,7 +37,7 @@ CIFS-ECS offers a single caching option:
 
 ## Installing CIFS-ECS
 
-1. Navigate to the following Portal page to download the ZIP file that contains the CIFS-ECS installer: [CIFS-ECS Tool] (https://portal.ukcloud.com/support/knowledge_centre/85dc54ff-7d21-43ac-9cfa-88e87de7ba27)
+1. Navigate to the following Portal page to download the ZIP file that contains the CIFS-ECS installer: [CIFS-ECS Tool] (https://portal.ukcloud.com/support/knowledge_centre/85dc54ff-7d21-43ac-9cfa-88e87de7ba27).
 
     To download CIFS-ECS you'll need your UKCloud Portal log in details.
 
@@ -62,20 +62,19 @@ CIFS-ECS offers a single caching option:
 
     - You can find the **User ID** in the *Storage* section of the UKCloud Portal.
 
-    - If you’ve forgotten or don’t know your **Secret Access Key**, you can reset it in the *Storage* section of the Portal
+    - If you’ve forgotten or don’t know your **Secret Access Key**, you can reset it in the *Storage* section of the Portal.
 
         > [!NOTE]
-        > The **'Server Name'** and **Description** can be anything, but must not be blank. In the example it is shown as `UKCloud' and UKCloud - ECS Drive`
+        > The **Server Name** and **Description** can be anything, but must not be blank. In the example it is shown as `UKCloud` and `UKCloud - ECS Drive`.
 
-
-7.  From the **Use https or http list, select HTTPS**.
+7.  From the **Use https or http list**, select **HTTPS**.
 
     ![Hosts page](images/cs-ecs-installtion-step-two.png)
 
 8.  In the **Host name / IP** field input one of the following:
 
-    &nbsp;| S3 API endpoint |
-    ------|-----------------|
+    &nbsp;| S3 API endpoint
+    ------|----------------
     **Corsham (Assured)** |
     Internet | `cas.cor00005.ukcloud.com`
     PSN Assured | `cas.cor00005.psnassured.ukcloud.com`
@@ -86,7 +85,7 @@ CIFS-ECS offers a single caching option:
     N3 | `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
 
 9. Deselect the **Port Override** check box.
-    
+
 10. Click **OK** to return to the *Settings* page.
 
 10.	The rest of the fields on the *Settings* page enable you to configure the root directory, encryption and compression settings.
@@ -108,13 +107,12 @@ CIFS-ECS offers a single caching option:
 
 15.	You can share the CIFS-ECS drive, or a folder within it, so that other machines on the network can access it.
 
-    > [!TIP]
-    > See Microsoft's How-To guide on how to share a a drive on the network from Windows:
-    https://support.microsoft.com/en-gb/help/4092694/windows-10-changes-to-file-sharing-over-a-network
-    
     &nbsp;| |
     ------|-----------------|
     ![CIFS-ECS drive in windows](images/cs-ecs-installtion-step-five.png) |![Inside the CIFS-ECS drive](images/cs-ecs-installtion-step-six.png)
+
+    > [!TIP]
+    > See Microsoft's How-To guide on how to share a a drive on the network from Windows: https://support.microsoft.com/en-gb/help/4092694/windows-10-changes-to-file-sharing-over-a-network
 
 ## Feedback
 
