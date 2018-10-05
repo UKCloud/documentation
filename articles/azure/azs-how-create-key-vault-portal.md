@@ -95,7 +95,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 ## Viewing the secret
 
-1. Once the secret has been created, select it on the *Secrets* page.
+1. Once you've created the secret, select it on the *Secrets* page.
 
 2. On the secret's blade, select the current version.
 
