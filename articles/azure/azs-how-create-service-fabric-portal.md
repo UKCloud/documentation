@@ -173,9 +173,9 @@ You also need the thumbprint of the certificate(s). For information about how to
 
    - **Service Fabric Reverse Proxy Port** - Service Fabric cluster reverse proxy port
 
-   - **Custom Application Endpoints** - Custom endpoints allow for connections to applications running on this cluster. Enter endpoints separated by commas, for example, 80,8080,8081.
+   - **Custom Application Endpoints** - Custom endpoints to allow for connections to applications running on this cluster. Enter endpoints separated by commas, for example, `80,8080,8081`.
 
-   - **Custom ports to open in the Network Security Group** - Custom ports to allow for the Network Security Group. Enter ports separated by comma, for example, 3389,80,8080,8081.
+   - **Custom ports to open in the Network Security Group** - Custom ports to allow in the Network Security Group. Enter ports separated by commas, for example, `3389,80,8080,8081`.
    
    ![Create Service Fabric cluster > Network Settings](images/azs-browser-create-sf-networking.png) 
 
@@ -189,13 +189,13 @@ You also need the thumbprint of the certificate(s). For information about how to
 
 7. In the *Security* blade, enter the following information and click **OK**:
 
-   - **Source Key Vault** - The resource ID of the key vault that you gathered in the previous section. This should be in the format of /subscriptions/<subscriptionid>/resourceGropus/<resourceGroupName>/providers/Microsoft.KeyVault/vaults/<vaultName>.
+   - **Source Key Vault** - The resource ID of the key vault that you gathered in the previous section. This should be in the format of /subscriptions/\<subscriptionid\>/resourceGropus/\<resourceGroupName\>/providers/Microsoft.KeyVault/vaults/\<vaultName\>.
 
-   - **Cluster Certificate URL** - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of https<!---->://<vaultEndpoint>/secrets/<secretName>/<secretVersion>.
+   - **Cluster Certificate URL** - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of https<!---->://\<vaultEndpoint\>/secrets/\<secretName\>/\<secretVersion\>.
 
    - **Cluster Certificate thumbprint** - Cluster certificate thumbprint that you gathered earlier. For example, 1742635FBCC5F9A442582516A7292523686DE3D7.
 
-   - **Server Certificate URL** - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of https<!---->://<vaultEndpoint>/secrets/<secretName>/<secretVersion>.
+   - **Server Certificate URL** - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of https<!---->://\<vaultEndpoint\>/secrets/\<secretName\>/\<secretVersion\>.
 
    - **Server Certificate thumbprint** - Server certificate thumbprint that you gathered earlier. For example, 1742635FBCC5F9A442582516A7292523686DE3D7.
 
