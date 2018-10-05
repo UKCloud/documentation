@@ -1,11 +1,11 @@
 ---
-title: How to create a Key Vault - Portal | UKCloud Ltd
+title: How to create a Key Vault using the Azure Stack Portal | UKCloud Ltd
 description: Provides help for creating a Key Vault on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
 toc_rootlink: Users
-toc_sub1: Create a Key Vault
-toc_sub2:
+toc_sub1: How To
+toc_sub2: Create a Key Vault
 toc_sub3:
 toc_sub4:
 toc_title: Create a Key Vault - Portal
@@ -69,11 +69,11 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 2. Select your key vault from the list.
 
-3. In the **Settings** section of the key vault blade, select **Secrets**.
+3. In the *Settings* section of the key vault blade, select **Secrets**.
 
-4. On the **Secrets** page, click the **+ Generate/Import** button.
+4. On the *Secrets* page, click the **+ Generate/Import** button.
 
-5. In the **Create a secret** blade, enter the following information:
+5. In the *Create a secret* blade, enter the following information:
 
    - **Upload Options** - Manually enter a secret or upload an x.509 certificate.
 
@@ -81,13 +81,13 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
    - **Value** - The value you are storing as a secret.
 
-   - **Content Type** - The type of content contained in the secret (For example, Password). There are no pre-defined values for this field.
+   - **Content Type** - The type of content contained in the secret (for example, Password). There are no pre-defined values for this field.
 
-   - **Activation Date** - Sets when the secret will become active.
+   - **Activation Date** - Specifies when the secret will become active.
 
-   - **Expiration Date** - Sets when the secret will become inactive.
+   - **Expiration Date** - Specifies when the secret will become inactive.
 
-   - **Enabled** -Set whether or not the secret data can be retrieved.
+   - **Enabled** - Indicates whether or not the secret data can be retrieved.
 
    ![Create a new secret](images/azs-browser-create-secret.png)
 
@@ -95,11 +95,11 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 ## Viewing the secret
 
-1. Once the secret has been created, select it from the **Secrets** page.
+1. Once the secret has been created, select it on the *Secrets* page.
 
-2. On the secret blade, select the current version.
+2. On the secret's blade, select the current version.
 
-3. On the current version blade, click the **Show secret value** button.
+3. On the current version's blade, click the **Show secret value** button.
 
 ## Feedback
 
