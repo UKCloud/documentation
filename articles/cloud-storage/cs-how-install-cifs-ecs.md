@@ -45,7 +45,7 @@ CIFS-ECS offers a single caching option:
 
 3. Step through the wizard, adjusting values to suit your environment.
 
-    > [!NOTE]
+    > [!NOTE]
     > The Data Directory is used as a local cache for any content you place in the CIFS-ECS drive, so you may want to put this on a non-system volume.
 
 4. When the installation is complete, click **Add CIFS-ECS Drive** to open the *Drive Parameters* page.
@@ -64,7 +64,7 @@ CIFS-ECS offers a single caching option:
 
     - If you’ve forgotten or don’t know your **Secret Access Key**, you can reset it in the *Storage* section of the Portal.
 
-        > [!NOTE]
+        > [!NOTE]
         > The **Server Name** and **Description** can be anything, but must not be blank. In the example it is shown as `UKCloud` and `UKCloud - ECS Drive`.
 
 8. From the **Use https or http list**, select **HTTPS**.
