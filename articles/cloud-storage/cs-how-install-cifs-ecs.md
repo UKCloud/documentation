@@ -37,7 +37,7 @@ CIFS-ECS offers a single caching option:
 
 ## Installing CIFS-ECS
 
-1. Navigate to the following Portal page to download the ZIP file that contains the CIFS-ECS installer: [CIFS-ECS Tool] (https://portal.ukcloud.com/support/knowledge_centre/85dc54ff-7d21-43ac-9cfa-88e87de7ba27).
+1. Navigate to the following Portal page to download the ZIP file that contains the CIFS-ECS installer: [CIFS-ECS Tool](https://portal.ukcloud.com/support/knowledge_centre/85dc54ff-7d21-43ac-9cfa-88e87de7ba27).
 
     To download CIFS-ECS you'll need your UKCloud Portal log in details.
 
@@ -90,7 +90,7 @@ CIFS-ECS offers a single caching option:
 
 10.	The rest of the fields on the *Settings* page enable you to configure the root directory, encryption and compression settings.
 
-    > [!TIP]
+    > [!TIP]
     > Configure these fields appropriately for your environment, or accept the defaults. We suggest you give the root directory a friendlier name, so that you can more easily identify it.
 
     ![Settings page](images/cs-ecs-installtion-step-three.png)
@@ -111,7 +111,7 @@ CIFS-ECS offers a single caching option:
     ------|-----------------|
     ![CIFS-ECS drive in windows](images/cs-ecs-installtion-step-five.png) |![Inside the CIFS-ECS drive](images/cs-ecs-installtion-step-six.png)
 
-    > [!TIP]
+    > [!TIP]
     > See Microsoft's How-To guide on how to share a a drive on the network from Windows: https://support.microsoft.com/en-gb/help/4092694/windows-10-changes-to-file-sharing-over-a-network
 
 ## Feedback
