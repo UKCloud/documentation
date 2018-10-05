@@ -986,6 +986,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/cloud-storage/cs-how-install-cifs-ecs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cloud-storage/cs-how-install-cifs-ecs.html",
+          "hash": "vE0Yd4f4+b8gpFypmo28Sg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/cloud-storage/cs-how-reset-secret-key.md",
       "output": {
         ".html": {
@@ -1038,6 +1050,72 @@
       "output": {
         "resource": {
           "relative_path": "articles/cloud-storage/images/cloud-storage-image-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-ecs-installtion-step-five.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-ecs-installtion-step-five.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-ecs-installtion-step-four.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-ecs-installtion-step-four.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-ecs-installtion-step-one.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-ecs-installtion-step-one.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-ecs-installtion-step-six.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-ecs-installtion-step-six.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-ecs-installtion-step-three.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-ecs-installtion-step-three.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-ecs-installtion-step-two.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-ecs-installtion-step-two.png"
         }
       },
       "is_incremental": false,
@@ -1225,7 +1303,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/toc.html",
-          "hash": "k4X/IkbDKDF69FZOQnlBPQ=="
+          "hash": "HBgzwM6YaSmCKgA4sRqvoA=="
         }
       },
       "is_incremental": false,
@@ -2986,7 +3064,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-faq.html",
-          "hash": "iPdLjp4QgU3e21jhdd2fjw=="
+          "hash": "jSFqV/72IHEe2RC3SeO2pQ=="
         }
       },
       "is_incremental": false,
@@ -5760,7 +5838,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-api.html",
-          "hash": "kQIORmCeYGVzvmwCsck2ag=="
+          "hash": "/Ony1FbSedKrJSVWewyb0g=="
         }
       },
       "is_incremental": false,
@@ -10975,7 +11053,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq-snapshot-protection.html",
-          "hash": "Y7/Yq8N44CIpODJF0On4cA=="
+          "hash": "w5/l9Nt80uJEmag1pu7nQg=="
         }
       },
       "is_incremental": false,
@@ -12188,14 +12266,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

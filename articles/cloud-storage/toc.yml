@@ -10,6 +10,8 @@
   items:
   - name: Create a new Cloud Storage user
     href: cs-how-create-user.md
+  - name: How to install CIFS-ECS
+    href: cs-how-install-cifs-ecs.md
   - name: Reset your Cloud Storage secret key
     href: cs-how-reset-secret-key.md
   - name: View Cloud Storage information in the UKCloud Portal
