@@ -52,9 +52,11 @@ Documentation on ways to interact with the platform is available from the [Knowl
 Cloud Storage in our Assured OFFICAL domain uses the same environment for both PSN Assured and internet connections. Although it is not possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.
 
 ### Can I restrict Cloud Storage access to specific networks?
-It is possible to lock Cloud Storage accounts down so that buckets are only accessible via a single network (e.g. N3, PSN, Janet), but we cannot lock down a bucket to a customer specified source IP address or range. 
 
-**Important note:** As we impose this restriction at a Cloud Storage user account level rather than the bucket itself, any new users added to the ECS account would be able to access associated buckets from ANY network until UKCloud are asked to update our blacklist by the customer. In order to request network restrictions please raise a support ticket through [My Calls](https://portal.skyscapecloud.com/support/my_calls). Alternatively, you can contact support by phone or email.
+It is possible to lock Cloud Storage accounts down so that buckets are only accessible via a single network (for example HSCN, PSN, Janet), but we cannot lock down a bucket to a customer-specified source IP address or range. 
+
+> [!IMPORTANT]
+> As we impose this restriction at a Cloud Storage user account level rather than the bucket itself, any new users that you add to the ECS account will be able to access associated buckets from ANY network until you request that we update our blacklist. To request network restrictions, raise a support ticket through [My Calls](https://portal.skyscapecloud.com/support/my_calls). Alternatively, you can contact support by phone or email.
 
 ### Which APIs are supported by the platform?
 
