@@ -173,9 +173,9 @@ You also need the thumbprint of the certificate(s). For information about how to
 
    - **Service Fabric Reverse Proxy Port** - Service Fabric cluster reverse proxy port
 
-   - **Custom Application Endpoints** - Custom endpoints to allow for connections to applications running on this cluster. Enter endpoints separated by commas, for example, `80,8080,8081`.
+   - **Custom Application Endpoints** - Custom endpoints to open for connections to applications running on this cluster. Enter endpoints separated by commas, for example, `80,8080,8081`.
 
-   - **Custom ports to open in the Network Security Group** - Custom ports to allow in the Network Security Group. Enter ports separated by commas, for example, `3389,80,8080,8081`.
+   - **Custom ports to open in the Network Security Group** - Custom ports to open in the Network Security Group. Enter ports separated by commas, for example, `3389,80,8080,8081`.
    
    ![Create Service Fabric cluster > Network Settings](images/azs-browser-create-sf-networking.png) 
 
