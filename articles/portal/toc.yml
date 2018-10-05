@@ -4,7 +4,7 @@
     href: ptl-gs.md
 - name: How To
   items:
-  - name: Current infrastructure patch versions
+  - name: How to sign up for Portal notifications
     href: ptl-how-signup-notifications.md
   - name: Raise and escalate incidents and service requests
     href: ptl-how-raise-escalate-service-request.md
