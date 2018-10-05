@@ -17,7 +17,7 @@ toc_mdlink: oshift-faq.md
 
 ### What is UKCloud for OpenShift?
 
-UKCloud for OpenShift is a Platform as a Service (PaaS) solution providing container management and orchestration using either Red Hat OpenShift or Cloud Foundry technology to deliver a flexible, scalable cloud application platform. Unlike traditional managed PaaS offerings, it provides a modern application platform that accelerates end-to-end development, deployment and operation of digital applications, while raising overall application reliability and availability.
+UKCloud for OpenShift is a Platform as a Service (PaaS) solution providing container management and orchestration powered by Red Hat OpenShift Container Platform to deliver a flexible, scalable cloud application platform. Unlike traditional managed PaaS offerings, it provides a modern application platform that accelerates end-to-end development, deployment and operation of digital applications, while raising overall application reliability and availability.
 
 ### Why deliver UKCloud for OpenShift as a cloud service?
 
@@ -31,15 +31,10 @@ UKCloud for OpenShift is built as a single-tenant platform on-top of UKCloud's s
 
 ### How is UKCloud for OpenShift billed?
 
-- **Red Hat OpenShift**. This service comprises of two charges elements:
+This service comprises of two main chargeable elements:
 
-  - **Starter Pack -** providing an initial footprint of 32GiB of RAM, billed by the month with a one-month minimum commitment
-  - **Expansion Pack -** billed by the month with a one-month minimum commitment based upon the amour of additional RAM consumed
-
-- **Open source Cloud Foundry**. This service comprises of two charging elements:
-
-  - **Starter Pack --** providing an initial footprint of 32GiB of RAM, billed by the month with a one-month minimum commitment
-  - **Expansion Pack -** billed by the hour based upon the amour of additional RAM consumed
+  - **Starter Pack -** provides the foundation OpenShift services to support the orchestration and management of the container runtime environments. Each customer environment requires only a single Starter Pack
+  - **Expansion Pack -** Provides the footprint to host customer’s containerised applications and services. Customers can choose to mix and match their Runtime Packs, and Runtime Packs can be called off individually, however UKCloud strongly recommends the initial deployment of two or more Runtime Packs for production environments to provide resilience to your workloads in the event of the failure of a single Runtime Pack.
 
 ### Does UKCloud offer a free trial?
 
