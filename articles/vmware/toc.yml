@@ -12,6 +12,10 @@
     href: vmw-faq.md
 - name: Getting Started
   items:
+  - name: Build a virtual machine (vCloud Director 8.20)
+    href: vmw-how-build-vm.md
+  - name: Build a virtual machine (vCloud Director 9.1)
+    href: vmw-gs-build-vm-vcd91.md
   - name: Journaling Protection
     href: vmw-gs-journaling.md
   - name: UKCloud for VMware
@@ -36,8 +40,6 @@
     href: vmw-how-access-vcloud-api.md
   - name: Bring your own Red Hat licensing
     href: vmw-how-license-red-hat.md
-  - name: Build a virtual machine with UKCloud for VMware
-    href: vmw-how-build-vm.md
   - name: Build an edge gateway using the UKCloud Portal
     href: vmw-how-build-edge.md
   - name: Change IPsec VPN settings via the vCloud API
