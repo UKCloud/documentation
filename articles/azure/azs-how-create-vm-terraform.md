@@ -118,7 +118,9 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
 
 - `tenant_id` - The tenant ID of your Azure Active Directory tenant domain. It can either be the actual GUID or your Azure Active Directory tenant domain name.
 
-## I want to create a VM with:
+## Creating a VM:
+
+The examples that follow show how to create a VM using Terraform. The code changes depending on whether you are creating a VM with an unmanaged disk or a managed disk. Select the the type of disk you want to use to update the examples below with the appropriate code.
 
 <form id="diskType" onchange="result.value=name.value;result2.value=name.value">
   <input type="radio" name="name" value=' storage_os_disk {
@@ -126,17 +128,17 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
     vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
     caching       = "ReadWrite"
     create_option = "FromImage"
-  }' checked>An Unmanaged Disk
+  }' checked>An unmanaged disk
 
   <input type="radio" name="name" value=' storage_os_disk {
     name              = "myosdisk1"
     caching           = "ReadWrite"
     create_option     = "FromImage"
     managed_disk_type = "Standard_LRS"
-  }'>A Managed Disk
+  }'>A managed disk
 </form>
 
-## Create a VM with Public IP template - using **Environment Variables** option
+### Create a VM with Public IP template - using **Environment Variables** option
 
 > [!IMPORTANT]
 > This is only the `example.tf` file. You will still need the `variables.tf` and `terraform.tfvars` files in your folder.
@@ -265,7 +267,7 @@ resource "azurestack_virtual_machine" "test" {
 }
 </code></pre>
 
-## Create a VM with Public IP template - using **Provider Block** option
+### Create a VM with Public IP template - using **Provider Block** option
 
 <pre><code class="language-hcl">
 provider "azurestack" {
@@ -391,12 +393,12 @@ resource "azurestack_virtual_machine" "test" {
 }
 </code></pre>
 
-## How to execute a plan - using **Environment Variables** option
+### How to execute a plan - using **Environment Variables** option
 
 > [!TIP]
-> Terraform by default scans your execution directory and is looks for all `tf` files.
+> Terraform by default scans your execution directory and looks for all `tf` files.
 
-From a PowerShell prompt, navigate to the directory which contains your `tf` files and run the following commands:
+From a PowerShell prompt, navigate to the directory that contains your `tf` files and run the following commands:
 
 ```powershell
 # Check if your environment is setup correctly
@@ -435,12 +437,12 @@ commands will detect it and remind you to do so if necessary.
 > [!NOTE]
 > You can also add `-auto-approve` to the apply command for it to not ask you to apply changes for full automation.
 
-## How to execute a plan - using **Provider Block** option
+### How to execute a plan - using **Provider Block** option
 
 > [!TIP]
 > Terraform by default scans your execution directory and looks for all `tf` files.
 
-From a PowerShell prompt, navigate to the directory which contains your `tf` files and run the following commands:
+From a PowerShell prompt, navigate to the directory that contains your `tf` files and run the following commands:
 
 ```powershell
 # Check if your environment is setup correctly
