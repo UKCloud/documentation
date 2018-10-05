@@ -31,7 +31,7 @@ UKCloud for OpenShift is built as a single-tenant platform on-top of UKCloud's s
 
 ### How is UKCloud for OpenShift billed?
 
-This service comprises of two main chargable elements:
+This service comprises of two main chargeable elements:
 
   - **Starter Pack -** provides the foundation OpenShift services to support the orchestration and management of the container runtime environments. Each customer environment requires only a single Starter Pack
   - **Expansion Pack -** Provides the footprint to host customer’s containerised applications and services. Customers can choose to mix and match their Runtime Packs, and Runtime Packs can be called off individually, however UKCloud strongly recommends the initial deployment of two or more Runtime Packs for production environments to provide resilience to your workloads in the event of the failure of a single Runtime Pack.
