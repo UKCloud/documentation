@@ -1,5 +1,5 @@
 ---
-title: Product overview comparison | UKCloud Ltd
+title: Services at a glance | UKCloud Ltd
 description: Provides a top level comparison for our main products
 services: other
 author: Steve Hall
@@ -9,12 +9,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Product overview comparison
+toc_title: Services at a glance
 toc_fullpath: Reference/other-ref-product-overview.md
 toc_mdlink: other-ref-product-overview.md
 ---
 
-# Product overview comparison
+# Services at a glance
 
 This article is designed to provide you with a top level comparison for our main products. For further information, refer to the appropriate Service Definition as listed in [UKCloud G-Cloud 10 Service Definitions](other-ref-service-definitions.md).
 
