@@ -45,12 +45,12 @@ Prerequisites from a Windows-based external client.
 
 2. Go to the **Update** blade on the Administration Portal.
 
-> [!IMPORTANT]
-> From 1807 onwards you no longer need to download Update and Hotfix packages manually.
->
-> They are automatically pulled by Azure Stack itself and will show as **update available** in the portal.
+    > [!IMPORTANT]
+    > From 1807 onwards you no longer need to download Update and Hotfix packages manually.
+    >
+    > They are automatically pulled by Azure Stack itself and will show as **update available** in the portal.
 
-1. Start the Update process.
+3. Start the Update process.
 
 > [!NOTE]
 > Automatic Update Guide to follow
