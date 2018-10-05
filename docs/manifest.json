@@ -5556,6 +5556,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-2fa.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-2fa.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-account-locked.png",
       "output": {
         "resource": {
@@ -5797,15 +5808,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "3LLu66+aimW7c7K/PPGiOA=="
+          "hash": "ESfLzT0qOmzRMVS/ztQcWg=="
         }
       },
       "is_incremental": false,
