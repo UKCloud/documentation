@@ -71,6 +71,10 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
    **Service Principal ClientID** - The Service Principal application ID (used by the Kubernetes Azure cloud provider). More help [here](https://github.com/Azure/acs-engine/blob/master/docs/serviceprincipal.md).
 
+   **Service Principal Client Secret** - The Service Principal Client secret.
+
+   **Kubernetes Azure Cloud Provider Version** - This is the Kubernetes version that is used for the cluster.
+
    ![Create Azure Kubernetes Service cluster > Kubernetes Cluster Settings](images/azs-browser-create-aks-settings.png)
 
 7. In the *Summary* step, check that the information is correct, then click **OK**.
