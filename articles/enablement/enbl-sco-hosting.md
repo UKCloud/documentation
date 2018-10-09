@@ -55,7 +55,7 @@ The VPN service provides up to two ports:
 ## What is the port speed of connection?
 
 - In regions 1, 2, 7 & 8, the port speed is up to 1 Gbps
-- In regions 5 & 6, the port speed can be either 1 or 10Gbps
+- In regions 5 & 6, the port speed can be either 1Gbps (copper or fibre) or 10Gbps (fibre only)
 
 ## Who manages the switch?
 
