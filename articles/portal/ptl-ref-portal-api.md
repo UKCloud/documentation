@@ -359,7 +359,7 @@ v1
 #### Example request (Curl)
 
 ```
-curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/my_calls/INC10001 -X PUT --d '{"description": "My new update"}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/my_calls/INC10001 -X PUT -d '{"description": "My new update"}' -H 'Accept: application/json' -H 'Content-Type: application/json'
 ```
 
 #### Example request (Ruby)
@@ -435,15 +435,13 @@ None
 #### Example request (Curl)
 
 ```
-curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/my_calls -X POST --d '{"incident": {"problem_area": "compute", "service": "My Service", "classification": "Production Service >
-unavailable or unresponsive", "summary": "My Incident", "further_details": "My further details"}}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/my_calls -X POST -d '{"incident": {"problem_area": "compute", "service": "My Service", "classification": "Production Service unavailable or unresponsive", "summary": "My Incident", "further_details": "My further details"}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
 ```
 
 #### Example request (Ruby)
 
 ```
-conn.post('/api/my_calls') { |req| req.headers['cookie'] = cookies; req.body = '{"incident": {"problem_area": "compute", "service", "classification": "Production Service > unavailable or
-unresponsive", "summary": "My Incident", "further_details": "My further details"}}' }
+conn.post('/api/my_calls') { |req| req.headers['cookie'] = cookies; req.body = '{"incident": {"problem_area": "compute", "service", "classification": "Production Service unavailable or unresponsive", "summary": "My Incident", "further_details": "My further details"}}' }
 ```
 
 ### Response
@@ -495,7 +493,7 @@ v1
 #### Example request (Curl)
 
 ```
-curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' --d '{"email": "myemail@example.com"}' https://portal.skyscapecloud.com/api/my_calls/INC10001/subscribe
+curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' -d '{"email": "myemail@example.com"}' https://portal.skyscapecloud.com/api/my_calls/INC10001/subscribe
 ```
 
 #### Example request (Ruby)
@@ -553,7 +551,7 @@ v1
 #### Example request (Curl)
 
 ```
-curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' --d '{"email": "myemail@example.com"}' https://portal.skyscapecloud.com/api/my_calls/INC10001/subscribe
+curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' -d '{"email": "myemail@example.com"}' https://portal.skyscapecloud.com/api/my_calls/INC10001/subscribe
 ```
 
 #### Example request (Ruby)
@@ -665,7 +663,7 @@ v1
 #### Example request (Curl)
 
 ```
-curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' --d '{"email": "myemail@example.com"}' https://portal.skyscapecloud.com/api/my_calls/INC10001/change_owner
+curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' -d '{"email": "myemail@example.com"}' https://portal.skyscapecloud.com/api/my_calls/INC10001/change_owner
 ```
 
 #### Example request (Ruby)
@@ -722,7 +720,7 @@ None
 curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/cancel
 ```
 
-### Example request (Ruby)
+#### Example request (Ruby)
 
 ```
 resp = conn.put('/api/my_calls/INC10001/cancel') { |req| req.headers['cookie'] = cookies}
@@ -1489,7 +1487,7 @@ None
 #### Example request (Curl)
 
 ```
-curl -b /tmp/cookies.txt -X GET -H \'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/api_credentials
+curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/api_credentials
 ```
 
 #### Example request (Ruby)
@@ -1753,7 +1751,7 @@ zone id | The zone in which to create the vOrg</br>Valid values:</br>- B (for Re
 #### Example request (Curl)
 
 ```
-curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs -X POST -d '{"data": {"type": "Vorg", "attributes": {"zoneId": "B", "name": "DEMO"}}}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs -X POST -d '{"data": {"type": "Vorg", "attributes": {"zoneId": "B", "name": "DEMO"}}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
 ```
 
 ### Response
@@ -1896,7 +1894,7 @@ None
 #### Example request
 
 ```
-curl -b /tmp/cookies.txt -H 'Accept: application/json' --H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/vorg-builds/10 -X GET
+curl -b /tmp/cookies.txt -H 'Accept: application/json' -H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/vorg-builds/10 -X GET
 ```
 
 ### Response
@@ -2412,7 +2410,7 @@ name | The name of the VDC<br>The name can be up to 32 characters long and can i
 #### Example request (Curl)
 
 ```
-curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs -X POST -d '{"data": {"type": "VDC", "attributes": {"vmType": "POWER", "name": "DEMO"}}}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs -X POST -d '{"data": {"type": "VDC", "attributes": {"vmType": "POWER", "name": "DEMO"}}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
 ```
 
 ### Response
@@ -2579,7 +2577,7 @@ None
 #### Example request (Curl)
 
 ```
-curl -b /tmp/cookies.txt -H 'Accept: application/json' --H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/vdc-builds/10 -X GET
+curl -b /tmp/cookies.txt -H 'Accept: application/json' -H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/vdc-builds/10 -X GET
 ```
 
 ### Response
@@ -3118,7 +3116,7 @@ connectivityType | The type of connection</br>Valid values:</br>- Internet (in t
 #### Example request (Curl)
 
 ```
-curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs/urn:vcloud:vdc:345a5d90-1c8c-4fb2-bf4f-f480de82c594/edge-gateways -X POST -d '{"data": {"type": "EdgeGateway", "attributes": {"connectivityType": "Internet"}}}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs/urn:vcloud:vdc:345a5d90-1c8c-4fb2-bf4f-f480de82c594/edge-gateways -X POST -d '{"data": {"type": "EdgeGateway", "attributes": {"connectivityType": "Internet"}}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
 ```
 
 ### Response
@@ -3240,7 +3238,7 @@ None
 #### Example request (Curl)
 
 ```
-curl -b /tmp/cookies.txt -H 'Accept: application/json' --H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/edge-gateway-builds/23 -X GET
+curl -b /tmp/cookies.txt -H 'Accept: application/json' -H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/edge-gateway-builds/23 -X GET
 ```
 
 ### Response
@@ -3642,7 +3640,7 @@ None
 #### Example request (Curl)
 
 ```
-curl -b /tmp/cookies.txt -X GET -H "Accept: application/json" -k https://portal.skyscapecloud.com/api/billing/cloud-storage-report?date=2018-01-01& org-id=xx-xx-xx-xxxxxxx
+curl -b /tmp/cookies.txt -X GET -H "Accept: application/json" -k https://portal.skyscapecloud.com/api/billing/cloud-storage-report?date=2018-01-01&org-id=xx-xx-xx-xxxxxxx
 ```
 
 #### Example request (Ruby)
