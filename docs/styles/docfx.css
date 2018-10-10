@@ -927,13 +927,13 @@ div.embeddedvideo iframe {
     text-decoration: none;
     border-bottom: 2px solid #fff; }
     .tabGroup a[role="tab"]:hover, .tabGroup a[role="tab"]:focus, .tabGroup a[role="tab"][aria-selected="true"] {
-      border-bottom: 2px solid #0050C5; }
+      border-bottom: 2px solid #00d2b3; }
     .tabGroup a[role="tab"][aria-selected="true"] {
       color: #222; }
     .tabGroup a[role="tab"]:hover, .tabGroup a[role="tab"]:focus {
-      color: #0050C5; }
+      color: #818181; }
     .tabGroup a[role="tab"]:focus {
-      outline: 1px solid #0050C5;
+      outline: 1px solid #00d2b3;
       outline-offset: -1px; }
   @media (min-width: 768px) {
     .tabGroup a[role="tab"] {
