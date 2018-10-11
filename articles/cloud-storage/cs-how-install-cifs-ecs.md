@@ -8,7 +8,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: How to install CIFS-ECS
+toc_title: Install CIFS-ECS
 toc_fullpath: How To/cs-how-install-cifs-ecs.md
 toc_mdlink: cs-how-install-cifs-ecs.md
 ---
