@@ -73,7 +73,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -c /tmp/cookies.txt -X POST -H 'Accept: application/json' -H 'Content-Type: application/json' -d '{"email": "email\@example.com", "password": "password"}' https://portal.skyscapecloud.com/api/authenticate
+curl -c /tmp/cookies.txt -X POST -H 'Accept: application/json' -H 'Content-Type: application/json' -d '{"email": "email@example.com", "password": "password"}' https://portal.skyscapecloud.com/api/authenticate
 ```
 
 #### Example request (Ruby)
