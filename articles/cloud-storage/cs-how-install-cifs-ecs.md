@@ -73,16 +73,19 @@ CIFS-ECS offers a single caching option:
 
 9. In the **Host name / IP** field input one of the following:
 
-    &nbsp;| S3 API endpoint
-    ------|----------------
-    **Corsham (Assured)** |
-    Internet | `cas.cor00005.ukcloud.com`
-    PSN Assured | `cas.cor00005.psnassured.ukcloud.com`
-    N3 | `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
-    **Farnborough (Assured)** |
-    Internet | `cas.frn00006.ukcloud.com`
-    PSN Assured | `cas.frn00006.psnassured.ukcloud.com`
-    N3 | `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
+S3 API endpoints:
+
+- **Corsham (Assured)**
+
+  - Internet: `cas.cor00005.ukcloud.com`
+  - PSN Assured: `cas.cor00005.psnassured.ukcloud.com`
+  - N3: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
+  
+- **Farnborough (Assured)**
+
+  - Internet: `cas.frn00006.ukcloud.com`
+  - PSN Assured: `cas.frn00006.psnassured.ukcloud.com`
+  - N3: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
 
 9. Deselect the **Port Override** check box.
 
