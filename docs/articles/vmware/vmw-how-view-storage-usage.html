@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>VMware vCloud Connector | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to view storage profile usage | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="VMware vCloud Connector | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to view storage profile usage | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,24 +82,65 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="vmware-vcloud-connector">VMware vCloud Connector</h1>
+<h1 id="how-to-view-storage-profile-usage">How to view storage profile usage</h1>
 
-<p>VMware vCloud Connector links your internal private cloud with UKCloud so that you can manage them as a single hybrid environment and transfer workloads back and forth.</p>
-<p>The use of vCloud Connector is supported on the platform, but we do not offer support in configuring vCloud Connector or its use.</p>
-<p>We have verified the following connection settings as being in the correct format to authenticate against our platform.</p>
-<h2 id="for-vcc-server">For vCC server</h2>
-<p><img src="images/update_node.png" alt="vCloud Connector Node Details"></p>
-<h2 id="for-vcc-node">For vCC node</h2>
-<p><img src="images/cloud_registration.png" alt="vCloud Registration details"></p>
-<p>Time Zone settings need to be the same on both Node and Server</p>
-<p>Login details are the same as for the <em>API interaction through PowerCLI</em></p>
-<h2 id="vcloud-connector-endpoint-authentication">vCloud Connector endpoint authentication</h2>
-<p>When authenticating to our vCloud endpoints using vCloud Connector, the details needed are the same as for the vCloud API. For example:</p>
-<p>URL: <code>api.vcd.portal.skyscapecloud.com/api</code>
-Username: <code>1-1-1@1-1-1-abcdef</code></p>
-<p>For more information, see <a href="vmw-how-access-vcloud-api.html#finding-your-vcloud-api-credentials">*How to access vCloud Director through the vCloud API</a>.</p>
-<h2 id="more-information">More information</h2>
-<p>For more information about vCloud Connector, visit <a href="http://www.vmware.com/uk/products/vcloud-connector">http://www.vmware.com/uk/products/vcloud-connector</a>.</p>
+<h2 id="overview">Overview</h2>
+<p>Before allocating more disk space in your UKCloud for VMware account, it is useful to check how much of your allocated space has been used.</p>
+<h2 id="viewing-your-storage-usage-vcloud-director-820">Viewing your storage usage (vCloud Director 8.20)</h2>
+<ol>
+<li><p>In vCloud Director, select the <strong>Administration</strong> tab.</p>
+<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
+</li>
+<li><p>Right-click your virtual data centre and select <strong>Open</strong>.</p>
+</li>
+<li><p>Select the <strong>Storage Policies</strong> tab.</p>
+</li>
+<li><p>The <strong>Requested/Limit</strong> column shows how much storage has been used as well as your storage limit.</p>
+<p><img src="images/vmw-vcd-storage-usage.png" alt="Storage Policies tab"></p>
+</li>
+</ol>
+<h2 id="viewing-your-storage-usage-vcloud-director-91">Viewing your storage usage (vCloud Director 9.1)</h2>
+<ol>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, go to the card for your data centre.</p>
+</li>
+<li><p>The <em>Storage</em> section shows how much storage you're currently using as well as the amount of allocated storage.</p>
+<p><img src="images/vmw-vcd91-storage-usage.png" alt="VDC card showing storage usage and allocation"></p>
+</li>
+</ol>
+<h2 id="viewing-your-storage-usage-vcloud-api">Viewing your storage usage (vCloud API)</h2>
+<p>To check your storage profile usage programmatically, you need to call the appropriate vCloud REST API endpoint.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Before calling this endpoint, you must first authenticate your session as described in <a href="vmw-how-access-vcloud-api.html"><em>How to access vCloud Director through the vCloud API</em></a>.</p>
+</div>
+<p>We've provided some sample code to show how to make this call on our <a href="https://github.com/ukcloud/knowledge_centre/tree/master/StorageProfileUsage">GitHub repository</a>.</p>
+<p>The <code>using_curl.md</code> page provides an example of how to use CURL to call the REST API. The example assumes that you have set up the following three environment variables to hold your user credentials:</p>
+<ul>
+<li><code>VCD_ORG</code></li>
+<li><code>VCD_USERNAME</code></li>
+<li><code>VCD_PASSWORD</code></li>
+</ul>
+<p>The example makes two calls to the API. The first call authenticates the session:</p>
+<pre><code>curl -u %VCD_USERNAME%@%VCD_ORG%:%VCD_PASSWORD%  -H &quot;Accept: application/*+xml;version=5.6&quot; -X POST -i https://api.vcd.portal.skyscapecloud.com/api/sessions
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>On Linux, use <code>$VCD_USERNAME</code> instead of <code>%VCD_USERNAME%</code>.</p>
+</div>
+<p>Having authenticated successfully and received an <code>x-vcloud-authorisation</code> header in the response, the second call passes the authentication token as a header on the request:</p>
+<pre><code>curl -H &quot;x-vcloud-authorization: a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6&quot; -H &quot;Accept: application/*+xml;version=5.6&quot; -i  https://api.vcd.portal.skyscapecloud.com/api/query?type=orgVdcStorageProfile
+</code></pre>
+<p>This call returns an XML structure, in which you can see an <code>OrgVdcStorageProfileRecord</code> element containing the following properties:</p>
+<pre><code>storageLimitMB=&quot;512000&quot; storageUsedMB=&quot;65536&quot;
+</code></pre>
+<p>The GitHub repository also provides a ruby example. Again, the script assumes the above environment variables have been set up with your user credentials.</p>
+<p>You can use the ruby script by running:</p>
+<pre><code>ruby storage_profile.rb
+</code></pre>
+<p>The output will look similar to the following:</p>
+<pre><code>Name        Used GB   Total GB   Percent   VDC
+BASIC-Any   192       500        38.5%     XXXX
+</code></pre>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
@@ -114,7 +155,7 @@ Username: <code>1-1-1@1-1-1-abcdef</code></p>
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-vcloud-connector.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-view-storage-usage.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>

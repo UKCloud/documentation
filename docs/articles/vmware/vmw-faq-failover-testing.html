@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>VMware vCloud Connector | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Service failover testing FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="VMware vCloud Connector | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="Service failover testing FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,24 +82,60 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="vmware-vcloud-connector">VMware vCloud Connector</h1>
+<h1 id="service-failover-testing-faqs">Service failover testing FAQs</h1>
 
-<p>VMware vCloud Connector links your internal private cloud with UKCloud so that you can manage them as a single hybrid environment and transfer workloads back and forth.</p>
-<p>The use of vCloud Connector is supported on the platform, but we do not offer support in configuring vCloud Connector or its use.</p>
-<p>We have verified the following connection settings as being in the correct format to authenticate against our platform.</p>
-<h2 id="for-vcc-server">For vCC server</h2>
-<p><img src="images/update_node.png" alt="vCloud Connector Node Details"></p>
-<h2 id="for-vcc-node">For vCC node</h2>
-<p><img src="images/cloud_registration.png" alt="vCloud Registration details"></p>
-<p>Time Zone settings need to be the same on both Node and Server</p>
-<p>Login details are the same as for the <em>API interaction through PowerCLI</em></p>
-<h2 id="vcloud-connector-endpoint-authentication">vCloud Connector endpoint authentication</h2>
-<p>When authenticating to our vCloud endpoints using vCloud Connector, the details needed are the same as for the vCloud API. For example:</p>
-<p>URL: <code>api.vcd.portal.skyscapecloud.com/api</code>
-Username: <code>1-1-1@1-1-1-abcdef</code></p>
-<p>For more information, see <a href="vmw-how-access-vcloud-api.html#finding-your-vcloud-api-credentials">*How to access vCloud Director through the vCloud API</a>.</p>
-<h2 id="more-information">More information</h2>
-<p>For more information about vCloud Connector, visit <a href="http://www.vmware.com/uk/products/vcloud-connector">http://www.vmware.com/uk/products/vcloud-connector</a>.</p>
+<h2 id="general">General</h2>
+<h3 id="how-can-i-test-that-my-services-will-failover">How can I test that my services will failover?</h3>
+<p>You can test the failover function of the service by requesting a Test Scenario from UKCloud.</p>
+<p>The Test Scenario is designed for the following uses:</p>
+<ul>
+<li>Customers that wish to test and understand how their applications might react in a failover where the underlying physical hosts have failed (simulated in the scenario) or when the VMs have been migrated in a live state.</li>
+</ul>
+<p>The Test Scenario is not:</p>
+<ul>
+<li>A customisable feature of UKCloud for VMware.</li>
+</ul>
+<p>This Test Scenario Service is limited by the following rules:</p>
+<ul>
+<li><p>UKCloud will only complete a test scenario for a maximum of 10 customer identified VMs. This provides you with an experience similar to what you would experience in a live fail over scenario.</p>
+</li>
+<li><p>Test Scenarios will only occur during office hours.</p>
+</li>
+<li><p>Customers will build and explicitly identify up to 10 VMs to UKCloud.</p>
+</li>
+<li><p>The failover will be deemed a success by UKCloud once we can identify that the VMs are running in the second UKCloud data centre using its own monitors and tools.</p>
+</li>
+</ul>
+<h3 id="what-is-not-included">What is not included?</h3>
+<p>UKCloud will not failover the connectivity and physical firewall during a test failover. You will experience a network latency of a few milliseconds through this firewall.</p>
+<h3 id="what-is-the-process-to-initiate-a-test-scenario">What is the process to initiate a Test Scenario?</h3>
+<ol>
+<li><p>Customer raises a Support Request indicating they wish to complete this test and confirming the VMs (up to 10) that they wish to be failed over, the start and end time, and any other requirements.</p>
+</li>
+<li><p>UKCloud receives the request and responds accordingly with an accept or reject.</p>
+</li>
+<li><p>If accepted, UKCloud will schedule the work to commence at the specified time.</p>
+</li>
+</ol>
+<h3 id="what-options-are-there">What options are there?</h3>
+<p><strong>Option 1: UKCloud will dynamically move customer VMs between two data centres</strong></p>
+<p>UKCloud will dynamically move customer VMs between the data centres while the VMs remain online. There will be increased network latency between client VMs that are running in the different data centres (approximately 4-4.5 msec).</p>
+<p><strong>Option 2: UKCloud will restart customer VMs between the two data centres</strong></p>
+<p>Customer VMs can be shut down and restarted in the secondary datacentre. If the shutdown is a non-graceful (Power-Off as opposed to a Guest OS shutdown) then this simulates the effect of a physical server outage from an individual VM perspective. This is the equivalent of a total data centre failure.</p>
+<p>As the UKCloud platform is multi-tenanted, UKCloud will not replicate a physical host failure to invoke a DR scenario as this may impact other customers.</p>
+<p>Failovers will last a maximum of 12 hours before being failed back to the originating data centre.</p>
+<h3 id="what-outputs-are-available">What outputs are available?</h3>
+<p>It's highly likely that the testing of a failover will be seamless to the customer and therefore it will be difficult for them to gauge that the failover has occurred. To provide assurance that the test was successful, UKCloud will produce a report that identifies the following:</p>
+<ul>
+<li><p>A sanitised (removing ESX host names) report of the ESX servers that the VMs are located on during the period of the failover test</p>
+</li>
+<li><p>Comments and observations</p>
+</li>
+</ul>
+<h3 id="are-there-charges-for-a-service-failover-test">Are there charges for a service failover test?</h3>
+<p>Typically, UKCloud will only allow a test to last for 1 business day with a charge (based on the SFIA rate card) of £660 per day. If you require longer testing periods, this needs to be approved by UKCloud.</p>
+<h3 id="why-is-the-dr-failover-test-scenario-not-fully-automatic-and-self-service">Why is the DR failover Test Scenario not fully automatic and self service?</h3>
+<p>This is part of the service roadmap.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
@@ -114,7 +150,7 @@ Username: <code>1-1-1@1-1-1-abcdef</code></p>
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-vcloud-connector.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-faq-failover-testing.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>

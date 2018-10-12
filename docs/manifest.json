@@ -1527,11 +1527,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-network-adaptor.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-network-adaptor.html",
+          "hash": "QaVHH0xjNzWROoU44sXSUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/connectivity/conn-ref-psn-core-services.md",
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-psn-core-services.html",
           "hash": "SUSBGbwwYdCERAzF6nsSIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-psn-flattening.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-psn-flattening.html",
+          "hash": "nortO33IHlCavXH8meN50A=="
         }
       },
       "is_incremental": false,
@@ -1657,7 +1681,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/toc.html",
-          "hash": "JC2v4dhFv2oSRUBu81jsHw=="
+          "hash": "ny8IwP/ZKTXHyuv6YF7zag=="
         }
       },
       "is_incremental": false,
@@ -4788,6 +4812,17 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/orcl-solaris-aix.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/orcl-solaris-aix.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/oracle/orcl-faq.md",
       "output": {
@@ -4873,6 +4908,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/oracle/orcl-ref-solaris-aix.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/oracle/orcl-ref-solaris-aix.html",
+          "hash": "pNgwGCeAAmDyT59bskhe2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/oracle/orcl-ref-templates.md",
       "output": {
         ".html": {
@@ -4913,7 +4960,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/toc.html",
-          "hash": "g0S9RMA6V4w/sIun25ipYw=="
+          "hash": "bNGNmVpki61EH/XJVGJDtQ=="
         }
       },
       "is_incremental": false,
@@ -5046,6 +5093,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/other/images/monitoring_permissions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-complaints.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-complaints.png"
         }
       },
       "is_incremental": false,
@@ -5264,6 +5322,18 @@
         ".html": {
           "relative_path": "articles/other/other-ref-cloud-economics.html",
           "hash": "k6S/7SjoHPFpcSmDo5mjCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-complaints.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-complaints.html",
+          "hash": "mDEDjxAjVrAKSk3whuX0iw=="
         }
       },
       "is_incremental": false,
@@ -5515,7 +5585,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "vc2BpGUa8/HySPmaBTTusQ=="
+          "hash": "mZamaKF+qYb9ZdeZNIynPw=="
         }
       },
       "is_incremental": false,
@@ -5637,6 +5707,28 @@
       "output": {
         "resource": {
           "relative_path": "articles/portal/images/ptl-login.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mem-word-switch.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mem-word-switch.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mem-word.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mem-word.png"
         }
       },
       "is_incremental": false,
@@ -5897,7 +5989,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-view-login-info.html",
-          "hash": "D9q3hqv1xCBjxtNAGCIddA=="
+          "hash": "qfIDgimj491UkUc3klb64Q=="
         }
       },
       "is_incremental": false,
@@ -5910,6 +6002,18 @@
         ".html": {
           "relative_path": "articles/portal/ptl-overview-permissions.html",
           "hash": "AsZZp4Ta4JzoYIEhNaSHiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/portal/ptl-ref-memorable-word.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/portal/ptl-ref-memorable-word.html",
+          "hash": "x+0H/iGNHg4thH/L3qj5OA=="
         }
       },
       "is_incremental": false,
@@ -5969,7 +6073,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "y8FXwfBoVz3OALN6lh2kwg=="
+          "hash": "6imiY5yByith77gIdeeCxw=="
         }
       },
       "is_incremental": false,
@@ -6138,12 +6242,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/sra/sra-how-add-remove-users.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/sra/sra-how-add-remove-users.html",
+          "hash": "Do/0GQekZSyeOs64zepBGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/sra/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/sra/toc.html",
-          "hash": "YpgShA6J9P63z4nDXlMddg=="
+          "hash": "MQnSH7jBoj1MQ9rndAHWgQ=="
         }
       },
       "is_incremental": false,
@@ -9431,6 +9547,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-storage-usage.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-storage-usage.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-syslog-firewall-default-action.png",
       "output": {
         "resource": {
@@ -10740,6 +10867,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-storage-usage.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-storage-usage.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd91-tab-network.png",
       "output": {
         "resource": {
@@ -11129,7 +11267,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "H+5IJ8lsVUBaahqmO8cB0w=="
+          "hash": "GZlT7djNF/BVOUvZcBvG8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-faq-failover-testing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-faq-failover-testing.html",
+          "hash": "rsLYUMySi/ajBYJIYVSIfw=="
         }
       },
       "is_incremental": false,
@@ -11821,6 +11971,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-view-storage-usage.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-view-storage-usage.html",
+          "hash": "Co4N+/wilr5Gs01wKebnhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-zerto-access-zssp.md",
       "output": {
         ".html": {
@@ -11994,6 +12156,18 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-naming-vms.html",
           "hash": "pe/q93aQlPvXaw60hqtuaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-ref-nested-hypervisors.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-ref-nested-hypervisors.html",
+          "hash": "vPYy/vgF2ed8y5+5jlpNzw=="
         }
       },
       "is_incremental": false,
@@ -12197,7 +12371,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcloud-connector.html",
-          "hash": "o3ZkjEVtLx6ZuCbJJ3PkMQ=="
+          "hash": "mnYTim5Ctp6HstUhXdL9/w=="
         }
       },
       "is_incremental": false,

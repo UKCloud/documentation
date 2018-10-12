@@ -22,6 +22,8 @@
   items:
   - name: API Reference Guide
     href: ptl-ref-portal-api.md
+  - name: Enable memorable word on account switch
+    href: ptl-ref-memorable-word.md
   - name: Portal permissions
     href: ptl-overview-permissions.md
   - name: Portal release notes
