@@ -18,7 +18,14 @@ toc_mdlink: ptl-how-view-login-info.md
 
 ## Overview
 
-The UKCloud Portal provides a report of who has logged into your environment over the last 30 days.
+The UKCloud Portal provides a report of who has logged into your account over the last 30 days. The report currently records the following activity against the account:
+
+- User name
+- Date and time
+- Source IP address
+
+> [!NOTE]
+> To ensure appropriate segregation, if you have access to multiple accounts, you must switch accounts to view login information for each account.
 
 ## Viewing login history
 
@@ -36,7 +43,7 @@ The UKCloud Portal provides a report of who has logged into your environment ove
 
 5. Use the **Search** field to find a particular user or IP address.
 
-6. To download a `.csv` file of the login data, click the **Actions** tab and choose **Export login history**.
+6. To export the login data, click the **Actions** tab and choose **Export login history**.
 
 ## Feedback
 
