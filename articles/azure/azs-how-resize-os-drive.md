@@ -58,7 +58,7 @@ $VMName = '<output form="VMName" name="result" style="display: inline;">&lt;VM N
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
-Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 </code></pre>
 
 Please select the type of disk you are trying to expand:
