@@ -94,6 +94,7 @@ Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 # Set the size of the unmanaged OS disk to the desired value and update the VM
 $VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result2" style="display: inline;">&lt;Disk Size&gt;</output>
 Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
+
 # Restart the VM
 Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
