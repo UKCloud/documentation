@@ -54,7 +54,7 @@ In this section we will create a load balancer with a public IP address.
      - Select **Create new** on the **Choose public IP address** blade.
      - Enter a name for the public IP address and click **OK**.
 
-   - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
+   - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
@@ -88,7 +88,7 @@ In this section we will create a virtual network and two virtual machines which 
 
    - **Address Space** - The virtual network's address range in CIDR notation (for example, 192.168.1.0/16).
 
-   - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
+   - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
