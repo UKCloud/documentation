@@ -216,7 +216,7 @@ Login-AzureRmAccount -EnvironmentName 'AzureStack'
 
 # Input Variables
 $RGName = '<output form="resourcegroup" name="result" style="display: inline;">myResourceGroup</output>'
-$SAName = '<output form="saname" name="result" style="display: inline;">myStorageAccount<script>document.write(Math.round(Math.random()*100000000))</script></output>'.ToLower()
+$SAName = '<output form="saname" name="result" style="display: inline;">myStorageAccount<span id="RandNum"></span></output>'.ToLower()
 $Location = '<output form="region" name="result" style="display: inline;">frn00006</output>'
 $SubnetName = '<output form="subnetname" name="result" style="display: inline;">mySubnet</output>'
 $SubnetRange = '<output form="subaddrrange" name="result" style="display: inline;">192.168.1.0/24</output>'
@@ -289,3 +289,5 @@ $NewVM
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+
+<script>document.getElementById("RandNum").innerHTML = Math.round(Math.random()*100000000)</script>
