@@ -273,7 +273,7 @@ New-AzureRmResourceGroup -Name $RGName -Location $Location
 $StorageAccount = New-AzureRMStorageAccount -Location $Location -ResourceGroupName $RGName -Type 'Standard_LRS' -Name $SAName
 
 # Set the current storage account
-Set-AzureRmCurrentStorageAccount -StorageAccountName $SAName -ResourceGroupName $RGName
+$SetStorageAccount = Set-AzureRmCurrentStorageAccount -StorageAccountName $SAName -ResourceGroupName $RGName
 
 ## Create network resources
 
@@ -319,7 +319,8 @@ $OSDiskUri = '{0}vhds/{1}-{2}.vhd' -f $StorageAccount.PrimaryEndpoints.Blob.ToSt
 $VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -CreateOption FromImage | Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id
 
 # Create the virtual machine.
-New-AzureRmVM -ResourceGroupName $ResourceGroupName -Location $Location -VM $VirtualMachine
+$NewVM = New-AzureRmVM -ResourceGroupName $RGName -Location $Location -VM $VirtualMachine
+$NewVM
 </code></pre>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
