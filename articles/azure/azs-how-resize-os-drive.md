@@ -66,9 +66,9 @@ Please select the type of disk you are trying to expand:
 # [Managed Disk](#tab/tabid-1)
 
 <pre><code class="language-PowerShell"># Set the size of the managed OS disk to the desired value and update the VM
-$disk= Get-AzureRmDisk -ResourceGroupName $rgName -DiskName $vm.StorageProfile.OsDisk.Name
-$disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">&lt;Disk Size&gt;</output>
-Update-AzureRmDisk -ResourceGroupName $rgName -Disk $disk -DiskName $disk.Name
+$Disk = Get-AzureRmDisk -ResourceGroupName $rgName -DiskName $vm.StorageProfile.OsDisk.Name
+$Disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">&lt;Disk Size&gt;</output>
+Update-AzureRmDisk -ResourceGroupName $rgName -Disk $Disk -DiskName $Disk.Name
 </code></pre>
 
 # [Unmanaged Disk](#tab/tabid-2)
