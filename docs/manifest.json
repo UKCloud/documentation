@@ -185,11 +185,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-create-vm-cli.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-create-vm-cli.html",
+          "hash": "6m8jvRDevMdzpug4xU5Nfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-create-vm-ps.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-create-vm-ps.html",
+          "hash": "+kat9oP1ZlBC4HDN3zvBBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-create-vm-terraform.md",
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-terraform.html",
-          "hash": "g9rWjCvCx3snGqKRi8RYFA=="
+          "hash": "RCUhjPfq1Qh3nmLHqnGOgg=="
         }
       },
       "is_incremental": false,
@@ -201,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm.html",
-          "hash": "DpvYGKpbQhYzlOABc8k3eA=="
+          "hash": "gouBywupPg5mqelw7nVZjQ=="
         }
       },
       "is_incremental": false,
@@ -927,7 +951,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "LR2HEnxVkHqlkTvrXw9f7g=="
+          "hash": "BpzDLNt50SXDz1KTi5Tu4A=="
         }
       },
       "is_incremental": false,
@@ -12642,11 +12666,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -12654,6 +12673,11 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
