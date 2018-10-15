@@ -103,7 +103,7 @@ $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 # Stop the VM before resizing the disk
 Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
-# Managed Disk Resize
+# Resize Managed OS Disk
 $Disk = Get-AzureRmDisk -ResourceGroupName $rgName -DiskName $vm.StorageProfile.OsDisk.Name
 $Disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">&lt;Disk Size&gt;</output>
 Update-AzureRmDisk -ResourceGroupName $rgName -Disk $Disk -DiskName $Disk.Name
