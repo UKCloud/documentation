@@ -250,7 +250,7 @@ $NetworkInterface = New-AzureRmNetworkInterface -Name '<output form="nicname" na
 
 # Define a credential object to store the username and password for the virtual machine
 $UserName='<output form="vmusername" name="result" style="display: inline;">&lt;VM Username&gt;</output>'
-$Password='<output form="vmpassword" name="result" style="display: inline;">&lt;VM Password&gt;</output>'| ConvertTo-SecureString -Force -AsPlainText
+$Password='<output form="vmpassword" name="result" style="display: inline;">Password123!</output>'| ConvertTo-SecureString -Force -AsPlainText
 $Credential = New-Object PSCredential($UserName,$Password)
 
 # Create the virtual machine configuration object
