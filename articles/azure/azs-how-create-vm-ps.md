@@ -260,7 +260,7 @@ $VirtualMachine = New-AzureRmVMConfig -VMName '<output form="vmname" name="resul
 $VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result" style="display: inline;">-Linux</output> -ComputerName '<output form="compname" name="result" style="display: inline;">&lt;Computer Name&gt;</output>' -Credential $Credential
 
 # Get the VM Source Image
-$Image = Get-AzureRMVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object {$_.Id -like '*<output form="vmimage" name="result" style="display: inline;">/UbuntuServer/Skus/14.04.5-LTS</output>*'}
+$Image = Get-AzureRMVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object {$_.Id -like '*<output form="vmimage" name="result" style="display: inline;">/UbuntuServer/Skus/14.04.5-LTS</output>'}
 
 # Set the VM Source Image
 $VirtualMachine =  Set-AzureRmVMSourceImage -vm $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -version 'latest'
