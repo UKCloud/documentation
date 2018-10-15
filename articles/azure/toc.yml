@@ -20,8 +20,8 @@
       href: azs-how-create-azure-group.md
     - name: Identify your Azure Global Admins
       href: azs-how-identify-global-admins.md
-    - name: Resize an unmanaged disk - PowerShell
-      href: azs-how-resize-unmanaged-disk.md
+    - name: Resize an OS drive
+      href: azs-how-resize-os-drive.md
     - name: Use the Azure Stack API
       href: azs-how-use-azure-api.md
     - name: Client ID via API
