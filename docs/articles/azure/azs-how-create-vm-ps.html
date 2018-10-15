@@ -223,6 +223,10 @@ Before creating the virtual machine, it is necessary to create storage and netwo
 <input type="text" id="compname" name="compname" style="display: inline;" placeholder="myComputer"></form></p>
 <p>VM Image: <form onchange="result.value=vmimage.value" id="vmimage" style="display: inline;">
 <select name="vmimage" id="vmimage" style="display: inline;"><p>
+  <option value="/CentOS/Skus/6.10">CentOS-based 6.10
+  <option value="/CentOS/Skus/6.9">CentOS-based 6.9
+  <option value="/CentOS/Skus/7.3">CentOS-based 7.3
+  <option value="/CentOS/Skus/7.5">CentOS-based 7.5
   <option value="/UbuntuServer/Skus/14.04.5-LTS">Ubuntu Server 14.04 LTS
   <option value="/UbuntuServer/Skus/16.04-LTS">Ubuntu Server 16.04 LTS
   <option value="/UbuntuServer/Skus/18.04-LTS">Ubuntu Server 18.04 LTS
@@ -246,10 +250,6 @@ Before creating the virtual machine, it is necessary to create storage and netwo
   <option value="/WindowsServer/Skus/2016-Datacenter">Windows Server 2016 Datacenter - Pay-as-you-use
   <option value="/WindowsServer/Skus/2016-Datacenter-Server-Core">Windows Server 2016 Datacenter - Server Core - Pay as you use
   <option value="/WindowsServer/Skus/2016-Datacenter-with-Containers">Windows Server 2016 Datacenter - with Containers - Pay as you use
-  <option value="/CentOS/Skus/6.10">CentOS-based 6.10
-  <option value="/CentOS/Skus/6.9">CentOS-based 6.9
-  <option value="/CentOS/Skus/7.3">CentOS-based 7.3
-  <option value="/CentOS/Skus/7.5">CentOS-based 7.5
 </select></form>
 </div>
 <p>From your PowerShell window:</p>
@@ -274,7 +274,7 @@ $NICName = '<output form="nicname" name="result" style="display: inline;">myNIC<
 $VMName = '<output form="vmname" name="result" style="display: inline;">myVM</output>'
 $VMSize = '<output form="vmsize" name="result" style="display: inline;">Basic_A0</output>'
 $ComputerName = '<output form="compname" name="result" style="display: inline;">myComputer</output>'
-$VMImage = '*<output form="vmimage" name="result" style="display: inline;">/UbuntuServer/Skus/14.04.5-LTS</output>'
+$VMImage = '*<output form="vmimage" name="result" style="display: inline;">/CentOS/Skus/6.10</output>'
 
 
 # Create a new resource group
