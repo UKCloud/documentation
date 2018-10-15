@@ -39,6 +39,9 @@ Create a storage account and storage container. These resources provide storage 
 > Storage Account Name: <form oninput="result.value=saname.value;result2.value=saname.value;result3.value=saname.value" id="saname" style="display: inline;">
 > <input  type="text" id="saname" name="saname" style="display: inline;" placeholder="myStorageAccount"/></form>
 >
+> Subnet Name: <form oninput="result.value=subnetname.value" id="region" style="display: inline;" >
+> <input  type="text" id="region" name="region" style="display: inline;" placeholder="frn00006"/></form>
+>
 > Subnet Name: <form oninput="result.value=subnetname.value" id="subnetname" style="display: inline;" >
 > <input  type="text" id="subnetname" name="subnetname" style="display: inline;" placeholder="mySubnet"/></form>
 >
@@ -215,7 +218,7 @@ Login-AzureRmAccount -EnvironmentName 'AzureStack'
 # Input Variables
 $RGName = '<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
 $SAName = '<output form="saname" name="result" style="display: inline;">&lt;Storage Account&gt;</output>'.ToLower()
-$Location = 'frn00006'
+$Location = '<output form="region" name="result" style="display: inline;">&lt;frn00006&gt;</output>'
 
 # Create a new resource group
 New-AzureRmResourceGroup -Name $RGName -Location $Location
