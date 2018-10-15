@@ -39,7 +39,7 @@ Create a storage account and storage container. These resources provide storage 
 > Storage Account Name: <form oninput="result.value=saname.value;result2.value=saname.value;result3.value=saname.value" id="saname" style="display: inline;">
 > <input  type="text" id="saname" name="saname" style="display: inline;" placeholder="myStorageAccount"/></form>
 >
-> Subnet Name: <form oninput="result.value=region.value" id="region" style="display: inline;" >
+> Region Name: <form oninput="result.value=region.value" id="region" style="display: inline;" >
 > <input  type="text" id="region" name="region" style="display: inline;" placeholder="frn00006"/></form>
 >
 > Subnet Name: <form oninput="result.value=subnetname.value" id="subnetname" style="display: inline;" >
