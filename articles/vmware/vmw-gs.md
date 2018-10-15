@@ -51,7 +51,7 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
 1. Go to the appropriate URL, depending on the security domain in which your service is located:
 
     - **Assured OFFICIAL:** <https://portal.ukcloud.com>
-    - **Elevated OFFICIAL:** <https://portal.ukcloud.gsi.gov.uk>
+    - **Elevated OFFICIAL:** Contact your Portal administrator or Customer Success Manager (CSM)
 
 2. On the *Log in* page, enter your credentials and click **Sign in**.
 
@@ -69,6 +69,9 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
 4. If your Portal administrator has enabled Two-Factor Authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA.)
 
     ![Two-Factor Authentication dialog box](images/vmw-portal-2fa.png)
+
+    > [!NOTE]
+    > If you incorrectly enter your password three times, you'll be prompted to enter a captcha code until you successfully log in. If you incorrectly enter the captcha code or your password another three times, a seventh unsuccessful login attempt will result in your account being locked. You'll need to contact your Portal administrator to unlock your account.
 
 For more information about the UKCloud Portal and all the functionality it provides, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
 
@@ -186,9 +189,9 @@ After you've created your compute service and VDC, you can start to build up you
 
     ![vCloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
 
-3. vCloud Director launches in your browser window. <!-- What you see will depend on whether your environment uses vCloud Director 8.20 or vCloud Director 9.1. -->
+3. vCloud Director launches in your browser window. What you see depends on the version of vCloud Director available in your environment.
 
-    <!-- **vCloud Director 8.20 Home page** -->
+    **vCloud Director 8.20 Home page**
 
     ![vCloud Director 8.20 Home page](images/vmw-vcd-home.png)
 
@@ -198,19 +201,21 @@ After you've created your compute service and VDC, you can start to build up you
     > [!TIP]
     > If you encounter any issues, make sure you're using the Firefox ESR 32-bit browser. For more information, see [*Browser requirements for services on the UKCloud Platform*](../other/other-ref-browsers.md).
 
-    <!-- **vCloud Director 9.1 Home page**
+    **vCloud Director 9.1 Home page**
 
-    ![vCloud Director 9.1 Home page](images/vmw-vcd-home-91.png) -->
+    ![vCloud Director 9.1 Home page](images/vmw-vcd-home-91.png)
 
 4. The tasks you can perform in vCloud Director will depend on the permissions you have been granted.
 
     **More information!** [*How to manage permissions for vCloud Director*](vmw-how-manage-vcd-permissions.md)
 
-5. To return to the UKCloud Portal click the **Logout** link in the top right corner.
+5. To return to the UKCloud Portal:
+
+    - In vCloud Director 8.20, click the **Logout** link in the top right corner.
 
     ![vCloud Director 8.20 Logout option](images/vmw-vcd-logout.png)
 
-    <!-- - In vCloud Director 9.1, click your user name in the top right corner, and select **Log out**.
+    - In vCloud Director 9.1, click your user name in the top right corner, and select **Log out**.
 
     ![vCloud Director 9.1 Logout option](images/vmw-vcd-logout-91.png) -->
 

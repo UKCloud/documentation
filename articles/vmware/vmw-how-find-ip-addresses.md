@@ -9,7 +9,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Create find your allocated external IP addresses
+toc_title: Find your allocated external IP addresses
 toc_fullpath: How To/vmw-how-find-ip-addresses.md
 toc_mdlink: vmw-how-find-ip-addresses.md
 ---
@@ -23,6 +23,8 @@ To route traffic to your external network (for example internet, PSN), you need 
 ## Finding your IP addresses
 
 To find your allocated external IP address range:
+
+# [Using vCloud Director 8.20](#tab/tabid-1)
 
 1. In vCloud Director, click the **Administration** tab.
 
@@ -46,7 +48,23 @@ To find your allocated external IP address range:
 
     ![Allocated external IP addresses](images/vmw-vcd-allocated-ip-addresses.png)
 
-    You'll need to know this range when you configure setting such as NAT rules.
+    You'll need to know this range when you configure settings such as NAT rules.
+
+# [Using vCloud Director 9.1](#tab/tabid-2)
+
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway you want to configure.
+
+2. In the left navigation panel, click **Edges**.
+
+    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
+
+3. Select the edge that you want to configure.
+
+4. In the *Edge Gateway Settings* section, in the *Sub-allocated IP Addresses* table, you'll see the range of external IP addresses allocated for your use.
+
+    You'll need to know this range when you configure settings such as NAT rules.
+
+***
 
 ## Next steps
 

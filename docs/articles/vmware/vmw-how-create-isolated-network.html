@@ -91,7 +91,14 @@
 <li>An isolated (internally connected) network is one that only VMs within the VDC can connect to. This guide describes how to create an isolated VDC network.</li>
 <li>A routed network (externally connected) provides access to machines and networks outside the VDC via the edge gateway. You can have up to nine usable routed networks per VDC. Creation of routed networks is described in <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a>.</li>
 </ul>
-<h2 id="creating-an-isolated-vdc-network">Creating an isolated VDC network</h2>
+<p>The steps for creating an isolated VDC network depend on the version of vCloud Director available in your environment:</p>
+<ul>
+<li><p><a href="#creating-an-isolated-vdc-network-vcloud-director-820">vCloud Director 8.20</a></p>
+</li>
+<li><p><a href="#creating-an-isolated-vdc-network-vcloud-director-91">vCloud Director 9.1</a></p>
+</li>
+</ul>
+<h2 id="creating-an-isolated-vdc-network-vcloud-director-820">Creating an isolated VDC network (vCloud Director 8.20)</h2>
 <ol>
 <li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
 <p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
@@ -102,7 +109,7 @@
 <li><p>Select the <strong>Org VDC Networks</strong> tab.</p>
 <p><img src="images/vmw-vcd-tab-vdc-networks.png" alt="Org VDC Networks tab in vCloud Director"></p>
 </li>
-<li><p>Click the green <strong>+</strong> icon (or right-click an empty row and select <strong>Add Network</strong>)</p>
+<li><p>Click the green <strong>+</strong> icon (or right-click an empty row and select <strong>Add Network</strong>).</p>
 </li>
 <li><p>Select the option to <strong>Create an isolated network</strong>.</p>
 <p><img src="images/vmw-vcd-admin-isolated-network-select.png" alt="Isolated network option"></p>
@@ -127,6 +134,39 @@
 <li><p>If you want to make the network shareable with other VDCs, select the <strong>Share this network</strong> check box.</p>
 </li>
 <li><p>Click <strong>Next</strong> to review your settings, and then click <strong>Finish</strong>.You'll then need to create a network gateway address and network mask.</p>
+</li>
+</ol>
+<h2 id="creating-an-isolated-vdc-network-vcloud-director-91">Creating an isolated VDC network (vCloud Director 9.1)</h2>
+<ol>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to create the network.</p>
+</li>
+<li><p>In the left navigation panel, select <strong>Networks</strong>.</p>
+<p><img src="images/vmw-vcd91-tab-network.png" alt="Network tab in vCloud Director"></p>
+</li>
+<li><p>Click the <strong>Add</strong> button.</p>
+<p><img src="images/vmw-vcd91-btn-add-network.png" alt="Add network button"></p>
+</li>
+<li><p>In the <em>Add Org VDC Network</em> dialog box, from the <strong>Type</strong> radio buttons, select <strong>Isolated network within this Virtual Data Center</strong>.</p>
+<p><img src="images/vmw-vcd91-add-network-isolated.png" alt="Add Org VDC Network dialog box with Isolated network selected"></p>
+</li>
+<li><p>Confirm that you're creating the network in the correct <strong>Org VDC</strong>.</p>
+</li>
+<li><p>Enter a <strong>Name</strong> and <strong>Description</strong> for the network.</p>
+</li>
+<li><p>If you want to make the network shareable with other VDCs, select the <strong>Share this network with other VDCs in this organization</strong> check box.</p>
+</li>
+<li><p>Create a network <strong>Gateway address</strong> and <strong>Network mask</strong>, and add a <strong>DNS</strong> if possible.</p>
+</li>
+<li><p>The <strong>Static IP Pool</strong> is similar to DHCP in the sense that it's a range of IP addresses to be consumed by the VMs connecting to the network. When a VM is configured it will have a static manual or a static IP pool address assigned to it.</p>
+<ul>
+<li>For static manual, enter the address manually. This must be a valid address for the pool. The VM will keep this address for as long as it exists.</li>
+<li>For static IP pool, enter a range of addresses. A free address from the IP pool will be allocated to the machine automatically.</li>
+</ul>
+<p>As an example, if you give the gateway address as <code>192.168.1.1</code>, you may then want to create a <strong>Static IP Pool</strong> of <code>192.168.1.10-192.168.1.100</code>. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.</p>
+<p><img src="images/vmw-vcd91-network-ip-pool.png" alt="Static IP Pool"></p>
+<p>Click <strong>Add</strong> to create the static pool.</p>
+</li>
+<li><p>When you're done, click <strong>Save</strong>.</p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>

@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to build a virtual machine with UKCloud for VMware (vCloud Director 9.1) | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to build a virtual machine with UKCloud for VMware (vCloud Director 9.1) | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.36.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-build-a-virtual-machine-with-ukcloud-for-vmware-vcloud-director-91">How to build a virtual machine with UKCloud for VMware (vCloud Director 9.1)</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This guide leads you through the three basic steps for using UKCloud for VMware to quickly build a simple virtual machine (VM) in vCloud Director 9.1, and connect it to the internet.</p>
+<p>For more information about how to use other vCloud Director functions to make the most of UKCloud for VMware and create more complex virtual data centres (VDCs), take a look at the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
+<p>The three steps covered in this guide are:</p>
+<ol>
+<li>Create a network (to move requests around your VMs)</li>
+<li>Configure the edge gateway (in this guide we focus on the firewall and NAT configuration)</li>
+<li>Create a virtual machine</li>
+</ol>
+<p>If you follow these steps, you can have a VM up and running with a connection to the internet in about 20 to 25 minutes.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The steps in this guide are for vCloud Director 9.1. If your environment uses vCloud Director 8.20, see <a href="vmw-how-build-vm.html">here</a>.</p>
+</div>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>You should have received your UKCloud Portal login credentials from your Portal administrator.</p>
+<p>You should have created a compute service and VDC within your account. For more information, see the <a href="vmw-gs.html#creating-your-ukcloud-for-vmware-estate"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
+<p>You should also have created an edge gateway, which enables communication between your VDC and the outside world. For more information, see <a href="vmw-how-build-edge.html"><em>How to build an edge gateway using the UKCloud Portal</em></a>. The steps in this guide assume that you've converted your edge gateway to an advanced edge. For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
+<h2 id="create-a-network">Create a network</h2>
+<p>Before you can start building VMs in your VDC, you need to create the network that connects the VMs to each other and the outside world.</p>
+<p>First, you need to create a network that can connect to external networks outside your VDC (including the internet). This is called an <em>external routed network</em>.</p>
+<ol>
+<li><p>Log in to the UKCloud Portal.</p>
+<p>For more detailed instructions, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a></p>
+</li>
+<li><p>Select your account.</p>
+</li>
+<li><p>In the Portal navigation panel, expand <strong>VMware Cloud</strong> and then select the compute service in which you want to create your VM.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you haven't created a compute service yet, see the <a href="vmw-gs.html#building-a-compute-service"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
+</div>
+</li>
+<li><p>On the <strong>vCloud Director</strong> tab, enter your Portal password and click <strong>Confirm</strong>.</p>
+<p><img src="images/vmw-portal-vcd-login.png" alt="vCloud Director tab in UKCloud Portal"></p>
+</li>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select your VDC.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you haven't created a VDC yet, see the <a href="vmw-gs.html#building-a-virtual-data-centre"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
+</div>
+</li>
+<li><p>You're creating a network, so, in the left navigation panel, select <strong>Network</strong>.</p>
+<p><img src="images/vmw-vcd91-tab-network.png" alt="Network menu option"></p>
+</li>
+<li><p>To create a new network, click the <strong>Add</strong> button.</p>
+<p><img src="images/vmw-vcd91-btn-add-network.png" alt="Add network button"></p>
+</li>
+<li><p>Give the network a <strong>Name</strong> and <strong>Description</strong>.</p>
+</li>
+<li><p>You can make your network available to other VDCs within the same region so that VMs can communicate with each other, regardless of which VDC they are in. For example, you may have a single repository server that provides updates for all the VMs in a region.</p>
+<p>For the purposes of this exercise, leave the <strong>Share this network</strong> check box empty.</p>
+</li>
+<li><p>You want your VM to connect to the internet (rather than just other VMs in the same VDC), so in the <em>Add Org VDC Network</em> dialog box, choose the <strong>Routed network</strong> option.</p>
+<p><img src="images/vmw-vcd91-add-network-routed-option.png" alt="Routed network option"></p>
+</li>
+<li><p>When you connect a network to the outside world, it's important that you control exactly what can access your environment via that network. UKCloud for VMWare uses edge gateways to do this, so select the edge that you want your new network to use (we'll work more with the edge gateway later on).</p>
+<p><img src="images/vmw-vcd91-add-network-routed-edge.png" alt="Select edge gateway"></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you haven't created an edge gateway, see <a href="vmw-how-build-edge.html"><em>How to build an edge gateway using the UKCloud Portal</em></a>.</p>
+</div>
+</li>
+<li><p>Scroll down the page to enter the details for the <strong>Gateway address</strong>, <strong>Network mask</strong> and <strong>Primary DNS</strong>.</p>
+<p>The example below uses <code>192.168.1.1</code> for the gateway, <code>255.255.255.0</code> for the mask and <code>8.8.8.8</code> for the DNS.</p>
+<p><img src="images/vmw-vcd91-add-network-routed-address.png" alt="Network settings for routed VDC network"></p>
+</li>
+<li><p>A VM needs an IP address to identify it on the network. Use the <strong>Static IP Pool</strong> field to identify the range of IP addresses that VMs connecting to this network can use then click <strong>Add</strong>. For example, if your default gateway is <code>192.168.1.1</code>, you can use the <code>192.168.1.10-192.168.1.100</code> range for your static IP pool, giving 91 usable internal IP addresses.</p>
+<p><img src="images/vmw-vcd91-add-network-routed-ip.png" alt="IP pool for routed network"></p>
+<p>When you're done, click <strong>Add</strong>.</p>
+<p><img src="images/vmw-vcd91-add-network-routed-ip-pool.png" alt="Static IP pool"></p>
+</li>
+<li><p>When you're done, click <strong>Save</strong>.</p>
+<p>You can find more information about routed networks in <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a>.</p>
+</li>
+</ol>
+<h2 id="configure-the-edge-gateway">Configure the edge gateway</h2>
+<p>The edge gateway is possibly the most complex part of the VDC because of its high level of functionality. The following steps show you how to quickly configure the edge gateway to enable you to access the internet from a VM.</p>
+<ol>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select your VDC.</p>
+</li>
+<li><p>This time you're working with the edge gateway, so in the left navigation panel, click <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd91-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+</li>
+<li><p>Select the edge gateway you want to work with and click the <strong>Configure Services</strong> button.</p>
+<p><img src="images/vmw-vcd91-btn-configure-services.png" alt="Configure Services button"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The steps that follow describe how to change the edge gateway settings for an advanced gateway. If necessary, convert your edge using the steps in <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
+</div>
+</li>
+<li><p>Each tab in the <em>Edge Gateway</em> dialog box provides access to a different service provided by the edge gateway. The main tabs are:</p>
+<p><img src="images/vmw-vcd-adv-edge-tabs.png" alt="Tabs on the Edge Gateway dialog box"></p>
+<ul>
+<li><p><strong>Firewall</strong> - As well as a physical firewall, you can control which networks and ports can communicate through the edge gateway. You'll set up some firewall rules later in this exercise.</p>
+</li>
+<li><p><strong>DHCP</strong> - The edge gateway can act as a DHCP server for VMs connected to Org networks connected to an edge. The DHCP tab shows DHCP information for any VDC networks that have been configured with DHCP, and so acts as a centralised view. For more information, see <a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a>.</p>
+</li>
+<li><p><strong>NAT</strong> - Network address translation, both in (DNAT) and out (SNAT) of the edge gateway. You'll set up some NAT rules later in this exercise.</p>
+</li>
+<li><p><strong>Routing</strong> - You can provide static routes from the edge gateway to other networks, for example networks in other VDCs in your compute service. For more information, see <a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a>.</p>
+</li>
+<li><p><strong>Load Balancer</strong> - The edge gateway provides simple HTTP and HTTPS load balancing using round robin. For more information, see <a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a>.</p>
+</li>
+<li><p><strong>VPN</strong> - IPsec site‑to‑site VPN is available on the edge gateway. It can be configured within the vCloud user interface, but may require additional configuration through the API. For more information, see <a href="vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a>.</p>
+</li>
+</ul>
+<p>To access the internet from a VM, you'll need to create firewall rules to determine who can access your network and NAT rules to route traffic within your network.</p>
+</li>
+</ol>
+<h3 id="creating-firewall-rules">Creating firewall rules</h3>
+<p>Let's start with firewall rules:</p>
+<ol>
+<li><p>In the <em>Edge Gateway</em> dialog box, select the <strong>Firewall</strong> tab.</p>
+</li>
+<li><p>Make sure the <strong>Enabled</strong> option is selected.</p>
+<p><img src="images/vmw-vcd-adv-edge-firewall-enabled.png" alt="Enabled option on Firewall tab"></p>
+</li>
+<li><p>Click the <strong>+</strong> button to add a new row to the firewall rules table.</p>
+<p><img src="images/vmw-vcd-adv-edge-firewall-add.png" alt="Add button on Firewall tab"></p>
+</li>
+<li><p>Edit the values in the row for the <strong>New Rule</strong> using the settings below:</p>
+<ul>
+<li><p><strong>Name</strong> - <code>HTTPS outbound</code></p>
+</li>
+<li><p><strong>Source</strong> - <code>internal</code></p>
+</li>
+<li><p><strong>Destination</strong> - <code>external</code></p>
+</li>
+<li><p><strong>Service</strong> - Click the <strong>+</strong> button and enter the following values in the <em>Add Service</em> dialog box</p>
+<ul>
+<li><p><strong>Protocol</strong> - <strong>TCP</strong></p>
+</li>
+<li><p><strong>Source Port</strong> - <code>any</code></p>
+</li>
+<li><p><strong>Destination Port</strong> - <code>443</code></p>
+<p><img src="images/vmw-vcd-adv-edge-firewall-add-service.png" alt="Add Service dialog box"></p>
+<p>Click <strong>Keep</strong> when you're done.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Action</strong> - <strong>Accept</strong></p>
+</li>
+</ul>
+<p>These settings allow traffic from the VMs (<strong>Source</strong> = <code>internal</code>) to reach destinations outside your VDC (<strong>Destination</strong> = <code>external</code>) on port <code>443</code> (HTTPS). You'll need to repeat these steps for ports <code>80</code> (HTTP) and <code>53</code> (DNS).</p>
+<p>You can also allow traffic to reach your VMs from outside your VDC by swapping the <strong>Source</strong> and <strong>Destination</strong> values. However, because this opens up your firewall to a lot of traffic, we recommend that you first complete this guide to get comfortable with general networking concepts, and then take a look at the information in <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a> where you can find out how to lock the firewall down.</p>
+<p><img src="images/vmw-vcd-adv-edge-firewall-new-rule.png" alt="New firewall rule"></p>
+</li>
+<li><p>Click <strong>Save changes</strong>.</p>
+<p><img src="images/vmw-vcd-adv-edge-firewall-save.png" alt="Save changes link on Firewall tab"></p>
+</li>
+</ol>
+<h3 id="creating-nat-rules">Creating NAT rules</h3>
+<p>Now that you've set up the firewall rules, you can create NAT rules:</p>
+<ol>
+<li><p>In the <em>Edge Gateways</em> dialog box, select the <strong>NAT</strong> tab.</p>
+<p><img src="images/vmw-vcd-adv-edge-tab-nat.png" alt="NAT tab in vCloud Director"></p>
+</li>
+<li><p>Click the <strong>SNAT Rule</strong> button to create a source NAT (SNAT) rule to translate internal IP addresses into something that the external network can understand.</p>
+<p><img src="images/vmw-vcd-adv-edge-btn-snat.png" alt="Add SNAT Rule button"></p>
+</li>
+<li><p>In the <em>Add SNAT Rule</em> dialog box, from the <strong>Applied on</strong> list, choose the edge gateway to which you want to apply the SNAT rule.</p>
+</li>
+<li><p>In the <strong>Original Source IP/Range</strong> field, enter the range of addresses you created when you created the network in the previous exercise.</p>
+</li>
+<li><p>In the <strong>Translated Source IP/Range</strong> field, enter one or more of the external IP addresses provided to you by UKCloud.</p>
+<p>If you are not sure what your IP addresses are, see <a href="vmw-how-find-ip-addresses.html"><em>How to find your allocated external IP addresses</em></a>.</p>
+<p><img src="images/vmw-vcd-adv-edge-snat-add.png" alt="Add SNAT Rule dialog box"></p>
+</li>
+<li><p>When you're done, click <strong>Keep</strong> and then <strong>Save changes</strong>.</p>
+<p><img src="images/vmw-vcd-adv-edge-nat-save.png" alt="Save changes link on NAT tab"></p>
+<p>You can also add destination NAT (DNAT) rules to translate external IP addresses to route traffic to the appropriate internal addresses. However, because the firewall only provides outbound access to the internet, we don't need to add DNAT rules at the moment.</p>
+<p>You can find more information about setting up NAT rules in <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a>.</p>
+</li>
+</ol>
+<h2 id="create-a-virtual-machine">Create a virtual machine</h2>
+<p>Now that you've laid the groundwork, it's time to create your VM. The best way to do this is to create a virtual application (vApp). You can think of a vApp as a container for your VMs; it enables you to group related VMs together to manage them in one place. See <a href="vmw-how-create-vapp.html"><em>How to create a vApp</em></a> to find out more.</p>
+<ol>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select your VDC.</p>
+</li>
+<li><p>In the left navigation panel, click <strong>vApps</strong>.</p>
+<p><img src="images/vmw-vcd91-tab-vapps.png" alt="vApps menu option in vCloud Director"></p>
+</li>
+<li><p>In this exercise, you'll create the vApp from scratch, so click the <strong>Build New vApp</strong> button.</p>
+<p><img src="images/vmw-vcd91-btn-new-vapp.png" alt="Build New vApp button"></p>
+</li>
+<li><p>In the <em>Build new vApp</em> dialog box, give the vApp a <strong>Name</strong> and <strong>Description</strong>.</p>
+</li>
+<li><p>Click <strong>Add Virtual Machine</strong>.</p>
+<p><img src="images/vmw-vcd91-btn-add-vm-new.png" alt="Add Virtual Machine button in Build new vApp dialog box"></p>
+</li>
+<li><p>In the <em>Create VM</em> dialog box, you can create your VM. Enter a <strong>Name</strong>, <strong>Computer Name</strong> and <strong>Description</strong> for the VM.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The <strong>Name</strong> is to identify the VM, the <strong>Computer Name</strong> is the host name of the VM.</p>
+</div>
+</li>
+<li><p>The easiest way to create a VM is to use a pre-built template from a catalog, so from the <strong>Type</strong> radio buttons, select <strong>From Template</strong>.</p>
+</li>
+<li><p>From the list of <strong>Templates</strong>, select the one you want to use then click <strong>OK</strong>.</p>
+</li>
+<li><p>Back in the <em>Build new vApp</em> dialog box, you can add more VMs if you want, but for now click <strong>Build</strong> to create the vApp and the single VM.</p>
+</li>
+<li><p>There are some more configuration tasks to complete for your new VM, so in the left navigation panel, click <strong>Virtual Machines</strong> to list all the VMs in the VDC.</p>
+<p><img src="images/vmw-vcd91-tab-vms.png" alt="Virtual Machines menu option"></p>
+</li>
+<li><p>In the card for your new VM, click <strong>Details</strong>.</p>
+<p><img src="images/vmw-mnu-vm-details.png" alt="Details menu option for VM"></p>
+</li>
+<li><p>In the <em>General</em> section, you can change the VM name in the <strong>Name</strong> field, but keep the default <strong>Storage Policy</strong> option.</p>
+<p><img src="images/vmw-vcd91-vm-details-general.png" alt="VM details General section"></p>
+</li>
+<li><p>Expand the <em>Hardware</em> section and, in the <strong>NICs</strong> section, click <strong>Add</strong> and select the externally routed <strong>Network</strong> you created in the first exercise.</p>
+</li>
+<li><p>From the <strong>IP Mode</strong> list, choose <strong>Static - IP Pool</strong> to use the IP pool you defined earlier when you created your network.</p>
+</li>
+<li><p>Select the <strong>Connected</strong> check box.</p>
+<p><img src="images/vmw-vcd91-vm-details-hardware.png" alt="VM details Hardware section"></p>
+</li>
+<li><p>You don't need to change anything in the other sections, so click <strong>Save</strong>.</p>
+</li>
+<li><p>In the card for the VM, click <strong>Power</strong> and select <strong>Power On</strong></p>
+</li>
+<li><p>Click the monitor icon to open the popout console and go through the setup procedure.</p>
+<p><img src="images/vmw-vcd91-ico-console.png" alt="Monitor icon to start popout console"></p>
+</li>
+<li><p>To confirm that you have connectivity to the internet and have an assigned IP address:</p>
+<ul>
+<li>Type <code>ipconfig</code> into the Command Prompt. If you've configured the networking correctly, your VM will return an IP address.</li>
+<li>Open an internet browser page and navigate to an external web page</li>
+<li>Ping the IP address of your DNS (for example, <code>8.8.8.8</code>) through the command line.</li>
+</ul>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>In this guide, you've learned how to build a simple virtual machine and connect it to the internet.</p>
+<p>For information about more creating complex VDCs so that you can make the most of UKCloud for VMware, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>. This <em>Getting Started Guide</em> provides links to documents that describe each of the different parts of your environment in more detail.</p>
+<p>If you want a more comprehensive guide to the platform, take a look at the <a href="https://docs.vmware.com/en/vCloud-Director/9.1/com.vmware.vcloud.admin.doc/GUID-3A4FBE1E-6BDB-4AE4-93F8-D23A8DCBD1F1.html"><em>vCloud Director Administrator's Guide</em></a> and the <a href="https://docs.vmware.com/en/vCloud-Director/9.1/com.vmware.vcloud.tenantportal.doc/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html"><em>vCloud Director Tenant Portal Guide</em></a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-gs-build-vm-vcd91.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

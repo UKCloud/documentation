@@ -36,57 +36,44 @@ To complete the steps in this guide you must have access to the UKCloud Portal a
 
 ## Creating an affinity or anti-affinity rule
 
+> [!NOTE]
+> You cannot create affinity or anti-affinity rules in the new vCloud Director 9.1 tenant portal. If your environment uses vCloud Director 9.1, you must first switch to the vCloud Director web console. For more information, see [*How to switch to the vCloud Director web console from the tenant portal*](vmw-how-switch-web-console.md).
+
 To create an affinity or anti-affinity rule:
 
-1. Log in to the UKCloud Portal.
-
-    For more detailed steps, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
-
-2. Select the account to which the VMs belong.
-
-3. Click **My VMs**.
-
-    ![My VMs on the Portal home page](images/myvms.png)
-
-4. Click the compute service to which the VMs belong.
-
-5. On the *vCloud Director* tab, enter your password and then click **Confirm**.
-
-    ![vCloud Director login](images/vmw-portal-vcd-login.png)
-
-6. Click **Administration**.
+1. In vCloud Director, click **Administration**.
 
     ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
 
-7. Right-click the VDC that you want to work with and select Open.
+2. Right-click the VDC that you want to work with and select Open.
 
-8. Select the *Affinity Rules* tab.
+3. Select the *Affinity Rules* tab.
 
     ![Affinity Rules tab](images/vmw-vcd-tab-affinity.png)
 
-9. To create an affinity rule, click the **+** icon in the *Affinity Rules* section.
+4. To create an affinity rule, click the **+** icon in the *Affinity Rules* section.
 
     To create an anti-affinity rule, click the **+** icon in the *Anti-Affinity Rules* section.
 
     ![Add Affinity Rule and Add Anti-Affinity Rule icons](images/vmw-vcd-ico-add-affinity-rule.png)
 
-10. In the *Add Affinity Rule* or *Add Anti-Affinity Rule* dialog box, enter a **Rule Name**.
+5. In the *Add Affinity Rule* or *Add Anti-Affinity Rule* dialog box, enter a **Rule Name**.
 
-11. In the search box, enter the name of a VM that you want to add to the rule.
+6. In the search box, enter the name of a VM that you want to add to the rule.
 
-12. Select the VM and click the **Add** button.
+7. Select the VM and click the **Add** button.
 
-13. Add more VMs as required.
+8. Add more VMs as required.
 
-14. If you don't want the rule to take effect immediately, deselect the **Enabled** check box.
+9. If you don't want the rule to take effect immediately, deselect the **Enabled** check box.
 
     You can edit the rule later to enable it when you're ready.
 
     ![Add Affinity Rule dialog box](images/vmw-vcd-add-affinity-rule.png)
 
-15. When you're done, click **OK**.
+10. When you're done, click **OK**.
 
-16. If you selected the **Enabled** check box, the affinity or anti-affinity rule is applied and the selected VMs are redistributed as required to meet the conditions of the rule.
+11. If you selected the **Enabled** check box, the affinity or anti-affinity rule is applied and the selected VMs are redistributed as required to meet the conditions of the rule.
 
 ## Next steps
 

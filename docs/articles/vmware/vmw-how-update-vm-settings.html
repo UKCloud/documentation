@@ -84,8 +84,19 @@
                   
 <h1 id="how-to-view-and-update-virtual-machine-settings">How to view and update virtual machine settings</h1>
 
-<h2 id="viewing-and-updating-vm-settings-">Viewing and updating VM settings <!-- (vCloud Director 8.20) --></h2>
+<h2 id="viewing-and-updating-vm-settings">Viewing and updating VM settings</h2>
 <p>After you've deployed a virtual machine (VM), you can view and update its configuration.</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Using vCloud Director 8.20</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Using vCloud Director 9.1</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+
 <ol>
 <li><p>In vCloud Director, select the <strong>My Cloud</strong> tab.</p>
 <p><img src="images/vmw-vcd-tab-my-cloud.png" alt="Home tab in vCloud Director"></p>
@@ -101,16 +112,52 @@
 <li><p>When you're done, click <strong>OK</strong> to save any changes you've made, or <strong>Cancel</strong> to close the dialog box without saving.</p>
 </li>
 </ol>
-<!-- ## Viewing and updating VM settings (vCloud Director 9.1) -->
-<h2 id="general-tab">General tab</h2>
-<p>On the <strong>General</strong> tab of the <em>Virtual Machine Properties</em> dialog box, you can view and changes properties such as the VM/host name, OS type and version. You can also see if VMware Tools is installed on the VM and change the storage policy for the VM. For more information on storage policies, see <a href="vmw-ref-storage-policies.html"><em>Storage policies</em></a>.</p>
-<p><img src="images/vmw-vcd-vm-settings-general.png" alt="Virtual Machine Properties: General tab"></p>
-<h2 id="hardware-tab">Hardware tab</h2>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li><p>In vCloud Director, click the menu icon and select <strong>Datacenters</strong>.</p>
+<p><img src="images/vmw-vcd91-mnu-dcs.png" alt="Datacentres menu option in vCloud Director"></p>
+</li>
+<li><p>Select the VDC where the vApp that contains the VM is located.</p>
+</li>
+<li><p>In the left navigation panel, click <strong>vApps</strong>.</p>
+<p><img src="images/vmw-vcd91-tab-vapps.png" alt="vApps menu option"></p>
+</li>
+<li><p>In the card for the vApp that you want to add to the catalog, click <strong>Details</strong>.</p>
+<p><img src="images/vmw-vcd91-mnu-vapp-details.png" alt="Add to Catalog menu option"></p>
+</li>
+<li><p>Click the name of the VM for which you want to view configuration information.</p>
+</li>
+<li><p>Expand each section to view the settings for the VM and change them if required.</p>
+</li>
+<li><p>When you're done, click <strong>Save</strong> to save any changes you've made, or <strong>Discard Changes</strong> to close without saving.</p>
+</li>
+</ol>
+</section>
+</div>
+<h2 id="general">General</h2>
+<p>View and changes properties such as the VM/host name, OS type and version. You can also see if VMware Tools is installed on the VM and change the storage policy for the VM. For more information on storage policies, see <a href="vmw-ref-storage-policies.html"><em>Storage policies</em></a>.</p>
+<table>
+<thead>
+<tr>
+<th>vCloud Director 8.20</th>
+<th>vCloud Director 9.1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="images/vmw-vcd-vm-settings-general.png" alt="Virtual Machine Properties: General tab"></td>
+<td><img src="images/vmw-vcd91-vm-general.png" alt="Virtual Machines: General section"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="hardware">Hardware</h2>
 <p>On the <strong>Hardware</strong> tab, you can:</p>
 <ul>
 <li><p>See and change the number of virtual CPUs and the amount of RAM associated with the VM.</p>
 </li>
-<li><p>Specify the number of cores per socket and number of vCPUs you require, and then set the number of cores per socket.</p>
+<li><p>Specify the number of cores per socket and number of vCPUs. You can use this for software applications that have per-socket licensing. First set the number of vCPUs you require, and then set the number of cores per socket.</p>
 </li>
 <li><p>Run virtualisation servers as a VM. For example, run a Windows 2008 or 2012 server with Hyper-V, or a VMware ESX host. Select the <strong>Expose hardware-assisted CPU virtualization</strong> check box in these cases.</p>
 </li>
@@ -121,13 +168,42 @@
 </div>
 </li>
 </ul>
-<p><img src="images/vmw-vcd-vm-settings-hardware.png" alt="Virtual Machine Properties: Hardware tab"></p>
-<h2 id="guest-os-customization-tab">Guest OS Customization tab</h2>
+<table>
+<thead>
+<tr>
+<th>vCloud Director 8.20</th>
+<th>vCloud Director 9.1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="images/vmw-vcd-vm-settings-hardware.png" alt="Virtual Machine Properties: Hardware tab"></td>
+<td><img src="images/vmw-vcd91-vm-hardware.png" alt="Virtual Machines: Hardware section"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="guest-os-customization">Guest OS Customization</h2>
 <p>By default, a password is randomly generated and assigned when the VM is first booted. You can use this tab to determine the login password, or to specify the password that will be assigned to the administrator/root user for the VM.</p>
-<p>The password must meet the OS password complexity requirements (at least eight characters long, and including upper and lowercase letters and numbers).</p>
+<p>The password must meet the OS password complexity requirements (at least eight characters long, and including upper and lower case letters and numbers).</p>
 <p>For guest customisation to work, VMware Tools must be installed and running in the VM.</p>
 <p>For Windows VMs, there is an option for guest customisation to change the SID of the operating system. Bear in mind that changing the SID can corrupt VMs running applications, such as Active Directory, that rely on a known SID.</p>
-<p><img src="images/vmw-vcd-vm-settings-guestos-cust.png" alt="Virtual Machine Properties: Guest OS Customization tab"></p>
+<table>
+<thead>
+<tr>
+<th>vCloud Director 8.20</th>
+<th>vCloud Director 9.1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="images/vmw-vcd-vm-settings-guestos-cust.png" alt="Virtual Machine Properties: Guest OS Customization tab"></td>
+<td><img src="images/vmw-vcd91-vm-guestos.png" alt="Virtual Machines: Guest OS Customization section"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="advanced">Advanced</h2>
+<p>You can configure CPU and memory reservation and priority for this VM. This is useful if you have a VM that needs guaranteed resources. You can also view VM metadata here.</p>
+<p><img src="images/vmw-vcd91-vm-advanced.png" alt="Virtual Machines: Advanced section"></p>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 

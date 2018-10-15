@@ -47,7 +47,7 @@ This article provides a list of Service Definitions for G-Cloud 10 (G10) UKCloud
 
 [Secure Remote Access](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/153884335251015-service-definition-document-2018-05-21-1247.pdf)
 
-[UKCloud for Microsoft Azure](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/630346855069919-service-definition-document-2018-07-30-0941.pdf)
+[UKCloud for Microsoft Azure](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/322910045972626-service-definition-document-2018-09-28-1341.pdf)
 
 [UKCloud for OpenShift](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/248991245857940-service-definition-document-2018-05-21-1259.pdf)
 

@@ -41,3 +41,6 @@ debugSettings.json
 launchSettings.json
 project.lock.json
 *.sublime-workspace
+
+# IntelliJ / PyCharm
+.idea

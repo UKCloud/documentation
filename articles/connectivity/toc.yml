@@ -40,6 +40,8 @@
     href: conn-ref-ddos-protection.md
   - name: PSN Assured - permitted standard ports
     href: conn-ref-psn-permitted-ports.md
+  - name: PSN flattening
+    href: conn-ref-psn-flattening.md
   - name: Telecommunications Service Provider engagement
     href: conn-ref-telco-enagagement.md
   - name: Understanding PSN core services
@@ -52,3 +54,7 @@
     href: conn-sco-app-ddos.md
   - name: Global load balancing Service Scope
     href: conn-sco-glb.md
+- name: Troubleshooting
+  items:
+  - name: Network Adaptor Issue
+    href: conn-ref-network-adaptor.md

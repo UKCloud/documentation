@@ -171,6 +171,12 @@ HTTPS - 443, 444 and 8443 | &nbsp; | ISAKMP - UDP 500
 Secure SMTP - 465 | &nbsp;| &nbsp;
 FTPS (Data) - 989 | &nbsp; | &nbsp;
 
+## Connectivity
+
+By default the Assured data upload PC is connected to your environment's internet gateway. You can connect from the PC to an external IP in your environment. The IP address of the data upload pc can be added to a firewall rule in your environment to secure access
+
+Access to environments on other networks (e.g HSCN or PSN) will require additional configuration. Please discuss this with your Cloud Delivery Manager or TAM if required
+
 ## Platform performance
 
 The speed of data transfer to the UKCloud platform isn't guaranteed. However, during tests of the upload and download speeds, an average of 8 Mbit/s was achieved for VM import/export and 40 Mbit/s for data transferred over FTPS.

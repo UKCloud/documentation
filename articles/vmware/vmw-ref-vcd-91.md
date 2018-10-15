@@ -48,7 +48,9 @@ You should be aware of the following end-of-life and end-of-support warnings for
 
 ## Known issues
 
-For a list of known issues with vCloud Director 9.1, see the [*vCloud Director 9.1 for Service Providers Release Notes*](https://docs.vmware.com/en/vCloud-Director/9.1/rn/rel_notes_vcloud_director_91.html#knownissues).
+You can only manage advanced gateways in the new vCloud Director 9.1 tenant portal. If you have not yet converted your edge to an advanced gateway, you must first switch to the vCloud Director web console to manage the edge.  For more information about converting your edge to an advanced gateway, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md). For more information about switching to the web console, see [*How to switch to the vCloud Director web console from the tenant portal*](vmw-how-switch-web-console.md). 
+
+For a list of other known issues with vCloud Director 9.1, see the [*vCloud Director 9.1 for Service Providers Release Notes*](https://docs.vmware.com/en/vCloud-Director/9.1/rn/rel_notes_vcloud_director_91.html#knownissues).
 
 ## Feedback
 

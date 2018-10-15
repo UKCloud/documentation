@@ -121,7 +121,7 @@ use the Portal API. For more information about UKCloud regions, see <a href="../
 </li>
 <li><p>password - the password you use to log in to the UKCloud Portal</p>
 <p>For example:</p>
-<pre><code>curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' --X POST --d
+<pre><code>curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d
 '{
   &quot;email&quot;: &quot;user@example.com&quot;,
   &quot;password&quot;: &quot;password&quot;
@@ -148,7 +148,7 @@ use the Portal API. For more information about UKCloud regions, see <a href="../
 <ol>
 <li><p>If you need to find your account ID, send a GET request to the accounts endpoint to return a list of all your accounts.</p>
 <p>For example:</p>
-<pre><code>curl -b cookies.txt 'http://portal.skyscapecloud.com/api/accounts' | json_pp
+<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts' | json_pp
 </code></pre>
 <p>If you need to authenticate to the Portal API first, see <a href="#authenticating-to-the-api">Authenticating to the API</a>.</p>
 </li>
@@ -222,7 +222,7 @@ use the Portal API. For more information about UKCloud regions, see <a href="../
 long and can include any character except <code>+</code></li>
 </ul>
 <p>For example:</p>
-<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' --i -X POST -d '{
+<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' -i -X POST -d '{
   &quot;data&quot;: {
     &quot;type&quot;: &quot;VDC&quot;,
     &quot;attributes&quot;: {
@@ -234,7 +234,7 @@ long and can include any character except <code>+</code></li>
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Use the <code>--i</code> option in the request to view response headers so that you can see the <code>Location</code> header in the response.</p>
+<p>Use the <code>-i</code> option in the request to view response headers so that you can see the <code>Location</code> header in the response.</p>
 </div>
 </li>
 <li><p>A successful response to this call includes information about the status of the build and a <code>Location</code> header that provides an address you can use to monitor the build process.</p>

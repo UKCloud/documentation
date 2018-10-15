@@ -14,6 +14,8 @@
     href: orcl-how-enable-ha.md
 - name: Reference
   items:
+  - name: Compatibility with Solaris and AIX
+    href: orcl-ref-solaris-aix.md
   - name: Oracle cloud self-service functionality
     href: orcl-ref-bug-self-service.md
   - name: Oracle licensing on the UKCloud platform

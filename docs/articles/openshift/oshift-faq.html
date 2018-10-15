@@ -85,26 +85,17 @@
 <h1 id="ukcloud-for-openshift-faqs">UKCloud for OpenShift FAQs</h1>
 
 <h3 id="what-is-ukcloud-for-openshift">What is UKCloud for OpenShift?</h3>
-<p>UKCloud for OpenShift is a Platform as a Service (PaaS) solution providing container management and orchestration using either Red Hat OpenShift or Cloud Foundry technology to deliver a flexible, scalable cloud application platform. Unlike traditional managed PaaS offerings, it provides a modern application platform that accelerates end-to-end development, deployment and operation of digital applications, while raising overall application reliability and availability.</p>
+<p>UKCloud for OpenShift is a Platform as a Service (PaaS) solution providing container management and orchestration powered by Red Hat OpenShift Container Platform to deliver a flexible, scalable cloud application platform. Unlike traditional managed PaaS offerings, it provides a modern application platform that accelerates end-to-end development, deployment and operation of digital applications, while raising overall application reliability and availability.</p>
 <h3 id="why-deliver-ukcloud-for-openshift-as-a-cloud-service">Why deliver UKCloud for OpenShift as a cloud service?</h3>
 <p>Although UKCloud for OpenShift is a simple, benefits-rich service to consume, it is a complex platform of inter-dependent servers and services, whose deployment, configuration and maintenance requires time and expertise.</p>
 <p>By offering this service, we take on all that complexity so that customers can immediately realise the value of UKCloud for OpenShift by simply consuming it.</p>
 <h3 id="is-ukcloud-for-openshift-a-single-tenant-or-multi-tenant-solution">Is UKCloud for OpenShift a single-tenant or multi-tenant solution?</h3>
 <p>UKCloud for OpenShift is built as a single-tenant platform on-top of UKCloud's secure, assured multi-tenant UKCloud for OpenStack IaaS platform, helping to deliver the benefits of single tenant isolation with the economics and flexibility of multi-tenant infrastructure.</p>
 <h3 id="how-is-ukcloud-for-openshift-billed">How is UKCloud for OpenShift billed?</h3>
+<p>This service comprises of two main chargeable elements:</p>
 <ul>
-<li><p><strong>Red Hat OpenShift</strong>. This service comprises of two charges elements:</p>
-<ul>
-<li><strong>Starter Pack -</strong> providing an initial footprint of 32GiB of RAM, billed by the month with a one-month minimum commitment</li>
-<li><strong>Expansion Pack -</strong> billed by the month with a one-month minimum commitment based upon the amour of additional RAM consumed</li>
-</ul>
-</li>
-<li><p><strong>Open source Cloud Foundry</strong>. This service comprises of two charging elements:</p>
-<ul>
-<li><strong>Starter Pack --</strong> providing an initial footprint of 32GiB of RAM, billed by the month with a one-month minimum commitment</li>
-<li><strong>Expansion Pack -</strong> billed by the hour based upon the amour of additional RAM consumed</li>
-</ul>
-</li>
+<li><strong>Starter Pack -</strong> provides the foundation OpenShift services to support the orchestration and management of the container runtime environments. Each customer environment requires only a single Starter Pack</li>
+<li><strong>Expansion Pack -</strong> Provides the footprint to host customer’s containerised applications and services. Customers can choose to mix and match their Runtime Packs, and Runtime Packs can be called off individually, however UKCloud strongly recommends the initial deployment of two or more Runtime Packs for production environments to provide resilience to your workloads in the event of the failure of a single Runtime Pack.</li>
 </ul>
 <h3 id="does-ukcloud-offer-a-free-trial">Does UKCloud offer a free trial?</h3>
 <p>Free trials are currently available for UKCloud for OpenShift. Please get in touch with your Account Manager to raise this request.</p>
@@ -163,7 +154,7 @@
 <h3 id="how-do-i-add-users">How do I add users?</h3>
 <p>In order to add new users, you will need to raise a <a href="https://portal.skyscapecloud.com/support/my_calls/new">Service Request</a> on the UKCloud Portal.</p>
 <h3 id="what-monitoring-of-the-services-is-provided-by-default-in-a-trial">What monitoring of the services is provided by default in a trial?</h3>
-<p>By default, a minimal Zabbix infrastructure gets deployed to enable customer monitoring of the nodes and other services. However, we recommend external monitoring services such as Datadog or Coscale for production-grade OpenShift hosted applications.</p>
+<p>By default, no specific monitoring service is integrated. However, we recommend external monitoring services such as Datadog or Coscale for production-grade OpenShift hosted applications. Alternatively, you can implement your own simple monitoring solution as described in <a href="oshift-how-monitor-cluster.html">How to monitor your OpenShift cluster</a>.</p>
 <h3 id="what-monitoring-of-the-services-is-provided-on-a-billable-service">What monitoring of the services is provided on a billable service?</h3>
 <p>By default, no specific monitoring service is integrated. It is our expectation that customers may want to use a third party or their own monitoring service to ensure cluster availability. There is a metrics service deployed into the cluster that provides utilisation stats of the cluster, and a wide range of metrics about both the cluster itself and the containers running within it can be extracted via the API to this service.</p>
 <h3 id="can-i-integrate-external-monitoring-saas-providers-or-my-own-monitoring-agents-to-the-service">Can I integrate external monitoring SaaS providers or my own monitoring agents to the service?</h3>
