@@ -35,13 +35,13 @@ From your PowerShell window:
 > [!IMPORTANT]
 > Enter details below to provide values for the variables in the scripts in this article:
 >
-> Resource Group Name: <form oninput="result.value=name.value" id="ResourceGroup" style="display: inline;" >
+> Resource Group Name: <form oninput="result.value=name.value;result2.value=name.value;result3.value=name.value" id="ResourceGroup" style="display: inline;" >
 > <input  type="text" id="name" name="name" style="display: inline;"/></form>
 >
-> VM Name: <form oninput="result.value=name.value" id="VMName" style="display: inline;">
+> VM Name: <form oninput="result.value=name.value;result2.value=name.value;result3.value=name.value" id="VMName" style="display: inline;">
 > <input  type="text" id="name" name="name" style="display: inline;"/></form>
 >
-> New Disk Size in GB: <form oninput="result.value=name.value;result2.value=name.value" id="DiskSize" style="display: inline;">
+> New Disk Size in GB: <form oninput="result.value=name.value;result2.value=name.value;result3.value=name.value;result4.value=name.value" id="DiskSize" style="display: inline;">
 > <input  type="text" id="name" name="name" style="display: inline;"/></form>
 >
 > Note that the maximum size allowed for OS disks is 2048GB
@@ -69,23 +69,9 @@ Please select the type of disk you are trying to expand:
 $Disk = Get-AzureRmDisk -ResourceGroupName $rgName -DiskName $vm.StorageProfile.OsDisk.Name
 $Disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">&lt;Disk Size&gt;</output>
 Update-AzureRmDisk -ResourceGroupName $rgName -Disk $Disk -DiskName $Disk.Name
-</code></pre>
-
-# [Unmanaged Disk](#tab/tabid-2)
-
-<pre><code class="language-PowerShell"># Set the size of the unmanaged OS disk to the desired value and update the VM
-$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result2" style="display: inline;">&lt;Disk Size&gt;</output>
-Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
-</code></pre>
-
-***
-
-<br/>
-
-```PowerShell
 # Restart the VM
 Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
-```
+</code></pre>
 
 ## Quick Guide - Resize Managed Disk
 
@@ -94,8 +80,8 @@ Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.f
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group name and VM name
-$RGName = '<output form="ResourceGroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
-$VMName = '<output form="VMName" name="result" style="display: inline;">&lt;VM Name&gt;</output>'
+$RGName = '<output form="ResourceGroup" name="result2" style="display: inline;">&lt;Resource Group&gt;</output>'
+$VMName = '<output form="VMName" name="result2" style="display: inline;">&lt;VM Name&gt;</output>'
 
 # Obtain a reference to your VM
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
@@ -105,12 +91,46 @@ Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize Managed OS Disk
 $Disk = Get-AzureRmDisk -ResourceGroupName $rgName -DiskName $vm.StorageProfile.OsDisk.Name
-$Disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">&lt;Disk Size&gt;</output>
+$Disk.DiskSizeGB = <output form="DiskSize" name="result2" style="display: inline;">&lt;Disk Size&gt;</output>
 Update-AzureRmDisk -ResourceGroupName $rgName -Disk $Disk -DiskName $Disk.Name
 
 # Restart the VM
 Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
+
+# [Unmanaged Disk](#tab/tabid-2)
+
+<pre><code class="language-PowerShell"># Set the size of the unmanaged OS disk to the desired value and update the VM
+$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result3" style="display: inline;">&lt;Disk Size&gt;</output>
+Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
+# Restart the VM
+Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+</code></pre>
+
+## Quick Guide - Resize Unmanaged Disk
+
+<pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
+Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Login-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Set your resource group name and VM name
+$RGName = '<output form="ResourceGroup" name="result3" style="display: inline;">&lt;Resource Group&gt;</output>'
+$VMName = '<output form="VMName" name="result3" style="display: inline;">&lt;VM Name&gt;</output>'
+
+# Obtain a reference to your VM
+$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+
+# Stop the VM before resizing the disk
+Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+
+# Set the size of the unmanaged OS disk to the desired value and update the VM
+$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result4" style="display: inline;">&lt;Disk Size&gt;</output>
+Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
+# Restart the VM
+Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+</code></pre>
+
+***
 
 ## Expanding the volume
 
