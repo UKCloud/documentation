@@ -273,11 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-resize-os-drive.html",
-<<<<<<< HEAD
-          "hash": "1r4/4gtzt5Ktko+huUFavw=="
-=======
-          "hash": "qfMJilj/j+Q6IjwUw2ijGA=="
->>>>>>> b711fdb1464c3fc87b8e0fd45d865a6c81fc1d1d
+          "hash": "s5ZPH6VCV5n7QoCvEix0wA=="
         }
       },
       "is_incremental": false,
@@ -3194,11 +3190,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-faq.html",
-<<<<<<< HEAD
           "hash": "5z27HQU7eMqmhp2kHjXQhQ=="
-=======
-          "hash": "3SOuXm4KHLSqlt1Ta6y1/g=="
->>>>>>> b711fdb1464c3fc87b8e0fd45d865a6c81fc1d1d
         }
       },
       "is_incremental": false,
@@ -3210,11 +3202,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-gs.html",
-<<<<<<< HEAD
           "hash": "EKmUbMIwQLy/9MMaozrdow=="
-=======
-          "hash": "R8Ob7LOjSxgW4byMsdm4zw=="
->>>>>>> b711fdb1464c3fc87b8e0fd45d865a6c81fc1d1d
         }
       },
       "is_incremental": false,
@@ -3226,11 +3214,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-build-app-private-repo.html",
-<<<<<<< HEAD
           "hash": "AVGyDjg1FTnZhOfP8UdqdQ=="
-=======
-          "hash": "wChw7L1R6rhyNNzDYELF2g=="
->>>>>>> b711fdb1464c3fc87b8e0fd45d865a6c81fc1d1d
         }
       },
       "is_incremental": false,
@@ -3242,11 +3226,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-monitor-cluster.html",
-<<<<<<< HEAD
           "hash": "KEP7VvGJxTt5klI+6Tf0Bw=="
-=======
-          "hash": "eoTg8LBkLcuiMM4JQkKxbw=="
->>>>>>> b711fdb1464c3fc87b8e0fd45d865a6c81fc1d1d
         }
       },
       "is_incremental": false,
@@ -3258,11 +3238,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-obtain-usage-metrics.html",
-<<<<<<< HEAD
           "hash": "CFJ2AVwfbmyDrIH0zpjjDw=="
-=======
-          "hash": "LCGmf/3+hn3qjxcko/FjEw=="
->>>>>>> b711fdb1464c3fc87b8e0fd45d865a6c81fc1d1d
         }
       },
       "is_incremental": false,
