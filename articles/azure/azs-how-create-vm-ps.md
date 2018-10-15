@@ -50,7 +50,7 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 > <input  type="text" id="vnetname" name="vnetname" style="display: inline;" placeholder="myVNetwork"/></form>
 > 
 > Virtual Network Address Range (CIDR Notation): <form oninput="result.value=vnetaddrrange.value" id="vnetaddrrange" style="display: inline;">
-> <input  type="text" id="vnetaddrrange" name="vnetaddrrange" style="display: inline;" placeholder="192.168.1.0/16"/></form>
+> <input  type="text" id="vnetaddrrange" name="vnetaddrrange" style="display: inline;" placeholder="192.168.0.0/16"/></form>
 > 
 > Public IP Name: <form oninput="result.value=publicipname.value" id="publicipname" style="display: inline;" >
 > <input  type="text" id="publicipname" name="publicipname" style="display: inline;" placeholder="myPublicIP"/></form>
@@ -206,7 +206,8 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 
 From your PowerShell window:
 
-<pre><code class="language-PowerShell">## Create storage resources
+<pre><code class="language-PowerShell">## Initialise environment and variables
+
 # Add environment
 Add-AzureRMEnvironment -Name 'AzureStack' -ArmEndpoint 'https://management.frn00006.azure.ukcloud.com'
 
@@ -220,7 +221,7 @@ $Location = '<output form="region" name="result" style="display: inline;">frn000
 $SubnetName = '<output form="subnetname" name="result" style="display: inline;">mySubnet</output>'
 $SubnetRange = '<output form="subaddrrange" name="result" style="display: inline;">192.168.1.0/24</output>'
 $VNetName = '<output form="vnetname" name="result" style="display: inline;">myVNetwork</output>'
-$VNetRange = '<output form="vnetaddrrange" name="result" style="display: inline;">192.168.1.0/16</output>'
+$VNetRange = '<output form="vnetaddrrange" name="result" style="display: inline;">192.168.0.0/16</output>'
 $PublicIPName = '<output form="publicipname" name="result" style="display: inline;">myPublicIP</output>'
 $NSGName = '<output form="nsgname" name="result" style="display: inline;">myNSG</output>'
 $NICName = '<output form="nicname" name="result" style="display: inline;">myNIC</output>'
@@ -229,9 +230,10 @@ $VMSize = '<output form="vmsize" name="result" style="display: inline;">Basic_A0
 $ComputerName = '<output form="compname" name="result" style="display: inline;">myComputer</output>'
 $VMImage = '*<output form="vmimage" name="result" style="display: inline;">/CentOS/Skus/6.10</output>'
 
-
 # Create a new resource group
 New-AzureRmResourceGroup -Name $RGName -Location $Location
+
+## Create storage resources
 
 # Create a new storage account
 $StorageAccount = New-AzureRMStorageAccount -Location $Location -ResourceGroupName $RGName -Type 'Standard_LRS' -Name $SAName
