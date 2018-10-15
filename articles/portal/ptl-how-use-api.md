@@ -63,7 +63,7 @@ The Portal API uses session authentication. Before calling any of the API endpoi
         For example:
 
         ```
-        curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' --X POST --d
+        curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d
         '{
           "email": "user@example.com",
           "password": "password"
@@ -93,7 +93,7 @@ To create a VDC, you need to know the ID of the account in which you want to cre
     For example:
 
     ```
-    curl -b cookies.txt 'http://portal.skyscapecloud.com/api/accounts' | json_pp
+    curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts' | json_pp
     ```
 
     If you need to authenticate to the Portal API first, see [Authenticating to the API](#authenticating-to-the-api).
@@ -173,7 +173,7 @@ When you have the account and vOrg IDs, you can go ahead and create your VDC.
     For example:
 
     ```
-    curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' --i -X POST -d '{
+    curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' -i -X POST -d '{
       "data": {
         "type": "VDC",
         "attributes": {
@@ -185,7 +185,7 @@ When you have the account and vOrg IDs, you can go ahead and create your VDC.
     ```
 
     > [!NOTE]
-    > Use the `--i` option in the request to view response headers so that you can see the `Location` header in the response.
+    > Use the `-i` option in the request to view response headers so that you can see the `Location` header in the response.
 
 3. A successful response to this call includes information about the status of the build and a `Location` header that provides an address you can use to monitor the build process.
 

@@ -1,24 +1,24 @@
 ---
-title: How to build a virtual machine with UKCloud for VMware | UKCloud Ltd
-description: Describes how to get up and running with UKCloud for VMware by showing you how to quickly spin up a virtual machine from scratch and connect it to the internet (Assured OFFICIAL security domain only)
+title: How to build a virtual machine with UKCloud for VMware (vCloud Director 8.20) | UKCloud Ltd
+description: Describes how to get up and running with UKCloud for VMware by showing you how to use vCloud Director 8.20 to quickly spin up a virtual machine from scratch and connect it to the internet (Assured OFFICIAL security domain only)
 services: vmware
 author: Sue Highmoor
 
-toc_rootlink: How To
+toc_rootlink: Getting Started
 toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Build a virtual machine with UKCloud for VMware
-toc_fullpath: How To/vmw-how-build-vm.md
+toc_title: Build a virtual machine (vCloud Director 8.20)
+toc_fullpath: Getting Started/vmw-how-build-vm.md
 toc_mdlink: vmw-how-build-vm.md
 ---
 
-# How to build a virtual machine with UKCloud for VMware
+# How to build a virtual machine with UKCloud for VMware (vCloud Director 8.20)
 
 ## Overview
 
-This guide leads you through the three basic steps for using UKCloud for VMware to quickly build a simple virtual machine (VM) in vCloud Director, and connect it to the internet.
+This guide leads you through the three basic steps for using UKCloud for VMware to quickly build a simple virtual machine (VM) in vCloud Director 8.20, and connect it to the internet.
 
 For more information about how to use other vCloud Director functions to make the most of UKCloud for VMware and create more complex virtual data centres (VDCs), take a look at the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md).
 
@@ -29,6 +29,9 @@ The three steps covered in this guide are:
 3. Create a virtual machine
 
 If you follow these steps, you can have a VM up and running with a connection to the internet in about 20 to 25 minutes.
+
+> [!NOTE]
+> The steps in this guide are for vCloud Director 8.20. If your environment uses vCloud Director 9.1, see [here](vmw-gs-build-vm-vcd91.md).
 
 ## Before you begin
 

@@ -239,6 +239,10 @@ The service is charged on a per VM basis based on:
 
 - The length of time those backups are held
 
+### When I disable snapshot protection on my VM, will billing immediately stop?
+
+Billing stops immediately and you will no longer be charged regardless of the chosen retention period. In addition, you will no longer have access to any snapshots taken. 
+
 ### If I have an existing VDC that includes snapshot protection, is protection automatically added to any new VMs I create?
 
 Yes, if the service level of your VDC includes snapshot protection (either selected for an Essential, Power or Priority VM or the former "STANDARD" or "ENHANCED"), that protection is automatically applied to any VMs you create within that VDC. You can still use the self‑service backup functionality within the UKCloud Portal to remove snapshot protection from a VM or change the retention policy without having to raise a Service Request.

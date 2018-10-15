@@ -10,6 +10,8 @@
   items:
   - name: Create load balancing services
     href: ostack-how-create-load-balancer.md
+  - name: Create static IPs for OpenStack instances
+    href: ostack-how-static-ip.md
   - name: Install Red Hat Update Infrastructure on an existing OpenStack instance
     href: ostack-how-install-rhui.md
   - name: Manage how your instance recovers from a host failure

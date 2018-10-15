@@ -69,7 +69,7 @@ To convert your edge to an advanced gateway:
 5. Click **Yes** to start the conversion.
 
     > [!IMPORTANT]
-    > After converting your edge gateway, check the firewall rules to make sure that the **default rule for ingress traffic** is set to **Deny**.
+    > After converting your edge gateway, click **Configure Services** and check the firewall rules to make sure that the **default rule for ingress traffic** is set to **Deny**.
 
     ![Administration tab](images/conver-image-4.png)
 
@@ -86,7 +86,7 @@ To convert your edge to an advanced gateway:
 4. Click **Yes** to start the conversion.
 
     > [!IMPORTANT]
-    > After converting your edge gateway, check the firewall rules to make sure that the **default rule for ingress traffic** is set to **Deny**.
+    > After converting your edge gateway, click **Configure Services** and check the firewall rules to make sure that the **default rule for ingress traffic** is set to **Deny**.
 
     ![Administration tab](images/conver-image-4.png)
 

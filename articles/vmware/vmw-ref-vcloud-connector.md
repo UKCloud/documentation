@@ -33,6 +33,15 @@ Time Zone settings need to be the same on both Node and Server
 
 Login details are the same as for the *API interaction through PowerCLI*
 
+## vCloud Connector endpoint authentication
+
+When authenticating to our vCloud endpoints using vCloud Connector, the details needed are the same as for the vCloud API. For example:
+
+URL: `api.vcd.portal.skyscapecloud.com/api`
+Username: `1-1-1@1-1-1-abcdef`
+
+For more information, see [*How to access vCloud Director through the vCloud API](vmw-how-access-vcloud-api.md#finding-your-vcloud-api-credentials).
+
 ## More information
 
 For more information about vCloud Connector, visit http://www.vmware.com/uk/products/vcloud-connector.

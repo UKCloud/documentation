@@ -35,30 +35,28 @@ Prerequisites from a Windows-based external client.
 > [!CAUTION]
 > In the 1802 example you can see that you need to install a Hotfix before you apply the upgrade. That is one of the many reasons why you should always check the official documentation.
 
-# High Level Overview of the process
+## High Level Overview of the process
 
 > [!IMPORTANT]
->
 >
 > We strongly recommend that you notify users of any maintenance operations, and that you schedule normal maintenance windows during non-business hours as much as possible. Maintenance operations may affect both user workloads and portal operations.
 
 1. Raise a pre-emptive case with Microsoft prior to starting the Update.
 
-2. Download required packages.
-* Full Manual procedure can be found here -> [more](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-apply-updates#import-and-install-updates)
-  * Download link -> [download](https://aka.ms/azurestackupdatedownload)
+2. Go to the **Update** blade on the Administration Portal.
 
-3. Upload the packages to Azure Stack.
+    > [!IMPORTANT]
+    > From 1807 onwards you no longer need to download Update and Hotfix packages manually.
+    >
+    > They are automatically pulled by Azure Stack itself and will show as **update available** in the portal.
 
-4. Start Update process.
+3. Start the Update process.
 
 > [!NOTE]
 > Automatic Update Guide to follow
 >
-> Code for Automatic Update can be found here -> [more](https://github.com/UKCloud/AZS_dev_black/tree/master/docs/code/powershell/Update)
+> You can find the code for automatic updates [here](https://github.com/UKCloud/AZS_dev_black/tree/master/docs/code/powershell/UpdateManagement).
 
-# Automated Update Guide
+## Feedback
 
-1. 
-
-(c) UKCloud Ltd, 2018. All Rights Reserved.
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.

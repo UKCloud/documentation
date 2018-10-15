@@ -55,6 +55,9 @@ To create DHCP pools on an advanced gateway:
 
 ## Creating a DHCP pool for a standard edge
 
+> [!NOTE]
+> You can only manage advanced gateways in the new vCloud Director 9.1 tenant portal. If you're working with a standard edge gateway, you must first switch to the vCloud Director web console to manage the edge. For more information, see [*How to switch to the vCloud Director web console from the tenant portal*](vmw-how-switch-web-console.md).
+
 To create DHCP pools on a standard edge:
 
 1. In vCloud Director, select the **Administration** tab.

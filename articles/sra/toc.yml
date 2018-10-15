@@ -6,3 +6,7 @@
   items:
   - name: Secure Remote Access
     href: sra-gs.md
+- name: How To
+  items:
+  - name: Add and remove users
+    href: sra-how-add-remove-users.md

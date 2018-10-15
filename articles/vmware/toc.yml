@@ -2,6 +2,8 @@
   items:
   - name: Journaling Protection FAQs
     href: vmw-faq-journaling-protection.md
+  - name: Service failover testing FAQs
+    href: vmw-faq-failover-testing.md
   - name: Sharing catalogs FAQs
     href: vmw-faq-sharing-catalogs.md
   - name: Snapshot Protection FAQs
@@ -12,6 +14,10 @@
     href: vmw-faq.md
 - name: Getting Started
   items:
+  - name: Build a virtual machine (vCloud Director 8.20)
+    href: vmw-how-build-vm.md
+  - name: Build a virtual machine (vCloud Director 9.1)
+    href: vmw-gs-build-vm-vcd91.md
   - name: Journaling Protection
     href: vmw-gs-journaling.md
   - name: UKCloud for VMware
@@ -36,8 +42,6 @@
     href: vmw-how-access-vcloud-api.md
   - name: Bring your own Red Hat licensing
     href: vmw-how-license-red-hat.md
-  - name: Build a virtual machine with UKCloud for VMware
-    href: vmw-how-build-vm.md
   - name: Build an edge gateway using the UKCloud Portal
     href: vmw-how-build-edge.md
   - name: Change IPsec VPN settings via the vCloud API
@@ -124,6 +128,8 @@
     href: vmw-how-use-vm-location.md
   - name: View and update virtual machine settings
     href: vmw-how-update-vm-settings.md
+  - name: View storage profile usage
+    href: vmw-how-view-storage-usage.md
   - name: View your VMs in the UKCloud Portal
     href: vmw-how-portal-view-vms.md
 - name: Reference
@@ -148,6 +154,8 @@
     href: vmw-ref-managing-portal-api.md
   - name: Naming virtual manchines
     href: vmw-ref-naming-vms.md
+  - name: Nested hypervisors
+    href: vmw-ref-nested-hypervisors.md
   - name: Network Time Protocol server access
     href: vmw-ref-network-time-server.md
   - name: Oversized VMs on the UKCloud platform

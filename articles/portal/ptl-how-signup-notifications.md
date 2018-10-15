@@ -8,7 +8,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Current infrastructure patch versions
+toc_title: Sign up for Portal notifications
 toc_fullpath: How To/ptl-how-signup-notifications.md
 toc_mdlink: ptl-how-signup-notifications.md
 ---

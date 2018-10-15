@@ -58,7 +58,7 @@ containers.
 
 ![OpenShift pods and containers](images/oshift-pods-containers.png)
 
-**OpenShift documentation:** [*Architecture*](https://docs.openshift.com/container-platform/3.5/architecture/index.html) and [*Container Security Guide*](https://docs.openshift.com/container-platform/3.5/security/index.html)
+**OpenShift documentation:** [*Architecture*](https://docs.openshift.com/container-platform/3.9/architecture/index.html) and [*Container Security Guide*](https://docs.openshift.com/container-platform/3.9/security/index.html)
 
 ## Before you begin
 
@@ -68,7 +68,7 @@ As part of your onboarding, UKCloud will provide you with a URL and credentials 
 
 In addition, we recommend the installation of the OpenShift CLI on your device.
 
-**OpenShift documentation:** [*Get Started with the CLI*](https://docs.openshift.com/container-platform/3.5/cli_reference/get_started_cli.html)
+**OpenShift documentation:** [*Get Started with the CLI*](https://docs.openshift.com/container-platform/3.9/cli_reference/get_started_cli.html)
 
 ## Initial environment
 
@@ -80,14 +80,14 @@ You can expand the Starter Pack in increments of 16GiB, to a maximum OpenShift e
 
 The OpenShift Container Platform web console is a user interface accessible from a web browser. Developers can use the web console to visualize, browse, and manage the contents of projects.
 
-**OpenShift documentation:** [*Web Console Walkthrough*](https://docs.openshift.com/container-platform/3.5/getting_started/developers_console.html)
+**OpenShift documentation:** [*Web Console Walkthrough*](https://docs.openshift.com/container-platform/3.9/getting_started/developers_console.html)
 
 ## Using the command-line interface
 
 With the OpenShift Container Platform command line interface (CLI), you can create applications and manage OpenShift Container Platform projects from a terminal.
 
-**OpenShift documentation:** [*Basic Walkthrough Using the CLI*](https://docs.openshift.com/container-platform/3.5/getting_started/developers_cli.html)
-and [*CLI Reference*](https://docs.openshift.com/container-platform/3.5/cli_reference/index.html)
+**OpenShift documentation:** [*Basic Walkthrough Using the CLI*](https://docs.openshift.com/container-platform/3.9/getting_started/developers_cli.html)
+and [*CLI Reference*](https://docs.openshift.com/container-platform/3.9/cli_reference/index.html)
 
 ## Using the API
 
@@ -95,23 +95,23 @@ The OpenShift Container Platform distribution of Kubernetes includes the Kuberne
 
 These REST APIs can be used to manage end-user applications, the cluster, and the users of the cluster.
 
-**OpenShift documentation:** [*REST API Reference*](https://docs.openshift.com/container-platform/3.5/rest_api/index.html)
+**OpenShift documentation:** [*REST API Reference*](https://docs.openshift.com/container-platform/3.9/rest_api/index.html)
 
 ## Developing and deploying applications
 
 OpenShift Container Platform is designed for building and deploying applications. You can begin your application's development from scratch using OpenShift Container Platform directly or develop locally then use OpenShift Container Platform to deploy your fully developed application.
 
-**OpenShift documentation:** [*Developer Guide*](https://docs.openshift.com/container-platform/3.5/dev_guide/index.html)
+**OpenShift documentation:** [*Developer Guide*](https://docs.openshift.com/container-platform/3.9/dev_guide/index.html)
 
 ## Creating and using images
 
 Containers in OpenShift Container Platform are based on Docker-formatted container images. An image is a binary that includes all the requirements for running a single container, as well as metadata describing its needs and capabilities. Containers only have access to resources defined in the image unless you give the container additional access when creating it.
 
-**OpenShift documentation:** [*Creating images*](https://docs.openshift.com/container-platform/3.5/creating_images/index.html) and [*Using images*](https://docs.openshift.com/container-platform/3.5/using_images/index.html)
+**OpenShift documentation:** [*Creating images*](https://docs.openshift.com/container-platform/3.9/creating_images/index.html) and [*Using images*](https://docs.openshift.com/container-platform/3.9/using_images/index.html)
 
 ## Next steps
 
-In this Getting Started Guide, you've learned the basics about UKCloud for OpenShift. For more information, see the OpenShift documentation at [*OpenShift Container Platform 3.5 Documentation*](https://docs.openshift.com/container-platform/3.5/welcome/index.html)
+In this Getting Started Guide, you've learned the basics about UKCloud for OpenShift. For more information, see the OpenShift documentation at [*OpenShift Container Platform 3.9 Documentation*](https://docs.openshift.com/container-platform/3.9/welcome/index.html)
 
 ## Glossary
 

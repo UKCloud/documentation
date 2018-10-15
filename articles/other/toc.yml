@@ -36,6 +36,8 @@
     href: other-ref-export-data.md
   - name: Protective Monitoring information in the UKCloud Portal
     href: other-ref-promon-showback.md
+  - name: Services at a glance
+    href: other-ref-product-overview.md
   - name: Services by region
     href: other-ref-services-by-region.md
   - name: Services by zone
@@ -44,6 +46,8 @@
     href: other-ref-srz-table.md
   - name: SLA definition
     href: other-ref-sla-definition.md
+  - name: UKCloud complaints procedure
+    href: other-ref-complaints.md
   - name: UKCloud Ideas
     href: other-ref-ideas.md
   - name: UKCloud Ideas competition terms and conditions
