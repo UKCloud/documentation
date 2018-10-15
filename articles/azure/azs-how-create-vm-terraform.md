@@ -1,20 +1,19 @@
 ---
-title: How to create a VM using Terraform on Azure Stack
+title: How to create a virtual machine using Terraform | UKCloud Ltd
 description: Learn how to create a VM using Terraform on Azure Stack
 services: azure-stack
 author: Chris Black
-
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2:
+toc_sub2: Create a virtual machine
 toc_sub3:
 toc_sub4:
-toc_title: Create a VM using Terraform on Azure Stack
-toc_fullpath: Users/How To/azs-how-create-vm-terraform.md
+toc_title: Create a virtual machine - Terraform
+toc_fullpath: Users/How To/Create a virtual machine/azs-how-create-vm-terraform.md
 toc_mdlink: azs-how-create-vm-terraform.md
 ---
 
-# How to create a VM using Terraform on Azure Stack
+# How to create a virtual machine using Terraform
 
 This document explains how to create a VM using **azurestack** Terraform provider with Service Principal Name authentication.
 
