@@ -218,7 +218,7 @@ Login-AzureRmAccount -EnvironmentName 'AzureStack'
 # Input Variables
 $RGName = '<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
 $SAName = '<output form="saname" name="result" style="display: inline;">&lt;Storage Account&gt;</output>'.ToLower()
-$Location = '<output form="region" name="result" style="display: inline;">frn00006&</output>'
+$Location = '<output form="region" name="result" style="display: inline;">frn00006</output>'
 
 # Create a new resource group
 New-AzureRmResourceGroup -Name $RGName -Location $Location
