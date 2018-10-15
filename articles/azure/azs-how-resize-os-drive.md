@@ -87,6 +87,31 @@ Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
 Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 ```
 
+## Quick Guide - Resize Managed Disk
+
+<pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
+Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Login-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Set your resource group name and VM name
+$RGName = '<output form="ResourceGroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
+$VMName = '<output form="VMName" name="result" style="display: inline;">&lt;VM Name&gt;</output>'
+
+# Obtain a reference to your VM
+$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+
+# Stop the VM before resizing the disk
+Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+
+# Managed Disk Resize
+$Disk = Get-AzureRmDisk -ResourceGroupName $rgName -DiskName $vm.StorageProfile.OsDisk.Name
+$Disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">&lt;Disk Size&gt;</output>
+Update-AzureRmDisk -ResourceGroupName $rgName -Disk $Disk -DiskName $Disk.Name
+
+# Restart the VM
+Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+</code></pre>
+
 ## Expanding the volume
 
 After expanding the disk, you must go into the OS and expand the volume to actually use the newly allocated space. To do so follow these steps:
