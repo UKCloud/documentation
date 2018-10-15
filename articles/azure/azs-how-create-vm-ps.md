@@ -216,6 +216,9 @@ Login-AzureRmAccount -EnvironmentName 'AzureStack'
 $RGName = '<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
 $SAName = '<output form="saname" name="result" style="display: inline;">&lt;Storage Account&gt;</output>'.ToLower()
 
+# Create a new resource group
+New-AzureRmResourceGroup -Name $RGName -Location 'frn00006'
+
 # Create a new storage account
 $StorageAccount = New-AzureRMStorageAccount -Location 'frn00006' -ResourceGroupName $RGName -Type 'Standard_LRS' -Name $SAName
 
