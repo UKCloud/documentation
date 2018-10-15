@@ -175,6 +175,10 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 > 
 > VM Image: <form onchange="result.value=vmimage.value" id="vmimage" style="display: inline;" >
 > <select name="vmimage" id="vmimage" style="display: inline;">
+>   <option value="/CentOS/Skus/6.10">CentOS-based 6.10</option>
+>   <option value="/CentOS/Skus/6.9">CentOS-based 6.9</option>
+>   <option value="/CentOS/Skus/7.3">CentOS-based 7.3</option>
+>   <option value="/CentOS/Skus/7.5">CentOS-based 7.5</option>
 >   <option value="/UbuntuServer/Skus/14.04.5-LTS">Ubuntu Server 14.04 LTS</option>
 >   <option value="/UbuntuServer/Skus/16.04-LTS">Ubuntu Server 16.04 LTS</option>
 >   <option value="/UbuntuServer/Skus/18.04-LTS">Ubuntu Server 18.04 LTS</option>
@@ -198,10 +202,6 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 >   <option value="/WindowsServer/Skus/2016-Datacenter">Windows Server 2016 Datacenter - Pay-as-you-use</option>
 >   <option value="/WindowsServer/Skus/2016-Datacenter-Server-Core">Windows Server 2016 Datacenter - Server Core - Pay as you use</option>
 >   <option value="/WindowsServer/Skus/2016-Datacenter-with-Containers">Windows Server 2016 Datacenter - with Containers - Pay as you use</option>
->   <option value="/CentOS/Skus/6.10">CentOS-based 6.10</option>
->   <option value="/CentOS/Skus/6.9">CentOS-based 6.9</option>
->   <option value="/CentOS/Skus/7.3">CentOS-based 7.3</option>
->   <option value="/CentOS/Skus/7.5">CentOS-based 7.5</option>
 > </select></form>
 
 From your PowerShell window:
@@ -227,7 +227,7 @@ $NICName = '<output form="nicname" name="result" style="display: inline;">myNIC<
 $VMName = '<output form="vmname" name="result" style="display: inline;">myVM</output>'
 $VMSize = '<output form="vmsize" name="result" style="display: inline;">Basic_A0</output>'
 $ComputerName = '<output form="compname" name="result" style="display: inline;">myComputer</output>'
-$VMImage = '*<output form="vmimage" name="result" style="display: inline;">/UbuntuServer/Skus/14.04.5-LTS</output>'
+$VMImage = '*<output form="vmimage" name="result" style="display: inline;">/CentOS/Skus/6.10</output>'
 
 
 # Create a new resource group
