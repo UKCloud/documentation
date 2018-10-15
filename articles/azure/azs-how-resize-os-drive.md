@@ -44,21 +44,6 @@ To complete the steps in this guide you must have the appropriate permissions on
 >
 > Note that the maximum size allowed for OS disks is 2048GB
 
-<pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
-Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
-Login-AzureRmAccount -EnvironmentName "AzureStackUser"
-
-# Set your resource group name and VM name
-$RGName = '<output form="ResourceGroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
-$VMName = '<output form="VMName" name="result" style="display: inline;">&lt;VM Name&gt;</output>'
-
-# Obtain a reference to your VM
-$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
-
-# Stop the VM before resizing the disk
-Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
-</code></pre>
-
 Please select the type of disk you are trying to expand:
 
 # [Managed Disk](#tab/tabid-1)
