@@ -34,7 +34,7 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 > Resource Group Name: <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;" >
 > <input  type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="myResourceGroup"/></form>
 >
-> Storage Account Name: <form oninput="result.value=saname.value;result2.value=saname.value;result3.value=saname.value" id="saname" style="display: inline;">
+> Storage Account Name: <form oninput="result.value=saname.value" id="saname" style="display: inline;">
 > <input  type="text" id="saname" name="saname" style="display: inline;" placeholder="myStorageAccount"/></form>
 >
 > Region Name: <form oninput="result.value=region.value" id="region" style="display: inline;" >
@@ -216,7 +216,7 @@ Login-AzureRmAccount -EnvironmentName 'AzureStack'
 
 # Input Variables
 $RGName = '<output form="resourcegroup" name="result" style="display: inline;">myResourceGroup</output>'
-$SAName = '<output form="saname" name="result" style="display: inline;">myStorageAccount</output>'.ToLower()
+$SAName = '<output form="saname" name="result" style="display: inline;">myStorageAccount<script>document.write(Math.round(Math.random()*100000000))</script></output>'.ToLower()
 $Location = '<output form="region" name="result" style="display: inline;">frn00006</output>'
 $SubnetName = '<output form="subnetname" name="result" style="display: inline;">mySubnet</output>'
 $SubnetRange = '<output form="subaddrrange" name="result" style="display: inline;">192.168.1.0/24</output>'
@@ -237,9 +237,6 @@ New-AzureRmResourceGroup -Name $RGName -Location $Location
 
 # Create a new storage account
 $StorageAccount = New-AzureRMStorageAccount -Location $Location -ResourceGroupName $RGName -Type 'Standard_LRS' -Name $SAName
-
-# Set the current storage account
-$SetStorageAccount = Set-AzureRmCurrentStorageAccount -StorageAccountName $SAName -ResourceGroupName $RGName
 
 ## Create network resources
 
