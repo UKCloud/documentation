@@ -219,6 +219,18 @@ Login-AzureRmAccount -EnvironmentName 'AzureStack'
 $RGName = '<output form="resourcegroup" name="result" style="display: inline;">myResourceGroup</output>'
 $SAName = '<output form="saname" name="result" style="display: inline;">myStorageAccount</output>'.ToLower()
 $Location = '<output form="region" name="result" style="display: inline;">frn00006</output>'
+$SubnetName = '<output form="subnetname" name="result" style="display: inline;">mySubnet</output>'
+$SubnetRange = '<output form="subaddrrange" name="result" style="display: inline;">192.168.1.0/24</output>'
+$VNetName = '<output form="vnetname" name="result" style="display: inline;">myVNetwork</output>'
+$VNetRange = '<output form="vnetaddrrange" name="result" style="display: inline;">192.168.1.0/16</output>'
+$PublicIPName = '<output form="publicipname" name="result" style="display: inline;">myPublicIP</output>'
+$NSGName = '<output form="nsgname" name="result" style="display: inline;">myNSG</output>'
+$NICName = '<output form="nicname" name="result" style="display: inline;">myNIC</output>'
+$VMName = '<output form="vmname" name="result" style="display: inline;">myVM</output>'
+$VMSize = '<output form="vmsize" name="result" style="display: inline;">Basic_A0</output>'
+$ComputerName = '<output form="compname" name="result" style="display: inline;">myComputer</output>'
+$VMImage = '*<output form="vmimage" name="result" style="display: inline;">/UbuntuServer/Skus/14.04.5-LTS</output>'
+
 
 # Create a new resource group
 New-AzureRmResourceGroup -Name $RGName -Location $Location
@@ -232,19 +244,19 @@ $SetStorageAccount = Set-AzureRmCurrentStorageAccount -StorageAccountName $SANam
 ## Create network resources
 
 # Create a subnet configuration
-$SubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name '<output form="subnetname" name="result" style="display: inline;">mySubnet</output>' -AddressPrefix '<output form="subaddrrange" name="result" style="display: inline;">192.168.1.0/24</output>'
+$SubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetRange
 
 # Create a virtual network
-$VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location $Location -Name '<output form="vnetname" name="result" style="display: inline;">myVNetwork</output>' -AddressPrefix '<output form="vnetaddrrange" name="result" style="display: inline;">192.168.1.0/16</output>' -Subnet $SubnetConfig
+$VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location $Location -Name $VNetName -AddressPrefix $VNetRange -Subnet $SubnetConfig
 
 # Create a public IP address
-$PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Location -AllocationMethod 'Dynamic' -Name '<output form="publicipname" name="result" style="display: inline;">myPublicIP</output>'
+$PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Location -AllocationMethod 'Dynamic' -Name $PublicIPName
 
 # Create a network security group
-$NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location $Location -Name '<output form="nsgname" name="result" style="display: inline;">myNSG</output>'
+$NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location $Location -Name $NSGName
 
 # Create a virtual network card and associate it with the public IP address and NSG
-$NetworkInterface = New-AzureRmNetworkInterface -Name '<output form="nicname" name="result" style="display: inline;">myNIC</output>' -ResourceGroupName $RGName -Location $Location -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
+$NetworkInterface = New-AzureRmNetworkInterface -Name $NICName -ResourceGroupName $RGName -Location $Location -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
 
 ## Create the virtual machine
 
@@ -254,20 +266,20 @@ $Password = '<output form="vmpassword" name="result" style="display: inline;">Pa
 $Credential = New-Object PSCredential($UserName,$Password)
 
 # Create the virtual machine configuration object
-$VirtualMachine = New-AzureRmVMConfig -VMName '<output form="vmname" name="result" style="display: inline;">myVM</output>' -VMSize '<output form="vmsize" name="result" style="display: inline;">Basic_A0</output>'
+$VirtualMachine = New-AzureRmVMConfig -VMName $VMName -VMSize $VMSize
 
 # Set the VM Size and Type
-$VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result" style="display: inline;">-Linux</output> -ComputerName '<output form="compname" name="result" style="display: inline;">myComputer</output>' -Credential $Credential
+$VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result" style="display: inline;">-Linux</output> -ComputerName $ComputerName -Credential $Credential
 
 # Get the VM Source Image
-$Image = Get-AzureRMVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object {$_.Id -like '*<output form="vmimage" name="result" style="display: inline;">/UbuntuServer/Skus/14.04.5-LTS</output>'}
+$Image = Get-AzureRMVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object {$_.Id -like $VMImage}
 
 # Set the VM Source Image
 $VirtualMachine =  Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version 'latest'
 
 #Set the OS Disk properties
 $OSDiskName = "OsDisk"
-$OSDiskUri = '{0}vhds/{1}-{2}.vhd' -f $StorageAccount.PrimaryEndpoints.Blob.ToString(), '<output form="vmname" name="result2" style="display: inline;">myVM</output>'.ToLower(), $OSDiskName
+$OSDiskUri = '{0}vhds/{1}-{2}.vhd' -f $StorageAccount.PrimaryEndpoints.Blob.ToString(), $VMName.ToLower(), $OSDiskName
 
 # Applies the OS disk properties and NIC to the virtual machine.
 $VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -CreateOption FromImage | Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id
