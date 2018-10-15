@@ -87,7 +87,8 @@
 <h2 id="overview">Overview</h2>
 <p>With UKCloud for Microsoft Azure, you can leverage the power of Microsoft Azure to create virtual machines (VMs) for your on-premises applications.
 As UKCloud for Microsoft Azure is built on UKCloud’s assured, UK-sovereign multi-cloud platform, those applications can work alongside other cloud platforms, such as Oracle,
-VMware and OpenStack, and benefit from native connectivity to non-cloud workloads in Crown Hosting and government community networks, including PSN, HSCN and RLI.</p>
+VMware and OpenStack, and benefit from native connectivity to non-cloud workloads in Crown Hosting and government community networks, including PSN, HSCN and RLI.
+Before creating the virtual machine, it is necessary to create storage and networking resources for the the VM to use.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Ensure your PowerShell environment is setup as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
 <h2 id="creating-storage-resources">Creating storage resources</h2>
@@ -140,19 +141,19 @@ Set-AzureRmCurrentStorageAccount -StorageAccountName $SAName -ResourceGroupName 
 </div>
 <p>From your PowerShell window:</p>
 <pre><code class="language-PowerShell"># Create a subnet configuration
-$subnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name '<output form="subnetname" name="result" style="display: inline;">&lt;Subnet Name&gt;</output>' -AddressPrefix '<output form="subaddrrange" name="result" style="display: inline;">&lt;Subnet Address Range&gt;</output>'
+$SubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name '<output form="subnetname" name="result" style="display: inline;">&lt;Subnet Name&gt;</output>' -AddressPrefix '<output form="subaddrrange" name="result" style="display: inline;">&lt;Subnet Address Range&gt;</output>'
 
 # Create a virtual network
-$vnet = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location 'frn00006' -Name '<output form="vnetname" name="result" style="display: inline;">&lt;Virtual Network Name&gt;</output>' -AddressPrefix '<output form="vnetaddrrange" name="result" style="display: inline;">&lt;Virtual Network Address Range&gt;</output>' -Subnet $subnetConfig
+$VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location 'frn00006' -Name '<output form="vnetname" name="result" style="display: inline;">&lt;Virtual Network Name&gt;</output>' -AddressPrefix '<output form="vnetaddrrange" name="result" style="display: inline;">&lt;Virtual Network Address Range&gt;</output>' -Subnet $SubnetConfig
 
 # Create a public IP address
-$pip = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location 'frn00006' -AllocationMethod 'Dynamic' -Name '<output form="publicipname" name="result" style="display: inline;">&lt;Public IP Name&gt;</output>'
+$PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location 'frn00006' -AllocationMethod 'Dynamic' -Name '<output form="publicipname" name="result" style="display: inline;">&lt;Public IP Name&gt;</output>'
 
 # Create a network security group
-$nsg = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location 'frn00006' -Name '<output form="nsgname" name="result" style="display: inline;">&lt;Network Security Group Name&gt;</output>'
+$NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location 'frn00006' -Name '<output form="nsgname" name="result" style="display: inline;">&lt;Network Security Group Name&gt;</output>'
 
 # Create a virtual network card and associate it with the public IP address and NSG
-$nic = New-AzureRmNetworkInterface -Name '<output form="nicname" name="result" style="display: inline;">&lt;Network Interface Card Name&gt;</output>' -ResourceGroupName $RGName -Location 'frn00006' -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $pip.Id -NetworkSecurityGroupId $nsg.Id
+$NetworkInterface = New-AzureRmNetworkInterface -Name '<output form="nicname" name="result" style="display: inline;">&lt;Network Interface Card Name&gt;</output>' -ResourceGroupName $RGName -Location 'frn00006' -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
 </code></pre>
 <h2 id="creating-a-virtual-machine">Creating a virtual machine</h2>
 <div class="IMPORTANT">
@@ -299,7 +300,7 @@ $nic = New-AzureRmNetworkInterface -Name '<output form="nicname" name="result" s
 <pre><code class="language-PowerShell"># Define a credential object to store the username and password for the virtual machine
 $UserName='<output form="vmusername" name="result" style="display: inline;">&lt;VM Username&gt;</output>'
 $Password='<output form="vmpassword" name="result" style="display: inline;">&lt;VM Password&gt;</output>'| ConvertTo-SecureString -Force -AsPlainText
-$Credential=New-Object PSCredential($UserName,$Password)
+$Credential = New-Object PSCredential($UserName,$Password)
 
 # Create the virtual machine configuration object
 $VirtualMachine = New-AzureRmVMConfig -VMName '<output form="vmname" name="result" style="display: inline;">&lt;VM Name&gt;</output>' -VMSize '<output form="vmsize" name="result" style="display: inline;">Basic_A0</output>'
@@ -311,14 +312,14 @@ $VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form=
 $Image = Get-AzureRMVMImagePublisher -Location 'frn00006' | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | where {$_.Id -like '*<output form="vmimage" name="result" style="display: inline;">/UbuntuServer/Skus/14.04.5-LTS</output>*'}
 
 # Set the VM Source Image
-$VirtualMachine2 =  Set-AzureRmVMSourceImage -vm $VirtualMachine -PublisherName $Image.PublisherName -Offer $image.Offer -Skus $image.Skus -version 'latest'
+$VirtualMachine =  Set-AzureRmVMSourceImage -vm $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -version 'latest'
 
 #Set the OS Disk properties
-$osDiskName = "OsDisk"
-$osDiskUri = '{0}vhds/{1}-{2}.vhd' -f $StorageAccount.PrimaryEndpoints.Blob.ToString(), '<output form="vmname" name="result2" style="display: inline;">&lt;VM Name&gt;</output>'.ToLower(), $osDiskName
+$OSDiskName = "OsDisk"
+$OSDiskUri = '{0}vhds/{1}-{2}.vhd' -f $StorageAccount.PrimaryEndpoints.Blob.ToString(), '<output form="vmname" name="result2" style="display: inline;">&lt;VM Name&gt;</output>'.ToLower(), $OSDiskName
 
 # Applies the OS disk properties and NIC to the virtual machine.
-$VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $osDiskName -VhdUri $OsDiskUri -CreateOption FromImage | Add-AzureRmVMNetworkInterface -Id $nic.Id
+$VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -CreateOption FromImage | Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id
 
 # Create the virtual machine.
 New-AzureRmVM -ResourceGroupName $ResourceGroupName -Location 'frn00006' -VM $VirtualMachine
