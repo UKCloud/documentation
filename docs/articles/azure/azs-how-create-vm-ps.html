@@ -100,30 +100,6 @@ Before creating the virtual machine, it is necessary to create storage and netwo
 <input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="myResourceGroup"></form></p>
 <p>Storage Account Name: <form oninput="result.value=saname.value;result2.value=saname.value;result3.value=saname.value" id="saname" style="display: inline;">
 <input type="text" id="saname" name="saname" style="display: inline;" placeholder="myStorageAccount"></form></p>
-</div>
-<p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Add environment
-Add-AzureRMEnvironment -Name 'AzureStack' -ArmEndpoint 'https://management.frn00006.azure.ukcloud.com'
-
-# Login
-Login-AzureRmAccount -EnvironmentName 'AzureStack'
-
-# Input Variables
-$RGName = '<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
-$SAName = '<output form="saname" name="result" style="display: inline;">&lt;Storage Account&gt;</output>'.ToLower()
-
-# Create a new storage account
-$StorageAccount = New-AzureRMStorageAccount -Location 'frn00006' -ResourceGroupName $RGName -Type 'Standard_LRS' -Name $SAName
-
-# Set the current storage account
-Set-AzureRmCurrentStorageAccount -StorageAccountName $SAName -ResourceGroupName $RGName
-</code></pre>
-<p>This will create a storage account in the specified resource group.</p>
-<h2 id="creating-networking-resources">Creating networking resources</h2>
-<p>Create a virtual network, subnet, public IP address, network security group and network interface card. These networking resources provide connectivity for the virtual machine.</p>
-<div class="IMPORTANT">
-<h5>Important</h5>
-<p>Enter details below to provide values for the variables in the following script in this article:</p>
 <p>Subnet Name: <form oninput="result.value=subnetname.value" id="subnetname" style="display: inline;">
 <input type="text" id="subnetname" name="subnetname" style="display: inline;" placeholder="mySubnet"></form></p>
 <p>Subnet Address Range (CIDR Notation): <form oninput="result.value=subaddrrange.value" id="subaddrrange" style="display: inline;">
@@ -138,31 +114,10 @@ Set-AzureRmCurrentStorageAccount -StorageAccountName $SAName -ResourceGroupName 
 <input type="text" id="nsgname" name="nsgname" style="display: inline;" placeholder="myNSG"></form></p>
 <p>Network Interface Card Name: <form oninput="result.value=nicname.value" id="nicname" style="display: inline;">
 <input type="text" id="nicname" name="nicname" style="display: inline;" placeholder="myNIC"></form></p>
-</div>
-<p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Create a subnet configuration
-$SubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name '<output form="subnetname" name="result" style="display: inline;">&lt;Subnet Name&gt;</output>' -AddressPrefix '<output form="subaddrrange" name="result" style="display: inline;">&lt;Subnet Address Range&gt;</output>'
-
-# Create a virtual network
-$VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location 'frn00006' -Name '<output form="vnetname" name="result" style="display: inline;">&lt;Virtual Network Name&gt;</output>' -AddressPrefix '<output form="vnetaddrrange" name="result" style="display: inline;">&lt;Virtual Network Address Range&gt;</output>' -Subnet $SubnetConfig
-
-# Create a public IP address
-$PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location 'frn00006' -AllocationMethod 'Dynamic' -Name '<output form="publicipname" name="result" style="display: inline;">&lt;Public IP Name&gt;</output>'
-
-# Create a network security group
-$NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location 'frn00006' -Name '<output form="nsgname" name="result" style="display: inline;">&lt;Network Security Group Name&gt;</output>'
-
-# Create a virtual network card and associate it with the public IP address and NSG
-$NetworkInterface = New-AzureRmNetworkInterface -Name '<output form="nicname" name="result" style="display: inline;">&lt;Network Interface Card Name&gt;</output>' -ResourceGroupName $RGName -Location 'frn00006' -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
-</code></pre>
-<h2 id="creating-a-virtual-machine">Creating a virtual machine</h2>
-<div class="IMPORTANT">
-<h5>Important</h5>
-<p>Enter details below to provide values for the variables in the following script in this article:</p>
 <p>VM Username: <form oninput="result.value=vmusername.value" id="vmusername" style="display: inline;">
 <input type="text" id="vmusername" name="vmusername" style="display: inline;" placeholder="myUser"></form></p>
 <p>VM Password: <form oninput="result.value=vmpassword.value" id="vmpassword" style="display: inline;">
-<input type="text" id="vmpassword" name="vmpassword" style="display: inline;" placeholder="CorrectHorseBatteryStaple"></form></p>
+<input type="text" id="vmpassword" name="vmpassword" style="display: inline;" placeholder="Password123!"></form></p>
 <p>VM Name: <form oninput="result.value=vmname.value;result2.value=vmname.value" id="vmname" style="display: inline;">
 <input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="myVM"></form></p>
 <p>VM Size <a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-vm-sizes">(More info)</a>: <form onchange="result.value=vmsize.value" id="vmsize" style="display: inline;">
@@ -297,7 +252,43 @@ $NetworkInterface = New-AzureRmNetworkInterface -Name '<output form="nicname" na
 </select></form>
 </div>
 <p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Define a credential object to store the username and password for the virtual machine
+<pre><code class="language-PowerShell">## Create storage resources
+# Add environment
+Add-AzureRMEnvironment -Name 'AzureStack' -ArmEndpoint 'https://management.frn00006.azure.ukcloud.com'
+
+# Login
+Login-AzureRmAccount -EnvironmentName 'AzureStack'
+
+# Input Variables
+$RGName = '<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
+$SAName = '<output form="saname" name="result" style="display: inline;">&lt;Storage Account&gt;</output>'.ToLower()
+
+# Create a new storage account
+$StorageAccount = New-AzureRMStorageAccount -Location 'frn00006' -ResourceGroupName $RGName -Type 'Standard_LRS' -Name $SAName
+
+# Set the current storage account
+Set-AzureRmCurrentStorageAccount -StorageAccountName $SAName -ResourceGroupName $RGName
+
+## Create network resources
+
+# Create a subnet configuration
+$SubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name '<output form="subnetname" name="result" style="display: inline;">&lt;Subnet Name&gt;</output>' -AddressPrefix '<output form="subaddrrange" name="result" style="display: inline;">&lt;Subnet Address Range&gt;</output>'
+
+# Create a virtual network
+$VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location 'frn00006' -Name '<output form="vnetname" name="result" style="display: inline;">&lt;Virtual Network Name&gt;</output>' -AddressPrefix '<output form="vnetaddrrange" name="result" style="display: inline;">&lt;Virtual Network Address Range&gt;</output>' -Subnet $SubnetConfig
+
+# Create a public IP address
+$PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location 'frn00006' -AllocationMethod 'Dynamic' -Name '<output form="publicipname" name="result" style="display: inline;">&lt;Public IP Name&gt;</output>'
+
+# Create a network security group
+$NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location 'frn00006' -Name '<output form="nsgname" name="result" style="display: inline;">&lt;Network Security Group Name&gt;</output>'
+
+# Create a virtual network card and associate it with the public IP address and NSG
+$NetworkInterface = New-AzureRmNetworkInterface -Name '<output form="nicname" name="result" style="display: inline;">&lt;Network Interface Card Name&gt;</output>' -ResourceGroupName $RGName -Location 'frn00006' -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
+
+## Create the virtual machine
+
+# Define a credential object to store the username and password for the virtual machine
 $UserName='<output form="vmusername" name="result" style="display: inline;">&lt;VM Username&gt;</output>'
 $Password='<output form="vmpassword" name="result" style="display: inline;">&lt;VM Password&gt;</output>'| ConvertTo-SecureString -Force -AsPlainText
 $Credential = New-Object PSCredential($UserName,$Password)
