@@ -405,7 +405,7 @@ To configure CloudArray:
 
     A provisioning policy connects a cloud provider and a cache.
 
-    ![Cloud Optimizer]((images/cs-cloud-array-web-gui-configuration-step-14.png) )
+    ![Cloud Optimizer](images/cs-cloud-array-web-gui-configuration-step-14.png)
 
 17. On the *Configure Cache* page, configure the cache and connection speed.
 
@@ -475,12 +475,16 @@ If you are successful at this point, then CloudArray should be able to connect.
 
 This guide has shown you how to create a new Cloud Storage user. For more information about how to use the service, see the following articles:
 
+- [*Getting Started Guide for Cloud Storage*](cs-gs.md)
+
 - [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
+
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
+
 - Cloud Storage Gateways
-    - [CIFS-ECS Tool](cs-how-install-cifs-ecs.md)
-    - [CloudArray](cs-how-setup-cloud-array.md)
-- [Using file browsers with UKCloud Cloud Storage](cs-file-browsers.md)
+    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+
+- [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 
