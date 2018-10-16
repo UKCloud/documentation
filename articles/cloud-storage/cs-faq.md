@@ -146,7 +146,14 @@ Storage is billed on a per-GiB per-month basis, and is based on utilisation of t
 
 ### How is my storage bill calculated?
 
-Used storage is calculated on a daily basis. The data for a month is collected, and the average consumption calculated and rounded up to the next whole number to provide the number of GiB consumed in a month.
+Used storage is calculated on a daily basis. The data for a month is collected, and the average consumption calculated and rounded up to the next whole number to provide the number of GiB consumed in a month. The charge for the total storage is based on a tiering basis as per the Service Definition. When your storage consumption moves into the next tier, only the amount of storage above the previous tier threshold is charged at the lower price.
+
+As an example, if a customer uses 520TiB of storage in a month, their charges are calculated as:
+
+* 250TiB x £0.0200 = £5,000
+* 250TiB x £0.0180 = £4,500
+* 20TiB x £0.0162 = £324
+* Total cost = £9,824
 
 ### How can I view billing information?
 
