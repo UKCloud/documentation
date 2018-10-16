@@ -368,9 +368,14 @@ To access your Cloud Storage service in the UKCloud Portal:
 In this Getting Started Guide, you've learned the basics about the Cloud Storage service. For more detailed information, see the following articles in the Knowledge Centre:
 
 - [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
+
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
-- [*Blueprint -- Using storage gateways with Cloud Storage (ECS)*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf)
-- [*Blueprint -- Using file browsers with Cloud Storage (ECS)*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-575-Blueprint-Using-file-browsers-with-Cloud-Storage-ECS-v1.pdf)
+
+- Cloud Storage Gateways
+    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+
+- [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Glossary
 
