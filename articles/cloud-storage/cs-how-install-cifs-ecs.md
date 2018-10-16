@@ -1,5 +1,5 @@
 ---
-title: How to install CIFS-ECS | UKCloud Ltd
+title: How to install the CIFS-ECS Tool| UKCloud Ltd
 description: Installation Guide for CIFS-ECS Tool
 services: cloud-storage
 author: Dan Baker
@@ -8,16 +8,21 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: How to install CIFS-ECS
+toc_title: Install the CIFS-ECS Tool
 toc_fullpath: How To/cs-how-install-cifs-ecs.md
 toc_mdlink: cs-how-install-cifs-ecs.md
 ---
 
-# How to install CIFS-ECS
+# How to install the CIFS-ECS Tool
 
 ## What is CIFS-ECS?
 
 CIFS-ECS is a free application that runs on Windows and Windows Server, exposing UKCloud Cloud Storage as file systems. It’s designed as an easy way to use object storage by enabling Windows applications to interface with Cloud Storage servers using the popular S3 REST API.
+
+If you require a fully-integrated cloud gateway appliance with features like advanced deduplication and location caching, you may want to consider [CloudArrary](cs-how-install-cloudarray.md) as an alternative. 
+
+> [!NOTE]
+> Unlike CIFS-ECS, CloudArray is not a free application.
 
 ## Use cases
 
@@ -37,7 +42,7 @@ CIFS-ECS offers a single caching option:
 
 ## Installing CIFS-ECS
 
-1. Navigate to the following Portal page to download the ZIP file that contains the CIFS-ECS installer: [CIFS-ECS Tool](https://portal.ukcloud.com/support/knowledge_centre/85dc54ff-7d21-43ac-9cfa-88e87de7ba27).
+1. Navigate to the following Portal page to download the ZIP file that contains the [CIFS-ECS installer](https://portal.ukcloud.com/support/knowledge_centre/85dc54ff-7d21-43ac-9cfa-88e87de7ba27).
 
     To download CIFS-ECS you'll need your UKCloud Portal log in details.
 
@@ -81,6 +86,7 @@ S3 API endpoints:
   - PSN Assured: `cas.cor00005.psnassured.ukcloud.com`
   - N3: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
   
+  
 - **Farnborough (Assured)**
 
   - Internet: `cas.frn00006.ukcloud.com`
@@ -115,7 +121,22 @@ S3 API endpoints:
     ![CIFS-ECS drive in windows](images/cs-ecs-installtion-step-five.png) |![Inside the CIFS-ECS drive](images/cs-ecs-installtion-step-six.png)
 
     > [!TIP]
-    > See Microsoft's How-To guide on how to share a a drive on the network from Windows: https://support.microsoft.com/en-gb/help/4092694/windows-10-changes-to-file-sharing-over-a-network
+    > See Microsoft's How-To guide on [how to share a a drive on the network from Windows](https://support.microsoft.com/en-gb/help/4092694/windows-10-changes-to-file-sharing-over-a-network).
+    
+## Next steps
+
+This guide has shown you how to create a new Cloud Storage user. For more information about how to use the service, see the following articles:
+
+- [*Getting Started Guide for Cloud Storage*](cs-gs.md)
+
+- [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
+
+- [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
+
+- Cloud Storage Gateways
+    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+
+- [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 
