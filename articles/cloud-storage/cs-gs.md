@@ -369,8 +369,10 @@ In this Getting Started Guide, you've learned the basics about the Cloud Storage
 
 - [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
-- [*Blueprint -- Using storage gateways with Cloud Storage (ECS)*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf)
-- [*Blueprint -- Using file browsers with Cloud Storage (ECS)*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-575-Blueprint-Using-file-browsers-with-Cloud-Storage-ECS-v1.pdf)
+- Cloud Storage Gateways
+    - [CIFS-ECS Tool](cs-how-install-cifs-ecs.md)
+    - [CloudArray](cs-how-setup-cloud-array.md)
+- [Using file browsers with UKCloud Cloud Storage](cs-file-browsers.md)
 
 ## Glossary
 
