@@ -8,7 +8,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: How to install the CIFS-ECS Tool
+toc_title: Install the CIFS-ECS Tool
 toc_fullpath: How To/cs-how-install-cifs-ecs.md
 toc_mdlink: cs-how-install-cifs-ecs.md
 ---
@@ -22,7 +22,7 @@ CIFS-ECS is a free application that runs on Windows and Windows Server, exposing
 If you require a fully-integrated cloud gateway appliance with features like advanced deduplication and location caching, you may want to consider [CloudArrary](cs-how-install-cloudarray.md) as an alternative. 
 
 > [!NOTE]
-> Unlike CIFS-ECS, CloudArray is not a free application like CIFS-ECS.
+> Unlike CIFS-ECS, CloudArray is not a free application.
 
 ## Use cases
 
@@ -121,18 +121,23 @@ S3 API endpoints:
     ![CIFS-ECS drive in windows](images/cs-ecs-installtion-step-five.png) |![Inside the CIFS-ECS drive](images/cs-ecs-installtion-step-six.png)
 
     > [!TIP]
-    > See Microsoft's How-To guide on [how to share a a drive on the network from Windows](https://support.microsoft.com/en-gb/help/4092694/windows-10-changes-to-file-sharing-over-a-network)
+    > See Microsoft's How-To guide on [how to share a a drive on the network from Windows](https://support.microsoft.com/en-gb/help/4092694/windows-10-changes-to-file-sharing-over-a-network).
     
 ## Next steps
 
 This guide has shown you how to create a new Cloud Storage user. For more information about how to use the service, see the following articles:
 
+- [*Getting Started Guide for Cloud Storage*](cs-gs.md)
+
 - [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
+
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
+
 - Cloud Storage Gateways
-    - [CIFS-ECS Tool](cs-how-install-cifs-ecs.md)
-    - [CloudArray](cs-how-setup-cloud-array.md)
-- [Using file browsers with UKCloud Cloud Storage](cs-file-browsers.md)
+    - [*How to install the CIFS-ECS Tool*](cs-how-install-cifs-ecs.md)
+    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+
+- [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 
