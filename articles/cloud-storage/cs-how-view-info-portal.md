@@ -99,10 +99,14 @@ In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down
 This guide has shown you how you can view information about your Cloud Storage service in the UKCloud Portal. For information about how to use the service, see the following articles:
 
 - [*Getting Started Guide for Cloud Storage*](cs-gs.md)
+
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
-- [*How to reset your Cloud Storage secret key*](cs-how-reset-secret-key.md)
-- [*Blueprint -- Using storage gateways with Cloud Storage*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf)
-- [*Blueprint -- Using file browsers with Cloud Storage*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-575-Blueprint-Using-file-browsers-with-Cloud-Storage-ECS-v1.pdf)
+
+- Cloud Storage Gateways
+  - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+
+- [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 
