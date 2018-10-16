@@ -10,10 +10,14 @@
   items:
   - name: Create a new Cloud Storage user
     href: cs-how-create-user.md
-  - name: How to install CIFS-ECS
+  - name: Install CloudArray
+    href: cs-how-install-cloudarray.md
+  - name: Install the CIFS-ECS Tool
     href: cs-how-install-cifs-ecs.md
   - name: Reset your Cloud Storage secret key
     href: cs-how-reset-secret-key.md
+  - name: Use file browsers with Cloud Storage
+    href: cs-how-use-file-browsers.md
   - name: View Cloud Storage information in the UKCloud Portal
     href: cs-how-view-info-portal.md
 - name: Reference

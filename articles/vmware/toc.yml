@@ -144,6 +144,8 @@
     href: vmw-ref-cant-manage-edge.md
   - name: Cloning vApps using PowerCLI
     href: vmw-ref-cloning-vapps.md
+  - name: Comparison of UKCloud for VMware against hyperscalers
+    href: vmw-ref-comparison-hyperscalers.md
   - name: Edge gateways and high availability
     href: vmw-ref-edge-ha.md
   - name: Fix for customers unable to upload and download vApps or catalog items

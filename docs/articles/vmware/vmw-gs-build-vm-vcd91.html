@@ -8,7 +8,7 @@
     <title>How to build a virtual machine with UKCloud for VMware (vCloud Director 9.1) | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to build a virtual machine with UKCloud for VMware (vCloud Director 9.1) | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -229,6 +229,10 @@
 </li>
 </ul>
 <p>These settings allow traffic from the VMs (<strong>Source</strong> = <code>internal</code>) to reach destinations outside your VDC (<strong>Destination</strong> = <code>external</code>) on port <code>443</code> (HTTPS). You'll need to repeat these steps for ports <code>80</code> (HTTP) and <code>53</code> (DNS).</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For DNS, the protocol should be UDP.</p>
+</div>
 <p>You can also allow traffic to reach your VMs from outside your VDC by swapping the <strong>Source</strong> and <strong>Destination</strong> values. However, because this opens up your firewall to a lot of traffic, we recommend that you first complete this guide to get comfortable with general networking concepts, and then take a look at the information in <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a> where you can find out how to lock the firewall down.</p>
 <p><img src="images/vmw-vcd-adv-edge-firewall-new-rule.png" alt="New firewall rule"></p>
 </li>
