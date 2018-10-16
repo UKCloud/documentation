@@ -19,6 +19,11 @@ toc_mdlink: cs-how-install-cifs-ecs.md
 
 CIFS-ECS is a free application that runs on Windows and Windows Server, exposing UKCloud Cloud Storage as file systems. It’s designed as an easy way to use object storage by enabling Windows applications to interface with Cloud Storage servers using the popular S3 REST API.
 
+If you require a fully-integrated cloud gateway appliance with features like advanced deduplication and location caching, you may want to consider [CloudArrary](cs-how-install-cloudarray.md) as an alternative. 
+
+> [!NOTE]
+> Unlike CIFS-ECS, CloudArray is not a free application like CIFS-ECS.
+
 ## Use cases
 
 You can use CIFS-ECS to:
