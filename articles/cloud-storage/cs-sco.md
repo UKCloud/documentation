@@ -33,7 +33,7 @@ Organisations can choose from two service levels:
 
 If you want more control and visibility of your disaster recovery solution, you can design your solution to write data independently to each data centre at our STANDARD service level, instead of using our ENHANCED service level.
 
-Full details of the available service options are outlined in the Service Definition ([Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/946099568360634-service-definition-document-2018-05-21-1258.pdf)).
+Full details of the available service options are outlined in the [Service Definition](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf).
 
 ## Service availability
 
@@ -65,9 +65,10 @@ Users can access, manage and view their Cloud Storage service, in any of the fol
 
 - **Command Line Interface (CLI).** CLI tools enable access from the command line by translating commands into the relevant API calls.
 
-- **Storage Gateways.** These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see the Cloud Storage Gateways Knowledge Centre article:
-    - [CIFS-ECS Tool](cs-how-install-cifs-ecs.md)
-    - [CloudArray](cs-how-setup-cloud-array.md)
+- **Storage Gateways.** These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see the appropriate Cloud Storage Gateways Knowledge Centre article:
+
+    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
 - **UKCloud Portal.** Contains information about the namespaces and users within your Cloud Storage environment, as well as a graphical representation of your storage consumption. For more information on the Portal functionality, see [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md).
 
@@ -159,7 +160,7 @@ If during Emergency Maintenance there is a loss of availability to the service, 
 
 The following documents contain more information about Cloud Storage and the service options:
 
-- *Cloud Storage Service Definition* ([Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/946099568360634-service-definition-document-2018-05-21-1258.pdf))
+- [*Cloud Storage Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf)
 
 - [*Cloud Storage FAQ*](cs-faq.md)
 
@@ -168,7 +169,7 @@ The following documents contain more information about Cloud Storage and the ser
 - [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
 
 - Cloud Storage Gateways
-    - [CIFS-ECS Tool](cs-how-install-cifs-ecs.md)
-    - [CloudArray](cs-how-setup-cloud-array.md)
+    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
     
-- [Using file browsers with UKCloud Cloud Storage](cs-file-browsers.md)
+- [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
