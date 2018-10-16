@@ -471,6 +471,17 @@ Complete the following steps to verify your Cloud Storage credentials and connec
 
 If you are successful at this point, then CloudArray should be able to connect.
 
+## Next steps
+
+This guide has shown you how to create a new Cloud Storage user. For more information about how to use the service, see the following articles:
+
+- [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
+- [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
+- Cloud Storage Gateways
+    - [CIFS-ECS Tool](cs-how-install-cifs-ecs.md)
+    - [CloudArray](cs-how-setup-cloud-array.md)
+- [Using file browsers with UKCloud Cloud Storage](cs-file-browsers.md)
+
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
