@@ -1056,7 +1056,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-faq.html",
-          "hash": "jIAmWMEWMjE7+69l/XOyAg=="
+          "hash": "7ZAxd0Vl/Ijo5QkrjyORCw=="
         }
       },
       "is_incremental": false,
@@ -3710,7 +3710,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-gs.html",
-          "hash": "YkcQgkIc0huYTdcr29qimg=="
+          "hash": "A1k14lUkrmLkN8G538aqdw=="
         }
       },
       "is_incremental": false,
@@ -13241,11 +13241,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -13253,6 +13248,11 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
