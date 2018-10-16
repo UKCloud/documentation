@@ -165,6 +165,8 @@ The following documents contain more information about Cloud Storage and the ser
 
 - [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
 
-- [*Blueprint -- Using Storage Gateways with Cloud Storage*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf)
-
-- [*Blueprint -- Using File Browsers with Cloud Storage*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-575-Blueprint-Using-file-browsers-with-Cloud-Storage-ECS-v1.pdf)
+- Cloud Storage Gateways
+    - [CIFS-ECS Tool](cs-how-install-cifs-ecs.md)
+    - [CloudArray](cs-how-setup-cloud-array.md)
+    
+- [Using file browsers with UKCloud Cloud Storage](cs-file-browsers.md)
