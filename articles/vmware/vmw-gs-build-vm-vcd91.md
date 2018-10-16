@@ -181,7 +181,10 @@ Let's start with firewall rules:
 
     - **Action** - **Accept**
 
-    These settings allow traffic from the VMs (**Source** = `internal`) to reach destinations outside your VDC (**Destination** = `external`) on port `443` (HTTPS). You'll need to repeat these steps for ports `80` (HTTP) and `53` (DNS). Please note the protocol should be UDP for DNS. 
+    These settings allow traffic from the VMs (**Source** = `internal`) to reach destinations outside your VDC (**Destination** = `external`) on port `443` (HTTPS). You'll need to repeat these steps for ports `80` (HTTP) and `53` (DNS).
+    
+    > [!NOTE]
+    > For DNS, the protocol should be UDP.
 
     You can also allow traffic to reach your VMs from outside your VDC by swapping the **Source** and **Destination** values. However, because this opens up your firewall to a lot of traffic, we recommend that you first complete this guide to get comfortable with general networking concepts, and then take a look at the information in [*How to create firewall rules*](vmw-how-create-firewall-rules.md) where you can find out how to lock the firewall down.
 
