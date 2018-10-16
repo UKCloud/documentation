@@ -65,7 +65,9 @@ Users can access, manage and view their Cloud Storage service, in any of the fol
 
 - **Command Line Interface (CLI).** CLI tools enable access from the command line by translating commands into the relevant API calls.
 
-- **Storage Gateways.** These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. See [*Blueprint -- Using Storage Gateways with Cloud Storage*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf) for more information.
+- **Storage Gateways.** These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see the Cloud Storage Gateways Knowledge Centre article:
+    - [CIFS-ECS Tool](cs-how-install-cifs-ecs.md)
+    - [CloudArray](cs-how-setup-cloud-array.md)
 
 - **UKCloud Portal.** Contains information about the namespaces and users within your Cloud Storage environment, as well as a graphical representation of your storage consumption. For more information on the Portal functionality, see [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md).
 
