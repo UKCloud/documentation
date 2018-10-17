@@ -36,10 +36,11 @@ Prerequisites from a Windows-based external client.
   ```powershell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
-  # PowerShell commands for Azure Stack are installed through the PowerShell gallery. To register the PSGallery repository, open an elevated PowerShell session from the development kit # or  from a Windows-based external client if you are connected through VPN and run the following command:
+  # PowerShell commands for Azure Stack are installed through the PowerShell gallery. To register the PSGallery repository, open an elevated PowerShell session from the development kit 
+  # or  from a Windows-based external client if you are connected through VPN and run the following command:
   Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
   # Uninstall existing versions of PowerShell
-  Get-Module -ListAvailable | where-Object {$_.Name -like “Azure*”} | Uninstall-Module
+  Get-Module -ListAvailable | Where-Object {$_.Name -like "Azure*" -or $_.Name -like "Azs*"} | Uninstall-Module -Force
   # Install the AzureRM.Bootstrapper module. Select Yes when prompted to install NuGet
   Install-Module -Name AzureRm.BootStrapper
   # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
@@ -62,7 +63,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
   # Sign in to your environment
   Login-AzureRmAccount -EnvironmentName "AzureStackUser"
-   ```
+  ```
 
 ### Azure Active Directory (AAD) based deployments - Embedded Credentials
 
@@ -81,7 +82,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
   # Sign in to your environment
   Login-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackUser"
-   ```
+  ```
 
 ## Test the connectivity
 

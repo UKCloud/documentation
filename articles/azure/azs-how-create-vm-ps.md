@@ -236,7 +236,7 @@ New-AzureRmResourceGroup -Name $RGName -Location $Location
 ## Create storage resources
 
 # Create a new storage account
-$StorageAccount = New-AzureRMStorageAccount -Location $Location -ResourceGroupName $RGName -Type 'Standard_LRS' -Name $SAName
+$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type 'Standard_LRS' -Name $SAName
 
 ## Create network resources
 
