@@ -68,7 +68,7 @@ To create a new user:
 
     f. In the **Request Summary** field, enter `Add Portal users to OpenShift cluster`.
 
-    g. In the **Please provide any further details regarding your request** field, enter the names of the users that you want to add to the OpenShift cluster.
+    g. In the **Please provide any further details regarding your request** field, enter the name(s) of the user(s), and their username(s), that you want to add to the OpenShift cluster, along with the URL of the cluster that the user(s) should be added to. If there are multiple clusters the user(s) needs adding to then specify all of the cluster URLs here and it can be completed as one task.
 
     h. When you're done, click **Submit**.
 
