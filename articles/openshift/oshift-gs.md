@@ -98,7 +98,7 @@ If your OpenShift cluster uses OpenShift Container Platform (OCP) 3.10 or later,
 Alternatively, you can obtain the CLI login command (including login token) from the OpenShift console by clicking your user name and selecting **Copy Login Command**.
 
 > [!NOTE]
-> The token in the log in command supplied through the URL or OpenShift console is valid only for a limited time. If you require a more longer lasting token, you can use a service account token. For more information see the OpenShift [*Service Accounts*](https://docs.openshift.com/container-platform/3.6/dev_guide/service_accounts.html) documentation.
+> The token in the log in command supplied through the URL or OpenShift console is valid only for a limited time. If you require a more longer lasting token, you can use a service account token. For more information see the OpenShift [*Service Accounts*](https://docs.openshift.com/container-platform/3.10/dev_guide/service_accounts.html) documentation.
 
 **OpenShift documentation:** [*Basic Walkthrough Using the CLI*](https://docs.openshift.com/container-platform/3.9/getting_started/developers_cli.html) and [*CLI Reference*](https://docs.openshift.com/container-platform/3.9/cli_reference/index.html)
 
