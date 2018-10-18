@@ -60,6 +60,8 @@ When you first log in to a Portal account that has 2FA enabled, you'll be prompt
 
 3. When you've installed and set up your authenticator app, enter the 6 digit code provided by the app in the *Configure your two-factor authentication* dialog box and click **Confirm code** to log in to the Portal.
 
+4. For future logins to the Portal, use your authenticator app to generate a 2FA code to confirm your identity and complete the log in process.
+
 ## Feedback
 
 If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
