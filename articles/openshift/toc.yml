@@ -11,7 +11,7 @@
   - name: Build an OpenShift application from a private GitHub repo
     href: oshift-how-build-app-private-repo.md
   - name: Create new users
-    href: filename.md
+    href: oshift-how-create-users.md
   - name: Monitor your OpenShift cluster
     href: oshift-how-monitor-cluster.md
   - name: Obtain usage metrics to use for OpenShift capacity management
