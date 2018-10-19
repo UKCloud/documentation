@@ -11821,6 +11821,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vid-vcd91.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vid-vcd91.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vmware-options.png",
       "output": {
         "resource": {
@@ -12056,7 +12067,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "TnJl1tjqqBa7XT4mEBR2YQ=="
+          "hash": "SyLygMI+A9Thjt9FDRELig=="
         }
       },
       "is_incremental": false,
@@ -13148,7 +13159,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcd-91.html",
-          "hash": "AM1KosD5EXIZVR/MpbJfYA=="
+          "hash": "JgZcWjAbYdP42iID0lj9QQ=="
         }
       },
       "is_incremental": false,
@@ -13311,6 +13322,18 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-vid-vcd91.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-vid-vcd91.html",
+          "hash": "ZC5wqbj9D482Iwngoz6yLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "favicon.ico",
       "output": {
@@ -13365,14 +13388,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

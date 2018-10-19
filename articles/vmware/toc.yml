@@ -218,3 +218,7 @@
     href: vmw-ref-trouble-null-pointer.md
   - name: Fixing your IPsec VPN following upgrade to NSX 6.4
     href: vmw-ref-trouble-ipsec-nsx64.md
+- name: Videos
+  items:
+  - name: vCloud Director 9.1 overview
+    href: vmw-vid-vcd91.md
