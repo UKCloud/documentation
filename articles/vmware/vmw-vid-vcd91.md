@@ -16,7 +16,7 @@ toc_mdlink: vmw-vid-vcd91.md
 
 # vCloud Director 9.1 overview video
 
-This video provides an overview of the new features available in vCloud Director 9.1. Click the image below to watch the video.
+This video provides an overview of the vCloud Director 9.1 user interface. Click the image below to watch the video.
 
 [![vCloud Director 9.1 overview](images/vmw-vid-vcd91.png)](https://vimeo.com/296027011)
 
