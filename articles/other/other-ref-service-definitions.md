@@ -1,5 +1,5 @@
 ---
-title: UKCloud G-Cloud 10 Service Definitions | UKCloud Ltd
+title: UKCloud G-Cloud 10 Service Definitions and Pricing Guide | UKCloud Ltd
 description: List of Service Definitions for G-Cloud 10 (G10) UKCloud services, including terms and conditions, SFIA rate card, and pricing guide
 services: Other
 author: Sue Highmoor
@@ -8,14 +8,14 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: G10 Service Definitions
+toc_title: G10 Service Definitions and Pricing Guide
 toc_fullpath: Reference/other-ref-service-definitions.md
 toc_mdlink: other-ref-service-definitions.md
 ---
 
-# UKCloud G-Cloud 10 Service Definitions
+# UKCloud G-Cloud 10 Service Definitions and Pricing Guide
 
-This article provides a list of Service Definitions for G-Cloud 10 (G10) UKCloud services. The article also includes
+This article provides a list of Service Definitions for G-Cloud 10 (G10) UKCloud services. The list also includes our G10 Pricing Guide, SFIA rate card and terms and conditions.
 
 ## Service Definitions
 
