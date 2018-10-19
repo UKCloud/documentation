@@ -2987,7 +2987,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-ref-services.html",
-          "hash": "TQIHR6OQYch9n238TdnROg=="
+          "hash": "TC2In9J4XaL79eDfAY/4hA=="
         }
       },
       "is_incremental": false,
@@ -3072,6 +3072,17 @@
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-vpn.html",
           "hash": "WX+fnLE2xsPZX6Cyp+V1yg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/enablement/images/enbl-config.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/enablement/images/enbl-config.png"
         }
       },
       "is_incremental": false,
@@ -13388,14 +13399,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
