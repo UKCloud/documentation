@@ -17,9 +17,11 @@ toc_mdlink: other-ref-test.md
 
 ## Overview
 
-This is an overview of the article
+This is an overview of the article.
 
 ## Subheading
+
+Adding a bit more text here.
 
 ### Subheading
 
