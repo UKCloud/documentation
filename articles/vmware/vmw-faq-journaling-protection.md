@@ -103,6 +103,10 @@ Currently, you can carry out the following actions using Journaling Protection:
 
 - Perform disaster recovery tests by recovering vApps into the recovery destination
 
+### Can I set different retention policies for my vApps? 
+
+Yes. Each vApp maps to a VPG, and each VPG can have its own retention policy. For example, you may have one VPG retention policy set at 2-day Journaling and another VPG retention policy set at 7-day Journaling.
+
 ### Is this a managed service?
 
 No. UKCloud have implemented Journaling Protection to be available for UKCloud for VMware workloads as an on-platform service and will ensure that the service is available and updated accordingly. Once the service has been available for your workloads, you will be responsible for managing the service via the UKCloud or Journaling Protection portal (powered by Zerto).
@@ -128,6 +132,10 @@ No. In the initial release, this feature will not be enabled as we have identifi
 Journaling Protection (powered by Zerto) will replicate vApp networking specific to a customer's vApp.
 
 However, organisation and external networking configuration would need to be done manually. Customers can do this ahead of any failure by pre-provisioning external connectivity within the recovery site.
+
+### During setup for the DR site, is there a way to export the Edge and vLAN configurations from the production site and import this configuration for the DR site?
+
+Yes. You can manage exports and imports of configurations via the API. You may also raise a support ticket and we will be able to assist with this process. 
 
 ### Does the Journaling Protection swap drive work for bitlocker enabled drives?
 
