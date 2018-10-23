@@ -36,8 +36,7 @@ The steps for creating firewall rules vary depending on what type of edge gatewa
 > We recommend that you convert your edge to an advanced gateway to access the latest vCloud Director functionality. For more information, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md).
 
 > [!NOTE]
-> For security reasons, the firewall should always be enabled. NAT rules will only work if firewall is enabled.
-> At your own risk, if you don't require the firewall to block ports then the firewall should be left enabled and the "Default Action" or the Default Rule set to Allow. This will allow NAT to still function.
+> NAT rules will only work if firewall is enabled. For security reasons, the firewall should always be enabled.
 
 ## Creating firewall rules for an advanced gateway
 
