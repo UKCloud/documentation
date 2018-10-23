@@ -43,6 +43,9 @@ The steps for creating NAT rules vary depending on what type of edge gateway you
 > [!NOTE]
 > We recommend that you convert your edge to an advanced gateway to access the latest vCloud Director functionality. For more information, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md).
 
+> [!NOTE]
+> NAT rules will only work if firewall is enabled. For security reasons, the firewall should always be enabled.
+
 ## Creating NAT rules for an advanced gateway
 
 ### Creating a DNAT rule for an advanced gateway
