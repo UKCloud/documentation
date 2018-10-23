@@ -258,7 +258,7 @@ $NetworkInterface = New-AzureRmNetworkInterface -Name $NICName -ResourceGroupNam
 ## Create the virtual machine
 
 # Define a credential object to store the username and password for the virtual machine
-$UserName = '<output form="vmusername" name="result" style="display: inline;">myUser</output>'
+$UserName = '<output form="vmusername" name="result" style="display: inline;">myuser</output>'
 $Password = '<output form="vmpassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
 $Credential = New-Object PSCredential($UserName,$Password)
 
@@ -274,12 +274,15 @@ $Image = Get-AzureRMVMImagePublisher -Location $Location | Get-AzureRmVMImageOff
 # Set the VM Source Image
 $VirtualMachine =  Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version 'latest'
 
-#Set the OS Disk properties
+# Add Network Interface Card 
+$VirtualMachine = Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id -VM $VirtualMachine
+
+# Set the OS Disk properties
 $OSDiskName = "OsDisk"
 $OSDiskUri = '{0}vhds/{1}-{2}.vhd' -f $StorageAccount.PrimaryEndpoints.Blob.ToString(), $VMName.ToLower(), $OSDiskName
 
-# Applies the OS disk properties and NIC to the virtual machine.
-$VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -CreateOption FromImage | Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id
+# Apply the OS disk properties.
+$VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -CreateOption FromImage
 
 # Create the virtual machine.
 $NewVM = New-AzureRmVM -ResourceGroupName $RGName -Location $Location -VM $VirtualMachine
