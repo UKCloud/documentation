@@ -114,6 +114,9 @@ First, you need to create a network that can connect to external networks outsid
 
 The edge gateway is possibly the most complex part of the VDC because of its high level of functionality. The following steps show you how to quickly configure the edge gateway to enable you to access the internet from a VM.
 
+> [!NOTE]
+> NAT rules will only work if firewall is enabled. For security reasons, the firewall should always be enabled.
+
 1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
 
 2. This time you're working with the edge gateway, so in the left navigation panel, click **Edges**.
