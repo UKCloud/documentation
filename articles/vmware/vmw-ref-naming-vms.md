@@ -8,12 +8,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Naming virtual manchines
+toc_title: Naming virtual machines
 toc_fullpath: Reference/vmw-ref-naming-vms.md
 toc_mdlink: vmw-ref-naming-vms.md
 ---
 
-# Naming virtual manchines
+# Naming virtual machines
 
 We're currently in the process of rolling out updates to the ESXi hosts on the UKCloud platform to version 6 to ensure platform stability and enable future feature sets. This new version implements stricter restrictions on the characters permitted for virtual machines (VMs), so you should be aware of the following:
 
