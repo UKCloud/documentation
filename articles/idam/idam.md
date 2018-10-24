@@ -1,3 +1,19 @@
+---
+title: Getting Started Guide for IDAM | UKCloud Ltd
+description: Provides information on managing permissions using IDAM
+services: idam
+author: Simon Fish
+
+toc_rootlink: Getting Started
+toc_sub1:
+toc_sub2:
+toc_sub3:
+toc_sub4:
+toc_title: IDAM
+toc_fullpath: Getting Started/idam.md
+toc_mdlink: idam.md
+---
+
 # Identity and Access Management (IDAM)
 
 UKCloud's **ID** and **A**ccess **M**anagement system allows users to manage user access to products within their account. Adding a user to a group changes which permissions they have.
