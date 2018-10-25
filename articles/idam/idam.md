@@ -18,7 +18,7 @@ toc_mdlink: idam.md
 
 UKCloud's **ID** and **A**ccess **M**anagement system allows users to manage user access to products within their account. Adding a user to a group changes which permissions they have.
 
-Full documentation for the IDAM API is available in [Swagger]({{swagger_url}}).
+Full documentation for the IDAM API is available on [SwaggerHub](https://app.swaggerhub.com/apis/ukcloud/idam-service).
 
 ## Typical usage
 
