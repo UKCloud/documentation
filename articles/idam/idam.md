@@ -30,7 +30,7 @@ In order to add a user to a permission group, you can list the users and permiss
 
 ### Authentication
 
-You'll need to retrieve a token from the Portal to authenticate with IDAM. For ease of use, this is saved to a variable `token` in your current shell session using the below command.
+You'll need to retrieve a single sign-on token to authenticate with IDAM. For ease of use, this is saved to a variable `token` in your current shell session using the below command.
 
 ```sh
 token=$(curl -X POST "https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token" \
