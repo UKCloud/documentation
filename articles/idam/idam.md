@@ -33,7 +33,7 @@ In order to add a user to a permission group, you can list the users and permiss
 You'll need to retrieve a token from the Portal to authenticate with IDAM. For ease of use, this is saved to a variable `token` in your current shell session using the below command.
 
 ```sh
-token=$(curl -k -X POST "https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token" \
+token=$(curl -X POST "https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token" \
      -d username="<username>" \
      -d password="<password>"  \
      -d grant_type=password    \
