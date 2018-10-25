@@ -42,7 +42,7 @@
     topicHref: articles/enablement/enbl-ref-services.md
   - name: UKCloud Portal
     topicHref: articles/portal/ptl-gs.md
-  - name: IDAM
+  - name: ID & Access Management API
     topicHref: articles/idam/idam.md
   - name: Other
     topicHref: articles/other/other-ref-services-by-region.md

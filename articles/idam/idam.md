@@ -1,6 +1,6 @@
 ---
-title: Getting Started Guide for IDAM | UKCloud Ltd
-description: Provides information on managing permissions using IDAM
+title: ID & Access Management API | UKCloud Ltd
+description: Provides information on managing permissions using the ID & Access Management API
 services: idam
 author: Simon Fish
 
@@ -16,7 +16,7 @@ toc_mdlink: idam.md
 
 # Identity and Access Management (IDAM)
 
-UKCloud's **ID** and **A**ccess **M**anagement system allows users to manage user access to products within their account. Adding a user to a group changes which permissions they have.
+UKCloud's **ID** & **A**ccess **M**anagement API (IDAM) allows users to manage user access to products within their account. Adding a user to a group changes which permissions they have.
 
 Full documentation for the IDAM API is available on [SwaggerHub](https://app.swaggerhub.com/apis/ukcloud/idam-service).
 
