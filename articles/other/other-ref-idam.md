@@ -14,23 +14,23 @@ toc_fullpath: Reference/other-ref-idam.md
 toc_mdlink: other-ref-idam.md
 ---
 
-# Identity and Access Management (IDAM)
+# Understanding UKCloud's Identity & Access Management API
 
-UKCloud's **ID** & **A**ccess **M**anagement API (IDAM) allows users to manage user access to products within their account. Adding a user to a group changes which permissions they have.
+UKCloud's Identity & Access Management API (IDAM) enables you to manage user access to products within your account. Adding a user to a group changes which permissions they have.
 
 Full documentation for the IDAM API is available on [SwaggerHub](https://app.swaggerhub.com/apis/ukcloud/idam-service).
 
 ## Typical usage
 
-In order to add a user to a permission group, you can list the users and permission groups you have access to in order to find the IDs for both.
+To add a user to a permission group, you first need to list the users and permission groups to find the IDs for both. Then you can use those IDs to add the user to the appropriate group.
 
 ### Prerequisites
 
-[`curl`](https://curl.haxx.se/) and [`jq`](https://stedolan.github.io/jq/_) will be used during this tutorial.
+This article provides examples using [`curl`](https://curl.haxx.se/) and [`jq`](https://stedolan.github.io/jq/_).
 
 ### Authentication
 
-You'll need to retrieve a single sign-on token to authenticate with IDAM. For ease of use, this is saved to a variable `token` in your current shell session using the below command.
+Before you begin, you'll need to retrieve a single sign-on token to authenticate with IDAM. For ease of use, this is saved to a variable `token` in your current shell session using the below command.
 
 ```sh
 token=$(curl -X POST "https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token" \
