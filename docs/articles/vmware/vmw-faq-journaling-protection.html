@@ -8,7 +8,7 @@
     <title>Journaling Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Journaling Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -160,6 +160,8 @@
 <li><p>Perform disaster recovery tests by recovering vApps into the recovery destination</p>
 </li>
 </ul>
+<h3 id="can-i-set-different-retention-policies-for-my-vapps">Can I set different retention policies for my vApps?</h3>
+<p>Yes. Each vApp maps to a VPG, and each VPG can have its own retention policy. For example, you may have one VPG retention policy set at 2-day Journaling and another VPG retention policy set at 7-day Journaling.</p>
 <h3 id="is-this-a-managed-service">Is this a managed service?</h3>
 <p>No. UKCloud have implemented Journaling Protection to be available for UKCloud for VMware workloads as an on-platform service and will ensure that the service is available and updated accordingly. Once the service has been available for your workloads, you will be responsible for managing the service via the UKCloud or Journaling Protection portal (powered by Zerto).</p>
 <h3 id="how-do-i-make-changes-to-my-journaling-protection">How do I make changes to my Journaling Protection?</h3>
@@ -173,6 +175,8 @@
 <h3 id="will-my-network-configuration-be-failed-over-in-the-event-of-disaster">Will my network configuration be failed over in the event of disaster?</h3>
 <p>Journaling Protection (powered by Zerto) will replicate vApp networking specific to a customer's vApp.</p>
 <p>However, organisation and external networking configuration would need to be done manually. Customers can do this ahead of any failure by pre-provisioning external connectivity within the recovery site.</p>
+<h3 id="during-setup-for-the-dr-site-is-there-a-way-to-export-the-edge-and-vlan-configurations-from-the-production-site-and-import-this-configuration-for-the-dr-site">During setup for the DR site, is there a way to export the edge and vLAN configurations from the production site and import this configuration for the DR site?</h3>
+<p>Yes. You can manage exports and imports of configurations via the API. You may also raise a support ticket and we will be able to assist with this process.</p>
 <h3 id="does-the-journaling-protection-swap-drive-work-for-bitlocker-enabled-drives">Does the Journaling Protection swap drive work for bitlocker enabled drives?</h3>
 <p>Swap disks are synchronised during the initial synchronisation, but no further ongoing synchronisation occurs. This means that the Bitlocker drive should remain encrypted and configured when failed over.</p>
 <p>However, if the password or key is modified then it will need to be reconfigured or re-encrypted in the event of a failover. To avoid this scenario, customers are advised to leave the Bitlocker drive marked as normal synchronisation (non-swap).</p>
