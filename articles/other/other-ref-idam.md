@@ -46,7 +46,7 @@ This token is used in bearer authentication with IDAM. Requests to the IDAM API 
 
 The first step would be to find the ID of the user whose permissions you wish to edit.
 
-The below command will list all users you are entitled to manage with their IDs and usernames. Take a note of your target user's ID.
+The below command lists all users you are entitled to manage with their IDs and usernames. Take a note of your target user's ID.
 
 ```sh
 curl -s -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users | jq -r '.[] | .id + " " + .username'
@@ -56,7 +56,7 @@ curl -s -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users | jq
 
 The next step is to find the ID of the permission you would like to give or take from the user. These are known as *groups* internally to IDAM.
 
-The below command will list all groups you are entitled to manage with their IDs and names.
+The below command lists all groups you are entitled to manage with their IDs and names.
 
 ```sh
 curl -s -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/groups | jq -r '.[].subGroups[] | .id + " " + .name'
@@ -64,7 +64,7 @@ curl -s -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/groups | j
 
 ### Adding a user to a group
 
-If you wish to give a user a particular permission, you can then use the IDs that you have found to make a request to grant the user that permission.
+To give a user a particular permission, use the IDs that you have found to make a request to grant the user that permission.
 
 You can add a user to a group with this PUT request. Expect a response code of 204 if this is successful.
 
@@ -76,7 +76,7 @@ curl -X PUT -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users/
 
 A `DELETE` request, as opposed to a `PUT` request, will remove a permission from a user by removing them from a group.
 
-You can remove a user from a group with this PUT request. Expect a response code of 204 if this is successful.
+You can remove a user from a group with this DELETE request. Expect a response code of 204 if this is successful.
 
 ```sh
 curl -X DELETE -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users/{{user_id}}/groups/{{group_id}}
