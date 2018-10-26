@@ -4077,6 +4077,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-btn-create-image.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-btn-create-image.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-horizon-btn-create-network.png",
       "output": {
         "resource": {
@@ -4125,6 +4136,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/openstack/images/ostack-horizon-change-volume-type.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-create-image.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-create-image.png"
         }
       },
       "is_incremental": false,
@@ -5025,6 +5047,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-convert-vms.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-convert-vms.html",
+          "hash": "r/6cI4LHQS0gBD4rJEluTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-how-create-load-balancer.md",
       "output": {
         ".html": {
@@ -5209,7 +5243,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "CJO8mrDR2BLhtvcbw4sBoQ=="
+          "hash": "MEtbI7GWtFotU4EAwZGxLA=="
         }
       },
       "is_incremental": false,
@@ -13460,13 +13494,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }

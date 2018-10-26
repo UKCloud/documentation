@@ -8,6 +8,8 @@
     href: ostack-gs.md
 - name: How To
   items:
+  - name: Convert virtual machines
+    href: ostack-how-convert-vms.md
   - name: Create load balancing services
     href: ostack-how-create-load-balancer.md
   - name: Create static IPs for OpenStack instances
