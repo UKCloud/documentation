@@ -133,7 +133,7 @@ Journaling Protection (powered by Zerto) will replicate vApp networking specific
 
 However, organisation and external networking configuration would need to be done manually. Customers can do this ahead of any failure by pre-provisioning external connectivity within the recovery site.
 
-### During setup for the DR site, is there a way to export the Edge and vLAN configurations from the production site and import this configuration for the DR site?
+### During setup for the DR site, is there a way to export the edge and vLAN configurations from the production site and import this configuration for the DR site?
 
 Yes. You can manage exports and imports of configurations via the API. You may also raise a support ticket and we will be able to assist with this process. 
 
