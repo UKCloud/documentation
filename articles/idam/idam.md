@@ -1,7 +1,7 @@
 ---
-title: ID & Access Management API | UKCloud Ltd
-description: Provides information on managing permissions using the ID & Access Management API
-services: idam
+title: Understanding UKCloud's Identity & Access Management API | UKCloud Ltd
+description: Provides information on managing permissions using the Identity & Access Management API
+services: other
 author: Simon Fish
 
 toc_rootlink: Getting Started
