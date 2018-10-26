@@ -43,6 +43,6 @@
   - name: UKCloud Portal
     topicHref: articles/portal/ptl-gs.md
   - name: ID & Access Management API
-    topicHref: articles/idam/idam.md
+    topicHref: articles/other/other-ref-idam.md
   - name: Other
     topicHref: articles/other/other-ref-services-by-region.md

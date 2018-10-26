@@ -9,9 +9,9 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: IDAM
-toc_fullpath: Getting Started/idam.md
-toc_mdlink: idam.md
+toc_title: Identity & Access Management API
+toc_fullpath: Reference/other-ref-idam.md
+toc_mdlink: other-ref-idam.md
 ---
 
 # Identity and Access Management (IDAM)
