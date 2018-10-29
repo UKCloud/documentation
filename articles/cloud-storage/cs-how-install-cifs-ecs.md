@@ -21,7 +21,7 @@ CIFS-ECS is a free application that runs on Windows and Windows Server, exposing
 
 If you require a fully-integrated cloud gateway appliance with features like advanced deduplication and location caching, you may want to consider [CloudArrary](cs-how-install-cloudarray.md) as an alternative. 
 
-> [!NOTE]
+> [!NOTE]
 > Unlike CIFS-ECS, CloudArray is not a free application.
 
 ## Use cases
