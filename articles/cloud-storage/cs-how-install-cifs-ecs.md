@@ -136,6 +136,7 @@ This guide has shown you how to create a new Cloud Storage user. For more inform
 - Cloud Storage Gateways
     - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
+
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
