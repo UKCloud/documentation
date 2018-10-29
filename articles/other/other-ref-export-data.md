@@ -23,7 +23,7 @@ This guide provides some general information about how you can export data away 
 
 You can package and export your data in a number of different ways, however we recommend that you read the following documents:
 
-- [Blueprint: Exporting and importing vApps and vApp templates](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-136-Exporting-and-Importing-vApps-and-vApp-Templates-Blueprint-v2.pdf) - A technical case for transfer of data in UKCloud for VMware
+- [Blueprint: Exporting and importing vApps and vApp templates](https://ukcloud.com/wp-content/uploads/2018/08/ukc-gen-136-exporting-and-importing-vapps-and-vapp-templates-blueprint-v2.pdf) - A technical case for transfer of data in UKCloud for VMware
 - [Getting Started Guide for Cloud Storage](../cloud-storage/cs-gs.md) - Covers the use APIs for access to our storage service
 
 ## Exporting data
