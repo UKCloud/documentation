@@ -4,7 +4,7 @@ description: Provides information on managing permissions using the Identity & A
 services: other
 author: Simon Fish
 
-toc_rootlink: Getting Started
+toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
 toc_sub3:
