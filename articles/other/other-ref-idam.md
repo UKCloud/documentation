@@ -40,7 +40,7 @@ token=$(curl -X POST "https://idp.ukcloud.com/auth/realms/client-assured/protoco
      -d client_id=portal.ukcloud | jq -r '.access_token')
 ```
 
-This token is used in bearer authentication with IDAM. Requests to the IDAM API are prefaced with `curl -H "Authorization: Bearer $token"`
+This token is used in bearer authentication with IDAM. Requests to the IDAM API are prefaced with `curl -H "Authorization: Bearer $token"`.
 
 ### Listing users
 
