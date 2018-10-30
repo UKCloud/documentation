@@ -15,6 +15,14 @@ toc_mdlink: conn-how-migrate-n3-hscn.md
 
 # How to migrate from N3 to HSCN
 
+> [!Note]
+> Due to DNS change freeze by NHS Digital, customers will not be able to request HSCN/N3 DNS changes on the following dates:
+> 6/11/18 to 08/11/18
+> 13/11/18 to 14/11/18
+> 20/11/18 to 21/11/18
+> We advise avoiding these dates for cutover from N3 to HSCN
+
+
 ## Overview
 
 As of March 2019, NHS Digital will be decommissioning the N3 network, replacing it with the new Health and Social Care Network (HSCN). As a result, UKCloud will be decommissioning our N3 connectivity in January 2019 and users of the N3 network on our platform must migrate their workloads to the HSCN network by then. The two networks (N3 and HSCN) will run in parallel to enable all our customers to migrate off the N3 network.
