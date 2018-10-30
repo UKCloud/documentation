@@ -38,7 +38,7 @@ Terms and conditions for the UKCloud Ideas competition running from 27th Septemb
 15. The information provided will be used in conjunction with the following Privacy Policy: <https://ukcloud.com/legal/>.
 16. The competition and these terms and conditions will be governed by English law and any disputes will be subject to the exclusive jurisdiction of the courts of England.
 17. Attendees of the UKCloud Meet the Team event on 1st November 2018 will be able to submit ideas for the competition by completing a form available at the event.
-18. The competition term will be extended until 23:59 on 4th November 2018. After this time no further scoring will be permitted.
+18. The competition term will be extended until 23:59 on 4th November 2018. The winner will be selected on 5th November 2018 and announced via Twitter and our monthly newsletter.
 
 ## Feedback
 
