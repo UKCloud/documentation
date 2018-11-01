@@ -231,28 +231,34 @@ $ComputerName = '<output form="compname" name="result" style="display: inline;">
 $VMImage = '*<output form="vmimage" name="result" style="display: inline;">/CentOS/Skus/6.10</output>'
 
 # Create a new resource group
+Write-Host "Creating resource group"
 New-AzureRmResourceGroup -Name $RGName -Location $Location
 
 ## Create storage resources
 
 # Create a new storage account
+Write-Host "Creating storage account"
 $StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type 'Standard_LRS' -Name $SAName
 
 ## Create network resources
 
 # Create a subnet configuration
+Write-Host "Creating virtual network"
 $SubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetRange
 
 # Create a virtual network
 $VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location $Location -Name $VNetName -AddressPrefix $VNetRange -Subnet $SubnetConfig
 
 # Create a public IP address
+Write-Host "Creating public IP address"
 $PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Location -AllocationMethod 'Dynamic' -Name $PublicIPName
 
 # Create a network security group
+Write-Host "Creating network security group"
 $NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location $Location -Name $NSGName
 
 # Create a virtual network card and associate it with the public IP address and NSG
+Write-Host "Creating network interface card"
 $NetworkInterface = New-AzureRmNetworkInterface -Name $NICName -ResourceGroupName $RGName -Location $Location -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
 
 ## Create the virtual machine
@@ -282,8 +288,10 @@ $OSDiskUri = '{0}vhds/{1}-{2}.vhd' -f $StorageAccount.PrimaryEndpoints.Blob.ToSt
 $VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -CreateOption FromImage | Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id
 
 # Create the virtual machine.
+Write-Host "Creating virtual machine"
 $NewVM = New-AzureRmVM -ResourceGroupName $RGName -Location $Location -VM $VirtualMachine
 $NewVM
+Write-Host "Virtual machine created successfully"
 </code></pre>
 
 ## Feedback
