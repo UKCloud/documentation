@@ -210,6 +210,10 @@ For more information about how to use the API, including examples showing how to
 
 In this Getting Started Guide, you've learned the basics about the Portal and the functionality it provides to help you interact with your UKCloud environment. For more details about a specific service, see the appropriate Getting Started Guide.
 
+## Related videos
+
+- [UKCloud Portal overview video](https://vimeo.com/298596419)
+
 ## Glossary
 
 This section provides a glossary of terms specific to the UKCloud Portal.
