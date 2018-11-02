@@ -137,6 +137,10 @@ After raising a support ticket, you can view the ticket to monitor progress, add
 
 For more information about what you can do in the UKCloud Portal, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md).
 
+## Related videos
+
+- [UKCloud Portal overview video](https://vimeo.com/298596419)
+
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.

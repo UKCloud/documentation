@@ -44,6 +44,10 @@ If you want, you can also opt to have these notifications sent to you by email. 
 > [!NOTE]
 > This may not happen immediately as the update will need to sync with Active Directory. If you experience any issues with receiving emails from the Portal, raise a ticket with UKCloud Support.
 
+## Related videos
+
+- [UKCloud Portal overview video](https://vimeo.com/298596419)
+
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
