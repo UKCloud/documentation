@@ -25,14 +25,6 @@ Bug fix
 
 Details: Fixed error when managing IPsec VPN configuration in Elevated.
 
-## Release 1.88.0
-
-Date: 26th September 2018
-
-Feature update
-
-Details: Provide more detail in Portal version hover-over text.
-
 ## Release 1.84.3
 
 Date: 16th August 2018
