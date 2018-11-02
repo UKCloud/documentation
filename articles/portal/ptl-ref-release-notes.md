@@ -25,6 +25,46 @@ Bug fix
 
 Details: Fixed error when managing IPsec VPN configuration in Elevated.
 
+## Release 1.88.0
+
+Date: 26th September 2018
+
+Feature update
+
+Details: Provide more detail in Portal version hover-over text.
+
+## Release 1.84.3
+
+Date: 16th August 2018
+
+Bug fix
+
+Details: Fixed date pickers on monitoring pages.
+
+## Release 1.84.1
+
+Date: 2nd August 2018
+
+Bug fix and feature update
+
+Details: Changing links to point to new Knowledge Centre content, change 2FA setup to use new seed.
+
+## Release 1.82.0
+
+Date: 3rd July 2018
+
+Feature update
+
+Details: Update product names to reflect G-Cloud 10 names, enable self-service ECS user creation.
+
+## Release 1.78.0
+
+Date: 7th June 2018
+
+Bug fix and feature update
+
+Details: Remove power status from My VMs page for VMs and vApps, remove BETA references from UKCloud for Azure.
+
 ## Release 1.76.0
 
 Date: 17th May 2018
