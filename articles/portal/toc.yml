@@ -34,3 +34,7 @@
     href: ptl-ref-user-access.md
   - name: Resetting Two-Factor Authentication for SSO
     href: ptl-ref-reset-2fa-sso.md
+- name: Videos
+  items:
+  - name: UKCloud Portal
+    href: ptl-vid-portal.md
