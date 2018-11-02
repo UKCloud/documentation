@@ -17,6 +17,14 @@ toc_mdlink: ptl-ref-release-notes.md
 
 This article provides a list of completed Portal releases.
 
+## Release 1.88.2
+
+Date: 29th October 2018
+
+Bug fix
+
+Details: Fixed error when managing IPsec VPN configuration in Elevated.
+
 ## Release 1.76.0
 
 Date: 17th May 2018
