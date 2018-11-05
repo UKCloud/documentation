@@ -20,7 +20,7 @@ toc_mdlink: conn-how-migrate-n3-hscn.md
 > 6/11/18 to 08/11/18
 > 13/11/18 to 14/11/18
 > 20/11/18 to 21/11/18
-> We advise avoiding these dates for cutover from N3 to HSCN
+> We advise avoiding these dates for cutover from N3 to HSCN.
 
 
 ## Overview
