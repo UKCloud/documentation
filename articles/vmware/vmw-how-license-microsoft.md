@@ -47,7 +47,7 @@ Due to the elimination of the discount for G-SPLA, there is now price parity wit
 
 ## Microsoft desktop licensing
 
-While we do not offer the option of supplying Microsoft Desktop Operating System licensing, we are now an authorised partner on the  Qualified MultiTenant Hoster (QMTH) program. The QMTH program enables you to purchase Microsoft 10 Enterprise licenses, and use these on our multitenant cloud platform.
+While we do not offer the option of supplying Microsoft Desktop Operating System licensing, we are now an authorised partner on the  Qualified MultiTenant Hoster (QMTH) program. The QMTH program enables you to purchase Microsoft 10 Enterprise licences, and use these on our multi-tenant cloud platform.
 
 > [!IMPORTANT]
 > You **must** inform Microsoft by completing a [Microsoft Licence Mobility Verification form](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx) for the licensing to be valid.
