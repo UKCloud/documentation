@@ -47,13 +47,16 @@ Due to the elimination of the discount for G-SPLA, there is now price parity wit
 
 ## Microsoft desktop licensing
 
-Whilst we do not offer the option of supplying Microsoft Desktop Operating System licensing, we are now an authorised partner on the  Qualified MultiTenant Hoster (QMTH) program. The QMTH program allows you to purchase Microsoft 10 Enterprise licenses, and use these on our multitenant cloud platform. Please note that you must inform Microsoft by completing a Microsoft Licence Mobility Verification form in order for the licensing to be valid.
+While we do not offer the option of supplying Microsoft Desktop Operating System licensing, we are now an authorised partner on the  Qualified MultiTenant Hoster (QMTH) program. The QMTH program enables you to purchase Microsoft 10 Enterprise licenses, and use these on our multitenant cloud platform.
 
-For more information regarding the QMTH program, we have further information on the [UKcloud website](https://ukcloud.com/qualified-multitenant-hoster-program/)
+> [!IMPORTANT]
+> You **must** inform Microsoft by completing a [Microsoft Licence Mobility Verification form](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx) for the licensing to be valid.
 
-if you wish to use this option, please raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal, detailing the VM names
+For more information regarding the QMTH program, we have further details on the [UKCloud web site](https://ukcloud.com/qualified-multitenant-hoster-program/)
 
-In addition, it is also possible for you to bring your own Microsoft desktop licensing for use on a dedicated single tenant cloud server such as Private Cloud for Compute. In this instance, please contact your Account Director or your Technical Account Manager for further information.
+If you want to use this option, raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal, detailing the VM names.
+
+In addition, you can also bring your own Microsoft desktop licensing for use on a dedicated single tenant cloud server such as Private Cloud for Compute. In this instance, contact your Account Director or Technical Account Manager for further information.
 
 ## Options for all other Microsoft applications
 
@@ -86,9 +89,9 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **Office 365**
 
-  - UKCloud licensing - we are not able to provide Microsoft Office 365 licensing. .
+  - UKCloud licensing - we are not able to provide Microsoft Office 365 licensing.
 
-  - Microsoft Mobility - this is a valid option for Office 365 ProPlus licences as long as you have valid Software Assurance in place. In order to take advantage of this option, you must manage your Office 265 implementaiton and ensure you haev the correct number of licenses to reflect your user count. This option is available via the QMTH program, and more information is available on the [UKcloud website](https://ukcloud.com/qualified-multitenant-hoster-program/)
+  - Microsoft Mobility - this is a valid option for Office 365 ProPlus licences as long as you have valid Software Assurance in place. To take advantage of this option, you must manage your Office 365 implementation and ensure you have the correct number of licences to reflect your user count. This option is available via the QMTH program, and more information is available on the [UKCloud web site](https://ukcloud.com/qualified-multitenant-hoster-program/).
 
 - **Remote Desktop Server Access Licence**
 
