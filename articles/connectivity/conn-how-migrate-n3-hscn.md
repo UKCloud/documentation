@@ -17,9 +17,11 @@ toc_mdlink: conn-how-migrate-n3-hscn.md
 
 > [!Note]
 > Due to DNS change freeze by NHS Digital, customers will not be able to request HSCN/N3 DNS changes on the following dates:
+>
 > - 6/11/18 to 08/11/18
 > - 13/11/18 to 14/11/18
 > - 20/11/18 to 21/11/18
+> 
 > We advise avoiding these dates for cutover from N3 to HSCN.
 
 
