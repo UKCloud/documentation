@@ -154,7 +154,7 @@
     href: vmw-ref-byof-working-firewalls.md
   - name: Managing your UKCloud for VMware environment using the UKCloud Portal API
     href: vmw-ref-managing-portal-api.md
-  - name: Naming virtual manchines
+  - name: Naming virtual machines
     href: vmw-ref-naming-vms.md
   - name: Nested hypervisors
     href: vmw-ref-nested-hypervisors.md
