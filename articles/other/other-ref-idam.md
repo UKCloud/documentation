@@ -26,7 +26,7 @@ To add a user to a permission group, you first need to list the users and permis
 
 ### Prerequisites
 
-This article provides examples using [`curl`](https://curl.haxx.se/) and [`jq`](https://stedolan.github.io/jq/_).
+This article provides examples using [`curl`](https://curl.haxx.se/) and [`jq`](https://stedolan.github.io/jq/).
 
 ### Authentication
 
