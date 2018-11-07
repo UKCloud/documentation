@@ -54,6 +54,7 @@ session = boto3.session.Session()
 # Transfer progress percentage class
 class ProgressPercentage(object):
     def __init__(self, filename):
+        """ Transfer progress percentage class """
         self._filename = filename
         self._size = float(os.path.getsize(filename))
         self._seen_so_far = 0
