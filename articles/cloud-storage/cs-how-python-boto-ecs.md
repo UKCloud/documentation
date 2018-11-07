@@ -34,7 +34,7 @@ You can use Boto to:
 
 1. Navigate to the [Python homepage](https://www.python.org/) and install the version of Python 3 relevant for your OS.
 
-2. Next install the Boto 3 package via Pythons Package Manager PIP.
+2. Next install the Boto 3 package via Python's Package Manager,  Pip.
 
 ```Python
 pip install -U boto3
