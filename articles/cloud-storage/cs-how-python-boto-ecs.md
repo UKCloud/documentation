@@ -43,6 +43,7 @@ pip install -U boto3
 3. The following code will create a bucket, upload a file and display a percentage progress counter.
 
 ```Python
+#!/usr/bin/env python3
 import os
 import sys
 import threading
