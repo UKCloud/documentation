@@ -124,7 +124,8 @@ ukc_ecs_s3 = session.client(
     aws_access_key_id='<access key or username>',
     # The following can be obtained and reset if required from the UKCloud portal
     aws_secret_access_key='<secret key>',
-    # The endpoint will be either https://cas.frn00006.ukcloud.com or https://cas.frn00006.ukcloud.com
+    # The endpoint will be either https://cas.frn00006.ukcloud.com
+    # or https://cas.frn00006.ukcloud.com
     endpoint_url='<endpoint>',
 )
 
