@@ -17,7 +17,7 @@ toc_mdlink: cs-how-python-boto-ecs.md
 
 ## What is Boto?
 
-Boto is a Python package which enables interaction with UKClouds Cloud Storage and will run on any client supporting Python.
+Boto is a Python package which enables interaction with UKCloud's Cloud Storage and will run on any client supporting Python.
 
 > [!NOTE]
 > This guide uses Python 3 and Boto 3 and has not been tested on previous versions.
