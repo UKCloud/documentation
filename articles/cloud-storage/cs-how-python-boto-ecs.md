@@ -17,7 +17,7 @@ toc_mdlink: cs-how-python-boto-ecs.md
 
 ## What is Boto?
 
-Boto is a Python package which enables interaction with UKClouds Cloud Storage and will run on any client supporting Python.
+Boto is a Python package which enables interaction with UKCloud's Cloud Storage and will run on any client supporting Python.
 
 > [!NOTE]
 > This guide uses Python 3 and Boto 3 and has not been tested on previous versions.
@@ -34,7 +34,7 @@ You can use Boto to:
 
 1. Navigate to the [Python homepage](https://www.python.org/) and install the version of Python 3 relevant for your OS.
 
-2. Next install the Boto 3 package via Pythons Package Manager PIP.
+2. Next install the Boto 3 package via Pythons Package Manager, Pip.
 
 ```Python
 pip install -U boto3
@@ -43,16 +43,16 @@ pip install -U boto3
 3. The following code will create a bucket, upload a file and display a percentage progress counter.
 
 ```Python
+#!/usr/bin/env python3
 import os
 import sys
 import threading
 import boto3
 
 session = boto3.session.Session()
-
-# Transfer progress percentage class
 class ProgressPercentage(object):
     def __init__(self, filename):
+        """ Transfer progress percentage class """
         self._filename = filename
         self._size = float(os.path.getsize(filename))
         self._seen_so_far = 0
@@ -71,9 +71,10 @@ ukc_ecs_s3 = session.client(
     service_name='s3',
     # The following can be obtained from the UKCloud portal
     aws_access_key_id='<access key or username>',
-    # The following can be obtained and reset if required from the UKCloud portal
+    # The following can be obtained from the UKCloud portal
     aws_secret_access_key='<secret key>',
-    # The endpoint will be either https://cas.frn00006.ukcloud.com or https://cas.frn00006.ukcloud.com
+    # The endpoint will be either https://cas.frn00006.ukcloud.com
+    # or https://cas.frn00006.ukcloud.com
     endpoint_url='<endpoint>',
 )
 
