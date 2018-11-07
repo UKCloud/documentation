@@ -41,23 +41,23 @@ You apply the annotation to a route in the following manner:
 
 To allow a single IP address through to the route, use the following:
   
-    oc annotate route myroute haproxy.router.openshift.io/ip_whitelist=192.168.1.10
+    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist=192.168.1.10
 
 To allow several IP addresses through to the route, separate each IP with a space:
 
-    oc annotate route myroute haproxy.router.openshift.io/ip_whitelist=192.168.1.10 192.168.1.11 192.168.1.12
+    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist=192.168.1.10 192.168.1.11 192.168.1.12
 
 To allow a network CIDR through to the route, declare the network CIDR as so:
 
-    oc annotate route myroute haproxy.router.openshift.io/ip_whitelist=192.168.1.10/24
+    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist=192.168.1.10/24
 
 You can even use a mix of IP addresses and a network CIDR:
 
-    oc annotate route myroute haproxy.router.openshift.io/ip_whitelist=192.168.1.10 180.5.61.153 192.168.1.0/24 10.0.0.0/8
+    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist=192.168.1.10 180.5.61.153 192.168.1.0/24 10.0.0.0/8
 
 To delete the IPs from the annotation, you can run the command:
     
-    oc annotate route myroute haproxy.router.openshift.io/ip_whitelist=''
+    oc annotate route <route_name> haproxy.router.openshift.io/ip_whitelist-
 
 ## More information
 
