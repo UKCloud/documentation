@@ -64,7 +64,7 @@ To delete the IPs from the annotation, you can run the command:
 For further infomation, see the following: [Openshift Documentation](https://docs.openshift.com/container-platform/3.9/architecture/networking/routes.html)
 
 > [!IMPORTANT]
-> This functionality is available in OpenShift 3.10 by default. For all previous versions customers need to raise a request with UK Cloud to have this functionality turned on. 
+> This functionality is available by default in UKCloud OpenShift deployments of version 3.10 or newer. For all previous versions customers need to raise a request with UKCloud to have this functionality enabled. 
 
 
 ## Feedback
