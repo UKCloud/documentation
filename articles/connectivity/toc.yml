@@ -33,7 +33,7 @@
   - name: DDoS mitigation causing VPN failures and slow applications
     href: conn-ref-ddos-mitigation.md
   - name: HSCN and SSL certificates
-    href: conn-ref-hscn.md
+    href: conn-ref-hscn-ssl.md
   - name: HybridConnect vs CrownConnect
     href: conn-ref-hybrid-crown-connect.md
   - name: Internet - permitted standard ports in regions 1 and 2
