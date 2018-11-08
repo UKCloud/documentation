@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>HybridConnect vs CrownConnect (Private Connectivity) | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>HSCN and SSL certificates | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="HybridConnect vs CrownConnect (Private Connectivity) | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="HSCN and SSL certificates | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,86 +82,27 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="hybridconnect-vs-crownconnect-private-connectivity">HybridConnect vs CrownConnect (Private Connectivity)</h1>
+<h1 id="hscn-and-ssl-certificates">HSCN and SSL certificates</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This article outlines the difference between HybridConnect and CrownConnect and explains when each should be used.</p>
-<h2 id="what-is-hybridconnect">What is HybridConnect?</h2>
-<p>HybridConnect enables you to bring private connectivity into service provider locations within UKCloud's core network locations in ARK data centres. UKCloud will then arrange onward connectivity from the termination point into your cloud service. The service provider locations must be within UKCloud's core network locations for HybridConnect to be used.</p>
-<p>The current core network locations are: Farnborough A9 and Corsham SQ17.</p>
-<p>Known Service Providers with presence* within A9 and SQ17:</p>
-<p>BT</p>
-<p>Vodafone</p>
-<p>CenturyLink</p>
-<p>Virgin Media</p>
-<p>Interoute</p>
-<p>* This does not necessarily mean your private connection will be terminated within these locations. You should check the planned termination location with your provider.</p>
-<p>UKCloud is not responsible for procuring the private connection or arranging any service provider activity on your behalf.</p>
-<p>You may want to implement encryption on your private connection. You can use Cloud Enablement to host physical devices for termination of this encryption if required.</p>
-<h2 id="what-is-crownconnect">What is CrownConnect?</h2>
-<p>CrownConnect has two flavours: Private Connectivity and Private Infrastructure. This article focuses on Private Connectivity.</p>
-<p>CrownConnect (Private Connectivity) enables you to bring private connectivity into service provider locations anywhere in the ARK data centre campus. UKCloud will then arrange for onward connectivity from the termination point into the your cloud service. The service provider locations can be anywhere within the ARK Crown Campus and are not limited to UKCloud's core network locations.</p>
-<p>UKCloud is not responsible for procuring the private connection or arranging any service provider activity on your behalf.</p>
-<p>You may want to implement encryption on your private connection. You can use Cloud Enablement to host physical devices for termination of this encryption if required.</p>
-<h2 id="pricing">Pricing</h2>
-<p>There are different pricing models for both products. These charges are applied per installation.</p>
-<table>
-<thead>
-<tr>
-<th> </th>
-<th>HybridConnect</th>
-<th>CrownConnect (Private Connectivity)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>One-off charge</td>
-<td>£2000</td>
-<td>£1000</td>
-</tr>
-<tr>
-<td>Monthly charge</td>
-<td>£0</td>
-<td>£200 (1Gb port)<br>£500 (10Gb port)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="lead-times">Lead times</h2>
-<p>Lead times vary depending on product and there are no SLAs for delivery. HybridConnect can be delivered within a few days due to the locality of the termination points to UKCloud's core network, however CrownConnect is dependent on fibre installation from the termination point into UKCloud's core network location. The lead time of delivery of this fibre depends on the distance from the termination point to the core network location.</p>
-<h2 id="comparison-table">Comparison table</h2>
-<table>
-<thead>
-<tr>
-<th> </th>
-<th>HybridConnect</th>
-<th>CrownConnect (Private Connectivity)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Service provider termination locations</td>
-<td>A9<br>SQ17</td>
-<td>A101<br>A102<br>A103<br>P1<br>P2<br>P3</td>
-</tr>
-<tr>
-<td>Costs</td>
-<td>One-off installation</td>
-<td>One-off installation + monthly charge</td>
-</tr>
-<tr>
-<td>Lead times</td>
-<td>A few days (approx)</td>
-<td>Dependent on termination location</td>
-</tr>
-<tr>
-<td>Cloud Enablement use</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<h2 id="further-information">Further information</h2>
-<p>For more information about the process of installing HybridConnect or CrownConnect, or to understand party responsibilities, see <a href="conn-ref-telco-enagagement.html"><em>Telecommunications Service Provider engagement</em></a>.</p>
+<p>This article outlines how you can get SSL certificates for web services hosted on HSCN.</p>
+<h2 id="domain-names">Domain names</h2>
+<p>Before you can get SSL certificates for your web site, you must get a domain name that you can use on the HSCN. This can come in two forms:</p>
+<ul>
+<li><code>nhs.uk</code> domain</li>
+<li>non <code>nhs.uk</code> domain</li>
+</ul>
+<h3 id="nhsuk-domain">nhs.uk domain</h3>
+<p>Typically <code>nhs.uk</code> domains are reserved for NHS organisations only, however in some circumstances these may be successfully applied for by private organisations. There is guidance available about domain namespace policy available at <a href="https://digital.nhs.uk/services/networking-addressing/namespace-policy">https://digital.nhs.uk/services/networking-addressing/namespace-policy</a>. You should apply for an <code>nhs.uk</code> domain by emailing the NHS DNS Team (<a href="mailto:dnsteam@nhs.net">dnsteam@nhs.net</a>).</p>
+<p>If you have an <code>nhs.uk</code> domain name, you'll get a subdomain on the HSCN internal DNS service with a suitable A record.</p>
+<h3 id="non-nhsuk-domain">Non nhs.uk domain</h3>
+<p>If you don't have an <code>nhs.uk</code> domain name, you may use your own domain name that has been adapted for use on HSCN. For example, if you don't already have a domain then you can create the internet domain of <code>example.org</code> then purchase an internet-based DNS service and create an A record in the DNS that maps to your HSCN IP address, for example, <code>hscn.example.org</code> maps to <code>HSCN.IP.x.x</code>.</p>
+<h2 id="getting-ssl-certificates">Getting SSL certificates</h2>
+<p>When you have set up your domain, you can then get an SSL certificate.</p>
+<p>Go to a certificate provider, for example, Comodo or GoDaddy, and go through the validation process. Generally, this involves validation against emails to the specific domain you want to get a certificate for, for example, <code>hostmaster@example.nhs.uk</code> or <code>administrator@example.org</code>, though this process differs between providers. You should also decide what type of certificate you want, and this will affect the validation process. If you're unable to validate against an email address, then you should talk to your supplier about other methods of validation.</p>
+<p>Neither UKCloud nor NHS Digital provide SSL certificates and neither have preferred suppliers for SSL certs.</p>
+<h2 id="installing-ssl-certificates">Installing SSL certificates</h2>
+<p>You are responsible for the installation of the SSL certificates in the appropriate place(s), for example, load balancers, SSL offloaders or web servers, by whoever administers the web site. UKCloud are not responsible for the installation or management of certificates.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
@@ -176,7 +117,7 @@
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/connectivity/conn-ref-hybrid-crown-connect.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/connectivity/conn-ref-hscn-ssl.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>

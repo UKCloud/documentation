@@ -2181,11 +2181,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-hscn-ssl.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-hscn-ssl.html",
+          "hash": "Ki/ZWrncK13DijIPirtw8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/connectivity/conn-ref-hybrid-crown-connect.md",
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-hybrid-crown-connect.html",
-          "hash": "gvgQBRmKNOnzmg8fZDlLlQ=="
+          "hash": "KE4wcZB63o3h4RfocNZa6g=="
         }
       },
       "is_incremental": false,
@@ -2366,12 +2378,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/connectivity/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/toc.html",
-          "hash": "/Ln6CHT8/R01Eegg1kdm4Q=="
+          "hash": "FU8IwUIE2wPmAOMKerbmyw=="
         }
       },
       "is_incremental": false,
@@ -13553,13 +13568,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
