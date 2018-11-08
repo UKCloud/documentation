@@ -209,26 +209,26 @@ From your PowerShell window:
 <pre><code class="language-PowerShell">## Initialise environment and variables
 
 # Add environment
-Add-AzureRMEnvironment -Name 'AzureStack' -ArmEndpoint 'https://management.frn00006.azure.ukcloud.com'
+Add-AzureRMEnvironment -Name "AzureStack" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Login
-Login-AzureRmAccount -EnvironmentName 'AzureStack'
+Login-AzureRmAccount -EnvironmentName "AzureStack"
 
 # Input Variables
-$RGName = '<output form="resourcegroup" name="result" style="display: inline;">myResourceGroup</output>'
-$SAName = '<output form="saname" name="result" style="display: inline;">myStorageAccount<span id="RandNum"></span></output>'.ToLower()
-$Location = '<output form="region" name="result" style="display: inline;">frn00006</output>'
-$SubnetName = '<output form="subnetname" name="result" style="display: inline;">mySubnet</output>'
-$SubnetRange = '<output form="subaddrrange" name="result" style="display: inline;">192.168.1.0/24</output>'
-$VNetName = '<output form="vnetname" name="result" style="display: inline;">myVNetwork</output>'
-$VNetRange = '<output form="vnetaddrrange" name="result" style="display: inline;">192.168.0.0/16</output>'
-$PublicIPName = '<output form="publicipname" name="result" style="display: inline;">myPublicIP</output>'
-$NSGName = '<output form="nsgname" name="result" style="display: inline;">myNSG</output>'
-$NICName = '<output form="nicname" name="result" style="display: inline;">myNIC</output>'
-$VMName = '<output form="vmname" name="result" style="display: inline;">myVM</output>'
-$VMSize = '<output form="vmsize" name="result" style="display: inline;">Basic_A0</output>'
-$ComputerName = '<output form="compname" name="result" style="display: inline;">myComputer</output>'
-$VMImage = '*<output form="vmimage" name="result" style="display: inline;">/CentOS/Skus/6.10</output>'
+$RGName = "<output form="resourcegroup" name="result" style="display: inline;">myResourceGroup</output>"
+$SAName = "<output form="saname" name="result" style="display: inline;">myStorageAccount<span id="RandNum"></span></output>".ToLower()
+$Location = "<output form="region" name="result" style="display: inline;">frn00006</output>"
+$SubnetName = "<output form="subnetname" name="result" style="display: inline;">mySubnet</output>"
+$SubnetRange = "<output form="subaddrrange" name="result" style="display: inline;">192.168.1.0/24</output>"
+$VNetName = "<output form="vnetname" name="result" style="display: inline;">myVNetwork</output>"
+$VNetRange = "<output form="vnetaddrrange" name="result" style="display: inline;">192.168.0.0/16</output>"
+$PublicIPName = "<output form="publicipname" name="result" style="display: inline;">myPublicIP</output>"
+$NSGName = "<output form="nsgname" name="result" style="display: inline;">myNSG</output>"
+$NICName = "<output form="nicname" name="result" style="display: inline;">myNIC</output>"
+$VMName = "<output form="vmname" name="result" style="display: inline;">myVM</output>"
+$VMSize = "<output form="vmsize" name="result" style="display: inline;">Basic_A0</output>"
+$ComputerName = "<output form="compname" name="result" style="display: inline;">myComputer</output>"
+$VMImage = "*<output form="vmimage" name="result" style="display: inline;">/CentOS/Skus/6.10</output>"
 
 # Create a new resource group
 Write-Host "Creating resource group"
@@ -238,7 +238,7 @@ New-AzureRmResourceGroup -Name $RGName -Location $Location
 
 # Create a new storage account
 Write-Host "Creating storage account"
-$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type 'Standard_LRS' -Name $SAName
+$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $SAName
 
 ## Create network resources
 
@@ -251,7 +251,7 @@ $VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location
 
 # Create a public IP address
 Write-Host "Creating public IP address"
-$PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Location -AllocationMethod 'Dynamic' -Name $PublicIPName
+$PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Location -AllocationMethod "Dynamic" -Name $PublicIPName
 
 # Create a network security group
 Write-Host "Creating network security group"
@@ -264,8 +264,8 @@ $NetworkInterface = New-AzureRmNetworkInterface -Name $NICName -ResourceGroupNam
 ## Create the virtual machine
 
 # Define a credential object to store the username and password for the virtual machine
-$UserName = '<output form="vmusername" name="result" style="display: inline;">myUser</output>'
-$Password = '<output form="vmpassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
+$UserName = "<output form="vmusername" name="result" style="display: inline;">myUser</output>"
+$Password = "<output form="vmpassword" name="result" style="display: inline;">Password123!</output>" | ConvertTo-SecureString -Force -AsPlainText
 $Credential = New-Object PSCredential($UserName,$Password)
 
 # Create the virtual machine configuration object
@@ -278,14 +278,14 @@ $VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form=
 $Image = Get-AzureRMVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object {$_.Id -like $VMImage}
 
 # Set the VM Source Image
-$VirtualMachine =  Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version 'latest'
+$VirtualMachine =  Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version "latest"
 
 # Add Network Interface Card 
 $VirtualMachine = Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id -VM $VirtualMachine
 
 # Set the OS Disk properties
 $OSDiskName = "OsDisk"
-$OSDiskUri = '{0}vhds/{1}-{2}.vhd' -f $StorageAccount.PrimaryEndpoints.Blob.ToString(), $VMName.ToLower(), $OSDiskName
+$OSDiskUri = "{0}vhds/{1}-{2}.vhd" -f $StorageAccount.PrimaryEndpoints.Blob.ToString(), $VMName.ToLower(), $OSDiskName
 
 # Applies the OS disk properties 
 $VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -CreateOption FromImage
