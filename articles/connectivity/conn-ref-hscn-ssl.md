@@ -10,8 +10,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: HSCN and SSL certificates
-toc_fullpath: Reference/conn-ref-hscn.md
-toc_mdlink: conn-ref-hscn.md
+toc_fullpath: Reference/conn-ref-hscn-ssl.md
+toc_mdlink: conn-ref-hscn-ssl.md
 ---
 
 # HSCN and SSL certificates
