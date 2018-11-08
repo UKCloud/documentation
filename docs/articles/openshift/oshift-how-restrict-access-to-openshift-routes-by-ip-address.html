@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Upgrade to vCloud Director 9.1 | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to restrict access to OpenShift routes by IP address | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Upgrade to vCloud Director 9.1 | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to restrict access to OpenShift routes by IP address | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,45 +82,47 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="upgrade-to-vcloud-director-91">Upgrade to vCloud Director 9.1</h1>
+<h1 id="how-to-only-allow-trusted-ips-to-be-able-to-access-routes-in-openshift">How to only allow trusted IP's to be able to access routes in Openshift</h1>
 
-<h2 id="introduction">Introduction</h2>
-<p>This guide outlines the improvements UKCloud's upgrade to vCloud Director 9.1 will deliver to UKCloud for VMware.</p>
-<h2 id="vcloud-director-91-new-features">vCloud Director 9.1 new features</h2>
-<p>vCloud Director 9.1 provides the following new features:</p>
-<ul>
-<li><p>Enhanced HTML-5 tenant portal, including:</p>
-<ul>
-<li><p>Creation and configuration of networks consolidated in a single view</p>
-</li>
-<li><p>New metrics dashboard provides functionality previously available only via API</p>
-</li>
-<li><p>Streamlined workflows for creating vApps and VMs</p>
-<p>For more information about the vCloud Director tenant portal, see the <a href="https://docs.vmware.com/en/vCloud-Director/9.1/com.vmware.vcloud.tenantportal.doc/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html"><em>vCloud Director Tenant Portal Guide</em></a>.</p>
-</li>
-</ul>
-</li>
-<li><p>Standalone VMRC improves access to VM consoles</p>
-</li>
-<li><p>Python SDK and CLI</p>
-</li>
-</ul>
-<p>For a full list of new features in vCloud Director 9.1, see the <a href="https://blogs.vmware.com/vcloud/files/2018/03/vcd91newfeatureswp.pdf"><em>What's New with VMware vCloud Director 9.1</em></a> white paper.</p>
-<h2 id="changes-to-apis">Changes to APIs</h2>
-<p>For information about the changes to the vCloud API used by vCloud Director 9.1, see the <a href="https://code.vmware.com/apis/287/vcloud#/doc/diff/index.html"><em>vCloud API Schema Differences</em></a> document.</p>
-<p>You should be aware of the following end-of-life and end-of-support warnings for older vCloud API versions in vCloud Director 9.1:</p>
-<ul>
-<li>vCloud Director 9.1 no longer supports vCloud API versions 1.5 and 5.1. These API versions were deprecated in a previous release.</li>
-<li>vCloud Director 9.1 is the last release of vCloud Director to support any vCloud API versions earlier than 20.0. Those API versions are deprecated in this release and will not be supported in future releases.</li>
-</ul>
-<h2 id="known-issues">Known issues</h2>
-<p>There are some tasks, including managing standard edges, that are not currently possible using the vCloud Director 9.1 tenant portal. To perform these tasks, you must use the vCloud Director web console. For more information, including a list of tasks that must be performed in the web console, see <a href="vmw-how-switch-web-console.html"><em>How to switch to the vCloud Director web console from the tenant portal</em></a>. For information about converting your edge to an advanced gateway, which can be managed in the tenant portal, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
-<p>If you disable your firewall, NAT and Load Balancing features are also disabled. This applies to both standard and advanced edge gateways in vCloud Director 9.1. To avoid any potential issues, we recommend that you review your edge configuration, apply appropriate rules and enable the firewall. We also recommend that firewalls should be enabled as part of best practice to reduce attack vectors on your cloud environment. Before you perform any work on the edge, we strongly recommend that you take a backup of the configuration via the API as a restore point. For information about how to do this, see <a href="https://docs.ukcloud.com/articles/vmware/vmw-how-change-ipsec-vpn-api.html#reviewing-the-edge-gateway-configuration"><em>Reviewing the edge gateway configuration</em></a> in <em>How to change IPsec VPN settings via the vCloud Director API</em>.</p>
-<p>For a list of other known issues with vCloud Director 9.1, see the <a href="https://docs.vmware.com/en/vCloud-Director/9.1/rn/rel_notes_vcloud_director_91.html#knownissues"><em>vCloud Director 9.1 for Service Providers Release Notes</em></a>.</p>
-<h2 id="related-videos">Related videos</h2>
-<ul>
-<li><a href="https://vimeo.com/296027011">vCloud Director 9.1 overview</a></li>
-</ul>
+<h2 id="overview">Overview</h2>
+<p>This knowledge centre article explains how OpenShift developers can restrict access to the routes they create to their deployed services in OpenShift by IP address. Restricting access in this way increases the security of a route by allowing only trusted IPs to access the OpenShift route.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>OpenShift developers who have created and deployed services into OpenShift, and created and exposed routes for those services. This article describes how to further secure access to those exposed routes by allowing only trusted IPs to access them.</p>
+<h2 id="restricting-access-to-a-route">Restricting access to a route</h2>
+<p>After creating and exposing a route in OpenShift in the usual manner, you can then add an annotation to the route specifying the IP address(es) that you would like to whitelist.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Whitelisting a IP address automatically blacklists everything else.</p>
+</div>
+<p>You apply the annotation to a route in the following manner:</p>
+<pre><code>oc annotate route &lt;route_name&gt; haproxy.router.openshift.io/ip_whitelist=&lt;ip_address&gt;
+</code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>You must do this for every route that you wish to apply the whitelisting to.</p>
+</div>
+<h2 id="examples">Examples</h2>
+<p>To allow a single IP address through to the route, use the following:</p>
+<pre><code>oc annotate route &lt;route_name&gt; haproxy.router.openshift.io/ip_whitelist=192.168.1.10
+</code></pre>
+<p>To allow several IP addresses through to the route, separate each IP with a space:</p>
+<pre><code>oc annotate route &lt;route_name&gt; haproxy.router.openshift.io/ip_whitelist=192.168.1.10 192.168.1.11 192.168.1.12
+</code></pre>
+<p>To allow a network CIDR through to the route, declare the network CIDR as so:</p>
+<pre><code>oc annotate route &lt;route_name&gt; haproxy.router.openshift.io/ip_whitelist=192.168.1.10/24
+</code></pre>
+<p>You can even use a mix of IP addresses and a network CIDR:</p>
+<pre><code>oc annotate route &lt;route_name&gt; haproxy.router.openshift.io/ip_whitelist=192.168.1.10 180.5.61.153 192.168.1.0/24 10.0.0.0/8
+</code></pre>
+<p>To delete the IPs from the annotation, you can run the command:</p>
+<pre><code>oc annotate route &lt;route_name&gt; haproxy.router.openshift.io/ip_whitelist-
+</code></pre>
+<h2 id="more-information">More information</h2>
+<p>For further infomation, see the following: <a href="https://docs.openshift.com/container-platform/3.9/architecture/networking/routes.html">Openshift Documentation</a></p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>This functionality is available by default in UKCloud OpenShift deployments of version 3.10 or newer. For all previous versions customers need to raise a request with UKCloud to have this functionality enabled.</p>
+</div>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
@@ -135,7 +137,7 @@
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-vcd-91.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-restrict-access-to-openshift-routes-by-ip-address.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>

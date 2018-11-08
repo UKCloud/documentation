@@ -2137,7 +2137,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-how-migrate-n3-hscn.html",
-          "hash": "sNl9xSMBs0VDSuqEbUo2fw=="
+          "hash": "ouQlr5taG7rz3hCQouQJsQ=="
         }
       },
       "is_incremental": false,
@@ -2174,6 +2174,18 @@
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-ddos-protection.html",
           "hash": "Z6UGErLST89eJuRgGBOKIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-hybrid-crown-connect.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-hybrid-crown-connect.html",
+          "hash": "gvgQBRmKNOnzmg8fZDlLlQ=="
         }
       },
       "is_incremental": false,
@@ -2359,7 +2371,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/toc.html",
-          "hash": "ny8IwP/ZKTXHyuv6YF7zag=="
+          "hash": "/Ln6CHT8/R01Eegg1kdm4Q=="
         }
       },
       "is_incremental": false,
@@ -3910,12 +3922,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-how-restrict-access-to-openshift-routes-by-ip-address.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-how-restrict-access-to-openshift-routes-by-ip-address.html",
+          "hash": "1qj1WQWudlsp2D1TJD0cTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/openshift/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "rRwijmB5Hw4Z36c9evhWWg=="
+          "hash": "ojb0VPCSke/XNN3TWyUKpw=="
         }
       },
       "is_incremental": false,
@@ -6190,6 +6214,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-idam.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-idam.html",
+          "hash": "NinrOLxTO4tWcJK6aoKh7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-ideas-competition.md",
       "output": {
         ".html": {
@@ -6386,7 +6422,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "/QIGQ53/E5TMlMiwyhI6Pw=="
+          "hash": "BQpFWq47B7AD6TMU+MZF2w=="
         }
       },
       "is_incremental": false,
@@ -6871,7 +6907,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-portal-api.html",
-          "hash": "iupH9G0MvaCaP3Sqnwp3lA=="
+          "hash": "3I76RpiZmsIwteYj1CbsbA=="
         }
       },
       "is_incremental": false,
@@ -13283,7 +13319,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcd-91.html",
-          "hash": "JgZcWjAbYdP42iID0lj9QQ=="
+          "hash": "Xl2arb3dx5jcMpcKorrGlw=="
         }
       },
       "is_incremental": false,

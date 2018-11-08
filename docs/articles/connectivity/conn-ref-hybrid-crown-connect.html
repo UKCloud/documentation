@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Upgrade to vCloud Director 9.1 | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>HybridConnect vs CrownConnect (Private Connectivity) | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Upgrade to vCloud Director 9.1 | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="HybridConnect vs CrownConnect (Private Connectivity) | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,47 +82,90 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="upgrade-to-vcloud-director-91">Upgrade to vCloud Director 9.1</h1>
+<h1 id="hybridconnect-vs-crownconnect-private-connectivity">HybridConnect vs CrownConnect (Private Connectivity)</h1>
 
-<h2 id="introduction">Introduction</h2>
-<p>This guide outlines the improvements UKCloud's upgrade to vCloud Director 9.1 will deliver to UKCloud for VMware.</p>
-<h2 id="vcloud-director-91-new-features">vCloud Director 9.1 new features</h2>
-<p>vCloud Director 9.1 provides the following new features:</p>
+<h2 id="overview">Overview</h2>
+<p>This article outlines the difference between HybridConnect and CrownConnect and explains when each should be used.</p>
+<h2 id="what-is-hybridconnect">What is HybridConnect?</h2>
+<p>HybridConnect enables you to bring private connectivity into service provider locations within UKCloud's core network locations in ARK data centres. UKCloud will then arrange onward connectivity from the termination point into your cloud service. The service provider locations must be within UKCloud's core network locations for HybridConnect to be used.</p>
+<p>The current core network locations are: Farnborough A9 and Corsham SQ17.</p>
+<p>Known Service Providers with presence* within A9 and SQ17:</p>
 <ul>
-<li><p>Enhanced HTML-5 tenant portal, including:</p>
-<ul>
-<li><p>Creation and configuration of networks consolidated in a single view</p>
-</li>
-<li><p>New metrics dashboard provides functionality previously available only via API</p>
-</li>
-<li><p>Streamlined workflows for creating vApps and VMs</p>
-<p>For more information about the vCloud Director tenant portal, see the <a href="https://docs.vmware.com/en/vCloud-Director/9.1/com.vmware.vcloud.tenantportal.doc/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html"><em>vCloud Director Tenant Portal Guide</em></a>.</p>
-</li>
+<li>BT</li>
+<li>Vodafone</li>
+<li>CenturyLink</li>
+<li>Virgin Media</li>
+<li>Interoute</li>
 </ul>
-</li>
-<li><p>Standalone VMRC improves access to VM consoles</p>
-</li>
-<li><p>Python SDK and CLI</p>
-</li>
-</ul>
-<p>For a full list of new features in vCloud Director 9.1, see the <a href="https://blogs.vmware.com/vcloud/files/2018/03/vcd91newfeatureswp.pdf"><em>What's New with VMware vCloud Director 9.1</em></a> white paper.</p>
-<h2 id="changes-to-apis">Changes to APIs</h2>
-<p>For information about the changes to the vCloud API used by vCloud Director 9.1, see the <a href="https://code.vmware.com/apis/287/vcloud#/doc/diff/index.html"><em>vCloud API Schema Differences</em></a> document.</p>
-<p>You should be aware of the following end-of-life and end-of-support warnings for older vCloud API versions in vCloud Director 9.1:</p>
-<ul>
-<li>vCloud Director 9.1 no longer supports vCloud API versions 1.5 and 5.1. These API versions were deprecated in a previous release.</li>
-<li>vCloud Director 9.1 is the last release of vCloud Director to support any vCloud API versions earlier than 20.0. Those API versions are deprecated in this release and will not be supported in future releases.</li>
-</ul>
-<h2 id="known-issues">Known issues</h2>
-<p>There are some tasks, including managing standard edges, that are not currently possible using the vCloud Director 9.1 tenant portal. To perform these tasks, you must use the vCloud Director web console. For more information, including a list of tasks that must be performed in the web console, see <a href="vmw-how-switch-web-console.html"><em>How to switch to the vCloud Director web console from the tenant portal</em></a>. For information about converting your edge to an advanced gateway, which can be managed in the tenant portal, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
-<p>If you disable your firewall, NAT and Load Balancing features are also disabled. This applies to both standard and advanced edge gateways in vCloud Director 9.1. To avoid any potential issues, we recommend that you review your edge configuration, apply appropriate rules and enable the firewall. We also recommend that firewalls should be enabled as part of best practice to reduce attack vectors on your cloud environment. Before you perform any work on the edge, we strongly recommend that you take a backup of the configuration via the API as a restore point. For information about how to do this, see <a href="https://docs.ukcloud.com/articles/vmware/vmw-how-change-ipsec-vpn-api.html#reviewing-the-edge-gateway-configuration"><em>Reviewing the edge gateway configuration</em></a> in <em>How to change IPsec VPN settings via the vCloud Director API</em>.</p>
-<p>For a list of other known issues with vCloud Director 9.1, see the <a href="https://docs.vmware.com/en/vCloud-Director/9.1/rn/rel_notes_vcloud_director_91.html#knownissues"><em>vCloud Director 9.1 for Service Providers Release Notes</em></a>.</p>
-<h2 id="related-videos">Related videos</h2>
-<ul>
-<li><a href="https://vimeo.com/296027011">vCloud Director 9.1 overview</a></li>
-</ul>
+<p>* This does not necessarily mean your private connection will be terminated within these locations. You should check the planned termination location with your provider.</p>
+<p>UKCloud is not responsible for procuring the private connection or arranging any service provider activity on your behalf.</p>
+<p>You may want to implement encryption on your private connection. You can use Cloud Enablement to host physical devices for termination of this encryption if required.</p>
+<h2 id="what-is-crownconnect">What is CrownConnect?</h2>
+<p>CrownConnect has two flavours: Private Connectivity and Private Infrastructure. This article focuses on Private Connectivity.</p>
+<p>CrownConnect (Private Connectivity) enables you to bring private connectivity into service provider locations anywhere in the ARK data centre campus. UKCloud will then arrange for onward connectivity from the termination point into the your cloud service. The service provider locations can be anywhere within the ARK Crown Campus and are not limited to UKCloud's core network locations.</p>
+<p>UKCloud is not responsible for procuring the private connection or arranging any service provider activity on your behalf.</p>
+<p>You may want to implement encryption on your private connection. You can use Cloud Enablement to host physical devices for termination of this encryption if required.</p>
+<h2 id="pricing">Pricing</h2>
+<p>There are different pricing models for both products. These charges are applied per installation.</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>HybridConnect</th>
+<th>CrownConnect (Private Connectivity)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One-off charge</td>
+<td>£2000</td>
+<td>£1000</td>
+</tr>
+<tr>
+<td>Monthly charge</td>
+<td>£0</td>
+<td>£200 (1Gb port)<br>£500 (10Gb port)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lead-times">Lead times</h2>
+<p>Lead times vary depending on product and there are no SLAs for delivery. HybridConnect can be delivered within a few days due to the locality of the termination points to UKCloud's core network, however CrownConnect is dependent on fibre installation from the termination point into UKCloud's core network location. The lead time of delivery of this fibre depends on the distance from the termination point to the core network location.</p>
+<h2 id="comparison-table">Comparison table</h2>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>HybridConnect</th>
+<th>CrownConnect (Private Connectivity)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Service provider termination locations</td>
+<td>A9<br>SQ17</td>
+<td>A101<br>A102<br>A103<br>P1<br>P2<br>P3</td>
+</tr>
+<tr>
+<td>Costs</td>
+<td>One-off installation</td>
+<td>One-off installation + monthly charge</td>
+</tr>
+<tr>
+<td>Lead times</td>
+<td>A few days (approx)</td>
+<td>Dependent on termination location</td>
+</tr>
+<tr>
+<td>Cloud Enablement use</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="further-information">Further information</h2>
+<p>For more information about the process of installing HybridConnect or CrownConnect, or to understand party responsibilities, see <a href="conn-ref-telco-enagagement.html"><em>Telecommunications Service Provider engagement</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -135,7 +178,7 @@
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-vcd-91.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/connectivity/conn-ref-hybrid-crown-connect.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>
