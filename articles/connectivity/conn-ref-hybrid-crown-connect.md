@@ -28,9 +28,13 @@ The current core network locations are: Farnborough A9 and Corsham SQ17.
 Known Service Providers with presence* within A9 and SQ17:
 
 BT
+
 Vodafone
+
 CenturyLink
+
 Virgin Media
+
 Interoute
 
 \* This does not necessarily mean your private connection will be terminated within these locations. You should check the planned termination location with your provider.
