@@ -210,13 +210,15 @@ UKCloud's public services are currently presented on N3 and HSCN. You will need 
 
 ### Cloud Storage
 
-Cloud Storage will continue to be accessible over N3 but will also be presented to HSCN.
+Cloud Storage will continue to be accessible over N3 until 3rd January 2019 but will also be presented to HSCN.
 
-When you've migrated to HSCN, you should consider using the HSCN-facing Cloud Storage when possible, as this will improve communication between your VMs and Cloud Storage.
+When you've migrated your compute workloads to HSCN, you should consider using the HSCN-facing Cloud Storage as soon as possible, as this will improve communication between your VMs and Cloud Storage.
 
 You'll need to update your firewall and host file records to continue to use this service.
 
-Raise a service request when you want to move to using HSCN Cloud Storage so we can help you make sure your migration is successful, and to ensure we remove the N3 connectivity so you are no longer billed for it.
+HSCN-connected Cloud Storage has the following URLs and IPs
+Farnborough: cas.frn00006.ukcloud.thirdparty.nhs.uk – 10.200.82.4
+Corsham: cas.cor00005.ukcloud.thirdparty.nhs.uk – 10.200.83.4
 
 ### Next steps
 
