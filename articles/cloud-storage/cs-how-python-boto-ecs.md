@@ -94,6 +94,7 @@ ukc_ecs_s3.upload_file(source_file, bucket_name, key_name, Callback=ProgressPerc
 4. The following code will download a file and display a percentage progress counter.
 
 ```Python
+#!/usr/bin/env python3
 import os
 import sys
 import threading
