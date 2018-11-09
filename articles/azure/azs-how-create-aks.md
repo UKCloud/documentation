@@ -47,21 +47,21 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
    **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
-   **Location** - This will be "frn00006", which is the location of the Azure Stack.
+   **Location** - This will be 'frn00006', which is the location of the Azure Stack.
 
    ![Create Kubernetes Cluster > Basics](images/azs-browser-create-aks-basics.png)
 
 6. In the *Kubernetes Cluster Settings* step, enter the following information and click **OK**:
 
-   **Linux VM Admin Username** - The username for the Linux Virtual Machines that are part of the Kubernetes Cluster.
+   **Linux VM Admin Username** - The username for the Linux virtual machines that are part of the Kubernetes Cluster.
 
-   **SSH public key** - SSH public key used for auth to all Linux machines created as part of the the Kubernetes cluster.
+   **SSH public key** - SSH public key used for authentication to all Linux machines created as part of the the Kubernetes cluster.
 
-   **Master Profile DNS Prefix** - This must be a region-unique name e.g. k8s-12345. Try to choose the same name as the resource group as best practice.
+   **Master Profile DNS Prefix** - This must be a region-unique name, for example k8s-12345. Try to choose the same name as the resource group as best practice.
 
    **Kubernetes Master Pool Profile Count** - The number of master nodes for the Kubernetes cluster. This value should be an odd number.
 
-   **The VMSize of Kubernetes node VMs** - The VM size of each master node. For information about the different available VM sizes, see <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>
+   **The VMSize of Kubernetes node VMs** - The VM size of each master node. For information about the different available VM sizes, see <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>.
 
    **Kubernetes Node Pool Profile Count** - The number of agents for the Kubernetes cluster.
 
@@ -85,7 +85,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     ![Notification showing cluster deployment in progress](images/azsp_createvm_progress.png)
 
-10. After your cluster has been deployed, you can view it by clicking **Resource Groups** in the favourites panel, then selecting the resource group which contains the cluster.
+10. After your cluster has been deployed, you can view it by clicking **Resource Groups** in the favourites panel, then selecting the resource group that contains the cluster.
 
 ## Feedback
 
