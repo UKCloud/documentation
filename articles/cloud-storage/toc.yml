@@ -28,3 +28,7 @@
   items:
   - name: Cloud Storage Service Scope
     href: cs-sco.md
+- name: Videos
+  items:
+  - name: CIFS-ECS overview
+    href: cs-vid-cifs-ecs-overview.md

@@ -1136,7 +1136,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-gs.html",
-          "hash": "6pm8G6qqsAzPzMY8VGVMzQ=="
+          "hash": "mwyqqeSqsetAVTmSapFf8w=="
         }
       },
       "is_incremental": false,
@@ -1160,7 +1160,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-install-cifs-ecs.html",
-          "hash": "wDFoLk2ukquVa/bO2SXyQw=="
+          "hash": "q4/cOIuMuBMEy7IvuBoHwQ=="
         }
       },
       "is_incremental": false,
@@ -1233,6 +1233,18 @@
         ".html": {
           "relative_path": "articles/cloud-storage/cs-sco.html",
           "hash": "Z+UhXYqY6Q3MUMZpzNuBYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/cloud-storage/cs-vid-cifs-ecs-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cloud-storage/cs-vid-cifs-ecs-overview.html",
+          "hash": "pRHMW1RECO66YxaW6QOcpg=="
         }
       },
       "is_incremental": false,
@@ -1966,6 +1978,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-vid-cifs-ecs-overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-vid-cifs-ecs-overview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/cloud-storage/images/psn_assured_whitelist_ports.png",
       "output": {
         "resource": {
@@ -1981,7 +2004,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/toc.html",
-          "hash": "KgNsaTTzko1/Hh/jvCn/Og=="
+          "hash": "mvmnnEmfpbKS+hEP7s/LHw=="
         }
       },
       "is_incremental": false,
@@ -13560,11 +13583,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -13572,6 +13590,11 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
