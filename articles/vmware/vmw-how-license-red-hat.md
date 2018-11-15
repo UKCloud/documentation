@@ -17,7 +17,7 @@ toc_mdlink: vmw-how-license-red-hat.md
 
 ## Overview
 
-UKCloud offer Compute as a Service with a variety of operating systems to suite your application requirements.
+UKCloud offer UKCloud for VMware with a variety of operating systems to suite your application requirements.
 
 ## Options
 
