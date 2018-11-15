@@ -75,7 +75,7 @@ This article provides a list of Service Definitions for G-Cloud 10 (G10) UKCloud
 
 ## Terms and conditions
 
-[UKCloud Ltd G-Cloud 10 Terms and Conditions](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf)
+[UKCloud Ltd G-Cloud 10 Terms and Conditions](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/113527390782629-pricing-document-2018-11-14-1427.pdf)
 
 ## Feedback
 
