@@ -6918,7 +6918,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-overview-permissions.html",
-          "hash": "AsZZp4Ta4JzoYIEhNaSHiA=="
+          "hash": "rYt/woeMOwp+WZp6Sn/ggg=="
         }
       },
       "is_incremental": false,
@@ -6954,7 +6954,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-release-notes.html",
-          "hash": "w9ZmqS3HXwBRhYVL7Rl2Fw=="
+          "hash": "ImakkjxRlApvBxO4j8Fuhg=="
         }
       },
       "is_incremental": false,
@@ -13588,13 +13588,13 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
