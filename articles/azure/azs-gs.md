@@ -69,11 +69,11 @@ After submitting your details, you will receive an email asking for permission f
 
 Once you have received this, click the **CSP Invitation URL** link and click to sign in:
 
-![Microsoft Azure sign in page](images/azs-browser-csp-auth-signin.PNG)
+![Microsoft Azure sign in page](images/azs-browser-csp-auth-signin.png)
 
 After signing in you will be greeted with the following page. Tick the checkbox and click **Authorize CSP**, then contact your CSM so UKCloud can complete your onboarding process.
 
-![Microsoft Azure authorize CSP page](images/azs-browser-authorize-csp.PNG)
+![Microsoft Azure authorize CSP page](images/azs-browser-authorize-csp.png)
 
 Next, you should receive a welcome email from your CSM containing the details of your new UKCloud for Microsoft Azure environment.
 
