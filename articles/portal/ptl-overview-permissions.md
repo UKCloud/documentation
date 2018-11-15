@@ -37,7 +37,7 @@ Leave these boxes unchecked to deny a user these capabilities.
 
 Contact and user permissions dictate whether the user is able to make changes to who has access to the account, and their role inside of it.
 
-A contact is just contact details, they may not necessarily have an actual user account. To enable a contact to have User access, the must be marked as "active".
+A contact is just contact details, they may not necessarily have an actual user account. To enable a contact to have User access, they must be marked as "active".
 
 &nbsp; | Create | Read | Update | Delete | All
 ------ | ------ | ---- | ------ | ------ | ---

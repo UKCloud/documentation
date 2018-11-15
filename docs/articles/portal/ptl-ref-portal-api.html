@@ -174,7 +174,7 @@
 <h4 id="uri-parameters">URI parameters</h4>
 <p>None</p>
 <h4 id="example-request-curl">Example request (Curl)</h4>
-<pre><code>curl -c /tmp/cookies.txt -X POST -H 'Accept: application/json\' -H 'Content-Type: application/json' -d \'{&quot;email&quot;: &quot;email\@example.com&quot;, &quot;password&quot;: &quot;password&quot;}' https://portal.skyscapecloud.com/api/authenticate
+<pre><code class="lang-bash">curl -c /tmp/cookies.txt -X POST -H 'Accept: application/json' -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;email@example.com&quot;, &quot;password&quot;: &quot;password&quot;}' https://portal.skyscapecloud.com/api/authenticate
 </code></pre>
 <h4 id="example-request-ruby">Example request (Ruby)</h4>
 <pre><code>conn = Faraday.new('https://portal.skyscapecloud.com') { |f| f.request :json }
@@ -207,7 +207,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 </tbody>
 </table>
 <p>The endpoint also returns a session cookie that provides authentication for your API calls. You must send this cookie with any subsequent authenticated call, for example:</p>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts
 </code></pre>
 <h4 id="example-response">Example response</h4>
 <pre><code>{&quot;expire_after&quot;: 900}
@@ -224,7 +224,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 <h4 id="uri-parameters-1">URI parameters</h4>
 <p>None</p>
 <h4 id="example-request-curl-1">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my\vm
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my\vm
 </code></pre>
 <h4 id="example-request-ruby-1">Example request (Ruby)</h4>
 <pre><code>resp = conn.get('/api/my_vm') { |req| req.headers['cookie'] = cookies }
@@ -309,7 +309,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 </tbody>
 </table>
 <h4 id="example-request-curl-2">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls?for=user
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls?for=user
 </code></pre>
 <h4 id="example-request-ruby-2">Example request (Ruby)</h4>
 <pre><code>resp = conn.get('/api/my_calls') { |req| req.headers['cookie'] = cookies }
@@ -361,7 +361,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 </tbody>
 </table>
 <h4 id="example-request-curl-3">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001?for=user
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001?for=user
 </code></pre>
 <h4 id="example-request-ruby-3">Example request (Ruby)</h4>
 <pre><code>resp = conn.get('/api/my_calls/INC10001') { |req| req.headers['cookie'] = cookies }
@@ -424,7 +424,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 </tbody>
 </table>
 <h4 id="example-request-curl-4">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/my_calls/INC10001 -X PUT --d '{&quot;description&quot;: &quot;My new update&quot;}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/my_calls/INC10001 -X PUT -d '{&quot;description&quot;: &quot;My new update&quot;}' -H 'Accept: application/json' -H 'Content-Type: application/json'
 </code></pre>
 <h4 id="example-request-ruby-4">Example request (Ruby)</h4>
 <pre><code>resp = conn.put('/api/my_calls/INC10001') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;description&quot;: &quot;My new update&quot;}' }
@@ -488,12 +488,10 @@ further_details | A more complete description of the service request | String | 
 <h4 id="uri-parameters-5">URI parameters</h4>
 <p>None</p>
 <h4 id="example-request-curl-5">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/my_calls -X POST --d '{&quot;incident&quot;: {&quot;problem_area&quot;: &quot;compute&quot;, &quot;service&quot;: &quot;My Service&quot;, &quot;classification&quot;: &quot;Production Service &gt;
-unavailable or unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_details&quot;: &quot;My further details&quot;}}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/my_calls -X POST -d '{&quot;incident&quot;: {&quot;problem_area&quot;: &quot;compute&quot;, &quot;service&quot;: &quot;My Service&quot;, &quot;classification&quot;: &quot;Production Service unavailable or unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_details&quot;: &quot;My further details&quot;}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
 </code></pre>
 <h4 id="example-request-ruby-5">Example request (Ruby)</h4>
-<pre><code>conn.post('/api/my_calls') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;incident&quot;: {&quot;problem_area&quot;: &quot;compute&quot;, &quot;service&quot;, &quot;classification&quot;: &quot;Production Service &gt; unavailable or
-unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_details&quot;: &quot;My further details&quot;}}' }
+<pre><code>conn.post('/api/my_calls') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;incident&quot;: {&quot;problem_area&quot;: &quot;compute&quot;, &quot;service&quot;, &quot;classification&quot;: &quot;Production Service unavailable or unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_details&quot;: &quot;My further details&quot;}}' }
 </code></pre>
 <h3 id="response-5">Response</h3>
 <h4 id="successful-http-response-5">Successful HTTP response</h4>
@@ -551,7 +549,7 @@ unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_
 </tbody>
 </table>
 <h4 id="example-request-curl-6">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' --d '{&quot;email&quot;: &quot;myemail@example.com&quot;}' https://portal.skyscapecloud.com/api/my_calls/INC10001/subscribe
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' -d '{&quot;email&quot;: &quot;myemail@example.com&quot;}' https://portal.skyscapecloud.com/api/my_calls/INC10001/subscribe
 </code></pre>
 <h4 id="example-request-ruby-6">Example request (Ruby)</h4>
 <pre><code>resp = conn.put('/api/my_calls/INC10001/subscribe') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;description&quot;: &quot;My new update&quot;}' }
@@ -612,7 +610,7 @@ unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_
 </tbody>
 </table>
 <h4 id="example-request-curl-7">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' --d '{&quot;email&quot;: &quot;myemail@example.com&quot;}' https://portal.skyscapecloud.com/api/my_calls/INC10001/subscribe
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' -d '{&quot;email&quot;: &quot;myemail@example.com&quot;}' https://portal.skyscapecloud.com/api/my_calls/INC10001/subscribe
 </code></pre>
 <h4 id="example-request-ruby-7">Example request (Ruby)</h4>
 <pre><code>resp = conn.put('/api/my_calls/INC10001/unsubscribe') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;email&quot;: &quot;myemail@example.com&quot;}' }
@@ -655,7 +653,7 @@ unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_
 </tbody>
 </table>
 <h4 id="example-request-curl-8">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/reopen
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/reopen
 </code></pre>
 <h4 id="example-request-ruby-8">Example request (Ruby)</h4>
 <pre><code>resp = conn.put('/api/my_calls/INC10001/reopen') { |req| req.headers['cookie'] = cookies}
@@ -716,7 +714,7 @@ unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_
 </tbody>
 </table>
 <h4 id="example-request-curl-9">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' --d '{&quot;email&quot;: &quot;myemail@example.com&quot;}' https://portal.skyscapecloud.com/api/my_calls/INC10001/change_owner
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' -d '{&quot;email&quot;: &quot;myemail@example.com&quot;}' https://portal.skyscapecloud.com/api/my_calls/INC10001/change_owner
 </code></pre>
 <h4 id="example-request-ruby-9">Example request (Ruby)</h4>
 <pre><code>resp = conn.put('/api/my_calls/INC10001/change_owner') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;email&quot;: &quot;myemail@example.com&quot;}' }
@@ -759,9 +757,9 @@ unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_
 </tbody>
 </table>
 <h4 id="example-request-curl-10">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/cancel
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/cancel
 </code></pre>
-<h3 id="example-request-ruby-10">Example request (Ruby)</h3>
+<h4 id="example-request-ruby-10">Example request (Ruby)</h4>
 <pre><code>resp = conn.put('/api/my_calls/INC10001/cancel') { |req| req.headers['cookie'] = cookies}
 </code></pre>
 <h3 id="response-10">Response</h3>
@@ -802,7 +800,7 @@ unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_
 </tbody>
 </table>
 <h4 id="example-request-curl-11">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/close
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/close
 </code></pre>
 <h4 id="example-request-ruby-11">Example request (Ruby)</h4>
 <pre><code>resp = conn.put('/api/my_calls/INC10001/close') { |req| req.headers['cookie'] = cookies}
@@ -828,7 +826,7 @@ unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_
 <h4 id="uri-parameters-12">URI parameters</h4>
 <p>None</p>
 <h4 id="example-request-curl-12">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/ping
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/ping
 </code></pre>
 <h4 id="example-request-ruby-12">Example request (Ruby)</h4>
 <pre><code>resp = conn.get('/api/ping') { |req| req.headers['cookie'] = cookies }
@@ -855,7 +853,7 @@ unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_
 <h4 id="uri-parameters-13">URI parameters</h4>
 <p>None</p>
 <h4 id="example-request-curl-13">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts
 </code></pre>
 <h4 id="example-request-ruby-13">Example request (Ruby)</h4>
 <pre><code>resp = conn.get('/api/accounts') { |req| req.headers['cookie'] = cookies }
@@ -936,7 +934,7 @@ unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_
 </tbody>
 </table>
 <h4 id="example-request-curl-14">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/compute_services?page=10&amp;per_page=20
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/compute_services?page=10&amp;per_page=20
 </code></pre>
 <h4 id="example-request-ruby-14">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/compute_services?page=10&amp;per_page=20&quot;) { |req| req.headers['cookie'] = cookies }
@@ -1355,7 +1353,7 @@ unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_
 </table>
 <p>For information about how to find the vOrg ID, see <a href="#get-apiaccountsaccount_idvorgs"><em>GET /api/accounts/:account_id/vorgs</em></a></p>
 <h4 id="example-request-curl-15">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/compute_services/12
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/compute_services/12
 </code></pre>
 <h3 id="response-15">Response</h3>
 <h4 id="successful-http-response-15">Successful HTTP response</h4>
@@ -1436,7 +1434,7 @@ unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_
 </tbody>
 </table>
 <h4 id="example-request-curl-16">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H \'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/api_credentials
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/api_credentials
 </code></pre>
 <h4 id="example-request-ruby-15">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/api_credentials&quot;) { |req| req.headers['cookie'] = cookies }
@@ -1512,7 +1510,7 @@ unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_
 </tbody>
 </table>
 <h4 id="example-request-curl-17">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs
 </code></pre>
 <h4 id="example-request-ruby-16">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/vorgs&quot;) { |req| req.headers['cookie'] = cookies }
@@ -1717,7 +1715,7 @@ unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_
 </tbody>
 </table>
 <h4 id="example-request-curl-18">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs -X POST -d '{&quot;data&quot;: {&quot;type&quot;: &quot;Vorg&quot;, &quot;attributes&quot;: {&quot;zoneId&quot;: &quot;B&quot;, &quot;name&quot;: &quot;DEMO&quot;}}}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs -X POST -d '{&quot;data&quot;: {&quot;type&quot;: &quot;Vorg&quot;, &quot;attributes&quot;: {&quot;zoneId&quot;: &quot;B&quot;, &quot;name&quot;: &quot;DEMO&quot;}}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
 </code></pre>
 <h3 id="response-18">Response</h3>
 <h4 id="successful-http-response-18">Successful HTTP response</h4>
@@ -1892,7 +1890,7 @@ unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_
 </tbody>
 </table>
 <h4 id="example-request">Example request</h4>
-<pre><code>curl -b /tmp/cookies.txt -H 'Accept: application/json' --H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/vorg-builds/10 -X GET
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -H 'Accept: application/json' -H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/vorg-builds/10 -X GET
 </code></pre>
 <h3 id="response-19">Response</h3>
 <h4 id="successful-http-response-19">Successful HTTP response</h4>
@@ -2023,7 +2021,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 </tbody>
 </table>
 <h4 id="example-request-curl-19">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorg-builds
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorg-builds
 </code></pre>
 <h4 id="example-request-ruby-17">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/vorg-builds&quot;) {|req| Req.headers['cookie'] = cookies }
@@ -2264,7 +2262,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 </tbody>
 </table>
 <h4 id="example-request-curl-20">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs
 </code></pre>
 <h3 id="response-21">Response</h3>
 <h4 id="successful-http-response-21">Successful HTTP response</h4>
@@ -2466,7 +2464,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 </tbody>
 </table>
 <h4 id="example-request-curl-21">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs -X POST -d '{&quot;data&quot;: {&quot;type&quot;: &quot;VDC&quot;, &quot;attributes&quot;: {&quot;vmType&quot;: &quot;POWER&quot;, &quot;name&quot;: &quot;DEMO&quot;}}}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs -X POST -d '{&quot;data&quot;: {&quot;type&quot;: &quot;VDC&quot;, &quot;attributes&quot;: {&quot;vmType&quot;: &quot;POWER&quot;, &quot;name&quot;: &quot;DEMO&quot;}}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
 </code></pre>
 <h3 id="response-22">Response</h3>
 <h4 id="successful-http-response-22">Successful HTTP response</h4>
@@ -2669,7 +2667,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 </tbody>
 </table>
 <h4 id="example-request-curl-22">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -H 'Accept: application/json' --H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/vdc-builds/10 -X GET
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -H 'Accept: application/json' -H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/vdc-builds/10 -X GET
 </code></pre>
 <h3 id="response-23">Response</h3>
 <h4 id="successful-http-response-23">Successful HTTP response</h4>
@@ -2813,7 +2811,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tbody>
 </table>
 <h4 id="example-request-curl-23">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vdc-builds
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vdc-builds
 </code></pre>
 <h4 id="example-request-ruby-18">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/vdc-builds&quot;) {|req| Req.headers['cookie'] = cookies }
@@ -3078,7 +3076,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tbody>
 </table>
 <h4 id="example-request-curl-24">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways
 </code></pre>
 <h3 id="response-25">Response</h3>
 <h4 id="successful-http-response-25">Successful HTTP response</h4>
@@ -3280,7 +3278,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tbody>
 </table>
 <h4 id="example-request-curl-25">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs/urn:vcloud:vdc:345a5d90-1c8c-4fb2-bf4f-f480de82c594/edge-gateways -X POST -d '{&quot;data&quot;: {&quot;type&quot;: &quot;EdgeGateway&quot;, &quot;attributes&quot;: {&quot;connectivityType&quot;: &quot;Internet&quot;}}}' -H 'Accept: application/json' --H 'Content-Type: application/json'
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs/urn:vcloud:vdc:345a5d90-1c8c-4fb2-bf4f-f480de82c594/edge-gateways -X POST -d '{&quot;data&quot;: {&quot;type&quot;: &quot;EdgeGateway&quot;, &quot;attributes&quot;: {&quot;connectivityType&quot;: &quot;Internet&quot;}}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
 </code></pre>
 <h3 id="response-26">Response</h3>
 <h4 id="successful-http-response-26">Successful HTTP response</h4>
@@ -3423,7 +3421,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tbody>
 </table>
 <h4 id="example-request-curl-26">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -H 'Accept: application/json' --H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/edge-gateway-builds/23 -X GET
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -H 'Accept: application/json' -H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/edge-gateway-builds/23 -X GET
 </code></pre>
 <h3 id="response-27">Response</h3>
 <h4 id="successful-http-response-27">Successful HTTP response</h4>
@@ -3558,7 +3556,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tbody>
 </table>
 <h4 id="example-request-curl-27">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/edge-gateway-builds
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/edge-gateway-builds
 </code></pre>
 <h4 id="example-request-ruby-19">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/edge-gateway-builds&quot;) {|req| Req.headers['cookie'] = cookies }
@@ -3765,7 +3763,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tbody>
 </table>
 <h4 id="example-request-curl-28">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/platform_visibility/vmotion_events
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/platform_visibility/vmotion_events
 </code></pre>
 <h4 id="example-request-ruby-20">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/platform_visibility/vmotion_events&quot;) { |req| req.headers['cookie'] = cookies }
@@ -3858,7 +3856,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tbody>
 </table>
 <h4 id="example-request-curl-29">Example request (Curl)</h4>
-<pre><code>curl -b /tmp/cookies.txt -X GET -H &quot;Accept: application/json&quot; -k https://portal.skyscapecloud.com/api/billing/cloud-storage-report?date=2018-01-01&amp; org-id=xx-xx-xx-xxxxxxx
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H &quot;Accept: application/json&quot; -k https://portal.skyscapecloud.com/api/billing/cloud-storage-report?date=2018-01-01&amp;org-id=xx-xx-xx-xxxxxxx
 </code></pre>
 <h4 id="example-request-ruby-21">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/billing/cloud-storage-report?date=#{date}&amp;org-id=#{org-id}&quot;) { |req| req.headers['cookie'] = cookies }

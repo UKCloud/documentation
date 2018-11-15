@@ -371,11 +371,17 @@ In this Getting Started Guide, you've learned the basics about the Cloud Storage
 
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
-- Cloud Storage Gateways
-    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
-    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
-
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
+
+- Cloud Storage Gateways
+
+  - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+
+  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+
+## Related videos
+
+- [CIFS-ECS overview video](https://vimeo.com/300264583)
 
 ## Glossary
 
@@ -404,4 +410,4 @@ Storage.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

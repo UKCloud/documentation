@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Portal permissions | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Understanding UKCloud's Identity &amp; Access Management API | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Portal permissions | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="Understanding UKCloud's Identity &amp; Access Management API | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -82,101 +82,45 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="portal-permissions">Portal permissions</h1>
+<h1 id="understanding-ukclouds-identity--access-management-api">Understanding UKCloud's Identity &amp; Access Management API</h1>
 
-<h2 id="overview">Overview</h2>
-<p>System administrators are presented with several options to control user permissions through the UKCloud Portal. The information below is intended as a brief guide to which permissions are applied using each setting.</p>
-<p><img src="images/portal_permissions.png" alt="Portal permissions page"></p>
-<h2 id="user-is-admin">User is admin?</h2>
-<p>User gets full administrative privileges across the entire account. This includes all of the permissions listed below.</p>
-<h2 id="permissions-for-settings">Permissions for Settings</h2>
-<p><strong>Update:</strong> A user can update all of the account settings. This includes changing the security methods applied to the account, such as updating security restrictions to require memorable word, password timeout and 2FA. These users can also change the details of the accounts primary and secondary contacts.</p>
-<p><strong>All:</strong> Presently this offers the same capability the update permission.</p>
-<p>Leave these boxes unchecked to deny a user these capabilities.</p>
-<h2 id="permissions-for-contacts">Permissions for Contacts</h2>
-<p>Contact and user permissions dictate whether the user is able to make changes to who has access to the account, and their role inside of it.</p>
-<p>A contact is just contact details, they may not necessarily have an actual user account. To enable a contact to have User access, they must be marked as &quot;active&quot;.</p>
-<table>
-<thead>
-<tr>
-<th> </th>
-<th>Create</th>
-<th>Read</th>
-<th>Update</th>
-<th>Delete</th>
-<th>All</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Contact</strong></td>
-<td>Can create a new contact for that account.</td>
-<td>Can view existing contacts in that account.</td>
-<td>Can edit existing contacts but cannot create new ones.</td>
-<td>Can delete existing contacts.</td>
-<td>All of the above.</td>
-</tr>
-<tr>
-<td><strong>User</strong></td>
-<td>Can create a user associated to a contact for that account and assign permissions.</td>
-<td>Can view existing users for contacts.</td>
-<td>Can edit existing users and their permissions.</td>
-<td>Can delete existing users from contacts.</td>
-<td>All of the above.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="permissions-for-support">Permissions for Support</h2>
-<p>Support Permissions dictate whether a user can view and raise support tickets, and whether they can view other users support tickets.</p>
-<table>
-<thead>
-<tr>
-<th> </th>
-<th>Create</th>
-<th>Read</th>
-<th>Update</th>
-<th>All</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>User support tickets</strong></td>
-<td>Can log their own support tickets in their name.</td>
-<td>Can view their own support tickets.</td>
-<td>Can update their own support tickets.</td>
-<td>All of the above.</td>
-</tr>
-<tr>
-<td><strong>Account support tickets</strong></td>
-<td>Can log their own support tickets.</td>
-<td>Can view all tickets logged by users across that account.</td>
-<td>Can update anyone’s support ticket across that account.</td>
-<td>All of the above.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="permissions-for-ukcloud-for-vmware">Permissions for UKCloud for VMware</h2>
-<p>Compute service permissions are based on the vCloud director RBAC (role based access control permissions). These roles are applied on a service by service basis - for example someone might be a catalogue author of one service, and a console only user in a secondary service.</p>
-<p>The roles exposed are:</p>
-<ul>
-<li>Admin</li>
-<li>Catalogue Author</li>
-<li>vApp Author</li>
-<li>vApp User</li>
-<li>Console Only</li>
-</ul>
-<p>You can find further details of these roles in Chapter 11 of the vCloud Director Administrator's Guide.</p>
-<p>In addition, UKCloud have created an API Only role, that restricts users to accessing vCloud Director solely via the API - no GUI access.</p>
-<h2 id="permissions-for-cloud-storage">Permissions for Cloud Storage</h2>
-<p>Users need to be granted access to the relevant namespace. Once access is granted, the user will be able to see the namespace, list the buckets in the namespace and reset the secret key. The user will also be able to see consumption data for namespaces and buckets.</p>
-<h2 id="permissions-for-ukcloud-for-openstack">Permissions for UKCloud for OpenStack</h2>
-<p>Users need to be granted access to the relevant OpenStack project. Once access is granted, the user can access the Horizon dashboard for the project.</p>
-<h2 id="permissions-for-billing">Permissions for Billing</h2>
-<p>Users can see financial data for their compute services in My VMs. This includes spend to date and estimated spend for the month.</p>
-<h2 id="permissions-for-monitoring">Permissions for Monitoring</h2>
-<p>Users with <strong>Read</strong> permissions can view showback information from the Protective Monitoring service on the <em>My Security Events</em> page.</p>
+<p>UKCloud's Identity &amp; Access Management API (IDAM) enables you to manage user access to products within your account. Adding a user to a group changes which permissions they have.</p>
+<p>Full documentation for the IDAM API is available on <a href="https://app.swaggerhub.com/apis/ukcloud/idam-service">SwaggerHub</a>.</p>
+<h2 id="typical-usage">Typical usage</h2>
+<p>To add a user to a permission group, you first need to list the users and permission groups to find the IDs for both. Then you can use those IDs to add the user to the appropriate group.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>This article provides examples using <a href="https://curl.haxx.se/"><code>curl</code></a> and <a href="https://stedolan.github.io/jq/"><code>jq</code></a>.</p>
+<h3 id="authentication">Authentication</h3>
+<p>Before you begin, you'll need to retrieve a single sign-on token to authenticate with IDAM. For ease of use, this is saved to a variable <code>token</code> in your current shell session using the below command.</p>
+<pre><code class="lang-sh">token=$(curl -X POST &quot;https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token&quot; \
+     -d username=&quot;&lt;username&gt;&quot; \
+     -d password=&quot;&lt;password&gt;&quot;  \
+     -d grant_type=password    \
+     -d client_id=portal.ukcloud | jq -r '.access_token')
+</code></pre>
+<p>This token is used in bearer authentication with IDAM. Requests to the IDAM API are prefaced with <code>curl -H &quot;Authorization: Bearer $token&quot;</code>.</p>
+<h3 id="listing-users">Listing users</h3>
+<p>The first step would be to find the ID of the user whose permissions you wish to edit.</p>
+<p>The below command lists all users you are entitled to manage with their IDs and usernames. Take a note of your target user's ID.</p>
+<pre><code class="lang-sh">curl -s -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users | jq -r '.[] | .id + &quot; &quot; + .username'
+</code></pre>
+<h3 id="listing-groups">Listing groups</h3>
+<p>The next step is to find the ID of the permission you would like to give or take from the user. These are known as <em>groups</em> internally to IDAM.</p>
+<p>The below command lists all groups you are entitled to manage with their IDs and names.</p>
+<pre><code class="lang-sh">curl -s -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/groups | jq -r '.[].subGroups[] | .id + &quot; &quot; + .name'
+</code></pre>
+<h3 id="adding-a-user-to-a-group">Adding a user to a group</h3>
+<p>To give a user a particular permission, use the IDs that you have found to make a request to grant the user that permission.</p>
+<p>You can add a user to a group with this PUT request. Expect a response code of 204 if this is successful.</p>
+<pre><code class="lang-sh">curl -X PUT -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/{{user_id}}/groups/{{group_id}}
+</code></pre>
+<h3 id="removing-a-user-from-a-group">Removing a user from a group</h3>
+<p>A <code>DELETE</code> request, as opposed to a <code>PUT</code> request, will remove a permission from a user by removing them from a group.</p>
+<p>You can remove a user from a group with this DELETE request. Expect a response code of 204 if this is successful.</p>
+<pre><code class="lang-sh">curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/{{user_id}}/groups/{{group_id}}
+</code></pre>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -189,7 +133,7 @@
                   <div class="contribution">
                     <ul class="nav">
                       <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/portal/ptl-overview-permissions.md/#L1" class="contribution-link">Improve this Doc</a>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-idam.md/#L1" class="contribution-link">Improve this Doc</a>
                       </li>
                     </ul>
                   </div>

@@ -84,6 +84,16 @@
                   
 <h1 id="how-to-migrate-from-n3-to-hscn">How to migrate from N3 to HSCN</h1>
 
+<div class="NOTE">
+<h5>Note</h5>
+<p>Due to DNS change freeze by NHS Digital, customers will not be able to request HSCN/N3 DNS changes on the following dates:</p>
+<ul>
+<li>6/11/18 to 08/11/18</li>
+<li>13/11/18 to 14/11/18</li>
+<li>20/11/18 to 21/11/18</li>
+</ul>
+<p>We advise avoiding these dates for cutover from N3 to HSCN.</p>
+</div>
 <h2 id="overview">Overview</h2>
 <p>As of March 2019, NHS Digital will be decommissioning the N3 network, replacing it with the new Health and Social Care Network (HSCN). As a result, UKCloud will be decommissioning our N3 connectivity in January 2019 and users of the N3 network on our platform must migrate their workloads to the HSCN network by then. The two networks (N3 and HSCN) will run in parallel to enable all our customers to migrate off the N3 network.</p>
 <p>Our migration strategy from N3 to HSCN will migrate all the services in a single VDC/project at the same time. An alternative option enables you to migrate individual workloads one at a time, but this will require considerably more configuration on your side.</p>
@@ -250,10 +260,12 @@ Depending on the connectivity types required on each of your VMs, it may be requ
 <p>These services will be removed from the N3 on 8th October. You'll need to amend your firewall rules and host files so you can continue to reach these services when we've migrated these services to HSCN. As HSCN is routable from N3, if you are currently still on N3 you will be able to reach these services if you amend your N3 firewall and host files with the HSCN IPs.</p>
 </div>
 <h3 id="cloud-storage">Cloud Storage</h3>
-<p>Cloud Storage will continue to be accessible over N3 but will also be presented to HSCN.</p>
-<p>When you've migrated to HSCN, you should consider using the HSCN-facing Cloud Storage when possible, as this will improve communication between your VMs and Cloud Storage.</p>
+<p>Cloud Storage will continue to be accessible over N3 until 3rd January 2019 but will also be presented to HSCN.</p>
+<p>When you've migrated your compute workloads to HSCN, you should consider using the HSCN-facing Cloud Storage as soon as possible, as this will improve communication between your VMs and Cloud Storage.</p>
 <p>You'll need to update your firewall and host file records to continue to use this service.</p>
-<p>Raise a service request when you want to move to using HSCN Cloud Storage so we can help you make sure your migration is successful, and to ensure we remove the N3 connectivity so you are no longer billed for it.</p>
+<p>HSCN-connected Cloud Storage has the following URLs and IPs
+Farnborough: cas.frn00006.ukcloud.thirdparty.nhs.uk – 10.200.82.4
+Corsham: cas.cor00005.ukcloud.thirdparty.nhs.uk – 10.200.83.4</p>
 <h3 id="next-steps">Next steps</h3>
 <p>For more information about HSCN, see the <a href="conn-faq-hscn.html"><em>HSCN connectivity FAQs</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
