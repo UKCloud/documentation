@@ -40,6 +40,9 @@ Site Recovery contributes to your business continuity and disaster recovery stra
 
 * Azure subscription account
 * Azure account permissions
+    * Create a Recovery Service vault
+    * Create a virtual machine in the resource group and virtual network you use for the scenario
+    * Write to the storage account you specify
 * Azure Stack VM for site recovery configuration server
 
 ## Configuration server prerequisites
@@ -69,7 +72,7 @@ Configuration server requirements for physical server replication
 * MySQL should be installed on configuration server, this can be installed manually however site recovery can install it during deployment
 * Ports - Allow ports 443 and 9443
 
-## 1. Preparation of VM's
+## Step 1. Preparation of VM's
 
 **OS Support**
 
@@ -85,9 +88,9 @@ Review Supported kernels at:
 
 https://docs.microsoft.com/en-us/azure/site-recovery/vmware-physical-azure-support-matrix#ubuntu-kernel-versions
 
-**Preparation for Mobility service installation**
+**Preparation for mobility service installation**
 
-Every VM you want to replicate must have the Mobility service installed. In order for the process server to install the service automatically on the VM when replication is enabled, verify the VM settings.
+Every VM you want to replicate must have the mobility service installed. In order for the process server to install the service automatically on the VM when replication is enabled, verify the VM settings.
 
 **Windows Machines**
 
@@ -131,12 +134,12 @@ For every machine you want to replicate you will need to find and note down the 
 
 ![List Azure Stack VM Extensions Output](images/azs-browser-networking-private-ip.png)
 
-## 2. Create a new vault and setting a replication goal.
+## Step 2. Create a new vault and setting a replication goal.
 
 1. In the Azure portal navigate to **Create a resource** > **Management Tools** > **Backup and Site Recovery (OMS)** 
 2. In **Name** enter the name you wish to call the vault
 3. In Resource group, create or select a resource group
-4. In Location choose one of the UK South
+4. In Location choose UK South
 5. To quickly access the vault simply right click and select **Pin to dashboard**
 
 ![List Azure Stack VM Extensions Output](images/azs-browser-recovery-vault.png)
@@ -146,9 +149,9 @@ For every machine you want to replicate you will need to find and note down the 
 1. On the **Recovery Services vaults** select the vault you have created.
 2. Select the **Site Recovery** tab under **Getting Started**.
 3. Select **Prepare Infrastructure**.
-4. In Protection goal > Where are your machines located, select **On-premises**.
-5. In Where do you want to replicate your machines, select **To Azure**.
-6. In Are your machines virtualized, select **Not virtualized/Other**. Then select OK.
+4. In Protection goal > **Where are your machines located**, select **On-premises**.
+5. In **Where do you want to replicate your machines**, select **To Azure**.
+6. In **Are your machines virtualized**, select **Not virtualized / Other**. Then select OK.
 
 ![List Azure Stack VM Extensions Output](images/azs-browser-recovery-vault-configuration.png)
 
@@ -164,26 +167,158 @@ For every machine you want to replicate you will need to find and note down the 
 3. Download the vault registration key
 4. Run the Unified Setup on the configuration server VM on Azure Stack
 
-**Running Azure Site Recovery Unified Setup**
+### Running Azure Site Recovery Unified Setup
 
-To install and register the configuration server, do an RDP connection to the VM you want to use for the configuration server, and run Unified Setup. Before you start, make sure that the clock is synchronized with a time server on the VM before you start. Installation fails if the time is more than five minutes off local time. A link on how to do this is here:
+To install and register the configuration server, perform an RDP connection to the VM you want to use for the configuration server, and run **Unified Setup**. Before you start, make sure that the server clock is synchronized with a time server on the VM before you start. Installation fails if the time is more than five minutes off local time. A link on how to do this is here:
 
 https://technet.microsoft.com/windows-server-docs/identity/ad-ds/get-started/windows-time-service/windows-time-service
 
 Now install the Azure Site Recovery Unified Setup:
 
-1. Run the Unified Setup installation file.
-2. In **Before You Begin**, select Install the configuration server and process server.
-3. In *Third Party Software License**, click I Accept to download and install MySQL.
-4. In **Registration**, select the registration key you downloaded from the vault.
-5. In **Internet Settings**, specify how the Provider running on the configuration server connects to Azure Site Recovery over the Internet. Make sure you've allowed the required URLs.
-    * If you want to connect with the proxy that's currently set up on the machine, select Connect to Azure Site Recovery using a proxy server.
-    * If you want the Provider to connect directly, select Connect directly to Azure Site Recovery without a proxy server.
-    * If the existing proxy requires authentication, or if you want to use a custom proxy for the Provider connection, select Connect with custom proxy settings, and specify the address, port, and credentials. 
-6. In **Prerequisites Check**, Setup runs a check to make sure that installation can run. If a warning appears about the Global time sync check, verify that the time on the system clock (Date and Time settings) is the same as the time zone. This step will ensure the configurations hardware meets minimum requirements 
-7. In **MySQL Configuration**, create credentials for logging on to the MySQL server instance that is installed.
-8. In **Environment Details**, select No as you're replicating Azure Stack VMs.
-9. In **Install Location**, select where you want to install the binaries and store the cache. The drive you select must have at least 5 GB of disk space available, but it is highly recommended to have a cache drive with at least 600 GB of free space.
-10. In **Network Selection**, specify the listener (network adapter and SSL port) on which the configuration server sends and receives replication data. Port 9443 is the default port used for sending and receiving replication traffic, but you can modify this port number to suit your environment's requirements. In addition to the port 9443, we also open port 443, which is used by a web server to orchestrate replication operations. Do not use port 443 for sending or receiving replication traffic.
-11. In **Summary**, review the information and click Install. When installation finishes, a passphrase is generated. You will need this when you enable replication, so copy it and keep it in a secure location.
 
+1. Run the Unified Setup installation file.
+
+2. In **Before You Begin**, select **Install the configuration server and process server**.
+![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step1.png)
+
+3. In **Third Party Software License**, select **I accept the third party license agreement**.
+![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step2.png)
+
+4. In **Registration**, select the registration key you downloaded from the vault.
+![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step3.png)
+
+5. In **Internet Settings**, specify how the Provider running on the configuration server connects to Azure Site Recovery over the Internet. Make sure you've allowed the required URLs.    
+    * If you want the Provider to connect directly, select **Connect directly to Azure Site Recovery without a proxy server**.
+
+    ![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step4a.png)
+    * If the existing proxy requires authentication, or if you want to use a custom proxy for the Provider connection, select **Connect to Azure Site Recovery using a proxy server**, and specify the address, port, and credentials. 
+    
+    ![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step4b.png)
+6. In **Prerequisites Check**, The setup runs a check to make sure that installation can run. If a warning appears about the Global time sync check, verify that the time on the system clock (Date and Time settings) is the same as the time zone. This step will ensure the configurations hardware meets minimum requirements 
+![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step5.png) 
+7. In **MySQL Configuration**, create credentials for logging on to the MySQL server instance that is installed.
+![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step6.png)
+8. In **Environment Details**, select **No** as you're replicating Azure Stack VMs.
+![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step7.png)
+9. In **Install Location**, select where you want to install the binaries and store the cache. The drive you select must have at least 5 GB of disk space available, but it is highly recommended to have a cache drive with at least 600 GB of free space.
+![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step8.png)
+10. In **Network Selection**, specify the listener (network adapter and SSL port) on which the configuration server sends and receives replication data. Port 9443 is the default port used for sending and receiving replication traffic, but you can modify this port number to suit your environment's requirements. In addition to the port 9443, we also open port 443, which is used by a web server to orchestrate replication operations. Do not use port 443 for sending or receiving replication traffic.
+![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step9.png)
+11. In **Summary**, review the information and click Install. When installation finishes, a passphrase is generated. You will need this when you enable replication, so copy it and keep it in a secure location.
+![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step10.png)
+![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step11.png)
+
+After registration finishes, the server should become option when selecting **Configuration Server**
+
+## Step 4. Set up target environment
+
+Select and verify target resources.
+
+1. In Prepare infrastructure > Target, select the Azure subscription you want to use.
+2. Specify the target deployment model.
+3. Site Recovery checks that you have one or more compatible Azure storage accounts and networks. If it doesn't find them, you need to create at least one storage account and virtual network, in order to complete the wizard.
+
+![List Azure Stack VM Extensions Output](images/azs-browser-recovery-infrastructure-configuration2.png)
+
+## Step 5: Enable replication
+
+1. Select the final tab **Replication Settings**.
+2. In **Create replication policy**, specify a policy name.
+3. In **RPO threshold**, specify the recovery point objective (RPO) limit.
+    * Recovery points for replicated data are created in accordance with the time set.
+    * This setting does not affect replication, which is continuous. It simply issues an alert if the threshold limit is reached without a recovery point being created.
+4. In **Recovery point retention**, Specify how long each recovery point is kept. Replicated VMs can be recovered to any point in the specified time window.
+5. In **App-consistent snapshot frequency**, specify how often application-consistent snapshots are created.
+    * A app-consistent snapshot is a point-in-time snapshot of the app data inside the VM.
+    * Volume Shadow Copy Service (VSS) ensures that apps on the VM are in a consistent state when the snapshot is taken.
+6. Select OK to create the policy.
+
+![List Azure Stack VM Extensions Output](images/azs-browser-recovery-infrastructure-configuration3.png)
+
+## Step 6: Run a disaster recovery drill
+
+You run a test failover to Azure to make sure that everything's working as expected. This failover won't affect your production environment.
+
+### Verify machine properties
+
+Before you run a test failover, verify the machine properties, and make sure that they comply with Azure requirements. You can view and modify properties as follows:
+
+1. In Protected Items, click Replicated Items > VM.
+2. In the Replicated item pane, there's a summary of VM information, health status, and the latest available recovery points. Click Properties to view more details.
+3. In Compute and Network, modify settings as needed.
+    * You can modify the Azure VM name, resource group, target size, availability set, and managed disk settings.
+    * You can also view and modify network settings. These include the network/subnet to which the Azure VM is joined after failover, and the IP address that will be assigned to the VM.
+4. In Disks, view information about the operating system and data disks on the VM.
+
+### Run a test failover
+
+When you run a test failover, the following happens:
+
+1. A prerequisites check runs to make sure all of the conditions required for failover are in place.
+2. Failover processes the data using the specified recovery point:
+    * Latest processed: The machine fails over to the latest recovery point processed by Site Recovery. The time stamp is shown. With this option, no time is spent processing data, so it provides a low RTO (recovery time objective).
+    * Latest app-consistent.The machine fails over to the latest app-consistent recovery point.
+    * Custom. Select the recovery point used for failover.
+3. An Azure VM is created using the processed data.
+4. Test failover can automatically clean up Azure VMs created during the drill.
+
+### Run a test failover for a VM as follows:
+
+1. In Settings > Replicated Items, click the VM > +Test Failover.
+2. For this walkthrough, we'll select to use the Latest processed recovery point.
+3. In Test Failover, select the target Azure network.
+4. Click OK to begin the failover.
+5. Track progress by clicking on the VM to open its properties. Or, click the Test 6. Failover job in vault name > Settings > Jobs >Site Recovery jobs.
+6. After the failover finishes, the replica Azure VM appears in the Azure portal > Virtual Machines. Check that the VM is the appropriate size, connected to the right network, and running.
+7. You should now be able to connect to the replicated VM in Azure. Learn more.
+8. To delete Azure VMs created during the test failover, click Cleanup test failover on the VM. In Notes, save any observations associated with the test failover.
+
+## Fail Over and Fail Back
+
+After you've set up replication, and run a drill to make sure everything's working, you can fail machines over to Azure as required.
+
+Before you run a failover, if you want to connect to the machine in Azure after the failover, then prepare to connect before you start.
+
+Then run a failover as follows:
+
+1. In Settings > Replicated Items, click the machine > Failover.
+2. Select the recovery point that you want to use.
+3. In Test Failover, select the target Azure network.
+4. Select Shut down machine before beginning failover. With this setting, Site Recovery tries to shut down the source machine before starting the failover. However failover continues even if shutdown fails.
+5. Click OK to begin the failover. You can follow the failover progress on the Jobs page.
+6. After the failover finishes, the replica Azure VM appears in the Azure portal > Virtual Machines. If you prepared to connect after failover, check that the VM is the appropriate size, connected to the right network, and running.
+7. After verifying the VM, click Commit to finish the failover. This deletes all available recovery points.
+
+```markdown
+Warning
+
+Don't cancel a failover in progress: Before failover is started, VM replication is stopped. 
+If you cancel a failover in progress, failover stops, but the VM won't replicate again.
+```
+
+### Fail back to Azure Stack
+
+When you primary site is up and running again, you can fail back from Azure to Azure Stack. To do this, you need to download the Azure VM VHD, and upload it to Azure Stack.
+
+1. Shut down the Azure VM, so that the VHD can be downloaded.
+2. To start downloading the VHD, install Azure Storage Explorer.
+3. Navigate to the VM in the Azure Portal (using the VM name).
+4. In Disks, click on the disk name, and gather settings.
+5. Now, use Azure Storage Explorer to download the VHD.
+6. Upload the VHD to Azure Stack with these steps.
+7. In the existing VM or new VM, attach the uploaded VHDs.
+8. Check that the OS Disk is correct, and start the VM.
+
+At this stage failback is complete.
+
+## Conclusion
+
+In this article we replicated Azure Stack VMs to Azure. With replication in place, we ran a disaster recovery drill to make sure failover to Azure worked as expected. The article also included steps for running a full failover to Azure, and failing back to Azure Stack.
+
+## Next steps
+
+After failing back, you can re-protect the VM and start replicating it to Azure again To do this, repeat the steps in this article.
+
+## Feedback
+
+If you find an issue with this article, click Improve this Doc to suggest a change. If you have an idea for how we could improve any of our services, visit UKCloud Ideas. Alternatively, you can contact us at products@ukcloud.com.
