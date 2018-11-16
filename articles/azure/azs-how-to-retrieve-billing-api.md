@@ -13,7 +13,7 @@ toc_title: Retrieve billing information from the CSP Portal via API
 toc_fullpath: Operators/How To/azs-how-to-retrieve-billing-api.md
 toc_mdlink: azs-how-to-retrieve-billing-api.md
 ---
-# How to retrieving billing information from the CSP Portal via API
+# How to retrieve billing information from the CSP Portal via API
 
 The purpose of this guide is to help obtain billing information from the CSP Portal via the API.
 
