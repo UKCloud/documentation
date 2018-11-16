@@ -325,3 +325,7 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
     ```
 - [Event Viewer Logs](http://www.codewrecks.com/blog/index.php/2014/06/15/deploying-web-site-with-powershell-dsc-part-3/)
   -  Errors are located in: `Application And Service Logs / Microsoft / Windows / Desired State Configuration`
+
+## Feedback
+
+If you find an issue with this article, click Improve this Doc to suggest a change. If you have an idea for how we could improve any of our services, visit [*UKCloud Ideas*](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
