@@ -307,13 +307,22 @@ When you run a test failover, the following happens:
 
 ### Run a test failover for a VM as follows:
 
-1. In Settings > Replicated Items, click the VM > +Test Failover.
+1. In **Protected items** > **Replicated Items**, click the **VM** > **Test Failover**.
 2. For this walkthrough, we'll select to use the Latest processed recovery point.
 3. In Test Failover, select the target Azure network.
 4. Click OK to begin the failover.
+
+    ![List Azure Stack VM Extensions Output](images/azs-browser-recovery-failover.png)
+
 5. Track progress by clicking on the VM to open its properties. Or, click the Test 6. Failover job in vault name > Settings > Jobs >Site Recovery jobs.
+
+    ![List Azure Stack VM Extensions Output](images/azs-browser-recovery-testfailover.png)
+
+
 6. After the failover finishes, the replica Azure VM appears in the Azure portal > Virtual Machines. Check that the VM is the appropriate size, connected to the right network, and running.
-7. You should now be able to connect to the replicated VM in Azure. Learn more.
+7. You should now be able to connect to the replicated VM in Azure.
+    1. To connect to the new VM via RDP you will need to assign a public IP to the vm
+    2. 
 8. To delete Azure VMs created during the test failover, click Cleanup test failover on the VM. In Notes, save any observations associated with the test failover.
 
 ## Fail Over and Fail Back
