@@ -23,7 +23,7 @@ Site Recovery contributes to your business continuity and disaster recovery stra
 * On failover, Azure VMs are created from the stored VM data, and users can continue accessing workloads running on those Azure VMs.
 * When everything's up and running again, you can fail back Azure VMs to your primary site, and start replicating to Azure storage again.
 
-## Overview Of this Article
+## Overview
 
 1. **Prepare Azure stack VMs for replication.** Check that VMs comply with Site Recovery requirements, and prepare for installation of the Site Recovery Mobility service. This service is installed on each VM you want to replicate.
 
@@ -97,11 +97,11 @@ Every VM you want to replicate must have the mobility service installed. In orde
 * You need network connectivity between the VM on which you want to enable replication,   and the machine running the process server (by default this is the configuration server VM).
 * You need an account with admin rights (domain or local) on the machine for which you enable replication.
   * You specify this account when you set up Site Recovery. Then the process server uses this account to install the Mobility service when replication is enabled.
-  * This account will only be used by Site Recovery for the push installation, and to update the Mobility service.
+  * This account will only be used by Site Recovery for the push installation and to update the Mobility service.
   * If you're not using a domain account, you need to disable Remote User Access control on the VM:
     1. In the registry, create DWORD value LocalAccountTokenFilterPolicy under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System.
     2. Set the value to 1.
-    3. To do this at the command prompt, type the following: REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1.
+    3. To do this at the command prompt, type the following: `REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1.`
 * In the Windows Firewall on the VM you want to replicate, allow File and Printer Sharing, and WMI.
     1. To do this, run wf.msc to open the Windows Firewall console.
     2. Right click Inbound Rules > New Rule. Select Predefined, and choose File and Printer sharing from the list.
@@ -353,18 +353,13 @@ Then run a failover as follows:
 
 1. In Settings > Replicated Items, click the machine > Failover.
 2. Select the recovery point that you want to use.
-3. In Test Failover, select the target Azure network.
-4. Select Shut down machine before beginning failover. With this setting, Site Recovery tries to shut down the source machine before starting the failover. However failover continues even if shutdown fails.
-5. Click OK to begin the failover. You can follow the failover progress on the Jobs page.
-6. After the failover finishes, the replica Azure VM appears in the Azure portal > Virtual Machines. If you prepared to connect after failover, check that the VM is the appropriate size, connected to the right network, and running.
-7. After verifying the VM, click Commit to finish the failover. This deletes all available recovery points.
+3. Click OK to begin the failover. You can follow the failover progress on the Jobs page.
+4. After the failover finishes, the replica Azure VM appears in the Azure portal > Virtual Machines. If you prepared to connect after failover, check that the VM is the appropriate size, connected to the right network, and running. 
+    * Remember to add a public IP to the VM if it needs one
+5. After verifying the VM, click Commit to finish the failover. This deletes all available recovery points.
 
-```markdown
-Warning.
-
-Don't cancel a failover in progress: Before failover is started, VM replication is stopped.
-If you cancel a failover in progress, failover stops, but the VM won't replicate again.
-```
+> [!CAUTION]
+> Don't cancel a failover in progress: Before failover is started, VM replication is stopped. If you cancel a failover in progress, failover stops, but the VM won't replicate again.
 
 ### Fail back to Azure Stack
 
@@ -391,4 +386,4 @@ After failing back, you can re-protect the VM and start replicating it to Azure 
 
 ## Feedback
 
-If you find an issue with this article, click Improve this Doc to suggest a change. If you have an idea for how we could improve any of our services, visit UKCloud Ideas. Alternatively, you can contact us at products@ukcloud.com.
+ If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [*UKCloud Ideas*](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
