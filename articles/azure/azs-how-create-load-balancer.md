@@ -60,7 +60,7 @@ In this section we will create a load balancer with a public IP address.
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
 
-     ![Create new load balancer](images/azs-browser-create-load-balancer.PNG)
+     ![Create new load balancer](images/azs-browser-create-load-balancer.png)
 
 6. Click **Create**.
 
@@ -173,7 +173,7 @@ In this section we will create NSG rules to allow inbound traffic.
 
    - **Description** - A description of the security rule.
   
-    ![Add an inbound security rule](images/azs-browser-add-in-security-rule.PNG)
+    ![Add an inbound security rule](images/azs-browser-add-in-security-rule.png)
 
 6. Click **Add**.
 
