@@ -23,7 +23,7 @@ This article provides a list of Service Definitions for G-Cloud 10 (G10) UKCloud
 
 [Cloud GPU](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/619924782710146-service-definition-document-2018-05-21-1304.pdf)
 
-[Cloud Storage](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf)
+[Cloud Storage](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-11-12-1555.pdf)
 
 [Cross Domain Security Zone](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/781113344072781-service-definition-document-2018-05-21-1257.pdf)
 
@@ -47,15 +47,15 @@ This article provides a list of Service Definitions for G-Cloud 10 (G10) UKCloud
 
 [Secure Remote Access](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/153884335251015-service-definition-document-2018-05-21-1247.pdf)
 
-[UKCloud for Microsoft Azure](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/322910045972626-service-definition-document-2018-09-28-1341.pdf)
+[UKCloud for Microsoft Azure](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/630346855069919-service-definition-document-2018-11-12-1615.pdf)
 
-[UKCloud for OpenShift](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/248991245857940-service-definition-document-2018-05-21-1259.pdf)
+[UKCloud for OpenShift](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/248991245857940-service-definition-document-2018-11-12-1732.pdf)
 
 [UKCloud for OpenStack](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/284790846871896-service-definition-document-2018-05-21-1301.pdf)
 
-[UKCloud for Oracle Software](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf)
+[UKCloud for Oracle Software](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-11-12-1616.pdf)
 
-[UKCloud for VMware](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf)
+[UKCloud for VMware](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-11-12-1615.pdf)
 
 [Cloud Assessment Service](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/296757947202588-service-definition-document-2018-05-21-1318.pdf)
 
@@ -67,7 +67,7 @@ This article provides a list of Service Definitions for G-Cloud 10 (G10) UKCloud
 
 ## Pricing Guide
 
-[Pricing Guide](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf)
+[Pricing Guide](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/113527390782629-pricing-document-2018-11-14-1427.pdf)
 
 ## SFIA rate card
 
@@ -79,4 +79,4 @@ This article provides a list of Service Definitions for G-Cloud 10 (G10) UKCloud
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
