@@ -354,7 +354,7 @@ Then run a failover as follows:
 1. In Settings > Replicated Items, click the machine > Failover.
 2. Select the recovery point that you want to use.
 3. Click OK to begin the failover. You can follow the failover progress on the Jobs page.
-4. After the failover finishes, the replica Azure VM appears in the Azure portal > Virtual Machines. If you prepared to connect after failover, check that the VM is the appropriate size, connected to the right network, and running. 
+4. After the failover finishes, the replica Azure VM appears in the Azure portal > Virtual Machines. If you prepared to connect after failover, check that the VM is the appropriate size, connected to the right network, and running.
     * Remember to add a public IP to the VM if it needs one
 5. After verifying the VM, click Commit to finish the failover. This deletes all available recovery points.
 
