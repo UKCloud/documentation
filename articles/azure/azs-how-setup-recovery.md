@@ -14,9 +14,9 @@ toc_mdlink: azs-how-setup-recovery.md
 ---
 # Setting up disaster recovery for Azure Stack VMs to Azure
 
-The purpose of this guide is to help the setting up of the Azure Stack disaster recovery to Azure using the Azure Site Recovery Service.
+The purpose of this guide is to help the setting up of the **Azure Stack** disaster recovery to **Public Azure** using the **Azure Site Recovery Service**.
 
-Site Recovery contributes to your business continuity and disaster recovery strategy. The service ensures that your VM workloads remain available when expected and unexpected outages occur.
+**Site Recovery** contributes to your business continuity and disaster recovery strategy. The service ensures that your VM workloads remain available when expected and unexpected outages occur.
 
 * Site Recovery orchestrates and manages replication of VMs to Azure storage.
 * When an outage occurs in your primary site, you use Site Recovery to fail over to Azure.
@@ -31,7 +31,7 @@ Site Recovery contributes to your business continuity and disaster recovery stra
 
 3. **Set up the source replication environment.** Set up a Site Recovery configuration server. The configuration server is a single Azure Stack VM that runs all the components needed by Site Recovery. After you've set up the configuration server, you register it in the vault.
 
-4. **Set up the target replication environment.** Select your Azure account, and the Azure storage account and network that you want to use. During replication, VM data is copied to Azure storage. After failover, Azure VMs are joined to the specified network.
+4. **Set up the target replication environment.** Select your Azure account, Azure storage account and network that you want to use. During replication, VM data is copied to Azure storage. After failover, Azure VMs are joined to the specified network.
 
 5. **Enable replication.** Configure replication settings, and enable replication for VMs. The Mobility service will be installed on a VM when replication is enabled. Site Recovery performs an initial replication of the VM, and then ongoing replication begins.
 
@@ -71,7 +71,7 @@ Configuration server requirements for physical server replication.
 ### Access Settings
 
 * MySQL should be installed on configuration server, this can be installed manually however site recovery can install it during deployment.
-* Ports - Allow ports 443 and 9443.
+* Firewall Ports - Allow ports 443 and 9443 (these are used during failover).
 
 ## Step 1. Preparation of VM's
 
@@ -79,18 +79,18 @@ Configuration server requirements for physical server replication.
 
 Please make sure the VM's you want to protect are running one of the following operating systems.
 
-|OS                                  |Details               |
-|---------                                 |---------             |
+|OS       |Details               |
+|---------|---------             |
 |64-bit Windows | Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 (from SP1) |
-|CentOS         | 5.2 to 5.11, 6.1 to 6.9, 7.0 to 7.3 |
-|Ubuntu         | 14.04 LTS server, 16.04 LTS server |
+|CentOS | 5.2 to 5.11, 6.1 to 6.9, 7.0 to 7.3 |
+|Ubuntu | 14.04 LTS server, 16.04 LTS server |
 
 Review Supported kernels at:
 <https://docs.microsoft.com/en-us/azure/site-recovery/vmware-physical-azure-support-matrix#ubuntu-kernel-versions>
 
 ### Preparation for mobility service installation
 
-Every VM you want to replicate must have the mobility service installed. In order for the process server to install the service automatically on the VM when replication is enabled, verify the VM settings.
+Every VM you want to replicate must have the mobility service installed. In order for the process server to install the service automatically on the VM when replication is enabled, please verify the VM has the settings.
 
 #### Windows Machines
 
@@ -105,8 +105,8 @@ Every VM you want to replicate must have the mobility service installed. In orde
 * In the Windows Firewall on the VM you want to replicate, allow File and Printer Sharing, and WMI.
     1. To do this, run wf.msc to open the Windows Firewall console.
     2. Right click Inbound Rules > New Rule. Select Predefined, and choose File and Printer sharing from the list.
-    3. Find the firewall rules related to WMI and enable them.
-    4. Complete the wizard, select to allow the connection > Finish.
+    3. Complete the wizard, select to allow the connection > Finish.
+    4. Find the firewall rules related to WMI (**Windows Management Instrumentation**) and enable them.
     5. For domain computers, you can use a GPO to do this.
 
 #### Linux Machines
@@ -134,7 +134,7 @@ For every machine you want to replicate you will need to find and note down the 
 
     ![List Azure Stack VM Extensions Output](images/azs-browser-networking-private-ip.png)
 
-## Step 2. Create a new vault and setting a replication goal
+## Step 2. Creating a new vault and setting a replication goal
 
 1. In the Azure portal navigate to **Create a resource** > **Management Tools** > **Backup and Site Recovery (OMS)**
 2. In **Name** enter the name you wish to call the vault.
@@ -252,13 +252,13 @@ Select and verify target resources.
 
 ### Adding admin account
 
-After the setup has complete if you navigate to the servers desktop you will find a tool called **Cspconfigtool**, run this tool and navigate to the **Manage Accounts** tab, select **Add Account** and then fill out the details matching the admin accounts details on the VM you wish to replicate.
+After the setup has complete if you navigate to the configuration servers desktop you will find a tool called **Cspconfigtool**, run this tool and navigate to the **Manage Accounts** tab, select **Add Account** and then fill out the details matching the admin accounts details on the VM you wish to replicate.
 
 ![List Azure Stack VM Extensions Output](images/azs-siterecovery-account-manager.png)
 
 ### Enable replication
 
-Make sure you've completed all the tasks in Step 1: Prepare machine. Then enable replication as follows:
+Make sure you've completed all the tasks in **Step 1: Preparation of VM's**. Then enable replication as follows:
 
 1. Under **Protected items** select **Replicated items**.
 2. Select **+Replicate**.
@@ -366,11 +366,11 @@ Then run a failover as follows:
 When you primary site is up and running again, you can fail back from Azure to Azure Stack. To do this, you need to download the Azure VM VHD, and upload it to Azure Stack.
 
 1. Shut down the Azure VM, so that the VHD can be downloaded.
-2. To start downloading the VHD, install Azure Storage Explorer.
-3. Navigate to the VM in the Azure Portal (using the VM name).
-4. In Disks, click on the disk name, and gather settings.
-5. Now, use Azure Storage Explorer to download the VHD.
-6. Upload the VHD to Azure Stack with these steps.
+2. Navigate to your disks on the VM
+3. Select a **Disk**
+4. Navigate to **Disk Export**
+5. Select **Export** > **Download VHD**
+6. Upload the VHD to Azure Stack with these [*steps*](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-manage-vm-disks#use-powershell-to-add-multiple-unmanaged-disks-to-a-vm).
 7. In the existing VM or new VM, attach the uploaded VHDs.
 8. Check that the OS Disk is correct, and start the VM.
 
