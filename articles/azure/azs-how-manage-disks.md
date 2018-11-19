@@ -31,6 +31,7 @@ These disks require that you create a storage account to store the disks. The di
 1. In the portal choose **Virtual machines**.
 2. Select the VM you wish to add disks too.
 3. Navigate to **Disks** > **+Add data disk**.
+    ![List Azure Stack VM Extensions Output](images/azs-browser-disk-creation.png)
 4. Edit the options for your new Disk.
     * **Name**: This is what the disk will be called
     * **Source type**: Leave this as **New(empty disk)** as we are creating a new disk
@@ -38,6 +39,7 @@ These disks require that you create a storage account to store the disks. The di
     * **Size**: This is where you specify the size of the new disk.
     * **Storage container**: This is where you specify the storage container for the disk. Find the storage account where you VM's OS disk is located and then create a new **Container**. Select this container as the location for the new disk
     * **Storage blob name**: This is the blob where the disk will be stored.
+    ![List Azure Stack VM Extensions Output](images/azs-browser-disk-creation2.png)
 5. Select Ok and the new disk will be added to the VM.
 
 ## Using the portal to add existing VM's
@@ -48,6 +50,7 @@ These disks require that you create a storage account to store the disks. The di
 4. In **Source type** select **Existing blob**.
 5. In **Source blob** select **Browse**.
 6. Navigate to the storage account you uploaded the .vhd file to > select the container you uploaded the .vhd file to and click **Select**.
+    ![List Azure Stack VM Extensions Output](images/azs-browser-disk-attaching.png)
 7. Finally click **OK** then **Save**.
 
 ## Adding a disk to a VM that is already attached to another VM on Azure Stack
