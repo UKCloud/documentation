@@ -370,7 +370,7 @@ When you primary site is up and running again, you can fail back from Azure to A
 3. Select a **Disk**
 4. Navigate to **Disk Export**
 5. Select **Export** > **Download VHD**
-6. Upload the VHD to Azure Stack with these [*steps*](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-manage-vm-disks#use-powershell-to-add-multiple-unmanaged-disks-to-a-vm).
+6. Upload the VHD to Azure Stack with these [*steps*](azs-how-manage-disks.md).
 7. In the existing VM or new VM, attach the uploaded VHDs.
 8. Check that the OS Disk is correct, and start the VM.
 
