@@ -52,8 +52,6 @@ The following are known issues with the Mac version of the Pricing Estimation To
 
 4. If you minimise the tool's window, there is no way to resize it. You must close the tool and reopen it.
 
-    ![Window Bug](images/pricing-bug-4.png)
-
 ## Related videos
 
 - [UKCloud Pricing Estimator](https://vimeo.com/300701961)
