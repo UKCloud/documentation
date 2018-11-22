@@ -21,7 +21,7 @@ toc_mdlink: other-how-use-pricing-tool.md
 The UKCloud Pricing Estimation Tool has been created to assist in the cost estimation of our core G-Cloud 10 services. Refer to the G-Cloud 10 Pricing Guide for information regarding service options, pricing options, any required set up fees and product rules. To achieve the most accurate estimate please consult with one of our Cloud Architects.
 
 > [!IMPORTANT]
-> You should always ensure that you're using the latest version of the pricing estimation tool by checking on the [UKCloud web site](https://ukcloud.com/price-estimator-tool/). Also note that this tool provides an estimate based on the selections you make. Your actual consumption of the service may be different, resulting in higher or lower actual costs.
+> You should always ensure that you're using the latest version of the pricing estimation tool by checking on the [UKCloud website](https://ukcloud.com/price-estimator-tool/). Also, note that this tool provides an estimate based on the selections you make. Your actual consumption of the service may be different, resulting in higher or lower actual costs.
 
 > [!NOTE]
 > There are some known bugs in the latest versions of the tool. For more information see [Known bugs with the UKCloud Pricing Estimator Tool](pricing-estimator-bugs.md)
@@ -30,7 +30,7 @@ The UKCloud Pricing Estimation Tool has been created to assist in the cost estim
 
 The Windows version of the tool is provided as a  `.exe` file and the MacOS version is packaged as a `.dmg` file.
 
-Once you've downloaded the install file from the UKCloud web site, depending on the version of the tool you're using, you may to install it first.
+Once you've downloaded the install file from the UKCloud web site, depending on the version of the tool you're using, you may need to install it first.
 
 ### Installing the Windows version
 
@@ -75,7 +75,7 @@ Both the Mac and Windows versions of the tool operate the same way. This guide s
 
     ![UKCloud for VMware](images/pricing-estimator-3.png)
 
-4. Any invalid selections or combinations will result in a dialog box appearing stating why this selection is invalid. The tool will then be returned to its state prior to the selection that caused this error message to appear.
+4. Any invalid selections or combinations will result in a dialogue box appearing stating why this selection is invalid. The tool will then be returned to its state prior to the selection that caused this error message to appear.
 
     ![Error dialog box](images/pricing-estimator-4.png)
 
@@ -89,7 +89,7 @@ Both the Mac and Windows versions of the tool operate the same way. This guide s
 
     ![Saved dialog box](images/pricing-estimator-5.png)
 
-7. Your estimates will be displayed the next time you open the tool. You can use the **Edit** button to make changes to existing estimates.
+7. Your estimates will be displayed the next time you open the tool. You can use the **Edit** button to make changes to existing estimates, once the changes have been made click the **Save** button again to update the edited line. This allows for changes to an existing estimate to update the total cost, showing how changes in usage affects the total.
 
     ![Summary screen with saved estimates](images/pricing-estimator-6.png)
 
