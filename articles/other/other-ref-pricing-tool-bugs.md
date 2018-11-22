@@ -30,11 +30,11 @@ The current version of the tool:
 
 ### Windows
 
-1. Within the UKCloud for VMware section, a user can add additional storage GiB without selecting the Storage type – with no error message.
+1. In the UKCloud for VMware section, entering an amount of additional storage GiB without selecting the Storage type does not display an error message.
 
-This storage is added to the estimate BUT the calculation does not work. It displays the additional storage as being free, which is incorrect.
+If you specify an amount of storage without specify a Storage type, the storage is added to the estimate but the calculation shows the additional storage as being free, which is incorrect.
 
-Workaround: if the user selects the storage type first and not enter any GiB then an error message appears which is correct.
+Workaround: When including additional storage in your estimate, be sure to select the storage type first. If you select a storage type but do not enter a storage amount, an error message is displayed.
 
 ![Storage Bug](images/pricing-bug-win-1.png)
 
