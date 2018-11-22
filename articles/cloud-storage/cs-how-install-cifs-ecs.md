@@ -70,7 +70,7 @@ CIFS-ECS offers a single caching option:
     - If you’ve forgotten or don’t know your **Secret Access Key**, you can reset it in the *Storage* section of the Portal.
 
         > [!NOTE]
-        > The **Server Name** and **Description** can be anything, but must not be blank. In the example it is shown as `UKCloud` and `UKCloud - ECS Drive`.
+        > The **Server Name** and **Description** can be anything, but must not be blank. In the example, it is shown as `UKCloud` and `UKCloud - ECS Drive`.
 
 8. From the **Use https or http list**, select **HTTPS**.
 
@@ -94,10 +94,10 @@ CIFS-ECS offers a single caching option:
 
 11. Click **OK** to return to the *Settings* page.
 
-12. The rest of the fields on the *Settings* page enable you to configure the root directory, encryption and compression settings.
+12. The rest of the fields on the *Settings* page enable you to the root directory, encryption and compression settings.
 
     > [!TIP]
-    > Configure these fields appropriately for your environment, or accept the defaults. We suggest you give the root directory a friendlier name, so that you can more easily identify it.
+    > Configure these fields appropriately for your environment or accept the defaults. We suggest you give the root directory a friendlier name so that you can more easily identify it.
 
     ![Settings page](images/cs-ecs-installtion-step-three.png)
 
@@ -111,14 +111,14 @@ CIFS-ECS offers a single caching option:
 
     ![Dashboard of CIFS-ECS](images/cs-ecs-installtion-step-four.png)
 
-17. You can share the CIFS-ECS drive, or a folder within it, so that other machines on the network can access it.
+17. You can share the CIFS-ECS drive, or a folder within it so that other machines on the network can access it.
 
     &nbsp;| |
     ------|-----------------|
     ![CIFS-ECS drive in windows](images/cs-ecs-installtion-step-five.png) |![Inside the CIFS-ECS drive](images/cs-ecs-installtion-step-six.png)
 
     > [!TIP]
-    > See Microsoft's How-To guide on [how to share a a drive on the network from Windows](https://support.microsoft.com/en-gb/help/4092694/windows-10-changes-to-file-sharing-over-a-network).
+    > See Microsoft's How-To guide on [how to share a drive on the network from Windows](https://support.microsoft.com/en-gb/help/4092694/windows-10-changes-to-file-sharing-over-a-network).
 
 ## Next steps
 
