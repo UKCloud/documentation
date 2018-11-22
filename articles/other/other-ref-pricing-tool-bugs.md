@@ -44,15 +44,15 @@ The following are known issues with the Mac version of the Pricing Estimation To
 
 1. You cannot select a date in the date picker. Instead you must enter the date manually.
 
-    ![Date Picker](images/pricing-bug-1.png)
+    ![Date Picker](images/pricing-bug-mac-1.png)
 
 2. When creating an estimate for **Cloud GPU for HPC**, if you click the increase counter for **Cloud GPU Cards** the number is added twice. You'll need to manually edit the field to remove the duplicated number.
 
-    ![Cloud GPU Bug](images/pricing-bug-2.png)
+    ![Cloud GPU Bug](images/pricing-bug-mac-2.png)
 
 3. If you select **Save as** from the main menu, you'll see the following error message:
 
-    ![Save As Bug](images/pricing-bug-3.png)
+    ![Save As Bug](images/pricing-bug-mac-3.png)
 
     If you click **Abort**, the tool closes and your estimate will not be saved. Instead, click **OK** to save the estimate successfully.
 
