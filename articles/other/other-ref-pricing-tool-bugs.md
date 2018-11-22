@@ -16,11 +16,11 @@ toc_mdlink: other-ref-pricing-tool-bugs.md
 
 # Known bugs in the Pricing Estimator Tool
 
-This is an occompanying article to the [Pricing Estimator Tool guide](other-how-use-pricing-tool.md). This article intends to be a constantly updated list of issues and bugs users expereinece will the tool. As we update the tool, this article will be updated accordingly.
+This is an accompanying article to the [Pricing Estimator Tool guide](other-how-use-pricing-tool.md). This article intends to be a constantly updated list of issues and bugs users experience will the tool. As we update the tool, this article will be updated accordingly.
 
 ## Current version
 
-Current version of the tool:
+The current version of the tool:
 
 - **Windows version**: 10.2.8
 
@@ -30,7 +30,13 @@ Current version of the tool:
 
 ### Windows
 
-There are currently no known issues with the Windows version of the Pricing Estimation Tool.
+1. Within the UKCloud for VMware section, a user can add additional storage GiB without selecting the Storage type – with no error message.
+
+This storage is added to the estimate BUT the calculation does not work. It displays the additional storage as being free, which is incorrect.
+
+Workaround: if the user selects the storage type first and not enter any GiB then an error message appears which is correct.
+
+![Storage Bug](images/pricing-bug-win-1.png)
 
 ### Mac
 
