@@ -16,7 +16,7 @@ toc_mdlink: other-ref-pricing-tool-bugs.md
 
 # Known bugs in the Pricing Estimator Tool
 
-This is an accompanying article to the [Pricing Estimator Tool guide](other-how-use-pricing-tool.md). This article intends to be a constantly updated list of issues and bugs users experience will the tool. As we update the tool, this article will be updated accordingly.
+This is an accompanying article to the [Pricing Estimator Tool guide](other-how-use-pricing-tool.md). We'll update this article to document new bugs and issues as they are discovered and to remove resolved bugs and issues when we update the tool.
 
 ## Current version
 
