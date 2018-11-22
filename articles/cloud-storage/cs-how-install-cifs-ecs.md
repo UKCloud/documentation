@@ -94,7 +94,7 @@ CIFS-ECS offers a single caching option:
 
 11. Click **OK** to return to the *Settings* page.
 
-12. The rest of the fields on the *Settings* page enables you to configre the root directory, encryption and compression settings.
+12. The rest of the fields on the *Settings* page enables you to configure the root directory, encryption and compression settings.
 
     > [!TIP]
     > Configure these fields appropriately for your environment or accept the defaults. We suggest you give the root directory a friendlier name so that you can more easily identify it.
