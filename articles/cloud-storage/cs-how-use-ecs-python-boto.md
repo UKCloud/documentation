@@ -91,7 +91,7 @@ You can use Boto to:
     ukc_ecs_s3.upload_file(source_file, bucket_name, key_name, Callback=ProgressPercentage(source_file))
     ```
 
-4. The following code will download a file and display a percentage progress counter.
+4. The following code downloads a file and displays a percentage progress counter.
 
     ```Python
     #!/usr/bin/env python3
