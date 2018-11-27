@@ -46,6 +46,10 @@ To request a change for your firewall:
 
     <https://www.gov.uk/government/publications/gcf-customer-change-form>
 
+## More information
+
+For an overview of the future of PSN, including updates about PSN flattening, see our [*Future of PSN - what you really need to know!*](https://ukcloud.com/hub/news/the-future-of-psn/) blog post.
+
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

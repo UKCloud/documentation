@@ -423,7 +423,7 @@ The CloudArray interface is comprised of the following major elements:
 
 - Main menu
 
-    The EMC CloudArray main menu is at the left side of the screen. Click menu items to move directly to the corresponding top-level panel and view related sub-menu items.
+    The EMC CloudArray main menu is on the left side of the screen. Click menu items to move directly to the corresponding top-level panel and view related sub-menu items.
 
     > [!NOTE]
     > If you reduce the window size, the main menu moves to the top of the screen.

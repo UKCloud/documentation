@@ -12,7 +12,7 @@
     items:
     - name: Create a load balancer
       href: azs-how-create-load-balancer.md
-    - name: Create a Site-to-Site connection in Azure Stack
+    - name: Create a Site-to-Site connection
       href: azs-how-create-S2S-VPN.md
     - name: Create an Azure user group
       href: azs-how-create-azure-group.md

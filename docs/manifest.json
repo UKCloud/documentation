@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "n2JuSVporUN1YXOejG0NZw=="
+          "hash": "pghV4NMjn6/EbmnOlkJ2Jg=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-gs.html",
-          "hash": "tjqGEbVEGbIVuSLJwr1JUg=="
+          "hash": "KtINU6XaCqGCImEvHZMprQ=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-S2S-VPN.html",
-          "hash": "wa67pOmRP8KNY1nMbOBdUA=="
+          "hash": "t+QcHOLv60PMpj3H0YrCJg=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-load-balancer.html",
-          "hash": "0PLW3HbG1WOXVCrRBcXADA=="
+          "hash": "RgqjZf7vOd6NSoqwHRxHjA=="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-ps.html",
-          "hash": "XGEgnXWxENOKqj73/qBXBQ=="
+          "hash": "wYWcROLWr87vyB75+r9Y0Q=="
         }
       },
       "is_incremental": false,
@@ -443,10 +443,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-browser-authorize-csp.PNG",
+      "source_relative_path": "articles/azure/images/azs-browser-authorize-csp.png",
       "output": {
         "resource": {
-          "relative_path": "articles/azure/images/azs-browser-authorize-csp.PNG"
+          "relative_path": "articles/azure/images/azs-browser-authorize-csp.png"
         }
       },
       "is_incremental": false,
@@ -520,10 +520,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-browser-csp-auth-signin.PNG",
+      "source_relative_path": "articles/azure/images/azs-browser-csp-auth-signin.png",
       "output": {
         "resource": {
-          "relative_path": "articles/azure/images/azs-browser-csp-auth-signin.PNG"
+          "relative_path": "articles/azure/images/azs-browser-csp-auth-signin.png"
         }
       },
       "is_incremental": false,
@@ -1019,7 +1019,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "3dMh4bWc9ZjHBpQEcw90Wg=="
+          "hash": "cqQgy1Q+jcynQjFQOv8Aog=="
         }
       },
       "is_incremental": false,
@@ -1172,7 +1172,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-install-cloudarray.html",
-          "hash": "ylEKcOguMF+YasTB+eFmJw=="
+          "hash": "qIgvtQMoTMVZu3HnsKBDTQ=="
         }
       },
       "is_incremental": false,
@@ -2268,7 +2268,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-psn-core-services.html",
-          "hash": "SUSBGbwwYdCERAzF6nsSIQ=="
+          "hash": "pRDXIp04wb79SG4rCdkOKw=="
         }
       },
       "is_incremental": false,
@@ -2280,7 +2280,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-psn-flattening.html",
-          "hash": "nortO33IHlCavXH8meN50A=="
+          "hash": "oXtDrwKlUJMIaYWc1NUd1g=="
         }
       },
       "is_incremental": false,
@@ -6069,17 +6069,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/windows_activation.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/windows_activation.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-faq-g10.md",
       "output": {
@@ -6145,7 +6134,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-how-contribute-knowledge.html",
-          "hash": "eIWIeYpX333URKHoA5oehg=="
+          "hash": "K6ug5Ppv1V29mfaxipPdCg=="
         }
       },
       "is_incremental": false,
@@ -6349,7 +6338,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "PUbKcixDgzYvUhxnMR6U2g=="
+          "hash": "U4HwHIC0Nojjd5frrrOYtw=="
         }
       },
       "is_incremental": false,
@@ -6822,7 +6811,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-raise-escalate-service-request.html",
-          "hash": "cc1LuR64lHhB6+yG1OVOBg=="
+          "hash": "uMrcgsf/J8RQayPxZ+OtWw=="
         }
       },
       "is_incremental": false,
@@ -6846,7 +6835,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-setup-2fa.html",
-          "hash": "6/s0PtfZhwagIL+xCGRg4Q=="
+          "hash": "jejk5gEo84JThZxRW89WYw=="
         }
       },
       "is_incremental": false,
@@ -12334,7 +12323,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "JEoK/yhVGovKWbITxw6pBA=="
+          "hash": "UQYIxZScynr2DaOLyGGskg=="
         }
       },
       "is_incremental": false,
@@ -12766,7 +12755,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-license-red-hat.html",
-          "hash": "HDP08s7xAwm4QmbfGylVhQ=="
+          "hash": "NoIcYhJwF5zc1Zz96MP+JA=="
         }
       },
       "is_incremental": false,
