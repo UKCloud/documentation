@@ -9,15 +9,17 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: How to link Azure Storage Explorer to Azure Stack
-toc_fullpath: Users/How To/Create a virtual machine/azs-how-link-storage-explorer.md
+toc_fullpath: Users/How To/azs-how-link-storage-explorer.md
 toc_mdlink: azs-how-link-storage-explorer.md
 ---
 
 # How to link Azure Storage Explorer to Azure Stack
 
-In this guide, you will learn how to link Azure Stack subscriptions to the Azure storage explorer. Azure storage explorer is a standalone application that allows you to easily work with Azure Stack storage data on Windows, macOS and Linux. This tool allows for easy downloading and uploading to Azure Stack which makes tasks such as downloading and uploading data disks to VM's very easy.
+## Overview
 
-If you need to install the storage explorer, please find the link [here](https://azure.microsoft.com/en-us/features/storage-explorer/) and install it.
+In this article, you will learn how to link Azure Stack subscriptions to the Azure Storage Explorer. Azure Storage Explorer is a standalone application that allows you to easily work with Azure Stack storage data on Windows, macOS and Linux. With this application, you can easily download and upload objects to Azure Stack, which makes tasks such as downloading and uploading data disks to VMs very easy.
+
+If you need to install the Storage Explorer, please find the link [here](https://azure.microsoft.com/en-us/features/storage-explorer/) and install it.
 
 ## Installation and setup
 
@@ -37,23 +39,23 @@ If you need to install the storage explorer, please find the link [here](https:/
 
     ![Storage tool installation guide 4](images/azs-installation-storage-tool-3.png)
 
-5. Name the enviroment **Azure Stack** and for the ARM endpoint use **[https://management.frn00006.azure.ukcloud.com]()**.
+5. Name the environment **Azure Stack** and for the ARM endpoint use **`https://management.frn00006.azure.ukcloud.com`**.
 
     ![Storage tool installation guide 5](images/azs-installation-storage-tool-4.png)
 
-6. Sign in with your Azure Stack acount when prompted.
+6. Sign in with your Azure Stack credentials when prompted.
 
     ![Storage tool installation guide 6](images/azs-installation-storage-tool-5.png)
 
-7. Click **Apply**
+7. Click **Apply**.
 
     ![Storage tool installation guide 7](images/azs-installation-storage-tool-6.png)
 
-8. Finally select **Edit** > **Target Default Azure API's** and then resetart.
+8. From the **Edit** menu, select **Target Default Azure APIs** then restart Storage Explorer.
 
     ![Storage tool installation guide 8](images/azs-installation-storage-tool-7.png)
 
-Now the storage tool is linked to Azure Stack. As stated before you can now access all of your VM's storage acccounts.
+Now that you've linked Storage Explorer to Azure Stack, you can access all of your VMs storage accounts.
 
 ## Feedback
 
