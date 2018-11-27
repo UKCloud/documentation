@@ -16,7 +16,7 @@ toc_mdlink: azs-how-resize-disks.md
 
 # How to resize virtual machine disks
 
-In this guide we will cover the process of resizes disks in Azure portal. This can be needed if the VM requires more storage space and you can increase current disk capacity rather than adding more disks.
+In this article we will cover the process of resizing disks in the Azure portal. This will be needed if the VM requires more storage space as you can increase current disk capacity rather than adding more disks.
 
 ## Steps to changing disk size via portal
 
