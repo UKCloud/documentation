@@ -41,8 +41,8 @@ CIFS-ECS offers a single caching option:
 **Stub**: files are initially stored locally and replaced with a stub, or shortcut, after a period of time. When you access a file that has been stubbed, it will be retrieved from the cloud. This offers the best scalability, as you can use a virtually unlimited amount of cloud storage.
 
 ## Installing CIFS-ECS
-
-1. Navigate to the following Portal page to download the ZIP file that contains the [CIFS-ECS installer](https://portal.ukcloud.com/support/knowledge_centre/85dc54ff-7d21-43ac-9cfa-88e87de7ba27).
+88e87de7ba27
+1. Navigate to the following Portal page to download the ZIP file that contains the [CIFS-ECS installer](https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/CIFS-ECS.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1574424921&Signature=sPorRMvkR5S8lLn1D1tmahyzK3g%3D).
 
     To download CIFS-ECS you'll need your UKCloud Portal log in details.
 
