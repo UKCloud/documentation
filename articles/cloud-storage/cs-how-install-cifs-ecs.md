@@ -44,8 +44,6 @@ CIFS-ECS offers a single caching option:
 88e87de7ba27
 1. Navigate to the following Portal page to download the ZIP file that contains the [CIFS-ECS installer](https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/CIFS-ECS.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1574424921&Signature=sPorRMvkR5S8lLn1D1tmahyzK3g%3D).
 
-    To download CIFS-ECS you'll need your UKCloud Portal log in details.
-
 2. Extract and run the setup launcher from the ZIP file.
 
 3. Step through the wizard, adjusting values to suit your environment.
