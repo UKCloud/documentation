@@ -1,18 +1,18 @@
 ---
-title: How to manage disks on Azure Stack
-description: How to manage disks on Azure Stack
+title: How to add disks on Azure Stack
+description: How to add disks on Azure Stack
 services: azure-stack
 author: David Woffendin
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: 
+toc_sub2: Disk Management
 toc_sub3:
 toc_sub4:
-toc_title: How to manage disks on Azure Stack
-toc_fullpath: Operators/How To/azs-how-manage-disks.md
-toc_mdlink: azs-how-manage-disks.md
+toc_title: How to add disks on Azure Stack
+toc_fullpath: Operators/How To/azs-how-add-disks.md
+toc_mdlink: azs-how-add-disks.md
 ---
-# Managing disks on Azure Stack
+# Adding disks on Azure Stack
 
 ## Overview
 
@@ -33,11 +33,11 @@ These disks require that you create a storage account to store the disks. The di
 3. Navigate to **Disks** > **+Add data disk**.
     ![List Azure Stack VM Extensions Output](images/azs-browser-disk-creation.png)
 4. Edit the options for your new Disk.
-    * **Name**: This is what the disk will be called
-    * **Source type**: Leave this as **New(empty disk)** as we are creating a new disk
+    * **Name**: This is what the disk will be called.
+    * **Source type**: Leave this as **New(empty disk)** as we are creating a new disk.
     * **Account type**: This is where you choose between SSD and HDD.
     * **Size**: This is where you specify the size of the new disk.
-    * **Storage container**: This is where you specify the storage container for the disk. Find the storage account where you VM's OS disk is located and then create a new **Container**. Select this container as the location for the new disk
+    * **Storage container**: This is where you specify the storage container for the disk. Find the storage account where you VM's OS disk is located and then create a new **Container**. Select this container as the location for the new disk.
     * **Storage blob name**: This is the blob where the disk will be stored.
     ![List Azure Stack VM Extensions Output](images/azs-browser-disk-creation2.png)
 5. Select Ok and the new disk will be added to the VM.
