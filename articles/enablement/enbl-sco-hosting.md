@@ -41,7 +41,7 @@ Please note that ANY device placed within the UKCloud estate must be done so to 
 **Failover responsibility** | Customer
 **Resilience requirement</br>(1 bay = 10U, 1kw per month)** | Depends on solution               |
 **Resilience cost** | Depends on solution
-**Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (eg Cloud Enablement in region 5 cannot be stretched to region 6)
+**Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (e.g. Cloud Enablement in region 5 cannot be stretched to region 6)
 **Next steps** | Raise a service request via the UKCloud Portal                    |
 
 ## What connectivity does the server/storage hosting service provide?
