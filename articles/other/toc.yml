@@ -14,6 +14,8 @@
   items:
   - name: Contribute to the UKCloud Knowledge Centre
     href: other-how-contribute-knowledge.md
+  - name: Use the UKCloud Pricing Estimator Tool
+    href: other-how-use-pricing-tool.md
 - name: Reference
   items:
   - name: Best practice customer guide
@@ -34,6 +36,8 @@
     href: other-ref-knowledge-template.md
   - name: Knowledge Centre guidelines
     href: other-ref-knowledge-guidelines.md
+  - name: Known bugs with the UKCloud Pricing Estimator Tool
+    href: other-ref-pricing-tool-bugs.md
   - name: Methods for exporting data
     href: other-ref-export-data.md
   - name: Protective Monitoring information in the UKCloud Portal
@@ -68,3 +72,7 @@
   items:
   - name: Free trials Service Scope
     href: other-sco-free-trials.md
+- name: Videos
+  items:
+  - name: Pricing Estimator Tool overview video
+    href: other-vid-pricing-tool-overview.md

@@ -2172,7 +2172,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-how-migrate-n3-hscn.html",
-          "hash": "ouQlr5taG7rz3hCQouQJsQ=="
+          "hash": "ZwgKxFJUoUphV7Trh5M03w=="
         }
       },
       "is_incremental": false,
@@ -3114,7 +3114,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-capscpa.html",
-          "hash": "7xE+1WIHr5lxt0+sNVTklw=="
+          "hash": "tNJD+Irrq8sbPgzwN8/4oA=="
         }
       },
       "is_incremental": false,
@@ -3138,7 +3138,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-hosting.html",
-          "hash": "fAIAZ3jkUIjTBkIPNJPdZQ=="
+          "hash": "o9XIF4joVxj9VBxw7aeTRw=="
         }
       },
       "is_incremental": false,
@@ -3186,7 +3186,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-vpn.html",
-          "hash": "WX+fnLE2xsPZX6Cyp+V1yg=="
+          "hash": "TU4BftAz9yvMxYEy8lachQ=="
         }
       },
       "is_incremental": false,
@@ -6038,6 +6038,226 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/other/images/other-vid-pricing-tool.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-vid-pricing-tool.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-bug-mac-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-bug-mac-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-bug-mac-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-bug-mac-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-bug-mac-3.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-bug-mac-3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-bug-win-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-bug-win-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-10.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-10.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-3.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-4.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-5.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-6.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-7.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-8.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-8.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-9.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-9.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-download-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-download-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-mac-install-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-mac-install-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-mac-install-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-mac-install-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-mac-install-3.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-mac-install-3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/pricing-estimator-mac-install-4.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/pricing-estimator-mac-install-4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/other/images/searching_filtering.png",
       "output": {
         "resource": {
@@ -6147,6 +6367,21 @@
         ".html": {
           "relative_path": "articles/other/other-how-contribute-knowledge.html",
           "hash": "K6ug5Ppv1V29mfaxipPdCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/other/other-how-use-pricing-tool.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-how-use-pricing-tool.html",
+          "hash": "9vjbF/DF5X4N/bzqETz1SQ=="
         }
       },
       "is_incremental": false,
@@ -6322,6 +6557,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-pricing-tool-bugs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-pricing-tool-bugs.html",
+          "hash": "kaD3kmlji0CLk+fb+tZ05A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-product-overview.md",
       "output": {
         ".html": {
@@ -6453,12 +6700,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/other/other-vid-pricing-tool-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-vid-pricing-tool-overview.html",
+          "hash": "xLQwqNN3YYESUQyu9rDWXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/other/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "BQpFWq47B7AD6TMU+MZF2w=="
+          "hash": "2wfZ8PVWXTPOqVnOeviv6w=="
         }
       },
       "is_incremental": false,
@@ -13584,18 +13843,18 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

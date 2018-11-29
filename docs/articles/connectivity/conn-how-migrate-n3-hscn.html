@@ -86,13 +86,8 @@
 
 <div class="NOTE">
 <h5>Note</h5>
-<p>Due to DNS change freeze by NHS Digital, customers will not be able to request HSCN/N3 DNS changes on the following dates:</p>
-<ul>
-<li>6/11/18 to 08/11/18</li>
-<li>13/11/18 to 14/11/18</li>
-<li>20/11/18 to 21/11/18</li>
-</ul>
-<p>We advise avoiding these dates for cutover from N3 to HSCN.</p>
+<p>You can migrate your UKCloud environments from N3 to HSCN regardless of whether your end user environments have migrated to HSCN. The HSCN-to-N3 gateway ensures a free-flow of traffic between the two networks.</p>
+<p>One consideration is the customer firewalls, which would need to be amended to allow traffic to/from the new HSCN IPs provided by UKCloud, regardless of whether the end customer locations are on N3 or HSCN; you can find more information below.</p>
 </div>
 <h2 id="overview">Overview</h2>
 <p>As of March 2019, NHS Digital will be decommissioning the N3 network, replacing it with the new Health and Social Care Network (HSCN). As a result, UKCloud will be decommissioning our N3 connectivity in January 2019 and users of the N3 network on our platform must migrate their workloads to the HSCN network by then. The two networks (N3 and HSCN) will run in parallel to enable all our customers to migrate off the N3 network.</p>
@@ -166,15 +161,15 @@ If you decide that the default gateway of the edge should route via the internet
 <p>When applying static routes to your edge, these must not conflict with any of your internal ranges. If so, when routing internally, internal traffic could be routed externally to the edge.</p>
 </div>
 <h3 id="option-2-a-new-hscn-edge-1">Option 2: A new HSCN edge</h3>
-<p>If you chose Option 2 for your migration strategy, your internet connectivity and HSCN connectivity will be configured on 2 different edges. Whereas in the original Option 2 above, your previous N3 edge is removed from your environment after the migration, if you require Internet connectivity in your VDC, this edge will not be deleted. N3 access via this edge will be removed so that it can solely be used for Internet connectivity.
-Depending on the connectivity types required on each of your VMs, it may be required for you to configure 2 NICs; one for HSCN and one for internet connectivity. The routing table within the OS will also need to be configured to route traffic out of the correct NIC as well.</p>
+<p>If you chose Option 2 for your migration strategy, your internet connectivity and HSCN connectivity will be configured on two different edges. Whereas in the original Option 2 above, your previous N3 edge is removed from your environment after the migration, if you require Internet connectivity in your VDC, this edge will not be deleted. N3 access via this edge will be removed so that it can solely be used for Internet connectivity.
+Depending on the connectivity types required on each of your VMs, it may be required for you to configure two NICs; one for HSCN and one for internet connectivity. The routing table within the OS will also need to be configured to route traffic out of the correct NIC as well.</p>
 <h5 id="new-hscn-edge-ukcloud-actions">New HSCN edge: UKCloud actions</h5>
 <ol>
 <li>When you confirm that you're ready to begin testing HSCN connectivity in preparation for your migration, UKCloud will deploy an HSCN edge gateway into the N3-connected VDC.</li>
 </ol>
 <h5 id="new-hscn-edge-customer-actions">New HSCN edge: Customer actions</h5>
 <ol>
-<li><p>When you're ready to begin testing on the HSCN network, log a service request with UKCloud to deploy an HSCN Edge into your environment.</p>
+<li><p>When you're ready to begin testing on the HSCN network, log a service request with UKCloud to deploy an HSCN edge into your environment.</p>
 </li>
 <li><p>Create an Org VDC network connected the HSCN edge and connect any VMs to perform testing to ensure that after the migration, all services will work successfully over HSCN rather than N3.</p>
 <div class="IMPORTANT">
@@ -229,7 +224,7 @@ Depending on the connectivity types required on each of your VMs, it may be requ
 </li>
 </ol>
 <h3 id="hscn-firewall-implementation">HSCN firewall implementation</h3>
-<p>UKCloud will be replacing the existing N3 firewalls with new next generation firewall devices for the HSCN network. UKCloud will not be blocking any ports but will have IDS, IPS and malware detection running across all ports as directed by NHS Digital. If you encounter any issues with legitimate packets being dropped or blocked, raise a service request so we can investigate, and if needed, update the next generation firewall rules.</p>
+<p>UKCloud will be replacing the existing N3 firewalls with new next-generation firewall devices for the HSCN network. UKCloud will not be blocking any ports but will have IDS, IPS and malware detection running across all ports as directed by NHS Digital. If you encounter any issues with legitimate packets being dropped or blocked, raise a service request so we can investigate, and if needed, update the next generation firewall rules.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>You should ensure that your firewall rules are suitable for controlling all traffic traversing them, and should not rely on UKCloud to control traffic to your environments.</p>
@@ -257,19 +252,19 @@ Depending on the connectivity types required on each of your VMs, it may be requ
 <p>UKCloud's public services are currently presented on N3 and HSCN. You will need to amend VM host files to re-point to the HSCN IPs of any shared services you use when you migrate from N3 to HSCN. A list of the shared service IPs is available within the UKCloud Portal here: <a href="https://portal.skyscapecloud.com/notifications/472">https://portal.skyscapecloud.com/notifications/472</a>  (UKCloud Portal log in required)</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>These services will be removed from the N3 on 8th October. You'll need to amend your firewall rules and host files so you can continue to reach these services when we've migrated these services to HSCN. As HSCN is routable from N3, if you are currently still on N3 you will be able to reach these services if you amend your N3 firewall and host files with the HSCN IPs.</p>
+<p>These services will be removed from the N3 on 8th October. You'll need to amend your firewall rules and host files so you can continue to reach these services when we've migrated these services to HSCN. As HSCN is routable from N3, if you're currently still on N3 you'll be able to reach these services if you amend your N3 firewall and host files with the HSCN IPs.</p>
 </div>
 <h3 id="cloud-storage">Cloud Storage</h3>
-<p>Cloud Storage will continue to be accessible over N3 until 3rd January 2019 but will also be presented to HSCN.</p>
-<p>When you've migrated your compute workloads to HSCN, you should consider using the HSCN-facing Cloud Storage as soon as possible, as this will improve communication between your VMs and Cloud Storage.</p>
-<p>You'll need to update your firewall and host file records to continue to use this service.</p>
-<p>HSCN-connected Cloud Storage has the following URLs and IPs
-Farnborough: cas.frn00006.ukcloud.thirdparty.nhs.uk – 10.200.82.4
-Corsham: cas.cor00005.ukcloud.thirdparty.nhs.uk – 10.200.83.4</p>
+<p>Cloud Storage is now available on HSCN.</p>
+<p>The NHS DNS records for this service will be migrated from N3 to HSCN IPs on 7th December 2018.</p>
+<p>If you rely on the NHS DNS service to interact with the Cloud Storage then you'll need to update your firewall and host file records to continue to use this service after this date.</p>
+<p>HSCN-connected Cloud Storage has the following URLs and IPs:</p>
+<p>-Farnborough: <code>cas.frn00006.ukcloud.thirdparty.nhs.uk</code> – <code>10.200.82.4</code>
+-Corsham: <code>cas.cor00005.ukcloud.thirdparty.nhs.uk</code> – <code>10.200.83.4</code></p>
 <h3 id="next-steps">Next steps</h3>
 <p>For more information about HSCN, see the <a href="conn-faq-hscn.html"><em>HSCN connectivity FAQs</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:feedback@ukcloud.com">feedback@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
