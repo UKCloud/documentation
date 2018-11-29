@@ -25,15 +25,16 @@ This guide is intended to give you enough information to forumulate basic memory
 1. Firstly, you must ensure that the user you will be using to query the API has reader permissions for the corresponding OpenShift project to the Hawkular-Tenant you are querying. If you are querying the _system tenant then the user must have cluster-reader permissions.
 
 2. To get a list of all node level counters and gauges you can use you would run the following:
-
+    ```
     curl -X GET https://hawkular-metrics.$(cluster-url)/hawkular/metrics/metrics "Content-Type: application/json" -H "Hawkular-Tenant: _system" -H "Authorization: Bearer $token"
-    
+    ```
+
     Where $token is a variable storing the output of oc whoami -t from an OpenShift user with the correct permissions to view metrics and cluster-url is the domain suffix of your cluster.
     
     For example; if your cluster URL is https://ocp.openshift-test.cna.ukcloud.com:8443 your query would be the following:
-    
+    ```
     curl -X GET https://hawkular-metrics.openshift-test.cna.ukcloud.com/hawkular/metrics/metrics "Content-Type: application/json" -H "Hawkular-Tenant: _system" -H "Authorization: Bearer $token"
-
+    ```
 
 3. You will need to pass the output from the request into some form of json parser in order to get human readable results. It will return a series of json blocks similiar to the following:
 ```
@@ -54,7 +55,9 @@ This guide is intended to give you enough information to forumulate basic memory
 ```
 This is the gauge for cluster memory usage and you can query the raw data using the id from the above block as follows:
 
+```
 curl -X GET https://hawkular-metrics.openshift-test.cna.ukcloud.com/hawkular/metrics/gauges/cluster%2Fmemory%2Fusage/raw "Content-Type: application/json" -H "Hawkular-Tenant: _system" -H "Authorization: Bearer $token"
+```
 
 This will return a series of data points like the following:
 
