@@ -28,7 +28,7 @@ This guide is intended to give you enough information to forumulate basic memory
 
     curl -X GET https://hawkular-metrics.$(cluster-url)/hawkular/metrics/metrics "Content-Type: application/json" -H "Hawkular-Tenant: _system" -H "Authorization: Bearer $token"
     
-    Where $token is a variable storing the output of oc whoami -t from an openshift user with the correct permissions to view metrics and cluster-url is the domain suffix of your cluster.
+    Where $token is a variable storing the output of oc whoami -t from an OpenShift user with the correct permissions to view metrics and cluster-url is the domain suffix of your cluster.
     
     For example; if your cluster URL is https://ocp.openshift-test.cna.ukcloud.com:8443 your query would be the following:
     
