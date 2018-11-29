@@ -26,7 +26,7 @@ This guide is intended to give you enough information to forumulate basic memory
 
 2. To get a list of all counters and gauages you can use you would run the following:
 
-    curl -X GET https://hawkular-metrics.<cluster-url>/hawkular/metrics/metrics "Content-Type: application/json" -H "Hawkular-Tenant: _system" -H "Authorization: Bearer $token"
+    curl -X GET https://hawkular-metrics.$(cluster-url)/hawkular/metrics/metrics "Content-Type: application/json" -H "Hawkular-Tenant: _system" -H "Authorization: Bearer $token"
     
     Where $token is a variable storing the output of oc whoami -t from an openshift user with the correct permissions to view metrics and cluster-url is the domain suffix of your cluster.
     
