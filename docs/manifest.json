@@ -6373,15 +6373,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-how-use-pricing-tool.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-how-use-pricing-tool.html",
-          "hash": "9vjbF/DF5X4N/bzqETz1SQ=="
+          "hash": "L+/pLguMxORmrFcmko8D7g=="
         }
       },
       "is_incremental": false,
