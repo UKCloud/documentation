@@ -38,7 +38,7 @@ Use case | Chosen connectivity option:</br>CPA-approved (or equivalent standard)
 **Failover responsibility** | Customer
 **Resilience requirement</br>(1 bay = 10U, 1kw per month)**| One bay in our Farnborough data centre</br>One bay in our Corsham data centre
 **Resilience cost** | £4,000 setup fee plus £1,000 per month
-**Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (e.g. Cloud Enablement in region 5 cannot be stretched to region 6)
+**Notes** | Devices must be hosted in the same region as your compute environment.
 **Next steps** | Raise a service request via the UKCloud Portal.</br>You will also need to complete the Assurance Wrap form so that we can create a walled garden for you in the Cross Domain Security Zone.
 
 ## What connectivity does the VPN service provide?
