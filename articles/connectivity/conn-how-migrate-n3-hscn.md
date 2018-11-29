@@ -16,13 +16,9 @@ toc_mdlink: conn-how-migrate-n3-hscn.md
 # How to migrate from N3 to HSCN
 
 > [!Note]
-> Due to DNS change freeze by NHS Digital, customers will not be able to request HSCN/N3 DNS changes on the following dates:
+> Customers may migrate their UKCloud environments from N3 to HSCN regardless of whether their end user environments have migrated to HSCN. The HSCN-to-N3 gateway ensures a free-flow of traffic between the two networks.
 >
-> - 6/11/18 to 08/11/18
-> - 13/11/18 to 14/11/18
-> - 20/11/18 to 21/11/18
-> 
-> We advise avoiding these dates for cutover from N3 to HSCN.
+> One consideration is the customer firewalls, which would need to be ammended to allow traffic to/from the new HSCN IPs provided by UKCloud, regardless of whether the end customer locations are on N3 or HSCN - more information can be found below. 
 
 
 ## Overview
@@ -210,11 +206,11 @@ UKCloud's public services are currently presented on N3 and HSCN. You will need 
 
 ### Cloud Storage
 
-Cloud Storage will continue to be accessible over N3 until 3rd January 2019 but will also be presented to HSCN.
+Cloud Storage is now available on HSCN. 
 
-When you've migrated your compute workloads to HSCN, you should consider using the HSCN-facing Cloud Storage as soon as possible, as this will improve communication between your VMs and Cloud Storage.
+Th NHS DNS records for this service will be migrated from N3 to HSCN IPs on 7th December 2018.
 
-You'll need to update your firewall and host file records to continue to use this service.
+If you rely on the NHS DNS service to interact with the Cloud Storage then you'll need to update your firewall and host file records to continue to use this service after this date.
 
 HSCN-connected Cloud Storage has the following URLs and IPs
 Farnborough: cas.frn00006.ukcloud.thirdparty.nhs.uk – 10.200.82.4
