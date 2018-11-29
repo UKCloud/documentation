@@ -22,16 +22,20 @@ This guide is intended to give you enough information to forumulate basic memory
 
 ## Using the API
 
-To create a new user:
+1. Firstly, you must ensure that the user you will be using to query the API has reader permissions for the corresponding OpenShift project to the Hawkular-Tenant you are querying. If you are querying the _system tenant then the user must have cluster-reader permissions.
 
-1. Log in to the UKCloud Portal
+2. To get a list of all counters and gauages you can use you would run the following:
 
-    For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
+    curl -X GET https://hawkular-metrics.<cluster-url>/hawkular/metrics/metrics "Content-Type: application/json" -H "Hawkular-Tenant: _system" -H "Authorization: Bearer $token"
+    
+    Where $token is a variable storing the output of oc whoami -t from an openshift user with the correct permissions to view metrics and cluster-url is the domain suffix of your cluster.
+    
+    For example; if your cluster URL is https://ocp.openshift-test.cna.ukcloud.com:8443 your query would be the following:
+    
+    curl -X GET https://hawkular-metrics.openshift-test.cna.ukcloud.com/hawkular/metrics/metrics "Content-Type: application/json" -H "Hawkular-Tenant: _system" -H "Authorization: Bearer $token"
 
-    > [!NOTE]
-    > You must log in as a Portal administrator for the account that includes the OpenShift cluster.
 
-2. If necessary, switch to the account that includes the OpenShift cluster.
+3. If necessary, switch to the account that includes the OpenShift cluster.
 
 3. In the navigation panel, expand **Contacts**, then select **All Contacts**.
 
