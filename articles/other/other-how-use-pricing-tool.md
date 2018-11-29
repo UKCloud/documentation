@@ -24,7 +24,7 @@ The UKCloud Pricing Estimation Tool has been created to assist in the cost estim
 > You should always ensure that you're using the latest version of the pricing estimation tool by checking on the [UKCloud website](https://ukcloud.com/price-estimator-tool/). Also, note that this tool provides an estimate based on the selections you make. Your actual consumption of the service may be different, resulting in higher or lower actual costs.
 
 > [!NOTE]
-> There are some known bugs in the latest versions of the tool. For more information see [Known bugs with the UKCloud Pricing Estimator Tool](pricing-estimator-bugs.md)
+> There are some known bugs in the latest versions of the tool. For more information see [Known bugs with the UKCloud Pricing Estimator Tool](other-ref-pricing-tool-bugs.md)
 
 ## Installing the tool
 
