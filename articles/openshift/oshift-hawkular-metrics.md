@@ -36,7 +36,7 @@ This guide is intended to give you enough information to forumulate basic memory
 
 
 3. You will need to pass the output from the request into some form of json parser in order to get human readable results. It will return a series of json blocks similiar to the following:
-
+```
 {
     "dataRetention": 7,
     "id": "cluster/memory/usage",
@@ -51,7 +51,7 @@ This guide is intended to give you enough information to forumulate basic memory
     "tenantId": "_system",
     "type": "gauge"
 }
-
+```
 This is the gauge for cluster memory usage and you can query the raw data using the id from the above block as follows:
 
 curl -X GET https://hawkular-metrics.openshift-test.cna.ukcloud.com/hawkular/metrics/gauges/cluster%2Fmemory%2Fusage/raw "Content-Type: application/json" -H "Hawkular-Tenant: _system" -H "Authorization: Bearer $token"
