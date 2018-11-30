@@ -1039,6 +1039,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/cdsz/cdsz-bp-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cdsz/cdsz-bp-overview.html",
+          "hash": "7h84eKV3bRps3IaHUm6N3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/cdsz/cdsz-faq.md",
       "output": {
         ".html": {
@@ -1068,6 +1080,28 @@
         ".html": {
           "relative_path": "articles/cdsz/cdsz-how-access-services-walled-garden.html",
           "hash": "kiet0jSQBkAkKPEzszY4Fw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cdsz/images/cdsz-example-setup.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cdsz/images/cdsz-example-setup.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cdsz/images/cdsz-network-topography.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cdsz/images/cdsz-network-topography.png"
         }
       },
       "is_incremental": false,
@@ -1112,7 +1146,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/toc.html",
-          "hash": "QeBgd2/1azJlqNHU9ythFg=="
+          "hash": "3TYCwy5j9D0L+WXXVuhKxw=="
         }
       },
       "is_incremental": false,

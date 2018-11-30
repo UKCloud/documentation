@@ -1,3 +1,7 @@
+- name: Blueprint
+  items:
+  - name: Cross Domain Security Zone Blueprint
+    href: cdsz-bp-overview.md
 - name: FAQs
   items:
   - name: Cross Domain Security Zone FAQs
