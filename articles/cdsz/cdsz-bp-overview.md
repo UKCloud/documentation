@@ -1,6 +1,6 @@
 ---
 title: Cross Domain Security Zone Blueprint | UKCloud Ltd
-description: Provides an overview of the UKCloud Cross Domain Security Zone, which 
+description: Provides an overview of the UKCloud Cross Domain Security Zone 
 services: cdsz
 author: Sue Highmoor
 
