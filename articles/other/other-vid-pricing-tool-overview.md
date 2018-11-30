@@ -1,6 +1,6 @@
 ---
-title: UKCloud Pricing Estimator Tool overview video | UKCloud Ltd
-description: Links to a video that provides an overview of the Pricing Estimator Tool
+title: UKCloud Pricing Estimation Tool overview video | UKCloud Ltd
+description: Links to a video that provides an overview of the Pricing Estimation Tool
 services: other
 author: Dan Baker
 
@@ -9,16 +9,16 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Pricing Estimator Tool overview video
+toc_title: Pricing Estimation Tool overview video
 toc_fullpath: Videos/other-vid-pricing-tool-overview.md
 toc_mdlink: other-vid-pricing-tool-overview.md
 ---
 
-# UKCloud Pricing Estimator Tool overview video
+# UKCloud Pricing Estimation Tool overview video
 
-This video provides an overview of the UKCloud Pricing Estimator user interface. Click the image below to watch the video.
+This video provides an overview of the UKCloud Pricing Estimation tool's user interface. Click the image below to watch the video.
 
-[![UKCloud Pricing Estimator](images/other-vid-pricing-tool.png)](https://vimeo.com/300701961)
+[![UKCloud Pricing Estimation](images/other-vid-pricing-tool.png)](https://vimeo.com/300701961)
 
 ## Feedback
 
