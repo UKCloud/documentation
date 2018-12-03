@@ -6,7 +6,7 @@ author: David Woffendin
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: 
+toc_sub2: Disk Management
 toc_sub3:
 toc_sub4:
 toc_title: How to resize virtual machine disks
