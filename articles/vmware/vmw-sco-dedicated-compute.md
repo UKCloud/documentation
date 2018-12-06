@@ -28,7 +28,9 @@ Dedicated Compute enables you to have a reserved, single-tenanted section of our
 This service is designed for customers who:
 
 - Are looking to run abnormal sized VMs - such as those larger than our standard T-shirt sizes
+
 - Looking to meet specific software licensing requirements
+
 - Have an increased security requirement that can be met by Dedicated Compute infrastructure
 
 ## Default setup

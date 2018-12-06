@@ -25,6 +25,7 @@ This article outlines how you can get SSL certificates for web services hosted o
 Before you can get SSL certificates for your web site, you must get a domain name that you can use on the HSCN. This can come in two forms:
 
 - `nhs.uk` domain
+
 - non `nhs.uk` domain
 
 ### nhs.uk domain

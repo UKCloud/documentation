@@ -39,27 +39,42 @@ The following diagram shows the status of standard internet ports. The permitted
 ### TCP ports
 
 - SSH - 22 
+
 - SMTP - 25
+
 - DNS - 53
+
 - HTTP - 80 & 8080
+
 - HTTPS - 443,444 & 8443
+
 - Secure SMTP - 465 & 587
+
 - FTPS (Data) - 989
+
 - FTPS (Control) - 990
+
 - IMAPS - 993
+
 - POP3S - 995
+
 - RDP - 3389
 
 ### UDP ports
   
+
 - DNS - 53
+
 - OpenVPN - 1194
 
 ### VPN ports
 
 - AH
+
 - ESP
+
 - IPSEC - UDP 4500 
+
 - ISAKMP - UDP 500
 
 ## Outbound access to the internet from your edge gateway
@@ -67,28 +82,43 @@ The following diagram shows the status of standard internet ports. The permitted
 ### TCP ports
 
 - SSH - 22
+
 - SMTP - 25
+
 - DNS - 53
+
 - HTTP - 80 & 8080
+
 - HTTPS - 443, 444 & 8443
+
 - Secure SMTP - 465 & 587
+
 - FTPS (Data) - 989
+
 - FTPS (Control) - 990
+
 - IMAPS - 993
+
 - POP3S - 995
+
 - Windows KMS - 1688
 
 ### UDP ports
 
 - DNS - 53
+
 - NTP - 123
+
 - OpenVPN - 1194
 
 ### VPN ports
 
 - AH
+
 - ESP
+
 - IPSEC - UDP 4500
+
 - ISAKMP - UDP 500
 
 ## Feedback

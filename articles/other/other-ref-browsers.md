@@ -67,7 +67,9 @@ High Performance Compute has the same browser requirements as [UKCloud for VMwar
 For the most up to date list of supported browsers for Email and Collaboration as a Service, refer to the [*Zimbra Collaboration Supported Systems*](https://wiki.zimbra.com/wiki/Zimbra_Releases/8.7.0/Supported_Systems) document.
 
 - Firefox and Chrome on Windows, Mac, Linux
+
 - Internet Explorer on Windows
+
 - Safari on Mac and Windows
 
 ## Feedback

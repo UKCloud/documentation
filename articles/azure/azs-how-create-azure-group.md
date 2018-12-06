@@ -21,7 +21,9 @@ toc_mdlink: azs-how-create-azure-group.md
 UKCloud for Microsoft Azure provides you with three default user groups to get you started:
 
 - **AzureStackOperators** - Members of this group have Owner permissions and have full access to all resources and can manage access to resources
+
 - **AzureStackUsers** - Members of this group have Contributor permissions and can create and manage all resources but cannot manage access to resources
+
 - **AzureStackReadOnly** - Members of this group have Reader permissions and can view everything but cannot make changes
 
 If these default groups do not meet your requirements, for example, if you've created a custom role and want to grant users the permissions specified by that role, you can create new groups and assign roles and permissions to them.
@@ -97,11 +99,13 @@ To grant Azure permissions to a group:
 For more information about Azure Stack, see the following Microsoft resources:
 
 - [*Get started with Azure*](https://azure.microsoft.com/en-gb/get-started/)
+
 - [*Azure Stack Operator Documentation*](https://docs.microsoft.com/en-us/azure/azure-stack/)
 
 For more information about UKCloud for Microsoft Azure, see:
 
 - [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md)
+
 - [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
 
 ## Feedback

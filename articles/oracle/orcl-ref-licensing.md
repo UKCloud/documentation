@@ -20,6 +20,7 @@ toc_mdlink: orcl-ref-licensing.md
 Due to the licensing rules regarding Oracle, it is not possible to install and run Oracle software on the UKCloud public cloud platform. However, there are currently two ways for customers to install and run Oracle software with UKCloud:
 
 - **Private Cloud for Compute**. This is a dedicated hardware solution that limits the number of cores, RAM and storage that would require Oracle licensing. Note that this may not be financially efficient for all customers, and this will be a bare metal environment that has not been prepared for Oracle.
+
 - **UKCloud for Oracle Software**. This is a solution specifically designed to host Oracle solutions on a separate platform. This enables Oracle licensing to be used correctly, and is also financially efficient.
 
 The remainder of this article is regarding general Oracle licensing.

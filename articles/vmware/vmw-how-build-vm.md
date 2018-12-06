@@ -159,16 +159,23 @@ The edge gateway is possibly the most complex part of the VDC because of its hig
 11. Edit the values in the row for the **New Rule** using the settings below:
 
     - Name - HTTPS outbound
+
     - Source - `internal`
+
     - Destination - `external`
+
     - Service - Click the **+** button and enter the following values in the *Add Service* dialog box
+
         - Protocol - **TCP**
+
         - Source Port - any
+
         - Destination Port - 443
 
             ![Add Service dialog box](images/vmw-vcd-adv-edge-firewall-add-service.png)
 
         Click **Keep** when you're done.
+
     - Action - Accept
 
     ![New firewall rule](images/vmw-vcd-adv-edge-firewall-new-rule.png)
@@ -260,7 +267,9 @@ Now that you've laid the groundwork, it's time to create your VM. The best way t
 16. To confirm that you have connectivity to the internet and have an assigned IP address:
 
     - Type `ipconfig` into the Command Prompt. If you've configured the networking correctly, your VM will return an IP address.
+
     - Open an internet browser page and navigate to an external web page
+
     - Ping the IP address of your DNS (for example, `8.8.8.8`) through the command line.
 
 ## Next steps

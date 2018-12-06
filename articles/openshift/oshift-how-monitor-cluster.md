@@ -163,6 +163,7 @@ main()
 For more information about UKCloud for OpenShift service, see:
 
 - [*Getting Started Guide for UKCloud for OpenShift*](oshift-gs.md)
+
 - [*UKCloud for OpenShift FAQs*](oshift-faq.md)
 
 ## Feedback

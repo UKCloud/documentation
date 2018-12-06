@@ -24,6 +24,7 @@ UKCloud have configured the platform to dynamically move workloads to quieter ho
 The impact to a customer VM is twofold:
 
 - Reducing the reliability of performance
+
 - Potentially affecting VM availability in the case of a failure
 
 UKCloud must also consider the impact that these abnormally large VMs have on other users of the platform as the increased VMs consume additional resources and cause performance issues for other VMs.

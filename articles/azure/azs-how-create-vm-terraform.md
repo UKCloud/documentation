@@ -22,11 +22,13 @@ This document explains how to create a VM using **azurestack** Terraform provide
 Prerequisites from a Windows-based external client.
 
 - Terraform executable
+
     - [Download Terraform](https://www.terraform.io/downloads.html)
 
 - Active Azure *Subscription* (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)
 
 - Service Principal Name
+
     - [How To create Service Principal Name for Azure Stack](azs-how-create-spn-powershell.md)
 
 ## Official Documentation

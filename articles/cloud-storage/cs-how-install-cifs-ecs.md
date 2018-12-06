@@ -79,13 +79,18 @@ CIFS-ECS offers a single caching option:
     - **Corsham (Assured)**
 
         - Internet: `cas.cor00005.ukcloud.com`
+
         - PSN Assured: `cas.cor00005.psnassured.ukcloud.com`
+
         - N3/HSCN: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
   
+
     - **Farnborough (Assured)**
 
         - Internet: `cas.frn00006.ukcloud.com`
+
         - PSN Assured: `cas.frn00006.psnassured.ukcloud.com`
+
         - N3/HSCN: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
 
 10. Deselect the **Port Override** check box.

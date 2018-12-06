@@ -18,9 +18,13 @@ toc_mdlink: vmw-ref-trouble-ipsec-nsx64.md
 With the upgrade to NSX version 6.4, VMware have made a security change to the default settings of the NSX edge gateway's IPsec VPN service. The new default for IPsec VPN service is to use the DH-14 (Diffie–Hellman group 14) algorithm during phase 1 negotiation of the VPN tunnel. You have the option of selecting a different version of Diffie-Hellman in the advanced gateway GUI. The following versions are supported:
 
 - DH-2 (Diffie–Hellman group 2)
+
 - DH-5 (Diffie–Hellman group 5)
+
 - DH-14 (Diffie–Hellman group 14)
+
 - DH-15 (Diffie–Hellman group 15)
+
 - DH-16 (Diffie–Hellman group 16)
 
 However, during the upgrade of one of our regions we discovered that for edges that have not been converted to advanced gateways that have VPNs configured, the upgrade changes the config on the VPN tunnels to use the DH-14 algorithm instead of the previously only available DH-2.
@@ -28,6 +32,7 @@ However, during the upgrade of one of our regions we discovered that for edges t
 As a result, VPN tunnels are then broken until either of the following is performed:
 
 - The edge with the affected VPN is upgraded to an advanced gateway and the VPN config is changed from DH-14 back to DH-2
+
 - The peer end config is amended to use DH-14 for its ike negotiation
 
 UKCloud support staff can change the VPN config back to DH-2 on a temporary basis until the edge is converted, however the setting is not persistent, and under certain configuration changes to an edge, the setting of DH-14 may be reapplied. Converting to an advanced gateway does not require any downtime nor cause any outage during the conversion.

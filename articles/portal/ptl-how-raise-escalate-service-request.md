@@ -33,7 +33,9 @@ Customers should ensure they complete basic checks before contacting UKCloud, an
 Methods for contacting The UKCloud team are as follows:
 
 - UKCloud Portal (Assured) &mdash; <https://portal.ukcloud.com/>
+
 - UKCloud Portal (Elevated) &mdash; Contact your Portal administrator or Customer Success Manager (CSM)
+
 - Telephone &mdash; 01252 303 300 (select option 2)
 
 The UKCloud Portal is the preferred approach for raising requests and issues with UKCloud.
@@ -41,8 +43,11 @@ The UKCloud Portal is the preferred approach for raising requests and issues wit
 Customers are asked to provide the following:
 
 - Company details and contact details
+
 - A detailed description of the problem or issue
+
 - Relevant log files, configuration files and supporting information
+
 - Captured screen shots
 
 Customers can contact Support via email at <support@ukcloud.com>, although, as we are unable to carry out user verification via this method, email should not be used to raise support tickets.
@@ -58,7 +63,9 @@ Initial contact should always be via the UKCloud Portal unless this is unavailab
 All requests and incidents are sent to triage for initial review to assess that sufficient details have been provided, for example:
 
 - Correct priority/severity
+
 - Contact details have been provided
+
 - Clear description of issue or request is included
 
 Where details are missing, we'll seek clarification.
@@ -101,6 +108,7 @@ For onboarding issues, contact your allocated Customer Success Manager (CSM). Fo
 To escalate an incident or service request, contact the Support Team:
 
 - Tel: 01252 303 300 (option 2)
+
 - Email: escalations@ukcloud.com (monitored 24 x 7)
 
 ## Feedback

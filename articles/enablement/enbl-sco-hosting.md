@@ -49,12 +49,15 @@ Please note that ANY device placed within the UKCloud estate must be done so to 
 The VPN service provides up to two ports:
 
 - Cloud Enablement in regions 1, 2, 7 & 8 offers fibre-0nly connectivity
+
 - Cloud Enablement in regions 5 & 6 offers connectivity via SFP, so customers can use fibre or copper
+
 - The connection is into a shared switch.
 
 ## What is the port speed of connection?
 
 - In regions 1, 2, 7 & 8, the port speed is up to 1 Gbps
+
 - In regions 5 & 6, the port speed can be either 1Gbps (copper or fibre) or 10Gbps (fibre only)
 
 ## Who manages the switch?

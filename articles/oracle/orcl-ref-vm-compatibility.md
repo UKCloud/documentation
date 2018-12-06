@@ -30,7 +30,9 @@ OVA files (Assembly option) and `tar.gz/tgz` (Template option) are the only acce
 If you select the **Assembly** option on the upload page, then the uploader will expect an OVA Assembly package file (`ova` file). Your `.ova file` should contain the following files (in the exact order listed):
 
 - *`MyVM`*`.ovf` - the OVF descriptor file, which contains all VM specs metadata and links to the embedded virtual disk image file (with a `.vmdk` extension)
+
 - *`MyVM`*`.mf` - contains metadata that is used for integrity and authenticity checks; this data must be correct for the `.ova` file to be accepted in most cases
+
 - *`MyVM`*`.vmdk` - the embedded virtual disk image file
 
 As the exported `.ova` file also contains file hashes that are unique to the files included in the package, simply creating a `tar` file with these contents will not work in most cases. For most virtualisation platforms, it's best to use the export functionality from the source virtualisation platform to generate the `.ova` file.
@@ -53,6 +55,7 @@ You can download the OVF Tool from:
 If you select the **Template** option on the upload page, then the uploader will expect an Oracle VM Template file (either a `.tgz` or `.tar.gz` file). This gzipped tarball file normally contains the following files (in the exact order listed):
 
 - *`MyVM`*`.cfg` - contains the VM specs metadata and links to the embedded RAW disk image file, normally named `system.img`
+
 - `system.img` - the embedded RAW disk image file, either exported from another XEN platform or converted from other virtual disk formats
 
 ## Upload size

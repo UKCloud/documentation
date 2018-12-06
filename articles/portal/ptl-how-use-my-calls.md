@@ -23,7 +23,9 @@ The My Calls area of the UKCloud Portal is a one‑stop place to raise new suppo
 The My Calls feature covers the ITIL standards of:
 
 - Raising faults and outages
+
 - Raising service requests, for example, to request service or system information, restore backups or request logs
+
 - Raising change requests, for example, to request a new virtual data centre (VDC), provision a new service or perform initial service set up
 
 For faults and outages, raise an incident report. For more information, see [Raising a new incident report](#raising-a-new-incident-report).
@@ -53,6 +55,7 @@ will depend on the level of permissions you have.
 3. The **My Calls** tab is divided into two further tabs:
 
     - **Your Calls** lists all the support tickets (incident reports and service requests) that you have raised.
+
     - **Account Calls** lists all the support tickets that have been raised against the current customer account
 
 4. By default, each tab lists 10 tickets per page. Use the **Show entries** list to display more tickets (up to 100 per page) if you prefer.

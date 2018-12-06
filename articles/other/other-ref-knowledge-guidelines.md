@@ -76,31 +76,54 @@ where:
 - `product` indicates which product the topic is for. One of:
 
   - `azs` for UKCloud for Microsoft Azure
+
   - `cdsz` for Cross Domain Security Zone
+
   - `conn` for Connectivity
+
   - `cs` for Cloud Storage
+
   - `draas` for Disaster Recovery as a Service
+
   - `email` for Email and Collaboration
+
   - `enbl` for Cloud Enablement
+
   - `gpu` for Cloud GPU
+
   - `migr` for Migration to the Cloud
+
   - `orcl` for UKCloud for Oracle Software
+
   - `oshift` for UKCloud for OpenShift
+
   - `ostack` for UKCloud for OpenStack
+
   - `ptl` for the UKCloud Portal
+
   - `prc` for Private Cloud for Compute
+
   - `pro` for Private Cloud for Oracle
+
   - `prs` for Private Cloud for Storage
+
   - `sra` for Secure Remote Access
+
   - `vmw` for UKCloud for VMware
+
   - For articles that do belong to a service or that apply to multiple services, use `other`
 
 - `type` indicates the article type. One of:
   
+
   - `faq` for FAQs
+
   - `gs` for Getting Started Guides
+
   - `how` for How To Guides
+
   - `ref` for Reference Guides
+
   - `sco` for Service Scopes
 
 - `description` indicates the purpose of the article. Use as few words as possible and separate words with hyphens. For Reference Guides start with a noun, for How To guides start with a verb.
@@ -143,23 +166,41 @@ This is a description of the content of the article. Provide information here th
 This is the service to which the article belongs. One of:
 
 - `azure-stack`
+
 - `cdsz`
+
 - `cloud-storage`
+
 - `connectivity`
+
 - `draas`
+
 - `email`
+
 - `enablement`
+
 - `gpu`
+
 - `migration`
+
 - `openshift`
+
 - `openstack`
+
 - `oracle`
+
 - `portal`
+
 - `private-compute`
+
 - `private-oracle`
+
 - `private-storage`
+
 - `sra`
+
 - `vmware`
+
 - For articles that do belong to a service or that apply to multiple services, use `other`
 
 ### author
@@ -171,10 +212,15 @@ This is the name of the person who created the article.
 **Mandatory.** For most articles, the rootlink will be the article type. One of:
 
 - `Getting Started`
+
 - `How To`
+
 - `Reference`
+
 - `FAQs`
+
 - `Blueprints`
+
 - `Service Scopes`
 
 > [!NOTE]

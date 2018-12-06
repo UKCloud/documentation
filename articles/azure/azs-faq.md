@@ -36,22 +36,31 @@ The first release of UKCloud for Microsoft Azure IaaS provides:
 Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic compute building blocks in Azure Stack. Initial machine types supported are:
 
 - General purpose: Basic A series, Standard A & D Series
+
 - Memory enhanced: DS Series
+
 - Compute optimised: F Series
 
 #### Storage
 
 - Azure Blob Storage (page): Used to support virtual machine disks. Good for randomly accessed large files.
+
 - Azure Blob Storage (block): Object storage. Good for storing documents, videos and images for example.
+
 - Azure Blob Storage (append): Good for log files.
+
 - Azure Queue Storage: Message queue as a service. Good for asynchronous scale out micro-services.
+
 - Azure Table Storage: NoSQL database service. Good for highly scalable, eventually consistent database support
 
 #### Network
 
 - Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure. This can be configured via the UI, API and other tooling. 
+
 - Load balancers (IPv4 only) - Deploy basic load balancers.
+
 - VPN gateway - Use the Azure Stack VPN gateway to create site-to-site VPNs to remote infrastructure.
+
 - Routing - Configure basic custom defined routing on virtual networks.
 
 ### What technology is UKCloud for Microsoft Azure based on?
@@ -188,7 +197,9 @@ For infrastructure solutions, you'll be billed by the smallest unit of time whic
 UKCloud will issue invoices as follows:
 
 - At point of order for upfront fees and service options
+
 - Annually in advance for pre-payment fees
+
 - Monthly in arrears for monthly fees
 
 Payment can be made by direct bank transfer (BACS/CHAPS).

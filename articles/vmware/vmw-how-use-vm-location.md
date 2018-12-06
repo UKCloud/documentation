@@ -24,8 +24,11 @@ This guide describes the step-by-step instructions for obtaining this informatio
 With regards to the supplied location, this is standardised to the following options:
 
 - Corsham (located in the Corsham data centre)
+
 - Farnborough (located in the Farnborough data centre)
+
 - ENHANCED-Corsham (replicated in both data centres. Active in Corsham and standby in Farnborough)
+
 - ENHANCED-Farnborough (replicated in both data centres. Active in Farnborough and standby in Corsham)
 
 This feature is designed to show the location of VMs to assist you in optimising your infrastructure with regard to performance and availability. If you wish to change the location of a specific or group

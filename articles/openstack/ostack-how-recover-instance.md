@@ -27,6 +27,7 @@ This guide outlines UKCloud's policy for handling OpenStack instances in the eve
 If a host restarts, or if we have to reboot a host before live migrating your instances, any instances running on that host will be shut off. When we recover a host, there are two options for the recovery state of any instances that may have been affected:
 
 - Manual restart of instance (default) - you must restart any affected instances when the host has been recovered
+
 - Automatic restart of an instance - UKCloud will automatically restart any shut off instances on a recovered host
 
 You can set the recovery option for each of your instances in the instance metadata.
@@ -114,6 +115,7 @@ As a result, you must ensure that the applications you deploy on OpenStack have 
 For more information about UKCloud for OpenStack, see the following articles in the Knowledge Centre:
 
 - [*Getting Started Guide for UKCloud for OpenStack*](ostack-gs.md)
+
 - [*UKCloud for OpenStack FAQs*](ostack-faq.md)
 
 ## Feedback

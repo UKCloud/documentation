@@ -45,6 +45,7 @@ The first step is to create an empty catalog:
 5. You now have the option to select the storage type used to store the catalog.
 
     - The default is **Use any storage**. Leave this selected if you don't need to store catalog items on specific storage.
+
     - Alternatively, you can indicate where your catalog items should be stored if they need to be stored on a specific storage policy.
 
     ![Select Storage Type options](images/vmw-vcd-new-catalog-storage.png)
@@ -92,6 +93,7 @@ The first step is to create an empty catalog:
 5. From the **Storage Policy** list, select the storage type used to store the catalog.
 
     - **Tier1** is for high performance, high IOPS VMs
+
     - **Tier2** is for everything else less demanding (recommended for ISO and templates)
 
     ![Create Catalog dialog box](images/vmw-vcd91-create-catalog.png)
@@ -109,6 +111,7 @@ The first step is to create an empty catalog:
 9. In the *Share With Users and Groups* dialog box, select:
 
     - **Share with everyone in the organisation** to add everyone in the organisation
+
     - **Share with specific users or groups** to add individual users or groups of users
 
     You can give users different access levels: **Ready Only**, **Full Control** or **Change**. Change allows users to change permissions.
@@ -126,6 +129,7 @@ The first step is to create an empty catalog:
 There are two ways to populate a catalog:
 
 - By [uploading an OVF package](#uploading-an-ovf-package)
+
 - By [creating a template from an existing vApp](#adding-an-existing-vapp)
 
 ### Uploading an OVF package

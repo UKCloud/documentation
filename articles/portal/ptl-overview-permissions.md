@@ -60,9 +60,13 @@ Compute service permissions are based on the vCloud director RBAC (role based ac
 The roles exposed are:
 
 - Admin
+
 - Catalogue Author
+
 - vApp Author
+
 - vApp User
+
 - Console Only 
 
 You can find further details of these roles in Chapter 11 of the vCloud Director Administrator's Guide.

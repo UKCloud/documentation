@@ -26,13 +26,17 @@ Before you attempt to establish a connection to RHUI, you need to make sure your
 Certain Red Hat templates within the public catalog within vCloud Director are automatically configured to receive updates from UKCloud's RHUI. The templates are:
 
 - **RHEL6.6** - UKCloud-RHEL6.6-x86_64-RHUI-Template
+
 - **RHEL7.1** - UKCloud-RHEL7.1-x86_64-RHUI-Template
 
 These templates have the following properties:
 
 - You can find the default root password in the VM Properties Description field (you can set the password using Guest Customization)
+
 - Red Hat Update Infrastructure enabled for standard packages
+
 - VMware Tools / Guest Customization enabled
+
 - 32GB disk space / 1 x vCPU / 2GB ram (default, adjust as required)
 
 You can adjust the VM properties as required and you'll be billed as per the standard VM sizes as described in the UKCloud for VMware Service Definition. You will not be billed on additional storage until you reach the 60GB of provisioned disk space, unless you've chosen geo-resilient.

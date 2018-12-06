@@ -23,6 +23,7 @@ An organisation virtual data centre network enables its virtual machines (VMs) t
 There are two network flavours, isolated and routed:
 
 - An isolated (internally connected) network is one that only VMs within the VDC can connect to. This guide describes how to create an isolated VDC network.
+
 - A routed network (externally connected) provides access to machines and networks outside the VDC via the edge gateway. You can have up to nine usable routed networks per VDC. Creation of routed networks is described in [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
 
 The steps for creating an isolated VDC network depend on the version of vCloud Director available in your environment:
@@ -60,6 +61,7 @@ The steps for creating an isolated VDC network depend on the version of vCloud D
 8. The **Static IP pool** is similar to DHCP in the sense that it's a range of IP addresses to be consumed by the VMs connecting to the network. When a VM is configured it will have a static manual or a static IP pool address assigned to it.
 
     - For static manual, enter the address manually. This must be a valid address for the pool.     The VM will keep this address for as long as it exists.
+
     - For static IP pool, enter a range of addresses. A free address from the IP pool will be allocated to the machine automatically.
 
     As an example, if you give the gateway address as `192.168.1.1`, you may then want to give a static IP pool of `192.168.1.10` to `192.168.1.100`. This will give you a pool of 91 IP  addresses to assign to machines within your network. You can always increase this later if needed.
@@ -101,6 +103,7 @@ The steps for creating an isolated VDC network depend on the version of vCloud D
 9. The **Static IP Pool** is similar to DHCP in the sense that it's a range of IP addresses to be consumed by the VMs connecting to the network. When a VM is configured it will have a static manual or a static IP pool address assigned to it.
 
     - For static manual, enter the address manually. This must be a valid address for the pool. The VM will keep this address for as long as it exists.
+
     - For static IP pool, enter a range of addresses. A free address from the IP pool will be allocated to the machine automatically.
 
     As an example, if you give the gateway address as `192.168.1.1`, you may then want to create a **Static IP Pool** of `192.168.1.10-192.168.1.100`. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.

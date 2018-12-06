@@ -55,7 +55,9 @@ VCLOUD_ORG
 When you run the vCloud Director healthcheck script, it searches for all VMs accessible to the user account you specified and displays how many it has found. Then, for each VM found by the search, the script checks that it meets the following criteria:
 
 - Hardware version is 9
+
 - Network Device is VMXNET3
+
 - Snapshots are not older than seven days
 
 For any VMs that do not meet the above recommendations, the results for each check are listed so that you can identify which one(s) failed.

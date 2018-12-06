@@ -20,7 +20,9 @@ toc_mdlink: ptl-how-signup-notifications.md
 When you use the UKCloud Portal, you'll notice that notifications are provided at the top of every page. These notifications provide information about:
 
 - Updates to UKCloud services
+
 - Planned maintenance
+
 - Incidents
 
 If you want, you can also opt to have these notifications sent to you by email. This feature is available in both the Assured and Elevated Portals.

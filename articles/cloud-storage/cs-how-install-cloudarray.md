@@ -43,6 +43,7 @@ Potential use cases for CloudArray include:
 CloudArray supports the following hypervisors:
 
 - VMware vSphere 5.5 (ESXi) or higher
+
 - Microsoft Windows Server 2012 R2 with Hyper-V
 
 > [!NOTE]
@@ -53,7 +54,9 @@ CloudArray supports the following hypervisors:
 To run CloudArray Virtual Edition you must have the following minimum resources:
 
 - 60 GB of disk space
+
 - 1 virtual processor assigned to the CloudArray VE (two virtual processors is recommended)
+
 - 8 GB of RAM for the 3 TB base model
 
 For specific details about memory requirements, see [EMC CloudArray Best Practices](https://uk.emc.com/collateral/TechnicalDocument/docu60787.pdf).
@@ -63,10 +66,15 @@ For specific details about memory requirements, see [EMC CloudArray Best Practic
 CloudArray supports the following operating systems:
 
 - Mac OS X
+
 - OpenSolaris 2009.06
+
 - Red Hat Linux: 4.0 and higher
+
 - SUSE Linux: 10, 11
+
 - VMware ESX or ESXi
+
 - Windows: XP, Vista, 7, 8, Server 2003, 2008, 2012
 
 ### Supported web browsers
@@ -74,9 +82,13 @@ CloudArray supports the following operating systems:
 CloudArray supports the browsers:
 
 - Google Chrome v49 or higher
+
 - Microsoft Edge v25 or higher
+
 - Internet Explorer v11 or higher
+
 - Mozilla Firefox v45 or higher
+
 - Safari for Mac v6.1.6 or higher
 
 ### Network port requirements
@@ -84,20 +96,31 @@ CloudArray supports the browsers:
 CloudArray allows network traffic on the following TCP/IP ports:
 
 - 80 (HTTP)
+
 - 111 (NFS Portmapper TCP/UDP)
+
 - 137, 138, 139 (CIFS)
+
 - 443 (HTTPS)
+
 - 445 (CIFS)
 
 System requirements:
 
 - 662 (NFS Status TCP/UDP)
+
 - 875 (NFS rquotad TCP/UDP)
+
 - 892 (NFS mountd TCP/UDP)
+
 - 2049 (NFS nfsd TCP/UDP)
+
 - 3260 (iSCSI)
+
 - 8080 (HTTP)
+
 - 32803 (NFS nlockmgr TCP)
+
 - 41022 (EMC Support)
 
 ### Memory sharing
@@ -115,6 +138,7 @@ If you require a CloudArray license key, UKCloud will contact Dell EMC on your b
 The steps for installing CloudArray depend on your hypervisor:
 
 - [VMware vSphere](#installing-cloudarray-on-vmware-vsphere)
+
 - [Microsoft Hyper-V](#installing-cloudarray-on-microsoft-hyper-v)
 
 ### Installing CloudArray on VMware vSphere
@@ -205,6 +229,7 @@ To install CloudArray on Microsoft Hyper-V:
 You have two options to configure CloudArray:
 
 - [Using the CloudArray Appliance console](#configuring-cloudarray-using-the-cloudarray-appliance-console)
+
 - [Using the web browser interface](#configuring-cloudarray-using-the-web-browser-interface)
 
 ### Configuring CloudArray using the CloudArray Appliance console
@@ -220,6 +245,7 @@ To start the CloudArray Appliance console:
 2. Click **Sign in** and enter the following credentials:
 
     - Username: admin
+
     - Password: <admin_password>
 
     Upon first login, you are prompted to change the password.
@@ -331,6 +357,7 @@ To configure CloudArray:
 1. Once connected to CloudArray using a web browser, you have two options:
 
     - **Setup** - to setup and configure a new installation of CloudArray.
+
     - **Restore** - to restore a backup configuration of a previous CloudArray Installation.
 
     ![CloudArray Dashboard](images/cs-cloud-array-web-gui-configuration-step-1.png)
@@ -377,6 +404,7 @@ To configure CloudArray:
 9. You'll be presented with the initial dashboard of CloudArray, you have two options:
 
     - **Configuration Wizard**
+
     - **User Interface**
 
     ![CloudArray configuration options](images/cs-cloud-array-web-gui-configuration-step-9.png)
@@ -482,6 +510,7 @@ This guide has shown you how to create a new Cloud Storage user. For more inform
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
 - Cloud Storage Gateways
+
     - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)

@@ -55,7 +55,9 @@ This error can usually be attributed to the software license key being assigned 
 The steps in the attachment should help to successfully rectify the error being returned by the UKCloud KMS server but, before starting, please ensure: 
 
 - You must have full admin access to the Windows VM you are activating
+
 - You must know the exact version of Windows you are running
+
 - You reference the following Microsoft KB article: http://technet.microsoft.com/en-us/library/ff793409.aspx#E4IAC
 
 ## Feedback

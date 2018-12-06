@@ -34,7 +34,9 @@ The options below are all currently available within the service:
 Virtual machines (VMs) provide the basic building blocks of compute resource within UKCloud for Microsoft Azure. Each standard machine has a pre-allocated number of vCPUs, amount of memory and a temporary disk. The available sizes and families of VMs are continually increasing. Broadly, the following machine families are supported:
 
 - Basic and Standard A-Series. CPU performance and memory configurations best suited for entry level workloads like development and test.  
+
 - Standard D-Series and DS-Series. Optimised CPU-to-memory configuration, making them suitable for most general-purpose applications. A subset of the D-series VMs also sport higher memory per CPU making them suitable for applications that require higher amounts of memory. 
+
 - Basic and Standard F-series. Optimised for CPU-intensive workloads so have a higher CPU to memory configurations.
 
 You can find the full list of supported machines [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
@@ -83,7 +85,9 @@ UKCloud manages the physical firewalls that face public and secure networks.
 You can deploy multiple gateway devices and configure the following using either the Azure Stack Portal GUI or API:
 
 - Virtual networks – UKCloud for Microsoft Azure enables you to configure virtual private clouds, and create and manage your private address space within Azure. You can configure this via the UI, API or other tooling
+
 - Load balancers (IPv4 only) – you can deploy basic load balancers VPN gateway – you can use the UKCloud for Microsoft Azure VPN gateway to create site-to-site VPNs to remote infrastructure
+
 - Routing – basic custom defined routing can be configured on virtual networks
 
 **Internet-facing solutions** have 8 usable public IP addresses. You can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.
@@ -104,6 +108,7 @@ The availability of your virtual machines in UKCloud for Microsoft Azure follows
 The service levels are as follows:
 
 - 99.90% (a single VM deployed as a single instance deployed inside a zone)
+
 - 99.95% (a single VM with two instances deployed inside a zone)
 
 > [!TIP]
@@ -130,7 +135,9 @@ The service levels are as follows:
 UKCloud for Microsoft Azure includes access to a local version of the Azure Marketplace. The Marketplace contains a collection of services, applications, and resources customized for Azure Stack that you can deploy in your environment. Every Marketplace item has:
 
 - An Azure Resource Manager template for resource provisioning
+
 - Metadata, such as strings, icons, and other marketing collateral
+
 - Formatting information to display the item in the portal
 
 We've pre-populated the Marketplace with a variety of images and templates that have been identified as the most useful services. You can request additional resources are added, providied they are approved for use on Microsoft Azure Stack. Here is the full list of [available items](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-marketplace-azure-items).
