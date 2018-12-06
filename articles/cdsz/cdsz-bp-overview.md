@@ -115,13 +115,17 @@ It's important to highlight that there is no pre-defined architectural pattern t
 The Assured OFFICIAL security domain should have:
 
 - Firewall rules to tightly control traffic to the applications which will talk across the walled garden
+
 - Anti-virus
+
 - Protective monitoring
 
 Additional techniques to further secure the solution should be used if possible:
 
 - OS and application hardening to reduce services running on the server, decreasing the surface of vulnerability
+
 - Logging of events on the server for auditing purposes, with logs included in the protective monitoring solution
+
 - Content checking to ensure the integrity of data and provide a defence against content attacks
 
 It is recommended that it should have an anti-virus product that differs from other anti-virus products used in the overall solution.
@@ -131,14 +135,19 @@ It is recommended that it should have an anti-virus product that differs from ot
 The Walled Garden consists of a single-tenant walled garden architecture which should include:
 
 - A protocol break and re-creation, for example by using a reverse proxy
+
 - Inspection of the data to validate the message structure or message content, to ensure the messages used to convey the application data are correctly encoded, and to confirm that the content within the messages are as expected
+
 - IDS and logging of events on the VMs for auditing purposes, and alert generation for messages that fail the validation process as part of a protective monitoring solution
+
 - Anti-virus
 
 Other considerations for the Walled Garden include:
 
 - OS and application hardening to reduce services running on the server, decreasing the surface of vulnerability
+
 - Implementation of release controls to enforce a whitelist of the data types and content permitted for release through the Walled Garden
+
 - Direction control for data moving from either high-to-low or low-to-high domains; for example, best practice is to prevent 'pull' requests from the application in the low domain
 
 It's good practice to run non-SSL traffic so the Walled Garden doesn't need to decrypt and re-encrypt to inspect the messages.
@@ -150,14 +159,19 @@ Customers can have different VMs within a single walled garden instance servicin
 The Elevated OFFICIAL security domain should have:
 
 - Firewall rules to tightly control traffic to the applications that will talk across the Walled Garden
+
 - Post-authentication to enable access control and auditing
+
 - Anti-virus
+
 - Protective monitoring with IDS
 
 Additional techniques to further secure the solution should be used if possible:
 
 - OS and application hardening to reduce services running on the server, decreasing the surface of vulnerability
+
 - Logging of events on the VMs for auditing purposes, with logs included in the protective monitoring solution
+
 - Content checking to ensure the integrity of data and provide a defence against content attacks
 
 It should also be configured with an anti-virus product that differs from other anti-virus products used in the overall solution.
