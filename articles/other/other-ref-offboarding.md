@@ -188,7 +188,7 @@ ISOs | VDC
 Catalogs | vOrg
 &nbsp; | Certificates and Active Directory
 
-### Connectivity
+#### [Connectivity](#tab/tabid-15)
 
 Customer responsibilities | UKCloud responsibilities
 --------------------------|-------------------------
