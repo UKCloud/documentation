@@ -60,8 +60,6 @@ After you've removed all of the items from your account that you're responsible 
 
 - Remove your account (and company, if necessary).
 
-- Return to you any data or materials that cannot be deleted or exported.
-
 - Return any prepaid sums for services that you have not consumed (unless otherwise required by the associated Service Definition).
 
 - Arrange to return all confidential information.
