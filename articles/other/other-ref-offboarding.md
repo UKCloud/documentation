@@ -127,6 +127,8 @@ NAT/firewall/DHCP/static routes/VPN |
 Disable snapshot backups |
 VPGs for Journaling Protection |
 
+***
+
 ### Multi-cloud enabling
 
 #### [Cloud GPU](#tab/tabid-6)
