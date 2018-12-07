@@ -83,6 +83,14 @@ Yes. All of our licensing agreements are open to either Public or Private Sector
 
 Yes. We have large ecosystem of partners, including large system integrators, popular managed service providers and specialist SaaS providers, who already deliver a wide range of services to both Public Sector and Private Sector.  Many of these partners share similar characteristics with UKCloud's platform and specialise in high security, excellent service and domain expertise. Contact us by calling 01252 303300 (option 3) or by emailing <info@ukcloud.com> for further information.
 
+### Is there a free trial?
+
+Yes. We offer a 30-day free trial for many of our services. Your trial provides you with a live environment on the UKCloud platform to test our services without commitment and verify whether they are suited to your needs.
+
+You can request a trial via the UKCloud website: http://www.UKCloud.com/free-trial-sign-up and accept the trial terms and conditions. Your environment will then be set up and you will be given trial credits to the equivalent of £500.
+
+You will be contacted by your Cloud Architect or CSM when your trial is due to end, either because you have run out of credits or reached 30 days (whichever is sooner). At the end of your trial, you have the option to transition to production or cease the trial.
+
 ## Feedback
 
 If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
