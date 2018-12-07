@@ -39,7 +39,7 @@ No. The Elevated security domain and the Tier 2 security domain are designed to 
 
 ### What are your service SLAs?
 
-All of our services have formal SLAs supported by service credits. As there is a specific SLA for each service, please review the specific Service Definition which are available in our [Knowledge Centre](https://docs.ukcloud.com/articles/other/other-ref-service-definitions.html).
+All of our services have formal SLAs supported by service credits. As there is a specific SLA for each service, please review the [*SLA Definition*](https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html) article in our Knowledge Centre.
 
 ### Will Enterprise & Private Sector customers share the same estate as UK Public Sector?
 
