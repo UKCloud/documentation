@@ -9,7 +9,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Delete SSO users
+toc_title: Delete single sign on users
 toc_fullpath: How To/other-how-delete-sso-user.md
 toc_mdlink: other-how-delete-sso-user.md
 ---
@@ -30,7 +30,7 @@ For more information about the IDAM API, see [*Understanding UKCloud's Identity 
 
 ## Deleting a single sign on user
 
-The process for using the IDAM API to delete a single sign on user is as follows:
+The process for using the IDAM API to delete an SSO user is as follows:
 
 1. Authenticate with the IDAM API:
 
@@ -42,7 +42,7 @@ The process for using the IDAM API to delete a single sign on user is as follows
      -d client_id=portal.ukcloud | jq -r '.access_token')
      ```
 
-    This returns a single sign on token to use for authenticating calls to the IDAM API. For example:
+    This returns an SSO token to use for authenticating calls to the IDAM API. For example:
 
     ``` json
     {
