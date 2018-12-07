@@ -94,12 +94,12 @@ UKCloud monitors various elements across the service to ensure that availability
 
 &nbsp; | &nbsp;
 -------|-------
-**Service level agreement** | **STANDARD:** 99.95%<br>**ENHANCED:** 99.99%<br>**ENHANCED PLUS:** 99.99%
+**Service level agreement** | **STANDARD:** 99.95%<br>**ENHANCED:** 99.99%
 **Portal level agreement**  | 99.90%
 **Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any planned and emergency maintenance.
 **Measurement of SLA** | Unavailability applies to existing data where the data becomes inaccessible due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the messaging infrastructure, storage, power and internal networking such as physical firewalls and routers.
 **Key exclusions** | The following are examples of what is not covered by the SLA: <br>- The fault is within the customer's control (applications and user networks)<br>- Faults within external connectivity providers (for example DDoS- protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud
-**Service Credit**  | **STANDARD:** 10% of monthly spend<br>**ENHANCED:** 15% of monthly spend<br>**ENHANCED PLUS:** 15% of monthly spend
+**Service Credit**  | **STANDARD:** 10% of monthly spend<br>**ENHANCED:** 15% of monthly spend
 &nbsp; | 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal.
 
 ### Cross Domain Security Zone
