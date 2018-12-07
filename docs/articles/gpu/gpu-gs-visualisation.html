@@ -89,8 +89,10 @@
 <p>This service enables you to use UKCloud's main infrastructure platforms to meet the specialist requirements of some advanced applications, with the benefits of a cloud environment. It supports the following types of
 workloads:</p>
 <ul>
-<li><strong>Compute workloads.</strong> GPUs have become prevalent in a world that needs a lot of data processing, fast. The parallel nature of GPU cores lends itself perfectly to supporting initiatives such as deep or machine learning and large-scale mathematical modelling.</li>
-<li><strong>Visualisation workloads.</strong> Describes the traditional use cases for GPU processing --- these include simulation, powering desktop applications with graphics content (such as computer aided design), video encoding, rendering or streaming.</li>
+<li><p><strong>Compute workloads.</strong> GPUs have become prevalent in a world that needs a lot of data processing, fast. The parallel nature of GPU cores lends itself perfectly to supporting initiatives such as deep or machine learning and large-scale mathematical modelling.</p>
+</li>
+<li><p><strong>Visualisation workloads.</strong> Describes the traditional use cases for GPU processing --- these include simulation, powering desktop applications with graphics content (such as computer aided design), video encoding, rendering or streaming.</p>
+</li>
 </ul>
 <p>This Getting Started Guide provides an introduction for how to use Cloud GPU for visualisation workloads and describes the tasks you need to perform to get the service up and running.</p>
 <h3 id="intended-audience">Intended audience</h3>
@@ -136,9 +138,12 @@ workloads:</p>
 </li>
 <li><p><strong>Visualise data in real-time</strong> --- Improved visualisation capabilities provided by Cloud GPU Visualisation enables you to visualise data in real-time to render virtualised environments when you need them. This helps you to:</p>
 <ul>
-<li>Design using Computer Aided Design applications in a centralised environment, enabling ease of collaboration</li>
-<li>Create and run simulations</li>
-<li>Render and analyse high resolution images and video</li>
+<li><p>Design using Computer Aided Design applications in a centralised environment, enabling ease of collaboration</p>
+</li>
+<li><p>Create and run simulations</p>
+</li>
+<li><p>Render and analyse high resolution images and video</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -167,11 +172,16 @@ workloads:</p>
 <p>When your VM is ready, make sure it is powered off and then use My Calls in the UKCloud Portal to raise a service request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can
 complete the setup of your service:</p>
 <ul>
-<li>Service type: GPU -- Visualisation</li>
-<li>VDC name</li>
-<li>vApp name</li>
-<li>VM name</li>
-<li>vGPU profile that you want to use (see table below)</li>
+<li><p>Service type: GPU -- Visualisation</p>
+</li>
+<li><p>VDC name</p>
+</li>
+<li><p>vApp name</p>
+</li>
+<li><p>VM name</p>
+</li>
+<li><p>vGPU profile that you want to use (see table below)</p>
+</li>
 </ul>
 <table>
 <thead>
@@ -337,11 +347,16 @@ Thu Oct 5 14:57:43 2017
 <h4 id="configuring-the-edge-gateway">Configuring the edge gateway</h4>
 <p>To enable access to the NVIDIA GRID License Server from your network, you must create the following firewall rule on your edge gateway:</p>
 <ul>
-<li><strong>Source/Source Port:</strong> as appropriate for your source network</li>
-<li><strong>Destination:</strong> <code>51:179.197.53</code></li>
-<li><strong>Destination Port:</strong> <code>7070</code></li>
-<li><strong>Protocol:</strong> <code>TCP</code></li>
-<li><strong>Action:</strong> <code>Allow</code></li>
+<li><p><strong>Source/Source Port:</strong> as appropriate for your source network</p>
+</li>
+<li><p><strong>Destination:</strong> <code>51:179.197.53</code></p>
+</li>
+<li><p><strong>Destination Port:</strong> <code>7070</code></p>
+</li>
+<li><p><strong>Protocol:</strong> <code>TCP</code></p>
+</li>
+<li><p><strong>Action:</strong> <code>Allow</code></p>
+</li>
 </ul>
 <p><img src="images/gpu-vcd-add-firewall-rule.png" alt="Add firewall rule dialog box"></p>
 <p>If you need more detailed instructions for creating firewall rules, see <a href="../vmware/vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
@@ -374,9 +389,12 @@ Thu Oct 5 14:57:43 2017
 </li>
 <li><p>Edit the file and set the following values:</p>
 <ul>
-<li><code>ServerAddress=gpuls.ukcloud.com</code></li>
-<li><code>ServerPort=7070</code></li>
-<li><code>FeatureType=1</code></li>
+<li><p><code>ServerAddress=gpuls.ukcloud.com</code></p>
+</li>
+<li><p><code>ServerPort=7070</code></p>
+</li>
+<li><p><code>FeatureType=1</code></p>
+</li>
 </ul>
 </li>
 <li><p>Save your changes.</p>
@@ -404,8 +422,10 @@ Oct 5 15:05:17 localhost nvidia-gridd: Your system is licensed for GRID vGPU.
 </li>
 <li><p>Select Manage License and input the following server details:</p>
 <ul>
-<li><strong>License Server:</strong> <code>gpuls.ukcloud.com</code></li>
-<li><strong>Port Number:</strong> <code>7070</code></li>
+<li><p><strong>License Server:</strong> <code>gpuls.ukcloud.com</code></p>
+</li>
+<li><p><strong>Port Number:</strong> <code>7070</code></p>
+</li>
 </ul>
 </li>
 </ul>
@@ -416,8 +436,10 @@ Oct 5 15:05:17 localhost nvidia-gridd: Your system is licensed for GRID vGPU.
 <p><a href="http://nvidia.custhelp.com/app/answers/detail/a_id/4187/%7E/nvidia-grid-nvenc-availability-for-hardware-accelerated-protocol-encode-%E2%80%93-rgs%2C">http://nvidia.custhelp.com/app/answers/detail/a_id/4187/~/nvidia-grid-nvenc-availability-for-hardware-accelerated-protocol-encode-%E2%80%93-rgs%2C</a></p>
 <p>We've tested the following applications against our Cloud GPU service to confirm that they work successfully:</p>
 <ul>
-<li>VMware Blast Extreme</li>
-<li>HP Remote Graphics Software</li>
+<li><p>VMware Blast Extreme</p>
+</li>
+<li><p>HP Remote Graphics Software</p>
+</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>

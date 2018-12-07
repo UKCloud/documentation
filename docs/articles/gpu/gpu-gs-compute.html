@@ -134,11 +134,16 @@ workloads:</p>
 <ul>
 <li><p><strong>Process large data sets</strong> --- The significantly improved computational power provided by Cloud GPU means that you can gain insight into your data by using the massively parallelised capabilities to process large data sets. This enables:</p>
 <ul>
-<li>Parallel processing of data in a fraction of the time of using just CPU</li>
-<li>Machine learning, deep learning, artificial intelligence</li>
-<li>Mathematical modelling and data sequencing</li>
-<li>Healthcare modelling</li>
-<li>Predictive threat analysis</li>
+<li><p>Parallel processing of data in a fraction of the time of using just CPU</p>
+</li>
+<li><p>Machine learning, deep learning, artificial intelligence</p>
+</li>
+<li><p>Mathematical modelling and data sequencing</p>
+</li>
+<li><p>Healthcare modelling</p>
+</li>
+<li><p>Predictive threat analysis</p>
+</li>
 </ul>
 </li>
 <li><p><strong>Bring any application to the cloud</strong> --- Applications that have previously struggled to transition to the cloud because of GPU requirements can now be moved, improving manageability of your data and applications, while increasing collaborative opportunities.</p>
@@ -147,20 +152,28 @@ workloads:</p>
 </li>
 <li><p><strong>Visualise data in real-time</strong> --- Improved visualisation capabilities provided by Cloud GPU enables you to visualise data in real-time to render virtualised environments when you need them. This helps you to:</p>
 <ul>
-<li>Design using Computer Aided Design applications in a centralised environment, enabling ease of collaboration</li>
-<li>Create and run simulations</li>
-<li>Render and analyse high resolution images and video</li>
+<li><p>Design using Computer Aided Design applications in a centralised environment, enabling ease of collaboration</p>
+</li>
+<li><p>Create and run simulations</p>
+</li>
+<li><p>Render and analyse high resolution images and video</p>
+</li>
 </ul>
 </li>
 </ul>
 <h2 id="before-you-begin">Before you begin</h2>
 <p>When using our Cloud GPU service for compute workloads, you should consider the following:</p>
 <ul>
-<li>Your Cloud GPU virtual machine (VM) must be in a PRIORITY virtual data centre (VDC).</li>
-<li>You should create your Cloud GPU VM using the appropriate UKCloud template from the GPGPU public catalogue.</li>
-<li>Your deployed Cloud GPU VM should be using hardware version 11. The shell VM in the Cloud GPU VM template uses hardware version 11.</li>
-<li>Snapshot Protection is not available for your VM, so you must implement your own backup solution.</li>
-<li>Currently, there is no high availability or disaster recovery option; your VM cannot be migrated to a different host in the event of host failure. In the event of a host failure, you must wait for the host to be returned to service.</li>
+<li><p>Your Cloud GPU virtual machine (VM) must be in a PRIORITY virtual data centre (VDC).</p>
+</li>
+<li><p>You should create your Cloud GPU VM using the appropriate UKCloud template from the GPGPU public catalogue.</p>
+</li>
+<li><p>Your deployed Cloud GPU VM should be using hardware version 11. The shell VM in the Cloud GPU VM template uses hardware version 11.</p>
+</li>
+<li><p>Snapshot Protection is not available for your VM, so you must implement your own backup solution.</p>
+</li>
+<li><p>Currently, there is no high availability or disaster recovery option; your VM cannot be migrated to a different host in the event of host failure. In the event of a host failure, you must wait for the host to be returned to service.</p>
+</li>
 </ul>
 <h2 id="creating-your-virtual-machine">Creating your virtual machine</h2>
 <p>Before you request your Cloud GPU service, you must create a VM for the service using the UKCloud GPU-enabled template.</p>
@@ -235,9 +248,12 @@ workloads:</p>
 <h2 id="provisioning-your-cloud-gpu-service">Provisioning your Cloud GPU service</h2>
 <p>When your VM is ready, use My Calls in the UKCloud Portal to raise a service request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can complete the setup of your service:</p>
 <ul>
-<li>VDC name</li>
-<li>vApp name</li>
-<li>VM name</li>
+<li><p>VDC name</p>
+</li>
+<li><p>vApp name</p>
+</li>
+<li><p>VM name</p>
+</li>
 </ul>
 <p>UKCloud will confirm that you've set up your VM correctly and that it meets all the necessary prerequisites. If the VM meets all requirements, UKCloud will migrate the VM to a GPU‑enabled host and attach the GPU card to your VM.</p>
 <h2 id="installing-nvidia-drivers">Installing NVIDIA drivers</h2>
@@ -323,11 +339,16 @@ Thu Oct 5 14:57:43 2017
 <h4 id="configuring-the-edge-gateway">Configuring the edge gateway</h4>
 <p>To enable access to the NVIDIA GRID License Server from your network, you must create the following firewall rule on your edge gateway:</p>
 <ul>
-<li><strong>Source/Source Port:</strong> as appropriate for your source network</li>
-<li><strong>Destination:</strong> <code>51:179.197.53</code></li>
-<li><strong>Destination Port:</strong> <code>7070</code></li>
-<li><strong>Protocol:</strong> <code>TCP</code></li>
-<li><strong>Action:</strong> <code>Allow</code></li>
+<li><p><strong>Source/Source Port:</strong> as appropriate for your source network</p>
+</li>
+<li><p><strong>Destination:</strong> <code>51:179.197.53</code></p>
+</li>
+<li><p><strong>Destination Port:</strong> <code>7070</code></p>
+</li>
+<li><p><strong>Protocol:</strong> <code>TCP</code></p>
+</li>
+<li><p><strong>Action:</strong> <code>Allow</code></p>
+</li>
 </ul>
 <p><img src="images/gpu-vcd-add-firewall-rule.png" alt="Add firewall rule dialog box"></p>
 <p>For more detailed instructions for creating firewall rules, see <a href="../vmware/vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
@@ -360,9 +381,12 @@ Thu Oct 5 14:57:43 2017
 </li>
 <li><p>Edit the file and set the following values:</p>
 <ul>
-<li><code>ServerAddress=gpuls.ukcloud.com</code></li>
-<li><code>ServerPort=7070</code></li>
-<li><code>FeatureType=1</code></li>
+<li><p><code>ServerAddress=gpuls.ukcloud.com</code></p>
+</li>
+<li><p><code>ServerPort=7070</code></p>
+</li>
+<li><p><code>FeatureType=1</code></p>
+</li>
 </ul>
 </li>
 <li><p>Save your changes.</p>
@@ -390,8 +414,10 @@ Oct 5 15:05:17 localhost nvidia-gridd: Your system is licensed for GRID vGPU.
 </li>
 <li><p>Select Manage License and input the following server details:</p>
 <ul>
-<li><strong>License Server:</strong> <code>gpuls.ukcloud.com</code></li>
-<li><strong>Port Number:</strong> <code>7070</code></li>
+<li><p><strong>License Server:</strong> <code>gpuls.ukcloud.com</code></p>
+</li>
+<li><p><strong>Port Number:</strong> <code>7070</code></p>
+</li>
 </ul>
 </li>
 </ul>

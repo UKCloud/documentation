@@ -106,8 +106,10 @@
 <h3 id="supported-hypervisors">Supported hypervisors</h3>
 <p>CloudArray supports the following hypervisors:</p>
 <ul>
-<li>VMware vSphere 5.5 (ESXi) or higher</li>
-<li>Microsoft Windows Server 2012 R2 with Hyper-V</li>
+<li><p>VMware vSphere 5.5 (ESXi) or higher</p>
+</li>
+<li><p>Microsoft Windows Server 2012 R2 with Hyper-V</p>
+</li>
 </ul>
 <blockquote>
 <p> [!NOTE]
@@ -116,49 +118,76 @@ The hypervisor must support 64 bit Linux OS guest operating systems.</p>
 <h3 id="ram-cpu-and-disk-requirements">RAM, CPU and disk requirements</h3>
 <p>To run CloudArray Virtual Edition you must have the following minimum resources:</p>
 <ul>
-<li>60 GB of disk space</li>
-<li>1 virtual processor assigned to the CloudArray VE (two virtual processors is recommended)</li>
-<li>8 GB of RAM for the 3 TB base model</li>
+<li><p>60 GB of disk space</p>
+</li>
+<li><p>1 virtual processor assigned to the CloudArray VE (two virtual processors is recommended)</p>
+</li>
+<li><p>8 GB of RAM for the 3 TB base model</p>
+</li>
 </ul>
 <p>For specific details about memory requirements, see <a href="https://uk.emc.com/collateral/TechnicalDocument/docu60787.pdf">EMC CloudArray Best Practices</a>.</p>
 <h3 id="supported-host-operating-systems">Supported host operating systems</h3>
 <p>CloudArray supports the following operating systems:</p>
 <ul>
-<li>Mac OS X</li>
-<li>OpenSolaris 2009.06</li>
-<li>Red Hat Linux: 4.0 and higher</li>
-<li>SUSE Linux: 10, 11</li>
-<li>VMware ESX or ESXi</li>
-<li>Windows: XP, Vista, 7, 8, Server 2003, 2008, 2012</li>
+<li><p>Mac OS X</p>
+</li>
+<li><p>OpenSolaris 2009.06</p>
+</li>
+<li><p>Red Hat Linux: 4.0 and higher</p>
+</li>
+<li><p>SUSE Linux: 10, 11</p>
+</li>
+<li><p>VMware ESX or ESXi</p>
+</li>
+<li><p>Windows: XP, Vista, 7, 8, Server 2003, 2008, 2012</p>
+</li>
 </ul>
 <h3 id="supported-web-browsers">Supported web browsers</h3>
 <p>CloudArray supports the browsers:</p>
 <ul>
-<li>Google Chrome v49 or higher</li>
-<li>Microsoft Edge v25 or higher</li>
-<li>Internet Explorer v11 or higher</li>
-<li>Mozilla Firefox v45 or higher</li>
-<li>Safari for Mac v6.1.6 or higher</li>
+<li><p>Google Chrome v49 or higher</p>
+</li>
+<li><p>Microsoft Edge v25 or higher</p>
+</li>
+<li><p>Internet Explorer v11 or higher</p>
+</li>
+<li><p>Mozilla Firefox v45 or higher</p>
+</li>
+<li><p>Safari for Mac v6.1.6 or higher</p>
+</li>
 </ul>
 <h3 id="network-port-requirements">Network port requirements</h3>
 <p>CloudArray allows network traffic on the following TCP/IP ports:</p>
 <ul>
-<li>80 (HTTP)</li>
-<li>111 (NFS Portmapper TCP/UDP)</li>
-<li>137, 138, 139 (CIFS)</li>
-<li>443 (HTTPS)</li>
-<li>445 (CIFS)</li>
+<li><p>80 (HTTP)</p>
+</li>
+<li><p>111 (NFS Portmapper TCP/UDP)</p>
+</li>
+<li><p>137, 138, 139 (CIFS)</p>
+</li>
+<li><p>443 (HTTPS)</p>
+</li>
+<li><p>445 (CIFS)</p>
+</li>
 </ul>
 <p>System requirements:</p>
 <ul>
-<li>662 (NFS Status TCP/UDP)</li>
-<li>875 (NFS rquotad TCP/UDP)</li>
-<li>892 (NFS mountd TCP/UDP)</li>
-<li>2049 (NFS nfsd TCP/UDP)</li>
-<li>3260 (iSCSI)</li>
-<li>8080 (HTTP)</li>
-<li>32803 (NFS nlockmgr TCP)</li>
-<li>41022 (EMC Support)</li>
+<li><p>662 (NFS Status TCP/UDP)</p>
+</li>
+<li><p>875 (NFS rquotad TCP/UDP)</p>
+</li>
+<li><p>892 (NFS mountd TCP/UDP)</p>
+</li>
+<li><p>2049 (NFS nfsd TCP/UDP)</p>
+</li>
+<li><p>3260 (iSCSI)</p>
+</li>
+<li><p>8080 (HTTP)</p>
+</li>
+<li><p>32803 (NFS nlockmgr TCP)</p>
+</li>
+<li><p>41022 (EMC Support)</p>
+</li>
 </ul>
 <h3 id="memory-sharing">Memory sharing</h3>
 <p>Memory for a CloudArray virtual machine must be provisioned for its exclusive use.</p>
@@ -168,8 +197,10 @@ The hypervisor must support 64 bit Linux OS guest operating systems.</p>
 <h2 id="installing-cloudarray-virtual-edition">Installing CloudArray Virtual Edition</h2>
 <p>The steps for installing CloudArray depend on your hypervisor:</p>
 <ul>
-<li><a href="#installing-cloudarray-on-vmware-vsphere">VMware vSphere</a></li>
-<li><a href="#installing-cloudarray-on-microsoft-hyper-v">Microsoft Hyper-V</a></li>
+<li><p><a href="#installing-cloudarray-on-vmware-vsphere">VMware vSphere</a></p>
+</li>
+<li><p><a href="#installing-cloudarray-on-microsoft-hyper-v">Microsoft Hyper-V</a></p>
+</li>
 </ul>
 <h3 id="installing-cloudarray-on-vmware-vsphere">Installing CloudArray on VMware vSphere</h3>
 <p>To install CloudArray on VMware:</p>
@@ -245,8 +276,10 @@ The VM is configured for two networks but only one is required. However, we stro
 <h2 id="configuring-cloudarray">Configuring CloudArray</h2>
 <p>You have two options to configure CloudArray:</p>
 <ul>
-<li><a href="#configuring-cloudarray-using-the-cloudarray-appliance-console">Using the CloudArray Appliance console</a></li>
-<li><a href="#configuring-cloudarray-using-the-web-browser-interface">Using the web browser interface</a></li>
+<li><p><a href="#configuring-cloudarray-using-the-cloudarray-appliance-console">Using the CloudArray Appliance console</a></p>
+</li>
+<li><p><a href="#configuring-cloudarray-using-the-web-browser-interface">Using the web browser interface</a></p>
+</li>
 </ul>
 <h3 id="configuring-cloudarray-using-the-cloudarray-appliance-console">Configuring CloudArray using the CloudArray Appliance console</h3>
 <h4 id="starting-the-console">Starting the console</h4>
@@ -257,8 +290,10 @@ The VM is configured for two networks but only one is required. However, we stro
 </li>
 <li><p>Click <strong>Sign in</strong> and enter the following credentials:</p>
 <ul>
-<li>Username: admin</li>
-<li>Password: &lt;admin_password&gt;</li>
+<li><p>Username: admin</p>
+</li>
+<li><p>Password: &lt;admin_password&gt;</p>
+</li>
 </ul>
 <p>Upon first login, you are prompted to change the password.</p>
 <blockquote>
@@ -354,8 +389,10 @@ Newer versions (v7.X.X.X.X) require a secure connection to the CloudArray interf
 <ol>
 <li><p>Once connected to CloudArray using a web browser, you have two options:</p>
 <ul>
-<li><strong>Setup</strong> - to setup and configure a new installation of CloudArray.</li>
-<li><strong>Restore</strong> - to restore a backup configuration of a previous CloudArray Installation.</li>
+<li><p><strong>Setup</strong> - to setup and configure a new installation of CloudArray.</p>
+</li>
+<li><p><strong>Restore</strong> - to restore a backup configuration of a previous CloudArray Installation.</p>
+</li>
 </ul>
 <p><img src="images/cs-cloud-array-web-gui-configuration-step-1.png" alt="CloudArray Dashboard"></p>
 <p>This article shows you how to configure a new installation of CloudArray through a web browser, so click <strong>Setup</strong>.</p>
@@ -390,8 +427,10 @@ To obtain the <strong>CloudArray License Tag</strong>, log into the CloudArray p
 </li>
 <li><p>You'll be presented with the initial dashboard of CloudArray, you have two options:</p>
 <ul>
-<li><strong>Configuration Wizard</strong></li>
-<li><strong>User Interface</strong></li>
+<li><p><strong>Configuration Wizard</strong></p>
+</li>
+<li><p><strong>User Interface</strong></p>
+</li>
 </ul>
 <p><img src="images/cs-cloud-array-web-gui-configuration-step-9.png" alt="CloudArray configuration options"></p>
 </li>

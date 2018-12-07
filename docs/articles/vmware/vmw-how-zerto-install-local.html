@@ -87,8 +87,10 @@
 <h2 id="overview">Overview</h2>
 <p>If you want to use UKCloud's Disaster Recovery as a Service or Migration to the Cloud services, there are some tasks that you must perform to prepare your local environment.</p>
 <ul>
-<li>UKCloud's Disaster Recovery as a Service enables you to provide a secure, scalable disaster recovery solution for your on-premises environment by replicating your workloads on the UKCloud platform</li>
-<li>Migration to the Cloud enables you to move your workloads from a local, on-premises environment onto the UKCloud platform.</li>
+<li><p>UKCloud's Disaster Recovery as a Service enables you to provide a secure, scalable disaster recovery solution for your on-premises environment by replicating your workloads on the UKCloud platform</p>
+</li>
+<li><p>Migration to the Cloud enables you to move your workloads from a local, on-premises environment onto the UKCloud platform.</p>
+</li>
 </ul>
 <p>Our Disaster Recovery as a Service and Migration to the Cloud services are powered by Zerto, a leading provider of disaster recovery software for the cloud, so you'll need to install Zerto software in your local environment to enable the replication of your workloads to the UKCloud platform. You'll also need to create a IPsec VPN to connect your local environment to the UKCloud.</p>
 <p><img src="images/configure-zerto-image-1.png" alt="IPsec"></p>
@@ -97,10 +99,14 @@
 <h2 id="before-you-begin">Before you begin</h2>
 <p>When you raise a Service Request for Disaster Recovery as a Service or Migration to the Cloud, UKCloud provides you with:</p>
 <ul>
-<li>A ZORG ID to identify your environment within Zerto</li>
-<li>A link to the appropriate version of Zerto Virtual Manager (ZVM) for you to deploy in your local environment as well as a site address and port for licensing purposes</li>
-<li>The IP address (from the IP range you provided to UKCloud) of the Zerto Cloud Connector (ZCC) deployed in your target VDC (for recovery or migration); you'll need this to complete the setup of the site-to-site VPN between your local environment and your target VDC</li>
-<li>Access to the Zerto Self-Service Portal (ZSSP) in the UKCloud zone where your target VDC is located</li>
+<li><p>A ZORG ID to identify your environment within Zerto</p>
+</li>
+<li><p>A link to the appropriate version of Zerto Virtual Manager (ZVM) for you to deploy in your local environment as well as a site address and port for licensing purposes</p>
+</li>
+<li><p>The IP address (from the IP range you provided to UKCloud) of the Zerto Cloud Connector (ZCC) deployed in your target VDC (for recovery or migration); you'll need this to complete the setup of the site-to-site VPN between your local environment and your target VDC</p>
+</li>
+<li><p>Access to the Zerto Self-Service Portal (ZSSP) in the UKCloud zone where your target VDC is located</p>
+</li>
 </ul>
 <h2 id="installing-and-configuring-zerto-virtual-manager-in-your-local-environment">Installing and configuring Zerto Virtual Manager in your local environment</h2>
 <p>As UKCloud's Disaster Recovery as a Service and  Migration to the Cloud services are powered by Zerto, you need to set up Zerto Virtual Manager (ZVM) in your local environment to enable your VMs to be replicated on the UKCloud platform. ZVM is responsible for all the Zerto configuration for a site and performs the replication tasks.</p>

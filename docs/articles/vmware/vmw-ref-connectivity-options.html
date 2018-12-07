@@ -154,11 +154,16 @@ present the Janet connection.</p>
 <h3 id="ip-address-allocations">IP address allocations</h3>
 <p>When you create a new vOrg, we'll provide you with a number of usable IP addresses per project, depending on the network you are connecting to:</p>
 <ul>
-<li>Internet - 5 x usable IPs</li>
-<li>N3 - 1 x usable IP</li>
-<li>PSN Assured - 1 x usable IP</li>
-<li>Janet - 1 x usable IP</li>
-<li>PSN Protected - 1 x usable IP</li>
+<li><p>Internet - 5 x usable IPs</p>
+</li>
+<li><p>N3 - 1 x usable IP</p>
+</li>
+<li><p>PSN Assured - 1 x usable IP</p>
+</li>
+<li><p>Janet - 1 x usable IP</p>
+</li>
+<li><p>PSN Protected - 1 x usable IP</p>
+</li>
 </ul>
 <p>You can request additional IP addresses as required via a Service Request. If you ask for a large number of IP addresses in a single request, we may ask you to provide further information to support your request.</p>
 <h2 id="cloud-fabric-and-gateway-architecture">Cloud Fabric and gateway architecture</h2>
@@ -188,8 +193,10 @@ present the Janet connection.</p>
 <p><img src="images/fig13_fabric_ipsec_vpn.png" alt="VDC communication using IPsec VPN in the Assured platform (Cloud Fabric)"></p>
 <p>In the Elevated platform each IPsec tunnel consumes either:</p>
 <ul>
-<li>An external (UKCloud) IP, if the tunnel is configured between VDCs</li>
-<li>An external (PSN Protected) IP, if the tunnel is configured between a VDC and an endpoint on the PSN Protected network</li>
+<li><p>An external (UKCloud) IP, if the tunnel is configured between VDCs</p>
+</li>
+<li><p>An external (PSN Protected) IP, if the tunnel is configured between a VDC and an endpoint on the PSN Protected network</p>
+</li>
 </ul>
 <p><img src="images/fig14_fabric_ipsec_vpn_elevated.png" alt="VDC communication using IPsec VPN in the Elevated platform (Cloud Fabric)"></p>
 <h3 id="bringing-your-own-firewall-1">Bringing your own firewall</h3>
@@ -209,15 +216,21 @@ present the Janet connection.</p>
 <p>When connecting to the different UKCloud networks it's important to ensure that you uphold network connection compliance. To this end, the way you access the different government community networks has not changed in Enterprise Cloud Compute.</p>
 <p>In the Assured platform, you'll always have an internet connected edge. Access to other networks is as follows:</p>
 <ul>
-<li>For N3 you'll need to go through the UKCloud aggregation process</li>
-<li>For PSN Assured you'll need to get accreditation for the service you wish to provide from the PSN Authority</li>
-<li>For Janet you'll need to engage with your Cloud Architect</li>
+<li><p>For N3 you'll need to go through the UKCloud aggregation process</p>
+</li>
+<li><p>For PSN Assured you'll need to get accreditation for the service you wish to provide from the PSN Authority</p>
+</li>
+<li><p>For Janet you'll need to engage with your Cloud Architect</p>
+</li>
 </ul>
 <p>In the Elevated platform:</p>
 <ul>
-<li>For PSN Protected you'll need to gain approval from the PSN Authority</li>
-<li>For RLI you'll need to get approval from the MOD</li>
-<li>For Cross Domain Security Zone services (Walled Garden, UKCloud Guard or SRA) you'll need to get the authorisation from your end-customer IA as well as the UKCloud SIRO</li>
+<li><p>For PSN Protected you'll need to gain approval from the PSN Authority</p>
+</li>
+<li><p>For RLI you'll need to get approval from the MOD</p>
+</li>
+<li><p>For Cross Domain Security Zone services (Walled Garden, UKCloud Guard or SRA) you'll need to get the authorisation from your end-customer IA as well as the UKCloud SIRO</p>
+</li>
 </ul>
 <p>The application processes haven't changed for any of these services, however it's important to be mindful about how you may have to design your architecture based on the network architecture you'll be deployed on. As an example, when connecting to the N3 network, you'll need to ensure that the N3 and internet networks aren't bridged. With the Cloud Fabric architecture and NFT architecture (shown in the two diagrams below respectively), you should ensure that VMs are not connected to both the internet and to N3
 at the same time.</p>

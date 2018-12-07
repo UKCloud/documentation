@@ -96,8 +96,10 @@
 <h2 id="creating-a-vapp-network">Creating a vApp network</h2>
 <p>There are two ways to create a vApp network within vCloud Director:</p>
 <ul>
-<li><a href="#creating-a-vapp-network-during-vapp-creation"><em>During vApp creation</em></a></li>
-<li><a href="#creating-a-vapp-network-after-vapp-creation"><em>After vApp creation</em></a></li>
+<li><p><a href="#creating-a-vapp-network-during-vapp-creation"><em>During vApp creation</em></a></p>
+</li>
+<li><p><a href="#creating-a-vapp-network-after-vapp-creation"><em>After vApp creation</em></a></p>
+</li>
 </ul>
 <h3 id="creating-a-vapp-network-during-vapp-creation">Creating a vApp network during vApp creation</h3>
 <ol>
@@ -222,9 +224,12 @@
 <p>Static routing at the vApp network level allows traffic to route between different vApp networks, across the VDC networks.</p>
 <p>The prerequisites for static routing are as follows:</p>
 <ul>
-<li>Static routing must be enabled for the VDC network you're connecting to (see <a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a>).</li>
-<li>The two vApp networks must be routed to the same VDC network.</li>
-<li>The vApp networks must be in vApps that have been started at least once.</li>
+<li><p>Static routing must be enabled for the VDC network you're connecting to (see <a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a>).</p>
+</li>
+<li><p>The two vApp networks must be routed to the same VDC network.</p>
+</li>
+<li><p>The vApp networks must be in vApps that have been started at least once.</p>
+</li>
 </ul>
 <p>To add a static route:</p>
 <ol>
@@ -234,8 +239,10 @@
 </li>
 <li><p>Enter the following details:</p>
 <ul>
-<li><strong>Network</strong> - The address of the first vApp network to which you're adding a static route</li>
-<li><strong>Next Hop IP</strong> - The external IP address of that vApp network's router</li>
+<li><p><strong>Network</strong> - The address of the first vApp network to which you're adding a static route</p>
+</li>
+<li><p><strong>Next Hop IP</strong> - The external IP address of that vApp network's router</p>
+</li>
 </ul>
 <p><img src="images/vmw-vcd-vapp-static-route.png" alt="Add Static Route dialog box"></p>
 </li>

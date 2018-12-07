@@ -105,18 +105,25 @@
 <p>Before you can begin creating instances, you must first build the required network components. In a freshly provisioned project, the only resource that will exist initially is a shared external network called <code>internet</code>.</p>
 <p>You need to create the following minimum set of resources:</p>
 <ul>
-<li>A router using the internet external network</li>
-<li>A network and associated subnet, specifying the network address using CIDR notation (for example, 192.168.1.0/24), and DHCP settings for DNS, any static routes, and so on.</li>
-<li>A router interface to connect the router to your new subnet</li>
+<li><p>A router using the internet external network</p>
+</li>
+<li><p>A network and associated subnet, specifying the network address using CIDR notation (for example, 192.168.1.0/24), and DHCP settings for DNS, any static routes, and so on.</p>
+</li>
+<li><p>A router interface to connect the router to your new subnet</p>
+</li>
 </ul>
 <p>When you have created these elements, you can view them in the <em>Network Topology</em> page in the Horizon dashboard.</p>
 <p><img src="images/ostack-horizon-network-topology.png" alt="Horizon Network Topology page"></p>
 <p>You can create your network infrastructure in one of the following ways:</p>
 <ul>
-<li>Using Horizon to manually create your infrastructure (see <a href="#using-horizon-to-manually-create-your-infrastructure">Using Horizon to manually create your infrastructure</a>)</li>
-<li>Using the OpenStack Heat orchestration tool to create stacks (see <a href="#using-the-openstack-heat-orchestration-tool-to-create-stacks">Using the OpenStack Heat orchestration tool to create stacks</a>)</li>
-<li>Using the OpenStack API and automation (see <a href="#using-the-openstack-api-and-automation">Using the OpenStack API and automation</a>)</li>
-<li>Using the OpenStack CLI clients (see <a href="ostack-ref-cli-clients.html">Command-line clients for UKCloud for OpenStack</a>)</li>
+<li><p>Using Horizon to manually create your infrastructure (see <a href="#using-horizon-to-manually-create-your-infrastructure">Using Horizon to manually create your infrastructure</a>)</p>
+</li>
+<li><p>Using the OpenStack Heat orchestration tool to create stacks (see <a href="#using-the-openstack-heat-orchestration-tool-to-create-stacks">Using the OpenStack Heat orchestration tool to create stacks</a>)</p>
+</li>
+<li><p>Using the OpenStack API and automation (see <a href="#using-the-openstack-api-and-automation">Using the OpenStack API and automation</a>)</p>
+</li>
+<li><p>Using the OpenStack CLI clients (see <a href="ostack-ref-cli-clients.html">Command-line clients for UKCloud for OpenStack</a>)</p>
+</li>
 </ul>
 <h3 id="using-horizon-to-manually-create-your-infrastructure">Using Horizon to manually create your infrastructure</h3>
 <p>The <em>Network Topology</em> page is a useful page to get started with. This page provides a resizable, moveable and interactive view of your OpenStack project, along with easily accessible buttons for manually creating routers and networks and for launching instances.</p>
@@ -174,11 +181,16 @@
 <p>A security group consists of one or more rules. Each rule is composed of
 five elements:</p>
 <ul>
-<li><strong>Role</strong> --- Custom or predefined protocol type (for example, TCP, UDP or ICMP)</li>
-<li><strong>Direction</strong> --- Ingress or Egress</li>
-<li><strong>Open Port or Port Range</strong> --- Open either a single port or a range of ports</li>
-<li><strong>Remote</strong> --- The source of the traffic to be allowed via this rule (source address for an inbound rule, or destination address for an outbound rule)</li>
-<li>The ether type (that is IPv4 or IPv6) --- Not currently available</li>
+<li><p><strong>Role</strong> --- Custom or predefined protocol type (for example, TCP, UDP or ICMP)</p>
+</li>
+<li><p><strong>Direction</strong> --- Ingress or Egress</p>
+</li>
+<li><p><strong>Open Port or Port Range</strong> --- Open either a single port or a range of ports</p>
+</li>
+<li><p><strong>Remote</strong> --- The source of the traffic to be allowed via this rule (source address for an inbound rule, or destination address for an outbound rule)</p>
+</li>
+<li><p>The ether type (that is IPv4 or IPv6) --- Not currently available</p>
+</li>
 </ul>
 <p><img src="images/ostack-horizon-add-rule.png" alt="Add Rule page"></p>
 <p>When adding a new rule to a security group, you can choose from a pre-populated list of common rules, for example, SSH, DNS, HTTP or SMTP, or you can specify your own custom rule.</p>
@@ -266,8 +278,10 @@ you can run the following command to retrieve a list of the flavors and their ma
 <h3 id="choosing-your-storage-type">Choosing your storage type</h3>
 <p>There are two storage options available for use with your instances:</p>
 <ul>
-<li>Ephemeral storage (default)</li>
-<li>Persistent volume storage</li>
+<li><p>Ephemeral storage (default)</p>
+</li>
+<li><p>Persistent volume storage</p>
+</li>
 </ul>
 <h4 id="ephemeral-storage">Ephemeral storage</h4>
 <p>When you create an instance, the default behaviour is to clone your chosen disk image onto the physical disk attached to the host that will be running the instance. This is not dedicated locally attached storage to your instance, but rather a RAID array of fast SSD disks that is shared by all the instances running on the host hypervisor.</p>
@@ -280,9 +294,12 @@ you can run the following command to retrieve a list of the flavors and their ma
 <ol>
 <li><p>Click or select <strong>Launch Instance</strong> on one of the following pages:</p>
 <ul>
-<li><em>Images</em> page (under the <strong>Compute</strong> menu)</li>
-<li><em>Instances</em> page (under the <strong>Compute</strong> menu)</li>
-<li><em>Network Topology</em> page (under the <strong>Networks</strong> menu)</li>
+<li><p><em>Images</em> page (under the <strong>Compute</strong> menu)</p>
+</li>
+<li><p><em>Instances</em> page (under the <strong>Compute</strong> menu)</p>
+</li>
+<li><p><em>Network Topology</em> page (under the <strong>Networks</strong> menu)</p>
+</li>
 </ul>
 </li>
 <li><p>On the <em>Details</em> tab of the <em>Launch Instance</em> dialog box, enter an <strong>Instance Name</strong> and select a <strong>Flavor</strong>.</p>
@@ -291,8 +308,10 @@ you can run the following command to retrieve a list of the flavors and their ma
 </li>
 <li><p>From the <strong>Instance Boot Source</strong> list, select:</p>
 <ul>
-<li><strong>Boot from image</strong> to create an instance that boots from the local ephemeral storage.</li>
-<li><strong>Boot from image (creates a new volume)</strong> to create an instance that boots from a volume</li>
+<li><p><strong>Boot from image</strong> to create an instance that boots from the local ephemeral storage.</p>
+</li>
+<li><p><strong>Boot from image (creates a new volume)</strong> to create an instance that boots from a volume</p>
+</li>
 </ul>
 </li>
 <li><p>From the <strong>Image Name</strong> list, select your preferred image.</p>
@@ -354,14 +373,18 @@ you can run the following command to retrieve a list of the flavors and their ma
 </li>
 <li><p>From the <strong>Volume Source</strong> list, select:</p>
 <ul>
-<li><strong>No source, empty volume</strong> to create a totally empty volume for customer to populate with their data (this is the default option)</li>
-<li><strong>Image</strong> to enable customer to create a prepopulated volume from a previously created image</li>
+<li><p><strong>No source, empty volume</strong> to create a totally empty volume for customer to populate with their data (this is the default option)</p>
+</li>
+<li><p><strong>Image</strong> to enable customer to create a prepopulated volume from a previously created image</p>
+</li>
 </ul>
 </li>
 <li><p>From the Volume Type list, select:</p>
 <ul>
-<li><strong>Tier 1</strong> for our most performant block storage for workloads requiring consistently higher disk throughput</li>
-<li><strong>Tier 2</strong> for block storage with typical performance characteristics for use by production applications or storage (this is the default option)</li>
+<li><p><strong>Tier 1</strong> for our most performant block storage for workloads requiring consistently higher disk throughput</p>
+</li>
+<li><p><strong>Tier 2</strong> for block storage with typical performance characteristics for use by production applications or storage (this is the default option)</p>
+</li>
 </ul>
 </li>
 <li><p>From the <strong>Size</strong> list, select the size of your volume in GiB.</p>
@@ -434,8 +457,10 @@ you can run the following command to retrieve a list of the flavors and their ma
 </code></pre>
 <p>Where:</p>
 <ul>
-<li><em><code>volume</code></em> is the name or ID of the volume that you want to retype</li>
-<li><em><code>volume-type</code></em> is the new volume type</li>
+<li><p><em><code>volume</code></em> is the name or ID of the volume that you want to retype</p>
+</li>
+<li><p><em><code>volume-type</code></em> is the new volume type</p>
+</li>
 </ul>
 <h2 id="working-with-the-api-and-automation">Working with the API and automation</h2>
 <h3 id="using-the-openstack-heat-orchestration-tool-to-create-stacks">Using the OpenStack Heat orchestration tool to create stacks</h3>
@@ -495,11 +520,16 @@ can examine the contents of the RC file to find the settings that you may need t
 <p>In this Getting Started Guide, you've learned how to use the OpenStack Horizon UI to set up UKCloud for OpenStack and create new instances. You've also learned about the other tools available including the OpenStack API and command-line client.</p>
 <p>You can find additional information in the following places:</p>
 <ul>
-<li><strong>OpenStack API</strong> --- For more information about using the API, see the OpenStack documentation at <a href="http://developer.openstack.org/api-guide/quick-start/">http://developer.openstack.org/api-guide/quick-start/</a></li>
-<li><strong>OpenStack Client</strong> --- For more information about using the OpenStack Client, see the OpenStack documentation at <a href="http://docs.openstack.org/user-guide/cli.html">http://docs.openstack.org/user-guide/cli.html</a></li>
-<li><strong>HEAT templates</strong> --- You can find more information about the Heat orchestration tool and the resources you can use in the YAML format templates in the OpenStack documentation at <a href="https://wiki.openstack.org/wiki/Heat">https://wiki.openstack.org/wiki/Heat</a> and <a href="http://docs.openstack.org/developer/heat/template_guide/index.html">http://docs.openstack.org/developer/heat/template_guide/index.html</a></li>
-<li><strong>Terraform</strong> --- For information about using Terraform and the OpenStack provider, see the Terraform documentation at <a href="https://www.terraform.io/intro/">https://www.terraform.io/intro/</a> and <a href="https://www.terraform.io/docs/providers/openstack/index.html">https://www.terraform.io/docs/providers/openstack/index.html</a></li>
-<li><strong>Ansible</strong> --- For information on Ansible's support for working with OpenStack resources, see the Ansible documentation at <a href="http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack">http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack</a></li>
+<li><p><strong>OpenStack API</strong> --- For more information about using the API, see the OpenStack documentation at <a href="http://developer.openstack.org/api-guide/quick-start/">http://developer.openstack.org/api-guide/quick-start/</a></p>
+</li>
+<li><p><strong>OpenStack Client</strong> --- For more information about using the OpenStack Client, see the OpenStack documentation at <a href="http://docs.openstack.org/user-guide/cli.html">http://docs.openstack.org/user-guide/cli.html</a></p>
+</li>
+<li><p><strong>HEAT templates</strong> --- You can find more information about the Heat orchestration tool and the resources you can use in the YAML format templates in the OpenStack documentation at <a href="https://wiki.openstack.org/wiki/Heat">https://wiki.openstack.org/wiki/Heat</a> and <a href="http://docs.openstack.org/developer/heat/template_guide/index.html">http://docs.openstack.org/developer/heat/template_guide/index.html</a></p>
+</li>
+<li><p><strong>Terraform</strong> --- For information about using Terraform and the OpenStack provider, see the Terraform documentation at <a href="https://www.terraform.io/intro/">https://www.terraform.io/intro/</a> and <a href="https://www.terraform.io/docs/providers/openstack/index.html">https://www.terraform.io/docs/providers/openstack/index.html</a></p>
+</li>
+<li><p><strong>Ansible</strong> --- For information on Ansible's support for working with OpenStack resources, see the Ansible documentation at <a href="http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack">http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack</a></p>
+</li>
 </ul>
 <h2 id="glossary">Glossary</h2>
 <p>This section provides a glossary of terms specific to UKCloud for OpenStack.</p>

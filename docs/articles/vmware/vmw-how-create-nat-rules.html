@@ -88,23 +88,31 @@
 <p>Network Address Translation (NAT) allows the source or destination IP address to be changed to enable traffic to transition through a router or gateway.</p>
 <p>You can use two types of NAT within your edge gateway:</p>
 <ul>
-<li>Destination NAT (DNAT) - changes the destination IP of the packet</li>
-<li>Source NAT (SNAT) - changes the source IP of the packet</li>
+<li><p>Destination NAT (DNAT) - changes the destination IP of the packet</p>
+</li>
+<li><p>Source NAT (SNAT) - changes the source IP of the packet</p>
+</li>
 </ul>
 <p>For a virtual machine (VM) to access an external network resource from its virtual data centre (VDC), the IP address of its network needs to NAT to one of the following:</p>
 <ul>
-<li>The public internet IP addresses provided by UKCloud</li>
-<li>The private transit networks provided by UKCloud for PSN and HSCN connectivity</li>
+<li><p>The public internet IP addresses provided by UKCloud</p>
+</li>
+<li><p>The private transit networks provided by UKCloud for PSN and HSCN connectivity</p>
+</li>
 </ul>
 <p>It's worth noting that for both DNAT and SNAT:</p>
 <ul>
-<li>The NAT rule will be applied to the edge gateway, rather than to the internal VDC network</li>
-<li>The firewall needs to be open for NAT rules</li>
+<li><p>The NAT rule will be applied to the edge gateway, rather than to the internal VDC network</p>
+</li>
+<li><p>The firewall needs to be open for NAT rules</p>
+</li>
 </ul>
 <p>The steps for creating NAT rules vary depending on what type of edge gateway you're working with:</p>
 <ul>
-<li><a href="#creating-nat-rules-for-an-advanced-gateway">Creating NAT rules for an advanced gateway</a></li>
-<li><a href="#creating-nat-rules-for-a-standard-edge">Creating nat rules for a standard edge</a></li>
+<li><p><a href="#creating-nat-rules-for-an-advanced-gateway">Creating NAT rules for an advanced gateway</a></p>
+</li>
+<li><p><a href="#creating-nat-rules-for-a-standard-edge">Creating nat rules for a standard edge</a></p>
+</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
@@ -239,11 +247,16 @@ You should have multiple external IP addresses to use. For how to find them, see
 <h2 id="next-steps">Next steps</h2>
 <p>In this article you've learned how to create DNAT and SNAT rules. For other edge gateway configuration tasks, see:</p>
 <ul>
-<li><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></li>
-<li><a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></li>
-<li><a href="vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a></li>
-<li><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></li>
-<li><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></li>
+<li><p><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></p>
+</li>
+<li><p><a href="vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a></p>
+</li>
+<li><p><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></p>
+</li>
 </ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>

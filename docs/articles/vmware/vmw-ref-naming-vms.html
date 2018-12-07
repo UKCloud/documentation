@@ -86,8 +86,10 @@
 
 <p>We're currently in the process of rolling out updates to the ESXi hosts on the UKCloud platform to version 6 to ensure platform stability and enable future feature sets. This new version implements stricter restrictions on the characters permitted for virtual machines (VMs), so you should be aware of the following:</p>
 <ul>
-<li>When creating a new VM, make sure that the name includes only uppercase and lowercase alphanumeric characters and the hyphen (-) character. Using any other special characters will cause deployment to fail.</li>
-<li>You must update any existing VMs that have names that include other special characters to make sure that they comply with the new restrictions. VMs with special characters in their names may go offline if they're moved to an upgraded host.</li>
+<li><p>When creating a new VM, make sure that the name includes only uppercase and lowercase alphanumeric characters and the hyphen (-) character. Using any other special characters will cause deployment to fail.</p>
+</li>
+<li><p>You must update any existing VMs that have names that include other special characters to make sure that they comply with the new restrictions. VMs with special characters in their names may go offline if they're moved to an upgraded host.</p>
+</li>
 </ul>
 <p>For more information, see the following VMware Knowledge Base article: <a href="https://kb.vmware.com/s/article/2046088">https://kb.vmware.com/s/article/2046088</a>, although note that the article does not provide an exhaustive list of restricted characters.</p>
 <h2 id="feedback">Feedback</h2>

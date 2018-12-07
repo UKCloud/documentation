@@ -87,8 +87,10 @@
 <p>This document explains how to deploy SQL Always On Cluster using ARM Template to Azure Stack using PowerShell.</p>
 <p>It will guide you through the process of:</p>
 <ul>
-<li>obtaining ARM Template</li>
-<li>deploying <a href="https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master/sql-2016-ha">ARM Template for SQL Always On</a></li>
+<li><p>obtaining ARM Template</p>
+</li>
+<li><p>deploying <a href="https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master/sql-2016-ha">ARM Template for SQL Always On</a></p>
+</li>
 </ul>
 <h2 id="what-is-an-arm-template">What is an ARM Template?</h2>
 <p>You can use Azure Resource Manager templates to deploy and provision all the resources for your application in a single, coordinated operation. You can also redeploy templates to make changes to the resources in a resource group.
@@ -140,22 +142,34 @@ git checkout master
 <h2 id="what-does-it-deploy">What does it deploy?</h2>
 <p>This template deploys two SQL Server 2016 SP1 Enterprise / Standard / Developer instances in the Always On Availability Group using the PowerShell DSC Extension. It creates the following resources:</p>
 <ul>
-<li>A network security group</li>
-<li>A Virtual Network</li>
-<li>Four Storage Accounts (One for AD, One for SQL, One for File Share witness and One for VM diagnostic)</li>
-<li>Four public IP address (One for AD, Two for each SQL VM and One for Public LB bound to SQL Always On Listener)</li>
-<li>One external load balancer for SQL VMs with Public IP bound to SQL always On Listener</li>
-<li>One VM (WS2016) configured as Domain Controller for a new forest with a single domain</li>
-<li>Two VM (WS2016) configured as SQL Server 2016 SP1 Enterprise / Standard / Developer and clustered.</li>
-<li>One VM (WS2016) configured as File Share Witness for the cluster.</li>
+<li><p>A network security group</p>
+</li>
+<li><p>A Virtual Network</p>
+</li>
+<li><p>Four Storage Accounts (One for AD, One for SQL, One for File Share witness and One for VM diagnostic)</p>
+</li>
+<li><p>Four public IP address (One for AD, Two for each SQL VM and One for Public LB bound to SQL Always On Listener)</p>
+</li>
+<li><p>One external load balancer for SQL VMs with Public IP bound to SQL always On Listener</p>
+</li>
+<li><p>One VM (WS2016) configured as Domain Controller for a new forest with a single domain</p>
+</li>
+<li><p>Two VM (WS2016) configured as SQL Server 2016 SP1 Enterprise / Standard / Developer and clustered.</p>
+</li>
+<li><p>One VM (WS2016) configured as File Share Witness for the cluster.</p>
+</li>
 </ul>
 <h3 id="notes">Notes</h3>
 <p>The images used to create this deployment are:</p>
 <ul>
-<li>AD - Windows Server 2016 Image</li>
-<li>SQL Server - SQL Server 2016 SP1 on Windows Server 2016 Image</li>
-<li>SQL IAAS Extension 1.2.18</li>
-<li>Latest DSC Extension (2.26.0 or higher)</li>
+<li><p>AD - Windows Server 2016 Image</p>
+</li>
+<li><p>SQL Server - SQL Server 2016 SP1 on Windows Server 2016 Image</p>
+</li>
+<li><p>SQL IAAS Extension 1.2.18</p>
+</li>
+<li><p>Latest DSC Extension (2.26.0 or higher)</p>
+</li>
 </ul>
 <div class="WARNING">
 <h5>Warning</h5>
@@ -185,9 +199,12 @@ git checkout master
 </div>
 <h3 id="configuration">Configuration</h3>
 <ul>
-<li>Each SQL VMs will have two 128GB data disks.</li>
-<li>The template configures the SQL instances with contained database authentication set to true.</li>
-<li>The DNS suffix for public IP addresses by default will be <code>azurestack.external</code> unless you change it to <code>azure.ukcloud.com</code></li>
+<li><p>Each SQL VMs will have two 128GB data disks.</p>
+</li>
+<li><p>The template configures the SQL instances with contained database authentication set to true.</p>
+</li>
+<li><p>The DNS suffix for public IP addresses by default will be <code>azurestack.external</code> unless you change it to <code>azure.ukcloud.com</code></p>
+</li>
 </ul>
 <h2 id="overview-of-the-arm-template-deployment-process-for-azure-stack-using-service-principal-name-spn-authentication">Overview of the ARM Template deployment process for Azure Stack using Service Principal Name (SPN) authentication</h2>
 <ol>
@@ -527,12 +544,12 @@ threw one or more non-terminating errors while running the Set-TargetResource fu
 </ul>
 <h2 id="troubleshooting-dsc-extensions">Troubleshooting DSC Extensions</h2>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-overview">PowerShell DSC Extension</a>
+<li><p><a href="https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-overview">PowerShell DSC Extension</a></p>
 <ul>
 <li><code>C:\WindowsAzure\Logs\Plugins\Microsoft.Powershell.DSC\&lt;version number&gt;</code></li>
 </ul>
 </li>
-<li><a href="https://powershell.org/2017/10/10/using-azure-desired-state-configuration-part-iv/">DSC Configuration</a> and <a href="https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmdscextensionstatus?view=azurermps-6.5.0">cmdlets</a>
+<li><p><a href="https://powershell.org/2017/10/10/using-azure-desired-state-configuration-part-iv/">DSC Configuration</a> and <a href="https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmdscextensionstatus?view=azurermps-6.5.0">cmdlets</a></p>
 <ul>
 <li><p>To view Status of the DSC deployment run:</p>
 <pre><code class="lang-powershell">Get-AzureRmVMDscExtension -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot;
@@ -541,7 +558,7 @@ Get-AzureRmVMDscExtensionStatus -ResourceGroupName &quot;&lt;ResourceGroupName&g
 </li>
 </ul>
 </li>
-<li><a href="http://www.codewrecks.com/blog/index.php/2014/06/15/deploying-web-site-with-powershell-dsc-part-3/">Event Viewer Logs</a>
+<li><p><a href="http://www.codewrecks.com/blog/index.php/2014/06/15/deploying-web-site-with-powershell-dsc-part-3/">Event Viewer Logs</a></p>
 <ul>
 <li>Errors are located in: <code>Application And Service Logs / Microsoft / Windows / Desired State Configuration</code></li>
 </ul>
