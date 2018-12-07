@@ -1,6 +1,6 @@
 ---
-title: How to delete single sign on users | UKCloud Ltd
-description: Describes the process for deleting single sign on (SSO) users
+title: How to remove access from Single Sign-On users | UKCloud Ltd
+description: Describes the process for removing access from Single Sign-On (SSO) users
 services: other
 author: Sue Highmoor
 
@@ -9,16 +9,16 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Delete single sign on users
+toc_title: Delete Single Sign-On users
 toc_fullpath: How To/other-how-delete-sso-user.md
 toc_mdlink: other-how-delete-sso-user.md
 ---
 
-# How to delete single sign on users
+# How to remove access from Single Sign-On (SSO) users
 
 ## Overview
 
-When you use the UKCloud Portal to remove a user from an account that includes single sign on (SSO) enabled services, it's important to note that this does not remove the corresponding SSO user. To remove the SSO user, you must use the Identity & Access Management (IDAM) API.
+When you use the UKCloud Portal to remove a user from an account that includes SSO-enabled services, it's important to note that this does not remove the corresponding SSO user. To remove the SSO user's access, you must use the Identity & Access Management (IDAM) API.
 
 SSO-enabled services are:
 
@@ -28,7 +28,7 @@ SSO-enabled services are:
 
 For more information about the IDAM API, see [*Understanding UKCloud's Identity & Access Management API*](other-ref-idam.md).
 
-## Deleting a single sign on user
+## Deleting an SSO user
 
 The process for using the IDAM API to delete an SSO user is as follows:
 
@@ -64,74 +64,18 @@ The process for using the IDAM API to delete an SSO user is as follows:
     curl -s -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users | jq -r '.[] | .id + " " + .username'
     ```
 
-    This returns a list of SSO users:
+    The `jq` filter on this request returns a list of SSO users and their IDs:
 
-    ``` json
-    [
-      {
-        "id": "0744f665-2d7a-483c-adb3-72b0effe2356",
-        "createdTimestamp": 1544026027038,
-        "username": "acc1admin",
-        "enabled": true,
-        "totp": false,
-        "emailVerified": false,
-        "disableableCredentialTypes": [
-          "password"
-        ],
-        "requiredActions": [],
-        "notBefore": 0,
-        "access": {
-          "manageGroupMembership": true,
-          "view": true,
-          "mapRoles": true,
-          "impersonate": false,
-          "manage": true
-        }
-      },
-      {
-        "id": "1d9e52e6-f833-47b9-9cfa-be727510c910",
-        "createdTimestamp": 1544026027145,
-        "username": "acc1usr1",
-        "enabled": true,
-        "totp": false,
-        "emailVerified": false,
-        "disableableCredentialTypes": [
-          "password"
-        ],
-        "requiredActions": [],
-        "notBefore": 0,
-        "access": {
-          "manageGroupMembership": true,
-          "view": true,
-          "mapRoles": true,
-          "impersonate": false,
-          "manage": true
-        }
-      },
-      {
-        "id": "a089698b-8f32-4a32-ab71-790b015aa662",
-        "createdTimestamp": 1544026027295,
-        "username": "acc1usr2",
-        "enabled": true,
-        "totp": false,
-        "emailVerified": false,
-        "disableableCredentialTypes": [
-          "password"
-        ],
-        "requiredActions": [],
-        "notBefore": 0,
-        "access": {
-          "manageGroupMembership": true,
-          "view": true,
-          "mapRoles": true,
-          "impersonate": false,
-          "manage": true
-        }
-      },
-    ]
+    ``` 
+    0744f665-2d7a-483c-adb3-72b0effe2356 acc1admin
+    1d9e52e6-f833-47b9-9cfa-be727510c910 acc1usr1
+    a089698b-8f32-4a32-ab71-790b015aa662 acc1usr2
     ```
 
 3. Find the user that you want to delete and make a note of that user's ID. For example, to delete the user `acc1usr2`, you would need the ID `a089698b-8f32-4a32-ab71-790b015aa662`.
+
+    > [!TIP]
+    > If you will have to remove the user from multiple groups, you may find it helpful to store this ID in a variable.
 
 4. List all the groups that you have permission to manage:
 
@@ -139,30 +83,11 @@ The process for using the IDAM API to delete an SSO user is as follows:
     curl -s -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/groups | jq -r '.[].subGroups[] | .id + " " + .name'
     ```
 
-    This returns a list of groups:
-
-    ``` json
-    [
-      {
-        "id": "6b106d3b-a671-43c8-891f-d2cabf37e5d9",
-        "name": "idam:Account_101",
-        "path": "/idam:Account_101",
-        "subGroups": [
-          {
-            "id": "008d3512-54f9-439e-800a-7b0b5ef76438",
-            "name": "idam:Account_101#User",
-            "path": "/idam:Account_101/idam:Account_101#User",
-            "subGroups": []
-          },
-          {
-            "id": "a4ebc856-222f-4686-a4bf-239c21ffa010",
-            "name": "idam:Account_101#Admin",
-            "path": "/idam:Account_101/idam:Account_101#Admin",
-            "subGroups": []
-          }
-        ]
-      }
-    ]
+    The `jq` filter on this request returns a list of groups:
+    
+    ```
+    008d3512-54f9-439e-800a-7b0b5ef76438 idam:Account_101#User
+    a4ebc856-222f-4686-a4bf-239c21ffa010 idam:Account_101#Admin
     ```
 
 5. Make a note of the IDs of all the groups. The example above lists two groups:
@@ -183,6 +108,14 @@ The process for using the IDAM API to delete an SSO user is as follows:
     curl -X DELETE -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users/a089698b-8f32-4a32-ab71-790b015aa662/groups/008d3512-54f9-439e-800a-7b0b5ef76438
 
     curl -X DELETE -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users/a089698b-8f32-4a32-ab71-790b015aa662/groups/a4ebc856-222f-4686-a4bf-239c21ffa010
+    ```
+
+    If you stored the user ID in a variable, you can use that in the request. For example, if the user ID `a089698b-8f32-4a32-ab71-790b015aa662` is stored in a variable `acc1usr2`, your calls would look like the following:
+    
+    ``` bash
+    curl -X DELETE -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users/$acc1usr2/groups/008d3512-54f9-439e-800a-7b0b5ef76438
+    
+    curl -X DELETE -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users/$acc1usr2/groups/a4ebc856-222f-4686-a4bf-239c21ffa010
     ```
 
 ## Feedback
