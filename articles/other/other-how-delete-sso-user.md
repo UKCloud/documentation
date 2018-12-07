@@ -9,7 +9,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Delete Single Sign-On users
+toc_title: Remove access from Single Sign-On users
 toc_fullpath: How To/other-how-delete-sso-user.md
 toc_mdlink: other-how-delete-sso-user.md
 ---
