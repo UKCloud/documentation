@@ -151,11 +151,11 @@ Although we don't offer an SLA relating the performance of the Zerto software, w
 -------|--------|-------
 **Service level agreement** | **STANDARD** | **REPLICATED**
 &nbsp; | 99.95% | 99.99%
-**Portal level agreement** <td colspan=2> 99.90% |
-**Availability calculation** <td colspan=2> Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any planned and emergency maintenance. |
-**Measurement of SLA** <td colspan=2> Unavailability applies to existing data where the data on the backup target becomes inaccessible due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the backup infrastructure, storage, power and internal networking such as physical firewalls and routers. |
+**Portal level agreement** <td colspan=2> 99.90%
+**Availability calculation** <td colspan=2> Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any planned and emergency maintenance.
+**Measurement of SLA** <td colspan=2> Unavailability applies to existing data where the data on the backup target becomes inaccessible due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the backup infrastructure, storage, power and internal networking such as physical firewalls and routers.
 **Key exclusions** <td colspan=2> The following are examples of what is not covered by the SLA:<br>- The fault is within the customer's control (backup software or application and user networks)<br>- Incompatible applications or backup software (eg a change of
-backup software leading to incompatibility, or incompatible software versions)<br>- Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or N3/HSCN) and components co-located at UKCloud |
+backup software leading to incompatibility, or incompatible software versions)<br>- Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or N3/HSCN) and components co-located at UKCloud
 **Service Credit+** | **STANDARD** | **REPLICATED**
 &nbsp; | 10% of monthly Backup Storage spend | 15% of monthly Backup Storage spend
 &nbsp; <td colspan=2> 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal.
