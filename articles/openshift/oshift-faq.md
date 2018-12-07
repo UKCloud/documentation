@@ -34,6 +34,7 @@ UKCloud for OpenShift is built as a single-tenant platform on-top of UKCloud's s
 This service comprises of two main chargeable elements:
 
   - **Starter Pack -** provides the foundation OpenShift services to support the orchestration and management of the container runtime environments. Each customer environment requires only a single Starter Pack
+
   - **Expansion Pack -** Provides the footprint to host customer’s containerised applications and services. Customers can choose to mix and match their Runtime Packs, and Runtime Packs can be called off individually, however UKCloud strongly recommends the initial deployment of two or more Runtime Packs for production environments to provide resilience to your workloads in the event of the failure of a single Runtime Pack.
 
 ### Does UKCloud offer a free trial?
@@ -91,12 +92,19 @@ Although UKCloud for OpenShift is designed to deploy and manage stateless apps (
 The service supports many popular development frameworks and languages such as:
 
 - Java
+
 - Spring
+
 - Ruby
+
 - Sinatra
+
 - Node.js
+
 - Python
+
 - PHP
+
 - GoLang
 
 ### Does UKCloud for OpenShift support any data services?
@@ -104,8 +112,11 @@ The service supports many popular development frameworks and languages such as:
 Our OpenShift service provides popular open source data service packages deployable within the platform, all supported by the global open source community, including:
 
 - MySQL, an open source relational database
+
 - Postgres, a relational database based on PostgreSQL
+
 - MongoDB, a scalable, open, document-based database
+
 - RabbitMQ, for reliable, scalable and portable messaging for applications
 
 Note that these services are offered 'as is' with no management, support or availability commitment from UKCloud. We strongly suggest customers ensure they maintain a master copy or backup copy of any persistent or dynamic data hosted on this service (such as MySQL DB) by using, for example, a data service provided by a managed service provider on our UKCloud for VMware platform.

@@ -21,7 +21,9 @@ toc_mdlink: ptl-how-view-login-info.md
 The UKCloud Portal provides a report of who has logged into your account over the last 30 days. The report currently records the following activity against the account:
 
 - User name
+
 - Date and time
+
 - Source IP address
 
 > [!NOTE]

@@ -23,21 +23,25 @@ Network Address Translation (NAT) allows the source or destination IP address to
 You can use two types of NAT within your edge gateway:
 
 - Destination NAT (DNAT) - changes the destination IP of the packet
+
 - Source NAT (SNAT) - changes the source IP of the packet
 
 For a virtual machine (VM) to access an external network resource from its virtual data centre (VDC), the IP address of its network needs to NAT to one of the following:
 
 - The public internet IP addresses provided by UKCloud
+
 - The private transit networks provided by UKCloud for PSN and HSCN connectivity
 
 It's worth noting that for both DNAT and SNAT:
 
 - The NAT rule will be applied to the edge gateway, rather than to the internal VDC network
+
 - The firewall needs to be open for NAT rules
 
 The steps for creating NAT rules vary depending on what type of edge gateway you're working with:
 
 - [Creating NAT rules for an advanced gateway](#creating-nat-rules-for-an-advanced-gateway)
+
 - [Creating nat rules for a standard edge](#creating-nat-rules-for-a-standard-edge)
 
 > [!NOTE]
@@ -198,9 +202,13 @@ To create an SNAT rule on your edge gateway:
 In this article you've learned how to create DNAT and SNAT rules. For other edge gateway configuration tasks, see:
 
 - [*How to create firewall rules*](vmw-how-create-firewall-rules.md)
+
 - [*How to create a DHCP pool*](vmw-how-create-dhcp-pool.md)
+
 - [*How to configure IPsec VPN*](vmw-how-configure-ipsec-vpn.md)
+
 - [*How to configure a load balancer*](vmw-how-configure-load-balancer.md)
+
 - [*How to create a static route*](vmw-how-create-static-route.md)
 
 ## Feedback

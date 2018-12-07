@@ -19,6 +19,7 @@ toc_mdlink: ptl-ref-reset-2fa-sso.md
 With the introduction of our new UKCloud Single Sign On service, we require all Portal users currently using Two-Factor Authentication (2FA) to reset their 2FA token. Single Sign On is an exciting new service that enables us to provide:
 
 - Unified logon across our major multi-cloud offerings, including VMware, OpenStack and OpenShift
+
 - Roll out of 2FA for technology stacks where this has not previously been an option
 
 If your Portal administrator has enabled 2FA on your Portal account and you scanned the QR code before August 1 2018, then next time you log in after October 1 2018 you'll see the following information:

@@ -23,7 +23,9 @@ Although OpenStack's Neutron project does support load-balancing natively, our t
 Benefits of this solution include:
 
 - Highly Available implementation of an OpenStack load-balancing solution
+
 - Advanced load-balancing services provided by HAProxy (for example, SSL support, session stickiness)
+
 - Fully scripted repeatable deployment (HEAT template available on the UKCloud Knowledge Centre alongside this article)
 
 ## Caveats
@@ -36,8 +38,11 @@ This solution utilises HAProxy and keepalived, both of which are complicated sof
 This guide assumes that you have the following already configured in your environment:
 
 - A router connected to the internet external network.
+
 - A jump server with required security groups to allow you to SSH to that server and to SSH inside your environment.
+
 - At least two servers inside your environment running a web server to test the HAProxy configuration against.
+
 - The Ubuntu 16.04 amd64 image (id: `b8617599-495f-4d00-abf9-57b431caeb4c`) has been used throughout this document.
 
 ## Implementation steps
@@ -260,12 +265,15 @@ This guide assumes that you have the following already configured in your enviro
     - Edit `/etc/keepalived/keepalived.conf` and make the following changes
 
         - Change state to BACKUP
+
         - Change priority to 90
+
         - Save and exit the file
 
 12. Enable non-local IP binding on the second server.
 
     - Add `net.ipv4.ip_forward = 1` to `/etc/sysctl.conf`
+
     - `sudo sysctl -p`
 
 13. Start keepalived on first load balancer.

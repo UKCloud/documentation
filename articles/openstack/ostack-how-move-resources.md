@@ -106,6 +106,7 @@ To achieve this across different regions, the use of a VPN may be required. Deta
     a. To show a list of all volumes in your project:
 
     - Source the originating region's `cred rc` file
+
     - Enter the following command:
 
           openstack volume list

@@ -37,6 +37,7 @@ The newer virtual hardware version is already available in regions 5 and 6. Regi
 Prior to upgrading the Virtual Hardware version the following should be noted:
 
 - You cannot downgrade the hardware version of the virtual machines in a vApp
+
 - The vApp/VMs must be stopped and its virtual machines must have the latest version of VMware Tools installed.
 
 ## Q. How do I manually upgrade the Virtual Hardware version of my VM?

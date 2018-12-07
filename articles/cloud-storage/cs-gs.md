@@ -33,11 +33,17 @@ This guide is intended for users who want to learn more about UKCloud's Cloud St
 Cloud Storage:
 
 - Is a secure and highly adaptable storage platform designed to address a wide variety of use cases
+
 - Is based on object storage technology that is natively optimised for cloud storage in terms of scale, resilience and accessibility
+
 - Removes the complexity of capacity management by utilising a pay‑as‑you‑go model, so you pay for what you use, when you use it, scaling indefinitely and on demand
+
 - Natively enables application deduplication and redundancy to ensure the highest level of data availability, while reducing the cost and management of on-premises storage solutions
+
 - Provides easy access to storage anywhere, any time, to any device, using HTTP(S) to simplify the integration of object storage systems into cloud‑based solutions by removing the need to rely on the availability of web, file or FTP servers
+
 - Offloads objects (files, media, images) from compute resources, reducing the load on server resources
+
 - Automatically replicates and distributes objects to give high levels of data durability and availability, eliminating the need for cloud backup and recovery
 
 ECS provides two APIs that you can use to manage your cloud storage: the S3‑compatible API and the EMC ECS Atmos API.
@@ -48,6 +54,7 @@ ECS provides two APIs that you can use to manage your cloud storage: the S3‑co
 The key differences between the two APIs are:
 
 - The ECS S3-compatible API enables you to easily migrate applications between Atmos, S3 and other S3‑compatible storage; but not all functionality available in S3 is available on ECS as shown in the *S3 Supported Features* chapter of the [*Elastic Cloud Storage (ECS) Data Access Guide*](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf)).
+
 - The ECS Atmos API provides backward compatibility with the EMC Atmos platform. It offers access to the majority of the features of the platform with certain exceptions as listed in the *Atmos Supported Features* chapter of the [*Elastic Cloud Storage (ECS) Data Access Guide*](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf).
 
 ### Cloud Storage use cases
@@ -59,14 +66,19 @@ We anticipate that most web applications can make good use of cloud storage for 
 For example, with an internet-facing application that enables users to download forms and guides in PDF, these items are often stored in primary storage attached to the web servers, which creates several challenges:
 
 - Whenever a PDF is updated, the updated copy must be replicated to all web servers
+
 - When an item is downloaded, the bandwidth usage of the web server in question increases
+
 - Multiple simultaneous downloads could overload the web servers or other components of the network infrastructure
+
 - Each object is stored multiple times in primary storage, increasing the overall cost of storage
 
 On the other hand, storing this content in cloud storage overcomes these challenges because:
 
 - Only one copy of each item is stored, so updates only need to be made in one place
+
 - End users connect directly to cloud storage to download PDFs, bypassing the web servers and associated network infrastructure
+
 - Objects are stored only once, and at a much lower price per GB, which substantially reduces the overall cost of storage
 
 The same principles apply to other static content, such as images and (especially) videos. The more workload you can offload onto an external system such as cloud storage, the leaner your application infrastructure
@@ -163,6 +175,7 @@ To use S3Curl:
     Where:
 
     - `user_id` is your User ID (you can find this in the Storage section of the UKCloud Portal)
+
     - `secret_key` is your secret key (If you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)
 
 4. Change the permissions, otherwise the Perl script will refuse to run.
@@ -268,9 +281,13 @@ To use S3cmd:
 3. When prompted, provide the following information:
 
     - Access Key --- your User ID (you can find this in the Storage section of the UKCloud Portal)
+
     - Secret Key --- your secret key (If you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)
+
     - Encryption password --- create a secure password
+
     - Path to GPG program --- as appropriate for your system
+
     - Use HTTPS protocol --- Yes
 
 4. You'll be prompted to test the connection. After the test, even if it fails, save the configuration, which will be written to `~/.s3cfg`.
@@ -315,7 +332,9 @@ To use S3Express:
     Where:
 
     - `user_id` is your User ID (you can find this in the Storage section of the UKCloud Portal)
+
     - `secret_key` is your secret key (if you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)
+
     - `api_endpoint` is the appropriate endpoint, as shown in [Before you begin](#before-you-begin), for example:
 
         `setopt --endpoint:cas.cor00005.ukcloud.com`
@@ -335,6 +354,7 @@ Although you will mostly interact with your Cloud Storage service through the AP
 - View information about the namespaces within your Cloud Storage environment, including:
 
   - How many buckets are in each namespace
+
   - Storage consumed by each namespace
 
 - View a list of users with access to the namespace
@@ -344,7 +364,9 @@ Although you will mostly interact with your Cloud Storage service through the AP
 - View information about the buckets within a namespace, including:
 
   - API Type: Atmos or S3
+
   - Storage consumed by the bucket
+
   - Number of objects in the bucket
 
 - View a graphical representation of the storage consumed by a bucket over the last 30 days

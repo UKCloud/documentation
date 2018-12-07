@@ -60,7 +60,9 @@ You can use the UKCloud Portal to see whether a VM uses Snapshot Protection, fin
 8. The icon in **Snapshot Protection** column shows the status of each VM's most recent backup:
 
     - ![Excluded](images/snapshot-image-13.png) - Excluded from backup (if you have recently added Snapshot Protection to a VM, this icon indicates that a backup does not yet exist for the VM)
+
     - ![Successful](images/snapshot-image-14.png) - Backup successful
+
     - ![unsuccessful](images/snapshot-image-15.png) - Backup unsuccessful
 
 9. The button in the **Snapshot Protection** column shows the Snapshot Protection option currently applied to the VM:
@@ -82,26 +84,39 @@ You can use the UKCloud Portal to see whether a VM uses Snapshot Protection, fin
 11. In the VMs *Info* page, the following fields provide information about the most recent backup of the VM:
 
     - **Additional information** - additional information about the backup, for example if the backup was removed from the daily automated backup, if the retention period was changed, or further details of any failures.
+
     - **Last backup** - the status of the most recent backup
+
     - **Retention length** - how long the backup will be kept for: 14 days or 28 days
+
     - **Backup status** - when the most recent backup was attempted
 
 12. The *Snapshot Protection* *Backups* section of the page provides information about previous backups. This covers the entire retention policy period (14 or 28 days). Information includes:
 
     - **Status** - the status of the backup
+
     - **Slot** - the backup slot during which the backup was taken
+
     - **Start** - the date and time when the backup started
+
     - **End** - the date and time when the backup ended
+
     - **Snapshot Removal Start** - the date and time when the snapshot consolidation process started (that is, writing back any changes to the VM that occurred during the time it was locked for backup)
+
     - **Snapshot Removal End** - the date and time when the snapshot consolidation process ended
 
 13. The *Snapshot Protection Policy History* section of the page lists any recent changes to the snapshot retention policy for the VM.
 
     - **Status** - The status of the policy change
+
     - **Date Requested** - The date and time when the policy change was requested
+
     - **User** - The user who requested the change
+
     - **Protection Period** - The new protection period introduced by the policy change
+
     - **Reason for Change** - The reason for the policy change
+
     - **Action** - The type of policy change request
 
 14. Click **Manage my Backups** to raise a service request related to your backups, for example, to restore a backup.

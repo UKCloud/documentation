@@ -38,9 +38,13 @@ This service is designed for customers who:
 The following OpenStack projects/services are available with UKCloud for OpenStack:
 
 - Nova Compute
+
 - Glance Image Service
+
 - Cinder Block Storage
+
 - Keystone authentication
+
 - Neutron Networking Services
 
 UKCloud will look to add additional OpenStack projects to this service through future releases.
@@ -101,6 +105,7 @@ Ensuring only appropriate data (for example OFFICIAL) is stored and processed by
 By default, we will place the following network limitations per project:
 
 - 3 x Floating IP Addresses
+
 - 2 x Network Routers
 
 Customers with requirements beyond these limits can raise a service request via My Calls to have these limits per project considered for raising.
@@ -110,8 +115,11 @@ Customers with requirements beyond these limits can raise a service request via 
 By default, we will place the following virtual resource limitations per project:
 
 - 100 Instances
+
 - 100 vCPU
+
 - 200 GiB RAM
+
 - 2 TiB Persistent block storage
 
 Customers with requirements beyond these limits can raise a service request via My Calls to have these limits per project considered for raising.
@@ -125,6 +133,7 @@ Although designed to be a large-scale cloud platform, we strongly advise that wh
 The following features published in the UKCloud for OpenStack Service Definition are not currently available:
 
 - Janet & RLI connectivity
+
 - UKCloud provided Red Hat licences
 
 We are actively working on delivering these features and aim to have them delivered by Q4 2018.

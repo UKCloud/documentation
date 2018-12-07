@@ -85,7 +85,9 @@ The steps for creating a VM depend on the version of vCloud Director available i
 
     - **Static - IP Pool** (the usual method) to inject an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a checkbox to keep
     IP address assignments elsewhere within the UI once the VMs are created.
+
     - **Static - Manual** to specify a valid IP address from the pool that the VM will then keep.
+
     - **DHCP** to specify that vCloud Director should interact with the OS via VMware Tools to
     use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway.
 
@@ -171,7 +173,9 @@ The steps for creating a VM depend on the version of vCloud Director available i
     From the **IP Mode** list, select:
 
     - **Static - IP Pool** (the usual method) to inject an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a check box to keep IP address assignments elsewhere within the UI once the VMs are created.
+
     - **Static - Manual** to specify a valid IP address from the pool that the VM will then keep.
+
     - **DHCP** to specify that vCloud Director should interact with the OS via VMware Tools to
     use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway.
 

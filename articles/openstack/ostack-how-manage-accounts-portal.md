@@ -159,6 +159,7 @@ To remove an OpenStack account:
 For more information about UKCloud for OpenStack, see the following articles in the Knowledge Centre:
 
 - [*Getting Started Guide for UKCloud for OpenStack*](ostack-gs.md)
+
 - [*UKCloud for OpenStack FAQs*](ostack-faq.md)
 
 ## Feedback

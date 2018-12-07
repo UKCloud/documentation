@@ -148,6 +148,7 @@ To use your existing Microsoft licensing or use licences billed by us on UKCloud
     From the **What is the nature of your query?** list, select either:
 
     - **I want UKCloud to invoice me for the licensing of Microsoft software on one or more VMs**.
+
     - **I want to bring my own Microsoft licences to my UKCloud environment**
 
 6. Once you have selected one of the two options above, you will need to fill out **a Request summary** and provide the information outlined below:

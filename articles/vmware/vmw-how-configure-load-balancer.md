@@ -25,6 +25,7 @@ Bear in mind, however, that the edge gateway load balancer is quite basic. If yo
 The steps for configuring a load balancer vary depending on what type of edge gateway you're working with:
 
 - [Configuring a load balancer for an advanced gateway](#configuring-a-load-balancer-for-an-advanced-gateway)
+
 - [Configuring a load balancer for a standard edge](#configuring-a-load-balancer-for-a-standard-edge)
 
 > [!NOTE]
@@ -207,9 +208,13 @@ A virtual server masks the pool of real servers and presents a single IP address
 In this article you've learned how to create firewall rules. For other edge gateway configuration tasks, see:
 
 - [*How to create firewall rules*](vmw-how-create-firewall-rules.md)
+
 - [*How to create NAT rules*](vmw-how-create-nat-rules.md)
+
 - [*How to create a DHCP pool*](vmw-how-create-dhcp-pool.md)
+
 - [*How to configure IPsec VPN*](vmw-how-configure-ipsec-vpn.md)
+
 - [*How to create a static route*](vmw-how-create-static-route.md)
 
 ## Feedback

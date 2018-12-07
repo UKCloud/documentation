@@ -91,7 +91,9 @@ The steps for creating a VM depend on the version of vCloud Director available i
 
     - **Static - IP Pool** is the usual method, which injects an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a checkbox to keep IP address assignments elsewhere within the UI once the VMs are
     created.
+
     - **Static - Manual** is similar to Static - IP Pool, but you need to type in a valid IP address from the pool, which the VM will then keep.
+
     - **DHCP** vCloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.
 
     ![Configure Virtual Machines page of New Virtual Machine wizard](images/vmw-vcd-new-virtual-machine-vms.png)
@@ -184,7 +186,9 @@ The steps for creating a VM depend on the version of vCloud Director available i
 
     - **Static - IP Pool** is the usual method, which injects an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a checkbox to keep IP address assignments elsewhere within the UI once the VMs are
     created.
+
     - **Static - Manual** is similar to Static - IP Pool, but you need to type in a valid IP address from the pool, which the VM will then keep.
+
     - **DHCP** vCloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.11. how many network interface controllers (NICs) you need in the first instance.
 
 11. Click **Add** to create more NICs.

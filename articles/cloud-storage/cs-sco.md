@@ -68,6 +68,7 @@ Users can access, manage and view their Cloud Storage service, in any of the fol
 - **Storage Gateways.** These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see the appropriate Cloud Storage Gateways Knowledge Centre article:
 
     - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+
     - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
 - **UKCloud Portal.** Contains information about the namespaces and users within your Cloud Storage environment, as well as a graphical representation of your storage consumption. For more information on the Portal functionality, see [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md).
@@ -109,7 +110,9 @@ In line with UKCloud's SISP, we provide notification of customer-impacting secur
 You can request a migration through a Service Request. Migrations may be between:
 
 - Services (for example, STANDARD to ENHANCED)
+
 - UKCloud sites or availability zones
+
 - The Assured and Elevated platforms
 
 ## Customer service
@@ -125,8 +128,11 @@ You can request a migration through a Service Request. Migrations may be between
 ## Customer responsibilities
 
 - Assessing whether the UKCloud platform can support the various requirements of your application and storage needs.
+
 - The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.
+
 - If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.
+
 - The customer is also responsible for ensuring only lawful data that supports the UK public sector is stored and processed by applications on this environment, and that they fully comply with the UKCloud Security Operating Procedures (SyOPs) and other information assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.
 
 ## Service provisioning
@@ -169,7 +175,10 @@ The following documents contain more information about Cloud Storage and the ser
 - [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
 
 - Cloud Storage Gateways
+
     - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+
     - [*How to install CloudArray*](cs-how-install-cloudarray.md)
     
+
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)

@@ -78,6 +78,7 @@ For example, to create an Ubuntu 18.04-LTS server:
 ```Bash
 az vm create --resource-group 'myResourceGroup' --name 'myVM' --image 'Canonical:UbuntuServer:18.04-LTS:18.04.201808140' --admin-username 'username' --admin-password 'Password1234!' --use-unmanaged-disk --location 'frn00006'
 
+
 - Running ..
 {
   "fqdns": "",

@@ -92,9 +92,13 @@ The **Edge Gateways** tab shows properties associates with the edge gateways tha
 2. From the **Select Edge** list, select the edge gateway you want to work with.
 
     - The **Config** tab shows basic configuration information for the edge
+
     - The **Firewall** tab shows you information about the firewall rules configured for the edge.
+
     - The **NAT** tab shows you information about the NAT rules configured for the edge.
+
     - The **VPN** tab displays any VPNs that have been created against the selected edge
+
     - The **Events** tab displays any events associated with the edge.
 
 ## Viewing bandwidth monitoring information

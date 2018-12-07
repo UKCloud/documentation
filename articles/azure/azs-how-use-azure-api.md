@@ -39,7 +39,9 @@ To obtain an access token:
     where `tenant_id` is one of:
 
     - Your tenant domain, for example, `ukcloud.onmicrosoft.com`, `ukcloud.com`, `example.mydomain.com`
+
     - Your tenant ID, for example `8eaef023-2b34-4da1-9baa-8bc8c9d6a490`
+
     - The default value for tenant independent keys: `common`
 
 2. Pass the following parameters in the request body:
@@ -51,9 +53,13 @@ To obtain an access token:
         Other options for specific scenarios are:
 
         - LegacyPowerShell - `0a7bdc5c-7b57-40be-9939-d4c5fc7cd417*`
+
         - PowerShell - `1950a258-227b-4e31-a9cf-717495945fc2`
+
         - WindowsAzureActiveDirectory - `00000002-0000-0000-c000-000000000000`
+
         - VisualStudio - `872cd9fa-d31f-45e0-9eab-6e460a02d1f1`
+
         - AzureCLI - `04b07795-8ddb-461a-bbee-02f9e1bf7b46`
 
     - `resource` - The endpoint of the resource the token will be used to access, for example,
@@ -124,8 +130,11 @@ A REST request URI consists of:
 where:
 
 - `URI-scheme` is the protocol used to transmit the request, for example `http` or `https`.
+
 - `URI-host` is the domain name or IP address of the server where the REST service endpoint is hosted, for example `management.local.azurestack.external`.
+
 - `resource-path` is the resource or resource collection, which may include multiple segments, used by the service in determining the selection of those resources. For example `beta/applications/00003f25-7e1f-4278-9488-efc7bac53c4a/owners` is the resource path to a specific application's owners within the applications collection.
+
 - `query-string` provides additional simple parameters, such as the API version or resource selection criteria.
 
 The syntax of an Azure Stack request URI is:
@@ -135,10 +144,15 @@ The syntax of an Azure Stack request URI is:
 where:
 
 - `subscription-id` is your tenant subscription ID
+
 - `resource-group` is the resource group you want to query
+
 - `provider` is the provider you want to query
+
 - `resource-path` is the resource you want to query
+
 - `filter-expression` is an optional list of arguments to filter the results of the query
+
 - `api-version` is the version of the Azure Stack API being called, for example `api-version=2016-05-01`
 
 For example, the following API call returns information about region health:
@@ -168,6 +182,7 @@ There is not currently an API reference guide for Azure Stack Users; however, th
 For more information about UKCloud for Microsoft Azure, see:
 
 - [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md)
+
 - [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
 
 ## Feedback

@@ -59,12 +59,15 @@ The Authentication/Login Endpoint can be https:/\/login.microsoftonline.com/{ten
 **How to obtain Access Token Request Body and Authentication Information**
 
 a. Grant_type
+
 - This is static value and in order to get the access token you need to set it to "password". Example:  **Grant_type = password**
 
 b. Resource - Application ID URI / graphEndpoint
+
 - Can be found in the Endpoint query above. Example: https://graph.windows.net/
 
 c. ClientID (Application ID)
+
 - In our case we can use built-in ClientIDs
 
 |Application  |ApplicationID  |
@@ -88,6 +91,7 @@ e. Password
 f. TenantID
 
 - Query https://\<your domain>\.onmicrosoft.com\.well-known\/openid-configuration
+
 - In the output from the query above look for token_endpoint value (i.e. https://login.windows.net/0000ffff-1111-cccc-0000-888888888888/oauth2/token) and in this example your Tenant ID is **0000ffff-1111-cccc-0000-888888888888**.
 
 g. Request Authentication Endpoint/URI of Azure Authentication Endpoint

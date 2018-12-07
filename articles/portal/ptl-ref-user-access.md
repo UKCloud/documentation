@@ -26,9 +26,13 @@ Security of our services is paramount and we provide the facilities to enable cu
 Customers need to allocate administrators who are responsible for:
 
 - Adding and deleting new user accounts
+
 - Maintaining the appropriate permissions and access for users
+
 - Activating and locking individual user accounts where required
+
 - Resetting passwords and memorable words
+
 - Ensuring that only appropriate users are listed as administrators
 
 To avoid a situation where all administrators are unable to access services, UKCloud recommends that each customer assigns multiple administrators and ensures that memorable words are maintained.

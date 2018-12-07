@@ -60,7 +60,9 @@ This article outlines the improvements UKCloud's upgrade to its Email and Collab
 ### ZCO Improvements
 
 - Log file improvements
+
 - Connection security improvements
+
 - Share message support, with Accept Share and Decline Share options available
 
 ## Feedback

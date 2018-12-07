@@ -28,21 +28,37 @@ This article is intended for operators who have the capability to download a VM 
 You can use `virt-v2v` to convert VMs running the following operating systems to run on KVM:
 
 - Red Hat Enterprise Linux 3.9
+
 - Red Hat Enterprise Linux 4
+
 - Red Hat Enterprise Linux 5
+
 - Red Hat Enterprise Linux 6
+
 - Red Hat Enterprise Linux 7.1 and later
+
 - Windows XP
+
 - Windows Vista
+
 - Windows 7
+
 - Windows 8
+
 - Windows 8.1
+
 - Windows 10
+
 - Windows Server 2003
+
 - Windows Server 2008
+
 - Windows Server 2008 R2
+
 - Windows Server 2012
+
 - Windows Server 2012 R2
+
 - Windows Server 2016
 
 > [!NOTE]
@@ -51,6 +67,7 @@ You can use `virt-v2v` to convert VMs running the following operating systems to
 Conversions from the following hypervisors are supported:
 
 - Red Hat Enterprise Linux 5 Xen
+
 - VMware vSphere ESX / ESX(i) - versions 3.5, 4.0, 4.1, 5.0, 5.1, 5.5, 6.0, 6.5, 6.7
 
 > [!NOTE]

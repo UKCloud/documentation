@@ -32,11 +32,17 @@ If the availability of the service for a particular month falls below the Availa
 The following will be excluded from any time-based calculations related to the service being unavailable:
 
 - Service dependant — planned maintenance windows (as specified in the applicable service description)
+
 - Emergency maintenance (as specified in the applicable service description)
+
 - Your misuse of a particular service (as defined in the UKCloud Terms and Conditions and the UKCloud System Interconnect Security Policy (SISP))
+
 - A *force majeure* event
+
 - Denial of service attacks, virus or hacking attacks for which there is no commercially reasonable, known solution; or any other events that are not within the direct control of UKCloud or that could not have been avoided with commercially reasonable care
+
 - Packet loss, network or connectivity (for example, internet, MPLS) problems beyond UKCloud’s management boundary (for example, border router) supporting our connectivity to the public internet or government secure networks
+
 - Any customer-defined/customer-controlled event (for example, unavailability of service resulting from inadequate customer-subscribed services, resources or configuration)
 
 The customer will not be eligible to receive a Service Credit if the service account has any undisputed payments outstanding beyond their due date, or you are in violation of UKCloud’s Terms and Conditions including the UKCloud System Interconnect Security Policy (SISP).

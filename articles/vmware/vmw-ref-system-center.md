@@ -22,8 +22,11 @@ Licensing for System Center is not provided by UKCloud. Therefore, if you wish t
 Please note the following limitations apply to System Center:
 
 - If you have System Center Datacentre licensing in place this can be used on up to 10 VMs on the UKCloud platform
+
 - If you have a Standard license this covers 2 VMs on the UKCloud platform
+
 - Configuration Manager Console SAL and EndPoint protection cannot be used on our platform as these are only available for laptops and desktops as per Microsoft's terms
+
 - To license this software you need to license based on either the number of cores or processors on a host server. Please contact UKCloud via <products@ukcloud.com> to discuss this prior to the purchase of any licensing or completion of a Mobility form
 
 ## Feedback

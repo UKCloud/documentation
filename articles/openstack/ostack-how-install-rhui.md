@@ -75,6 +75,7 @@ You can find the installer RPM files in an ISO image. Before this can be mounted
 10. The first time you update from RHUI you may be prompted to accept the following two certificates:
 
     - The Red Hat entitlement certificate
+
     - The Client entitlement certificate
 
 ## Troubleshooting

@@ -149,10 +149,13 @@ This guide has shown you how to use the Boto package for Python to interact with
 
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
  
+
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 - Cloud Storage Gateways
+
     - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+
     - [*How to install the CIF-ECS Tool*](cs-how-install-cifs-ecs.md)
 
 

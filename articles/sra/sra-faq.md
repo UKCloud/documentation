@@ -46,7 +46,9 @@ If you're new to UKCloud, you should contact the UKCloud sales team to discuss y
 As a minimum the application form must include:
 
 - A business case explaining why you require an SRA solution
+
 - The technical architecture of the solution incorporating the UKCloud SRA
+
 - An assurance plan - your proposed approach to ensuring that risks are correctly identified, appropriate mitigation is implemented and residual risks are accepted so that both the customer and UKCloud SIROs can make an informed decision about the risks of the solution
 
 ### What is likely to be included in the assurance plan?
@@ -54,11 +56,17 @@ As a minimum the application form must include:
 The assurance plan includes:
 
 - Validation of requirements by the customer (department SIRO)
+
 - Evidence from the customer that end-user devices are configured and managed in line with minimum requirements (for example scope of PSN compliance with IA requirements)
+
 - Evidence from the customer that users of the SRA service are vetted and security-cleared in line with minimum requirements (scope of PSN compliance with IA requirements)
+
 - Confirmation by the customer that an appropriate security incident management process applies to the solution
+
 - Confirmation by the customer that the service will be accessed from the UK only
+
 - Confirmation by the customer and each individual user of agreement to the UKCloud Acceptable Use Policy (AUP)
+
 - Identification of data flows between the walled garden and the customer's solution (firewall access control list)
 
 ### What requirements are placed on the access devices?
