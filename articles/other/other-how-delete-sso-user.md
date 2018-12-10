@@ -34,7 +34,7 @@ The process for using the IDAM API to remove access rights from an SSO user is a
 
 1. Authenticate with the IDAM API:
 
-    ```
+    ```bash
     token=$(curl -X POST "https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token" \
      -d username="<username>" \
      -d password="<password>"  \
@@ -44,7 +44,7 @@ The process for using the IDAM API to remove access rights from an SSO user is a
 
     This returns an SSO token to use for authenticating calls to the IDAM API. For example:
 
-    ```
+    ```json
     {
      "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJUU0F1WERTWUt0SGVEWTI5ZHlPVFZVeHZUMWNhYmUyNUpEVVZzajhVRUhrIn0.eyJqdGkiOiI2YWJmYzkw...",
      "expires_in": 300,
@@ -60,13 +60,13 @@ The process for using the IDAM API to remove access rights from an SSO user is a
 
 2. List users and note the ID of the user you want to remove:
 
-    ```
+    ```bash
     curl -s -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users | jq -r '.[] | .id + " " + .username'
     ```
 
     The `jq` filter on this request returns a list of SSO users and their IDs:
 
-    ``` 
+    ```none
     0744f665-2d7a-483c-adb3-72b0effe2356 acc1admin
     1d9e52e6-f833-47b9-9cfa-be727510c910 acc1usr1
     a089698b-8f32-4a32-ab71-790b015aa662 acc1usr2
@@ -79,13 +79,13 @@ The process for using the IDAM API to remove access rights from an SSO user is a
 
 4. List all the groups that you have permission to manage:
 
-    ```
+    ```bash
     curl -s -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/groups | jq -r '.[].subGroups[] | .id + " " + .name'
     ```
 
     The `jq` filter on this request returns a list of groups:
     
-    ```
+    ```none
     008d3512-54f9-439e-800a-7b0b5ef76438 idam:Account_101#User
     a4ebc856-222f-4686-a4bf-239c21ffa010 idam:Account_101#Admin
     ```
@@ -98,13 +98,13 @@ The process for using the IDAM API to remove access rights from an SSO user is a
 
 6. Remove the user from each group by making a `DELETE` request for that user against each group.
 
-    ```
+    ```bash
     curl -X DELETE -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users/{{user_id}}/groups/{{group_id}}
     ```
 
     For example, to remove the SSO user `acc1usr2`, you would need to make two calls:
 
-    ```
+    ```bash
     curl -X DELETE -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users/a089698b-8f32-4a32-ab71-790b015aa662/groups/008d3512-54f9-439e-800a-7b0b5ef76438
 
     curl -X DELETE -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users/a089698b-8f32-4a32-ab71-790b015aa662/groups/a4ebc856-222f-4686-a4bf-239c21ffa010
@@ -112,7 +112,7 @@ The process for using the IDAM API to remove access rights from an SSO user is a
 
     If you stored the user ID in a variable, you can use that in the request. For example, if the user ID `a089698b-8f32-4a32-ab71-790b015aa662` is stored in a variable `acc1usr2`, your calls would look like the following:
     
-    ```
+    ```bash
     curl -X DELETE -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users/$acc1usr2/groups/008d3512-54f9-439e-800a-7b0b5ef76438
     
     curl -X DELETE -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users/$acc1usr2/groups/a4ebc856-222f-4686-a4bf-239c21ffa010
