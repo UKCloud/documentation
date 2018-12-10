@@ -6432,6 +6432,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-how-delete-sso-user.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-how-delete-sso-user.html",
+          "hash": "wHFwmQ2rblFvpDajTfkI1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-how-use-pricing-tool.md",
       "output": {
         ".html": {
@@ -6784,7 +6796,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "kQ/urCiN9+D2H2D16xoTzg=="
+          "hash": "Xm6gb9b5/W1OHSw3gvpTKg=="
         }
       },
       "is_incremental": false,

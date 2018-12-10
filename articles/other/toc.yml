@@ -16,6 +16,8 @@
   items:
   - name: Contribute to the UKCloud Knowledge Centre
     href: other-how-contribute-knowledge.md
+  - name: Remove access rights from Single Sign-On users
+    href: other-how-delete-sso-user.md
   - name: Use the UKCloud Pricing Estimator Tool
     href: other-how-use-pricing-tool.md
 - name: Reference
