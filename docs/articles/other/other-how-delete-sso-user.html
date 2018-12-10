@@ -98,14 +98,14 @@
 <p>The process for using the IDAM API to remove access rights from an SSO user is as follows:</p>
 <ol>
 <li><p>Authenticate with the IDAM API:</p>
-<pre><code>token=$(curl -X POST &quot;https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token&quot; \
+<pre><code class="lang-bash">token=$(curl -X POST &quot;https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token&quot; \
  -d username=&quot;&lt;username&gt;&quot; \
  -d password=&quot;&lt;password&gt;&quot;  \
  -d grant_type=password    \
  -d client_id=portal.ukcloud | jq -r '.access_token')
 </code></pre>
 <p>This returns an SSO token to use for authenticating calls to the IDAM API. For example:</p>
-<pre><code>{
+<pre><code class="lang-json">{
  &quot;access_token&quot;: &quot;eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJUU0F1WERTWUt0SGVEWTI5ZHlPVFZVeHZUMWNhYmUyNUpEVVZzajhVRUhrIn0.eyJqdGkiOiI2YWJmYzkw...&quot;,
  &quot;expires_in&quot;: 300,
  &quot;refresh_expires_in&quot;: 1800,
@@ -118,10 +118,10 @@
 <p>For convenience, the token is saved to the <code>token</code> variable in your current shell session. Use this variable in the <code>Authorization: Bearer</code> header for all further calls to the IDAM API.</p>
 </li>
 <li><p>List users and note the ID of the user you want to remove:</p>
-<pre><code>curl -s -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users | jq -r '.[] | .id + &quot; &quot; + .username'
+<pre><code class="lang-bash">curl -s -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users | jq -r '.[] | .id + &quot; &quot; + .username'
 </code></pre>
 <p>The <code>jq</code> filter on this request returns a list of SSO users and their IDs:</p>
-<pre><code>0744f665-2d7a-483c-adb3-72b0effe2356 acc1admin
+<pre><code class="lang-none">0744f665-2d7a-483c-adb3-72b0effe2356 acc1admin
 1d9e52e6-f833-47b9-9cfa-be727510c910 acc1usr1
 a089698b-8f32-4a32-ab71-790b015aa662 acc1usr2
 </code></pre>
@@ -133,10 +133,10 @@ a089698b-8f32-4a32-ab71-790b015aa662 acc1usr2
 </div>
 </li>
 <li><p>List all the groups that you have permission to manage:</p>
-<pre><code>curl -s -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/groups | jq -r '.[].subGroups[] | .id + &quot; &quot; + .name'
+<pre><code class="lang-bash">curl -s -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/groups | jq -r '.[].subGroups[] | .id + &quot; &quot; + .name'
 </code></pre>
 <p>The <code>jq</code> filter on this request returns a list of groups:</p>
-<pre><code>008d3512-54f9-439e-800a-7b0b5ef76438 idam:Account_101#User
+<pre><code class="lang-none">008d3512-54f9-439e-800a-7b0b5ef76438 idam:Account_101#User
 a4ebc856-222f-4686-a4bf-239c21ffa010 idam:Account_101#Admin
 </code></pre>
 </li>
@@ -149,15 +149,15 @@ a4ebc856-222f-4686-a4bf-239c21ffa010 idam:Account_101#Admin
 </ul>
 </li>
 <li><p>Remove the user from each group by making a <code>DELETE</code> request for that user against each group.</p>
-<pre><code>curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/{{user_id}}/groups/{{group_id}}
+<pre><code class="lang-bash">curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/{{user_id}}/groups/{{group_id}}
 </code></pre>
 <p>For example, to remove the SSO user <code>acc1usr2</code>, you would need to make two calls:</p>
-<pre><code>curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/a089698b-8f32-4a32-ab71-790b015aa662/groups/008d3512-54f9-439e-800a-7b0b5ef76438
+<pre><code class="lang-bash">curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/a089698b-8f32-4a32-ab71-790b015aa662/groups/008d3512-54f9-439e-800a-7b0b5ef76438
 
 curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/a089698b-8f32-4a32-ab71-790b015aa662/groups/a4ebc856-222f-4686-a4bf-239c21ffa010
 </code></pre>
 <p>If you stored the user ID in a variable, you can use that in the request. For example, if the user ID <code>a089698b-8f32-4a32-ab71-790b015aa662</code> is stored in a variable <code>acc1usr2</code>, your calls would look like the following:</p>
-<pre><code>curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/$acc1usr2/groups/008d3512-54f9-439e-800a-7b0b5ef76438
+<pre><code class="lang-bash">curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/$acc1usr2/groups/008d3512-54f9-439e-800a-7b0b5ef76438
 
 curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/$acc1usr2/groups/a4ebc856-222f-4686-a4bf-239c21ffa010
 </code></pre>
