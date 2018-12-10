@@ -1,5 +1,5 @@
 ---
-title: How to remove access from Single Sign-On users | UKCloud Ltd
+title: How to remove access rights from Single Sign-On users | UKCloud Ltd
 description: Describes the process for removing access from Single Sign-On (SSO) users
 services: other
 author: Sue Highmoor
@@ -9,16 +9,16 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Remove access from Single Sign-On users
+toc_title: Remove access rights from Single Sign-On users
 toc_fullpath: How To/other-how-delete-sso-user.md
 toc_mdlink: other-how-delete-sso-user.md
 ---
 
-# How to remove access from Single Sign-On (SSO) users
+# How to remove access rights from Single Sign-On (SSO) users
 
 ## Overview
 
-When you use the UKCloud Portal to remove a user from an account that includes SSO-enabled services, it's important to note that this does not remove the corresponding SSO user. To remove the SSO user's access, you must use the Identity & Access Management (IDAM) API.
+When you use the UKCloud Portal to remove a user from an account that includes SSO-enabled services, it's important to note that this does not remove access rights from the corresponding SSO user. To remove the SSO user's access, you must use the Identity & Access Management (IDAM) API to remove that user from all IDAM groups.
 
 SSO-enabled services are:
 
@@ -28,9 +28,9 @@ SSO-enabled services are:
 
 For more information about the IDAM API, see [*Understanding UKCloud's Identity & Access Management API*](other-ref-idam.md).
 
-## Deleting an SSO user
+## Removing access rights from an SSO user
 
-The process for using the IDAM API to delete an SSO user is as follows:
+The process for using the IDAM API to remove access rights from an SSO user is as follows:
 
 1. Authenticate with the IDAM API:
 
@@ -58,7 +58,7 @@ The process for using the IDAM API to delete an SSO user is as follows:
 
     For convenience, the token is saved to the `token` variable in your current shell session. Use this variable in the `Authorization: Bearer` header for all further calls to the IDAM API.
 
-2. List users and note the ID of the user you want to delete:
+2. List users and note the ID of the user you want to remove:
 
     ``` bash
     curl -s -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users | jq -r '.[] | .id + " " + .username'
@@ -72,7 +72,7 @@ The process for using the IDAM API to delete an SSO user is as follows:
     a089698b-8f32-4a32-ab71-790b015aa662 acc1usr2
     ```
 
-3. Find the user that you want to delete and make a note of that user's ID. For example, to delete the user `acc1usr2`, you would need the ID `a089698b-8f32-4a32-ab71-790b015aa662`.
+3. Find the user that you want to remove and make a note of that user's ID. For example, to remove the user `acc1usr2`, you would need the ID `a089698b-8f32-4a32-ab71-790b015aa662`.
 
     > [!TIP]
     > If you will have to remove the user from multiple groups, you may find it helpful to store this ID in a variable.
@@ -102,7 +102,7 @@ The process for using the IDAM API to delete an SSO user is as follows:
     curl -X DELETE -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users/{{user_id}}/groups/{{group_id}}
     ```
 
-    For example, to delete the SSO user `acc1usr2`, you would need to make two calls:
+    For example, to remove the SSO user `acc1usr2`, you would need to make two calls:
 
     ``` bash
     curl -X DELETE -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/users/a089698b-8f32-4a32-ab71-790b015aa662/groups/008d3512-54f9-439e-800a-7b0b5ef76438
