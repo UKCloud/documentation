@@ -1,5 +1,7 @@
 - name: FAQs
   items:
+  - name: Enterprise & Private Sector FAQs
+    href: other-faq-eps.md
   - name: G-Cloud 10 services FAQs
     href: other-faq-g10.md
   - name: MISO rebate FAQs
