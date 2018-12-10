@@ -28,6 +28,14 @@
       items:
       - name: How to obtain Client ID via API for Azure Stack - REST API
         href: azs-how-to-obtain-clientid-via-api.md
+    - name: Disk Management
+      items:
+      - name: How to add disks on Azure Stack
+        href: azs-how-add-disks.md
+    - name: Site Recovery
+      items:
+      - name: How to setup disaster recovery for Azure Stack VMs to Azure via the portal
+        href: azs-how-setup-recovery-portal.md
     - name: Configure Environment
       items:
       - name: Configure the Azure Stack user's Azure CLI environment
