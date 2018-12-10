@@ -26,6 +26,7 @@ _exported_templates/
 *.nupkg
 *.log
 *.tmp
+*.swp
 *.vsprops
 *.suo
 *.user
