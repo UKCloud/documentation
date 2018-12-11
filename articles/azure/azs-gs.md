@@ -280,6 +280,10 @@ In this Getting Started Guide, you've learned the basics about UKCloud for Micro
 
 - [*How to use the Azure Stack API*](azs-how-use-azure-api.md)
 
+## Related videos
+
+- [Microsoft Azure Stack Portal overview video](https://vimeo.com/305064724)
+
 ## Glossary
 
 This section provides a glossary of terms specific to UKCloud for Microsoft Azure.
