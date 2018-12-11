@@ -18,3 +18,5 @@
     href: oshift-how-obtain-usage-metrics.md
   - name: Restrict access to OpenShift routes by IP address
     href: oshift-how-restrict-access-to-openshift-routes-by-ip-address.md
+  - name: Use the Hawkular Metrics API
+    href: oshift-how-use-hawkular-metrics.md
