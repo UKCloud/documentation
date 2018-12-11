@@ -61,7 +61,7 @@ We are not currently able to support IPv6, although this is on our technical roa
 
 ### What pricing is available for Enterprise & Private Sector customers?
 
-We'll apply the rebate by crediting your next monthly invoice by the amount you have applied for.
+Enterprise & Private Sector customers recieve the same pricing as our public sector customers.
 
 ### Where do I find pricing?
 
