@@ -9,28 +9,39 @@ toc_sub1: How To
 toc_sub2: Disk Management
 toc_sub3:
 toc_sub4:
-toc_title: How to resize virtual machine disks
-toc_fullpath: Users/How To/azs-how-resize-disks.md
+toc_title: Resize virtual machine disks
+toc_fullpath: Users/How To/Disk Management/azs-how-resize-disks.md
 toc_mdlink: azs-how-resize-disks.md
 ---
 
 # How to resize virtual machine disks
 
-In this article we will cover the process of resizing disks in the Azure portal. This will be needed if the VM requires more storage space as you can increase current disk capacity rather than adding more disks.
+In this article we will cover the process of resizing disks in the Azure portal. If your VM requires more storage space, you can increase the current disk capacity, rather than adding more disks. You can do this in the Azure portal.
 
-## Steps to changing disk size via portal
-
-1. Power down or detach disk from VM.
-  ![Detach disks](images/azs-browser-detach-disk.png)
-2. Navigate to the resource group.
-3. Select disk.
-4. Alter the disk size (Note the max size for a disk is 1023gb for a single disk).
-  ![Detach disks](images/azs-browser-change-disk.png)
-5. Save changes.
-6. Power back on the VM or reattach the disk.
-  ![Detach disks](images/azs-browser-attach-disk.png)
+## Resizing disk size via the portal
 
 These steps will work for both non managed and managed VM's.
+
+1. Power down or detach the disk from the VM.
+
+    ![Detaching disks from vm](images/azs-browser-detach-disk.png)
+  
+2. Navigate to the resource group.
+
+3. Select the disk that you want to resize.
+
+4. In the **Size** field, enter the new size for the disk.
+
+    ![Changing disk size](images/azs-browser-change-disk.png)
+  
+5. Save your changes.
+
+6. Power back on the VM or reattach the disk.
+
+    ![attaching vm disks](images/azs-browser-attach-disk.png)
+
+[!NOTE]
+The maximum size for a single disk is 1023 GiB.
 
 ## Feedback
 
