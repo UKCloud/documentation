@@ -503,9 +503,25 @@ Whatever library or automation tools you choose to use, you'll need to know a fe
 
 3. On the *API Access* tab, you can see all the relevant API endpoints for making connections to the various OpenStack subsystems, including the **Identify** endpoint, which provides the initial authentication process, that you'll typically need when configuring connections.
 
-    You can also download your user's OpenStack RC file for use in the following section.
+    You can also download your user's OpenStack RC file for use in the following section. If your account is SSO enabled, please download the v3 RC file.
 
     ![Download OpenStack RC File button on Access & Security page](images/ostack-horizon-btn-download-rc-file.png)
+
+4. If your account is enabled for SSO, you will need to add the following items to the RC file downloaded above.
+
+   ```
+   export OS_AUTH_TYPE="v3oidcpassword"
+   export OS_IDENTITY_PROVIDER="sso"
+   export OS_PROTOCOL="oidc"
+   export OS_CLIENT_ID=""
+   export OS_CLIENT_SECRET=""
+   export OS_DISCOVERY_ENDPOINT="https://idp.ukcloud.com/auth/realms/client-assured/.well-known/openid-configuration
+   ```
+   4.a
+   The client_id for Corsham is `cni.1.cor00005`.
+   The client_id for Farnborough is; `cni.1.frn00006`.
+   The client_secret can be set to any value.
+
 
 ## Using the OpenStack command-line client
 
