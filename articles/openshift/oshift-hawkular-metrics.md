@@ -9,9 +9,9 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Hawkular Metrics
-toc_fullpath: How To/oshift-how-create-users.md
-toc_mdlink: oshift-hawkular-metrics.md
+toc_title: Use the Hawkular Metrics API
+toc_fullpath: How To/oshift-how-use-hawkular-metrics.md
+toc_mdlink: oshift-how-use-hawkular-metrics.md
 ---
 
 # How to use the Hawkular Metrics API
