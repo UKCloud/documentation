@@ -39,7 +39,7 @@ To manage your OpenStack projects, you can log in to the OpenStack Horizon dashb
 
 3. If you selected **Keystone Credentials**, enter your UKCloud Portal login credentials and click **Connect**.
 
-    If you selected **UKCloud SSO** click **Connect**. You will be redirected to the SSO login page, where you can enter your username and password and click **Log in**.
+    If you selected **UKCloud SSO** click **Connect**. You'll be redirected to the SSO login page, where you can enter your username and password and click **Log in**.
 
     ![SSO Login Page](images/ostack-horizon-sso-login.PNG)
 
@@ -524,7 +524,7 @@ Whatever library or automation tools you choose to use, you'll need to know a fe
    
     - The `client_id` for Corsham is `cni.1.cor00005`
 
-    - The `client_id` for Farnborough is; `cni.1.frn00006`
+    - The `client_id` for Farnborough is `cni.1.frn00006`
 
     - You can set the `client_secret` to any value
 
