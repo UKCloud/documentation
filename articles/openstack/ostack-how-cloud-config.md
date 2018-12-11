@@ -39,16 +39,20 @@ As an example, let's boot an instance and run some arbitrary commands at boot ti
 
 1. Create a new text file called `user-data.txt`.
 
-2. Add the following to the new file. The "#cloud-config" is required to be at the top of the file.
+2. Add the following to the new file.
 
-    ```
+    ``` none
     #cloud-config
     runcmd:
      - mkdir -pv /root/cloud-config-test
      - touch /root/cloud-config-test/boottest
      - echo "boot instance test" >> /root/cloud-config-test/boottest
     ```
-3. Boot an instance using the CLI, and add `--user-data user-data.txt` to the end of the boot command.
+    
+    > [!NOTE]
+    > Tou must include the `#cloud-config` line at the top of the file.
+
+3. Boot an instance using the CLI, adding `--user-data user-data.txt` to the end of the boot command.
 
 4. When the instance has booted, log into the instance, switch to root and look in the directory. You will see the new file, and it will contain `boot instance test`.
 
