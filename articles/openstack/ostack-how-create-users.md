@@ -45,7 +45,7 @@ To create a new user:
 
     ![New Contact page](images/ptl-new-contact.png)
 
-6. After you've created the user account, you must raise a Service Request to grant the user access to the OpenStack project.
+6. After you've created the user account, you must raise a Service Request to grant the user access to the OpenStack project. Or your can use the self service IDAM API, information on how to use it can be seen here  [*Understanding UKCloud's Identity & Access Management API*](../other/other-ref-idam.md)
 
     a. In the navigation panel, expand **Support**, then select **My Calls**.
 
