@@ -26,23 +26,24 @@ This guide is intended for users who want to learn more about UKCloud for OpenSt
 
 ## Logging in to the OpenStack Horizon dashboard
 
-To manage your OpenStack projects, you can log in to the OpenStack Horizon dashboard via our single sign on service, using your UKCloud Portal credentials. Additionally, if you've set up two-factor authentication (2FA) in the Portal, when logging in using your Portal credentials, you'll be prompted for a 2FA code.
+To manage your OpenStack projects, you can log in to the OpenStack Horizon dashboard via our Single Sign-On (SSO) service, using your UKCloud Portal credentials. Additionally, if you've set up two-factor authentication (2FA) in the Portal, when logging in using your Portal credentials, you'll be prompted for a 2FA code.
 
 1. Go to the URL provided in your welcome email, for example, `https://cor00005.cni.ukcloud.com/`.
 
-2. From the "Authenticate using" drop down, choose either "Keystone Credentials" if your account has not been migated to SSO or "UKCloud SSO" if your account has been migrated to SSO.
+2. From the **Authenticate using** list, select:
+
+    - **Keystone Credentials** if your account has not been migated to SSO
+    - **UKCloud SSO** if your account has been migrated to SSO
 
     ![Horizon login page](images/ostack-horizon-login.png)
 
-   2a. If using "Keystone Credentials". Enter your UKCloud Portal login credentials and click **Connect**.
+3. If you selected **Keystone Credentials**, enter your UKCloud Portal login credentials and click **Connect**.
 
-   2b. If using "UKCloud SSO", click **Connect**.
+    If you selected **UKCloud SSO** click **Connect**. You will be redirected to the SSO login page, where you can enter your username and password and click **Log in**.
 
-   2c. You will be redirected to the SSO login page, enter your username and password and click **Log in**
+    ![SSO Login Page](images/ostack-horizon-sso-login.PNG)
 
-    ![SSO Login Page](images/ostack-horizon-sso-login.png)
-
-3. If you've set up two-factor authentication (2FA) in the Portal, you'll be prompted for a 2FA code.
+    If you've set up two-factor authentication (2FA) in the Portal, you'll be prompted for a 2FA code.
 
 4. After logging in, the first screen you'll see is the *Overview* page.
 
@@ -501,15 +502,18 @@ Whatever library or automation tools you choose to use, you'll need to know a fe
 
 2. On the *Access and Security* page, select the *API Access* tab.
 
-3. On the *API Access* tab, you can see all the relevant API endpoints for making connections to the various OpenStack subsystems, including the **Identify** endpoint, which provides the initial authentication process, that you'll typically need when configuring connections.
+3. On the *API Access* tab, you can see all the relevant API endpoints for making connections to the various OpenStack subsystems, including the **Identify** endpoint, which provides the initial authentication process that you'll typically need when configuring connections.
 
-    You can also download your user's OpenStack RC file for use in the following section. If your account is SSO enabled, please download the v3 RC file.
+    You can also download your user's OpenStack RC file for use in the following section.
+    
+    > [!NOTE]
+    > If your account is SSO-enabled, download the v3 RC file.
 
     ![Download OpenStack RC File button on Access & Security page](images/ostack-horizon-btn-download-rc-file.png)
 
-4. If your account is enabled for SSO, you will need to add the following items to the RC file downloaded above.
+4. If your account is enabled for SSO, you'll need to add the following items to the RC file you downloaded in the previous step.
 
-   ```
+   ``` none
    export OS_AUTH_TYPE="v3oidcpassword"
    export OS_IDENTITY_PROVIDER="sso"
    export OS_PROTOCOL="oidc"
@@ -517,11 +521,12 @@ Whatever library or automation tools you choose to use, you'll need to know a fe
    export OS_CLIENT_SECRET=""
    export OS_DISCOVERY_ENDPOINT="https://idp.ukcloud.com/auth/realms/client-assured/.well-known/openid-configuration
    ```
-   4.a
-   The client_id for Corsham is `cni.1.cor00005`.
-   The client_id for Farnborough is; `cni.1.frn00006`.
-   The client_secret can be set to any value.
+   
+    - The `client_id` for Corsham is `cni.1.cor00005`
 
+    - The `client_id` for Farnborough is; `cni.1.frn00006`
+
+    - You can set the `client_secret` to any value
 
 ## Using the OpenStack command-line client
 
