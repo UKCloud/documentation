@@ -54,6 +54,7 @@ This guide is intended to give you enough information to forumulate basic memory
     }
     ```
 This is the gauge for cluster memory usage and you can query the raw data using the id from the above block as follows:
+    
     ```
     curl -X GET https://hawkular-metrics.openshift-test.cna.ukcloud.com/hawkular/metrics/gauges/cluster%2Fmemory%2Fusage/raw     "Content-Type: application/json" -H "Hawkular-Tenant: _system" -H "Authorization: Bearer $token"
     ```
