@@ -4,13 +4,13 @@ description: Links to a video that provides an overview of the Microsoft Azure S
 services: azure-stack
 author: Sue Highmoor
 
-toc_rootlink: Videos
-toc_sub1: 
+toc_rootlink: Users
+toc_sub1: Videos
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Microsoft Azure Stack Portal overview
-toc_fullpath: Videos/azs-vid-overview.md
+toc_fullpath: Users/Videos/azs-vid-overview.md
 toc_mdlink: azs-vid-overview.md
 ---
 
