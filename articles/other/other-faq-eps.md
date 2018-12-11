@@ -81,7 +81,7 @@ Yes. All of our licensing agreements are open to either Public or Private Sector
 
 ### Do any UKCloud partners cater for Enterprise & Private Sector customers?
 
-Yes. We have large ecosystem of partners, including large system integrators, popular managed service providers and specialist SaaS providers, who already deliver a wide range of services to both Public Sector and Private Sector.  Many of these partners share similar characteristics with UKCloud's platform and specialise in high security, excellent service and domain expertise. Contact us by calling 01252 303300 (option 3) or by emailing <info@ukcloud.com> for further information.
+Yes. We have a large ecosystem of partners, including large system integrators, popular managed service providers and specialist SaaS providers, who already deliver a wide range of services to both Public Sector and Private Sector.  Many of these partners share similar characteristics with UKCloud's platform and specialise in high security, excellent service and domain expertise. Contact us by calling 01252 303300 (option 3) or by emailing <info@ukcloud.com> for further information.
 
 ### Is there a free trial?
 
