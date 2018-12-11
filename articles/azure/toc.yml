@@ -1,7 +1,3 @@
-- name: Videos
-  items:
-  - name: Microsoft Azure Stack Portal overview
-    href: azs-vid-overview.md
 - name: Users
   items:
   - name: FAQs
@@ -78,6 +74,10 @@
     items:
     - name: UKCloud for Microsoft Azure Service Scope
       href: asz-sco.md
+  - name: Videos
+    items:
+    - name: Microsoft Azure Stack Portal overview
+      href: azs-vid-overview.md
 - name: Operators
   items:
   - name: How To
