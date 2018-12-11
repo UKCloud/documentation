@@ -39,7 +39,7 @@ As an example, let's boot an instance and run some arbitrary commands at boot ti
 
 1. Create a new text file called `user-data.txt`.
 
-2. Add the following to the new file.
+2. Add the following to the new file. The "#cloud-config" is required to be at the top of the file.
 
     ```
     #cloud-config
@@ -48,10 +48,9 @@ As an example, let's boot an instance and run some arbitrary commands at boot ti
      - touch /root/cloud-config-test/boottest
      - echo "boot instance test" >> /root/cloud-config-test/boottest
     ```
-
 3. Boot an instance using the CLI, and add `--user-data user-data.txt` to the end of the boot command.
 
-4. When the instance has booted, log into the instance, switch to root and look in the directoy. You will see the new file, and it will contain `boot instance test`.
+4. When the instance has booted, log into the instance, switch to root and look in the directory. You will see the new file, and it will contain `boot instance test`.
 
 This is a very simple example of what you can do with cloud-config, but you can see from this simple example that you can easily start to build fairly complicated setup scripts.
 
