@@ -5,11 +5,11 @@ services: azure-stack
 author: David Woffendin
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: 
+toc_sub2: Site Recovery
 toc_sub3:
 toc_sub4:
 toc_title: How to setup disaster recovery for Azure Stack VMs to Azure via the portal
-toc_fullpath: Users/How To/azs-how-setup-recovery-portal.md
+toc_fullpath: Users/How To/Site Recovery/azs-how-setup-recovery-portal.md
 toc_mdlink: azs-how-setup-recovery-portal.md
 ---
 # Setting up disaster recovery for Azure Stack VMs to Azure via the portal
@@ -20,10 +20,13 @@ The purpose of this article is to help with the setting up of the **Azure Stack*
 
 Site Recovery contributes to your business continuity and disaster recovery strategy. The service ensures that your VM workloads remain available when expected and unexpected outages occur.
 
-* Site Recovery orchestrates and manages replication of VMs to Azure storage on Public Azure.
-* When an outage occurs in your primary site, you use Site Recovery to fail over to Azure.
-* On failover, Azure VMs are created from the stored VM data, and users can continue accessing workloads running on those Azure VMs.
-* When everything's up and running again, you can fail back Azure VMs to your primary site, and start replicating to Azure storage again.
+- Site Recovery orchestrates and manages replication of VMs to Azure storage on Public Azure.
+
+- When an outage occurs in your primary site, you use Site Recovery to fail over to Azure.
+
+- On failover, Azure VMs are created from the stored VM data, and users can continue accessing workloads running on those Azure VMs.
+
+- When everything's up and running again, you can fail back Azure VMs to your primary site, and start replicating to Azure storage again.
 
 ## What is covered in this article
 
@@ -41,12 +44,17 @@ Site Recovery contributes to your business continuity and disaster recovery stra
 
 ## Account Prerequisites
 
-* Public Azure subscription account.
-* Azure account permissions.
-  * The ability to create a Recovery Service vault.
-  * The ability to create a virtual machine in the resource group and virtual network you want to protect.
-  * The ability to write to the storage account you specify.
-* Azure Stack VM for site recovery configuration server setup in the same resource group as the VMs you want to protect.
+- Public Azure subscription account.
+
+- Azure account permissions.
+
+  - The ability to create a Recovery Service vault.
+
+  - The ability to create a virtual machine in the resource group and virtual network you want to protect.
+
+  - The ability to write to the storage account you specify.
+
+- Azure Stack VM for site recovery configuration server setup in the same resource group as the VMs you want to protect.
 
 ## Configuration server prerequisites
 
@@ -72,8 +80,9 @@ When setting up the Configuration server, it needs the following requirements fo
 
 ### Access Settings
 
-* MySQL should be installed on configuration server, this can be installed manually however site recovery can install it during deployment.
-* Firewall Ports - Allow ports 443 and 9443, both inbound and outbound (these are used during failover). It may be useful to set up a single **Network Security Group** for all the VMs in the resource group.
+- MySQL should be installed on configuration server, this can be installed manually however site recovery can install it during deployment.
+
+- Firewall Ports - Allow ports 443 and 9443, both inbound and outbound (these are used during failover). It may be useful to set up a single **Network Security Group** for all the VMs in the resource group.
 
 ## Step 1. Preparation of VMs
 
@@ -96,34 +105,58 @@ Every VM you want to replicate must have the mobility service installed. In orde
 
 #### Windows Machines
 
-* You need network connectivity between the VM on which you want to enable replication, and the machine running the process server (by default this is the configuration server VM), you can test this by pinging the configuration server.
-* You need an account with admin rights (domain or local) on the machine for which you enable replication.
-  * You specify this account when you set up Site Recovery. Then the process server uses this account to install the Mobility service when replication is enabled.
-  * This account will only be used by Site Recovery for the push installation and to update the Mobility service.
-  * If you're not using a domain account, you need to disable **Remote User Access** control on the VM:
+- You need network connectivity between the VM on which you want to enable replication, and the machine running the process server (by default this is the configuration server VM), you can test this by pinging the configuration server.
+
+- You need an account with admin rights (domain or local) on the machine for which you enable replication.
+
+  - You specify this account when you set up Site Recovery. Then the process server uses this account to install the Mobility service when replication is enabled.
+
+  - This account will only be used by Site Recovery for the push installation and to update the Mobility service.
+
+  - If you're not using a domain account, you need to disable **Remote User Access** control on the VM:
+
     1. In the registry, create DWORD value LocalAccountTokenFilterPolicy under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System.
+
     2. Set the value to 1.
-        * To do this at the command prompt, type the following: `REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1.`
-* In the Windows Firewall on the VM you want to replicate, allow **File and Printer Sharing**, and **WMI**.
+
+        - To do this at the command prompt, type the following: `REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1.`
+
+- In the Windows Firewall on the VM you want to replicate, allow **File and Printer Sharing**, and **WMI**.
+
     1. To do this, run wf.msc to open the Windows Firewall console.
+
     2. Right click Inbound Rules > New Rule. Select Predefined, and choose File and Printer sharing from the list.
+
     3. Complete the wizard, select to allow the connection > Finish.
+
     4. Find the firewall rules related to WMI (**Windows Management Instrumentation**) and enable them.
+
     5. For domain computers, you can use a GPO to do this.
 
 #### Linux Machines
 
-* Ensure that there’s network connectivity between the Linux computer and the process server.
-* On the machine for which you enable replication, you need an account that's a root user on the source Linux server:
-  * You specify this account when you set up Site Recovery. Then the process server uses this account to install the Mobility service when replication is enabled.
-  * This account will only be used by Site Recovery for the push installation, and to update the Mobility service.
-* Check that the /etc/hosts file on the source Linux server has entries that map the local hostname to IP addresses associated with all network adapters.
-* Install the latest openssh, openssh-server, and openssl packages on the computer that you want to replicate.
-* Ensure that Secure Shell (SSH) is enabled and running on port 22.
-* Enable SFTP subsystem and password authentication in the sshd_config file:
+- Ensure that there’s network connectivity between the Linux computer and the process server.
+
+- On the machine for which you enable replication, you need an account that's a root user on the source Linux server:
+
+  - You specify this account when you set up Site Recovery. Then the process server uses this account to install the Mobility service when replication is enabled.
+
+  - This account will only be used by Site Recovery for the push installation, and to update the Mobility service.
+
+- Check that the /etc/hosts file on the source Linux server has entries that map the local hostname to IP addresses associated with all network adapters.
+
+- Install the latest openssh, openssh-server, and openssl packages on the computer that you want to replicate.
+
+- Ensure that Secure Shell (SSH) is enabled and running on port 22.
+
+- Enable SFTP subsystem and password authentication in the sshd_config file:
+
   1. To do this, sign in as root.
+
   2. Find the line that begins with PasswordAuthentication, in the /etc/ssh/sshd_config file. Uncomment the line and change the value to yes.
+
   3. Find the line that begins with Subsystem and uncomment the line.
+
   4. Restart the sshd service.
 
 ### Note the VM private IP address
@@ -131,7 +164,9 @@ Every VM you want to replicate must have the mobility service installed. In orde
 For every machine you want to replicate you will need to find and note down the IP address of the machine:
 
 1. In the Azure Stack Portal, click on the VM.
+
 2. On the Resource menu, click Networking.
+
 3. Note down the private IP address.
 
     ![List Azure Stack VM Extensions Output](images/azs-browser-networking-private-ip.png)
@@ -139,10 +174,15 @@ For every machine you want to replicate you will need to find and note down the 
 ## Step 2. Creating a new vault and setting a replication goal
 
 1. In the Public Azure portal navigate to **Create a resource** > **Management Tools** > **Backup and Site Recovery (OMS)**.
+
 2. In **Name** enter the name you wish to call the vault.
+
 3. In **Resource group**, create or select a resource group.
+
 4. In **Location** choose UK South.
+
 5. Select **OK** and the vault will be deployed
+
 6. To quickly access the vault simply right click and select **Pin to dashboard**.
 
     ![List Azure Stack VM Extensions Output](images/azs-browser-recovery-vault.png)
@@ -150,10 +190,15 @@ For every machine you want to replicate you will need to find and note down the 
 ### Selecting a replication goal
 
 1. On the **Recovery Services vaults** tab on Public Azure, select the vault you have created.
+
 2. Select the **Site Recovery** tab under **Getting Started**.
+
 3. Select **Prepare Infrastructure**.
+
 4. In Protection goal > **Where are your machines located**, select **On-premises**.
+
 5. In **Where do you want to replicate your machines**, select **To Azure**.
+
 6. In **Are your machines virtualized**, select **Not virtualized / Other**. Then select OK.
 
     ![List Azure Stack VM Extensions Output](images/azs-browser-recovery-vault-configuration.png)
@@ -167,7 +212,9 @@ For every machine you want to replicate you will need to find and note down the 
     ![List Azure Stack VM Extensions Output](images/azs-browser-recovery-infrastructure-configuration.png)
 
 2. Download the Microsoft Azure Site Recovery Unified Setup.
+
 3. Download the vault registration key and transfer it to the configuration server.
+
 4. Run the Unified Setup on the configuration server VM on Azure Stack.
 
 ### Running Azure Site Recovery Unified Setup
@@ -193,10 +240,10 @@ Now install the Azure Site Recovery Unified Setup:
     ![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step3.png)
 
 5. In **Internet Settings**, specify how the Provider running on the configuration server connects to Azure Site Recovery over the Internet. Make sure you've allowed the required URLs.
-    * If you want the Provider to connect directly, select **Connect directly to Azure Site Recovery without a proxy server**.
+    - If you want the Provider to connect directly, select **Connect directly to Azure Site Recovery without a proxy server**.
 
     ![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step4a.png)
-    * If the existing proxy requires authentication, or if you want to use a custom proxy for the Provider connection, select **Connect to Azure Site Recovery using a proxy server**, and specify the address, port, and credentials.
+    - If the existing proxy requires authentication, or if you want to use a custom proxy for the Provider connection, select **Connect to Azure Site Recovery using a proxy server**, and specify the address, port, and credentials.
 
     ![List Azure Stack VM Extensions Output](images/azs-siterecovery-installer-step4b.png)
 
@@ -233,8 +280,11 @@ After registration finishes, the server should become option when selecting **Co
 In Public Azure, select and verify target resources.
 
 1. In **Prepare infrastructure** > **Target**, select the Azure subscription you want to use.
+
 2. Specify the target deployment model.
+
 3. Site Recovery checks that you have one or more compatible Azure storage accounts and networks. If it doesn't find them, you need to create at least one storage account and virtual network, in order to complete the wizard.
+
 4. Select **OK**.
 
     ![List Azure Stack VM Extensions Output](images/azs-browser-recovery-infrastructure-configuration3.png)
@@ -242,14 +292,23 @@ In Public Azure, select and verify target resources.
 ## Step 5: Enable replication
 
 1. Select the final tab **Replication Settings**.
+
 2. Select **Create and Associate** and specify a policy name.
+
 3. In **RPO threshold**, specify the recovery point objective (RPO) limit.
-    * Recovery points for replicated data are created in accordance with the time set.
-    * This setting does not affect replication, which is continuous. It simply issues an alert if the threshold limit is reached without a recovery point being created.
+
+    - Recovery points for replicated data are created in accordance with the time set.
+
+    - This setting does not affect replication, which is continuous. It simply issues an alert if the threshold limit is reached without a recovery point being created.
+
 4. In **Recovery point retention**, Specify how long each recovery point is kept. Replicated VMs can be recovered to any point in the specified time window.
+
 5. In **App-consistent snapshot frequency**, specify how often application-consistent snapshots are created.
-    * A app-consistent snapshot is a point-in-time snapshot of the app data inside the VM.
-    * Volume Shadow Copy Service (VSS) ensures that apps on the VM are in a consistent state when the snapshot is taken.
+
+    - A app-consistent snapshot is a point-in-time snapshot of the app data inside the VM.
+
+    - Volume Shadow Copy Service (VSS) ensures that apps on the VM are in a consistent state when the snapshot is taken.
+
 6. Select **OK** to create the policy.
 
     ![List Azure Stack VM Extensions Output](images/azs-browser-recovery-infrastructure-configuration2.png)
@@ -265,24 +324,33 @@ After the setup has complete if you navigate to the configuration servers deskto
 Make sure you've completed all the tasks in **Step 1: Preparation of VMs**. On Public Azure then enable replication as follows:
 
 1. Under **Protected items** in the vault select **Replicated items**.
+
 2. Select **+Replicate**.
+
 3. In Source, select **On-premises**.
+
 4. In **Source location** select the configuration server you want to use.
+
 5. In Machine type, select Physical machines.
+
 6. Select the process server (configuration server). Then click OK.
 
     ![List Azure Stack VM Extensions Output](images/azs-browser-replication-source.png)
 
 7. In Target, select the **subscription** and the **Post-failover resource group** in which you want to create the VMs after failover. Choose the **Post-failover deployment model** that you want to use for the failed-over VMs.
+
 8. Select the Public Azure storage account in which you want to store replicated data or create a new storage account.
+
 9. Select **Configure now** for selected machines to apply the network setting to all machines you select for protection. Select **Configure later** if you want to select the Azure network separately for each machine.
+
 10. Select or create a new Azure network and subnet to which Azure VMs connect when they're created after failover.
 
     ![List Azure Stack VM Extensions Output](images/azs-browser-replication-target.png)
 
 11. In Physical Machines, click **+Physical machine**. Specify the name and IP address of each machine and the operating system you want to replicate.
-    * Use the internal IP address of the machine.
-    * If you specify the public IP address replication might not work as expected.
+    - Use the internal IP address of the machine.
+
+    - If you specify the public IP address replication might not work as expected.
 
     ![List Azure Stack VM Extensions Output](images/azs-browser-replication-machine.png)
 
@@ -295,8 +363,9 @@ Make sure you've completed all the tasks in **Step 1: Preparation of VMs**. On P
     ![List Azure Stack VM Extensions Output](images/azs-browser-replication-settings.png)
 
 14. Click **Enable Replication**.
+
 15. Track progress of the Enable Protection job in Settings > Jobs > Site Recovery Jobs. After the Finalize Protection job runs, the machine is ready for failover.
-    * The VM will need to synchronize before a failover can take place. You can see synchronization progress of the VM in the vault.
+    - The VM will need to synchronize before a failover can take place. You can see synchronization progress of the VM in the vault.
 
 ## Step 6: Run a disaster recovery drill
 
@@ -307,10 +376,15 @@ You can run a test failover to Azure to make sure that everything's working as e
 Before you run a test failover, verify the machine properties, and make sure that they comply with Azure requirements. You can view and modify properties as follows:
 
 1. In Protected Items, click Replicated Items > VM.
+
 2. In the Replicated item pane, there's a summary of VM information, health status, and the latest available recovery points. Click Properties to view more details.
+
 3. In Compute and Network, modify settings as needed.
-    * You can modify the Azure VM name, resource group, target size, availability set, and managed disk settings.
-    * You can also view and modify network settings. These include the network/subnet to which the Azure VM is joined after failover, and the IP address that will be assigned to the VM.
+
+    - You can modify the Azure VM name, resource group, target size, availability set, and managed disk settings.
+
+    - You can also view and modify network settings. These include the network/subnet to which the Azure VM is joined after failover, and the IP address that will be assigned to the VM.
+
 4. In Disks, view information about the operating system and data disks on the VM.
 
 ### Run a test failover
@@ -318,18 +392,27 @@ Before you run a test failover, verify the machine properties, and make sure tha
 When you run a test failover, the following happens:
 
 1. A prerequisites check runs to make sure all of the conditions required for failover are in place.
+
 2. Failover processes the data using the specified recovery point:
-    * Latest processed: The machine fails over to the latest recovery point processed by Site Recovery. The time stamp is shown. With this option, no time is spent processing data, so it provides a low RTO (recovery time objective).
-    * Latest app-consistent.The machine fails over to the latest app-consistent recovery point.
-    * Custom. Select the recovery point used for failover.
+
+    - Latest processed: The machine fails over to the latest recovery point processed by Site Recovery. The time stamp is shown. With this option, no time is spent processing data, so it provides a low RTO (recovery time objective).
+
+    - Latest app-consistent.The machine fails over to the latest app-consistent recovery point.
+
+    - Custom. Select the recovery point used for failover.
+
 3. An Azure VM is created using the processed data.
+
 4. Test failover can automatically clean up Azure VMs created during the drill.
 
 ### Run a test failover for a VM
 
 1. In **Protected items** > **Replicated Items**, click the **VM** > **Test Failover**.
+
 2. For this walkthrough, we'll select to use the Latest processed recovery point.
+
 3. In Test Failover, select the target Azure network.
+
 4. Click OK to begin the failover.
 
     ![List Azure Stack VM Extensions Output](images/azs-browser-recovery-failover.png)
@@ -339,13 +422,21 @@ When you run a test failover, the following happens:
     ![List Azure Stack VM Extensions Output](images/azs-browser-recovery-testfailover.png)
 
 6. After the failover finishes, the replica Azure VM appears in the Azure portal > Virtual Machines. Check that the VM is the appropriate size, connected to the right network, and running.
+
 7. You should now be able to connect to the replicated VM in Azure.
+
     1. To connect to the VM via RDP you will need to assign a public IP to the VM.
+
     2. Navigate to the VMs **Network interface**.
+
     3. Under settings select **IP configurations**, then select the config.
+
     4. Enable **Public IP address**.
+
     5. Configure **IP address** and create a new IP and select **OK**.
+
     6. Click save to create the public IP for the VM.
+
 8. To delete Azure VMs created during the test failover, click Cleanup test failover on the VM. In Notes, save any observations associated with the test failover.
 
 ## Fail Over and Fail Back
@@ -357,10 +448,15 @@ Before you run a failover, if you want to connect to the machine in Azure after 
 Then run a failover as follows:
 
 1. In Settings > Replicated Items, click the machine > Failover.
+
 2. Select the recovery point that you want to use.
+
 3. Click OK to begin the failover. You can follow the failover progress on the Jobs page.
+
 4. After the failover finishes, the replica Azure VM appears in the Azure portal > Virtual Machines. If you prepared to connect after failover, check that the VM is the appropriate size, connected to the right network, and running.
-    * Remember to add a public IP to the VM if it needs one
+
+    - Remember to add a public IP to the VM if it needs one
+
 5. After verifying the VM, click Commit to finish the failover. This deletes all available recovery points.
 
 > [!CAUTION]
@@ -371,12 +467,19 @@ Then run a failover as follows:
 When you primary site is up and running again, you can fail back from Azure to Azure Stack. To do this, you need to download the Azure VM VHD, and upload it to Azure Stack.
 
 1. Shut down the Azure VM, so that the VHD can be downloaded.
+
 2. Navigate to your disks on the VM
+
 3. Select a **Disk**
+
 4. Navigate to **Disk Export**
+
 5. Select **Export** > **Download VHD**
+
 6. Upload the VHD to Azure Stack with these [*steps*](azs-how-add-disks.md).
+
 7. In the existing VM or new VM, attach the uploaded VHDs.
+
 8. Check that the OS Disk is correct, and start the VM.
 
 At this stage failback is complete.
