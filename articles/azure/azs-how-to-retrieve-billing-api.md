@@ -30,21 +30,23 @@ or
 https://login.windows.net/{tenant id}/oauth2/token
 ```
 The tenant ID can either be:
-* Default value for tenant independent keys - common
-* The tenant ID, for example, XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-* The tenant domain, for example, example.your.domain.com
+- Default value for tenant independent keys - common
+
+- The tenant ID, for example, XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+
+- The tenant domain, for example, example.your.domain.com
 
 ### Body
 
-* **grant_type** - This is the type of authentication scheme you will be using. In this example the value is "password".
+- **grant_type** - This is the type of authentication scheme you will be using. In this example the value is "password".
 
-* **clientid** - This value is unique to your CSP portal for example, XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+- **clientid** - This value is unique to your CSP portal for example, XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
 
-* **resource** - The resource the token will be used to access, https://api.partnercenter.microsoft.com.
+- **resource** - The resource the token will be used to access, https://api.partnercenter.microsoft.com.
 
-* **username** - The Azure Stack AAD account email.
+- **username** - The Azure Stack AAD account email.
 
-* **password** - The Azure Stack AAD account password.
+- **password** - The Azure Stack AAD account password.
 
 ### PowerShell Example:
 
@@ -112,9 +114,12 @@ curl -X "POST" "https://api.partnercenter.microsoft.com/generatetoken" \
 ## CSP API Request
 
 URL Endpoints will be determined from the CSP API guide:
-* https://docs.microsoft.com/en-us/partner-center/develop/partner-center-rest-api-reference
-* https://docs.microsoft.com/en-us/partner-center/develop/get-a-customer-s-utilization-record-for-azure
-* https://docs.microsoft.com/en-us/partner-center/develop/get-prices-for-microsoft-azure
+
+- https://docs.microsoft.com/en-us/partner-center/develop/partner-center-rest-api-reference
+
+- https://docs.microsoft.com/en-us/partner-center/develop/get-a-customer-s-utilization-record-for-azure
+
+- https://docs.microsoft.com/en-us/partner-center/develop/get-prices-for-microsoft-azure
 
 ### PowerShell Example:
 
