@@ -16,7 +16,7 @@ toc_mdlink: ostack-vid-overview.md
 
 # Openstack Horizon dashboard overview video
 
-This video provides an overview of the OpenStack Horizon dashboard that you can use to manage your UKCloud for OpenStack service. Click the image below to watch the video.
+This video provides an overview of the OpenStack Horizon dashboard which can be used to manage your UKCloud for OpenStack service. Click the image below to watch the video.
 
 [![OpenStack Horizon dashboard overview](images/ostack-vid-overview.png)](https://vimeo.com/305934797)
 
