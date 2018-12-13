@@ -50,7 +50,7 @@ As an example, let's boot an instance and run some arbitrary commands at boot ti
     ```
     
     > [!NOTE]
-    > Tou must include the `#cloud-config` line at the top of the file.
+    > You must include the `#cloud-config` line at the top of the file.
 
 3. Boot an instance using the CLI, adding `--user-data user-data.txt` to the end of the boot command.
 
