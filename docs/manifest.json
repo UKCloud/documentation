@@ -4658,6 +4658,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-sso-login.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-sso-login.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-horizon-update-instance-metadata-restartonfail.png",
       "output": {
         "resource": {
@@ -5142,6 +5153,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ptl-my-calls-request.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ptl-my-calls-request.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ptl-new-contact.png",
       "output": {
         "resource": {
@@ -5153,10 +5175,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ptl-tab-new-ticket.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ptl-tab-new-ticket.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ptl-update-password.png",
       "output": {
         "resource": {
           "relative_path": "articles/openstack/images/ptl-update-password.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ptl_mnu-my-calls.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ptl_mnu-my-calls.png"
         }
       },
       "is_incremental": false,
@@ -5202,7 +5246,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-gs.html",
-          "hash": "5+Z29ePjg2MfUC22PeP+UA=="
+          "hash": "DLAAeN4NYGDA+xHZM/OgYQ=="
         }
       },
       "is_incremental": false,
@@ -5239,6 +5283,18 @@
         ".html": {
           "relative_path": "articles/openstack/ostack-how-create-load-balancer.html",
           "hash": "NYwJQz8xTAvwxEVJZ7qy/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-create-users.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-create-users.html",
+          "hash": "1AVn/A4EmxnZI8ZYgYFMWQ=="
         }
       },
       "is_incremental": false,
@@ -5430,7 +5486,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "w8/liHkonyDJw4JbOlJOIg=="
+          "hash": "g1adruqgYhJO8Mmf3SzlXA=="
         }
       },
       "is_incremental": false,
