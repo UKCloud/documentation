@@ -26,19 +26,32 @@ This guide is intended for users who want to learn more about UKCloud for OpenSt
 
 ## Logging in to the OpenStack Horizon dashboard
 
-1. Go to the URL provided in your welcome email.
+To manage your OpenStack projects, you can log in to the OpenStack Horizon dashboard via our Single Sign-On (SSO) service, using your UKCloud Portal credentials. Additionally, if you've set up two-factor authentication (2FA) in the Portal, when logging in using your Portal credentials, you'll be prompted for a 2FA code.
 
-    The examples in this guide use `https://cor00005.cni.ukcloud.com/`.
+1. Go to the URL provided in your welcome email, for example, `https://cor00005.cni.ukcloud.com/`.
 
-2. Enter your login credentials and click **Connect**.
+2. From the **Authenticate using** list, select:
+
+    - **Keystone Credentials** if your account has not been migated to SSO
+    - **UKCloud SSO** if your account has been migrated to SSO
 
     ![Horizon login page](images/ostack-horizon-login.png)
 
-3. After logging in, the first screen you'll see is the *Overview* page.
+3. If you selected **Keystone Credentials**, enter your UKCloud Portal login credentials and click **Connect**.
+
+    If you selected **UKCloud SSO** click **Connect**. You'll be redirected to the SSO login page, where you can enter your username and password and click **Log in**.
+
+    ![SSO Login Page](images/ostack-horizon-sso-login.PNG)
+
+    If you've set up two-factor authentication (2FA) in the Portal, you'll be prompted for a 2FA code.
+
+4. After logging in, the first screen you'll see is the *Overview* page.
 
     From here you can get a summary of your project and view your resource usage and the quotas configured on the project.
 
     ![Horizon Overview page](images/ostack-horizon-welcome.png)
+
+For more information about the Horizon dashboard, see the [*Red Hat OpenStack Platform 10 Introduction to the OpenStack Dashboard*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/pdf/introduction_to_the_openstack_dashboard/Red_Hat_OpenStack_Platform-10-Introduction_to_the_OpenStack_Dashboard-en-US.pdf).
 
 ## Creating your network infrastructure
 
@@ -508,15 +521,35 @@ Whatever library or automation tools you choose to use, you'll need to know a fe
 
 2. On the *Access and Security* page, select the *API Access* tab.
 
-3. On the *API Access* tab, you can see all the relevant API endpoints for making connections to the various OpenStack subsystems, including the **Identify** endpoint, which provides the initial authentication process, that you'll typically need when configuring connections.
+3. On the *API Access* tab, you can see all the relevant API endpoints for making connections to the various OpenStack subsystems, including the **Identify** endpoint, which provides the initial authentication process that you'll typically need when configuring connections.
 
     You can also download your user's OpenStack RC file for use in the following section.
+    
+    > [!NOTE]
+    > If your account is SSO-enabled, download the v3 RC file.
 
     ![Download OpenStack RC File button on Access & Security page](images/ostack-horizon-btn-download-rc-file.png)
 
+4. If your account is enabled for SSO, you'll need to add the following items to the RC file you downloaded in the previous step.
+
+   ``` none
+   export OS_AUTH_TYPE="v3oidcpassword"
+   export OS_IDENTITY_PROVIDER="sso"
+   export OS_PROTOCOL="oidc"
+   export OS_CLIENT_ID=""
+   export OS_CLIENT_SECRET=""
+   export OS_DISCOVERY_ENDPOINT="https://idp.ukcloud.com/auth/realms/client-assured/.well-known/openid-configuration
+   ```
+   
+    - The `client_id` for Corsham is `cni.1.cor00005`
+
+    - The `client_id` for Farnborough is `cni.1.frn00006`
+
+    - You can set the `client_secret` to any value
+
 ## Using the OpenStack command-line client
 
-The OpenStack project provides a command‑line client that enables you to access the project API through easy‑to‑use commands. For example, the Compute service provides a NOVA command‑line client.
+The OpenStack project provides a command‑line client that enables you to access the project API through easy‑to‑use commands. For example, the compute service provides a NOVA command‑line client.
 
 You can run the commands from the command line, or include the commands in scripts to automate tasks. If you provide OpenStack credentials, such as your user name and password, you can run these commands on any computer.
 
@@ -589,4 +622,4 @@ network mounted onto the host hypervisor.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
