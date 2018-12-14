@@ -34,7 +34,7 @@ These disks require that you create a storage account to store the disks. The di
 
 3. Navigate to **Disks** > **+Add data disk**.
 
-    ![List Azure Stack VM Extensions Output](images/azs-browser-disk-creation.png)
+    ![Azure Stack disk creation 1](images/azs-browser-disk-creation.png)
 
 4. Edit the options for your new Disk.
 
@@ -46,15 +46,15 @@ These disks require that you create a storage account to store the disks. The di
 
     - **Size**: This is where you specify the size of the new disk.
 
-    - **Storage container**: This is where you specify the storage container for the disk. Find the storage account where you VM's OS disk is located and then create a new.
+    - **Storage container**: This is where you specify the storage container for the disk. Find the storage account where your VM's OS disk is located and then create a new.
 
     - **Container**. Select this container as the location for the new disk.
 
     - **Storage blob name**: This is the blob where the disk will be stored.
 
-    ![List Azure Stack VM Extensions Output](images/azs-browser-disk-creation2.png)
+    ![Azure Stack disk creation 2](images/azs-browser-disk-creation2.png)
 
-5. Select Ok and the new disk will be added to the VM.
+5. Select Ok and the new disks will be added to the VM.
 
 ## Using the portal to add existing VM's
 
@@ -70,7 +70,7 @@ These disks require that you create a storage account to store the disks. The di
 
 6. Navigate to the storage account you uploaded the .vhd file to > select the container you uploaded the .vhd file to and click **Select**.
 
-    ![List Azure Stack VM Extensions Output](images/azs-browser-disk-attaching.png)
+    ![Azure Stack disk creation 3](images/azs-browser-disk-attaching.png)
 
 7. Finally click **OK** then **Save**.
 
@@ -86,7 +86,7 @@ Please ensure the disk is has been detached from its original VM.
 
 4. In **Source blob** select **Browse**.
 
-5. Navigate to the storage container which contains the disk you wish to add to the VM, then navigate to the container where the dis resides.
+5. Navigate to the storage container which contains the disk you wish to add to the VM, then navigate to the container where the disk resides.
 
 6. Finally click **Select** > **OK** > **Save**
 
@@ -203,9 +203,9 @@ $DataDiskVhd3 = "DataDisk3"
 $DataDisk3 = '{0}vhds/{1}-{2}.vhd' -f $StorageAccount.PrimaryEndpoints.Blob.ToString(), $VMName.ToLower(), $DataDiskVhd3
 
 # Applies the additional disks properties
-$VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name $DataDiskVhd1 -Caching 'ReadOnly' -DiskSizeInGB 10 -Lun 1  -VhdUri $DataDisk1 -CreateOption Empty
-$VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name $DataDiskVhd2 -Caching 'ReadOnly' -DiskSizeInGB 10 -Lun 2 -VhdUri $DataDisk2 -CreateOption Empty
-$VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name $DataDiskVhd3 -Caching 'ReadOnly' -DiskSizeInGB 10 -Lun 3 -VhdUri $DataDisk3 -CreateOption Empty
+$VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name $DataDiskVhd1 -Caching 'ReadOnly' -DiskSizeInGB 10 -Lun 0  -VhdUri $DataDisk1 -CreateOption Empty
+$VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name $DataDiskVhd2 -Caching 'ReadOnly' -DiskSizeInGB 10 -Lun 1 -VhdUri $DataDisk2 -CreateOption Empty
+$VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name $DataDiskVhd3 -Caching 'ReadOnly' -DiskSizeInGB 10 -Lun 2 -VhdUri $DataDisk3 -CreateOption Empty
 
 # Create the virtual machine.
 Write-Host "Creating virtual machine"
@@ -238,7 +238,7 @@ Update-AzureRmVM -ResourceGroupName "myResourceGroup" -VM $VirtualMachine
 
 ## Next Steps
 
-Now you know how do add disks to VM's this guide will be needed in the following guides:
+Now you know how to add disks to VM's this guide will be needed in the following guides:
 
 - [How to setup disaster recovery for Azure Stack VMs to Azure](azs-how-setup-recovery-portal.md)
 
