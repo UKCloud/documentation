@@ -22,3 +22,39 @@ In this guide, you learn how to increase the availability and reliability of you
 An Availability Set is a logical grouping capability that you can use in Azure to ensure that the VM resources you place within it are isolated from each other when they are deployed within an Azure datacenter. Azure ensures that the VMs you place within an Availability Set run across multiple physical servers, compute racks, storage units, and network switches. If a hardware or Azure software failure occurs, only a subset of your VMs are impacted, and your overall application stays up and continues to be available to your customers. Availability Sets are an essential capability when you want to build reliable cloud solutions.
 
 Let’s consider a typical VM-based solution where you might have four front-end web servers and 2 back-end VMs hosting databases. With Azure Stack, you’d want to define two availability sets before you deploy your VMs: one availability set for the web tier and one availability set for the back tier. When you create a new VM you can then specify the availability set as a parameter to the `az vm` create command, and Azure Stack automatically ensures that the VMs you create within the available set are isolated across multiple physical hardware resources. If the physical hardware that one of your Web Server or back-end VMs is running on has a problem, you know that the other instances of your Web Server and back-end VMs remain running because they are on different hardware.
+
+## Creating an availability set via the portal
+
+1. The first step when initially creating an availability set is to create the resource group the availability set
+
+    ![Microsoft Azure availability set step 1](images/azs-portal-create-availability-set1.png)
+
+2. t
+
+    ![Microsoft Azure availability set step 2](images/azs-portal-create-availability-set2.png)
+
+3. t
+
+    ![Microsoft Azure availability set step 3](images/azs-portal-create-availability-set3.png)
+
+4. t
+
+    ![Microsoft Azure availability set step 4](images/azs-portal-create-availability-set4.png)
+
+5. t
+
+    ![Microsoft Azure availability set step 5](images/azs-portal-create-availability-set5.png)
+
+6. t
+
+    ![Microsoft Azure availability set step 6](images/azs-portal-create-availability-set6.png)
+
+7. t
+
+    ![Microsoft Azure availability set step 7](images/azs-portal-create-availability-set7.png)
+
+## Creating an availability set via PowerShell
+
+## Feedback
+
+ If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [*UKCloud Ideas*](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
