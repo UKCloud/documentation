@@ -46,3 +46,7 @@
   items:
   - name: UKCloud for OpenStack Service Scope
     href: ostack-sco.md
+- name: Videos
+  items:
+  - name: OpenStack Horizon dashboard overview
+    href: ostack-vid-overview.md
