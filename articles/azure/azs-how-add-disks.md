@@ -56,7 +56,7 @@ These disks require that you create a storage account to store the disks. The di
 
 5. Select Ok and the new disks will be added to the VM.
 
-## Using the portal to add existing VM's
+## Using the portal to add disks to existing VM's
 
 1. Ensure the existing disk you want to add to your VM is on you local machine as a .vhd file. Upload this .vhd to a new Container in your VM's storage account.
 
@@ -234,7 +234,7 @@ Update-AzureRmVM -ResourceGroupName "myResourceGroup" -VM $VirtualMachine
 ```
 
 > [!IMPORTANT]
-> Remember each time you add a disk to increase the **Lun** (Logical Unit Number).
+> Remember each time you add a disk to increase the **LUN** (Logical Unit Number).
 
 ## Next Steps
 
