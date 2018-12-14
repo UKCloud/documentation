@@ -153,7 +153,7 @@ Every VM you want to replicate must have the mobility service installed. In orde
 
   2. Find the line that begins with PasswordAuthentication, in the /etc/ssh/sshd_config file. Uncomment the line and change the value to yes.
 
-  3. Find the line that begins with Subsystem and uncomment the line.
+  3. Find the line that begins with **Subsystem** and uncomment the line.
 
   4. Restart the sshd service.
 
@@ -207,7 +207,7 @@ For every machine you want to replicate you will need to find and note down the 
 
 1. On the **Source Prepare** Tab Select **+Configuration Server**.
 
-    ![List Azure Stack VM Extensions Output](images/azs-browser-recovery-infrastructure-configuration.png)
+    ![Azure Stack recovery infrastructure configuration](images/azs-browser-recovery-infrastructure-configuration.png)
 
 2. Download the Microsoft Azure Site Recovery Unified Setup.
 
@@ -286,7 +286,7 @@ In Public Azure, select and verify target resources.
 
 4. Select **OK**.
 
-    ![Azure site frecovery infrastructure 2](images/azs-browser-recovery-infrastructure-configuration3.png)
+    ![Azure site recovery infrastructure 1](images/azs-browser-recovery-infrastructure-configuration3.png)
 
 ## Step 5: Enable replication
 
@@ -310,7 +310,7 @@ In Public Azure, select and verify target resources.
 
 6. Select **OK** to create the policy.
 
-    ![Azure site frecovery infrastructure 3](images/azs-browser-recovery-infrastructure-configuration2.png)
+    ![Azure site frecovery infrastructure 2](images/azs-browser-recovery-infrastructure-configuration2.png)
 
 ### Adding admin account
 
