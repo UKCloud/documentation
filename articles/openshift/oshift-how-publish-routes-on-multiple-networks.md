@@ -67,7 +67,7 @@ application-a   application-a-routersharding.cnap-demo.frn00006.cna.ukcloud.com 
 
 Now to see that your route has been published you can describe the route and see where its been exposed or you can review the routes in the default router by opening a session to the router pod and reviewing the configuration:
 
-Find a router pod - in this case labelled router-<buildno>-<uniqueid>
+Find a router pod - in this case labelled `router-<buildno>-<uniqueid>`
 
 ```
 $ oc project default
