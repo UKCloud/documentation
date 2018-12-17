@@ -26,7 +26,7 @@ To complete the steps in this guide you must have access to and a working knowle
 
 ### High level overview
 
-Firstly an explanation of what gets deployed. The cluster will have frontend loadbalancers that sit outside OpenShift that essentially do TCP passthrough of incoming traffic to the OpenShift routers deployed inside your cluster. As a cluster admin you can see the OpenShift routers viewing the ‘default' project. You will also have another set of routers that run on the community network facing nodes that provide termination of inbound traffic from the community network.
+Firstly an explanation of what gets deployed. The cluster will have frontend loadbalancers that sit outside OpenShift that essentially do TCP passthrough of incoming traffic to the OpenShift routers deployed inside your cluster. As a cluster admin you can see the OpenShift routers by viewing the ‘default' project. You will also have another set of routers that run on the community network facing nodes that provide termination of inbound traffic from the community network.
 
 ![high-level overview of inbound data flows](images/oshift-sharding-network-flows.png)
 
@@ -44,25 +44,25 @@ First I'll create a project called routersharding and the 3 applications to demo
 
 ```
 $ oc new-project routersharding
-Now using project "routersharding" on server "https://console.1-1-209-f44e8f:8443".
+Now using project "routersharding" on server "https://console.x-y-zzz-abcdef:8443".
  
-$ oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git --name=application-a
+$ oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git --name=application-1
  
-$ oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git --name=application-b
+$ oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git --name=application-2
  
-$ oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git --name=application-c
+$ oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git --name=application-3
  
 $ oc get svc
 NAME            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
-application-a   ClusterIP   172.30.144.215   <none>        8080/TCP   1m
-application-b   ClusterIP   172.30.122.177   <none>        8080/TCP   1m
-application-c   ClusterIP   172.30.247.162   <none>        8080/TCP   1m
+application-1   ClusterIP   x.y.144.215   <none>        8080/TCP   1m
+application-2   ClusterIP   x.y.122.177   <none>        8080/TCP   1m
+application-3   ClusterIP   x.y.247.162   <none>        8080/TCP   1m
  
-$ oc expose svc application-a
-route "application-a" exposed
+$ oc expose svc application-1
+route "application-1" exposed
 $ oc get routes
 NAME            HOST/PORT                                                         PATH      SERVICES        PORT       TERMINATION   WILDCARD
-application-a   application-a-routersharding.cnap-demo.frn00006.cna.ukcloud.com             application-a   8080-tcp                 None
+application-1   application-1-routersharding.demo-env.region1.cna.ukcloud.com             application-1   8080-tcp                 None
 ```
 
 Now to see that your route has been published you can describe the route and see where its been exposed or you can review the routes in the default router by opening a session to the router pod and reviewing the configuration:
@@ -71,7 +71,7 @@ Find a router pod - in this case labelled `router-<buildno>-<uniqueid>`
 
 ```
 $ oc project default
-Now using project "default" on server "https://console.1-1-209-f44e8f:8443".
+Now using project "default" on server "https://console.x-y-zzz-abcdef:8443".
  
 $ oc get pods
 NAME                       READY     STATUS    RESTARTS   AGE
@@ -87,8 +87,8 @@ Remotely launch an interactive shell in a router and look at routes json file to
 
 ```
 $ oc rsh router-4-bjqz2
-sh-4.2$ cat /var/lib/haproxy/router/routes.json | grep application-a-routersharding
-    "Host": "application-a-routersharding.cnap-demo.frn00006.cna.ukcloud.com",
+sh-4.2$ cat /var/lib/haproxy/router/routes.json | grep application-1-routersharding
+    "Host": "application-1-routersharding.demo-env.region1.cna.ukcloud.com",
 ``` 
 
 Similarly we can see that no routes are currently published on the router-secondary pods
@@ -121,37 +121,37 @@ Now we need to switch back to our application project and make the changes to ou
 
 ```
 $ oc project routersharding
-Now using project "routersharding" on server "https://console.1-1-209-f44e8f:8443".
+Now using project "routersharding" on server "https://console.x-y-zzz-abcdef:8443".
 ```
  
 First we expose the route on the default router as before
 
 ```
-$ oc expose svc application-b
-route "application-b" exposed
+$ oc expose svc application-2
+route "application-2" exposed
 # we can apply the label to expose our route on the secondary router with the following command
-$ oc label route application-b "router=secondary"
-route "application-b" labeled
+$ oc label route application-2 "router=secondary"
+route "application-2" labeled
 ``` 
 
 By describing the route we can see it has been exposed on both routers now (see "exposed on" lines below)
 
 ```
-$ oc describe route application-b
-Name:           application-b
+$ oc describe route application-2
+Name:           application-2
 Namespace:      routersharding
 Created:        3 minutes ago
-Labels:         app=application-b
+Labels:         app=application-2
             router=secondary
 Annotations:        openshift.io/host.generated=true
-Requested Host:     application-b-routersharding.cnap-demo.frn00006.cna.ukcloud.com
+Requested Host:     application-2-routersharding.demo-env.region1.cna.ukcloud.com
               exposed on router router 3 minutes ago
               exposed on router router-secondary 2 minutes ago
 Path:           <none>
 TLS Termination:    <none>
 Insecure Policy:    <none>
 Endpoint Port:      8080-tcp
-Service:    application-b
+Service:    application-2
 Weight:     100 (100%)
 Endpoints:  10.128.4.24:8080
 ```
@@ -162,10 +162,10 @@ Reviewing the routes on the router-secondary pods as before also shows our route
 $ oc rsh router-secondary-2-f2p8z
 sh-4.2$ cat /var/lib/haproxy/router/routes.json
 {
-  "routersharding:application-b": {
-    "Name": "application-b",
+  "routersharding:application-2": {
+    "Name": "application-2",
     "Namespace": "routersharding",
-    "Host": "application-b-routersharding.cnap-demo.frn00006.cna.ukcloud.com",
+    "Host": "application-2-routersharding.demo-env.region1.cna.ukcloud.com",
     "Path": "",
     "TLSTermination": "",
     "Certificates": null,
@@ -179,10 +179,10 @@ sh-4.2$ cat /var/lib/haproxy/router/routes.json
       "openshift.io/host.generated": "true"
     },
     "ServiceUnits": {
-      "routersharding/application-b": 100
+      "routersharding/application-2": 100
     },
     "ServiceUnitNames": {
-      "routersharding/application-b": 256
+      "routersharding/application-2": 256
     },
     "ActiveServiceUnits": 1,
     "ActiveEndpoints": 1
@@ -197,7 +197,7 @@ First we edit the existing default router to tell it not to select routes that h
 
 ```
 $ oc project default
-Now using project "default" on server "https://console.1-1-209-f44e8f:8443".
+Now using project "default" on server "https://console.x-y-zzz-abcdef:8443".
  
 $ oc set env dc/router ROUTE_LABELS='isolated != true'
 deploymentconfig "router” updated
@@ -206,22 +206,22 @@ deploymentconfig "router” updated
 We can now create a new basic route with that label and see that it doesn’t appear on any router
 
 ```
-$ oc expose svc application-c --labels="isolated=true"
-route "application-c" exposed
+$ oc expose svc application-3 --labels="isolated=true"
+route "application-3" exposed
  
-$ oc describe route application-c
-Name:           application-c
+$ oc describe route application-3
+Name:           application-3
 Namespace:      routersharding
 Created:        19 seconds ago
 Labels:         isolated=true
 Annotations:        openshift.io/host.generated=true
-Requested Host:     application-c-routersharding.cnap-demo.frn00006.cna.ukcloud.com
+Requested Host:     application-3-routersharding.demo-env.region1.cna.ukcloud.com
 Path:           <none>
 TLS Termination:    <none>
 Insecure Policy:    <none>
 Endpoint Port:      8080-tcp
  
-Service:    application-c
+Service:    application-3
 Weight:     100 (100%)
 Endpoints:  10.129.2.20:8080
 ```
@@ -230,9 +230,9 @@ Notice that this doesn’t appear to be exposed on any routers - we can check th
 
 ```
 $ oc project default
-Now using project "default" on server "https://console.1-1-209-f44e8f:8443".
+Now using project "default" on server "https://console.x-y-zzz-abcdef:8443".
 $ oc rsh router-4-bjqz2
-sh-4.2$ cat /var/lib/haproxy/router/routes.json | grep application-c-routersharding
+sh-4.2$ cat /var/lib/haproxy/router/routes.json | grep application-3-routersharding
 <no results>
 ```
  
@@ -240,7 +240,7 @@ Similarly its not appearing on our secondary router either:
 
 ```
 $ oc rsh router-secondary-2-f2p8z
-sh-4.2$ cat /var/lib/haproxy/router/routes.json | grep application-c-routersharding
+sh-4.2$ cat /var/lib/haproxy/router/routes.json | grep application-3-routersharding
 <no results>
 ```
  
@@ -248,39 +248,39 @@ Now we can just expose this route on the secondary routers by tagging it with th
 
 ```
 $ oc project routersharding
-Now using project "routersharding" on server "https://console.1-1-209-f44e8f:8443".
+Now using project "routersharding" on server "https://console.x-y-zzz-abcdef:8443".
  
-$ oc label route application-c  "router=secondary"
-route "application-c" labeled
+$ oc label route application-3  "router=secondary"
+route "application-3" labeled
  
-$ oc describe route application-c
-Name:           application-c
+$ oc describe route application-3
+Name:           application-3
 Namespace:      routersharding
 Created:        3 minutes ago
 Labels:         isolated=true
             router=secondary
 Annotations:        openshift.io/host.generated=true
-Requested Host:     application-c-routersharding.cnap-demo.frn00006.cna.ukcloud.com
+Requested Host:     application-3-routersharding.demo-env.region1.cna.ukcloud.com
               exposed on router router-secondary 4 seconds ago
 Path:           <none>
 TLS Termination:    <none>
 Insecure Policy:    <none>
 Endpoint Port:      8080-tcp
  
-Service:    application-c
+Service:    application-3
 Weight:     100 (100%)
 Endpoints:  10.129.2.20:8080
 # notice how this route now is showing as exposed on router-secondary. We can verify this as before.
 $ oc project default
-Now using project "default" on server "https://console.1-1-209-f44e8f:8443".
+Now using project "default" on server "https://console.x-y-zzz-abcdef:8443".
 $ oc rsh router-secondary-2-f2p8z
 $ oc rsh router-secondary-2-f2p8z
 sh-4.2$ cat /var/lib/haproxy/router/routes.json
 {
-  "routersharding:application-b": {
-    "Name": "application-b",
+  "routersharding:application-2": {
+    "Name": "application-2",
     "Namespace": "routersharding",
-    "Host": "application-b-routersharding.cnap-demo.frn00006.cna.ukcloud.com",
+    "Host": "application-2-routersharding.demo-env.region1.cna.ukcloud.com",
     "Path": "",
     "TLSTermination": "",
     "Certificates": null,
@@ -294,18 +294,18 @@ sh-4.2$ cat /var/lib/haproxy/router/routes.json
       "openshift.io/host.generated": "true"
     },
     "ServiceUnits": {
-      "routersharding/application-b": 100
+      "routersharding/application-2": 100
     },
     "ServiceUnitNames": {
-      "routersharding/application-b": 256
+      "routersharding/application-2": 256
     },
     "ActiveServiceUnits": 1,
     "ActiveEndpoints": 1
   },
-  "routersharding:application-c": {
-    "Name": "application-c",
+  "routersharding:application-3": {
+    "Name": "application-3",
     "Namespace": "routersharding",
-    "Host": "application-c-routersharding.cnap-demo.frn00006.cna.ukcloud.com",
+    "Host": "application-3-routersharding.demo-env.region1.cna.ukcloud.com",
     "Path": "",
     "TLSTermination": "",
     "Certificates": null,
@@ -319,7 +319,7 @@ sh-4.2$ cat /var/lib/haproxy/router/routes.json
       "openshift.io/host.generated": "true"
     },
     "ServiceUnits": {
-      "routersharding/application-c": 100
+      "routersharding/application-3": 100
     },
     "ServiceUnitNames": null,
     "ActiveServiceUnits": 1,
