@@ -38,7 +38,7 @@ The three scenarios shown in the above diagram are as follows:
 
 We'll be using some basic example applications to demonstrate publishing routes in each of these three application scenarios.
 
-###  
+### Process and code examples 
 
 First I'll create a project called routersharding and the 3 applications to demonstrate with.
 
