@@ -108,13 +108,13 @@ sh-4.2$ cat /var/lib/haproxy/router/routes.json
 {}
 ```
 
-So that shows the basic route is now published - which fulfils the application 1 scenario shown in the diagram above. In order to make it appear on the secondary router and achieve the scenario of application 2 we need to label the route appropriately so that its is also exposed on the router-secondary pods. By default we setup the secondary routers with a label based route selector of `"router=secondary"`. 
+So that shows the basic route is now published - which fulfils the application 1 scenario shown in the diagram above. In order to make it appear on the secondary router and achieve the scenario of application 2 we need to label the route appropriately so that its is also exposed on the router-secondary pods. By default we setup the secondary routers with a label based route selector of `"router-secondary=true"`. 
 
 Here we see the route selector label setup on the secondary router - this indicates that this route will publish routes that are labelled with `"router=secondary"`
 
 ```
 $ oc describe dc router-secondary | grep ROUTE_LABELS
-      ROUTE_LABELS:                router=secondary
+      ROUTE_LABELS:                router-secondary=true
 ``` 
 
 Now we need to switch back to our application project and make the changes to our application b to meet scenario 2
@@ -130,7 +130,7 @@ First we expose the route on the default router as before
 $ oc expose svc application-2
 route "application-2" exposed
 # we can apply the label to expose our route on the secondary router with the following command
-$ oc label route application-2 "router=secondary"
+$ oc label route application-2 "router-secondary=true"
 route "application-2" labeled
 ``` 
 
@@ -142,7 +142,7 @@ Name:           application-2
 Namespace:      routersharding
 Created:        3 minutes ago
 Labels:         app=application-2
-            router=secondary
+            router-secondary=true
 Annotations:        openshift.io/host.generated=true
 Requested Host:     application-2-routersharding.demo-env.region1.cna.ukcloud.com
               exposed on router router 3 minutes ago
@@ -250,7 +250,7 @@ Now we can just expose this route on the secondary routers by tagging it with th
 $ oc project routersharding
 Now using project "routersharding" on server "https://console.x-y-zzz-abcdef:8443".
  
-$ oc label route application-3  "router=secondary"
+$ oc label route application-3  "router-secondary=true"
 route "application-3" labeled
  
 $ oc describe route application-3
@@ -258,7 +258,7 @@ Name:           application-3
 Namespace:      routersharding
 Created:        3 minutes ago
 Labels:         isolated=true
-            router=secondary
+            router-secondary=true
 Annotations:        openshift.io/host.generated=true
 Requested Host:     application-3-routersharding.demo-env.region1.cna.ukcloud.com
               exposed on router router-secondary 4 seconds ago
@@ -329,6 +329,9 @@ sh-4.2$ cat /var/lib/haproxy/router/routes.json
 ```
 
 The above shows both the routes we’ve created in this demo now on router-secondary.
+
+> [!NOTE]
+> If you would like to expose applications on a private network the above logic still applies. The only differences are that the deployment config for the router is called router-private and the route label required to expose your routes is router-private=true.
 
 ## Further reading
 
