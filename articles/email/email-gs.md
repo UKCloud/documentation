@@ -33,9 +33,13 @@ Zimbra administration console.
 The Zimbra Collaboration Suite that underpins UKCloud's email offering provides a wide range of client connectivity options.
 
 - An advanced webmail client allows the full feature set within the suite to be accessed from anywhere that internet connectivity is available and from virtually any platform via a wide-range of supported browsers
+
 - A cross-platform desktop application is provided extending the functionality of the web client by enabling email to be read and composed while offline
+
 - IMAP and POP3 clients are supported
+
 - Calendar and contacts can be accessed via the CalDav and CardDav protocols
+
 - Full Microsoft Outlook integration is supported using the Zimbra Collaboration Suite Connector for Outlook, which utilizes a full MAPI provider that leverages the Microsoft-standard MAPI interface for contacts, calendar, and other functionality not supported by IMAP or POP
 
 The service provides enterprise-class functionality for end-users, on a per-mailbox, per- month pricing model. It offers several options for mailbox access, including POP3, IMAP4 and SMTP --- all with TLS (SSL)
@@ -69,7 +73,9 @@ Refer to the *Zimbra Collaboration Supported Systems* document for the most up t
 <https://wiki.zimbra.com/wiki/Zimbra_Releases/8.7.0/Supported_Systems>
 
 - Firefox and Chrome on Windows, Mac, Linux
+
 - Internet Explorer on Windows
+
 - Safari on Mac and Windows
 
 ## Accessing the Zimbra administration console
@@ -79,6 +85,7 @@ The Zimbra administration console is a browser-based user interface for managing
 The way you access the administration console depends on which security domain you use:
 
 - The Assured OFFICIAL console is accessible from the internet or via the PSN Assured network (depending on the service selected)
+
 - The Elevated OFFICIAL console is accessible only via the PSN Protected network (and other interconnecting networks)
 
 We'll provide you with the URL for the administration console along with your account details.
@@ -118,7 +125,9 @@ To create a user account:
     If the account is an administrator account, you need to add it to the administration group at this point, to grant the necessary rights within the domain. To do this:
 
     - In the **Find** field under *Add distribution lists to the account*, enter `admingroup` and click **Search**.
+
     - Select the resulting `admingroup@<yourdomain>`, for example `admingroup@example.com`.
+
     - Click **Add** at the bottom of the dialog box to make the new account a member of the group.
 
     ![New Account Member Of](images/email-zimbra-admin-new-account-member-of.png)
@@ -136,7 +145,9 @@ The user can log in to and use the account immediately. It will take up to an ho
 Zimbra offers standard HTML, advanced JavaScript, and mobile web clients that you can log into. The web clients include mail, calendar, address book, and task functionality. You can select the client to use when you log in.
 
 - The advanced web client includes Ajax capability and offers a full set of web collaboration features. This web client works best with newer browsers and fast internet connections.
+
 - The standard web client is a good option when internet connections are slow or if you prefer HTML-based messaging for navigating within your mailbox.
+
 - The mobile web client provides an experience optimized for smaller screen formats available on mobile devices.
 
 Typically when you log in, you'll see the advanced Zimbra web client. You can switch to a different version if you prefer by using the **Version** list on the login screen. If the Zimbra web client detects that the screen resolution is 800x600, you're automatically redirected to the standard web client. You can still select the advanced web client but will see a warning message suggesting the use of the standard client for a better screen view. When connecting to Zimbra using a mobile web browser, Zimbra will automatically detect and default to the mobile web
@@ -299,7 +310,9 @@ To install the Zimbra Connector for Outlook:
 6. When prompted, enter the following details:
 
     - **Server Name** is mail.skyscapecs.net
+
     - Select the **Use Secure Connection** checkbox
+
     - Enter the **Email Address** and **Password** of your account
 
     ![Zimbra Server Configuration Settings](images/email-outlook-zimbra-config.png)
@@ -313,14 +326,19 @@ To install the Zimbra Connector for Outlook:
 In this guide, you've learned how to:
 
 - Access the Zimbra administration console and create new mailbox accounts
+
 - Access your mailbox using the Zimbra web and desktop clients
+
 - Configure IMAP and POP3 clients
+
 - Install the Zimbra Connector for Outlook
 
 For more information about using Email and Collaboration as a Service, see the following articles on the Knowledge Centre:
 
 - [*How to use UKCloud's email service with your application*](email-how-use-with-app.md)
+
 - [*How to set up Email and Collaboration on an iPhone or iPad*](email-how-setup-iphone.md)
+
 - [*How to setup Email on Android, Windows or BlackBerry mobile devices*](email-how-setup-android.md)
 
 ## Glossary

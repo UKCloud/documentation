@@ -21,6 +21,7 @@ toc_mdlink: vmw-how-upload-media-iso-flp.md
 You may find you need to upload ISO (DVD/CD) or FLP (floppy disk) media to vCloud that have already been provided by UKCloud. These media can then:
 
 - Be consumed by users within your organisation
+
 - Facilitate the creation of VMs from scratch, which can then be saved to your catalog for future deployment
 
 ## Uploading media
@@ -44,6 +45,7 @@ To upload media to the catalog:
 4. In the *Upload Media & Other* dialog box you can:
 
     - Paste in a URL for the ISO or FLP media
+
     - Browse to the ISO or FLP file on your local device and select it (for this to work, you need to have Java JRE available on your device)
 
     ![Upload Media & Other dialog box](images/vmw-vcd-upload-media-source.png)

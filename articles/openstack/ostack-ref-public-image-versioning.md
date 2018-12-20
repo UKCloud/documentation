@@ -28,6 +28,7 @@ In our public catalog, we keep the original version of the image in the catalog 
 This means that:
 
 - The LTS (original version) is predictable both in deployment state and UUID within OpenStack
+
 - The current version is not predictable in deployment as patches are applied and the UUID changes when the image is updated
 
 ## Image naming convention

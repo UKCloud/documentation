@@ -29,6 +29,7 @@ This guide covers the steps you need to follow to get your Walled Garden up and 
 This guide is intended for customers who have:
 
 - Completed the CDSZ Walled Garden assurance wrap
+
 - Been approved to have a Base Implementation of the Walled Garden to allow data to pass between the Assured and Elevated security domains on the UKCloud platform
 
 ## Before you begin
@@ -45,10 +46,15 @@ You can track the progress of the service request in the [My Calls](https://port
 During the provisioning of the Walled Garden service, we'll ask you for some additional information via the service request:
 
 - The customer account in which you would like the Walled Garden VDC to be provisioned, if different from the customer completing the Walled Garden application.
+
 - Whether you plan to have a single or dual site solution.
+
 - How many VDCs you need to be set up in each security domain.
+
 - If you're connecting new or existing VDCs to the Walled Garden VDC.
+
   - If you're connecting to existing VDCs, we'll need to know information such as NFT details, customer account, and so on.
+
 - The external source IP addresses from which you'd like to access the Assured VDC (up to a maximum of 50).
 
     These IP addresses are the locations from which you can build and test the environment (for example, offices or end user premises).
@@ -72,6 +78,7 @@ You also need to create the rules that allow connectivity between the different 
 There are two options for networking between the VDCs in the Walled Garden service:
 
 - **Option 1:** Create static routes between the VDCs; this is the simplest option for connecting VDCs
+
 - **Option 2:** Use NAT rules on top of the static routes; this option may be appropriate if you want to abstract the static routes
 
 The diagrams below provide examples for both options.

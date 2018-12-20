@@ -35,6 +35,7 @@ Storage policies enable you to choose where the VM sits on the underlying infras
 The storage profiles are all at the same storage tier (for example, Basic) and all make use of the array in the same way (that is, the same mix of flash, SAS and NL-SAS). We provide three storage profiles to provide you with the option of influencing where the VM/data is located.
 
 - **STANDARD-Any** is the default and allows for the VM to be placed as UKCloud determine.
+
 - **STANDARD-Storage1** and **STANDARD-Storage2** are the profiles that allow the storage placement to be decided by you. VMs associated with **Storage1** are located on different data stores and disks compared to VMs associated with **Storage2**.
 
 ![Storage policy types](images/vmw-storage-policy-types.png)

@@ -8,7 +8,7 @@
     <title>How to access syslog data for your advanced gateway | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to access syslog data for your advanced gateway | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -87,16 +87,21 @@
 <h2 id="overview">Overview</h2>
 <p>Your NSX edge is globally configured to send syslog messages to a specific IP address (<code>100.127.255.250</code>). By configuring a new network or IP address within your virtual data centre (VDC) and deploying a collector with the syslog IP address, you can access your NSX edge syslog data. You can then use this data to check:</p>
 <ul>
-<li>Allowed and denied network traffic</li>
-<li>Load balancer statistics</li>
-<li>Load balancer health</li>
+<li><p>Allowed and denied network traffic</p>
+</li>
+<li><p>Load balancer statistics</p>
+</li>
+<li><p>Load balancer health</p>
+</li>
 </ul>
 <p>This guide explains the network configuration required to provision a syslog collector within your VDC to receive syslog information direct from your NSX gateway.</p>
 <h2 id="collecting-syslog-data-for-a-single-nsx-edge">Collecting syslog data for a single NSX edge</h2>
 <p>The simplest scenario is to gather syslog data from a single NSX edge into one collector. To do this you need to create a routable location for the syslog IP address, by either:</p>
 <ul>
-<li><a href="#adding-the-syslog-ip-address-to-an-existing-nic"><em>Adding the syslog IP address to an existing network interface card (NIC) on a routed subnet</em></a></li>
-<li><a href="#configuring-a-new-routed-network"><em>Configuring a new routed network</em></a></li>
+<li><p><a href="#adding-the-syslog-ip-address-to-an-existing-nic"><em>Adding the syslog IP address to an existing network interface card (NIC) on a routed subnet</em></a></p>
+</li>
+<li><p><a href="#configuring-a-new-routed-network"><em>Configuring a new routed network</em></a></p>
+</li>
 </ul>
 <h3 id="adding-the-syslog-ip-address-to-an-existing-nic">Adding the syslog IP address to an existing NIC</h3>
 <ol>
@@ -117,11 +122,16 @@
 <ol>
 <li><p>Create a new routed network with the following details:</p>
 <ul>
-<li><strong>Org Network Name:</strong> Customer defined</li>
-<li><strong>Gateway:</strong> <code>100.127.255.249</code></li>
-<li><strong>Subnet Mask:</strong> <code>255.255.255.248</code></li>
-<li><strong>DNS:</strong> Customer defined</li>
-<li><strong>Static IP Pool:</strong> <code>100.127.255.250-100.127.255.254</code></li>
+<li><p><strong>Org Network Name:</strong> Customer defined</p>
+</li>
+<li><p><strong>Gateway:</strong> <code>100.127.255.249</code></p>
+</li>
+<li><p><strong>Subnet Mask:</strong> <code>255.255.255.248</code></p>
+</li>
+<li><p><strong>DNS:</strong> Customer defined</p>
+</li>
+<li><p><strong>Static IP Pool:</strong> <code>100.127.255.250-100.127.255.254</code></p>
+</li>
 </ul>
 <p>You can find more detailed steps for creating a routed network in <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a>.</p>
 </li>
@@ -146,17 +156,24 @@
 <li><p>Create a firewall rule on the syslog edge to allow syslog traffic from the source edges' TRANSIT IPs (<code>172.26.</code><em><code>x</code></em><code>.</code><em><code>x</code></em> in Assured or <code>172.26.</code><em><code>LOWER OCTET</code></em><code>.</code><em><code>x</code></em> in Elevated) through to the syslog server IP.</p>
 <p>You can create individual rules using the following suggestions:</p>
 <ul>
-<li><em><code>SOURCE TRANSIT IP</code></em><code>:Any</code> to <code>100.127.255.250</code> on UDP</li>
-<li><code>Any:Any</code> to <code>100.127.255.250:514</code> on UDP</li>
-<li><em><code>NFT TRANSIT CIDR/SUBNET</code></em><code>:Any</code> to <code>100.127.255.250:514</code> on UDP</li>
+<li><p><em><code>SOURCE TRANSIT IP</code></em><code>:Any</code> to <code>100.127.255.250</code> on UDP</p>
+</li>
+<li><p><code>Any:Any</code> to <code>100.127.255.250:514</code> on UDP</p>
+</li>
+<li><p><em><code>NFT TRANSIT CIDR/SUBNET</code></em><code>:Any</code> to <code>100.127.255.250:514</code> on UDP</p>
+</li>
 </ul>
 </li>
 <li><p>On each of the source edges, create a static route to direct traffic to the syslog edge. Use the following settings:</p>
 <ul>
-<li><strong>Applied On:</strong> <em><code>nft_network</code></em></li>
-<li><strong>Name:</strong> Syslog traffic (or any other name you prefer)</li>
-<li><strong>Network:</strong> <code>100.127.255.248/29</code></li>
-<li><strong>Next Hop IP:</strong> The TRANSIT IP address of the syslog edge</li>
+<li><p><strong>Applied On:</strong> <em><code>nft_network</code></em></p>
+</li>
+<li><p><strong>Name:</strong> Syslog traffic (or any other name you prefer)</p>
+</li>
+<li><p><strong>Network:</strong> <code>100.127.255.248/29</code></p>
+</li>
+<li><p><strong>Next Hop IP:</strong> The TRANSIT IP address of the syslog edge</p>
+</li>
 </ul>
 <p>Syslog packets from each source edge will now be forwarded to the syslog edge, with the source of the syslog traffic being the TRANSIT IP of the source edge.</p>
 </li>

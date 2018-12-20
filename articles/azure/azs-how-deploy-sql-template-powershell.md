@@ -21,6 +21,7 @@ This document explains how to deploy SQL Always On Cluster using ARM Template to
 It will guide you through the process of:
 
 - obtaining ARM Template
+
 - deploying [ARM Template for SQL Always On](https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master/sql-2016-ha)
 
 ## What is an ARM Template?
@@ -77,12 +78,19 @@ SQL Always On Repository - [sql-2016-ha](https://github.com/Azure/AzureStack-Qui
 This template deploys two SQL Server 2016 SP1 Enterprise / Standard / Developer instances in the Always On Availability Group using the PowerShell DSC Extension. It creates the following resources:
 
 - A network security group
+
 - A Virtual Network
+
 - Four Storage Accounts (One for AD, One for SQL, One for File Share witness and One for VM diagnostic)
+
 - Four public IP address (One for AD, Two for each SQL VM and One for Public LB bound to SQL Always On Listener)
+
 - One external load balancer for SQL VMs with Public IP bound to SQL always On Listener
+
 - One VM (WS2016) configured as Domain Controller for a new forest with a single domain
+
 - Two VM (WS2016) configured as SQL Server 2016 SP1 Enterprise / Standard / Developer and clustered.
+
 - One VM (WS2016) configured as File Share Witness for the cluster.
 
 ### Notes
@@ -90,8 +98,11 @@ This template deploys two SQL Server 2016 SP1 Enterprise / Standard / Developer 
 The images used to create this deployment are:
 
 - AD - Windows Server 2016 Image
+
 - SQL Server - SQL Server 2016 SP1 on Windows Server 2016 Image
+
 - SQL IAAS Extension 1.2.18
+
 - Latest DSC Extension (2.26.0 or higher)
 
 > [!WARNING]
@@ -119,7 +130,9 @@ The images used to create this deployment are:
 ### Configuration
 
 - Each SQL VMs will have two 128GB data disks.
+
 - The template configures the SQL instances with contained database authentication set to true.
+
 - The DNS suffix for public IP addresses by default will be `azurestack.external` unless you change it to `azure.ukcloud.com`
 
 ## Overview of the ARM Template deployment process for Azure Stack using Service Principal Name (SPN) authentication
@@ -315,13 +328,18 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 ## Troubleshooting DSC Extensions
 
 - [PowerShell DSC Extension](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-overview)
+
   - `C:\WindowsAzure\Logs\Plugins\Microsoft.Powershell.DSC\<version number>` 
+
 - [DSC Configuration](https://powershell.org/2017/10/10/using-azure-desired-state-configuration-part-iv/) and [cmdlets](https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmdscextensionstatus?view=azurermps-6.5.0)
+
   - To view Status of the DSC deployment run:
 
     ```powershell
     Get-AzureRmVMDscExtension -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>"
     Get-AzureRmVMDscExtensionStatus -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>" | select -ExpandProperty DscConfigurationLog
     ```
+
 - [Event Viewer Logs](http://www.codewrecks.com/blog/index.php/2014/06/15/deploying-web-site-with-powershell-dsc-part-3/)
+
   -  Errors are located in: `Application And Service Logs / Microsoft / Windows / Desired State Configuration`

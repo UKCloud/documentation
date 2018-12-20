@@ -136,9 +136,13 @@ If you change from a UKCloud‑provided firewall to your own firewall, we'll red
 When you create a new vOrg, we'll provide you with a number of usable IP addresses per project, depending on the network you are connecting to:
 
 - Internet - 5 x usable IPs
+
 - N3 - 1 x usable IP
+
 - PSN Assured - 1 x usable IP
+
 - Janet - 1 x usable IP
+
 - PSN Protected - 1 x usable IP
 
 You can request additional IP addresses as required via a Service Request. If you ask for a large number of IP addresses in a single request, we may ask you to provide further information to support your request.
@@ -196,6 +200,7 @@ If you need VDC communication between VDCs that reside either in different regio
 In the Elevated platform each IPsec tunnel consumes either:
 
 - An external (UKCloud) IP, if the tunnel is configured between VDCs
+
 - An external (PSN Protected) IP, if the tunnel is configured between a VDC and an endpoint on the PSN Protected network
 
 ![VDC communication using IPsec VPN in the Elevated platform (Cloud Fabric)](images/fig14_fabric_ipsec_vpn_elevated.png)
@@ -225,13 +230,17 @@ When connecting to the different UKCloud networks it's important to ensure that 
 In the Assured platform, you'll always have an internet connected edge. Access to other networks is as follows:
 
 - For N3 you'll need to go through the UKCloud aggregation process
+
 - For PSN Assured you'll need to get accreditation for the service you wish to provide from the PSN Authority
+
 - For Janet you'll need to engage with your Cloud Architect
 
 In the Elevated platform:
 
 - For PSN Protected you'll need to gain approval from the PSN Authority
+
 - For RLI you'll need to get approval from the MOD
+
 - For Cross Domain Security Zone services (Walled Garden, UKCloud Guard or SRA) you'll need to get the authorisation from your end-customer IA as well as the UKCloud SIRO
 
 The application processes haven't changed for any of these services, however it's important to be mindful about how you may have to design your architecture based on the network architecture you'll be deployed on. As an example, when connecting to the N3 network, you'll need to ensure that the N3 and internet networks aren't bridged. With the Cloud Fabric architecture and NFT architecture (shown in the two diagrams below respectively), you should ensure that VMs are not connected to both the internet and to N3

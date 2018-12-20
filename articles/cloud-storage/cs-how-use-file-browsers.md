@@ -22,7 +22,9 @@ UKCloud's Cloud Storage service is an object storage solution based on Dell EMC 
 Web applications can easily interact with the API, but the ability to browse the contents of the storage using a graphical client can be useful, as it provides a user friendly interface to the storage. This enables, for example:
 
 - Verification by developers that their applications or scripts work as intended with the storage
+
 - Bulk import or export of content by users
+
 - Easy maintenance and housekeeping of the objects in the storage system
 
 ECS provides two APIs that you can use to manage Cloud Storage: the S3 compatible API and the EMC ECS Atmos API.
@@ -33,6 +35,7 @@ ECS provides two APIs that you can use to manage Cloud Storage: the S3 compatibl
 In this article, we'll look at some of the many applications that enable you to browse an object storage system. We'll look at two categories:
 
 - [Windows applications](#windows-applications)
+
 - [Browser extensions for Chrome and Firefox](#browser-extensions)
 
 The inclusion of applications in this article should not be taken as an endorsement or recommendation of them by UKCloud. However, we have tested them with our Cloud Storage service and verified that they work correctly.
@@ -46,13 +49,18 @@ S3 API endpoints:
 - **Corsham (Assured)**
 
   - Internet: `cas.cor00005.ukcloud.com`
+
   - PSN Assured: `cas.cor00005.psnassured.ukcloud.com`
+
   - N3: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
   
+
 - **Farnborough (Assured)**
 
   - Internet: `cas.frn00006.ukcloud.com`
+
   - PSN Assured: `cas.frn00006.psnassured.ukcloud.com`
+
   - N3: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
 
 If you're using the ENHANCED option (geo-resilient storage), you can use either the Corsham or Farnborough endpoints. In the event of a site failure, there will be an outage to objects created on the failed site. UKCloud will bring these objects online in the other site within about 15 minutes.
@@ -86,6 +94,7 @@ To install and configure Cyberduck:
 
     - Ensure you enter the correct endpoint in the **Server** field, as shown in [API endpoints](#api-endpoints)
   
+
     - The **Access Key ID** is your User ID, which you can find in the *Storage* section of the UKCloud Portal
 
     - When you're done, click the **x** icon to close the dialog box
@@ -226,7 +235,9 @@ This guide has shown you how to create a new Cloud Storage user. For more inform
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
 - Cloud Storage Gateways
+
     - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+
     - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)

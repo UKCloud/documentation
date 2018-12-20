@@ -40,9 +40,13 @@ To secure your environment, we recommend that you deploy the OpenVPN appliance i
 After you've created the network, you'll need to configure the edge gateway to control access to the VMs in your environment by creating:
 
 - A Source NAT rule to allow the OpenVPN appliance outbound access to the internet.
+
 - A Destination NAT rule to allow inbound access from the internet.
+
 - A firewall rule to allow inbound access from the internet on port `443`.
+
 - One or more firewall rules to allow users connected to the OpenVPN appliance to access VMs on other networks for administration purposes. Note that all VPN users will be NATed to the IP address of the OpenVPN appliance.
+
 - One or more firewall rules to allow access from trusted environments to the OpenVPN appliance on the admin port (`943` by default, but can be changed).
 
 **More information!** [*How to create NAT rules*](vmw-how-create-nat-rules.md) and [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
@@ -160,15 +164,25 @@ To perform initial configuration:
 3. You'll be prompted to answer a series of questions:
 
     - **Licence agreement:** --- Enter `yes` to accept.
+
     - **Will this be the primary Access Server node?** --- Enter `yes`.
+
     - **Please specify the network interface and IP address to be used by the Admin Web UI** -- If the guest customisations were applied correctly, this should default to `eth0`, which should be configured with an IP address on the network you selected during deployment.
+
     - **Please specify the port number for the Admin Web UI** --- Enter your desired port number, or accept the default of `943`. A separate port is not strictly needed for administration but is recommended.
+
     - **Please specify the TCP port number for the OpenVPN Daemon** --- We recommend that you use the default of `443` where possible as the use of a non-standard port may cause problems when connecting from corporate networks.
+
     - **Should client traffic be routed by default through VPN?** --- Entering `yes` will prevent your client device from accessing any other networks (for example, your corporate network) while the VPN is connected. For ease of use, we suggest you answer `no` to this question.
+
     - **Should client DNS traffic be routed by default through the VPN?** --- If you answered `yes` to the previous question, all traffic will be routed through the VPN anyway, so your answer here will not matter. If you answered `no` to the previous question, you'll probably want to answer `no` to this question so that your DNS queries are answered by the usual servers.
+
     - **Use local authentication via internal DB?** --- Enter `yes` unless you want to authenticate users from an existing directory service (Active Directory/LDAP).
+
     - **Should private subnets be accessible to clients by default?** --- Answer `yes` to enable access to your cloud networks via the VPN.
+
     - **Do you wish to login to the Admin UI as "openvpn"?** --- Answer `yes` to create a local user account named `openvpn`. If you answer `no`, you'll need to set up a different user name and password.
+
     - **Please specify your OpenVPN-AS license key** --- If you've purchased a licence, enter the licence key, otherwise leave this blank.
 
 4. When you've completed the setup wizard, you'll need to create user accounts and passwords on the local operating system (unless you configured an LDAP directory).

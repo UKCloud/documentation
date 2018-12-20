@@ -8,7 +8,7 @@
     <title>How to create firewall rules | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create firewall rules | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -88,15 +88,21 @@
 <p>vCloud Director provides a fully featured layer 3 firewall to control transit from inside to outside security boundaries, and within the various VDC networks you create.</p>
 <p>When you specify networks or IP addresses, you can use:</p>
 <ul>
-<li>An individual IP address</li>
-<li>IP ranges separated by a dash (<code>-</code>)</li>
-<li>A CIDR, for example, <code>192.168.2.0/24</code></li>
-<li>The keywords <code>internal</code>, <code>external</code> or <code>any</code></li>
+<li><p>An individual IP address</p>
+</li>
+<li><p>IP ranges separated by a dash (<code>-</code>)</p>
+</li>
+<li><p>A CIDR, for example, <code>192.168.2.0/24</code></p>
+</li>
+<li><p>The keywords <code>internal</code>, <code>external</code> or <code>any</code></p>
+</li>
 </ul>
 <p>The steps for creating firewall rules vary depending on what type of edge gateway you're working with:</p>
 <ul>
-<li><a href="#creating-firewall-rules-for-an-advanced-gateway"><em>Creating firewall rules for an advanced gateway</em></a></li>
-<li><a href="#creating-firewall-rules-for-a-standard-edge"><em>Creating firewall rules for a standard edge</em></a></li>
+<li><p><a href="#creating-firewall-rules-for-an-advanced-gateway"><em>Creating firewall rules for an advanced gateway</em></a></p>
+</li>
+<li><p><a href="#creating-firewall-rules-for-a-standard-edge"><em>Creating firewall rules for a standard edge</em></a></p>
+</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
@@ -185,8 +191,10 @@
 <p>A common use case for a firewall rule is to allow SSH through from the internet. The following example uses allocated public IP addresses.</p>
 <p>When your VDC is provisioned in the:</p>
 <ul>
-<li>Assured OFFICIAL platform, you're assigned five public IP addresses</li>
-<li>Elevated OFFICIAL platform, you're assigned three PSN-P IP addresses</li>
+<li><p>Assured OFFICIAL platform, you're assigned five public IP addresses</p>
+</li>
+<li><p>Elevated OFFICIAL platform, you're assigned three PSN-P IP addresses</p>
+</li>
 </ul>
 <p>In the examples below, the source is <code>any</code> (any IP address within the VDC). The source port is also <code>any</code>. The destination is a public IP address and the destination port is <code>443</code> for HTTPS.</p>
 <h3 id="advanced-gateway">Advanced gateway</h3>
@@ -196,11 +204,16 @@
 <h2 id="next-steps">Next steps</h2>
 <p>In this article you've learned how to create firewall rules. For other edge gateway configuration tasks, see:</p>
 <ul>
-<li><a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a></li>
-<li><a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></li>
-<li><a href="vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a></li>
-<li><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></li>
-<li><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></li>
+<li><p><a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></p>
+</li>
+<li><p><a href="vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a></p>
+</li>
+<li><p><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></p>
+</li>
 </ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>

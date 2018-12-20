@@ -1,5 +1,5 @@
 ---
-title: How to create a load balancer | UKCloud Ltd
+title: How to create a load balancer using the Azure Stack portal | UKCloud Ltd
 description: Provides help for creating a load balancer on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
@@ -13,7 +13,7 @@ toc_fullpath: Users/How To/azs-how-create-load-balancer.md
 toc_mdlink: azs-how-create-load-balancer.md
 ---
 
-# How to create a load balancer
+# How to create a load balancer using the Azure Stack portal
 
 ## Overview
 
@@ -45,18 +45,27 @@ In this section we will create a load balancer with a public IP address.
 
 5. In the **Create load balancer** blade, enter the following information:
 
+
    - **Name** - The name of the load balancer.
+
 
    - **Type** - You can use internal load balancers to balance traffic from private IP addresses. Public load balancers can balance traffic originating from public IP addresses. For this example we will be creating a public load balancer.
 
+
    - **Public IP Address** - The public IP address that will be assigned to this load balancer. To create a new public IP address:
+
      - Click **Public IP address** on the **Create load balancer** blade.
+
      - Select **Create new** on the **Choose public IP address** blade.
+
      - Enter a name for the public IP address and click **OK**.
+
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
 
+
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
+
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
 
@@ -84,17 +93,24 @@ In this section we will create a virtual network and two virtual machines which 
 
 4. In the **Create virtual network** blade, enter the following information:
 
+
    - **Name** - The name of the virtual network.
+
 
    - **Address Space** - The virtual network's address range in CIDR notation (for example, 192.168.1.0/16).
 
+
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
+
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
+
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
 
+
    - **Subnet Name** - The name of the first subnet within the virtual network.
+
 
    - **Address Range** - The subnet's address range in CIDR notation (for example, 192.168.1.0/24). It must be contained by the address space of the virtual network. The address range of a subnet which is in use can't be edited.
 
@@ -131,8 +147,11 @@ In this section we will create a virtual network and two virtual machines which 
 
 6. In the **Settings** step, change any of the optional settings as required for your VM, then click **OK**. Ensure that the virtual network created earlier is selected and that the VM belongs to an availability set. To create a new availability set:
 
+
    - Click **Availability set** on the **Create virtual machine** blade.
+
    - Select **Create new** on the **Change availability set** blade.
+
    - Enter a name for the availability set and the number of fault domains and update domains, then click **OK**.
 
    ![Create virtual machine > Settings](images/azs-browser-vm-settings-as.png)
@@ -155,21 +174,30 @@ In this section we will create NSG rules to allow inbound traffic.
 
 5. In the **Add inbound security rule** blade, enter the following information:
 
+
    - **Source** - The source filter can be Any, an IP address range, or a default tag. It specifies the incoming traffic from a specific source IP address range that will be allowed or denied by this rule.
+
 
    - **Source port range** - Provide a single port, such as 80, or a port range, such as 1024-65535. This specifies from which ports traffic will be allowed or denied by this rule. Use an asterisk (\*) to allow traffic on any port.
 
+
    - **Destination** - The destination filter can be Any, an IP address range, or a default tag. It specifies the outgoing traffic for a specific destination IP address range that will be allowed or denied by this rule.
+
 
    - **Destination port range** - Provide a single port, such as 80, or a port range, such as 1024-65535. This specifies from which ports traffic will be allowed or denied by this rule. Use an asterisk (\*) to allow traffic on any port.
 
+
    - **Protocol** - Specify whether to allow inbound traffic using UDP, TCP or both.
+
 
    - **Action** - Choose whether the rule allows or denies the traffic specified.
 
+
    - **Priority** - Rules are processed in priority order; the lower the number, the higher the priority. We recommend leaving gaps between rules - 100, 200, 300, etc. - so that it's easier to add new rules without having to edit existing rules.
 
+
    - **Name** - The name of the security rule.
+
 
    - **Description** - A description of the security rule.
   
@@ -215,13 +243,18 @@ When creating a load balancer, you can use a health probe to monitor the status 
 
 5. In the **Add health probe** blade, enter the following information:
 
+
    - **Name** - The name of your health probe.
+
 
    - **Protocol** - The protocol that the health probe uses to monitor the status of your VMs.
 
+
    - **Port** - The port that the health probe uses to monitor the status of your VMs.
 
+
    - **Interval** - The number of seconds between probe attempts.
+
 
    - **Unhealthy threshold** - The number of consecutive probe failures that must occur before a virtual machine is considered unhealthy and is removed from the pool.
   
@@ -243,24 +276,36 @@ A load balancer rule defines how traffic is distributed between VMs. The rule li
 
 5. In the **Add load balancing rule** blade, enter the following information:
 
+
    - **Name** - The name of your load balancing rule.
+
 
    - **Frontend IP address** - Clients communicating with this load balancer on the selected IP address and service will have their traffic routed to the target virtual machine by this NAT rule.
 
+
    - **Protocol** - The protocol that the rule redirects traffic for.
+
 
    - **Port** - The front-end port that the rule listens on.
 
+
    - **Backend port** - You can choose to route traffic to the virtual machines in the back-end pool using a different port than the one clients use to communicate with the load balancer.
+
 
    - **Backend pool** - The virtual machines in the selected back-end pool will be the target for the load-balanced traffic of this rule. Select the pool that you created in the previous section.
 
+
    - **Health probe** - The selected probe is used by this rule to determine which virtual machines in the back-end pool are healthy and can receive load-balanced traffic. Select the probe that you created in the previous section.
 
+
    - **Session Persistence** - Session persistence specifies that traffic from a client should be handled by the same virtual machine in the back-end pool for the duration of a session. 
+
       - **None** specifies that successive requests from the same client may be handled by any virtual machine.
+
       - **Client IP** specifies that successive requests from the same client IP address will be handled by the same virtual machine. 
+
       - **Client IP and protocol** specifies that successive requests from the same client IP address and protocol combination will be handled by the same virtual machine.
+
 
    - **Idle timeout** - Keep a TCP or HTTP connection open without relying on clients to send keep-alive messages.
 

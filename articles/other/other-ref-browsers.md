@@ -23,28 +23,19 @@ This document outlines the browser requirement for UKCloud services.
 
 ## UKCloud for VMware
 
-For UKCloud for VMware, we recommend that you use the Mozilla Firefox Extended Support Release (ESR 52) 32-bit browser. This browser is supported by both the UKCloud Portal and by the Web Console for vCloud Director 8.20 (the version used by UKCloud for VMware).
+For UKCloud for VMware, vCloud Director 9.1 is compatible with many current and last major browser revisions.
+Version 9.1 of vCloud Director was tested by VMware and supports:
 
-Firefox ESR 52 is an older version of Firefox, updated with new security patches, that remains compatible with the plugin type that the vCloud Director Web Console uses on our platform. You can find Firefox ESR at:
+- Google Chrome 64
+- Mozilla Firefox 58
+- Microsoft Edge 41
+- Microsoft Internet Explorer 11
 
-<https://www.mozilla.org/en-US/firefox/organizations/>
+>Note: Flash must be enabled in the browser to access the vCloud Director Web Console.
 
-> [!NOTE]
-> Make sure you download ESR 52, which is the last ESR release to support legacy add-ons. Support for ESR 52 ends in August 2018. We plan to upgrade UKCloud for VMware to vCloud Director 9.1, which will eliminate the need for the Web Console plugin. For more information, see <https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/>. You should also make sure that you download the 32-bit version of the browser.
+>Note: Edge does not support plugins, so functions such as console redirection and OVF upload using the legacy UI do not work with Edge.
 
-Although Internet Explorer 8.*x* , 9.*x* and 10.*x* are supported by the vCloud Director 8.20 Web Console, if you've applied any group policy restrictions you may encounter problems.
-
-The vCloud Director Web Console has the following additional requirements:
-
-- Adobe Flash Player version 11.2 or later (32-bit version only)
-
-    > [!NOTE]
-    > This is a known issue with Adobe Flash Player version 27.0.0.170. If you encounter problems, make sure you update to version 27.0.0.183 or later.
-
-- JRE 1.6.0 update 10 or later installed and enabled (32-bit version only)
-
-> [!NOTE]
-> VMware are redeveloping the Flash-based UI for vCloud Director and replacing it with a fully-featured HTML5-based interface. The first part of this redeveloped UI (provding HTML5 options for advanced networking features) has been made available in vCloud Director 8.20. More features will move to an HTML5-based UI in future releases.
+> Note: Although Internet Explorer is supported by the vCloud Director, if you've applied any group policy restrictions you may encounter problems.
 
 ## UKCloud for OpenStack
 
@@ -67,7 +58,9 @@ High Performance Compute has the same browser requirements as [UKCloud for VMwar
 For the most up to date list of supported browsers for Email and Collaboration as a Service, refer to the [*Zimbra Collaboration Supported Systems*](https://wiki.zimbra.com/wiki/Zimbra_Releases/8.7.0/Supported_Systems) document.
 
 - Firefox and Chrome on Windows, Mac, Linux
+
 - Internet Explorer on Windows
+
 - Safari on Mac and Windows
 
 ## Feedback

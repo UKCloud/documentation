@@ -8,7 +8,7 @@
     <title>UKCloud for Microsoft Azure Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for Microsoft Azure Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,9 +94,12 @@
 <h3 id="iaas-compute">IaaS compute</h3>
 <p>Virtual machines (VMs) provide the basic building blocks of compute resource within UKCloud for Microsoft Azure. Each standard machine has a pre-allocated number of vCPUs, amount of memory and a temporary disk. The available sizes and families of VMs are continually increasing. Broadly, the following machine families are supported:</p>
 <ul>
-<li>Basic and Standard A-Series. CPU performance and memory configurations best suited for entry level workloads like development and test.</li>
-<li>Standard D-Series and DS-Series. Optimised CPU-to-memory configuration, making them suitable for most general-purpose applications. A subset of the D-series VMs also sport higher memory per CPU making them suitable for applications that require higher amounts of memory.</li>
-<li>Basic and Standard F-series. Optimised for CPU-intensive workloads so have a higher CPU to memory configurations.</li>
+<li><p>Basic and Standard A-Series. CPU performance and memory configurations best suited for entry level workloads like development and test.</p>
+</li>
+<li><p>Standard D-Series and DS-Series. Optimised CPU-to-memory configuration, making them suitable for most general-purpose applications. A subset of the D-series VMs also sport higher memory per CPU making them suitable for applications that require higher amounts of memory.</p>
+</li>
+<li><p>Basic and Standard F-series. Optimised for CPU-intensive workloads so have a higher CPU to memory configurations.</p>
+</li>
 </ul>
 <p>You can find the full list of supported machines <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes">here</a>.</p>
 <p>You can deploy VMs using the UKCloud for Microsoft Azure portal and other tooling.</p>
@@ -142,9 +145,12 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 <p>UKCloud manages the physical firewalls that face public and secure networks.</p>
 <p>You can deploy multiple gateway devices and configure the following using either the Azure Stack Portal GUI or API:</p>
 <ul>
-<li>Virtual networks – UKCloud for Microsoft Azure enables you to configure virtual private clouds, and create and manage your private address space within Azure. You can configure this via the UI, API or other tooling</li>
-<li>Load balancers (IPv4 only) – you can deploy basic load balancers VPN gateway – you can use the UKCloud for Microsoft Azure VPN gateway to create site-to-site VPNs to remote infrastructure</li>
-<li>Routing – basic custom defined routing can be configured on virtual networks</li>
+<li><p>Virtual networks – UKCloud for Microsoft Azure enables you to configure virtual private clouds, and create and manage your private address space within Azure. You can configure this via the UI, API or other tooling</p>
+</li>
+<li><p>Load balancers (IPv4 only) – you can deploy basic load balancers VPN gateway – you can use the UKCloud for Microsoft Azure VPN gateway to create site-to-site VPNs to remote infrastructure</p>
+</li>
+<li><p>Routing – basic custom defined routing can be configured on virtual networks</p>
+</li>
 </ul>
 <p><strong>Internet-facing solutions</strong> have 8 usable public IP addresses. You can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.</p>
 <h3 id="advanced-features">Advanced features</h3>
@@ -158,8 +164,10 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 <p>The availability of your virtual machines in UKCloud for Microsoft Azure follows the same principles of the Microsoft Azure Public Cloud, where customers achieve a higher service level availability based on how they architect the solution.</p>
 <p>The service levels are as follows:</p>
 <ul>
-<li>99.90% (a single VM deployed as a single instance deployed inside a zone)</li>
-<li>99.95% (a single VM with two instances deployed inside a zone)</li>
+<li><p>99.90% (a single VM deployed as a single instance deployed inside a zone)</p>
+</li>
+<li><p>99.95% (a single VM with two instances deployed inside a zone)</p>
+</li>
 </ul>
 <div class="TIP">
 <h5>Tip</h5>
@@ -185,9 +193,12 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 <h3 id="azure-marketplace">Azure Marketplace</h3>
 <p>UKCloud for Microsoft Azure includes access to a local version of the Azure Marketplace. The Marketplace contains a collection of services, applications, and resources customized for Azure Stack that you can deploy in your environment. Every Marketplace item has:</p>
 <ul>
-<li>An Azure Resource Manager template for resource provisioning</li>
-<li>Metadata, such as strings, icons, and other marketing collateral</li>
-<li>Formatting information to display the item in the portal</li>
+<li><p>An Azure Resource Manager template for resource provisioning</p>
+</li>
+<li><p>Metadata, such as strings, icons, and other marketing collateral</p>
+</li>
+<li><p>Formatting information to display the item in the portal</p>
+</li>
 </ul>
 <p>We've pre-populated the Marketplace with a variety of images and templates that have been identified as the most useful services. You can request additional resources are added, providied they are approved for use on Microsoft Azure Stack. Here is the full list of <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-marketplace-azure-items">available items</a>.</p>
 <p>You are responsible for ensuring that you have appropriate licensing and support in place for any item deployed from the Marketplace not licensed by UKCloud.</p>

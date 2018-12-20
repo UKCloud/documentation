@@ -55,7 +55,9 @@ Full details of the available service options are outlined in the Service Defini
 All storage is persistent and resilient to local hardware failures. Multiple storage options can be used to support different aspects of the application.
 
 - **Tier 1.** Fast storage ideal for data warehouses, fast transactional databases or randomly executing workloads.
+
 - **Tier 2.** General all-purpose storage, suitable for systems with human interactions or predictable work patterns.
+
 - **Cloud Storage.** Ideal for serving media content or as a medium-term repository; can be used to store Recovery Manager (RMAN)
     backups.
 
@@ -72,7 +74,9 @@ For installations of Oracle apps on top of the OS, it's best to have separate no
 You'll need to take into consideration future data growth while planning capacity, as this would also reflect on the capacity required for backups.
 
 - We do not guarantee storage performance, as it can be affected by many factors.
+
 - We do not provide IOPS figures for our storage offerings.
+
 - Workloads can use multiple storage profiles.
 
 ## Protection
@@ -108,7 +112,9 @@ You can specify Farnborough or Corsham as the site where you would like to have 
 We control the deployed versions of technology on the platform. This covers internal platform-supporting technologies, and any technology versions available to you.
 
 - Internally this includes, but isn't limited to, the Oracle Virtual Machine Manager and Oracle Virtual Machine Server versions, and the hardware version of the platform.
+
 - Externally this includes the available versions of the edge gateway and Oracle Enterprise Manager.
+
 - You can make additional configurations inside an OVM (such as implementing third-party software technologies). We do not support customer implementations inside a VM.
 
 ## Operating systems
@@ -160,8 +166,11 @@ In line with UKCloud's System Interconnect and Security Policy (SISP), we provid
 Users can access, manage and view the UKCloud for Oracle Software service, accessing only those features allowed by their role, in any of the following ways:
 
 - **Oracle Enterprise Manager.** The graphical interface for the creation and management of the Oracle environment.
+
 - **vCloud Director API.** Enables the programmatic creation and management of the Oracle edge gateway.
+
 - **vCloud Director graphical UI.** Provides a graphical interface to access the vCloud Director environment to manage the Oracle edge gateway (depending on assigned permissions).
+
 - **UKCloud Portal.** Enables the creation of Oracle compute services and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the Portal.
 
 You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the Oracle Virtual Machine Manager environment.

@@ -8,7 +8,7 @@
     <title>Getting Started Guide for Disaster Recovery as a Service | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for Disaster Recovery as a Service | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -100,24 +100,34 @@
 <p><img src="images/draas-zerto-recovery.png" alt="Recovery process"></p>
 <p>Two terms you may hear in connection with disaster recovery are recovery point objective (RPO) and recovery time objective (RTO).</p>
 <ul>
-<li>The RPO indicates the amount of data you can afford to lose in the event of a disaster. For example, if your application data changes fairly infrequently, your RPO can be higher as the data remains fairly static. However, if your application data is constantly changing, you'll need your RPO to be smaller to avoid significant loss of data in the event of a disaster.</li>
-<li>The RTO is the amount of time you can tolerate your application being unavailable in the event of a disaster. For example, if your application provides critical functionality, you'll need to bring it back online very quickly. However, for a less critical application, you may be able to tolerate a longer outage.</li>
+<li><p>The RPO indicates the amount of data you can afford to lose in the event of a disaster. For example, if your application data changes fairly infrequently, your RPO can be higher as the data remains fairly static. However, if your application data is constantly changing, you'll need your RPO to be smaller to avoid significant loss of data in the event of a disaster.</p>
+</li>
+<li><p>The RTO is the amount of time you can tolerate your application being unavailable in the event of a disaster. For example, if your application provides critical functionality, you'll need to bring it back online very quickly. However, for a less critical application, you may be able to tolerate a longer outage.</p>
+</li>
 </ul>
 <p>Because of the use of regular checkpoints (every few seconds), our Zerto-powered DRaaS provides a minimal RPO. The ability to use recovered VMs even before all the journal data has been promoted provides a good RTO as well.</p>
 <h2 id="before-you-begin">Before you begin</h2>
 <p>When you order DRaaS, UKCloud provides you with:</p>
 <ul>
-<li>The IP address (from the IP range you provided to UKCloud) of the Zerto Cloud Connector (ZCC) deployed in your recovery VDC; you'll need this to complete the setup of the site-to-site VPN between your local environment and your recovery VDC</li>
-<li>A link to the appropriate version of the Zerto Virtual Manager (ZVM) for you to deploy in your local environment</li>
-<li>A ZORG ID to identify your Zerto environment within the UKCloud platform</li>
-<li>Access to the Zerto Self-Service Portal (ZSSP) in the appropriate UKCloud zone, where you can trigger a failover</li>
+<li><p>The IP address (from the IP range you provided to UKCloud) of the Zerto Cloud Connector (ZCC) deployed in your recovery VDC; you'll need this to complete the setup of the site-to-site VPN between your local environment and your recovery VDC</p>
+</li>
+<li><p>A link to the appropriate version of the Zerto Virtual Manager (ZVM) for you to deploy in your local environment</p>
+</li>
+<li><p>A ZORG ID to identify your Zerto environment within the UKCloud platform</p>
+</li>
+<li><p>Access to the Zerto Self-Service Portal (ZSSP) in the appropriate UKCloud zone, where you can trigger a failover</p>
+</li>
 </ul>
 <p>You should consider the following:</p>
 <ul>
-<li>VMs must be powered on to be synchronised.</li>
-<li>The operating system used by the protected VMs must also be supported in the recovery site.</li>
-<li>Disaster Recovery as a Service captures every action. When a VM is deleted, the associated journal is also deleted.</li>
-<li>We provide a single default service profile. The details of this are available in the DRaaS Service Scope. We do not currently provide the option for you to create custom profiles.</li>
+<li><p>VMs must be powered on to be synchronised.</p>
+</li>
+<li><p>The operating system used by the protected VMs must also be supported in the recovery site.</p>
+</li>
+<li><p>Disaster Recovery as a Service captures every action. When a VM is deleted, the associated journal is also deleted.</p>
+</li>
+<li><p>We provide a single default service profile. The details of this are available in the DRaaS Service Scope. We do not currently provide the option for you to create custom profiles.</p>
+</li>
 </ul>
 <h3 id="system-requirements">System requirements</h3>
 <p>To use DRaaS, you must have a valid, centrally managed vSphere or HyperV estate. A single hypervisor is not sufficient.</p>
@@ -198,15 +208,19 @@
 <h3 id="create-a-recovery-vdc">Create a recovery VDC</h3>
 <p>To recover your VMs to the UKCloud platform, you must have a VDC in the intended recovery site. If you already have a compute service in the UKCloud site, you can use an existing VDC or you can create a new one using:</p>
 <ul>
-<li>The UKCloud Portal (for more information see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>)</li>
-<li>The UKCloud Portal API (for more information see the <a href="../portal/ptl-how-use-api.html"><em>How to use the UKCloud Portal API</em></a>)</li>
+<li><p>The UKCloud Portal (for more information see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>)</p>
+</li>
+<li><p>The UKCloud Portal API (for more information see the <a href="../portal/ptl-how-use-api.html"><em>How to use the UKCloud Portal API</em></a>)</p>
+</li>
 </ul>
 <p>If you don't already have a compute service in the UKCloud site or you'd prefer UKCloud to create the VDC for you, you can request this as part of your DRaaS Service Request.</p>
 <h3 id="set-up-your-local-environment">Set up your local environment</h3>
 <p>Before you can start using DRaaS, you need to prepare your local environment by:</p>
 <ul>
-<li>Installing the appropriate version of Zerto Virtual Manager (ZVM) in your local environment</li>
-<li>Creating a secure site-to-site VPN between your local environment and the UKCloud platform</li>
+<li><p>Installing the appropriate version of Zerto Virtual Manager (ZVM) in your local environment</p>
+</li>
+<li><p>Creating a secure site-to-site VPN between your local environment and the UKCloud platform</p>
+</li>
 </ul>
 <p>For more information, see <a href="../vmware/vmw-how-zerto-install-local.html"><em>How to install and configure Zerto in your local environment</em></a>.</p>
 <h3 id="configure-networking-on-the-recovery-site">Configure networking on the recovery site</h3>

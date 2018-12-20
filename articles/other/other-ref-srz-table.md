@@ -20,6 +20,7 @@ To assist you in understanding the concept of sites, regions and zones within th
 There are also two other articles in the Knowledge Centre that accompany this article and assist in explaining the Sites, regions and zones concept:
 
 - [*Understanding Sites, regions and zones*](other-ref-sites-regions-zones.md)
+
 - [*UKCloud services by region*](other-ref-services-by-region.md)
 
 ## Sites, regions and zones map

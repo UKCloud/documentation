@@ -8,7 +8,7 @@
     <title>Getting Started Guide for Secure Remote Access | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for Secure Remote Access | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -88,8 +88,10 @@
 <h3 id="intended-audience">Intended audience</h3>
 <p>This document is for customers who have:</p>
 <ul>
-<li>Completed the UKCloud Assurance Wrap</li>
-<li>Been approved to use the Secure Remote Access (SRA) service to manage services in the Elevated OFFICIAL security domain on the UKCloud platform</li>
+<li><p>Completed the UKCloud Assurance Wrap</p>
+</li>
+<li><p>Been approved to use the Secure Remote Access (SRA) service to manage services in the Elevated OFFICIAL security domain on the UKCloud platform</p>
+</li>
 </ul>
 <h2 id="post-approval">Post approval</h2>
 <p>Once the SRA Assurance Wrap has been approved, we'll raise a service request for the
@@ -100,35 +102,48 @@ won't be raised.)</p>
 <p>During creation of the UKCloud SRA vDC, we'll ask you for some additional information
 via the service request:</p>
 <ul>
-<li>Confirm the customer account number in Elevated as a new Org will be created under the account to contain the SRA vDC. The Org number will be used as an identifier when signing certificates.</li>
-<li>The preferred IP pool you want to use for your client devices. If the IP Pool you'd prefer is in use by another customer then another will have to be chosen. We'll inform you if this is the case.</li>
-<li>If you want to specify an IP from the IP pool for each device, we'll need you to supply the mapping.</li>
-<li>Any specified DNS servers.</li>
-<li>The Elevated Network Firewall Tenant (NFT) number and the Elevated organisation containing it for connection into Elevated.</li>
-<li>A certificate signing request for each remote access device.</li>
+<li><p>Confirm the customer account number in Elevated as a new Org will be created under the account to contain the SRA vDC. The Org number will be used as an identifier when signing certificates.</p>
+</li>
+<li><p>The preferred IP pool you want to use for your client devices. If the IP Pool you'd prefer is in use by another customer then another will have to be chosen. We'll inform you if this is the case.</p>
+</li>
+<li><p>If you want to specify an IP from the IP pool for each device, we'll need you to supply the mapping.</p>
+</li>
+<li><p>Any specified DNS servers.</p>
+</li>
+<li><p>The Elevated Network Firewall Tenant (NFT) number and the Elevated organisation containing it for connection into Elevated.</p>
+</li>
+<li><p>A certificate signing request for each remote access device.</p>
+</li>
 </ul>
 <h2 id="certificate-signing-request-generation">Certificate signing request generation</h2>
 <p>To enable SRA access, we'll need the certificate-signing request (CSR) from each remote access device you'll be using. The certificate-generation process will vary depending on the OS of the client device.</p>
 <h3 id="windows">Windows</h3>
 <p>Follow the steps below to generate the CSR for a Windows device.</p>
 <ol>
-<li>Open the Certificates MMC snap-in (click <strong>Start</strong>, click <strong>Run</strong>, type <strong>mmc</strong> and then press <strong>Enter</strong>) select <strong>Certificates</strong> and then <strong>Computer Account</strong>.</li>
-<li>In the console tree, double-click <strong>Personal</strong> and then click <strong>Certificates</strong>.</li>
-<li>On the <strong>Actions</strong> menu, point to <strong>All Tasks</strong>, point to <strong>Advanced Options</strong> and then click <strong>Create Custom Request</strong> to start the Certificate Enrolment wizard. Click <strong>Next</strong>.</li>
-<li>On the Custom request page, in the <strong>Templates</strong> list, we recommend using the <strong>Custom Request</strong> option as your domain policy may be incompatible with the SRA service.
+<li><p>Open the Certificates MMC snap-in (click <strong>Start</strong>, click <strong>Run</strong>, type <strong>mmc</strong> and then press <strong>Enter</strong>) select <strong>Certificates</strong> and then <strong>Computer Account</strong>.</p>
+</li>
+<li><p>In the console tree, double-click <strong>Personal</strong> and then click <strong>Certificates</strong>.</p>
+</li>
+<li><p>On the <strong>Actions</strong> menu, point to <strong>All Tasks</strong>, point to <strong>Advanced Options</strong> and then click <strong>Create Custom Request</strong> to start the Certificate Enrolment wizard. Click <strong>Next</strong>.</p>
+</li>
+<li><p>On the Custom request page, in the <strong>Templates</strong> list, we recommend using the <strong>Custom Request</strong> option as your domain policy may be incompatible with the SRA service.</p>
 <ul>
 <li>Select <strong>Proceed without enrolment policy</strong> and click <strong>Next</strong>.</li>
 </ul>
 </li>
-<li>Select <strong>(No template) CNG key</strong> and ensure the <strong>PKCS#10</strong> radio button is selected, then click <strong>Next</strong>.</li>
-<li>At the <strong>Certificate Information</strong> page, click the down arrow next to <strong>Details</strong> then click the <strong>Properties</strong> button.</li>
-<li>Click the <strong>Private Key</strong> tab, then the down arrow to the right of <strong>Key options</strong>.</li>
-<li>Change the <strong>Key size</strong> to <strong>2048</strong> and click <strong>Apply</strong>.
+<li><p>Select <strong>(No template) CNG key</strong> and ensure the <strong>PKCS#10</strong> radio button is selected, then click <strong>Next</strong>.</p>
+</li>
+<li><p>At the <strong>Certificate Information</strong> page, click the down arrow next to <strong>Details</strong> then click the <strong>Properties</strong> button.</p>
+</li>
+<li><p>Click the <strong>Private Key</strong> tab, then the down arrow to the right of <strong>Key options</strong>.</p>
+</li>
+<li><p>Change the <strong>Key size</strong> to <strong>2048</strong> and click <strong>Apply</strong>.</p>
 <ul>
 <li><strong>Optional:</strong> If you want to back up the certificate (to protect against client device failure) click the check boxes for the <strong>private key</strong>. You'll be asked for a password.</li>
 </ul>
 </li>
-<li>For the file format, select <strong>Base 64</strong> and then save the CSR.</li>
+<li><p>For the file format, select <strong>Base 64</strong> and then save the CSR.</p>
+</li>
 </ol>
 <h3 id="linux">Linux</h3>
 <p>For Linux, an equivalent OpenSSL command would be the following:</p>
@@ -199,8 +214,10 @@ sudo ./vpn_install.sh
 <p>For each customer SRA service a unique IssuingCA certificate is generated and used to sign each individual device certificates. The IssuingCA certificate along with the specific certificate for the device will be emailed. Both the certificates need to be installed.</p>
 <p>The certificates sent through will named as below:</p>
 <ul>
-<li><strong>IssuingCA</strong> – <code>clientcert.pem</code></li>
-<li><strong>Device Certificate</strong> - <code>E51FFC7D50C&lt;HEX VALUE&gt;.pem</code></li>
+<li><p><strong>IssuingCA</strong> – <code>clientcert.pem</code></p>
+</li>
+<li><p><strong>Device Certificate</strong> - <code>E51FFC7D50C&lt;HEX VALUE&gt;.pem</code></p>
+</li>
 </ul>
 <h3 id="windows-certificate-store">Windows certificate store</h3>
 <p>Follow the steps below to import the certificates into the Windows certificate store. This assumes that you have the certificates we sent accessible to the MMC:</p>
@@ -232,9 +249,12 @@ sudo ./vpn_install.sh
 <h3 id="linux-certificate-store">Linux certificate store</h3>
 <p>The Linux certificate store is just a file structure under the root or user account depending on how you use Linux OS. For the Linux client to work the following must be true:</p>
 <ul>
-<li>All certificate files must end with the extension <code>.pem</code></li>
-<li>All private key files must end with the extension <code>.key</code></li>
-<li>A client certificate and its corresponding private key must have the same filename. For example <code>client.pem</code> and <code>client.key</code></li>
+<li><p>All certificate files must end with the extension <code>.pem</code></p>
+</li>
+<li><p>All private key files must end with the extension <code>.key</code></p>
+</li>
+<li><p>A client certificate and its corresponding private key must have the same filename. For example <code>client.pem</code> and <code>client.key</code></p>
+</li>
 </ul>
 <p>Using the example customer issued certificate SRAS1-1-2-001.pem the files would be stored in the following locations for root. The key file generated above needs to moved and renamed appropriately.</p>
 <table>

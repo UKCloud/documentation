@@ -92,7 +92,9 @@ You can also create your own assemblies and upload reusable software images.
 You can change processor, memory and storage allocations via the self-service UKCloud Portal.
 
 - Processors and memory can be added to or removed from VMs, although VMs will need to be shut down for this to happen.
+
 - Increasing CPU or memory allocations will result in the VM being billed at a higher rate.
+
 - Additional VM storage can be allocated and will be billed on a per GiB per month basis.
 
 ### How long will it take to provision the service?-
@@ -104,6 +106,7 @@ Depending on the complexity of the solution, including the ingress of data onto 
 You can access your OVMs using:
 
 - The remote console through the UKCloud Portal
+
 - Remote access protocols (RDP/SSH) over a VPN or secure network
 
 ## Connectivity
@@ -139,12 +142,19 @@ Providing that the software products have the appropriate operating system, soft
 Providing that the software products adhere to the guidelines above, the following software applications are compatible with UKCloud for Oracle Software:
 
 - Oracle 9i R2 DB with partitioning; OEM;
+
 - Oracle 10g R1 & R2; with partitioning; advanced security; spatial; data mining; OLAP; OEM
+
 - WebLogic 10 Platform
+
 - Oracle 11g R1 with partitioning; advanced security; spatial; BI; Forms; DataGuard; DatabaseVault; OLAP
+
 - WebLogic 11g Platform
+
 - Oracle 12c R1 with advanced security
+
 - Primavera 8 (components from 8.1 to 8.7)
+
 - Primavera 6
 
 For software not listed above, please visit the [Oracle support webpage](https://support.oracle.com/epmos/faces/CertifyHome). You will need to have an Oracle Support account to log in.

@@ -35,7 +35,9 @@ For customers requiring a new installation of hardware into one of the data cent
 For more information on the process for installing hardware into one of the UKCloud data centres, see the appropriate Cloud Enablement Service Scope:
 
 - [*CAPS/CPA-approved VPN*](../enablement/enbl-sco-capscpa.md)
+
 - [*VPN solutions*](../enablement/enbl-sco-vpn.md)
+
 - [*Server/Storage Hosting*](../enablement/enbl-sco-hosting.md)
 
 ## Feedback

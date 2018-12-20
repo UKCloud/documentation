@@ -1,5 +1,5 @@
 ---
-title: How to create a Site-to-Site connection in Azure Stack | UKCloud Ltd
+title: How to create a Site-to-Site connection using the Azure Stack portal | UKCloud Ltd
 description: Create a S2S VPN gateway connection from an on-premises network to UKCLoud for Microsoft Azure 
 services: azure-stack
 author: Bailey Lawson
@@ -8,12 +8,12 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Create a Site-to-Site connection in Azure Stack
+toc_title: Create a Site-to-Site connection
 toc_fullpath: Users/How To/azs-how-create-S2S-VPN.md
 toc_mdlink: azs-how-create-S2S-VPN.md
 ---
 
-# How to create a Site-to-Site connection in Azure Stack
+# How to create a Site-to-Site connection using the Azure Stack portal
 
 ## Overview
 
@@ -45,17 +45,24 @@ First, you'll need to create a virtual network. This virtual network will be abl
 
 5. In the **Create virtual network** blade, enter the following information:
 
+
    - **Name** - The name of the virtual network.
+
 
    - **Address Space** - The virtual network's address range in CIDR notation.
 
+
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
+
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
+
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
 
+
    - **Subnet Name** - The name of the first subnet within the virtual network.
+
 
    - **Address Range** - The subnet's address range in CIDR notation (for example, 192.168.1.0). It must be contained by the address space of the virtual network. The address range of a subnet which is in use can't be edited.
 
@@ -105,22 +112,33 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
 4. In the **Create virtual network gateway** blade, enter the following information:
 
+
    - **Name** - The name of the virtual network gateway.
+
 
    - **SKU** - Route-based VPN gateway types are offered in three SKUs: Basic, Standard, and High performance. You must select Standard or High performance if you are creating the network to coexist with an ExpressRoute gateway. You must select High performance SKU to enable active-active mode. You can find more information about SKUs here: [Azure Stack SKUs](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-about-skus-legacy).
 
+
    - **Virtual Network** - This is the virtual network that you created earlier.
 
+
    - **Public IP address** - The public IP address to assign to this virtual network gateway. Only dynamic public IP addresses are supported. To create a new public IP address:
+
       - Click **Public IP address** on the **Create virtual network gateway** blade.
+
       - Select **Create new** on the **Choose public IP address** blade.
+
       - Enter a name for the public IP address and click **OK**.
+
 
    - **Configure BGP ASN** - BGP is the standard routing protocol commonly used on the internet to exchange routing information between two or more networks. BGP enables the Azure VPN Gateways and your on-premises VPN devices, called BGP peers or neighbours, to exchange "routes" that will inform both gateways on the availability and reachability for those prefixes to go through the gateways or routers involved. You should also make sure your on-premises VPN devices support BGP before you enable this feature.
 
+
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
+
    - **Resource Group** - The virtual network gateway will be created in the same resource group as the chosen virtual network.
+
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
 
@@ -150,17 +168,24 @@ The local network gateway refers to your on-premises network. The following step
 
 4. In the **Create local network gateway** blade, enter the following information:
 
+
    - **Name** - The name of the local network gateway.
+
 
    - **IP address** - This is the public IP address of the VPN device that you want Azure to connect to. Specify a valid public IP address.
 
+
    - **Address space** - One or more IP address ranges (in CIDR notation) that define your local network's address space. For example: 192.168.0.0/16. If you plan to use this local network gateway in a BGP-enabled connection, then the minimum prefix you need to declare is the host address of your BGP Peer IP address on your VPN device.
+
 
    - **Configure BGP settings** - Use only when configuring BGP.
 
+
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
+
    - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
+
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
 
@@ -182,19 +207,27 @@ Create the Site-to-Site VPN connection between your virtual network gateway and 
 
 5. In the **Add connection** blade, enter the following information:
 
+
    - **Name** - The name of the connection.
+
 
    - **Connection type** - Select **Site-to-site (IPSec)**.
 
+
    - **Virtual network gateway** - Select the virtual network gateway you created earlier.
+
 
    - **Local network gateway**- Select the local network gateway you created earlier.
 
+
    - **Shared Key** - A mixture of letters and numbers, used to establish encryption for the connection. You must use the same shared key in both the virtual network and local network gateways. If your gateway device doesn't provide one, you can make one up here and provide it to your device.
+
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
+
    - **Resource Group** - When adding a connection for an existing peer, the resource group can't be changed.
+
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
 

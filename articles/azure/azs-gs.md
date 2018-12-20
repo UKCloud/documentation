@@ -35,13 +35,17 @@ Microsoft Azure Stack is an extension of Azure that provides on-premises Infrast
 With UKCloud for Microsoft Azure you can:
 
 - Leverage existing Azure investment, knowledge and skills
+
 - Use Azure Stack alongside other technologies, for example, VMware, OpenStack or Oracle
+
 - Connect to government community networks, including PSN, HSCN, Janet and RLI
+
 - Meet specific compliance directives, such as data sovereignty or security
 
 The two main delivery models provided by UKCloud for Microsoft Azure are:
 
 - A multi-tenant IaaS and PaaS platform available in both UKCloud security domains (Assured OFFICIAL and Elevated OFFICIAL), connected to government community networks with UKCloud's award-winning support
+
 - Private cloud deployment of UKCloud for Microsoft Azure dedicated to a single customer
 
 ### What is Azure Active Directory and why is it required for UKCloud for Microsoft Azure?
@@ -58,7 +62,9 @@ Azure Active Directory is Microsoft's cloud-based Directory and Identity Access 
 If you've decided that UKCloud for Microsoft Azure is the right environment for you, contact your CSM with the following information:
 
 - Contact email address, for example, onboardingukcloud3@ukcloud.com
+
 - Azure Active Directory Domain, for example, onboardingukcloud3csp.onmicrosoft.com
+
 - AAD administrator email address, for example, admin@onboardingukcloud3csp.onmicrosoft.com
 
 Once you've provided this information, UKCloud will set up your new UKCloud for Microsoft Azure environment.
@@ -69,11 +75,11 @@ After submitting your details, you will receive an email asking for permission f
 
 Once you have received this, click the **CSP Invitation URL** link and click to sign in:
 
-![Microsoft Azure sign in page](images/azs-browser-csp-auth-signin.PNG)
+![Microsoft Azure sign in page](images/azs-browser-csp-auth-signin.png)
 
 After signing in you will be greeted with the following page. Tick the checkbox and click **Authorize CSP**, then contact your CSM so UKCloud can complete your onboarding process.
 
-![Microsoft Azure authorize CSP page](images/azs-browser-authorize-csp.PNG)
+![Microsoft Azure authorize CSP page](images/azs-browser-authorize-csp.png)
 
 Next, you should receive a welcome email from your CSM containing the details of your new UKCloud for Microsoft Azure environment.
 
@@ -82,9 +88,13 @@ Next, you should receive a welcome email from your CSM containing the details of
 If you've decided that UKCloud for Microsoft Azure is the right environment for you, contact your CSM with the following information:
 
 - Contact name, for example, John Doe
+
 - Contact email address, for example, onboardingukcloud3@ukcloud.com
+
 - Contact phone number, 01252 303300
+
 - Billing address, for example, Hartham Park, Corsham, Wiltshire, SN13 0RP
+
 - Preferred Azure Active Directory Domain, for example, onboardingukcloud3csp.onmicrosoft.com
 
 Once you've provided this information, UKCloud will set up your new UKCloud for Microsoft Azure environment.
@@ -128,7 +138,9 @@ To log in to the Azure Stack portal:
 Your UKCloud for Microsoft Azure environment is provisioned with a subscription that determines the services you have access to, and your quotas for those services.
 
 - A **subscription** is a mechanism for signing up to an *offer*.
+
 - An **offer** is a collection of one or more *plans*.
+
 - A **plan** is a collection of one or more *services*, with associated *quotas*.
 
 ## Customising your favourites
@@ -212,7 +224,9 @@ To customise a dashboard:
 To work with UKCloud for Microsoft Azure, users must have the appropriate Azure Stack permissions. We provide the following three groups to get you started:
 
 - **AzureStackOperators** - Members of this group have Owner permissions and have full access to all resources and can manage access to resources
+
 - **AzureStackUsers** - Members of this group have Contributor permissions and can create and manage all resources but cannot manage access to resources
+
 - **AzureStackReadOnly** - Members of this group have Reader permissions and can view everything but cannot be any changes
 
 To grant a user access to UKCloud for Microsoft Azure:
@@ -257,10 +271,18 @@ For more information, including steps and scripts for setting up Azure PowerShel
 In this Getting Started Guide, you've learned the basics about UKCloud for Microsoft Azure and the Azure Stack portal. For more information about UKCloud for Microsoft Azure, see the following articles in the Knowledge Centre:
 
 - [*Understanding UKCloud for Microsoft Azure*](azs-ref-overview.md)
+
 - [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
+
 - [*How to create a virtual machine from the Azure Marketplace*](azs-how-create-vm.md)
+
 - [*How to create an Azure user group*](azs-how-create-azure-group.md)
+
 - [*How to use the Azure Stack API*](azs-how-use-azure-api.md)
+
+## Related videos
+
+- [Microsoft Azure Stack Portal overview video](https://vimeo.com/305064724)
 
 ## Glossary
 

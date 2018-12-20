@@ -54,7 +54,9 @@ We've provided some sample code to show how to make this call on our [GitHub rep
 The `using_curl.md` page provides an example of how to use CURL to call the REST API. The example assumes that you have set up the following three environment variables to hold your user credentials:
 
 - `VCD_ORG`
+
 - `VCD_USERNAME`
+
 - `VCD_PASSWORD`
 
 The example makes two calls to the API. The first call authenticates the session:

@@ -8,7 +8,7 @@
     <title>Virtual machine disk limits and considerations | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Virtual machine disk limits and considerations | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -86,9 +86,12 @@
 
 <p>In order to ensure the performance and stability of a customer's VM, whilst also being able to ensure the integrity and validity of VM back-ups, UKCloud advises the following soft limits on storage presented to individual VMs;</p>
 <ul>
-<li>2032 GB for each virtual disk (VMDK) presented to a VM, this will ensure normal snapshot functions will operate correctly</li>
-<li>Maximum of 20 virtual disks presented to a VM</li>
-<li>Maximum of 40TB overall storage presented to a VM</li>
+<li><p>2032 GB for each virtual disk (VMDK) presented to a VM, this will ensure normal snapshot functions will operate correctly</p>
+</li>
+<li><p>Maximum of 20 virtual disks presented to a VM</p>
+</li>
+<li><p>Maximum of 40TB overall storage presented to a VM</p>
+</li>
 </ul>
 <h2 id="storage-controllers">Storage Controllers</h2>
 <p>Increasing the number of disks per controller can have a performance impact, for high I/O machines we'd recommend minimizing the disk to controller ratio, also using the paravirtualised controller can result in greater throughput and lower CPU use.</p>

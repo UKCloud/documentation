@@ -114,7 +114,9 @@ oc new-app --template <app-name>
 ## Sources and further reading
 
 - [blog.openshift.com](https://blog.openshift.com/using-ssh-key-for-s2i-builds/)
+
 - [blog.lucywyman.me](http://blog.lucywyman.me/deploy-private-git-repo-to-openshift.html)
+
 - [Openshift documentation on source-clone-secrets](https://docs.openshift.com/container-platform/latest/dev_guide/builds/build_inputs.html#source-clone-secrets)
 
 ## Feedback

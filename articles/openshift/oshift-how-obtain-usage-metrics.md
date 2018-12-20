@@ -35,10 +35,15 @@ A UKCloud deployed OpenShift cluster comprises a single Starter Pack, plus a num
 The sections in this guide, show you how to obtain various statistics about the platform, including:
 
 - Overall status of each node in the cluster
+
 - Uptime per node
+
 - CPU usage
+
 - Memory usage
+
 - Block storage consumption (used by persistent volumes)
+
 - Object storage consumption (used by the registry)
 
 ### Intended audience

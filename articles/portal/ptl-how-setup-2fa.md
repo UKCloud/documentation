@@ -18,11 +18,11 @@ toc_mdlink: ptl-how-setup-2fa.md
 
 ## Overview
 
-To provide additional security, you may want to set up two-factor authentication (2FA) in the UKCloud Portal. Two-factor authentication in the Portal requires that users enter a randomly generated 2FA code, as well as their user name and and password, when logging in to the Portal.
+To provide additional security, you may want to set up two-factor authentication (2FA) in the UKCloud Portal. 2FA in the Portal requires that users enter a randomly generated code, as well as their user name and and password, when logging in to the Portal.
 
 ![Two-Factor Authentication dialog box in the UKCloud Portal](images/ptl-2fa.png)
 
-To set up 2FA, a Portal administrator must first enable 2FA for the Portal account. After enabling 2FA for the account, the next time a user attempts to log in, they will be prompted to set up 2FA for their user account by registering their Portal account with a 2FA authenticator app, such as Google Authenticator.
+To set up 2FA, a Portal administrator must first enable 2FA for the Portal account. After enabling 2FA for the account, the next time a user attempts to log in, they will be prompted to set up 2FA for their user account by registering their Portal account with an authenticator app, such as Google Authenticator.
 
 ## Enabling 2FA in the UKCloud Portal (administrators)
 
@@ -50,11 +50,11 @@ To enable 2FA:
 
 When you first log in to a Portal account that has 2FA enabled, you'll be prompted to set up 2FA:
 
-1. Log in to the UKCloud Portal.
+1. Log in to the UKCloud Portal, providing your user name and password as usual and memorable word, if required.
 
     For more detailed instructions, see the [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md).
 
-2. Per the instructions in the *Configure your two-factor authentication* dialog box, install a authenticator app and scan the provided QR code.
+2. Per the instructions in the *Configure your two-factor authentication* dialog box, install an authenticator app and scan the provided QR code.
 
     ![Configure your two-factor authentication dialog box](images/ptl-2fa-setup.png)
 

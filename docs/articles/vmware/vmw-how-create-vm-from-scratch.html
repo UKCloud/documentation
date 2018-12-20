@@ -8,7 +8,7 @@
     <title>How to create a virtual machine from scratch | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual machine from scratch | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -150,10 +150,13 @@
 </li>
 <li><p>Select an <em>IP Assignment</em> method:</p>
 <ul>
-<li><strong>Static - IP Pool</strong> is the usual method, which injects an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a checkbox to keep IP address assignments elsewhere within the UI once the VMs are
-created.</li>
-<li><strong>Static - Manual</strong> is similar to Static - IP Pool, but you need to type in a valid IP address from the pool, which the VM will then keep.</li>
-<li><strong>DHCP</strong> vCloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.</li>
+<li><p><strong>Static - IP Pool</strong> is the usual method, which injects an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a checkbox to keep IP address assignments elsewhere within the UI once the VMs are
+created.</p>
+</li>
+<li><p><strong>Static - Manual</strong> is similar to Static - IP Pool, but you need to type in a valid IP address from the pool, which the VM will then keep.</p>
+</li>
+<li><p><strong>DHCP</strong> vCloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.</p>
+</li>
 </ul>
 <p><img src="images/vmw-vcd-new-virtual-machine-vms.png" alt="Configure Virtual Machines page of New Virtual Machine wizard"></p>
 </li>
@@ -240,10 +243,13 @@ created.</li>
 </li>
 <li><p>Select which <strong>Network</strong> to connect the VM to and select an <strong>IP Mode</strong> to determine how IP addresses are assigned:</p>
 <ul>
-<li><strong>Static - IP Pool</strong> is the usual method, which injects an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a checkbox to keep IP address assignments elsewhere within the UI once the VMs are
-created.</li>
-<li><strong>Static - Manual</strong> is similar to Static - IP Pool, but you need to type in a valid IP address from the pool, which the VM will then keep.</li>
-<li><strong>DHCP</strong> vCloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.11. how many network interface controllers (NICs) you need in the first instance.</li>
+<li><p><strong>Static - IP Pool</strong> is the usual method, which injects an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a checkbox to keep IP address assignments elsewhere within the UI once the VMs are
+created.</p>
+</li>
+<li><p><strong>Static - Manual</strong> is similar to Static - IP Pool, but you need to type in a valid IP address from the pool, which the VM will then keep.</p>
+</li>
+<li><p><strong>DHCP</strong> vCloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.11. how many network interface controllers (NICs) you need in the first instance.</p>
+</li>
 </ul>
 </li>
 <li><p>Click <strong>Add</strong> to create more NICs.</p>

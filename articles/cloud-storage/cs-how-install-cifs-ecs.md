@@ -19,7 +19,7 @@ toc_mdlink: cs-how-install-cifs-ecs.md
 
 CIFS-ECS is a free application that runs on Windows and Windows Server, exposing UKCloud Cloud Storage as file systems. It’s designed as an easy way to use object storage by enabling Windows applications to interface with Cloud Storage servers using the popular S3 REST API.
 
-If you require a fully-integrated cloud gateway appliance with features like advanced deduplication and location caching, you may want to consider [CloudArrary](cs-how-install-cloudarray.md) as an alternative. 
+If you require a fully-integrated cloud gateway appliance with features like advanced deduplication and location caching, you may want to consider [CloudArrary](cs-how-install-cloudarray.md) as an alternative.
 
 > [!NOTE]
 > Unlike CIFS-ECS, CloudArray is not a free application.
@@ -42,9 +42,7 @@ CIFS-ECS offers a single caching option:
 
 ## Installing CIFS-ECS
 
-1. Navigate to the following Portal page to download the ZIP file that contains the [CIFS-ECS installer](https://portal.ukcloud.com/support/knowledge_centre/85dc54ff-7d21-43ac-9cfa-88e87de7ba27).
-
-    To download CIFS-ECS you'll need your UKCloud Portal log in details.
+1. Navigate to the following URL to download the ZIP file that contains the [CIFS-ECS installer](https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/CIFS-ECS.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1574424921&Signature=sPorRMvkR5S8lLn1D1tmahyzK3g%3D).
 
 2. Extract and run the setup launcher from the ZIP file.
 
@@ -76,45 +74,47 @@ CIFS-ECS offers a single caching option:
 
     ![Hosts page](images/cs-ecs-installtion-step-two.png)
 
-9. In the **Host name / IP** field input one of the following:
+9. In the **Host name / IP** field input one of the following S3 API endpoints:
 
-S3 API endpoints:
+    - **Corsham (Assured)**
 
-- **Corsham (Assured)**
+        - Internet: `cas.cor00005.ukcloud.com`
 
-  - Internet: `cas.cor00005.ukcloud.com`
-  - PSN Assured: `cas.cor00005.psnassured.ukcloud.com`
-  - N3: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
+        - PSN Assured: `cas.cor00005.psnassured.ukcloud.com`
+
+        - N3/HSCN: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
   
-  
-- **Farnborough (Assured)**
 
-  - Internet: `cas.frn00006.ukcloud.com`
-  - PSN Assured: `cas.frn00006.psnassured.ukcloud.com`
-  - N3: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
+    - **Farnborough (Assured)**
 
-9. Deselect the **Port Override** check box.
+        - Internet: `cas.frn00006.ukcloud.com`
 
-10. Click **OK** to return to the *Settings* page.
+        - PSN Assured: `cas.frn00006.psnassured.ukcloud.com`
 
-10. The rest of the fields on the *Settings* page enable you to configure the root directory, encryption and compression settings.
+        - N3/HSCN: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
+
+10. Deselect the **Port Override** check box.
+
+11. Click **OK** to return to the *Settings* page.
+
+12. The rest of the fields on the *Settings* page enable you to configure the root directory, encryption and compression settings.
 
     > [!TIP]
     > Configure these fields appropriately for your environment, or accept the defaults. We suggest you give the root directory a friendlier name, so that you can more easily identify it.
 
     ![Settings page](images/cs-ecs-installtion-step-three.png)
 
-11. Click the **Advanced** button to configure various thresholds, such as how long a local file will be retained before being replaced with a stub.
+13. Click the **Advanced** button to configure various thresholds, such as how long a local file will be retained before being replaced with a stub.
 
-12. Click **Next**  to get to the *Logging* page.
+14. Click **Next**  to get to the *Logging* page.
 
-13. Change the settings on the *Logging* page to meet your requirements.
+15. Change the settings on the *Logging* page to meet your requirements.
 
-14.	Click **Finish** to complete the wizard. CIFS-ECS connects to Cloud Storage and starts synchronising any content you put on the drive letter you assigned to it.
+16. Click **Finish** to complete the wizard. CIFS-ECS connects to Cloud Storage and starts synchronising any content you put on the drive letter you assigned to it.
 
     ![Dashboard of CIFS-ECS](images/cs-ecs-installtion-step-four.png)
 
-15. You can share the CIFS-ECS drive, or a folder within it, so that other machines on the network can access it.
+17. You can share the CIFS-ECS drive, or a folder within it, so that other machines on the network can access it.
 
     &nbsp;| |
     ------|-----------------|
@@ -122,7 +122,7 @@ S3 API endpoints:
 
     > [!TIP]
     > See Microsoft's How-To guide on [how to share a a drive on the network from Windows](https://support.microsoft.com/en-gb/help/4092694/windows-10-changes-to-file-sharing-over-a-network).
-    
+
 ## Next steps
 
 This guide has shown you how to create a new Cloud Storage user. For more information about how to use the service, see the following articles:
@@ -133,12 +133,16 @@ This guide has shown you how to create a new Cloud Storage user. For more inform
 
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
-- Cloud Storage Gateways
-    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
-
-
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
+
+- Cloud Storage Gateways
+
+  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+
+## Related videos
+
+- [CIFS-ECS overview video](https://vimeo.com/300264583)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

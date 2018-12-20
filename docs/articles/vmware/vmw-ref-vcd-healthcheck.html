@@ -8,7 +8,7 @@
     <title>vCloud Director Healthcheck | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="vCloud Director Healthcheck | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -110,9 +110,12 @@ VCLOUD_ORG
 <h2 id="how-the-script-works">How the script works</h2>
 <p>When you run the vCloud Director healthcheck script, it searches for all VMs accessible to the user account you specified and displays how many it has found. Then, for each VM found by the search, the script checks that it meets the following criteria:</p>
 <ul>
-<li>Hardware version is 9</li>
-<li>Network Device is VMXNET3</li>
-<li>Snapshots are not older than seven days</li>
+<li><p>Hardware version is 9</p>
+</li>
+<li><p>Network Device is VMXNET3</p>
+</li>
+<li><p>Snapshots are not older than seven days</p>
+</li>
 </ul>
 <p>For any VMs that do not meet the above recommendations, the results for each check are listed so that you can identify which one(s) failed.</p>
 <p>For example, in the output below, you can see that out of four VMs found, <code>machine01</code> and <code>machine04</code> are both using an E1000 network device and <code>machine01</code> has one snapshot older than seven days.</p>

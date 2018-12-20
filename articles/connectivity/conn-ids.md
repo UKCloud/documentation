@@ -32,9 +32,13 @@ For Elevated OFFICIAL solutions, we implement network IDS at our perimeter firew
 Although we do not recommend specific third-party services, we are aware of the following solutions:
 
 - Cisco FirePOWER – www.cisco.com/c/en/us/products/security/ngips/index.html
+
 - Brocade Virtual Traffic Manager – www.brocade.com/en/products-services/application-delivery-controllers/virtual-traffic-manager.html
+
 - Modsecurity – www.modsecurity.org
+
 - McAfee Host IPS – www.mcafee.com/uk/products/host-ips-for-server.aspx
+
 - Trend Deep Security – www.trendmicro.co.uk/products/deep-security
 
 ## Feedback

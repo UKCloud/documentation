@@ -66,6 +66,7 @@ UKCloud for OpenStack is a cloud platform built specifically for cloud native ap
 Instances are contended using the default OpenStack ratios against the following resources:
 
 - CPU - 16:1
+
 - Memory - 1.1:1
 
 ### Do I get root access to the instances I deploy?
@@ -222,7 +223,9 @@ If you use FTPS to upload data to or download it from your environment, you can 
 ### How do I access my solutions via the internet?
 
 You can access your instances using:
+
 - The remote console via the OpenStack dashboard
+
 - Remote access protocols (such as RDP/SSH) over a VPN or secure network
 
 ### How do I access my solutions via government networks (PSN-A, N3/HSCN)?
@@ -280,6 +283,7 @@ UKCloud for OpenStack is powered by OpenStack, so is compatible with a wide rang
 You can use the UKCloud catalogue of operating systems or upload your own:
 
 - For Linux we offer; Red Hat Enterprise Linux 7, Ubuntu 14.04 to 16.04 and CentOS 6.0 to 7.2.
+
 - Windows 2012 R2 & Windows 2016 are fully supported
 
 ### Can I run Microsoft SQL on my instances?
@@ -433,8 +437,11 @@ Historic billing information is available via the UKCloud Portal.
 Billing for the service is:
 
 - Via Purchase Order
+
 - At point of order for up-front fees
+
 - Annually in advance for pre-payment fees
+
 - Monthly in arrears for monthly fees
 
 Payment can be made by direct bank transfer (BACS/CHAPS).

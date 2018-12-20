@@ -27,6 +27,7 @@ To run RAC on UKCloud for Oracle Software, you must have:
 
 - Configured an additional private VLAN within your Oracle tenancy for the RAC interconnect. If you need assistance creating a VLAN, contact UKCloud Support.
   
+
 - Access to shared storage. To do this, ask UKCloud to create a shared disk for you. Currently NFS if not available for RAC on UKCloud for Oracle Software.
 
     > [!NOTE]

@@ -23,13 +23,17 @@ vCloud Director provides a fully featured layer 3 firewall to control transit fr
 When you specify networks or IP addresses, you can use:
 
 - An individual IP address
+
 - IP ranges separated by a dash (`-`)
+
 - A CIDR, for example, `192.168.2.0/24`
+
 - The keywords `internal`, `external` or `any`
 
 The steps for creating firewall rules vary depending on what type of edge gateway you're working with:
 
 - [*Creating firewall rules for an advanced gateway*](#creating-firewall-rules-for-an-advanced-gateway)
+
 - [*Creating firewall rules for a standard edge*](#creating-firewall-rules-for-a-standard-edge)
 
 > [!NOTE]
@@ -131,6 +135,7 @@ A common use case for a firewall rule is to allow SSH through from the internet.
 When your VDC is provisioned in the:
 
 - Assured OFFICIAL platform, you're assigned five public IP addresses
+
 - Elevated OFFICIAL platform, you're assigned three PSN-P IP addresses
 
 In the examples below, the source is `any` (any IP address within the VDC). The source port is also `any`. The destination is a public IP address and the destination port is `443` for HTTPS.
@@ -148,9 +153,13 @@ In the examples below, the source is `any` (any IP address within the VDC). The 
 In this article you've learned how to create firewall rules. For other edge gateway configuration tasks, see:
 
 - [*How to create NAT rules*](vmw-how-create-nat-rules.md)
+
 - [*How to create a DHCP pool*](vmw-how-create-dhcp-pool.md)
+
 - [*How to configure IPsec VPN*](vmw-how-configure-ipsec-vpn.md)
+
 - [*How to configure a load balancer*](vmw-how-configure-load-balancer.md)
+
 - [*How to create a static route*](vmw-how-create-static-route.md)
 
 ## Feedback

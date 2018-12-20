@@ -24,6 +24,7 @@ This guide provides some general information about how you can export data away 
 You can package and export your data in a number of different ways, however we recommend that you read the following documents:
 
 - [Blueprint: Exporting and importing vApps and vApp templates](https://ukcloud.com/wp-content/uploads/2018/08/ukc-gen-136-exporting-and-importing-vapps-and-vapp-templates-blueprint-v2.pdf) - A technical case for transfer of data in UKCloud for VMware
+
 - [Getting Started Guide for Cloud Storage](../cloud-storage/cs-gs.md) - Covers the use APIs for access to our storage service
 
 ## Exporting data
@@ -31,8 +32,11 @@ You can package and export your data in a number of different ways, however we r
 You can use any of the following methods to export data:
 
 - Internet, government secure network or leased line data copy
+
 - Data load room (self-service)
+
 - Data load room (UKCloud SFIA)
+
 - Customer-hosted equipment
 
 ### Internet, government secure network or leased line data copy

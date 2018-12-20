@@ -8,7 +8,7 @@
     <title>How to use UKCloud's email service with your application | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to use UKCloud's email service with your application | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -117,11 +117,16 @@
 <h3 id="sending-outbound-email">Sending outbound email</h3>
 <p>To send outbound email, your application needs to support SMTP authentication and TLS encryption. Provided this is the case, simply configure the following settings in your application:</p>
 <ul>
-<li>SMTP Server/Mail relay host: mail.ukcloud.net</li>
-<li>Port number: 465</li>
-<li>Use TLS*: Yes</li>
-<li>Username/Password: as configured</li>
-<li>From Address: as configured</li>
+<li><p>SMTP Server/Mail relay host: mail.ukcloud.net</p>
+</li>
+<li><p>Port number: 465</p>
+</li>
+<li><p>Use TLS*: Yes</p>
+</li>
+<li><p>Username/Password: as configured</p>
+</li>
+<li><p>From Address: as configured</p>
+</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
@@ -131,10 +136,14 @@
 <p>To receive inbound email, your application needs to support POP3 or IMAP4 over TLS.</p>
 <p>Provided this is the case, simply configure the following settings in your application:</p>
 <ul>
-<li>Mailbox server: mail.ukcloud.net</li>
-<li>Protocol: POP3S or IMAPS</li>
-<li>Port number: 993 (POP3S) or 995 (IMAPS)</li>
-<li>Username/Password: as configured</li>
+<li><p>Mailbox server: mail.ukcloud.net</p>
+</li>
+<li><p>Protocol: POP3S or IMAPS</p>
+</li>
+<li><p>Port number: 993 (POP3S) or 995 (IMAPS)</p>
+</li>
+<li><p>Username/Password: as configured</p>
+</li>
 </ul>
 <h2 id="applications-without-tls-support">Applications without TLS support</h2>
 <p>Unfortunately, not all applications support sending or receiving mail over TLS. Some older applications may not support TLS at all, and some require use of the STARTTLS command for sending mail.</p>

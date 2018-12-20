@@ -41,7 +41,7 @@ Please note that ANY device placed within the UKCloud estate must be done so to 
 **Failover responsibility** | Customer
 **Resilience requirement</br>(1 bay = 10U, 1kw per month)** | Depends on solution               |
 **Resilience cost** | Depends on solution
-**Notes** | Servers and storage must be hosted in the same data centre as your compute environment
+**Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (e.g. Cloud Enablement in region 5 cannot be stretched to region 6)
 **Next steps** | Raise a service request via the UKCloud Portal                    |
 
 ## What connectivity does the server/storage hosting service provide?
@@ -49,12 +49,15 @@ Please note that ANY device placed within the UKCloud estate must be done so to 
 The VPN service provides up to two ports:
 
 - Cloud Enablement in regions 1, 2, 7 & 8 offers fibre-0nly connectivity
+
 - Cloud Enablement in regions 5 & 6 offers connectivity via SFP, so customers can use fibre or copper
+
 - The connection is into a shared switch.
 
 ## What is the port speed of connection?
 
 - In regions 1, 2, 7 & 8, the port speed is up to 1 Gbps
+
 - In regions 5 & 6, the port speed can be either 1Gbps (copper or fibre) or 10Gbps (fibre only)
 
 ## Who manages the switch?

@@ -20,7 +20,9 @@ toc_mdlink: vmw-faq-sharing-catalogs.md
 It is possible to share catalogs between vOrgs, and this can be processed by the UKCloud support team. For the request to be valid and for the support team to complete the sharing, the following rules apply:
 
 - The requester must be an organisation administrator for both the source and destination organisations
+
 - UKCloud will not revoke or delete a shared catalog
+
 - UKCloud will only set shared catalog to read only permissions for the destination organisations
 
 ## Where does a shared catalog appear in vCloud Director and what does it look like?

@@ -8,7 +8,7 @@
     <title>Best practice customer guide | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Best practice customer guide | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -95,9 +95,12 @@
 <p>Snapshot Protection automatically takes an image of the protected VM every 24 hours and stores the image outside the core platform for either 14 or 28 days, depending on your chosen snapshot retention profile.</p>
 <p>You should remove snapshots that are no longer needed within 24-48 hours. If snapshots aren't removed, this can cause the following issues:</p>
 <ul>
-<li>Depending on the size of the snapshot, it may delay the time it takes your virtual machine to power on</li>
-<li>Snapshot back-ups are likely to fail</li>
-<li>You may be billed for additional storage due to the size of the snapshot</li>
+<li><p>Depending on the size of the snapshot, it may delay the time it takes your virtual machine to power on</p>
+</li>
+<li><p>Snapshot back-ups are likely to fail</p>
+</li>
+<li><p>You may be billed for additional storage due to the size of the snapshot</p>
+</li>
 </ul>
 <p>To reduce this potential impact, ensure that you remove any old snapshots within 48 hours once they are no longer needed. For more information, see the following articles: <a href="../vmware/vmw-ref-vmdk-limits.html"><em>Virtual machine disk limits and considerations</em></a>
 and <a href="../vmware/vmw-faq-snapshot-protection.html"><em>Snapshot Protection FAQs</em></a>.</p>
@@ -107,8 +110,10 @@ and <a href="../vmware/vmw-faq-snapshot-protection.html"><em>Snapshot Protection
 <h3 id="creating-affinity-rules">Creating affinity rules</h3>
 <p>Affinity and anti-affinity rules determine if VMs are kept together as they are moved around within an environment.</p>
 <ul>
-<li>Affinity rules keep VMs together on the same host</li>
-<li>Anti-affinity rules ensure that VMs are distributed across different hosts</li>
+<li><p>Affinity rules keep VMs together on the same host</p>
+</li>
+<li><p>Anti-affinity rules ensure that VMs are distributed across different hosts</p>
+</li>
 </ul>
 <p>For example, if it is important that your application has very low latency, you can create affinity rules to make sure that the application's VMs are always kept on the same host. If you want your application to be robust in the event of host failures, you can create anti‑affinity rules to spread the VMs across multiple hosts.</p>
 <p>If you're considering setting affinity rules, please be aware of the impact this may have if a host becomes unavailable at any time.</p>
@@ -130,9 +135,12 @@ and <a href="../vmware/vmw-faq-snapshot-protection.html"><em>Snapshot Protection
 <h3 id="setting-up-syslog-collection">Setting up syslog collection</h3>
 <p>Your edge gateway is globally configured to send syslog messages to a specific IP address. By configuring a new network or IP address within your virtual data centre (VDC) and deploying a collector with the syslog IP address, you can access your edge gateway syslog data. You can then use this data to check:</p>
 <ul>
-<li>Allowed and denied network traffic</li>
-<li>Load balancer statistics</li>
-<li>Load balancer health</li>
+<li><p>Allowed and denied network traffic</p>
+</li>
+<li><p>Load balancer statistics</p>
+</li>
+<li><p>Load balancer health</p>
+</li>
 </ul>
 <p>For more information, see <a href="../vmware/vmw-how-access-syslog-data.html"><em>How to access syslog data for your edge gateway</em></a>.</p>
 <h3 id="choosing-the-appropriate-compute-sizing">Choosing the appropriate compute sizing</h3>
@@ -142,8 +150,10 @@ and <a href="../vmware/vmw-faq-snapshot-protection.html"><em>Snapshot Protection
 <h3 id="maintaining-up-to-date-contacts-for-your-account">Maintaining up-to-date contacts for your account</h3>
 <p>In the event of an incident, it's important that we have the correct contact details for you. Ensure that:</p>
 <ul>
-<li>Your account has two nominated administrators. The administrator has access rights to create and set up new users and reset passwords. In the event of an incident, our support team will always contact the administrator first to resolve the issue.</li>
-<li>Your contact details are up to date. Please review account permissions regularly when people leave your business or change roles to ensure they are correct</li>
+<li><p>Your account has two nominated administrators. The administrator has access rights to create and set up new users and reset passwords. In the event of an incident, our support team will always contact the administrator first to resolve the issue.</p>
+</li>
+<li><p>Your contact details are up to date. Please review account permissions regularly when people leave your business or change roles to ensure they are correct</p>
+</li>
 </ul>
 <p>There are contact details listed for both primary and secondary technical contacts. We proactively create support tickets for these contacts when an action is required in your environment so it's important these are up to date.</p>
 <p>If you're already a nominated administrator and would like to set up an additional administrator or make changes to any contacts, you can do so via the <strong>Contacts</strong> option in the UKCloud Portal.</p>
@@ -154,21 +164,30 @@ and <a href="../vmware/vmw-faq-snapshot-protection.html"><em>Snapshot Protection
 <h3 id="locating-your-vdcs">Locating your VDCs</h3>
 <p>UKCloud provides information about the location of a VDC in the VDC metadata. Using this metadata, you can locate a VDC by site, region and zone. Knowing where your VDCs are located can be useful for:</p>
 <ul>
-<li>Determining how resilient your applications are</li>
-<li>Determining how maintenance or an unplanned outage may affect your applications</li>
-<li>Providing additional information to help with support call resolution</li>
-<li>More detailed billing information per VM</li>
+<li><p>Determining how resilient your applications are</p>
+</li>
+<li><p>Determining how maintenance or an unplanned outage may affect your applications</p>
+</li>
+<li><p>Providing additional information to help with support call resolution</p>
+</li>
+<li><p>More detailed billing information per VM</p>
+</li>
 </ul>
 <p>For more information, see <a href="../vmware/vmw-how-locate-vdc.html"><em>How to locate your virtual data centre on the UKCloud platform</em></a>.</p>
 <h3 id="renewing-adding-and-revoking-sra-certificates">Renewing, adding and revoking SRA certificates</h3>
 <p>Secure Remote Access (SRA) certificates enable you to securely connect to UKCloud's Elevated OFFICIAL security domain using NCSC-approved internet virtual private network (VPN) technologies and the walled garden architectural pattern.</p>
 <p>System administrators and mobile workers can securely access workloads running on Elevated OFFICIAL from locations that don't have alternative secure network connections such as PSN or N3/HSCN.</p>
 <ul>
-<li>SRA certificates last for 12 months. You'll need to renew certificates no later than two weeks before the certificates expire to avoid any interruption to your service.</li>
-<li>To add additional certificates, raise a service request via the UKCloud Portal, selecting the <strong>Request Additional SRAS Certificate(s)</strong> option.</li>
-<li>To renew or revoke your certificate, raise a service request via the UKCloud Portal, selecting the <strong>Renew and/or Revoke SRAS Certificate</strong> option.</li>
-<li>For renewals, it's important you give us at least two weeks' notice to prevent a break in your service.</li>
-<li>If you have multiple certificates to renew or revoke, you can do this in a single service request by selecting the <strong>Renew and/or Revoke multiple SRAS Certificates</strong> option in the UKCloud Portal. Attach the <em>Secure Remote Access bulk renewal/revoke form</em> containing all the certificates.</li>
+<li><p>SRA certificates last for 12 months. You'll need to renew certificates no later than two weeks before the certificates expire to avoid any interruption to your service.</p>
+</li>
+<li><p>To add additional certificates, raise a service request via the UKCloud Portal, selecting the <strong>Request Additional SRAS Certificate(s)</strong> option.</p>
+</li>
+<li><p>To renew or revoke your certificate, raise a service request via the UKCloud Portal, selecting the <strong>Renew and/or Revoke SRAS Certificate</strong> option.</p>
+</li>
+<li><p>For renewals, it's important you give us at least two weeks' notice to prevent a break in your service.</p>
+</li>
+<li><p>If you have multiple certificates to renew or revoke, you can do this in a single service request by selecting the <strong>Renew and/or Revoke multiple SRAS Certificates</strong> option in the UKCloud Portal. Attach the <em>Secure Remote Access bulk renewal/revoke form</em> containing all the certificates.</p>
+</li>
 </ul>
 <p>For more information, see the following articles: <a href="../sra/sra-faq.html"><em>Secure Remote Access FAQs</em></a>, <a href="https://ukcloud.com/wp-content/uploads/2018/01/SRA-Factsheet.pdf"><em>Secure Remote Access Factsheet</em></a> and <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/153884335251015-service-definition-document-2018-05-21-1247.pdf"><em>Secure Remote Access Service Definition</em></a>.</p>
 <h2 id="feedback">Feedback</h2>

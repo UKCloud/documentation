@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to remove access rights from Single Sign-On users | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to remove access rights from Single Sign-On users | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-remove-access-rights-from-single-sign-on-sso-users">How to remove access rights from Single Sign-On (SSO) users</h1>
+
+<h2 id="overview">Overview</h2>
+<p>When you use the UKCloud Portal to remove a user from an account that includes SSO-enabled services, it's important to note that this does not remove access rights from the corresponding SSO user. To remove the SSO user's access, you must use the Identity &amp; Access Management (IDAM) API to remove that user from all IDAM groups.</p>
+<p>SSO-enabled services are:</p>
+<ul>
+<li><p>UKCloud for OpenShift</p>
+</li>
+<li><p>UKCloud for OpenStack</p>
+</li>
+</ul>
+<p>For more information about the IDAM API, see <a href="other-ref-idam.html"><em>Understanding UKCloud's Identity &amp; Access Management API</em></a>.</p>
+<h2 id="removing-access-rights-from-an-sso-user">Removing access rights from an SSO user</h2>
+<p>The process for using the IDAM API to remove access rights from an SSO user is as follows:</p>
+<ol>
+<li><p>Authenticate with the IDAM API:</p>
+<pre><code class="lang-bash">token=$(curl -X POST &quot;https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token&quot; \
+ -d username=&quot;&lt;username&gt;&quot; \
+ -d password=&quot;&lt;password&gt;&quot;  \
+ -d grant_type=password    \
+ -d client_id=portal.ukcloud | jq -r '.access_token')
+</code></pre>
+<p>This returns an SSO token to use for authenticating calls to the IDAM API. For example:</p>
+<pre><code class="lang-json">{
+ &quot;access_token&quot;: &quot;eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJUU0F1WERTWUt0SGVEWTI5ZHlPVFZVeHZUMWNhYmUyNUpEVVZzajhVRUhrIn0.eyJqdGkiOiI2YWJmYzkw...&quot;,
+ &quot;expires_in&quot;: 300,
+ &quot;refresh_expires_in&quot;: 1800,
+ &quot;refresh_token&quot;: &quot;eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJUU0F1WERTWUt0SGVEWTI5ZHlPVFZVeHZUMWNhYmUyNUpEVVZzajhVRUhrIn0.eyJqdGkiOiIyMDkyNjA0...&quot;,
+ &quot;token_type&quot;: &quot;bearer&quot;,
+ &quot;not-before-policy&quot;: 0,
+ &quot;session_state&quot;: &quot;342ab476-d286-41b9-8b3a-1a236cceefc1&quot;
+}
+</code></pre>
+<p>For convenience, the token is saved to the <code>token</code> variable in your current shell session. Use this variable in the <code>Authorization: Bearer</code> header for all further calls to the IDAM API.</p>
+</li>
+<li><p>List users and note the ID of the user you want to remove:</p>
+<pre><code class="lang-bash">curl -s -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users | jq -r '.[] | .id + &quot; &quot; + .username'
+</code></pre>
+<p>The <code>jq</code> filter on this request returns a list of SSO users and their IDs:</p>
+<pre><code class="lang-none">0744f665-2d7a-483c-adb3-72b0effe2356 acc1admin
+1d9e52e6-f833-47b9-9cfa-be727510c910 acc1usr1
+a089698b-8f32-4a32-ab71-790b015aa662 acc1usr2
+</code></pre>
+</li>
+<li><p>Find the user that you want to remove and make a note of that user's ID. For example, to remove the user <code>acc1usr2</code>, you would need the ID <code>a089698b-8f32-4a32-ab71-790b015aa662</code>.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you will have to remove the user from multiple groups, you may find it helpful to store this ID in a variable.</p>
+</div>
+</li>
+<li><p>List all the groups that you have permission to manage:</p>
+<pre><code class="lang-bash">curl -s -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/groups | jq -r '.[].subGroups[] | .id + &quot; &quot; + .name'
+</code></pre>
+<p>The <code>jq</code> filter on this request returns a list of groups:</p>
+<pre><code class="lang-none">008d3512-54f9-439e-800a-7b0b5ef76438 idam:Account_101#User
+a4ebc856-222f-4686-a4bf-239c21ffa010 idam:Account_101#Admin
+</code></pre>
+</li>
+<li><p>Make a note of the IDs of all the groups. The example above lists two groups:</p>
+<ul>
+<li><p><code>idam:Account_101#User</code> with the ID <code>008d3512-54f9-439e-800a-7b0b5ef76438</code></p>
+</li>
+<li><p><code>idam:Account_101#Admin</code> with the ID <code>a4ebc856-222f-4686-a4bf-239c21ffa010</code></p>
+</li>
+</ul>
+</li>
+<li><p>Remove the user from each group by making a <code>DELETE</code> request for that user against each group.</p>
+<pre><code class="lang-bash">curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/{{user_id}}/groups/{{group_id}}
+</code></pre>
+<p>For example, to remove the SSO user <code>acc1usr2</code>, you would need to make two calls:</p>
+<pre><code class="lang-bash">curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/a089698b-8f32-4a32-ab71-790b015aa662/groups/008d3512-54f9-439e-800a-7b0b5ef76438
+
+curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/a089698b-8f32-4a32-ab71-790b015aa662/groups/a4ebc856-222f-4686-a4bf-239c21ffa010
+</code></pre>
+<p>If you stored the user ID in a variable, you can use that in the request. For example, if the user ID <code>a089698b-8f32-4a32-ab71-790b015aa662</code> is stored in a variable <code>acc1usr2</code>, your calls would look like the following:</p>
+<pre><code class="lang-bash">curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/$acc1usr2/groups/008d3512-54f9-439e-800a-7b0b5ef76438
+
+curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/$acc1usr2/groups/a4ebc856-222f-4686-a4bf-239c21ffa010
+</code></pre>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-how-delete-sso-user.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

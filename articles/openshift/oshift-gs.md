@@ -41,6 +41,7 @@ You can use UKCloud for OpenShift to:
 - Host front-end web applications services to ensure that your environment:
 
   - Can scale to handle any demands placed on it
+
   - Will auto-heal in the event of problems to maintain high levels of availability
 
 - Create an Internet of Things (IoT) endpoint enabling internet devices to talk to your cloud applications, with all the benefits described above

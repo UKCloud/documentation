@@ -8,7 +8,7 @@
     <title>Oversized VMs on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Oversized VMs on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -89,8 +89,10 @@
 <p>UKCloud have configured the platform to dynamically move workloads to quieter hosts when the current host experiences a sustained level of increased activity. By increasing the resource requirements, the ability to move a VM from a busy host to quieter host is significantly impacted. As the VM resources are increased, the likelihood of that amount being free on another host is significantly diminished which effectively locks the VM to the current host.</p>
 <p>The impact to a customer VM is twofold:</p>
 <ul>
-<li>Reducing the reliability of performance</li>
-<li>Potentially affecting VM availability in the case of a failure</li>
+<li><p>Reducing the reliability of performance</p>
+</li>
+<li><p>Potentially affecting VM availability in the case of a failure</p>
+</li>
 </ul>
 <p>UKCloud must also consider the impact that these abnormally large VMs have on other users of the platform as the increased VMs consume additional resources and cause performance issues for other VMs.</p>
 <p>With this mind, UKCloud advises customers that VMs that exceed the maximum available in our current G Cloud service description for UKCloud for VMware are not allowed. We are currently scoping a technical fix to stop further creation of VMs that exceed the maximum permitted configuration. In the interim, we will be running regular reports to identify customers with VMs that breach these limits.</p>

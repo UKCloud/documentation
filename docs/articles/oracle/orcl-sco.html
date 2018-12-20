@@ -8,7 +8,7 @@
     <title>UKCloud for Oracle Software Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for Oracle Software Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -105,10 +105,13 @@
 <h2 id="storage-options">Storage options</h2>
 <p>All storage is persistent and resilient to local hardware failures. Multiple storage options can be used to support different aspects of the application.</p>
 <ul>
-<li><strong>Tier 1.</strong> Fast storage ideal for data warehouses, fast transactional databases or randomly executing workloads.</li>
-<li><strong>Tier 2.</strong> General all-purpose storage, suitable for systems with human interactions or predictable work patterns.</li>
-<li><strong>Cloud Storage.</strong> Ideal for serving media content or as a medium-term repository; can be used to store Recovery Manager (RMAN)
-backups.</li>
+<li><p><strong>Tier 1.</strong> Fast storage ideal for data warehouses, fast transactional databases or randomly executing workloads.</p>
+</li>
+<li><p><strong>Tier 2.</strong> General all-purpose storage, suitable for systems with human interactions or predictable work patterns.</p>
+</li>
+<li><p><strong>Cloud Storage.</strong> Ideal for serving media content or as a medium-term repository; can be used to store Recovery Manager (RMAN)
+backups.</p>
+</li>
 </ul>
 <h2 id="storage-policies">Storage policies</h2>
 <p>We provide you with access to two storage policies: tier 1 and tier 2.</p>
@@ -117,9 +120,12 @@ backups.</li>
 <p>For installations of Oracle apps on top of the OS, it's best to have separate non-OS virtual disks which are then mapped to mountpoints. The sizing requirements/recommendations for the non-OS storage can be found on the official Oracle installation guides and they can differ from version to version.</p>
 <p>You'll need to take into consideration future data growth while planning capacity, as this would also reflect on the capacity required for backups.</p>
 <ul>
-<li>We do not guarantee storage performance, as it can be affected by many factors.</li>
-<li>We do not provide IOPS figures for our storage offerings.</li>
-<li>Workloads can use multiple storage profiles.</li>
+<li><p>We do not guarantee storage performance, as it can be affected by many factors.</p>
+</li>
+<li><p>We do not provide IOPS figures for our storage offerings.</p>
+</li>
+<li><p>Workloads can use multiple storage profiles.</p>
+</li>
 </ul>
 <h2 id="protection">Protection</h2>
 <p>UKCloud for Oracle Software does not include any infrastructure-level backup or disaster recovery functionality. However, the underpinning infrastructure supports native Oracle protection technologies such as Data Guard and RMAN.</p>
@@ -138,9 +144,12 @@ backups.</li>
 <p>You can specify Farnborough or Corsham as the site where you would like to have your service provisioned, and we will try to accommodate requests and will advise you if we are unable do so.</p>
 <p>We control the deployed versions of technology on the platform. This covers internal platform-supporting technologies, and any technology versions available to you.</p>
 <ul>
-<li>Internally this includes, but isn't limited to, the Oracle Virtual Machine Manager and Oracle Virtual Machine Server versions, and the hardware version of the platform.</li>
-<li>Externally this includes the available versions of the edge gateway and Oracle Enterprise Manager.</li>
-<li>You can make additional configurations inside an OVM (such as implementing third-party software technologies). We do not support customer implementations inside a VM.</li>
+<li><p>Internally this includes, but isn't limited to, the Oracle Virtual Machine Manager and Oracle Virtual Machine Server versions, and the hardware version of the platform.</p>
+</li>
+<li><p>Externally this includes the available versions of the edge gateway and Oracle Enterprise Manager.</p>
+</li>
+<li><p>You can make additional configurations inside an OVM (such as implementing third-party software technologies). We do not support customer implementations inside a VM.</p>
+</li>
 </ul>
 <h2 id="operating-systems">Operating systems</h2>
 <p>UKCloud for Oracle Software includes the base OVM platform licences, which provide VM containers that meet Oracle's definition of hard partitioning.</p>
@@ -167,10 +176,14 @@ backups.</li>
 <h2 id="platform-management">Platform management</h2>
 <p>Users can access, manage and view the UKCloud for Oracle Software service, accessing only those features allowed by their role, in any of the following ways:</p>
 <ul>
-<li><strong>Oracle Enterprise Manager.</strong> The graphical interface for the creation and management of the Oracle environment.</li>
-<li><strong>vCloud Director API.</strong> Enables the programmatic creation and management of the Oracle edge gateway.</li>
-<li><strong>vCloud Director graphical UI.</strong> Provides a graphical interface to access the vCloud Director environment to manage the Oracle edge gateway (depending on assigned permissions).</li>
-<li><strong>UKCloud Portal.</strong> Enables the creation of Oracle compute services and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the Portal.</li>
+<li><p><strong>Oracle Enterprise Manager.</strong> The graphical interface for the creation and management of the Oracle environment.</p>
+</li>
+<li><p><strong>vCloud Director API.</strong> Enables the programmatic creation and management of the Oracle edge gateway.</p>
+</li>
+<li><p><strong>vCloud Director graphical UI.</strong> Provides a graphical interface to access the vCloud Director environment to manage the Oracle edge gateway (depending on assigned permissions).</p>
+</li>
+<li><p><strong>UKCloud Portal.</strong> Enables the creation of Oracle compute services and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the Portal.</p>
+</li>
 </ul>
 <p>You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the Oracle Virtual Machine Manager environment.</p>
 <h2 id="service-migration">Service migration</h2>

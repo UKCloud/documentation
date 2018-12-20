@@ -49,7 +49,9 @@ To complete the steps in this guide, you must have appropriate access to your Mi
 For more information about UKCloud for Microsoft Azure, see:
 
 - [*Understanding UKCloud for Microsoft Azure*](azs-ref-overview.md)
+
 - [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md)
+
 - [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
 
 ## Feedback

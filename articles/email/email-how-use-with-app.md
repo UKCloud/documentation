@@ -39,6 +39,7 @@ platform, which is internet facing. If you wish to send and/or receive mail on t
 - The Elevated mail platform is PSN facing, so you'll need a PSN- or GCF- registered domain name in order to use the service
 
 - The hostname for UKCloud's mail server is different, and will be provided to you once your order has been processed
+
 - By default, you'll only be able to connect to UKCloud's mail server using HTTPS --- you'll need to raise a service request in the Elevated portal to request access from your virtual data centre to the UKCloud mail server via SMTP, POP3 or IMAP as required
 
 ## Getting started with Email and Collaboration
@@ -69,10 +70,18 @@ You're now ready to configure your application to connect to the mailbox to send
 
 To send outbound email, your application needs to support SMTP authentication and TLS encryption. Provided this is the case, simply configure the following settings in your application:
 
+<<<<<<< HEAD
 - SMTP Server/Mail relay host: mail.skyscapecs.net
+=======
+- SMTP Server/Mail relay host: mail.ukcloud.net
+
+>>>>>>> b3f330f82b2d12590e512496489f9ac6eb833762
 - Port number: 465
+
 - Use TLS*: Yes
+
 - Username/Password: as configured
+
 - From Address: as configured
 
 > [!NOTE]
@@ -84,9 +93,16 @@ To receive inbound email, your application needs to support POP3 or IMAP4 over T
 
 Provided this is the case, simply configure the following settings in your application:
 
+<<<<<<< HEAD
 - Mailbox server: mail.skyscapecs.net
+=======
+- Mailbox server: mail.ukcloud.net
+
+>>>>>>> b3f330f82b2d12590e512496489f9ac6eb833762
 - Protocol: POP3S or IMAPS
+
 - Port number: 993 (POP3S) or 995 (IMAPS)
+
 - Username/Password: as configured
 
 ## Applications without TLS support

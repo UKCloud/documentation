@@ -37,9 +37,13 @@ UKCloud for Oracle Software enables you to start your cloud journey with your Or
 The service has been designed and tested for compatibility with the most popular Oracle applications used in citizen‑facing solutions today, including:
 
 - Oracle database (including features such as encryption and Data Guard)
+
 - Oracle WebLogic Server
+
 - Oracle Fusion Applications
+
 - Oracle Enterprise Manager
+
 - Oracle E-Business Suite
 
 UKCloud for Oracle Software provides workloads with an uncontended infrastructure optimised for the performance and availability of Oracle workloads. You can right‑size the allocated resources to suit the changing demands of your application; ensuring performance and avoiding over‑capacity. You can specify the resource allocation of each workload independently: simply choose the appropriate CPU cores, amount of memory and required storage from the catalogue.
@@ -47,11 +51,17 @@ UKCloud for Oracle Software provides workloads with an uncontended infrastructur
 The service offers the following technical benefits specific to Oracle workloads:
 
 - Use of core-pinning technology means that Oracle workloads operating on the UKCloud platform aren't subject to the types of movement that can unbalance Oracle applications running on other cloud platforms
+
 - The scalable nature of our service enables you to add or remove cores in line with your understanding of the performance requirements of your solution
+
 - Self-service management of your environment via our Customer Portal, which you can also use to programmatically control your Oracle environment
+
 - Virtual firewalls to manage connectivity into and out of your environment -- self-service and free of charge
+
 - IPsec and SSL VPN/SDN to create secure connections between users and other environments using a variety of included tunnelling technologies
+
 - Basic load balancing to configure active/active solutions that are resilient to outages and can handle high levels of activity, using our on‑platform, out‑of‑the‑box load balancers
+
 - Persistent storage so that your data remains, even when a virtual machine (VM) is turned off, ensuring that your application data remains consistent and available
 
 ### Oracle licensing compliance
@@ -69,6 +79,7 @@ If you require assistance building out your Oracle solution, we can put you in c
 The management of your Oracle estate is split between Oracle Enterprise Manager (OEM) and vCloud Director:
 
 - Use OEM to build and manage your VMs and templates
+
 - Use vCloud Director to create your VM networks and configure your edge gateway, including firewall rules and VPN connections
 
 ![UKCloud for Oracle Software architecture](images/orcl-architecture.png)
@@ -163,9 +174,13 @@ UKCloud uses The *Notification Center* to communicate alerts about the objects i
 From the user account menu, you can:
 
 - [Change your password](#changing-your-password)
+
 - [Change your accessibility preferences](#changing-your-accessibility-preferences)
+
 - [Change system broadcast preferences](#changing-system-broadcast-preferences)
+
 - [Change your console settings](#changing-your-console-settings)
+
 - [Log out of the console](#logging-out-of-the-cloud-control-console)
 
 You can also access online help and display information about your version of OEM.

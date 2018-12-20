@@ -111,28 +111,43 @@ As with databases, these kinds of applications are often slowed down by their st
 The data in the benchmark results section shows that the UKCloud for OpenStack platform consistently outperforms both hyperscalers across a variety of benchmarks including:
 
 - Instance Boot Time
+
   - 1.5 times faster than AWS
+
   - Almost 7 times faster than Azure
+
   - **Reduced delay in loading the instances means that users are able to readily access the applications within them**
 
 - Networking Performance
+
   - Almost 12 times higher than AWS
+
   - Almost 19 times higher than Azure
+
   - **Users spend less time transferring data on the network, allowing applications to access their data faster and thus running faster**
 
 - MongoDB
+
   - 2 times faster than AWS
+
   - Almost 2 times faster than Azure
+
   - **Better database performance allows for higher data availability to applications, therefore resulting in a better customer experience**
 
 - Random I/O Performance
+
   - Random Read is over 5 times faster than AWS and over 34 times faster than Azure
+
   - Random Write is over 4 times faster than AWS and over 27 times faster than Azure
+
   - **Faster storage access allows applications to rapidly access and process data and thus results in faster applications**
 
 - Sequential I/O Performance
+
   - Sequential Read is almost 11 times better than AWS and over 4 times better than Azure
+
   - Sequential Write is over 10 times higher than AWS and over 6 times higher than Azure
+
   - **High sequential IO performance is vital for data analysis and specifically for data warehouses, it is a core component of business intelligence and thus guides key management decisions**
 
 ## Summary

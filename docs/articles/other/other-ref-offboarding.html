@@ -1,0 +1,586 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Terminating your UKCloud services | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Terminating your UKCloud services | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="terminating-your-ukcloud-services">Terminating your UKCloud services</h1>
+
+<h2 id="overview">Overview</h2>
+<p>UKCloud is easy to adopt, easy to use and easy to leave, so our intention is to make the service termination process, sometimes referred to as offboarding, as simple as possible.</p>
+<p>This article clearly outlines customer and UKCloud responsibilities for terminating your UKCloud services.</p>
+<h2 id="notice-requirements">Notice requirements</h2>
+<p>The notice required to terminate UKCloud services varies depending on the service. For UKCloud notice period requirements on a per-product basis, refer to <a href="other-ref-product-overview.html"><em>Services at a glance</em></a>.</p>
+<h2 id="single-service-termination-vs-account-termination">Single service termination vs account termination</h2>
+<p>You can request the termination of one or more services within your account. In this case, the termination is restricted to the chargeable items within that service (for example, a VMware environment within a customer account).</p>
+<p>If you want to terminate your whole account with UKCloud, you must raise separate termination requests for each service associated with your customer contract. The final stage of the termination of a complete customer account will be the decommissioning of the last UKCloud Portal user, decommissioning of all customer reports and termination of the ability to access customer ticket details and service reports through the Portal.</p>
+<h2 id="customer-responsibilities">Customer responsibilities</h2>
+<ul>
+<li><p>When you decide to terminate a service, you should first contact your Technical Account Manager (TAM) or Cloud Delivery Manager (CDM). Your TAM or CDM will help you to determine the relevant environment details for termination and the Effective Date of Termination.</p>
+</li>
+<li><p>After speaking to your TAM or CDM, an administrator of your Portal account must raise a Service Request via the Portal, following the relevant prompts for information to enable our support team to action the request as quickly as possible.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you do not raise a Service Request to initiate a formal termination of service, your environment may not be completely decommissioned and you may end up still being charged for objects remaining on the platform.</p>
+</div>
+</li>
+<li><p>Before the decommissioning of the services can take place, you are responsible for the removal of all the data within the environment. Refer to <a href="#responsibilities-by-service"><em>Responsibilities by service</em></a> below for a list of environment items that you need to clear ahead of UKCloud decommissioning the service.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you do not removal all the environment items listed, UKCloud will not be able to complete the termination process and you may still be charged for those remaining items.</p>
+</div>
+</li>
+<li><p>All users with access to the service being terminated must be removed from the Portal by an administrator within the customer organisation.</p>
+</li>
+</ul>
+<h2 id="ukcloud-responsibilities">UKCloud responsibilities</h2>
+<p>After you've removed all of the items from your account that you're responsible for, UKCloud will:</p>
+<ul>
+<li><p>Remove service-specific environment items as listed in <a href="#responsibilities-by-service"><em>Responsibilities by service</em></a> below.</p>
+</li>
+<li><p>Securely and permanently erase any residual customer data and configurations that remain.</p>
+<p>Our data removal solution is independently validated by periodic IT Security Health Check tests. While the solution does not align with the documented requirements of HMG IA Standard No.5, it has successfully passed all CHECK/ITSHC activities, and has been assessed and validated by the National Cyber Security Centre (NCSC) on behalf of specific customers.</p>
+</li>
+<li><p>Remove your account (and company, if necessary).</p>
+</li>
+<li><p>Return any prepaid sums for services that you have not consumed (unless otherwise required by the associated Service Definition).</p>
+</li>
+<li><p>Arrange to return all confidential information.</p>
+</li>
+</ul>
+<h2 id="costs">Costs</h2>
+<p>There are no termination costs associated with cancelling UKCloud services. However, you should consider the following:</p>
+<ul>
+<li><p>You are responsible for extracting your own data from the service and any costs that may incur.</p>
+</li>
+<li><p>We may make additional charges for transferring data out of the service.</p>
+</li>
+<li><p>We reserve the right to pass through third-party price rises that are not within our direct control.</p>
+</li>
+<li><p>If you use service options with minimum terms, such as Global Load Balancing or Application-tuned DDoS Protection, you will continue to be charged for these until the end of those terms.</p>
+</li>
+<li><p>We reserve the right to charge for any content that you leave in your environment or for retrieving and returning your content.</p>
+</li>
+</ul>
+<h2 id="responsibilities-by-service">Responsibilities by service</h2>
+<h3 id="multi-cloud-platforms">Multi-cloud platforms</h3>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">UKCloud for Microsoft Azure</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">UKCloud for OpenShift</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-3" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-3" data-tab="tabid-3" tabindex="-1">UKCloud for OpenStack</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-5" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-5" data-tab="tabid-5" tabindex="-1">UKCloud for VMware</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+
+<table>
+<thead>
+<tr>
+<th>Customer responsibilities</th>
+<th>UKCloud responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resource groups (which contain virtual machines, storage and virtual networks)</td>
+<td>User subscriptions, offers, plans and quotas</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<table>
+<thead>
+<tr>
+<th>Customer responsibilities</th>
+<th>UKCloud responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pods</td>
+<td>Entire environment</td>
+</tr>
+<tr>
+<td>Projects</td>
+<td></td>
+</tr>
+<tr>
+<td>Volumes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
+
+<table>
+<thead>
+<tr>
+<th>Customer responsibilities</th>
+<th>UKCloud responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instances</td>
+<td>External networks (HSCN, etc.)</td>
+</tr>
+<tr>
+<td>Internal networks</td>
+<td></td>
+</tr>
+<tr>
+<td>Routers</td>
+<td></td>
+</tr>
+<tr>
+<td>Floating IPs</td>
+<td></td>
+</tr>
+<tr>
+<td>Volumes</td>
+<td></td>
+</tr>
+<tr>
+<td>Volume snapshots</td>
+<td></td>
+</tr>
+<tr>
+<td>Images</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- #### [UKCloud for Oracle Software](#tab/tabid-4)
+
+Customer responsibilities | UKCloud responsibilities
+--------------------------|------------------------- -->
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-5" role="tabpanel" data-tab="tabid-5" aria-hidden="true" hidden="hidden">
+
+<table>
+<thead>
+<tr>
+<th>Customer responsibilities</th>
+<th>UKCloud responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Virtual machines</td>
+<td>Edges</td>
+</tr>
+<tr>
+<td>vApps</td>
+<td>VDC</td>
+</tr>
+<tr>
+<td>Templates</td>
+<td>vOrg</td>
+</tr>
+<tr>
+<td>ISOs</td>
+<td>Existing snapshot backups</td>
+</tr>
+<tr>
+<td>Catalogs</td>
+<td>ZORG/assigned VDCs for Journaling Protection</td>
+</tr>
+<tr>
+<td>Org VDC networks</td>
+<td></td>
+</tr>
+<tr>
+<td>NAT/firewall/DHCP/static routes/VPN</td>
+<td></td>
+</tr>
+<tr>
+<td>Disable snapshot backups</td>
+<td></td>
+</tr>
+<tr>
+<td>VPGs for Journaling Protection</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<h3 id="multi-cloud-enabling">Multi-cloud enabling</h3>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-6" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-6" data-tab="tabid-6" tabindex="0" aria-selected="true">Cloud GPU</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-7" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-7" data-tab="tabid-7" tabindex="-1">Cloud Storage</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-8" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-8" data-tab="tabid-8" tabindex="-1">Cross Domain Security Zone</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-9" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-9" data-tab="tabid-9" tabindex="-1">Disaster Recovery as a Service</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-10" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-10" data-tab="tabid-10" tabindex="-1">Email and Collaboration</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-12" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-12" data-tab="tabid-12" tabindex="-1">Migration to the Cloud</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-14" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-14" data-tab="tabid-14" tabindex="-1">Secure Remote Access</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-15" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-15" data-tab="tabid-15" tabindex="-1">Connectivity</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-6" role="tabpanel" data-tab="tabid-6">
+
+<table>
+<thead>
+<tr>
+<th>Customer responsibilities</th>
+<th>UKCloud responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uninstall NVIDIA software</td>
+<td>Remove GPU mapping from virtual machine</td>
+</tr>
+<tr>
+<td>Power off GPU-enabled virtual machine</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-7" role="tabpanel" data-tab="tabid-7" aria-hidden="true" hidden="hidden">
+
+<table>
+<thead>
+<tr>
+<th>Customer responsibilities</th>
+<th>UKCloud responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data</td>
+<td>Default bucket</td>
+</tr>
+<tr>
+<td>Customer-created buckets</td>
+<td>Accounts</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-8" role="tabpanel" data-tab="tabid-8" aria-hidden="true" hidden="hidden">
+
+<table>
+<thead>
+<tr>
+<th>Customer responsibilities</th>
+<th>UKCloud responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Virtual machines</td>
+<td>Edges</td>
+</tr>
+<tr>
+<td>vApps</td>
+<td>VDC</td>
+</tr>
+<tr>
+<td>Templates</td>
+<td>vOrg</td>
+</tr>
+<tr>
+<td>ISOs</td>
+<td></td>
+</tr>
+<tr>
+<td>Catalogs</td>
+<td></td>
+</tr>
+<tr>
+<td>Org VDC networks</td>
+<td></td>
+</tr>
+<tr>
+<td>NAT/firewall/DHCP/static routes/VPN</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-9" role="tabpanel" data-tab="tabid-9" aria-hidden="true" hidden="hidden">
+
+<table>
+<thead>
+<tr>
+<th>Customer responsibilities</th>
+<th>UKCloud responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On-premises ZVMs and VRAs</td>
+<td>ZORG/assigned VDCs</td>
+</tr>
+<tr>
+<td>VPGs</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-10" role="tabpanel" data-tab="tabid-10" aria-hidden="true" hidden="hidden">
+
+<table>
+<thead>
+<tr>
+<th>Customer responsibilities</th>
+<th>UKCloud responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mail accounts</td>
+<td>Final admin account</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-12" role="tabpanel" data-tab="tabid-12" aria-hidden="true" hidden="hidden">
+
+<table>
+<thead>
+<tr>
+<th>Customer responsibilities</th>
+<th>UKCloud responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On-premises ZVMs and VRAs</td>
+<td>ZORG/assigned VDCs</td>
+</tr>
+<tr>
+<td>VPGs</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-14" role="tabpanel" data-tab="tabid-14" aria-hidden="true" hidden="hidden">
+
+<table>
+<thead>
+<tr>
+<th>Customer responsibilities</th>
+<th>UKCloud responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Additional VMs (including Bastion)</td>
+<td>Org VDC networks</td>
+</tr>
+<tr>
+<td>vApps (excluding Bastion vApp)</td>
+<td>NAT/firewall/DHCP/static routes/VPN</td>
+</tr>
+<tr>
+<td>Templates</td>
+<td>Edges</td>
+</tr>
+<tr>
+<td>ISOs</td>
+<td>VDC</td>
+</tr>
+<tr>
+<td>Catalogs</td>
+<td>vOrg</td>
+</tr>
+<tr>
+<td> </td>
+<td>Certificates and Active Directory</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-15" role="tabpanel" data-tab="tabid-15" aria-hidden="true" hidden="hidden">
+
+<table>
+<thead>
+<tr>
+<th>Customer responsibilities</th>
+<th>UKCloud responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customer-provided private networks</td>
+<td>External network connections</td>
+</tr>
+<tr>
+<td>Customer-provided IP ranges</td>
+<td>Allocated IP ranges</td>
+</tr>
+<tr>
+<td>Customer co-lo'd kit</td>
+<td>Private VLANs/VRFs</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-offboarding.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

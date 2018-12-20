@@ -24,6 +24,7 @@ This document provides an overview of the UKCloud process to be used by customer
 There are two approaches to applying for CDSZ services:
 
 - A light touch design review/self-assessment route for customers with simple implementations, or those who are experienced at designing secure solutions. This enables customers who are comfortable with the risk associated with their data to choose which controls and evidence they feel is appropriate to self-certify their cross domain solution.
+
 - An assurance wrap style approach with UKCloud’s experienced professionals for more complex implementations or those customers who would like support and guidance when developing their solutions. This enables customers who require more support to submit their proposed solution with confidence that it effectively mitigates against risk.
 
 In this document, the *customer* is the UKCloud customer, who may or may not be the ultimate end user of the application. The customer will be responsible for completing any compliance process with the end user, including obtaining sign-off from the relevant data owner. The data owner should be a permanent employee at the data owning organisation with evidence of data ownership, for example an IT Security Officer (ITSO), Senior Information Risk Owner (SIRO) or accreditor.
@@ -66,11 +67,13 @@ When you apply for a CDSZ service, you must provide the following documents to s
 If you want to use the CDSZ, you can initiate the application process in one of two ways:
 
 - Raise a Service Request through My Calls, specifying the relevant CDSZ product (UKCloud Guard, Walled Garden or Secure Remote Access). One of our Sales representatives, TAMs, or Cloud Architects will arrange a call to discuss your requirements and then close the Service Request.
+
 - Contact one of our Sales representatives, TAMs, or Cloud Architects directly to arrange a call to discuss your requirements.
 
 During your initial conversation, our Cloud Architect will discuss your proposed implementation and help determine the best approach for your situation:
 
 - If your implementation is simple, or you're confident with designing a solution that mitigates the risk associated with your data and choosing the controls and evidence appropriate to that solution, you can follow our self-assessment option.
+
 - If your implementation is complex, or you'd prefer some guidance to identify risks and how to mitigate against them, we can provide an assurance wrap style approach with our experienced professionals for more complex implementations.
 
 The following table lists some examples of simple versus complex designs:
@@ -112,8 +115,11 @@ At the end of the review period, you will have generated all the necessary docum
 The design review is facilitated by a Cloud Architect and will gather a clearer understanding of how the proposed design aligns with recognised good security practice.
 
 - Present your technical solution to a Cloud Architect. You can do this via teleconference, Webex or face-to-face as appropriate.
+
 - The Cloud Architect will be looking to see evidence of effective mitigation for common risks (for example, technical controls like firewall, anti-malware and protective monitoring).
+
 - The Cloud Architect will provide advice and guidance on aspects of the solution that are likely to raise concerns.
+
 - You may revise your design to incorporate feedback from the design review.
 
 > [!NOTE]

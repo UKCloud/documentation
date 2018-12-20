@@ -21,8 +21,11 @@ This document explains how to create a Service Principal Name to manage Azure an
 It will guide you through the creation of:
 
 - an Azure application
+
 - a Service Principal Name
+
 - role assignment
+
 - permissions
 
 ## What is a Service Principal Name?

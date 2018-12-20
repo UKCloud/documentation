@@ -77,6 +77,10 @@ For a template to get you started with a new article, see [*UKCloud Knowledge Ce
 
 If you want to suggest significant changes to the Knowledge Centre, contact <products@ukcloud.com> to discuss your ideas.
 
+## Related videos
+
+- [*Editing Docs within the UKCloud Knowledge Centre*](https://vimeo.com/281661800)
+
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.

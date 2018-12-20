@@ -8,7 +8,7 @@
     <title>How to perform a failover | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to perform a failover | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -87,8 +87,10 @@
 <h2 id="overview">Overview</h2>
 <p>You may want to perform a failover in the following circumstances:</p>
 <ul>
-<li>To recover virtual machines (VMs) after a disaster, if you're using Disaster Recovery as a Service or the UKCloud for VMware Journaling Protection option</li>
-<li>To migrate workloads from a local, on-premises environment onto the UKCloud platform</li>
+<li><p>To recover virtual machines (VMs) after a disaster, if you're using Disaster Recovery as a Service or the UKCloud for VMware Journaling Protection option</p>
+</li>
+<li><p>To migrate workloads from a local, on-premises environment onto the UKCloud platform</p>
+</li>
 </ul>
 <p>With Disaster Recovery as a Service and Journaling Protection, you can also run a test failover to verify that, during recovery, your protected VMs are correctly replicated at the target site.</p>
 <div class="IMPORTANT">
@@ -120,10 +122,14 @@
 </li>
 <li><p>In the <em>Checkpoints</em> dialog, select the checkpoint that you want to use:</p>
 <ul>
-<li><strong>Latest</strong> to use the latest checkpoint</li>
-<li><strong>Latest Tagged Checkpoint</strong> to use the latest manually added checkpoint</li>
-<li><strong>Latest VSS</strong> to use the latest VSS snapshot (this option is applicable only for Disaster Recovery as a Service and if you've installed the Zerto VSS agent on the VM)</li>
-<li><strong>Select from all available checkpoints</strong> to select a specific checkpoint from the list below</li>
+<li><p><strong>Latest</strong> to use the latest checkpoint</p>
+</li>
+<li><p><strong>Latest Tagged Checkpoint</strong> to use the latest manually added checkpoint</p>
+</li>
+<li><p><strong>Latest VSS</strong> to use the latest VSS snapshot (this option is applicable only for Disaster Recovery as a Service and if you've installed the Zerto VSS agent on the VM)</p>
+</li>
+<li><p><strong>Select from all available checkpoints</strong> to select a specific checkpoint from the list below</p>
+</li>
 </ul>
 <p><img src="images/perform-image-4.png" alt="My VMs"></p>
 </li>
@@ -167,10 +173,14 @@
 </li>
 <li><p>In the <em>Checkpoints</em> dialog, select the checkpoint that you want to use:</p>
 <ul>
-<li><strong>Latest</strong> to use the latest checkpoint</li>
-<li><strong>Latest Tagged Checkpoint</strong> to use the latest manually added checkpoint</li>
-<li><strong>Latest VSS</strong> to use the latest VSS snapshot (this option is applicable only for Disaster Recovery as a Service and Migration to the Cloud, and if you've installed the Zerto VSS agent on the VM)</li>
-<li><strong>Select from all available checkpoints</strong> to select a specific checkpoint from the list below</li>
+<li><p><strong>Latest</strong> to use the latest checkpoint</p>
+</li>
+<li><p><strong>Latest Tagged Checkpoint</strong> to use the latest manually added checkpoint</p>
+</li>
+<li><p><strong>Latest VSS</strong> to use the latest VSS snapshot (this option is applicable only for Disaster Recovery as a Service and Migration to the Cloud, and if you've installed the Zerto VSS agent on the VM)</p>
+</li>
+<li><p><strong>Select from all available checkpoints</strong> to select a specific checkpoint from the list below</p>
+</li>
 </ul>
 <p><img src="images/perform-image-8.png" alt="My VMs"></p>
 </li>
@@ -188,9 +198,12 @@
 </li>
 <li><p>The shutdown policy determines what happens to the source VMs in the event of a failover. To change the shutdown policy, select the <strong>VM Shutdown</strong> field and choose:</p>
 <ul>
-<li><strong>No</strong> to leave the source VMs as they are before starting the failover.</li>
-<li><strong>Yes</strong> if the source VMs have VMware Tools available so that they can be gracefully shut down before starting the failover or migration. If the VMs cannot be shut down, the failover fails.</li>
-<li><strong>Force Shutdown</strong> to forcibly shut down the source VMs before starting the failover.</li>
+<li><p><strong>No</strong> to leave the source VMs as they are before starting the failover.</p>
+</li>
+<li><p><strong>Yes</strong> if the source VMs have VMware Tools available so that they can be gracefully shut down before starting the failover or migration. If the VMs cannot be shut down, the failover fails.</p>
+</li>
+<li><p><strong>Force Shutdown</strong> to forcibly shut down the source VMs before starting the failover.</p>
+</li>
 </ul>
 </li>
 <li><p>Reverse protection ensures that when the source VMs are failed over to the target site, the source site becomes the new target site to ensure that the VMs are still protected. To enable reverse protection, select the <strong>Reverse Protection</strong> field and select the check box.</p>

@@ -8,7 +8,7 @@
     <title>How to obtain your Client ID via the API for Azure Stack - REST API | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to obtain your Client ID via the API for Azure Stack - REST API | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -190,8 +190,10 @@
 </ul>
 <p>f. TenantID</p>
 <ul>
-<li>Query https://&lt;your domain&gt;.onmicrosoft.com.well-known/openid-configuration</li>
-<li>In the output from the query above look for token_endpoint value (i.e. <a href="https://login.windows.net/0000ffff-1111-cccc-0000-888888888888/oauth2/token">https://login.windows.net/0000ffff-1111-cccc-0000-888888888888/oauth2/token</a>) and in this example your Tenant ID is <strong>0000ffff-1111-cccc-0000-888888888888</strong>.</li>
+<li><p>Query https://&lt;your domain&gt;.onmicrosoft.com.well-known/openid-configuration</p>
+</li>
+<li><p>In the output from the query above look for token_endpoint value (i.e. <a href="https://login.windows.net/0000ffff-1111-cccc-0000-888888888888/oauth2/token">https://login.windows.net/0000ffff-1111-cccc-0000-888888888888/oauth2/token</a>) and in this example your Tenant ID is <strong>0000ffff-1111-cccc-0000-888888888888</strong>.</p>
+</li>
 </ul>
 <p>g. Request Authentication Endpoint/URI of Azure Authentication Endpoint</p>
 <ul>

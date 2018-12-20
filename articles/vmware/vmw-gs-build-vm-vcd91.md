@@ -166,12 +166,14 @@ Let's start with firewall rules:
 
     - **Name** - `HTTPS outbound`
   
+
     - **Source** - `internal`
 
     - **Destination** - `external`
 
     - **Service** - Click the **+** button and enter the following values in the *Add Service* dialog box
   
+
       - **Protocol** - **TCP**
 
       - **Source Port** - `any`
@@ -289,7 +291,9 @@ Now that you've laid the groundwork, it's time to create your VM. The best way t
 19. To confirm that you have connectivity to the internet and have an assigned IP address:
 
     - Type `ipconfig` into the Command Prompt. If you've configured the networking correctly, your VM will return an IP address.
+
     - Open an internet browser page and navigate to an external web page
+
     - Ping the IP address of your DNS (for example, `8.8.8.8`) through the command line.
 
 ## Next steps

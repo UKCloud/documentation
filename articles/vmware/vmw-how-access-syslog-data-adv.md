@@ -21,7 +21,9 @@ toc_mdlink: vmw-how-access-syslog-data-adv.md
 Your NSX edge is globally configured to send syslog messages to a specific IP address (`100.127.255.250`). By configuring a new network or IP address within your virtual data centre (VDC) and deploying a collector with the syslog IP address, you can access your NSX edge syslog data. You can then use this data to check:
 
 - Allowed and denied network traffic
+
 - Load balancer statistics
+
 - Load balancer health
 
 This guide explains the network configuration required to provision a syslog collector within your VDC to receive syslog information direct from your NSX gateway.
@@ -31,6 +33,7 @@ This guide explains the network configuration required to provision a syslog col
 The simplest scenario is to gather syslog data from a single NSX edge into one collector. To do this you need to create a routable location for the syslog IP address, by either:
 
 - [*Adding the syslog IP address to an existing network interface card (NIC) on a routed subnet*](#adding-the-syslog-ip-address-to-an-existing-nic)
+
 - [*Configuring a new routed network*](#configuring-a-new-routed-network)
 
 ### Adding the syslog IP address to an existing NIC
@@ -53,9 +56,13 @@ The simplest scenario is to gather syslog data from a single NSX edge into one c
 1. Create a new routed network with the following details:
 
     - **Org Network Name:** Customer defined
+
     - **Gateway:** `100.127.255.249`
+
     - **Subnet Mask:** `255.255.255.248`
+
     - **DNS:** Customer defined
+
     - **Static IP Pool:** `100.127.255.250-100.127.255.254`
 
     You can find more detailed steps for creating a routed network in [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
@@ -81,14 +88,19 @@ If you have multiple NSX edges under a single NFT, you can gather the data from 
     You can create individual rules using the following suggestions:
 
     - *`SOURCE TRANSIT IP`*`:Any` to `100.127.255.250` on UDP
+
     - `Any:Any` to `100.127.255.250:514` on UDP
+
     - *`NFT TRANSIT CIDR/SUBNET`*`:Any` to `100.127.255.250:514` on UDP
 
 4. On each of the source edges, create a static route to direct traffic to the syslog edge. Use the following settings:
 
     - **Applied On:** *`nft_network`*
+
     - **Name:** Syslog traffic (or any other name you prefer)
+
     - **Network:** `100.127.255.248/29`
+
     - **Next Hop IP:** The TRANSIT IP address of the syslog edge
 
     Syslog packets from each source edge will now be forwarded to the syslog edge, with the source of the syslog traffic being the TRANSIT IP of the source edge.

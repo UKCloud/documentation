@@ -8,7 +8,7 @@
     <title>How to view storage profile usage | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to view storage profile usage | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -116,9 +116,12 @@
 <p>We've provided some sample code to show how to make this call on our <a href="https://github.com/ukcloud/knowledge_centre/tree/master/StorageProfileUsage">GitHub repository</a>.</p>
 <p>The <code>using_curl.md</code> page provides an example of how to use CURL to call the REST API. The example assumes that you have set up the following three environment variables to hold your user credentials:</p>
 <ul>
-<li><code>VCD_ORG</code></li>
-<li><code>VCD_USERNAME</code></li>
-<li><code>VCD_PASSWORD</code></li>
+<li><p><code>VCD_ORG</code></p>
+</li>
+<li><p><code>VCD_USERNAME</code></p>
+</li>
+<li><p><code>VCD_PASSWORD</code></p>
+</li>
 </ul>
 <p>The example makes two calls to the API. The first call authenticates the session:</p>
 <pre><code>curl -u %VCD_USERNAME%@%VCD_ORG%:%VCD_PASSWORD%  -H &quot;Accept: application/*+xml;version=5.6&quot; -X POST -i https://api.vcd.portal.skyscapecloud.com/api/sessions
