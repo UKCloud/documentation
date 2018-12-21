@@ -381,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-vid-overview.html",
-          "hash": "K+wFsc43ErfDMeYJfDwHjw=="
+          "hash": "CicQd6QkoaOc8qk539PTew=="
         }
       },
       "is_incremental": false,
@@ -873,17 +873,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/azure/images/azs-vid-overview.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/azure/images/azs-vid-overview.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/azure/images/azsp_computeblade.png",
       "output": {
         "resource": {
@@ -1313,7 +1302,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-vid-cifs-ecs-overview.html",
-          "hash": "/9VVisawiLXkk9k94JimMg=="
+          "hash": "evk9mguB/Rqn0BADdMseWg=="
         }
       },
       "is_incremental": false,
@@ -2040,17 +2029,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/cloud-storage/images/cs-portal-users.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/cloud-storage/images/cs-vid-cifs-ecs-overview.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/cloud-storage/images/cs-vid-cifs-ecs-overview.png"
         }
       },
       "is_incremental": false,
@@ -5021,17 +4999,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/openstack/images/ostack-vid-overview.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/openstack/images/ostack-vid-overview.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-windows-advanced-system-settings.png",
       "output": {
         "resource": {
@@ -5474,7 +5441,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-vid-overview.html",
-          "hash": "439SZ8/IpsgbOmZaq35UAg=="
+          "hash": "/iHlUsqoe8G7q/ELxbZaUQ=="
         }
       },
       "is_incremental": false,
@@ -6210,17 +6177,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/other/images/other-vid-pricing-tool.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/other-vid-pricing-tool.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/other/images/pricing-bug-mac-1.png",
       "output": {
         "resource": {
@@ -6906,11 +6862,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-vid-kc-contribution.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-vid-kc-contribution.html",
+          "hash": "5FZXyyLrolf4InkP3htykg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-vid-pricing-tool-overview.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-vid-pricing-tool-overview.html",
-          "hash": "PQPfoFn17wLH3qyyl4Ve4Q=="
+          "hash": "S20KAgnwoETb6RPM1R1qAw=="
         }
       },
       "is_incremental": false,
@@ -6922,7 +6890,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "Xm6gb9b5/W1OHSw3gvpTKg=="
+          "hash": "DUGwfRHwQwHjGnO4bdd5/w=="
         }
       },
       "is_incremental": false,
@@ -7249,17 +7217,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/portal/images/ptl-vid-overview.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/portal/images/ptl-vid-overview.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl_mnu-my-calls.png",
       "output": {
         "resource": {
@@ -7455,7 +7412,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-vid-portal.html",
-          "hash": "cWaCqOBEI7+/Q46o6K4Z+A=="
+          "hash": "WelT85OwGzzL1bLaqjrSqw=="
         }
       },
       "is_incremental": false,
@@ -12481,17 +12438,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vid-vcd91.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vid-vcd91.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vmware-options.png",
       "output": {
         "resource": {
@@ -13987,7 +13933,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-vid-vcd91.html",
-          "hash": "w99aDREnuM38wv+Ce1d/VQ=="
+          "hash": "KdeOQNNgNB4/mFUDcIyXMg=="
         }
       },
       "is_incremental": false,
@@ -14053,13 +13999,13 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
