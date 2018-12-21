@@ -1,5 +1,7 @@
 - name: FAQs
   items:
+  - name: Credit card payment FAQ
+    href: other-faq-credit-card.md
   - name: Enterprise & Private Sector FAQs
     href: other-faq-eps.md
   - name: G-Cloud 10 services FAQs
