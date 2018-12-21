@@ -338,6 +338,10 @@ For more detailed information about building Oracle applications in your UKCloud
 
 - [*How to build an Oracle virtual machine*](orcl-how-build-vm.md)
 
+## Related videos
+
+- [Oracle Enterprise Manager Cloud Control console overview](https://vimeo.com/307495809)
+
 ## Glossary
 
 This section provides a glossary of terms specific to UKCloud for Oracle Software.
