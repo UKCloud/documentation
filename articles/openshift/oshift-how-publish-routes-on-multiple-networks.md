@@ -33,7 +33,9 @@ Firstly, an explanation of what gets deployed: the cluster will have front-end l
 The three scenarios shown in the above diagram are as follows:
 
 1. Traffic from the internet to application-1 (blue lines)
+
 2. Traffic from the internet and a community network to application-2 (green and red lines)
+
 3. Traffic from a community network to application-3 only (purple lines)
 
 We'll be using some basic example applications to demonstrate publishing routes in each of these three application scenarios.
