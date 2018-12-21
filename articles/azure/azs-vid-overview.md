@@ -18,7 +18,8 @@ toc_mdlink: azs-vid-overview.md
 
 This video provides an overview of the Microsoft Azure Stack Portal. Click the image below to watch the video.
 
-[![UKCloud for Microsoft Azure overview](images/azs-vid-overview.png)](https://vimeo.com/305064724)
+<iframe src="https://player.vimeo.com/video/305064724?color=34d9c3" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 
 ## Feedback
 
