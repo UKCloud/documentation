@@ -34,7 +34,7 @@ These limits will be removed once a Sales Rep has successfully qualified your ac
 
 ### What if my account is not qualified?
 
-If your account is not qualified then, as per our terms and conditions, we reserve the right to decommission your account.
+If your account is not qualified then, as per our [terms and conditions](https://ukcloud.com/onlinetermsandconditions), we reserve the right to decommission your account.
 
 ### How much free credit will I get?
 
