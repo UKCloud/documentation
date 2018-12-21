@@ -1,6 +1,6 @@
 ---
 title: CIFS-ECS overview video | UKCloud Ltd
-description: Links to a video that provides an overview of the CIFS-ECS Tool
+description: Shows a video that provides an overview of the CIFS-ECS Tool
 services: cloud-storage
 author: Sue Highmoor
 
@@ -16,9 +16,9 @@ toc_mdlink: cs-vid-cifs-ecs-overview.md
 
 # CIFS-ECS overview video
 
-This video provides an overview of the CIFS-ECS Tool and its user interface, highlighting key sections of the UI and useful features. Click the image below to watch the video.
+The following video provides an overview of the CIFS-ECS Tool and its user interface, highlighting key sections of the UI and useful features.
 
-[![CIFS-ECS overview](images/cs-vid-cifs-ecs-overview.png)](https://vimeo.com/300264583)
+<iframe src="https://player.vimeo.com/video/300264583?color=34d9c3" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Feedback
 

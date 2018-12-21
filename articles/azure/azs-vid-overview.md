@@ -1,6 +1,6 @@
 ---
 title: Microsoft Azure Stack Portal overview video | UKCloud Ltd
-description: Links to a video that provides an overview of the Microsoft Azure Stack portal
+description: Shows a video that provides an overview of the Microsoft Azure Stack portal
 services: azure-stack
 author: Sue Highmoor
 
@@ -16,10 +16,9 @@ toc_mdlink: azs-vid-overview.md
 
 # Microsoft Azure Stack Portal overview video
 
-This video provides an overview of the Microsoft Azure Stack Portal.
+The following video provides an overview of the Microsoft Azure Stack Portal.
 
 <iframe src="https://player.vimeo.com/video/305064724?color=34d9c3" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
 
 ## Feedback
 
