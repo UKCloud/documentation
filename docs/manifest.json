@@ -3879,6 +3879,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-sharding-network-flows.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-sharding-network-flows.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openshift/images/ptl-menu-all-contacts.png",
       "output": {
         "resource": {
@@ -4017,6 +4028,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-how-publish-routes-on-multiple-networks.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-how-publish-routes-on-multiple-networks.html",
+          "hash": "BploOr5U4Sjr7DGiR8kzcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-how-restrict-access-to-openshift-routes-by-ip-address.md",
       "output": {
         ".html": {
@@ -4045,7 +4068,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "X0MhPDFAQ+wl6aPHuHQ0lg=="
+          "hash": "icFvo/NRd10obTpYBQK3Xg=="
         }
       },
       "is_incremental": false,

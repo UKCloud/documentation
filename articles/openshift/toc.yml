@@ -16,6 +16,8 @@
     href: oshift-how-monitor-cluster.md
   - name: Obtain usage metrics to use for OpenShift capacity management
     href: oshift-how-obtain-usage-metrics.md
+  - name: Publish application routes to multiple external networks
+    href: oshift-how-publish-routes-on-multiple-networks.md
   - name: Restrict access to OpenShift routes by IP address
     href: oshift-how-restrict-access-to-openshift-routes-by-ip-address.md
   - name: Use the Hawkular Metrics API

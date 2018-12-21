@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to publish application routes to multiple networks | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to publish application routes to multiple networks | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-publish-application-routes-to-multiple-networks">How to publish application routes to multiple networks</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This article provides instructions on how to make use of multiple external networks from within an OpenShift cluster. If you've requested an OpenShift cluster with multple networks from UKCloud you'll have multiple data planes - usually one for the internet and one for the community network you’ve requested be added to your deployment. Building applications that listen on these networks is relatively straightforward, but requires some specific configuration to be put in place on your application routes. This guide should help explain how you go about exposing your application on the relevant networks.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this guide you must have access to and a working knowledge of <code>oc</code>, the OpenShift command-line client (CLI). For more information, see OpenShift's <a href="https://docs.openshift.com/container-platform/3.9/cli_reference/get_started_cli.html"><em>Get Started with the CLI</em></a>.</p>
+<h2 id="high-level-overview">High level overview</h2>
+<p>Firstly, an explanation of what gets deployed: the cluster will have front-end load balancers that sit outside OpenShift, which essentially do TCP passthrough of incoming traffic to the OpenShift routers deployed inside your cluster. As a cluster administrator, you can see the OpenShift routers by viewing the <code>default</code> project. You'll also have another set of routers that run on the community network facing nodes that provide termination of inbound traffic from the community network.</p>
+<p><img src="images/oshift-sharding-network-flows.png" alt="High-level overview of inbound data flows"></p>
+<p>The three scenarios shown in the above diagram are as follows:</p>
+<ol>
+<li>Traffic from the internet to application-1 (blue lines)</li>
+<li>Traffic from the internet and a community network to application-2 (green and red lines)</li>
+<li>Traffic from a community network to application-3 only (purple lines)</li>
+</ol>
+<p>We'll be using some basic example applications to demonstrate publishing routes in each of these three application scenarios.</p>
+<h2 id="process-and-code-examples">Process and code examples</h2>
+<h3 id="scenario-1---traffic-from-the-internet-to-application-1">Scenario 1 - Traffic from the internet to application-1</h3>
+<p>First we'll create a project called <code>routersharding</code> and the three applications to demonstrate with:</p>
+<pre><code>$ oc new-project routersharding
+Now using project &quot;routersharding&quot; on server &quot;https://console.x-y-zzz-abcdef:8443&quot;.
+ 
+$ oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git --name=application-1
+ 
+$ oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git --name=application-2
+ 
+$ oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git --name=application-3
+ 
+$ oc get svc
+NAME            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
+application-1   ClusterIP   x.y.144.215   &lt;none&gt;        8080/TCP   1m
+application-2   ClusterIP   x.y.122.177   &lt;none&gt;        8080/TCP   1m
+application-3   ClusterIP   x.y.247.162   &lt;none&gt;        8080/TCP   1m
+ 
+$ oc expose svc application-1
+route &quot;application-1&quot; exposed
+$ oc get routes
+NAME            HOST/PORT                                                         PATH      SERVICES        PORT       TERMINATION   WILDCARD
+application-1   application-1-routersharding.demo-env.region1.cna.ukcloud.com             application-1   8080-tcp                 None
+</code></pre>
+<p>Now to see that your route has been published, you can describe the route and see where it's been exposed, or you can review the routes in the default router by opening a session to the router pod and reviewing the configuration.</p>
+<p>Find a router pod - in this case labelled <code>router-&lt;buildno&gt;-&lt;uniqueid&gt;</code>:</p>
+<pre><code>$ oc project default
+Now using project &quot;default&quot; on server &quot;https://console.x-y-zzz-abcdef:8443&quot;.
+ 
+$ oc get pods
+NAME                       READY     STATUS    RESTARTS   AGE
+docker-registry-1-466xv    1/1       Running   0          16h
+registry-console-2-bff2q   1/1       Running   0          18h
+router-4-bjqz2             1/1       Running   0          8h
+router-4-q5g6g             1/1       Running   0          8h
+router-secondary-2-f2p8z   1/1       Running   0          1d
+router-secondary-2-nr2lm   1/1       Running   0          15d
+</code></pre>
+<p>Remotely launch an interactive shell in a router and look at the <code>routes.json</code> file to see our route is published:</p>
+<pre><code>$ oc rsh router-4-bjqz2
+sh-4.2$ cat /var/lib/haproxy/router/routes.json | grep application-1-routersharding
+    &quot;Host&quot;: &quot;application-1-routersharding.demo-env.region1.cna.ukcloud.com&quot;,
+</code></pre>
+<p>Similarly, we can see that no routes are currently published on the <code>router-secondary</code> pods:</p>
+<pre><code>$ oc get pods
+NAME                       READY     STATUS    RESTARTS   AGE
+docker-registry-1-466xv    1/1       Running   0          1h
+registry-console-2-bff2q   1/1       Running   0          3h
+router-1-6fzkh             1/1       Running   0          1h
+router-1-pzjrj             1/1       Running   0          50d
+router-secondary-2-f2p8z   1/1       Running   0          1d
+router-secondary-2-nr2lm   1/1       Running   0          15d
+ 
+$ oc rsh router-secondary-2-f2p8z
+sh-4.2$ cat /var/lib/haproxy/router/routes.json
+{}
+</code></pre>
+<p>So that shows the basic route is now published, which fulfils scenario 1 shown in the diagram above.</p>
+<h3 id="scenario-2---traffic-from-the-internet-and-a-community-network-to-application-2">Scenario 2 - Traffic from the internet and a community network to application-2</h3>
+<p>To make the route appear on the secondary router and achieve scenario 2, we need to label the route appropriately so that it's also exposed on the <code>router-secondary</code> pods. By default, we setup the secondary routers with a label based route selector of <code>&quot;router-secondary=true&quot;</code>.</p>
+<p>Here we see the route selector label setup on the secondary router. This indicates that this route will publish routes that are labelled with <code>&quot;router=secondary&quot;</code>:</p>
+<pre><code>$ oc describe dc router-secondary | grep ROUTE_LABELS
+      ROUTE_LABELS:                router-secondary=true
+</code></pre>
+<p>Now we need to switch back to our application project and make the changes to our application b to meet scenario 2:</p>
+<pre><code>$ oc project routersharding
+Now using project &quot;routersharding&quot; on server &quot;https://console.x-y-zzz-abcdef:8443&quot;.
+</code></pre>
+<p>First, we expose the route on the default router as before:</p>
+<pre><code>$ oc expose svc application-2
+route &quot;application-2&quot; exposed
+# we can apply the label to expose our route on the secondary router with the following command
+$ oc label route application-2 &quot;router-secondary=true&quot;
+route &quot;application-2&quot; labeled
+</code></pre>
+<p>By describing the route, we can now see it's been exposed on both routers (see <code>exposed on</code> lines below):</p>
+<pre><code>$ oc describe route application-2
+Name:           application-2
+Namespace:      routersharding
+Created:        3 minutes ago
+Labels:         app=application-2
+            router-secondary=true
+Annotations:        openshift.io/host.generated=true
+Requested Host:     application-2-routersharding.demo-env.region1.cna.ukcloud.com
+              exposed on router router 3 minutes ago
+              exposed on router router-secondary 2 minutes ago
+Path:           &lt;none&gt;
+TLS Termination:    &lt;none&gt;
+Insecure Policy:    &lt;none&gt;
+Endpoint Port:      8080-tcp
+Service:    application-2
+Weight:     100 (100%)
+Endpoints:  10.128.4.24:8080
+</code></pre>
+<p>Reviewing the routes on the <code>router-secondary</code> pods as before also shows our route now exposed there:</p>
+<pre><code>$ oc rsh router-secondary-2-f2p8z
+sh-4.2$ cat /var/lib/haproxy/router/routes.json
+{
+  &quot;routersharding:application-2&quot;: {
+    &quot;Name&quot;: &quot;application-2&quot;,
+    &quot;Namespace&quot;: &quot;routersharding&quot;,
+    &quot;Host&quot;: &quot;application-2-routersharding.demo-env.region1.cna.ukcloud.com&quot;,
+    &quot;Path&quot;: &quot;&quot;,
+    &quot;TLSTermination&quot;: &quot;&quot;,
+    &quot;Certificates&quot;: null,
+    &quot;VerifyServiceHostname&quot;: false,
+    &quot;Status&quot;: &quot;saved&quot;,
+    &quot;PreferPort&quot;: &quot;8080-tcp&quot;,
+    &quot;InsecureEdgeTerminationPolicy&quot;: &quot;&quot;,
+    &quot;RoutingKeyName&quot;: &quot;8647b1a7d5f913923a2eae0e1d02df09&quot;,
+    &quot;IsWildcard&quot;: false,
+    &quot;Annotations&quot;: {
+      &quot;openshift.io/host.generated&quot;: &quot;true&quot;
+    },
+    &quot;ServiceUnits&quot;: {
+      &quot;routersharding/application-2&quot;: 100
+    },
+    &quot;ServiceUnitNames&quot;: {
+      &quot;routersharding/application-2&quot;: 256
+    },
+    &quot;ActiveServiceUnits&quot;: 1,
+    &quot;ActiveEndpoints&quot;: 1
+  }
+}
+</code></pre>
+<h3 id="scenario-3---traffic-from-a-community-network-to-application-3-only">Scenario 3 - Traffic from a community network to application-3 only</h3>
+<p>The final scenario for <code>application-3</code> requires modification of the original routers to ensure they don’t select routes with a specific label (by default they expose all of the routes we expose). We’ll recreate the same application in a new project called <code>test-project1</code> to demonstrate this.</p>
+<p>First, we edit the existing default router to tell it not to select routes that have a label of <code>isolated=true</code>:</p>
+<pre><code>$ oc project default
+Now using project &quot;default&quot; on server &quot;https://console.x-y-zzz-abcdef:8443&quot;.
+ 
+$ oc set env dc/router ROUTE_LABELS='isolated != true'
+deploymentconfig &quot;router” updated
+</code></pre>
+<p>We can now create a new basic route with that label and see that it doesn't appear on any router:</p>
+<pre><code>$ oc expose svc application-3 --labels=&quot;isolated=true&quot;
+route &quot;application-3&quot; exposed
+ 
+$ oc describe route application-3
+Name:           application-3
+Namespace:      routersharding
+Created:        19 seconds ago
+Labels:         isolated=true
+Annotations:        openshift.io/host.generated=true
+Requested Host:     application-3-routersharding.demo-env.region1.cna.ukcloud.com
+Path:           &lt;none&gt;
+TLS Termination:    &lt;none&gt;
+Insecure Policy:    &lt;none&gt;
+Endpoint Port:      8080-tcp
+ 
+Service:    application-3
+Weight:     100 (100%)
+Endpoints:  10.129.2.20:8080
+</code></pre>
+<p>Notice that this doesn't appear to be exposed on any routers. We can check this on the routers quickly as we have previously:</p>
+<pre><code>$ oc project default
+Now using project &quot;default&quot; on server &quot;https://console.x-y-zzz-abcdef:8443&quot;.
+$ oc rsh router-4-bjqz2
+sh-4.2$ cat /var/lib/haproxy/router/routes.json | grep application-3-routersharding
+&lt;no results&gt;
+</code></pre>
+<p>Similarly, it's not appearing on our secondary router either:</p>
+<pre><code>$ oc rsh router-secondary-2-f2p8z
+sh-4.2$ cat /var/lib/haproxy/router/routes.json | grep application-3-routersharding
+&lt;no results&gt;
+</code></pre>
+<p>Now we can just expose this route on the secondary routers by tagging it with the appropriate label for those routers:</p>
+<pre><code>$ oc project routersharding
+Now using project &quot;routersharding&quot; on server &quot;https://console.x-y-zzz-abcdef:8443&quot;.
+ 
+$ oc label route application-3  &quot;router-secondary=true&quot;
+route &quot;application-3&quot; labeled
+ 
+$ oc describe route application-3
+Name:           application-3
+Namespace:      routersharding
+Created:        3 minutes ago
+Labels:         isolated=true
+            router-secondary=true
+Annotations:        openshift.io/host.generated=true
+Requested Host:     application-3-routersharding.demo-env.region1.cna.ukcloud.com
+              exposed on router router-secondary 4 seconds ago
+Path:           &lt;none&gt;
+TLS Termination:    &lt;none&gt;
+Insecure Policy:    &lt;none&gt;
+Endpoint Port:      8080-tcp
+ 
+Service:    application-3
+Weight:     100 (100%)
+Endpoints:  10.129.2.20:8080
+# notice how this route now is showing as exposed on router-secondary. We can verify this as before.
+$ oc project default
+Now using project &quot;default&quot; on server &quot;https://console.x-y-zzz-abcdef:8443&quot;.
+$ oc rsh router-secondary-2-f2p8z
+$ oc rsh router-secondary-2-f2p8z
+sh-4.2$ cat /var/lib/haproxy/router/routes.json
+{
+  &quot;routersharding:application-2&quot;: {
+    &quot;Name&quot;: &quot;application-2&quot;,
+    &quot;Namespace&quot;: &quot;routersharding&quot;,
+    &quot;Host&quot;: &quot;application-2-routersharding.demo-env.region1.cna.ukcloud.com&quot;,
+    &quot;Path&quot;: &quot;&quot;,
+    &quot;TLSTermination&quot;: &quot;&quot;,
+    &quot;Certificates&quot;: null,
+    &quot;VerifyServiceHostname&quot;: false,
+    &quot;Status&quot;: &quot;saved&quot;,
+    &quot;PreferPort&quot;: &quot;8080-tcp&quot;,
+    &quot;InsecureEdgeTerminationPolicy&quot;: &quot;&quot;,
+    &quot;RoutingKeyName&quot;: &quot;8647b1a7d5f913923a2eae0e1d02df09&quot;,
+    &quot;IsWildcard&quot;: false,
+    &quot;Annotations&quot;: {
+      &quot;openshift.io/host.generated&quot;: &quot;true&quot;
+    },
+    &quot;ServiceUnits&quot;: {
+      &quot;routersharding/application-2&quot;: 100
+    },
+    &quot;ServiceUnitNames&quot;: {
+      &quot;routersharding/application-2&quot;: 256
+    },
+    &quot;ActiveServiceUnits&quot;: 1,
+    &quot;ActiveEndpoints&quot;: 1
+  },
+  &quot;routersharding:application-3&quot;: {
+    &quot;Name&quot;: &quot;application-3&quot;,
+    &quot;Namespace&quot;: &quot;routersharding&quot;,
+    &quot;Host&quot;: &quot;application-3-routersharding.demo-env.region1.cna.ukcloud.com&quot;,
+    &quot;Path&quot;: &quot;&quot;,
+    &quot;TLSTermination&quot;: &quot;&quot;,
+    &quot;Certificates&quot;: null,
+    &quot;VerifyServiceHostname&quot;: false,
+    &quot;Status&quot;: &quot;&quot;,
+    &quot;PreferPort&quot;: &quot;8080-tcp&quot;,
+    &quot;InsecureEdgeTerminationPolicy&quot;: &quot;&quot;,
+    &quot;RoutingKeyName&quot;: &quot;187190814c4acaea9156fd0ca476bd4f&quot;,
+    &quot;IsWildcard&quot;: false,
+    &quot;Annotations&quot;: {
+      &quot;openshift.io/host.generated&quot;: &quot;true&quot;
+    },
+    &quot;ServiceUnits&quot;: {
+      &quot;routersharding/application-3&quot;: 100
+    },
+    &quot;ServiceUnitNames&quot;: null,
+    &quot;ActiveServiceUnits&quot;: 1,
+    &quot;ActiveEndpoints&quot;: 0
+  }
+}
+</code></pre>
+<p>The above shows both the routes we've created in this demo now on <code>router-secondary</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you want to expose applications on a private network, the above logic still applies. The only differences are that the deployment config for the router is called <code>router-private</code> and the route label required to expose your routes is <code>router-private=true</code>.</p>
+</div>
+<h2 id="further-reading">Further reading</h2>
+<p>OpenShift documentation on router sharding: <a href="https://docs.openshift.com/container-platform/3.9/architecture/networking/routes.html#router-sharding">https://docs.openshift.com/container-platform/3.9/architecture/networking/routes.html#router-sharding</a></p>
+<p>OpenShift blog post on router sharding: <a href="https://blog.openshift.com/openshift-router-sharding-for-production-and-development-traffic/">https://blog.openshift.com/openshift-router-sharding-for-production-and-development-traffic/</a></p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <div class="contribution">
+                    <ul class="nav">
+                      <li>
+                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-publish-routes-on-multiple-networks.md/#L1" class="contribution-link">Improve this Doc</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>
