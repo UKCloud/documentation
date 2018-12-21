@@ -46,6 +46,8 @@
     href: vmw-how-build-edge.md
   - name: Change IPsec VPN settings via the vCloud API
     href: vmw-how-change-ipsec-vpn-api.md
+  - name: Configure a Distributed Firewall
+    href: vmw-how-configure-distributed-firewall.md
   - name: Configure a load balancer
     href: vmw-how-configure-load-balancer.md
   - name: Configure IPsec VPN
@@ -222,3 +224,5 @@
   items:
   - name: vCloud Director 9.1 overview
     href: vmw-vid-vcd91.md
+  - name: VMware Distributed Firewall
+    href: vmw-vid-dfw.md

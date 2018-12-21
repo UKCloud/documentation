@@ -5874,7 +5874,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-gs.html",
-          "hash": "bt7xtxB9HCXroKtAvyvkow=="
+          "hash": "+hZhKtPqfgrL8so+M81JHw=="
         }
       },
       "is_incremental": false,
@@ -5898,7 +5898,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-how-enable-ha.html",
-          "hash": "Zzz09H6EGBNVyKjF+5FfxA=="
+          "hash": "u0FztPaURwLt9kbJsllSBg=="
         }
       },
       "is_incremental": false,
@@ -5989,12 +5989,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/oracle/orcl-vid-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/oracle/orcl-vid-overview.html",
+          "hash": "UJPc3eKCM1G0CLnJEx4RoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/oracle/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/oracle/toc.html",
-          "hash": "bNGNmVpki61EH/XJVGJDtQ=="
+          "hash": "FDaCxknzfCmeTbqXOaZ/zg=="
         }
       },
       "is_incremental": false,
@@ -9184,6 +9196,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-dfw-overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-dfw-overview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-estate.png",
       "output": {
         "resource": {
@@ -11956,6 +11979,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-btn-add-dfw-l3-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-btn-add-dfw-l3-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-btn-add-ipset.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-btn-add-ipset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-btn-add-macset.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-btn-add-macset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd91-btn-add-media.png",
       "output": {
         "resource": {
@@ -11971,6 +12027,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd91-btn-add-network.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-btn-add-security-group.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-btn-add-security-group.png"
         }
       },
       "is_incremental": false,
@@ -12004,6 +12071,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd91-btn-add-vm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-btn-configure-services-security.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-btn-configure-services-security.png"
         }
       },
       "is_incremental": false,
@@ -12088,10 +12166,87 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-dfw-l3-rule-add-service.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-dfw-l3-rule-add-service.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-dfw-l3-rule-dest-ip.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-dfw-l3-rule-dest-ip.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-dfw-l3-rule-select-objects.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-dfw-l3-rule-select-objects.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-dfw-l3-rule-source-ip.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-dfw-l3-rule-source-ip.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-dfw-l3-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-dfw-l3-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd91-edge-ip-addresses.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd91-edge-ip-addresses.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-enable-dfw.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-enable-dfw.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-grouping-objects.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-grouping-objects.png"
         }
       },
       "is_incremental": false,
@@ -12231,6 +12386,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-mnu-security.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-mnu-security.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd91-mnu-share-catalog.png",
       "output": {
         "resource": {
@@ -12286,6 +12452,72 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-save-changes.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-save-changes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-security-group-dynamic.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-security-group-dynamic.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-security-group-include-exclude.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-security-group-include-exclude.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-security-group.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-security-group.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-services-ipset.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-services-ipset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-services-macset.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-services-macset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd91-share-catalog.png",
       "output": {
         "resource": {
@@ -12312,6 +12544,28 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd91-storage-usage.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-tab-grouping-service-groups.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-tab-grouping-service-groups.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd91-tab-grouping-services.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd91-tab-grouping-services.png"
         }
       },
       "is_incremental": false,
@@ -12708,7 +12962,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "KlXxw5SzgBBmCbOpR98HJQ=="
+          "hash": "nzTaGO0eR1nrx2FwHNi2HQ=="
         }
       },
       "is_incremental": false,
@@ -12937,6 +13191,18 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-how-change-ipsec-vpn-api.html",
           "hash": "b+yFh+1aIqnsvuCQYX1Tdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-configure-distributed-firewall.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-configure-distributed-firewall.html",
+          "hash": "ZGtjw3C+2GTy3h+v7D/rFA=="
         }
       },
       "is_incremental": false,
@@ -13957,6 +14223,18 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-sco.html",
           "hash": "V8WVHOql83PtIA14ZQuTFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-vid-dfw.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-vid-dfw.html",
+          "hash": "kNgq2Tcf65LoDam6akSCLA=="
         }
       },
       "is_incremental": false,

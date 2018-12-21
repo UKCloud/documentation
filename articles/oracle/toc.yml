@@ -30,3 +30,7 @@
   items:
   - name: UKCloud for Oracle Software Service Scope
     href: orcl-sco.md
+- name: Videos
+  items:
+  - name: OEM Cloud Control console overview
+    href: orcl-vid-overview.md
