@@ -16,7 +16,7 @@ toc_mdlink: other-vid-kc-contribution.md
 
 # Editing Knowledge Centre articles video
 
-The following shows you how you can make improvements to Knowledge Centre articles by editing them in GitHub.
+The following video shows you how you can make improvements to Knowledge Centre articles by editing them in GitHub.
 
 <iframe src="https://player.vimeo.com/video/281661800" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
