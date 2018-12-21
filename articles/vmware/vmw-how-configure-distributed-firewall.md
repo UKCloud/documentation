@@ -110,7 +110,7 @@ To create an IP set:
     ------|-------
     Name | Enter a name for the IP set, ideally without any spaces or special characters.
     Description | Enter a description for the IP set.
-    IP Addresses | Enter the IP addresses that you want to include in the IP set. You can include a combination of individual IP addresses and IP ranges. You can also use CIDR format, for example `192.168.1.1/24.
+    IP Addresses | Enter the IP addresses that you want to include in the IP set. You can include a combination of individual IP addresses and IP ranges. You can also use CIDR format, for example `192.168.1.1/24`.
     Inheritance | Select this option to enable the IP set to be consumed by underlying scopes.
 
     ![New IP Set dialog box](images/vmw-vcd91-services-ipset.png)
