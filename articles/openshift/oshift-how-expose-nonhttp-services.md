@@ -37,3 +37,36 @@ You will need to raise a support request with us and provide us with; the networ
 > [!NOTE]
 > You can request multiple ports/protocols and networks for external services.
 
+### Exposing your service
+
+Now you need to create the service you would like to expose, this can be done as you normally would, afterwards you want to patch the local IP we give you into the service as its 'External IP' using the following command(assuming the local IP you were given was 10.2.1.120):
+
+```oc patch svc <service_name> '{"spec":{"externalIPs":["10.2.1.120"]}}'```
+
+### Deploying ipfailover
+
+OpenShift has a feature called ipfailover that can be used to make an external IP accessible on a subset of nodes in the cluster. This is what will be used to make your service accessible on the external IP. The following command is used to deploy ipfailover, it requires cluster-admin permissions:
+
+```oc adm ipfailover --virtual-ips=10.2.1.120 --watch-port=0 --replicas=<amount_of_compute_nodes> --selector="node-role.kubernetes.io/compute=true" --vrrp-id-offset=0 --create```
+
+You will need to pass the IP you have patched into the service as an external IP to the --virtual-ips argument, you can use any node-selector you would like for the --selector argument but make sure it is a valid node label. --watch-port needs to be 0 for the ipfailover deployment to work. --replicas should equal the amount of nodes matching your --selector label. --vrrp-id-offset will need to be incremented by one for each ipfailover deployment in your cluster, for example if I wanted to expose another external IP my command might look like this:
+
+```oc adm ipfailover --virtual-ips=10.2.1.121 --watch-port=0 --replicas=<amount_of_compute_nodes> --selector="node-role.kubernetes.io/compute=true" --vrrp-id-offset=1 --create```
+
+>[!NOTE]
+>You can only deploy one instance of ipfailover per project. Also you may sometimes get the deployment go into a pending state, if this is the case ensure the --vrrp-id-offset has been incremented(if neccessary) and try running the following command inside the project you are deploying to
+> oc adm policy add-scc-to-user privileged -z ipfailover
+
+You can now access your service on the public IP tied to the external IP!
+
+>[!TIP]
+> You can access multiple services on the same external IP, they will just need to be running on a different port.
+
+## Further reading
+
+OpenShift documentation on ipfailover: https://docs.openshift.com/container-platform/3.10/admin_guide/high_availability.html
+
+
+## Feedback
+
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
