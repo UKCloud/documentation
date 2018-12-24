@@ -28,5 +28,12 @@ This guide assumes familiarity with services and routes in OpenShift and access 
 
 ### Prerequisites
 
-To complete the steps in this guide, you must have the a cluster deployed on the right version of our code. You can raise a support ticket to check if this is possible in your cluster or to request a newer cluster deployed from the relevant coode.
+To complete the steps in this guide, you must have the a cluster deployed on the right version of our code. You can raise a support ticket to check if this is possible in your cluster or to request a newer cluster deployed from the relevant code.
+
+### Getting the external IP
+
+You will need to raise a support request with us and provide us with; the network you would like to expose services on and the ports/protocols of the services you will be exposing. We will then run a stack update against your environment to create the virtual infrastructure needed. We will then provide you with the publically accessible IP and the local IP this maps to. The local IP will be important for the upcoming steps.
+
+> [!NOTE]
+> You can request multiple ports/protocols and networks for external services.
 
