@@ -54,8 +54,8 @@ You will need to pass the IP you have patched into the service as an external IP
 ```oc adm ipfailover --virtual-ips=10.2.1.121 --watch-port=0 --replicas=<amount_of_compute_nodes> --selector="node-role.kubernetes.io/compute=true" --vrrp-id-offset=1 --create```
 
 >[!NOTE]
->You can only deploy one instance of ipfailover per project. Also you may sometimes get the deployment go into a pending state, if this is the case ensure the --vrrp-id-offset has been incremented(if neccessary) and try running the following command inside the project you are deploying to
-> oc adm policy add-scc-to-user privileged -z ipfailover
+>You can only deploy one instance of ipfailover per project. Also you may sometimes get the deployment go into a pending state, if this is the case ensure the --vrrp-id-offset has been incremented(if neccessary) and try running the following command inside the project you are deploying in:
+> ```oc adm policy add-scc-to-user privileged -z ipfailover```
 
 You can now access your service on the public IP tied to the external IP!
 
