@@ -20,7 +20,7 @@ toc_mdlink: oshift-how-expose-nonhttp-services.md
 
 UKCloud for OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.
 
-This guide explains how you can set expose services outside of your OpenShift cluster without using routes.
+This guide explains how you can expose services outside of your OpenShift cluster without using routes.
 
 ### Intended audience
 
