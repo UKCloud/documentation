@@ -245,7 +245,7 @@ You can see the images that are available for you to use by expanding the **Comp
 
 ### Choosing your instance size
 
-If you're already familiar with UKCloud's vCloud Director-based Enterprise Compute Cloud service, then you may be used to being able to choose exactly how many vCPUs and how much memory a VM is allocated.
+If you're already familiar with UKCloud's vCloud Director-based UKCloud for VMWare service, then you may be used to being able to choose exactly how many vCPUs and how much memory a VM is allocated.
 
 In OpenStack, you choices are restricted to a number of pre-defined *flavors* that define how many vCPUs, how much memory and how much storage an instance may use. Although full details for each flavor are
 available through the Horizon UI, there's no overall list available showing all the different flavors and sizes of instances. However, if you've installed the OpenStack CLI tools (see
