@@ -12951,7 +12951,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "nzTaGO0eR1nrx2FwHNi2HQ=="
+          "hash": "oC90Wq/mfGaIgTc93HrOjw=="
         }
       },
       "is_incremental": false,
@@ -13575,7 +13575,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-setup-kms.html",
-          "hash": "de1q6h2cR+5zfeGKIps/qQ=="
+          "hash": "gOgEqDzKEaH2+6s5LNNS6g=="
         }
       },
       "is_incremental": false,
@@ -14231,6 +14231,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-vid-licensing-kms.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-vid-licensing-kms.html",
+          "hash": "5hBYDDq6Yxa8f8JMbS67lA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-vid-vcd91.md",
       "output": {
         ".html": {
@@ -14296,11 +14308,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -14308,6 +14315,11 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
