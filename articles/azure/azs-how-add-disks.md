@@ -16,27 +16,27 @@ toc_mdlink: azs-how-add-disks.md
 
 ## Overview
 
-In Azure Stack there are two types of disks, **Managed** and **Unmanaged** both these disks can be used on VM's as both OS and data disks.
+In Azure Stack there are two types of disks, **Managed** and **Unmanaged** both these disks can be used on VMs as both OS and data disks.
 
 ### Managed disks
 
-These disks simplify disk management for Azure IaaS VMs by managing the storage accounts associated with the VM disks. You only have to specify the size of disk you need, and Azure Stack creates and manages the disk for you.
+Managed disks simplify disk management for Azure IaaS VMs by managing the storage accounts associated with the VM disks. You only have to specify the size of disk you need, and Azure Stack creates and manages the disk for you.
 
 ### Unmanaged disks
 
-These disks require that you create a storage account to store the disks. The disks you create are referred to as VM disks and are stored in containers in the storage account.
+Unmanaged disks require that you create a storage account to store the disks. The disks you create are referred to as VM disks and are stored in containers in the storage account.
 
-## Using the portal to add new disks to VM's
+## Adding a new disk to a VM using the portal
 
-1. In the portal choose **Virtual machines**.
+1. In the portal select **Virtual machines**.
 
-2. Select the VM you wish to add disks too.
+2. Select the VM you want to add disks to.
 
 3. Navigate to **Disks** > **+Add data disk**.
 
-    ![Azure Stack disk creation 1](images/azs-browser-disk-creation.png)
+    ![Azure Stack disk creation disks blade](images/azs-browser-disk-creation.png)
 
-4. Edit the options for your new Disk.
+4. Edit the options for your new disk.
 
     - **Name**: This is what the disk will be called.
 
@@ -46,55 +46,53 @@ These disks require that you create a storage account to store the disks. The di
 
     - **Size**: This is where you specify the size of the new disk.
 
-    - **Storage container**: This is where you specify the storage container for the disk. Find the storage account where your VM's OS disk is located and then create a new.
-
-    - **Container**. Select this container as the location for the new disk.
+    - **Storage container**: This is where you specify the storage container for the disk. Find the storage account where your VMs OS disk is located and then create a new a new storage container and then select this.
 
     - **Storage blob name**: This is the blob where the disk will be stored.
 
     ![Azure Stack disk creation 2](images/azs-browser-disk-creation2.png)
 
-5. Select Ok and the new disks will be added to the VM.
+5. Select **Ok** and the new disks will be added to the VM.
 
-## Using the portal to add disks to existing VM's
+## Adding a disk to an existing VM using the portal
 
-1. Ensure the existing disk you want to add to your VM is on you local machine as a .vhd file. Upload this .vhd to a new Container in your VM's storage account.
+1. Ensure the existing disk you want to add to your VM is on your local machine as a .vhd file. Upload this .vhd to a new container in your VMs storage account.
 
-2. After the .vhd file is uploaded, you are ready to attach the VHD to a VM. In the menu on the left, select **Virtual machines**.
+2. After the .vhd file is uploaded, you're ready to attach the VHD to a VM. In the menu on the left, select **Virtual machines**.
 
-3. Chose the VM you wish to add the disk to.
+3. Select the VM you want to add the disk to.
 
 4. In **Source type** select **Existing blob**.
 
 5. In **Source blob** select **Browse**.
 
-6. Navigate to the storage account you uploaded the .vhd file to > select the container you uploaded the .vhd file to and click **Select**.
+6. Navigate to the storage account you uploaded the .vhd file to, select the container you uploaded the .vhd file to, then click **Select**.
 
     ![Azure Stack disk creation 3](images/azs-browser-disk-attaching.png)
 
-7. Finally click **OK** then **Save**.
+7. Click **OK** then **Save**.
 
 ## Adding a disk to a VM that is already attached to another VM on Azure Stack
 
-Please ensure the disk is has been detached from its original VM.
+1. Ensure the disk is has been detached from its original VM.
 
-1. In the menu on the left, select **Virtual machines**.
+2. In the menu on the left, select **Virtual machines**.
 
-2. Chose the VM you wish to add the disk to.
+3. Chose the VM you want to add the disk to.
 
-3. In **Source type** select **Existing blob**.
+4. In **Source type** select **Existing blob**.
 
-4. In **Source blob** select **Browse**.
+5. In **Source blob** select **Browse**.
 
-5. Navigate to the storage container which contains the disk you wish to add to the VM, then navigate to the container where the disk resides.
+6. Navigate to the storage container that contains the disk you want to add to the VM, then navigate to the container where the disk resides.
 
-6. Finally click **Select** > **OK** > **Save**
+7. Click **Select**, then **OK**, then **Save**.
 
-## Using PowerShell to add disks to a new VM
+## Adding a disk to a new VM using PowerShell
 
-In one of our other guides we showed you how to provision a VM (which can be found [here](azs-how-create-vm.md)) and the code in this guide will build off that. The Add-AzureRmVMDataDisk cmdlet adds a data disk to a virtual machine. You can add a data disk when you create a virtual machine, or you can add a data disk to an existing virtual machine. Specifying the VhdUri parameter to distribute the disks to different containers.  
+In [*How to create a virtual machine using the Azure Stack portal*](azs-how-create-vm.md), we showed you how to provision a VM. The code in this article builds on that by using the Add-AzureRmVMDataDisk cmdlet to add a data disk to the VM. Specifying the VhdUri parameter distributes the disks to different containers.
 
-The following code will demonstrate how to add multiple disks to that VM on startup.
+The following code demonstrates how to add multiple disks to a VM on startup.
 
 ```powershell
 #Sets the disks properties
@@ -214,9 +212,9 @@ $NewVM
 Write-Host "Virtual machine created successfully"
 ```
 
-## Using PowerShell to add disks to an existing VM
+## Adding a disk to an existing VM using PowerShell
 
-The following code will add new disks to VM's that already exists. It retrieves the VM from the resource group, modifies it and then updates it on the stack
+The following code adds a new disk to a VM that already exists. It retrieves the VM from the resource group, modifies it and then updates it on the stack.
 
 ```powershell
 # Retrieves the VM
@@ -238,7 +236,7 @@ Update-AzureRmVM -ResourceGroupName "myResourceGroup" -VM $VirtualMachine
 
 ## Next Steps
 
-Now you know how to add disks to VM's this guide will be needed in the following guides:
+This article has shown you how to add disks to VM, which you'll find useful when setting up disaster recovery for your VMs. For more information, see:
 
 - [How to setup disaster recovery for Azure Stack VMs to Azure](azs-how-setup-recovery-portal.md)
 
