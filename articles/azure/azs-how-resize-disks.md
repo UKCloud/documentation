@@ -20,7 +20,7 @@ In this article we will cover the process of resizing disks in the Azure portal.
 
 ## Resizing disk size via the portal
 
-These steps will work for both unmanaged and managed VM's.
+These steps will work for both unmanaged and managed VMs.
 
 1. Power down or detach the disk from the VM.
 
@@ -38,10 +38,10 @@ These steps will work for both unmanaged and managed VM's.
 
 6. Power back on the VM or reattach the disk.
 
-    ![Attaching vm disks](images/azs-browser-attach-disk.png)
+    ![Attaching VM disks](images/azs-browser-attach-disk.png)
 
-[!NOTE]
-The maximum size for a single disk is 4TB.
+> [!NOTE]
+> The maximum size for a single disk is 4TB.
 
 ## Feedback
 
