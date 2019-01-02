@@ -18,7 +18,7 @@ toc_mdlink: orcl-vid-overview.md
 
 The following video provides an introduction to the Oracle Enterprise Manager (OEM) Cloud Control 13c Console, showing you the different tasks that you can perform.
 
-<iframe src="https://player.vimeo.com/video/307495809" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/307495809" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Feedback
 

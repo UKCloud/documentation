@@ -18,7 +18,7 @@ toc_mdlink: ostack-vid-overview.md
 
 The following video provides an overview of the OpenStack Horizon dashboard, which you can use to manage your UKCloud for OpenStack service.
 
-<iframe src="https://player.vimeo.com/video/305934797?color=34d9c3" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/305934797?color=34d9c3" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Feedback
 

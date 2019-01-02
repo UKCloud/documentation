@@ -18,7 +18,7 @@ toc_mdlink: cs-vid-cifs-ecs-overview.md
 
 The following video provides an overview of the CIFS-ECS Tool and its user interface, highlighting key sections of the UI and useful features.
 
-<iframe src="https://player.vimeo.com/video/300264583?color=34d9c3" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/300264583?color=34d9c3" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Feedback
 
