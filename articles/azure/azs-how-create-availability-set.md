@@ -1,6 +1,6 @@
 ---
-title: How to create a Availability Set | UKCloud Ltd
-description: Creating a Availability Set in UKCloud for Microsoft Azure
+title: How to create a availability set | UKCloud Ltd
+description: Creating a availability set in UKCloud for Microsoft Azure
 services: azure-stack
 author: David Woffendin
 toc_rootlink: Users
@@ -8,71 +8,68 @@ toc_sub1: How To
 toc_sub2: 
 toc_sub3:
 toc_sub4:
-toc_title: Create a Availability
+toc_title: Create a availability set
 toc_fullpath: Users/How To/azs-how-create-availability-set.md
 toc_mdlink: azs-how-create-availability-set.md
 ---
 
 # Overview
 
-In this guide, you learn how to increase the availability and reliability of your Virtual Machine solutions on Azure Stack using a capability called **Availability Sets**. Availability sets ensure that the VMs you deploy on Azure Stack are distributed across multiple isolated hardware nodes in a cluster. Doing this ensures that if a hardware or software failure within Azure Stack happens, only a subset of your VMs are impacted and that your overall solution remains available and operational.
+This guide will cover how to increase the availability and reliability of your virtual machines on Azure Stack using **availability sets**. availability sets ensure that VMs you deploy on Azure Stack are evenly distributed across multiple physical nodes in a cluster. Doing this ensure that, if a hardware or software failure happens within Azure Stack, only a subset of your VMs are impacted and your overall solution remains available and operational.
 
 ## Availability sets
 
-An Availability Set is a logical grouping capability that you can use in Azure to ensure that the VM resources you place within it are isolated from each other when they are deployed within an Azure datacenter. Azure ensures that the VMs you place within an Availability Set run across multiple physical servers, compute racks, storage units, and network switches. If a hardware or Azure software failure occurs, only a subset of your VMs are impacted, and your overall application stays up and continues to be available to your customers. Availability Sets are an essential capability when you want to build reliable cloud solutions.
+An availability set is a grouping capability for VMs that you can use in Azure Stack to ensure that the VM resources you place within it are isolated from each other when deployed. Azure Stack ensures that the VMs you place within an availability set run across multiple physical nodes. If a hardware or software failure occurs, only a subset of your VMs are impacted, and your overall application stays up and continues to be available to your customers. Availability sets are an essential capability when you want to build reliable cloud solutions that are protected against the unexpected.
 
-Let’s consider a typical VM-based solution where you might have four front-end web servers and 2 back-end VMs hosting databases. With Azure Stack, you’d want to define two availability sets before you deploy your VMs: one availability set for the web tier and one availability set for the back tier. When you create a new VM you can then specify the availability set as a parameter to the `az vm` create command, and Azure Stack automatically ensures that the VMs you create within the available set are isolated across multiple physical hardware resources. If the physical hardware that one of your Web Server or back-end VMs is running on has a problem, you know that the other instances of your Web Server and back-end VMs remain running because they are on different hardware.
+An example of where availability sets would be used is a typical website where you might have four front-end web servers and 2 back-end VMs hosting databases. With Azure Stack, you’d want to define two availability sets before you deploy your VMs: one availability set for the web hosting VMs and one availability set for the database VMs. When you create a new VM you can then specify the availability set as a parameter and Azure Stack automatically ensures that the VMs you create within the available set are isolated across multiple physical nodes. If the physical hardware that one of your Web Server or back-end VMs is running on has a problem, you know that the other instances of your Web Server and back-end VMs remain running because they are on different nodes.
 
 ## Creating an availability set via the portal
 
-1. The first step when initially creating an availability set is to create the resource group for the availability set.
+1. When initially creating an availability set, you will need to create the resource group for the availability set.
 
-    ![Microsoft Azure availability set step 1](images/azs-portal-create-availability-set1.png)
+    ![Microsoft Azure availability set click add resource group button](images/azs-portal-create-availability-set1.png)
 
 2. Name the resource group.
 
-    ![Microsoft Azure availability set step 2](images/azs-portal-create-availability-set2.png)
+    ![Microsoft Azure availability set fill out resource group settings](images/azs-portal-create-availability-set2.png)
 
-3. Once the resource group has been created if you navigate into it and select **Overview** then you will be able to select **Create resources**.
+3. When you've created the resource group, navigate into it, select **Overview** then **Create resources**.
 
-    ![Microsoft Azure availability set step 3](images/azs-portal-create-availability-set3.png)
+    ![Microsoft Azure availability set click create resource button](images/azs-portal-create-availability-set3.png)
 
-4. This will load the marketplace, if you search for **Availability Set**, you will be given the option to create one.
+4. In the Marketplace, search for and then click **availability set**.
 
-    ![Microsoft Azure availability set step 4](images/azs-portal-create-availability-set4.png)
+    ![Microsoft Azure availability set choose availability set button](images/azs-portal-create-availability-set4.png)
 
-5. This will bring up the **Create availability** set blade. Here you can set the name of the set and how many fault and update domains you want it to have. The resource group should be the same as the one you created earlier. As for the option for managed disks, select the option for which matches the VMs disks you will be adding to the set. Once done select **Create** and the availability set will be deployed.
+5. In the **Create availability** set blade, you can set the name of the set and how many fault and update domains you want it to have. For the **Resource group**, select the resource group you created earlier and for **Use managed disks**, select the option that matches the VM disks you'll be adding to the set. When you're done, click **Create** to deploy the availability set.
 
-    ![Microsoft Azure availability set step 5](images/azs-portal-create-availability-set5.png)
+    ![Microsoft Azure availability set choose availability set settings](images/azs-portal-create-availability-set5.png)
 
-6. Now when you are creating the VM's you want to be a part of the availability set, when you get to step 3, under **High Availability** select the availability set you want to use. Make sure to set the disk type of the VM first.
+6. When you are creating the VMs you want to be a part of the availability set, when you get to step 3, under **High Availability** select the availability set you want to use. Make sure to set the disk type of the VM first.
 
-    ![Microsoft Azure availability set step 6](images/azs-portal-create-availability-set6.png)
+    ![Microsoft Azure availability set creating vm in availbility set](images/azs-portal-create-availability-set6.png)
 
-7. Once you have created the VM's if you navigate to the availability set, in overview you will be able to see your VM's and you will be able to see what domains they are located on.
+7. Once you've created the VMs, if you navigate to the availability set, in the **Overview** blade, you can see your VMs and the domains they're located on.
 
-    ![Microsoft Azure availability set step 7](images/azs-portal-create-availability-set7.png)
+    ![Microsoft Azure availability set checking vm fault domains](images/azs-portal-create-availability-set7.png)
 
 ## Creating an availability set via PowerShell
 
 The following PowerShell code example will create an empty resource group and then deploy an availability set to it.
 
 ```PowerShell
+# Input Variables
 $Resourcegroup = "myResourceGroupAvailability"
 $Availabilityset = "myAvailabilitySet"
 
+# Creates a resource group
 New-AzureRmResourceGroup -Name $Resourcegroup -Location 'frn00006'
 
-New-AzureRmAvailabilitySet `
-   -Location "frn00006" `
-   -Name $Availabilityset `
-   -ResourceGroupName $Resourcegroup `
-   -Sku classic `
-   -PlatformFaultDomainCount 2 `
-   -PlatformUpdateDomainCount 2  
+# Creates an availability set
+New-AzureRmAvailabilitySet -Location "frn00006" -Name $Availabilityset -ResourceGroupName $Resourcegroup -Sku classic -PlatformFaultDomainCount 2   -PlatformUpdateDomainCount 2  
 ```
 
-The following code is a variation of the script required to create a VM. This code will add the VM to the availability set that was created in the code outlined above.
+The following PowerShell code sample is a variation of the script required to create a VM. This code creates the VM and then adds it to the availability set that you created with the previous script.
 
 ```PowerShell
 ## Initialise environment and variables
