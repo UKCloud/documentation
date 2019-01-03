@@ -32,7 +32,7 @@ To complete the steps in this guide, your cluster must have been deployed from a
 
 ### Getting the external IP
 
-You will need to raise a support request with us and provide us with; the network you would like to expose services on and the ports/protocols of the services you will be exposing. We will run a stack update against your environment to create the virtual infrastructure needed and provide you with the publically accessible IP and the local IP this maps to. The local IP will be important for the upcoming steps.
+You will need to raise a support request with us and provide us with; the network you would like to expose services on and the ports/protocols of the services you will be exposing. We will run a stack update against your environment to create the virtual infrastructure needed and provide you with the publicly accessible IP and the local IP this maps to. The local IP will be important for the upcoming steps.
 
 > [!NOTE]
 > You can request multiple ports/protocols and networks for external services.
