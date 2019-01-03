@@ -18,7 +18,7 @@ toc_mdlink: azs-vid-overview.md
 
 The following video provides an overview of the Microsoft Azure Stack Portal.
 
-<iframe src="https://player.vimeo.com/video/305064724?color=34d9c3" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/305064724?color=34d9c3" width="864" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Feedback
 

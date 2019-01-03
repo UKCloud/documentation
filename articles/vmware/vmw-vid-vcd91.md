@@ -18,7 +18,7 @@ toc_mdlink: vmw-vid-vcd91.md
 
 The following video provides an overview of the vCloud Director 9.1 user interface.
 
-<iframe src="https://player.vimeo.com/video/296027011?color=34d9c3" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/296027011?color=34d9c3" width="864" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Feedback
 
