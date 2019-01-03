@@ -9,7 +9,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Expose Non-HTTP Services Externally
+toc_title: Expose non-http services externally
 toc_fullpath: How To/oshift-how-expose-nonhttp-services.md
 toc_mdlink: oshift-how-expose-nonhttp-services.md
 ---
@@ -20,51 +20,60 @@ toc_mdlink: oshift-how-expose-nonhttp-services.md
 
 UKCloud for OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.
 
-This guide explains how you can expose services outside of your OpenShift cluster without using routes.
+This article explains how you can expose services outside of your OpenShift cluster without using routes.
 
 ### Intended audience
 
-This guide assumes familiarity with services and routes in OpenShift and access to an account with cluster-admin permissions.
+This article assumes familiarity with services and routes in OpenShift and access to an account with cluster-admin permissions.
 
-### Prerequisites
+## Prerequisites
 
-To complete the steps in this guide, your cluster must have been deployed from a version of our code which enables our non-http functionality. You can raise a support ticket to: check if this is already the case, to check if we can pull this version into your existing cluster or otherwise to request a new cluster be deployed incorporating our non-http functionality.
+To complete the steps in this guide, your cluster must have been deployed from a version of our code that enables our non-http functionality. You can raise a support ticket to: 
 
-### Getting the external IP
+- Check if your cluster already provides non-http functionality
 
-You will need to raise a support request with us and provide us with; the network you would like to expose services on and the ports/protocols of the services you will be exposing. We will run a stack update against your environment to create the virtual infrastructure needed and provide you with the publicly accessible IP and the local IP this maps to. The local IP will be important for the upcoming steps.
+- Request a new cluster to be deployed incorporating our non-http functionality.
+
+## Getting the external IP
+
+You'll need to raise a support ticket with us that provides network you'd like to expose services on and the ports/protocols of the services you'll be exposing. We'll run a stack update against your environment to create the virtual infrastructure needed and provide you with the publicly accessible IP and the local IP this maps to. The local IP will be important for the upcoming steps.
 
 > [!NOTE]
 > You can request multiple ports/protocols and networks for external services.
 
-### Exposing your service
+## Exposing your service
 
-Now you need to create the service you would like to expose, this can be done as you normally would, afterwards you want to patch the local IP we give you into the service as its 'External IP' using the following command(assuming the local IP you were given was 10.2.1.120):
+Now you need to create the service you would like to expose. Create the service as usual, then patch the local IP we gave you into the service as its external IP using the following command (the example uses a local IP of 10.2.1.120):
 
-```oc patch svc <service_name> '{"spec":{"externalIPs":["10.2.1.120"]}}'```
+```
+oc patch svc <service_name> '{"spec":{"externalIPs":["10.2.1.120"]}}'
+```
 
-### Deploying ipfailover
+## Deploying ipfailover
 
-OpenShift has a feature called ipfailover that can be used to make an external IP accessible on a subset of nodes in the cluster. This is what will be used to make your service accessible on the external IP. The following command is used to deploy ipfailover, it requires cluster-admin permissions:
+OpenShift has a feature called ipfailover that you can use to make an external IP accessible on a subset of nodes in the cluster. Use ipfailover to make your service available on the external IP. Enter the following command to deploy ipfailover (you must have cluster-admin permissions):
 
-```oc adm ipfailover --virtual-ips=10.2.1.120 --watch-port=0 --replicas=<amount_of_compute_nodes> --selector="node-role.kubernetes.io/compute=true" --vrrp-id-offset=0 --create```
+```
+oc adm ipfailover --virtual-ips=10.2.1.120 --watch-port=0 --replicas=<amount_of_compute_nodes> --selector="node-role.kubernetes.io/compute=true" --vrrp-id-offset=0 --create
+```
 
-You will need to pass the IP you have patched into the service as an external IP to the --virtual-ips argument, you can use any node-selector you would like for the --selector argument but make sure it is a valid node label. --watch-port needs to be 0 for the ipfailover deployment to work. --replicas should equal the amount of nodes matching your --selector label. --vrrp-id-offset will need to be incremented by one for each ipfailover deployment in your cluster, for example if I wanted to expose another external IP my command might look like this:
+You'll need to pass the IP you've patched into the service as an external IP, using the --virtual-ips argument. You can use any node-selector you like for the --selector argument but make sure it's a valid node label. You must set --watch-port to 0 for the ipfailover deployment to work. The --replicas argument should equal the amount of nodes matching your --selector label. You will need to increment --vrrp-id-offset by one for each ipfailover deployment in your cluster, for example to expose another external IP your command might look like the following:
 
-```oc adm ipfailover --virtual-ips=10.2.1.121 --watch-port=0 --replicas=<amount_of_compute_nodes> --selector="node-role.kubernetes.io/compute=true" --vrrp-id-offset=1 --create```
+```
+oc adm ipfailover --virtual-ips=10.2.1.121 --watch-port=0 --replicas=<amount_of_compute_nodes> --selector="node-role.kubernetes.io/compute=true" --vrrp-id-offset=1 --create
+```
 
->[!NOTE]
->You can only deploy one instance of ipfailover per project. Also you may sometimes get the deployment go into a pending state, if this is the case ensure the --vrrp-id-offset has been incremented (if necessary) and try running the following command inside the project you are deploying in:
+> [!NOTE]```You can only deploy one instance of ipfailover per project. Also, the deployment may sometimes go into a pending state. If this happens ensure that you've incremented --vrrp-id-offset (if necessary) and try running the following command inside the project you are deploying in: oc adm policy add-scc-to-user privileged -z ipfailover.```
 > ```oc adm policy add-scc-to-user privileged -z ipfailover```
 
-You can now access your service on the public IP tied to the external IP!
+You can now access your service on the public IP tied to the external IP.
 
->[!TIP]
-> You can access multiple services on the same external IP, they will just need to be running on a different port.
+> [!TIP]
+> You can access multiple services on the same external IP, they just need to be running on a different port.
 
 ## Further reading
 
-OpenShift documentation on ipfailover: https://docs.openshift.com/container-platform/3.10/admin_guide/high_availability.html
+OpenShift documentation on ipfailover: <https://docs.openshift.com/container-platform/3.10/admin_guide/high_availability.html>
 
 
 ## Feedback
