@@ -18,7 +18,7 @@ toc_mdlink: vmw-vid-licensing-kms.md
 
 The following video provides a quick guide for how to activate your Windows licence on VMware using the UKCloud Key Management System (KMS).
 
-<iframe src="https://player.vimeo.com/video/308877124" width="896" height="504" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/308877124" width="864" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Feedback
 
