@@ -18,7 +18,7 @@ toc_mdlink: vmw-vid-dfw.md
 
 The following video provides a technical explanation of VMware's Distributed Firewall, which forms part of UKCloud for VMware's advanced networking bundle.
 
-<iframe src="https://player.vimeo.com/video/307686299" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/307686299" width="864" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Feedback
 
