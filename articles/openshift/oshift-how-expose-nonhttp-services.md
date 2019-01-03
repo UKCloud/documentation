@@ -65,7 +65,9 @@ oc adm ipfailover --virtual-ips=10.2.1.121 --watch-port=0 --replicas=<amount_of_
 
 > [!NOTE]
 > You can only deploy one instance of ipfailover per project. Also, the deployment may sometimes go into a pending state. If this happens ensure that you've incremented --vrrp-id-offset (if necessary) and try running the following command inside the project you are deploying in: oc adm policy add-scc-to-user privileged -z ipfailover.
-> ```oc adm policy add-scc-to-user privileged -z ipfailover```
+> ```
+> oc adm policy add-scc-to-user privileged -z ipfailover
+> ```
 
 You can now access your service on the public IP tied to the external IP.
 
