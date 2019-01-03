@@ -18,7 +18,7 @@ toc_mdlink: other-vid-pricing-tool-overview.md
 
 The following video provides an overview of the UKCloud Pricing Estimation tool's user interface.
 
-<iframe src="https://player.vimeo.com/video/300701961?color=34d9c3" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/300701961?color=34d9c3" width="864" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Feedback
 
