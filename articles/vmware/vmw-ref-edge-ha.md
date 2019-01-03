@@ -21,7 +21,7 @@ UKCloud has trialled the use of HA enabled edge gateway devices with customers o
 
 In light of this, UKCloud does not recommend that customers have HA enabled on the edge gateway device.
 
-If you would like to investigate other methods of implementing HA into your solutions and the options available on UKCloud, this [*High Availability Blueprint*](https://ukcloud.com/wp-content/uploads/2016/07/UKCloud_Blueprint_UKC-GEN-101_High-Availability-and-Disaster-Recovery-Options.pdf) contains some useful advice. Alternatively, please contact your Account Manager who can arrange a session with one of our Cloud Architects.
+If you would like to investigate other methods of implementing HA into your solutions and the options available on UKCloud, this [*High Availability Blueprint*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud_blueprint_ukc-gen-101_high-availability-and-disaster-recovery-options.pdf) contains some useful advice. Alternatively, please contact your Account Manager who can arrange a session with one of our Cloud Architects.
 
 We are continuing to investigate with our partners at VMware to resolve this challenge.
 
