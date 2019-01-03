@@ -381,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-vid-overview.html",
-          "hash": "CicQd6QkoaOc8qk539PTew=="
+          "hash": "Qty3a+DZgOI/eBut57xvSA=="
         }
       },
       "is_incremental": false,
@@ -1302,7 +1302,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-vid-cifs-ecs-overview.html",
-          "hash": "evk9mguB/Rqn0BADdMseWg=="
+          "hash": "wXzNtls/uZYZG06X3jO3zw=="
         }
       },
       "is_incremental": false,
@@ -5464,7 +5464,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-vid-overview.html",
-          "hash": "/iHlUsqoe8G7q/ELxbZaUQ=="
+          "hash": "kfX9MwOvoEfdVy5qzLaavA=="
         }
       },
       "is_incremental": false,
@@ -5994,7 +5994,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-vid-overview.html",
-          "hash": "xPG77KrWZ43YB7XBWGYeGg=="
+          "hash": "prdUXgZYNKFQH8TeD6hwxw=="
         }
       },
       "is_incremental": false,
@@ -6913,7 +6913,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-vid-kc-contribution.html",
-          "hash": "5FZXyyLrolf4InkP3htykg=="
+          "hash": "hejhTnq6ZJL/VvJ/XU0MDA=="
         }
       },
       "is_incremental": false,
@@ -6925,7 +6925,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-vid-pricing-tool-overview.html",
-          "hash": "S20KAgnwoETb6RPM1R1qAw=="
+          "hash": "0Kh66jrN7DH0hEG4A/Znmg=="
         }
       },
       "is_incremental": false,
@@ -7459,7 +7459,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-vid-portal.html",
-          "hash": "WelT85OwGzzL1bLaqjrSqw=="
+          "hash": "nLzS9ZapoK2aH8w2zEwt7w=="
         }
       },
       "is_incremental": false,
@@ -14223,7 +14223,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-vid-dfw.html",
-          "hash": "T3Kfrya96ov+zGbtpe7Lww=="
+          "hash": "fihBeFS3hqFMXP4+CizEiA=="
         }
       },
       "is_incremental": false,
@@ -14247,7 +14247,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-vid-vcd91.html",
-          "hash": "KdeOQNNgNB4/mFUDcIyXMg=="
+          "hash": "YNoLFr2RpIMXx95oiikvcA=="
         }
       },
       "is_incremental": false,
