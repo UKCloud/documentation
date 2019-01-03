@@ -18,7 +18,7 @@ toc_mdlink: ptl-vid-portal.md
 
 The following video provides an overview of the UKCloud Portal user interface.
 
-<iframe src="https://player.vimeo.com/video/298596419?color=34d9c3" width="1280" height="720" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/298596419?color=34d9c3" width="864" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Feedback
 
