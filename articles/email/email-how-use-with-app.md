@@ -70,12 +70,7 @@ You're now ready to configure your application to connect to the mailbox to send
 
 To send outbound email, your application needs to support SMTP authentication and TLS encryption. Provided this is the case, simply configure the following settings in your application:
 
-<<<<<<< HEAD
 - SMTP Server/Mail relay host: mail.skyscapecs.net
-=======
-- SMTP Server/Mail relay host: mail.ukcloud.net
-
->>>>>>> b3f330f82b2d12590e512496489f9ac6eb833762
 - Port number: 465
 
 - Use TLS*: Yes
@@ -93,12 +88,7 @@ To receive inbound email, your application needs to support POP3 or IMAP4 over T
 
 Provided this is the case, simply configure the following settings in your application:
 
-<<<<<<< HEAD
 - Mailbox server: mail.skyscapecs.net
-=======
-- Mailbox server: mail.ukcloud.net
-
->>>>>>> b3f330f82b2d12590e512496489f9ac6eb833762
 - Protocol: POP3S or IMAPS
 
 - Port number: 993 (POP3S) or 995 (IMAPS)
