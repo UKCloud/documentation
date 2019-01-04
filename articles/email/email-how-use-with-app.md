@@ -127,8 +127,8 @@ The diagram below shows stunnel encrypting SMTP traffic.
 
 ![Stunnel encrypting SMTP traffic](images/email-stunnel.png)
 
-[!NOTE]
-An example working stunnel config is below to send smtp traffic on port 25 to zimbra on TLS port 465
+> [!NOTE]
+> An example working stunnel config is below to send smtp traffic on port 25 to zimbra on TLS port 465
 
 ```
 [smtp]

@@ -31,11 +31,14 @@ Version 9.1 of vCloud Director was tested by VMware and supports:
 - Microsoft Edge 41
 - Microsoft Internet Explorer 11
 
->Note: Flash must be enabled in the browser to access the vCloud Director Web Console.
+> [!NOTE]
+> You must enable Flash in your browser to access the vCloud Director Web Console.
 
->Note: Edge does not support plugins, so functions such as console redirection and OVF upload using the legacy UI do not work with Edge.
+> [!NOTE]
+> The Edge browser does not support plugins, so functions such as console redirection and OVF upload using the legacy UI do not work with Edge. To perform these functions, you must use a different browser.
 
-> Note: Although Internet Explorer is supported by the vCloud Director, if you've applied any group policy restrictions you may encounter problems.
+> [!NOTE]
+> Although Internet Explorer is supported by vCloud Director 9.1, if you've applied any security or group policy restrictions, you may encounter problems.
 
 ## UKCloud for OpenStack
 
