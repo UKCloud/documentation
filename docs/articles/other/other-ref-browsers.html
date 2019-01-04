@@ -88,28 +88,25 @@
 <p>To get the best interaction with the UKCloud platform, it's important to use a browser that is compatible with all aspects of the services with which you interact.</p>
 <p>This document outlines the browser requirement for UKCloud services.</p>
 <h2 id="ukcloud-for-vmware">UKCloud for VMware</h2>
-<p>For UKCloud for VMware, we recommend that you use the Mozilla Firefox Extended Support Release (ESR 52) 32-bit browser. This browser is supported by both the UKCloud Portal and by the Web Console for vCloud Director 8.20 (the version used by UKCloud for VMware).</p>
-<p>Firefox ESR 52 is an older version of Firefox, updated with new security patches, that remains compatible with the plugin type that the vCloud Director Web Console uses on our platform. You can find Firefox ESR at:</p>
-<p><a href="https://www.mozilla.org/en-US/firefox/organizations/">https://www.mozilla.org/en-US/firefox/organizations/</a></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Make sure you download ESR 52, which is the last ESR release to support legacy add-ons. Support for ESR 52 ends in August 2018. We plan to upgrade UKCloud for VMware to vCloud Director 9.1, which will eliminate the need for the Web Console plugin. For more information, see <a href="https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/">https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/</a>. You should also make sure that you download the 32-bit version of the browser.</p>
-</div>
-<p>Although Internet Explorer 8.<em>x</em> , 9.<em>x</em> and 10.<em>x</em> are supported by the vCloud Director 8.20 Web Console, if you've applied any group policy restrictions you may encounter problems.</p>
-<p>The vCloud Director Web Console has the following additional requirements:</p>
+<p>For UKCloud for VMware, vCloud Director 9.1 is compatible with many current and last major browser revisions.
+Version 9.1 of vCloud Director was tested by VMware and supports:</p>
 <ul>
-<li><p>Adobe Flash Player version 11.2 or later (32-bit version only)</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>This is a known issue with Adobe Flash Player version 27.0.0.170. If you encounter problems, make sure you update to version 27.0.0.183 or later.</p>
-</div>
-</li>
-<li><p>JRE 1.6.0 update 10 or later installed and enabled (32-bit version only)</p>
-</li>
+<li>Google Chrome 64</li>
+<li>Mozilla Firefox 58</li>
+<li>Microsoft Edge 41</li>
+<li>Microsoft Internet Explorer 11</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>VMware are redeveloping the Flash-based UI for vCloud Director and replacing it with a fully-featured HTML5-based interface. The first part of this redeveloped UI (provding HTML5 options for advanced networking features) has been made available in vCloud Director 8.20. More features will move to an HTML5-based UI in future releases.</p>
+<p>You must enable Flash in your browser to access the vCloud Director Web Console.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The Edge browser does not support plugins, so functions such as console redirection and OVF upload using the legacy UI do not work with Edge. To perform these functions, you must use a different browser.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Although Internet Explorer is supported by vCloud Director 9.1, if you've applied any security or group policy restrictions, you may encounter problems.</p>
 </div>
 <h2 id="ukcloud-for-openstack">UKCloud for OpenStack</h2>
 <p>UKCloud for OpenStack is powered by OpenStack and uses the Horizon project to provide its dashboard capabilities. Horizon is built around modern HTML5 standards and requires no auxiliary plugins to operate. Therefore, it is compatible with all latest browser versions.</p>
