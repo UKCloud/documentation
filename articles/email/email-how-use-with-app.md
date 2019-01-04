@@ -46,7 +46,7 @@ platform, which is internet facing. If you wish to send and/or receive mail on t
 
 To start creating mailboxes on the Email and Collaboration service, you first need to decide on a domain name, which must be a real-world, registered domain name. You can use a new domain name, or simply delegate a sub-domain of your organisation's existing domain name.
 
-You'll need to configure your chosen domain's MX record as `mail.ukcloud.net`.
+You'll need to configure your chosen domain's MX record as `mail.skyscapecs.net`.
 
 Once you've decided on a domain name and submitted your order form, the UKCloud team will configure your domain name on our platform and provide you with credentials for an administrator account. You'll be able to use this account to create mailboxes on the platform.
 
@@ -56,7 +56,7 @@ A mailbox will be needed for each email address you want to be able to send from
 
 This section takes you through the process of configuring a mailbox on UKCloud's Email and Collaboration platform for use with an application.
 
-The first step is to create a mailbox for this purpose. Once your domain name and administrator accounts have been configured, you can do this by logging on to the Administrator console at <https://mail.ukcloud.net:7071>
+The first step is to create a mailbox for this purpose. Once your domain name and administrator accounts have been configured, you can do this by logging on to the Administrator console at <https://mail.skyscapecs.net:7071>
 
 Create a new mailbox --- configure the account name and password as you normally would, but make sure you **don't** choose the option to force a password change:
 
@@ -70,8 +70,7 @@ You're now ready to configure your application to connect to the mailbox to send
 
 To send outbound email, your application needs to support SMTP authentication and TLS encryption. Provided this is the case, simply configure the following settings in your application:
 
-- SMTP Server/Mail relay host: mail.ukcloud.net
-
+- SMTP Server/Mail relay host: mail.skyscapecs.net
 - Port number: 465
 
 - Use TLS*: Yes
@@ -89,8 +88,7 @@ To receive inbound email, your application needs to support POP3 or IMAP4 over T
 
 Provided this is the case, simply configure the following settings in your application:
 
-- Mailbox server: mail.ukcloud.net
-
+- Mailbox server: mail.skyscapecs.net
 - Protocol: POP3S or IMAPS
 
 - Port number: 993 (POP3S) or 995 (IMAPS)
@@ -117,9 +115,20 @@ Stunnel can secure SMTP, IMAP4, POP3 (or any other protocol) as follows:
 
 The diagram below shows stunnel encrypting SMTP traffic.
 
-You can get full documentation, how to and FAQ guides from the stunnel website.
-
 ![Stunnel encrypting SMTP traffic](images/email-stunnel.png)
+
+> [!NOTE]
+> An example working stunnel config is below to send smtp traffic on port 25 to zimbra on TLS port 465
+
+```
+[smtp]
+accept = 25
+client = yes
+connect = mail.skyscapecs.net:465
+;delay = yes
+```
+
+You can get full documentation, how to and FAQ guides from the stunnel website.
 
 ## For more help
 
