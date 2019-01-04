@@ -57,6 +57,12 @@ OpenShift has a feature called ipfailover that you can use to make an external I
 oc adm ipfailover --virtual-ips=10.2.1.120 --watch-port=0 --replicas=<amount_of_compute_nodes> --selector="node-role.kubernetes.io/compute=true" --vrrp-id-offset=0 --create
 ```
 
+You must also ensure the ipfailover account in your current project has the required permissions. To do this run the following command:
+
+```
+oc adm policy add-scc-to-user privileged -z ipfailover
+```
+
 You'll need to pass the IP you've patched into the service as an external IP, using the --virtual-ips argument. You can use any node-selector you like for the --selector argument but make sure it's a valid node label. You must set --watch-port to 0 for the ipfailover deployment to work. The --replicas argument should equal the amount of nodes matching your --selector label. You will need to increment --vrrp-id-offset by one for each ipfailover deployment in your cluster, for example to expose another external IP your command might look like the following:
 
 ```
@@ -64,7 +70,7 @@ oc adm ipfailover --virtual-ips=10.2.1.121 --watch-port=0 --replicas=<amount_of_
 ```
 
 > [!NOTE]
-> You can only deploy one instance of ipfailover per project. Also, the deployment may sometimes go into a pending state. If this happens ensure that you've incremented --vrrp-id-offset (if necessary) and try running the following command inside the project you are deploying in: oc adm policy add-scc-to-user privileged -z ipfailover.
+> You can only deploy one instance of ipfailover per project. Also, the deployment may sometimes go into a pending state. If this happens ensure that you've incremented --vrrp-id-offset (if necessary) and have given the ipfailover service account the required permissions inside the project you are deploying in:
 > ```
 > oc adm policy add-scc-to-user privileged -z ipfailover
 > ```
