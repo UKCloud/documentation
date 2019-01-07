@@ -84,9 +84,9 @@
                   
 <h1 id="understanding-your-invoice-evidence-file">Understanding your invoice evidence file</h1>
 
-<h2 id="introduction">Introduction</h2>
-<p>The UKCloud evidence file is a CSV file provided with your invoice that contains data on your VMs per month and corroborates how the totals invoiced are derived.</p>
-<h2 id="viewing-information-about-charges">Viewing information about charges</h2>
+<h2 id="overview">Overview</h2>
+<p>The UKCloud evidence file is a CSV file provided with your invoice that contains data on your hourly metered charges per month and corroborates how the totals invoiced are derived.</p>
+<h2 id="evidence-file-columns-containing-information-about-charges">Evidence file columns containing information about charges</h2>
 <p>The evidence file includes information to help you understand how your usage of the UKCloud platform determines how the totals in your invoice are calculated. For a quick look at the different charges that contribute to the overall cost, see the columns listed in the table below.</p>
 <table>
 <thead>
@@ -97,11 +97,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Independent Disks and Media</td>
-<td>H</td>
-<td>Specifies charges for UKCloud for VMware Independent Disk or Media</td>
-</tr>
 <tr>
 <td>Compute VM</td>
 <td>U</td>
@@ -144,14 +139,369 @@
 </tr>
 </tbody>
 </table>
+<h2 id="all-evidence-file-columns">All evidence file columns</h2>
+<p>For information about how to use the evidence file to answer common questions about your invoice, see the <a href="other-faq-billing.html"><em>Invoice and billing FAQs</em></a>.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Name</th>
+<th>Usage</th>
+<th>Applies to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>EventDate</td>
+<td>Date charges apply to, in UTC, so daylight savings are not applied</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>B</td>
+<td>ProjectID</td>
+<td>OpenStack Project ID</td>
+<td>OpenStack</td>
+</tr>
+<tr>
+<td>C</td>
+<td>vAPP</td>
+<td>Name of the vApp</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>D</td>
+<td>vDC</td>
+<td>Name of the virtual data centre</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>E</td>
+<td>ResourceName</td>
+<td>Client-friendly name of the resource</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Resource Id</td>
+<td>Identifier of the resource</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>G</td>
+<td>OSID</td>
+<td>Operating system</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>H</td>
+<td>Service</td>
+<td>The UKCloud service to which the charge applies:<br>OpenStack Virtual Machine<br>OpenStack Block Storage Tier 1<br>OpenStack Block Storage Tier 2<br>OpenStack Image<br>CDSZ Walled Garden<br>Disaster Recovery as a Service<br>High Performance Compute<br>Secure Remote Access<br>VMware Dedicated VM<br>VMware Independent Disk<br>VMware Media<br>VMware Template<br>VMware VM</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>I</td>
+<td>Metadata</td>
+<td>Customer VM metadata</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>J</td>
+<td>StartTime</td>
+<td>Charging period start time on the EventDate, in UTC</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>K</td>
+<td>EndTime</td>
+<td>Charging period end time on the EventDate, in UTC</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>L</td>
+<td>PowerState</td>
+<td>On or Off</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>M</td>
+<td>UsageMinsWithinPeriod</td>
+<td>60 x UsageHoursWithinPeriod (may not match difference between the start time and end time due to rounding)</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>N</td>
+<td>UsageHoursWithinPeriod</td>
+<td>Typically rounded up usage hours matching start time to end time period</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>O</td>
+<td>ComputeMachineType</td>
+<td>For example m1.medium (OpenStack), Medium High Memory (VMware)</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>P</td>
+<td>PowerType</td>
+<td>ESSENTIAL, POWER or PRIORITY</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>Security Domain</td>
+<td>ASSURED or ELEVATED</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>R</td>
+<td>Compute vCPU</td>
+<td>Number of CPUs</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>S</td>
+<td>ComputeMemory</td>
+<td>Memory in GiB</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>T</td>
+<td>ComputePricePerHour</td>
+<td>Service catalogue price for the machine type, security domain, vCPU, memory and power level</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>U</td>
+<td>ComputeTotalPrice</td>
+<td>ComputePricePerHour * UsageHoursWithinPeriod</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>V</td>
+<td>GPUType</td>
+<td>compute or visual</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>W</td>
+<td>GPUCount</td>
+<td>Any positive integer (1 to 16)</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>X</td>
+<td>GPUPricePerHour</td>
+<td>As per current pricing guide</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>GPUTotalPrice</td>
+<td>GPUPricePerHour * GPUCount * UsageHoursWithinPeriod</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Tier1StorageUsed</td>
+<td>Tier 1 storage allocated</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>AA</td>
+<td>Tier1SnapshotStorageUsed</td>
+<td>Tier 1 storage allocated for vCloud snapshots</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AB</td>
+<td>Tier1StorageIncluded</td>
+<td>Tier 1 storage amount that is not charged</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AC</td>
+<td>Tier1StorageChargeable</td>
+<td>Tier1StorageUsed + Tier1SnapshotUsed - Tier1StorageIncluded</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>AD</td>
+<td>Tier1StoragePricePerHour</td>
+<td>Service catalogue price for Tier 1 storage and security domain converted into hourly charge per GiB</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>AE</td>
+<td>Tier1StoragePrice</td>
+<td>Tier1StorageChargeable * Tier1StoragePricePerHour * UsageHoursWithinPeriod</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>AF</td>
+<td>Tier2StorageUsed</td>
+<td>Tier 2 torage allocated</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>AG</td>
+<td>Tier2SnapshotStorageUsed</td>
+<td>Tier 2 storage allocated for vCloud snapshots</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AH</td>
+<td>Tier2StorageIncluded</td>
+<td>Tier 2 storage amount that is not charged (60GiB of Tier 2 storage is included if powered on (10GiB for Micro VMS))</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AI</td>
+<td>Tier2StorageChargeable</td>
+<td>Tier2StorageUsed + Tier2SnapshotUsed - Tier2StorageIncluded</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>AJ</td>
+<td>Tier2StoragePricePerHour</td>
+<td>Service catalogue price for Tier 2 storage and security domain converted into hourly charge per GiB</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>AK</td>
+<td>Tier2StoragePrice</td>
+<td>Tier2StorageChargeable * Tier2StoragePricePerHour * UsageHoursWithinPeriod</td>
+<td>OpenStack, VMware</td>
+</tr>
+<tr>
+<td>AL</td>
+<td>Geo-resilientStorageUsed</td>
+<td>Storage used in GiB</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AM</td>
+<td>Geo-resilientSnapshotStorageUsed</td>
+<td>Geo-resilient storage allocated for vCloud snapshots</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AN</td>
+<td>Geo-resilientStorageIncluded</td>
+<td>Geo-resilient storage amount that is not charged (60GiB included if powered on (10GiB for Micro VMS))</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AO</td>
+<td>Geo-resilientStorageChargeable</td>
+<td>Geo-resilientSnapshotStorageUsed + Geo-resilientSnapshotStorageUsed - Geo-resilientStorageIncluded</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AP</td>
+<td>Geo-resilientPricePerHour</td>
+<td>Service catalogue price for geo-resilient storage and security domain converted into hourly charge per GiB</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AQ</td>
+<td>Geo-resilientStoragePrice</td>
+<td>Geo-resilientStorageChargeable * Geo-resilientStoragePricePerHour * UsageHoursWithinPeriod</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AR</td>
+<td>Protection Type</td>
+<td>Type of protection applied:<br>None<br>14 Day Snapshot Protection<br>28 Day Snapshot Protection<br>Synchronous Protection<br>2 Day Journaling Protection<br>7 Day Journaling Protection<br>14 Day Journaling Protection<br>28 Day Journaling Protection<br>Any combination of the above (apart from None) separated by &amp;</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AS</td>
+<td>ComputeProtectionPerHour</td>
+<td>Price per hour dependent on values in Protection Type (taking into account free 14 day snapshot with synchronous)</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AT</td>
+<td>ComputeProtectionTotalPrice</td>
+<td>ComputeProtectionPerHour * UsageHoursWithinPeriod</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AU</td>
+<td>Tier1ProtectionPricePerHour</td>
+<td>Monthly charge from service catalogue (per GB per month) converted into hourly charge per GiB (0 if no protection; blank if not relevant)</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AV</td>
+<td>Tier2ProtectionPricePerHour</td>
+<td>Monthly charge from service catalogue (per GB per month) converted into hourly charge per GiB (0 if no protection; blank if not relevant)</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AW</td>
+<td>Geo-resilientProtectionPerHour</td>
+<td>Monthly charge from service catalogue (per GB per month) converted into hourly charge per GiB (0 if no protection or not relevant). This is either just geo-resilient storage protection or geo-resilient plus 28 day snapshot</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AX</td>
+<td>Tier1ProtectionTotalPrice</td>
+<td>The cost of protection for Tier 1 storage. This could be journaling or snapshot or both<br>(Tier1StorageChargeable - Tier1SnapshotUsed) * Tier1ProtectionPricePerHour * UsageHours</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AY</td>
+<td>Tier2ProtectionTotalPrice</td>
+<td>The cost of protection for Tier 2 storage. This could be journaling or snapshot or both<br>(Tier2StorageChargeable - Tier2SnapshotUsed) * Tier2ProtectionPricePerHour * UsageHours</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>AZ</td>
+<td>Geo-resilientProtectionTotalPrice</td>
+<td>The cost of protection for geo-resilient storage. As 14 day snapshot is included with synchronous protection, this is only for when 28 day snapshot protection is taken with geo-resilient storage.<br>(Geo-resilientStorageChargeable - Geo-resilientSnapshotUsed) * Geo-resilientProtectionPricePerHour * UsageHours</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>BA</td>
+<td>ProtectionTotalPrice</td>
+<td>Total cost for protection in period (0 if no protection)<br>(ComputeProtectionTotalPrice + Tier1ProtectionTotalPrice + Tier2ProtectionTotalPrice + Geo-resilientProtectionTotalPrice)</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>BB</td>
+<td>LicensePricePerHour</td>
+<td>Licence charges for the VM</td>
+<td>VMware</td>
+</tr>
+<tr>
+<td>BC</td>
+<td>LicenseTotalPrice</td>
+<td>LicensePricePerHour * UsageHoursWithinPeriod</td>
+<td></td>
+</tr>
+<tr>
+<td>BD</td>
+<td>TotalPrice</td>
+<td>ComputeTotalPrice + GPUTotalPrice + Tier1StoragePrice + Tier2StoragePrice + Geo-resilientStoragePrice + ProtectionTotalPrice + LicenseTotalPrice</td>
+<td>OpenStack, VMware</td>
+</tr>
+</tbody>
+</table>
 <h2 id="key-changes-to-the-evidence-file-november-2017-onwards">Key changes to the Evidence File (November 2017 onwards)</h2>
-<p>From November 2017, you will see the following changes to your evidence file. You'll receive the Evidence File for November at the start of December 2017, detailing your consumption during November.</p>
+<p>From December 2018, you'll see the following changes to your evidence file. You'll receive the Evidence File for December at the start of January 2019, detailing your consumption during December.</p>
 <p>The key changes to the evidence file are as follows:</p>
-<p><strong>New column</strong></p>
+<p><strong>Service type categories</strong></p>
+<ul>
+<li>In column H the OpenStack Instance service type has been renamed to OpenStack Virtual Machine</li>
+</ul>
+<h2 id="previous-changes">Previous changes</h2>
+<h3 id="november-2017">November 2017</h3>
+<p><strong>New column:</strong></p>
 <ul>
 <li>Column H - UKCloud for VMware Independent Disks and Media charges</li>
 </ul>
-<h2 id="previous-changes">Previous changes</h2>
 <h3 id="october-2017">October 2017</h3>
 <p><strong>Added new columns:</strong></p>
 <ul>
@@ -198,8 +548,7 @@
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any feedback on the new format of the evidence file, or want to make suggestions for additional features or improvements, make your suggestions via the <a href="http://ideas.ukcloud.com/">UKCloud Ideas</a> web site.</p>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
