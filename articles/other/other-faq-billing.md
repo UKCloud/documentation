@@ -25,6 +25,8 @@ We send out invoices on the first day of each month for the previous month's usa
 
 Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
 
+If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
+
 ### How is my invoice formatted?
 
 Your invoice includes a line for each chargeable service. For example, there might be a row for your UKCloud for VMware charges, one for Cloud Storage and another for HSCN connectivity.
