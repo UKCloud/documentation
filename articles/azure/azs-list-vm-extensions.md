@@ -26,7 +26,7 @@ Ensure your Powershell environment is setup as detailed in [*Configure PowerShel
 
 From your Powershell window run:
 
-```powershell
+```PowerShell
 Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"

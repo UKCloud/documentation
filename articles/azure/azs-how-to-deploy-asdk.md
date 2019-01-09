@@ -163,7 +163,7 @@ Then reboot the box and conitnue the install.
 
 Example of Automated Physical Kit Deployment:
 
-```powershell
+```PowerShell
 $adminpass = ConvertTo-SecureString 'Password123' -AsPlainText -Force
 $unameS = "azurestackadmin@<domain>.onmicrosoft.com"
 $credsS = "<password>"
@@ -210,7 +210,7 @@ Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.T
  ```
 After you modified it, run:
 
-```powershell
+```PowerShell
 $adminpass = ConvertTo-SecureString 'Password123'-AsPlainText -Force
 $unameS = "azurestackadmin@<domain>.onmicrosoft.com"
 $credsS = "<password>"

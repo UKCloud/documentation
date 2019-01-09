@@ -109,7 +109,7 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
 
     Then run the following commands:
 
-    ```powershell
+    ```PowerShell
     Add-AzureRMEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
     Login-AzureRmAccount -EnvironmentName "AzureStackAdmin"
     Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageType | ` Get-AzureRmVMExtensionImage | ` Select Type, Version | ` Format-Table -Property * -AutoSize
