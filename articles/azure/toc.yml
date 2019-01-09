@@ -16,6 +16,8 @@
       href: azs-how-create-S2S-VPN.md
     - name: Create an Azure user group
       href: azs-how-create-azure-group.md
+    - name: How to link Azure Storage Explorer to Azure Stack
+      href: azs-how-link-storage-explorer.md
     - name: Identify your Azure Global Admins
       href: azs-how-identify-global-admins.md
     - name: Resize an OS drive
