@@ -1,6 +1,6 @@
 ---
-title: How to identify your Azure Global Administrators | UKCloud Ltd
-description: How to identify your Azure Global Administrators for Microsoft Azure
+title: How to Identify your Azure Global Administrators | UKCloud Ltd
+description: How to Identify your Azure Global Administrators for Microsoft Azure
 services: azure-stack
 author: Paul Brown
 
@@ -14,7 +14,7 @@ toc_fullpath: Users/How To/azs-how-identify-global-admins.md
 toc_mdlink: azs-how-identify-global-admins.md
 ---
 
-# How to identify your Microsoft Azure Global Administrators
+# How to Identify your Microsoft Azure Global Administrators
 
 ## Overview
 
