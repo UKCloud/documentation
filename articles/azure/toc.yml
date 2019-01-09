@@ -10,17 +10,17 @@
       href: azs-gs.md
   - name: How To
     items:
-    - name: Create a load balancer
+    - name: Create a Load Balancer
       href: azs-how-create-load-balancer.md
-    - name: Create a Site-to-Site connection
+    - name: Create a Site-to-Site Connection
       href: azs-how-create-S2S-VPN.md
-    - name: Create an Azure user group
-      href: azs-how-create-azure-group.md
+    - name: Manage Azure User Groups and Permissions
+      href: azs-how-manage-azure-group.md
     - name: Identify your Azure Global Admins
       href: azs-how-identify-global-admins.md
-    - name: Resize an OS drive
+    - name: Resize an OS Drive
       href: azs-how-resize-os-drive.md
-    - name: Retrieve your subscription quotas
+    - name: Retrieve your Subscription Quotas
       href: azs-how-retrieve-quota-ps.md
     - name: Use the Azure Stack API
       href: azs-how-use-azure-api.md
@@ -30,9 +30,9 @@
         href: azs-how-to-obtain-clientid-via-api.md
     - name: Configure Environment
       items:
-      - name: Configure the Azure Stack user's Azure CLI environment
+      - name: Configure the Azure Stack User's Azure CLI Environment
         href: azs-how-configure-cli.md
-      - name: Configure the Azure Stack user's PowerShell environment
+      - name: Configure the Azure Stack User's PowerShell Environment
         href: azs-how-configure-powershell-users.md
     - name: Create a Key Vault
       items:
@@ -40,19 +40,19 @@
         href: azs-how-create-key-vault-portal.md
       - name: Create a Key Vault - PowerShell
         href: azs-how-create-key-vault-ps.md
-    - name: Create a virtual machine
+    - name: Create a Virtual Machine
       items:
-      - name: Create a virtual machine - CLI
+      - name: Create a Virtual Machine - CLI
         href: azs-how-create-vm-cli.md
-      - name: Create a virtual machine - Portal
+      - name: Create a Virtual Machine - Portal
         href: azs-how-create-vm.md
-      - name: Create a virtual machine - PowerShell
+      - name: Create a Virtual Machine - PowerShell
         href: azs-how-create-vm-ps.md
-      - name: Create a virtual machine - Terraform
+      - name: Create a Virtual Machine - Terraform
         href: azs-how-create-vm-terraform.md
     - name: List VM Extensions
       items:
-      - name: How to list VM extensions in Azure Stack - PowerShell
+      - name: How to List VM Extensions in Azure Stack - PowerShell
         href: azs-list-vm-extensions.md
     - name: Service Principal Name
       items:
@@ -62,7 +62,7 @@
         href: azs-how-create-spn-powershell.md
     - name: Templates
       items:
-      - name: Deploy a SQL template to Azure Stack - PowerShell
+      - name: Deploy an SQL Template to Azure Stack - PowerShell
         href: azs-how-deploy-sql-template-powershell.md
   - name: Reference
     items:
@@ -82,11 +82,11 @@
   items:
   - name: How To
     items:
-    - name: Deploy and configure the Azure Stack Development Kit
+    - name: Deploy and Configure the Azure Stack Development Kit
       href: azs-how-to-deploy-asdk.md
     - name: Update Azure Stack Procedure
       href: azs-how-ps-update-azure-stack.md
     - name: Configure Environment
       items:
-      - name: Configure the Azure Stack operator's PowerShell environment
+      - name: Configure the Azure Stack Operator's PowerShell Environment
         href: azs-how-configure-powershell-operators.md
