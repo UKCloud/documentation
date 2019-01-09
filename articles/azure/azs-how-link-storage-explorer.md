@@ -51,7 +51,7 @@ If you need to install the Storage Explorer, please find the link [here](https:/
 
     ![Storage tool installation guide 7](images/azs-installation-storage-tool-6.png)
 
-8. From the **Edit** menu, select **Target Default Azure APIs** then restart Storage Explorer.
+8. From the **Edit** menu, select **Target Azure Stack APIs** then restart Storage Explorer.
 
     ![Storage tool installation guide 8](images/azs-installation-storage-tool-7.png)
 
