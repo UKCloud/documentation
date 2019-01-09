@@ -57,7 +57,7 @@ VMs provide the basic compute building blocks in Azure Stack. You can create VMs
 
 7. In the *Settings* step, change any of the optional settings as required for your VM, as of version 1811 for storage "managed disks" are selected by default and you need to select the public inbound ports you want enabled, then click **OK**.
 
-    ![Create virtual machine > Settings](images/azsp_createvm_settings_v1811.PNG)
+    ![Create virtual machine > Settings](images/azsp_createvm_settings_v1811.png)
 
 8. In the *Summary* step, review the selections you've made and then click **OK** to start the deployment.
 
