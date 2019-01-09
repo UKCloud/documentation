@@ -26,7 +26,7 @@
       href: azs-how-use-azure-api.md
     - name: Client ID via API
       items:
-      - name: How to obtain Client ID via API for Azure Stack - REST API
+      - name: How to Obtain Client ID via API for Azure Stack - REST API
         href: azs-how-to-obtain-clientid-via-api.md
     - name: Configure Environment
       items:
