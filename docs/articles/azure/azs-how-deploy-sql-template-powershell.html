@@ -127,7 +127,7 @@ The following quickstart templates are available on <a href="http://aka.ms/Azure
 </div>
 <ul>
 <li><p>From an elevated (run as adminstrator) PowerShell prompt run:</p>
-<pre><code class="lang-powershell">cd c:\
+<pre><code class="lang-PowerShell">cd c:\
 mkdir RepoDirectory
 cd RepoDirectory
 git init
@@ -437,7 +437,7 @@ Current default is set to STANDARD -&gt; <strong><code>SQL2016SP1-WS2016-STD</co
 <p><strong><code>platformFaultDomainCount</code></strong> and <strong><code>platformUpdateDomainCount</code></strong> - below we set them to 3 and 5 accordingly to spread the servers on different hosts.</p>
 <p>More information on Fault Domains and Update Domains can be found <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-key-features#availability-sets-in-azure-stack">here</a></p>
 </div>
-<pre><code class="lang-powershell"># Declare login variables
+<pre><code class="lang-PowerShell"># Declare login variables
 $AppGUID = &quot;&lt;GUID of your SPN Application&gt;&quot;
 $AppPassword = '&lt;your password&gt;'
 
@@ -516,7 +516,7 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 <div class="NOTE">
 <h5>Note</h5>
 <p>If Template fails validation and you need to see detailed error message you can do:</p>
-<pre><code class="lang-powershell">Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -sqlVMSize &quot;Standard_A4&quot;
+<pre><code class="lang-PowerShell">Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -sqlVMSize &quot;Standard_A4&quot;
 
 Code    : MultipleErrorsOccurred
 Message : Multiple error occurred: BadRequest. Please see details.
@@ -532,7 +532,7 @@ Details :
 <h2 id="known-issues">Known Issues</h2>
 <ul>
 <li><p>Sometimes Domain Account does not get correctly created and you will get the following error:</p>
-<pre><code class="lang-powershell">&quot;statusMessage&quot;:
+<pre><code class="lang-PowerShell">&quot;statusMessage&quot;:
 &quot;{\&quot;status\&quot;:\&quot;Failed\&quot;,\&quot;error\&quot;:{\&quot;code\&quot;:\&quot;ResourceDeploymentFailure\&quot;,\&quot;message\&quot;:\&quot;The
 resource operation completed with terminal provisioning state 'Failed'.\&quot;,\&quot;details\&quot;:{\&quot;code\&quot;:\&quot;VMExtensionProvisioningError\&quot;,\&quot;message\&quot;:\&quot;VM
 has reported a failure when processing extension 'sqlAOPrepare'. Error
@@ -552,7 +552,7 @@ threw one or more non-terminating errors while running the Set-TargetResource fu
 <li><p><a href="https://powershell.org/2017/10/10/using-azure-desired-state-configuration-part-iv/">DSC Configuration</a> and <a href="https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmdscextensionstatus?view=azurermps-6.5.0">cmdlets</a></p>
 <ul>
 <li><p>To view Status of the DSC deployment run:</p>
-<pre><code class="lang-powershell">Get-AzureRmVMDscExtension -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot;
+<pre><code class="lang-PowerShell">Get-AzureRmVMDscExtension -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot;
 Get-AzureRmVMDscExtensionStatus -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot; | select -ExpandProperty DscConfigurationLog
 </code></pre>
 </li>

@@ -109,7 +109,7 @@
 <li><p>Azure AD PowerShell Module</p>
 </li>
 </ul>
-<pre><code class="lang-powershell">Install-Module AzureAD -Force -Verbose
+<pre><code class="lang-PowerShell">Install-Module AzureAD -Force -Verbose
 </code></pre>
 </li>
 <li><p>Active Azure <em>Subscription</em> (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)</p>
@@ -155,7 +155,7 @@
 <p>Credential variables to change:</p>
 <p>$AzureUsernameAdmin, $AzureUserPasswordAdmin, $AzsUsernameAdmin, $AzsUserPasswordAdmin</p>
 </div>
-<pre><code class="lang-powershell"># Declare Variables
+<pre><code class="lang-PowerShell"># Declare Variables
 $AppName = &quot;TestApp&quot;
 $AppURL = &quot;https://test.app&quot;
 $AppPassword = ConvertTo-SecureString '&lt;your password&gt;' -AsPlainText -Force # e.g. &quot;Password123!&quot;
@@ -329,7 +329,7 @@ $OutputObject
 <p>Credential variables to change:</p>
 <p>$AzsUsernameAdmin, $AzsUserPasswordAdmin</p>
 </div>
-<pre><code class="lang-powershell"># Declare Variables
+<pre><code class="lang-PowerShell"># Declare Variables
 $AppName = &quot;TestApp&quot;
 $AppURL = &quot;https://test.app&quot;
 $AppPassword = ConvertTo-SecureString '&lt;your password&gt;' -AsPlainText -Force # e.g. &quot;Password123!&quot;

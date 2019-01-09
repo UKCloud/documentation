@@ -98,7 +98,7 @@
 </li>
 </ul>
 <h3 id="install-azure-stack-powershell">Install Azure Stack PowerShell</h3>
-<pre><code class="lang-powershell"># Set Execution Policy
+<pre><code class="lang-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
 # PowerShell commands for Azure Stack are installed through the PowerShell gallery. To register the PSGallery repository, open an elevated PowerShell session from the development kit 
 # or  from a Windows-based external client if you are connected through VPN and run the following command:
@@ -114,7 +114,7 @@ Install-Module -Name AzureStack -RequiredVersion 1.6.0
 <h2 id="configure-the-user-environment-and-sign-in-to-azure-stack">Configure the user environment and sign in to Azure Stack</h2>
 <p>UKCloud FRN00006 Region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the  $AzsUsername and  $AzsPassword values)</p>
 <h3 id="azure-active-directory-aad-based-deployments">Azure Active Directory (AAD) based deployments</h3>
-<pre><code class="lang-powershell"># Set Execution Policy
+<pre><code class="lang-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
 
 # Register an AzureRM environment that targets your Azure Stack instance
@@ -124,7 +124,7 @@ Add-AzureRMEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https
 Login-AzureRmAccount -EnvironmentName &quot;AzureStackUser&quot;
 </code></pre>
 <h3 id="azure-active-directory-aad-based-deployments---embedded-credentials">Azure Active Directory (AAD) based deployments - Embedded Credentials</h3>
-<pre><code class="lang-powershell"># Set Execution Policy
+<pre><code class="lang-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
 
 # Register an AzureRM environment that targets your Azure Stack instance
@@ -141,7 +141,7 @@ Login-AzureRmAccount -Credential $AzsCred -EnvironmentName &quot;AzureStackUser&
 </code></pre>
 <h2 id="test-the-connectivity">Test the connectivity</h2>
 <p>Now that we've got everything set-up, let's use PowerShell to create resources within Azure Stack. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named &quot;MyResourceGroup&quot;:</p>
-<pre><code class="lang-powershell">New-AzureRmResourceGroup -Name &quot;MyResourceGroup&quot; -Location &quot;frn00006&quot;
+<pre><code class="lang-PowerShell">New-AzureRmResourceGroup -Name &quot;MyResourceGroup&quot; -Location &quot;frn00006&quot;
 </code></pre>
 <h2 id="next-steps">Next steps</h2>
 <ul>

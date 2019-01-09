@@ -191,7 +191,7 @@
 <p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install</a></p>
 <p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download</a></p>
 <p>Then run the following commands:</p>
-<pre><code class="lang-powershell">Add-AzureRMEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+<pre><code class="lang-PowerShell">Add-AzureRMEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
 Login-AzureRmAccount -EnvironmentName &quot;AzureStackAdmin&quot;
 Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageType | ` Get-AzureRmVMExtensionImage | ` Select Type, Version | ` Format-Table -Property * -AutoSize
 </code></pre>
