@@ -19,25 +19,19 @@ toc_mdlink: ostack-ref-public-image-versioning.md
 
 When you create an instance in OpenStack, its disk is cloned from an image managed by OpenStack. To get you started quickly, we publish a public catalog on our platform that provides several instance images for commonly-used instance sizes and operating systems.
 
-To provide you with both predictability and access to the latest updates, without having to provide an unmanageably large catalog, we use a long-term support (LTS) approach for our OpenStack public image catalog.
-
 ## Image versioning
 
-In our public catalog, we keep the original version of the image in the catalog for the lifetime of that distribution (providing predictability). We also maintain a second version of the release of the template that we patch and replace as necessary during the distribution (providing you with access to the latest version).
+We will be providing updated images once a quarter for our supported images. We will not be removing images from the platform until they are no longer in use by any customers. We will be adopting a naming convention that will allow you to easily identify images.
 
-This means that:
-
-- The LTS (original version) is predictable both in deployment state and UUID within OpenStack
-
-- The current version is not predictable in deployment as patches are applied and the UUID changes when the image is updated
+UKCloud always recomends using the latest availible image, and recomends that all instances have their packages updated as often as possible.
 
 ## Image naming convention
 
 Within the public catalog, images are named using the following naming convention:
 
-`<distributionName>-<distributionVersionNumber>-LTS`
+`<distributionName>-<distributionVersionNumber>-CURRENT` - This will be the most recent image for the quarter.
 
-`<distributionName>-<distributionVersionNumber>-CURRENT`
+`<distributionName>-<distributionVersionNumber>-DATE` - The data indicates when the image was rotated from being the current image.
 
 For example:
 
