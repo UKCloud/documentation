@@ -8,7 +8,7 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Resize an OS drive
+toc_title: Resize an OS Drive
 toc_fullpath: Users/How To/azs-how-resize-os-drive.md
 toc_mdlink: azs-how-resize-os-drive.md
 ---
