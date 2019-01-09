@@ -1,6 +1,6 @@
 ---
-title: How to deploy a SQL template to Azure Stack - PowerShell
-description: Learn how to deploy a SQL template to Azure Stack using PowerShell
+title: How to Deploy an SQL Template to Azure Stack - PowerShell
+description: Learn how to deploy an SQL template to Azure Stack using PowerShell
 services: azure-stack
 author: Chris Black
 
@@ -9,12 +9,12 @@ toc_sub1: How To
 toc_sub2: Templates
 toc_sub3:
 toc_sub4:
-toc_title: Deploy a SQL template to Azure Stack - PowerShell
+toc_title: Deploy an SQL Template to Azure Stack - PowerShell
 toc_fullpath: Users/How To/azs-how-deploy-sql-template-powershell.md
 toc_mdlink: azs-how-deploy-sql-template-powershell.md
 ---
 
-# How to deploy a SQL template to Azure Stack - PowerShell
+# How to Deploy an SQL Template to Azure Stack - PowerShell
 
 This document explains how to deploy SQL Always On Cluster using ARM Template to Azure Stack using PowerShell.
 
