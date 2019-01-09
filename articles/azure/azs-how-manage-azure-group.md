@@ -11,7 +11,7 @@ toc_sub3:
 toc_sub4:
 toc_title: Manage Azure User Groups and Permissions 
 toc_fullpath: Users/How To/azs-how-manage-azure-group.md
-toc_mdlink: azs-how-create-azure-group.md
+toc_mdlink: azs-how-manage-azure-group.md
 ---
 
 # How to Manage Azure User Groups and Permissions 
