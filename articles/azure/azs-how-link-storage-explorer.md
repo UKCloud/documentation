@@ -8,7 +8,7 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: How to link Azure Storage Explorer to Azure Stack
+toc_title: Link Azure Storage Explorer to Azure Stack
 toc_fullpath: Users/How To/azs-how-link-storage-explorer.md
 toc_mdlink: azs-how-link-storage-explorer.md
 ---
