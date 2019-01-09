@@ -1,5 +1,5 @@
 ---
-title: How to retrieve your subscription quotas using PowerShell | UKCloud Ltd
+title: How to Retrieve your Subscription Quotas using PowerShell | UKCloud Ltd
 description: Provides help for retrieving your quotas on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
@@ -8,12 +8,12 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Retrieve your subscription quotas
+toc_title: Retrieve your Subscription Quotas
 toc_fullpath: Users/How To/azs-how-retrieve-quota-ps.md
 toc_mdlink: azs-how-retrieve-quota-ps.md
 ---
 
-# How to retrieve your subscription quotas using PowerShell
+# How to Retrieve your Subscription Quotas using PowerShell
 
 ## Overview
 
