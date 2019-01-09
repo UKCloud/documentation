@@ -1,5 +1,5 @@
 ---
-title: How to deploy and configure the Azure Stack Development Kit
+title: How to Deploy and Configure the Azure Stack Development Kit
 description: Deploy and configure the Azure Stack Development Kit
 services: azure-stack
 author: Paul Brown
@@ -9,16 +9,17 @@ toc_sub1: How To
 toc_sub2: 
 toc_sub3:
 toc_sub4:
-toc_title: Deploy and configure the Azure Stack Development Kit
-toc_fullpath: Operators/How To/azs-how-to-deploy-asdk.md
-toc_mdlink: azs-how-to-deploy-asdk.md
+toc_title: Deploy and Configure the Azure Stack Development Kit
+toc_fullpath: Operators/How To/azs-how-deploy-asdk.md
+toc_mdlink: azs-how-deploy-asdk.md
 ---
-# Deploy and configure the Azure Stack Development Kit
+# How to Deploy and Configure the Azure Stack Development Kit
 The Azure Stack Development kit is a single server instance of Azure Stack. It is not fit for production workloads and has some subtle differences vs the real Azure Stack integrate appliance, however for most test scenarios it will suffice.
 
 The ASDK is used in two modes within UKCloud:
 
 * Physical hardware (pre-production) - Community support with Microsoft
+
 * Virtual servers (development and testing) - not officially supported by Microsoft
 This document covers two scenarios, building from scratch and redeploying.
 
@@ -56,6 +57,7 @@ Download the appliance and prep the virtual disk (vhdx) for the ASDK.
 Implement the following steps from the guide: https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script
 
 * Download and extract the development kit
+
 * Prepare the development kit host
 
 **Virtualisation Note:** Before running the installer open, "C:\AzureStack_Installer\asdk-installer.ps1" and edit as follows:
@@ -92,6 +94,7 @@ Once step 3 is complete the box will have been rebooted from the vhdx downloaded
 Implement the following steps from the guide: https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script
 
 * Deploy the development kit
+
 
 The following details should be used:
 
@@ -223,4 +226,5 @@ cd C:\CloudDeployment\Setup
 If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes after you run the script, you will get prompted for AAD Account - use azurestackadmin@<domain>.onmicrosoft.com
 
 * [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
+
 * [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
