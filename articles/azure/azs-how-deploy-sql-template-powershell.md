@@ -61,7 +61,7 @@ SQL Always On Repository - [sql-2016-ha](https://github.com/Azure/AzureStack-Qui
 
 - From an elevated (run as adminstrator) PowerShell prompt run:
 
-  ```powershell
+  ```PowerShell
   cd c:\
   mkdir RepoDirectory
   cd RepoDirectory
@@ -215,7 +215,7 @@ Change the required variables as per your environment and run the following scri
 
 
 
-```powershell
+```PowerShell
 # Declare login variables
 $AppGUID = "<GUID of your SPN Application>"
 $AppPassword = '<your password>'
@@ -296,7 +296,7 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 > [!NOTE]
 > If Template fails validation and you need to see detailed error message you can do:
 >
-> ```powershell
+> ```PowerShell
 > Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -sqlVMSize "Standard_A4"
 >
 > Code    : MultipleErrorsOccurred
@@ -314,7 +314,7 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 
 - Sometimes Domain Account does not get correctly created and you will get the following error:
 
-  ```powershell
+  ```PowerShell
   "statusMessage":
   "{\"status\":\"Failed\",\"error\":{\"code\":\"ResourceDeploymentFailure\",\"message\":\"The
   resource operation completed with terminal provisioning state 'Failed'.\",\"details\":{\"code\":\"VMExtensionProvisioningError\",\"message\":\"VM
@@ -335,7 +335,7 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 
   - To view Status of the DSC deployment run:
 
-    ```powershell
+    ```PowerShell
     Get-AzureRmVMDscExtension -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>"
     Get-AzureRmVMDscExtensionStatus -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>" | select -ExpandProperty DscConfigurationLog
     ```

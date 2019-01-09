@@ -384,7 +384,7 @@ resource "azurestack_virtual_machine" "test" {
 
 From PowerShell prompt navigate to the directory you have all your `tf` files in and run:
 
-```powershell
+```PowerShell
 # Check if your environment is setup correctly
 .\terraform.exe init
 
@@ -428,7 +428,7 @@ commands will detect it and remind you to do so if necessary.
 
 From PowerShell prompt navigate to the directory you have all your `tf` files in and run:
 
-```powershell
+```PowerShell
 # Check if your environment is setup correctly
 .\terraform.exe init
 
