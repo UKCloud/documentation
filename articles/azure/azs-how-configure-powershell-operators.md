@@ -1,5 +1,5 @@
 ---
-title: Configure the Azure Stack operator's PowerShell environment for UKCloud |  based on Microsoft Docs
+title: Configure the Azure Stack Operator's PowerShell Environment for UKCloud |  Based on Microsoft Docs
 description: Configure the Azure Stack operator's PowerShell environment
 services: azure-stack
 author: Chris Black
@@ -9,12 +9,12 @@ toc_sub1: How To
 toc_sub2: Configure Environment
 toc_sub3:
 toc_sub4:
-toc_title: Configure the Azure Stack operator's PowerShell environment
+toc_title: Configure the Azure Stack Operator's PowerShell Environment
 toc_fullpath: Operators/How To/azs-how-configure-powershell-operators.md
 toc_mdlink: azs-how-configure-powershell-operators.md
 ---
 
-# Configure the Azure Stack operator's PowerShell environment
+# Configure the Azure Stack Operator's PowerShell Environment
 
 As an Azure Stack operator, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates,  etc. This topic is scoped to use with the operator environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:
 
