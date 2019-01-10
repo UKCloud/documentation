@@ -68,13 +68,13 @@ Implement the following steps from the guide: https://docs.microsoft.com/en-us/a
 
 To run:
 
- ```
+ ```PowerShell
  "C:\AzureStack_Installer\asdk-installer.ps1"  | ForEach {($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object {`$====_.isboot -eq `$true}).Model -match 'null') {") -replace "====",""} | Set-Content "C:\AzureStack_Installer\asdk-installer.ps1" -force
  ```
 
  To verify:
 
- ```
+ ```PowerShell
  Select-String -Path "C:\AzureStack_Installer\asdk-installer.ps1" -pattern "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'null'\) \`{"
  ```
 The following details should be used:
@@ -111,8 +111,7 @@ For some reason the driver injection does not work and you have to manually add 
 
 **Important:** 1803 install failed with the error below.
 
-```
-
+```PowerShell
 Invoke-EceAction : Type 'Deployment' of Role 'Domain' raised an exception:
 'AzS-DC01' failed to start.
 Virtual machine 'AzS-DC01' could not be started because the hypervisor is not running.
@@ -159,14 +158,14 @@ To verify run you can run systeminfo and it will show whether BIOS is set correc
 
 To fix it run from elevated command/powershell prompt:
 
-```
+```PowerShell
 BCDEDIT /Set {current} hypervisorlaunchtype auto
 ```
 Then reboot the box and conitnue the install.
 
 Example of Automated Physical Kit Deployment:
 
-```powershell
+```PowerShell
 $adminpass = ConvertTo-SecureString 'Password123' -AsPlainText -Force
 $unameS = "azurestackadmin@<domain>.onmicrosoft.com"
 $credsS = "<password>"
@@ -181,7 +180,7 @@ cd C:\CloudDeployment\Setup
 > [!IMPORTANT]
 > If the installer cannot see any network adapters - you can install manually VMware Tools and reboot the box. It will work then.
 
-```
+```PowerShell
 E:\AzureStack_Installer\asdk-installer.ps1
  
 Initialize environment. Please wait...
@@ -199,21 +198,21 @@ Open, "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" and 
 
 To edit run:
 
- ```
+ ```PowerShell
 (gc "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1") | ForEach {$_ -replace  "\`$physicalMachine.IsVirtualMachine \| Should Be \`$false","`$physicalMachine.IsVirtualMachine | Should Be `$true"} | Set-Content “C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1” -Force
 ```
 And then run:
-```
+```PowerShell
 (gc "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1") | ForEach {$_ -replace "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine", "(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0"} | Set-Content “C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1” -Force
  ```
  To verify run:
- ```
+ ```PowerShell
 Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -pattern "\`$physicalMachine.IsVirtualMachine \| Should Be \`$true"
 Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -pattern "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan 0"
  ```
 After you modified it, run:
 
-```powershell
+```PowerShell
 $adminpass = ConvertTo-SecureString 'Password123'-AsPlainText -Force
 $unameS = "azurestackadmin@<domain>.onmicrosoft.com"
 $credsS = "<password>"
