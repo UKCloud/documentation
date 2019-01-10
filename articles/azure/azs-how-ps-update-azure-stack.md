@@ -1,6 +1,6 @@
 ---
-title: Azure Stack Update Procedure | UKCloud Ltd
-description: Azure Stack Update Procedure Guide for Support
+title: Azure Stack update procedure | UKCloud Ltd
+description: Azure Stack update procedure guide for support
 services: azure-stack
 author: Chris Black
 
@@ -9,11 +9,11 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Update Azure Stack Procedure
+toc_title: Azure Stack update procedure
 toc_fullpath: Operators/Update Azure Stack/azs-how-ps-update-azure-stack.md
 toc_mdlink: azs-how-ps-update-azure-stack.md
 ---
-# Azure Stack Update Procedure
+# Azure Stack update procedure
 
 This guide is intended to provide a reference on how can we perform Azure Stack Updates.
 
