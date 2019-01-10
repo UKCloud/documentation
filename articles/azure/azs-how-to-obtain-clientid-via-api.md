@@ -1,5 +1,5 @@
 ---
-title: How to Obtain your Client ID via the API for Azure Stack - REST API
+title: How to obtain your Client ID via the API for Azure Stack - REST API
 description: How to obtain your Client ID via the REST API for Azure Stack
 services: azure-stack
 author: Paul Brown
@@ -9,12 +9,12 @@ toc_sub1: How To
 toc_sub2: Client ID via API
 toc_sub3:
 toc_sub4:
-toc_title: How to Obtain Client ID via API for Azure Stack - REST API
+toc_title: Obtain Client ID via API for Azure Stack - REST API
 toc_fullpath: Users/How To/azs-how-to-obtain-clientid-via-api.md
 toc_mdlink: azs-how-to-obtain-clientid-via-api.md
 ---
 
-# How to Obtain Client ID via the REST API for Azure Stack
+# How to obtain Client ID via the REST API for Azure Stack
 
 ## Overview
 
