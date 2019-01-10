@@ -1,5 +1,5 @@
 ---
-title: How to Deploy and Configure the Azure Stack Development Kit
+title: How to deploy and configure the Azure Stack Development Kit
 description: Deploy and configure the Azure Stack Development Kit
 services: azure-stack
 author: Paul Brown
@@ -9,11 +9,11 @@ toc_sub1: How To
 toc_sub2: 
 toc_sub3:
 toc_sub4:
-toc_title: Deploy and Configure the Azure Stack Development Kit
+toc_title: Deploy and configure the Azure Stack Development Kit
 toc_fullpath: Operators/How To/azs-how-deploy-asdk.md
 toc_mdlink: azs-how-deploy-asdk.md
 ---
-# How to Deploy and Configure the Azure Stack Development Kit
+# How to deploy and configure the Azure Stack Development Kit
 The Azure Stack Development kit is a single server instance of Azure Stack. It is not fit for production workloads and has some subtle differences vs the real Azure Stack integrate appliance, however for most test scenarios it will suffice.
 
 The ASDK is used in two modes within UKCloud:
