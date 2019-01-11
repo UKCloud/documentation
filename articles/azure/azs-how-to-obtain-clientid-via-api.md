@@ -32,11 +32,11 @@ Query <https://adminportal.frn00006.azure.ukcloud.com/metadata/endpoints?api-ver
 
 ## Authentication
 
-**Obtain Access Token**
+### Obtain Access Token
 
 In order to obtain Access Token you will need to create a request body and use Rest API POST against Authentication/Login Endpoint.
 
-**Request Body Fields**
+### Request Body Fields
 
 |Name  |Description  |
 |---------|---------|
@@ -47,7 +47,7 @@ In order to obtain Access Token you will need to create a request body and use R
 |password     |   The password of the Azure AD user account      |
 |scope     |   optional, such as openid to get Id Token      |
 
-** Request Authentication Endpoint**
+### Request Authentication Endpoint
 
 The Authentication/Login Endpoint can be https:/\/login.microsoftonline.com/{tenant id}/oauth2/token or https:/\/login.windows.net/{tenant id}/oauth2/token
 
@@ -56,7 +56,7 @@ The Authentication/Login Endpoint can be https:/\/login.microsoftonline.com/{ten
 >
 > The allowed values are tenant identifiers, for example,  8eaef023-2b34-4da1-9baa-8bc8c9d6a490  or  contoso.onmicrosoft.com  or  common  for tenant-independent tokens.
 
-**How to obtain Access Token Request Body and Authentication Information**
+### How to obtain Access Token Request Body and Authentication Information
 
 1. Grant_type
 
@@ -72,13 +72,14 @@ The Authentication/Login Endpoint can be https:/\/login.microsoftonline.com/{ten
 
 |Application  |ApplicationID  |
 |---------|---------|
-|LegacyPowerShell    |0a7bdc5c-7b57-40be-9939-d4c5fc7cd417*         |
+|LegacyPowerShell    |0a7bdc5c-7b57-40be-9939-d4c5fc7cd417         |
 |PowerShell     |  1950a258-227b-4e31-a9cf-717495945fc2       |
 |WindowsAzureActiveDirectory     |  00000002-0000-0000-c000-000000000000       |
 |VisualStudio     |    872cd9fa-d31f-45e0-9eab-6e460a02d1f1     |
 |AzureCLI     |    04b07795-8ddb-461a-bbee-02f9e1bf7b46     |
 
-**Do Not Use - it is legacy and does not have all permissions*
+> [!NOTE]
+> Do not use LegacyPowerShell as it does not have all permissions
 
 5. Username
 
