@@ -17,7 +17,7 @@ toc_mdlink: vmw-ref-trouble-uk-keyboard-console.md
 
 ## Issue
 
-In vCloud Director 9.1, the VMware Web Console no longer supports UK keyboards. This means that when interacting with the console using a UK keyboard, the keys you press on the keyboard may not work as expected in the console. For example, if you press the @ key on your keyboard, this may appear in the console as a " symbol.
+The web-based console available in the vCloud Director 9.1 HTML5 UI (tenant portal) does not provide support for a UK English keyboard layout, only US English. This means that when interacting with the console using a UK keyboard, the keys you press on the keyboard may not work as expected in the console. For example, if you press the @ key on your keyboard, this may appear in the console as a " symbol.
 
 ## Solution
 
