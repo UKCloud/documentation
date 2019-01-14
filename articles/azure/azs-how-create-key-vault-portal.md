@@ -1,5 +1,5 @@
 ---
-title: How to create a Key Vault using the Azure Stack Portal | UKCloud Ltd
+title: How to create a Key Vault using the Azure Stack portal | UKCloud Ltd
 description: Provides help for creating a Key Vault on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson

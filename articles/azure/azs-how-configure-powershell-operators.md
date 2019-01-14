@@ -91,3 +91,7 @@ Now that we've got everything set-up, let's use PowerShell to list resources wit
 ```PowerShell
 Get-AzureRmResourceGroup -Location "frn00006"
 ```
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.

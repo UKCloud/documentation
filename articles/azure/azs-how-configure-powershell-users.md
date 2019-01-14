@@ -1,5 +1,5 @@
 ---
-title: Configure the Azure Stack user's PowerShell environment for UKCloud |  based on Microsoft Docs
+title: Configure the Azure Stack user's PowerShell environment for UKCloud | Based on Microsoft Docs
 description: Configure the Azure Stack user's PowerShell environment
 services: azure-stack
 author: Chris Black
@@ -95,4 +95,9 @@ New-AzureRmResourceGroup -Name "MyResourceGroup" -Location "frn00006"
 ## Next steps
 
 * [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
+
 * [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
