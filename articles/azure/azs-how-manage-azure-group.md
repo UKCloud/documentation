@@ -1,9 +1,5 @@
 ---
-<<<<<<< HEAD:articles/azure/azs-how-manage-azure-group.md
 title: How to Manage Azure User Groups and Permissions | UKCloud Ltd
-=======
-title: How to manage Azure user groups and permissions  | UKCloud Ltd
->>>>>>> 17b2f90363cff5f09c7a864002a31d3cd43765f2:articles/azure/azs-how-manage-azure-group.md
 description: Describes how to apply the appropriate Azure Stack permissions to your UKCloud for Microsoft Azure users
 services: azure-stack
 author: Sue Highmoor
@@ -15,15 +11,7 @@ toc_sub3:
 toc_sub4:
 toc_title: Manage Azure user groups and permissions 
 toc_fullpath: Users/How To/azs-how-manage-azure-group.md
-<<<<<<< HEAD:articles/azure/azs-how-manage-azure-group.md
 toc_mdlink: azs-how-manage-azure-group.md
-=======
-<<<<<<< HEAD:articles/azure/azs-how-manage-azure-group.md
-toc_mdlink: azs-how-create-azure-group.md
-=======
-toc_mdlink: azs-how-manage-azure-group.md
->>>>>>> 70ba515373ff46fc77c0fa4950e831aebebeffb9:articles/azure/azs-how-manage-azure-group.md
->>>>>>> 17b2f90363cff5f09c7a864002a31d3cd43765f2:articles/azure/azs-how-manage-azure-group.md
 ---
 
 # How to manage Azure user groups and permissions 
