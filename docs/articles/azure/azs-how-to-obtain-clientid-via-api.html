@@ -92,9 +92,9 @@
 <h2 id="obtain-additional-endpoints">Obtain additional Endpoints</h2>
 <p>Query <a href="https://adminportal.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2015-01-01">https://adminportal.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2015-01-01</a></p>
 <h2 id="authentication">Authentication</h2>
-<p><strong>Obtain Access Token</strong></p>
+<h3 id="obtain-access-token">Obtain Access Token</h3>
 <p>In order to obtain Access Token you will need to create a request body and use Rest API POST against Authentication/Login Endpoint.</p>
-<p><strong>Request Body Fields</strong></p>
+<h3 id="request-body-fields">Request Body Fields</h3>
 <table>
 <thead>
 <tr>
@@ -129,26 +129,31 @@
 </tr>
 </tbody>
 </table>
-<p>** Request Authentication Endpoint**</p>
+<h3 id="request-authentication-endpoint">Request Authentication Endpoint</h3>
 <p>The Authentication/Login Endpoint can be https://login.microsoftonline.com/{tenant id}/oauth2/token or https://login.windows.net/{tenant id}/oauth2/token</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>You can use the  {tenant id}  value in the path of the request to control who can sign into the application.</p>
 <p>The allowed values are tenant identifiers, for example,  8eaef023-2b34-4da1-9baa-8bc8c9d6a490  or  contoso.onmicrosoft.com  or  common  for tenant-independent tokens.</p>
 </div>
-<p><strong>How to obtain Access Token Request Body and Authentication Information</strong></p>
-<p>a. Grant_type</p>
+<h3 id="how-to-obtain-access-token-request-body-and-authentication-information">How to obtain Access Token Request Body and Authentication Information</h3>
+<ol>
+<li><p>Grant_type</p>
 <ul>
 <li>This is static value and in order to get the access token you need to set it to &quot;password&quot;. Example:  <strong>Grant_type = password</strong></li>
 </ul>
-<p>b. Resource - Application ID URI / graphEndpoint</p>
+</li>
+<li><p>Resource - Application ID URI / graphEndpoint</p>
 <ul>
 <li>Can be found in the Endpoint query above. Example: <a href="https://graph.windows.net/">https://graph.windows.net/</a></li>
 </ul>
-<p>c. ClientID (Application ID)</p>
+</li>
+<li><p>ClientID (Application ID)</p>
 <ul>
 <li>In our case we can use built-in ClientIDs</li>
 </ul>
+</li>
+</ol>
 <table>
 <thead>
 <tr>
@@ -159,7 +164,7 @@
 <tbody>
 <tr>
 <td>LegacyPowerShell</td>
-<td>0a7bdc5c-7b57-40be-9939-d4c5fc7cd417*</td>
+<td>0a7bdc5c-7b57-40be-9939-d4c5fc7cd417</td>
 </tr>
 <tr>
 <td>PowerShell</td>
@@ -179,26 +184,35 @@
 </tr>
 </tbody>
 </table>
-<p>*<em>Do Not Use - it is legacy and does not have all permissions</em></p>
-<p>d. username</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Do not use LegacyPowerShell as it does not have all permissions</p>
+</div>
+<ol start="5">
+<li><p>Username</p>
 <ul>
 <li>Your usename for Azure Active Directory. i.e. user@domain.onmicrosoft.com</li>
 </ul>
-<p>e. Password</p>
+</li>
+<li><p>Password</p>
 <ul>
 <li>Password for your account.</li>
 </ul>
-<p>f. TenantID</p>
+</li>
+<li><p>TenantID</p>
 <ul>
 <li><p>Query https://&lt;your domain&gt;.onmicrosoft.com.well-known/openid-configuration</p>
 </li>
 <li><p>In the output from the query above look for token_endpoint value (i.e. <a href="https://login.windows.net/0000ffff-1111-cccc-0000-888888888888/oauth2/token">https://login.windows.net/0000ffff-1111-cccc-0000-888888888888/oauth2/token</a>) and in this example your Tenant ID is <strong>0000ffff-1111-cccc-0000-888888888888</strong>.</p>
 </li>
 </ul>
-<p>g. Request Authentication Endpoint/URI of Azure Authentication Endpoint</p>
+</li>
+<li><p>Request Authentication Endpoint/URI of Azure Authentication Endpoint</p>
 <ul>
 <li>Query https://login.windows.net/&lt;your domain&gt;.onmicrosoft.com/.well-known/openid-configuration</li>
 </ul>
+</li>
+</ol>
 <h2 id="example-of-authentication-request">Example of Authentication Request</h2>
 <p>Request Body</p>
 <table>
@@ -241,7 +255,7 @@ Host: https://login.microsoftonline.com
 grant_type=password
 &amp;client_id=1950a258-227b-4e31-a9cf-717495945fc2
 &amp;resource=https://graph.windows.net/
-&amp;username=admin@charliejllewellyngmail.onmicrosoft.com
+&amp;username=user@domain.onmicrosoft.com
 &amp;password=Password123
 &amp;scope=openid
 </code></pre>
