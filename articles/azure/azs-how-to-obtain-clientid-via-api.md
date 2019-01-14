@@ -32,11 +32,11 @@ Query <https://adminportal.frn00006.azure.ukcloud.com/metadata/endpoints?api-ver
 
 ## Authentication
 
-**Obtain Access Token**
+### Obtain Access Token
 
 In order to obtain Access Token you will need to create a request body and use Rest API POST against Authentication/Login Endpoint.
 
-**Request Body Fields**
+### Request Body Fields
 
 |Name  |Description  |
 |---------|---------|
@@ -47,7 +47,7 @@ In order to obtain Access Token you will need to create a request body and use R
 |password     |   The password of the Azure AD user account      |
 |scope     |   optional, such as openid to get Id Token      |
 
-** Request Authentication Endpoint**
+### Request Authentication Endpoint
 
 The Authentication/Login Endpoint can be https:/\/login.microsoftonline.com/{tenant id}/oauth2/token or https:/\/login.windows.net/{tenant id}/oauth2/token
 
@@ -56,47 +56,48 @@ The Authentication/Login Endpoint can be https:/\/login.microsoftonline.com/{ten
 >
 > The allowed values are tenant identifiers, for example,  8eaef023-2b34-4da1-9baa-8bc8c9d6a490  or  contoso.onmicrosoft.com  or  common  for tenant-independent tokens.
 
-**How to obtain Access Token Request Body and Authentication Information**
+### How to obtain Access Token Request Body and Authentication Information
 
-a. Grant_type
+1. Grant_type
 
-- This is static value and in order to get the access token you need to set it to "password". Example:  **Grant_type = password**
+   - This is static value and in order to get the access token you need to set it to "password". Example:  **Grant_type = password**
 
-b. Resource - Application ID URI / graphEndpoint
+2. Resource - Application ID URI / graphEndpoint
 
-- Can be found in the Endpoint query above. Example: https://graph.windows.net/
+   - Can be found in the Endpoint query above. Example: https://graph.windows.net/
 
-c. ClientID (Application ID)
+3. ClientID (Application ID)
 
-- In our case we can use built-in ClientIDs
+   - In our case we can use built-in ClientIDs
 
 |Application  |ApplicationID  |
 |---------|---------|
-|LegacyPowerShell    |0a7bdc5c-7b57-40be-9939-d4c5fc7cd417*         |
+|LegacyPowerShell    |0a7bdc5c-7b57-40be-9939-d4c5fc7cd417         |
 |PowerShell     |  1950a258-227b-4e31-a9cf-717495945fc2       |
 |WindowsAzureActiveDirectory     |  00000002-0000-0000-c000-000000000000       |
 |VisualStudio     |    872cd9fa-d31f-45e0-9eab-6e460a02d1f1     |
 |AzureCLI     |    04b07795-8ddb-461a-bbee-02f9e1bf7b46     |
 
-**Do Not Use - it is legacy and does not have all permissions*
+> [!NOTE]
+> Do not use LegacyPowerShell as it does not have all permissions
 
-d. username
+5. Username
 
-- Your usename for Azure Active Directory. i.e. user\@domain.onmicrosoft.com
+   - Your usename for Azure Active Directory. i.e. user\@domain.onmicrosoft.com
 
-e. Password
+6. Password
 
-- Password for your account.
+   - Password for your account.
 
-f. TenantID
+7. TenantID
 
-- Query https://\<your domain>\.onmicrosoft.com\.well-known\/openid-configuration
+   - Query https://\<your domain>\.onmicrosoft.com\.well-known\/openid-configuration
 
-- In the output from the query above look for token_endpoint value (i.e. https://login.windows.net/0000ffff-1111-cccc-0000-888888888888/oauth2/token) and in this example your Tenant ID is **0000ffff-1111-cccc-0000-888888888888**.
+   - In the output from the query above look for token_endpoint value (i.e. https://login.windows.net/0000ffff-1111-cccc-0000-888888888888/oauth2/token) and in this example your Tenant ID is **0000ffff-1111-cccc-0000-888888888888**.
 
-g. Request Authentication Endpoint/URI of Azure Authentication Endpoint
+8. Request Authentication Endpoint/URI of Azure Authentication Endpoint
 
-- Query https:/\/login.windows.net/\<your domain>.onmicrosoft.com/.well-known/openid-configuration
+   - Query https:/\/login.windows.net/\<your domain>.onmicrosoft.com/.well-known/openid-configuration
 
 ## Example of Authentication Request
 
@@ -119,7 +120,7 @@ Host: https://login.microsoftonline.com
 grant_type=password
 &client_id=1950a258-227b-4e31-a9cf-717495945fc2
 &resource=https://graph.windows.net/
-&username=admin@charliejllewellyngmail.onmicrosoft.com
+&username=user@domain.onmicrosoft.com
 &password=Password123
 &scope=openid
 ```
