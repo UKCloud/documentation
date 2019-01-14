@@ -33,7 +33,7 @@ Prerequisites from a Windows-based external client.
 
 ### Install Azure Stack PowerShell
 
-  ```powershell
+  ```PowerShell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
   # PowerShell commands for Azure Stack are installed through the PowerShell gallery. To register the PSGallery repository, open an elevated PowerShell session from the development kit
@@ -54,7 +54,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
 ### Azure Active Directory (AAD) based deployments
 
-  ```powershell
+  ```PowerShell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
 
@@ -67,7 +67,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
 ### Azure Active Directory (AAD) based deployments - Embedded Credentials
 
-  ```powershell
+  ```PowerShell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
 
@@ -88,6 +88,10 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
 Now that we've got everything set-up, let's use PowerShell to list resources within Azure Stack. For example, you can list resource groups. Use the following command list all resource groups:
 
-```powershell
+```PowerShell
 Get-AzureRmResourceGroup -Location "frn00006"
 ```
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.

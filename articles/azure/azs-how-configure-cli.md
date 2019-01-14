@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: Configure the Azure Stack User's Azure CLI Environment |  based on Microsoft Docs
+=======
+title: Configure the Azure Stack user's Azure CLI environment |  Based on Microsoft Docs
+>>>>>>> 17b2f90363cff5f09c7a864002a31d3cd43765f2
 description: Learn how to use the cross-platform command-line interface (CLI) to manage and deploy resources on Azure Stack
 services: azure-stack
 author: Chris Black
@@ -179,5 +183,19 @@ az vm create --resource-group testRG --name testVM --image OpenLogic:CentOS:6.9:
 There are some known issues that you must be aware of when using CLI in Azure Stack:
 
 * The CLI interactive mode i.e the `az interactive` command is not yet supported in Azure Stack.
+
 * To get the list of virtual machine images available in Azure Stack, use the `az vm images list --all` command instead of the `az vm image list` command. Specifying the `--all` option makes sure that response returns only the images that are available in your Azure Stack environment. 
+<<<<<<< HEAD
 * Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the `az vm images list` command.
+=======
+<<<<<<< HEAD
+* Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the `az vm images list` command.
+=======
+
+* Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the `az vm images list` command.
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+>>>>>>> 70ba515373ff46fc77c0fa4950e831aebebeffb9
+>>>>>>> 17b2f90363cff5f09c7a864002a31d3cd43765f2

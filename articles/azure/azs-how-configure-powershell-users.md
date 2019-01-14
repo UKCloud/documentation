@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: Configure the Azure Stack User's PowerShell Environment for UKCloud |  based on Microsoft Docs
+=======
+title: Configure the Azure Stack user's PowerShell environment for UKCloud | Based on Microsoft Docs
+>>>>>>> 17b2f90363cff5f09c7a864002a31d3cd43765f2
 description: Configure the Azure Stack user's PowerShell environment
 services: azure-stack
 author: Chris Black
@@ -33,7 +37,7 @@ Prerequisites from a Windows-based external client.
 
 ### Install Azure Stack PowerShell
 
-  ```powershell
+  ```PowerShell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
   # PowerShell commands for Azure Stack are installed through the PowerShell gallery. To register the PSGallery repository, open an elevated PowerShell session from the development kit 
@@ -54,7 +58,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
 ### Azure Active Directory (AAD) based deployments
 
-  ```powershell
+  ```PowerShell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
 
@@ -67,7 +71,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
 ### Azure Active Directory (AAD) based deployments - Embedded Credentials
 
-  ```powershell
+  ```PowerShell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
 
@@ -88,11 +92,16 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
 Now that we've got everything set-up, let's use PowerShell to create resources within Azure Stack. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named "MyResourceGroup":
 
-```powershell
+```PowerShell
 New-AzureRmResourceGroup -Name "MyResourceGroup" -Location "frn00006"
 ```
 
 ## Next steps
 
 * [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
+
 * [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.

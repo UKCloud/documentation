@@ -105,7 +105,7 @@ For more information visit <https://www.gov.uk/guidance/introducing-the-uk-publi
 
 For more information about PSN, see the [*Public Services Network (PSN) FAQs*](conn-faq-psn.md).
 
-For an overview of the future of PSN, including updates about email and DNS services, see our [*Future of PSN - what you really need to know!*](https://ukcloud.com/hub/news/the-future-of-psn/) blog post.
+For an overview of the future of PSN, including updates about email and DNS services, see our blog post, [*The new future of PSN*](https://ukcloud.com/hub/news/the-new-future-of-psn/).
 
 ## Feedback
 

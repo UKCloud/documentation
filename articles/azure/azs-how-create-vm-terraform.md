@@ -112,7 +112,8 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
 - `arm_endpoint` - The Azure Resource Manager API Endpoint for
  your Azure Stack instance, eg `https://management.{region}.{domain}`.
  
- For UKCloud Region it is **`https://management.frn00006.azure.ukcloud.com`**.
+   > [!NOTE]
+   > For UKCloud Region it is **`https://management.frn00006.azure.ukcloud.com`**.
 
 - `subscription_id` - The ID of your Azure Stack Subscription.
 
@@ -384,7 +385,7 @@ resource "azurestack_virtual_machine" "test" {
 
 From PowerShell prompt navigate to the directory you have all your `tf` files in and run:
 
-```powershell
+```PowerShell
 # Check if your environment is setup correctly
 .\terraform.exe init
 
@@ -428,7 +429,7 @@ commands will detect it and remind you to do so if necessary.
 
 From PowerShell prompt navigate to the directory you have all your `tf` files in and run:
 
-```powershell
+```PowerShell
 # Check if your environment is setup correctly
 .\terraform.exe init
 
@@ -464,3 +465,7 @@ commands will detect it and remind you to do so if necessary.
 
 > [!NOTE]
 > You can also add `-auto-approve` to apply command for it not to ask you to apply changes for full automation.
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
