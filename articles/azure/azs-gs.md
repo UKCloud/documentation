@@ -276,7 +276,7 @@ In this Getting Started Guide, you've learned the basics about UKCloud for Micro
 
 - [*How to create a virtual machine from the Azure Marketplace*](azs-how-create-vm.md)
 
-- [*How to create an Azure user group*](azs-how-create-azure-group.md)
+- [*How to create an Azure user group*](azs-how-manage-azure-group.md)
 
 - [*How to use the Azure Stack API*](azs-how-use-azure-api.md)
 
