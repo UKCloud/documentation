@@ -14,7 +14,7 @@ toc_fullpath: Users/How To/azs-list-vm-extensions.md
 toc_mdlink: azs-list-vm-extensions.md
 ---
 
-# How to List VM Extensions in Azure Stack with PowerShell
+# How to list VM extensions in Azure Stack with PowerShell
 
 This document explains how to list VM extensions in Azure Stack with PowerShell.
 
