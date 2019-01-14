@@ -227,10 +227,7 @@ If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes af
 * [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
 
 * [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
-<<<<<<< HEAD:articles/azure/azs-how-deploy-asdk.md
-=======
 
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
->>>>>>> 17b2f90363cff5f09c7a864002a31d3cd43765f2:articles/azure/azs-how-to-deploy-asdk.md
