@@ -1,5 +1,5 @@
 ---
-title: How to create a load balancer using the Azure Stack portal | UKCloud Ltd
+title: How to Create a Load Balancer Using the Azure Stack Portal | UKCloud Ltd
 description: Provides help for creating a load balancer on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
