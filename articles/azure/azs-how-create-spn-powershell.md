@@ -1,5 +1,5 @@
 ---
-title: How to create a Service Principal Name for Azure Stack - PowerShell
+title: How to Create a Service Principal Name for Azure Stack - PowerShell
 description: Learn how to create SPN to manage your Azure Stack using PowerShell
 services: azure-stack
 author: Chris Black
