@@ -163,7 +163,7 @@ Then reboot the box and conitnue the install.
 
 Example of Automated Physical Kit Deployment:
 
-```powershell
+```PowerShell
 $adminpass = ConvertTo-SecureString 'Password123' -AsPlainText -Force
 $unameS = "azurestackadmin@<domain>.onmicrosoft.com"
 $credsS = "<password>"
@@ -210,7 +210,7 @@ Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.T
  ```
 After you modified it, run:
 
-```powershell
+```PowerShell
 $adminpass = ConvertTo-SecureString 'Password123'-AsPlainText -Force
 $unameS = "azurestackadmin@<domain>.onmicrosoft.com"
 $credsS = "<password>"
@@ -223,4 +223,9 @@ cd C:\CloudDeployment\Setup
 If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes after you run the script, you will get prompted for AAD Account - use azurestackadmin@<domain>.onmicrosoft.com
 
 * [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
+
 * [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
