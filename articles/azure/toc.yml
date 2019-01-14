@@ -19,7 +19,7 @@
     - name: Link Azure Storage Explorer to Azure Stack
       href: azs-how-link-storage-explorer.md
     - name: 'Manage Azure user groups and permissions '
-      href: azs-how-create-azure-group.md
+      href: azs-how-manage-azure-group.md
     - name: Resize an OS drive
       href: azs-how-resize-os-drive.md
     - name: Retrieve your subscription quotas
