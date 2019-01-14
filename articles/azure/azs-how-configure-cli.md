@@ -184,8 +184,6 @@ There are some known issues that you must be aware of when using CLI in Azure St
 
 * Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the `az vm images list` command.
 
-* Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the `az vm images list` command.
-
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
