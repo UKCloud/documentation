@@ -154,3 +154,7 @@ az group delete --name rg01 -y
 > Given the fact that Azure CLI under Profile 2017-03-09 does **NOT** allow you to lsit your Service Principal Name unlike the [latest profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-list) vs [206-03-09 profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2017-03-09-profile#az-ad-sp-list), its use for Azure Stack is highly limited.
 >
 > As a rule of thumb use PowerShell wherever possible.
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
