@@ -1,5 +1,5 @@
 ---
-title: How to create a virtual machine using the Azure Stack portal| UKCloud Ltd
+title: How to Create a Virtual Machine Using the Azure Stack Portal| UKCloud Ltd
 description: Create a virtual machine in UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
