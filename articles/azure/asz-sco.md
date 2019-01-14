@@ -1,5 +1,5 @@
 ---
-title: UKCloud for Microsoft Azure service scope | UKCloud Ltd
+title: UKCloud for Microsoft Azure Service Scope | UKCloud Ltd
 description: Outlines important details regarding UKCloud for Microsoft Azure
 services: azure
 author: Andy Webb
