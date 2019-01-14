@@ -290,21 +290,21 @@ This section provides a glossary of terms specific to UKCloud for Microsoft Azur
 
 **Azure Active Directory**&nbsp;&nbsp;The service that provides identify management within UKCloud for Microsoft Azure.
 
-**cloud operator**&nbsp;&nbsp;An entity that provides services, via subscriptions, on Azure Stack. UKCloud is a cloud operator.
+**Cloud operator**&nbsp;&nbsp;An entity that provides services, via subscriptions, on Azure Stack. UKCloud is a cloud operator.
 
 **Microsoft Azure**&nbsp;&nbsp;Microsoft's public cloud service.
 
 **Microsoft Azure Stack**&nbsp;&nbsp;An extension of Azure that provides cloud computing to an on-premises environment.
 
-**resource**&nbsp;&nbsp;An object within Azure Stack, such as a virtual machine, network or storage.
+**Resource**&nbsp;&nbsp;An object within Azure Stack, such as a virtual machine, network or storage.
 
-**resource group**&nbsp;&nbsp;A collection of resources, services and applications.
+**Resource group**&nbsp;&nbsp;A collection of resources, services and applications.
 
-**subscription**&nbsp;&nbsp;A mechanism for organising resources and services for tenants to consume.
+**Subscription**&nbsp;&nbsp;A mechanism for organising resources and services for tenants to consume.
 
 **UKCloud for Microsoft Azure**&nbsp;&nbsp;A UKCloud IaaS and PaaS service that works as an extension of Microsoft's own Azure Public Cloud, delivered from our assured sovereign data centres.
 
-**tenant**&nbsp;&nbsp;An entity that consumes services from cloud operators in Azure Stack.
+**Tenant**&nbsp;&nbsp;An entity that consumes services from cloud operators in Azure Stack.
 
 ## Feedback
 
