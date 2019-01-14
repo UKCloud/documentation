@@ -26,7 +26,7 @@ Ensure your Powershell environment is setup as detailed in [*Configure PowerShel
 
 From your Powershell window run:
 
-```powershell
+```PowerShell
 Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
@@ -40,3 +40,7 @@ Get-AzureRmVmImagePublisher -Location frn00006 | `
 This will produce a table similar to the following:
 
 ![List Azure Stack VM Extensions Output](images/azs-list-vm-extensions.png)
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.

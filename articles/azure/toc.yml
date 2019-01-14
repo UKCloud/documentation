@@ -14,10 +14,12 @@
       href: azs-how-create-load-balancer.md
     - name: Create a Site-to-Site connection
       href: azs-how-create-S2S-VPN.md
-    - name: Create an Azure user group
-      href: azs-how-create-azure-group.md
     - name: Identify your Azure Global Admins
       href: azs-how-identify-global-admins.md
+    - name: Link Azure Storage Explorer to Azure Stack
+      href: azs-how-link-storage-explorer.md
+    - name: 'Manage Azure user groups and permissions '
+      href: azs-how-manage-azure-group.md
     - name: Resize an OS drive
       href: azs-how-resize-os-drive.md
     - name: Retrieve your subscription quotas

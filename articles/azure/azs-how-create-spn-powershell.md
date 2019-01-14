@@ -44,7 +44,7 @@ Prerequisites from a Windows-based external client are:
 
     - Azure AD PowerShell Module
 
-    ```powershell
+    ```PowerShell
     Install-Module AzureAD -Force -Verbose
     ```
 
@@ -91,7 +91,7 @@ Change the required variables as per your environment and run the following scri
 >
 > $AzureUsernameAdmin, $AzureUserPasswordAdmin, $AzsUsernameAdmin, $AzsUserPasswordAdmin
 
-```powershell
+```PowerShell
 # Declare Variables
 $AppName = "TestApp"
 $AppURL = "https://test.app"
@@ -268,7 +268,7 @@ Change the required variables as per your environment and run the following scri
 >
 > $AzsUsernameAdmin, $AzsUserPasswordAdmin
 
-```powershell
+```PowerShell
 # Declare Variables
 $AppName = "TestApp"
 $AppURL = "https://test.app"
@@ -368,3 +368,7 @@ $OutputObject = [PSCustomObject]@{
 
 $OutputObject
 ```
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.

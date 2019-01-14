@@ -48,7 +48,7 @@ To request a change for your firewall:
 
 ## More information
 
-For an overview of the future of PSN, including updates about PSN flattening, see our [*Future of PSN - what you really need to know!*](https://ukcloud.com/hub/news/the-future-of-psn/) blog post.
+For an overview of the future of PSN, including updates about PSN flattening, see our blog post, [*The new future of PSN*](https://ukcloud.com/hub/news/the-new-future-of-psn/).
 
 ## Feedback
 
