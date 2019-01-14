@@ -1,5 +1,5 @@
 ---
-title: How to create a virtual machine using Terraform | UKCloud Ltd
+title: How to Create a Virtual Machine Using Terraform | UKCloud Ltd
 description: Learn how to create a VM using Terraform on Azure Stack
 services: azure-stack
 author: Chris Black
