@@ -1,5 +1,5 @@
 ---
-title: How to manage Azure user groups and permissions | UKCloud Ltd
+title: How to Manage Azure User Groups and Permissions | UKCloud Ltd
 description: Describes how to apply the appropriate Azure Stack permissions to your UKCloud for Microsoft Azure users
 services: azure-stack
 author: Sue Highmoor
