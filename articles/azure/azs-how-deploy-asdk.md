@@ -1,5 +1,5 @@
 ---
-title: How to deploy and configure the Azure Stack Development Kit
+title: How to Deploy and Configure the Azure Stack Development Kit | UKCloud Ltd
 description: Deploy and configure the Azure Stack Development Kit
 services: azure-stack
 author: Paul Brown
