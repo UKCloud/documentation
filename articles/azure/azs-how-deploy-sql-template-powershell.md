@@ -1,5 +1,5 @@
 ---
-title: How to deploy an SQL template to Azure Stack - PowerShell
+title: How to Deploy an SQL Template to Azure Stack - PowerShell
 description: Learn how to deploy an SQL template to Azure Stack using PowerShell
 services: azure-stack
 author: Chris Black
