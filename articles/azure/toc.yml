@@ -14,11 +14,8 @@
       href: azs-how-create-load-balancer.md
     - name: Create a Site-to-Site connection
       href: azs-how-create-S2S-VPN.md
-<<<<<<< HEAD
     - name: Manage Azure user groups and permissions
       href: azs-how-manage-azure-group.md
-=======
->>>>>>> 17b2f90363cff5f09c7a864002a31d3cd43765f2
     - name: Identify your Azure Global Admins
       href: azs-how-identify-global-admins.md
     - name: Link Azure Storage Explorer to Azure Stack
