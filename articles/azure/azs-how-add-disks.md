@@ -94,7 +94,7 @@ In [*How to create a virtual machine using the Azure Stack portal*](azs-how-crea
 
 The following code demonstrates how to add multiple disks to a VM on startup.
 
-```powershell
+```PowerShell
 #Sets the disks properties
 $DataDiskVhd3 = "DataDisk1"
 $DataDisk3 = '{0}vhds/{1}-{2}.vhd' -f $StorageAccount.PrimaryEndpoints.Blob.ToString(), $VMName.ToLower(), $DataDiskVhd3
@@ -105,7 +105,7 @@ $VirtualMachine = Add-AzureRmVMDataDisk -VM $VirtualMachine -Name $DataDiskVhd1 
 
 A full example of this code in use would be:
 
-```powershell
+```PowerShell
 ## Initialise environment and variables
 
 # Add environment
@@ -216,7 +216,7 @@ Write-Host "Virtual machine created successfully"
 
 The following code adds a new disk to a VM that already exists. It retrieves the VM from the resource group, modifies it and then updates it on the stack.
 
-```powershell
+```PowerShell
 # Retrieves the VM
 $VirtualMachine = Get-AzureRmVM -ResourceGroupName "myResourceGroup" -Name "myVM"
 

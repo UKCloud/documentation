@@ -124,7 +124,7 @@ Please make sure the VMs you want to protect are running one of the following op
 
     3. Select all of the file and printer sharing rules and click **Next**.
 
-    4. Select the option labled **Allow the connection** and select **Finish.**
+    4. Select the option labled **Allow the connection** and select **Finish**.
 
     5. Find the firewall rules related to WMI (**Windows Management Instrumentation**) and enable them.
 
@@ -179,7 +179,7 @@ For every machine you want to replicate you will need to find and note down the 
 
 4. In **Location** choose a region.
 
-5. Click **OK** and the vault will be deployed
+5. Click **OK** and the vault will be deployed.
 
     ![Azure Stack recovery vault](images/azs-browser-recovery-vault.png)
 
@@ -313,7 +313,7 @@ In Public Azure, you'll need to select and verify the target resources.
 
 ### Adding admin account
 
-After the setup has complete if you navigate to the configuration servers desktop you will find a tool called **Cspconfigtool**, run this tool and navigate to the **Manage Accounts** tab, select **Add Account** and then fill out the details matching the admin accounts details on the VM you want to replicate. It may take a while for the configuration server to sync with Public Azure
+After the setup has complete if you navigate to the configuration servers desktop you will find a tool called **Cspconfigtool**, run this tool and navigate to the **Manage Accounts** tab, select **Add Account** and then fill out the details matching the admin accounts details on the VM you want to replicate. It may take a while for the configuration server to sync with Public Azure.
 
 ![Azure site recovery account manager](images/azs-siterecovery-account-manager.png)
 
