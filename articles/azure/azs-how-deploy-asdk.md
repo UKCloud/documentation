@@ -1,6 +1,6 @@
 ---
-title: How to Deploy and Configure the Azure Stack Development Kit | UKCloud Ltd
-description: Deploy and configure the Azure Stack Development Kit
+title: How to deploy and configure the Azure Stack Development Kit | UKCloud Ltd
+description: Deploy and configure the Azure Stack Development Kit (ASDK)
 services: azure-stack
 author: Paul Brown
 
@@ -13,8 +13,10 @@ toc_title: Deploy and configure the Azure Stack Development Kit
 toc_fullpath: Operators/How To/azs-how-deploy-asdk.md
 toc_mdlink: azs-how-deploy-asdk.md
 ---
+
 # How to deploy and configure the Azure Stack Development Kit
-The Azure Stack Development kit is a single server instance of Azure Stack. It is not fit for production workloads and has some subtle differences vs the real Azure Stack integrate appliance, however for most test scenarios it will suffice.
+
+The Azure Stack Development Kit (ASDK) is a single server instance of Azure Stack. It is not fit for production workloads and has some subtle differences vs the real Azure Stack integrate appliance, however for most test scenarios it will suffice.
 
 The ASDK is used in two modes within UKCloud:
 
@@ -24,6 +26,7 @@ The ASDK is used in two modes within UKCloud:
 This document covers two scenarios, building from scratch and redeploying.
 
 ## Step 1 - Hardware pre-reqs
+
 Detailed specs are here - https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-deploy
 
 |Device  |Details  |
@@ -43,6 +46,7 @@ Detailed specs are here - https://docs.microsoft.com/en-us/azure/azure-stack/azu
 **Physical Note:** The first two drives must be setup as a RAID 1, the rest passed through as a JBOD; additionally, you need to specify your VLAN as ACCESS in the CIMC
 
 ## Step 2 - Install base operating system
+
 Install Windows Server 2016 to the OS disk implementing a static IP address.
 
 **Physical Note:** This the RAID 1 disk, the following drivers must be downloaded, extracted and installed:
@@ -52,6 +56,7 @@ https://software.cisco.com/download/release.html?mdfid=286281356&softwareid=2832
 **Virtualisation Note:** VMware tools must be installed and the VMware Tools drivers must be exported onto the c:\ drive (VMwareKB), also disks have to be online and initialised as MBR
 
 ## Step 3 - Initial setup
+
 Download the appliance and prep the virtual disk (vhdx) for the ASDK.
 
 Implement the following steps from the guide: https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script
