@@ -1,5 +1,5 @@
 ---
-title: Configure the Azure Stack Operator's PowerShell Environment for UKCloud | Based on Microsoft Docs
+title: How to configure the Azure Stack operator's PowerShell environment for UKCloud | Based on Microsoft Docs
 description: Configure the Azure Stack operator's PowerShell environment
 services: azure-stack
 author: Chris Black
