@@ -14,7 +14,7 @@ toc_fullpath: Operators/How To/azs-how-configure-powershell-operators.md
 toc_mdlink: azs-how-configure-powershell-operators.md
 ---
 
-# Configure the Azure Stack operator's PowerShell environment
+# How to configure the Azure Stack operator's PowerShell environment
 
 As an Azure Stack operator, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates,  etc. This topic is scoped to use with the operator environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:
 
