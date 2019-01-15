@@ -6,11 +6,11 @@ author: Chris Black
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Service Principal Name
+toc_sub2: Create a Service Principal Name
 toc_sub3:
 toc_sub4:
 toc_title: Create a service principal name - CLI
-toc_fullpath: Users/How To/azs-how-create-spn-cli.md
+toc_fullpath: Users/How To/Create a Service Principal Name/azs-how-create-spn-cli.md
 toc_mdlink: azs-how-create-spn-cli.md
 ---
 
