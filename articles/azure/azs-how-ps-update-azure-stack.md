@@ -1,5 +1,5 @@
 ---
-title: How to Perform an Azure Stack Update | UKCloud Ltd
+title: How to perform an Azure Stack Update | UKCloud Ltd
 description: Azure Stack update procedure guide for support
 services: azure-stack
 author: Chris Black
@@ -10,7 +10,7 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Perfom an Azure Stack update
-toc_fullpath: Operators/Update Azure Stack/azs-how-ps-update-azure-stack.md
+toc_fullpath: Operators/How To/azs-how-ps-update-azure-stack.md
 toc_mdlink: azs-how-ps-update-azure-stack.md
 ---
 # How to perfom an Azure Stack update
