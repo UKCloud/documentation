@@ -1,42 +1,42 @@
 ---
-title: How to Obtain Your Client ID via the API for Azure Stack - REST API | UKCloud Ltd
+title: How to obtain your Azure Stack Client ID using the REST API | UKCloud Ltd
 description: How to obtain your Client ID via the REST API for Azure Stack
 services: azure-stack
 author: Paul Brown
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Client ID via API
+toc_sub2: 
 toc_sub3:
 toc_sub4:
-toc_title: Obtain Client ID via API for Azure Stack - REST API
+toc_title: Obtain Azure Stack Client ID - REST API
 toc_fullpath: Users/How To/azs-how-to-obtain-clientid-via-api.md
 toc_mdlink: azs-how-to-obtain-clientid-via-api.md
 ---
 
-# How to obtain Client ID via the REST API for Azure Stack
+# How to obtain your Azure Stack Client ID using the REST API
 
 ## Overview
 
-The client ID for your application can be found if you know the Application Name and this name will be used for the query to obtain its ID. As with every other API query in Azure we will need to authenticate first.
+The Client ID for your application can be found if you know the application name and this name will be used for the query to obtain its ID. As with every other API query in Azure we will need to authenticate first.
 
-In order to authenticate with any API Endpoints you will need to obtain and Access Token. To get the Client ID we will have to authenticate with graphEndpoint as our resource.
+In order to authenticate with any API endpoints you will need to obtain an access token. To get the Client ID we will have to authenticate with graphEndpoint as our resource.
 
-## Management Endpoints
+## Management endpoints
 
 Management Endpoint for Administrators is <https://adminportal.frn00006.azure.ukcloud.com>
 
-## Obtain additional Endpoints
+## Obtain additional endpoints
 
 Query <https://adminportal.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2015-01-01>
 
 ## Authentication
 
-### Obtain Access Token
+### Obtain access token
 
-In order to obtain Access Token you will need to create a request body and use Rest API POST against Authentication/Login Endpoint.
+In order to obtain an access token you will need to create a request body and use Rest API POST against Authentication/Login Endpoint.
 
-### Request Body Fields
+### Request Body fields
 
 |Name  |Description  |
 |---------|---------|
@@ -47,7 +47,7 @@ In order to obtain Access Token you will need to create a request body and use R
 |password     |   The password of the Azure AD user account      |
 |scope     |   optional, such as openid to get Id Token      |
 
-### Request Authentication Endpoint
+### Request Authentication endpoint
 
 The Authentication/Login Endpoint can be https:/\/login.microsoftonline.com/{tenant id}/oauth2/token or https:/\/login.windows.net/{tenant id}/oauth2/token
 
@@ -56,7 +56,7 @@ The Authentication/Login Endpoint can be https:/\/login.microsoftonline.com/{ten
 >
 > The allowed values are tenant identifiers, for example,  8eaef023-2b34-4da1-9baa-8bc8c9d6a490  or  contoso.onmicrosoft.com  or  common  for tenant-independent tokens.
 
-### How to obtain Access Token Request Body and Authentication Information
+### How to obtain access token Request Body and Authentication Information
 
 1. Grant_type
 
@@ -154,7 +154,7 @@ iIsInN1YiI6ImFSeHhiX01YYU5NOG1KS2p3VzlzWnNvV0xkZnF5bF9jYmJVcEc4aWNHX28iLCJ0aWQiO
 3NvZnQuY29tIiwidXBuIjoiYWRtaW5AY2hhcmxpZWpsbGV3ZWxseW5nbWFpbC5vbm1pY3Jvc29mdC5jb20iLCJ2ZXIiOiIxLjAifQ.
 }
 ```
-## API Queries
+## API queries
 
 1. Append Token
 
