@@ -19,7 +19,7 @@ toc_mdlink: azs-how-create-service-principals.md
 
 In Azure Stack you are able to grant an external application access to Azure Stack resources by creating a service principal that uses Azure Resource Manager. A service principal lets you delegate specific permissions using **role-based access control**. Service principals are preferable to running an application using your own credentials for the following reasons:
 
-- You are able to assign specific permissions to the service principal that are different than your own account permissions. Typically, a service principal's permissions are restricted to exactly what the app needs to do which reduces the security risks involved with using external applications
+- You are able to assign specific permissions to the service principal that are different than your own account permissions. Typically, a service principal's permissions are restricted to exactly what the app needs to do which reduces the security risks involved with using external applications.
 
 - You do not have to change the application's credentials if your role or responsibilities change.
 
