@@ -1,6 +1,6 @@
 ---
-title: How to Create a Service Principal Name for Azure Stack - CLI | UKCloud Ltd
-description: Learn how to create SPN to manage your Azure Stack using Azure CLI
+title: How to Create a service principal name for Azure Stack - CLI | UKCloud Ltd
+description: Learn how to create service principal name (SPN) to manage your Azure Stack using Azure CLI
 services: azure-stack
 author: Chris Black
 
@@ -9,28 +9,28 @@ toc_sub1: How To
 toc_sub2: Service Principal Name
 toc_sub3:
 toc_sub4:
-toc_title: Create a Service Principal Name for Azure Stack - CLI
+toc_title: Create a service principal name - CLI
 toc_fullpath: Users/How To/azs-how-create-spn-cli.md
 toc_mdlink: azs-how-create-spn-cli.md
 ---
 
-# How to create a Service Principal Name for Azure Stack using Azure CLI
+# How to create a service principal name for Azure Stack using Azure CLI
 
-This document explains how to create a Service Principal Name to manage Azure and Azure Stack using Azure CLI.
+This document explains how to create a service principal name to manage Azure and Azure Stack using Azure CLI.
 
 It will guide you through the creation of:
 
 - an Azure application
 
-- a Service Principal Name
+- a service principal name
 
 - role assignment
 
 - permissions
 
-## What is a Service Principal Name?
+## What is a service principal name?
 
-An Azure Service Principal Name (SPN) is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.
+An Azure service principal name (SPN) is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.
 
 To log in and manage your resources via SPN you'll need to create an Azure application and then assign SPN to it. Only then will you be able to perform tasks against your environment.
 
@@ -74,10 +74,10 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 3. Log in to your Azure Stack *Subscription* with administrator user credentials (needs to have **Owner** role).
 
-4. Create Azure Application, Service Principal Name, and Assign **Role**
+4. Create Azure application, SPN, and assign **Role**
 
     > [!NOTE]
-    > Unlike with PowerShell - Azure CLI creates an Azure Application, creates Service Principal Name (SPN) and assigns **Roles** to Service Principal Name (SPN) in one command.
+    > Unlike with PowerShell - Azure CLI creates an Azure application, creates SPN and assigns **Roles** to SPN in one command.
 
 5. Log in to your Azure Stack *Subscription* using the SPN account.
 
@@ -85,7 +85,7 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 7. Remove the resource group you just created from Azure Stack.
 
-## Create Service Principal Name (SPN) for Azure Stack with **Set Password**
+## Create service principal name for Azure Stack with **Set Password**
 
 ```azurecli-interactive
 # Create your environment
@@ -127,7 +127,7 @@ az group delete --name rg01 -y
 ```
 
 > [!NOTE]
-> Arguments for Service Principal Login can be derived from the output of its creation:
+> Arguments for service principal login can be derived from the output of its creation:
 >
 > CLIENT_ID=appId
 >
@@ -151,7 +151,7 @@ az group delete --name rg01 -y
 > This is yet another difference between PowerShell creation as there is no auto-generation of passwords built-in
 
 > [!IMPORTANT]
-> Given the fact that Azure CLI under Profile 2017-03-09 does **NOT** allow you to lsit your Service Principal Name unlike the [latest profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-list) vs [206-03-09 profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2017-03-09-profile#az-ad-sp-list), its use for Azure Stack is highly limited.
+> Given the fact that Azure CLI under Profile 2017-03-09 does **NOT** allow you to lsit your service principal name unlike the [latest profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-list) vs [206-03-09 profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2017-03-09-profile#az-ad-sp-list), its use for Azure Stack is highly limited.
 >
 > As a rule of thumb use PowerShell wherever possible.
 
