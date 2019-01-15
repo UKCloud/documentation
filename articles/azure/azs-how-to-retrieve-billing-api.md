@@ -50,7 +50,7 @@ The tenant ID can either be:
 
 ### PowerShell Example:
 
-```powershell
+```PowerShell
 $url  = "https://login.windows.net/common/oauth2/token"
 $body = "grant_type=password&"
 $body = $body + "client_id=$clientid&"
@@ -90,7 +90,7 @@ grant_type=jwt_token
 
 ### PowerShell Example:
 
-```powershell
+```PowerShell
 $url  = "https://api.partnercenter.microsoft.com/generatetoken"
 $body = "grant_type=jwt_token"
 $headers=@{Authorization="Bearer $aadtoken"} 
@@ -123,7 +123,7 @@ URL Endpoints will be determined from the CSP API guide:
 
 ### PowerShell Example:
 
-```powershell
+```PowerShell
 $CSPQuery = Invoke-WebRequest -uri "https://api.partnercenter.microsoft.com/v1/invoices/<"Insert Invoice Name">/documents/statement" -UseBasicParsing -Headers $headerstest -OutFile c:\temp\test1.pdf
 $CSPQuery
 ```
@@ -141,7 +141,7 @@ curl -X "GET" "https://api.partnercenter.microsoft.com/v1/invoices/<"Insert Invo
 
 ### PowerShell
 
-```powershell
+```PowerShell
 #########################################
 
 # Variables
