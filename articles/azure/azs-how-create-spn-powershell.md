@@ -10,7 +10,7 @@ toc_sub2: Create a Service Principal Name
 toc_sub3:
 toc_sub4:
 toc_title: Create a service principal name - PowerShell
-toc_fullpath: Users/How To/azs-how-create-spn-powershell.md
+toc_fullpath: Users/How To/Create a Service Principal Name/azs-how-create-spn-powershell.md
 toc_mdlink: azs-how-create-spn-powershell.md
 ---
 
