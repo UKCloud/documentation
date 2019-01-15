@@ -1,5 +1,5 @@
 ---
-title: How to Resize an OS Drive Using PowerShell | UKCloud Ltd
+title: How to resize an OS drive using PowerShell | UKCloud Ltd
 description: Provides help for resizing an OS drive on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
