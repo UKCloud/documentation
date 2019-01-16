@@ -16,7 +16,7 @@ toc_mdlink: azs-how-configure-powershell-users.md
 
 # Configure the Azure Stack user's PowerShell environment
 
-As an Azure Stack user, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates,  etc. This topic is scoped to use with the user environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:
+As an Azure Stack user, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates, etc. This topic is scoped to use with the user environments only. In order to interact with Azure Stack PowerShell, you will need to set up your environment. To do so follow the below guide:
 
 ## Prerequisites
 
@@ -25,11 +25,9 @@ Prerequisites from a Windows-based external client.
 - PowerShell 5.1
 
     > [!NOTE]
-    > To check your version, run $PSVersionTable.PSVersion and compare the "Major" version.
+    > To check your version, run `$PSVersionTable.PSVersion` and compare the "Major" version.
     >
-    > For "legacy" Operating Systems like Windows Server 2008 R2 and Windows 7, or Windows Server 2012 R2, Windows Server 2012, and Windows 8.1
-    >
-    > Download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
+    > For "legacy" Operating Systems like Windows Server 2008 R2 and Windows 7, or Windows Server 2012 R2, Windows Server 2012, and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
 
 ### Install Azure Stack PowerShell
 
