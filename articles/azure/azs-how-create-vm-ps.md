@@ -209,10 +209,10 @@ From your PowerShell window:
 <pre><code class="language-PowerShell">## Initialise environment and variables
 
 # Add environment
-Add-AzureRmEnvironment -Name "AzureStack" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Login
-Login-AzureRmAccount -EnvironmentName "AzureStack"
+Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Input Variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">myResourceGroup</output>"
