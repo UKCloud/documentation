@@ -25,11 +25,9 @@ Prerequisites from a Windows-based external client.
 - PowerShell 5.1
 
     > [!NOTE]
-    > To check your version, run $PSVersionTable.PSVersion and compare the "Major" version.
+    > To check your version, run `$PSVersionTable.PSVersion` and compare the "Major" version.
     >
-    > For "legacy" Operating Systems like Windows Server 2008 R2 and Windows 7, or Windows Server 2012 R2, Windows Server 2012, and Windows 8.1
-    >
-    > Download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
+    > For "legacy" Operating Systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
 
 ### Install Azure Stack PowerShell
 
@@ -59,7 +57,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
   Set-ExecutionPolicy RemoteSigned
 
   # Register an AzureRM environment that targets your Azure Stack instance
-  Add-AzureRMEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://adminmanagement.frn00006.azure.ukcloud.com"
+  Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://adminmanagement.frn00006.azure.ukcloud.com"
 
   # Sign in to your environment
   Login-AzureRmAccount -EnvironmentName "AzureStackAdmin"
@@ -72,13 +70,13 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
   Set-ExecutionPolicy RemoteSigned
 
   # Register an AzureRM environment that targets your Azure Stack instance
-  Add-AzureRMEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://adminmanagement.frn00006.azure.ukcloud.com"
+  Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://adminmanagement.frn00006.azure.ukcloud.com"
 
   # Create your Credentials
   $AzsUsername =  "<username>@<myDirectoryTenantName>.onmicrosoft.com"
   $AzsPassword = '<your password>'
     $AzsUserPassword = ConvertTo-SecureString "$AzsPassword" -AsPlainText -Force
-    $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
+    $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
   # Sign in to your environment
   Login-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackAdmin"
