@@ -55,8 +55,8 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.f
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group name and VM name
-$RGName = '<output form="ResourceGroup" name="result" style="display: inline;">myResourceGroup</output>'
-$VMName = '<output form="VMName" name="result" style="display: inline;">myVM</output>'
+$RGName = "<output form="ResourceGroup" name="result" style="display: inline;">myResourceGroup</output>"
+$VMName = "<output form="VMName" name="result" style="display: inline;">myVM</output>"
 
 # Obtain a reference to your VM
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
@@ -82,8 +82,8 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.f
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group name and VM name
-$RGName = '<output form="ResourceGroup" name="result2" style="display: inline;">myResourceGroup</output>'
-$VMName = '<output form="VMName" name="result2" style="display: inline;">myVM</output>'
+$RGName = "<output form="ResourceGroup" name="result2" style="display: inline;">myResourceGroup</output>"
+$VMName = "<output form="VMName" name="result2" style="display: inline;">myVM</output>"
 
 # Obtain a reference to your VM
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
