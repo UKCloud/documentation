@@ -182,13 +182,13 @@ $AzsUserPassword = $AppPassword
 Login-AzureRmAccount -Credential $AzsCred -ServicePrincipal -TenantId $SubId.TenantId
 
 # Test your SPN account by creating a new Resource Group in Public Azure
-New-AzureRMResourceGroup -Name $ResourceGroupAzurePublic -Location $RegionPublicAzure
+New-AzureRmResourceGroup -Name $ResourceGroupAzurePublic -Location $RegionPublicAzure
 
 ## Remove test Resource Group
 Remove-AzureRmResourceGroup -Name $ResourceGroupAzurePublic -Force
 
 # Create Azure Stack Environment so that you can log in to it
-Add-AzureRMEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Admin (Subscription Owner) Credentials
 # Note: This account CAN but does not have to be, the same as your Public Azure Account
@@ -353,7 +353,6 @@ $SubscriptionId = $SubId.SubscriptionId
 $ClientId = $AppGet.ApplicationId.Guid + "@" + $TenantDomain
 $ClientSecret = $AppPassword
 $TenantId = $SubId.TenantId
-
 
 $OutputObject = [PSCustomObject]@{
   arm_endpoint = $ArmEndpoint
