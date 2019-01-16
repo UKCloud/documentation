@@ -31,10 +31,10 @@ From your PowerShell window:
 
 ```PowerShell
 # Add environment
-Add-AzureRmEnvironment -Name 'AzureStack' -ArmEndpoint 'https://management.frn00006.azure.ukcloud.com'
+Add-AzureRmEnvironment -Name "AzureStack" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Login
-Login-AzureRmAccount -EnvironmentName 'AzureStack'
+Login-AzureRmAccount -EnvironmentName "AzureStack"
 
 # Retrieve Compute quota
 $ComputeQuota = Get-AzureRmVMUsage -Location "frn00006" | Select-Object Name, CurrentValue, Limit
