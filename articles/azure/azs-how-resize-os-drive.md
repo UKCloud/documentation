@@ -51,7 +51,7 @@ Please select the type of disk you are trying to expand:
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
-Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group name and VM name
@@ -78,7 +78,7 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
-Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group name and VM name
