@@ -50,7 +50,8 @@ $ComputeQuota | ForEach-Object {
 $StorageQuota = Get-AzureRmStorageUsage | Select-Object Name, CurrentValue, Limit
 
 # Retrieve Network quota
-$NetworkQuota = Get-AzureRmNetworkUsage -Location "frn00006" | Select-Object @{label="Name";expression={$_.ResourceType}}, CurrentValue, Limit
+$NetworkQuota = Get-AzureRmNetworkUsage -Location "frn00006" | Select-Object @{label="Name";expression={$_.ResourceType}}, `
+    CurrentValue, Limit
 
 # Combine quotas
 $AllQuotas = $ComputeQuota + $StorageQuota + $NetworkQuota
