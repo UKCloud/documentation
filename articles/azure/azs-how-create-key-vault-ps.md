@@ -45,10 +45,10 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Add environment
-Add-AzureRmEnvironment -Name "AzureStack" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Login
-Login-AzureRmAccount -EnvironmentName "AzureStack"
+Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Select Resource Group
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>"
