@@ -59,7 +59,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
   Set-ExecutionPolicy RemoteSigned
 
   # Register an AzureRM environment that targets your Azure Stack instance
-  Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+  Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
   # Sign in to your environment
   Login-AzureRmAccount -EnvironmentName "AzureStackUser"
@@ -72,7 +72,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
   Set-ExecutionPolicy RemoteSigned
 
   # Register an AzureRM environment that targets your Azure Stack instance
-  Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+  Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
   # Create your Credentials
   $AzsUsername =  "<username>@<myDirectoryTenantName>.onmicrosoft.com"
