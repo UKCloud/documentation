@@ -46,7 +46,7 @@ Unmanaged disks require that you create a storage account to store the disks. Th
 
     - **Size**: This is where you specify the size of the new disk.
 
-    - **Storage container**: This is where you specify the storage container for the disk. Find the storage account where your VMs OS disk is located and then create a new a new storage container and then select this.
+    - **Storage container**: This is where you specify the storage container for the disk. Find the storage account where your VM's OS disk is located, create a new storage container then select the new container.
 
     - **Storage blob name**: This is the blob where the disk will be stored.
 
@@ -56,7 +56,7 @@ Unmanaged disks require that you create a storage account to store the disks. Th
 
 ## Adding a disk to an existing VM using the portal
 
-1. Ensure the existing disk you want to add to your VM is on your local machine as a .vhd file. Upload this .vhd to a new container in your VMs storage account.
+1. Ensure the existing disk you want to add to your VM is on your local machine as a .vhd file. Upload this .vhd to a new container in your VM's storage account.
 
 2. After the .vhd file is uploaded, you're ready to attach the VHD to a VM. In the menu on the left, select **Virtual machines**.
 
@@ -74,7 +74,7 @@ Unmanaged disks require that you create a storage account to store the disks. Th
 
 ## Adding a disk to a VM that is already attached to another VM on Azure Stack
 
-1. Ensure the disk is has been detached from its original VM.
+1. Ensure the disk has been detached from its original VM.
 
 2. In the menu on the left, select **Virtual machines**.
 
@@ -236,7 +236,7 @@ Update-AzureRmVM -ResourceGroupName "myResourceGroup" -VM $VirtualMachine
 
 ## Next Steps
 
-This article has shown you how to add disks to VM, which you'll find useful when setting up disaster recovery for your VMs. For more information, see:
+This article has shown you how to add disks to a VM, which you'll find useful when setting up disaster recovery for your VMs. For more information, see:
 
 - [How to setup disaster recovery for Azure Stack VMs to Azure](azs-how-setup-recovery-portal.md)
 
