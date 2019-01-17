@@ -1,6 +1,6 @@
 ---
-title: How to create a availability set | UKCloud Ltd
-description: Creating a availability set in UKCloud for Microsoft Azure
+title: How to create an availability set | UKCloud Ltd
+description: Creating an availability set in UKCloud for Microsoft Azure
 services: azure-stack
 author: David Woffendin
 toc_rootlink: Users
@@ -8,20 +8,18 @@ toc_sub1: How To
 toc_sub2: 
 toc_sub3:
 toc_sub4:
-toc_title: Create a availability set
+toc_title: Create an availability set set
 toc_fullpath: Users/How To/azs-how-create-availability-set.md
 toc_mdlink: azs-how-create-availability-set.md
 ---
 
 # Overview
 
-This guide will cover how to increase the availability and reliability of your virtual machines on Azure Stack using **availability sets**. availability sets ensure that VMs you deploy on Azure Stack are evenly distributed across multiple physical nodes in a cluster. Doing this ensure that, if a hardware or software failure happens within Azure Stack, only a subset of your VMs are impacted and your overall solution remains available and operational.
+This article shows you how to increase the availability and reliability of your Azure Stack applications using availability sets.
 
-## Availability sets
+An availability set groups virtual machines (VMs) together so that Azure Stack can control where they are deployed to ensure availability. VMs in the same availability group are deployed across multiple physical nodes within a cluster so that, in the event of a hardware or software failure, only a subset of those VMs are affected and your application can continue to run. If you're building critical applications that must remain available, using availability sets is an important part of ensuring that availability.
 
-An availability set is a grouping capability for VMs that you can use in Azure Stack to ensure that the VM resources you place within it are isolated from each other when deployed. Azure Stack ensures that the VMs you place within an availability set run across multiple physical nodes. If a hardware or software failure occurs, only a subset of your VMs are impacted, and your overall application stays up and continues to be available to your customers. Availability sets are an essential capability when you want to build reliable cloud solutions that are protected against the unexpected.
-
-An example of where availability sets would be used is a typical website where you might have four front-end web servers and 2 back-end VMs hosting databases. With Azure Stack, you’d want to define two availability sets before you deploy your VMs: one availability set for the web hosting VMs and one availability set for the database VMs. When you create a new VM you can then specify the availability set as a parameter and Azure Stack automatically ensures that the VMs you create within the available set are isolated across multiple physical nodes. If the physical hardware that one of your Web Server or back-end VMs is running on has a problem, you know that the other instances of your Web Server and back-end VMs remain running because they are on different nodes.
+For example, if your application has four web server VMs, you can put these in an availability set to ensure that they are deployed across different nodes. If the hardware that one of your web servers is running on experiences a failure, because the other instances are deployed in different nodes, they will remain running and serving your application. You could create a separate availability set for any database-hosting VMs to similarly protect the back end of your application.
 
 ## Creating an availability set via the portal
 
