@@ -24,7 +24,7 @@ These steps will work for both unmanaged and managed VMs.
 
 1. Power down or detach the disk from the VM.
 
-    ![Detaching disks from vm](images/azs-browser-detach-disk.png)
+    ![Detaching disks from VM](images/azs-browser-detach-disk.png)
   
 2. Navigate to the resource group.
 
@@ -33,15 +33,15 @@ These steps will work for both unmanaged and managed VMs.
 4. In the **Size** field, enter the new size for the disk.
 
     ![Changing disk size](images/azs-browser-change-disk.png)
+    
+    > [!NOTE]
+    > The maximum size for a single disk is 4TB.
   
 5. Save your changes.
 
 6. Power back on the VM or reattach the disk.
 
     ![Attaching VM disks](images/azs-browser-attach-disk.png)
-
-> [!NOTE]
-> The maximum size for a single disk is 4TB.
 
 ## Feedback
 
