@@ -8,7 +8,7 @@ toc_sub1: How To
 toc_sub2: 
 toc_sub3:
 toc_sub4:
-toc_title: Create an availability set set
+toc_title: Create an availability set
 toc_fullpath: Users/How To/azs-how-create-availability-set.md
 toc_mdlink: azs-how-create-availability-set.md
 ---
