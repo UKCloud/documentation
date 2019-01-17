@@ -81,7 +81,7 @@ When setting up the configuration server VM, it will need the following requirem
 
     3. Select all of the file and printer sharing rules and click **Next**.
 
-    4. Select the option labled **Allow the connection** and select **Finish.**
+    4. Select the option labelled **Allow the connection** and select **Finish.**
 
     5. Find the firewall rules related to WMI (**Windows Management Instrumentation**) and enable them.
 
@@ -199,7 +199,7 @@ For every machine you want to replicate you will need to find and note down the 
 
     ![Azure Stack recovery vault configuration](images/azs-browser-recovery-vault-configuration.png)
 
-7. In the *Deployment Planning* blade select the **Yes, I have done it option**.
+7. In the *Deployment Planning* blade, select **Yes, I have done it**.
 
 ## Step 4. Setting up the source environment
 
@@ -299,7 +299,7 @@ In Public Azure, you'll need to select and verify the target resources.
 
     * This setting does not affect replication, which is continuous. It simply issues an alert if the threshold limit is reached without a recovery point being created.
 
-4. In **Recovery point retention**, Specify how long each recovery point is kept. You can recover replicated VMs to any point in the specified time window.
+4. In **Recovery point retention**, specify how long each recovery point is kept. You can recover replicated VMs to any point in the specified time window.
 
 5. In **App-consistent snapshot frequency**, specify how often application-consistent snapshots are created.
 
@@ -435,11 +435,11 @@ When you run a test failover, the following happens:
 
     5. Configure **IP address**, create a new IP and select **OK**.
 
-    6. click save to create the public IP for the VM.
+    6. Click **Save** to create the public IP for the VM.
 
 8. To delete Azure VMs created during the test failover, select **Cleanup test failover** on the VM. In Notes, save any observations associated with the test failover.
 
-## Failing over and Failing back
+## Failing over and failing back
 
 ### Failing over to Public Azure
 
@@ -470,11 +470,11 @@ When your primary site is up and running again, you can fail back from Azure to 
 
 2. Navigate to your disks on the VM.
 
-3. Select a **Disk**
+3. Select a **Disk**.
 
-4. Navigate to **Disk Export**
+4. Navigate to **Disk Export**.
 
-5. Select **Export** > **Download VHD**
+5. Select **Export**, then **Download VHD**.
 
 6. Upload the VHD to Azure Stack by following the steps in [How to add disks to Azure Stack](azs-how-add-disks.md).
 
