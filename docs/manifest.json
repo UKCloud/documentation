@@ -13096,7 +13096,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "HAHhQQZkkDLOF9QMJW8INw=="
+          "hash": "/ROgLSKg6AIrfvpV0YJhSQ=="
         }
       },
       "is_incremental": false,
@@ -13720,7 +13720,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-setup-kms.html",
-          "hash": "Drr1OgWz4UhJkBNGz7IL6Q=="
+          "hash": "AZ+W2pv0VnNM3xL58O1iHw=="
         }
       },
       "is_incremental": false,
@@ -14388,6 +14388,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-vid-licensing-kms.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-vid-licensing-kms.html",
+          "hash": "I5eKBlC+rjjfRATSvFsVug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-vid-vcd91.md",
       "output": {
         ".html": {
@@ -14453,18 +14465,18 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
