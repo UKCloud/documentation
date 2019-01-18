@@ -117,7 +117,7 @@ Storage is persistent unless it is virtual machine temporary storage.
 
 Access to the UKCloud for Microsoft Azure portal is available via the UKCloud Portal. You'll be provided with login details once your account is provisioned.
 
-### What ports do I need open to access my UKCloud for Microsoft Azure solution?
+### Which ports need to be open to access my UKCloud for Microsoft Azure solution?
 
 The UKCloud for Microsoft Azure portal requires port 80 (HTTP) and port 443 (HTTPS) to be open.
 
