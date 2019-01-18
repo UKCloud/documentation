@@ -403,7 +403,7 @@ In this Getting Started Guide, you've learned the basics about the Cloud Storage
 
 ## Related videos
 
-- [CIFS-ECS overview video](https://vimeo.com/300264583)
+- [*CIFS-ECS overview video*](cs-vid-cifs-ecs-overview.md)
 
 ## Glossary
 

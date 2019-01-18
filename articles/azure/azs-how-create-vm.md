@@ -98,6 +98,10 @@ For more information about UKCloud for Microsoft Azure, see:
 
 - [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
 
+## Related videos
+
+- [*Microsoft Azure Stack Portal overview video*](azs-vid-overview.md)
+
 ## Feedback
 
 If you have any comments on this article, or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.

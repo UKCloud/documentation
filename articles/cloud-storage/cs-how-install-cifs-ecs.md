@@ -141,7 +141,7 @@ This guide has shown you how to create a new Cloud Storage user. For more inform
 
 ## Related videos
 
-- [CIFS-ECS overview video](https://vimeo.com/300264583)
+- [*CIFS-ECS overview video*](cs-vid-cifs-ecs-overview.md)
 
 ## Feedback
 

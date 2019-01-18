@@ -190,7 +190,7 @@ Security groups enable you to categorise based on the access level required. If 
 
 ## Related videos
 
-- [VMware Distributed Firewall video](https://vimeo.com/307686299)
+- [*VMware Distributed Firewall video*](vmw-vid-dfw.md)
 
 ## Feedback
 

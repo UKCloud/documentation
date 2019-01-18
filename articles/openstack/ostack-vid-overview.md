@@ -20,6 +20,12 @@ The following video provides an overview of the OpenStack Horizon dashboard, whi
 
 <iframe src="https://player.vimeo.com/video/305934797?color=34d9c3" width="864" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
+[OpenStack Horizon Dashboard Overview](https://vimeo.com/305934797) on [Vimeo](https://vimeo.com/ukcloud)
+
+## Related articles
+
+- [*Getting Started Guide for UKCloud for OpenStack*](ostack-gs.md)
+
 ## Feedback
 
 If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

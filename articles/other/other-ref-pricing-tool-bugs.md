@@ -1,6 +1,6 @@
 ---
-title: Known bugs with the UKCloud Pricing Estimator Tool | UKCloud Ltd
-description: Known bugs with the UKCloud Pricing Estimator Tool
+title: Known bugs with the UKCloud Pricing Estimation Tool | UKCloud Ltd
+description: Known bugs with the UKCloud Pricing Estimation Tool
 services: other
 author: Dan Baker
 
@@ -9,14 +9,14 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Known bugs with the UKCloud Pricing Estimator Tool
+toc_title: Known bugs with the UKCloud Pricing Estimation Tool
 toc_fullpath: Reference/other-ref-pricing-tool-bugs.md
 toc_mdlink: other-ref-pricing-tool-bugs.md
 ---
 
-# Known bugs in the Pricing Estimator Tool
+# Known bugs in the Pricing Estimation Tool
 
-This is an accompanying article to the [Pricing Estimator Tool guide](other-how-use-pricing-tool.md). We'll update this article to document new bugs and issues as they are discovered and to remove resolved bugs and issues when we update the tool.
+This is an accompanying article to [*How to use the UKCloud Pricing Estimation Tool*](other-how-use-pricing-tool.md). We'll update this article to document new bugs and issues as they are discovered and to remove resolved bugs and issues when we update the tool.
 
 ## Current version
 
@@ -60,7 +60,7 @@ The following are known issues with the Mac version of the Pricing Estimation To
 
 ## Related videos
 
-- [UKCloud Pricing Estimator](https://vimeo.com/300701961)
+- [*UKCloud Pricing Estimation Tool overview video*](other-vid-pricing-tool-overview.md)
 
 ## Feedback
 

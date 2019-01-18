@@ -1,6 +1,6 @@
 ---
-title: How to use the UKCloud Pricing Estimator Tool | UKCloud Ltd
-description: Describes how to use the UKCloud Pricing Estimator Tool
+title: How to use the UKCloud Pricing Estimation Tool | UKCloud Ltd
+description: Describes how to use the UKCloud Pricing Estimation Tool
 services: other
 author: Dan Baker
 
@@ -9,22 +9,22 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Use the UKCloud Pricing Estimator Tool
+toc_title: Use the UKCloud Pricing Estimation Tool
 toc_fullpath: How To/other-how-use-pricing-tool.md
 toc_mdlink: other-how-use-pricing-tool.md
 ---
 
-# How to use the UKCloud Pricing Estimator Tool
+# How to use the UKCloud Pricing Estimation Tool
 
 ## Overview
 
 The UKCloud Pricing Estimation Tool has been created to assist in the cost estimation of our core G-Cloud 10 services. Refer to the G-Cloud 10 Pricing Guide for information regarding service options, pricing options, any required set up fees and product rules. To achieve the most accurate estimate please consult with one of our Cloud Architects.
 
 > [!IMPORTANT]
-> You should always ensure that you're using the latest version of the pricing estimation tool by checking on the [UKCloud website](https://ukcloud.com/price-estimator-tool/). Also, note that this tool provides an estimate based on the selections you make. Your actual consumption of the service may be different, resulting in higher or lower actual costs.
+> You should always ensure that you're using the latest version of the Pricing Estimation Tool by checking on the [UKCloud website](https://ukcloud.com/price-estimator-tool/). Also, note that this tool provides an estimate based on the selections you make. Your actual consumption of the service may be different, resulting in higher or lower actual costs.
 
 > [!NOTE]
-> There are some known bugs in the latest versions of the tool. For more information see [Known bugs with the UKCloud Pricing Estimator Tool](other-ref-pricing-tool-bugs.md)
+> There are some known bugs in the latest versions of the tool. For more information see [Known bugs with the UKCloud Pricing Estimation Tool](other-ref-pricing-tool-bugs.md)
 
 ## Installing the tool
 
@@ -111,7 +111,7 @@ Both the Mac and Windows versions of the tool operate the same way. This guide s
 
 ## Related videos
 
-- [UKCloud Pricing Estimator](https://vimeo.com/300701961)
+- [*UKCloud Pricing Estimation Tool overview video*](other-vid-pricing-tool-overview.md)
 
 ## Feedback
 
