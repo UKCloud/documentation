@@ -114,6 +114,10 @@ To allow this communication, you need to create a source network address transla
 
     ![Product successfully activated](images/vmw-windows-kms-activate-success.png)
 
+## Related videos
+
+- [*Licensing Windows VMs using the UKCloud Key Management Server video*](vmw-vid-licensing-kms.md)
+
 ## Feedback
 
 If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
