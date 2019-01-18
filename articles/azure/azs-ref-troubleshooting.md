@@ -19,14 +19,6 @@ toc_mdlink: azs-ref-troubleshooting.md
 
 This guide describes some of the issues you may encounter when using UKCloud for Microsoft Azure:
 
-- [Login results in server error](#login-results-in-server-error)
-
-- [Azure Stack portal does not show any resources](#azure-stack-portal-does-not-show-any-resources)
-
-- [Diagnostics do not work for Linux VMs](#diagnostics-do-not-work-for-linux-vms)
-
-- [Virtual machine disk size is not showing in the GUI or CLI](#virtual-machine-disk-size-is-not-showing-in-the-gui-or-cli)
-
 ## Login results in server error
 
 ### Cause
