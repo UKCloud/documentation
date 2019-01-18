@@ -41,18 +41,6 @@ When first logging in to the Azure Stack portal, you may see the following error
 
 Refresh the page and the login should work.
 
-## Azure Stack portal does not show any resources
-
-### Cause
-
-If your firewall ports are not open to enable outbound communication with Azure Stack, your Azure Stack portal will not show any resources.
-
-![Microsoft Azure Stack Dashboard](images/azs-firewall-ports.png)
-
-### Solution
-
-In your firewall, ensure that the appropriate ports are open for communication, as listed in *Portal (user)* row of the *Ports and protocols (inbound)* table in the following article: <https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-integrate-endpoints#ports-and-protocols-inbound>
-
 ## Diagnostics do not work for Linux VMs
 
 ### Cause
