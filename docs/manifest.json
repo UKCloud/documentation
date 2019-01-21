@@ -7386,15 +7386,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "9zXNHw2D9wyvBtjTVoAn7A=="
+          "hash": "OviSlNxmSM7PHs0PHXV0Ew=="
         }
       },
       "is_incremental": false,
@@ -7425,30 +7422,24 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-setup-2fa.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-setup-2fa.html",
-          "hash": "ZwYD2pR6Vz7OtAato+gAQg=="
+          "hash": "p6INxoSG1r+TwV4YS2vjOg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-signup-notifications.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-signup-notifications.html",
-          "hash": "9WKKromqWo1VHyV1oGHyvQ=="
+          "hash": "p5pSroOs42nIE8T38jGrlQ=="
         }
       },
       "is_incremental": false,
@@ -7479,15 +7470,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-use-my-calls.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-my-calls.html",
-          "hash": "by2n98mgJl3jbfFdaEVjnA=="
+          "hash": "JTqAAvLVwa03n4qdubc29w=="
         }
       },
       "is_incremental": false,
