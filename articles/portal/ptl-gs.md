@@ -224,7 +224,7 @@ In this Getting Started Guide, you've learned the basics about the Portal and th
 
 ## Related videos
 
-- [*UKCloud Portal overview video*](ptl-vid-portal)
+- [*UKCloud Portal overview video*](ptl-vid-portal.md)
 
 ## Glossary
 

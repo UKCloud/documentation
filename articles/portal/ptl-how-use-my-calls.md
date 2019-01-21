@@ -142,7 +142,7 @@ For more information about what you can do in the UKCloud Portal, see the [*Gett
 
 ## Related videos
 
-- [*UKCloud Portal overview video*](ptl-vid-portal)
+- [*UKCloud Portal overview video*](ptl-vid-portal.md)
 
 ## Feedback
 
