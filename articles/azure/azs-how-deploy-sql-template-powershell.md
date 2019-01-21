@@ -233,7 +233,7 @@ $sqlAuthPassword = '<your password>'
   $sqlAuthPasswordCred = ConvertTo-SecureString "$sqlAuthPassword" -AsPlainText -Force
 $domainName = "<ActiveDirectoryDomainName>"
 $adminUsername = "<adminUsername>"
-$sqlServerServiceAccountUserName = "<serviceAccountUsername"
+$sqlServerServiceAccountUserName = "<serviceAccountUsername>"
 
 $CustomTemplateJSON = "<directory>\azuredeploy.json"
 $CustomTemplateParamJSON = "<directory>\azuredeploy.parameters.json"
@@ -248,13 +248,12 @@ $platformUpdateDomainCount = 5
 $ARMDeploymentName = "SqlAlwaysOnDeployment"
 
 # Create Azure Stack Environment so that you can log in to it
-Add-AzureRMEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
 # Create your SPN  Credentials Login
 # Note: (Username is "<ApplicationId>@<AAD Domain>")
 $AzsUsername = $AppGUID + "@" + $TenantDomain
-$AzsPassword = $AppPassword
-  $AzsUserPassword = ConvertTo-SecureString "$AzsPassword" -AsPlainText -Force
+  $AzsUserPassword = ConvertTo-SecureString "$AppPassword" -AsPlainText -Force
   $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
 
 # Log in to Azure Stack using SPN account
@@ -264,14 +263,14 @@ Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCre
 try {
     $RG = Get-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -ErrorAction 'SilentlyContinue'
     if ( -not $RG) {
-      write-host("Didn't find Resource Group")
+      Write-Host("Didn't find Resource Group")
       New-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -Verbose
       return
     } else {
       return 'Exists'
     }
   } catch {
-    write-host('Could not query Resource Group')
+    Write-Host("Could not query Resource Group")
     exit
   }
 

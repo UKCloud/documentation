@@ -20,13 +20,13 @@ This document explains how to create a Service Principal Name to manage Azure an
 
 It will guide you through the creation of:
 
-- an Azure application
+- An Azure application
 
-- a Service Principal Name
+- A Service Principal Name
 
-- role assignment
+- Role assignment
 
-- permissions
+- Permissions
 
 ## What is a Service Principal Name?
 
@@ -182,13 +182,13 @@ $AzsUserPassword = $AppPassword
 Login-AzureRmAccount -Credential $AzsCred -ServicePrincipal -TenantId $SubId.TenantId
 
 # Test your SPN account by creating a new Resource Group in Public Azure
-New-AzureRMResourceGroup -Name $ResourceGroupAzurePublic -Location $RegionPublicAzure
+New-AzureRmResourceGroup -Name $ResourceGroupAzurePublic -Location $RegionPublicAzure
 
 ## Remove test Resource Group
 Remove-AzureRmResourceGroup -Name $ResourceGroupAzurePublic -Force
 
 # Create Azure Stack Environment so that you can log in to it
-Add-AzureRMEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Admin (Subscription Owner) Credentials
 # Note: This account CAN but does not have to be, the same as your Public Azure Account
@@ -215,25 +215,18 @@ $RoleAssignmentGet
 Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $SubId.TenantId
 
 # Test your SPN account by creating a new Resource Group in Azure Stack
-New-AzureRMResourceGroup -Name $ResourceGroupAzureStack -Location $RegionAzureStack
+New-AzureRmResourceGroup -Name $ResourceGroupAzureStack -Location $RegionAzureStack
 
 ## Remove test Resource Group
-Remove-AzureRMResourceGroup -Name $ResourceGroupAzureStack -Force
+Remove-AzureRmResourceGroup -Name $ResourceGroupAzureStack -Force
 
 # Export Data of your SPN
-$Arm_Endpoint = $ArmEndpoint
-$Subscription_id = $SubId.SubscriptionId
-$Client_Id = $AppGet.ApplicationId.Guid + "@" + $TenantDomain
-$Client_Secret = $AppPassword
-$Tenant_Id = $SubId.TenantId
-
-
 $OutputObject = [PSCustomObject]@{
-  arm_endpoint = $Arm_Endpoint
-  subscription_id = $Subscription_id
-  client_id = $Client_Id
-  client_secret = $Client_Secret
-  tenant_id  = $Tenant_Id
+  ArmEndpoint = $ArmEndpoint
+  SubscriptionId = $SubId.SubscriptionId
+  ClientId = $AppGet.ApplicationId.Guid + "@" + $TenantDomain
+  ClientSecret = $AppPassword
+  TenantId  = $SubId.TenantId
 }
 
 $OutputObject
@@ -285,9 +278,8 @@ $RegionAzureStack = "frn00006"
 
 $Role = "Owner"
 
-
 # Create Azure Stack Environment so that you can log in to it
-Add-AzureRMEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Admin (Subscription Owner) Credentials
 # Note: This account CAN but does not have to be, the same as your Public Azure Account
@@ -345,25 +337,18 @@ $AzsUserPassword = $AppPassword
 Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $SubId.TenantId
 
 # Test your SPN account by creating a new Resource Group in Azure Stack
-New-AzureRMResourceGroup -Name $ResourceGroupAzureStack -Location $RegionAzureStack
+New-AzureRmResourceGroup -Name $ResourceGroupAzureStack -Location $RegionAzureStack
 
 ## Remove test Resource Group
-Remove-AzureRMResourceGroup -Name $ResourceGroupAzureStack -Force
+Remove-AzureRmResourceGroup -Name $ResourceGroupAzureStack -Force
 
 # Export Data of your SPN
-$Arm_Endpoint = $ArmEndpoint
-$Subscription_id = $SubId.SubscriptionId
-$Client_Id = $AppGet.ApplicationId.Guid + "@" + $TenantDomain
-$Client_Secret = $AppPassword
-$Tenant_Id = $SubId.TenantId
-
-
 $OutputObject = [PSCustomObject]@{
-  arm_endpoint = $Arm_Endpoint
-  subscription_id = $Subscription_id
-  client_id = $Client_Id
-  client_secret = $Client_Secret
-  tenant_id  = $Tenant_Id
+  ArmEndpoint = $ArmEndpoint
+  SubscriptionId = $SubId.SubscriptionId
+  ClientId = $AppGet.ApplicationId.Guid + "@" + $TenantDomain
+  ClientSecret = $AppPassword
+  TenantId  = $SubId.TenantId
 }
 
 $OutputObject

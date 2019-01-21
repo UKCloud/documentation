@@ -45,16 +45,16 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Add environment
-Add-AzureRMEnvironment -Name 'AzureStack' -ArmEndpoint 'https://management.frn00006.azure.ukcloud.com'
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Login
-Login-AzureRmAccount -EnvironmentName 'AzureStack'
+Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Select Resource Group
-$RGName = '<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
+$RGName = "<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>"
 
 # Create a new vault in the Resource Group above
-New-AzureRmKeyVault -VaultName '<output form="vaultname" name="result" style="display: inline;">&lt;Vault Name&gt;</output>' -ResourceGroupName $RGName -Location 'frn00006'
+New-AzureRmKeyVault -VaultName "<output form="vaultname" name="result" style="display: inline;">&lt;Vault Name&gt;</output>" -ResourceGroupName $RGName -Location "frn00006"
 </code></pre>
 
 This will create a Key Vault in the specified resource group.
@@ -67,7 +67,7 @@ From your PowerShell window:
 $SecretValue = ConvertTo-SecureString '<output form="secretvalue" name="result" style="display: inline;">&lt;String&gt;</output>' -AsPlainText -Force
 
 # Store the secret in Azure Key Vault
-$Secret = Set-AzureKeyVaultSecret -VaultName '<output form="vaultname" name="result2" style="display: inline;">&lt;Vault Name&gt;</output>' -Name '<output form="secretname" name="result" style="display: inline;">&lt;Secret Name&gt;</output>' -SecretValue $SecretValue
+$Secret = Set-AzureKeyVaultSecret -VaultName "<output form="vaultname" name="result2" style="display: inline;">&lt;Vault Name&gt;</output>" -Name "<output form="secretname" name="result" style="display: inline;">&lt;Secret Name&gt;</output>" -SecretValue $SecretValue
 
 # Display URL
 $Secret.Id
@@ -83,7 +83,7 @@ The secret you created will be stored in your Key Vault.
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Extract the secret key value and store it in a variable
-$ExtractedSecret = (Get-AzureKeyVaultSecret –VaultName '<output form="vaultname" name="result3" style="display: inline;">&lt;Vault Name&gt;</output>' -Name '<output form="secretname" name="result2" style="display: inline;">&lt;Secret Name&gt;</output>').SecretValueText
+$ExtractedSecret = (Get-AzureKeyVaultSecret –VaultName "<output form="vaultname" name="result3" style="display: inline;">&lt;Vault Name&gt;</output>" -Name "<output form="secretname" name="result2" style="display: inline;">&lt;Secret Name&gt;</output>").SecretValueText
 
 # Display the secret key value
 $ExtractedSecret

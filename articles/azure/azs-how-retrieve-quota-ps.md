@@ -31,14 +31,14 @@ From your PowerShell window:
 
 ```PowerShell
 # Add environment
-Add-AzureRMEnvironment -Name 'AzureStack' -ArmEndpoint 'https://management.frn00006.azure.ukcloud.com'
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Login
-Login-AzureRmAccount -EnvironmentName 'AzureStack'
+Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Retrieve compute quota
-$ComputeQuota = Get-AzureRmVMUsage -location "frn00006" | select-object name,CurrentValue,Limit
-$ComputeQuota | foreach-object {
+# Retrieve Compute quota
+$ComputeQuota = Get-AzureRmVMUsage -Location "frn00006" | Select-Object Name, CurrentValue, Limit
+$ComputeQuota | ForEach-Object {
     if (!$_.Name.LocalizedValue) {
         $_.Name = $_.Name.Value -creplace '(\B[A-Z])', ' $1'
     } else {
@@ -46,17 +46,18 @@ $ComputeQuota | foreach-object {
     }   
 } 
 
-# Retrieve storage quota
-$StorageQuota = Get-AzureRmStorageUsage | Select-Object name, currentvalue, limit
+# Retrieve Storage quota
+$StorageQuota = Get-AzureRmStorageUsage | Select-Object Name, CurrentValue, Limit
 
-# Retrieve network quota
-$NetworkQuota = Get-AzureRmNetworkUsage -Location "frn00006" | select-object @{label="Name";expression={$_.ResourceType}}, currentvalue, Limit
+# Retrieve Network quota
+$NetworkQuota = Get-AzureRmNetworkUsage -Location "frn00006" | Select-Object @{label="Name";expression={$_.ResourceType}}, `
+    CurrentValue, Limit
 
 # Combine quotas
 $AllQuotas = $ComputeQuota + $StorageQuota + $NetworkQuota
 
 # Export quota to CSV
-$AllQuotas | Export-Csv -path "AzureStackQuotas.csv" -NoTypeInformation
+$AllQuotas | Export-Csv -Path "AzureStackQuotas.csv" -NoTypeInformation
 ```
 
 ## Feedback

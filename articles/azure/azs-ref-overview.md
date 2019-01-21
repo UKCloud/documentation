@@ -115,9 +115,10 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
     Then run the following commands:
 
     ```PowerShell
-    Add-AzureRMEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+    Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
     Login-AzureRmAccount -EnvironmentName "AzureStackAdmin"
-    Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageType | ` Get-AzureRmVMExtensionImage | ` Select Type, Version | ` Format-Table -Property * -AutoSize
+    Get-AzureRmVMImagePublisher -Location frn00006 | Get-AzureRmVMExtensionImageType | Get-AzureRmVMExtensionImage | `
+      Select-Object Type, Version | Format-Table -Property * -AutoSize
     ```
 
 - Use load balancers to make the best use of IP address quota

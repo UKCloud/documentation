@@ -27,14 +27,13 @@ To complete the steps in this guide, you must have appropriate access to your Mi
 
 ## Indentifying the Global Administrators
 
-1. Log in to your Microsoft Azure portal at http://portal.azure.com.
-
+1. Log in to your Microsoft Azure portal at https://portal.azure.com.
 
 2. In the left hand side portal menu select **Azure Active Directory**.
 
     ![Azure Active Directory in favourites panel](images/azs-ad.png)
 
-3. In the *New* blade, select **Roles and Administrators**.
+3. In the *Manage* section, select **Roles and Administrators**.
 
     ![Roles and Administrators in New blade](images/azs-roles-admins.png)
 
