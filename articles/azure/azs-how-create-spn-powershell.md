@@ -221,18 +221,12 @@ New-AzureRmResourceGroup -Name $ResourceGroupAzureStack -Location $RegionAzureSt
 Remove-AzureRmResourceGroup -Name $ResourceGroupAzureStack -Force
 
 # Export Data of your SPN
-$SubscriptionId = $SubId.SubscriptionId
-$ClientId = $AppGet.ApplicationId.Guid + "@" + $TenantDomain
-$ClientSecret = $AppPassword
-$TenantId = $SubId.TenantId
-
-
 $OutputObject = [PSCustomObject]@{
-  arm_endpoint = $ArmEndpoint
-  subscription_id = $SubscriptionId
-  client_id = $ClientId
-  client_secret = $ClientSecret
-  tenant_id  = $TenantId
+  ArmEndpoint = $ArmEndpoint
+  SubscriptionId = $SubId.SubscriptionId
+  ClientId = $AppGet.ApplicationId.Guid + "@" + $TenantDomain
+  ClientSecret = $AppPassword
+  TenantId  = $SubId.TenantId
 }
 
 $OutputObject
@@ -349,17 +343,12 @@ New-AzureRmResourceGroup -Name $ResourceGroupAzureStack -Location $RegionAzureSt
 Remove-AzureRmResourceGroup -Name $ResourceGroupAzureStack -Force
 
 # Export Data of your SPN
-$SubscriptionId = $SubId.SubscriptionId
-$ClientId = $AppGet.ApplicationId.Guid + "@" + $TenantDomain
-$ClientSecret = $AppPassword
-$TenantId = $SubId.TenantId
-
 $OutputObject = [PSCustomObject]@{
-  arm_endpoint = $ArmEndpoint
-  subscription_id = $SubscriptionId
-  client_id = $ClientId
-  client_secret = $ClientSecret
-  tenant_id  = $TenantId
+  ArmEndpoint = $ArmEndpoint
+  SubscriptionId = $SubId.SubscriptionId
+  ClientId = $AppGet.ApplicationId.Guid + "@" + $TenantDomain
+  ClientSecret = $AppPassword
+  TenantId  = $SubId.TenantId
 }
 
 $OutputObject
