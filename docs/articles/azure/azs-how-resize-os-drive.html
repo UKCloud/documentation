@@ -8,7 +8,7 @@
     <title>How to resize an OS drive using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to resize an OS drive using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.7.0">
+    <meta name="generator" content="docfx 2.40.6.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -119,12 +119,12 @@
 
 <p>From your PowerShell window:</p>
 <pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
-Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group name and VM name
-$RGName = '<output form="ResourceGroup" name="result" style="display: inline;">myResourceGroup</output>'
-$VMName = '<output form="VMName" name="result" style="display: inline;">myVM</output>'
+$RGName = "<output form="ResourceGroup" name="result" style="display: inline;">myResourceGroup</output>"
+$VMName = "<output form="VMName" name="result" style="display: inline;">myVM</output>"
 
 # Obtain a reference to your VM
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
@@ -145,12 +145,12 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
 <p>From your PowerShell window:</p>
 <pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
-Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group name and VM name
-$RGName = '<output form="ResourceGroup" name="result2" style="display: inline;">myResourceGroup</output>'
-$VMName = '<output form="VMName" name="result2" style="display: inline;">myVM</output>'
+$RGName = "<output form="ResourceGroup" name="result2" style="display: inline;">myResourceGroup</output>"
+$VMName = "<output form="VMName" name="result2" style="display: inline;">myVM</output>"
 
 # Obtain a reference to your VM
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName

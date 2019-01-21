@@ -8,7 +8,7 @@
     <title>Understanding UKCloud for Microsoft Azure | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Understanding UKCloud for Microsoft Azure | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.7.0">
+    <meta name="generator" content="docfx 2.40.6.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -195,9 +195,10 @@
 <p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install</a></p>
 <p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download</a></p>
 <p>Then run the following commands:</p>
-<pre><code class="lang-PowerShell">Add-AzureRMEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+<pre><code class="lang-PowerShell">Add-AzureRmEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
 Login-AzureRmAccount -EnvironmentName &quot;AzureStackAdmin&quot;
-Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageType | ` Get-AzureRmVMExtensionImage | ` Select Type, Version | ` Format-Table -Property * -AutoSize
+Get-AzureRmVMImagePublisher -Location frn00006 | Get-AzureRmVMExtensionImageType | Get-AzureRmVMExtensionImage | `
+  Select-Object Type, Version | Format-Table -Property * -AutoSize
 </code></pre>
 </li>
 <li><p>Use load balancers to make the best use of IP address quota</p>

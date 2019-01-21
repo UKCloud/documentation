@@ -8,7 +8,7 @@
     <title>Configure the Azure Stack user's PowerShell environment for UKCloud | Based on Microsoft Docs | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Configure the Azure Stack user's PowerShell environment for UKCloud | Based on Microsoft Docs | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.7.0">
+    <meta name="generator" content="docfx 2.40.6.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -84,16 +84,15 @@
                   
 <h1 id="configure-the-azure-stack-users-powershell-environment">Configure the Azure Stack user's PowerShell environment</h1>
 
-<p>As an Azure Stack user, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates,  etc. This topic is scoped to use with the user environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:</p>
+<p>As an Azure Stack user, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates, etc. This topic is scoped to use with the user environments only. In order to interact with Azure Stack PowerShell, you will need to set up your environment. To do so follow the below guide:</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Prerequisites from a Windows-based external client.</p>
 <ul>
 <li><p>PowerShell 5.1</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>To check your version, run $PSVersionTable.PSVersion and compare the &quot;Major&quot; version.</p>
-<p>For &quot;legacy&quot; Operating Systems like Windows Server 2008 R2 and Windows 7, or Windows Server 2012 R2, Windows Server 2012, and Windows 8.1</p>
-<p>Download the <a href="https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure">Windows Management Framework 5.1</a></p>
+<p>To check your version, run <code>$PSVersionTable.PSVersion</code> and compare the &quot;Major&quot; version.</p>
+<p>For &quot;legacy&quot; Operating Systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the <a href="https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure">Windows Management Framework 5.1</a></p>
 </div>
 </li>
 </ul>
@@ -118,7 +117,7 @@ Install-Module -Name AzureStack -RequiredVersion 1.6.0
 Set-ExecutionPolicy RemoteSigned
 
 # Register an AzureRM environment that targets your Azure Stack instance
-Add-AzureRMEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+Add-AzureRmEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
 
 # Sign in to your environment
 Login-AzureRmAccount -EnvironmentName &quot;AzureStackUser&quot;
@@ -128,7 +127,7 @@ Login-AzureRmAccount -EnvironmentName &quot;AzureStackUser&quot;
 Set-ExecutionPolicy RemoteSigned
 
 # Register an AzureRM environment that targets your Azure Stack instance
-Add-AzureRMEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+Add-AzureRmEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
 
 # Create your Credentials
 $AzsUsername =  &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;.onmicrosoft.com&quot;

@@ -8,7 +8,7 @@
     <title>How to deploy a SQL template to Azure Stack - PowerShell | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to deploy a SQL template to Azure Stack - PowerShell | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.7.0">
+    <meta name="generator" content="docfx 2.40.6.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -454,7 +454,7 @@ $sqlAuthPassword = '&lt;your password&gt;'
   $sqlAuthPasswordCred = ConvertTo-SecureString &quot;$sqlAuthPassword&quot; -AsPlainText -Force
 $domainName = &quot;&lt;ActiveDirectoryDomainName&gt;&quot;
 $adminUsername = &quot;&lt;adminUsername&gt;&quot;
-$sqlServerServiceAccountUserName = &quot;&lt;serviceAccountUsername&quot;
+$sqlServerServiceAccountUserName = &quot;&lt;serviceAccountUsername&gt;&quot;
 
 $CustomTemplateJSON = &quot;&lt;directory&gt;\azuredeploy.json&quot;
 $CustomTemplateParamJSON = &quot;&lt;directory&gt;\azuredeploy.parameters.json&quot;
@@ -469,13 +469,12 @@ $platformUpdateDomainCount = 5
 $ARMDeploymentName = &quot;SqlAlwaysOnDeployment&quot;
 
 # Create Azure Stack Environment so that you can log in to it
-Add-AzureRMEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
 # Create your SPN  Credentials Login
 # Note: (Username is &quot;&lt;ApplicationId&gt;@&lt;AAD Domain&gt;&quot;)
 $AzsUsername = $AppGUID + &quot;@&quot; + $TenantDomain
-$AzsPassword = $AppPassword
-  $AzsUserPassword = ConvertTo-SecureString &quot;$AzsPassword&quot; -AsPlainText -Force
+  $AzsUserPassword = ConvertTo-SecureString &quot;$AppPassword&quot; -AsPlainText -Force
   $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
 
 # Log in to Azure Stack using SPN account
@@ -485,14 +484,14 @@ Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCre
 try {
     $RG = Get-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -ErrorAction 'SilentlyContinue'
     if ( -not $RG) {
-      write-host(&quot;Didn't find Resource Group&quot;)
+      Write-Host(&quot;Didn't find Resource Group&quot;)
       New-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -Verbose
       return
     } else {
       return 'Exists'
     }
   } catch {
-    write-host('Could not query Resource Group')
+    Write-Host(&quot;Could not query Resource Group&quot;)
     exit
   }
 

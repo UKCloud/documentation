@@ -8,7 +8,7 @@
     <title>How to create a virtual machine using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual machine using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.7.0">
+    <meta name="generator" content="docfx 2.40.6.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -256,10 +256,10 @@ Before creating the virtual machine, it is necessary to create storage and netwo
 <pre><code class="language-PowerShell">## Initialise environment and variables
 
 # Add environment
-Add-AzureRMEnvironment -Name "AzureStack" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Login
-Login-AzureRmAccount -EnvironmentName "AzureStack"
+Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Input Variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">myResourceGroup</output>"
@@ -312,7 +312,7 @@ $NetworkInterface = New-AzureRmNetworkInterface -Name $NICName -ResourceGroupNam
 
 # Define a credential object to store the username and password for the virtual machine
 $UserName = "<output form="vmusername" name="result" style="display: inline;">myUser</output>"
-$Password = "<output form="vmpassword" name="result" style="display: inline;">Password123!</output>" | ConvertTo-SecureString -Force -AsPlainText
+$Password = '<output form="vmpassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
 $Credential = New-Object PSCredential($UserName,$Password)
 
 # Create the virtual machine configuration object
@@ -322,7 +322,7 @@ $VirtualMachine = New-AzureRmVMConfig -VMName $VMName -VMSize $VMSize
 $VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result" style="display: inline;">-Linux</output> -ComputerName $ComputerName -Credential $Credential
 
 # Get the VM Source Image
-$Image = Get-AzureRMVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object {$_.Id -like $VMImage}
+$Image = Get-AzureRmVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object {$_.Id -like $VMImage}
 
 # Set the VM Source Image
 $VirtualMachine =  Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version "latest"
