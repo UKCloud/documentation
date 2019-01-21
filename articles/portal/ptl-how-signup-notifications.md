@@ -48,7 +48,7 @@ If you want, you can also opt to have these notifications sent to you by email. 
 
 ## Related videos
 
-- [*UKCloud Portal overview video*](ptl-vid-portal)
+- [*UKCloud Portal overview video*](ptl-vid-portal.md)
 
 ## Feedback
 
