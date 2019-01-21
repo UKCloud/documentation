@@ -20,6 +20,14 @@ The following video shows you how you can make improvements to Knowledge Centre 
 
 <iframe src="https://player.vimeo.com/video/281661800" width="864" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
+[Editing Knowledge Centre articles](https://vimeo.com/281661800) on [Vimeo](https://vimeo.com/ukcloud)
+
+## Related articles
+
+- [*How to contribute to the UKCloud Knowledge Centre*](other-how-contribute-knowledge.md)
+- [*UKCloud Knowledge Centre guidelines*](other-ref-knowledge-guidelines.md)
+- [*UKCloud Knowledge Centre article template*](other-ref-knowledge-template.md)
+
 ## Feedback
 
 If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

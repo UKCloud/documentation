@@ -580,7 +580,7 @@ You can find additional information in the following places:
 
 ## Related videos
 
-- [OpenStack Horizon dashboard overview](https://vimeo.com/305934797)
+- [*OpenStack Horizon dashboard overview video*](ostack-vid-overview.md)
 
 ## Glossary
 
