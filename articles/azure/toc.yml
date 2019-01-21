@@ -78,7 +78,7 @@
       href: asz-sco.md
   - name: Videos
     items:
-    - name: Microsoft Azure Stack Portal overview
+    - name: Microsoft Azure Stack portal overview
       href: azs-vid-overview.md
 - name: Operators
   items:
