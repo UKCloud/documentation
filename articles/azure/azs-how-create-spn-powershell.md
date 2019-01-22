@@ -173,8 +173,8 @@ $AzureADPermissionsGet = Get-AzureADApplication -ObjectId $AppGet.ObjectId.Guid 
 $AzureADPermissionsGet
 
 # Create your SPN  Credentials Login
-# Note: (Username is "<ApplicationId>@<AAD Domain>")
-$AzsUsername = $AppGet.ApplicationId.Guid + "@" + $TenantDomain
+# Note: (Username is "<ApplicationId>")
+$AzsUsername = $AppGet.ApplicationId.Guid
 $AzsUserPassword = $AppPassword
 $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
@@ -328,8 +328,8 @@ $RoleAssignmentGet = Get-AzureRmRoleAssignment -ObjectId $SPNAzsGet.Id.Guid
 $RoleAssignmentGet
 
 # Create your SPN  Credentials Login
-# Note: (Username is "<ApplicationId>@<AAD Domain>")
-$AzsUsername = $AppGet.ApplicationId.Guid + "@" + $TenantDomain
+# Note: (Username is "<ApplicationId>")
+$AzsUsername = $AppGet.ApplicationId.Guid
 $AzsUserPassword = $AppPassword
 $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
