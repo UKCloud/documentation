@@ -175,9 +175,9 @@ $Role = &quot;Owner&quot;
 
 # Create your Public Azure Admin Credentials 
 # in order to log in to your Azure Subscription you will be creating you SPN on
-$AzureUsernameAdmin =  &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;&quot;
+$AzureUsernameAdmin = &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;&quot;
 $AzureUserPasswordAdmin = ConvertTo-SecureString '&lt;your password&gt;' -AsPlainText -Force
-  $AzureCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzureUsernameAdmin,$AzureUserPasswordAdmin
+$AzureCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzureUsernameAdmin, $AzureUserPasswordAdmin
 
 # Log in to your Azure Subscription you will be creating you SPN on
 Login-AzureRmAccount -Credential $AzureCredAdmin
@@ -212,34 +212,34 @@ Connect-AzureAD -Credential $AzureCredAdmin -TenantId $TenantDomain
 # Grant Permission to Azure Active Directory to SPN
 $req = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.RequiredResourceAccess&quot;
 $req.ResourceAppId = &quot;00000002-0000-0000-c000-000000000000&quot;
-$acc1 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;5778995a-e1bf-45b8-affa-663a9f3f4d04&quot;,&quot;Role&quot;
-$acc2 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;abefe9df-d5a9-41c6-a60b-27b38eac3efb&quot;,&quot;Role&quot;
-$acc3 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;78c8a3c8-a07e-4b9e-af1b-b5ccab50a175&quot;,&quot;Role&quot;
-$acc4 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;1138cb37-bd11-4084-a2b7-9f71582aeddb&quot;,&quot;Role&quot;
-$acc5 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;9728c0c4-a06b-4e0e-8d1b-3d694e8ec207&quot;,&quot;Role&quot;
-$acc6 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;824c81eb-e3f8-4ee6-8f6d-de7f50d565b7&quot;,&quot;Role&quot;
-$acc7 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;1cda74f2-2616-4834-b122-5cb1b07f8a59&quot;,&quot;Role&quot;
-$acc8 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;aaff0dfd-0295-48b6-a5cc-9f465bc87928&quot;,&quot;Role&quot;
-$acc9 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;a42657d6-7f20-40e3-b6f0-cee03008a62a&quot;,&quot;Scope&quot;
-$acc10 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;5778995a-e1bf-45b8-affa-663a9f3f4d04&quot;,&quot;Scope&quot;
-$acc11 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;78c8a3c8-a07e-4b9e-af1b-b5ccab50a175&quot;,&quot;Scope&quot;
-$acc12 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;970d6fa6-214a-4a9b-8513-08fad511e2fd&quot;,&quot;Scope&quot;
-$acc13 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;6234d376-f627-4f0f-90e0-dff25c5211a3&quot;,&quot;Scope&quot;
-$acc14 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;c582532d-9d9e-43bd-a97c-2667a28ce295&quot;,&quot;Scope&quot;
-$acc15 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;cba73afc-7f69-4d86-8450-4978e04ecd1a&quot;,&quot;Scope&quot;
-$acc16 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;311a71cc-e848-46a1-bdf8-97ff7156d8e6&quot;,&quot;Scope&quot;
-$acc17 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;2d05a661-f651-4d57-a595-489c91eda336&quot;,&quot;Scope&quot;
-$req.ResourceAccess = $acc1,$acc2,$acc3,$acc4,$acc5,$acc6,$acc7,$acc8,$acc9,$acc10,$acc11,$acc12,$acc13,$acc14,$acc15,$acc16,$acc17
+$acc1 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;5778995a-e1bf-45b8-affa-663a9f3f4d04&quot;, &quot;Role&quot;
+$acc2 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;abefe9df-d5a9-41c6-a60b-27b38eac3efb&quot;, &quot;Role&quot;
+$acc3 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;78c8a3c8-a07e-4b9e-af1b-b5ccab50a175&quot;, &quot;Role&quot;
+$acc4 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;1138cb37-bd11-4084-a2b7-9f71582aeddb&quot;, &quot;Role&quot;
+$acc5 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;9728c0c4-a06b-4e0e-8d1b-3d694e8ec207&quot;, &quot;Role&quot;
+$acc6 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;824c81eb-e3f8-4ee6-8f6d-de7f50d565b7&quot;, &quot;Role&quot;
+$acc7 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;1cda74f2-2616-4834-b122-5cb1b07f8a59&quot;, &quot;Role&quot;
+$acc8 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;aaff0dfd-0295-48b6-a5cc-9f465bc87928&quot;, &quot;Role&quot;
+$acc9 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;a42657d6-7f20-40e3-b6f0-cee03008a62a&quot;, &quot;Scope&quot;
+$acc10 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;5778995a-e1bf-45b8-affa-663a9f3f4d04&quot;, &quot;Scope&quot;
+$acc11 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;78c8a3c8-a07e-4b9e-af1b-b5ccab50a175&quot;, &quot;Scope&quot;
+$acc12 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;970d6fa6-214a-4a9b-8513-08fad511e2fd&quot;, &quot;Scope&quot;
+$acc13 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;6234d376-f627-4f0f-90e0-dff25c5211a3&quot;, &quot;Scope&quot;
+$acc14 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;c582532d-9d9e-43bd-a97c-2667a28ce295&quot;, &quot;Scope&quot;
+$acc15 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;cba73afc-7f69-4d86-8450-4978e04ecd1a&quot;, &quot;Scope&quot;
+$acc16 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;311a71cc-e848-46a1-bdf8-97ff7156d8e6&quot;, &quot;Scope&quot;
+$acc17 = New-Object -TypeName &quot;Microsoft.Open.AzureAD.Model.ResourceAccess&quot; -ArgumentList &quot;2d05a661-f651-4d57-a595-489c91eda336&quot;, &quot;Scope&quot;
+$req.ResourceAccess = $acc1, $acc2, $acc3, $acc4, $acc5, $acc6, $acc7, $acc8, $acc9, $acc10, $acc11, $acc12, $acc13, $acc14, $acc15, $acc16, $acc17
 
 $AzureADPermissions = Set-AzureADApplication -ObjectId $AppGet.ObjectId.Guid -RequiredResourceAccess $req
 $AzureADPermissionsGet = Get-AzureADApplication -ObjectId $AppGet.ObjectId.Guid | Select-Object -Property *
 $AzureADPermissionsGet
 
 # Create your SPN  Credentials Login
-# Note: (Username is &quot;&lt;ApplicationId&gt;@&lt;AAD Domain&gt;&quot;)
-$AzsUsername = $AppGet.ApplicationId.Guid + &quot;@&quot; + $TenantDomain
+# Note: (Username is &quot;&lt;ApplicationId&gt;&quot;)
+$AzsUsername = $AppGet.ApplicationId.Guid
 $AzsUserPassword = $AppPassword
-  $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
+$AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
 # Log in to Public Azure using SPN account
 Login-AzureRmAccount -Credential $AzsCred -ServicePrincipal -TenantId $SubId.TenantId
@@ -255,9 +255,9 @@ Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Admin (Subscription Owner) Credentials
 # Note: This account CAN but does not have to be, the same as your Public Azure Account
-$AzsUsernameAdmin =  &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;&quot;
+$AzsUsernameAdmin = &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;&quot;
 $AzsUserPasswordAdmin = ConvertTo-SecureString '&lt;your password&gt;' -AsPlainText -Force 
-  $AzsCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsernameAdmin,$AzsUserPasswordAdmin
+$AzsCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsernameAdmin, $AzsUserPasswordAdmin
 
 # Login to Azure Stack as Admin (Subscription Owner)
 Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCredAdmin
@@ -285,11 +285,11 @@ Remove-AzureRmResourceGroup -Name $ResourceGroupAzureStack -Force
 
 # Export Data of your SPN
 $OutputObject = [PSCustomObject]@{
-  ArmEndpoint = $ArmEndpoint
-  SubscriptionId = $SubId.SubscriptionId
-  ClientId = $AppGet.ApplicationId.Guid + &quot;@&quot; + $TenantDomain
-  ClientSecret = $AppPassword
-  TenantId  = $SubId.TenantId
+    ArmEndpoint    = $ArmEndpoint
+    SubscriptionId = $SubId.SubscriptionId
+    ClientId       = $AppGet.ApplicationId.Guid + &quot;@&quot; + $TenantDomain
+    ClientSecret   = $AppPassword
+    TenantId       = $SubId.TenantId
 }
 
 $OutputObject
@@ -343,9 +343,9 @@ Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Admin (Subscription Owner) Credentials
 # Note: This account CAN but does not have to be, the same as your Public Azure Account
-$AzsUsernameAdmin =  &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;&quot;
+$AzsUsernameAdmin = &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;&quot;
 $AzsUserPasswordAdmin = ConvertTo-SecureString '&lt;your password&gt;' -AsPlainText -Force
-  $AzsCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsernameAdmin,$AzsUserPasswordAdmin
+$AzsCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsernameAdmin, $AzsUserPasswordAdmin
 
 # Login to Azure Stack as Admin (Subscription Owner)
 Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCredAdmin
@@ -388,10 +388,10 @@ $RoleAssignmentGet = Get-AzureRmRoleAssignment -ObjectId $SPNAzsGet.Id.Guid
 $RoleAssignmentGet
 
 # Create your SPN  Credentials Login
-# Note: (Username is &quot;&lt;ApplicationId&gt;@&lt;AAD Domain&gt;&quot;)
-$AzsUsername = $AppGet.ApplicationId.Guid + &quot;@&quot; + $TenantDomain
+# Note: (Username is &quot;&lt;ApplicationId&gt;&quot;)
+$AzsUsername = $AppGet.ApplicationId.Guid
 $AzsUserPassword = $AppPassword
-  $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
+$AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
 # Log in to Azure Stack using SPN account
 Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $SubId.TenantId
@@ -404,11 +404,11 @@ Remove-AzureRmResourceGroup -Name $ResourceGroupAzureStack -Force
 
 # Export Data of your SPN
 $OutputObject = [PSCustomObject]@{
-  ArmEndpoint = $ArmEndpoint
-  SubscriptionId = $SubId.SubscriptionId
-  ClientId = $AppGet.ApplicationId.Guid + &quot;@&quot; + $TenantDomain
-  ClientSecret = $AppPassword
-  TenantId  = $SubId.TenantId
+    ArmEndpoint    = $ArmEndpoint
+    SubscriptionId = $SubId.SubscriptionId
+    ClientId       = $AppGet.ApplicationId.Guid + &quot;@&quot; + $TenantDomain
+    ClientSecret   = $AppPassword
+    TenantId       = $SubId.TenantId
 }
 
 $OutputObject
