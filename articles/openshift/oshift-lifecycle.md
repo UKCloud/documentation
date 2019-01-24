@@ -9,8 +9,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: OpenShift lifecycle and patch management
-toc_fullpath: openshift/lifecycle.md
-toc_mdlink: lifecycle.md
+toc_fullpath: openshift/oshift-lifecycle.md
+toc_mdlink: oshift-lifecycle.md
 ---
 
 # UKCloud for OpenShift life cycle and patch management
