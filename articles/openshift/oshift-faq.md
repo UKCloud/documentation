@@ -33,17 +33,13 @@ UKCloud for OpenShift is built as a single-tenant platform on-top of UKCloud's s
 
 This service comprises of two main chargeable elements:
 
-  - **Starter Pack -** provides the foundation OpenShift services to support the orchestration and management of the container runtime environments. Each customer environment requires only a single Starter Pack
+  - **Foundation Pack -** provides the foundation OpenShift services to support the orchestration and management of the container runtime environments. Each customer environment requires only a single Foundation Pack
 
-  - **Expansion Pack -** Provides the footprint to host customer’s containerised applications and services. Customers can choose to mix and match their Runtime Packs, and Runtime Packs can be called off individually, however UKCloud strongly recommends the initial deployment of two or more Runtime Packs for production environments to provide resilience to your workloads in the event of the failure of a single Runtime Pack.
+  - **Runtime Pack -** Provides the footprint to host customer’s containerised applications and services. Customers can choose to mix and match their Runtime Packs, and Runtime Packs can be called off individually, however UKCloud strongly recommends the initial deployment of two or more Runtime Packs for production environments to provide resilience to your workloads in the event of the failure of a single Runtime Pack.
 
 ### Does UKCloud offer a free trial?
 
 Free trials are currently available for UKCloud for OpenShift. Please get in touch with your Account Manager to raise this request.
-
-### Is there a free tier to your service?
-
-Due to the complexities of providing a dedicated, single-tenant environment, a free tier is currently not offered on UKCloud for OpenShift.
 
 ### Where is the service hosted?
 
@@ -77,9 +73,9 @@ We are now required to self-assert our services, with customers taking responsib
 
 We provide confidence that our OpenShift service still meets the highest level of information assurance, which is why we continue to have our platform independently tested and validated, and have the findings made available to customers and partners. This enables SIROs to make an informed decision about any service they choose to consume.
 
-### Can I use UKCloud for OpenShift over closed networks such as PSN and N3?
+### Can I use UKCloud for OpenShift over closed networks such as PSN and N3/HSCN?
 
-We plan for this service to be accredited for use over PSN, however this may not be available at launch. Connectivity to the N3 network will be considered when an appropriate sponsor submits a requirement.
+We plan for this service to be accredited for use over PSN, however this may not be available at launch. Connectivity to the N3/HSCN network is supported.
 
 ### Does UKCloud offer any scheduled automated backups for UKCloud for OpenShift?
 
