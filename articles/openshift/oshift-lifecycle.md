@@ -29,7 +29,7 @@ Red Hat's official versioning for their OpenShift Container Platform is _**X.Y**
 
 Although Red Hat officially fully support each major _**X**_ version of the OpenShift Container Platform for five years, as a service provider this duration is too long for UKCloud to ensure the highest levels of security, performance and features to their customers. As such, UKCloud will officially support the current and previous two minor versions **_(Y-2)_**. As minor versions are released roughly every six months, this provides users with the assurance their environments will be fully maintained for 18 months.
 
-![Lifecycle](images/openshiftsupported.jpg)
+![Lifecycle](images/oshift-supported-versions.png)
 
 ### Upgrades of major _**X**_ and minor _**Y**_ versions
 
