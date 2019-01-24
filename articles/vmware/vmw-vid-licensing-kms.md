@@ -25,7 +25,9 @@ The following video provides a quick guide for how to activate your Windows lice
 ## Related articles
 
 - [*How to license Windows VMs using the UKCloud Key Management Server*](vmw-how-setup-kms.md)
+
 - [*How to create NAT rules*](vmw-how-create-nat-rules.md)
+
 - [*How to create firewall rules*](vmw-how-create-firewall-rules.md)
 
 ## Feedback
