@@ -17,7 +17,7 @@ toc_mdlink: oshift-lifecycle.md
 
 ## Overview
 
-This article outlines the life cycle of supported OpenShift releases along with UKCloud's approach to patching exisitng OpenShift environments in order for customers to effectively plan, deploy, and support their infrastructure. UKCloud publishes this life cycle in an effort to provide as much transparency as possible and may make exceptions from this document should the need arise.
+This article outlines the life cycle of UKCloud supported OpenShift releases along with UKCloud's approach to patching exisitng OpenShift environments in order for customers to effectively plan, deploy, and support their infrastructure. UKCloud publishes this life cycle in an effort to provide as much transparency as possible and may make exceptions from this document should the need arise.
 
 ### Intended audience
 
