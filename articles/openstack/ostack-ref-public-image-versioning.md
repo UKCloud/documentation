@@ -21,21 +21,22 @@ When you create an instance in OpenStack, its disk is cloned from an image manag
 
 ## Image versioning
 
-We will be providing updated images once a quarter for our supported images. We will not be removing images from the platform until they are no longer in use by any customers. We will be adopting a naming convention that will allow you to easily identify images.
+We update our supported images once a quarter. We will not remove images from the platform until they are no longer in use by any customer.
 
-UKCloud always recomends using the latest availible image, and recomends that all instances have their packages updated as often as possible.
+UKCloud always recommends using the latest available image, and recommends that all instances have their packages updated as often as possible.
 
 ## Image naming convention
 
-Within the public catalog, images are named using the following naming convention:
+Within the public catalog, we use the following image naming convention to enable you to easily identify images and select the best image to meet your requirements:
 
 `<distributionName>-<distributionVersionNumber>-CURRENT` - This will be the most recent image for the quarter.
 
-`<distributionName>-<distributionVersionNumber>-DATE` - The data indicates when the image was rotated from being the current image.
+`<distributionName>-<distributionVersionNumber>-<DATE>` - The date indicates when the image was rotated from being the current image.
 
 For example:
 
 `win2012-r2-CURRENT`
+`win2012-r2-01-01-2019`
 
 ## Feedback
 
