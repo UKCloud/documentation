@@ -20,6 +20,15 @@ UKCloud's Identity & Access Management API (IDAM) enables you to manage user acc
 
 Full documentation for the IDAM API is available on [SwaggerHub](https://app.swaggerhub.com/apis/ukcloud/idam-service).
 
+## Platforms using IDAM
+
+IDAM is in use on the UKCloud for OpenStack plaforms, and for newer UKCloud for OpenShift deployments.
+
+An OpenShift deployment using IDAM can be identified by looking at the start of the managment domain URL:
+
+- ocp.####-######... - IDAM OpenShift deployment
+- ocp.#-#-#-###### - non-IDAM OpenShift deployment
+
 ## Typical usage
 
 To add a user to a permission group, you first need to list the users and permission groups to find the IDs for both. Then you can use those IDs to add the user to the appropriate group.
