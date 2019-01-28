@@ -43,6 +43,8 @@ The following are examples of the core tasks that Smart Hands can be requested f
 
 - Basic troubleshooting of customer equipment
 
+Please note, the Smart Hands service is only available within the Datacentre halls and  cannot be used for transporation of hardware between different areas of the Datacentre. UKCloud can assist with uninstalling and moving equipment to loading bays but cannot transport between different areas of the Datacentre. 
+
 ## How do I use Smart Hands?
 
 ### Step 1: Raise a Service Request/Incident
