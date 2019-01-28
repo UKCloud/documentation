@@ -149,9 +149,12 @@ No, we don't currently offer this service. Customers can implement their own DNS
 
 Yes, UKCloud provides a Janet connection provided free for our customers. In order to utilise this network, you will need to be authorised by Jisc. There is no inbound or outbound usage charge for using the Janet connection to access the UKCloud platform.
 
-## Are there bandwidth restrictions on virtual routing and forwarding (VRF)?
+## Is there a bandwidth restriction on a VRF?
 
-No, there are no restrictions applied on bandwidth over VRF. UKCloud capacity manage the VRF network in order to ensure our customers can consume as much as required. However, we do operate a Networks Fair Use Policy which protects all our users of the networks from any spikes  or unpredictable network loads. If you believe that you may require large amounts of bandwidth, please let us know in advance so we can proactively increase bandwidth in order to avoid having to lean on any policy to protect all our users. 
+Like all our connectivity options, there is no set bandwidth cap on our VRFs, and we will capacity manage our VRF network in order to ensure our customers can consume as much as required, however we do operate a Networks Fair Use Policy which protects all our users of the networks from being impacted by particularly spiky/unpredictable network loads. To that end, if a customer thinks that they will use large amounts of bandwidth we always appreciate a heads-up so we can proactively increase bandwidth of the network in order to avoid having to lean on any policy to protect all our users.
+
+Outside of the VRF, customers may need to consider the impact of things such as IPSec VPN tunnels over the VRF, which decrease the bandwidth of the network because of Edge throughput limits.
+
 
 ## Feedback
 
