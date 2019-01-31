@@ -43,7 +43,7 @@ Distributed Firewall | &check; | &check;
 Distributed Logical Router | &check; | &check;
 L2 VPN |  | &check;
 
-Advanced networking bundles are charged per VM/per hour. For more information, see the [*UKCloud Pricing Guide*] on the Digital Marketplace.
+Advanced networking bundles are charged per VM/per hour. For more information, see the [*UKCloud Pricing Guide*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/113527390782629-pricing-document-2018-11-14-1427.pdf) on the Digital Marketplace.
 
 ## Feedback
 
