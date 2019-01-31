@@ -40,6 +40,8 @@
     href: conn-ref-internet-permitted-ports.md
   - name: Internet access to the Elevated OFFICIAL security domain
     href: conn-ref-internet-access-elevated.md
+  - name: Networks fair use policy
+    href: conn-ref-networks-fair-use.md
   - name: Protection for Distributed Denial of Service (DDoS) attacks
     href: conn-ref-ddos-protection.md
   - name: PSN Assured - permitted standard ports

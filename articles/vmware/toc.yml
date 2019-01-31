@@ -48,8 +48,12 @@
     href: vmw-how-change-ipsec-vpn-api.md
   - name: Configure a Distributed Firewall
     href: vmw-how-configure-distributed-firewall.md
+  - name: Configure a Distributed Logical Router
+    href: vmw-how-configure-distributed-logical-router.md
   - name: Configure a load balancer
     href: vmw-how-configure-load-balancer.md
+  - name: Configure an L2 VPN
+    href: vmw-how-configure-l2-vpn.md
   - name: Configure IPsec VPN
     href: vmw-how-configure-ipsec-vpn.md
   - name: Connect to the UKCloud Windows Server Update Services (WSUS)
@@ -138,6 +142,8 @@
   items:
   - name: Access to virtual machines on the UKCloud platform
     href: vmw-ref-access-to-vms.md
+  - name: Advanced networking options
+    href: vmw-ref-advanced-networking.md
   - name: Availability of Virtual Hardware version 11
     href: vmw-ref-virtual-hardware-v11.md
   - name: Blocked vCloud Director API calls
