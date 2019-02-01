@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure Stack portal overview Video | UKCloud Ltd
+title: Microsoft Azure Stack portal overview video | UKCloud Ltd
 description: Shows a video that provides an overview of the Microsoft Azure Stack portal
 services: azure-stack
 author: Sue Highmoor
