@@ -93,7 +93,7 @@ For more information, see the [*Synchronous Protection Service Scope*](vmw-sco-s
 
 ### Will I be charged for using Snapshot Protection if I opt for Synchronous Protection?
 
-Synchronous Protection with Geo-resilience comes with 14-day Snapshot Protection as standard, with the option for 28-day Snapshot Protection free of charge. Please note that you will be charged for any storage consumed associated with the Snapshot Protection option if enabled.
+Synchronous Protection with Geo-resilience comes with 14-day Snapshot Protection as standard when selected, with the option for 28-day Snapshot Protection free of charge. Please note that you will be charged for any storage consumed associated with the Snapshot Protection option if enabled.
 
 ## Feedback
 
