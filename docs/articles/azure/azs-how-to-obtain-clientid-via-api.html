@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to obtain your Client ID via the API for Azure Stack - REST API | UKCloud Knowledge Centre </title>
+    <title>How to obtain your Azure Stack Client ID using the REST API | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to obtain your Client ID via the API for Azure Stack - REST API | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to obtain your Azure Stack Client ID using the REST API | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.40.9.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -91,19 +91,19 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-obtain-client-id-via-the-rest-api-for-azure-stack">How to obtain Client ID via the REST API for Azure Stack</h1>
+<h1 id="how-to-obtain-your-azure-stack-client-id-using-the-rest-api">How to obtain your Azure Stack Client ID using the REST API</h1>
 
 <h2 id="overview">Overview</h2>
-<p>The client ID for your application can be found if you know the Application Name and this name will be used for the query to obtain its ID. As with every other API query in Azure we will need to authenticate first.</p>
-<p>In order to authenticate with any API Endpoints you will need to obtain and Access Token. To get the Client ID we will have to authenticate with graphEndpoint as our resource.</p>
-<h2 id="management-endpoints">Management Endpoints</h2>
+<p>The Client ID for your application can be found if you know the application name and this name will be used for the query to obtain its ID. As with every other API query in Azure we will need to authenticate first.</p>
+<p>In order to authenticate with any API endpoints you will need to obtain an access token. To get the Client ID we will have to authenticate with graphEndpoint as our resource.</p>
+<h2 id="management-endpoints">Management endpoints</h2>
 <p>Management Endpoint for Administrators is <a href="https://adminportal.frn00006.azure.ukcloud.com">https://adminportal.frn00006.azure.ukcloud.com</a></p>
-<h2 id="obtain-additional-endpoints">Obtain additional Endpoints</h2>
+<h2 id="obtain-additional-endpoints">Obtain additional endpoints</h2>
 <p>Query <a href="https://adminportal.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2015-01-01">https://adminportal.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2015-01-01</a></p>
 <h2 id="authentication">Authentication</h2>
-<h3 id="obtain-access-token">Obtain Access Token</h3>
-<p>In order to obtain Access Token you will need to create a request body and use Rest API POST against Authentication/Login Endpoint.</p>
-<h3 id="request-body-fields">Request Body Fields</h3>
+<h3 id="obtain-access-token">Obtain access token</h3>
+<p>In order to obtain an access token you will need to create a request body and use Rest API POST against Authentication/Login Endpoint.</p>
+<h3 id="request-body-fields">Request Body fields</h3>
 <table>
 <thead>
 <tr>
@@ -138,14 +138,14 @@
 </tr>
 </tbody>
 </table>
-<h3 id="request-authentication-endpoint">Request Authentication Endpoint</h3>
+<h3 id="request-authentication-endpoint">Request Authentication endpoint</h3>
 <p>The Authentication/Login Endpoint can be https://login.microsoftonline.com/{tenant id}/oauth2/token or https://login.windows.net/{tenant id}/oauth2/token</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>You can use the  {tenant id}  value in the path of the request to control who can sign into the application.</p>
 <p>The allowed values are tenant identifiers, for example,  8eaef023-2b34-4da1-9baa-8bc8c9d6a490  or  contoso.onmicrosoft.com  or  common  for tenant-independent tokens.</p>
 </div>
-<h3 id="how-to-obtain-access-token-request-body-and-authentication-information">How to obtain Access Token Request Body and Authentication Information</h3>
+<h3 id="how-to-obtain-access-token-request-body-and-authentication-information">How to obtain access token Request Body and Authentication Information</h3>
 <ol>
 <li><p>Grant_type</p>
 <ul>
@@ -295,7 +295,7 @@ iIsInN1YiI6ImFSeHhiX01YYU5NOG1KS2p3VzlzWnNvV0xkZnF5bF9jYmJVcEc4aWNHX28iLCJ0aWQiO
 3NvZnQuY29tIiwidXBuIjoiYWRtaW5AY2hhcmxpZWpsbGV3ZWxseW5nbWFpbC5vbm1pY3Jvc29mdC5jb20iLCJ2ZXIiOiIxLjAifQ.
 }
 </code></pre>
-<h2 id="api-queries">API Queries</h2>
+<h2 id="api-queries">API queries</h2>
 <ol>
 <li><p>Append Token</p>
 <p>Once you obtained your Access Token for Graph API Endpoint you will need to append it to each of your API requests.
