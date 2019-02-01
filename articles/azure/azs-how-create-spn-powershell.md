@@ -22,7 +22,7 @@ It will guide you through the creation of:
 
 - an Azure application
 
-- a service principal name
+- a Service Principal name
 
 - role assignment
 
