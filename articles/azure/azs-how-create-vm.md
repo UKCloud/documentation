@@ -5,11 +5,11 @@ services: azure-stack
 author: Sue Highmoor
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Create a virtual machine
+toc_sub2: Create a Virtual Machine
 toc_sub3:
 toc_sub4:
 toc_title: Create a virtual machine - Portal
-toc_fullpath: Users/How To/Create a virtual machine/azs-how-create-vm.md
+toc_fullpath: Users/How To/Create a Virtual Machine/azs-how-create-vm.md
 toc_mdlink: azs-how-create-vm.md
 ---
 

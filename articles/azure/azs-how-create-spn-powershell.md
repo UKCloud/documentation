@@ -1,22 +1,22 @@
 ---
-title: How to create a Service Principal Name for Azure Stack - PowerShell
-description: Learn how to create SPN to manage your Azure Stack using PowerShell
+title: How to create a service principal name for Azure Stack using PowerShell
+description: Learn how to create a service principal name (SPN) to manage your Azure Stack using PowerShell
 services: azure-stack
 author: Chris Black
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Service Principal Name
+toc_sub2: Create a Service Principal Name
 toc_sub3:
 toc_sub4:
-toc_title: Create a Service Principal Name for Azure Stack - PowerShell
-toc_fullpath: Users/How To/azs-how-create-spn-powershell.md
+toc_title: Create a service principal name - PowerShell
+toc_fullpath: Users/How To/Create a Service Principal Name/azs-how-create-spn-powershell.md
 toc_mdlink: azs-how-create-spn-powershell.md
 ---
 
-# How to create a Service Principal Name for Azure Stack - PowerShell
+# How to create a service principal name for Azure Stack using PowerShell
 
-This document explains how to create a Service Principal Name to manage Azure and Azure Stack using PowerShell.
+This document explains how to create a service principal name to manage Azure and Azure Stack using PowerShell.
 
 It will guide you through the creation of:
 
@@ -28,9 +28,9 @@ It will guide you through the creation of:
 
 - Permissions
 
-## What is a Service Principal Name?
+## What is a service principal name?
 
-An Azure Service Principal Name (SPN) is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.
+An Azure service principal name (SPN) is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.
 
 To log in and manage your resources via SPN you'll need to create an Azure application and then assign SPN to it. Only then will you be able to perform tasks against your environment.
 
@@ -58,9 +58,9 @@ Prerequisites from a Windows-based external client are:
 
 3. Create your Azure application.
 
-4. Create a new Service Principal Name for the Azure application.
+4. Create a new service principal name for the Azure application.
 
-5. Assign the appropriate **Role** to your Service Principal Name.
+5. Assign the appropriate **Role** to your service principal name.
 
 6. Grant Azure AD permissions to your Azure application.
 
@@ -242,9 +242,9 @@ $OutputObject
 
 4. Create your Azure application.
 
-5. Create a new Service Principal Name for the Azure application.
+5. Create a new service principal name for the Azure application.
 
-6. Assign the appropriate **Role** to your Service Principal Name.
+6. Assign the appropriate **Role** to your service principal name.
 
 7. Log in to your Azure Stack *Subscription* using the SPN account.
 

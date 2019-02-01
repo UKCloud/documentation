@@ -1,6 +1,6 @@
 ---
-title: How to deploy and configure the Azure Stack Development Kit
-description: Deploy and configure the Azure Stack Development Kit
+title: How to deploy and configure the Azure Stack Development Kit | UKCloud Ltd
+description: Deploy and configure the Azure Stack Development Kit (ASDK)
 services: azure-stack
 author: Paul Brown
 
@@ -10,19 +10,23 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Deploy and configure the Azure Stack Development Kit
-toc_fullpath: Operators/How To/azs-how-to-deploy-asdk.md
-toc_mdlink: azs-how-to-deploy-asdk.md
+toc_fullpath: Operators/How To/azs-how-deploy-asdk.md
+toc_mdlink: azs-how-deploy-asdk.md
 ---
-# Deploy and configure the Azure Stack Development Kit
-The Azure Stack Development kit is a single server instance of Azure Stack. It is not fit for production workloads and has some subtle differences vs the real Azure Stack integrate appliance, however for most test scenarios it will suffice.
+
+# How to deploy and configure the Azure Stack Development Kit
+
+The Azure Stack Development Kit (ASDK) is a single server instance of Azure Stack. It is not fit for production workloads and has some subtle differences vs the real Azure Stack integrate appliance, however for most test scenarios it will suffice.
 
 The ASDK is used in two modes within UKCloud:
 
 * Physical hardware (pre-production) - Community support with Microsoft
+
 * Virtual servers (development and testing) - not officially supported by Microsoft
 This document covers two scenarios, building from scratch and redeploying.
 
 ## Step 1 - Hardware pre-reqs
+
 Detailed specs are here - https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-deploy
 
 |Device  |Details  |
@@ -42,6 +46,7 @@ Detailed specs are here - https://docs.microsoft.com/en-us/azure/azure-stack/azu
 **Physical Note:** The first two drives must be setup as a RAID 1, the rest passed through as a JBOD; additionally, you need to specify your VLAN as ACCESS in the CIMC
 
 ## Step 2 - Install base operating system
+
 Install Windows Server 2016 to the OS disk implementing a static IP address.
 
 **Physical Note:** This the RAID 1 disk, the following drivers must be downloaded, extracted and installed:
@@ -51,11 +56,13 @@ https://software.cisco.com/download/release.html?mdfid=286281356&softwareid=2832
 **Virtualisation Note:** VMware tools must be installed and the VMware Tools drivers must be exported onto the c:\ drive (VMwareKB), also disks have to be online and initialised as MBR
 
 ## Step 3 - Initial setup
+
 Download the appliance and prep the virtual disk (vhdx) for the ASDK.
 
 Implement the following steps from the guide: https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script
 
 * Download and extract the development kit
+
 * Prepare the development kit host
 
 **Virtualisation Note:** Before running the installer open, "C:\AzureStack_Installer\asdk-installer.ps1" and edit as follows:
@@ -66,13 +73,13 @@ Implement the following steps from the guide: https://docs.microsoft.com/en-us/a
 
 To run:
 
- ```
+ ```PowerShell
  "C:\AzureStack_Installer\asdk-installer.ps1"  | ForEach {($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object {`$====_.isboot -eq `$true}).Model -match 'null') {") -replace "====",""} | Set-Content "C:\AzureStack_Installer\asdk-installer.ps1" -force
  ```
 
  To verify:
 
- ```
+ ```PowerShell
  Select-String -Path "C:\AzureStack_Installer\asdk-installer.ps1" -pattern "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'null'\) \`{"
  ```
 The following details should be used:
@@ -93,6 +100,7 @@ Implement the following steps from the guide: https://docs.microsoft.com/en-us/a
 
 * Deploy the development kit
 
+
 The following details should be used:
 
 |Option  |Parameter  |
@@ -108,8 +116,7 @@ For some reason the driver injection does not work and you have to manually add 
 
 **Important:** 1803 install failed with the error below.
 
-```
-
+```PowerShell
 Invoke-EceAction : Type 'Deployment' of Role 'Domain' raised an exception:
 'AzS-DC01' failed to start.
 Virtual machine 'AzS-DC01' could not be started because the hypervisor is not running.
@@ -156,7 +163,7 @@ To verify run you can run systeminfo and it will show whether BIOS is set correc
 
 To fix it run from elevated command/powershell prompt:
 
-```
+```PowerShell
 BCDEDIT /Set {current} hypervisorlaunchtype auto
 ```
 Then reboot the box and conitnue the install.
@@ -178,7 +185,7 @@ cd C:\CloudDeployment\Setup
 > [!IMPORTANT]
 > If the installer cannot see any network adapters - you can install manually VMware Tools and reboot the box. It will work then.
 
-```
+```PowerShell
 E:\AzureStack_Installer\asdk-installer.ps1
  
 Initialize environment. Please wait...
@@ -196,15 +203,15 @@ Open, "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" and 
 
 To edit run:
 
- ```
+ ```PowerShell
 (gc "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1") | ForEach {$_ -replace  "\`$physicalMachine.IsVirtualMachine \| Should Be \`$false","`$physicalMachine.IsVirtualMachine | Should Be `$true"} | Set-Content “C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1” -Force
 ```
 And then run:
-```
+```PowerShell
 (gc "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1") | ForEach {$_ -replace "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine", "(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0"} | Set-Content “C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1” -Force
  ```
  To verify run:
- ```
+ ```PowerShell
 Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -pattern "\`$physicalMachine.IsVirtualMachine \| Should Be \`$true"
 Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -pattern "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan 0"
  ```

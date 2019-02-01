@@ -8,12 +8,12 @@ toc_sub1: Service Scope
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for Microsoft Azure Service Scope
+toc_title: UKCloud for Microsoft Azure service scope
 toc_fullpath: Users/Service Scope/asz-sco.md
 toc_mdlink: asz-sco.md
 ---
 
-# UKCloud for Microsoft Azure Service Scope
+# UKCloud for Microsoft Azure service scope
 
 ## About this document
 

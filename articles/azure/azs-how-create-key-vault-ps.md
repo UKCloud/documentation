@@ -1,6 +1,6 @@
 ---
-title: How to create a Key Vault - PowerShell | UKCloud Ltd
-description: Provides help for creating a Key Vault on UKCloud for Microsoft Azure
+title: How to Create a key vault - PowerShell | UKCloud Ltd
+description: Provides help for creating a key vault on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
 toc_rootlink: Users
@@ -8,12 +8,12 @@ toc_sub1: How To
 toc_sub2: Create a Key Vault
 toc_sub3:
 toc_sub4:
-toc_title: Create a Key Vault - PowerShell
+toc_title: Create a key vault - PowerShell
 toc_fullpath: Users/How To/Create a Key Vault/azs-how-create-key-vault-ps.md
 toc_mdlink: azs-how-create-key-vault-ps.md
 ---
 
-# How to create a Key Vault in Azure Stack with PowerShell
+# How to create a key vault in Azure Stack with PowerShell
 
 ## Overview
 
@@ -25,7 +25,7 @@ The following process shows you how to setup a vault within Azure Stack's Key Va
 
 Ensure your PowerShell environment is setup as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md).
 
-## Creating a new Key Vault
+## Creating a new key vault
 
 > [!IMPORTANT]
 > Enter details below to provide values for the variables in the scripts in this article:
@@ -57,7 +57,7 @@ $RGName = "<output form="resourcegroup" name="result" style="display: inline;">&
 New-AzureRmKeyVault -VaultName "<output form="vaultname" name="result" style="display: inline;">&lt;Vault Name&gt;</output>" -ResourceGroupName $RGName -Location "frn00006"
 </code></pre>
 
-This will create a Key Vault in the specified resource group.
+This will create a key vault in the specified resource group.
 
 ## Storing a secret in the vault
 
@@ -76,7 +76,7 @@ $Secret.Id
 $Secret.SecretValue
 </code></pre>
 
-The secret you created will be stored in your Key Vault.
+The secret you created will be stored in your key vault.
 
 ## Extracting a Secret from the vault
 

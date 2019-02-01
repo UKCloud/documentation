@@ -1,20 +1,20 @@
 ---
-title: How to deploy a SQL template to Azure Stack - PowerShell
-description: Learn how to deploy a SQL template to Azure Stack using PowerShell
+title: How to deploy an SQL template to Azure Stack using PowerShell | UKCloud Ltd
+description: Learn how to deploy an SQL template to Azure Stack using PowerShell
 services: azure-stack
 author: Chris Black
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Templates
+toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Deploy a SQL template to Azure Stack - PowerShell
+toc_title: Deploy an SQL template to Azure Stack - PowerShell
 toc_fullpath: Users/How To/azs-how-deploy-sql-template-powershell.md
 toc_mdlink: azs-how-deploy-sql-template-powershell.md
 ---
 
-# How to deploy a SQL template to Azure Stack - PowerShell
+# How to deploy an SQL template to Azure Stack using PowerShell
 
 This document explains how to deploy SQL Always On Cluster using ARM Template to Azure Stack using PowerShell.
 
@@ -40,7 +40,7 @@ Prerequisites from a Windows-based external client are:
 
 - Active Azure *Subscription* (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)
 
-## Official Documentation
+## Official documentation
 
 - [Azure Stack ARM Templates Overview](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-arm-templates)
 
@@ -309,7 +309,7 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 > Details :
 > ```
 
-## Known Issues
+## Known issues
 
 - Sometimes Domain Account does not get correctly created and you will get the following error:
 
@@ -324,7 +324,7 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 
   If that happens, you can just **redeploy** and it should be fine.
 
-## Troubleshooting DSC Extensions
+## Troubleshooting DSC extensions
 
 - [PowerShell DSC Extension](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-overview)
 
@@ -345,4 +345,4 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
   
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.  
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.

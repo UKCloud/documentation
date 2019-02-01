@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting - UKCloud for Microsoft Azure | UKCloud Ltd
+title: UKCloud for Microsoft Azure troubleshooting | UKCloud Ltd
 description: This article describes some of the issues you may encounter when using UKCloud for Microsoft Azure
 services: azure-stack
 author: Dan Baker
@@ -8,12 +8,12 @@ toc_sub1: Reference
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for Microsoft Azure Troubleshooting
+toc_title: UKCloud for Microsoft Azure troubleshooting
 toc_fullpath: Users/Reference/azs-ref-troubleshooting.md
 toc_mdlink: azs-ref-troubleshooting.md
 ---
 
-# UKCloud for Microsoft Azure Troubleshooting
+# UKCloud for Microsoft Azure troubleshooting
 
 ## Overview
 

@@ -1,5 +1,5 @@
 ---
-title: Configure the Azure Stack user's PowerShell environment for UKCloud | Based on Microsoft Docs
+title: How to configure the Azure Stack user's PowerShell environment for UKCloud | Based on Microsoft Docs
 description: Configure the Azure Stack user's PowerShell environment
 services: azure-stack
 author: Chris Black
@@ -14,7 +14,7 @@ toc_fullpath: Users/How To/azs-how-configure-powershell-users.md
 toc_mdlink: azs-how-configure-powershell-users.md
 ---
 
-# Configure the Azure Stack user's PowerShell environment
+# How to configure the Azure Stack user's PowerShell environment
 
 As an Azure Stack user, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates, etc. This topic is scoped to use with the user environments only. In order to interact with Azure Stack PowerShell, you will need to set up your environment. To do so follow the below guide:
 
