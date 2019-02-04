@@ -1,6 +1,6 @@
 ---
 title: GeoDrive Client 2.0 overview video | UKCloud Ltd
-description: Shows a video that provides an overview of the CIFS-ECS Tool
+description: Shows a video that provides an overview of the GeoDrive Client 2.0
 services: cloud-storage
 author: Sue Highmoor
 
@@ -14,9 +14,9 @@ toc_fullpath: Videos/cs-vid-geodrive2-client-overview.md
 toc_mdlink: cs-vid-geodrive2-client-overview.md
 ---
 
-# GeoDrive Client 2.0 overview video
+# The GeoDrive Client 2.0 overview video
 
-The following video provides an overview of the The GeoDrive Client 2.0 and its user interface, highlighting key sections of the UI and useful features.
+The following video provides an overview of the GeoDrive Client 2.0 and its user interface, highlighting key sections of the UI and useful features.
 
 <iframe src="https://player.vimeo.com/video/300264583?color=34d9c3" width="864" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
