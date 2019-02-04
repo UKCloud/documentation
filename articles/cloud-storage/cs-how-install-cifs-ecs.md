@@ -26,7 +26,7 @@ If you require a fully-integrated cloud gateway appliance with features like adv
 
 ## Use cases
 
-You can use The GeoDrive 2.0 Client to:
+You can use the GeoDrive 2.0 Client to:
 
 - Expose UKCloud Cloud Storage for native access on Windows through a centralised server With the GeoDrive 2.0 Client installed on a centralised Windows Server installation.
 
@@ -40,7 +40,7 @@ The GeoDrive 2.0 Client offers a single caching option:
 
 **Stub**: files are initially stored locally and replaced with a stub, or shortcut, after a period of time. When you access a file that has been stubbed, it will be retrieved from the cloud. This offers the best scalability, as you can use a virtually unlimited amount of cloud storage.
 
-## Installing The GeoDrive 2.0 Client
+## Installing the GeoDrive 2.0 Client
 
 1. Navigate to the following URL to download the ZIP file that contains the [The GeoDrive 2.0 Client installer](https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/CIFS-ECS.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1574424921&Signature=sPorRMvkR5S8lLn1D1tmahyzK3g%3D).
 
