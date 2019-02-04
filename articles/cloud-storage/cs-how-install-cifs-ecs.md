@@ -1,6 +1,6 @@
 ---
 title: How to install the GeoDrive Client 2.0| UKCloud Ltd
-description: Installation Guide for GeoDrive Client 2.0
+description: Installation Guide for the GeoDrive Client 2.0
 services: cloud-storage
 author: Dan Baker
 toc_rootlink: How To
@@ -15,7 +15,7 @@ toc_mdlink: cs-how-install-geodrive2-client.md
 
 # How to install the GeoDrive Client 2.0
 
-## What is The GeoDrive 2.0 Client?
+## What is the GeoDrive 2.0 Client?
 
 The GeoDrive 2.0 Client is a free application that runs on Windows and Windows Server, exposing UKCloud Cloud Storage as file systems. It’s designed as an easy way to use object storage by enabling Windows applications to interface with Cloud Storage servers using the popular S3 REST API.
 
