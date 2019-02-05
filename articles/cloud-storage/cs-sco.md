@@ -67,7 +67,7 @@ Users can access, manage and view their Cloud Storage service, in any of the fol
 
 - **Storage Gateways.** These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see the appropriate Cloud Storage Gateways Knowledge Centre article:
 
-    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
     - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
@@ -139,7 +139,7 @@ You can request a migration through a Service Request. Migrations may be between
 
 Within 1 day of accepting an order (shorter deployment times are typically achieved and can be prioritised upon request), UKCloud will create the customer's Primary Administrator account and send a Welcome Pack which includes the URL for the UKCloud Customer Portal, and the getting started guide.
 
-The customer can then use these details to configure their application (for example GeoDrive, CIFS-ECS, Cloud Tiering Appliance and Documentum) or access Cloud Storage via the API to begin using the service.
+The customer can then use these details to configure their application (for example GeoDrive, Cloud Tiering Appliance and Documentum) or access Cloud Storage via the API to begin using the service.
 
 UKCloud has created a number of videos, help guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the Knowledge Centre, accessed via the UKCloud Portal.
 
@@ -176,7 +176,7 @@ The following documents contain more information about Cloud Storage and the ser
 
 - Cloud Storage Gateways
 
-    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
     - [*How to install CloudArray*](cs-how-install-cloudarray.md)
     

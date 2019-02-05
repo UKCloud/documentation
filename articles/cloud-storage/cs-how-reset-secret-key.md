@@ -67,7 +67,7 @@ This guide has shown you how to reset your Cloud Storage secret key. For informa
 
 - Cloud Storage Gateways
 
-    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
     - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 

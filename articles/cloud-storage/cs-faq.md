@@ -2,7 +2,7 @@
 title: Cloud Storage FAQs | UKCloud Ltd
 description: Frequently asked questions for Cloud Storage
 services: cloud-storage
-author: Matt Warner
+author: Dan Baker
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
