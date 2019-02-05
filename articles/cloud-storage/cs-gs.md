@@ -403,7 +403,7 @@ In this Getting Started Guide, you've learned the basics about the Cloud Storage
 
 ## Related videos
 
-- [*GeoDrive 2.0 overview video*](cs-vid-geodrive2-client-overview)
+- [*GeoDrive 2.0 overview video*](cs-vid-geodrive2-client-overview.md)
 
 ## Glossary
 
