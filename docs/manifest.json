@@ -1282,7 +1282,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-gs.html",
-          "hash": "sUvBXKJL41omr44tiAIKuA=="
+          "hash": "ttsgKmvfcWzdBkMYOrS4CQ=="
         }
       },
       "is_incremental": false,
@@ -1294,19 +1294,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-create-user.html",
-          "hash": "XA53LLdmLKWv6XVNVy9F5A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/cloud-storage/cs-how-install-cifs-ecs.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/cloud-storage/cs-how-install-cifs-ecs.html",
-          "hash": "RpDa7bDu7rLKYET8izId5Q=="
+          "hash": "WX+z4uxEhfiogovOmbBMvA=="
         }
       },
       "is_incremental": false,
@@ -1318,7 +1306,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-install-cloudarray.html",
-          "hash": "G5VUIz3wXhejY3r2+W2VQQ=="
+          "hash": "7yo1kB3gWF6e0Lb4NQtAzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/cloud-storage/cs-how-install-geodrive2-client.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cloud-storage/cs-how-install-geodrive2-client.html",
+          "hash": "69doI7nE/r3fOrxiLsCKoA=="
         }
       },
       "is_incremental": false,
@@ -1330,7 +1330,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-reset-secret-key.html",
-          "hash": "hZ/Qi8kYHsbq8Dphi/552A=="
+          "hash": "sK1s/206jN1tPiZ4WHQYkA=="
         }
       },
       "is_incremental": false,
@@ -1342,7 +1342,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-use-ecs-python-boto.html",
-          "hash": "LPLdzxEo5KxkGLaGcM+Nqg=="
+          "hash": "zKFXPlXu8lOdd9bZwaYOPg=="
         }
       },
       "is_incremental": false,
@@ -1354,7 +1354,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-use-file-browsers.html",
-          "hash": "QulWDAn7NktgdEJBk2nyZA=="
+          "hash": "7TrMrnlycIm4xZ7xCsRHXw=="
         }
       },
       "is_incremental": false,
@@ -1366,7 +1366,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-view-info-portal.html",
-          "hash": "mQyMztd0fjz6czQJriwzbw=="
+          "hash": "t5/bK2zoK3DXAHFOWavVvA=="
         }
       },
       "is_incremental": false,
@@ -1390,7 +1390,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-sco.html",
-          "hash": "093zwkdUbU49j/sdO9Tx2Q=="
+          "hash": "fPgYMYbG1qfMDhLKtP9kfA=="
         }
       },
       "is_incremental": false,
@@ -1398,11 +1398,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/cloud-storage/cs-vid-cifs-ecs-overview.md",
+      "source_relative_path": "articles/cloud-storage/cs-vid-geodrive2-client-overview.md",
       "output": {
         ".html": {
-          "relative_path": "articles/cloud-storage/cs-vid-cifs-ecs-overview.html",
-          "hash": "HJuENxgzdOjZp6xiyHCwsg=="
+          "relative_path": "articles/cloud-storage/cs-vid-geodrive2-client-overview.html",
+          "hash": "Y0cJoh6zIJ/b0egPS3WySw=="
         }
       },
       "is_incremental": false,
@@ -2151,7 +2151,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/toc.html",
-          "hash": "3qea5tkMsZMs4uJaxGMyXQ=="
+          "hash": "Dz+ZHpI8oFUMgQgS+ag62Q=="
         }
       },
       "is_incremental": false,
