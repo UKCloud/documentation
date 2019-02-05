@@ -42,7 +42,7 @@ The GeoDrive 2.0 Client offers a single caching option:
 
 ## Installing the GeoDrive 2.0 Client
 
-1. Navigate to the following URL to download the ZIP file that contains the [The GeoDrive 2.0 Client installer](https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/CIFS-ECS.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1574424921&Signature=sPorRMvkR5S8lLn1D1tmahyzK3g%3D).
+1. Navigate to the following URL to download the ZIP file that contains the [The GeoDrive 2.0 Client installer](https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/GeoDrive.2_x64.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1578565704&Signature=kVEbb9%2B%2FD0yJOgErtG9CAdsWqb0%3D).
 
 2. Extract and run the setup launcher from the ZIP file.
 
