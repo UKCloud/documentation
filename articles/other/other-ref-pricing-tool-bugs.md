@@ -22,11 +22,17 @@ This is an accompanying article to [*How to use the UKCloud Pricing Estimation T
 
 The current version of the tool:
 
-- **Windows version**: 10.2.8
+- **Windows version**: 10.3.1
 
-- **Mac version**: 10.2.8
+- **Mac version**: 10.3.1
 
-## Known issues
+## Pricing Estimation Tool v10.3.1 Changelog
+
+Fixed all known issues listed below.
+
+- **No known issues with 10.3.1.**
+
+## Known issues with v10.2.8 (Previous Version)
 
 ### Windows
 
