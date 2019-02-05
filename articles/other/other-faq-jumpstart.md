@@ -45,7 +45,7 @@ Jumpstart is a flexible service which can be used for a wide range of projects. 
 
 UKCloud have a team of consultants with skillsets aligned to the services they offer which forms the Jumpstart service
 
-- Consultant DevOps Engineers
+- Consultant DevOps Engineers:
 
   - Proficient in “cloud native” technologies
   
@@ -61,7 +61,7 @@ UKCloud have a team of consultants with skillsets aligned to the services they o
   
   - Linux
   
-- Consultant Cloud Engineers
+- Consultant Cloud Engineers:
   
   - Expert in VMware, Oracle, Azure technologies and Cloud Storage
   
@@ -92,7 +92,7 @@ Jumpstart is designed to provide additional skills and resources during the buil
 
 For existing customers, you can raise a ticket in the UKCloud portal requesting access to Jumpstart services. If you are not already a UKCloud customer, Jumpstart should be discussed first with an Account Director or Cloud Architect.
 
-## What do I need to do before my project can start?
+### What do I need to do before my project can start?
 
 It is important that any pre-requisites such as the Cloud environment deployment, connectivity and assurance activities are completed prior to a Jumpstart engineer commencing work. Your Jumpstart engineer will discuss these pre-requisites during the initial kick-off call / meeting. A “pre-flight checklist” will be created to track progress against these activities.
 
