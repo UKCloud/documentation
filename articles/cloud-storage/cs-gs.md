@@ -397,7 +397,7 @@ In this Getting Started Guide, you've learned the basics about the Cloud Storage
 
 - Cloud Storage Gateways
 
-  - [*How to install the GeoDrive Client 2.0](cs-how-install-geodrive2-client.md)
+  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
   - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
