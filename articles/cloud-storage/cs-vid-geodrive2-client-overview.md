@@ -9,12 +9,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: The GeoDrive Client 2.0 overview
+toc_title: GeoDrive Client 2.0 overview
 toc_fullpath: Videos/cs-vid-geodrive2-client-overview.md
 toc_mdlink: cs-vid-geodrive2-client-overview.md
 ---
 
-# The GeoDrive Client 2.0 overview video
+# GeoDrive Client 2.0 overview video
 
 The following video provides an overview of the GeoDrive Client 2.0 and its user interface, highlighting key sections of the UI and useful features.
 
