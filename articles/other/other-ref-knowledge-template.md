@@ -13,6 +13,8 @@ toc_fullpath: Reference/other-ref-knowledge-template.md
 toc_mdlink: other-ref-knowledge-template.md
 ---
 
+This is an example of an edit.
+
 # UKCloud Knowledge Centre article template
 
 The first thing in your article after the metadata should be the main article title. Use the following to help you decide on the title for your article
