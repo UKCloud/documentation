@@ -146,48 +146,52 @@ To install and configure S3 Browser:
     > [!NOTE]
     > Not all S3 features are implemented by the ECS S3 compatible API, so some functionality may not work. However, common file operations (create, read, write and delete) all work well.
 
-## Internet Browser Access
+## Internet browser access
 
-This section takes you through installing and configuring browser access that enables users to browse the contents of Cloud Storage using their web browser.
+This section takes you through installing and configuring browser access that enables users to browse the contents of Cloud Storage using a web browser.
 
-An EMC created HTML5 based application can be installed to your Atmos bucket, which generates a URL that enables customers to share with users who require access to cloud storage.
+An HTML5 application, created by EMC, that you can install in one of your Atmos buckets to generate a URL that enables you to share the application with users who require access to cloud storage.
 
    > [!NOTE]
-   > If you have multiple buckets under the same endpoint these can all be accessed from a single URL, however if you have multiple buckets hosted in both Cloud Storage regions, you will need to install the application on both regions and access the relevent buckets using the relevent URL.
+   > If you have multiple buckets under the same endpoint, you can provide access to them all from a single URL. However, if you have multiple buckets hosted in both Cloud Storage regions, you'll need to install the application in both regions and access is via a different URL for each region.
 
 S3 extensions are also available for browsers, but none of them include the functionality to customise the server host name, which is a requirement for connecting to Cloud Storage. If we find S3 browser extensions that offer this functionality in the future, we'll update this article.
 
-### Atmos HTML5 Application
-
+### Atmos HTML5 application
+   >
    > [!NOTE]
    > For installation and initial configuration of the Atmos HTML5 application, you will need the following Prerequisite information:
+   >
    > Atmos Access Key - in the form of SubtennantID/User
+   >
    > Atmos Secret Key - Shared Secret Key
-   > A folder within an existing bucket or new bucket to host the GUI files e.g. /<bucket_name>/HTML5UI or /HTML5UI
+   >
+   > A folder within an existing bucket or new bucket to host the GUI files, for example /<bucket_name>/HTML5UI/ or /HTML5UI/
 
-To install and configure the Atmos HTML5 application on windows:
+To install and configure the Atmos HTML5 application.
 
-1. Download and extract the [Atmos HTML5 application](INSERT URL HERE).
+1. Download and extract the [Atmos HTML5 application](https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/AtmosHTML5.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1575471403&Signature=49Xss9swLLmSPmkAyruywkscUas%3D).
 
-2. Open a command prompt and navigate to the extracted files and run the following command: upload.bat WebContent\main.html /<bucket_name>/<optional_path>/
+2.  a. On Windows: Open a command prompt and navigate to the extracted files and run the following command: `upload.bat WebContent\main.html /<bucket_name>/<optional_path>/`
+    b. On Linux: Open a terminal prompt or from the CLI, navigate to the extracted files and run the following command: `upload.sh WebContent\main.html /<bucket_name>/<optional_path>/`
 
-3. The installer script will run and prompt for the following information.
+3. The installer script will run and prompt for the following information,
 
-    a. Atmos host name, which is the UKCloud endpoint URL for your selected storage bucket e.g. atmos.cas.frn00006.ukcloud.com.
+    a. Atmos host name, which is the UKCloud endpoint URL for your selected storage bucket for example `atmos.cas.frn00006.ukcloud.com`
 
-    b. Atmos port - Please enter 443.
+    b. Atmos port - Enter 443.
 
-    c. Atmos UID - Please enter your selected storage bucket's Atmos access key e.g. a554f348g57f48729c0247r9730e29a1/10-10-10-89431b-1.
+    c. Atmos UID - Eenter your selected storage bucket's Atmos access key for example `a554f348g57f48729c0247r9730e29a1/10-10-10-89431b-1`
 
     d. Atmos secret - Please enter your selected storage bucket's shared secret key.
 
-4. Once the information has been added the installer will connect to the bucket and upload the files to the requested folder. Once the script has finished it will give you a URL output that you should copy to your clipboard and keep it safe.
+4. When you have provided all the required information, the installer will connect to the bucket and upload the files to the requested folder. Once the script has finished, it will output a URL that you should copy to your clipboard and then keep somewhere safe.
 
-5. Enter the generated URL into your browser and when connecting for the first time, the application will prompt for you to specify an account UID and Shared secret for the account that you want to access using the GUI. Once the UID and secret have been entered, you can test the credentials using the test button, and then click OK to add them and access the bucket.
+5. Enter the generated URL into your browser and, when connecting for the first time, the application will prompt you to specify an account UID and shared secret for the account that you want to access. After you enter the UID and secret, you can test the credentials using the test button. If the test is successful, click OK to add the credentials to the application and you can then access the bucket.
 
     ![Atmos HTML5 Add account interface](images/cs-file-browsers-html5-2.png)
 
-6. Should you wish to add additional accounts that are located at the same Cloud storage endpoint, they can be added to the GUI using the COG icon in the top right have corner of the GUI.
+6. If you want to add more cloud storage accounts that are located at the same Cloud Storage endpoint, you can add them to the application using the cog icon in the top right-hand corner.
 
 7. You can now:
 
@@ -203,7 +207,7 @@ To install and configure the Atmos HTML5 application on windows:
 
 ## Next steps
 
-This guide has shown you how to browse Cloud Storage using an application. For more information about how to use the service, see the following articles:
+This article has shown you how to browse Cloud Storage buckets using various different applications. For more information about how to use the service, see the following articles:
 
 - [*Getting Started Guide for Cloud Storage*](cs-gs.md)
 
