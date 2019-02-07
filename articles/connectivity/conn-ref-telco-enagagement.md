@@ -17,17 +17,17 @@ toc_mdlink: conn-ref-telco-enagagement.md
 
 ## Overview
 
-The purpose of this document is to outline the engagement process, demarcation points and the responsibilities of all parties involved in the provisioning of connectivity into UKCloud's datacentres using the HybridConnect service provided by UKCloud. This document should be attached to any order made with telco providers to ensure that all parties are of the same understanding with regards to implementation.
+The purpose of this document is to outline the engagement process, demarcation points and the responsibilities of all parties involved in the provisioning of connectivity into UKCloud's datacentres using the HybridConnect and CrownConnect services provided by UKCloud. This document should be attached to any order made with telco providers to ensure that all parties are of the same understanding with regards to implementation.
 
-HybridConnect enables customers to bring in their own MPLS, leased lines or public network connectivity into the UKCloud datacentres. It can be paired with Cloud Enablement -- the colocation of network attached devices (firewalls, VPN concentrators etc) to enable the overlay of encryption technologies on the connectivity.
+HybridConnect and CrownConnect enables customers to bring in their own MPLS, leased lines or public network connectivity into the UKCloud datacentres. These can be paired with Cloud Enablement -- the colocation of network attached devices (firewalls, VPN concentrators etc) to enable the overlay of encryption technologies on the connectivity.
 
 ## High level process
 
-To facilitate a HybridConnect order, UKCloud expects that:
+To facilitate a HybridConnect or CrownConnect order, UKCloud expects that:
 
 1) The end customer or partner will order the connection directly with the service provider that they wish to contract with
 
-2) At the same time, the customer or partner will raise a service request through the UKCloud portal to make UKCloud support aware of the need for HybridConnect
+2) At the same time, the customer or partner will raise a service request through the UKCloud portal to make UKCloud support aware of the need for HybridConnect or CrownConnect
 
 3) UKCloud will provide information where needed to help the customer or partner complete forms that the telco provider requires in order to progress the order
 
@@ -35,31 +35,39 @@ To facilitate a HybridConnect order, UKCloud expects that:
 
 5) Ark will provide connectivity between the telco termination point and the UKCloud patch panel
 
-6) UKCloud will liaise with the partner or customer to arrange for onward connectivity from the UKCloud patch panel to the UKCloud environment. This may require additional information gathering. In the case where Cloud Enablement is required, this will involve additional engineer work from both customer/partner and UKCloud
+6) UKCloud will liaise with the partner or customer to arrange for onward connectivity from the UKCloud patch panel to the UKCloud environment. This may require additional information gathering. In the case where Cloud Enablement is required, this will involve additional engineer work from both customer/partner and UKCloud.
 
 UKCloud will complete the logical and physical connectivity to enable a live service.
 
 ## Telcos with a presence in Ark
 
-Telco providers will need to have a presence in the Ark Meet Me Room (MMR) in order to provide a service to the customer or partner.
+Telco providers will need to have a presence in the Ark Meet Me Room (MMR) in order to provide a service to the customer or partner. The location where a telco has presence defines whether HybridConnect or CrownConnect can be used. If the telco has presence in a core UKCloud location (A9 or SQ17) then HybridConnect can be used, if the telco has presence in Ark but outside of UKCloud's core locations, then CrownConnect must be used. 
 
 The following telcos have a presence in Ark MMRs:
 
-- BT
+- BT*
 
-- Vodafone
+- Vodafone*
 
-- CenturyLink
+- CenturyLink*
 
-- Virgin Media
+- Virgin Media*
 
-- Interoute
+- Interoute*
+
+- GTT
+
+- Redcentric
+
+- SSE
+
+*has known presence in core UKCloud locations
 
 If a service provider does not have a presence in Ark, then they will need to contact Ark Continuity directly in order to gain presence. It is not the responsibility of the customer/partner or UKCloud to contact Ark on behalf of the telco.
 
 ## Completing telco order form
 
-When completing the telco order form, it is important to state the correct address of the Ark datacentre that the connectivity will be provisioned in. The addresses of the UKCloud connectivity termination points are:
+When completing the telco order form, it is important to state the correct address of the Ark datacentre that the connectivity will be provisioned in. The addresses of UKCloud's core locations are:
 
 ### Farnborough
 
@@ -96,7 +104,7 @@ Telcos are responsible for organising directly with Ark to install their equipme
 Customers/partners are responsible for organising any colocation of customer/partner equipment with UKCloud.
 
 > [!IMPORTANT]
-> All equipment's onward connectivity to the UKCloud platform must be LC-LC multimode fibre. It is the responsibility of the partner/customer and telco to ensure that all equipment has the right interface to connect into UKCloud. UKCloud will not be held responsible for any financial penalty or delays in installation due to the wrong equipment interface being supplied by either the partner/customer or the telco.
+> All equipment's onward connectivity to the UKCloud platform must be LC-LC fibre (multimode if HybridConnect or singlemode if CrownConnect). It is the responsibility of the partner/customer and telco to ensure that all equipment has the right interface to connect into UKCloud. UKCloud will not be held responsible for any financial penalty or delays in installation due to the wrong equipment interface being supplied by either the partner/customer or the telco.
 
 ## Demarcation
 
