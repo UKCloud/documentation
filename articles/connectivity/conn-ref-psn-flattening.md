@@ -18,37 +18,35 @@ toc_mdlink: conn-ref-psn-flattening.md
 
 ## Overview
 
-The Public Services Network (PSN) is being flattened to converge PSN Assured and PSN Protected into a single network. This process is planned for completion by 2019, when new DNS services will be available, and service providers of both PSN Assured and PSN Protected are expected to have enabled routing between Assured and Protected, creating a single, flat network.
+The Public Services Network (PSN) has been flattened to converge PSN Assured and PSN Protected into a single network. Traffic can now flow between VMs in our Assured and Elevated security domains over the flattened PSN network.
 
-For more information about flattening, see the [PSN Authority's documentation](https://www.gov.uk/government/publications/flattening-obligations-for-psn-protected-network-service-providers/flattening-obligations-for-psn-protected-network-service-providers).
+The flattened PSN network enables better collaboration between local government, blue light services and central government departments, allowing for more joined-up services, including counter-terrorism initiatives and centralised intelligence, to improve the lives of UK citizens.
 
-## Allowing traffic between PSN Protected and PSN Assured
+The information in this article is also available in our [PSN flattening - an update](https://ukcloud.com/hub/news/psn-flattening-an-update/) blog post.
 
-Until the flattening has taken place, if you use PSN in your UKCloud environment and require access for traffic to traverse PSN Protected to PSN Assured or vice versa, you must raise a service request with Vodafone to open the PSN Protected to PSN Assured firewall to allow traffic to go between the networks.
+## PSN and CDSZ
 
-To request this change, you must have a PSN Core Service contract with Vodafone. For more information about PSN core services, see [*Understanding PSN core services*](conn-ref-psn-core-services.md).
+Although it may now be possible to bypass the Cross Domain Security Zone (CDSZ) to communicate between Elevated and Assured environments using the flattened PSN, you should consider the following:
 
-UKCloud are not responsible for raising service requests with Vodafone for customers' PSN core service changes. You must raise these changes directly with Vodafone.
+- The connection isn't a short hop in the way that you would create a connection between two environments in the same security domain, where communication uses private links to remain within the UKCloud boundary, even over an external network. Instead, traffic needs to leave UKCloud, go through the service provider gateways and then come back into UKCloud. This introduces multiple hops and increases latency. You also need to consider the security implications of traffic leaving the assured environment of the UKCloud platform.
 
-This change is universal and only needs to be performed once for each PSN IP. Once complete, all traffic with a source or destination of that IP will be routable through the Vodafone Firewall without raising further change requests.
+    ![Communication with PSN between Assured and Elevated](images/conn-psn-flattening.png)
 
-The change request is chargeable per IP. You should request a quote from Vodafone before submitting the change to avoid surprising charges on your invoice from Vodafone.
+- You can only use the PSN for specific functions, as approved by the PSN Authority by way of the different PSN Codes of Connection. If you want to use the PSN to communicate between Elevated and Assured, you would need to fully document the use case and request approval by the PSN Authority before you could implement it.
 
-## Requesting a change
+- You must have a PSN connection in your Elevated environment.
 
-To request a change for your firewall:
+## Restricting access to PSN Protected services
 
-- If you're a non-GCF customer, go to:
+It is possible to make your PSN Protected addresses unreachable to PSN Assured, if required. To do this, send a request via the [PSN team contact centre](https://publicservicesnetwork.zendesk.com/hc/en-us/requests/new?ticket_form_id=34591). If your request is successful, the PSN team will notify all PSN Protected providers.
 
-    <https://www.gov.uk/government/publications/psn-dns-change-forms>
-
-- If you're a GCF customer, go to:
-
-    <https://www.gov.uk/government/publications/gcf-customer-change-form>
+In the event of your PSN Protected addresses being on the same subnet as another customer, the PSN team will decide what needs to be done to meet your request.
 
 ## More information
 
-For an overview of the future of PSN, including updates about PSN flattening, see our blog post, [*The new future of PSN*](https://ukcloud.com/hub/news/the-new-future-of-psn/).
+For more information about PSN flattening, see [Flattening obligations for PSN Protected network service providers](https://www.gov.uk/government/publications/flattening-obligations-for-psn-protected-network-service-providers/flattening-obligations-for-psn-protected-network-service-providers).
+
+For an overview of the future of PSN, including updates about PSN flattening, see our blog posts, [The new future of PSN](https://ukcloud.com/hub/news/the-new-future-of-psn/).
 
 ## Feedback
 
