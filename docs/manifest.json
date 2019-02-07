@@ -2439,7 +2439,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-psn-flattening.html",
-          "hash": "lvy1BqU6wXvpfGTOUelQkQ=="
+          "hash": "eqqihwESp58hN/ds+FN20Q=="
         }
       },
       "is_incremental": false,
@@ -2488,6 +2488,17 @@
         ".html": {
           "relative_path": "articles/connectivity/conn-sco-glb.html",
           "hash": "MDtCBTHu8PluaGlMxAdEzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/connectivity/images/conn-psn-flattening.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/connectivity/images/conn-psn-flattening.png"
         }
       },
       "is_incremental": false,
@@ -14724,16 +14735,16 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
