@@ -150,7 +150,7 @@ To install and configure S3 Browser:
 
 This section takes you through installing and configuring browser access that enables users to browse the contents of Cloud Storage using a web browser.
 
-An HTML5 application, created by EMC, that you can install in one of your Atmos buckets to generate a URL that enables you to share the application with users who require access to cloud storage.
+EMC provides an HTML5 application that you can install in your Atmos bucket to generate a URL that enables you to share the bucket with other users who require access to cloud storage.
 
    > [!NOTE]
    > If you have multiple buckets under the same endpoint, you can provide access to them all from a single URL. However, if you have multiple buckets hosted in both Cloud Storage regions, you'll need to install the application in both regions and access is via a different URL for each region.
@@ -168,22 +168,23 @@ S3 extensions are also available for browsers, but none of them include the func
    >
    > A folder within an existing bucket or new bucket to host the GUI files, for example /<bucket_name>/HTML5UI/ or /HTML5UI/
 
-To install and configure the Atmos HTML5 application.
+To install and configure the Atmos HTML5 application:
 
 1. Download and extract the [Atmos HTML5 application](https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/AtmosHTML5.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1575471403&Signature=49Xss9swLLmSPmkAyruywkscUas%3D).
 
-2.  a. On Windows: Open a command prompt and navigate to the extracted files and run the following command: `upload.bat WebContent\main.html /<bucket_name>/<optional_path>/`
-    b. On Linux: Open a terminal prompt or from the CLI, navigate to the extracted files and run the following command: `upload.sh WebContent\main.html /<bucket_name>/<optional_path>/`
+2. **On Windows:** Open a command prompt, navigate to the extracted files and run the following command: `upload.bat WebContent\main.html /<bucket_name>/<optional_path>/`.
 
-3. The installer script will run and prompt for the following information,
+    **On Linux:** Open a terminal prompt, or from the CLI, navigate to the extracted files and run the following command: `upload.sh WebContent\main.html /<bucket_name>/<optional_path>/`.
 
-    a. Atmos host name, which is the UKCloud endpoint URL for your selected storage bucket for example `atmos.cas.frn00006.ukcloud.com`
+3. The installer script will run and prompt for the following information:
 
-    b. Atmos port - Enter 443.
+    - Atmos host name, which is the UKCloud endpoint URL for your selected storage bucket for example `atmos.cas.frn00006.ukcloud.com`
 
-    c. Atmos UID - Eenter your selected storage bucket's Atmos access key for example `a554f348g57f48729c0247r9730e29a1/10-10-10-89431b-1`
+    - Atmos port - Enter 443.
 
-    d. Atmos secret - Please enter your selected storage bucket's shared secret key.
+    - Atmos UID - Enter your selected storage bucket's Atmos access key for example `a554f348g57f48729c0247r9730e29a1/10-10-10-89431b-1`
+
+    - Atmos secret - Enter your selected storage bucket's shared secret key.
 
 4. When you have provided all the required information, the installer will connect to the bucket and upload the files to the requested folder. Once the script has finished, it will output a URL that you should copy to your clipboard and then keep somewhere safe.
 
@@ -216,11 +217,13 @@ This article has shown you how to browse Cloud Storage buckets using various dif
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
 - Cloud Storage Gateways
-    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+
+    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+
     - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com/). Alternatively, you can contact us at <products@ukcloud.com>.
