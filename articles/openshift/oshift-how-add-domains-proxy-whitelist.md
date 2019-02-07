@@ -1,6 +1,6 @@
 ---
 title: How to permit outbound access to internet hosts in deployments with public services network connectivity | UKCloud Ltd
-description: Describes methods to securely permit access to internet hosts in v3.11 OpenShift clusters deployed with public services network connectivity.
+description: Outlines methods to securely permit access to internet hosts in v3.11 OpenShift clusters deployed with public services network connectivity.
 services: openshift
 author: Ben Bacon
 toc_rootlink: How To
@@ -10,7 +10,7 @@ toc_sub3:
 toc_sub4:
 toc_title: Permit outbound internet access in deployments with public services network connectivity
 toc_fullpath: How To/oshift-how-add-domains-proxy-whitelist.md
-toc_mdlink: other-ref-knowledge-template.md
+toc_mdlink: oshift-how-add-domains-proxy-whitelist.md
 ---
 
 # How to permit outbound access to internet hosts in deployments with public services network connectivity
