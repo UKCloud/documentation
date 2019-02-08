@@ -49,15 +49,15 @@ Telco providers will need to have a presence in the Ark Meet Me Room (MMR) in or
 
 The following telcos have a presence in Ark MMRs:
 
-- BT*
+- BT<sup>*</sup>
 
-- Vodafone*
+- Vodafone<sup>*</sup>
 
-- CenturyLink*
+- CenturyLink<sup>*</sup>
 
-- Virgin Media*
+- Virgin Media<sup>*</sup>
 
-- Interoute*
+- Interoute<sup>*</sup>
 
 - GTT
 
@@ -65,7 +65,7 @@ The following telcos have a presence in Ark MMRs:
 
 - SSE
 
-`*` - has known presence in core UKCloud locations
+<sup>*</sup> - has known presence in core UKCloud locations
 
 If a service provider does not have a presence in Ark, then they will need to contact Ark Continuity directly in order to gain presence. It is not the responsibility of the customer/partner or UKCloud to contact Ark on behalf of the telco.
 
