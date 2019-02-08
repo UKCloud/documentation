@@ -1354,7 +1354,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-use-file-browsers.html",
-          "hash": "7TrMrnlycIm4xZ7xCsRHXw=="
+          "hash": "osWzP6wgYoFJNGahHamsyg=="
         }
       },
       "is_incremental": false,
@@ -1960,6 +1960,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-html5-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-file-browsers-html5-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-html5-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cloud-storage/images/cs-file-browsers-html5-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/cloud-storage/images/cs-file-browsers-s3.png",
       "output": {
         "resource": {
@@ -2463,7 +2485,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-telco-enagagement.html",
-          "hash": "PECPHIsOKrzpfrbe2f16IQ=="
+          "hash": "/jMJLVNUmG0a684lwsz/8w=="
         }
       },
       "is_incremental": false,
@@ -14735,13 +14757,6 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -14753,6 +14768,13 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 322,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }
