@@ -36,7 +36,7 @@ In this article, we'll look at some of the many applications that enable you to 
 
 - [Windows applications](#windows-applications)
 
-- [Browser extensions for Chrome and Firefox](#browser-extensions)
+- [Internet browser access](#internet-browser-access)
 
 The inclusion of applications in this article should not be taken as an endorsement or recommendation of them by UKCloud. However, we have tested them with our Cloud Storage service and verified that they work correctly.
 
