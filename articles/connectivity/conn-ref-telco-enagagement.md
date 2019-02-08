@@ -65,7 +65,7 @@ The following telcos have a presence in Ark MMRs:
 
 - SSE
 
-/* has known presence in core UKCloud locations
+`*` - has known presence in core UKCloud locations
 
 If a service provider does not have a presence in Ark, then they will need to contact Ark Continuity directly in order to gain presence. It is not the responsibility of the customer/partner or UKCloud to contact Ark on behalf of the telco.
 
