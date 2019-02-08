@@ -19,7 +19,7 @@ toc_mdlink: conn-ref-telco-enagagement.md
 
 The purpose of this document is to outline the engagement process, demarcation points and the responsibilities of all parties involved in the provisioning of connectivity into UKCloud's datacentres using the HybridConnect and CrownConnect services provided by UKCloud. This document should be attached to any order made with telco providers to ensure that all parties are of the same understanding with regards to implementation.
 
-HybridConnect and CrownConnect enable customers to bring in their own MPLS, leased lines or public network connectivity into the UKCloud datacentres. These can be paired with Cloud Enablement - the colocation of network attached devices (firewalls, VPN concentrators etc) to enable the overlay of encryption technologies on the connectivity.
+HybridConnect and CrownConnect enable customers to bring in their own MPLS, leased lines or public network connectivity into the UKCloud datacentres. These can be paired with Cloud Enablement - the colocation of network attached devices (firewalls, VPN concentrators, and so on) to enable the overlay of encryption technologies on the connectivity.
 
 ## High level process
 
