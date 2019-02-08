@@ -13,4 +13,4 @@ toc_fullpath: How To/cs-how-install-geodrive2-client.md
 toc_mdlink: cs-how-install-geodrive2-client.md
 ---
 
-# How to install the GeoDrive Client 2kjdhgdkfjhgdkfjgh
+# How to install the GeoDrive Client
