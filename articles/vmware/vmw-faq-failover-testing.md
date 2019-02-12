@@ -76,7 +76,7 @@ It's highly likely that the testing of a failover will be seamless to the custom
 
 ### Are there charges for a service failover test?
 
-Typically, UKCloud will only allow a test to last for 1 business day with a charge (based on the SFIA rate card) of £660 per day. If you require longer testing periods, this needs to be approved by UKCloud.
+Typically, UKCloud will only allow a test to last for 1 business day with a charge (based on the [SFIA rate card](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-sfia-rate-card-2018-05-21-1255.pdf) - level 3 Apply). If you require longer testing periods, this needs to be approved by UKCloud.
 
 ### Why is the DR failover Test Scenario not fully automatic and self service?
 
@@ -84,4 +84,4 @@ This is part of the service roadmap.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
