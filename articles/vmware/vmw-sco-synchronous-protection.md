@@ -205,8 +205,8 @@ If we accept your request, we'll schedule the work to start at the time you spec
 
 ## Failover testing charges
 
-We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the SFIA rate card) of £660 per day. Longer testing periods will need to be approved by UKCloud.
+We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the [SFIA rate card](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/832543392527475-sfia-rate-card-2019-01-18-1501.pdf) - level 3 Apply). Longer testing periods will need to be approved by UKCloud.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
