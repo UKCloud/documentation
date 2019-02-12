@@ -111,7 +111,6 @@ resources:
       floatingip_id: { get_resource: heat_server_public_ip }
       port_id: { get_resource: heat_server_port }
 
-
 outputs:
   heat_server_public_ip:
     description: IP Address of the deployed heat_server instance
@@ -148,129 +147,7 @@ outputs:
     | stack_status_reason | Stack CREATE started                 |
     +---------------------+--------------------------------------+
     ```
-    
-2. Create a subnet and attach to the network:
 
-    ```
-    $ openstack subnet create --network testnet --subnet-range 10.1.1.0/24 testnet-sub
-    ```
-
-    This command will return the following:
-
-    ```
-    +-------------------+--------------------------------------+
-    | Field             | Value                                |
-    +-------------------+--------------------------------------+
-    | allocation_pools  | 10.1.1.2-10.1.1.254                  |
-    | cidr              | 10.1.1.0/24                          |
-    | created_at        | 2018-09-05T12:22:46Z                 |
-    | description       |                                      |
-    | dns_nameservers   |                                      |
-    | enable_dhcp       | True                                 |
-    | gateway_ip        | 10.1.1.1                             |
-    | host_routes       |                                      |
-    | id                | fc333721-47c8-4445-871b-d261eb195b41 |
-    | ip_version        | 4                                    |
-    | ipv6_address_mode | None                                 |
-    | ipv6_ra_mode      | None                                 |
-    | name              | testnet-sub                          |
-    | network_id        | dd4f624a-1101-4b01-a388-308c5972742a |
-    | project_id        | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     |
-    | revision_number   | 2                                    |
-    | segment_id        | None                                 |
-    | service_types     |                                      |
-    | subnetpool_id     | None                                 |
-    | tags              |                                      |
-    | updated_at        | 2018-09-05T12:22:46Z                 |
-    +-------------------+--------------------------------------+
-    ```
-    
-3. Create a port and attach to the network & subnet: 
-
-    ```
-    $ openstack port create --network testnet --fixed-ip subnet=testnet-sub,ip-address=10.1.1.10 test-static-ip-1
-    ```
-
-    This command will return the following:
-
-    ```
-    +-----------------------+--------------------------------------------------------------------------+
-    | Field                 | Value                                                                    |
-    +-----------------------+--------------------------------------------------------------------------+
-    | admin_state_up        | UP                                                                       |
-    | allowed_address_pairs |                                                                          |
-    | binding_host_id       | None                                                                     |
-    | binding_profile       | None                                                                     |
-    | binding_vif_details   | None                                                                     |
-    | binding_vif_type      | None                                                                     |
-    | binding_vnic_type     | normal                                                                   |
-    | created_at            | 2018-09-05T12:26:55Z                                                     |
-    | data_plane_status     | None                                                                     |
-    | description           |                                                                          |
-    | device_id             |                                                                          |
-    | device_owner          |                                                                          |
-    | dns_assignment        | None                                                                     |
-    | dns_domain            | None                                                                     |
-    | dns_name              | None                                                                     |
-    | extra_dhcp_opts       |                                                                          |
-    | fixed_ips             | ip_address='10.1.1.10', subnet_id='fc333721-47c8-4445-871b-d261eb195b41' |
-    | id                    | f6c6ace7-3e33-4159-a0ce-f9d70ba69bf2                                     |
-    | mac_address           | fa:16:3e:4f:70:b6                                                        |
-    | name                  | test-static-ip-1                                                         |
-    | network_id            | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                                         |
-    | port_security_enabled | True                                                                     |
-    | project_id            | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                                         |
-    | qos_policy_id         | None                                                                     |
-    | revision_number       | 5                                                                        |
-    | security_group_ids    | 01ea0a6f-1a39-4196-b798-47db89499379                                     |
-    | status                | DOWN                                                                     |
-    | tags                  |                                                                          |
-    | trunk_details         | None                                                                     |
-    | updated_at            | 2018-09-05T12:26:55Z                                                     |
-    +-----------------------+--------------------------------------------------------------------------+
-    ```
-
-4. Launch an instance with the static IP attached:
-
-    ```
-    $ openstack server create --flavor t1.nano --port test-static-ip-1 --image cirros ukc-test --wait
-    ```
-
-    This command will return the following:
-
-    ```
-    +-----------------------------+----------------------------------------------------------+`
-    | Field                       | Value                                                    |`
-    +-----------------------------+----------------------------------------------------------+`
-    | OS-DCF:diskConfig           | MANUAL                                                   |`
-    | OS-EXT-AZ:availability_zone | availability.zone                                        |`
-    | OS-EXT-STS:power_state      | Running                                                  |`
-    | OS-EXT-STS:task_state       | None                                                     |`
-    | OS-EXT-STS:vm_state         | active                                                   |`
-    | OS-SRV-USG:launched_at      | 2018-09-05T12:36:32.000000                               |`
-    | OS-SRV-USG:terminated_at    | None                                                     |`
-    | accessIPv4                  |                                                          |`
-    | accessIPv6                  |                                                          |`
-    | addresses                   | testnet=10.1.1.10                                        |`
-    | adminPass                   | adminPass                                                |`
-    | config_drive                |                                                          |`
-    | created                     | 2018-09-05T12:36:25Z                                     |`
-    | flavor                      | t1.nano (flavor-id)                                      |`
-    | hostId                      | host-id                                                  |`
-    | id                          | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                         |`
-    | image                       | cirros (xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    )            |`
-    | key_name                    | None                                                     |`
-    | name                        | ukc-test                                                 |`
-    | progress                    | 0                                                        |`
-    | project_id                  | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                         |`
-    | properties                  |                                                          |`
-    | security_groups             | name='default'                                           |`
-    | status                      | ACTIVE                                                   |`
-    | updated                     | 2018-09-05T12:36:32Z                                     |`
-    | user_id                     | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                         |`
-    | volumes_attached            |                                                          |`
-    +-----------------------------+----------------------------------------------------------+`
-    ```
     
 ## Next steps
 
