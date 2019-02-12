@@ -1,6 +1,6 @@
 ---
-title: How to create static IPs for OpenStack instances  | UKCloud Ltd
-description: Instructions on how to create static IPs and assign them to instances
+title: How to create and deploy a basic heat template  | UKCloud Ltd
+description: Instructions on how to deploy a basic heat template
 services: openstack
 author: Bryce Nicholls
 toc_rootlink: How to
