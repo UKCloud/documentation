@@ -153,7 +153,7 @@ outputs:
 
 The following Red Hat document provides more options for configuring ports when using UKCloud for OpenStack.
 
-[*Red Hat OpenStack Platform 10 Command-Line Interface Reference for configuring ports*](https://docs.openstack.org/python-openstackclient/pike/cli/command-objects/port.html)
+[*Heat Orchestration Template (HOT) specification*](https://docs.openstack.org/heat/rocky/template_guide/hot_spec.html)
 
 ## Feedback
 
