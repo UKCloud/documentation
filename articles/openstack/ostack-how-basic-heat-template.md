@@ -151,7 +151,7 @@ outputs:
     
 ## Next steps
 
-The following Red Hat document provides more options for configuring ports when using UKCloud for OpenStack.
+The following document provides more options for configuring and creating Heat templates when using UKCloud for OpenStack.
 
 [*Heat Orchestration Template (HOT) specification*](https://docs.openstack.org/heat/rocky/template_guide/hot_spec.html)
 
