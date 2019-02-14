@@ -17,7 +17,7 @@ toc_mdlink: ostack-how-basic-heat-template.md
 
 ## Overview
 
-This is a basic heat ochestration template create a heat stack.
+This is a basic heat orchestration template create a heat stack.
 
 This template will create the following and connect them up.
 - A network
@@ -152,7 +152,7 @@ outputs:
 ## Next steps
 
 ### Generate a heat template for your existing environment.
-Flame a standalone tool to convert your existing environment into a heat template.
+Flame a standalone tool to convert from an existing environment into a heat template.
 More information is available at https://github.com/openstack/flame
 
 The following document provides more options for configuring and creating Heat templates when using UKCloud for OpenStack.
