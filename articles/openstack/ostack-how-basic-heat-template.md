@@ -151,6 +151,9 @@ outputs:
     
 ## Next steps
 
+OpenStack have also created a standalone tool to convert your existing environment into a heat template.
+More information is available at https://github.com/openstack/flame
+
 The following document provides more options for configuring and creating Heat templates when using UKCloud for OpenStack.
 
 [*Heat Orchestration Template (HOT) specification*](https://docs.openstack.org/heat/rocky/template_guide/hot_spec.html)
