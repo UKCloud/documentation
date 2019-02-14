@@ -74,7 +74,7 @@ resources:
     properties:
       network: { get_resource: heat_network }
       cidr: "10.1.1.0/24"
-      dns_nameservers: ["155.231.231.3"]
+      dns_nameservers: ["8.8.8.8"]
       gateway_ip: "10.1.1.1"
       ip_version: 4
   heat_router:
