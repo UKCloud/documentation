@@ -9,11 +9,11 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Create and deploy a basic Heat template 
-toc_fullpath: ostack-how-create-heat-template.md
+toc_fullpath: How To/ostack-how-create-heat-template.md
 toc_mdlink: ostack-how-create-heat-template.md
 ---
 
-# How to create and deploy a basic heat template 
+# How to create and deploy a basic Heat template 
 
 ## Overview
 
@@ -159,13 +159,11 @@ Create a stack by running the following command in the OpenStack CLI:
     
 ## Next steps
 
-Generate a heat template for your existing environment.
-
 This article demonstrated how to create a basic Heat template. You can now create your own templates.
-If you want to create template from your existing environment, you can use a tool like Flame that converts an existing environment into a Heat template.
-For more information, see https://github.com/openstack/flame
 
-The following document provides more options for configuring and creating Heat templates when using UKCloud for OpenStack.
+If you want to create template from your existing environment, you can use a tool like Flame that converts an existing environment into a Heat template. For more information, see https://github.com/openstack/flame
+
+The following document provides more options for configuring and creating Heat templates when using UKCloud for OpenStack:
 
 [*Heat Orchestration Template (HOT) specification*](https://docs.openstack.org/heat/rocky/template_guide/hot_spec.html)
 
