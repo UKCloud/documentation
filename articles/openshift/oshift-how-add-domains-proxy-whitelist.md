@@ -17,7 +17,7 @@ toc_mdlink: oshift-how-add-domains-proxy-whitelist.md
 
 ## Overview
 
-This article outlines the necessary steps to whitelist domain names within the Squid proxy. Squid is an enabled service within v3.11 OpenShift clusters deployed with connectivity to government community networks (such as: HSCN, PSN, Janet). Whitelisted domains can be accessed on the internet via the proxy, enabling you to request external resources/data on nodes that previously only had connectivity to government community networks.
+This article outlines the necessary steps to whitelist domain names within the Squid proxy. Squid is an enabled service within v3.11 OpenShift clusters deployed with connectivity to government community networks (such as: HSCN, PSN, Janet). Whitelisted domains can be accessed on the internet via the proxy, enabling you to request external resources/data on nodes that previously only had connectivity to government community networks. Added domains should be scrutinised as the relevant authority of the community network may require you to submit documentation regarding these for you to receive accreditation.
 
 ## Prerequisites
 
@@ -33,11 +33,22 @@ You must also have access to either:
 
 Squid proxy is installed as a service on the control plane load balancers. Within the Squid configuration, we have specified an ACL (Access Control List) as being a list of destination domains (present in a file on the file system), which we will refer to as the whitelist for the remainder of this article. Outbound traffic from the cluster's internal network will pass through the proxy with the destination domain being compared against the whitelist for each connection attempt; if the domain exists then outbound internet traffic is permitted, otherwise it is denied with a HTTP 403 error.
 
+By default, the following domains are added to the whitelist (and cannot be removed) to facilitate installation, testing and ongoing operation of the cluster:
+```
+registry.access.redhat.com
+registry.redhat.io
+.ukcloud.com
+.docker.io
+.docker.com
+.rubygems.org
+.github.com
+```
+
 A scheduled job (which runs at 0 minutes past every hour) on the OpenShift cluster Bastion host reads a Config Map named `proxy-whitelist` within the `whitelist` project. If there are any modifications to this Config Map, the job overwrites the previous custom entries within the whitelist and triggers a reconfigure task on the Squid proxy to enable the updated domains to be accessed.
 
 ### Assigning non cluster-admin users rights to edit the whitelist 
 
-By default, only users who have been assigned the cluster-admin role will be able to view/edit the `proxy-whitelist` ConfigMap within the `whitelist` project. To allow non cluster-admin users to edit this object, use the following Role Based Access Control (RBAC) commands:
+By default, only users who have been assigned the cluster-admin role will be able to view/edit the `proxy-whitelist` ConfigMap within the `whitelist` project. Granting a user cluster-admin rights should be done with great consideration as you should always enforce the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege). To allow non cluster-admin users to edit this object, use the following Role Based Access Control (RBAC) commands which abide by this principle:
 
 >[!TIP]
 >To add multiple users to these roles, separate each username within the `username` variable with a space.
