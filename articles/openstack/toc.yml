@@ -12,6 +12,8 @@
     href: ostack-how-cloud-config.md
   - name: Convert virtual machines
     href: ostack-how-convert-vms.md
+  - name: 'Create and deploy a basic Heat template '
+    href: ostack-how-create-heat-template.md
   - name: Create load balancing services
     href: ostack-how-create-load-balancer.md
   - name: Create new users
