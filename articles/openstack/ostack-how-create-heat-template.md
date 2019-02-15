@@ -1,5 +1,5 @@
 ---
-title: How to create and deploy a basic heat template  | UKCloud Ltd
+title: How to create and deploy a basic Heat template  | UKCloud Ltd
 description: Instructions on how to deploy a basic heat template
 services: openstack
 author: Bryce Nicholls
@@ -9,28 +9,34 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Create and deploy a basic heat template 
-toc_fullpath: How To/ostack-how-static-ip.md
-toc_mdlink: ostack-how-basic-heat-template.md
+toc_fullpath: ostack-how-create-heat-template.md
+toc_mdlink: ostack-how-create-heat-template.md
 ---
 
 # How to create and deploy a basic heat template 
 
 ## Overview
 
-This is a basic heat orchestration template create a heat stack.
+This articles provides a basic Heat Orchestration template that creates a Heat stack.
 
-This template will create the following and connect them up.
+This template will create the following and connect them up:
+
 - A network
+
 - A static IP
+
 - A router
+
 - An instance
+
 - A floating IP
+
 - A volume
 
 ## The heat template
 
 > [!NOTE]
-> Make sure you check the indentation and file extension. It needs to be in yaml format.
+> The template must be in yaml format and be saved with the .yaml file extension. You should also make sure that you use the correct indentation.
 
 ```yaml
 heat_template_version: 2016-10-14
@@ -120,21 +126,23 @@ outputs:
 ## Deploying the stack
 
 > [!NOTE]
-> You will need to source your RC file before you run the commands below.
+> You must source your RC file before you run the commands below.
 
-1. Create a stack by running the following command in the OpenStack CLI:
+Create a stack by running the following command in the OpenStack CLI:
 
-    ```
-    $ openstack stack create -t basic-stack.yaml basic-stack
-    ```
-    SYNTAX:
-    ```
+    ```none
     openstack stack create -t  <template name> <stack name>
     ```
-
+    
+    For example, for the template above, run:
+    
+    ```none
+    $ openstack stack create -t basic-stack.yaml basic-stack
+    ```
+   
     This command will return the following:
     
-    ```
+    ```none
     +---------------------+--------------------------------------+
     | Field               | Value                                |
     +---------------------+--------------------------------------+
@@ -151,9 +159,11 @@ outputs:
     
 ## Next steps
 
-### Generate a heat template for your existing environment.
-Flame a standalone tool to convert from an existing environment into a heat template.
-More information is available at https://github.com/openstack/flame
+Generate a heat template for your existing environment.
+
+This article demonstrated how to create a basic Heat template. You can now create your own templates.
+If you want to create template from your existing environment, you can use a tool like Flame that converts an existing environment into a Heat template.
+For more information, see https://github.com/openstack/flame
 
 The following document provides more options for configuring and creating Heat templates when using UKCloud for OpenStack.
 
@@ -161,4 +171,4 @@ The following document provides more options for configuring and creating Heat t
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at [products@ukcloud.com](mailto:products@ukcloud.com).
