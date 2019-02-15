@@ -65,7 +65,7 @@ You can use the UKCloud Portal to see whether a VM uses Snapshot Protection, fin
     ![Excluded from backup](images/snapshot-image-13.png) | The VM has been excluded from backups
     ![Not in backup yet](images/snapshot-image-13.png) | A backup has not yet been created for a VM that has recently been included in backups
     ![Backup Failed](images/snapshot-image-15.png) | Backup of the VM was unsuccessful
-    ![Excluded from backup](images/snapshot-image-15.png) | The VM has been excluded from backups but has not yet reached end of the previous retention period<br>(when the end retention period is reached, the icon will change to the grey minus sign)
+    ![Excluded from backup](images/snapshot-image-15.png) | The VM has been excluded from backups but has not yet reached the end of the previous retention period<br>(when the end retention period is reached, the icon will change to the grey minus sign)
 
 9. The button in the **Snapshot Protection** column shows the Snapshot Protection option currently applied to the VM:
 
@@ -161,7 +161,7 @@ By default, VMs deployed on the UKCloud platform do not come with any protection
 
     - **No Backup** to turn Snapshot Protection off for the VM
 
-    ![Snaphot Protection Policy](images/snapshot-image-8.png)
+    ![Snapshot Protection Policy](images/snapshot-image-8.png)
 
     > [!NOTE]
     > If you remove Snapshot Protection from a VM, you should consider alternatives to ensure the integrity of your data in the case of disruption. In addition to Snapshot Protection, UKCloud offers Synchronous Protection and Journaling Protection options, or you may want to implement your own protection solution, possibly utilising our Cloud Storage service.
