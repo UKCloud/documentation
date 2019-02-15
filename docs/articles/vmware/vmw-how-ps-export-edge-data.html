@@ -138,7 +138,7 @@
 
     $webclient.Headers.Add(&quot;x-vcloud-authorization&quot;,$EdgeView.Client.SessionKey)
 
-    $webclient.Headers.Add(&quot;accept&quot;,$EdgeView.Type + &quot;;version=5.1&quot;)
+    $webclient.Headers.Add(&quot;accept&quot;,$EdgeView.Type + &quot;;version=5.5&quot;)
 
     [xml]$EGWConfXML = $webclient.DownloadString($EdgeView.href)
 
