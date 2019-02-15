@@ -204,20 +204,13 @@ outputs:
 <p>You must source your RC file before you run the commands below.</p>
 </div>
 <p>Create a stack by running the following command in the OpenStack CLI:</p>
-<pre><code>```none
-openstack stack create -t  &lt;template name&gt; &lt;stack name&gt;
-```
-
-For example, for the template above, run:
-
-```none
-$ openstack stack create -t basic-stack.yaml basic-stack
-```
-
-This command will return the following:
-
-```none
-+---------------------+--------------------------------------+
+<pre><code class="lang-none">openstack stack create -t  &lt;template name&gt; &lt;stack name&gt;
+</code></pre>
+<p>For example, for the template above, run:</p>
+<pre><code class="lang-none">$ openstack stack create -t basic-stack.yaml basic-stack
+</code></pre>
+<p>This command will return the following:</p>
+<pre><code class="lang-none">+---------------------+--------------------------------------+
 | Field               | Value                                |
 +---------------------+--------------------------------------+
 | id                  | 6be269ec-d22f-4cf0-bf04-df71cc6dcf75 |
@@ -228,10 +221,9 @@ This command will return the following:
 | stack_status        | CREATE_IN_PROGRESS                   |
 | stack_status_reason | Stack CREATE started                 |
 +---------------------+--------------------------------------+
-```
 </code></pre>
 <h2 id="next-steps">Next steps</h2>
-<p>This article demonstrated how to create a basic Heat template. You can now create your own templates.</p>
+<p>This article demonstrated how to create a basic Heat template. You should now be able to create your own templates.</p>
 <p>If you want to create template from your existing environment, you can use a tool like Flame that converts an existing environment into a Heat template. For more information, see <a href="https://github.com/openstack/flame">https://github.com/openstack/flame</a></p>
 <p>The following document provides more options for configuring and creating Heat templates when using UKCloud for OpenStack:</p>
 <p><a href="https://docs.openstack.org/heat/rocky/template_guide/hot_spec.html"><em>Heat Orchestration Template (HOT) specification</em></a></p>
