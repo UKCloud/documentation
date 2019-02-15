@@ -8,7 +8,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Create and deploy a basic heat template 
+toc_title: Create and deploy a basic Heat template 
 toc_fullpath: ostack-how-create-heat-template.md
 toc_mdlink: ostack-how-create-heat-template.md
 ---
@@ -33,7 +33,7 @@ This template will create the following and connect them up:
 
 - A volume
 
-## The heat template
+## The Heat template
 
 > [!NOTE]
 > The template must be in yaml format and be saved with the .yaml file extension. You should also make sure that you use the correct indentation.
