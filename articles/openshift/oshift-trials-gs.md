@@ -56,7 +56,7 @@ OpenShift is deployed with an internal image registry. Customers can make use of
 
 Customers should take care when creating there container images to ensure the images do not run as root. Containers should be set up to run as a user which has just enough rights to run the container workload. 
 
-**OpenShift documentation:** [*Creating images*](https://docs.openshift.com/container-platform/3.11/creating_images/index.html) and [*Using images*](https://docs.openshift.com/container-platform/3.11/using_images/index.html)
+**OpenShift documentation:** [*Creating images*](https://docs.openshift.com/container-platform/3.11/creating_images/index.html) and [*Using images*](https://docs.openshift.com/container-platform/3.11/getting_started/index.html)
 
 ## RedHat OpenShift Getting Started Documentation
 
