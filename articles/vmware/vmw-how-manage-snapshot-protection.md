@@ -59,11 +59,13 @@ You can use the UKCloud Portal to see whether a VM uses Snapshot Protection, fin
 
 8. The icon in **Snapshot Protection** column shows the status of each VM's most recent backup:
 
-    - ![Excluded](images/snapshot-image-13.png) - Excluded from backup (if you have recently added Snapshot Protection to a VM, this icon indicates that a backup does not yet exist for the VM)
-
-    - ![Successful](images/snapshot-image-14.png) - Backup successful
-
-    - ![unsuccessful](images/snapshot-image-15.png) - Backup unsuccessful
+    Icon | Description
+    -----|------------
+    ![Backup Successful](images/snapshot-image-14.png) | Backup of the VM was successful
+    ![Excluded from backup](images/snapshot-image-13.png) | The VM has been excluded from backups
+    ![Not in backup yet](images/snapshot-image-13.png) | A backup has not yet been created for a VM that has recently been included in backups
+    ![Backup Failed](images/snapshot-image-15.png) | Backup of the VM was unsuccessful
+    ![Excluded from backup](images/snapshot-image-15.png) | The VM has been excluded from backups but has not yet reached end of the previous retention period<br>(when the end retention period is reached, the icon will change to the grey minus sign)
 
 9. The button in the **Snapshot Protection** column shows the Snapshot Protection option currently applied to the VM:
 
@@ -161,8 +163,8 @@ By default, VMs deployed on the UKCloud platform do not come with any protection
 
     ![Snaphot Protection Policy](images/snapshot-image-8.png)
 
-        > [!NOTE]
-        > If you remove Snapshot Protection from a VM, you should consider alternatives to ensure the integrity of your data in the case of disruption. In addition to Snapshot Protection, UKCloud offers Synchronous Protection and Journaling Protection options, or you may want to implement your own protection solution, possibly utilising our Cloud Storage service.
+    > [!NOTE]
+    > If you remove Snapshot Protection from a VM, you should consider alternatives to ensure the integrity of your data in the case of disruption. In addition to Snapshot Protection, UKCloud offers Synchronous Protection and Journaling Protection options, or you may want to implement your own protection solution, possibly utilising our Cloud Storage service.
 
 6. In the **Reason For Change** field, provide a reason for the change to the existing snapshot retention policy.
 
@@ -173,6 +175,9 @@ By default, VMs deployed on the UKCloud platform do not come with any protection
     The amount of time it takes for your changes to take place depends on how many requests are in the queue. If there are any problems with the request, the button in the **Snapshot Protection** column changes to a red **Failed** button; in this situation, contact UKCloud Support for further assistance.
 
     Backup status information is updated daily on the UKCloud Portal by 1000, but typically within minutes of the close of the backup window.
+
+    > [!NOTE]
+    > If you remove a VM from backups, the status icon for the VM will display as a red cross until the end of the previously selected retention period. When the end of the retention period is reached, the status icon will change to the grey minus sign.
 
 ## Managing Snapshot Protection for a VDC
 
