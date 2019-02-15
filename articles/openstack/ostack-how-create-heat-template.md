@@ -130,36 +130,35 @@ outputs:
 
 Create a stack by running the following command in the OpenStack CLI:
 
-    ```none
-    openstack stack create -t  <template name> <stack name>
-    ```
+```none
+openstack stack create -t  <template name> <stack name>
+```
     
-    For example, for the template above, run:
+For example, for the template above, run:
     
-    ```none
-    $ openstack stack create -t basic-stack.yaml basic-stack
-    ```
-   
-    This command will return the following:
-    
-    ```none
-    +---------------------+--------------------------------------+
-    | Field               | Value                                |
-    +---------------------+--------------------------------------+
-    | id                  | 6be269ec-d22f-4cf0-bf04-df71cc6dcf75 |
-    | stack_name          | basic-stack                          |
-    | description         | No description                       |
-    | creation_time       | 2019-02-12T15:58:20Z                 |
-    | updated_time        | None                                 |
-    | stack_status        | CREATE_IN_PROGRESS                   |
-    | stack_status_reason | Stack CREATE started                 |
-    +---------------------+--------------------------------------+
-    ```
+```none
+$ openstack stack create -t basic-stack.yaml basic-stack
+```
 
+This command will return the following:
+
+```none
++---------------------+--------------------------------------+
+| Field               | Value                                |
++---------------------+--------------------------------------+
+| id                  | 6be269ec-d22f-4cf0-bf04-df71cc6dcf75 |
+| stack_name          | basic-stack                          |
+| description         | No description                       |
+| creation_time       | 2019-02-12T15:58:20Z                 |
+| updated_time        | None                                 |
+| stack_status        | CREATE_IN_PROGRESS                   |
+| stack_status_reason | Stack CREATE started                 |
++---------------------+--------------------------------------+
+```
     
 ## Next steps
 
-This article demonstrated how to create a basic Heat template. You can now create your own templates.
+This article demonstrated how to create a basic Heat template. You should now be able to create your own templates.
 
 If you want to create template from your existing environment, you can use a tool like Flame that converts an existing environment into a Heat template. For more information, see https://github.com/openstack/flame
 
