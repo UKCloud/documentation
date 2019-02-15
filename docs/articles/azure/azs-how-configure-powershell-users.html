@@ -8,7 +8,7 @@
     <title>How to configure the Azure Stack user's PowerShell environment for UKCloud | Based on Microsoft Docs | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure the Azure Stack user's PowerShell environment for UKCloud | Based on Microsoft Docs | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.10.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -116,7 +116,7 @@ Get-Module -ListAvailable | Where-Object {$_.Name -like &quot;Azure*&quot; -or $
 # Install the AzureRM.Bootstrapper module. Select Yes when prompted to install NuGet
 Install-Module -Name AzureRm.BootStrapper
 # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
-Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
+Install-Module AzureRM -RequiredVersion 2.4.0 -Force
 Install-Module -Name AzureStack -RequiredVersion 1.7.0
 </code></pre>
 <h2 id="configure-the-user-environment-and-sign-in-to-azure-stack">Configure the user environment and sign in to Azure Stack</h2>
