@@ -60,7 +60,7 @@ Customers should take care when creating there container images to ensure the im
 
 ## RedHat OpenShift Getting Started Documentation
 
-**OpenShift documentation:** [*Getting Started*](https://www.openshift.com/learn/get-started/) and [*Getting Started Docs*](https://docs.openshift.com/container-platform/3.11/using_images/index.html)
+**OpenShift documentation:** [*Getting Started*](https://www.openshift.com/learn/get-started/) and [*Getting Started Docs*](https://docs.openshift.com/container-platform/3.11/getting_started/index.html)
 
 ## Feedback
 
