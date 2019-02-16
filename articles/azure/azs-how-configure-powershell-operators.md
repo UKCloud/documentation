@@ -39,8 +39,6 @@ Prerequisites from a Windows-based external client.
   Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
   # Uninstall existing versions of PowerShell
   Get-Module -ListAvailable | Where-Object {$_.Name -like "Azure*" -or $_.Name -like "Azs*"} | Uninstall-Module -Force
-  # Install the AzureRM.Bootstrapper module. Select Yes when prompted to install NuGet
-  Install-Module -Name AzureRm.BootStrapper
   # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
   Install-Module AzureRM -RequiredVersion 2.4.0 -Force
   Install-Module -Name AzureStack -RequiredVersion 1.7.0
