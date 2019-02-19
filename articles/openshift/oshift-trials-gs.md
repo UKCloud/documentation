@@ -50,7 +50,7 @@ In addition to GUI access customers can also access OpenShift through the CLI, i
 
 Each trial deployment has a block storage limit allocated to the OpenStack project of 2TB. The storage is available to the OpenShift projects customers deploy within OpenShift, customers can consume that storage by creating Persistant Storage Claims for there applications. It is good practice to use PVC's for any persistant storage requirements as any data stored within pods will be lost when clusters are patched. After trials if customers require more than 2TB of storage to be available to there clusters than customers can request this. 
 
-OpenShift is deployed with an internal image registry. Customers can make use of this registry which is backed by UKClouds object storage.
+OpenShift is deployed with an internal image registry with a 60GB capacity. Customers can make use of this registry which is backed by UKClouds object storage. This does not come out of customers 2TB storage capacity, rather this is in addition to customers 2TB data limit. However UKCloud do provision ElasticSearch, FluentD and Kibana stack which uses 20GB and Hawkular Metrics backed by a Cassandra database which uses 10GB and the Prometheus Operator which uses 106GB of tier 2 storage which is taken out of the 2TB storage limit.  
 
 ## Image Security
 
