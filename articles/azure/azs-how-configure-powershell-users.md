@@ -38,10 +38,10 @@ Prerequisites from a Windows-based external client.
   # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
   Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
   # Uninstall existing versions of PowerShell
-  Get-Module -ListAvailable | Where-Object {$_.Name -like "Azure*" -or $_.Name -like "Azs*"} | Uninstall-Module -Force
+  Get-Module -ListAvailable | Where-Object {$_.Name -like "Azure*" -or $_.Name -like "Azs*"} | Uninstall-Module -Force -Verbose
   # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
-  Install-Module AzureRM -RequiredVersion 2.4.0 -Force
-  Install-Module -Name AzureStack -RequiredVersion 1.7.0
+  Install-Module AzureRM -RequiredVersion 2.4.0 -Force -Verbose
+  Install-Module -Name AzureStack -RequiredVersion 1.7.0 -Verbose
   ```
 
 ## Configure the user environment and sign in to Azure Stack
