@@ -108,14 +108,14 @@
 <h3 id="install-azure-stack-powershell">Install Azure Stack PowerShell</h3>
 <pre><code class="lang-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
-# PowerShell commands for Azure Stack are installed through the PowerShell gallery. To register the PSGallery repository, open an elevated PowerShell session from the development kit 
-# or  from a Windows-based external client if you are connected through VPN and run the following command:
+# PowerShell commands for Azure Stack are installed through the PSGallery repository.
+# To register the PSGallery repository, open an elevated PowerShell session and run the following command:
 Set-PSRepository -Name &quot;PSGallery&quot; -InstallationPolicy Trusted
 # Uninstall existing versions of PowerShell
-Get-Module -ListAvailable | Where-Object {$_.Name -like &quot;Azure*&quot; -or $_.Name -like &quot;Azs*&quot;} | Uninstall-Module -Force
+Get-Module -ListAvailable | Where-Object {$_.Name -like &quot;Azure*&quot; -or $_.Name -like &quot;Azs*&quot;} | Uninstall-Module -Force -Verbose
 # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
-Install-Module AzureRM -RequiredVersion 2.4.0 -Force
-Install-Module -Name AzureStack -RequiredVersion 1.7.0
+Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Force -Verbose
+Install-Module -Name AzureStack -RequiredVersion 1.7.0 -Verbose
 </code></pre>
 <h2 id="configure-the-user-environment-and-sign-in-to-azure-stack">Configure the user environment and sign in to Azure Stack</h2>
 <p>UKCloud FRN00006 Region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the  $AzsUsername and  $AzsPassword values)</p>
