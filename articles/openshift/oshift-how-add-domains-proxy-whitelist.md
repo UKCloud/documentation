@@ -37,18 +37,17 @@ By default, the following domains are added to the whitelist (and cannot be remo
 ```
 registry.access.redhat.com
 registry.redhat.io
-.ukcloud.com
-.docker.io
-.docker.com
-.rubygems.org
-.github.com
+<UKCloud Object Storage Endpoint>
+<UKCloud SSO Endpoint>
 ```
 
 A scheduled job (which runs at 0 minutes past every hour) on the OpenShift cluster Bastion host reads a Config Map named `proxy-whitelist` within the `whitelist` project. If there are any modifications to this Config Map, the job overwrites the previous custom entries within the whitelist and triggers a reconfigure task on the Squid proxy to enable the updated domains to be accessed.
 
 ### Assigning non cluster-admin users rights to edit the whitelist 
 
-By default, only users who have been assigned the cluster-admin role will be able to view/edit the `proxy-whitelist` ConfigMap within the `whitelist` project. Granting a user cluster-admin rights should be done with great consideration as you should always enforce the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege). To allow non cluster-admin users to edit this object, use the following Role Based Access Control (RBAC) commands which abide by this principle:
+By default, only users who have been assigned the cluster-admin role will be able to view/edit the `proxy-whitelist` ConfigMap within the `whitelist` project. It is possible to grant non cluster-admin users rights to edit this object but doing so should be taken with great consideration. There could be nefarious consequences should a malicious domain be unwittingly added so only trusted users should be granted this permission.
+
+To allow non cluster-admin users to edit this object, use the following Role Based Access Control (RBAC) commands:
 
 >[!TIP]
 >To add multiple users to these roles, separate each username within the `username` variable with a space.
