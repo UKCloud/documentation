@@ -34,7 +34,7 @@ Prerequisites from a Windows-based external client.
   ```PowerShell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
-  # PowerShell commands for Azure Stack are installed through the PowerShell gallery. 
+  # PowerShell commands for Azure Stack are installed through the PSGallery repository.
   # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
   Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
   # Uninstall existing versions of PowerShell
