@@ -161,6 +161,10 @@ Yes, it is possible to run a privileged container. However, this is not recommen
 
 ![OpenShift Architecture](images/oshift-architecture.png)
 
+###  What considerations should I take for running larger scale clusters?
+
+As the scale of a cluster increases the resource usage of the infrastructure components (Hawkular Metrics, ELK, Prometheus etc.) will increase. By default, there will be 2 infrastructure nodes deployed to run these applications, it is highly recommended to run at a scale of 3+ infrastructure nodes if you're running a cluster with more than 2 tenant nodes. This will give you the ability to have increased resilience during patching or in the case of a node failure and also ensure the resource utilisation of the infrastructure nodes doesn't get too high. You will also need to consider the persistent storage usage of these applications. For example, a large scale cluster will generate a lot of logs for Elasticsearch. This will likely mean the default persistent storage size of 20GB won't be able to hold the default retention period of 14 days for the cluster. It's recommended to get an idea of how much storage your cluster is using per day and request an expansion relevant to the retention period you have. 
+
 ## Feedback
 
 If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
