@@ -129,21 +129,21 @@ The examples that follow show how to create a VM using Terraform. The code chang
 
 <form id="diskType" onchange="result.value=name.value;result2.value=name.value">
   <p>
-    <input type="radio" name="name" value='  storage_os_disk {
-      name          = "myosdisk1"
-      vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
-      caching       = "ReadWrite"
-      create_option = "FromImage"
-    }' checked>An unmanaged disk
+    <input type="radio" name="name" value='storage_os_disk {
+    name          = "myosdisk1"
+    vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
+    caching       = "ReadWrite"
+    create_option = "FromImage"
+  }' checked>An unmanaged disk
   </p>
   <div></div>
   <p>
-    <input type="radio" name="name" value='  storage_os_disk {
-      name              = "myosdisk1"
-      caching           = "ReadWrite"
-      create_option     = "FromImage"
-      managed_disk_type = "Standard_LRS"
-    }'>A managed disk
+    <input type="radio" name="name" value='storage_os_disk {
+    name              = "myosdisk1"
+    caching           = "ReadWrite"
+    create_option     = "FromImage"
+    managed_disk_type = "Standard_LRS"
+  }'>A managed disk
   </p>
 </form>
 
@@ -244,12 +244,14 @@ resource "azurestack_virtual_machine" "test" {
     version   = "latest"
   }
 
-<output form="diskType" name="result" style="display: inline;">  storage_os_disk {
+  <output form="diskType" name="result" style="display: inline;" class="output-code">
+  storage_os_disk {
     name          = "myosdisk1"
     vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
     caching       = "ReadWrite"
     create_option = "FromImage"
-  }</output>
+  }
+  </output>
 
   # Optional data disks
   storage_data_disk {
@@ -370,12 +372,14 @@ resource "azurestack_virtual_machine" "test" {
     version   = "latest"
   }
 
-<output form="diskType" name="result2" style="display: inline;">  storage_os_disk {
+  <output form="diskType" name="result2" style="display: inline;" class="output-code">
+  storage_os_disk {
     name          = "myosdisk1"
     vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
     caching       = "ReadWrite"
     create_option = "FromImage"
-  }</output>
+  }
+  </output>
 
   # Optional data disks
   storage_data_disk {
