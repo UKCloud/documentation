@@ -40,10 +40,15 @@ UKCloud Ideas is a beta service being developed using an Agile approach. It's im
 Each idea will be assigned a status as follows:
 
 - **New:** the idea has been created and we’re waiting to see what the community thinks of it
+
 - **Under consideration:** we’re assessing the idea to see if it’s viable.
+
 - **On roadmap:** the idea has been approved and has been added to our roadmap
+
 - **Considered for future:** it’s not something we’re going to do short term although it may be incorporated into the future roadmap, or we haven’t fully assessed the idea
+
 - **Not planned:** this isn’t an idea we’re going to progress
+
 - **Delivered:** we’ve implemented the idea
 
 You have the option to receive an email when someone comments on your idea, which can be set when the idea is created.

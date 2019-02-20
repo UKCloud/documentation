@@ -5,11 +5,11 @@ services: azure-stack
 author: Bailey Lawson
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Create a virtual machine
+toc_sub2: Create a Virtual Machine
 toc_sub3:
 toc_sub4:
 toc_title: Create a virtual machine - PowerShell
-toc_fullpath: Users/How To/Create a virtual machine/azs-how-create-vm-ps.md
+toc_fullpath: Users/How To/Create a Virtual Machine/azs-how-create-vm-ps.md
 toc_mdlink: azs-how-create-vm-ps.md
 ---
 
@@ -26,9 +26,7 @@ Before creating the virtual machine, it is necessary to create storage and netwo
 
 Ensure your PowerShell environment is setup as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md).
 
-## Creating storage resources
-
-Create a storage account and storage container. These resources provide storage for the virtual machine.
+## Creating a virtual machine
 
 > [!IMPORTANT]
 > Enter details below to provide values for the variables in the following script in this article:
@@ -36,11 +34,11 @@ Create a storage account and storage container. These resources provide storage 
 > Resource Group Name: <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;" >
 > <input  type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="myResourceGroup"/></form>
 >
-> Storage Account Name: <form oninput="result.value=saname.value;result2.value=saname.value;result3.value=saname.value" id="saname" style="display: inline;">
+> Storage Account Name: <form oninput="result.value=saname.value" id="saname" style="display: inline;">
 > <input  type="text" id="saname" name="saname" style="display: inline;" placeholder="myStorageAccount"/></form>
 >
 > Region Name: <form oninput="result.value=region.value" id="region" style="display: inline;" >
-> <input  type="text" id="region" name="region" style="display: inline;" placeholder="frn00006"/></form>
+> <input  type="text" id="region" name="region" style="display: inline;" placeholder="frn00006" value="frn00006"/></form>
 >
 > Subnet Name: <form oninput="result.value=subnetname.value" id="subnetname" style="display: inline;" >
 > <input  type="text" id="subnetname" name="subnetname" style="display: inline;" placeholder="mySubnet"/></form>
@@ -52,7 +50,7 @@ Create a storage account and storage container. These resources provide storage 
 > <input  type="text" id="vnetname" name="vnetname" style="display: inline;" placeholder="myVNetwork"/></form>
 > 
 > Virtual Network Address Range (CIDR Notation): <form oninput="result.value=vnetaddrrange.value" id="vnetaddrrange" style="display: inline;">
-> <input  type="text" id="vnetaddrrange" name="vnetaddrrange" style="display: inline;" placeholder="192.168.1.0/16"/></form>
+> <input  type="text" id="vnetaddrrange" name="vnetaddrrange" style="display: inline;" placeholder="192.168.0.0/16"/></form>
 > 
 > Public IP Name: <form oninput="result.value=publicipname.value" id="publicipname" style="display: inline;" >
 > <input  type="text" id="publicipname" name="publicipname" style="display: inline;" placeholder="myPublicIP"/></form>
@@ -177,6 +175,10 @@ Create a storage account and storage container. These resources provide storage 
 > 
 > VM Image: <form onchange="result.value=vmimage.value" id="vmimage" style="display: inline;" >
 > <select name="vmimage" id="vmimage" style="display: inline;">
+>   <option value="/CentOS/Skus/6.10">CentOS-based 6.10</option>
+>   <option value="/CentOS/Skus/6.9">CentOS-based 6.9</option>
+>   <option value="/CentOS/Skus/7.3">CentOS-based 7.3</option>
+>   <option value="/CentOS/Skus/7.5">CentOS-based 7.5</option>
 >   <option value="/UbuntuServer/Skus/14.04.5-LTS">Ubuntu Server 14.04 LTS</option>
 >   <option value="/UbuntuServer/Skus/16.04-LTS">Ubuntu Server 16.04 LTS</option>
 >   <option value="/UbuntuServer/Skus/18.04-LTS">Ubuntu Server 18.04 LTS</option>
@@ -200,83 +202,103 @@ Create a storage account and storage container. These resources provide storage 
 >   <option value="/WindowsServer/Skus/2016-Datacenter">Windows Server 2016 Datacenter - Pay-as-you-use</option>
 >   <option value="/WindowsServer/Skus/2016-Datacenter-Server-Core">Windows Server 2016 Datacenter - Server Core - Pay as you use</option>
 >   <option value="/WindowsServer/Skus/2016-Datacenter-with-Containers">Windows Server 2016 Datacenter - with Containers - Pay as you use</option>
->   <option value="/CentOS/Skus/6.10">CentOS-based 6.10</option>
->   <option value="/CentOS/Skus/6.9">CentOS-based 6.9</option>
->   <option value="/CentOS/Skus/7.3">CentOS-based 7.3</option>
->   <option value="/CentOS/Skus/7.5">CentOS-based 7.5</option>
 > </select></form>
 
 From your PowerShell window:
 
-<pre><code class="language-PowerShell">## Create storage resources
+<pre><code class="language-PowerShell">## Initialise environment and variables
+
 # Add environment
-Add-AzureRMEnvironment -Name 'AzureStack' -ArmEndpoint 'https://management.frn00006.azure.ukcloud.com'
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Login
-Login-AzureRmAccount -EnvironmentName 'AzureStack'
+Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Input Variables
-$RGName = '<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
-$SAName = '<output form="saname" name="result" style="display: inline;">&lt;Storage Account&gt;</output>'.ToLower()
-$Location = '<output form="region" name="result" style="display: inline;">frn00006</output>'
+$RGName = "<output form="resourcegroup" name="result" style="display: inline;">myResourceGroup</output>"
+$SAName = "<output form="saname" name="result" style="display: inline;">myStorageAccount<span id="RandNum"></span></output>".ToLower()
+$Location = "<output form="region" name="result" style="display: inline;">frn00006</output>"
+$SubnetName = "<output form="subnetname" name="result" style="display: inline;">mySubnet</output>"
+$SubnetRange = "<output form="subaddrrange" name="result" style="display: inline;">192.168.1.0/24</output>"
+$VNetName = "<output form="vnetname" name="result" style="display: inline;">myVNetwork</output>"
+$VNetRange = "<output form="vnetaddrrange" name="result" style="display: inline;">192.168.0.0/16</output>"
+$PublicIPName = "<output form="publicipname" name="result" style="display: inline;">myPublicIP</output>"
+$NSGName = "<output form="nsgname" name="result" style="display: inline;">myNSG</output>"
+$NICName = "<output form="nicname" name="result" style="display: inline;">myNIC</output>"
+$VMName = "<output form="vmname" name="result" style="display: inline;">myVM</output>"
+$VMSize = "<output form="vmsize" name="result" style="display: inline;">Basic_A0</output>"
+$ComputerName = "<output form="compname" name="result" style="display: inline;">myComputer</output>"
+$VMImage = "*<output form="vmimage" name="result" style="display: inline;">/CentOS/Skus/6.10</output>"
 
 # Create a new resource group
+Write-Host "Creating resource group"
 New-AzureRmResourceGroup -Name $RGName -Location $Location
 
-# Create a new storage account
-$StorageAccount = New-AzureRMStorageAccount -Location $Location -ResourceGroupName $RGName -Type 'Standard_LRS' -Name $SAName
+## Create storage resources
 
-# Set the current storage account
-$SetStorageAccount = Set-AzureRmCurrentStorageAccount -StorageAccountName $SAName -ResourceGroupName $RGName
+# Create a new storage account
+Write-Host "Creating storage account"
+$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $SAName
 
 ## Create network resources
 
 # Create a subnet configuration
-$SubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name '<output form="subnetname" name="result" style="display: inline;">&lt;Subnet Name&gt;</output>' -AddressPrefix '<output form="subaddrrange" name="result" style="display: inline;">&lt;Subnet Address Range&gt;</output>'
+Write-Host "Creating virtual network"
+$SubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetRange
 
 # Create a virtual network
-$VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location $Location -Name '<output form="vnetname" name="result" style="display: inline;">&lt;Virtual Network Name&gt;</output>' -AddressPrefix '<output form="vnetaddrrange" name="result" style="display: inline;">&lt;Virtual Network Address Range&gt;</output>' -Subnet $SubnetConfig
+$VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location $Location -Name $VNetName -AddressPrefix $VNetRange -Subnet $SubnetConfig
 
 # Create a public IP address
-$PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Location -AllocationMethod 'Dynamic' -Name '<output form="publicipname" name="result" style="display: inline;">&lt;Public IP Name&gt;</output>'
+Write-Host "Creating public IP address"
+$PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Location -AllocationMethod "Dynamic" -Name $PublicIPName
 
 # Create a network security group
-$NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location $Location -Name '<output form="nsgname" name="result" style="display: inline;">&lt;Network Security Group Name&gt;</output>'
+Write-Host "Creating network security group"
+$NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location $Location -Name $NSGName
 
 # Create a virtual network card and associate it with the public IP address and NSG
-$NetworkInterface = New-AzureRmNetworkInterface -Name '<output form="nicname" name="result" style="display: inline;">&lt;Network Interface Card Name&gt;</output>' -ResourceGroupName $RGName -Location $Location -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
+Write-Host "Creating network interface card"
+$NetworkInterface = New-AzureRmNetworkInterface -Name $NICName -ResourceGroupName $RGName -Location $Location -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
 
 ## Create the virtual machine
 
 # Define a credential object to store the username and password for the virtual machine
-$UserName = '<output form="vmusername" name="result" style="display: inline;">&lt;VM Username&gt;</output>'
+$UserName = "<output form="vmusername" name="result" style="display: inline;">myUser</output>"
 $Password = '<output form="vmpassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
 $Credential = New-Object PSCredential($UserName,$Password)
 
 # Create the virtual machine configuration object
-$VirtualMachine = New-AzureRmVMConfig -VMName '<output form="vmname" name="result" style="display: inline;">&lt;VM Name&gt;</output>' -VMSize '<output form="vmsize" name="result" style="display: inline;">Basic_A0</output>'
+$VirtualMachine = New-AzureRmVMConfig -VMName $VMName -VMSize $VMSize
 
 # Set the VM Size and Type
-$VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result" style="display: inline;">-Linux</output> -ComputerName '<output form="compname" name="result" style="display: inline;">&lt;Computer Name&gt;</output>' -Credential $Credential
+$VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result" style="display: inline;">-Linux</output> -ComputerName $ComputerName -Credential $Credential
 
 # Get the VM Source Image
-$Image = Get-AzureRMVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object {$_.Id -like '*<output form="vmimage" name="result" style="display: inline;">/UbuntuServer/Skus/14.04.5-LTS</output>'}
+$Image = Get-AzureRmVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object {$_.Id -like $VMImage}
 
 # Set the VM Source Image
-$VirtualMachine =  Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version 'latest'
+$VirtualMachine =  Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version "latest"
 
-#Set the OS Disk properties
+# Add Network Interface Card 
+$VirtualMachine = Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id -VM $VirtualMachine
+
+# Set the OS Disk properties
 $OSDiskName = "OsDisk"
-$OSDiskUri = '{0}vhds/{1}-{2}.vhd' -f $StorageAccount.PrimaryEndpoints.Blob.ToString(), '<output form="vmname" name="result2" style="display: inline;">&lt;VM Name&gt;</output>'.ToLower(), $OSDiskName
+$OSDiskUri = "{0}vhds/{1}-{2}.vhd" -f $StorageAccount.PrimaryEndpoints.Blob.ToString(), $VMName.ToLower(), $OSDiskName
 
-# Applies the OS disk properties and NIC to the virtual machine.
-$VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -CreateOption FromImage | Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id
+# Applies the OS disk properties 
+$VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -CreateOption FromImage
 
 # Create the virtual machine.
+Write-Host "Creating virtual machine"
 $NewVM = New-AzureRmVM -ResourceGroupName $RGName -Location $Location -VM $VirtualMachine
 $NewVM
+Write-Host "Virtual machine created successfully"
 </code></pre>
 
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+
+<script>document.getElementById("RandNum").innerHTML = Math.round(Math.random()*100000000)</script>

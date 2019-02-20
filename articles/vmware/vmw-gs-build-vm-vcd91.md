@@ -114,6 +114,9 @@ First, you need to create a network that can connect to external networks outsid
 
 The edge gateway is possibly the most complex part of the VDC because of its high level of functionality. The following steps show you how to quickly configure the edge gateway to enable you to access the internet from a VM.
 
+> [!NOTE]
+> NAT rules only work if the firewall is enabled. For security reasons, you should ensure that the firewall is always enabled.
+
 1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
 
 2. This time you're working with the edge gateway, so in the left navigation panel, click **Edges**.
@@ -163,12 +166,14 @@ Let's start with firewall rules:
 
     - **Name** - `HTTPS outbound`
   
+
     - **Source** - `internal`
 
     - **Destination** - `external`
 
     - **Service** - Click the **+** button and enter the following values in the *Add Service* dialog box
   
+
       - **Protocol** - **TCP**
 
       - **Source Port** - `any`
@@ -182,6 +187,9 @@ Let's start with firewall rules:
     - **Action** - **Accept**
 
     These settings allow traffic from the VMs (**Source** = `internal`) to reach destinations outside your VDC (**Destination** = `external`) on port `443` (HTTPS). You'll need to repeat these steps for ports `80` (HTTP) and `53` (DNS).
+    
+    > [!NOTE]
+    > For DNS, the protocol should be UDP.
 
     You can also allow traffic to reach your VMs from outside your VDC by swapping the **Source** and **Destination** values. However, because this opens up your firewall to a lot of traffic, we recommend that you first complete this guide to get comfortable with general networking concepts, and then take a look at the information in [*How to create firewall rules*](vmw-how-create-firewall-rules.md) where you can find out how to lock the firewall down.
 
@@ -283,7 +291,9 @@ Now that you've laid the groundwork, it's time to create your VM. The best way t
 19. To confirm that you have connectivity to the internet and have an assigned IP address:
 
     - Type `ipconfig` into the Command Prompt. If you've configured the networking correctly, your VM will return an IP address.
+
     - Open an internet browser page and navigate to an external web page
+
     - Ping the IP address of your DNS (for example, `8.8.8.8`) through the command line.
 
 ## Next steps

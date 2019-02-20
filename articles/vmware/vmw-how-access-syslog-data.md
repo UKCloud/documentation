@@ -22,7 +22,9 @@ Your edge gateway is globally configured to send syslog messages to a specific I
 syslog data. You can then use this data to check:
 
 - Allowed and denied network traffic
+
 - Load balancer statistics
+
 - Load balancer health
 
 This guide explains the network configuration required to provision a syslog collector within your VDC to receive syslog information direct from your edge gateway.
@@ -51,9 +53,13 @@ The simplest scenario is to gather syslog data from a single edge gateway into o
 1. Create a new routed network with the following details:
 
     - **Org Network Name:** Customer defined
+
     - **Gateway:** `100.127.255.249`
+
     - **Subnet Mask:** `255.255.255.248`
+
     - **DNS:** Customer defined
+
     - **Static IP Pool:** `100.127.255.250 -- 100.127.255.254`
 
     You can find more detailed steps for creating a routed network in [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
@@ -79,14 +85,19 @@ If you have multiple edge gateways under a single NFT you can gather the data fr
     You can create individual rules using the following suggestions:
 
     - `<SOURCE TRANSIT IP>:Any` to `100.127.255.250` on UDP
+
     - `Any:Any` to `100.127.255.250:514` on UDP
+
     - `<NFT TRANSIT CIDR/SUBNET>:Any` to `100.127.255.250:514` on UDP
 
 4. On each of the source edges, create a static route to direct traffic to the syslog edge. Use the following settings:
 
     - **Applied On:** `<nft_network>`
+
     - **Name:** Syslog traffic (or any other name you prefer)
+
     - **Network:** `100.127.255.248/29`
+
     - **Next Hop IP:** The TRANSIT IP address of the syslog edge
 
     Syslog packets from each source edge will now be forwarded to the syslog edge, with the source of the syslog traffic being the TRANSIT IP of the source edge.

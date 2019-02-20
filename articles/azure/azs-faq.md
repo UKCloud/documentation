@@ -36,22 +36,31 @@ The first release of UKCloud for Microsoft Azure IaaS provides:
 Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic compute building blocks in Azure Stack. Initial machine types supported are:
 
 - General purpose: Basic A series, Standard A & D Series
+
 - Memory enhanced: DS Series
+
 - Compute optimised: F Series
 
 #### Storage
 
 - Azure Blob Storage (page): Used to support virtual machine disks. Good for randomly accessed large files.
+
 - Azure Blob Storage (block): Object storage. Good for storing documents, videos and images for example.
+
 - Azure Blob Storage (append): Good for log files.
+
 - Azure Queue Storage: Message queue as a service. Good for asynchronous scale out micro-services.
+
 - Azure Table Storage: NoSQL database service. Good for highly scalable, eventually consistent database support
 
 #### Network
 
 - Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure. This can be configured via the UI, API and other tooling. 
+
 - Load balancers (IPv4 only) - Deploy basic load balancers.
+
 - VPN gateway - Use the Azure Stack VPN gateway to create site-to-site VPNs to remote infrastructure.
+
 - Routing - Configure basic custom defined routing on virtual networks.
 
 ### What technology is UKCloud for Microsoft Azure based on?
@@ -107,6 +116,10 @@ Storage is persistent unless it is virtual machine temporary storage.
 ### How do I access my UKCloud for Microsoft Azure solution?
 
 Access to the UKCloud for Microsoft Azure portal is available via the UKCloud Portal. You'll be provided with login details once your account is provisioned.
+
+### Which ports need to be open to access my UKCloud for Microsoft Azure solution?
+
+The UKCloud for Microsoft Azure portal requires port 80 (HTTP) and port 443 (HTTPS) to be open.
 
 ### How do I access my solutions via government networks?
 
@@ -188,7 +201,9 @@ For infrastructure solutions, you'll be billed by the smallest unit of time whic
 UKCloud will issue invoices as follows:
 
 - At point of order for upfront fees and service options
+
 - Annually in advance for pre-payment fees
+
 - Monthly in arrears for monthly fees
 
 Payment can be made by direct bank transfer (BACS/CHAPS).
@@ -216,3 +231,7 @@ For more information, see our Cross Domain Security Zone documentation.
 Protective monitoring is included for our all our services and follows GPG 13.
 
 For more information about this service, see our [*Protective Monitoring FAQs*](../other/other-faq-promon.md).
+
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.

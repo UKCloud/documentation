@@ -34,6 +34,7 @@ The example of a vApp network, below, shows the vApp edge.
 There are two ways to create a vApp network within vCloud Director:
 
 - [*During vApp creation*](#creating-a-vapp-network-during-vapp-creation)
+
 - [*After vApp creation*](#creating-a-vapp-network-after-vapp-creation)
 
 ### Creating a vApp network during vApp creation
@@ -196,7 +197,9 @@ Static routing at the vApp network level allows traffic to route between differe
 The prerequisites for static routing are as follows:
 
 - Static routing must be enabled for the VDC network you're connecting to (see [*How to create a static route*](vmw-how-create-static-route.md)).
+
 - The two vApp networks must be routed to the same VDC network.
+
 - The vApp networks must be in vApps that have been started at least once.
 
 To add a static route:
@@ -208,6 +211,7 @@ To add a static route:
 3. Enter the following details:
 
     - **Network** - The address of the first vApp network to which you're adding a static route
+
     - **Next Hop IP** - The external IP address of that vApp network's router
 
     ![Add Static Route dialog box](images/vmw-vcd-vapp-static-route.png)

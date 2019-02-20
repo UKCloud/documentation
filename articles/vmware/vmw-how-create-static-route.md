@@ -97,9 +97,13 @@ To create a static route on your standard edge:
 In this article you've learned how to create a static route. For other edge gateway configuration tasks, see:
 
 - [*How to create firewall rules*](vmw-how-create-firewall-rules.md)
+
 - [*How to create NAT rules*](vmw-how-create-nat-rules.md)
+
 - [*How to create a DHCP pool*](vmw-how-create-dhcp-pool.md)
+
 - [*How to configure IPsec VPN*](vmw-how-configure-ipsec-vpn.md)
+
 - [*How to configure a load balancer*](vmw-how-configure-load-balancer.md)
 
 ## Feedback

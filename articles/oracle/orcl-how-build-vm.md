@@ -79,7 +79,9 @@ To build an Oracle VM, you need to raise a server request. Each request can incl
 5. In the *New Server Request* wizard, on the *General* page:
 
     - Enter a **Name** for the request. This is displayed on the Requests page to help you identify your request and track its progress.
+
     - From the **Zone** list, select the UKCloud zone in which you want to create the VM.
+
     - In the **Source** field, specify the template that you want to use for the VM, for example, **OL6u9_x86_64_HVMPVOL6u9_x86_64_HVMPV**.
 
         > [!NOTE]
@@ -92,21 +94,28 @@ To build an Oracle VM, you need to raise a server request. Each request can incl
 6. On the *Deployment Configuration* page:
 
     - You can create multiple VMs in a single request. From the **Number Of Servers** list, select the number of VMs that you want to create.
+
     - If you're creating more than one VM, click **Configure Individual Servers** if you want to configure each VM separately. If you do not click this link, the configuration you specify is applied to all VMs in the request.
+
     - Enter a **Name** for the VM. If there are multiple VMs in the request, a number is added to the end of each VM to ensure uniqueness
 
         > [!NOTE]
         > Click **Configure Individual Servers** to name each VM individually.
 
     - Select **Enable High Availability** to enable high availability for the VM.
+
     - From the **Keymap** list, select the keyboard type for the VM.
+
     - In the **Tags** field, enter tags to identify the VM. This helps to find VMs during searches.
+
     - From the **Server Size** list, select a pre-configured option or select **Custom** if you want to specify your own settings.
 
         If you select **Custom**, specify the **Maximum Memory**, **Memory**, **Maximum Number of CPUs** and **Number of CPUs** settings for the VM(s).
 
     - In the *Networks* section, click **Add** and select the network interface card to use for the VM(s).
+
     - The *Storage* section shows the disk used for VM storage.
+
     - Click **Next**.
 
     ![Deployment Configuration page of New Server Request wizard](images/orcl-oem-new-server-deployment-config.png)
@@ -144,9 +153,13 @@ On the *Requests* page, you can view and edit all requests.
 3. On the *Requests* page, you can view the following information for each request, including:
 
     - The type of request
+
     - The current status of the request: Successful, Partially Successful, In Progress, Scheduled, Error Scheduling, Execution Error, Error Ending, Ended
+
     - The dates when the request was submitted, started and completed.
+
     - The number of servers included in the request
+
     - The total CPU, memory (in MB) and storage (in GB) consumed by the request across all servers
 
     ![Requests page in OEM console](images/orcl-oem-requests.png)
@@ -159,6 +172,10 @@ On the *Requests* page, you can view and edit all requests.
 
 For a general overview of UKCloud for Oracle Software, see the [*Getting Started Guide for UKCloud for Oracle Software*](orcl-gs.md).
 
+## Related videos
+
+- [*Oracle Enterprise Manager Cloud Control console overview video*](orcl-vid-overview.md)
+
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

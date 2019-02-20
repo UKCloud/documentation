@@ -77,6 +77,10 @@ For a template to get you started with a new article, see [*UKCloud Knowledge Ce
 
 If you want to suggest significant changes to the Knowledge Centre, contact <products@ukcloud.com> to discuss your ideas.
 
+## Related videos
+
+- [*Editing Knowledge Centre articles video*](other-vid-kc-contribution.md)
+
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

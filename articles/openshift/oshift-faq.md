@@ -33,16 +33,13 @@ UKCloud for OpenShift is built as a single-tenant platform on-top of UKCloud's s
 
 This service comprises of two main chargeable elements:
 
-  - **Starter Pack -** provides the foundation OpenShift services to support the orchestration and management of the container runtime environments. Each customer environment requires only a single Starter Pack
-  - **Expansion Pack -** Provides the footprint to host customer’s containerised applications and services. Customers can choose to mix and match their Runtime Packs, and Runtime Packs can be called off individually, however UKCloud strongly recommends the initial deployment of two or more Runtime Packs for production environments to provide resilience to your workloads in the event of the failure of a single Runtime Pack.
+  - **Foundation Pack -** provides the foundation OpenShift services to support the orchestration and management of the container runtime environments. Each customer environment requires only a single Foundation Pack
+
+  - **Runtime Pack -** Provides the footprint to host customer’s containerised applications and services. Customers can choose to mix and match their Runtime Packs, and Runtime Packs can be called off individually, however UKCloud strongly recommends the initial deployment of two or more Runtime Packs for production environments to provide resilience to your workloads in the event of the failure of a single Runtime Pack.
 
 ### Does UKCloud offer a free trial?
 
 Free trials are currently available for UKCloud for OpenShift. Please get in touch with your Account Manager to raise this request.
-
-### Is there a free tier to your service?
-
-Due to the complexities of providing a dedicated, single-tenant environment, a free tier is currently not offered on UKCloud for OpenShift.
 
 ### Where is the service hosted?
 
@@ -76,9 +73,9 @@ We are now required to self-assert our services, with customers taking responsib
 
 We provide confidence that our OpenShift service still meets the highest level of information assurance, which is why we continue to have our platform independently tested and validated, and have the findings made available to customers and partners. This enables SIROs to make an informed decision about any service they choose to consume.
 
-### Can I use UKCloud for OpenShift over closed networks such as PSN and N3?
+### Can I use UKCloud for OpenShift over closed networks such as PSN and N3/HSCN?
 
-We plan for this service to be accredited for use over PSN, however this may not be available at launch. Connectivity to the N3 network will be considered when an appropriate sponsor submits a requirement.
+We plan for this service to be accredited for use over PSN, however this may not be available at launch. Connectivity to the N3/HSCN network is supported.
 
 ### Does UKCloud offer any scheduled automated backups for UKCloud for OpenShift?
 
@@ -91,12 +88,19 @@ Although UKCloud for OpenShift is designed to deploy and manage stateless apps (
 The service supports many popular development frameworks and languages such as:
 
 - Java
+
 - Spring
+
 - Ruby
+
 - Sinatra
+
 - Node.js
+
 - Python
+
 - PHP
+
 - GoLang
 
 ### Does UKCloud for OpenShift support any data services?
@@ -104,8 +108,11 @@ The service supports many popular development frameworks and languages such as:
 Our OpenShift service provides popular open source data service packages deployable within the platform, all supported by the global open source community, including:
 
 - MySQL, an open source relational database
+
 - Postgres, a relational database based on PostgreSQL
+
 - MongoDB, a scalable, open, document-based database
+
 - RabbitMQ, for reliable, scalable and portable messaging for applications
 
 Note that these services are offered 'as is' with no management, support or availability commitment from UKCloud. We strongly suggest customers ensure they maintain a master copy or backup copy of any persistent or dynamic data hosted on this service (such as MySQL DB) by using, for example, a data service provided by a managed service provider on our UKCloud for VMware platform.
@@ -156,4 +163,4 @@ Yes, it is possible to run a privileged container. However, this is not recommen
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

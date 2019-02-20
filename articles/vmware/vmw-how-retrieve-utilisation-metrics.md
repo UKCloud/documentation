@@ -20,12 +20,19 @@ toc_mdlink: vmw-how-retrieve-utilisation-metrics.md
 You can use the vCloud API to retrieve current or historic utilisation metrics for a virtual machine (VM). You can retrieve the following utilisation metrics:
 
 - Average CPU usage (%)
+
 - Maximum CPU usage (%)
+
 - Average CPU usage (MHz)
+
 - Average memory usage (%)
+
 - Average disk write speed (KBps)
+
 - Average disk read speed (KBps)
+
 - Amount of disk provisioned (KB)
+
 - Amount of disk used (KB)
 
 You can retrieve current utilisation metrics for VMs in all UKCloud regions; you can retrieve historic metrics for VMs in regions 5 and 6.

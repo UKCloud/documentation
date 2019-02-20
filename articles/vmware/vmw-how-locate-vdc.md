@@ -22,7 +22,9 @@ Each virtual data centre (VDC) exists in a particular location within the UKClou
 Knowing where your VDCs are located can be useful for:
 
 - Determining how resilient your applications are
+
 - Determining how scheduled or emergency maintenance or an unplanned outage may affect your applications
+
 - Providing additional information to help with support call resolution
 
 This guide describes how to use vCloud Director to find out where your VDC is within the UKCloud platform. You can use the vCloud Director UI or the API.

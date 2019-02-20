@@ -21,11 +21,18 @@ For some tasks, you cannot use the tenant portal that was introduced in vCloud D
 
 Tasks that you cannot perform in the tenant portal include:
 
+- Managing standard edges (for example, editing firewall and NAT rules)
+
 - Redeploying edges
+
 - Editing vApp network settings
+
 - Uploading ISO or OVF files from a URL
+
 - Copying and moving individual virtual machines (VMs)
+
 - Viewing virtual data centre (VDC) properties, such as metadata
+
 - Creating affinity and anti-affinity rules
 
 ## Switching to the vCloud Director web console

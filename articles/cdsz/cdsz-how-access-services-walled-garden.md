@@ -29,7 +29,9 @@ To complete the steps in this guide you must have vCloud Director administrator 
 Before making network changes to your environment, you'll need the following information:
 
 - The Transit IP for the Elevated edge gateway of your CDSZ or SRA VDC
+
 - The Transit IP for the edge gateway of your Elevated VDC
+
 - The IP of the service you require.
 
 To get the last two octets of the IP addresses for the service you require, please raise a support ticket on the UKCloud Elevated Portal.
@@ -59,6 +61,7 @@ The diagrams below show that you need to add two static routes and an SNAT rule 
 Now that you've set up access to UKCloud services, you can register your VMs with those services. For more information, see:
 
 - [*How to license Windows VMs using the UKCloud Key Management Server*](../vmware/vmw-how-setup-kms.md)
+
 - [*How to connect to the UKCloud Windows Server Update Services (WSUS)*](../vmware/vmw-how-connect-windows-update.md)
 
 ## Feedback

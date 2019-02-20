@@ -8,7 +8,7 @@
     <title>How to create a virtual machine from a template | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual machine from a template | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-vm-from-template.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -148,11 +157,14 @@
 </li>
 <li><p>From the <strong>IP Assignment</strong> list, select:</p>
 <ul>
-<li><strong>Static - IP Pool</strong> (the usual method) to inject an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a checkbox to keep
-IP address assignments elsewhere within the UI once the VMs are created.</li>
-<li><strong>Static - Manual</strong> to specify a valid IP address from the pool that the VM will then keep.</li>
-<li><strong>DHCP</strong> to specify that vCloud Director should interact with the OS via VMware Tools to
-use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway.</li>
+<li><p><strong>Static - IP Pool</strong> (the usual method) to inject an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a checkbox to keep
+IP address assignments elsewhere within the UI once the VMs are created.</p>
+</li>
+<li><p><strong>Static - Manual</strong> to specify a valid IP address from the pool that the VM will then keep.</p>
+</li>
+<li><p><strong>DHCP</strong> to specify that vCloud Director should interact with the OS via VMware Tools to
+use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway.</p>
+</li>
 </ul>
 <p><img src="images/vmw-vcd-vm-configure-vms.png" alt="Configure Virtual Machines page"></p>
 </li>
@@ -228,10 +240,13 @@ use DHCP rather than static IPs. You'll need to define a DHCP server on your edg
 <li><p>To add a new network interface controller (NIC), in the <em>NICs</em> section, click <strong>Add</strong>, configure the parameters as required, then select the <strong>Connected</strong> check box.</p>
 <p>From the <strong>IP Mode</strong> list, select:</p>
 <ul>
-<li><strong>Static - IP Pool</strong> (the usual method) to inject an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a check box to keep IP address assignments elsewhere within the UI once the VMs are created.</li>
-<li><strong>Static - Manual</strong> to specify a valid IP address from the pool that the VM will then keep.</li>
-<li><strong>DHCP</strong> to specify that vCloud Director should interact with the OS via VMware Tools to
-use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway.</li>
+<li><p><strong>Static - IP Pool</strong> (the usual method) to inject an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a check box to keep IP address assignments elsewhere within the UI once the VMs are created.</p>
+</li>
+<li><p><strong>Static - Manual</strong> to specify a valid IP address from the pool that the VM will then keep.</p>
+</li>
+<li><p><strong>DHCP</strong> to specify that vCloud Director should interact with the OS via VMware Tools to
+use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway.</p>
+</li>
 </ul>
 <div class="TIP">
 <h5>Tip</h5>
@@ -255,13 +270,6 @@ use DHCP rather than static IPs. You'll need to define a DHCP server on your edg
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-vm-from-template.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -280,7 +288,7 @@ use DHCP rather than static IPs. You'll need to define a DHCP server on your edg
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

@@ -8,7 +8,7 @@
     <title>VM compatibility with UKCloud for Oracle Software | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="VM compatibility with UKCloud for Oracle Software | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/oracle/orcl-ref-vm-compatibility.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -92,9 +101,12 @@
 <h2 id="ova">OVA</h2>
 <p>If you select the <strong>Assembly</strong> option on the upload page, then the uploader will expect an OVA Assembly package file (<code>ova</code> file). Your <code>.ova file</code> should contain the following files (in the exact order listed):</p>
 <ul>
-<li><em><code>MyVM</code></em><code>.ovf</code> - the OVF descriptor file, which contains all VM specs metadata and links to the embedded virtual disk image file (with a <code>.vmdk</code> extension)</li>
-<li><em><code>MyVM</code></em><code>.mf</code> - contains metadata that is used for integrity and authenticity checks; this data must be correct for the <code>.ova</code> file to be accepted in most cases</li>
-<li><em><code>MyVM</code></em><code>.vmdk</code> - the embedded virtual disk image file</li>
+<li><p><em><code>MyVM</code></em><code>.ovf</code> - the OVF descriptor file, which contains all VM specs metadata and links to the embedded virtual disk image file (with a <code>.vmdk</code> extension)</p>
+</li>
+<li><p><em><code>MyVM</code></em><code>.mf</code> - contains metadata that is used for integrity and authenticity checks; this data must be correct for the <code>.ova</code> file to be accepted in most cases</p>
+</li>
+<li><p><em><code>MyVM</code></em><code>.vmdk</code> - the embedded virtual disk image file</p>
+</li>
 </ul>
 <p>As the exported <code>.ova</code> file also contains file hashes that are unique to the files included in the package, simply creating a <code>tar</code> file with these contents will not work in most cases. For most virtualisation platforms, it's best to use the export functionality from the source virtualisation platform to generate the <code>.ova</code> file.</p>
 <p>One way of converting your VMs to an <code>.ova</code> file would be to use the OVF Tool, for example:</p>
@@ -109,8 +121,10 @@
 <h2 id="tar">TAR</h2>
 <p>If you select the <strong>Template</strong> option on the upload page, then the uploader will expect an Oracle VM Template file (either a <code>.tgz</code> or <code>.tar.gz</code> file). This gzipped tarball file normally contains the following files (in the exact order listed):</p>
 <ul>
-<li><em><code>MyVM</code></em><code>.cfg</code> - contains the VM specs metadata and links to the embedded RAW disk image file, normally named <code>system.img</code></li>
-<li><code>system.img</code> - the embedded RAW disk image file, either exported from another XEN platform or converted from other virtual disk formats</li>
+<li><p><em><code>MyVM</code></em><code>.cfg</code> - contains the VM specs metadata and links to the embedded RAW disk image file, normally named <code>system.img</code></p>
+</li>
+<li><p><code>system.img</code> - the embedded RAW disk image file, either exported from another XEN platform or converted from other virtual disk formats</p>
+</li>
 </ul>
 <h2 id="upload-size">Upload size</h2>
 <p>For any uploads larger than 500 MB, you'll need to allow sufficient time for the upload to complete before clicking the <strong>Upload</strong> button or it will fail and the item will not appear in your software library. There is currently no upload progress indicator on OEM. Oracle is aware of this but are treating it as an enhancement request therefore there's currently no indication of when the upload progress indicator will be added on future releases of the platform software.</p>
@@ -125,13 +139,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/oracle/orcl-ref-vm-compatibility.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -150,7 +157,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

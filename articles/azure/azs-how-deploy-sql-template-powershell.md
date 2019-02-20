@@ -1,26 +1,27 @@
 ---
-title: How to deploy a SQL template to Azure Stack - PowerShell
-description: Learn how to deploy a SQL template to Azure Stack using PowerShell
+title: How to deploy an SQL template to Azure Stack using PowerShell | UKCloud Ltd
+description: Learn how to deploy an SQL template to Azure Stack using PowerShell
 services: azure-stack
 author: Chris Black
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Templates
+toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Deploy a SQL template to Azure Stack - PowerShell
+toc_title: Deploy an SQL template to Azure Stack - PowerShell
 toc_fullpath: Users/How To/azs-how-deploy-sql-template-powershell.md
 toc_mdlink: azs-how-deploy-sql-template-powershell.md
 ---
 
-# How to deploy a SQL template to Azure Stack - PowerShell
+# How to deploy an SQL template to Azure Stack using PowerShell
 
 This document explains how to deploy SQL Always On Cluster using ARM Template to Azure Stack using PowerShell.
 
 It will guide you through the process of:
 
 - obtaining ARM Template
+
 - deploying [ARM Template for SQL Always On](https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master/sql-2016-ha)
 
 ## What is an ARM Template?
@@ -39,7 +40,7 @@ Prerequisites from a Windows-based external client are:
 
 - Active Azure *Subscription* (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)
 
-## Official Documentation
+## Official documentation
 
 - [Azure Stack ARM Templates Overview](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-arm-templates)
 
@@ -60,7 +61,7 @@ SQL Always On Repository - [sql-2016-ha](https://github.com/Azure/AzureStack-Qui
 
 - From an elevated (run as adminstrator) PowerShell prompt run:
 
-  ```powershell
+  ```PowerShell
   cd c:\
   mkdir RepoDirectory
   cd RepoDirectory
@@ -77,12 +78,19 @@ SQL Always On Repository - [sql-2016-ha](https://github.com/Azure/AzureStack-Qui
 This template deploys two SQL Server 2016 SP1 Enterprise / Standard / Developer instances in the Always On Availability Group using the PowerShell DSC Extension. It creates the following resources:
 
 - A network security group
+
 - A Virtual Network
+
 - Four Storage Accounts (One for AD, One for SQL, One for File Share witness and One for VM diagnostic)
+
 - Four public IP address (One for AD, Two for each SQL VM and One for Public LB bound to SQL Always On Listener)
+
 - One external load balancer for SQL VMs with Public IP bound to SQL always On Listener
+
 - One VM (WS2016) configured as Domain Controller for a new forest with a single domain
+
 - Two VM (WS2016) configured as SQL Server 2016 SP1 Enterprise / Standard / Developer and clustered.
+
 - One VM (WS2016) configured as File Share Witness for the cluster.
 
 ### Notes
@@ -90,8 +98,11 @@ This template deploys two SQL Server 2016 SP1 Enterprise / Standard / Developer 
 The images used to create this deployment are:
 
 - AD - Windows Server 2016 Image
+
 - SQL Server - SQL Server 2016 SP1 on Windows Server 2016 Image
+
 - SQL IAAS Extension 1.2.18
+
 - Latest DSC Extension (2.26.0 or higher)
 
 > [!WARNING]
@@ -119,7 +130,9 @@ The images used to create this deployment are:
 ### Configuration
 
 - Each SQL VMs will have two 128GB data disks.
+
 - The template configures the SQL instances with contained database authentication set to true.
+
 - The DNS suffix for public IP addresses by default will be `azurestack.external` unless you change it to `azure.ukcloud.com`
 
 ## Overview of the ARM Template deployment process for Azure Stack using Service Principal Name (SPN) authentication
@@ -202,7 +215,7 @@ Change the required variables as per your environment and run the following scri
 
 
 
-```powershell
+```PowerShell
 # Declare login variables
 $AppGUID = "<GUID of your SPN Application>"
 $AppPassword = '<your password>'
@@ -220,7 +233,7 @@ $sqlAuthPassword = '<your password>'
   $sqlAuthPasswordCred = ConvertTo-SecureString "$sqlAuthPassword" -AsPlainText -Force
 $domainName = "<ActiveDirectoryDomainName>"
 $adminUsername = "<adminUsername>"
-$sqlServerServiceAccountUserName = "<serviceAccountUsername"
+$sqlServerServiceAccountUserName = "<serviceAccountUsername>"
 
 $CustomTemplateJSON = "<directory>\azuredeploy.json"
 $CustomTemplateParamJSON = "<directory>\azuredeploy.parameters.json"
@@ -235,13 +248,12 @@ $platformUpdateDomainCount = 5
 $ARMDeploymentName = "SqlAlwaysOnDeployment"
 
 # Create Azure Stack Environment so that you can log in to it
-Add-AzureRMEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
 # Create your SPN  Credentials Login
 # Note: (Username is "<ApplicationId>@<AAD Domain>")
 $AzsUsername = $AppGUID + "@" + $TenantDomain
-$AzsPassword = $AppPassword
-  $AzsUserPassword = ConvertTo-SecureString "$AzsPassword" -AsPlainText -Force
+  $AzsUserPassword = ConvertTo-SecureString "$AppPassword" -AsPlainText -Force
   $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
 
 # Log in to Azure Stack using SPN account
@@ -251,14 +263,14 @@ Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCre
 try {
     $RG = Get-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -ErrorAction 'SilentlyContinue'
     if ( -not $RG) {
-      write-host("Didn't find Resource Group")
+      Write-Host("Didn't find Resource Group")
       New-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -Verbose
       return
     } else {
       return 'Exists'
     }
   } catch {
-    write-host('Could not query Resource Group')
+    Write-Host("Could not query Resource Group")
     exit
   }
 
@@ -283,7 +295,7 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 > [!NOTE]
 > If Template fails validation and you need to see detailed error message you can do:
 >
-> ```powershell
+> ```PowerShell
 > Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -sqlVMSize "Standard_A4"
 >
 > Code    : MultipleErrorsOccurred
@@ -297,11 +309,11 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 > Details :
 > ```
 
-## Known Issues
+## Known issues
 
 - Sometimes Domain Account does not get correctly created and you will get the following error:
 
-  ```powershell
+  ```PowerShell
   "statusMessage":
   "{\"status\":\"Failed\",\"error\":{\"code\":\"ResourceDeploymentFailure\",\"message\":\"The
   resource operation completed with terminal provisioning state 'Failed'.\",\"details\":{\"code\":\"VMExtensionProvisioningError\",\"message\":\"VM
@@ -312,16 +324,25 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 
   If that happens, you can just **redeploy** and it should be fine.
 
-## Troubleshooting DSC Extensions
+## Troubleshooting DSC extensions
 
 - [PowerShell DSC Extension](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-overview)
+
   - `C:\WindowsAzure\Logs\Plugins\Microsoft.Powershell.DSC\<version number>` 
+
 - [DSC Configuration](https://powershell.org/2017/10/10/using-azure-desired-state-configuration-part-iv/) and [cmdlets](https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmdscextensionstatus?view=azurermps-6.5.0)
+
   - To view Status of the DSC deployment run:
 
-    ```powershell
+    ```PowerShell
     Get-AzureRmVMDscExtension -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>"
     Get-AzureRmVMDscExtensionStatus -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>" | select -ExpandProperty DscConfigurationLog
     ```
+
 - [Event Viewer Logs](http://www.codewrecks.com/blog/index.php/2014/06/15/deploying-web-site-with-powershell-dsc-part-3/)
+
   -  Errors are located in: `Application And Service Logs / Microsoft / Windows / Desired State Configuration`
+  
+## Feedback
+
+If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.

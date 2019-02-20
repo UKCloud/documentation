@@ -8,7 +8,7 @@
     <title>How to configure IPsec VPN | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure IPsec VPN | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-configure-ipsec-vpn.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -87,9 +96,12 @@
 <h2 id="overview">Overview</h2>
 <p>vCloud Director supports the following types of site-to-site VPN:</p>
 <ul>
-<li>Another edge gateway in the same organisation</li>
-<li>An edge gateway in another organisation (UKCloud or another vCloud service provider)</li>
-<li>A remote network offering IPsec VPN endpoint capability</li>
+<li><p>Another edge gateway in the same organisation</p>
+</li>
+<li><p>An edge gateway in another organisation (UKCloud or another vCloud service provider)</p>
+</li>
+<li><p>A remote network offering IPsec VPN endpoint capability</p>
+</li>
 </ul>
 <p>Depending on the type of connection required, you'll need to complete IP addressing for both ends, together with a shared secret, and indicate which VDC networks are allowed to connect to the VPN link.</p>
 <h2 id="before-you-begin">Before you begin</h2>
@@ -144,8 +156,10 @@
 <h2 id="configuring-edge-gateway-ipsec-vpn-settings">Configuring edge gateway IPsec VPN settings</h2>
 <p>The steps for configuring edge gateway IPsec VPN settings vary depending on what type of edge gateway you're working with:</p>
 <ul>
-<li><a href="#configuring-edge-gateway-ipsec-vpn-settings-for-an-advanced-gateway">Configuring edge gateway IPsec VPN settings for an advanced gateway</a></li>
-<li><a href="#configuring-edge-gateway-ipsec-vpn-settings-for-a-standard-edge">Configuring edge gateway IPsec VPN settings for a standard edge</a></li>
+<li><p><a href="#configuring-edge-gateway-ipsec-vpn-settings-for-an-advanced-gateway">Configuring edge gateway IPsec VPN settings for an advanced gateway</a></p>
+</li>
+<li><p><a href="#configuring-edge-gateway-ipsec-vpn-settings-for-a-standard-edge">Configuring edge gateway IPsec VPN settings for a standard edge</a></p>
+</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
@@ -173,18 +187,30 @@
 </li>
 <li><p>Complete the configuration as follows:</p>
 <ul>
-<li>Enable perfect forward secrecy (PFS) - Select this if your on-premises/remote site has that capability.</li>
-<li>Name</li>
-<li>Local Id</li>
-<li>Local Endpoint - The external IP of your edge gateway (refer to the first steps of this procedure for more information).</li>
-<li>Local Subnets - Enter the organisation networks that can access the VPN (separate multiple local subnets with commas).</li>
-<li>Peer Id</li>
-<li>Peer Endpoint - The external IP of your remote site or on-premises firewall or edge where VPN is being set up.</li>
-<li>Peer Subnets - This is the subnet on your on-premises network that you want to make accessible from your UKCloud VDC. For example, if your on-premises networks sit inside the <code>10.20.0.0/16</code> range, you could enter <code>10.20.0.0/16</code> here or limit your entry to a smaller subnet of that, for example <code>10.20.0.0/25</code>.</li>
-<li>Encryption Algorithm - Select the most secure protocol that is supported by your on-premises gateway.</li>
-<li>Authentication - Select the authentication method that is supported by your on-premises gateway. If you want to use certificates, then you need to configure those first on the <strong>Certificates</strong> tab.</li>
-<li>Pre-Shared Key - The shared secret used to authenticate and encrypt the connection. It must be an alphanumeric string between 32 and 128 characters that includes at least one uppercase letter, one lowercase letter and one number. This must be the same on both sites.</li>
-<li>Diffie-Hellmann Group - We recommend setting this to DH14 or higher if your on-premises environment can support it.</li>
+<li><p>Enable perfect forward secrecy (PFS) - Select this if your on-premises/remote site has that capability.</p>
+</li>
+<li><p>Name</p>
+</li>
+<li><p>Local Id</p>
+</li>
+<li><p>Local Endpoint - The external IP of your edge gateway (refer to the first steps of this procedure for more information).</p>
+</li>
+<li><p>Local Subnets - Enter the organisation networks that can access the VPN (separate multiple local subnets with commas).</p>
+</li>
+<li><p>Peer Id</p>
+</li>
+<li><p>Peer Endpoint - The external IP of your remote site or on-premises firewall or edge where VPN is being set up.</p>
+</li>
+<li><p>Peer Subnets - This is the subnet on your on-premises network that you want to make accessible from your UKCloud VDC. For example, if your on-premises networks sit inside the <code>10.20.0.0/16</code> range, you could enter <code>10.20.0.0/16</code> here or limit your entry to a smaller subnet of that, for example <code>10.20.0.0/25</code>.</p>
+</li>
+<li><p>Encryption Algorithm - Select the most secure protocol that is supported by your on-premises gateway.</p>
+</li>
+<li><p>Authentication - Select the authentication method that is supported by your on-premises gateway. If you want to use certificates, then you need to configure those first on the <strong>Certificates</strong> tab.</p>
+</li>
+<li><p>Pre-Shared Key - The shared secret used to authenticate and encrypt the connection. It must be an alphanumeric string between 32 and 128 characters that includes at least one uppercase letter, one lowercase letter and one number. This must be the same on both sites.</p>
+</li>
+<li><p>Diffie-Hellmann Group - We recommend setting this to DH14 or higher if your on-premises environment can support it.</p>
+</li>
 </ul>
 <p><img src="images/vmw-vcd-adv-edge-ipsec-vpn-config.png" alt="Add IPsec VPN dialog box"></p>
 </li>
@@ -228,22 +254,33 @@
 </li>
 <li><p>In the <em>Add a Site-to-Site VPN configuration</em> dialog box, complete the configuration as follows:</p>
 <ul>
-<li><strong>Name</strong></li>
-<li><strong>Description</strong></li>
-<li><strong>Establish VPN to</strong> - Choose between:
+<li><p><strong>Name</strong></p>
+</li>
+<li><p><strong>Description</strong></p>
+</li>
+<li><p><strong>Establish VPN to</strong> - Choose between:</p>
 <ul>
-<li>A remote network</li>
-<li>A network in this organisation</li>
-<li>A network in another organisation</li>
+<li><p>A remote network</p>
+</li>
+<li><p>A network in this organisation</p>
+</li>
+<li><p>A network in another organisation</p>
+</li>
 </ul>
 </li>
-<li><strong>Local Networks</strong> - Choose the organisation networks that can access the VPN. If you have only one, select that.</li>
-<li><strong>Peer Networks</strong> - This is the subnet on your on-premises network that you want to make accessible from your VDC. For example, if your on-premises networks sit inside the <code>10.20.0.0/16</code> range, you could enter <code>10.20.0.0/16</code> here, or limit your entry to
-a smaller subnet of that, for example <code>10.20.6.0/25</code></li>
-<li><strong>Local Endpoint</strong> - The external network of your Edge Gateway. Only one option should be available.</li>
-<li><strong>Encryption protocol</strong> - Choose the most secure protocol that is supported by your on-premises gateway</li>
-<li><strong>Shared Key</strong> - The shared secret to use to authenticate and encrypt the connection. It must be an alphanumeric string between 32 and 128 characters long and include at least one upper-case letter, one lower-case letter, and one number.</li>
-<li><strong>MTU</strong> - Reduce from default to <code>1350</code>.</li>
+<li><p><strong>Local Networks</strong> - Choose the organisation networks that can access the VPN. If you have only one, select that.</p>
+</li>
+<li><p><strong>Peer Networks</strong> - This is the subnet on your on-premises network that you want to make accessible from your VDC. For example, if your on-premises networks sit inside the <code>10.20.0.0/16</code> range, you could enter <code>10.20.0.0/16</code> here, or limit your entry to
+a smaller subnet of that, for example <code>10.20.6.0/25</code></p>
+</li>
+<li><p><strong>Local Endpoint</strong> - The external network of your Edge Gateway. Only one option should be available.</p>
+</li>
+<li><p><strong>Encryption protocol</strong> - Choose the most secure protocol that is supported by your on-premises gateway</p>
+</li>
+<li><p><strong>Shared Key</strong> - The shared secret to use to authenticate and encrypt the connection. It must be an alphanumeric string between 32 and 128 characters long and include at least one upper-case letter, one lower-case letter, and one number.</p>
+</li>
+<li><p><strong>MTU</strong> - Reduce from default to <code>1350</code>.</p>
+</li>
 </ul>
 <p><img src="images/vmw-vcd-vpn-config-reg.png" alt="Add Site-to-Site VPN configuration dialog box"></p>
 </li>
@@ -261,59 +298,90 @@ a smaller subnet of that, for example <code>10.20.6.0/25</code></li>
 <p>Phase 1 sets up mutual authentication of the peers, negotiates cryptographic parameters, and creates session keys.</p>
 <p>The Phase 1 parameters used by an advanced gateway are:</p>
 <ul>
-<li>Main mode</li>
-<li>AES/AES256/AES-GCM (user configurable)</li>
-<li>Diffie-Hellman Group</li>
-<li>Pre-shared secret (user configurable)</li>
-<li>SA lifetime of 28800 seconds (eight hours) with no kbytes rekeying</li>
-<li>ISAKMP aggressive mode disabled</li>
+<li><p>Main mode</p>
+</li>
+<li><p>AES/AES256/AES-GCM (user configurable)</p>
+</li>
+<li><p>Diffie-Hellman Group</p>
+</li>
+<li><p>Pre-shared secret (user configurable)</p>
+</li>
+<li><p>SA lifetime of 28800 seconds (eight hours) with no kbytes rekeying</p>
+</li>
+<li><p>ISAKMP aggressive mode disabled</p>
+</li>
 </ul>
 <p>The Phase 1 parameters used by a standard edge are:</p>
 <ul>
-<li>Main mode</li>
-<li>TripleDES / AES (user configurable)</li>
-<li>SHA-1</li>
-<li>MODP group 2 (1024 bits)</li>
-<li>Pre-shared secret (user configurable)</li>
-<li>SA lifetime of 28800 seconds (eight hours) with no kbytes rekeying</li>
-<li>ISAKMP aggressive mode disabled</li>
+<li><p>Main mode</p>
+</li>
+<li><p>TripleDES / AES (user configurable)</p>
+</li>
+<li><p>SHA-1</p>
+</li>
+<li><p>MODP group 2 (1024 bits)</p>
+</li>
+<li><p>Pre-shared secret (user configurable)</p>
+</li>
+<li><p>SA lifetime of 28800 seconds (eight hours) with no kbytes rekeying</p>
+</li>
+<li><p>ISAKMP aggressive mode disabled</p>
+</li>
 </ul>
 <h4 id="phase-2-parameters">Phase 2 parameters</h4>
 <p>IKE Phase 2 negotiates an IPSec tunnel by creating keying material for the IPSec tunnel to use (either by using the IKE phase 1 keys as a base or by performing a new key exchange).</p>
 <p>The IKE Phase 2 parameters supported by an advanced gateway are:</p>
 <ul>
-<li>AES/AES256/AES-GCM (Will match the Phase 1 setting)</li>
-<li>ESP tunnel mode</li>
-<li>Diffie-Hellman Group</li>
-<li>Perfect forward secrecy for rekeying (only if it was turned on in both endpoints)</li>
-<li>SA lifetime of 3600 seconds (one hour) with no kbytes rekeying</li>
-<li>Selectors for all IP protocols, all ports, between the two networks, using IPv4 subnets</li>
+<li><p>AES/AES256/AES-GCM (Will match the Phase 1 setting)</p>
+</li>
+<li><p>ESP tunnel mode</p>
+</li>
+<li><p>Diffie-Hellman Group</p>
+</li>
+<li><p>Perfect forward secrecy for rekeying (only if it was turned on in both endpoints)</p>
+</li>
+<li><p>SA lifetime of 3600 seconds (one hour) with no kbytes rekeying</p>
+</li>
+<li><p>Selectors for all IP protocols, all ports, between the two networks, using IPv4 subnets</p>
+</li>
 </ul>
 <p>The IKE Phase 2 parameters supported by a standard edge are:</p>
 <ul>
-<li>TripleDES / AES (will match the Phase 1 setting)</li>
-<li>SHA-1</li>
-<li>ESP tunnel mode</li>
-<li>MODP group 2 (1024 bits)</li>
-<li>Perfect forward secrecy for rekeying</li>
-<li>SA lifetime of 3600 seconds (one hour) with no kbytes rekeying</li>
-<li>Selectors for all IP protocols, all ports, between the two networks, using IPv4 subnets</li>
+<li><p>TripleDES / AES (will match the Phase 1 setting)</p>
+</li>
+<li><p>SHA-1</p>
+</li>
+<li><p>ESP tunnel mode</p>
+</li>
+<li><p>MODP group 2 (1024 bits)</p>
+</li>
+<li><p>Perfect forward secrecy for rekeying</p>
+</li>
+<li><p>SA lifetime of 3600 seconds (one hour) with no kbytes rekeying</p>
+</li>
+<li><p>Selectors for all IP protocols, all ports, between the two networks, using IPv4 subnets</p>
+</li>
 </ul>
 <h2 id="configuring-the-edge-gateway-firewall">Configuring the edge gateway firewall</h2>
 <p>When the VPN tunnel is up and running, you'll need to create firewall rules on the edge gateway for any traffic passing over the tunnel. For how to do this, see <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
 <p>Key points to note:</p>
 <ul>
-<li>You need to create a firewall rule for both directions, that is, from data centre to VDC and from VDC to data centre.</li>
-<li>For data centre to VDC, set:
+<li><p>You need to create a firewall rule for both directions, that is, from data centre to VDC and from VDC to data centre.</p>
+</li>
+<li><p>For data centre to VDC, set:</p>
 <ul>
-<li>Source as the source IP range for your external VDC/data centre network</li>
-<li>Destination as the destination IP range for your VDC network</li>
+<li><p>Source as the source IP range for your external VDC/data centre network</p>
+</li>
+<li><p>Destination as the destination IP range for your VDC network</p>
+</li>
 </ul>
 </li>
-<li>For VDC to data centre, set:
+<li><p>For VDC to data centre, set:</p>
 <ul>
-<li>Source as the source IP range for your VDC network</li>
-<li>Destination as the destination IP range for your data centre/VDC network</li>
+<li><p>Source as the source IP range for your VDC network</p>
+</li>
+<li><p>Destination as the destination IP range for your data centre/VDC network</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -328,14 +396,17 @@ a smaller subnet of that, for example <code>10.20.6.0/25</code></li>
 </li>
 <li><p>For advanced gateways:</p>
 <ul>
-<li>Select the <strong>Statistics</strong> tab and then the <strong>IPsec VPN</strong> tab.</li>
-<li>For each configured tunnel, if you can see a tick, the tunnel is up and running and operational. If any other status is shown, you'll need to review your configuration and any firewall rules.</li>
+<li><p>Select the <strong>Statistics</strong> tab and then the <strong>IPsec VPN</strong> tab.</p>
+</li>
+<li><p>For each configured tunnel, if you can see a tick, the tunnel is up and running and operational. If any other status is shown, you'll need to review your configuration and any firewall rules.</p>
+</li>
 </ul>
 <p><img src="images/vmw-vcd-adv-edge-ipsec-vpn-config.png" alt="IPsec VPN Statistics tab"></p>
 </li>
 </ol>
 <p>For standard edges:</p>
 <pre><code>- Select the **VPN** tab.
+
 - For each configured tunnel you should see an entry in the **Status** column. If it's a green tick, the tunnel is up and operational. If any other status is shown, you'll need to review your configuration and any firewall rules.
 </code></pre>
 <div class="NOTE">
@@ -352,11 +423,16 @@ a smaller subnet of that, for example <code>10.20.6.0/25</code></li>
 <h2 id="next-steps">Next steps</h2>
 <p>In this article you've learned how to configure IPsec VPN. For other edge gateway configuration tasks, see:</p>
 <ul>
-<li><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></li>
-<li><a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a></li>
-<li><a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></li>
-<li><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></li>
-<li><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></li>
+<li><p><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></p>
+</li>
+<li><p><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></p>
+</li>
 </ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
@@ -369,13 +445,6 @@ a smaller subnet of that, for example <code>10.20.6.0/25</code></li>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-configure-ipsec-vpn.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -394,7 +463,7 @@ a smaller subnet of that, for example <code>10.20.6.0/25</code></li>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

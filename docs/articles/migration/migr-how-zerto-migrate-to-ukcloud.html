@@ -8,7 +8,7 @@
     <title>How to migrate your workloads to the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to migrate your workloads to the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/migration/migr-how-zerto-migrate-to-ukcloud.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -92,15 +101,21 @@
 <h2 id="before-you-begin">Before you begin</h2>
 <p>When you request Workload Migration, UKCloud provides you with:</p>
 <ul>
-<li>The IP address (from the IP range you provided to UKCloud) of the Zerto Cloud Connector (ZCC) deployed in your target VDC; you'll need this to complete the setup of the site-to-site VPN between your local environment and your UKCloud target VDC</li>
-<li>A link to the appropriate version of the Zerto Virtual Manager (ZVM) for you to deploy in your local environment</li>
-<li>A ZORG ID to identify your Zerto environment within the UKCloud platform</li>
-<li>Access to the Zerto Self-Service Portal (ZSSP) in the appropriate UKCloud zone</li>
+<li><p>The IP address (from the IP range you provided to UKCloud) of the Zerto Cloud Connector (ZCC) deployed in your target VDC; you'll need this to complete the setup of the site-to-site VPN between your local environment and your UKCloud target VDC</p>
+</li>
+<li><p>A link to the appropriate version of the Zerto Virtual Manager (ZVM) for you to deploy in your local environment</p>
+</li>
+<li><p>A ZORG ID to identify your Zerto environment within the UKCloud platform</p>
+</li>
+<li><p>Access to the Zerto Self-Service Portal (ZSSP) in the appropriate UKCloud zone</p>
+</li>
 </ul>
 <p>You should consider the following:</p>
 <ul>
-<li>VMs must be powered on to be synchronised</li>
-<li>The operating system used by the source VMs must also be supported in the target site</li>
+<li><p>VMs must be powered on to be synchronised</p>
+</li>
+<li><p>The operating system used by the source VMs must also be supported in the target site</p>
+</li>
 </ul>
 <h3 id="system-requirements">System requirements</h3>
 <p>To use our Workload Migration service, you must have a valid, centrally managed vSphere or HyperV estate. A single hypervisor is not sufficient.</p>
@@ -180,15 +195,19 @@
 <h3 id="create-a-target-vdc">Create a target VDC</h3>
 <p>To migrate your workloads to the UKCloud platform, you must have a VDC in the intended target site. If you already have a compute service in the UKCloud site, you can use an existing VDC or you can create a new one using:</p>
 <ul>
-<li>The UKCloud Portal (for more information see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>)</li>
-<li>The UKCloud Portal API (for more information see the <a href="../portal/ptl-how-use-api.html"><em>How to use the UKCloud Portal API</em></a>)</li>
+<li><p>The UKCloud Portal (for more information see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>)</p>
+</li>
+<li><p>The UKCloud Portal API (for more information see the <a href="../portal/ptl-how-use-api.html"><em>How to use the UKCloud Portal API</em></a>)</p>
+</li>
 </ul>
 <p>If you don't already have a compute service in the UKCloud site or you'd prefer UKCloud to create the VDC for you, you can request this as part of your Workload Migration Service Request.</p>
 <h3 id="set-up-your-local-environment">Set up your local environment</h3>
 <p>Before you can start migrating your workloads to UKCloud, you need to prepare your local environment by:</p>
 <ul>
-<li>Installing the appropriate version of Zerto Virtual Manager (ZVM) in your local environment</li>
-<li>Creating a secure site-to-site VPN between your local environment and the UKCloud platform</li>
+<li><p>Installing the appropriate version of Zerto Virtual Manager (ZVM) in your local environment</p>
+</li>
+<li><p>Creating a secure site-to-site VPN between your local environment and the UKCloud platform</p>
+</li>
 </ul>
 <p>For more information, see <a href="../vmware/vmw-how-zerto-install-local.html"><em>How to install and configure Zerto in your local environment</em></a>.</p>
 <h3 id="configure-networking-on-the-target-site">Configure networking on the target site</h3>
@@ -201,8 +220,10 @@ source VMs with the target site replicas.</p>
 <h3 id="migrate-your-workloads">Migrate your workloads</h3>
 <p>Within Zerto, you have two options for migrating your workloads:</p>
 <ul>
-<li>Move the VPG to the target site. This method performs an end-to-end migration, including removing the VMs from the source site after they have been moved. For more information, see the steps below.</li>
-<li>Perform a live failover. This method provides more flexibility for you to control what happens on the source site after you move the VMs to the target site. For more information, see <a href="../vmware/vmw-how-zerto-perform-failover.html"><em>How to perform a failover</em></a>.</li>
+<li><p>Move the VPG to the target site. This method performs an end-to-end migration, including removing the VMs from the source site after they have been moved. For more information, see the steps below.</p>
+</li>
+<li><p>Perform a live failover. This method provides more flexibility for you to control what happens on the source site after you move the VMs to the target site. For more information, see <a href="../vmware/vmw-how-zerto-perform-failover.html"><em>How to perform a failover</em></a>.</p>
+</li>
 </ul>
 <p>To move a VPG:</p>
 <ol>
@@ -217,9 +238,12 @@ source VMs with the target site replicas.</p>
 </li>
 <li><p>On the <em>EXECUTION PARAMETERS</em> page, the commit policy gives you the opportunity to check the integrity of the migrated VMs before committing the move. To change the commit policy, select the <strong>Commit Policy</strong> field and choose:</p>
 <ul>
-<li><strong>Auto-Commit</strong> if you want to automatically commit the move after a specified amount of time if there is no user interaction. Set the amount of time in the <strong>After</strong> field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately committed, enter 0.</li>
-<li><strong>Auto-Rollback</strong> if you want to automatically roll back the move after a specified amount of time if there is no user interaction. Set the amount of time in the <strong>After</strong> field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately rolled back, enter 0.</li>
-<li><strong>None</strong> if you do not want to apply a commit policy. You must manually commit or roll back the move.</li>
+<li><p><strong>Auto-Commit</strong> if you want to automatically commit the move after a specified amount of time if there is no user interaction. Set the amount of time in the <strong>After</strong> field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately committed, enter 0.</p>
+</li>
+<li><p><strong>Auto-Rollback</strong> if you want to automatically roll back the move after a specified amount of time if there is no user interaction. Set the amount of time in the <strong>After</strong> field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately rolled back, enter 0.</p>
+</li>
+<li><p><strong>None</strong> if you do not want to apply a commit policy. You must manually commit or roll back the move.</p>
+</li>
 </ul>
 </li>
 <li><p>The source VMs must be powered off before they can be migrated. If the VMs cannot be gracefully shut down, you can force a shutdown. To force shutdown, select the <strong>Force Shutdown</strong> check box. If you do not select this option and the VMs cannot be gracefully shut down, the move process fails.</p>
@@ -254,13 +278,6 @@ source VMs with the target site replicas.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/migration/migr-how-zerto-migrate-to-ukcloud.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -279,7 +296,7 @@ source VMs with the target site replicas.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

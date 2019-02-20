@@ -41,6 +41,7 @@ You can use UKCloud for OpenShift to:
 - Host front-end web applications services to ensure that your environment:
 
   - Can scale to handle any demands placed on it
+
   - Will auto-heal in the event of problems to maintain high levels of availability
 
 - Create an Internet of Things (IoT) endpoint enabling internet devices to talk to your cloud applications, with all the benefits described above
@@ -80,14 +81,27 @@ You can expand the Starter Pack in increments of 16GiB, to a maximum OpenShift e
 
 The OpenShift Container Platform web console is a user interface accessible from a web browser. Developers can use the web console to visualize, browse, and manage the contents of projects.
 
+If your OpenShift cluster uses OpenShift Container Platform (OCP) 3.10 or later, you can log in to the console, via our single sign on service, using your UKCloud Portal credentials. Additionally, if you've set up two-factor authentication (2FA) in the Portal, when logging in using your Portal credentials, you'll be prompted for a 2FA code.
+
+> [!NOTE]
+> To log in to the OpenShift web console using your Portal credentials, your Portal account must have been granted access to the cluster.
+
+If your OpenShift cluster uses an earlier version of OCP, you will need to use your separate OpenShift credentials to log in to the console.
+
 **OpenShift documentation:** [*Web Console Walkthrough*](https://docs.openshift.com/container-platform/3.9/getting_started/developers_console.html)
 
 ## Using the command-line interface
 
 With the OpenShift Container Platform command line interface (CLI), you can create applications and manage OpenShift Container Platform projects from a terminal.
 
-**OpenShift documentation:** [*Basic Walkthrough Using the CLI*](https://docs.openshift.com/container-platform/3.9/getting_started/developers_cli.html)
-and [*CLI Reference*](https://docs.openshift.com/container-platform/3.9/cli_reference/index.html)
+If your OpenShift cluster uses OpenShift Container Platform (OCP) 3.10 or later, when you enter the login command, you'll be given a URL to use to log in using your Portal credentials. Go to this URL and you'll be prompted for your Portal credentials and, if you've set up 2FA, your 2FA code. This will take you to a page with your API token, the command to run to log in to the CLI and curl request to use to log in to the CLI.
+
+Alternatively, you can obtain the CLI login command (including login token) from the OpenShift console by clicking your user name and selecting **Copy Login Command**.
+
+> [!NOTE]
+> The token in the log in command supplied through the URL or OpenShift console is valid only for a limited time. If you require a more longer lasting token, you can use a service account token. For more information see the OpenShift [*Service Accounts*](https://docs.openshift.com/container-platform/3.9/dev_guide/service_accounts.html) documentation.
+
+**OpenShift documentation:** [*Basic Walkthrough Using the CLI*](https://docs.openshift.com/container-platform/3.9/getting_started/developers_cli.html) and [*CLI Reference*](https://docs.openshift.com/container-platform/3.9/cli_reference/index.html)
 
 ## Using the API
 
@@ -141,4 +155,4 @@ This section provides a glossary of terms specific to UKCloud for OpenShift.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

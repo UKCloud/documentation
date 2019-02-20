@@ -23,8 +23,11 @@ Cloud Storage is UKCloud's object storage solution based on Dell EMC Elastic Clo
 Within the UKCloud Portal you can view:
 
 - Information about the namespaces within your Cloud Storage environment
+
 - A list of users with access to a namespace
+
 - Information about the buckets within a namespace
+
 - A graphical representation of the storage consumed over the last 30 days
 
 You can also use the UKCloud Portal to create new Cloud Storage users. For more information, see [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md).
@@ -71,9 +74,13 @@ In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down
 2. The *Storage* tab lists the namespaces within the currently selected account. You can see:
 
     - The number of buckets in the namespace
+
     - The total amount of storage (in GiB) currently consumed by the objects in all the buckets in the namespace
+
     - The service level of the namespace:
+
         - STANDARD - data is stored in a single data centre
+
         - ENHANCED - data is stored in a primary named data centre and copied to a second geographically remote data centre
 
     ![Namespaces page](images/cs-portal-namespaces.png)
@@ -85,7 +92,9 @@ In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down
 4. On the *Buckets* tab, you can see the following information for each bucket in the selected namespace:
 
     - The type of bucket: S3 or ATMOS
+
     - The total amount of storage (in GiB) currently consumed by the objects in the bucket
+
     - The number of objects in the bucket
 
     ![Buckets page](images/cs-portal-buckets.png)
@@ -99,10 +108,16 @@ In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down
 This guide has shown you how you can view information about your Cloud Storage service in the UKCloud Portal. For information about how to use the service, see the following articles:
 
 - [*Getting Started Guide for Cloud Storage*](cs-gs.md)
+
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
-- [*How to reset your Cloud Storage secret key*](cs-how-reset-secret-key.md)
-- [*Blueprint -- Using storage gateways with Cloud Storage*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf)
-- [*Blueprint -- Using file browsers with Cloud Storage*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-575-Blueprint-Using-file-browsers-with-Cloud-Storage-ECS-v1.pdf)
+
+- Cloud Storage Gateways
+
+  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+
+  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+
+- [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 

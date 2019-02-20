@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Understanding UKCloud's Identity &amp; Access Management API | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Understanding UKCloud's Identity &amp; Access Management API | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-idam.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="understanding-ukclouds-identity--access-management-api">Understanding UKCloud's Identity &amp; Access Management API</h1>
+
+<p>UKCloud's Identity &amp; Access Management API (IDAM) enables you to manage user access to products within your account. Adding a user to a group changes which permissions they have.</p>
+<p>Full documentation for the IDAM API is available on <a href="https://app.swaggerhub.com/apis/ukcloud/idam-service">SwaggerHub</a>.</p>
+<h2 id="typical-usage">Typical usage</h2>
+<p>To add a user to a permission group, you first need to list the users and permission groups to find the IDs for both. Then you can use those IDs to add the user to the appropriate group.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>This article provides examples using <a href="https://curl.haxx.se/"><code>curl</code></a> and <a href="https://stedolan.github.io/jq/"><code>jq</code></a>.</p>
+<h3 id="authentication">Authentication</h3>
+<p>Before you begin, you'll need to retrieve a single sign-on token to authenticate with IDAM. For ease of use, this is saved to a variable <code>token</code> in your current shell session using the below command.</p>
+<pre><code class="lang-sh">token=$(curl -X POST &quot;https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token&quot; \
+     -d username=&quot;&lt;username&gt;&quot; \
+     -d password=&quot;&lt;password&gt;&quot;  \
+     -d grant_type=password    \
+     -d client_id=portal.ukcloud | jq -r '.access_token')
+</code></pre>
+<p>This token is used in bearer authentication with IDAM. Requests to the IDAM API are prefaced with <code>curl -H &quot;Authorization: Bearer $token&quot;</code>.</p>
+<h3 id="listing-users">Listing users</h3>
+<p>The first step would be to find the ID of the user whose permissions you wish to edit.</p>
+<p>The below command lists all users you are entitled to manage with their IDs and usernames. Take a note of your target user's ID.</p>
+<pre><code class="lang-sh">curl -s -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users | jq -r '.[] | .id + &quot; &quot; + .username'
+</code></pre>
+<h3 id="listing-groups">Listing groups</h3>
+<p>The next step is to find the ID of the permission you would like to give or take from the user. These are known as <em>groups</em> internally to IDAM.</p>
+<p>The below command lists all groups you are entitled to manage with their IDs and names.</p>
+<pre><code class="lang-sh">curl -s -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/groups | jq -r '.[].subGroups[] | .id + &quot; &quot; + .name'
+</code></pre>
+<h3 id="adding-a-user-to-a-group">Adding a user to a group</h3>
+<p>To give a user a particular permission, use the IDs that you have found to make a request to grant the user that permission.</p>
+<p>You can add a user to a group with this PUT request. Expect a response code of 204 if this is successful.</p>
+<pre><code class="lang-sh">curl -X PUT -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/{{user_id}}/groups/{{group_id}}
+</code></pre>
+<h3 id="removing-a-user-from-a-group">Removing a user from a group</h3>
+<p>A <code>DELETE</code> request, as opposed to a <code>PUT</code> request, will remove a permission from a user by removing them from a group.</p>
+<p>You can remove a user from a group with this DELETE request. Expect a response code of 204 if this is successful.</p>
+<pre><code class="lang-sh">curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/{{user_id}}/groups/{{group_id}}
+</code></pre>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

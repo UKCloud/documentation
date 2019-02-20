@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to install CIFS-ECS | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to install the CIFS-ECS Tool| UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to install CIFS-ECS | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="title" content="How to install the CIFS-ECS Tool| UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.40.9.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/cloud-storage/cs-how-install-cifs-ecs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -82,10 +91,15 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-install-cifs-ecs">How to install CIFS-ECS</h1>
+<h1 id="how-to-install-the-cifs-ecs-tool">How to install the CIFS-ECS Tool</h1>
 
 <h2 id="what-is-cifs-ecs">What is CIFS-ECS?</h2>
 <p>CIFS-ECS is a free application that runs on Windows and Windows Server, exposing UKCloud Cloud Storage as file systems. It’s designed as an easy way to use object storage by enabling Windows applications to interface with Cloud Storage servers using the popular S3 REST API.</p>
+<p>If you require a fully-integrated cloud gateway appliance with features like advanced deduplication and location caching, you may want to consider <a href="cs-how-install-cloudarray.html">CloudArrary</a> as an alternative.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Unlike CIFS-ECS, CloudArray is not a free application.</p>
+</div>
 <h2 id="use-cases">Use cases</h2>
 <p>You can use CIFS-ECS to:</p>
 <ul>
@@ -101,8 +115,7 @@
 <p><strong>Stub</strong>: files are initially stored locally and replaced with a stub, or shortcut, after a period of time. When you access a file that has been stubbed, it will be retrieved from the cloud. This offers the best scalability, as you can use a virtually unlimited amount of cloud storage.</p>
 <h2 id="installing-cifs-ecs">Installing CIFS-ECS</h2>
 <ol>
-<li><p>Navigate to the following Portal page to download the ZIP file that contains the CIFS-ECS installer: <a href="https://portal.ukcloud.com/support/knowledge_centre/85dc54ff-7d21-43ac-9cfa-88e87de7ba27">CIFS-ECS Tool</a>.</p>
-<p>To download CIFS-ECS you'll need your UKCloud Portal log in details.</p>
+<li><p>Navigate to the following URL to download the ZIP file that contains the <a href="https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/CIFS-ECS.zip?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1574424921&amp;Signature=sPorRMvkR5S8lLn1D1tmahyzK3g%3D">CIFS-ECS installer</a>.</p>
 </li>
 <li><p>Extract and run the setup launcher from the ZIP file.</p>
 </li>
@@ -135,27 +148,30 @@
 <li><p>From the <strong>Use https or http list</strong>, select <strong>HTTPS</strong>.</p>
 <p><img src="images/cs-ecs-installtion-step-two.png" alt="Hosts page"></p>
 </li>
-<li><p>In the <strong>Host name / IP</strong> field input one of the following:</p>
-</li>
-</ol>
-<p>S3 API endpoints:</p>
+<li><p>In the <strong>Host name / IP</strong> field input one of the following S3 API endpoints:</p>
 <ul>
 <li><p><strong>Corsham (Assured)</strong></p>
 <ul>
-<li>Internet: <code>cas.cor00005.ukcloud.com</code></li>
-<li>PSN Assured: <code>cas.cor00005.psnassured.ukcloud.com</code></li>
-<li>N3: <code>cas.cor00005.ukcloud.thirdparty.nhs.uk/</code></li>
+<li><p>Internet: <code>cas.cor00005.ukcloud.com</code></p>
+</li>
+<li><p>PSN Assured: <code>cas.cor00005.psnassured.ukcloud.com</code></p>
+</li>
+<li><p>N3/HSCN: <code>cas.cor00005.ukcloud.thirdparty.nhs.uk/</code></p>
+</li>
 </ul>
 </li>
 <li><p><strong>Farnborough (Assured)</strong></p>
 <ul>
-<li>Internet: <code>cas.frn00006.ukcloud.com</code></li>
-<li>PSN Assured: <code>cas.frn00006.psnassured.ukcloud.com</code></li>
-<li>N3: <code>cas.frn00006.ukcloud.thirdparty.nhs.uk/</code></li>
+<li><p>Internet: <code>cas.frn00006.ukcloud.com</code></p>
+</li>
+<li><p>PSN Assured: <code>cas.frn00006.psnassured.ukcloud.com</code></p>
+</li>
+<li><p>N3/HSCN: <code>cas.frn00006.ukcloud.thirdparty.nhs.uk/</code></p>
+</li>
 </ul>
 </li>
 </ul>
-<ol start="9">
+</li>
 <li><p>Deselect the <strong>Port Override</strong> check box.</p>
 </li>
 <li><p>Click <strong>OK</strong> to return to the <em>Settings</em> page.</p>
@@ -193,12 +209,33 @@
 </table>
 <div class="TIP">
 <h5>Tip</h5>
-<p>See Microsoft's How-To guide on how to share a a drive on the network from Windows: <a href="https://support.microsoft.com/en-gb/help/4092694/windows-10-changes-to-file-sharing-over-a-network">https://support.microsoft.com/en-gb/help/4092694/windows-10-changes-to-file-sharing-over-a-network</a></p>
+<p>See Microsoft's How-To guide on <a href="https://support.microsoft.com/en-gb/help/4092694/windows-10-changes-to-file-sharing-over-a-network">how to share a a drive on the network from Windows</a>.</p>
 </div>
 </li>
 </ol>
+<h2 id="next-steps">Next steps</h2>
+<p>This guide has shown you how to create a new Cloud Storage user. For more information about how to use the service, see the following articles:</p>
+<ul>
+<li><p><a href="cs-gs.html"><em>Getting Started Guide for Cloud Storage</em></a></p>
+</li>
+<li><p><a href="cs-how-view-info-portal.html"><em>How to view Cloud Storage information in the UKCloud Portal</em></a></p>
+</li>
+<li><p><a href="cs-how-create-user.html"><em>How to create a new Cloud Storage user in the UKCloud Portal</em></a></p>
+</li>
+<li><p><a href="cs-how-use-file-browsers.html"><em>How to use file browsers with Cloud Storage</em></a></p>
+</li>
+<li><p>Cloud Storage Gateways</p>
+<ul>
+<li><a href="cs-how-install-cloudarray.html"><em>How to install CloudArray</em></a></li>
+</ul>
+</li>
+</ul>
+<h2 id="related-videos">Related videos</h2>
+<ul>
+<li><a href="cs-vid-cifs-ecs-overview.html"><em>CIFS-ECS overview video</em></a></li>
+</ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -208,13 +245,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/cloud-storage/cs-how-install-cifs-ecs.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -233,7 +263,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

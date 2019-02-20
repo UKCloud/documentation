@@ -5,11 +5,11 @@ services: azure-stack
 author: Chris Black
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Create a virtual machine
+toc_sub2: Create a Virtual Machine
 toc_sub3:
 toc_sub4:
-toc_title: Create a VM using Terraform on Azure Stack
-toc_fullpath: Users/How To/Create a virtual machine/azs-how-create-vm-terraform.md
+toc_title: Create a virtual machine - Terraform
+toc_fullpath: Users/How To/Create a Virtual Machine/azs-how-create-vm-terraform.md
 toc_mdlink: azs-how-create-vm-terraform.md
 ---
 
@@ -22,11 +22,13 @@ This document explains how to create a VM using the **azurestack** Terraform pro
 Prerequisites from a Windows-based external client.
 
 - Terraform executable
+
     - [Download Terraform](https://www.terraform.io/downloads.html)
 
 - An active Azure *Subscription* (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)
 
 - Service Principal Name
+
     - [How To create Service Principal Name for Azure Stack](azs-how-create-spn-powershell.md)
 
 ## Official Documentation
@@ -107,7 +109,11 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
 
 #### Argument Reference
 
-- `arm_endpoint` - The Azure Resource Manager API Endpoint for your Azure Stack instance. This will be **`https://management.frn00006.azure.ukcloud.com`**.
+- `arm_endpoint` - The Azure Resource Manager API Endpoint for your Azure Stack instance. This will be **`https://management.{region}.{domain}`**.
+
+> [!NOTE]
+> For UKCloud Region it is **`https://management.frn00006.azure.ukcloud.com`**.
+
 
 - `subscription_id` - The ID of your Azure Stack Subscription.
 
@@ -399,7 +405,7 @@ resource "azurestack_virtual_machine" "test" {
 
 From a PowerShell prompt, navigate to the directory that contains your `tf` files and run the following commands:
 
-```powershell
+```PowerShell
 # Check if your environment is setup correctly
 .\terraform.exe init
 
@@ -443,7 +449,7 @@ commands will detect it and remind you to do so if necessary.
 
 From a PowerShell prompt, navigate to the directory that contains your `tf` files and run the following commands:
 
-```powershell
+```PowerShell
 # Check if your environment is setup correctly
 .\terraform.exe init
 

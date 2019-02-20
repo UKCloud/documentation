@@ -8,7 +8,7 @@
     <title>How to resize an OS drive using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to resize an OS drive using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-resize-os-drive.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -98,11 +107,11 @@
 <h5>Important</h5>
 <p>Enter details below to provide values for the variables in the scripts in this article:</p>
 <p>Resource Group Name: <form oninput="result.value=name.value;result2.value=name.value" id="ResourceGroup" style="display: inline;">
-<input type="text" id="name" name="name" style="display: inline;"></form></p>
+<input type="text" id="name" name="name" style="display: inline;" placeholder="myResourceGroup"></form></p>
 <p>VM Name: <form oninput="result.value=name.value;result2.value=name.value" id="VMName" style="display: inline;">
-<input type="text" id="name" name="name" style="display: inline;"></form></p>
+<input type="text" id="name" name="name" style="display: inline;" placeholder="myVM"></form></p>
 <p>New Disk Size in GB: <form oninput="result.value=name.value;result2.value=name.value" id="DiskSize" style="display: inline;">
-<input type="text" id="name" name="name" style="display: inline;"></form></p>
+<input type="text" id="name" name="name" style="display: inline;" placeholder="1024"></form></p>
 <p>Note that the maximum size allowed for OS disks is 2048GB</p>
 </div>
 <p>Please select the type of disk you are trying to expand:</p>
@@ -119,12 +128,12 @@
 
 <p>From your PowerShell window:</p>
 <pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
-Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group name and VM name
-$RGName = '<output form="ResourceGroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>'
-$VMName = '<output form="VMName" name="result" style="display: inline;">&lt;VM Name&gt;</output>'
+$RGName = "<output form="ResourceGroup" name="result" style="display: inline;">myResourceGroup</output>"
+$VMName = "<output form="VMName" name="result" style="display: inline;">myVM</output>"
 
 # Obtain a reference to your VM
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
@@ -132,9 +141,9 @@ $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 # Stop the VM before resizing the disk
 Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
-# Resize Managed OS Disk
+# Resize mananaged OS disk
 $Disk = Get-AzureRmDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.OsDisk.Name
-$Disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">&lt;Disk Size&gt;</output>
+$Disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">1024</output>
 Update-AzureRmDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
 
 # Restart the VM
@@ -145,12 +154,12 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
 <p>From your PowerShell window:</p>
 <pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
-Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group name and VM name
-$RGName = '<output form="ResourceGroup" name="result2" style="display: inline;">&lt;Resource Group&gt;</output>'
-$VMName = '<output form="VMName" name="result2" style="display: inline;">&lt;VM Name&gt;</output>'
+$RGName = "<output form="ResourceGroup" name="result2" style="display: inline;">myResourceGroup</output>"
+$VMName = "<output form="VMName" name="result2" style="display: inline;">myVM</output>"
 
 # Obtain a reference to your VM
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
@@ -158,8 +167,8 @@ $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 # Stop the VM before resizing the disk
 Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
-# Set the size of the unmanaged OS disk to the desired value and update the VM
-$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result2" style="display: inline;">&lt;Disk Size&gt;</output>
+# Resize unmananaged OS disk
+$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result2" style="display: inline;">1024</output>
 Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
 
 # Restart the VM
@@ -209,13 +218,6 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-resize-os-drive.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -234,7 +236,7 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

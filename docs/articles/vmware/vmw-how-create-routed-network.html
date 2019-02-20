@@ -8,7 +8,7 @@
     <title>How to create a routed VDC network | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a routed VDC network | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-routed-network.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -88,8 +97,10 @@
 <p>An organisation virtual data centre network enables its virtual machines (VMs) to communicate with each other or to provide access to external networks. A single VDC can have multiple networks.</p>
 <p>There are two network flavours, isolated and routed:</p>
 <ul>
-<li>An isolated (internally connected) network is one that only VMs within the VDC can connect to. Creation of isolated networks is described in <a href="vmw-how-create-isolated-network.html"><em>How to create an isolated VDC network</em></a>.</li>
-<li>A routed network (externally connected) provides access to machines and networks outside the VDC via the edge gateway. You can have up to nine usable routed networks per VDC. This guide describes how to create a routed VDC network.</li>
+<li><p>An isolated (internally connected) network is one that only VMs within the VDC can connect to. Creation of isolated networks is described in <a href="vmw-how-create-isolated-network.html"><em>How to create an isolated VDC network</em></a>.</p>
+</li>
+<li><p>A routed network (externally connected) provides access to machines and networks outside the VDC via the edge gateway. You can have up to nine usable routed networks per VDC. This guide describes how to create a routed VDC network.</p>
+</li>
 </ul>
 <p>The steps for creating a routed VDC network depend on the version of vCloud Director available in your environment:</p>
 <ul>
@@ -124,8 +135,10 @@
 </li>
 <li><p>The <strong>Static IP pool</strong> is similar to DHCP in the sense that it's a range of IP addresses to be consumed by the VMs connecting to the network. When a VM is configured it will have a static manual or a static IP pool address assigned to it.</p>
 <ul>
-<li>For static manual, enter the address manually. This must be a valid address for the pool. The VM will keep this address for as long as it exists.</li>
-<li>For static IP pool, enter a range of addresses. A free address from the IP pool will be allocated to the machine automatically.</li>
+<li><p>For static manual, enter the address manually. This must be a valid address for the pool. The VM will keep this address for as long as it exists.</p>
+</li>
+<li><p>For static IP pool, enter a range of addresses. A free address from the IP pool will be allocated to the machine automatically.</p>
+</li>
 </ul>
 <p>As an example, if you give the gateway address as <code>192.168.1.1</code>, you may then want to give a static IP pool of <code>192.168.1.10</code> to <code>192.168.1.100</code>. This will give you a pool of 91 IP  addresses to assign to machines within your network. You can always increase this later if needed.</p>
 <p><img src="images/vmw-vcd-admin-vdc-network-ip.png" alt="IP pool for routed network"></p>
@@ -165,8 +178,10 @@
 </li>
 <li><p>The <strong>Static IP Pool</strong> is similar to DHCP in the sense that it's a range of IP addresses to be consumed by the VMs connecting to the network. When a VM is configured it will have a static manual or a static IP pool address assigned to it.</p>
 <ul>
-<li>For static manual, enter the address manually. This must be a valid address for the pool. The VM will keep this address for as long as it exists.</li>
-<li>For static IP pool, enter a range of addresses. A free address from the IP pool will be allocated to the machine automatically.</li>
+<li><p>For static manual, enter the address manually. This must be a valid address for the pool. The VM will keep this address for as long as it exists.</p>
+</li>
+<li><p>For static IP pool, enter a range of addresses. A free address from the IP pool will be allocated to the machine automatically.</p>
+</li>
 </ul>
 <p>As an example, if you give the gateway address as <code>192.168.1.1</code>, you may then want to create a <strong>Static IP Pool</strong> of <code>192.168.1.10-192.168.1.100</code>. This will give you a pool of 91 IP addresses to assign to machines within your network. You can always increase this later if needed.</p>
 <p><img src="images/vmw-vcd91-network-ip-pool.png" alt="Static IP Pool"></p>
@@ -188,13 +203,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-routed-network.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -213,7 +221,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

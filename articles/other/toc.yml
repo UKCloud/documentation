@@ -1,7 +1,15 @@
 - name: FAQs
   items:
+  - name: Credit card payment FAQ
+    href: other-faq-credit-card.md
+  - name: Enterprise & Private Sector FAQs
+    href: other-faq-eps.md
   - name: G-Cloud 10 services FAQs
     href: other-faq-g10.md
+  - name: Invoice and billing FAQs
+    href: other-faq-billing.md
+  - name: Jumpstart FAQs
+    href: other-faq-jumpstart.md
   - name: MISO rebate FAQs
     href: other-faq-miso-rebate.md
   - name: Protective Monitoring FAQs
@@ -14,6 +22,10 @@
   items:
   - name: Contribute to the UKCloud Knowledge Centre
     href: other-how-contribute-knowledge.md
+  - name: Remove access rights from Single Sign-On users
+    href: other-how-delete-sso-user.md
+  - name: Use the UKCloud Pricing Estimation Tool
+    href: other-how-use-pricing-tool.md
 - name: Reference
   items:
   - name: Best practice customer guide
@@ -26,12 +38,16 @@
     href: other-ref-customer-admin.md
   - name: Data centre advance notice requirements
     href: other-ref-dc-notice.md
-  - name: G10 Service Definitions
+  - name: G10 Service Definitions and Pricing Guide
     href: other-ref-service-definitions.md
+  - name: Identity & Access Management API
+    href: other-ref-idam.md
   - name: Knowledge Centre article template
     href: other-ref-knowledge-template.md
   - name: Knowledge Centre guidelines
     href: other-ref-knowledge-guidelines.md
+  - name: Known bugs with the UKCloud Pricing Estimation Tool
+    href: other-ref-pricing-tool-bugs.md
   - name: Methods for exporting data
     href: other-ref-export-data.md
   - name: Protective Monitoring information in the UKCloud Portal
@@ -46,6 +62,8 @@
     href: other-ref-srz-table.md
   - name: SLA definition
     href: other-ref-sla-definition.md
+  - name: Terminating your UKCloud services
+    href: other-ref-offboarding.md
   - name: UKCloud complaints procedure
     href: other-ref-complaints.md
   - name: UKCloud Ideas
@@ -66,3 +84,9 @@
   items:
   - name: Free trials Service Scope
     href: other-sco-free-trials.md
+- name: Videos
+  items:
+  - name: Editing Knowledge Centre articles video
+    href: other-vid-kc-contribution.md
+  - name: Pricing Estimation Tool overview video
+    href: other-vid-pricing-tool-overview.md

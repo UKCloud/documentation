@@ -8,7 +8,7 @@
     <title>UKCloud for Microsoft Azure FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for Microsoft Azure FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-faq.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -95,24 +104,36 @@
 <h4 id="compute">Compute</h4>
 <p>Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic compute building blocks in Azure Stack. Initial machine types supported are:</p>
 <ul>
-<li>General purpose: Basic A series, Standard A &amp; D Series</li>
-<li>Memory enhanced: DS Series</li>
-<li>Compute optimised: F Series</li>
+<li><p>General purpose: Basic A series, Standard A &amp; D Series</p>
+</li>
+<li><p>Memory enhanced: DS Series</p>
+</li>
+<li><p>Compute optimised: F Series</p>
+</li>
 </ul>
 <h4 id="storage">Storage</h4>
 <ul>
-<li>Azure Blob Storage (page): Used to support virtual machine disks. Good for randomly accessed large files.</li>
-<li>Azure Blob Storage (block): Object storage. Good for storing documents, videos and images for example.</li>
-<li>Azure Blob Storage (append): Good for log files.</li>
-<li>Azure Queue Storage: Message queue as a service. Good for asynchronous scale out micro-services.</li>
-<li>Azure Table Storage: NoSQL database service. Good for highly scalable, eventually consistent database support</li>
+<li><p>Azure Blob Storage (page): Used to support virtual machine disks. Good for randomly accessed large files.</p>
+</li>
+<li><p>Azure Blob Storage (block): Object storage. Good for storing documents, videos and images for example.</p>
+</li>
+<li><p>Azure Blob Storage (append): Good for log files.</p>
+</li>
+<li><p>Azure Queue Storage: Message queue as a service. Good for asynchronous scale out micro-services.</p>
+</li>
+<li><p>Azure Table Storage: NoSQL database service. Good for highly scalable, eventually consistent database support</p>
+</li>
 </ul>
 <h4 id="network">Network</h4>
 <ul>
-<li>Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure. This can be configured via the UI, API and other tooling. </li>
-<li>Load balancers (IPv4 only) - Deploy basic load balancers.</li>
-<li>VPN gateway - Use the Azure Stack VPN gateway to create site-to-site VPNs to remote infrastructure.</li>
-<li>Routing - Configure basic custom defined routing on virtual networks.</li>
+<li><p>Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure. This can be configured via the UI, API and other tooling. </p>
+</li>
+<li><p>Load balancers (IPv4 only) - Deploy basic load balancers.</p>
+</li>
+<li><p>VPN gateway - Use the Azure Stack VPN gateway to create site-to-site VPNs to remote infrastructure.</p>
+</li>
+<li><p>Routing - Configure basic custom defined routing on virtual networks.</p>
+</li>
 </ul>
 <h3 id="what-technology-is-ukcloud-for-microsoft-azure-based-on">What technology is UKCloud for Microsoft Azure based on?</h3>
 <p>UKCloud for Microsoft Azure is based on a CISCO implementation of Microsoft's Azure Stack.</p>
@@ -141,6 +162,8 @@
 <h2 id="management">Management</h2>
 <h3 id="how-do-i-access-my-ukcloud-for-microsoft-azure-solution">How do I access my UKCloud for Microsoft Azure solution?</h3>
 <p>Access to the UKCloud for Microsoft Azure portal is available via the UKCloud Portal. You'll be provided with login details once your account is provisioned.</p>
+<h3 id="which-ports-need-to-be-open-to-access-my-ukcloud-for-microsoft-azure-solution">Which ports need to be open to access my UKCloud for Microsoft Azure solution?</h3>
+<p>The UKCloud for Microsoft Azure portal requires port 80 (HTTP) and port 443 (HTTPS) to be open.</p>
 <h3 id="how-do-i-access-my-solutions-via-government-networks">How do I access my solutions via government networks?</h3>
 <p>UKCloud for Microsoft Azure will be available on the internet, HSCN, Janet, RLI and PSN networks. Initial access will be from the appropriate UKCloud Portal.</p>
 <h3 id="what-reports-can-i-get-about-my-ukcloud-for-microsoft-azure-solution">What reports can I get about my UKCloud for Microsoft Azure solution?</h3>
@@ -182,9 +205,12 @@ Microsoft Azure solution.</p>
 <h3 id="how-can-i-pay-for-the-services">How can I pay for the services?</h3>
 <p>UKCloud will issue invoices as follows:</p>
 <ul>
-<li>At point of order for upfront fees and service options</li>
-<li>Annually in advance for pre-payment fees</li>
-<li>Monthly in arrears for monthly fees</li>
+<li><p>At point of order for upfront fees and service options</p>
+</li>
+<li><p>Annually in advance for pre-payment fees</p>
+</li>
+<li><p>Monthly in arrears for monthly fees</p>
+</li>
 </ul>
 <p>Payment can be made by direct bank transfer (BACS/CHAPS).</p>
 <h3 id="are-there-any-termination-fees">Are there any termination fees?</h3>
@@ -199,6 +225,8 @@ Microsoft Azure solution.</p>
 <h3 id="is-there-a-protective-monitoring-service">Is there a protective monitoring service?</h3>
 <p>Protective monitoring is included for our all our services and follows GPG 13.</p>
 <p>For more information about this service, see our <a href="../other/other-faq-promon.html"><em>Protective Monitoring FAQs</em></a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -208,13 +236,6 @@ Microsoft Azure solution.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-faq.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -233,7 +254,7 @@ Microsoft Azure solution.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

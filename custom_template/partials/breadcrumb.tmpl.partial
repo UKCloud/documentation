@@ -1,7 +1,25 @@
 {{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
 
 <div class="navbar-borderless subnav navbar navbar-default">
-  <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+  <div class="navbar-right subnav-margin-right">
+    {{^_disableContribution}}
+      <div class="contribution">
+        <ul class="nav">
+          {{#docurl}}
+          <li>
+            <a href="{{docurl}}" class="contribution-link">{{__global.improveThisDoc}}</a>
+          </li>
+          {{/docurl}}
+          {{#sourceurl}}
+          <li>
+            <a href="{{sourceurl}}" class="contribution-link">{{__global.viewSource}}</a>
+          </li>
+          {{/sourceurl}}
+        </ul>
+      </div>
+    {{/_disableContribution}}
+  </div>
+  <div class="hide-when-search subnav-margin-left" id="breadcrumb">
     <ul class="breadcrumb">
       <li>{{_tocTitle}}</li>
     </ul>

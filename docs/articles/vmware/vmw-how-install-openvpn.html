@@ -8,7 +8,7 @@
     <title>How to install and configure OpenVPN | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to install and configure OpenVPN | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-install-openvpn.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -99,11 +108,16 @@
 <h3 id="configuring-the-edge-gateway">Configuring the edge gateway</h3>
 <p>After you've created the network, you'll need to configure the edge gateway to control access to the VMs in your environment by creating:</p>
 <ul>
-<li>A Source NAT rule to allow the OpenVPN appliance outbound access to the internet.</li>
-<li>A Destination NAT rule to allow inbound access from the internet.</li>
-<li>A firewall rule to allow inbound access from the internet on port <code>443</code>.</li>
-<li>One or more firewall rules to allow users connected to the OpenVPN appliance to access VMs on other networks for administration purposes. Note that all VPN users will be NATed to the IP address of the OpenVPN appliance.</li>
-<li>One or more firewall rules to allow access from trusted environments to the OpenVPN appliance on the admin port (<code>943</code> by default, but can be changed).</li>
+<li><p>A Source NAT rule to allow the OpenVPN appliance outbound access to the internet.</p>
+</li>
+<li><p>A Destination NAT rule to allow inbound access from the internet.</p>
+</li>
+<li><p>A firewall rule to allow inbound access from the internet on port <code>443</code>.</p>
+</li>
+<li><p>One or more firewall rules to allow users connected to the OpenVPN appliance to access VMs on other networks for administration purposes. Note that all VPN users will be NATed to the IP address of the OpenVPN appliance.</p>
+</li>
+<li><p>One or more firewall rules to allow access from trusted environments to the OpenVPN appliance on the admin port (<code>943</code> by default, but can be changed).</p>
+</li>
 </ul>
 <p><strong>More information!</strong> <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a> and <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
 <h2 id="obtaining-the-latest-openvpn-appliance">Obtaining the latest OpenVPN appliance</h2>
@@ -210,17 +224,28 @@
 </li>
 <li><p>You'll be prompted to answer a series of questions:</p>
 <ul>
-<li><strong>Licence agreement:</strong> --- Enter <code>yes</code> to accept.</li>
-<li><strong>Will this be the primary Access Server node?</strong> --- Enter <code>yes</code>.</li>
-<li><strong>Please specify the network interface and IP address to be used by the Admin Web UI</strong> -- If the guest customisations were applied correctly, this should default to <code>eth0</code>, which should be configured with an IP address on the network you selected during deployment.</li>
-<li><strong>Please specify the port number for the Admin Web UI</strong> --- Enter your desired port number, or accept the default of <code>943</code>. A separate port is not strictly needed for administration but is recommended.</li>
-<li><strong>Please specify the TCP port number for the OpenVPN Daemon</strong> --- We recommend that you use the default of <code>443</code> where possible as the use of a non-standard port may cause problems when connecting from corporate networks.</li>
-<li><strong>Should client traffic be routed by default through VPN?</strong> --- Entering <code>yes</code> will prevent your client device from accessing any other networks (for example, your corporate network) while the VPN is connected. For ease of use, we suggest you answer <code>no</code> to this question.</li>
-<li><strong>Should client DNS traffic be routed by default through the VPN?</strong> --- If you answered <code>yes</code> to the previous question, all traffic will be routed through the VPN anyway, so your answer here will not matter. If you answered <code>no</code> to the previous question, you'll probably want to answer <code>no</code> to this question so that your DNS queries are answered by the usual servers.</li>
-<li><strong>Use local authentication via internal DB?</strong> --- Enter <code>yes</code> unless you want to authenticate users from an existing directory service (Active Directory/LDAP).</li>
-<li><strong>Should private subnets be accessible to clients by default?</strong> --- Answer <code>yes</code> to enable access to your cloud networks via the VPN.</li>
-<li><strong>Do you wish to login to the Admin UI as &quot;openvpn&quot;?</strong> --- Answer <code>yes</code> to create a local user account named <code>openvpn</code>. If you answer <code>no</code>, you'll need to set up a different user name and password.</li>
-<li><strong>Please specify your OpenVPN-AS license key</strong> --- If you've purchased a licence, enter the licence key, otherwise leave this blank.</li>
+<li><p><strong>Licence agreement:</strong> --- Enter <code>yes</code> to accept.</p>
+</li>
+<li><p><strong>Will this be the primary Access Server node?</strong> --- Enter <code>yes</code>.</p>
+</li>
+<li><p><strong>Please specify the network interface and IP address to be used by the Admin Web UI</strong> -- If the guest customisations were applied correctly, this should default to <code>eth0</code>, which should be configured with an IP address on the network you selected during deployment.</p>
+</li>
+<li><p><strong>Please specify the port number for the Admin Web UI</strong> --- Enter your desired port number, or accept the default of <code>943</code>. A separate port is not strictly needed for administration but is recommended.</p>
+</li>
+<li><p><strong>Please specify the TCP port number for the OpenVPN Daemon</strong> --- We recommend that you use the default of <code>443</code> where possible as the use of a non-standard port may cause problems when connecting from corporate networks.</p>
+</li>
+<li><p><strong>Should client traffic be routed by default through VPN?</strong> --- Entering <code>yes</code> will prevent your client device from accessing any other networks (for example, your corporate network) while the VPN is connected. For ease of use, we suggest you answer <code>no</code> to this question.</p>
+</li>
+<li><p><strong>Should client DNS traffic be routed by default through the VPN?</strong> --- If you answered <code>yes</code> to the previous question, all traffic will be routed through the VPN anyway, so your answer here will not matter. If you answered <code>no</code> to the previous question, you'll probably want to answer <code>no</code> to this question so that your DNS queries are answered by the usual servers.</p>
+</li>
+<li><p><strong>Use local authentication via internal DB?</strong> --- Enter <code>yes</code> unless you want to authenticate users from an existing directory service (Active Directory/LDAP).</p>
+</li>
+<li><p><strong>Should private subnets be accessible to clients by default?</strong> --- Answer <code>yes</code> to enable access to your cloud networks via the VPN.</p>
+</li>
+<li><p><strong>Do you wish to login to the Admin UI as &quot;openvpn&quot;?</strong> --- Answer <code>yes</code> to create a local user account named <code>openvpn</code>. If you answer <code>no</code>, you'll need to set up a different user name and password.</p>
+</li>
+<li><p><strong>Please specify your OpenVPN-AS license key</strong> --- If you've purchased a licence, enter the licence key, otherwise leave this blank.</p>
+</li>
 </ul>
 </li>
 <li><p>When you've completed the setup wizard, you'll need to create user accounts and passwords on the local operating system (unless you configured an LDAP directory).</p>
@@ -396,13 +421,6 @@ certificates necessary to establish a VPN connection.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-install-openvpn.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -421,7 +439,7 @@ certificates necessary to establish a VPN connection.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

@@ -18,7 +18,9 @@ toc_mdlink: vmw-ref-vmdk-limits.md
 In order to ensure the performance and stability of a customer's VM, whilst also being able to ensure the integrity and validity of VM back-ups, UKCloud advises the following soft limits on storage presented to individual VMs;
 
 - 2032 GB for each virtual disk (VMDK) presented to a VM, this will ensure normal snapshot functions will operate correctly
+
 - Maximum of 20 virtual disks presented to a VM
+
 - Maximum of 40TB overall storage presented to a VM
 
 ## Storage Controllers

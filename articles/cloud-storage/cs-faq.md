@@ -2,7 +2,7 @@
 title: Cloud Storage FAQs | UKCloud Ltd
 description: Frequently asked questions for Cloud Storage
 services: cloud-storage
-author: Matt Warner
+author: Dan Baker
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -50,6 +50,13 @@ Documentation on ways to interact with the platform is available from the [Knowl
 ### Is data accessible via the PSN Assured connection also accessible via the internet?
 
 Cloud Storage in our Assured OFFICAL domain uses the same environment for both PSN Assured and internet connections. Although it is not possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.
+
+### Can I restrict Cloud Storage access to specific networks?
+
+It is possible to lock Cloud Storage accounts down so that buckets are only accessible via a single network (for example HSCN, PSN, Janet), but we cannot lock down a bucket to a customer-specified source IP address or range. 
+
+> [!IMPORTANT]
+> As we impose this restriction at a Cloud Storage user account level rather than the bucket itself, any new users that you add to the ECS account will be able to access associated buckets from ANY network until you request that we update our blacklist. To request network restrictions, raise a support ticket through [My Calls](https://portal.skyscapecloud.com/support/my_calls). Alternatively, you can contact support by phone or email.
 
 ### Which APIs are supported by the platform?
 
@@ -139,7 +146,14 @@ Storage is billed on a per-GiB per-month basis, and is based on utilisation of t
 
 ### How is my storage bill calculated?
 
-Used storage is calculated on a daily basis. The data for a month is collected, and the average consumption calculated and rounded up to the next whole number to provide the number of GiB consumed in a month.
+Used storage is calculated on a daily basis. The data for a month is collected, and the average consumption calculated and rounded up to the next whole number to provide the number of GiB consumed in a month. The charge for the total storage is based on a tiering basis as per the Service Definition. When your storage consumption moves into the next tier, only the amount of storage above the previous tier threshold is charged at the lower price.
+
+As an example, if a customer uses 520TiB of storage in a month, their charges are calculated as:
+
+* 250TiB x £0.0200 = £5,000
+* 250TiB x £0.0180 = £4,500
+* 20TiB x £0.0162 = £324
+* Total cost = £9,824
 
 ### How can I view billing information?
 

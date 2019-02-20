@@ -583,31 +583,11 @@ You will not be charged for any Virtual Machines whilst they are turned off, how
 
 ### How will I be billed for additional storage?
 
-Customers can allocate additional storage to VMs on demand. UKCloud will bill customers for additional allocated storage, regardless of the powered on/off state.
+Customers can allocate additional storage to VMs on demand. UKCloud will bill customers for additional allocated storage, regardless of the powered on/off state. Additional storage will also include storage used for templates and media items.  
 
 ### What is a template or media item?
 
 Within UKCloud for VMware Virtual Data Centres (VDC), you can deploy your own templates, media items or catalogue images. These include templates for applications and Operating Systems.
-
-### What change is UKCloud making to the templates and media items?
-
-From a technology perspective, there will be no changes. You can still deploy templates and media items on VMs. However, in-line with the UKCloud for VMware Service Definition and Pricing Guide, we will now be billing you for the storage element related to templates and media items on VMs.
-
-### Why is UKCloud making this change now?
-
-As a result of continuous updates and improvements to the platform we now have better monitoring in place. Therefore, we are now able to monitor the media usage on VMs and bill accordingly as per the Service Definition and Pricing Guide. Historically, we have been unable to identify the amount of storage consumed associated with templates and media items on VMs and therefore, took the decision to not bill you as we were not comfortable with the data.
-
-### When did the template/media item charges come into effect?
-
-Charges for Storage associated with templates and media items were billed from March 2017.
-
-### Will UKCloud bill retrospectively for the templates/media items on VMs?
-
-No, you will not be billed for any storage associated with templates and media items that occurred on any VMs prior to the 1 March 2017.
-
-### What is the increased cost?
-
-As per the Pricing Guide, consumed storage includes any VM catalogue images. (for example, associated media items and templates on VMs). This will be billed per GiB/per month.
 
 ### How can I view billing information?
 

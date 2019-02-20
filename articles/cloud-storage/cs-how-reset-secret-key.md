@@ -60,10 +60,18 @@ For security purposes, the UKCloud Portal does not display secret keys, if you f
 This guide has shown you how to reset your Cloud Storage secret key. For information about how to use the service, see the following articles:
 
 - [*Getting Started Guide for Cloud Storage*](cs-gs.md)
-- [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
+
 - [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
-- [*Blueprint -- Using storage gateways with Cloud Storage*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf)
-- [*Blueprint -- Using file browsers with Cloud Storage*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-575-Blueprint-Using-file-browsers-with-Cloud-Storage-ECS-v1.pdf)
+
+- [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
+
+- Cloud Storage Gateways
+
+    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+
+    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+
+- [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 

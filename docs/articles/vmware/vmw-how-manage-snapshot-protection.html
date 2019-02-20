@@ -8,7 +8,7 @@
     <title>How to manage Snapshot Protection for your VMs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to manage Snapshot Protection for your VMs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-manage-snapshot-protection.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -115,9 +124,12 @@
 </li>
 <li><p>The icon in <strong>Snapshot Protection</strong> column shows the status of each VM's most recent backup:</p>
 <ul>
-<li><img src="images/snapshot-image-13.png" alt="Excluded"> - Excluded from backup (if you have recently added Snapshot Protection to a VM, this icon indicates that a backup does not yet exist for the VM)</li>
-<li><img src="images/snapshot-image-14.png" alt="Successful"> - Backup successful</li>
-<li><img src="images/snapshot-image-15.png" alt="unsuccessful"> - Backup unsuccessful</li>
+<li><p><img src="images/snapshot-image-13.png" alt="Excluded"> - Excluded from backup (if you have recently added Snapshot Protection to a VM, this icon indicates that a backup does not yet exist for the VM)</p>
+</li>
+<li><p><img src="images/snapshot-image-14.png" alt="Successful"> - Backup successful</p>
+</li>
+<li><p><img src="images/snapshot-image-15.png" alt="unsuccessful"> - Backup unsuccessful</p>
+</li>
 </ul>
 </li>
 <li><p>The button in the <strong>Snapshot Protection</strong> column shows the Snapshot Protection option currently applied to the VM:</p>
@@ -139,30 +151,46 @@
 </li>
 <li><p>In the VMs <em>Info</em> page, the following fields provide information about the most recent backup of the VM:</p>
 <ul>
-<li><strong>Additional information</strong> - additional information about the backup, for example if the backup was removed from the daily automated backup, if the retention period was changed, or further details of any failures.</li>
-<li><strong>Last backup</strong> - the status of the most recent backup</li>
-<li><strong>Retention length</strong> - how long the backup will be kept for: 14 days or 28 days</li>
-<li><strong>Backup status</strong> - when the most recent backup was attempted</li>
+<li><p><strong>Additional information</strong> - additional information about the backup, for example if the backup was removed from the daily automated backup, if the retention period was changed, or further details of any failures.</p>
+</li>
+<li><p><strong>Last backup</strong> - the status of the most recent backup</p>
+</li>
+<li><p><strong>Retention length</strong> - how long the backup will be kept for: 14 days or 28 days</p>
+</li>
+<li><p><strong>Backup status</strong> - when the most recent backup was attempted</p>
+</li>
 </ul>
 </li>
 <li><p>The <em>Snapshot Protection</em> <em>Backups</em> section of the page provides information about previous backups. This covers the entire retention policy period (14 or 28 days). Information includes:</p>
 <ul>
-<li><strong>Status</strong> - the status of the backup</li>
-<li><strong>Slot</strong> - the backup slot during which the backup was taken</li>
-<li><strong>Start</strong> - the date and time when the backup started</li>
-<li><strong>End</strong> - the date and time when the backup ended</li>
-<li><strong>Snapshot Removal Start</strong> - the date and time when the snapshot consolidation process started (that is, writing back any changes to the VM that occurred during the time it was locked for backup)</li>
-<li><strong>Snapshot Removal End</strong> - the date and time when the snapshot consolidation process ended</li>
+<li><p><strong>Status</strong> - the status of the backup</p>
+</li>
+<li><p><strong>Slot</strong> - the backup slot during which the backup was taken</p>
+</li>
+<li><p><strong>Start</strong> - the date and time when the backup started</p>
+</li>
+<li><p><strong>End</strong> - the date and time when the backup ended</p>
+</li>
+<li><p><strong>Snapshot Removal Start</strong> - the date and time when the snapshot consolidation process started (that is, writing back any changes to the VM that occurred during the time it was locked for backup)</p>
+</li>
+<li><p><strong>Snapshot Removal End</strong> - the date and time when the snapshot consolidation process ended</p>
+</li>
 </ul>
 </li>
 <li><p>The <em>Snapshot Protection Policy History</em> section of the page lists any recent changes to the snapshot retention policy for the VM.</p>
 <ul>
-<li><strong>Status</strong> - The status of the policy change</li>
-<li><strong>Date Requested</strong> - The date and time when the policy change was requested</li>
-<li><strong>User</strong> - The user who requested the change</li>
-<li><strong>Protection Period</strong> - The new protection period introduced by the policy change</li>
-<li><strong>Reason for Change</strong> - The reason for the policy change</li>
-<li><strong>Action</strong> - The type of policy change request</li>
+<li><p><strong>Status</strong> - The status of the policy change</p>
+</li>
+<li><p><strong>Date Requested</strong> - The date and time when the policy change was requested</p>
+</li>
+<li><p><strong>User</strong> - The user who requested the change</p>
+</li>
+<li><p><strong>Protection Period</strong> - The new protection period introduced by the policy change</p>
+</li>
+<li><p><strong>Reason for Change</strong> - The reason for the policy change</p>
+</li>
+<li><p><strong>Action</strong> - The type of policy change request</p>
+</li>
 </ul>
 </li>
 <li><p>Click <strong>Manage my Backups</strong> to raise a service request related to your backups, for example, to restore a backup.</p>
@@ -314,13 +342,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-manage-snapshot-protection.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -339,7 +360,7 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

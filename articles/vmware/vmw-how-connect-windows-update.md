@@ -35,7 +35,9 @@ In this section you'll need to use the appropriate address depending on the loca
 2. Test connectivity to the update servers by opening an Internet Explorer browser window, then opening a connection to one of the update servers on:
 
     - `https://wsus.cor.ukcloud.com` (Assured OFFICIAL, Corsham)
+
     - `https://wsus.frn.ukcloud.com` (Assured OFFICIAL, Farnborough)
+
     - For Elevated OFFICIAL, raise a Service Request via the My Calls section of the UKCloud Portal to get the appropriate IP address
 
     > [!NOTE]
@@ -46,6 +48,7 @@ In this section you'll need to use the appropriate address depending on the loca
     Links for Root CA and Issuing CA:
 
     - <https://www.digicert.com/CACerts/DigiCertGlobalRootCA.crt>
+
     - <https://www.digicert.com/CACerts/DigiCertSHA2SecureServerCA.crt>
 
     **For Windows Server 2008:**<br>
@@ -70,7 +73,9 @@ In this section you'll need to use the appropriate address depending on the loca
 8. Enable and configure the following settings:
 
     - Specify intranet Microsoft update service location —  in both boxes enter `https://wsus.cor.ukcloud.com`, `https://wsus.frn.ukcloud.com` or the appropriate Elevated IP address
+
     - Configure Automatic Updates — enter required settings
+
     - Enable client-side targeting — enter `client` in the group name field
 
 9. Open an elevated command prompt and type `gpupdate /force`.

@@ -8,7 +8,7 @@
     <title>How to connect to the UKCloud Windows Server Update Services (WSUS) | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to connect to the UKCloud Windows Server Update Services (WSUS) | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-connect-windows-update.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -99,9 +108,12 @@
 </li>
 <li><p>Test connectivity to the update servers by opening an Internet Explorer browser window, then opening a connection to one of the update servers on:</p>
 <ul>
-<li><code>https://wsus.cor.ukcloud.com</code> (Assured OFFICIAL, Corsham)</li>
-<li><code>https://wsus.frn.ukcloud.com</code> (Assured OFFICIAL, Farnborough)</li>
-<li>For Elevated OFFICIAL, raise a Service Request via the My Calls section of the UKCloud Portal to get the appropriate IP address</li>
+<li><p><code>https://wsus.cor.ukcloud.com</code> (Assured OFFICIAL, Corsham)</p>
+</li>
+<li><p><code>https://wsus.frn.ukcloud.com</code> (Assured OFFICIAL, Farnborough)</p>
+</li>
+<li><p>For Elevated OFFICIAL, raise a Service Request via the My Calls section of the UKCloud Portal to get the appropriate IP address</p>
+</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
@@ -111,8 +123,10 @@
 <li><p>Ensure that you have the full certificate chain installed. If not, you may have to install the certificates into your VM manually.</p>
 <p>Links for Root CA and Issuing CA:</p>
 <ul>
-<li><a href="https://www.digicert.com/CACerts/DigiCertGlobalRootCA.crt">https://www.digicert.com/CACerts/DigiCertGlobalRootCA.crt</a></li>
-<li><a href="https://www.digicert.com/CACerts/DigiCertSHA2SecureServerCA.crt">https://www.digicert.com/CACerts/DigiCertSHA2SecureServerCA.crt</a></li>
+<li><p><a href="https://www.digicert.com/CACerts/DigiCertGlobalRootCA.crt">https://www.digicert.com/CACerts/DigiCertGlobalRootCA.crt</a></p>
+</li>
+<li><p><a href="https://www.digicert.com/CACerts/DigiCertSHA2SecureServerCA.crt">https://www.digicert.com/CACerts/DigiCertSHA2SecureServerCA.crt</a></p>
+</li>
 </ul>
 <p><strong>For Windows Server 2008:</strong><br>
 Select Place all certificates in the following store.</br>
@@ -135,9 +149,12 @@ Click Next and confirm the import settings, then click Finish.</p>
 </li>
 <li><p>Enable and configure the following settings:</p>
 <ul>
-<li>Specify intranet Microsoft update service location —  in both boxes enter <code>https://wsus.cor.ukcloud.com</code>, <code>https://wsus.frn.ukcloud.com</code> or the appropriate Elevated IP address</li>
-<li>Configure Automatic Updates — enter required settings</li>
-<li>Enable client-side targeting — enter <code>client</code> in the group name field</li>
+<li><p>Specify intranet Microsoft update service location —  in both boxes enter <code>https://wsus.cor.ukcloud.com</code>, <code>https://wsus.frn.ukcloud.com</code> or the appropriate Elevated IP address</p>
+</li>
+<li><p>Configure Automatic Updates — enter required settings</p>
+</li>
+<li><p>Enable client-side targeting — enter <code>client</code> in the group name field</p>
+</li>
 </ul>
 </li>
 <li><p>Open an elevated command prompt and type <code>gpupdate /force</code>.</p>
@@ -177,13 +194,6 @@ Click Next and confirm the import settings, then click Finish.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-connect-windows-update.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -202,7 +212,7 @@ Click Next and confirm the import settings, then click Finish.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

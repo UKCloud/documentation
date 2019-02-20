@@ -111,6 +111,7 @@ To manage permissions for a specific vApp:
 4. For each user to whom you want to grant permissions:
 
     - Highlight the user or users from the list and go to the right panel to select Access Level.
+
     - Select the appropriate permission level from the **Access Level** list: **Read Only** or **Full Control**.
 
     ![vApp Access Level](images/vmw-vcd-tp-vapp-share-level.png)

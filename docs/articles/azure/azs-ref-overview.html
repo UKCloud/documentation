@@ -8,7 +8,7 @@
     <title>Understanding UKCloud for Microsoft Azure | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Understanding UKCloud for Microsoft Azure | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-ref-overview.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -93,17 +102,24 @@
 <p>Virtual machines (VMs) provide the basic building block providing compute in Azure Stack. For a list of available VM sizes, see: <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes">https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes</a>.</p>
 <p>You can deploy VMs using the Azure Stack portal and other tooling. VMs have the following support:</p>
 <ul>
-<li>API</li>
-<li>Azure Stack Marketplace - Provides access to pre-created images that help speed up application delivery</li>
-<li>Azure Resource Manager - Enables you to write templates to deploy, update and delete Azure Stack resources in a single co-ordinated operation</li>
+<li><p>API</p>
+</li>
+<li><p>Azure Stack Marketplace - Provides access to pre-created images that help speed up application delivery</p>
+</li>
+<li><p>Azure Resource Manager - Enables you to write templates to deploy, update and delete Azure Stack resources in a single co-ordinated operation</p>
+</li>
 </ul>
 <p><a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-considerations">https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-considerations</a></p>
 <h3 id="network">Network</h3>
 <ul>
-<li>Virtual networks - Azure Stack enables you to configure virtual private clouds, create and manage your private address space within Azure; you can configure this via the UI, API and other tooling</li>
-<li>Load balancers (IPv4 only) — You can deploy basic load balancers</li>
-<li>VPN gateway — You can use the Azure Stack VPN gateway to create site-to-site VPNs to remote infrastructure</li>
-<li>Routing — You can configure basic custom defined routing on virtual networks; Vnet to Vnet peering is not yet supported</li>
+<li><p>Virtual networks - Azure Stack enables you to configure virtual private clouds, create and manage your private address space within Azure; you can configure this via the UI, API and other tooling</p>
+</li>
+<li><p>Load balancers (IPv4 only) — You can deploy basic load balancers</p>
+</li>
+<li><p>VPN gateway — You can use the Azure Stack VPN gateway to create site-to-site VPNs to remote infrastructure</p>
+</li>
+<li><p>Routing — You can configure basic custom defined routing on virtual networks; Vnet to Vnet peering is not yet supported</p>
+</li>
 </ul>
 <p><a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-network-differences">https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-network-differences</a></p>
 <h3 id="storage">Storage</h3>
@@ -154,27 +170,44 @@
 <ul>
 <li><p>Azure Stack supports a subset of Azure VM extensions; UKCloud for Microsoft Azure currently supports the following:</p>
 <ul>
-<li>BGInfo v2.1</li>
-<li>CustomScriptExtension v1.8</li>
-<li>JsonADDomainExtension v1.3</li>
-<li>VMAccessAgent v2</li>
-<li>CustomScriptForLinux v1.5.2.0</li>
-<li>OSPatchingForLinux v2.3.0.1</li>
-<li>VMAccessForLinux v1.4.0.0</li>
-<li>DockerExtension v1.1.1606092330</li>
-<li>DSC v2.19.0.0</li>
-<li>IaaSAntimalware v1.4.0.0</li>
-<li>IaaSDiagnostics v1.10.1.1</li>
-<li>MicrosoftMonitoringAgent v1.0.10900.0</li>
+<li><p>CustomScriptForLinux  v1.5.2.2 &amp; v1.5.2.0</p>
+</li>
+<li><p>OSPatchingForLinux  v2.3.0.1</p>
+</li>
+<li><p>VMAccessForLinux  v1.4.0.0</p>
+</li>
+<li><p>CustomScriptExtension  v1.9.1 &amp; v1.8</p>
+</li>
+<li><p>BGInfo  v2.1</p>
+</li>
+<li><p>JsonADDomainExtension  v1.3</p>
+</li>
+<li><p>VMAccessAgent  v2.0</p>
+</li>
+<li><p>SqlIaaSAgent  v1.2.30.0</p>
+</li>
+<li><p>DSC  v2.76.0.0 &amp; v2.19.0.0</p>
+</li>
+<li><p>DockerExtension  v1.1.1606092330</p>
+</li>
+<li><p>CustomScript  v2.0.6</p>
+</li>
+<li><p>IaaSAntimalware  v1.4.0.0</p>
+</li>
+<li><p>IaaSDiagnostics  v1.10.1.1</p>
+</li>
+<li><p>MicrosoftMonitoringAgent  v1.0.10900.0</p>
+</li>
 </ul>
 <p>For an up-to-date list of the supported extensions, perform the following steps:</p>
 <p>First, ensure that you've installed the relevant Azure PowerShell tools from the following links:</p>
 <p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install</a></p>
 <p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download</a></p>
 <p>Then run the following commands:</p>
-<pre><code class="lang-powershell">Add-AzureRMEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+<pre><code class="lang-PowerShell">Add-AzureRmEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
 Login-AzureRmAccount -EnvironmentName &quot;AzureStackAdmin&quot;
-Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageType | ` Get-AzureRmVMExtensionImage | ` Select Type, Version | ` Format-Table -Property * -AutoSize
+Get-AzureRmVMImagePublisher -Location frn00006 | Get-AzureRmVMExtensionImageType | Get-AzureRmVMExtensionImage | `
+  Select-Object Type, Version | Format-Table -Property * -AutoSize
 </code></pre>
 </li>
 <li><p>Use load balancers to make the best use of IP address quota</p>
@@ -191,13 +224,20 @@ Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageTy
 <h3 id="storage-1">Storage</h3>
 <p>Azure Stack storage is all served from the same pool of disks and does not provide “limitless” storage, so you should consider the following:</p>
 <ul>
-<li>Use blob storage (object storage) to support the application; not for multiple petabytes of data storage</li>
-<li>Put large volume data on UKCloud's Cloud Storage</li>
-<li>Clean up backups to conserve storage</li>
-<li>Consider use of temporary storage</li>
-<li>There is a difference in maximum blob storage between Azure and Azure Stack</li>
-<li>No guarantees around IOPs</li>
-<li>Use blob storage for queues to help deliver scalable micro-services</li>
+<li><p>Use blob storage (object storage) to support the application; not for multiple petabytes of data storage</p>
+</li>
+<li><p>Put large volume data on UKCloud's Cloud Storage</p>
+</li>
+<li><p>Clean up backups to conserve storage</p>
+</li>
+<li><p>Consider use of temporary storage</p>
+</li>
+<li><p>There is a difference in maximum blob storage between Azure and Azure Stack</p>
+</li>
+<li><p>No guarantees around IOPs</p>
+</li>
+<li><p>Use blob storage for queues to help deliver scalable micro-services</p>
+</li>
 </ul>
 <h2 id="accessing-ukcloud-for-microsoft-azure">Accessing UKCloud for Microsoft Azure</h2>
 <p>You can access UKCloud for Microsoft Azure from the following location:</p>
@@ -205,13 +245,21 @@ Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageTy
 <h2 id="further-information">Further information</h2>
 <p>For more information about Azure Stack, see the following Microsoft resources:</p>
 <ul>
-<li><a href="https://azure.microsoft.com/en-gb/get-started/"><em>Get Started with Azure</em></a></li>
-<li><a href="https://docs.microsoft.com/en-us/azure/azure-stack/"><em>Azure Stack Operator Documentation</em></a></li>
+<li><p><a href="https://azure.microsoft.com/en-gb/get-started/"><em>Get Started with Azure</em></a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/"><em>Azure Stack Operator Documentation</em></a></p>
+</li>
 </ul>
 <p>For more information about UKCloud for Microsoft Azure, see:</p>
 <ul>
-<li><a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a></li>
-<li><a href="azs-faq.html"><em>UKCloud for Microsoft Azure FAQs</em></a></li>
+<li><p><a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a></p>
+</li>
+<li><p><a href="azs-faq.html"><em>UKCloud for Microsoft Azure FAQs</em></a></p>
+</li>
+</ul>
+<h2 id="related-videos">Related videos</h2>
+<ul>
+<li><a href="azs-vid-overview.html"><em>Microsoft Azure Stack Portal overview video</em></a></li>
 </ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this article, or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
@@ -224,13 +272,6 @@ Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageTy
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-ref-overview.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -249,7 +290,7 @@ Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageTy
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

@@ -82,7 +82,9 @@ The solution is not designed to provide a comprehensive security solution for a 
 For more information about DDoS protection, see the following articles:
 
 - [*DDoS Mitigation Service FAQs*](conn-faq-ddos.md)
+
 - [*Application-tuned DDoS protection Service Scope*](conn-sco-app-ddos.md)
+
 - [*Application-tuned DDoS protection FAQs*](conn-faq-app-ddos.md)
 
 ## Feedback

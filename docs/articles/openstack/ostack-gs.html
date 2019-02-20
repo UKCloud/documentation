@@ -8,7 +8,7 @@
     <title>Getting Started Guide for UKCloud for OpenStack | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for UKCloud for OpenStack | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-gs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -89,34 +98,51 @@
 <h3 id="intended-audience">Intended audience</h3>
 <p>This guide is intended for users who want to learn more about UKCloud for OpenStack.</p>
 <h2 id="logging-in-to-the-openstack-horizon-dashboard">Logging in to the OpenStack Horizon dashboard</h2>
+<p>To manage your OpenStack projects, you can log in to the OpenStack Horizon dashboard via our Single Sign-On (SSO) service, using your UKCloud Portal credentials. Additionally, if you've set up two-factor authentication (2FA) in the Portal, when logging in using your Portal credentials, you'll be prompted for a 2FA code.</p>
 <ol>
-<li><p>Go to the URL provided in your welcome email.</p>
-<p>The examples in this guide use <code>https://cor00005.cni.ukcloud.com/</code>.</p>
+<li><p>Go to the URL provided in your welcome email, for example, <code>https://cor00005.cni.ukcloud.com/</code>.</p>
 </li>
-<li><p>Enter your login credentials and click <strong>Connect</strong>.</p>
+<li><p>From the <strong>Authenticate using</strong> list, select:</p>
+<ul>
+<li><strong>Keystone Credentials</strong> if your account has not been migated to SSO</li>
+<li><strong>UKCloud SSO</strong> if your account has been migrated to SSO</li>
+</ul>
 <p><img src="images/ostack-horizon-login.png" alt="Horizon login page"></p>
+</li>
+<li><p>If you selected <strong>Keystone Credentials</strong>, enter your UKCloud Portal login credentials and click <strong>Connect</strong>.</p>
+<p>If you selected <strong>UKCloud SSO</strong> click <strong>Connect</strong>. You'll be redirected to the SSO login page, where you can enter your username and password and click <strong>Log in</strong>.</p>
+<p><img src="images/ostack-horizon-sso-login.PNG" alt="SSO Login Page"></p>
+<p>If you've set up two-factor authentication (2FA) in the Portal, you'll be prompted for a 2FA code.</p>
 </li>
 <li><p>After logging in, the first screen you'll see is the <em>Overview</em> page.</p>
 <p>From here you can get a summary of your project and view your resource usage and the quotas configured on the project.</p>
 <p><img src="images/ostack-horizon-welcome.png" alt="Horizon Overview page"></p>
 </li>
 </ol>
+<p>For more information about the Horizon dashboard, see the <a href="https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/pdf/introduction_to_the_openstack_dashboard/Red_Hat_OpenStack_Platform-10-Introduction_to_the_OpenStack_Dashboard-en-US.pdf"><em>Red Hat OpenStack Platform 10 Introduction to the OpenStack Dashboard</em></a>.</p>
 <h2 id="creating-your-network-infrastructure">Creating your network infrastructure</h2>
 <p>Before you can begin creating instances, you must first build the required network components. In a freshly provisioned project, the only resource that will exist initially is a shared external network called <code>internet</code>.</p>
 <p>You need to create the following minimum set of resources:</p>
 <ul>
-<li>A router using the internet external network</li>
-<li>A network and associated subnet, specifying the network address using CIDR notation (for example, 192.168.1.0/24), and DHCP settings for DNS, any static routes, and so on.</li>
-<li>A router interface to connect the router to your new subnet</li>
+<li><p>A router using the internet external network</p>
+</li>
+<li><p>A network and associated subnet, specifying the network address using CIDR notation (for example, 192.168.1.0/24), and DHCP settings for DNS, any static routes, and so on.</p>
+</li>
+<li><p>A router interface to connect the router to your new subnet</p>
+</li>
 </ul>
 <p>When you have created these elements, you can view them in the <em>Network Topology</em> page in the Horizon dashboard.</p>
 <p><img src="images/ostack-horizon-network-topology.png" alt="Horizon Network Topology page"></p>
 <p>You can create your network infrastructure in one of the following ways:</p>
 <ul>
-<li>Using Horizon to manually create your infrastructure (see <a href="#using-horizon-to-manually-create-your-infrastructure">Using Horizon to manually create your infrastructure</a>)</li>
-<li>Using the OpenStack Heat orchestration tool to create stacks (see <a href="#using-the-openstack-heat-orchestration-tool-to-create-stacks">Using the OpenStack Heat orchestration tool to create stacks</a>)</li>
-<li>Using the OpenStack API and automation (see <a href="#using-the-openstack-api-and-automation">Using the OpenStack API and automation</a>)</li>
-<li>Using the OpenStack CLI clients (see <a href="ostack-ref-cli-clients.html">Command-line clients for UKCloud for OpenStack</a>)</li>
+<li><p>Using Horizon to manually create your infrastructure (see <a href="#using-horizon-to-manually-create-your-infrastructure">Using Horizon to manually create your infrastructure</a>)</p>
+</li>
+<li><p>Using the OpenStack Heat orchestration tool to create stacks (see <a href="#using-the-openstack-heat-orchestration-tool-to-create-stacks">Using the OpenStack Heat orchestration tool to create stacks</a>)</p>
+</li>
+<li><p>Using the OpenStack API and automation (see <a href="#using-the-openstack-api-and-automation">Using the OpenStack API and automation</a>)</p>
+</li>
+<li><p>Using the OpenStack CLI clients (see <a href="ostack-ref-cli-clients.html">Command-line clients for UKCloud for OpenStack</a>)</p>
+</li>
 </ul>
 <h3 id="using-horizon-to-manually-create-your-infrastructure">Using Horizon to manually create your infrastructure</h3>
 <p>The <em>Network Topology</em> page is a useful page to get started with. This page provides a resizable, moveable and interactive view of your OpenStack project, along with easily accessible buttons for manually creating routers and networks and for launching instances.</p>
@@ -174,11 +200,16 @@
 <p>A security group consists of one or more rules. Each rule is composed of
 five elements:</p>
 <ul>
-<li><strong>Role</strong> --- Custom or predefined protocol type (for example, TCP, UDP or ICMP)</li>
-<li><strong>Direction</strong> --- Ingress or Egress</li>
-<li><strong>Open Port or Port Range</strong> --- Open either a single port or a range of ports</li>
-<li><strong>Remote</strong> --- The source of the traffic to be allowed via this rule (source address for an inbound rule, or destination address for an outbound rule)</li>
-<li>The ether type (that is IPv4 or IPv6) --- Not currently available</li>
+<li><p><strong>Role</strong> --- Custom or predefined protocol type (for example, TCP, UDP or ICMP)</p>
+</li>
+<li><p><strong>Direction</strong> --- Ingress or Egress</p>
+</li>
+<li><p><strong>Open Port or Port Range</strong> --- Open either a single port or a range of ports</p>
+</li>
+<li><p><strong>Remote</strong> --- The source of the traffic to be allowed via this rule (source address for an inbound rule, or destination address for an outbound rule)</p>
+</li>
+<li><p>The ether type (that is IPv4 or IPv6) --- Not currently available</p>
+</li>
 </ul>
 <p><img src="images/ostack-horizon-add-rule.png" alt="Add Rule page"></p>
 <p>When adding a new rule to a security group, you can choose from a pre-populated list of common rules, for example, SSH, DNS, HTTP or SMTP, or you can specify your own custom rule.</p>
@@ -255,7 +286,7 @@ public key so that OpenStack can use it to inject into new instances.</p>
 <p>You can see the images that are available for you to use by expanding the <strong>Compute</strong> menu on the left side of the Horizon dashboard and clicking <strong>Images</strong>.</p>
 <p><img src="images/ostack-horizon-images.png" alt="Images page"></p>
 <h3 id="choosing-your-instance-size">Choosing your instance size</h3>
-<p>If you're already familiar with UKCloud's vCloud Director-based Enterprise Compute Cloud service, then you may be used to being able to choose exactly how many vCPUs and how much memory a VM is allocated.</p>
+<p>If you're already familiar with UKCloud's vCloud Director-based UKCloud for VMWare service, then you may be used to being able to choose exactly how many vCPUs and how much memory a VM is allocated.</p>
 <p>In OpenStack, you choices are restricted to a number of pre-defined <em>flavors</em> that define how many vCPUs, how much memory and how much storage an instance may use. Although full details for each flavor are
 available through the Horizon UI, there's no overall list available showing all the different flavors and sizes of instances. However, if you've installed the OpenStack CLI tools (see
 <a href="http://docs.openstack.org/user-guide/common/cli-install-openstack-command-line-clients.html">http://docs.openstack.org/user-guide/common/cli-install-openstack-command-line-clients.html</a>),
@@ -266,8 +297,10 @@ you can run the following command to retrieve a list of the flavors and their ma
 <h3 id="choosing-your-storage-type">Choosing your storage type</h3>
 <p>There are two storage options available for use with your instances:</p>
 <ul>
-<li>Ephemeral storage (default)</li>
-<li>Persistent volume storage</li>
+<li><p>Ephemeral storage (default)</p>
+</li>
+<li><p>Persistent volume storage</p>
+</li>
 </ul>
 <h4 id="ephemeral-storage">Ephemeral storage</h4>
 <p>When you create an instance, the default behaviour is to clone your chosen disk image onto the physical disk attached to the host that will be running the instance. This is not dedicated locally attached storage to your instance, but rather a RAID array of fast SSD disks that is shared by all the instances running on the host hypervisor.</p>
@@ -280,9 +313,12 @@ you can run the following command to retrieve a list of the flavors and their ma
 <ol>
 <li><p>Click or select <strong>Launch Instance</strong> on one of the following pages:</p>
 <ul>
-<li><em>Images</em> page (under the <strong>Compute</strong> menu)</li>
-<li><em>Instances</em> page (under the <strong>Compute</strong> menu)</li>
-<li><em>Network Topology</em> page (under the <strong>Networks</strong> menu)</li>
+<li><p><em>Images</em> page (under the <strong>Compute</strong> menu)</p>
+</li>
+<li><p><em>Instances</em> page (under the <strong>Compute</strong> menu)</p>
+</li>
+<li><p><em>Network Topology</em> page (under the <strong>Networks</strong> menu)</p>
+</li>
 </ul>
 </li>
 <li><p>On the <em>Details</em> tab of the <em>Launch Instance</em> dialog box, enter an <strong>Instance Name</strong> and select a <strong>Flavor</strong>.</p>
@@ -291,8 +327,10 @@ you can run the following command to retrieve a list of the flavors and their ma
 </li>
 <li><p>From the <strong>Instance Boot Source</strong> list, select:</p>
 <ul>
-<li><strong>Boot from image</strong> to create an instance that boots from the local ephemeral storage.</li>
-<li><strong>Boot from image (creates a new volume)</strong> to create an instance that boots from a volume</li>
+<li><p><strong>Boot from image</strong> to create an instance that boots from the local ephemeral storage.</p>
+</li>
+<li><p><strong>Boot from image (creates a new volume)</strong> to create an instance that boots from a volume</p>
+</li>
 </ul>
 </li>
 <li><p>From the <strong>Image Name</strong> list, select your preferred image.</p>
@@ -354,14 +392,18 @@ you can run the following command to retrieve a list of the flavors and their ma
 </li>
 <li><p>From the <strong>Volume Source</strong> list, select:</p>
 <ul>
-<li><strong>No source, empty volume</strong> to create a totally empty volume for customer to populate with their data (this is the default option)</li>
-<li><strong>Image</strong> to enable customer to create a prepopulated volume from a previously created image</li>
+<li><p><strong>No source, empty volume</strong> to create a totally empty volume for customer to populate with their data (this is the default option)</p>
+</li>
+<li><p><strong>Image</strong> to enable customer to create a prepopulated volume from a previously created image</p>
+</li>
 </ul>
 </li>
 <li><p>From the Volume Type list, select:</p>
 <ul>
-<li><strong>Tier 1</strong> for our most performant block storage for workloads requiring consistently higher disk throughput</li>
-<li><strong>Tier 2</strong> for block storage with typical performance characteristics for use by production applications or storage (this is the default option)</li>
+<li><p><strong>Tier 1</strong> for our most performant block storage for workloads requiring consistently higher disk throughput</p>
+</li>
+<li><p><strong>Tier 2</strong> for block storage with typical performance characteristics for use by production applications or storage (this is the default option)</p>
+</li>
 </ul>
 </li>
 <li><p>From the <strong>Size</strong> list, select the size of your volume in GiB.</p>
@@ -434,8 +476,10 @@ you can run the following command to retrieve a list of the flavors and their ma
 </code></pre>
 <p>Where:</p>
 <ul>
-<li><em><code>volume</code></em> is the name or ID of the volume that you want to retype</li>
-<li><em><code>volume-type</code></em> is the new volume type</li>
+<li><p><em><code>volume</code></em> is the name or ID of the volume that you want to retype</p>
+</li>
+<li><p><em><code>volume-type</code></em> is the new volume type</p>
+</li>
 </ul>
 <h2 id="working-with-the-api-and-automation">Working with the API and automation</h2>
 <h3 id="using-the-openstack-heat-orchestration-tool-to-create-stacks">Using the OpenStack Heat orchestration tool to create stacks</h3>
@@ -478,13 +522,34 @@ use the template to create a <em>stack</em>. The stack contains the instantiatio
 </li>
 <li><p>On the <em>Access and Security</em> page, select the <em>API Access</em> tab.</p>
 </li>
-<li><p>On the <em>API Access</em> tab, you can see all the relevant API endpoints for making connections to the various OpenStack subsystems, including the <strong>Identify</strong> endpoint, which provides the initial authentication process, that you'll typically need when configuring connections.</p>
+<li><p>On the <em>API Access</em> tab, you can see all the relevant API endpoints for making connections to the various OpenStack subsystems, including the <strong>Identify</strong> endpoint, which provides the initial authentication process that you'll typically need when configuring connections.</p>
 <p>You can also download your user's OpenStack RC file for use in the following section.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If your account is SSO-enabled, download the v3 RC file.</p>
+</div>
 <p><img src="images/ostack-horizon-btn-download-rc-file.png" alt="Download OpenStack RC File button on Access &amp; Security page"></p>
+</li>
+<li><p>If your account is enabled for SSO, you'll need to add the following items to the RC file you downloaded in the previous step.</p>
+<pre><code class="lang-none">export OS_AUTH_TYPE=&quot;v3oidcpassword&quot;
+export OS_IDENTITY_PROVIDER=&quot;sso&quot;
+export OS_PROTOCOL=&quot;oidc&quot;
+export OS_CLIENT_ID=&quot;&quot;
+export OS_CLIENT_SECRET=&quot;&quot;
+export OS_DISCOVERY_ENDPOINT=&quot;https://idp.ukcloud.com/auth/realms/client-assured/.well-known/openid-configuration
+</code></pre>
+<ul>
+<li><p>The <code>client_id</code> for Corsham is <code>cni.1.cor00005</code></p>
+</li>
+<li><p>The <code>client_id</code> for Farnborough is <code>cni.1.frn00006</code></p>
+</li>
+<li><p>You can set the <code>client_secret</code> to any value</p>
+</li>
+</ul>
 </li>
 </ol>
 <h2 id="using-the-openstack-command-line-client">Using the OpenStack command-line client</h2>
-<p>The OpenStack project provides a command‑line client that enables you to access the project API through easy‑to‑use commands. For example, the Compute service provides a NOVA command‑line client.</p>
+<p>The OpenStack project provides a command‑line client that enables you to access the project API through easy‑to‑use commands. For example, the compute service provides a NOVA command‑line client.</p>
 <p>You can run the commands from the command line, or include the commands in scripts to automate tasks. If you provide OpenStack credentials, such as your user name and password, you can run these commands on any computer.</p>
 <p>The following file is a bash shell script format file that sets up all the relevant environment variables in the Linux shell session so that you can use the OpenStack CLI tools. The OpenStack CLI tools, just like the Horizon UI, also communicate with the OpenStack API. This means you
 can examine the contents of the RC file to find the settings that you may need to pass into, for example, a Terraform provider definition when configuring it to manage your OpenStack project.</p>
@@ -495,11 +560,20 @@ can examine the contents of the RC file to find the settings that you may need t
 <p>In this Getting Started Guide, you've learned how to use the OpenStack Horizon UI to set up UKCloud for OpenStack and create new instances. You've also learned about the other tools available including the OpenStack API and command-line client.</p>
 <p>You can find additional information in the following places:</p>
 <ul>
-<li><strong>OpenStack API</strong> --- For more information about using the API, see the OpenStack documentation at <a href="http://developer.openstack.org/api-guide/quick-start/">http://developer.openstack.org/api-guide/quick-start/</a></li>
-<li><strong>OpenStack Client</strong> --- For more information about using the OpenStack Client, see the OpenStack documentation at <a href="http://docs.openstack.org/user-guide/cli.html">http://docs.openstack.org/user-guide/cli.html</a></li>
-<li><strong>HEAT templates</strong> --- You can find more information about the Heat orchestration tool and the resources you can use in the YAML format templates in the OpenStack documentation at <a href="https://wiki.openstack.org/wiki/Heat">https://wiki.openstack.org/wiki/Heat</a> and <a href="http://docs.openstack.org/developer/heat/template_guide/index.html">http://docs.openstack.org/developer/heat/template_guide/index.html</a></li>
-<li><strong>Terraform</strong> --- For information about using Terraform and the OpenStack provider, see the Terraform documentation at <a href="https://www.terraform.io/intro/">https://www.terraform.io/intro/</a> and <a href="https://www.terraform.io/docs/providers/openstack/index.html">https://www.terraform.io/docs/providers/openstack/index.html</a></li>
-<li><strong>Ansible</strong> --- For information on Ansible's support for working with OpenStack resources, see the Ansible documentation at <a href="http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack">http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack</a></li>
+<li><p><strong>OpenStack API</strong> --- For more information about using the API, see the OpenStack documentation at <a href="http://developer.openstack.org/api-guide/quick-start/">http://developer.openstack.org/api-guide/quick-start/</a></p>
+</li>
+<li><p><strong>OpenStack Client</strong> --- For more information about using the OpenStack Client, see the OpenStack documentation at <a href="http://docs.openstack.org/user-guide/cli.html">http://docs.openstack.org/user-guide/cli.html</a></p>
+</li>
+<li><p><strong>HEAT templates</strong> --- You can find more information about the Heat orchestration tool and the resources you can use in the YAML format templates in the OpenStack documentation at <a href="https://wiki.openstack.org/wiki/Heat">https://wiki.openstack.org/wiki/Heat</a> and <a href="http://docs.openstack.org/developer/heat/template_guide/index.html">http://docs.openstack.org/developer/heat/template_guide/index.html</a></p>
+</li>
+<li><p><strong>Terraform</strong> --- For information about using Terraform and the OpenStack provider, see the Terraform documentation at <a href="https://www.terraform.io/intro/">https://www.terraform.io/intro/</a> and <a href="https://www.terraform.io/docs/providers/openstack/index.html">https://www.terraform.io/docs/providers/openstack/index.html</a></p>
+</li>
+<li><p><strong>Ansible</strong> --- For information on Ansible's support for working with OpenStack resources, see the Ansible documentation at <a href="http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack">http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack</a></p>
+</li>
+</ul>
+<h2 id="related-videos">Related videos</h2>
+<ul>
+<li><a href="ostack-vid-overview.html"><em>OpenStack Horizon dashboard overview video</em></a></li>
 </ul>
 <h2 id="glossary">Glossary</h2>
 <p>This section provides a glossary of terms specific to UKCloud for OpenStack.</p>
@@ -524,7 +598,7 @@ template.</p>
 <p><strong>volume</strong>  A persistent storage option backed by a Ceph storage array that is
 network mounted onto the host hypervisor.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -534,13 +608,6 @@ network mounted onto the host hypervisor.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-gs.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -559,7 +626,7 @@ network mounted onto the host hypervisor.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

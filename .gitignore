@@ -26,6 +26,7 @@ _exported_templates/
 *.nupkg
 *.log
 *.tmp
+*.swp
 *.vsprops
 *.suo
 *.user
@@ -44,3 +45,4 @@ project.lock.json
 
 # IntelliJ / PyCharm
 .idea
+articles/.DS_Store

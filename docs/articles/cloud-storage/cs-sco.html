@@ -8,7 +8,7 @@
     <title>Cloud Storage Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Cloud Storage Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.0.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/cloud-storage/cs-sco.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -93,7 +102,7 @@
 <p><strong>STANDARD</strong> - data is stored in a single named UK-sovereign data centre with data protection using erasure coding. This provides fault tolerance by storing three copies of the data across separate nodes, thus improving data durability.</p>
 <p><strong>ENHANCED</strong> - data is stored in two UK-sovereign data centres, with a copy maintained in a primary named UK data centre and copied to a geographically remote UK data centre. This provides a greater degree of fault tolerance than the STANDARD service level by storing an additional copy of the data in a separate site.</p>
 <p>If you want more control and visibility of your disaster recovery solution, you can design your solution to write data independently to each data centre at our STANDARD service level, instead of using our ENHANCED service level.</p>
-<p>Full details of the available service options are outlined in the Service Definition (<a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/946099568360634-service-definition-document-2018-05-21-1258.pdf">Elevated</a>).</p>
+<p>Full details of the available service options are outlined in the <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf">Service Definition</a>.</p>
 <h2 id="service-availability">Service availability</h2>
 <p>UKCloud platform availability is based on the service level you purchase.</p>
 <p>The service level agreement (SLA) for the STANDARD service level guarantees 99.95% availability.</p>
@@ -112,7 +121,13 @@
 </li>
 <li><p><strong>Command Line Interface (CLI).</strong> CLI tools enable access from the command line by translating commands into the relevant API calls.</p>
 </li>
-<li><p><strong>Storage Gateways.</strong> These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. See <a href="https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf"><em>Blueprint -- Using Storage Gateways with Cloud Storage</em></a> for more information.</p>
+<li><p><strong>Storage Gateways.</strong> These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see the appropriate Cloud Storage Gateways Knowledge Centre article:</p>
+<ul>
+<li><p><a href="cs-how-install-geodrive2-client.html"><em>How to install the GeoDrive Client 2.0</em></a></p>
+</li>
+<li><p><a href="cs-how-install-cloudarray.html"><em>How to install CloudArray</em></a></p>
+</li>
+</ul>
 </li>
 <li><p><strong>UKCloud Portal.</strong> Contains information about the namespaces and users within your Cloud Storage environment, as well as a graphical representation of your storage consumption. For more information on the Portal functionality, see <a href="cs-how-view-info-portal.html"><em>How to view Cloud Storage information in the UKCloud Portal</em></a>.</p>
 </li>
@@ -136,9 +151,12 @@
 <h2 id="service-migration">Service migration</h2>
 <p>You can request a migration through a Service Request. Migrations may be between:</p>
 <ul>
-<li>Services (for example, STANDARD to ENHANCED)</li>
-<li>UKCloud sites or availability zones</li>
-<li>The Assured and Elevated platforms</li>
+<li><p>Services (for example, STANDARD to ENHANCED)</p>
+</li>
+<li><p>UKCloud sites or availability zones</p>
+</li>
+<li><p>The Assured and Elevated platforms</p>
+</li>
 </ul>
 <h2 id="customer-service">Customer service</h2>
 <p><strong>Customer Success Manager (CSM).</strong> For the first 90 days of the service, you have access to a UKCloud Customer Success Manager, who will help you with your adoption of the UKCloud Cloud Storage service, including finding relevant systems and using UKCloud tools and processes.</p>
@@ -147,14 +165,18 @@
 <p><strong>Support.</strong> After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the <a href="https://ukcloud.com/wp-content/uploads/2017/07/UKCloud-Factsheet-Customer-Care.pdf"><em>Customer Engagement Factsheet</em></a>.</p>
 <h2 id="customer-responsibilities">Customer responsibilities</h2>
 <ul>
-<li>Assessing whether the UKCloud platform can support the various requirements of your application and storage needs.</li>
-<li>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.</li>
-<li>If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.</li>
-<li>The customer is also responsible for ensuring only lawful data that supports the UK public sector is stored and processed by applications on this environment, and that they fully comply with the UKCloud Security Operating Procedures (SyOPs) and other information assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.</li>
+<li><p>Assessing whether the UKCloud platform can support the various requirements of your application and storage needs.</p>
+</li>
+<li><p>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.</p>
+</li>
+<li><p>If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.</p>
+</li>
+<li><p>The customer is also responsible for ensuring only lawful data that supports the UK public sector is stored and processed by applications on this environment, and that they fully comply with the UKCloud Security Operating Procedures (SyOPs) and other information assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.</p>
+</li>
 </ul>
 <h2 id="service-provisioning">Service provisioning</h2>
 <p>Within 1 day of accepting an order (shorter deployment times are typically achieved and can be prioritised upon request), UKCloud will create the customer's Primary Administrator account and send a Welcome Pack which includes the URL for the UKCloud Customer Portal, and the getting started guide.</p>
-<p>The customer can then use these details to configure their application (for example GeoDrive, CIFS-ECS, Cloud Tiering Appliance and Documentum) or access Cloud Storage via the API to begin using the service.</p>
+<p>The customer can then use these details to configure their application (for example GeoDrive, Cloud Tiering Appliance and Documentum) or access Cloud Storage via the API to begin using the service.</p>
 <p>UKCloud has created a number of videos, help guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the Knowledge Centre, accessed via the UKCloud Portal.</p>
 <p>UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud would be pleased to introduce you to the right partner to suit your needs.</p>
 <h2 id="service-constraints">Service constraints</h2>
@@ -169,7 +191,7 @@ notice of the Planned Maintenance.</p>
 <h2 id="supporting-documents-and-resources">Supporting documents and resources</h2>
 <p>The following documents contain more information about Cloud Storage and the service options:</p>
 <ul>
-<li><p><em>Cloud Storage Service Definition</em> (<a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/946099568360634-service-definition-document-2018-05-21-1258.pdf">Elevated</a>)</p>
+<li><p><a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf"><em>Cloud Storage Service Definition</em></a></p>
 </li>
 <li><p><a href="cs-faq.html"><em>Cloud Storage FAQ</em></a></p>
 </li>
@@ -177,9 +199,15 @@ notice of the Planned Maintenance.</p>
 </li>
 <li><p><a href="cs-how-view-info-portal.html"><em>How to view Cloud Storage information in the UKCloud Portal</em></a></p>
 </li>
-<li><p><a href="https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf"><em>Blueprint -- Using Storage Gateways with Cloud Storage</em></a></p>
+<li><p>Cloud Storage Gateways</p>
+<ul>
+<li><p><a href="cs-how-install-geodrive2-client.html"><em>How to install the GeoDrive Client 2.0</em></a></p>
 </li>
-<li><p><a href="https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-575-Blueprint-Using-file-browsers-with-Cloud-Storage-ECS-v1.pdf"><em>Blueprint -- Using File Browsers with Cloud Storage</em></a></p>
+<li><p><a href="cs-how-install-cloudarray.html"><em>How to install CloudArray</em></a></p>
+</li>
+</ul>
+</li>
+<li><p><a href="cs-how-use-file-browsers.html"><em>How to use file browsers with Cloud Storage</em></a></p>
 </li>
 </ul>
 
@@ -191,13 +219,6 @@ notice of the Planned Maintenance.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/cloud-storage/cs-sco.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -216,7 +237,7 @@ notice of the Planned Maintenance.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

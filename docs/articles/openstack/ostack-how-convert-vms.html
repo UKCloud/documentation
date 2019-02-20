@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to convert virtual machines to run in OpenStack | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to convert virtual machines to run in OpenStack | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-how-convert-vms.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-convert-virtual-machines-to-run-in-openstack">How to convert virtual machines to run in OpenStack</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This article outlines the process for importing virtual machine (VM) images from other cloud or virtualisation platforms and run them on OpenStack's KVM hypervisor using the Linux <code>virt-v2v</code> tool.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This article is intended for operators who have the capability to download a VM image from their current hypervisor and upload images to UKCloud's OpenStack service. In addition, this article assumes that operators are familiar with Linux and its command line.</p>
+<h2 id="supported-conversions">Supported conversions</h2>
+<p>You can use <code>virt-v2v</code> to convert VMs running the following operating systems to run on KVM:</p>
+<ul>
+<li><p>Red Hat Enterprise Linux 3.9</p>
+</li>
+<li><p>Red Hat Enterprise Linux 4</p>
+</li>
+<li><p>Red Hat Enterprise Linux 5</p>
+</li>
+<li><p>Red Hat Enterprise Linux 6</p>
+</li>
+<li><p>Red Hat Enterprise Linux 7.1 and later</p>
+</li>
+<li><p>Windows XP</p>
+</li>
+<li><p>Windows Vista</p>
+</li>
+<li><p>Windows 7</p>
+</li>
+<li><p>Windows 8</p>
+</li>
+<li><p>Windows 8.1</p>
+</li>
+<li><p>Windows 10</p>
+</li>
+<li><p>Windows Server 2003</p>
+</li>
+<li><p>Windows Server 2008</p>
+</li>
+<li><p>Windows Server 2008 R2</p>
+</li>
+<li><p>Windows Server 2012</p>
+</li>
+<li><p>Windows Server 2012 R2</p>
+</li>
+<li><p>Windows Server 2016</p>
+</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>virt-v2v</code> may convert VMs running other Linux operating systems, such as Debian and Ubuntu, but these conversions are not supported.</p>
+</div>
+<p>Conversions from the following hypervisors are supported:</p>
+<ul>
+<li><p>Red Hat Enterprise Linux 5 Xen</p>
+</li>
+<li><p>VMware vSphere ESX / ESX(i) - versions 3.5, 4.0, 4.1, 5.0, 5.1, 5.5, 6.0, 6.5, 6.7</p>
+</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>VMware appliances based on Photon OS are not supported and cannot be converted using <code>virt-v2v</code>.</p>
+</div>
+<h2 id="converting-virtual-machines">Converting virtual machines</h2>
+<ol>
+<li><p>Download the VM image from your source hypervisor (please see your local instructions on how to perform this).</p>
+</li>
+<li><p>Convert the source hypervisor image to an OpenStack KVM compatible image (QCOW2) using the following:</p>
+<ul>
+<li>For general instructions on how to use the <code>virt-v2v</code> tool, see the following page on the Red Hat Customer Portal:</li>
+</ul>
+<p><a href="https://access.redhat.com/articles/1351473">Converting Virtual Machines from Other Hypervisors to KVM with virt-v2v in RHEL 7</a></p>
+<ul>
+<li>For specific instructions on how to export a guest VM from VMware as an OVA file and import it into KVM see the following page on the Red Hat Customer Portal:</li>
+</ul>
+<p><a href="https://access.redhat.com/articles/1351963">Export a guest virtual machine from VMware as an OVA file and import it into KVM</a></p>
+</li>
+<li><p>Upload your new QCOW2 image to OpenStack (Glance) using the following steps:</p>
+<p>a. Log in to the UKCloud OpenStack region to which you want to upload your image.</p>
+<p>b. Expand the <strong>Compute</strong> menu on the left side of the Horizon dashboard and select <strong>Images</strong>.</p>
+<p><img src="images/ostack-horizon-images.png" alt="Images page"></p>
+<p>c. Click the <strong>Create Image</strong> button.</p>
+<p><img src="images/ostack-horizon-btn-create-image.png" alt="Create Image button"></p>
+<p>d. In the <em>Create Image</em> page, browse for the image you want to import, complete the rest of the details on the page, then click Create Image.</p>
+<p><img src="images/ostack-horizon-create-image.png" alt="Create Image page"></p>
+<p>e. Depending on the the size of the image, the import process may take up to an hour to complete. You can view progress of the import from the Images page of the OpenStack dashboard.</p>
+</li>
+<li><p>When the import process is complete, you'll be able to use your newly imported image in the same way as any other image stored in OpenStack's image catalog (Glance).</p>
+</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The above instructions assume you're using RHEL 7 to run the <code>virt-v2v</code> tool, however you can install the <code>virt-v2v</code> tool on other Linux operating systems.</p>
+</div>
+<h2 id="next-steps">Next steps</h2>
+<p>You can find more information about the <code>virt-v2v</code> tool on the official project page:</p>
+<p><a href="http://libguestfs.org/virt-p2v.1.html">http://libguestfs.org/virt-p2v.1.html</a></p>
+<p>If you're looking for a more managed migration service, you can engage with companies such as <a href="https://cloudbase.it/coriolis/">Cloudbase Solutions</a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

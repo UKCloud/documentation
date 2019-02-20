@@ -31,13 +31,17 @@ This guide is intended for users who want to migrate their workloads onto the UK
 When you request Workload Migration, UKCloud provides you with:
 
 - The IP address (from the IP range you provided to UKCloud) of the Zerto Cloud Connector (ZCC) deployed in your target VDC; you'll need this to complete the setup of the site-to-site VPN between your local environment and your UKCloud target VDC
+
 - A link to the appropriate version of the Zerto Virtual Manager (ZVM) for you to deploy in your local environment
+
 - A ZORG ID to identify your Zerto environment within the UKCloud platform
+
 - Access to the Zerto Self-Service Portal (ZSSP) in the appropriate UKCloud zone
 
 You should consider the following:
 
 - VMs must be powered on to be synchronised
+
 - The operating system used by the source VMs must also be supported in the target site
 
 ### System requirements
@@ -79,6 +83,7 @@ For a complete list of hypervisor features supported when using Workload Migrati
 To migrate your workloads to the UKCloud platform, you must have a VDC in the intended target site. If you already have a compute service in the UKCloud site, you can use an existing VDC or you can create a new one using:
 
 - The UKCloud Portal (for more information see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md))
+
 - The UKCloud Portal API (for more information see the [*How to use the UKCloud Portal API*](../portal/ptl-how-use-api.md))
 
 If you don't already have a compute service in the UKCloud site or you'd prefer UKCloud to create the VDC for you, you can request this as part of your Workload Migration Service Request.
@@ -88,6 +93,7 @@ If you don't already have a compute service in the UKCloud site or you'd prefer 
 Before you can start migrating your workloads to UKCloud, you need to prepare your local environment by:
 
 - Installing the appropriate version of Zerto Virtual Manager (ZVM) in your local environment
+
 - Creating a secure site-to-site VPN between your local environment and the UKCloud platform
 
 For more information, see [*How to install and configure Zerto in your local environment*](../vmware/vmw-how-zerto-install-local.md).
@@ -110,6 +116,7 @@ For more information, see [*How to create a virtual protection group*](../vmware
 Within Zerto, you have two options for migrating your workloads:
 
 - Move the VPG to the target site. This method performs an end-to-end migration, including removing the VMs from the source site after they have been moved. For more information, see the steps below.
+
 - Perform a live failover. This method provides more flexibility for you to control what happens on the source site after you move the VMs to the target site. For more information, see [*How to perform a failover*](../vmware/vmw-how-zerto-perform-failover.md).
 
 To move a VPG:
@@ -129,7 +136,9 @@ To move a VPG:
 4. On the *EXECUTION PARAMETERS* page, the commit policy gives you the opportunity to check the integrity of the migrated VMs before committing the move. To change the commit policy, select the **Commit Policy** field and choose:
 
     - **Auto-Commit** if you want to automatically commit the move after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately committed, enter 0.
+
     - **Auto-Rollback** if you want to automatically roll back the move after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately rolled back, enter 0.
+
     - **None** if you do not want to apply a commit policy. You must manually commit or roll back the move.
 
 5. The source VMs must be powered off before they can be migrated. If the VMs cannot be gracefully shut down, you can force a shutdown. To force shutdown, select the **Force Shutdown** check box. If you do not select this option and the VMs cannot be gracefully shut down, the move process fails.

@@ -87,10 +87,15 @@ After you create your edge gateway, we recommend that you convert it to an advan
 For information about how to configure your new edge gateway, see:
 
 - [*How to create firewall rules*](vmw-how-create-firewall-rules.md)
+
 - [*How to create NAT rules*](vmw-how-create-nat-rules.md)
+
 - [*How to create a DHCP pool*](vmw-how-create-dhcp-pool.md)
+
 - [*How to configure IPsec VPN*](vmw-how-configure-ipsec-vpn.md)
+
 - [*How to configure a load balancer*](vmw-how-configure-load-balancer.md)
+
 - [*How to create a static route*](vmw-how-create-static-route.md)
 
 ## Feedback

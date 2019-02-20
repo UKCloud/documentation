@@ -87,8 +87,11 @@ Elevated | Zone D | **UKCloud for VMware**<br>*Connectvity:* PSN-P, HybridConnec
 If you're interested in any of the following services, contact one of our Cloud Architects for further information:
 
 - High Performance Compute
+
 - Private Cloud for Compute
+
 - Private Cloud for Storage
+
 - RLI connectivity
 
 ## Feedback

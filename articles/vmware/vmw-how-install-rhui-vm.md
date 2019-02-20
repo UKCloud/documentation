@@ -56,6 +56,7 @@ If you require the high availability (HA) package, raise a Service Request direc
 5. The first time you update from RHUI you will be prompted to accept the following two certificates:
 
     - The Red Hat entitlement certificate
+
     - The Client entitlement certificate
 
 ## Troubleshooting

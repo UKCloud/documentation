@@ -20,6 +20,7 @@ toc_mdlink: vmw-how-zerto-perform-failover.md
 You may want to perform a failover in the following circumstances:
 
 - To recover virtual machines (VMs) after a disaster, if you're using Disaster Recovery as a Service or the UKCloud for VMware Journaling Protection option
+
 - To migrate workloads from a local, on-premises environment onto the UKCloud platform
 
 With Disaster Recovery as a Service and Journaling Protection, you can also run a test failover to verify that, during recovery, your protected VMs are correctly replicated at the target site.
@@ -61,8 +62,11 @@ When you run a test failover, a test VM is created for each of your protected VM
 5. In the *Checkpoints* dialog, select the checkpoint that you want to use:
 
     - **Latest** to use the latest checkpoint
+
     - **Latest Tagged Checkpoint** to use the latest manually added checkpoint
+
     - **Latest VSS** to use the latest VSS snapshot (this option is applicable only for Disaster Recovery as a Service and if you've installed the Zerto VSS agent on the VM)
+
     - **Select from all available checkpoints** to select a specific checkpoint from the list below
 
    ![My VMs](images/perform-image-4.png)
@@ -114,8 +118,11 @@ In the event of a disaster, you'll need to run a live failover to recover your V
 5. In the *Checkpoints* dialog, select the checkpoint that you want to use:
 
     - **Latest** to use the latest checkpoint
+
     - **Latest Tagged Checkpoint** to use the latest manually added checkpoint
+
     - **Latest VSS** to use the latest VSS snapshot (this option is applicable only for Disaster Recovery as a Service and Migration to the Cloud, and if you've installed the Zerto VSS agent on the VM)
+
     - **Select from all available checkpoints** to select a specific checkpoint from the list below
 
    ![My VMs](images/perform-image-8.png)
@@ -125,6 +132,7 @@ In the event of a disaster, you'll need to run a live failover to recover your V
 7. The commit policy gives you the opportunity to check the integrity of the recovered or migrated VMs before committing the failover. To change the commit policy, select the **Commit Policy** field and choose:
 
     - **Auto-Commit** if you want to automatically commit the failover after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440 minutes (24 hours). If you want the failover to be immediately committed, enter 0.
+
     - **Auto-Rollback** if you want to automatically roll back the failover after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440 minutes (24 hours). If you want the failover to be immediately rolled back, enter 0.
 
     - **None** if you do not want to apply a commit policy. You must manually commit or roll back the failover.
@@ -132,7 +140,9 @@ In the event of a disaster, you'll need to run a live failover to recover your V
 8. The shutdown policy determines what happens to the source VMs in the event of a failover. To change the shutdown policy, select the **VM Shutdown** field and choose:
 
     - **No** to leave the source VMs as they are before starting the failover.
+
     - **Yes** if the source VMs have VMware Tools available so that they can be gracefully shut down before starting the failover or migration. If the VMs cannot be shut down, the failover fails.
+
     - **Force Shutdown** to forcibly shut down the source VMs before starting the failover.
 
 9. Reverse protection ensures that when the source VMs are failed over to the target site, the source site becomes the new target site to ensure that the VMs are still protected. To enable reverse protection, select the **Reverse Protection** field and select the check box.

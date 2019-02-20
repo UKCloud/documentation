@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UK keyboard layout not supported in Web Console | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UK keyboard layout not supported in Web Console | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-trouble-uk-keyboard-console.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="uk-keyboard-layout-not-supported-in-web-console">UK keyboard layout not supported in Web Console</h1>
+
+<h2 id="issue">Issue</h2>
+<p>The web-based console available in the vCloud Director 9.1 HTML5 UI (tenant portal) does not provide support for a UK English keyboard layout, only US English. This means that when interacting with the console using a UK keyboard, the keys you press on the keyboard may not work as expected in the console. For example, if you press the @ key on your keyboard, this may appear in the console as a &quot; symbol.</p>
+<h2 id="solution">Solution</h2>
+<p>VMware are aware of this issue and currently plan to address it in vCloud Director 9.7. We will continue to monitor the issue and will let you know if it is addressed any sooner.</p>
+<p>In the meantime, the lack of support for the UK keyboard should not cause issues with entering commands in the console. However if you do encounter issues, you can use the VM Remote Console instead. To use the console you'll need to download an application (available for Windows, Linux and Mac) to the local PC client (requires VMware account).</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The VM Remote Console in vCloud Director 9.1 is different from the VMRC used in previous versions of vCloud Director and does not require the client integration plugin, which previously caused issues with browser limitations.</p>
+</div>
+<ol>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select your VDC.</p>
+</li>
+<li><p>In the left navigation panel, click <strong>Virtual Machines</strong>.</p>
+<p><img src="images/vmw-vcd91-tab-vms.png" alt="Virtual Machines menu option"></p>
+</li>
+<li><p>In the card for your VM, select <strong>More</strong>, then <strong>Download VMRC</strong>.</p>
+<p><img src="images/vmw-vcd91-mnu-download-vmrc.png" alt="Download VMRC menu option for VM"></p>
+</li>
+<li><p>Click the <strong>Download</strong> button for the version of the console you want to download (Windows, Mac or Linux).</p>
+<p><img src="images/vmw-vmrc-download.png" alt="Download VMRC page"></p>
+</li>
+<li><p>At this point, you'll need to login to your VMware account.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you do not have a VMware account, they are free to create, or you can contact UKCloud Support and we'll make the VMRC installer file available to you.</p>
+</div>
+</li>
+<li><p>Run the VM Remote Console installer then restart vCloud Director.</p>
+</li>
+<li><p>In the card for your VM, select <strong>More</strong>, then <strong>Launch VM Remote Console</strong>.</p>
+<p><img src="images/vmw-vcd91-mnu-launch-vmrc.png" alt="Launch VM Remote Console menu option for VM"></p>
+<p>The VM Remote Console works correctly with a UK keyboard.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>There is a current bug that occasionally reports that the VM Remote Console is not installed. If you see this message, and you have installed the console, it should still open normally.</p>
+</div>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

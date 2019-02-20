@@ -8,6 +8,8 @@
     href: ptl-how-raise-escalate-service-request.md
   - name: Reset your UKCloud Portal password or memorable word
     href: ptl-how-reset-password.md
+  - name: Set up two-factor authentication
+    href: ptl-how-setup-2fa.md
   - name: Sign up for Portal notifications
     href: ptl-how-signup-notifications.md
   - name: Unlock a user account
@@ -32,3 +34,7 @@
     href: ptl-ref-user-access.md
   - name: Resetting Two-Factor Authentication for SSO
     href: ptl-ref-reset-2fa-sso.md
+- name: Videos
+  items:
+  - name: UKCloud Portal
+    href: ptl-vid-portal.md

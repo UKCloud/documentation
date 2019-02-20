@@ -51,6 +51,7 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
 1. Go to the appropriate URL, depending on the security domain in which your service is located:
 
     - **Assured OFFICIAL:** <https://portal.ukcloud.com>
+
     - **Elevated OFFICIAL:** Contact your Portal administrator or Customer Success Manager (CSM)
 
 2. On the *Log in* page, enter your credentials and click **Sign in**.
@@ -148,7 +149,9 @@ After creating your compute service, the next step is to create one or more VDCs
 3. On the *Build VDC* page, from the **VM Type** radio buttons, select the option that describes the characteristics of the workload of the VDC:
 
     - **ESSENTIAL**---For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload receives the requested performance.
+
     - **POWER**---For key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is enabled to pre-emptively optimise performance and availability.
+
     - **PRIORITY**---For critical workloads that handle important business processes that benefit from a steady state of operation. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is configured to reduce workload movement around the platform.
 
 4. Enter a **VDC Name**.
@@ -224,8 +227,11 @@ After you've created your compute service and VDC, you can start to build up you
 In this *Getting Started Guide*, you've learned:
 
 - About your UKCloud for VMware environment and how your estate is organised
+
 - How to log in to the UKCloud Portal
+
 - How to create a compute service and VDC to set up your environment
+
 - How to log in to vCloud Director so that you can start to build your applications
 
 Now that you've set up your basic environment, you can start building your applications. If you want to get up and running quickly, you can take a look at [*How to build a virtual machine with UKCloud for VMware*](vmw-how-build-vm.md), which provides a quick walkthrough of the process.
@@ -235,21 +241,32 @@ For more detailed information about the different aspects of your UKCloud for VM
 - To create virtual machines to define your applications:
 
   - [*How to create a virtual machine from scratch*](vmw-how-create-vm-from-scratch.md)
+
   - [*How to create a virtual machine from a template*](vmw-how-create-vm-from-template.md)
 
 - To create a VDC network to enable your virtual machines to communicate with each other and the outside world:
 
   - [*How to create a routed VDC network*](vmw-how-create-routed-network.md)
+
   - [*How to create an isolated VDC network*](vmw-how-create-isolated-network.md)
 
 - To configure your edge gateway to control access to your VMs:
 
   - [*How to create firewall rules*](vmw-how-create-firewall-rules.md)
+
   - [*How to create NAT rules*](vmw-how-create-nat-rules.md)
+
   - [*How to create a DHCP pool*](vmw-how-create-dhcp-pool.md)
+
   - [*How to configure IPsec VPN*](vmw-how-configure-ipsec-vpn.md)
+
   - [*How to configure a load balancer*](vmw-how-configure-load-balancer.md)
+
   - [*How to create a static route*](vmw-how-create-static-route.md)
+
+## Related videos
+
+- [*vCloud Director 9.1 overview video*](vmw-vid-vcd91.md)
 
 ## Glossary
 
@@ -258,6 +275,7 @@ This section provides a glossary of terms specific to UKCloud for VMware.
 **account**&nbsp;&nbsp;Within the UKCloud for VMware environment there are two types of account:
 
 - **customer account** --- A collection of related compute services associated with a particular customer or partner.
+
 - **user account** --- The account you use to log in to the UKCloud Portal or authenticate with the Portal API. Your user account determines which customer accounts you have access to. Each user account can be associated with multiple customer accounts.
 
 **company**&nbsp;&nbsp;A UKCloud construct to organise business accounts. Each company can own
@@ -288,4 +306,4 @@ resource requirements and the UKCloud platform optimises its placement to ensure
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
