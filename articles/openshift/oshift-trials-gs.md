@@ -38,7 +38,7 @@ During a trial each cluster is also provisioned with 2 small run time packs. The
 
 ## GUI and CLI Access
 
-In order to access the OpenShift cluster GUI customers require a internet-enabled device running a HTML5 capable browser and need to be set up for access in UKClouds Portal with SSO access. Customers will also be set up with the relavent access in their OpenShift deployment.
+In order to access the OpenShift cluster GUI customers require a internet-enabled device running a HTML5 capable browser and need to be set up for access in the UKCloud Portal. Customers will also be set up with the relevant access in their OpenShift deployment.
 
 **OpenShift documentation:** [*Web Console Walkthrough*](https://docs.openshift.com/container-platform/3.11/getting_started/developers_console.html)
 
