@@ -161,6 +161,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-create-service-fabric-portal.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-create-service-fabric-portal.html",
+          "hash": "4F6snrM7ZzWgnCZ6rj7ZIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-create-spn-cli.md",
       "output": {
         ".html": {
@@ -213,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-terraform.html",
-          "hash": "Rj5y5dvxAn5aTx9OIASEWQ=="
+          "hash": "zazsjg2aSJO4H5+YyoG1iA=="
         }
       },
       "is_incremental": false,
@@ -423,6 +435,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-add-certificate.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-add-certificate.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-add-connection.png",
       "output": {
         "resource": {
@@ -526,6 +549,50 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-create-secret.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-sf-basics.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-sf-basics.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-sf-networking.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-sf-networking.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-sf-node.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-sf-node.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-sf-security.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-sf-security.png"
         }
       },
       "is_incremental": false,
@@ -1131,7 +1198,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "zJrVZsechvywZkHa5oPoMA=="
+          "hash": "v15a2YOj+nOrzcaNEVd2/g=="
         }
       },
       "is_incremental": false,
@@ -14789,17 +14856,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 324,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 325,
           "skipped_file_count": 0
         }
       }

@@ -12,6 +12,8 @@
     items:
     - name: Create a load balancer
       href: azs-how-create-load-balancer.md
+    - name: Create a Service Fabric cluster
+      href: azs-how-create-service-fabric-portal.md
     - name: Create a site-to-site connection
       href: azs-how-create-S2S-VPN.md
     - name: Deploy an SQL template to Azure Stack - PowerShell
