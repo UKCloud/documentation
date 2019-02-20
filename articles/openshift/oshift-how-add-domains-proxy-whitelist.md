@@ -45,7 +45,7 @@ A scheduled job (which runs at 0 minutes past every hour) on the OpenShift clust
 
 ### Assigning non cluster-admin users rights to edit the whitelist 
 
-By default, only users who have been assigned the cluster-admin role will be able to view/edit the `proxy-whitelist` ConfigMap within the `whitelist` project. It is possible to grant non cluster-admin users rights to edit this object but doing so should be taken with great consideration. There could be nefarious consequences should a malicious domain be unwittingly added so only trusted users should be granted this permission.
+By default, only users who have been assigned the cluster-admin role will be able to view/edit the `proxy-whitelist` ConfigMap within the `whitelist` project. It is possible to grant non cluster-admin users rights to edit this object but this should be done with careful deliberation. The ability to access hosts on the internet, from nodes that previously only had access to government community networks, exposes the cluster to additional risk (should a domain be whitelisted that hosts malicious content for example). For this reason, only trusted users should be permitted to determine these domains to reduce the risk of a malicious domain being unwittingly added.
 
 To allow non cluster-admin users to edit this object, use the following Role Based Access Control (RBAC) commands:
 
