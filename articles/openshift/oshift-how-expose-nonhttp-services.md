@@ -46,7 +46,7 @@ You'll need to raise a support ticket with us that provides the network you'd li
 Now you need to create the service you would like to expose. Create the service as usual, then patch the local IP we gave you into the service as its external IP using the following command (the example uses a local IP of 10.2.1.120):
 
 ```
-oc patch svc <service_name> '{"spec":{"externalIPs":["10.2.1.120"]}}'
+oc patch svc <service_name> -p '{"spec":{"externalIPs":["10.2.1.120"]}}'
 ```
 
 ## Deploying ipfailover
