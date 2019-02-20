@@ -134,7 +134,7 @@ The examples that follow show how to create a VM using Terraform. The code chang
     caching       = "ReadWrite"
     create_option = "FromImage"
   }' checked>An unmanaged disk
-
+  <div></div>
   <input type="radio" name="name" value=' storage_os_disk {
     name              = "myosdisk1"
     caching           = "ReadWrite"
