@@ -28,7 +28,7 @@ This guide is intended for developers who have signed up for a OpenShift trial w
 
 OpenShift is a platform as a service, this means that you no longer need to worry about the underlying hardware or operating system, instead customers can focus on developing, deploying, scaling and monitoring your applications in OpenShift which maximises your returns on investment both monetary and time.
 
-With UKCloud OpenShift you have admin access to OpenShift giving you the control you need to create, deploy and administar your cluster as you see fit.
+With UKCloud OpenShift you have admin access to OpenShift giving you the control you need to create, deploy and administer your cluster as you see fit.
 
 All OpenShift deployments get a starter pack which includes the management and orchestration planes of OpenShift. These are essentially 3 Master, 2 Infra, 2 data and 2 control plane nodes.
 
