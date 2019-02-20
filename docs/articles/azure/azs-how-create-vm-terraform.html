@@ -91,9 +91,9 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-create-a-virtual-machine-using-terraform">How to create a virtual machine using Terraform</h1>
+<h1 id="how-to-create-a-virtual-machine-using-terraform-on-azure-stack">How to create a virtual machine using Terraform on Azure Stack</h1>
 
-<p>This document explains how to create a VM using <strong>azurestack</strong> Terraform provider with Service Principal Name authentication.</p>
+<p>This document explains how to create a VM using the <strong>azurestack</strong> Terraform provider with Service Principal Name authentication.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Prerequisites from a Windows-based external client.</p>
 <ul>
@@ -102,7 +102,7 @@
 <li><a href="https://www.terraform.io/downloads.html">Download Terraform</a></li>
 </ul>
 </li>
-<li><p>Active Azure <em>Subscription</em> (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)</p>
+<li><p>An active Azure <em>Subscription</em> (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)</p>
 </li>
 <li><p>Service Principal Name</p>
 <ul>
@@ -119,18 +119,18 @@
 </ul>
 <h1 id="how-to-use-terraform-with-azure-stack">How to use Terraform with Azure Stack</h1>
 <h2 id="authentication">Authentication</h2>
-<p>In order to authenticate with Terraform you will need to have valid Service Principal Name (SPN) - how to create one is described in <a href="#prerequisites">Prerequisites</a>.</p>
+<p>In order to authenticate with Terraform you will need to have a valid Service Principal Name (SPN) - how to create one is described in <a href="#prerequisites">Prerequisites</a>.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You only need your Service Principal Name (SPN) to be assigned to Azure Stack subscription despite what official Terraform documentation says.</p>
+<p>You only need your Service Principal Name (SPN) to be assigned to your Azure Stack subscription, despite what official Terraform documentation says.</p>
 </div>
 <p>The process of authentication can be handled in one of two ways, either as <strong>Environment Variables</strong> or in the <strong>Provider Block</strong>.</p>
-<p><a href="#example-of-environment-variables">Environment Variables Option</a> - you can create your <strong>terraform plan</strong> by putting only the plan itself into <code>example.tf</code> and then keep <code>variables.tf</code> separately. You have to declare the actual values in <code>terraform.tfvars</code> file. It is this file that you will need to populate with your actual credential details.</p>
+<p><a href="#example-of-environment-variables">Environment Variables Option</a> - you can create your <strong>terraform plan</strong> by putting only the plan itself into <code>example.tf</code> and then keep <code>variables.tf</code> separate. You have to declare the actual values in the <code>terraform.tfvars</code> file. This is the file that you will need to populate with your actual credential details.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You can also put content of <code>variables.tf</code> in the <code>example.tf</code> at the top of the file.</p>
+<p>You can also put the content of <code>variables.tf</code> in the <code>example.tf</code> at the top of the file.</p>
 </div>
-<p><a href="#example-of-provider-block">Provider Block Option</a> - you can create your <strong>terraform plan</strong> by putting everything in one <code>example.tf</code> file which then contains your Provider settings explicitly in said plan.</p>
+<p><a href="#example-of-provider-block">Provider Block Option</a> - you can create your <strong>terraform plan</strong> by putting everything in one <code>example.tf</code> file, which then contains your Provider settings explicitly in said plan.</p>
 <p>Official <a href="https://www.terraform.io/intro/getting-started/variables.html">Variables Guide</a></p>
 <h3 id="example-of-environment-variables">Example of Environment Variables</h3>
 <ul>
@@ -178,13 +178,13 @@ provider &quot;azurestack&quot; {
 </ul>
 <h4 id="argument-reference">Argument Reference</h4>
 <ul>
-<li><p><code>arm_endpoint</code> - The Azure Resource Manager API Endpoint for
-your Azure Stack instance, eg <code>https://management.{region}.{domain}</code>.</p>
+<li><code>arm_endpoint</code> - The Azure Resource Manager API Endpoint for your Azure Stack instance. This will be <strong><code>https://management.{region}.{domain}</code></strong>.</li>
+</ul>
 <div class="NOTE">
 <h5>Note</h5>
 <p>For UKCloud Region it is <strong><code>https://management.frn00006.azure.ukcloud.com</code></strong>.</p>
 </div>
-</li>
+<ul>
 <li><p><code>subscription_id</code> - The ID of your Azure Stack Subscription.</p>
 </li>
 <li><p><code>client_id</code> - The Application GUID that you configured your Service Principal Name (SPN) to use.</p>
@@ -194,88 +194,105 @@ your Azure Stack instance, eg <code>https://management.{region}.{domain}</code>.
 <li><p><code>tenant_id</code> - The tenant ID of your Azure Active Directory tenant domain. It can either be the actual GUID or your Azure Active Directory tenant domain name.</p>
 </li>
 </ul>
-<h2 id="create-a-vm-with-public-ip-template---using-environment-variables-option">Create a VM with Public IP template - using <strong>Environment Variables</strong> option</h2>
+<h2 id="creating-a-vm">Creating a VM:</h2>
+<p>The examples that follow show how to create a VM using Terraform. The code changes depending on whether you are creating a VM with an unmanaged disk or a managed disk. Select the the type of disk you want to use to update the examples below with the appropriate code.</p>
+<form id="diskType" onchange="result.value=name.value;result2.value=name.value">
+  <input type="radio" name="name" value=' storage_os_disk {
+    name          = "myosdisk1"
+    vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
+    caching       = "ReadWrite"
+    create_option = "FromImage"
+  }' checked="">An unmanaged disk
+<p><input type="radio" name="name" value=' storage_os_disk {
+name              = "myosdisk1"
+caching           = "ReadWrite"
+create_option     = "FromImage"
+managed_disk_type = "Standard_LRS"
+}'>A managed disk</p>
+</form>
+<h3 id="create-a-vm-with-public-ip-template---using-environment-variables-option">Create a VM with Public IP template - using <strong>Environment Variables</strong> option</h3>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>This is only <code>example.tf</code> file you still need <code>variables.tf</code> and <code>terraform.tfvars</code> in your folder.</p>
+<p>This is only the <code>example.tf</code> file. You will still need the <code>variables.tf</code> and <code>terraform.tfvars</code> files in your folder.</p>
 </div>
-<pre><code class="lang-hcl">provider &quot;azurestack&quot; {
-  arm_endpoint    = &quot;${var.arm_endpoint}&quot;
-  subscription_id = &quot;${var.subscription_id}&quot;
-  client_id       = &quot;${var.client_id}&quot;
-  client_secret   = &quot;${var.client_secret}&quot;
-  tenant_id       = &quot;${var.tenant_id}&quot;
+<pre><code class="language-hcl">
+provider "azurestack" {
+  arm_endpoint    = "${var.arm_endpoint}"
+  subscription_id = "${var.subscription_id}"
+  client_id       = "${var.client_id}"
+  client_secret   = "${var.client_secret}"
+  tenant_id       = "${var.tenant_id}"
 }
 
 # Create a resource group
-resource &quot;azurestack_resource_group&quot; &quot;test&quot; {
-  name     = &quot;rg01&quot;
-  location = &quot;frn00006&quot;
+resource "azurestack_resource_group" "test" {
+  name     = "rg01"
+  location = "frn00006"
 }
 
-resource &quot;azurestack_public_ip&quot; &quot;test&quot; {
-  name                         = &quot;acceptanceTestPublicIp1&quot;
-  location                     = &quot;${azurestack_resource_group.test.location}&quot;
-  resource_group_name          = &quot;${azurestack_resource_group.test.name}&quot;
-  public_ip_address_allocation = &quot;static&quot;
+resource "azurestack_public_ip" "test" {
+  name                         = "acceptanceTestPublicIp1"
+  location                     = "${azurestack_resource_group.test.location}"
+  resource_group_name          = "${azurestack_resource_group.test.name}"
+  public_ip_address_allocation = "static"
 
   tags {
-    environment = &quot;Production&quot;
+    environment = "Production"
   }
 }
 
-resource &quot;azurestack_virtual_network&quot; &quot;test&quot; {
-  name                = &quot;acctvn&quot;
-  address_space       = [&quot;10.0.0.0/16&quot;]
-  location            = &quot;${azurestack_resource_group.test.location}&quot;
-  resource_group_name = &quot;${azurestack_resource_group.test.name}&quot;
+resource "azurestack_virtual_network" "test" {
+  name                = "acctvn"
+  address_space       = ["10.0.0.0/16"]
+  location            = "${azurestack_resource_group.test.location}"
+  resource_group_name = "${azurestack_resource_group.test.name}"
 }
 
-resource &quot;azurestack_subnet&quot; &quot;test&quot; {
-  name                 = &quot;acctsub&quot;
-  resource_group_name  = &quot;${azurestack_resource_group.test.name}&quot;
-  virtual_network_name = &quot;${azurestack_virtual_network.test.name}&quot;
-  address_prefix       = &quot;10.0.2.0/24&quot;
+resource "azurestack_subnet" "test" {
+  name                 = "acctsub"
+  resource_group_name  = "${azurestack_resource_group.test.name}"
+  virtual_network_name = "${azurestack_virtual_network.test.name}"
+  address_prefix       = "10.0.2.0/24"
 }
 
-resource &quot;azurestack_network_interface&quot; &quot;test&quot; {
-  name                = &quot;acctni&quot;
-  location            = &quot;${azurestack_resource_group.test.location}&quot;
-  resource_group_name = &quot;${azurestack_resource_group.test.name}&quot;
+resource "azurestack_network_interface" "test" {
+  name                = "acctni"
+  location            = "${azurestack_resource_group.test.location}"
+  resource_group_name = "${azurestack_resource_group.test.name}"
 
   ip_configuration {
-    name                          = &quot;testconfiguration1&quot;
-    subnet_id                     = &quot;${azurestack_subnet.test.id}&quot;
-    private_ip_address_allocation = &quot;dynamic&quot;
-    public_ip_address_id          = &quot;${azurestack_public_ip.test.id}&quot;
+    name                          = "testconfiguration1"
+    subnet_id                     = "${azurestack_subnet.test.id}"
+    private_ip_address_allocation = "dynamic"
+    public_ip_address_id          = "${azurestack_public_ip.test.id}"
   }
 }
 
-resource &quot;azurestack_storage_account&quot; &quot;test&quot; {
-  name                     = &quot;accsa001&quot;
-  resource_group_name      = &quot;${azurestack_resource_group.test.name}&quot;
-  location                 = &quot;${azurestack_resource_group.test.location}&quot;
-  account_tier             = &quot;Standard&quot;
-  account_replication_type = &quot;LRS&quot;
+resource "azurestack_storage_account" "test" {
+  name                     = "accsa001"
+  resource_group_name      = "${azurestack_resource_group.test.name}"
+  location                 = "${azurestack_resource_group.test.location}"
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
 
   tags {
-    environment = &quot;staging&quot;
+    environment = "staging"
   }
 }
 
-resource &quot;azurestack_storage_container&quot; &quot;test&quot; {
-  name                  = &quot;vhds&quot;
-  resource_group_name   = &quot;${azurestack_resource_group.test.name}&quot;
-  storage_account_name  = &quot;${azurestack_storage_account.test.name}&quot;
-  container_access_type = &quot;private&quot;
+resource "azurestack_storage_container" "test" {
+  name                  = "vhds"
+  resource_group_name   = "${azurestack_resource_group.test.name}"
+  storage_account_name  = "${azurestack_storage_account.test.name}"
+  container_access_type = "private"
 }
 
-resource &quot;azurestack_virtual_machine&quot; &quot;test&quot; {
-  name                  = &quot;acctvm&quot;
-  location              = &quot;${azurestack_resource_group.test.location}&quot;
-  resource_group_name   = &quot;${azurestack_resource_group.test.name}&quot;
-  network_interface_ids = [&quot;${azurestack_network_interface.test.id}&quot;]
-  vm_size               = &quot;Standard_D2_v2&quot;
+resource "azurestack_virtual_machine" "test" {
+  name                  = "acctvm"
+  location              = "${azurestack_resource_group.test.location}"
+  resource_group_name   = "${azurestack_resource_group.test.name}"
+  network_interface_ids = ["${azurestack_network_interface.test.id}"]
+  vm_size               = "Standard_D2_v2"
 
   # Uncomment this line to delete the OS disk automatically when deleting the VM
   # delete_os_disk_on_termination = true
@@ -284,32 +301,32 @@ resource &quot;azurestack_virtual_machine&quot; &quot;test&quot; {
   # delete_data_disks_on_termination = true
 
   storage_image_reference {
-    publisher = &quot;Canonical&quot;
-    offer     = &quot;UbuntuServer&quot;
-    sku       = &quot;16.04-LTS&quot;
-    version   = &quot;latest&quot;
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "16.04-LTS"
+    version   = "latest"
   }
 
-  storage_os_disk {
-    name          = &quot;myosdisk1&quot;
-    vhd_uri       = &quot;${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd&quot;
-    caching       = &quot;ReadWrite&quot;
-    create_option = &quot;FromImage&quot;
-  }
+<output form="diskType" name="result" style="display: inline;">  storage_os_disk {
+    name          = "myosdisk1"
+    vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
+    caching       = "ReadWrite"
+    create_option = "FromImage"
+  }</output>
 
   # Optional data disks
   storage_data_disk {
-    name          = &quot;datadisk0&quot;
-    vhd_uri       = &quot;${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/datadisk0.vhd&quot;
-    disk_size_gb  = &quot;1023&quot;
-    create_option = &quot;Empty&quot;
+    name          = "datadisk0"
+    vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/datadisk0.vhd"
+    disk_size_gb  = "1023"
+    create_option = "Empty"
     lun           = 0
   }
 
   os_profile {
-    computer_name  = &quot;hostname&quot;
-    admin_username = &quot;testadmin&quot;
-    admin_password = &quot;Password1234!&quot;
+    computer_name  = "hostname"
+    admin_username = "testadmin"
+    admin_password = "Password1234!"
   }
 
   os_profile_linux_config {
@@ -317,88 +334,89 @@ resource &quot;azurestack_virtual_machine&quot; &quot;test&quot; {
   }
 
   tags {
-    environment = &quot;staging&quot;
+    environment = "staging"
   }
 }
 </code></pre>
-<h2 id="create-a-vm-with-public-ip-template---using-provider-block-option">Create a VM with Public IP template - using <strong>Provider Block</strong> option</h2>
-<pre><code class="lang-hcl">provider &quot;azurestack&quot; {
-  arm_endpoint    = &quot;https://management.{region}.{domain}&quot;
-  subscription_id = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
-  client_id       = &quot;{applicationId}@{tenantDomain}&quot;
-  client_secret   = &quot;{applicationPassword}&quot;
-  tenant_id       = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
+<h3 id="create-a-vm-with-public-ip-template---using-provider-block-option">Create a VM with Public IP template - using <strong>Provider Block</strong> option</h3>
+<pre><code class="language-hcl">
+provider "azurestack" {
+  arm_endpoint    = "https://management.{region}.{domain}"
+  subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+  client_id       = "{applicationId}@{tenantDomain}"
+  client_secret   = "{applicationPassword}"
+  tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
 }
 
 # Create a resource group
-resource &quot;azurestack_resource_group&quot; &quot;test&quot; {
-  name     = &quot;rg01&quot;
-  location = &quot;frn00006&quot;
+resource "azurestack_resource_group" "test" {
+  name     = "rg01"
+  location = "frn00006"
 }
 
-resource &quot;azurestack_public_ip&quot; &quot;test&quot; {
-  name                         = &quot;acceptanceTestPublicIp1&quot;
-  location                     = &quot;${azurestack_resource_group.test.location}&quot;
-  resource_group_name          = &quot;${azurestack_resource_group.test.name}&quot;
-  public_ip_address_allocation = &quot;static&quot;
+resource "azurestack_public_ip" "test" {
+  name                         = "acceptanceTestPublicIp1"
+  location                     = "${azurestack_resource_group.test.location}"
+  resource_group_name          = "${azurestack_resource_group.test.name}"
+  public_ip_address_allocation = "static"
 
   tags {
-    environment = &quot;Production&quot;
+    environment = "Production"
   }
 }
 
-resource &quot;azurestack_virtual_network&quot; &quot;test&quot; {
-  name                = &quot;acctvn&quot;
-  address_space       = [&quot;10.0.0.0/16&quot;]
-  location            = &quot;${azurestack_resource_group.test.location}&quot;
-  resource_group_name = &quot;${azurestack_resource_group.test.name}&quot;
+resource "azurestack_virtual_network" "test" {
+  name                = "acctvn"
+  address_space       = ["10.0.0.0/16"]
+  location            = "${azurestack_resource_group.test.location}"
+  resource_group_name = "${azurestack_resource_group.test.name}"
 }
 
-resource &quot;azurestack_subnet&quot; &quot;test&quot; {
-  name                 = &quot;acctsub&quot;
-  resource_group_name  = &quot;${azurestack_resource_group.test.name}&quot;
-  virtual_network_name = &quot;${azurestack_virtual_network.test.name}&quot;
-  address_prefix       = &quot;10.0.2.0/24&quot;
+resource "azurestack_subnet" "test" {
+  name                 = "acctsub"
+  resource_group_name  = "${azurestack_resource_group.test.name}"
+  virtual_network_name = "${azurestack_virtual_network.test.name}"
+  address_prefix       = "10.0.2.0/24"
 }
 
-resource &quot;azurestack_network_interface&quot; &quot;test&quot; {
-  name                = &quot;acctni&quot;
-  location            = &quot;${azurestack_resource_group.test.location}&quot;
-  resource_group_name = &quot;${azurestack_resource_group.test.name}&quot;
+resource "azurestack_network_interface" "test" {
+  name                = "acctni"
+  location            = "${azurestack_resource_group.test.location}"
+  resource_group_name = "${azurestack_resource_group.test.name}"
 
   ip_configuration {
-    name                          = &quot;testconfiguration1&quot;
-    subnet_id                     = &quot;${azurestack_subnet.test.id}&quot;
-    private_ip_address_allocation = &quot;dynamic&quot;
-    public_ip_address_id          = &quot;${azurestack_public_ip.test.id}&quot;
+    name                          = "testconfiguration1"
+    subnet_id                     = "${azurestack_subnet.test.id}"
+    private_ip_address_allocation = "dynamic"
+    public_ip_address_id          = "${azurestack_public_ip.test.id}"
   }
 }
 
-resource &quot;azurestack_storage_account&quot; &quot;test&quot; {
-  name                     = &quot;accsa001&quot;
-  resource_group_name      = &quot;${azurestack_resource_group.test.name}&quot;
-  location                 = &quot;${azurestack_resource_group.test.location}&quot;
-  account_tier             = &quot;Standard&quot;
-  account_replication_type = &quot;LRS&quot;
+resource "azurestack_storage_account" "test" {
+  name                     = "accsa001"
+  resource_group_name      = "${azurestack_resource_group.test.name}"
+  location                 = "${azurestack_resource_group.test.location}"
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
 
   tags {
-    environment = &quot;staging&quot;
+    environment = "staging"
   }
 }
 
-resource &quot;azurestack_storage_container&quot; &quot;test&quot; {
-  name                  = &quot;vhds&quot;
-  resource_group_name   = &quot;${azurestack_resource_group.test.name}&quot;
-  storage_account_name  = &quot;${azurestack_storage_account.test.name}&quot;
-  container_access_type = &quot;private&quot;
+resource "azurestack_storage_container" "test" {
+  name                  = "vhds"
+  resource_group_name   = "${azurestack_resource_group.test.name}"
+  storage_account_name  = "${azurestack_storage_account.test.name}"
+  container_access_type = "private"
 }
 
-resource &quot;azurestack_virtual_machine&quot; &quot;test&quot; {
-  name                  = &quot;acctvm&quot;
-  location              = &quot;${azurestack_resource_group.test.location}&quot;
-  resource_group_name   = &quot;${azurestack_resource_group.test.name}&quot;
-  network_interface_ids = [&quot;${azurestack_network_interface.test.id}&quot;]
-  vm_size               = &quot;Standard_D2_v2&quot;
+resource "azurestack_virtual_machine" "test" {
+  name                  = "acctvm"
+  location              = "${azurestack_resource_group.test.location}"
+  resource_group_name   = "${azurestack_resource_group.test.name}"
+  network_interface_ids = ["${azurestack_network_interface.test.id}"]
+  vm_size               = "Standard_D2_v2"
 
   # Uncomment this line to delete the OS disk automatically when deleting the VM
   # delete_os_disk_on_termination = true
@@ -407,32 +425,32 @@ resource &quot;azurestack_virtual_machine&quot; &quot;test&quot; {
   # delete_data_disks_on_termination = true
 
   storage_image_reference {
-    publisher = &quot;Canonical&quot;
-    offer     = &quot;UbuntuServer&quot;
-    sku       = &quot;16.04-LTS&quot;
-    version   = &quot;latest&quot;
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "16.04-LTS"
+    version   = "latest"
   }
 
-  storage_os_disk {
-    name          = &quot;myosdisk1&quot;
-    vhd_uri       = &quot;${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd&quot;
-    caching       = &quot;ReadWrite&quot;
-    create_option = &quot;FromImage&quot;
-  }
+<output form="diskType" name="result2" style="display: inline;">  storage_os_disk {
+    name          = "myosdisk1"
+    vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
+    caching       = "ReadWrite"
+    create_option = "FromImage"
+  }</output>
 
   # Optional data disks
   storage_data_disk {
-    name          = &quot;datadisk0&quot;
-    vhd_uri       = &quot;${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/datadisk0.vhd&quot;
-    disk_size_gb  = &quot;1023&quot;
-    create_option = &quot;Empty&quot;
+    name          = "datadisk0"
+    vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/datadisk0.vhd"
+    disk_size_gb  = "1023"
+    create_option = "Empty"
     lun           = 0
   }
 
   os_profile {
-    computer_name  = &quot;hostname&quot;
-    admin_username = &quot;testadmin&quot;
-    admin_password = &quot;Password1234!&quot;
+    computer_name  = "hostname"
+    admin_username = "testadmin"
+    admin_password = "Password1234!"
   }
 
   os_profile_linux_config {
@@ -440,16 +458,16 @@ resource &quot;azurestack_virtual_machine&quot; &quot;test&quot; {
   }
 
   tags {
-    environment = &quot;staging&quot;
+    environment = "staging"
   }
 }
 </code></pre>
-<h2 id="how-to-execute-a-plan---using-environment-variables-option">How to execute a plan - using <strong>Environment Variables</strong> option</h2>
+<h3 id="how-to-execute-a-plan---using-environment-variables-option">How to execute a plan - using <strong>Environment Variables</strong> option</h3>
 <div class="TIP">
 <h5>Tip</h5>
-<p>Terraform by default scans your execution directory and is looking for all <code>tf</code> files.</p>
+<p>Terraform by default scans your execution directory and looks for all <code>tf</code> files.</p>
 </div>
-<p>From PowerShell prompt navigate to the directory you have all your <code>tf</code> files in and run:</p>
+<p>From a PowerShell prompt, navigate to the directory that contains your <code>tf</code> files and run the following commands:</p>
 <pre><code class="lang-PowerShell"># Check if your environment is setup correctly
 .\terraform.exe init
 
@@ -482,14 +500,14 @@ commands will detect it and remind you to do so if necessary.
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You can also add <code>-auto-approve</code> to apply command for it not to ask you to apply changes for full automation.</p>
+<p>You can also add <code>-auto-approve</code> to the apply command for it to not ask you to apply changes for full automation.</p>
 </div>
-<h2 id="how-to-execute-a-plan---using-provider-block-option">How to execute a plan - using <strong>Provider Block</strong> option</h2>
+<h3 id="how-to-execute-a-plan---using-provider-block-option">How to execute a plan - using <strong>Provider Block</strong> option</h3>
 <div class="TIP">
 <h5>Tip</h5>
-<p>Terraform by default scans your execution directory and is looking for all <code>tf</code> files.</p>
+<p>Terraform by default scans your execution directory and looks for all <code>tf</code> files.</p>
 </div>
-<p>From PowerShell prompt navigate to the directory you have all your <code>tf</code> files in and run:</p>
+<p>From a PowerShell prompt, navigate to the directory that contains your <code>tf</code> files and run the following commands:</p>
 <pre><code class="lang-PowerShell"># Check if your environment is setup correctly
 .\terraform.exe init
 
@@ -522,7 +540,7 @@ commands will detect it and remind you to do so if necessary.
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You can also add <code>-auto-approve</code> to apply command for it not to ask you to apply changes for full automation.</p>
+<p>You can also add <code>-auto-approve</code> to the apply command for it to not ask you to apply changes for full automation.</p>
 </div>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
