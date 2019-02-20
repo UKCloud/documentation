@@ -129,20 +129,22 @@ The examples that follow show how to create a VM using Terraform. The code chang
 
 <form id="diskType" onchange="result.value=name.value;result2.value=name.value">
   <p>
-  <input type="radio" name="name" value='  storage_os_disk {
-    name          = "myosdisk1"
-    vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
-    caching       = "ReadWrite"
-    create_option = "FromImage"
-  }' checked>An unmanaged disk
+    <input type="radio" name="name" value='  storage_os_disk {
+      name          = "myosdisk1"
+      vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
+      caching       = "ReadWrite"
+      create_option = "FromImage"
+    }' checked>An unmanaged disk
   </p>
   <div></div>
-  <input type="radio" name="name" value='  storage_os_disk {
-    name              = "myosdisk1"
-    caching           = "ReadWrite"
-    create_option     = "FromImage"
-    managed_disk_type = "Standard_LRS"
-  }'>A managed disk
+  <p>
+    <input type="radio" name="name" value='  storage_os_disk {
+      name              = "myosdisk1"
+      caching           = "ReadWrite"
+      create_option     = "FromImage"
+      managed_disk_type = "Standard_LRS"
+    }'>A managed disk
+  </p>
 </form>
 
 ### Create a VM with Public IP template - using **Environment Variables** option
