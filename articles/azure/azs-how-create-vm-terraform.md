@@ -128,14 +128,14 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
 The examples that follow show how to create a VM using Terraform. The code changes depending on whether you are creating a VM with an unmanaged disk or a managed disk. Select the the type of disk you want to use to update the examples below with the appropriate code.
 
 <form id="diskType" onchange="result.value=name.value;result2.value=name.value">
-  <input type="radio" name="name" value=' storage_os_disk {
+  <input type="radio" name="name" value='  storage_os_disk {
     name          = "myosdisk1"
     vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
     caching       = "ReadWrite"
     create_option = "FromImage"
   }' checked>An unmanaged disk
-
-  <input type="radio" name="name" value=' storage_os_disk {
+  <div></div>
+  <input type="radio" name="name" value='  storage_os_disk {
     name              = "myosdisk1"
     caching           = "ReadWrite"
     create_option     = "FromImage"
