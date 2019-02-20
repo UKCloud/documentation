@@ -189,21 +189,22 @@ You also need the thumbprint of the certificate(s). For information about how to
 
 7. In the *Security* blade, enter the following information and click **OK**:
 
-   - **Source Key Vault** - The resource ID of the key vault that you gathered in the previous section. This should be in the format of /subscriptions/\<subscriptionid\>/resourceGropus/\<resourceGroupName\>/providers/Microsoft.KeyVault/vaults/\<vaultName\>.
+   - **Source Key Vault** - The resource ID of the key vault that you gathered in the previous section. This should be in the format of **`/subscriptions/<SubscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.KeyVault/vaults/<VaultName>`**.
 
-   - **Cluster Certificate URL** - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of https<!---->://\<vaultEndpoint\>/secrets/\<secretName\>/\<secretVersion\>.
+   - **Cluster Certificate URL** - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of **`https://<VaultEndpoint>/secrets/\<SecretName>/<SecretVersion>`**.
 
-   - **Cluster Certificate thumbprint** - Cluster certificate thumbprint that you gathered earlier. For example, 1742635FBCC5F9A442582516A7292523686DE3D7.
+   - **Cluster Certificate thumbprint** - Cluster certificate thumbprint that you gathered earlier. For example, **`1742635FBCC5F9A442582516A7292523686DE3D7`**.
 
-   - **Server Certificate URL** - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of https<!---->://\<vaultEndpoint\>/secrets/\<secretName\>/\<secretVersion\>.
+   - **Server Certificate URL** - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of
+    **`https://<VaultEndpoint>/secrets/<SecretName>/<SecretVersion>`**.
 
-   - **Server Certificate thumbprint** - Server certificate thumbprint that you gathered earlier. For example, 1742635FBCC5F9A442582516A7292523686DE3D7.
+   - **Server Certificate thumbprint** - Server certificate thumbprint that you gathered earlier. For example, **`1742635FBCC5F9A442582516A7292523686DE3D7`**.
 
    - **Use Reverse Proxy Certificate** - You may specify a SSL certificate to be used by the reverse proxy you have enabled. Doing so will cause the reverse proxy to communicate using HTTPS. If no certificate is specified, then the reverse proxy will communicate using HTTP instead.
 
-   - **Admin Client Certificate Thumbprints** - Comma separated list of admin client certificate thumbprints. For example, 1742635FBCC5F9A442582516A7292523686DE3D7,0272251171BA32CEC7938A65B8A6A553AA2D3283.
+   - **Admin Client Certificate Thumbprints** - Comma separated list of admin client certificate thumbprints. For example, **`1742635FBCC5F9A442582516A7292523686DE3D7,0272251171BA32CEC7938A65B8A6A553AA2D3283`**.
 
-   - **Non-Admin Client Certificate Thumbprints** - Comma separated list of non-admin client certificate thumbprints. For example, 1742635FBCC5F9A442582516A7292523686DE3D7,0272251171BA32CEC7938A65B8A6A553AA2D3283.
+   - **Non-Admin Client Certificate Thumbprints** - Comma separated list of non-admin client certificate thumbprints. For example, **`1742635FBCC5F9A442582516A7292523686DE3D7,0272251171BA32CEC7938A65B8A6A553AA2D3283`**.
 
    ![Create Service Fabric cluster > Security](images/azs-browser-create-sf-security.png)
 
