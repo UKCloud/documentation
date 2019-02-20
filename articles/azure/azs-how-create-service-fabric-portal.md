@@ -25,9 +25,9 @@ The following process shows you how to setup a Service Fabric cluster in Azure u
 
 To complete the steps in this guide, you must have appropriate access to a subscription in the UKCloud Azure Stack portal.
 
-## Creating a new Key Vault
+## Creating a new key vault
 
-Before creating a Service Fabric cluster, it is necessary to create a Key Vault to store the certificates for the cluster. These certificates are used in Service Fabric to provide authentication and encryption to secure various aspects of a cluster and its applications. You can find more information about these certificates [here](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cluster-security#x509-certificates-and-service-fabric).
+Before creating a Service Fabric cluster, it is necessary to create a key vault to store the certificates for the cluster. These certificates are used in Service Fabric to provide authentication and encryption to secure various aspects of a cluster and its applications. You can find more information about these certificates [here](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cluster-security#x509-certificates-and-service-fabric).
 
 1. Log in to the UKCloud Azure Stack portal.
 
@@ -65,7 +65,7 @@ Before creating a Service Fabric cluster, it is necessary to create a Key Vault 
 
    ![!Notification showing vault deployment in progress](images/azsp_createvm_progress.png)
 
-### Adding a certificate to the Key Vault
+### Adding a certificate to the key vault
 
 1. Once the key vault has been deployed, navigate to it by clicking **All services** in the favourites panel, then selecting **Key Vaults** under the *Security + Identity* section.
 
@@ -95,11 +95,11 @@ Before creating a Service Fabric cluster, it is necessary to create a Key Vault 
 
 7. Repeat as necessary, depending on how many certificates you require.
 
-### Gathering Key Vault and certificate information
+### Gathering key vault and certificate information
 
 During configuration of the Service Fabric cluster, you must provide several details relating to the key vault and certificates. You must also configure access to the key vault for virtual machines and the Azure Resource Manager.
 
-1. Once you've deployed the key vault, navigate to it by clicking **All services** in the favourites panel, then selecting **Key Vaults** under the *Security + Identity* section.
+1. Once you have deployed the key vault, navigate to it by clicking **All services** in the favourites panel, then selecting **Key Vaults** under the *Security + Identity* section.
 
 2. Select your key vault from the list.
 
@@ -176,7 +176,7 @@ You also need the thumbprint of the certificate(s). For information about how to
    - **Custom Application Endpoints** - Custom endpoints to open for connections to applications running on this cluster. Enter endpoints separated by commas, for example, `80,8080,8081`.
 
    - **Custom ports to open in the Network Security Group** - Custom ports to open in the Network Security Group. Enter ports separated by commas, for example, `3389,80,8080,8081`.
-   
+
    ![Create Service Fabric cluster > Network Settings](images/azs-browser-create-sf-networking.png) 
 
 6. In the *Node Configuration* blade, enter the following information and click **OK**:
