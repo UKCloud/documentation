@@ -41,7 +41,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     ![List of templates in Compute blade](images/azsp_computeblade.png)
 
-5. In the *Create Kubernetes Service cluster* blade, in the *Basics* step, enter the following information and click **OK**:
+5. In the *Create Kubernetes Cluster* blade, in the *Basics* step, enter the following information and click **OK**:
 
    **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
@@ -53,7 +53,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 6. In the *Kubernetes Cluster Settings* step, enter the following information and click **OK**:
 
-   **Linux VM admin username** - The username for the Linux virtual machines that are part of the Kubernetes Cluster.
+   **Linux VM admin username** - The username for the Linux virtual machines that are part of the Kubernetes cluster.
 
    **SSH public key** - SSH public key used for authentication to all Linux machines created as part of the the Kubernetes cluster.
 
@@ -61,7 +61,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
    **Kubernetes master pool profile count** - The number of master nodes for the Kubernetes cluster. This value should be an odd number.
 
-   **The VMSize of Kubernetes master VMs** - The VM size of each master node. For information about the different available VM sizes, see <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>.
+   **The VMSize of Kubernetes master VMs** - The VM size of each master node. For information about the different available VM sizes, see [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
 
    **Kubernetes node pool profile count** - The number of agents for the Kubernetes cluster.
 
