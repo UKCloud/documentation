@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/asz-sco.html",
-          "hash": "Ciu16BlrR3l/QAD4eqFzdw=="
+          "hash": "+Gheyk0x/LE+nmPuwCTIog=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "3yg885U02bM+eb5ElL2NnA=="
+          "hash": "9ov9vRUOwHnGD3PtIko9yw=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-gs.html",
-          "hash": "jUYDmS9DT8ZDTfZautOy8A=="
+          "hash": "WFZ3CGx3btcCXGudwSqgUg=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-cli.html",
-          "hash": "6iMkBNrFCTRDNbq0rhZ/yw=="
+          "hash": "pRXST6Z3C/RD2R38mAoYVw=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-powershell-operators.html",
-          "hash": "i3rRMjE7KpN58VdCQmrJbw=="
+          "hash": "hllVjFJFg7CMpDyti/1yCg=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-powershell-users.html",
-          "hash": "8edtHjQuoI3DFYC5OUb+4A=="
+          "hash": "C9UKPnZOS7KCmi0ug61AiA=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-S2S-VPN.html",
-          "hash": "mmDnyT7DD1OJcagqPrIqqQ=="
+          "hash": "310TzNYv7W62kOU5M3ATQA=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-aks.html",
-          "hash": "ebQXOB3gXCqbZxCikKU3wA=="
+          "hash": "PUetuSYxpLDUNTCM3k0LMw=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-key-vault-portal.html",
-          "hash": "vSrsBFrXfG/tqlFhTy4ahQ=="
+          "hash": "/tabaYIpvD7Wd4nuAPrtNA=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-key-vault-ps.html",
-          "hash": "WLvhNRiCKhXU6PjRlAuf1w=="
+          "hash": "srKs1UhAGedW9NkOjMFzCg=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-load-balancer.html",
-          "hash": "nW/M3ulQQcWcr3H1C+eOGg=="
+          "hash": "110FjYmdY6B8gFPR6bbQVw=="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-service-fabric-portal.html",
-          "hash": "D/z6q5Es/j78z1JJrfznNA=="
+          "hash": "4F6snrM7ZzWgnCZ6rj7ZIQ=="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-spn-cli.html",
-          "hash": "wzO2vzGqfWynLLOj51sk0g=="
+          "hash": "zy3+0bMe1w2n3VFoQPShiA=="
         }
       },
       "is_incremental": false,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-spn-powershell.html",
-          "hash": "LHwvdq3Q3i9CUVX8paaXQg=="
+          "hash": "1gNSXP2wsRlTheomxRhXrQ=="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-cli.html",
-          "hash": "MDkHDsX/t48oIXIVLxWh8A=="
+          "hash": "Y0fnlnHQZ0YIMLWLOQmg3Q=="
         }
       },
       "is_incremental": false,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-ps.html",
-          "hash": "vfmkNJ4W1x9Xd4SiofA4Vw=="
+          "hash": "dYgDX+Ieefk4A9VxhhZ7Hg=="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-terraform.html",
-          "hash": "XQrZ6UfQpCvQ5cY4bqzJdQ=="
+          "hash": "ytlDwpPG0A4mSVPW4bsQ9Q=="
         }
       },
       "is_incremental": false,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm.html",
-          "hash": "oJUooAlM7ZGfSWIKBPrZAA=="
+          "hash": "ePFRIHJ3G/gCCF4Rjg08wA=="
         }
       },
       "is_incremental": false,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-deploy-asdk.html",
-          "hash": "6SasCCkkLquYdiqdvYY7kw=="
+          "hash": "VaG0GZ++z0DqyK9Oaqw81w=="
         }
       },
       "is_incremental": false,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-deploy-sql-template-powershell.html",
-          "hash": "WLaUju+W6XRCXo2atyee7w=="
+          "hash": "DYFSGttsiO2XtdUpywLZPw=="
         }
       },
       "is_incremental": false,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-identify-global-admins.html",
-          "hash": "/Iq2svqAvI25D+iJMR7xAg=="
+          "hash": "3gc888cLpX6GJvGnch7YfQ=="
         }
       },
       "is_incremental": false,
@@ -297,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-link-storage-explorer.html",
-          "hash": "FnSk8Q/7lZwTMyfkFlZ6Yg=="
+          "hash": "C0z6XKChMtHBBhAVuNNfmQ=="
         }
       },
       "is_incremental": false,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-manage-azure-group.html",
-          "hash": "S/kNBGjSz/dhOJRSmRw4Ag=="
+          "hash": "v66FgCGb+Ytp9Jjfv96EWw=="
         }
       },
       "is_incremental": false,
@@ -321,19 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-ps-update-azure-stack.html",
-          "hash": "y+ScjbRf38PUGDNb4mr37w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/azure/azs-how-replace-certificates.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/azure/azs-how-replace-certificates.html",
-          "hash": "DsOH/z9D65VGNObOoJGHaA=="
+          "hash": "MC3GKKH3bqqkYsJmsZQpBg=="
         }
       },
       "is_incremental": false,
@@ -345,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-resize-os-drive.html",
-          "hash": "4IzNF1H5slD7nOUskMMQDg=="
+          "hash": "KEB6sqMC1YwCW9C1L1VQyw=="
         }
       },
       "is_incremental": false,
@@ -357,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-retrieve-quota-ps.html",
-          "hash": "9DkgmW9zfxq0pOb7cE00kA=="
+          "hash": "1zlzcBL/rb6snXs65ta85g=="
         }
       },
       "is_incremental": false,
@@ -369,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-to-obtain-clientid-via-api.html",
-          "hash": "NfGc7TfdR2n/eixxeOO/vg=="
+          "hash": "z+w6wH6PjzudQvRtwPX27Q=="
         }
       },
       "is_incremental": false,
@@ -381,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-use-azure-api.html",
-          "hash": "qUtNjRssdRnoDVAZfZUhkA=="
+          "hash": "9pUzQ9MQYAjMovNlqSkskw=="
         }
       },
       "is_incremental": false,
@@ -393,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-list-vm-extensions.html",
-          "hash": "1wF9hCPjF76L3r2Gr5yPOQ=="
+          "hash": "TxmKAE/pRwusJBdfEM0o2Q=="
         }
       },
       "is_incremental": false,
@@ -405,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-overview.html",
-          "hash": "pV1Ojg6s9YDrzGl4oKC49w=="
+          "hash": "or8UknzAu31uP4j9g6GXBw=="
         }
       },
       "is_incremental": false,
@@ -417,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-troubleshooting.html",
-          "hash": "hcD8OAdD99VT2qTbzNHPNw=="
+          "hash": "MtusObI/dQFLraamFHuu+g=="
         }
       },
       "is_incremental": false,
@@ -429,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-vid-overview.html",
-          "hash": "0cziqZBHcV0S8s2XkPKzRA=="
+          "hash": "z6BzQLW9EBIBZFR6+/4KvQ=="
         }
       },
       "is_incremental": false,
@@ -1233,6 +1221,18 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azsp_vmsmenu.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/azure/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/toc.html",
+          "hash": "Cc3EPWFUSkfURGc+ETTVRg=="
         }
       },
       "is_incremental": false,
@@ -14865,7 +14865,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "aCbovJjWzzXi/2aUDMTezQ=="
+          "hash": "aA45TrN2aJob7AjS+Ytybg=="
         }
       },
       "is_incremental": false,
@@ -14883,9 +14883,9 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
@@ -14893,12 +14893,12 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 327,
+          "total_file_count": 326,
           "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
