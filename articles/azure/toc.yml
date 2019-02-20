@@ -1,3 +1,10 @@
+- name: 
+  items:
+  - name: 
+    href: 
+    items:
+      name: 
+      href: 
 - name: Users
   items:
   - name: FAQs
@@ -16,6 +23,8 @@
       href: azs-how-create-service-fabric-portal.md
     - name: Create a site-to-site connection
       href: azs-how-create-S2S-VPN.md
+    - name: Create an Azure Kubernetes Service cluster
+      href: azs-how-create-aks.md
     - name: Deploy an SQL template to Azure Stack - PowerShell
       href: azs-how-deploy-sql-template-powershell.md
     - name: Identify your Azure global administrators

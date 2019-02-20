@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to manage Azure user groups and permissions | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to create an Azure Kubernetes Service cluster using the Azure Stack portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to manage Azure user groups and permissions | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to create an Azure Kubernetes Service cluster using the Azure Stack portal | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-manage-azure-group.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-create-aks.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -84,96 +84,59 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-manage-azure-user-groups-and-permissions">How to manage Azure user groups and permissions</h1>
+<h1 id="how-to-create-an-azure-kubernetes-service-cluster-using-the-azure-stack-portal">How to create an Azure Kubernetes Service cluster using the Azure Stack portal</h1>
 
 <h2 id="overview">Overview</h2>
-<p>UKCloud for Microsoft Azure provides you with three default user groups to get you started:</p>
-<ul>
-<li><p><strong>AzureStackOperators</strong> - Members of this group have Owner permissions and have full access to all resources and can manage access to resources</p>
-</li>
-<li><p><strong>AzureStackUsers</strong> - Members of this group have Contributor permissions and can create and manage all resources but cannot manage access to resources</p>
-</li>
-<li><p><strong>AzureStackReadOnly</strong> - Members of this group have Reader permissions and can view everything but cannot make changes</p>
-</li>
-</ul>
-<p>If these default groups do not meet your requirements, for example, if you've created a custom role and want to grant users the permissions specified by that role, you can create new groups and assign roles and permissions to them.</p>
+<p>Azure Kubernetes Service (AKS) makes it simple to deploy a managed Kubernetes cluster in Azure Stack. AKS reduces the complexity and operational overhead of managing Kubernetes by offloading much of that responsibility to Azure Stack. As a hosted Kubernetes service, Azure Stack handles critical tasks like health monitoring and maintenance for you.</p>
 <h3 id="intended-audience">Intended audience</h3>
-<p>To complete the steps in this guide you must have global administrator access to the Azure portal and Owner access to the Azure Stack portal.</p>
-<h2 id="creating-a-group-for-azure-users">Creating a group for Azure users</h2>
-<p>Rather than granting permissions to individual users, we recommend that you first create a group and add your Azure users to that group.</p>
-<p>To create a group in the Azure portal:</p>
+<p>To complete the steps in this guide, you must have appropriate access to a subscription in the UKCloud Azure Stack portal.</p>
+<h2 id="creating-an-azure-kubernetes-service-cluster">Creating an Azure Kubernetes Service cluster</h2>
 <ol>
-<li><p>Log in to the Azure portal as a global administrator:</p>
-<p><a href="https://portal.azure.com">https://portal.azure.com</a></p>
+<li><p>Log in to the UKCloud Azure Stack portal.</p>
+<p>For more detailed instructions, see the <a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a>.</p>
 </li>
-<li><p>Navigate to the <strong>Azure Active Directory</strong>.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>You can find the Azure Active Directory by selecting <strong>All services</strong> and scrolling down to the <em>Security + Identity</em> section.</p>
-</div>
+<li><p>In the favourites panel, select <strong>Create a resource</strong>.</p>
+<p><img src="images/azsp_newmenu.png" alt="New option in favourites panel"></p>
 </li>
-<li><p>Select <strong>Groups</strong> and then <strong>All groups</strong>.</p>
+<li><p>In the <em>New</em> blade, select <strong>Compute</strong>.</p>
+<p><img src="images/azsp_newblade.png" alt="Compute option in New blade"></p>
 </li>
-<li><p>Click the <strong>New group</strong> option.</p>
+<li><p>In the <em>Compute</em> blade, select <strong>Kubernetes Cluster</strong>.</p>
+<p><img src="images/azsp_computeblade.png" alt="List of templates in Compute blade"></p>
 </li>
-<li><p>From the <strong>Group type</strong> list, select <strong>Security</strong>.</p>
+<li><p>In the <em>Create Kubernetes Cluster</em> blade, in the <em>Basics</em> step, enter the following information and click <strong>OK</strong>:</p>
+<p><strong>Subscription</strong> - This is your UKCloud for Microsoft Azure subscription.</p>
+<p><strong>Resource group</strong> - Select an existing resource group, or create a new one by typing a name for your new resource group.</p>
+<p><strong>Location</strong> - This will be <code>frn00006</code>, which is the location of the Azure Stack.</p>
+<p><img src="images/azs-browser-create-aks-basics.png" alt="Create Kubernetes Cluster &gt; Basics"></p>
 </li>
-<li><p>In the <strong>Group name</strong> field, enter a name for the group, for example, <code>AzureStackGroup</code>.</p>
+<li><p>In the <em>Kubernetes Cluster Settings</em> step, enter the following information and click <strong>OK</strong>:</p>
+<p><strong>Linux VM admin username</strong> - The username for the Linux virtual machines that are part of the Kubernetes cluster.</p>
+<p><strong>SSH public key</strong> - SSH public key used for authentication to all Linux machines created as part of the the Kubernetes cluster.</p>
+<p><strong>Master Profile DNS prefix</strong> - This must be a region-unique name, for example k8s-12345. Try to choose the same name as the resource group as best practice.</p>
+<p><strong>Kubernetes master pool profile count</strong> - The number of master nodes for the Kubernetes cluster. This value should be an odd number.</p>
+<p><strong>The VMSize of Kubernetes master VMs</strong> - The VM size of each master node. For information about the different available VM sizes, see <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes">here</a>.</p>
+<p><strong>Kubernetes node pool profile count</strong> - The number of agents for the Kubernetes cluster.</p>
+<p><strong>The VMSize of Kubernetes node VMs</strong> - The VM size of each agent node.</p>
+<p><strong>The Storage Profile</strong> - The storage profile for the Kubernetes cluster.</p>
+<p><strong>Azure Stack identity system</strong> - Azure Stack identity provider - defaults to AzureAD</p>
+<p><strong>Service principal clientId</strong> - The Service Principal application ID (used by the Kubernetes Azure cloud provider). More help <a href="https://github.com/Azure/acs-engine/blob/master/docs/serviceprincipal.md">here</a>.</p>
+<p><strong>Service principal client secret</strong> - The Service Principal Client secret.</p>
+<p><strong>Kubernetes version</strong> - This is the Kubernetes version that is used for the cluster.</p>
+<p><img src="images/azs-browser-create-aks-settings.png" alt="Create Azure Kubernetes Service cluster &gt; Kubernetes Cluster Settings"></p>
 </li>
-<li><p>In the <strong>Group description</strong> field, enter a brief, but meaningful description for the group.</p>
-</li>
-<li><p>From the <strong>Membership type</strong> list, select <strong>Assigned</strong>.</p>
-<p><img src="images/azs-portal-add-group.png" alt="Group blade"></p>
+<li><p>In the <em>Summary</em> step, check that the information is correct, then click <strong>OK</strong>.</p>
 </li>
 <li><p>Click <strong>Create</strong>.</p>
 </li>
-<li><p>To add users to the group, open the group, select <strong>Members</strong> then click <strong>Add members</strong>.</p>
+<li><p>You can monitor the progress of your cluster's deployment by clicking the <strong>Notifications</strong> icon.</p>
+<p><img src="images/azsp_createvm_progress.png" alt="Notification showing cluster deployment in progress"></p>
+</li>
+<li><p>After your cluster has been deployed, you can view it by clicking <strong>Resource Groups</strong> in the favourites panel, then selecting the resource group that contains the cluster.</p>
 </li>
 </ol>
-<h2 id="granting-azure-permissions">Granting Azure permissions</h2>
-<p>After setting up the user group in Azure, you need to go to the Azure Stack portal to grant the appropriate permissions to the group.</p>
-<p>To grant Azure permissions to a group:</p>
-<ol>
-<li><p>Log in to the Azure Stack portal:</p>
-<p><a href="https://portal.frn00006.azure.ukcloud.com/">https://portal.frn00006.azure.ukcloud.com/</a></p>
-</li>
-<li><p>Navigate to <strong>Subscriptions</strong>.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>If you can't see Subscriptions in your favourites panel, click <strong>More services</strong> and then <strong>Subscriptions</strong>. You can add Subscriptions to your favourites panel by clicking the star icon.</p>
-</div>
-</li>
-<li><p>Select your subscription for UKCloud for Microsoft Azure.</p>
-</li>
-<li><p>Select <strong>Access control (IAM)</strong>.</p>
-</li>
-<li><p>Click the <strong>Add</strong> option.</p>
-</li>
-<li><p>From the <strong>Role</strong> list, select the appropriate role that you want to assign to the group.</p>
-</li>
-<li><p>In the <strong>Select</strong> field, enter the name of the group you created in <a href="#creating-a-group-for-azure-users">Creating a group for UKCloud for Microsoft Azure users</a>.</p>
-<p><img src="images/azs-portal_add-permissions.png" alt="Add permissions blade"></p>
-</li>
-<li><p>Click <strong>Save</strong>.</p>
-</li>
-</ol>
-<h2 id="next-steps">Next steps</h2>
-<p>For more information about Azure Stack, see the following Microsoft resources:</p>
-<ul>
-<li><p><a href="https://azure.microsoft.com/en-gb/get-started/"><em>Get started with Azure</em></a></p>
-</li>
-<li><p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/"><em>Azure Stack Operator Documentation</em></a></p>
-</li>
-</ul>
-<p>For more information about UKCloud for Microsoft Azure, see:</p>
-<ul>
-<li><p><a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a></p>
-</li>
-<li><p><a href="azs-faq.html"><em>UKCloud for Microsoft Azure FAQs</em></a></p>
-</li>
-</ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you have any comments on this article, or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
