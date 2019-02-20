@@ -21,7 +21,7 @@ With your UKCloud for OpenShift cluster we deploy a number of infrastructure app
 
 These applications run their components on the infrastructure nodes (these are the nodes with the naming convention worker-infra) your cluster comes out of the box with 2 of these nodes and each has 16GB of memory and 2 vCPUs. While this is a perfectly reasonable amount of resource for the infrastructure components for a small cluster, running light development workloads, if you are looking to scale out the cluster to a larger size and start running more intensive applications or builds these nodes may not be enough. For example, the more applications and nodes you have in your environment the more logs will be gathered off the nodes by fluentd and sent off to Elasticsearch for indexing. This will result in significantly higher resource usage. In the same vein, the more pods and nodes are running in your environment the more stats hawkular metrics will be gathering and storing in the Cassandra database.
 
-##### Recommendations
+#### Recommendations
 
 It's recommended by us to take a minimum of 3 infrastructure nodes with a deployment, especially with v3.11 deployments onwards as there are now more infrastructure components. As well as having more resource available to the infrastructure applications, running your infrastructure nodes at a scale of 3 or more will give you increased resilience for these components during patching as the applications will be able to scale up on the 2 available nodes while the 3rd is being patched.
 
