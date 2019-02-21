@@ -29,7 +29,7 @@ Finally you will want to consider the storage usage of the infrastructure applic
 
 ### Planning your scale out
 
-You'll want to estimate how many pods you are expecting to fit on a node. Things to take into account are the CPU, Memory and Storage (If your pod is going to be writing to the local filesystem rather than persistent storage) requirements of your applications. This will give you an idea of the size and amount of nodes you will need. More information regarding planning for application requirements can be found here: https://docs.openshift.com/container-platform/3.11/scaling_performance/cluster_limits.html#scaling-performance-planning-your-environment-according-to-application-requirements
+You'll want to estimate how many pods you are expecting to fit on a node. Things to take into account are the CPU, memory and storage (If your pod is going to be writing to the local filesystem rather than persistent storage) requirements of your applications. This will give you an idea of the size and amount of nodes you will need. More information regarding planning for application requirements can be found here: https://docs.openshift.com/container-platform/3.11/scaling_performance/cluster_limits.html#scaling-performance-planning-your-environment-according-to-application-requirements
 
 
 ### Further Reading
