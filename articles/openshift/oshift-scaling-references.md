@@ -31,6 +31,12 @@ Finally you will want to consider the storage usage of the infrastructure applic
 
 You'll want to estimate how many pods you are expecting to fit on a node. Things to take into account are the CPU, memory and storage (If your pod is going to be writing to the local filesystem rather than persistent storage) requirements of your applications. This will give you an idea of the size and amount of nodes you will need. More information regarding planning for application requirements can be found here: https://docs.openshift.com/container-platform/3.11/scaling_performance/cluster_limits.html#scaling-performance-planning-your-environment-according-to-application-requirements
 
+### Scaling
+
+If you would like to scale up your cluster raise a Servcice Request via the portal and provide us with the size, amount and network connectivity of the nodes you would like. 
+
+> [!NOTE]
+> The network connectivity you request for the scaled up nodes must be present in the cluster.
 
 ### Further Reading
 
