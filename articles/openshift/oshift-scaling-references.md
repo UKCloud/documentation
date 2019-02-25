@@ -35,7 +35,7 @@ You'll want to estimate how many pods you are expecting to fit on a node. Things
 
 ### Scaling
 
-If you would like to scale up your cluster raise a Servcice Request via the portal and provide us with the size, amount and network connectivity of the nodes you would like. 
+If you would like to scale up your cluster raise a Service Request via the UKCloud portal and provide us with the size, network connectivity and quantity of nodes you would like to add. The same process should be followed to scale a cluster down, this time providing the details of the node(s) you wish to remove.
 
 > [!NOTE]
 > The network connectivity you request for the scaled up nodes must be present in the cluster.
