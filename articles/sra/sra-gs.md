@@ -86,7 +86,7 @@ We request that you paste the contents of the CSR file directly into a ticket fo
 
 ## VPN Cisco AnyConnect client setup
 
-To access yoru SRA VDC you need to download the Cisco AnyConnect client and install it on your remote access devices.
+To access yoru SRA VDC you need to download the Cisco AnyConnect client and install it on your remote access devices (requires UKCloud Portal login).
 
 For each OS there is the main Cisco AnyConnect client software install and an additional executable to enable the FIPS capability. You need to run both.
 
