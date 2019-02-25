@@ -3635,18 +3635,18 @@ None
   Parameter name | Description | Type | Mandatory (Default)
   ---------------|-------------|------|--------------------
   date | The date for which you require the monthly report | String | Y
-  org-id | The ID of the compute service for which you want the billing report | String | Y
+  org_id | The ID of the compute service for which you want the billing report | String | Y
 
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H "Accept: application/json" -k https://portal.skyscapecloud.com/api/billing/cloud-storage-report?date=2018-01-01&org-id=xx-xx-xx-xxxxxxx
+curl -b /tmp/cookies.txt -X GET -H "Accept: application/json" -k https://portal.skyscapecloud.com/api/billing/cloud-storage-report?date=2018-01-01&org_id=xx-xx-xx-xxxxxxx
 ```
 
 #### Example request (Ruby)
 
 ```
-resp = conn.get("/api/billing/cloud-storage-report?date=#{date}&org-id=#{org-id}") { |req| req.headers['cookie'] = cookies }
+resp = conn.get("/api/billing/cloud-storage-report?date=#{date}&org_id=#{org-id}") { |req| req.headers['cookie'] = cookies }
 ```
 
 ### Response
