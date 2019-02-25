@@ -82,7 +82,7 @@ You can now access your service on the public IP tied to the external IP.
 
 ## Further reading
 
-OpenShift documentation on ipfailover: <https://docs.openshift.com/container-platform/3.10/admin_guide/high_availability.html>
+OpenShift documentation on ipfailover: <https://docs.openshift.com/container-platform/3.11/admin_guide/high_availability.html>
 
 
 ## Feedback
