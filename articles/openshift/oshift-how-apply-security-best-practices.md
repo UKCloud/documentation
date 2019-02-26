@@ -37,7 +37,7 @@ Users with access to UKCloud OpenShift should ensure account credentials are not
 
 You can read more about Service accounts [here] (https://docs.openshift.com/container-platform/3.11/dev_guide/service_accounts.html)
 
-- Creating and deploying vulnerable container images - There have many incidents in recent history whereby containers which contain severe vulnerabilities have been deployed into production clusters. To avoid this from happening users should use base images from trusted sources. i.e from RedHats container registry. These containers are scanned for vulnerabilities on a daily basis and given a security rating based on known security risks at that moment in time. Docker Hub also provides some certified containers. Users can also choose to build their own base containers from scratch. However, containers built from scratch could still contain vulnerable packages. Therefore, it would be good practice to set up an automated image scanning process as part of your container building/deploying process which can scan the built image and provide an image security rating. It is also possible to use these image scanning tools to certify your own images before they are deployed so that only images with a security rating which has been deemed to be satisfactory by your OpenShift administrators are deployed. 
+- Creating and deploying vulnerable container images - There have many incidents in recent history whereby containers which contain severe vulnerabilities have been deployed into production clusters. To avoid this from happening users should use base images from trusted sources. i.e from RedHats container registry. These containers are scanned for vulnerabilities on a daily basis and given a security rating based on known security risks at that moment in time. Docker Hub also provides some certified containers. Users can also choose to build their own base containers from scratch. However, containers built from scratch could still contain vulnerable packages. Therefore, it would be good practice to set up an automated image scanning process as part of your container building/deploying process which can scan the built image and provide an image security rating. It is also possible to use these image scanning tools to certify your own images before they are deployed so that only images with a security rating which has been deemed to be satisfactory by your OpenShift administrators are deployed.
 Just some container image scanning tools are as follows:
   -  OpenSCAP-docker
   -  Black Duck Hub
@@ -46,13 +46,13 @@ Just some container image scanning tools are as follows:
   -  Image-inspector
   -  Clair
 
-User should also apply 'Principle of least Access' with containers too. Containers should never be run as root user instead always run as a user with just enough privileges to run the required container work load. 
+User should also apply 'Principle of least Access' with containers too. Containers should never be run as root user instead always run as a user with just enough privileges to run the required container work load.
 
 - Secrets - Sensitive information like passwords, SSH Keys, tokens, Certificates etc are some examples of what could be considered to be a secret. As such secrets should never be stored in any place in readable format (Source code, GitHub Repo etc). It is imperative that when secrets are required in OpenShift they are set up in OpenShift as OpenShift Secrets. This allows the secrets to be encrypted within OpenShift and accessed only by the relevant containers at the time of need.
 
 - Limiting Resources - Containers should always be set up with resources limits, in the case of a denial of service attack or just a burst of very high load on a service these resource limits will prevent pods from using all available resources on the node they are running on. You can read more about setting resource quotas and limits [here](https://docs.openshift.com/container-platform/3.11/dev_guide/compute_resources.html)
 
-- Privileged ports - TCP/IP ports below port 1024 are considered to be Privileged Ports and should not be used to front any Service that is deployed into OpenShift. 
+- Privileged ports - TCP/IP ports below port 1024 are considered to be Privileged Ports and should not be used to front any Service that is deployed into OpenShift.
 
 - Route security - Within OpenShift users can expose their services using routes. Creating a route to a service allows the user to access the service through a URL on a browser. By default, the URLS which are created are exposed on HTTP port 80 without any SSL certificate. Users can secure these routes with SSL encryption using one of three SSL termination methods:
      1. Edge - SSL termination is done on the HAProxy router from which point onwards the traffic is un-encrypted.
