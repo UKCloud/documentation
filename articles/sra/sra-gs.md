@@ -86,15 +86,15 @@ We request that you paste the contents of the CSR file directly into a ticket fo
 
 ## VPN Cisco AnyConnect client setup
 
-To access yoru SRA VDC you need to download the Cisco AnyConnect client and install it on your remote access devices.
+To access your SRA VDC you need to download the Cisco AnyConnect client and install it on your remote access devices (requires UKCloud Portal login).
 
 For each OS there is the main Cisco AnyConnect client software install and an additional executable to enable the FIPS capability. You need to run both.
 
+### Download link
+
+<https://portal.skyscapecloud.com/support/knowledge_centre/a0e452d8-cd7b-49a4-a3ca-f791620cb084>
+
 ### Linux
-
-#### Download link
-
-<https://portal.ukcloud.com/support/knowledge_centre/a0e452d8-cd7b-49a4-a3ca-f791620cb084>
 
 #### Install the AnyConnect client
 
@@ -116,10 +116,6 @@ tar zxvf anyconnect-linux-64-<version number>-enableFIPS.tar.gz
 
 ### Windows
 
-#### Download link
-
-<https://portal.ukcloud.com/support/knowledge_centre/9af4958c-04c0-4ae1-8eb2-2733dc8042ce>
-
 #### Install the AnyConnect client
 
 The windows installation has the option of `.msi` or `.iso` (that contains the `.msi`) for the AnyConnect client image. The following installs may need to be run as administrator depending on the local policy of your Windows device.
@@ -132,13 +128,11 @@ Double click `anyconnect-EnableFIPS-win-<version number>.exe` and then enter `y`
 
 ### Mac
 
-#### Download link
-
-https://portal.ukcloud.com/support/knowledge_centre/e8b2d284-ec20-45e4-aed6-5a6071299064
+No further instructions required.
 
 ## AnyConnect client software
 
-We'll make the latest Cisco AnyConnect client software available via the Knowledge Centre using the links above. Using the latest version of the AnyConnect client will probably be a requirement of your ITSHC or service assurance wrap so it will be worth checking the above articles periodically.
+We'll make the latest Cisco AnyConnect client software available via the Knowledge Centre using the link above. Using the latest version of the AnyConnect client will probably be a requirement of your ITSHC or service assurance wrap so it will be worth checking the above articles periodically.
 
 If a client is upgraded from a previous install then the following post installation steps will need to be performed again to ensure the client configuration isn't reverted to the default.
 
@@ -155,7 +149,7 @@ Windows | `C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile`
 
 In addition to the AnyConnect profile, you also need to install a local policy which is available in the Knowledge Centre:
 
-<https://portal.ukcloud.com/support/knowledge_centre/2effd0b2-1eda-4999-87a6-6140e5fc07ea>
+<https://portal.skyscapecloud.com/support/knowledge_centre/2effd0b2-1eda-4999-87a6-6140e5fc07ea>
 
 Unzip the file and copy it to: `/opt/cisco/anyconnect/AnyConnectLocalPolicy.xml`.
 
@@ -257,4 +251,4 @@ Addresses to hit the Elevated portal and vCloud Director API can be obtained by 
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
