@@ -68,5 +68,3 @@ UKCloud can whitelist source IP's/Subnets in OpenShift to the OpenShift GUI/Metr
 ## Feedback
 
 If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
-
-
