@@ -85,7 +85,7 @@ This guide assumes that you have the following already configured in your enviro
 
         **Result:**
 
-        ![Results of router-inteface-add command](images/ostack-neutron-router-interface-add.png)
+        ![Results of router-interface-add command](images/ostack-neutron-router-interface-add.png)
 
 4. Create a port to be used as the VIP addresses.
 
