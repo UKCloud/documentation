@@ -29,7 +29,7 @@ UKCloud for OpenStack is built using KVM hypervisor technology, a trusted soluti
 
 ### Does UKCloud offer dedicated, bare-metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?
 
-UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack product. We do however provide "large" instances, with upto 56 vCpus and 440Gb Ram, with no overcommit. UKCloud also offers its 'Private Cloud for Compute' product which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.
+UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack product. We do however provide "large" instances, with up to 56 vCpus and 440Gb Ram, with no overcommit. UKCloud also offers its 'Private Cloud for Compute' product which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.
 
 ### Which Disk formats does UKCloud for OpenStack support?
 
@@ -240,7 +240,7 @@ UKCloud does not currently provide instance performance reports, but you can mon
 
 ### Does UKCloud patch instances?
 
-No, you are responsible for the patching of your services. We make a patch repository available to you for instances on the Elevated OFFICIAL cloud platform (which doesn't cannot connect to the internet) for common operating systems that we provide.
+No, you are responsible for the patching of your services. We make a patch repository available to you for instances on the Elevated OFFICIAL cloud platform (which cannot connect to the internet) for common operating systems that we provide.
 
 <!--### How do I find the latest patches to the UKCloud infrastructure?
 
@@ -302,7 +302,7 @@ Microsoft offers License Mobility, a scheme that allows a customer to provide ad
 
 ### RHEL
 
-RHEL operating systems can be licensed by the customer directly with Red Hat. We are Currently unable to provide RHEL licences for UKCloud for Openstack.
+RHEL operating systems can be licensed by the customer directly with Red Hat. We are Currently unable to provide RHEL licences for UKCloud for OpenStack.
 
 The customer is responsible for ensuring correct licensing for any other operating system they chose to install.
 
@@ -386,7 +386,7 @@ At the end of your free trial, you can seamlessly move to a billed service, leve
 
 UKCloud for OpenStack is a cloud platform built specifically for cloud native applications which have been engineered to use stateless, disposable instances.
 
-UKCloud does not provided automated backups of projects or instances, however it does allow consumers to create snapshots of their instances via the OpenStack dashboard or programmatically via the API. These snapshots when used in conjunction with deployment orchestration tools or infrastructure as code templates such as HEAT allow for environments to be rapidly replicate, redeploy or scale environments.
+UKCloud does not provide automated backups of projects or instances, however it does allow consumers to create snapshots of their instances via the OpenStack dashboard or programmatically via the API. These snapshots when used in conjunction with deployment orchestration tools or infrastructure as code templates such as HEAT allow for environments to be rapidly replicate, redeploy or scale environments.
 
 ### Can I create scheduled snapshots?
 
