@@ -13,7 +13,7 @@ toc_fullpath: How To/restrict-access-to-openshift-routes-by-ip-address.md
 toc_mdlink: oshift-how-restrict-access-to-openshift-routes-by-ip-address.md
 ---
 
-# How to only allow trusted IP's to be able to access routes in Openshift
+# How to restrict access to OpenShift routes by IP address
 
 ## Overview
 
