@@ -103,7 +103,7 @@ Conversions from the following hypervisors are supported:
 
     ![Create Image page](images/ostack-horizon-create-image.png)
 
-    e. Depending on the the size of the image, the import process may take up to an hour to complete. You can view progress of the import from the Images page of the OpenStack dashboard.
+    e. Depending on the size of the image, the import process may take up to an hour to complete. You can view progress of the import from the Images page of the OpenStack dashboard.
 
 4. When the import process is complete, you'll be able to use your newly imported image in the same way as any other image stored in OpenStack's image catalog (Glance).
 
