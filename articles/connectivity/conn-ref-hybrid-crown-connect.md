@@ -64,7 +64,7 @@ Monthly charge | £0 | £200 (1Gb port)<br>£500 (10Gb port)
 
 ## Lead times
 
-Lead times vary depending on product. HybridConnect can normally be delivered within a couple of weeks due to the locality of the termination points to UKCloud's core network, however CrownConnect is dependent on fibre installation from the termination point into UKCloud's core network location. The lead time of delivery of this fibre depends on the distance from the termination point to the core network location, and customers should expect 3 to 4 weeks from order to delivery.
+Lead times vary depending on product. HybridConnect can normally be delivered within a couple of weeks due to the locality of the termination points to UKCloud's core network, however CrownConnect is dependent on fibre installation from the termination point into UKCloud's core network location. The lead time of delivery of this fibre depends on the distance from the termination point to the core network location, but typically customers should expect 3 to 4 weeks from order to delivery.
 
 ## Comparison table
 
