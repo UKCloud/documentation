@@ -117,11 +117,11 @@
 <h2 id="prerequisites-and-known-issues">Prerequisites and known issues</h2>
 <p>Before converting your edge gateway, review the prerequisites and known issues below:</p>
 <ul>
-<li><p><strong>Edge gateway version</strong> --- To convert to an advanced gateway, your edge gateway must be at version 6.2.<em>x</em>. If necessary, redeploy your edge gateway to upgrade to the latest version; for more information,
+<li><p><strong>Edge gateway version</strong> --- To convert to an advanced gateway, your edge gateway must be at the latest version. If necessary, redeploy your edge gateway to upgrade to the latest version; for more information,
 see <a href="vmw-how-upgrade-edge.html"><em>How to upgrade your edge gateway</em></a>.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>If the edge gateway is not at the latest version, it is possible that the conversion process will cause the gateway to redeploy. Therefore, the conversion should be scheduled during an outage window.</p>
+<p>If the edge gateway is not at the latest version, it is possible that the conversion process will cause the gateway to redeploy. Therefore, the conversion should always be scheduled during an outage window.</p>
 </div>
 </li>
 <li><p><strong>Disabled firewalls</strong> - On an advanced gateway, if you disable the firewall, this also stops the NAT service, as it is dependent on the firewall. As a result, traffic flow that relies on NAT, such as NAT rules and the load balancer is stopped. If you attempt to disable the firewall service, the vCloud Director Web Console will display a warning. This is due to the firewall service being used to track stateful connections. See the following VMware Knowledge Base article for more information: <a href="https://kb.vmware.com/s/article/2093153">https://kb.vmware.com/s/article/2093153</a>.</p>

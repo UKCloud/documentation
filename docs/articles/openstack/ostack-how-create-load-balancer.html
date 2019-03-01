@@ -144,7 +144,7 @@
 <p><strong>Command:</strong> <code>neutron router-interface-add &lt;RouterName&gt; &lt;NetworkName&gt;</code></p>
 <p><strong>Example:</strong> <code>neutron router-interface-add R1 FrontEdge</code></p>
 <p><strong>Result:</strong></p>
-<p><img src="images/ostack-neutron-router-interface-add.png" alt="Results of router-inteface-add command"></p>
+<p><img src="images/ostack-neutron-router-interface-add.png" alt="Results of router-interface-add command"></p>
 </li>
 </ul>
 </li>
@@ -360,7 +360,7 @@
 <p>Depending on the amount of traffic you expect to see, you may need to make  additional tuning changes to your load balancer systems. Usually these changes take the form of increasing the number of available ephemeral ports, and the enablement of <code>tcp_tw_reuse</code>. Please do careful research on these settings before making changes. We recommend making these changes on a non-live system and testing before applying these changes to a production system.</p>
 <p>You may also wish to investigate keepalived ability to monitor applications on the local system and force a fail over if an application crashes. For example, keepalived can be made to monitor HAProxy and to fail over if HAProxy stops or fails. Instructions on how to do this can be found in the keepalived  documentation.</p>
 <h2 id="first-free-load-balancer">First free load balancer</h2>
-<p>To meet the UKCloud for OpenStack G-Cloud Service Definition commitment of one free load balancer per per project, we will credit the first two instances in a project which match the following criteria:</p>
+<p>To meet the UKCloud for OpenStack G-Cloud Service Definition commitment of one free load balancer per project, we will credit the first two instances in a project which match the following criteria:</p>
 <table>
 <thead>
 <tr>
