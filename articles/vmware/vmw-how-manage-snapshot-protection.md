@@ -47,25 +47,30 @@ You can use the UKCloud Portal to see whether a VM uses Snapshot Protection, fin
 
 4. Select the compute service (vOrg) that the VM belongs to.
 
-5. Select the *My VMs* tab.
+5. Select the **My VMs** tab.
 
     ![My VMs tab](images/snapshot-image-2.png)
 
 6. From the **Currently viewing for VDC** list, select the VDC that the VM belongs to.
 
-7. Click the *VMs* tab.
+7. Click the **VMs** tab.
 
     ![VMs tab](images/snapshot-image-3.png)
 
-8. The icon in **Snapshot Protection** column shows the status of each VM's most recent backup:
+8. The icon in **VM Backup** column shows the status of each VM's most recent backup:
 
-    - ![Excluded](images/snapshot-image-13.png) - Excluded from backup (if you have recently added Snapshot Protection to a VM, this icon indicates that a backup does not yet exist for the VM)
+    Icon | Description
+    -----|------------
+    ![Backup Successful](images/snapshot-image-14.png) | Backup of the VM was successful
+    ![Excluded from backup](images/snapshot-image-13.png) | The VM has been excluded from backups
+    ![Not in backup yet](images/snapshot-image-13.png) | A backup has not yet been created for a VM that has recently been included in backups
+    ![Backup Failed](images/snapshot-image-15.png) | Backup of the VM was unsuccessful
+    ![Excluded from backup](images/snapshot-image-15.png) | The VM has been excluded from backups but has not yet reached the end of the previous retention period<br>(when the end retention period is reached, the icon will change to the grey minus sign)
 
-    - ![Successful](images/snapshot-image-14.png) - Backup successful
+    > [!TIP]
+    > You can hover over the icon to see a description of the backup status.
 
-    - ![unsuccessful](images/snapshot-image-15.png) - Backup unsuccessful
-
-9. The button in the **Snapshot Protection** column shows the Snapshot Protection option currently applied to the VM:
+9. The button in the **Default Policy** column shows the Snapshot Protection option currently applied to the VM:
 
     - **14‑day** - VM uses Snapshot Protection, with backups retained for 14 days
 
@@ -77,9 +82,9 @@ You can use the UKCloud Portal to see whether a VM uses Snapshot Protection, fin
 
     - **Failed** - A change in the status of Snapshot Protection for the VM failed; contact the UKCloud support team to resolve this issue.
 
-    ![Failed](images/snapshot-image-4.png)
+    ![Snapshot Protection Status](images/snapshot-image-4.png)
 
-10. To find out more detail about the most recent backup of a VM, or to view information about previous backups, click the VM name.
+10. To find out more detail about the most recent backup of a VM, or to view information about previous backups, click the **VM Name**.
 
 11. In the VMs *Info* page, the following fields provide information about the most recent backup of the VM:
 
@@ -91,7 +96,7 @@ You can use the UKCloud Portal to see whether a VM uses Snapshot Protection, fin
 
     - **Backup status** - when the most recent backup was attempted
 
-12. The *Snapshot Protection* *Backups* section of the page provides information about previous backups. This covers the entire retention policy period (14 or 28 days). Information includes:
+12. The *Snapshot Protection Backups* section of the page provides information about previous backups. This covers the entire retention policy period (14 or 28 days). Information includes:
 
     - **Status** - the status of the backup
 
@@ -121,25 +126,25 @@ You can use the UKCloud Portal to see whether a VM uses Snapshot Protection, fin
 
 14. Click **Manage my Backups** to raise a service request related to your backups, for example, to restore a backup.
 
-    ![manage my backups](images/snapshot-image-5.png)
+    ![Manage my Backups button](images/snapshot-image-5.png)
 
 15. To view all the VM information in a single table, click the *Actions* tab and select **Export VMs**. You can save this page to view offline and analyse further.
 
-    ![Export VMs](images/snapshot-image-6.png)
+    ![Export VMs option](images/snapshot-image-6.png)
 
 ## Managing Snapshot Protection for a VM
 
 By default, VMs deployed on the UKCloud platform do not come with any protection services enabled. You can use the UKCloud Portal to add Snapshot Protection to your VM. You can also use the Portal to change the snapshot retention policy for your backups and to remove Snapshot Protection from your VM.
 
-1. Access the *My VMs* tab for your compute service.
+1. Access the **My VMs** tab for your compute service.
 
     For detailed steps for how to do this, see the first few steps in [Checking a VM's snapshot status](#checking-a-vms-snapshot-protection-status).
 
 2. From the **Currently viewing for VDC** list, select the VDC that the VM belongs to.
 
-3. Click the *VMs* tab.
+3. Click the **VMs** tab.
 
-4. In the **Snapshot Protection** column, click the green button.
+4. In the **Default Policy** column, click the green button.
 
     The label on the button will depend on the currently applied policy:
 
@@ -149,7 +154,7 @@ By default, VMs deployed on the UKCloud platform do not come with any protection
 
     - **28-day** if the VM's snapshot retention policy is currently 28 days
 
-    ![Snapshot Protection](images/snapshot-image-7.png)
+    ![Snapshot Protection options](images/snapshot-image-7.png)
 
 5. In the *Snapshot Protection Policy* dialog box, from the **New Protection Policy** list, select the snapshot retention policy that you want to apply to the VM:
 
@@ -159,10 +164,10 @@ By default, VMs deployed on the UKCloud platform do not come with any protection
 
     - **No Backup** to turn Snapshot Protection off for the VM
 
-    ![Snaphot Protection Policy](images/snapshot-image-8.png)
+    ![Snapshot Protection Policy](images/snapshot-image-8.png)
 
-        > [!NOTE]
-        > If you remove Snapshot Protection from a VM, you should consider alternatives to ensure the integrity of your data in the case of disruption. In addition to Snapshot Protection, UKCloud offers Synchronous Protection and Journaling Protection options, or you may want to implement your own protection solution, possibly utilising our Cloud Storage service.
+    > [!NOTE]
+    > If you remove Snapshot Protection from a VM, you should consider alternatives to ensure the integrity of your data in the case of disruption. In addition to Snapshot Protection, UKCloud offers Synchronous Protection and Journaling Protection options, or you may want to implement your own protection solution, possibly utilising our Cloud Storage service.
 
 6. In the **Reason For Change** field, provide a reason for the change to the existing snapshot retention policy.
 
@@ -174,11 +179,14 @@ By default, VMs deployed on the UKCloud platform do not come with any protection
 
     Backup status information is updated daily on the UKCloud Portal by 1000, but typically within minutes of the close of the backup window.
 
+    > [!NOTE]
+    > If you remove a VM from backups, the status icon for the VM will display as a red cross until the end of the previously selected retention period. When the end of the retention period is reached, the status icon will change to the grey minus sign.
+
 ## Managing Snapshot Protection for a VDC
 
 You can specify a snapshot retention policy to apply to all the VMs in a VDC. You can apply the policy to all new VMs or to all new and existing VMs.
 
-1. Access the *My VMs* tab for your compute service.
+1. Access the **My VMs** tab for your compute service.
 
     For detailed steps for how to do this, see the first few steps in [Checking a VM's snapshot status](#checking-a-vms-snapshot-protection-status).
 
@@ -268,4 +276,4 @@ For more information about working with your VMs, see the [*Getting Started Guid
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
