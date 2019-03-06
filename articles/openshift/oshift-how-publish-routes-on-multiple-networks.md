@@ -118,7 +118,7 @@ So that shows the basic route is now published, which fulfils scenario 1 shown i
 
 To make the route appear on the secondary router and achieve scenario 2, we need to label the route appropriately so that it's also exposed on the `router-secondary` pods. By default, we setup the secondary routers with a label based route selector of `"router-secondary=true"`. 
 
-Here we see the route selector label setup on the secondary router. This indicates that this route will publish routes that are labelled with `"router=secondary"`:
+Here we see the route selector label setup on the secondary router. This indicates that this route will publish routes that are labelled with `"router-secondary=true"`:
 
 ```
 $ oc describe dc router-secondary | grep ROUTE_LABELS
