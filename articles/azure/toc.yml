@@ -28,8 +28,6 @@
       href: azs-list-vm-extensions.md
     - name: 'Manage Azure user groups and permissions '
       href: azs-how-manage-azure-group.md
-    - name: Obtain Azure Stack Client ID - REST API
-      href: azs-how-to-obtain-clientid-via-api.md
     - name: Resize an OS drive
       href: azs-how-resize-os-drive.md
     - name: Retrieve your subscription quotas

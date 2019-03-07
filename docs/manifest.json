@@ -365,18 +365,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/azure/azs-how-to-obtain-clientid-via-api.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/azure/azs-how-to-obtain-clientid-via-api.html",
-          "hash": "z+w6wH6PjzudQvRtwPX27Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-use-azure-api.md",
       "output": {
         ".html": {
@@ -1321,7 +1309,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "Fcr1cn4gjnWRwpPPKCttYg=="
+          "hash": "KJwQQDJSiq3n+L8pKTt9lA=="
         }
       },
       "is_incremental": false,
@@ -7185,7 +7173,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-knowledge-template.html",
-          "hash": "bz5K1F7NAyNbRwBF9WwAgA=="
+          "hash": "c5hC3wyc/MJPQiodjXaXoA=="
         }
       },
       "is_incremental": false,
@@ -15295,13 +15283,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -15312,7 +15293,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 331,
+          "total_file_count": 330,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }
