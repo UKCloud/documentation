@@ -45,7 +45,7 @@ system:serviceaccount:<project>:<name>.
 ```
 For example,
 ```bash
-system:serviceaccount:continuous-integration:jenkins.
+system:serviceaccount:continuous-integration:jenkins
 ```
 
 You can read more about service accounts [here] (https://docs.openshift.com/container-platform/3.11/dev_guide/service_accounts.html).
