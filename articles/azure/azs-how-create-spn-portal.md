@@ -37,9 +37,7 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 - An active Azure Subscription
 
-## Create an SPN account for Azure and Azure Stack
-
-### Create an SPN
+## Create an SPN
 
 1. Log in to the [Azure portal](https://portal.azure.com).
 
@@ -55,19 +53,19 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 5. In the *Create* blade, enter the following information:
 
-   - **Name** - The name of the application. Should have a minimum of 4 characters.
+   - **Name** - The name of the application. Should have a minimum of four characters.
 
-   - **Application Type** - Choose "Web app / API" to add an application that represents a web application, a web API, or both. Choose "Native" to add an application that can be installed on a user's device or computer. In this instance, you can use `Web app / API`.
+   - **Application Type** - Choose **Web app / API** to add an application that represents a web application, a web API, or both. Choose **Native** to add an application that can be installed on a user's device or computer. In this instance, you can use **Web app / API**.
 
-   - **Sign-on URL** - The URL where user can sign in and use your app. You can change this URL later. In this instance, you can use `http://localhost`.
+   - **Sign-on URL** - The URL where users can sign in and use your app. You can change this URL later. In this instance, you can use `http://localhost`.
 
     ![Create Service Principal](images/azs-browser-create-spn.png)
 
 6. Click **Create**.
 
-### Gathering SPN Credentials
+## Gathering SPN credentials
 
-1. On the blade that has now opened, copy the `Application ID` and store it somewhere secure. This value is sometimes referred to as the SPN Client ID.
+1. On the blade that has now opened, copy the **Application ID** and store it somewhere secure. This value is sometimes referred to as the SPN Client ID.
 
     ![Copy Application ID](images/azs-browser-select-SPN-App-ID.png)
 
@@ -81,13 +79,13 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 5. Copy the displayed value for the key and store it somewhere secure. This value is referred to as the SPN Client Secret.
 
-### Configure role-based access control for the SPN on Azure Stack
+## Configure role-based access control for the SPN on Azure Stack
 
 1. Log in to the UKCloud Azure Stack portal.
 
     For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
-2. Navigate to the resource you wish to give the SPN access to. In this example we are adding the SPN to the subscription resource to give it permission to all resources.
+2. Navigate to the resource you want to give the SPN access to. In this example we are adding the SPN to the subscription resource to give it permission to all resources.
 
    1. View your subscription by clicking **All services** in the favourites panel, then selecting **Subscriptions** under the *General* section.
 
@@ -99,9 +97,9 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
     ![Add SPN to RBAC](images/azs-browser-add-RBAC-user.png)
 
-4. Select the role you wish to add your SPN to.
+4. Select the role you want to add your SPN to.
 
-5. Enter the name of the SPN in the *Select* field, select the SPN when it appears then click **Save**
+5. Enter the name of the SPN in the **Select** field, select the SPN when it appears then click **Save**
 
     ![Add SPN to role](images/azs-browser-add-SPN-role.png)
 
@@ -109,4 +107,4 @@ The SPN will now have the appropriate permissions assigned to it and is ready fo
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
