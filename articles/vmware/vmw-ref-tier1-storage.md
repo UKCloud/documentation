@@ -109,7 +109,7 @@ If the workload is currently running on any environment, it's possible to run a 
 
 ## Limitations
 
-Tier 1 workloads are available with the Essential, Power and Priority VM types. They're not available with Synchronous with Geo-resilient protection option, because the latency overhead of the synchronous replication would offset the Tier 1 storage benefits.
+Tier 1 workloads are available with the Essential, Power and Priority VM types.
 
 Initially, moving a workload to and from the Tier 1 platform will be a manual process that may involve raising a service request via My Calls on the UKCloud Portal.
 
@@ -125,4 +125,4 @@ If you need more help, contact UKCloud Support or engage with your Cloud Archite
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
