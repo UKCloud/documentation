@@ -26,3 +26,7 @@
     href: oshift-how-restrict-access-to-openshift-routes-by-ip-address.md
   - name: Use the Hawkular Metrics API
     href: oshift-how-use-hawkular-metrics.md
+- name: Reference
+  items:
+  - name: Lifecycle and patch management
+    href: oshift-ref-lifecycle.md

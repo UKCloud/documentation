@@ -4158,6 +4158,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-supported-versions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-supported-versions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openshift/images/ptl-menu-all-contacts.png",
       "output": {
         "resource": {
@@ -4355,12 +4366,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-ref-lifecycle.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-ref-lifecycle.html",
+          "hash": "Q3tFSz+kx5NrunijgbN0bQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/openshift/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "mBH5m126sz7eIzdpAdVF/w=="
+          "hash": "me4KcOD5UtFHQaDbSgpKDQ=="
         }
       },
       "is_incremental": false,
@@ -15200,7 +15223,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 329,
+          "total_file_count": 330,
           "skipped_file_count": 0
         }
       }
