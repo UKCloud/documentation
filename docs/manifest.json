@@ -197,6 +197,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-create-spn-portal.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-create-spn-portal.html",
+          "hash": "EteyyTmbX5ByDLa5bpshkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-create-spn-powershell.md",
       "output": {
         ".html": {
@@ -436,6 +448,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-add-RBAC-user.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-add-RBAC-user.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-add-SPN-key.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-add-SPN-key.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-add-SPN-role.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-add-SPN-role.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-add-backend-pool.png",
       "output": {
         "resource": {
@@ -495,6 +540,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-add-lb-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-app-registrations.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-app-registrations.png"
         }
       },
       "is_incremental": false,
@@ -634,6 +690,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-create-spn.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-create-spn.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-create-virtual-network.png",
       "output": {
         "resource": {
@@ -693,6 +760,28 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-new-security.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-select-SPN-App-ID.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-select-SPN-App-ID.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-select-aad.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-select-aad.png"
         }
       },
       "is_incremental": false,
@@ -1232,7 +1321,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "Cc3EPWFUSkfURGc+ETTVRg=="
+          "hash": "Fcr1cn4gjnWRwpPPKCttYg=="
         }
       },
       "is_incremental": false,
@@ -15206,13 +15295,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -15220,10 +15302,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 330,
+          "total_file_count": 331,
           "skipped_file_count": 0
         }
       }

@@ -52,6 +52,8 @@
       items:
       - name: Create a service principal name - CLI
         href: azs-how-create-spn-cli.md
+      - name: Create a service principal name - Portal
+        href: azs-how-create-spn-portal.md
       - name: Create a service principal name - PowerShell
         href: azs-how-create-spn-powershell.md
     - name: Create a Virtual Machine

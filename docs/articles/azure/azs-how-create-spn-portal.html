@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to create a service principal name for Azure Stack using the Azure portal | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to create a service principal name for Azure Stack using the Azure portal | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-create-spn-portal.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-create-a-service-principal-name-for-azure-stack-using-the-azure-portal">How to create a service principal name for Azure Stack using the Azure portal</h1>
+
+<p>This document explains how to create a service principal name to manage Azure and Azure Stack using the Azure portal.</p>
+<p>It will guide you through the creation of:</p>
+<ul>
+<li><p>An Azure application</p>
+</li>
+<li><p>A service principal name</p>
+</li>
+<li><p>Role assignment</p>
+</li>
+<li><p>Permissions</p>
+</li>
+</ul>
+<h2 id="what-is-a-service-principal-name">What is a service principal name</h2>
+<p>An Azure service principal name (SPN) is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.</p>
+<p>To log in and manage your resources via SPN you'll need to create an Azure application and then assign an SPN to it. Only then will you be able to perform tasks against your environment.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>An active Azure Subscription</li>
+</ul>
+<h2 id="create-an-spn">Create an SPN</h2>
+<ol>
+<li><p>Log in to the <a href="https://portal.azure.com">Azure portal</a>.</p>
+</li>
+<li><p>In the favourites panel, select <strong>Azure Active Directory</strong>.</p>
+<p><img src="images/azs-browser-select-aad.png" alt="Select Azure Active Directory"></p>
+</li>
+<li><p>In the <em>Azure Active Directory</em> blade, select <strong>App registrations</strong>.</p>
+<p><img src="images/azs-browser-app-registrations.png" alt="Select App registrations"></p>
+</li>
+<li><p>On the <em>App registrations</em> page, click the <strong>+ New application registration</strong> button.</p>
+</li>
+<li><p>In the <em>Create</em> blade, enter the following information:</p>
+<ul>
+<li><p><strong>Name</strong> - The name of the application. Should have a minimum of four characters.</p>
+</li>
+<li><p><strong>Application Type</strong> - Choose <strong>Web app / API</strong> to add an application that represents a web application, a web API, or both. Choose <strong>Native</strong> to add an application that can be installed on a user's device or computer. In this instance, you can use <strong>Web app / API</strong>.</p>
+</li>
+<li><p><strong>Sign-on URL</strong> - The URL where users can sign in and use your app. You can change this URL later. In this instance, you can use <code>http://localhost</code>.</p>
+</li>
+</ul>
+<p><img src="images/azs-browser-create-spn.png" alt="Create Service Principal"></p>
+</li>
+<li><p>Click <strong>Create</strong>.</p>
+</li>
+</ol>
+<h2 id="gathering-spn-credentials">Gathering SPN credentials</h2>
+<ol>
+<li><p>On the blade that has now opened, copy the <strong>Application ID</strong> and store it somewhere secure. This value is sometimes referred to as the SPN Client ID.</p>
+<p><img src="images/azs-browser-select-SPN-App-ID.png" alt="Copy Application ID"></p>
+</li>
+<li><p>On the same blade, click the <strong>Settings</strong> button.</p>
+</li>
+<li><p>In the <em>API Access</em> section of the <em>Settings</em> blade, select <strong>Keys</strong>.</p>
+</li>
+<li><p>In the <em>Keys</em> blade, enter a description for a key as well as an expiry duration, then click <strong>Save</strong>.</p>
+<p><img src="images/azs-browser-add-SPN-key.png" alt="Create SPN key"></p>
+</li>
+<li><p>Copy the displayed value for the key and store it somewhere secure. This value is referred to as the SPN Client Secret.</p>
+</li>
+</ol>
+<h2 id="configure-role-based-access-control-for-the-spn-on-azure-stack">Configure role-based access control for the SPN on Azure Stack</h2>
+<ol>
+<li><p>Log in to the UKCloud Azure Stack portal.</p>
+<p>For more detailed instructions, see the <a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a>.</p>
+</li>
+<li><p>Navigate to the resource you want to give the SPN access to. In this example we are adding the SPN to the subscription resource to give it permission to all resources.</p>
+<ol>
+<li><p>View your subscription by clicking <strong>All services</strong> in the favourites panel, then selecting <strong>Subscriptions</strong> under the <em>General</em> section.</p>
+</li>
+<li><p>Select your subscription.</p>
+</li>
+<li><p>On your subscription's blade, select <strong>Access Control (IAM)</strong>.</p>
+</li>
+</ol>
+</li>
+<li><p>On the <em>Access Control (IAM)</em> blade, click the <strong>+ Add</strong> button.</p>
+<p><img src="images/azs-browser-add-RBAC-user.png" alt="Add SPN to RBAC"></p>
+</li>
+<li><p>Select the role you want to add your SPN to.</p>
+</li>
+<li><p>Enter the name of the SPN in the <strong>Select</strong> field, select the SPN when it appears then click <strong>Save</strong></p>
+<p><img src="images/azs-browser-add-SPN-role.png" alt="Add SPN to role"></p>
+</li>
+</ol>
+<p>The SPN will now have the appropriate permissions assigned to it and is ready for use.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>
