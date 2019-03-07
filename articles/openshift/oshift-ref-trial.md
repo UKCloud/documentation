@@ -30,7 +30,7 @@ OpenShift provides platform-as-a-service, which means that you don't need to wor
 
 With UKCloud for OpenShift, you have administrator access to your cluster, giving you the control you need to create, deploy and administer your environment as you see fit.
 
-All OpenShift deployments get a starter pack, which includes the management and orchestration planes. These are essentially three master nodes, two infrastructure nodes and load balancers for the control and data planes.
+All OpenShift deployments get a foundation pack, which includes the management and orchestration planes. These are essentially three master nodes, two infrastructure nodes and load balancers for the control and data planes.
 
 During a trial, each cluster is also provisioned with two small Runtime Packs. These are essentially two OpenStack VMs running RedHat Atomic OS with 16GB RAM, 2vCPUs and 100GB disks each. This is also the minimum number of Runtime Packs UKCloud recommends in each OpenShift deployment in order to provide minimal resilience and enable interruption free patching. After the trial phase it is possible to deploy larger and more nodes for your cluster.
 
