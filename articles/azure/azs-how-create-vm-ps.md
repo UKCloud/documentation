@@ -5,11 +5,11 @@ services: azure-stack
 author: Bailey Lawson
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Create a virtual machine
+toc_sub2: Create a Virtual Machine
 toc_sub3:
 toc_sub4:
 toc_title: Create a virtual machine - PowerShell
-toc_fullpath: Users/How To/Create a virtual machine/azs-how-create-vm-ps.md
+toc_fullpath: Users/How To/Create a Virtual Machine/azs-how-create-vm-ps.md
 toc_mdlink: azs-how-create-vm-ps.md
 ---
 
@@ -199,6 +199,7 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 >   <option value="/SQL2017-SLES12SP2/Skus/Standard">SQL Server 2017 Standard on SLES 12 SP2</option>
 >   <option value="/SQL2017-WS2016/Skus/Standard">SQL Server 2017 Standard on Windows Server 2016</option>
 >   <option value="/WindowsServer/Skus/2012-Datacenter">Windows Server 2012 Datacenter - Pay as you use</option>
+>   <option value="/WindowsServer/Skus/2012-R2-Datacenter">Windows Server 2012 R2 Datacenter - Pay as you use</option>
 >   <option value="/WindowsServer/Skus/2016-Datacenter">Windows Server 2016 Datacenter - Pay-as-you-use</option>
 >   <option value="/WindowsServer/Skus/2016-Datacenter-Server-Core">Windows Server 2016 Datacenter - Server Core - Pay as you use</option>
 >   <option value="/WindowsServer/Skus/2016-Datacenter-with-Containers">Windows Server 2016 Datacenter - with Containers - Pay as you use</option>
@@ -209,10 +210,10 @@ From your PowerShell window:
 <pre><code class="language-PowerShell">## Initialise environment and variables
 
 # Add environment
-Add-AzureRMEnvironment -Name "AzureStack" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Login
-Login-AzureRmAccount -EnvironmentName "AzureStack"
+Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Input Variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">myResourceGroup</output>"
@@ -265,7 +266,7 @@ $NetworkInterface = New-AzureRmNetworkInterface -Name $NICName -ResourceGroupNam
 
 # Define a credential object to store the username and password for the virtual machine
 $UserName = "<output form="vmusername" name="result" style="display: inline;">myUser</output>"
-$Password = "<output form="vmpassword" name="result" style="display: inline;">Password123!</output>" | ConvertTo-SecureString -Force -AsPlainText
+$Password = '<output form="vmpassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
 $Credential = New-Object PSCredential($UserName,$Password)
 
 # Create the virtual machine configuration object
@@ -275,7 +276,7 @@ $VirtualMachine = New-AzureRmVMConfig -VMName $VMName -VMSize $VMSize
 $VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result" style="display: inline;">-Linux</output> -ComputerName $ComputerName -Credential $Credential
 
 # Get the VM Source Image
-$Image = Get-AzureRMVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object {$_.Id -like $VMImage}
+$Image = Get-AzureRmVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object {$_.Id -like $VMImage}
 
 # Set the VM Source Image
 $VirtualMachine =  Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version "latest"
@@ -299,6 +300,6 @@ Write-Host "Virtual machine created successfully"
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
 
 <script>document.getElementById("RandNum").innerHTML = Math.round(Math.random()*100000000)</script>

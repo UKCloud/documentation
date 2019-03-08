@@ -20,6 +20,16 @@ The following video provides a quick guide for how to activate your Windows lice
 
 <iframe src="https://player.vimeo.com/video/308877124" width="864" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
+[Licensing Windows VMs using the UKCloud Key Management Server](https://vimeo.com/308877124) on [Vimeo](https://vimeo.com/ukcloud)
+
+## Related articles
+
+- [*How to license Windows VMs using the UKCloud Key Management Server*](vmw-how-setup-kms.md)
+
+- [*How to create NAT rules*](vmw-how-create-nat-rules.md)
+
+- [*How to create firewall rules*](vmw-how-create-firewall-rules.md)
+
 ## Feedback
 
 If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

@@ -1,5 +1,5 @@
 ---
-title: Configure the Azure Stack user's Azure CLI environment |  based on Microsoft Docs
+title: Configure the Azure Stack user's Azure CLI environment | Based on Microsoft Docs
 description: Learn how to use the cross-platform command-line interface (CLI) to manage and deploy resources on Azure Stack
 services: azure-stack
 author: Chris Black
@@ -14,7 +14,7 @@ toc_fullpath: Users/How To/azs-how-configure-cli.md
 toc_mdlink: azs-how-configure-cli.md
 ---
 
-# Install and configure CLI for use with Azure Stack
+# How to configure the Azure Stack user's Azure CLI environment
 
 In this article, we will guide you through the process of installing and using the Azure command-line interface (CLI) to manage Azure Stack. Azure CLI can be used to manage resources such as create virtual machines, deploy Azure Resource Manager templates, etc.
 
@@ -179,5 +179,11 @@ az vm create --resource-group testRG --name testVM --image OpenLogic:CentOS:6.9:
 There are some known issues that you must be aware of when using CLI in Azure Stack:
 
 * The CLI interactive mode i.e the `az interactive` command is not yet supported in Azure Stack.
+
 * To get the list of virtual machine images available in Azure Stack, use the `az vm images list --all` command instead of the `az vm image list` command. Specifying the `--all` option makes sure that response returns only the images that are available in your Azure Stack environment. 
+
 * Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the `az vm images list` command.
+
+## Feedback
+
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

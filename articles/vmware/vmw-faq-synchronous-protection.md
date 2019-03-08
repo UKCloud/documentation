@@ -89,6 +89,12 @@ You can test the failover function of the service by requesting a Test Scenario 
 
 For more information, see the [*Synchronous Protection Service Scope*](vmw-sco-synchronous-protection.md).
 
+## Snapshot Protection
+
+### Will I be charged for using Snapshot Protection if I opt for Synchronous Protection?
+
+Synchronous Protection with Geo-resilience comes with 14-day Snapshot Protection as standard when selected, with the option for 28-day Snapshot Protection free of charge. Please note that you will be charged for any storage consumed associated with the Snapshot Protection option if enabled.
+
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

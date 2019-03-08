@@ -595,15 +595,9 @@ Billing information is available via the UKCloud Portal.
 
 ### How can I pay for the services?
 
-UKCloud will issue invoices as follows:
+Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
 
-- At point of order for upfront fees and service options
-
-- Annually in advance for pre-payment fees
-
-- Monthly in arrears for monthly fees
-
-Payment can be made by direct bank transfer (BACS/CHAPS).
+If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
 
 ### What are the termination fees?
 
@@ -639,4 +633,4 @@ Protective Monitoring is included for our IaaS platform and follows GPG 13.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

@@ -239,6 +239,10 @@ The service is charged on a per VM basis based on:
 
 - The length of time those backups are held
 
+### Will I be charged for Snapshot Protection if I also have Synchronous Protection with Geo-resilience?
+
+No. Synchronous Protection with Geo-resilience comes with 14-day Snapshot Protection as standard when selected, with the option for 28-day Snapshot Protection free of charge. Please note that you will still be charged for any storage consumed associated with the Snapshot Protection option.
+
 ### When I disable snapshot protection on my VM, will billing immediately stop?
 
 Billing stops immediately and you will no longer be charged regardless of the chosen retention period. In addition, you will no longer have access to any snapshots taken. 
@@ -261,4 +265,4 @@ Protection products are not automatically applied to VMs running on the UKCloud 
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

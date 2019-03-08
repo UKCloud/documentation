@@ -1,6 +1,6 @@
 ---
-title: How to create a Key Vault using the Azure Stack Portal | UKCloud Ltd
-description: Provides help for creating a Key Vault on UKCloud for Microsoft Azure
+title: How to Create a key vault Using the Azure Stack portal | UKCloud Ltd
+description: Provides help for creating a key vault on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
 toc_rootlink: Users
@@ -8,12 +8,12 @@ toc_sub1: How To
 toc_sub2: Create a Key Vault
 toc_sub3:
 toc_sub4:
-toc_title: Create a Key Vault - Portal
+toc_title: Create a key vault - portal
 toc_fullpath: Users/How To/Create a Key Vault/azs-how-create-key-vault-portal.md
 toc_mdlink: azs-how-create-key-vault-portal.md
 ---
 
-# How to create a Key Vault using the Azure Stack portal
+# How to create a key vault using the Azure Stack portal
 
 ## Overview
 
@@ -25,7 +25,7 @@ The following process shows you how to setup a vault within Azure Stack's Key Va
 
 To complete the steps in this guide, you must have appropriate access to a subscription in the UKCloud Azure Stack portal.
 
-## Creating a new Key Vault
+## Creating a new key vault
 
 1. Log in to the UKCloud Azure Stack portal.
 
@@ -64,11 +64,11 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 6. Click **Create**.
 
-7. You can monitor the progress of your Key Vault's deployment by clicking the **Notifications** icon.
+7. You can monitor the progress of your key vault's deployment by clicking the **Notifications** icon.
 
    ![!Notification showing vault deployment in progress](images/azsp_createvm_progress.png)
 
-## Adding a secret to the Key Vault
+## Adding a secret to the key vault
 
 1. Once the key vault has been deployed, navigate to it by clicking **All services** in the favourites panel, then selecting **Key Vaults** under the *Security + Identity* section.
 
@@ -115,4 +115,4 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

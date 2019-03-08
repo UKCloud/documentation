@@ -85,7 +85,7 @@ This guide assumes that you have the following already configured in your enviro
 
         **Result:**
 
-        ![Results of router-inteface-add command](images/ostack-neutron-router-interface-add.png)
+        ![Results of router-interface-add command](images/ostack-neutron-router-interface-add.png)
 
 4. Create a port to be used as the VIP addresses.
 
@@ -330,7 +330,7 @@ You may also wish to investigate keepalived ability to monitor applications on t
 
 ## First free load balancer
 
-To meet the UKCloud for OpenStack G-Cloud Service Definition commitment of one free load balancer per per project, we will credit the first two instances in a project which match the following criteria:
+To meet the UKCloud for OpenStack G-Cloud Service Definition commitment of one free load balancer per project, we will credit the first two instances in a project which match the following criteria:
 
   Region | Flavor ID | Image ID | Instance name prefix
   -------|-----------|----------|---------------------
@@ -341,4 +341,4 @@ To meet the UKCloud for OpenStack G-Cloud Service Definition commitment of one f
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

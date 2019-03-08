@@ -1,6 +1,6 @@
 ---
-title: Azure Stack Update Procedure | UKCloud Ltd
-description: Azure Stack Update Procedure Guide for Support
+title: How to perform an Azure Stack Update | UKCloud Ltd
+description: Azure Stack update procedure guide for support
 services: azure-stack
 author: Chris Black
 
@@ -9,11 +9,11 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Update Azure Stack Procedure
-toc_fullpath: Operators/Update Azure Stack/azs-how-ps-update-azure-stack.md
+toc_title: Perfom an Azure Stack update
+toc_fullpath: Operators/How To/azs-how-ps-update-azure-stack.md
 toc_mdlink: azs-how-ps-update-azure-stack.md
 ---
-# Azure Stack Update Procedure
+# How to perfom an Azure Stack update
 
 This guide is intended to provide a reference on how can we perform Azure Stack Updates.
 
@@ -59,4 +59,4 @@ Prerequisites from a Windows-based external client.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

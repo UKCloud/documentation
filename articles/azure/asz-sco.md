@@ -8,12 +8,12 @@ toc_sub1: Service Scope
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for Microsoft Azure Service Scope
+toc_title: UKCloud for Microsoft Azure service scope
 toc_fullpath: Users/Service Scope/asz-sco.md
 toc_mdlink: asz-sco.md
 ---
 
-# UKCloud for Microsoft Azure Service Scope
+# UKCloud for Microsoft Azure service scope
 
 ## About this document
 
@@ -262,4 +262,4 @@ The following documents contain more information about UKCloud for VMware and th
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

@@ -51,12 +51,12 @@ Please select the type of disk you are trying to expand:
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
-Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group name and VM name
-$RGName = '<output form="ResourceGroup" name="result" style="display: inline;">myResourceGroup</output>'
-$VMName = '<output form="VMName" name="result" style="display: inline;">myVM</output>'
+$RGName = "<output form="ResourceGroup" name="result" style="display: inline;">myResourceGroup</output>"
+$VMName = "<output form="VMName" name="result" style="display: inline;">myVM</output>"
 
 # Obtain a reference to your VM
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
@@ -78,12 +78,12 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
-Add-AzureRMEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 Login-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group name and VM name
-$RGName = '<output form="ResourceGroup" name="result2" style="display: inline;">myResourceGroup</output>'
-$VMName = '<output form="VMName" name="result2" style="display: inline;">myVM</output>'
+$RGName = "<output form="ResourceGroup" name="result2" style="display: inline;">myResourceGroup</output>"
+$VMName = "<output form="VMName" name="result2" style="display: inline;">myVM</output>"
 
 # Obtain a reference to your VM
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
@@ -125,4 +125,4 @@ No further action is required.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

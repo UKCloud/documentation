@@ -64,7 +64,7 @@ When you first log in to a Portal account that has 2FA enabled, you'll be prompt
 
 ## Related videos
 
-- [UKCloud Portal overview video](https://vimeo.com/298596419)
+- [*UKCloud Portal overview video*](ptl-vid-portal.md)
 
 ## Feedback
 

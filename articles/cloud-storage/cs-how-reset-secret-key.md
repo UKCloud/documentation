@@ -67,7 +67,7 @@ This guide has shown you how to reset your Cloud Storage secret key. For informa
 
 - Cloud Storage Gateways
 
-    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
     - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
@@ -75,4 +75,4 @@ This guide has shown you how to reset your Cloud Storage secret key. For informa
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

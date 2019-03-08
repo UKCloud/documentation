@@ -156,7 +156,7 @@ This guide has shown you how to use the Boto package for Python to interact with
 
     - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
-    - [*How to install the CIF-ECS Tool*](cs-how-install-cifs-ecs.md)
+    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
 
 

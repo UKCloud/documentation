@@ -397,13 +397,13 @@ In this Getting Started Guide, you've learned the basics about the Cloud Storage
 
 - Cloud Storage Gateways
 
-  - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
   - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
 ## Related videos
 
-- [CIFS-ECS overview video](https://vimeo.com/300264583)
+- [*GeoDrive 2.0 overview video*](cs-vid-geodrive2-client-overview.md)
 
 ## Glossary
 

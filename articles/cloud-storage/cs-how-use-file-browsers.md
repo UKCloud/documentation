@@ -36,7 +36,7 @@ In this article, we'll look at some of the many applications that enable you to 
 
 - [Windows applications](#windows-applications)
 
-- [Browser extensions for Chrome and Firefox](#browser-extensions)
+- [Internet browser access](#internet-browser-access)
 
 The inclusion of applications in this article should not be taken as an endorsement or recommendation of them by UKCloud. However, we have tested them with our Cloud Storage service and verified that they work correctly.
 
@@ -155,78 +155,69 @@ To install and configure S3 Browser:
     > [!NOTE]
     > Not all S3 features are implemented by the ECS S3 compatible API, so some functionality may not work. However, common file operations (create, read, write and delete) all work well.
 
-## Browser extensions
+## Internet browser access
 
-This section takes you through installing and configuring browser extensions that enable you to browse the contents of Cloud Storage using your web browser.
+This section takes you through installing and configuring browser access that enables users to browse the contents of Cloud Storage using a web browser.
 
-Atmos extensions are available for both Chrome and Firefox. Although the extensions included in this article were natively built for the Atmos platform, they also work with ECS using Atmos endpoints and therefore work well with Cloud Storage.
+EMC provides an HTML5 application that you can install in your Atmos bucket to generate a URL that enables you to share the bucket with other users who require access to cloud storage.
 
-S3 extensions are also available for both browsers, but none of them include the functionality to customise the server host name, which is a requirement for connecting to Cloud Storage. If we find S3 browser extensions that offer this functionality in the future, we'll update this article.
+   > [!NOTE]
+   > If you have multiple buckets under the same endpoint, you can provide access to them all from a single URL. However, if you have multiple buckets hosted in both Cloud Storage regions, you'll need to install the application in both regions and access is via a different URL for each region.
 
-### Chrome — Atmos for Chrome
+S3 extensions are also available for browsers, but none of them include the functionality to customise the server host name, which is a requirement for connecting to Cloud Storage. If we find S3 browser extensions that offer this functionality in the future, we'll update this article.
 
-To install and configure Atmos for Chrome:
+### Atmos HTML5 application
+   >
+   > [!NOTE]
+   > For installation and initial configuration of the Atmos HTML5 application, you will need the following Prerequisite information:
+   >
+   > Atmos Access Key - in the form of SubtennantID/User
+   >
+   > Atmos Secret Key - Shared Secret Key
+   >
+   > A folder within an existing bucket or new bucket to host the GUI files, for example /<bucket_name>/HTML5UI/ or /HTML5UI/
 
-1. Download and install the [Atmos for Chrome extension](https://chrome.google.com/webstore/detail/atmos-for-chrome/befofpjhdclgccimklkaheifjajbcmnk).
+To install and configure the Atmos HTML5 application:
 
-2. After you complete the installation, you'll see a globe icon in your browser toolbar. Click this icon to launch the extension.
+1. Download and extract the [Atmos HTML5 application](https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/AtmosHTML5.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1575471403&Signature=49Xss9swLLmSPmkAyruywkscUas%3D).
 
-    ![Atmos for Chrome toolbar icon](images/cs-file-browsers-ext-1.png)
+2. **On Windows:** Open a command prompt, navigate to the extracted files and run the following command: `upload.bat WebContent\main.html /<bucket_name>/<optional_path>/`.
 
-3. To connect the extension to Cloud Storage, click the **Manage Accounts** button.
+    **On Linux:** Open a terminal prompt, or from the CLI, navigate to the extracted files and run the following command: `upload.sh WebContent\main.html /<bucket_name>/<optional_path>/`.
 
-4. Add an account for Cloud Storage using your credentials, which you can find in the *Storage* section of the UKCloud Portal.
+3. The installer script will run and prompt for the following information:
 
-    > [!NOTE]
-    > The UID value is a combination of the subtenant ID (bucket name) and your user ID, joined by a forward slash (`/`): `<subtenant_id>/<user_id>`. Ensure you enter the correct endpoint in the **Atmos URL** field, as shown in [API endpoints](#api-endpoints).
+    - Atmos host name, which is the UKCloud endpoint URL for your selected storage bucket for example `atmos.cas.frn00006.ukcloud.com`
 
-    ![Atmos for Chrome Manage Accounts dialog box](images/cs-file-browsers-ext-2.png)
+    - Atmos port - Enter 443.
 
-5. When you're done, click **Save**, then **Close**.
+    - Atmos UID - Enter your selected storage bucket's Atmos access key for example `a554f348g57f48729c0247r9730e29a1/10-10-10-89431b-1`
 
-6. You can now:
+    - Atmos secret - Enter your selected storage bucket's shared secret key.
+
+4. When you have provided all the required information, the installer will connect to the bucket and upload the files to the requested folder. Once the script has finished, it will output a URL that you should copy to your clipboard and then keep somewhere safe.
+
+5. Enter the generated URL into your browser and, when connecting for the first time, the application will prompt you to specify an account UID and shared secret for the account that you want to access. After you enter the UID and secret, you can test the credentials using the test button. If the test is successful, click OK to add the credentials to the application and you can then access the bucket.
+
+    ![Atmos HTML5 Add account interface](images/cs-file-browsers-html5-2.png)
+
+6. If you want to add more cloud storage accounts that are located at the same Cloud Storage endpoint, you can add them to the application using the cog icon in the top right-hand corner.
+
+7. You can now:
 
     - Browse the buckets and files stored in your account
 
-    - Use the toolbar buttons to upload files and folders
+    - Use the toolbar buttons to upload files
 
     - Double-click items to download them
 
-    - Access other operations for selected items through context menus
+    - Access other operations for selected items through the toolbar buttons
 
-    ![Atmos for Chrome interface](images/cs-file-browsers-ext-3.png)
-
-### Firefox — AtmosFox
-
-To install and configure AtmosFox:
-
-1. Download and install the [AtmosFox extension](https://addons.mozilla.org/en-US/firefox/addon/atmosfox/)
-
-2. After you complete the installation, in Firefox, select **AtmosFox Explorer** from the **Tools** menu to launch the extension.
-
-    > [!NOTE]
-    > You may need to press the **Alt** key to reveal the **Tools** menu.
-
-    ![AtmosFox menu option](images/cs-file-browsers-ext-4.png)
-
-3. To connect to Cloud Storage, in the *Manage Account* dialog box, specify your Cloud Storage credentials, which you can find in the *Storage* section of the UKCloud Portal.
-
-    > [!NOTE]
-    > The UID value is a combination of the subtenant ID (bucket name) and your user ID, joined by a forward slash (`/`): `<subtenant_id>/<user_id>`. Ensure you enter the correct endpoint in the Atmos URL field, as shown in [API endpoints](#api-endpoints).
-
-    ![AtmosFox Manage Accounts dialog box](images/cs-file-browsers-ext-5.png)
-
-4. When you're done, click **Save**, then **Close**.
-
-5. You can now browse the buckets and files stored in your account.
-
-    You'll see two lists of files: your local machine on the left and your Cloud Storage on the right. Use the large red arrows in the centre to transfer files to and from Cloud Storage. Context menus work well on both sides, enabling you to access a variety of functions.
-
-    ![AtmosFox interface](images/cs-file-browsers-ext-6.png)
+    ![Atmos HTML5 Application interface](images/cs-file-browsers-html5-1.png)
 
 ## Next steps
 
-This guide has shown you how to create a new Cloud Storage user. For more information about how to use the service, see the following articles:
+This article has shown you how to browse Cloud Storage buckets using various different applications. For more information about how to use the service, see the following articles:
 
 - [*Getting Started Guide for Cloud Storage*](cs-gs.md)
 
@@ -236,7 +227,7 @@ This guide has shown you how to create a new Cloud Storage user. For more inform
 
 - Cloud Storage Gateways
 
-    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
     - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
@@ -244,4 +235,4 @@ This guide has shown you how to create a new Cloud Storage user. For more inform
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com/). Alternatively, you can contact us at <products@ukcloud.com>.

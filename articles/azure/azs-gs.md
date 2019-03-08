@@ -14,7 +14,7 @@ toc_fullpath: Users/Getting Started/azs-gs.md
 toc_mdlink: azs-gs.md
 ---
 
-# Getting Started Guide for UKCloud for Microsoft Azure
+# Getting started guide for UKCloud for Microsoft Azure
 
 ## Overview
 
@@ -276,13 +276,13 @@ In this Getting Started Guide, you've learned the basics about UKCloud for Micro
 
 - [*How to create a virtual machine from the Azure Marketplace*](azs-how-create-vm.md)
 
-- [*How to create an Azure user group*](azs-how-create-azure-group.md)
+- [*How to create an Azure user group*](azs-how-manage-azure-group.md)
 
 - [*How to use the Azure Stack API*](azs-how-use-azure-api.md)
 
 ## Related videos
 
-- [Microsoft Azure Stack Portal overview video](https://vimeo.com/305064724)
+- [*Microsoft Azure Stack Portal overview video*](azs-vid-overview.md)
 
 ## Glossary
 
@@ -290,22 +290,22 @@ This section provides a glossary of terms specific to UKCloud for Microsoft Azur
 
 **Azure Active Directory**&nbsp;&nbsp;The service that provides identify management within UKCloud for Microsoft Azure.
 
-**cloud operator**&nbsp;&nbsp;An entity that provides services, via subscriptions, on Azure Stack. UKCloud is a cloud operator.
+**Cloud operator**&nbsp;&nbsp;An entity that provides services, via subscriptions, on Azure Stack. UKCloud is a cloud operator.
 
 **Microsoft Azure**&nbsp;&nbsp;Microsoft's public cloud service.
 
 **Microsoft Azure Stack**&nbsp;&nbsp;An extension of Azure that provides cloud computing to an on-premises environment.
 
-**resource**&nbsp;&nbsp;An object within Azure Stack, such as a virtual machine, network or storage.
+**Resource**&nbsp;&nbsp;An object within Azure Stack, such as a virtual machine, network or storage.
 
-**resource group**&nbsp;&nbsp;A collection of resources, services and applications.
+**Resource group**&nbsp;&nbsp;A collection of resources, services and applications.
 
-**subscription**&nbsp;&nbsp;A mechanism for organising resources and services for tenants to consume.
+**Subscription**&nbsp;&nbsp;A mechanism for organising resources and services for tenants to consume.
 
 **UKCloud for Microsoft Azure**&nbsp;&nbsp;A UKCloud IaaS and PaaS service that works as an extension of Microsoft's own Azure Public Cloud, delivered from our assured sovereign data centres.
 
-**tenant**&nbsp;&nbsp;An entity that consumes services from cloud operators in Azure Stack.
+**Tenant**&nbsp;&nbsp;An entity that consumes services from cloud operators in Azure Stack.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

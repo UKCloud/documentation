@@ -85,6 +85,10 @@ a:hover {
   margin-left: 25px;
 }
 
+.subnav-margin-right {
+  margin-right: 25px;
+}
+
 .navbar-margin-left {
   margin-left: 15px;
   padding-left: 15px;
@@ -328,4 +332,11 @@ article {
 .affix ul > li > a:hover:before {
   display: block;
   white-space: normal;
+}
+
+.output-code {
+  color: rgb(51, 51, 51);
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size: 13px;
+  padding: 0px;
 }

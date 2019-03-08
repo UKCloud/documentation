@@ -8,7 +8,7 @@
     <title>Getting Started Guide for Secure Remote Access | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for Secure Remote Access | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.6.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/sra/sra-gs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -153,11 +162,11 @@ via the service request:</p>
 <h2 id="csr-submission-to-ukcloud">CSR submission to UKCloud</h2>
 <p>We request that you paste the contents of the CSR file directly into a ticket for us to generate the associated certificate(s), but you can also email it to us if you cannot access the Portal.</p>
 <h2 id="vpn-cisco-anyconnect-client-setup">VPN Cisco AnyConnect client setup</h2>
-<p>To access yoru SRA VDC you need to download the Cisco AnyConnect client and install it on your remote access devices.</p>
+<p>To access your SRA VDC you need to download the Cisco AnyConnect client and install it on your remote access devices (requires UKCloud Portal login).</p>
 <p>For each OS there is the main Cisco AnyConnect client software install and an additional executable to enable the FIPS capability. You need to run both.</p>
+<h3 id="download-link">Download link</h3>
+<p><a href="https://portal.skyscapecloud.com/support/knowledge_centre/a0e452d8-cd7b-49a4-a3ca-f791620cb084">https://portal.skyscapecloud.com/support/knowledge_centre/a0e452d8-cd7b-49a4-a3ca-f791620cb084</a></p>
 <h3 id="linux-1">Linux</h3>
-<h4 id="download-link">Download link</h4>
-<p><a href="https://portal.ukcloud.com/support/knowledge_centre/a0e452d8-cd7b-49a4-a3ca-f791620cb084">https://portal.ukcloud.com/support/knowledge_centre/a0e452d8-cd7b-49a4-a3ca-f791620cb084</a></p>
 <h4 id="install-the-anyconnect-client">Install the AnyConnect client</h4>
 <pre><code>tar zxvf anyconnect-linux-64-&lt;version number&gt;-k9.tar.gz
 
@@ -171,18 +180,15 @@ sudo ./vpn_install.sh
 ./ anyconnect-linux-64-&lt;version number&gt;-enableFIPS
 </code></pre>
 <h3 id="windows-1">Windows</h3>
-<h4 id="download-link-1">Download link</h4>
-<p><a href="https://portal.ukcloud.com/support/knowledge_centre/9af4958c-04c0-4ae1-8eb2-2733dc8042ce">https://portal.ukcloud.com/support/knowledge_centre/9af4958c-04c0-4ae1-8eb2-2733dc8042ce</a></p>
 <h4 id="install-the-anyconnect-client-1">Install the AnyConnect client</h4>
 <p>The windows installation has the option of <code>.msi</code> or <code>.iso</code> (that contains the <code>.msi</code>) for the AnyConnect client image. The following installs may need to be run as administrator depending on the local policy of your Windows device.</p>
 <p>Right click on the <code>anyconnect-win-&lt;version number&gt;-pre-deploy.msi</code> and select Install.</p>
 <h4 id="enable-fips-1">Enable FIPS</h4>
 <p>Double click <code>anyconnect-EnableFIPS-win-&lt;version number&gt;.exe</code> and then enter <code>y</code> when asked at the command prompt.</p>
 <h3 id="mac">Mac</h3>
-<h4 id="download-link-2">Download link</h4>
-<p><a href="https://portal.ukcloud.com/support/knowledge_centre/e8b2d284-ec20-45e4-aed6-5a6071299064">https://portal.ukcloud.com/support/knowledge_centre/e8b2d284-ec20-45e4-aed6-5a6071299064</a></p>
+<p>No further instructions required.</p>
 <h2 id="anyconnect-client-software">AnyConnect client software</h2>
-<p>We'll make the latest Cisco AnyConnect client software available via the Knowledge Centre using the links above. Using the latest version of the AnyConnect client will probably be a requirement of your ITSHC or service assurance wrap so it will be worth checking the above articles periodically.</p>
+<p>We'll make the latest Cisco AnyConnect client software available via the Knowledge Centre using the link above. Using the latest version of the AnyConnect client will probably be a requirement of your ITSHC or service assurance wrap so it will be worth checking the above articles periodically.</p>
 <p>If a client is upgraded from a previous install then the following post installation steps will need to be performed again to ensure the client configuration isn't reverted to the default.</p>
 <h2 id="post-installation-configuration">Post-installation configuration</h2>
 <p>Once you've installed the AnyConnect software and certificates on your device, you need to install the connection profile which is available in the Knowledge Centre (<a href="https://portal.skyscapecloud.com/support/knowledge_centre/25a7111c-139e-4fd2-a52c-3412689bf1d3">https://portal.skyscapecloud.com/support/knowledge_centre/25a7111c-139e-4fd2-a52c-3412689bf1d3</a>). Unzip the file and copy the xml to the following location:</p>
@@ -206,7 +212,7 @@ sudo ./vpn_install.sh
 </table>
 <h3 id="for-linux-only">For Linux only</h3>
 <p>In addition to the AnyConnect profile, you also need to install a local policy which is available in the Knowledge Centre:</p>
-<p><a href="https://portal.ukcloud.com/support/knowledge_centre/2effd0b2-1eda-4999-87a6-6140e5fc07ea">https://portal.ukcloud.com/support/knowledge_centre/2effd0b2-1eda-4999-87a6-6140e5fc07ea</a></p>
+<p><a href="https://portal.skyscapecloud.com/support/knowledge_centre/2effd0b2-1eda-4999-87a6-6140e5fc07ea">https://portal.skyscapecloud.com/support/knowledge_centre/2effd0b2-1eda-4999-87a6-6140e5fc07ea</a></p>
 <p>Unzip the file and copy it to: <code>/opt/cisco/anyconnect/AnyConnectLocalPolicy.xml</code>.</p>
 <p>Once you've copied the connection profile and local policy to the correct locations, you need to restart the AnyConnect service (using the command service <code>vpnagentd restart</code>) or reboot the VM.</p>
 <h2 id="sra-certificates">SRA certificates</h2>
@@ -297,7 +303,7 @@ sudo ./vpn_install.sh
 <p>In most instances we'll create a virtual machine (VM) within the SRA VDC that you can VPN into in order to log in to the Elevated portal to provision and manage your SRA and Elevated VDC. Once this VM is deployed, it becomes your responsibility to manage and maintain it. This VM will be billed according to standard UKCloud billing process.</p>
 <p>Addresses to hit the Elevated portal and vCloud Director API can be obtained by raising a support ticket through the UKCloud Portal.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -307,13 +313,6 @@ sudo ./vpn_install.sh
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/sra/sra-gs.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -332,7 +331,7 @@ sudo ./vpn_install.sh
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>

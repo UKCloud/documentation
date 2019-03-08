@@ -22,6 +22,8 @@ UKCloud for VMware provides Distributed Firewall (DFW) functionality as part of 
 
 You can have a routed or isolated network on a vApp and still use a DFW at the VDC level to complement it. The NSX edge handles North-South bound traffic while the DFW is designed to manage East-West bound traffic.
 
+![Distributed Firewall overview](images/vmw-dfw-overview.png)
+
 The DFW rules can be based on Layer 2 (L2) up to Layer 4 (L4).
 
 - L2 rules (Ethernet tab) are based on MAC address L2 protocols like ARP, RARP and LLDP
@@ -190,7 +192,7 @@ Security groups enable you to categorise based on the access level required. If 
 
 ## Related videos
 
-- [VMware Distributed Firewall video](https://vimeo.com/307686299)
+- [*VMware Distributed Firewall video*](vmw-vid-dfw.md)
 
 ## Feedback
 

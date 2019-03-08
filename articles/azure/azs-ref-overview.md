@@ -75,29 +75,34 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
 
 - Azure Stack supports a subset of Azure VM extensions; UKCloud for Microsoft Azure currently supports the following:
 
-  - BGInfo v2.1
-
-  - CustomScriptExtension v1.8
-
-  - JsonADDomainExtension v1.3
-
-  - VMAccessAgent v2
-
-  - CustomScriptForLinux v1.5.2.0
-
-  - OSPatchingForLinux v2.3.0.1
-
-  - VMAccessForLinux v1.4.0.0
-
-  - DockerExtension v1.1.1606092330
-
-  - DSC v2.19.0.0
-
-  - IaaSAntimalware v1.4.0.0
-
-  - IaaSDiagnostics v1.10.1.1
-
-  - MicrosoftMonitoringAgent v1.0.10900.0
+  - CustomScriptForLinux  v1.5.2.2 & v1.5.2.0
+  
+  - OSPatchingForLinux  v2.3.0.1
+  
+  - VMAccessForLinux  v1.4.0.0
+  
+  - CustomScriptExtension  v1.9.1 & v1.8
+  
+  - BGInfo  v2.1
+  
+  - JsonADDomainExtension  v1.3
+  
+  - VMAccessAgent  v2.0
+  
+  - SqlIaaSAgent  v1.2.30.0
+  
+  - DSC  v2.76.0.0 & v2.19.0.0
+  
+  - DockerExtension  v1.1.1606092330
+  
+  - CustomScript  v2.0.6
+  
+  - IaaSAntimalware  v1.4.0.0
+  
+  - IaaSDiagnostics  v1.10.1.1
+  
+  - MicrosoftMonitoringAgent  v1.0.10900.0
+  
 
   For an up-to-date list of the supported extensions, perform the following steps:
 
@@ -109,10 +114,11 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
 
     Then run the following commands:
 
-    ```powershell
-    Add-AzureRMEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+    ```PowerShell
+    Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
     Login-AzureRmAccount -EnvironmentName "AzureStackAdmin"
-    Get-AzureRmVmImagePublisher -Location frn00006 | ` Get-AzureRmVMExtensionImageType | ` Get-AzureRmVMExtensionImage | ` Select Type, Version | ` Format-Table -Property * -AutoSize
+    Get-AzureRmVMImagePublisher -Location frn00006 | Get-AzureRmVMExtensionImageType | Get-AzureRmVMExtensionImage | `
+      Select-Object Type, Version | Format-Table -Property * -AutoSize
     ```
 
 - Use load balancers to make the best use of IP address quota
@@ -162,6 +168,10 @@ For more information about UKCloud for Microsoft Azure, see:
 - [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md)
 
 - [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
+
+## Related videos
+
+- [*Microsoft Azure Stack Portal overview video*](azs-vid-overview.md)
 
 ## Feedback
 

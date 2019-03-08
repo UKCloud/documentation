@@ -116,7 +116,7 @@ To allow this communication, you need to create a source network address transla
 
 ## Related videos
 
-- [How to license Windows VMs using the UKCloud Key Management Server](https://vimeo.com/308877124)
+- [*Licensing Windows VMs using the UKCloud Key Management Server video*](vmw-vid-licensing-kms.md)
 
 ## Feedback
 

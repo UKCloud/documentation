@@ -24,7 +24,7 @@ CloudArray is a fully integrated appliance which uses object storage (raw unorga
 As CloudArray is a fully integrated appliance, you don't have to spend money and resources managing operating systems for the solutions. It uses a combination of object storage and a local cache reserve to provide unlimited storage with near local storage performance, using the cache to store frequently used files locally, while asynchronously replicating data to UKCloud's Cloud Storage platform. CloudArray also supports Amazon's REST S3 API to expand on-premises SANs and NAS solutions with on-demand elastic cloud capacity.
 
 > [!TIP]
-> If you do not need the features of CloudArray such as deduplication and location caching, or do not require a fully-integrated cloud gateway appliance, you may want to consider [CIFS-EFS](cs-how-install-cifs-ecs.md) as an alternative.
+> If you do not need the features of CloudArray such as deduplication and location caching, or do not require a fully-integrated cloud gateway appliance, you may want to consider the [GeoDrive Client 2.0](cs-how-install-geodrive2-client.md) as an alternative.
 
 ## Use cases
 
@@ -511,10 +511,10 @@ This guide has shown you how to create a new Cloud Storage user. For more inform
 
 - Cloud Storage Gateways
 
-    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

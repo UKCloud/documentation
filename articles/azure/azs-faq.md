@@ -117,6 +117,10 @@ Storage is persistent unless it is virtual machine temporary storage.
 
 Access to the UKCloud for Microsoft Azure portal is available via the UKCloud Portal. You'll be provided with login details once your account is provisioned.
 
+### Which ports need to be open to access my UKCloud for Microsoft Azure solution?
+
+The UKCloud for Microsoft Azure portal requires port 80 (HTTP) and port 443 (HTTPS) to be open.
+
 ### How do I access my solutions via government networks?
 
 UKCloud for Microsoft Azure will be available on the internet, HSCN, Janet, RLI and PSN networks. Initial access will be from the appropriate UKCloud Portal.
@@ -194,15 +198,10 @@ For infrastructure solutions, you'll be billed by the smallest unit of time whic
 
 ### How can I pay for the services?
 
-UKCloud will issue invoices as follows:
+Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
 
-- At point of order for upfront fees and service options
+If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
 
-- Annually in advance for pre-payment fees
-
-- Monthly in arrears for monthly fees
-
-Payment can be made by direct bank transfer (BACS/CHAPS).
 
 ### Are there any termination fees?
 
@@ -227,3 +226,7 @@ For more information, see our Cross Domain Security Zone documentation.
 Protective monitoring is included for our all our services and follows GPG 13.
 
 For more information about this service, see our [*Protective Monitoring FAQs*](../other/other-faq-promon.md).
+
+## Feedback
+
+If you find an issue with this article, click Improve this Doc to suggest a change. If you have an idea for how we could improve any of our services, visit UKCloud Ideas. Alternatively, you can contact us at products@ukcloud.com.

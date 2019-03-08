@@ -45,3 +45,4 @@ project.lock.json
 
 # IntelliJ / PyCharm
 .idea
+articles/.DS_Store

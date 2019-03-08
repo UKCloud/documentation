@@ -8,6 +8,8 @@
     href: other-faq-g10.md
   - name: Invoice and billing FAQs
     href: other-faq-billing.md
+  - name: Jumpstart FAQs
+    href: other-faq-jumpstart.md
   - name: MISO rebate FAQs
     href: other-faq-miso-rebate.md
   - name: Protective Monitoring FAQs
@@ -22,7 +24,7 @@
     href: other-how-contribute-knowledge.md
   - name: Remove access rights from Single Sign-On users
     href: other-how-delete-sso-user.md
-  - name: Use the UKCloud Pricing Estimator Tool
+  - name: Use the UKCloud Pricing Estimation Tool
     href: other-how-use-pricing-tool.md
 - name: Reference
   items:
@@ -44,7 +46,7 @@
     href: other-ref-knowledge-template.md
   - name: Knowledge Centre guidelines
     href: other-ref-knowledge-guidelines.md
-  - name: Known bugs with the UKCloud Pricing Estimator Tool
+  - name: Known bugs with the UKCloud Pricing Estimation Tool
     href: other-ref-pricing-tool-bugs.md
   - name: Methods for exporting data
     href: other-ref-export-data.md

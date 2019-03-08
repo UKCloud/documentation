@@ -5,11 +5,11 @@ services: azure-stack
 author: Sue Highmoor
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Create a virtual machine
+toc_sub2: Create a Virtual Machine
 toc_sub3:
 toc_sub4:
 toc_title: Create a virtual machine - Portal
-toc_fullpath: Users/How To/Create a virtual machine/azs-how-create-vm.md
+toc_fullpath: Users/How To/Create a Virtual Machine/azs-how-create-vm.md
 toc_mdlink: azs-how-create-vm.md
 ---
 
@@ -57,7 +57,10 @@ VMs provide the basic compute building blocks in Azure Stack. You can create VMs
 
 7. In the *Settings* step, change any of the optional settings as required for your VM, then click **OK**.
 
-    ![Create virtual machine > Settings](images/azsp_createvm_settings.png)
+    ![Create virtual machine > Settings](images/azsp_createvm_settings_v1811.png)
+
+>[!NOTE]
+>As of version 1811 for storage "managed disks" are selected by default and you need to select the public inbound ports you want enabled.
 
 8. In the *Summary* step, review the selections you've made and then click **OK** to start the deployment.
 
@@ -94,6 +97,10 @@ For more information about UKCloud for Microsoft Azure, see:
 - [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md)
 
 - [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
+
+## Related videos
+
+- [*Microsoft Azure Stack Portal overview video*](azs-vid-overview.md)
 
 ## Feedback
 
