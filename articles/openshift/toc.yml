@@ -30,3 +30,5 @@
   items:
   - name: Lifecycle and patch management
     href: oshift-ref-lifecycle.md
+  - name: Making the most of your UKCloud for OpenShift trial
+    href: oshift-ref-trial.md

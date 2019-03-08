@@ -4455,12 +4455,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-ref-trial.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-ref-trial.html",
+          "hash": "fZTnoh23Ed7kuC//Hlgk2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/openshift/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "me4KcOD5UtFHQaDbSgpKDQ=="
+          "hash": "XLpbyq9leNyJTPGYrBq+8g=="
         }
       },
       "is_incremental": false,
@@ -15293,7 +15305,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 330,
+          "total_file_count": 331,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
