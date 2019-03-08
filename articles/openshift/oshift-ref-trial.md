@@ -26,7 +26,7 @@ This article is intended for developers who have signed up for an OpenShift tria
 
 ## Introduction to UKCloud for OpenShift trials
 
-OpenShift provides platform-as-a-service, which means that you don't need to worry about the underlying hardware or operating system. Instead, you can focus on developing, deploying, scaling and monitoring your applications in OpenShift, maximising your return on investment in terms of money and time.
+OpenShift provides a platform-as-a-service, which means that you don't need to worry about the underlying hardware or operating system. Instead, you can focus on developing, deploying, scaling and monitoring your applications in OpenShift, maximising your return on investment in terms of money and time.
 
 With UKCloud for OpenShift, you have administrator access to your cluster, giving you the control you need to create, deploy and administer your environment as you see fit.
 
