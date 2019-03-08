@@ -18,7 +18,7 @@ toc_mdlink: oshift-ref-trial.md
 
 ## Overview
 
-Welcome to your UKCloud for OpenShift trial. Your trial OpenShift cluster is a secure, single-tenant private deployment on UKCloud's assured OpenStack cloud, avoiding any noisy neighbour issues. During an OpenShift trial the OpenShift cluster is typically only connected to the internet, however connectivity to many other Government Community Networks is available in OpenShift clusters after the trial phase. The purpose of an OpenShift trial is for you to get hands-on experience with Red Hat&trade; OpenShift container orchestration technology to see if this is the correct technology for you.
+Welcome to your UKCloud for OpenShift trial. Your trial OpenShift cluster is a secure, single-tenant private deployment on UKCloud's Assured OpenStack cloud, avoiding any noisy neighbour issues. During an OpenShift trial the OpenShift cluster is typically only connected to the internet, however connectivity to many other government community networks is available in OpenShift clusters after the trial phase. The purpose of an OpenShift trial is for you to get hands-on experience with Red Hat&trade; OpenShift container orchestration technology to see if this is the correct technology for you.
 
 ### Intended audience
 
