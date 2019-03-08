@@ -36,6 +36,7 @@ Within the public catalog, we use the following image naming convention to enabl
 For example:
 
 `win2012-r2-CURRENT`
+
 `win2012-r2-01-01-2019`
 
 ## Feedback
