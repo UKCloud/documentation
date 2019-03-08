@@ -42,7 +42,7 @@ To access the OpenShift cluster GUI, you need an internet-enabled device running
 
 **OpenShift documentation:** [*Web Console Walkthrough*](https://docs.openshift.com/container-platform/3.11/getting_started/developers_console.html)
 
-In addition to GUI access, you can also access OpenShift through the CLI. To do this, you need to install the OC client on your machines. To avoid any compatabilities issues please install the same version of the OC client as your OpenShift cluster. 
+In addition to GUI access, you can also access OpenShift through the CLI. To do this, you need to install the `oc` client on your machines. To avoid any compatibility issues please install the same version of the `oc` client as your OpenShift cluster. 
 
 **OpenShift documentation:** [*Installing the OC CLI*](https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html#installing-the-cli)
 
