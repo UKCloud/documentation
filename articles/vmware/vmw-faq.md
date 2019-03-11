@@ -471,7 +471,7 @@ It's not possible to restrict the automated VM snapshot backup to specific files
 
 ## Can I still use Synchronous Protection for my VMs?
 
-Synchronous Protection is no longer available as protection option for UKCloud for VMware. We recommend using one of our other protection options: Journaling Protection or Snapshot Protection. We will continue to provide support to customers who previously added Synchronous Protection to their environment, although we would encourage considering using Journaling Protection instead.
+Synchronous Protection is no longer available as protection option for UKCloud for VMware. We recommend using one of our other protection options: Journaling Protection or Snapshot Protection. We will continue to provide support to customers who previously added Synchronous Protection to their environment.
 
 ## Snapshot Protection
 
