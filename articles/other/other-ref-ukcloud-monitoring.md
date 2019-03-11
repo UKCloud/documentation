@@ -48,7 +48,7 @@ We use single pane views of multiple technologies to monitor our platform. These
 
 We monitor each individual component of the platform and then roll this data up into a single concise dashboard. This provides us with both RED and GREEN alerting systems at the component level and enables us to understand the overall health of a system.
 
-The list below provides a quick overview of how some of the key components of the UKCloud platform are monitored, which takes place across all services and both security domains.
+The list below provides a quick overview of how some of the key components of the UKCloud platform are monitored, which takes place across all services and both security domains (Assured and Elevated).
 
 ### UKCloud Portal
 
