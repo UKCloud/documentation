@@ -6628,6 +6628,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/other/images/other-monitoring-responsibilities.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-monitoring-responsibilities.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/other/images/pricing-bug-mac-1.png",
       "output": {
         "resource": {
@@ -7325,6 +7336,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-ukcloud-monitoring.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-ukcloud-monitoring.html",
+          "hash": "TEK+y4SAX3zIB1tI9GFmuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-windows-2016-templates.md",
       "output": {
         ".html": {
@@ -7377,7 +7400,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "K1gQ3JPCQ15RUg7GM5ieQw=="
+          "hash": "H5x9mHocvftrPI+FokX+rA=="
         }
       },
       "is_incremental": false,
@@ -15295,6 +15318,13 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -15305,14 +15335,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 331,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 332,
           "skipped_file_count": 0
         }
       }
