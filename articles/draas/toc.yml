@@ -9,7 +9,7 @@
 - name: Reference
   items:
   - name: Troubleshooting Disaster Recovery to the Cloud
-    href: drass-ref-troubleshooting.md
+    href: draas-ref-troubleshooting.md
 - name: Service Scope
   items:
   - name: Disaster Recovery as a Service Service Scope
