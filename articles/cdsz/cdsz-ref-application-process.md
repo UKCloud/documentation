@@ -33,7 +33,7 @@ The data owner can choose to sign off for a single CDSZ implementation or setup 
 
 ## Process overview
 
-![Overview of the key stages](images/cdsz-ref-process-overview.png)
+![Overview of the key stages](images/cdsz-process-overview.png)
 
 The following table provides more detail about each stage:
 
