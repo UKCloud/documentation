@@ -34,7 +34,7 @@ This guide is intended for customers who have:
 
 ## Before you begin
 
-Before you can start to implement a walled garden, you must have completed and passed the appropriate application process. For more information, see the [*UKCloud Cross Domain Security Zone application process*](cdsz-application-process.md).
+Before you can start to implement a walled garden, you must have completed and passed the appropriate application process. For more information, see the [*UKCloud Cross Domain Security Zone application process*](cdsz-ref-application-process.md).
 
 After your Walled Garden application has been approved, a service request is raised to implement the Walled Garden virtual data centre (VDC) and, if necessary, Elevated and Assured VDCs.
 
