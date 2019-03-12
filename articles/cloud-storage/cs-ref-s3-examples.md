@@ -9,8 +9,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: S3-compatible API examples
-toc_fullpath: Reference/cs-s3-examples.md
-toc_mdlink: cs-s3-examples.md
+toc_fullpath: Reference/cs-ref-s3-examples.md
+toc_mdlink: cs-ref-s3-examples.md
 ---
 
 # S3-compatible API examples for Cloud Storage
