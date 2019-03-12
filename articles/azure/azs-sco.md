@@ -1,7 +1,7 @@
 ---
 title: UKCloud for Microsoft Azure Service Scope | UKCloud Ltd
 description: Outlines important details regarding UKCloud for Microsoft Azure
-services: azure
+services: azure-stack
 author: Andy Webb
 toc_rootlink: Users
 toc_sub1: Service Scope
