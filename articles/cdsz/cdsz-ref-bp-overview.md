@@ -4,14 +4,14 @@ description: Provides an overview of the UKCloud Cross Domain Security Zone
 services: cdsz
 author: Sue Highmoor
 
-toc_rootlink: Blueprint
+toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Cross Domain Security Zone Blueprint
-toc_fullpath: Blueprint/cdsz-bp-overview.md
-toc_mdlink: cdsz-bp-overview.md
+toc_fullpath: Blueprint/cdsz-ref-bp-overview.md
+toc_mdlink: cdsz-ref-bp-overview.md
 ---
 
 # Cross Domain Security Zone Blueprint
