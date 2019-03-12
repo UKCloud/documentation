@@ -9,8 +9,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: What Intrusion Detection System (IDS) does UKCloud provide?
-toc_fullpath: Reference/conn-ids.md
-toc_mdlink: conn-ids.md
+toc_fullpath: Reference/conn-ref-ids.md
+toc_mdlink: conn-ref-ids.md
 ---
 
 # What Intrusion Detection System (IDS) does UKCloud provide?

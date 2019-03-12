@@ -9,8 +9,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: UKCloud Cross Domain Security Zone application process
-toc_fullpath: Reference/cdsz-application-process.md
-toc_mdlink: cdsz-application-process.md
+toc_fullpath: Reference/cdsz-ref-application-process.md
+toc_mdlink: cdsz-ref-application-process.md
 ---
 
 # UKCloud Cross Domain Security Zone application process

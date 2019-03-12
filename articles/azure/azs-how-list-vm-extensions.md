@@ -10,8 +10,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: List VM extensions - PowerShell
-toc_fullpath: Users/How To/azs-list-vm-extensions.md
-toc_mdlink: azs-list-vm-extensions.md
+toc_fullpath: Users/How To/azs-how-list-vm-extensions.md
+toc_mdlink: azs-how-list-vm-extensions.md
 ---
 
 # How to list VM extensions in Azure Stack using PowerShell
