@@ -14,9 +14,9 @@ toc_fullpath: Videos/vmw-vid-l2-vpn.md
 toc_mdlink: vmw-vid-l2-vpn.md
 ---
 
-# VMware L2 VN video
+# VMware L2 VPN video
 
-The following video provides a technical explanation of VMware's L2 VPN, which forms part of UKCloud for VMware's Enterprise Networking Bundle.
+The following video provides a technical explanation of VMware's L2 VPN feature, which forms part of the UKCloud for VMware's Enterprise Networking Bundle.
 
 <iframe src="https://player.vimeo.com/video/323161271" width="864" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
