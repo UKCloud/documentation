@@ -210,7 +210,7 @@ If Cross Domain Security Zone instances will be used in an active/active configu
 
 Every UKCloud Cross Domain Security Zone implementation requires customer Data Owner and UKCloud approval before the customer can carry out any implementation work.
 
-The approval process is shown below. More information is available in the [*UKCloud Cross Domain Security Zone application process*](cdsz-application-process.md).
+The approval process is shown below. More information is available in the [*UKCloud Cross Domain Security Zone application process*](cdsz-ref-application-process.md).
 
 ![Cross Domain Security Zone application process](images/cdsz-process-overview.png)
 
