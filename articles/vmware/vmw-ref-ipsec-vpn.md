@@ -44,7 +44,7 @@ While UKCloud for VMware meets the cryptographic requirements of the Foundation 
 
 ## PRIME profile
 
-The tables below list the requirements of the PRIME IPsec profile and indicate whether UKCloud for VMware meets them:
+The tables below lists the requirements of the PRIME IPsec profile and indicates whether UKCloud for VMware meets them:
 
 IKEv2 | Selection | Meets requirement
 ------|-----------|------------------
