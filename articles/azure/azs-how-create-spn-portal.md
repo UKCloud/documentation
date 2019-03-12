@@ -35,7 +35,7 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 ## Prerequisites
 
-- An active Azure Subscription
+- <p>An active Azure Subscription</p>
 
 ## Create an SPN
 
