@@ -53,7 +53,7 @@
   - name: Understanding PSN core services
     href: conn-ref-psn-core-services.md
   - name: What Intrusion Detection System (IDS) does UKCloud provide?
-    href: conn-ids.md
+    href: conn-ref-ids.md
 - name: Service Scope
   items:
   - name: Application-tuned DDoS protection Service Scope

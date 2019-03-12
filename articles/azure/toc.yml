@@ -25,7 +25,7 @@
     - name: Link Azure Storage Explorer to Azure Stack
       href: azs-how-link-storage-explorer.md
     - name: List VM extensions - PowerShell
-      href: azs-list-vm-extensions.md
+      href: azs-how-list-vm-extensions.md
     - name: 'Manage Azure user groups and permissions '
       href: azs-how-manage-azure-group.md
     - name: Resize an OS drive
@@ -73,7 +73,7 @@
   - name: Service Scope
     items:
     - name: UKCloud for Microsoft Azure service scope
-      href: asz-sco.md
+      href: azs-sco.md
   - name: Videos
     items:
     - name: Microsoft Azure Stack portal overview

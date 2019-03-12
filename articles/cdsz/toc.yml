@@ -1,7 +1,3 @@
-- name: Blueprint
-  items:
-  - name: Cross Domain Security Zone Blueprint
-    href: cdsz-bp-overview.md
 - name: FAQs
   items:
   - name: Cross Domain Security Zone FAQs
@@ -16,5 +12,7 @@
     href: cdsz-how-access-services-walled-garden.md
 - name: Reference
   items:
+  - name: Cross Domain Security Zone Blueprint
+    href: cdsz-ref-bp-overview.md
   - name: UKCloud Cross Domain Security Zone application process
-    href: cdsz-application-process.md
+    href: cdsz-ref-application-process.md

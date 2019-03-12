@@ -41,18 +41,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/azure/asz-sco.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/azure/asz-sco.html",
-          "hash": "dy5Vuzcg+NYNYYqOPtDrmg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-faq.md",
       "output": {
         ".html": {
@@ -201,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-spn-portal.html",
-          "hash": "zN6MbcfiV2+B96ElCHlX9A=="
+          "hash": "EteyyTmbX5ByDLa5bpshkg=="
         }
       },
       "is_incremental": false,
@@ -317,6 +305,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-list-vm-extensions.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-list-vm-extensions.html",
+          "hash": "oXr8uDjs4DuxZqPqcgx8kA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-manage-azure-group.md",
       "output": {
         ".html": {
@@ -377,18 +377,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/azure/azs-list-vm-extensions.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/azure/azs-list-vm-extensions.html",
-          "hash": "vs1bqlsjFNOTKQB+w/Cvhg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-ref-overview.md",
       "output": {
         ".html": {
@@ -406,6 +394,18 @@
         ".html": {
           "relative_path": "articles/azure/azs-ref-troubleshooting.html",
           "hash": "7UgT/xnjjCdkk+zMvyYRuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-sco.html",
+          "hash": "q+VlumZZolt84jPCOI+oWA=="
         }
       },
       "is_incremental": false,
@@ -1309,31 +1309,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "KJwQQDJSiq3n+L8pKTt9lA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/cdsz/cdsz-application-process.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/cdsz/cdsz-application-process.html",
-          "hash": "mwbZoX8kRU0Nrz+ZzEMZPw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/cdsz/cdsz-bp-overview.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/cdsz/cdsz-bp-overview.html",
-          "hash": "iOfpJHTU6FtqXfl1SiF4bg=="
+          "hash": "wuV16ilCsck4H+JnZG1NkQ=="
         }
       },
       "is_incremental": false,
@@ -1352,12 +1328,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/cdsz/cdsz-gs-walled-garden.md",
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-gs-walled-garden.html",
-          "hash": "UbfgCQOIgdnIuLY88qNtsQ=="
+          "hash": "zBbsxg74zHMtrvHIfdz/ZA=="
         }
       },
       "is_incremental": false,
@@ -1370,6 +1349,33 @@
         ".html": {
           "relative_path": "articles/cdsz/cdsz-how-access-services-walled-garden.html",
           "hash": "5vgeZ4VO5ir8t5WF/E/11A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/cdsz/cdsz-ref-application-process.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cdsz/cdsz-ref-application-process.html",
+          "hash": "ONiDdDWViNwcrf/rdvv9yQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/cdsz/cdsz-ref-bp-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/cdsz/cdsz-ref-bp-overview.html",
+          "hash": "15VGaYbSfWE1toG7nBh5nw=="
         }
       },
       "is_incremental": false,
@@ -1436,7 +1442,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/toc.html",
-          "hash": "3TYCwy5j9D0L+WXXVuhKxw=="
+          "hash": "gtksYsp8Hv6fzS7ieSN9SQ=="
         }
       },
       "is_incremental": false,
@@ -1552,11 +1558,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/cloud-storage/cs-s3-examples.md",
+      "source_relative_path": "articles/cloud-storage/cs-ref-s3-examples.md",
       "output": {
         ".html": {
-          "relative_path": "articles/cloud-storage/cs-s3-examples.html",
-          "hash": "LS0yr3nwMkTWATq1bukymA=="
+          "relative_path": "articles/cloud-storage/cs-ref-s3-examples.html",
+          "hash": "nGrE1HpIUj2LUS3hXShEpA=="
         }
       },
       "is_incremental": false,
@@ -2351,7 +2357,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/toc.html",
-          "hash": "Dz+ZHpI8oFUMgQgS+ag62Q=="
+          "hash": "O778aHnr9pGyS5wCTZjRIA=="
         }
       },
       "is_incremental": false,
@@ -2515,18 +2521,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/connectivity/conn-ids.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/connectivity/conn-ids.html",
-          "hash": "JjYPIVL47e0QwFvUqXrRog=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/connectivity/conn-ref-ddos-mitigation.md",
       "output": {
         ".html": {
@@ -2568,6 +2562,18 @@
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-hybrid-crown-connect.html",
           "hash": "dJoP06auqAJYEszAR6DF1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-ids.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-ids.html",
+          "hash": "7pmiIWMgHnTvE2E9PYC6Qw=="
         }
       },
       "is_incremental": false,
@@ -2776,7 +2782,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/toc.html",
-          "hash": "X2yKVsXbL1f+e6HnPcHlmA=="
+          "hash": "l9YlqN4ouDbX/OPBBbMECA=="
         }
       },
       "is_incremental": false,
@@ -2808,11 +2814,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/draas/draas-sco.md",
+      "source_relative_path": "articles/draas/draas-ref-troubleshooting.md",
       "output": {
         ".html": {
-          "relative_path": "articles/draas/draas-sco.html",
-          "hash": "FHoFKhgFWOIfMYqM2gScGA=="
+          "relative_path": "articles/draas/draas-ref-troubleshooting.html",
+          "hash": "2ef17CTNxY4Vdt7pHT423w=="
         }
       },
       "is_incremental": false,
@@ -2820,11 +2826,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/draas/drass-ref-troubleshooting.md",
+      "source_relative_path": "articles/draas/draas-sco.md",
       "output": {
         ".html": {
-          "relative_path": "articles/draas/drass-ref-troubleshooting.html",
-          "hash": "HGpNgsB/rS4uTuvG4CPW3g=="
+          "relative_path": "articles/draas/draas-sco.html",
+          "hash": "FHoFKhgFWOIfMYqM2gScGA=="
         }
       },
       "is_incremental": false,
@@ -2853,12 +2859,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/draas/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/draas/toc.html",
-          "hash": "KuYxDk1NGN2rH0om1Y7xOg=="
+          "hash": "aWA6HGpMC7OWzWCelK+jyw=="
         }
       },
       "is_incremental": false,
@@ -7979,12 +7988,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "cQv7kGmOUbF9HTp+mVPE4Q=="
+          "hash": "b7m6VkGqRRj1IfGSsBOPaw=="
         }
       },
       "is_incremental": false,
@@ -8100,11 +8112,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/portal/ptl-overview-permissions.md",
+      "source_relative_path": "articles/portal/ptl-ref-memorable-word.md",
       "output": {
         ".html": {
-          "relative_path": "articles/portal/ptl-overview-permissions.html",
-          "hash": "GT2gymxP8iNCGpycN7MPlw=="
+          "relative_path": "articles/portal/ptl-ref-memorable-word.html",
+          "hash": "XGYWeWnDIZu2U5ExN333ew=="
         }
       },
       "is_incremental": false,
@@ -8112,11 +8124,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/portal/ptl-ref-memorable-word.md",
+      "source_relative_path": "articles/portal/ptl-ref-overview-permissions.md",
       "output": {
         ".html": {
-          "relative_path": "articles/portal/ptl-ref-memorable-word.html",
-          "hash": "XGYWeWnDIZu2U5ExN333ew=="
+          "relative_path": "articles/portal/ptl-ref-overview-permissions.html",
+          "hash": "OScbDmokZMTXK4zOW5Fndg=="
         }
       },
       "is_incremental": false,
@@ -8171,12 +8183,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-vid-portal.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-vid-portal.html",
-          "hash": "7qE6cB3fvDHNghiyKiWggg=="
+          "hash": "Xn/iiMmdkWHztYeQyD6s2w=="
         }
       },
       "is_incremental": false,
@@ -8188,7 +8203,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/toc.html",
-          "hash": "vgPgbArJP8CYUwKrsu4cdw=="
+          "hash": "0kQDkQ2BxW2JOW38JK0ziQ=="
         }
       },
       "is_incremental": false,
@@ -8398,7 +8413,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/support-docs/toc.html",
-          "hash": "q+mWwVVpjdLG9cx3VjzpeA=="
+          "hash": "1WU5NFdkCSwJtrpLEnLYcQ=="
         }
       },
       "is_incremental": false,
@@ -15318,9 +15333,9 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
@@ -15331,9 +15346,9 @@
           "total_file_count": 332,
           "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0

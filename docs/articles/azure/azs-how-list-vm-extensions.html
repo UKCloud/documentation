@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>UKCloud Portal overview video | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to list VM extensions in Azure Stack using PowerShell | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="UKCloud Portal overview video | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to list VM extensions in Azure Stack using PowerShell | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/portal/ptl-vid-portal.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-list-vm-extensions.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,17 +91,24 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="ukcloud-portal-overview-video">UKCloud Portal overview video</h1>
+<h1 id="how-to-list-vm-extensions-in-azure-stack-using-powershell">How to list VM extensions in Azure Stack using PowerShell</h1>
 
-<p>The following video provides an overview of the UKCloud Portal user interface.</p>
-<iframe src="https://player.vimeo.com/video/298596419?color=34d9c3" width="864" height="486" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-<p><a href="https://vimeo.com/298596419">UKCloud Portal Overview</a> on <a href="https://vimeo.com/ukcloud">Vimeo</a></p>
-<h2 id="related-articles">Related articles</h2>
-<ul>
-<li><a href="ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a></li>
-<li><a href="ptl-overview-permissions.md"><em>Portal permissions</em></a></li>
-<li><a href="ptl-how-signup-notifications.html"><em>How to sign up for Portal notifications</em></a></li>
-</ul>
+<p>This document explains how to list VM extensions in Azure Stack with PowerShell.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Ensure your Powershell environment is setup as detailed in <a href="azs-how-configure-powershell-users.html"><em>Configure PowerShell Environment and Azure Stack Modules</em></a>.</p>
+<h2 id="instructions">Instructions</h2>
+<p>From your Powershell window run:</p>
+<pre><code class="lang-PowerShell">Add-AzureRmEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+
+Login-AzureRmAccount -EnvironmentName &quot;AzureStackUser&quot;
+
+Get-AzureRmVmImagePublisher -Location frn00006 | `
+  Get-AzureRmVMExtensionImageType | `
+  Get-AzureRmVMExtensionImage | `
+  Format-Table -Property Type, Version -AutoSize
+</code></pre>
+<p>This will produce a table similar to the following:</p>
+<p><img src="images/azs-list-vm-extensions.png" alt="List Azure Stack VM Extensions Output"></p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
