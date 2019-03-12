@@ -1328,15 +1328,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/cdsz/cdsz-gs-walled-garden.md",
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-gs-walled-garden.html",
-          "hash": "zBbsxg74zHMtrvHIfdz/ZA=="
+          "hash": "K0T8mcnLpBcODyDS9BOsOA=="
         }
       },
       "is_incremental": false,
@@ -1355,12 +1352,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/cdsz/cdsz-ref-application-process.md",
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-ref-application-process.html",
-          "hash": "ONiDdDWViNwcrf/rdvv9yQ=="
+          "hash": "dBSeJW2SR8ISS0LVREKRng=="
         }
       },
       "is_incremental": false,
@@ -2867,7 +2867,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/toc.html",
-          "hash": "aWA6HGpMC7OWzWCelK+jyw=="
+          "hash": "TD+PGxzzKweoQZh6FBQH4Q=="
         }
       },
       "is_incremental": false,
@@ -7988,15 +7988,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "b7m6VkGqRRj1IfGSsBOPaw=="
+          "hash": "xjVZxwYxOYI8e/JpuIdNwQ=="
         }
       },
       "is_incremental": false,
@@ -8183,15 +8180,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-vid-portal.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-vid-portal.html",
-          "hash": "Xn/iiMmdkWHztYeQyD6s2w=="
+          "hash": "ixyFyCUm32dJQ9ftygPUSA=="
         }
       },
       "is_incremental": false,
@@ -15340,17 +15334,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 332,
+          "skipped_file_count": 0
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 332,
           "skipped_file_count": 0
         }
       }
