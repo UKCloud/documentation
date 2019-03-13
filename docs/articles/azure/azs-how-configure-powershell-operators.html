@@ -93,7 +93,7 @@
                   
 <h1 id="how-to-configure-the-azure-stack-operators-powershell-environment">How to configure the Azure Stack operator's PowerShell environment</h1>
 
-<p>As an Azure Stack operator, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates,  etc. This topic is scoped to use with the operator environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:</p>
+<p>As an Azure Stack operator, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates, etc. This topic is scoped to use with the operator environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Prerequisites from a Windows-based external client.</p>
 <ul>
@@ -108,11 +108,14 @@
 <h3 id="install-azure-stack-powershell">Install Azure Stack PowerShell</h3>
 <pre><code class="lang-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
+
 # PowerShell commands for Azure Stack are installed through the PSGallery repository.
 # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
 Set-PSRepository -Name &quot;PSGallery&quot; -InstallationPolicy Trusted
-# Uninstall existing versions of PowerShell
-Get-Module -ListAvailable | Where-Object {$_.Name -like &quot;Azure*&quot; -or $_.Name -like &quot;Azs*&quot;} | Uninstall-Module -Force -Verbose
+
+# Uninstall existing versions of Azure/Azure Stack PowerShell
+Get-Module -ListAvailable | Where-Object { $_.Name -like &quot;Azure*&quot; -or $_.Name -like &quot;Azs*&quot; } | Uninstall-Module -Force -Verbose
+
 # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
 Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Force -Verbose
 Install-Module -Name AzureStack -RequiredVersion 1.7.0 -Verbose
@@ -127,7 +130,7 @@ Set-ExecutionPolicy RemoteSigned
 Add-AzureRmEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://adminmanagement.frn00006.azure.ukcloud.com&quot;
 
 # Sign in to your environment
-Login-AzureRmAccount -EnvironmentName &quot;AzureStackAdmin&quot;
+Connect-AzureRmAccount -EnvironmentName &quot;AzureStackAdmin&quot;
 </code></pre>
 <h3 id="azure-active-directory-aad-based-deployments---embedded-credentials">Azure Active Directory (AAD) based deployments - Embedded Credentials</h3>
 <pre><code class="lang-PowerShell"># Set Execution Policy
@@ -139,11 +142,11 @@ Add-AzureRmEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;http
 # Create your Credentials
 $AzsUsername =  &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;.onmicrosoft.com&quot;
 $AzsPassword = '&lt;your password&gt;'
-  $AzsUserPassword = ConvertTo-SecureString &quot;$AzsPassword&quot; -AsPlainText -Force
-  $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
+$AzsUserPassword = ConvertTo-SecureString $AzsPassword -AsPlainText -Force
+$AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
 # Sign in to your environment
-Login-AzureRmAccount -Credential $AzsCred -EnvironmentName &quot;AzureStackAdmin&quot;
+Connect-AzureRmAccount -Credential $AzsCred -EnvironmentName &quot;AzureStackAdmin&quot;
 </code></pre>
 <h2 id="test-the-connectivity">Test the connectivity</h2>
 <p>Now that we've got everything set-up, let's use PowerShell to list resources within Azure Stack. For example, you can list resource groups. Use the following command list all resource groups:</p>
