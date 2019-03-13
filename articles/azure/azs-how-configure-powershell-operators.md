@@ -16,7 +16,7 @@ toc_mdlink: azs-how-configure-powershell-operators.md
 
 # How to configure the Azure Stack operator's PowerShell environment
 
-As an Azure Stack operator, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates,  etc. This topic is scoped to use with the operator environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:
+As an Azure Stack operator, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates, etc. This topic is scoped to use with the operator environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:
 
 ## Prerequisites
 
@@ -34,11 +34,14 @@ Prerequisites from a Windows-based external client.
   ```PowerShell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
+  
   # PowerShell commands for Azure Stack are installed through the PSGallery repository.
   # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
   Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
+  
   # Uninstall existing versions of Azure/Azure Stack PowerShell
-  Get-Module -ListAvailable | Where-Object {$_.Name -like "Azure*" -or $_.Name -like "Azs*"} | Uninstall-Module -Force -Verbose
+  Get-Module -ListAvailable | Where-Object { $_.Name -like "Azure*" -or $_.Name -like "Azs*" } | Uninstall-Module -Force -Verbose
+  
   # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
   Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Force -Verbose
   Install-Module -Name AzureStack -RequiredVersion 1.7.0 -Verbose
