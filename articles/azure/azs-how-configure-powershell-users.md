@@ -34,11 +34,14 @@ Prerequisites from a Windows-based external client.
   ```PowerShell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
+  
   # PowerShell commands for Azure Stack are installed through the PSGallery repository.
   # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
   Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
-  # Uninstall existing versions of PowerShell
-  Get-Module -ListAvailable | Where-Object {$_.Name -like "Azure*" -or $_.Name -like "Azs*"} | Uninstall-Module -Force -Verbose
+  
+  # Uninstall existing versions of Azure/Azure Stack PowerShell
+  Get-Module -ListAvailable | Where-Object { $_.Name -like "Azure*" -or $_.Name -like "Azs*" } | Uninstall-Module -Force -Verbose
+  
   # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
   Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Force -Verbose
   Install-Module -Name AzureStack -RequiredVersion 1.7.0 -Verbose
@@ -58,7 +61,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
   Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
   # Sign in to your environment
-  Login-AzureRmAccount -EnvironmentName "AzureStackUser"
+  Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
   ```
 
 ### Azure Active Directory (AAD) based deployments - Embedded Credentials
@@ -73,11 +76,11 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
   # Create your Credentials
   $AzsUsername =  "<username>@<myDirectoryTenantName>.onmicrosoft.com"
   $AzsPassword = '<your password>'
-    $AzsUserPassword = ConvertTo-SecureString "$AzsPassword" -AsPlainText -Force
-    $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
+  $AzsUserPassword = ConvertTo-SecureString $AzsPassword -AsPlainText -Force
+  $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
   # Sign in to your environment
-  Login-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackUser"
+  Connect-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackUser"
   ```
 
 ## Test the connectivity
