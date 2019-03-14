@@ -28,7 +28,7 @@ It will guide you through the creation of:
 
 - Permissions
 
-## What is a service principal name
+## What is a service principal name?
 
 An Azure service principal name (SPN) is a security identity used by user-created applications, services, and automation tools to access specific Azure resources. Think of it as a 'user identity' (username and password or certificate) with a specific role, and tightly controlled permissions. It only needs to be able to do specific things, unlike a general user identity. It improves security if you grant it only the minimum permissions level needed to perform its management tasks.
 
