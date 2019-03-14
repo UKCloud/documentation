@@ -34,6 +34,16 @@ When first logging in to the Azure Stack portal, you may see the following error
 
 Refresh the page and the login should work.
 
+## Diagnostics do not work for Linux VMs
+
+### Cause
+
+If you enable Microsoft Insights for your subscription (**Subscriptions > Resource providers > Microsoft.Insights** and then click subscribe), you'll have access to Azure Monitoring for Windows VMs only. This feature is not yet available for Linux VMs as documented [here](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-metrics-azure-data#application---diagnostics-logs-application-logs-and-metrics).
+
+### Solution
+
+There is currently no workaround for this issue.
+
 ## Virtual machine disk size is not showing in the GUI or CLI
 
 ### Cause
