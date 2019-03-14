@@ -1,6 +1,6 @@
 ---
-title: VMware L2 VPN video | UKCloud Ltd
-description: Shows a video that provides a technical explanation of VMware's L2 VPN
+title: Benefits of VMware L2 VPN | UKCloud Ltd
+description: Shows a video that provides a technical explanation of VMware's L2 VPN feature
 services: vmware
 author: Sue Highmoor
 
@@ -9,12 +9,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: VMware L2 VPN
+toc_title: Benefits of VMware L2 VPN
 toc_fullpath: Videos/vmw-vid-l2-vpn.md
 toc_mdlink: vmw-vid-l2-vpn.md
 ---
 
-# VMware L2 VPN video
+# Benefits of VMware L2 VPN
 
 The following video provides a technical explanation of VMware's L2 VPN feature, which forms part of the UKCloud for VMware Enterprise Networking Bundle.
 
