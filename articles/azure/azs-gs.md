@@ -103,15 +103,13 @@ After providing the above details, you should receive a welcome email shortly fr
 
 ***
 
-## Logging in to the Microsoft Azure Stack portal
+## Logging in to the UKCloud for Microsoft Azure portal
 
 To manage UKCloud for Microsoft Azure, you need to log in to the Azure Stack portal. The portal provides access to all your Azure resources.
 
 To log in to the Azure Stack portal:
 
-1. In your browser, go to the following URL:
-
-    <https://portal.frn00006.azure.ukcloud.com/>
+1. In your browser, go to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
 
 2. In the login dialog box, enter the email address for your account and click **Next**, or pick your account.
 
@@ -302,7 +300,7 @@ This section provides a glossary of terms specific to UKCloud for Microsoft Azur
 
 **Subscription**&nbsp;&nbsp;A mechanism for organising resources and services for tenants to consume.
 
-**UKCloud for Microsoft Azure**&nbsp;&nbsp;A UKCloud IaaS and PaaS service that works as an extension of Microsoft's own Azure Public Cloud, delivered from our assured sovereign data centres.
+**UKCloud for Microsoft Azure**&nbsp;&nbsp;A UKCloud IaaS and PaaS service that works as an extension of Microsoft's own Azure public cloud, delivered from our assured sovereign data centres.
 
 **Tenant**&nbsp;&nbsp;An entity that consumes services from cloud operators in Azure Stack.
 
