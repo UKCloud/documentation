@@ -77,7 +77,7 @@ To obtain an access token:
 
     For example:
 
-    ```
+    ```http
     grant_type=password
     &client_id=1950a258-227b-4e31-a9cf-717495945fc2
     &resource=(endpoint returned in the audiences section below)
@@ -91,7 +91,7 @@ To obtain an access token:
 
 3. An example request might look something like the following
 
-    ```
+    ```bash
     curl -X "POST" "https://login.windows.net/160f539f-8571-4c96-9361-797645c24e75/oauth2/token" \
     -H "Content-Type: application/x-www-form-urlencoded" \
     --data-urlencode "client_id=1950a258-227b-4e31-a9cf-717495945fc2" \
@@ -102,7 +102,7 @@ To obtain an access token:
 
 4. If the authentication is successful, the endpoint returns an access token. For example:
 
-    ```
+    ```json
     {
       "token_type": "Bearer",
       "scope": "user_impersonation",
@@ -117,7 +117,7 @@ To obtain an access token:
 
 5. You must include this token in the Authorization header of each subsequent API request. For example:
 
-    ```
+    ```bash
     curl -H "Authorization: Bearer eyJ0eXAiOi...truncated for readability..." 'https://management.local.azurestack.external/subscriptions?api-version=2016-05-01'
     ```
 
