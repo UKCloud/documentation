@@ -24,7 +24,7 @@ If you need to install Azure Storage Explorer, please click [here](https://azure
 
 ## Installation and setup
 
-1. Download and install storage explorer.
+1. Download and install Storage Explorer.
 
     ![Storage Explorer installation guide 1](images/azs-browser-storage-tool-download.png)
 
