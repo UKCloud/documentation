@@ -3,6 +3,7 @@ title: UKCloud for Microsoft Azure FAQs | UKCloud Ltd
 description: Frequently asked questions for UKCloud for Microsoft Azure
 services: azure-stack
 author: Matt Warner
+
 toc_rootlink: Users
 toc_sub1: FAQs
 toc_sub2:
@@ -55,7 +56,7 @@ Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic
 
 #### Network
 
-- Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure. This can be configured via the UI, API and other tooling. 
+- Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure. This can be configured via the UI, API and other tooling.
 
 - Load balancers (IPv4 only) - Deploy basic load balancers.
 
@@ -201,7 +202,6 @@ For infrastructure solutions, you'll be billed by the smallest unit of time whic
 Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
 
 If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
-
 
 ### Are there any termination fees?
 

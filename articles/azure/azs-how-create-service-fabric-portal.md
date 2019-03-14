@@ -3,6 +3,7 @@ title: How to create a Service Fabric cluster using the Azure Stack portal | UKC
 description: Provides help for creating a Service Fabric cluster on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
+
 toc_rootlink: Users
 toc_sub1: How To
 toc_sub2:
@@ -177,7 +178,7 @@ You also need the thumbprint of the certificate(s). For information about how to
 
    - **Custom ports to open in the Network Security Group** - Custom ports to open in the Network Security Group. Enter ports separated by commas, for example, `3389,80,8080,8081`.
 
-   ![Create Service Fabric cluster > Network Settings](images/azs-browser-create-sf-networking.png) 
+   ![Create Service Fabric cluster > Network Settings](images/azs-browser-create-sf-networking.png)
 
 6. In the *Node Configuration* blade, enter the following information and click **OK**:
 
