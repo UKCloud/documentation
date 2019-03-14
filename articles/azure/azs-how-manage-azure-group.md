@@ -14,7 +14,7 @@ toc_fullpath: Users/How To/azs-how-manage-azure-group.md
 toc_mdlink: azs-how-manage-azure-group.md
 ---
 
-# How to manage Azure user groups and permissions 
+# How to manage Azure user groups and permissions
 
 ## Overview
 
@@ -38,9 +38,9 @@ Rather than granting permissions to individual users, we recommend that you firs
 
 To create a group in the Azure portal:
 
-1. Log in to the Azure portal as a global administrator:
+1. Log in to the [public Azure portal](https://portal.azure.com) as a global administrator.
 
-    <https://portal.azure.com>
+    For help with identifying your Azure global administrators, see [here](azs-how-identify-global-admins.md)
 
 2. Navigate to the **Azure Active Directory**.
 
@@ -71,9 +71,7 @@ After setting up the user group in Azure, you need to go to the Azure Stack port
 
 To grant Azure permissions to a group:
 
-1. Log in to the Azure Stack portal:
-
-    <https://portal.frn00006.azure.ukcloud.com/>
+1. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
 
 2. Navigate to **Subscriptions**.
 
@@ -100,7 +98,7 @@ For more information about Azure Stack, see the following Microsoft resources:
 
 - [*Get started with Azure*](https://azure.microsoft.com/en-gb/get-started/)
 
-- [*Azure Stack Operator Documentation*](https://docs.microsoft.com/en-us/azure/azure-stack/)
+- [*Azure Stack User Documentation*](https://docs.microsoft.com/en-us/azure/azure-stack/user/)
 
 For more information about UKCloud for Microsoft Azure, see:
 
