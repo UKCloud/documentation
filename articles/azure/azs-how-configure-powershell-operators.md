@@ -1,5 +1,5 @@
 ---
-title: How to configure the Azure Stack operator's PowerShell environment for UKCloud | Based on Microsoft Docs
+title: How to configure the Azure Stack operator's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd
 description: Configure the Azure Stack operator's PowerShell environment
 services: azure-stack
 author: Chris Black
@@ -31,7 +31,7 @@ Prerequisites from a Windows-based external client.
 
 ### Install Azure Stack PowerShell
 
-  ```PowerShell
+  ```powershell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
   
@@ -53,7 +53,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
 ### Azure Active Directory (AAD) based deployments
 
-  ```PowerShell
+  ```powershell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
 
@@ -66,7 +66,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
 ### Azure Active Directory (AAD) based deployments - Embedded Credentials
 
-  ```PowerShell
+  ```powershell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
 
@@ -76,7 +76,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
   # Create your Credentials
   $AzsUsername =  "<username>@<myDirectoryTenantName>.onmicrosoft.com"
   $AzsPassword = '<your password>'
-  $AzsUserPassword = ConvertTo-SecureString $AzsPassword -AsPlainText -Force
+  $AzsUserPassword = ConvertTo-SecureString -String $AzsPassword -AsPlainText -Force
   $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
   # Sign in to your environment
@@ -87,7 +87,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
 Now that we've got everything set-up, let's use PowerShell to list resources within Azure Stack. For example, you can list resource groups. Use the following command list all resource groups:
 
-```PowerShell
+```powershell
 Get-AzureRmResourceGroup -Location "frn00006"
 ```
 
