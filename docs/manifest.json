@@ -13922,7 +13922,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "kxIreIJlPVZVEfhGPI845w=="
+          "hash": "iZKeyTSBGB4V/lC/HWpMuQ=="
         }
       },
       "is_incremental": false,
@@ -15250,6 +15250,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-vid-l2-vpn.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-vid-l2-vpn.html",
+          "hash": "TV0gWTUdVsn25CTYkeioaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-vid-licensing-kms.md",
       "output": {
         ".html": {
@@ -15347,7 +15359,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 333,
+          "total_file_count": 334,
           "skipped_file_count": 0
         }
       }

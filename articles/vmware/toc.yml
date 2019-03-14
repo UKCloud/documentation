@@ -230,6 +230,8 @@
     href: vmw-ref-trouble-uk-keyboard-console.md
 - name: Videos
   items:
+  - name: Benefits of VMware L2 VPN
+    href: vmw-vid-l2-vpn.md
   - name: Licensing Windows VMs using the KMS
     href: vmw-vid-licensing-kms.md
   - name: vCloud Director 9.1 overview
