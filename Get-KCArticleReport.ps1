@@ -53,16 +53,17 @@ $TypeTable = @{
 }
 
 # Get list of all articles
-$Articles = Get-ChildItem -Path "$DocumentationFolder\articles" -Recurse -Filter "*.md"
+$Articles = Get-ChildItem -Path "$($DocumentationFolder.TrimEnd("\"))\articles" -Recurse -Filter "*.md"
 
 # Create info object for each article
 foreach ($Article in $Articles) {
     $Content = Get-Content -Path $Article.FullName
     $ArticleInfo = [PSCustomObject]@{
-        Product  = $ProductTable[($Article.Name -split "-")[0]]
-        Title    = ($Content | Select-String -Pattern "toc_title") -replace "toc_title: ", ""
-        Category = $TypeTable[((($Article.Name -split "-")[1]).split("."))[0]]
-        Link     = $UrlPrefix + ($Article.DirectoryName).split("\")[-1] + "/" + ($Article.Name -replace ".md", ".html")
+        Product      = $ProductTable[($Article.Name -split "-")[0]]
+        Title        = ($Content | Select-String -Pattern "toc_title") -replace "toc_title: ", ""
+        Category     = $TypeTable[((($Article.Name -split "-")[1]).split("."))[0]]
+        Link         = $UrlPrefix + ($Article.DirectoryName).split("\")[-1] + "/" + ($Article.Name -replace ".md", ".html")
+        LastModified = [DateTime](git -C $DocumentationFolder log -1 --format="%aD" $Article.FullName)
     }
     $InfoArray += $ArticleInfo
 }
