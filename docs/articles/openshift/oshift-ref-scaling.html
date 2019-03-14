@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Considerations when scaling an OpenShift cluster | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Considerations when scaling an OpenShift cluster | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.40.11.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-ref-scaling.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="considerations-when-scaling-an-openshift-cluster">Considerations when scaling an OpenShift cluster</h1>
+
+<h3 id="infrastructure-applications">Infrastructure applications</h3>
+<p>With your UKCloud for OpenShift cluster we deploy a number of infrastructure applications by default. These are quality of service features that are intended to help you with the administration, management and application development within your cluster. Examples include the EFK stack, Hawkular Metrics, the integrated registry, the service catalog and, with v3.11 deployments onwards, Prometheus and Grafana.</p>
+<p>These applications run their components on the infrastructure nodes (these are the nodes with the naming convention worker-infra). Your cluster comes out of the box with two of these nodes and each has 16GB of memory and two vCPUs. This is a perfectly reasonable amount of resource for the infrastructure components for a small cluster running light development workloads. If you're looking to scale out the cluster to a larger size and start running more intensive applications or builds, these nodes may not be enough. For example, the more applications and nodes you have in your environment, the more logs will be gathered off the nodes by fluentd and sent off to Elasticsearch for indexing. This will result in significantly higher resource usage. In the same vein, the more pods and nodes are running in your environment, the more stats hawkular metrics will be gathering and storing in the Cassandra database.</p>
+<h4 id="recommendations">Recommendations</h4>
+<p>We recommend having a minimum of three infrastructure nodes with a production deployment where you expect to make use of these additional services, especially with v3.11 deployments onwards as there are now more infrastructure components. As well as having more resource available to the infrastructure applications, running your infrastructure nodes at a scale of three or more will give you increased resilience for these components during patching as the applications will be able to scale up on the two available nodes while the third is being patched.</p>
+<p>Additionally, scaling of the infrastructure applications to make them more resilient is possible but may require additional infrastructure nodes to be deployed. For example to scale Elasticsearch to three nodes/containers we recommend having a minimum of four infrastructure nodes. To have these applications scaled up or down raise a Service Request via the UKCloud Portal.</p>
+<p>Finally, you'll want to consider the storage usage of the infrastructure applications. As previously mentioned, the more applications and nodes you have in your environment the more logs will be gathered off the nodes by fluentd and sent off to Elasticsearch for indexing. This means the persistent volume used by Elasticsearch will have more data to store. By default, we provide 14 days retention and a 20GB persistent volume with Elasticsearch. If this volume fills to 100% then the EFK stack will not work until indices are deleted or more space is provided. If you're relying on the EFK stack for your logs then you'll want to determine an average of how much storage your cluster is consuming on logs per day and request an increase of the persistent volume to fit your desired retention.</p>
+<h3 id="planning-your-scale-out">Planning your scale out</h3>
+<p>You'll want to estimate how many pods you are expecting to fit on a node. Things to take into account are the CPU, memory and storage (if your pod is going to be writing to the local file system rather than persistent storage) requirements of your applications. This will give you an idea of the size and amount of nodes you'll need. For more information regarding planning for application requirements, see the following OpenShift documentation page: <a href="https://docs.openshift.com/container-platform/3.11/scaling_performance/cluster_limits.html#scaling-performance-planning-your-environment-according-to-application-requirements">https://docs.openshift.com/container-platform/3.11/scaling_performance/cluster_limits.html#scaling-performance-planning-your-environment-according-to-application-requirements</a></p>
+<h3 id="scaling">Scaling</h3>
+<p>If you'd like to scale up your cluster, raise a Service Request via the UKCloud Portal and provide us with the size, network connectivity and quantity of nodes you'd like to add. The same process should be followed to scale a cluster down, this time providing the details of the node(s) you want to remove.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The network connectivity you request for the scaled up nodes must be present in the cluster.</p>
+</div>
+<h3 id="further-information">Further information</h3>
+<p>Below are some useful OpenShift documentation pages regarding scaling of a cluster:</p>
+<p><a href="https://docs.openshift.com/container-platform/3.11/scaling_performance/scaling_cluster_metrics.html">https://docs.openshift.com/container-platform/3.11/scaling_performance/scaling_cluster_metrics.html</a>
+<a href="https://docs.openshift.com/container-platform/3.11/scaling_performance/scaling_cluster_monitoring.html">https://docs.openshift.com/container-platform/3.11/scaling_performance/scaling_cluster_monitoring.html</a></p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>
