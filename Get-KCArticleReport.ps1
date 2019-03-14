@@ -1,11 +1,11 @@
 [CmdletBinding()]
 param (
     [Parameter(Mandatory = $true)]
-    [ValidateScript( { if (-not (Test-Path $_)) { throw "Folder path does not exist" } else { if (-not (Test-Path -Path "$_\articles")) { throw "Folder specified is not the documentation folder" } else { $true } } })]
+    [ValidateScript({ if (-not (Test-Path $_)) { throw "Folder path does not exist" } else { if (-not (Test-Path -Path "$_\articles")) { throw "Folder specified is not the documentation folder" } else { $true } } })]
     [String]
     $DocumentationFolder,
     [Parameter(Mandatory = $true)]
-    [ValidateScript( { if (-not (Test-Path $_)) { New-item -ItemType Directory -Path $_ -Force } else { $true } })]
+    [ValidateScript({ if (-not (Test-Path $_)) { New-item -ItemType Directory -Path $_ -Force } else { $true } })]
     [String]
     $DestinationFolder
 )
