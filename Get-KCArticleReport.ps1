@@ -1,18 +1,17 @@
 [CmdletBinding()]
 param (
     [Parameter(Mandatory = $true)]
-    [ValidateScript({ if (-not (Test-Path $_)) { throw "Folder path does not exist" } else { if (-not (Test-Path -Path "$_\articles")) { throw "Folder specified is not the documentation folder" } else { $true } } })]
+    [ValidateScript( { if (-not (Test-Path $_)) { throw "Folder path does not exist" } else { if (-not (Test-Path -Path "$_\articles")) { throw "Folder specified is not the documentation folder" } else { $true } } })]
     [String]
     $DocumentationFolder,
     [Parameter(Mandatory = $true)]
-    [ValidateScript({ if (-not (Test-Path $_)) { New-item -ItemType Directory -Path $_ -Force } else { $true } })]
+    [ValidateScript( { if (-not (Test-Path $_)) { New-item -ItemType Directory -Path $_ -Force } else { $true } })]
     [String]
     $DestinationFolder
 )
 
 # Declare variables
 $UrlPrefix = "https://docs.ukcloud.com/articles/"
-
 # Declare empty array
 $InfoArray = @()
 
@@ -53,16 +52,17 @@ $TypeTable = @{
 }
 
 # Get list of all articles
-$Articles = Get-ChildItem -Path "$DocumentationFolder\articles" -Recurse -Filter "*.md"
+$Articles = Get-ChildItem -Path "$($DocumentationFolder.TrimEnd("\"))\articles" -Recurse -Filter "*.md"
 
 # Create info object for each article
 foreach ($Article in $Articles) {
     $Content = Get-Content -Path $Article.FullName
     $ArticleInfo = [PSCustomObject]@{
-        Product  = $ProductTable[($Article.Name -split "-")[0]]
-        Title    = ($Content | Select-String -Pattern "toc_title") -replace "toc_title: ", ""
-        Category = $TypeTable[((($Article.Name -split "-")[1]).split("."))[0]]
-        Link     = $UrlPrefix + ($Article.DirectoryName).split("\")[-1] + "/" + ($Article.Name -replace ".md", ".html")
+        Product      = $ProductTable[($Article.Name -split "-")[0]]
+        Title        = ($Content | Select-String -Pattern "toc_title") -replace "toc_title: ", ""
+        Category     = $TypeTable[((($Article.Name -split "-")[1]).split("."))[0]]
+        Link         = $UrlPrefix + ($Article.DirectoryName).split("\")[-1] + "/" + ($Article.Name -replace ".md", ".html")
+        LastModified = [DateTime](git -C $DocumentationFolder log -1 --format="%aD" $Article.FullName)
     }
     $InfoArray += $ArticleInfo
 }
@@ -70,5 +70,4 @@ foreach ($Article in $Articles) {
 # Export a CSV file
 $CsvFilePath = $DestinationFolder.TrimEnd("\") + "\" + "KCArticleReport-" + (Get-Date -Format dd-MM-yyyy) + ".csv"
 $InfoArray | Sort-Object -Property Product, Category, Title | Export-Csv -Path $CsvFilePath -NoTypeInformation
-
 Write-Output -InputObject "CSV file saved to $CsvFilePath"
