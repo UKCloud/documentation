@@ -265,15 +265,17 @@ Connect-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsC
 try {
     $RG = Get-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -ErrorAction 'SilentlyContinue'
     if ( -not $RG) {
-      Write-Host -InputObject "Didn't find resource group"
-      New-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -Verbose
-    } else {
-      Write-Output -InputObject "Exists"
+        Write-Host -InputObject "Didn't find resource group"
+        New-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -Verbose
     }
-  } catch {
+    else {
+        Write-Output -InputObject "Exists"
+    }
+}
+catch {
     Write-Host -InputObject "Could not query resource group"
     exit
-  }
+}
 
 # Test Deployment
 Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -Verbose
