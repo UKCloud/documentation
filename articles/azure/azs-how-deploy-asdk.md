@@ -24,7 +24,7 @@ The ASDK is used in two modes within UKCloud:
 
 - Virtual servers (development and testing) - not officially supported by Microsoft This document covers two scenarios, building from scratch and redeploying.
 
-## Step 1 - Hardware pre-requirements
+## Step 1 - Hardware pre-requisites
 
 Detailed specifications are here - [https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-deploy](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-deploy)
 
