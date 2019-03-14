@@ -40,7 +40,7 @@ Prerequisites from a Windows-based external client are:
 
 - PowerShell 5.1, AzureStack and Azure AD PowerShell Modules
 
-  - [Configure PowerShell Environment and Azure Stack Modules](azs-how-configure-powershell-users.md)
+  - [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md)
 
   - Azure AD PowerShell Module
 
