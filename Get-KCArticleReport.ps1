@@ -12,6 +12,7 @@ param (
 
 # Declare variables
 $UrlPrefix = "https://docs.ukcloud.com/articles/"
+
 # Declare empty array
 $InfoArray = @()
 
@@ -70,4 +71,5 @@ foreach ($Article in $Articles) {
 # Export a CSV file
 $CsvFilePath = $DestinationFolder.TrimEnd("\") + "\" + "KCArticleReport-" + (Get-Date -Format dd-MM-yyyy) + ".csv"
 $InfoArray | Sort-Object -Property Product, Category, Title | Export-Csv -Path $CsvFilePath -NoTypeInformation
+
 Write-Output -InputObject "CSV file saved to $CsvFilePath"
