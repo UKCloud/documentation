@@ -20,11 +20,11 @@ This document explains how to deploy SQL Always On Cluster using ARM Template to
 
 It will guide you through the process of:
 
-- obtaining an ARM Template
+- Obtaining an ARM Template
 
-- deploying an [ARM Template for SQL Always On](https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master/sql-2016-ha)
+- Deploying an [ARM Template for SQL Always On](https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master/sql-2016-ha)
 
-## What is an ARM Template
+## What is an ARM Template?
 
 You can use Azure Resource Manager templates to deploy and provision all the resources for your application in a single, coordinated operation. You can also redeploy templates to make changes to the resources in a resource group.
 These templates can be deployed via the Azure Stack portal, PowerShell, Azure CLI, REST API and Visual Studio.
@@ -73,7 +73,7 @@ SQL Always On Repository - [sql-2016-ha](https://github.com/Azure/AzureStack-Qui
   git checkout master
   ```
 
-## What does it deploy
+## What does it deploy?
 
 This template deploys two SQL Server 2016 SP1 Enterprise / Standard / Developer instances in the Always On Availability Group using the PowerShell DSC Extension. It creates the following resources:
 
@@ -282,7 +282,7 @@ Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -Templ
 New-AzureRmResourceGroupDeployment -Name $ArmDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -Verbose
 
 # Verify Deployment
-## Note: $ArmjDeploymentName you can change to query each subdeployment in your GroupDeployment
+## Note: $ArmDeploymentName can be changed to query each deployment in your resource group
 Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName
 ```
 
