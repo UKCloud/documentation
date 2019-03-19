@@ -50,7 +50,7 @@ Email <signup@ukcloud.com> if you have issues with the sign-up process.
 
 ### How do I leave UKCloud?
 
-For information about how to terminate your service with UKCloud, see [*Terminating your UKCloud services*](other-ref-services-by-region.md).
+For information about how to terminate your service with UKCloud, see [*Terminating your UKCloud services*](other-ref-offboarding.md).
 
 ### My credit or debit card details have changed, how do I update them with UKCloud?
 
