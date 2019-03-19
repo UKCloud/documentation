@@ -501,7 +501,7 @@ If you are successful at this point, then CloudArray should be able to connect.
 
 ## Next steps
 
-This guide has shown you how to create a new Cloud Storage user. For more information about how to use the service, see the following articles:
+This guide has shown you how to install and configure CloudArray for use with Cloud Storage. For more information about how to use the service, see the following articles:
 
 - [*Getting Started Guide for Cloud Storage*](cs-gs.md)
 
