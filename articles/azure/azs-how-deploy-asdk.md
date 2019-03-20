@@ -72,13 +72,13 @@ Implement the following steps from the guide: [https://docs.microsoft.com/en-us/
 To run:
 
 ```powershell
-"C:\AzureStack_Installer\asdk-installer.ps1"  | foreach {($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object {`$====_.isboot -eq `$true}).Model -match 'null') {") -replace "====",""} | Set-Content "C:\AzureStack_Installer\asdk-installer.ps1" -force
+Get-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" | foreach {($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object {`$====_.isboot -eq `$true}).Model -match 'null') {") -replace "====",""} | Set-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Force
 ```
 
 To verify:
 
 ```powershell
-Select-String -Path "C:\AzureStack_Installer\asdk-installer.ps1" -pattern "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'null'\) \`{"
+Select-String -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Pattern "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'null'\) \`{"
 ```
 
 The following details should be used:
@@ -197,19 +197,20 @@ Open, "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" and 
 To edit run:
 
 ```powershell
-(gc "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1") | ForEach {$_ -replace  "\`$physicalMachine.IsVirtualMachine \| Should Be \`$false","`$physicalMachine.IsVirtualMachine | Should Be `$true"} | Set-Content “C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1” -Force
+Get-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" | foreach {$_ -replace  "\`$physicalMachine.IsVirtualMachine \| Should Be \`$false","`$physicalMachine.IsVirtualMachine | Should Be `$true"} | Set-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Force
 ```
 
 And then run:
 
 ```powershell
-(gc "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1") | ForEach {$_ -replace "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine", "(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0"} | Set-Content “C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1” -Force
+Get-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" | foreach {$_ -replace "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine", "(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0"} | Set-Content -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Force
 ```
 
 To verify run:
 
 ```powershell
-Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -pattern "\`$physicalMachine.IsVirtualMachine \| Should Be \`$true" Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -pattern "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan 0"
+Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Pattern "\`$physicalMachine.IsVirtualMachine \| Should Be \`$true"
+Select-String -Path "C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1" -Pattern "\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan 0"
 ```
 
 After you modified it, run:
