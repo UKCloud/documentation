@@ -225,7 +225,7 @@ cd C:\CloudDeployment\Setup
 .\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $credentialsS -InfraAzureDirectoryTenantName <domain>.onmicrosoft.com -NatIPv4Subnet 10.0.0.0/24 -NatIPv4Address 10.0.0.191 -NatIPv4DefaultGateway 10.0.0.1 -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
 ```
 
-If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes after you run the script, you will get prompted for AAD Account - use azurestackadmin@<domain>.onmicrosoft.com
+If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes after you run the script, you will get prompted for AAD Account - use azurestackadmin@\<domain\>.onmicrosoft.com
 
 - [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
 
