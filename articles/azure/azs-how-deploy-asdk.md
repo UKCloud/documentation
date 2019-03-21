@@ -37,9 +37,11 @@ Detailed specifications are here - [https://docs.microsoft.com/en-us/azure/azure
 
 **Virtualisation Note:** VMware HW must be \>=11, CPU virtual extension pass-through must be enabled
 
-> [!IMPORTANT] If you deploy your VM with Hardware Version 11 and Operating System Family as Windows Server 2016 you will not be able to create S2D Cluster as disk UUIDs are not exposed.
+> [!IMPORTANT]
+> If you deploy your VM with Hardware Version 11 and Operating System Family as Windows Server 2016 you will not be able to create S2D Cluster as disk UUIDs are not exposed.
 >
-> Either create it with Windows Server 2012 and change later or in Configuration Parameters -\> Click Add Row. In the Name column, enter disk.EnableUUID. In the Value column, enter TRUE. This will show correct disk IDs in Get-PhysicalDisk cmdlets and cluster should build.
+> Either create it with Windows Server 2012 and change later or in Configuration Parameters -\> Click Add Row. In the Name column, enter disk.EnableUUID.
+> In the Value column, enter TRUE. This will show correct disk IDs in Get-PhysicalDisk cmdlets and cluster should build.
 
 **Physical Note:** The first two drives must be setup as a RAID 1, the rest passed through as a JBOD; additionally, you need to specify your VLAN as ACCESS in the CIMC
 
@@ -175,7 +177,8 @@ cd C:\CloudDeployment\Setup
 
 **Virtualisation Note:** after completing the wizard BUT before clicking install copy the command as the install will fail.
 
-> [!IMPORTANT] If the installer cannot see any network adapters - you can install manually VMware Tools and reboot the box. It will work then.
+> [!IMPORTANT]
+> If the installer cannot see any network adapters - you can install manually VMware Tools and reboot the box. It will work then.
 
 ```powershell
 E:\AzureStack_Installer\asdk-installer.ps1

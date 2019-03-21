@@ -129,7 +129,7 @@ To log in to the Azure Stack portal:
 
     D.  **Notifications** - view useful alerts about your Azure environment
 
-    E.  **New** - create new resources, such as virtual machines (see [*How to create a virtual machine from the Azure Marketplace*](azs-how-create-vm.md))
+    E.  **New** - create new resources, such as virtual machines (see [*How to create a virtual machine from the Azure Marketplace*](azs-how-create-vm-portal.md))
 
 ## Understanding subscriptions, offers and plans
 
@@ -272,7 +272,7 @@ In this Getting Started Guide, you've learned the basics about UKCloud for Micro
 
 - [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
 
-- [*How to create a virtual machine from the Azure Marketplace*](azs-how-create-vm.md)
+- [*How to create a virtual machine from the Azure Marketplace*](azs-how-create-vm-portal.md)
 
 - [*How to create an Azure user group*](azs-how-manage-azure-group.md)
 
