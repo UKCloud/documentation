@@ -59,7 +59,7 @@
       - name: Create a virtual machine - CLI
         href: azs-how-create-vm-cli.md
       - name: Create a virtual machine - Portal
-        href: azs-how-create-vm.md
+        href: azs-how-create-vm-portal.md
       - name: Create a virtual machine - PowerShell
         href: azs-how-create-vm-ps.md
       - name: Create a virtual machine - Terraform

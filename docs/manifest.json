@@ -1304,15 +1304,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/azure/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "hcBqKy9yypioEqQbbKQ4Wg=="
+          "hash": "NdB1zHENQt89IyFRKj5a6Q=="
         }
       },
       "is_incremental": false,
@@ -15364,17 +15361,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 335,
+          "skipped_file_count": 0
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 335,
           "skipped_file_count": 0
         }
       }
