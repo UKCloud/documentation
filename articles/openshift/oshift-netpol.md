@@ -131,7 +131,7 @@ Now we have created the objects any pods inside the webserver project matching t
 
 In order to get a full understanding of the capabilities and options of a NetworkPolicy object we recommend reading: <https://kubernetes.io/docs/concepts/services-networking/network-policies>
 
-Documemtation on efficient netpol rules: <https://docs.openshift.com/container-platform/3.11/admin_guide/managing_networking.html#admin-guide-networking-using-networkpolicy-efficiently>
+Documentation on efficient netpol rules: <https://docs.openshift.com/container-platform/3.11/admin_guide/managing_networking.html#admin-guide-networking-using-networkpolicy-efficiently>
 
 ## Feedback
 
