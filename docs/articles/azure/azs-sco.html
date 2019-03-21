@@ -8,7 +8,7 @@
     <title>UKCloud for Microsoft Azure Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for Microsoft Azure Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,7 +91,7 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="ukcloud-for-microsoft-azure-service-scope">UKCloud for Microsoft Azure service scope</h1>
+<h1 id="ukcloud-for-microsoft-azure-service-scope">UKCloud for Microsoft Azure Service Scope</h1>
 
 <h2 id="about-this-document">About this document</h2>
 <p>This document describes the boundaries of the UKCloud for Microsoft Azure service, along with the division of responsibilities between UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.</p>
@@ -111,7 +111,7 @@
 </li>
 </ul>
 <p>You can find the full list of supported machines <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes">here</a>.</p>
-<p>You can deploy VMs using the UKCloud for Microsoft Azure portal and other tooling.</p>
+<p>You can deploy VMs using the UKCloud Azure Stack portal and other tooling.</p>
 <div class="WARNING">
 <h5>Warning</h5>
 <p>Each VM contains a temporary disk. The temporary disk provides short-term storage for applications and processes and is intended to only store data such as page or swap files. Data on the temporary disk may be lost during a maintenance event or when you redeploy a VM.</p>
@@ -143,16 +143,16 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 <ul>
 <li><p>API. Enables you to programmatically interact with UKCloud for Microsoft Azure resources.</p>
 </li>
-<li><p>UKCloud for Microsoft Azure Marketplace – provides access to pre-created images, which help speed up application delivery</p>
+<li><p>UKCloud for Microsoft Azure Marketplace – provides access to pre-created images, which help speed up application delivery.</p>
 </li>
-<li><p>Azure Resource Manager – enables you to write templates to deploy, update and delete UKCloud for Microsoft Azure resources in a single coordinated operation</p>
+<li><p>Azure Resource Manager – enables you to write templates to deploy, update and delete UKCloud for Microsoft Azure resources in a single coordinated operation.</p>
 </li>
-<li><p>VM Extensions – UKCloud for Microsoft Azure supports virtual machine extensions that provide post deployment management for automation (for example, Docker)</p>
+<li><p>VM Extensions – UKCloud for Microsoft Azure supports virtual machine extensions that provide post deployment management for automation (for example, PowerShell DSC).</p>
 </li>
 </ul>
 <h3 id="network">Network</h3>
 <p>UKCloud manages the physical firewalls that face public and secure networks.</p>
-<p>You can deploy multiple gateway devices and configure the following using either the Azure Stack Portal GUI or API:</p>
+<p>You can deploy multiple gateway devices and configure the following using either the UKCloud Azure Stack portal or API:</p>
 <ul>
 <li><p>Virtual networks – UKCloud for Microsoft Azure enables you to configure virtual private clouds, and create and manage your private address space within Azure. You can configure this via the UI, API or other tooling</p>
 </li>
@@ -164,8 +164,7 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 <p><strong>Internet-facing solutions</strong> have 8 usable public IP addresses. You can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.</p>
 <h3 id="advanced-features">Advanced features</h3>
 <ul>
-<li>Key Vault. UKCloud for Microsoft Azure provides cryptographic secret storage for applications and services. These services can be consumed by both portal and API.<br>
-<a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-kv-intro">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-kv-intro</a></li>
+<li>Key Vault. UKCloud for Microsoft Azure provides cryptographic secret storage for applications and services. These services can be consumed via both portal and API. More information found <a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-kv-intro">here</a>.</li>
 </ul>
 <h3 id="protection-options">Protection options</h3>
 <p>You are responsible for designing your own disaster recovery and backup solutions as part of your adoption of UKCloud for Microsoft Azure.</p>
@@ -194,7 +193,7 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 </li>
 <li><p>The UKCloud for Microsoft Azure service is updated regularly with the latest code release from Microsoft - typically, this is once a month and notified via the <a href="https://status.ukcloud.com/">UKCloud service status page</a> and the <a href="https://portal.ukcloud.com">UKCloud Portal</a>. UKCloud aim to be within two updates from Microsoft, however, we will control the release of the patches into the live service.</p>
 </li>
-<li><p>Through the Azure Stack portal you can use availability sets so that VMs do not run on the same physical host.</p>
+<li><p>Through the UKCloud Azure Stack portal you can use availability sets so that VMs do not run on the same physical host.</p>
 </li>
 <li><p>You can make additional configurations inside a VM (such as acting as a secondary hypervisor or implementing third-party software technologies), however, we do not support these customer implementations.</p>
 </li>
@@ -209,7 +208,7 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 <li><p>Formatting information to display the item in the portal</p>
 </li>
 </ul>
-<p>We've pre-populated the Marketplace with a variety of images and templates that have been identified as the most useful services. You can request additional resources are added, providied they are approved for use on Microsoft Azure Stack. Here is the full list of <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-marketplace-azure-items">available items</a>.</p>
+<p>We've pre-populated the Marketplace with a variety of images and templates that have been identified as the most useful services. You can request additional resources are added, provided they are approved for use on Azure Stack. A full list of available items can be found <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-marketplace-azure-items">here</a>.</p>
 <p>You are responsible for ensuring that you have appropriate licensing and support in place for any item deployed from the Marketplace not licensed by UKCloud.</p>
 <h2 id="operating-systems">Operating systems</h2>
 <h3 id="licensing">Licensing</h3>
@@ -224,7 +223,7 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 <p>You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you're providing your own licensing for a retrospective discount.</p>
 <p>For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.</p>
 <h3 id="vm-server-images">VM server images</h3>
-<p>We provide base VM images for the operating systems (OS) for which we provide licensing, along with images for various free Linux distributions (such as Ubuntu, Centos &amp; Debian). You can access these from the Marketplace available within the Azure Stack portal.</p>
+<p>We provide base VM images for the operating systems (OS) for which we provide licensing, along with images for various free Linux distributions (such as Ubuntu, CentOS &amp; Debian). You can access these from the Marketplace available within the UKCloud Azure Stack portal.</p>
 <p>You can use your own images for non-Windows and RHEL services, where licensing stipulates that to use the VM on our platform it must be licensed (and reported back to the software vendor) by UKCloud.</p>
 <p><strong>Anti-virus.</strong> We do not provide anti-virus software as part of the service.</p>
 <h2 id="protective-monitoring">Protective monitoring</h2>
@@ -243,8 +242,8 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 </ul>
 <p>You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware.</p>
 <h2 id="service-reporting">Service reporting</h2>
-<p><strong>Visibility.</strong> You can use the Azure Stack portal to configure multiple views of your estate and monitor the health of your services in real time. This includes utilisation of individual components, alerts and recent operations.</p>
-<p><strong>Reporting.</strong> We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the Portal and via the UKCloud status page <a href="https://status.ukcloud.com/">https://status.ukcloud.com/</a>.</p>
+<p><strong>Visibility.</strong> You can use the UKCloud Azure Stack portal to configure multiple views of your estate and monitor the health of your services in real time. This includes utilisation of individual components, alerts and recent operations.</p>
+<p><strong>Reporting.</strong> We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the Portal and via the <a href="https://status.ukcloud.com/">UKCloud status page</a>.</p>
 <p><strong>Billing.</strong> We provide you with monthly bills covering your monthly spend.</p>
 <h2 id="customer-service">Customer service</h2>
 <p><strong>Customer Success Manager (CSM).</strong> All new customers of the service have access to a UKCloud Customer Success Manager, who will help you with your adoption of the UKCloud for Microsoft Azure service,  including finding relevant systems and using UKCloud tools and processes.</p>
@@ -268,7 +267,7 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 </ul>
 <h2 id="service-provisioning">Service provisioning</h2>
 <p>Within 4 hours of accepting an order (shorter deployment times are typically achieved and can be prioritised upon request), UKCloud will create the customer's Primary Administrator account and send a Welcome Pack which includes the URL for the UKCloud Customer Portal, and the getting started guide.</p>
-<p>We've created several articles, guides and FAQs to help you get up and running quickly and easily. These are available within the <a href="https://docs.ukcloud.com/">Knowledge Centre</a>.</p>
+<p>We've created several articles, guides and FAQs to help you get up and running quickly and easily. These are available within our <a href="https://docs.ukcloud.com/">Knowledge Centre</a>.</p>
 <p>In addition, you will be assigned a Customer Success Manager (CSM) to provide any assistance required during the first 90 days of the service.</p>
 <p>UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud would be pleased to introduce you to the right partner to suit your needs.</p>
 <h2 id="service-constraints">Service constraints</h2>
@@ -280,7 +279,7 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 <p>b)  carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.</p>
 <p>If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.</p>
 <h2 id="supporting-documents-and-resources">Supporting documents and resources</h2>
-<p>The following documents contain more information about UKCloud for VMware and the service options:</p>
+<p>The following documents contain more information about UKCloud for Microsoft Azure and the service options:</p>
 <ul>
 <li><p><a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/630346855069919-service-definition-document-2018-07-30-0941.pdf"><em>UKCloud for Microsoft Azure service definition</em></a></p>
 </li>

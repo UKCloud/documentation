@@ -8,7 +8,7 @@
     <title>Understanding UKCloud for Microsoft Azure | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Understanding UKCloud for Microsoft Azure | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -100,7 +100,7 @@
 <p>UKCloud for Microsoft Azure supports the following Azure Stack IaaS features:</p>
 <h3 id="compute">Compute</h3>
 <p>Virtual machines (VMs) provide the basic building block providing compute in Azure Stack. For a list of available VM sizes, see: <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes">https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes</a>.</p>
-<p>You can deploy VMs using the Azure Stack portal and other tooling. VMs have the following support:</p>
+<p>You can deploy VMs using the UKCloud Azure Stack portal and other tooling. VMs have the following support:</p>
 <ul>
 <li><p>API</p>
 </li>
@@ -161,7 +161,7 @@
 </table>
 <h3 id="advanced-features">Advanced features</h3>
 <ul>
-<li>Key Vault — Azure Stack provides cryptographic secret storage for applications and services. These services can be consumed by both portal and API.</li>
+<li>Key Vault — Azure Stack provides cryptographic secret storage for applications and services. These services can be consumed via both portal and API.</li>
 </ul>
 <p><a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-kv-intro">https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-kv-intro</a></p>
 <h2 id="design-considerations">Design considerations</h2>
@@ -200,14 +200,13 @@
 </li>
 </ul>
 <p>For an up-to-date list of the supported extensions, perform the following steps:</p>
-<p>First, ensure that you've installed the relevant Azure PowerShell tools from the following links:</p>
-<p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-install</a></p>
-<p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download">https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-download</a></p>
+<p>First, ensure that you've installed the relevant Azure PowerShell modules from the following link:</p>
+<p><a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a></p>
 <p>Then run the following commands:</p>
-<pre><code class="lang-PowerShell">Add-AzureRmEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
-Login-AzureRmAccount -EnvironmentName &quot;AzureStackAdmin&quot;
-Get-AzureRmVMImagePublisher -Location frn00006 | Get-AzureRmVMExtensionImageType | Get-AzureRmVMExtensionImage | `
-  Select-Object Type, Version | Format-Table -Property * -AutoSize
+<pre><code class="lang-powershell">Add-AzureRmEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+Connect-AzureRmAccount -EnvironmentName &quot;AzureStackAdmin&quot;
+Get-AzureRmVMImagePublisher -Location &quot;frn00006&quot; | Get-AzureRmVMExtensionImageType | Get-AzureRmVMExtensionImage | `
+  Select-Object -Property Type, Version | Format-Table -AutoSize
 </code></pre>
 </li>
 <li><p>Use load balancers to make the best use of IP address quota</p>
@@ -247,7 +246,7 @@ Get-AzureRmVMImagePublisher -Location frn00006 | Get-AzureRmVMExtensionImageType
 <ul>
 <li><p><a href="https://azure.microsoft.com/en-gb/get-started/"><em>Get Started with Azure</em></a></p>
 </li>
-<li><p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/"><em>Azure Stack Operator Documentation</em></a></p>
+<li><p><a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a></p>
 </li>
 </ul>
 <p>For more information about UKCloud for Microsoft Azure, see:</p>
@@ -259,7 +258,7 @@ Get-AzureRmVMImagePublisher -Location frn00006 | Get-AzureRmVMExtensionImageType
 </ul>
 <h2 id="related-videos">Related videos</h2>
 <ul>
-<li><a href="azs-vid-overview.html"><em>Microsoft Azure Stack Portal overview video</em></a></li>
+<li><a href="azs-vid-overview.html"><em>UKCloud Azure Stack portal overview video</em></a></li>
 </ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you have any comments on this article, or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>

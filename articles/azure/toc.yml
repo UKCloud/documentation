@@ -72,11 +72,11 @@
       href: azs-ref-overview.md
   - name: Service Scope
     items:
-    - name: UKCloud for Microsoft Azure service scope
+    - name: UKCloud for Microsoft Azure Service Scope
       href: azs-sco.md
   - name: Videos
     items:
-    - name: Microsoft Azure Stack portal overview
+    - name: UKCloud Azure Stack portal overview
       href: azs-vid-overview.md
 - name: Operators
   items:
@@ -84,7 +84,7 @@
     items:
     - name: Deploy and configure the Azure Stack Development Kit
       href: azs-how-deploy-asdk.md
-    - name: Perfom an Azure Stack update
+    - name: Perform an Azure Stack update
       href: azs-how-ps-update-azure-stack.md
     - name: Configure Environment
       items:
