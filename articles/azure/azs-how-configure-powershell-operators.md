@@ -24,10 +24,10 @@ Prerequisites from a Windows-based external client.
 
 - PowerShell 5.1
 
-    > [!NOTE]
-    > To check your version, run `$PSVersionTable.PSVersion` and compare the "Major" version.
-    >
-    > For "legacy" Operating Systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
+  > [!NOTE]
+  > To check your version, run `$PSVersionTable.PSVersion` and compare the "Major" version.
+  >
+  > For "legacy" Operating Systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
 
 ### Install Azure Stack PowerShell
 
@@ -43,7 +43,7 @@ Prerequisites from a Windows-based external client.
   Get-Module -ListAvailable | Where-Object { $_.Name -like "Azure*" -or $_.Name -like "Azs*" } | Uninstall-Module -Force -Verbose
   
   # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
-  Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Force -Verbose
+  Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Verbose
   Install-Module -Name AzureStack -RequiredVersion 1.7.0 -Verbose
   ```
 
@@ -68,7 +68,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
   ```powershell
   # Set Execution Policy
-  Set-ExecutionPolicy RemoteSigned
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
   # Register an AzureRM environment that targets your Azure Stack instance
   Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://adminmanagement.frn00006.azure.ukcloud.com"
