@@ -30,7 +30,7 @@ If these default groups do not meet your requirements, for example, if you've cr
 
 ### Intended audience
 
-To complete the steps in this guide you must have global administrator access to the Azure portal and Owner access to the Azure Stack portal.
+To complete the steps in this guide you must have global administrator access to the Azure portal and Owner access to the UKCloud Azure Stack portal.
 
 ## Creating a group for Azure users
 
@@ -67,11 +67,11 @@ To create a group in the Azure portal:
 
 ## Granting Azure permissions
 
-After setting up the user group in Azure, you need to go to the Azure Stack portal to grant the appropriate permissions to the group.
+After setting up the user group in Azure, you need to go to the UKCloud Azure Stack portal to grant the appropriate permissions to the group.
 
 To grant Azure permissions to a group:
 
-1. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
+1. Log in to the [UKCloud Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
 
 2. Navigate to **Subscriptions**.
 

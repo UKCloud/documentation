@@ -29,7 +29,7 @@ UKCloud for Microsoft Azure supports the following Azure Stack IaaS features:
 
 Virtual machines (VMs) provide the basic building block providing compute in Azure Stack. For a list of available VM sizes, see: <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>.
 
-You can deploy VMs using the Azure Stack portal and other tooling. VMs have the following support:
+You can deploy VMs using the UKCloud Azure Stack portal and other tooling. VMs have the following support:
 
 - API
 
@@ -63,7 +63,7 @@ You can deploy VMs using the Azure Stack portal and other tooling. VMs have the 
 
 ### Advanced features
 
-- Key Vault — Azure Stack provides cryptographic secret storage for applications and services. These services can be consumed by both portal and API.
+- Key Vault — Azure Stack provides cryptographic secret storage for applications and services. These services can be consumed via both portal and API.
 
 <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-kv-intro>
 
@@ -168,7 +168,7 @@ For more information about UKCloud for Microsoft Azure, see:
 
 ## Related videos
 
-- [*Microsoft Azure Stack Portal overview video*](azs-vid-overview.md)
+- [*UKCloud Azure Stack portal overview video*](azs-vid-overview.md)
 
 ## Feedback
 

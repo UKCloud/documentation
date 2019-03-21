@@ -1,5 +1,5 @@
 ---
-title: How to create a load balancer using the Azure Stack portal | UKCloud Ltd
+title: How to create a load balancer using the UKCloud Azure Stack portal | UKCloud Ltd
 description: Provides help for creating a load balancer on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
@@ -14,7 +14,7 @@ toc_fullpath: Users/How To/azs-how-create-load-balancer.md
 toc_mdlink: azs-how-create-load-balancer.md
 ---
 
-# How to create a load balancer using the Azure Stack portal
+# How to create a load balancer using the UKCloud Azure Stack portal
 
 ## Overview
 
@@ -22,13 +22,13 @@ A load balancer provides scale and availability by spreading incoming requests a
 
 ### Intended audience
 
-To complete the steps in this guide, you must have appropriate access to a subscription in the UKCloud Azure Stack portal.
+To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.
 
 ## Creating a load balancer
 
 In this section we will create a load balancer with a public IP address.
 
-1. Log in to the UKCloud Azure Stack portal.
+1. Log in to the Azure Stack portal.
 
    For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 

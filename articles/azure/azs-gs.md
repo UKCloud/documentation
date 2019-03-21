@@ -24,7 +24,7 @@ This Getting Started Guide provides you with the information you need to get up 
 
 ### Intended audience
 
-To complete the steps in this guide you must have access to the Azure Stack portal.
+To complete the steps in this guide you must have access to the UKCloud Azure Stack portal.
 
 ## Introduction to UKCloud for Microsoft Azure
 
@@ -103,7 +103,7 @@ After providing the above details, you should receive a welcome email shortly fr
 
 ***
 
-## Logging in to the UKCloud for Microsoft Azure portal
+## Logging in to the UKCloud Azure Stack portal
 
 To manage UKCloud for Microsoft Azure, you need to log in to the Azure Stack portal. The portal provides access to all your Azure resources.
 
@@ -266,7 +266,7 @@ For more information, including steps and scripts for setting up Azure PowerShel
 
 ## Next steps
 
-In this Getting Started Guide, you've learned the basics about UKCloud for Microsoft Azure and the Azure Stack portal. For more information about UKCloud for Microsoft Azure, see the following articles in the Knowledge Centre:
+In this Getting Started Guide, you've learned the basics about UKCloud for Microsoft Azure and the UKCloud Azure Stack portal. For more information about UKCloud for Microsoft Azure, see the following articles in the Knowledge Centre:
 
 - [*Understanding UKCloud for Microsoft Azure*](azs-ref-overview.md)
 

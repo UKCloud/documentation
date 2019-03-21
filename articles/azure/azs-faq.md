@@ -116,11 +116,11 @@ Storage is persistent unless it is virtual machine temporary storage.
 
 ### How do I access my UKCloud for Microsoft Azure solution?
 
-Access to the UKCloud for Microsoft Azure portal is available via the UKCloud Portal. You'll be provided with login details once your account is provisioned.
+Access to the UKCloud Azure Stack portal is available via the UKCloud Portal. You'll be provided with login details once your account is provisioned.
 
 ### Which ports need to be open to access my UKCloud for Microsoft Azure solution?
 
-The UKCloud for Microsoft Azure portal requires port 80 (HTTP) and port 443 (HTTPS) to be open.
+The UKCloud Azure Stack portal requires port 80 (HTTP) and port 443 (HTTPS) to be open.
 
 ### How do I access my solutions via government networks?
 
@@ -128,7 +128,7 @@ UKCloud for Microsoft Azure will be available on the internet, HSCN, Janet, RLI 
 
 ### What reports can I get about my UKCloud for Microsoft Azure solution?
 
-All reporting is via the UKCloud for Microsoft Azure management portal, which provides a variety of reports on the dashboard.
+All reporting is via the UKCloud Azure Stack portal, which provides a variety of reports on the dashboard.
 
 You can also interact with the API to pull data into your own reporting solutions.
 
@@ -139,7 +139,7 @@ Microsoft Azure solution.
 
 ### How do I manage my services?
 
-This service is designed to be managed using the UKCloud for Microsoft Azure portal. You can also manage it through a command line using the UKCloud for Microsoft Azure API.
+This service is designed to be managed using the UKCloud Azure Stack portal. You can also manage it through a command line using the UKCloud for Microsoft Azure API.
 
 ### What tools can I use to manage my service?
 
@@ -151,7 +151,7 @@ The current provisioning time for a new service is 4 hours from service request 
 
 ### How quickly can I scale my service up or down?
 
-You can scale your UKCloud for Microsoft Azure services either via the UKCloud for Microsoft Azure portal or using the Azure API. This will typically take a few minutes to action. However, if you are likely to increase your requirements significantly, you are advised to plan this with your allocated Technical Account Manager.
+You can scale your UKCloud for Microsoft Azure services either via the UKCloud Azure Stack portal or using the Azure API. This will typically take a few minutes to action. However, if you are likely to increase your requirements significantly, you are advised to plan this with your allocated Technical Account Manager.
 
 ## Support
 

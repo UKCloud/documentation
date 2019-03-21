@@ -1,5 +1,5 @@
 ---
-title: How to create a site-to-site connection using the Azure Stack portal | UKCloud Ltd
+title: How to create a site-to-site connection using the UKCloud Azure Stack portal | UKCloud Ltd
 description: Create a site-to-site (S2S) VPN gateway connection from an on-premises network to UKCloud for Microsoft Azure 
 services: azure-stack
 author: Bailey Lawson
@@ -14,21 +14,21 @@ toc_fullpath: Users/How To/azs-how-create-S2S-VPN.md
 toc_mdlink: azs-how-create-S2S-VPN.md
 ---
 
-# How to create a site-to-site connection using the Azure Stack portal
+# How to create a site-to-site connection using the UKCloud Azure Stack portal
 
 ## Overview
 
-This guide shows you how to use the UKCloud Azure Stack portal to create a Site-to-Site VPN from your on-premises network to your UKCloud for Microsoft Azure environment.
+This guide shows you how to use the Azure Stack portal to create a Site-to-Site VPN from your on-premises network to your UKCloud for Microsoft Azure environment.
 
 ### Intended audience
 
-To complete the steps in this guide, you must have appropriate access to a subscription in the UKCloud Azure Stack portal.
+To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.
 
 ## Create a virtual network
 
 First, you'll need to create a virtual network. This virtual network will be able to send and receive traffic through the virtual network gateway. You cannot associate a virtual network with more than one gateway.
 
-1. Log in to the UKCloud Azure Stack portal.
+1. Log in to the Azure Stack portal.
 
    For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 

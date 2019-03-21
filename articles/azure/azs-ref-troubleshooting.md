@@ -24,7 +24,7 @@ This guide describes some of the issues you may encounter when using UKCloud for
 
 ### Cause
 
-When first logging in to the Azure Stack portal, you may see the following error:
+When first logging in to the UKCloud Azure Stack portal, you may see the following error:
 
 `Server Error in '/' Application.`
 

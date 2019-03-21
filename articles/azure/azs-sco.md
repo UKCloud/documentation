@@ -42,7 +42,7 @@ Virtual machines (VMs) provide the basic building blocks of compute resource wit
 
 You can find the full list of supported machines [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
 
-You can deploy VMs using the UKCloud for Microsoft Azure portal and other tooling.
+You can deploy VMs using the UKCloud Azure Stack portal and other tooling.
 
 > [!Warning]
 > Each VM contains a temporary disk. The temporary disk provides short-term storage for applications and processes and is intended to only store data such as page or swap files. Data on the temporary disk may be lost during a maintenance event or when you redeploy a VM.
@@ -83,7 +83,7 @@ There are several ways in which storage can be addressed in UKCloud for Microsof
 
 UKCloud manages the physical firewalls that face public and secure networks.
 
-You can deploy multiple gateway devices and configure the following using either the Azure Stack Portal GUI or API:
+You can deploy multiple gateway devices and configure the following using either the UKCloud Azure Stack portal or API:
 
 - Virtual networks – UKCloud for Microsoft Azure enables you to configure virtual private clouds, and create and manage your private address space within Azure. You can configure this via the UI, API or other tooling
 
@@ -95,7 +95,7 @@ You can deploy multiple gateway devices and configure the following using either
 
 ### Advanced features
 
-- Key Vault. UKCloud for Microsoft Azure provides cryptographic secret storage for applications and services. These services can be consumed by both portal and API. More information found [here](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-kv-intro).
+- Key Vault. UKCloud for Microsoft Azure provides cryptographic secret storage for applications and services. These services can be consumed via both portal and API. More information found [here](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-kv-intro).
 
 ### Protection options
 
@@ -126,7 +126,7 @@ The service levels are as follows:
 
 - The UKCloud for Microsoft Azure service is updated regularly with the latest code release from Microsoft - typically, this is once a month and notified via the [UKCloud service status page](https://status.ukcloud.com/) and the [UKCloud Portal](https://portal.ukcloud.com). UKCloud aim to be within two updates from Microsoft, however, we will control the release of the patches into the live service.
 
-- Through the Azure Stack portal you can use availability sets so that VMs do not run on the same physical host.
+- Through the UKCloud Azure Stack portal you can use availability sets so that VMs do not run on the same physical host.
 
 - You can make additional configurations inside a VM (such as acting as a secondary hypervisor or implementing third-party software technologies), however, we do not support these customer implementations.
 
@@ -162,7 +162,7 @@ For non-UKCloud issued software, you must obey the licensing requirements of the
 
 ### VM server images
 
-We provide base VM images for the operating systems (OS) for which we provide licensing, along with images for various free Linux distributions (such as Ubuntu, CentOS & Debian). You can access these from the Marketplace available within the Azure Stack portal.
+We provide base VM images for the operating systems (OS) for which we provide licensing, along with images for various free Linux distributions (such as Ubuntu, CentOS & Debian). You can access these from the Marketplace available within the UKCloud Azure Stack portal.
 
 You can use your own images for non-Windows and RHEL services, where licensing stipulates that to use the VM on our platform it must be licensed (and reported back to the software vendor) by UKCloud.
 
@@ -190,7 +190,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 ## Service reporting
 
-**Visibility.** You can use the Azure Stack portal to configure multiple views of your estate and monitor the health of your services in real time. This includes utilisation of individual components, alerts and recent operations.
+**Visibility.** You can use the UKCloud Azure Stack portal to configure multiple views of your estate and monitor the health of your services in real time. This includes utilisation of individual components, alerts and recent operations.
 
 **Reporting.** We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the Portal and via the [UKCloud status page](https://status.ukcloud.com/).
 
