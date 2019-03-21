@@ -1,6 +1,6 @@
 ---
 title: How to export edge gateway configuration data using PowerShell | UKCloud Ltd
-description: This article describes how to use PowerCLI to extract vCNS Edge configuration data
+description: This article describes how to use PowerCLI to extract Edge Gateway configuration data
 services: vmware
 author: Steve Hall
 toc_rootlink: How To
@@ -19,7 +19,7 @@ toc_mdlink: vmw-how-ps-export-edge-data.md
 
 If you want to export your edge gateway configuration data (firewall rules, NAT rules, load balancer virtual servers and DHCP pools), for example, for backup or disaster recovery purposes, you can use PowerShell.
 
-## Exporting vCNS Edge configuration data
+## Exporting Edge Gateway configuration data
 
 1. Install PowerCLI from VMware:
 
@@ -64,7 +64,7 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
     }
     
-4. Find your vCNS Edges by entering the following command:
+4. Find your Edge Gateways by entering the following command:
 
         $Gateways = Search-Cloud -QueryType EdgeGateway
 
