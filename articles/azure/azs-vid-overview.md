@@ -25,7 +25,7 @@ The following video provides an overview of the UKCloud Azure Stack portal.
 ## Related articles
 
 - [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md)
-- [*How to create a virtual machine using the UKCloud Azure Stack portal*](azs-how-create-vm.md)
+- [*How to create a virtual machine using the UKCloud Azure Stack portal*](azs-how-create-vm-portal.md)
 
 ## Feedback
 
