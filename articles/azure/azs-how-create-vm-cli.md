@@ -1,8 +1,9 @@
 ---
-title: How to create a virtual machine using the Azure CLI | UKCloud Ltd
+title: How to create a virtual machine using Azure CLI | UKCloud Ltd
 description: Provides help for creating a virtual machine on UKCloud for Microsoft Azure using Azure CLI
 services: azure-stack
 author: Bailey Lawson
+
 toc_rootlink: Users
 toc_sub1: How To
 toc_sub2: Create a Virtual Machine
@@ -17,7 +18,7 @@ toc_mdlink: azs-how-create-vm-cli.md
 
 ## Overview
 
-With UKCloud for Microsoft Azure, you can leverage the power of Microsoft Azure to create virtual machines (VMs) for your on-premises applications. 
+With UKCloud for Microsoft Azure, you can leverage the power of Microsoft Azure to create virtual machines (VMs) for your on-premises applications.
 As UKCloud for Microsoft Azure is built on UKCloud’s assured, UK-sovereign multi-cloud platform, those applications can work alongside other cloud platforms, such as Oracle,
 VMware and OpenStack, and benefit from native connectivity to non-cloud workloads in Crown Hosting and government community networks, including PSN, HSCN and RLI.
 
@@ -27,9 +28,9 @@ Ensure your Azure CLI environment is setup as detailed in [Configure the Azure S
 
 ## Creating a resource group
 
-Before create a VM, you must create a resource group to deploy the VM to. If you've already created the resource group, you can skip this step.
+Before creating a VM, you must create a resource group to deploy the VM to. If you've already created the resource group, you can skip this step.
 
-```Bash
+```azurecli
 az group create --name '<Resource Group Name>' --location 'frn00006'
 ```
 
@@ -37,7 +38,7 @@ az group create --name '<Resource Group Name>' --location 'frn00006'
 
 When you've created the resource group, you must choose which image template to use for your VM. To obtain a list of available images run the following command:
 
-```Bash
+```azurecli
 az vm image list --all --output table
 You are retrieving all the images from server which could take more than a minute. To shorten the wait, provide '--publisher', '--offer' or '--sku'. Partial name search is supported.
 Offer                    Publisher               Sku                Urn                                                                      Version
@@ -69,14 +70,14 @@ SQL2017-WS2016           MicrosoftSQLServer      Standard           MicrosoftSQL
 
 After you've decided which image you want to use, run the following command, substituting your own variables where applicable. The 'az vm create' command will also create any resources required for the VM (for example, a network interface card, a network security group, and so on)
 
-```Bash
-az vm create --resource-group '<Resource Group Name>' --name '<VM Name>' --image '<Image URN>' --admin-username '<Username>' --admin-password '<password>' --use-unmanaged-disk --location 'frn00006'
+```azurecli
+az vm create --resource-group '<Resource Group Name>' --name '<VM Name>' --image '<Image URN>' --admin-username '<Username>' --admin-password '<Password>' --location 'frn00006'
 ```
 
 For example, to create an Ubuntu 18.04-LTS server:
 
-```Bash
-az vm create --resource-group 'myResourceGroup' --name 'myVM' --image 'Canonical:UbuntuServer:18.04-LTS:18.04.201808140' --admin-username 'username' --admin-password 'Password1234!' --use-unmanaged-disk --location 'frn00006'
+```azurecli
+az vm create --resource-group 'myResourceGroup' --name 'myVM' --image 'Canonical:UbuntuServer:18.04-LTS:18.04.201808140' --admin-username 'username' --admin-password 'Password1234!' --location 'frn00006'
 
 
 - Running ..

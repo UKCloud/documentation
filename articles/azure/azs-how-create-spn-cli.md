@@ -1,5 +1,5 @@
 ---
-title: How to Create a service principal name for Azure Stack - CLI | UKCloud Ltd
+title: How to create a service principal name for Azure Stack using Azure CLI | UKCloud Ltd
 description: Learn how to create service principal name (SPN) to manage your Azure Stack using Azure CLI
 services: azure-stack
 author: Chris Black
@@ -38,46 +38,28 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 - Azure CLI
 
-    - [Configure Azure CLI Environment for Azure Stack](azs-how-configure-cli.md)
+  - [Configure Azure CLI Environment for Azure Stack](azs-how-configure-cli.md)
 
 - Active Azure *Subscription* (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)
 
 ## Official Documentation
 
-- [Service Principal Name commands for 2017-03-09-profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2017-03-09-profile)
+- [Service Principal Name commands for 2018-03-01-hybrid profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2018-03-01-hybrid)
 
-- [Create an Azure Service Principal Name with Azure CLI 2.0 for 2017-03-09-profile](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-2017-03-09-profile)
-
-> [!IMPORTANT]
-> Currently Azure CLI **2.0.41** is broken and this will **NOT** work - [see GitHub Issue](https://github.com/Azure/azure-cli/issues/6433)
->
-> The workaround is to use older Azure CLI
->
-> [How To Install Azure CLI on CentOS](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-yum?view=azure-cli-latest)
->
-> - [CentOS Azure CLI Packages](https://packages.microsoft.com/yumrepos/azure-cli/)
-> 
-> ```bash
-> yum install azure-cli-2.0.25-1.el7.x86_64 -y
-> ```
->
-> [How To Install Azure CLI on Windows](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest)
->
-> - [Windows Azure CLI MSI Package](https://azurecliprod.azureedge.net/msi/azure-cli-2.0.25.msi)
->
+- [Create an Azure Service Principal Name with Azure CLI 2.0 for 2018-03-01-hybrid profile](azs-how-create-spn-cli.md)
 
 ## Overview of the creation process for Azure Stack SPN
 
-1. Prepare your Azure Stack environment - [Configure Azure CLI Environment for Azure Stack](azs-how-configure-cli.md)
+1. Prepare your Azure Stack CLI environment - [Configure Azure CLI Environment for Azure Stack](azs-how-configure-cli.md).
 
 2. Create your Azure Stack environment.
 
 3. Log in to your Azure Stack *Subscription* with administrator user credentials (needs to have **Owner** role).
 
-4. Create Azure application, SPN, and assign **Role**
+4. Create Azure application, SPN, and assign **Role**.
 
     > [!NOTE]
-    > Unlike with PowerShell - Azure CLI creates an Azure application, creates SPN and assigns **Roles** to SPN in one command.
+    > Unlike PowerShell, Azure CLI creates an Azure application, creates an SPN and assigns **Roles** to the SPN in one command.
 
 5. Log in to your Azure Stack *Subscription* using the SPN account.
 
@@ -87,9 +69,9 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 ## Create service principal name for Azure Stack with **Set Password**
 
-```azurecli-interactive
+```azurecli
 # Create your environment
-az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" --suffix-storage-endpoint "frn00006.azure.ukcloud.com" --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2017-03-09-profile
+az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" --suffix-storage-endpoint "frn00006.azure.ukcloud.com" --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
 
 # Set your environment
 az cloud set -n AzureStackUser
@@ -119,10 +101,10 @@ az ad sp create-for-rbac --name "ServicePrincipalName" --password 'Password1234!
 ## Note, CLIENT_ID=appId, CLIENT_SECRET=password, TENANT_ID=tenant
 az login --service-principal -u CLIENT_ID -p CLIENT_SECRET --tenant TENANT_ID
 
-# Test your SPN account by creating a new Resource Group in Azure Stack
+# Test your SPN account by creating a new resource group in Azure Stack
 az group create --name rg01 --location frn00006
 
-# Remove test Resource Group
+# Remove test resource group
 az group delete --name rg01 -y
 ```
 
@@ -136,8 +118,9 @@ az group delete --name rg01 -y
 > TENANT_ID=tenant
 
 > [!TIP]
-> You can also run the create-for-rbac command without password and then you can pick the automatically generated password from the output variable:
-> ```azurecli-interactive
+> You can also run the `create-for-rbac` command without password and then you can pick the automatically generated password from the output variable:
+>
+> ```azurecli
 > az ad sp create-for-rbac --name "ServicePrincipalName" --role="Owner"
 > {
 > "appId": "00000000-0000-0000-0000-000000000000",
@@ -149,11 +132,6 @@ az group delete --name rg01 -y
 > ```
 >
 > This is yet another difference between PowerShell creation as there is no auto-generation of passwords built-in
-
-> [!IMPORTANT]
-> Given the fact that Azure CLI under Profile 2017-03-09 does **NOT** allow you to lsit your service principal name unlike the [latest profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-list) vs [206-03-09 profile](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2017-03-09-profile#az-ad-sp-list), its use for Azure Stack is highly limited.
->
-> As a rule of thumb use PowerShell wherever possible.
 
 ## Feedback
 

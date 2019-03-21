@@ -1,5 +1,5 @@
 ---
-title: How to configure the Azure Stack user's PowerShell environment for UKCloud | Based on Microsoft Docs
+title: How to configure the Azure Stack user's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd
 description: Configure the Azure Stack user's PowerShell environment
 services: azure-stack
 author: Chris Black
@@ -24,14 +24,14 @@ Prerequisites from a Windows-based external client.
 
 - PowerShell 5.1
 
-    > [!NOTE]
-    > To check your version, run `$PSVersionTable.PSVersion` and compare the "Major" version.
-    >
-    > For "legacy" Operating Systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
+  > [!NOTE]
+  > To check your version, run `$PSVersionTable.PSVersion` and compare the "Major" version.
+  >
+  > For "legacy" Operating Systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
 
 ### Install Azure Stack PowerShell
 
-  ```PowerShell
+  ```powershell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
   
@@ -43,7 +43,7 @@ Prerequisites from a Windows-based external client.
   Get-Module -ListAvailable | Where-Object { $_.Name -like "Azure*" -or $_.Name -like "Azs*" } | Uninstall-Module -Force -Verbose
   
   # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
-  Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Force -Verbose
+  Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Verbose
   Install-Module -Name AzureStack -RequiredVersion 1.7.0 -Verbose
   ```
 
@@ -53,7 +53,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
 ### Azure Active Directory (AAD) based deployments
 
-  ```PowerShell
+  ```powershell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
 
@@ -66,9 +66,9 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
 ### Azure Active Directory (AAD) based deployments - Embedded Credentials
 
-  ```PowerShell
+  ```powershell
   # Set Execution Policy
-  Set-ExecutionPolicy RemoteSigned
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
   # Register an AzureRM environment that targets your Azure Stack instance
   Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
@@ -76,7 +76,7 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
   # Create your Credentials
   $AzsUsername =  "<username>@<myDirectoryTenantName>.onmicrosoft.com"
   $AzsPassword = '<your password>'
-  $AzsUserPassword = ConvertTo-SecureString $AzsPassword -AsPlainText -Force
+  $AzsUserPassword = ConvertTo-SecureString -String $AzsPassword -AsPlainText -Force
   $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
   # Sign in to your environment
@@ -87,15 +87,15 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
 
 Now that we've got everything set-up, let's use PowerShell to create resources within Azure Stack. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named "MyResourceGroup":
 
-```PowerShell
+```powershell
 New-AzureRmResourceGroup -Name "MyResourceGroup" -Location "frn00006"
 ```
 
 ## Next steps
 
-* [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
+- [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
 
-* [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
+- [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
 
 ## Feedback
 
