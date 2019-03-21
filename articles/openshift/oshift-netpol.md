@@ -24,7 +24,7 @@ By default we put in place NetworkPolicy objects that allow all pods to communic
 
 ## Interacting with NetworkPolicy objects
 
-NetworkPolicy objects can interacted with on the command line using the full name networkpolicy or short name netpol, for example:
+NetworkPolicy objects can be interacted with on the command line using the full name networkpolicy or short name netpol, for example:
 
 ``` oc get netpol ``` - List NetworkPolicy objects in the current project.
 
