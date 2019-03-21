@@ -130,10 +130,12 @@
 </tbody>
 </table>
 <p><strong>Virtualisation Note:</strong> VMware HW must be &gt;=11, CPU virtual extension pass-through must be enabled</p>
-<blockquote>
-<p>[!IMPORTANT] If you deploy your VM with Hardware Version 11 and Operating System Family as Windows Server 2016 you will not be able to create S2D Cluster as disk UUIDs are not exposed.</p>
-<p>Either create it with Windows Server 2012 and change later or in Configuration Parameters -&gt; Click Add Row. In the Name column, enter disk.EnableUUID. In the Value column, enter TRUE. This will show correct disk IDs in Get-PhysicalDisk cmdlets and cluster should build.</p>
-</blockquote>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>If you deploy your VM with Hardware Version 11 and Operating System Family as Windows Server 2016 you will not be able to create S2D Cluster as disk UUIDs are not exposed.</p>
+<p>Either create it with Windows Server 2012 and change later or in Configuration Parameters -&gt; Click Add Row. In the Name column, enter disk.EnableUUID.
+In the Value column, enter TRUE. This will show correct disk IDs in Get-PhysicalDisk cmdlets and cluster should build.</p>
+</div>
 <p><strong>Physical Note:</strong> The first two drives must be setup as a RAID 1, the rest passed through as a JBOD; additionally, you need to specify your VLAN as ACCESS in the CIMC</p>
 <h2 id="step-2---install-base-operating-system">Step 2 - Install base operating system</h2>
 <p>Install Windows Server 2016 to the OS disk implementing a static IP address.</p>
@@ -288,9 +290,10 @@ cd C:\CloudDeployment\Setup
 .\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $Credentials -InfraAzureDirectoryTenantName &lt;domain&gt;.onmicrosoft.com -NatIPv4Subnet 51.179.198.224/28 -NatIPv4Address 51.179.198.227 -NatIPv4DefaultGateway 51.179.198.225 -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
 </code></pre>
 <p><strong>Virtualisation Note:</strong> after completing the wizard BUT before clicking install copy the command as the install will fail.</p>
-<blockquote>
-<p>[!IMPORTANT] If the installer cannot see any network adapters - you can install manually VMware Tools and reboot the box. It will work then.</p>
-</blockquote>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>If the installer cannot see any network adapters - you can install manually VMware Tools and reboot the box. It will work then.</p>
+</div>
 <pre><code class="lang-powershell">E:\AzureStack_Installer\asdk-installer.ps1
 
 Initialize environment. Please wait...
