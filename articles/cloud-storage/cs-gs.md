@@ -112,9 +112,6 @@ Internet | `cas.frn00006.ukcloud.com` | `atmos.cas.frn00006.ukcloud.com`
 PSN Assured | `cas.frn00006.psnassured.ukcloud.com` | `atmos.cas.frn00006.psnassured.ukcloud.com`
 N3 | `cas.frn00006.ukcloud.thirdparty.nhs.uk/` | `atmos.cas.frn00006.ukcloud.thirdparty.nhs.uk/`
 
-If you're using the ENHANCED option (geo-resilient storage), you can use either the Corsham or Farnborough endpoints. In the event of a site failure, there will be an outage to objects created on the failed site.
-UKCloud will bring these objects online in the other site within about 15 minutes.
-
 Contact UKCloud support if you are unsure which endpoint to use.
 
 ## Using the ECS S3-compatible API

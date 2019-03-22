@@ -101,10 +101,6 @@ This data centre interconnectivity is highly scalable, as spare fibre capacity i
 
 We actively monitor and manage our connections to ensure there is appropriate connectivity to the platform. Customers looking to provide 'guaranteed' connection capacity should include a HybridConnect leased line in their solution.
 
-## If I use VMs with Geo-resilience (formerly ENHANCED service level), am I still charged for connectivity between data centres?
-
-No. The cost of bandwidth required for replication of VMs is included in the hourly cost of the Geo-resilient VM and the monthly cost of additional geo-resilient storage.
-
 ## Can UKCloud help me if I don't have a suitable connection for the Elevated OFFICIAL cloud platform?
 
 We recognise that some customers may be affected by the often extended lead times associated with provisioning new connections suitable for the Elevated OFFICIAL cloud platform; and that some customers may not have adequate bandwidth to handle bulk import/export activities.
@@ -121,7 +117,7 @@ If you're interested in either of these services, please contact our sales team 
 
 This depends on the use case.
 
-- If you have a non geo-resilient VDC in each UKCloud data centre:
+- If you have a VDC in each UKCloud data centre:
 
   - Configure an IPsec VPN between the edge gateway instances of each VDC. Once the VPN has been established, VMs within the VDC can connect to each another using their private (RFC 1918) IP addresses.
 
@@ -154,7 +150,6 @@ Yes, UKCloud provides a Janet connection provided free for our customers. In ord
 Like all our connectivity options, there is no set bandwidth cap on our VRFs, and we will capacity manage our VRF network in order to ensure our customers can consume as much as required, however we do operate a Networks Fair Use Policy which protects all our users of the networks from being impacted by particularly spiky/unpredictable network loads. To that end, if a customer thinks that they will use large amounts of bandwidth we always appreciate a heads-up so we can proactively increase bandwidth of the network in order to avoid having to lean on any policy to protect all our users.
 
 Outside of the VRF, customers may need to consider the impact of things such as IPSec VPN tunnels over the VRF, which decrease the bandwidth of the network because of Edge throughput limits.
-
 
 ## Feedback
 

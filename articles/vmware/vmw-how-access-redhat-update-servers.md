@@ -39,7 +39,7 @@ These templates have the following properties:
 
 - 32GB disk space / 1 x vCPU / 2GB ram (default, adjust as required)
 
-You can adjust the VM properties as required and you'll be billed as per the standard VM sizes as described in the UKCloud for VMware Service Definition. You will not be billed on additional storage until you reach the 60GB of provisioned disk space, unless you've chosen geo-resilient.
+You can adjust the VM properties as required and you'll be billed as per the standard VM sizes as described in the UKCloud for VMware Service Definition. You will not be billed on additional storage until you reach the 60GiB of provisioned disk space.
 
 ## Old Red Hat VM templates
 
