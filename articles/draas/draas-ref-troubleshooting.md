@@ -3,14 +3,14 @@ title: Troubleshooting Disaster Recovery as a Service | UKCloud Ltd
 description: This guide helps you get your Disaster Recovery to the Cloud service (powered by Zerto) up and running
 services: draas
 author: Dan Baker
-toc_rootlink: Troubleshooting
+toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Troubleshooting Disaster Recovery to the Cloud
-toc_fullpath: Troubleshooting/draas-ref-troubleshooting.md
-toc_mdlink: drass-ref-troubleshooting.md
+toc_fullpath: Reference/draas-ref-troubleshooting.md
+toc_mdlink: draas-ref-troubleshooting.md
 ---
 
 # Troubleshooting Disaster Recovery as a Service
@@ -107,4 +107,4 @@ It's likely that the live failover (excluding the commit operation) will take a 
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

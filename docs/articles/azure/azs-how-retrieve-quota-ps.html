@@ -8,7 +8,7 @@
     <title>How to retrieve your subscription quotas using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to retrieve your subscription quotas using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -100,11 +100,11 @@
 <p>Ensure your PowerShell environment is setup as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
 <h2 id="retrieving-your-quota">Retrieving your quota</h2>
 <p>From your PowerShell window:</p>
-<pre><code class="lang-PowerShell"># Add environment
+<pre><code class="lang-powershell"># Add environment
 Add-AzureRmEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
 
 # Login
-Login-AzureRmAccount -EnvironmentName &quot;AzureStackUser&quot;
+Connect-AzureRmAccount -EnvironmentName &quot;AzureStackUser&quot;
 
 # Retrieve Compute quota
 $ComputeQuota = Get-AzureRmVMUsage -Location &quot;frn00006&quot; | Select-Object Name, CurrentValue, Limit
@@ -113,14 +113,14 @@ $ComputeQuota | ForEach-Object {
         $_.Name = $_.Name.Value -creplace '(\B[A-Z])', ' $1'
     } else {
         $_.Name = $_.Name.LocalizedValue
-    }   
-} 
+    }
+}
 
 # Retrieve Storage quota
 $StorageQuota = Get-AzureRmStorageUsage | Select-Object Name, CurrentValue, Limit
 
 # Retrieve Network quota
-$NetworkQuota = Get-AzureRmNetworkUsage -Location &quot;frn00006&quot; | Select-Object @{label=&quot;Name&quot;;expression={$_.ResourceType}}, `
+$NetworkQuota = Get-AzureRmNetworkUsage -Location &quot;frn00006&quot; | Select-Object @{label=&quot;Name&quot;;expression={ $_.ResourceType }}, `
     CurrentValue, Limit
 
 # Combine quotas
@@ -130,7 +130,7 @@ $AllQuotas = $ComputeQuota + $StorageQuota + $NetworkQuota
 $AllQuotas | Export-Csv -Path &quot;AzureStackQuotas.csv&quot; -NoTypeInformation
 </code></pre>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">

@@ -8,7 +8,7 @@
     <title>How to use the Azure Stack API | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to use the Azure Stack API | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -146,7 +146,7 @@
 </li>
 </ul>
 <p>For example:</p>
-<pre><code>grant_type=password
+<pre><code class="lang-http">grant_type=password
 &amp;client_id=1950a258-227b-4e31-a9cf-717495945fc2
 &amp;resource=(endpoint returned in the audiences section below)
 &amp;username=admin@ukcloud.onmicrosoft.com
@@ -159,7 +159,7 @@
 </div>
 </li>
 <li><p>An example request might look something like the following</p>
-<pre><code>curl -X &quot;POST&quot; &quot;https://login.windows.net/160f539f-8571-4c96-9361-797645c24e75/oauth2/token&quot; \
+<pre><code class="lang-bash">curl -X &quot;POST&quot; &quot;https://login.windows.net/160f539f-8571-4c96-9361-797645c24e75/oauth2/token&quot; \
 -H &quot;Content-Type: application/x-www-form-urlencoded&quot; \
 --data-urlencode &quot;client_id=1950a258-227b-4e31-a9cf-717495945fc2&quot; \
 --data-urlencode &quot;grant_type=password&quot; \
@@ -170,7 +170,7 @@
 </code></pre>
 </li>
 <li><p>If the authentication is successful, the endpoint returns an access token. For example:</p>
-<pre><code>{
+<pre><code class="lang-json">{
   &quot;token_type&quot;: &quot;Bearer&quot;,
   &quot;scope&quot;: &quot;user_impersonation&quot;,
   &quot;expires_in&quot;: &quot;3599&quot;,
@@ -183,7 +183,7 @@
 </code></pre>
 </li>
 <li><p>You must include this token in the Authorization header of each subsequent API request. For example:</p>
-<pre><code>curl -H &quot;Authorization: Bearer eyJ0eXAiOi...truncated for readability...&quot; 'https://management.local.azurestack.external/subscriptions?api-version=2016-05-01'
+<pre><code class="lang-bash">curl -H &quot;Authorization: Bearer eyJ0eXAiOi...truncated for readability...&quot; 'https://management.local.azurestack.external/subscriptions?api-version=2016-05-01'
 </code></pre>
 </li>
 </ol>
@@ -245,7 +245,7 @@
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to Create a service principal name for Azure Stack - CLI | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to create a service principal name for Azure Stack using Azure CLI | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to Create a service principal name for Azure Stack - CLI | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="title" content="How to create a service principal name for Azure Stack using Azure CLI | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -120,38 +120,23 @@
 </ul>
 <h2 id="official-documentation">Official Documentation</h2>
 <ul>
-<li><p><a href="https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2017-03-09-profile">Service Principal Name commands for 2017-03-09-profile</a></p>
+<li><p><a href="https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2018-03-01-hybrid">Service Principal Name commands for 2018-03-01-hybrid profile</a></p>
 </li>
-<li><p><a href="https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-2017-03-09-profile">Create an Azure Service Principal Name with Azure CLI 2.0 for 2017-03-09-profile</a></p>
+<li><p><a href="azs-how-create-spn-cli.html">Create an Azure Service Principal Name with Azure CLI 2.0 for 2018-03-01-hybrid profile</a></p>
 </li>
 </ul>
-<div class="IMPORTANT">
-<h5>Important</h5>
-<p>Currently Azure CLI <strong>2.0.41</strong> is broken and this will <strong>NOT</strong> work - <a href="https://github.com/Azure/azure-cli/issues/6433">see GitHub Issue</a></p>
-<p>The workaround is to use older Azure CLI</p>
-<p><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-yum?view=azure-cli-latest">How To Install Azure CLI on CentOS</a></p>
-<ul>
-<li><a href="https://packages.microsoft.com/yumrepos/azure-cli/">CentOS Azure CLI Packages</a></li>
-</ul>
-<pre><code class="lang-bash">yum install azure-cli-2.0.25-1.el7.x86_64 -y
-</code></pre>
-<p><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest">How To Install Azure CLI on Windows</a></p>
-<ul>
-<li><a href="https://azurecliprod.azureedge.net/msi/azure-cli-2.0.25.msi">Windows Azure CLI MSI Package</a></li>
-</ul>
-</div>
 <h2 id="overview-of-the-creation-process-for-azure-stack-spn">Overview of the creation process for Azure Stack SPN</h2>
 <ol>
-<li><p>Prepare your Azure Stack environment - <a href="azs-how-configure-cli.html">Configure Azure CLI Environment for Azure Stack</a></p>
+<li><p>Prepare your Azure Stack CLI environment - <a href="azs-how-configure-cli.html">Configure Azure CLI Environment for Azure Stack</a>.</p>
 </li>
 <li><p>Create your Azure Stack environment.</p>
 </li>
 <li><p>Log in to your Azure Stack <em>Subscription</em> with administrator user credentials (needs to have <strong>Owner</strong> role).</p>
 </li>
-<li><p>Create Azure application, SPN, and assign <strong>Role</strong></p>
+<li><p>Create Azure application, SPN, and assign <strong>Role</strong>.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Unlike with PowerShell - Azure CLI creates an Azure application, creates SPN and assigns <strong>Roles</strong> to SPN in one command.</p>
+<p>Unlike PowerShell, Azure CLI creates an Azure application, creates an SPN and assigns <strong>Roles</strong> to the SPN in one command.</p>
 </div>
 </li>
 <li><p>Log in to your Azure Stack <em>Subscription</em> using the SPN account.</p>
@@ -162,8 +147,8 @@
 </li>
 </ol>
 <h2 id="create-service-principal-name-for-azure-stack-with-set-password">Create service principal name for Azure Stack with <strong>Set Password</strong></h2>
-<pre><code class="lang-azurecli" data-interactive="azurecli"># Create your environment
-az cloud register -n AzureStackUser --endpoint-resource-manager &quot;https://management.frn00006.azure.ukcloud.com&quot; --suffix-storage-endpoint &quot;frn00006.azure.ukcloud.com&quot; --suffix-keyvault-dns &quot;.vault.frn00006.azure.ukcloud.com&quot; --endpoint-active-directory-graph-resource-id &quot;https://graph.windows.net/&quot; --profile 2017-03-09-profile
+<pre><code class="lang-azurecli"># Create your environment
+az cloud register -n AzureStackUser --endpoint-resource-manager &quot;https://management.frn00006.azure.ukcloud.com&quot; --suffix-storage-endpoint &quot;frn00006.azure.ukcloud.com&quot; --suffix-keyvault-dns &quot;.vault.frn00006.azure.ukcloud.com&quot; --endpoint-active-directory-graph-resource-id &quot;https://graph.windows.net/&quot; --profile 2018-03-01-hybrid
 
 # Set your environment
 az cloud set -n AzureStackUser
@@ -193,10 +178,10 @@ az ad sp create-for-rbac --name &quot;ServicePrincipalName&quot; --password 'Pas
 ## Note, CLIENT_ID=appId, CLIENT_SECRET=password, TENANT_ID=tenant
 az login --service-principal -u CLIENT_ID -p CLIENT_SECRET --tenant TENANT_ID
 
-# Test your SPN account by creating a new Resource Group in Azure Stack
+# Test your SPN account by creating a new resource group in Azure Stack
 az group create --name rg01 --location frn00006
 
-# Remove test Resource Group
+# Remove test resource group
 az group delete --name rg01 -y
 </code></pre>
 <div class="NOTE">
@@ -208,8 +193,8 @@ az group delete --name rg01 -y
 </div>
 <div class="TIP">
 <h5>Tip</h5>
-<p>You can also run the create-for-rbac command without password and then you can pick the automatically generated password from the output variable:</p>
-<pre><code class="lang-azurecli" data-interactive="azurecli">az ad sp create-for-rbac --name &quot;ServicePrincipalName&quot; --role=&quot;Owner&quot;
+<p>You can also run the <code>create-for-rbac</code> command without password and then you can pick the automatically generated password from the output variable:</p>
+<pre><code class="lang-azurecli">az ad sp create-for-rbac --name &quot;ServicePrincipalName&quot; --role=&quot;Owner&quot;
 {
 &quot;appId&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,
 &quot;displayName&quot;: &quot;azure-cli-2017-06-05-10-41-15&quot;,
@@ -220,13 +205,8 @@ az group delete --name rg01 -y
 </code></pre>
 <p>This is yet another difference between PowerShell creation as there is no auto-generation of passwords built-in</p>
 </div>
-<div class="IMPORTANT">
-<h5>Important</h5>
-<p>Given the fact that Azure CLI under Profile 2017-03-09 does <strong>NOT</strong> allow you to lsit your service principal name unlike the <a href="https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-list">latest profile</a> vs <a href="https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-2017-03-09-profile#az-ad-sp-list">206-03-09 profile</a>, its use for Azure Stack is highly limited.</p>
-<p>As a rule of thumb use PowerShell wherever possible.</p>
-</div>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">

@@ -26,3 +26,11 @@
     href: oshift-how-restrict-access-to-openshift-routes-by-ip-address.md
   - name: Use the Hawkular Metrics API
     href: oshift-how-use-hawkular-metrics.md
+- name: Reference
+  items:
+  - name: Considerations when scaling an OpenShift cluster
+    href: oshift-ref-scaling.md
+  - name: Lifecycle and patch management
+    href: oshift-ref-lifecycle.md
+  - name: Making the most of your UKCloud for OpenShift trial
+    href: oshift-ref-trial.md

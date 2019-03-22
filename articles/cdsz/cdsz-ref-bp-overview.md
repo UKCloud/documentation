@@ -4,14 +4,14 @@ description: Provides an overview of the UKCloud Cross Domain Security Zone
 services: cdsz
 author: Sue Highmoor
 
-toc_rootlink: Blueprint
+toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Cross Domain Security Zone Blueprint
-toc_fullpath: Blueprint/cdsz-bp-overview.md
-toc_mdlink: cdsz-bp-overview.md
+toc_fullpath: Blueprint/cdsz-ref-bp-overview.md
+toc_mdlink: cdsz-ref-bp-overview.md
 ---
 
 # Cross Domain Security Zone Blueprint
@@ -210,7 +210,7 @@ If Cross Domain Security Zone instances will be used in an active/active configu
 
 Every UKCloud Cross Domain Security Zone implementation requires customer Data Owner and UKCloud approval before the customer can carry out any implementation work.
 
-The approval process is shown below. More information is available in the [*UKCloud Cross Domain Security Zone application process*](cdsz-application-process.md).
+The approval process is shown below. More information is available in the [*UKCloud Cross Domain Security Zone application process*](cdsz-ref-application-process.md).
 
 ![Cross Domain Security Zone application process](images/cdsz-process-overview.png)
 

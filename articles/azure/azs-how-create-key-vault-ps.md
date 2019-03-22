@@ -1,8 +1,9 @@
 ---
-title: How to Create a key vault - PowerShell | UKCloud Ltd
+title: How to create a key vault using PowerShell | UKCloud Ltd
 description: Provides help for creating a key vault on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
+
 toc_rootlink: Users
 toc_sub1: How To
 toc_sub2: Create a Key Vault
@@ -48,7 +49,7 @@ From your PowerShell window:
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Login
-Login-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Select Resource Group
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>"
@@ -64,7 +65,7 @@ This will create a key vault in the specified resource group.
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Create a new secret
-$SecretValue = ConvertTo-SecureString '<output form="secretvalue" name="result" style="display: inline;">&lt;String&gt;</output>' -AsPlainText -Force
+$SecretValue = ConvertTo-SecureString -String '<output form="secretvalue" name="result" style="display: inline;">&lt;String&gt;</output>' -AsPlainText -Force
 
 # Store the secret in Azure Key Vault
 $Secret = Set-AzureKeyVaultSecret -VaultName "<output form="vaultname" name="result2" style="display: inline;">&lt;Vault Name&gt;</output>" -Name "<output form="secretname" name="result" style="display: inline;">&lt;Secret Name&gt;</output>" -SecretValue $SecretValue
@@ -78,7 +79,7 @@ $Secret.SecretValue
 
 The secret you created will be stored in your key vault.
 
-## Extracting a Secret from the vault
+## Extracting a secret from the vault
 
 From your PowerShell window:
 
@@ -91,4 +92,4 @@ $ExtractedSecret
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

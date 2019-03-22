@@ -8,7 +8,7 @@
     <title>How to deploy and configure the Azure Stack Development Kit | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to deploy and configure the Azure Stack Development Kit | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,12 +98,11 @@
 <ul>
 <li><p>Physical hardware (pre-production) - Community support with Microsoft</p>
 </li>
-<li><p>Virtual servers (development and testing) - not officially supported by Microsoft
-This document covers two scenarios, building from scratch and redeploying.</p>
+<li><p>Virtual servers (development and testing) - not officially supported by Microsoft This document covers two scenarios, building from scratch and redeploying.</p>
 </li>
 </ul>
-<h2 id="step-1---hardware-pre-reqs">Step 1 - Hardware pre-reqs</h2>
-<p>Detailed specs are here - <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-deploy">https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-deploy</a></p>
+<h2 id="step-1---hardware-pre-requisites">Step 1 - Hardware pre-requisites</h2>
+<p>Detailed specifications are here - <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-deploy">https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-deploy</a></p>
 <table>
 <thead>
 <tr>
@@ -134,14 +133,15 @@ This document covers two scenarios, building from scratch and redeploying.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>If you deploy your VM with Hardware Version 11 and Operating System Family as Windows Server 2016 you will not be able to create S2D Cluster as disk UUIDs are not exposed.</p>
-<p>Either create it with Windows Server 2012 and change later or in Configuration Parameters -&gt;  Click Add Row. In the Name column, enter disk.EnableUUID.  In the Value column, enter TRUE. This will show correct disk IDs in Get-PhysicalDisk cmdlets and cluster should build.</p>
+<p>Either create it with Windows Server 2012 and change later or in Configuration Parameters -&gt; Click Add Row. In the Name column, enter disk.EnableUUID.
+In the Value column, enter TRUE. This will show correct disk IDs in Get-PhysicalDisk cmdlets and cluster should build.</p>
 </div>
 <p><strong>Physical Note:</strong> The first two drives must be setup as a RAID 1, the rest passed through as a JBOD; additionally, you need to specify your VLAN as ACCESS in the CIMC</p>
 <h2 id="step-2---install-base-operating-system">Step 2 - Install base operating system</h2>
 <p>Install Windows Server 2016 to the OS disk implementing a static IP address.</p>
 <p><strong>Physical Note:</strong> This the RAID 1 disk, the following drivers must be downloaded, extracted and installed:</p>
 <p><a href="https://software.cisco.com/download/release.html?mdfid=286281356&amp;softwareid=283291009&amp;os=Windows%202016%2064-bit&amp;release=3.0(3a)&amp;relind=AVAILABLE&amp;rellifecycle=&amp;reltype=latest">https://software.cisco.com/download/release.html?mdfid=286281356&amp;softwareid=283291009&amp;os=Windows%202016%2064-bit&amp;release=3.0(3a)&amp;relind=AVAILABLE&amp;rellifecycle=&amp;reltype=latest</a></p>
-<p><strong>Virtualisation Note:</strong> VMware tools must be installed and the VMware Tools drivers must be exported onto the c:\ drive (VMwareKB), also disks have to be online and initialised as MBR</p>
+<p><strong>Virtualisation Note:</strong> VMware tools must be installed and the VMware Tools drivers must be exported onto the c: drive (VMwareKB), also disks have to be online and initialised as MBR</p>
 <h2 id="step-3---initial-setup">Step 3 - Initial setup</h2>
 <p>Download the appliance and prep the virtual disk (vhdx) for the ASDK.</p>
 <p>Implement the following steps from the guide: <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script">https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-run-powershell-script</a></p>
@@ -151,7 +151,7 @@ This document covers two scenarios, building from scratch and redeploying.</p>
 <li><p>Prepare the development kit host</p>
 </li>
 </ul>
-<p><strong>Virtualisation Note:</strong> Before running the installer open, &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; and edit as follows:</p>
+<p><strong>Virtualisation Note:</strong> Before running the installer, open &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; and edit as follows:</p>
 <table>
 <thead>
 <tr>
@@ -169,10 +169,10 @@ This document covers two scenarios, building from scratch and redeploying.</p>
 </tbody>
 </table>
 <p>To run:</p>
-<pre><code class="lang-PowerShell">&quot;C:\AzureStack_Installer\asdk-installer.ps1&quot;  | ForEach {($_ -replace &quot;elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{&quot;, &quot;elseif ((get-disk | Where-Object {`$====_.isboot -eq `$true}).Model -match 'null') {&quot;) -replace &quot;====&quot;,&quot;&quot;} | Set-Content &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; -force
+<pre><code class="lang-powershell">Get-Content -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; | foreach {($_ -replace &quot;elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{&quot;, &quot;elseif ((get-disk | Where-Object {`$====_.isboot -eq `$true}).Model -match 'null') {&quot;) -replace &quot;====&quot;,&quot;&quot;} | Set-Content -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; -Force
 </code></pre>
 <p>To verify:</p>
-<pre><code class="lang-PowerShell">Select-String -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; -pattern &quot;elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'null'\) \`{&quot;
+<pre><code class="lang-powershell">Select-String -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; -Pattern &quot;elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'null'\) \`{&quot;
 </code></pre>
 <p>The following details should be used:</p>
 <table>
@@ -230,7 +230,7 @@ This document covers two scenarios, building from scratch and redeploying.</p>
 </tr>
 <tr>
 <td>Type</td>
-<td>Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack. e.g. joebloggsukcloud.onmicrosoft.com</td>
+<td>Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack. e.g. joebloggsukcloud.onmicrosoft.com</td>
 </tr>
 <tr>
 <td>Static IP</td>
@@ -241,19 +241,14 @@ This document covers two scenarios, building from scratch and redeploying.</p>
 <p><strong>Physical Note:</strong> Before running the installation, make sure only one network adapter is enabled, otherwise install will fail.</p>
 <p>For some reason the driver injection does not work and you have to manually add Ethernet Adapters from Device Manager, then disable everything but management-0. Configure its IP address and then run the install.</p>
 <p><strong>Important:</strong> 1803 install failed with the error below.</p>
-<pre><code class="lang-PowerShell">Invoke-EceAction : Type 'Deployment' of Role 'Domain' raised an exception:
-'AzS-DC01' failed to start.
+<pre><code class="lang-powershell">Invoke-EceAction : Type 'Deployment' of Role 'Domain' raised an exception: 'AzS-DC01' failed to start.
 Virtual machine 'AzS-DC01' could not be started because the hypervisor is not running.
 'AzS-DC01' failed to start. (Virtual machine ID DA2A3A2D-F30B-42C3-AB39-C4BF11E07CEE)
-Virtual machine 'AzS-DC01' could not be started because the hypervisor is not running (Virtual machine ID
-DA2A3A2D-F30B-42C3-AB39-C4BF11E07CEE).
+Virtual machine 'AzS-DC01' could not be started because the hypervisor is not running (Virtual machine ID DA2A3A2D-F30B-42C3-AB39-C4BF11E07CEE).
 The following actions may help you resolve the problem:
 1) Verify that the processor of the physical computer has a supported version of hardware-assisted virtualization.
-2) Verify that hardware-assisted virtualization and hardware-assisted data execution protection are enabled in the
-BIOS of the physical computer. (If you edit the BIOS to enable either setting, you must turn off the power to the
-physical computer and then turn it back on. Resetting the physical computer is not sufficient.)
-3) If you have made changes to the Boot Configuration Data store, review these changes to ensure that the hypervisor
-is configured to launch automatically.
+2) Verify that hardware-assisted virtualization and hardware-assisted data execution protection are enabled in the BIOS of the physical computer. (If you edit the BIOS to enable either setting, you must turn off the power to the physical computer and then turn it back on. Resetting the physical computer is not sufficient.)
+3) If you have made changes to the Boot Configuration Data store, review these changes to ensure that the hypervisor is configured to launch automatically.
 at New-ManagementVM, C:\Program Files\WindowsPowerShell\Modules\NewManagementVM\NewManagementVM.psm1: line 493
 at DeployOneVM, C:\CloudDeployment\Classes\Common\Image\VirtualMachineRole.psm1: line 1321
 at DeployVms, C:\CloudDeployment\Classes\Common\Image\VirtualMachineRole.psm1: line 1501
@@ -264,17 +259,14 @@ At C:\CloudDeployment\Setup\DeploySingleNode.ps1:676 char:5
 + Invoke-EceAction -RolePath $masterRole -ActionType $actionPlan @d ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  + CategoryInfo : NotSpecified: (:) [Invoke-EceAction], InterfaceInvocationFailedException
- + FullyQualifiedErrorId : OperationFailed,Microsoft.HyperV.PowerShell.Commands.StartVM,CloudEngine.Cmdlets.InvokeC
- mdlet
-Invoke-EceAction : Action: Invocation of step PhysicalMachineAndInitialConfiguration.15 failed. Stopping invocation of
-action plan.
+ + FullyQualifiedErrorId : OperationFailed,Microsoft.HyperV.PowerShell.Commands.StartVM,CloudEngine.Cmdlets.InvokeCmdlet
+Invoke-EceAction : Action: Invocation of step PhysicalMachineAndInitialConfiguration.15 failed. Stopping invocation of action plan.
 At C:\CloudDeployment\Setup\DeploySingleNode.ps1:676 char:5
 + Invoke-EceAction -RolePath $masterRole -ActionType $actionPlan @d ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  + CategoryInfo : InvalidOperation: (:) [Invoke-EceAction], ActionExecutionException
  + FullyQualifiedErrorId : Unspecified error,CloudEngine.Cmdlets.InvokeCmdlet
-Invoke-EceAction : Action: Invocation of step PhysicalMachineAndInitialConfiguration failed. Stopping invocation of
-action plan.
+Invoke-EceAction : Action: Invocation of step PhysicalMachineAndInitialConfiguration failed. Stopping invocation of action plan.
 At C:\CloudDeployment\Setup\DeploySingleNode.ps1:676 char:5
 + Invoke-EceAction -RolePath $masterRole -ActionType $actionPlan @d ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -284,26 +276,26 @@ At C:\CloudDeployment\Setup\DeploySingleNode.ps1:676 char:5
 <p>Verification of Physical kit showed that Virtualisation is in fact enabled but Hyper-V is not starting on boot.</p>
 <p>To verify run you can run systeminfo and it will show whether BIOS is set correctly etc... In our case it was set correctly. Only Boot settings were not.</p>
 <p>To fix it run from elevated command/powershell prompt:</p>
-<pre><code class="lang-PowerShell">BCDEDIT /Set {current} hypervisorlaunchtype auto
+<pre><code class="lang-powershell">BCDEDIT /Set {current} hypervisorlaunchtype auto
 </code></pre>
-<p>Then reboot the box and conitnue the install.</p>
+<p>Then reboot the box and continue the install.</p>
 <p>Example of Automated Physical Kit Deployment:</p>
-<pre><code class="lang-PowerShell">$adminpass = ConvertTo-SecureString 'Password123' -AsPlainText -Force
-$unameS = &quot;azurestackadmin@&lt;domain&gt;.onmicrosoft.com&quot;
-$credsS = &quot;&lt;password&gt;&quot;
-    $userPasswordS = ConvertTo-SecureString &quot;$credsS&quot; -AsPlainText -Force
-    $credentialsS = new-object -typename System.Management.Automation.PSCredential -argumentlist $unameS,$userPasswordS
- 
+<pre><code class="lang-powershell">$AdminPass = ConvertTo-SecureString -String 'Password123' -AsPlainText -Force
+$Username = &quot;azurestackadmin@&lt;domain&gt;.onmicrosoft.com&quot;
+$Password = &quot;&lt;password&gt;&quot;
+$Password = ConvertTo-SecureString -String $Password -AsPlainText -Force
+$Credentials = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
+
 cd C:\CloudDeployment\Setup
-.\InstallAzureStackPOC.ps1 -AdminPassword $adminpass -InfraAzureDirectoryTenantAdminCredential $credentialsS -InfraAzureDirectoryTenantName &lt;domain&gt;.onmicrosoft.com -NatIPv4Subnet 51.179.198.224/28 -NatIPv4Address 51.179.198.227 -NatIPv4DefaultGateway 51.179.198.225 -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
+.\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $Credentials -InfraAzureDirectoryTenantName &lt;domain&gt;.onmicrosoft.com -NatIPv4Subnet 51.179.198.224/28 -NatIPv4Address 51.179.198.227 -NatIPv4DefaultGateway 51.179.198.225 -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
 </code></pre>
 <p><strong>Virtualisation Note:</strong> after completing the wizard BUT before clicking install copy the command as the install will fail.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>If the installer cannot see any network adapters - you can install manually VMware Tools and reboot the box. It will work then.</p>
 </div>
-<pre><code class="lang-PowerShell">E:\AzureStack_Installer\asdk-installer.ps1
- 
+<pre><code class="lang-powershell">E:\AzureStack_Installer\asdk-installer.ps1
+
 Initialize environment. Please wait...
 </code></pre>
 <p>This will just end with nothing.</p>
@@ -331,26 +323,26 @@ Initialize environment. Please wait...
 </tbody>
 </table>
 <p>To edit run:</p>
-<pre><code class="lang-PowerShell">(gc &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot;) | ForEach {$_ -replace  &quot;\`$physicalMachine.IsVirtualMachine \| Should Be \`$false&quot;,&quot;`$physicalMachine.IsVirtualMachine | Should Be `$true&quot;} | Set-Content “C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1” -Force
+<pre><code class="lang-powershell">Get-Content -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; | foreach {$_ -replace  &quot;\`$physicalMachine.IsVirtualMachine \| Should Be \`$false&quot;,&quot;`$physicalMachine.IsVirtualMachine | Should Be `$true&quot;} | Set-Content -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; -Force
 </code></pre>
 <p>And then run:</p>
-<pre><code class="lang-PowerShell">(gc &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot;) | ForEach {$_ -replace &quot;\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine&quot;, &quot;(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0&quot;} | Set-Content “C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1” -Force
+<pre><code class="lang-powershell">Get-Content -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; | foreach {$_ -replace &quot;\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan \`$minimumNumberOfCoresPerMachine&quot;, &quot;(`$physicalMachine.Processors.NumberOfEnabledCores | Measure-Object -Sum).Sum | Should Not BeLessThan 0&quot;} | Set-Content -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; -Force
 </code></pre>
 <p>To verify run:</p>
-<pre><code class="lang-PowerShell">Select-String -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; -pattern &quot;\`$physicalMachine.IsVirtualMachine \| Should Be \`$true&quot;
-Select-String -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; -pattern &quot;\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan 0&quot;
+<pre><code class="lang-powershell">Select-String -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; -Pattern &quot;\`$physicalMachine.IsVirtualMachine \| Should Be \`$true&quot;
+Select-String -Path &quot;C:\CloudDeployment\Roles\PhysicalMachines\Tests\BareMetal.Tests.ps1&quot; -Pattern &quot;\(\`$physicalMachine.Processors.NumberOfEnabledCores \| Measure-Object -Sum\).Sum \| Should Not BeLessThan 0&quot;
 </code></pre>
 <p>After you modified it, run:</p>
-<pre><code class="lang-PowerShell">$adminpass = ConvertTo-SecureString 'Password123'-AsPlainText -Force
-$unameS = &quot;azurestackadmin@&lt;domain&gt;.onmicrosoft.com&quot;
-$credsS = &quot;&lt;password&gt;&quot;
-    $userPasswordS = ConvertTo-SecureString &quot;$credsS&quot; -AsPlainText -Force
-    $credentialsS = new-object -typename System.Management.Automation.PSCredential -argumentlist $unameS,$userPasswordS
- 
+<pre><code class="lang-powershell">$AdminPass = ConvertTo-SecureString -String 'Password123'-AsPlainText -Force
+$Username = &quot;azurestackadmin@&lt;domain&gt;.onmicrosoft.com&quot;
+$Password = &quot;&lt;password&gt;&quot;
+$Password = ConvertTo-SecureString -String $Password -AsPlainText -Force
+$Credentials = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username, $Password
+
 cd C:\CloudDeployment\Setup
-.\InstallAzureStackPOC.ps1 -AdminPassword $adminpass -InfraAzureDirectoryTenantAdminCredential $credentialsS -InfraAzureDirectoryTenantName &lt;domain&gt;.onmicrosoft.com -NatIPv4Subnet 10.0.0.0/24 -NatIPv4Address 10.0.0.191 -NatIPv4DefaultGateway 10.0.0.1 -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
+.\InstallAzureStackPOC.ps1 -AdminPassword $AdminPass -InfraAzureDirectoryTenantAdminCredential $credentialsS -InfraAzureDirectoryTenantName &lt;domain&gt;.onmicrosoft.com -NatIPv4Subnet 10.0.0.0/24 -NatIPv4Address 10.0.0.191 -NatIPv4DefaultGateway 10.0.0.1 -DNSForwarder 8.8.8.8 -TimeServer 13.79.239.69
 </code></pre>
-<p>If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes after you run the script, you will get prompted for AAD Account - use azurestackadmin@<domain>.onmicrosoft.com<p>
+<p>If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes after you run the script, you will get prompted for AAD Account - use azurestackadmin@&lt;domain&gt;.onmicrosoft.com</p>
 <ul>
 <li><p><a href="https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md">Develop templates for Azure Stack</a></p>
 </li>
@@ -358,8 +350,8 @@ cd C:\CloudDeployment\Setup
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
-</domain>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
 
                   <div class="row">
                   </div>

@@ -3,6 +3,7 @@ title: How to create a virtual machine using Terraform | UKCloud Ltd
 description: Learn how to create a VM using Terraform on Azure Stack
 services: azure-stack
 author: Chris Black
+
 toc_rootlink: Users
 toc_sub1: How To
 toc_sub2: Create a Virtual Machine
@@ -23,13 +24,13 @@ Prerequisites from a Windows-based external client.
 
 - Terraform executable
 
-    - [Download Terraform](https://www.terraform.io/downloads.html)
+  - [Download Terraform](https://www.terraform.io/downloads.html)
 
 - An active Azure *Subscription* (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)
 
 - Service Principal Name
 
-    - [How To create Service Principal Name for Azure Stack](azs-how-create-spn-powershell.md)
+  - [How To create Service Principal Name for Azure Stack](azs-how-create-spn-powershell.md)
 
 ## Official Documentation
 
@@ -114,7 +115,6 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
 > [!NOTE]
 > For UKCloud Region it is **`https://management.frn00006.azure.ukcloud.com`**.
 
-
 - `subscription_id` - The ID of your Azure Stack Subscription.
 
 - `client_id` - The Application GUID that you configured your Service Principal Name (SPN) to use.
@@ -123,7 +123,7 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
 
 - `tenant_id` - The tenant ID of your Azure Active Directory tenant domain. It can either be the actual GUID or your Azure Active Directory tenant domain name.
 
-## Creating a VM:
+## Creating a VM
 
 The examples that follow show how to create a VM using Terraform. The code changes depending on whether you are creating a VM with an unmanaged disk or a managed disk. Select the the type of disk you want to use to update the examples below with the appropriate code.
 
@@ -413,7 +413,7 @@ resource "azurestack_virtual_machine" "test" {
 
 From a PowerShell prompt, navigate to the directory that contains your `tf` files and run the following commands:
 
-```PowerShell
+```powershell
 # Check if your environment is setup correctly
 .\terraform.exe init
 
@@ -440,7 +440,7 @@ rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
 
-```PowerShell
+```powershell
 # Verify your plan
 .\terraform.exe plan -var-file=C:\<DirectoryName>\testvars.tfvars
 # Apply your plan
@@ -457,7 +457,7 @@ commands will detect it and remind you to do so if necessary.
 
 From a PowerShell prompt, navigate to the directory that contains your `tf` files and run the following commands:
 
-```PowerShell
+```powershell
 # Check if your environment is setup correctly
 .\terraform.exe init
 
@@ -484,7 +484,7 @@ rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
 
-```PowerShell
+```powershell
 # Verify your plan
 .\terraform.exe plan
 # Apply your plan
@@ -496,4 +496,4 @@ commands will detect it and remind you to do so if necessary.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

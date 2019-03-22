@@ -158,6 +158,8 @@
     href: vmw-ref-edge-ha.md
   - name: Fix for customers unable to upload and download vApps or catalog items
     href: vmw-ref-fix-unable-to-vapps.md
+  - name: IPsec VPN Foundation and PRIME profiles
+    href: vmw-ref-ipsec-vpn.md
   - name: Known working and non-working firewalls
     href: vmw-ref-byof-working-firewalls.md
   - name: Managing your UKCloud for VMware environment using the UKCloud Portal API
@@ -230,6 +232,8 @@
     href: vmw-ref-trouble-uk-keyboard-console.md
 - name: Videos
   items:
+  - name: Benefits of VMware L2 VPN
+    href: vmw-vid-l2-vpn.md
   - name: Licensing Windows VMs using the KMS
     href: vmw-vid-licensing-kms.md
   - name: vCloud Director 9.1 overview

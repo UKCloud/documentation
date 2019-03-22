@@ -25,7 +25,7 @@
 - name: Reference
   items:
   - name: S3-compatible API examples
-    href: cs-s3-examples.md
+    href: cs-ref-s3-examples.md
 - name: Service Scope
   items:
   - name: Cloud Storage Service Scope

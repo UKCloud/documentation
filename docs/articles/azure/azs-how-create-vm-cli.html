@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to create a virtual machine using the Azure CLI | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to create a virtual machine using Azure CLI | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to create a virtual machine using the Azure CLI | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="title" content="How to create a virtual machine using Azure CLI | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -100,12 +100,12 @@ VMware and OpenStack, and benefit from native connectivity to non-cloud workload
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Ensure your Azure CLI environment is setup as detailed in <a href="azs-how-configure-cli.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
 <h2 id="creating-a-resource-group">Creating a resource group</h2>
-<p>Before create a VM, you must create a resource group to deploy the VM to. If you've already created the resource group, you can skip this step.</p>
-<pre><code class="lang-Bash">az group create --name '&lt;Resource Group Name&gt;' --location 'frn00006'
+<p>Before creating a VM, you must create a resource group to deploy the VM to. If you've already created the resource group, you can skip this step.</p>
+<pre><code class="lang-azurecli">az group create --name '&lt;Resource Group Name&gt;' --location 'frn00006'
 </code></pre>
 <h2 id="creating-a-virtual-machine">Creating a virtual machine</h2>
 <p>When you've created the resource group, you must choose which image template to use for your VM. To obtain a list of available images run the following command:</p>
-<pre><code class="lang-Bash">az vm image list --all --output table
+<pre><code class="lang-azurecli">az vm image list --all --output table
 You are retrieving all the images from server which could take more than a minute. To shorten the wait, provide '--publisher', '--offer' or '--sku'. Partial name search is supported.
 Offer                    Publisher               Sku                Urn                                                                      Version
 -----------------------  ----------------------  -----------------  -----------------------------------------------------------------------  -----------------
@@ -134,10 +134,10 @@ SQL2017-WS2016           MicrosoftSQLServer      SQLDEV             MicrosoftSQL
 SQL2017-WS2016           MicrosoftSQLServer      Standard           MicrosoftSQLServer:SQL2017-WS2016:Standard:14.0.1000320                  14.0.1000320
 </code></pre>
 <p>After you've decided which image you want to use, run the following command, substituting your own variables where applicable. The 'az vm create' command will also create any resources required for the VM (for example, a network interface card, a network security group, and so on)</p>
-<pre><code class="lang-Bash">az vm create --resource-group '&lt;Resource Group Name&gt;' --name '&lt;VM Name&gt;' --image '&lt;Image URN&gt;' --admin-username '&lt;Username&gt;' --admin-password '&lt;password&gt;' --use-unmanaged-disk --location 'frn00006'
+<pre><code class="lang-azurecli">az vm create --resource-group '&lt;Resource Group Name&gt;' --name '&lt;VM Name&gt;' --image '&lt;Image URN&gt;' --admin-username '&lt;Username&gt;' --admin-password '&lt;Password&gt;' --location 'frn00006'
 </code></pre>
 <p>For example, to create an Ubuntu 18.04-LTS server:</p>
-<pre><code class="lang-Bash">az vm create --resource-group 'myResourceGroup' --name 'myVM' --image 'Canonical:UbuntuServer:18.04-LTS:18.04.201808140' --admin-username 'username' --admin-password 'Password1234!' --use-unmanaged-disk --location 'frn00006'
+<pre><code class="lang-azurecli">az vm create --resource-group 'myResourceGroup' --name 'myVM' --image 'Canonical:UbuntuServer:18.04-LTS:18.04.201808140' --admin-username 'username' --admin-password 'Password1234!' --location 'frn00006'
 
 
 - Running ..
@@ -153,7 +153,7 @@ SQL2017-WS2016           MicrosoftSQLServer      Standard           MicrosoftSQL
 }
 </code></pre>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">

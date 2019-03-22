@@ -50,6 +50,8 @@
     href: other-ref-pricing-tool-bugs.md
   - name: Methods for exporting data
     href: other-ref-export-data.md
+  - name: Monitoring the UKCloud platform
+    href: other-ref-ukcloud-monitoring.md
   - name: Protective Monitoring information in the UKCloud Portal
     href: other-ref-promon-showback.md
   - name: Services at a glance

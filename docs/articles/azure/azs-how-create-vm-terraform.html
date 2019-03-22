@@ -8,7 +8,7 @@
     <title>How to create a virtual machine using Terraform | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual machine using Terraform | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -194,7 +194,7 @@ provider &quot;azurestack&quot; {
 <li><p><code>tenant_id</code> - The tenant ID of your Azure Active Directory tenant domain. It can either be the actual GUID or your Azure Active Directory tenant domain name.</p>
 </li>
 </ul>
-<h2 id="creating-a-vm">Creating a VM:</h2>
+<h2 id="creating-a-vm">Creating a VM</h2>
 <p>The examples that follow show how to create a VM using Terraform. The code changes depending on whether you are creating a VM with an unmanaged disk or a managed disk. Select the the type of disk you want to use to update the examples below with the appropriate code.</p>
 <form id="diskType" onchange="result.value=name.value;result2.value=name.value">
   <p>
@@ -477,7 +477,7 @@ resource "azurestack_virtual_machine" "test" {
 <p>Terraform by default scans your execution directory and looks for all <code>tf</code> files.</p>
 </div>
 <p>From a PowerShell prompt, navigate to the directory that contains your <code>tf</code> files and run the following commands:</p>
-<pre><code class="lang-PowerShell"># Check if your environment is setup correctly
+<pre><code class="lang-powershell"># Check if your environment is setup correctly
 .\terraform.exe init
 
 Initializing provider plugins...
@@ -502,7 +502,7 @@ If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 </code></pre>
-<pre><code class="lang-PowerShell"># Verify your plan
+<pre><code class="lang-powershell"># Verify your plan
 .\terraform.exe plan -var-file=C:\&lt;DirectoryName&gt;\testvars.tfvars
 # Apply your plan
 .\terraform.exe apply -var-file=C:\&lt;DirectoryName&gt;\testvars.tfvars
@@ -517,7 +517,7 @@ commands will detect it and remind you to do so if necessary.
 <p>Terraform by default scans your execution directory and looks for all <code>tf</code> files.</p>
 </div>
 <p>From a PowerShell prompt, navigate to the directory that contains your <code>tf</code> files and run the following commands:</p>
-<pre><code class="lang-PowerShell"># Check if your environment is setup correctly
+<pre><code class="lang-powershell"># Check if your environment is setup correctly
 .\terraform.exe init
 
 Initializing provider plugins...
@@ -542,7 +542,7 @@ If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 </code></pre>
-<pre><code class="lang-PowerShell"># Verify your plan
+<pre><code class="lang-powershell"># Verify your plan
 .\terraform.exe plan
 # Apply your plan
 .\terraform.exe apply
@@ -552,7 +552,7 @@ commands will detect it and remind you to do so if necessary.
 <p>You can also add <code>-auto-approve</code> to the apply command for it to not ask you to apply changes for full automation.</p>
 </div>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">

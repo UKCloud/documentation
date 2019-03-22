@@ -25,7 +25,7 @@ The following video provides an overview of the UKCloud Portal user interface.
 ## Related articles
 
 - [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md)
-- [*Portal permissions*](ptl-overview-permissions.md)
+- [*Portal permissions*](ptl-ref-overview-permissions.md)
 - [*How to sign up for Portal notifications*](ptl-how-signup-notifications.md)
 
 ## Feedback

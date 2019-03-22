@@ -90,6 +90,8 @@ where:
   - `enbl` for Cloud Enablement
 
   - `gpu` for Cloud GPU
+  
+  - `hpc` for High Performance Compute
 
   - `migr` for Migration to the Cloud
 
@@ -114,7 +116,6 @@ where:
   - For articles that do belong to a service or that apply to multiple services, use `other`
 
 - `type` indicates the article type. One of:
-  
 
   - `faq` for FAQs
 
@@ -125,6 +126,8 @@ where:
   - `ref` for Reference Guides
 
   - `sco` for Service Scopes
+  
+  - `vid` for Videos
 
 - `description` indicates the purpose of the article. Use as few words as possible and separate words with hyphens. For Reference Guides start with a noun, for How To guides start with a verb.
 
@@ -307,4 +310,4 @@ Looks like:
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
