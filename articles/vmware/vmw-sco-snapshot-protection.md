@@ -75,7 +75,7 @@ We will not rerun snapshots outside the window.
 
 Automated VM snapshots don't include an SLA. You should be aware that snapshots may occasionally fail for a variety of reasons. The status of automated VM snapshots is monitored continuously, and the UKCloud support team investigates all failures.
 
-It isn't always possible to rerun an automated VM snapshot, if this service doesn't meet your own protection requirements, we can also offer synchronous protection and journaling protection options.
+It isn't always possible to rerun an automated VM snapshot, if this service doesn't meet your own protection requirements, we can also offer Journaling Protection options.
 
 If none of these services meet your requirements, you can also implement and manage your own protection solution.
 
