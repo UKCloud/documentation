@@ -8,7 +8,7 @@
     <title>Synchronous Protection Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Synchronous Protection Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,6 +96,11 @@
 <h2 id="about-this-document">About this document</h2>
 <p>This Service Scope explains what is and isn't included in the scope of the UKCloud for VMware Synchronous Protection service option.</p>
 <p>Synchronous Protection is one of a variety of on‑platform protection options available from UKCloud. Use this service scope to understand what Synchronous Protection offers and whether it will meet your own recovery point objectives (RPO) and recovery time objectives (RTO).</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Synchronous Protection is no longer available as a protection option for UKCloud for VMware. UKCloud offer two alternative data protection solutions: <a href="vmw-sco-journaling-protection.html">Journaling Protection (Zerto)</a> and <a href="vmw-sco-snapshot-protection.html">Snapshot Protection</a>. Contact your Technical Account Manager (TAM) for more information.</p>
+<p>We will continue to provide support to customers who previously added Synchronous Protection to their environment, although we would encourage considering using Journaling Protection instead.</p>
+</div>
 <h2 id="about-synchronous-protection">About Synchronous Protection</h2>
 <p>The UKCloud for VMware Synchronous Protection service option is designed to offer geographical protection of your live environments across both of our sites (Farnborough and Corsham; 60 miles apart). To achieve this, we utilise synchronous replication between sites to ensure that any changes made to your environment are committed to arrays in both sites before the write is confirmed as being complete to the VM OS.</p>
 <p>Synchronous Protection provides a replica of data (for any data written, and flushed to disk) and then enables the ability to migrate your VMs between the sites while they are running, offering a greater level of protection for live environments.</p>

@@ -8,7 +8,7 @@
     <title>General connectivity FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="General connectivity FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -151,8 +151,6 @@
 <p>This data centre interconnectivity is highly scalable, as spare fibre capacity is in place to meet future demand. It uses <a href="http://www.cesg.gov.uk/servicecatalogue/service_assurance/CAS/Pages/Service-Requirements.aspx">CAS(T) compliant</a> circuits; and within our Elevated OFFICIAL cloud platform, we provide additional overlay encryption using a CPA-approved solution. These have previously achieved Pan Government Accreditation and are PSN accredited to carry OFFICIAL data (including OFFICIAL SENSITIVE), as well as the PSN Assured service and the encrypted PSN Protected service.</p>
 <h2 id="if-i-have-reserved-bandwidth-how-do-i-uplift-this">If I have reserved bandwidth, how do I uplift this?</h2>
 <p>We actively monitor and manage our connections to ensure there is appropriate connectivity to the platform. Customers looking to provide 'guaranteed' connection capacity should include a HybridConnect leased line in their solution.</p>
-<h2 id="if-i-use-vms-with-geo-resilience-formerly-enhanced-service-level-am-i-still-charged-for-connectivity-between-data-centres">If I use VMs with Geo-resilience (formerly ENHANCED service level), am I still charged for connectivity between data centres?</h2>
-<p>No. The cost of bandwidth required for replication of VMs is included in the hourly cost of the Geo-resilient VM and the monthly cost of additional geo-resilient storage.</p>
 <h2 id="can-ukcloud-help-me-if-i-dont-have-a-suitable-connection-for-the-elevated-official-cloud-platform">Can UKCloud help me if I don't have a suitable connection for the Elevated OFFICIAL cloud platform?</h2>
 <p>We recognise that some customers may be affected by the often extended lead times associated with provisioning new connections suitable for the Elevated OFFICIAL cloud platform; and that some customers may not have adequate bandwidth to handle bulk import/export activities.</p>
 <p>To help address these issues, we offer two options:</p>
@@ -166,7 +164,7 @@
 <h2 id="how-do-i-configure-my-solution-to-use-the-ukcloud-data-centre-interconnection">How do I configure my solution to use the UKCloud data centre interconnection?</h2>
 <p>This depends on the use case.</p>
 <ul>
-<li><p>If you have a non geo-resilient VDC in each UKCloud data centre:</p>
+<li><p>If you have a VDC in each UKCloud data centre:</p>
 <ul>
 <li>Configure an IPsec VPN between the edge gateway instances of each VDC. Once the VPN has been established, VMs within the VDC can connect to each another using their private (RFC 1918) IP addresses.</li>
 </ul>

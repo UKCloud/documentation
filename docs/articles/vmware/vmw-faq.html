@@ -8,7 +8,7 @@
     <title>UKCloud for VMware FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for VMware FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.40.11.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -116,10 +116,10 @@
 </li>
 <li><p>Production STANDARD = POWER VM Type</p>
 </li>
-<li><p>ENHANCED - Now available for all VM Types as an option - Synchronous Protection</p>
+<li><p>ENHANCED - This service level has been retired from sale as of 1 January 2019</p>
 </li>
 </ul>
-<p>The new pricing structure introduced in G-Cloud 8 enables customers to customise their VMs and any options without being tied to a specific package. Thus, options such as backups, Journaling Protection and Synchronous Protection can be added regardless of the VM type.</p>
+<p>The new pricing structure introduced in G-Cloud 8 enables customers to customise their VMs and any options without being tied to a specific package. Thus, options such as backups and Journaling Protection can be added regardless of the VM type.</p>
 <h3 id="can-a-vm-communicate-to-another-vm-at-of-a-different-type">Can a VM communicate to another VM at of a different type?</h3>
 <p>Yes. VMs can communicate with each other. In some cases, customers may need to use the built-in self-service IPsec VPN functionality to create a virtual private network within our Assured cloud platform.</p>
 <h3 id="can-vms-types-be-changed">Can VMs types be changed?</h3>
@@ -170,20 +170,16 @@
 <p>There's a longer deployment lead time for Dedicated Compute, as well as a longer contractual commitment than our shared cloud platform (three months rather than one hour).</p>
 <p>For more details, please see the UKCloud for VMware Service Definition available via the Digital Marketplace.</p>
 <h3 id="can-i-utilise-multiple-storage-types-with-my-vm">Can I utilise multiple storage types with my VM?</h3>
-<p>UKCloud offer three storage types to customers:</p>
+<p>UKCloud offers two storage types to customers:</p>
 <ul>
 <li><p>Tier 1 which is a fast storage offering</p>
 </li>
 <li><p>Tier 2 which is a standard storage offering</p>
 </li>
-<li><p>Geo-resilient which is utilised by the synchronous protection technology</p>
-</li>
 </ul>
 <p>With Tier 1 and Tier 2 storage, customers can utilise both types to deliver their solutions - including running VMs utilising disks on different storage types.</p>
-<p>Customers can not mix geo-resilient storage with any other storage type attached to a VM. So, customers cannot leverage Geo-Resilient Storage in conjunction with Tier 1 or Tier 2 storage types.</p>
 <h3 id="can-i-change-between-storage-types-associated-with-the-vms-ive-deployed">Can I change between storage types associated with the VMs I've deployed?</h3>
 <p>If a customer has both Tier 1 and Tier 2 storage profiles available, they can self-migrate between these storage types.</p>
-<p>Migration from, or to, Geo-Resilient storage and other storage types (Tier 1 and Tier 2) is an activity that can only be performed by UKCloud.</p>
 <h3 id="what-happens-when-i-switch-off-my-vms-using-the-guest-operating-system">What happens when I switch off my VMs using the guest Operating System?</h3>
 <p>If you shut down your VM using the guest OS, we will recognise this as a 'Power Off' event and you will not be billed whilst the VM remains in this state. Billing will resume once the VM is powered on again.</p>
 <h3 id="how-do-i-change-the-workload-type-of-a-vdc">How do I change the workload type of a VDC?</h3>
@@ -252,7 +248,7 @@ customers configure and manage their firewalls.</p>
 </li>
 </ul>
 <p>Existing applications can take advantage of Tier 1 Storage. A migration process maybe involved.</p>
-<p>Tier 1 Storage is available for use with all VM types and compatible with all protection technologies - with the exception of those using Synchronous protection (which has a specific requirement to use geo-resilient storage).</p>
+<p>Tier 1 Storage is available for use with all VM types and compatible with all protection technologies.</p>
 <p>Talk to your UKCloud Account Director or Cloud Architect to understand if Tier 1 storage can benefit your solution.</p>
 <h3 id="what-are-independent-disks">What are independent disks?</h3>
 <p>Independent disks are a technology provided natively by VMware vCloud Director, and are included as options by default in the UKCloud service. They can only be created via the API, and cannot be created though the user interface. UKCloud has provided some advice on how to create and control them <a href="https://github.com/UKCloud/vcloud-independent-disks">here</a>.</p>
@@ -265,11 +261,9 @@ customers configure and manage their firewalls.</p>
 <h3 id="what-if-i-use-my-independent-disks-with-the-same-vm-all-the-time">What if I use my independent disks with the same VM all the time?</h3>
 <p>We advise that you move the data in the independent disk into a disk associated with a single VM - this will allow you to take advantage of the free 60GiB of storage included with all UKCloud VMs.</p>
 <h3 id="what-rate-are-independent-disks-charged-at">What rate are independent disks charged at?</h3>
-<p>Independent disks will be charged at the rate of the storage they are stored on (Tier 1, Tier 2 or Geo-Resilient), along with any additional protection applied (such as Snapshot or synchronous protection) and charged at a rate of per GiB per month.</p>
+<p>Independent disks will be charged at the rate of the storage they are stored on, along with any additional protection applied (Journaling or Snapshot Protection) and charged at a rate per GiB per month.</p>
 <h3 id="can-i-use-the-60gib-included-with-my-vm-on-an-independent-disk">Can I use the 60GiB included with my VM on an independent disk?</h3>
 <p>No, as an independent disk can be mounted to any VMs inside a customer's VDC, so is not associated with a single VM.</p>
-<h3 id="do-i-still-get-60-gib-of-storage-10gib-for-micro-vms-included-with-my-vm-if-i-select-geo-resilient-storage">Do I still get 60 GiB of storage (10GiB for Micro VMs) included with my VM if I select Geo-Resilient storage?</h3>
-<p>Yes, you will still get 60GiB (10GiB for Micro VMs) included with the VM of Geo-Resilient storage. Please note, for VMs in a powered off state any storage consumed will be charged at the prevailing rate. Geo-resilient storage and Synchronous protection must be purchased together.</p>
 <h3 id="how-much-included-storage-do-i-get-with-dedicated-compute">How much included storage do I get with Dedicated Compute?</h3>
 <p>You will receive the same allowance as for UKCloud for VMware VMs. For example, 60GiB of Tier 2 storage when the VM is powered on for free. Please note, when the VM is in a powered off state any storage associated with the VM will be charged at the prevailing rate.</p>
 <h2 id="management">Management</h2>
@@ -350,60 +344,42 @@ regarding the registration on VMs targeting the UKCloud KMS.</p>
 <p>You will be contacted by your Cloud Architect or CSM when your trial is due to end, either because you have run out of credits or reached 30 days (whichever is sooner).</p>
 <p>At the end of your trial, you have the option to transition to production or cease the trial.</p>
 <h2 id="protection">Protection</h2>
-<h3 id="which-protection-types-can-i-purchase-together">Which protection types can I purchase together?</h3>
-<ul>
-<li><p>Synchronous Protection &amp; 14/28 Day Snapshot Protection</p>
-</li>
-<li><p>Synchronous Protection &amp; 14/28 Day Journaling Protection</p>
-</li>
-<li><p>Synchronous Protection, 14 Day Journaling Protection &amp; 14 Day Snapshot Protection</p>
-</li>
-<li><p>Synchronous Protection, 28 Day Journaling Protection &amp; 28 Day Snapshot Protection</p>
-</li>
-<li><p>Synchronous Protection &amp; 14 Day Journaling Protection &amp; 28 Day Snapshot Protection</p>
-</li>
-<li><p>Synchronous Protection &amp; 28 Day Journaling Protection &amp; 14 Day Snapshot Protection</p>
-</li>
-</ul>
-<p>Please note - 14/28-day Snapshot Protection is included at no extra cost with Synchronous Protection.</p>
-<h3 id="what-is-the-enhanced-service">What is the ENHANCED service?</h3>
-<p>ENHANCED was a G-Cloud 7 service level option which has now been replaced with the G-Cloud 9 equivalent, a POWER VM with Synchronous Protection and Geo-resilient storage.</p>
 <h3 id="can-i-create-a-clone-of-my-environment">Can I create a clone of my environment?</h3>
 <p>Yes, you can do this through the UKCloud Portal by right-clicking on a vApp and selecting 'Copy'. This operation can also be performed programmatically via the API.</p>
 <p>It's not possible to restrict the automated VM snapshot backup to specific files or directories. You can install your own backup service and use our Cloud Storage if you need more flexibility.</p>
-<h3 id="how-quickly-can-a-vm-be-restored">How quickly can a VM be restored?</h3>
-<p>This depends on the size of the VM, the location from which it's being restored, and the priority of the support ticket raised to request the restoration.</p>
-<p>Customers should expect recovery to take two to three days. If you require a faster recovery time, you must implement your own backup/restore solution which will be entirely under their control. Our Cloud Storage platform could be an appropriate target for self-managed backups using software such as CommVault and NetWorker.</p>
-<h3 id="if-i-have-synchronous-protection-which-includes-1428-day-snapshot-what-will-i-be-billed-for">If I have Synchronous Protection, which includes 14/28-day Snapshot, what will I be billed for?</h3>
-<p>VM's with synchronous protection and 14/28-day snapshot protection will not incur any snapshot protection compute/VM charges.</p>
-<h3 id="if-i-have-snapshot-protection-on-dedicated-compute-what-will-i-be-charged-for">If I have Snapshot Protection on Dedicated Compute, what will I be charged for?</h3>
-<p>You will only be charged for the protection of the storage consumed, not the VM.</p>
+<h2 id="can-i-still-use-synchronous-protection-for-my-vms">Can I still use Synchronous Protection for my VMs?</h2>
+<p>Synchronous Protection is no longer available as protection option for UKCloud for VMware. We recommend using one of our other protection options: Journaling Protection or Snapshot Protection. We will continue to provide support to customers who previously added Synchronous Protection to their environment.</p>
 <h2 id="snapshot-protection">Snapshot Protection</h2>
 <h3 id="what-are-snapshots">What are snapshots?</h3>
 <p>A snapshot is NOT a copy of the VMDK. Creating a snapshot locks out the base VMDK file and any changes to the data are written to the snapshot delta VMDK. If you wish to &quot;roll back&quot; to the point in time that the snapshot was created and discard any changes since, you can &quot;revert&quot; the snapshot, which essentially deletes it and discards any changes. If you are happy with the changes made since the snapshot was created, you can &quot;delete&quot; the snapshot, which essentially consolidated all changes back into the base VMDK. Please see advice on best practice regarding snapshots in this <a href="vmw-ref-vmdk-limits.html">article</a>.</p>
 <p>Snapshots can be created using the vCloud Director portal and are stored in the same zone as the source VM. This is not to be confused with the UKCloud snapshot protection service, which uses a temporary snapshot in order to backup the VM to an external system in another UKCloud site. </p>
 <p>For further reference, this <a href="vmw-ref-vm-data-recovery.html">article</a> explains the different recovery options available to you through vCloud Director. In order to identify old snapshots, UKCloud have created this <a href="vmw-ref-vcd-healthcheck.html">article</a> which contains scripts to run a health check of your VMs.</p>
+<h3 id="can-i-restrict-automated-vm-snapshot-backup-to-specific-files-or-directories">Can I restrict automated VM snapshot backup to specific files or directories?</h3>
+<p>It's not possible to restrict the automated VM snapshot backup to specific files or directories. You can install your own backup service and use our Cloud Storage if you need more flexibility.</p>
+<h3 id="how-quickly-can-a-vm-be-restored">How quickly can a VM be restored?</h3>
+<p>This depends on the size of the VM, the location from which it's being restored, and the priority of the support ticket raised to request the restoration.</p>
+<p>Customers should expect recovery to take two to three days. If you require a faster recovery time, you must implement your own backup/restore solution which will be entirely under their control. Our Cloud Storage platform could be an appropriate target for self-managed backups using software such as CommVault and NetWorker.</p>
 <h3 id="what-rate-are-snapshots-charged-at">What rate are snapshots charged at?</h3>
-<p>Snapshots will be charged at the rate of the storage they are stored on (Tier 1, Tier 2 or Geo-Resilient), and charged per GiB per month.</p>
+<p>Snapshots will be charged at the rate of the storage they are stored on (Tier 1 or Tier 2), and charged per GiB per month.</p>
 <h3 id="can-i-use-the-60gib-included-with-my-vm-for-snapshots">Can I use the 60GiB included with my VM for snapshots?</h3>
 <p>Yes, you can use the 60GiB included with the VM for snapshots.</p>
-<h2 id="synchronous-protection-dr">Synchronous Protection (DR)</h2>
-<h3 id="does-ukcloud-provide-a-dr-option">Does UKCloud provide a DR option?</h3>
-<p>An automated replication and failover service is included for VMs utilising the Synchronous protection capability. It provides synchronous data replication which enables a near-zero recovery point objective (RPO).</p>
-<p>The recovery time objective (RTO) depends on the nature of the disaster or failure scenario. In some scenarios, VMs utilising Synchronous protection will be automatically restarted at the other data centre. In other scenarios, manual intervention by UKCloud will be needed, and the recovery time might be extended from minutes to hours.</p>
-<p>If you need more control and assurance around how data is replicated, the DR service is tested, or the solution handles failover and failback, we recommend you create your own DR solution by using independent sets of VMs in the various regions offered by the UKCloud platform.</p>
+<h3 id="if-i-have-snapshot-protection-on-dedicated-compute-what-will-i-be-charged-for">If I have Snapshot Protection on Dedicated Compute, what will I be charged for?</h3>
+<p>You will only be charged for the protection of the storage consumed, not the VM.</p>
+<h2 id="disaster-recovery">Disaster Recovery</h2>
+<h3 id="does-ukcloud-provide-a-dr-service">Does UKCloud provide a DR service?</h3>
+<p><a href="../draas/draas-sco.html">Disaster Recovery as a Service</a> (powered by Zerto) can help you improve organisational resilience. It enables rapid migration of applications between your local VMware or Hyper-V based VMs and UKCloud for VMware disaster recovery-enabled regions.</p>
 <p>An alternative UKCloud solution to achieve DR with a low RPO and RTO is <a href="vmw-sco-journaling-protection.html">Journaling Protection</a>.</p>
 <h3 id="how-does-ukcloud-enable-customers-to-create-their-own-dr-solutions">How does UKCloud enable customers to create their own DR solutions?</h3>
 <p>Although we have engineered our cloud platform to tolerate failures and ensure customers' services remain available, we encourage all our customers to design for failure and build DR capabilities into the system design, or into the application.</p>
 <p>To help this process, the UKCloud platform has been designed to give you the options you need to design a disaster tolerant solution. UKCloud's platform is about providing customers with choice. Clearly, customers need to balance the low probability of these failure scenarios occurring with the cost and complexity involved in mitigating their impact.</p>
 <p>Depending on the type of failure you are trying to mitigate, UKCloud services have been developed to enable you to design appropriate resilience into your solution.</p>
 <p>At a macro level, UKCloud operate out of two sites. Designing across multiple sites will provide resilience against even the most unlikely of scenarios - including natural disasters and mass WAN failure. UKCloud currently offer two sites:</p>
-<ol>
+<ul>
 <li><p>The independent cloud platform at our Corsham site</p>
 </li>
 <li><p>The independent cloud platform at our Farnborough site</p>
 </li>
-</ol>
+</ul>
 <p>Each site also offers independent regions. These are physically segregated parts of the UKCloud platform that have an independent power and networking components - allowing customers to architect resilient solutions out of a single site.</p>
 <p>Services in different regions also have independent control planes. By architecting for separate regions, you improve your resilience to outages that effect the control and management of your VMs.</p>
 <p>Finally, each region has a number of distinct hardware zones. For customers looking to architect against mass hardware failures. Zones can be utilised to provide additional confidence in your ability to tolerate outages. For example, you can load-balance across two zones to ensure that your service stays online in the event of an unlikely outage.</p>
