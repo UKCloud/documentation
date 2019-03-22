@@ -109,7 +109,7 @@ spec:
           webserver: "true"
 ```
 
-This object will be created in the database project, it will match any pods in the project with the label "role=database" and allow ingress traffic from any project labeled "webserver=true" in order to achieve our desired outcome we will need to label our webserver project:
+This object will be created in the database project, it will match any pods in the project with the label "role=database" and allow ingress traffic from any project labeled "webserver=true". In order to achieve our desired outcome we will need to label our webserver project:
 
 > [!NOTE]
 > The cluster administrator role is required to add labels to namespaces.
