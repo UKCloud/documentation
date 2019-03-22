@@ -45,7 +45,7 @@ metadata:
 spec:
 ```
 
-Inside the spec field we'll pass in the rules that will determine what our NetworkPolicy object does. The first thing you need to consider is the pods you want to target, this is done using the podSelector field. 
+Inside the spec key we'll pass in the rules that will determine what our NetworkPolicy object does. The first thing you need to consider is the pods you want to target, this is done using the podSelector key. 
 You can use this to match all pods in a project or alternatively to match all pods with a certain label. If you leave this field blank it will match all pods. If you want to match pods with the label 'role=webserver' 
 it would look like:
 
