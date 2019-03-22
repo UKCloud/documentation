@@ -17,6 +17,10 @@ toc_mdlink: vmw-faq-synchronous-protection.md
 
 ## General
 
+### Is Synchronous Protection still available?
+
+Synchronous Protection is no longer available as a protection option for UKCloud for VMware. We recommend using one of our other protection options: Journaling Protection or Snapshot Protection. We will continue to provide support to customers who previously added Synchronous Protection to their environment, although we would encourage considering using Journaling Protection instead.
+
 ### What is the ENHANCED service?
 
 ENHANCED was a G-Cloud 7 service level option which was subsequently replaced with the product name "Synchronous Protection". However, for most purposes, [Journaling Protection](vmw-sco-journaling-protection.md) is more flexible.
