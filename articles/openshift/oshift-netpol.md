@@ -125,7 +125,7 @@ We are now ready to create our objects, in my case the objects have been saved i
 Now we have created the objects any pods inside the webserver project matching the label role=webserver will be able to communicate out to the service inside the database project exposed by pods matching the label role=database.
 
 > [!NOTE]
-> You can test connectivity by curling the desired target service from the terminal of a pod which has been allowed access to the service. You can find the terminal in the UI or use 'oc rsh' to enter the pod.
+> You can test connectivity by curling the desired target service from the terminal of a pod which has been allowed access to the service. You can find the terminal in the UI or use ```oc rsh``` to enter the pod.
 
 ## Further reading
 
