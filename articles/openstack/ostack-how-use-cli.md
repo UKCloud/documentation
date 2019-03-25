@@ -123,6 +123,8 @@ After successful installation, you'll have to download the OpenStack RC file for
 
     ![Download OpenStack RC File button in Horizon dashboard](images/ostack-horizon-download-rc-file.png)
 
+* If your user is SSO enabled, please see this guide for modifying your RC file to allow it to work with your SSO enabled user [Guide](ostack-sso-rcfile.md)
+
 5. Download the [Source-OpenRC.ps1](https://raw.githubusercontent.com/naturalis/powershell/master/Source-OpenRC.ps1) PowerShell script and save it locally.
 
 6. As the downloaded PowerShell script is unsigned, you'll need to unblock it by right-clicking the file, selecting **Properties**, then clicking the **Unblock** button and clicking **OK**.
