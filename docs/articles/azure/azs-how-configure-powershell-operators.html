@@ -8,7 +8,7 @@
     <title>How to configure the Azure Stack operator's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure the Azure Stack operator's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -114,7 +114,7 @@ Set-ExecutionPolicy RemoteSigned
 Set-PSRepository -Name &quot;PSGallery&quot; -InstallationPolicy Trusted
 
 # Uninstall existing versions of Azure/Azure Stack PowerShell
-Get-Module -ListAvailable | Where-Object { $_.Name -like &quot;Azure*&quot; -or $_.Name -like &quot;Azs*&quot; } | Uninstall-Module -Force -Verbose
+Get-Module -Name Azs.*, Azure* -ListAvailable | Uninstall-Module -Force -Verbose
 
 # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
 Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Verbose
