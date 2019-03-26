@@ -44,7 +44,7 @@ If you want to terminate your whole account with UKCloud, you must raise separat
 - Before the decommissioning of the services can take place, you are responsible for the removal of all the data within the environment. Refer to [*Responsibilities by service*](#responsibilities-by-service) below for a list of environment items that you need to clear ahead of UKCloud decommissioning the service.
 
     > [!NOTE]
-    > If you do not removal all the environment items listed, UKCloud will not be able to complete the termination process and you may still be charged for those remaining items.
+    > If you do not remove all the environment items listed, UKCloud will not be able to complete the termination process and you may still be charged for those remaining items.
 
 - All users with access to the service being terminated must be removed from the Portal by an administrator within the customer organisation.
 
@@ -80,7 +80,7 @@ There are no termination costs associated with cancelling UKCloud services. Howe
 
 ## Responsibilities by service
 
-### Multi-cloud platforms
+### Multi-cloud technology stacks
 
 #### [UKCloud for Microsoft Azure](#tab/tabid-1)
 
