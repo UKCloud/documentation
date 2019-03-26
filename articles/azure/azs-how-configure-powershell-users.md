@@ -40,7 +40,7 @@ Prerequisites from a Windows-based external client.
   Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
   
   # Uninstall existing versions of Azure/Azure Stack PowerShell
-  Get-Module -ListAvailable | Where-Object { $_.Name -like "Azure*" -or $_.Name -like "Azs*" } | Uninstall-Module -Force -Verbose
+  Get-Module -Name Azs.*, Azure* -ListAvailable | Uninstall-Module -Force -Verbose
   
   # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
   Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Verbose
