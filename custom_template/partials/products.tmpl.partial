@@ -11,47 +11,47 @@
   </a>
 
   <a href="/articles/openstack/ostack-gs.html" class="product-grid__item">
-    <img src="/styles/assets/ukcloud-icons-light/cloud.svg" width="80" height="80" alt="" />
+    <img src="/styles/assets/ukcloud-icons-light/openstack.svg" width="80" height="80" alt="" />
     <span>OpenStack</span>
   </a>
 
   <a href="/articles/azure/azs-gs.html" class="product-grid__item">
-    <img src="/styles/assets/ukcloud-icons-light/cloud.svg" width="80" height="80" alt="" />
+    <img src="/styles/assets/ukcloud-icons-light/azure.svg" width="80" height="80" alt="" />
     <span>Azure</span>
   </a>
 
   <a href="/articles/oracle/orcl-gs.html" class="product-grid__item">
-    <img src="/styles/assets/ukcloud-icons-light/cloud.svg" width="80" height="80" alt="" />
+    <img src="/styles/assets/ukcloud-icons-light/oracle.svg" width="80" height="80" alt="" />
     <span>Oracle</span>
   </a>
 
   <a href="/articles/openshift/oshift-gs.html" class="product-grid__item">
-    <img src="/styles/assets/ukcloud-icons-light/cloud.svg" width="80" height="80" alt="" />
+    <img src="/styles/assets/ukcloud-icons-light/openshift.svg" width="80" height="80" alt="" />
     <span>OpenShift</span>
   </a>
 
   <a href="/articles/cloud-storage/cs-gs.html" class="product-grid__item">
-    <img src="/styles/assets/ukcloud-icons-light/cloud-business.svg" width="80" height="80" alt="" />
+    <img src="/styles/assets/ukcloud-icons-light/cloud-storage.svg" width="80" height="80" alt="" />
     <span>Cloud Storage</span>
   </a>
 
   <a href="/articles/gpu/gpu-faq.html" class="product-grid__item">
-    <img src="/styles/assets/ukcloud-icons-light/cloud-business.svg" width="80" height="80" alt="" />
+    <img src="/styles/assets/ukcloud-icons-light/cloud-gpu.svg" width="80" height="80" alt="" />
     <span>Cloud GPU</span>
   </a>
 
   <a href="/articles/hpc/hpc-ref-overview.html" class="product-grid__item">
-    <img src="/styles/assets/ukcloud-icons-light/cloud-business.svg" width="80" height="80" alt="" />
+    <img src="/styles/assets/ukcloud-icons-light/high-performance-compute.svg" width="80" height="80" alt="" />
     <span>High Performance Compute</span>
   </a>
 
   <a href="/articles/cdsz/cdsz-gs-walled-garden.html" class="product-grid__item">
-    <img src="/styles/assets/ukcloud-icons-light/cloud-business.svg" width="80" height="80" alt="" />
+    <img src="/styles/assets/ukcloud-icons-light/cross-domain-security-zone.svg" width="80" height="80" alt="" />
     <span>Cross Domain Security Zone</span>
   </a>
 
   <a href="/articles/sra/sra-gs.html" class="product-grid__item">
-    <img src="/styles/assets/ukcloud-icons-light/cloud-business.svg" width="80" height="80" alt="" />
+    <img src="/styles/assets/ukcloud-icons-light/secure-remote-access.svg" width="80" height="80" alt="" />
     <span>Secure Remote Access</span>
   </a>
 
@@ -61,22 +61,22 @@
   </a>
 
   <a href="/articles/draas/draas-gs.html" class="product-grid__item">
-    <img src="/styles/assets/ukcloud-icons-light/cloud.svg" width="80" height="80" alt="" />
+    <img src="/styles/assets/ukcloud-icons-light/disaster-recovery-as-a-service.svg" width="80" height="80" alt="" />
     <span>Disaster Recovery as a Service</span>
   </a>
 
   <a href="/articles/migration/migr-how-zerto-migrate-to-ukcloud.html" class="product-grid__item">
-    <img src="/styles/assets/ukcloud-icons-light/cloud.svg" width="80" height="80" alt="" />
+    <img src="/styles/assets/ukcloud-icons-light/migration-to-cloud.svg" width="80" height="80" alt="" />
     <span>Migration to the Cloud</span>
   </a>
 
   <a href="/articles/private-compute/prc-faq.html" class="product-grid__item">
-    <img src="/styles/assets/ukcloud-icons-light/cloud.svg" width="80" height="80" alt="" />
+    <img src="/styles/assets/ukcloud-icons-light/private-cloud-for-compute.svg" width="80" height="80" alt="" />
     <span>Private Cloud for Compute</span>
   </a>
 
   <a href="/articles/private-storage/prs-faq.html" class="product-grid__item">
-    <img src="/styles/assets/ukcloud-icons-light/cloud.svg" width="80" height="80" alt="" />
+    <img src="/styles/assets/ukcloud-icons-light/private-cloud-for-storage.svg" width="80" height="80" alt="" />
     <span>Private Cloud for Storage</span>
   </a>
 

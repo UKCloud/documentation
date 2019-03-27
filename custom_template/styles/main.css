@@ -16,25 +16,27 @@
   font-weight: 500;
   src: url("../fonts/raleway/raleway-medium-webfont.woff2") format("woff2"), url("../fonts/raleway/raleway-medium-webfont.woff") format("woff");
 }
-@font-face {
+
+/* @font-face {
   font-family: varela-round;
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/varela-round/varela-round-regular-webfont.woff2") format("woff2"), url("../fonts/varela-round/varela-round-regular-webfont.woff") format("woff");
-}
+} */
 
 html,
 body {
+  /* font-family: 'varela-round', Helvetica, Arial, sans-serif; */
   color      : #30545f;
-  font-family: 'varela-round', Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size  : 16px;
 }
 
 h1, h2, h3, h4, h5 {
-  color: #30545f;
-  font-family: 'raleway', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
+  color         : #30545f;
+  font-family   : 'raleway', Helvetica, Arial, sans-serif;
+  font-weight   : 700;
+  text-transform: none;
 }
 
 p, td {
