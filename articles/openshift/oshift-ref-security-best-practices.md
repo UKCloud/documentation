@@ -105,7 +105,7 @@ UKCloud can whitelist individual IP addresses or entire subnets to access the Op
 
 OpenShift uses a software-defined networking (SDN) approach to provide cluster-wide networking that enables communication between pods across the OpenShift cluster. This Container Networking Interface (CNI) runs in the OpenShift SDN project and creates an overlay network using the Open vSwitch (OVS) networking plugin.
 
-However, from February 2019, UKCloud will be deploying OpenShift clusters with the ovs-networkpolicy plugin. This plugin allows project administrators to configure their own isolation policies using [NetworkPolicy objects](https://docs.openshift.com/container-platform/3.6/admin_guide/managing_networking.html#admin-guide-networking-networkpolicy).
+However, from February 2019, UKCloud will be deploying OpenShift clusters with the ovs-networkpolicy plugin. This plugin allows project administrators to configure their own isolation policies using [NetworkPolicy objects](https://docs.openshift.com/container-platform/3.11/admin_guide/managing_networking.html#admin-guide-networking-networkpolicy). You can find an article regarding NetworkPolicy [here](oshift-netpol.md).
 
 
 ## Feedback
