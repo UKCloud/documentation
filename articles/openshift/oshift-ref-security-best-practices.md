@@ -35,7 +35,7 @@ You can view a pre-defined list of cluster roles and local roles [here](https://
 
  - Users with the admin default cluster role bound locally can manage roles and bindings in that project.
 
-It is good practice to follow the [Principle of Least Access](https://en.wikipedia.org/wiki/Principle_of_least_privilege) with OpenShift access. For information about creating new OpenShift users, see [*How to create new UKCloud for OpenShift users in the UKCloud Portal*](oshift-how-create-users.md). This article also explains how to enable two-factor authentication (2FA) when logging in to OpenShift. Users are also encouraged to change their passwords regularly, which is possible to do from the UKCloud Portal.
+It is good practice to follow the [Principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) with OpenShift access. For information about creating new OpenShift users, see [*How to create new UKCloud for OpenShift users in the UKCloud Portal*](oshift-how-create-users.md). This article also explains how to enable two-factor authentication (2FA) when logging in to OpenShift. Users are also encouraged to change their passwords regularly, which is possible to do from the UKCloud Portal.
 
 You should ensure that OpenShift account credentials are not shared between multiple users. Instead, you should create individual user accounts for each user with the correct role binding. It is also the responsibility of each individual user to ensure the physical security of the terminal from which they access OpenShift.
 
