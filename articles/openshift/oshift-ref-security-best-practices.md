@@ -41,7 +41,7 @@ You should ensure that OpenShift account credentials are not shared between mult
 
 ## Service accounts
 
-You should use service accounts for all API access, which should be accomplished by an automated process; never use an regular user's credentials. Usually a service account's username is the same as the project it is created for, followed by its name:
+You should use service accounts for all API access, which should be accomplished by an automated process; never use a regular user's credentials. Usually a service account's username is the same as the project it is created for, followed by its name:
 
 ```bash
 system:serviceaccount:<project>:<name>. 
