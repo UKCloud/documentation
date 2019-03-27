@@ -63,7 +63,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     ![Notification progress alert](images/azs-browser-notification-disks-progress.png)
 
-5. When the deployment is finished, the notification will change to *successfully updated virtual machine disks*.
+5. When the deployment is finished, the notification will change to *Successfully updated virtual machine disks*.
 
     ![Notification complete alert](images/azs-browser-notification-disks-complete.png)
 
@@ -98,7 +98,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     ![Notification progress alert](images/azs-browser-notification-disks-progress.png)
 
-4. When the deployment is finished, the notification will change to successfully updated virtual machine disks.
+4. When the deployment is finished, the notification will change to *Successfully updated virtual machine disks*.
 
     ![Notification complete alert](images/azs-browser-notification-disks-complete.png)
 
