@@ -73,7 +73,7 @@ Some container image scanning tools include:
 
   -  Clair
 
-You should also apply the Principle of least Access with containers too. You should never run containers as the root user; instead always run as a user with just enough privileges to run the required container workload.
+You should also apply the Principle of least privilege with containers too. If it can be avoided you should never run containers as the root user; instead always run as a user with just enough privileges to run the required container workload.
 
 ## Secrets
 
