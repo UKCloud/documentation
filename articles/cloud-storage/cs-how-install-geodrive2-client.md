@@ -82,7 +82,7 @@ The GeoDrive 2.0 Client offers a single caching option:
 
         - PSN Assured: `cas.cor00005.psnassured.ukcloud.com`
 
-        - N3/HSCN: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
+        - HSCN: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
   
 
     - **Farnborough (Assured)**
@@ -91,7 +91,7 @@ The GeoDrive 2.0 Client offers a single caching option:
 
         - PSN Assured: `cas.frn00006.psnassured.ukcloud.com`
 
-        - N3/HSCN: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
+        - HSCN: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
 
 10. Deselect the **Port Override** check box.
 
