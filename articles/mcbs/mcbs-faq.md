@@ -25,7 +25,7 @@ UKCloud's Multi-Cloud Backup Storage is based upon Dell EMC's Data Domain Boostâ
 
 DD Boost offers an extensive range of extensions for services such as Oracle, Microsoft SQL, Microsoft Exchange and a wide array of backup server applications to help support performance optimised off-site, multi-cloud backups.
 
-## What Data Domain Boost (DD Boost) extension are available?
+## What Data Domain Boost (DD Boost) extensions are available?
 
 Extension | Supported Applications | Further Information
 ------|-----------------|-------------------
