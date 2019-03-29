@@ -341,6 +341,11 @@ body .toc {
   max-height: 43px;
 }
 
+.navbar-brand > img{
+  height: auto;
+  max-width: 100%;
+}
+
 .navbar:not(.collapsed) .navbar-brand{
   height: 43px;
 }
@@ -474,6 +479,7 @@ mark{
     align-items          : stretch;
     flex-direction       : row;
     flex-wrap            : wrap;
+    grid-auto-rows       : 1fr;
     grid-template-columns: repeat(3, 1fr);
     justify-content      : flex-start;
   }
@@ -489,7 +495,7 @@ mark{
 @media (min-width: 1200px){
 
   .product-grid{
-    grid-gap             : 2px;
+    grid-gap             : 10px;
     grid-template-columns: repeat(5, 1fr);
     margin-left          : 0;
     margin-right         : 0;
@@ -509,9 +515,11 @@ mark{
   font-family     : 'raleway', sans-serif;
   font-size       : 1em;
   font-weight     : 700;
+  justify-content : center;
   letter-spacing  : 0.037em;
   padding         : 1em 0.5em;
   position        : relative;
+  text-align      : center;
 }
 
 .product-grid__item:hover,
@@ -554,7 +562,6 @@ mark{
 
   .product-grid__item{
     flex-direction: column;
-    text-align    : center;
   }
 
   .product-grid__item img{
