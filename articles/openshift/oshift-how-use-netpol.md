@@ -20,17 +20,17 @@ toc_mdlink: oshift-how-use-netpol.md
 
 In v3.11 clusters deployed from mid-February 2019, the default SDN plugin has been changed from ovs-multitenant to ovs-networkpolicy. This gives you the ability to create NetworkPolicy objects which allow granular control over the flow of communication between the pods, services and projects inside your cluster. 
 
-By default, we create a NetworkPolicy object, named allow-from-same-and-privileged-namespaces, in every project, including those created after the cluster is deployed. This object allows all pods to communicate with each other inside the same project and allow communication from all pods and services to the default and openshift-monitoring projects. This mirrors the default pod security provided with the ovs-multitenant plugin.
+By default, we create a NetworkPolicy object, named allow-from-same-and-privileged-namespaces, in every project, including those created after the cluster is deployed. This object allows all pods to communicate with each other inside the same project and allows communication from all pods and services to the default and openshift-monitoring projects. This mirrors the default pod security provided with the ovs-multitenant plugin.
 
 ## Interacting with NetworkPolicy objects
 
-You can interact with NetworkPolicy object from the command line using the full name networkpolicy or short name netpol, for example:
+You can interact with NetworkPolicy objects from the command line using the full name networkpolicy or short name netpol, for example:
 
-``` oc get netpol ``` - List NetworkPolicy objects in the current project.
+`oc get netpol` - List NetworkPolicy objects in the current project.
 
-``` oc describe netpol <name> ``` - Provides more detailed information on the named NetworkPolicy object.
+`oc describe netpol <name>` - Provides more detailed information on the named NetworkPolicy object.
 
-``` oc get netpol <name> -o yaml ``` - Provides yaml output of the named NetworkPolicy object. Useful to reference existing rules when creating new objects.
+`oc get netpol <name> -o yaml` - Provides yaml output of the named NetworkPolicy object. Useful to reference existing rules when creating new objects.
 
 ## Example of connecting services from two different projects
 
@@ -45,8 +45,9 @@ metadata:
 spec:
 ```
 
-Inside the spec key, you can pass in rules that determine what the NetworkPolicy object does. The first thing you need to consider is the pods you want to target. You can do this using the ```podSelector``` key.
-You can use this to match all pods in a project or alternatively to match all pods with a certain label. You can leave the key blank to match all pods in a project or you can match all pods with a certain label. In our example, we want to match pods with the label ```role=webserver```:
+Inside the spec key, you can pass in rules that determine what the NetworkPolicy object does. The first thing you need to consider is the pods you want to target. You can do this using the `podSelector` key.
+
+You can use this to match all pods in a project or alternatively to match all pods with a certain label. You can leave the key blank to match all pods in a project or you can match all pods with a certain label. In our example, we want to match pods with the label `role=webserver`:
 
 ```
 apiVersion: extensions/v1beta1
@@ -60,7 +61,7 @@ spec:
       role: webserver
 ```
 
-Now, we've matched the pods inside our webserver project that have the label ```role=webserver```. Now we want to allow these podes to connect to a service inside a project we've named database. To do this, we'll use a namespace selector, which evaluates projects based on a label. In this case, we're going to be looking for the namespace label ```database=true```. First, we need to ensure that this label is applied using the following command:
+We've matched the pods inside our webserver project that have the label `role=webserver`. Now we want to allow these pods to connect to a service inside a project we've named database. To do this, we'll use a namespace selector, which evaluates projects based on a label. In this case, we're going to be looking for the namespace label `database=true`. First, we need to ensure that this label is applied using the following command:
 
 > [!NOTE]
 > The cluster administrator role is required to add labels to namespaces.
@@ -86,7 +87,7 @@ spec:
           database: "true"
 ```
 
-We now have a template for a NetworkPolicy object that matches any pods labeled ```role=webserver``` inside the webserver project and allows them to communicate out to any projects labeled ```database=true```. This is only half the work; we still need the ingress allowance inside the database project. Our example template for that object looks like the following:
+We now have a template for a NetworkPolicy object that matches any pods labeled `role=webserver` inside the webserver project and allows them to communicate out to any projects labeled `database=true`. This is only half the work; we still need the ingress allowance inside the database project. Our example template for that object looks like the following:
 
 ```
 apiVersion: extensions/v1beta1
@@ -105,7 +106,7 @@ spec:
           webserver: "true"
 ```
 
-This object is created in the database project and matches any pods in the project with the label ```role=database``` and allows ingress traffic from any project labeled ```webserver=true```. To achieve our desired outcome, we need to label our webserver project as follows:
+This object is created in the database project and matches any pods in the project with the label `role=database` and allows ingress traffic from any project labeled `webserver=true`. To achieve our desired outcome, we need to label our webserver project as follows:
 
 > [!NOTE]
 > The cluster administrator role is required to add labels to namespaces.
@@ -118,10 +119,10 @@ In our example, we've saved our templates in files called netpol.yaml and netpol
 
 ``` oc create -f netpol1.yaml ```
 
-Now we've created the objects, any pods inside the webserver project matching the label ```role=webserver``` can communicate out to the service inside the database project exposed by pods matching the label ```role=database```.
+Now we've created the objects, any pods inside the webserver project matching the label `role=webserver` can communicate out to the service inside the database project exposed by pods matching the label `role=database`.
 
 > [!NOTE]
-> You can test connectivity by curling the desired target service from the terminal of a pod that has been allowed access to the service. You can find the terminal in the UI or use ```oc rsh``` to enter the pod.
+> You can test connectivity by curling the desired target service from the terminal of a pod that has been allowed access to the service. You can find the terminal in the UI or use `oc rsh` to enter the pod.
 
 ## Further information
 
