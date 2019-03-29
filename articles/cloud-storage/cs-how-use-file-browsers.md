@@ -52,7 +52,7 @@ S3 API endpoints:
 
   - PSN Assured: `cas.cor00005.psnassured.ukcloud.com`
 
-  - N3: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
+  - HSCN: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
   
 - **Farnborough (Assured)**
 
@@ -60,7 +60,7 @@ S3 API endpoints:
 
   - PSN Assured: `cas.frn00006.psnassured.ukcloud.com`
 
-  - N3: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
+  - HSCN: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
 
 Contact UKCloud support if you are unsure which endpoint to use.
 
