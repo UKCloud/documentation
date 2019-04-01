@@ -44,7 +44,7 @@ Prerequisites from a Windows-based external client.
   
   # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
   Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Verbose
-  Install-Module -Name AzureStack -RequiredVersion 1.7.0 -Verbose
+  Install-Module -Name AzureStack -RequiredVersion 1.7.1 -Verbose
   ```
 
 ## Configure the operator environment and sign in to Azure Stack
