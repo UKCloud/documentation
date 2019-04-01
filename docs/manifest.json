@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-gs.html",
-          "hash": "NqL8y1NCVJT7DZd0V6+kDA=="
+          "hash": "L2gfQSCpqhObdjHnb5nCMA=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-powershell-operators.html",
-          "hash": "glnmFb/WZAD0djFxl0wC2A=="
+          "hash": "ofZAJqWuZ/V6ApJshP0cDg=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-powershell-users.html",
-          "hash": "1hp66f3abcbwWpxb7TpNTg=="
+          "hash": "vF7QNBgtWEzQ1k9nUSGA/Q=="
         }
       },
       "is_incremental": false,
@@ -429,6 +429,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-ad.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-MS-SfB-agreement.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-MS-SfB-agreement.png"
         }
       },
       "is_incremental": false,
@@ -3544,7 +3555,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-smart-hands.html",
-          "hash": "SzYTlsohi5bE9Iybk7svzw=="
+          "hash": "eZ3UvIpkZcAtvFwLDtIe9g=="
         }
       },
       "is_incremental": false,
@@ -14474,7 +14485,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-locate-vdc.html",
-          "hash": "nyFLvmtwtuMQgrINPIZhHA=="
+          "hash": "D4j/4w3ud0l9zgxvpuZKnA=="
         }
       },
       "is_incremental": false,
@@ -15361,17 +15372,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 335,
+          "skipped_file_count": 0
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 335,
           "skipped_file_count": 0
         }
       }
