@@ -73,11 +73,15 @@ After submitting your details, you will receive an email asking for permission f
 
 ![Microsoft Azure CSP invitation email](images/azs-email-csp-invitation.png)
 
-Once you have received this, click the **CSP Invitation URL** link and click to sign in:
+Once you have received this, click the **CSP Invitation URL** link and enter your details to sign in.
 
 ![Microsoft Azure sign in page](images/azs-browser-csp-auth-signin.png)
 
-After signing in you will be greeted with the following page. Tick the checkbox and click **Authorize CSP**, then contact your CSM so UKCloud can complete your onboarding process.
+Accept the **Microsoft Store for Business and your data** agreement.
+
+![Microsoft Store for Business Data Agreement](images/azs-browser-MS-SfB-agreement.png)
+
+After accepting the agreement you will be greeted with the following page. Tick the checkbox and click **Accept**, then contact your CSM so UKCloud can complete your onboarding process.
 
 ![Microsoft Azure authorize CSP page](images/azs-browser-authorize-csp.png)
 
