@@ -22,7 +22,7 @@ This guide is will show you how to expand persistent storage volumes from the co
 
 ## Steps
 
-1. Scale down the pod that has the persistent storage attached. Depending whether the pod is backed by a DeploymentConfig or ReplicationController you will need to specify either rc or dc as the object type in the following command (in my example I'm targeting a DeploymentConfig named test).
+1. Scale down the pod that has the persistent storage attached. Depending whether the pod is backed by a DeploymentConfig or    ReplicationController you will need to specify either rc or dc as the object type in the following command (in my example    I'm targeting a DeploymentConfig named test).
 
   `oc scale --replicas=0 dc test`
 
