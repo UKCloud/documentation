@@ -24,7 +24,7 @@ This guide is will show you how to expand persistent storage volumes from the co
 
 1. Scale down the pod that has the persistent storage attached. Depending whether the pod is backed by a DeploymentConfig or ReplicationController you will need to specify either rc or dc as the object type in the following command (in my example I'm targeting a DeploymentConfig named test).
 
-  'oc scale --replicas=0 dc test'
+  `oc scale --replicas=0 dc test`
 
 2. Once the scaling is complete you can edit the PersistentVolumeClaim and adjust the spec.resources.requests.storage value. For example my PV is currently 20Gi and I want it to be 30Gi. I will edit the spec section from:
   
@@ -54,7 +54,7 @@ This guide is will show you how to expand persistent storage volumes from the co
   
    The command used to edit the PersistentVolumeClaim is (in my example the pvc is called test-pvc):
   
-   'oc edit pvc test-pvc'
+   `oc edit pvc test-pvc`
   
    This takes you to a vi interface, use :wq to save your changes.
    
