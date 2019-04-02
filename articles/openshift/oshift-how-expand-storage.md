@@ -20,6 +20,27 @@ toc_mdlink: oshift-how-expand-storage.md
 
 This is a step-by-step guide on expanding persistent storage volumes from the command line. In order to follow this guide your OpenShift cluster needs to be v3.11 or later, you need access to the OpenShift command line tools and you need sufficient permissions to edit the PersistentVolumeClaim that is bound to the target storage.
 
+## Pre-checks
+Before you can carry out this task you need to confirm the storage class can be expanded. We currently support this on OpenStack Cinder backed persistent volumes only. To verify if your storage class is based on this carry out the following checks.
+
+In this example we're verifying that the tier2 storage class is able to be expanded.
+
+```oc describe sc tier2
+Name:                  tier2
+IsDefaultClass:        Yes
+Annotations:           storageclass.beta.kubernetes.io/is-default-class=true
+Provisioner:           kubernetes.io/cinder
+Parameters:            availability=nova,type=TIER2
+AllowVolumeExpansion:  True
+MountOptions:          <none>
+ReclaimPolicy:         Delete
+VolumeBindingMode:     Immediate
+Events:                <none>```
+
+You can see from the Provisioner that this is OpenStack Cinder based storage, and from the AllowVolumeExpansion: True parameter that this storage class has expansion enabled.
+
+With this example we are able to proceed.
+
 ## Steps
 
 1. Scale down the pod that has the persistent storage attached. Depending whether the pod is backed by a DeploymentConfig or    ReplicationController you will need to specify either rc or dc as the object type in the following command (in my example    I'm targeting a DeploymentConfig named test):
