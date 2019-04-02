@@ -22,6 +22,14 @@ In v3.11 clusters deployed from mid-February 2019, the default SDN plugin has be
 
 By default, we create a NetworkPolicy object, named allow-from-same-and-privileged-namespaces, in every project, including those created after the cluster is deployed. This object allows all pods to communicate with each other inside the same project and allows communication from all pods and services to the default and openshift-monitoring projects. This mirrors the default pod security provided with the ovs-multitenant plugin.
 
+## Verifying the cluster SDN
+
+In order to verify if the cluster has the ovs-networkpolicy SDN you can use the following command:
+
+```oc get clusternetwork```
+
+This will show redhat/openshift-ovs-networkpolicy under the PLUGIN NAME. If this shows ovs-multitenant instead you and you wish to use NetworkPolicy objects you will need to raise a service request to look at the options for switching SDN.
+
 ## Interacting with NetworkPolicy objects
 
 You can interact with NetworkPolicy objects from the command line using the full name networkpolicy or short name netpol, for example:
