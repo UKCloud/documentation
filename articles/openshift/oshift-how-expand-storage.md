@@ -18,7 +18,7 @@ toc_mdlink: oshift-how-expand-storage.md
 
 ## Overview
 
-This guide is will show you how to expand persistent storage volumes from the command line. In order to follow this guide your OpenShift cluster needs to be v3.11 or later, you need access to the OpenShift command line tools and you need sufficient permissions to edit the PersistentVolumeClaim that is bound to the target storage.
+This is a step-by-step guide on expanding persistent storage volumes from the command line. In order to follow this guide your OpenShift cluster needs to be v3.11 or later, you need access to the OpenShift command line tools and you need sufficient permissions to edit the PersistentVolumeClaim that is bound to the target storage.
 
 ## Steps
 
