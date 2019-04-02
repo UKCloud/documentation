@@ -22,7 +22,7 @@ In v3.11 clusters deployed from mid-February 2019, the default SDN plugin has be
 
 By default, we create a NetworkPolicy object, named allow-from-same-and-privileged-namespaces, in every project, including those created after the cluster is deployed. This object allows all pods to communicate with each other inside the same project and allows communication from all pods and services to the default and openshift-monitoring projects. This mirrors the default pod security provided with the ovs-multitenant plugin.
 
-This document refers to namespaces and projects. A project is an OpenShift construct on top of a Kuberenetes namespace. For the purpose of this guide they can be thought of as the same thing, however, the 'oc label' commands that are performed on a namespace must be applied to the namespace object, they will not work if you attempt to apply them to the project object.
+This document refers to namespaces and projects. A project is an OpenShift construct on top of a Kuberenetes namespace. For the purpose of this guide they can be thought of as the same thing, however, the `oc label` commands that are performed on a namespace must be applied to the namespace object, they will not work if you attempt to apply them to the project object.
 
 ## Verifying the cluster SDN
 
