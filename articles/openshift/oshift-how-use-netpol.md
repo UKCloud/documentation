@@ -68,7 +68,7 @@ We've matched the pods inside our webserver project that have the label `role=we
 
 ``` oc label namespace database database=true ```
 
-Our example netpol object now looks like the following:
+Our example NetworkPolicy object now looks like the following:
 
 ```
 apiVersion: extensions/v1beta1
