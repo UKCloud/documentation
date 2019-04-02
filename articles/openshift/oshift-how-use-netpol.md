@@ -28,7 +28,7 @@ In order to verify if the cluster has the ovs-networkpolicy SDN you can use the 
 
 ```oc get clusternetwork```
 
-This will show redhat/openshift-ovs-networkpolicy under the PLUGIN NAME. If this shows ovs-multitenant instead you and you wish to use NetworkPolicy objects you will need to raise a service request to look at the options for switching SDN.
+This will show redhat/openshift-ovs-networkpolicy under the PLUGIN NAME. If this shows ovs-multitenant instead and you wish to use NetworkPolicy objects you will need to raise a service request to look at the options for switching SDN.
 
 ## Interacting with NetworkPolicy objects
 
