@@ -1,5 +1,5 @@
 ---
-title: How to Create a Scale Set using UKCloud Azure Stack portal | UKCloud Ltd
+title: How to create a scale set using UKCloud Azure Stack portal | UKCloud Ltd
 description: Provides help for creating a scale set on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel
@@ -9,20 +9,20 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Create a Scale Set - Portal
+toc_title: Create a scale set
 toc_fullpath: Users/How To/azs-how-create-scale-set.md
 toc_mdlink: azs-how-create-scale-set.md
 ---
 
-# How to create a Virtual Machine Scale Set using UKCloud Azure Stack portal
+# How to create a scale set using UKCloud Azure Stack portal
 
 ## Overview
 
-Virtual Machine scale sets in Azure Stack are a compute resource that can be used to deploy and manage identical virtual machines. All virtual machine instances in a scale set are configured in the same way and do not require any provisioning beforehand.
+Virtual machine (VM) scale sets in Azure Stack are a compute resource that you can use to deploy and manage identical VMs. All virtual machine instances in a scale set are configured in the same way and do not require any provisioning beforehand.
 
 ## Prerequisites
 
-To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.
+To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.
 
 ## Creating a new virtual machine scale set
 
@@ -34,7 +34,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     ![New option in favourites panel](images/azsp_newmenu.png)
 
-3. In the *Everything* blade search **'Virtual machine scale set'**.
+3. In the *Everything* blade search **'Virtual machine scale set'** and then select it from the search results.
 
     ![Searching for scale set](images/azs-browser-button-scale-set-menu.png)
 
@@ -48,8 +48,8 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     - **Operating system disk image** – The operating system disk image for the virtual machines in the scale set.
 
-    > [!Warning]
-    > Scale sets currently do not support CentOS 7.2 on Azure Stack.
+        > [!Note]
+        > Scale sets currently do not support CentOS 7.2 on Azure Stack.
 
     - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
@@ -65,9 +65,9 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     - **Instance count** – The number of virtual machines in the scale set (0 - 100).
 
-    - **Instance size** – The size of each virtual machine in the scale set. Some sizes may only be available using templates, PowerShell, or Azure CLI due to the recommended portal defaults.
+    - **Instance size** – The size of each virtual machine in the scale set. Some sizes may only be available using templates, PowerShell or Azure CLI due to the recommended portal defaults.
 
-    - **Use managed disks** – Managed disks is a feature that simplifies disk management for Azure laaS virtual machines by handling storage account management for you. For more information, see the [Managed Disks overview](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/managed-disks-overview)
+    - **Use managed disks** – Managed disks is a feature that simplifies disk management for Azure IaaS virtual machines by handling storage account management for you. For more information, see the [Managed Disks overview](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/managed-disks-overview).
 
     - **Public IP address name** – The name of the public IP address for the load balancer in front of the scale sets.
 
@@ -81,32 +81,34 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     ![BASICS page](images/azs-browser-create-scale-set.png)
 
-6. You can monitor the progress of your scale set's deployment by clicking the **Notifications** icon.
+6. When you're done, click Create.
+
+7. You can monitor the progress of your scale set's deployment by clicking the **Notifications** icon.
 
     ![Deployment in progress notification](images/azsp_createvm_progress.png)
 
-7. When the deployment is finished, the notification will change to *Deployment succeeded*.
+8. When the deployment is finished, the notification will change to *Deployment succeeded*.
 
     ![Deployment complete](images/azsp_createvm_deployment_success.png)
 
-8. After the scale set has deployed, you can view it by clicking **All Services** in the favourites panel, then select **Virtual machine scale sets** from the *compute* section.
+9. After the scale set has deployed, you can view it by clicking **All Services** in the favourites panel, then select **Virtual machine scale sets** from the *compute* section.
 
     ![All resources menu](images/azs-browser-select-all-services.png)
 
-9. Select your scale set from the list.
+10. Select your scale set from the list.
 
     ![All resources list](images/azs-browser-select-scale-set.png)
 
-10. In the blade for your scale set, you can view and monitor the scale set, change its settings and perform diagnostics and troubleshooting.
+11. In the blade for your scale set, you can view and monitor the scale set, change its settings and perform diagnostics and troubleshooting.
 
     ![scale set overview](images/azs-browser-Scale-Set-overview.png)
 
 ## Modifying the instance count of your scale set
 
-> [!Warning]
+> [!Note]
 > Currently auto-scaling is not supported on Azure Stack.
 
-1. In the blade for the scale set, select **Scaling** under *settings*.
+1. In the blade for the scale set, select **Scaling** under *Settings*.
 
     ![scale set scaling button](images/azs-browser-button-scaling.png)
 
@@ -118,8 +120,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     ![Save number of instances for the scale set](images/azs-browser-button-save-instance-count.png)
 
-> [!Note]
-> A prompt will notify you once the configuration has been updated.
+4. A prompt will notify you once the configuration has been updated.
 
 ## Feedback
 
