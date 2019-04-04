@@ -1,6 +1,6 @@
 ---
 title: Partitioning projects or end customers using UKCloud accounts | UKCloud Ltd
-description: Frequently asked questions for UKCloud for VMware
+description: 
 services: portal
 author: Sophie Wake
 toc_rootlink: Reference
@@ -15,7 +15,7 @@ toc_mdlink: ptl-ref-multiple-accounts.md
 
 # Partitioning projects or end customers using UKCloud accounts
 
-## About UKCloud accounts
+## Overview
 
 When you request your first service on UKCloud, you're given a single account. An account can represent an organisation, a customer contract or a specific project and contains one or more UKCloud services, such as UKCloud for VMware, Cloud Storage or UKCloud for OpenStack. Within an account, Portal administrators can set permissions for users so that they can access only those services and features that they are allowed to view and use. This is a simple way to manage smaller accounts, however the more projects or end customers you have, the more complicated and confusing the account can become without some degree of separation.
 
