@@ -103,7 +103,7 @@ For Windows to be aware of Python you need to declare its path as follows:
 
 ### Install the OpenStack Command Line client
 
-1. Install pip with the following command:
+1. Install the OpenStack client with the following command:
 
         pip install python-openstackclient
 
@@ -123,7 +123,7 @@ After successful installation, you'll have to download the OpenStack RC file for
 
     ![Download OpenStack RC File button in Horizon dashboard](images/ostack-horizon-download-rc-file.png)
 
-5. Download the [Source-OpenRC.ps1](https://raw.githubusercontent.com/naturalis/powershell/master/Source-OpenRC.ps1) PowerShell script and save it locally.
+5. Download the [Source-OpenRC.ps1](https://raw.githubusercontent.com/UKCloud/PS-OpenRC/master/Source-OpenRC.ps1) PowerShell script and save it locally.
 
 6. As the downloaded PowerShell script is unsigned, you'll need to unblock it by right-clicking the file, selecting **Properties**, then clicking the **Unblock** button and clicking **OK**.
 
@@ -148,7 +148,7 @@ Now you've installed and configured the everything, you can start using the comm
 
 2. Test if everything is working with a simple list command:
 
-        nova list
+        openstack server list
 
 3. If you've started with an empty project, you'll get output similar to the following:
 
