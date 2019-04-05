@@ -35,55 +35,59 @@ Our Elevated OFFICIAL security domain doesn't natively connect to the internet, 
 
 We provide repositories for CentOS 6 on our Elevated OFFICIAL security domain. To access them:
 
-Create a file called `il3-repos.repo` in `/etc/yum.repos.d`, and populate it with the following, replacing `<elevated-public-ip-address>` with the Elevated OFFICIAL public IP address (if you're not sure what this is, contact UKCloud Support):
+Create a file called `il3-repos.repo` in `/etc/yum.repos.d`, and populate it with the following:
 
-    ```
-    [base]
+```
+[base]
 
-    name=UKCloud CentOS Repository - Base
+name=UKCloud CentOS Repository - Base
 
-    baseurl=http://<elevated-public-ip-address>/centos/6.5/os/x86_64
+baseurl=http://<elevated-public-ip-address>/centos/<x>.<y>/os/x86_64
 
-    gpgcheck=1
+gpgcheck=1
 
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<x>
 
-    [updates]
+[updates]
 
-    name=UKCloud CentOS Repository - Updates
+name=UKCloud CentOS Repository - Updates
 
-    baseurl=http://<elevated-public-ip-address>/centos/centos-updates
+baseurl=http://<elevated-public-ip-address>/centos/centos-updates
 
-    gpgcheck=1
+gpgcheck=1
 
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<x>
 
-    [extras]
+[extras]
 
-    name=UKCloud CentOS Repository - Extras
+name=UKCloud CentOS Repository - Extras
 
-    baseurl=http://<elevated-public-ip-address>/centos/centos-extras
+baseurl=http://<elevated-public-ip-address>/centos/centos-extras
 
-    gpgcheck=1
+gpgcheck=1
 
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
-    ```
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<x>
+```
+
+Where:
+
+- `<elevated-public-ip-address>` is the Elevated OFFICIAL public IP address (if you're not sure what this is, contact UKCloud Support)
+
+- <x>.<y> is your version of CentOS
 
 Or use the following command to download the repo file directly from the server:
 
 **CentOS 6:**
 
-    ```
-    wget -P /etc/yum.repos.d http://<elevated-public-ip-address>/repos/ukcloud_centos6.repo
-    ```
+```
+wget -P /etc/yum.repos.d http://<elevated-public-ip-address>/repos/ukcloud_centos<x>.repo
+```
 
 **CentOS 7:**
 
-    ```
-    wget -P /etc/yum.repos.d http://<elevated-public-ip-address>/repos/ukcloud_centos7.repo
-    ```
-
-In the above string, replace `elevated-public-ip-address` with the Elevated OFFICIAL public IP addresses. If you're not sure what this is, contact UKCloud Support.
+```
+wget -P /etc/yum.repos.d http://<elevated-public-ip-address>/repos/ukcloud_centos<x>.repo
+```
 
 Remove all other `*.repo` files in this directory.
 
