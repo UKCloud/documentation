@@ -65,14 +65,6 @@ Where:
 
 Or use the following command to download the repo file directly from the server:
 
-**CentOS 6:**
-
-```
-wget -P /etc/yum.repos.d http://<elevated-public-ip-address>/repos/ukcloud_centos<x>.repo
-```
-
-**CentOS 7:**
-
 ```
 wget -P /etc/yum.repos.d http://<elevated-public-ip-address>/repos/ukcloud_centos<x>.repo
 ```
