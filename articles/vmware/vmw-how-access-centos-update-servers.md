@@ -61,7 +61,7 @@ Where:
 
 - `<elevated-public-ip-address>` is the Elevated OFFICIAL public IP address (if you're not sure what this is, contact UKCloud Support)
 
-- <x>.<y> is your version of CentOS
+- `<x>.<y>` is your version of CentOS
 
 Or use the following command to download the repo file directly from the server:
 
