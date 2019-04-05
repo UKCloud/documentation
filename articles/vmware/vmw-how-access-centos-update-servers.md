@@ -35,7 +35,7 @@ Our Elevated OFFICIAL security domain doesn't natively connect to the internet, 
 
 We provide repositories for CentOS 6 on our Elevated OFFICIAL security domain. To access them:
 
-Create a file called `il3-repos.repo` in `/etc/yum.repos.d`, and populate it with the following:
+Create a file called `il3-repos.repo` in `/etc/yum.repos.d`, and populate it with the following, replacing `<elevated-public-ip-address>` with the Elevated OFFICIAL public IP address (if you're not sure what this is, contact UKCloud Support):
 
     ```
     [base]
@@ -71,8 +71,16 @@ Create a file called `il3-repos.repo` in `/etc/yum.repos.d`, and populate it wit
 
 Or use the following command to download the repo file directly from the server:
 
+**CentOS 6:**
+
     ```
     wget -P /etc/yum.repos.d http://<elevated-public-ip-address>/repos/ukcloud_centos6.repo
+    ```
+
+**CentOS 7:**
+
+    ```
+    wget -P /etc/yum.repos.d http://<elevated-public-ip-address>/repos/ukcloud_centos7.repo
     ```
 
 In the above string, replace `elevated-public-ip-address` with the Elevated OFFICIAL public IP addresses. If you're not sure what this is, contact UKCloud Support.
