@@ -33,39 +33,27 @@ Our Elevated OFFICIAL security domain doesn't natively connect to the internet, 
 
 ### Option 1. UKCloud-managed repository servers
 
-We provide repositories for CentOS 6 on our Elevated OFFICIAL security domain. To access them:
+We provide repositories for CentOS 6 and 7 on our Elevated OFFICIAL security domain. To access them:
 
 Create a file called `il3-repos.repo` in `/etc/yum.repos.d`, and populate it with the following:
 
 ```
 [base]
-
 name=UKCloud CentOS Repository - Base
-
 baseurl=http://<elevated-public-ip-address>/centos/<x>.<y>/os/x86_64
-
 gpgcheck=1
-
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<x>
 
 [updates]
-
 name=UKCloud CentOS Repository - Updates
-
 baseurl=http://<elevated-public-ip-address>/centos/centos-updates
-
 gpgcheck=1
-
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<x>
 
 [extras]
-
 name=UKCloud CentOS Repository - Extras
-
 baseurl=http://<elevated-public-ip-address>/centos/centos-extras
-
 gpgcheck=1
-
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<x>
 ```
 
