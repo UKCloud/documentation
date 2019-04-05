@@ -143,14 +143,14 @@ After successful installation, you'll have to download the OpenStack RC file for
 ### Test your configuration
 
 Now you've installed and configured the everything, you can start using the command line tools.
+> [!NOTE]
+> You'll need to run the PowerShell script defined above, and provide your OpenStack project credentials every time you relaunch PowerShell.
 
-1. Start Windows PowerShell.
-
-2. Test if everything is working with a simple list command:
+1. Test if everything is working with a simple list command:
 
         openstack server list
 
-3. If you've started with an empty project, you'll get output similar to the following:
+2. If you've started with an empty project, you'll get output similar to the following:
 
     ```
     +----+------+--------+------------+-------------+----------+
@@ -162,9 +162,7 @@ Now you've installed and configured the everything, you can start using the comm
     > If you enter your password incorrectly, you will see a message similar to:
     > `The request you have made requires authentication. (HTTP 401) (Request-ID: req-..)`
     
-    
-    > [!NOTE]
-    > You'll need to run the PowerShell script defined above, and provide your OpenStack project credentials every time you relaunch PowerShell.
+  
 
 ## Upgrading clients
 
