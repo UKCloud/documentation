@@ -158,7 +158,11 @@ Now you've installed and configured the everything, you can start using the comm
     +----+------+--------+------------+-------------+----------+
     +----+------+--------+------------+-------------+----------+
     ```
-
+    > [!NOTE]
+    > If you enter your password incorrectly, you will see a message similar to:
+    > `The request you have made requires authentication. (HTTP 401) (Request-ID: req-..)`
+    
+    
     > [!NOTE]
     > You'll need to run the PowerShell script defined above, and provide your OpenStack project credentials every time you relaunch PowerShell.
 
