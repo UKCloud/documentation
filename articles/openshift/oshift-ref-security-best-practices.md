@@ -88,11 +88,11 @@ Within OpenShift, you can expose your services using routes. Creating a route to
 
  - Re-Encrypt - This process uses two certificates: the first certificate is held on the HAProxy router and the second in the pods. This secures traffic all the way down to the application.
 
-# Security Groups
+### Security Groups
 
 UKCloud can secure routes with the use of Security Groups applied by the UKCloud OpenShift team, these security groups can be applied at the time of cluster deployment or later via a Service Request to the UKCloud OpenShift Support team. These security groups can also be used to secure routes which are exposed to various Government Community Networks. When services are protected by security groups the traffic is dropped before it reaches OpenShift.
 
-# White Listing
+### White Listing
 
 You can secure your routes by applying white lists by IP address. The advantage of doing this is that users can do this themselves, however this does allow traffic to reach the OpenShift route before it is either allowed through or dropped based on the white listing users may have applied. We have documented the process of IP whitelisting [here](oshift-how-restrict-access-to-openshift-routes-by-ip-address.md). 
 
