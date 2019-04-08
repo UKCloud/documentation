@@ -44,7 +44,7 @@ Users should also apply Principle of least privilege to there containers work lo
 You should use service accounts for all API access, which should be accomplished by an automated process; never use a regular user's credentials. Usually a service account's username is the same as the project it is created for, followed by its name:
 
 ```
-system:serviceaccount:<project>:<name>. 
+system:serviceaccount:<project>:<name>
 ```
 
 For example:
