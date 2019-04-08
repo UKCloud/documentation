@@ -8026,15 +8026,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-how-create-users.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-create-users.html",
-          "hash": "yeyo38nCrOBv/kpUTrTvaQ=="
+          "hash": "GCKgb+W2ySCP17+qMFjGSg=="
         }
       },
       "is_incremental": false,
