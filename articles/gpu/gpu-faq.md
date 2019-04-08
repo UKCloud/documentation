@@ -25,6 +25,14 @@ It is a supplementary Graphics Processing Unit (GPU) option that enables custome
 
 - Computational workloads - The parallel nature of general purpose Graphics Processing Unit (GPGPU) cores enables initiatives such as deep learning, analytics and large-scale mathematical modelling.
 
+### What the service can help you achieve
+Cloud GPU enables UKCloud customers to supplement their cloud compute resources with GPU capabilities;
+- Improve the speed at which you can gain insight into your data. Cloud GPU’s massively parallelised capabilities allow you to process large data sets at a much faster rate, allowing for greater operational efficiency
+- Bring GPU-reliant applications to the cloud. Applications that have previously struggled to transition to the cloud because of GPU requirements can now be moved — improving manageability of your data and applications, whilst increasing collaboration opportunities
+- Improve access to your most important applications. Cloud GPU lets you centralise your applications so that staff can access the tools they need, from anywhere, on commodity devices
+- Streamline compute resources. Compute resources can be streamlined by offloading processing power to GPUs, reducing the CPU footprint needed to run applications
+
+
 ### What technology does Cloud GPU use?
 
 The service is provisioned using NVIDIA cards in the required hosts. Different cards are utilised depending on the use case:
