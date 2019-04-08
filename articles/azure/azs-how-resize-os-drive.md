@@ -28,6 +28,10 @@ This guide shows you how to resize disks on UKCloud for Microsoft Azure.
 
 To complete the steps in this guide you must have the appropriate permissions on the resource you are trying to access.
 
+## Prerequisites
+
+Ensure your PowerShell environment is setup as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md).
+
 ## Resizing an OS drive
 
 > [!IMPORTANT]
@@ -50,26 +54,26 @@ Please select the type of disk you are trying to expand:
 
 From your PowerShell window:
 
-<pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
+<pre><code class="language-PowerShell"># Sign in to your Azure Stack environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
-Login-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Set your resource group name and VM name
+# Set your resource group and VM name
 $RGName = "<output form="ResourceGroup" name="result" style="display: inline;">myResourceGroup</output>"
 $VMName = "<output form="VMName" name="result" style="display: inline;">myVM</output>"
 
-# Obtain a reference to your VM
+# Obtain your VM object
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
 Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
-# Resize mananaged OS disk
+# Resize managed OS disk
 $Disk = Get-AzureRmDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.OsDisk.Name
 $Disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">1024</output>
 Update-AzureRmDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
 
-# Restart the VM
+# Start the VM
 Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
 
@@ -77,21 +81,21 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
 From your PowerShell window:
 
-<pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
+<pre><code class="language-PowerShell"># Sign in to your Azure Stack environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
-Login-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Set your resource group name and VM name
+# Set your resource group and VM name
 $RGName = "<output form="ResourceGroup" name="result2" style="display: inline;">myResourceGroup</output>"
 $VMName = "<output form="VMName" name="result2" style="display: inline;">myVM</output>"
 
-# Obtain a reference to your VM
+# Obtain your VM object
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
 Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
-# Resize unmananaged OS disk
+# Resize unmanaged OS disk
 $VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result2" style="display: inline;">1024</output>
 Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
 
@@ -111,11 +115,11 @@ After expanding the disk, you must go into the OS and expand the volume to actua
 
 2. Open a command prompt and type `diskpart`.
 
-3. At the `DISKPART` prompt, type `list volume`. Take note of the volume you want to extend.
+3. In the `DISKPART` prompt, type `list volume`. Take note of the volume you want to extend.
 
-4. At the `DISKPART` prompt, type `select volume <volumenumber>`. This selects the volume that you want to extend into unpartitioned empty space on the same disk.
+4. In the `DISKPART` prompt, type `select volume <volumenumber>`. This selects the volume that you want to extend into unpartitioned empty space on the same disk.
 
-5. At the `DISKPART` prompt, type `extend`. This extends the selected volume to fill the added space on the disk.
+5. In the `DISKPART` prompt, type `extend`. This extends the selected volume to fill the added space on the disk.
 
 # [Linux VM](#tab/tabid-b)
 
@@ -125,4 +129,4 @@ No further action is required.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

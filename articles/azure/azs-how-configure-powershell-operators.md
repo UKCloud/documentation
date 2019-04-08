@@ -1,5 +1,5 @@
 ---
-title: How to configure the Azure Stack operator's PowerShell environment for UKCloud | Based on Microsoft Docs
+title: How to configure the Azure Stack operator's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd
 description: Configure the Azure Stack operator's PowerShell environment
 services: azure-stack
 author: Chris Black
@@ -16,7 +16,7 @@ toc_mdlink: azs-how-configure-powershell-operators.md
 
 # How to configure the Azure Stack operator's PowerShell environment
 
-As an Azure Stack operator, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates,  etc. This topic is scoped to use with the operator environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:
+As an Azure Stack operator, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates, etc. This topic is scoped to use with the operator environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:
 
 ## Prerequisites
 
@@ -24,35 +24,36 @@ Prerequisites from a Windows-based external client.
 
 - PowerShell 5.1
 
-    > [!NOTE]
-    > To check your version, run `$PSVersionTable.PSVersion` and compare the "Major" version.
-    >
-    > For "legacy" Operating Systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
+  > [!NOTE]
+  > To check your version, run `$PSVersionTable.PSVersion` and compare the "Major" version.
+  >
+  > For "legacy" operating systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
 
 ### Install Azure Stack PowerShell
 
-  ```PowerShell
+  ```powershell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
-  # PowerShell commands for Azure Stack are installed through the PowerShell gallery. To register the PSGallery repository, open an elevated PowerShell session from the development kit
-  # or  from a Windows-based external client if you are connected through VPN and run the following command:
+  
+  # PowerShell commands for Azure Stack are installed through the PSGallery repository.
+  # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
   Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
-  # Uninstall existing versions of PowerShell
-  Get-Module -ListAvailable | Where-Object {$_.Name -like "Azure*" -or $_.Name -like "Azs*"} | Uninstall-Module -Force
-  # Install the AzureRM.Bootstrapper module. Select Yes when prompted to install NuGet
-  Install-Module -Name AzureRm.BootStrapper
+  
+  # Uninstall existing versions of Azure/Azure Stack PowerShell
+  Get-Module -Name Azs.*, Azure* -ListAvailable | Uninstall-Module -Force -Verbose
+  
   # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
-  Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
-  Install-Module -Name AzureStack -RequiredVersion 1.6.0
+  Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Verbose
+  Install-Module -Name AzureStack -RequiredVersion 1.7.1 -Verbose
   ```
 
 ## Configure the operator environment and sign in to Azure Stack
 
-UKCloud FRN00006 Region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the  $AzsUsername and  $AzsPassword values)
+UKCloud **frn00006** region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the `$AzsUsername` and `$AzsPassword` values)
 
 ### Azure Active Directory (AAD) based deployments
 
-  ```PowerShell
+  ```powershell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
 
@@ -60,14 +61,14 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
   Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://adminmanagement.frn00006.azure.ukcloud.com"
 
   # Sign in to your environment
-  Login-AzureRmAccount -EnvironmentName "AzureStackAdmin"
+  Connect-AzureRmAccount -EnvironmentName "AzureStackAdmin"
   ```
 
 ### Azure Active Directory (AAD) based deployments - Embedded Credentials
 
-  ```PowerShell
+  ```powershell
   # Set Execution Policy
-  Set-ExecutionPolicy RemoteSigned
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
   # Register an AzureRM environment that targets your Azure Stack instance
   Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://adminmanagement.frn00006.azure.ukcloud.com"
@@ -75,21 +76,21 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
   # Create your Credentials
   $AzsUsername =  "<username>@<myDirectoryTenantName>.onmicrosoft.com"
   $AzsPassword = '<your password>'
-    $AzsUserPassword = ConvertTo-SecureString "$AzsPassword" -AsPlainText -Force
-    $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
+  $AzsUserPassword = ConvertTo-SecureString -String $AzsPassword -AsPlainText -Force
+  $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
   # Sign in to your environment
-  Login-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackAdmin"
+  Connect-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackAdmin"
   ```
 
 ## Test the connectivity
 
 Now that we've got everything set-up, let's use PowerShell to list resources within Azure Stack. For example, you can list resource groups. Use the following command list all resource groups:
 
-```PowerShell
+```powershell
 Get-AzureRmResourceGroup -Location "frn00006"
 ```
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

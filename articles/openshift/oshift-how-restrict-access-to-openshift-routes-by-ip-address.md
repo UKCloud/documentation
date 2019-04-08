@@ -13,7 +13,7 @@ toc_fullpath: How To/restrict-access-to-openshift-routes-by-ip-address.md
 toc_mdlink: oshift-how-restrict-access-to-openshift-routes-by-ip-address.md
 ---
 
-# How to only allow trusted IP's to be able to access routes in Openshift
+# How to restrict access to OpenShift routes by IP address
 
 ## Overview
 
@@ -69,4 +69,4 @@ For further infomation, see the following: [Openshift Documentation](https://doc
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

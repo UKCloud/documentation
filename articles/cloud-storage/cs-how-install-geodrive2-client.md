@@ -125,7 +125,7 @@ The GeoDrive 2.0 Client offers a single caching option:
 
 ## Next steps
 
-This guide has shown you how to create a new Cloud Storage user. For more information about how to use the service, see the following articles:
+This guide has shown you how to install and configure the GeoDrive Client 2.0 for use with Cloud Storage. For more information about how to use the service, see the following articles:
 
 - [*Getting Started Guide for Cloud Storage*](cs-gs.md)
 

@@ -21,6 +21,11 @@ This Service Scope explains what is and isn't included in the scope of the UKClo
 
 Synchronous Protection is one of a variety of on‑platform protection options available from UKCloud. Use this service scope to understand what Synchronous Protection offers and whether it will meet your own recovery point objectives (RPO) and recovery time objectives (RTO).
 
+> [!NOTE]
+> Synchronous Protection is no longer available as a protection option for UKCloud for VMware. UKCloud offer two alternative data protection solutions: [Journaling Protection (Zerto)](vmw-sco-journaling-protection.md) and [Snapshot Protection](vmw-sco-snapshot-protection.md). Contact your Technical Account Manager (TAM) for more information.
+>
+> We will continue to provide support to customers who previously added Synchronous Protection to their environment, although we would encourage considering using Journaling Protection instead.
+
 ## About Synchronous Protection
 
 The UKCloud for VMware Synchronous Protection service option is designed to offer geographical protection of your live environments across both of our sites (Farnborough and Corsham; 60 miles apart). To achieve this, we utilise synchronous replication between sites to ensure that any changes made to your environment are committed to arrays in both sites before the write is confirmed as being complete to the VM OS.
@@ -205,8 +210,8 @@ If we accept your request, we'll schedule the work to start at the time you spec
 
 ## Failover testing charges
 
-We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the SFIA rate card) of £660 per day. Longer testing periods will need to be approved by UKCloud.
+We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the [SFIA rate card](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/832543392527475-sfia-rate-card-2019-01-18-1501.pdf) - level 3 Apply). Longer testing periods will need to be approved by UKCloud.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

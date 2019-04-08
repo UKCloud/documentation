@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to permit outbound access to internet hosts in deployments with government community network connectivity | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to permit outbound access to internet hosts in deployments with government community network connectivity | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.40.12.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-add-domains-proxy-whitelist.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-permit-outbound-access-to-internet-hosts-in-deployments-with-government-community-network-connectivity">How to permit outbound access to internet hosts in deployments with government community network connectivity</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This article outlines the necessary steps to whitelist domain names within the Squid proxy. Squid is an enabled service within v3.11 OpenShift clusters deployed with connectivity to government community networks (such as: HSCN, PSN, Janet). Whitelisted domains can be accessed on the internet via the proxy, enabling you to request external resources/data on nodes that previously only had connectivity to government community networks. Added domains should be scrutinised as the relevant authority of the community network may require you to submit documentation regarding these for you to receive accreditation.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>To complete the steps in this guide, you must have access to a cluster that is running OpenShift Container Platform v3.11 (or newer) with connectivity to a government community network. Squid proxy is not currently enabled within environments that do not have access to a government community network.</p>
+<p>You must also have access to either:</p>
+<ul>
+<li><p>the OpenShift Web console</p>
+</li>
+<li><p><code>oc</code>, the OpenShift command-line client (CLI). For more information, see OpenShift's <a href="https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html"><em>Get Started with the CLI</em></a></p>
+</li>
+</ul>
+<h2 id="destination-domain-whitelist">Destination domain whitelist</h2>
+<p>Squid proxy is installed as a service on the control plane load balancers. Within the Squid configuration, we have specified an ACL (Access Control List) as being a list of destination domains (present in a file on the file system), which we will refer to as the whitelist for the remainder of this article. Outbound traffic from the cluster's internal network will pass through the proxy with the destination domain being compared against the whitelist for each connection attempt; if the domain exists then outbound internet traffic is permitted, otherwise it is denied with a HTTP 403 error.</p>
+<p>By default, the following domains are added to the whitelist (and cannot be removed) to facilitate installation, testing and ongoing operation of the cluster:</p>
+<pre><code>registry.access.redhat.com
+registry.redhat.io
+&lt;UKCloud Object Storage Endpoint&gt;
+&lt;UKCloud SSO Endpoint&gt;
+</code></pre>
+<p>A scheduled job (which runs at 0 minutes past every hour) on the OpenShift cluster Bastion host reads a Config Map named <code>proxy-whitelist</code> within the <code>whitelist</code> project. If there are any modifications to this Config Map, the job overwrites the previous custom entries within the whitelist and triggers a reconfigure task on the Squid proxy to enable the updated domains to be accessed.</p>
+<h3 id="assigning-non-cluster-admin-users-rights-to-edit-the-whitelist">Assigning non cluster-admin users rights to edit the whitelist</h3>
+<p>By default, only users who have been assigned the cluster-admin role will be able to view/edit the <code>proxy-whitelist</code> ConfigMap object within the <code>whitelist</code> project. It is possible to grant non cluster-admin users rights to edit this object but this should be given careful consideration. The ability to access hosts on the internet, from nodes that previously only had access to government community networks, exposes the cluster to additional risk (should a domain be whitelisted that hosts malicious content for example). For this reason, only trusted users should be permitted to determine these domains to reduce the risk of a malicious domain being unwittingly added.</p>
+<p>To allow non cluster-admin users to edit this object, use the following Role Based Access Control (RBAC) commands:</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To add multiple users to these roles, separate each username within the <code>username</code> variable with a space.</p>
+</div>
+<pre><code class="lang-bash">export username=&lt;replace-with-username&gt;
+# Create roles
+oc create role view-project --verb=get,list,watch --resource=namespaces --verb get --resource=projects -n whitelist
+oc create role get-configmap --verb=get,list --resource=configmaps -n whitelist
+oc create role edit-proxy-whitelist --verb=patch,update --resource=configmaps --resource-name=proxy-whitelist -n whitelist
+# Bind roles to desired user
+oc policy add-role-to-user view-project $username -n whitelist --role-namespace='whitelist'
+oc policy add-role-to-user get-configmap $username -n whitelist --role-namespace='whitelist'
+oc policy add-role-to-user edit-proxy-whitelist $username -n whitelist --role-namespace='whitelist'
+</code></pre>
+<h3 id="modifying-the-whitelist">Modifying the whitelist</h3>
+<p>There are two tools you can use to modify the <code>proxy-whitelist</code> Config Map. As previously stated you will need to have the necessary rights to edit this object within the <code>whitelist</code> project.</p>
+<h4 id="web-console">Web console</h4>
+<ol>
+<li><p>To view the <code>proxy-whitelist</code> Config Map within the <code>whitelist</code> project, navigate to the following URL (ensuring you replace &lt;your-deployment-name&gt;):</p>
+<p><code>https://ocp.&lt;your-deployment-name&gt;.cna.ukcloud.com:8443/console/project/whitelist/browse/config-maps/proxy-whitelist</code></p>
+<p><img src="images/oshift-proxy-configmap.png" alt="whitelist ConfigMaps"></p>
+</li>
+</ol>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To whitelist all subdomains, precede the domain with a <code>.</code> for example <code>.domain.com</code></p>
+</div>
+<ol start="2">
+<li><p>Click <strong>Actions</strong> then <strong>Edit</strong> to modify the values within the <code>proxy-whitelist.txt</code> key. Each domain should be on its own line:</p>
+<p><img src="images/oshift-proxy-editproxywhitelist.png" alt="Edit proxy-whitelist"></p>
+</li>
+<li><p>Click <strong>Save</strong> when finished.</p>
+</li>
+</ol>
+<h4 id="oc-client">oc client</h4>
+<div class="NOTE">
+<h5>Note</h5>
+<p>To authenticate using the <code>oc</code> client you will need an API token. Retrieve this by logging in to the Web Console and clicking your name in the top right then choosing <strong>Copy Login Command</strong>. This can then be pasted from your buffer into a terminal where you have the <code>oc</code> client installed.</p>
+</div>
+<ol>
+<li><p>Change to the <code>whitelist</code> project:</p>
+<pre><code class="lang-bash">$ oc project whitelist
+</code></pre>
+</li>
+<li><p>Edit the <code>proxy-whitelist</code> Config Map:</p>
+<pre><code class="lang-bash">$ oc edit cm proxy-whitelist
+</code></pre>
+<p>This will display the object definition in yaml format in your default text editor:</p>
+<pre><code># Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+data:
+  proxy-whitelist.txt: &quot;&quot;
+kind: ConfigMap
+metadata:
+  creationTimestamp: 2019-01-18T01:18:44Z
+  name: proxy-whitelist
+  namespace: whitelist
+  resourceVersion: &quot;5385199&quot;
+  selfLink: /api/v1/namespaces/whitelist/configmaps/proxy-whitelist
+  uid: ff7df4a9-1abe-11e9-965a-fa163ecc60e0
+</code></pre>
+</li>
+<li><p>Within the object definition data attribute is the <code>proxy-whitelist.txt</code> key. By default this will be an empty single line string but you can modify this to be a multi-line string by changing <code>&quot;&quot;</code> to <code>|-</code> as below and indenting the domains you want to add with two spaces. For example:</p>
+<pre><code>proxy-whitelist.txt: |-
+  firstdomain.com
+  .seconddomain.com
+</code></pre>
+</li>
+<li><p>Save your changes to persist to the Config Map, otherwise cancel your edit to not make any changes.</p>
+</li>
+</ol>
+<h2 id="further-reading">Further reading</h2>
+<p><a href="https://wiki.squid-cache.org/SquidFaq/SquidAcl">https://wiki.squid-cache.org/SquidFaq/SquidAcl</a></p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

@@ -1,5 +1,5 @@
 ---
-title: How to configure the Azure Stack user's PowerShell environment for UKCloud | Based on Microsoft Docs
+title: How to configure the Azure Stack user's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd
 description: Configure the Azure Stack user's PowerShell environment
 services: azure-stack
 author: Chris Black
@@ -24,35 +24,36 @@ Prerequisites from a Windows-based external client.
 
 - PowerShell 5.1
 
-    > [!NOTE]
-    > To check your version, run `$PSVersionTable.PSVersion` and compare the "Major" version.
-    >
-    > For "legacy" Operating Systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
+  > [!NOTE]
+  > To check your version, run `$PSVersionTable.PSVersion` and compare the "Major" version.
+  >
+  > For "legacy" operating systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
 
 ### Install Azure Stack PowerShell
 
-  ```PowerShell
+  ```powershell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
-  # PowerShell commands for Azure Stack are installed through the PowerShell gallery. To register the PSGallery repository, open an elevated PowerShell session from the development kit 
-  # or  from a Windows-based external client if you are connected through VPN and run the following command:
+  
+  # PowerShell commands for Azure Stack are installed through the PSGallery repository.
+  # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
   Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
-  # Uninstall existing versions of PowerShell
-  Get-Module -ListAvailable | Where-Object {$_.Name -like "Azure*" -or $_.Name -like "Azs*"} | Uninstall-Module -Force
-  # Install the AzureRM.Bootstrapper module. Select Yes when prompted to install NuGet
-  Install-Module -Name AzureRm.BootStrapper
+  
+  # Uninstall existing versions of Azure/Azure Stack PowerShell
+  Get-Module -Name Azs.*, Azure* -ListAvailable | Uninstall-Module -Force -Verbose
+  
   # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
-  Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
-  Install-Module -Name AzureStack -RequiredVersion 1.6.0
+  Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Verbose
+  Install-Module -Name AzureStack -RequiredVersion 1.7.1 -Verbose
   ```
 
 ## Configure the user environment and sign in to Azure Stack
 
-UKCloud FRN00006 Region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the  $AzsUsername and  $AzsPassword values)
+UKCloud **frn00006** region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the `$AzsUsername` and `$AzsPassword` values)
 
 ### Azure Active Directory (AAD) based deployments
 
-  ```PowerShell
+  ```powershell
   # Set Execution Policy
   Set-ExecutionPolicy RemoteSigned
 
@@ -60,14 +61,14 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
   Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
   # Sign in to your environment
-  Login-AzureRmAccount -EnvironmentName "AzureStackUser"
+  Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
   ```
 
 ### Azure Active Directory (AAD) based deployments - Embedded Credentials
 
-  ```PowerShell
+  ```powershell
   # Set Execution Policy
-  Set-ExecutionPolicy RemoteSigned
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
   # Register an AzureRM environment that targets your Azure Stack instance
   Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
@@ -75,27 +76,27 @@ UKCloud FRN00006 Region is based on the Azure AD deployment type, run the follow
   # Create your Credentials
   $AzsUsername =  "<username>@<myDirectoryTenantName>.onmicrosoft.com"
   $AzsPassword = '<your password>'
-    $AzsUserPassword = ConvertTo-SecureString "$AzsPassword" -AsPlainText -Force
-    $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
+  $AzsUserPassword = ConvertTo-SecureString -String $AzsPassword -AsPlainText -Force
+  $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
   # Sign in to your environment
-  Login-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackUser"
+  Connect-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackUser"
   ```
 
 ## Test the connectivity
 
 Now that we've got everything set-up, let's use PowerShell to create resources within Azure Stack. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named "MyResourceGroup":
 
-```PowerShell
+```powershell
 New-AzureRmResourceGroup -Name "MyResourceGroup" -Location "frn00006"
 ```
 
 ## Next steps
 
-* [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
+- [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
 
-* [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
+- [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

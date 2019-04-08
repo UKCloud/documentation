@@ -16,6 +16,8 @@
     href: ptl-how-unlock-account.md
   - name: Use My Calls in the UKCloud Portal
     href: ptl-how-use-my-calls.md
+  - name: Use the My Calls Archive
+    href: ptl-how-use-my-calls-archive.md
   - name: Use the UKCloud Portal API
     href: ptl-how-use-api.md
   - name: View login information
@@ -27,7 +29,7 @@
   - name: Enable memorable word on account switch
     href: ptl-ref-memorable-word.md
   - name: Portal permissions
-    href: ptl-overview-permissions.md
+    href: ptl-ref-overview-permissions.md
   - name: Portal release notes
     href: ptl-ref-release-notes.md
   - name: Portal user access

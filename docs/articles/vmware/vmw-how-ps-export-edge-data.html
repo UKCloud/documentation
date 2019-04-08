@@ -8,7 +8,7 @@
     <title>How to export edge gateway configuration data using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to export edge gateway configuration data using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.9.0">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -95,7 +95,7 @@
 
 <h2 id="overview">Overview</h2>
 <p>If you want to export your edge gateway configuration data (firewall rules, NAT rules, load balancer virtual servers and DHCP pools), for example, for backup or disaster recovery purposes, you can use PowerShell.</p>
-<h2 id="exporting-vcns-edge-configuration-data">Exporting vCNS Edge configuration data</h2>
+<h2 id="exporting-edge-gateway-configuration-data">Exporting Edge Gateway configuration data</h2>
 <ol>
 <li><p>Install PowerCLI from VMware:</p>
 <p><a href="https://vmware.com/support/developer/PowerCLI">https://vmware.com/support/developer/PowerCLI</a></p>
@@ -103,7 +103,42 @@
 <li><p>Open your PowerCLI session and connect to vCloud.</p>
 <p>You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API.</p>
 </li>
-<li><p>Find your vCNS Edges by entering the following command:</p>
+<li><p>Copy the following function and paste it into your PowerCLI shell:</p>
+<pre><code>Function Get-EdgeConfig ($EdgeGateway)
+
+{
+
+    $Edgeview = $EdgeGateway | get-ciview
+
+    $webclient = New-Object system.net.webclient
+
+    $webclient.Headers.Add(&quot;x-vcloud-authorization&quot;,$EdgeView.Client.SessionKey)
+
+    $webclient.Headers.Add(&quot;accept&quot;,$EdgeView.Type + &quot;;version=5.5&quot;)
+
+    [xml]$EGWConfXML = $webclient.DownloadString($EdgeView.href)
+
+    $Holder = &quot;&quot; | Select Firewall,NAT,LoadBalancer,DHCP
+
+    $Holder.Firewall =
+    $EGWConfXML.EdgeGateway.Configuration.EdgegatewayServiceConfiguration.FirewallService.FirewallRule
+
+    $Holder.NAT =
+    $EGWConfXML.EdgeGateway.Configuration.EdgegatewayServiceConfiguration.NatService.NatRule
+
+    $Holder.LoadBalancer =
+    $EGWConfXML.EdgeGateway.Configuration.EdgegatewayServiceConfiguration.LoadBalancerService.VirtualServer
+
+    $Holder.DHCP =
+    $EGWConfXML.EdgeGateway.Configuration.EdgegatewayServiceConfiguration.GatewayDHCPService.Pool
+
+    Return $Holder
+
+}
+
+</code></pre>
+</li>
+<li><p>Find your Edge Gateways by entering the following command:</p>
 <pre><code> $Gateways = Search-Cloud -QueryType EdgeGateway
 </code></pre>
 </li>
@@ -126,44 +161,12 @@
 
  $Config.Nat | Export-csv -path c:\users\myaccount\desktop\natrules.csv -notypeinformation
 </code></pre>
-</li>
-<li><p>Copy the following function and paste it into your PowerCLI shell:</p>
-<pre><code>Function Get-EdgeConfig ($EdgeGateway)
-
-{
-
-    $Edgeview = $EdgeGateway | get-ciview
-
-    $webclient = New-Object system.net.webclient
-
-    $webclient.Headers.Add(&quot;x-vcloud-authorization&quot;,$EdgeView.Client.SessionKey)
-
-    $webclient.Headers.Add(&quot;accept&quot;,$EdgeView.Type + &quot;;version=5.1&quot;)
-
-    [xml]$EGWConfXML = $webclient.DownloadString($EdgeView.href)
-
-    $Holder = &quot;&quot; | Select Firewall,NAT,LoadBalancer,DHCP
-
-    $Holder.Firewall =
-    $EGWConfXML.EdgeGateway.Configuration.EdgegatewayServiceConfiguration.FirewallService.FirewallRule
-
-    $Holder.NAT =
-    $EGWConfXML.EdgeGateway.Configuration.EdgegatewayServiceConfiguration.NatService.NatRule
-
-    $Holder.LoadBalancer =
-    $EGWConfXML.EdgeGateway.Configuration.EdgegatewayServiceConfiguration.LoadBalancerService.VirtualServer
-
-    $Holder.DHCP =
-    $EGWConfXML.EdgeGateway.Configuration.EdgegatewayServiceConfiguration.GatewayDHCPService.Pool
-
-    Return $Holder
-
-}
+<pre><code>
 </code></pre>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">

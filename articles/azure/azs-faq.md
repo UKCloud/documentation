@@ -3,6 +3,7 @@ title: UKCloud for Microsoft Azure FAQs | UKCloud Ltd
 description: Frequently asked questions for UKCloud for Microsoft Azure
 services: azure-stack
 author: Matt Warner
+
 toc_rootlink: Users
 toc_sub1: FAQs
 toc_sub2:
@@ -55,7 +56,7 @@ Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic
 
 #### Network
 
-- Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure. This can be configured via the UI, API and other tooling. 
+- Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure. This can be configured via the UI, API and other tooling.
 
 - Load balancers (IPv4 only) - Deploy basic load balancers.
 
@@ -115,11 +116,11 @@ Storage is persistent unless it is virtual machine temporary storage.
 
 ### How do I access my UKCloud for Microsoft Azure solution?
 
-Access to the UKCloud for Microsoft Azure portal is available via the UKCloud Portal. You'll be provided with login details once your account is provisioned.
+Access to the UKCloud Azure Stack portal is available via the UKCloud Portal. You'll be provided with login details once your account is provisioned.
 
 ### Which ports need to be open to access my UKCloud for Microsoft Azure solution?
 
-The UKCloud for Microsoft Azure portal requires port 80 (HTTP) and port 443 (HTTPS) to be open.
+The UKCloud Azure Stack portal requires port 80 (HTTP) and port 443 (HTTPS) to be open.
 
 ### How do I access my solutions via government networks?
 
@@ -127,7 +128,7 @@ UKCloud for Microsoft Azure will be available on the internet, HSCN, Janet, RLI 
 
 ### What reports can I get about my UKCloud for Microsoft Azure solution?
 
-All reporting is via the UKCloud for Microsoft Azure management portal, which provides a variety of reports on the dashboard.
+All reporting is via the UKCloud Azure Stack portal, which provides a variety of reports on the dashboard.
 
 You can also interact with the API to pull data into your own reporting solutions.
 
@@ -138,7 +139,7 @@ Microsoft Azure solution.
 
 ### How do I manage my services?
 
-This service is designed to be managed using the UKCloud for Microsoft Azure portal. You can also manage it through a command line using the UKCloud for Microsoft Azure API.
+This service is designed to be managed using the UKCloud Azure Stack portal. You can also manage it through a command line using the UKCloud for Microsoft Azure API.
 
 ### What tools can I use to manage my service?
 
@@ -150,7 +151,7 @@ The current provisioning time for a new service is 4 hours from service request 
 
 ### How quickly can I scale my service up or down?
 
-You can scale your UKCloud for Microsoft Azure services either via the UKCloud for Microsoft Azure portal or using the Azure API. This will typically take a few minutes to action. However, if you are likely to increase your requirements significantly, you are advised to plan this with your allocated Technical Account Manager.
+You can scale your UKCloud for Microsoft Azure services either via the UKCloud Azure Stack portal or using the Azure API. This will typically take a few minutes to action. However, if you are likely to increase your requirements significantly, you are advised to plan this with your allocated Technical Account Manager.
 
 ## Support
 
@@ -198,15 +199,9 @@ For infrastructure solutions, you'll be billed by the smallest unit of time whic
 
 ### How can I pay for the services?
 
-UKCloud will issue invoices as follows:
+Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
 
-- At point of order for upfront fees and service options
-
-- Annually in advance for pre-payment fees
-
-- Monthly in arrears for monthly fees
-
-Payment can be made by direct bank transfer (BACS/CHAPS).
+If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
 
 ### Are there any termination fees?
 
@@ -234,4 +229,4 @@ For more information about this service, see our [*Protective Monitoring FAQs*](
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click Improve this Doc to suggest a change. If you have an idea for how we could improve any of our services, visit UKCloud Ideas. Alternatively, you can contact us at products@ukcloud.com.

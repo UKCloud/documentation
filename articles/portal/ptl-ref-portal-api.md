@@ -3635,18 +3635,18 @@ None
   Parameter name | Description | Type | Mandatory (Default)
   ---------------|-------------|------|--------------------
   date | The date for which you require the monthly report | String | Y
-  org-id | The ID of the compute service for which you want the billing report | String | Y
+  org_id | The ID of the compute service for which you want the billing report | String | Y
 
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H "Accept: application/json" -k https://portal.skyscapecloud.com/api/billing/cloud-storage-report?date=2018-01-01&org-id=xx-xx-xx-xxxxxxx
+curl -b /tmp/cookies.txt -X GET -H "Accept: application/json" -k https://portal.skyscapecloud.com/api/billing/cloud-storage-report?date=2018-01-01&org_id=xx-xx-xx-xxxxxxx
 ```
 
 #### Example request (Ruby)
 
 ```
-resp = conn.get("/api/billing/cloud-storage-report?date=#{date}&org-id=#{org-id}") { |req| req.headers['cookie'] = cookies }
+resp = conn.get("/api/billing/cloud-storage-report?date=#{date}&org_id=#{org-id}") { |req| req.headers['cookie'] = cookies }
 ```
 
 ### Response
@@ -3682,4 +3682,4 @@ If you want to discuss any aspect of the service or settings specific to your do
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

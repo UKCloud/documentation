@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to Create a key vault - PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to create a key vault using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to Create a key vault - PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.9.0">
+    <meta name="title" content="How to create a key vault using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -116,7 +116,7 @@
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Login
-Login-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Select Resource Group
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>"
@@ -128,7 +128,7 @@ New-AzureRmKeyVault -VaultName "<output form="vaultname" name="result" style="di
 <h2 id="storing-a-secret-in-the-vault">Storing a secret in the vault</h2>
 <p>From your PowerShell window:</p>
 <pre><code class="language-PowerShell"># Create a new secret
-$SecretValue = ConvertTo-SecureString '<output form="secretvalue" name="result" style="display: inline;">&lt;String&gt;</output>' -AsPlainText -Force
+$SecretValue = ConvertTo-SecureString -String '<output form="secretvalue" name="result" style="display: inline;">&lt;String&gt;</output>' -AsPlainText -Force
 
 # Store the secret in Azure Key Vault
 $Secret = Set-AzureKeyVaultSecret -VaultName "<output form="vaultname" name="result2" style="display: inline;">&lt;Vault Name&gt;</output>" -Name "<output form="secretname" name="result" style="display: inline;">&lt;Secret Name&gt;</output>" -SecretValue $SecretValue
@@ -140,7 +140,7 @@ $Secret.Id
 $Secret.SecretValue
 </code></pre>
 <p>The secret you created will be stored in your key vault.</p>
-<h2 id="extracting-a-secret-from-the-vault">Extracting a Secret from the vault</h2>
+<h2 id="extracting-a-secret-from-the-vault">Extracting a secret from the vault</h2>
 <p>From your PowerShell window:</p>
 <pre><code class="language-PowerShell"># Extract the secret key value and store it in a variable
 $ExtractedSecret = (Get-AzureKeyVaultSecret –VaultName "<output form="vaultname" name="result3" style="display: inline;">&lt;Vault Name&gt;</output>" -Name "<output form="secretname" name="result2" style="display: inline;">&lt;Secret Name&gt;</output>").SecretValueText
@@ -149,7 +149,7 @@ $ExtractedSecret = (Get-AzureKeyVaultSecret –VaultName "<output form="vaultnam
 $ExtractedSecret
 </code></pre>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">

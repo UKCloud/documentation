@@ -3,6 +3,7 @@ title: How to create a virtual machine using PowerShell | UKCloud Ltd
 description: Provides help for creating a virtual machine on UKCloud for Microsoft Azure using PowerShell
 services: azure-stack
 author: Bailey Lawson
+
 toc_rootlink: Users
 toc_sub1: How To
 toc_sub2: Create a Virtual Machine
@@ -17,7 +18,7 @@ toc_mdlink: azs-how-create-vm-ps.md
 
 ## Overview
 
-With UKCloud for Microsoft Azure, you can leverage the power of Microsoft Azure to create virtual machines (VMs) for your on-premises applications. 
+With UKCloud for Microsoft Azure, you can leverage the power of Microsoft Azure to create virtual machines (VMs) for your on-premises applications.
 As UKCloud for Microsoft Azure is built on UKCloud’s assured, UK-sovereign multi-cloud platform, those applications can work alongside other cloud platforms, such as Oracle,
 VMware and OpenStack, and benefit from native connectivity to non-cloud workloads in Crown Hosting and government community networks, including PSN, HSCN and RLI.
 Before creating the virtual machine, it is necessary to create storage and networking resources for the the VM to use.
@@ -45,19 +46,19 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 >
 > Subnet Address Range (CIDR Notation): <form oninput="result.value=subaddrrange.value" id="subaddrrange" style="display: inline;">
 > <input  type="text" id="subaddrrange" name="subaddrrange" style="display: inline;" placeholder="192.168.1.0/24"/></form>
-> 
+>
 > Virtual Network Name: <form oninput="result.value=vnetname.value" id="vnetname" style="display: inline;" >
 > <input  type="text" id="vnetname" name="vnetname" style="display: inline;" placeholder="myVNetwork"/></form>
-> 
+>
 > Virtual Network Address Range (CIDR Notation): <form oninput="result.value=vnetaddrrange.value" id="vnetaddrrange" style="display: inline;">
 > <input  type="text" id="vnetaddrrange" name="vnetaddrrange" style="display: inline;" placeholder="192.168.0.0/16"/></form>
-> 
+>
 > Public IP Name: <form oninput="result.value=publicipname.value" id="publicipname" style="display: inline;" >
 > <input  type="text" id="publicipname" name="publicipname" style="display: inline;" placeholder="myPublicIP"/></form>
-> 
+>
 > Network Security Group Name: <form oninput="result.value=nsgname.value" id="nsgname" style="display: inline;" >
 > <input  type="text" id="nsgname" name="nsgname" style="display: inline;" placeholder="myNSG"/></form>
-> 
+>
 > Network Interface Card Name: <form oninput="result.value=nicname.value" id="nicname" style="display: inline;" >
 > <input  type="text" id="nicname" name="nicname" style="display: inline;" placeholder="myNIC"/></form>
 >
@@ -66,10 +67,10 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 >
 > VM Password: <form oninput="result.value=vmpassword.value" id="vmpassword" style="display: inline;">
 > <input  type="text" id="vmpassword" name="vmpassword" style="display: inline;" placeholder="Password123!"/></form>
-> 
+>
 > VM Name: <form oninput="result.value=vmname.value;result2.value=vmname.value" id="vmname" style="display: inline;" >
 > <input  type="text" id="vmname" name="vmname" style="display: inline;" placeholder="myVM"/></form>
-> 
+>
 > VM Size [(More info)](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-vm-sizes): <form onchange="result.value=vmsize.value" id="vmsize" style="display: inline;" >
 > <select name="vmsize" id="vmsize" style="display: inline;">
 >   <optgroup label="Basic A">
@@ -169,10 +170,10 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 >   <option value="-Linux">Linux</option>
 >   <option value="-Windows">Windows</option>
 > </select></form>
-> 
+>
 > Computer Name: <form oninput="result.value=compname.value" id="compname" style="display: inline;" >
 > <input  type="text" id="compname" name="compname" style="display: inline;" placeholder="myComputer"/></form>
-> 
+>
 > VM Image: <form onchange="result.value=vmimage.value" id="vmimage" style="display: inline;" >
 > <select name="vmimage" id="vmimage" style="display: inline;">
 >   <option value="/CentOS/Skus/6.10">CentOS-based 6.10</option>
@@ -199,6 +200,7 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 >   <option value="/SQL2017-SLES12SP2/Skus/Standard">SQL Server 2017 Standard on SLES 12 SP2</option>
 >   <option value="/SQL2017-WS2016/Skus/Standard">SQL Server 2017 Standard on Windows Server 2016</option>
 >   <option value="/WindowsServer/Skus/2012-Datacenter">Windows Server 2012 Datacenter - Pay as you use</option>
+>   <option value="/WindowsServer/Skus/2012-R2-Datacenter">Windows Server 2012 R2 Datacenter - Pay as you use</option>
 >   <option value="/WindowsServer/Skus/2016-Datacenter">Windows Server 2016 Datacenter - Pay-as-you-use</option>
 >   <option value="/WindowsServer/Skus/2016-Datacenter-Server-Core">Windows Server 2016 Datacenter - Server Core - Pay as you use</option>
 >   <option value="/WindowsServer/Skus/2016-Datacenter-with-Containers">Windows Server 2016 Datacenter - with Containers - Pay as you use</option>
@@ -212,7 +214,7 @@ From your PowerShell window:
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Login
-Login-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Input Variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">myResourceGroup</output>"
@@ -278,16 +280,16 @@ $VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form=
 $Image = Get-AzureRmVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object {$_.Id -like $VMImage}
 
 # Set the VM Source Image
-$VirtualMachine =  Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version "latest"
+$VirtualMachine = Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version "latest"
 
-# Add Network Interface Card 
+# Add Network Interface Card
 $VirtualMachine = Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id -VM $VirtualMachine
 
 # Set the OS Disk properties
 $OSDiskName = "OsDisk"
 $OSDiskUri = "{0}vhds/{1}-{2}.vhd" -f $StorageAccount.PrimaryEndpoints.Blob.ToString(), $VMName.ToLower(), $OSDiskName
 
-# Applies the OS disk properties 
+# Applies the OS disk properties
 $VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -CreateOption FromImage
 
 # Create the virtual machine.
@@ -299,6 +301,6 @@ Write-Host "Virtual machine created successfully"
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
 
 <script>document.getElementById("RandNum").innerHTML = Math.round(Math.random()*100000000)</script>

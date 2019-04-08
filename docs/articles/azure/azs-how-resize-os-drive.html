@@ -8,7 +8,7 @@
     <title>How to resize an OS drive using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to resize an OS drive using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.9.0">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -102,6 +102,8 @@
 </div>
 <h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this guide you must have the appropriate permissions on the resource you are trying to access.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Ensure your PowerShell environment is setup as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
 <h2 id="resizing-an-os-drive">Resizing an OS drive</h2>
 <div class="IMPORTANT">
 <h5>Important</h5>
@@ -127,47 +129,47 @@
 <section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
 
 <p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
+<pre><code class="language-PowerShell"># Sign in to your Azure Stack environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
-Login-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Set your resource group name and VM name
+# Set your resource group and VM name
 $RGName = "<output form="ResourceGroup" name="result" style="display: inline;">myResourceGroup</output>"
 $VMName = "<output form="VMName" name="result" style="display: inline;">myVM</output>"
 
-# Obtain a reference to your VM
+# Obtain your VM object
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
 Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
-# Resize mananaged OS disk
+# Resize managed OS disk
 $Disk = Get-AzureRmDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.OsDisk.Name
 $Disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">1024</output>
 Update-AzureRmDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
 
-# Restart the VM
+# Start the VM
 Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
 </section>
 <section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 
 <p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Sign in to your Azure Active Directory account in resource management mode
+<pre><code class="language-PowerShell"># Sign in to your Azure Stack environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
-Login-AzureRmAccount -EnvironmentName "AzureStackUser"
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Set your resource group name and VM name
+# Set your resource group and VM name
 $RGName = "<output form="ResourceGroup" name="result2" style="display: inline;">myResourceGroup</output>"
 $VMName = "<output form="VMName" name="result2" style="display: inline;">myVM</output>"
 
-# Obtain a reference to your VM
+# Obtain your VM object
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
 Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
-# Resize unmananaged OS disk
+# Resize unmanaged OS disk
 $VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result2" style="display: inline;">1024</output>
 Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
 
@@ -194,11 +196,11 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 </li>
 <li><p>Open a command prompt and type <code>diskpart</code>.</p>
 </li>
-<li><p>At the <code>DISKPART</code> prompt, type <code>list volume</code>. Take note of the volume you want to extend.</p>
+<li><p>In the <code>DISKPART</code> prompt, type <code>list volume</code>. Take note of the volume you want to extend.</p>
 </li>
-<li><p>At the <code>DISKPART</code> prompt, type <code>select volume &lt;volumenumber&gt;</code>. This selects the volume that you want to extend into unpartitioned empty space on the same disk.</p>
+<li><p>In the <code>DISKPART</code> prompt, type <code>select volume &lt;volumenumber&gt;</code>. This selects the volume that you want to extend into unpartitioned empty space on the same disk.</p>
 </li>
-<li><p>At the <code>DISKPART</code> prompt, type <code>extend</code>. This extends the selected volume to fill the added space on the disk.</p>
+<li><p>In the <code>DISKPART</code> prompt, type <code>extend</code>. This extends the selected volume to fill the added space on the disk.</p>
 </li>
 </ol>
 </section>
@@ -208,7 +210,7 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 </section>
 </div>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">

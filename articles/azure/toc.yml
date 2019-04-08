@@ -12,8 +12,12 @@
     items:
     - name: Create a load balancer
       href: azs-how-create-load-balancer.md
+    - name: Create a Service Fabric cluster
+      href: azs-how-create-service-fabric-portal.md
     - name: Create a site-to-site connection
       href: azs-how-create-S2S-VPN.md
+    - name: Create an Azure Kubernetes Service cluster
+      href: azs-how-create-aks.md
     - name: Deploy an SQL template to Azure Stack - PowerShell
       href: azs-how-deploy-sql-template-powershell.md
     - name: Identify your Azure global administrators
@@ -21,11 +25,9 @@
     - name: Link Azure Storage Explorer to Azure Stack
       href: azs-how-link-storage-explorer.md
     - name: List VM extensions - PowerShell
-      href: azs-list-vm-extensions.md
+      href: azs-how-list-vm-extensions.md
     - name: 'Manage Azure user groups and permissions '
       href: azs-how-manage-azure-group.md
-    - name: Obtain Azure Stack Client ID - REST API
-      href: azs-how-to-obtain-clientid-via-api.md
     - name: Resize an OS drive
       href: azs-how-resize-os-drive.md
     - name: Retrieve your subscription quotas
@@ -48,6 +50,8 @@
       items:
       - name: Create a service principal name - CLI
         href: azs-how-create-spn-cli.md
+      - name: Create a service principal name - Portal
+        href: azs-how-create-spn-portal.md
       - name: Create a service principal name - PowerShell
         href: azs-how-create-spn-powershell.md
     - name: Create a Virtual Machine
@@ -55,7 +59,7 @@
       - name: Create a virtual machine - CLI
         href: azs-how-create-vm-cli.md
       - name: Create a virtual machine - Portal
-        href: azs-how-create-vm.md
+        href: azs-how-create-vm-portal.md
       - name: Create a virtual machine - PowerShell
         href: azs-how-create-vm-ps.md
       - name: Create a virtual machine - Terraform
@@ -68,11 +72,11 @@
       href: azs-ref-overview.md
   - name: Service Scope
     items:
-    - name: UKCloud for Microsoft Azure service scope
-      href: asz-sco.md
+    - name: UKCloud for Microsoft Azure Service Scope
+      href: azs-sco.md
   - name: Videos
     items:
-    - name: Microsoft Azure Stack portal overview
+    - name: UKCloud Azure Stack portal overview
       href: azs-vid-overview.md
 - name: Operators
   items:
@@ -80,7 +84,7 @@
     items:
     - name: Deploy and configure the Azure Stack Development Kit
       href: azs-how-deploy-asdk.md
-    - name: Perfom an Azure Stack update
+    - name: Perform an Azure Stack update
       href: azs-how-ps-update-azure-stack.md
     - name: Configure Environment
       items:

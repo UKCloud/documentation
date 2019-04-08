@@ -608,3 +608,10 @@ mark{
   background-color: #1b6e60;
   /* background-color: #6E527C; */
 }
+
+.output-code {
+  color: rgb(51, 51, 51);
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size: 13px;
+  padding: 0px;
+}

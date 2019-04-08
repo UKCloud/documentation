@@ -8,7 +8,7 @@
     <title>How to deploy an SQL template to Azure Stack using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to deploy an SQL template to Azure Stack using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.9.0">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,15 +96,15 @@
 <p>This document explains how to deploy SQL Always On Cluster using ARM Template to Azure Stack using PowerShell.</p>
 <p>It will guide you through the process of:</p>
 <ul>
-<li><p>obtaining ARM Template</p>
+<li><p>Obtaining an ARM Template</p>
 </li>
-<li><p>deploying <a href="https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master/sql-2016-ha">ARM Template for SQL Always On</a></p>
+<li><p>Deploying an <a href="https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master/sql-2016-ha">ARM Template for SQL Always On</a></p>
 </li>
 </ul>
 <h2 id="what-is-an-arm-template">What is an ARM Template?</h2>
 <p>You can use Azure Resource Manager templates to deploy and provision all the resources for your application in a single, coordinated operation. You can also redeploy templates to make changes to the resources in a resource group.
-These templates can be deployed with the Microsoft Azure Stack portal, PowerShell, Azure CLI, REST API and Visual Studio.
-The following quickstart templates are available on <a href="http://aka.ms/AzureStackGitHub">GitHub</a>.</p>
+These templates can be deployed via the Azure Stack portal, PowerShell, Azure CLI, REST API and Visual Studio.
+The following quick-start templates are available on <a href="https://aka.ms/AzureStackGitHub">GitHub</a>.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Prerequisites from a Windows-based external client are:</p>
 <ul>
@@ -135,8 +135,8 @@ The following quickstart templates are available on <a href="http://aka.ms/Azure
 <p>Change the RepoDirectory to the desired folder.</p>
 </div>
 <ul>
-<li><p>From an elevated (run as adminstrator) PowerShell prompt run:</p>
-<pre><code class="lang-PowerShell">cd c:\
+<li><p>From an elevated (run as administrator) PowerShell prompt run:</p>
+<pre><code class="lang-powershell">cd c:\
 mkdir RepoDirectory
 cd RepoDirectory
 git init
@@ -242,187 +242,187 @@ git checkout master
 </thead>
 <tbody>
 <tr>
-<td>adminPassword</td>
+<td>AdminPassword</td>
 <td>The password for the Administrator account of the new VMs and Domain</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>adminUsername</td>
+<td>AdminUsername</td>
 <td>The name of the Administrator of the new VMs and Domain</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>adPDCNICIPAddress</td>
+<td>AdPDCNICIPAddress</td>
 <td>The IP address of the new AD VM</td>
 <td></td>
 <td>10.0.0.4</td>
 </tr>
 <tr>
-<td>adVMSize</td>
+<td>AdVMSize</td>
 <td>The size of the AD VMs Created</td>
 <td>{Standard_A1, Standard_A2, Standard_A3}</td>
 <td>Standard_A2</td>
 </tr>
 <tr>
-<td>autoPatchingDay</td>
+<td>AutoPatchingDay</td>
 <td>The day of a week for auto patching</td>
 <td>{Never, Everyday, Sunday, Monday...}</td>
 <td>Never</td>
 </tr>
 <tr>
-<td>autoPatchingStartHour</td>
+<td>AutoPatchingStartHour</td>
 <td>The start hour of a day for auto patching</td>
 <td>{0, 1, 2, 3...}</td>
 <td>2</td>
 </tr>
 <tr>
-<td>deploymentPrefix</td>
+<td>DeploymentPrefix</td>
 <td>The DNS Prefix for the Public IP Address for the Always On Cluster</td>
 <td></td>
 <td>aodns</td>
 </tr>
 <tr>
-<td>dnsSuffix</td>
+<td>DnsSuffix</td>
 <td>The DNS Suffix for reverse lookup of public IPAddresses</td>
 <td></td>
 <td>azurestack.external</td>
 </tr>
 <tr>
-<td>domainName</td>
+<td>DomainName</td>
 <td>The FQDN of the AD Domain created</td>
 <td></td>
 <td>contoso.local</td>
 </tr>
 <tr>
-<td>platformFaultDomainCount</td>
+<td>PlatformFaultDomainCount</td>
 <td>Fault Domain Count Integer</td>
 <td></td>
 <td>1</td>
 </tr>
 <tr>
-<td>platformUpdateDomainCount</td>
+<td>PlatformUpdateDomainCount</td>
 <td>Update Domain Count Integer</td>
 <td></td>
 <td>1</td>
 </tr>
 <tr>
-<td>scriptsBaseUrl</td>
+<td>ScriptsBaseUrl</td>
 <td>DSC Scripts base url</td>
 <td></td>
-<td><a href="https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sq..">https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sq..</a>.</td>
+<td>https<!---->://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sq...</td>
 </tr>
 <tr>
-<td>sqlAOAGName</td>
+<td>SqlAOAGName</td>
 <td>The Sql AlwaysOn Group Name</td>
 <td></td>
 <td>alwayson-ag</td>
 </tr>
 <tr>
-<td>sqlAOListenerName</td>
+<td>SqlAOListenerName</td>
 <td>The Sql AG Listener Name</td>
 <td></td>
 <td>[tolower(concat('aon-listener-' , resourceGroup().name))]</td>
 </tr>
 <tr>
-<td>sqlAOListenerPort</td>
+<td>SqlAOListenerPort</td>
 <td>The Sql AG Listener port</td>
 <td></td>
 <td>1433</td>
 </tr>
 <tr>
-<td>sqlAuthPassword</td>
+<td>SqlAuthPassword</td>
 <td>The SQL Server Auth Account password</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>sqlAuthUserName</td>
+<td>SqlAuthUserName</td>
 <td>The SQL Server Auth Account name</td>
 <td></td>
 <td>sqlsa</td>
 </tr>
 <tr>
-<td>sqlServerServiceAccountPassword</td>
+<td>SqlServerServiceAccountPassword</td>
 <td>The SQL Server Service Account password</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>sqlServerServiceAccountUserName</td>
+<td>SqlServerServiceAccountUserName</td>
 <td>The SQL Server Service Account name</td>
 <td></td>
 <td>sqlservice</td>
 </tr>
 <tr>
-<td>sqlServerVersion</td>
+<td>SqlServerVersion</td>
 <td>The Sql Server Version</td>
 <td>{SQL2016SP1-WS2016-ENT, SQL2016SP1-WS2016-DEV, SQL2016SP1-WS2016-STD}</td>
 <td>SQL2016SP1-WS2016-ENT</td>
 </tr>
 <tr>
-<td>sqlStorageAccountName</td>
+<td>SqlStorageAccountName</td>
 <td>The name of Sql Server Storage Account</td>
 <td></td>
 <td>[tolower(concat(take(uniqueString(resourceGroup().id),8),'sql'))]</td>
 </tr>
 <tr>
-<td>sqlStorageAccountType</td>
+<td>SqlStorageAccountType</td>
 <td>The type of the Sql Server Storage Account created</td>
 <td>{Premium_LRS, Standard_LRS}</td>
 <td>Standard_LRS</td>
 </tr>
 <tr>
-<td>sqlSubnet</td>
+<td>SqlSubnet</td>
 <td>The address range of the SQL subnet created in the new VNET</td>
 <td></td>
 <td>10.0.1.0/26</td>
 </tr>
 <tr>
-<td>sqlVMSize</td>
+<td>SqlVMSize</td>
 <td>The size of the SQL VMs Created</td>
 <td>{Standard_A1, Standard_A2, Standard_A3}</td>
 <td>Standard_A3</td>
 </tr>
 <tr>
-<td>staticSubnet</td>
+<td>StaticSubnet</td>
 <td>The address range of the subnet static IPs are allocated from in the new VNET</td>
 <td></td>
 <td>10.0.0.0/24</td>
 </tr>
 <tr>
-<td>templatesBaseUrl</td>
+<td>TemplatesBaseUrl</td>
 <td>Linked Templates base url</td>
 <td></td>
-<td><a href="https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sq..">https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sq..</a>.</td>
+<td>https<!---->://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sq...</td>
 </tr>
 <tr>
-<td>virtualNetworkAddressRange</td>
+<td>VirtualNetworkAddressRange</td>
 <td>The address range of the new VNET in CIDR format</td>
 <td></td>
 <td>10.0.0.0/16</td>
 </tr>
 <tr>
-<td>virtualNetworkName</td>
+<td>VirtualNetworkName</td>
 <td>Name of virtual network to be created</td>
 <td></td>
 <td>autohav2VNET</td>
 </tr>
 <tr>
-<td>vmDiskSize</td>
+<td>VMDiskSize</td>
 <td>The size of the VMs data disk in GB.</td>
 <td>{128, 256, 512, 1000}</td>
 <td>128</td>
 </tr>
 <tr>
-<td>witnessVMSize</td>
+<td>WitnessVMSize</td>
 <td>The size of the Witness VM Created</td>
 <td>{Standard_A1, Standard_A2, Standard_A3}</td>
 <td>Standard_A1</td>
 </tr>
 <tr>
-<td>workloadType</td>
+<td>WorkloadType</td>
 <td>The Sql VM work load type: GENERAL - general work load</td>
 <td>GENERAL</td>
 <td>GENERAL</td>
@@ -434,19 +434,19 @@ git checkout master
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>Credential variables to change:</p>
-<p><code>$AppGUID, $AppPassword</code></p>
-<p><strong>Required Parameters</strong> for SQL template</p>
-<p><code>adminPassword, sqlServerServiceAccountPassword, sqlAuthPassword</code></p>
-<p>Additional Parameters that you <strong>should</strong> change</p>
-<p><code>$domainName, $adminUsername, $sqlServerServiceAccountUserName</code></p>
-<p><strong><code>dnsSuffix</code></strong> Should be changed to - &quot;azure.ukcloud.com&quot; otherwise the deployment will fail because it will default to &quot;azurestack.external&quot; and that cannot be resolved externally</p>
+<p><code>$AppGUID</code>, <code>$AppPassword</code></p>
+<p><strong>Required Variables</strong> for SQL template:</p>
+<p><code>$AdminPassword</code>, <code>$SqlServerServiceAccountPassword</code>, <code>$SqlAuthPassword</code></p>
+<p>Additional variables that you <strong>should</strong> change:</p>
+<p><code>$DomainName</code>, <code>$AdminUsername</code>, <code>$SqlServerServiceAccountUserName</code></p>
+<p><strong><code>$DnsSuffix</code></strong> should be changed to &quot;azure.ukcloud.com&quot; otherwise the deployment will fail because it will default to &quot;azurestack.external&quot; and that cannot be resolved externally.</p>
 <p>In the example below it has been already set accordingly.</p>
-<p>To change which SQL Server Version to deploy set <strong><code>$sqlServerVersion</code></strong> accordingly: <code>SQL2016SP1-WS2016-ENT</code>, <code>SQL2016SP1-WS2016-DEV</code>, <code>SQL2016SP1-WS2016-STD</code>
-Current default is set to STANDARD -&gt; <strong><code>SQL2016SP1-WS2016-STD</code></strong></p>
-<p><strong><code>platformFaultDomainCount</code></strong> and <strong><code>platformUpdateDomainCount</code></strong> - below we set them to 3 and 5 accordingly to spread the servers on different hosts.</p>
+<p>To change which SQL Server Version to deploy set <strong><code>$SqlServerVersion</code></strong> accordingly: <code>SQL2016SP1-WS2016-ENT</code>, <code>SQL2016SP1-WS2016-DEV</code>, <code>SQL2016SP1-WS2016-STD</code>.
+Current default is set to STANDARD -&gt; <strong><code>SQL2016SP1-WS2016-STD</code></strong>.</p>
+<p><strong><code>$PlatformFaultDomainCount</code></strong> and <strong><code>$PlatformUpdateDomainCount</code></strong> - are set to 3 and 5 respectively to spread the servers on different hosts.</p>
 <p>More information on Fault Domains and Update Domains can be found <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-key-features#availability-sets-in-azure-stack">here</a></p>
 </div>
-<pre><code class="lang-PowerShell"># Declare login variables
+<pre><code class="lang-powershell"># Declare login variables
 $AppGUID = &quot;&lt;GUID of your SPN Application&gt;&quot;
 $AppPassword = '&lt;your password&gt;'
 
@@ -455,27 +455,30 @@ $ArmEndpoint = &quot;https://management.frn00006.azure.ukcloud.com&quot;
 $AzureStackEnvironment = &quot;AzureStackUser&quot;
 
 # Declare Variables for the template
-$adminPassword = '&lt;your password&gt;'
-  $adminPasswordCred = ConvertTo-SecureString &quot;$adminPassword&quot; -AsPlainText -Force
-$sqlServerServiceAccountPassword = '&lt;your password&gt;'
-  $sqlServerServiceAccountPasswordCred = ConvertTo-SecureString &quot;$sqlServerServiceAccountPassword&quot; -AsPlainText -Force
-$sqlAuthPassword = '&lt;your password&gt;'
-  $sqlAuthPasswordCred = ConvertTo-SecureString &quot;$sqlAuthPassword&quot; -AsPlainText -Force
-$domainName = &quot;&lt;ActiveDirectoryDomainName&gt;&quot;
-$adminUsername = &quot;&lt;adminUsername&gt;&quot;
-$sqlServerServiceAccountUserName = &quot;&lt;serviceAccountUsername&gt;&quot;
+$AdminPassword = '&lt;your password&gt;'
+$AdminPasswordCred = ConvertTo-SecureString -String &quot;$AdminPassword&quot; -AsPlainText -Force
+
+$SqlServerServiceAccountPassword = '&lt;your password&gt;'
+$SqlServerServiceAccountPasswordCred = ConvertTo-SecureString -String &quot;$SqlServerServiceAccountPassword&quot; -AsPlainText -Force
+
+$SqlAuthPassword = '&lt;your password&gt;'
+$SqlAuthPasswordCred = ConvertTo-SecureString -String &quot;$SqlAuthPassword&quot; -AsPlainText -Force
+
+$DomainName = &quot;&lt;ActiveDirectoryDomainName&gt;&quot;
+$AdminUsername = &quot;&lt;AdminUsername&gt;&quot;
+$SqlServerServiceAccountUserName = &quot;&lt;ServiceAccountUsername&gt;&quot;
 
 $CustomTemplateJSON = &quot;&lt;directory&gt;\azuredeploy.json&quot;
 $CustomTemplateParamJSON = &quot;&lt;directory&gt;\azuredeploy.parameters.json&quot;
 
-$dnsSuffix = &quot;azure.ukcloud.com&quot;
+$DnsSuffix = &quot;azure.ukcloud.com&quot;
 $ResourceGroupName = &quot;SqlAlwaysOnRG01&quot;
 $RegionAzureStack = &quot;frn00006&quot;
 
-$sqlServerVersion  = &quot;SQL2016SP1-WS2016-STD&quot;
-$platformFaultDomainCount = 3
-$platformUpdateDomainCount = 5
-$ARMDeploymentName = &quot;SqlAlwaysOnDeployment&quot;
+$SqlServerVersion  = &quot;SQL2016SP1-WS2016-STD&quot;
+$PlatformFaultDomainCount = 3
+$PlatformUpdateDomainCount = 5
+$ArmDeploymentName = &quot;SqlAlwaysOnDeployment&quot;
 
 # Create Azure Stack Environment so that you can log in to it
 Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
@@ -483,54 +486,54 @@ Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 # Create your SPN  Credentials Login
 # Note: (Username is &quot;&lt;ApplicationId&gt;@&lt;AAD Domain&gt;&quot;)
 $AzsUsername = $AppGUID + &quot;@&quot; + $TenantDomain
-  $AzsUserPassword = ConvertTo-SecureString &quot;$AppPassword&quot; -AsPlainText -Force
-  $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
+$AzsUserPassword = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
+$AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
 # Log in to Azure Stack using SPN account
-Login-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $TenantDomain
+Connect-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $TenantDomain
 
 # Create New ResourceGroup if it does not exist
 try {
     $RG = Get-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -ErrorAction 'SilentlyContinue'
     if ( -not $RG) {
-      Write-Host(&quot;Didn't find Resource Group&quot;)
-      New-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -Verbose
-      return
-    } else {
-      return 'Exists'
+        Write-Host -InputObject &quot;Didn't find resource group&quot;
+        New-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -Verbose
     }
-  } catch {
-    Write-Host(&quot;Could not query Resource Group&quot;)
+    else {
+        Write-Output -InputObject &quot;Exists&quot;
+    }
+}
+catch {
+    Write-Host -InputObject &quot;Could not query resource group&quot;
     exit
-  }
+}
 
 # Test Deployment
-Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -domainName $domainName -adminUsername $adminUsername -sqlServerServiceAccountUserName $sqlServerServiceAccountUserName -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -Verbose
+Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -Verbose
 
 # Start Deployment
-New-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -domainName $domainName -adminUsername $adminUsername -sqlServerServiceAccountUserName $sqlServerServiceAccountUserName -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -Verbose
-
+New-AzureRmResourceGroupDeployment -Name $ArmDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -Verbose
 
 # Verify Deployment
-## Note: $ARMDeploymentName you can change to query each subdeployment in your GroupDeployment
+## Note: $ArmDeploymentName can be changed to query each deployment in your resource group
 Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName
 </code></pre>
 <div class="TIP">
 <h5>Tip</h5>
-<p>Every Parameter listed in <a href="#list-of-the-parameters-you-can-define">Parameter List</a> can be defined in the <strong><code>New-AzureRmResourceGroupDeployment</code></strong> by simply adding <em><code>-&lt;parametername&gt;</code></em></p>
+<p>Every parameter in the <a href="#list-of-the-parameters-you-can-define">parameter list</a> can be defined in the <strong><code>New-AzureRmResourceGroupDeployment</code></strong> by simply adding <em><code>-&lt;ParameterName&gt;</code></em></p>
 <p>For example:
-<code>-sqlVMSize &quot;Standard_A3&quot;</code></p>
+<code>-SqlVMSize &quot;Standard_A3&quot;</code></p>
 </div>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If Template fails validation and you need to see detailed error message you can do:</p>
-<pre><code class="lang-PowerShell">Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -sqlVMSize &quot;Standard_A4&quot;
+<p>If the template fails validation and you need to see detailed error message you can do:</p>
+<pre><code class="lang-powershell">Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -SqlVMSize &quot;Standard_A4&quot;
 
 Code    : MultipleErrorsOccurred
 Message : Multiple error occurred: BadRequest. Please see details.
 Details : {Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResourceManagerError}
 
-(Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON  -dnsSuffix $dnsSuffix -adminPassword $adminPasswordCred -sqlServerServiceAccountPassword $sqlServerServiceAccountPasswordCred -sqlAuthPassword $sqlAuthPasswordCred -sqlServerVersion $sqlServerVersion -platformFaultDomainCount $platformFaultDomainCount -platformUpdateDomainCount $platformUpdateDomainCount -sqlVMSize &quot;Standard_A4&quot;).Details
+(Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -SqlVMSize &quot;Standard_A4&quot;).Details
 
 Code    : InvalidTemplate
 Message : Deployment template validation failed: 'The provided value 'Standard_A4' for the template parameter 'sqlVMSize' at line '31' and column '23' is not valid. The parameter value is not part of the allowed value(s): &gt; 'Standard_A1,Standard_A2,Standard_A3'.'.
@@ -540,12 +543,12 @@ Details :
 <h2 id="known-issues">Known issues</h2>
 <ul>
 <li><p>Sometimes Domain Account does not get correctly created and you will get the following error:</p>
-<pre><code class="lang-PowerShell">&quot;statusMessage&quot;:
+<pre><code class="lang-powershell">&quot;statusMessage&quot;:
 &quot;{\&quot;status\&quot;:\&quot;Failed\&quot;,\&quot;error\&quot;:{\&quot;code\&quot;:\&quot;ResourceDeploymentFailure\&quot;,\&quot;message\&quot;:\&quot;The
 resource operation completed with terminal provisioning state 'Failed'.\&quot;,\&quot;details\&quot;:{\&quot;code\&quot;:\&quot;VMExtensionProvisioningError\&quot;,\&quot;message\&quot;:\&quot;VM
 has reported a failure when processing extension 'sqlAOPrepare'. Error
-message: DSC Configuration 'PrepareAlwaysOnSqlServer' completed with error(s). Following arethe first few: FindDomainForAccount: Call to DsGetDcNameWithAccountW failed with return value0x0000054B Could not find account SQL-AYQE0\\r\\n The PowerShell DSC resource '[xSqlServerConfigureSqlServerWithAlwaysOn' with SourceInfo'C:\\\\Packages\\\\Plugins\\\\Microsoft.Powershell.DSC\\\\2.76.00\\\\DSCWork\\\\PrepareAlwaysOnSqlServer.ps1.0\\\\PrepareAlwaysOnSqlServerps1::205::9::xSqlServer'
-threw one or more non-terminating errors while running the Set-TargetResource functionality.These errors are logged to the ETW channel called Microsoft-Windows-DSC/Operational. Refer tothis channel for more details.\&quot;}]}}&quot;
+message: DSC Configuration 'PrepareAlwaysOnSqlServer' completed with error(s). Following are the first few: FindDomainForAccount: Call to DsGetDcNameWithAccountW failed with return value0x0000054B Could not find account SQL-AYQE0\\r\\n The PowerShell DSC resource '[xSqlServerConfigureSqlServerWithAlwaysOn' with SourceInfo'C:\\\\Packages\\\\Plugins\\\\Microsoft.Powershell.DSC\\\\2.76.00\\\\DSCWork\\\\PrepareAlwaysOnSqlServer.ps1.0\\\\PrepareAlwaysOnSqlServerps1::205::9::xSqlServer'
+threw one or more non-terminating errors while running the Set-TargetResource functionality.These errors are logged to the ETW channel called Microsoft-Windows-DSC/Operational. Refer to this channel for more details.\&quot;}]}}&quot;
 </code></pre>
 <p>If that happens, you can just <strong>redeploy</strong> and it should be fine.</p>
 </li>
@@ -559,9 +562,9 @@ threw one or more non-terminating errors while running the Set-TargetResource fu
 </li>
 <li><p><a href="https://powershell.org/2017/10/10/using-azure-desired-state-configuration-part-iv/">DSC Configuration</a> and <a href="https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmdscextensionstatus?view=azurermps-6.5.0">cmdlets</a></p>
 <ul>
-<li><p>To view Status of the DSC deployment run:</p>
-<pre><code class="lang-PowerShell">Get-AzureRmVMDscExtension -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot;
-Get-AzureRmVMDscExtensionStatus -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot; | select -ExpandProperty DscConfigurationLog
+<li><p>To view the status of the DSC deployment run:</p>
+<pre><code class="lang-powershell">Get-AzureRmVMDscExtension -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot;
+Get-AzureRmVMDscExtensionStatus -ResourceGroupName &quot;&lt;ResourceGroupName&gt;&quot; -VMName &quot;&lt;VMName&gt;&quot; -Name &quot;&lt;ExtensionName&gt;&quot; | Select-Object -ExpandProperty DscConfigurationLog
 </code></pre>
 </li>
 </ul>
@@ -573,7 +576,7 @@ Get-AzureRmVMDscExtensionStatus -ResourceGroupName &quot;&lt;ResourceGroupName&g
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">

@@ -8,7 +8,7 @@
     <title>How to publish application routes to multiple networks | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to publish application routes to multiple networks | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.9.0">
+    <meta name="generator" content="docfx 2.40.12.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -170,7 +170,7 @@ sh-4.2$ cat /var/lib/haproxy/router/routes.json
 <p>So that shows the basic route is now published, which fulfils scenario 1 shown in the diagram above.</p>
 <h3 id="scenario-2---traffic-from-the-internet-and-a-community-network-to-application-2">Scenario 2 - Traffic from the internet and a community network to application-2</h3>
 <p>To make the route appear on the secondary router and achieve scenario 2, we need to label the route appropriately so that it's also exposed on the <code>router-secondary</code> pods. By default, we setup the secondary routers with a label based route selector of <code>&quot;router-secondary=true&quot;</code>.</p>
-<p>Here we see the route selector label setup on the secondary router. This indicates that this route will publish routes that are labelled with <code>&quot;router=secondary&quot;</code>:</p>
+<p>Here we see the route selector label setup on the secondary router. This indicates that this route will publish routes that are labelled with <code>&quot;router-secondary=true&quot;</code>:</p>
 <pre><code>$ oc describe dc router-secondary | grep ROUTE_LABELS
       ROUTE_LABELS:                router-secondary=true
 </code></pre>

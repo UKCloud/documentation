@@ -12,13 +12,27 @@
     href: oshift-how-build-app-private-repo.md
   - name: Create new users
     href: oshift-how-create-users.md
+  - name: Expose non-http services externally
+    href: oshift-how-expose-nonhttp-services.md
   - name: Monitor your OpenShift cluster
     href: oshift-how-monitor-cluster.md
   - name: Obtain usage metrics to use for OpenShift capacity management
     href: oshift-how-obtain-usage-metrics.md
+  - name: Permit outbound internet access in deployments with government community network connectivity
+    href: oshift-how-add-domains-proxy-whitelist.md
   - name: Publish application routes to multiple external networks
     href: oshift-how-publish-routes-on-multiple-networks.md
   - name: Restrict access to OpenShift routes by IP address
     href: oshift-how-restrict-access-to-openshift-routes-by-ip-address.md
+  - name: Use NetworkPolicy objects
+    href: oshift-how-use-netpol.md
   - name: Use the Hawkular Metrics API
     href: oshift-how-use-hawkular-metrics.md
+- name: Reference
+  items:
+  - name: Considerations when scaling an OpenShift cluster
+    href: oshift-ref-scaling.md
+  - name: Lifecycle and patch management
+    href: oshift-ref-lifecycle.md
+  - name: Making the most of your UKCloud for OpenShift trial
+    href: oshift-ref-trial.md
