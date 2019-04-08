@@ -33,23 +33,23 @@ You can view a pre-defined list of cluster roles and local roles [here](https://
 
  - Users with the cluster-admin default cluster role bound cluster-wide can perform any action on any resource.
 
- - Users with the admin default cluster role bound locally can manage roles and bindings in that project.
+ - Users with the admin default cluster role bound locally can manage roles and bindings within a project.
 
-It is good practice to follow the [Principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) with OpenShift access. For information about creating new OpenShift users, see [*How to create new UKCloud for OpenShift users in the UKCloud Portal*](oshift-how-create-users.md). This article also explains how to enable two-factor authentication (2FA) when logging in to OpenShift. Users are also encouraged to change their passwords regularly, which is possible to do from the UKCloud Portal.
+It is good practice to follow the [Principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) with OpenShift access. For information about creating new OpenShift users, see [*How to create new UKCloud for OpenShift users in the UKCloud Portal*](oshift-how-create-users.md). This article also explains how to enable two-factor authentication (2FA) when logging in to OpenShift. Users are also encouraged to change their passwords regularly, which is possible to do from the UKCloud Portal. You should ensure that OpenShift account credentials are not shared between multiple users. Instead, you should create individual user accounts for each user with the correct role binding. It is also the responsibility of each individual user to ensure the physical security of the terminal from which they access OpenShift.
 
-You should ensure that OpenShift account credentials are not shared between multiple users. Instead, you should create individual user accounts for each user with the correct role binding. It is also the responsibility of each individual user to ensure the physical security of the terminal from which they access OpenShift.
+Users should also apply Principle of least privilege to there containers work loads, this means to run your workloads as a user with just enough permissions to run the workload within your containers. Particularly avoiding running privileged containers if this can be avoided. If however a workload does require to be run privileged container than users need to ensure that they set the correct security context constraint to run that container. You can read more about setting the correct SCC [here](https://docs.openshift.com/container-platform/3.11/admin_guide/manage_scc.html). Containers that try to run as priviledged without the relevant SCC set will fail to run.
 
 ## Service accounts
 
 You should use service accounts for all API access, which should be accomplished by an automated process; never use a regular user's credentials. Usually a service account's username is the same as the project it is created for, followed by its name:
 
-```bash
+```
 system:serviceaccount:<project>:<name>. 
 ```
 
 For example:
 
-```bash
+```
 system:serviceaccount:continuous-integration:jenkins
 ```
 
@@ -57,39 +57,30 @@ You can read more about service accounts [here](https://docs.openshift.com/conta
 
 ## Creating and deploying vulnerable container images
 
-There have been many incidents in recent history whereby containers that contain severe vulnerabilities have been deployed into production clusters. To avoid this from happening, you should use base images from trusted sources, that is, from Red Hat's container registry. These containers are scanned for vulnerabilities on a daily basis and given a security rating based on known security risks at that moment in time. Docker Hub also provides some certified containers. Users can also choose to build their own base containers from scratch. However, containers built from scratch could still contain vulnerable packages. Therefore, it is good practice to set up an automated image scanning process, as part of your container building and deployment process, which can scan the built image and provide an image security rating. It is also possible to use image scanning tools to certify your own images before they are deployed so that only images with an acceptable security rating set by your OpenShift administrators are deployed.
+Just like traditional software packages, containers also run software, even if they are running that software within a self contained environment of a container. These containers can be built and run using vulnerable software packages/libraries. It is therefore considered good practice to do the following to ensure that you are not introducing vulnerable containers into your clusters.
 
-Some container image scanning tools include:
+ 1. Only use base images from trusted sources, i.e Red Hat's container registry. RedHats containers on RedHats container registry are scanned for vulnerabilities and given a security rating. Docker Hub also provides some certified containers which are built using best practices, tested and validated against the Docker Enterprise Edition platform and APIs, pass Dockers security requirements, and are collaboratively supported by Docker and the firms whos container it is. Users can also choose to build base containers from scratch using only the software packages they need for their workload. Although building containers from scratch and using just enough of the software packages you need to run for your workload does not garantee that your base image is going to be free of all possible vulnerabilities as it is possible that some of those software packages could contain vulnerabilities.
+
+ 2. Scan your containers with container scanning software as part of your build or deployment process. There are several tools available to scan containers. These tools give you a security rating on your final container once it's been created from a secure base container. There are a few such tools:- 
 
   -  OpenSCAP-docker
-
   -  Black Duck Hub
-
   -  JFrog Xray
-
   -  Twistlock
-
   -  Image-inspector
-
   -  Clair
-
-You should also apply the Principle of least privilege with containers too. If it can be avoided you should never run containers as the root user; instead always run as a user with just enough privileges to run the required container workload.
-
+ 
 ## Secrets
 
-Sensitive information, such as passwords, SSH keys, tokens and certificates, are examples of information that could be considered secret. Such secrets should never be stored in any place in readable format (for example, in source code, GitHub repositories, and so on). It is imperative that when secrets are required in OpenShift, they are set up as OpenShift Secrets. This allows the secrets to be encrypted within OpenShift and accessed only by the relevant containers when they are needed.
+Sensitive information, such as passwords, SSH keys, tokens and certificates, are examples of information that could be considered secret. As such secrets should never be stored in any place in plain text readable format (for example, in source code, GitHub repositories, and so on). It is imperative that when secrets are required in OpenShift, they are set up as OpenShift Secrets. This allows the secrets to be encrypted within OpenShift and accessed only by the relevant containers when they are needed. However there are limits to the current OpenShift secrets ability, these are; that the secrets are encoded in base64 encryption which can be easily decrypted and stored secrets can be accessible from any container on the same node. So users could use a popular solution like Hashicorps Vault software for secret storage. 
 
 ## Limiting resources
 
 You should always set up containers with resource limits. In the event of a denial of service attack, or even just a burst of very high load on a service, these resource limits will prevent pods from using all available resources in the node they are running on. You can read more about setting resource quotas and limits [here](https://docs.openshift.com/container-platform/3.11/dev_guide/compute_resources.html).
 
-## Privileged ports
-
-TCP/IP ports below port 1024 are considered to be privileged ports and you should not use them to front any service that is deployed into OpenShift.
-
 ## Route security
 
-Within OpenShift, you can expose your services using routes. Creating a route to a service enables your users to access the service through a URL on a browser. By default, the URLs that are created are exposed on HTTP port 80 without any SSL certificate. You can secure these routes with SSL encryption using one of three SSL termination methods:
+Within OpenShift, you can expose your services using routes. Creating a route to a service enables your users to access the service through a URL in a browser. If you do not specify any SSL certificates for your route than it would be exposed on HTTP port 80 without any SSL certificate. You can secure these routes with SSL encryption using one of three SSL termination methods:
 
  - Edge - SSL termination is done on the HAProxy router from which point onwards the traffic is un-encrypted
 
@@ -97,15 +88,18 @@ Within OpenShift, you can expose your services using routes. Creating a route to
 
  - Re-Encrypt - This process uses two certificates: the first certificate is held on the HAProxy router and the second in the pods. This secures traffic all the way down to the application.
 
-It is possible to further secure routes by applying IP whitelisting on routes. We have documented the process of IP whitelisting [here](oshift-how-restrict-access-to-openshift-routes-by-ip-address.md).
+# Security Groups
 
-UKCloud can whitelist individual IP addresses or entire subnets to access the OpenShift console and metrics page. It is also possible to do the same for the services that you create and deploy in OpenShift, even if those services are exposed to various Government Community Networks with the use of security groups. These restrictions can be applied at the time the cluster is deployed or can be done later via a Service Request to the UKCloud OpenShift team.
+UKCloud can secure routes with the use of Security Groups applied by the UKCloud OpenShift team, these security groups can be applied at the time of cluster deployment or later via a Service Request to the UKCloud OpenShift Support team. These security groups can also be used to secure routes which are exposed to various Government Community Networks. When services are protected by security groups the traffic is dropped before it reaches OpenShift.
 
-## Software-defined networking (SDN)
+# White Listing
 
-OpenShift uses a software-defined networking (SDN) approach to provide cluster-wide networking that enables communication between pods across the OpenShift cluster. This Container Networking Interface (CNI) runs in the OpenShift SDN project and creates an overlay network using the Open vSwitch (OVS) networking plugin.
+You can secure your routes by applying white lists by IP address. The advantage of doing this is that users can do this themselves, however this does allow traffic to reach the OpenShift route before it is either allowed through or dropped based on the white listing users may have applied. We have documented the process of IP whitelisting [here](oshift-how-restrict-access-to-openshift-routes-by-ip-address.md). 
 
-However, from February 2019, UKCloud will be deploying OpenShift clusters with the ovs-networkpolicy plugin. This plugin allows project administrators to configure their own isolation policies using [NetworkPolicy objects](https://docs.openshift.com/container-platform/3.11/admin_guide/managing_networking.html#admin-guide-networking-networkpolicy). You can find an article regarding NetworkPolicy [here](oshift-netpol.md).
+
+## Network Isolation
+
+OpenShift uses a software-defined networking (SDN) approach to provide cluster-wide networking that enables communication between pods across the OpenShift cluster. This Container Networking Interface (CNI) runs in the OpenShift SDN project and creates an overlay network using the Open vSwitch (OVS) SDN plugin. OVS has 3 different plugins based on the type of pod network cluster admins would like to create. Previoudly UKCloud were using the ovs-multitenant SDN plugin, as of February 2019 and OpenShift 3.11 UKCloud have been deploying OpenShift clusters using the ovs-network-policy SDN plugin. This plugin allows project administrators to configure their own network isolation policies using [NetworkPolicy objects](https://docs.openshift.com/container-platform/3.11/admin_guide/managing_networking.html#admin-guide-networking-networkpolicy). UKCloud have documented the process of using Network Policy based isolation [here](oshift-how-use-netpol.md).
 
 
 ## Feedback
