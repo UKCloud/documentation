@@ -3,6 +3,8 @@ title: How to export edge gateway configuration data using PowerShell | UKCloud 
 description: This article describes how to use PowerCLI to extract Edge Gateway configuration data
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

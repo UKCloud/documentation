@@ -3,6 +3,8 @@ title: How to add and remove users in Secure Remote Access | UKCloud Ltd
 description: Describes how you can request users to be added or removed from the UKCloud Secure Remote Access (SRA) service
 services: sra
 author: Sue Highmoor
+reviewer:
+lastreviewed: 12/10/2018 17:42:06
 
 toc_rootlink: How To
 toc_sub1:

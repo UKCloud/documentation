@@ -3,6 +3,8 @@ title: How to securely manage permissions for a specific vApp | UKCloud Ltd
 description: Shows how to extend permissions to users for a specific vApp, ensuring that those users cannot also access other vApps or settings within vCloud Director
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

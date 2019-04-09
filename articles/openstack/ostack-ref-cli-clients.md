@@ -3,6 +3,8 @@ title: Command-line clients for UKCloud for OpenStack | UKCloud Ltd
 description: Collects the help content from the OpenStack command-line clients, for reference
 services: openstack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/08/2018 14:45:48
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:

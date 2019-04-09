@@ -3,6 +3,8 @@ title: Cloning vApps using PowerCLI | UKCloud Ltd
 description: Provides customers with a scripted facility to clone an existing vApp.
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

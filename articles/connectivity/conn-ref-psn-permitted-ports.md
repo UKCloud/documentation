@@ -3,6 +3,8 @@ title: PSN Assured - permitted standard ports | UKCloud Ltd
 description: Outline of the whitelist of standard PSN Assured ports on the UKCloud managed perimeter firewalls
 services: connectivity
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 18:37:23
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

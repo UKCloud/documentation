@@ -3,6 +3,8 @@ title: Application-tuned DDoS protection FAQs | UKCloud Ltd
 description: Frequently asked questions for Application-tuned DDoS protection
 services: connectivity
 author: Matt Warner
+reviewer:
+lastreviewed: 20/07/2018 18:37:23
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:

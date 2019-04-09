@@ -3,6 +3,8 @@ title: Portal user access | UKCloud Ltd
 description: Guidance on UKCloud's Portal user access processes and procedures
 services: portal
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 12:12:33
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

@@ -3,6 +3,8 @@ title: How to locate your virtual data centre on the UKCloud platform | UKCloud 
 description: Describes how to use the vCloud Director UI or API to find out where your VDC is located within the UKCloud platform
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

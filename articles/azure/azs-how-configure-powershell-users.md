@@ -3,6 +3,8 @@ title: How to configure the Azure Stack user's PowerShell environment | Based on
 description: Configure the Azure Stack user's PowerShell environment
 services: azure-stack
 author: Chris Black
+reviewer:
+lastreviewed: 10/07/2018 12:39:32
 
 toc_rootlink: Users
 toc_sub1: How To

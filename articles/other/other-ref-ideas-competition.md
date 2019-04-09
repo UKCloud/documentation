@@ -3,6 +3,8 @@ title: UKCloud Ideas competition terms and conditions | UKCloud Ltd
 description: Full terms and conditions for the UKCloud Ideas competition running from September 27 2018 to October 30 2018
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 27/09/2018 13:12:21
 
 toc_rootlink: Reference
 toc_sub1: 

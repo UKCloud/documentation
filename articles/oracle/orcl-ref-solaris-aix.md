@@ -3,6 +3,8 @@ title: Compatibility with Solaris and AIX | UKCloud Ltd
 description: Provides advice on how to migrate your applications to UKCloud for Oracle Software depending on the Oracle platform you're using
 services: oracle
 author: Sue Highmoor
+reviewer:
+lastreviewed: 12/10/2018 17:42:06
 
 toc_rootlink: Reference
 toc_sub1: 

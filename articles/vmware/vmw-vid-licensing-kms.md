@@ -3,6 +3,8 @@ title: Licensing Windows VMs using the UKCloud Key Management Server video | UKC
 description: Provides a quick video guide for how to activate your Windows licence on VMware using the UKCloud Key Management System (KMS)
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 31/12/2018 14:06:55
 
 toc_rootlink: Videos
 toc_sub1: 

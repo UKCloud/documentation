@@ -3,6 +3,8 @@ title: How to enable memorable word on account switch | UKCloud Ltd
 description: Describes how to enable and disable the second level of authentication through a memorable word when switching accounts
 services: portal
 author: Sue Highmoor
+reviewer:
+lastreviewed: 12/10/2018 17:42:06
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

@@ -3,6 +3,8 @@ title: How to create a DHCP pool | UKCloud Ltd
 description: Shows how to configure DHCP for regular edges and advanced gateways within vCloud Director
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 
 toc_rootlink: How To
 toc_sub1:

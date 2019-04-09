@@ -3,6 +3,8 @@ title: UKCloud FAQs | UKCloud Ltd
 description: List of FAQs on UKCloud services, technology, connections and processes
 services: Other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 30/07/2018 11:15:54
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:

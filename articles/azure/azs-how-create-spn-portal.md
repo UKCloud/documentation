@@ -3,6 +3,8 @@ title: How to create a service principal name for Azure Stack using the Azure po
 description: Learn how to create a service principal name (SPN) to manage your Azure Stack resources using the Azure portal
 services: azure-stack
 author: Bailey Lawson
+reviewer:
+lastreviewed: 07/03/2019 14:32:37
 
 toc_rootlink: Users
 toc_sub1: How To

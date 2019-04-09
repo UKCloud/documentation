@@ -3,6 +3,8 @@ title: UKCloud for Microsoft Azure FAQs | UKCloud Ltd
 description: Frequently asked questions for UKCloud for Microsoft Azure
 services: azure-stack
 author: Matt Warner
+reviewer:
+lastreviewed: 12/07/2018 11:06:15
 
 toc_rootlink: Users
 toc_sub1: FAQs

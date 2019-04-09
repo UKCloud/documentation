@@ -3,6 +3,8 @@ title: How to create an Azure Kubernetes Service cluster using the UKCloud Azure
 description: Create an Azure Kubernetes Service cluster using Azure Stack
 services: azure-stack
 author: Bailey Lawson
+reviewer:
+lastreviewed: 20/02/2019 11:42:20
 
 toc_rootlink: Users
 toc_sub1: How To

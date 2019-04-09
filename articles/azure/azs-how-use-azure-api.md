@@ -3,6 +3,8 @@ title: How to use the Azure Stack API | UKCloud Ltd
 description: Describes how to use the Azure Stack API with UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 16/07/2018 11:43:35
 
 toc_rootlink: Users
 toc_sub1: How To

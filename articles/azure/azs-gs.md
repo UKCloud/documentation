@@ -3,6 +3,8 @@ title: Getting Started Guide for UKCloud for Microsoft Azure | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 25/05/2018 13:48:45
 
 toc_rootlink: Users
 toc_sub1: Getting Started

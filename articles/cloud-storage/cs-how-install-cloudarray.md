@@ -3,6 +3,8 @@ title: How to install CloudArray | UKCloud Ltd
 description: Installation guide for CloudArray
 services: cloud-storage
 author: Dan Baker
+reviewer:
+lastreviewed: 16/10/2018 11:28:15
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

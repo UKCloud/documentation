@@ -3,6 +3,8 @@ title: Enterprise & Private Sector FAQs | UKCloud Ltd
 description: Frequently asked questions for Enterprise & Private Sector
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/12/2018 10:53:34
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:

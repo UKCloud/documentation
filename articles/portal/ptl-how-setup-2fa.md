@@ -3,6 +3,8 @@ title: How to set up two-factor authentication in the UKCloud Portal | UKCloud L
 description: Describes how to enable two-factor authentication (2FA) for a UKCloud Portal account and how to set up 2FA for a user account
 services: portal
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/10/2018 07:26:13
 
 toc_rootlink: How To
 toc_sub1: 

@@ -3,6 +3,8 @@ title: Internet access to the Elevated OFFICIAL security domain | UKCloud Ltd
 description: Provides information about the process for providing internet access to the UKCloud Elevated OFFICIAL security domain
 services: connectivity
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 18:37:23
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

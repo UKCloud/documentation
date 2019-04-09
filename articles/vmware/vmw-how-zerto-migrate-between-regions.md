@@ -3,6 +3,8 @@ title: How to migrate your workloads between UKCloud regions | UKCloud Ltd
 description: This article describes how to migrate your existing workloads from one region in our cloud platform to another
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

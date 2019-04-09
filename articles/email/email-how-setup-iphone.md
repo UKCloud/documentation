@@ -3,6 +3,8 @@ title: How to set up Email and Collaboration on an iPhone or iPad | UKCloud Ltd
 description: Provides information on how to set up the UKCloud Email and Collaboration service on an iPhone or iPad
 services: email
 author: Sue Highmoor
+reviewer:
+lastreviewed: 24/07/2018 13:50:39
 
 toc_rootlink: How To
 toc_sub1:

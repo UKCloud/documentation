@@ -3,6 +3,8 @@ title: How to use NetworkPolicy objects to connect services between projects | U
 description: Shows how to create a basic NetworkPolicy object to connect services in two projects
 services: openshift
 author: Kieran O'Neill
+reviewer:
+lastreviewed: 02/04/2019 13:29:38
 
 toc_rootlink: How To
 toc_sub1: 

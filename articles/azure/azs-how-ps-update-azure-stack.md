@@ -3,6 +3,8 @@ title: How to perform an Azure Stack Update | UKCloud Ltd
 description: Azure Stack update procedure guide for support
 services: azure-stack
 author: Chris Black
+reviewer:
+lastreviewed: 25/05/2018 16:34:15
 
 toc_rootlink: Operators
 toc_sub1: How To

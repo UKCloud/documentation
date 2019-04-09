@@ -3,6 +3,8 @@ title: UKCloud response to Spectre and Meltdown | UKCloud Ltd
 description: Explains the implications of Spectre and Meltdown for the UKCloud platform
 services: x-platform
 author: Sue Highmoor
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
