@@ -1,5 +1,5 @@
 ---
-title: How to create a scale set using UKCloud Azure Stack portal | UKCloud Ltd
+title: How to create a scale set using the UKCloud Azure Stack portal | UKCloud Ltd
 description: Provides help for creating a scale set on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel
@@ -14,7 +14,7 @@ toc_fullpath: Users/How To/azs-how-create-scale-set.md
 toc_mdlink: azs-how-create-scale-set.md
 ---
 
-# How to create a scale set using UKCloud Azure Stack portal
+# How to create a scale set using the UKCloud Azure Stack portal
 
 ## Overview
 
@@ -81,7 +81,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![BASICS page](images/azs-browser-create-scale-set.png)
 
-6. When you're done, click Create.
+6. When you're done, click **Create**.
 
 7. You can monitor the progress of your scale set's deployment by clicking the **Notifications** icon.
 
