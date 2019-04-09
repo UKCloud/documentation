@@ -50,7 +50,9 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Add data disk button](images/azs-browser-button-add-disk.png)
 
-# [If you're adding a pre-existing disk:](#tab/tabid-a)
+# [Pre-existing disk:](#tab/tabid-a)
+
+If you're adding a pre-existing disk:
 
 1. Enter the LUN (logical unit number).
 
@@ -76,13 +78,15 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![VM Data disks](images/azs-browser-disks.png)
 
-# [If you're adding a new disk:](#tab/tabid-b)
+# [New disk:](#tab/tabid-b)
+
+If you're adding a new disk:
 
 1. Enter the LUN (logical unit number).
 
     ![LUN input](images/azs-browser-input-disk-lun.png)
 
-2. In the *name* field select **Create disk** and enter the following information:
+2. In the **Name** field select **Create disk** and enter the following information:
 
     - **Name** - The name of the disk.
 
@@ -99,7 +103,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - **Size** - The size of the disk in GB.
 
-    ![!!!](images/azs-browser-add-vm-disk.png)
+    ![Create managed disk](images/azs-browser-add-vm-disk.png)
 
 3. You can monitor the progress of your deployment by clicking the **Notifications** icon.
 
