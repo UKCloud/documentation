@@ -103,7 +103,7 @@ For Windows to be aware of Python you need to declare its path as follows:
 
 ### Install the OpenStack Command Line client
 
-1. Install pip with the following command:
+1. Install the OpenStack client with the following command:
 
         pip install python-openstackclient
 
@@ -123,7 +123,7 @@ After successful installation, you'll have to download the OpenStack RC file for
 
     ![Download OpenStack RC File button in Horizon dashboard](images/ostack-horizon-download-rc-file.png)
 
-5. Download the [Source-OpenRC.ps1](https://raw.githubusercontent.com/naturalis/powershell/master/Source-OpenRC.ps1) PowerShell script and save it locally.
+5. Download the [Source-OpenRC.ps1](https://raw.githubusercontent.com/UKCloud/PS-OpenRC/master/Source-OpenRC.ps1) PowerShell script and save it locally.
 
 6. As the downloaded PowerShell script is unsigned, you'll need to unblock it by right-clicking the file, selecting **Properties**, then clicking the **Unblock** button and clicking **OK**.
 
@@ -143,14 +143,14 @@ After successful installation, you'll have to download the OpenStack RC file for
 ### Test your configuration
 
 Now you've installed and configured the everything, you can start using the command line tools.
+> [!NOTE]
+> You'll need to run the PowerShell script defined above, and provide your OpenStack project credentials every time you relaunch PowerShell.
 
-1. Start Windows PowerShell.
+1. Test if everything is working with a simple list command:
 
-2. Test if everything is working with a simple list command:
+        openstack server list
 
-        nova list
-
-3. If you've started with an empty project, you'll get output similar to the following:
+2. If you've started with an empty project, you'll get output similar to the following:
 
     ```
     +----+------+--------+------------+-------------+----------+
@@ -158,9 +158,11 @@ Now you've installed and configured the everything, you can start using the comm
     +----+------+--------+------------+-------------+----------+
     +----+------+--------+------------+-------------+----------+
     ```
-
     > [!NOTE]
-    > You'll need to run the PowerShell script defined above, and provide your OpenStack project credentials every time you relaunch PowerShell.
+    > If you enter your password incorrectly, you will see a message similar to:
+    > `The request you have made requires authentication. (HTTP 401) (Request-ID: req-..)`
+    
+  
 
 ## Upgrading clients
 
