@@ -3,6 +3,8 @@ title: How to resize virtual machine disks using the UKCloud Azure Stack portal 
 description: Provides help for resizing virtual machine disks using the portal on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel
+reviewer:
+lastreviewed: 05/04/2019 11:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
