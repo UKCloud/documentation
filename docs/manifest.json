@@ -5819,7 +5819,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-use-cli.html",
-          "hash": "fXl152T8d9ssuE9GMRnrpQ=="
+          "hash": "Ghzar2l+kMEvGxHevCWQ6A=="
         }
       },
       "is_incremental": false,
@@ -5868,6 +5868,18 @@
         ".html": {
           "relative_path": "articles/openstack/ostack-ref-dashboard.html",
           "hash": "ZNt9WyPkzsCwRYw+FH0Y3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-ref-live-migration.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-ref-live-migration.html",
+          "hash": "JW4JtOKEDMXt0QFeOJSoow=="
         }
       },
       "is_incremental": false,
@@ -5927,7 +5939,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "+OUamOMKHuhmDY94Cfzy7A=="
+          "hash": "LFZASuXvroiGKESzEVoFwA=="
         }
       },
       "is_incremental": false,
@@ -7243,7 +7255,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-offboarding.html",
-          "hash": "v/DwFP10H/YSPu/NHW1O2g=="
+          "hash": "g+z8FmmQut6e+R2aGlddeg=="
         }
       },
       "is_incremental": false,
@@ -15406,7 +15418,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 337,
+          "total_file_count": 338,
           "skipped_file_count": 0
         }
       }

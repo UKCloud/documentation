@@ -44,6 +44,8 @@
     href: ostack-ref-ukcloud-outperforms.md
   - name: Introduction to the OpenStack dashboard
     href: ostack-ref-dashboard.md
+  - name: Live migrations
+    href: ostack-ref-live-migration.md
   - name: OpenStack public image versioning
     href: ostack-ref-public-image-versioning.md
 - name: Service Scope

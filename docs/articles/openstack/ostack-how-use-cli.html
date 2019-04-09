@@ -174,7 +174,7 @@
 </ol>
 <h3 id="install-the-openstack-command-line-client">Install the OpenStack Command Line client</h3>
 <ol>
-<li><p>Install pip with the following command:</p>
+<li><p>Install the OpenStack client with the following command:</p>
 <pre><code> pip install python-openstackclient
 </code></pre>
 </li>
@@ -193,7 +193,7 @@
 <li><p>Click <strong>Download OpenStack RC File</strong> and save the file in a convenient place.</p>
 <p><img src="images/ostack-horizon-download-rc-file.png" alt="Download OpenStack RC File button in Horizon dashboard"></p>
 </li>
-<li><p>Download the <a href="https://raw.githubusercontent.com/naturalis/powershell/master/Source-OpenRC.ps1">Source-OpenRC.ps1</a> PowerShell script and save it locally.</p>
+<li><p>Download the <a href="https://raw.githubusercontent.com/UKCloud/PS-OpenRC/master/Source-OpenRC.ps1">Source-OpenRC.ps1</a> PowerShell script and save it locally.</p>
 </li>
 <li><p>As the downloaded PowerShell script is unsigned, you'll need to unblock it by right-clicking the file, selecting <strong>Properties</strong>, then clicking the <strong>Unblock</strong> button and clicking <strong>OK</strong>.</p>
 <p><img src="images/ostack-ps-openrc-unblock.png" alt="Unblock button for OpenRC PowerShell script"></p>
@@ -213,11 +213,13 @@
 </ol>
 <h3 id="test-your-configuration">Test your configuration</h3>
 <p>Now you've installed and configured the everything, you can start using the command line tools.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You'll need to run the PowerShell script defined above, and provide your OpenStack project credentials every time you relaunch PowerShell.</p>
+</div>
 <ol>
-<li><p>Start Windows PowerShell.</p>
-</li>
 <li><p>Test if everything is working with a simple list command:</p>
-<pre><code> nova list
+<pre><code> openstack server list
 </code></pre>
 </li>
 <li><p>If you've started with an empty project, you'll get output similar to the following:</p>
@@ -228,7 +230,8 @@
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You'll need to run the PowerShell script defined above, and provide your OpenStack project credentials every time you relaunch PowerShell.</p>
+<p>If you enter your password incorrectly, you will see a message similar to:
+<code>The request you have made requires authentication. (HTTP 401) (Request-ID: req-..)</code></p>
 </div>
 </li>
 </ol>
