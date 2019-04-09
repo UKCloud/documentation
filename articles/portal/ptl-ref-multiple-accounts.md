@@ -70,7 +70,7 @@ There are two options that you can choose from to manage your projects and end c
   <tr>
     <td><b>Disadvantages</b></td>
     <td>Necessitates switching view in the Portal to see the services and tickets within each account.</td>
-    <td>Provides less visibility of users and tickets that are all together in single lists.</td>
+    <td>Lists all tickets in a single list, making it more difficult to locate tickets for a particular project. Similarly with users for different workloads.</td>
   </tr>
   <tr>
     <td></td>
