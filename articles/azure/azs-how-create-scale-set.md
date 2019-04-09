@@ -3,6 +3,8 @@ title: How to create a scale set using the UKCloud Azure Stack portal | UKCloud 
 description: Provides help for creating a scale set on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel
+reviewer:
+lastreviewed: 25/03/2019 11:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
