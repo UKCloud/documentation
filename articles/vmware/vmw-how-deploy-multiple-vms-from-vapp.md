@@ -3,6 +3,8 @@ title: How to deploy multiple VMs from a vApp template simultaneously using the 
 description: Outlines the options for deploying multiple VMs simultaneously from a single vApp template
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/09/2018 14:50:11
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

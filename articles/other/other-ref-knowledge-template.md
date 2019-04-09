@@ -3,6 +3,8 @@ title: UKCloud Knowledge Centre article template | UKCloud Ltd
 description: Provides a template to help when you're creating new UKCloud Knowledge Centre articles
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 27/07/2018 17:59:14
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

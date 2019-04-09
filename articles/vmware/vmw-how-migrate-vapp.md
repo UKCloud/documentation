@@ -3,6 +3,8 @@ title: How to migrate vApps between virtual data centres | UKCloud Ltd
 description: Covers the ways in which customers can migrate their vApps between virtual data centres (VDCs)
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 30/08/2018 14:10:25
 
 toc_rootlink: How To
 toc_sub1:

@@ -3,6 +3,8 @@ title: Invoice and billing FAQs | UKCloud Ltd
 description: Frequently asked questions about invoicing and billing
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 07/01/2019 13:14:56
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:

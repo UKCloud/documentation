@@ -3,6 +3,8 @@ title: Cloud GPU FAQs | UKCloud Ltd
 description: Frequently asked questions for Cloud GPU
 services: gpu
 author: Matt Warner
+reviewer:
+lastreviewed: 19/07/2018 17:56:05
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:

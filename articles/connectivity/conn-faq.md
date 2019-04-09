@@ -3,6 +3,8 @@ title: General connectivity FAQs | UKCloud Ltd
 description: Frequently asked questions for general connectivity
 services: connectivity
 author: Matt Warner
+reviewer:
+lastreviewed: 19/07/2018 17:56:05
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:

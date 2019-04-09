@@ -3,6 +3,8 @@ title: How to use the UKCloud Portal API | UKCloud Ltd
 description: Demonstrates how to use the Portal API by stepping you through the process of creating a VDC
 services: portal
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 12:12:33
 
 toc_rootlink: How To
 toc_sub1:

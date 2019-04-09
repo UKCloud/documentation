@@ -3,6 +3,8 @@ title: How to use affinity and anti-affinity rules | UKCloud Ltd
 description: Describes how to use affinity and anti-affinity rules to control the movement of VMs around the UKCloud platform
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 26/07/2018 09:58:17
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

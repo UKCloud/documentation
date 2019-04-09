@@ -3,6 +3,8 @@ title: How to retrieve utilisation metrics for your virtual machines | UKCloud L
 description: This guide shows how you can use the vCloud API to retrieve current and historic utilisation metrics for a virtual machine
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

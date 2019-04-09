@@ -3,6 +3,8 @@ title: Dedicated Compute Service Scope | UKCloud Ltd
 description: Outlines important details regarding UKCloud for VMware Dedicated Compute
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 03/08/2018 11:14:35
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:

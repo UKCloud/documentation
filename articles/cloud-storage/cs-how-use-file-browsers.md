@@ -3,6 +3,8 @@ title: How to use file browsers with Cloud Storage | UKCloud Ltd
 description: Using file browsers with Cloud Storage
 services: cloud-storage
 author: Dan Baker
+reviewer:
+lastreviewed: 16/10/2018 11:28:45
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

@@ -3,6 +3,8 @@ title: How to manage Snapshot Protection for your VMs | UKCloud Ltd
 description: Explains how to use the self-service Snapshot Protection tool to add, change or remove Snapshot Protection for your VMs
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

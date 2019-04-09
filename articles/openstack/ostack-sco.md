@@ -3,6 +3,8 @@ title: UKCloud for OpenStack Service Scope | UKCloud Ltd
 description: Outlines important details regarding Cloud Native Infrastructure
 services: openstack
 author: Steve Hall
+reviewer:
+lastreviewed: 19/07/2018 15:17:17
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:

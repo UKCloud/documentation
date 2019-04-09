@@ -3,6 +3,8 @@ title: VMware Tools installation | UKCloud Ltd
 description: Recommended practices for installing and maintaining VMware tools on the Assured platform
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

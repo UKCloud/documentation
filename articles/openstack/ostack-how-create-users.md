@@ -3,6 +3,8 @@ title: How to create new UKCloud for OpenStack users in the UKCloud Portal | UKC
 description: Shows how to create UKCloud for OpenStack users in the UKCloud Portal so that they can benefit from two-factor authentication (2FA)
 services: openstack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/10/2018 07:26:13
 
 toc_rootlink: How To
 toc_sub1: 

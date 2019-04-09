@@ -3,6 +3,8 @@ title: How to use the OpenStack Command Line Client on Microsoft operating syste
 description: Outlines how to use the OpenStack Command Line Client on a Microsoft operating system using Windows PowerShell
 services: openstack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 15:17:17
 
 toc_rootlink: How To
 toc_sub1:

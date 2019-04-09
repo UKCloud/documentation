@@ -3,6 +3,8 @@ title: Nested hypervisors | UKCloud Ltd
 description: Outlines UKCloud's positioning as to why we do not recommend or support the use of nested hypervisors on UKCloud for VMware
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 12/10/2018 17:42:06
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

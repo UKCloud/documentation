@@ -3,6 +3,8 @@ title: TW_REUSE and TW_RECYCLE settings | UKCloud Ltd
 description: Describes the role of TW_reuse and TW_recycle settings on edge gateways, and how these may affect TCP connections in some scenarios.
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

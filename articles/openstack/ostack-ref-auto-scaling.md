@@ -3,6 +3,8 @@ title: Auto Scaling for UKCloud for OpenStack | UKCloud Ltd
 description: Shows how to automatically scale out your OpenStack compute instances in response to system usage
 services: openstack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/08/2018 14:45:48
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:

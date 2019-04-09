@@ -3,6 +3,8 @@ title: How to identify your Azure global administrators | UKCloud Ltd
 description: How to identify your Azure global administrators
 services: azure-stack
 author: Paul Brown
+reviewer:
+lastreviewed: 24/08/2018 08:29:03
 
 toc_rootlink: Users
 toc_sub1: How To

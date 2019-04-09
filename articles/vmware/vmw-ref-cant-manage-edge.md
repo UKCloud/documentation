@@ -3,6 +3,8 @@ title: Cannot manage 5.5.4 edge gateway firewall rules after upgrade to vCloud D
 description: Provides a solution for a known issue with vCloud Director 8.20
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

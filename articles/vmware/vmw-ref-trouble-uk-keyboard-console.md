@@ -3,6 +3,8 @@ title: UK keyboard layout not supported in Web Console | UKCloud Ltd
 description: Intended for customers who are experiencing issues when using a UK keyboard to interact with the VMware Web Console
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 11/01/2019 12:28:38
 toc_rootlink: Troubleshooting
 toc_sub1: 
 toc_sub2:

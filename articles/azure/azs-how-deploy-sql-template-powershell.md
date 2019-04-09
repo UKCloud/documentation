@@ -3,6 +3,8 @@ title: How to deploy an SQL template to Azure Stack using PowerShell | UKCloud L
 description: Learn how to deploy an SQL template to Azure Stack using PowerShell
 services: azure-stack
 author: Chris Black
+reviewer:
+lastreviewed: 23/07/2018 13:55:12
 
 toc_rootlink: Users
 toc_sub1: How To

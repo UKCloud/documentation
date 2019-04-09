@@ -3,6 +3,8 @@ title: UKCloud services by zone | UKCloud Ltd
 description: Shows the zones in each UKCloud site and lists the services and connectivity options that are available in each of those zones
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 25/07/2018 15:32:54
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

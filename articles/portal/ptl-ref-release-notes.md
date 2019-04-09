@@ -3,6 +3,8 @@ title: Portal release notes | UKCloud Ltd
 description: Information on latest features included in a Portal update
 services: portal
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 12:12:33
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

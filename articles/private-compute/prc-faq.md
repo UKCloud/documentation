@@ -3,6 +3,8 @@ title: Private Cloud for Compute FAQs | UKCloud Ltd
 description: Frequently asked questions for Private Cloud for Compute
 services: private-compute
 author: Matt Warner
+reviewer:
+lastreviewed: 19/07/2018 17:56:05
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
