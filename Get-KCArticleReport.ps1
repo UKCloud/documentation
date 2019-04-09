@@ -1,3 +1,25 @@
+<#
+    .SYNOPSIS
+        Creates a CSV file containing details of each article in the knowledge center.
+
+    .DESCRIPTION
+        Creates a CSV file containing details of each article in the knowledge center. Returns product, article title, category, link,
+        last modified date and creation date.
+
+    .PARAMETER DocumentationFolder
+        The folder of the documentation repository.
+
+    .PARAMETER DestinationFolder
+        The folder in which to store the output CSV.
+
+    .EXAMPLE
+        Get-KCArticleReport.ps1 -DocumentationFolder "C:\documentation" -DestinationFolder "C:\temp"
+
+    .EXAMPLE
+        Get-KCArticleReport.ps1 -DocumentationFolder <repository folder path> -DestinationFolder <csv output folder>
+
+#>
+
 [CmdletBinding()]
 param (
     [Parameter(Mandatory = $true)]
@@ -64,6 +86,7 @@ foreach ($Article in $Articles) {
         Category     = $TypeTable[((($Article.Name -split "-")[1]).split("."))[0]]
         Link         = $UrlPrefix + ($Article.DirectoryName).split("\")[-1] + "/" + ($Article.Name -replace ".md", ".html")
         LastModified = [DateTime](git -C $DocumentationFolder log -1 --format="%aD" $Article.FullName)
+        CreationDate = [DateTime](git -C $DocumentationFolder log --follow --format="%aD" -- $Article.FullName | tail -1)
     }
     $InfoArray += $ArticleInfo
 }
