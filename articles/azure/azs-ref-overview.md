@@ -3,8 +3,8 @@ title: Understanding UKCloud for Microsoft Azure | UKCloud Ltd
 description: Overview of UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 25/05/2018 16:34:15
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: Reference

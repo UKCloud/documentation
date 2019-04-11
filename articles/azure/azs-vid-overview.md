@@ -3,8 +3,8 @@ title: UKCloud Azure Stack portal overview video | UKCloud Ltd
 description: Shows a video that provides an overview of the UKCloud Azure Stack portal
 services: azure-stack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 11/12/2018 12:39:48
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: Videos

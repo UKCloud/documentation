@@ -3,8 +3,8 @@ title: How to create a key vault using PowerShell | UKCloud Ltd
 description: Provides help for creating a key vault on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
-reviewer:
-lastreviewed: 17/09/2018 10:23:07
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
