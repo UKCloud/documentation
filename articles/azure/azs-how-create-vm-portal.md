@@ -3,8 +3,8 @@ title: How to create a virtual machine using the UKCloud Azure Stack portal | UK
 description: Create a virtual machine in UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 31/05/2018 11:19:07
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
