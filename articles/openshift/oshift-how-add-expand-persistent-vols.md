@@ -59,7 +59,7 @@ NAME                              REVISION   DESIRED   CURRENT   TRIGGERED BY
 logging-es-data-master-7bqadxxd   1          1         1
 logging-kibana                    1          1         1         config
 ```
-In this example, logging-kibana depends on logging-es-data-master so it is good practice to also scale this down during the expansion of the persistent volume for logging-es-data-master:
+In this example, the logging-kibana pod depends on the logging-es-data-master pod so it is good practice to also scale this down during the expansion of the persistent volume for logging-es-data-master:
 ```
 $ oc scale dc logging-kibana --replicas=0
 deploymentconfig.apps.openshift.io/logging-kibana scaled
@@ -116,9 +116,31 @@ Conditions:
 Events:                     <none>
 ```
 
+## Restart pods by scaling up the deployment(s)
+When the pod which uses the persistant volume is started, the persistent volume will be resized as it starts.
+
+Since we scaled down the logging-es-data-master pod and its dependant logging-kibana pod in this example, we will scale up both of these.
+```
+$ oc scale dc logging-kibana --replicas=1
+deploymentconfig.apps.openshift.io/logging-kibana scaled
+$ oc scale dc logging-es-data-master-7bqadxxd --replicas=1
+deploymentconfig.apps.openshift.io/logging-es-data-master-7bqadxxd scaled
+```
+Once the pod has started, we can check the filesystem has resized correctly by logging into the container and checking the mount point for the new size:
+```
+oc rsh logging-es-data-master-7bqadxxd-1-7rb9x
+sh-4.2$ df -h                                  
+Filesystem                             Size  Used Avail Use% Mounted on
+/dev/mapper/docker-253:0-1468012...     10G  520M  9.5G   6% /
+tmpfs                                  7.8G     0  7.8G   0% /dev
+tmpfs                                  7.8G     0  7.8G   0% /sys/fs/cgroup
+*/dev/vdd                               30G  7.5G   23G  33% /elasticsearch/persistent*
+...
+```
+
 ## Further reading
 
-https://wiki.squid-cache.org/SquidFaq/SquidAcl
+https://docs.openshift.com/container-platform/3.11/dev_guide/expanding_persistent_volumes.html#expanding_file_system_pvc
 
 ## Feedback
 
