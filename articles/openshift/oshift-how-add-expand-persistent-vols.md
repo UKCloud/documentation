@@ -25,11 +25,8 @@ In OpenShift clusters running OpenShift v3.11 or later, it is possible to expand
 >To check the version of your cluster, either click "(?)" in the top-right of the web UI and select "About" or run the following while connected in the CLI client:
 >```
 >$ oc version
->oc v3.11.51
->kubernetes v1.11.0+d4cacc0
->features: Basic-Auth GSSAPI Kerberos SPNEGO
->
->Server https://console.5649-f44e8f:8443
+>...
+>Server https://console.5678-89abcd:8443
 >openshift v3.11.51
 >kubernetes v1.11.0+d4cacc0
 >```
@@ -44,6 +41,40 @@ You must also have access to:
 
 ## Scale down any pod which is using the volume.
 
+In this guide, we will expand the volume for cluster's default elasticsearch deployment which is located in the openshift-logging project. The pod using the persistent volume in this example is "logging-es-data-master" and the pvc (Persistent Volume Claim) name is "logging-es-0"
+
+The same procedure can be applied to other pods which use persistent volumes.
+
+```
+$ oc project openshift-logging
+Now using project "openshift-logging" on server "https://console.5678-89abcd:8443".
+$ oc get pods
+NAME                                      READY     STATUS      RESTARTS   AGE
+logging-curator-1554953400-whmb7          0/1       Completed   0          14h
+logging-es-data-master-7bqadxxd-1-wrlqh   2/2       Running     2          52d
+...
+logging-kibana-1-n7j8t                    2/2       Running     2          91d
+$ oc get dc
+NAME                              REVISION   DESIRED   CURRENT   TRIGGERED BY
+logging-es-data-master-7bqadxxd   1          1         1
+logging-kibana                    1          1         1         config
+```
+In this example, logging-kibana depends on logging-es-data-master so it is good practice to also scale this down during the expansion of the persistent volume for logging-es-data-master:
+```
+$ oc scale dc logging-kibana --replicas=0
+deploymentconfig.apps.openshift.io/logging-kibana scaled
+$ oc scale dc logging-es-data-master-7bqadxxd --replicas=0
+deploymentconfig.apps.openshift.io/logging-es-data-master-7bqadxxd scaled
+```
+Confirm that the pod using the volume has been Terminated:
+```
+$ oc get pods | grep logging-es-data-master
+# (nothing returned)
+```
+
+## Resize persistent volume
+
+Once the pod(s) dependant on the volume are resized, we can edit the pvc to resize the volume.
 
 ## Further reading
 
