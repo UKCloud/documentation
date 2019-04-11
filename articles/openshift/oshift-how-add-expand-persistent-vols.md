@@ -41,9 +41,10 @@ You must also have access to:
 
 ## Scale down any pod which is using the volume.
 
-In this guide, we will expand the volume for cluster's default elasticsearch deployment which is located in the openshift-logging project. The pod using the persistent volume in this example is `logging-es-data-master` and the pvc (Persistent Volume Claim) name is `logging-es-0`
-
-The same procedure can be applied to other pods which use persistent volumes.
+>[!INFO]
+>In this guide, we will expand the volume for cluster's default elasticsearch deployment which is located in the openshift-logging project. The pod using the persistent volume in this example is `logging-es-data-master` and the pvc (Persistent Volume Claim) name is `logging-es-0`
+>
+>The same procedure can be applied to other pods which use persistent volumes.
 
 ```
 $ oc project openshift-logging
@@ -59,14 +60,14 @@ NAME                              REVISION   DESIRED   CURRENT   TRIGGERED BY
 logging-es-data-master-7bqadxxd   1          1         1
 logging-kibana                    1          1         1         config
 ```
-In this example, the `logging-kibana` pod depends on the `logging-es-data-master` pod so it is good practice to also scale this down during the expansion of the persistent volume for `logging-es-data-master`:
+>[!INFO] In this example, the `logging-kibana` pod depends on the `logging-es-data-master` pod so it is good practice to also scale this down during the expansion of the persistent volume for `logging-es-data-master`
 ```
 $ oc scale dc logging-kibana --replicas=0
 deploymentconfig.apps.openshift.io/logging-kibana scaled
 $ oc scale dc logging-es-data-master-7bqadxxd --replicas=0
 deploymentconfig.apps.openshift.io/logging-es-data-master-7bqadxxd scaled
 ```
-Confirm that the pod using the volume has been Terminated:
+Confirm that the pod which uses the volume has been Terminated:
 ```
 $ oc get pods | grep logging-es-data-master
 # (nothing returned)
