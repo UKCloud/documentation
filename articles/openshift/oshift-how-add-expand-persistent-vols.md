@@ -11,7 +11,7 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: How to expand OpenShift persistent volumes
-toc_fullpath: How To/oshift-how-add-domains-proxy-whitelist.md
+toc_fullpath: How To/oshift-how-add-expand-persistent-vols.md
 toc_mdlink: oshift-how-add-expand-persistent-vols.md
 ---
 
