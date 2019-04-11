@@ -74,7 +74,47 @@ $ oc get pods | grep logging-es-data-master
 
 ## Resize persistent volume
 
-Once the pod(s) dependant on the volume are resized, we can edit the pvc to resize the volume.
+Once the pod(s) dependant on the volume are stopped, we can edit the pvc to resize the volume.
+
+```
+$ oc get pvc
+NAME           STATUS    VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+logging-es-0   Bound     pvc-4ad7258e-12a6-11e9-bc9d-fa163e12bba5   20Gi       RWO            tier2          2d
+$ oc edit pvc logging-es-0
+```
+`oc edit` causes the configration of the object to open in a text editor. Edit the size in the `spec:` section only:
+```
+...
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 30Gi   # (edited from 20Gi)
+  storageClassName: tier2
+...
+```
+When the edit is completed, the pvc will *continue to show the old size* but will be listed as being in a `FileSystemResizePending` state:
+```
+oc describe pvc logging-es-0
+Name:          logging-es-0
+Namespace:     openshift-logging
+StorageClass:  tier2
+Status:        Bound
+Volume:        pvc-4ad7258e-12a6-11e9-bc9d-fa163e12bba5
+Labels:        logging-infra=support
+Annotations:   pv.kubernetes.io/bind-completed=yes
+               pv.kubernetes.io/bound-by-controller=yes
+               volume.beta.kubernetes.io/storage-provisioner=kubernetes.io/cinder
+Finalizers:    [kubernetes.io/pvc-protection]
+Capacity:      20Gi
+Access Modes:  RWO
+Conditions:
+  Type                      Status  LastProbeTime                     LastTransitionTime                Reason  Message
+  ----                      ------  -----------------                 ------------------                ------  -------
+  FileSystemResizePending   True    Mon, 01 Jan 0001 00:00:00 +0000   Thu, 11 Apr 2019 17:43:26 +0000           Waiting for user to (re-)start a pod to finish file system resize of volume on node.
+Events:                     <none>
+```
 
 ## Further reading
 
