@@ -39,7 +39,7 @@ You must also have access to:
 
 - `oc`, the OpenShift command-line client (CLI). For more information, see OpenShift's [*Get Started with the CLI*](https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html)
 
-## Scale down any pod which is using the volume.
+## Stop any pod which is using the volume.
 
 >[!INFO]
 >In this guide, we will expand the volume for cluster's default elasticsearch deployment which is located in the `openshift-logging` project. The pod using the persistent volume in this example is `logging-es-data-master` and the pvc (Persistent Volume Claim) name is `logging-es-0`. This is a common requirement - a large volume of logs may cause elasticsearch to fail when the logging volume fills up.
@@ -72,7 +72,7 @@ $ oc get pods | grep logging-es-data-master
 # (nothing returned)
 ```
 
-## Resize persistent volume
+## Resize the persistent volume
 
 Once the pod(s) dependent on the volume are stopped, we can edit the pvc to resize the volume.
 
@@ -117,7 +117,8 @@ Conditions:
 Events:                     <none>
 ```
 
-## Restart pods by scaling up the deployment(s)
+## Restart the pod(s)
+
 When the pod which uses the persistent volume is started, the persistent volume will be resized as it starts.
 
 Since we scaled down the `logging-es-data-master` deployment and its dependent `logging-kibana` in this example, we will scale up both deployments.
