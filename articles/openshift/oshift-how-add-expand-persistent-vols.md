@@ -51,10 +51,9 @@ $ oc project openshift-logging
 Now using project "openshift-logging" on server "https://console.5678-89abcd:8443".
 $ oc get pods
 NAME                                      READY     STATUS      RESTARTS   AGE
-logging-curator-1554953400-whmb7          0/1       Completed   0          14h
-logging-es-data-master-7bqadxxd-1-wrlqh   2/2       Running     2          52d
+logging-es-data-master-7bqadxxd-1-wrlqh   2/2       Running     2          2d
 ...
-logging-kibana-1-n7j8t                    2/2       Running     2          91d
+logging-kibana-1-n7j8t                    2/2       Running     2          2d
 $ oc get dc
 NAME                              REVISION   DESIRED   CURRENT   TRIGGERED BY
 logging-es-data-master-7bqadxxd   1          1         1
@@ -82,8 +81,9 @@ $ oc get pvc
 NAME           STATUS    VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
 logging-es-0   Bound     pvc-4ad7258e-12a6-11e9-bc9d-fa163e12bba5   20Gi       RWO            tier2          2d
 $ oc edit pvc logging-es-0
+...
 ```
-`oc edit` causes the configration of the object to open in a text editor. Edit the size in the `spec:` section only:
+`oc edit` causes the configration of the object to open in a text editor. Edit the size in the `spec:` section only (do not touch the size listed under `status:`:
 ```
 ...
 spec:
@@ -120,7 +120,7 @@ Events:                     <none>
 ## Restart pods by scaling up the deployment(s)
 When the pod which uses the persistant volume is started, the persistent volume will be resized as it starts.
 
-Since we scaled down the `logging-es-data-master` pod and its dependent `logging-kibana` pod in this example, we will scale up both of these.
+Since we scaled down the `logging-es-data-master` deployment and its dependent `logging-kibana` in this example, we will scale up both deployments.
 ```
 $ oc scale dc logging-kibana --replicas=1
 deploymentconfig.apps.openshift.io/logging-kibana scaled
