@@ -131,10 +131,8 @@ Once the pod has started, we can check the filesystem has resized correctly by l
 oc rsh logging-es-data-master-7bqadxxd-1-7rb9x
 sh-4.2$ df -h                                  
 Filesystem                             Size  Used Avail Use% Mounted on
-/dev/mapper/docker-253:0-1468012...     10G  520M  9.5G   6% /
-tmpfs                                  7.8G     0  7.8G   0% /dev
-tmpfs                                  7.8G     0  7.8G   0% /sys/fs/cgroup
-*/dev/vdd                               30G  7.5G   23G  33% /elasticsearch/persistent*
+...
+/dev/vdd                               30G  7.5G   23G  33% /elasticsearch/persistent
 ...
 ```
 
