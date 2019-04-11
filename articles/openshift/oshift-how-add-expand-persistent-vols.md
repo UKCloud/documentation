@@ -83,7 +83,7 @@ logging-es-0   Bound     pvc-4ad7258e-12a6-11e9-bc9d-fa163e12bba5   20Gi       R
 $ oc edit pvc logging-es-0
 ...
 ```
-`oc edit` causes the configration of the object to open in a text editor. Edit the size in the `spec:` section only (do not touch the size listed under `status:`:
+`oc edit` causes the configuration of the object to open in a text editor. Edit the size in the `spec:` section only (do not touch the size listed under `status:`):
 ```
 ...
 spec:
@@ -118,7 +118,7 @@ Events:                     <none>
 ```
 
 ## Restart pods by scaling up the deployment(s)
-When the pod which uses the persistant volume is started, the persistent volume will be resized as it starts.
+When the pod which uses the persistent volume is started, the persistent volume will be resized as it starts.
 
 Since we scaled down the `logging-es-data-master` deployment and its dependent `logging-kibana` in this example, we will scale up both deployments.
 ```
