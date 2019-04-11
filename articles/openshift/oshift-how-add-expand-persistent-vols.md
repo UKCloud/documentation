@@ -19,7 +19,7 @@ toc_mdlink: oshift-how-add-expand-persistent-vols.md
 
 ## Overview
 
-In OpenShift clusters running OpenShift v3.11 or later, it is possible to expand existing persistent volumes. It is necessary to shutdown any pod/container using the volume before the expansion can be performed. In earlier versions (such as v3.9) it is necessary to raise a support request with UKCloud so that UKCloud admins can facilitate the expansion.
+In OpenShift clusters running OpenShift v3.11 or later, it is possible to expand existing persistent volumes. It is necessary to shutdown any pod/container using the volume before the expansion can be performed. In earlier versions (such as v3.9) it is necessary to raise a support request so that UKCloud admins can facilitate the expansion.
 
 >[!TIP]
 >To check the version of your cluster, either click "(?)" in the top-right of the web UI and select "About" or run the following while connected in the CLI client:
@@ -42,9 +42,9 @@ You must also have access to:
 ## Scale down any pod which is using the volume.
 
 >[!INFO]
->In this guide, we will expand the volume for cluster's default elasticsearch deployment which is located in the openshift-logging project. The pod using the persistent volume in this example is `logging-es-data-master` and the pvc (Persistent Volume Claim) name is `logging-es-0`
+>In this guide, we will expand the volume for cluster's default elasticsearch deployment which is located in the `openshift-logging` project. The pod using the persistent volume in this example is `logging-es-data-master` and the pvc (Persistent Volume Claim) name is `logging-es-0`. This is a common requirement - a large volume of logs may cause elasticsearch to fail when the logging volume fills up.
 >
->The same procedure can be applied to other pods which use persistent volumes.
+>The same procedure can be applied to any other pods which use persistent volumes.
 
 ```
 $ oc project openshift-logging
