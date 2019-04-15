@@ -1,10 +1,10 @@
 ---
-title: How to create a scale set using the UKCloud Azure Stack portal | UKCloud Ltd
-description: Provides help for creating a scale set on UKCloud for Microsoft Azure
+title: How to create a virtual machine scale set using the UKCloud Azure Stack portal | UKCloud Ltd
+description: Provides help for creating a virtual machine scale set on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel
-reviewer:
-lastreviewed: 25/03/2019 11:00:00
+reviewer: BaileyLawson
+lastreviewed: 15/04/2019 11:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -16,11 +16,11 @@ toc_fullpath: Users/How To/azs-how-create-scale-set.md
 toc_mdlink: azs-how-create-scale-set.md
 ---
 
-# How to create a scale set using the UKCloud Azure Stack portal
+# How to create a virtual machine scale set using the UKCloud Azure Stack portal
 
 ## Overview
 
-Virtual machine (VM) scale sets in Azure Stack are a compute resource that you can use to deploy and manage identical VMs. All virtual machine instances in a scale set are configured in the same way and do not require any provisioning beforehand.
+Virtual machine scale sets (VMSS) in Azure Stack are a compute resource that you can use to deploy and manage identical VMs. All virtual machine instances in a scale set are configured in the same way and do not require any provisioning beforehand.
 
 ## Prerequisites
 
@@ -36,22 +36,22 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![New option in favourites panel](images/azsp_newmenu.png)
 
-3. In the *Everything* blade search **'Virtual machine scale set'** and then select it from the search results.
+3. In the *Everything* blade, search for **'Virtual machine scale set'** and then select it from the search results.
 
     ![Searching for scale set](images/azs-browser-button-scale-set-menu.png)
 
-4. In the *virtual machine scale set* blade select **Create**.
+4. In the *Virtual machine scale set* blade select **Create**.
 
     ![Create scale set button](images/azs-browser-button-create-scale-set.png)
 
-5. In the *BASICS* page, enter the following information:
+5. On the *BASICS* page, enter the following information:
 
-    - **Virtual machine scale set name** - The name of the scale set.
+    - **Virtual machine scale set name** - The name of the virtual machine scale set.
 
     - **Operating system disk image** – The operating system disk image for the virtual machines in the scale set.
 
         > [!Note]
-        > Scale sets currently do not support CentOS 7.2 on Azure Stack.
+        > CentOS 7.2 is currently unsupported on Azure Stack.
 
     - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
@@ -63,17 +63,15 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - **Password** – Admin password for the virtual machines.
 
-    - **Confirm password** – Confirm the password.
-
     - **Instance count** – The number of virtual machines in the scale set (0 - 100).
 
-    - **Instance size** – The size of each virtual machine in the scale set. Some sizes may only be available using templates, PowerShell or Azure CLI due to the recommended portal defaults.
+    - **Instance size** – The size of each virtual machine in the scale set.
 
-    - **Use managed disks** – Managed disks is a feature that simplifies disk management for Azure IaaS virtual machines by handling storage account management for you. For more information, see the [Managed Disks overview](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/managed-disks-overview).
+    - **Use managed disks** – Managed disks is a feature that simplifies disk management for Azure IaaS virtual machines by handling storage account management for you. For more information, see [Managed Disks overview](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/managed-disks-overview).
 
     - **Public IP address name** – The name of the public IP address for the load balancer in front of the scale sets.
 
-    - **Public IP allocation method** – Select between Dynamic or Static IP addresses.
+    - **Public IP allocation method** – Select between *Dynamic* or *Static* IP addresses.
 
     - **Domain name label** – Domain name label for the load balancer in front of the scale set.
 
@@ -83,7 +81,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![BASICS page](images/azs-browser-create-scale-set.png)
 
-6. When you're done, click **Create**.
+6. When you are done, click **Create**.
 
 7. You can monitor the progress of your scale set's deployment by clicking the **Notifications** icon.
 
@@ -103,22 +101,22 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 11. In the blade for your scale set, you can view and monitor the scale set, change its settings and perform diagnostics and troubleshooting.
 
-    ![scale set overview](images/azs-browser-Scale-Set-overview.png)
+    ![Scale set overview](images/azs-browser-Scale-Set-overview.png)
 
 ## Modifying the instance count of your scale set
 
 > [!Note]
-> Currently auto-scaling is not supported on Azure Stack.
+> Auto-scaling is currently unsupported on Azure Stack.
 
 1. In the blade for the scale set, select **Scaling** under *Settings*.
 
-    ![scale set scaling button](images/azs-browser-button-scaling.png)
+    ![Scale set scaling button](images/azs-browser-button-scaling.png)
 
-2. Manually increase or decrease the number of instances within the scaling settings using the slide bar.
+2. Increase or decrease the number of instances using the slide bar.
 
     ![Scaling slide bar](images/azs-browser-instance-count-slidebar.png)
 
-3. Once you have selected the desired number of instances select **Save** to commit the change.
+3. Once you have selected the desired number of instances click **Save** to commit the change.
 
     ![Save number of instances for the scale set](images/azs-browser-button-save-instance-count.png)
 
