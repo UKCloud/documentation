@@ -30,6 +30,8 @@
     href: ptl-ref-portal-api.md
   - name: Enable memorable word on account switch
     href: ptl-ref-memorable-word.md
+  - name: Partitioning projects or end customers using accounts
+    href: ptl-ref-multiple-accounts.md
   - name: Portal permissions
     href: ptl-ref-overview-permissions.md
   - name: Portal release notes
