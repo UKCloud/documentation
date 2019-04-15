@@ -3,8 +3,8 @@ title: How to resize virtual machine disks using the UKCloud Azure Stack portal 
 description: Provides help for resizing virtual machine disks using the portal on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel
-reviewer:
-lastreviewed: 05/04/2019 11:00:00
+reviewer: BaileyLawson
+lastreviewed: 15/04/2019 11:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -20,7 +20,7 @@ toc_mdlink: azs-how-resize-disks.md
 
 ## Overview
 
-The UKCloud for Azure Stack portal allows users to resize VM disks. This article shows you how to resize disks that are mounted to a VM, and will work for both managed and unmanaged disks.
+The UKCloud Azure Stack portal allows users to resize VM disks. This article shows you how to resize disks that are mounted to a VM, and will work for both managed and unmanaged disks.
 
 ## Prerequisites
 
@@ -36,24 +36,24 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Virtual machines in the favourites panel](images/azsp_vmsmenu.png)
 
-3. In the *Virtual machines* blade select the owner VM that the disk is mounted to.
+3. In the *Virtual machines* blade, select the virtual machine that the disk is attached to.
 
     ![VM Disks button](images/azs-browser-button-vm-disks.png)
 
-4. In the VM's blade select disks.
+4. In the virtual machine's blade, select **Disks**.
 
     ![Disks button within VM](images/azs-browser-button-vm-disks.png)
 
-5. In the *Disks* blade select the disk you would like to resize.
+5. In the *Disks* blade, select the disk you would like to resize.
 
     >[!Note]
-    >Disks can only be resized when they are unattached or the owner VM is deallocated.
+    >Disks can only be resized when they are unattached from the VM or the virtual machine is deallocated.
 
-6. In the VM disk's blade input the The size of the disk in GB in the *size* section.
+6. In the disk's blade, input the desired size of the disk in GiB in the **Size** field.
 
     >[!Note]
-    >- Disks can only be resized to a larger size.
-    >- Although the process is the same for both managed and unmanaged disks, the two blades look slightly different. Examples for both have been included below.
+    > - Disks can only be resized to a larger size.
+    > - Although the process is the same for both managed and unmanaged disks, the two blades look slightly different. Examples for both have been included below.
 
 # [Resizing managed disks](#tab/tabid-1)
 
@@ -65,17 +65,17 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ***
 
-6. Click *Save* to commit the changes.
+6. Click **Save** to commit the changes.
 
     ![VM disks save button](images/azs-browser-vm-disk-save-button.png)
 
-7. You can monitor the progress of the Disk resize by clicking the **Notifications** icon.
+7. You can monitor the progress of the disk resizing by clicking the **Notifications** icon.
 
    ![Notification showing updating virtual machine disk](images/azs-update-deployment-progress.png)
 
 ## Expanding the volume
 
-After expanding the disk, you must go into the OS and expand the volume to actually use the newly allocated space. To do so follow these steps:
+After expanding the disk, you must go into the OS and expand the volume to actually use the newly allocated space. To do so, follow these steps:
 
 # [Windows VM](#tab/tabid-a)
 
