@@ -86,7 +86,7 @@ UKCloud monitors various elements across the service to ensure that availability
 -------|-------
 **Service level agreement** | 99.90%
 **Portal level agreement**  | 99.90%
-**Availability calculation**| Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days).
+**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days).
 **Emergency and Planned Maintenance** | Excluded from calculations
 **Measurement of SLA** | Unavailability applies to inability to connect to a new GPU resource in the event of a failure of a GPU service within a single zone. Failure condition is following a hardware fault recognised at the IaaS layer or below and within UKCloud-controlled components.
 **Key exclusions** | The following are examples of what is not covered by the SLA: <br>- Faults within your control, such as client application issues<br>- Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud
