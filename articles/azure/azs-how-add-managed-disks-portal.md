@@ -46,9 +46,9 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 4. Under *Settings*, select **Disks**.
 
-![Virtual machine disk button](images/azs-browser-button-vm-disks-setting.png)
+    ![Virtual machine disk button](images/azs-browser-button-vm-disks-setting.png)
 
-5. In the *Disks* blade select **+Add data disk**.
+5. In the *Disks* blade, select **+Add data disk**.
 
     ![Add data disk button](images/azs-browser-button-add-disk.png)
 
@@ -70,13 +70,13 @@ If you're adding a pre-existing disk:
 
 4. You can monitor the progress of your deployment by clicking the **Notifications** icon.
 
-    ![Notification progress alert](images/azs-browser-notification-disks-progress.png)
+    ![Deployment progress alert](images/azs-browser-notification-disks-progress.png)
 
 5. When the deployment is finished, the notification will change to *Successfully updated virtual machine disks*.
 
-    ![Notification complete alert](images/azs-browser-notification-disks-complete.png)
+    ![Deployment complete alert](images/azs-browser-notification-disks-complete.png)
 
-6. You can view the disk by navigating to the VM that you added the disk to and then selecting **Disks**.
+6. You can view the disk by navigating to the VM that the disk was added to, then select **Disks**.
 
     ![VM Data disks](images/azs-browser-disks.png)
 
@@ -99,23 +99,23 @@ If you're adding a new disk:
     - **Account type** - Standard disks (HDD) are backed by magnetic drives and are preferable for applications where data is accessed infrequently.
 
         > [!Note]
-        > Currently only standard (HDD) disks are available in UKCloud for Microsoft Azure.
+        > Currently, only standard disks (HDD) are available in UKCloud for Microsoft Azure.
 
     - **Source type** - Create a disk from a snapshot of another disk, a blob in a storage account, or create an empty disk.
 
-    - **Size** - The size of the disk in GB.
+    - **Size** - The size of the disk in GiB.
 
     ![Create managed disk](images/azs-browser-add-vm-disk.png)
 
 3. You can monitor the progress of your deployment by clicking the **Notifications** icon.
 
-    ![Notification progress alert](images/azs-browser-notification-disks-progress.png)
+    ![Deployment progress alert](images/azs-browser-notification-disks-progress.png)
 
 4. When the deployment is finished, the notification will change to *Successfully updated virtual machine disks*.
 
-    ![Notification complete alert](images/azs-browser-notification-disks-complete.png)
+    ![Deployment complete alert](images/azs-browser-notification-disks-complete.png)
 
-5. You can view the disk by navigating to the VM that you added the disk to and then selecting **Disks**.
+5. You can view the disk by navigating to the VM that the disk was added to, then select **Disks**.
 
     ![VM Data disks](images/azs-browser-disks.png)
 
