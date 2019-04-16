@@ -95,7 +95,8 @@ $StackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "
 ## Connect to environment
 $AzsContext = (Connect-AzureRmAccount -EnvironmentName "AzureStackUser").Context
 ## Retrieve Access token
-$AzsAccessToken = ($AzsContext.TokenCache.ReadItems() | Where-Object { $_.TenantId -eq $AzsContext.Tenant.Id } | Sort-Object -Property ExpiresOn -Descending)[0].AccessToken
+$AzsAccessToken = ($AzsContext.TokenCache.ReadItems() | Where-Object { $_.TenantId -eq $AzsContext.Tenant.Id } | `
+    Sort-Object -Property ExpiresOn -Descending)[0].AccessToken
 ## Pull location from environment
 $AzsLocation = $StackEnvironment.StorageEndpointSuffix.split(".")[0]
 
@@ -110,8 +111,8 @@ Write-Output -InputObject "Creating virtual network"
 $AzsSubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name "Default" -AddressPrefix $AzsSubnetRange
 $AzsGWSubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name "GatewaySubnet" -AddressPrefix $AzsGWSubnetRange
 ## Create virtual network
-$AzsVirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $AzsRGName -Location $AzsLocation -Name $AzsVNetName -AddressPrefix $AzsVNetRange `
-    -Subnet $AzsSubnetConfig,$AzsGWSubnetConfig
+$AzsVirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $AzsRGName -Location $AzsLocation -Name $AzsVNetName `
+    -AddressPrefix $AzsVNetRange -Subnet $AzsSubnetConfig,$AzsGWSubnetConfig
 ## Retrieve gateway subnet config
 $AzsGWSubnetConfig = Get-AzureRmVirtualNetworkSubnetConfig -Name "GatewaySubnet" -VirtualNetwork $AzsVirtualNetwork
 
@@ -164,8 +165,8 @@ Write-Output -InputObject "Creating virtual network"
 $AzureSubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name "Default" -AddressPrefix $AzureSubnetRange
 $AzureGWSubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name "GatewaySubnet" -AddressPrefix $AzureGWSubnetRange
 ## Create virtual network
-$AzureVirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $AzureRGName -Location $AzureLocation -Name $AzureVNetName -AddressPrefix $AzureVNetRange `
-    -Subnet $AzureSubnetConfig,$AzureGWSubnetConfig
+$AzureVirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $AzureRGName -Location $AzureLocation -Name $AzureVNetName `
+    -AddressPrefix $AzureVNetRange -Subnet $AzureSubnetConfig,$AzureGWSubnetConfig
 ## Retrieve gateway subnet config
 $AzureGWSubnetConfig = Get-AzureRmVirtualNetworkSubnetConfig -Name "GatewaySubnet" -VirtualNetwork $AzureVirtualNetwork
 
