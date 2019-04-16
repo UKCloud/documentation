@@ -83,6 +83,8 @@ $SharedKey = "Password123!"
 
 ## Initial Azure Stack setup
 
+The following code creates a resource group, virtual network, public IP, virtual netowrk gateway, local network gateway and connection in your Azure Stack subscription.
+
 From your PowerShell window:
 
 ```powershell
@@ -144,6 +146,8 @@ $AzsPublicIP = Get-AzureRmPublicIpAddress -ResourceGroupName $AzsRGName -Name $A
 
 ## Public Azure configuration
 
+The following code creates a resource group, virtual network, public IP, virtual netowrk gateway, local network gateway and connection in your public Azure subscription.
+
 From your PowerShell window:
 
 ```powershell
@@ -191,6 +195,8 @@ $AzurePublicIP = Get-AzureRmPublicIpAddress -ResourceGroupName $AzureRGName -Nam
 ```
 
 ## Configure IP gateway IP address on Azure Stack
+
+The following code sets the public IP for the local network gateway on Azure Stack.
 
 From your PowerShell window:
 
