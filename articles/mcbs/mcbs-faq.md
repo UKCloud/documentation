@@ -29,10 +29,10 @@ DD Boost offers an extensive range of extensions via Dell EMC's Data Protection 
 
 Extension | Supported Applications | Further Information
 ----------|------------------------|--------------------
-Dell EMC Microsoft Application Agent | Exchange, SQL Server | HERE
-Dell EMC Data Domain&reg; Boost for OpenStorage | OpenStorage | HERE
-Dell EMC Data Domain Boost for Partner Integration | Dell NetVault Backup, Dell vRanger Pro, EMC Avamar, EMC Database application agent for DD Boost for Enterprise Applications and ProtectPoint, EMC Microsoft application agent for DD Boost for Enterprise Applications, EMC NetWorker, Hewlett-Packard HP Data Protector, Pivotal Greenplum Data Computing Appliance, Quest NetVault, Quest vRanger Pro, Veeam Backup and Replication, VMware vSphere Data Protection Advanced (VDPA)| HERE
-Dell EMC Oracle RMAN Agent | Oracle RMAN | HERE
+Dell EMC Microsoft Application Agent | Exchange, SQL Server | <a href="https://www.emc.com/collateral/TechnicalDocument/docu91897.pdf" target="_blank">HERE</a>
+Dell EMC Data Domain&reg; Boost for OpenStorage | OpenStorage | <a href="https://www.emc.com/collateral/TechnicalDocument/docu85193.pdf" target="_blank">HERE</a>
+Dell EMC Data Domain Boost for Partner Integration | Dell NetVault Backup, Dell vRanger Pro, EMC Avamar, EMC Database application agent for DD Boost for Enterprise Applications and ProtectPoint, EMC Microsoft application agent for DD Boost for Enterprise Applications, EMC NetWorker, Hewlett-Packard HP Data Protector, Pivotal Greenplum Data Computing Appliance, Quest NetVault, Quest vRanger Pro, Veeam Backup and Replication, VMware vSphere Data Protection Advanced (VDPA)| <a href="https://www.emc.com/collateral/TechnicalDocument/docu85192.pdf" target="_blank">HERE</a>
+Dell EMC Oracle RMAN Agent | Oracle RMAN | <a href="https://www.emc.com/collateral/TechnicalDocument/docu86478.pdf" target="_blank">HERE</a>
 
 ## What is Data Domain Boost Filesystem (BoostFS)?
 
