@@ -23,9 +23,9 @@ The UKCloud Multi-Cloud Backup Storage (MCBS) service provides a backup target t
 
 UKCloud's Multi-Cloud Backup Storage is based on Dell EMC's Data Domain Boost&trade; (DD Boost) software, which provides advanced integration between leading backup and enterprise applications and Data Domain systems. With DD Boost, parts of the deduplication process are distributed to the backup server or application server, enabling client-side deduplication so only unique data segments are sent to the Data Domain system. This enables 50% faster backups and reduces network bandwidth requirements by 80 to 98%. DD Boost provides advanced load balancing and failover, which further improves throughput and resiliency. In addition, Data Domain systems can grant secure access to multiple DD Boost users per system for data protection-as-a-service in private and public cloud deployments. Providing DD Boost users secure access to their data lays the foundation for logical data isolation enabling secure multi-tenancy on a Data Domain system in DD Boost environments.
 
-DD Boost offers an extensive range of extensions for services such as Oracle, Microsoft SQL, Microsoft Exchange and a wide array of backup server applications to help support performance-optimised, off-site, multi-cloud backups.
+DD Boost offers an extensive range of extensions via Dell EMC's Data Protection Suite for services such as Oracle, Microsoft SQL, Microsoft Exchange and a wide array of backup server applications to help support performance-optimised, off-site, multi-cloud backups.
 
-## What Data Domain Boost (DD Boost) extensions are available?
+## What Data Protection Suite extensions are available?
 
 Extension | Supported Applications | Further Information
 ----------|------------------------|--------------------
@@ -36,7 +36,7 @@ Dell EMC Oracle RMAN Agent | Oracle RMAN | HERE
 
 ## What is Data Domain Boost Filesystem (BoostFS)?
 
-Should a DD Boost extension not be available for your specific application or workload, Data Domain offers Boost Filesystem (BoostFS). This provides a general file-system interface from within Microsoft Windows or Linux to the DD Boost library, allowing standard backup applications to take advantage of DD Boost features.
+Should an explicit Data Protection Suite extension not be available for your specific application or workload, Data Domain offers Boost Filesystem (BoostFS). This provides a general file-system interface from within Microsoft Windows or Linux to the DD Boost library, allowing standard backup applications to take advantage of DD Boost features.
 
 ### What are the advantages of BoostFS?
 
