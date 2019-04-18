@@ -1,6 +1,6 @@
 ---
 title: Specifying endpoints to avoid being proxied in deployments with government community network connectivity | UKCloud Ltd
-description: 
+description: Provides information regarding proxy environment variables in v3.11 OpenShift clusters deployed with government community network connectivity.
 services: openshift
 author: Ben Bacon
 toc_rootlink: Reference
@@ -8,7 +8,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: 
+toc_title: Specifying endpoints to avoid being proxied in deployments with government community network connectivity
 toc_fullpath: Reference/oshift-ref-no_proxy.md
 toc_mdlink: oshift-ref-no_proxy.md
 ---
