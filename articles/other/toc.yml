@@ -30,6 +30,8 @@
   items:
   - name: Best practice customer guide
     href: other-ref-best-practice-guide.md
+  - name: Big Data & Hadoop Service Proposition
+    href: other-ref-hadoop-proposition.md
   - name: Browser requirements for services on the UKCloud platform
     href: other-ref-browsers.md
   - name: Cloud economics

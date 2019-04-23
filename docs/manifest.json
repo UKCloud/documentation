@@ -7214,6 +7214,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-hadoop-proposition.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-hadoop-proposition.html",
+          "hash": "dcHidk2W84poK3nPPxY2zQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-idam.md",
       "output": {
         ".html": {
@@ -7482,7 +7494,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "KKLbOxB22DGf0XDduvwhaQ=="
+          "hash": "F3WX6U+RKhbLQBTd+70fsw=="
         }
       },
       "is_incremental": false,
@@ -15465,7 +15477,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 341,
+          "total_file_count": 342,
           "skipped_file_count": 0
         }
       }
