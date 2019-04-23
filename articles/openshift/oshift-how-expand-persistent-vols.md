@@ -39,6 +39,15 @@ You must also have access to:
 
 - `oc`, the OpenShift command-line client (CLI). For more information, see OpenShift's [*Get Started with the CLI*](https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html)
 
+If the cluster is v3.11 or newer, the storage class should be enabled for Volume Expansion - you can confirm this as follows:
+```
+$ oc describe storageclass tier2
+Name:                  tier2
+...
+AllowVolumeExpansion:  True
+...
+```
+
 ## Stop any pod which is using the volume.
 
 >[!INFO]
