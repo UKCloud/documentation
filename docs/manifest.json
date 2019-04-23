@@ -2634,6 +2634,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-psn-connection.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-psn-connection.html",
+          "hash": "lbhVyli+yr2G2jpy3DzEPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/connectivity/conn-ref-psn-core-services.md",
       "output": {
         ".html": {
@@ -2699,6 +2711,17 @@
         ".html": {
           "relative_path": "articles/connectivity/conn-sco-glb.html",
           "hash": "sj5sLLvvrR8eI1HpqO0kfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/connectivity/images/conn-psn-connection-compliance.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/connectivity/images/conn-psn-connection-compliance.png"
         }
       },
       "is_incremental": false,
@@ -2787,7 +2810,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/toc.html",
-          "hash": "l9YlqN4ouDbX/OPBBbMECA=="
+          "hash": "iuBRU7j82OyufNlzXyyzJw=="
         }
       },
       "is_incremental": false,
@@ -15432,17 +15455,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 340,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 341,
           "skipped_file_count": 0
         }
       }
