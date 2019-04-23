@@ -77,7 +77,7 @@ In addition, we recommend the installation of the OpenShift CLI on your device.
 
 UKCloud will provision you with an OpenShift Starter Pack, providing you with 32GiB of container resources to deploy your applications.
 
-You can expand the Starter Pack in increments of 16GiB, to a maximum OpenShift environment of 176GiB. These Expansion Packs are deployed by UKCloud via a service request within the UKCloud Portal.
+You can expand your cluster by requesting expansion packs. Expansion packs come in three sizes: small(16GiB 2vCPU), medium(32GiB 4vCPU) and large(64GiB 8vCPU). These Expansion Packs are deployed by UKCloud via a service request within the UKCloud Portal.
 
 ## Using the web console
 
