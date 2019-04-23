@@ -43,9 +43,15 @@ If the cluster is v3.11 or newer, the storage class should be enabled for Volume
 ```
 $ oc describe storageclass tier2
 Name:                  tier2
-...
+IsDefaultClass:        Yes
+Annotations:           storageclass.beta.kubernetes.io/is-default-class=true
+Provisioner:           kubernetes.io/cinder
+Parameters:            availability=nova,type=TIER2
 AllowVolumeExpansion:  True
-...
+MountOptions:          <none>
+ReclaimPolicy:         Delete
+VolumeBindingMode:     Immediate
+Events:                <none>
 ```
 
 ## Stop any pod which is using the volume.
