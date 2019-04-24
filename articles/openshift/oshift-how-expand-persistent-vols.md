@@ -19,7 +19,7 @@ toc_mdlink: oshift-how-expand-persistent-vols.md
 
 ## Overview
 
-In OpenShift clusters running OpenShift v3.11 or later, it is possible to expand existing persistent volumes. It is necessary to shutdown any pod/container using the volume before the expansion can be performed. In earlier versions (such as v3.9) it is necessary to raise a support request so that UKCloud admins can facilitate the expansion.
+In OpenShift clusters running OpenShift v3.11 or later, it is possible to expand existing persistent volumes. It is necessary to scale-down any pod/container using the volume before the expansion can be performed. In earlier versions (such as v3.9) it is necessary to raise a support request so that UKCloud admins can facilitate the expansion.
 
 >[!TIP]
 >To check the version of your cluster, either click "(?)" in the top-right of the web UI and select "About" or run the following while connected in the CLI client:
