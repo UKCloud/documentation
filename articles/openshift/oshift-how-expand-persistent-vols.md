@@ -145,7 +145,7 @@ deploymentconfig.apps.openshift.io/logging-es-data-master-7bqadxxd scaled
 ```
 Once the pod has started, we can check the filesystem has resized correctly by logging into the new pod and checking the mount point for the new size:
 ```
-oc rsh logging-es-data-master-7bqadxxd-1-7rb9x
+$ oc rsh logging-es-data-master-7bqadxxd-1-7rb9x
 sh-4.2$ df -h                                  
 Filesystem                             Size  Used Avail Use% Mounted on
 ...
