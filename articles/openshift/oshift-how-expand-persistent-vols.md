@@ -98,7 +98,7 @@ logging-es-0   Bound     pvc-4ad7258e-12a6-11e9-bc9d-fa163e12bba5   20Gi       R
 $ oc edit pvc logging-es-0
 ...
 ```
-`oc edit` causes the configuration of the object to open in a text editor. Edit the size in the `spec:` section only (do not touch the size listed under `status:`):
+`oc edit` causes the configuration of the object to open in a text editor. Edit the size within the `spec:` array only (do not touch the size listed under `status:`):
 ```
 ...
 spec:
