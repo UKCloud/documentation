@@ -112,7 +112,7 @@ spec:
 ```
 When the edit is completed, the pvc will *continue to show the old size* but will be listed as being in a `FileSystemResizePending` state:
 ```
-oc describe pvc logging-es-0
+$ oc describe pvc logging-es-0
 Name:          logging-es-0
 Namespace:     openshift-logging
 StorageClass:  tier2
