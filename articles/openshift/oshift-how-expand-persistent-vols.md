@@ -76,10 +76,12 @@ logging-kibana                    1          1         1         config
 ```
 >[!INFO] In this example, the `logging-kibana` pod depends on the `logging-es-data-master` pod so it is good practice to also scale this down during the expansion of the persistent volume for `logging-es-data-master`
 ```
-$ oc scale dc logging-kibana --replicas=0
+$ for i in $(oc get dc | awk 'NR>1 {print $1}') ; do oc scale --replicas=0 dc $i; done
 deploymentconfig.apps.openshift.io/logging-kibana scaled
-$ oc scale dc logging-es-data-master-7bqadxxd --replicas=0
 deploymentconfig.apps.openshift.io/logging-es-data-master-7bqadxxd scaled
+
+# For a single deployment, generally:
+oc scale --replicas=0 dc <deployment_name>
 ```
 Confirm that the pod which uses the volume has been Terminated:
 ```
@@ -138,10 +140,12 @@ When the pod which uses the persistent volume is started, the persistent volume 
 
 Since we scaled down the `logging-es-data-master` deployment and its dependent `logging-kibana` in this example, we will scale up both deployments.
 ```
-$ oc scale dc logging-kibana --replicas=1
+$ for i in $(oc get dc | awk 'NR>1 {print $1}') ; do oc scale --replicas=1 dc $i; done
 deploymentconfig.apps.openshift.io/logging-kibana scaled
-$ oc scale dc logging-es-data-master-7bqadxxd --replicas=1
 deploymentconfig.apps.openshift.io/logging-es-data-master-7bqadxxd scaled
+
+# For a single deployment, generally:
+oc scale --replicas=1 dc <deployment_name>
 ```
 Once the pod has started, we can check the filesystem has resized correctly by logging into the new pod and checking the mount point for the new size:
 ```
