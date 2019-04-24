@@ -57,7 +57,7 @@ Events:                <none>
 ## Stop any pod which is using the volume.
 
 >[!INFO]
->In this guide, we will expand the volume for cluster's default elasticsearch deployment which is located in the `openshift-logging` project. The pod using the persistent volume in this example is `logging-es-data-master` and the pvc (Persistent Volume Claim) name is `logging-es-0`. This is a common requirement - a large volume of logs may cause elasticsearch to fail when the logging volume fills up.
+>In this guide, we will expand the volume for a cluster's default Elasticsearch deployment which is located in the `openshift-logging` project. The pod using the persistent volume in this example is named `logging-es-data-master` and the pvc (Persistent Volume Claim) name is `logging-es-0`. This is a common scenario - a high throughput of logs may cause Elasticsearch to enter a CrashLoop when the logging volume fills up.
 >
 >The same procedure can be applied to any other pods which use persistent volumes.
 
