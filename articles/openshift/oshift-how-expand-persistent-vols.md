@@ -132,7 +132,7 @@ Conditions:
 Events:                     <none>
 ```
 
-## Restart the pod(s)
+## Scale-up the pod(s)
 
 When the pod which uses the persistent volume is started, the persistent volume will be resized as it starts.
 
