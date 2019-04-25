@@ -288,6 +288,10 @@ In this Getting Started Guide, you've learned the basics about UKCloud for Micro
 
 - [*Microsoft Azure Stack Portal overview video*](azs-vid-overview.md)
 
+## Related repositories
+
+- [*UKCloud Azure Stack Repository*](https://github.com/UKCloud/AzureStack/tree/master/Users)
+
 ## Glossary
 
 This section provides a glossary of terms specific to UKCloud for Microsoft Azure.

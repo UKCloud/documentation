@@ -78,6 +78,10 @@ While UKCloud for Microsoft Azure is developed by Microsoft, some services will 
 
 The SLA for this service is 99.95%. For further details, review the UKCloud for Microsoft Azure Service Definition.
 
+### Where can I find additional resources to assist me in administering my UKCloud for Microsoft Azure environment?
+
+UKCloud maintains an Azure Stack repository which contains ARM templates, custom script extensions and more. This repository can be found [here](https://github.com/UKCloud/AzureStack/tree/master/Users).
+
 ## Networking
 
 ### How many IP addresses do I get?
