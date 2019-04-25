@@ -290,7 +290,7 @@ In this Getting Started Guide, you've learned the basics about UKCloud for Micro
 
 ## Related repositories
 
-- [*UKCloud Azure Stack Repository*](https://github.com/UKCloud/AzureStack/tree/master/Users)
+- [*UKCloud Azure Stack Repository*](https://github.com/UKCloud/AzureStack)
 
 ## Glossary
 

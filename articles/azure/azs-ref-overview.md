@@ -174,7 +174,7 @@ For more information about UKCloud for Microsoft Azure, see:
 
 ## Related repositories
 
-- [*UKCloud Azure Stack Repository*](https://github.com/UKCloud/AzureStack/tree/master/Users)
+- [*UKCloud Azure Stack Repository*](https://github.com/UKCloud/AzureStack)
 
 ## Feedback
 
