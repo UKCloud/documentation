@@ -145,7 +145,7 @@ For the steps required to do this, see [*How to manage Snapshot Protection for y
 
 The service is suitable for data certified as OFFICIAL and OFFICIAL-SENSITIVE and is available on both UKCloud platforms: Assured OFFICIAL (formerly IL2) and Elevated OFFICIAL (formerly IL3).
 
-### Do large virtual disk (2 TiB+) configurations affect snapshot backups?
+### Do large VMs (2 TiB+) affect snapshot backups?
 
 Yes. Snapshot‑based backups are not supported for large VMs with high change rates, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up.
 
