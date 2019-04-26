@@ -19,7 +19,7 @@ toc_mdlink: oshift-how-expand-persistent-vols.md
 
 ## Overview
 
-In OpenShift clusters running OpenShift v3.11 or later, you can expand existing persistent volumes. You must scale-down any pod or container using the volume before you can perform the expansion. In earlier versions (such as v3.9) you need to raise a Service Request so that UKCloud OpenShift administrators can facilitate the expansion.
+In OpenShift clusters running OpenShift v3.11 or later, you can expand existing persistent volumes. In earlier versions (such as v3.9) you need to raise a Service Request so that UKCloud OpenShift administrators can facilitate the expansion.
 
 > [!TIP]
 > To check the version of your cluster, either click **(?)** in the top-right of the web UI and select **About** or run the following while connected in the CLI client:
@@ -31,6 +31,9 @@ In OpenShift clusters running OpenShift v3.11 or later, you can expand existing 
 > openshift v3.11.51
 > kubernetes v1.11.0+d4cacc0
 > ```
+
+> [!NOTE]
+> You must scale down any pod or container using the volume before you can perform the expansion.
 
 ### Intended audience
 
@@ -58,10 +61,9 @@ Events:                <none>
 
 ## Stop any pod that is using the volume
 
-> [!NOTE]
-> In this article, we'll expand the volume for a cluster's default Elasticsearch deployment, which is located in the `openshift-logging` project. The pod using the persistent volume in this example is named `logging-es-data-master` and the pvc (Persistent Volume Claim) name is `logging-es-0`. This is a common scenario - a high throughput of logs may cause Elasticsearch to enter a CrashLoop when the logging volume fills up.
->
-> You can apply the same procedure to any other pods that use persistent volumes.
+In this article, we'll expand the volume for a cluster's default Elasticsearch deployment, which is located in the `openshift-logging` project. The pod using the persistent volume in this example is named `logging-es-data-master` and the pvc (Persistent Volume Claim) name is `logging-es-0`. This is a common scenario - a high throughput of logs may cause Elasticsearch to enter a CrashLoop when the logging volume fills up.
+
+You can apply the same procedure to any other pods that use persistent volumes.
 
 ```
 $ oc project openshift-logging
@@ -77,7 +79,7 @@ logging-es-data-master-7bqadxxd   1          1         1
 logging-kibana                    1          1         1         config
 ```
 
-In this example, the `logging-kibana` pod depends on the `logging-es-data-master` pod so it's good practice to also scale this down during the expansion of the persistent volume for `logging-es-data-master`.
+In this example, the `logging-kibana` pod depends on the `logging-es-data-master` pod so it's good practice to also scale this down during the expansion of the persistent volume for `logging-es-data-master`:
 
 ```
 $ for i in $(oc get dc | awk 'NR>1 {print $1}') ; do oc scale --replicas=0 dc $i; done
@@ -144,11 +146,11 @@ Conditions:
 Events:                     <none>
 ```
 
-## Scale-up the pod
+## Scale up the pod
 
 When you start the pod that uses the persistent volume, the persistent volume will be resized as it starts.
 
-Since we scaled down the `logging-es-data-master` deployment and its dependent `logging-kibana` in this example, we'll scale up both deployments.
+Since we scaled down the `logging-es-data-master` deployment and its dependent `logging-kibana` in this example, we'll scale up both deployments:
 
 ```
 $ for i in $(oc get dc | awk 'NR>1 {print $1}') ; do oc scale --replicas=1 dc $i; done
