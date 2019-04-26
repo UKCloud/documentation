@@ -38,8 +38,6 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 3. In the *Virtual machines* blade, select the virtual machine that the disk is attached to.
 
-    ![VM Disks button](images/azs-browser-button-vm-disks.png)
-
 4. In the virtual machine's blade, select **Disks**.
 
     ![Disks button within VM](images/azs-browser-button-vm-disks.png)
@@ -57,25 +55,25 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 # [Resizing managed disks](#tab/tabid-1)
 
-![Managed disk size](images/azs-browser-vm-disk-size-managed.png)
+![Managed disk resize](images/azs-browser-vm-disk-size-managed.png)
 
 # [Resizing unmanaged disks](#tab/tabid-2)
 
-![Unmanaged disk size](images/azs-browser-vm-disk-size.png)
+![Unmanaged disk resize](images/azs-browser-vm-disk-size.png)
 
 ***
 
-6. When you're done, click **Save**.
+7. When you're done, click **Save**.
 
     ![VM disks save button](images/azs-browser-vm-disk-save-button.png)
 
-7. You can monitor the progress of the disk resizing by clicking the **Notifications** icon.
+8. You can monitor the progress of the disk resizing by clicking the **Notifications** icon.
 
-   ![Notification showing updating virtual machine disk](images/azs-update-deployment-progress.png)
+   ![Notification showing updating virtual machine disk](images\azsp_createvm_progress.png)
 
 ## Expanding the volume
 
-After expanding the disk, you must go into the OS and expand the volume to actually use the newly allocated space. To do so, follow the steps below:
+After expanding the disk, you may need to go into the OS and expand the volume to actually use the newly allocated space. To do so, follow the steps below:
 
 # [Windows VM](#tab/tabid-a)
 
