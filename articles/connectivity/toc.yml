@@ -50,6 +50,8 @@
     href: conn-ref-psn-connection.md
   - name: PSN flattening
     href: conn-ref-psn-flattening.md
+  - name: Requesting Janet connectivity
+    href: conn-ref-janet.md
   - name: Telecommunications Service Provider engagement
     href: conn-ref-telco-enagagement.md
   - name: Understanding PSN core services

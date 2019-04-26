@@ -32,6 +32,8 @@
     href: ostack-how-retrieve-windows-password.md
   - name: Use OpenStack instance metadata
     href: ostack-how-use-instance-metadata.md
+  - name: Use the OpenStack API with an SSO user
+    href: ostack-how-use-api-sso.md
   - name: Use the OpenStack Command Line Client on Microsoft operating systems
     href: ostack-how-use-cli.md
 - name: Reference

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PowerCLI command for interacting with the vCloud API | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to use the OpenStack API using an SSO enabled user | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="PowerCLI command for interacting with the vCloud API | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to use the OpenStack API using an SSO enabled user | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.41.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-powercli-vcloud.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-how-use-api-sso.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,16 +91,69 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="powercli-command-for-interacting-with-the-vcloud-api">PowerCLI command for interacting with the vCloud API</h1>
+<h1 id="how-to-use-the-openstack-api-using-an-sso-enabled-user">How to use the OpenStack API using an SSO enabled user</h1>
 
-<p>To establish a connection to vCloud Director using PowerShell, use the following command:</p>
-<pre><code>Connect-CIServer -Server &lt;API-URL&gt; -org &lt;ORG-ID&gt; -User &lt;USERNAME&gt; -Password &lt;PASSWORD&gt;
-</code></pre>
-<p>You can find the details for API-URL, ORG-ID, and USERNAME in the UKCloud Portal, under the API section of the top right menu.</p>
+<h2 id="overview">Overview</h2>
+<p>If your OpenStack user account is SSO-enabled, and you want to use the OpenStack API you'll need to make a few changes to your downloaded OpenStack RC file. These changes allow any API calls that you make to be correctly passed to the SSO service.</p>
+<h2 id="downloading-your-rc-file">Downloading your RC file</h2>
+<p>See the <em>Bind your OpenStack credentials</em> section of <a href="ostack-how-use-cli.html"><em>How to use the OpenStack Command Line</em></a> for details on where to get your RC file.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Remove <code>@&lt;ORG-ID&gt;</code> from the username that is listed on the UKCloud Portal API page, as it is not required when attempting to login with this command.</p>
+<p>You will require the v3 version.</p>
 </div>
+<h2 id="modifying-your-rc-file">Modifying your RC file</h2>
+<p>Once you've downloaded your RC file, add the following lines to the bottom of the file:</p>
+<pre><code class="lang-bash">export OS_IDENTITY_PROVIDER=&quot;sso&quot;
+export OS_PROTOCOL=&quot;oidc&quot;
+export OS_AUTH_TYPE=&quot;v3oidcpassword&quot;
+</code></pre>
+<p>You also need to add the following items, substituting the appropriate values from the table below depending on the OpenStack regions you're connecting to:</p>
+<pre><code class="lang-bash">export OS_CLIENT_ID=&quot;&quot;
+export OS_CLIENT_SECRET=&quot;&quot;
+export OS_ACCESS_TOKEN_ENDPOINT=&quot;&quot;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Site</th>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Farnborough</td>
+<td>OS_CLIENT_ID</td>
+<td><code>cni.1.frn00006</code></td>
+</tr>
+<tr>
+<td> </td>
+<td>OS_CLIENT_SECRET</td>
+<td>User defined</td>
+</tr>
+<tr>
+<td> </td>
+<td>OS_ACCESS_TOKEN_ENDPOINT</td>
+<td><code>https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token</code></td>
+</tr>
+<tr>
+<td>Corsham</td>
+<td>OS_CLIENT_ID</td>
+<td><code>cni.1.cor00005</code></td>
+</tr>
+<tr>
+<td> </td>
+<td>OS_CLIENT_SECRET</td>
+<td>User defined</td>
+</tr>
+<tr>
+<td> </td>
+<td>OS_ACCESS_TOKEN_ENDPOINT</td>
+<td><code>https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token</code></td>
+</tr>
+</tbody>
+</table>
+<p>You have now updated your RC file.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 

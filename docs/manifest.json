@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "v1tPFJ/YVNBjksXWt2NW3Q=="
+          "hash": "Sy07A/cqZKmrcM/MkmzSoQ=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-gs.html",
-          "hash": "M6EylcJL3vR3EN2XmnGuUw=="
+          "hash": "hOeqrdDLpXiQNi/nNlbMIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-add-managed-disks-portal.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-add-managed-disks-portal.html",
+          "hash": "nx/T0JnOd8dvMydJjguzcg=="
         }
       },
       "is_incremental": false,
@@ -381,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-overview.html",
-          "hash": "Y4Tpckdt6VC8Qp4oC4r8Fg=="
+          "hash": "dJiXcJw4GtBxm9XtqSNjFw=="
         }
       },
       "is_incremental": false,
@@ -405,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-sco.html",
-          "hash": "gQS4zOioXROLjHvM/9sofg=="
+          "hash": "YbVZ7RcAbZAvZfYgHmq3UA=="
         }
       },
       "is_incremental": false,
@@ -546,6 +558,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-add-vm-disk.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-add-vm-disk.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-app-registrations.png",
       "output": {
         "resource": {
@@ -561,6 +584,50 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-authorize-csp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-button-add-disk.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-button-add-disk.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-button-save-add-data-disk.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-button-save-add-data-disk.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-button-vm-disks-setting.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-button-vm-disks-setting.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-button-vm-disks.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-button-vm-disks.png"
         }
       },
       "is_incremental": false,
@@ -722,6 +789,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-disks.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-disks.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-input-disk-lun.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-input-disk-lun.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-input-disk-name.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-input-disk-name.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/azure/images/azs-browser-networking-create.png",
       "output": {
         "resource": {
@@ -759,6 +859,28 @@
       "output": {
         "resource": {
           "relative_path": "articles/azure/images/azs-browser-new-security.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-notification-disks-complete.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-notification-disks-complete.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/azs-browser-notification-disks-progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/azs-browser-notification-disks-progress.png"
         }
       },
       "is_incremental": false,
@@ -1320,7 +1442,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "NdB1zHENQt89IyFRKj5a6Q=="
+          "hash": "bue1FtphY6FZI3p/M2SvAQ=="
         }
       },
       "is_incremental": false,
@@ -1507,7 +1629,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-install-geodrive2-client.html",
-          "hash": "B0S+vc1xXEXVnJTy/hqVbg=="
+          "hash": "EqwfWDjIQY4ZBB+A2W1JPA=="
         }
       },
       "is_incremental": false,
@@ -2610,6 +2732,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/connectivity/conn-ref-janet.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/connectivity/conn-ref-janet.html",
+          "hash": "TamXo1KGl5DZMQBK+AIxEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/connectivity/conn-ref-network-adaptor.md",
       "output": {
         ".html": {
@@ -2810,7 +2944,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/toc.html",
-          "hash": "iuBRU7j82OyufNlzXyyzJw=="
+          "hash": "8YIj6Kz6TJ0AKuX41NKZxQ=="
         }
       },
       "is_incremental": false,
@@ -4083,6 +4217,42 @@
         ".html": {
           "relative_path": "articles/hpc/toc.html",
           "hash": "/H5p6LpCIaEtog2qqn0U8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/mcbs/mcbs-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/mcbs/mcbs-faq.html",
+          "hash": "mm7TiJVdfOpFRiJA24Yqsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/mcbs/mcbs-gs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/mcbs/mcbs-gs.html",
+          "hash": "o5+CAOR3+BlDYhSrC+PIJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/mcbs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/mcbs/toc.html",
+          "hash": "mh2DkieiYI/g6ng3CQ/oVg=="
         }
       },
       "is_incremental": false,
@@ -5838,11 +6008,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-use-api-sso.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-use-api-sso.html",
+          "hash": "0Kh611P9nP6HmVcopWSReA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-how-use-cli.md",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-use-cli.html",
-          "hash": "t010u2yYFvbeW77eTw/4iQ=="
+          "hash": "PVzj48aWl0IaoN5XQvDgYg=="
         }
       },
       "is_incremental": false,
@@ -5962,7 +6144,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "LFZASuXvroiGKESzEVoFwA=="
+          "hash": "lnaiiwJ7ltu2h7eCmukXlg=="
         }
       },
       "is_incremental": false,
@@ -7398,7 +7580,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
-          "hash": "oRFDy0exijC3ys6NL3BrDg=="
+          "hash": "UnzcmbX78hO54NE9G07y0g=="
         }
       },
       "is_incremental": false,
@@ -14076,7 +14258,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq-snapshot-protection.html",
-          "hash": "PO7Td8nzjLpYEfxVx9oCmg=="
+          "hash": "ImQfcWvh3imCxnMwjNBA7A=="
         }
       },
       "is_incremental": false,
@@ -15036,7 +15218,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-powercli-vcloud.html",
-          "hash": "XH7fusUyTR/BLs6t/TPs2Q=="
+          "hash": "NK0wQRgQHbJCyw+zwxsdsA=="
         }
       },
       "is_incremental": false,
@@ -15324,7 +15506,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-snapshot-protection.html",
-          "hash": "V6TkDqdUtmz5UnxcIRHtyw=="
+          "hash": "xV8r2dxoch1Ct+AeRNsR/Q=="
         }
       },
       "is_incremental": false,
@@ -15477,7 +15659,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 342,
+          "total_file_count": 347,
           "skipped_file_count": 0
         }
       }

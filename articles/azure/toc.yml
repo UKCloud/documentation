@@ -34,6 +34,10 @@
       href: azs-how-retrieve-quota-ps.md
     - name: Use the Azure Stack API
       href: azs-how-use-azure-api.md
+    - name: Add a Managed Disk to a VM
+      items:
+      - name: Add a managed disk to a VM - Portal
+        href: azs-how-add-managed-disks-portal.md
     - name: Configure Environment
       items:
       - name: Configure the Azure Stack user's Azure CLI environment
