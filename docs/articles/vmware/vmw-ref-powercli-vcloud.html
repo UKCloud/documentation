@@ -94,8 +94,9 @@
 <h1 id="powercli-command-for-interacting-with-the-vcloud-api">PowerCLI command for interacting with the vCloud API</h1>
 
 <p>To establish a connection to vCloud Director using PowerShell, use the following command:</p>
-<pre><code>Connect-CIServer -Server api.vcd.portal.ukcloud.com -org &lt;ORG-ID&gt; -User &lt;USERNAME&gt; -Password &lt;PASSWORD&gt;
+<pre><code>Connect-CIServer -Server &lt;API-URL&gt; -org &lt;ORG-ID&gt; -User &lt;USERNAME&gt; -Password &lt;PASSWORD&gt;
 </code></pre>
+<p>The details for API-URL, ORG-ID, and USERNAME can all be found in the UKCloud portal, under the API section of the top right menu.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Remove <code>@&lt;ORG-ID&gt;</code> from the username that is listed on the UKCloud Portal API page, as it is not required when attempting to login with this command.</p>
