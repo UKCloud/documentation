@@ -8,27 +8,27 @@ lastreviewed:
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2:
+toc_sub2: Create a Site-to-Site Connection
 toc_sub3:
 toc_sub4:
 toc_title: Create a site-to-site VPN connection - PowerShell
-toc_fullpath: Users/How To/azs-how-create-S2S-VPN-ps.md
+toc_fullpath: Users/How To/Create a Site-to-Site Connection/azs-how-create-S2S-VPN-ps.md
 toc_mdlink: azs-how-create-S2S-VPN-ps.md
 ---
 
-# How to create a site-to-site connection using the UKCloud Azure Stack portal
+# How to create a site-to-site VPN connection using PowerShell
 
 ## Overview
 
-This guide shows you how to use PowerShell to create a Site-to-Site VPN from your UKCloud Azure Stack environment to public Azure.
+This guide shows you how to use PowerShell to create a site-to-site VPN from your UKCloud for Microsoft Azure environment to public Azure.
 
 ### Intended audience
 
-To complete the steps in this guide, you must have appropriate access to subscriptions in UKCloud Azure Stack and public Azure.
+To complete the steps in this guide, you must have appropriate access to subscriptions in UKCloud for Microsoft Azure and public Azure.
 
 ## Prerequisites
 
-Ensure your PowerShell environment is setup as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md).
+Ensure your PowerShell environment is set up as detailed in [*Configure the Azure Stack user's PowerShell environment*](azs-how-configure-powershell-users.md).
 
 ## Declare variables
 
@@ -57,7 +57,7 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$AzureGWConnectionName | Name of virtual network gateway connection to create in public Azure                       | <form oninput="result.value=AzureGWConnectionName.value" id="AzureGWConnectionName" style="display: inline;" ><input  type="text" id="AzureGWConnectionName" name="AzureGWConnectionName" style="display: inline;" placeholder="S2S-Connection"/></form> |
 | \$SharedKey             | Encryption key to use for VPN connection                                                   | <form oninput="result.value=SharedKey.value" id="SharedKey" style="display: inline;" ><input  type="text" id="SharedKey" name="SharedKey" style="display: inline;" placeholder="Password123!"/></form> |
 
-## Create Site-to-Site VPN connection from Azure Stack to Azure
+## Create site-to-site VPN connection from Azure Stack to Azure
 
 From your PowerShell window:
 
