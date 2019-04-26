@@ -3706,7 +3706,7 @@ None
 #### Example request (Curl)
 
 ```bash
-curl -b /tmp/cookies.txt -X GET -H "Accept: application/json" -k https://portal.skyscapecloud.com/api/billing/billing-csv?period=2018-01-&org_id=xx-xx-xx-xxxxxxx
+curl -b /tmp/cookies.txt -X GET -H "Accept: application/json" -k https://portal.skyscapecloud.com/api/billing/billing-csv?period=2018-01&org_id=xx-xx-xx-xxxxxxx
 ```
 
 #### Example request (Ruby)
