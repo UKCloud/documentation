@@ -3648,7 +3648,7 @@ curl -b /tmp/cookies.txt -X GET -H "Accept: application/json" -k https://portal.
 #### Example request (Ruby)
 
 ```
-resp = conn.get("/api/billing/cloud-storage-report?date=#{date}&org_id=#{org-id}") { |req| req.headers['cookie'] = cookies }
+resp = conn.get("/api/billing/cloud-storage-report?date=#{date}&org_id=#{org_id}") { |req| req.headers['cookie'] = cookies }
 ```
 
 ### Response
@@ -3677,6 +3677,119 @@ Returns a CSV report for the whole month specified including the date provided.
   Service Level | Grade of service charged
   Consumption (GB) | Average storage used over the month in gigabytes
   Cost | Amount that would be charged if this were for a whole month (in pounds)
+
+## GET /api/billing/billing-csv
+
+Returns a CSV containing billing data for the period given.
+
+### API version
+
+v1
+
+### Request
+
+#### Request body
+
+None
+
+#### Parameters
+
+None
+
+#### URI parameters
+
+  Parameter name | Description | Type | Mandatory (Default)
+  ---------------|-------------|------|--------------------
+  period | The date for which you require the monthly report in the format YYYY-MM | String | Y
+  org_id | The ID of the compute service for which you want the billing report | String | Y
+
+#### Example request (Curl)
+
+```bash
+curl -b /tmp/cookies.txt -X GET -H "Accept: application/json" -k https://portal.skyscapecloud.com/api/billing/billing-csv?period=2018-01-&org_id=xx-xx-xx-xxxxxxx
+```
+
+#### Example request (Ruby)
+
+```
+resp = conn.get("/api/billing/billing-csv?period=#{period}&org_id=#{org_id}") { |req| req.headers['cookie'] = cookies }
+```
+
+### Response
+
+#### Successful HTTP response
+
+200 OK --- The request was successful</br>Content-Type (text/csv)
+
+#### Unsuccessful HTTP response
+
+400 Bad Request
+
+401 Unauthorized --- The user could not be authenticated
+
+#### Response body
+
+Returns a CSV report for the period specified.
+
+
+  CSV Header                        | Description
+  ----------------------------------|------------
+  EventDate                         | Date of this event
+  ProjectID                         | ID of the project this VM is assigned to
+  vAPP                              | The vApp that this VM is running in
+  vDC                               | The vDC that this VM is running in
+  ResourceName                      | Friendly name of this resource
+  ResourceId                        | Unique URN for this VM
+  OSID                              | The OS this VM is running
+  Service                           | Service Type of this VM
+  Metadata                          | JSONB object containing service metadata
+  StartTime                         | Start time that this row is valid from
+  EndTime                           | End time that this row is valid to
+  PowerState                        | VM Power status
+  UsageMinsWithinPeriod             | How many minutes within this period the VM was in use for
+  UsageHoursWithinPeriod            | How many hours within this period the VM was in use for
+  ComputeMachineType                | Size of the VM
+  PowerType                         | Power type of the VM
+  SecurityDomain                    | Security domain this VM is running in
+  Compute vCPU                      | Configured vCPU count
+  ComputeMemory                     | Configured memory in MB
+  ComputePricePerHour               | Hourly price of the compute section of this VM
+  ComputeTotalPrice                 | Price of the compute section of this VM
+  GPUType                           | Configured GPU type
+  GPUCount                          | Configured GPU count
+  GPUPricePerHour                   | Hourly price of the GPU section of this VM
+  GPUTotalPrice                     | Price of the GPU section of this VM
+  Tier1StorageUsed                  | Amount of Tier 1 storage used in GB
+  Tier1SnapshotStorageUsed          | Amount of Tier 1 snapshot storage used in GB
+  Tier1StorageIncluded              | Amount of Tier 1 storage included with this VM in GB
+  Tier1StorageChargeable            | Amount of Tier 1 storage outside the included amount in GB
+  Tier1StoragePricePerHour          | Hourly price of the Tier 1 storage for this VM
+  Tier1StoragePrice                 | Price of the Tier 1 storage for this VM
+  Tier2StorageUsed                  | Amount of Tier 2 storage used in GB
+  Tier2SnapshotStorageUsed          | Amount of Tier 2 snapshot storage used in GB
+  Tier2StorageIncluded              | Amount of Tier 2 storage included with this VM in GB
+  Tier2StorageChargeable            | Amount of Tier 2 storage outside the included amount in GB
+  Tier2StoragePricePerHour          | Hourly price of the Tier 2 storage for this VM
+  Tier2StoragePrice                 | Price of the Tier 2 storage for this VM
+  Geo-resilientStorageUsed          | Amount of Geo-Resilient storage used in GB
+  Geo-resilientSnapshotStorageUsed  | Amount of Geo-Resilient snapshot storage used in GB
+  Geo-resilientStorageIncluded      | Amount of Geo-Resilient storage included with this VM in GB
+  Geo-resilientStorageChargeable    | Amount of Geo-Resilient storage outside the included amount in GB
+  Geo-resilientStoragePricePerHour  | Hourly price of the Geo-Resilient storage for this VM
+  Geo-resilientStoragePrice         | Price of the Geo-Resilient storage for this VM
+  Protection Type                   | Protection Type of this VM
+  ComputeProtectionPerHour          | Hourly price of Compute protection
+  ComputeProtectionTotalPrice       | Price of Compute protection
+  Tier1ProtectionPricePerHour       | Hourly price of Tier 1 storage protection
+  Tier2ProtectionPricePerHour       | Hourly price of Tier 2 storage protection
+  Geo-resilientProtectionPerHour    | Hourly price of Geo-Resilient storage protection
+  Tier1ProtectionTotalPrice         | Price of Tier 1 storage protection
+  Tier2ProtectionTotalPrice         | Price of Tier 2 storage protection
+  Geo-resilientProtectionTotalPrice | Price of Geo-Resilient storage protection
+  ProtectionTotalPrice              | Total price of all protections on this VM
+  LicencePricePerHour               | Hourly price of any licenses attached to this VM
+  LicenceTotalPrice                 | Price of any licenses attached to this VM
+  TotalPrice                        | Total price of this VM
 
 ## Further information
 
