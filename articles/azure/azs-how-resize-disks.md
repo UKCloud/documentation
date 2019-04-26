@@ -1,6 +1,6 @@
 ---
 title: How to resize virtual machine disks using the UKCloud Azure Stack portal | UKCloud Ltd
-description: Provides help for resizing virtual machine disks using the portal on UKCloud for Microsoft Azure
+description: Provides help for resizing virtual machine disks (managed and unmanaged) using the portal on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel
 reviewer: BaileyLawson
@@ -8,10 +8,10 @@ lastreviewed: 15/04/2019 11:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Resize disks
+toc_sub2: Resize Disks
 toc_sub3:
 toc_sub4:
-toc_title: Resize managed and unmanaged disks - portal
+toc_title: Resize virtual machine disks - portal
 toc_fullpath: Users/How To/azs-how-resize-disks.md
 toc_mdlink: azs-how-resize-disks.md
 ---
@@ -20,9 +20,9 @@ toc_mdlink: azs-how-resize-disks.md
 
 ## Overview
 
-The UKCloud Azure Stack portal allows users to resize VM disks. This article shows you how to resize disks that are mounted to a VM, and will work for both managed and unmanaged disks.
+The UKCloud Azure Stack portal allows you to resize virtual machine (VM) disks. This article shows you how to resize disks that are mounted to a VM, and will work for both managed and unmanaged disks.
 
-## Prerequisites
+### Intended audience
 
 To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.
 
@@ -46,14 +46,14 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 5. In the *Disks* blade, select the disk you would like to resize.
 
-    >[!Note]
-    >Disks can only be resized when they are unattached from the VM or the virtual machine is deallocated.
+    > [!Note]
+    > Disks can only be resized when they are unattached from the VM or the virtual machine is deallocated.
 
-6. In the disk's blade, input the desired size of the disk in GiB in the **Size** field.
+6. In the disk's blade, enter the desired size of the disk in GiB in the **Size** field.
 
-    >[!Note]
+    > [!Note]
     > - Disks can only be resized to a larger size.
-    > - Although the process is the same for both managed and unmanaged disks, the two blades look slightly different. Examples for both have been included below.
+    > - Although the process is the same for both managed and unmanaged disks, the two blades look slightly different. Examples for both are provided below.
 
 # [Resizing managed disks](#tab/tabid-1)
 
@@ -65,7 +65,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ***
 
-6. Click **Save** to commit the changes.
+6. When you're done, click **Save**.
 
     ![VM disks save button](images/azs-browser-vm-disk-save-button.png)
 
@@ -75,7 +75,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ## Expanding the volume
 
-After expanding the disk, you must go into the OS and expand the volume to actually use the newly allocated space. To do so, follow these steps:
+After expanding the disk, you must go into the OS and expand the volume to actually use the newly allocated space. To do so, follow the steps below:
 
 # [Windows VM](#tab/tabid-a)
 
@@ -83,11 +83,17 @@ After expanding the disk, you must go into the OS and expand the volume to actua
 
 2. Open a command prompt and type `diskpart`.
 
-3. In the `DISKPART` prompt, type `list volume`. Take note of the volume you want to extend.
+3. At the `DISKPART` prompt, type `list volume`.
 
-4. In the `DISKPART` prompt, type `select volume <volumenumber>`. This selects the volume that you want to extend into unpartitioned empty space on the same disk.
+    Take note of the volume you want to extend.
 
-5. In the `DISKPART` prompt, type `extend`. This extends the selected volume to fill the added space on the disk.
+4. At the `DISKPART` prompt, type `select volume <volumenumber>`.
+
+    This selects the volume that you want to extend into unpartitioned empty space on the same disk.
+
+5. At the `DISKPART` prompt, type `extend`.
+
+    This extends the selected volume to fill the added space on the disk.
 
 # [Linux VM](#tab/tabid-b)
 
