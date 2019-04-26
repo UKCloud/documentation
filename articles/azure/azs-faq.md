@@ -80,7 +80,7 @@ The SLA for this service is 99.95%. For further details, review the UKCloud for 
 
 ### Where can I find additional resources to assist me in administering my UKCloud for Microsoft Azure environment?
 
-UKCloud maintains an Azure Stack repository which contains ARM templates, custom script extensions and more. This repository can be found [here](https://github.com/UKCloud/AzureStack).
+UKCloud maintains an Azure Stack repository, which contains ARM templates, custom script extensions and more. You can find this repository found [here](https://github.com/UKCloud/AzureStack).
 
 ## Networking
 
