@@ -4,7 +4,7 @@ description: Frequently asked questions for UKCloud for Microsoft Azure
 services: azure-stack
 author: Matt Warner
 reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+lastreviewed: 26/04/2019 11:00:00
 
 toc_rootlink: Users
 toc_sub1: FAQs
