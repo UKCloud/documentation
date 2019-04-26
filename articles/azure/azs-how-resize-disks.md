@@ -40,7 +40,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 4. In the virtual machine's blade, select **Disks**.
 
-    ![Disks button within VM](images\azs-browser-vm-menu-disks-button.png)
+    ![Disks button within VM](images/azs-browser-vm-menu-disks-button.png)
 
 5. In the *Disks* blade, select the disk you would like to resize.
 
