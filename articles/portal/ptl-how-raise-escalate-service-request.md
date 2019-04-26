@@ -3,6 +3,8 @@ title: How to raise and escalate incidents and service requests | UKCloud Ltd
 description: Provides an overview of the process for raising incidents and service requests, as well as how to escalate them if necessary
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
 
 toc_rootlink: How To
 toc_sub1:

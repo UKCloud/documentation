@@ -3,6 +3,8 @@ title: Storage policies | UKCloud Ltd
 description: Reference to the latest policies around vCloud Director Storage
 services: vmware
 author: Matt Warner
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

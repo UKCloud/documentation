@@ -3,6 +3,8 @@ title: How to view login information | UKCloud Ltd
 description: Explains how to access a report of who has logged into your environment
 services: portal
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 16:13:38
 
 toc_rootlink: How To
 toc_sub1:

@@ -3,6 +3,8 @@ title: How to publish application routes to multiple networks | UKCloud Ltd
 description: Describes the process and commands required to publish routes to different external networks available from an OpenShift cluster.
 services: openshift
 author: Steve Mulholland
+reviewer:
+lastreviewed: 21/12/2018 13:49:11
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

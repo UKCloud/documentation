@@ -3,6 +3,8 @@ title: How to upgrade your edge gateway | UKCloud Ltd
 description: This article explains how to check the current version of your edge gateway and upgrade to the latest version
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: how to
 toc_sub1: 
 toc_sub2:

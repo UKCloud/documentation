@@ -3,6 +3,8 @@ title: Jumpstart FAQs | UKCloud Ltd
 description: Frequently asked questions about UKCloud's Jumpstart service
 services: other
 author: Vrush Sumanoharan
+reviewer:
+lastreviewed: 15/02/2019 11:57:34
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:

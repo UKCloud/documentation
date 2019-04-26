@@ -3,6 +3,8 @@ title: Virtual machine data recovery options | UKCloud Ltd
 description: Provides an overview of the data recovery options available for your VMs
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

@@ -3,6 +3,8 @@ title: What Intrusion Detection System (IDS) does UKCloud provide? | UKCloud Ltd
 description: Describes the IDS capability provided on the UKCloud platform
 services: connectivity
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 18:37:23
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

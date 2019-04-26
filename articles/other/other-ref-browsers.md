@@ -3,6 +3,8 @@ title: Browser requirements for services on the UKCloud platform | UKCloud Ltd
 description: Provides information about browser requirements for various services on the UKCloud platform
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

@@ -46,6 +46,8 @@
     href: conn-ref-ddos-protection.md
   - name: PSN Assured - permitted standard ports
     href: conn-ref-psn-permitted-ports.md
+  - name: PSN connection compliance
+    href: conn-ref-psn-connection.md
   - name: PSN flattening
     href: conn-ref-psn-flattening.md
   - name: Telecommunications Service Provider engagement

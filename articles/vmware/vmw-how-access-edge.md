@@ -3,6 +3,8 @@ title: How to access edge gateway settings | UKCloud Ltd
 description: Shows how to access your edge gateway settings within vCloud Director
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 21/09/2018 14:45:15
 
 toc_rootlink: How To
 toc_sub1:

@@ -3,6 +3,8 @@ title: Cloud GPU FAQs | UKCloud Ltd
 description: Frequently asked questions for Cloud GPU
 services: gpu
 author: Matt Warner
+reviewer:
+lastreviewed: 19/07/2018 17:56:05
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -19,11 +21,24 @@ toc_mdlink: gpu-faq.md
 
 ### What is Cloud GPU?
 
-It is a supplementary Graphics Processing Unit (GPU) option that enables customers to meet the specialist compute requirements of certain advanced applications. This falls into two categories:
+Cloud GPU is a supplementary Graphics Processing Unit (GPU) option that enables customers to meet the specialist compute requirements of certain advanced applications. This falls into two categories:
 
 - Visualisation workloads - taking advantage of the traditional use of GPU for powerful desktop/server applications which use graphically intensive content, such as computer-aided design (CAD), simulations and video encoding, rendering or streaming.
 
 - Computational workloads - The parallel nature of general purpose Graphics Processing Unit (GPGPU) cores enables initiatives such as deep learning, analytics and large-scale mathematical modelling.
+
+### What can the service help you achieve?
+
+Cloud GPU enables UKCloud customers to supplement their cloud compute resources with GPU capabilities:
+
+- Improve the speed at which you can gain insight into your data. Cloud GPU’s massively parallelised capabilities enable you to process large data sets at a much faster rate, allowing for greater operational efficiency.
+
+- Bring GPU-reliant applications to the cloud. Applications that have previously struggled to transition to the cloud because of GPU requirements can now be moved — improving manageability of your data and applications, while increasing collaboration opportunities.
+
+- Improve access to your most important applications. Cloud GPU lets you centralise your applications so that staff can access the tools they need, from anywhere, on commodity devices.
+
+- Streamline compute resources. Offload processing power to GPUs, reducing the CPU footprint needed to run applications.
+
 
 ### What technology does Cloud GPU use?
 
@@ -45,7 +60,7 @@ Yes. To take advantage of the Cloud GPU service, you must also have UKCloud for 
 
 Yes. VMs utilising the NVIDIA GRID solution must use the GRID driver matching the driver installed on the vSphere hosts (currently 385.41). This driver can be downloaded from the [UKCloud Knowledge Centre](https://portal.skyscapecloud.com/support/knowledge_centre/76dcd09f-3bd4-411f-8343-9fb21be0ceb1).
 
-### Which Compute platforms support Cloud GPU?
+### Which compute services support Cloud GPU?
 
 Currently, Cloud GPU only supports environments provisioned on UKCloud for VMware in regions 5 and 6. There are future plans to enable the service on UKCloud for OpenStack and High Performance Compute.
 
@@ -63,7 +78,7 @@ You can find the latest information regarding CUDA on the NVIDIA website [here](
 
 ### What is the SLA?
 
-The SLA for Cloud GPU is 99.90%. Full details regarding the SLA can be found on page 6 of the *Cloud GPU Service Definition* ([Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/619924782710146-service-definition-document-2018-05-21-1304.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/906087077560438-service-definition-document-2018-05-21-1303.pdf)).
+The SLA for Cloud GPU is 99.90%. You can find full details regarding the SLA in [*SLA definition*](../other/other-ref-sla-definition.md).
 
 ### What happens if the card fails?
 

@@ -3,6 +3,8 @@ title: How to deploy and configure the Azure Stack Development Kit | UKCloud Ltd
 description: Deploy and configure the Azure Stack Development Kit (ASDK)
 services: azure-stack
 author: Paul Brown
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Operators
 toc_sub1: How To

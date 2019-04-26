@@ -3,6 +3,8 @@ title: File naming conventions for UKCloud Knowledge Centre | UKCloud Ltd
 description: Describes how to name files for UKCloud Knowledge Centre
 services: docfx
 author: Chris Black
+reviewer:
+lastreviewed: 05/06/2018 11:14:36
 
 toc_rootlink: Support Docs
 toc_sub1: DocFX

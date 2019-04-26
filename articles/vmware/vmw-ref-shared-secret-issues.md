@@ -3,6 +3,8 @@ title: Shared Secret Length Issues IPSec VPN - Watchguard/Sonicwall | UKCloud Lt
 description: Outlines a potential issue and it's resolution for using an IPsec VPN tunnel with Watchguard or Sonicwall devices
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

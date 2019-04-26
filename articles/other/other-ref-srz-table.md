@@ -3,6 +3,8 @@ title: Sites, regions and zones map and reference table | UKCloud Ltd
 description: A network diagram map and reference table to assist you in identifying the different sites and the regions and zones within them
 services: other
 author: Matt Warner
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

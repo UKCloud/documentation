@@ -3,6 +3,8 @@ title: How to manage permissions for vCloud Director | UKCloud Ltd
 description: Shows how to manage and adjust permissions and roles for vCloud Director within the UKCloud Portal
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

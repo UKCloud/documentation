@@ -1,11 +1,33 @@
+<#
+    .SYNOPSIS
+        Creates a CSV file containing details of each article in the knowledge center.
+
+    .DESCRIPTION
+        Creates a CSV file containing details of each article in the knowledge center. Returns product, article title, category, link,
+        last modified date and creation date.
+
+    .PARAMETER DocumentationFolder
+        The folder of the documentation repository.
+
+    .PARAMETER DestinationFolder
+        The folder in which to store the output CSV.
+
+    .EXAMPLE
+        Get-KCArticleReport.ps1 -DocumentationFolder "C:\documentation" -DestinationFolder "C:\temp"
+
+    .EXAMPLE
+        Get-KCArticleReport.ps1 -DocumentationFolder <repository folder path> -DestinationFolder <csv output folder>
+
+#>
+
 [CmdletBinding()]
 param (
     [Parameter(Mandatory = $true)]
-    [ValidateScript({ if (-not (Test-Path $_)) { throw "Folder path does not exist" } else { if (-not (Test-Path -Path "$_\articles")) { throw "Folder specified is not the documentation folder" } else { $true } } })]
+    [ValidateScript({ if (-not (Test-Path -Path $_)) { throw "Folder path does not exist" } else { if (-not (Test-Path -Path "$_\articles")) { throw "Folder specified is not the documentation folder" } else { $true } } })]
     [String]
     $DocumentationFolder,
     [Parameter(Mandatory = $true)]
-    [ValidateScript({ if (-not (Test-Path $_)) { New-item -ItemType Directory -Path $_ -Force } else { $true } })]
+    [ValidateScript({ if (-not (Test-Path -Path $_)) { New-item -ItemType Directory -Path $_ -Force } else { $true } })]
     [String]
     $DestinationFolder
 )
@@ -63,12 +85,13 @@ foreach ($Article in $Articles) {
         Title        = ($Content | Select-String -Pattern "toc_title") -replace "toc_title: ", ""
         Category     = $TypeTable[((($Article.Name -split "-")[1]).split("."))[0]]
         Link         = $UrlPrefix + ($Article.DirectoryName).split("\")[-1] + "/" + ($Article.Name -replace ".md", ".html")
-        LastModified = [DateTime](git -C $DocumentationFolder log -1 --format="%aD" $Article.FullName)
+        LastModified = [String](Get-Date -Date (git -C $DocumentationFolder log -1 --format="%aD" $Article.FullName) -Format "dd/MM/yyyy HH:mm:ss")
+        CreationDate = [String](Get-Date -Date (git -C $DocumentationFolder log --follow --format="%aD" -- $Article.FullName | tail -1) -Format "dd/MM/yyyy HH:mm:ss")
     }
     $InfoArray += $ArticleInfo
 }
 
-# Export a CSV file
+# Export CSV file
 $CsvFilePath = $DestinationFolder.TrimEnd("\") + "\" + "KCArticleReport-" + (Get-Date -Format dd-MM-yyyy) + ".csv"
 $InfoArray | Sort-Object -Property Product, Category, Title | Export-Csv -Path $CsvFilePath -NoTypeInformation
 

@@ -3,6 +3,8 @@ title: How to remove access rights from Single Sign-On users | UKCloud Ltd
 description: Describes the process for removing access from Single Sign-On (SSO) users
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/12/2018 11:11:23
 
 toc_rootlink: How To
 toc_sub1: 

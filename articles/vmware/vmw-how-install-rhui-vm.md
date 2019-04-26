@@ -3,6 +3,8 @@ title: How to install Red Hat Update Infrastructure on an existing VMware virtua
 description: Shows you how to update your existing hosts to target UKCloud's approved Red Hat Update Infrastructure (RHUI)
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 17/08/2018 13:00:56
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

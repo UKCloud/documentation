@@ -3,6 +3,8 @@ title: How to access UKCloud services from Walled Garden and Secure Remote Acces
 description: Shows how to access UKCloud services (such as WSUS, KMS or Red Hat Update Service) from Secure Remote Access or a Cross Domain Security Zone Walled Garden solution
 services: cdsz
 author: Sue Highmoor
+reviewer:
+lastreviewed: 17/07/2018 10:43:00
 
 toc_rootlink: How To
 toc_sub1:

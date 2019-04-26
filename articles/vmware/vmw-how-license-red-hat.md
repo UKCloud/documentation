@@ -3,6 +3,8 @@ title: How to bring your own Red Hat licensing | UKCloud Ltd
 description: Outlines the options for Red Hat licencing and how to use your own licencing
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:

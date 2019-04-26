@@ -3,6 +3,8 @@ title: Data centre advance notice requirements | UKCloud Ltd
 description: Referencing the Data Centre's advanced notice requirements
 services: other
 author: Matt Warner
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

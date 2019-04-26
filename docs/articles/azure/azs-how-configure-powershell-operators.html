@@ -8,7 +8,7 @@
     <title>How to configure the Azure Stack operator's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure the Azure Stack operator's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="generator" content="docfx 2.41.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../..//styles/assets/logo.png" srcset="../..//styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -101,7 +101,7 @@
 <div class="NOTE">
 <h5>Note</h5>
 <p>To check your version, run <code>$PSVersionTable.PSVersion</code> and compare the &quot;Major&quot; version.</p>
-<p>For &quot;legacy&quot; Operating Systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the <a href="https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure">Windows Management Framework 5.1</a></p>
+<p>For &quot;legacy&quot; operating systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the <a href="https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure">Windows Management Framework 5.1</a></p>
 </div>
 </li>
 </ul>
@@ -114,14 +114,14 @@ Set-ExecutionPolicy RemoteSigned
 Set-PSRepository -Name &quot;PSGallery&quot; -InstallationPolicy Trusted
 
 # Uninstall existing versions of Azure/Azure Stack PowerShell
-Get-Module -ListAvailable | Where-Object { $_.Name -like &quot;Azure*&quot; -or $_.Name -like &quot;Azs*&quot; } | Uninstall-Module -Force -Verbose
+Get-Module -Name Azs.*, Azure* -ListAvailable | Uninstall-Module -Force -Verbose
 
 # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
 Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Verbose
-Install-Module -Name AzureStack -RequiredVersion 1.7.0 -Verbose
+Install-Module -Name AzureStack -RequiredVersion 1.7.1 -Verbose
 </code></pre>
 <h2 id="configure-the-operator-environment-and-sign-in-to-azure-stack">Configure the operator environment and sign in to Azure Stack</h2>
-<p>UKCloud FRN00006 Region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the  $AzsUsername and  $AzsPassword values)</p>
+<p>UKCloud <strong>frn00006</strong> region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the <code>$AzsUsername</code> and <code>$AzsPassword</code> values)</p>
 <h3 id="azure-active-directory-aad-based-deployments">Azure Active Directory (AAD) based deployments</h3>
 <pre><code class="lang-powershell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned

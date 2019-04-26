@@ -3,6 +3,8 @@ title: Mass Transfer Facility - NAS Service Scope | UKCloud Ltd
 description: Outlines how you can use your NAS to move data into your compute environment
 services: enablement
 author: Steve Hall
+reviewer:
+lastreviewed: 23/07/2018 11:55:40
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:

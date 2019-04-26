@@ -3,6 +3,8 @@ title: Getting Started Guide for Disaster Recovery as a Service | UKCloud Ltd
 description: Provides information to get up and running with Disaster Recovery as a Service
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 17:56:05
 
 toc_rootlink: Getting Started
 toc_sub1:

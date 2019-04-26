@@ -3,6 +3,8 @@ title: How to configure a Distributed Firewall | UKCloud Ltd
 description: Describes how to configure a Distributed Firewall (DFW), available as an advanced networking option with UKCloud for VMware
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 21/12/2018 15:47:05
 
 toc_rootlink: How To
 toc_sub1: 

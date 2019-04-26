@@ -3,6 +3,8 @@ title: Global load balancing Service Scope | UKCloud Ltd
 description: Outlines important details regarding the Global Load Balancing service 
 services: Connectivity
 author: Steve Hall
+reviewer:
+lastreviewed: 20/07/2018 18:37:23
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:

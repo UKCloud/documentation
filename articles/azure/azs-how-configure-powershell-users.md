@@ -3,6 +3,8 @@ title: How to configure the Azure Stack user's PowerShell environment | Based on
 description: Configure the Azure Stack user's PowerShell environment
 services: azure-stack
 author: Chris Black
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -27,7 +29,7 @@ Prerequisites from a Windows-based external client.
   > [!NOTE]
   > To check your version, run `$PSVersionTable.PSVersion` and compare the "Major" version.
   >
-  > For "legacy" Operating Systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
+  > For "legacy" operating systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the [Windows Management Framework 5.1](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure)
 
 ### Install Azure Stack PowerShell
 
@@ -40,16 +42,16 @@ Prerequisites from a Windows-based external client.
   Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
   
   # Uninstall existing versions of Azure/Azure Stack PowerShell
-  Get-Module -ListAvailable | Where-Object { $_.Name -like "Azure*" -or $_.Name -like "Azs*" } | Uninstall-Module -Force -Verbose
+  Get-Module -Name Azs.*, Azure* -ListAvailable | Uninstall-Module -Force -Verbose
   
   # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
   Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Verbose
-  Install-Module -Name AzureStack -RequiredVersion 1.7.0 -Verbose
+  Install-Module -Name AzureStack -RequiredVersion 1.7.1 -Verbose
   ```
 
 ## Configure the user environment and sign in to Azure Stack
 
-UKCloud FRN00006 Region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the  $AzsUsername and  $AzsPassword values)
+UKCloud **frn00006** region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the `$AzsUsername` and `$AzsPassword` values)
 
 ### Azure Active Directory (AAD) based deployments
 

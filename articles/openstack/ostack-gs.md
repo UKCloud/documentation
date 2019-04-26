@@ -3,6 +3,8 @@ title: Getting Started Guide for UKCloud for OpenStack | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:

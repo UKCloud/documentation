@@ -3,6 +3,8 @@ title: Getting Started Guide for the UKCloud Portal | UKCloud Ltd
 description: Provides information to get up and running with the UKCloud Portal
 services: portal
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:

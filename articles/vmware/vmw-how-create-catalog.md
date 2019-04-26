@@ -3,6 +3,8 @@ title: How to create a catalog | UKCloud Ltd
 description: Shows you how to create a catalog within vCloud Director
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 
 toc_rootlink: How To
 toc_sub1:

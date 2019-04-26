@@ -3,6 +3,8 @@ title: How to switch to the vCloud Director web console from the tenant portal |
 description: Describes how to switch to the vCloud Director web console to perform tasks that are not possible in the tenant portal
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 21/09/2018 16:53:03
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
