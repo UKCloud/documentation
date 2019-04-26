@@ -216,7 +216,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 - The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.
 
-- If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), you ware responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of your CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where you have not provided the required evidence.
+- If access is required over government community networks (PSN, HSCN, Janet or RLI), you are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of your CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where you have not provided the required evidence.
 
 - Management and administration of layers above the hypervisor (OS patching, application performance monitoring, user administration).
 
