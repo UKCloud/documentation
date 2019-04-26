@@ -112,7 +112,7 @@ Yes. This is offered as an option. You can also deploy your own load balancer.
 
 ### How much storage do I get?
 
-You'll get 4TiB unmanaged storage, which will be shared between blob, table and queue storage. You will also get 2 TiB of managed disk storage.
+You'll get 4TiB unmanaged storage, which will be shared between blob, table and queue storage types. You will also get 2 TiB of managed disk storage.
 
 ### Is storage persistent?
 
