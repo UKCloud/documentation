@@ -21,7 +21,7 @@ To establish a connection to vCloud Director using PowerShell, use the following
 
     Connect-CIServer -Server <API-URL> -org <ORG-ID> -User <USERNAME> -Password <PASSWORD>
 
-The details for API-URL, ORG-ID, and USERNAME can all be found in the UKCloud portal, under the API section of the top right menu.
+You can find the details for API-URL, ORG-ID, and USERNAME in the UKCloud Portal, under the API section of the top right menu.
 
 > [!NOTE]
 > Remove `@<ORG-ID>` from the username that is listed on the UKCloud Portal API page, as it is not required when attempting to login with this command.
