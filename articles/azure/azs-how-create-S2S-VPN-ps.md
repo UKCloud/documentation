@@ -57,7 +57,7 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$AzureGWConnectionName | Name of virtual network gateway connection to create in public Azure                       | <form oninput="result.value=AzureGWConnectionName.value" id="AzureGWConnectionName" style="display: inline;" ><input  type="text" id="AzureGWConnectionName" name="AzureGWConnectionName" style="display: inline;" placeholder="S2S-Connection"/></form> |
 | \$SharedKey             | Encryption key to use for VPN connection                                                   | <form oninput="result.value=SharedKey.value" id="SharedKey" style="display: inline;" ><input  type="text" id="SharedKey" name="SharedKey" style="display: inline;" placeholder="Password123!"/></form> |
 
-## Create site-to-site VPN connection from Azure Stack to Azure
+## Create site-to-site VPN connection from Azure Stack to public Azure
 
 From your PowerShell window:
 
@@ -181,7 +181,7 @@ $AzsLocalGW.GatewayIpAddress = $AzurePublicIP.IpAddress
 Set-AzureRmLocalNetworkGateway -LocalNetworkGateway $AzsLocalGW
 </code></pre>
 
-After a short amount of time, the connection between Azure and Azure Stack should change to **Connected**.
+After a short amount of time, the connection between Azure Stack and public Azure should change to **Connected**.
 
 ## Feedback
 
