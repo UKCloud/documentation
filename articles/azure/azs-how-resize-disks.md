@@ -69,7 +69,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 8. You can monitor the progress of the disk resizing by clicking the **Notifications** icon.
 
-   ![Notification showing updating virtual machine disk](images\azsp_createvm_progress.png)
+   ![Notification showing updating virtual machine disk](images/azsp_createvm_progress.png)
 
 ## Expanding the volume
 
