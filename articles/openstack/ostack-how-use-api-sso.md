@@ -22,10 +22,10 @@ If your OpenStack user account is SSO-enabled, and you want to use the OpenStack
 
 ## Downloading your RC file
 
-Please see the Bind your OpenStack credentials section of [How to use the OpenStack Command Line](ostack-how-use-cli.md) on where to get your RC file. 
+See the *Bind your OpenStack credentials* section of [*How to use the OpenStack Command Line*](ostack-how-use-cli.md) for details on where to get your RC file. 
 
-[!NOTE]
-You will require the v3 version. 
+> [!NOTE]
+> You will require the v3 version. 
 
 ## Modifying your RC file
 
@@ -38,6 +38,7 @@ export OS_AUTH_TYPE="v3oidcpassword"
 ```
 
 You also need to add the following items, substituting the appropriate values from the table below depending on the OpenStack regions you're connecting to:
+
 ```bash
 export OS_CLIENT_ID=""
 export OS_CLIENT_SECRET=""
@@ -46,12 +47,12 @@ export OS_ACCESS_TOKEN_ENDPOINT=""
 
 | Site | Variable | Value|
 | ---  | ---------|------|
-| Farnborough  | OS_CLIENT_ID | cni.1.frn00006 |
+| Farnborough  | OS_CLIENT_ID | `cni.1.frn00006` |
 | &nbsp; | OS_CLIENT_SECRET | User defined |
-| &nbsp; | OS_ACCESS_TOKEN_ENDPOINT | https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token |
-| Corsham  | OS_CLIENT_ID | cni.1.cor00005 |
+| &nbsp; | OS_ACCESS_TOKEN_ENDPOINT | `https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token` |
+| Corsham  | OS_CLIENT_ID | `cni.1.cor00005` |
 | &nbsp; | OS_CLIENT_SECRET | User defined |
-| &nbsp; | OS_ACCESS_TOKEN_ENDPOINT | https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token |
+| &nbsp; | OS_ACCESS_TOKEN_ENDPOINT | `https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token` |
 
 You have now updated your RC file.
 
