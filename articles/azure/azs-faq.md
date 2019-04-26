@@ -102,11 +102,11 @@ All production services are reported through the UKCloud [service status page](h
 
 ### Are external Domain Name System (DNS) services available?
 
-Yes. A similar service to Azure DNS is available. There are some limitations such as no AAAA support.
+Yes, a similar service to Azure DNS is available. There are some limitations such as no AAAA support.
 
 ### Do you offer load balancing?
 
-Yes. This is offered as an option. You can also deploy your own load balancer.
+Yes, this is offered as an option. You can also deploy your own load balancer.
 
 ## Storage
 
