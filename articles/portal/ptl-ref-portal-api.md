@@ -3786,7 +3786,7 @@ Returns a CSV report for the period specified.
   Tier1ProtectionTotalPrice         | Price of Tier 1 storage protection
   Tier2ProtectionTotalPrice         | Price of Tier 2 storage protection
   Geo-resilientProtectionTotalPrice | Price of Geo-Resilient storage protection
-  ProtectionTotalPrice              | Total price of all protections on this VM
+  ProtectionTotalPrice              | Total price of all protection options on this VM
   LicencePricePerHour               | Hourly price of any licenses attached to this VM
   LicenceTotalPrice                 | Price of any licenses attached to this VM
   TotalPrice                        | Total price of this VM
