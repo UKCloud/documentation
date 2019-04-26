@@ -172,6 +172,10 @@ For more information about UKCloud for Microsoft Azure, see:
 
 - [*UKCloud Azure Stack portal overview video*](azs-vid-overview.md)
 
+## Related repositories
+
+- [*UKCloud Azure Stack Repository*](https://github.com/UKCloud/AzureStack)
+
 ## Feedback
 
 If you have any comments on this article, or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
