@@ -8,11 +8,11 @@ lastreviewed:
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Create a Site-to-Site Connection
+toc_sub2: Create a Site-to-Site VPN Connection
 toc_sub3:
 toc_sub4:
 toc_title: Create a site-to-site VPN connection - PowerShell
-toc_fullpath: Users/How To/Create a Site-to-Site Connection/azs-how-create-S2S-VPN-ps.md
+toc_fullpath: Users/How To/Create a Site-to-Site VPN Connection/azs-how-create-S2S-VPN-ps.md
 toc_mdlink: azs-how-create-S2S-VPN-ps.md
 ---
 
