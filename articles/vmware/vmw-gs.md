@@ -22,7 +22,7 @@ toc_mdlink: vmw-gs.md
 
 If you're new to UKCloud, you'll probably have received a link to this guide as part of your welcome email. It will help you to get started using UKCloud for VMware.
 
-The *Getting Started Guide* provides an overview of UKCloud for VMware and gives you basic information about how to log in and set up your environment.
+The Getting Started Guide provides an overview of UKCloud for VMware and gives you basic information about how to log in and set up your environment.
 
 ### Intended audience
 

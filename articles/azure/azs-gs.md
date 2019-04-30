@@ -16,7 +16,7 @@ toc_fullpath: Users/Getting Started/azs-gs.md
 toc_mdlink: azs-gs.md
 ---
 
-# Getting started guide for UKCloud for Microsoft Azure
+# Getting Started Guide for UKCloud for Microsoft Azure
 
 ## Overview
 
