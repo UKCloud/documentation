@@ -34,7 +34,7 @@ To manage your OpenStack projects, you can log in to the OpenStack Horizon dashb
 
 2. From the **Authenticate using** list, select:
 
-    - **Keystone Credentials** if your account has not been migated to SSO
+    - **Keystone Credentials** if your account has not been migrated to SSO
     - **UKCloud SSO** if your account has been migrated to SSO
 
     ![Horizon login page](images/ostack-horizon-login.png)
