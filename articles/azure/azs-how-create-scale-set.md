@@ -50,8 +50,9 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - **Operating system disk image** – The operating system disk image for the virtual machines in the scale set.
 
-        > [!Note]
+        > [!WARNING]
         > CentOS 7.2 is currently unsupported on Azure Stack. For more information, see [here](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-update-1903#compute).
+        > ![CentOS 7.2 is currently unsupported](images/azs-browser-scale-set-unsupported-operating-systems.png)
 
     - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
@@ -105,7 +106,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ## Modifying the instance count of your scale set
 
-> [!Note]
+> [!NOTE]
 > Auto-scaling is currently unsupported on Azure Stack.
 
 1. In the blade for the scale set, select **Scaling** under *Settings*.
