@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "Sy07A/cqZKmrcM/MkmzSoQ=="
+          "hash": "M7kQUVoQksek/e3K06qBwg=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-S2S-VPN.html",
-          "hash": "ZdOQvcJZrLL39E+b6yDDDg=="
+          "hash": "KF0/Wfi9Efrn02UCjAgySA=="
         }
       },
       "is_incremental": false,
@@ -1442,7 +1442,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "bue1FtphY6FZI3p/M2SvAQ=="
+          "hash": "CihMzC4AQ0739qMMfbptmg=="
         }
       },
       "is_incremental": false,
@@ -6825,6 +6825,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/other/images/other-esrt-scope.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-esrt-scope.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/other/images/other-github-ico-edit.png",
       "output": {
         "resource": {
@@ -7384,6 +7395,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-external-security-review-testing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-external-security-review-testing.html",
+          "hash": "JDIiyhHjqCiz2g6TLKTXEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-gib.md",
       "output": {
         ".html": {
@@ -7676,7 +7699,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "F3WX6U+RKhbLQBTd+70fsw=="
+          "hash": "ufMs+s/hZtO8pZyRdBH+ag=="
         }
       },
       "is_incremental": false,
@@ -15659,7 +15682,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 347,
+          "total_file_count": 348,
           "skipped_file_count": 0
         }
       }

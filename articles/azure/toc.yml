@@ -14,8 +14,6 @@
       href: azs-how-create-load-balancer.md
     - name: Create a Service Fabric cluster
       href: azs-how-create-service-fabric-portal.md
-    - name: Create a site-to-site connection
-      href: azs-how-create-S2S-VPN.md
     - name: Create an Azure Kubernetes Service cluster
       href: azs-how-create-aks.md
     - name: Deploy an SQL template to Azure Stack - PowerShell
@@ -58,6 +56,10 @@
         href: azs-how-create-spn-portal.md
       - name: Create a service principal name - PowerShell
         href: azs-how-create-spn-powershell.md
+    - name: Create a Site-to-Site VPN Connection
+      items:
+      - name: Create a site-to-site VPN connection - portal
+        href: azs-how-create-S2S-VPN.md
     - name: Create a Virtual Machine
       items:
       - name: Create a virtual machine - CLI

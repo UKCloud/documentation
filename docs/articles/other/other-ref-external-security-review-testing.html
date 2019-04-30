@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>External security review testing | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="External security review testing | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../..//styles/assets/logo.png" srcset="../..//styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-external-security-review-testing.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="external-security-review-testing">External security review testing</h1>
+
+<h2 id="overview">Overview</h2>
+<p>All UKCloud services, and their underlying infrastructure are suitable for supporting OFFICIAL and OFFICIAL-SENSITIVE data. We achieve this via a robust risk management system that meets stringent requirements and best practice industry standards. We also complete a comprehensive IT Security Health Check of the entire infrastructure, undertaken by an external assessment organisation, on a regular basis. UKCloud has implemented all 14 NCSC Cloud Security Principles.</p>
+<p>However, to ensure that you are able to meet your own legislative, regulatory and/or contractual requirements, UKCloud provides a service to assist customers in undertaking appropriate security reviews of the services above the underlying platform. In this way, we will co-operate with reasonable requests in arranging, conducting and reviewing the results of such reviews and/or tests.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Within the terms and conditions of the service (full details included with the application form), you (and any third parties or agents you engage) must treat any results or information of these tests as confidential, safeguard it accordingly and not disclose any confidential information belonging to the other party. Further, any activities or testing performed outside of the agreed scope will be treated as malicious and/or unauthorised activity which may result in a breach of contract, service cessation and legal consequences. If you have any questions relating to UKCloud's policies and procedures in place to mitigate risk within the underlying platform, contact us for further information.</p>
+<p>Confidential information includes, but is not limited to all commercial, marketing, financial, technical, security, personnel, operational and similar information, including trade secrets, &quot;know how&quot;, brand marks, trademarks and other proprietary information.</p>
+</div>
+<p>This article provides useful information for undertaking appropriate security reviews of your services above the underlying UKCloud platform. It highlights the notice requirement for performing penetration tests, and provides access to the form that you must complete before arrangements can be made.</p>
+<h2 id="service-scope">Service scope</h2>
+<p>As above, the underlying technology platform supporting UKCloud's services and customer management tools, for example the UKCloud Portal, are fully tested for our Assured and Elevated security domains. You will therefore be testing from a cloud consumer rather than a cloud management perspective.</p>
+<p>Within UKCloud for VMware, the platform extends to the perimeter of the your vCloud organisation with the edge gateway acting as the boundary.</p>
+<p>An example of this is depicted in the diagram below and therefore the edge gateway, along with everything to the right, is your responsibility and can be included within the scope of your security test.</p>
+<p><img src="images/other-esrt-scope.png" alt="Scope of external security review testing"></p>
+<h2 id="engagement-and-operation-of-tests">Engagement and operation of tests</h2>
+<p>UKCloud will cooperate with you to support external penetration testing requirements, subject to four (4) working days' notice being given as long as the following activities have been completed.</p>
+<p>To request permission to perform a test, you must:</p>
+<ol>
+<li><p>Raise a Service Request within the UKCloud Portal for the test.</p>
+</li>
+<li><p>Complete the External Security Review Test (ESRT) application form (UKC-FRM-231 - available on request) and attach the completed document (<strong>in full</strong>) to your Service Request. If you want to share any other relevant information (for example, a formal scope), you should also attach this to your Service Request.</p>
+</li>
+</ol>
+<p>On receipt of the Service Request and ESRT form, UKCloud will review the submission at the next possible Change Advisory Board (CAB) and provide an update in the Service Request, either:</p>
+<ul>
+<li><p>Where the request is approved, to convey technical authority to proceed with the test at the date and time specified, and in accordance with the documented testing scope</p>
+</li>
+<li><p>Where the request is not approved, to convey the result and the reasons for it, enabling you to decide whether to withdraw or resubmit the request</p>
+</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If testing is to be conducted in both Assured and Elevated security domains, you must complete separate requests for each system.</p>
+</div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>If the resultant ESRT form contains RESTRICTED content and cannot be emailed, contact our support team for alternative communication methods.</p>
+</div>
+<h2 id="testing-access-points">Testing access points</h2>
+<p>Customers may test from two locations:</p>
+<p><strong>External (from outside the virtual environment)</strong> – Tests are to be carried out external to the UKCloud data centres and offices from the perspective of the internet or government networks. These tests will traverse UKCloud's physical network edge, and enter your vCloud organisation through the edge gateway.</p>
+<p><strong>Internal (from inside the virtual environment)</strong> – Tests are to be carried out external to the UKCloud data centres and offices from the perspective of the internet or government networks. It is expected that you would provision a virtual machine (VM) within your vCloud organisation to act as a launch-pad for testing. Any testers would then upload relevant tools to this VM to execute tests within your organisation.</p>
+<p>If you don't have a compute service prior to testing to use for this purpose, you can provision a new compute service, which will be billed under as normal consumption.</p>
+<h2 id="pricing">Pricing</h2>
+<p>For a test to commence, UKCloud must complete a number of administrative tasks to facilitate the activity. This may result in a cost, chargeable as one day's work from the <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/585894882747037-sfia-rate-card-2019-01-18-1511.pdf">UKCloud SFIA rate card</a> (Level 4 - Enable).</p>
+<p>In some circumstances, additional time may be required but this will be outlined prior to tests commencing.</p>
+<h2 id="external-security-review-test-esrt-application-form">External Security Review Test (ESRT) application form</h2>
+<p>To receive a copy of the External Security Review Test (ESRT) application form, contact <a href="mailto:support@ukcloud.com">support@ukcloud.com</a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

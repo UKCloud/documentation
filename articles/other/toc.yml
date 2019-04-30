@@ -40,6 +40,8 @@
     href: other-ref-customer-admin.md
   - name: Data centre advance notice requirements
     href: other-ref-dc-notice.md
+  - name: External security review testing
+    href: other-ref-external-security-review-testing.md
   - name: G10 Service Definitions and Pricing Guide
     href: other-ref-service-definitions.md
   - name: Identity & Access Management API
