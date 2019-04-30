@@ -14,6 +14,8 @@
     href: oshift-how-create-users.md
   - name: Expose non-http services externally
     href: oshift-how-expose-nonhttp-services.md
+  - name: How to expand OpenShift persistent volumes
+    href: oshift-how-expand-persistent-vols.md
   - name: Monitor your OpenShift cluster
     href: oshift-how-monitor-cluster.md
   - name: Obtain usage metrics to use for OpenShift capacity management

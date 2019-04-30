@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to expand OpenShift persistent volumes | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to expand OpenShift persistent volumes | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../..//styles/assets/logo.png" srcset="../..//styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-expand-persistent-vols.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-expand-openshift-persistent-volumes">How to expand OpenShift persistent volumes</h1>
+
+<h2 id="overview">Overview</h2>
+<p>In OpenShift clusters running OpenShift v3.11 or later, you can expand existing persistent volumes. In earlier versions (such as v3.9) you need to raise a Service Request so that UKCloud OpenShift administrators can facilitate the expansion.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To check the version of your cluster, either click <strong>(?)</strong> in the top-right of the web UI and select <strong>About</strong> or run the following while connected in the CLI client:</p>
+<pre><code>$ oc version
+...
+Server https://console.5678-89abcd:8443
+openshift v3.11.51
+kubernetes v1.11.0+d4cacc0
+</code></pre>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You must scale down any pod or container using the volume before you can perform the expansion.</p>
+</div>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this article, you must have access to a cluster that is running OpenShift Container Platform v3.11 (or newer).</p>
+<p>You must also have access to <code>oc</code>, the OpenShift command-line client (CLI). For more information, see OpenShift's <a href="https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html"><em>Get Started with the CLI</em></a>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>If the cluster is v3.11 or newer, the storage class should be enabled for Volume Expansion. You can confirm this as follows:</p>
+<pre><code>$ oc describe storageclass tier2
+Name:                  tier2
+IsDefaultClass:        Yes
+Annotations:           storageclass.beta.kubernetes.io/is-default-class=true
+Provisioner:           kubernetes.io/cinder
+Parameters:            availability=nova,type=TIER2
+AllowVolumeExpansion:  True
+MountOptions:          &lt;none&gt;
+ReclaimPolicy:         Delete
+VolumeBindingMode:     Immediate
+Events:                &lt;none&gt;
+</code></pre>
+<h2 id="stop-any-pod-that-is-using-the-volume">Stop any pod that is using the volume</h2>
+<p>In this article, we'll expand the volume for a cluster's default Elasticsearch deployment, which is located in the <code>openshift-logging</code> project. The pod using the persistent volume in this example is named <code>logging-es-data-master</code> and the pvc (Persistent Volume Claim) name is <code>logging-es-0</code>. This is a common scenario - a high throughput of logs may cause Elasticsearch to enter a CrashLoop when the logging volume fills up.</p>
+<p>You can apply the same procedure to any other pods that use persistent volumes.</p>
+<pre><code>$ oc project openshift-logging
+Now using project &quot;openshift-logging&quot; on server &quot;https://console.5678-89abcd:8443&quot;.
+$ oc get pods
+NAME                                      READY     STATUS      RESTARTS   AGE
+logging-es-data-master-7bqadxxd-1-wrlqh   2/2       Running     2          2d
+...
+logging-kibana-1-n7j8t                    2/2       Running     2          2d
+$ oc get dc
+NAME                              REVISION   DESIRED   CURRENT   TRIGGERED BY
+logging-es-data-master-7bqadxxd   1          1         1
+logging-kibana                    1          1         1         config
+</code></pre>
+<p>In this example, the <code>logging-kibana</code> pod depends on the <code>logging-es-data-master</code> pod so it's good practice to also scale this down during the expansion of the persistent volume for <code>logging-es-data-master</code>:</p>
+<pre><code>$ for i in $(oc get dc | awk 'NR&gt;1 {print $1}') ; do oc scale --replicas=0 dc $i; done
+deploymentconfig.apps.openshift.io/logging-kibana scaled
+deploymentconfig.apps.openshift.io/logging-es-data-master-7bqadxxd scaled
+
+# For a single deployment, generally:
+oc scale --replicas=0 dc &lt;deployment_name&gt;
+</code></pre>
+<p>Confirm that the pod that uses the volume has been terminated:</p>
+<pre><code>$ oc get pods | grep logging-es-data-master
+# (nothing returned)
+</code></pre>
+<h2 id="resize-the-persistent-volume">Resize the persistent volume</h2>
+<p>Once the pod dependent on the volume is stopped, you can edit the pvc to resize the volume:</p>
+<pre><code>$ oc get pvc
+NAME           STATUS    VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+logging-es-0   Bound     pvc-4ad7258e-12a6-11e9-bc9d-fa163e12bba5   20Gi       RWO            tier2          2d
+$ oc edit pvc logging-es-0
+...
+</code></pre>
+<p><code>oc edit</code> causes the configuration of the object to open in a text editor. Edit the size within the <code>spec:</code> array only (do not touch the size listed under <code>status:</code>):</p>
+<pre><code>...
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 30Gi   # (edited from 20Gi)
+  storageClassName: tier2
+...
+</code></pre>
+<p>When the edit is completed, the pvc will <em>continue to show the old size</em> but will be listed as being in a <code>FileSystemResizePending</code> state:</p>
+<pre><code>$ oc describe pvc logging-es-0
+Name:          logging-es-0
+Namespace:     openshift-logging
+StorageClass:  tier2
+Status:        Bound
+Volume:        pvc-4ad7258e-12a6-11e9-bc9d-fa163e12bba5
+Labels:        logging-infra=support
+Annotations:   pv.kubernetes.io/bind-completed=yes
+               pv.kubernetes.io/bound-by-controller=yes
+               volume.beta.kubernetes.io/storage-provisioner=kubernetes.io/cinder
+Finalizers:    [kubernetes.io/pvc-protection]
+Capacity:      20Gi
+Access Modes:  RWO
+Conditions:
+  Type                      Status  LastProbeTime                     LastTransitionTime                Reason  Message
+  ----                      ------  -----------------                 ------------------                ------  -------
+  FileSystemResizePending   True    Mon, 01 Jan 0001 00:00:00 +0000   Thu, 11 Apr 2019 17:43:26 +0000           Waiting for user to (re-)start a pod to finish file system resize of volume on node.
+Events:                     &lt;none&gt;
+</code></pre>
+<h2 id="scale-up-the-pod">Scale up the pod</h2>
+<p>When you start the pod that uses the persistent volume, the persistent volume will be resized as it starts.</p>
+<p>Since we scaled down the <code>logging-es-data-master</code> deployment and its dependent <code>logging-kibana</code> in this example, we'll scale up both deployments:</p>
+<pre><code>$ for i in $(oc get dc | awk 'NR&gt;1 {print $1}') ; do oc scale --replicas=1 dc $i; done
+deploymentconfig.apps.openshift.io/logging-kibana scaled
+deploymentconfig.apps.openshift.io/logging-es-data-master-7bqadxxd scaled
+
+# For a single deployment, generally:
+oc scale --replicas=1 dc &lt;deployment_name&gt;
+</code></pre>
+<p>Once the pod has started, you can check the file system has resized correctly by logging into the new pod and checking the mount point for the new size:</p>
+<pre><code>$ oc rsh logging-es-data-master-7bqadxxd-1-7rb9x
+sh-4.2$ df -h                                  
+Filesystem                             Size  Used Avail Use% Mounted on
+...
+/dev/vdd                               30G  7.5G   23G  33% /elasticsearch/persistent
+...
+</code></pre>
+<h2 id="further-reading">Further reading</h2>
+<p><a href="https://docs.openshift.com/container-platform/3.11/dev_guide/expanding_persistent_volumes.html#expanding_file_system_pvc">https://docs.openshift.com/container-platform/3.11/dev_guide/expanding_persistent_volumes.html#expanding_file_system_pvc</a></p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>
