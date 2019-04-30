@@ -51,7 +51,7 @@ To complete the steps in this article, you must have appropriate access to a sub
     - **Operating system disk image** – The operating system disk image for the virtual machines in the scale set.
 
         > [!Note]
-        > CentOS 7.2 is currently unsupported on Azure Stack.
+        > CentOS 7.2 is currently unsupported on Azure Stack. For more information, see [here](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-update-1903#compute).
 
     - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
