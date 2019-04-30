@@ -101,7 +101,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 11. In the blade for your scale set, you can view and monitor the scale set, change its settings and perform diagnostics and troubleshooting.
 
-    ![Scale set overview](images/azs-browser-Scale-Set-overview.png)
+    ![Scale set overview](images/azs-browser-scale-set-overview.png)
 
 ## Modifying the instance count of your scale set
 
