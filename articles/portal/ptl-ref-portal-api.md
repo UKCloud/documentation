@@ -3682,6 +3682,8 @@ Returns a CSV report for the whole month specified including the date provided.
 
 Returns a CSV containing billing data for the period given.
 
+For more information about this CSV, see [*Understanding your invoice evidence file*](../other/other-ref-invoice-evidence-file.md) and the [*Invoice and billing FAQs*](../other/other-faq-billing.md).
+
 ### API version
 
 v1
