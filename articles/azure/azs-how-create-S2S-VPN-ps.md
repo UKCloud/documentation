@@ -22,6 +22,9 @@ toc_mdlink: azs-how-create-S2S-VPN-ps.md
 
 This guide shows you how to use PowerShell to create a site-to-site VPN from your UKCloud for Microsoft Azure environment to public Azure.
 
+> [!NOTE]
+> In public Azure - virtual network gateways can take up to 45 minutes to deploy, for more information see [here](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways).
+
 ### Intended audience
 
 To complete the steps in this guide, you must have appropriate access to subscriptions in UKCloud for Microsoft Azure and public Azure.
@@ -120,10 +123,10 @@ $AzsVirtualGW = New-AzureRmVirtualNetworkGateway -ResourceGroupName $AzsRGName -
 
 ## Create local network gateway
 Write-Output -InputObject "Creating local network gateway"
-$AzsLocalGW = New-AzureRmLocalNetworkGateway -ResourceGroupName $AzsRGName -Location $AzsLocation -Name $AzsLocalGWName  -GatewayIpAddress "10.10.10.10" -AddressPrefix $AzureVNetRange
+$AzsLocalGW = New-AzureRmLocalNetworkGateway -ResourceGroupName $AzsRGName -Location $AzsLocation -Name $AzsLocalGWName -GatewayIpAddress "10.10.10.10" -AddressPrefix $AzureVNetRange
 
 ## Create IPsec Policy
-$IPsecPolicy = New-AzureRmIpsecPolicy -IkeEncryption "AES256" -IkeIntegrity "SHA256" -DhGroup "DHGroup14" -IpsecEncryption "AES256" -IpsecIntegrity "SHA256" -PfsGroup "PFS2048" -SALifeTimeSeconds 14400 -SADataSizeKilobytes 102400000
+$IPsecPolicy = New-AzureRmIpsecPolicy -IkeEncryption "AES256" -IkeIntegrity "SHA256" -DhGroup "DHGroup14" -IpsecEncryption "AES256" -IpsecIntegrity "SHA256" -PfsGroup "PFS2048" -SALifeTimeSeconds 3600 -SADataSizeKilobytes 102400000
 
 ## Create virtual network gateway connection
 Write-Output -InputObject "Creating virtual network gateway connection"
