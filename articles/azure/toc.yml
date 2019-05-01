@@ -62,6 +62,8 @@
       items:
       - name: Create a site-to-site VPN connection - portal
         href: azs-how-create-S2S-VPN.md
+      - name: Create a site-to-site VPN connection - PowerShell
+        href: azs-how-create-S2S-VPN-ps.md
     - name: Create a Virtual Machine
       items:
       - name: Create a virtual machine - CLI
