@@ -20,7 +20,7 @@ toc_mdlink: email-how-use-with-app.md
 
 ## Overview
 
-Many customers who use UKCloud's IaaS need to be able to send email from, or receive email into, their applications. Although we don't have an SMTP relay service dedicated to this purpose, you can use our Email and Collaboration service to meet your needs. This can be particularly valuable if you're using the UKCloud Elevated OFFICIAL (formerly PGA IL3) platform, as it doesn't connect directly to the internet, but to secure government networks such as PSN and N3/HSCN, where few mail relay providers are available.
+Many customers who use UKCloud's IaaS need to be able to send email from, or receive email into, their applications. Although we don't have an SMTP relay service dedicated to this purpose, you can use our Email and Collaboration service to meet your needs. This can be particularly valuable if you're using the UKCloud Elevated OFFICIAL (formerly PGA IL3) platform, as it doesn't connect directly to the internet, but to secure government networks such as PSN and HSCN, where few mail relay providers are available.
 
 In this guide, we'll walk you through the process for configuring your application to use our Email & Collaboration service.
 
@@ -73,6 +73,7 @@ You're now ready to configure your application to connect to the mailbox to send
 To send outbound email, your application needs to support SMTP authentication and TLS encryption. Provided this is the case, simply configure the following settings in your application:
 
 - SMTP Server/Mail relay host: mail.skyscapecs.net
+
 - Port number: 465
 
 - Use TLS*: Yes
@@ -91,6 +92,7 @@ To receive inbound email, your application needs to support POP3 or IMAP4 over T
 Provided this is the case, simply configure the following settings in your application:
 
 - Mailbox server: mail.skyscapecs.net
+
 - Protocol: POP3S or IMAPS
 
 - Port number: 993 (POP3S) or 995 (IMAPS)
@@ -122,7 +124,7 @@ The diagram below shows stunnel encrypting SMTP traffic.
 > [!NOTE]
 > An example working stunnel config is below to send smtp traffic on port 25 to zimbra on TLS port 465
 
-```
+```none
 [smtp]
 accept = 25
 client = yes
