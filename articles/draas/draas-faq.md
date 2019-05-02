@@ -69,7 +69,7 @@ The price of Disaster Recovery as a Service is based on the storage tier that th
 
 ### What connectivity options do I have?
 
-All UKCloud connectivity options are available including Internet, PSN-A, PSN-P, N3/HSCN, Janet and RLI.
+All UKCloud connectivity options are available including Internet, PSN-A, PSN-P, HSCN, Janet and RLI.
 
 ### Can I replicate into the UKCloud Elevated environment?
 
