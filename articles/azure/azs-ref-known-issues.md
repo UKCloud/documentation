@@ -1,40 +1,26 @@
 ---
-title: UKCloud for Microsoft Azure troubleshooting | UKCloud Ltd
+title: UKCloud for Microsoft Azure known issues | UKCloud Ltd
 description: This article describes some of the issues you may encounter when using UKCloud for Microsoft Azure
 services: azure-stack
-author: Dan Baker
+author: Chris Black
 reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+lastreviewed: 30/04/2019 15:00:00
 
 toc_rootlink: Users
 toc_sub1: Reference
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud for Microsoft Azure troubleshooting
-toc_fullpath: Users/Reference/azs-ref-troubleshooting.md
-toc_mdlink: azs-ref-troubleshooting.md
+toc_title: UKCloud for Microsoft Azure known issues
+toc_fullpath: Users/Reference/azs-ref-known-issues.md
+toc_mdlink: azs-ref-known-issues.md
 ---
 
-# UKCloud for Microsoft Azure troubleshooting
+# UKCloud for Microsoft Azure known issues
 
 ## Overview
 
-This guide describes some of the issues you may encounter when using UKCloud for Microsoft Azure:
-
-## Login results in server error
-
-### Cause
-
-When first logging in to the UKCloud Azure Stack portal, you may see the following error:
-
-`Server Error in '/' Application.`
-
-![Server Error](images/azs-login-error.png)
-
-### Solution
-
-Refresh the page and the login should work.
+This guide describes some of the issues you may encounter when using UKCloud for Microsoft Azure. More known issues can be found [here](https://docs.microsoft.com/en-gb/azure-stack/operator/azure-stack-release-notes-known-issues-1904).
 
 ## Diagnostics do not work for Linux VMs
 
@@ -45,18 +31,6 @@ If you enable Microsoft Insights for your subscription (**Subscriptions > Resour
 ### Solution
 
 There is currently no workaround for this issue.
-
-## Virtual machine disk size is not showing in the GUI or CLI
-
-### Cause
-
-You cannot see the virtual machine disk size in the GUI or CLI.
-
-### Solution
-
-To view your disk size, navigate to **Storage accounts > \<Storage Account Name\> > Blob service > vhds** and find your disk there:
-
-![VM Size in GUI](images/azs-disk-size.png)
 
 ## Feedback
 
