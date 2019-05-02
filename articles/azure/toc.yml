@@ -76,8 +76,8 @@
         href: azs-how-create-vm-terraform.md
   - name: Reference
     items:
-    - name: UKCloud for Microsoft Azure troubleshooting
-      href: azs-ref-troubleshooting.md
+    - name: UKCloud for Microsoft Azure known issues
+      href: azs-ref-known-issues.md
     - name: Understanding UKCloud for Microsoft Azure
       href: azs-ref-overview.md
   - name: Service Scope

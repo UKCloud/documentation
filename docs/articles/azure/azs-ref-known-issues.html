@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Managing your UKCloud for VMware environment using the UKCloud Portal API | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>UKCloud for Microsoft Azure known issues | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Managing your UKCloud for VMware environment using the UKCloud Portal API | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="UKCloud for Microsoft Azure known issues | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.41.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-managing-portal-api.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-ref-known-issues.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,22 +91,15 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="managing-your-ukcloud-for-vmware-environment-using-the-ukcloud-portal-api">Managing your UKCloud for VMware environment using the UKCloud Portal API</h1>
+<h1 id="ukcloud-for-microsoft-azure-known-issues">UKCloud for Microsoft Azure known issues</h1>
 
-<p>With the development of the UKCloud for VMware service for G‑Cloud 8, we've introduced some changes to the architecture underpinning the platform. The change in architecture introduces the concept of sites, regions and zones to enable you to design resilience into your solutions in a way that works best for you.</p>
-<ul>
-<li><p><strong>Sites</strong> will be a familiar concept if you're already on the UKCloud platform. We have two sites, one in Corsham and one in Farnborough, creating the ability to deploy disaster‑resilient solutions across two geographically disparate locations.</p>
-</li>
-<li><p><strong>Regions</strong> are a new concept in UKCloud for VMware. Within each site we have independent regions, enabling you to create resilient solutions within a single site, allowing for protection such as synchronous replication between applications or databases.</p>
-</li>
-<li><p>A region is made up of <strong>zones</strong>. A zone typically relates to a single service, and there is usually only one service zone per region. However, in the case of UKCloud for VMware, there may be multiple UKCloud for VMware zones in a single region, enabling you to build up services that are underpinned by different compute and storage but the same network.</p>
-</li>
-</ul>
-<p>For more information, see <a href="../other/other-ref-sites-regions-zones.html"><em>Understanding sites, regions and zones</em></a>.</p>
-<p>When managing the platform through the Portal API, if you've designed your solution across multiple regions, you must use different credentials for each environment that you're managing. Also, because each region has its own management instance, you must use the API endpoints that apply specifically to the region. This is important to remember so that you call the correct endpoints if your solution is deployed across multiple regions. You can find out which endpoints to use by clicking your username in the top right corner of the UKCloud Portal home page and selecting API:</p>
-<p><img src="images/api_menu.png" alt="Link to API credentials in the Portal"></p>
-<p>Using the API page to find the correct API URL for each region:</p>
-<p><img src="images/api_details.png" alt="Example API credentials"></p>
+<h2 id="overview">Overview</h2>
+<p>This guide describes some of the issues you may encounter when using UKCloud for Microsoft Azure. More known issues can be found <a href="https://docs.microsoft.com/en-gb/azure-stack/operator/azure-stack-release-notes-known-issues-1904">here</a>.</p>
+<h2 id="diagnostics-do-not-work-for-linux-vms">Diagnostics do not work for Linux VMs</h2>
+<h3 id="cause">Cause</h3>
+<p>If you enable Microsoft Insights for your subscription (<strong>Subscriptions &gt; Resource providers &gt; Microsoft.Insights</strong> and then click subscribe), you'll have access to Azure Monitoring for Windows VMs only. This feature is not yet available for Linux VMs as documented <a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-metrics-azure-data#application---diagnostics-logs-application-logs-and-metrics">here</a>.</p>
+<h3 id="solution">Solution</h3>
+<p>There is currently no workaround for this issue.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
