@@ -53,15 +53,13 @@ Before converting your edge gateway, review the prerequisites and known issues b
 
     If you convert an edge that already has the firewall disabled to an advanced gateway, the converted advanced gateway will have the firewall enabled, but with an Any, Any, Allow rule so that all traffic is allowed inbound or outbound.
 
-- **Internal/external keywords** - Due to a bug in vCloud Director 8.20, when you create or amend firewall rules on your advanced gateway using the vCloud Director Web Console, you can no longer use the keywords internal or external when specifying the direction of the traffic. However, you can still use these keywords when using the API to create or amend rules. This Web Console bug is fixed in vCloud Director 9.*x*, which we'll be upgrading to in the coming months. For information about using the API to create or amend firewall rules, see the [*vCloud Director API for NSX Programming Guide*](https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf).
-
 ## Converting your edge to an advanced gateway
 
 To access the latest vCloud Director networking features, you need to convert your edge to an advanced gateway.
 
 To convert your edge to an advanced gateway:
 
-# [Using vCloud Director 8.20](#tab/tabid-1)
+# [Using vCloud Director Legacy UI](#tab/tabid-1)
 
 1. In vCloud Director, select the **Administration** tab.
 
@@ -80,7 +78,7 @@ To convert your edge to an advanced gateway:
 
     ![Administration tab](images/conver-image-4.png)
 
-# [Using vCloud Director 9.1](#tab/tabid-2)
+# [Using vCloud Director HTML5 UI](#tab/tabid-2)
 
 1. In vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway you want to convert.
 
