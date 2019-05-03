@@ -47,7 +47,7 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 > <input  type="text" id="VMNameInput" name="VMNameInput" style="display: inline;" placeholder="myVM"/></form>
 >
 > New Disk Size in GB: <form oninput="result.value=DiskSizeInput.value; result2.value=DiskSizeInput.value" id="DiskSize" style="display: inline;">
-> <input  type="text" id="DiskSizeInput" name="DiskSizeInput" style="display: inline;" placeholder="1024"/></form>
+> <input  type="text" id="DiskSizeInput" name="DiskSizeInput" style="display: inline;" placeholder="200"/></form>
 >
 > Note that the maximum size allowed for OS disks is 2048GB
 
@@ -63,7 +63,7 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 > <input  type="text" id="VMNameInput2" name="VMNameInput2" style="display: inline;" placeholder="myVM"/></form>
 >
 > New Disk Size in GB: <form oninput="result.value=DiskSizeInput2.value; result2.value=DiskSizeInput2.value" id="DiskSize2" style="display: inline;">
-> <input  type="text" id="DiskSizeInput2" name="DiskSizeInput2" style="display: inline;" placeholder="1024"/></form>
+> <input  type="text" id="DiskSizeInput2" name="DiskSizeInput2" style="display: inline;" placeholder="200"/></form>
 >
 > Disk LUN (Logical Unit Number): <form oninput="result.value=LUNInput.value; result2.value=LUNInput.value" id="LUN" style="display: inline;">
 > <input  type="text" id="LUNInput" name="LUNInput" style="display: inline;" placeholder="0"/></form>
@@ -92,7 +92,7 @@ Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize managed OS disk
 $Disk = Get-AzureRmDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.OsDisk.Name
-$Disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">1024</output>
+$Disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">200</output>
 Update-AzureRmDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
 
 # Start the VM
@@ -118,7 +118,7 @@ $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize unmanaged OS disk
-$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result2" style="display: inline;">1024</output>
+$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result2" style="display: inline;">200</output>
 Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
 
 # Restart the VM
@@ -146,7 +146,7 @@ Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize managed data disk
 $Disk = Get-AzureRmDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.DataDisks[$DiskLun].Name
-$Disk.DiskSizeGB = <output form="DiskSize2" name="result" style="display: inline;">1024</output>
+$Disk.DiskSizeGB = <output form="DiskSize2" name="result" style="display: inline;">200</output>
 Update-AzureRmDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
 
 # Start the VM
@@ -173,7 +173,7 @@ $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize unmanaged data disk
-$VM.StorageProfile.DataDisks[$DiskLun].DiskSizeGB = <output form="DiskSize2" name="result2" style="display: inline;">1024</output>
+$VM.StorageProfile.DataDisks[$DiskLun].DiskSizeGB = <output form="DiskSize2" name="result2" style="display: inline;">200</output>
 Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
 
 # Restart the VM
