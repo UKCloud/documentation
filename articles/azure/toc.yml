@@ -74,6 +74,10 @@
         href: azs-how-create-vm-ps.md
       - name: Create a virtual machine - Terraform
         href: azs-how-create-vm-terraform.md
+    - name: Resize Disks
+      items:
+      - name: Resize virtual machine disks - portal
+        href: azs-how-resize-disks.md
   - name: Reference
     items:
     - name: UKCloud for Microsoft Azure known issues
