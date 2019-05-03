@@ -49,7 +49,10 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 > New Disk Size in GB: <form oninput="result.value=DiskSizeInput.value; result2.value=DiskSizeInput.value" id="DiskSize" style="display: inline;">
 > <input  type="text" id="DiskSizeInput" name="DiskSizeInput" style="display: inline;" placeholder="200"/></form>
 >
-> Note that the maximum size allowed for OS disks is 2048GB
+> **Note**: that the maximum size allowed for OS disks is 2048 GB
+>
+> DriveLetter: <form oninput="result.value=DriveLetter.value; result2.value=DriveLetter.value" id="DriveLetter" style="display: inline;">
+> <input  type="text" id="DriveLetter" name="DriveLetter" style="display: inline;" placeholder="C"/></form>
 
 ## [Resizing a data disk](#tab/tabid-2)
 
@@ -67,6 +70,9 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 >
 > Disk LUN (Logical Unit Number): <form oninput="result.value=LUNInput.value; result2.value=LUNInput.value" id="LUN" style="display: inline;">
 > <input  type="text" id="LUNInput" name="LUNInput" style="display: inline;" placeholder="0"/></form>
+>
+> DriveLetter: <form oninput="result.value=DriveLetter.value; result2.value=DriveLetter.value" id="DriveLetter" style="display: inline;">
+> <input  type="text" id="DriveLetter" name="DriveLetter" style="display: inline;" placeholder="C"/></form>
 
 ***
 
@@ -190,13 +196,25 @@ After expanding the disk, you must go into the OS and expand the volume to actua
 
 1. Open an RDP connection to your VM.
 
-2. Open a command prompt and type `diskpart`.
+    > [!TIP]
+    > ```powershell
+    > # Obtain public IP of your VM based on the variables from above
+    > $IpAddress= (Get-AzureRmPublicIpAddress -ResourceGroupName $RGName | Where-Object { $_.IpConfiguration.Id -like "*$VMName*" })
+    > # Start RDP session to your VM
+    > Start-Process "mstsc" -ArgumentList "/v:$($IpAddress.IpAddress)"
+    > ```
 
-3. In the `DISKPART` prompt, type `list volume`. Take note of the volume you want to extend.
+2. From your PowerShell window:
 
-4. In the `DISKPART` prompt, type `select volume <volumenumber>`. This selects the volume that you want to extend into unpartitioned empty space on the same disk.
-
-5. In the `DISKPART` prompt, type `extend`. This extends the selected volume to fill the added space on the disk.
+    <pre><code class="language-PowerShell">
+    # Resize partition based on drive letter
+    ## Declare drive letter
+    $DriveLetter = "<output form="DriveLetter" name="result" style="display: inline;">C</output>"
+    ## Find maximum size of the partition based on drive letter
+    $MaxSize = (Get-PartitionSupportedSize -DriveLetter $DriveLetter).SizeMax
+    ## Resize the partition
+    Resize-Partition -DriveLetter $DriveLetter -Size $MaxSize
+    </code></pre>
 
 ### [Linux VM](#tab/tabid-d)
 
