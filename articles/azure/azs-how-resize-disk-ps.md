@@ -134,8 +134,8 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.f
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group and VM name
-$RgName = "<output form="ResourceGroup2" name="result" style="display: inline;">myResourceGroup</output>"
-$VmName = "<output form="VMName2" name="result" style="display: inline;">myVM</output>"
+$RGName = "<output form="ResourceGroup2" name="result" style="display: inline;">myResourceGroup</output>"
+$VMName = "<output form="VMName2" name="result" style="display: inline;">myVM</output>"
 $DiskLun = <output form="LUN" name="result" style="display: inline;">0</output>
 
 # Obtain your VM object
@@ -162,8 +162,8 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.f
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group and VM name
-$RgName = "<output form="ResourceGroup2" name="result2" style="display: inline;">myResourceGroup</output>"
-$VmName = "<output form="VMName2" name="result2" style="display: inline;">myVM</output>"
+$RGName = "<output form="ResourceGroup2" name="result2" style="display: inline;">myResourceGroup</output>"
+$VMName = "<output form="VMName2" name="result2" style="display: inline;">myVM</output>"
 $DiskLun = <output form="LUN" name="result2" style="display: inline;">0</output>
 
 # Obtain your VM object
