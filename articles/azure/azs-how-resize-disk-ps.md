@@ -139,18 +139,18 @@ $VMName = "<output form="VMName2" name="result" style="display: inline;">myVM</o
 $DiskLun = <output form="LUN" name="result" style="display: inline;">0</output>
 
 # Obtain your VM object
-$VM = Get-AzureRmVM -ResourceGroupName $RgName -Name $VmName
+$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
-Stop-AzureRmVM -ResourceGroupName $RgName -Name $VmName -Force
+Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize managed data disk
-$Disk = Get-AzureRmDisk -ResourceGroupName $RgName -DiskName $VM.StorageProfile.DataDisks[$DiskLun].Name
+$Disk = Get-AzureRmDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.DataDisks[$DiskLun].Name
 $Disk.DiskSizeGB = <output form="DiskSize2" name="result" style="display: inline;">1024</output>
-Update-AzureRmDisk -ResourceGroupName $RgName -Disk $Disk -DiskName $Disk.Name
+Update-AzureRmDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
 
 # Start the VM
-Start-AzureRmVM -ResourceGroupName $RgName -Name $VmName
+Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
 
 ### [Unmanaged Disk](#tab/tabid-b/tabid-2)
@@ -167,17 +167,17 @@ $VMName = "<output form="VMName2" name="result2" style="display: inline;">myVM</
 $DiskLun = <output form="LUN" name="result2" style="display: inline;">0</output>
 
 # Obtain your VM object
-$VM = Get-AzureRmVM -ResourceGroupName $RgName -Name $VmName
+$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
 # Stop the VM before resizing the disk
-Stop-AzureRmVM -ResourceGroupName $RgName -Name $VmName -Force
+Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
 
 # Resize unmanaged data disk
 $VM.StorageProfile.DataDisks[$DiskLun].DiskSizeGB = <output form="DiskSize2" name="result2" style="display: inline;">1024</output>
-Update-AzureRmVM -ResourceGroupName $RgName -VM $VM
+Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
 
 # Restart the VM
-Start-AzureRmVM -ResourceGroupName $RgName -Name $VmName
+Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 </code></pre>
 
 ***
