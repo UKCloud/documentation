@@ -19,7 +19,7 @@ toc_mdlink: conn-faq.md
 
 ## What options do I have to connect to my solution hosted on the UKCloud Assured OFFICIAL (previously PGA IL2) cloud platform?
 
-The UKCloud Assured OFFICAL cloud platform previously achieved CESG Pan Government Accreditation (PGA) and is PSN Accredited to host OFFICIAL data (including OFFICIAL SENSITIVE) which is accessible via the internet or the PSN Assured Service. You can also connect via internet, N3/HSCN and Janet dependant on relevant accreditation.
+The UKCloud Assured OFFICAL cloud platform previously achieved CESG Pan Government Accreditation (PGA) and is PSN Accredited to host OFFICIAL data (including OFFICIAL SENSITIVE) which is accessible via the internet or the PSN Assured Service. You can also connect via internet, HSCN and Janet dependant on relevant accreditation.
 
 Our Assured OFFICAL cloud platform follows best commercial practice, so certain insecure traffic types are restricted. In general, it's good practice to connect to your Assured OFFICIAL solution via an IPsec VPN (using commercial-grade encryption) which you configure via your self-managed virtual firewall. Within the VPN tunnel, you can use any protocol, giving you maximum flexibility. You can also configure your solution to allow other traffic encrypted using SSL or TLS. Use of non-encrypted traffic should be minimised.
 
@@ -33,7 +33,7 @@ Our Assured OFFICAL and Elevated OFFICAL cloud platforms both support SSL VPN (c
 
 No. Our cloud platforms are designed so that all traffic either originates or terminates within our platform. We can't facilitate routing between connections. If your solution needs to service users on different networks, this will need to be implemented, managed and accredited within your application or an authorised gateway service.
 
-## Do you provide an SLA on internet/PSN/N3(HSCN)/Janet connectivity?
+## Do you provide an SLA on internet/PSN/HSCN/Janet connectivity?
 
 We provide an SLA for availability of our core services such as UKCloud for VMware. We cannot provide an SLA on external services as they are outside our control. UKCloud can only provide assurance associated with the native SLAs that are offered as part of the core PSN framework.
 
@@ -41,7 +41,7 @@ We provide an SLA for availability of our core services such as UKCloud for VMwa
 
 The UKCloud SLA provides our customers with assurance that our platform is designed, engineered and operated to deliver high levels of availability and uptime. We have invested in skilled and experienced people, ISO 20000-certified IT service management processes and best-in-class technology - all of which underpin our cloud services and allow us to deliver high availability.
 
-When it comes to external connectivity, we depend on services provided by third parties. In some cases (such as PSN, Janet and N3/HSCN), we have no choice about which connectivity provider to work with, as this is mandated by the government framework. These services are available only as managed connections, so our SLA can only extend to the inside interface of the managed router deployed and maintained by the third party. Although we work closely with third-party providers to engineer a highly available solution, the actual delivery of the service is not within our control.
+When it comes to external connectivity, we depend on services provided by third parties. In some cases (such as PSN, Janet and HSCN), we have no choice about which connectivity provider to work with, as this is mandated by the government framework. These services are available only as managed connections, so our SLA can only extend to the inside interface of the managed router deployed and maintained by the third party. Although we work closely with third-party providers to engineer a highly available solution, the actual delivery of the service is not within our control.
 
 For more open networks such as the internet, we use multiple connectivity providers to further mitigate the impact of a service failure on the part an individual connectivity provider. Even so, failure scenarios can still occur beyond the UKCloud boundary, which can affect the service that customers receive (for example, congestion on the internet, localised failures within the provider's network or their peering agreement).
 

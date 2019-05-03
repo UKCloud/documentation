@@ -152,7 +152,7 @@ For more information, see [*How to locate your virtual data centre on the UKClou
 
 Secure Remote Access (SRA) certificates enable you to securely connect to UKCloud's Elevated OFFICIAL security domain using NCSC-approved internet virtual private network (VPN) technologies and the walled garden architectural pattern.
 
-System administrators and mobile workers can securely access workloads running on Elevated OFFICIAL from locations that don't have alternative secure network connections such as PSN or N3/HSCN.
+System administrators and mobile workers can securely access workloads running on Elevated OFFICIAL from locations that don't have alternative secure network connections such as PSN or HSCN.
 
 - SRA certificates last for 12 months. You'll need to renew certificates no later than two weeks before the certificates expire to avoid any interruption to your service.
 
