@@ -65,7 +65,7 @@ Your compute solution can be:
 
 - In either our Assured OFFICIAL or Elevated OFFICIAL security domain
 
-- Connected via the internet, HybridConnect, Janet, N3/HSCN, PSN Assured, PSN Protected, RLI or Secure Remote Access
+- Connected via the internet, HybridConnect, Janet, HSCN, PSN, RLI or Secure Remote Access
 
 ## Upfront deployment charges
 
@@ -207,7 +207,7 @@ We cannot be responsible for any service affecting issues resulting from non-esc
 
   - Any access provided by you to your user base that takes the compute system beyond its recommended performance and connectivity thresholds
 
-  - Faults within external connectivity providers (for example internet, PSN, Janet or N3/HSCN) and components co-located at UKCloud
+  - Faults within external connectivity providers (for example internet, PSN, Janet or HSCN) and components co-located at UKCloud
 
   - Any connectivity between data centres that is out of our control
 
