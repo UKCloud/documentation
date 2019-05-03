@@ -20,7 +20,7 @@ toc_mdlink: oshift-gs.md
 
 ## Overview
 
-UKCloud for OpenShift delivers a secure, private deployment of Red Hat&trade; OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks, including PSN, N3 and Janet.
+UKCloud for OpenShift delivers a secure, private deployment of Red Hat&trade; OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks, including PSN, HSCN and Janet.
 
 UKCloud provides a fully provisioned, single-tenant OpenShift instance to each customer, enabling developers to totally focus on delivering business value, without having to worry about any infrastructure considerations.
 
