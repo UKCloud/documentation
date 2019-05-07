@@ -29,6 +29,8 @@ Advanced gateways in UKCloud for VMware provide:
 
 - **SSH edge access** - If you enable SSH, you can perform your own packet captures and troubleshoot your edge gateway yourself, without having to contact UKCloud Support.
 
+- **Advanced networking options** - Distributed networking features, namely Distributed Firewall, Distributed Logical Router and L2 VPN, to improve the performance of traffic within your VDC.
+
 > [!IMPORTANT]
 > After converting your edge gateway to an advanced gateway, the API endpoint for configuring edge services will change. Any tooling that you use to amend the edge service configuration, such as adding firewall rules, will no longer work in its current state. For more information about using the advanced gateway API, see the [*vCloud Director API for NSX Programming Guide*](https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf).
 
