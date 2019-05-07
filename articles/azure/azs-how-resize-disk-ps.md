@@ -12,7 +12,7 @@ toc_sub2: Resize a disk
 toc_sub3:
 toc_sub4:
 toc_title: Resize a disk - PowerShell
-toc_fullpath: Users/How To/azs-how-resize-disk-ps.md
+toc_fullpath: Users/How To/Resize a disk/azs-how-resize-disk-ps.md
 toc_mdlink: azs-how-resize-disk-ps.md
 ---
 
