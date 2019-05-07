@@ -21,7 +21,7 @@ OpenShift 3.11 ships with a pre-configured and self-updating monitoring stack ba
 
 ### Resource
 
-We run cluster monitoring with persistent storage, this means that the metrics are stored on a persistent volume and can survive a pod being restarted or recreated. Each Alertmanager instance conumes 2Gi and each Prometheus instance consumes 50Gi. In a standard cluster with two infrastructure nodes this will mean 106Gi of storage will be used for cluster monitoring. If the persistent volumes fill up, or you notice them getting close to being full, you can follow this guide to expand the persistent volumes: https://docs.ukcloud.com/articles/openshift/oshift-how-expand-persistent-vols.html
+Cluster monitoring is deployed with persistent storage, this means that the metrics are stored on a persistent volume and can survive a pod being restarted or recreated. By default each Alertmanager instance is allocated 2Gi and each Prometheus instance is allocated 50Gi. In a standard cluster with two infrastructure nodes this will mean 106Gi of storage will be used for cluster monitoring. If the persistent volumes fill up, or you notice them getting close to being full, you can follow this guide to expand the persistent volumes or raise a ticket in the support portal: https://docs.ukcloud.com/articles/openshift/oshift-how-expand-persistent-vols.html
 
 ### Configuration
 
