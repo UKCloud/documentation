@@ -39,9 +39,12 @@ By default, the following domains are added to the whitelist (and cannot be remo
 ```
 registry.access.redhat.com
 registry.redhat.io
-<UKCloud Object Storage Endpoint>
-<UKCloud SSO Endpoint>
+<UKCloud Object Storage Endpoint - cas.cor00005.ukcloud.com OR cas.frn00006.ukcloud.com>
+<UKCloud SSO Endpoint - idp.ukcloud.com>
 ```
+
+>[!WARNING]
+>Adding any subdomains of domains that are already within the proxy whitelist will lead to squid being unable to reconfigure and any domains added after this point will not be whitelisted. Please keep the above domains in mind when adding to the whitelist as these will not be shown in the ConfigMap. To give an example, adding .ukcloud.com or .redhat.com to your proxy-whitelist needs to be avoided as both registry.access.redhat.com and idp.ukcloud.com are already whitelisted by us.
 
 A scheduled job (which runs at 0 minutes past every hour) on the OpenShift cluster Bastion host reads a Config Map named `proxy-whitelist` within the `whitelist` project. If there are any modifications to this Config Map, the job overwrites the previous custom entries within the whitelist and triggers a reconfigure task on the Squid proxy to enable the updated domains to be accessed.
 
