@@ -25,7 +25,7 @@ Cluster monitoring is deployed with persistent storage, this means that the metr
 
 ### Configuration
 
-If you'd like to change the behaviour of Alertmanager e.g. have alerts notify somebody by email you'll need to raise a service request with us via the portal. The information we'll require is the cluster and the Alertmanager configuration you'd like to be used, we can then reconfigure the cluster-monitoring using the OpenShift ansible playbooks used to deploy it. If you attempt to edit the configMaps or secrets directly to insert this configuration the cluster-monitoring operator will detect these changes and restore default values. This documentation page can be used as a reference when creating Alertmanger config: https://prometheus.io/docs/alerting/configuration/
+If you'd like to change the behaviour of Alertmanager e.g. have alerts notify somebody by email you'll need to raise a service request with us via the support portal. The information we'll require is the cluster and the Alertmanager configuration you'd like to be used, we can then reconfigure the cluster-monitoring using the OpenShift ansible playbooks used to deploy it. If you attempt to edit the configMaps or secrets directly to insert this configuration the cluster-monitoring operator will detect these changes and restore default values. This documentation page can be used as a reference when creating Alertmanger config: https://prometheus.io/docs/alerting/configuration/
 
 Please note that the OCP 3.11 delivery of the Prometheus Alertmanager only includes a default template. Configurations requiring a specific template should be avoided and may lead to failures to reconfigure the cluster-monitoring.
 
@@ -33,7 +33,7 @@ It is possible to inject additional configuration into the stack. However this i
 
 ### Accessing Web UIs
 
-`oc get routes -n openshift-monitoring` will give you the URLs you can use to access Prometheus, Alertmanage and Grafana UIs. You'll need to prepend `https://` to the addresses.
+`oc get routes -n openshift-monitoring` will give you the URLs you can use to access Prometheus, Alertmanager and Grafana UIs. You'll need to prepend `https://` to the addresses.
 
 ### Grafana Dashboards
 
