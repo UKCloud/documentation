@@ -40,39 +40,26 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 > [!IMPORTANT]
 > Enter details below to provide values for the variables in the scripts in this article:
 >
-> Resource Group Name: <form oninput="result.value=ResourceGroupInput.value; result2.value=ResourceGroupInput.value" id="ResourceGroup" style="display: inline;">
-> <input  type="text" id="ResourceGroupInput" name="ResourceGroupInput" style="display: inline;" placeholder="myResourceGroup"/></form>
+> Resource Group Name: <form oninput="result.value=ResourceGroupInput.value; result2.value=ResourceGroupInput.value" id="ResourceGroup" style="display: inline;"><input type="text" id="ResourceGroupInput" name="ResourceGroupInput" style="display: inline;" placeholder="myResourceGroup"/></form>
 >
-> VM Name: <form oninput="result.value=VMNameInput.value; result2.value=VMNameInput.value" id="VMName" style="display: inline;">
-> <input  type="text" id="VMNameInput" name="VMNameInput" style="display: inline;" placeholder="myVM"/></form>
+> VM Name: <form oninput="result.value=VMNameInput.value; result2.value=VMNameInput.value" id="VMName" style="display: inline;"><input type="text" id="VMNameInput" name="VMNameInput" style="display: inline;" placeholder="myVM"/></form>
 >
-> New Disk Size in GB: <form oninput="result.value=DiskSizeInput.value; result2.value=DiskSizeInput.value" id="DiskSize" style="display: inline;">
-> <input  type="text" id="DiskSizeInput" name="DiskSizeInput" style="display: inline;" placeholder="200"/></form>
+> New Disk Size in GB: <form oninput="result.value=DiskSizeInput.value; result2.value=DiskSizeInput.value" id="DiskSize" style="display: inline;"><input type="text" id="DiskSizeInput" name="DiskSizeInput" style="display: inline;" placeholder="200"/></form>
 >
-> **Note**: that the maximum size allowed for OS disks is 2048 GB
->
-> DriveLetter: <form oninput="result.value=DriveLetter.value; result2.value=DriveLetter.value" id="DriveLetter" style="display: inline;">
-> <input  type="text" id="DriveLetter" name="DriveLetter" style="display: inline;" placeholder="C"/></form>
+> **Note**: The maximum size allowed for OS disks is 2048 GB
 
 ## [Resizing a data disk](#tab/tabid-2)
 
 > [!IMPORTANT]
 > Enter details below to provide values for the variables in the scripts in this article:
 >
-> Resource Group Name: <form oninput="result.value=ResourceGroupInput2.value; result2.value=ResourceGroupInput2.value" id="ResourceGroup2" style="display: inline;">
-> <input  type="text" id="ResourceGroupInput2" name="ResourceGroupInput2" style="display: inline;" placeholder="myResourceGroup"/></form>
+> Resource Group Name: <form oninput="result.value=ResourceGroupInput2.value; result2.value=ResourceGroupInput2.value" id="ResourceGroup2" style="display: inline;"><input type="text" id="ResourceGroupInput2" name="ResourceGroupInput2" style="display: inline;" placeholder="myResourceGroup"/></form>
 >
-> VM Name: <form oninput="result.value=VMNameInput2.value; result2.value=VMNameInput2.value" id="VMName2" style="display: inline;">
-> <input  type="text" id="VMNameInput2" name="VMNameInput2" style="display: inline;" placeholder="myVM"/></form>
+> VM Name: <form oninput="result.value=VMNameInput2.value; result2.value=VMNameInput2.value" id="VMName2" style="display: inline;"><input type="text" id="VMNameInput2" name="VMNameInput2" style="display: inline;" placeholder="myVM"/></form>
 >
-> New Disk Size in GB: <form oninput="result.value=DiskSizeInput2.value; result2.value=DiskSizeInput2.value" id="DiskSize2" style="display: inline;">
-> <input  type="text" id="DiskSizeInput2" name="DiskSizeInput2" style="display: inline;" placeholder="200"/></form>
+> New Disk Size in GB: <form oninput="result.value=DiskSizeInput2.value; result2.value=DiskSizeInput2.value" id="DiskSize2" style="display: inline;"><input type="text" id="DiskSizeInput2" name="DiskSizeInput2" style="display: inline;" placeholder="200"/></form>
 >
-> Disk LUN (Logical Unit Number): <form oninput="result.value=LUNInput.value; result2.value=LUNInput.value" id="LUN" style="display: inline;">
-> <input  type="text" id="LUNInput" name="LUNInput" style="display: inline;" placeholder="0"/></form>
->
-> DriveLetter: <form oninput="result.value=DriveLetter.value; result2.value=DriveLetter.value" id="DriveLetter" style="display: inline;">
-> <input  type="text" id="DriveLetter" name="DriveLetter" style="display: inline;" placeholder="C"/></form>
+> Disk LUN (Logical Unit Number): <form oninput="result.value=LUNInput.value; result2.value=LUNInput.value" id="LUN" style="display: inline;"><input type="text" id="LUNInput" name="LUNInput" style="display: inline;" placeholder="0"/></form>
 
 ***
 
@@ -190,24 +177,27 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 
 ## Expanding the volume
 
-After expanding the disk, you must go into the OS and expand the volume to actually use the newly allocated space. To do so follow these steps:
+After expanding the disk, you may need to go into the OS and expand the volume to actually use the newly allocated space. To do so, follow these steps:
 
 ### [Windows VM](#tab/tabid-c)
 
+> [!IMPORTANT]
+> Enter details below to provide values for the variables in the following scripts:
+>
+> DriveLetter: <form oninput="result.value=DriveLetter.value" id="DriveLetter" style="display: inline;"><input type="text" id="DriveLetterInput" name="DriveLetterInput" style="display: inline;" placeholder="C"/></form>
+
 1. Open an RDP connection to your VM.
 
-    > [!TIP]
-    > ```powershell
-    > # Obtain public IP of your VM based on the variables from above
-    > $IpAddress= (Get-AzureRmPublicIpAddress -ResourceGroupName $RGName | Where-Object { $_.IpConfiguration.Id -like "*$VMName*" })
-    > # Start RDP session to your VM
-    > Start-Process "mstsc" -ArgumentList "/v:$($IpAddress.IpAddress)"
-    > ```
+    ```powershell
+    # Obtain public IP of your VM based on the variables from above
+    $IpAddress= (Get-AzureRmPublicIpAddress -ResourceGroupName $RGName | Where-Object { $_.IpConfiguration.Id -like "*$VMName*" })
+    # Start RDP session to your VM
+    Start-Process "mstsc" -ArgumentList "/v:$($IpAddress.IpAddress)"
+    ```
 
 2. From your PowerShell window:
 
-    <pre><code class="language-PowerShell">
-    # Resize partition based on drive letter
+    <pre><code class="language-PowerShell"># Resize partition based on drive letter
     ## Declare drive letter
     $DriveLetter = "<output form="DriveLetter" name="result" style="display: inline;">C</output>"
     ## Find maximum size of the partition based on drive letter
