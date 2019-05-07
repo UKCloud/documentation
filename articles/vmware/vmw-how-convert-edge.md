@@ -3,8 +3,8 @@ title: How to convert your edge to an advanced gateway | UKCloud Ltd
 description: This article describes how to convert an edge gateway to an advanced gateway to access advanced functionality
 services: vmware
 author: Steve Hall
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: mikepukcloud
+lastreviewed: 07/05/2019
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -19,7 +19,7 @@ toc_mdlink: vmw-how-convert-edge.md
 
 ## Overview
 
-With the upgrade to vCloud Director 8.20 and 9.1, UKCloud for VMware now offers advanced gateways to provide access to new vCloud Director functionality. Some of this functionality is available now, with other features being added following integration testing to assess suitability on our platform (some features may incur additional charges).
+UKCloud for VMware offers advanced gateways to provide access to new vCloud Director functionality. Some of this functionality is available now, with other features being added following integration testing to assess suitability on our platform (some features may incur additional charges).
 
 Advanced gateways in UKCloud for VMware provide:
 
@@ -78,7 +78,7 @@ To convert your edge to an advanced gateway:
 
     ![Administration tab](images/conver-image-4.png)
 
-# [Using vCloud Director HTML5 UI](#tab/tabid-2)
+# [Using vCloud Director Tenant UI](#tab/tabid-2)
 
 1. In vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway you want to convert.
 
@@ -99,10 +99,10 @@ To convert your edge to an advanced gateway:
 
 ## Next steps
 
-To find out more about the features provided by advanced gateways, see the following articles:
+To find out more about the advanced networking features provided by advanced gateways, see the following article:
 
-- [*Upgrade to vCloud Director 8.20*](vmw-ref-vcd-820.md)
+- [*Advanced networking options for UKCloud for VMware*](vmw-ref-advanced-networking.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, please send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
