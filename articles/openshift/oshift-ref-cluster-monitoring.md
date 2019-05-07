@@ -25,9 +25,11 @@ Cluster monitoring is deployed with persistent storage, this means that the metr
 
 ### Configuration
 
-The only Red Hat supported configuration options for the integrated monitoring stack are variables used at the time of deployment and can be seen here: https://docs.openshift.com/container-platform/3.11/install_config/prometheus_cluster_monitoring.html#configuring-openshift-cluster-monitoring
+If you'd like to change the behaviour of Alertmanager e.g. have alerts notify somebody by email you'll need to raise a service request with us via the portal. The information we'll require is the cluster and the Alertmanager configuration you'd like to be used, we can then reconfigure the cluster-monitoring using the OpenShift ansible playbooks used to deploy it. If you attempt to edit the configMaps or secrets directly to insert this configuration the cluster-monitoring operator will detect these changes and restore default values. This documentation page can be used as a reference when creating Alertmanger config: https://prometheus.io/docs/alerting/configuration/
 
-Red Hat advises: Beyond those explicit configuration options, it is possible to inject additional configuration into the stack. However this is unsupported, as configuration paradigms might change across Prometheus releases, and such cases can only be handled gracefully if all configuration possibilities are controlled.
+Please note that the OCP 3.11 delivery of the Prometheus Alertmanager only includes a default template. Configurations requiring a specific template should be avoided and may lead to failures to reconfigure the cluster-monitoring.
+
+It is possible to inject additional configuration into the stack. However this is unsupported by Red Hat, as configuration paradigms might change across Prometheus releases, and such cases can only be handled gracefully if all configuration possibilities are controlled.
 
 ### Accessing Web UIs
 
