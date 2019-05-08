@@ -27,7 +27,7 @@ UKCloud manages the underlying infrastructure and application, ensuring the inte
 
 ## How is Email and Collaboration as a Service billed?
 
-The service is charged per mailbox per month (or part thereof) which includes 1GB of mailbox storage. There is a charge of £1 per 1GB of additional storage per mailbox per month. Charges vary depending on the number of mailboxes and whether the service is hosted in the OFFICIAL Assured or Elevated platform. The pricing is stacked and applied for the number of mailboxes within the specified tier. For example, our first 2 tiers are, 1 - 499 and 500 - 999; if you have 600 mailboxes you will pay the first 499 at Tier 1 rate and the next 101 at the Tier 2 rate, the introduction of additional mailboxes up to total of 999 will be charged at Tier 2 rate, when the number of mailboxes exceeds 999 the additional mailboxes will be charged at Tier 3 rate.
+The service is charged per mailbox per month (or part thereof) which includes 1GB of mailbox storage. There is a charge of £1 per 1GB of additional storage per mailbox per month. Charges vary depending on the number of mailboxes and whether the service is hosted in the OFFICIAL Assured or Elevated platform. The pricing is stacked and applied for the number of mailboxes within the specified tier. For example, our first 2 tiers are, 1 - 499 and 500 - 999; if you have 600 mailboxes you will pay the first 499 at Tier 1 rate and the next 101 at the Tier 2 rate, the introduction of additional mailboxes up to a total of 999 will be charged at Tier 2 rate, when the number of mailboxes exceeds 999 the additional mailboxes will be charged at Tier 3 rate.
 
 ## Does UKCloud offer a free trial?
 
