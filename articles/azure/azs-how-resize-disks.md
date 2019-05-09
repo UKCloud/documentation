@@ -8,11 +8,11 @@ lastreviewed: 15/04/2019 11:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Resize Disks
+toc_sub2: Resize a disk
 toc_sub3:
 toc_sub4:
 toc_title: Resize virtual machine disks - portal
-toc_fullpath: Users/How To/azs-how-resize-disks.md
+toc_fullpath: Users/How To/Resize a disk/azs-how-resize-disks.md
 toc_mdlink: azs-how-resize-disks.md
 ---
 
