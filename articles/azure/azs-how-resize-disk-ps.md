@@ -37,33 +37,32 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 
 ## [Resizing an OS disk](#tab/tabid-1)
 
-> [!IMPORTANT]
-> Enter details below to provide values for the variables in the scripts in this article:
->
-> Resource Group Name: <form oninput="result.value=ResourceGroupInput.value; result2.value=ResourceGroupInput.value" id="ResourceGroup" style="display: inline;"><input type="text" id="ResourceGroupInput" name="ResourceGroupInput" style="display: inline;" placeholder="myResourceGroup"/></form>
->
-> VM Name: <form oninput="result.value=VMNameInput.value; result2.value=VMNameInput.value" id="VMName" style="display: inline;"><input type="text" id="VMNameInput" name="VMNameInput" style="display: inline;" placeholder="myVM"/></form>
->
-> New Disk Size in GB: <form oninput="result.value=DiskSizeInput.value; result2.value=DiskSizeInput.value" id="DiskSize" style="display: inline;"><input type="text" id="DiskSizeInput" name="DiskSizeInput" style="display: inline;" placeholder="200"/></form>
->
-> **Note**: The maximum size allowed for OS disks is 2048 GB
+### Declare variables
+
+Enter details below to provide values for the variables in the scripts in this article:
+
+| Variable name           | Variable description                                                                       | Input            |
+|-------------------------|--------------------------------------------------------------------------------------------|------------------|
+| \$RGName                | Name of the resource group which the VM is inside in Azure Stack                           | <form oninput="result.value=ResourceGroupInput.value; result2.value=ResourceGroupInput.value" id="ResourceGroup" style="display: inline;"><input type="text" id="ResourceGroupInput" name="ResourceGroupInput" style="display: inline;" placeholder="myResourceGroup"/></form> |
+| \$VMName                | Name of the VM with the disk you are trying to resize                                      | <form oninput="result.value=VMNameInput.value; result2.value=VMNameInput.value" id="VMName" style="display: inline;"><input type="text" id="VMNameInput" name="VMNameInput" style="display: inline;" placeholder="myVM"/></form> |
+| \$Disk.DiskSizeGB       | The new disk size in gigabytes. **Note**: The maximum size allowed for OS disks is 2048 GB | <form oninput="result.value=DiskSizeInput.value; result2.value=DiskSizeInput.value" id="DiskSize" style="display: inline;"><input type="text" id="DiskSizeInput" name="DiskSizeInput" style="display: inline;" placeholder="200"/></form> |
 
 ## [Resizing a data disk](#tab/tabid-2)
 
-> [!IMPORTANT]
-> Enter details below to provide values for the variables in the scripts in this article:
->
-> Resource Group Name: <form oninput="result.value=ResourceGroupInput2.value; result2.value=ResourceGroupInput2.value" id="ResourceGroup2" style="display: inline;"><input type="text" id="ResourceGroupInput2" name="ResourceGroupInput2" style="display: inline;" placeholder="myResourceGroup"/></form>
->
-> VM Name: <form oninput="result.value=VMNameInput2.value; result2.value=VMNameInput2.value" id="VMName2" style="display: inline;"><input type="text" id="VMNameInput2" name="VMNameInput2" style="display: inline;" placeholder="myVM"/></form>
->
-> New Disk Size in GB: <form oninput="result.value=DiskSizeInput2.value; result2.value=DiskSizeInput2.value" id="DiskSize2" style="display: inline;"><input type="text" id="DiskSizeInput2" name="DiskSizeInput2" style="display: inline;" placeholder="200"/></form>
->
-> Disk LUN (Logical Unit Number): <form oninput="result.value=LUNInput.value; result2.value=LUNInput.value" id="LUN" style="display: inline;"><input type="text" id="LUNInput" name="LUNInput" style="display: inline;" placeholder="0"/></form>
+### Declare variables
+
+Enter details below to provide values for the variables in the scripts in this article:
+
+| Variable name           | Variable description                                                                       | Input            |
+|-------------------------|--------------------------------------------------------------------------------------------|------------------|
+| \$RGName                | Name of the resource group which the VM is inside in Azure Stack                           | <form oninput="result.value=ResourceGroupInput2.value; result2.value=ResourceGroupInput2.value" id="ResourceGroup2" style="display: inline;"><input type="text" id="ResourceGroupInput2" name="ResourceGroupInput2" style="display: inline;" placeholder="myResourceGroup"/></form> |
+| \$VMName                | Name of the VM with the disk you are trying to resize                                      | <form oninput="result.value=VMNameInput2.value; result2.value=VMNameInput2.value" id="VMName2" style="display: inline;"><input type="text" id="VMNameInput2" name="VMNameInput2" style="display: inline;" placeholder="myVM"/></form> |
+| \$Disk.DiskSizeGB       | The new disk size in gigabytes. | <form oninput="result.value=DiskSizeInput2.value; result2.value=DiskSizeInput2.value" id="DiskSize2" style="display: inline;"><input type="text" id="DiskSizeInput2" name="DiskSizeInput2" style="display: inline;" placeholder="200"/></form> |
+| \$DiskLun               | The LUN (Logical Unit Number) of the disk you are trying to resize                         | <form oninput="result.value=LUNInput.value; result2.value=LUNInput.value" id="LUN" style="display: inline;"><input type="text" id="LUNInput" name="LUNInput" style="display: inline;" placeholder="0"/></form> |
 
 ***
 
-Please select the type of disk you are trying to expand:
+Please select the type of disk you are trying to resize:
 
 ### [Managed Disk](#tab/tabid-a/tabid-1)
 
@@ -181,10 +180,15 @@ After expanding the disk, you may need to go into the OS and expand the volume t
 
 ### [Windows VM](#tab/tabid-c)
 
-> [!IMPORTANT]
-> Enter details below to provide values for the variables in the following scripts:
->
-> DriveLetter: <form oninput="result.value=DriveLetter.value" id="DriveLetter" style="display: inline;"><input type="text" id="DriveLetterInput" name="DriveLetterInput" style="display: inline;" placeholder="C"/></form>
+### Declare variables
+
+Enter details below to provide values for the variables in the following scripts:
+
+| Variable name           | Variable description                                                                       | Input            |
+|-------------------------|--------------------------------------------------------------------------------------------|------------------|
+| \$DriveLetter           | The drive letter of the volume you are trying to expand                                    | <form oninput="result.value=DriveLetter.value" id="DriveLetter" style="display: inline;"><input type="text" id="DriveLetterInput" name="DriveLetterInput" style="display: inline;" placeholder="C"/></form> |
+
+### Expand the Volume
 
 1. Open an RDP connection to your VM.
 
