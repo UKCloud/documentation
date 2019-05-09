@@ -29,11 +29,17 @@ Ensure your PowerShell environment is setup as detailed in [Configure the Azure 
 From your Powershell window run:
 
 ```powershell
+# Register an AzureRM environment that targets your Azure Stack instance
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
+# Sign in to your environment
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-Get-AzureRmVmImagePublisher -Location "frn00006" | `
+# Pull location from environment
+$Location = $StackEnvironment.StorageEndpointSuffix.split(".")[0]
+
+# Retrieve VM extension list
+Get-AzureRmVmImagePublisher -Location $Location | `
   Get-AzureRmVMExtensionImageType | `
   Get-AzureRmVMExtensionImage | `
   Format-Table -Property Type, Version -AutoSize
