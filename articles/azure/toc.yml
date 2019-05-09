@@ -74,7 +74,7 @@
         href: azs-how-create-vm-ps.md
       - name: Create a virtual machine - Terraform
         href: azs-how-create-vm-terraform.md
-    - name: Resize Disks
+    - name: Resize a disk
       items:
       - name: Resize virtual machine disks - portal
         href: azs-how-resize-disks.md

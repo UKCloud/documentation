@@ -1643,7 +1643,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "RSN9m73RzLBPaNUVzzLhqg=="
+          "hash": "ISvjjD2UNHZkqXqrfdLWeQ=="
         }
       },
       "is_incremental": false,
@@ -4733,7 +4733,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-gs.html",
-          "hash": "hCdsW0naYeQM7GaQeX6r3A=="
+          "hash": "wBaad9fNXfnLjyAp+5Y8ww=="
         }
       },
       "is_incremental": false,
@@ -15885,17 +15885,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 352,
+          "skipped_file_count": 0
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 352,
           "skipped_file_count": 0
         }
       }
