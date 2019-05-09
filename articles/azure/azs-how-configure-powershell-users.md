@@ -80,7 +80,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Create your Credentials
-$AzsUsername =  "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
+$AzsUsername = "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
 $AzsPassword = '<output form="password" name="result" style="display: inline;">Password123!</output>'
 $AzsUserPassword = ConvertTo-SecureString -String $AzsPassword -AsPlainText -Force
 $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
