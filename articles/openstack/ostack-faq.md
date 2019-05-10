@@ -152,11 +152,11 @@ Internal IPs are assigned to instances from a pool and will remain assigned to t
 
 ### Are external Domain Name System (DNS) services available?
 
-No, we don't currently offer this service. You can implement your own DNS servers within your solution, or configure your instances to connect to an externally hosted DNS server - for example, one hosted on a government secure network such as PSN or N3; or one available on the Internet such as Google 8.8.8.8.
+No, we don't currently offer this service. You can implement your own DNS servers within your solution, or configure your instances to connect to an externally hosted DNS server - for example, one hosted on a government secure network such as PSN or HSCN; or one available on the Internet such as Google 8.8.8.8.
 
 ### Are domain name registration services available?
 
-No, we don't currently offer this service. Some government secure networks (such as PSN and N3) offer domain name registration and DNS hosting as part of their service.
+No, we don't currently offer this service. Some government secure networks (such as PSN and HSCN) offer domain name registration and DNS hosting as part of their service.
 
 For internet-facing services a third-party domain provider will be required.
 
@@ -168,7 +168,7 @@ Network Time Protocol services will initially only be available via public NTP s
 
 UKCloud doesn't provide SSL certificates, but you can use your existing ones.
 
-Some government secure networks (such as PSN and N3) provide SSL certificates as part of their service.
+Some government secure networks (such as PSN and HSCN) provide SSL certificates as part of their service.
 
 ### Do you offer load balancing? 
 
@@ -230,11 +230,11 @@ You can access your instances using:
 
 - Remote access protocols (such as RDP/SSH) over a VPN or secure network
 
-### How do I access my solutions via government networks (PSN-A, N3/HSCN)?
+### How do I access my solutions via government networks (PSN, HSCN)?
 
 Although UKCloud allows you to make your customer-facing applications accessible via government network connections, the management of your Assured OFFICIAL OpenStack environment can only be achieved directly via an internet connection.
 
-OpenStack environments in our Elevated OFFICIAL security domain can be managed via the PSN-P network.
+OpenStack environments in our Elevated OFFICIAL security domain can be managed via the PSN network.
 
 ### What reports can I get about instances performance?
 
@@ -254,7 +254,7 @@ UKCloud provides a repository of patches for common operating systems for custom
 
 For support, you'll need to log a request with UKCloud, who will log the ticket with the relevant supplier. UKCloud will then inform you about any updates. However, UKCloud isn't responsible for the actual resolution of non-IaaS issues.
 
-### Do you have a Key Management System (KMS) for activating Windows? 
+### Do you have a Key Management System (KMS) for activating Windows?
 
 Yes. A we provide a [step-by-step guide](../vmware/vmw-how-setup-kms.md) on configuring and using this service.
 
