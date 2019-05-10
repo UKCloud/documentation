@@ -28,40 +28,53 @@ The following process shows you how to retrieve the quotas for your subscription
 
 Ensure your PowerShell environment is setup as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md).
 
+## Declare variables
+
+Enter details below to provide values for the variables in the scripts in this article:
+
+| Variable name  | Variable description                                | Input            |
+|----------------|-----------------------------------------------------|------------------|
+| \$ArmEndpoint   | The Azure Resource Manager endpoint for Azure Stack | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+
 ## Retrieving your quota
 
 From your PowerShell window:
 
-```powershell
+<pre><code class="language-PowerShell"># Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
 # Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
+# Pull location from environment
+$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
+
 # Retrieve Compute quota
-$ComputeQuota = Get-AzureRmVMUsage -Location "frn00006" | Select-Object Name, CurrentValue, Limit
+$ComputeQuota = Get-AzureRmVMUsage -Location $Location | Select-Object -Property Name, CurrentValue, Limit
 $ComputeQuota | ForEach-Object {
-    if (!$_.Name.LocalizedValue) {
+    if (-not $_.Name.LocalizedValue) {
         $_.Name = $_.Name.Value -creplace '(\B[A-Z])', ' $1'
-    } else {
+    }
+    else {
         $_.Name = $_.Name.LocalizedValue
     }
 }
 
 # Retrieve Storage quota
-$StorageQuota = Get-AzureRmStorageUsage | Select-Object Name, CurrentValue, Limit
+$StorageQuota = Get-AzureRmStorageUsage | Select-Object -Property Name, CurrentValue, Limit
 
 # Retrieve Network quota
-$NetworkQuota = Get-AzureRmNetworkUsage -Location "frn00006" | Select-Object @{label="Name";expression={ $_.ResourceType }}, `
-    CurrentValue, Limit
+$NetworkQuota = Get-AzureRmNetworkUsage -Location $Location | Select-Object @{ Label="Name"; Expression={ $_.ResourceType } }, CurrentValue, Limit
 
 # Combine quotas
 $AllQuotas = $ComputeQuota + $StorageQuota + $NetworkQuota
 
 # Export quota to CSV
 $AllQuotas | Export-Csv -Path "AzureStackQuotas.csv" -NoTypeInformation
-```
+</code></pre>
 
 ## Feedback
 
