@@ -43,7 +43,7 @@ Assured | Zone F | **UKCloud for VMware**<br>*Connectvity:* Internet, PSN, HSCN,
 &nbsp; | &nbsp; | **Cloud GPU**<br>*Connectvity:* Internet, PSN, HSCN, Janet, HybridConnect
 &nbsp; | Zone 1A | **UKCloud for Oracle Software**<br>*Connectvity:* Internet, PSN, HSCN, Janet, HybridConnect<br>*Storage:* Tier 1, Tier 2
 &nbsp; | Zone 21 | **UKCloud for OpenStack**<br>*Connectvity:* Internet, PSN, HSCN, Janet<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2
-&nbsp; | &nbsp; | **UKCloud for OpenShift**<br>*Connectvity:* Internet
+&nbsp; | &nbsp; | **UKCloud for OpenShift**<br>*Connectvity:* Internet, PSN, HSCN, Janet
 &nbsp; | Zone 22 | **UKCloud for Microsoft Azure**<br>*Connectvity:* Internet
 &nbsp; | All zones | **Cloud Storage**<br>*Connectvity:* Internet, PSN, HSCN, Janet
 Elevated | Zone 12 | **UKCloud for VMware**<br>*Connectvity:* PSN, HybridConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall
@@ -73,7 +73,7 @@ Security domain | Zone | Service
 Assured | Zone B | **UKCloud for VMware**<br>*Connectvity:* Internet, PSN, HSCN, Janet, HybridConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall
 &nbsp; | &nbsp; | **Cloud GPU**<br>*Connectvity:* Internet, PSN, HSCN, Janet, HybridConnect
 &nbsp; | Zone C | **UKCloud for OpenStack**<br>*Connectvity:* Internet, PSN, HSCN, Janet<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2
-&nbsp; | &nbsp; | **UKCloud for OpenShift**<br>*Connectvity:* Internet
+&nbsp; | &nbsp; | **UKCloud for OpenShift**<br>*Connectvity:* Internet, PSN, HSCN, Janet
 &nbsp; | All zones | **Cloud Storage**<br>*Connectvity:* Internet, PSN, HSCN, Janet
 Elevated | Zone D | **UKCloud for VMware**<br>*Connectvity:* PSN, HybridConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall
 &nbsp; | &nbsp; | **Cloud GPU**<br>*Connectvity:* PSN, HybridConnect
