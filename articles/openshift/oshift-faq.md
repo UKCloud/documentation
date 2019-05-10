@@ -77,7 +77,7 @@ We provide confidence that our OpenShift service still meets the highest level o
 
 ### Can I use UKCloud for OpenShift over closed networks such as PSN and HSCN?
 
-We plan for this service to be accredited for use over PSN, however this may not be available at launch. Connectivity to the HSCN network is supported.
+UKCloud for OpenShift is available on the PSN, HSCN and Janet networks.
 
 ### Does UKCloud offer any scheduled automated backups for UKCloud for OpenShift?
 
