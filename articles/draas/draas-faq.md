@@ -69,11 +69,11 @@ The price of Disaster Recovery as a Service is based on the storage tier that th
 
 ### What connectivity options do I have?
 
-All UKCloud connectivity options are available including Internet, PSN-A, PSN-P, HSCN, Janet and RLI.
+All UKCloud connectivity options are available including Internet, PSN, HSCN, Janet and RLI.
 
 ### Can I replicate into the UKCloud Elevated environment?
 
-If you currently have a PSN-P connection in your primary site, then you would be able to replicate over PSN-P into the UKCloud Elevated environment. However, if you do not have a PSN-P connection at your primary site but would like to replicate into the Elevated environment, you can use an encrypted private line to do so. Contact your Cloud Architect for more details on this.
+If you currently have a PSN connection in your primary site, then you would be able to replicate over PSN into the UKCloud Elevated environment. However, if you do not have a PSN connection at your primary site but would like to replicate into the Elevated environment, you can use an encrypted private line to do so. Contact your Cloud Architect for more details on this.
 
 ### How do I invoke a recovery if my Zerto console becomes unavailable?
 
@@ -89,7 +89,7 @@ The pricing for Disaster Recovery as a Service is simple. You only pay for the d
 
 ### How do I modify replication in the UKCloud Elevated environment?
 
-Zerto replication to the UKCloud Assured environment can be controlled from the internet-facing Zerto Portal, however replication into the UKCloud Elevated environment can only be controlled via the Elevated Zerto Portal. To access the Elevated Zerto Portal, you need to be connected to it via the PSN-P, RLI, private encrypted connection or our Secure Remote Access (SRA) service.
+Zerto replication to the UKCloud Assured environment can be controlled from the internet-facing Zerto Portal, however replication into the UKCloud Elevated environment can only be controlled via the Elevated Zerto Portal. To access the Elevated Zerto Portal, you need to be connected to it via the PSN, RLI, private encrypted connection or our Secure Remote Access (SRA) service.
 
 ### Does UKCloud install the Zerto software in my data centre?
 
