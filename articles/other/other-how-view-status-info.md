@@ -50,11 +50,11 @@ For each service, you can see the availability over the last 90 days, with each 
 
 The uptime figure indicates what percentage of the last 90 days the service was available for.
 
+Click the + icon to expand the service to see a breakdown of the service to see which specific components are affected.
+
 If service availability is impacted, the bar for that day displays in a different colour and the status is reported as `Under Maintenance`, `Degraded Performance` or `Outage`.
 
 ![Service with partial outage](images/other-status-outage.png)
-
-Click the + icon to expand the service to see a breakdown of the service to see which specific components are affected.
 
 Past incidents and scheduled maintenance are displayed at the bottom of the status page.
 
@@ -62,7 +62,7 @@ Past incidents and scheduled maintenance are displayed at the bottom of the stat
 
 You can subscribe to the status page to receive updates when information is updated.
 
-1. On the UKCloud Service Status page, click the **Subscribe to Updates button**.
+1. On the UKCloud Service Status page, click the **Subscribe to Updates** button.
 
     ![Subscribe to Updates button](images/other-status-btn-subscribe.png)
 
