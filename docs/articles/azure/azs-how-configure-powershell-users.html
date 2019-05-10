@@ -105,52 +105,88 @@
 </div>
 </li>
 </ul>
-<h3 id="install-azure-stack-powershell">Install Azure Stack PowerShell</h3>
-<pre><code class="lang-powershell"># Set Execution Policy
+<h2 id="declare-variables">Declare variables</h2>
+<p>Enter details below to provide values for the variables in the scripts in this article:</p>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ArmEndpoint</td>
+<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td><form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
+</tr>
+<tr>
+<td>$AzsUsername</td>
+<td>Your AAD username</td>
+<td><form oninput="result.value=username.value" id="username" style="display: inline;"><input type="text" id="username" name="username" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"></form></td>
+</tr>
+<tr>
+<td>$AzsPassword</td>
+<td>Your AAD password</td>
+<td><form oninput="result.value=password.value" id="password" style="display: inline;"><input type="text" id="password" name="password" style="display: inline;" placeholder="Password123!"></form></td>
+</tr>
+</tbody>
+</table>
+<h2 id="install-azure-stack-powershell">Install Azure Stack PowerShell</h2>
+<pre><code class="language-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
-
+  
 # PowerShell commands for Azure Stack are installed through the PSGallery repository.
 # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
-Set-PSRepository -Name &quot;PSGallery&quot; -InstallationPolicy Trusted
-
+Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
+  
 # Uninstall existing versions of Azure/Azure Stack PowerShell
 Get-Module -Name Azs.*, Azure* -ListAvailable | Uninstall-Module -Force -Verbose
-
+  
 # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
 Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Verbose
 Install-Module -Name AzureStack -RequiredVersion 1.7.1 -Verbose
 </code></pre>
 <h2 id="configure-the-user-environment-and-sign-in-to-azure-stack">Configure the user environment and sign in to Azure Stack</h2>
-<p>UKCloud <strong>frn00006</strong> region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the <code>$AzsUsername</code> and <code>$AzsPassword</code> values)</p>
 <h3 id="azure-active-directory-aad-based-deployments">Azure Active Directory (AAD) based deployments</h3>
-<pre><code class="lang-powershell"># Set Execution Policy
+<pre><code class="language-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
 
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
 # Register an AzureRM environment that targets your Azure Stack instance
-Add-AzureRmEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Sign in to your environment
-Connect-AzureRmAccount -EnvironmentName &quot;AzureStackUser&quot;
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 </code></pre>
 <h3 id="azure-active-directory-aad-based-deployments---embedded-credentials">Azure Active Directory (AAD) based deployments - Embedded Credentials</h3>
-<pre><code class="lang-powershell"># Set Execution Policy
+<pre><code class="language-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
 # Register an AzureRM environment that targets your Azure Stack instance
-Add-AzureRmEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Credentials
-$AzsUsername =  &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;.onmicrosoft.com&quot;
-$AzsPassword = '&lt;your password&gt;'
+$AzsUsername = "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
+$AzsPassword = '<output form="password" name="result" style="display: inline;">Password123!</output>'
 $AzsUserPassword = ConvertTo-SecureString -String $AzsPassword -AsPlainText -Force
 $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
 # Sign in to your environment
-Connect-AzureRmAccount -Credential $AzsCred -EnvironmentName &quot;AzureStackUser&quot;
+Connect-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackUser"
 </code></pre>
 <h2 id="test-the-connectivity">Test the connectivity</h2>
 <p>Now that we've got everything set-up, let's use PowerShell to create resources within Azure Stack. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named &quot;MyResourceGroup&quot;:</p>
-<pre><code class="lang-powershell">New-AzureRmResourceGroup -Name &quot;MyResourceGroup&quot; -Location &quot;frn00006&quot;
+<pre><code class="language-PowerShell"># Pull location from environment
+$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
+
+New-AzureRmResourceGroup -Name "MyResourceGroup" -Location $Location
 </code></pre>
 <h2 id="next-steps">Next steps</h2>
 <ul>

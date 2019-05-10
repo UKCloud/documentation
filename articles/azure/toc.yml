@@ -50,13 +50,13 @@
         href: azs-how-create-key-vault-portal.md
       - name: Create a key vault - PowerShell
         href: azs-how-create-key-vault-ps.md
-    - name: Create a Service Principal Name
+    - name: Create a Service Principal Name (SPN)
       items:
-      - name: Create a service principal name - CLI
+      - name: Create a service principal name (SPN) - CLI
         href: azs-how-create-spn-cli.md
-      - name: Create a service principal name - Portal
+      - name: Create a service principal name (SPN) - Portal
         href: azs-how-create-spn-portal.md
-      - name: Create a service principal name - PowerShell
+      - name: Create a service principal name (SPN) - PowerShell
         href: azs-how-create-spn-powershell.md
     - name: Create a Site-to-Site VPN Connection
       items:

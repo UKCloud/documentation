@@ -96,13 +96,40 @@
 <p>This document explains how to list VM extensions in Azure Stack with PowerShell.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Ensure your PowerShell environment is setup as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
+<h2 id="declare-variables">Declare variables</h2>
+<p>Enter details below to provide values for the variables in the scripts in this article:</p>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-ArmEndpoint</td>
+<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td><form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
+</tr>
+</tbody>
+</table>
 <h2 id="instructions">Instructions</h2>
 <p>From your Powershell window run:</p>
-<pre><code class="lang-powershell">Add-AzureRmEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+<pre><code class="language-PowerShell"># Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-Connect-AzureRmAccount -EnvironmentName &quot;AzureStackUser&quot;
+# Register an AzureRM environment that targets your Azure Stack instance
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
-Get-AzureRmVmImagePublisher -Location &quot;frn00006&quot; | `
+# Sign in to your environment
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Pull location from environment
+$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
+
+# Retrieve VM extension list
+Get-AzureRmVmImagePublisher -Location $Location | `
   Get-AzureRmVMExtensionImageType | `
   Get-AzureRmVMExtensionImage | `
   Format-Table -Property Type, Version -AutoSize
