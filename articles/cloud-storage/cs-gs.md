@@ -108,11 +108,11 @@ performance for your solution.
 **Corsham (Assured)** | |
 Internet | `cas.cor00005.ukcloud.com` | `atmos.cas.cor00005.ukcloud.com`
 PSN Assured | `cas.cor00005.psnassured.ukcloud.com` | `atmos.cas.cor00005.psnassured.ukcloud.com`
-N3 | `cas.cor00005.ukcloud.thirdparty.nhs.uk/` | `atmos.cas.cor00005.ukcloud.thirdparty.nhs.uk/`
+HSCN | `cas.cor00005.ukcloud.thirdparty.nhs.uk/` | `atmos.cas.cor00005.ukcloud.thirdparty.nhs.uk/`
 **Farnborough (Assured)** | |
 Internet | `cas.frn00006.ukcloud.com` | `atmos.cas.frn00006.ukcloud.com`
 PSN Assured | `cas.frn00006.psnassured.ukcloud.com` | `atmos.cas.frn00006.psnassured.ukcloud.com`
-N3 | `cas.frn00006.ukcloud.thirdparty.nhs.uk/` | `atmos.cas.frn00006.ukcloud.thirdparty.nhs.uk/`
+HSCN | `cas.frn00006.ukcloud.thirdparty.nhs.uk/` | `atmos.cas.frn00006.ukcloud.thirdparty.nhs.uk/`
 
 Contact UKCloud support if you are unsure which endpoint to use.
 
@@ -139,7 +139,7 @@ You may also find the *Elastic Cloud Storage (ECS) Data Access Guide* useful:
 <https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf>
 
 > [!NOTE]
-> Currently the N3 DNS service does not allow UKCloud to create wildcard DNS entries for our services. This means that S3 URLs that feature the bucket as part of the domain do not work (for example, `bucket01.cas.frn00006.ukcloud.thirdparty.nhs.uk`). With most S3 tools, you can choose whether to use prefix buckets or suffix buckets. If you are using the service via N3 you'll need to make sure your client tools support suffix buckets.
+> Currently the HSCN DNS service does not allow UKCloud to create wildcard DNS entries for our services. This means that S3 URLs that feature the bucket as part of the domain do not work (for example, `bucket01.cas.frn00006.ukcloud.thirdparty.nhs.uk`). With most S3 tools, you can choose whether to use prefix buckets or suffix buckets. If you are using the service via HSCN you'll need to make sure your client tools support suffix buckets.
 
 ### Amazon S3 Authentication Tool for Curl
 

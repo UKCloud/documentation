@@ -47,7 +47,7 @@ The ENHANCED service level SLA guarantees 99.99% availability. In the event of a
 
 You are entitled to claim Service Credits for outages to services that take you out of SLA. For more about how we calculate SLAs, see the [*SLA Definition*](../other/other-ref-sla-definition.md).
 
-## Service background 
+## Service background
 
 We actively capacity-manage the cloud platform to ensure you have access to the resources you request.
 
@@ -59,7 +59,7 @@ You can specify Farnborough or Corsham as the site where you would like to have 
 
 We control the deployed versions of technology on the platform. This covers internal platform-supporting technologies, and any technology versions available to you.
 
-# Platform management
+## Platform management
 
 Users can access, manage and view their Cloud Storage service, in any of the following ways:
 
@@ -69,9 +69,9 @@ Users can access, manage and view their Cloud Storage service, in any of the fol
 
 - **Storage Gateways.** These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see the appropriate Cloud Storage Gateways Knowledge Centre article:
 
-    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
-    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
 - **UKCloud Portal.** Contains information about the namespaces and users within your Cloud Storage environment, as well as a graphical representation of your storage consumption. For more information on the Portal functionality, see [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md).
 
@@ -133,7 +133,7 @@ You can request a migration through a Service Request. Migrations may be between
 
 - The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.
 
-- If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.
+- If access is required over government secure networks (HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.
 
 - The customer is also responsible for ensuring only lawful data that supports the UK public sector is stored and processed by applications on this environment, and that they fully comply with the UKCloud Security Operating Procedures (SyOPs) and other information assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.
 
@@ -178,9 +178,12 @@ The following documents contain more information about Cloud Storage and the ser
 
 - Cloud Storage Gateways
 
-    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
-    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
-    
+  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
+
+## Feedback
+
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
