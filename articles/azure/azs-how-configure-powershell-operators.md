@@ -35,10 +35,11 @@ Prerequisites from a Windows-based external client.
 
 Enter details below to provide values for the variables in the scripts in this article:
 
-| Variable name  | Variable description                    | Input            |
-|----------------|-----------------------------------------|------------------|
-| \$AzsUsername  | Your AAD username                       | <form oninput="result.value=username.value" id="username" style="display: inline;"><input type="text" id="username" name="username" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"/></form> |
-| \$AzsPassword  | Your AAD password                       | <form oninput="result.value=password.value" id="password" style="display: inline;"><input type="text" id="password" name="password" style="display: inline;" placeholder="Password123!"/></form> |
+| Variable name  | Variable description                                      | Input            |
+|----------------|-----------------------------------------------------------|------------------|
+| \$AzsUsername  | Your AAD username                                         | <form oninput="result.value=username.value" id="username" style="display: inline;"><input type="text" id="username" name="username" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"/></form> |
+| \$AzsPassword  | Your AAD password                                         | <form oninput="result.value=password.value" id="password" style="display: inline;"><input type="text" id="password" name="password" style="display: inline;" placeholder="Password123!"/></form> |
+| -ArmEndpoint   | The Azure Resource Manager admin endpoint for Azure Stack | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://adminmanagement.frn00006.azure.ukcloud.com"/></form> |
 
 ## Install Azure Stack PowerShell
 
@@ -65,7 +66,7 @@ Install-Module -Name AzureStack -RequiredVersion 1.7.1 -Verbose
 Set-ExecutionPolicy RemoteSigned
 
 # Register an AzureRM environment that targets your Azure Stack instance
-Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://adminmanagement.frn00006.azure.ukcloud.com"
+Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "<output form="armendpoint" name="result" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
 
 # Sign in to your environment
 Connect-AzureRmAccount -EnvironmentName "AzureStackAdmin"
@@ -77,7 +78,7 @@ Connect-AzureRmAccount -EnvironmentName "AzureStackAdmin"
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
 # Register an AzureRM environment that targets your Azure Stack instance
-Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://adminmanagement.frn00006.azure.ukcloud.com"
+Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "<output form="armendpoint" name="result2" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
 
 # Create your Credentials
 $AzsUsername = "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
