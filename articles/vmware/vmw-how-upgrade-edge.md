@@ -30,13 +30,9 @@ This guide shows you how to check the existing version of your edge gateway and,
 
 To complete the steps in this guide you must have access to the UKCloud Portal and vCloud Director.
 
-## Prerequisites
+## Checking the current version of your edge gateway
 
-Before you attempt to upgrade your edge gateway, check for the following.
-
-## Check current version
-
-To check the existing version of your edge gateway:
+Before you attempt to upgrade your edge gateway, check for the existing version of your edge gateway:
 
 1. Log in to the UKCloud Portal.
 
@@ -69,72 +65,6 @@ To check the existing version of your edge gateway:
    ![VM version](images/upgrade-image-4.png)
 
 10. Repeat these steps for any other edge gateways that you want to check.
-
-## Load balancers with weight of 0
-
-In the NSX API in vCloud Director 8.20 or later, using a load balancer weight of 0 to disable a member is no longer valid. If you attempt to upgrade an edge gateway with a load balancer member weight of 0, the redeployment will fail.
-
-For more information, see the following VMware Knowledge Base article: <https://kb.vmware.com/s/article/51724>.
-
-To resolve this issue, before you upgrade your edge gateway, set the load balancer member weight to 1.
-
-# [Using vCloud Director Legacy UI](#tab/tabid-1)
-
-1. In vCloud Director, select the **Administration** tab.
-
-2. Double-click the VDC that the edge gateway that you want to edit belongs to (or right-click the VDC and select **Open**).
-
-3. Select the **Edge Gateways** tab.
-
-4. Right-click the edge gateway that you want to edit and select **Edge Gateway Services**.
-
-5. Select the **Load Balancer** tab.
-
-6. Select the load balancer you want to edit and click **Edit**.
-
-7. Select the **Manage Members** tab.
-
-8. Select the load balancer member that you want to edit and click **Edit**.
-
-9. In the **Ratio** weight field, enter `1`.
-
-   ![Ratio](images/upgrade-image-5.png)
-
-After you've upgraded the edge gateway, we recommend that you convert it to an advanced gateway, where you can then disable the load balancer member.
-
-> [!IMPORTANT]
-> Before you convert your edge gateway, read [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md) for important known issues relating to APIs and disabling firewalls.
-
-# [Using vCloud Director Tenant UI](#tab/tabid-2)
-
-1. In the vCloud Director Virtual Datacenters dashboard, select the VDC that the edge gateway you want to edit belongs to.
-
-2. In the left navigation panel, click Edges.
-
-    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
-
-3. Select the edge that you want to configure.
-
-4. Click the **Configure Services** button.
-
-5. Select the **Load Balancer** tab.
-
-6. Select the **Pools** tab.
-
-7. Select the pool you want to edit and click the **Edit** icon.
-
-8. In the *Members* section, select the load balancer member that you want to edit and click the **Edit** icon.
-
-9. In the **Weight** field, enter `1`.
-
-   ![Load balancer member weight](images/vmw-vcd91-load-balancer-member-weight.png)
-
-After you've upgraded the edge gateway, we recommend that you convert it to an advanced gateway, where you can then disable the load balancer member.
-
-> [!IMPORTANT]
-> Before you convert your edge gateway, read [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md) for important known issues relating to APIs and disabling firewalls.
-
-***
 
 ## Upgrading your edge gateway to the latest available version
 
