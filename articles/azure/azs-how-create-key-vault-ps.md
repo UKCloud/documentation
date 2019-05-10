@@ -36,10 +36,10 @@ Enter details below to provide values for the variables in the scripts in this a
 
 | Variable name  | Variable description                                               | Input            |
 |----------------|--------------------------------------------------------------------|------------------|
-| \$RGName       | Name of the resource group to create the key vault inside          | <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="myResourceGroup"/></form> |
-| \$VaultName    | Name of the key vault to be created                                | <form oninput="result.value=vaultname.value;result2.value=vaultname.value;result3.value=vaultname.value" id="vaultname" style="display: inline;"><input type="text" id="vaultname" name="vaultname" style="display: inline;" placeholder="myVault"/></form> |
-| \$SecretValue  | Value of the secret to store inside of the key vault               | <form oninput="result.value=secretvalue.value" id="secretvalue" style="display: inline;"><input type="text" id="secretvalue" name="secretvalue" style="display: inline;" placeholder="mySecretValue"/></form> |
-| \$SecretName   | Name of the secret to store inside of the key vault                | <form oninput="result.value=secretname.value;result2.value=secretname.value" id="secretname" style="display: inline;"><input type="text" id="secretname" name="secretname" style="display: inline;" placeholder="mySecret"/></form> |
+| \$RGName       | Name of the resource group to create the key vault inside          | <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
+| \$VaultName    | Name of the key vault to be created                                | <form oninput="result.value=vaultname.value;result2.value=vaultname.value;result3.value=vaultname.value" id="vaultname" style="display: inline;"><input type="text" id="vaultname" name="vaultname" style="display: inline;" placeholder="MyVault"/></form> |
+| \$SecretValue  | Value of the secret to store inside of the key vault               | <form oninput="result.value=secretvalue.value" id="secretvalue" style="display: inline;"><input type="text" id="secretvalue" name="secretvalue" style="display: inline;" placeholder="MySecretValue"/></form> |
+| \$SecretName   | Name of the secret to store inside of the key vault                | <form oninput="result.value=secretname.value;result2.value=secretname.value" id="secretname" style="display: inline;"><input type="text" id="secretname" name="secretname" style="display: inline;" placeholder="MySecret"/></form> |
 
 ### Deploy the key vault
 
@@ -55,8 +55,8 @@ Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 $Location = $StackEnvironment.StorageEndpointSuffix.split(".")[0]
 
 # Select Resource Group
-$RGName = "<output form="resourcegroup" name="result" style="display: inline;">myResourceGroup</output>"
-$VaultName = "<output form="vaultname" name="result" style="display: inline;">myVault</output>"
+$RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+$VaultName = "<output form="vaultname" name="result" style="display: inline;">MyVault</output>"
 
 # Create a new vault
 New-AzureRmKeyVault -VaultName $VaultName -ResourceGroupName $RGName -Location $Location
@@ -69,8 +69,8 @@ This will create a key vault in the specified resource group.
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Create a new secret
-$SecretValue = ConvertTo-SecureString -String '<output form="secretvalue" name="result" style="display: inline;">mySecretValue</output>' -AsPlainText -Force
-$SecretName = "<output form="secretname" name="result" style="display: inline;">mySecret</output>"
+$SecretValue = ConvertTo-SecureString -String '<output form="secretvalue" name="result" style="display: inline;">MySecretValue</output>' -AsPlainText -Force
+$SecretName = "<output form="secretname" name="result" style="display: inline;">MySecret</output>"
 
 # Store the secret in Azure Key Vault
 $Secret = Set-AzureKeyVaultSecret -VaultName $VaultName -Name $SecretName -SecretValue $SecretValue
