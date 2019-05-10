@@ -39,6 +39,7 @@ Enter details below to provide values for the variables in the scripts in this a
 
 | Variable name           | Variable description                                                                       | Input            |
 |-------------------------|--------------------------------------------------------------------------------------------|------------------|
+| \$ArmEndpoint           | The Azure Resource Manager endpoint for Azure Stack                                        | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
 | \$AzsRGName             | Name of resource group to create in Azure Stack                                            | <form oninput="result.value=AzsRGName.value" id="AzsRGName" style="display: inline;" ><input  type="text" id="AzsRGName" name="AzsRGName" style="display: inline;" placeholder="S2S-VPN"/></form> |
 | \$AzsVNetName           | Name of virtual network to create in Azure Stack                                           | <form oninput="result.value=AzsVNetName.value" id="AzsVNetName" style="display: inline;" ><input  type="text" id="AzsVNetName" name="AzsVNetName" style="display: inline;" placeholder="S2S-VNet"/></form> |
 | \$AzsVNetRange          | Address space of virtual network to create in Azure Stack in CIDR notation                 | <form oninput="result.value=AzsVNetRange.value" id="AzsVNetRange" style="display: inline;"><input  type="text" id="AzsVNetRange" name="AzsVNetRange" style="display: inline;" placeholder="10.1.0.0/16"/></form> |
@@ -89,8 +90,10 @@ $SharedKey = "<output form="SharedKey" name="result" style="display: inline;">Pa
 # Azure Stack
 
 ## Login
+### Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 ### Add environment
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 ### Connect to environment
 $AzsContext = (Connect-AzureRmAccount -EnvironmentName "AzureStackUser").Context
 ### Retrieve Access token

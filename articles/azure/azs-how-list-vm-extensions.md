@@ -36,8 +36,11 @@ Enter details below to provide values for the variables in the scripts in this a
 
 From your Powershell window run:
 
-<pre><code class="language-PowerShell"># Register an AzureRM environment that targets your Azure Stack instance
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+<pre><code class="language-PowerShell"># Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+# Register an AzureRM environment that targets your Azure Stack instance
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Sign in to your environment
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"

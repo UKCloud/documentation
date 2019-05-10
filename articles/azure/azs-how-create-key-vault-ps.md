@@ -36,6 +36,7 @@ Enter details below to provide values for the variables in the scripts in this a
 
 | Variable name  | Variable description                                               | Input            |
 |----------------|--------------------------------------------------------------------|------------------|
+| \$ArmEndpoint  | The Azure Resource Manager endpoint for Azure Stack               | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
 | \$RGName       | Name of the resource group to create the key vault inside          | <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
 | \$VaultName    | Name of the key vault to be created                                | <form oninput="result.value=vaultname.value;result2.value=vaultname.value;result3.value=vaultname.value" id="vaultname" style="display: inline;"><input type="text" id="vaultname" name="vaultname" style="display: inline;" placeholder="MyVault"/></form> |
 | \$SecretValue  | Value of the secret to store inside of the key vault               | <form oninput="result.value=secretvalue.value" id="secretvalue" style="display: inline;"><input type="text" id="secretvalue" name="secretvalue" style="display: inline;" placeholder="MySecretValue"/></form> |
@@ -45,8 +46,11 @@ Enter details below to provide values for the variables in the scripts in this a
 
 From your PowerShell window:
 
-<pre><code class="language-PowerShell"># Add environment
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+<pre><code class="language-PowerShell"># Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+# Add environment
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
@@ -54,7 +58,7 @@ Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 # Pull location from environment
 $Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
 
-# Select Resource Group
+# Select resource group
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
 $VaultName = "<output form="vaultname" name="result" style="display: inline;">MyVault</output>"
 
@@ -72,7 +76,7 @@ From your PowerShell window:
 $SecretValue = ConvertTo-SecureString -String '<output form="secretvalue" name="result" style="display: inline;">MySecretValue</output>' -AsPlainText -Force
 $SecretName = "<output form="secretname" name="result" style="display: inline;">MySecret</output>"
 
-# Store the secret in Azure Key Vault
+# Store the secret in Azure Stack Key Vault
 $Secret = Set-AzureKeyVaultSecret -VaultName $VaultName -Name $SecretName -SecretValue $SecretValue
 
 # Display URL
