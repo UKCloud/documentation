@@ -19,11 +19,11 @@ toc_mdlink: conn-faq.md
 
 ## What options do I have to connect to my solution hosted on the UKCloud Assured OFFICIAL (previously PGA IL2) cloud platform?
 
-The UKCloud Assured OFFICAL cloud platform previously achieved CESG Pan Government Accreditation (PGA) and is PSN Accredited to host OFFICIAL data (including OFFICIAL SENSITIVE) which is accessible via the internet or the PSN Assured Service. You can also connect via internet, HSCN and Janet dependant on relevant accreditation.
+The UKCloud Assured OFFICAL cloud platform previously achieved CESG Pan Government Accreditation (PGA) and is PSN accredited to host OFFICIAL data (including OFFICIAL SENSITIVE) which is accessible via the internet or the PSN service. You can also connect via internet, HSCN and Janet dependant on relevant accreditation.
 
 Our Assured OFFICAL cloud platform follows best commercial practice, so certain insecure traffic types are restricted. In general, it's good practice to connect to your Assured OFFICIAL solution via an IPsec VPN (using commercial-grade encryption) which you configure via your self-managed virtual firewall. Within the VPN tunnel, you can use any protocol, giving you maximum flexibility. You can also configure your solution to allow other traffic encrypted using SSL or TLS. Use of non-encrypted traffic should be minimised.
 
-As our Assured OFFICIAL cloud platform is PSN Accredited, you can also connect to your solution via our resilient and scalable PSN Assured Service connections. Alternatively, you can use HybridConnect options by, for example, installing your own CAS(T)-compliant private circuit.
+As our Assured OFFICIAL cloud platform is PSN accredited, you can also connect to your solution via our resilient and scalable PSN service connections. Alternatively, you can use HybridConnect options by, for example, installing your own CAS(T)-compliant private circuit.
 
 ## Can I connect to my solution using SSL VPN?
 
@@ -97,7 +97,7 @@ We continue to work with our service providers and technology partners to ensure
 
 UKCloud operates high-bandwidth (multi-Gigabit), low-latency (typically sub-5ms round-trip time) dark fibre connectivity between our two data centres. It's highly resilient as it takes diverse northerly and southerly routes.
 
-This data centre interconnectivity is highly scalable, as spare fibre capacity is in place to meet future demand. It uses [CAS(T) compliant](http://www.cesg.gov.uk/servicecatalogue/service_assurance/CAS/Pages/Service-Requirements.aspx) circuits; and within our Elevated OFFICIAL cloud platform, we provide additional overlay encryption using a CPA-approved solution. These have previously achieved Pan Government Accreditation and are PSN accredited to carry OFFICIAL data (including OFFICIAL SENSITIVE), as well as the PSN Assured service and the encrypted PSN Protected service.
+This data centre interconnectivity is highly scalable, as spare fibre capacity is in place to meet future demand. It uses [CAS(T) compliant](http://www.cesg.gov.uk/servicecatalogue/service_assurance/CAS/Pages/Service-Requirements.aspx) circuits; and within our Elevated OFFICIAL cloud platform, we provide additional overlay encryption using a CPA-approved solution. These have previously achieved Pan Government Accreditation and are PSN accredited to carry OFFICIAL data (including OFFICIAL SENSITIVE), as well as the PSN service.
 
 ## If I have reserved bandwidth, how do I uplift this?
 
