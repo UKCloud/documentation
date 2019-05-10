@@ -46,13 +46,13 @@ Enter details below to provide values for the variables in the scripts in this a
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Add environment
-$StackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Pull location from environment
-$Location = $StackEnvironment.StorageEndpointSuffix.split(".")[0]
+$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
 
 # Select Resource Group
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"

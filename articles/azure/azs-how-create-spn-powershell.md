@@ -204,7 +204,7 @@ New-AzureRmResourceGroup -Name $PublicAzureResourceGroup -Location $PublicAzureR
 Remove-AzureRmResourceGroup -Name $PublicAzureResourceGroup -Force
 
 # Create Azure Stack environment so that you can log in to it
-$StackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure account
@@ -231,7 +231,7 @@ $RoleAssignmentGet
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -Credential $AzsCred -ServicePrincipal -TenantId $SubId.TenantId
 
 # Pull location from environment
-$AzureStackRegion = $StackEnvironment.StorageEndpointSuffix.split(".")[0]
+$AzureStackRegion = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
 
 # Test your SPN account by creating a new resource group in Azure Stack
 New-AzureRmResourceGroup -Name $AzureStackResourceGroup -Location $AzureStackRegion
@@ -289,7 +289,7 @@ $AzureStackResourceGroup = "<output form="azurestackrg" name="result2" style="di
 $AzureStackRole = "<output form="azurestackrole" name="result2" style="display: inline;">Owner</output>"
 
 # Create Azure Stack Environment so that you can log in to it
-$StackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure Account
@@ -332,7 +332,7 @@ $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -Argum
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser" -Credential $AzsCred -ServicePrincipal -TenantId $SubId.TenantId
 
 # Pull location from environment
-$AzureStackRegion = $StackEnvironment.StorageEndpointSuffix.split(".")[0]
+$AzureStackRegion = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
 
 # Test your SPN account by creating a new resource group in Azure Stack
 New-AzureRmResourceGroup -Name $AzureStackResourceGroup -Location $AzureStackRegion

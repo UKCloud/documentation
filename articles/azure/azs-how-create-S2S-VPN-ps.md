@@ -90,13 +90,13 @@ $SharedKey = "<output form="SharedKey" name="result" style="display: inline;">Pa
 
 ## Login
 ### Add environment
-$StackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 ### Connect to environment
 $AzsContext = (Connect-AzureRmAccount -EnvironmentName "AzureStackUser").Context
 ### Retrieve Access token
 $AzsAccessToken = ($AzsContext.TokenCache.ReadItems() | Where-Object { $_.TenantId -eq $AzsContext.Tenant.Id } | Sort-Object -Property ExpiresOn -Descending)[0].AccessToken
 ### Pull location from environment
-$AzsLocation = $StackEnvironment.StorageEndpointSuffix.split(".")[0]
+$AzsLocation = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
 
 ## Create resource group
 Write-Output -InputObject "Creating resource group"

@@ -37,13 +37,13 @@ Enter details below to provide values for the variables in the scripts in this a
 From your Powershell window run:
 
 <pre><code class="language-PowerShell"># Register an AzureRM environment that targets your Azure Stack instance
-$StackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Sign in to your environment
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Pull location from environment
-$Location = $StackEnvironment.StorageEndpointSuffix.split(".")[0]
+$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
 
 # Retrieve VM extension list
 Get-AzureRmVmImagePublisher -Location $Location | `

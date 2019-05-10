@@ -62,13 +62,13 @@ From your PowerShell window:
 <pre><code class="language-PowerShell"># Initialise environment and variables
 
 ## Add environment
-$StackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 ## Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 ## Pull location from environment
-$Location = $StackEnvironment.StorageEndpointSuffix.split(".")[0]
+$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
 
 # Input Variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"

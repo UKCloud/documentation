@@ -41,13 +41,13 @@ Enter details below to provide values for the variables in the scripts in this a
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Add environment
-$StackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Pull location from environment
-$Location = $StackEnvironment.StorageEndpointSuffix.split(".")[0]
+$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
 
 # Retrieve Compute quota
 $ComputeQuota = Get-AzureRmVMUsage -Location $Location | Select-Object Name, CurrentValue, Limit
