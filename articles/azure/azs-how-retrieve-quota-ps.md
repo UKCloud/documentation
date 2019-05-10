@@ -53,21 +53,21 @@ Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 $Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
 
 # Retrieve Compute quota
-$ComputeQuota = Get-AzureRmVMUsage -Location $Location | Select-Object Name, CurrentValue, Limit
+$ComputeQuota = Get-AzureRmVMUsage -Location $Location | Select-Object -Property Name, CurrentValue, Limit
 $ComputeQuota | ForEach-Object {
-    if (!$_.Name.LocalizedValue) {
+    if (-not $_.Name.LocalizedValue) {
         $_.Name = $_.Name.Value -creplace '(\B[A-Z])', ' $1'
-    } else {
+    }
+    else {
         $_.Name = $_.Name.LocalizedValue
     }
 }
 
 # Retrieve Storage quota
-$StorageQuota = Get-AzureRmStorageUsage | Select-Object Name, CurrentValue, Limit
+$StorageQuota = Get-AzureRmStorageUsage | Select-Object -Property Name, CurrentValue, Limit
 
 # Retrieve Network quota
-$NetworkQuota = Get-AzureRmNetworkUsage -Location $Location | Select-Object @{label="Name";expression={ $_.ResourceType }}, `
-    CurrentValue, Limit
+$NetworkQuota = Get-AzureRmNetworkUsage -Location $Location | Select-Object @{ Label="Name"; Expression={ $_.ResourceType } }, CurrentValue, Limit
 
 # Combine quotas
 $AllQuotas = $ComputeQuota + $StorageQuota + $NetworkQuota
