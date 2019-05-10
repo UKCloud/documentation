@@ -5,6 +5,7 @@ services: other
 author: Matt Warner
 reviewer:
 lastreviewed: 23/07/2018 14:44:15
+
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -35,7 +36,7 @@ In the case of our compute products (UKCloud for VMware, UKCloud for OpenStack a
 
 The following demonstrates the scope of UKCloud's Protective Monitoring;
 
-- **External connectivity, for example, internet, PSN, N3/HSCN, Janet, RLI, leased lines** - responsibility of the Telecommunications provider.
+- **External connectivity, for example, internet, PSN, HSCN, Janet, RLI, leased lines** - responsibility of the Telecommunications provider.
 
 - **Perimeter Routes/Firewalls** - UKCloud protectively monitors and regularly assesses any potential vulnerabilities at the perimeter, alongside other mitigations including DDoS^ and active vulnerability scanning.
 

@@ -23,9 +23,9 @@ toc_mdlink: other-ref-services-by-region.md
 
 Security domain | Services
 -----------------|--------
-Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet, HybridConnect<br>*VM type:* ESSENTIAL, POWER<br>*Storage:* Tier 1 (partial), Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall<br>Dedicated Compute
-&nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet
-&nbsp; | **Email and Collaboration**<br>*Connectivity:* Internet, PSN-A
+Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect<br>*VM type:* ESSENTIAL, POWER<br>*Storage:* Tier 1 (partial), Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall<br>Dedicated Compute
+&nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet
+&nbsp; | **Email and Collaboration**<br>*Connectivity:* Internet, PSN
 
 *Enablement services:* Mass Transfer Facility, Data Transfer Facility, Cloud Enablement, Smart Hands<br>
 *Cross Domain Security Zone:* UKCloud Guard, Walled Garden, Secure Remote Access
@@ -34,9 +34,9 @@ Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet
 
 Security domain | Services
 -----------------|--------
-Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN-P, HybridConnect<br>*VM type:* ESSENTIAL, POWER<br>*Storage:* Tier 1 (partial), Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall<br>Dedicated Compute
-&nbsp; | **Cloud Storage**<br>*Connectivity:* PSN-P
-&nbsp; | **Email and Collaboration**<br>*Connectivity:* PSN-P
+Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect<br>*VM type:* ESSENTIAL, POWER<br>*Storage:* Tier 1 (partial), Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall<br>Dedicated Compute
+&nbsp; | **Cloud Storage**<br>*Connectivity:* PSN
+&nbsp; | **Email and Collaboration**<br>*Connectivity:* PSN
 
 *Enablement services:* Mass Transfer Facility, Data Transfer Facility, Cloud Enablement, Smart Hands<br>
 *Cross Domain Security Zone:* UKCloud Guard, Walled Garden, Secure Remote Access
@@ -45,16 +45,16 @@ Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN-P, HybridConnect<br>*VM
 
 Security domain | Services
 -----------------|--------
-Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet, HybridConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall
-&nbsp; | **UKCloud for Oracle Software**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet, HybridConnect<br>*Storage:* Tier 1, Tier 2
-&nbsp; | **Cloud GPU**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet, HybridConnect
-&nbsp; | **UKCloud for OpenStack**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet
+Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall
+&nbsp; | **UKCloud for Oracle Software**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect<br>*Storage:* Tier 1, Tier 2
+&nbsp; | **Cloud GPU**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect
+&nbsp; | **UKCloud for OpenStack**<br>*Connectivity:* Internet, PSN, HSCN, Janet
 &nbsp; | **UKCloud for OpenShift**<br>*Connectivity:* Internet
-&nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet
+&nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet
 &nbsp; | **UKCloud for Microsoft Azure**<br>*Connectivity:* Internet<br>IaaS services<br>PaaS services coming in H2 CY2018
-Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN-P, HybridConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall
-&nbsp; | **Cloud GPU**<br>*Connectivity:* PSN-P, HybridConnect
-&nbsp; | **Cloud Storage**<br>*Connectivity:* PSN-P
+Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall
+&nbsp; | **Cloud GPU**<br>*Connectivity:* PSN, HybridConnect
+&nbsp; | **Cloud Storage**<br>*Connectivity:* PSN
 
 *Enablement services:* Disaster Recovery as a Service, Migration to the Cloud, Mass Transfer Facility, Cloud Enablement<br>
 *Cross Domain Security Zone:* UKCloud Guard, Walled Garden, Secure Remote Access
@@ -65,8 +65,8 @@ Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN-P, HybridConnect<br>*VM
 
 Security domain | Service
 -----------------|--------
-Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet, HybridConnect<br>*VM type:* ESSENTIAL, POWER<br>*Storage:* Tier 1 (partial), Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall<br>Dedicated Compute
-&nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet
+Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect<br>*VM type:* ESSENTIAL, POWER<br>*Storage:* Tier 1 (partial), Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall<br>Dedicated Compute
+&nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet
 
 *Enablement services:* Mass Transfer Facility, Data Transfer Facility (via Farnborough), Cloud Enablement<br>
 *Cross Domain Security Zone:* UKCloud Guard, Walled Garden, Secure Remote Access
@@ -75,8 +75,8 @@ Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet
 
 Security domain | Service
 -----------------|--------
-Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN-P, HybridConnect<br>*VM type:* ESSENTIAL, POWER<br>*Storage:* Tier 1 (partial), Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall<br>Dedicated Compute
-&nbsp; | **Cloud Storage**<br>*Connectivity:* PSN-P
+Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect<br>*VM type:* ESSENTIAL, POWER<br>*Storage:* Tier 1 (partial), Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall<br>Dedicated Compute
+&nbsp; | **Cloud Storage**<br>*Connectivity:* PSN
 
 *Enablement services:* Mass Transfer Facility, Data Transfer Facility (via Farnborough), Cloud Enablement<br>
 *Cross Domain Security Zone:* UKCloud Guard, Walled Garden, Secure Remote Access
@@ -85,15 +85,15 @@ Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN-P, HybridConnect<br>*VM
 
 Security domain | Service
 -----------------|--------
-Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet, HybridConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall
-&nbsp; | **Cloud GPU**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet, HybridConnect
-&nbsp; | **UKCloud for OpenStack**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2
+Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall
+&nbsp; | **Cloud GPU**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect
+&nbsp; | **UKCloud for OpenStack**<br>*Connectivity:* Internet, PSN, HSCN, Janet<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2
 &nbsp; | **UKCloud for OpenShift**<br>*Connectivity:* Internet
-&nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN-A, HSCN, Janet
-Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN-P, HybridConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall
-&nbsp; | **Cloud GPU**<br>*Connectivity:* PSN-P, HybridConnect
-&nbsp; | **UKCloud for OpenStack**<br>*Connectivity:* PSN-P<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2
-&nbsp; | **Cloud Storage**<br>*Connectivity:* PSN-P
+&nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet
+Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall
+&nbsp; | **Cloud GPU**<br>*Connectivity:* PSN, HybridConnect
+&nbsp; | **UKCloud for OpenStack**<br>*Connectivity:* PSN<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2
+&nbsp; | **Cloud Storage**<br>*Connectivity:* PSN
 
 *Enablement services:* Disaster Recovery as a Service, Migration to the Cloud, Mass Transfer Facility, Cloud Enablement<br>
 *Cross Domain Security Zone:* UKCloud Guard, Walled Garden, Secure Remote Access

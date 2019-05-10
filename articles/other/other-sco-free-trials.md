@@ -39,7 +39,7 @@ Exclusions are:
 
 - Basic Managed VM
 
-- N3/HSCN, unless you already have an N3/HSCN connection
+- HSCN, unless you already have an HSCN connection
 
 - Services covered by the SFIA rate card
 

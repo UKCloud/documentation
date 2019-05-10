@@ -425,7 +425,7 @@ The following are examples of what is not covered by the SLA:
 
 - Faults within your control, such as client applications and mailbox configuration
 
-- Faults within external connectivity providers (for example DDoS protected internet, PSN, Janet or N3/HSCN) and components collocated at UKCloud 
+- Faults within external connectivity providers (for example DDoS protected internet, PSN, Janet or HSCN) and components collocated at UKCloud 
 
 ### Can you give me a worked example for the Email and Collaboration as a Service SLA?
 
