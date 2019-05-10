@@ -108,7 +108,7 @@ Write-Output -InputObject "Creating virtual network"
 $AzsSubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name "Default" -AddressPrefix $AzsSubnetRange
 $AzsGWSubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name "GatewaySubnet" -AddressPrefix $AzsGWSubnetRange
 ### Create virtual network
-$AzsVirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $AzsRGName -Location $AzsLocation -Name $AzsVNetName -AddressPrefix $AzsVNetRange -Subnet $AzsSubnetConfig,$AzsGWSubnetConfig
+$AzsVirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $AzsRGName -Location $AzsLocation -Name $AzsVNetName -AddressPrefix $AzsVNetRange -Subnet $AzsSubnetConfig, $AzsGWSubnetConfig
 ### Retrieve gateway subnet config
 $AzsGWSubnetConfig = Get-AzureRmVirtualNetworkSubnetConfig -Name "GatewaySubnet" -VirtualNetwork $AzsVirtualNetwork
 
@@ -149,7 +149,7 @@ Write-Output -InputObject "Creating virtual network"
 $AzureSubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name "Default" -AddressPrefix $AzureSubnetRange
 $AzureGWSubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name "GatewaySubnet" -AddressPrefix $AzureGWSubnetRange
 ### Create virtual network
-$AzureVirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $AzureRGName -Location $AzureLocation -Name $AzureVNetName -AddressPrefix $AzureVNetRange -Subnet $AzureSubnetConfig,$AzureGWSubnetConfig
+$AzureVirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $AzureRGName -Location $AzureLocation -Name $AzureVNetName -AddressPrefix $AzureVNetRange -Subnet $AzureSubnetConfig, $AzureGWSubnetConfig
 ### Retrieve gateway subnet config
 $AzureGWSubnetConfig = Get-AzureRmVirtualNetworkSubnetConfig -Name "GatewaySubnet" -VirtualNetwork $AzureVirtualNetwork
 
