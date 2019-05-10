@@ -11,7 +11,7 @@ toc_sub1: How To
 toc_sub2: Resize a disk
 toc_sub3:
 toc_sub4:
-toc_title: Resize virtual machine disks - portal
+toc_title: Resize virtual machine disks - Portal
 toc_fullpath: Users/How To/Resize a disk/azs-how-resize-disks.md
 toc_mdlink: azs-how-resize-disks.md
 ---

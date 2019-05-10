@@ -11,7 +11,7 @@ toc_sub1: How To
 toc_sub2: Create a Key Vault
 toc_sub3:
 toc_sub4:
-toc_title: Create a key vault - portal
+toc_title: Create a key vault - Portal
 toc_fullpath: Users/How To/Create a Key Vault/azs-how-create-key-vault-portal.md
 toc_mdlink: azs-how-create-key-vault-portal.md
 ---
