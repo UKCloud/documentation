@@ -220,11 +220,11 @@ The external IP addresses are static. Internal IPs can be assigned statically fr
 
 ### Are external Domain Name System (DNS) services available?
 
-No, we don't currently offer this service. You can implement your own DNS servers within your solution, or configure your virtual firewall to enable connectivity to an externally hosted DNS server - for example, one hosted on a government secure network such as PSN, Janet or N3/HSCN; or one available on the Internet such as Google `8.8.8.8`.
+No, we don't currently offer this service. You can implement your own DNS servers within your solution, or configure your virtual firewall to enable connectivity to an externally hosted DNS server - for example, one hosted on a government secure network such as PSN, Janet or HSCN; or one available on the Internet such as Google `8.8.8.8`.
 
 ### Are domain name registration services available?
 
-No, we don't currently offer this service. Some government secure networks (such as PSN and N3/HSCN) offer domain name registration and DNS hosting as part of their service.
+No, we don't currently offer this service. Some government secure networks (such as PSN and HSCN) offer domain name registration and DNS hosting as part of their service.
 
 For internet-facing services a third-party DNS provider will be required.
 
@@ -236,7 +236,7 @@ Yes this is available for Assured OFFICIAL and Elevated OFFICIAL. See [*Network 
 
 UKCloud doesn't provide SSL certificates, but you can use your existing ones.
 
-Some government secure networks (such as PSN and N3/HSCN) provide SSL certificates as part of their service.
+Some government secure networks (such as PSN and HSCN) provide SSL certificates as part of their service.
 
 ### Do you offer load balancing?
 

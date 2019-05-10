@@ -53,7 +53,7 @@ PRIORITY |Uncontended (CPU/GiB) | Configured to reduce workload movement around 
 
 **VM size.** There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through vCloud Director.
 
-Full details of the available service options are outlined in the *Service Definition* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-service-definition-document-2018-05-21-1254.pdf).
+Full details of the available service options are outlined in the [*Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf).
 
 ## Storage options
 
@@ -137,7 +137,7 @@ You are entitled to claim Service Credits for outages to services that take you 
 
 - Red Hat Enterprise Linux licensing
 
-For the latest available licences, please check the *Service Definition* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-service-definition-document-2018-05-21-1254.pdf) and the *Pricing Guide* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-pricing-document-2018-05-23-0844.pdf).
+For the latest available licences, please check the [*Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf) and the [*Pricing Guide*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf).
 
 You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you're providing your own licensing for a retrospective discount.
 
@@ -161,7 +161,7 @@ We manage the physical firewalls that face public and secure networks.
 
 **PSN-facing solutions.** You should raise a Service Request or contact your Customer Success Manager (CSM) to be assigned your IP address. Contended bandwidth (uncapped).
 
-**Janet and N3/HSCN solutions** have one usable IP address. You can request additional IP addresses via a Service Request.
+**Janet and HSCN solutions** have one usable IP address. You can request additional IP addresses via a Service Request.
 
 From a customer management experience, you manage all your connectivity rules, such as firewall, IPsec VPN and NAT functionality, through your edge gateway, using either the UKCloud Portal GUI or API.
 
@@ -214,7 +214,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 ## Service migration
 
-You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the *Pricing Guide* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-pricing-document-2018-05-23-0844.pdf).
+You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the [*Pricing Guide*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf).
 
 Customers are free to migrate their workloads. You can also request a migration through a Service Request. Migrations may be between:
 
@@ -248,7 +248,7 @@ Customers are free to migrate their workloads. You can also request a migration 
 
 - The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.
 
-- If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.
+- If access is required over government secure networks (HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.
 
 - Management and administration of layers above the hypervisor (OS patching, application performance monitoring, user administration).
 
@@ -284,7 +284,7 @@ If during Emergency Maintenance there is a loss of availability to the service, 
 
 The following documents contain more information about UKCloud for VMware and the service options:
 
-- *UKCloud for VMware Service Definition* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-service-definition-document-2018-05-21-1254.pdf)
+- [*UKCloud for VMware Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf)
 
 - [*UKCloud for VMware FAQ*](vmw-faq.md)
 
@@ -298,7 +298,7 @@ The following documents contain more information about UKCloud for VMware and th
 
 - [*Understanding connectivity options in UKCloud for VMware*](vmw-ref-connectivity-options.md)
 
-- *UKCloud Terms and Conditions* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-terms-and-conditions-2018-05-21-1254.pdf)
+- [*UKCloud Terms and Conditions*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf)
 
 - [*SLA Definition*](../other/other-ref-sla-definition.md)
 
