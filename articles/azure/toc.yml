@@ -46,7 +46,7 @@
         href: azs-how-configure-powershell-users.md
     - name: Create a Key Vault
       items:
-      - name: Create a key vault - portal
+      - name: Create a key vault - Portal
         href: azs-how-create-key-vault-portal.md
       - name: Create a key vault - PowerShell
         href: azs-how-create-key-vault-ps.md
@@ -60,7 +60,7 @@
         href: azs-how-create-spn-powershell.md
     - name: Create a Site-to-Site VPN Connection
       items:
-      - name: Create a site-to-site VPN connection - portal
+      - name: Create a site-to-site VPN connection - Portal
         href: azs-how-create-S2S-VPN.md
       - name: Create a site-to-site VPN connection - PowerShell
         href: azs-how-create-S2S-VPN-ps.md
@@ -76,7 +76,7 @@
         href: azs-how-create-vm-terraform.md
     - name: Resize a disk
       items:
-      - name: Resize virtual machine disks - portal
+      - name: Resize virtual machine disks - Portal
         href: azs-how-resize-disks.md
   - name: Reference
     items:
