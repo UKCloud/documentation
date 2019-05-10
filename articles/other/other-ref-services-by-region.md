@@ -49,7 +49,7 @@ Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, 
 &nbsp; | **UKCloud for Oracle Software**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect<br>*Storage:* Tier 1, Tier 2
 &nbsp; | **Cloud GPU**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect
 &nbsp; | **UKCloud for OpenStack**<br>*Connectivity:* Internet, PSN, HSCN, Janet
-&nbsp; | **UKCloud for OpenShift**<br>*Connectivity:* Internet
+&nbsp; | **UKCloud for OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet
 &nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet
 &nbsp; | **UKCloud for Microsoft Azure**<br>*Connectivity:* Internet<br>IaaS services<br>PaaS services coming in H2 CY2018
 Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall
@@ -88,7 +88,7 @@ Security domain | Service
 Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall
 &nbsp; | **Cloud GPU**<br>*Connectivity:* Internet, PSN, HSCN, Janet, HybridConnect
 &nbsp; | **UKCloud for OpenStack**<br>*Connectivity:* Internet, PSN, HSCN, Janet<br>*VM type:* Ephemeral<br>*Storage:* Tier 1, Tier 2
-&nbsp; | **UKCloud for OpenShift**<br>*Connectivity:* Internet
+&nbsp; | **UKCloud for OpenShift**<br>*Connectivity:* Internet, PSN, HSCN, Janet
 &nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet
 Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect<br>*VM type:* ESSENTIAL, POWER, PRIORITY<br>*Storage:* Tier 1, Tier 2<br>*Protection:* Journaling, Snapshot<br>Bring Your Own Firewall
 &nbsp; | **Cloud GPU**<br>*Connectivity:* PSN, HybridConnect
