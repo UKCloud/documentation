@@ -4,7 +4,7 @@ description: Learn how to create a service principal name (SPN) to manage your A
 services: azure-stack
 author: Chris Black
 reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+lastreviewed: 10/05/2019 10:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
