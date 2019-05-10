@@ -46,7 +46,7 @@ Enter details below to provide values for the variables in the scripts in this a
 From your PowerShell window:
 
 <pre><code class="language-PowerShell"># Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+$StackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"

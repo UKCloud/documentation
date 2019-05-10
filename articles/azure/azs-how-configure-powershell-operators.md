@@ -66,7 +66,7 @@ Install-Module -Name AzureStack -RequiredVersion 1.7.1 -Verbose
 Set-ExecutionPolicy RemoteSigned
 
 # Register an AzureRM environment that targets your Azure Stack instance
-Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "<output form="armendpoint" name="result" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
+$StackEnvironment = Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "<output form="armendpoint" name="result" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
 
 # Sign in to your environment
 Connect-AzureRmAccount -EnvironmentName "AzureStackAdmin"
@@ -78,7 +78,7 @@ Connect-AzureRmAccount -EnvironmentName "AzureStackAdmin"
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
 # Register an AzureRM environment that targets your Azure Stack instance
-Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "<output form="armendpoint" name="result2" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
+$StackEnvironment = Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "<output form="armendpoint" name="result2" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
 
 # Create your Credentials
 $AzsUsername = "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
