@@ -72,7 +72,7 @@ To check the existing version of your edge gateway:
 
 ## Load balancers with weight of 0
 
-In the NSX API in vCloud Director 8.20, using a load balancer weight of 0 to disable a member is no longer valid. If you attempt to upgrade an edge gateway with a load balancer member weight of 0, the redeployment will fail.
+In the NSX API in vCloud Director 8.20 or later, using a load balancer weight of 0 to disable a member is no longer valid. If you attempt to upgrade an edge gateway with a load balancer member weight of 0, the redeployment will fail.
 
 For more information, see the following VMware Knowledge Base article: <https://kb.vmware.com/s/article/51724>.
 
