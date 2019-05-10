@@ -192,7 +192,7 @@ performance for your solution.</p>
 <td><code>atmos.cas.cor00005.psnassured.ukcloud.com</code></td>
 </tr>
 <tr>
-<td>N3</td>
+<td>HSCN</td>
 <td><code>cas.cor00005.ukcloud.thirdparty.nhs.uk/</code></td>
 <td><code>atmos.cas.cor00005.ukcloud.thirdparty.nhs.uk/</code></td>
 </tr>
@@ -212,7 +212,7 @@ performance for your solution.</p>
 <td><code>atmos.cas.frn00006.psnassured.ukcloud.com</code></td>
 </tr>
 <tr>
-<td>N3</td>
+<td>HSCN</td>
 <td><code>cas.frn00006.ukcloud.thirdparty.nhs.uk/</code></td>
 <td><code>atmos.cas.frn00006.ukcloud.thirdparty.nhs.uk/</code></td>
 </tr>
@@ -232,7 +232,7 @@ performance for your solution.</p>
 <p><a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf">https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf</a></p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Currently the N3 DNS service does not allow UKCloud to create wildcard DNS entries for our services. This means that S3 URLs that feature the bucket as part of the domain do not work (for example, <code>bucket01.cas.frn00006.ukcloud.thirdparty.nhs.uk</code>). With most S3 tools, you can choose whether to use prefix buckets or suffix buckets. If you are using the service via N3 you'll need to make sure your client tools support suffix buckets.</p>
+<p>Currently the HSCN DNS service does not allow UKCloud to create wildcard DNS entries for our services. This means that S3 URLs that feature the bucket as part of the domain do not work (for example, <code>bucket01.cas.frn00006.ukcloud.thirdparty.nhs.uk</code>). With most S3 tools, you can choose whether to use prefix buckets or suffix buckets. If you are using the service via HSCN you'll need to make sure your client tools support suffix buckets.</p>
 </div>
 <h3 id="amazon-s3-authentication-tool-for-curl">Amazon S3 Authentication Tool for Curl</h3>
 <p>The Amazon S3 Authentication Tool for Curl (S3Curl) is a very useful Perl script, developed by Amazon. It's a wrapper for Curl that calculates the required authentication signature automatically for each request. As the authentication signature changes for every request, this allows Curl to interact with the API outside of code, enabling you to validate that your commands are working correctly and view the raw HTML response from the API, which can be useful when troubleshooting.</p>

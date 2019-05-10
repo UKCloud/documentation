@@ -164,15 +164,15 @@
 <p>The external IP addresses are allocated to the project from a pool and will remain allocated to that project unless you explicitly select to &quot;release&quot; the address.</p>
 <p>Internal IPs are assigned to instances from a pool and will remain assigned to that instance/network port until that instance or network port is deleted. Optionally, it is possible to select the IP address assigned during instance/port creation.</p>
 <h3 id="are-external-domain-name-system-dns-services-available">Are external Domain Name System (DNS) services available?</h3>
-<p>No, we don't currently offer this service. You can implement your own DNS servers within your solution, or configure your instances to connect to an externally hosted DNS server - for example, one hosted on a government secure network such as PSN or N3; or one available on the Internet such as Google 8.8.8.8.</p>
+<p>No, we don't currently offer this service. You can implement your own DNS servers within your solution, or configure your instances to connect to an externally hosted DNS server - for example, one hosted on a government secure network such as PSN or HSCN; or one available on the Internet such as Google 8.8.8.8.</p>
 <h3 id="are-domain-name-registration-services-available">Are domain name registration services available?</h3>
-<p>No, we don't currently offer this service. Some government secure networks (such as PSN and N3) offer domain name registration and DNS hosting as part of their service.</p>
+<p>No, we don't currently offer this service. Some government secure networks (such as PSN and HSCN) offer domain name registration and DNS hosting as part of their service.</p>
 <p>For internet-facing services a third-party domain provider will be required.</p>
 <h3 id="is-network-time-protocol-available-for-time-synchronisation">Is Network Time Protocol available for time synchronisation?</h3>
 <p>Network Time Protocol services will initially only be available via public NTP servers.</p>
 <h3 id="can-ukcloud-provide-ssl-certificates-or-can-existing-ssl-certificates-be-used">Can UKCloud provide SSL certificates or can existing SSL certificates be used?</h3>
 <p>UKCloud doesn't provide SSL certificates, but you can use your existing ones.</p>
-<p>Some government secure networks (such as PSN and N3) provide SSL certificates as part of their service.</p>
+<p>Some government secure networks (such as PSN and HSCN) provide SSL certificates as part of their service.</p>
 <h3 id="do-you-offer-load-balancing">Do you offer load balancing? </h3>
 <p>Due to OpenStack Neutron not supporting highly-available load balancing services, UKCloud has created <a href="ostack-how-create-load-balancer.html"><em>How to creating load balancing services on UKCloud for OpenStack</em></a>, which describes how to deploy a HA load balancing solution, of which the first deployed solution is free of charge.</p>
 <p>We will look to include more native OpenStack functionality once a highly-available solution is provided by the community.</p>
@@ -207,9 +207,9 @@
 <li><p>Remote access protocols (such as RDP/SSH) over a VPN or secure network</p>
 </li>
 </ul>
-<h3 id="how-do-i-access-my-solutions-via-government-networks-psn-a-n3hscn">How do I access my solutions via government networks (PSN-A, N3/HSCN)?</h3>
+<h3 id="how-do-i-access-my-solutions-via-government-networks-psn-hscn">How do I access my solutions via government networks (PSN, HSCN)?</h3>
 <p>Although UKCloud allows you to make your customer-facing applications accessible via government network connections, the management of your Assured OFFICIAL OpenStack environment can only be achieved directly via an internet connection.</p>
-<p>OpenStack environments in our Elevated OFFICIAL security domain can be managed via the PSN-P network.</p>
+<p>OpenStack environments in our Elevated OFFICIAL security domain can be managed via the PSN network.</p>
 <h3 id="what-reports-can-i-get-about-instances-performance">What reports can I get about instances performance?</h3>
 <p>UKCloud does not currently provide instance performance reports, but you can monitor their performance using standard tools within the operating system.</p>
 <h3 id="does-ukcloud-patch-instances">Does UKCloud patch instances?</h3>
@@ -220,7 +220,7 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <h3 id="how-do-i-access-support-and-patches-for-operating-systems-that-ukcloud-licenses">How do I access support and patches for operating systems that UKCloud licenses?</h3>
 <p>UKCloud provides a repository of patches for common operating systems for customers to access and update from. Please refer to the onboarding guide or the Knowledge Centre for details.</p>
 <p>For support, you'll need to log a request with UKCloud, who will log the ticket with the relevant supplier. UKCloud will then inform you about any updates. However, UKCloud isn't responsible for the actual resolution of non-IaaS issues.</p>
-<h3 id="do-you-have-a-key-management-system-kms-for-activating-windows">Do you have a Key Management System (KMS) for activating Windows? </h3>
+<h3 id="do-you-have-a-key-management-system-kms-for-activating-windows">Do you have a Key Management System (KMS) for activating Windows?</h3>
 <p>Yes. A we provide a <a href="../vmware/vmw-how-setup-kms.html">step-by-step guide</a> on configuring and using this service.</p>
 <h3 id="how-do-i-control-an-instance">How do I control an instance?</h3>
 <p>You control an instance via the OpenStack dashboard or API. Controls include stop, start, restart, load media, clone, snapshot, and so on.</p>

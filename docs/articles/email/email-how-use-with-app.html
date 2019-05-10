@@ -94,7 +94,7 @@
 <h1 id="how-to-use-ukclouds-email-service-with-your-application">How to use UKCloud's email service with your application</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Many customers who use UKCloud's IaaS need to be able to send email from, or receive email into, their applications. Although we don't have an SMTP relay service dedicated to this purpose, you can use our Email and Collaboration service to meet your needs. This can be particularly valuable if you're using the UKCloud Elevated OFFICIAL (formerly PGA IL3) platform, as it doesn't connect directly to the internet, but to secure government networks such as PSN and N3/HSCN, where few mail relay providers are available.</p>
+<p>Many customers who use UKCloud's IaaS need to be able to send email from, or receive email into, their applications. Although we don't have an SMTP relay service dedicated to this purpose, you can use our Email and Collaboration service to meet your needs. This can be particularly valuable if you're using the UKCloud Elevated OFFICIAL (formerly PGA IL3) platform, as it doesn't connect directly to the internet, but to secure government networks such as PSN and HSCN, where few mail relay providers are available.</p>
 <p>In this guide, we'll walk you through the process for configuring your application to use our Email &amp; Collaboration service.</p>
 <h2 id="ukcloud-email-and-collaboration-as-a-service">UKCloud Email and Collaboration as a Service</h2>
 <p>The service provides enterprise-class functionality for end-users, on a per-mailbox, per- month pricing model. It offers several options for mailbox access, including POP3, IMAP4 and SMTP --- all with TLS (SSL) encryption --- as well as HTTPS. Exchange ActiveSync is also supported.</p>
@@ -176,7 +176,7 @@
 <h5>Note</h5>
 <p>An example working stunnel config is below to send smtp traffic on port 25 to zimbra on TLS port 465</p>
 </div>
-<pre><code>[smtp]
+<pre><code class="lang-none">[smtp]
 accept = 25
 client = yes
 connect = mail.skyscapecs.net:465
