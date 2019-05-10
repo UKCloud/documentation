@@ -1,5 +1,5 @@
 ---
-title: How to create a service principal name for Azure Stack using the Azure portal | UKCloud Ltd
+title: How to create a service principal name (SPN) for Azure Stack using the Azure portal | UKCloud Ltd
 description: Learn how to create a service principal name (SPN) to manage your Azure Stack resources using the Azure portal
 services: azure-stack
 author: Bailey Lawson
@@ -8,11 +8,11 @@ lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Create a Service Principal Name
+toc_sub2: Create a Service Principal Name (SPN)
 toc_sub3:
 toc_sub4:
-toc_title: Create a service principal name - Portal
-toc_fullpath: Users/How To/Create a Service Principal Name/azs-how-create-spn-portal.md
+toc_title: Create a service principal name (SPN) - Portal
+toc_fullpath: Users/How To/Create a Service Principal Name (SPN)/azs-how-create-spn-portal.md
 toc_mdlink: azs-how-create-spn-portal.md
 ---
 
