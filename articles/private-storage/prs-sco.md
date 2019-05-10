@@ -59,7 +59,7 @@ Your storage solution can be:
 
 - Independent of any other UKCloud product
 
-- Connected via the internet, HybridConnect, Janet, MPLS, N3/HSCN, PSN Assured, PSN Protected or Secure Remote Access
+- Connected via the internet, HybridConnect, Janet, MPLS, HSCN, PSN or Secure Remote Access
 
 ## Installation
 
