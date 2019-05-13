@@ -90,9 +90,9 @@ After accepting the agreement you will be greeted with the following page. Tick 
 Next, you should receive a welcome email from your CSM containing the details of your new UKCloud for Microsoft Azure environment.
 
 > [!IMPORTANT]
-> If you have conditional access policy enabled for you Azure Active Directory, please follow the instructions from the invitation email to allow us access to your AAD.
+> If you have conditional access policies enabled for your Azure Active Directory, follow the instructions from the invitation email to allow us access to your AAD.
 >
-> More information about conditional access policy can be found [here](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/location-condition#trusted-ips).
+> You can find more information about conditional access policies [here](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/location-condition#trusted-ips).
 
 # [I do not have an existing Azure Active Directory](#tab/tabid-2)
 
