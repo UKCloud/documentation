@@ -20,20 +20,20 @@ toc_mdlink: azs-how-resize-disk-ps.md
 
 ## Overview
 
-When deploying a new virtual machine from an Azure Marketplace image, the default drive size is often 127GB or less. While it is recommended to add additional disks for tasks such as installing applications and for CPU intensive workloads, you may need to expand the initial drive for purposes such as migrating from a physical PC to the VM or to support applications that must be installed on the OS drive.
+When deploying a new virtual machine from an Azure Marketplace image, the default drive size is often 127GB or less. While it is recommended to add additional disks for tasks such as installing applications and for CPU intensive workloads, you may need to expand a disk for purposes such as migrating from a physical PC to the VM or to support applications that must be installed on the OS drive.
 
-This guide shows you how to resize disks on UKCloud for Microsoft Azure.
+This article shows you how to resize disks on UKCloud for Microsoft Azure.
 
 > [!NOTE]
 > Resizing a disk will cause the virtual machine to restart.
 
 ### Intended audience
 
-To complete the steps in this guide you must have the appropriate permissions on the resource you are trying to access.
+To complete the steps in this article you must have the appropriate permissions on the resource you are trying to access.
 
 ## Prerequisites
 
-Ensure your PowerShell environment is setup as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md).
+Before you begin, ensure your PowerShell environment is set up as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md).
 
 ## [Resizing an OS disk](#tab/tabid-1)
 
@@ -62,7 +62,7 @@ Enter details below to provide values for the variables in the scripts in this a
 
 ***
 
-Please select the type of disk you are trying to resize:
+Select the type of disk you are trying to resize:
 
 ### [Managed Disk](#tab/tabid-a/tabid-1)
 
