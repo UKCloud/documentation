@@ -28,35 +28,41 @@ The [UKCloud Service Status page](https://status.ukcloud.com) enables you to mon
 
 ### Platform status
 
-A banner at the top of the status page indicates the general availability of the platform.
+Incidents are displayed at the top of the page and are indicated by a yellow (performance degraded) or red (outage) banner, with details of the incident and its current status.
 
-![All Systems Operational](images/other-status-all-operational.png)
+![Incident](images/other-status-incident.png)
 
-Scheduled maintenance is indicated by a blue banner, with details of what the maintenance involves and its current status.
+Scheduled maintenance is indicated by a blue banner, with details of what the maintenance work involves and its current status.
 
 ![Scheduled maintenance](images/other-status-maintenance.png)
 
-Incidents are indicated by a yellow (performance degraded) or red (outage) banner, with details of the incident and its current status.
+If there are no incident or scheduled maintenance alerts, a green banner at the top displays `All Systems Operational`.
 
-![Incident](images/other-status-incident.png)
+![All Systems Operational](images/other-status-all-operational.png)
+
+Below the alerts for incidents and maintenance, you can see any general information about the status of the platform.
+
+Click **View historical uptime** to view uptime and incident information for past months.
+
+![Historic uptime](images/other-status-history.png)
+
+Upcoming maintenance work and recent incidents are listed at the bottom of the status page.
 
 ### Service status
 
 As well as the overall status of the platform, the status page also shows the status of each service on the UKCloud platform.
 
-For each service, you can see the availability over the last 90 days, with each day represented by a bar. If there are no issues with a service, the status is reported as `Operational`.
+For each service, you can see the availability over the last 90 days, with each day represented by a bar. Hover over a bar to see a popup with details for that day. If there are no issues with a service, the status is reported as `Operational`.
 
 ![Service status](images/other-status-service.png)
 
 The uptime figure indicates what percentage of the last 90 days the service was available for.
 
-Click the + icon to expand the service to see a breakdown of the service to see which specific components are affected.
+Click the **+** icon to expand the service to see the status of specific components within the service. For example, for Connectivity, you can see the status of each connectivity type (Internet, PSN, HSCN, Janet, RLI); for UKCloud for VMware, you can see the status for each UKCloud zone.
 
 If service availability is impacted, the bar for that day displays in a different colour and the status is reported as `Under Maintenance`, `Degraded Performance` or `Outage`.
 
-![Service with partial outage](images/other-status-outage.png)
-
-Past incidents and scheduled maintenance are displayed at the bottom of the status page.
+![Service with degraded performance](images/other-status-outage.png)
 
 ## Subscribing to the status page
 
@@ -66,31 +72,47 @@ You can subscribe to the status page to receive updates when information is upda
 
     ![Subscribe to Updates button](images/other-status-btn-subscribe.png)
 
-2. Select the method by which you want to receive notifications:
+2. To receive email notifications:
 
-    - To receive email notifications, click the envelope icon, enter your email address, then click **Subscribe via Email**.
+    1. Click the envelope icon, enter your email address, then click **Subscribe via Email**.
 
         ![Subscribe via Email](images/other-status-notification-email.png)
 
-    - To receive text notifications, click the telephone handset icon, enter your phone number, then click **Subscribe via Text Message**.
+    2. Confirm your subscription by clicking the **Confirm subscription** button in the email you receive.
+
+    3. On the *Notifications Subscription* page, you can specify individual components for which you want to receive notifications.
+
+        ![Notifications Subscription page](images/other-status-subscriptions.png)
+
+3. To receive text notifications:
+
+    1. Click the telephone handset icon, enter your phone number, then click **Subscribe via Text Message**.
 
         ![Subscribe via Text Message](images/other-status-notification-text.png)
 
-    - To receive webhook notifications, click the code icon (**<>**), enter the URL to send the webhook to and the email address to send any associated error messages to, then click **Subscribe to Notifications**.
+    2. Click the link in the confirmation text message you receive to manage your subscriptions.
 
-        ![Subscribe via Webhook](images/other-status-notification-webhook.png)
+4. To receive webhook notifications, click the code icon (**<>**), enter the URL to send the webhook to and the email address to send any associated error messages to, then click **Subscribe to Notifications**.
 
-    - To subscribe to the Atom/RSS feed, click the RSS icon.
+    ![Subscribe via Webhook](images/other-status-notification-webhook.png)
 
-        ![Subscribe to RSS](images/other-status-notification-rss.png)
+5. To subscribe to the Atom/RSS feed, click the RSS icon and then click the **Atom Feed** or **RSS Feed** link.
 
-    - For help about the status page, click the speech bubble icon.
+    ![Subscribe to RSS](images/other-status-notification-rss.png)
+
+6. For more information about UKCloud Support, click the speech bubble icon, then click the **support site** link.
 
         ![Help](images/other-status-help.png)
 
-3. On the *Notifications Subscription* page, you can specify individual components for which you want to receive notifications.
+7. You can also subscribe to notifications for a specific incident or maintenance:
 
-    ![Notifications Subscription page](images/other-status-subscriptions.png)
+    1. Click the **Subscribe** link in the banner for that incident or maintenance alert.
+
+        ![Subscribe link for incident](images/other-status-incident-subscribe.png)
+
+    2. Enter your email address or phone number, then click **Subscribe to Incident**.
+
+        ![Subscribe to Incident dialog box](images/other-status-subscribe-incident.png)
 
 ## Feedback
 
