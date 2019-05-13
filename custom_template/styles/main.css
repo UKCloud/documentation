@@ -271,13 +271,12 @@ body .toc {
 }
 
 .navbar:not(.collapsed) .navbar-collapse .navbar-nav{
-  align-self: flex-end;
   margin-right: 2em;
 }
 
 .navbar:not(.collapsed) .navbar-collapse .navbar-nav > li > a{
-  padding-bottom: 0;
-  padding-top: 1em;
+  padding-bottom: 0.25em;
+  padding-top: 0.25em;
 }
 
 .navbar .navbar-collapse .navbar-nav > li > a{
