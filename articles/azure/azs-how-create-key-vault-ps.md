@@ -26,7 +26,7 @@ The following process shows you how to setup a vault within Azure Stack's Key Va
 
 ## Prerequisites
 
-Ensure your PowerShell environment is setup as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md).
+Before you begin, ensure your PowerShell environment is set up as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md).
 
 ## Creating a new key vault
 

@@ -31,7 +31,7 @@ To complete the steps in this guide, you must have appropriate access to subscri
 
 ## Prerequisites
 
-Ensure your PowerShell environment is set up as detailed in [*Configure the Azure Stack user's PowerShell environment*](azs-how-configure-powershell-users.md).
+Before you begin, ensure your PowerShell environment is set up as detailed in [*Configure the Azure Stack user's PowerShell environment*](azs-how-configure-powershell-users.md).
 
 ## Declare variables
 
