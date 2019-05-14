@@ -26,7 +26,7 @@ VMware and OpenStack, and benefit from native connectivity to non-cloud workload
 
 ## Prerequisites
 
-Ensure your Azure CLI environment is setup as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-cli.md).
+Before you begin, ensure your Azure CLI environment is set up as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-cli.md).
 
 ## Creating a resource group
 

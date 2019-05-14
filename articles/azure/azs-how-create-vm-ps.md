@@ -27,7 +27,7 @@ Before creating the virtual machine, it is necessary to create storage and netwo
 
 ## Prerequisites
 
-Ensure your PowerShell environment is setup as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md).
+Before you begin, ensure your PowerShell environment is set up as detailed in [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md).
 
 ## Creating a virtual machine
 
