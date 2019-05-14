@@ -126,14 +126,19 @@
 </thead>
 <tbody>
 <tr>
+<td>$ArmEndpoint</td>
+<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td><form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
+</tr>
+<tr>
 <td>$RGName</td>
 <td>Name of the resource group which the VM is inside in Azure Stack</td>
-<td><form oninput="result.value=ResourceGroupInput.value; result2.value=ResourceGroupInput.value" id="ResourceGroup" style="display: inline;"><input type="text" id="ResourceGroupInput" name="ResourceGroupInput" style="display: inline;" placeholder="myResourceGroup"></form></td>
+<td><form oninput="result.value=ResourceGroupInput.value; result2.value=ResourceGroupInput.value" id="ResourceGroup" style="display: inline;"><input type="text" id="ResourceGroupInput" name="ResourceGroupInput" style="display: inline;" placeholder="MyResourceGroup"></form></td>
 </tr>
 <tr>
 <td>$VMName</td>
 <td>Name of the VM with the disk you are trying to resize</td>
-<td><form oninput="result.value=VMNameInput.value; result2.value=VMNameInput.value" id="VMName" style="display: inline;"><input type="text" id="VMNameInput" name="VMNameInput" style="display: inline;" placeholder="myVM"></form></td>
+<td><form oninput="result.value=VMNameInput.value; result2.value=VMNameInput.value" id="VMName" style="display: inline;"><input type="text" id="VMNameInput" name="VMNameInput" style="display: inline;" placeholder="MyVM"></form></td>
 </tr>
 <tr>
 <td>$Disk.DiskSizeGB</td>
@@ -156,14 +161,19 @@
 </thead>
 <tbody>
 <tr>
+<td>$ArmEndpoint</td>
+<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td><form oninput="result.value=armendpoint2.value;result2.value=armendpoint2.value" id="armendpoint2" style="display: inline;"><input type="text" id="armendpoint2" name="armendpoint2" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
+</tr>
+<tr>
 <td>$RGName</td>
 <td>Name of the resource group which the VM is inside in Azure Stack</td>
-<td><form oninput="result.value=ResourceGroupInput2.value; result2.value=ResourceGroupInput2.value" id="ResourceGroup2" style="display: inline;"><input type="text" id="ResourceGroupInput2" name="ResourceGroupInput2" style="display: inline;" placeholder="myResourceGroup"></form></td>
+<td><form oninput="result.value=ResourceGroupInput2.value; result2.value=ResourceGroupInput2.value" id="ResourceGroup2" style="display: inline;"><input type="text" id="ResourceGroupInput2" name="ResourceGroupInput2" style="display: inline;" placeholder="MyResourceGroup"></form></td>
 </tr>
 <tr>
 <td>$VMName</td>
 <td>Name of the VM with the disk you are trying to resize</td>
-<td><form oninput="result.value=VMNameInput2.value; result2.value=VMNameInput2.value" id="VMName2" style="display: inline;"><input type="text" id="VMNameInput2" name="VMNameInput2" style="display: inline;" placeholder="myVM"></form></td>
+<td><form oninput="result.value=VMNameInput2.value; result2.value=VMNameInput2.value" id="VMName2" style="display: inline;"><input type="text" id="VMNameInput2" name="VMNameInput2" style="display: inline;" placeholder="MyVM"></form></td>
 </tr>
 <tr>
 <td>$Disk.DiskSizeGB</td>
@@ -199,13 +209,16 @@
 <section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tabpanel" data-tab="tabid-a" data-condition="tabid-1">
 
 <p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Sign in to your Azure Stack environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+<pre><code class="language-PowerShell"># Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+# Sign in to your Azure Stack environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group and VM name
-$RGName = "<output form="ResourceGroup" name="result" style="display: inline;">myResourceGroup</output>"
-$VMName = "<output form="VMName" name="result" style="display: inline;">myVM</output>"
+$RGName = "<output form="ResourceGroup" name="result" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="VMName" name="result" style="display: inline;">MyVM</output>"
 
 # Obtain your VM object
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
@@ -225,13 +238,16 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 <section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
 
 <p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Sign in to your Azure Stack environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+<pre><code class="language-PowerShell"># Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+# Sign in to your Azure Stack environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group and VM name
-$RGName = "<output form="ResourceGroup" name="result2" style="display: inline;">myResourceGroup</output>"
-$VMName = "<output form="VMName" name="result2" style="display: inline;">myVM</output>"
+$RGName = "<output form="ResourceGroup" name="result2" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="VMName" name="result2" style="display: inline;">MyVM</output>"
 
 # Obtain your VM object
 $VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
@@ -250,13 +266,16 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 <section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tabpanel" data-tab="tabid-a" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
 
 <p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Sign in to your Azure Stack environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+<pre><code class="language-PowerShell"># Declare endpoint
+$ArmEndpoint = "<output form="armendpoint2" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+# Sign in to your Azure Stack environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group and VM name
-$RGName = "<output form="ResourceGroup2" name="result" style="display: inline;">myResourceGroup</output>"
-$VMName = "<output form="VMName2" name="result" style="display: inline;">myVM</output>"
+$RGName = "<output form="ResourceGroup2" name="result" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="VMName2" name="result" style="display: inline;">MyVM</output>"
 $DiskLun = <output form="LUN" name="result" style="display: inline;">0</output>
 
 # Obtain your VM object
@@ -277,13 +296,16 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 <section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tabpanel" data-tab="tabid-b" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
 
 <p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Sign in to your Azure Stack environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+<pre><code class="language-PowerShell"># Declare endpoint
+$ArmEndpoint = "<output form="armendpoint2" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+# Sign in to your Azure Stack environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
 # Set your resource group and VM name
-$RGName = "<output form="ResourceGroup2" name="result2" style="display: inline;">myResourceGroup</output>"
-$VMName = "<output form="VMName2" name="result2" style="display: inline;">myVM</output>"
+$RGName = "<output form="ResourceGroup2" name="result2" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="VMName2" name="result2" style="display: inline;">MyVM</output>"
 $DiskLun = <output form="LUN" name="result2" style="display: inline;">0</output>
 
 # Obtain your VM object
@@ -327,7 +349,7 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 <tr>
 <td>$DriveLetter</td>
 <td>The drive letter of the volume you are trying to expand</td>
-<td><form oninput="result.value=DriveLetter.value" id="DriveLetter" style="display: inline;"><input type="text" id="DriveLetterInput" name="DriveLetterInput" style="display: inline;" placeholder="C"></form></td>
+<td><form oninput="result.value=DriveLetterInput.value" id="DriveLetter" style="display: inline;"><input type="text" id="DriveLetterInput" name="DriveLetterInput" style="display: inline;" placeholder="C"></form></td>
 </tr>
 </tbody>
 </table>
