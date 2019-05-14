@@ -94,7 +94,7 @@
 <h1 id="how-to-convert-your-edge-to-an-advanced-gateway">How to convert your edge to an advanced gateway</h1>
 
 <h2 id="overview">Overview</h2>
-<p>With the upgrade to vCloud Director 8.20 and 9.1, UKCloud for VMware now offers advanced gateways to provide access to new vCloud Director functionality. Some of this functionality is available now, with other features being added following integration testing to assess suitability on our platform (some features may incur additional charges).</p>
+<p>UKCloud for VMware offers advanced gateways to provide access to new vCloud Director functionality. Some of this functionality is available now, with other features being added following integration testing to assess suitability on our platform (some features may incur additional charges).</p>
 <p>Advanced gateways in UKCloud for VMware provide:</p>
 <ul>
 <li><p><strong>NSX Tenant Portal</strong> - The new Tenant Portal is a pure HTML5 user interface that you can use in conjunction with the legacy vCloud Director Web Console. This portal provides an initial set of controls to configure Advanced Gateway NSX Edges.</p>
@@ -102,6 +102,8 @@
 <li><p><strong>New API NSX management</strong> - vCloud Director 8.20 introduces a new proxy API that enables vCloud API clients to make requests to the NSX API. Unlike the NSX API, which is designed to address NSX objects in a global scope, such as a vCenter database, the vCloud Director API for NSX is designed to address NSX objects within the scope of a vCloud Director tenant organisation.</p>
 </li>
 <li><p><strong>SSH edge access</strong> - If you enable SSH, you can perform your own packet captures and troubleshoot your edge gateway yourself, without having to contact UKCloud Support.</p>
+</li>
+<li><p><strong>Advanced networking options</strong> - Distributed networking features, namely Distributed Firewall, Distributed Logical Router and L2 VPN, to improve the performance of traffic within your VDC.</p>
 </li>
 </ul>
 <div class="IMPORTANT">
@@ -117,17 +119,14 @@
 <h2 id="prerequisites-and-known-issues">Prerequisites and known issues</h2>
 <p>Before converting your edge gateway, review the prerequisites and known issues below:</p>
 <ul>
-<li><p><strong>Edge gateway version</strong> --- To convert to an advanced gateway, your edge gateway must be at the latest version. If necessary, redeploy your edge gateway to upgrade to the latest version; for more information,
-see <a href="vmw-how-upgrade-edge.html"><em>How to upgrade your edge gateway</em></a>.</p>
+<li><p><strong>Edge gateway version</strong> --- When converting to an advanced gateway, your edge will be redeployed to the latest version.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>If the edge gateway is not at the latest version, it is possible that the conversion process will cause the gateway to redeploy. Therefore, the conversion should always be scheduled during an outage window.</p>
+<p>As the conversion process causes the gateway to redeploy, you should always schedule an edge conversion during an outage window.</p>
 </div>
 </li>
 <li><p><strong>Disabled firewalls</strong> - On an advanced gateway, if you disable the firewall, this also stops the NAT service, as it is dependent on the firewall. As a result, traffic flow that relies on NAT, such as NAT rules and the load balancer is stopped. If you attempt to disable the firewall service, the vCloud Director Web Console will display a warning. This is due to the firewall service being used to track stateful connections. See the following VMware Knowledge Base article for more information: <a href="https://kb.vmware.com/s/article/2093153">https://kb.vmware.com/s/article/2093153</a>.</p>
 <p>If you convert an edge that already has the firewall disabled to an advanced gateway, the converted advanced gateway will have the firewall enabled, but with an Any, Any, Allow rule so that all traffic is allowed inbound or outbound.</p>
-</li>
-<li><p><strong>Internal/external keywords</strong> - Due to a bug in vCloud Director 8.20, when you create or amend firewall rules on your advanced gateway using the vCloud Director Web Console, you can no longer use the keywords internal or external when specifying the direction of the traffic. However, you can still use these keywords when using the API to create or amend rules. This Web Console bug is fixed in vCloud Director 9.<em>x</em>, which we'll be upgrading to in the coming months. For information about using the API to create or amend firewall rules, see the <a href="https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf"><em>vCloud Director API for NSX Programming Guide</em></a>.</p>
 </li>
 </ul>
 <h2 id="converting-your-edge-to-an-advanced-gateway">Converting your edge to an advanced gateway</h2>
@@ -136,10 +135,10 @@ see <a href="vmw-how-upgrade-edge.html"><em>How to upgrade your edge gateway</em
 <div class="tabGroup" id="tabgroup_CeZOj-G++Q">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Using vCloud Director 8.20</a>
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Using vCloud Director Legacy UI</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Using vCloud Director 9.1</a>
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Using vCloud Director Tenant UI</a>
 </li>
 </ul>
 <section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
@@ -184,12 +183,12 @@ see <a href="vmw-how-upgrade-edge.html"><em>How to upgrade your edge gateway</em
 </section>
 </div>
 <h2 id="next-steps">Next steps</h2>
-<p>To find out more about the features provided by advanced gateways, see the following articles:</p>
+<p>To find out more about the advanced networking features provided by advanced gateways, see the following article:</p>
 <ul>
-<li><a href="vmw-ref-vcd-820.html"><em>Upgrade to vCloud Director 8.20</em></a></li>
+<li><a href="vmw-ref-advanced-networking.html"><em>Advanced networking options for UKCloud for VMware</em></a></li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, please send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
