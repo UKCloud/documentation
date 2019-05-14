@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to create a key vault using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to resize a disk using the UKCloud Azure Stack portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to create a key vault using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to resize a disk using the UKCloud Azure Stack portal | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.42.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-create-key-vault-ps.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-resize-disk-portal.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,98 +91,102 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-create-a-key-vault-in-azure-stack-with-powershell">How to create a key vault in Azure Stack with PowerShell</h1>
+<h1 id="how-to-resize-a-disk-using-the-ukcloud-azure-stack-portal">How to resize a disk using the UKCloud Azure Stack portal</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Key Vault in Azure Stack helps safeguard cryptographic keys and secrets that cloud applications and services use. By using Key Vault, you can encrypt keys and secrets.</p>
-<p>The following process shows you how to setup a vault within Azure Stack's Key Vault, store a secret in the vault and how to extract the secret.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
-<h2 id="creating-a-new-key-vault">Creating a new key vault</h2>
-<h3 id="declare-variables">Declare variables</h3>
-<p>Enter details below to provide values for the variables in the scripts in this article:</p>
-<table>
-<thead>
-<tr>
-<th>Variable name</th>
-<th>Variable description</th>
-<th>Input</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$ArmEndpoint</td>
-<td>The Azure Resource Manager endpoint for Azure Stack</td>
-<td><form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
-</tr>
-<tr>
-<td>$RGName</td>
-<td>Name of the resource group to create the key vault inside</td>
-<td><form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"></form></td>
-</tr>
-<tr>
-<td>$VaultName</td>
-<td>Name of the key vault to be created</td>
-<td><form oninput="result.value=vaultname.value;result2.value=vaultname.value;result3.value=vaultname.value" id="vaultname" style="display: inline;"><input type="text" id="vaultname" name="vaultname" style="display: inline;" placeholder="MyVault"></form></td>
-</tr>
-<tr>
-<td>$SecretValue</td>
-<td>Value of the secret to store inside of the key vault</td>
-<td><form oninput="result.value=secretvalue.value" id="secretvalue" style="display: inline;"><input type="text" id="secretvalue" name="secretvalue" style="display: inline;" placeholder="MySecretValue"></form></td>
-</tr>
-<tr>
-<td>$SecretName</td>
-<td>Name of the secret to store inside of the key vault</td>
-<td><form oninput="result.value=secretname.value;result2.value=secretname.value" id="secretname" style="display: inline;"><input type="text" id="secretname" name="secretname" style="display: inline;" placeholder="MySecret"></form></td>
-</tr>
-</tbody>
-</table>
-<h3 id="deploy-the-key-vault">Deploy the key vault</h3>
-<p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Declare endpoint
-$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+<p>The UKCloud Azure Stack portal allows you to resize virtual machine (VM) disks. This article shows you how to resize disks that are mounted to a VM, and will work for both managed and unmanaged disks.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.</p>
+<h2 id="resizing-disks-that-are-mounted-to-a-vm">Resizing disks that are mounted to a VM</h2>
+<ol>
+<li><p>Log in to the Azure Stack portal.</p>
+<p>For more detailed instructions, see the <a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a>.</p>
+</li>
+<li><p>In the favourites panel, select <strong>Virtual machines</strong>.</p>
+<p><img src="images/azsp_vmsmenu.png" alt="Virtual machines in the favourites panel"></p>
+</li>
+<li><p>In the <em>Virtual machines</em> blade, select the virtual machine that the disk is attached to.</p>
+</li>
+<li><p>In the virtual machine's blade, select <strong>Disks</strong>.</p>
+<p><img src="images/azs-browser-vm-menu-disks-button.png" alt="Disks button within VM"></p>
+</li>
+<li><p>In the <em>Disks</em> blade, select the disk you would like to resize.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Disks can only be resized when they are unattached from the VM or the virtual machine is deallocated.</p>
+</div>
+</li>
+<li><p>In the disk's blade, enter the desired size of the disk in GiB in the <strong>Size</strong> field.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<ul>
+<li>Disks can only be resized to a larger size.</li>
+<li>Although the process is the same for both managed and unmanaged disks, the two blades look slightly different. Examples for both are provided below.</li>
+</ul>
+</div>
+</li>
+</ol>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Resizing managed disks</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Resizing unmanaged disks</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
 
-# Add environment
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+<p><img src="images/azs-browser-vm-disk-size-managed.png" alt="Managed disk resize"></p>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 
-# Login
-Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+<p><img src="images/azs-browser-vm-disk-size.png" alt="Unmanaged disk resize"></p>
+</section>
+</div>
 
-# Pull location from environment
-$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
+<ol start="7">
+<li><p>When you're done, click <strong>Save</strong>.</p>
+<p><img src="images/azs-browser-vm-disk-save-button.png" alt="VM disks save button"></p>
+</li>
+<li><p>You can monitor the progress of the disk resizing by clicking the <strong>Notifications</strong> icon.</p>
+<p><img src="images/azsp_createvm_progress.png" alt="Notification showing updating virtual machine disk"></p>
+</li>
+</ol>
+<h2 id="expanding-the-volume">Expanding the volume</h2>
+<p>After expanding the disk, you may need to go into the OS and expand the volume to actually use the newly allocated space. To do so, follow the steps below:</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">Windows VM</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b" data-tab="tabid-b" tabindex="-1">Linux VM</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-a" role="tabpanel" data-tab="tabid-a">
 
-# Select resource group
-$RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
-$VaultName = "<output form="vaultname" name="result" style="display: inline;">MyVault</output>"
+<ol>
+<li><p>Open an RDP connection to your VM.</p>
+</li>
+<li><p>Open a command prompt and type <code>diskpart</code>.</p>
+</li>
+<li><p>At the <code>DISKPART</code> prompt, type <code>list volume</code>.</p>
+<p>Take note of the volume you want to extend.</p>
+</li>
+<li><p>At the <code>DISKPART</code> prompt, type <code>select volume &lt;volumenumber&gt;</code>.</p>
+<p>This selects the volume that you want to extend into unpartitioned empty space on the same disk.</p>
+</li>
+<li><p>At the <code>DISKPART</code> prompt, type <code>extend</code>.</p>
+<p>This extends the selected volume to fill the added space on the disk.</p>
+</li>
+</ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
 
-# Create a new vault
-New-AzureRmKeyVault -VaultName $VaultName -ResourceGroupName $RGName -Location $Location
-</code></pre>
-<p>This will create a key vault in the specified resource group.</p>
-<h3 id="storing-a-secret-in-the-vault">Storing a secret in the vault</h3>
-<p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Create a new secret
-$SecretValue = ConvertTo-SecureString -String '<output form="secretvalue" name="result" style="display: inline;">MySecretValue</output>' -AsPlainText -Force
-$SecretName = "<output form="secretname" name="result" style="display: inline;">MySecret</output>"
-
-# Store the secret in Azure Stack Key Vault
-$Secret = Set-AzureKeyVaultSecret -VaultName $VaultName -Name $SecretName -SecretValue $SecretValue
-
-# Display URL
-$Secret.Id
-
-# Display value
-$Secret.SecretValue
-</code></pre>
-<p>The secret you created will be stored in your key vault.</p>
-<h3 id="extracting-a-secret-from-the-vault">Extracting a secret from the vault</h3>
-<p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Extract the secret key value and store it in a variable
-$ExtractedSecret = (Get-AzureKeyVaultSecret –VaultName $VaultName -Name $SecretName).SecretValueText
-
-# Display the secret key value
-$ExtractedSecret
-</code></pre>
+<p>No further action is required.</p>
+</section>
+</div>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 

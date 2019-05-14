@@ -28,8 +28,6 @@
       href: azs-how-list-vm-extensions.md
     - name: 'Manage Azure user groups and permissions '
       href: azs-how-manage-azure-group.md
-    - name: Resize an OS drive
-      href: azs-how-resize-os-drive.md
     - name: Retrieve your subscription quotas
       href: azs-how-retrieve-quota-ps.md
     - name: Use the Azure Stack API
@@ -76,8 +74,10 @@
         href: azs-how-create-vm-terraform.md
     - name: Resize a disk
       items:
-      - name: Resize virtual machine disks - Portal
-        href: azs-how-resize-disks.md
+      - name: Resize a disk - Portal
+        href: azs-how-resize-disk-portal.md
+      - name: Resize a disk - PowerShell
+        href: azs-how-resize-disk-ps.md
   - name: Reference
     items:
     - name: UKCloud for Microsoft Azure known issues

@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-S2S-VPN-ps.html",
-          "hash": "ahjas1eOQPkR4LL+F6nrMg=="
+          "hash": "pv6XyYfIJ8O5N1MX2sPl3w=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-key-vault-ps.html",
-          "hash": "yXpA+3sdR3t5N+7miYu5mA=="
+          "hash": "jl3TUFa23skymyn4GBEPQw=="
         }
       },
       "is_incremental": false,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-cli.html",
-          "hash": "OVjexRtlAnxDH0nugAdKLA=="
+          "hash": "KRp2W6QlR8SYjzajoePrsg=="
         }
       },
       "is_incremental": false,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-ps.html",
-          "hash": "/TCf/XD60CNTzugeHYW75g=="
+          "hash": "NrbGSh1O6Ph+xGCyakrCOQ=="
         }
       },
       "is_incremental": false,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-list-vm-extensions.html",
-          "hash": "DYNgUumPG7Q+0MWFyWbp6g=="
+          "hash": "HoeugnouhOEaWTM3eOcP4w=="
         }
       },
       "is_incremental": false,
@@ -377,11 +377,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/azure/azs-how-resize-disks.md",
+      "source_relative_path": "articles/azure/azs-how-resize-disk-portal.md",
       "output": {
         ".html": {
-          "relative_path": "articles/azure/azs-how-resize-disks.html",
-          "hash": "bXvSY6MH5BWsrEIZ42iENA=="
+          "relative_path": "articles/azure/azs-how-resize-disk-portal.html",
+          "hash": "Id+5MTzcBh4GO2xO7yTrdA=="
         }
       },
       "is_incremental": false,
@@ -389,11 +389,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/azure/azs-how-resize-os-drive.md",
+      "source_relative_path": "articles/azure/azs-how-resize-disk-ps.md",
       "output": {
         ".html": {
-          "relative_path": "articles/azure/azs-how-resize-os-drive.html",
-          "hash": "+AqAj308Wnc6/zmlrpRjGA=="
+          "relative_path": "articles/azure/azs-how-resize-disk-ps.html",
+          "hash": "uTZA/nx9Yg1MzWqcVFE5Nw=="
         }
       },
       "is_incremental": false,
@@ -1643,7 +1643,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "x1sxNdrfnI5+w9wh+E1gUg=="
+          "hash": "YXjDAdHSptgdl7r50PtUag=="
         }
       },
       "is_incremental": false,
@@ -15878,16 +15878,16 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0

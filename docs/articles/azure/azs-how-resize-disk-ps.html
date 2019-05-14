@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to resize a disk using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to resize a disk using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.42.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../..//styles/assets/logo.png" srcset="../..//styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-resize-disk-ps.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-resize-a-disk-using-powershell">How to resize a disk using PowerShell</h1>
+
+<h2 id="overview">Overview</h2>
+<p>When deploying a new virtual machine from an Azure Marketplace image, the default drive size is often 127GB or less. While it is recommended to add additional disks for tasks such as installing applications and for CPU intensive workloads, you may need to expand a disk for purposes such as migrating from a physical PC to the VM or to support applications that must be installed on the OS drive.</p>
+<p>This article shows you how to resize disks on UKCloud for Microsoft Azure.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Resizing a disk will cause the virtual machine to restart.</p>
+</div>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this article you must have the appropriate permissions on the resource you are trying to access.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Resizing an OS disk</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Resizing a data disk</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+<h3 id="declare-variables">Declare variables</h3>
+<p>Enter details below to provide values for the variables in the scripts in this article:</p>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$RGName</td>
+<td>Name of the resource group which the VM is inside in Azure Stack</td>
+<td><form oninput="result.value=ResourceGroupInput.value; result2.value=ResourceGroupInput.value" id="ResourceGroup" style="display: inline;"><input type="text" id="ResourceGroupInput" name="ResourceGroupInput" style="display: inline;" placeholder="myResourceGroup"></form></td>
+</tr>
+<tr>
+<td>$VMName</td>
+<td>Name of the VM with the disk you are trying to resize</td>
+<td><form oninput="result.value=VMNameInput.value; result2.value=VMNameInput.value" id="VMName" style="display: inline;"><input type="text" id="VMNameInput" name="VMNameInput" style="display: inline;" placeholder="myVM"></form></td>
+</tr>
+<tr>
+<td>$Disk.DiskSizeGB</td>
+<td>The new disk size in gigabytes. <strong>Note</strong>: The maximum size allowed for OS disks is 2048 GB</td>
+<td><form oninput="result.value=DiskSizeInput.value; result2.value=DiskSizeInput.value" id="DiskSize" style="display: inline;"><input type="text" id="DiskSizeInput" name="DiskSizeInput" style="display: inline;" placeholder="200"></form></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<h3 id="declare-variables-1">Declare variables</h3>
+<p>Enter details below to provide values for the variables in the scripts in this article:</p>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$RGName</td>
+<td>Name of the resource group which the VM is inside in Azure Stack</td>
+<td><form oninput="result.value=ResourceGroupInput2.value; result2.value=ResourceGroupInput2.value" id="ResourceGroup2" style="display: inline;"><input type="text" id="ResourceGroupInput2" name="ResourceGroupInput2" style="display: inline;" placeholder="myResourceGroup"></form></td>
+</tr>
+<tr>
+<td>$VMName</td>
+<td>Name of the VM with the disk you are trying to resize</td>
+<td><form oninput="result.value=VMNameInput2.value; result2.value=VMNameInput2.value" id="VMName2" style="display: inline;"><input type="text" id="VMNameInput2" name="VMNameInput2" style="display: inline;" placeholder="myVM"></form></td>
+</tr>
+<tr>
+<td>$Disk.DiskSizeGB</td>
+<td>The new disk size in gigabytes.</td>
+<td><form oninput="result.value=DiskSizeInput2.value; result2.value=DiskSizeInput2.value" id="DiskSize2" style="display: inline;"><input type="text" id="DiskSizeInput2" name="DiskSizeInput2" style="display: inline;" placeholder="200"></form></td>
+</tr>
+<tr>
+<td>$DiskLun</td>
+<td>The LUN (Logical Unit Number) of the disk you are trying to resize</td>
+<td><form oninput="result.value=LUNInput.value; result2.value=LUNInput.value" id="LUN" style="display: inline;"><input type="text" id="LUNInput" name="LUNInput" style="display: inline;" placeholder="0"></form></td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+<p>Select the type of disk you are trying to resize:</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" data-tab="tabid-a" data-condition="tabid-1" tabindex="0" aria-selected="true">Managed Disk</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" data-tab="tabid-b" data-condition="tabid-1" tabindex="-1">Unmanaged Disk</a>
+</li>
+<li role="presentation" aria-hidden="true" hidden="hidden">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" data-tab="tabid-a" data-condition="tabid-2" tabindex="-1">Managed Disk</a>
+</li>
+<li role="presentation" aria-hidden="true" hidden="hidden">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" data-tab="tabid-b" data-condition="tabid-2" tabindex="-1">Unmanaged Disk</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tabpanel" data-tab="tabid-a" data-condition="tabid-1">
+
+<p>From your PowerShell window:</p>
+<pre><code class="language-PowerShell"># Sign in to your Azure Stack environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Set your resource group and VM name
+$RGName = "<output form="ResourceGroup" name="result" style="display: inline;">myResourceGroup</output>"
+$VMName = "<output form="VMName" name="result" style="display: inline;">myVM</output>"
+
+# Obtain your VM object
+$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+
+# Stop the VM before resizing the disk
+Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+
+# Resize managed OS disk
+$Disk = Get-AzureRmDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.OsDisk.Name
+$Disk.DiskSizeGB = <output form="DiskSize" name="result" style="display: inline;">200</output>
+Update-AzureRmDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
+
+# Start the VM
+Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+</code></pre>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
+
+<p>From your PowerShell window:</p>
+<pre><code class="language-PowerShell"># Sign in to your Azure Stack environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Set your resource group and VM name
+$RGName = "<output form="ResourceGroup" name="result2" style="display: inline;">myResourceGroup</output>"
+$VMName = "<output form="VMName" name="result2" style="display: inline;">myVM</output>"
+
+# Obtain your VM object
+$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+
+# Stop the VM before resizing the disk
+Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+
+# Resize unmanaged OS disk
+$VM.StorageProfile.OSDisk.DiskSizeGB = <output form="DiskSize" name="result2" style="display: inline;">200</output>
+Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
+
+# Restart the VM
+Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+</code></pre>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tabpanel" data-tab="tabid-a" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
+
+<p>From your PowerShell window:</p>
+<pre><code class="language-PowerShell"># Sign in to your Azure Stack environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Set your resource group and VM name
+$RGName = "<output form="ResourceGroup2" name="result" style="display: inline;">myResourceGroup</output>"
+$VMName = "<output form="VMName2" name="result" style="display: inline;">myVM</output>"
+$DiskLun = <output form="LUN" name="result" style="display: inline;">0</output>
+
+# Obtain your VM object
+$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+
+# Stop the VM before resizing the disk
+Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+
+# Resize managed data disk
+$Disk = Get-AzureRmDisk -ResourceGroupName $RGName -DiskName $VM.StorageProfile.DataDisks[$DiskLun].Name
+$Disk.DiskSizeGB = <output form="DiskSize2" name="result" style="display: inline;">200</output>
+Update-AzureRmDisk -ResourceGroupName $RGName -Disk $Disk -DiskName $Disk.Name
+
+# Start the VM
+Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+</code></pre>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tabpanel" data-tab="tabid-b" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
+
+<p>From your PowerShell window:</p>
+<pre><code class="language-PowerShell"># Sign in to your Azure Stack environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Set your resource group and VM name
+$RGName = "<output form="ResourceGroup2" name="result2" style="display: inline;">myResourceGroup</output>"
+$VMName = "<output form="VMName2" name="result2" style="display: inline;">myVM</output>"
+$DiskLun = <output form="LUN" name="result2" style="display: inline;">0</output>
+
+# Obtain your VM object
+$VM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+
+# Stop the VM before resizing the disk
+Stop-AzureRmVM -ResourceGroupName $RGName -Name $VMName -Force
+
+# Resize unmanaged data disk
+$VM.StorageProfile.DataDisks[$DiskLun].DiskSizeGB = <output form="DiskSize2" name="result2" style="display: inline;">200</output>
+Update-AzureRmVM -ResourceGroupName $RGName -VM $VM
+
+# Restart the VM
+Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+</code></pre>
+</section>
+</div>
+<h2 id="expanding-the-volume">Expanding the volume</h2>
+<p>After expanding the disk, you may need to go into the OS and expand the volume to actually use the newly allocated space. To do so, follow these steps:</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q-2">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-2_tabid-c" role="tab" aria-controls="tabpanel_CeZOj-G++Q-2_tabid-c" data-tab="tabid-c" tabindex="0" aria-selected="true">Windows VM</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-2_tabid-d" role="tab" aria-controls="tabpanel_CeZOj-G++Q-2_tabid-d" data-tab="tabid-d" tabindex="-1">Linux VM</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q-2_tabid-c" role="tabpanel" data-tab="tabid-c">
+<h3 id="declare-variables-2">Declare variables</h3>
+<p>Enter details below to provide values for the variables in the following scripts:</p>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$DriveLetter</td>
+<td>The drive letter of the volume you are trying to expand</td>
+<td><form oninput="result.value=DriveLetter.value" id="DriveLetter" style="display: inline;"><input type="text" id="DriveLetterInput" name="DriveLetterInput" style="display: inline;" placeholder="C"></form></td>
+</tr>
+</tbody>
+</table>
+<h3 id="expand-the-volume">Expand the Volume</h3>
+<ol>
+<li><p>Open an RDP connection to your VM.</p>
+<pre><code class="lang-powershell"># Obtain public IP of your VM based on the variables from above
+$IpAddress= (Get-AzureRmPublicIpAddress -ResourceGroupName $RGName | Where-Object { $_.IpConfiguration.Id -like &quot;*$VMName*&quot; })
+# Start RDP session to your VM
+Start-Process &quot;mstsc&quot; -ArgumentList &quot;/v:$($IpAddress.IpAddress)&quot;
+</code></pre>
+</li>
+<li><p>From your PowerShell window:</p>
+ <pre><code class="language-PowerShell"># Resize partition based on drive letter
+ ## Declare drive letter
+ $DriveLetter = "<output form="DriveLetter" name="result" style="display: inline;">C</output>"
+ ## Find maximum size of the partition based on drive letter
+ $MaxSize = (Get-PartitionSupportedSize -DriveLetter $DriveLetter).SizeMax
+ ## Resize the partition
+ Resize-Partition -DriveLetter $DriveLetter -Size $MaxSize
+ </code></pre>
+</li>
+</ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q-2_tabid-d" role="tabpanel" data-tab="tabid-d" aria-hidden="true" hidden="hidden">
+
+<p>No further action is required.</p>
+</section>
+</div>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>
