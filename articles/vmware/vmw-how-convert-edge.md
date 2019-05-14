@@ -3,8 +3,8 @@ title: How to convert your edge to an advanced gateway | UKCloud Ltd
 description: This article describes how to convert an edge gateway to an advanced gateway to access advanced functionality
 services: vmware
 author: Steve Hall
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: mikepukcloud
+lastreviewed: 07/05/2019
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -19,7 +19,7 @@ toc_mdlink: vmw-how-convert-edge.md
 
 ## Overview
 
-With the upgrade to vCloud Director 8.20 and 9.1, UKCloud for VMware now offers advanced gateways to provide access to new vCloud Director functionality. Some of this functionality is available now, with other features being added following integration testing to assess suitability on our platform (some features may incur additional charges).
+UKCloud for VMware offers advanced gateways to provide access to new vCloud Director functionality. Some of this functionality is available now, with other features being added following integration testing to assess suitability on our platform (some features may incur additional charges).
 
 Advanced gateways in UKCloud for VMware provide:
 
@@ -28,6 +28,8 @@ Advanced gateways in UKCloud for VMware provide:
 - **New API NSX management** - vCloud Director 8.20 introduces a new proxy API that enables vCloud API clients to make requests to the NSX API. Unlike the NSX API, which is designed to address NSX objects in a global scope, such as a vCenter database, the vCloud Director API for NSX is designed to address NSX objects within the scope of a vCloud Director tenant organisation.
 
 - **SSH edge access** - If you enable SSH, you can perform your own packet captures and troubleshoot your edge gateway yourself, without having to contact UKCloud Support.
+
+- **Advanced networking options** - Distributed networking features, namely Distributed Firewall, Distributed Logical Router and L2 VPN, to improve the performance of traffic within your VDC.
 
 > [!IMPORTANT]
 > After converting your edge gateway to an advanced gateway, the API endpoint for configuring edge services will change. Any tooling that you use to amend the edge service configuration, such as adding firewall rules, will no longer work in its current state. For more information about using the advanced gateway API, see the [*vCloud Director API for NSX Programming Guide*](https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf).
@@ -43,17 +45,14 @@ To complete the steps in this guide you must have access to the UKCloud Portal a
 
 Before converting your edge gateway, review the prerequisites and known issues below:
 
-- **Edge gateway version** --- To convert to an advanced gateway, your edge gateway must be at the latest version. If necessary, redeploy your edge gateway to upgrade to the latest version; for more information,
-    see [*How to upgrade your edge gateway*](vmw-how-upgrade-edge.md).
+- **Edge gateway version** --- When converting to an advanced gateway, your edge will be redeployed to the latest version.
     
     > [!IMPORTANT]
-    > If the edge gateway is not at the latest version, it is possible that the conversion process will cause the gateway to redeploy. Therefore, the conversion should always be scheduled during an outage window.
+    > As the conversion process causes the gateway to redeploy, you should always schedule an edge conversion during an outage window.
 
 - **Disabled firewalls** - On an advanced gateway, if you disable the firewall, this also stops the NAT service, as it is dependent on the firewall. As a result, traffic flow that relies on NAT, such as NAT rules and the load balancer is stopped. If you attempt to disable the firewall service, the vCloud Director Web Console will display a warning. This is due to the firewall service being used to track stateful connections. See the following VMware Knowledge Base article for more information: <https://kb.vmware.com/s/article/2093153>.
 
     If you convert an edge that already has the firewall disabled to an advanced gateway, the converted advanced gateway will have the firewall enabled, but with an Any, Any, Allow rule so that all traffic is allowed inbound or outbound.
-
-- **Internal/external keywords** - Due to a bug in vCloud Director 8.20, when you create or amend firewall rules on your advanced gateway using the vCloud Director Web Console, you can no longer use the keywords internal or external when specifying the direction of the traffic. However, you can still use these keywords when using the API to create or amend rules. This Web Console bug is fixed in vCloud Director 9.*x*, which we'll be upgrading to in the coming months. For information about using the API to create or amend firewall rules, see the [*vCloud Director API for NSX Programming Guide*](https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf).
 
 ## Converting your edge to an advanced gateway
 
@@ -61,7 +60,7 @@ To access the latest vCloud Director networking features, you need to convert yo
 
 To convert your edge to an advanced gateway:
 
-# [Using vCloud Director 8.20](#tab/tabid-1)
+# [Using vCloud Director Legacy UI](#tab/tabid-1)
 
 1. In vCloud Director, select the **Administration** tab.
 
@@ -80,7 +79,7 @@ To convert your edge to an advanced gateway:
 
     ![Administration tab](images/conver-image-4.png)
 
-# [Using vCloud Director 9.1](#tab/tabid-2)
+# [Using vCloud Director Tenant UI](#tab/tabid-2)
 
 1. In vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway you want to convert.
 
@@ -101,10 +100,10 @@ To convert your edge to an advanced gateway:
 
 ## Next steps
 
-To find out more about the features provided by advanced gateways, see the following articles:
+To find out more about the advanced networking features provided by advanced gateways, see the following article:
 
-- [*Upgrade to vCloud Director 8.20*](vmw-ref-vcd-820.md)
+- [*Advanced networking options for UKCloud for VMware*](vmw-ref-advanced-networking.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, please send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
