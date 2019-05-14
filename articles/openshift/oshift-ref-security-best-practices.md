@@ -61,7 +61,7 @@ Just like traditional software packages, containers also run software, even if t
 
  1. Only use base images from trusted sources, i.e Red Hat's container registry. Red Hats containers on Red Hats container registry are scanned for vulnerabilities and given a security rating. Docker Hub also provides some certified containers which are built using best practices, tested and validated against the Docker Enterprise Edition platform and APIs, pass Dockers security requirements, and are collaboratively supported by Docker and the company responsible for the container. Users can also choose to build base containers from scratch using only the software packages they need for their workload. Although building containers from scratch and using just enough of the software packages you need to run for your workload does not guarantee that your base image is going to be free of all possible vulnerabilities as it is possible that some of those software packages could contain vulnerabilities.
 
- 2. Scan your containers with container scanning software as part of your build or deployment process. There are several tools available to scan containers. These tools give you a security rating on your final container once it's been created from a secure base container. There are a few such tools:- 
+ 2. Scan your containers with container vulnerability scanning software as part of your build or deployment process. There are several tools available to scan containers. These tools give you a security rating on your final container once it's been created from a secure base container. There are a number of tools available to do this, the following is a small sample we're aware of:- 
 
   -  OpenSCAP-docker
   -  Black Duck Hub
