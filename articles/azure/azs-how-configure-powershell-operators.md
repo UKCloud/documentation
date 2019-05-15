@@ -41,22 +41,41 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$AzsUsername  | Your AAD username                                         | <form oninput="result.value=username.value" id="username" style="display: inline;"><input type="text" id="username" name="username" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"/></form> |
 | \$AzsPassword  | Your AAD password                                         | <form oninput="result.value=password.value" id="password" style="display: inline;"><input type="text" id="password" name="password" style="display: inline;" placeholder="Password123!"/></form> |
 
-
 ## Install Azure Stack PowerShell
 
 <pre><code class="language-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
   
-# PowerShell commands for Azure Stack are installed through the PSGallery repository.
+# PowerShell commands for Azure Stack are installed through the PSGallery repository
 # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
   
 # Uninstall existing versions of Azure/Azure Stack PowerShell
 Get-Module -Name Azs.*, Azure* -ListAvailable | Uninstall-Module -Force -Verbose
   
-# Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
-Install-Module -Name AzureRM -RequiredVersion 2.4.0 -Verbose
-Install-Module -Name AzureStack -RequiredVersion 1.7.1 -Verbose
+# Install the AzureRM.BootStrapper module. Select Yes when prompted to install NuGet
+Install-Module -Name AzureRM.BootStrapper
+
+# Install and import the API Version Profile required by Azure Stack into the current PowerShell session
+Get-AzureRMProfile -Update
+Use-AzureRmProfile -Profile 2019-03-01-hybrid -Force
+Install-Module -Name AzureStack -RequiredVersion 1.7.2
+</code></pre>
+
+## Enable additional storage features
+
+<pre><code class="language-PowerShell"># Install the Azure.Storage module version 4.5.0
+Install-Module -Name Azure.Storage -RequiredVersion 4.5.0 -Force -AllowClobber
+
+# Install the AzureRm.Storage module version 5.0.4
+Install-Module -Name AzureRM.Storage -RequiredVersion 5.0.4 -Force -AllowClobber
+
+# Remove incompatible storage module installed by AzureRM.Storage
+Uninstall-Module Azure.Storage -RequiredVersion 4.6.1 -Force
+
+# Load the modules explicitly specifying the versions
+Import-Module -Name Azure.Storage -RequiredVersion 4.5.0
+Import-Module -Name AzureRM.Storage -RequiredVersion 5.0.4
 </code></pre>
 
 ## Configure the operator environment and sign in to Azure Stack
