@@ -8,7 +8,13 @@
 <!--[if IE]><![endif]-->
 <html>
   {{>partials/head}}
+
+  {{#_showGrid}}
+  <body data-spy="scroll" data-target="#affix" data-offset="120" class="show-grid">
+  {{/_showGrid}}
+  {{^_showGrid}}
   <body data-spy="scroll" data-target="#affix" data-offset="120">
+  {{/_showGrid}}
     <div id="wrapper">
       <header>
         {{^_disableNavbar}}

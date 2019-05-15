@@ -659,20 +659,20 @@ $(function () {
     function initFooter() {
       if (needFooter()) {
         shiftUpBottomCss();
-        $("footer").show();
+        $("body:not(.show-grid) footer").show();
       } else {
         resetBottomCss();
-        $("footer").hide();
+        $("body:not(.show-grid) footer").hide();
       }
     }
 
     function showFooterCore() {
       if (needFooter()) {
         shiftUpBottomCss();
-        $("footer").fadeIn();
+        $("body:not(.show-grid) footer").fadeIn();
       } else {
         resetBottomCss();
-        $("footer").fadeOut();
+        $("body:not(.show-grid) footer").fadeOut();
       }
     }
 

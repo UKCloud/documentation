@@ -614,3 +614,13 @@ mark{
   font-size: 13px;
   padding: 0px;
 }
+
+
+/** Show Grid - Template overrides */
+body.show-grid .body-content .article {
+  margin-bottom: 3em;
+}
+
+body.show-grid footer {
+  position: static;
+}
