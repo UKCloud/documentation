@@ -62,7 +62,7 @@ Use-AzureRmProfile -Profile 2019-03-01-hybrid -Force
 Install-Module -Name AzureStack -RequiredVersion 1.7.2 -Verbose
 </code></pre>
 
-## Enable additional storage features
+### Enable additional storage features
 
 <pre><code class="language-PowerShell"># Install the Azure.Storage module version 4.5.0
 Install-Module -Name Azure.Storage -RequiredVersion 4.5.0 -Force -AllowClobber -Verbose
