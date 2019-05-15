@@ -54,28 +54,24 @@ Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
 Get-Module -Name Azs.*, Azure* -ListAvailable | Uninstall-Module -Force -Verbose
   
 # Install the AzureRM.BootStrapper module. Select Yes when prompted to install NuGet
-Install-Module -Name AzureRM.BootStrapper
+Install-Module -Name AzureRM.BootStrapper -Verbose
 
 # Install and import the API Version Profile required by Azure Stack into the current PowerShell session
-Get-AzureRMProfile -Update
+Get-AzureRmProfile -Update
 Use-AzureRmProfile -Profile 2019-03-01-hybrid -Force
-Install-Module -Name AzureStack -RequiredVersion 1.7.2
+Install-Module -Name AzureStack -RequiredVersion 1.7.2 -Verbose
 </code></pre>
 
 ## Enable additional storage features
 
 <pre><code class="language-PowerShell"># Install the Azure.Storage module version 4.5.0
-Install-Module -Name Azure.Storage -RequiredVersion 4.5.0 -Force -AllowClobber
+Install-Module -Name Azure.Storage -RequiredVersion 4.5.0 -Force -AllowClobber -Verbose
 
 # Install the AzureRm.Storage module version 5.0.4
-Install-Module -Name AzureRM.Storage -RequiredVersion 5.0.4 -Force -AllowClobber
+Install-Module -Name AzureRM.Storage -RequiredVersion 5.0.4 -Force -AllowClobber -Verbose
 
 # Remove incompatible storage module installed by AzureRM.Storage
-Uninstall-Module Azure.Storage -RequiredVersion 4.6.1 -Force
-
-# Load the modules explicitly specifying the versions
-Import-Module -Name Azure.Storage -RequiredVersion 4.5.0
-Import-Module -Name AzureRM.Storage -RequiredVersion 5.0.4
+Uninstall-Module Azure.Storage -RequiredVersion 4.6.1 -Force -Verbose
 </code></pre>
 
 ## Configure the operator environment and sign in to Azure Stack
