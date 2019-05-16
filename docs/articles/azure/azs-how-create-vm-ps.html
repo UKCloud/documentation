@@ -8,7 +8,7 @@
     <title>How to create a virtual machine using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual machine using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.1.0">
+    <meta name="generator" content="docfx 2.42.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -231,34 +231,34 @@ $VMSize = "<output form="vmsize" name="result" style="display: inline;">Basic_A0
 $VMImage = "*<output form="vmimage" name="result" style="display: inline;">/CentOS/Skus/6.10</output>"
 
 # Create a new resource group
-Write-Host "Creating resource group"
+Write-Output -InputObject "Creating resource group"
 New-AzureRmResourceGroup -Name $RGName -Location $Location
 
 ## Create storage resources
 
 # Create a new storage account
-Write-Host "Creating storage account"
+Write-Output -InputObject "Creating storage account"
 $StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $SAName
 
 ## Create network resources
 
 # Create a subnet configuration
-Write-Host "Creating virtual network"
+Write-Output -InputObject "Creating virtual network"
 $SubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetRange
 
 # Create a virtual network
 $VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location $Location -Name $VNetName -AddressPrefix $VNetRange -Subnet $SubnetConfig
 
 # Create a public IP address
-Write-Host "Creating public IP address"
+Write-Output -InputObject "Creating public IP address"
 $PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Location -AllocationMethod "Dynamic" -Name $PublicIPName
 
 # Create a network security group
-Write-Host "Creating network security group"
+Write-Output -InputObject "Creating network security group"
 $NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location $Location -Name $NSGName
 
 # Create a virtual network card and associate it with the public IP address and NSG
-Write-Host "Creating network interface card"
+Write-Output -InputObject "Creating network interface card"
 $NetworkInterface = New-AzureRmNetworkInterface -Name $NICName -ResourceGroupName $RGName -Location $Location -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
 
 ## Create the virtual machine
@@ -291,10 +291,10 @@ $OSDiskUri = "{0}vhds/{1}-{2}.vhd" -f $StorageAccount.PrimaryEndpoints.Blob.ToSt
 $VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -CreateOption FromImage
 
 # Create the virtual machine.
-Write-Host "Creating virtual machine"
+Write-Output -InputObject "Creating virtual machine"
 $NewVM = New-AzureRmVM -ResourceGroupName $RGName -Location $Location -VM $VirtualMachine
 $NewVM
-Write-Host "Virtual machine created successfully"
+Write-Output -InputObject "Virtual machine created successfully"
 </code></pre>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
