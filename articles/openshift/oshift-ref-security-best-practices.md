@@ -93,7 +93,7 @@ Within OpenShift, you can expose your services using routes. Creating a route to
 
  - Re-Encrypt - This process uses two certificates: the first certificate is held on the HAProxy router and the second in the pods. This secures traffic all the way down to the application.
 
-### Control plane and Data plane lockdown
+### Control plane and data plane lockdown
 
 Some of the core components of OpenShift, such as the routers and API pods, are run as root. To minimise any risk of these containers being compromised we can offer IP whitelisting to the control plane and data plane(s) as a whole. UKCloud can lock down your control plane and data plane(s) to a set of addresses or address ranges with the use of Security Groups. These security group rules can be applied at the time of cluster deployment or later via a Service Request to the UKCloud OpenShift Support team. The information we require to apply these rules is which plane you would like these applied to, for example, control plane or data plane (specify internet or community network if applicable) and the source addresses or ranges that will be allowed access. When services are protected by security group rules the traffic is dropped before it reaches OpenShift.
 
