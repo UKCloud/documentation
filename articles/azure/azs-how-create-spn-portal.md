@@ -38,7 +38,7 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 ## Prerequisites
 
-- <p>An active Azure Subscription</p>
+- <p>An active Azure subscription</p>
 
 ## Create an SPN
 
@@ -52,7 +52,7 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
     ![Select App registrations](images/azs-browser-app-registrations.png)
 
-4. On the *App registrations* page, click the **+ New application registration** button.
+4. On the *App registrations* page, click the **+ New registration** button.
 
 5. In the *Create* blade, enter the following information:
 
