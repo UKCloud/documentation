@@ -59,6 +59,11 @@ Azure Active Directory is Microsoft's cloud-based Directory and Identity Access 
 
 ## How can I get started with UKCloud for Microsoft Azure?
 
+> [!Important]
+> You agree that you will be required to enter into a direct Microsoft Cloud Solution Provider Customer Agreement. Once you have accepted the agreement we are obliged to report your name, email address and date of acceptance to Microsoft.
+>
+> The Microsoft Cloud Solution Provider Customer Agreement is available [here](https://docs.microsoft.com/en-us/partner-center/agreements) (Europe/United Kingdom).
+
 # [I have an existing Azure Active Directory Domain](#tab/tabid-1)
 
 If you've decided that UKCloud for Microsoft Azure is the right environment for you, contact your CSM with the following information:
