@@ -267,7 +267,7 @@ Connect-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsC
 try {
     $RG = Get-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -ErrorAction 'SilentlyContinue'
     if ( -not $RG) {
-        Write-Host -InputObject "Didn't find resource group"
+        Write-Output -InputObject "Didn't find resource group"
         New-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -Verbose
     }
     else {
@@ -275,7 +275,7 @@ try {
     }
 }
 catch {
-    Write-Host -InputObject "Could not query resource group"
+    Write-Output -InputObject "Could not query resource group"
     exit
 }
 
