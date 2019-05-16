@@ -4897,6 +4897,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-ref-security-best-practices.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-ref-security-best-practices.html",
+          "hash": "BbAMhcFeFmIeOKi+nh9jRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-ref-trial.md",
       "output": {
         ".html": {
@@ -4913,7 +4925,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "K1bQTrRaa80cMhyvjaJkjw=="
+          "hash": "ThzdUsHfZeKNo4zRfvXRhw=="
         }
       },
       "is_incremental": false,
@@ -15895,7 +15907,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 352,
+          "total_file_count": 353,
           "skipped_file_count": 0
         }
       }
