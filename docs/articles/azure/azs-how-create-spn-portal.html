@@ -110,7 +110,7 @@
 <p>To log in and manage your resources via SPN you'll need to create an Azure application and then assign an SPN to it. Only then will you be able to perform tasks against your environment.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
-<li><p>An active Azure Subscription</p>
+<li><p>An active Azure subscription</p>
 </li>
 </ul>
 <h2 id="create-an-spn">Create an SPN</h2>
@@ -121,22 +121,22 @@
 <p><img src="images/azs-browser-select-aad.png" alt="Select Azure Active Directory"></p>
 </li>
 <li><p>In the <em>Azure Active Directory</em> blade, select <strong>App registrations</strong>.</p>
+</li>
+<li><p>On the <em>App registrations</em> page, click the <strong>+ New registration</strong> button.</p>
 <p><img src="images/azs-browser-app-registrations.png" alt="Select App registrations"></p>
 </li>
-<li><p>On the <em>App registrations</em> page, click the <strong>+ New application registration</strong> button.</p>
-</li>
-<li><p>In the <em>Create</em> blade, enter the following information:</p>
+<li><p>In the <em>Register an application</em> blade, enter the following information:</p>
 <ul>
 <li><p><strong>Name</strong> - The name of the application. Should have a minimum of four characters.</p>
 </li>
-<li><p><strong>Application Type</strong> - Choose <strong>Web app / API</strong> to add an application that represents a web application, a web API, or both. Choose <strong>Native</strong> to add an application that can be installed on a user's device or computer. In this instance, you can use <strong>Web app / API</strong>.</p>
+<li><p><strong>Supported account types</strong> - Lets you decide who can use the service principal.</p>
 </li>
-<li><p><strong>Sign-on URL</strong> - The URL where users can sign in and use your app. You can change this URL later. In this instance, you can use <code>http://localhost</code>.</p>
+<li><p><strong>Redirect URI (optional)</strong> - The URL which the authentication response is sent to. In this instance, you can leave it blank.</p>
 </li>
 </ul>
 <p><img src="images/azs-browser-create-spn.png" alt="Create Service Principal"></p>
 </li>
-<li><p>Click <strong>Create</strong>.</p>
+<li><p>Click <strong>Register</strong>.</p>
 </li>
 </ol>
 <h2 id="gathering-spn-credentials">Gathering SPN credentials</h2>
@@ -144,12 +144,11 @@
 <li><p>On the blade that has now opened, copy the <strong>Application ID</strong> and store it somewhere secure. This value is sometimes referred to as the SPN Client ID.</p>
 <p><img src="images/azs-browser-select-SPN-App-ID.png" alt="Copy Application ID"></p>
 </li>
-<li><p>On the same blade, click the <strong>Settings</strong> button.</p>
+<li><p>On the blade menu, click the <strong>Certificates &amp; secrets</strong> button.</p>
 </li>
-<li><p>In the <em>API Access</em> section of the <em>Settings</em> blade, select <strong>Keys</strong>.</p>
+<li><p>Under <em>Client secrets</em>, click the <strong>+ New client secret</strong> button.</p>
 </li>
-<li><p>In the <em>Keys</em> blade, enter a description for a key as well as an expiry duration, then click <strong>Save</strong>.</p>
-<p><img src="images/azs-browser-add-SPN-key.png" alt="Create SPN key"></p>
+<li><p>Enter a description for the key, select a expiry duration, then click <strong>Add</strong>.</p>
 </li>
 <li><p>Copy the displayed value for the key and store it somewhere secure. This value is referred to as the SPN Client Secret.</p>
 </li>
