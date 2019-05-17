@@ -50,9 +50,9 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 3. In the *Azure Active Directory* blade, select **App registrations**.
 
-    ![Select App registrations](images/azs-browser-app-registrations.png)
-
 4. On the *App registrations* page, click the **+ New registration** button.
+
+    ![Select App registrations](images/azs-browser-app-registrations.png)
 
 5. In the *Register an application* blade, enter the following information:
 
