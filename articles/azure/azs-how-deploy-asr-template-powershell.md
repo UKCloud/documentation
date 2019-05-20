@@ -254,13 +254,13 @@ $TemplateParameters = @{
 $TestDeployment = Test-AzureRmResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters
 
 # Deploy ARM template
-if ($TestDeployment -like $null) {
+if ($TestDeployment.Count -eq 0) {
     Write-Output -InputObject "Deploying ARM template..."
     Write-Warning -Message "This may take a while..."
     New-AzureRmResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters
 }
 else {
-    Write-Error -Message "Failed to deploy ARM template due to following issue: $TestDeployment"
+    Write-Error -Message "Failed to deploy ARM template due to following issue(s): $TestDeployment"
     break
 }
 </code></pre>
