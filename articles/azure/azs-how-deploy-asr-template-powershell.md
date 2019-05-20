@@ -1,0 +1,283 @@
+---
+title: How to deploy an Azure Site Recovery template to Azure Stack using PowerShell | UKCloud Ltd
+description: Learn how to deploy an Azure Site Recovery template to Azure Stack using PowerShell
+services: azure-stack
+author: Bailey Lawson
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
+
+toc_rootlink: Users
+toc_sub1: How To
+toc_sub2:
+toc_sub3:
+toc_sub4:
+toc_title: Deploy an Azure Site Recovery template to Azure Stack - PowerShell
+toc_fullpath: Users/How To/azs-how-deploy-asr-template-powershell.md
+toc_mdlink: azs-how-deploy-asr-template-powershell.md
+---
+
+# How to deploy an Azure Site Recovery template to Azure Stack using PowerShell
+
+This document explains how to deploy an Azure Site Recovery configuration server ARM template to Azure Stack using PowerShell.
+
+It will guide you through the process of:
+
+- Obtaining an ARM Template
+
+- Deploying an [ARM Template for Azure Site Recovery](https://github.com/UKCloud/AzureStack/tree/master/Users/ARM%20Templates/Azure%20Site%20Recovery%20-%20Config%20Server)
+
+## What is an ARM Template?
+
+You can use Azure Resource Manager templates to deploy and provision all the resources for your application in a single, coordinated operation. You can also redeploy templates to make changes to the resources in a resource group.
+These templates can be deployed via the Azure Stack portal, PowerShell, Azure CLI, REST API and Visual Studio.
+The following quick-start templates are available on [GitHub](https://aka.ms/AzureStackGitHub).
+
+## Prerequisites
+
+Prerequisites from a Windows-based external client are:
+
+- PowerShell 5.1 and AzureStack PowerShell Module
+
+  - [Configure PowerShell Environment and Azure Stack Module](azs-how-configure-powershell-users.md)
+
+- A service principal with contributor permissions on both Azure and Azure Stack
+
+  - [How to create a service principal name (SPN) using PowerShell](azs-how-create-spn-powershell.md) 
+
+- A virtual network in Azure Stack to deploy the Azure Site Recovery configuration server on to
+
+- For any VMs which you wish to be protected, be sure to add the relevant custom script extension. These are required as specified in the Azure Stack Site Recovery documentation.
+
+  - [Windows](https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1) - This extension disables Remote User Access control and allows WMI and File and Printer sharing on the firewall.
+
+  - [Linux] https://raw.githubusercontent.com/UKCloud/AzureStack/master/Extensions/Linux/SetRootPassword.sh
+
+This extension sets the root password to the input parameter, as root access is required for Azure Site Recovery.
+
+## Official documentation
+
+- [Azure Stack ARM Templates Overview](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-arm-templates)
+
+- [Deploy a template to Azure Stack using PowerShell](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-deploy-template-powershell)
+
+- [Understand the structure and syntax of Azure Resource Manager Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates)
+
+- [GitHub Azure Stack Quick-Start Template Repository](https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master)
+
+- [*UKCloud Azure Stack Repository*](https://github.com/UKCloud/AzureStack)
+
+## What does it deploy?
+
+This template deploys a Windows Server Datacenter 2016 virtual machine, which is then configured for use with Azure Site Recovery. It also creates the following resources:
+
+- A storage account for the configuration server disks
+
+- A network security group for the configuration server
+
+- A network interface for the configuration server
+
+- A public IP address for the configuration server
+
+- Creates a resource group (can use existing), recovery services vault (can use existing), storage account and virtual network on public Azure
+
+### Notes
+
+The images used to create this deployment are:
+
+- Windows Server Datacenter 2016
+
+- Windows Custom Script Extension
+
+### Configuration
+
+- The configuration server will have a 127 GB OS disk, and two 600 GB data disks.
+
+## Overview of the ARM Template deployment process for Azure Stack using Service Principal Name (SPN) authentication
+
+1. Declare your variables accordingly.
+
+2. Create your Azure Stack environment.
+
+3. Log in to your Azure Stack *Subscription* with Service Principal Name (SPN).
+
+4. Check if resource group and virtual network exists.
+
+5. Deploy resources from ARM template.
+
+## Declare variables
+
+| Variable name   | Variable description                                               | Input            |
+|-----------------|--------------------------------------------------------------------|------------------|
+| \$StackArmEndpoint | The Azure Resource Manager endpoint for Azure Stack | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$StackResourceGroup | The resource group to deploy the ASR configuration server to on Azure Stack | <form oninput="result.value=AzsRGName.value" id="AzsRGName" style="display: inline;"><input type="text" id="AzsRGName" name="AzsRGName" style="display: inline;" placeholder="MyResourceGroup"/></form> |
+| \$ClientID | The application ID of a service principal with contributor permissions on Azure Stack and Azure | <form oninput="result.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="00000000-0000-0000-0000-000000000000"/></form> |
+| \$ClientSecret | A password of the service principal specified in the ClientID parameter | <form oninput="result.value=clientsecret.value" id="clientsecret" style="display: inline;"><input type="text" id="clientsecret" name="clientsecret" style="display: inline;" placeholder="ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jkx]="/></form> |
+| \$StackVNetName | The name of the existing virtual network to connect the configuration server to on Azure Stack | <form oninput="result.value=AzsVNetName.value" id="AzsVNetName" style="display: inline;" ><input  type="text" id="AzsVNetName" name="AzsVNetName" style="display: inline;" placeholder="SiteRecoveryVNet"/></form> |
+| \$StackSubnetName | The name of the existing virtual network subnet to connect the configuration server to on Azure Stack | <form oninput="result.value=AzsSubnetName.value" id="AzsSubnetName" style="display: inline;"><input  type="text" id="AzsSubnetName" name="AzsSubnetName" style="display: inline;" placeholder="default"/></form> |
+| \$StackStorageAccount | The name of the storage account to be created on Azure Stack (Must be unique across Azure Stack)  | <form oninput="result.value=AzsSAName.value" id="AzsSAName" style="display: inline;"><input  type="text" id="AzsSAName" name="AzsSAName" style="display: inline;" placeholder="siterecoverycssa"/></form> |
+| \$AzureResourceGroup | The name of the resource group to be created on public Azure | <form oninput="result.value=AzureRGName.value" id="AzureRGName" style="display: inline;" ><input  type="text" id="AzureRGName" name="AzureRGName" style="display: inline;" placeholder="SiteRecoveryRG"/></form> |
+| \$ExistingAzureRG | Select **True** if the resource group already exists in public Azure | <form onchange="result.value=ExistingRG.value" id="ExistingRG" style="display: inline;"><select name="ExistingRG" id="ExistingRG" style="display: inline;"><option value="$False">False</option><option value="$True">True</option></select></form> |
+| \$AzureLocation | The location of the recovery services vault on public Azure  | <form oninput="result.value=AzureLocation.value" id="AzureLocation" style="display: inline;" ><input  type="text" id="AzureLocation" name="AzureLocation" style="display: inline;" placeholder="UkWest"/></form> |
+| \$AzureVNetName | The name of the virtual network to be created on public Azure | <form oninput="result.value=AzureVNetName.value" id="AzureVNetName" style="display: inline;" ><input  type="text" id="AzureVNetName" name="AzureVNetName" style="display: inline;" placeholder="SiteRecoveryVNet"/></form> |
+| \$AzureVNetRange | The address space of the virtual network to be created on public Azure (In CIDR notation)  | <form oninput="result.value=AzureVNetRange.value" id="AzureVNetRange" style="display: inline;" ><input  type="text" id="AzureVNetRange" name="AzureVNetRange" style="display: inline;" placeholder="192.168.0.0/16"/></form> |
+| \$AzureSubnetRange | The subnet range of the virtual network to be created on public Azure (In CIDR notation)  | <form oninput="result.value=AzureSubnetRange.value" id="AzureSubnetRange" style="display: inline;" ><input  type="text" id="AzureSubnetRange" name="AzureSubnetRange" style="display: inline;" placeholder="192.168.1.0/24"/></form> |
+| \$AzureStorageAccount | The name of the storage account to be created on public Azure (Must be unique across public Azure)  | <form oninput="result.value=AzureSAName.value" id="AzureSAName" style="display: inline;"><input  type="text" id="AzureSAName" name="AzureSAName" style="display: inline;" placeholder="stacksiterecoverysa"/></form> |
+| \$VaultName | The name of the recovery services vault to be created on public Azure  | <form oninput="result.value=VaultName.value" id="VaultName" style="display: inline;"><input  type="text" id="VaultName" name="VaultName" style="display: inline;" placeholder="AzureStackVault"/></form> |
+| \$ExistingAzureVault | Select **True** if the vault already exists in public Azure | <form onchange="result.value=ExistingVault.value" id="ExistingVault" style="display: inline;"><select name="ExistingVault" id="ExistingVault" style="display: inline;"><option value="$False">False</option><option value="$True">True</option></select></form> |
+| \$ReplicationPolicyName | The name of the site recovery replication policy to be created in the recovery services vault  | <form oninput="result.value=ReplicationPolicy.value" id="ReplicationPolicy" style="display: inline;"><input  type="text" id="ReplicationPolicy" name="ReplicationPolicy" style="display: inline;" placeholder="ReplicationPolicy"/></form> |
+| \$ConfigServerUsername | The username for the configuration server  | <form oninput="result.value=ConfigUsername.value" id="ConfigUsername" style="display: inline;"><input  type="text" id="ConfigUsername" name="ConfigUsername" style="display: inline;" placeholder="ConfigAdmin"/></form> |
+| \$ConfigServerPassword | The password for the configuration server | Password123! |
+| \$ConfigurationServerName | The name of the configuration server VM | SRConfigServer |
+| \$TempFilesPath | Location on configuration server where setup files will be stored | C:\TempASR\ |
+| \$ExtractionPath | The name of the folder within the TempFilesPath where the configuration server unified setup will be extracted to | Extracted |
+| \$MySQLUserPassword | The user password for the MySQL server created on the Configuration Server (Must meet password requirements specified [below](#MySQL-Password-Requirements)) | Password123! |
+| \$MySQLRootPassword | The root password for the MySQL server created on the Configuration Server (Must meet password requirements specified [below](#MySQL-Password-Requirements)) | Password123! |
+| \$EncryptionKey | The encryption key for the MySQL database on the configuration server  | ExampleEncryptionKey |
+| \$WindowsUsername | The username of an administrator account on the Windows VMs to be protected  | Administrator |
+| \$WindowsPassword | The password of an administrator account on the Windows VMs to be protected | Password123! |
+| \$LinuxRootPassword | The password of the root account on the Linux VMs to be protected | Password123! |
+
+### MySQL Password Requirements
+
+Password must conform to all of the following rules:
+
+- Password must contain at least one letter
+- Password must contain at least one number
+- Password must contain at least one special character (_!@#$%)
+- Password must be between 8 and 16 characters
+- Password cannot contain spaces
+
+## Deploy ARM template code
+
+Change the required variables as per your environment and run the following script:
+
+<pre><code class="language-PowerShell"># Initialise environment and variables
+
+# Declare endpoint
+$StackArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+## Add environment
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+
+## Login
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+## Pull location from environment
+$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
+
+# Declare template variables
+$StackResourceGroup = "<output form="AzsRGName" name="result" style="display: inline;">MyResourceGroup</output>"
+$ClientID = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
+$ClientSecret = '<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jkx]=</output>' | ConvertTo-SecureString -Force -AsPlainText
+$StackVNetName = "<output form="AzsVNetName" name="result" style="display: inline;">SiteRecoveryVNet</output>"
+$StackSubnetName = "<output form="AzsSubnetName" name="result" style="display: inline;">default</output>"
+$StackStorageAccount = "<output form="AzsSAName" name="result" style="display: inline;">siterecoverycssa</output>"
+$AzureResourceGroup = "<output form="AzureRGName" name="result" style="display: inline;">SiteRecoveryRG</output>"
+£ExistingAzureRG = <output form="ExistingRG" name="result" style="display: inline;">$False</output>
+$AzureLocation = "<output form="AzureLocation" name="result" style="display: inline;">UkWest</output>"
+$AzureVNetName = "<output form="AzureVNetName" name="result" style="display: inline;">SiteRecoveryVNet</output>"
+$AzureVNetRange = "<output form="AzureVNetRange" name="result" style="display: inline;">192.168.0.0/16</output>"
+$AzureSubnetRange = <output form="AzureSubnetRange" name="result" style="display: inline;">192.168.1.0/24</output>
+$AzureStorageAccount = "<output form="AzureSAName" name="result" style="display: inline;">stacksiterecoverysa</output>"
+$VaultName = "<output form="VaultName" name="result" style="display: inline;">AzureStackVault</output>"
+$ExistingAzureVault = <output form="ExistingVault" name="result" style="display: inline;">$False</output>
+$ReplicationPolicyName = "<output form="ReplicationPolicy" name="result" style="display: inline;">ReplicationPolicy</output>"
+$ConfigServerUsername = "<output form="ConfigUsername" name="result" style="display: inline;">ConfigAdmin</output>"
+$ConfigServerPassword = "<output form="ConfigPassword" name="result" style="display: inline;">Password123!</output>"| ConvertTo-SecureString -Force -AsPlainText
+$ConfigurationServerName = 
+$TempFilesPath = 
+$ExtractionPath = 
+$MySQLRootPassword = | ConvertTo-SecureString -Force -AsPlainText
+$MySQLUserPassword = | ConvertTo-SecureString -Force -AsPlainText
+$EncryptionKey = 
+$WindowsUsername = 
+$WindowsPassword = | ConvertTo-SecureString -Force -AsPlainText
+$LinuxRootPassword = | ConvertTo-SecureString -Force -AsPlainText
+
+# Create New ResourceGroup if it does not exist
+try {
+    $RG = Get-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -ErrorAction 'SilentlyContinue'
+    if ( -not $RG) {
+        Write-Host -InputObject "Didn't find resource group"
+        New-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -Verbose
+    }
+    else {
+        Write-Output -InputObject "Exists"
+    }
+}
+catch {
+    Write-Host -InputObject "Could not query resource group"
+    exit
+}
+
+# Test Deployment
+Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -Verbose
+
+# Start Deployment
+New-AzureRmResourceGroupDeployment -Name $ArmDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -Verbose
+
+# Verify Deployment
+## Note: $ArmDeploymentName can be changed to query each deployment in your resource group
+Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName
+```
+
+> [!TIP]
+> Every parameter in the [parameter list](#list-of-the-parameters-you-can-define) can be defined in the **`New-AzureRmResourceGroupDeployment`** by simply adding *`-<ParameterName>`*
+>
+> For example:
+> `-SqlVMSize "Standard_A3"`
+
+> [!NOTE]
+> If the template fails validation and you need to see detailed error message you can do:
+>
+> ```powershell
+> Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -SqlVMSize "Standard_A4"
+>
+> Code    : MultipleErrorsOccurred
+> Message : Multiple error occurred: BadRequest. Please see details.
+> Details : {Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResourceManagerError}
+>
+>(Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -SqlVMSize "Standard_A4").Details
+>
+> Code    : InvalidTemplate
+> Message : Deployment template validation failed: 'The provided value 'Standard_A4' for the template parameter 'sqlVMSize' at line '31' and column '23' is not valid. The parameter value is not part of the allowed value(s): > 'Standard_A1,Standard_A2,Standard_A3'.'.
+> Details :
+> ```
+
+## Known issues
+
+- Sometimes Domain Account does not get correctly created and you will get the following error:
+
+  ```powershell
+  "statusMessage":
+  "{\"status\":\"Failed\",\"error\":{\"code\":\"ResourceDeploymentFailure\",\"message\":\"The
+  resource operation completed with terminal provisioning state 'Failed'.\",\"details\":{\"code\":\"VMExtensionProvisioningError\",\"message\":\"VM
+  has reported a failure when processing extension 'sqlAOPrepare'. Error
+  message: DSC Configuration 'PrepareAlwaysOnSqlServer' completed with error(s). Following are the first few: FindDomainForAccount: Call to DsGetDcNameWithAccountW failed with return value0x0000054B Could not find account SQL-AYQE0\\r\\n The PowerShell DSC resource '[xSqlServerConfigureSqlServerWithAlwaysOn' with SourceInfo'C:\\\\Packages\\\\Plugins\\\\Microsoft.Powershell.DSC\\\\2.76.00\\\\DSCWork\\\\PrepareAlwaysOnSqlServer.ps1.0\\\\PrepareAlwaysOnSqlServerps1::205::9::xSqlServer'
+  threw one or more non-terminating errors while running the Set-TargetResource functionality.These errors are logged to the ETW channel called Microsoft-Windows-DSC/Operational. Refer to this channel for more details.\"}]}}"
+  ```
+
+  If that happens, you can just **redeploy** and it should be fine.
+
+## Troubleshooting DSC extensions
+
+- [PowerShell DSC Extension](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-overview)
+
+  - `C:\WindowsAzure\Logs\Plugins\Microsoft.Powershell.DSC\<version number>`
+
+- [DSC Configuration](https://powershell.org/2017/10/10/using-azure-desired-state-configuration-part-iv/) and [cmdlets](https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmdscextensionstatus?view=azurermps-6.5.0)
+
+  - To view the status of the DSC deployment run:
+
+    ```powershell
+    Get-AzureRmVMDscExtension -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>"
+    Get-AzureRmVMDscExtensionStatus -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>" | Select-Object -ExpandProperty DscConfigurationLog
+    ```
+
+- [Event Viewer Logs](http://www.codewrecks.com/blog/index.php/2014/06/15/deploying-web-site-with-powershell-dsc-part-3/)
+
+  - Errors are located in: `Application And Service Logs / Microsoft / Windows / Desired State Configuration`
+  
+## Feedback
+
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
