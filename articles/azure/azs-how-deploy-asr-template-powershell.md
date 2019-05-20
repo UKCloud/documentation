@@ -112,30 +112,29 @@ The images used to create this deployment are:
 | \$StackResourceGroup | The resource group to deploy the ASR configuration server to on Azure Stack | <form oninput="result.value=AzsRGName.value" id="AzsRGName" style="display: inline;"><input type="text" id="AzsRGName" name="AzsRGName" style="display: inline;" placeholder="MyResourceGroup"/></form> |
 | \$ClientID | The application ID of a service principal with contributor permissions on Azure Stack and Azure | <form oninput="result.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="00000000-0000-0000-0000-000000000000"/></form> |
 | \$ClientSecret | A password of the service principal specified in the ClientID parameter | <form oninput="result.value=clientsecret.value" id="clientsecret" style="display: inline;"><input type="text" id="clientsecret" name="clientsecret" style="display: inline;" placeholder="ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jkx]="/></form> |
-| \$StackVNetName | The name of the existing virtual network to connect the configuration server to on Azure Stack | <form oninput="result.value=AzsVNetName.value" id="AzsVNetName" style="display: inline;" ><input  type="text" id="AzsVNetName" name="AzsVNetName" style="display: inline;" placeholder="SiteRecoveryVNet"/></form> |
-| \$StackSubnetName | The name of the existing virtual network subnet to connect the configuration server to on Azure Stack | <form oninput="result.value=AzsSubnetName.value" id="AzsSubnetName" style="display: inline;"><input  type="text" id="AzsSubnetName" name="AzsSubnetName" style="display: inline;" placeholder="default"/></form> |
-| \$StackStorageAccount | The name of the storage account to be created on Azure Stack (Must be unique across Azure Stack)  | <form oninput="result.value=AzsSAName.value" id="AzsSAName" style="display: inline;"><input  type="text" id="AzsSAName" name="AzsSAName" style="display: inline;" placeholder="siterecoverycssa"/></form> |
-| \$AzureResourceGroup | The name of the resource group to be created on public Azure | <form oninput="result.value=AzureRGName.value" id="AzureRGName" style="display: inline;" ><input  type="text" id="AzureRGName" name="AzureRGName" style="display: inline;" placeholder="SiteRecoveryRG"/></form> |
-| \$ExistingAzureRG | Select **True** if the resource group already exists in public Azure | <form onchange="result.value=ExistingRG.value" id="ExistingRG" style="display: inline;"><select name="ExistingRG" id="ExistingRG" style="display: inline;"><option value="$False">False</option><option value="$True">True</option></select></form> |
-| \$AzureLocation | The location of the recovery services vault on public Azure  | <form oninput="result.value=AzureLocation.value" id="AzureLocation" style="display: inline;" ><input  type="text" id="AzureLocation" name="AzureLocation" style="display: inline;" placeholder="UkWest"/></form> |
-| \$AzureVNetName | The name of the virtual network to be created on public Azure | <form oninput="result.value=AzureVNetName.value" id="AzureVNetName" style="display: inline;" ><input  type="text" id="AzureVNetName" name="AzureVNetName" style="display: inline;" placeholder="SiteRecoveryVNet"/></form> |
-| \$AzureVNetRange | The address space of the virtual network to be created on public Azure (In CIDR notation)  | <form oninput="result.value=AzureVNetRange.value" id="AzureVNetRange" style="display: inline;" ><input  type="text" id="AzureVNetRange" name="AzureVNetRange" style="display: inline;" placeholder="192.168.0.0/16"/></form> |
-| \$AzureSubnetRange | The subnet range of the virtual network to be created on public Azure (In CIDR notation)  | <form oninput="result.value=AzureSubnetRange.value" id="AzureSubnetRange" style="display: inline;" ><input  type="text" id="AzureSubnetRange" name="AzureSubnetRange" style="display: inline;" placeholder="192.168.1.0/24"/></form> |
-| \$AzureStorageAccount | The name of the storage account to be created on public Azure (Must be unique across public Azure)  | <form oninput="result.value=AzureSAName.value" id="AzureSAName" style="display: inline;"><input  type="text" id="AzureSAName" name="AzureSAName" style="display: inline;" placeholder="stacksiterecoverysa"/></form> |
-| \$VaultName | The name of the recovery services vault to be created on public Azure  | <form oninput="result.value=VaultName.value" id="VaultName" style="display: inline;"><input  type="text" id="VaultName" name="VaultName" style="display: inline;" placeholder="AzureStackVault"/></form> |
-| \$ExistingAzureVault | Select **True** if the vault already exists in public Azure | <form onchange="result.value=ExistingVault.value" id="ExistingVault" style="display: inline;"><select name="ExistingVault" id="ExistingVault" style="display: inline;"><option value="$False">False</option><option value="$True">True</option></select></form> |
-| \$ReplicationPolicyName | The name of the site recovery replication policy to be created in the recovery services vault  | <form oninput="result.value=ReplicationPolicy.value" id="ReplicationPolicy" style="display: inline;"><input  type="text" id="ReplicationPolicy" name="ReplicationPolicy" style="display: inline;" placeholder="ReplicationPolicy"/></form> |
-| \$ConfigServerUsername | The username for the configuration server  | <form oninput="result.value=ConfigUsername.value" id="ConfigUsername" style="display: inline;"><input  type="text" id="ConfigUsername" name="ConfigUsername" style="display: inline;" placeholder="ConfigAdmin"/></form> |
-| \$ConfigServerPassword | The password for the configuration server | Password123! |
-| \$ConfigurationServerName | The name of the configuration server VM | SRConfigServer |
-| \$TempFilesPath | Location on configuration server where setup files will be stored | C:\TempASR\ |
-| \$ExtractionPath | The name of the folder within the TempFilesPath where the configuration server unified setup will be extracted to | Extracted |
-| \$MySQLUserPassword | The user password for the MySQL server created on the Configuration Server (Must meet password requirements specified [below](#MySQL-Password-Requirements)) | Password123! |
-| \$MySQLRootPassword | The root password for the MySQL server created on the Configuration Server (Must meet password requirements specified [below](#MySQL-Password-Requirements)) | Password123! |
-| \$EncryptionKey | The encryption key for the MySQL database on the configuration server  | ExampleEncryptionKey |
-| \$WindowsUsername | The username of an administrator account on the Windows VMs to be protected  | Administrator |
-| \$WindowsPassword | The password of an administrator account on the Windows VMs to be protected | Password123! |
-| \$LinuxRootPassword | The password of the root account on the Linux VMs to be protected | Password123! |
+| \$StackVNetName | The name of the existing virtual network to connect the configuration server to on Azure Stack | <form oninput="result.value=AzsVNetName.value" id="AzsVNetName" style="display: inline;" ><input type="text" id="AzsVNetName" name="AzsVNetName" style="display: inline;" placeholder="SiteRecoveryVNet"/></form> |
+| \$StackSubnetName | The name of the existing virtual network subnet to connect the configuration server to on Azure Stack | <form oninput="result.value=AzsSubnetName.value" id="AzsSubnetName" style="display: inline;"><input type="text" id="AzsSubnetName" name="AzsSubnetName" style="display: inline;" placeholder="default"/></form> |
+| \$StackStorageAccount | The name of the storage account to be created on Azure Stack (Must be unique across Azure Stack)  | <form oninput="result.value=AzsSAName.value" id="AzsSAName" style="display: inline;"><input type="text" id="AzsSAName" name="AzsSAName" style="display: inline;" placeholder="siterecoverycssa"/></form> |
+| \$AzureResourceGroup | The name of the resource group to be created on public Azure | <form oninput="result.value=AzureRGName.value" id="AzureRGName" style="display: inline;" ><input type="text" id="AzureRGName" name="AzureRGName" style="display: inline;" placeholder="SiteRecoveryRG"/></form> |
+| \$ExistingAzureRG | Select **True** if the resource group already exists in public Azure | <form onchange="result.value=ExistingRG.value" id="ExistingRG" style="display: inline;"><select name="ExistingRG" id="ExistingRG" style="display: inline;"><option value="&#36;false">False</option><option value="&#36;true">True</option></select></form> |
+| \$AzureLocation | The location of the recovery services vault on public Azure | <form oninput="result.value=AzureLocation.value" id="AzureLocation" style="display: inline;" ><input type="text" id="AzureLocation" name="AzureLocation" style="display: inline;" placeholder="UkWest"/></form> |
+| \$AzureVNetName | The name of the virtual network to be created on public Azure | <form oninput="result.value=AzureVNetName.value" id="AzureVNetName" style="display: inline;" ><input type="text" id="AzureVNetName" name="AzureVNetName" style="display: inline;" placeholder="SiteRecoveryVNet"/></form> |
+| \$AzureVNetRange | The address space of the virtual network to be created on public Azure (In CIDR notation)  | <form oninput="result.value=AzureVNetRange.value" id="AzureVNetRange" style="display: inline;" ><input type="text" id="AzureVNetRange" name="AzureVNetRange" style="display: inline;" placeholder="192.168.0.0/16"/></form> |
+| \$AzureSubnetRange | The subnet range of the virtual network to be created on public Azure (In CIDR notation)  | <form oninput="result.value=AzureSubnetRange.value" id="AzureSubnetRange" style="display: inline;" ><input type="text" id="AzureSubnetRange" name="AzureSubnetRange" style="display: inline;" placeholder="192.168.1.0/24"/></form> |
+| \$AzureStorageAccount | The name of the storage account to be created on public Azure (Must be unique across public Azure)  | <form oninput="result.value=AzureSAName.value" id="AzureSAName" style="display: inline;"><input type="text" id="AzureSAName" name="AzureSAName" style="display: inline;" placeholder="stacksiterecoverysa"/></form> |
+| \$VaultName | The name of the recovery services vault to be created on public Azure  | <form oninput="result.value=VaultName.value" id="VaultName" style="display: inline;"><input type="text" id="VaultName" name="VaultName" style="display: inline;" placeholder="AzureStackVault"/></form> |
+| \$ExistingAzureVault | Select **True** if the vault already exists in public Azure | <form onchange="result.value=ExistingVault.value" id="ExistingVault" style="display: inline;"><select name="ExistingVault" id="ExistingVault" style="display: inline;"><option value="&#36;false">False</option><option value="&#36;true">True</option></select></form> |
+| \$ReplicationPolicyName | The name of the site recovery replication policy to be created in the recovery services vault  | <form oninput="result.value=ReplicationPolicy.value" id="ReplicationPolicy" style="display: inline;"><input type="text" id="ReplicationPolicy" name="ReplicationPolicy" style="display: inline;" placeholder="ReplicationPolicy"/></form> |
+| \$ConfigServerUsername | The username for the configuration server  | <form oninput="result.value=ConfigUsername.value" id="ConfigUsername" style="display: inline;"><input type="text" id="ConfigUsername" name="ConfigUsername" style="display: inline;" placeholder="ConfigAdmin"/></form> |
+| \$ConfigServerPassword | The password for the configuration server | <form oninput="result.value=ConfigPassword.value" id="ConfigPassword" style="display: inline;"><input type="text" id="ConfigPassword" name="ConfigPassword" style="display: inline;" placeholder="Password123!"/></form> | \$ConfigurationServerName | The name of the configuration server VM | <form oninput="result.value=ConfigName.value" id="ConfigName" style="display: inline;"><input type="text" id="ConfigName" name="ConfigName" style="display: inline;" placeholder="SRConfigServer"/></form> |
+| \$TempFilesPath | Location on configuration server where setup files will be stored | <form oninput="result.value=TempFilesPath.value" id="TempFilesPath" style="display: inline;"><input type="text" id="TempFilesPath" name="TempFilesPath" style="display: inline;" placeholder="C:\TempASR\"/></form> |
+| \$ExtractionPath | The name of the folder within the TempFilesPath where the configuration server unified setup will be extracted to | <form oninput="result.value=ExtractionPath.value" id="ExtractionPath" style="display: inline;"><input type="text" id="ExtractionPath" name="ExtractionPath" style="display: inline;" placeholder="Extracted"/></form> |
+| \$MySQLRootPassword | The root password for the MySQL server created on the Configuration Server (Must meet password requirements specified [below](#MySQL-Password-Requirements)) | <form oninput="result.value=MySQLRootPassword.value" id="MySQLRootPassword" style="display: inline;"><input type="text" id="MySQLRootPassword" name="MySQLRootPassword" style="display: inline;" placeholder="Password123!"/></form> |
+| \$MySQLUserPassword | The user password for the MySQL server created on the Configuration Server (Must meet password requirements specified [below](#MySQL-Password-Requirements)) | <form oninput="result.value=MySQLUserPassword.value" id="MySQLUserPassword" style="display: inline;"><input type="text" id="MySQLUserPassword" name="MySQLUserPassword" style="display: inline;" placeholder="Password123!"/></form> |
+| \$EncryptionKey | The encryption key for the MySQL database on the configuration server  | <form oninput="result.value=EncryptionKey.value" id="EncryptionKey" style="display: inline;"><input type="text" id="EncryptionKey" name="EncryptionKey" style="display: inline;" placeholder="ExampleEncryptionKey"/></form> |
+| \$WindowsUsername | The username of an administrator account on the Windows VMs to be protected  | <form oninput="result.value=WindowsUsername.value" id="WindowsUsername" style="display: inline;"><input type="text" id="WindowsUsername" name="WindowsUsername" style="display: inline;" placeholder="Administrator"/></form> |
+| \$WindowsPassword | The password of an administrator account on the Windows VMs to be protected | <form oninput="result.value=WindowsPassword.value" id="WindowsPassword" style="display: inline;"><input type="text" id="WindowsPassword" name="WindowsPassword" style="display: inline;" placeholder="Password123!"/></form> |
+| \$LinuxRootPassword | The password of the root account on the Linux VMs to be protected | <form oninput="result.value=LinuxPassword.value" id="LinuxPassword" style="display: inline;"><input type="text" id="LinuxPassword" name="LinuxPassword" style="display: inline;" placeholder="Password123!"/></form> |
 
 ### MySQL Password Requirements
 
@@ -157,7 +156,7 @@ Change the required variables as per your environment and run the following scri
 $StackArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 ## Add environment
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $StackArmEndpoint
 
 ## Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
@@ -173,42 +172,30 @@ $StackVNetName = "<output form="AzsVNetName" name="result" style="display: inlin
 $StackSubnetName = "<output form="AzsSubnetName" name="result" style="display: inline;">default</output>"
 $StackStorageAccount = "<output form="AzsSAName" name="result" style="display: inline;">siterecoverycssa</output>"
 $AzureResourceGroup = "<output form="AzureRGName" name="result" style="display: inline;">SiteRecoveryRG</output>"
-£ExistingAzureRG = <output form="ExistingRG" name="result" style="display: inline;">$False</output>
+$ExistingAzureRG = <output form="ExistingRG" name="result" style="display: inline;">$false</output>
 $AzureLocation = "<output form="AzureLocation" name="result" style="display: inline;">UkWest</output>"
 $AzureVNetName = "<output form="AzureVNetName" name="result" style="display: inline;">SiteRecoveryVNet</output>"
 $AzureVNetRange = "<output form="AzureVNetRange" name="result" style="display: inline;">192.168.0.0/16</output>"
 $AzureSubnetRange = <output form="AzureSubnetRange" name="result" style="display: inline;">192.168.1.0/24</output>
 $AzureStorageAccount = "<output form="AzureSAName" name="result" style="display: inline;">stacksiterecoverysa</output>"
 $VaultName = "<output form="VaultName" name="result" style="display: inline;">AzureStackVault</output>"
-$ExistingAzureVault = <output form="ExistingVault" name="result" style="display: inline;">$False</output>
+$ExistingAzureVault = <output form="ExistingVault" name="result" style="display: inline;">$false</output>
 $ReplicationPolicyName = "<output form="ReplicationPolicy" name="result" style="display: inline;">ReplicationPolicy</output>"
 $ConfigServerUsername = "<output form="ConfigUsername" name="result" style="display: inline;">ConfigAdmin</output>"
-$ConfigServerPassword = "<output form="ConfigPassword" name="result" style="display: inline;">Password123!</output>"| ConvertTo-SecureString -Force -AsPlainText
-$ConfigurationServerName = 
-$TempFilesPath = 
-$ExtractionPath = 
-$MySQLRootPassword = | ConvertTo-SecureString -Force -AsPlainText
-$MySQLUserPassword = | ConvertTo-SecureString -Force -AsPlainText
-$EncryptionKey = 
-$WindowsUsername = 
-$WindowsPassword = | ConvertTo-SecureString -Force -AsPlainText
-$LinuxRootPassword = | ConvertTo-SecureString -Force -AsPlainText
+$ConfigServerPassword = '<output form="ConfigPassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
+$ConfigurationServerName = "<output form="ConfigName" name="result" style="display: inline;">SRConfigServer</output>"
+$TempFilesPath = "<output form="TempFilesPath" name="result" style="display: inline;">C:\TempASR\</output>"
+$ExtractionPath = "<output form="ExtractionPath" name="result" style="display: inline;">Extracted</output>"
+$MySQLRootPassword = '<output form="MySQLRootPassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
+$MySQLUserPassword = '<output form="MySQLUserPassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
+$EncryptionKey = '<output form="EncryptionKey" name="result" style="display: inline;">ExampleEncryptionKey</output>'
+$WindowsUsername = "<output form="WindowsUsername" name="result" style="display: inline;">Administrator</output>"
+$WindowsPassword = '<output form="WindowsPassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
+$LinuxRootPassword = '<output form="LinuxPassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
 
-# Create New ResourceGroup if it does not exist
-try {
-    $RG = Get-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -ErrorAction 'SilentlyContinue'
-    if ( -not $RG) {
-        Write-Host -InputObject "Didn't find resource group"
-        New-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -Verbose
-    }
-    else {
-        Write-Output -InputObject "Exists"
-    }
-}
-catch {
-    Write-Host -InputObject "Could not query resource group"
-    exit
-}
+# Test if resource group, virtual network and subnet exist
+$TestRG = Get-Resource
+
 
 # Test Deployment
 Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -Verbose
