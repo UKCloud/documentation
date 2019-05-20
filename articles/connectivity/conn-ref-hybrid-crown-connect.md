@@ -3,6 +3,8 @@ title: HybridConnect vs CrownConnect (Private Connectivity) | UKCloud Ltd
 description: Outlines the difference between HybridConnect and CrownConnect and explains when each should be used
 services: connectivity
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/11/2018 13:07:22
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

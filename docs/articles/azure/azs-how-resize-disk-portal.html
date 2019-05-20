@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to resize a disk using the UKCloud Azure Stack portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to resize a disk using the UKCloud Azure Stack portal | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.42.3.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../..//styles/assets/logo.png" srcset="../..//styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-resize-disk-portal.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-resize-a-disk-using-the-ukcloud-azure-stack-portal">How to resize a disk using the UKCloud Azure Stack portal</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The UKCloud Azure Stack portal allows you to resize virtual machine (VM) disks. This article shows you how to resize disks that are mounted to a VM, and will work for both managed and unmanaged disks.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.</p>
+<h2 id="resizing-disks-that-are-mounted-to-a-vm">Resizing disks that are mounted to a VM</h2>
+<ol>
+<li><p>Log in to the Azure Stack portal.</p>
+<p>For more detailed instructions, see the <a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a>.</p>
+</li>
+<li><p>In the favourites panel, select <strong>Virtual machines</strong>.</p>
+<p><img src="images/azsp_vmsmenu.png" alt="Virtual machines in the favourites panel"></p>
+</li>
+<li><p>In the <em>Virtual machines</em> blade, select the virtual machine that the disk is attached to.</p>
+</li>
+<li><p>In the virtual machine's blade, select <strong>Disks</strong>.</p>
+<p><img src="images/azs-browser-vm-menu-disks-button.png" alt="Disks button within VM"></p>
+</li>
+<li><p>In the <em>Disks</em> blade, select the disk you would like to resize.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Disks can only be resized when they are unattached from the VM or the virtual machine is deallocated.</p>
+</div>
+</li>
+<li><p>In the disk's blade, enter the desired size of the disk in GiB in the <strong>Size</strong> field.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<ul>
+<li>Disks can only be resized to a larger size.</li>
+<li>Although the process is the same for both managed and unmanaged disks, the two blades look slightly different. Examples for both are provided below.</li>
+</ul>
+</div>
+</li>
+</ol>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Resizing managed disks</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Resizing unmanaged disks</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+
+<p><img src="images/azs-browser-vm-disk-size-managed.png" alt="Managed disk resize"></p>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<p><img src="images/azs-browser-vm-disk-size.png" alt="Unmanaged disk resize"></p>
+</section>
+</div>
+
+<ol start="7">
+<li><p>When you're done, click <strong>Save</strong>.</p>
+<p><img src="images/azs-browser-vm-disk-save-button.png" alt="VM disks save button"></p>
+</li>
+<li><p>You can monitor the progress of the disk resizing by clicking the <strong>Notifications</strong> icon.</p>
+<p><img src="images/azsp_createvm_progress.png" alt="Notification showing updating virtual machine disk"></p>
+</li>
+</ol>
+<h2 id="expanding-the-volume">Expanding the volume</h2>
+<p>After expanding the disk, you may need to go into the OS and expand the volume to actually use the newly allocated space. To do so, follow the steps below:</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-a" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a" data-tab="tabid-a" tabindex="0" aria-selected="true">Windows VM</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-b" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b" data-tab="tabid-b" tabindex="-1">Linux VM</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-a" role="tabpanel" data-tab="tabid-a">
+
+<ol>
+<li><p>Open an RDP connection to your VM.</p>
+</li>
+<li><p>Open a command prompt and type <code>diskpart</code>.</p>
+</li>
+<li><p>At the <code>DISKPART</code> prompt, type <code>list volume</code>.</p>
+<p>Take note of the volume you want to extend.</p>
+</li>
+<li><p>At the <code>DISKPART</code> prompt, type <code>select volume &lt;volumenumber&gt;</code>.</p>
+<p>This selects the volume that you want to extend into unpartitioned empty space on the same disk.</p>
+</li>
+<li><p>At the <code>DISKPART</code> prompt, type <code>extend</code>.</p>
+<p>This extends the selected volume to fill the added space on the disk.</p>
+</li>
+</ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-b" role="tabpanel" data-tab="tabid-b" aria-hidden="true" hidden="hidden">
+
+<p>No further action is required.</p>
+</section>
+</div>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

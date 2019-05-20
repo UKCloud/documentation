@@ -3,6 +3,8 @@ title: How to manage Azure user groups and permissions | UKCloud Ltd
 description: Describes how to apply the appropriate Azure Stack permissions to your UKCloud for Microsoft Azure users
 services: azure-stack
 author: Sue Highmoor
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -14,7 +16,7 @@ toc_fullpath: Users/How To/azs-how-manage-azure-group.md
 toc_mdlink: azs-how-manage-azure-group.md
 ---
 
-# How to manage Azure user groups and permissions 
+# How to manage Azure user groups and permissions
 
 ## Overview
 
@@ -30,7 +32,7 @@ If these default groups do not meet your requirements, for example, if you've cr
 
 ### Intended audience
 
-To complete the steps in this guide you must have global administrator access to the Azure portal and Owner access to the Azure Stack portal.
+To complete the steps in this guide you must have global administrator access to the Azure portal and Owner access to the UKCloud Azure Stack portal.
 
 ## Creating a group for Azure users
 
@@ -38,9 +40,9 @@ Rather than granting permissions to individual users, we recommend that you firs
 
 To create a group in the Azure portal:
 
-1. Log in to the Azure portal as a global administrator:
+1. Log in to the [public Azure portal](https://portal.azure.com) as a global administrator.
 
-    <https://portal.azure.com>
+    For help with identifying your Azure global administrators, see [here](azs-how-identify-global-admins.md)
 
 2. Navigate to the **Azure Active Directory**.
 
@@ -67,13 +69,11 @@ To create a group in the Azure portal:
 
 ## Granting Azure permissions
 
-After setting up the user group in Azure, you need to go to the Azure Stack portal to grant the appropriate permissions to the group.
+After setting up the user group in Azure, you need to go to the UKCloud Azure Stack portal to grant the appropriate permissions to the group.
 
 To grant Azure permissions to a group:
 
-1. Log in to the Azure Stack portal:
-
-    <https://portal.frn00006.azure.ukcloud.com/>
+1. Log in to the [UKCloud Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
 
 2. Navigate to **Subscriptions**.
 
@@ -100,7 +100,7 @@ For more information about Azure Stack, see the following Microsoft resources:
 
 - [*Get started with Azure*](https://azure.microsoft.com/en-gb/get-started/)
 
-- [*Azure Stack Operator Documentation*](https://docs.microsoft.com/en-us/azure/azure-stack/)
+- [*Azure Stack User Documentation*](https://docs.microsoft.com/en-us/azure/azure-stack/user/)
 
 For more information about UKCloud for Microsoft Azure, see:
 
@@ -110,4 +110,4 @@ For more information about UKCloud for Microsoft Azure, see:
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

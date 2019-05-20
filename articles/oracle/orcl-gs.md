@@ -3,6 +3,8 @@ title: Getting Started Guide for UKCloud for Oracle Software | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -348,7 +350,7 @@ This section provides a glossary of terms specific to UKCloud for Oracle Softwar
 
 **assembly**&nbsp;&nbsp;A kind of infrastructure template containing a configuration of multiple virtual machines with their virtual disks and even the inter connectivity between them. Assemblies can be created as a set of .ovf (Open Virtualization Format) and .img (disk image) files, or may all be contained in a single .ova (Open Virtualization Format Archive) file.
 
-**Assured OFFICIAL**&nbsp;&nbsp;A security domain on the UKCloud platform that provides access to public networks, such as the internet, PSN Assured, N3 or Janet.
+**Assured OFFICIAL**&nbsp;&nbsp;A security domain on the UKCloud platform that provides access to public networks, such as the internet, PSN, HSCN or Janet.
 
 **Cloud Console**&nbsp;&nbsp;System management software from Oracle that delivers centralized monitoring, administration, and life-cycle management functionality for the complete IT infrastructure, including systems running Oracle and non-Oracle technologies.
 
@@ -356,7 +358,7 @@ This section provides a glossary of terms specific to UKCloud for Oracle Softwar
 
 **edge gateway**&nbsp;&nbsp;A virtual router that provides VDC network services such as DHCP, firewall, NAT, static routing, VPN and load balancing.
 
-**Elevated OFFICIAL**&nbsp;&nbsp;A security domain on the UKCloud platform that provides secure access to restricted networks such as PSN Protected.
+**Elevated OFFICIAL**&nbsp;&nbsp;A security domain on the UKCloud platform that provides secure access to restricted networks such as PSN.
 
 **Oracle Enterprise Manager (OEM)**&nbsp;&nbsp;Oracle's on-premises management platform, providing a single pane of glass for managing all of a customer's Oracle deployments, whether in their data centres or in the Oracle Cloud. OEM provides management and automation support for Oracle applications, databases, middleware, hardware and engineered systems.
 

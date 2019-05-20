@@ -3,6 +3,8 @@ title: How to manage Snapshot Protection for your VMs | UKCloud Ltd
 description: Explains how to use the self-service Snapshot Protection tool to add, change or remove Snapshot Protection for your VMs
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -167,7 +169,7 @@ By default, VMs deployed on the UKCloud platform do not come with any protection
     ![Snapshot Protection Policy](images/snapshot-image-8.png)
 
     > [!NOTE]
-    > If you remove Snapshot Protection from a VM, you should consider alternatives to ensure the integrity of your data in the case of disruption. In addition to Snapshot Protection, UKCloud offers Synchronous Protection and Journaling Protection options, or you may want to implement your own protection solution, possibly utilising our Cloud Storage service.
+    > If you remove Snapshot Protection from a VM, you should consider alternatives to ensure the integrity of your data in the case of disruption. In addition to Snapshot Protection, UKCloud offers Journaling Protection options, or you may want to implement your own protection solution, possibly utilising our Cloud Storage service.
 
 6. In the **Reason For Change** field, provide a reason for the change to the existing snapshot retention policy.
 

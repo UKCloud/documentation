@@ -3,6 +3,8 @@ title: How to reset your Cloud Storage secret key | UKCloud Ltd
 description: Describes how to reset your Cloud Storage secret key
 services: cloud-storage
 author: Sue Highmoor
+reviewer:
+lastreviewed: 31/08/2018 15:11:27
 
 toc_rootlink: How To
 toc_sub1:
@@ -75,4 +77,4 @@ This guide has shown you how to reset your Cloud Storage secret key. For informa
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

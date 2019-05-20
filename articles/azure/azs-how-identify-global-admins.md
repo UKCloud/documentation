@@ -1,8 +1,10 @@
 ---
 title: How to identify your Azure global administrators | UKCloud Ltd
-description: How to identify your Azure global administrators for Microsoft Azure
+description: How to identify your Azure global administrators
 services: azure-stack
 author: Paul Brown
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -22,12 +24,11 @@ The global administrator has access to all administrative features. By default, 
 
 ### Intended audience
 
-To complete the steps in this guide, you must have appropriate access to your Microsoft Azure Portal.
+To complete the steps in this guide, you must have appropriate access to the public Azure portal.
 
+## Identifying the global administrators
 
-## Indentifying the global administrators
-
-1. Log in to your Microsoft Azure portal at https://portal.azure.com.
+1. Log in to the [public Azure portal](https://portal.azure.com).
 
 2. In the left hand side portal menu select **Azure Active Directory**.
 

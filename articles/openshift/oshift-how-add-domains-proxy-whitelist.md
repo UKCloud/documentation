@@ -3,6 +3,8 @@ title: How to permit outbound access to internet hosts in deployments with gover
 description: Outlines methods to securely permit access to internet hosts in v3.11 OpenShift clusters deployed with government community network connectivity.
 services: openshift
 author: Ben Bacon
+reviewer:
+lastreviewed: 26/02/2019 10:09:46
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -34,12 +36,16 @@ You must also have access to either:
 Squid proxy is installed as a service on the control plane load balancers. Within the Squid configuration, we have specified an ACL (Access Control List) as being a list of destination domains (present in a file on the file system), which we will refer to as the whitelist for the remainder of this article. Outbound traffic from the cluster's internal network will pass through the proxy with the destination domain being compared against the whitelist for each connection attempt; if the domain exists then outbound internet traffic is permitted, otherwise it is denied with a HTTP 403 error.
 
 By default, the following domains are added to the whitelist (and cannot be removed) to facilitate installation, testing and ongoing operation of the cluster:
+
 ```
 registry.access.redhat.com
 registry.redhat.io
-<UKCloud Object Storage Endpoint>
-<UKCloud SSO Endpoint>
+<UKCloud Object Storage Endpoint - cas.cor00005.ukcloud.com OR cas.frn00006.ukcloud.com>
+<UKCloud SSO Endpoint - idp.ukcloud.com>
 ```
+
+> [!WARNING]
+> Adding any subdomains of domains that are already within the proxy whitelist will lead to squid being unable to reconfigure and any domains added after this point will not be whitelisted. Please keep the above domains in mind when adding to the whitelist as these will not be shown in the ConfigMap. To give an example, you should avoid adding `.ukcloud.com` or `.redhat.com` to your proxy-whitelist as both `registry.access.redhat.com` and `idp.ukcloud.com` are already whitelisted by us.
 
 A scheduled job (which runs at 0 minutes past every hour) on the OpenShift cluster Bastion host reads a Config Map named `proxy-whitelist` within the `whitelist` project. If there are any modifications to this Config Map, the job overwrites the previous custom entries within the whitelist and triggers a reconfigure task on the Squid proxy to enable the updated domains to be accessed.
 

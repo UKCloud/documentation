@@ -8,7 +8,7 @@
     <title>How to permit outbound access to internet hosts in deployments with government community network connectivity | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to permit outbound access to internet hosts in deployments with government community network connectivity | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="generator" content="docfx 2.42.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../..//styles/assets/logo.png" srcset="../..//styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -109,9 +109,13 @@
 <p>By default, the following domains are added to the whitelist (and cannot be removed) to facilitate installation, testing and ongoing operation of the cluster:</p>
 <pre><code>registry.access.redhat.com
 registry.redhat.io
-&lt;UKCloud Object Storage Endpoint&gt;
-&lt;UKCloud SSO Endpoint&gt;
+&lt;UKCloud Object Storage Endpoint - cas.cor00005.ukcloud.com OR cas.frn00006.ukcloud.com&gt;
+&lt;UKCloud SSO Endpoint - idp.ukcloud.com&gt;
 </code></pre>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Adding any subdomains of domains that are already within the proxy whitelist will lead to squid being unable to reconfigure and any domains added after this point will not be whitelisted. Please keep the above domains in mind when adding to the whitelist as these will not be shown in the ConfigMap. To give an example, you should avoid adding <code>.ukcloud.com</code> or <code>.redhat.com</code> to your proxy-whitelist as both <code>registry.access.redhat.com</code> and <code>idp.ukcloud.com</code> are already whitelisted by us.</p>
+</div>
 <p>A scheduled job (which runs at 0 minutes past every hour) on the OpenShift cluster Bastion host reads a Config Map named <code>proxy-whitelist</code> within the <code>whitelist</code> project. If there are any modifications to this Config Map, the job overwrites the previous custom entries within the whitelist and triggers a reconfigure task on the Squid proxy to enable the updated domains to be accessed.</p>
 <h3 id="assigning-non-cluster-admin-users-rights-to-edit-the-whitelist">Assigning non cluster-admin users rights to edit the whitelist</h3>
 <p>By default, only users who have been assigned the cluster-admin role will be able to view/edit the <code>proxy-whitelist</code> ConfigMap object within the <code>whitelist</code> project. It is possible to grant non cluster-admin users rights to edit this object but this should be given careful consideration. The ability to access hosts on the internet, from nodes that previously only had access to government community networks, exposes the cluster to additional risk (should a domain be whitelisted that hosts malicious content for example). For this reason, only trusted users should be permitted to determine these domains to reduce the risk of a malicious domain being unwittingly added.</p>

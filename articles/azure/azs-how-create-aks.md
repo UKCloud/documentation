@@ -1,8 +1,11 @@
 ---
-title: How to create an Azure Kubernetes Service cluster using the Azure Stack portal | UKCloud Ltd
+title: How to create an Azure Kubernetes Service cluster using the UKCloud Azure Stack portal | UKCloud Ltd
 description: Create an Azure Kubernetes Service cluster using Azure Stack
 services: azure-stack
 author: Bailey Lawson
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
+
 toc_rootlink: Users
 toc_sub1: How To
 toc_sub2:
@@ -13,7 +16,7 @@ toc_fullpath: Users/How To/azs-how-create-aks.md
 toc_mdlink: azs-how-create-aks.md
 ---
 
-# How to create an Azure Kubernetes Service cluster using the Azure Stack portal
+# How to create an Azure Kubernetes Service cluster using the UKCloud Azure Stack portal
 
 ## Overview
 
@@ -21,11 +24,11 @@ Azure Kubernetes Service (AKS) makes it simple to deploy a managed Kubernetes cl
 
 ### Intended audience
 
-To complete the steps in this guide, you must have appropriate access to a subscription in the UKCloud Azure Stack portal.
+To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.
 
 ## Creating an Azure Kubernetes Service cluster
 
-1. Log in to the UKCloud Azure Stack portal.
+1. Log in to the Azure Stack portal.
 
    For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 

@@ -8,7 +8,7 @@
     <title>UKCloud for Microsoft Azure troubleshooting | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for Microsoft Azure troubleshooting | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="generator" content="docfx 2.42.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../..//styles/assets/logo.png" srcset="../..//styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -97,24 +97,24 @@
 <p>This guide describes some of the issues you may encounter when using UKCloud for Microsoft Azure:</p>
 <h2 id="login-results-in-server-error">Login results in server error</h2>
 <h3 id="cause">Cause</h3>
-<p>When first logging in to the Azure Stack portal, you may see the following error:</p>
+<p>When first logging in to the UKCloud Azure Stack portal, you may see the following error:</p>
 <p><code>Server Error in '/' Application.</code></p>
 <p><img src="images/azs-login-error.png" alt="Server Error"></p>
 <h3 id="solution">Solution</h3>
 <p>Refresh the page and the login should work.</p>
 <h2 id="diagnostics-do-not-work-for-linux-vms">Diagnostics do not work for Linux VMs</h2>
 <h3 id="cause-1">Cause</h3>
-<p>If you enable Microsoft Insights for your subscription (<strong>Subscriptions &gt; Resource providers &gt; Microsoft.Insights</strong> and subscribe), you'll have access to Azure Monitoring for Windows VMs only. This feature is not yet available for Linux VMs as documented at: <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/azure-stack-update-1802">https://docs.microsoft.com/en-gb/azure/azure-stack/azure-stack-update-1802</a></p>
+<p>If you enable Microsoft Insights for your subscription (<strong>Subscriptions &gt; Resource providers &gt; Microsoft.Insights</strong> and then click subscribe), you'll have access to Azure Monitoring for Windows VMs only. This feature is not yet available for Linux VMs as documented <a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-metrics-azure-data#application---diagnostics-logs-application-logs-and-metrics">here</a>.</p>
 <h3 id="solution-1">Solution</h3>
 <p>There is currently no workaround for this issue.</p>
 <h2 id="virtual-machine-disk-size-is-not-showing-in-the-gui-or-cli">Virtual machine disk size is not showing in the GUI or CLI</h2>
 <h3 id="cause-2">Cause</h3>
 <p>You cannot see the virtual machine disk size in the GUI or CLI.</p>
 <h3 id="solution-2">Solution</h3>
-<p>To view your disk size, navigate to <strong>Storage accounts &gt; &lt;storage_account_name&gt; &gt; Blob service &gt; vhds</strong> and find your disk there:</p>
+<p>To view your disk size, navigate to <strong>Storage accounts &gt; &lt;Storage Account Name&gt; &gt; Blob service &gt; vhds</strong> and find your disk there:</p>
 <p><img src="images/azs-disk-size.png" alt="VM Size in GUI"></p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">

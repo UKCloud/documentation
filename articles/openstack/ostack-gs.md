@@ -3,6 +3,8 @@ title: Getting Started Guide for UKCloud for OpenStack | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -32,7 +34,7 @@ To manage your OpenStack projects, you can log in to the OpenStack Horizon dashb
 
 2. From the **Authenticate using** list, select:
 
-    - **Keystone Credentials** if your account has not been migated to SSO
+    - **Keystone Credentials** if your account has not been migrated to SSO
     - **UKCloud SSO** if your account has been migrated to SSO
 
     ![Horizon login page](images/ostack-horizon-login.png)

@@ -3,13 +3,15 @@ title: File naming conventions for UKCloud Knowledge Centre | UKCloud Ltd
 description: Describes how to name files for UKCloud Knowledge Centre
 services: docfx
 author: Chris Black
+reviewer:
+lastreviewed: 05/06/2018 11:14:36
 
 toc_rootlink: Support Docs
 toc_sub1: DocFX
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title:  File naming conventions for UKCloud Knowledge Centre
+toc_title: File naming conventions for UKCloud Knowledge Centre
 toc_fullpath: Support Docs/DocFX/sup-dfx-file-names.md
 toc_mdlink: sup-dfx-file-names.md
 ---

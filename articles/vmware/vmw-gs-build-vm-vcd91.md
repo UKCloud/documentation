@@ -3,6 +3,8 @@ title: How to build a virtual machine with UKCloud for VMware (vCloud Director 9
 description: Describes how to get up and running with UKCloud for VMware by showing you how to use vCloud Director 9.1 to quickly spin up a virtual machine from scratch and connect it to the internet (Assured OFFICIAL security domain only)
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 05/10/2018 12:14:25
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -306,4 +308,4 @@ If you want a more comprehensive guide to the platform, take a look at the [*vCl
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

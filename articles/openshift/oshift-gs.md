@@ -3,6 +3,8 @@ title: Getting Started Guide for UKCloud for OpenShift | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for OpenShift
 services: openshift
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -18,7 +20,7 @@ toc_mdlink: oshift-gs.md
 
 ## Overview
 
-UKCloud for OpenShift delivers a secure, private deployment of Red Hat&trade; OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks, including PSN, N3 and Janet.
+UKCloud for OpenShift delivers a secure, private deployment of Red Hat&trade; OpenShift deployed on an assured, trusted platform connected to the internet and to public sector networks, including PSN, HSCN and Janet.
 
 UKCloud provides a fully provisioned, single-tenant OpenShift instance to each customer, enabling developers to totally focus on delivering business value, without having to worry about any infrastructure considerations.
 
@@ -73,9 +75,9 @@ In addition, we recommend the installation of the OpenShift CLI on your device.
 
 ## Initial environment
 
-UKCloud will provision you with an OpenShift Starter Pack, providing you with 32GiB of container resources to deploy your applications.
+UKCloud will provision you with an OpenShift Foundation Pack, providing you with 32GiB of container resources to deploy your applications.
 
-You can expand the Starter Pack in increments of 16GiB, to a maximum OpenShift environment of 176GiB. These Expansion Packs are deployed by UKCloud via a service request within the UKCloud Portal.
+You can expand your cluster by requesting Runtime Packs. Runtime Packs come in three sizes: small (16GiB 2vCPU), medium (32GiB 4vCPU) and large (64GiB 8vCPU) and are deployed by UKCloud via a Service Request through the UKCloud Portal.
 
 ## Using the web console
 

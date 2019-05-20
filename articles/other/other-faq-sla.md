@@ -3,6 +3,8 @@ title: Service Level Agreement FAQs | UKCloud Ltd
 description: Frequently asked questions for Service Level Agreements
 services: other
 author: Matt Warner
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -423,7 +425,7 @@ The following are examples of what is not covered by the SLA:
 
 - Faults within your control, such as client applications and mailbox configuration
 
-- Faults within external connectivity providers (for example DDoS protected internet, PSN, Janet or N3/HSCN) and components collocated at UKCloud 
+- Faults within external connectivity providers (for example DDoS protected internet, PSN, Janet or HSCN) and components collocated at UKCloud 
 
 ### Can you give me a worked example for the Email and Collaboration as a Service SLA?
 
@@ -459,4 +461,4 @@ How much is payable?
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

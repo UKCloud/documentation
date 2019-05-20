@@ -3,6 +3,8 @@ title: Janet connectivity FAQs | UKCloud Ltd
 description: Frequently asked questions for Janet connectivity
 services: connectivity
 author: Matt Warner
+reviewer:
+lastreviewed: 20/07/2018 18:37:23
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -85,4 +87,4 @@ UKCloud will set up new connections to the Janet network for you free of charge.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

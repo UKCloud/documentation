@@ -3,6 +3,8 @@ title: How to publish application routes to multiple networks | UKCloud Ltd
 description: Describes the process and commands required to publish routes to different external networks available from an OpenShift cluster.
 services: openshift
 author: Steve Mulholland
+reviewer:
+lastreviewed: 21/12/2018 13:49:11
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -118,7 +120,7 @@ So that shows the basic route is now published, which fulfils scenario 1 shown i
 
 To make the route appear on the secondary router and achieve scenario 2, we need to label the route appropriately so that it's also exposed on the `router-secondary` pods. By default, we setup the secondary routers with a label based route selector of `"router-secondary=true"`. 
 
-Here we see the route selector label setup on the secondary router. This indicates that this route will publish routes that are labelled with `"router=secondary"`:
+Here we see the route selector label setup on the secondary router. This indicates that this route will publish routes that are labelled with `"router-secondary=true"`:
 
 ```
 $ oc describe dc router-secondary | grep ROUTE_LABELS

@@ -3,6 +3,8 @@ title: UKCloud Portal overview video | UKCloud Ltd
 description: Shows a video that provides an overview of the UKCloud Portal user interface
 services: portal
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/11/2018 17:27:39
 
 toc_rootlink: Videos
 toc_sub1: 
@@ -25,7 +27,7 @@ The following video provides an overview of the UKCloud Portal user interface.
 ## Related articles
 
 - [*Getting Started Guide for the UKCloud Portal*](ptl-gs.md)
-- [*Portal permissions*](ptl-overview-permissions.md)
+- [*Portal permissions*](ptl-ref-overview-permissions.md)
 - [*How to sign up for Portal notifications*](ptl-how-signup-notifications.md)
 
 ## Feedback

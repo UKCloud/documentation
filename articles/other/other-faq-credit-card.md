@@ -3,6 +3,8 @@ title: Credit card payment FAQs | UKCloud Ltd
 description: Frequently asked questions for paying for UKCloud services using a credit or debit card
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 21/12/2018 12:51:11
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -50,7 +52,7 @@ Email <signup@ukcloud.com> if you have issues with the sign-up process.
 
 ### How do I leave UKCloud?
 
-For information about how to terminate your service with UKCloud, see [*Terminating your UKCloud services*](other-ref-services-by-region.md).
+For information about how to terminate your service with UKCloud, see [*Terminating your UKCloud services*](other-ref-offboarding.md).
 
 ### My credit or debit card details have changed, how do I update them with UKCloud?
 

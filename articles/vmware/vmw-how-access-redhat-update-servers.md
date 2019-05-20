@@ -3,6 +3,8 @@ title: How to access Red Hat update servers | UKCloud Ltd
 description: Shows you how to access Red Hat updates using Red Hat Update Infrastructure (RHUI)
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 17/08/2018 13:00:56
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -39,7 +41,7 @@ These templates have the following properties:
 
 - 32GB disk space / 1 x vCPU / 2GB ram (default, adjust as required)
 
-You can adjust the VM properties as required and you'll be billed as per the standard VM sizes as described in the UKCloud for VMware Service Definition. You will not be billed on additional storage until you reach the 60GB of provisioned disk space, unless you've chosen geo-resilient.
+You can adjust the VM properties as required and you'll be billed as per the standard VM sizes as described in the UKCloud for VMware Service Definition. You will not be billed on additional storage until you reach the 60GiB of provisioned disk space.
 
 ## Old Red Hat VM templates
 
@@ -53,4 +55,4 @@ High Availability (HA) and Extended Update Support (EUS) are premium Red Hat ser
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

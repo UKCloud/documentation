@@ -3,6 +3,8 @@ title: UKCloud for VMware Service Scope | UKCloud Ltd
 description: Outlines important details regarding UKCloud for VMware
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 03/08/2018 13:39:33
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -51,7 +53,7 @@ PRIORITY |Uncontended (CPU/GiB) | Configured to reduce workload movement around 
 
 **VM size.** There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through vCloud Director.
 
-Full details of the available service options are outlined in the *Service Definition* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-service-definition-document-2018-05-21-1254.pdf).
+Full details of the available service options are outlined in the [*Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf).
 
 ## Storage options
 
@@ -62,8 +64,6 @@ Additional storage can be purchased to support your application. Multiple storag
 - **Tier 1.** Our most performant block storage for workloads requiring consistently higher disk throughput.
 
 - **Tier 2.** Persistent block storage with typical performance characteristics for use by production applications or storage.
-
-- **Geo-Resilient.** Works in combination with Synchronous Protection to replicate storage across a SAN that spans site locations.
 
 ## Storage policies
 
@@ -88,14 +88,6 @@ Customers have a range of automated, on-platform protection options to choose fr
 **Snapshot Protection.** 14-day or 28-day snapshot policies available. Data protected by the snapshot has an RPO of 24 hours, with RTO determined by the time taken to restore the VM after the service request is raised. See the [*Snapshot Protection Service Scope*](vmw-sco-snapshot-protection.md) for full details.
 
 **Journaling Protection.** A non-invasive, self-service disaster recovery solution with configurable recovery points, providing near real-time data protection. The standard journaling profile provides a target RPO of 5 minutes and a journal history of 2, 7, 14 or 28 days. The [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md) covers the full details of this protection option.
-
-**Synchronous Protection.** Geographical protection of your live environments across both of our sites.
-
-- Currently available in regions 1, 2, 7 and 8.
-
-- Provides an RPO of almost 0 seconds.
-
-- The RTO is variable and will be influenced by factors such as your application design and the ability to failover networks. For more information, see theh [*Synchronous Protection Service Scope*](vmw-sco-synchronous-protection.md).
 
 ## Service availability
 
@@ -145,7 +137,7 @@ You are entitled to claim Service Credits for outages to services that take you 
 
 - Red Hat Enterprise Linux licensing
 
-For the latest available licences, please check the *Service Definition* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-service-definition-document-2018-05-21-1254.pdf) and the *Pricing Guide* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-pricing-document-2018-05-23-0844.pdf).
+For the latest available licences, please check the [*Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf) and the [*Pricing Guide*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf).
 
 You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you're providing your own licensing for a retrospective discount.
 
@@ -169,7 +161,7 @@ We manage the physical firewalls that face public and secure networks.
 
 **PSN-facing solutions.** You should raise a Service Request or contact your Customer Success Manager (CSM) to be assigned your IP address. Contended bandwidth (uncapped).
 
-**Janet and N3/HSCN solutions** have one usable IP address. You can request additional IP addresses via a Service Request.
+**Janet and HSCN solutions** have one usable IP address. You can request additional IP addresses via a Service Request.
 
 From a customer management experience, you manage all your connectivity rules, such as firewall, IPsec VPN and NAT functionality, through your edge gateway, using either the UKCloud Portal GUI or API.
 
@@ -222,7 +214,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 ## Service migration
 
-You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the *Pricing Guide* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-pricing-document-2018-05-23-0844.pdf).
+You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the [*Pricing Guide*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf).
 
 Customers are free to migrate their workloads. You can also request a migration through a Service Request. Migrations may be between:
 
@@ -256,7 +248,7 @@ Customers are free to migrate their workloads. You can also request a migration 
 
 - The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.
 
-- If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.
+- If access is required over government secure networks (HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.
 
 - Management and administration of layers above the hypervisor (OS patching, application performance monitoring, user administration).
 
@@ -292,7 +284,7 @@ If during Emergency Maintenance there is a loss of availability to the service, 
 
 The following documents contain more information about UKCloud for VMware and the service options:
 
-- *UKCloud for VMware Service Definition* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-service-definition-document-2018-05-21-1254.pdf)
+- [*UKCloud for VMware Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf)
 
 - [*UKCloud for VMware FAQ*](vmw-faq.md)
 
@@ -302,16 +294,14 @@ The following documents contain more information about UKCloud for VMware and th
 
 - [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md)
 
-- [*Synchronous Protection Service Scope*](vmw-sco-synchronous-protection.md)
-
 - [*Bring Your Own Firewall Service Scope*](vmw-sco-byof.md)
 
 - [*Understanding connectivity options in UKCloud for VMware*](vmw-ref-connectivity-options.md)
 
-- *UKCloud Terms and Conditions* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-terms-and-conditions-2018-05-21-1254.pdf)
+- [*UKCloud Terms and Conditions*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf)
 
 - [*SLA Definition*](../other/other-ref-sla-definition.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

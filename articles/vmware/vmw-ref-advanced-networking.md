@@ -3,6 +3,8 @@ title: Advanced networking options for UKCloud for VMware | UKCloud Ltd
 description: Provides an overview of the Advanced and Enterprise Networking bundles available with UKCloud for VMware, including Distributed Firewall (DFW), Distributed Logical Router (DLR) and L2 VPN
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 31/01/2019 09:49:35
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

@@ -3,6 +3,8 @@ title: How to manage how your instance recovers from a host failure | UKCloud Lt
 description: Describes how to control what happens to your instances in the event of a service interruption to the availability of a host
 services: openstack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 15:17:17
 
 toc_rootlink: How To
 toc_sub1:
@@ -120,4 +122,4 @@ For more information about UKCloud for OpenStack, see the following articles in 
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

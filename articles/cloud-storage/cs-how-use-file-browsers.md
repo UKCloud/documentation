@@ -3,6 +3,8 @@ title: How to use file browsers with Cloud Storage | UKCloud Ltd
 description: Using file browsers with Cloud Storage
 services: cloud-storage
 author: Dan Baker
+reviewer:
+lastreviewed: 16/10/2018 11:28:45
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -52,18 +54,15 @@ S3 API endpoints:
 
   - PSN Assured: `cas.cor00005.psnassured.ukcloud.com`
 
-  - N3: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
+  - HSCN: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
   
-
 - **Farnborough (Assured)**
 
   - Internet: `cas.frn00006.ukcloud.com`
 
   - PSN Assured: `cas.frn00006.psnassured.ukcloud.com`
 
-  - N3: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
-
-If you're using the ENHANCED option (geo-resilient storage), you can use either the Corsham or Farnborough endpoints. In the event of a site failure, there will be an outage to objects created on the failed site. UKCloud will bring these objects online in the other site within about 15 minutes.
+  - HSCN: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
 
 Contact UKCloud support if you are unsure which endpoint to use.
 

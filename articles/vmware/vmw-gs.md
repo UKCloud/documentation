@@ -3,6 +3,8 @@ title: Getting Started Guide for UKCloud for VMware | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for VMware
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -20,7 +22,7 @@ toc_mdlink: vmw-gs.md
 
 If you're new to UKCloud, you'll probably have received a link to this guide as part of your welcome email. It will help you to get started using UKCloud for VMware.
 
-The *Getting Started Guide* provides an overview of UKCloud for VMware and gives you basic information about how to log in and set up your environment.
+The Getting Started Guide provides an overview of UKCloud for VMware and gives you basic information about how to log in and set up your environment.
 
 ### Intended audience
 

@@ -18,10 +18,10 @@
   items:
   - name: Cloud Storage
     topicHref: articles/cloud-storage/cs-gs.md
+  - name: Multi-Cloud Backup Storage
+    topicHref: articles/mcbs/mcbs-gs.md
   - name: Cloud GPU
     topicHref: articles/gpu/gpu-faq.md
-  - name: High Performance Compute
-    topicHref: articles/hpc/hpc-ref-overview.md
   - name: Cross Domain Security Zone
     topicHref: articles/cdsz/cdsz-gs-walled-garden.md
   - name: Secure Remote Access
@@ -30,16 +30,18 @@
     topicHref: articles/email/email-gs.md
   - name: Disaster Recovery as a Service
     topicHref: articles/draas/draas-gs.md
-  - name: Migration to the Cloud 
-    topicHref: articles/migration/migr-how-zerto-migrate-to-ukcloud.md
   - name: Private Cloud for Compute
     topicHref: articles/private-compute/prc-faq.md
   - name: Private Cloud for Storage
     topicHref: articles/private-storage/prs-faq.md
+  - name: High Performance Compute
+    topicHref: articles/hpc/hpc-ref-overview.md
   - name: Connectivity 
     topicHref: articles/connectivity/conn-faq.md
   - name: Cloud Enablement
     topicHref: articles/enablement/enbl-ref-services.md
+  - name: Migration to the Cloud 
+    topicHref: articles/migration/migr-how-zerto-migrate-to-ukcloud.md
   - name: UKCloud Portal
     topicHref: articles/portal/ptl-gs.md
   - name: Other

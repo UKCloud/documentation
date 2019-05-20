@@ -145,6 +145,7 @@ $(function () {
     function renderSearchBox() {
       autoCollapse();
       $(window).on('resize', autoCollapse);
+      $(window).on('load', autoCollapse);
       $(document).on('click', '.navbar-collapse.in', function (e) {
         if ($(e.target).is('a')) {
           $(this).collapse('hide');
@@ -153,11 +154,12 @@ $(function () {
 
       function autoCollapse() {
         var navbar = $('#autocollapse');
+        var navbar_nav = $('#autocollapse .navbar-nav');
         if (navbar.height() === null) {
           setTimeout(autoCollapse, 300);
         }
         navbar.removeClass(collapsed);
-        if (navbar.height() > 60) {
+        if (navbar.height() > 60 || navbar_nav.height() > 40) {
           navbar.addClass(collapsed);
         }
       }

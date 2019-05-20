@@ -30,6 +30,8 @@
   items:
   - name: Best practice customer guide
     href: other-ref-best-practice-guide.md
+  - name: Big Data & Hadoop Service Proposition
+    href: other-ref-hadoop-proposition.md
   - name: Browser requirements for services on the UKCloud platform
     href: other-ref-browsers.md
   - name: Cloud economics
@@ -38,6 +40,8 @@
     href: other-ref-customer-admin.md
   - name: Data centre advance notice requirements
     href: other-ref-dc-notice.md
+  - name: External security review testing
+    href: other-ref-external-security-review-testing.md
   - name: G10 Service Definitions and Pricing Guide
     href: other-ref-service-definitions.md
   - name: Identity & Access Management API
@@ -50,6 +54,8 @@
     href: other-ref-pricing-tool-bugs.md
   - name: Methods for exporting data
     href: other-ref-export-data.md
+  - name: Monitoring the UKCloud platform
+    href: other-ref-ukcloud-monitoring.md
   - name: Protective Monitoring information in the UKCloud Portal
     href: other-ref-promon-showback.md
   - name: Services at a glance
@@ -76,6 +82,8 @@
     href: other-ref-sites-regions-zones.md
   - name: Understanding the Cyber Security News page
     href: other-ref-cyber-security-news.md
+  - name: Understanding the difference between GB and GiB
+    href: other-ref-gib.md
   - name: Understanding your invoice evidence file
     href: other-ref-invoice-evidence-file.md
   - name: Windows Server 2016 templates

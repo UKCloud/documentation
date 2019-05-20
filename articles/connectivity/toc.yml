@@ -46,14 +46,18 @@
     href: conn-ref-ddos-protection.md
   - name: PSN Assured - permitted standard ports
     href: conn-ref-psn-permitted-ports.md
+  - name: PSN connection compliance
+    href: conn-ref-psn-connection.md
   - name: PSN flattening
     href: conn-ref-psn-flattening.md
+  - name: Requesting Janet connectivity
+    href: conn-ref-janet.md
   - name: Telecommunications Service Provider engagement
     href: conn-ref-telco-enagagement.md
   - name: Understanding PSN core services
     href: conn-ref-psn-core-services.md
   - name: What Intrusion Detection System (IDS) does UKCloud provide?
-    href: conn-ids.md
+    href: conn-ref-ids.md
 - name: Service Scope
   items:
   - name: Application-tuned DDoS protection Service Scope

@@ -3,6 +3,8 @@ title: How to use the Azure Stack API | UKCloud Ltd
 description: Describes how to use the Azure Stack API with UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -77,7 +79,7 @@ To obtain an access token:
 
     For example:
 
-    ```
+    ```http
     grant_type=password
     &client_id=1950a258-227b-4e31-a9cf-717495945fc2
     &resource=(endpoint returned in the audiences section below)
@@ -91,7 +93,7 @@ To obtain an access token:
 
 3. An example request might look something like the following
 
-    ```
+    ```bash
     curl -X "POST" "https://login.windows.net/160f539f-8571-4c96-9361-797645c24e75/oauth2/token" \
     -H "Content-Type: application/x-www-form-urlencoded" \
     --data-urlencode "client_id=1950a258-227b-4e31-a9cf-717495945fc2" \
@@ -102,7 +104,7 @@ To obtain an access token:
 
 4. If the authentication is successful, the endpoint returns an access token. For example:
 
-    ```
+    ```json
     {
       "token_type": "Bearer",
       "scope": "user_impersonation",
@@ -117,7 +119,7 @@ To obtain an access token:
 
 5. You must include this token in the Authorization header of each subsequent API request. For example:
 
-    ```
+    ```bash
     curl -H "Authorization: Bearer eyJ0eXAiOi...truncated for readability..." 'https://management.local.azurestack.external/subscriptions?api-version=2016-05-01'
     ```
 
@@ -187,4 +189,4 @@ For more information about UKCloud for Microsoft Azure, see:
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

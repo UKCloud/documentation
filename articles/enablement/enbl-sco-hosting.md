@@ -3,6 +3,8 @@ title: Cloud Enablement - Server/Storage Hosting Service Scope | UKCloud Ltd
 description: outlines important details regarding Cloud enablement for server / storage hosting
 services: enablement
 author: Steve Hall
+reviewer:
+lastreviewed: 23/07/2018 11:55:40
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -116,4 +118,4 @@ If, in the unlikely event of a power failure, you would like your hardware resta
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

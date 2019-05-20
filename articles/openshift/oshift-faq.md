@@ -3,6 +3,8 @@ title: UKCloud for OpenShift FAQs | UKCloud Ltd
 description: Frequently asked questions for UKCloud for OpenShift
 services: openshift
 author: Matt Warner
+reviewer:
+lastreviewed: 20/07/2018 10:26:58
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -73,9 +75,9 @@ We are now required to self-assert our services, with customers taking responsib
 
 We provide confidence that our OpenShift service still meets the highest level of information assurance, which is why we continue to have our platform independently tested and validated, and have the findings made available to customers and partners. This enables SIROs to make an informed decision about any service they choose to consume.
 
-### Can I use UKCloud for OpenShift over closed networks such as PSN and N3/HSCN?
+### Can I use UKCloud for OpenShift over closed networks such as PSN and HSCN?
 
-We plan for this service to be accredited for use over PSN, however this may not be available at launch. Connectivity to the N3/HSCN network is supported.
+UKCloud for OpenShift is available on the PSN, HSCN and Janet networks.
 
 ### Does UKCloud offer any scheduled automated backups for UKCloud for OpenShift?
 

@@ -3,6 +3,8 @@ title: Synchronous Protection FAQs | UKCloud Ltd
 description: Frequently asked questions for Synchronous Protection
 services: vmware
 author: Matt Warner
+reviewer:
+lastreviewed: 02/08/2018 16:00:52
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -16,6 +18,10 @@ toc_mdlink: vmw-faq-synchronous-protection.md
 # Synchronous Protection FAQs
 
 ## General
+
+### Is Synchronous Protection still available?
+
+Synchronous Protection is no longer available as a protection option for UKCloud for VMware. We recommend using one of our other protection options: Journaling Protection or Snapshot Protection. We will continue to provide support to customers who previously added Synchronous Protection to their environment, although we would encourage considering using Journaling Protection instead.
 
 ### What is the ENHANCED service?
 
@@ -97,4 +103,4 @@ Synchronous Protection with Geo-resilience comes with 14-day Snapshot Protection
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

@@ -12,10 +12,10 @@
     items:
     - name: Create a load balancer
       href: azs-how-create-load-balancer.md
+    - name: Create a scale set
+      href: azs-how-create-scale-set.md
     - name: Create a Service Fabric cluster
       href: azs-how-create-service-fabric-portal.md
-    - name: Create a site-to-site connection
-      href: azs-how-create-S2S-VPN.md
     - name: Create an Azure Kubernetes Service cluster
       href: azs-how-create-aks.md
     - name: Deploy an SQL template to Azure Stack - PowerShell
@@ -25,17 +25,17 @@
     - name: Link Azure Storage Explorer to Azure Stack
       href: azs-how-link-storage-explorer.md
     - name: List VM extensions - PowerShell
-      href: azs-list-vm-extensions.md
+      href: azs-how-list-vm-extensions.md
     - name: 'Manage Azure user groups and permissions '
       href: azs-how-manage-azure-group.md
-    - name: Obtain Azure Stack Client ID - REST API
-      href: azs-how-to-obtain-clientid-via-api.md
-    - name: Resize an OS drive
-      href: azs-how-resize-os-drive.md
     - name: Retrieve your subscription quotas
       href: azs-how-retrieve-quota-ps.md
     - name: Use the Azure Stack API
       href: azs-how-use-azure-api.md
+    - name: Add a Managed Disk to a VM
+      items:
+      - name: Add a managed disk to a VM - Portal
+        href: azs-how-add-managed-disks-portal.md
     - name: Configure Environment
       items:
       - name: Configure the Azure Stack user's Azure CLI environment
@@ -44,39 +44,53 @@
         href: azs-how-configure-powershell-users.md
     - name: Create a Key Vault
       items:
-      - name: Create a key vault - portal
+      - name: Create a key vault - Portal
         href: azs-how-create-key-vault-portal.md
       - name: Create a key vault - PowerShell
         href: azs-how-create-key-vault-ps.md
-    - name: Create a Service Principal Name
+    - name: Create a Service Principal Name (SPN)
       items:
-      - name: Create a service principal name - CLI
+      - name: Create a service principal name (SPN) - CLI
         href: azs-how-create-spn-cli.md
-      - name: Create a service principal name - PowerShell
+      - name: Create a service principal name (SPN) - Portal
+        href: azs-how-create-spn-portal.md
+      - name: Create a service principal name (SPN) - PowerShell
         href: azs-how-create-spn-powershell.md
+    - name: Create a Site-to-Site VPN Connection
+      items:
+      - name: Create a site-to-site VPN connection - Portal
+        href: azs-how-create-S2S-VPN.md
+      - name: Create a site-to-site VPN connection - PowerShell
+        href: azs-how-create-S2S-VPN-ps.md
     - name: Create a Virtual Machine
       items:
       - name: Create a virtual machine - CLI
         href: azs-how-create-vm-cli.md
       - name: Create a virtual machine - Portal
-        href: azs-how-create-vm.md
+        href: azs-how-create-vm-portal.md
       - name: Create a virtual machine - PowerShell
         href: azs-how-create-vm-ps.md
       - name: Create a virtual machine - Terraform
         href: azs-how-create-vm-terraform.md
+    - name: Resize a disk
+      items:
+      - name: Resize a disk - Portal
+        href: azs-how-resize-disk-portal.md
+      - name: Resize a disk - PowerShell
+        href: azs-how-resize-disk-ps.md
   - name: Reference
     items:
-    - name: UKCloud for Microsoft Azure troubleshooting
-      href: azs-ref-troubleshooting.md
+    - name: UKCloud for Microsoft Azure known issues
+      href: azs-ref-known-issues.md
     - name: Understanding UKCloud for Microsoft Azure
       href: azs-ref-overview.md
   - name: Service Scope
     items:
-    - name: UKCloud for Microsoft Azure service scope
-      href: asz-sco.md
+    - name: UKCloud for Microsoft Azure Service Scope
+      href: azs-sco.md
   - name: Videos
     items:
-    - name: Microsoft Azure Stack portal overview
+    - name: UKCloud Azure Stack portal overview
       href: azs-vid-overview.md
 - name: Operators
   items:
@@ -84,7 +98,7 @@
     items:
     - name: Deploy and configure the Azure Stack Development Kit
       href: azs-how-deploy-asdk.md
-    - name: Perfom an Azure Stack update
+    - name: Perform an Azure Stack update
       href: azs-how-ps-update-azure-stack.md
     - name: Configure Environment
       items:

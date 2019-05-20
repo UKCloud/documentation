@@ -3,6 +3,8 @@ title: VMware Distributed Firewall video | UKCloud Ltd
 description: Shows a video that provides an technical explanation of VMware's Distributed Firewall (DFW)
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 21/12/2018 15:47:05
 
 toc_rootlink: Videos
 toc_sub1: 

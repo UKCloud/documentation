@@ -8,7 +8,7 @@
     <title>Snapshot Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Snapshot Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="generator" content="docfx 2.42.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../..//styles/assets/logo.png" srcset="../..//styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -104,8 +104,6 @@
 <li><p>Snapshot protection - automatically takes an image of your VM every 24 hours and stores the image outside the core platform</p>
 </li>
 <li><p>Journaling protection - creates an almost live copy of your VM and records the VM data and state in a data journal</p>
-</li>
-<li><p>Synchronous protection - creates a live copy of your VM in a different geographic site</p>
 </li>
 </ul>
 <p>Additionally, you can implement your own protection technologies.</p>
@@ -177,7 +175,7 @@
 <p>For the steps required to do this, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
 <h3 id="what-type-of-data-is-the-automated-vm-snapshot-backup-solution-suitable-for">What type of data is the automated VM snapshot backup solution suitable for?</h3>
 <p>The service is suitable for data certified as OFFICIAL and OFFICIAL-SENSITIVE and is available on both UKCloud platforms: Assured OFFICIAL (formerly IL2) and Elevated OFFICIAL (formerly IL3).</p>
-<h3 id="do-large-virtual-disk-2tib-configurations-affect-snapshot-backups">Do large virtual disk (2 TiB+) configurations affect snapshot backups?</h3>
+<h3 id="do-large-vms-2-tib-affect-snapshot-backups">Do large VMs (2 TiB+) affect snapshot backups?</h3>
 <p>Yes. Snapshot‑based backups are not supported for large VMs with high change rates, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up.</p>
 <p>You must take an alternative backup approach with VMs of this size.</p>
 <h3 id="can-i-restrict-the-automated-vm-snapshot-backup-to-specific-files-or-directories">Can I restrict the automated VM snapshot backup to specific files or directories?</h3>
@@ -243,8 +241,6 @@
 <li><p>The length of time those backups are held</p>
 </li>
 </ul>
-<h3 id="will-i-be-charged-for-snapshot-protection-if-i-also-have-synchronous-protection-with-geo-resilience">Will I be charged for Snapshot Protection if I also have Synchronous Protection with Geo-resilience?</h3>
-<p>No. Synchronous Protection with Geo-resilience comes with 14-day Snapshot Protection as standard when selected, with the option for 28-day Snapshot Protection free of charge. Please note that you will still be charged for any storage consumed associated with the Snapshot Protection option.</p>
 <h3 id="when-i-disable-snapshot-protection-on-my-vm-will-billing-immediately-stop">When I disable snapshot protection on my VM, will billing immediately stop?</h3>
 <p>Billing stops immediately and you will no longer be charged regardless of the chosen retention period. In addition, you will no longer have access to any snapshots taken.</p>
 <h3 id="if-i-have-an-existing-vdc-that-includes-snapshot-protection-is-protection-automatically-added-to-any-new-vms-i-create">If I have an existing VDC that includes snapshot protection, is protection automatically added to any new VMs I create?</h3>
@@ -256,7 +252,7 @@
 <h3 id="are-snapshot-policies-automatically-applied-to-vms">Are Snapshot policies automatically applied to VMs?</h3>
 <p>Protection products are not automatically applied to VMs running on the UKCloud platform, therefore you must explicitly select the protection option that best meets your requirements.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">

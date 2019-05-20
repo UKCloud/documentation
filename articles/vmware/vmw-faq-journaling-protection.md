@@ -3,6 +3,8 @@ title: Journaling Protection FAQs | UKCloud Ltd
 description: Frequently asked questions for Journaling Protection (powered by Zerto)
 services: vmware
 author: Matt Warner
+reviewer:
+lastreviewed: 25/07/2018 15:32:54
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -103,7 +105,7 @@ Currently, you can carry out the following actions using Journaling Protection:
 
 - Perform disaster recovery tests by recovering vApps into the recovery destination
 
-### Can I set different retention policies for my vApps? 
+### Can I set different retention policies for my vApps?
 
 Yes. Each vApp maps to a VPG, and each VPG can have its own retention policy. For example, you may have one VPG retention policy set at 2-day Journaling and another VPG retention policy set at 7-day Journaling.
 
@@ -115,13 +117,11 @@ No. UKCloud have implemented Journaling Protection to be available for UKCloud f
 
 Once the service has been provisioned for your environment, you will be able to log into the [UKCloud Portal](https://portal.ukcloud.com/) and then log into the Journaling Protection portal. Please note that our support teams will be unable to manage your service for you as this is provided unmanaged.
 
-### How does this differ from Geo-resilient Synchronous and Snapshot Protection?
+### How does this differ from Snapshot Protection?
 
-The Journaling Protection service provides a continuous log of all the changes that have occurred within your environment for 28 days that are stored on the UKCloud platform and can be restored quickly and easily from a point in time of your choosing.
+The Journaling Protection service provides a continuous log of all the changes that have occurred within your environment within the specified time frame (2, 7, 14 or 28 days) that are stored on the UKCloud platform and can be restored quickly and easily from a point in time of your choosing.
 
 Snapshot protection utilises 24 hour backups for up to 28 days which are stored on a separate storage solution, and can recover from deleted disks or VMs. In the event that you need to recover from a previous recovery point, there may be a loss of data due to the time difference between the event and the last snapshot.
-
-With regards to Geo-resilient synchronous, whilst changes are replicated with a minimum of delay which results in a good RPO and RTO, issues such as bad software updates or Ransomware will also be replicated since synchronous replication does not support recovery to a historical state.
 
 ### Will I be able to extend my retention periods by moving my journals to external storage, such as Cloud Storage?
 
@@ -149,7 +149,7 @@ We do not currently plan to offer an SLA around the service. However, the real t
 
 ### Is Zerto licensing included?
 
-Yes, it is included with the Journaling Protection option for use with the 14 day or 28 day retention policies.
+Yes, it is included with the Journaling Protection option for use with the 2, 7, 14 day or 28 day retention policies.
 
 ### Will a VPG still be protected if one or more VMs are powered off?
 
@@ -177,4 +177,4 @@ Find out more about how to migrate your workloads between UKCloud regions in [*H
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

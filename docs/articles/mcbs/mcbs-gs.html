@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started Guide for Multi-Cloud Backup Storage | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started Guide for Multi-Cloud Backup Storage | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.42.3.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../..//styles/assets/logo.png" srcset="../..//styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/mcbs/mcbs-gs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="getting-started-guide-for-multi-cloud-backup-storage">Getting Started Guide for Multi-Cloud Backup Storage</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The UKCloud Multi-Cloud Backup Storage (MCBS) service provides a backup target that is accessible from every cloud within UKCloud’s multi-cloud platform, utilising a technology that is common across backup products, and compatible with certain file systems, enabling open-source backup applications to utilise the backup service as a target. You can also use Multi-Cloud Backup Storage as a remote backup target for your on-premises data.</p>
+<p>UKCloud's Multi-Cloud Backup Storage is based on Dell EMC's Data Domain Boost™ (DD Boost) technology, which offers an extensive range of extensions for services such as Oracle, Microsoft SQL, Microsoft Exchange and a wide array of backup server applications to help support performance-optimised, off-site, multi-cloud backups. A full list of DD Boost extensions can be found in our <a href="mcbs-faq.html"><em>Multi-Cloud Backup Storage FAQs</em></a>.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This document is for backup administrators who:</p>
+<ul>
+<li><p>Are comfortable using an API or command line tools</p>
+</li>
+<li><p>Have signed-up for UKCloud's Multi-Cloud Backup Storage service</p>
+</li>
+<li><p>Have been issued their Multi-Cloud Backup Storage credentials</p>
+</li>
+</ul>
+<h2 id="multi-cloud-backup-storage">Multi-Cloud Backup Storage</h2>
+<p>Multi-Cloud Backup Storage:</p>
+<ul>
+<li><p>Lets you pay for what you use, scaling indefinitely and on demand, removing the complexity of capacity management</p>
+</li>
+<li><p>Natively enables deduplication, reducing the cost and management of on-premises storage solutions</p>
+</li>
+<li><p>Provides easy access to backup storage from any backup application via DD Boost and BoostFS; using Boost protocol vastly simplifies the integration of backup applications and Boost-aware databases with a cloud-based backup target by removing the need to rely on file servers or cloud storage gateways</p>
+</li>
+<li><p>Can replicate backups to give high levels of data durability and availability, eliminating the need for managing a second backup location</p>
+</li>
+</ul>
+<p>You can find a full list of DD Boost extensions in our <a href="mcbs-faq.html"><em>Multi-Cloud Backup Storage FAQs</em></a>.</p>
+<h3 id="use-cases">Use cases</h3>
+<p>The low cost of Multi-Cloud Backup Storage per GB, as well as its backup-optimised performance and almost unlimited scalability, means there's a large variety of use cases for it. For example, it's ideal for data archives, backups, databases and log files because of its:</p>
+<ul>
+<li><p>Lower overhead of managing backup infrastructure</p>
+</li>
+<li><p>Lower Recovery Time Objective (RTO) for backup recovery through more granular or application aware backup applications</p>
+</li>
+<li><p>Quicker database recovery, directly from backup target into database</p>
+</li>
+<li><p>Greater control over backups using your own self-service backup applications</p>
+</li>
+</ul>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>When you request your Multi-Cloud Backup Storage service, UKCloud Support creates the following within your account:</p>
+<ul>
+<li><p>Storage unit (a Multi-Cloud Backup Storage enabled storage pool)</p>
+</li>
+<li><p>API endpoint (see below)</p>
+</li>
+<li><p>API username</p>
+</li>
+<li><p>API key (password)</p>
+</li>
+</ul>
+<p>These details form the structure of the personalised credentials you'll need to access your Multi-Cloud Backup Storage service.</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>MCBS API endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Corsham (Assured)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Internet</td>
+<td>TBC - Q2'19</td>
+</tr>
+<tr>
+<td>PSN Assured</td>
+<td>TBC</td>
+</tr>
+<tr>
+<td>HSCN</td>
+<td>TBC</td>
+</tr>
+<tr>
+<td><strong>Farnborough (Assured)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Internet</td>
+<td><code>mcbs.frn00013.ukcloud.com</code></td>
+</tr>
+<tr>
+<td>PSN Assured</td>
+<td>TBC</td>
+</tr>
+<tr>
+<td>HSCN</td>
+<td>TBC</td>
+</tr>
+</tbody>
+</table>
+<p>Contact UKCloud Support if you are unsure which endpoint to use.</p>
+<h2 id="connecting-to-multi-cloud-backup-storage-using-data-domain-boost-filesystem-boostfs-using-microsoft-windows">Connecting to Multi-Cloud Backup Storage using Data Domain Boost Filesystem (BoostFS) using Microsoft Windows</h2>
+<p>For authentication we use local accounts, so you need to create a lockbox to store the password and key values for the account. Details on how to create your configuration file, lockbox and mount your storage follow.</p>
+<h3 id="create-configuration-file">Create configuration file</h3>
+<p><code>boostfs.conf</code> contains static configuration that can be used to help connect to your service, key items to configure:</p>
+<pre><code class="lang-none">[global]
+# Data Domain Hostname or IP address
+data-domain-system=mcbs.frn00013.ukcloud.com` (assumes connection to Farnborough Internet API endpoint)
+
+# Storage Unit
+storage-unit={customer storage unit}` (Name of the storage unit as provided in your MCBS credentials)
+
+# Lockbox path (default: C:\BoostFS\Lockbox\boostfs.lockbox)
+# lockbox-path=C:\lockbox-name
+
+[\\mcbs.frn00013.ukcloud.com\{customer storage unit}]
+# Drive Letter specifies the Windows drive to map to this UNC mount point
+drive-letter=G:
+</code></pre>
+<h3 id="create-lockbox">Create lockbox</h3>
+<ol>
+<li><p>Provide the username and storage unit name for access:</p>
+<p><code>C:\Program Files\BoostFS&gt; boostfs.exe lockbox set -u {username} -d mcbs.frn00013.ukcloud.com -s {customer storage unit} -l C:\BoostFS\LockBox\boostfs.lockbox</code></p>
+</li>
+<li><p>Enter your API key (password).</p>
+</li>
+<li><p>Once created you can use this to mount a drive or folder for use with BoostFS.</p>
+</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We provide your API key, {username}, {customer storage unit} and API endpoint as part of your MCBS credentials. Contact UKCloud Support if you're unsure of any of these details.</p>
+</div>
+<h3 id="mount-storage-to-local-machine">Mount storage to local machine</h3>
+<p><code>boostfs.exe mount \\mcbs.frn00013.ukcloud.com\{customer storage unit}</code></p>
+<p>This will attempt to mount the volume on the drive G as per the configuration.</p>
+<h2 id="further-data-domain-boost-filesystem-boostfs-information">Further Data Domain Boost Filesystem (BoostFS) information</h2>
+<ul>
+<li><p>For Microsoft Windows, see the Dell EMC BoostFS for Windows Configuration Guide HERE</p>
+</li>
+<li><p>For Linux, see the Dell EMC BoostFS for Linux Configuration Guide HERE</p>
+</li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com/">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

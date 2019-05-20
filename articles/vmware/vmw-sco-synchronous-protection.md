@@ -3,6 +3,8 @@ title: Synchronous Protection Service Scope | UKCloud Ltd
 description: Outlines important details regarding the Synchronous Protection service
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 03/08/2018 11:14:35
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -20,6 +22,11 @@ toc_mdlink: vmw-sco-synchronous-protection.md
 This Service Scope explains what is and isn't included in the scope of the UKCloud for VMware Synchronous Protection service option.
 
 Synchronous Protection is one of a variety of on‑platform protection options available from UKCloud. Use this service scope to understand what Synchronous Protection offers and whether it will meet your own recovery point objectives (RPO) and recovery time objectives (RTO).
+
+> [!NOTE]
+> Synchronous Protection is no longer available as a protection option for UKCloud for VMware. UKCloud offer two alternative data protection solutions: [Journaling Protection (Zerto)](vmw-sco-journaling-protection.md) and [Snapshot Protection](vmw-sco-snapshot-protection.md). Contact your Technical Account Manager (TAM) for more information.
+>
+> We will continue to provide support to customers who previously added Synchronous Protection to their environment, although we would encourage considering using Journaling Protection instead.
 
 ## About Synchronous Protection
 

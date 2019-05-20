@@ -3,6 +3,8 @@ title: Secure Remote Access FAQs | UKCloud Ltd
 description: Frequently asked questions for Secure Remote Access
 services: sra
 author: Matt Warner
+reviewer:
+lastreviewed: 02/08/2018 16:00:52
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -19,9 +21,17 @@ toc_mdlink: sra-faq.md
 
 ### What is the service?
 
-The UKCloud Secure Remote Access (SRA) service enables you to securely connect to the UKCloud platform's Elevated OFFICIAL security domain using NCSC-approved internet virtual private network (VPN) technologies and the 'walled garden' architectural pattern.
+The UKCloud Secure Remote Access (SRA) service:
 
-System administrators and mobile workers can securely access workloads running on Elevated OFFICIAL from locations that don't have alternative secure network connections such as PSN or N3.
+- Is based on NCSC-approved CPA technology, including Cisco AnyConnect and Cisco VPN devices
+
+- Provides secure two-factor authentication based on UKCloud-assured device certificates
+
+- Has a walled garden architecture that enables you to deploy and manage appropriate systems in a DMZ, allowing secure, controlled onward access to workloads hosted on the UKCloud Elevated OFFICIAL security domain
+
+- Is integrated with the UKCloud Protective Monitoring solution (aligned with GPG13)
+
+System administrators and mobile workers can securely access workloads running on Elevated OFFICIAL from locations that don't have alternative secure network connections such as PSN or HSCN.
 
 ### Do I have to buy other UKCloud services to use UKCloud SRA?
 
@@ -209,6 +219,20 @@ The billing model has two parts:
 
 The service is subject to a minimum term of three months. Termination within this initial term will incur an early exit charge.
 
+### What does the cost of SRA include?
+
+SRA prices include:
+
+- Access to managed NCSC-approved VPN gateways
+
+- A Cisco AnyConnect licence for the end-user device
+
+- Two-factor authentication using device certificates
+
+- A walled garden virtual data centre, where you can deploy your application services
+
+- A small VM to use as a bastion host (additional costs apply for larger or additional VMs)
+
 ## Security
 
 ### Why does use of CPA-approved solutions to access the UKCloud Elevated OFFICIAL environment via the internet require approval by the UKCloud SIRO?
@@ -243,4 +267,4 @@ Consider PSN-compliant remote access services if you require access to the broad
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

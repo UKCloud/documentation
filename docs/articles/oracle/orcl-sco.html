@@ -8,7 +8,7 @@
     <title>UKCloud for Oracle Software Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for Oracle Software Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="generator" content="docfx 2.42.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../..//styles/assets/logo.png" srcset="../..//styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -91,7 +91,7 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="ukcloud-for-oracle-software">UKCloud for Oracle Software</h1>
+<h1 id="ukcloud-for-oracle-software-service-scope">UKCloud for Oracle Software Service Scope</h1>
 
 <h2 id="about-this-document">About this document</h2>
 <p>This document describes the boundaries of the UKCloud for Oracle software service, along with the division of responsibilities between UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.</p>
@@ -109,8 +109,7 @@
 <p>The UKCloud for Oracle Software infrastructure is uncontended and configured to optimise the performance and availability of Oracle workloads. There is only one service configuration on the UKCloud for Oracle Software platform, ensuring that OVMs are pinned to cores to stop OVM movement that would unbalance applications.</p>
 <p>Customers can self-configure OVMs by the number of cores, and amount of memory and storage needed. OVMs can be reconfigured to adjust resources in line with changing performance requirements.</p>
 <p>Self-service management is done through the Oracle Enterprise Management Portal, accessed through the UKCloud Portal.</p>
-<p>Full details of the available service options are outlined in the Service Definition
-(<a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/177331567371441-service-definition-document-2018-07-11-1146.pdf">Elevated</a>).</p>
+<p>Full details of the available service options are outlined in the <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf"><em>Service Definition</em></a>.</p>
 <h2 id="storage-options">Storage options</h2>
 <p>All storage is persistent and resilient to local hardware failures. Multiple storage options can be used to support different aspects of the application.</p>
 <ul>
@@ -142,7 +141,7 @@ backups.</p>
 <h2 id="service-availability">Service availability</h2>
 <p>UKCloud for Oracle Software offers an SLA guarantee of 99.95% availability.</p>
 <p>You are entitled to claim Service Credits for outages to services that take you out of the SLA. For more about how we calculate SLAs, see the <a href="../other/other-ref-sla-definition.html"><em>SLA Definition</em></a> document.</p>
-<p>Our SLA does not cover faults within your control, such as client application issues, or faults within external connectivity providers (for example, internet, PSN or N3/HSCN).</p>
+<p>Our SLA does not cover faults within your control, such as client application issues, or faults within external connectivity providers (for example, internet, PSN or HSCN).</p>
 <h2 id="service-background">Service background</h2>
 <p>UKCloud for Oracle Software is underpinned by Oracle compute infrastructure. UKCloud manage the physical infrastructure and utilise our partner, Infomentum, to provide support and management from the hypervisor level and above.</p>
 <p>Infomentum will provision your Oracle Tenant environment and UKCloud will present it to you through the Oracle Enterprise Manager. You will be responsible for OVM creation and maintenance.</p>
@@ -170,7 +169,7 @@ backups.</p>
 <h2 id="networks">Networks</h2>
 <p><strong>Internet-facing solutions.</strong> You are provided with 2 usable public IP addresses, but you can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.</p>
 <p><strong>PSN-facing solutions.</strong> You should raise a Service Request or contact your Customer Success Manager (CSM) to be assigned your IP address. This solution also comes with contended bandwidth (uncapped).</p>
-<p><strong>Janet and N3/HSCN solutions.</strong> You have one usable IP address, but you can request additional IP addresses via a Service Request.</p>
+<p><strong>Janet and HSCN solutions.</strong> You have one usable IP address, but you can request additional IP addresses via a Service Request.</p>
 <p>UKCloud for Oracle Software does not have a native external connectivity functionality. Therefore, UKCloud have enabled customers to manage connectivity rules, such as firewall, IPsec VPN and NAT functionality, through a VMware edge gateway. This edge is provisioned within the UKCloud for VMware environment and is managed using either the UKCloud Portal GUI or API.</p>
 <p>This edge can be an existing edge in a customer's UKCloud for VMware environment, or can be provisioned as a completely new entity, specific for Oracle.</p>
 <h2 id="edge-gateway">Edge gateway</h2>
@@ -211,7 +210,7 @@ backups.</p>
 <li><p>You are responsible for assessing whether the UKCloud UKCloud for Oracle Software platform can support the various requirements of your application.</p>
 </li>
 <li><p>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.</p>
-<p>If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), you are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided.</p>
+<p>If access is required over government secure networks (HSCN, Janet, RLI or PSN), you are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided.</p>
 </li>
 <li><p>Management and administration of layers above the Oracle hypervisor (OS patching, application performance monitoring, user administration).</p>
 </li>
@@ -234,15 +233,17 @@ backups.</p>
 <h2 id="supporting-documents-and-resources">Supporting documents and resources</h2>
 <p>The following documents contain more information about UKCloud for Oracle Software and the service options:</p>
 <ul>
-<li><p><em>UKCloud for Oracle Software Service Definition</em> (<a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/177331567371441-service-definition-document-2018-07-11-1146.pdf">Elevated</a>)</p>
+<li><p><a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf"><em>UKCloud for Oracle Software Service Definition</em></a></p>
 </li>
-<li><p><em>UKCloud Terms and Conditions for G10</em> (<a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-terms-and-conditions-2018-05-21-1254.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/177331567371441-terms-and-conditions-2018-05-21-1253.pdf">Elevated</a>)</p>
+<li><p><a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-terms-and-conditions-2018-05-21-1254.pdf"><em>UKCloud Terms and Conditions for G10</em></a></p>
 </li>
 <li><p><a href="../vmware/vmw-ref-connectivity-options.html"><em>Understanding connectivity options in UKCloud for VMware</em></a></p>
 </li>
 <li><p><a href="../other/other-ref-sla-definition.html"><em>UKCloud SLA Definition</em></a></p>
 </li>
 </ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">

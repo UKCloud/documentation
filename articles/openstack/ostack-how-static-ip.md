@@ -3,6 +3,8 @@ title: How to create static IPs for OpenStack instances  | UKCloud Ltd
 description: Instructions on how to create static IPs and assign them to instances
 services: openstack
 author: Bryce Nicholls
+reviewer:
+lastreviewed: 05/10/2018 12:10:57
 toc_rootlink: How to
 toc_sub1:
 toc_sub2:
@@ -199,4 +201,4 @@ The following Red Hat document provides more options for configuring ports when 
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

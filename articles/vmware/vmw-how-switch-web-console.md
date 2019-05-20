@@ -3,6 +3,8 @@ title: How to switch to the vCloud Director web console from the tenant portal |
 description: Describes how to switch to the vCloud Director web console to perform tasks that are not possible in the tenant portal
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 21/09/2018 16:53:03
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -45,4 +47,4 @@ Tasks that you cannot perform in the tenant portal include:
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

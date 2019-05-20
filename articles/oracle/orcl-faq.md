@@ -3,6 +3,8 @@ title: UKCloud for Oracle Software FAQs | UKCloud Ltd
 description: Frequently asked questions for UKCloud for Oracle Software
 services: oracle
 author: Matt Warner
+reviewer:
+lastreviewed: 16/07/2018 12:32:29
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -13,7 +15,7 @@ toc_fullpath: FAQs/orcl-faq.md
 toc_mdlink: orcl-faq.md
 ---
 
-# UKCloud for Oracle Software
+# UKCloud for Oracle Software FAQs
 
 ## General
 
@@ -23,13 +25,13 @@ UKCloud for Oracle Software provides Infrastructure as a Service (IaaS), powered
 
 ### What is provided in the service?
 
-For further details on the service, and what is provided, please view the UKCloud for Oracle Software service definition for [Assured OFFICIAL](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf) and [Elevated OFFICIAL](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/177331567371441-service-definition-document-2018-07-11-1146.pdf).
+For further details on the service, and what is provided, please view the [*UKCloud for Oracle Software service definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf).
 
 ### Do UKCloud offer an SLA for this service?
 
-Yes. There is a service credit-backed SLA of 99.95% excluding faults within your control or external networking connections such as internet, PSN, Janet or N3/HSCN.
+Yes. There is a service credit-backed SLA of 99.95% excluding faults within your control or external networking connections such as internet, PSN, Janet or HSCN.
 
-For further details regarding the SLA, please review the relevant section within the Service Definition for [Assured OFFICIAL](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf) and [Elevated OFFICIAL](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/177331567371441-service-definition-document-2018-07-11-1146.pdf).
+For further details regarding the SLA, please review the relevant section within the [*Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf).
 
 ### Is the UKCloud for Oracle Software environment a separate physical hosting platform with external connectivity via the UKCloud for VMware platform?
 
@@ -41,7 +43,7 @@ UKCloud have chosen to utilise Oracle's own Oracle Virtual Machine (OVM) technol
 
 Current stack is Oracle VM Server-> Oracle VM Manager-> Oracle Enterprise Manager.
 
-### Which Oracle architectures are suitable for deployment on the UKCloud platform? 
+### Which Oracle architectures are suitable for deployment on the UKCloud platform?
 
 UKCloud are currently working on a "known good" list of architectures that will allow customers to ascertain if UKCloud's platform is suitable for hosting their Oracle workloads.
 
@@ -57,7 +59,7 @@ While this is not currently available, this is being investigated by the develop
 
 ### Can I have a dedicated UKCloud for Oracle Software environment?
 
-Yes. If you prefer a dedicated environment, UKCloud offer the Private Cloud for Compute service for both [Assured OFFICIAL](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/386916122749029-service-definition-document-2018-05-21-1252.pdf) and [Elevated OFFICIAL](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/832543392527475-service-definition-document-2018-05-21-1251.pdf).
+Yes. If you prefer a dedicated environment, UKCloud offer the [*Private Cloud for Compute service*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/386916122749029-service-definition-document-2018-05-21-1252.pdf) for both Assured OFFICIAL and Elevated OFFICIAL.
 
 ### Is the RAM virtual or physical?
 
@@ -113,11 +115,11 @@ You can access your OVMs using:
 
 ### Can I connect to the UKCloud Assured OFFICIAL environment?
 
-Yes, this service is available on the Assured OFFICIAL environment with connections to the internet, PSN-A, Janet and N3/HSCN networks.
+Yes, this service is available on the Assured OFFICIAL environment with connections to the internet, PSN, Janet and HSCN networks.
 
 ### Can I connect to the UKCloud Elevated OFFICIAL environment?
 
-Yes, this service is available on the Elevated OFFICIAL environment with connections to the PSN-P and RLI networks.
+Yes, this service is available on the Elevated OFFICIAL environment with connections to the PSN and RLI networks.
 
 ### Is there connectivity from other regions to Oracle?
 
@@ -172,3 +174,7 @@ No, you are responsible for ensuring that you have purchased the appropriate lic
 ### Does UKCloud have any terms and conditions regarding Oracle licensing?
 
 You must ensure your platform is appropriately licensed for the Oracle Software that you are running as UKCloud for Oracle Software can only license operating systems. To ensure the appropriate licensing is in place, see [*Oracle licensing on the UKCloud platform*](orcl-ref-licensing.md).
+
+## Feedback
+
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

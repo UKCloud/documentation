@@ -1,19 +1,22 @@
 ---
-title: How to Create a key vault Using the Azure Stack portal | UKCloud Ltd
+title: How to create a key vault using the UKCloud Azure Stack portal | UKCloud Ltd
 description: Provides help for creating a key vault on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
+
 toc_rootlink: Users
 toc_sub1: How To
 toc_sub2: Create a Key Vault
 toc_sub3:
 toc_sub4:
-toc_title: Create a key vault - portal
+toc_title: Create a key vault - Portal
 toc_fullpath: Users/How To/Create a Key Vault/azs-how-create-key-vault-portal.md
 toc_mdlink: azs-how-create-key-vault-portal.md
 ---
 
-# How to create a key vault using the Azure Stack portal
+# How to create a key vault using the UKCloud Azure Stack portal
 
 ## Overview
 
@@ -23,11 +26,11 @@ The following process shows you how to setup a vault within Azure Stack's Key Va
 
 ## Prerequisites
 
-To complete the steps in this guide, you must have appropriate access to a subscription in the UKCloud Azure Stack portal.
+To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.
 
 ## Creating a new key vault
 
-1. Log in to the UKCloud Azure Stack portal.
+1. Log in to the Azure Stack portal.
 
     For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
@@ -45,18 +48,13 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 5. In the **Create key vault** blade, enter the following information:
 
-
    - **Name** - The name of the key vault.
-
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
-
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
-
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
-
 
    - **Access policies** - Configure who can access the key vault and what permissions they have.
 
@@ -80,24 +78,17 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 5. In the *Create a secret* blade, enter the following information:
 
-
    - **Upload Options** - Manually enter a secret or upload an x.509 certificate.
-
 
    - **Name** - The name of the secret.
 
-
    - **Value** - The value you are storing as a secret.
-
 
    - **Content Type** - The type of content contained in the secret (for example, Password). There are no pre-defined values for this field.
 
-
    - **Activation Date** - Specifies when the secret will become active.
 
-
    - **Expiration Date** - Specifies when the secret will become inactive.
-
 
    - **Enabled** - Indicates whether or not the secret data can be retrieved.
 
@@ -115,4 +106,4 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

@@ -3,6 +3,8 @@ title: Understanding your invoice evidence file | UKCloud Ltd
 description: Describes the recent changes to the evidence file provided with your UKCloud invoice
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:

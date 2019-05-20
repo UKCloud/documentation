@@ -3,6 +3,8 @@ title: How to set up Email and Collaboration on an iPhone or iPad | UKCloud Ltd
 description: Provides information on how to set up the UKCloud Email and Collaboration service on an iPhone or iPad
 services: email
 author: Sue Highmoor
+reviewer:
+lastreviewed: 24/07/2018 13:50:39
 
 toc_rootlink: How To
 toc_sub1:
@@ -184,4 +186,4 @@ Now the server will send you a text message when you receive a new email. Text m
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

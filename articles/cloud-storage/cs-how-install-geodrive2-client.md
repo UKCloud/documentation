@@ -3,6 +3,8 @@ title: How to install the GeoDrive Client 2.0| UKCloud Ltd
 description: Installation Guide for the GeoDrive Client 2.0
 services: cloud-storage
 author: Dan Baker
+reviewer:
+lastreviewed: 05/10/2018 09:28:05
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -82,7 +84,7 @@ The GeoDrive 2.0 Client offers a single caching option:
 
         - PSN Assured: `cas.cor00005.psnassured.ukcloud.com`
 
-        - N3/HSCN: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
+        - HSCN: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
   
 
     - **Farnborough (Assured)**
@@ -91,7 +93,7 @@ The GeoDrive 2.0 Client offers a single caching option:
 
         - PSN Assured: `cas.frn00006.psnassured.ukcloud.com`
 
-        - N3/HSCN: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
+        - HSCN: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
 
 10. Deselect the **Port Override** check box.
 
@@ -125,7 +127,7 @@ The GeoDrive 2.0 Client offers a single caching option:
 
 ## Next steps
 
-This guide has shown you how to create a new Cloud Storage user. For more information about how to use the service, see the following articles:
+This guide has shown you how to install and configure the GeoDrive Client 2.0 for use with Cloud Storage. For more information about how to use the service, see the following articles:
 
 - [*Getting Started Guide for Cloud Storage*](cs-gs.md)
 

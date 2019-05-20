@@ -8,7 +8,7 @@
     <title>UKCloud Portal API Reference Guide | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud Portal API Reference Guide | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.11.0">
+    <meta name="generator" content="docfx 2.42.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../..//styles/assets/logo.png" srcset="../..//styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -3868,7 +3868,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H &quot;Accept: application/json&quot; -k https://portal.skyscapecloud.com/api/billing/cloud-storage-report?date=2018-01-01&amp;org_id=xx-xx-xx-xxxxxxx
 </code></pre>
 <h4 id="example-request-ruby-21">Example request (Ruby)</h4>
-<pre><code>resp = conn.get(&quot;/api/billing/cloud-storage-report?date=#{date}&amp;org_id=#{org-id}&quot;) { |req| req.headers['cookie'] = cookies }
+<pre><code>resp = conn.get(&quot;/api/billing/cloud-storage-report?date=#{date}&amp;org_id=#{org_id}&quot;) { |req| req.headers['cookie'] = cookies }
 </code></pre>
 <h3 id="response-30">Response</h3>
 <h4 id="successful-http-response-30">Successful HTTP response</h4>
@@ -3920,10 +3920,293 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tr>
 </tbody>
 </table>
+<h2 id="get-apibillingbilling-csv">GET /api/billing/billing-csv</h2>
+<p>Returns a CSV containing billing data for the period given.</p>
+<p>For more information about this CSV, see <a href="../other/other-ref-invoice-evidence-file.html"><em>Understanding your invoice evidence file</em></a> and the <a href="../other/other-faq-billing.html"><em>Invoice and billing FAQs</em></a>.</p>
+<h3 id="api-version-31">API version</h3>
+<p>v1</p>
+<h3 id="request-31">Request</h3>
+<h4 id="request-body-31">Request body</h4>
+<p>None</p>
+<h4 id="parameters-27">Parameters</h4>
+<p>None</p>
+<h4 id="uri-parameters-31">URI parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Mandatory (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>period</td>
+<td>The date for which you require the monthly report in the format YYYY-MM</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>org_id</td>
+<td>The ID of the compute service for which you want the billing report</td>
+<td>String</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-request-curl-30">Example request (Curl)</h4>
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H &quot;Accept: application/json&quot; -k https://portal.skyscapecloud.com/api/billing/billing-csv?period=2018-01&amp;org_id=xx-xx-xx-xxxxxxx
+</code></pre>
+<h4 id="example-request-ruby-22">Example request (Ruby)</h4>
+<pre><code>resp = conn.get(&quot;/api/billing/billing-csv?period=#{period}&amp;org_id=#{org_id}&quot;) { |req| req.headers['cookie'] = cookies }
+</code></pre>
+<h3 id="response-31">Response</h3>
+<h4 id="successful-http-response-31">Successful HTTP response</h4>
+<p>200 OK --- The request was successful<br>Content-Type (text/csv)</p>
+<h4 id="unsuccessful-http-response-31">Unsuccessful HTTP response</h4>
+<p>400 Bad Request</p>
+<p>401 Unauthorized --- The user could not be authenticated</p>
+<h4 id="response-body-31">Response body</h4>
+<p>Returns a CSV report for the period specified.</p>
+<table>
+<thead>
+<tr>
+<th>CSV Header</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EventDate</td>
+<td>Date of this event</td>
+</tr>
+<tr>
+<td>ProjectID</td>
+<td>ID of the project this VM is assigned to</td>
+</tr>
+<tr>
+<td>vAPP</td>
+<td>The vApp that this VM is running in</td>
+</tr>
+<tr>
+<td>vDC</td>
+<td>The vDC that this VM is running in</td>
+</tr>
+<tr>
+<td>ResourceName</td>
+<td>Friendly name of this resource</td>
+</tr>
+<tr>
+<td>ResourceId</td>
+<td>Unique URN for this VM</td>
+</tr>
+<tr>
+<td>OSID</td>
+<td>The OS this VM is running</td>
+</tr>
+<tr>
+<td>Service</td>
+<td>Service Type of this VM</td>
+</tr>
+<tr>
+<td>Metadata</td>
+<td>JSONB object containing service metadata</td>
+</tr>
+<tr>
+<td>StartTime</td>
+<td>Start time that this row is valid from</td>
+</tr>
+<tr>
+<td>EndTime</td>
+<td>End time that this row is valid to</td>
+</tr>
+<tr>
+<td>PowerState</td>
+<td>VM Power status</td>
+</tr>
+<tr>
+<td>UsageMinsWithinPeriod</td>
+<td>How many minutes within this period the VM was in use for</td>
+</tr>
+<tr>
+<td>UsageHoursWithinPeriod</td>
+<td>How many hours within this period the VM was in use for</td>
+</tr>
+<tr>
+<td>ComputeMachineType</td>
+<td>Size of the VM</td>
+</tr>
+<tr>
+<td>PowerType</td>
+<td>Power type of the VM</td>
+</tr>
+<tr>
+<td>SecurityDomain</td>
+<td>Security domain this VM is running in</td>
+</tr>
+<tr>
+<td>Compute vCPU</td>
+<td>Configured vCPU count</td>
+</tr>
+<tr>
+<td>ComputeMemory</td>
+<td>Configured memory in MB</td>
+</tr>
+<tr>
+<td>ComputePricePerHour</td>
+<td>Hourly price of the compute section of this VM</td>
+</tr>
+<tr>
+<td>ComputeTotalPrice</td>
+<td>Price of the compute section of this VM</td>
+</tr>
+<tr>
+<td>GPUType</td>
+<td>Configured GPU type</td>
+</tr>
+<tr>
+<td>GPUCount</td>
+<td>Configured GPU count</td>
+</tr>
+<tr>
+<td>GPUPricePerHour</td>
+<td>Hourly price of the GPU section of this VM</td>
+</tr>
+<tr>
+<td>GPUTotalPrice</td>
+<td>Price of the GPU section of this VM</td>
+</tr>
+<tr>
+<td>Tier1StorageUsed</td>
+<td>Amount of Tier 1 storage used in GB</td>
+</tr>
+<tr>
+<td>Tier1SnapshotStorageUsed</td>
+<td>Amount of Tier 1 snapshot storage used in GB</td>
+</tr>
+<tr>
+<td>Tier1StorageIncluded</td>
+<td>Amount of Tier 1 storage included with this VM in GB</td>
+</tr>
+<tr>
+<td>Tier1StorageChargeable</td>
+<td>Amount of Tier 1 storage outside the included amount in GB</td>
+</tr>
+<tr>
+<td>Tier1StoragePricePerHour</td>
+<td>Hourly price of the Tier 1 storage for this VM</td>
+</tr>
+<tr>
+<td>Tier1StoragePrice</td>
+<td>Price of the Tier 1 storage for this VM</td>
+</tr>
+<tr>
+<td>Tier2StorageUsed</td>
+<td>Amount of Tier 2 storage used in GB</td>
+</tr>
+<tr>
+<td>Tier2SnapshotStorageUsed</td>
+<td>Amount of Tier 2 snapshot storage used in GB</td>
+</tr>
+<tr>
+<td>Tier2StorageIncluded</td>
+<td>Amount of Tier 2 storage included with this VM in GB</td>
+</tr>
+<tr>
+<td>Tier2StorageChargeable</td>
+<td>Amount of Tier 2 storage outside the included amount in GB</td>
+</tr>
+<tr>
+<td>Tier2StoragePricePerHour</td>
+<td>Hourly price of the Tier 2 storage for this VM</td>
+</tr>
+<tr>
+<td>Tier2StoragePrice</td>
+<td>Price of the Tier 2 storage for this VM</td>
+</tr>
+<tr>
+<td>Geo-resilientStorageUsed</td>
+<td>Amount of Geo-Resilient storage used in GB</td>
+</tr>
+<tr>
+<td>Geo-resilientSnapshotStorageUsed</td>
+<td>Amount of Geo-Resilient snapshot storage used in GB</td>
+</tr>
+<tr>
+<td>Geo-resilientStorageIncluded</td>
+<td>Amount of Geo-Resilient storage included with this VM in GB</td>
+</tr>
+<tr>
+<td>Geo-resilientStorageChargeable</td>
+<td>Amount of Geo-Resilient storage outside the included amount in GB</td>
+</tr>
+<tr>
+<td>Geo-resilientStoragePricePerHour</td>
+<td>Hourly price of the Geo-Resilient storage for this VM</td>
+</tr>
+<tr>
+<td>Geo-resilientStoragePrice</td>
+<td>Price of the Geo-Resilient storage for this VM</td>
+</tr>
+<tr>
+<td>Protection Type</td>
+<td>Protection Type of this VM</td>
+</tr>
+<tr>
+<td>ComputeProtectionPerHour</td>
+<td>Hourly price of Compute protection</td>
+</tr>
+<tr>
+<td>ComputeProtectionTotalPrice</td>
+<td>Price of Compute protection</td>
+</tr>
+<tr>
+<td>Tier1ProtectionPricePerHour</td>
+<td>Hourly price of Tier 1 storage protection</td>
+</tr>
+<tr>
+<td>Tier2ProtectionPricePerHour</td>
+<td>Hourly price of Tier 2 storage protection</td>
+</tr>
+<tr>
+<td>Geo-resilientProtectionPerHour</td>
+<td>Hourly price of Geo-Resilient storage protection</td>
+</tr>
+<tr>
+<td>Tier1ProtectionTotalPrice</td>
+<td>Price of Tier 1 storage protection</td>
+</tr>
+<tr>
+<td>Tier2ProtectionTotalPrice</td>
+<td>Price of Tier 2 storage protection</td>
+</tr>
+<tr>
+<td>Geo-resilientProtectionTotalPrice</td>
+<td>Price of Geo-Resilient storage protection</td>
+</tr>
+<tr>
+<td>ProtectionTotalPrice</td>
+<td>Total price of all protection options on this VM</td>
+</tr>
+<tr>
+<td>LicencePricePerHour</td>
+<td>Hourly price of any licenses attached to this VM</td>
+</tr>
+<tr>
+<td>LicenceTotalPrice</td>
+<td>Price of any licenses attached to this VM</td>
+</tr>
+<tr>
+<td>TotalPrice</td>
+<td>Total price of this VM</td>
+</tr>
+</tbody>
+</table>
 <h2 id="further-information">Further information</h2>
 <p>If you want to discuss any aspect of the service or settings specific to your domain, log a Service Request via the <a href="https://portal.ukcloud.com/support/my_calls">My Calls</a> section of the UKCloud Portal.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
