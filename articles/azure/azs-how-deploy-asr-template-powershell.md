@@ -110,7 +110,7 @@ The images used to create this deployment are:
 |-----------------|--------------------------------------------------------------------|------------------|
 | \$StackArmEndpoint | The Azure Resource Manager endpoint for Azure Stack | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
 | \$StackResourceGroup | The resource group to deploy the ASR configuration server to on Azure Stack | <form oninput="result.value=AzsRGName.value" id="AzsRGName" style="display: inline;"><input type="text" id="AzsRGName" name="AzsRGName" style="display: inline;" placeholder="MyResourceGroup"/></form> |
-| \$ClientID | The application ID of a service principal with contributor permissions on Azure Stack and Azure | <form oninput="result.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="00000000-0000-0000-0000-000000000000"/></form> |
+| \$ClientId | The application ID of a service principal with contributor permissions on Azure Stack and Azure | <form oninput="result.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="00000000-0000-0000-0000-000000000000"/></form> |
 | \$ClientSecret | A password of the service principal specified in the ClientID parameter | <form oninput="result.value=clientsecret.value" id="clientsecret" style="display: inline;"><input type="text" id="clientsecret" name="clientsecret" style="display: inline;" placeholder="ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jkx]="/></form> |
 | \$StackVNetName | The name of the existing virtual network to connect the configuration server to on Azure Stack | <form oninput="result.value=AzsVNetName.value" id="AzsVNetName" style="display: inline;" ><input type="text" id="AzsVNetName" name="AzsVNetName" style="display: inline;" placeholder="SiteRecoveryVNet"/></form> |
 | \$StackSubnetName | The name of the existing virtual network subnet to connect the configuration server to on Azure Stack | <form oninput="result.value=AzsSubnetName.value" id="AzsSubnetName" style="display: inline;"><input type="text" id="AzsSubnetName" name="AzsSubnetName" style="display: inline;" placeholder="default"/></form> |
@@ -126,11 +126,12 @@ The images used to create this deployment are:
 | \$ExistingAzureVault | Select **True** if the vault already exists in public Azure | <form onchange="result.value=ExistingVault.value" id="ExistingVault" style="display: inline;"><select name="ExistingVault" id="ExistingVault" style="display: inline;"><option value="&#36;false">False</option><option value="&#36;true">True</option></select></form> |
 | \$ReplicationPolicyName | The name of the site recovery replication policy to be created in the recovery services vault  | <form oninput="result.value=ReplicationPolicy.value" id="ReplicationPolicy" style="display: inline;"><input type="text" id="ReplicationPolicy" name="ReplicationPolicy" style="display: inline;" placeholder="ReplicationPolicy"/></form> |
 | \$ConfigServerUsername | The username for the configuration server  | <form oninput="result.value=ConfigUsername.value" id="ConfigUsername" style="display: inline;"><input type="text" id="ConfigUsername" name="ConfigUsername" style="display: inline;" placeholder="ConfigAdmin"/></form> |
-| \$ConfigServerPassword | The password for the configuration server | <form oninput="result.value=ConfigPassword.value" id="ConfigPassword" style="display: inline;"><input type="text" id="ConfigPassword" name="ConfigPassword" style="display: inline;" placeholder="Password123!"/></form> | \$ConfigurationServerName | The name of the configuration server VM | <form oninput="result.value=ConfigName.value" id="ConfigName" style="display: inline;"><input type="text" id="ConfigName" name="ConfigName" style="display: inline;" placeholder="SRConfigServer"/></form> |
+| \$ConfigServerPassword | The password for the configuration server | <form oninput="result.value=ConfigPassword.value" id="ConfigPassword" style="display: inline;"><input type="text" id="ConfigPassword" name="ConfigPassword" style="display: inline;" placeholder="Password123!"/></form> |
+| \$ConfigurationServerName | The name of the configuration server VM | <form oninput="result.value=ConfigName.value" id="ConfigName" style="display: inline;"><input type="text" id="ConfigName" name="ConfigName" style="display: inline;" placeholder="SRConfigServer"/></form> |
 | \$TempFilesPath | Location on configuration server where setup files will be stored | <form oninput="result.value=TempFilesPath.value" id="TempFilesPath" style="display: inline;"><input type="text" id="TempFilesPath" name="TempFilesPath" style="display: inline;" placeholder="C:\TempASR\"/></form> |
 | \$ExtractionPath | The name of the folder within the TempFilesPath where the configuration server unified setup will be extracted to | <form oninput="result.value=ExtractionPath.value" id="ExtractionPath" style="display: inline;"><input type="text" id="ExtractionPath" name="ExtractionPath" style="display: inline;" placeholder="Extracted"/></form> |
-| \$MySQLRootPassword | The root password for the MySQL server created on the Configuration Server (Must meet password requirements specified [below](#MySQL-Password-Requirements)) | <form oninput="result.value=MySQLRootPassword.value" id="MySQLRootPassword" style="display: inline;"><input type="text" id="MySQLRootPassword" name="MySQLRootPassword" style="display: inline;" placeholder="Password123!"/></form> |
-| \$MySQLUserPassword | The user password for the MySQL server created on the Configuration Server (Must meet password requirements specified [below](#MySQL-Password-Requirements)) | <form oninput="result.value=MySQLUserPassword.value" id="MySQLUserPassword" style="display: inline;"><input type="text" id="MySQLUserPassword" name="MySQLUserPassword" style="display: inline;" placeholder="Password123!"/></form> |
+| \$MySqlRootPassword | The root password for the MySQL server created on the Configuration Server (Must meet password requirements specified [below](#mysql-password-requirements)) | <form oninput="result.value=MySQLRootPassword.value" id="MySQLRootPassword" style="display: inline;"><input type="text" id="MySQLRootPassword" name="MySQLRootPassword" style="display: inline;" placeholder="Password123!"/></form> |
+| \$MySqlUserPassword | The user password for the MySQL server created on the Configuration Server (Must meet password requirements specified [below](#mysql-password-requirements)) | <form oninput="result.value=MySQLUserPassword.value" id="MySQLUserPassword" style="display: inline;"><input type="text" id="MySQLUserPassword" name="MySQLUserPassword" style="display: inline;" placeholder="Password123!"/></form> |
 | \$EncryptionKey | The encryption key for the MySQL database on the configuration server  | <form oninput="result.value=EncryptionKey.value" id="EncryptionKey" style="display: inline;"><input type="text" id="EncryptionKey" name="EncryptionKey" style="display: inline;" placeholder="ExampleEncryptionKey"/></form> |
 | \$WindowsUsername | The username of an administrator account on the Windows VMs to be protected  | <form oninput="result.value=WindowsUsername.value" id="WindowsUsername" style="display: inline;"><input type="text" id="WindowsUsername" name="WindowsUsername" style="display: inline;" placeholder="Administrator"/></form> |
 | \$WindowsPassword | The password of an administrator account on the Windows VMs to be protected | <form oninput="result.value=WindowsPassword.value" id="WindowsPassword" style="display: inline;"><input type="text" id="WindowsPassword" name="WindowsPassword" style="display: inline;" placeholder="Password123!"/></form> |
@@ -166,8 +167,8 @@ $Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
 
 # Declare template variables
 $StackResourceGroup = "<output form="AzsRGName" name="result" style="display: inline;">MyResourceGroup</output>"
-$ClientID = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
-$ClientSecret = '<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jkx]=</output>' | ConvertTo-SecureString -Force -AsPlainText
+$ClientId = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
+$ClientSecret = '<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jkx]=</output>'
 $StackVNetName = "<output form="AzsVNetName" name="result" style="display: inline;">SiteRecoveryVNet</output>"
 $StackSubnetName = "<output form="AzsSubnetName" name="result" style="display: inline;">default</output>"
 $StackStorageAccount = "<output form="AzsSAName" name="result" style="display: inline;">siterecoverycssa</output>"
@@ -176,95 +177,94 @@ $ExistingAzureRG = <output form="ExistingRG" name="result" style="display: inlin
 $AzureLocation = "<output form="AzureLocation" name="result" style="display: inline;">UkWest</output>"
 $AzureVNetName = "<output form="AzureVNetName" name="result" style="display: inline;">SiteRecoveryVNet</output>"
 $AzureVNetRange = "<output form="AzureVNetRange" name="result" style="display: inline;">192.168.0.0/16</output>"
-$AzureSubnetRange = <output form="AzureSubnetRange" name="result" style="display: inline;">192.168.1.0/24</output>
+$AzureSubnetRange = "<output form="AzureSubnetRange" name="result" style="display: inline;">192.168.1.0/24</output>"
 $AzureStorageAccount = "<output form="AzureSAName" name="result" style="display: inline;">stacksiterecoverysa</output>"
 $VaultName = "<output form="VaultName" name="result" style="display: inline;">AzureStackVault</output>"
 $ExistingAzureVault = <output form="ExistingVault" name="result" style="display: inline;">$false</output>
 $ReplicationPolicyName = "<output form="ReplicationPolicy" name="result" style="display: inline;">ReplicationPolicy</output>"
 $ConfigServerUsername = "<output form="ConfigUsername" name="result" style="display: inline;">ConfigAdmin</output>"
-$ConfigServerPassword = '<output form="ConfigPassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
+$ConfigServerPassword = '<output form="ConfigPassword" name="result" style="display: inline;">Password123!</output>'
 $ConfigurationServerName = "<output form="ConfigName" name="result" style="display: inline;">SRConfigServer</output>"
 $TempFilesPath = "<output form="TempFilesPath" name="result" style="display: inline;">C:\TempASR\</output>"
 $ExtractionPath = "<output form="ExtractionPath" name="result" style="display: inline;">Extracted</output>"
-$MySQLRootPassword = '<output form="MySQLRootPassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
-$MySQLUserPassword = '<output form="MySQLUserPassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
+$MySqlRootPassword = '<output form="MySQLRootPassword" name="result" style="display: inline;">Password123!</output>'
+$MySqlUserPassword = '<output form="MySQLUserPassword" name="result" style="display: inline;">Password123!</output>'
 $EncryptionKey = '<output form="EncryptionKey" name="result" style="display: inline;">ExampleEncryptionKey</output>'
 $WindowsUsername = "<output form="WindowsUsername" name="result" style="display: inline;">Administrator</output>"
-$WindowsPassword = '<output form="WindowsPassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
-$LinuxRootPassword = '<output form="LinuxPassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
+$WindowsPassword = '<output form="WindowsPassword" name="result" style="display: inline;">Password123!</output>'
+$LinuxRootPassword = '<output form="LinuxPassword" name="result" style="display: inline;">Password123!</output>'
+$TemplateUri = "https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/ARM%20Templates/Azure%20Site%20Recovery%20-%20Config%20Server/azuredeploy.json"
 
-# Test if resource group, virtual network and subnet exist
-$TestRG = Get-Resource
+# Validate that resource group, virtual network and subnet exist
+$TestRG = Get-AzureRmResourceGroup -Name $StackResourceGroup
+if ($TestRG) {
+    $TestVNet = Get-AzureRmVirtualNetwork -Name $StackVNetName -ResourceGroupName $StackResourceGroup
+    if ($TestVNet) {
+        $TestSubnet = Get-AzureRmVirtualNetworkSubnetConfig -Name $StackSubnetName -VirtualNetwork $TestVNet
+        if ($TestSubnet) {
+            Write-Output -InputObject "Validated resource group, virtual network and subnet successfully"
+        }
+        else {
+            Write-Error -Message "Could not find subnet with name $StackSubnetName, please check and try again"
+            break
+        }
+    }
+    else {
+        Write-Error -Message "Could not find virtual network with name $StackVNetName, please check and try again"
+        break
+    }
+}
+else {
+    Write-Error -Message "Could not find resource group with name $StackResourceGroup, please check and try again"
+    break
+}
 
+# Create ARM template parameters object
+$TemplateParameters = @{
+    "Client ID" = $ClientId
+    "Client Secret" = $ClientSecret
+    "Stack Arm Endpoint" = $StackArmEndpoint
+    "Stack VNet Name" = $StackVNetName
+    "Stack Subnet Name" = $StackSubnetName
+    "Stack Storage Account" = $StackStorageAccount
+    "Azure Resource Group" = $AzureResourceGroup
+    "Existing Azure Resource Group" = $ExistingAzureRG
+    "Azure Location" = $AzureLocation
+    "Azure VNet Name" = $AzureVNetName
+    "Azure VNet Range" = $AzureVNetRange
+    "Azure Subnet Range" = $AzureSubnetRange
+    "Azure Storage Account" = $AzureStorageAccount
+    "Vault Name" = $VaultName
+    "Existing Azure Vault" = $ExistingAzureVault
+    "Replication Policy Name" = $ReplicationPolicyName
+    "Config Server Username" = $ConfigServerUsername
+    "Config Server Password" = $ConfigServerPassword
+    "Config Server Name" = $ConfigurationServerName
+    "Temporary Files Path" = $TempFilesPath
+    "Extraction Path" = $ExtractionPath
+    "MySQL Root Password" = $MySqlRootPassword
+    "MySQL User Password" = $MySqlUserPassword
+    "Encryption Key" = $EncryptionKey
+    "Windows Username" = $WindowsUsername
+    "Windows Password" = $WindowsPassword
+    "Linux Root Password" = $LinuxRootPassword
+}
 
 # Test Deployment
-Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -Verbose
+$TestDeployment = Test-AzureRmResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters
 
-# Start Deployment
-New-AzureRmResourceGroupDeployment -Name $ArmDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -Verbose
+# Deploy ARM template
+if ($TestDeployment -like $null) {
+    Write-Output -InputObject "Deploying ARM template..."
+    Write-Warning -Message "This may take a while..."
+    New-AzureRmResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters
+}
+else {
+    Write-Error -Message "Failed to deploy ARM template due to following issue: $TestDeployment"
+    break
+}
+</code></pre>
 
-# Verify Deployment
-## Note: $ArmDeploymentName can be changed to query each deployment in your resource group
-Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName
-```
-
-> [!TIP]
-> Every parameter in the [parameter list](#list-of-the-parameters-you-can-define) can be defined in the **`New-AzureRmResourceGroupDeployment`** by simply adding *`-<ParameterName>`*
->
-> For example:
-> `-SqlVMSize "Standard_A3"`
-
-> [!NOTE]
-> If the template fails validation and you need to see detailed error message you can do:
->
-> ```powershell
-> Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -SqlVMSize "Standard_A4"
->
-> Code    : MultipleErrorsOccurred
-> Message : Multiple error occurred: BadRequest. Please see details.
-> Details : {Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResourceManagerError}
->
->(Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -SqlVMSize "Standard_A4").Details
->
-> Code    : InvalidTemplate
-> Message : Deployment template validation failed: 'The provided value 'Standard_A4' for the template parameter 'sqlVMSize' at line '31' and column '23' is not valid. The parameter value is not part of the allowed value(s): > 'Standard_A1,Standard_A2,Standard_A3'.'.
-> Details :
-> ```
-
-## Known issues
-
-- Sometimes Domain Account does not get correctly created and you will get the following error:
-
-  ```powershell
-  "statusMessage":
-  "{\"status\":\"Failed\",\"error\":{\"code\":\"ResourceDeploymentFailure\",\"message\":\"The
-  resource operation completed with terminal provisioning state 'Failed'.\",\"details\":{\"code\":\"VMExtensionProvisioningError\",\"message\":\"VM
-  has reported a failure when processing extension 'sqlAOPrepare'. Error
-  message: DSC Configuration 'PrepareAlwaysOnSqlServer' completed with error(s). Following are the first few: FindDomainForAccount: Call to DsGetDcNameWithAccountW failed with return value0x0000054B Could not find account SQL-AYQE0\\r\\n The PowerShell DSC resource '[xSqlServerConfigureSqlServerWithAlwaysOn' with SourceInfo'C:\\\\Packages\\\\Plugins\\\\Microsoft.Powershell.DSC\\\\2.76.00\\\\DSCWork\\\\PrepareAlwaysOnSqlServer.ps1.0\\\\PrepareAlwaysOnSqlServerps1::205::9::xSqlServer'
-  threw one or more non-terminating errors while running the Set-TargetResource functionality.These errors are logged to the ETW channel called Microsoft-Windows-DSC/Operational. Refer to this channel for more details.\"}]}}"
-  ```
-
-  If that happens, you can just **redeploy** and it should be fine.
-
-## Troubleshooting DSC extensions
-
-- [PowerShell DSC Extension](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-overview)
-
-  - `C:\WindowsAzure\Logs\Plugins\Microsoft.Powershell.DSC\<version number>`
-
-- [DSC Configuration](https://powershell.org/2017/10/10/using-azure-desired-state-configuration-part-iv/) and [cmdlets](https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/get-azurermvmdscextensionstatus?view=azurermps-6.5.0)
-
-  - To view the status of the DSC deployment run:
-
-    ```powershell
-    Get-AzureRmVMDscExtension -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>"
-    Get-AzureRmVMDscExtensionStatus -ResourceGroupName "<ResourceGroupName>" -VMName "<VMName>" -Name "<ExtensionName>" | Select-Object -ExpandProperty DscConfigurationLog
-    ```
-
-- [Event Viewer Logs](http://www.codewrecks.com/blog/index.php/2014/06/15/deploying-web-site-with-powershell-dsc-part-3/)
-
-  - Errors are located in: `Application And Service Logs / Microsoft / Windows / Desired State Configuration`
-  
 ## Feedback
 
 If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
