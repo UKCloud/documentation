@@ -257,7 +257,7 @@ $TestDeployment = Test-AzureRmResourceGroupDeployment -ResourceGroupName $StackR
 if ($TestDeployment.Count -eq 0) {
     Write-Output -InputObject "Deploying ARM template..."
     Write-Warning -Message "This may take a while..."
-    New-AzureRmResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters
+    New-AzureRmResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters -Name "Azure Site Recovery"
 }
 else {
     Write-Error -Message "Failed to deploy ARM template due to following issue(s): $TestDeployment"
