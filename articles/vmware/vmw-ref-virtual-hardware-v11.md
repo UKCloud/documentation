@@ -19,20 +19,27 @@ toc_mdlink: vmw-ref-virtual-hardware-v11.md
 
 Virtual Hardware v11 enables UKCloud to support increased CPU limits and memory, but primarily it introduces new guest OS support as follows:
 
-Debian 8.*x*
-Solaris 11.2
-Asanux 4 SP4
-Ubuntu 12.04.5/14.04.1
-Oracle Linux 7
-FreeBSD 9.3
-MAC OSX 10.10
-Windows 2016
+- Debian 8.*x*
+
+- Solaris 11.2
+
+- Asanux 4 SP4
+
+- Ubuntu 12.04.5/14.04.1
+
+- Oracle Linux 7
+
+- FreeBSD 9.3
+
+- MAC OSX 10.10
+
+- Windows 2016
 
 ## When do these changes take effect?
 
 UKCloud has enabled these upgrades across our entire UKCloud for VMware estate.
 
-Any new virtual machines (VMs) will, by default, be created with the updated virtual hardware version; you can specifically select an earlier hardware version at the point of VM creation. Any existing VMs and templates will continue to use their currently configured virtual hardware version until such time as you select to change this. Any clones/copies of VMs or templates will retain the same virtual hardware version as the source image.
+Any new virtual machines (VMs) will, by default, be created with the updated virtual hardware version. Any existing VMs and templates will continue to use their currently configured virtual hardware version until such time as you select to change this. Any clones/copies of VMs or templates will retain the same virtual hardware version as the source image.
 
 Prior to upgrading the Virtual Hardware version, you should note the following:
 
