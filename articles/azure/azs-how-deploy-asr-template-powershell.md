@@ -46,7 +46,7 @@ Prerequisites from a Windows-based external client are:
 
 - A virtual network in Azure Stack to deploy the Azure Site Recovery configuration server on to
 
-- For any VMs which you wish to be protected, be sure to add the relevant custom script extension. These are required as specified in the Azure Stack Site Recovery documentation.
+- For any VMs which you wish to be protected, be sure to add the relevant custom script extension. These are required as specified in the [Azure Stack Site Recovery documentation](https://docs.microsoft.com/en-us/azure/site-recovery/azure-stack-site-recovery#step-1-prepare-azure-stack-vms).
 
   - [Windows](https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1) - This extension disables Remote User Access control and allows WMI and File and Printer sharing on the firewall.
 
@@ -62,7 +62,7 @@ Prerequisites from a Windows-based external client are:
 
 - [GitHub Azure Stack Quick-Start Template Repository](https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master)
 
-- [*UKCloud Azure Stack Repository*](https://github.com/UKCloud/AzureStack)
+- [UKCloud Azure Stack Repository](https://github.com/UKCloud/AzureStack)
 
 ## What does it deploy?
 
