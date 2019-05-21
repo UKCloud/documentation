@@ -42,7 +42,7 @@ Prerequisites from a Windows-based external client are:
 
 - A service principal with contributor permissions on both Azure and Azure Stack
 
-  - [How to create a service principal name (SPN) using PowerShell](azs-how-create-spn-powershell.md) 
+  - [How to create a service principal name (SPN) using PowerShell](azs-how-create-spn-powershell.md)
 
 - A virtual network in Azure Stack to deploy the Azure Site Recovery configuration server on to
 
