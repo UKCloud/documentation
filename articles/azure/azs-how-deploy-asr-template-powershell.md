@@ -258,7 +258,7 @@ if ($TestDeployment.Count -eq 0) {
     New-AzureRmResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters -Name "AzureSiteRecovery"
 }
 else {
-    Write-Warning -Message "Failed to deploy ARM template due to following issue(s):"
+    Write-Warning -Message "Unable to deploy ARM template due to following issue(s):"
     $TestDeployment
     break
 }
