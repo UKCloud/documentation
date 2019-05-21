@@ -50,9 +50,7 @@ Prerequisites from a Windows-based external client are:
 
   - [Windows](https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1) - This extension disables Remote User Access control and allows WMI and File and Printer sharing on the firewall.
 
-  - [Linux] https://raw.githubusercontent.com/UKCloud/AzureStack/master/Extensions/Linux/SetRootPassword.sh
-
-This extension sets the root password to the input parameter, as root access is required for Azure Site Recovery.
+  - [Linux](ttps://raw.githubusercontent.com/UKCloud/AzureStack/master/Extensions/Linux/SetRootPassword.sh) - This extension sets the root password to the input parameter, as root access is required for Azure Site Recovery.
 
 ## Official documentation
 
