@@ -169,14 +169,14 @@ $ClientId = "<output form="clientid" name="result" style="display: inline;">0000
 $ClientSecret = '<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jkx]=</output>'
 $StackVNetName = "<output form="AzsVNetName" name="result" style="display: inline;">SiteRecoveryVNet</output>"
 $StackSubnetName = "<output form="AzsSubnetName" name="result" style="display: inline;">default</output>"
-$StackStorageAccount = "<output form="AzsSAName" name="result" style="display: inline;">siterecoverycssa</output>"
+$StackStorageAccount = "<output form="AzsSAName" name="result" style="display: inline;">siterecoverycssa<span id="RandNum8"></span></output>"
 $AzureResourceGroup = "<output form="AzureRGName" name="result" style="display: inline;">SiteRecoveryRG</output>"
 $ExistingAzureRG = <output form="ExistingRG" name="result" style="display: inline;">$false</output>
 $AzureLocation = "<output form="AzureLocation" name="result" style="display: inline;">UkWest</output>"
 $AzureVNetName = "<output form="AzureVNetName" name="result" style="display: inline;">SiteRecoveryVNet</output>"
 $AzureVNetRange = "<output form="AzureVNetRange" name="result" style="display: inline;">192.168.0.0/16</output>"
 $AzureSubnetRange = "<output form="AzureSubnetRange" name="result" style="display: inline;">192.168.1.0/24</output>"
-$AzureStorageAccount = "<output form="AzureSAName" name="result" style="display: inline;">stacksiterecoverysa</output>"
+$AzureStorageAccount = "<output form="AzureSAName" name="result" style="display: inline;">stacksiterecoverysa<span id="RandNum5"></span></output>"
 $VaultName = "<output form="VaultName" name="result" style="display: inline;">AzureStackVault</output>"
 $ExistingAzureVault = <output form="ExistingVault" name="result" style="display: inline;">$false</output>
 $ReplicationPolicyName = "<output form="ReplicationPolicy" name="result" style="display: inline;">ReplicationPolicy</output>"
@@ -267,3 +267,6 @@ else {
 ## Feedback
 
 If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+
+<script>document.getElementById("RandNum5").innerHTML = Math.round(Math.random()*100000)</script>
+<script>document.getElementById("RandNum8").innerHTML = Math.round(Math.random()*100000000)</script>
