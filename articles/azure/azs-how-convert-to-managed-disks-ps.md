@@ -96,10 +96,10 @@ $NewVMConfig = New-AzureRmVMConfig -VMName $VMName -VMSize $OldVM.HardwareProfil
 
 # Add OS disk to the new virtual machine config
 if ($OldVM.OSProfile.LinuxConfiguration) {
-    $NewVMConfig = Set-AzureRmVMOSDisk -VM $NewVMConfig -ManagedDiskId $OSDisk.Id -CreateOption Attach -Linux
+    $NewVMConfig = Set-AzureRmVMOSDisk -VM $NewVMConfig -ManagedDiskId $OSDisk.Id -CreateOption "Attach" -Linux
 }
 else {
-    $NewVMConfig = Set-AzureRmVMOSDisk -VM $NewVMConfig -ManagedDiskId $OSDisk.Id -CreateOption Attach -Windows
+    $NewVMConfig = Set-AzureRmVMOSDisk -VM $NewVMConfig -ManagedDiskId $OSDisk.Id -CreateOption "Attach" -Windows
 }
 
 # Add data disk(s) to the new virtual machine config
