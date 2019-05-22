@@ -77,7 +77,7 @@ Remove-AzureRmVM -Name $VMName -ResourceGroupName $RGName -Force
 # Create OS managed disk
 Write-Output -InputObject "Creating OS managed disk"
 $OSDiskConfig = New-AzureRmDiskConfig -AccountType "StandardLRS" -Location $Location -DiskSizeGB $OldVM.StorageProfile.OsDisk.DiskSizeGB `
-                    -SourceUri $OldVM.StorageProfile.OsDisk.Vhd.Uri -CreateOption "Import"
+    -SourceUri $OldVM.StorageProfile.OsDisk.Vhd.Uri -CreateOption "Import"
 $OSDisk = New-AzureRmDisk -DiskName "$($OldVM.Name)_$($OldVM.StorageProfile.OsDisk.Name)" -Disk $OSDiskConfig -ResourceGroupName $RGName
 
 # Create data managed disks
@@ -86,7 +86,7 @@ if ($OldVM.StorageProfile.DataDisks) {
     foreach ($DataDisk in $OldVM.StorageProfile.DataDisks) {
         Write-Output -InputObject "Creating data managed disk"
         $DataDiskConfig = New-AzureRmDiskConfig -AccountType "StandardLRS" -Location $Location -DiskSizeGB $DataDisk.DiskSizeGB `
-                            -SourceUri $DataDisk.Vhd.Uri -CreateOption "Import"
+            -SourceUri $DataDisk.Vhd.Uri -CreateOption "Import"
         $DataDiskArray += New-AzureRmDisk -DiskName "$($OldVM.Name)_$($DataDisk.Name)" -Disk $DataDiskConfig -ResourceGroupName $RGName
     }
 }
