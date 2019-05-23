@@ -10,6 +10,8 @@
       href: azs-gs.md
   - name: How To
     items:
+    - name: Convert a VM to use managed disks - PowerShell
+      href: azs-how-convert-to-managed-disks-ps.md
     - name: Create a load balancer
       href: azs-how-create-load-balancer.md
     - name: Create a scale set
@@ -18,6 +20,8 @@
       href: azs-how-create-service-fabric-portal.md
     - name: Create an Azure Kubernetes Service cluster
       href: azs-how-create-aks.md
+    - name: Deploy an Azure Site Recovery template to Azure Stack - PowerShell
+      href: azs-how-deploy-asr-template-powershell.md
     - name: Deploy an SQL template to Azure Stack - PowerShell
       href: azs-how-deploy-sql-template-powershell.md
     - name: Identify your Azure global administrators
@@ -28,6 +32,8 @@
       href: azs-how-list-vm-extensions.md
     - name: 'Manage Azure user groups and permissions '
       href: azs-how-manage-azure-group.md
+    - name: Move a VM to a new virtual network - PowerShell
+      href: azs-how-move-vm-new-vnet-ps.md
     - name: Retrieve your subscription quotas
       href: azs-how-retrieve-quota-ps.md
     - name: Use the Azure Stack API

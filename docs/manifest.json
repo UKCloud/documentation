@@ -113,6 +113,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-convert-to-managed-disks-ps.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-convert-to-managed-disks-ps.html",
+          "hash": "ymcVqIjQO8qMII7W3sHicQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-create-S2S-VPN-ps.md",
       "output": {
         ".html": {
@@ -305,6 +317,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-deploy-asr-template-powershell.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-deploy-asr-template-powershell.html",
+          "hash": "zJKwh/8JEbz96VISyqLNIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-deploy-sql-template-powershell.md",
       "output": {
         ".html": {
@@ -358,6 +382,18 @@
         ".html": {
           "relative_path": "articles/azure/azs-how-manage-azure-group.html",
           "hash": "yuRGzm/oW78Zve5yRgSilw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-move-vm-new-vnet-ps.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-move-vm-new-vnet-ps.html",
+          "hash": "W/cr1OBcMzhDzwQZJLuZbQ=="
         }
       },
       "is_incremental": false,
@@ -1643,7 +1679,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "YXjDAdHSptgdl7r50PtUag=="
+          "hash": "2zIyKCK7g0tIe6hvnYjQmA=="
         }
       },
       "is_incremental": false,
@@ -15902,13 +15938,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -15916,10 +15945,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 354,
+          "total_file_count": 357,
           "skipped_file_count": 0
         }
       }
