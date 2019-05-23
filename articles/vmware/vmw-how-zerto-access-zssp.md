@@ -47,7 +47,7 @@ The ZSSP you use depends on what you are trying to do:
 - To create a VPG for Journaling Protection, use the ZSSP in the zone where the VMs you are protecting are located
 
     > [!NOTE]
-    > To create a VPG for Disaster Recovery to the Cloud or Workload Migration, use the Zerto Virtual Manager (ZVM) Web Client in your local environment.
+    > To create a VPG for Disaster Recovery to the Cloud or Workload Migration, use the Zerto Virtual Manager (ZVM) Web Client in your local environment. You can download the latest version of the ZVM Web Client from: https://www.zerto.com/myzerto/support/downloads/
 
 - To perform a test or live failover for Disaster Recovery to the Cloud, Journaling Protection or Workload Migration, use the ZSSP in the zone where your target VDC (for recovery or migration) is located
 
