@@ -18,41 +18,39 @@ toc_mdlink: azs-how-deploy-asr-template-powershell.md
 
 # How to deploy an Azure Site Recovery template to Azure Stack using PowerShell
 
-This document explains how to deploy an Azure Site Recovery configuration server ARM template to Azure Stack using PowerShell.
+This document explains how to deploy an Azure Site Recovery configuration server Azure Resource Manager (ARM) template to Azure Stack using PowerShell.
 
 It will guide you through the process of:
 
-- Obtaining an ARM Template
+- Obtaining an ARM template
 
-- Deploying an [ARM Template for Azure Site Recovery](https://github.com/UKCloud/AzureStack/tree/master/Users/ARM%20Templates/Azure%20Site%20Recovery%20-%20Config%20Server)
+- Deploying an [ARM template for Azure Site Recovery](https://github.com/UKCloud/AzureStack/tree/master/Users/ARM%20Templates/Azure%20Site%20Recovery%20-%20Config%20Server)
 
-## What is an ARM Template?
+## What is an ARM template?
 
-You can use Azure Resource Manager templates to deploy and provision all the resources for your application in a single, coordinated operation. You can also redeploy templates to make changes to the resources in a resource group.
-These templates can be deployed via the Azure Stack portal, PowerShell, Azure CLI, REST API and Visual Studio.
-The following quick-start templates are available on [GitHub](https://aka.ms/AzureStackGitHub).
+You can use ARM templates to deploy and provision all the resources for your application in a single, coordinated operation. You can also redeploy templates to make changes to the resources in a resource group. You can deploy these templates via the Azure Stack portal, PowerShell, Azure CLI, REST API and Visual Studio. Microsoft provides some quick-start templates on [GitHub](https://aka.ms/AzureStackGitHub).
 
 ## Prerequisites
 
 Prerequisites from a Windows-based external client are:
 
-- PowerShell 5.1 and AzureStack PowerShell Module
+- PowerShell 5.1 and AzureStack PowerShell Module.
 
   - [Configure PowerShell Environment and Azure Stack Module](azs-how-configure-powershell-users.md)
 
-- A service principal with contributor permissions on both Azure and Azure Stack
+- A service principal with contributor permissions on both Azure and Azure Stack.
 
   - [How to create a service principal name (SPN) using PowerShell](azs-how-create-spn-powershell.md)
 
-- A virtual network in Azure Stack to deploy the Azure Site Recovery configuration server on to
+- A virtual network in Azure Stack to deploy the Azure Site Recovery configuration server to.
 
-- For any VMs which you wish to be protected, be sure to add the relevant custom script extension. These are required as specified in the [Azure Stack Site Recovery documentation](https://docs.microsoft.com/en-us/azure/site-recovery/azure-stack-site-recovery#step-1-prepare-azure-stack-vms).
+- For any VMs that you want protecting, be sure to add the relevant custom script extension. These are required as specified in the [Azure Stack Site Recovery documentation](https://docs.microsoft.com/en-us/azure/site-recovery/azure-stack-site-recovery#step-1-prepare-azure-stack-vms).
 
-  - [Windows](https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1) - This extension disables Remote User Access control and allows WMI and File and Printer sharing on the firewall.
+  - [Windows](https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1) - This extension disables Remote User Access control and allows WMI and File and Printer sharing on the firewall
 
-  - [Linux](https://raw.githubusercontent.com/UKCloud/AzureStack/master/Extensions/Linux/SetRootPassword.sh) - This extension sets the root password to the input parameter, as root access is required for Azure Site Recovery.
+  - [Linux](https://raw.githubusercontent.com/UKCloud/AzureStack/master/Extensions/Linux/SetRootPassword.sh) - This extension sets the root password to the input parameter, as root access is required for Azure Site Recovery
 
-## Official documentation
+## Microsoft documentation
 
 - [Azure Stack ARM Templates Overview](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-arm-templates)
 
@@ -64,7 +62,7 @@ Prerequisites from a Windows-based external client are:
 
 - [UKCloud Azure Stack Repository](https://github.com/UKCloud/AzureStack)
 
-## What does it deploy?
+## What does the template deploy?
 
 This template deploys a Windows Server Datacenter 2016 virtual machine, which is then configured for use with Azure Site Recovery. It also creates the following resources:
 
@@ -90,17 +88,17 @@ The images used to create this deployment are:
 
 - The configuration server will have a 127 GB OS disk, and two 600 GB data disks.
 
-## Overview of the ARM Template deployment process for Azure Stack using Service Principal Name (SPN) authentication
+## Overview of the ARM template deployment process for Azure Stack using service principal name (SPN) authentication
 
 1. Declare your variables accordingly.
 
 2. Create your Azure Stack environment.
 
-3. Log in to your Azure Stack *Subscription* with Service Principal Name (SPN).
+3. Log in to your Azure Stack *Subscription* with the service principal name (SPN).
 
-4. Check if resource group and virtual network exists.
+4. Check if a resource group and virtual network exist.
 
-5. Deploy resources from ARM template.
+5. Deploy resources from the ARM template.
 
 ## Declare variables
 
@@ -135,15 +133,19 @@ The images used to create this deployment are:
 | \$WindowsPassword | The password of an administrator account on the Windows VMs to be protected | <form oninput="result.value=WindowsPassword.value" id="WindowsPassword" style="display: inline;"><input type="text" id="WindowsPassword" name="WindowsPassword" style="display: inline;" placeholder="Password123!"/></form> |
 | \$LinuxRootPassword | The password of the root account on the Linux VMs to be protected | <form oninput="result.value=LinuxPassword.value" id="LinuxPassword" style="display: inline;"><input type="text" id="LinuxPassword" name="LinuxPassword" style="display: inline;" placeholder="Password123!"/></form> |
 
-### MySQL Password Requirements
+### MySQL password requirements
 
-Password must conform to all of the following rules:
+MySQL passwords must conform to all of the following rules:
 
-- Password must contain at least one letter
-- Password must contain at least one number
-- Password must contain at least one special character (_!@#$%)
-- Password must be between 8 and 16 characters
-- Password cannot contain spaces
+- Must contain at least one letter
+
+- Must contain at least one number
+
+- Must contain at least one special character (_!@#$%)
+
+- Must be between 8 and 16 characters
+
+- Cannot contain spaces
 
 ## Deploy ARM template code
 
@@ -248,7 +250,7 @@ $TemplateParameters = @{
     "Linux Root Password" = $LinuxRootPassword
 }
 
-# Test Deployment
+# Test deployment
 $TestDeployment = Test-AzureRmResourceGroupDeployment -ResourceGroupName $StackResourceGroup -TemplateUri $TemplateUri -TemplateParameterObject $TemplateParameters
 
 # Deploy ARM template
