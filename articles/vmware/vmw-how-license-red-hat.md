@@ -25,7 +25,7 @@ UKCloud offers UKCloud for VMware with a variety of operating systems to suit yo
 
 To make the provision of Red Hat based virtual machines (VMs) as simple and quick as possible, UKCloud offer the following options to all customers:
 
-- UKCloud Red Hat licencing and usage billing - One of the options is for UKCloud to provide Red Hat licensing per hour based on your usage per VM. This will be billed per month in addition to the cost of the VM.
+- UKCloud Red Hat licencing and usage billing - One of the options is for UKCloud to provide Red Hat licensing per hour based on your usage per VM. This will be retrospectively billed based on your usage per month in addition to the cost of the VM.
 
 - Bring your own (BYO) Red hat licensing - For certain organisations that have an existing licensing contract with Red Hat, or want to license their Red Hat usage directly, UKCloud are able to offer the option of your organisation using your own licensing and therefore opting out of the automatic Red Hat licensing process offered by UKCloud.
 
