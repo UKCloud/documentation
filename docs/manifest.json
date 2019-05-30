@@ -9849,6 +9849,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-mnu-my-calls.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-mnu-my-calls.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-my-calls-new-ticket.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-my-calls-new-ticket.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/ptl-myvms-select-vdc.png",
       "output": {
         "resource": {
@@ -9930,17 +9952,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/public_catalogs.jpg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/redhat-image-1.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/redhat-image-1.png"
         }
       },
       "is_incremental": false,
@@ -15046,7 +15057,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-license-red-hat.html",
-          "hash": "YKMgLLqw1e/OP34hubLZgg=="
+          "hash": "vAKpHFT/wXKwaulnPOH0Yg=="
         }
       },
       "is_incremental": false,
@@ -15938,16 +15949,16 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
