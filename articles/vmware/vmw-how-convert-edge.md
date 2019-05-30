@@ -46,7 +46,7 @@ To complete the steps in this guide you must have access to the UKCloud Portal a
 Before converting your edge gateway, review the prerequisites and known issues below:
 
 - **Edge gateway version** --- When converting to an advanced gateway, your edge will be redeployed to the latest version.
-    
+
     > [!IMPORTANT]
     > As the conversion process causes the gateway to redeploy, you should always schedule an edge conversion during an outage window.
 
@@ -59,27 +59,6 @@ Before converting your edge gateway, review the prerequisites and known issues b
 To access the latest vCloud Director networking features, you need to convert your edge to an advanced gateway.
 
 To convert your edge to an advanced gateway:
-
-# [Using vCloud Director Legacy UI](#tab/tabid-1)
-
-1. In vCloud Director, select the **Administration** tab.
-
-    ![Administration tab](images/conver-image-3.png)
-
-2. Double-click the VDC that the edge gateway belongs to.
-
-3. Select the **Edge Gateways** tab.
-
-4. Right-click the edge gateway that you want to convert and select **Convert to Advanced Gateway**.
-
-5. Click **Yes** to start the conversion.
-
-    > [!IMPORTANT]
-    > After converting your edge gateway, click **Configure Services** and check the firewall rules to make sure that the **default rule for ingress traffic** is set to **Deny**.
-
-    ![Administration tab](images/conver-image-4.png)
-
-# [Using vCloud Director Tenant UI](#tab/tabid-2)
 
 1. In vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway you want to convert.
 
@@ -95,8 +74,6 @@ To convert your edge to an advanced gateway:
     > After converting your edge gateway, click **Configure Services** and check the firewall rules to make sure that the **default rule for ingress traffic** is set to **Deny**.
 
     ![Administration tab](images/conver-image-4.png)
-
-***
 
 ## Next steps
 

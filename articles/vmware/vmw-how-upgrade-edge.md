@@ -3,7 +3,7 @@ title: How to upgrade your edge gateway | UKCloud Ltd
 description: This article explains how to check the current version of your edge gateway and upgrade to the latest version
 services: vmware
 author: Sue Highmoor
-reviewer:
+reviewer: 
 lastreviewed: 10/05/2019
 toc_rootlink: How To
 toc_sub1: 
@@ -70,15 +70,35 @@ Before you attempt to upgrade your edge gateway, check for the existing version 
 
 The following steps show how to upgrade your edge gateway using vCloud Director.
 
-> [!NOTE]
-> Before you begin the upgrade process, bear in mind that there will be a brief network disruption for the networks that are used by the edge gateway instance.
+> [!IMPORTANT]
+> Before you begin the upgrade process, bear in mind that this process requires downtime as a new VM needs to be deployed for the edge gateway. There will also be a brief network disruption for the networks that are used by the edge gateway instance. You should make sure that you have planned for this downtime before proceeding.
 
 > [!NOTE]
-> You cannot redeploy edge gateways in the new vCloud Director 9.1 tenant portal, you must first switch to the vCloud Director web console. For more information, see [*How to switch to the vCloud Director web console from the tenant portal*](vmw-how-switch-web-console.md).
+> You cannot redeploy edge gateways in the Tenant UI for vCloud Director 9.1. If you're using vCloud Director 9.1, you must first switch to the vCloud Director Legacy UI. For more information, see [*How to switch to the vCloud Director web console from the tenant portal*](vmw-how-switch-web-console.md).
 
-1. In vCloud Director, select the **Administration** tab.
+# [Using the Tenant UI](#tab/tabid-1)
+
+1. In vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway you want to configure.
+
+2. In the left navigation panel, select **Edges**.
+
+    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
+
+3. Select the edge that you want to configure and click the **Redeploy** button.
+
+    ![Redeploy button](images/vmw-vcd-btn-redeploy.png)
+
+4. In the *Redeploy an Edge gateway* dialog box, click **OK**.
+
+5. After the redeployment has finished, you can check the version of the edge gateway again in the UKCloud Portal to confirm that the upgrade has been successful.
+
+# [Using the Legacy UI](#tab/tabid-2)
+
+1. In the vCloud Director Legacy UI, select the **Administration** tab.
 
     ![Administration](images/upgrade-image-8.png)
+
+    For information about how to access the Legacy UI, see [*How to switch to the vCloud Director Legacy UI*](vmw-how-switch-web-console.md).
 
 2. Double-click the VDC that the edge gateway that you want to upgrade belongs to (or right-click the VDC and select **Open**).
 
@@ -90,12 +110,11 @@ The following steps show how to upgrade your edge gateway using vCloud Director.
 
 5. In the confirmation dialog box, click **Yes**.
 
-    > [!IMPORTANT]
-    > This step requires downtime as a new VM needs to be deployed for the edge gateway. You should make sure that you have planned for this downtime before proceeding.
-
 6. You can monitor the status in the *Activity Task Detail* dialog box.
 
-7. After the redeployment has finished, you can check the version of the edge gateway again in the UKCloud Portal to confirm that the upgrade has been successful.
+7.  After the redeployment has finished, you can check the version of the edge gateway again in the UKCloud Portal to confirm that the upgrade has been successful.
+
+***
 
 ## Next steps
 

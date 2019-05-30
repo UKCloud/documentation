@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-portal-view-vms.md
 
 ## Overview
 
-The My VMs page in the UKCloud Portal enables you to see, at a glance, the services currently operational within your environment. My VMs doesn't just cover virtual machines (VMs); it also covers deployed vApps, edge gateway settings and bandwidth monitoring.
+The My VMs page in the UKCloud Portal enables you to see, at a glance, the services currently operational within your environment. My VMs doesn't just cover virtual machines (VMs); it also covers deployed vApps, edge gateways and bandwidth monitoring.
 
 If your system administrator has enabled billing for your account, you can also look at near real-time costs; both current month-to-date and an estimated monthly cost. You can see costs on a per-VM and per-vApp
 basis.
@@ -87,21 +87,18 @@ The **VMs** tab displays a list of all VMs within your environment.
 
 ## Viewing information about edge gateways
 
-The **Edge Gateways** tab shows properties associates with the edge gateways that are deployed in your VDCs.
+The **Edge Gateways**  tab shows the version of the edge gateways in your VDCs.
 
 1. Select the **Edge Gateway** tab.
 
-2. From the **Select Edge** list, select the edge gateway you want to work with.
+2. From the **Select Edge** list, select the edge gateway you want to look at.
 
-    - The **Config** tab shows basic configuration information for the edge
+3. The **VM version** field shows the version of the selected edge gateway.
 
-    - The **Firewall** tab shows you information about the firewall rules configured for the edge.
+4. For information about how to upgrade your edge gateway to the latest version, see [*How to upgrade your edge gateway*](vmw-how-upgrade-edge.md)
 
-    - The **NAT** tab shows you information about the NAT rules configured for the edge.
-
-    - The **VPN** tab displays any VPNs that have been created against the selected edge
-
-    - The **Events** tab displays any events associated with the edge.
+> [!NOTE]
+> The remaining features of the **Edge Gateway** tab have been deprecated.
 
 ## Viewing bandwidth monitoring information
 
