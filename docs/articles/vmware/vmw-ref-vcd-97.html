@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to retrieve your Windows password on UKCloud for OpenStack | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Preparing for vCloud Director 9.7 upgrade | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to retrieve your Windows password on UKCloud for OpenStack | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="Preparing for vCloud Director 9.7 upgrade | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.42.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-how-retrieve-windows-password.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-vcd-97.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,18 +91,26 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-retrieve-your-windows-password-on-ukcloud-for-openstack">How to retrieve your Windows password on UKCloud for OpenStack</h1>
+<h1 id="preparing-for-vcloud-director-97-upgrade">Preparing for vCloud Director 9.7 upgrade</h1>
 
 <h2 id="overview">Overview</h2>
-<p>When you create an instance in OpenStack, its disk is cloned from an image managed by OpenStack. To get you started quickly, we publish a public catalog on our platform that provides several instance images for commonly-used instance sizes and operating systems. This catalog includes several images for Windows operating systems.</p>
-<p>During deployment of a Windows instance, you need to provide your public key to encrypt the password. After deployment, you can retrieve the password for the instance using the nova command line interface (CLI).</p>
-<h2 id="retrieving-your-windows-password">Retrieving your Windows password</h2>
-<p>To retrieve your Windows password, use the following nova CLI command:</p>
-<pre><code>nova get-password &lt;instanceName&gt;/&lt;id&gt; &lt;pathToPrivateKey&gt;
-</code></pre>
-<p>For example:</p>
-<pre><code>nova get-password testVM ~/.ssh/id_rsa
-</code></pre>
+<p>Ahead of our upgrade to vCloud Director 9.7, there are some key points for you to consider as preparation for the upgrade.</p>
+<h2 id="upgrade-to-advanced-edge-gateways">Upgrade to advanced edge gateways</h2>
+<p>vCloud Director 9.7 supports only advanced edge gateways. In preparation for the upgrade, before 31 May 2019 you must convert any legacy standard edge gateways to advanced edge gateways. For more information, see <a href="https://docs.ukcloud.com/articles/vmware/vmw-how-convert-edge.md"><em>How to convert your edge to an advanced gateway</em></a>.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>The conversion process will cause the gateway to redeploy. Therefore, you should schedule the conversion during an outage window.</p>
+</div>
+<p>After 31 May 2019, UKCloud will convert any remaining standard edge gateways at our convenience.</p>
+<h2 id="sandbox-for-testing-vcloud-api">Sandbox for testing vCloud API</h2>
+<p>UKCloud provides sandboxes to enable you to test the next versions of the vCloud API so that you can prepare for vCloud Director upgrades. Our latest sandbox (<a href="https://vcd.latest.ukcloud.com/cloud/">https://vcd.latest.ukcloud.com/cloud/</a>) has been upgraded to vCloud Director 9.7. If you already have an account on a previous sandbox, you can continue to use this account in the 9.7 sandbox. If you haven't previously used one of our vCloud sandboxes, raise a Service Request via My Calls on the UKCloud Portal to gain access.</p>
+<h2 id="changes-to-apis">Changes to APIs</h2>
+<p>vCloud Director 9.7 supports vCloud API version 32.0. For information the changes to the vCloud API for this version, see <a href="https://code.vmware.com/apis/553/doc/diff/index.html"><em>vCloud API Schema Differences</em></a>.</p>
+<p>vCloud Director 9.7 is the last release of vCloud Director to support vCloud API 20. The 20 version of the API is deprecated in this release and will not be supported in future releases.</p>
+<h2 id="powercli-supported-versions">PowerCLI supported versions</h2>
+<p>If you're using PowerCLI to interact with our vCloud Director instances, the minimum supported version is 11.0.0.</p>
+<h2 id="vcloud-director-97-new-features">vCloud Director 9.7 new features</h2>
+<p>We're currently evaluating the new features provided with vCloud Director 9.7 to determine which functionality is appropriate to make available on our platform. We'll provide more details of the new features that we plan to enable as this evaluation progresses.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
