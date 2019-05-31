@@ -48,10 +48,6 @@ If you're using PowerCLI to interact with our vCloud Director instances, the min
 
 We're currently evaluating the new features provided with vCloud Director 9.7 to determine which functionality is appropriate to make available on our platform. We'll provide more details of the new features that we plan to enable as this evaluation progresses.
 
-## Known issues
-
-For a list of known issues with vCloud Director 9.7, see the [*vCloud Director 9.7 for Service Providers Release Notes*](https://docs.vmware.com/en/vCloud-Director/9.7/rn/vmware-vcloud-director-for-service-providers-97-release-notes.html#knownissues).
-
 ## Feedback
 
 If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
