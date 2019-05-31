@@ -85,7 +85,7 @@ You may also need to know:
 
     ![Server Settings screen](images/email-android-account-setup-incoming-server.png)
 
-6. Configure your desired email account options (figure 8) and then tap **Next**
+6. Configure your desired email account options and then tap **Next**
 
     ![Account options](images/email-android-account-setup-options.png)
 
