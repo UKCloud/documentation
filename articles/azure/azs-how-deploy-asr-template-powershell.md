@@ -157,13 +157,13 @@ Change the required variables as per your environment and run the following scri
 $StackArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 ## Add environment
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $StackArmEndpoint
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $StackArmEndpoint
 
 ## Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-## Pull location from environment
-$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
+# Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
 
 # Declare template variables
 $StackResourceGroup = "<output form="AzsRGName" name="result" style="display: inline;">MyResourceGroup</output>"

@@ -204,7 +204,7 @@ New-AzureRmResourceGroup -Name $PublicAzureResourceGroup -Location $PublicAzureR
 Remove-AzureRmResourceGroup -Name $PublicAzureResourceGroup -Force
 
 # Create Azure Stack environment so that you can log in to it
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure account
@@ -289,7 +289,7 @@ $AzureStackResourceGroup = "<output form="azurestackrg" name="result2" style="di
 $AzureStackRole = "<output form="azurestackrole" name="result2" style="display: inline;">Owner</output>"
 
 # Create Azure Stack Environment so that you can log in to it
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure Account
