@@ -85,7 +85,7 @@ You can now edit your global or account-specific settings as described in the ne
 
 When you have successfully set up your account, you should begin to see mail folders, contacts, and your calendar(s) appear on your device. When the synchronization completes, you can edit your global or account-specific settings.
 
-In **Passwrds & Accounts** you can set global or account-specific usability controls for your email account(s), including setting the number of messages to show, how many lines of an email to preview, font size, how often to sync, and more.
+In **Passwords & Accounts** you can set global or account-specific usability controls for your email account(s), including setting the number of messages to show, how many lines of an email to preview, font size, how often to sync, and more.
 
 ![Zimbra settings](images/email-iphone-zimbra-settings.png)
 
