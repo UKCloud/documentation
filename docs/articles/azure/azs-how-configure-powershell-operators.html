@@ -8,7 +8,7 @@
     <title>How to configure the Azure Stack operator's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure the Azure Stack operator's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.1.0">
+    <meta name="generator" content="docfx 2.42.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -170,7 +170,7 @@ Set-ExecutionPolicy RemoteSigned
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
 
 # Register an AzureRM environment that targets your Azure Stack instance
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint $ArmEndpoint
 
 # Sign in to your environment
 Connect-AzureRmAccount -EnvironmentName "AzureStackAdmin"
@@ -183,7 +183,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
 
 # Register an AzureRM environment that targets your Azure Stack instance
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint $ArmEndpoint
 
 # Create your Credentials
 $AzsUsername = "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
@@ -196,8 +196,8 @@ Connect-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackAdmin"
 </code></pre>
 <h2 id="test-the-connectivity">Test the connectivity</h2>
 <p>Now that we've got everything set-up, let's use PowerShell to create resources within Azure Stack. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named &quot;MyResourceGroup&quot;:</p>
-<pre><code class="language-PowerShell"># Pull location from environment
-$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
+<pre><code class="language-PowerShell"># Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
 
 New-AzureRmResourceGroup -Name "MyResourceGroup" -Location $Location
 </code></pre>

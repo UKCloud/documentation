@@ -8,7 +8,7 @@
     <title>How to deploy an Azure Site Recovery template to Azure Stack using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to deploy an Azure Site Recovery template to Azure Stack using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.1.0">
+    <meta name="generator" content="docfx 2.42.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -353,13 +353,13 @@
 $StackArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 ## Add environment
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $StackArmEndpoint
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $StackArmEndpoint
 
 ## Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-## Pull location from environment
-$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
+# Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
 
 # Declare template variables
 $StackResourceGroup = "<output form="AzsRGName" name="result" style="display: inline;">MyResourceGroup</output>"
