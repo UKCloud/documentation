@@ -37,9 +37,9 @@ date or you are in violation of UKCloud’s Terms and Conditions including the U
 
 The following will be excluded from any time-based calculations related to the service being unavailable:
 
-- Service dependant — planned maintenance windows (as specified in the applicable service description)
+- Service dependant — planned maintenance windows (as specified in the applicable service definition)
 
-- Emergency maintenance (as specified in the applicable service description)
+- Emergency maintenance (as specified in the applicable service definition)
 
 - Your misuse of a particular service (as defined in the UKCloud Terms and Conditions and the UKCloud System Interconnect Security Policy (SISP))
 
