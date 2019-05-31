@@ -3299,7 +3299,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-how-setup-android.html",
-          "hash": "lhRXN02sbhIaY/y+a+D6MQ=="
+          "hash": "8i0gWgU5t0BAkE0i/jfiuQ=="
         }
       },
       "is_incremental": false,
@@ -3311,7 +3311,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/email/email-how-setup-iphone.html",
-          "hash": "PBILj2GdgWypl60ldfuvng=="
+          "hash": "UrS0y0AtOCf/7RNC+fHFOw=="
         }
       },
       "is_incremental": false,
@@ -7716,18 +7716,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-ref-ideas-competition.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-ref-ideas-competition.html",
-          "hash": "Ib6XRthfPFMD5ZYdSoy6Sw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-ideas.md",
       "output": {
         ".html": {
@@ -7972,7 +7960,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "ufMs+s/hZtO8pZyRdBH+ag=="
+          "hash": "CgpvO+ctSof/ZMIdgCyTow=="
         }
       },
       "is_incremental": false,
@@ -15956,17 +15944,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 356,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 357,
           "skipped_file_count": 0
         }
       }
