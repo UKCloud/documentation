@@ -34,17 +34,17 @@ To configure a load balancer:
 
     ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
 
-3. Select the edge that you want to configure and click the **Configure Services** button.
+3. Select the edge that you want to configure and click **Configure Services**.
 
-    ![Configure Services button](images/vmw-vcd91-btn-configure-services.png)
+    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
 
 4. Select the **Load Balancer** tab.
 
     ![Load Balancer tab](images/vmw-vcd-adv-edge-tab-load-balancer.png)
 
-5. On the **Global Configuration** tab, select the **Enabled** toggle.
+5. On the **Global Configuration** tab, enable the **Enabled** option.
 
-6. If you have a syslog server configured, select the **Enable Logging** toggle.
+6. If you have a syslog server configured, enable the **Enable Logging** option.
 
     For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md)
 
@@ -82,7 +82,7 @@ Pool servers are the real servers that will be masked by the load balancer.
 
 5. From the **Monitors** list, select the monitors policy.
 
-6. Select the **Transparent** toggle if you want IP addresses to be transparent.
+6. Enable the **Transparent** option if you want IP addresses to be transparent.
 
     ![Add Pool dialog box](images/vmw-vcd-adv-edge-load-balancer-add-pool.png)
 
@@ -112,7 +112,7 @@ A virtual server masks the pool of real servers and presents a single IP address
 
     ![Add virtual server button](images/vmw-vcd-load-balancer-btn-add-server-adv.png)
 
-3. In the **Add Virtual Server** dialog box, select the **Enable Virtual Server** toggle.
+3. In the *Add Virtual Server* dialog box, enable the **Enable Virtual Server** option.
 
 4. Enter a **Name** for the virtual server, assign it a virtual **IP Address**, and assign it to the server pool you want to mask. You can also choose which services you want to apply to the virtual server. When you're done, click **Keep**.
 

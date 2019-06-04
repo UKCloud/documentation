@@ -34,9 +34,9 @@ To create a DHCP pool:
 
     ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
 
-3. Select the edge that you want to configure and click the **Configure Services** button.
+3. Select the edge that you want to configure and click **Configure Services**.
 
-    ![Configure Services button](images/vmw-vcd91-btn-configure-services.png)
+    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
 
 4. Select the **DHCP** tab.
 

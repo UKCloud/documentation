@@ -45,9 +45,9 @@ To create a firewall rule:
 
     ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
 
-3. Select the edge that you want to configure and click the **Configure Services** button.
+3. Select the edge that you want to configure and click **Configure Services**.
 
-    ![Configure Services button](images/vmw-vcd91-btn-configure-services.png)
+    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
 
 4. Select the **Firewall** tab.
 
@@ -59,7 +59,7 @@ To create a firewall rule:
 
 6. For the **New Rule**, specify a **Name**.
 
-    ![New firewall rule](images/vmw-vcd-adv-edge-firewall-new-rule.png)
+    ![New firewall rule](images/vmw-vcd-edge-firewall-new-rule.png)
 
 7. In the **Source** and **Destination** fields, specify the source and destination addresses for the firewall rule.
 
@@ -81,7 +81,11 @@ To create a firewall rule:
 
 9. Select whether the rule is an **Accept** or **Deny** rule.
 
-10. Click **Save changes**.
+10. If you have a syslog server configured, select the **Enable logging** check box.
+
+    For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md).
+
+11. Click **Save changes**.
 
     ![Save changes link on Firewall tab](images/vmw-vcd-adv-edge-firewall-save.png)
 

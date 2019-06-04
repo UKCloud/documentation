@@ -48,13 +48,13 @@ To create an affinity or anti-affinity rule:
 
     ![Affinity rules option](images/vmw-vcd-mnu-affinity.png)
 
-3. To create an affinity rule, click the **New** link in the *Affinity Rules* section.
+3. To create an affinity rule, in the *Affinity Rules* section, click **New**.
 
-    To create an anti-affinity rule, click the **New** link in the *Anti-Affinity Rules* section.
+    To create an anti-affinity rule,in the *Anti-Affinity Rules* section, click **New**.
 
     ![New Affinity rule links](images/vmw-vcd-new-affinity-rule.png)
 
-4. In the *Create Affinity Rule* or *Create Anti-Affinity Rule* dialog box, enter a rule **Name**.
+4. In the *Create Affinity Rule* or *Create Anti-Affinity Rule* dialog box, enter a **Name** for the rule.
 
 5. If you don't want the rule to take effect immediately, deselect the **Enabled** option.
 
@@ -64,7 +64,7 @@ To create an affinity or anti-affinity rule:
 
     If you leave this option selected, if the rule cannot be met, the VMs added to the rule will not power on.
 
-7. In the *VMs in Rule* section, the VMs that you want to add to the rule.
+7. In the *VMs in Rule* section, select the VMs that you want to add to the rule.
 
     ![Create Affinity Rule dialog box](images/vmw-vcd-create-affinity-rule.png)
 

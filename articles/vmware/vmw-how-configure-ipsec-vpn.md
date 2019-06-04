@@ -38,31 +38,33 @@ Before you start configuring IPsec VPN settings, you'll need to make a note of t
 
 2. In the left navigation panel, click **Edges**.
 
-    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
+    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
 
 3. On the *Edges* page, select the edge that you want to configure.
 
 4. In the *Edge Gateway Settings* section, in the *IP Addresses* table, make a note of the IP address in the **IP Addresses** column.
 
-    ![IP Addresses column](images/vmw-vcd91-edge-ip-addresses.png)
+    ![IP Addresses column](images/vmw-vcd-edge-ip-addresses.png)
 
 ## Configuring edge gateway IPsec VPN settings
 
 1. On the *Edges* page, select the edge that you want to configure and click **Configure Services**.
 
+    ![Configure Services option](images/vmw-vcd-edge-btn-config.png)
+
 2. Select the **VPN** tab, then the **IPsec VPN** tab.
 
     ![IPsec VPN tab](images/vmw-vcd-adv-edge-tab-ipsec-vpn.png)
 
-3. On the **Activation Status** tab, select the **IPsec VPN Service Status** toggle.
+3. On the **Activation Status** tab, enable the **IPsec VPN Service Status** option.
 
-    ![Enable IPsec VPN](images/vmw-vcd-adv-edge-tab-ipsec-vpn-enabled.png)
+    ![Enable IPsec VPN](images/vmw-vcd-edge-ipsec-enabled.png)
 
 4. Select the **IPsec VPN Sites** tab.
 
 5. Click the **+** icon.
 
-6. In the *Add IPsec VPN* dialog box, select the **Enabled** toggle.
+6. In the *Add IPsec VPN* dialog box, enable the **Enabled** option.
 
 7. Complete the configuration as follows:
 
@@ -81,7 +83,7 @@ Before you start configuring IPsec VPN settings, you'll need to make a note of t
     Pre-Shared Key | The shared secret used to authenticate and encrypt the connection. It must be an alphanumeric string between 32 and 128 characters that includes at least one uppercase letter, one lowercase letter and one number. This must be the same on both sites.
     Diffie-Hellmann Group | We recommend setting this to DH14 or higher if your on-premises environment can support it.
 
-    ![Add IPsec VPN dialog box](images/vmw-vcd-adv-edge-ipsec-vpn-config.png)
+    ![Add IPsec VPN dialog box](images/vmw-vcd-edge-ipsec-add.png)
 
 8. When you're done, click **Keep** to create the edge end of the VPN tunnel then click **Save changes**.
 
