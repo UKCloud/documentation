@@ -42,7 +42,7 @@ Virtual machines (VMs) provide the basic building blocks of compute resource wit
 
 - Basic and Standard F-series. Optimised for CPU-intensive workloads so have a higher CPU to memory configurations.
 
-You can find the full list of supported machines [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
+You can find the full list of supported virtual machine sizes [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
 
 You can deploy VMs using the UKCloud Azure Stack portal and other tooling.
 
