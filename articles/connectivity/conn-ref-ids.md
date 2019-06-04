@@ -21,27 +21,21 @@ toc_mdlink: conn-ref-ids.md
 
 An Intrusion Detection System (IDS) examines incoming network traffic to identify potential malicious activities, such as attempts to gain unauthorised access to an application or corrupt application data, and reports such attempts to a monitoring service.
 
-## IDS for Assured OFFICIAL
-
-For Assured OFFICIAL solutions, we do not offer network IDS as part of our standard offering. We are planning to be able to enable network IDS as a cost option for customers who are buying additional Assured OFFICIAL Protective Monitoring from QinetiQ. Although our IDS solution can address activity based threats (such as port scans or SYN floods), it is less effective at addressing payload threats as the traffic is typically encrypted when it passes through our IDS solution. Hence, we recommend that customers implement their own application firewall, network IDS/IPS (within their virtual data centre) and/or host based IDS/IPS. In this way, customers have complete control over the policies and the resulting audit logs. Customers can also consider implementing a Content Delivery Network (CDN) in front of the UKCloud solution. All traffic will flow through the CDN, which often provides IDS/IPS features and can deal with issues such as Distributed Denial of Service (DDoS) attacks.
-
-## IDS for Elevated OFFICIAL
-
-For Elevated OFFICIAL solutions, we implement network IDS at our perimeter firewall and all logs are actively monitored via a GPG13 aligned Protective Monitoring service provided by QinetiQ (a UKCloud Alliance Partner). Although the solution can address activity based threats (such as port scans or SYN floods), it is less effective at addressing payload threats as the traffic is typically encrypted when it passes through our IDS solution. Hence, we recommend that customers implement additional IDS/IPS within their cloud solution as appropriate.
+We offer network IDS as part of our standard offering. Although our IDS solution can address activity based threats (such as port scans or SYN floods), it is less effective at addressing payload threats as the traffic is typically encrypted when it passes through our IDS solution. Hence, we recommend that customers implement their own application firewall, network IDS/IPS (within their virtual data centre) and/or host based IDS/IPS. In this way, customers have complete control over the policies and the resulting audit logs. Customers can also consider implementing a Content Delivery Network (CDN) in front of the UKCloud solution. All traffic will flow through the CDN, which often provides IDS/IPS features and can deal with issues such as Distributed Denial of Service (DDoS) attacks.
 
 ## Third-party solutions
 
 Although we do not recommend specific third-party services, we are aware of the following solutions:
 
-- Cisco FirePOWER – www.cisco.com/c/en/us/products/security/ngips/index.html
+- Cisco Next-Generation Intrusion Prevention System (NGIPS) – [www.cisco.com/c/en/us/products/security/ngips/index.html](https://www.cisco.com/c/en/us/products/security/ngips/index.html)
 
-- Brocade Virtual Traffic Manager – www.brocade.com/en/products-services/application-delivery-controllers/virtual-traffic-manager.html
+- Pulse Secure Virtual Traffic Manager – [www.pulsesecure.net/products/virtual-traffic-manager/](https://www.pulsesecure.net/products/virtual-traffic-manager/)
 
-- Modsecurity – www.modsecurity.org
+- Modsecurity – [www.modsecurity.org](http://www.modsecurity.org/)
 
-- McAfee Host IPS – www.mcafee.com/uk/products/host-ips-for-server.aspx
+- McAfee Host Intrusion Prevention for Server – [www.mcafee.com/uk/products/host-ips-for-server.aspx](https://www.mcafee.com/enterprise/en-gb/products/host-ips-for-server.html)
 
-- Trend Deep Security – www.trendmicro.co.uk/products/deep-security
+- Trend Micro Hybrid Cloud Security Solution – [www.trendmicro.co.uk/products/deep-security](https://www.trendmicro.com/en_gb/business/products/hybrid-cloud.html)
 
 ## Feedback
 
