@@ -23,23 +23,37 @@ The document also includes examples of the security events that are displayed in
 
 You can find UKCloud's Protective Monitoring Portal showback information on the *My Security Events* page. To view this page, you must have **Read** monitoring permissions on the page.
 
-### Clouds and security domains
+## Clouds and security domains
 
-UKCloud for VMWare
-UKCloud for OpenStack
-UKCloud for OpenShift
-UKCloud for Microsoft Azure
-UKCloud for Oracle Software
+- UKCloud for VMWare
 
-### Networks
+- UKCloud for OpenStack
 
-Internet, PSN-A, PSN-P, N3, HSCN, Janet, RLI
+- UKCloud for OpenShift
 
-### Domain
-Assured - OFFICAL
-Elevated - OFFICAL SENSERTIVE 
+- UKCloud for Microsoft Azure
 
-### All other clouds and networks
+- UKCloud for Oracle Software
+
+## Networks
+
+- Internet
+
+- PSN
+
+- HSCN
+
+- Janet
+
+- RLI
+
+## Security domains
+
+- Assured OFFICIAL
+
+- Elevated OFFICIAL SENSITIVE
+
+## All other clouds and networks
 
 UKCloud's security team will inform you of any security incidents in the usual way (that is, via the Portal).
 
@@ -63,9 +77,8 @@ UKCloud's security team will inform you of any security incidents in the usual w
 
 - Any traffic that is encrypted will not be spotted by UKCloud unless it's contacting known malicious domains
 
-
 ## Feedback
 
 If you would like to request that other clouds, networks or security domains are supported, contact <products@ukcloud.com>.
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
