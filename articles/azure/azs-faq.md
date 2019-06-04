@@ -44,7 +44,7 @@ Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic
 
 - Compute optimised: F series, Fs & Fsv2 series
 
-You can find the full list of supported machines [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
+You can find the full list of supported virtual machine sizes [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
 
 #### Storage
 
