@@ -23,7 +23,9 @@ The document also includes examples of the security events that are displayed in
 
 You can find UKCloud's Protective Monitoring Portal showback information on the *My Security Events* page. To view this page, you must have **Read** monitoring permissions on the page.
 
-## Clouds and security domains
+## Supported clouds, networks and security domains
+
+### Clouds
 
 - UKCloud for VMWare
 
@@ -35,7 +37,7 @@ You can find UKCloud's Protective Monitoring Portal showback information on the 
 
 - UKCloud for Oracle Software
 
-## Networks
+### Networks
 
 - Internet
 
@@ -47,13 +49,13 @@ You can find UKCloud's Protective Monitoring Portal showback information on the 
 
 - RLI
 
-## Security domains
+### Security domains
 
 - Assured OFFICIAL
 
 - Elevated OFFICIAL SENSITIVE
 
-## All other clouds and networks
+### All other clouds and networks
 
 UKCloud's security team will inform you of any security incidents in the usual way (that is, via the Portal).
 
