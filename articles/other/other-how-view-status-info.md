@@ -92,9 +92,11 @@ You can subscribe to the status page to receive updates when information is upda
 
     2. Click the link in the confirmation text message you receive to manage your subscriptions.
 
-4. To receive webhook notifications, click the code icon (**<>**), enter the URL to send the webhook to and the email address to send any associated error messages to, then click **Subscribe to Notifications**.
+4. To receive webhook notifications, click the code icon (**<>**), enter the URL of the endpoint to send the webhook to and the email address to send any associated error messages, then click **Subscribe to Notifications**.
 
     ![Subscribe via Webhook](images/other-status-notification-webhook.png)
+
+    You'll need to set up an endpoint to receive the webhook requests. For more information, see the Atlassian Statuspage documentation: [Webhook Notifications](https://help.statuspage.io/help/webhook-notifications).
 
 5. To subscribe to the Atom/RSS feed, click the RSS icon and then click the **Atom Feed** or **RSS Feed** link.
 
