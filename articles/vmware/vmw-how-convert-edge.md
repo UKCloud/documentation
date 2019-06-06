@@ -45,10 +45,18 @@ To complete the steps in this guide you must have access to the UKCloud Portal a
 
 Before converting your edge gateway, review the prerequisites and known issues below:
 
-- **Edge gateway version** --- When converting to an advanced gateway, your edge will be redeployed to the latest version.
-    
+- **Check your edge type** - To check whether your edge is already an advanced gateway, in vCloud Director, select your VDC, select **Edges**, then select your edge. If the **Convert to Advanced** option is greyed out, your edge has already been converted. Click **Configure Services** to manage edge settings using the vCloud Director Tenant UI.
+
+- **Edge gateway version** - When converting to an advanced gateway, your edge will be redeployed to the latest version.
+
     > [!IMPORTANT]
     > As the conversion process causes the gateway to redeploy, you should always schedule an edge conversion during an outage window.
+
+    You can find out the version of your edge in the *My VMs* page of the UKCloud Portal. Select your VDC, select the **Edge Gateway** tab, then select your edge:
+
+    ![Edge version in Portal](images/vmw-myvms-edge-version.png)
+
+    For more detailed instructions, see [*Checking the current version of your edge gateway*](vmw-how-upgrade-edge.md#checking-the-current-version-of-your-edge-gateway).
 
 - **Disabled firewalls** - On an advanced gateway, if you disable the firewall, this also stops the NAT service, as it is dependent on the firewall. As a result, traffic flow that relies on NAT, such as NAT rules and the load balancer is stopped. If you attempt to disable the firewall service, the vCloud Director Web Console will display a warning. This is due to the firewall service being used to track stateful connections. See the following VMware Knowledge Base article for more information: <https://kb.vmware.com/s/article/2093153>.
 
