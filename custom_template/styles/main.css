@@ -616,16 +616,6 @@ mark{
 }
 
 
-/** Show Grid - Template overrides */
-body.show-grid .body-content .article {
-  margin-bottom: 3em;
-}
-
-body.show-grid footer {
-  position: static;
-}
-
-
 /** Cookie notice */
 #cookie-cta {
   bottom: 0;
