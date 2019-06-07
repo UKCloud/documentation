@@ -1,6 +1,6 @@
 ---
 title: How to view UKCloud service status information | UKCloud Ltd
-description: Describes how to access the UKCloud status page to view information on the status of the services on the platform
+description: Describes how to access the UKCloud Service Status page to view information on the status of the services on the platform
 services: other
 author: Sue Highmoor
 reviewer:
@@ -20,11 +20,11 @@ toc_mdlink: other-how-view-status-info.md
 
 ## Overview
 
-The [UKCloud Status page](https://status.ukcloud.com) enables you to monitor the availability and overall health of the services on the UKCloud platform.
+The [UKCloud Service Status page](https://status.ukcloud.com) enables you to monitor the availability and overall health of the services on the UKCloud platform.
 
-![UKCloud Status page](images/other-status-page.png)
+![UKCloud Service Status page](images/other-status-page.png)
 
-## Viewing status information
+## Viewing service status information
 
 ### Platform status
 
@@ -46,11 +46,11 @@ Click **View historical uptime** to view uptime and incident information for pas
 
 ![Historic uptime](images/other-status-history.png)
 
-Upcoming maintenance work and recent incidents are listed at the bottom of the status page.
+Upcoming maintenance work and recent incidents are listed at the bottom of the Service Status page.
 
 ### Service status
 
-As well as the overall status of the platform, the status page also shows the status of each service on the UKCloud platform.
+As well as the overall status of the platform, the Service Status page also shows the status of each service on the UKCloud platform.
 
 For each service, you can see the availability over the last 90 days, with each day represented by a bar. Hover over a bar to see a popup with details for that day. If there are no issues with a service, the status is reported as `Operational`.
 
@@ -64,11 +64,11 @@ If service availability is impacted, the bar for that day displays in a differen
 
 ![Service with degraded performance](images/other-status-outage.png)
 
-## Subscribing to the status page
+## Subscribing to the Service Status page
 
-You can subscribe to the status page to receive updates when information is updated.
+You can subscribe to the Service Status page to receive updates when information is updated.
 
-1. On the UKCloud Status page, click the **Subscribe to Updates** button.
+1. On the UKCloud Service Status page, click the **Subscribe to Updates** button.
 
     ![Subscribe to Updates button](images/other-status-btn-subscribe.png)
 
