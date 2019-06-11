@@ -35,7 +35,7 @@ Advanced gateways in UKCloud for VMware provide:
 > After converting your edge gateway to an advanced gateway, the API endpoint for configuring edge services will change. Any tooling that you use to amend the edge service configuration, such as adding firewall rules, will no longer work in its current state. For more information about using the advanced gateway API, see the [*vCloud Director API for NSX Programming Guide*](https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf).
 
 > [!IMPORTANT]
-> After converting your edge to an advanced gateway, you will not be able to enable or disable logging on firewall rules via the advanced gateway GUI. To enable or disable logging, you must either use the API or raise a service request detailing the firewall rules for which you want to enable or disable logging so that we can action it on your behalf. When you convert an edge, the advanced gateway inherits the firewall logging configuration from the original edge. Enabling or disabling logging for NAT or load balancer services is not affected and you can edit those settings from the advanced gateway GUI as normal. For more information about using the API to amend firewall rules, see the [*vCloud Director API for NSX Programming Guide*](https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf).
+> After converting your edge to an advanced gateway, you will not be able to enable or disable logging on firewall rules via the advanced gateway GUI. To enable or disable logging, you must either use the API or raise a service request detailing the firewall rules for which you want to enable or disable logging so that we can action it on your behalf. When you convert an edge, the advanced gateway inherits the firewall logging configuration from the original edge. Enabling or disabling logging for NAT or load balancer services is not affected and you can edit those settings from the advanced gateway GUI as normal. For more information about using the API to amend firewall rules, see the [*vCloud Director API for NSX Programming Guide*](https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf). This issue is fixed in vCloud Director 9.7.
 
 ### Intended audience
 
@@ -45,10 +45,18 @@ To complete the steps in this guide you must have access to the UKCloud Portal a
 
 Before converting your edge gateway, review the prerequisites and known issues below:
 
-- **Edge gateway version** --- When converting to an advanced gateway, your edge will be redeployed to the latest version.
-    
+- **Check your edge type** - To check whether your edge is already an advanced gateway, in vCloud Director, select your VDC, select **Edges**, then select your edge. If the **Convert to Advanced** option is greyed out, your edge has already been converted. Click **Configure Services** to manage edge settings using the vCloud Director Tenant UI.
+
+- **Edge gateway version** - When converting to an advanced gateway, your edge will be redeployed to the latest version.
+
     > [!IMPORTANT]
     > As the conversion process causes the gateway to redeploy, you should always schedule an edge conversion during an outage window.
+
+    You can find out the version of your edge in the *My VMs* page of the UKCloud Portal. Select your VDC, select the **Edge Gateway** tab, then select your edge:
+
+    ![Edge version in Portal](images/vmw-myvms-edge-version.png)
+
+    For more detailed instructions, see [*Checking the current version of your edge gateway*](vmw-how-upgrade-edge.md#checking-the-current-version-of-your-edge-gateway).
 
 - **Disabled firewalls** - On an advanced gateway, if you disable the firewall, this also stops the NAT service, as it is dependent on the firewall. As a result, traffic flow that relies on NAT, such as NAT rules and the load balancer is stopped. If you attempt to disable the firewall service, the vCloud Director Web Console will display a warning. This is due to the firewall service being used to track stateful connections. See the following VMware Knowledge Base article for more information: <https://kb.vmware.com/s/article/2093153>.
 
