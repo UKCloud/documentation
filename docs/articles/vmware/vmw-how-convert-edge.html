@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../..//styles/assets/logo.png" srcset="../..//styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -112,18 +112,23 @@
 </div>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>After converting your edge to an advanced gateway, you will not be able to enable or disable logging on firewall rules via the advanced gateway GUI. To enable or disable logging, you must either use the API or raise a service request detailing the firewall rules for which you want to enable or disable logging so that we can action it on your behalf. When you convert an edge, the advanced gateway inherits the firewall logging configuration from the original edge. Enabling or disabling logging for NAT or load balancer services is not affected and you can edit those settings from the advanced gateway GUI as normal. For more information about using the API to amend firewall rules, see the <a href="https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf"><em>vCloud Director API for NSX Programming Guide</em></a>.</p>
+<p>After converting your edge to an advanced gateway, you will not be able to enable or disable logging on firewall rules via the advanced gateway GUI. To enable or disable logging, you must either use the API or raise a service request detailing the firewall rules for which you want to enable or disable logging so that we can action it on your behalf. When you convert an edge, the advanced gateway inherits the firewall logging configuration from the original edge. Enabling or disabling logging for NAT or load balancer services is not affected and you can edit those settings from the advanced gateway GUI as normal. For more information about using the API to amend firewall rules, see the <a href="https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf"><em>vCloud Director API for NSX Programming Guide</em></a>. This issue is fixed in vCloud Director 9.7.</p>
 </div>
 <h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this guide you must have access to the UKCloud Portal and vCloud Director.</p>
 <h2 id="prerequisites-and-known-issues">Prerequisites and known issues</h2>
 <p>Before converting your edge gateway, review the prerequisites and known issues below:</p>
 <ul>
-<li><p><strong>Edge gateway version</strong> --- When converting to an advanced gateway, your edge will be redeployed to the latest version.</p>
+<li><p><strong>Check your edge type</strong> - To check whether your edge is already an advanced gateway, in vCloud Director, select your VDC, select <strong>Edges</strong>, then select your edge. If the <strong>Convert to Advanced</strong> option is greyed out, your edge has already been converted. Click <strong>Configure Services</strong> to manage edge settings using the vCloud Director Tenant UI.</p>
+</li>
+<li><p><strong>Edge gateway version</strong> - When converting to an advanced gateway, your edge will be redeployed to the latest version.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>As the conversion process causes the gateway to redeploy, you should always schedule an edge conversion during an outage window.</p>
 </div>
+<p>You can find out the version of your edge in the <em>My VMs</em> page of the UKCloud Portal. Select your VDC, select the <strong>Edge Gateway</strong> tab, then select your edge:</p>
+<p><img src="images/vmw-myvms-edge-version.png" alt="Edge version in Portal"></p>
+<p>For more detailed instructions, see <a href="vmw-how-upgrade-edge.html#checking-the-current-version-of-your-edge-gateway"><em>Checking the current version of your edge gateway</em></a>.</p>
 </li>
 <li><p><strong>Disabled firewalls</strong> - On an advanced gateway, if you disable the firewall, this also stops the NAT service, as it is dependent on the firewall. As a result, traffic flow that relies on NAT, such as NAT rules and the load balancer is stopped. If you attempt to disable the firewall service, the vCloud Director Web Console will display a warning. This is due to the firewall service being used to track stateful connections. See the following VMware Knowledge Base article for more information: <a href="https://kb.vmware.com/s/article/2093153">https://kb.vmware.com/s/article/2093153</a>.</p>
 <p>If you convert an edge that already has the firewall disabled to an advanced gateway, the converted advanced gateway will have the firewall enabled, but with an Any, Any, Allow rule so that all traffic is allowed inbound or outbound.</p>
@@ -220,7 +225,20 @@
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
