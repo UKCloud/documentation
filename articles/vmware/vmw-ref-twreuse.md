@@ -32,8 +32,6 @@ For a further explanation of the reuse and recycle settings, refer to the follow
 
 Due to the implementation of both of these settings by default, there are instances where TCP sockets are closed prematurely. This is particularly noticeable where a large amount of NAT rules or Load balancers are configured on the edge gateway, with moderate to high traffic throughput. Depending on how the client application layer is designed to handle such interruptions in network layer communications, this may manifest to end users as application hangs or crashes.
 
-These settings can be configured by customers with the appropriate permissions through My VMs > Edge Gateway > System Control Settings.
-
 ## Feedback
 
 If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
