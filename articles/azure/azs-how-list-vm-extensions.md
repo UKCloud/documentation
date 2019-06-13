@@ -40,13 +40,13 @@ From your Powershell window run:
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Register an AzureRM environment that targets your Azure Stack instance
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Sign in to your environment
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Pull location from environment
-$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
+# Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
 
 # Retrieve VM extension list
 Get-AzureRmVmImagePublisher -Location $Location | `

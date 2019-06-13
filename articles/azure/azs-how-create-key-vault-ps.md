@@ -50,13 +50,13 @@ From your PowerShell window:
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Add environment
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Pull location from environment
-$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
+# Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
 
 # Select resource group
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"

@@ -8,7 +8,7 @@
     <title>Availability of Virtual Hardware version 11 | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Availability of Virtual Hardware version 11 | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.1.0">
+    <meta name="generator" content="docfx 2.42.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../..//styles/assets/logo.png" srcset="../..//styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -93,37 +93,50 @@
                   
 <h1 id="availability-of-virtual-hardware-version-11">Availability of Virtual Hardware version 11</h1>
 
-<h2 id="q-what-does-virtual-hardware-v11-provide">Q. What does Virtual Hardware v11 provide?</h2>
+<h2 id="what-does-virtual-hardware-v11-provide">What does Virtual Hardware v11 provide?</h2>
 <p>Virtual Hardware v11 enables UKCloud to support increased CPU limits and memory, but primarily it introduces new guest OS support as follows:</p>
-<p>Debian 8.<em>x</em>
-Solaris 11.2
-Asanux 4 SP4
-Ubuntu 12.04.5/14.04.1
-Oracle Linux 7
-FreeBSD 9.3
-MAC OSX 10.10
-Windows 2016</p>
-<h2 id="q-when-do-these-changes-take-effect">Q. When do these changes take effect?</h2>
-<p>UKCloud has already enabled these upgrades internally on our UKCloud for VMware platform.</p>
-<p>The newer virtual hardware version is already available in regions 5 and 6. Regions 1, 2, 7 and 8 will be available for customers by the end of Q3 2018. Any new VMs will, by default, be created with the updated virtual hardware version; clients are able to specifically select an earlier hardware version at the point of VM creation. Any existing VMs and templates will continue to use their currently configured virtual hardware version until such time as customers select to change this. Any clones/copies of VMs or templates will retain the same virtual hardware version as the source image.</p>
-<p>Prior to upgrading the Virtual Hardware version the following should be noted:</p>
+<ul>
+<li><p>Debian 8.<em>x</em></p>
+</li>
+<li><p>Solaris 11.2</p>
+</li>
+<li><p>Asanux 4 SP4</p>
+</li>
+<li><p>Ubuntu 12.04.5/14.04.1</p>
+</li>
+<li><p>Oracle Linux 7</p>
+</li>
+<li><p>FreeBSD 9.3</p>
+</li>
+<li><p>MAC OSX 10.10</p>
+</li>
+<li><p>Windows 2016</p>
+</li>
+</ul>
+<h2 id="when-do-these-changes-take-effect">When do these changes take effect?</h2>
+<p>UKCloud has enabled these upgrades across our entire UKCloud for VMware estate.</p>
+<p>Any new virtual machines (VMs) will, by default, be created with the updated virtual hardware version. Any existing VMs and templates will continue to use their currently configured virtual hardware version until such time as you select to change this. Any clones/copies of VMs or templates will retain the same virtual hardware version as the source image.</p>
+<p>Prior to upgrading the Virtual Hardware version, you should note the following:</p>
 <ul>
 <li><p>You cannot downgrade the hardware version of the virtual machines in a vApp</p>
 </li>
 <li><p>The vApp/VMs must be stopped and its virtual machines must have the latest version of VMware Tools installed.</p>
 </li>
 </ul>
-<h2 id="q-how-do-i-manually-upgrade-the-virtual-hardware-version-of-my-vm">Q. How do I manually upgrade the Virtual Hardware version of my VM?</h2>
+<h2 id="how-do-i-manually-upgrade-the-virtual-hardware-version-of-my-vm">How do I manually upgrade the Virtual Hardware version of my VM?</h2>
 <ol>
-<li>Log into the UKCloud Portal and access vCloud Director</li>
-<li>Click My Cloud.</li>
-<li>In the left pane, click VMs.</li>
-<li>Select a virtual machine, right-click, and select Upgrade Virtual Hardware Version.</li>
-<li>Click Yes.</li>
+<li><p>Log into the UKCloud Portal and access vCloud Director.</p>
+<p>For more detailed steps, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
+</li>
+<li><p>In the <em>Virtual Datacenters</em> dashboard, select the virtual data centre (VDC) that contains the VM you want to upgrade.</p>
+</li>
+<li><p>In the card for the VM that you want to upgrade, from the <strong>More</strong> menu, select <strong>Upgrade Virtual Hardware Version</strong>.</p>
+</li>
+<li><p>Click <strong>OK</strong> to complete the upgrade.</p>
+</li>
 </ol>
-<p><img src="images/HWVersion.jpg" alt="virtual machine properties"></p>
-<h2 id="q-are-there-precautions-i-need-to-be-aware-of">Q. Are there precautions I need to be aware of?</h2>
-<p>The update of CPU features may result in some operating systems being reconfigured on their next reboot. We advise that customers monitor the first reboot of any VMs to ensure any OS configuration changes apply correctly.</p>
+<h2 id="are-there-precautions-i-need-to-be-aware-of">Are there precautions I need to be aware of?</h2>
+<p>The update of CPU features may result in some operating systems being reconfigured on their next reboot. We advise that you monitor the first reboot of any VMs to ensure any OS configuration changes apply correctly.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
@@ -157,7 +170,20 @@ Windows 2016</p>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

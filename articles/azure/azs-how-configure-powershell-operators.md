@@ -57,7 +57,6 @@ Get-Module -Name Azs.*, Azure* -ListAvailable | Uninstall-Module -Force -Verbose
 Install-Module -Name AzureRM.BootStrapper -Verbose
 
 # Install and import the API Version Profile required by Azure Stack into the current PowerShell session
-Get-AzureRmProfile -Update
 Use-AzureRmProfile -Profile 2019-03-01-hybrid -Force
 Install-Module -Name AzureStack -RequiredVersion 1.7.2 -Verbose
 </code></pre>
@@ -85,7 +84,7 @@ Set-ExecutionPolicy RemoteSigned
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
 
 # Register an AzureRM environment that targets your Azure Stack instance
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint $ArmEndpoint
 
 # Sign in to your environment
 Connect-AzureRmAccount -EnvironmentName "AzureStackAdmin"
@@ -100,7 +99,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
 
 # Register an AzureRM environment that targets your Azure Stack instance
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint $ArmEndpoint
 
 # Create your Credentials
 $AzsUsername = "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
@@ -116,8 +115,8 @@ Connect-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackAdmin"
 
 Now that we've got everything set-up, let's use PowerShell to create resources within Azure Stack. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named "MyResourceGroup":
 
-<pre><code class="language-PowerShell"># Pull location from environment
-$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
+<pre><code class="language-PowerShell"># Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
 
 New-AzureRmResourceGroup -Name "MyResourceGroup" -Location $Location
 </code></pre>

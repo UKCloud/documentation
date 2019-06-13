@@ -65,13 +65,13 @@ From your PowerShell window:
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 ## Add environment
-$AzureStackEnvironment = Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 ## Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-## Pull location from environment
-$Location = $AzureStackEnvironment.StorageEndpointSuffix.split(".")[0]
+# Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
 
 # Input Variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
@@ -89,34 +89,34 @@ $VMSize = "<output form="vmsize" name="result" style="display: inline;">Basic_A0
 $VMImage = "*<output form="vmimage" name="result" style="display: inline;">/CentOS/Skus/6.10</output>"
 
 # Create a new resource group
-Write-Host "Creating resource group"
+Write-Output -InputObject "Creating resource group"
 New-AzureRmResourceGroup -Name $RGName -Location $Location
 
 ## Create storage resources
 
 # Create a new storage account
-Write-Host "Creating storage account"
+Write-Output -InputObject "Creating storage account"
 $StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $SAName
 
 ## Create network resources
 
 # Create a subnet configuration
-Write-Host "Creating virtual network"
+Write-Output -InputObject "Creating virtual network"
 $SubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetRange
 
 # Create a virtual network
 $VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location $Location -Name $VNetName -AddressPrefix $VNetRange -Subnet $SubnetConfig
 
 # Create a public IP address
-Write-Host "Creating public IP address"
+Write-Output -InputObject "Creating public IP address"
 $PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Location -AllocationMethod "Dynamic" -Name $PublicIPName
 
 # Create a network security group
-Write-Host "Creating network security group"
+Write-Output -InputObject "Creating network security group"
 $NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location $Location -Name $NSGName
 
 # Create a virtual network card and associate it with the public IP address and NSG
-Write-Host "Creating network interface card"
+Write-Output -InputObject "Creating network interface card"
 $NetworkInterface = New-AzureRmNetworkInterface -Name $NICName -ResourceGroupName $RGName -Location $Location -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
 
 ## Create the virtual machine
@@ -149,10 +149,10 @@ $OSDiskUri = "{0}vhds/{1}-{2}.vhd" -f $StorageAccount.PrimaryEndpoints.Blob.ToSt
 $VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -CreateOption FromImage
 
 # Create the virtual machine.
-Write-Host "Creating virtual machine"
+Write-Output -InputObject "Creating virtual machine"
 $NewVM = New-AzureRmVM -ResourceGroupName $RGName -Location $Location -VM $VirtualMachine
 $NewVM
-Write-Host "Virtual machine created successfully"
+Write-Output -InputObject "Virtual machine created successfully"
 </code></pre>
 
 ## Feedback

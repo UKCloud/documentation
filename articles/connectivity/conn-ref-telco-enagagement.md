@@ -61,7 +61,7 @@ The following telcos have a presence in Ark MMRs:
 
 - Interoute<sup>*</sup>
 
-- GTT
+- GTT<sup>*</sup>
 
 - Redcentric
 

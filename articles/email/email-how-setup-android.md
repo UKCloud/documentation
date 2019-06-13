@@ -61,22 +61,19 @@ You may also need to know:
 
     ![Add account option](images/email-android-mnu-add-account.png)
 
-3. Select **Corporate Account** from the other options
 
-    ![Corporate account option](images/email-android-mnu-corporate.png)
-
-4. Enter your **Email address** and **Password** to add an account, then tap **Next**
+3. Enter your **Email address** and **Password** to add an account, then tap **Next**
 
     ![Enter email account details](images/email-android-account-setup-email.png)
 
-5. Select **Exchange** from the type of account
+4. Select **Exchange** from the type of account
 
     ![Account type](images/email-android-account-setup-type-exchange.png)
 
     > [!NOTE]
     > ZCS 7.x does not support auto-discovery. If you want to perform auto-discovery, you need to enter the server name on the Server Settings screen.
 
-6. Complete the following fields in the Server Settings screen and then click **Next**
+5. Complete the following fields in the Server Settings screen and then click **Next**
 
     - **Username** - Your full email address (For example, `jane@coolexample.com`)
 
@@ -88,11 +85,11 @@ You may also need to know:
 
     ![Server Settings screen](images/email-android-account-setup-incoming-server.png)
 
-7. Configure your desired email account options (figure 8) and then tap **Next**
+6. Configure your desired email account options and then tap **Next**
 
     ![Account options](images/email-android-account-setup-options.png)
 
-8. Your account set up is complete. You can optionally give this account a name. Click **Done**
+7. Your account set up is complete. You can optionally give this account a name. Click **Done**
 
 ## Configuring Zimbra Mobile for Smart Phones on Windows Mobile Devices
 

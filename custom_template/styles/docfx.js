@@ -1138,3 +1138,55 @@ $(function () {
     scrollToCurrent();
   }
 });
+
+
+/** Cookie Notice */
+(function() {
+  /**
+   * Cookie name base on location
+   * @type {String}
+   */
+  var cookie_name = window.location.host.replace(/[^a-zA-Z0-9]+/ig,'') + "_cookiecta";
+
+  /**
+   * Cookie notice dismissal lifetime
+   * @type {Number}
+   */
+  var days = 30;
+
+  var triggers = document.getElementsByClassName('cookie-cta-close');
+  var target = document.getElementById('cookie-cta');
+
+  var cookie = '; ' + document.cookie;
+  var cookie_value  = cookie.split('; ' + cookie_name + '=').pop().split(';').shift();
+
+  // Check if set or element available
+  if(!target || (cookie_value && cookie_value.length > 0)) { return false; }
+
+  // Display
+  window.setTimeout(() => {
+    target.setAttribute('aria-hidden', 'false');
+    target.style.display = 'block';
+  }, 1000);
+
+  // Loop triggers
+  var triggered = false;
+  for(var i = 0; i < triggers.length; i++) {
+    // Set event
+    triggers[i].addEventListener('click', function(e) {
+      e.preventDefault();
+      if(triggered){ return false; }
+      triggered = true;
+
+      // Set cookie
+      var date = new Date();
+      date.setTime(date.getTime() + (1000 * 60 * 60 * 24 * days));
+      document.cookie = cookie_name + "=1; expires=" + date.toGMTString() + "; path=/";
+
+      // Remove self
+      target.parentNode.removeChild(target);
+
+      return true;
+    });
+  }
+})();
