@@ -64,9 +64,11 @@ To convert your edge to an advanced gateway:
 
 2. In the left navigation panel, click **Edges**.
 
-    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
+    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
 
-3. Select the edge that you want to convert and click the **Convert to Advanced** button.
+3. Select the edge that you want to convert and click **Convert to Advanced**.
+
+    ![Convert to Advanced button](images/vmw-vcd-edge-btn-convert.png)
 
 4. Click **Yes** to start the conversion.
 
