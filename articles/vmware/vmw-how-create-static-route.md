@@ -32,17 +32,17 @@ To create a static route:
 
 2. In the left navigation panel, click **Edges**.
 
-    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
+    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
 
-3. Select the edge that you want to configure and click the **Configure Services** button.
+3. Select the edge that you want to configure and click **Configure Services**.
 
-    ![Configure Services button](images/vmw-vcd91-btn-configure-services.png)
+    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
 
-4. Select the **Routing** tab.
+4. Select the **Routing** tab then the **Static Routes** tab.
 
-    ![Routing tab](images/vmw-vcd-adv-edg-tab-routing.png)
+    ![Routing tab](images/vmw-vcd-edge-tab-static-route.png)
 
-5. On the **Static Routes** tab, click the **+** button.
+5. Click the **+** button.
 
     ![Add static route button](images/vmw-vcd-adv-edg-btn-add-static-route.png)
 
@@ -50,7 +50,7 @@ To create a static route:
 
     ![Add Static Route dialog box](images/vmw-vcd-adv-edg-add-static-route.png)
 
-7. When you're done, click **Keep** then click **Save changes**.
+7. When you're done, click **Keep** then **Save changes**.
 
 8. Repeat the steps for the second VDC.
 
