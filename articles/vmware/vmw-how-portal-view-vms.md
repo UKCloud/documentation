@@ -97,9 +97,6 @@ The **Edge Gateways**  tab shows the version of the edge gateways in your VDCs.
 
 4. For information about how to upgrade your edge gateway to the latest version, see [*How to upgrade your edge gateway*](vmw-how-upgrade-edge.md)
 
-> [!NOTE]
-> The remaining features of the **Edge Gateway** tab have been deprecated.
-
 ## Viewing bandwidth monitoring information
 
 The **Bandwidth Monitoring** tab displays bandwidth statistics for the edge gateways within your VDCs.
