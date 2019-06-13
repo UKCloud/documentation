@@ -100,17 +100,17 @@ Make sure to scroll through the list of operating systems to find the one you wa
 
 #### Description
 
-Status icon for edge does not change even though there are issues with IPsec VPN or load balancing
+Status icon for edge does not change even though there are issues with IPsec VPN or load balancing.
 
 #### Solution
 
 There is currently no workaround for this issue. We have raised a bug with VMware.
 
-### Edge with a VPN that uses the AES-GCM cannot be managed in the Tenant UI
+### Edge with a VPN using AES-GCM encryption algorithm cannot be managed in the Tenant UI
 
 #### Description
 
-After setting up a VPN, if the encryption algorithm is set to AES-GCM the edge is no longer manageable in Tenant UI and errors with "class java.lang.NullPointerException"
+After setting up a VPN, if the encryption algorithm is set to `AES-GCM` the edge is no longer manageable in Tenant UI and errors with `"class java.lang.NullPointerException"`.
 
 #### Solution
 
