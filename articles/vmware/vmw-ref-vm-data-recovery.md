@@ -49,19 +49,9 @@ You can create only one snapshot for each VM, with each subsequent snapshot over
 
 ### How to create a VM snapshot
 
-# [Using the Tenant UI](#tab/tabid-1)
-
 In the card for the VM that you want to create a snapshot for, select **Actions** then **Create Snapshot**.
 
-![Create Snapshot menu option in Tenant Portal](images/vmw-vcd-mnu-create-snapshot.png)
-
-# [Using the Legacy UI](#tab/tabid-2)
-
-You can create a VM snapshot within the vCloud Director Legacy UI by right-clicking the VM that you want to create a snapshot for and selecting **Create Snapshot**.
-
-![Create Snapshot menu option in Legacy UI](images/vcd_snapshot.png)
-
-***
+![Create Snapshot menu option](images/vmw-vcd-mnu-create-snapshot.png)
 
 ## VM copy
 
@@ -83,19 +73,9 @@ You must power down the VM prior to taking a copy. Each additional copy will con
 
 ### How to create a VM copy
 
-# [Using the Tenant UI](#tab/tabid-1)
-
 In the card for the VM that you want to copy, select **Actions** then **Copy to**.
 
-![Copy VM menu option in Tenant Portal](images/vmw-vcd-mnu-copy-vm.png)
-
-# [Using the Legacy UI](#tab/tabid-2)
-
-You can create a VM copy within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to copy and selecting **Copy to**.
-
-![Copy VM menu optin in Legacy UI](images/vcd_copy.png)
-
-***
+![Copy VM menu option](images/vmw-vcd-mnu-copy-vm.png)
 
 ## VM backup
 
