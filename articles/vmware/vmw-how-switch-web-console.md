@@ -27,13 +27,17 @@ Tasks that you cannot perform in the Tenant UI include:
 
 - Viewing virtual data centre (VDC) properties, such as metadata
 
+- Uploading ISO and FLP media as a URL
+
 ## Switching to the Legacy UI
 
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC you want to work with.
+1. In the top-right corner of the vCloud Director Tenant UI, click your user name, then select **Legacy UI**.
 
-2. On the *vApps* or *Virtual Machines* page, click **See this page in vCloud Director Web Console**.
+    ![Legacy UI menu option](images/vmw-vcd-mnu-legacy-ui.png)
 
-    ![vCloud Director web console link](images/vmw-vcd91-web-console.png)
+2. To return to the Tenant UI, click **Try the new portal** at the top of the page.
+
+    ![Tenant UI link](images/vmw-vcd-mnu-tenant-ui.png)
 
 ## Feedback
 
