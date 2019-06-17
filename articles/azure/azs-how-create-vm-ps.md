@@ -133,7 +133,7 @@ $VirtualMachine = New-AzureRmVMConfig -VMName $VMName -VMSize $VMSize
 $VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result" style="display: inline;">-Linux</output> -ComputerName $ComputerName -Credential $Credential
 
 # Get the VM Source Image
-$Image = Get-AzureRmVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object {$_.Id -like $VMImage}
+$Image = Get-AzureRmVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object -FilterScript {$_.Id -like $VMImage}
 
 # Set the VM Source Image
 $VirtualMachine = Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version "latest"
