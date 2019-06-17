@@ -208,7 +208,7 @@ Enter details below to provide values for the variables in the following scripts
 
     ```powershell
     # Obtain public IP of your VM based on the variables from above
-    $IpAddress= (Get-AzureRmPublicIpAddress -ResourceGroupName $RGName | Where-Object { $_.IpConfiguration.Id -like "*$VMName*" })
+    $IpAddress= (Get-AzureRmPublicIpAddress -ResourceGroupName $RGName | Where-Object -FilterScript { $_.IpConfiguration.Id -like "*$VMName*" })
     # Start RDP session to your VM
     Start-Process "mstsc" -ArgumentList "/v:$($IpAddress.IpAddress)"
     ```

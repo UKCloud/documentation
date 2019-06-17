@@ -88,11 +88,11 @@ else {
 Stop-AzureRmVM -Name $VMName -ResourceGroupName $RGName -Force
 
 # Get VM current networking details
-$Nic = (Get-AzureRmNetworkInterface | Where-Object { $_.VirtualMachine.Id -like $VM.Id })
-$PublicIp = Get-AzureRmPublicIpAddress | Where-Object { $_.Id -like $Nic.IpConfigurations.PublicIpAddress.Id }
+$Nic = (Get-AzureRmNetworkInterface | Where-Object -FilterScript { $_.VirtualMachine.Id -like $VM.Id })
+$PublicIp = Get-AzureRmPublicIpAddress | Where-Object -FilterScript { $_.Id -like $Nic.IpConfigurations.PublicIpAddress.Id }
 
 # Get new virtual network details
-$NewVNet = Get-AzureRmVirtualNetwork | Where-Object { $_.Name -like $NewNetworkName }
+$NewVNet = Get-AzureRmVirtualNetwork | Where-Object -FilterScript { $_.Name -like $NewNetworkName }
 $NewSubnet = Get-AzureRmVirtualNetworkSubnetConfig -VirtualNetwork $NewVNet -Name $NewSubnetName
 
 # Create new VM networking resources
@@ -104,7 +104,7 @@ $NewNic = New-AzureRmNetworkInterface -Name $NewNicName -ResourceGroupName $NewV
 if ($VM.StorageProfile.DataDisks) {
     $Lun = 0
     if ($ManagedDisks) {
-        $Disks = Get-AzureRmDisk -ResourceGroupName $RGName | Where-Object { $_.ManagedBy -like "*$VMName" } | Where-Object { $_.Id -notlike $VM.StorageProfile.OsDisk.ManagedDisk.Id }
+        $Disks = Get-AzureRmDisk -ResourceGroupName $RGName | Where-Object -FilterScript { $_.ManagedBy -like "*$VMName" } | Where-Object -FilterScript { $_.Id -notlike $VM.StorageProfile.OsDisk.ManagedDisk.Id }
     }
     else {
         $Disks = $VM.StorageProfile.DataDisks

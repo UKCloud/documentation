@@ -97,7 +97,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 ### Connect to environment
 $AzsContext = (Connect-AzureRmAccount -EnvironmentName "AzureStackUser").Context
 ### Retrieve Access token
-$AzsAccessToken = ($AzsContext.TokenCache.ReadItems() | Where-Object { $_.TenantId -eq $AzsContext.Tenant.Id } | Sort-Object -Property ExpiresOn -Descending)[0].AccessToken
+$AzsAccessToken = ($AzsContext.TokenCache.ReadItems() | Where-Object -FilterScript { $_.TenantId -eq $AzsContext.Tenant.Id } | Sort-Object -Property ExpiresOn -Descending)[0].AccessToken
 ### Get location of Azure Stack
 $AzsLocation = (Get-AzureRmLocation).Location
 
