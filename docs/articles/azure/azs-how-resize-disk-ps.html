@@ -8,7 +8,7 @@
     <title>How to resize a disk using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to resize a disk using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.43.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -357,7 +357,7 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 <ol>
 <li><p>Open an RDP connection to your VM.</p>
 <pre><code class="lang-powershell"># Obtain public IP of your VM based on the variables from above
-$IpAddress= (Get-AzureRmPublicIpAddress -ResourceGroupName $RGName | Where-Object { $_.IpConfiguration.Id -like &quot;*$VMName*&quot; })
+$IpAddress= (Get-AzureRmPublicIpAddress -ResourceGroupName $RGName | Where-Object -FilterScript { $_.IpConfiguration.Id -like &quot;*$VMName*&quot; })
 # Start RDP session to your VM
 Start-Process &quot;mstsc&quot; -ArgumentList &quot;/v:$($IpAddress.IpAddress)&quot;
 </code></pre>

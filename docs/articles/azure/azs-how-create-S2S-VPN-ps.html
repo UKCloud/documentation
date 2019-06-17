@@ -8,7 +8,7 @@
     <title>How to create a site-to-site VPN connection using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a site-to-site VPN connection using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.43.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -255,7 +255,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 ### Connect to environment
 $AzsContext = (Connect-AzureRmAccount -EnvironmentName "AzureStackUser").Context
 ### Retrieve Access token
-$AzsAccessToken = ($AzsContext.TokenCache.ReadItems() | Where-Object { $_.TenantId -eq $AzsContext.Tenant.Id } | Sort-Object -Property ExpiresOn -Descending)[0].AccessToken
+$AzsAccessToken = ($AzsContext.TokenCache.ReadItems() | Where-Object -FilterScript { $_.TenantId -eq $AzsContext.Tenant.Id } | Sort-Object -Property ExpiresOn -Descending)[0].AccessToken
 ### Get location of Azure Stack
 $AzsLocation = (Get-AzureRmLocation).Location
 

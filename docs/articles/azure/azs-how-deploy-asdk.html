@@ -8,7 +8,7 @@
     <title>How to deploy and configure the Azure Stack Development Kit | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to deploy and configure the Azure Stack Development Kit | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.43.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -163,13 +163,13 @@ In the Value column, enter TRUE. This will show correct disk IDs in Get-Physical
 <tbody>
 <tr>
 <td>1372</td>
-<td><code>elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'Virtual Disk') {</code></td>
-<td><code>elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'null') {</code></td>
+<td><code>elseif ((get-disk | Where-Object -FilterScript {$_.isboot -eq $true}).Model -match 'Virtual Disk') {</code></td>
+<td><code>elseif ((get-disk | Where-Object -FilterScript {$_.isboot -eq $true}).Model -match 'null') {</code></td>
 </tr>
 </tbody>
 </table>
 <p>To run:</p>
-<pre><code class="lang-powershell">Get-Content -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; | foreach {($_ -replace &quot;elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{&quot;, &quot;elseif ((get-disk | Where-Object {`$====_.isboot -eq `$true}).Model -match 'null') {&quot;) -replace &quot;====&quot;,&quot;&quot;} | Set-Content -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; -Force
+<pre><code class="lang-powershell">Get-Content -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; | foreach {($_ -replace &quot;elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{&quot;, &quot;elseif ((get-disk | Where-Object -FilterScript {`$====_.isboot -eq `$true}).Model -match 'null') {&quot;) -replace &quot;====&quot;,&quot;&quot;} | Set-Content -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; -Force
 </code></pre>
 <p>To verify:</p>
 <pre><code class="lang-powershell">Select-String -Path &quot;C:\AzureStack_Installer\asdk-installer.ps1&quot; -Pattern &quot;elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'null'\) \`{&quot;
