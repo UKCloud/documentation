@@ -184,10 +184,10 @@
     href: vmw-ref-storage-policies.md
   - name: System Center on the UKCloud platform
     href: vmw-ref-system-center.md
+  - name: TCP_TW_REUSE and TCP_TW_RECYCLE settings
+    href: vmw-ref-twreuse.md
   - name: Tier 1 storage
     href: vmw-ref-tier1-storage.md
-  - name: TW_REUSE and TW_RECYCLE settings
-    href: vmw-ref-twreuse.md
   - name: Two Factor Authentication
     href: vmw-ref-two-factor-auth.md
   - name: UKCloud for VMware options
