@@ -198,6 +198,8 @@
     href: vmw-ref-vcd-820.md
   - name: Upgrade to vCloud Director 9.1
     href: vmw-ref-vcd-91.md
+  - name: vCloud Director 9.7 known issues
+    href: vmw-ref-vcd97-known-issues.md
   - name: vCloud Director Healthcheck
     href: vmw-ref-vcd-healthcheck.md
   - name: Virtual machine data recovery options
