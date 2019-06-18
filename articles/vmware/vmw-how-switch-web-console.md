@@ -23,11 +23,11 @@ For some tasks, you cannot use the Tenant UI; to perform these tasks, you must f
 
 Tasks that you cannot perform in the Tenant UI include:
 
-- Editing vApp network settings
-
-- Viewing virtual data centre (VDC) properties, such as metadata
-
 - Uploading ISO and FLP media as a URL
+
+- Viewing vApp template description, including OS password and patch dates
+
+- Changing VDC default storage policy
 
 ## Switching to the Legacy UI
 
