@@ -78,11 +78,11 @@ To make sure that a VM is fully powered off, select the **Power Off** option fro
 
 #### Description
 
-When adding a new NIC in the *Hardware* section of the VM details page, it is not possible to specify the NIC type.
+When adding a new NIC in the *Hardware* section of the VM details page, you cannot see or edit the NIC type.
 
 #### Solution
 
-<Is there a solution for this one?>
+There is currently no workaround for this issue. We have raised a bug with VMware.
 
 ### The list of operating systems when creating a VM is not logically ordered
 
