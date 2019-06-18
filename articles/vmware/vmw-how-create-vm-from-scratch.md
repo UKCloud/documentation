@@ -39,9 +39,9 @@ For information about creating a VM from a template, see [*How to create a VM fr
     > [!TIP]
     > To create a new vApp, see [*How to create a vApp*](vmw-how-create-vapp.md).
     > 
-    > To create a standalone VM, in the left navigation panel, select the **Virtual Machines** tab, then click **New VM**.
+    > To create a standalone VM, in the left navigation panel, select **Virtual Machines**, then click **New VM**.
 
-4. In the *Add VMs* page, click **Add Virtual Machine**.
+4. In the *Add VMs* dialog box, click **Add Virtual Machine**.
 
     ![Add Virtual Machine button](images/vmw-vcd91-btn-add-vm.png)
 
@@ -96,7 +96,7 @@ For information about creating a VM from a template, see [*How to create a VM fr
 
 13. Back in the *Add VMs* dialog box, you can add more VMs or click **Add** when you're done.
 
-    You can monitor progress in the *Add VMs* dialog box, or **Cancel** to return to the list of vApps while the VM is created in the background.
+    You can monitor progress in the *Add VMs* dialog box, or click **Cancel** to return to the list of vApps while the VM is created in the background.
 
     The VM will be deployed as bare metal.
 
