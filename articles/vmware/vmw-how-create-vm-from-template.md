@@ -89,7 +89,7 @@ For information about creating a VM from scratch, see [*How to create a VM from 
 
     - Configure *CPU* and *Memory*.
 
-    - In the *Storage* section, you edit configure storage or **Add** more disks.
+    - In the *Storage* section, you can configure storage or **Add** more disks.
 
     - In the *NICs* section, you can **Add** the VM to a network and select an **IP Mode** to determine how IP addresses are assigned:
 
