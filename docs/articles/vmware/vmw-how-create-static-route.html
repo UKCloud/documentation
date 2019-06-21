@@ -94,67 +94,29 @@
 <h1 id="how-to-create-a-static-route">How to create a static route</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Static routing allows you to configure your edge gateway to indicate to other networks how to get to further networks. It's particularly useful if you need to route between virtual data  centres (VDCs) in the same vOrg. Static routing is the only option in vCloud Director; routing protocol cannot be used.</p>
+<p>Static routing allows you to configure your edge gateway to indicate to other networks how to get to further networks. It's particularly useful if you need to route between virtual data centres (VDCs) in the same vOrg. Static routing is the only option in vCloud Director; routing protocol cannot be used.</p>
 <p>As an example, you may have a vApp network <code>192.168.8.0/24</code> routed to a VDC network called <code>Front end network</code>. You could create a static route to enable traffic to get to the outside IP of the vApp edge at <code>192.168.4.33</code> (a NAT will exist there).</p>
-<p>The steps for creating a static route vary depending on what type of edge gateway you're working with:</p>
-<ul>
-<li><p><a href="#creating-a-static-route-for-an-advanced-gateway">Creating a static route for an advanced gateway</a></p>
-</li>
-<li><p><a href="#creating-a-static-route-for-a-standard-edge">Creating a static route for a standard edge</a></p>
-</li>
-</ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>We recommend that you convert your edge to an advanced gateway to access the latest vCloud Director functionality. For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
-</div>
-<h2 id="creating-a-static-route-for-an-advanced-gateway">Creating a static route for an advanced gateway</h2>
-<p>To create a static route on your advanced gateway:</p>
+<h2 id="creating-a-static-route">Creating a static route</h2>
+<p>To create a static route:</p>
 <ol>
-<li><p>In vCloud Director, access the edge gateway settings.</p>
-<p>For more detailed instructions, see <a href="vmw-how-access-edge.html"><em>How to access edge gateway settings</em></a></p>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway in which you to create the static route.</p>
 </li>
-<li><p>Select the <strong>Routing</strong> tab.</p>
-<p><img src="images/vmw-vcd-adv-edg-tab-routing.png" alt="Routing tab"></p>
+<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
 </li>
-<li><p>On the <strong>Static Routes</strong> tab, click the <strong>+</strong> button.</p>
+<li><p>Select the edge that you want to configure and click <strong>Configure Services</strong>.</p>
+<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services button"></p>
+</li>
+<li><p>Select the <strong>Routing</strong> tab then the <strong>Static Routes</strong> tab.</p>
+<p><img src="images/vmw-vcd-edge-tab-static-route.png" alt="Routing tab"></p>
+</li>
+<li><p>Click the <strong>+</strong> button.</p>
 <p><img src="images/vmw-vcd-adv-edg-btn-add-static-route.png" alt="Add static route button"></p>
 </li>
 <li><p>In the <em>Add Static Route</em> dialog box, fill in the details of the network range, next hop (edge IP) and select the network interface to which you want to apply the static route.</p>
 <p><img src="images/vmw-vcd-adv-edg-add-static-route.png" alt="Add Static Route dialog box"></p>
 </li>
-<li><p>When you're done, click <strong>Keep</strong> then click <strong>Save changes</strong>.</p>
-</li>
-<li><p>Repeat the steps for the second VDC.</p>
-</li>
-</ol>
-<h2 id="creating-a-static-route-for-a-standard-edge">Creating a static route for a standard edge</h2>
-<div class="NOTE">
-<h5>Note</h5>
-<p>You can only manage advanced gateways in the new vCloud Director 9.1 tenant portal. If you're working with a standard edge gateway, you must first switch to the vCloud Director web console to manage the edge. For more information, see <a href="vmw-how-switch-web-console.html"><em>How to switch to the vCloud Director web console from the tenant portal</em></a>.</p>
-</div>
-<p>To create a static route on your standard edge:</p>
-<ol>
-<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
-<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
-</li>
-<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
-</li>
-<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
-</li>
-<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
-</li>
-<li><p>Select the <strong>Static Routing</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-static-routing-reg.png" alt="Static Routing tab"></p>
-</li>
-<li><p>Click <strong>Add</strong>.</p>
-<p><img src="images/vmw-vcd-btn-add-static-route-reg.png" alt="Add static route button"></p>
-</li>
-<li><p>Choose the network to which you want to apply the static route, give the static route a name, then fill in the network details.</p>
-<p><img src="images/vmw-vcd-add-static-route-reg.png" alt="Add Static Route dialog box"></p>
-</li>
-<li><p>When you're finished, click <strong>OK</strong>.</p>
+<li><p>When you're done, click <strong>Keep</strong> then <strong>Save changes</strong>.</p>
 </li>
 <li><p>Repeat the steps for the second VDC.</p>
 </li>

@@ -96,22 +96,16 @@
 <h2 id="overview">Overview</h2>
 <p>With VDC networks you have the option of creating an IP pool of addresses to be assigned automatically or manually (known as a static IP pool). These addresses are injected into virtual machines (VMs) via VMware Tools during Guest Customisation. They appear in the usual places in Windows and Linux where you would interrogate IP settings, and show as static addresses.</p>
 <p>In some situations, you may require true DHCP functionality in your VMs, so that IP addresses are shown as dynamically defined. As with an IP pool, you're defining a non-overlapping range of IP addresses to use on the network.</p>
-<p>The steps for creating a DHCP pool vary depending on what type of edge gateway you're working with:</p>
-<ul>
-<li><p><a href="#creating-a-dhcp-pool-for-an-advanced-gateway"><em>Creating a DHCP pool for an advanced gateway</em></a></p>
-</li>
-<li><p><a href="#creating-a-dhcp-pool-for-a-standard-edge"><em>Creating a DHCP pool for a standard edge</em></a></p>
-</li>
-</ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>We recommend that you convert your edge to an advanced gateway to access the latest vCloud Director functionality. For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
-</div>
 <h2 id="creating-a-dhcp-pool-for-an-advanced-gateway">Creating a DHCP pool for an advanced gateway</h2>
-<p>To create DHCP pools on an advanced gateway:</p>
+<p>To create a DHCP pool:</p>
 <ol>
-<li><p>In vCloud Director, access the edge gateway settings.</p>
-<p>For more detailed instructions, see <a href="vmw-how-access-edge.html"><em>How to access edge gateway settings</em></a></p>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway in which you to create the DHCP pool.</p>
+</li>
+<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd91-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+</li>
+<li><p>Select the edge that you want to configure and click <strong>Configure Services</strong>.</p>
+<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services button"></p>
 </li>
 <li><p>Select the <strong>DHCP</strong> tab.</p>
 <p><img src="images/vmw-vcd-adv-edge-tab-dhcp.png" alt="DHCP tab"></p>
@@ -123,36 +117,6 @@
 <p><img src="images/vmw-vcd-add-dhcp-pool-adv.png" alt="Add DHCP Pool dialog box"></p>
 </li>
 <li><p>When you're finished, click <strong>Keep</strong>.</p>
-</li>
-</ol>
-<h2 id="creating-a-dhcp-pool-for-a-standard-edge">Creating a DHCP pool for a standard edge</h2>
-<div class="NOTE">
-<h5>Note</h5>
-<p>You can only manage advanced gateways in the new vCloud Director 9.1 tenant portal. If you're working with a standard edge gateway, you must first switch to the vCloud Director web console to manage the edge. For more information, see <a href="vmw-how-switch-web-console.html"><em>How to switch to the vCloud Director web console from the tenant portal</em></a>.</p>
-</div>
-<p>To create DHCP pools on a standard edge:</p>
-<ol>
-<li><p>In vCloud Director, select the <strong>Administration</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
-<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
-</li>
-<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
-</li>
-<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
-</li>
-<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
-</li>
-<li><p>Select the <strong>DHCP</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-dhcp-reg.png" alt="DHCP tab"></p>
-</li>
-<li><p>Click <strong>Add</strong>.</p>
-<p><img src="images/vmw-vcd-btn-add-dhcp-reg.png" alt="Add DHCP button"></p>
-</li>
-<li><p>Select the network to which you want to apply the DHCP pool, then define an IP range for the pool. You can leave the lease times as default or change them.</p>
-<p><img src="images/vmw-vcd-add-dhcp-pool-reg.png" alt="Add DHCP Pool dialog box"></p>
-</li>
-<li><p>When you're finished, click <strong>OK</strong>.</p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>

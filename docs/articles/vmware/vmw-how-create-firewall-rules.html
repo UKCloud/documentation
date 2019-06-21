@@ -106,26 +106,20 @@
 <li><p>The keywords <code>internal</code>, <code>external</code> or <code>any</code></p>
 </li>
 </ul>
-<p>The steps for creating firewall rules vary depending on what type of edge gateway you're working with:</p>
-<ul>
-<li><p><a href="#creating-firewall-rules-for-an-advanced-gateway"><em>Creating firewall rules for an advanced gateway</em></a></p>
-</li>
-<li><p><a href="#creating-firewall-rules-for-a-standard-edge"><em>Creating firewall rules for a standard edge</em></a></p>
-</li>
-</ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>We recommend that you convert your edge to an advanced gateway to access the latest vCloud Director functionality. For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
-</div>
 <div class="NOTE">
 <h5>Note</h5>
 <p>NAT rules only work if the firewall is enabled. For security reasons, you should ensure that the firewall is always enabled.</p>
 </div>
-<h2 id="creating-firewall-rules-for-an-advanced-gateway">Creating firewall rules for an advanced gateway</h2>
-<p>To create a firewall rule on an advanced gateway:</p>
+<h2 id="creating-firewall-rules">Creating firewall rules</h2>
+<p>To create a firewall rule:</p>
 <ol>
-<li><p>In vCloud Director, access the edge gateway settings.</p>
-<p>For more detailed instructions, see <a href="vmw-how-access-edge.html"><em>How to access edge gateway settings</em></a></p>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway in which you to create the firewall rules.</p>
+</li>
+<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+</li>
+<li><p>Select the edge that you want to configure and click <strong>Configure Services</strong>.</p>
+<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services button"></p>
 </li>
 <li><p>Select the <strong>Firewall</strong> tab.</p>
 <p><img src="images/vmw-vcd-adv-edge-tab-firewall.png" alt="Firewall tab"></p>
@@ -134,7 +128,7 @@
 <p><img src="images/vmw-vcd-adv-edge-firewall-add.png" alt="Add firewall button"></p>
 </li>
 <li><p>For the <strong>New Rule</strong>, specify a <strong>Name</strong>.</p>
-<p><img src="images/vmw-vcd-adv-edge-firewall-new-rule.png" alt="New firewall rule"></p>
+<p><img src="images/vmw-vcd-edge-firewall-new-rule.png" alt="New firewall rule"></p>
 </li>
 <li><p>In the <strong>Source</strong> and <strong>Destination</strong> fields, specify the source and destination addresses for the firewall rule.</p>
 <ul>
@@ -154,46 +148,11 @@
 </li>
 <li><p>Select whether the rule is an <strong>Accept</strong> or <strong>Deny</strong> rule.</p>
 </li>
+<li><p>If you have a syslog server configured, select the <strong>Enable logging</strong> check box.</p>
+<p>For more information about syslog servers, see <a href="vmw-how-access-syslog-data-adv.html"><em>How to access syslog data for your advanced gateway</em></a>.</p>
+</li>
 <li><p>Click <strong>Save changes</strong>.</p>
 <p><img src="images/vmw-vcd-adv-edge-firewall-save.png" alt="Save changes link on Firewall tab"></p>
-</li>
-</ol>
-<h2 id="creating-firewall-rules-for-a-standard-edge">Creating firewall rules for a standard edge</h2>
-<div class="NOTE">
-<h5>Note</h5>
-<p>You can only manage advanced gateways in the new vCloud Director 9.1 tenant portal. If you're working with a standard edge gateway, you must first switch to the vCloud Director web console to manage the edge. For more information, see <a href="vmw-how-switch-web-console.html"><em>How to switch to the vCloud Director web console from the tenant portal</em></a>.</p>
-</div>
-<p>To create a firewall rule on a standard edge:</p>
-<ol>
-<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
-<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
-</li>
-<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
-</li>
-<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
-</li>
-<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
-</li>
-<li><p>Select the <strong>Firewall</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-firewall-reg.png" alt="Firewall tab"></p>
-</li>
-<li><p>Click <strong>Add</strong>.</p>
-<p><img src="images/vmw-vcd-btn-add-firewall-reg.png" alt="Add button on the Firewall tab"></p>
-</li>
-<li><p>Give the rule a name and assign a source IP address and source port type. This can be any port or a specific port number.</p>
-</li>
-<li><p>Add a destination IP address and port, then choose which protocol to assign to the rule.</p>
-</li>
-<li><p>Select whether to make the rule an <strong>Allow</strong> or <strong>Deny</strong> rule, and whether to log the network traffic for this particular rule. (Log viewing is currently not available owing to the multi-tenant nature of the environment. We are working to make this feature available in the future.)</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>With firewall rules, you are allowing packets through from the external network to the public IP address which is subsequently NAT-ed. A common mistake is to create firewall rules from <code>external</code> to an internal Org Network IP address or range.</p>
-</div>
-<p><img src="images/vmw-vcd-firewall-add-rule-reg.png" alt="Edit Firewall Rule dialog box"></p>
-</li>
-<li><p>When you're finished, click <strong>OK</strong>.</p>
 </li>
 </ol>
 <h2 id="example">Example</h2>
@@ -202,14 +161,11 @@
 <ul>
 <li><p>Assured OFFICIAL platform, you're assigned five public IP addresses</p>
 </li>
-<li><p>Elevated OFFICIAL platform, you're assigned three PSN-P IP addresses</p>
+<li><p>Elevated OFFICIAL platform, you're assigned three PSN IP addresses</p>
 </li>
 </ul>
-<p>In the examples below, the source is <code>any</code> (any IP address within the VDC). The source port is also <code>any</code>. The destination is a public IP address and the destination port is <code>443</code> for HTTPS.</p>
-<h3 id="advanced-gateway">Advanced gateway</h3>
-<p><img src="images/vmw-vcd-firewall-add-rule-ssh-adv.png" alt="Firewall rule to allow SSH through from the internet - advanced gateway"></p>
-<h3 id="standard-edge">Standard edge</h3>
-<p><img src="images/vmw-vcd-firewall-add-rule-ssh-reg.png" alt="Firewall rule to allow SSH through from the internet - standard edge"></p>
+<p>In the example below, the source is <code>any</code> (any IP address within the VDC). The source port is also <code>any</code>. The destination is a public IP address and the destination port is <code>443</code> for HTTPS.</p>
+<p><img src="images/vmw-vcd-firewall-add-rule-ssh-adv.png" alt="Firewall rule to allow SSH through from the internet"></p>
 <h2 id="next-steps">Next steps</h2>
 <p>In this article you've learned how to create firewall rules. For other edge gateway configuration tasks, see:</p>
 <ul>

@@ -114,26 +114,8 @@
 <h3 id="cons">Cons</h3>
 <p>You can create only one snapshot for each VM, with each subsequent snapshot overwriting the previous one. You should use snapshots only as a temporary solution, as the longer the snapshot is running, the more changes will be lost should the snapshot be restored. In addition, due to the way that snapshots capture all changes to a separate file, storage costs will increase as a result of having to store both the original master VM image and you may also encounter a negative impact to the overall performance of the VM.</p>
 <h3 id="how-to-create-a-vm-snapshot">How to create a VM snapshot</h3>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Using vCloud Director 8.20</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Using vCloud Director 9.1</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
-
-<p>You can create a VM snapshot within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to create a snapshot for and selecting <strong>Create Snapshot</strong>.</p>
-<p><img src="images/vcd_snapshot.png" alt="Snapshot creation in vCloud Director 8.20"></p>
-</section>
-<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-
-<p>In the card for the VM that you want to create a snapshot for, click <strong>More</strong> and select <strong>Create Snapshot</strong>.</p>
-<p><img src="images/vmw-vcd91-mnu-create-snapshot.png" alt="Snapshot creation in vCloud Director 9.1"></p>
-</section>
-</div>
+<p>In the card for the VM that you want to create a snapshot for, select <strong>Actions</strong> then <strong>Create Snapshot</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-create-snapshot.png" alt="Create Snapshot menu option"></p>
 <h2 id="vm-copy">VM copy</h2>
 <p>When you copy a VM, you create an exact replica of the VM in either the same vApp or a different vApp.</p>
 <p><img src="images/copy.png" alt="How Master and copy images differ with changes over time"></p>
@@ -144,25 +126,8 @@
 <h3 id="cons-1">Cons</h3>
 <p>You must power down the VM prior to taking a copy. Each additional copy will consume as much storage as the original and consume additional memory and CPU cycles while the VMs are running.</p>
 <h3 id="how-to-create-a-vm-copy">How to create a VM copy</h3>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Using vCloud Director 8.20</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-2" data-tab="tabid-2" tabindex="-1">Using vCloud Director 9.1</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-1" role="tabpanel" data-tab="tabid-1">
-
-<p>You can create a VM copy within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to copy and selecting <strong>Copy to</strong>.</p>
-<p><img src="images/vcd_copy.png" alt="VM copy in vCloud Director 8.20"></p>
-</section>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-
-<p>In the vCloud Director 9.1 tenant portal, you can only copy entire vApps. To copy a single VM, you need to switch to the vCloud Director Web Console and follow the steps for vCloud Director 8.20.</p>
-</section>
-</div>
+<p>In the card for the VM that you want to copy, select <strong>Actions</strong> then <strong>Copy to</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-copy-vm.png" alt="Copy VM menu option"></p>
 <h2 id="vm-backup">VM backup</h2>
 <p>You should view backup as a disaster recovery mechanism, whereby you can restore entire environments or individual files in the event of the original becoming unavailable as a result of corruption or accidental deletion.</p>
 <p>You can add any VM to the automated snapshot backup schedule so that it is automatically backed up on a daily basis. You can choose to retain snapshot backups for either 14 or 28 days. Data is backed up at the hypervisor level and provides a crash‑consistent image.</p>
@@ -173,8 +138,7 @@
 <h3 id="cons-2">Cons</h3>
 <p>Time taken for a restoration request to be completed (dependent on the amount of data to be restored).</p>
 <h3 id="how-to-add-a-vm-to-the-automated-snapshot-backup-schedule">How to add a VM to the automated snapshot backup schedule</h3>
-<p>For information about how to add a VM to the automated backup schedule, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage snapshot protection for your VMs</em></a>
-in the Knowledge Centre.</p>
+<p>For information about how to add a VM to the automated backup schedule, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage snapshot protection for your VMs</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 

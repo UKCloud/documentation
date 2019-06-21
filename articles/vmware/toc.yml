@@ -120,7 +120,7 @@
     href: vmw-how-retrieve-utilisation-metrics.md
   - name: Securely manage permissions for a specific vApp
     href: vmw-how-manage-vapp-permissions.md
-  - name: Switch to the vCloud Director web console
+  - name: Switch to the Legacy UI
     href: vmw-how-switch-web-console.md
   - name: Upgrade your edge gateway
     href: vmw-how-upgrade-edge.md

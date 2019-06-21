@@ -11256,6 +11256,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-add-nat64.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-add-nat64.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-add-snat-adv.png",
       "output": {
         "resource": {
@@ -11751,10 +11762,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-btn-add-dnat.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-btn-add-dnat.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-btn-add-firewall-reg.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-btn-add-firewall-reg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-btn-add-nat64.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-btn-add-nat64.png"
         }
       },
       "is_incremental": false,
@@ -11777,6 +11810,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-btn-add-snat-reg.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-btn-add-snat.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-btn-add-snat.png"
         }
       },
       "is_incremental": false,
@@ -11861,6 +11905,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-btn-redeploy.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-btn-redeploy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-btn-syslog-server.png",
       "output": {
         "resource": {
@@ -11905,10 +11960,109 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-create-affinity-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-create-affinity-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-dlr-enable.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-dlr-enable.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-edge-btn-config.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-edge-btn-config.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-edge-btn-convert.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-edge-btn-convert.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-edge-firewall-new-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-edge-firewall-new-rule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-edge-ip-addresses.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-edge-ip-addresses.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-edge-ipsec-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-edge-ipsec-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-edge-ipsec-enabled.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-edge-ipsec-enabled.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-edge-tab-nat.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-edge-tab-nat.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-edge-tab-static-route.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-edge-tab-static-route.png"
         }
       },
       "is_incremental": false,
@@ -12202,10 +12356,65 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-affinity.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-mnu-affinity.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-copy-vapp.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-mnu-copy-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-copy-vm.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-mnu-copy-vm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-create-snapshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-mnu-create-snapshot.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-edges.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-mnu-edges.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-legacy-ui.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-mnu-legacy-ui.png"
         }
       },
       "is_incremental": false,
@@ -12224,10 +12433,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-tenant-ui.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-mnu-tenant-ui.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-vapp-configure-services.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-mnu-vapp-configure-services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-vapp-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-mnu-vapp-details.png"
         }
       },
       "is_incremental": false,
@@ -12261,6 +12492,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-move-vapp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-new-affinity-rule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-new-affinity-rule.png"
         }
       },
       "is_incremental": false,
@@ -12624,6 +12866,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-tab-vapp-templates.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-tab-vapps.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-tab-vapps.png"
         }
       },
       "is_incremental": false,
@@ -13163,6 +13416,28 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-vm-console.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-vm-guestos.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-vm-guestos.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-vm-hardware.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-vm-hardware.png"
         }
       },
       "is_incremental": false,
@@ -13823,17 +14098,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd91-mnu-catalogs.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd91-mnu-create-snapshot.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd91-mnu-create-snapshot.png"
         }
       },
       "is_incremental": false,
@@ -14516,7 +14780,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "ojUx7A/vtdJfE+uTbYSIdQ=="
+          "hash": "qXvMAoxKRlEL1L/NnZ72BQ=="
         }
       },
       "is_incremental": false,
@@ -14780,7 +15044,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-ipsec-vpn.html",
-          "hash": "5z3tZlY0YCiWhT3sNvunJw=="
+          "hash": "S+t9nkn08navg+qeqOiyyg=="
         }
       },
       "is_incremental": false,
@@ -14804,7 +15068,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-configure-load-balancer.html",
-          "hash": "aOyMVJ73hHGS5tFRWFpFIQ=="
+          "hash": "Lm8HFnm2xcnQmalCAvD97g=="
         }
       },
       "is_incremental": false,
@@ -14828,7 +15092,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-convert-edge.html",
-          "hash": "fpTGHF+AaZMwh7tzBeCjPw=="
+          "hash": "CbwD6ahGizd2QjBTIs+IHA=="
         }
       },
       "is_incremental": false,
@@ -14852,7 +15116,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-dhcp-pool.html",
-          "hash": "m9da0vY/stpbihxc1gx4QQ=="
+          "hash": "9JJ7GrPznHDvlqsZiffUvg=="
         }
       },
       "is_incremental": false,
@@ -14864,7 +15128,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-firewall-rules.html",
-          "hash": "Zjlwksi5OzrAuzDAfTaFig=="
+          "hash": "mTwOle1i572H/mDlWBzTOg=="
         }
       },
       "is_incremental": false,
@@ -14888,7 +15152,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-nat-rules.html",
-          "hash": "q9NjNO7D+FMEXKI9Cnv8CA=="
+          "hash": "/YoJhDnspZ3/T1QRF4FsnA=="
         }
       },
       "is_incremental": false,
@@ -14912,7 +15176,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-static-route.html",
-          "hash": "h7+4w7iod9ZukmgiApM96Q=="
+          "hash": "+8c5hb0m1lcmGjd9/wyoLw=="
         }
       },
       "is_incremental": false,
@@ -15128,7 +15392,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-portal-view-vms.html",
-          "hash": "By8c4uxysraXKdgGUyX25w=="
+          "hash": "N7GZLc44gJDYJgyABr3TMw=="
         }
       },
       "is_incremental": false,
@@ -15176,7 +15440,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-switch-web-console.html",
-          "hash": "uRmzVEZIhwgHVWQxGEOy6w=="
+          "hash": "NyBM10wSOs93JnbzOw4zuw=="
         }
       },
       "is_incremental": false,
@@ -15188,7 +15452,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-update-vm-settings.html",
-          "hash": "cO13/DP7GvmPd2mjneVeNw=="
+          "hash": "/SHdoQ139jX42ZLYOVvZ8A=="
         }
       },
       "is_incremental": false,
@@ -15200,7 +15464,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-upgrade-edge.html",
-          "hash": "Vwe8kGSGJIfKBnt0tIExuw=="
+          "hash": "jw+V6nrrvCJi3i1kZVGoGA=="
         }
       },
       "is_incremental": false,
@@ -15224,7 +15488,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-affinity-rules.html",
-          "hash": "Lkoa9hQbsdrU5hK4pJp1/Q=="
+          "hash": "n864hNnHM56ieOH+ku09Mw=="
         }
       },
       "is_incremental": false,
@@ -15752,7 +16016,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vm-data-recovery.html",
-          "hash": "ueevJXoKJjZButaGSGEKdg=="
+          "hash": "lNiMN5uEResoCXg602KFtA=="
         }
       },
       "is_incremental": false,
@@ -15972,16 +16236,16 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
