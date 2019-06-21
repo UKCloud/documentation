@@ -24,7 +24,7 @@ As well as deploying pre-built VMs from a catalog, you can build your own VMs fr
 
 For information about creating a VM from a template, see [*How to create a VM from a template*](vmw-how-create-vm-from-template.md).
 
-## Creating a bare metal VM
+## Creating an empty VM
 
 1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the vApp in which you want to create the VM.
 
@@ -98,9 +98,9 @@ For information about creating a VM from a template, see [*How to create a VM fr
 
     You can monitor progress in the *Add VMs* dialog box, or click **Cancel** to return to the list of vApps while the VM is created in the background.
 
-    The VM will be deployed as bare metal.
+    The VM will be deployed without any operating system.
 
-### Installing an operating system into a bare metal VM
+### Installing an operating system into the VM
 
 1. On the card for the vApp that contains the VM, click **Power** then select **Power On**.
 

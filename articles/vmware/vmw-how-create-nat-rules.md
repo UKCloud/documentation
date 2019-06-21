@@ -69,7 +69,7 @@ To create a DNAT rule:
 
     ![Add DNAT Rule button](images/vmw-vcd-btn-add-dnat.png)
 
-6. In the *Add DNAT Rule* dialog box, from the **Applied On** list, select the interface on which to apply the rule.
+6. In the *Add DNAT Rule* dialog box, from the **Applied On** list, select the interface on which to apply the rule. Unless you have special requirements, this will be the external network (usually named nti* or nft*).
 
 7. Enter an **Original IP/Range** and a **Translated IP/Range**.
 
@@ -111,7 +111,7 @@ To create an SNAT rule:
 
     ![Add SNAT Rule button](images/vmw-vcd-btn-add-snat.png)
 
-6. In the *Add SNAT Rule* dialog box, from the **Applied On** list, select the interface on which to apply the rule.
+6. In the *Add SNAT Rule* dialog box, from the **Applied On** list, select the interface on which to apply the rule. Unless you have special requirements, this will be the external network (usually named nti* or nft*).
 
 7. Enter an **Original Source IP/Range** and a **Translated Source IP/Range**.
 

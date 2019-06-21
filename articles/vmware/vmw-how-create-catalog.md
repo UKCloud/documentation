@@ -64,7 +64,7 @@ The first step is to create an empty catalog:
 
     - **Share with specific users or groups** to add individual users or groups of users
 
-    You can give users different access levels: **Ready Only**, **Full Control** or **Change**. Change allows users to change permissions.
+    You can give users different access levels: **Read Only**, **Full Control** or **Change**. Change allows users to change permissions.
 
     ![Share With Users and Groups dialog box](images/vmw-vcd91-share-users-groups.png)
 
