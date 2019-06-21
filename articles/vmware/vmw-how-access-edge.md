@@ -24,33 +24,31 @@ An edge gateway provides access to your environment from the outside world and i
 
 ## To access edge gateway settings
 
-# [Using vCloud Director 8.20](#tab/tabid-1)
+# [Using Tenant UI](#tab/tabid-1)
+
+1. In vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway you want to configure.
+
+2. In the left navigation panel, click **Edges**.
+
+    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
+
+3. Select the edge that you want to configure and click **Configure Services**.
+
+    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
+
+# [Using Legacy UI](#tab/tabid-2)
 
 1. In vCloud Director, click the **Administration** tab.
 
     ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
 
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
-
-2. Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select **Open**.
+2. Double-click the VDC that you want to work with, or right-click the VDC and select **Open**.
 
 3. Select the **Edge Gateways** tab.
 
     ![Edge Gateways tab](images/vmw-vcd-tab-edge-gateways.png)
 
 4. Right-click the edge gateway and select **Edge Gateway Services**.
-
-# [Using vCloud Director 9.1](#tab/tabid-2)
-
-1. In vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway you want to configure.
-
-2. In the left navigation panel, click **Edges**.
-
-    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
-
-3. Select the edge that you want to configure and click the **Configure Services** button.
-
-    ![Configure Services button](images/vmw-vcd91-btn-configure-services.png)
 
 ***
 

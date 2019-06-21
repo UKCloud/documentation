@@ -44,7 +44,7 @@ The simplest scenario is to gather syslog data from a single NSX edge into one c
 
     For example, if your existing monitoring server has a NIC on **eth0** (for example, `10.0.1.10`), on routed VDC network `10.0.1.0/24`, you'd add the syslog IP address to **eth0**.
 
-2. Add a route on the NSX ddge that routes the syslog IP address via the subnet.
+2. Add a route on the NSX edge that routes the syslog IP address via the subnet.
 
     For example, route `100.127.255.250 MASK 255.255.255.255` via `10.0.1.10`.
 
@@ -118,44 +118,59 @@ If you have multiple NSX edges under a single NFT, you can gather the data from 
 
 After setting up your syslog collector, you need to make sure that your NSX edge sends network traffic to the log.
 
-1. In vCloud Director, select the **Administration** tab.
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC to which the NSX edge belongs.
 
-    ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
-
-2. Double-click the VDC to which the NSX edge belongs.
-
-3. Select the **Edge Gateways** tab.
+2. Select the **Edge Gateways** tab.
 
     ![Edge Gateways tab](images/vmw-vcd-tab-edge-gateways.png)
 
-4. Select the **Edge Settings** tab.
+3. In the left navigation panel, click **Edges**.
+
+    ![Edges menu option](images/vmw-vcd-mnu-edges.png)
+
+4. Select the edge that you want to configure and click **Configure Services**.
+
+    ![Configure Services](images/vmw-vcd-edge-btn-config.png)
+
+5. Select the **Edge Settings** tab.
 
     ![Edge Settings tab](images/vmw-vcd-adv-edge-tab-settings.png)
 
-5. Click **Edit Syslog Server**.
+6. Click **Edit Syslog Server**.
 
     ![Edit Syslog Server button](images/vmw-vcd-btn-syslog-server.png)
 
-6. In the *Edit Syslog Server* dialog box, in the **Syslog Server** field, enter the IP address of your syslog server then click **Keep**.
+7. In the *Edit Syslog Server* dialog box, in the **Syslog Server** field, enter the IP address of your syslog server then click **Keep**.
 
     ![Edit Syslog Server dialog box](images/vmw-vcd-edit-syslog-server.png)
 
-7. Currently, you cannot setup logging for firewall rules for NSX edges via the advanced gateway GUI. To setup logging for firewall rules, you must either use the API or raise a service request detailing the firewall rules for which you want to enable logging so that we can action it on your behalf. For more information about using the API to amend firewall rules, see the [*vCloud Director API for NSX Programming Guide*](https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf)
+8. Select the **Firewall Rules** tab.
 
-    > [!NOTE]
-    > Any firewall rules that were set up to send logs before conversion to an advanced gateway will continue to send logs. However if you want to disable logging for those firewall rules, you must use the API or raise a service request.
+9. For each firewall rule that you want to log, select the **Enable logging** check box.
 
-8. Select the **Load Balancer** tab.
+    ![Logging firewall rules](images/vmw-vcd-logging-firewall.png)
 
-9. On the *Global Configuration* page, select the **Enable Logging toggle**.
+10. When you're done, click **Save changes**.
 
-10. From the **Log Level** list, select the logging level.
+11. Select the **NAT** tab.
 
-    ![Global Configuration tab](images/vmw-vcd-logging-load-balancer.png)
+12. For each NAT rule that you want to log, select the rule, click the **Edit** icon, select the **Enable logging** option then click **Keep**.
 
-11. When you're done, click **Save changes**.
+    ![Logging NAT rules](images/vmw-vcd-logging-nat.png)
 
-You can find more detailed steps for editing load balancer settings in [*How to configure a load balancer*](vmw-how-configure-load-balancer.md).
+13. When you're done, click **Save changes**.
+
+14. Select the **Load Balancer** tab.
+
+15. On the **Global Configuration** tab, select the **Enable Logging** option.
+
+16. From the **Log Level** list, select the logging level.
+
+    ![Logging load balancer](images/vmw-vcd-logging-load-balancer.png)
+
+    You can find more detailed steps for editing load balancer settings in [*How to configure a load balancer*](vmw-how-configure-load-balancer.md).
+
+17. When you're done, click **Save changes**.
 
 ## Sample syslog captures
 
