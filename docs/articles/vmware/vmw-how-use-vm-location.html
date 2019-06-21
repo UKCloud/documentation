@@ -94,8 +94,8 @@
 <h1 id="how-to-use-vm-location-in-vcloud-director">How to use VM location in vCloud Director</h1>
 
 <h2 id="overview">Overview</h2>
-<p>The VM location function, now available within vCloud Director, enables you to identify where a specific virtual machine (VM) within your organisation is located within the UKCloud platform.</p>
-<p>This guide describes the step-by-step instructions for obtaining this information which is available for VMs in both the Assured OFFICIAL and Elevated OFFICIAL platforms.</p>
+<p>The VM location function in vCloud Director enables you to identify where a specific virtual machine (VM) within your organisation is located within the UKCloud platform.</p>
+<p>This article describes the step-by-step instructions for obtaining this information which is available for VMs in both the Assured OFFICIAL and Elevated OFFICIAL platforms.</p>
 <p>With regards to the supplied location, this is standardised to the following options:</p>
 <ul>
 <li><p>Corsham (located in the Corsham data centre)</p>
@@ -108,50 +108,29 @@
 </li>
 </ul>
 <p>This feature is designed to show the location of VMs to assist you in optimising your infrastructure with regard to performance and availability. If you wish to change the location of a specific or group
-of VMs, please raise a support request from the &quot;My Calls&quot; section of the UKCloud Portal.</p>
-<p>The steps for using VM location depend on the version of vCloud Director available in your environment:</p>
-<ul>
-<li><p><a href="#obtaining-the-location-of-a-specific-vm-vcloud-director-820">vCloud Director 8.20</a></p>
-</li>
-<li><p><a href="#obtaining-the-location-of-a-specific-vm-vcloud-director-91">vCloud Director 9.1</a></p>
-</li>
-</ul>
+of VMs, raise a support request from the My Calls section of the UKCloud Portal.</p>
 <p>You can also use the <a href="#obtaining-the-location-of-a-specific-vm-vcloud-api">vCloud API</a>.</p>
-<h2 id="obtaining-the-location-of-a-specific-vm-vcloud-director-820">Obtaining the location of a specific VM (vCloud Director 8.20)</h2>
+<h2 id="obtaining-the-location-of-a-vm">Obtaining the location of a VM</h2>
 <ol>
-<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
-<p>For more detailed instructions on accessing vCloud Director, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the <strong>VDC</strong> your VM is in.</p>
 </li>
-<li><p>Select the VM you want to find the location of.</p>
-<p><img src="images/vmw-vcd-vms.png" alt="List of virtual machines"></p>
-</li>
-<li><p>Right click your VM and select <strong>Properties</strong>.</p>
-</li>
-<li><p>Select the <strong>Metadata</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-vm-metatdata.png" alt="Metadata tab in VM Properties dialog box"></p>
-<p>The location of the VM is displayed in the <strong>Value</strong> column.</p>
-</li>
-</ol>
-<h2 id="obtaining-the-location-of-a-specific-vm-vcloud-director-91">Obtaining the location of a specific VM (vCloud Director 9.1)</h2>
-<ol>
-<li><p>In vCloud Director, select the <strong>VDC</strong> your VM is in then select <strong>Virtual Machines</strong>.</p>
-<p><img src="images/vmw-vcd-tp-vms.png" alt="Virtual Machines menu option"></p>
+<li><p>In the left navigation panel, select <strong>Virtual Machines</strong>.</p>
+<p><img src="images/vmw-vcd-tab-vms.png" alt="Virtual Machines menu option"></p>
 <p>For more detailed instructions on accessing vCloud Director, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
 <div class="TIP">
 <h5>Tip</h5>
-<p>You can change the view from cards or list. If you need to search for the VM, click on the filter icon and enter the name of the VM.</p>
+<p>You can change the view from cards to list. If you need to search for the VM, click on the filter icon and enter the name of the VM.</p>
+<p><img src="images/vmw-vcd-vms-filter.png" alt="Filter virtual machines"></p>
 </div>
-<p><img src="images/vmw-vcd-tp-vms-filter.png" alt="Filter virtual machines"></p>
 </li>
 <li><p>In the card for the VM, click <strong>Details</strong>.</p>
 </li>
-<li><p>Expand the <strong>Advanced</strong> section of the VM details to see <em>Metadata</em> information at the bottom.</p>
-<p><img src="images/vmw-vcd-tp-vm-metadata.png" alt="VM details -- Metadata"></p>
+<li><p>Expand the <em>Advanced</em> section of the VM details to see <em>Metadata</em> information at the bottom.</p>
+<p><img src="images/vmw-vcd-vm-metadata.png" alt="VM details -- Metadata"></p>
 <p>The location of the VM is displayed in the <strong>Value</strong> column.</p>
 </li>
 </ol>
-<h2 id="obtaining-the-location-of-a-specific-vm-vcloud-api">Obtaining the location of a specific VM (vCloud API)</h2>
+<h2 id="obtaining-the-location-of-a-specific-vm-using-the-vcloud-api">Obtaining the location of a specific VM using the vCloud API</h2>
 <p>You can also obtain the location of a VM via the via the API, looking at the metadata against the applicable VM.</p>
 <p>The following has been created as an example script to obtain the VM location:</p>
 <p><a href="https://api.vcd.portal.ukcloud.com/api/vApp/vm-xxxxxxxx/metadata">https://api.vcd.portal.ukcloud.com/api/vApp/vm-xxxxxxxx/metadata</a></p>

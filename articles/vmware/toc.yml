@@ -14,10 +14,8 @@
     href: vmw-faq.md
 - name: Getting Started
   items:
-  - name: Build a virtual machine (vCloud Director 8.20)
-    href: vmw-how-build-vm.md
-  - name: Build a virtual machine (vCloud Director 9.1)
-    href: vmw-gs-build-vm-vcd91.md
+  - name: Build a virtual machine
+    href: vmw-gs-build-vm-vcd.md
   - name: Journaling Protection
     href: vmw-gs-journaling.md
   - name: UKCloud for VMware
