@@ -72,11 +72,6 @@ For Windows VMs, there is an option for guest customisation to change the SID of
 
 ![Virtual Machines: Guest OS Customization section](images/vmw-vcd-vm-guestos.png)
 
-## Advanced
-
-You can configure CPU and memory reservation and priority for this VM. This is useful if you have a VM that needs guaranteed resources. You can also view VM metadata here.
-
-![Virtual Machines: Advanced section](images/vmw-vcd91-vm-advanced.png)
 
 ## Feedback
 
