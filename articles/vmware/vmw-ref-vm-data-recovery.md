@@ -49,19 +49,9 @@ You can create only one snapshot for each VM, with each subsequent snapshot over
 
 ### How to create a VM snapshot
 
-# [Using vCloud Director 8.20](#tab/tabid-1)
+In the card for the VM that you want to create a snapshot for, select **Actions** then **Create Snapshot**.
 
-You can create a VM snapshot within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to create a snapshot for and selecting **Create Snapshot**.
-
-![Snapshot creation in vCloud Director 8.20](images/vcd_snapshot.png)
-
-# [Using vCloud Director 9.1](#tab/tabid-2)
-
-In the card for the VM that you want to create a snapshot for, click **More** and select **Create Snapshot**.
-
-![Snapshot creation in vCloud Director 9.1](images/vmw-vcd91-mnu-create-snapshot.png)
-
-***
+![Create Snapshot menu option](images/vmw-vcd-mnu-create-snapshot.png)
 
 ## VM copy
 
@@ -83,17 +73,9 @@ You must power down the VM prior to taking a copy. Each additional copy will con
 
 ### How to create a VM copy
 
-# [Using vCloud Director 8.20](#tab/tabid-1)
+In the card for the VM that you want to copy, select **Actions** then **Copy to**.
 
-You can create a VM copy within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to copy and selecting **Copy to**.
-
-![VM copy in vCloud Director 8.20](images/vcd_copy.png)
-
-# [Using vCloud Director 9.1](#tab/tabid-2)
-
-In the vCloud Director 9.1 tenant portal, you can only copy entire vApps. To copy a single VM, you need to switch to the vCloud Director Web Console and follow the steps for vCloud Director 8.20.
-
-***
+![Copy VM menu option](images/vmw-vcd-mnu-copy-vm.png)
 
 ## VM backup
 
@@ -115,8 +97,7 @@ Time taken for a restoration request to be completed (dependent on the amount of
 
 ### How to add a VM to the automated snapshot backup schedule
 
-For information about how to add a VM to the automated backup schedule, see [*How to manage snapshot protection for your VMs*](vmw-how-manage-snapshot-protection.md)
-in the Knowledge Centre.
+For information about how to add a VM to the automated backup schedule, see [*How to manage snapshot protection for your VMs*](vmw-how-manage-snapshot-protection.md).
 
 ## Feedback
 

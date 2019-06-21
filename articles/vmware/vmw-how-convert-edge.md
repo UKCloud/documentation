@@ -68,34 +68,15 @@ To access the latest vCloud Director networking features, you need to convert yo
 
 To convert your edge to an advanced gateway:
 
-# [Using vCloud Director Legacy UI](#tab/tabid-1)
-
-1. In vCloud Director, select the **Administration** tab.
-
-    ![Administration tab](images/conver-image-3.png)
-
-2. Double-click the VDC that the edge gateway belongs to.
-
-3. Select the **Edge Gateways** tab.
-
-4. Right-click the edge gateway that you want to convert and select **Convert to Advanced Gateway**.
-
-5. Click **Yes** to start the conversion.
-
-    > [!IMPORTANT]
-    > After converting your edge gateway, click **Configure Services** and check the firewall rules to make sure that the **default rule for ingress traffic** is set to **Deny**.
-
-    ![Administration tab](images/conver-image-4.png)
-
-# [Using vCloud Director Tenant UI](#tab/tabid-2)
-
 1. In vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway you want to convert.
 
 2. In the left navigation panel, click **Edges**.
 
-    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
+    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
 
-3. Select the edge that you want to convert and click the **Convert to Advanced** button.
+3. Select the edge that you want to convert and click **Convert to Advanced**.
+
+    ![Convert to Advanced button](images/vmw-vcd-edge-btn-convert.png)
 
 4. Click **Yes** to start the conversion.
 
@@ -103,8 +84,6 @@ To convert your edge to an advanced gateway:
     > After converting your edge gateway, click **Configure Services** and check the firewall rules to make sure that the **default rule for ingress traffic** is set to **Deny**.
 
     ![Administration tab](images/conver-image-4.png)
-
-***
 
 ## Next steps
 

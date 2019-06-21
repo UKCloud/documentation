@@ -1,6 +1,6 @@
 ---
-title: How to switch to the vCloud Director web console from the tenant portal | UKCloud Ltd
-description: Describes how to switch to the vCloud Director web console to perform tasks that are not possible in the tenant portal
+title: How to switch to the vCloud Director Legacy UI | UKCloud Ltd
+description: Describes how to switch to the vCloud Director Legacy UI to perform tasks that are not possible in the tenant portal
 services: vmware
 author: Sue Highmoor
 reviewer:
@@ -10,40 +10,34 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Switch to the vCloud Director web console
+toc_title: Switch to the Legacy UI
 toc_fullpath: How To/vmw-how-switch-web-console.md
 toc_mdlink: vmw-how-switch-web-console.md
 ---
 
-# How to switch to the vCloud Director web console from the tenant portal
+# How to switch to the vCloud Director Legacy UI
 
 ## Overview
 
-For some tasks, you cannot use the tenant portal that was introduced in vCloud Director 9.1. To perform these tasks, you must first switch to the web console.
+For some tasks, you cannot use the Tenant UI; to perform these tasks, you must first switch to the Legacy UI.
 
-Tasks that you cannot perform in the tenant portal include:
+Tasks that you cannot perform in the Tenant UI include:
 
-- Managing standard edges (for example, editing firewall and NAT rules)
+- Uploading ISO and FLP media as a URL
 
-- Redeploying edges
+- Viewing vApp template description, including OS password and patch dates
 
-- Editing vApp network settings
+- Changing VDC default storage policy
 
-- Uploading ISO or OVF files from a URL
+## Switching to the Legacy UI
 
-- Copying and moving individual virtual machines (VMs)
+1. In the top-right corner of the vCloud Director Tenant UI, click your user name, then select **Legacy UI**.
 
-- Viewing virtual data centre (VDC) properties, such as metadata
+    ![Legacy UI menu option](images/vmw-vcd-mnu-legacy-ui.png)
 
-- Creating affinity and anti-affinity rules
+2. To return to the Tenant UI, click **Try the new portal** at the top of the page.
 
-## Switching to the vCloud Director web console
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC you want to work with.
-
-2. On the *vApps* or *Virtual Machines* page, click **See this page in vCloud Director Web Console**.
-
-    ![vCloud Director web console link](images/vmw-vcd91-web-console.png)
+    ![Tenant UI link](images/vmw-vcd-mnu-tenant-ui.png)
 
 ## Feedback
 

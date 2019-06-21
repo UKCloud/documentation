@@ -21,53 +21,27 @@ toc_mdlink: vmw-how-update-vm-settings.md
 
 After you've deployed a virtual machine (VM), you can view and update its configuration.
 
-# [Using vCloud Director 8.20](#tab/tabid-1)
+1. In the vCloud Director *Virtual Datacentres* dashboard, select the VDC where the vApp that contains the VM is located.
 
-1. In vCloud Director, select the **My Cloud** tab.
+2. In the left navigation panel, click **vApps**.
 
-    ![Home tab in vCloud Director](images/vmw-vcd-tab-my-cloud.png)
+    ![vApps menu option](images/vmw-vcd-tab-vapps.png)
 
-2. Right-click the vApp that contains the VM that you want to view and select **Open**.
+3. In the card for the vApp that contains the VM, click **Details**.
 
-3. Select the **Virtual Machines** tab.
+    ![vApp Details option](images/vmw-vcd-mnu-vapp-details.png)
 
-4. Right-click the VM for which you want to view configuration information and select **Properties**.
+4. Click the name of the VM for which you want to view configuration information.
 
-5. In the *Virtual Machine Properties* dialog box, you can select each tab to view the settings for the VM and change them if required.
+5. Expand each section to view the settings for the VM and change them if required.
 
-6. When you're done, click **OK** to save any changes you've made, or **Cancel** to close the dialog box without saving.
-
-# [Using vCloud Director 9.1](#tab/tabid-2)
-
-1. In vCloud Director, click the menu icon and select **Datacenters**.
-
-    ![Datacentres menu option in vCloud Director](images/vmw-vcd91-mnu-dcs.png)
-
-2. Select the VDC where the vApp that contains the VM is located.
-
-3. In the left navigation panel, click **vApps**.
-
-    ![vApps menu option](images/vmw-vcd91-tab-vapps.png)
-
-4. In the card for the vApp that you want to add to the catalog, click **Details**.
-
-    ![Add to Catalog menu option](images/vmw-vcd91-mnu-vapp-details.png)
-
-5. Click the name of the VM for which you want to view configuration information.
-
-6. Expand each section to view the settings for the VM and change them if required.
-
-7. When you're done, click **Save** to save any changes you've made, or **Discard Changes** to close without saving.
-
-***
+6. When you're done, click **Save** to save any changes you've made, or **Discard Changes** to close without saving.
 
 ## General
 
 View and changes properties such as the VM/host name, OS type and version. You can also see if VMware Tools is installed on the VM and change the storage policy for the VM. For more information on storage policies, see [*Storage policies*](vmw-ref-storage-policies.md).
 
-vCloud Director 8.20 | vCloud Director 9.1
----------------------|--------------------
-![Virtual Machine Properties: General tab](images/vmw-vcd-vm-settings-general.png) | ![Virtual Machines: General section](images/vmw-vcd91-vm-general.png)
+![Virtual Machines: General section](images/vmw-vcd91-vm-general.png)
 
 ## Hardware
 
@@ -84,9 +58,7 @@ On the **Hardware** tab, you can:
     > [!WARNING]
     > If you remove a hard disk, make sure you have a backup of the data. Removal of a hard disk is not reversible, and will result in the deletion of the hard disk and its data.
 
-vCloud Director 8.20 | vCloud Director 9.1
----------------------|--------------------
-![Virtual Machine Properties: Hardware tab](images/vmw-vcd-vm-settings-hardware.png) | ![Virtual Machines: Hardware section](images/vmw-vcd91-vm-hardware.png)
+![Virtual Machines: Hardware section](images/vmw-vcd-vm-hardware.png)
 
 ## Guest OS Customization
 
@@ -98,9 +70,7 @@ For guest customisation to work, VMware Tools must be installed and running in t
 
 For Windows VMs, there is an option for guest customisation to change the SID of the operating system. Bear in mind that changing the SID can corrupt VMs running applications, such as Active Directory, that rely on a known SID.
 
-vCloud Director 8.20 | vCloud Director 9.1
----------------------|--------------------
-![Virtual Machine Properties: Guest OS Customization tab](images/vmw-vcd-vm-settings-guestos-cust.png) | ![Virtual Machines: Guest OS Customization section](images/vmw-vcd91-vm-guestos.png)
+![Virtual Machines: Guest OS Customization section](images/vmw-vcd-vm-guestos.png)
 
 ## Advanced
 
