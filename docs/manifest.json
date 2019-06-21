@@ -1698,15 +1698,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/cdsz/cdsz-gs-walled-garden.md",
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/cdsz-gs-walled-garden.html",
-          "hash": "BEtsMgGPma5xu5KUm+Dvng=="
+          "hash": "rSaERROqSRGuAVRTFsgeEA=="
         }
       },
       "is_incremental": false,
@@ -15299,7 +15296,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs-build-vm-vcd.html",
-          "hash": "XnPdGn6ZoCjJeFWcyN+vTA=="
+          "hash": "GuwRI94eSMh/A7WUzg1o6Q=="
         }
       },
       "is_incremental": false,
@@ -15318,15 +15315,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "2na5jhOoz5AnLlpHYzLk8g=="
+          "hash": "5QfzUSJMStHc9boE/Ya0bw=="
         }
       },
       "is_incremental": false,
@@ -15417,15 +15411,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-build-edge.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-build-edge.html",
-          "hash": "qHibDCrhtYLv7s/eyLz18w=="
+          "hash": "AeSI3IKYBqXm0AJu+wZeIA=="
         }
       },
       "is_incremental": false,
@@ -15564,15 +15555,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-create-isolated-network.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-isolated-network.html",
-          "hash": "nI2rF2WJSIlAhaRYZ77lZA=="
+          "hash": "pAMK5QxUqLSJPz6GjfHnVQ=="
         }
       },
       "is_incremental": false,
@@ -15591,15 +15579,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-create-routed-network.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-routed-network.html",
-          "hash": "5iADc+/4++3MPwwWtl2LWw=="
+          "hash": "/JP6WsvervJo4Yf8BKUeXQ=="
         }
       },
       "is_incremental": false,
@@ -15947,7 +15932,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-vm-location.html",
-          "hash": "yPlIu8QdgyLGs3F2Xxpt4g=="
+          "hash": "POR2dvroIFQJb81h8oWNiA=="
         }
       },
       "is_incremental": false,
@@ -16602,15 +16587,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-vid-vcd91.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-vid-vcd91.html",
-          "hash": "Ky/fmZLlLuEzUNahxXVQ4g=="
+          "hash": "fpwO34uSFM8F8DuDaRf7BA=="
         }
       },
       "is_incremental": false,
