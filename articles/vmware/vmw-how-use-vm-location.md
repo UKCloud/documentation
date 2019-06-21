@@ -36,7 +36,7 @@ With regards to the supplied location, this is standardised to the following opt
 This feature is designed to show the location of VMs to assist you in optimising your infrastructure with regard to performance and availability. If you wish to change the location of a specific or group
 of VMs, raise a support request from the My Calls section of the UKCloud Portal.
 
-You can also use the [vCloud API](#obtaining-the-location-of-a-specific-vm-vcloud-api).
+You can also use the [vCloud API](#obtaining-the-location-of-a-specific-VM-using-the-vCloud-API).
 
 ## Obtaining the location of a VM
 

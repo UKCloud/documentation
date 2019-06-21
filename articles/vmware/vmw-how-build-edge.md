@@ -74,7 +74,7 @@ If your VDC is located on the Assured OFFICIAL security domain, its edge gateway
 
 7. When the build is complete, the page displays either a success or fail message.
 
-    If the build is successful, you can now start configuring the edge gateway. For a quick guide on how to do this, see [*How to build a virtual machine with UKCloud for VMware*](vmw-how-build-vm.md).
+    If the build is successful, you can now start configuring the edge gateway. For a quick guide on how to do this, see [*How to build a virtual machine with UKCloud for VMware*](vmw-gs-build-vm-vcd.md).
 
     ![Build VDC Status - success](images/vmw-portal-build-edge-success.png)
 
