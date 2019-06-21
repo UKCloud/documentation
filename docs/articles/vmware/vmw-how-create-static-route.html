@@ -94,7 +94,7 @@
 <h1 id="how-to-create-a-static-route">How to create a static route</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Static routing allows you to configure your edge gateway to indicate to other networks how to get to further networks. It's particularly useful if you need to route between virtual data centres (VDCs) in the same vOrg. Static routing is the only option in vCloud Director; routing protocol cannot be used.</p>
+<p>Static routing allows you to configure your edge gateway with knowledge of other networks which are not directly connected to it. It's particularly useful if you need to route between virtual data centres (VDCs) in the same vOrg, or route traffic to vApp networks. Static routing is the only option on edge gateways; dynamic routing protocols cannot be used.</p>
 <p>As an example, you may have a vApp network <code>192.168.8.0/24</code> routed to a VDC network called <code>Front end network</code>. You could create a static route to enable traffic to get to the outside IP of the vApp edge at <code>192.168.4.33</code> (a NAT will exist there).</p>
 <h2 id="creating-a-static-route">Creating a static route</h2>
 <p>To create a static route:</p>
