@@ -236,7 +236,7 @@ In this *Getting Started Guide*, you've learned:
 
 - How to log in to vCloud Director so that you can start to build your applications
 
-Now that you've set up your basic environment, you can start building your applications. If you want to get up and running quickly, you can take a look at [*How to build a virtual machine with UKCloud for VMware*](vmw-how-build-vm.md), which provides a quick walkthrough of the process.
+Now that you've set up your basic environment, you can start building your applications. If you want to get up and running quickly, you can take a look at [*How to build a virtual machine with UKCloud for VMware*](vmw-gs-build-vm-vcd.md), which provides a quick walkthrough of the process.
 
 For more detailed information about the different aspects of your UKCloud for VMware environment, see:
 

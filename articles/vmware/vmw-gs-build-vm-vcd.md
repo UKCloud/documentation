@@ -215,11 +215,11 @@ Now that you've set up the firewall rules, you can create NAT rules:
 
 1. In the *Edge Gateways* dialog box, select the **NAT** tab.
 
-    ![NAT tab in vCloud Director](images/vmw-vcd-edge-tab-nat.png)
+    ![NAT tab in vCloud Director](images/vmw-vcd-tab-nat.png)
 
 2. In the *NAT44 Rules* section, click the **SNAT Rule** button to create a source NAT (SNAT) rule to translate internal IP addresses into something that the external network can understand.
 
-    ![Add SNAT Rule button](images/vmw-vcd-edge-btn-snat.png)
+    ![Add SNAT Rule button](images/vmw-vcd-btn-add-snat.png)
 
 3. In the *Add SNAT Rule* dialog box, from the **Applied on** list, choose the edge gateway to which you want to apply the SNAT rule.
 

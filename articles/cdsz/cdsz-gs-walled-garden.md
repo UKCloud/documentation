@@ -71,7 +71,7 @@ It is important to remember that while the UKCloud Portal for the Assured securi
 
 ### Setting up your networking
 
-First, you need to replicate the networking that you set out in your Walled Garden application diagrams. This involves the creation of external and internal networking, as well as the creation of rules on the virtual firewall within your environment. For information about creating networks and firewall rules, see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md) and [*How to build a virtual machine with UKCloud for VMware*](../vmware/vmw-how-build-vm.md).
+First, you need to replicate the networking that you set out in your Walled Garden application diagrams. This involves the creation of external and internal networking, as well as the creation of rules on the virtual firewall within your environment. For information about creating networks and firewall rules, see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md) and [*How to build a virtual machine with UKCloud for VMware*](../vmware/vmw-gs-build-vm-vcd.md).
 
 You also need to create the rules that allow connectivity between the different VDCs through the Walled Garden. This involves the creation of firewall rules, static routes and/or NAT rules.
 
