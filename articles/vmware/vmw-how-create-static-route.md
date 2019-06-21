@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-create-static-route.md
 
 ## Overview
 
-Static routing allows you to configure your edge gateway to indicate to other networks how to get to further networks. It's particularly useful if you need to route between virtual data centres (VDCs) in the same vOrg. Static routing is the only option in vCloud Director; routing protocol cannot be used.
+Static routing allows you to configure your edge gateway with knowledge of other networks which are not directly connected to it. It's particularly useful if you need to route between virtual data centres (VDCs) in the same vOrg, or route traffic to vApp networks. Static routing is the only option on edge gateways; dynamic routing protocols cannot be used. 
 
 As an example, you may have a vApp network `192.168.8.0/24` routed to a VDC network called `Front end network`. You could create a static route to enable traffic to get to the outside IP of the vApp edge at `192.168.4.33` (a NAT will exist there).
 
