@@ -15288,15 +15288,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-gs-build-vm-vcd.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs-build-vm-vcd.html",
-          "hash": "GuwRI94eSMh/A7WUzg1o6Q=="
+          "hash": "NeT/CYvrQBLb1zK140Y3Rg=="
         }
       },
       "is_incremental": false,
@@ -15932,7 +15929,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-vm-location.html",
-          "hash": "POR2dvroIFQJb81h8oWNiA=="
+          "hash": "23lWO0iDGot7yhTwCf1p7Q=="
         }
       },
       "is_incremental": false,
