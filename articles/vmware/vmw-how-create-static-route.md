@@ -25,7 +25,7 @@ Static routing allows you to configure your edge gateway with knowledge of other
 As an example, you may have a vApp network `192.168.8.0/24` routed to a VDC network called `Front end network`. You could create a static route to enable traffic to get to the outside IP of the vApp edge at `192.168.4.33` (a NAT will exist there).
 
 > [!IMPORTANT]
-> Selecting the "Default gateway is not set" under STATIC ROUTING DEFAULT GATEWAY will remove all existing Static Routes.  However, setting a global default gateway IP when it is configured with "Default gateway is not set" will retain the entries on the Static Routes tab.
+> Selecting the **Default gateway is not set** in the **Applied On** list under the *Static Routing Default Gateway* section will remove all existing static routes.  However, setting a global default **Gateway IP** when it is configured with **Default gateway is not set** will retain the entries on the Static Routes tab.
 
 ## Creating a static route
 
