@@ -23,7 +23,7 @@ There are a number of prerequisites that you must meet before setting up the Cyb
 
 ## A supported virtualisation environment
 
-The CyberScore scanner is a virtual appliance that can be deployed on VMware (including UKCloud for VMware, Hyper-V, AWS or Azure. Support for an OpenStack scanner is coming soon.
+The CyberScore scanner is a virtual appliance that can be deployed on VMware (including UKCloud for VMware), Hyper-V, AWS or Azure. Support for an OpenStack scanner is coming soon.
 
 ## Administrative permission to install the scanner
 
