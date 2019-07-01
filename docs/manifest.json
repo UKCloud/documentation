@@ -8989,6 +8989,30 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/third-party/third-ref-cyberscore-prereqs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/third-party/third-ref-cyberscore-prereqs.html",
+          "hash": "bq5WRfgctuzNK+R91w2ePQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/third-party/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/third-party/toc.html",
+          "hash": "ZKRAMnWatsxMlBA5eaANAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "articles/vmware/images/HWVersion.jpg",
       "output": {
@@ -16670,7 +16694,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 357,
+          "total_file_count": 358,
           "skipped_file_count": 0
         }
       }
