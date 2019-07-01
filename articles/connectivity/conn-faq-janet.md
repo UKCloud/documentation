@@ -21,6 +21,8 @@ toc_mdlink: conn-faq-janet.md
 
 Janet is the UK's research and education network. It is connected to all education organisations and research councils.
 
+Janet is one of UKCloud's free-of-charge networks which we allow eligible customers to use - there are no ingress or egress charges for this network. It is presented from our Assured platform and has a current bandwidth capacity of 1Gbps from each of our data centres, scalable to 100s of Gbps. The Janet connections are diversely routed for resilience and utilise BGP between data centres to ensure high availability of connections. 
+
 ## Who is entitled to connect to the Janet network?
 
 Any organisation that is either publicly funded or receives government or EU funding to drive digital initiatives are entitled to use the Janet network.
