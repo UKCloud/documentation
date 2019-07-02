@@ -25,7 +25,7 @@
 [CmdletBinding()]
 param (
     [Parameter(Mandatory = $false)]
-    [ValidateScript( {If ((Test-Path $_)) {Test-Path $_ -Verbose }})]
+    [ValidateScript( { If ((Test-Path $_)) { Test-Path $_ -Verbose } })]
     [String]
     $Source = "$PWD\articles\"
 )
@@ -65,28 +65,28 @@ ForEach ($FolderB in $FoldersFromBase) {
     $TOCArrayProperties = @()
     $TOCArrayPropertiesCustom = @()
     ForEach ($MDArticle in $MDArticles) {
-        $TOCProp = $MDArticle | Select-String -Pattern "toc_"  | Select-Object -ExpandProperty Line
+        $TOCProp = $MDArticle | Select-String -Pattern "toc_" | Select-Object -ExpandProperty Line
         $TOCArrayProperties += $TOCProp
 
         # Read values from the header of the .md file
         $ourObject = [PSCustomObject]@{
-            Rootlink = ($MDArticle | Select-String -Pattern "toc_rootlink"  | Select-Object -First 1 -ExpandProperty Line) -replace "toc_rootlink:\s?", ""
-            Sub1     = ($MDArticle | Select-String -Pattern "toc_sub1"  | Select-Object -First 1 -ExpandProperty Line) -replace "toc_sub1:\s?", ""
-            Sub2     = ($MDArticle | Select-String -Pattern "toc_sub2"  | Select-Object -First 1 -ExpandProperty Line) -replace "toc_sub2:\s?", ""
-            Sub3     = ($MDArticle | Select-String -Pattern "toc_sub3"  | Select-Object -First 1 -ExpandProperty Line) -replace "toc_sub3:\s?", ""
-            Sub4     = ($MDArticle | Select-String -Pattern "toc_sub4"  | Select-Object -First 1 -ExpandProperty Line) -replace "toc_sub4:\s?", ""
-            Title    = ($MDArticle | Select-String -Pattern "toc_title"  | Select-Object -First 1 -ExpandProperty Line) -replace "toc_title:\s?", ""
-            MDlink   = ($MDArticle | Select-String -Pattern "toc_mdlink"  | Select-Object -First 1 -ExpandProperty Line) -replace "toc_mdlink:\s?", ""
+            Rootlink = ($MDArticle | Select-String -Pattern "toc_rootlink" | Select-Object -First 1 -ExpandProperty Line) -replace "toc_rootlink:\s?", ""
+            Sub1     = ($MDArticle | Select-String -Pattern "toc_sub1" | Select-Object -First 1 -ExpandProperty Line) -replace "toc_sub1:\s?", ""
+            Sub2     = ($MDArticle | Select-String -Pattern "toc_sub2" | Select-Object -First 1 -ExpandProperty Line) -replace "toc_sub2:\s?", ""
+            Sub3     = ($MDArticle | Select-String -Pattern "toc_sub3" | Select-Object -First 1 -ExpandProperty Line) -replace "toc_sub3:\s?", ""
+            Sub4     = ($MDArticle | Select-String -Pattern "toc_sub4" | Select-Object -First 1 -ExpandProperty Line) -replace "toc_sub4:\s?", ""
+            Title    = ($MDArticle | Select-String -Pattern "toc_title" | Select-Object -First 1 -ExpandProperty Line) -replace "toc_title:\s?", ""
+            MDlink   = ($MDArticle | Select-String -Pattern "toc_mdlink" | Select-Object -First 1 -ExpandProperty Line) -replace "toc_mdlink:\s?", ""
         }
         $TOCArrayPropertiesCustom += $ourObject
     }
 
     # Sort Objects so that Rootlink Users is first shown.
     If ($TOCArrayPropertiesCustom.Rootlink -like "Users" -or $TOCArrayPropertiesCustom.Rootlink -like "Operators") {
-        $SortedCustom = $TOCArrayPropertiesCustom  | Sort-Object -Property Rootlink -Descending | Sort-Object -Property Sub1, Sub2, Sub3, Sub4, Title, MDlink
+        $SortedCustom = $TOCArrayPropertiesCustom | Sort-Object -Property Rootlink -Descending | Sort-Object -Property Sub1, Sub2, Sub3, Sub4, Title, MDlink
     }
     Else {
-        $SortedCustom = $TOCArrayPropertiesCustom  | Sort-Object -Property Rootlink -Descending | Sort-Object -Property Rootlink, Sub1, Sub2, Sub3, Sub4, Title, MDlink
+        $SortedCustom = $TOCArrayPropertiesCustom | Sort-Object -Property Rootlink -Descending | Sort-Object -Property Rootlink, Sub1, Sub2, Sub3, Sub4, Title, MDlink
     }
 
     ForEach ($File in $SortedCustom) {
