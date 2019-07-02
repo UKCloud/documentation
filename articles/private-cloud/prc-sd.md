@@ -89,7 +89,7 @@ UKCloud Design Services Flexible purchase options
 
 ### Pricing and Packaging Options
 
-Private Cloud solutions is offered with three options
+Private Cloud solutions are offered with two options
 
 - OPEX
 

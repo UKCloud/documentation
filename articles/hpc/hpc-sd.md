@@ -23,7 +23,7 @@ We recognise the importance of government services in making the country run smo
 
 ![UKCloud services](images/ukc-services.png)
 
-## What is UKCloud for VMware?
+## What is High Performance Compute?
 
 High Performance Compute (HPC) is designed to give you the compute power to help you solve large scale problems, whether you need rapid real time data processing to provide direction to teams making life or death decisions, need to process complex large data sets in search of patterns to unlock new knowledge, or simulating hypotheses to support fast innovation in healthcare or science. HPC can help by providing an easy to deploy and easy to use compute infrastructure that can power Grid engine or parallel processing workloads that typically underpin these services.
 

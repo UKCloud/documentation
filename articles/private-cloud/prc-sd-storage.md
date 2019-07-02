@@ -75,7 +75,7 @@ Choose the security domain for your Private Storage
 
 ### Pricing and Packaging Options
 
-Private Cloud solutions is offered with two options
+Private Cloud solutions are offered with two options
 
 - OPEX
 

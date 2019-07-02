@@ -70,7 +70,7 @@ We understand that enterprise workloads need a dependable service that underpins
 **Service level agreement**  | 99.90%
 **Portal level agreement**   | 99.90%
 **Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any planned and emergency maintenance.
-**Measurement of SLA**       | Unavailability applies to the UKCloud Guard or the underlying Cross Domain Security Zone infrastructure due to a fault recognised at the IaaS layer, data centre facilities, physical firewalls or routers.
+**Measurement of SLA**       | Unavailability applies to the underlying Cross Domain Security Zone infrastructure due to a fault recognised at the IaaS layer, data centre facilities, physical firewalls or routers.
 **Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>The fault is within the customer's control (such as VM configuration, customer networks, application logic)<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
 **Service Credit**           | 10% of monthly spend on the Cross Domain Security Zone.<br>1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal.<br>You will not be eligible to receive a Service Credit if your account has any undisputed payments outstanding beyond their due date or you are in violation of UKCloud’s Terms and Conditions including the UKCloud System Interconnect Security Policy (SISP).
 
