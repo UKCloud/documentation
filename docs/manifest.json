@@ -1702,7 +1702,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "dEd5L+HQ6p4FqjqU2XMA9A=="
+          "hash": "gTREKC1jfChPYkmcU6pfNA=="
         }
       },
       "is_incremental": false,
@@ -9596,7 +9596,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/third-party/toc.html",
-          "hash": "KuNg+vMs7VQTnQoKRPN4pg=="
+          "hash": "++jKy1nAKrtEpos0VRrfgA=="
         }
       },
       "is_incremental": false,
@@ -17284,7 +17284,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "PCDCj2hks46OExV0AtpvEw=="
+          "hash": "KIAZG1tp0xKtaKMnsATGbg=="
         }
       },
       "is_incremental": false,
@@ -17302,15 +17302,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "s3f5Qp4qsH3ERV1OnqcSlQ=="
+          "hash": "jhKl7rScv9X+veAGdnUHmA=="
         }
       },
       "is_incremental": false,

@@ -22,9 +22,9 @@
   items:
   - name: 3rd party software EULA information
     href: third-ref-eula.md
-  - name: CyberScore scanner deployment environment requirements
-    href: third-ref-cyberscore-prereqs.md
 - name: XQ Cyber CyberScore
   items:
+  - name: CyberScore scanner deployment environment requirements
+    href: third-ref-cyberscore-prereqs.md
   - name: XQ Cyber CyberScore from UKCloud Service Definition
     href: third-sd-cyberscore.md
