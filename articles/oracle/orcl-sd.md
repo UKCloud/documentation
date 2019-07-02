@@ -119,12 +119,34 @@ UKCloud provides one of the best-connected cloud platforms for the UK Public Sec
 
 We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA including measurements and service credits, please view the [*SLA defintion article*](../other/other-ref-sla-definition.md) on the UKCloud Knowledge Centre.
 
-&nbsp;                      | Non-HA x86 | HA x86    | SPARC / Dedicated SPARC with resilience | Dedicated SPARC without resilience
-----------------------------|-------------|----------|-----------------------------------------|-----------------------------------
-**Service level agreement** | 99.95%    | 99.99%   | 99.95% | 95.00%
-**Portal level agreement**  <td colspan="4">99.90% |
-**Measurement of SLA**      <td colspan="4">The Service is deemed unavailable if a customer is unable to restart an VM after it becomes unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical infrastructure availability, storage, power and internal networking such as physical firewalls and routers.<br>As Oracle workloads are pinned to processor cores, x86 VMs will only be automatically moved in the event of a host failure if HA feature has been enabled by the customer on each x86 VM. Customers are responsible for enabling the HA feature on x86 VMs. If the x86 HA feature is not enabled, or SPARC is used, UKCloud will need to move Oracle VMs to a new host so they can be restarted. The manual movement of VMs is covered by the Non-HA x86 / SPARC SLAs. Customers are responsible for restarting VMs and should configure alerts to be notified if an Oracle VM failure occurs This will not be a live migration and an application restart will be required. Customers will be advised if an action is to be performed. |
-**Key exclusions**          <td colspan="4">The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul> |
+<table>
+  <tr>
+    <th></th>
+    <th>Non-HA x86</th>
+    <th>HA x86</th>
+    <th>SPARC / Dedicated SPARC with resilience</th>
+    <th>Dedicated SPARC without resilience</th>
+  </tr>
+  <tr>
+    <td><b>Service level agreement</b></td>
+    <td>99.95%</td>
+    <td>99.99%</td>
+    <td>99.95%</td>
+    <td>95.00%</td>
+  </tr>
+  <tr>
+    <td><b>Portal level agreement</b></td>
+    <td colspan="4">99.90%</td>
+  </tr>
+  <tr>
+    <td><b>Measurement of SLA</b></td>
+    <td colspan="4">The Service is deemed unavailable if a customer is unable to restart an VM after it becomes unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical infrastructure availability, storage, power and internal networking such as physical firewalls and routers.<br>As Oracle workloads are pinned to processor cores, x86 VMs will only be automatically moved in the event of a host failure if HA feature has been enabled by the customer on each x86 VM. Customers are responsible for enabling the HA feature on x86 VMs. If the x86 HA feature is not enabled, or SPARC is used, UKCloud will need to move Oracle VMs to a new host so they can be restarted. The manual movement of VMs is covered by the Non-HA x86 / SPARC SLAs. Customers are responsible for restarting VMs and should configure alerts to be notified if an Oracle VM failure occurs This will not be a live migration and an application restart will be required. Customers will be advised if an action is to be performed.</td>
+  </tr>
+  <tr>
+    <td><b>Key exclusions</b></td>
+    <td colspan="4">The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul></td>
+  </tr>
+</table>
 
 ## The small print
 
