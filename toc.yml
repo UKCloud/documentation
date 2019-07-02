@@ -45,7 +45,7 @@
   - name: Secure Remote Access
     topicHref: articles/sra/sra-gs.md
   - name: Third-Party Software
-    topicHref: articles/third-ref-eula.md
+    topicHref: articles/third-party/third-ref-eula.md
   - name: Transition Services
     topicHref: articles/transition-services/trans-sd.md
   - name: UKCloud Portal

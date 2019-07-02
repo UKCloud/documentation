@@ -5,13 +5,13 @@ services: third-party
 author: Sue Highmoor
 reviewer:
 lastreviewed: 
-toc_rootlink: Reference
+toc_rootlink: XQ Cyber CyberScore
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: CyberScore scanner deployment environment requirements
-toc_fullpath: Reference/third-ref-cyberscore-prereqs.md
+toc_fullpath: XQ Cyber CyberScore/third-ref-cyberscore-prereqs.md
 toc_mdlink: third-ref-cyberscore-prereqs.md
 ---
 
