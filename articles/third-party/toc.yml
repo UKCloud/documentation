@@ -1,4 +1,28 @@
+- name: Cisco AppDynamics
+  items:
+  - name: Cisco AppDynamics from UKCloud Service Definition
+    href: third-sd-appdynamics.md
+- name: CloudSOC
+  items:
+  - name: CloudSOC from UKCloud Service Definition
+    href: third-sd-cloudsoc.md
+- name: HyTrust DataControl
+  items:
+  - name: HyTrust DataControl from UKCloud Service Definition
+    href: third-sd-hytrust.md
+- name: Moogsoft AIOps
+  items:
+  - name: Moogsoft AIOps from UKCloud Service Definition
+    href: third-sd-moogsoft.md
+- name: Portworx Enterprise
+  items:
+  - name: Portworx Enterprise from UKCloud Service Definition
+    href: third-sd-portworx.md
 - name: Reference
   items:
   - name: CyberScore scanner deployment environment requirements
     href: third-ref-cyberscore-prereqs.md
+- name: XQ Cyber CyberScore
+  items:
+  - name: XQ Cyber CyberScore from UKCloud Service Definition
+    href: third-sd-cyberscore.md

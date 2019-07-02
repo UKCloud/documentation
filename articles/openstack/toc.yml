@@ -50,6 +50,10 @@
     href: ostack-ref-live-migration.md
   - name: OpenStack public image versioning
     href: ostack-ref-public-image-versioning.md
+- name: Service Definition
+  items:
+  - name: UKCloud for OpenStack Service Definition
+    href: ostack-sd.md
 - name: Service Scope
   items:
   - name: UKCloud for OpenStack Service Scope
