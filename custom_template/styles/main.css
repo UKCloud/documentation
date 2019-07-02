@@ -458,7 +458,7 @@ mark{
 /**
  * Product grid updates
  */
- .product-grid{
+.product-grid{
   display              : flex;
   display              : grid;
   flex-direction       : column;
