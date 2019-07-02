@@ -489,7 +489,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-sco.html",
-          "hash": "dpABHQUULwRbypOFm3kZZg=="
+          "hash": "ZbG+DpZo9sRsYfGIYRfO8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-sd.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-sd.html",
+          "hash": "PWY/Tl/T3fFUFuT6dnk3Cg=="
         }
       },
       "is_incremental": false,
@@ -1674,12 +1686,23 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "articles/azure/images/ukc-services.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/azure/images/ukc-services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/azure/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "2zIyKCK7g0tIe6hvnYjQmA=="
+          "hash": "dEd5L+HQ6p4FqjqU2XMA9A=="
         }
       },
       "is_incremental": false,
@@ -7097,12 +7120,23 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "articles/oracle/images/ukc-services.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/oracle/images/ukc-services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/oracle/orcl-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-faq.html",
-          "hash": "J289Ja3gY0w0izHcLnEctQ=="
+          "hash": "fRw8oFH7H3ydZ0sJy+O2oA=="
         }
       },
       "is_incremental": false,
@@ -7222,7 +7256,22 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco.html",
-          "hash": "8EsDizxpe9M5hqHOWV2WCw=="
+          "hash": "IisXsBhBv+JzpTR9KQLY7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/oracle/orcl-sd.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/oracle/orcl-sd.html",
+          "hash": "qZzH57kvOAPDGxPBj3o5YA=="
         }
       },
       "is_incremental": false,
@@ -7246,7 +7295,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/toc.html",
-          "hash": "FDaCxknzfCmeTbqXOaZ/zg=="
+          "hash": "/yGcvMqaJEebJh0Kd9OFYw=="
         }
       },
       "is_incremental": false,
@@ -8130,7 +8179,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "h5KFmbTvAliI11ySSFTBjA=="
+          "hash": "xOue/qYKVvEFgO/xqJsAjQ=="
         }
       },
       "is_incremental": false,
@@ -17288,7 +17337,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 385,
+          "total_file_count": 387,
           "skipped_file_count": 0
         }
       }

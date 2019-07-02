@@ -1,3 +1,7 @@
+- name: Service Definition
+  items:
+  - name: UKCloud for Microsoft Azure Service Definition
+    href: azs-sd.md
 - name: Users
   items:
   - name: FAQs
