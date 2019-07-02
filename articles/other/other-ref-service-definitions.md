@@ -61,7 +61,7 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 [Private Cloud for Oracle Software](../private-cloud/prc-sd-orcl.md)
 
-[Private Cloud for Storage](../private-cloud/prc-storage.md)
+[Private Cloud for Storage](../private-cloud/prc-sd-storage.md)
 
 [Secure Remote Access](../sra/sra-sd.md)
 
@@ -72,8 +72,6 @@ This article provides a list of Service Definitions for UKCloud services. The li
 [Cisco AppDynamics from UKCloud](../third-party/third-sd-appdynamics.md)
 
 [CloudSOC from UKCloud](../third-party/third-sd-cloudsoc.md)
-
-[CommVault Complete Backup & Recovery from UKCloud](../third-party/third-sd-commvault.md)
 
 [HyTrust DataControl from UKCloud](../third-party/third-sd-hytrust.md)
 

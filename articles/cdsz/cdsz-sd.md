@@ -9,8 +9,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Cross Domain Security Zone Service Definition
-toc_fullpath: Service Definition/vmw-sd.md
-toc_mdlink: vmw-sd.md
+toc_fullpath: Service Definition/cdsz-sd.md
+toc_mdlink: cdsz-sd.md
 ---
 
 # Cross Domain Security Zone Service Definition

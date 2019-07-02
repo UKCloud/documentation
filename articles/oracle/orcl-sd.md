@@ -59,7 +59,7 @@ Choose the security domain in which you want to run your workload
 
 - Public - Share the multi tenant cloud as trusted users of UKCloud for Oracle Software
 
-- Private - See [Private Cloud for Oracle Software Service Definition](../private/porcl-sd.md) for more info
+- Private - See [Private Cloud for Oracle Software Service Definition](../private-cloud/prc-sd-orcl.md) for more info
 
 - Dedicated - Private compute nodes on the public UKCloud for Oracle Software
 

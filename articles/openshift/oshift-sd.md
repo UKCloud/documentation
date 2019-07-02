@@ -29,7 +29,7 @@ UKCloud for OpenShift delivers a secure, private deployment of Red Hat’s OpenS
 
 UKCloud deploys, scales and monitors the platform, freeing up your DevOps resources to focus on adding value further up the stack through the rapid delivery of quality-controlled code, all without having to worry about the underlying infrastructure or software.
 
-For full information regarding this product, we have [Service Scopes](oshift-sco.md), [FAQs](oshift-faq.md) and other relevant documents on our [Knowledge Centre](https://docs.ukcloud.com).
+For full information regarding this product, we have [FAQs](oshift-faq.md) and other relevant documents on our [Knowledge Centre](https://docs.ukcloud.com).
 
 ## What the service can help you achieve
 
