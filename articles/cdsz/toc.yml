@@ -19,4 +19,4 @@
 - name: Service Definition
   items:
   - name: Cross Domain Security Zone Service Definition
-    href: vmw-sd.md
+    href: cdsz-sd.md

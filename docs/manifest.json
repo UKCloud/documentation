@@ -1769,9 +1769,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/cdsz/cdsz-sd.md",
       "output": {
@@ -1840,6 +1837,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/cdsz/images/cdsz-walled-garden.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/cdsz/images/cdsz-walled-garden.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/cdsz/images/ukc-services.png",
       "output": {
         "resource": {
@@ -1850,15 +1858,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/cdsz/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/cdsz/toc.html",
-          "hash": "NFdgXUycZfLKNZJUYnKN/w=="
+          "hash": "WsD2GK8rE6p5zATpSXjnCg=="
         }
       },
       "is_incremental": false,
@@ -5252,15 +5257,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-sd.md",
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sd.html",
-          "hash": "5fUL7AOHeH/OjyZaJXTa4A=="
+          "hash": "TLceNO6VQckQeAdHaCFoEg=="
         }
       },
       "is_incremental": false,
@@ -7263,15 +7265,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/oracle/orcl-sd.md",
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sd.html",
-          "hash": "qZzH57kvOAPDGxPBj3o5YA=="
+          "hash": "dcJCvh7ojmPoBARv8fjvUg=="
         }
       },
       "is_incremental": false,
@@ -8171,15 +8170,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-service-definitions.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "xOue/qYKVvEFgO/xqJsAjQ=="
+          "hash": "dKzF+A5L1kZTiGeC3zZPmw=="
         }
       },
       "is_incremental": false,
@@ -17320,13 +17316,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -17338,6 +17327,13 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 387,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }
