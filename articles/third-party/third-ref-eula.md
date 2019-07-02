@@ -21,7 +21,6 @@ This article provides links to EULA information for the 3rd party software provi
 
 Product | EULA
 --------|-----
-Appvia Hub | 
 Cisco AppDynamics | <https://www.appdynamics.com/download-eula/>
 CommVault Complete Backup & Recovery | <https://documentation.commvault.com/commvault/v11_sp9/article?p=features/misc/eula.htm>
 HyTrust DataControl | <https://www.hytrust.com/resources/hytrust-datacontrol-eula/>
