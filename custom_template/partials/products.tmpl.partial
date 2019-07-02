@@ -74,7 +74,7 @@
     <span>Multi-Cloud Backup Storage</span>
   </a>  
 
-  <a href="/articles/private-compute/prc-faq.html" class="product-grid__item">
+  <a href="/articles/private-compute/prc-sd.html" class="product-grid__item">
     <span>Private Cloud</span>
   </a>
 
@@ -87,7 +87,7 @@
   </a>
 
   <a href="/articles/transition-services/trans-sd.html" class="product-grid__item">
-    <span>Private Cloud for Compute</span>
+    <span>Transition Services</span>
   </a>
 
   <a href="/articles/portal/ptl-gs.html" class="product-grid__item">
