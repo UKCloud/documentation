@@ -35,7 +35,13 @@ try {
     Import-Module -Name powershell-yaml -ErrorAction "Stop"
 }
 catch {
-    Install-Module -Name powershell-yaml -Force
+    try {
+        Install-Module -Name powershell-yaml -Force
+    }
+    catch {
+        Write-Error -Message $_.Exception.Message
+        break
+    }
 }
 
 # Declare Articles Folder based on current directory
