@@ -147,14 +147,42 @@ UKCloud provides one of the best-connected cloud platforms for the UK Public Sec
 
 We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA including measurements and service credits, please view the [*SLA defintion article*](../other/other-ref-sla-definition.md) on the UKCloud Knowledge Centre.
 
-&nbsp;                      | ESSENTIAL | POWER    | PRIORITY
-----------------------------|-----------|----------|---------
-**Service level agreement** | 99.95%    | 99.99%   | 99.95%
-**Portal level agreement**  <td colspan="3">99.90% |
-**GPU**                     <td colspan="3">99.90% - see [*SLA defintion*](../other/other-ref-sla-definition.md) |
-**Planned maintenance**     | Included  | Included | Excluded
-**Measurement of SLA**      <td colspan="3">Unavailability applies to existing VMs that become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical host availability, storage, power and internal networking such as physical firewalls and routers. |
-**Key exclusions**          <td colspan="3">The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul> |
+<table>
+  <tr>
+    <th></th>
+    <th>ESSENTIAL</th>
+    <th>POWER</th>
+    <th>PRIORITY</th>
+  </tr>
+  <tr>
+    <td><b>Service level agreement</b></td>
+    <td>99.95%</td>
+    <td>99.99%</td>
+    <td>99.95%</td>
+  </tr>
+  <tr>
+    <td><b>Portal level agreement</b></td>
+    <td colspan="3">99.90%</td>
+  </tr>
+  <tr>
+    <td><b>GPU</b></td>
+    <td colspan="3">99.90% - see SLA defintion</td>
+  </tr>
+  <tr>
+    <td><b>Planned maintenance</b></td>
+    <td>Included</td>
+    <td>Included</td>
+    <td>Excluded</td>
+  </tr>
+  <tr>
+    <td><b>Measurement of SLA</b></td>
+    <td colspan="3">Unavailability applies to existing VMs that become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical host availability, storage, power and internal networking such as physical firewalls and routers.</td>
+  </tr>
+  <tr>
+    <td><b>Key exclusions</b></td>
+    <td colspan="3">The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul></td>
+  </tr>
+</table>
 
 ## The small print
 

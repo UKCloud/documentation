@@ -97,15 +97,39 @@ UKCloud provides one of the best-connected cloud platforms for the UK Public Sec
 
 We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA including measurements and service credits, please view the [*SLA defintion article*](../other/other-ref-sla-definition.md) on the UKCloud Knowledge Centre.
 
-&nbsp;                       | &nbsp; | &nbsp;
------------------------------|--------|-------
-**Platform SLA**             <td colspan="2">99.99% |
-**Portal SLA**               <td colspan="2">99.90% |
-**Availability calculation** <td colspan="2">Availability indication is based on an average 730 hours per month. Excludes planned and emergency maintenance. |
-**SLA Measurement**          <td colspan="2">Availability of all or part of the storage infrastructure. |
-**Key exclusions**           | Applies to All-Inclusive, UKCloud Hosted and Crown Campus Hosted | Deletion or modification of files by customer resulting in data loss. Any access provided by you to your user base that takes the storage system beyond its ecommended performance and connectivity thresholds. Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud.
-&nbsp;                       | Applies to customer-supplied hardware | As above, plus; any loss of connectivity or data including data corruption as a result of you or your suppliers installing new or additional capacity to the storage system.
-&nbsp;                       | Applies to Crown Campus Hosted | As above, plus; any platform outages causing disruption to power and cooling (as they are out of UKCloud's control).
+<table>
+  <tr>
+    <td><b>Platform SLA</b></td>
+    <td colspan="2">99.99%</td>
+  </tr>
+  <tr>
+    <td><b>Portal SLA</b></td>
+    <td colspan="2">99.90%</td>
+  </tr>
+  <tr>
+    <td><b>Availability calculation</b></td>
+    <td colspan="2">Availability indication is based on an average 730 hours per month. Excludes planned and emergency maintenance.</td>
+  </tr>
+  <tr>
+    <td><b>SLA Measurement</b></td>
+    <td colspan="2">Availability of all or part of the storage infrastructure.</td>
+  </tr>
+  <tr>
+    <td><b>Key exclusions</b></td>
+    <td>Applies to All-Inclusive, UKCloud Hosted and Crown Campus Hosted</td>
+    <td>Deletion or modification of files by customer resulting in data loss. Any access provided by you to your user base that takes the storage system beyond its ecommended performance and connectivity thresholds. Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Applies to customer-supplied hardware</td>
+    <td>As above, plus; any loss of connectivity or data including data corruption as a result of you or your suppliers installing new or additional capacity to the storage system.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Applies to Crown Campus Hosted</td>
+    <td>As above, plus; any platform outages causing disruption to power and cooling (as they are out of UKCloud's control).</td>
+  </tr>
+</table>
 
 ## The small print
 

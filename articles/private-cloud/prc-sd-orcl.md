@@ -103,16 +103,49 @@ UKCloud provides one of the best-connected cloud platforms for the UK Public Sec
 
 We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA including measurements and service credits, please view the [*SLA defintion article*](../other/other-ref-sla-definition.md) on the UKCloud Knowledge Centre.
 
-&nbsp;                      | &nbsp; | &nbsp;
-----------------------------|--------|-------
-**Service level agreement** <td colspan="2">99.99% |
-**Portal level agreement**  <td colspan="2">99.90% |
-**Measurement of SLA**      | Applies to All-Inclusive and UKCloud Managed | Availability of all or part of the Private Cloud for Oracle Software.
-&nbsp;                      | Applies to UKCloud Hosted | Availability of power and cooling to your Private Cloud for Oracle infrastructure.
-**Key exclusions**          | Applies to All-Inclusive and UKCloud Managed | Deletion or modification of files by customer resulting in data loss.<br>Any access provided by you to your user base that takes the Oracle system beyond its recommended performance and connectivity thresholds.
-&nbsp;                      | Applies to Customer Managed and UKCloud Managed | As above, plus; any loss of connectivity or data including data corruption as a result of you or your suppliers installing new or additional components into the system.
-&nbsp;                      | Applies to UKCloud Hosted | As above, plus; any platform outages of the Private Cloud for Oracle Software infrastructure caused by the party managing the Oracle infrastructure hosted within UKCloud, or by failures at the physical or logical infrastructure layer outside of UKCloud’s responsibility.
-&nbsp;                      | Applies to CHDC hosted or On-Premise | As above, plus; any platform outages of the Private Cloud for Oracle Software infrastructure caused by DC failures outside of UKCloud Control
+<table>
+  <tr>
+    <th></th>
+    <th colspan="2">Private Cloud for Oracle Software</th>
+  <tr>
+    <td><b>Service level agreement</b></td>
+    <td colspan="2">99.99%</td>
+  </tr>
+  <tr>
+    <td><b>Portal level agreement</b></td>
+    <td colspan="2">99.90%</td>
+  </tr>
+  <tr>
+    <td><b>Measurement of SLA</b></td>
+    <td>Applies to All-Inclusive and UKCloud Managed</td>
+    <td>Availability of all or part of the Private Cloud for Oracle Software.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Applies to UKCloud Hosted</td>
+    <td>Availability of power and cooling to your Private Cloud for Oracle infrastructure.</td>
+  </tr>
+  <tr>
+    <td><b>Key exclusions</b></td>
+    <td>Applies to All-Inclusive and UKCloud Managed</td>
+    <td>Deletion or modification of files by customer resulting in data loss.<br>Any access provided by you to your user base that takes the Oracle system beyond its recommended performance and connectivity thresholds.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Applies to Customer Managed and UKCloud Managed</td>
+    <td>As above, plus; any loss of connectivity or data including data corruption as a result of you or your suppliers installing new or additional components into the system.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Applies to UKCloud Hosted</td>
+    <td>As above, plus; any platform outages of the Private Cloud for Oracle Software infrastructure caused by the party managing the Oracle infrastructure hosted within UKCloud, or by failures at the physical or logical infrastructure layer outside of UKCloud’s responsibility.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Applies to CHDC hosted or On-Premise</td>
+    <td>As above, plus; any platform outages of the Private Cloud for Oracle Software infrastructure caused by DC failures outside of UKCloud Control</td>
+  </tr>
+</table>
 
 ## The small print
 

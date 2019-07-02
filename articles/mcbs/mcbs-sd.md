@@ -79,13 +79,35 @@ UKCloud provides one of the best-connected cloud platforms for the UK Public Sec
 
 We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA including measurements and service credits, please view the [*SLA defintion article*](../other/other-ref-sla-definition.md) on the UKCloud Knowledge Centre.
 
-&nbsp;                      | STANDARD | REPLICATED
-----------------------------|----------|-----------
-**Service level agreement** | 99.95%    | 99.99%
-**Portal level agreement**  <td colspan="2">99.90% |
-**Planned maintenance**     | Excluded from SLA  | Included in SLA
-**Measurement of SLA**      <td colspan="2">Unavailability applies to existing data where the data on the backup target becomes inaccessible due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the backup infrastructure, storage, power and internal networking such as physical firewalls and routers. |
-**Key exclusions**          <td colspan="2">The following are examples of what is not covered by the SLA:<ul><li>Faults within your control (e.g. backup software or application and user networks)<li>Incompatible applications or backup software (e.g. a change of backup software leading to incompatibility, or incompatible software versions)<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul> |
+<table>
+  <tr>
+    <th></th>
+    <th>STANDARD</th>
+    <th>REPLICATED</th>
+  </tr>
+  <tr>
+    <td><b>Service level agreement</b></td>
+    <td>99.95%</td>
+    <td>99.99%</td>
+  </tr>
+  <tr>
+    <td><b>Portal level agreement</b></td>
+    <td colspan="2">99.90%
+  </tr>
+  <tr>
+    <td><b>Planned maintenance</b></td>
+    <td>Excluded from SLA</td>
+    <td>Included in SLA</td>
+  </tr>
+  <tr>
+    <td><b>Measurement of SLA</b></td>
+    <td colspan="2">Unavailability applies to existing data where the data on the backup target becomes inaccessible due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the backup infrastructure, storage, power and internal networking such as physical firewalls and routers.</td>
+  </tr>
+  <tr>
+    <td><b>Key exclusions</b></td>
+    <td colspan="2">The following are examples of what is not covered by the SLA:<ul><li>Faults within your control (e.g. backup software or application and user networks)<li>Incompatible applications or backup software (e.g. a change of backup software leading to incompatibility, or incompatible software versions)<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul></td>
+  </tr>
+</table>
 
 ## The small print
 

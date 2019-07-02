@@ -127,14 +127,39 @@ UKCloud provides one of the best-connected cloud platforms for the UK Public Sec
 
 We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA including measurements and service credits, please view the [*SLA defintion article*](../other/other-ref-sla-definition.md) on the UKCloud Knowledge Centre.
 
-&nbsp;                      | Data Plane per region | Control Plane<br>(OpenStack API and Horizon GUI)
-----------------------------|-----------------------|-------------------------------------------------
-**Service level agreement** | 99.95% | 99.95%
-**Portal level agreement**  <td colspan="2"> 99.90% |
-**GPU**                     <td colspan="2">99.90% - see [*SLA definition article*](../other/other-ref-sla-definition.md) |
-**Planned maintenance**     <td colspan="2">Excluded where a customer solution has been engineered to a single Region |
-**Measurement of SLA**      | Inability to deploy/re-instantiate an Instance via the API at the same time as an existing Instance failing. | Inability to receive a response to any valid requests submitted to the appropriate OpenStack API endpoint after seven retries in any consecutive 10-minute period.
-**Key exclusions**          <td colspan="2">The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client applications and custom configurations (for example customer-defined networks)<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul> |
+<table>
+  <tr>
+    <th></th>
+    <th>Data Plane per region<br>(Instances)</th>
+    <th>Control Plane<br>(OpenStack API and Horizon GUI)</th>
+  </tr>
+  <tr>
+    <td><b>Service level agreement</b></td>
+    <td>99.95%</td>
+    <td>99.95%</td>
+  </tr>
+  <tr>
+    <td><b>Portal level agreement</b></td>
+    <td colspan="2">99.90%</td>
+  </tr>
+  <tr>
+    <td><b>GPU</b></td>
+    <td colspan="2">99.90% - see SLA definition article</td>
+  </tr>
+  <tr>
+    <td><b>Planned maintenance</b></td>
+    <td colspan="2">Excluded where a customer solution has been engineered to a single Region</td>
+  </tr>
+  <tr>
+    <td><b>Measurement of SLA</b></td>
+    <td>Inability to deploy/re-instantiate an Instance via the API at the same time as an existing Instance failing.</td>
+    <td>Inability to receive a response to any valid requests submitted to the appropriate OpenStack API endpoint after seven retries in any consecutive 10-minute period.</td>
+  </tr>
+  <tr>
+    <td><b>Key exclusions</b></td>
+    <td colspan="2">The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client applications and custom configurations (for example customer-defined networks)<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul></td>
+  </tr>
+</table>
 
 ## The small print
 
