@@ -3,8 +3,8 @@ title: UKCloud for Oracle Software FAQs | UKCloud Ltd
 description: Frequently asked questions for UKCloud for Oracle Software
 services: oracle
 author: Matt Warner
-reviewer:
-lastreviewed: 16/07/2018 12:32:29
+reviewer: Bart Challis
+lastreviewed: 01/07/2019
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -21,25 +21,33 @@ toc_mdlink: orcl-faq.md
 
 ### What is UKCloud for Oracle Software?
 
-UKCloud for Oracle Software provides Infrastructure as a Service (IaaS), powered by Oracle VM (OVM) technology, that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications. This service sits adjacent to UKCloud's genuine assured cloud services, enabling you to leverage the benefits of digital transformation while maintaining your investment and integration with traditional Oracle-based services.
+UKCloud for Oracle Software provides Infrastructure as a Service (IaaS), powered by Oracle technology, that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications. This service sits within UKCloud's genuine assured cloud services portfolio, enabling you to leverage the benefits of digital transformation while maintaining your investment and integration with traditional Oracle-based services.
+
+UKCloud for Oracle has two compute technologies: x86 and SPARC.
+
+- x86 is used for most Oracle workloads that leverage Intel or AMD processors
+
+- SPARC is designed for workloads that utilise SPARC chips to support certain legacy workloads
 
 ### What is provided in the service?
 
-For further details on the service, and what is provided, please view the [*UKCloud for Oracle Software service definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf).
+For further details on the service, and what is provided, please view the [*UKCloud for Oracle Software service definition*](orcl-sd.md).
 
 ### Do UKCloud offer an SLA for this service?
 
-Yes. There is a service credit-backed SLA of 99.95% excluding faults within your control or external networking connections such as internet, PSN, Janet or HSCN.
+Yes. There is a service credit-backed SLA of 99.95% for non-HA enabled x86 VMs, and 99.99% for HA enabled x86 VMs. SPARC machines, and Dedicated SPARC servers with resilience have an SLA of 99.95%. Dedicated SPARC servers without resilience have an SLA of 95.00%.
 
-For further details regarding the SLA, please review the relevant section within the [*Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf).
+The SLA excludes faults within your control or external networking connections such as internet, PSN, Janet or HSCN.
+
+For further details regarding the SLA, please review the relevant section within the [*Service Definition*](orcl-sd.md).
 
 ### Is the UKCloud for Oracle Software environment a separate physical hosting platform with external connectivity via the UKCloud for VMware platform?
 
-Yes, UKCloud for Oracle Software is a separate physical hosting platform.
+Yes, UKCloud for Oracle Software is a separate physical hosting platform. As Oracle OVM doesn't have a Layer 3 networking function built into the platform, we leverage the VMware cloud and the native NSX Edges to provide external connectivity for Oracle VMs.
 
 ### What technology is UKCloud for Oracle Software based on?
 
-UKCloud have chosen to utilise Oracle's own Oracle Virtual Machine (OVM) technology to underpin its UKCloud for Oracle Software platform.
+For the x86 Oracle service, UKCloud have chosen to utilise Oracle's own Oracle Virtual Machine (OVM) technology to underpin its UKCloud for Oracle Software platform.
 
 Current stack is Oracle VM Server-> Oracle VM Manager-> Oracle Enterprise Manager.
 
@@ -53,13 +61,17 @@ Please engage with a UKCloud solutions architect to see how we can help with you
 
 The UKCloud for Oracle Software platform is based on an underpinning infrastructure that can support native Oracle technologies such as Data Guard and RMAN data protection solutions.
 
+### If I'm using Oracle Data Guard, will I need to have the same size DR VMs as my primary VMs?
+
+No. While you will need to have the same CPU and storage allocation, you can reduce your RAM allocation by 50% in your DR VMs and ramp up if you need to invoke DR.
+
 ### Can I use UKCloud's Mass Data Transfer Facility to import my Oracle data?
 
 While this is not currently available, this is being investigated by the development team.
 
 ### Can I have a dedicated UKCloud for Oracle Software environment?
 
-Yes. If you prefer a dedicated environment, UKCloud offer the [*Private Cloud for Compute service*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/386916122749029-service-definition-document-2018-05-21-1252.pdf) for both Assured OFFICIAL and Elevated OFFICIAL.
+Yes. If you prefer a dedicated environment, UKCloud offer the [*Private Cloud service*](../private-cloud/prc-sd.md) for both Assured OFFICIAL and Elevated OFFICIAL. Alternatively, if you want to use Oracle proprietary hardware, then we can support the hosting and management of certain Oracle technologies - see [*Private Cloud for Oracle Software*](../private-cloud/prc-sd-orcl.md) for more information.
 
 ### Is the RAM virtual or physical?
 
@@ -85,13 +97,13 @@ No. UKCloud maintain and manage the underlying infrastructure that your solution
 
 ### Are templates available for solution components?
 
-UKCloud will provide a set of base OS templates (assemblies) based on Oracle Linux.
+UKCloud will provide a set of base OS templates (assemblies) based on Oracle Linux and Microsoft.
 
 You can also create your own assemblies and upload reusable software images.
 
 ### How do I increase or decrease resources?
 
-You can change processor, memory and storage allocations via the self-service UKCloud Portal.
+Currently, processor, memory and storage allocations are changed via a service request, raised through the UKCloud Portal. This is because of the resource pinning that OVM does on the underlying hypervisor.
 
 - Processors and memory can be added to or removed from VMs, although VMs will need to be shut down for this to happen.
 
@@ -123,7 +135,7 @@ Yes, this service is available on the Elevated OFFICIAL environment with connect
 
 ### Is there connectivity from other regions to Oracle?
 
-There is no native connectivity from other regions to Oracle other than customers configuring IPSEC VPNs.
+There is no native connectivity from other regions to Oracle other than customers configuring IPsec VPNs.
 
 ## Support
 
