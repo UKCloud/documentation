@@ -36,7 +36,7 @@ try {
 }
 catch {
     try {
-        Install-Module -Name powershell-yaml -Force
+        Install-Module -Name powershell-yaml -ErrorAction "Stop" -Force
     }
     catch {
         Write-Error -Message $_.Exception.Message
