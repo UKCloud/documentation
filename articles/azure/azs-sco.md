@@ -2,9 +2,9 @@
 title: UKCloud for Microsoft Azure Service Scope | UKCloud Ltd
 description: Outlines important details regarding UKCloud for Microsoft Azure
 services: azure-stack
-author: Andy Webb
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+author: Mario Fedato
+reviewer: Mario Fedato
+lastreviewed: 25/06/2019
 
 toc_rootlink: Users
 toc_sub1: Service Scope
@@ -93,7 +93,7 @@ You can deploy multiple gateway devices and configure the following using either
 
 - Routing – basic custom defined routing can be configured on virtual networks
 
-**Internet-facing solutions** have 8 usable public IP addresses. You can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.
+**Internet-facing solutions** have 10 usable public IP addresses. You can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.
 
 ### Advanced features
 
@@ -206,7 +206,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 **Technical Account Managers (TAM).** You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
 
-**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2017/07/UKCloud-Factsheet-Customer-Care.pdf).
+**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
 
 ## Customer responsibilities
 
@@ -252,13 +252,13 @@ If during Emergency Maintenance there is a loss of availability to the service, 
 
 The following documents contain more information about UKCloud for Microsoft Azure and the service options:
 
-- [*UKCloud for Microsoft Azure service definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/630346855069919-service-definition-document-2018-07-30-0941.pdf)
+- [*UKCloud for Microsoft Azure service definition*](azs-sd.md)
 
 - [*UKCloud for Microsoft Azure FAQ*](azs-faq.md)
 
 - [*Getting Started Guide for for Microsoft Azure*](azs-gs.md)
 
-- [UKCloud Terms and Conditions](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf)
+- [UKCloud Terms and Conditions](../other/other-ref-terms-and-conditions.md)
 
 - [*SLA Definition*](../other/other-ref-sla-definition.md)
 
