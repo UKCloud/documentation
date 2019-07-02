@@ -27,7 +27,7 @@ toc_mdlink: vmware-home.md
 
 ## Let's get started
 
-First, take a look at our [Getting Started Guide for UKCloud for VMware](./vmw-gs.md) to learn the basics, then you can:
+First, take a look at our [*Getting Started Guide*](./vmw-gs.md) to learn the basics, then you can:
 
 <div class="row">
   <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/vmware/vmw-how-create-routed-network.html">Create a routed network</a></ul></div>
@@ -68,21 +68,21 @@ First, take a look at our [Getting Started Guide for UKCloud for VMware](./vmw-g
 ## Other resources
 
 <div class="row">
-  <div class="col-md-4"><ul><li><a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-11-12-1615.pdf">Service Definition</a></ul></div>
-  <div class="col-md-4"><ul><li><a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/630346855069919-pricing-document-2018-11-14-1418.pdf">UKCloud Pricing Guide</a></ul></div>
-  <div class="col-md-4"><ul><li><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></ul></div>
+  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/vmware/vmw-sd.md">Service Definition</a></ul></div>
+  <div class="col-md-4"><ul><li><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></ul></div>
+  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/other/other-ref-services-by-region.html">Services by region</a></ul></div>
 </div>
 
 <div class="row">
-  <div class="col-md-4"><ul><li><a href="https://ukcloud.com/wp-content/uploads/2018/12/ukcloud-for-vmware-factsheet.pdf">Factsheet</a></ul></div>
+  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/vmware/vmw-sco.md">Service Scope</a></ul></div>
+  <div class="col-md-4"><ul><li><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></ul></div>
   <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html">SLA definition</a></ul></div>
-  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/other/other-ref-services-by-region.html">Services by region</a></ul></div>
 </div>
 
 ## Still have questions?
 
 Find answers to common questions in our [UKCloud for VMware FAQ](./vmw-faq.md).
 
-## Join the conversation
+<!--## Join the conversation
 
-<!--Visit the <a href="https://community.ukcloud.com">UKCloud Community</a> to join the conversation about digital transformation in the UK Public Sector. If you have an idea for how we could improve any of our services, use the <a href="https://community.ukcloud.com/ideas">Ideas</a> page or watch out for regular feedback challenges from our Product Management team. You can also read blogs, watch webinars, sign up to upcoming events and find a Partner to help deliver your project.-->
+Visit the <a href="https://community.ukcloud.com">UKCloud Community</a> to join the conversation about digital transformation in the UK Public Sector. If you have an idea for how we could improve any of our services, use the <a href="https://community.ukcloud.com/ideas">Ideas</a> page or watch out for regular feedback challenges from our Product Management team. You can also read blogs, watch webinars, sign up to upcoming events and find a Partner to help deliver your project.-->

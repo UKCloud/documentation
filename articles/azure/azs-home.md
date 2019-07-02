@@ -1,0 +1,90 @@
+---
+title: UKCloud for Microsoft Azure | UKCloud Ltd
+description: Home page for UKCloud for Microsoft Azure
+services: azure-stack
+author: Sue Highmoor
+
+toc_rootlink: About
+toc_sub1: 
+toc_sub2:
+toc_sub3:
+toc_sub4:
+toc_title: UKCloud for Microsoft Azure
+toc_fullpath: About/azs-home.md
+toc_mdlink: azs-home.md
+---
+
+# UKCloud for Microsoft Azure
+
+<div class="row">
+  <div class="col-md-2">
+    <img src="https://docs.ukcloud.com/articles/azure/images/azs-prod-image.png" alt="UKCloud for Microsoft Azure">
+  </div>
+  <div class="col-md-10">
+    <p>UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure platform delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners.</p>
+  </div>
+</div>
+
+## Let's get started
+
+First, take a look at our [*Getting Started Guide*](./azs-gs.md) to learn the basics, then you can:
+
+<div class="row">
+  <div class="col-md-3"><ul><li><a href="azs-how-create-vm.html">Create a VM (using the Portal)</a></ul></div>
+  <div class="col-md-3"><ul><li><a href="azs-how-manage-azure-group.html">Manage groups and permissions</a></ul></div>
+  <div class="col-md-3"></div>
+  <div class="col-md-3"></div>
+</div>
+
+<div class="row">
+  <div class="col-md-3"><ul><li><a href="azs-how-create-vm-cli.html">Create a VM (using the Azure CLI)</a></ul></div>
+  <div class="col-md-3"><ul><li><a href="azs-how-use-azure-api.html">Use the Azure Stack API</a></ul></div>
+  <div class="col-md-3"></div>
+  <div class="col-md-3"></div>
+</div>
+
+<div class="row">
+  <div class="col-md-3"><ul><li><a href="azs-how-create-vm-ps.html">Create a VM (using PowerShell)</a></ul></div>
+  <div class="col-md-3"></div>
+  <div class="col-md-3"></div>
+  <div class="col-md-3"></div>
+</div>
+
+<div class="row">
+  <div class="col-md-3"><ul><li><a href="azs-how-create-vm-terraform.html">Create a VM (using Terraform)</a></ul></div>
+  <div class="col-md-3"></div>
+  <div class="col-md-3"></div>
+  <div class="col-md-3"></div>
+</div>
+
+## Useful Videos
+
+<div class="row">
+  <div class="col-md-6">
+    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/305064724?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    <p><a href="https://vimeo.com/305064724">Microsoft Azure Stack Portal Overview</a></p>
+  </div>
+  <div class="col-md-6"></div>
+</div>
+
+## Other resources
+
+<div class="row">
+  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/azure/azs-sd.md">Service Definition</a></ul></div>
+  <div class="col-md-4"><ul><li><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></ul></div>
+  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/other/other-ref-services-by-region.html">Services by region</a></ul></div>
+</div>
+
+<div class="row">
+  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/azure/azs-sco.md">Service Scope</a></ul></div>
+  <div class="col-md-4"><ul><li><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></ul></div>
+  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html">SLA definition</a></ul></div>
+</div>
+
+## Still have questions?
+
+Find answers to common questions in our [UKCloud for Microsoft Azure FAQ](./azs-faq.md).
+
+<!--## Join the conversation
+
+Visit the <a href="https://community.ukcloud.com">UKCloud Community</a> to join the conversation about digital transformation in the UK Public Sector. If you have an idea for how we could improve any of our services, use the <a href="https://community.ukcloud.com/ideas">Ideas</a> page or watch out for regular feedback challenges from our Product Management team. You can also read blogs, watch webinars, sign up to upcoming events and find a Partner to help deliver your project.-->
