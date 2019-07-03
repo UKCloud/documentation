@@ -38,51 +38,44 @@ Your OpenShift cluster must be version 3.11 or later, and must be enabled for ro
 
 1. Log in to OpenShift on the command line and change to the default project:
 
-       oc login ...
-       oc project openshift-infra
+       $ oc login ...
+       $ oc project default
 
-2. Check if a monitoring account already exists:
+2. Check if the routers have the syslog container enabled:
 
-       oc get serviceaccount --all-namespaces | grep infra | \
-       grep monitoring
+       $ oc get pods | grep router
+       router-4-45r2t             2/2       Running   0          12d
+       router-4-n7jg2             2/2       Running   0          12d
+       router-private-3-lvbg4     2/2       Running   0          12d
+       router-private-3-s2nbr     2/2       Running   0          12d
+       
+       # Since the container count for each router shows 2/2, the syslog container is present
 
-    If the account exists, the command above prints the name, and you can move on to [Reading the authentication token](#reading-the-authentication-token). If it prints nothing, you need to create the account as described in the remaining steps below.
+    If your routers do not have the syslog sidecar container, raise a request in the UKCloud portal to request this functionality is added. Your cluster must be v3.11 or later.
 
-3. Create the monitoring account if it does not exist:
+3. View the logs for a specific router:
 
-       oc create serviceaccount monitoring
-
-4. Add the role cluster-reader to the account:
-
-       oc adm policy add-cluster-role-to-user cluster-reader \
-       system:serviceaccount:openshift-infra:monitoring
-
-## Reading the authentication token
-
-Next, you need to retrieve the authentication token that you created in the previous step.
-
-1. If you haven't already done so, ensure you are logged in to OpenShift and connected to the right project:
-
-       oc login ...
-       oc project openshift-infra
-
-2. Find the name of the monitoring account's token IDs:
-
-       oc describe serviceaccount monitoring
-
-    This lists the IDs of one or more token names, for example, `monitoring-token-1abc2`.
-
-3. Find the actual authentication token by querying the secret by the name given in the previous step, for example:
-
-       oc describe secret <monitoring-token>
-
-    Where `monitoring-token` is the token name you found in the previous step.
-
-    This lists a few values, including the 179-character authentication token.
+       # For router "router-4-45r2t":
+       $ oc logs router-4-45r2t -c syslog
+       2019-07-03T13:41:28.573805+00:00 worker-infra-0 haproxy[506]: 37.69.33.21:49342 [03/Jul/2019:13:41:28.570] fe_sni~ be_secure:openshift-logging:logging-kibana/pod:logging-kibana-1-r8rkj:logging-kibana:10.177.0.13:3000 0/0/0/3/3 200 22810 - - --VN 10/5/0/1/0 0/0 "GET /bundles/2e90d5152ce92e3eb62ba053c7b9d2cb.woff HTTP/1.1"
+       2019-07-03T13:41:28.578731+00:00 worker-infra-0 haproxy[506]: 37.69.33.21:49345 [03/Jul/2019:13:41:28.575] fe_sni~ be_secure:openshift-logging:logging-kibana/pod:logging-kibana-1-r8rkj:logging-kibana:10.177.0.13:3000 0/0/0/2/2 200 23286 - - --VN 10/5/1/2/0 0/0 "GET /bundles/697573f67bcfdd2c45e3e63c7380dd67.woff HTTP/1.1"
+       ...
+       
+The logs are shown in the HTTP haproxy log format. See https://cbonte.github.io/haproxy-dconv/1.7/configuration.html#8.2.3 for a guide on the fields.
+       
 
 ## Viewing logs for all routers in the cluster
 
-...
+The router syslog containers send their logs to the cluster's Elasticsearch database in the `openshift-logging` project. This can be viewed using Kibana as follows:
+
+1. Locate the URL to access Kibana. This can be found in the openshift-logging project using the Web UI or using the command-line client as below:
+      
+       $ oc describe route logging-kibana -n openshift-logging | grep Host
+       Requested Host:         kibana.cnap-testing.frn00006.cna.ukcloud.com
+       
+2. Access Kibana by opening the URL on HTTPS (eg https://kibana.cnap-testing.frn00006.cna.ukcloud.com) in a web browser. Login with your OpenShift/SSO credentials if prompted.
+
+3. In the query box, enter "kubernetes.pod_name:router*" and click the Search/Magnifying Glass button. This will return the logs for all routers.
 
 ## Next steps
 
