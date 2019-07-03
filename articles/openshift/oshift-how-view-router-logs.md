@@ -30,7 +30,7 @@ This guide assumes familiarity with the Linux command line, and with the `oc` co
 
 ### Prerequisites
 
-To complete the steps in this guide, you must have the `oc` command installed and have a suitable account on your OpenShift cluster. Specifically, it is assumed you know the authentication credentials that need to be supplied to `oc` login.
+To complete the steps in this guide, you must have the `oc` command installed and have a suitable account on your OpenShift cluster. Specifically, it is assumed you know the authentication credentials that need to be supplied to `oc login`.
 
 Your OpenShift cluster must be version 3.11 or later, and must be enabled for router logging. If your OpenShift routers do not have the "syslog" sidecar container enabled then raise a request on the UKCloud portal requesting this functionality.
 
@@ -68,14 +68,17 @@ The logs are shown in the HTTP haproxy log format. See https://cbonte.github.io/
 
 The router syslog containers send their logs to the cluster's Elasticsearch database in the `openshift-logging` project. This can be viewed using Kibana as follows:
 
-1. Locate the URL to access Kibana. This can be found in the openshift-logging project using the Web UI or using the command-line client as below:
+1. Locate the URL to access Kibana. This can be found in the openshift-logging project using the Web UI or by using the command-line client as below:
       
        $ oc describe route logging-kibana -n openshift-logging | grep Host
        Requested Host:         kibana.cnap-testing.frn00006.cna.ukcloud.com
        
-2. Access Kibana by opening the URL on HTTPS (eg https://kibana.cnap-testing.frn00006.cna.ukcloud.com) in a web browser. Login with your OpenShift/SSO credentials if prompted.
+2. Access Kibana by opening the URL using HTTPS (eg https://kibana.cnap-testing.frn00006.cna.ukcloud.com) in a web browser. Login with your OpenShift/SSO credentials if prompted.
 
-3. In the query box, enter "kubernetes.pod_name:router*" and click the Search/Magnifying Glass button. This will return the logs for all routers.
+3. In the query box, enter "kubernetes.pod_name:router*" and click the Search/Magnifying Glass button. This will return the logs for all routers. By default, logs for the last 15 minutes is shown. This can be changed using the picker in the top right of the page.
+
+![Example Kibana Search](images/oshift-kibana.png)
+
 
 ## Next steps
 
