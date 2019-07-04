@@ -1,6 +1,6 @@
 ---
-title: Private Cloud for Compute FAQs | UKCloud Ltd
-description: Frequently asked questions for Private Cloud for Compute
+title: Private Cloud FAQs | UKCloud Ltd
+description: Frequently asked questions for Private Cloud 
 services: private-compute
 author: Matt Warner
 reviewer:
@@ -10,22 +10,22 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Private Cloud for Compute FAQs
+toc_title: Private Cloud FAQs
 toc_fullpath: FAQs/prc-faq.md
 toc_mdlink: prc-faq.md
 ---
 
-# Private Cloud for Compute FAQs
+# Private Cloud FAQs
 
 ## Service
 
 ### What is the service?
 
-Private Cloud for Compute is a single-tenant UKCloud for VMware service, where your compute requirements are hosted either in one of our data centres, to gain the benefits of our Assured and Elevated cloud platforms; or in your Crown Hosting Data Centre (CHDC); powered by VMware vCloud Director or OpenStack.
+Private Cloud is a single-tenant UKCloud for VMware service, where your compute or storage requirements are hosted either in one of our data centres, to gain the benefits of our Assured and Elevated cloud platforms; or in your Crown Hosting Data Centre (CHDC); powered by VMware vCloud Director or OpenStack.
 
-### How does Private Cloud for Compute differ from UKCloud for VMware?
+### How does Private Cloud Compute differ from UKCloud for VMware?
 
-Private Cloud for Compute provides you with dedicated infrastructure - the compute infrastructure is designed for the exclusive use of each customer, and provides the highest levels of separation and isolation from other customers.
+Private Cloud Compute provides you with dedicated infrastructure - the compute infrastructure is designed for the exclusive use of each customer, and provides the highest levels of separation and isolation from other customers.
 
 This service differs from UKCloud for VMware in that it also allows you to have more flexibility in the size of your VMs.
 
@@ -43,7 +43,7 @@ Your data will be stored in our highly resilient, UK-sovereign tier 3 data centr
 
 ### How much data can I store?
 
-A core benefit of Private Cloud for Compute is that it can scale to meet the most demanding compute requirements.
+A core benefit of Private Cloud is that it can scale to meet the most demanding compute requirements.
 
 ## Management
 
@@ -65,7 +65,7 @@ UKCloud's secure online Portal provides the most common service management funct
 
 ### How do I manage my services?
 
-Private Cloud for Compute on the Assured OFFICIAL (formerly IL2) domain can be managed over the internet via the UKCloud Portal.
+Private Cloud on the Assured OFFICIAL (formerly IL2) domain can be managed over the internet via the UKCloud Portal.
 
 For the Elevated OFFICIAL (formerly IL3) domain, the security requirements are much stricter and require either a PSN-approved connection, UKCloud Secure Remote Access, or CAPS-approved encryption.
 
@@ -79,7 +79,7 @@ As far as possible, emergency maintenance of UKCloud's infrastructure takes plac
 
 ### How can I get started with the service?
 
-On acceptance of your order, we'll work with you to create a detailed design for your Private Cloud - Compute service. The design will formalise the dedicated components required for your solution.
+On acceptance of your order, we'll work with you to create a detailed design for your Private Cloud service. The design will formalise the dedicated components required for your solution.
 
 If this is a new service for you, we will create your primary administrator account and send you a welcome pack, which includes the URL for the UKCloud Portal for access to the Knowledge Centre and service management function.
 
@@ -119,9 +119,9 @@ The service is hosted in the UK and operated by SC-cleared staff. It has extensi
 
 ### Can systems on different UKCloud platforms communicate with one another?
 
-UKCloud's Cross Domain Security Zone allows customers to use the UKCloud-defined and managed Guard, or a customer-designed and managed Walled Garden, to enable communication between platforms.
+UKCloud's Cross Domain Security Zone allows customers to use the customer-designed and managed Walled Garden, to enable communication between platforms.
 
-For more information, see the [*Cross Domain Security Zone Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/781113344072781-service-definition-document-2018-05-21-1257.pdf).
+For more information, see the [*Cross Domain Security Zone Service Definition*](https://docs.ukcloud.com/articles/cdsz/cdsz-sd.html).
 
 ## Feedback
 
