@@ -207,8 +207,8 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Admin (Subscription Owner) credentials
 # Note: This account CAN, but does not have to, be the same as your public Azure account
-$AzsUsernameAdmin = "admin@onboardingukcloud3gmail.onmicrosoft.com"
-$AzsUserPasswordAdmin = ConvertTo-SecureString -String 'Skyscape!!!' -AsPlainText -Force
+$AzsUsernameAdmin = "<output form="azsusername" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
+$AzsUserPasswordAdmin = ConvertTo-SecureString -String '<output form="azspassword" name="result" style="display: inline;">Password123!</output>' -AsPlainText -Force
 $AzsCredAdmin = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsernameAdmin, $AzsUserPasswordAdmin
 
 # Login to Azure Stack as Admin (Subscription Owner)
