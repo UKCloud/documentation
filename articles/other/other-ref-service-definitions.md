@@ -23,7 +23,7 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 ### Multi-cloud technology stacks
 
-[UKCloud for Microsoft Azure](../vmware/vmw-sd.md)
+[UKCloud for Microsoft Azure](../azure/azs-sd.md)
 
 [UKCloud for OpenShift](../openshift/oshift-sd.md)
 
