@@ -69,13 +69,13 @@ Your compute solution can be:
 
 ## Upfront deployment charges
 
-You will be charged an upfront design and deployment fee before hardware is procured and installation is scheduled. See the pricing section of the Service Definition.
+You will be charged an upfront design and deployment fee before hardware is procured and installation is scheduled. See the Pricing guide for more information.
 
 ## Installation
 
 Your assigned project manager will coordinate the build activities and ensure end-to-end testing of your service.
 
-During the installation, we'll integrate your cloud into our assured platform so that we can maintain your service once it has gone live.
+During the installation, we'll integrate your cloud into our platform so that we can maintain your service once it has gone live.
 
 Your service will be handed over to you when your project manager can confirm that the testing has proved successful and that you can provision VMs in your environment.
 
@@ -99,7 +99,7 @@ As your service needs grow, we'll work with you to coordinate the installation o
 
 - Managing the performance of your workload by right-sizing your VMs and their usage
 
-- Raising service requests through the UKCloud Portal when you need configurations implemented
+- Raising Service Requests through the UKCloud Portal when you need configurations implemented
 
 - Raising incident tickets if you experience any issues with your service
 
@@ -113,7 +113,7 @@ As per All-Inclusive plus:
 
 - Purchasing the hardware and network infrastructure based on an agreed specification
 
-- Arranging a service and maintenance contract for your hardware and authorizing UKCloud as an authorised contact
+- Arranging a service and maintenance contract for your hardware and authorising UKCloud as an authorised contact
 
 - Managing the performance of your workload and assigning UKCloud as an authorised contact
 
@@ -145,7 +145,7 @@ As per All-Inclusive plus:
 
 #### Important CHDC considerations
 
-You need to ensure that UKCloud control the physical access to the hardware in your CHDC environment. A service request via the UKCloud Portal must be raised for anyone else requiring access to the hardware, with full details of the activities they wish to carry out. These requests are subject to our approval. This is to ensure that there is no disruption to your service.
+You need to ensure that UKCloud control the physical access to the hardware in your CHDC environment. A Service Request via the UKCloud Portal must be raised for anyone else requiring access to the hardware, with full details of the activities they wish to carry out. These requests are subject to our approval. This is to ensure that there is no disruption to your service.
 
 We cannot be responsible for any service affecting issues resulting from non-escorted access.
 
@@ -167,7 +167,7 @@ We cannot be responsible for any service affecting issues resulting from non-esc
 
 - Providing you with visibility of capacity utilisation to ensure capacity planning can be effectively performed
 
-- Your assigned technical account manager will attend any required service reviews and project progress calls that you need
+- Your assigned Technical Account Manager will attend any required service reviews and project progress calls that you need
 
 - Notifying you of any maintenance windows and agreeing a suitable time to implement
 
@@ -199,7 +199,7 @@ We cannot be responsible for any service affecting issues resulting from non-esc
 
 ## What we are not responsible for
 
-- We will not provide you with any access to any management applications that we use to run and maintain your environment.
+- We will not provide you with access to any management applications that we use to run and maintain your environment.
 
 - SLA excludes:
 
@@ -219,7 +219,7 @@ We cannot be responsible for any service affecting issues resulting from non-esc
 
 ## To progress further
 
-For further information, contact your account manager to request more information or to place an order.
+For further information, contact your Technical Account Manager to request more information or to place an order.
 
 ## Feedback
 
