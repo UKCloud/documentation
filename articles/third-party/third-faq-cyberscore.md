@@ -23,7 +23,7 @@ toc_mdlink: third-faq-cyberscore.md
 
 ### What is CyberScore?
 
-CyberScore&trade; is a fully-automated security testing and rating service that scores a virtual machine’s cyber security posture and explains potential impacts. Results are presented in a range of reports and action plans that help customers rank and rate vulnerabilities and identify key remediations. You can run the service as often as required and will CyberScore will show your progress over time.
+CyberScore&trade; is a fully-automated security testing and rating service that scores a virtual machine’s cyber security posture and explains potential impacts. Results are presented in a range of reports and action plans that help customers rank and rate vulnerabilities and identify key remediations. You can run the service as often as required and CyberScore will show your progress over time.
 
 ### What is provided in the service?
 
