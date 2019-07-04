@@ -25,7 +25,7 @@ This service is aimed at customers who require the perceived benefit of owning t
 
 Our Private Oracle service is a single tenant (private cloud) compute infrastructure where your compute needs are hosted either in one of our data centres, to gain the benefits of our Assured and Elevated cloud platforms, in your Crown Hosting Data Centre (CHDC), or hosted in your own DC or another DC of your choice.
 
-We can provide Private Oracle on an all-inclusive basis, or alternatively we can supply the environment specification for you to procure your own hardware, which we'll install and maintain on your behalf, or you can arrange alternative management of the private cloud (yourselves, through a partner or through Oracle.
+We can provide Private Oracle on an all-inclusive basis, or alternatively we can supply the environment specification for you to procure your own hardware, which we'll install and maintain on your behalf, or you can arrange alternative management of the private cloud (yourselves, through a partner or through Oracle).
 
 ## Capturing your requirements
 
@@ -63,7 +63,7 @@ Your compute solution can be:
 
 - Based on Oracle Exadata, Private Cloud Appliance (PCA), Private Oracle Cloud Infrastructure (OCI) or other Oracle Engineered Systems
 
-- Located in either or both of our two sites - Farnborough and Corsham, in a CHDC or in another datacentre (including on-premise)
+- Located in either or both of our two sites - Farnborough and Corsham, in a CHDC or in another data centre (including on-premise)
 
 - In either our Assured OFFICIAL or Elevated OFFICIAL security domain if hosted within UKC.
 
@@ -119,7 +119,7 @@ As your service needs grow, we'll work with you to coordinate the installation o
 
 ### Your UKCloud Hosted responsibilities
 
-- If your engineers will require access to manage and maintain the hardware you will need to ensure they are booked in to visit UKCloud DCs. This can be done through a Service Request. Note that due to the secure nature of the site, at least 24 hours’ notice is required. Engineers must be escorted and this is charged at a SFIA day rate. 
+- If your engineers will require access to manage and maintain the hardware you will need to ensure they are booked in to visit UKCloud DCs. This can be done through a Service Request. Note that due to the secure nature of the site, at least 24 hours’ notice is required. Engineers must be escorted and this is charged at a SFIA day rate - https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf. 
 
 ### Your CHDC Hosted responsibilities
 
@@ -143,7 +143,7 @@ As your service needs grow, we'll work with you to coordinate the installation o
 
 ### Important CHDC/On-premises/Alternate DC considerations
 
-You need to ensure that UKCloud control the physical access to the hardware in your CHDC environment. A service request via the UKCloud Portal must be raised for anyone else requiring access to the hardware, with full details of the activities they wish to carry out. These requests are subject to our approval. This is to ensure that there is no disruption to your service.
+You need to ensure that UKCloud control the physical access to the hardware in your CHDC environment. A Service Request via the UKCloud Portal must be raised for anyone else requiring access to the hardware, with full details of the activities they wish to carry out. These requests are subject to our approval. This is to ensure that there is no disruption to your service.
 
 We cannot be responsible for any service affecting issues resulting from non-escorted access.
 
@@ -155,7 +155,7 @@ We cannot be responsible for any service affecting issues resulting from non-esc
 
 - Managing the performance of your workload by right-sizing your VMs and their usage
 
-- Raising service requests through the UKCloud Portal when you need configurations implemented
+- Raising Service Requests through the UKCloud Portal when you need configurations implemented
 
 - Raising incident tickets if you experience any issues with your service
 
@@ -169,7 +169,7 @@ As per All-Inclusive plus:
 
 - Purchasing the hardware and network infrastructure based on an agreed specification
 
-- Arranging a service and maintenance contract for your hardware and authorizing UKCloud as an authorised contact
+- Arranging a service and maintenance contract for your hardware and authorising UKCloud as an authorised contact
 
 - Managing the performance of your workload and assigning UKCloud as an authorised contact
 
@@ -237,7 +237,7 @@ As per All-Inclusive plus:
 
 - Providing you with visibility of capacity utilisation to ensure capacity planning can be effectively performed
 
-- Your assigned technical account manager will attend any required service reviews and project progress calls that you need
+- Your assigned Technical Account Manager will attend any required service reviews and project progress calls that you need
 
 - Notifying you of any maintenance windows and agreeing a suitable time to implement
 
@@ -281,7 +281,7 @@ As per All-Inclusive plus:
 
 ## What we are not responsible for
 
-We will not provide you with any access to any management applications that we use to run and maintain your environment.
+We will not provide you with access to any management applications that we use to run and maintain your environment.
 
 ## SLA
 
@@ -307,7 +307,7 @@ SLA excludes:
 
 ## To progress further
 
-For further information, contact your account manager to request more information or to place an order.
+For further information, contact your Technical Account Manager to request more information or to place an order.
 
 ## Feedback
 
