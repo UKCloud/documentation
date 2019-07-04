@@ -143,7 +143,7 @@ As your storage needs grow, we'll work with you to coordinate the installation o
 
 - Performing capacity planning and working with us to plan upgrades
 
-- Raising service requests through the UKCloud Portal when you need configurations implemented
+- Raising Service Requests through the UKCloud Portal when you need configurations implemented
 
 - Raising incident tickets if you experience any issues with your service
 
@@ -195,13 +195,13 @@ As your storage needs grow, we'll work with you to coordinate the installation o
 
 ## What we are not responsible for
 
-We will not provide you with any access to any management applications that we use to run and maintain your storage environment.
+We will not provide you with access to any management applications that we use to run and maintain your storage environment.
 
 We will not supply you with root access to your hardware as your hardware will be maintained by us; we'll work with you to configure it to your needs.
 
 ## To progress further
 
-For further information, please see the Private Cloud for Storage service definition and contact your account manager to request more information or to place an order.
+For further information, please see the Private Cloud for Storage Service Definition and contact your Technical Account Manager to request more information or to place an order.
 
 ## Feedback
 
