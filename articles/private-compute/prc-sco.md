@@ -1,6 +1,6 @@
 ---
-title: Private Cloud for Compute Service Scope | UKCloud Ltd
-description: Outlines important details regarding Private Cloud for Compute
+title: Private Cloud Service Scope | UKCloud Ltd
+description: Outlines important details regarding Private Cloud 
 services: private-compute
 author: Steve Hall
 reviewer:
@@ -10,22 +10,22 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Private Cloud for Compute Service Scope
+toc_title: Private Cloud Service Scope
 toc_fullpath: Service Scope/prc-sco.md
 toc_mdlink: prc-sco.md
 ---
 
-# Private Cloud for Compute Service Scope
+# Private Cloud Service Scope
 
 ## About the service
 
-This document describes the boundaries of the Private Cloud for Compute service, along with the responsibilities of both you and UKCloud to facilitate the installation and ongoing use of the service.
+This document describes the boundaries of the Private Cloud service, along with the responsibilities of both you and UKCloud to facilitate the installation and ongoing use of the service.
 
-Our Private Cloud for Compute service is a single‑tenant (private cloud) compute infrastructure where your compute needs are hosted either in one of our data centres, to gain the benefits of our Assured and Elevated cloud platforms, or in your Crown Hosting Data Centre (CHDC).
+Our Private Cloud service is a single‑tenant (private cloud) compute or storage infrastructure where your compute or storage needs are hosted either in one of our data centres, to gain the benefits of our Assured and Elevated cloud platforms, or in your Crown Hosting Data Centre (CHDC).
 
 This service is aimed at customers who require the perceived benefit of owning their own infrastructure.
 
-We can provide Private Cloud for Compute on an all-inclusive basis, or alternatively we can supply the environment specification for you to procure your own hardware, which we'll install and maintain on your behalf.
+We can provide Private Cloud on an all-inclusive basis, or alternatively we can supply the environment specification for you to procure your own hardware, which we'll install and maintain on your behalf.
 
 ## Capturing your requirements
 
@@ -33,9 +33,9 @@ Before you finalise your order, your assigned Cloud Architect will finalise capt
 
 - Your end-to-end solution, including:
 
-  - Backup and connectivity needs for Private Cloud for Compute
+  - Backup and connectivity needs for Private Cloud 
 
-  - Standard UKCloud for VMware needs
+  - Standard UKCloud for VMware needs (if relevant)
 
 - A forecast of your growth to right-size your infrastructure
 
