@@ -3,8 +3,8 @@ title: Disaster Recovery as a Service Service Scope | UKCloud Ltd
 description: outlines important details regarding the Disaster Recovery to the Cloud service
 services: draas
 author: Steve Hall
-reviewer:
-lastreviewed: 03/08/2018 13:39:33
+reviewer: Guy Martin
+lastreviewed: 28/06/2019
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:

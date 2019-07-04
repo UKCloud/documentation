@@ -1,27 +1,28 @@
 ---
-title: Dedicated Compute Service Scope | UKCloud Ltd
-description: Outlines important details regarding UKCloud for VMware Dedicated Compute
+title: Dedicated Compute v1 Service Scope | UKCloud Ltd
+description: Outlines important details regarding Dedicated Compute v1
 services: vmware
 author: Steve Hall
-reviewer:
-lastreviewed: 03/08/2018 11:14:35
+reviewer: Guy Martin
+lastreviewed: 01/07/2019
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Dedicated Compute Service Scope
+toc_title: Dedicated Compute v1 Service Scope
 toc_fullpath: Service Scope/vmw-sco-dedicated-compute.md
 toc_mdlink: vmw-sco-dedicated-compute.md
 ---
 
-# Dedicated Compute Service Scope
+# Dedicated Compute v1 Service Scope
 
 ## About this document
 
-This document is for customers considering purchasing our Dedicated Compute service.
+This document describes the boundaries of the Dedicated Compute v1 service, along with the division of responsibilities between UKCloud and the customer to facilitate the changes required.
 
-It describes the boundaries of the service, along with the division of responsibilities between UKCloud and the customer to facilitate the changes required.
+> [!NOTE]
+> This article provides information for existing customers of our Dedicated Compute v1 service. If you're looking to purchase Dedicated Compute, refer to the [Dedicated Compute v2 Service Scope](../dedicated-compute/dcv2-sco.md).
 
 ## About Dedicated Compute
 
@@ -59,11 +60,11 @@ During a failure scenario, VMs will be restarted on surviving hosts within the D
 
 The table below shows the configuration, the resources available to a customer, the number of physical blades in the configuration, and the UKCloud resources reserved to run it.
 
-&nbsp; | Customer available resources | Physical blades | Resource reservation
-------|------------------------------|-----------------|---------------------
-**Starter pack** | 20 cores, 300 GiB RAM | 2 | 50% (20 cores, 300 GiB RAM)
-**Starter pack + 1 expansion pack** | 40 cores, 600 GiB RAM | 3 | 33% (20 cores, 300 GiB RAM)
-**Starter pack + 2 expansion packs** | 60 cores, 900 GiB RAM | 4 | 25% (20 cores, 300 GiB RAM)
+&nbsp;                               | Customer available resources | Physical blades | Resource reservation
+-------------------------------------|------------------------------|-----------------|---------------------
+**Starter pack**                     | 20 cores, 300 GiB RAM        | 2               | 50% (20 cores, 300 GiB RAM)
+**Starter pack + 1 expansion pack**  | 40 cores, 600 GiB RAM        | 3               | 33% (20 cores, 300 GiB RAM)
+**Starter pack + 2 expansion packs** | 60 cores, 900 GiB RAM        | 4               | 25% (20 cores, 300 GiB RAM)
 
 ## Resource utilisation
 
@@ -85,7 +86,7 @@ You can over-contend the resources on your Dedicated Compute as you see fit.
 
 There are two deployment options for Dedicated Compute:
 
-- **UKCloud-defined** - You select a workload type for your VDC based on UKCloud's Enterprise Compute Cloud VM types (ESSENTIAL, POWER or PRIORITY). Any VMs will inherit the characteristics and reservation levels of that service when deployed.
+- **UKCloud-defined** - You select a workload type for your VDC based on UKCloud for VMware VM types (ESSENTIAL, POWER or PRIORITY). Any VMs will inherit the characteristics and reservation levels of that service when deployed.
 
 - **Customer-defined** - You can set reservation levels on a per-VM basis.
 

@@ -3,8 +3,8 @@ title: UKCloud for VMware Service Scope | UKCloud Ltd
 description: Outlines important details regarding UKCloud for VMware
 services: vmware
 author: Steve Hall
-reviewer:
-lastreviewed: 03/08/2018 13:39:33
+reviewer: Guy Martin
+lastreviewed: 26/06/2019
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -53,7 +53,7 @@ PRIORITY |Uncontended (CPU/GiB) | Configured to reduce workload movement around 
 
 **VM size.** There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through vCloud Director.
 
-Full details of the available service options are outlined in the [*Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf).
+Full details of the available service options are outlined in the [*Service Definition*](vmw-sd.md).
 
 ## Storage options
 
@@ -61,7 +61,7 @@ All workloads (except micro) include 60GiB of Tier 2 storage for free, all stora
 
 Additional storage can be purchased to support your application. Multiple storage options can be used to support different aspects of the application.
 
-- **Tier 1.** Our most performant block storage for workloads requiring consistently higher disk throughput.
+- **Tier 1.** Our most performant storage for workloads requiring consistently higher disk throughput.
 
 - **Tier 2.** Persistent block storage with typical performance characteristics for use by production applications or storage.
 
@@ -88,6 +88,13 @@ Customers have a range of automated, on-platform protection options to choose fr
 **Snapshot Protection.** 14-day or 28-day snapshot policies available. Data protected by the snapshot has an RPO of 24 hours, with RTO determined by the time taken to restore the VM after the service request is raised. See the [*Snapshot Protection Service Scope*](vmw-sco-snapshot-protection.md) for full details.
 
 **Journaling Protection.** A non-invasive, self-service disaster recovery solution with configurable recovery points, providing near real-time data protection. The standard journaling profile provides a target RPO of 5 minutes and a journal history of 2, 7, 14 or 28 days. The [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md) covers the full details of this protection option.
+
+## Advanced management
+
+This bundle includes Distributed Firewall (DFW), Distributed Logical Router (DLR), Layer 2 VPN and vROPs Tenant Monitoring and Metrics.
+
+> [!NOTE]
+> These services may not be available in all regions and zones.
 
 ## Service availability
 
