@@ -111,7 +111,7 @@ We understand that enterprise workloads need a dependable service that underpins
 
 &nbsp;                      | &nbsp;
 ----------------------------|-------
-**Service level agreement** | 99.50
+**Service level agreement** | 99.50%
 **Portal level agreement**  | 99.90%
 **Planned maintenance**     | Excluded
 **Measurement of SLA**      | Unavailability applies when the OpenShift environment becomes unresponsive owing to a fault in the UKCloud-controlled OpenShift infrastructure and services which lies with:<ul><li>UKCloud-controlled components such as the virtual infrastructure, storage, power, and physical firewalls and routers<li>UKCloud-maintained OpenShift services (Master Nodes, Worker Nodes, Routing Layer)</ul>
