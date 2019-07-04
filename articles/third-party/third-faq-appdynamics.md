@@ -17,7 +17,7 @@ toc_mdlink: third-faq-appdynamics.md
 
 # Cisco AppDynamics from UKCloud FAQs
 
-AppDynamics provides Getting Started guides, Troubleshooting, Documentation, Community support and a Knowledge Base which you can found in the [Support section of the AppDynamics website](https://www.appdynamics.com/support/).
+AppDynamics provides Getting Started guides, Troubleshooting, Documentation, Community support and a Knowledge Base which you can find in the [Support section of the AppDynamics website](https://www.appdynamics.com/support/).
 
 ## Feedback
 
