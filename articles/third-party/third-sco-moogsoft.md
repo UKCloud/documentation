@@ -5,13 +5,13 @@ services: third-party
 author: Sue Highmoor
 reviewer: Camilla Powell
 lastreviewed: 27/06/2019
-toc_rootlink: Service Scope
+toc_rootlink: Moogsoft AIOps
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Moogsoft AIOps from UKCloud Service Scope
-toc_fullpath: Service Scope/third-sco-moogsoft.md
+toc_fullpath: Moogsoft AIOps/third-sco-moogsoft.md
 toc_mdlink: third-sco-moogsoft.md
 ---
 
