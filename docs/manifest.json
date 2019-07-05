@@ -3269,6 +3269,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/dedicated-compute/dc-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/dedicated-compute/dc-sco.html",
+          "hash": "JVL5aaEHoPC90W4OhFjwKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/dedicated-compute/dc-sd.md",
       "output": {
         ".html": {
@@ -3291,12 +3303,34 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "articles/dedicated-compute/images/vmw-dc-contingency1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/dedicated-compute/images/vmw-dc-contingency1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/dedicated-compute/images/vmw-dc-contingency2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/dedicated-compute/images/vmw-dc-contingency2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/dedicated-compute/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/dedicated-compute/toc.html",
-          "hash": "ErT57fBu323N5ob05lSsMA=="
+          "hash": "qDmhNAbNEUmTLBdTb2w9hw=="
         }
       },
       "is_incremental": false,
@@ -4390,7 +4424,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/gpu-sco.html",
-          "hash": "FQC936qIEicNfxfIkMHwow=="
+          "hash": "gwiI4QxOnPokJwtjcJZDtg=="
         }
       },
       "is_incremental": false,
@@ -15992,7 +16026,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "8DcAnVhcWvg+M72mYAyfLQ=="
+          "hash": "jUurkV14ZvkVRqlYL6vcKw=="
         }
       },
       "is_incremental": false,
@@ -17271,12 +17305,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-sco-dedicated-compute.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-dedicated-compute.html",
-          "hash": "M5tx5R1nWMwGZgvTkME9tA=="
+          "hash": "fCAFihbBJ/c1XRUdEJpu0A=="
         }
       },
       "is_incremental": false,
@@ -17324,7 +17361,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco.html",
-          "hash": "yAvlytXuGzsogd1Up20fzQ=="
+          "hash": "wAakxJ0aadCo9pGHJoDDMA=="
         }
       },
       "is_incremental": false,
@@ -17455,17 +17492,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 400,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 399,
           "skipped_file_count": 0
         }
       }
