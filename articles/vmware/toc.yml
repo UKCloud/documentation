@@ -210,11 +210,15 @@
     href: vmw-ref-vcloud-connector.md
   - name: Windows Server activation
     href: vmw-ref-windows-server-activation.md
+- name: Service Definition
+  items:
+  - name: UKCloud for VMware Service Definition
+    href: vmw-sd.md
 - name: Service Scope
   items:
   - name: Bring Your Own Firewall Service Scope
     href: vmw-sco-byof.md
-  - name: Dedicated Compute Service Scope
+  - name: Dedicated Compute v1 Service Scope
     href: vmw-sco-dedicated-compute.md
   - name: Journaling Protection Service Scope
     href: vmw-sco-journaling-protection.md

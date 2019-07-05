@@ -42,8 +42,6 @@
     href: other-ref-dc-notice.md
   - name: External security review testing
     href: other-ref-external-security-review-testing.md
-  - name: G10 Service Definitions and Pricing Guide
-    href: other-ref-service-definitions.md
   - name: Identity & Access Management API
     href: other-ref-idam.md
   - name: Knowledge Centre article template
@@ -74,8 +72,14 @@
     href: other-ref-complaints.md
   - name: UKCloud Ideas
     href: other-ref-ideas.md
+  - name: UKCloud Pricing Guides and SFIA Rate Card
+    href: other-ref-pricing-guide.md
   - name: UKCloud response to Spectre and Meltdown
     href: other-ref-spectre-meltdown.md
+  - name: UKCloud Service Definitions and Pricing Guide
+    href: other-ref-service-definitions.md
+  - name: UKCloud Terms & Conditions for G-Cloud 11
+    href: other-ref-terms-and-conditions.md
   - name: Understanding sites, regions and zones
     href: other-ref-sites-regions-zones.md
   - name: Understanding the Cyber Security News page

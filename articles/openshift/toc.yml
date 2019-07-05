@@ -42,3 +42,7 @@
     href: oshift-ref-cluster-monitoring.md
   - name: Security best practices
     href: oshift-ref-security-best-practices.md
+- name: Service Definition
+  items:
+  - name: UKCloud for OpenShift Service Definition
+    href: oshift-sd.md

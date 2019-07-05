@@ -575,37 +575,49 @@ mark{
 
 }
 
-.product-grid__item:nth-child(20n+1),
-.product-grid__item:nth-child(20n+2),
-.product-grid__item:nth-child(20n+3),
-.product-grid__item:nth-child(20n+4),
-.product-grid__item:nth-child(20n+5){
+.product-grid__item:nth-child(25n+1),
+.product-grid__item:nth-child(25n+2),
+.product-grid__item:nth-child(25n+3),
+.product-grid__item:nth-child(25n+4),
+.product-grid__item:nth-child(25n+5){
+  background-color: hsl(170, 100%, 40%);
   background-color: #00ccaa;
 }
 
-.product-grid__item:nth-child(20n+6),
-.product-grid__item:nth-child(20n+7),
-.product-grid__item:nth-child(20n+8),
-.product-grid__item:nth-child(20n+9),
-.product-grid__item:nth-child(20n+10){
-  background-color: #0bab91;
+.product-grid__item:nth-child(25n+6),
+.product-grid__item:nth-child(25n+7),
+.product-grid__item:nth-child(25n+8),
+.product-grid__item:nth-child(25n+9),
+.product-grid__item:nth-child(25n+10){
+  background-color: hsl(170, 90.25%, 36.75%);
+  background-color: #09b296;
 }
 
-.product-grid__item:nth-child(20n+11),
-.product-grid__item:nth-child(20n+12),
-.product-grid__item:nth-child(20n+13),
-.product-grid__item:nth-child(20n+14),
-.product-grid__item:nth-child(20n+15){
-  background-color: #158875;
+.product-grid__item:nth-child(25n+11),
+.product-grid__item:nth-child(25n+12),
+.product-grid__item:nth-child(25n+13),
+.product-grid__item:nth-child(25n+14),
+.product-grid__item:nth-child(25n+15){
+  background-color: hsl(170, 80.5%, 33.5%);
+  background-color: #109a83;
 }
 
-.product-grid__item:nth-child(20n+16),
-.product-grid__item:nth-child(20n+17),
-.product-grid__item:nth-child(20n+18),
-.product-grid__item:nth-child(20n+19),
-.product-grid__item:nth-child(20n+20){
-  background-color: #1b6e60;
-  /* background-color: #6E527C; */
+.product-grid__item:nth-child(25n+16),
+.product-grid__item:nth-child(25n+17),
+.product-grid__item:nth-child(25n+18),
+.product-grid__item:nth-child(25n+19),
+.product-grid__item:nth-child(25n+20){
+  background-color: hsl(170, 70.75%, 30.25%);
+  background-color: #168371;
+}
+
+.product-grid__item:nth-child(25n+21),
+.product-grid__item:nth-child(25n+22),
+.product-grid__item:nth-child(25n+23),
+.product-grid__item:nth-child(25n+24),
+.product-grid__item:nth-child(25n+25){
+  background-color: hsl(170, 61%, 27%);
+  background-color: #1a6e60;
 }
 
 .output-code {
