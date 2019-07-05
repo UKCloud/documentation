@@ -45,11 +45,11 @@ If you need any assistance, you can raise a service request from My Calls within
 
 ### What virtualisation platform can the scanner be installed on?
 
-The CyberScore scanner can be deployed on VMware (including UKCloud for VMware), Hyper-V, AWS or Azure. Support for an OpenStack scanner is coming soon.
+You can deploy the CyberScore scanner on VMware (including UKCloud for VMware), Hyper-V, AWS or Azure. Support for an OpenStack scanner is coming soon.
 
 ### How do I configure the service?
 
-Once you’ve checked the prerequisites] (see [*XQ Cyber CyberScore scanner deployment environment requirements*](third-ref-cyberscore-prereqs.md)), download the scanner template from the CyberScore portal, then install and configure the scanner. To help with this process there are [video tutorials](https://secure.cyberscore.com/support/scanner)<sup>*</sup> on the CyberScore Portal.
+Once you’ve checked the prerequisites (see [*XQ Cyber CyberScore scanner deployment environment requirements*](third-ref-cyberscore-prereqs.md)), download the scanner template from the CyberScore portal, then install and configure the scanner. To help with this process there are [video tutorials](https://secure.cyberscore.com/support/scanner)<sup>*</sup> on the CyberScore Portal.
 
 ### What t-shirt size is required for the scanner?
 
@@ -59,7 +59,7 @@ If the scanner is deployed in our UKCloud for VMware Assured security domain the
 
 ### How does it work?
 
-CyberScore aims to prevent harm being done to your organisation, by providing a view of your security posture so you can take remedial action. The service scans your internal network using a scanner deployed into your environment, and scans your external, internet facing network from a scanner based in CyberScore HQ, to generate a *CyberScore*, along with Get Well plans and detailed technical reports. Following the scan you can create task lists and Get Well Plans to enable you to fix vulnerabilities. All vulnerabilities are listed, highlighting which ones are most important, either because of their nature or their prevalence.
+CyberScore aims to prevent harm being done to your organisation by providing a view of your security posture so you can take remedial action. The service scans your internal network using a scanner deployed into your environment, and scans your external, internet facing network from a scanner based in CyberScore HQ, to generate a *CyberScore*, along with Get Well plans and detailed technical reports. Following the scan you can create task lists and Get Well plans to enable you to fix vulnerabilities. All vulnerabilities are listed, highlighting which ones are most important, either because of their nature or their prevalence.
 
 ### Why do I need it?
 
@@ -85,7 +85,7 @@ Yes, we have these sample reports available within our website:
 
 ### How often do you recommend I scan and analyse my networks?
 
-We recommend that you scan to monitor your CyberScore daily or weekly, and that you plan to analyse your scans at least monthly. Scanning frequently and monitoring your CyberScore will give you confidence on your cyber risk exposure and alert you if, for example, any new vulnerabilities or patches have been released, or there is a new misconfiguration, which has reduced your CyberScore. If your CyberScore remains satisfactory then you don’t need to do anything, but if it goes down then you will be aware and able to remediate the vulnerability quickly. Your security is only as good as your weakest host.
+We recommend that you plan to monitor your CyberScore daily or weekly, and that you plan to analyse your scans at least monthly. Scanning frequently and monitoring your CyberScore will give you confidence on your cyber risk exposure and alert you if, for example, any new vulnerabilities or patches have been released, or there is a new misconfiguration, which has reduced your CyberScore. If your CyberScore remains satisfactory then you don’t need to do anything, but if it goes down then you will be aware and able to remediate the vulnerability quickly. Your security is only as good as your weakest host.
 
 ### Why are authenticated scans necessary?
 
@@ -129,4 +129,4 @@ If you signed up with a credit or debit card, your payment card will be automati
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at products@ukcloud.com.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
