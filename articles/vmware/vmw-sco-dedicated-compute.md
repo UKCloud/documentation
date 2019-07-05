@@ -22,7 +22,7 @@ toc_mdlink: vmw-sco-dedicated-compute.md
 This document describes the boundaries of the Dedicated Compute v1 service, along with the division of responsibilities between UKCloud and the customer to facilitate the changes required.
 
 > [!NOTE]
-> This article provides information for existing customers of our Dedicated Compute v1 service. If you're looking to purchase Dedicated Compute, refer to the [Dedicated Compute v2 Service Scope](../dedicated-compute/dcv2-sco.md).
+> This article provides information for existing customers of our Dedicated Compute v1 service. If you're looking to purchase Dedicated Compute, refer to the [Dedicated Compute v2 Service Scope](../dedicated-compute/dc-sco.md).
 
 ## About Dedicated Compute
 
