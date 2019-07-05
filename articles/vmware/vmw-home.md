@@ -3,7 +3,8 @@ title: UKCloud for VMware | UKCloud Ltd
 description: Home page for UKCloud for VMware
 services: vmware
 author: Sue Highmoor
-
+reviewer:
+lastreviewed: 
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -17,17 +18,17 @@ toc_mdlink: vmware-home.md
 # UKCloud for VMware
 
 <div class="row">
-  <div class="col-md-2">
-    <img src="https://docs.ukcloud.com/articles/vmware/images/vmw-prod-image.png" alt="UKCloud for VMware">
+  <div class="col-md-1">
+    <img src="images/vmw-prod-image.png" alt="UKCloud for VMware">
   </div>
-  <div class="col-md-10">
+  <div class="col-md-11">
     <p>UKCloud for VMware is a trusted, connected and flexible cloud, based on VMware technology, that enables you to either migrate existing workloads or create new workloads on our secure sovereign cloud platform quickly and easily whilst enjoying the economies of scale of the cloud. Using a familiar interface and structure for customers having virtualised using VMWare, it offers native backup and disaster recovery, storage options, all government network connectivity, and self-provisioning of VDCs and VMs. It's billed hourly with no minimum contracts and supported free of charge.</p>
   </div>
 </div>
 
 ## Let's get started
 
-First, take a look at our [*Getting Started Guide*](./vmw-gs.md) to learn the basics, then you can:
+First, take a look at our [*Getting Started Guide*](vmw-gs.md) to learn the basics, then you can:
 
 <div class="row">
   <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/vmware/vmw-how-create-routed-network.html">Create a routed network</a></ul></div>
@@ -81,8 +82,8 @@ First, take a look at our [*Getting Started Guide*](./vmw-gs.md) to learn the ba
 
 ## Still have questions?
 
-Find answers to common questions in our [UKCloud for VMware FAQ](./vmw-faq.md).
+Find answers to common questions in our [UKCloud for VMware FAQ](vmw-faq.md).
 
-<!--## Join the conversation
+## Join the conversation
 
-Visit the <a href="https://community.ukcloud.com">UKCloud Community</a> to join the conversation about digital transformation in the UK Public Sector. If you have an idea for how we could improve any of our services, use the <a href="https://community.ukcloud.com/ideas">Ideas</a> page or watch out for regular feedback challenges from our Product Management team. You can also read blogs, watch webinars, sign up to upcoming events and find a Partner to help deliver your project.-->
+Visit the <a href="https://community.ukcloud.com">UKCloud Community</a> to join the conversation about digital transformation in the UK Public Sector. If you have an idea for how we could improve any of our services, use the <a href="https://community.ukcloud.com/ideas">Ideas</a> section or watch out for regular feedback challenges from our Product Management team. You can also read blogs, watch webinars, sign up to upcoming events and find a Partner to help deliver your project.
