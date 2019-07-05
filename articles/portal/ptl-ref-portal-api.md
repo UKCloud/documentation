@@ -212,40 +212,49 @@ Returns a response with a list of up to 10 VMs
 ```
 
 ## My Calls API (Removed)
+
 > [!IMPORTANT]
-> With the move to the ITSM tool the functionality of my_calls methods
-> is no longer available.
+> With the move to the ITSM tool, the functionality of the `my_calls` methods is no longer available.
 
 ### GET /api/my_calls
+
 Returns a complete list of support calls (similar to the MyCalls view in the UKCloud Portal).
 
 ### GET /api/my_calls/:ticket_id
+
 Returns a single ticket and its updates and changes.
 
 ### PUT /api/my_calls/:ticket_id
+
 Adds a new note to a ticket.
 
 ### POST /api/my_calls
+
 Adds a new ticket.
 
 ### PUT /api/my_calls/:ticket_id/subscribe
+
 Subscribes a user to a ticket.
 
 ### PUT /api/my_calls/:ticket_id/unsubscribe
+
 Unsubscribes a user from a ticket.
 
 ### PUT /api/my_calls/:ticket_id/reopen
+
 Reopens a ticket.
 
 ### PUT /api/my_calls/:ticket_id/change_owner
+
 Change the owner of a ticket.
 
 ### PUT /api/my_calls/:ticket_id/cancel
+
 Cancels a ticket.
 
 ### PUT /api/my_calls/:ticket_id/close
-Closes a ticket.
 
+Closes a ticket.
 
 ## GET /api/ping
 
