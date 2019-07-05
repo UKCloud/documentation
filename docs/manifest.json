@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-spn-powershell.html",
-          "hash": "HlUCrhA2LIczQB67vdekwg=="
+          "hash": "4okedALswPe4YfSoQ28Dtg=="
         }
       },
       "is_incremental": false,
@@ -5262,7 +5262,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sd.html",
-          "hash": "TLceNO6VQckQeAdHaCFoEg=="
+          "hash": "pvugCM2spvVFtGaII5FWgQ=="
         }
       },
       "is_incremental": false,
