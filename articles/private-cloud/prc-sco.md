@@ -35,7 +35,7 @@ Before you finalise your order, your assigned Cloud Architect will finalise capt
 
   - Backup and connectivity needs for Private Cloud
 
-  - Standard UKCloud for VMware needs
+  - Standard multi-cloud platform needs
 
 - A forecast of your growth to right-size your infrastructure
 
