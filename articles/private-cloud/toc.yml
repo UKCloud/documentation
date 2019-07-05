@@ -1,3 +1,9 @@
+- name: FAQs
+  items:
+  - name: Private Cloud FAQs
+    href: prc-faq.md
+  - name: Private Cloud for Storage FAQs
+    href: prc-faq-storage.md
 - name: Service Definition
   items:
   - name: Private Cloud for Oracle Software Service Definition
@@ -6,3 +12,11 @@
     href: prc-sd-storage.md
   - name: Private Cloud Service Definition
     href: prc-sd.md
+- name: Service Scope
+  items:
+  - name: Private Cloud for Oracle Software Service Scope
+    href: prc-sco-orcl.md
+  - name: Private Cloud for Storage Service Scope
+    href: prc-sco-storage.md
+  - name: Private Cloud Service Scope
+    href: prc-sco.md

@@ -9161,45 +9161,96 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/private-cloud/prc-faq-storage.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/private-cloud/prc-faq-storage.html",
+          "hash": "+8Uxs7pXN959klBG3EomcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/private-cloud/prc-faq.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/private-cloud/prc-faq.html",
+          "hash": "wyAgHR8qZ45h3plRa5P9hA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/private-cloud/prc-sco-orcl.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/private-cloud/prc-sco-orcl.html",
+          "hash": "F1RD7EjYKIyL9l578KwpOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/private-cloud/prc-sco-storage.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/private-cloud/prc-sco-storage.html",
+          "hash": "SnyV/h+7DyzG+CHwA/iH5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/private-cloud/prc-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/private-cloud/prc-sco.html",
+          "hash": "vQfHH4+EUGCLd9REM0+2Fw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/private-cloud/prc-sd-orcl.md",
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd-orcl.html",
-          "hash": "179pankxbM0FALw6NHPwsw=="
+          "hash": "MpruLj/G+B5D3ES6bhY4gQ=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/private-cloud/prc-sd-storage.md",
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd-storage.html",
-          "hash": "Y/VThEJJnfHaxxcgqMuj0g=="
+          "hash": "sYp2aMJMHZgeYOrIkUdz2Q=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/private-cloud/prc-sd.md",
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/prc-sd.html",
-          "hash": "/HiUvCd8I5b3z5skjWlnGw=="
+          "hash": "QAkeqNy6QTTmuVswMVZtDg=="
         }
       },
       "is_incremental": false,
@@ -9211,7 +9262,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/private-cloud/toc.html",
-          "hash": "l7K5dGrUdlnRRZCJVfzOsg=="
+          "hash": "OjgSm/zsg8FehA5Tg4fppA=="
         }
       },
       "is_incremental": false,
@@ -17397,13 +17448,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -17411,10 +17455,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 394,
+          "total_file_count": 399,
           "skipped_file_count": 0
         }
       }
