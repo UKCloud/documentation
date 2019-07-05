@@ -45,11 +45,11 @@ If you need any assistance, you can raise a service request from My Calls within
 
 ### What virtualisation platform can the scanner be installed on?
 
-CyberScore is supported on VMware vSphere and Microsoft Hyper-V. You can install the CyberScore scanner on UKCloud for VMware. Support for an OpenStack scanner is coming soon.
+The CyberScore scanner can be deployed on VMware (including UKCloud for VMware), Hyper-V, AWS or Azure. Support for an OpenStack scanner is coming soon.
 
 ### How do I configure the service?
 
-Once you’ve met the prerequisites] (see [*XQ Cyber CyberScore scanner deployment environment requirements*](third-ref-cyberscore-prereqs.md)) and you’ve downloaded the service, you can then load the CyberScore scanner into either VMware vSphere or Microsoft Hyper-V. To help with this process and configure the scanner, there are [video tutorials](https://secure.cyberscore.com/support/scanner)<sup>*</sup> on the CyberScore Portal.
+Once you’ve checked the prerequisites] (see [*XQ Cyber CyberScore scanner deployment environment requirements*](third-ref-cyberscore-prereqs.md)), download the scanner template from the CyberScore portal, then install and configure the scanner. To help with this process there are [video tutorials](https://secure.cyberscore.com/support/scanner)<sup>*</sup> on the CyberScore Portal.
 
 ### What t-shirt size is required for the scanner?
 
@@ -59,7 +59,7 @@ If the scanner is deployed in our UKCloud for VMware Assured security domain the
 
 ### How does it work?
 
-The service scans internal and external networks to generate a *CyberScore*, along with a Get Well plan. CyberScore aims to prevent harm being done to your organisation, either directly or via third parties by providing a view of their security posture. A plan is created to enable you to fix things quickly, and identifies if partners are running obsolete software, or supported software that is missing security fixes. All vulnerabilities are listed, highlighting which ones are most important, either because of their nature or their prevalence. The Get Well plan will tell you what to do about them before they are exploited.
+CyberScore aims to prevent harm being done to your organisation, by providing a view of your security posture so you can take remedial action. The service scans your internal network using a scanner deployed into your environment, and scans your external, internet facing network from a scanner based in CyberScore HQ, to generate a *CyberScore*, along with Get Well plans and detailed technical reports. Following the scan you can create task lists and Get Well Plans to enable you to fix vulnerabilities. All vulnerabilities are listed, highlighting which ones are most important, either because of their nature or their prevalence.
 
 ### Why do I need it?
 
@@ -85,7 +85,7 @@ Yes, we have these sample reports available within our website:
 
 ### How often do you recommend I scan and analyse my networks?
 
-We recommend that you analyse your scans monthly, though when scanning your network, it is advisable to do this more frequently, for example, daily or weekly. Scanning more frequently will show that if your score is fine, then you don’t need to do anything and if it goes down then you'll be aware and able to handle the vulnerability in a quicker timeframe. Your security is only as good as your weakest host.
+We recommend that you scan to monitor your CyberScore daily or weekly, and that you plan to analyse your scans at least monthly. Scanning frequently and monitoring your CyberScore will give you confidence on your cyber risk exposure and alert you if, for example, any new vulnerabilities or patches have been released, or there is a new misconfiguration, which has reduced your CyberScore. If your CyberScore remains satisfactory then you don’t need to do anything, but if it goes down then you will be aware and able to remediate the vulnerability quickly. Your security is only as good as your weakest host.
 
 ### Why are authenticated scans necessary?
 
