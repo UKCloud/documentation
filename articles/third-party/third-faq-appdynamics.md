@@ -5,13 +5,13 @@ services: third-party
 author: Sue Highmoor
 reviewer:
 lastreviewed: 
-toc_rootlink: Cisco AppDynamics from UKCloud
+toc_rootlink: Cisco AppDynamics
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Cisco AppDynamics from UKCloud FAQs
-toc_fullpath: Cisco AppDynamics from UKCloud/third-faq-appdynamics.md
+toc_fullpath: Cisco AppDynamics/third-faq-appdynamics.md
 toc_mdlink: third-faq-appdynamics.md
 ---
 

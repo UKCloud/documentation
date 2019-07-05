@@ -5,13 +5,13 @@ services: third-party
 author: Sue Highmoor
 reviewer:
 lastreviewed: 
-toc_rootlink: XQ Cyber CyberScore from UKCloud
+toc_rootlink: XQ Cyber CyberScore
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: XQ Cyber CyberScore from UKCloud FAQs
-toc_fullpath: XQ Cyber CyberScore from UKCloud/third-faq-cyberscore.md
+toc_fullpath: XQ Cyber CyberScore/third-faq-cyberscore.md
 toc_mdlink: third-faq-cyberscore.md
 ---
 

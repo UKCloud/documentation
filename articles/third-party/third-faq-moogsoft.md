@@ -5,13 +5,13 @@ services: third-party
 author: Sue Highmoor
 reviewer:
 lastreviewed: 
-toc_rootlink: Moogsoft AIOps from UKCloud
+toc_rootlink: Moogsoft AIOps
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Moogsoft AIOps from UKCloud FAQs
-toc_fullpath: Moogsoft AIOps from UKCloud/third-faq-moogsoft.md
+toc_fullpath: Moogsoft AIOps/third-faq-moogsoft.md
 toc_mdlink: third-faq-moogsoft.md
 ---
 
