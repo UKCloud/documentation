@@ -1,11 +1,11 @@
 - name: Cisco AppDynamics
   items:
-  - name: Cisco AppDynamics from UKCloud Service Definition
-    href: third-sd-appdynamics.md
-- name: Cisco AppDynamics from UKCloud
-  items:
   - name: Cisco AppDynamics from UKCloud FAQs
     href: third-faq-appdynamics.md
+  - name: Cisco AppDynamics from UKCloud Service Definition
+    href: third-sd-appdynamics.md
+  - name: Cisco AppDynamics from UKCloud Service Scope
+    href: third-sco-appdynamics.md
 - name: CloudSOC
   items:
   - name: CloudSOC from UKCloud Service Definition
@@ -16,12 +16,12 @@
     href: third-sd-hytrust.md
 - name: Moogsoft AIOps
   items:
-  - name: Moogsoft AIOps from UKCloud Service Definition
-    href: third-sd-moogsoft.md
-- name: Moogsoft AIOps from UKCloud
-  items:
   - name: Moogsoft AIOps from UKCloud FAQs
     href: third-faq-moogsoft.md
+  - name: Moogsoft AIOps from UKCloud Service Definition
+    href: third-sd-moogsoft.md
+  - name: Moogsoft AIOps from UKCloud Service Scope
+    href: third-sco-moogsoft.md
 - name: Portworx Enterprise
   items:
   - name: Portworx Enterprise from UKCloud Service Definition
@@ -30,21 +30,13 @@
   items:
   - name: 3rd party software EULA information
     href: third-ref-eula.md
-- name: Service Scope
-  items:
-  - name: Cisco AppDynamics from UKCloud Service Scope
-    href: third-sco-appdynamics.md
-  - name: Moogsoft AIOps from UKCloud Service Scope
-    href: third-sco-moogsoft.md
 - name: XQ Cyber CyberScore
   items:
   - name: CyberScore scanner deployment environment requirements
     href: third-ref-cyberscore-prereqs.md
+  - name: XQ Cyber CyberScore from UKCloud FAQs
+    href: third-faq-cyberscore.md
   - name: XQ Cyber CyberScore from UKCloud Service Definition
     href: third-sd-cyberscore.md
   - name: XQ Cyber CyberScore from UKCloud Service Scope
     href: third-sco-cyberscore.md
-- name: XQ Cyber CyberScore from UKCloud
-  items:
-  - name: XQ Cyber CyberScore from UKCloud FAQs
-    href: third-faq-cyberscore.md
