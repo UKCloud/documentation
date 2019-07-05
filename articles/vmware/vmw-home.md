@@ -39,24 +39,21 @@ First, take a look at our [*Getting Started Guide*](vmw-gs.md) to learn the basi
 
 <div class="row">
   <div class="col-md-6">
-    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/296027011?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-    <p><a href="https://vimeo.com/296027011">vCloud Director 9.1 Overview</a></p>
-  </div>
-  <div class="col-md-6">
     <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/307686299?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     <p><a href="https://vimeo.com/307686299">VMware Distributed Firewall</a></p>
+  </div>
+  <div class="col-md-6">
+    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/323161271?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    <p><a href="https://vimeo.com/323161271">Benefits of VMware L2 VPN</a></p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6">
-    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/323161271?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-    <p><a href="https://vimeo.com/323161271">Benefits of VMware L2 VPN</a></p>
-  </div>
-  <div class="col-md-6">
     <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/308877124?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     <p><a href="https://vimeo.com/308877124">Licensing Windows VMs using the KMS</a></p>
   </div>
+  <div class="col-md-6"></div>
 </div>  
 
 ## Other resources
