@@ -17,14 +17,7 @@ toc_mdlink: oshift-home.md
 
 # UKCloud for OpenShift
 
-<div class="row">
-  <div class="col-md-1">
-    <img src="images/oshift-prod-image.png" alt="UKCloud for OpenShift">
-  </div>
-  <div class="col-md-11">
-    <p>UKCloud for OpenShift delivers a secure, private deployment of Red Hat&reg; OpenShift Container Platform, enabling developers to use build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud native applications and accelerate digital transformation.</p>
-  </div>
-</div>
+UKCloud for OpenShift delivers a secure, private deployment of Red Hat&reg; OpenShift Container Platform, enabling developers to use build automation pipelines and leverage the benefits of containerised solutions, helping to deliver modern, cloud native applications and accelerate digital transformation.
 
 ## Let's get started
 

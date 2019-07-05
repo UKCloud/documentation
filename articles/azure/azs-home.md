@@ -17,14 +17,7 @@ toc_mdlink: azs-home.md
 
 # UKCloud for Microsoft Azure
 
-<div class="row">
-  <div class="col-md-1">
-    <img src="images/azs-prod-image.png" alt="UKCloud for Microsoft Azure">
-  </div>
-  <div class="col-md-11">
-    <p>UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure platform delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners.</p>
-  </div>
-</div>
+UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure platform delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners.
 
 ## Let's get started
 

@@ -17,14 +17,7 @@ toc_mdlink: ostack-home.md
 
 # UKCloud for OpenStack
 
-<div class="row">
-  <div class="col-md-1">
-    <img src="images/ostack-prod-image.png" alt="UKCloud for OpenStack">
-  </div>
-  <div class="col-md-11">
-    <p>UKCloud for OpenStack is engineered specifically for organisations embracing digital transformation and delivering true cloud-native applications; facilitating the creation of elastic infrastructure as code, which can be built once and run anywhere at any time to take full advantage of the benefits of cloud.</p>
-  </div>
-</div>
+UKCloud for OpenStack is engineered specifically for organisations embracing digital transformation and delivering true cloud-native applications; facilitating the creation of elastic infrastructure as code, which can be built once and run anywhere at any time to take full advantage of the benefits of cloud.
 
 ## Let's get started
 
