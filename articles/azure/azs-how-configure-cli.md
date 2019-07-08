@@ -3,8 +3,8 @@ title: How to configure the Azure Stack user's Azure CLI environment | Based on 
 description: Learn how to use the cross-platform command-line interface (CLI) to manage and deploy resources on Azure Stack
 services: azure-stack
 author: Chris Black
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: Alexa Evans
+lastreviewed: 08/07/2019 16:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -31,7 +31,7 @@ In this article, we will guide you through the process of installing and using t
 
 ## Install CLI
 
-Sign in to your development workstation and install CLI. Azure Stack requires the 2.0 version of Azure CLI. You can install that by using the steps described in the [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli) article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:
+Sign in to your development workstation and install CLI. Azure Stack requires the at least version 2.0 of Azure CLI. You can install that by using the steps described in the [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli) article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:
 
 ```azurecli
 az --version
@@ -48,12 +48,12 @@ Use the following steps to connect to Azure Stack:
    To register the *user* environment, use:
 
       ```azurecli
-      az cloud register \
-        -n AzureStackUser \
-        --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" \
-        --suffix-storage-endpoint "frn00006.azure.ukcloud.com" \
-        --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" \
-        --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" \
+      az cloud register `
+        -n AzureStackUser `
+        --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" `
+        --suffix-storage-endpoint "frn00006.azure.ukcloud.com" `
+        --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" `
+        --endpoint-active-directory-graph-resource-id "https://graph.windows.net/"
       ```
 
    To register the *user* environment - One Liner:
@@ -91,10 +91,10 @@ Use the following steps to connect to Azure Stack:
    - Sign in as a *service principal*: Before you sign in, create a service principal through [the public Azure portal](azs-how-create-spn-portal.md), [PowerShell](azs-how-create-spn-powershell.md) or [CLI](azs-how-create-spn-cli.md) and assign it a role. Now, sign in by using the following command:
 
       ```azurecli
-      az login \
-        --tenant <Azure Active Directory Tenant name. For example: myazurestack.onmicrosoft.com> \
-        --service-principal \
-        -u <Application Id of the Service Principal> \
+      az login `
+        --tenant <Azure Active Directory Tenant name. For example: myazurestack.onmicrosoft.com> `
+        --service-principal `
+        -u <Application Id of the Service Principal> `
         -p <Key generated for the Service Principal>
       ```
 
