@@ -35,37 +35,39 @@ For pricing information for UKCloud services, see the following documents on the
 
   - Basic Managed Compute from UKCloud
 
-  - Extended Network Support from UKCloud
-
-  - Managed Monitoring from UKCloud
-
-  - Cross Domain Security Zone
-
   - Cloud GPU
+
+  - Cloud Optimisation from UKCloud
 
   - Cloud Storage
 
-  - Dedicated Compute v1
+  - Cross Domain Security Zone
 
   - Dedicated Compute v2
 
   - Disaster Recovery as a Service
 
+  - Extended Network Support from UKCloud
+
   - High Performance Compute
+
+  - Managed Monitoring from UKCloud
 
   - Migration to the Cloud
 
   - Multi-Cloud Backup Storage
 
+  - Multi-Cloud for TIER 2 (UKCloudX)
+
   - Private Cloud
 
   - Private Cloud for Oracle Sofware
 
+  - Private Cloud for Storage
+
   - Secure Remote Access
 
   - Transition services
-
-  - Cloud Optimisation from UKCloud
 
 - [UKCloud 3rd Party Software Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf)
 

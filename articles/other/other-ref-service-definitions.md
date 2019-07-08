@@ -57,6 +57,8 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 [Multi-Cloud Backup Storage](../mcbs/mcbs-sd.md)
 
+[Multi-Cloud for TIER 2 (UKCloudX)](other-sd-cloudx.md)
+
 [Private Cloud](../private-cloud/prc-sd.md)
 
 [Private Cloud for Oracle Software](../private-cloud/prc-sd-orcl.md)
