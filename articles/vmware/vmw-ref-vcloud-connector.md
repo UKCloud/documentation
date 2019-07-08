@@ -3,6 +3,8 @@ title: VMware vCloud Connector | UKCloud Ltd
 description: Covers the use of VMware vCloud Connector with the UKCloud platform
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -33,10 +35,19 @@ Time Zone settings need to be the same on both Node and Server
 
 Login details are the same as for the *API interaction through PowerCLI*
 
+## vCloud Connector endpoint authentication
+
+When authenticating to our vCloud endpoints using vCloud Connector, the details needed are the same as for the vCloud API. For example:
+
+URL: `api.vcd.portal.skyscapecloud.com/api`
+Username: `1-1-1@1-1-1-abcdef`
+
+For more information, see [*How to access vCloud Director through the vCloud API](vmw-how-access-vcloud-api.md#finding-your-vcloud-api-credentials).
+
 ## More information
 
 For more information about vCloud Connector, visit http://www.vmware.com/uk/products/vcloud-connector.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

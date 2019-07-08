@@ -3,6 +3,8 @@ title: Snapshot Protection FAQs | UKCloud Ltd
 description: Frequently asked questions for Snapshot Protection
 services: vmware
 author: Matt Warner
+reviewer:
+lastreviewed: 25/07/2018 15:32:54
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -32,8 +34,6 @@ However, you can opt to utilise one of the platform based protection technologie
 - Snapshot protection - automatically takes an image of your VM every 24 hours and stores the image outside the core platform
 
 - Journaling protection - creates an almost live copy of your VM and records the VM data and state in a data journal
-
-- Synchronous protection - creates a live copy of your VM in a different geographic site
 
 Additionally, you can implement your own protection technologies.
 
@@ -145,7 +145,7 @@ For the steps required to do this, see [*How to manage Snapshot Protection for y
 
 The service is suitable for data certified as OFFICIAL and OFFICIAL-SENSITIVE and is available on both UKCloud platforms: Assured OFFICIAL (formerly IL2) and Elevated OFFICIAL (formerly IL3).
 
-### Do large virtual disk (2 TiB+) configurations affect snapshot backups?
+### Do large VMs (2 TiB+) affect snapshot backups?
 
 Yes. Snapshot‑based backups are not supported for large VMs with high change rates, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up.
 
@@ -239,6 +239,10 @@ The service is charged on a per VM basis based on:
 
 - The length of time those backups are held
 
+### When I disable snapshot protection on my VM, will billing immediately stop?
+
+Billing stops immediately and you will no longer be charged regardless of the chosen retention period. In addition, you will no longer have access to any snapshots taken. 
+
 ### If I have an existing VDC that includes snapshot protection, is protection automatically added to any new VMs I create?
 
 Yes, if the service level of your VDC includes snapshot protection (either selected for an Essential, Power or Priority VM or the former "STANDARD" or "ENHANCED"), that protection is automatically applied to any VMs you create within that VDC. You can still use the self‑service backup functionality within the UKCloud Portal to remove snapshot protection from a VM or change the retention policy without having to raise a Service Request.
@@ -257,4 +261,5 @@ Protection products are not automatically applied to VMs running on the UKCloud 
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

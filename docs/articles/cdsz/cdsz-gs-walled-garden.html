@@ -8,7 +8,7 @@
     <title>Getting Started Guide for the Cross Domain Security Zone Walled Garden | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for the Cross Domain Security Zone Walled Garden | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/cdsz/cdsz-gs-walled-garden.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -91,11 +100,13 @@
 <h3 id="intended-audience">Intended audience</h3>
 <p>This guide is intended for customers who have:</p>
 <ul>
-<li>Completed the CDSZ Walled Garden assurance wrap</li>
-<li>Been approved to have a Base Implementation of the Walled Garden to allow data to pass between the Assured and Elevated security domains on the UKCloud platform</li>
+<li><p>Completed the CDSZ Walled Garden assurance wrap</p>
+</li>
+<li><p>Been approved to have a Base Implementation of the Walled Garden to allow data to pass between the Assured and Elevated security domains on the UKCloud platform</p>
+</li>
 </ul>
 <h2 id="before-you-begin">Before you begin</h2>
-<p>Before you can start to implement a walled garden, you must have completed and passed the appropriate application process. For more information, see the <a href="cdsz-application-process.html"><em>UKCloud Cross Domain Security Zone application process</em></a>.</p>
+<p>Before you can start to implement a walled garden, you must have completed and passed the appropriate application process. For more information, see the <a href="cdsz-ref-application-process.html"><em>UKCloud Cross Domain Security Zone application process</em></a>.</p>
 <p>After your Walled Garden application has been approved, a service request is raised to implement the Walled Garden virtual data centre (VDC) and, if necessary, Elevated and Assured VDCs.</p>
 <div class="NOTE">
 <h5>Note</h5>
@@ -121,21 +132,18 @@
 </ul>
 <p>The build phase of the Walled Garden environment can take up to 10 working days depending on the complexity of the deployment. When the environment has been fully provisioned, your Customer Success Manager (CSM) will send you the information you need to access it.</p>
 <h2 id="building-your-walled-garden-service">Building your Walled Garden service</h2>
-<p>As soon as you have access to your environment, you can start to build your Walled Garden services. You then have 42 calendar days to:</p>
-<ul>
-<li>Complete the provisioning of the virtual machines (VMs) and networking</li>
-<li>Complete an IT Health Check</li>
-<li>Present your evidence pack to the customer and UKCloud SIROs</li>
-</ul>
+<p>As soon as you have access to your environment, you can start to build your Walled Garden services.</p>
 <p>It is important to remember that while the UKCloud Portal for the Assured security domain is accessible from the internet, the Portal for the Elevated security domain and Walled Garden services is accessible only through the PSN Protected network or through UKCloud's Secure Remote Access (SRA) service.</p>
 <h3 id="setting-up-your-networking">Setting up your networking</h3>
-<p>First, you need to replicate the networking that you set out in your Walled Garden application diagrams. This involves the creation of external and internal networking, as well as the creation of rules on the virtual firewall within your environment. For information about creating networks and firewall rules, see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a> and <a href="../vmware/vmw-how-build-vm.html"><em>How to build a virtual machine with UKCloud for VMware</em></a>.</p>
+<p>First, you need to replicate the networking that you set out in your Walled Garden application diagrams. This involves the creation of external and internal networking, as well as the creation of rules on the virtual firewall within your environment. For information about creating networks and firewall rules, see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a> and <a href="../vmware/vmw-gs-build-vm-vcd.html"><em>How to build a virtual machine with UKCloud for VMware</em></a>.</p>
 <p>You also need to create the rules that allow connectivity between the different VDCs through the Walled Garden. This involves the creation of firewall rules, static routes and/or NAT rules.</p>
 <h4 id="networking-examples">Networking examples</h4>
 <p>There are two options for networking between the VDCs in the Walled Garden service:</p>
 <ul>
-<li><strong>Option 1:</strong> Create static routes between the VDCs; this is the simplest option for connecting VDCs</li>
-<li><strong>Option 2:</strong> Use NAT rules on top of the static routes; this option may be appropriate if you want to abstract the static routes</li>
+<li><p><strong>Option 1:</strong> Create static routes between the VDCs; this is the simplest option for connecting VDCs</p>
+</li>
+<li><p><strong>Option 2:</strong> Use NAT rules on top of the static routes; this option may be appropriate if you want to abstract the static routes</p>
+</li>
 </ul>
 <p>The diagrams below provide examples for both options.</p>
 <div class="NOTE">
@@ -156,15 +164,9 @@
 <h3 id="testing-your-environment">Testing your environment</h3>
 <p>When you've built your VMs and networking, you can start to test the environment. If you've configured the networking correctly, your VMs should be able to talk to each other across the Walled Garden. If you have any issues, check your network rules.</p>
 <h3 id="performing-the-it-health-check">Performing the IT Health Check</h3>
-<p>As part of the Base Implementation, you're required to conduct an IT Health Check (ITHC) of the environment. The ITHC must be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NSCS). You can search for appropriate providers on the <a href="https://www.ncsc.gov.uk/index/professional-service?f%5B0%5D=field_assurance_status%3AAssured&amp;f%5B1%5D=field_assurance_scheme%3A213">NSCS web site</a>.</p>
+<p>As part of the CDSZ application process, you're required to outline any IT Health Check (ITHC) you intend to perform on the environment. The ITHC should be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NCSC). You can search for appropriate providers on the <a href="https://www.ncsc.gov.uk/index/professional-service?f%5B0%5D=field_assurance_status%3AAssured&amp;f%5B1%5D=field_assurance_scheme%3A213">NCSC web site</a>.</p>
 <p>Before beginning the ITHC, notify UKCloud by raising a service request in My Calls and completing the <a href="https://portal.ukcloud.com/support/knowledge_centre/4f052cee-0400-4e12-9e90-827a768ea7ad"><em>External Security Review Test (ESRT) application form</em></a>. Ideally, we require five working days' notice before the work is due to be carried out.</p>
 <p>The ITHC scope should be relevant to the environment. For example, if you're using the Walled Garden to pull application and antivirus updates from the internet, then security controls relevant to facilitate this should be in scope. Bear in mind that the end customer accreditor may dictate the scope of the ITHC.</p>
-<h3 id="presenting-your-results">Presenting your results</h3>
-<p>When you've conducted your ITHC, with no results higher than Medium, present your evidence pack to the UKCloud SIRO. The evidence pack comprises the Walled Garden assurance wrap form and the following, as detailed in sections (a) to (c) in section 3.7 of the Walled Garden assurance wrap form:</p>
-<p>(a) Evidence of protective monitoring aligning with the 12 Protective Monitoring Controls (PMCs) in Good Practice Guide 13 (GPG13). The protective monitoring will need to span both sides of the Walled Garden as well as the Walled Garden itself. You can provide this by explaining how each of the PMCs is met by the protective monitoring solution in place.</p>
-<p>(b) The ITHC results, with no risks higher than a Medium. If you do have results higher than a Medium but you have put a remediation plan in place that has been accepted by the end customer accreditor, then we may accept this depending on the issues raised.</p>
-<p>(c) An approval statement confirming that the end customer accreditor is satisfied with the overall security regime and is happy for the solution to be live.</p>
-<p>If the information provided in the Walled Garden evidence pack is acceptable, the UKCloud SIRO signs off the Live Implementation and any restrictions that have been imposed on the environment by UKCloud Customer Service are lifted.</p>
 <h2 id="glossary">Glossary</h2>
 <p>This section provides a glossary of terms specific to the Cross Domain Security Zone Walled
 Garden.</p>
@@ -182,7 +184,7 @@ Garden.</p>
 <p><strong>Senior Information Risk Owner (SIRO)</strong>  The person within an organisation who owns the organisation's information risk policy.</p>
 <p><strong>Walled Garden</strong>  A Cross Domain Security Zone (CDSZ) service option that provides you with self-service access to the CSDZ so that you can design, implement and manage your own cross-domain solution, using technology and application services of your choice.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -192,13 +194,6 @@ Garden.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/cdsz/cdsz-gs-walled-garden.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -217,11 +212,24 @@ Garden.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

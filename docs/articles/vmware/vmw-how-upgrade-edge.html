@@ -8,7 +8,7 @@
     <title>How to upgrade your edge gateway | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to upgrade your edge gateway | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-upgrade-edge.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -86,17 +95,15 @@
 
 <h2 id="overview">Overview</h2>
 <p>This guide shows you how to check the existing version of your edge gateway and, if necessary, upgrade it to the latest available version. If you need any assistance with the upgrade process, contact the support team by raising a service request in the <a href="https://portal.ukcloud.com/support/my_calls">My Calls</a> section of the UKCloud Portal.</p>
-<p>We highly recommend that you upgrade your edge gateways to 6.2.<em>x</em> so that you can then convert them to advanced gateways. Upgrading to 6.2.<em>x</em> also fixes known issues with TcpUdp firewall rules.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You must upgrade all edge gateways to 6.2.<em>x</em> prior to our planned upgrade to vCloud Director 9.1.</p>
+<p>In preparation for our planned upgrade to vCloud Director 9.7, you must convert your edges to advanced gateways. For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
+<p>If you're already using advanced gateways, you should upgrade them to 6.4.<em>x</em>.</p>
 </div>
 <h2 id="intended-audience">Intended audience</h2>
 <p>To complete the steps in this guide you must have access to the UKCloud Portal and vCloud Director.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Before you attempt to upgrade your edge gateway, check for the following.</p>
-<h2 id="check-current-version">Check current version</h2>
-<p>To check the existing version of your edge gateway:</p>
+<h2 id="checking-the-current-version-of-your-edge-gateway">Checking the current version of your edge gateway</h2>
+<p>Before you attempt to upgrade your edge gateway, check for the existing version of your edge gateway:</p>
 <ol>
 <li><p>Log in to the UKCloud Portal.</p>
 <p>For more detailed steps, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
@@ -119,63 +126,54 @@
 <li><p>From the <strong>Select Edge</strong> list, select the edge gateway that you want to check.</p>
 </li>
 <li><p>The <strong>VM version</strong> field shows the version number of your edge gateway.</p>
-<p>If the version is lower than 6.2.7 (for example, 5.5.4), make a note that the edge gateway needs upgrading.</p>
+<p>If the version is lower than 6.4.<em>x</em> (for example, 6.2.7), make a note that the edge gateway needs upgrading.</p>
 <p><img src="images/upgrade-image-4.png" alt="VM version"></p>
 </li>
 <li><p>Repeat these steps for any other edge gateways that you want to check.</p>
 </li>
 </ol>
-<h2 id="load-balancers-with-weight-of-0">Load balancers with weight of 0</h2>
-<p>In the NSX API in vCloud Director 8.20, using a load balancer weight of 0 to disable a member is no longer valid. If you attempt to upgrade an edge gateway with a load balancer member weight of 0, the redeployment will fail.</p>
-<p>For more information, see the following VMware Knowledge Base article: <a href="https://kb.vmware.com/s/article/51724">https://kb.vmware.com/s/article/51724</a>.</p>
-<p>To resolve this issue, before you upgrade your edge gateway, set the load balancer member weight to 1.</p>
-<ol>
-<li><p>In vCloud Director, select the <strong>Administration</strong> tab.</p>
-</li>
-<li><p>Double-click the VDC that the edge gateway that you want to edit belongs to (or right-click the VDC and select <strong>Open</strong>).</p>
-</li>
-<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
-</li>
-<li><p>Right-click the edge gateway that you want to edit and select <strong>Edge Gateway Services</strong>.</p>
-</li>
-<li><p>Select the <strong>Load Balancer</strong> tab.</p>
-</li>
-<li><p>Select the load balancer you want to edit and click <strong>Edit</strong>.</p>
-</li>
-<li><p>Select the <strong>Manage Members</strong> tab.</p>
-</li>
-<li><p>Select the load balancer member that you want to edit and click <strong>Edit</strong>.</p>
-</li>
-<li><p>In the <strong>Ratio</strong> weight field, enter <code>1</code>.</p>
-<p><img src="images/upgrade-image-5.png" alt="Ratio"></p>
-</li>
-</ol>
-<p>After you've upgraded the edge gateway, we recommend that you convert it to an advanced gateway, where you can then disable the load balancer member.</p>
-<div class="IMPORTANT">
-<h5>Important</h5>
-<p>Before you convert your edge gateway, read <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a> for important known issues relating to APIs, disabling firewalls and firewall rule keywords.</p>
-</div>
 <h2 id="upgrading-your-edge-gateway-to-the-latest-available-version">Upgrading your edge gateway to the latest available version</h2>
 <p>The following steps show how to upgrade your edge gateway using vCloud Director.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Before you begin the upgrade process, bear in mind that this process requires downtime as a new VM needs to be deployed for the edge gateway. There will also be a brief network disruption for the networks that are used by the edge gateway instance. You should make sure that you have planned for this downtime before proceeding.</p>
+</div>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Before you begin the upgrade process, bear in mind that there will be a brief network disruption for the networks that are used by the edge gateway instance.</p>
+<p>You cannot redeploy edge gateways in the Tenant UI for vCloud Director 9.1. If you're using vCloud Director 9.1, you must first switch to the vCloud Director Legacy UI. For more information, see <a href="vmw-how-switch-web-console.html"><em>How to switch to the vCloud Director web console from the tenant portal</em></a>.</p>
 </div>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Using the Tenant UI</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Using the Legacy UI</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+
 <ol>
-<li><p>Log in to the UKCloud Portal.</p>
-<p>For more detailed steps, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
+<li><p>In vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway you want to upgrade.</p>
 </li>
-<li><p>If necessary, switch to the appropriate account.</p>
-<p>Click <strong>My VMs</strong>.</p>
-<p><img src="images/upgrade-image-6.png" alt="Administration My VMs"></p>
+<li><p>In the left navigation panel, select <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd91-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
 </li>
-<li><p>Select the compute service (vOrg) that the edge gateway belongs to.</p>
+<li><p>Select the edge that you want to configure and click <strong>Redeploy</strong>.</p>
+<p><img src="images/vmw-vcd-btn-redeploy.png" alt="Redeploy button"></p>
 </li>
-<li><p>Select the <strong>vCloud Director</strong> tab, enter your UKCloud Portal password and then click <strong>Confirm</strong>.</p>
-<p><img src="images/upgrade-image-7.png" alt="vCloud Director"></p>
+<li><p>In the <em>Redeploy an Edge gateway</em> dialog box, click <strong>OK</strong>.</p>
 </li>
-<li><p>In vCloud Director, select the <strong>Administration</strong> tab.</p>
+<li><p>After the redeployment has finished, you can check the version of the edge gateway again in the UKCloud Portal to confirm that the upgrade has been successful.</p>
+</li>
+</ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li><p>In the vCloud Director Legacy UI, select the <strong>Administration</strong> tab.</p>
 <p><img src="images/upgrade-image-8.png" alt="Administration"></p>
+<p>For information about how to access the Legacy UI, see <a href="vmw-how-switch-web-console.html"><em>How to switch to the vCloud Director Legacy UI</em></a>.</p>
 </li>
 <li><p>Double-click the VDC that the edge gateway that you want to upgrade belongs to (or right-click the VDC and select <strong>Open</strong>).</p>
 </li>
@@ -185,20 +183,18 @@
 <li><p>Right-click the edge gateway that you want to upgrade and select <strong>Re-Deploy</strong>.</p>
 </li>
 <li><p>In the confirmation dialog box, click <strong>Yes</strong>.</p>
-<div class="IMPORTANT">
-<h5>Important</h5>
-<p>This step requires downtime as a new VM needs to be deployed for the edge gateway. You should make sure that you have planned for this downtime before proceeding.</p>
-</div>
 </li>
 <li><p>You can monitor the status in the <em>Activity Task Detail</em> dialog box.</p>
 </li>
 <li><p>After the redeployment has finished, you can check the version of the edge gateway again in the UKCloud Portal to confirm that the upgrade has been successful.</p>
 </li>
 </ol>
+</section>
+</div>
 <h2 id="next-steps">Next steps</h2>
-<p>We recommend that you convert your edge gateway to an advanced gateway to take advantage of more features and to access the new HTML5-based tenant portal. For more information, including known issues, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
+<p>We recommend that you convert your edge gateway to an advanced gateway to take advantage of more features and to access the new HTML5-based tenant portal. For more information, including known issues, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>. All edge gateways must be converted to advanced gateways before our planned upgrade to vCloud Director 9.7.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -208,13 +204,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-upgrade-edge.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -233,11 +222,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

@@ -3,6 +3,8 @@ title: How to migrate your workloads between UKCloud regions | UKCloud Ltd
 description: This article describes how to migrate your existing workloads from one region in our cloud platform to another
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -32,13 +34,17 @@ To complete the steps in this guide, you need to have access to the Zerto Self-S
 When you request Journaling Protection to migrate a workload within the UKCloud platform, UKCloud provides you with:
 
 - A ZORG ID to identify your environment within Zerto
+
 - Access to the Zerto Self-Service Portal (ZSSP), where you can create and manage your VPGs
 
 You should consider the following:
 
 - Migration is provided on a vApp basis (not for individual VMs). This is worth considering if you intend to migrate only some parts of your vApps.
+
 - VMs must be powered on to be synchronised prior to migration.
+
 - Our Journaling Protection service option captures every action. When a VM is deleted from your vApp, the associated journal is also deleted. This means if you delete a VM before migrating it, that VM will not exist in your target region.
+
 - We provide a single default service profile. The details of this are available in the [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md). We do not currently provide the option for you to create custom profiles
 
 ## Migrating workloads between UKCloud regions
@@ -69,6 +75,7 @@ The process for getting Journaling Protection up and running ready for workload 
 To migrate your workloads to a different UKCloud region, you must have a VDC in the intended target region. If you already have a compute service in the target region, you can use an existing VDC or you can create a new one using:
 
 - The UKCloud Portal - For more information see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
+
 - The UKCloud Portal API -- For more information see [*How to use the UKCloud Portal API*](../portal/ptl-how-use-api.md)
 
 If you don't already have a compute service in the target region or you'd prefer UKCloud to create the VDC for you, you can request this as part of your Journaling Protection service request.
@@ -104,6 +111,7 @@ If you are happy with your test migration, you can now choose when to migrate yo
 Within Zerto, you have two options for migrating your workloads:
 
 - Move the VPG to the target region. This method performs and end-to-end migration, including removing the VMs from the source region after they've been moved. For more information, see the steps below.
+
 - Perform a live migration. This method provides more flexibility for you to control what happens in the primary region after you move the VMs to the target region. For more information, see [*How to perform a     failover*](vmw-how-zerto-perform-failover.md).
 
 To move a VPG:
@@ -123,7 +131,9 @@ To move a VPG:
 4. On the *EXECUTION PARAMETERS* page, the commit policy gives you the opportunity to check the integrity of the migrated VMs before committing the move. To change the commit policy, select the **Commit Policy** field and choose:
 
     - **Auto-Commit** if you want to automatically commit the move after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440 minutes (24 hours). If you want the move to be immediately committed, enter 0.
+
     - **Auto-Rollback** if you want to automatically roll back the move after a specified amount of time if there is no user interaction. Set the amount of time in the **After** field, up to a maximum of 1440  minutes (24 hours). If you want the move to be immediately rolled back, enter 0.
+
     - **None** if you do not want to apply a commit policy. You must manually commit or roll back the move.
 
 5. The source VMs must be powered off before they can be migrated. If the VMs cannot be gracefully shut down, you can force a shutdown. To force shutdown, select the **Force Shutdown** check box. If you do not select this option and the VMs cannot be gracefully shut down, the move process fails.
@@ -156,4 +166,4 @@ You can use Journaling Protection to protect your newly migrated VMs by replicat
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

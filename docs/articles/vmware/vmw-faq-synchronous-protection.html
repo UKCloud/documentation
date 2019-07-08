@@ -8,7 +8,7 @@
     <title>Synchronous Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Synchronous Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-faq-synchronous-protection.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -82,13 +91,15 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="synchronous-protection-faqa">Synchronous Protection FAQa</h1>
+<h1 id="synchronous-protection-faqs">Synchronous Protection FAQs</h1>
 
 <h2 id="general">General</h2>
+<h3 id="is-synchronous-protection-still-available">Is Synchronous Protection still available?</h3>
+<p>Synchronous Protection is no longer available as a protection option for UKCloud for VMware. We recommend using one of our other protection options: Journaling Protection or Snapshot Protection. We will continue to provide support to customers who previously added Synchronous Protection to their environment, although we would encourage considering using Journaling Protection instead.</p>
 <h3 id="what-is-the-enhanced-service">What is the ENHANCED service?</h3>
-<p>ENHANCED was a G-Cloud 7 service level option which has now been replaced with a POWER VM with Synchronous Protection and Geo-resilient storage.</p>
+<p>ENHANCED was a G-Cloud 7 service level option which was subsequently replaced with the product name &quot;Synchronous Protection&quot;. However, for most purposes, <a href="vmw-sco-journaling-protection.html">Journaling Protection</a> is more flexible.</p>
 <h3 id="how-is-the-environment-protected">How is the environment protected?</h3>
-<p>Any data that is written is committed to the underlying storage arrays in both UKCloud sites simultaneously. This includes the full content of your VMs and edge gateway instances. For clarity, we don't use asynchronous replication technologies. The recovery point is the last write to disk, with no historical recovery points.</p>
+<p>Any data that is written is committed to the underlying storage arrays in both UKCloud sites synchronously. This includes the full content of your VMs and edge gateway instances. For clarity, this is not an asynchronous replication technology and the recovery point is the last write to disk, with no historical recovery points. If asynchronous replication with historical recovery points is required, consider <a href="vmw-sco-journaling-protection.html">Journaling Protection</a>.</p>
 <h3 id="how-is-an-unplanned-failover-event-triggered">How is an unplanned failover event triggered?</h3>
 <p>We monitor the underlying physical infrastructure, including the blades, routers and switches. In the event of multiple component failure, including loss of redundancy, in the majority of cases your VMs and edge gateway instances will be automatically brought online in the alternative site.</p>
 <p>However, other scenarios can result in a full or partial failover, and in these cases we'll need to react differently.</p>
@@ -97,17 +108,17 @@
 <ul>
 <li><p>Is not designed to be active‑active. It offers failover to a second UK site. If you need an active‑active solution, you can build across both sites and design in load balancing. Contact your Account Manager if you want to investigate this option.</p>
 </li>
-<li><p>Provides a quickly implemented disaster recovery service with an RPO of 0 seconds, and a variable RTO from 1 minute to longer, depending on the scenario.</p>
+<li><p>Provides a disaster recovery service with an RPO of 0 seconds, and a variable RTO from 1 minute to longer, depending on the scenario.</p>
 </li>
 </ul>
 <h3 id="what-will-i-need-to-do-after-an-unplanned-failover-has-occurred">What will I need to do after an unplanned failover has occurred?</h3>
 <p>In the event of an unplanned failover, because your VMs are restarted in a crash-consistent state, you may need to manually restart parts of your environment to ensure that your applications continue running as before. You may also need to check your external connectivity to ensure that all networking has been correctly rerouted.</p>
 <h3 id="what-is-the-impact-on-latency">What is the impact on latency?</h3>
-<p>A consequence of synchronous replication is that there is a higher write latency (time taken for a write to be acknowledged). This is primarily due to the time taken for the write request to occur between the sites (limited by the speed of light). Typically, this means that writes take 15‑20ms (compared to 5‑10ms if Synchronous Protection is not selected). Depending on the workload, this may have a noticeable impact.</p>
+<p>A consequence of synchronous replication is that there is a higher write latency (time taken for a write to be acknowledged). This is primarily due to the time taken for the write request to occur on both sites. Typically, this means that writes take 15‑20ms (compared to 5‑10ms if Synchronous Protection is not selected). Depending on the workload, this may have a noticeable impact.</p>
 <p>If an application performs a large sequence of writes in series (one at a time), then the impact of the higher write latency will be felt. If, on the other hand, the application performs a number of writes in parallel (multiple writes at the same time), then the impact of the higher write latency will be significantly less.</p>
 <p>We highly recommend that applications deployed with Synchronous Protection are designed and configured to perform write operations in parallel. As a best practice, we would also recommend ensuring that the file systems are block aligned - that is of particular relevance with Synchronous Protection. Most modern operating systems are block aligned by default, but this may still be of relevance with the additional file systems created manually on Linux.</p>
 <p>If you are unable to architect your application to make use of parallel writes, and the increased latency cannot be tolerated, then you should consider alternatives to Synchronous Protection, utilising application replication for protection between sites.</p>
-<p>For clarity, there is no difference in the read latency.</p>
+<p>For clarity, Synchronous Protection makes no difference to read latency.</p>
 <h3 id="how-is-the-network-rerouted">How is the network rerouted?</h3>
 <p>For internet-bound traffic, we manage an autonomous Border Gateway Protocol (BGP) service that enables us to intelligently redirect traffic without affecting your IP address allocation.</p>
 <p>The resilience of the external connectivity into the Elevated OFFICIAL security domain depends on, and is generally provided by, the access network. Behind the router layer, we have designed a network that stretches between our two sites. This allows for network connectivity (if installed in one site) to remain if your virtual firewall and our physical firewall are in separate and alternative sites.</p>
@@ -120,53 +131,16 @@
 <h3 id="can-i-ask-for-the-vms-in-my-environment-to-be-split-between-ukcloud-sites">Can I ask for the VMs in my environment to be split between UKCloud sites?</h3>
 <p>You cannot specifically request this as part of the service, but UKCloud retains the right to do this if necessary, such as during planned maintenance.</p>
 <h3 id="can-i-be-alerted-when-a-vm-is-moved-to-a-different-site">Can I be alerted when a VM is moved to a different site?</h3>
-<p>This feature isn't currently supported, but is a consideration for future development.</p>
+<p>This feature isn't currently supported. However, you can check the location of your VMs. For more information, see <a href="vmw-how-use-vm-location.html"><em>How to use VM location in vCloud Director</em></a>.</p>
 <h2 id="failover-testing">Failover testing</h2>
 <h3 id="how-can-i-test-that-my-services-will-fail-over">How can I test that my services will fail over?</h3>
 <p>You can test the failover function of the service by requesting a Test Scenario from UKCloud.</p>
 <p>For more information, see the <a href="vmw-sco-synchronous-protection.html"><em>Synchronous Protection Service Scope</em></a>.</p>
-<h3 id="what-is-excluded-from-a-test-scenario">What is excluded from a Test Scenario?</h3>
-<ul>
-<li><p>We will not fail over the connectivity and physical firewall during a Test Scenario. You'll experience a network latency of a few milliseconds through this firewall.</p>
-</li>
-<li><p>We don't currently offer a &quot;hard failover&quot; test, in which a physical host would be switched off to simulate a hardware fail event.</p>
-</li>
-</ul>
-<h3 id="how-do-i-initiate-a-test-scenario">How do I initiate a Test Scenario?</h3>
-<ol>
-<li><p>Raise a Support Request indicating you want to complete a Test Scenario. Confirm the VDC and name the VMs (up to 10) you want to have failed over, along with the date, start and end time, and any other requirements. Remember that the start and end times must be during office hours.</p>
-</li>
-<li><p>When we receive your request we will accept or reject it.</p>
-</li>
-<li><p>If we accept it, we will schedule the Test Scenario to start on the date and at the time you specified.</p>
-</li>
-</ol>
-<h3 id="what-test-options-are-available">What test options are available?</h3>
-<p>Option 1: We dynamically move your VMs between our two sites.</p>
-<ul>
-<li>We will dynamically move your VMs between the sites while the VMs remain online. There will be increased network latency between the VMs running in the different sites (circa 4-4.5 msec).</li>
-</ul>
-<p>Option 2: We restart your VMs between the two sites.</p>
-<ul>
-<li><p>Your VMs can be shut down and restarted in the secondary site. If the shutdown is non‑graceful (power off as opposed to a Guest OS shutdown), this simulates the effect of a physical server outage from an individual VM perspective. This is the equivalent of a total site failure.</p>
-</li>
-<li><p>As the UKCloud platform is multi-tenanted, we will not replicate a physical host failure to invoke a DR scenario as this may affect other customers.</p>
-</li>
-<li><p>Failovers will last a maximum of 12 hours before being failed back to the originating site.</p>
-</li>
-</ul>
-<h3 id="what-testing-outputs-are-available">What testing outputs are available?</h3>
-<p>It's highly likely that the testing of a failover will be seamless to you and therefore it will be difficult for you to gauge that the failover has occurred. To provide assurance that the test was successful, we'll produce a report that identifies the following:</p>
-<ul>
-<li>A sanitised (removing ESX host names) report of the ESX servers that the VMs are located on during the period of the failover test</li>
-<li>Comments and observations</li>
-</ul>
-<h3 id="what-if-i-want-to-test-on-a-live-environment">What if I want to test on a live environment?</h3>
-<p>You can test a maximum of 10 VMs on a live environment. Your users will experience a minimal outage as a consequence. We do not recommend testing on a live environment.</p>
-<h3 id="are-there-charges-for-a-service-failover-test">Are there charges for a service failover test?</h3>
-<p>We generally allocate a day's worth of IT Operations effort for a failover test, charged per our SFIA rate card. Longer testing periods will need to be approved by UKCloud.</p>
+<h2 id="snapshot-protection">Snapshot Protection</h2>
+<h3 id="will-i-be-charged-for-using-snapshot-protection-if-i-opt-for-synchronous-protection">Will I be charged for using Snapshot Protection if I opt for Synchronous Protection?</h3>
+<p>Synchronous Protection with Geo-resilience comes with 14-day Snapshot Protection as standard when selected, with the option for 28-day Snapshot Protection free of charge. Please note that you will be charged for any storage consumed associated with the Snapshot Protection option if enabled.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -176,13 +150,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-faq-synchronous-protection.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -201,11 +168,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

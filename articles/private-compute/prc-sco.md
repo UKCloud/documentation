@@ -3,6 +3,8 @@ title: Private Cloud for Compute Service Scope | UKCloud Ltd
 description: Outlines important details regarding Private Cloud for Compute
 services: private-compute
 author: Steve Hall
+reviewer:
+lastreviewed: 03/08/2018 13:39:33
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -63,7 +65,7 @@ Your compute solution can be:
 
 - In either our Assured OFFICIAL or Elevated OFFICIAL security domain
 
-- Connected via the internet, HybridConnect, Janet, N3/HSCN, PSN Assured, PSN Protected, RLI or Secure Remote Access
+- Connected via the internet, HybridConnect, Janet, HSCN, PSN, RLI or Secure Remote Access
 
 ## Upfront deployment charges
 
@@ -205,7 +207,7 @@ We cannot be responsible for any service affecting issues resulting from non-esc
 
   - Any access provided by you to your user base that takes the compute system beyond its recommended performance and connectivity thresholds
 
-  - Faults within external connectivity providers (for example internet, PSN, Janet or N3/HSCN) and components co-located at UKCloud
+  - Faults within external connectivity providers (for example internet, PSN, Janet or HSCN) and components co-located at UKCloud
 
   - Any connectivity between data centres that is out of our control
 
@@ -221,4 +223,4 @@ For further information, contact your account manager to request more informatio
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

@@ -3,6 +3,8 @@ title: How to enable high availability for your Oracle VMs | UKCloud Ltd
 description: Describes how to enable high availability (HA) for your Oracle VMs so that workloads are automatically moved in the event of a host failure
 services: oracle
 author: Sue Highmoor
+reviewer:
+lastreviewed: 16/07/2018 12:32:29
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -69,6 +71,10 @@ For more information about UKCloud for Oracle Software, see:
 
 - [*UKCloud for Oracle Software FAQs*](orcl-faq.md)
 
+## Related videos
+
+- [*Oracle Enterprise Manager Cloud Control console overview video*](orcl-vid-overview.md)
+
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

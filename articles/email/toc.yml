@@ -16,5 +16,7 @@
     href: email-how-use-with-app.md
 - name: Reference
   items:
+  - name: Fair use policy
+    href: email-ref-fair-use.md
   - name: Upgrade to Email and Collaboration as a Service
     href: email-ref-upgrade-to-86.md

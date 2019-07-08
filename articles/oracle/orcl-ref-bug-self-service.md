@@ -3,6 +3,8 @@ title: Oracle cloud self-service functionality (bug notification) | UKCloud Ltd
 description: Contains information about changes to the self-service functionality for UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 15:17:17
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -20,6 +22,7 @@ toc_mdlink: orcl-ref-bug-self-service.md
 Due to a bug that has been identified within the Oracle cloud placement engine, until further notice, customers on the Oracle cloud will be unable to perform the following tasks through the Oracle cloud portal:
 
 - Create new VMs
+
 - Modify the compute and storage resources available to existing VMs
 
 Until this issue is resolved, we ask that customers raise a Service Request so that UKCloud can provision Oracle VMs and VM resources on your behalf.
@@ -32,6 +35,7 @@ We apologise for the inconvenience caused; we are working towards a solution as 
 In the meantime, this means information in the following articles relating to VM creation and modification should not be followed, and a Service Request should be raised instead:
 
 - [*How to build an Oracle virtual machine*](orcl-how-build-vm.md)
+
 - [*Getting Started Guide for UKCloud for Oracle Software*](orcl-gs.md)
 
 ## Raising a Service Request
@@ -41,10 +45,15 @@ In the meantime, this means information in the following articles relating to VM
 When raising a Service Request for new Oracle VMs, we require the following information:
 
 - Customer environment
+
 - UKCloud template (if required)
+
 - CPU
+
 - RAM
+
 - OS (if required)
+
 - Storage disks required (T1/T2 and sizes)
 
 ## Additional resources on existing VMs
@@ -52,9 +61,11 @@ When raising a Service Request for new Oracle VMs, we require the following info
 When raising a Service Request for additional resources on existing Oracle VMs, we require the following information:
 
 - Customer environment
+
 - VM name
+
 - Resource change required (CPU, RAM, disk)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

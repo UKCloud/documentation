@@ -1,0 +1,488 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Monitoring the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Monitoring the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-ukcloud-monitoring.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="monitoring-the-ukcloud-platform">Monitoring the UKCloud platform</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This article helps you understand what UKCloud monitors, and how we manage alerts created by the monitoring system.</p>
+<h2 id="areas-of-monitoring-responsibility">Areas of monitoring responsibility</h2>
+<p>The diagram below shows a typical application stack and identifies the areas that can be monitored. The services below the red line on the diagram are monitored by us for both availability and performance (at a platform level).</p>
+<p>Incoming data is scanned and assessed, and any results outside of a defined threshold generates an alert inside our monitoring platform.</p>
+<p>Additional monitoring above the red line is the responsibility of the customer organisation.</p>
+<p><img src="images/other-monitoring-responsibilities.png" alt="Monitoring responsibilities"></p>
+<h2 id="how-does-ukcloud-monitor-platform-availability">How does UKCloud monitor platform availability?</h2>
+<p>We use a mixture of availability checks and synthetic transactions to monitor the availability of our platform. The platform level monitoring is provided at an aggregate level and does not check the availability of individual customer solutions.</p>
+<h2 id="technologies-used">Technologies used</h2>
+<p>We use single pane views of multiple technologies to monitor our platform. These include best of breed monitoring applications to:</p>
+<ul>
+<li><p>Monitor our cloud estate, including all core services and underlying hosts (in summary, all non-network devices).</p>
+</li>
+<li><p>Monitor the underlying internal UKCloud infrastructure and core network devices.</p>
+</li>
+<li><p>Monitor for potential Security Incidents 24 hours a day (Protective Monitoring, or ProMon), enabling us to benefit from industry leading detection and protection against security related incidents. This service is fully GPG13 (Good Practice Guide 13) compliant and is UK Government recommended.</p>
+</li>
+</ul>
+<h2 id="details-of-systems-and-services-monitored">Details of systems and services monitored</h2>
+<p>We monitor each individual component of the platform and then roll this data up into a single concise dashboard. This provides us with both RED and GREEN alerting systems at the component level and enables us to understand the overall health of a system.</p>
+<p>The list below provides a quick overview of how some of the key components of the UKCloud platform are monitored, which takes place across all services and both security domains (Assured and Elevated).</p>
+<h3 id="ukcloud-portal">UKCloud Portal</h3>
+<ul>
+<li><p>UKCloud Portal (including transaction and performance tests)</p>
+<ul>
+<li><p>Synthetic login tests through the GUI and the Portal API.</p>
+</li>
+<li><p>In depth monitoring of the web application layer, including page render and database access times.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="multi-cloud-services">Multi-cloud services</h3>
+<ul>
+<li><p>Cloud estate (including all core services and underlying hosts)</p>
+<ul>
+<li><p>Host CPU/memory stats</p>
+</li>
+<li><p>Host connectivity status</p>
+</li>
+<li><p>Host bandwidth throughput</p>
+</li>
+<li><p>Host storage connectivity and throughput</p>
+</li>
+<li><p>Core service status</p>
+</li>
+</ul>
+</li>
+<li><p>Underlying storage (including storage pools and storage performance)</p>
+<ul>
+<li><p>LUN capacity</p>
+</li>
+<li><p>LUN status</p>
+</li>
+<li><p>Data store connectivity</p>
+</li>
+<li><p>Data store throughput</p>
+</li>
+</ul>
+</li>
+<li><p>Cloud management platform (including transaction and performance tests)</p>
+<ul>
+<li>Creation/deletion/modification of instances or groups of instances</li>
+</ul>
+</li>
+</ul>
+<h3 id="multi-cloud-enabling-services">Multi-cloud enabling services</h3>
+<ul>
+<li><p>Cloud Storage</p>
+<ul>
+<li>Infrastructure (including transaction and performance tests)</li>
+</ul>
+</li>
+</ul>
+<h2 id="what-ukcloud-monitors-in-your-environment">What UKCloud monitors in your environment</h2>
+<p>We do not monitor any individual component inside your environment.</p>
+<p>The table below outlines what we monitor inside and outside your environment, and what you can and should monitor:</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>External connectivity (internet, PSN, HSCN, etc.)</th>
+<th>Network gateway</th>
+<th>Instance</th>
+<th>Storage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Customer monitors</strong></td>
+<td>Application performance</td>
+<td>Gateway state<br>Gateway rules and activity<br>VPN</td>
+<td>Instance management<br>Instance performance<br>Instance state</td>
+<td>Storage profiles</td>
+</tr>
+<tr>
+<td><strong>UKCloud monitors</strong></td>
+<td>Connection availability<br>Bandwidth throughput</td>
+<td>Customer gateway availability and responsiveness<br>Network availability<br>Platform bandwidth</td>
+<td>Host availability<br>Platform availability<br>Platform performance<br>Management plane availability<br><em>Some</em> management plane performance</td>
+<td>Platform availability<br>Platform responsiveness and performance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-can-ukcloud-provide-and-what-can-you-gain-yourself">What can UKCloud provide, and what can you gain yourself?</h2>
+<p>Our platform can also provide you with several real-time and retrospective reporting tools so that you can manage and monitor your estate. These are listed below:</p>
+<h3 id="multi-cloud-services-1">Multi-cloud services</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Instance attributes</th>
+<th>Self-service tools</th>
+<th> </th>
+<th> </th>
+<th>On request via My Calls</th>
+<th>What you can monitor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> </td>
+<td> </td>
+<td><strong>UKCloud Portal</strong></td>
+<td><strong>Cloud management UI</strong></td>
+<td><strong>API</strong></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td><strong>Billing metrics</strong></td>
+<td> </td>
+<td>Y</td>
+<td> </td>
+<td>Y</td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Licence usage</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td><strong>Instance details</strong></td>
+<td>CPU</td>
+<td> </td>
+<td>Y</td>
+<td>Y</td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td> </td>
+<td>Memory</td>
+<td> </td>
+<td>Y</td>
+<td>Y</td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td> </td>
+<td>Storage usage</td>
+<td> </td>
+<td>Y</td>
+<td>Y</td>
+<td> </td>
+<td>y</td>
+</tr>
+<tr>
+<td> </td>
+<td>OS</td>
+<td> </td>
+<td>Y</td>
+<td>Y</td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td><strong>Instance utilisation stats</strong></td>
+<td>Real time</td>
+<td> </td>
+<td> </td>
+<td>Y</td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td> </td>
+<td>Historical</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td><strong>Network gateway</strong></td>
+<td>NAT rules</td>
+<td>Y</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td> </td>
+<td>Syslog</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td> </td>
+<td>Config</td>
+<td>Y</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td> </td>
+<td>VPN connections</td>
+<td>Y</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td><strong>Backups</strong></td>
+<td>Success/Fail<br>14/28 day record</td>
+<td>Y</td>
+<td> </td>
+<td>Y</td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td><strong>Storage</strong></td>
+<td>Storage profiles</td>
+<td> </td>
+<td>Y</td>
+<td>Y</td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td><strong>Bandwidth usage</strong></td>
+<td>Internet</td>
+<td>Y</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td> </td>
+<td>PSN</td>
+<td>Y</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td> </td>
+<td>HybridConnect</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td> </td>
+<td>HSCN</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cloud-storage">Cloud Storage</h2>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Self-service tools</th>
+<th> </th>
+<th>What you can monitor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> </td>
+<td>Portal</td>
+<td>API</td>
+<td> </td>
+</tr>
+<tr>
+<td><strong>Billing metrics</strong></td>
+<td> </td>
+<td> </td>
+<td>Y</td>
+</tr>
+<tr>
+<td><strong>Usage</strong></td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<h2 id="continual-improvement">Continual improvement</h2>
+<p>We have a team dedicated to ensuring our monitoring systems are accurately and concisely reporting the status of the UKCloud platform. The monitoring team works closely with both the Technical and Operations teams to ensure all monitoring requirements are captured, and alerts are correctly tuned.</p>
+<h2 id="keeping-you-informed">Keeping you informed</h2>
+<p>We strive to provide a highly available, performant and stable platform to our customers.</p>
+<p>In the event of a service performance or availability outage, we'll provide updates via our <a href="https://status.ukcloud.com">Status Page</a>, as well as posting updates in the UKCloud Portal (<a href="https://portal.ukcloud.com">https://portal.ukcloud.com</a>).</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

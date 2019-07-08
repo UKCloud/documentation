@@ -3,6 +3,8 @@ title: Virtual machine data recovery options | UKCloud Ltd
 description: Provides an overview of the data recovery options available for your VMs
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -47,15 +49,15 @@ You can create only one snapshot for each VM, with each subsequent snapshot over
 
 ### How to create a VM snapshot
 
-You can create a VM snapshot within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to create a snapshot for and selecting **Create Snapshot**.
+In the card for the VM that you want to create a snapshot for, select **Actions** then **Create Snapshot**.
 
-![Snapshot creation in vCloud Director](images/vcd_snapshot.png)
+![Create Snapshot menu option](images/vmw-vcd-mnu-create-snapshot.png)
 
 ## VM copy
 
 When you copy a VM, you create an exact replica of the VM in either the same vApp or a different vApp.
 
-![VM copy in vCloud Director](images/vcd_copy.png)
+![How Master and copy images differ with changes over time](images/copy.png)
 
 ### Use case
 
@@ -71,9 +73,9 @@ You must power down the VM prior to taking a copy. Each additional copy will con
 
 ### How to create a VM copy
 
-You can create a VM copy within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to copy and selecting **Copy to**.
+In the card for the VM that you want to copy, select **Actions** then **Copy to**.
 
-![How Master and copy images differ with changes over time](images/copy.png)
+![Copy VM menu option](images/vmw-vcd-mnu-copy-vm.png)
 
 ## VM backup
 
@@ -95,9 +97,8 @@ Time taken for a restoration request to be completed (dependent on the amount of
 
 ### How to add a VM to the automated snapshot backup schedule
 
-For information about how to add a VM to the automated backup schedule, see [*How to manage snapshot protection for your VMs*](vmw-how-manage-snapshot-protection.md)
-in the Knowledge Centre.
+For information about how to add a VM to the automated backup schedule, see [*How to manage snapshot protection for your VMs*](vmw-how-manage-snapshot-protection.md).
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

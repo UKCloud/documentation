@@ -8,7 +8,7 @@
     <title>Cloud Enablement - CAPS/CPA-approved VPN Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Cloud Enablement - CAPS/CPA-approved VPN Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/enablement/enbl-sco-capscpa.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -98,55 +107,55 @@
 </thead>
 <tbody>
 <tr>
-<td>Service type</td>
+<td><strong>Service type</strong></td>
 <td>Connectivity</td>
 </tr>
 <tr>
-<td>Security level</td>
+<td><strong>Security level</strong></td>
 <td>Elevated OFFICIAL</td>
 </tr>
 <tr>
-<td>Hosted device</td>
+<td><strong>Hosted device</strong></td>
 <td>VPN</td>
 </tr>
 <tr>
-<td>Typical device size</td>
+<td><strong>Typical device size</strong></td>
 <td>1U / 2U</td>
 </tr>
 <tr>
-<td>Service level (default)</td>
+<td><strong>Service level (default)</strong></td>
 <td>Single data centre, no automatic failover</td>
 </tr>
 <tr>
-<td>Cloud Enablement requirement<br> (one bay = 10U, 1kW per month)</td>
+<td><strong>Cloud Enablement requirement<br> (one bay = 10U, 1kW per month)</strong></td>
 <td>One bay in one UKCloud data centre</td>
 </tr>
 <tr>
-<td>Cost</td>
+<td><strong>Cost</strong></td>
 <td>£2,000 setup fee plus £500 per month</td>
 </tr>
 <tr>
-<td>Resilience available?</td>
+<td><strong>Resilience available?</strong></td>
 <td>We don't provide a resiliently connected environment. You can provision devices to both of our data centres to create a self-managed resilient solution (in which case, the resilience options below are required).</td>
 </tr>
 <tr>
-<td>Failover responsibility</td>
+<td><strong>Failover responsibility</strong></td>
 <td>Customer</td>
 </tr>
 <tr>
-<td>Resilience requirement<br>(1 bay = 10U, 1kw per month)</td>
 <td>One bay in our Farnborough data centre<br>One bay in our Corsham data centre</td>
+<td></td>
 </tr>
 <tr>
-<td>Resilience cost</td>
+<td><strong>Resilience cost</strong></td>
 <td>£4,000 setup fee plus £1,000 per month</td>
 </tr>
 <tr>
-<td>Notes</td>
-<td>Devices must be hosted in the same data centre as your compute environment.</td>
+<td><strong>Notes</strong></td>
+<td>Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (e.g. Cloud Enablement in region 5 cannot be stretched to region 6).</td>
 </tr>
 <tr>
-<td>Next steps</td>
+<td><strong>Next steps</strong></td>
 <td>Raise a service request via the UKCloud Portal.<br>You will also need to complete the Assurance Wrap form so that we can create a walled garden for you in the Cross Domain Security Zone.</td>
 </tr>
 </tbody>
@@ -154,14 +163,19 @@
 <h2 id="what-connectivity-does-the-vpn-service-provide">What connectivity does the VPN service provide?</h2>
 <p>The VPN service provides up to two ports:</p>
 <ul>
-<li>Cloud Enablement in regions 1, 2, 7 &amp; 8 offers fibre-only connectivity</li>
-<li>Cloud Enablement in regions 5 &amp; 6 offers connectivity via SFP, so customers can use fibre or copper</li>
-<li>The connection is into a shared switch.</li>
+<li><p>Cloud Enablement in regions 1, 2, 7 &amp; 8 offers fibre-only connectivity</p>
+</li>
+<li><p>Cloud Enablement in regions 5 &amp; 6 offers connectivity via SFP, so customers can use fibre or copper</p>
+</li>
+<li><p>The connection is into a shared switch.</p>
+</li>
 </ul>
 <h2 id="what-is-the-port-speed-of-connection">What is the port speed of connection?</h2>
 <ul>
-<li>In regions 1, 2, 7 &amp; 8, the port speed is up to 1 Gbps</li>
-<li>In regions 5 &amp; 6, the port speed can be either 1 or 10 Gbps</li>
+<li><p>In regions 1, 2, 7 &amp; 8, the port speed is up to 1 Gbps</p>
+</li>
+<li><p>In regions 5 &amp; 6, the port speed can be either 1Gbps (copper or fibre) or 10 Gbps (fibre only)</p>
+</li>
 </ul>
 <h2 id="who-manages-the-switch">Who manages the switch?</h2>
 <p>We manage the shared switch - the initial logical configuration is included in the setup fee. Additional configuration (of your devices to your solution) is a chargeable service.</p>
@@ -214,7 +228,7 @@
 <h2 id="what-happens-in-the-event-of-a-power-failure">What happens in the event of a power failure?</h2>
 <p>If, in the unlikely event of a power failure, you would like your hardware restarted, provide <strong>laminated</strong> worked instructions (totalling no more than a double-sided A4 page) that you can place within your Cloud Enablement rack space.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -224,13 +238,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/enablement/enbl-sco-capscpa.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -249,11 +256,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

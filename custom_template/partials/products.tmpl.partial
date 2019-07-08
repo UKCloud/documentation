@@ -1,72 +1,109 @@
 {{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
 <style type="text/css">
   .sideaffix.shiftup { bottom: unset; }
-  p { font-size: 22px; }
 </style>
 
-<products>
-  <div class="row">
-    <div class="product_grid-1">
-      <a href="/articles/vmware/vmw-gs.html">
-        <div class="product_grid-2 child-1 border-main">VMware</div>
-      </a>
-      <a href="/articles/openstack/ostack-gs.html">
-        <div class="product_grid-2 child-2 border-main">OpenStack</div>
-      </a>
-      <a href="/articles/azure/azs-gs.html">
-        <div class="product_grid-2 child-3 border-main">Azure</div>
-      </a>
-      <a href="/articles/oracle/orcl-gs.html">
-        <div class="product_grid-2 child-4 border-main">Oracle</div>
-      </a>
-      <a href="/articles/openshift/oshift-gs.html">
-        <div class="product_grid-2 child-5 border-main border-right">OpenShift</div>
-      </a>
-      <a href="articles/cloud-storage/cs-gs.html">
-        <div class="product_grid-2 child-6 border-main">Cloud Storage</div>
-      </a>
-      <a href="articles/gpu/gpu-faq.html">
-        <div class="product_grid-2 child-7 border-main">Cloud GPU</div>
-      </a>
-      <a href="articles/hpc/hpc-ref-overview.html">
-        <div class="product_grid-2 child-8 border-main">High Performance Compute</div>
-      </a>
-      <a href="articles/cdsz/cdsz-gs-walled-garden.html">
-        <div class="product_grid-2 child-9 border-main">Cross Domain Security Zone</div>
-      </a>
-      <a href="articles/sra/sra-gs.html">
-        <div class="product_grid-2 child-10 border-main border-right">Secure Remote Access</div>
-      </a>
-      <a href="articles/email/email-gs.html">
-        <div class="product_grid-2 child-11 border-main">Email and Collaboration</div>
-      </a>
-      <a href="articles/draas/draas-gs.html">
-        <div class="product_grid-2 child-12 border-main">Disaster Recovery as a Service</div>
-      </a>
-      <a href="articles/migration/migr-how-zerto-migrate-to-ukcloud.html">
-        <div class="product_grid-2 child-13 border-main">Migration to the Cloud</div>
-      </a>
-      <a href="articles/private-compute/prc-faq.html">
-        <div class="product_grid-2 child-14 border-main">Private Cloud for Compute</div>
-      </a>
-      <a href="articles/private-storage/prs-faq.html">
-        <div class="product_grid-2 child-15 border-main border-right">Private Cloud for Storage</div>
-      </a>
-      <a href="articles/connectivity/conn-faq.html">
-        <div class="product_grid-2 child-16 border-main border-bottom">Connectivity</div>
-      </a>
-      <a href="articles/enablement/enbl-ref-services.html">
-        <div class="product_grid-2 child-17 border-main border-bottom">Cloud Enablement</div>
-      </a>
-      <a href="articles/portal/ptl-gs.html">
-        <div class="product_grid-2 child-18 border-main border-bottom">UKCloud Portal</div>
-      </a>
-      <a href="articles/other/other-ref-services-by-region.html">
-        <div class="product_grid-2 child-19 border-main border-bottom">Other</div>
-      </a>
-      <a href="https://ukcloud.com/">
-        <div class="product_grid-2 child-20 border-main border-right border-bottom">UKCloud</div>
-      </a>
-    </div>
-  </div>
-</products>
+
+<section class="product-grid">
+
+  <a href="/articles/azure/azs-gs.html" class="product-grid__item">
+    <span>Azure</span>
+  </a>
+
+  <a href="/articles/openshift/oshift-gs.html" class="product-grid__item">
+    <span>OpenShift</span>
+  </a>
+
+  <a href="/articles/openstack/ostack-gs.html" class="product-grid__item">
+    <span>OpenStack</span>
+  </a>
+
+  <a href="/articles/oracle/orcl-gs.html" class="product-grid__item">
+    <span>Oracle</span>
+  </a>
+
+  <a href="/articles/vmware/vmw-gs.html" class="product-grid__item">
+    <span>VMware</span>
+  </a>
+
+  <a href="/articles/enablement/enbl-ref-services.html" class="product-grid__item">
+    <span>Cloud Enablement</span>
+  </a>
+
+  <a href="/articles/gpu/gpu-faq.html" class="product-grid__item">
+    <span>Cloud GPU</span>
+  </a>
+
+  <a href="/articles/cloud-storage/cs-gs.html" class="product-grid__item">
+    <span>Cloud Storage</span>
+  </a>
+
+  <a href="/articles/connectivity/conn-faq.html" class="product-grid__item">
+    <span>Connectivity</span>
+  </a>
+
+  <a href="/articles/cdsz/cdsz-gs-walled-garden.html" class="product-grid__item">
+    <span>Cross Domain Security Zone</span>
+  </a>
+
+  <a href="/articles/dedicated-compute/dc-sd.html" class="product-grid__item">
+    <span>Dedicated Compute</span>
+  </a>  
+
+  <a href="/articles/draas/draas-gs.html" class="product-grid__item">
+    <span>Disaster Recovery as a Service</span>
+  </a>
+
+  <a href="/articles/email/email-gs.html" class="product-grid__item">
+    <span>Email and Collaboration</span>
+  </a>
+
+  <a href="/articles/hpc/hpc-ref-overview.html" class="product-grid__item">
+    <span>High Performance Compute</span>
+  </a>
+
+  <a href="/articles/managed-services/man-sd-compute.html" class="product-grid__item">
+    <span>Managed Services</span>
+  </a> 
+
+  <a href="/articles/migration/migr-how-zerto-migrate-to-ukcloud.html" class="product-grid__item">
+    <span>Migration to the Cloud</span>
+  </a>
+
+  <a href="/articles/mcbs/mcbs-gs.html" class="product-grid__item">
+    <span>Multi-Cloud Backup Storage</span>
+  </a>  
+
+  <a href="/articles/private-cloud/prc-sd.html" class="product-grid__item">
+    <span>Private Cloud</span>
+  </a>
+
+  <a href="/articles/sra/sra-gs.html" class="product-grid__item">
+    <span>Secure Remote Access</span>
+  </a>
+
+  <a href="/articles/third-party/third-ref-eula.html" class="product-grid__item">
+    <span>Third-Party Software</span>
+  </a>
+
+  <a href="/articles/transition-services/trans-sd.html" class="product-grid__item">
+    <span>Transition Services</span>
+  </a>
+
+  <a href="/articles/portal/ptl-gs.html" class="product-grid__item">
+    <span>UKCloud Portal</span>
+  </a>
+
+  <a href="/articles/other/other-ref-services-by-region.html" class="product-grid__item">
+    <span>Other</span>
+  </a>
+
+  <a href="https://status.ukcloud.com/" class="product-grid__item">
+    <span>Service Status</span>
+  </a>
+
+  <a href="https://ukcloud.com/" class="product-grid__item">
+    <span>ukcloud.com</span>
+  </a>
+
+</section>

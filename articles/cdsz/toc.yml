@@ -12,5 +12,11 @@
     href: cdsz-how-access-services-walled-garden.md
 - name: Reference
   items:
+  - name: Cross Domain Security Zone Blueprint
+    href: cdsz-ref-bp-overview.md
   - name: UKCloud Cross Domain Security Zone application process
-    href: cdsz-application-process.md
+    href: cdsz-ref-application-process.md
+- name: Service Definition
+  items:
+  - name: Cross Domain Security Zone Service Definition
+    href: cdsz-sd.md

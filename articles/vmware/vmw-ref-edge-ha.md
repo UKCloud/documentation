@@ -3,6 +3,8 @@ title: Edge gateways and high availability | UKCloud Ltd
 description: Covers the challenges and considerations of enabling High availability (HA) on the edge gateway devices
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -21,10 +23,10 @@ UKCloud has trialled the use of HA enabled edge gateway devices with customers o
 
 In light of this, UKCloud does not recommend that customers have HA enabled on the edge gateway device.
 
-If you would like to investigate other methods of implementing HA into your solutions and the options available on UKCloud, this [*High Availability Blueprint*](https://ukcloud.com/wp-content/uploads/2016/07/UKCloud_Blueprint_UKC-GEN-101_High-Availability-and-Disaster-Recovery-Options.pdf) contains some useful advice. Alternatively, please contact your Account Manager who can arrange a session with one of our Cloud Architects.
+If you would like to investigate other methods of implementing HA into your solutions and the options available on UKCloud, this [*High Availability Blueprint*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud_blueprint_ukc-gen-101_high-availability-and-disaster-recovery-options.pdf) contains some useful advice. Alternatively, please contact your Account Manager who can arrange a session with one of our Cloud Architects.
 
 We are continuing to investigate with our partners at VMware to resolve this challenge.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

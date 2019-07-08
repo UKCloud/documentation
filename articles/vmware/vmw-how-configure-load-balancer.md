@@ -1,8 +1,10 @@
 ---
 title: How to configure a load balancer | UKCloud Ltd
-description: Shows how to configure a load balancer for regular edges and advanced gateways within vCloud Director
+description: Shows how to configure a load balancer within vCloud Director
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 
 toc_rootlink: How To
 toc_sub1:
@@ -16,53 +18,47 @@ toc_mdlink: vmw-how-configure-load-balancer.md
 
 # How to configure a load balancer
 
-# Overview
+## Overview
 
-One of the functions of the edge gateway is to act as a basic layer 3 load balancer, distributing IP traffic to a pool of servers while appearing as a single virtual server. The load balancing methods offered are round-robin, IP hash, URI, HTTP header or least connected.
+One of the functions of the edge gateway is to act as a basic Layer 3 load balancer, distributing IP traffic to a pool of servers while appearing as a single virtual server. The load balancing methods offered are round-robin, IP hash, URI, HTTP header or least connected.
 
 Bear in mind, however, that the edge gateway load balancer is quite basic. If you need to meet more complex requirements, you'll need provide your own third-party virtual load balancer.
 
-The steps for configuring a load balancer vary depending on what type of edge gateway you're working with:
+## Configuring a load balancer
 
-- [Configuring a load balancer for an advanced gateway](#configuring-a-load-balancer-for-an-advanced-gateway)
-- [Configuring a load balancer for a standard edge](#configuring-a-load-balancer-for-a-standard-edge)
+To configure a load balancer:
 
-> [!NOTE]
-> We recommend that you convert your edge to an advanced gateway to access the latest vCloud Director functionality. For more information, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md).
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway in which you to configure the load balancer.
 
-## Configuring a load balancer for an advanced gateway
+2. In the left navigation panel, click **Edges**.
 
-To configure a load balancer for an advanced gateway:
+    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
 
-1. In vCloud Director, click the **Administration** tab.
+3. Select the edge that you want to configure and click **Configure Services**.
 
-    ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
+    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
 
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
-
-2. Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select **Open**.
-
-3. Select the **Edge Gateways** tab.
-
-    ![Edge Gateways tab](images/vmw-vcd-tab-edge-gateways.png)
-
-4. Right-click the edge gateway and select **Edge Gateway Services**.
-
-5. Select the **Load Balancer** tab.
+4. Select the **Load Balancer** tab.
 
     ![Load Balancer tab](images/vmw-vcd-adv-edge-tab-load-balancer.png)
 
-6. On the **Global Configuration** tab, select the **Enabled** toggle.
+5. On the **Global Configuration** tab, enable the **Enabled** option.
 
-7. If you have a syslog server configured, select the **Enable Logging** toggle.
+6. If you have a syslog server configured, enable the **Enable Logging** option.
 
     For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md)
 
-8. Click **Save changes**.
+7. Click **Save changes**.
 
-9. You need to configure two components of the load balancing service for it to function correctly: [pool servers](#configuring-a-pool-server-for-an-advanced-gateway) and [virtual servers](#configuring-a-virtual-server-for-an-advanced-gateway).
+- [How to configure a load balancer](#how-to-configure-a-load-balancer)
+  - [Overview](#overview)
+  - [Configuring a load balancer](#configuring-a-load-balancer)
+    - [Configuring a pool server](#configuring-a-pool-server)
+    - [Configuring a virtual server](#configuring-a-virtual-server)
+  - [Next steps](#next-steps)
+  - [Feedback](#feedback)
 
-### Configuring a pool server for an advanced gateway
+### Configuring a pool server
 
 Pool servers are the real servers that will be masked by the load balancer.
 
@@ -86,7 +82,7 @@ Pool servers are the real servers that will be masked by the load balancer.
 
 5. From the **Monitors** list, select the monitors policy.
 
-6. Select the **Transparent** toggle if you want IP addresses to be transparent.
+6. Enable the **Transparent** option if you want IP addresses to be transparent.
 
     ![Add Pool dialog box](images/vmw-vcd-adv-edge-load-balancer-add-pool.png)
 
@@ -104,7 +100,7 @@ Pool servers are the real servers that will be masked by the load balancer.
 
     ![Show Pool Statistics button](images/vmw-vcd-adv-edge-load-balancer-pool-stats.png)
 
-### Configuring a virtual server for an advanced gateway
+### Configuring a virtual server
 
 A virtual server masks the pool of real servers and presents a single IP address.
 
@@ -116,109 +112,26 @@ A virtual server masks the pool of real servers and presents a single IP address
 
     ![Add virtual server button](images/vmw-vcd-load-balancer-btn-add-server-adv.png)
 
-3. In the **Add Virtual Server** dialog box, select the **Enable Virtual Server** toggle.
+3. In the *Add Virtual Server* dialog box, enable the **Enable Virtual Server** option.
 
 4. Enter a **Name** for the virtual server, assign it a virtual **IP Address**, and assign it to the server pool you want to mask. You can also choose which services you want to apply to the virtual server. When you're done, click **Keep**.
 
     ![Add Virtual Server dialog box](images/vmw-vcd-load-balancer-add-virtual-server-adv.png)
-
-## Configuring a load balancer for a standard edge
-
-To configure a load balancer for a standard edge:
-
-1. In vCloud Director, click the **Administration** tab.
-
-    ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
-
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
-
-2. Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select **Open**.
-
-3. Select the **Edge Gateways** tab.
-
-    ![Edge Gateways tab](images/vmw-vcd-tab-edge-gateways.png)
-
-4. Right-click the edge gateway and select **Edge Gateway Services**.
-
-5. Select the **Load Balancer** tab.
-
-    ![Load Balancer tab](images/vmw-vcd-tab-load-balancer-reg.png)
-
-6. You need to configure two components of the load balancing service for it to function correctly: [pool servers](#configuring-a-pool-server-for-a-standard-edge) and [virtual servers](#configuring-a-virtual-server-for-a-standard-edge).
-
-### Configuring a pool server for a standard edge
-
-Pool servers are the real servers that will be masked by the load balancer.
-
-> [!NOTE]
-> Before you configure the pool of servers, make a list of their IP addresses so that you can populate the pool later in the procedure.
-
-1. On the **Load Balancer** tab, select the **Pool Servers** tab.
-
-    ![Pool Servers tab](images/vmw-vcd-tab-lb-pool-servers-reg.png)
-
-2. Click **Add**.
-
-    ![Add pool server button](images/vmw-vcd-btn-lb-add-pool-reg.png)
-
-3. In the *Add Load Balancer Member Pool* wizard, give the pool a **Name** and **Description** then click **Next**.
-
-4. Select the service type for the pool then click **Next**.
-
-    A service type consists of the protocol, port number and balancing method. You can enable multiple services for a pool.
-
-    ![Pool server service type](images/vmw-vcd-add-load-balancer-member-service-reg.png)
-
-5. Configure health check parameters for the services you're provisioning (or leave as the default), then click **Next**.
-
-    ![Pool server health check parameters](images/vmw-vcd-add-load-balancer-member-health-reg.png)
-
-6. Click **Add** to add members to the pool.
-
-    ![Add pool server member button](images/vmw-vcd-add-load-balancer-member-btn-add-reg.png)
-
-7. In the *Add Member* dialog box, enter the IP addresses of one of the servers that you want to include in the pool. You can also give the servers different weightings to modify the flow of traffic to each one. You can then add service and monitoring port numbers.
-
-    ![Add Member dialog box](images/vmw-vcd-add-load-balancer-member-add-reg.png)
-
-8. When you're happy with the settings, click **OK**.
-
-9. Click **Add** to add another server to the pool and when you've added all the servers, click **Next**.
-
-10. On the last page of the wizard, review your settings and click **Finish**.
-
-    The pool you created will now be visible in the Pool Servers window.
-
-    ![Pool server](images/vmw-vcd-load-balancer-pool-reg.png)
-
-### Configuring a virtual server for a standard edge
-
-A virtual server masks the pool of real servers and presents a single IP address.
-
-1. On the **Load Balancer** tab, select the **Virtual Servers** tab.
-
-    ![Pool Servers tab](images/vmw-vcd-tab-lb-virtual-servers-reg.png)
-
-2. Click **Add**.
-
-    ![Add virtual server button](images/vmw-vcd-btn-lb-add-virtual-server-reg.png)
-
-3. In the *Add Virtual Server* dialog box, name the virtual server, assign a virtual IP address to it and assign it to the server pool you want to mask. You can also choose which services you want to apply to the virtual server.
-
-    ![Add Virtual Server dialog box](images/vmw-vcd-lb-add-virtual-server-reg.png)
-
-4. When you're finished, click **OK**.
 
 ## Next steps
 
 In this article you've learned how to create firewall rules. For other edge gateway configuration tasks, see:
 
 - [*How to create firewall rules*](vmw-how-create-firewall-rules.md)
+
 - [*How to create NAT rules*](vmw-how-create-nat-rules.md)
+
 - [*How to create a DHCP pool*](vmw-how-create-dhcp-pool.md)
+
 - [*How to configure IPsec VPN*](vmw-how-configure-ipsec-vpn.md)
+
 - [*How to create a static route*](vmw-how-create-static-route.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

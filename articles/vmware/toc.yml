@@ -2,6 +2,8 @@
   items:
   - name: Journaling Protection FAQs
     href: vmw-faq-journaling-protection.md
+  - name: Service failover testing FAQs
+    href: vmw-faq-failover-testing.md
   - name: Sharing catalogs FAQs
     href: vmw-faq-sharing-catalogs.md
   - name: Snapshot Protection FAQs
@@ -12,30 +14,44 @@
     href: vmw-faq.md
 - name: Getting Started
   items:
+  - name: Build a virtual machine
+    href: vmw-gs-build-vm-vcd.md
   - name: Journaling Protection
     href: vmw-gs-journaling.md
   - name: UKCloud for VMware
     href: vmw-gs.md
 - name: How To
   items:
+  - name: Access CentOS Update servers
+    href: vmw-how-access-centos-update-servers.md
+  - name: Access edge gateway settings
+    href: vmw-how-access-edge.md
+  - name: Access Red Hat update servers
+    href: vmw-how-access-redhat-update-servers.md
   - name: Access syslog data for your advanced gateway
     href: vmw-how-access-syslog-data-adv.md
   - name: Access syslog data for your edge gateway
     href: vmw-how-access-syslog-data.md
   - name: Access the Zerto Self-Service Portal
     href: vmw-how-zerto-access-zssp.md
+  - name: Access Ubuntu update servers
+    href: vmw-how-access-ubuntu-update-servers.md
   - name: Access vCloud Director through the vCloud API
     href: vmw-how-access-vcloud-api.md
   - name: Bring your own Red Hat licensing
     href: vmw-how-license-red-hat.md
-  - name: Build a virtual machine with UKCloud for VMware
-    href: vmw-how-build-vm.md
   - name: Build an edge gateway using the UKCloud Portal
     href: vmw-how-build-edge.md
   - name: Change IPsec VPN settings via the vCloud API
     href: vmw-how-change-ipsec-vpn-api.md
+  - name: Configure a Distributed Firewall
+    href: vmw-how-configure-distributed-firewall.md
+  - name: Configure a Distributed Logical Router
+    href: vmw-how-configure-distributed-logical-router.md
   - name: Configure a load balancer
     href: vmw-how-configure-load-balancer.md
+  - name: Configure an L2 VPN
+    href: vmw-how-configure-l2-vpn.md
   - name: Configure IPsec VPN
     href: vmw-how-configure-ipsec-vpn.md
   - name: Connect to the UKCloud Windows Server Update Services (WSUS)
@@ -62,24 +78,26 @@
     href: vmw-how-upgrade-edge.md
   - name: Create an isolated VDC network
     href: vmw-how-create-isolated-network.md
-  - name: Create find your allocated external IP addresses
-    href: vmw-how-find-ip-addresses.md
   - name: Create firewall rules
     href: vmw-how-create-firewall-rules.md
   - name: Create NAT rules
     href: vmw-how-create-nat-rules.md
+  - name: Deploy multiple VMs from a vApp template simultaneously using the API
+    href: vmw-how-deploy-multiple-vms-from-vapp.md
   - name: Export edge gateway configuration data using PowerShell
     href: vmw-how-ps-export-edge-data.md
-  - name: How to access CentOS Update servers
-    href: vmw-how-access-centos-update-servers.md
-  - name: How to access Ubuntu update servers
-    href: vmw-how-access-ubuntu-update-servers.md
+  - name: Find your allocated external IP addresses
+    href: vmw-how-find-ip-addresses.md
   - name: Install a REST client to access the vCloud API
     href: vmw-how-install-vcloud-api-rest-client.md
   - name: Install and configure OpenVPN
     href: vmw-how-install-openvpn.md
   - name: Install and configure Zerto in your local environment
     href: vmw-how-zerto-install-local.md
+  - name: Install Red Hat Update Infrastructure on an existing VMware virtual machine
+    href: vmw-how-install-rhui-vm.md
+  - name: Interact with the vCloud REST API using PowerShell and Python
+    href: vmw-how-interact-vcd-api-powershell.md
   - name: Licence Microsoft applications/software on the UKCloud platform
     href: vmw-how-license-microsoft.md
   - name: License Windows VMs using the UKCloud Key Management Server
@@ -90,6 +108,8 @@
     href: vmw-how-manage-vcd-permissions.md
   - name: Manage Snapshot Protection for your VMs
     href: vmw-how-manage-snapshot-protection.md
+  - name: Migrate vApps between virtual data centres
+    href: vmw-how-migrate-vapp.md
   - name: Migrate your workloads between UKCloud regions
     href: vmw-how-zerto-migrate-between-regions.md
   - name: Perform a failover
@@ -98,20 +118,30 @@
     href: vmw-how-retrieve-utilisation-metrics.md
   - name: Securely manage permissions for a specific vApp
     href: vmw-how-manage-vapp-permissions.md
+  - name: Switch to the Legacy UI
+    href: vmw-how-switch-web-console.md
   - name: Upgrade your edge gateway
     href: vmw-how-upgrade-edge.md
+  - name: Upload ISO or FLP media
+    href: vmw-how-upload-media-iso-flp.md
   - name: Use affinity and anti-affinity rules
     href: vmw-how-use-affinity-rules.md
   - name: Use the VMware OVF Tool
     href: vmw-how-use-ovf-tool.md
   - name: Use VM location in vCloud Director
     href: vmw-how-use-vm-location.md
+  - name: View and update virtual machine settings
+    href: vmw-how-update-vm-settings.md
+  - name: View storage profile usage
+    href: vmw-how-view-storage-usage.md
   - name: View your VMs in the UKCloud Portal
     href: vmw-how-portal-view-vms.md
 - name: Reference
   items:
   - name: Access to virtual machines on the UKCloud platform
     href: vmw-ref-access-to-vms.md
+  - name: Advanced networking options
+    href: vmw-ref-advanced-networking.md
   - name: Availability of Virtual Hardware version 11
     href: vmw-ref-virtual-hardware-v11.md
   - name: Blocked vCloud Director API calls
@@ -120,20 +150,30 @@
     href: vmw-ref-cant-manage-edge.md
   - name: Cloning vApps using PowerCLI
     href: vmw-ref-cloning-vapps.md
+  - name: Comparison of UKCloud for VMware against hyperscalers
+    href: vmw-ref-comparison-hyperscalers.md
   - name: Edge gateways and high availability
     href: vmw-ref-edge-ha.md
   - name: Fix for customers unable to upload and download vApps or catalog items
     href: vmw-ref-fix-unable-to-vapps.md
+  - name: IPsec VPN Foundation and PRIME profiles
+    href: vmw-ref-ipsec-vpn.md
   - name: Known working and non-working firewalls
     href: vmw-ref-byof-working-firewalls.md
   - name: Managing your UKCloud for VMware environment using the UKCloud Portal API
     href: vmw-ref-managing-portal-api.md
+  - name: Naming virtual machines
+    href: vmw-ref-naming-vms.md
+  - name: Nested hypervisors
+    href: vmw-ref-nested-hypervisors.md
   - name: Network Time Protocol server access
     href: vmw-ref-network-time-server.md
   - name: Oversized VMs on the UKCloud platform
     href: vmw-ref-oversized-vms.md
   - name: PowerCLI command for interacting with the vCloud API
     href: vmw-ref-powercli-vcloud.md
+  - name: Preparing for vCloud Director 9.7 upgrade
+    href: vmw-ref-vcd-97.md
   - name: Red Hat Update Infrastructure overview
     href: vmw-ref-rhui.md
   - name: Shared Secret Length Issues IPSec VPN
@@ -142,10 +182,10 @@
     href: vmw-ref-storage-policies.md
   - name: System Center on the UKCloud platform
     href: vmw-ref-system-center.md
+  - name: TCP_TW_REUSE and TCP_TW_RECYCLE settings
+    href: vmw-ref-twreuse.md
   - name: Tier 1 storage
     href: vmw-ref-tier1-storage.md
-  - name: TW_REUSE and TW_RECYCLE settings
-    href: vmw-ref-twreuse.md
   - name: Two Factor Authentication
     href: vmw-ref-two-factor-auth.md
   - name: UKCloud for VMware options
@@ -156,6 +196,8 @@
     href: vmw-ref-vcd-820.md
   - name: Upgrade to vCloud Director 9.1
     href: vmw-ref-vcd-91.md
+  - name: vCloud Director 9.7 known issues
+    href: vmw-ref-vcd97-known-issues.md
   - name: vCloud Director Healthcheck
     href: vmw-ref-vcd-healthcheck.md
   - name: Virtual machine data recovery options
@@ -168,11 +210,15 @@
     href: vmw-ref-vcloud-connector.md
   - name: Windows Server activation
     href: vmw-ref-windows-server-activation.md
+- name: Service Definition
+  items:
+  - name: UKCloud for VMware Service Definition
+    href: vmw-sd.md
 - name: Service Scope
   items:
   - name: Bring Your Own Firewall Service Scope
     href: vmw-sco-byof.md
-  - name: Dedicated Compute Service Scope
+  - name: Dedicated Compute v1 Service Scope
     href: vmw-sco-dedicated-compute.md
   - name: Journaling Protection Service Scope
     href: vmw-sco-journaling-protection.md
@@ -182,3 +228,21 @@
     href: vmw-sco-synchronous-protection.md
   - name: UKCloud for VMware Service Scope
     href: vmw-sco.md
+- name: Troubleshooting
+  items:
+  - name: Fixing your advanced gateway if you encounter NullPointerException error
+    href: vmw-ref-trouble-null-pointer.md
+  - name: Fixing your IPsec VPN following upgrade to NSX 6.4
+    href: vmw-ref-trouble-ipsec-nsx64.md
+  - name: UK keyboard layout not supported in Web Console
+    href: vmw-ref-trouble-uk-keyboard-console.md
+- name: Videos
+  items:
+  - name: Benefits of VMware L2 VPN
+    href: vmw-vid-l2-vpn.md
+  - name: Licensing Windows VMs using the KMS
+    href: vmw-vid-licensing-kms.md
+  - name: vCloud Director 9.1 overview
+    href: vmw-vid-vcd91.md
+  - name: VMware Distributed Firewall
+    href: vmw-vid-dfw.md

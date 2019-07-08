@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>IPsec VPN Foundation and PRIME profiles | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="IPsec VPN Foundation and PRIME profiles | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-ipsec-vpn.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="ipsec-vpn-foundation-and-prime-profiles">IPsec VPN Foundation and PRIME profiles</h1>
+
+<h2 id="overview">Overview</h2>
+<p>UKCloud for VMware supports IPsec VPN to provide secure access to your UKCloud environment. The National Cyber Security Centre (NCSC) provides guidance to help ensure that such connections meet strict security requirements through the application of Foundation and PRIME cryptographic profiles.</p>
+<h2 id="foundation-profile">Foundation profile</h2>
+<p>The tables below list the requirements of the Foundation IPsec profile and indicate whether UKCloud for VMware meets them:</p>
+<table>
+<thead>
+<tr>
+<th>IKEv1</th>
+<th>Selection</th>
+<th>Meets requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encryption</td>
+<td>AES with 128-bit keys in CBC mode (RFC3602)</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Pseudo-Random Function</td>
+<td>HMAC-SHA-256 (RFC4868)</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Diffie-Hellman Group</td>
+<td>Group 14 (2048-bit MODP Group) (RFC3526)</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>X.509 certificates with RSA signatures (2048 bits) and SHA-256 (RFC4945 and RFC4055)</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>ESP</th>
+<th>Selection</th>
+<th>Meets requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encryption</td>
+<td>AES with 128-bit keys in CBC mode (RFC3602)</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Integrity</td>
+<td>SHA-256 (RFC4868)</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>SA lifetimes</th>
+<th>Selection</th>
+<th>Meets requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 1</td>
+<td>86400 seconds (1 day)</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Phase 2</td>
+<td>28800 seconds (8 hours)</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<p>While UKCloud for VMware meets the cryptographic requirements of the Foundation profile and therefore provides an equivalent standard, the SA lifetimes are shorter than those specified. If your application requires strict adherence to the Foundation profile, you can bring your own firewall (BYOF) that enables you to configure the SA lifetimes to the required length.</p>
+<h2 id="prime-profile">PRIME profile</h2>
+<p>The tables below lists the requirements of the PRIME IPsec profile and indicates whether UKCloud for VMware meets them:</p>
+<table>
+<thead>
+<tr>
+<th>IKEv2</th>
+<th>Selection</th>
+<th>Meets requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encryption</td>
+<td>AES-128 in GCM-128 (and optionally CBC)</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Pseudo-Random Function</td>
+<td>HMAC-SHA256</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Diffie-Hellman Group</td>
+<td>256bit random ECP (RFC5903) Group 19</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>ECDSA-256 with SHA256 on P-256 curve</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>ESP</th>
+<th>Selection</th>
+<th>Meets requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encryption</td>
+<td>AES-128 in GCM-128</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>SA lifetimes</th>
+<th>Selection</th>
+<th>Meets requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 1</td>
+<td>86400 seconds (1 day)</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Phase 2</td>
+<td>28800 seconds (8 hours)</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<p>Currently, this configuration is not available via the NSX edge gateway included with vCloud. If you have a requirement to use the PRIME IPsec profile, you can bring your own firewall (BYOF) that does support this configuration.</p>
+<h2 id="further-information">Further information</h2>
+<ul>
+<li><p>For more information about IPsec VPN and the Foundation and PRIME profiles, see the NCSC guidance at <a href="https://www.ncsc.gov.uk/guidance/using-ipsec-protect-data">Using IPsec to protect data</a>.</p>
+</li>
+<li><p>For a list of third-party firewalls known to work with UKCloud for VMware, see <a href="https://docs.ukcloud.com/articles/vmware/vmw-ref-byof-working-firewalls.html"><em>Bring Your Own Firewall - Known working and non-working firewalls</em></a>.</p>
+</li>
+<li><p>For information about how to implement your own firewall within UKCloud for VMware, see the <a href="https://ukcloud.com/wp-content/uploads/2018/08/ukc-gen-310-bring-your-own-firewall-blueprint.pdf"><em>Bring your own firewall to UKCloud</em></a> blueprint.</p>
+</li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

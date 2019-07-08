@@ -3,6 +3,8 @@ title: How to create load balancing services on UKCloud for OpenStack | UKCloud 
 description: Provides information to deploy a load balancing solution (LBaaS) within your OpenStack environment
 services: openstack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 15:17:17
 
 toc_rootlink: How To
 toc_sub1:
@@ -23,7 +25,9 @@ Although OpenStack's Neutron project does support load-balancing natively, our t
 Benefits of this solution include:
 
 - Highly Available implementation of an OpenStack load-balancing solution
+
 - Advanced load-balancing services provided by HAProxy (for example, SSL support, session stickiness)
+
 - Fully scripted repeatable deployment (HEAT template available on the UKCloud Knowledge Centre alongside this article)
 
 ## Caveats
@@ -36,8 +40,11 @@ This solution utilises HAProxy and keepalived, both of which are complicated sof
 This guide assumes that you have the following already configured in your environment:
 
 - A router connected to the internet external network.
+
 - A jump server with required security groups to allow you to SSH to that server and to SSH inside your environment.
+
 - At least two servers inside your environment running a web server to test the HAProxy configuration against.
+
 - The Ubuntu 16.04 amd64 image (id: `b8617599-495f-4d00-abf9-57b431caeb4c`) has been used throughout this document.
 
 ## Implementation steps
@@ -80,7 +87,7 @@ This guide assumes that you have the following already configured in your enviro
 
         **Result:**
 
-        ![Results of router-inteface-add command](images/ostack-neutron-router-interface-add.png)
+        ![Results of router-interface-add command](images/ostack-neutron-router-interface-add.png)
 
 4. Create a port to be used as the VIP addresses.
 
@@ -260,12 +267,15 @@ This guide assumes that you have the following already configured in your enviro
     - Edit `/etc/keepalived/keepalived.conf` and make the following changes
 
         - Change state to BACKUP
+
         - Change priority to 90
+
         - Save and exit the file
 
 12. Enable non-local IP binding on the second server.
 
     - Add `net.ipv4.ip_forward = 1` to `/etc/sysctl.conf`
+
     - `sudo sysctl -p`
 
 13. Start keepalived on first load balancer.
@@ -322,7 +332,7 @@ You may also wish to investigate keepalived ability to monitor applications on t
 
 ## First free load balancer
 
-To meet the UKCloud for OpenStack G-Cloud Service Definition commitment of one free load balancer per per project, we will credit the first two instances in a project which match the following criteria:
+To meet the UKCloud for OpenStack G-Cloud Service Definition commitment of one free load balancer per project, we will credit the first two instances in a project which match the following criteria:
 
   Region | Flavor ID | Image ID | Instance name prefix
   -------|-----------|----------|---------------------
@@ -333,4 +343,4 @@ To meet the UKCloud for OpenStack G-Cloud Service Definition commitment of one f
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

@@ -8,7 +8,7 @@
     <title>UKCloud for Oracle Software FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for Oracle Software FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/oracle/orcl-faq.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -82,30 +91,40 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="ukcloud-for-oracle-software">UKCloud for Oracle Software</h1>
+<h1 id="ukcloud-for-oracle-software-faqs">UKCloud for Oracle Software FAQs</h1>
 
 <h2 id="general">General</h2>
 <h3 id="what-is-ukcloud-for-oracle-software">What is UKCloud for Oracle Software?</h3>
-<p>UKCloud for Oracle Software provides Infrastructure as a Service (IaaS), powered by Oracle VM (OVM) technology, that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications. This service sits adjacent to UKCloud's genuine assured cloud services, enabling you to leverage the benefits of digital transformation while maintaining your investment and integration with traditional Oracle-based services.</p>
+<p>UKCloud for Oracle Software provides Infrastructure as a Service (IaaS), powered by Oracle technology, that is fully compliant with the compatibility and licensing requirements of Oracle-based enterprise applications. This service sits within UKCloud's genuine assured cloud services portfolio, enabling you to leverage the benefits of digital transformation while maintaining your investment and integration with traditional Oracle-based services.</p>
+<p>UKCloud for Oracle has two compute technologies: x86 and SPARC.</p>
+<ul>
+<li><p>x86 is used for most Oracle workloads that leverage Intel or AMD processors</p>
+</li>
+<li><p>SPARC is designed for workloads that utilise SPARC chips to support certain legacy workloads</p>
+</li>
+</ul>
 <h3 id="what-is-provided-in-the-service">What is provided in the service?</h3>
-<p>For further details on the service, and what is provided, please view the UKCloud for Oracle Software service definition for <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf">Assured OFFICIAL</a> and <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/177331567371441-service-definition-document-2018-07-11-1146.pdf">Elevated OFFICIAL</a>.</p>
+<p>For further details on the service, and what is provided, please view the <a href="orcl-sd.html"><em>UKCloud for Oracle Software service definition</em></a>.</p>
 <h3 id="do-ukcloud-offer-an-sla-for-this-service">Do UKCloud offer an SLA for this service?</h3>
-<p>Yes. There is a service credit-backed SLA of 99.95% excluding faults within your control or external networking connections such as internet, PSN, Janet or N3/HSCN.</p>
-<p>For further details regarding the SLA, please review the relevant section within the Service Definition for <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf">Assured OFFICIAL</a> and <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/177331567371441-service-definition-document-2018-07-11-1146.pdf">Elevated OFFICIAL</a>.</p>
+<p>Yes. There is a service credit-backed SLA of 99.95% for non-HA enabled x86 VMs, and 99.99% for HA enabled x86 VMs. SPARC machines, and Dedicated SPARC servers with resilience have an SLA of 99.95%. Dedicated SPARC servers without resilience have an SLA of 95.00%.</p>
+<p>The SLA excludes faults within your control or external networking connections such as internet, PSN, Janet or HSCN.</p>
+<p>For further details regarding the SLA, please review the relevant section within the <a href="orcl-sd.html"><em>Service Definition</em></a>.</p>
 <h3 id="is-the-ukcloud-for-oracle-software-environment-a-separate-physical-hosting-platform-with-external-connectivity-via-the-ukcloud-for-vmware-platform">Is the UKCloud for Oracle Software environment a separate physical hosting platform with external connectivity via the UKCloud for VMware platform?</h3>
-<p>Yes, UKCloud for Oracle Software is a separate physical hosting platform.</p>
+<p>Yes, UKCloud for Oracle Software is a separate physical hosting platform. As Oracle OVM doesn't have a Layer 3 networking function built into the platform, we leverage the VMware cloud and the native NSX Edges to provide external connectivity for Oracle VMs.</p>
 <h3 id="what-technology-is-ukcloud-for-oracle-software-based-on">What technology is UKCloud for Oracle Software based on?</h3>
-<p>UKCloud have chosen to utilise Oracle's own Oracle Virtual Machine (OVM) technology to underpin its UKCloud for Oracle Software platform.</p>
+<p>For the x86 Oracle service, UKCloud have chosen to utilise Oracle's own Oracle Virtual Machine (OVM) technology to underpin its UKCloud for Oracle Software platform.</p>
 <p>Current stack is Oracle VM Server-&gt; Oracle VM Manager-&gt; Oracle Enterprise Manager.</p>
 <h3 id="which-oracle-architectures-are-suitable-for-deployment-on-the-ukcloud-platform">Which Oracle architectures are suitable for deployment on the UKCloud platform?</h3>
 <p>UKCloud are currently working on a &quot;known good&quot; list of architectures that will allow customers to ascertain if UKCloud's platform is suitable for hosting their Oracle workloads.</p>
 <p>Please engage with a UKCloud solutions architect to see how we can help with your requirements.</p>
 <h3 id="how-can-i-backup-my-ukcloud-for-oracle-software-environment">How can I backup my UKCloud for Oracle Software environment?</h3>
 <p>The UKCloud for Oracle Software platform is based on an underpinning infrastructure that can support native Oracle technologies such as Data Guard and RMAN data protection solutions.</p>
+<h3 id="if-im-using-oracle-data-guard-will-i-need-to-have-the-same-size-dr-vms-as-my-primary-vms">If I'm using Oracle Data Guard, will I need to have the same size DR VMs as my primary VMs?</h3>
+<p>No. While you will need to have the same CPU and storage allocation, you can reduce your RAM allocation by 50% in your DR VMs and ramp up if you need to invoke DR.</p>
 <h3 id="can-i-use-ukclouds-mass-data-transfer-facility-to-import-my-oracle-data">Can I use UKCloud's Mass Data Transfer Facility to import my Oracle data?</h3>
 <p>While this is not currently available, this is being investigated by the development team.</p>
 <h3 id="can-i-have-a-dedicated-ukcloud-for-oracle-software-environment">Can I have a dedicated UKCloud for Oracle Software environment?</h3>
-<p>Yes. If you prefer a dedicated environment, UKCloud offer the Private Cloud for Compute service for both <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/386916122749029-service-definition-document-2018-05-21-1252.pdf">Assured OFFICIAL</a> and <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/832543392527475-service-definition-document-2018-05-21-1251.pdf">Elevated OFFICIAL</a>.</p>
+<p>Yes. If you prefer a dedicated environment, UKCloud offer the <a href="../private-cloud/prc-sd.html"><em>Private Cloud service</em></a> for both Assured OFFICIAL and Elevated OFFICIAL. Alternatively, if you want to use Oracle proprietary hardware, then we can support the hosting and management of certain Oracle technologies - see <a href="../private-cloud/prc-sd-orcl.html"><em>Private Cloud for Oracle Software</em></a> for more information.</p>
 <h3 id="is-the-ram-virtual-or-physical">Is the RAM virtual or physical?</h3>
 <p>As with all our services, UKCloud for Oracle Software comes with Virtual RAM.</p>
 <h3 id="what-is-the-best-platform-to-use-to-run-mysql">What is the best platform to use to run MySQL?</h3>
@@ -118,30 +137,35 @@
 <h3 id="is-this-a-managed-service">Is this a managed service?</h3>
 <p>No. UKCloud maintain and manage the underlying infrastructure that your solution is based on, but we do not manage your UKCloud for Oracle Software solution. If you need your solution managed, there are a number of accredited Oracle partners within the UKCloud partner network that will be able to help.</p>
 <h3 id="are-templates-available-for-solution-components">Are templates available for solution components?</h3>
-<p>UKCloud will provide a set of base OS templates (assemblies) based on Oracle Linux.</p>
+<p>UKCloud will provide a set of base OS templates (assemblies) based on Oracle Linux and Microsoft.</p>
 <p>You can also create your own assemblies and upload reusable software images.</p>
 <h3 id="how-do-i-increase-or-decrease-resources">How do I increase or decrease resources?</h3>
-<p>You can change processor, memory and storage allocations via the self-service UKCloud Portal.</p>
+<p>Currently, processor, memory and storage allocations are changed via a service request, raised through the UKCloud Portal. This is because of the resource pinning that OVM does on the underlying hypervisor.</p>
 <ul>
-<li>Processors and memory can be added to or removed from VMs, although VMs will need to be shut down for this to happen.</li>
-<li>Increasing CPU or memory allocations will result in the VM being billed at a higher rate.</li>
-<li>Additional VM storage can be allocated and will be billed on a per GiB per month basis.</li>
+<li><p>Processors and memory can be added to or removed from VMs, although VMs will need to be shut down for this to happen.</p>
+</li>
+<li><p>Increasing CPU or memory allocations will result in the VM being billed at a higher rate.</p>
+</li>
+<li><p>Additional VM storage can be allocated and will be billed on a per GiB per month basis.</p>
+</li>
 </ul>
 <h3 id="how-long-will-it-take-to-provision-the-service-">How long will it take to provision the service?-</h3>
 <p>Depending on the complexity of the solution, including the ingress of data onto the UKCloud platform, it can take up to 10 days for the service to be provisioned.</p>
 <h3 id="how-do-i-manage-my-ukcloud-for-oracle-software-environment">How do I manage my UKCloud for Oracle Software environment?</h3>
 <p>You can access your OVMs using:</p>
 <ul>
-<li>The remote console through the UKCloud Portal</li>
-<li>Remote access protocols (RDP/SSH) over a VPN or secure network</li>
+<li><p>The remote console through the UKCloud Portal</p>
+</li>
+<li><p>Remote access protocols (RDP/SSH) over a VPN or secure network</p>
+</li>
 </ul>
 <h2 id="connectivity">Connectivity</h2>
 <h3 id="can-i-connect-to-the-ukcloud-assured-official-environment">Can I connect to the UKCloud Assured OFFICIAL environment?</h3>
-<p>Yes, this service is available on the Assured OFFICIAL environment with connections to the internet, PSN-A, Janet and N3/HSCN networks.</p>
+<p>Yes, this service is available on the Assured OFFICIAL environment with connections to the internet, PSN, Janet and HSCN networks.</p>
 <h3 id="can-i-connect-to-the-ukcloud-elevated-official-environment">Can I connect to the UKCloud Elevated OFFICIAL environment?</h3>
-<p>Yes, this service is available on the Elevated OFFICIAL environment with connections to the PSN-P and RLI networks.</p>
+<p>Yes, this service is available on the Elevated OFFICIAL environment with connections to the PSN and RLI networks.</p>
 <h3 id="is-there-connectivity-from-other-regions-to-oracle">Is there connectivity from other regions to Oracle?</h3>
-<p>There is no native connectivity from other regions to Oracle other than customers configuring IPSEC VPNs.</p>
+<p>There is no native connectivity from other regions to Oracle other than customers configuring IPsec VPNs.</p>
 <h2 id="support">Support</h2>
 <h3 id="what-storage-options-are-supported">What storage options are supported?</h3>
 <p>The Oracle platform supports Tier 1 block storage for fast transactional databases, Tier 2 block storage for predictable work patterns and object storage for media content or to store recovery manager backups.</p>
@@ -152,14 +176,22 @@
 <h3 id="which-oracle-software-products-are-supported-on-the-ukcloud-platform">Which Oracle software products are supported on the UKCloud platform?</h3>
 <p>Providing that the software products adhere to the guidelines above, the following software applications are compatible with UKCloud for Oracle Software:</p>
 <ul>
-<li>Oracle 9i R2 DB with partitioning; OEM;</li>
-<li>Oracle 10g R1 &amp; R2; with partitioning; advanced security; spatial; data mining; OLAP; OEM</li>
-<li>WebLogic 10 Platform</li>
-<li>Oracle 11g R1 with partitioning; advanced security; spatial; BI; Forms; DataGuard; DatabaseVault; OLAP</li>
-<li>WebLogic 11g Platform</li>
-<li>Oracle 12c R1 with advanced security</li>
-<li>Primavera 8 (components from 8.1 to 8.7)</li>
-<li>Primavera 6</li>
+<li><p>Oracle 9i R2 DB with partitioning; OEM;</p>
+</li>
+<li><p>Oracle 10g R1 &amp; R2; with partitioning; advanced security; spatial; data mining; OLAP; OEM</p>
+</li>
+<li><p>WebLogic 10 Platform</p>
+</li>
+<li><p>Oracle 11g R1 with partitioning; advanced security; spatial; BI; Forms; DataGuard; DatabaseVault; OLAP</p>
+</li>
+<li><p>WebLogic 11g Platform</p>
+</li>
+<li><p>Oracle 12c R1 with advanced security</p>
+</li>
+<li><p>Primavera 8 (components from 8.1 to 8.7)</p>
+</li>
+<li><p>Primavera 6</p>
+</li>
 </ul>
 <p>For software not listed above, please visit the <a href="https://support.oracle.com/epmos/faces/CertifyHome">Oracle support webpage</a>. You will need to have an Oracle Support account to log in.</p>
 <h2 id="licensing">Licensing</h2>
@@ -169,6 +201,8 @@
 <p><a href="orcl-ref-licensing.html"><em>Oracle licensing on the UKCloud platform</em></a> provides details outlining how to ensure that Oracle is licensed appropriately on the platform.</p>
 <h3 id="does-ukcloud-have-any-terms-and-conditions-regarding-oracle-licensing">Does UKCloud have any terms and conditions regarding Oracle licensing?</h3>
 <p>You must ensure your platform is appropriately licensed for the Oracle Software that you are running as UKCloud for Oracle Software can only license operating systems. To ensure the appropriate licensing is in place, see <a href="orcl-ref-licensing.html"><em>Oracle licensing on the UKCloud platform</em></a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -178,13 +212,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/oracle/orcl-faq.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -203,11 +230,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

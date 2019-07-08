@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to use NetworkPolicy objects to connect services between projects | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to use NetworkPolicy objects to connect services between projects | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-use-netpol.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-use-networkpolicy-objects-to-connect-services-between-projects">How to use NetworkPolicy objects to connect services between projects</h1>
+
+<h2 id="overview">Overview</h2>
+<p>In OpenShift v3.11 clusters deployed from mid-February 2019, the default SDN plugin has been changed from ovs-multitenant to ovs-networkpolicy. This gives you the ability to create NetworkPolicy objects which allow granular control over the flow of communication between the pods, services and projects inside your cluster.</p>
+<p>By default, we create a NetworkPolicy object, named <code>allow-from-same-and-privileged-namespaces</code>, in every project, including those created after the cluster is deployed. This object allows all pods to communicate with each other inside the same project and allows communication from all pods and services to the default and openshift-monitoring projects. This mirrors the default pod security provided with the ovs-multitenant plugin.</p>
+<p>This document refers to namespaces and projects. A project is an OpenShift construct on top of a Kuberenetes namespace. For the purpose of this guide they can be thought of as the same thing, however, the <code>oc label</code> commands that are performed on a namespace must be applied to the namespace object, they will not work if you attempt to apply them to the project object.</p>
+<h2 id="verifying-the-cluster-sdn">Verifying the cluster SDN</h2>
+<p>In order to verify if the cluster has the ovs-networkpolicy SDN you can use the following command:</p>
+<p><code>oc get clusternetwork</code></p>
+<p>This will show redhat/openshift-ovs-networkpolicy under the PLUGIN NAME. If this shows ovs-multitenant instead and you wish to use NetworkPolicy objects you will need to raise a service request to look at the options for switching SDN.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You need to have cluster-reader or higher privilege in the cluster for this command to work.</p>
+</div>
+<h2 id="interacting-with-networkpolicy-objects">Interacting with NetworkPolicy objects</h2>
+<p>You can interact with NetworkPolicy objects from the command line using the full name networkpolicy or short name netpol, for example:</p>
+<p><code>oc get netpol</code> - List NetworkPolicy objects in the current project.</p>
+<p><code>oc describe netpol &lt;name&gt;</code> - Provides more detailed information on the named NetworkPolicy object.</p>
+<p><code>oc get netpol &lt;name&gt; -o yaml</code> - Provides yaml output of the named NetworkPolicy object. Useful to reference existing rules when creating new objects.</p>
+<h2 id="example-of-connecting-services-from-two-different-projects">Example of connecting services from two different projects</h2>
+<p>NetworkPolicy objects are scoped at the project level. This means if you create a NetworkPolicy object using a template it will be created inside the project you're in and the rules will apply to pods within that project, with the exception of remote projects you may be referencing inside the rule. The object without any rules will look like the following:</p>
+<pre><code>apiVersion: extensions/v1beta1
+kind: NetworkPolicy
+metadata:
+  name: &lt;desired_name_of_object&gt;
+  namespace: &lt;desired_project&gt; (if not provided this will default to the project you are in when you run oc create)
+spec:
+</code></pre>
+<p>Inside the spec key, you can pass in rules that determine what the NetworkPolicy object does. The first thing you need to consider is the pods you want to target. You can do this using the <code>podSelector</code> key.</p>
+<p>You can use this to match all pods in a project or alternatively to match all pods with a certain label. You can leave the key blank to match all pods in a project or you can match all pods with a certain label. In our example, we want to match pods with the label <code>role=webserver</code>:</p>
+<pre><code>apiVersion: extensions/v1beta1
+kind: NetworkPolicy
+metadata:
+  name: webserver-egress 
+  namespace: webserver
+spec:
+  podSelector:
+    matchLabels:
+      role: webserver
+</code></pre>
+<p>We've matched the pods inside our webserver project that have the label <code>role=webserver</code>. Now we want to allow these pods to connect to a service inside a project we've named database. To do this, we'll use a namespace selector, which evaluates projects based on a label. In this case, we're going to be looking for the namespace label <code>database=true</code>. First, we need to ensure that this label is applied using the following command:</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The cluster administrator role is required to add labels to namespaces.</p>
+</div>
+<p><code>oc label namespace database database=true</code></p>
+<p>Our example NetworkPolicy object now looks like the following:</p>
+<pre><code>apiVersion: extensions/v1beta1
+kind: NetworkPolicy
+metadata:
+  name: webserver-egress
+  namespace: webserver
+spec:
+  podSelector:
+    matchLabels:
+      role: webserver
+  egress:
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          database: &quot;true&quot;
+</code></pre>
+<p>We now have a template for a NetworkPolicy object that matches any pods labeled <code>role=webserver</code> inside the webserver project and allows them to communicate out to any projects labeled <code>database=true</code>. This is only half the work; we still need the ingress allowance inside the database project. Our example template for that object looks like the following:</p>
+<pre><code>apiVersion: extensions/v1beta1
+kind: NetworkPolicy
+metadata:
+  name: database-ingress
+  namespace: database
+spec:
+  podSelector:
+    matchLabels:
+      role: database
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          webserver: &quot;true&quot;
+</code></pre>
+<p>This object is created in the database project and matches any pods in the project with the label <code>role=database</code> and allows ingress traffic from any project labeled <code>webserver=true</code>. To achieve our desired outcome, we need to label our webserver project as follows:</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The cluster administrator role is required to add labels to namespaces.</p>
+</div>
+<p><code>oc label namespace webserver webserver=true</code></p>
+<p>In our example, we've saved our templates in files called netpol.yaml and netpol1.yaml. Use the following commands to create the objects, substituting in the relevant filename:</p>
+<p><code>oc create -f netpol.yaml</code></p>
+<p><code>oc create -f netpol1.yaml</code></p>
+<p>Now we've created the objects, any pods inside the webserver project matching the label <code>role=webserver</code> can communicate out to the service inside the database project exposed by pods matching the label <code>role=database</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can test connectivity by curling the desired target service from the terminal of a pod that has been allowed access to the service. You can find the terminal in the UI or use <code>oc rsh</code> to enter the pod.</p>
+</div>
+<h2 id="further-information">Further information</h2>
+<p>To get a full understanding of the capabilities and options of a NetworkPolicy object we recommend reading: <a href="https://kubernetes.io/docs/concepts/services-networking/network-policies">https://kubernetes.io/docs/concepts/services-networking/network-policies</a></p>
+<p>Documentation on efficient NetworkPolicy rules: <a href="https://docs.openshift.com/container-platform/3.11/admin_guide/managing_networking.html#admin-guide-networking-using-networkpolicy-efficiently">https://docs.openshift.com/container-platform/3.11/admin_guide/managing_networking.html#admin-guide-networking-using-networkpolicy-efficiently</a></p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

@@ -1,45 +1,53 @@
-﻿- name: VMware
-  href: articles/vmware/
-  topicHref: articles/vmware/vmw-gs.md
-- name: OpenStack
-  href: articles/openstack/
-  topicHref: articles/openstack/ostack-gs.md
-- name: Azure
+﻿- name: Azure
   href: articles/azure/
   topicHref: articles/azure/azs-gs.md
-- name: Oracle
-  href: articles/oracle/
-  topicHref: articles/oracle/orcl-gs.md
 - name: OpenShift
   href: articles/openshift/
   topicHref: articles/openshift/oshift-gs.md
+- name: OpenStack
+  href: articles/openstack/
+  topicHref: articles/openstack/ostack-gs.md
+- name: Oracle
+  href: articles/oracle/
+  topicHref: articles/oracle/orcl-gs.md
+- name: VMware
+  href: articles/vmware/
+  topicHref: articles/vmware/vmw-gs.md
 - name: More
   nav_dropdown: true
   items:
-  - name: Cloud Storage
-    topicHref: articles/cloud-storage/cs-gs.md
-  - name: Cloud GPU
-    topicHref: articles/gpu/gpu-faq.md
-  - name: High Performance Compute
-    topicHref: articles/hpc/hpc-ref-overview.md
-  - name: Cross Domain Security Zone
-    topicHref: articles/cdsz/cdsz-gs-walled-garden.md
-  - name: Secure Remote Access
-    topicHref: articles/sra/sra-gs.md
-  - name: Email and Collaboration 
-    topicHref: articles/email/email-gs.md
-  - name: Disaster Recovery as a Service
-    topicHref: articles/draas/draas-gs.md
-  - name: Migration to the Cloud 
-    topicHref: articles/migration/migr-how-zerto-migrate-to-ukcloud.md
-  - name: Private Cloud for Compute
-    topicHref: articles/private-compute/prc-faq.md
-  - name: Private Cloud for Storage
-    topicHref: articles/private-storage/prs-faq.md
-  - name: Connectivity 
-    topicHref: articles/connectivity/conn-faq.md
   - name: Cloud Enablement
     topicHref: articles/enablement/enbl-ref-services.md
+  - name: Cloud GPU
+    topicHref: articles/gpu/gpu-faq.md
+  - name: Cloud Storage
+    topicHref: articles/cloud-storage/cs-gs.md
+  - name: Connectivity 
+    topicHref: articles/connectivity/conn-faq.md
+  - name: Cross Domain Security Zone
+    topicHref: articles/cdsz/cdsz-gs-walled-garden.md
+  - name: Dedicated Compute
+    topicHref: articles/dedicated-compute/dc-sd.md
+  - name: Disaster Recovery as a Service
+    topicHref: articles/draas/draas-gs.md
+  - name: Email and Collaboration 
+    topicHref: articles/email/email-gs.md
+  - name: High Performance Compute
+    topicHref: articles/hpc/hpc-ref-overview.md
+  - name: Managed Services
+    topicHref: articles/managed-services/man-sd-compute.md
+  - name: Migration to the Cloud 
+    topicHref: articles/migration/migr-how-zerto-migrate-to-ukcloud.md
+  - name: Multi-Cloud Backup Storage
+    topicHref: articles/mcbs/mcbs-gs.md
+  - name: Private Cloud
+    topicHref: articles/private-cloud/prc-sd.md
+  - name: Secure Remote Access
+    topicHref: articles/sra/sra-gs.md
+  - name: Third-Party Software
+    topicHref: articles/third-party/third-ref-eula.md
+  - name: Transition Services
+    topicHref: articles/transition-services/trans-sd.md
   - name: UKCloud Portal
     topicHref: articles/portal/ptl-gs.md
   - name: Other

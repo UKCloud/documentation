@@ -8,7 +8,7 @@
     <title>UKCloud for Oracle Software Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for Oracle Software Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/oracle/orcl-sco.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -82,7 +91,7 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="ukcloud-for-oracle-software">UKCloud for Oracle Software</h1>
+<h1 id="ukcloud-for-oracle-software-service-scope">UKCloud for Oracle Software Service Scope</h1>
 
 <h2 id="about-this-document">About this document</h2>
 <p>This document describes the boundaries of the UKCloud for Oracle software service, along with the division of responsibilities between UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.</p>
@@ -100,15 +109,17 @@
 <p>The UKCloud for Oracle Software infrastructure is uncontended and configured to optimise the performance and availability of Oracle workloads. There is only one service configuration on the UKCloud for Oracle Software platform, ensuring that OVMs are pinned to cores to stop OVM movement that would unbalance applications.</p>
 <p>Customers can self-configure OVMs by the number of cores, and amount of memory and storage needed. OVMs can be reconfigured to adjust resources in line with changing performance requirements.</p>
 <p>Self-service management is done through the Oracle Enterprise Management Portal, accessed through the UKCloud Portal.</p>
-<p>Full details of the available service options are outlined in the Service Definition
-(<a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/177331567371441-service-definition-document-2018-07-11-1146.pdf">Elevated</a>).</p>
+<p>Full details of the available service options are outlined in the <a href="orcl-sd.html"><em>Service Definition</em></a>.</p>
 <h2 id="storage-options">Storage options</h2>
 <p>All storage is persistent and resilient to local hardware failures. Multiple storage options can be used to support different aspects of the application.</p>
 <ul>
-<li><strong>Tier 1.</strong> Fast storage ideal for data warehouses, fast transactional databases or randomly executing workloads.</li>
-<li><strong>Tier 2.</strong> General all-purpose storage, suitable for systems with human interactions or predictable work patterns.</li>
-<li><strong>Cloud Storage.</strong> Ideal for serving media content or as a medium-term repository; can be used to store Recovery Manager (RMAN)
-backups.</li>
+<li><p><strong>Tier 1.</strong> Fast storage ideal for data warehouses, fast transactional databases or randomly executing workloads.</p>
+</li>
+<li><p><strong>Tier 2.</strong> General all-purpose storage, suitable for systems with human interactions or predictable work patterns.</p>
+</li>
+<li><p><strong>Cloud Storage.</strong> Ideal for serving media content or as a medium-term repository; can be used to store Recovery Manager (RMAN)
+backups.</p>
+</li>
 </ul>
 <h2 id="storage-policies">Storage policies</h2>
 <p>We provide you with access to two storage policies: tier 1 and tier 2.</p>
@@ -117,20 +128,25 @@ backups.</li>
 <p>For installations of Oracle apps on top of the OS, it's best to have separate non-OS virtual disks which are then mapped to mountpoints. The sizing requirements/recommendations for the non-OS storage can be found on the official Oracle installation guides and they can differ from version to version.</p>
 <p>You'll need to take into consideration future data growth while planning capacity, as this would also reflect on the capacity required for backups.</p>
 <ul>
-<li>We do not guarantee storage performance, as it can be affected by many factors.</li>
-<li>We do not provide IOPS figures for our storage offerings.</li>
-<li>Workloads can use multiple storage profiles.</li>
+<li><p>We do not guarantee storage performance, as it can be affected by many factors.</p>
+</li>
+<li><p>We do not provide IOPS figures for our storage offerings.</p>
+</li>
+<li><p>Workloads can use multiple storage profiles.</p>
+</li>
 </ul>
 <h2 id="protection">Protection</h2>
 <p>UKCloud for Oracle Software does not include any infrastructure-level backup or disaster recovery functionality. However, the underpinning infrastructure supports native Oracle protection technologies such as Data Guard and RMAN.</p>
 <p>UKCloud's Cloud Storage can be used as an S3-addressable target for Oracle protection technologies.</p>
 <h2 id="service-availability">Service availability</h2>
-<p>UKCloud for Oracle Software offers an SLA guarantee of 99.95% availability.</p>
+<p>UKCloud for Oracle Software offers an SLA guarantee of 99.95% availability for VMs without high availability (HA) enabled.</p>
+<p>VMs with HA enabled have an SLA of 99.99%. Having HA enabled will not consume any additional resource on the platform, and is therefore free-of-charge, however, as this setting is not enabled by default, you must configure this through the UI. For more information, see <a href="orcl-how-enable-ha.html"><em>How to enable high availability for your Oracle VMs</em></a>.</p>
 <p>You are entitled to claim Service Credits for outages to services that take you out of the SLA. For more about how we calculate SLAs, see the <a href="../other/other-ref-sla-definition.html"><em>SLA Definition</em></a> document.</p>
-<p>Our SLA does not cover faults within your control, such as client application issues, or faults within external connectivity providers (for example, internet, PSN or N3/HSCN).</p>
+<p>Our SLA does not cover faults within your control, such as client application issues, or faults within external connectivity providers (for example, internet, PSN or HSCN).</p>
 <h2 id="service-background">Service background</h2>
 <p>UKCloud for Oracle Software is underpinned by Oracle compute infrastructure. UKCloud manage the physical infrastructure and utilise our partner, Infomentum, to provide support and management from the hypervisor level and above.</p>
-<p>Infomentum will provision your Oracle Tenant environment and UKCloud will present it to you through the Oracle Enterprise Manager. You will be responsible for OVM creation and maintenance.</p>
+<p>Infomentum will provision your Oracle Tenant environment and UKCloud will present it to you through the Oracle Enterprise Manager.</p>
+<p>VM creation is currently available via service request to ensure that the platform remains balanced — this is due to the core-pinning technology that Oracle OVM uses. You'll need to submit a service request with the VM details, including resource allocation, and we'll create the VM. You can then manage the created VM. You must also raise a service request to change the size of a VM. For more information, see <a href="orcl-ref-bug-self-service.html"><em>Oracle cloud self-service funtionality</em></a>.</p>
 <p>All service requests will be triaged by UKCloud. We reserve the right to escalate a request to Infomentum for support. If you have not have a managed service contract with Infomentum, please do not contact them directly.</p>
 <p>UKCloud actively capacity-manages the cloud platform to ensure you have access to the resources you request.</p>
 <p>The UKCloud platform is designed using sites, regions and zones. The relationship between them is shown below:</p>
@@ -138,26 +154,29 @@ backups.</li>
 <p>You can specify Farnborough or Corsham as the site where you would like to have your service provisioned, and we will try to accommodate requests and will advise you if we are unable do so.</p>
 <p>We control the deployed versions of technology on the platform. This covers internal platform-supporting technologies, and any technology versions available to you.</p>
 <ul>
-<li>Internally this includes, but isn't limited to, the Oracle Virtual Machine Manager and Oracle Virtual Machine Server versions, and the hardware version of the platform.</li>
-<li>Externally this includes the available versions of the edge gateway and Oracle Enterprise Manager.</li>
-<li>You can make additional configurations inside an OVM (such as implementing third-party software technologies). We do not support customer implementations inside a VM.</li>
+<li><p>Internally this includes, but isn't limited to, the Oracle Virtual Machine Manager and Oracle Virtual Machine Server versions, and the hardware version of the platform.</p>
+</li>
+<li><p>Externally this includes the available versions of the NSX Edge and Oracle Enterprise Manager.</p>
+</li>
+<li><p>You can make additional configurations inside an OVM (such as implementing third-party software technologies). We do not support customer implementations inside a VM.</p>
+</li>
 </ul>
 <h2 id="operating-systems">Operating systems</h2>
 <p>UKCloud for Oracle Software includes the base OVM platform licences, which provide VM containers that meet Oracle's definition of hard partitioning.</p>
 <p>Our service does not include licences for the Oracle applications and databases you choose to run.</p>
-<p>As the underlying platform is powered by OVM technology, you can either transfer your existing licences, or purchase new licences based on the quantity of virtual processors (cores) you allocate within each VM. Please note that UKCloud does not have the functionality to provide Oracle licensing, and this must be sourced via an appropriate partner.</p>
-<p>'Cores' refers to OVM vCPUs pinned to physical processor cores (excluding hyper-threading). Your Oracle licensing will be based on the cores consumed by your OVM.</p>
-<p><strong>Update services.</strong> We make update repositories available for OVM containers. We don't provide software update facilities for non-UKCloud licensed software, including all Oracle applications.</p>
+<p>As the underlying platform is powered by OVM technology, you can either transfer your existing licences, or purchase new licences based on the quantity of cores you allocate within each VM. Please note that UKCloud does not have the functionality to provide Oracle licensing, and this must be sourced via an appropriate partner.</p>
+<p><em>Cores</em> refers to physical processor cores (excluding hyper-threading). OVM cores have two threads, or <em>vCPUs</em>. Your Oracle licensing will be based on the cores consumed by your OVM.</p>
+<p><strong>Update services.</strong> We make update repositories available for OVM containers. We don't provide software update facilities for non-UKCloud licensed software, including all Oracle applications or databases.</p>
 <p><strong>Anti-virus.</strong> We do not provide anti-virus software as part of the service.</p>
 <h2 id="networks">Networks</h2>
 <p><strong>Internet-facing solutions.</strong> You are provided with 2 usable public IP addresses, but you can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.</p>
-<p><strong>PSN-facing solutions.</strong> You should raise a Service Request or contact your Customer Success Manager (CSM) to be assigned your IP address. This solution also comes with contended bandwidth (uncapped).</p>
-<p><strong>Janet and N3/HSCN solutions.</strong> You have one usable IP address, but you can request additional IP addresses via a Service Request.</p>
-<p>UKCloud for Oracle Software does not have a native external connectivity functionality. Therefore, UKCloud have enabled customers to manage connectivity rules, such as firewall, IPsec VPN and NAT functionality, through a VMware edge gateway. This edge is provisioned within the UKCloud for VMware environment and is managed using either the UKCloud Portal GUI or API.</p>
-<p>This edge can be an existing edge in a customer's UKCloud for VMware environment, or can be provisioned as a completely new entity, specific for Oracle.</p>
-<h2 id="edge-gateway">Edge gateway</h2>
-<p>By default, we assign one edge gateway per connectivity type. You can choose which external network you would like to enable your Oracle environment to connect to. Note that the Oracle environment does <strong>not</strong> have to connect to an external network, however an external network will need to be connected to the edge.</p>
-<p><strong>Site-to-site IPsec VPN.</strong> You can create IPsec VPN tunnels to connect different environments, both internal and external, to UKCloud. There is a limit of 64 tunnels per edge gateway.</p>
+<p><strong>PSN-facing solutions.</strong> You should raise a Service Request or contact your Customer Success Manager (CSM) to be assigned your IP address. This solution also comes with shared bandwidth (uncapped).</p>
+<p><strong>Janet and HSCN solutions.</strong> You have one usable IP address, but you can request additional IP addresses via a Service Request.</p>
+<p>UKCloud for Oracle Software does not have a native external connectivity functionality. Therefore, UKCloud have enabled customers to manage connectivity rules, such as firewall, IPsec VPN and NAT functionality, through a VMware NSX Edge. This Edge is provisioned within the UKCloud for VMware environment and is managed using either the UKCloud Portal GUI or API.</p>
+<p>This Edge can be an existing edge in a customer's UKCloud for VMware environment, or can be provisioned as a completely new entity, specific for Oracle.</p>
+<h2 id="nsx-edge">NSX Edge</h2>
+<p>By default, we assign one Edge per connectivity type. You can choose which external network you would like to enable your Oracle environment to connect to. Note that the Oracle environment does <strong>not</strong> have to connect to an external network, however an external network will need to be connected to the Edge.</p>
+<p><strong>Site-to-site IPsec VPN.</strong> You can create IPsec VPN tunnels to connect different environments, both internal and external, to UKCloud. There is a limit of 64 tunnels per Edge.</p>
 <h2 id="bring-your-own-firewall">Bring Your Own Firewall</h2>
 <p>Bring Your Own Firewall is currently not available for UKCloud for Oracle Software installations; however, you can have BYOF within UKCloud for VMware and connect it to the UKCloud for Oracle Software edge gateway via an IPsec VPN.</p>
 <h2 id="protective-monitoring">Protective monitoring</h2>
@@ -167,10 +186,14 @@ backups.</li>
 <h2 id="platform-management">Platform management</h2>
 <p>Users can access, manage and view the UKCloud for Oracle Software service, accessing only those features allowed by their role, in any of the following ways:</p>
 <ul>
-<li><strong>Oracle Enterprise Manager.</strong> The graphical interface for the creation and management of the Oracle environment.</li>
-<li><strong>vCloud Director API.</strong> Enables the programmatic creation and management of the Oracle edge gateway.</li>
-<li><strong>vCloud Director graphical UI.</strong> Provides a graphical interface to access the vCloud Director environment to manage the Oracle edge gateway (depending on assigned permissions).</li>
-<li><strong>UKCloud Portal.</strong> Enables the creation of Oracle compute services and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the Portal.</li>
+<li><p><strong>Oracle Enterprise Manager.</strong> The graphical interface for the creation and management of the Oracle environment.</p>
+</li>
+<li><p><strong>vCloud Director API.</strong> Enables the programmatic creation and management of the Oracle edge gateway.</p>
+</li>
+<li><p><strong>vCloud Director Graphical UI.</strong> Provides a graphical interface to access the vCloud Director environment to manage the Oracle NSX Edge (depending on assigned permissions).</p>
+</li>
+<li><p><strong>UKCloud Portal.</strong> Enables access to the vCloud Director and Oracle Enterprise Manager services. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the Portal.</p>
+</li>
 </ul>
 <p>You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the Oracle Virtual Machine Manager environment.</p>
 <h2 id="service-migration">Service migration</h2>
@@ -189,7 +212,7 @@ backups.</li>
 <li><p>You are responsible for assessing whether the UKCloud UKCloud for Oracle Software platform can support the various requirements of your application.</p>
 </li>
 <li><p>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.</p>
-<p>If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), you are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided.</p>
+<p>If access is required over government secure networks (HSCN, Janet, RLI or PSN), you are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided.</p>
 </li>
 <li><p>Management and administration of layers above the Oracle hypervisor (OS patching, application performance monitoring, user administration).</p>
 </li>
@@ -197,7 +220,7 @@ backups.</li>
 </li>
 </ul>
 <h2 id="service-provisioning">Service provisioning</h2>
-<p>Within 4 hours of accepting an order (shorter deployment times are typically achieved and can be prioritised upon request), UKCloud will create the customer's Primary Administrator account and send a welcome pack  which includes the URL for the UKCloud Customer Portal, and the getting started guide.</p>
+<p>Within four (4) working hours of accepting an order (shorter deployment times are typically achieved and can be prioritised upon request), UKCloud will create the customer's Primary Administrator account and send a welcome pack  which includes the URL for the UKCloud Customer Portal, and the getting started guide.</p>
 <p>UKCloud and Infomentum will provision the Oracle Tenant environment. UKCloud will request information such as private subnets before creating the environment. Once the build is complete, UKCloud will provide you with access to provision Oracle virtual machines and Oracle networks.</p>
 <p>UKCloud has created several videos, help guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the <a href="http://docs.ukcloud.com/"><em>UKCloud Knowledge Centre</em></a>.</p>
 <p>In addition, you will be assigned a Customer Success Manager (CSM) to provide any assistance required during the first 90 days of the service. UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud would be pleased to introduce you to the right partner to suit your needs.</p>
@@ -212,15 +235,17 @@ backups.</li>
 <h2 id="supporting-documents-and-resources">Supporting documents and resources</h2>
 <p>The following documents contain more information about UKCloud for Oracle Software and the service options:</p>
 <ul>
-<li><p><em>UKCloud for Oracle Software Service Definition</em> (<a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/177331567371441-service-definition-document-2018-07-11-1146.pdf">Elevated</a>)</p>
+<li><p><a href="orcl-sd.html"><em>UKCloud for Oracle Software Service Definition</em></a></p>
 </li>
-<li><p><em>UKCloud Terms and Conditions for G10</em> (<a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-terms-and-conditions-2018-05-21-1254.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/177331567371441-terms-and-conditions-2018-05-21-1253.pdf">Elevated</a>)</p>
+<li><p><a href="../other/other-ref-terms-and-conditions.html"><em>UKCloud Terms &amp; Conditions for G-Cloud 11</em></a></p>
 </li>
 <li><p><a href="../vmware/vmw-ref-connectivity-options.html"><em>Understanding connectivity options in UKCloud for VMware</em></a></p>
 </li>
 <li><p><a href="../other/other-ref-sla-definition.html"><em>UKCloud SLA Definition</em></a></p>
 </li>
 </ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -230,13 +255,6 @@ backups.</li>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/oracle/orcl-sco.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -255,11 +273,24 @@ backups.</li>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

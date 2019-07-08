@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to interact with the vCloud REST API using PowerShell and Python | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to interact with the vCloud REST API using PowerShell and Python | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-interact-vcd-api-powershell.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-interact-with-the-vcloud-rest-api-using-powershell-and-python">How to interact with the vCloud REST API using PowerShell and Python</h1>
+
+<h2 id="pre-work">Pre Work</h2>
+<h3 id="useful-links">Useful Links</h3>
+<p>You can look up all of the different object types here:</p>
+<p><a href="http://pubs.vmware.com/vcd-55/index.jsp#doc/index.html">http://pubs.vmware.com/vcd-55/index.jsp#doc/index.html</a></p>
+<h3 id="examples-of-all-typed-queries">Examples of all typed queries</h3>
+<p><a href="http://pubs.vmware.com/vcloud-api-1-5/wwhelp/wwhimpl/js/html/wwhelp.htm#href=api_prog/GUID-43DFF30E-391F-42DC-87B3-5923ABCEB366.html">http://pubs.vmware.com/vcloud-api-1-5/wwhelp/wwhimpl/js/html/wwhelp.htm#href=api_prog/GUID-43DFF30E-391F-42DC-87B3-5923ABCEB366.html</a></p>
+<h3 id="powershell">PowerShell</h3>
+<p>With PowerShell, you will need v3 or higher. To check this, open PowerShell and enter <code>$psversiontable</code> at the prompt. You should see something like the following:</p>
+<p><img src="images/powershellandpython1.png" alt="PowerShell version details"></p>
+<p>If <code>PSVersion</code> is less than 3.0, you'll need to upgrade. The v4 package is available here: <a href="https://www.microsoft.com/en-gb/download/details.aspx?id=40855">https://www.microsoft.com/en-gb/download/details.aspx?id=40855</a></p>
+<h3 id="python">Python</h3>
+<p>You'll need to install Python 2.7: <a href="https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi">https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi</a></p>
+<p>You'll then need to install the package: <a href="http://www.python-requests.org/en/latest/user/install/#install">http://www.python-requests.org/en/latest/user/install/#install</a></p>
+<h3 id="getting-your-credentials">Getting your credentials</h3>
+<p>The first thing you will need to do is login to the portal and get your API credentials:</p>
+<p><img src="images/api_menu.png" alt="Link to API credentials in the Portal"></p>
+<p>Select API from the menu on the top right, you will then get all of the credentials for each of the vCloud Orgs that you have access to. Note down the username field for the one you are going to interact with.</p>
+<p>For more detailed instructions, see <a href="vmw-how-access-vcloud-api.html"><em>How to access vCloud Director through the vCloud API</em></a>.</p>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="powershell-1">PowerShell</h3>
+<ol>
+<li><p>Copy and paste the following script into your PowerShell session:</p>
+<pre><code>$Global:SkyscapeURL = &quot;https://api.vcd.portal.skyscapecloud.com/api&quot;
+
+$Global:Authorization = &quot;&quot;
+
+$Global:Accept = &quot;application/*+xml;version=5.1&quot;
+
+$Global:xvCloudAuthorization = &quot;&quot;
+
+Function New-vCloudLogin($Username,$Password)
+
+{
+
+    $Pair = &quot;$($Username):$($Password)&quot;
+
+    $Bytes = [System.Text.Encoding]::ASCII.GetBytes($Pair)
+
+    $Base64 = [System.Convert]::ToBase64String($Bytes)
+
+    $Global:Authorization = &quot;Basic $base64&quot;
+
+    $headers = @{ Authorization = $Global:Authorization; Accept = $Global:Accept}
+
+    $Res = Invoke-WebRequest -Method Post -Headers $headers -Uri &quot;$($Global:SkyscapeURL)/sessions&quot;
+
+    $Global:xvCloudAuthorization = $res.headers[&quot;x-vcloud-authorization&quot;].tostring()
+
+}
+
+Function Get-vCloudRequest($EndPoint)
+
+{
+
+    $headers = @{&quot;Accept&quot; = $Global:Accept; &quot;x-vcloud-authorization&quot; = $Global:xvCloudAuthorization}
+
+    [xml]$Response = Invoke-WebRequest -Method Get -Headers $headers -Uri &quot;$($Global:SkyscapeURL)/$EndPoint&quot;
+
+    Return $Response
+
+}
+</code></pre>
+<p>You will now have two new functions available to you; <code>New-vCloudLogin</code> and <code>Get-vCloudRequest</code>.</p>
+</li>
+<li><p>To log in enter:</p>
+<pre><code>New-vCloudLogin –Username “myuser@org” –Password “yourportalpassword”
+</code></pre>
+</li>
+<li><p>Use the username that you copied from the Portal earlier and your Portal password. This will login to vCloud and add your authorisation header to a global variable for use in the next function:</p>
+<pre><code>$VMS = Get-vCloudRequest –EndPoint “query?type=vm”
+</code></pre>
+</li>
+<li><p>This will get the first 25 VMs in your Org and store them in <code>$VMS</code>, which you can inspect. Just enter <code>$vms</code> and see what you get.</p>
+</li>
+</ol>
+<h4 id="other-examples">Other examples</h4>
+<p><code>$VMS = Get-vCloudRequest –EndPoint &quot;query?type=vm&amp;pageSize=128&quot;</code> Returns 128 VMs rather than 25</p>
+<p><code>$VMS = Get-vCloudRequest –EndPoint &quot;query?type=vm&amp;page=2&quot;</code> Returns the second page of 25 VMs</p>
+<p><code>$VAPPS = Get-vCloudRequest –EndPoint &quot;query?type=vApp&quot;</code> Returns the first 25 vApps in an Org</p>
+<p><code>$VDC = Get-vCloudRequest –EndPoint &quot;query?type=orgVdc&quot;</code> Returns the first 25 VDCs in an Org</p>
+<h3 id="python-1">Python</h3>
+<ol>
+<li><p>Save the following into a file, for example: <code>c:\vcloud_demo.py</code>:</p>
+<pre><code>import base64
+
+import requests
+
+SkyscapeURL = &quot;https://api.vcd.portal.skyscapecloud.com/api&quot;
+
+Authorization = &quot;&quot;
+
+Accept = &quot;application/*+xml;version=5.1&quot;
+
+xvCloudAuthorization = &quot;&quot;
+
+def New_vCloudLogin(username,password):
+
+    global Authorization
+
+    global Accept
+
+    global SkyscapeURL
+
+    global xvCloudAuthorization
+
+    Pair = &quot;{username}:{password}&quot;.format(username=username,password=password)
+
+    EncodedPair = base64.b64encode(Pair)
+
+    Authorization = &quot;Basic %s&quot; % str(EncodedPair)
+
+    apiheaders = {&quot;Authorization&quot; : Authorization, &quot;Accept&quot; : Accept}  
+
+    res = requests.post(SkyscapeURL + '/sessions',headers=apiheaders, verify=False)
+
+    xvCloudAuthorization = res.headers['x-vcloud-authorization']
+
+def Get_vCloudRequest(endpoint):
+
+    global Authorization
+
+    global Accept
+
+    global SkyscapeURL
+
+    global xvCloudAuthorization
+
+    apiheaders = {&quot;Accept&quot; : Accept, &quot;x-vcloud-authorization&quot; : xvCloudAuthorization}  
+
+    res = requests.get(SkyscapeURL + '/' + endpoint,headers=apiheaders, verify=False)
+
+    return (res.content)
+
+# login to vcloud
+
+New_vCloudLogin(&quot;user@org&quot;,&quot;mypassword&quot;)
+
+# demo query, get all VM's and print them to screen
+
+data = Get_vCloudRequest(&quot;query?type=vm&quot;)
+
+print data
+</code></pre>
+</li>
+<li><p>Now, click <strong>Start</strong> and enter <code>cmd</code>. This will bring up a command prompt.</p>
+</li>
+<li><p>You can run this script by entering:</p>
+<pre><code>C:\python27\python.exe c:\vcloud_demo.py
+</code></pre>
+<p>The above example will log you into vCloud and return an XML representation of the first 25 VMs in your VDC. You can adjust the script to use the same params as the examples in the Powershell script above.</p>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

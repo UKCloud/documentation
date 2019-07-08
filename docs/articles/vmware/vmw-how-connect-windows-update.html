@@ -8,7 +8,7 @@
     <title>How to connect to the UKCloud Windows Server Update Services (WSUS) | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to connect to the UKCloud Windows Server Update Services (WSUS) | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-connect-windows-update.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -90,73 +99,92 @@
 <h5>Note</h5>
 <p>UKCloud provides Windows updates for server operating systems and SQL.</p>
 </div>
-<p>Before you establish a connection to the update services, you need to ensure your VMs can communicate with the update server, which exists outside your cloud organisation. This may involve editing the NAT and firewall settings on your edge gateway to allow traffic to traverse out of your virtual data centre (VDC). You'll need to open ports <code>443</code> and <code>80</code> on your firewall to the update server. For more information on how to do this, see <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a> and <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
+<p>Before you establish a connection to the update service, you need to ensure your VMs can communicate with the update server, which exists outside your cloud organisation.</p>
+<p>This may involve editing the NAT and firewall settings on your edge gateway to allow traffic to traverse out of your virtual data centre (VDC). You'll need to open ports <code>443</code> and <code>8530</code> on your firewall to the update server. For more information on how to do this, see <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a> and <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
 <h2 id="configuring-windows-update">Configuring Windows update</h2>
-<p>In this section you'll need to replace the IP addresses of <code>x.x.x.x</code> with the IP address for the update server you're targeting. The IP address depends on whether your VMs are on the Assured OFFICIAL or Elevated OFFICIAL security domain. To get the IP addresses for the update servers, raise a service via My Calls in the UKCloud Portal.</p>
+<p>In this section you'll need to use the appropriate address depending on the location you're targeting.</p>
 <ol>
 <li><p>Open a console to the VM you want to update.</p>
 </li>
-<li><p>Test connectivity to the update servers by opening an Internet Explorer browser window, then opening a connection to one of the update servers on <code>https://x.x.x.x</code>.</p>
+<li><p>Test connectivity to the update servers by opening an Internet Explorer browser window, then opening a connection to one of the update servers on:</p>
+<ul>
+<li><p><code>https://wsus.cor.ukcloud.com</code> (Assured OFFICIAL, Corsham)</p>
 </li>
-<li><p>Confirm that a certificate error displays.</p>
-<p>If it doesn't, connectivity hasn't been established and you'll need to troubleshoot the NAT and firewall rules before you continue.</p>
+<li><p><code>https://wsus.frn.ukcloud.com</code> (Assured OFFICIAL, Farnborough)</p>
 </li>
-<li><p>Confirm the certificate error, then click the certificate icon in the browser and select <strong>Show Certificate</strong> to show the <strong>Issued to: <em>servername</em></strong>. Make a note of this <strong><em>servername</em></strong> for use in the next steps.</p>
+<li><p>For Elevated OFFICIAL, raise a Service Request via the My Calls section of the UKCloud Portal to get the appropriate IP address</p>
 </li>
-<li><p>Create the host file entry for <code>x.x.x.x</code> to resolve to the <strong><em>servername</em></strong> from the step above.</p>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Ensure that you can resolve this name via DNS or via a host entry you have manually put into your VMs. If you require details on what IP address you need to put into your host file, raise a Service Request via the My Calls section of the UKCloud Portal.</p>
+</div>
 </li>
-<li><p>Restart IE and open a connection to <code>https://servername</code>. Confirm that a certificate error displays, and confirm the certificate error.</p>
+<li><p>Ensure that you have the full certificate chain installed. If not, you may have to install the certificates into your VM manually.</p>
+<p>Links for Root CA and Issuing CA:</p>
+<ul>
+<li><p><a href="https://www.digicert.com/CACerts/DigiCertGlobalRootCA.crt">https://www.digicert.com/CACerts/DigiCertGlobalRootCA.crt</a></p>
 </li>
-<li><p>Click the certificate icon to display the certificate and click <strong>Install certificate</strong>.</p>
+<li><p><a href="https://www.digicert.com/CACerts/DigiCertSHA2SecureServerCA.crt">https://www.digicert.com/CACerts/DigiCertSHA2SecureServerCA.crt</a></p>
 </li>
-<li><p><strong>For Windows Server 2008:</strong><br>
+</ul>
+<p><strong>For Windows Server 2008:</strong><br>
 Select Place all certificates in the following store.</br>
 In the Select Certificate Store select the option Show Physical Stores.<br>
 Install the certificate into Trusted Root Certification authorities/local PC.</br>
 <br>
-<strong>For Windows Server 2012:</strong></br>
+<strong>For Windows Server 2012 and 2016:</strong></br>
 On the welcome screen of the Certificate import wizard, select Local Machine, then click Next.<br>
 Select Place all certificates in the following store, and click Browse.</br>
 Highlight Trusted Root Certification Authorities and click OK.<br>
 Click Next and confirm the import settings, then click Finish.</p>
 </li>
-<li><p>Restart your browser and open a connection to <code>https://servername</code>.</p>
+<li><p>Restart your browser and open a connection to <code>https://wsus.cor.ukcloud.com</code>, <code>https://wsus.frn.ukcloud.com</code> or the appropriate Elevated IP address.</p>
 </li>
-<li><p>Confirm that no certificate warnings appear, and that the certificate icon in IE is green.</p>
+<li><p>Confirm that no certificate warnings appear and that the full certificate chain is present.</p>
 </li>
 <li><p>Run <code>gpedit.msc</code>.</p>
 </li>
-<li><p>In the Group Policy Management Editor, expand and navigate to Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Update.</p>
+<li><p>In the Group Policy Management Editor, expand and navigate to Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Update.</p>
 </li>
 <li><p>Enable and configure the following settings:</p>
 <ul>
-<li>Specify intranet Microsoft update service location --- enter <code>https://servername</code> in both boxes</li>
-<li>Configure Automatic Updates --- enter required settings</li>
-<li>Enable client-side targeting --- enter <code>client</code> in the group name field</li>
+<li><p>Specify intranet Microsoft update service location —  in both boxes enter <code>https://wsus.cor.ukcloud.com</code>, <code>https://wsus.frn.ukcloud.com</code> or the appropriate Elevated IP address</p>
+</li>
+<li><p>Configure Automatic Updates — enter required settings</p>
+</li>
+<li><p>Enable client-side targeting — enter <code>client</code> in the group name field</p>
+</li>
 </ul>
 </li>
-<li><p>Open an elevated command prompt and enter <code>gpupdate /force</code>.</p>
+<li><p>Open an elevated command prompt and type <code>gpupdate /force</code>.</p>
 </li>
 <li><p>Open Windows update and click Check for updates.</p>
 </li>
 </ol>
 <h2 id="replicating-settings-to-other-windows-vms">Replicating settings to other Windows VMs</h2>
-<p>To quickly replicate the settings defined above to other windows VMs in your environment:</p>
+<p>To quickly replicate the settings defined above to other Windows VMs in your environment:</p>
 <ol>
 <li><p>Copy the update server record in the host file to the additional VMs.</p>
 </li>
 <li><p>Export the certificate from the trusted root folder to a file and import it to the additional VMs.</p>
 </li>
-<li><p>Export from the registry the key</p>
-<pre><code> KEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
-</code></pre>
-<p>and import it onto the additional VMs.</p>
+<li><p>Export the following key from the registry and import it onto the additional VMs:</p>
+<p><code>KEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate</code></p>
 </li>
 <li><p>Restart the Windows update service on the additional VMs.</p>
 </li>
 </ol>
+<p>UKCloud provides a PowerShell script in our public GitHub that changes these settings by changing the registry keys inside the VM. If you use this script, you do so at your own risk.</p>
+<p>Another option is to reference these settings in a Group Policy Object if you have Group Policy running in your environment.</p>
+<p>These settings will depend on your current setup. The following article provides some useful information:</p>
+<p><a href="https://technet.microsoft.com/en-us/library/cc720539(v=ws.10).aspx">https://technet.microsoft.com/en-us/library/cc720539(v=ws.10).aspx</a></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>UKCloud are not responsible for content published on the URLs in the above guide. If you believe the link is broken or is no longer relevant, contact UKCloud Customer Support via the My Calls section of the UKCloud Portal.</p>
+</div>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -166,13 +194,6 @@ Click Next and confirm the import settings, then click Finish.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-connect-windows-update.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -191,11 +212,24 @@ Click Next and confirm the import settings, then click Finish.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

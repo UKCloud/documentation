@@ -3,6 +3,8 @@ title: How to raise and escalate incidents and service requests | UKCloud Ltd
 description: Provides an overview of the process for raising incidents and service requests, as well as how to escalate them if necessary
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
 
 toc_rootlink: How To
 toc_sub1:
@@ -32,8 +34,10 @@ Customers should ensure they complete basic checks before contacting UKCloud, an
 
 Methods for contacting The UKCloud team are as follows:
 
-- UKCloud Portal (Assured) &mdash; <https://portal.ukcloud.com/login>
-- UKCloud Portal (Elevated) &mdash; <https://portal.ukcloud.gsi.gov.uk/login>
+- UKCloud Portal (Assured) &mdash; <https://portal.ukcloud.com/>
+
+- UKCloud Portal (Elevated) &mdash; Contact your Portal administrator or Customer Success Manager (CSM)
+
 - Telephone &mdash; 01252 303 300 (select option 2)
 
 The UKCloud Portal is the preferred approach for raising requests and issues with UKCloud.
@@ -41,8 +45,11 @@ The UKCloud Portal is the preferred approach for raising requests and issues wit
 Customers are asked to provide the following:
 
 - Company details and contact details
+
 - A detailed description of the problem or issue
+
 - Relevant log files, configuration files and supporting information
+
 - Captured screen shots
 
 Customers can contact Support via email at <support@ukcloud.com>, although, as we are unable to carry out user verification via this method, email should not be used to raise support tickets.
@@ -58,7 +65,9 @@ Initial contact should always be via the UKCloud Portal unless this is unavailab
 All requests and incidents are sent to triage for initial review to assess that sufficient details have been provided, for example:
 
 - Correct priority/severity
+
 - Contact details have been provided
+
 - Clear description of issue or request is included
 
 Where details are missing, we'll seek clarification.
@@ -84,7 +93,7 @@ Ticket priority | Initial response target | Resolution target
 &nbsp; | &nbsp;
 -----------|-----------
 **Priority 1** | **Priority 2**
-A significant outage or disruption to multiple users or locations is in progress</br></br>Compromise, loss or unavailability of data has occurred | Service is available but degraded or restricted for multiple users or locations</br></br>Suspected or potential compromise, loss or unavailability of data
+A significant outage or disruption to multiple users or locations is in progress</br></br>Confirmed or suspected compromise, loss or unavailability of data has occurred | Service is available but degraded or restricted for multiple users or locations
 **Priority 3** | **Priority 4**
 A failure or degradation of redundant or non-critical components of service has occurred</br></br>Failure of a shared service, where alternative services remain available, or service disruption for single users | Documented housekeeping activities</br></br>Administration related requirements or an uncategorised incident
 
@@ -98,26 +107,12 @@ During a Major Incident, updates are published to the Service Status page: <http
 
 For onboarding issues, contact your allocated Customer Success Manager (CSM). For wider service issues, contact your Technical Account Manager (TAM) or Account Director.
 
-### Escalation 1
+To escalate an incident or service request, contact the Support Team:
 
-- **Support Team/Cloud Support Engineer**
 - Tel: 01252 303 300 (option 2)
-- Re-attempt point 1 and email: escalations@ukcloud.com (monitored 24 x 7)
 
-### Escalation 2
-
-- **Technical Support Desk Manager**
-- Tel: 01252 393 157
-- Mob: 07780 461 923
-- Email: molejar@ukcloud.com
-
-### Escalation 3
-
-- **Head of Live Service**
-- Tel: 01252 916 378
-- Mob: 07587 585 156
-- Email: cmuscat@ukcloud.com
+- Email: escalations@ukcloud.com (monitored 24 x 7)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

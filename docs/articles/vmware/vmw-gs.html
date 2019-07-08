@@ -8,7 +8,7 @@
     <title>Getting Started Guide for UKCloud for VMware | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for UKCloud for VMware | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-gs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -86,7 +95,7 @@
 
 <h2 id="overview">Overview</h2>
 <p>If you're new to UKCloud, you'll probably have received a link to this guide as part of your welcome email. It will help you to get started using UKCloud for VMware.</p>
-<p>The <em>Getting Started Guide</em> provides an overview of UKCloud for VMware and gives you basic information about how to log in and set up your environment.</p>
+<p>The Getting Started Guide provides an overview of UKCloud for VMware and gives you basic information about how to log in and set up your environment.</p>
 <h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this guide you must have access to the UKCloud Portal and vCloud Director. To build compute services and virtual data centres (VDCs) you must be a vCloud Director administrator.</p>
 <h2 id="before-you-begin">Before you begin</h2>
@@ -103,8 +112,10 @@
 <ol>
 <li><p>Go to the appropriate URL, depending on the security domain in which your service is located:</p>
 <ul>
-<li><strong>Assured OFFICIAL:</strong> <a href="https://portal.ukcloud.com">https://portal.ukcloud.com</a></li>
-<li><strong>Elevated OFFICIAL:</strong> <a href="https://portal.ukcloud.gsi.gov.uk">https://portal.ukcloud.gsi.gov.uk</a></li>
+<li><p><strong>Assured OFFICIAL:</strong> <a href="https://portal.ukcloud.com">https://portal.ukcloud.com</a></p>
+</li>
+<li><p><strong>Elevated OFFICIAL:</strong> Contact your Portal administrator or Customer Success Manager (CSM)</p>
+</li>
 </ul>
 </li>
 <li><p>On the <em>Log in</em> page, enter your credentials and click <strong>Sign in</strong>.</p>
@@ -115,12 +126,18 @@
 </div>
 <p>If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or CSM. You'll be prompted to change this temporary password.</p>
 </li>
-<li><p>If your Portal administrator has enabled memorable word authentication or Google Two Factor Authentication (2FA), you'll be prompted for the second step of your authentication process.</p>
-<p>For example, for memorable word authentication, you'll be prompted to enter three randomly‑selected letters from your memorable word. (If this is the first time you've logged in, you'll be prompted to create a memorable word.)</p>
+<li><p>If your Portal administrator has enabled memorable word authentication, you'll be prompted to enter three randomly‑selected letters from your memorable word. (If this is the first time you've logged in, you'll be prompted to create a memorable word.)</p>
 <p><img src="images/vmw-portal-memorable-word.png" alt="Memorable word dialog box"></p>
-<p>For more information about the UKCloud Portal and all the functionality it provides, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
+</li>
+<li><p>If your Portal administrator has enabled Two-Factor Authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA.)</p>
+<p><img src="images/vmw-portal-2fa.png" alt="Two-Factor Authentication dialog box"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you incorrectly enter your password three times, you'll be prompted to enter a captcha code until you successfully log in. If you incorrectly enter the captcha code or your password another three times, a seventh unsuccessful login attempt will result in your account being locked. You'll need to contact your Portal administrator to unlock your account.</p>
+</div>
 </li>
 </ol>
+<p>For more information about the UKCloud Portal and all the functionality it provides, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
 <h2 id="creating-your-ukcloud-for-vmware-estate">Creating your UKCloud for VMware estate</h2>
 <p>When you first access UKCloud for VMware, you'll need to create a compute service (sometimes called a vOrg) to act as a top-level container for your cloud resources. As your estate grows, you can add more compute services to logically organise your resources.</p>
 <p>Within your compute service, you create VDCs to contain your VMs. VMs in the same VDC share workload characteristics and have access to the same resources, such as networking infrastructure, storage and external connectivity. We recommend that you organise related VMs within vApps to make your applications easier to manage. For example, you can start all the VMs within a vApp with a single operation, rather than having to start up each VM separately. vApps are also useful to help maintain crash‑consistency within an application in the event of a disaster.</p>
@@ -185,9 +202,12 @@
 </li>
 <li><p>On the <em>Build VDC</em> page, from the <strong>VM Type</strong> radio buttons, select the option that describes the characteristics of the workload of the VDC:</p>
 <ul>
-<li><strong>ESSENTIAL</strong>---For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload receives the requested performance.</li>
-<li><strong>POWER</strong>---For key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is enabled to pre-emptively optimise performance and availability.</li>
-<li><strong>PRIORITY</strong>---For critical workloads that handle important business processes that benefit from a steady state of operation. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is configured to reduce workload movement around the platform.</li>
+<li><p><strong>ESSENTIAL</strong>---For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload receives the requested performance.</p>
+</li>
+<li><p><strong>POWER</strong>---For key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is enabled to pre-emptively optimise performance and availability.</p>
+</li>
+<li><p><strong>PRIORITY</strong>---For critical workloads that handle important business processes that benefit from a steady state of operation. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is configured to reduce workload movement around the platform.</p>
+</li>
 </ul>
 </li>
 <li><p>Enter a <strong>VDC Name</strong>.</p>
@@ -222,64 +242,94 @@
 <li><p>On the <strong>vCloud Director</strong> tab, for additional security, re-enter your UKCloud Portal password, then click <strong>Confirm</strong>.</p>
 <p><img src="images/vmw-portal-vcd-login.png" alt="vCloud Director tab in UKCloud Portal"></p>
 </li>
-<li><p>vCloud Director launches in your browser window.</p>
+<li><p>vCloud Director launches in your browser window. What you see depends on the version of vCloud Director available in your environment.</p>
+<p><strong>vCloud Director 8.20 Home page</strong></p>
+<p><img src="images/vmw-vcd-home.png" alt="vCloud Director 8.20 Home page"></p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If this is the first time you've opened vCloud Director, you may be requested to download the vCloud Director Web Console plugin.</p>
 </div>
-<p><img src="images/vmw-vcd-home.png" alt="vCloud Director Home page"></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>If you encounter any issues, make sure you're using the Firefox ESR 32-bit browser. For more information, see <a href="../other/other-ref-browsers.html"><em>Browser requirements for services on the UKCloud Platform</em></a>.</p>
 </div>
+<p><strong>vCloud Director 9.1 Home page</strong></p>
+<p><img src="images/vmw-vcd-home-91.png" alt="vCloud Director 9.1 Home page"></p>
 </li>
 <li><p>The tasks you can perform in vCloud Director will depend on the permissions you have been granted.</p>
 <p><strong>More information!</strong> <a href="vmw-how-manage-vcd-permissions.html"><em>How to manage permissions for vCloud Director</em></a></p>
 </li>
-<li><p>To return to the UKCloud platform, click the <strong>Logout</strong> link in the top right corner of vCloud Director.</p>
-<p><img src="images/vmw-vcd-logout.png" alt="vCloud Director Logout option"></p>
+<li><p>To return to the UKCloud Portal:</p>
+<ul>
+<li>In vCloud Director 8.20, click the <strong>Logout</strong> link in the top right corner.</li>
+</ul>
+<p><img src="images/vmw-vcd-logout.png" alt="vCloud Director 8.20 Logout option"></p>
+<ul>
+<li>In vCloud Director 9.1, click your user name in the top right corner, and select <strong>Log out</strong>.</li>
+</ul>
+<p><img src="images/vmw-vcd-logout-91.png" alt="vCloud Director 9.1 Logout option"> --&gt;</p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
 <p>In this <em>Getting Started Guide</em>, you've learned:</p>
 <ul>
-<li>About your UKCloud for VMware environment and how your estate is organised</li>
-<li>How to log in to the UKCloud Portal</li>
-<li>How to create a compute service and VDC to set up your environment</li>
-<li>How to log in to vCloud Director so that you can start to build your applications</li>
+<li><p>About your UKCloud for VMware environment and how your estate is organised</p>
+</li>
+<li><p>How to log in to the UKCloud Portal</p>
+</li>
+<li><p>How to create a compute service and VDC to set up your environment</p>
+</li>
+<li><p>How to log in to vCloud Director so that you can start to build your applications</p>
+</li>
 </ul>
-<p>Now that you've set up your basic environment, you can start building your applications. If you want to get up and running quickly, you can take a look at <a href="vmw-how-build-vm.html"><em>How to build a virtual machine with UKCloud for VMware</em></a>, which provides a quick walkthrough of the process.</p>
+<p>Now that you've set up your basic environment, you can start building your applications. If you want to get up and running quickly, you can take a look at <a href="vmw-gs-build-vm-vcd.html"><em>How to build a virtual machine with UKCloud for VMware</em></a>, which provides a quick walkthrough of the process.</p>
 <p>For more detailed information about the different aspects of your UKCloud for VMware environment, see:</p>
 <ul>
 <li><p>To create virtual machines to define your applications:</p>
 <ul>
-<li><a href="vmw-how-create-vm-from-scratch.html"><em>How to create a virtual machine from scratch</em></a></li>
-<li><a href="vmw-how-create-vm-from-template.html"><em>How to create a virtual machine from a template</em></a></li>
+<li><p><a href="vmw-how-create-vm-from-scratch.html"><em>How to create a virtual machine from scratch</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-vm-from-template.html"><em>How to create a virtual machine from a template</em></a></p>
+</li>
 </ul>
 </li>
 <li><p>To create a VDC network to enable your virtual machines to communicate with each other and the outside world:</p>
 <ul>
-<li><a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a></li>
-<li><a href="vmw-how-create-isolated-network.html">*How to create an isolated VDC networks</a></li>
+<li><p><a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-isolated-network.html"><em>How to create an isolated VDC network</em></a></p>
+</li>
 </ul>
 </li>
 <li><p>To configure your edge gateway to control access to your VMs:</p>
 <ul>
-<li><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></li>
-<li><a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a></li>
-<li><a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></li>
-<li><a href="vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a></li>
-<li><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></li>
-<li><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></li>
+<li><p><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></p>
+</li>
+<li><p><a href="vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a></p>
+</li>
+<li><p><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></p>
+</li>
 </ul>
 </li>
+</ul>
+<h2 id="related-videos">Related videos</h2>
+<ul>
+<li><a href="vmw-vid-vcd91.html"><em>vCloud Director 9.1 overview video</em></a></li>
 </ul>
 <h2 id="glossary">Glossary</h2>
 <p>This section provides a glossary of terms specific to UKCloud for VMware.</p>
 <p><strong>account</strong>  Within the UKCloud for VMware environment there are two types of account:</p>
 <ul>
-<li><strong>customer account</strong> --- A collection of related compute services associated with a particular customer or partner.</li>
-<li><strong>user account</strong> --- The account you use to log in to the UKCloud Portal or authenticate with the Portal API. Your user account determines which customer accounts you have access to. Each user account can be associated with multiple customer accounts.</li>
+<li><p><strong>customer account</strong> --- A collection of related compute services associated with a particular customer or partner.</p>
+</li>
+<li><p><strong>user account</strong> --- The account you use to log in to the UKCloud Portal or authenticate with the Portal API. Your user account determines which customer accounts you have access to. Each user account can be associated with multiple customer accounts.</p>
+</li>
 </ul>
 <p><strong>company</strong>  A UKCloud construct to organise business accounts. Each company can own
 multiple accounts.</p>
@@ -299,7 +349,7 @@ storage and external connectivity.</p>
 <p><strong>virtual machine (VM)</strong>  Software that emulates the functionality of a physical computer, running an operating system and applications. Customers can define a VM's
 resource requirements and the UKCloud platform optimises its placement to ensure it receives the requested resources.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -309,13 +359,6 @@ resource requirements and the UKCloud platform optimises its placement to ensure
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-gs.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -334,11 +377,24 @@ resource requirements and the UKCloud platform optimises its placement to ensure
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

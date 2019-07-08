@@ -8,7 +8,7 @@
     <title>Journaling Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Journaling Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-faq-journaling-protection.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -160,26 +169,29 @@
 <li><p>Perform disaster recovery tests by recovering vApps into the recovery destination</p>
 </li>
 </ul>
+<h3 id="can-i-set-different-retention-policies-for-my-vapps">Can I set different retention policies for my vApps?</h3>
+<p>Yes. Each vApp maps to a VPG, and each VPG can have its own retention policy. For example, you may have one VPG retention policy set at 2-day Journaling and another VPG retention policy set at 7-day Journaling.</p>
 <h3 id="is-this-a-managed-service">Is this a managed service?</h3>
 <p>No. UKCloud have implemented Journaling Protection to be available for UKCloud for VMware workloads as an on-platform service and will ensure that the service is available and updated accordingly. Once the service has been available for your workloads, you will be responsible for managing the service via the UKCloud or Journaling Protection portal (powered by Zerto).</p>
 <h3 id="how-do-i-make-changes-to-my-journaling-protection">How do I make changes to my Journaling Protection?</h3>
 <p>Once the service has been provisioned for your environment, you will be able to log into the <a href="https://portal.ukcloud.com/">UKCloud Portal</a> and then log into the Journaling Protection portal. Please note that our support teams will be unable to manage your service for you as this is provided unmanaged.</p>
-<h3 id="how-does-this-differ-from-geo-resilient-synchronous-and-snapshot-protection">How does this differ from Geo-resilient Synchronous and Snapshot Protection?</h3>
-<p>The Journaling Protection service provides a continuous log of all the changes that have occurred within your environment for 28 days that are stored on the UKCloud platform and can be restored quickly and easily from a point in time of your choosing.</p>
+<h3 id="how-does-this-differ-from-snapshot-protection">How does this differ from Snapshot Protection?</h3>
+<p>The Journaling Protection service provides a continuous log of all the changes that have occurred within your environment within the specified time frame (2, 7, 14 or 28 days) that are stored on the UKCloud platform and can be restored quickly and easily from a point in time of your choosing.</p>
 <p>Snapshot protection utilises 24 hour backups for up to 28 days which are stored on a separate storage solution, and can recover from deleted disks or VMs. In the event that you need to recover from a previous recovery point, there may be a loss of data due to the time difference between the event and the last snapshot.</p>
-<p>With regards to Geo-resilient synchronous, whilst changes are replicated with a minimum of delay which results in a good RPO and RTO, issues such as bad software updates or Ransomware will also be replicated since synchronous replication does not support recovery to a historical state.</p>
 <h3 id="will-i-be-able-to-extend-my-retention-periods-by-moving-my-journals-to-external-storage-such-as-cloud-storage">Will I be able to extend my retention periods by moving my journals to external storage, such as Cloud Storage?</h3>
 <p>No. In the initial release, this feature will not be enabled as we have identified a security challenge that must be addressed.</p>
 <h3 id="will-my-network-configuration-be-failed-over-in-the-event-of-disaster">Will my network configuration be failed over in the event of disaster?</h3>
 <p>Journaling Protection (powered by Zerto) will replicate vApp networking specific to a customer's vApp.</p>
 <p>However, organisation and external networking configuration would need to be done manually. Customers can do this ahead of any failure by pre-provisioning external connectivity within the recovery site.</p>
+<h3 id="during-setup-for-the-dr-site-is-there-a-way-to-export-the-edge-and-vlan-configurations-from-the-production-site-and-import-this-configuration-for-the-dr-site">During setup for the DR site, is there a way to export the edge and vLAN configurations from the production site and import this configuration for the DR site?</h3>
+<p>Yes. You can manage exports and imports of configurations via the API. You may also raise a support ticket and we will be able to assist with this process.</p>
 <h3 id="does-the-journaling-protection-swap-drive-work-for-bitlocker-enabled-drives">Does the Journaling Protection swap drive work for bitlocker enabled drives?</h3>
 <p>Swap disks are synchronised during the initial synchronisation, but no further ongoing synchronisation occurs. This means that the Bitlocker drive should remain encrypted and configured when failed over.</p>
 <p>However, if the password or key is modified then it will need to be reconfigured or re-encrypted in the event of a failover. To avoid this scenario, customers are advised to leave the Bitlocker drive marked as normal synchronisation (non-swap).</p>
 <h3 id="does-ukcloud-offer-an-sla-with-journaling-protection">Does UKCloud offer an SLA with Journaling Protection?</h3>
 <p>We do not currently plan to offer an SLA around the service. However, the real time monitoring available in the Journaling Protection portal (powered by Zerto) will advise customers of the state of their journal and their currently achievable RPO.</p>
 <h3 id="is-zerto-licensing-included">Is Zerto licensing included?</h3>
-<p>Yes, it is included with the Journaling Protection option for use with the 14 day or 28 day retention policies.</p>
+<p>Yes, it is included with the Journaling Protection option for use with the 2, 7, 14 day or 28 day retention policies.</p>
 <h3 id="will-a-vpg-still-be-protected-if-one-or-more-vms-are-powered-off">Will a VPG still be protected if one or more VMs are powered off?</h3>
 <p>In normal circumstances, if a VM within a VPG is powered off this will not impact the protection as remaining powered-on VMs will continue to replicate as normal. This includes the scenario when a new VM is added to a VPG and the new VM is in powered off state - in this instance the VM would need to be powered on to create its initial sync, and existing VMs will continue to replicate as normal.</p>
 <p>The one exception to this is if you have an existing VPG, and one VM is powered off, and at some point afterwards the VPG goes in a bitmap / delta sync (normally due to network contention or high periods of writes on a protected VM). In this case, the powered-off VM prevents the VPG from completing the sync and the VPG replication will be halted; this will trigger an alert within the Zerto portal.</p>
@@ -193,7 +205,7 @@
 <p>As migrating workloads involves enabling Journaling Protection on your source VMs, those VMs (and any associated storage) will incur the appropriate additional Journaling Protection charges for the duration of the migration. Once your migration is complete, you should be sure to remove the original VMs from the source site to avoid additional charges.</p>
 <p>Find out more about how to migrate your workloads between UKCloud regions in <a href="vmw-how-zerto-migrate-between-regions.html"><em>How to migrate your workloads between UKCloud regions</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -203,13 +215,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-faq-journaling-protection.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -228,11 +233,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

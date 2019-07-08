@@ -8,7 +8,7 @@
     <title>How to create load balancing services on UKCloud for OpenStack | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create load balancing services on UKCloud for OpenStack | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-how-create-load-balancer.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -88,9 +97,12 @@
 <p>Although OpenStack's Neutron project does support load-balancing natively, our testing has shown that this is not a highly available solution which could result in the loss of traffic flow to a project in the event of a host failure, this view has been echoed by many other OpenStack vendors. In order to mitigate against this scenario, we have created the following article, which enables you to easily deploy our load-balancing solution within your OpenStack projects.</p>
 <p>Benefits of this solution include:</p>
 <ul>
-<li>Highly Available implementation of an OpenStack load-balancing solution</li>
-<li>Advanced load-balancing services provided by HAProxy (for example, SSL support, session stickiness)</li>
-<li>Fully scripted repeatable deployment (HEAT template available on the UKCloud Knowledge Centre alongside this article)</li>
+<li><p>Highly Available implementation of an OpenStack load-balancing solution</p>
+</li>
+<li><p>Advanced load-balancing services provided by HAProxy (for example, SSL support, session stickiness)</p>
+</li>
+<li><p>Fully scripted repeatable deployment (HEAT template available on the UKCloud Knowledge Centre alongside this article)</p>
+</li>
 </ul>
 <h2 id="caveats">Caveats</h2>
 <p>This solution utilises HAProxy and keepalived, both of which are complicated software products. This guide will help you set up UKCloud for OpenStack to enable you to deploy a load-balancing solution based on keepalived and haProxy, but additional tuning and configuration may be required depending on your intended setup. Please take a moment to have a read through the documentation for both the keepalived project -
@@ -98,10 +110,14 @@
 <h2 id="prerequisites">Prerequisites</h2>
 <p>This guide assumes that you have the following already configured in your environment:</p>
 <ul>
-<li>A router connected to the internet external network.</li>
-<li>A jump server with required security groups to allow you to SSH to that server and to SSH inside your environment.</li>
-<li>At least two servers inside your environment running a web server to test the HAProxy configuration against.</li>
-<li>The Ubuntu 16.04 amd64 image (id: <code>b8617599-495f-4d00-abf9-57b431caeb4c</code>) has been used throughout this document.</li>
+<li><p>A router connected to the internet external network.</p>
+</li>
+<li><p>A jump server with required security groups to allow you to SSH to that server and to SSH inside your environment.</p>
+</li>
+<li><p>At least two servers inside your environment running a web server to test the HAProxy configuration against.</p>
+</li>
+<li><p>The Ubuntu 16.04 amd64 image (id: <code>b8617599-495f-4d00-abf9-57b431caeb4c</code>) has been used throughout this document.</p>
+</li>
 </ul>
 <h2 id="implementation-steps">Implementation steps</h2>
 <ol>
@@ -128,7 +144,7 @@
 <p><strong>Command:</strong> <code>neutron router-interface-add &lt;RouterName&gt; &lt;NetworkName&gt;</code></p>
 <p><strong>Example:</strong> <code>neutron router-interface-add R1 FrontEdge</code></p>
 <p><strong>Result:</strong></p>
-<p><img src="images/ostack-neutron-router-interface-add.png" alt="Results of router-inteface-add command"></p>
+<p><img src="images/ostack-neutron-router-interface-add.png" alt="Results of router-interface-add command"></p>
 </li>
 </ul>
 </li>
@@ -274,17 +290,22 @@
 </li>
 <li><p>Edit <code>/etc/keepalived/keepalived.conf</code> and make the following changes</p>
 <ul>
-<li>Change state to BACKUP</li>
-<li>Change priority to 90</li>
-<li>Save and exit the file</li>
+<li><p>Change state to BACKUP</p>
+</li>
+<li><p>Change priority to 90</p>
+</li>
+<li><p>Save and exit the file</p>
+</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><p>Enable non-local IP binding on the second server.</p>
 <ul>
-<li>Add <code>net.ipv4.ip_forward = 1</code> to <code>/etc/sysctl.conf</code></li>
-<li><code>sudo sysctl -p</code></li>
+<li><p>Add <code>net.ipv4.ip_forward = 1</code> to <code>/etc/sysctl.conf</code></p>
+</li>
+<li><p><code>sudo sysctl -p</code></p>
+</li>
 </ul>
 </li>
 <li><p>Start keepalived on first load balancer.</p>
@@ -339,7 +360,7 @@
 <p>Depending on the amount of traffic you expect to see, you may need to make  additional tuning changes to your load balancer systems. Usually these changes take the form of increasing the number of available ephemeral ports, and the enablement of <code>tcp_tw_reuse</code>. Please do careful research on these settings before making changes. We recommend making these changes on a non-live system and testing before applying these changes to a production system.</p>
 <p>You may also wish to investigate keepalived ability to monitor applications on the local system and force a fail over if an application crashes. For example, keepalived can be made to monitor HAProxy and to fail over if HAProxy stops or fails. Instructions on how to do this can be found in the keepalived  documentation.</p>
 <h2 id="first-free-load-balancer">First free load balancer</h2>
-<p>To meet the UKCloud for OpenStack G-Cloud Service Definition commitment of one free load balancer per per project, we will credit the first two instances in a project which match the following criteria:</p>
+<p>To meet the UKCloud for OpenStack G-Cloud Service Definition commitment of one free load balancer per project, we will credit the first two instances in a project which match the following criteria:</p>
 <table>
 <thead>
 <tr>
@@ -363,7 +384,7 @@
 <p>UKCloud has the right to remove this free solution with 30 days notice once the default OpenStack LBaaS service has been made available.</p>
 </div>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -373,13 +394,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-how-create-load-balancer.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -398,11 +412,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

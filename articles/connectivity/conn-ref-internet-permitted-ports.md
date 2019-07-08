@@ -3,6 +3,8 @@ title: Internet - permitted standard ports in regions 1 and 2  | UKCloud Ltd
 description: Shows the whitelist of standard internet ports on the UKCloud managed perimeter firewalls
 services: connectivity
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 18:37:23
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -39,27 +41,42 @@ The following diagram shows the status of standard internet ports. The permitted
 ### TCP ports
 
 - SSH - 22 
+
 - SMTP - 25
+
 - DNS - 53
+
 - HTTP - 80 & 8080
+
 - HTTPS - 443,444 & 8443
+
 - Secure SMTP - 465 & 587
+
 - FTPS (Data) - 989
+
 - FTPS (Control) - 990
+
 - IMAPS - 993
+
 - POP3S - 995
+
 - RDP - 3389
 
 ### UDP ports
   
+
 - DNS - 53
+
 - OpenVPN - 1194
 
 ### VPN ports
 
 - AH
+
 - ESP
+
 - IPSEC - UDP 4500 
+
 - ISAKMP - UDP 500
 
 ## Outbound access to the internet from your edge gateway
@@ -67,30 +84,45 @@ The following diagram shows the status of standard internet ports. The permitted
 ### TCP ports
 
 - SSH - 22
+
 - SMTP - 25
+
 - DNS - 53
+
 - HTTP - 80 & 8080
+
 - HTTPS - 443, 444 & 8443
+
 - Secure SMTP - 465 & 587
+
 - FTPS (Data) - 989
+
 - FTPS (Control) - 990
+
 - IMAPS - 993
+
 - POP3S - 995
+
 - Windows KMS - 1688
 
 ### UDP ports
 
 - DNS - 53
+
 - NTP - 123
+
 - OpenVPN - 1194
 
 ### VPN ports
 
 - AH
+
 - ESP
+
 - IPSEC - UDP 4500
+
 - ISAKMP - UDP 500
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

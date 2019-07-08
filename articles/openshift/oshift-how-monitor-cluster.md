@@ -3,6 +3,8 @@ title: How to monitor your OpenShift cluster | UKCloud Ltd
 description: Explains how to set up a simple system to monitor an OpenShift Cloud Native Application Platform cluster
 services: openshift
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 10:26:58
 
 toc_rootlink: How To
 toc_sub1:
@@ -156,15 +158,16 @@ main()
 > [!TIP]
 > If you encounter problems copying and pasting the source code above, we also provide the code in the following blog post:
 
-<https://ukcloud.com/news-resources/news/blog/simple-openshift-monitoring>
+<https://ukcloud.com/hub/news/simple-openshift-monitoring/>
 
 ## Next steps
 
 For more information about UKCloud for OpenShift service, see:
 
 - [*Getting Started Guide for UKCloud for OpenShift*](oshift-gs.md)
+
 - [*UKCloud for OpenShift FAQs*](oshift-faq.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

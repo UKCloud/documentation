@@ -3,6 +3,8 @@ title: Cross Domain Security Zone FAQs | UKCloud Ltd
 description: Frequently asked questions for Cross Domain Security Zone
 services: cdsz
 author: Matt Warner
+reviewer:
+lastreviewed: 17/07/2018 10:43:00
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -26,6 +28,7 @@ This allows solutions hosted on the Elevated OFFICIAL cloud platform that are ci
 Two service options are available to enable use of the CDSZ:
 
 - UKCloud Guard
+
 - Walled Garden
 
 ### Do I have to buy other UKCloud services to use services in the CDSZ?
@@ -67,7 +70,9 @@ UKCloud cannot provide additional storage in the CDSZ for designs involving patc
 As a minimum the application must include:
 
 - A business case explaining why a cross-domain solution is required
+
 - The technical architecture of the solution - incorporating either the UKCloud Guard or your proposed Walled Garden solution
+
 - An assurance plan - your proposed approach to ensuring that risks are correctly identified, appropriate mitigation is implemented and residual risks are accepted, so that both the UKCloud and customer SIROs can make an informed decision about the risks of the solution
 
 ## UKCloud Guard
@@ -125,9 +130,13 @@ The variable nature of Walled Garden Solutions means we may charge for the assur
 Broadly, the process is as follows:
 
 - Initial application
+
 - UKCloud design review (with a cloud architect)
+
 - Proposed evidence pack submission (by the customer)
+
 - Full evidence pack submission (by the customer)
+
 - UKCloud SIRO review and approval or rejection
 
 Full details of each stage are available in the UKCloud Knowledge Centre or from your account director.
@@ -137,10 +146,15 @@ Full details of each stage are available in the UKCloud Knowledge Centre or from
 The evidence pack will generally consist of:
 
 - IT Security Health Check (ITSHC)
+
   - This must be carried out by an [NCSC-approved security organisation](https://www.ncsc.gov.uk/index/professional-service?f%5B0%5D=field_assurance_status%3AAssured&f%5B1%5D=field_assurance_scheme%3A213)
+
 - Protective Monitoring solution
+
 - The nature of Walled Garden solutions makes it essential that appropriate audit logging of security events and information is implemented and regularly monitored.
+
 - Customer SIRO sign-off
+
 - We need an accreditor's statement confirming their acceptance of the risk assessment, mitigating controls and residual risks, and their understanding of the customer's obligations relating to the use of UKCloud services
 
 ### What are the ongoing requirements?

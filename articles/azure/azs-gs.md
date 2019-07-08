@@ -1,8 +1,10 @@
 ---
 title: Getting Started Guide for UKCloud for Microsoft Azure | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for Microsoft Azure
-services: azure
+services: azure-stack
 author: Sue Highmoor
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: Getting Started
@@ -24,7 +26,7 @@ This Getting Started Guide provides you with the information you need to get up 
 
 ### Intended audience
 
-To complete the steps in this guide you must have access to the Azure Stack portal.
+To complete the steps in this guide you must have access to the UKCloud Azure Stack portal.
 
 ## Introduction to UKCloud for Microsoft Azure
 
@@ -35,28 +37,93 @@ Microsoft Azure Stack is an extension of Azure that provides on-premises Infrast
 With UKCloud for Microsoft Azure you can:
 
 - Leverage existing Azure investment, knowledge and skills
+
 - Use Azure Stack alongside other technologies, for example, VMware, OpenStack or Oracle
+
 - Connect to government community networks, including PSN, HSCN, Janet and RLI
+
 - Meet specific compliance directives, such as data sovereignty or security
 
 The two main delivery models provided by UKCloud for Microsoft Azure are:
 
 - A multi-tenant IaaS and PaaS platform available in both UKCloud security domains (Assured OFFICIAL and Elevated OFFICIAL), connected to government community networks with UKCloud's award-winning support
+
 - Private cloud deployment of UKCloud for Microsoft Azure dedicated to a single customer
 
-## Before you begin
+### What is Azure Active Directory and why is it required for UKCloud for Microsoft Azure?
 
-You should have received your UKCloud for Microsoft Azure login credentials from your Azure administrator. If you're the administrator, your Customer Success Manager (CSM) will have provided you with your login credentials.
+Azure Active Directory is Microsoft's cloud-based Directory and Identity Access Management Service. It provides Single Sign-On and core directory services via a high availability service with automated failover. <abbr title="Azure Active Directory"> AAD</abbr> provides the identity store for UKCloud for Microsoft Azure, supporting features such as two-factor authentication and role based access control.
 
-## Logging in to the Microsoft Azure Stack portal
+> [!Note]
+> If you do not have an existing Azure Active Directory, provide a preferred domain name and administrator email address, and UKCloud will create an Azure Active Directory Domain (subject to availability), free of charge.
+
+## How can I get started with UKCloud for Microsoft Azure?
+
+> [!Important]
+> By providing the information below, you agree to enter into a direct Microsoft Cloud Solution Provider Customer Agreement (for more information see [here](https://docs.microsoft.com/en-us/partner-center/agreements) (Europe/United Kingdom)). If you accept the terms of the agreement, when you provide the information below we are obliged to report your name, email address and date of acceptance to Microsoft.
+
+# [I have an existing Azure Active Directory Domain](#tab/tabid-1)
+
+If you've decided that UKCloud for Microsoft Azure is the right environment for you, contact your CSM with the following information:
+
+- Contact email address, for example, onboardingukcloud3@ukcloud.com
+
+- Azure Active Directory Domain, for example, onboardingukcloud3csp.onmicrosoft.com
+
+- AAD administrator email address, for example, admin@onboardingukcloud3csp.onmicrosoft.com
+
+Once you've provided this information, UKCloud will set up your new UKCloud for Microsoft Azure environment.
+
+After submitting your details, you will receive an email asking for permission for UKCloud to be your Microsoft Cloud Solution Provider (see example below).
+
+![Microsoft Azure CSP invitation email](images/azs-email-csp-invitation.png)
+
+Once you have received this, click the **CSP Invitation URL** link and enter your details to sign in.
+
+![Microsoft Azure sign in page](images/azs-browser-csp-auth-signin.png)
+
+Accept the **Microsoft Store for Business and your data** agreement.
+
+![Microsoft Store for Business Data Agreement](images/azs-browser-MS-SfB-agreement.png)
+
+After accepting the agreement you will be greeted with the following page. Tick the checkbox and click **Accept**, then contact your CSM so UKCloud can complete your onboarding process.
+
+![Microsoft Azure authorize CSP page](images/azs-browser-authorize-csp.png)
+
+Next, you should receive a welcome email from your CSM containing the details of your new UKCloud for Microsoft Azure environment.
+
+> [!IMPORTANT]
+> If you have conditional access policies enabled for your Azure Active Directory, follow the instructions from the invitation email to allow us access to your AAD.
+>
+> You can find more information about conditional access policies [here](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/location-condition#trusted-ips).
+
+# [I do not have an existing Azure Active Directory](#tab/tabid-2)
+
+If you've decided that UKCloud for Microsoft Azure is the right environment for you, contact your CSM with the following information:
+
+- Contact name, for example, John Doe
+
+- Contact email address, for example, onboardingukcloud3@ukcloud.com
+
+- Contact phone number, 01252 303300
+
+- Billing address, for example, Hartham Park, Corsham, Wiltshire, SN13 0RP
+
+- Preferred Azure Active Directory Domain, for example, onboardingukcloud3csp.onmicrosoft.com
+
+Once you've provided this information, UKCloud will set up your new UKCloud for Microsoft Azure environment.
+
+After providing the above details, you should receive a welcome email shortly from your CSM containing the details of your new UKCloud for Microsoft Azure environment.
+
+***
+
+## Logging in to the UKCloud Azure Stack portal
 
 To manage UKCloud for Microsoft Azure, you need to log in to the Azure Stack portal. The portal provides access to all your Azure resources.
 
 To log in to the Azure Stack portal:
 
-1. In your browser, go to the following URL:
-
-    <https://portal.frn00006.azure.ukcloud.com/>
+1. In your browser, go to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
 
 2. In the login dialog box, enter the email address for your account and click **Next**, or pick your account.
 
@@ -76,14 +143,16 @@ To log in to the Azure Stack portal:
 
     D.  **Notifications** - view useful alerts about your Azure environment
 
-    E.  **New** - create new resources, such as virtual machines (see [*How to create a virtual machine from the Azure Marketplace*](azs-how-create-vm.md))
+    E.  **New** - create new resources, such as virtual machines (see [*How to create a virtual machine from the Azure Marketplace*](azs-how-create-vm-portal.md))
 
 ## Understanding subscriptions, offers and plans
 
 Your UKCloud for Microsoft Azure environment is provisioned with a subscription that determines the services you have access to, and your quotas for those services.
 
 - A **subscription** is a mechanism for signing up to an *offer*.
+
 - An **offer** is a collection of one or more *plans*.
+
 - A **plan** is a collection of one or more *services*, with associated *quotas*.
 
 ## Customising your favourites
@@ -167,7 +236,9 @@ To customise a dashboard:
 To work with UKCloud for Microsoft Azure, users must have the appropriate Azure Stack permissions. We provide the following three groups to get you started:
 
 - **AzureStackOperators** - Members of this group have Owner permissions and have full access to all resources and can manage access to resources
+
 - **AzureStackUsers** - Members of this group have Contributor permissions and can create and manage all resources but cannot manage access to resources
+
 - **AzureStackReadOnly** - Members of this group have Reader permissions and can view everything but cannot be any changes
 
 To grant a user access to UKCloud for Microsoft Azure:
@@ -209,13 +280,25 @@ For more information, including steps and scripts for setting up Azure PowerShel
 
 ## Next steps
 
-In this Getting Started Guide, you've learned the basics about UKCloud for Microsoft Azure and the Azure Stack portal. For more information about UKCloud for Microsoft Azure, see the following articles in the Knowledge Centre:
+In this Getting Started Guide, you've learned the basics about UKCloud for Microsoft Azure and the UKCloud Azure Stack portal. For more information about UKCloud for Microsoft Azure, see the following articles in the Knowledge Centre:
 
 - [*Understanding UKCloud for Microsoft Azure*](azs-ref-overview.md)
+
 - [*UKCloud for Microsoft Azure FAQs*](azs-faq.md)
-- [*How to create a virtual machine from the Azure Marketplace*](azs-how-create-vm.md)
-- [*How to create an Azure user group*](azs-how-create-azure-group.md)
+
+- [*How to create a virtual machine from the Azure Marketplace*](azs-how-create-vm-portal.md)
+
+- [*How to create an Azure user group*](azs-how-manage-azure-group.md)
+
 - [*How to use the Azure Stack API*](azs-how-use-azure-api.md)
+
+## Related videos
+
+- [*Microsoft Azure Stack Portal overview video*](azs-vid-overview.md)
+
+## Related repositories
+
+- [*UKCloud Azure Stack Repository*](https://github.com/UKCloud/AzureStack)
 
 ## Glossary
 
@@ -223,22 +306,22 @@ This section provides a glossary of terms specific to UKCloud for Microsoft Azur
 
 **Azure Active Directory**&nbsp;&nbsp;The service that provides identify management within UKCloud for Microsoft Azure.
 
-**cloud operator**&nbsp;&nbsp;An entity that provides services, via subscriptions, on Azure Stack. UKCloud is a cloud operator.
+**Cloud operator**&nbsp;&nbsp;An entity that provides services, via subscriptions, on Azure Stack. UKCloud is a cloud operator.
 
 **Microsoft Azure**&nbsp;&nbsp;Microsoft's public cloud service.
 
 **Microsoft Azure Stack**&nbsp;&nbsp;An extension of Azure that provides cloud computing to an on-premises environment.
 
-**resource**&nbsp;&nbsp;An object within Azure Stack, such as a virtual machine, network or storage.
+**Resource**&nbsp;&nbsp;An object within Azure Stack, such as a virtual machine, network or storage.
 
-**resource group**&nbsp;&nbsp;A collection of resources, services and applications.
+**Resource group**&nbsp;&nbsp;A collection of resources, services and applications.
 
-**subscription**&nbsp;&nbsp;A mechanism for organising resources and services for tenants to consume.
+**Subscription**&nbsp;&nbsp;A mechanism for organising resources and services for tenants to consume.
 
-**UKCloud for Microsoft Azure**&nbsp;&nbsp;A UKCloud IaaS and PaaS service that works as an extension of Microsoft's own Azure Public Cloud, delivered from our assured sovereign data centres.
+**UKCloud for Microsoft Azure**&nbsp;&nbsp;A UKCloud IaaS and PaaS service that works as an extension of Microsoft's own Azure public cloud, delivered from our assured sovereign data centres.
 
-**tenant**&nbsp;&nbsp;An entity that consumes services from cloud operators in Azure Stack.
+**Tenant**&nbsp;&nbsp;An entity that consumes services from cloud operators in Azure Stack.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

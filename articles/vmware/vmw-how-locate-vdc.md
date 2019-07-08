@@ -1,8 +1,10 @@
 ---
-title: how to locate your virtual data centre on the UKCloud platform | UKCloud Ltd
+title: How to locate your virtual data centre on the UKCloud platform | UKCloud Ltd
 description: Describes how to use the vCloud Director UI or API to find out where your VDC is located within the UKCloud platform
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -22,7 +24,9 @@ Each virtual data centre (VDC) exists in a particular location within the UKClou
 Knowing where your VDCs are located can be useful for:
 
 - Determining how resilient your applications are
+
 - Determining how scheduled or emergency maintenance or an unplanned outage may affect your applications
+
 - Providing additional information to help with support call resolution
 
 This guide describes how to use vCloud Director to find out where your VDC is within the UKCloud platform. You can use the vCloud Director UI or the API.
@@ -31,31 +35,20 @@ The information provided by the VDC metadata is read-only. If you want to change
 
 ## Finding the location of a VDC via the Portal
 
-1. Log in to the UKCloud Portal.
+> [!NOTE]
+> You cannot view VDC metadata in the new vCloud Director 9.1 tenant portal. If your environment uses vCloud Director 9.1, you must first switch to the vCloud Director web console. For more information, see [*How to switch to the vCloud Director web console from the tenant portal*](vmw-how-switch-web-console.md).
 
-2. Select the account to which the VDC belongs.
-
-3. In the dashboard, click **My VMs**.
-
-    ![My VMs](images/locate-image-1.png)
-
-4. Click the compute service to which the VDC belongs.
-
-5. On the **vCloud Director** tab, enter your password and then click **Confirm**.
-
-    ![vCloud Director](images/locate-image-2.png)
-
-6. Click **Administration**.
+1. In vCloud Director, click **Administration**.
 
     ![Administration](images/locate-image-3.png)
 
-7. Right-click the VDC and select **Properties**.
+2. Right-click the VDC and select **Properties**.
 
-8. Click the **Metadata** tab.
+3. Click the **Metadata** tab.
 
     ![Metadata](images/locate-image-4.png)
 
-9. The following fields indicate the location of your VDC:
+4. The following fields indicate the location of your VDC:
 
     - **provider-site** - indicates the site in which your VDC is located: **Farnborough** or **Corsham**
 
@@ -75,7 +68,7 @@ The information provided by the VDC metadata is read-only. If you want to change
 
     You can use VM Location to locate individual VMs within the VDC. For more information, see [How to use VM Location in vCloud Director](https://portal.ukcloud.com/support/knowledge_centre/4e69cbb9-b56c-4af6-a775-88c9fc11eefa).
 
-10. When you're done, click **Cancel**.
+5. When you're done, click **Cancel**.
 
 ## Finding the location of a VDC via the vCloud Director API
 
@@ -85,4 +78,4 @@ For example, to retrieve all the metadata for a specified VDC, call the `GET /vc
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Security best practices for UKCloud for Openshift | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Security best practices for UKCloud for Openshift | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-ref-security-best-practices.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="security-best-practices-for-ukcloud-for-openshift">Security best practices for UKCloud for OpenShift</h1>
+
+<h2 id="overview">Overview</h2>
+<p>As is the nature of technology, any cloud-based service is vulnerable to exploits from both hackers and insiders just the same as traditional environments. Such risks include data stealing, crypto-mining, ransomware and service disruption to name a few. Although the nature of running container-based workloads reduces the threat to your underlying infrastructure, that threat is not completely eliminated and you should still take care when designing, developing and deploying your container-based workloads to minimise the risks to those deployments in UKCloud for OpenShift.</p>
+<p>This article sets out some best practices to follow to minimise the attack vector to a UKCloud for OpenShift cluster and its workloads.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This article is intended for anyone who is using UKCloud for OpenShift. It highlights some of the best practices to keep OpenShift workloads secure.</p>
+<h2 id="role-based-access-control">Role Based Access Control</h2>
+<p>Within OpenShift, you can grant various levels of access to users, which can be cluster-wide or limited to a particular OpenShift object. You can associate users and groups with multiple roles at the same time.</p>
+<p>You can view a pre-defined list of cluster roles and local roles <a href="https://docs.openshift.com/container-platform/3.11/architecture/additional_concepts/authorization.html#roles">here</a>.</p>
+<ul>
+<li><p>Users with the cluster-admin default cluster role bound cluster-wide can perform any action on any resource.</p>
+</li>
+<li><p>Users with the admin default cluster role bound locally can manage roles and bindings within a project.</p>
+</li>
+</ul>
+<p>It is good practice to follow the <a href="https://en.wikipedia.org/wiki/Principle_of_least_privilege">principle of least privilege</a> with OpenShift access. For information about creating new OpenShift users, see <a href="oshift-how-create-users.html"><em>How to create new UKCloud for OpenShift users in the UKCloud Portal</em></a>. This article also explains how to enable two-factor authentication (2FA) when logging in to OpenShift. Users are also encouraged to change their passwords regularly, which is possible to do from the UKCloud Portal. You should ensure that OpenShift account credentials are not shared between multiple users. Instead, you should create individual user accounts for each user with the correct role binding. It is also the responsibility of each individual user to ensure the physical security of the terminal from which they access OpenShift.</p>
+<p>You should also apply the principle of least privilege to your containers' workloads. This means you should run your workloads as a user with just enough permissions to run the workload within your containers, particularly avoiding running privileged containers if this can be avoided. If however a workload does require to be run as a privileged container, then you should ensure that you set the correct security context constraint (SCC) to run that container. You can read more about setting the correct SCC <a href="https://docs.openshift.com/container-platform/3.11/admin_guide/manage_scc.html">here</a>. Containers that try to run as priviledged without the relevant SCC set will fail to run.</p>
+<h2 id="service-accounts">Service accounts</h2>
+<p>You should use service accounts for all API access, which should be accomplished by an automated process; never use a regular user's credentials. Usually a service account's username is the same as the project it is created for, followed by its name:</p>
+<pre><code>system:serviceaccount:&lt;project&gt;:&lt;name&gt;
+</code></pre>
+<p>For example:</p>
+<pre><code>system:serviceaccount:continuous-integration:jenkins
+</code></pre>
+<p>You can read more about service accounts <a href="https://docs.openshift.com/container-platform/3.11/dev_guide/service_accounts.html">here</a>.</p>
+<h2 id="creating-and-deploying-vulnerable-container-images">Creating and deploying vulnerable container images</h2>
+<p>Just like traditional software packages, containers also run software, even if they are running that software within a self contained environment of a container. These containers can be built and run using vulnerable software packages/libraries. It is therefore considered good practice to do the following to ensure that you are not introducing vulnerable containers into your clusters:</p>
+<ol>
+<li><p>Only use base images from trusted sources, for example, Red Hat's container registry. Red Hat's containers on Red Hat's container registry are scanned for vulnerabilities and given a security rating. Docker Hub also provides some certified containers that are built using best practices, tested and validated against the Docker Enterprise Edition platform and APIs, pass Dockers security requirements, and are collaboratively supported by Docker and the company responsible for the container. You can also build base containers from scratch using only the software packages you need for your workload. However, building containers from scratch and using just enough of the software packages you need to run for your workload does not guarantee that your base image is going to be free of all possible vulnerabilities as it is possible that some of those software packages could contain vulnerabilities.</p>
+</li>
+<li><p>Scan your containers with container vulnerability scanning software as part of your build or deployment process. There are several tools available to scan containers. These tools give you a security rating on your final container once it's been created from a secure base container. There are a number of tools available to do this, the following is a small sample we're aware of:</p>
+<ul>
+<li><p>OpenSCAP-docker</p>
+</li>
+<li><p>Black Duck Hub</p>
+</li>
+<li><p>JFrog Xray</p>
+</li>
+<li><p>Twistlock</p>
+</li>
+<li><p>Image-inspector</p>
+</li>
+<li><p>Clair</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="secrets">Secrets</h2>
+<p>Sensitive information, such as passwords, SSH keys, tokens and certificates, are examples of information that could be considered secret. As such secrets should never be stored in any place in plain text readable format (for example, in source code, GitHub repositories, and so on). It is imperative that when secrets are required in OpenShift, they are set up as OpenShift Secrets. This allows the secrets to be encrypted within OpenShift and accessed only by the relevant containers when they are needed. However there are limits to the current OpenShift secrets ability: the secrets are encoded in base64 encryption, which can be easily decrypted, and stored secrets can be accessible from any container on the same node. You could use a popular solution like Hashicorps Vault software for secret storage.</p>
+<h2 id="limiting-resources">Limiting resources</h2>
+<p>You should always set up containers with resource limits. In the event of a denial of service attack, or even just a burst of very high load on a service, these resource limits will prevent pods from using all available resources in the node they are running on. You can read more about setting resource quotas and limits <a href="https://docs.openshift.com/container-platform/3.11/dev_guide/compute_resources.html">here</a>.</p>
+<h2 id="route-security">Route security</h2>
+<p>Within OpenShift, you can expose your services using routes. Creating a route to a service enables your users to access the service through a URL in a browser. If you do not specify any SSL certificates for your route than it would be exposed on HTTP port 80 without any SSL certificate. You can secure these routes with SSL encryption using one of three SSL termination methods:</p>
+<ul>
+<li><p>Edge - SSL termination is done on the HAProxy router from which point onwards the traffic is un-encrypted</p>
+</li>
+<li><p>Passthrough termination - There is no SSL decryption on the routers; instead connections are passed straight through the routers to the OpenShift applications, which are then responsible for SSL certificate termination and traffic decryption.</p>
+</li>
+<li><p>Re-Encrypt - This process uses two certificates: the first certificate is held on the HAProxy router and the second in the pods. This secures traffic all the way down to the application.</p>
+</li>
+</ul>
+<h3 id="control-plane-and-data-plane-lockdown">Control plane and data plane lockdown</h3>
+<p>Some of the core components of OpenShift, such as the routers and API pods, are run as root. To minimise any risk of these containers being compromised we can offer IP whitelisting to the control plane and data plane(s) as a whole. UKCloud can lock down your control plane and data plane(s) to a set of addresses or address ranges with the use of Security Groups. These security group rules can be applied at the time of cluster deployment or later via a Service Request to the UKCloud OpenShift Support team. The information we require to apply these rules is which plane you would like these applied to, for example, control plane or data plane (specify internet or community network if applicable) and the source addresses or ranges that will be allowed access. When services are protected by security group rules the traffic is dropped before it reaches OpenShift.</p>
+<h3 id="whitelisting">Whitelisting</h3>
+<p>You can secure your routes by applying whitelists by IP address. The advantage of doing this is that you can do this yourself, however this does allow traffic to reach the OpenShift route before it is either allowed through or dropped based on the whitelisting you may have applied. We have documented the process of IP whitelisting <a href="oshift-how-restrict-access-to-openshift-routes-by-ip-address.html">here</a>.</p>
+<h2 id="network-isolation">Network Isolation</h2>
+<p>OpenShift uses a software-defined networking (SDN) approach to provide cluster-wide networking that enables communication between pods across the OpenShift cluster. This Container Networking Interface (CNI) runs in the OpenShift SDN project and creates an overlay network using the Open vSwitch (OVS) SDN plugin. OVS has three different plugins based on the type of pod network cluster admins would like to create. Previously we were using the ovs-multitenant SDN plugin but, as of February 2019 and OpenShift 3.11, we have been deploying OpenShift clusters using the ovs-network-policy SDN plugin. This plugin allows project administrators to configure their own network isolation policies using <a href="https://docs.openshift.com/container-platform/3.11/admin_guide/managing_networking.html#admin-guide-networking-networkpolicy">NetworkPolicy objects</a>. We have documented the process of using Network Policy based isolation <a href="oshift-how-use-netpol.html">here</a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <em>Improve this Doc</em> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com/">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

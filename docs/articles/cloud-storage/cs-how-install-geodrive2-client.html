@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to install the GeoDrive Client 2.0| UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to install the GeoDrive Client 2.0| UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/cloud-storage/cs-how-install-geodrive2-client.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-install-the-geodrive-client-20">How to install the GeoDrive Client 2.0</h1>
+
+<h2 id="what-is-the-geodrive-20-client">What is the GeoDrive 2.0 Client?</h2>
+<p>The GeoDrive 2.0 Client is a free application that runs on Windows and Windows Server, exposing UKCloud Cloud Storage as file systems. It’s designed as an easy way to use object storage by enabling Windows applications to interface with Cloud Storage servers using the popular S3 REST API.</p>
+<p>If you require a fully-integrated cloud gateway appliance with features like advanced deduplication and location caching, you may want to consider <a href="cs-how-install-cloudarray.html">CloudArrary</a> as an alternative.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Unlike The GeoDrive 2.0 Client, CloudArray is not a free application.</p>
+</div>
+<h2 id="use-cases">Use cases</h2>
+<p>You can use the GeoDrive 2.0 Client to:</p>
+<ul>
+<li><p>Expose UKCloud Cloud Storage for native access on Windows through a centralised server With the GeoDrive 2.0 Client installed on a centralised Windows Server installation.</p>
+</li>
+<li><p>Present Cloud Storage as storage for applications, without additional development.</p>
+</li>
+<li><p>Use Cloud Storage as a target for backups or long-term file retention.</p>
+</li>
+</ul>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>The GeoDrive 2.0 Client offers a single caching option:</p>
+<p><strong>Stub</strong>: files are initially stored locally and replaced with a stub, or shortcut, after a period of time. When you access a file that has been stubbed, it will be retrieved from the cloud. This offers the best scalability, as you can use a virtually unlimited amount of cloud storage.</p>
+<h2 id="installing-the-geodrive-20-client">Installing the GeoDrive 2.0 Client</h2>
+<ol>
+<li><p>Navigate to the following URL to download the ZIP file that contains the <a href="https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/GeoDrive.2_x64.zip?AWSAccessKeyId=438-1048-5-aefff7-1&amp;Expires=1578565704&amp;Signature=kVEbb9%2B%2FD0yJOgErtG9CAdsWqb0%3D">The GeoDrive 2.0 Client installer</a>.</p>
+</li>
+<li><p>Extract and run the setup launcher from the ZIP file.</p>
+</li>
+<li><p>Step through the wizard, adjusting values to suit your environment.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The Data Directory is used as a local cache for any content you place in the GeoDrive 2.0 drive, so you may want to put this on a non-system volume.</p>
+</div>
+</li>
+<li><p>When the installation is complete, click <strong>Add GeoDrive 2.0 Drive</strong> to open the <em>Drive Parameters</em> page.</p>
+</li>
+<li><p>On the <em>Drive Parameters</em> page, select any available drive letter from the drop down menu to use as the GeoDrive 2.0 drive then click <strong>Next</strong>.</p>
+<p>Optional: give your ECS drive a description.</p>
+<p><img src="images/cs-ecs-installtion-step-one.png" alt="Drive parameters page"></p>
+</li>
+<li><p>On the <em>Settings</em> page, click the <strong>Hosts</strong> button to configure the connection to the Cloud Storage service.</p>
+</li>
+<li><p>On the <strong>General</strong> tab, click the <strong>Add</strong> button and configure the settings as shown in the following example:</p>
+<ul>
+<li><p>You can find the <strong>User ID</strong> in the <em>Storage</em> section of the UKCloud Portal.</p>
+</li>
+<li><p>If you’ve forgotten or don’t know your <strong>Secret Access Key</strong>, you can reset it in the <em>Storage</em> section of the Portal.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The <strong>Server Name</strong> and <strong>Description</strong> can be anything, but must not be blank. In the example it is shown as <code>UKCloud</code> and <code>UKCloud - ECS Drive</code>.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p>From the <strong>Use https or http list</strong>, select <strong>HTTPS</strong>.</p>
+<p><img src="images/cs-ecs-installtion-step-two.png" alt="Hosts page"></p>
+</li>
+<li><p>In the <strong>Host name / IP</strong> field input one of the following S3 API endpoints:</p>
+<ul>
+<li><p><strong>Corsham (Assured)</strong></p>
+<ul>
+<li><p>Internet: <code>cas.cor00005.ukcloud.com</code></p>
+</li>
+<li><p>PSN Assured: <code>cas.cor00005.psnassured.ukcloud.com</code></p>
+</li>
+<li><p>HSCN: <code>cas.cor00005.ukcloud.thirdparty.nhs.uk/</code></p>
+</li>
+</ul>
+</li>
+<li><p><strong>Farnborough (Assured)</strong></p>
+<ul>
+<li><p>Internet: <code>cas.frn00006.ukcloud.com</code></p>
+</li>
+<li><p>PSN Assured: <code>cas.frn00006.psnassured.ukcloud.com</code></p>
+</li>
+<li><p>HSCN: <code>cas.frn00006.ukcloud.thirdparty.nhs.uk/</code></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Deselect the <strong>Port Override</strong> check box.</p>
+</li>
+<li><p>Click <strong>OK</strong> to return to the <em>Settings</em> page.</p>
+</li>
+<li><p>The rest of the fields on the <em>Settings</em> page enable you to configure the root directory, encryption and compression settings.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Configure these fields appropriately for your environment, or accept the defaults. We suggest you give the root directory a friendlier name, so that you can more easily identify it.</p>
+</div>
+<p><img src="images/cs-ecs-installtion-step-three.png" alt="Settings page"></p>
+</li>
+<li><p>Click the <strong>Advanced</strong> button to configure various thresholds, such as how long a local file will be retained before being replaced with a stub.</p>
+</li>
+<li><p>Click <strong>Next</strong>  to get to the <em>Logging</em> page.</p>
+</li>
+<li><p>Change the settings on the <em>Logging</em> page to meet your requirements.</p>
+</li>
+<li><p>Click <strong>Finish</strong> to complete the wizard. The GeoDrive 2.0 connects to Cloud Storage and starts synchronising any content you put on the drive letter you assigned to it.</p>
+<p><img src="images/cs-ecs-installtion-step-four.png" alt="Dashboard of GeoDrive 2.0"></p>
+</li>
+<li><p>You can share the GeoDrive 2.0 drive, or a folder within it, so that other machines on the network can access it.</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="images/cs-ecs-installtion-step-five.png" alt="GeoDrive 2.0 drive in windows"></td>
+<td><img src="images/cs-ecs-installtion-step-six.png" alt="Inside the GeoDrive 2.0 drive"></td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<p>See Microsoft's How-To guide on <a href="https://support.microsoft.com/en-gb/help/4092694/windows-10-changes-to-file-sharing-over-a-network">how to share a a drive on the network from Windows</a>.</p>
+</div>
+</li>
+</ol>
+<h2 id="next-steps">Next steps</h2>
+<p>This guide has shown you how to install and configure the GeoDrive Client 2.0 for use with Cloud Storage. For more information about how to use the service, see the following articles:</p>
+<ul>
+<li><p><a href="cs-gs.html"><em>Getting Started Guide for Cloud Storage</em></a></p>
+</li>
+<li><p><a href="cs-how-view-info-portal.html"><em>How to view Cloud Storage information in the UKCloud Portal</em></a></p>
+</li>
+<li><p><a href="cs-how-create-user.html"><em>How to create a new Cloud Storage user in the UKCloud Portal</em></a></p>
+</li>
+<li><p><a href="cs-how-use-file-browsers.html"><em>How to use file browsers with Cloud Storage</em></a></p>
+</li>
+<li><p>Cloud Storage Gateways</p>
+<ul>
+<li><a href="cs-how-install-cloudarray.html"><em>How to install CloudArray</em></a></li>
+</ul>
+</li>
+</ul>
+<h2 id="related-videos">Related videos</h2>
+<ul>
+<li><a href="cs-vid-geodrive2-client-overview.html"><em>GeoDrive 2.0 overview video</em></a></li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

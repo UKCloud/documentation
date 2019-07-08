@@ -3,6 +3,8 @@ title: Getting Started Guide for Cloud GPU Visualisation | UKCloud Ltd
 description: Provides information to get up and running with Cloud GPU Visualisation
 services: gpu
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -24,6 +26,7 @@ This service enables you to use UKCloud's main infrastructure platforms to meet 
 workloads:
 
 - **Compute workloads.** GPUs have become prevalent in a world that needs a lot of data processing, fast. The parallel nature of GPU cores lends itself perfectly to supporting initiatives such as deep or machine learning and large-scale mathematical modelling.
+
 - **Visualisation workloads.** Describes the traditional use cases for GPU processing --- these include simulation, powering desktop applications with graphics content (such as computer aided design), video encoding, rendering or streaming.
 
 This Getting Started Guide provides an introduction for how to use Cloud GPU for visualisation workloads and describes the tasks you need to perform to get the service up and running.
@@ -46,11 +49,15 @@ Delivery model | vGPU | vGPU
 With Cloud GPU Visualisation, you can:
 
 - **Bring any application to the cloud** --- Applications that have previously struggled to transition to the cloud because of GPU requirements can now be moved, improving manageability of your data and applications, while increasing collaborative opportunities.
+
 - **Centralise your applications** --- Cloud GPU enables you to centralise your applications to improve access to them. By doing so, users can access the tools they need from anywhere, anytime on commodity devices.
+
 - **Visualise data in real-time** --- Improved visualisation capabilities provided by Cloud GPU Visualisation enables you to visualise data in real-time to render virtualised environments when you need them. This helps you to:
 
   - Design using Computer Aided Design applications in a centralised environment, enabling ease of collaboration
+
   - Create and run simulations
+
   - Render and analyse high resolution images and video
 
 ## Before you begin
@@ -79,9 +86,13 @@ When your VM is ready, make sure it is powered off and then use My Calls in the 
 complete the setup of your service:
 
 - Service type: GPU -- Visualisation
+
 - VDC name
+
 - vApp name
+
 - VM name
+
 - vGPU profile that you want to use (see table below)
 
 vGPU profile | Intended use case | Frame buffer (Mbytes) | Virtual display heads | Maximum resolution per display head | Effective number of vGPUs
@@ -125,12 +136,15 @@ To install NVIDIA drivers:
     **On Windows:**
 
     - From Explorer, double click the driver installer file (NVIDIA*.*.exe).
+
     - Select **Custom (Advanced)**.
+
     - Select **Perform a clean installation**.
 
         ![Custom installation options in NVIDIA Installer](images/gpu-nvidia-win-install-driver.png)
 
     - Click **Next**.
+
     - Restart and connect to the VM.
 
     **On Linux:**
@@ -187,9 +201,13 @@ To enable full functionality of the NVIDIA GPU card, your VM must obtain a valid
 To enable access to the NVIDIA GRID License Server from your network, you must create the following firewall rule on your edge gateway:
 
 - **Source/Source Port:** as appropriate for your source network
+
 - **Destination:** `51:179.197.53`
+
 - **Destination Port:** `7070`
+
 - **Protocol:** `TCP`
+
 - **Action:** `Allow`
 
 ![Add firewall rule dialog box](images/gpu-vcd-add-firewall-rule.png)
@@ -229,7 +247,9 @@ To license GRID Virtual GPU on Linux
 2. Edit the file and set the following values:
 
     - `ServerAddress=gpuls.ukcloud.com`
+
     - `ServerPort=7070`
+
     - `FeatureType=1`
 
 3. Save your changes.
@@ -260,6 +280,7 @@ To license GRID Virtual GPU on Linux
     - Select Manage License and input the following server details:
 
       - **License Server:** `gpuls.ukcloud.com`
+
       - **Port Number:** `7070`
 
 ### Choosing a remote desktop application
@@ -271,6 +292,7 @@ For a list of remote desktop applications that utilise GPU acceleration and can 
 We've tested the following applications against our Cloud GPU service to confirm that they work successfully:
 
 - VMware Blast Extreme
+
 - HP Remote Graphics Software
 
 > [!NOTE]
@@ -299,4 +321,4 @@ device.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

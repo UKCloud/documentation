@@ -8,7 +8,7 @@
     <title>Getting Started Guide for Cloud Storage | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for Cloud Storage | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/cloud-storage/cs-gs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -94,13 +103,20 @@ and provides information about some command-line tools that you can use to inter
 <h2 id="cloud-storage-overview">Cloud Storage overview</h2>
 <p>Cloud Storage:</p>
 <ul>
-<li>Is a secure and highly adaptable storage platform designed to address a wide variety of use cases</li>
-<li>Is based on object storage technology that is natively optimised for cloud storage in terms of scale, resilience and accessibility</li>
-<li>Removes the complexity of capacity management by utilising a pay‑as‑you‑go model, so you pay for what you use, when you use it, scaling indefinitely and on demand</li>
-<li>Natively enables application deduplication and redundancy to ensure the highest level of data availability, while reducing the cost and management of on-premises storage solutions</li>
-<li>Provides easy access to storage anywhere, any time, to any device, using HTTP(S) to simplify the integration of object storage systems into cloud‑based solutions by removing the need to rely on the availability of web, file or FTP servers</li>
-<li>Offloads objects (files, media, images) from compute resources, reducing the load on server resources</li>
-<li>Automatically replicates and distributes objects to give high levels of data durability and availability, eliminating the need for cloud backup and recovery</li>
+<li><p>Is a secure and highly adaptable storage platform designed to address a wide variety of use cases</p>
+</li>
+<li><p>Is based on object storage technology that is natively optimised for cloud storage in terms of scale, resilience and accessibility</p>
+</li>
+<li><p>Removes the complexity of capacity management by utilising a pay‑as‑you‑go model, so you pay for what you use, when you use it, scaling indefinitely and on demand</p>
+</li>
+<li><p>Natively enables application deduplication and redundancy to ensure the highest level of data availability, while reducing the cost and management of on-premises storage solutions</p>
+</li>
+<li><p>Provides easy access to storage anywhere, any time, to any device, using HTTP(S) to simplify the integration of object storage systems into cloud‑based solutions by removing the need to rely on the availability of web, file or FTP servers</p>
+</li>
+<li><p>Offloads objects (files, media, images) from compute resources, reducing the load on server resources</p>
+</li>
+<li><p>Automatically replicates and distributes objects to give high levels of data durability and availability, eliminating the need for cloud backup and recovery</p>
+</li>
 </ul>
 <p>ECS provides two APIs that you can use to manage your cloud storage: the S3‑compatible API and the EMC ECS Atmos API.</p>
 <div class="NOTE">
@@ -109,24 +125,33 @@ and provides information about some command-line tools that you can use to inter
 </div>
 <p>The key differences between the two APIs are:</p>
 <ul>
-<li>The ECS S3-compatible API enables you to easily migrate applications between Atmos, S3 and other S3‑compatible storage; but not all functionality available in S3 is available on ECS as shown in the <em>S3 Supported Features</em> chapter of the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf"><em>Elastic Cloud Storage (ECS) Data Access Guide</em></a>).</li>
-<li>The ECS Atmos API provides backward compatibility with the EMC Atmos platform. It offers access to the majority of the features of the platform with certain exceptions as listed in the <em>Atmos Supported Features</em> chapter of the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf"><em>Elastic Cloud Storage (ECS) Data Access Guide</em></a>.</li>
+<li><p>The ECS S3-compatible API enables you to easily migrate applications between Atmos, S3 and other S3‑compatible storage; but not all functionality available in S3 is available on ECS as shown in the <em>S3 Supported Features</em> chapter of the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf"><em>Elastic Cloud Storage (ECS) Data Access Guide</em></a>).</p>
+</li>
+<li><p>The ECS Atmos API provides backward compatibility with the EMC Atmos platform. It offers access to the majority of the features of the platform with certain exceptions as listed in the <em>Atmos Supported Features</em> chapter of the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf"><em>Elastic Cloud Storage (ECS) Data Access Guide</em></a>.</p>
+</li>
 </ul>
 <h3 id="cloud-storage-use-cases">Cloud Storage use cases</h3>
 <p>The low cost of cloud storage per GB, as well as its almost unlimited scalability, means there's a large variety of use cases for it. For example, it's ideal for data archives, backups, log files, and media repositories.</p>
 <p>We anticipate that most web applications can make good use of cloud storage for static content, such as images and downloadable binaries. Storing these items in cloud storage—rather than in primary storage attached to web servers, inside the database or on a traditional file share—can provide significant benefits in terms of cost savings, agility and performance.</p>
 <p>For example, with an internet-facing application that enables users to download forms and guides in PDF, these items are often stored in primary storage attached to the web servers, which creates several challenges:</p>
 <ul>
-<li>Whenever a PDF is updated, the updated copy must be replicated to all web servers</li>
-<li>When an item is downloaded, the bandwidth usage of the web server in question increases</li>
-<li>Multiple simultaneous downloads could overload the web servers or other components of the network infrastructure</li>
-<li>Each object is stored multiple times in primary storage, increasing the overall cost of storage</li>
+<li><p>Whenever a PDF is updated, the updated copy must be replicated to all web servers</p>
+</li>
+<li><p>When an item is downloaded, the bandwidth usage of the web server in question increases</p>
+</li>
+<li><p>Multiple simultaneous downloads could overload the web servers or other components of the network infrastructure</p>
+</li>
+<li><p>Each object is stored multiple times in primary storage, increasing the overall cost of storage</p>
+</li>
 </ul>
 <p>On the other hand, storing this content in cloud storage overcomes these challenges because:</p>
 <ul>
-<li>Only one copy of each item is stored, so updates only need to be made in one place</li>
-<li>End users connect directly to cloud storage to download PDFs, bypassing the web servers and associated network infrastructure</li>
-<li>Objects are stored only once, and at a much lower price per GB, which substantially reduces the overall cost of storage</li>
+<li><p>Only one copy of each item is stored, so updates only need to be made in one place</p>
+</li>
+<li><p>End users connect directly to cloud storage to download PDFs, bypassing the web servers and associated network infrastructure</p>
+</li>
+<li><p>Objects are stored only once, and at a much lower price per GB, which substantially reduces the overall cost of storage</p>
+</li>
 </ul>
 <p>The same principles apply to other static content, such as images and (especially) videos. The more workload you can offload onto an external system such as cloud storage, the leaner your application infrastructure
 can become.</p>
@@ -167,7 +192,7 @@ performance for your solution.</p>
 <td><code>atmos.cas.cor00005.psnassured.ukcloud.com</code></td>
 </tr>
 <tr>
-<td>N3</td>
+<td>HSCN</td>
 <td><code>cas.cor00005.ukcloud.thirdparty.nhs.uk/</code></td>
 <td><code>atmos.cas.cor00005.ukcloud.thirdparty.nhs.uk/</code></td>
 </tr>
@@ -187,14 +212,12 @@ performance for your solution.</p>
 <td><code>atmos.cas.frn00006.psnassured.ukcloud.com</code></td>
 </tr>
 <tr>
-<td>N3</td>
+<td>HSCN</td>
 <td><code>cas.frn00006.ukcloud.thirdparty.nhs.uk/</code></td>
 <td><code>atmos.cas.frn00006.ukcloud.thirdparty.nhs.uk/</code></td>
 </tr>
 </tbody>
 </table>
-<p>If you're using the ENHANCED option (geo-resilient storage), you can use either the Corsham or Farnborough endpoints. In the event of a site failure, there will be an outage to objects created on the failed site.
-UKCloud will bring these objects online in the other site within about 15 minutes.</p>
 <p>Contact UKCloud support if you are unsure which endpoint to use.</p>
 <h2 id="using-the-ecs-s3-compatible-api">Using the ECS S3-compatible API</h2>
 <p>The S3-compatible API is at:</p>
@@ -209,7 +232,7 @@ UKCloud will bring these objects online in the other site within about 15 minute
 <p><a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf">https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf</a></p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Currently the N3 DNS service does not allow UKCloud to create wildcard DNS entries for our services. This means that S3 URLs that feature the bucket as part of the domain do not work (for example, <code>bucket01.cas.frn00006.ukcloud.thirdparty.nhs.uk</code>). With most S3 tools, you can choose whether to use prefix buckets or suffix buckets. If you are using the service via N3 you'll need to make sure your client tools support suffix buckets.</p>
+<p>Currently the HSCN DNS service does not allow UKCloud to create wildcard DNS entries for our services. This means that S3 URLs that feature the bucket as part of the domain do not work (for example, <code>bucket01.cas.frn00006.ukcloud.thirdparty.nhs.uk</code>). With most S3 tools, you can choose whether to use prefix buckets or suffix buckets. If you are using the service via HSCN you'll need to make sure your client tools support suffix buckets.</p>
 </div>
 <h3 id="amazon-s3-authentication-tool-for-curl">Amazon S3 Authentication Tool for Curl</h3>
 <p>The Amazon S3 Authentication Tool for Curl (S3Curl) is a very useful Perl script, developed by Amazon. It's a wrapper for Curl that calculates the required authentication signature automatically for each request. As the authentication signature changes for every request, this allows Curl to interact with the API outside of code, enabling you to validate that your commands are working correctly and view the raw HTML response from the API, which can be useful when troubleshooting.</p>
@@ -234,8 +257,10 @@ yum install perl-Digest-HMAC
 </code></pre>
 <p>Where:</p>
 <ul>
-<li><code>user_id</code> is your User ID (you can find this in the Storage section of the UKCloud Portal)</li>
-<li><code>secret_key</code> is your secret key (If you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)</li>
+<li><p><code>user_id</code> is your User ID (you can find this in the Storage section of the UKCloud Portal)</p>
+</li>
+<li><p><code>secret_key</code> is your secret key (If you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)</p>
+</li>
 </ul>
 </li>
 <li><p>Change the permissions, otherwise the Perl script will refuse to run.</p>
@@ -304,11 +329,16 @@ my @endpoints = ('cas.cor00005.ukcloud.com',
 </li>
 <li><p>When prompted, provide the following information:</p>
 <ul>
-<li>Access Key --- your User ID (you can find this in the Storage section of the UKCloud Portal)</li>
-<li>Secret Key --- your secret key (If you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)</li>
-<li>Encryption password --- create a secure password</li>
-<li>Path to GPG program --- as appropriate for your system</li>
-<li>Use HTTPS protocol --- Yes</li>
+<li><p>Access Key --- your User ID (you can find this in the Storage section of the UKCloud Portal)</p>
+</li>
+<li><p>Secret Key --- your secret key (If you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)</p>
+</li>
+<li><p>Encryption password --- create a secure password</p>
+</li>
+<li><p>Path to GPG program --- as appropriate for your system</p>
+</li>
+<li><p>Use HTTPS protocol --- Yes</p>
+</li>
 </ul>
 </li>
 <li><p>You'll be prompted to test the connection. After the test, even if it fails, save the configuration, which will be written to <code>~/.s3cfg</code>.</p>
@@ -365,8 +395,10 @@ my @endpoints = ('cas.cor00005.ukcloud.com',
 <ul>
 <li><p>View information about the namespaces within your Cloud Storage environment, including:</p>
 <ul>
-<li>How many buckets are in each namespace</li>
-<li>Storage consumed by each namespace</li>
+<li><p>How many buckets are in each namespace</p>
+</li>
+<li><p>Storage consumed by each namespace</p>
+</li>
 </ul>
 </li>
 <li><p>View a list of users with access to the namespace</p>
@@ -375,9 +407,12 @@ my @endpoints = ('cas.cor00005.ukcloud.com',
 </li>
 <li><p>View information about the buckets within a namespace, including:</p>
 <ul>
-<li>API Type: Atmos or S3</li>
-<li>Storage consumed by the bucket</li>
-<li>Number of objects in the bucket</li>
+<li><p>API Type: Atmos or S3</p>
+</li>
+<li><p>Storage consumed by the bucket</p>
+</li>
+<li><p>Number of objects in the bucket</p>
+</li>
 </ul>
 </li>
 <li><p>View a graphical representation of the storage consumed by a bucket over the last 30 days</p>
@@ -398,9 +433,24 @@ my @endpoints = ('cas.cor00005.ukcloud.com',
 <h2 id="next-steps">Next steps</h2>
 <p>In this Getting Started Guide, you've learned the basics about the Cloud Storage service. For more detailed information, see the following articles in the Knowledge Centre:</p>
 <ul>
-<li><a href="cs-how-view-info-portal.html"><em>How to view Cloud Storage information in the UKCloud Portal</em></a></li>
-<li><a href="https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf"><em>Blueprint -- Using storage gateways with Cloud Storage (ECS)</em></a></li>
-<li><a href="https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-575-Blueprint-Using-file-browsers-with-Cloud-Storage-ECS-v1.pdf"><em>Blueprint -- Using file browsers with Cloud Storage (ECS)</em></a></li>
+<li><p><a href="cs-how-view-info-portal.html"><em>How to view Cloud Storage information in the UKCloud Portal</em></a></p>
+</li>
+<li><p><a href="cs-how-create-user.html"><em>How to create a new Cloud Storage user in the UKCloud Portal</em></a></p>
+</li>
+<li><p><a href="cs-how-use-file-browsers.html"><em>How to use file browsers with Cloud Storage</em></a></p>
+</li>
+<li><p>Cloud Storage Gateways</p>
+<ul>
+<li><p><a href="cs-how-install-geodrive2-client.html"><em>How to install the GeoDrive Client 2.0</em></a></p>
+</li>
+<li><p><a href="cs-how-install-cloudarray.html"><em>How to install CloudArray</em></a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="related-videos">Related videos</h2>
+<ul>
+<li><a href="cs-vid-geodrive2-client-overview.html"><em>GeoDrive 2.0 overview video</em></a></li>
 </ul>
 <h2 id="glossary">Glossary</h2>
 <p>This section provides a glossary of terms specific to Cloud Storage.</p>
@@ -417,7 +467,7 @@ multi-tenant environment.</p>
 <p><strong>subtenant</strong>  A construct used to create a multi-tenant environment within Cloud
 Storage.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -427,13 +477,6 @@ Storage.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/cloud-storage/cs-gs.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -452,11 +495,24 @@ Storage.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

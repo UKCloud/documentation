@@ -3,6 +3,8 @@ title: How to obtain usage metrics to use for OpenShift capacity management | UK
 description: Shows you how to obtain various statistics about your UKCloud for OpenShift cluster that you can use to help with capacity management
 services: openshift
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 10:26:58
 
 toc_rootlink: How To
 toc_sub1:
@@ -35,15 +37,20 @@ A UKCloud deployed OpenShift cluster comprises a single Starter Pack, plus a num
 The sections in this guide, show you how to obtain various statistics about the platform, including:
 
 - Overall status of each node in the cluster
+
 - Uptime per node
+
 - CPU usage
+
 - Memory usage
+
 - Block storage consumption (used by persistent volumes)
+
 - Object storage consumption (used by the registry)
 
 ### Intended audience
 
-To complete the steps in this guide you must have access to and a working knowledge of `oc`, the OpenStack command-line client (CLI). For more information, see OpenShift's [*Get Started with the CLI*](https://docs.openshift.com/container-platform/3.7/cli_reference/get_started_cli.html).
+To complete the steps in this guide you must have access to and a working knowledge of `oc`, the OpenStack command-line client (CLI). For more information, see OpenShift's [*Get Started with the CLI*](https://docs.openshift.com/container-platform/3.9/cli_reference/get_started_cli.html).
 
 ## Identifying capacity statistics
 
@@ -103,7 +110,7 @@ Object storage is used only for the OpenShift registry, therefore, you can calcu
 
 ## Other monitoring options
 
-You can find a simple example of a custom monitoring application, using the REST API described above, in [*How to monitor your OpenShift cluster*](oshift-how-monitor-cluster.md) and as a [UKCloud blog post](https://ukcloud.com/news-resources/news/blog/simple-openshift-monitoring).
+You can find a simple example of a custom monitoring application, using the REST API described above, in [*How to monitor your OpenShift cluster*](oshift-how-monitor-cluster.md) and as a [UKCloud blog post](https://ukcloud.com/hub/news/simple-openshift-monitoring/).
 
 You can also perform monitoring using Hawkular, which is built into the product. You can access Hawkular from the browser-based console at:
 
@@ -176,4 +183,4 @@ imagestream_size = add_sizes(output.stdout.decode('utf-8'), 1)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

@@ -8,7 +8,7 @@
     <title>How to create a vApp network | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a vApp network | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-vapp-network.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -89,11 +98,17 @@
 <p>vApp networks enable you to create smaller networks within individual vApps that have a vApp edge, similar to the edge gateway on your VDC. Although a vApp edge isn't as feature rich as a VDC edge, it enables you to create firewall and NAT rules to separate your VDC networks from your vApp virtual machines (VMs). This means you can create some quite complex networks to satisfy application needs.</p>
 <p>The example of a vApp network, below, shows the vApp edge.</p>
 <p><img src="images/vmw-vapp-network.png" alt="vApp network"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You cannot create vApp networks in the new vCloud Director 9.1 tenant portal. If your environment uses vCloud Director 9.1, you must first switch to the vCloud Director web console. For more information, see <a href="vmw-how-switch-web-console.html"><em>How to switch to the vCloud Director web console from the tenant portal</em></a>.</p>
+</div>
 <h2 id="creating-a-vapp-network">Creating a vApp network</h2>
 <p>There are two ways to create a vApp network within vCloud Director:</p>
 <ul>
-<li><a href="#creating-a-vapp-network-during-vapp-creation"><em>During vApp creation</em></a></li>
-<li><a href="#creating-a-vapp-network-after-vapp-creation"><em>After vApp creation</em></a></li>
+<li><p><a href="#creating-a-vapp-network-during-vapp-creation"><em>During vApp creation</em></a></p>
+</li>
+<li><p><a href="#creating-a-vapp-network-after-vapp-creation"><em>After vApp creation</em></a></p>
+</li>
 </ul>
 <h3 id="creating-a-vapp-network-during-vapp-creation">Creating a vApp network during vApp creation</h3>
 <ol>
@@ -218,9 +233,12 @@
 <p>Static routing at the vApp network level allows traffic to route between different vApp networks, across the VDC networks.</p>
 <p>The prerequisites for static routing are as follows:</p>
 <ul>
-<li>Static routing must be enabled for the VDC network you're connecting to (see <a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a>).</li>
-<li>The two vApp networks must be routed to the same VDC network.</li>
-<li>The vApp networks must be in vApps that have been started at least once.</li>
+<li><p>Static routing must be enabled for the VDC network you're connecting to (see <a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a>).</p>
+</li>
+<li><p>The two vApp networks must be routed to the same VDC network.</p>
+</li>
+<li><p>The vApp networks must be in vApps that have been started at least once.</p>
+</li>
 </ul>
 <p>To add a static route:</p>
 <ol>
@@ -230,8 +248,10 @@
 </li>
 <li><p>Enter the following details:</p>
 <ul>
-<li><strong>Network</strong> - The address of the first vApp network to which you're adding a static route</li>
-<li><strong>Next Hop IP</strong> - The external IP address of that vApp network's router</li>
+<li><p><strong>Network</strong> - The address of the first vApp network to which you're adding a static route</p>
+</li>
+<li><p><strong>Next Hop IP</strong> - The external IP address of that vApp network's router</p>
+</li>
 </ul>
 <p><img src="images/vmw-vcd-vapp-static-route.png" alt="Add Static Route dialog box"></p>
 </li>
@@ -305,7 +325,7 @@
 <p>If you're converting a vApp after creation, on the <strong>My Cloud</strong> tab, open the vApp you want to fence, then, on the <strong>Networking</strong> tab, select the <strong>Fence vApp</strong> checkbox. Make sure you click <strong>Apply</strong> when you're done to save any changes.</p>
 <p><img src="images/vmw-vcd-vapp-fence-convert.png" alt="Fence vApp check box on vApp Networking tab"></p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -315,13 +335,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-vapp-network.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -340,11 +353,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

@@ -3,6 +3,8 @@ title: Data centre advance notice requirements | UKCloud Ltd
 description: Referencing the Data Centre's advanced notice requirements
 services: other
 author: Matt Warner
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -35,9 +37,11 @@ For customers requiring a new installation of hardware into one of the data cent
 For more information on the process for installing hardware into one of the UKCloud data centres, see the appropriate Cloud Enablement Service Scope:
 
 - [*CAPS/CPA-approved VPN*](../enablement/enbl-sco-capscpa.md)
+
 - [*VPN solutions*](../enablement/enbl-sco-vpn.md)
+
 - [*Server/Storage Hosting*](../enablement/enbl-sco-hosting.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

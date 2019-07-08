@@ -8,7 +8,7 @@
     <title>How to access syslog data for your edge gateway | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to access syslog data for your edge gateway | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-access-syslog-data.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -88,9 +97,12 @@
 <p>Your edge gateway is globally configured to send syslog messages to a specific IP address (<code>100.127.255.250</code>). By configuring a new network or IP address within your virtual data centre (VDC) and deploying a collector with the syslog IP address, you can access your edge gateway
 syslog data. You can then use this data to check:</p>
 <ul>
-<li>Allowed and denied network traffic</li>
-<li>Load balancer statistics</li>
-<li>Load balancer health</li>
+<li><p>Allowed and denied network traffic</p>
+</li>
+<li><p>Load balancer statistics</p>
+</li>
+<li><p>Load balancer health</p>
+</li>
 </ul>
 <p>This guide explains the network configuration required to provision a syslog collector within your VDC to receive syslog information direct from your edge gateway.</p>
 <h2 id="collecting-syslog-data-for-a-single-edge-gateway">Collecting syslog data for a single edge gateway</h2>
@@ -114,11 +126,16 @@ syslog data. You can then use this data to check:</p>
 <ol>
 <li><p>Create a new routed network with the following details:</p>
 <ul>
-<li><strong>Org Network Name:</strong> Customer defined</li>
-<li><strong>Gateway:</strong> <code>100.127.255.249</code></li>
-<li><strong>Subnet Mask:</strong> <code>255.255.255.248</code></li>
-<li><strong>DNS:</strong> Customer defined</li>
-<li><strong>Static IP Pool:</strong> <code>100.127.255.250 -- 100.127.255.254</code></li>
+<li><p><strong>Org Network Name:</strong> Customer defined</p>
+</li>
+<li><p><strong>Gateway:</strong> <code>100.127.255.249</code></p>
+</li>
+<li><p><strong>Subnet Mask:</strong> <code>255.255.255.248</code></p>
+</li>
+<li><p><strong>DNS:</strong> Customer defined</p>
+</li>
+<li><p><strong>Static IP Pool:</strong> <code>100.127.255.250 -- 100.127.255.254</code></p>
+</li>
 </ul>
 <p>You can find more detailed steps for creating a routed network in <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a>.</p>
 </li>
@@ -143,17 +160,24 @@ syslog data. You can then use this data to check:</p>
 <li><p>Create a firewall rule on the syslog edge to allow syslog traffic from the source edges' TRANSIT IPs (<code>172.26.</code><em><code>x</code></em><code>.</code><em><code>x</code></em> in Assured or <code>172.26.</code><em><code>LOWER OCTET</code></em><code>.</code><em><code>x</code></em> in Elevated) through to the syslog server IP.</p>
 <p>You can create individual rules using the following suggestions:</p>
 <ul>
-<li><code>&lt;SOURCE TRANSIT IP&gt;:Any</code> to <code>100.127.255.250</code> on UDP</li>
-<li><code>Any:Any</code> to <code>100.127.255.250:514</code> on UDP</li>
-<li><code>&lt;NFT TRANSIT CIDR/SUBNET&gt;:Any</code> to <code>100.127.255.250:514</code> on UDP</li>
+<li><p><code>&lt;SOURCE TRANSIT IP&gt;:Any</code> to <code>100.127.255.250</code> on UDP</p>
+</li>
+<li><p><code>Any:Any</code> to <code>100.127.255.250:514</code> on UDP</p>
+</li>
+<li><p><code>&lt;NFT TRANSIT CIDR/SUBNET&gt;:Any</code> to <code>100.127.255.250:514</code> on UDP</p>
+</li>
 </ul>
 </li>
 <li><p>On each of the source edges, create a static route to direct traffic to the syslog edge. Use the following settings:</p>
 <ul>
-<li><strong>Applied On:</strong> <code>&lt;nft_network&gt;</code></li>
-<li><strong>Name:</strong> Syslog traffic (or any other name you prefer)</li>
-<li><strong>Network:</strong> <code>100.127.255.248/29</code></li>
-<li><strong>Next Hop IP:</strong> The TRANSIT IP address of the syslog edge</li>
+<li><p><strong>Applied On:</strong> <code>&lt;nft_network&gt;</code></p>
+</li>
+<li><p><strong>Name:</strong> Syslog traffic (or any other name you prefer)</p>
+</li>
+<li><p><strong>Network:</strong> <code>100.127.255.248/29</code></p>
+</li>
+<li><p><strong>Next Hop IP:</strong> The TRANSIT IP address of the syslog edge</p>
+</li>
 </ul>
 <p>Syslog packets from each source edge will now be forwarded to the syslog edge, with the source of the syslog traffic being the TRANSIT IP of the source edge.</p>
 </li>
@@ -195,7 +219,7 @@ syslog data. You can then use this data to check:</p>
 <p>Refer to
 <a href="http://cbonte.github.io/haproxy-dconv/1.5/configuration.html#8">http://cbonte.github.io/haproxy-dconv/1.5/configuration.html#8</a> for information about how to interpret the load balancer logs.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -205,13 +229,6 @@ syslog data. You can then use this data to check:</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-access-syslog-data.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -230,11 +247,24 @@ syslog data. You can then use this data to check:</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

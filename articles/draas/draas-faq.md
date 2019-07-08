@@ -3,6 +3,8 @@ title: Disaster Recovery as a Service FAQs | UKCloud Ltd
 description: Frequently asked questions for Disaster Recovery as a Service (Powered by Zerto)
 services: draas
 author: Matt Warner
+reviewer:
+lastreviewed: 02/08/2018 16:00:52
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -67,11 +69,11 @@ The price of Disaster Recovery as a Service is based on the storage tier that th
 
 ### What connectivity options do I have?
 
-All UKCloud connectivity options are available including Internet, PSN-A, PSN-P, N3/HSCN, Janet and RLI.
+All UKCloud connectivity options are available including Internet, PSN, HSCN, Janet and RLI.
 
 ### Can I replicate into the UKCloud Elevated environment?
 
-If you currently have a PSN-P connection in your primary site, then you would be able to replicate over PSN-P into the UKCloud Elevated environment. However, if you do not have a PSN-P connection at your primary site but would like to replicate into the Elevated environment, you can use an encrypted private line to do so. Contact your Cloud Architect for more details on this.
+If you currently have a PSN connection in your primary site, then you would be able to replicate over PSN into the UKCloud Elevated environment. However, if you do not have a PSN connection at your primary site but would like to replicate into the Elevated environment, you can use an encrypted private line to do so. Contact your Cloud Architect for more details on this.
 
 ### How do I invoke a recovery if my Zerto console becomes unavailable?
 
@@ -87,7 +89,7 @@ The pricing for Disaster Recovery as a Service is simple. You only pay for the d
 
 ### How do I modify replication in the UKCloud Elevated environment?
 
-Zerto replication to the UKCloud Assured environment can be controlled from the internet-facing Zerto Portal, however replication into the UKCloud Elevated environment can only be controlled via the Elevated Zerto Portal. To access the Elevated Zerto Portal, you need to be connected to it via the PSN-P, RLI, private encrypted connection or our Secure Remote Access (SRA) service.
+Zerto replication to the UKCloud Assured environment can be controlled from the internet-facing Zerto Portal, however replication into the UKCloud Elevated environment can only be controlled via the Elevated Zerto Portal. To access the Elevated Zerto Portal, you need to be connected to it via the PSN, RLI, private encrypted connection or our Secure Remote Access (SRA) service.
 
 ### Does UKCloud install the Zerto software in my data centre?
 
@@ -101,4 +103,4 @@ Yes, once you have tested or performed a live failover you can failback onto you
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

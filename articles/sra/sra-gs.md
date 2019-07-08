@@ -3,6 +3,8 @@ title: Getting Started Guide for Secure Remote Access | UKCloud Ltd
 description: Provides information to get up and running with Secure Remote Access
 services: sra
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -23,6 +25,7 @@ toc_mdlink: sra-gs.md
 This document is for customers who have:
 
 - Completed the UKCloud Assurance Wrap
+
 - Been approved to use the Secure Remote Access (SRA) service to manage services in the Elevated OFFICIAL security domain on the UKCloud platform
 
 ## Post approval
@@ -38,10 +41,15 @@ During creation of the UKCloud SRA vDC, we'll ask you for some additional inform
 via the service request:
 
 - Confirm the customer account number in Elevated as a new Org will be created under the account to contain the SRA vDC. The Org number will be used as an identifier when signing certificates.
+
 - The preferred IP pool you want to use for your client devices. If the IP Pool you'd prefer is in use by another customer then another will have to be chosen. We'll inform you if this is the case.
+
 - If you want to specify an IP from the IP pool for each device, we'll need you to supply the mapping.
+
 - Any specified DNS servers.
+
 - The Elevated Network Firewall Tenant (NFT) number and the Elevated organisation containing it for connection into Elevated.
+
 - A certificate signing request for each remote access device.
 
 ## Certificate signing request generation
@@ -56,11 +64,13 @@ Follow the steps below to generate the CSR for a Windows device.
 2. In the console tree, double-click **Personal** and then click **Certificates**.
 3. On the **Actions** menu, point to **All Tasks**, point to **Advanced Options** and then click **Create Custom Request** to start the Certificate Enrolment wizard. Click **Next**.
 4. On the Custom request page, in the **Templates** list, we recommend using the **Custom Request** option as your domain policy may be incompatible with the SRA service.
+
     - Select **Proceed without enrolment policy** and click **Next**.
 5. Select **(No template) CNG key** and ensure the **PKCS#10** radio button is selected, then click **Next**.
 6. At the **Certificate Information** page, click the down arrow next to **Details** then click the **Properties** button.
 7. Click the **Private Key** tab, then the down arrow to the right of **Key options**.
 8. Change the **Key size** to **2048** and click **Apply**.
+
     - **Optional:** If you want to back up the certificate (to protect against client device failure) click the check boxes for the **private key**. You'll be asked for a password.
 9. For the file format, select **Base 64** and then save the CSR.
 
@@ -78,15 +88,15 @@ We request that you paste the contents of the CSR file directly into a ticket fo
 
 ## VPN Cisco AnyConnect client setup
 
-To access yoru SRA VDC you need to download the Cisco AnyConnect client and install it on your remote access devices.
+To access your SRA VDC you need to download the Cisco AnyConnect client and install it on your remote access devices (requires UKCloud Portal login).
 
 For each OS there is the main Cisco AnyConnect client software install and an additional executable to enable the FIPS capability. You need to run both.
 
+### Download link
+
+<https://portal.skyscapecloud.com/support/knowledge_centre/a0e452d8-cd7b-49a4-a3ca-f791620cb084>
+
 ### Linux
-
-#### Download link
-
-<https://portal.ukcloud.com/support/knowledge_centre/a0e452d8-cd7b-49a4-a3ca-f791620cb084>
 
 #### Install the AnyConnect client
 
@@ -108,10 +118,6 @@ tar zxvf anyconnect-linux-64-<version number>-enableFIPS.tar.gz
 
 ### Windows
 
-#### Download link
-
-<https://portal.ukcloud.com/support/knowledge_centre/9af4958c-04c0-4ae1-8eb2-2733dc8042ce>
-
 #### Install the AnyConnect client
 
 The windows installation has the option of `.msi` or `.iso` (that contains the `.msi`) for the AnyConnect client image. The following installs may need to be run as administrator depending on the local policy of your Windows device.
@@ -124,13 +130,11 @@ Double click `anyconnect-EnableFIPS-win-<version number>.exe` and then enter `y`
 
 ### Mac
 
-#### Download link
-
-https://portal.ukcloud.com/support/knowledge_centre/e8b2d284-ec20-45e4-aed6-5a6071299064
+No further instructions required.
 
 ## AnyConnect client software
 
-We'll make the latest Cisco AnyConnect client software available via the Knowledge Centre using the links above. Using the latest version of the AnyConnect client will probably be a requirement of your ITSHC or service assurance wrap so it will be worth checking the above articles periodically.
+We'll make the latest Cisco AnyConnect client software available via the Knowledge Centre using the link above. Using the latest version of the AnyConnect client will probably be a requirement of your ITSHC or service assurance wrap so it will be worth checking the above articles periodically.
 
 If a client is upgraded from a previous install then the following post installation steps will need to be performed again to ensure the client configuration isn't reverted to the default.
 
@@ -147,7 +151,7 @@ Windows | `C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile`
 
 In addition to the AnyConnect profile, you also need to install a local policy which is available in the Knowledge Centre:
 
-<https://portal.ukcloud.com/support/knowledge_centre/2effd0b2-1eda-4999-87a6-6140e5fc07ea>
+<https://portal.skyscapecloud.com/support/knowledge_centre/2effd0b2-1eda-4999-87a6-6140e5fc07ea>
 
 Unzip the file and copy it to: `/opt/cisco/anyconnect/AnyConnectLocalPolicy.xml`.
 
@@ -162,6 +166,7 @@ For each customer SRA service a unique IssuingCA certificate is generated and us
 The certificates sent through will named as below:
 
 - **IssuingCA** – `clientcert.pem`
+
 - **Device Certificate** - `E51FFC7D50C<HEX VALUE>.pem`
 
 ### Windows certificate store
@@ -201,7 +206,9 @@ Double click it and as in the examples pictures below:
 The Linux certificate store is just a file structure under the root or user account depending on how you use Linux OS. For the Linux client to work the following must be true:
 
 - All certificate files must end with the extension `.pem`
+
 - All private key files must end with the extension `.key`
+
 - A client certificate and its corresponding private key must have the same filename. For example `client.pem` and `client.key`
 
 Using the example customer issued certificate SRAS1-1-2-001.pem the files would be stored in the following locations for root. The key file generated above needs to moved and renamed appropriately.
@@ -246,4 +253,4 @@ Addresses to hit the Elevated portal and vCloud Director API can be obtained by 
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

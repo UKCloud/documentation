@@ -1,0 +1,13 @@
+<div id="cookie-cta" style="display: none;" aria-hidden="true">
+  <div class="cookie-cta-inner container">
+    <div class="cookie-cta-text">
+      <p>
+        <strong>{{_appTitle}}</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+      </p>
+    </div>
+
+    <div class="cookie-cta-action">
+      <button class="cookie-cta-close button button--small">Accept</button>
+    </div>
+  </div>
+</div>

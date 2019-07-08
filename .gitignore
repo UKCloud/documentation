@@ -18,6 +18,7 @@ target/
 /**/_site/
 .vscode/
 .vs/
+.DS_Store
 _exported_templates/
 
 ###############
@@ -26,6 +27,7 @@ _exported_templates/
 *.nupkg
 *.log
 *.tmp
+*.swp
 *.vsprops
 *.suo
 *.user
@@ -41,3 +43,7 @@ debugSettings.json
 launchSettings.json
 project.lock.json
 *.sublime-workspace
+
+# IntelliJ / PyCharm
+.idea
+articles/.DS_Store

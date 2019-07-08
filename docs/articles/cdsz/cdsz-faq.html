@@ -8,7 +8,7 @@
     <title>Cross Domain Security Zone FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Cross Domain Security Zone FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/cdsz/cdsz-faq.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -90,8 +99,10 @@
 <p>This allows solutions hosted on the Elevated OFFICIAL cloud platform that are citizen facing to be accessed securely from the internet.</p>
 <p>Two service options are available to enable use of the CDSZ:</p>
 <ul>
-<li>UKCloud Guard</li>
-<li>Walled Garden</li>
+<li><p>UKCloud Guard</p>
+</li>
+<li><p>Walled Garden</p>
+</li>
 </ul>
 <h3 id="do-i-have-to-buy-other-ukcloud-services-to-use-services-in-the-cdsz">Do I have to buy other UKCloud services to use services in the CDSZ?</h3>
 <p>Yes. UKCloud cross-domain services are available only to customers purchasing other UKCloud services, such as IaaS (compute and storage) or PaaS (UKCloud for OpenShift).</p>
@@ -113,9 +124,12 @@
 <h3 id="what-information-do-i-need-to-include-in-my-application-for-a-service-in-the-cdsz">What information do I need to include in my application for a service in the CDSZ?</h3>
 <p>As a minimum the application must include:</p>
 <ul>
-<li>A business case explaining why a cross-domain solution is required</li>
-<li>The technical architecture of the solution - incorporating either the UKCloud Guard or your proposed Walled Garden solution</li>
-<li>An assurance plan - your proposed approach to ensuring that risks are correctly identified, appropriate mitigation is implemented and residual risks are accepted, so that both the UKCloud and customer SIROs can make an informed decision about the risks of the solution</li>
+<li><p>A business case explaining why a cross-domain solution is required</p>
+</li>
+<li><p>The technical architecture of the solution - incorporating either the UKCloud Guard or your proposed Walled Garden solution</p>
+</li>
+<li><p>An assurance plan - your proposed approach to ensuring that risks are correctly identified, appropriate mitigation is implemented and residual risks are accepted, so that both the UKCloud and customer SIROs can make an informed decision about the risks of the solution</p>
+</li>
 </ul>
 <h2 id="ukcloud-guard">UKCloud Guard</h2>
 <h3 id="what-is-the-ukcloud-guard">What is the UKCloud Guard?</h3>
@@ -145,25 +159,34 @@
 <h3 id="what-is-the-process-for-approving-a-walled-garden">What is the process for approving a Walled Garden?</h3>
 <p>Broadly, the process is as follows:</p>
 <ul>
-<li>Initial application</li>
-<li>UKCloud design review (with a cloud architect)</li>
-<li>Proposed evidence pack submission (by the customer)</li>
-<li>Full evidence pack submission (by the customer)</li>
-<li>UKCloud SIRO review and approval or rejection</li>
+<li><p>Initial application</p>
+</li>
+<li><p>UKCloud design review (with a cloud architect)</p>
+</li>
+<li><p>Proposed evidence pack submission (by the customer)</p>
+</li>
+<li><p>Full evidence pack submission (by the customer)</p>
+</li>
+<li><p>UKCloud SIRO review and approval or rejection</p>
+</li>
 </ul>
 <p>Full details of each stage are available in the UKCloud Knowledge Centre or from your account director.</p>
 <h3 id="what-type-of-evidence-is-required-to-allow-use-of-the-walled-garden">What type of evidence is required to allow use of the Walled Garden?</h3>
 <p>The evidence pack will generally consist of:</p>
 <ul>
-<li>IT Security Health Check (ITSHC)
+<li><p>IT Security Health Check (ITSHC)</p>
 <ul>
 <li>This must be carried out by an <a href="https://www.ncsc.gov.uk/index/professional-service?f%5B0%5D=field_assurance_status%3AAssured&amp;f%5B1%5D=field_assurance_scheme%3A213">NCSC-approved security organisation</a></li>
 </ul>
 </li>
-<li>Protective Monitoring solution</li>
-<li>The nature of Walled Garden solutions makes it essential that appropriate audit logging of security events and information is implemented and regularly monitored.</li>
-<li>Customer SIRO sign-off</li>
-<li>We need an accreditor's statement confirming their acceptance of the risk assessment, mitigating controls and residual risks, and their understanding of the customer's obligations relating to the use of UKCloud services</li>
+<li><p>Protective Monitoring solution</p>
+</li>
+<li><p>The nature of Walled Garden solutions makes it essential that appropriate audit logging of security events and information is implemented and regularly monitored.</p>
+</li>
+<li><p>Customer SIRO sign-off</p>
+</li>
+<li><p>We need an accreditor's statement confirming their acceptance of the risk assessment, mitigating controls and residual risks, and their understanding of the customer's obligations relating to the use of UKCloud services</p>
+</li>
 </ul>
 <h3 id="what-are-the-ongoing-requirements">What are the ongoing requirements?</h3>
 <p>When the Walled Garden is in operation, the customer is responsible for ensuring continuing compliance with security operating procedures (SyOps) and other security obligations.</p>
@@ -208,13 +231,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/cdsz/cdsz-faq.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -233,11 +249,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

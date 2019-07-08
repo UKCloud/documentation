@@ -8,7 +8,7 @@
     <title>How to obtain usage metrics to use for OpenShift capacity management | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to obtain usage metrics to use for OpenShift capacity management | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-obtain-usage-metrics.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -98,15 +107,21 @@
 </ul>
 <p>The sections in this guide, show you how to obtain various statistics about the platform, including:</p>
 <ul>
-<li>Overall status of each node in the cluster</li>
-<li>Uptime per node</li>
-<li>CPU usage</li>
-<li>Memory usage</li>
-<li>Block storage consumption (used by persistent volumes)</li>
-<li>Object storage consumption (used by the registry)</li>
+<li><p>Overall status of each node in the cluster</p>
+</li>
+<li><p>Uptime per node</p>
+</li>
+<li><p>CPU usage</p>
+</li>
+<li><p>Memory usage</p>
+</li>
+<li><p>Block storage consumption (used by persistent volumes)</p>
+</li>
+<li><p>Object storage consumption (used by the registry)</p>
+</li>
 </ul>
 <h3 id="intended-audience">Intended audience</h3>
-<p>To complete the steps in this guide you must have access to and a working knowledge of <code>oc</code>, the OpenStack command-line client (CLI). For more information, see OpenShift's <a href="https://docs.openshift.com/container-platform/3.7/cli_reference/get_started_cli.html"><em>Get Started with the CLI</em></a>.</p>
+<p>To complete the steps in this guide you must have access to and a working knowledge of <code>oc</code>, the OpenStack command-line client (CLI). For more information, see OpenShift's <a href="https://docs.openshift.com/container-platform/3.9/cli_reference/get_started_cli.html"><em>Get Started with the CLI</em></a>.</p>
 <h2 id="identifying-capacity-statistics">Identifying capacity statistics</h2>
 <p>The OpenStack CLI provides the ability to list the nodes in your cluster and then retrieve status information about a specific node. You can use this information to determine if the nodes in your cluster have enough available disk space and memory.</p>
 <ol>
@@ -160,7 +175,7 @@ oc adm top images
 </li>
 </ol>
 <h2 id="other-monitoring-options">Other monitoring options</h2>
-<p>You can find a simple example of a custom monitoring application, using the REST API described above, in <a href="oshift-how-monitor-cluster.html"><em>How to monitor your OpenShift cluster</em></a> and as a <a href="https://ukcloud.com/news-resources/news/blog/simple-openshift-monitoring">UKCloud blog post</a>.</p>
+<p>You can find a simple example of a custom monitoring application, using the REST API described above, in <a href="oshift-how-monitor-cluster.html"><em>How to monitor your OpenShift cluster</em></a> and as a <a href="https://ukcloud.com/hub/news/simple-openshift-monitoring/">UKCloud blog post</a>.</p>
 <p>You can also perform monitoring using Hawkular, which is built into the product. You can access Hawkular from the browser-based console at:</p>
 <p><code>https://ocp.&lt;your-deployment-name&gt;.cna.ukcloud.com:8443</code></p>
 <p>Or directly at:</p>
@@ -220,7 +235,7 @@ output = subprocess.run(['oc', 'adm', 'top', 'imagestreams'],
 imagestream_size = add_sizes(output.stdout.decode('utf-8'), 1)
 </code></pre>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -230,13 +245,6 @@ imagestream_size = add_sizes(output.stdout.decode('utf-8'), 1)
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-obtain-usage-metrics.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -255,11 +263,24 @@ imagestream_size = add_sizes(output.stdout.decode('utf-8'), 1)
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

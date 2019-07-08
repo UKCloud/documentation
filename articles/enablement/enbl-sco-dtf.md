@@ -3,6 +3,8 @@ title: Data Transfer Facility Service Scope | UKCloud Ltd
 description: Outlines important details regarding the Data Transfer Facility
 services: enablement
 author: Steve Hall
+reviewer:
+lastreviewed: 23/07/2018 11:55:40
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -171,6 +173,12 @@ HTTPS - 443, 444 and 8443 | &nbsp; | ISAKMP - UDP 500
 Secure SMTP - 465 | &nbsp;| &nbsp;
 FTPS (Data) - 989 | &nbsp; | &nbsp;
 
+## Connectivity
+
+By default the Assured data upload PC is connected to your environment's internet gateway. You can connect from the PC to an external IP in your environment. The IP address of the data upload pc can be added to a firewall rule in your environment to secure access
+
+Access to environments on other networks (e.g HSCN or PSN) will require additional configuration. Please discuss this with your Cloud Delivery Manager or TAM if required
+
 ## Platform performance
 
 The speed of data transfer to the UKCloud platform isn't guaranteed. However, during tests of the upload and download speeds, an average of 8 Mbit/s was achieved for VM import/export and 40 Mbit/s for data transferred over FTPS.
@@ -236,4 +244,4 @@ If the issue doesn't directly relate to the Data Transfer Facility, you'll need 
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Disaster Recovery as a Service Service Definition | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Disaster Recovery as a Service Service Definition | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/draas/draas-sd.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="disaster-recovery-as-a-service-service-definition">Disaster Recovery as a Service Service Definition</h1>
+
+<h2 id="why-ukcloud">Why UKCloud?</h2>
+<p>UKCloud is dedicated to helping the UK Public Sector and UK citizens by delivering more choice and flexibility through safe and trusted cloud technology. We own and operate a UK-sovereign, industry-leading, multi-cloud platform, located within the Government’s Crown Campus, offering multiple cloud technologies, including VMware, Azure, OpenStack, OpenShift and Oracle. This enables customers to choose the right technology for creating new workloads or migrating existing applications to the cloud.</p>
+<p>We recognise the importance of government services in making the country run smoothly, which is why we include the highest level of support to all our customers at no extra cost. This includes a dedicated 24/7 UK telephone and ticket support, and Network Operations Centre (NOC) utilising protective and proactive monitoring tools, and access to UKCloud’s technical experts.</p>
+<p><img src="images/ukc-services.png" alt="UKCloud services"></p>
+<h2 id="what-is-disaster-recovery-as-a-service">What is Disaster Recovery as a Service?</h2>
+<p>Disaster Recovery as a Service makes it easy to replicate and recover virtual machines to the cloud, by failing over from your own data centre to UKCloud’s trusted, cost-effective and well-connected cloud.</p>
+<p>This service supports and facilitates your own business continuity (BC) plan or disaster recovery (DR) processes. You can easily replicate data and virtual machines (VMs) from your primary site to UKCloud to recover your services with minimum downtime and data loss. In contrast to traditional disaster recovery techniques, UKCloud’s service enables regular, real-world, non-disruptive tests to be undertaken.</p>
+<p>For full information regarding this product, we have <a href="draas-sco.html">Service Scopes</a>, <a href="draas-faq.html">FAQs</a> and other relevant documents on our <a href="https://docs.ukcloud.com">Knowledge Centre</a>.</p>
+<h2 id="what-the-service-can-help-you-achieve">What the service can help you achieve</h2>
+<ul>
+<li><p>Protect your on-premise vSphere and Hyper-V workloads to UKCloud secure data centres</p>
+</li>
+<li><p>Create a duplicate copy of your server estate which is always in sync should a DR event occur</p>
+</li>
+<li><p>Comply with policy, regulation or legislation (for example, Civil Contingencies Act) without the cost, complexity and inefficiency of traditional DR solutions</p>
+</li>
+<li><p>Reduce your data centre footprint and associated CAPEX by removing the legacy infrastructure required to provide a DR solution</p>
+</li>
+<li><p>Minimise data loss and downtime by realising short Recovery Point and Recovery Time Objectives (RPO and RTO)</p>
+</li>
+<li><p>Lower your carbon footprint with an efficient platform</p>
+</li>
+<li><p>Simplify DR testing – simple non-disruptive testing to ensure you can meet your business continuity requirements</p>
+</li>
+<li><p>Replicate your on-premises network topology in the cloud using software-defined network capabilities</p>
+</li>
+</ul>
+<h2 id="product-options">Product options</h2>
+<p>The service is designed to be flexible and allows you to choose the level of protection you require for your specific workload.</p>
+<h3 id="protection">Protection</h3>
+<p>Choose the level of protection required for your workload</p>
+<ul>
+<li><p>2 day retention</p>
+</li>
+<li><p>7 day retention</p>
+</li>
+<li><p>14 day retention</p>
+</li>
+<li><p>28 day retention</p>
+</li>
+</ul>
+<h2 id="pricing-and-packaging">Pricing and packaging</h2>
+<p>UKCloud for VMware VMs start at 1p per hour, and full pricing with all options including licensing and connectivity available in the <a href="../other/other-ref-pricing-guide.html"><em>UKCloud Pricing Guide</em></a>.</p>
+<h2 id="accreditation-and-information-assurance">Accreditation and information assurance</h2>
+<p>The security of our platform is our number one priority. We’ve always been committed to adhering to exacting standards, frameworks and best practice. Everything we do is subject to regular independent validation by government accreditors, sector auditors, and management system assessors. Details are available on the <a href="https://ukcloud.com/governance/">UKCloud website</a>.</p>
+<h2 id="connectivity-options">Connectivity options</h2>
+<p>UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the <a href="../other/other-ref-pricing-guide.html"><em>UKCloud Pricing Guide</em></a> which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.</p>
+<h2 id="an-sla-you-can-trust">An SLA you can trust</h2>
+<p>We understand that enterprise workloads need a dependable service that underpins the reliability of the application to users and other systems, which is why we offer one of the best SLAs on G-Cloud. For full details on the service SLA including measurements and service credits, please view the <a href="../other/other-ref-sla-definition.html"><em>SLA defintion article</em></a> on the UKCloud Knowledge Centre.</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>UKCloud for VMware (POWER)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Service level agreement</strong></td>
+<td>99.99%</td>
+</tr>
+<tr>
+<td><strong>Portal level agreement</strong></td>
+<td>99.90%</td>
+</tr>
+<tr>
+<td><strong>Availability calculation</strong></td>
+<td>Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.</td>
+</tr>
+<tr>
+<td><strong>Planned maintenance</strong></td>
+<td>Included in calculations</td>
+</tr>
+<tr>
+<td><strong>Measurement of SLA</strong></td>
+<td>Unavailability applies to existing storage that has become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical host availability, storage, power and internal networking such as physical firewalls and routers. Although we don't offer an SLA relating to the performance of the Zerto software, we do offer an SLA around the availability of the self-service portal, and one relating to the availability of the UKCloud for VMware platform that hosts the solution.</td>
+</tr>
+<tr>
+<td><strong>Key exclusions</strong></td>
+<td>The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Replication faults introduced by your environment, or your implementation of Zerto</li></li></li></ul></td>
+</tr>
+<tr>
+<td><strong>Service Credit</strong></td>
+<td>5% of monthly spend per 5% below service level target or part thereof for affected compute platform.<br>1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal.<br>You will not be eligible to receive a Service Credit if your account has any undisputed payments outstanding beyond their due date or you are in violation of UKCloud’s Terms and Conditions including the UKCloud System Interconnect Security Policy (SISP).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-small-print">The small print</h2>
+<p>For full terms and conditions including onboarding and responsibilities, please refer to the <a href="../other/other-ref-terms-and-conditions.html"><em>Terms and conditions documents</em></a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

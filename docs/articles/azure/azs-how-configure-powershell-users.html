@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Configure the Azure Stack user's PowerShell environment for UKCloud |  based on Microsoft Docs | UKCloud Knowledge Centre </title>
+    <title>How to configure the Azure Stack user's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Configure the Azure Stack user's PowerShell environment for UKCloud |  based on Microsoft Docs | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="title" content="How to configure the Azure Stack user's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-configure-powershell-users.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -82,71 +91,125 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="configure-the-azure-stack-users-powershell-environment">Configure the Azure Stack user's PowerShell environment</h1>
+<h1 id="how-to-configure-the-azure-stack-users-powershell-environment">How to configure the Azure Stack user's PowerShell environment</h1>
 
-<p>As an Azure Stack user, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates,  etc. This topic is scoped to use with the user environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:</p>
+<p>As an Azure Stack user, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates, etc. This topic is scoped to use with the user environments only. In order to interact with Azure Stack PowerShell, you will need to set up your environment. To do so follow the below guide:</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Prerequisites from a Windows-based external client.</p>
 <ul>
 <li><p>PowerShell 5.1</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>To check your version, run $PSVersionTable.PSVersion and compare the &quot;Major&quot; version.</p>
-<p>For &quot;legacy&quot; Operating Systems like Windows Server 2008 R2 and Windows 7, or Windows Server 2012 R2, Windows Server 2012, and Windows 8.1</p>
-<p>Download the <a href="https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure">Windows Management Framework 5.1</a></p>
+<p>To check your version, run <code>$PSVersionTable.PSVersion</code> and compare the &quot;Major&quot; version.</p>
+<p>For &quot;legacy&quot; operating systems such as Windows Server 2008 R2, Windows 7, Windows Server 2012, Windows Server 2012 R2 and Windows 8.1 you will need to download the <a href="https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure">Windows Management Framework 5.1</a></p>
 </div>
 </li>
 </ul>
-<h3 id="install-azure-stack-powershell">Install Azure Stack PowerShell</h3>
-<pre><code class="lang-powershell"># Set Execution Policy
+<h2 id="declare-variables">Declare variables</h2>
+<p>Enter details below to provide values for the variables in the scripts in this article:</p>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ArmEndpoint</td>
+<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td><form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
+</tr>
+<tr>
+<td>$AzsUsername</td>
+<td>Your AAD username</td>
+<td><form oninput="result.value=username.value" id="username" style="display: inline;"><input type="text" id="username" name="username" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"></form></td>
+</tr>
+<tr>
+<td>$AzsPassword</td>
+<td>Your AAD password</td>
+<td><form oninput="result.value=password.value" id="password" style="display: inline;"><input type="text" id="password" name="password" style="display: inline;" placeholder="Password123!"></form></td>
+</tr>
+</tbody>
+</table>
+<h2 id="install-azure-stack-powershell">Install Azure Stack PowerShell</h2>
+<pre><code class="language-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
-# PowerShell commands for Azure Stack are installed through the PowerShell gallery. To register the PSGallery repository, open an elevated PowerShell session from the development kit # or  from a Windows-based external client if you are connected through VPN and run the following command:
-Set-PSRepository -Name &quot;PSGallery&quot; -InstallationPolicy Trusted
-# Uninstall existing versions of PowerShell
-Get-Module -ListAvailable | where-Object {$_.Name -like “Azure*”} | Uninstall-Module
-# Install the AzureRM.Bootstrapper module. Select Yes when prompted to install NuGet
-Install-Module -Name AzureRm.BootStrapper
-# Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
-Use-AzureRmProfile -Profile 2017-03-09-profile -Force
-Install-Module -Name AzureStack -RequiredVersion 1.3.0
+  
+# PowerShell commands for Azure Stack are installed through the PSGallery repository
+# To register the PSGallery repository, open an elevated PowerShell session and run the following command:
+Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
+  
+# Uninstall existing versions of Azure/Azure Stack PowerShell
+Get-Module -Name Azs.*, Azure* -ListAvailable | Uninstall-Module -Force -Verbose
+  
+# Install the AzureRM.BootStrapper module. Select Yes when prompted to install NuGet
+Install-Module -Name AzureRM.BootStrapper -Verbose
+
+# Install and import the API Version Profile required by Azure Stack into the current PowerShell session
+Use-AzureRmProfile -Profile 2019-03-01-hybrid -Force
+Install-Module -Name AzureStack -RequiredVersion 1.7.2 -Verbose
+</code></pre>
+<h3 id="enable-additional-storage-features">Enable additional storage features</h3>
+<pre><code class="language-PowerShell"># Install the Azure.Storage module version 4.5.0
+Install-Module -Name Azure.Storage -RequiredVersion 4.5.0 -AllowClobber -Force -Verbose
+
+# Install the AzureRm.Storage module version 5.0.4
+Install-Module -Name AzureRM.Storage -RequiredVersion 5.0.4 -AllowClobber -Force -Verbose
+
+# Remove incompatible storage module installed by AzureRM.Storage
+Uninstall-Module Azure.Storage -RequiredVersion 4.6.1 -Force -Verbose
 </code></pre>
 <h2 id="configure-the-user-environment-and-sign-in-to-azure-stack">Configure the user environment and sign in to Azure Stack</h2>
-<p>UKCloud FRN00006 Region is based on the Azure AD deployment type, run the following scripts to configure PowerShell for Azure Stack (Make sure to replace the  $AzsUsername and  $AzsPassword values)</p>
 <h3 id="azure-active-directory-aad-based-deployments">Azure Active Directory (AAD) based deployments</h3>
-<pre><code class="lang-powershell"># Set Execution Policy
+<pre><code class="language-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
 
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
 # Register an AzureRM environment that targets your Azure Stack instance
-Add-AzureRMEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Sign in to your environment
-Login-AzureRmAccount -EnvironmentName &quot;AzureStackUser&quot;
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 </code></pre>
 <h3 id="azure-active-directory-aad-based-deployments---embedded-credentials">Azure Active Directory (AAD) based deployments - Embedded Credentials</h3>
-<pre><code class="lang-powershell"># Set Execution Policy
-Set-ExecutionPolicy RemoteSigned
+<pre><code class="language-PowerShell"># Set Execution Policy
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Register an AzureRM environment that targets your Azure Stack instance
-Add-AzureRMEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Credentials
-$AzsUsername =  &quot;&lt;username&gt;@&lt;myDirectoryTenantName&gt;.onmicrosoft.com&quot;
-$AzsPassword = '&lt;your password&gt;'
-  $AzsUserPassword = ConvertTo-SecureString &quot;$AzsPassword&quot; -AsPlainText -Force
-  $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername,$AzsUserPassword
+$AzsUsername = "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>"
+$AzsPassword = '<output form="password" name="result" style="display: inline;">Password123!</output>'
+$AzsUserPassword = ConvertTo-SecureString -String $AzsPassword -AsPlainText -Force
+$AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
 # Sign in to your environment
-Login-AzureRmAccount -Credential $AzsCred -EnvironmentName &quot;AzureStackUser&quot;
+Connect-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackUser"
 </code></pre>
 <h2 id="test-the-connectivity">Test the connectivity</h2>
 <p>Now that we've got everything set-up, let's use PowerShell to create resources within Azure Stack. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named &quot;MyResourceGroup&quot;:</p>
-<pre><code class="lang-powershell">New-AzureRmResourceGroup -Name &quot;MyResourceGroup&quot; -Location &quot;frn00006&quot;
+<pre><code class="language-PowerShell"># Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
+
+New-AzureRmResourceGroup -Name "MyResourceGroup" -Location $Location
 </code></pre>
 <h2 id="next-steps">Next steps</h2>
 <ul>
-<li><a href="https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md">Develop templates for Azure Stack</a></li>
-<li><a href="https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md">Deploy templates with PowerShell</a></li>
+<li><p><a href="https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md">Develop templates for Azure Stack</a></p>
+</li>
+<li><p><a href="https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md">Deploy templates with PowerShell</a></p>
+</li>
 </ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -156,13 +219,6 @@ Login-AzureRmAccount -Credential $AzsCred -EnvironmentName &quot;AzureStackUser&
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-configure-powershell-users.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -181,11 +237,24 @@ Login-AzureRmAccount -Credential $AzsCred -EnvironmentName &quot;AzureStackUser&
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

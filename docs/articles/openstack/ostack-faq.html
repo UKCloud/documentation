@@ -8,7 +8,7 @@
     <title>UKCloud for OpenStack FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for OpenStack FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-faq.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -86,49 +95,50 @@
 
 <h2 id="service">Service</h2>
 <h3 id="what-is-the-service">What is the service?</h3>
-<p>UKCloud for OpenStack is an OpenStack powered Infrastructure as a Service (IaaS) offering which enables organisations to rapidly provision and scale secure instances (VMs) in seconds, in a flexible and autonomous manner.</p>
-<p>UKCloud provides this service across two security domains, Assured OFFICIAL (formerly PGA IL2) and Elevated OFFICIAL (formerly PGA IL3), and with a range of service levels offering up to 99.95% availability. This choice allows customers to precisely match application and user needs to an appropriate security domain, service level and cost, instead of designing to the highest level which may not always be needed.</p>
+<p>UKCloud for OpenStack is an OpenStack-powered Infrastructure as a Service (IaaS) offering which enables organisations to rapidly provision and scale secure instances (VMs) in seconds, in a flexible and autonomous manner.</p>
+<p>UKCloud provides this service across two security domains, Assured OFFICIAL (formerly PGA IL2) and Elevated OFFICIAL (formerly PGA IL3), offering up to 99.95% availability. This choice allows customers to precisely match application and user needs to an appropriate security domain and cost, instead of designing to the highest level which may not always be needed.</p>
 <h3 id="what-hypervisor-do-you-use">What hypervisor do you use?</h3>
-<p>UKCloud for OpenStack is built using Red Hats KVM hypervisor technology, a trusted solution for implementing virtualized environments.</p>
-<h3 id="does-ukcloud-offer-dedicated-bare-metal-host-capabilities-openstack-ironic-with-ukcloud-for-openstack">Does UKCloud offer dedicated, bare metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?</h3>
-<p>UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack product. UKCloud offers its 'Private Cloud for Compute' product which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.</p>
+<p>UKCloud for OpenStack is built using KVM hypervisor technology, a trusted solution for implementing virtualised environments.</p>
+<h3 id="does-ukcloud-offer-dedicated-bare-metal-host-capabilities-openstack-ironic-with-ukcloud-for-openstack">Does UKCloud offer dedicated, bare-metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?</h3>
+<p>UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack product. We do however provide &quot;large&quot; instances, with up to 56 vCpus and 440Gb Ram, with no overcommit. UKCloud also offers its 'Private Cloud for Compute' product which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.</p>
 <h3 id="which-disk-formats-does-ukcloud-for-openstack-support">Which Disk formats does UKCloud for OpenStack support?</h3>
 <p>The disk format of a virtual machine image is the format of the underlying disk image. Virtual appliance vendors have different formats for laying out the information contained in a virtual machine disk image.</p>
 <p>Set the disk format for your image to one of the following values:</p>
-<p><strong>Aki</strong> - An Amazon kernel image</p>
-<p><strong>Ami</strong> - An Amazon machine image</p>
-<p><strong>Ari</strong> - An Amazon ramdisk image</p>
-<p><strong>Iso</strong> - An archive format for the data contents of an optical disc, such as CD-ROM</p>
+<p><strong>aki</strong> - An Amazon kernel image</p>
+<p><strong>ami</strong> - An Amazon machine image</p>
+<p><strong>ari</strong> - An Amazon ramdisk image</p>
+<p><strong>iso</strong> - An archive format for the data contents of an optical disc, such as CD-ROM</p>
 <p><strong>qcow2</strong> - Supported by the QEMU emulator that can expand dynamically and supports Copy on Write</p>
-<p><strong>Raw</strong> - An unstructured disk image format; if you have a file without an extension it is possibly a raw format</p>
-<p><strong>Vdi</strong> - Supported by VirtualBox virtual machine monitor and the QEMU emulator</p>
-<p><strong>Vhd</strong> - The VHD disk format, a common disk format used by virtual machine monitors from VMware, Xen, Microsoft, VirtualBox, and others</p>
-<p><strong>Vmdk</strong> - Common disk format supported by many common virtual machine monitors</p>
+<p><strong>raw</strong> - An unstructured disk image format; if you have a file without an extension it is possibly a raw format</p>
+<p><strong>vdi</strong> - Supported by VirtualBox virtual machine monitor and the QEMU emulator</p>
+<p><strong>vhd</strong> - The VHD disk format, a common disk format used by virtual machine monitors from VMware, Xen, Microsoft, VirtualBox, and others</p>
+<p><strong>vmdk</strong> - Common disk format supported by many common virtual machine monitors</p>
 <h2 id="instances-vms">Instances (VMs)</h2>
 <h3 id="can-instances-have-different-service-levels">Can instances have different service levels?</h3>
 <p>UKCloud for OpenStack is a cloud platform built specifically for cloud native applications which have been engineered to use stateless, disposable instances. Due to the disposable design constructs of customer solutions, only a single service level is required</p>
 <h3 id="are-instances-contended">Are instances contended?</h3>
 <p>Instances are contended using the default OpenStack ratios against the following resources:</p>
 <ul>
-<li>CPU - 16:1</li>
-<li>Memory - 1.5:1</li>
+<li><p>CPU - 16:1</p>
+</li>
+<li><p>Memory - 1.1:1</p>
+</li>
 </ul>
-<h3 id="do-i-get-root-access-onto-the-instances-i-deploy">Do I get root access onto the instances I deploy?</h3>
+<h3 id="do-i-get-root-access-to-the-instances-i-deploy">Do I get root access to the instances I deploy?</h3>
 <p>Yes, as this is a true IaaS cloud service, you have complete control and autonomy over each instance you deploy, and so have full 'root' or administrative access.</p>
 <h3 id="what-instance-sizes-are-available">What Instance sizes are available?</h3>
-<p>UKCloud offers a variety of flavours to meet customers' needs. The smallest configuration is 512MiB and 1 vCPU. The largest is 64GiB memory with 8 vCPU.</p>
+<p>UKCloud offers a variety of predefined flavours to meet customers' needs. The smallest configuration is 512MiB memory and 1 vCPU. The largest is 440GiB memory with 56 vCPU.</p>
 <p>Check the service definition for more details on the currently available sizes.</p>
 <h3 id="does-ukcloud-for-openstack-offer-gpu-optimised-instances">Does UKCloud for OpenStack offer GPU optimised instances?</h3>
 <p>Currently UKCloud does not offer GPU optimised OpenStack instances.</p>
-<h3 id="can-i-resize-an-instance">Can I resize an Instance?</h3>
-<p>Yes, you can change processor, memory and storage allocations via the self-service Portal and API.</p>
-<p>Processors and memory can be added to or removed from instances if the OS supports the 'hot add' capability.</p>
-<p>Increasing CPU or memory allocations may result in the instance being billed at a higher rate.</p>
-<p>Additional instance storage can be allocated instantly and will be billed on a per GiB basis.</p>
+<h3 id="can-i-resize-an-instance">Can I resize an instance?</h3>
+<p>Yes, you can change instance size (processor, memory and storage allocations) to a different predefined size via the self-service Portal and API.</p>
+<p>Increasing instance size may result in the instance being billed at a higher rate.</p>
+<p>Additional volume storage can be allocated instantly and will be billed on a per GiB basis.</p>
 <h3 id="what-is-the-speed-of-each-vcpu">What is the speed of each vCPU?</h3>
 <p>This is set at 2.4 GHz across instances.</p>
 <h3 id="does-ukcloud-offer-encryption-on-instances">Does UKCloud offer encryption on instances?</h3>
-<p>Not by default but, if it's required, you can implement it using a technology of your choice.</p>
+<p>Not by default but, if it's required, you can implement it using a technology of your choice inside the instance OS.</p>
 <h3 id="is-ukclouds-encryption-service-available-for-ukcloud-for-openstack">Is UKCloud's encryption service available for UKCloud for OpenStack?</h3>
 <p>Not currently, but we are considering options based upon customer feedback.</p>
 <h2 id="networking">Networking</h2>
@@ -136,36 +146,38 @@
 <p>You're initially allocated three external IP addresses with each OpenStack project.</p>
 <p>You can ask for more external IP addresses via a Service Request in the UKCloud Portal.</p>
 <h3 id="how-many-network-routers-do-i-get">How many network routers do I get?</h3>
-<p>You're initially allocated two network routers with each OpenStack project.</p>
-<p>You can ask for more external IP addresses via a Service Request in the UKCloud Portal.</p>
+<p>You're initially able to create up to two network routers in each OpenStack project.</p>
+<p>You can ask the router quota to be increased via a Service Request in the UKCloud Portal.</p>
 <h3 id="how-many-psn-ip-addresses-do-i-get">How many PSN IP addresses do I get?</h3>
 <p>Customer organisations are initially allocated one external PSN IP address.</p>
 <p>Additional external PSN IP addresses can be requested via a Service Request should a valid business requirement arise.</p>
 <h3 id="what-firewall-services-are-available">What firewall services are available?</h3>
 <p>UKCloud controls and manages a perimeter firewall on the edge of our Assured cloud platform which securely segregates traffic.</p>
+<p>OpenStack includes the concept of &quot;Security Groups&quot; which can be used to implement firewall filtering on the virtual NIC level.</p>
 <p>You can also use your preferred software firewall and security appliances deployed within your project.</p>
 <h3 id="which-firewall-ports-do-you-suggest-to-open">Which firewall ports do you suggest to open?</h3>
 <p>To access the infrastructure via the dashboard and API you will need access through any firewalls on the following ports to the OpenStack endpoints you target.</p>
-<p>13774, 13696, 13776, 13042, 13292, 13777, 13776, 80, 443, 13004, 13386, 13041, 13000</p>
+<p>443, 13000, 13080, 13004, 13776, 13774, 13777, 13696, 13776</p>
 <h3 id="how-does-ukcloud-provide-urgent-maintenance-notifications-and-incident-reports">How does UKCloud provide urgent maintenance notifications and incident reports?</h3>
-<p>You can view these on the notifications page on the UKCloud Portal. In addition, Service Status reports are published on the Portal.</p>
+<p>Current Service Status reports are published on the <a href="https://status.ukcloud.com/">Status Page</a>. You can view past incident reports on the UKCloud Portal.</p>
 <h3 id="do-you-offer-dynamic-or-static-ip-addresses">Do you offer dynamic or static IP addresses?</h3>
-<p>The external IP addresses are static. Internal IPs can be assigned statically from a pool, manually or dynamically via DHCP.</p>
+<p>The external IP addresses are allocated to the project from a pool and will remain allocated to that project unless you explicitly select to &quot;release&quot; the address.</p>
+<p>Internal IPs are assigned to instances from a pool and will remain assigned to that instance/network port until that instance or network port is deleted. Optionally, it is possible to select the IP address assigned during instance/port creation.</p>
 <h3 id="are-external-domain-name-system-dns-services-available">Are external Domain Name System (DNS) services available?</h3>
-<p>No, we don't currently offer this service. You can implement your own DNS servers within your solution, or configure your virtual firewall to enable connectivity to an externally hosted DNS server - for example, one hosted on a government secure network such as PSN or N3; or one available on the Internet such as Google 8.8.8.8.</p>
+<p>No, we don't currently offer this service. You can implement your own DNS servers within your solution, or configure your instances to connect to an externally hosted DNS server - for example, one hosted on a government secure network such as PSN or HSCN; or one available on the Internet such as Google 8.8.8.8.</p>
 <h3 id="are-domain-name-registration-services-available">Are domain name registration services available?</h3>
-<p>No, we don't currently offer this service. Some government secure networks (such as PSN and N3) offer domain name registration and DNS hosting as part of their service.</p>
-<p>For internet-facing services a third-party DNS provider will be required.</p>
+<p>No, we don't currently offer this service. Some government secure networks (such as PSN and HSCN) offer domain name registration and DNS hosting as part of their service.</p>
+<p>For internet-facing services a third-party domain provider will be required.</p>
 <h3 id="is-network-time-protocol-available-for-time-synchronisation">Is Network Time Protocol available for time synchronisation?</h3>
 <p>Network Time Protocol services will initially only be available via public NTP servers.</p>
 <h3 id="can-ukcloud-provide-ssl-certificates-or-can-existing-ssl-certificates-be-used">Can UKCloud provide SSL certificates or can existing SSL certificates be used?</h3>
 <p>UKCloud doesn't provide SSL certificates, but you can use your existing ones.</p>
-<p>Some government secure networks (such as PSN and N3) provide SSL certificates as part of their service.</p>
+<p>Some government secure networks (such as PSN and HSCN) provide SSL certificates as part of their service.</p>
 <h3 id="do-you-offer-load-balancing">Do you offer load balancing? </h3>
-<p>Due to OpenStack Neutron not supporting highly available load balancing services, UKCloud has created <a href="ostack-how-create-load-balancer.html"><em>How to creating load balancing services on UKCloud for OpenStack</em></a>, which describes how to deploy a HA load balancing solution, of which the first deployed solution is free of charge.</p>
-<p>We will look to include more native OpenStack functionality once a highly available solution is provided by the community.</p>
+<p>Due to OpenStack Neutron not supporting highly-available load balancing services, UKCloud has created <a href="ostack-how-create-load-balancer.html"><em>How to creating load balancing services on UKCloud for OpenStack</em></a>, which describes how to deploy a HA load balancing solution, of which the first deployed solution is free of charge.</p>
+<p>We will look to include more native OpenStack functionality once a highly-available solution is provided by the community.</p>
 <h3 id="can-i-deploy-my-own-load-balancer">Can I deploy my own load balancer?</h3>
-<p>Yes, you can deploy your own load-balancing virtual appliance (for example, F5, Stingray, Zeus) if support for other algorithms is required.</p>
+<p>Yes, you can deploy your own load balancing virtual appliance provided it is compatible with KVM hypervisor and OpenStack.</p>
 <h3 id="do-you-have-an-ipsec-vpn-connection-for-uploading-sensitive-data">Do you have an IPSEC VPN connection for uploading sensitive data?</h3>
 <p>We currently do not offer any VPN/Tunnelling as a Service from within the UKCloud for OpenStack product. Customers can create their own VPN endpoints by deploying a software appliance such as pfSense on an instance within their project.</p>
 <h2 id="storage">Storage</h2>
@@ -174,14 +186,14 @@
 <p>All ephemeral storage is fixed and cannot be increased.</p>
 <h3 id="how-do-i-scale-beyond-the-default-allocation-of-ephemeral-storage">How do I scale beyond the default allocation of ephemeral storage?</h3>
 <p>UKCloud for OpenStack is available with persistent block storage options. Persistent block storage is resilient, distributed block storage that can be moved between instances and retain data in the event of an instance becoming destroyed or unavailable.</p>
-<p>You can quickly and easily allocate additional persistent block storage via the self-service dashboard or API, which will be charged on a per-GiB basis.</p>
+<p>You can quickly and easily allocate additional persistent block storage volumes via the self-service dashboard or API, which will be charged on a per-GiB basis.</p>
 <h3 id="can-i-reallocate-storage-across-instances">Can I reallocate storage across instances?</h3>
-<p>No, storage pooling isn't possible. Each instance receives the stated allocation.</p>
-<p>You can quickly and easily allocate additional persistent block storage via the self-service dashboard or API, which will be charged on a per-GiB basis.</p>
+<p>Persistent block storage volumes can be detached from one instance then attached to another (except those being used as OS boot volumes). It is not possible for a volume to be attached to multiple instances simulutaneously.</p>
+<p>You can allocate additional persistent block storage via the self-service dashboard or API, which will be charged on a per-GiB basis.</p>
 <h3 id="is-instance-storage-persistent">Is instance storage persistent? </h3>
-<p>No, the ephemeral storage provided with each instance is non-persistent and any data stored on it will be deleted at the point an instance is terminated.</p>
+<p>No, the ephemeral storage provided with each instance is non-persistent and any data stored on it will be deleted at the point an instance is terminated. Persistent block storage volumes are persistent. If required, it is possible to deploy an instance using a block storage volume as its boot volume.</p>
 <h3 id="is-object-storage-openstack-swift-available">Is Object Storage (OpenStack Swift) available?</h3>
-<p>Unfortunately, the OpenStack Object Storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3 compatible Object Storage service which can be used in conjunction with OpenStack; please visit the Digital Market place or contact your Account Director for further details.</p>
+<p>Unfortunately, the OpenStack Object Storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3-compatible Object Storage service which can be used in conjunction with OpenStack; please visit the Digital Market place or contact your Account Director for further details.</p>
 <h3 id="what-is-the-fastest-way-of-importing-large-amounts-of-data-onto-the-ukcloud-platform">What is the fastest way of importing large amounts of data onto the UKCloud platform?</h3>
 <p>The speed of data transfer to the UKCloud platform isn't guaranteed. However, during tests of the upload and download speeds, an average of 8 Mbit/s was achieved for image import/export and 40 Mbit/s for data transferred over FTPS.</p>
 <p>For a transfer time calculator, click <a href="http://techinternets.com/copy_calc?do">here</a>.</p>
@@ -190,23 +202,25 @@
 <h3 id="how-do-i-access-my-solutions-via-the-internet">How do I access my solutions via the internet?</h3>
 <p>You can access your instances using:</p>
 <ul>
-<li>The remote console via the OpenStack dashboard</li>
-<li>Remote access protocols (such as RDP/SSH) over a VPN or secure network</li>
+<li><p>The remote console via the OpenStack dashboard</p>
+</li>
+<li><p>Remote access protocols (such as RDP/SSH) over a VPN or secure network</p>
+</li>
 </ul>
-<h3 id="how-do-i-access-my-solutions-via-government-networks-psn-a-n3hscn">How do I access my solutions via government networks (PSN-A, N3/HSCN)?</h3>
-<p>Although UKCloud allows you to make your customer facing applications accessible via government network connections, the management of your OpenStack environment can only be achieved directly via an internet connection.</p>
-<p>OpenStack environments in our Elevated OFFICIAL security domain can be managed via the PSN-P network.</p>
+<h3 id="how-do-i-access-my-solutions-via-government-networks-psn-hscn">How do I access my solutions via government networks (PSN, HSCN)?</h3>
+<p>Although UKCloud allows you to make your customer-facing applications accessible via government network connections, the management of your Assured OFFICIAL OpenStack environment can only be achieved directly via an internet connection.</p>
+<p>OpenStack environments in our Elevated OFFICIAL security domain can be managed via the PSN network.</p>
 <h3 id="what-reports-can-i-get-about-instances-performance">What reports can I get about instances performance?</h3>
 <p>UKCloud does not currently provide instance performance reports, but you can monitor their performance using standard tools within the operating system.</p>
 <h3 id="does-ukcloud-patch-instances">Does UKCloud patch instances?</h3>
-<p>No, you are responsible for the patching of your services. We make a patch repository available to you for instances on the Elevated OFFICIAL cloud platform (which doesn't cannot connect to the internet) for common operating systems that we provide.</p>
+<p>No, you are responsible for the patching of your services. We make a patch repository available to you for instances on the Elevated OFFICIAL cloud platform (which cannot connect to the internet) for common operating systems that we provide.</p>
 <!--### How do I find the latest patches to the UKCloud infrastructure?
 
 UKCloud maintains a Knowledge Centre article advising the current patch level of the UKCloud infrastructure. See [here](../other/other-ref-platform-patches.md). -->
 <h3 id="how-do-i-access-support-and-patches-for-operating-systems-that-ukcloud-licenses">How do I access support and patches for operating systems that UKCloud licenses?</h3>
-<p>UKCloud provides a repository of patches for common operating systems for customers to access and update from. Please refer to the onboarding guide or the UKCloud Portal's Knowledge Centre for details.</p>
+<p>UKCloud provides a repository of patches for common operating systems for customers to access and update from. Please refer to the onboarding guide or the Knowledge Centre for details.</p>
 <p>For support, you'll need to log a request with UKCloud, who will log the ticket with the relevant supplier. UKCloud will then inform you about any updates. However, UKCloud isn't responsible for the actual resolution of non-IaaS issues.</p>
-<h3 id="do-you-have-a-key-management-system-kms-for-activating-windows">Do you have a Key Management System (KMS) for activating Windows? </h3>
+<h3 id="do-you-have-a-key-management-system-kms-for-activating-windows">Do you have a Key Management System (KMS) for activating Windows?</h3>
 <p>Yes. A we provide a <a href="../vmware/vmw-how-setup-kms.html">step-by-step guide</a> on configuring and using this service.</p>
 <h3 id="how-do-i-control-an-instance">How do I control an instance?</h3>
 <p>You control an instance via the OpenStack dashboard or API. Controls include stop, start, restart, load media, clone, snapshot, and so on.</p>
@@ -222,8 +236,10 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <p>UKCloud for OpenStack is powered by OpenStack, so is compatible with a wide range of x86/x64 operating systems.</p>
 <p>You can use the UKCloud catalogue of operating systems or upload your own:</p>
 <ul>
-<li>For Linux we offer; Red Hat Enterprise Linux 7, Ubuntu 14.04 to 16.04 and CentOS 6.0 to 7.2.</li>
-<li>Windows 2012 R2 &amp; Windows 2016 are fully supported</li>
+<li><p>For Linux we offer; Red Hat Enterprise Linux 7, Ubuntu 14.04 to 16.04 and CentOS 6.0 to 7.2.</p>
+</li>
+<li><p>Windows 2012 R2 &amp; Windows 2016 are fully supported</p>
+</li>
 </ul>
 <h3 id="can-i-run-microsoft-sql-on-my-instances">Can I run Microsoft SQL on my instances?</h3>
 <p>Microsoft SQL can be installed within an OpenStack instance.</p>
@@ -233,7 +249,7 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <p>Microsoft terms and conditions preclude customers from using their own licence agreements for Windows Server in the Cloud. That means all licensing for Windows Server operating systems must be provided by UKCloud.</p>
 <p>Microsoft offers License Mobility, a scheme that allows a customer to provide additional software such as Exchange, SQL and so on, as long as the customer has appropriate Microsoft licensing as per the licence terms, conditions and usage rights.</p>
 <h3 id="rhel">RHEL</h3>
-<p>RHEL operating systems can be licensed by the customer directly with Red Hat. We are Currently unable to provide RHEL licences for UKCloud for Openstack.</p>
+<p>RHEL operating systems can be licensed by the customer directly with Red Hat. We are Currently unable to provide RHEL licences for UKCloud for OpenStack.</p>
 <p>The customer is responsible for ensuring correct licensing for any other operating system they chose to install.</p>
 <h3 id="how-up-to-date-are-the-operating-system-images-and-mirrors">How up to date are the operating system images and mirrors?</h3>
 <p>All CentOS, Ubuntu, Red Hat and Debian distributions are automatically updated to contain the latest patches and releases. For a list of supported operating systems, and instructions on how to access these repositories, see the appropriate article in the Knowledge Centre.</p>
@@ -275,7 +291,7 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <h2 id="backup">Backup</h2>
 <h3 id="does-ukcloud-back-up-my-projects-or-instances">Does UKCloud back up my projects or instances?</h3>
 <p>UKCloud for OpenStack is a cloud platform built specifically for cloud native applications which have been engineered to use stateless, disposable instances.</p>
-<p>UKCloud does not provided automated backups of projects or instances, however it does allow consumers to create snapshots of their instances via the OpenStack dashboard or programmatically via the API. These snapshots when used in conjunction with deployment orchestration tools or infrastructure as code templates such as HEAT allow for environments to be rapidly replicate, redeploy or scale environments.</p>
+<p>UKCloud does not provide automated backups of projects or instances, however it does allow consumers to create snapshots of their instances via the OpenStack dashboard or programmatically via the API. These snapshots when used in conjunction with deployment orchestration tools or infrastructure as code templates such as HEAT allow for environments to be rapidly replicate, redeploy or scale environments.</p>
 <h3 id="can-i-create-scheduled-snapshots">Can I create scheduled snapshots?</h3>
 <p>Snapshots cannot currently be scheduled directly through OpenStack, however custom scripts can be created and are available on the internet to enable snapshots to be programmatically set.</p>
 <h3 id="how-quickly-can-a-snapshot-be-restored">How quickly can a snapshot be restored?</h3>
@@ -299,14 +315,8 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <p>Real-time billing information is currently not available as a service provided by UKCloud, however customers are able to query the OpenStack Ceilometer API to query live event data.</p>
 <p>Historic billing information is available via the UKCloud Portal.</p>
 <h3 id="how-can-i-pay-for-the-services">How can I pay for the services?</h3>
-<p>Billing for the service is:</p>
-<ul>
-<li>Via Purchase Order</li>
-<li>At point of order for up-front fees</li>
-<li>Annually in advance for pre-payment fees</li>
-<li>Monthly in arrears for monthly fees</li>
-</ul>
-<p>Payment can be made by direct bank transfer (BACS/CHAPS).</p>
+<p>Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.</p>
+<p>If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.</p>
 <h3 id="how-are-snapshots-charged">How are snapshots charged?</h3>
 <p>You will only ever be charged for the amount of Tier 1 or Tier 2 storage your snapshots consume, that you have scheduled via the OpenStack dashboard or the API - we do not place any additional premium on-top for the snapshot functionality. To calculate an estimated cost of performing snapshots on UKCloud for OpenStack, simply use the following formula:</p>
 <p>Cost £ = Instance Size (GiB) x Number of Snapshots to be retained (Customer controlled) x Choice of Storage (Tier 1 @ £0.25 or Tier 2 @ £0.10)</p>
@@ -325,7 +335,7 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
 <h3 id="is-there-a-protective-monitoring-service">Is there a protective monitoring service?</h3>
 <p>Protective monitoring is included for our IaaS platform and follows GPG 13.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click Improve this Doc to suggest a change. If you have an idea for how we could improve any of our services, visit UKCloud Ideas. Alternatively, you can contact us at products@ukcloud.com.</p>
 
 
                   <div class="row">
@@ -335,13 +345,6 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-faq.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -360,11 +363,24 @@ UKCloud maintains a Knowledge Centre article advising the current patch level of
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

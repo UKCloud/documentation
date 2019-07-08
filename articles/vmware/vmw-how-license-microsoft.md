@@ -3,6 +3,8 @@ title: How to license Microsoft applications/software on the UKCloud platform | 
 description: This guide will explain how Microsoft software such as Server and SQL is licensed on the UKCloud platform
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -47,7 +49,16 @@ Due to the elimination of the discount for G-SPLA, there is now price parity wit
 
 ## Microsoft desktop licensing
 
-It is not currently possible for you to use Microsoft desktop operating systems on the UKCloud platform. This includes both your own licensing or via UKCloud. However, it is possible for you to bring your own Microsoft desktop licensing for use on a dedicated cloud server such as Private Cloud for Compute. In this instance, please contact your Account Director or your Technical Account Manager for further information.
+While we do not offer the option of supplying Microsoft Desktop Operating System licensing, we are now an authorised partner on the  Qualified MultiTenant Hoster (QMTH) program. The QMTH program enables you to purchase Microsoft 10 Enterprise licences, and use these on our multi-tenant cloud platform.
+
+> [!IMPORTANT]
+> You **must** inform Microsoft by completing a [Microsoft Licence Mobility Verification form](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx) for the licensing to be valid.
+
+For more information regarding the QMTH program, we have further details on the [UKCloud web site](https://ukcloud.com/qualified-multitenant-hoster-program/)
+
+If you want to use this option, raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal, detailing the VM names.
+
+In addition, you can also bring your own Microsoft desktop licensing for use on a dedicated single tenant cloud server such as Private Cloud for Compute. In this instance, contact your Account Director or Technical Account Manager for further information.
 
 ## Options for all other Microsoft applications
 
@@ -60,7 +71,7 @@ As stated, all Microsoft applications on the UKCloud platform must be licensed a
     > [!NOTE]
     > This is only possible with certain Microsoft applications and is not possible for Microsoft Windows Server as stated above. Before you install any Microsoft software onto a UKCloud VM, you must ensure that you purchase the correct licensing with software assurance and that you have completed the Microsoft Licence Mobility Verification process detailed in this document. The completion of the process is identified by a signed confirmation sent to you from Microsoft Ireland. Please note that if you do not have software assurance, you will not be able to use the Microsoft Mobility option.
 
-    The Microsoft Mobility option involves transferring the use of your licensing to UKCloud VMs, and therefore they cannot be used on other Cloud Service Providers or on your own hardware. However, if you discontinue the use of the application on the UKCloud platform and no longer require the licensing, this can be reverted for your use elsewhere. The [Microsoft Mobility form and guide](https://portal.skyscapecloud.com/support/knowledge_centre/3e06f32a-efbd-4fc4-8fce-7200ae9231c8) are available on the UKCloud Knowledge Centre. Please note that this must be completed and posted to Microsoft and not to UKCloud. The correct UKCloud partner agreement number to use is 8392716.
+    The Microsoft Mobility option involves transferring the use of your licensing to UKCloud VMs, and therefore they cannot be used on other Cloud Service Providers or on your own hardware. However, if you discontinue the use of the application on the UKCloud platform and no longer require the licensing, this can be reverted for your use elsewhere. The [Microsoft Mobility form](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx) is available on the Microsoft web site. Please note that this must be completed and posted to Microsoft and not to UKCloud. The correct UKCloud partner agreement number to use is 8392716.
 
 ## Microsoft application list
 
@@ -72,11 +83,17 @@ The following list is aimed at providing you with a summary regarding the licens
 
   - SQL Developer can only be utilised on a shared platform to test the SQL element of a solution and cannot be used to provide end-user services. If you wish to provide SQL services to end-users, SQL Enterprise or SQL Standard must be purchased.
 
-  - We can provide Microsoft SQL Standard Server licences on a per hour basis, or Microsoft SQL Enterprise licences billed on a monthly basis. These are retrospectively billed based on your usage of an associated VM, and the pricing is available within the G9 Service definitions and pricing guide.
+  - We can provide Microsoft SQL Standard Server licences on a per hour basis, or Microsoft SQL Enterprise licences billed on a monthly basis. These are retrospectively billed based on your usage of an associated VM, and the pricing is available within the G10 Service definitions and pricing guide.
 
   - Microsoft Mobility - this is a valid option for both SQL Standard and Enterprise.
 
   - Please note that for under SPLA licensing you only need to purchase the SQL server licence and you do not need to purchase Server Access Licences (SAL).
+
+- **Office 365**
+
+  - UKCloud licensing - we are not able to provide Microsoft Office 365 licensing.
+
+  - Microsoft Mobility - this is a valid option for Office 365 ProPlus licences as long as you have valid Software Assurance in place. To take advantage of this option, you must manage your Office 365 implementation and ensure you have the correct number of licences to reflect your user count. This option is available via the QMTH program, and more information is available on the [UKCloud web site](https://ukcloud.com/qualified-multitenant-hoster-program/).
 
 - **Remote Desktop Server Access Licence**
 
@@ -98,7 +115,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **Office**
 
-  - UKCloud licensing - UKCloud can offer SALs for this software. You need to inform us as to how many users will be accessing the application and we will bill you on a per user, per month basis. This pricing is available on request as it is not currently stated in the G9 service definitions or pricing guide.
+  - UKCloud licensing - UKCloud can offer SALs for this software. You need to inform us as to how many users will be accessing the application and we will bill you on a per user, per month basis. This pricing is available on request as it is not currently stated in the G10 service definitions or pricing guide.
 
   - Microsoft Mobility - this is not available via Microsoft Mobility and must be provided by UKCloud.
 
@@ -133,11 +150,12 @@ To use your existing Microsoft licensing or use licences billed by us on UKCloud
     From the **What is the nature of your query?** list, select either:
 
     - **I want UKCloud to invoice me for the licensing of Microsoft software on one or more VMs**.
+
     - **I want to bring my own Microsoft licences to my UKCloud environment**
 
 6. Once you have selected one of the two options above, you will need to fill out **a Request summary** and provide the information outlined below:
 
-    If you have selected **I want to bring my own Microsoft licences to my UKCloud environment,** you need to state the specific VDC and VMs that contain the software that will be affected by your own licensing. You will also need to state what software, version, and the quantity of licences you will be using. (You must have completed the [Microsoft Mobility](https://portal.skyscapecloud.com/support/knowledge_centre/3e06f32a-efbd-4fc4-8fce-7200ae9231c8) verification process before choosing this option.) If your Microsoft Mobility application has been accepted, you need to inform us of the date from which your licensing will take effect.
+    If you have selected **I want to bring my own Microsoft licences to my UKCloud environment,** you need to state the specific VDC and VMs that contain the software that will be affected by your own licensing. You will also need to state what software, version, and the quantity of licences you will be using. (You must have completed the [Microsoft Mobility](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx) verification process before choosing this option.) If your Microsoft Mobility application has been accepted, you need to inform us of the date from which your licensing will take effect.
 
     If you have selected **I want UKCloud to invoice me for the licensing of Microsoft software on one or more VMs**, you need to state the specific VDC and VMs that contain the software you wish UKCloud to licence for you. You will also need to state what software licenses, version, the quantity you require, and the date from which you wish the licensing to commence.
 
@@ -170,4 +188,4 @@ If you have any issues regarding updating, or the support of Microsoft Server, p
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

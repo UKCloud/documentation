@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to expose non-http services externally | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to expose non-http services externally | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-expose-nonhttp-services.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-expose-non-http-services-externally">How to expose non-http services externally</h1>
+
+<h2 id="overview">Overview</h2>
+<p>UKCloud for OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.</p>
+<p>This article explains how you can expose services outside of your OpenShift cluster without using routes.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This article assumes familiarity with services and routes in OpenShift and access to an account with cluster-admin permissions.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>To complete the steps in this guide, your cluster must have been deployed from a version of our code that enables our non-http functionality. You can raise a support ticket to:</p>
+<ul>
+<li><p>Check if your cluster already provides non-http functionality</p>
+</li>
+<li><p>Request a new cluster to be deployed incorporating our non-http functionality.</p>
+</li>
+</ul>
+<h2 id="getting-the-external-ip">Getting the external IP</h2>
+<p>You'll need to raise a support ticket with us that provides the network you'd like to expose services on and the ports/protocols of the services you'll be exposing. We'll update your environment to create the virtual infrastructure needed and provide you with the publicly accessible IP and the local IP this maps to. The local IP will be important for the upcoming steps.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can request multiple ports/protocols and networks for external services.</p>
+</div>
+<h2 id="exposing-your-service">Exposing your service</h2>
+<p>Now you need to create the service you would like to expose. Create the service as usual, then patch the local IP we gave you into the service as its external IP using the following command (the example uses a local IP of 10.2.1.120):</p>
+<pre><code>oc patch svc &lt;service_name&gt; -p '{&quot;spec&quot;:{&quot;externalIPs&quot;:[&quot;10.2.1.120&quot;]}}'
+</code></pre>
+<h2 id="deploying-ipfailover">Deploying ipfailover</h2>
+<p>OpenShift has a feature called ipfailover that you can use to make an external IP accessible on a subset of nodes in the cluster. Use ipfailover to make your service available on the external IP. Enter the following commands to deploy ipfailover (you must have cluster-admin permissions):</p>
+<pre><code>oc create sa ipfailover
+</code></pre>
+<pre><code>oc adm policy add-scc-to-user privileged -z ipfailover
+</code></pre>
+<pre><code>oc adm ipfailover --virtual-ips=10.2.1.120 --watch-port=0 --replicas=&lt;amount_of_compute_nodes&gt; --selector=&quot;node-role.kubernetes.io/compute=true&quot; --vrrp-id-offset=0 --create
+</code></pre>
+<p>You'll need to pass the IP you've patched into the service as an external IP, using the --virtual-ips argument. You can use any node-selector you like for the --selector argument but make sure it's a valid node label. You must set --watch-port to 0 for the ipfailover deployment to work. The --replicas argument should equal the amount of nodes matching your --selector label. You will need to increment --vrrp-id-offset by one for each ipfailover deployment in your cluster, for example to expose another external IP your command might look like the following:</p>
+<pre><code>oc adm ipfailover --virtual-ips=10.2.1.121 --watch-port=0 --replicas=&lt;amount_of_compute_nodes&gt; --selector=&quot;node-role.kubernetes.io/compute=true&quot; --vrrp-id-offset=1 --create
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can only deploy one instance of ipfailover per project. Also, the deployment may sometimes go into a pending state. If this happens ensure that you've incremented --vrrp-id-offset (if necessary) and have given the ipfailover service account the required permissions inside the project you are deploying in:</p>
+<pre><code>oc adm policy add-scc-to-user privileged -z ipfailover
+</code></pre>
+</div>
+<p>You can now access your service on the public IP tied to the external IP.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can access multiple services on the same external IP, they just need to be running on a different port.</p>
+</div>
+<h2 id="further-reading">Further reading</h2>
+<p>OpenShift documentation on ipfailover: <a href="https://docs.openshift.com/container-platform/3.11/admin_guide/high_availability.html">https://docs.openshift.com/container-platform/3.11/admin_guide/high_availability.html</a></p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

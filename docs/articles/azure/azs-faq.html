@@ -8,7 +8,7 @@
     <title>UKCloud for Microsoft Azure FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for Microsoft Azure FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-faq.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -91,71 +100,89 @@
 <h3 id="why-has-ukcloud-launched-ukcloud-for-microsoft-azure">Why has UKCloud launched UKCloud for Microsoft Azure?</h3>
 <p>UKCloud's strategy is to provide a multi-cloud platform and UKCloud for Microsoft Azure is now available for you to consume as either a secure, UK sovereign implementation of Azure Public Cloud, or as a complimentary platform to work alongside other UKCloud platforms. This allows you to have workloads utilising one or more technology clouds such as Azure, VMware, Oracle and OpenStack on the same trusted infrastructure.</p>
 <h3 id="what-is-provided-in-this-service">What is provided in this service?</h3>
-<p>The first release of UKCloud for Microsoft Azure IaaS provides:</p>
+<p>UKCloud for Microsoft Azure IaaS currently provides:</p>
 <h4 id="compute">Compute</h4>
-<p>Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic compute building blocks in Azure Stack. Initial machine types supported are:</p>
+<p>Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic compute building blocks in Azure Stack. Virtual machine sizes supported are:</p>
 <ul>
-<li>General purpose: Basic A series, Standard A &amp; D Series</li>
-<li>Memory enhanced: DS Series</li>
+<li><p>General purpose: Basic A series, standard A &amp; Av2 series, D &amp; Dv2 series, DS &amp; DSv2 series</p>
+</li>
+<li><p>Memory optimised: Memory optimised D &amp; Dv2 series, memory optimised DS &amp; DSv2 series</p>
+</li>
+<li><p>Compute optimised: F series, Fs &amp; Fsv2 series</p>
+</li>
 </ul>
+<p>You can find the full list of supported virtual machine sizes <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes">here</a>.</p>
 <h4 id="storage">Storage</h4>
 <ul>
-<li>Azure Blob Storage (page): Used to support virtual machine disks. Good for randomly accessed large files.</li>
-<li>Azure Blob Storage (block): Object storage. Good for storing documents, videos and images for example.</li>
-<li>Azure Blob Storage (append): Good for log files.</li>
-<li>Azure Queue Storage: Message queue as a service. Good for asynchronous scale out micro-services.</li>
-<li>Azure Table Storage: NoSQL database service. Good for highly scalable, eventually consistent database support</li>
+<li><p>Azure Blob Storage (block): Object storage. Good for storing documents, videos and images.</p>
+</li>
+<li><p>Azure Blob Storage (page): Optimised for virtual machine disks. Good for randomly accessed large files.</p>
+</li>
+<li><p>Azure Blob Storage (append): Good for log files. Can only be updated by appending to the end of the file.</p>
+</li>
+<li><p>Azure Queue Storage: Message queue as a service. Good for asynchronous scale out micro-services.</p>
+</li>
+<li><p>Azure Table Storage: NoSQL database service with schemaless design. Good for highly scalable, consistent database support.</p>
+</li>
 </ul>
 <h4 id="network">Network</h4>
 <ul>
-<li>Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure. This can be configured via the UI, API and other tooling. </li>
-<li>Load balancers (IPv4 only) - Deploy basic load balancers.</li>
-<li>VPN gateway - Use the Azure Stack VPN gateway to create site-to-site VPNs to remote infrastructure.</li>
-<li>Routing - Configure basic custom defined routing on virtual networks.</li>
+<li><p>Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure Stack. This can be configured via the UI, API and other tooling.</p>
+</li>
+<li><p>Load balancers (IPv4 only) - Deploy basic load balancers.</p>
+</li>
+<li><p>VPN gateway - Use the Azure Stack VPN gateway to create site-to-site VPNs to remote infrastructure.</p>
+</li>
+<li><p>Routing - Configure basic custom defined routing on virtual networks.</p>
+</li>
 </ul>
 <h3 id="what-technology-is-ukcloud-for-microsoft-azure-based-on">What technology is UKCloud for Microsoft Azure based on?</h3>
-<p>UKCloud for Microsoft Azure is based on a CISCO implementation of Microsoft's Azure Stack.</p>
+<p>UKCloud for Microsoft Azure is based on a Cisco implementation of Microsoft's Azure Stack.</p>
 <h3 id="are-there-any-differences-between-azure-and-ukcloud-for-microsoft-azure">Are there any differences between Azure and UKCloud for Microsoft Azure?</h3>
 <p>While UKCloud for Microsoft Azure is developed by Microsoft, some services will take longer to become available. Check the service scope for full details. Initial differences are captured in <a href="azs-ref-overview.html"><em>Understanding UKCloud for Microsoft Azure</em></a>.</p>
 <h3 id="does-ukcloud-offer-an-sla-for-this-service">Does UKCloud offer an SLA for this service?</h3>
 <p>The SLA for this service is 99.95%. For further details, review the UKCloud for Microsoft Azure Service Definition.</p>
+<h3 id="where-can-i-find-additional-resources-to-assist-me-in-administering-my-ukcloud-for-microsoft-azure-environment">Where can I find additional resources to assist me in administering my UKCloud for Microsoft Azure environment?</h3>
+<p>UKCloud maintains an Azure Stack repository, which contains ARM templates, custom script extensions and more. You can find this repository found <a href="https://github.com/UKCloud/AzureStack">here</a>.</p>
 <h2 id="networking">Networking</h2>
 <h3 id="how-many-ip-addresses-do-i-get">How many IP addresses do I get?</h3>
-<p>You're initially allocated three external IP addresses with a new compute service.</p>
+<p>You're initially allocated ten public IP addresses with a new compute service.</p>
 <h3 id="do-you-offer-dynamic-or-static-ip-addresses">Do you offer dynamic or static IP addresses?</h3>
-<p>Dynamic internet IP addresses are selected from a pre-defined shared pool.</p>
+<p>Dynamic and static public IP addresses are available from a pre-defined shared pool.</p>
 <h3 id="what-firewall-services-are-available">What firewall services are available?</h3>
-<p>Firewall services are provided by Azure Security Groups. More information is available <a href="https://docs.microsoft.com/en-gb/azure/virtual-network/virtual-network-vnet-plan-design-arm#security">here</a>.</p>
+<p>Firewall services are provided by Azure network security groups. More information is available <a href="https://docs.microsoft.com/en-gb/azure/virtual-network/virtual-network-vnet-plan-design-arm#security">here</a>.</p>
 <h3 id="how-does-ukcloud-provide-urgent-maintenance-notifications-and-incident-reports">How does UKCloud provide urgent maintenance notifications and incident reports?</h3>
 <p>All production services are reported through the UKCloud <a href="https://status.ukcloud.com/">service status page</a> where you can subscribe to RSS feeds and updates.</p>
 <h3 id="are-external-domain-name-system-dns-services-available">Are external Domain Name System (DNS) services available?</h3>
-<p>Yes. A similar service to Azure DNS is available. There are some limitations such as no AAAA support.</p>
+<p>Yes, a similar service to Azure DNS is available. There are some limitations such as no AAAA support.</p>
 <h3 id="do-you-offer-load-balancing">Do you offer load balancing?</h3>
-<p>Yes. This will be offered as an option. You can also deploy your own load balancer.</p>
+<p>Yes, this is offered as an option. You can also deploy your own load balancer.</p>
 <h2 id="storage-1">Storage</h2>
 <h3 id="how-much-storage-do-i-get">How much storage do I get?</h3>
-<p>You'll get 4TiB, which will be shared between blob, page blob, table and queue storage.</p>
+<p>You'll get 4TiB unmanaged storage, which will be shared between blob, table and queue storage types. You will also get 2 TiB of managed disk storage.</p>
 <h3 id="is-storage-persistent">Is storage persistent?</h3>
 <p>Storage is persistent unless it is virtual machine temporary storage.</p>
 <h2 id="management">Management</h2>
 <h3 id="how-do-i-access-my-ukcloud-for-microsoft-azure-solution">How do I access my UKCloud for Microsoft Azure solution?</h3>
-<p>Access to the UKCloud for Microsoft Azure portal is available via the UKCloud Portal. You'll be provided with login details once your account is provisioned.</p>
+<p>Access to the UKCloud Azure Stack portal is available via the UKCloud Portal. You'll be provided with login details once your account is provisioned.</p>
+<h3 id="which-ports-need-to-be-open-to-access-my-ukcloud-for-microsoft-azure-solution">Which ports need to be open to access my UKCloud for Microsoft Azure solution?</h3>
+<p>The UKCloud Azure Stack portal requires port 80 (HTTP) and port 443 (HTTPS) to be open.</p>
 <h3 id="how-do-i-access-my-solutions-via-government-networks">How do I access my solutions via government networks?</h3>
-<p>UKCloud for Microsoft Azure will be available on the internet, HSCN, Janet, RLI and PSN networks. Initial access will be from the appropriate UKCloud Portal.</p>
+<p>UKCloud for Microsoft Azure is currently available via the internet. Community network support such as HSCN, Janet, RLI and PSN is planned for the future.</p>
 <h3 id="what-reports-can-i-get-about-my-ukcloud-for-microsoft-azure-solution">What reports can I get about my UKCloud for Microsoft Azure solution?</h3>
-<p>All reporting is via the UKCloud for Microsoft Azure management portal, which provides a variety of reports on the dashboard.</p>
+<p>Reporting is via the UKCloud Azure Stack portal, which provides a variety of reports on the dashboard.</p>
 <p>You can also interact with the API to pull data into your own reporting solutions.</p>
 <h3 id="is-this-a-managed-service">Is this a managed service?</h3>
-<p>No. UKCloud maintains and manages the underlying infrastructure that your solution is based on, but we do not manage your UKCloud for
+<p>No, UKCloud maintains and manages the underlying infrastructure that your solution is based on, but we do not manage your UKCloud for
 Microsoft Azure solution.</p>
 <h3 id="how-do-i-manage-my-services">How do I manage my services?</h3>
-<p>This service is designed to be managed using the UKCloud for Microsoft Azure portal. You can also manage it through a command line using the UKCloud for Microsoft Azure API.</p>
+<p>This service is designed to be managed using the UKCloud Azure Stack portal. You can also manage it through a command line using the UKCloud for Microsoft Azure API.</p>
 <h3 id="what-tools-can-i-use-to-manage-my-service">What tools can I use to manage my service?</h3>
-<p>You can use many common DevOps tools, such as ARM, Ansible and PowerShell, to interface with UKCloud for Microsoft Azure. UKCloud for Microsoft Azure also provides a User Interface (UI) to manage the infrastructure via a browser with the same experience as Azure Public Cloud.</p>
+<p>You can use many common DevOps tools, such as ARM, Ansible, Terraform and PowerShell, to interface with UKCloud for Microsoft Azure. UKCloud for Microsoft Azure also provides a User Interface (UI) to manage the infrastructure via a browser with a similar experience to Azure Public Cloud.</p>
 <h3 id="how-long-will-it-take-to-provision-the-service">How long will it take to provision the service?</h3>
 <p>The current provisioning time for a new service is 4 hours from service request submission (during office hours).</p>
 <h3 id="how-quickly-can-i-scale-my-service-up-or-down">How quickly can I scale my service up or down?</h3>
-<p>You can scale your UKCloud for Microsoft Azure services either via the UKCloud for Microsoft Azure portal or using the Azure API. This will typically take a few minutes to action. However, if you are likely to increase your requirements significantly, you are advised to plan this with your allocated Technical Account Manager.</p>
+<p>You can scale your UKCloud for Microsoft Azure services either via the UKCloud Azure Stack portal or using the Azure API. This will typically take a few minutes to action. However, if you are likely to increase your requirements significantly, you are advised to plan this with your allocated Technical Account Manager.</p>
 <h2 id="support">Support</h2>
 <h3 id="how-do-i-raise-a-support-ticket">How do I raise a support ticket?</h3>
 <p>The secure online <a href="https://portal.ukcloud.com/">UKCloud Portal</a> provides most common service management functionality. Alternatively, you can contact support by phone or email.</p>
@@ -163,7 +190,7 @@ Microsoft Azure solution.</p>
 <p>As far as possible, planned maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on a Saturday or Sunday. We provide customers with at least 14 days' advance notice of planned maintenance.</p>
 <p>As far as possible, emergency maintenance of UKCloud's infrastructure takes place between the hours of 00:00 and 06:00 (UK local time) Monday to Sunday, or between the hours of 08:00 and 12:00 (UK local time) on Saturday or Sunday, unless there is an identified and demonstrable immediate risk to a customer's environment. Whenever possible, we provide customers with at least six hours' advance notice of emergency maintenance.</p>
 <h3 id="can-i-configure-email-alerts-from-the-portal">Can I configure email alerts from the portal?</h3>
-<p>Yes. You can receive portal notifications to the email address associated with your UKCloud Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is currently not available in the Elevated Portal.</p>
+<p>Yes, you can receive portal notifications to the email address associated with your UKCloud Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is currently not available in the Elevated Portal.</p>
 <h2 id="onboarding">Onboarding</h2>
 <h3 id="how-can-i-get-started-with-the-service">How can I get started with the service?</h3>
 <p>Once you have requested a UKCloud for Microsoft Azure environment, your Customer Success Manager (CSM) will introduce you to the platform and relevant supporting documentation.</p>
@@ -179,13 +206,8 @@ Microsoft Azure solution.</p>
 <h3 id="what-is-the-smallest-unit-of-time-i-will-be-billed-for">What is the smallest unit of time I will be billed for?</h3>
 <p>For infrastructure solutions, you'll be billed by the smallest unit of time which is one hour for compute, and one month per GiB for Storage.</p>
 <h3 id="how-can-i-pay-for-the-services">How can I pay for the services?</h3>
-<p>UKCloud will issue invoices as follows:</p>
-<ul>
-<li>At point of order for upfront fees and service options</li>
-<li>Annually in advance for pre-payment fees</li>
-<li>Monthly in arrears for monthly fees</li>
-</ul>
-<p>Payment can be made by direct bank transfer (BACS/CHAPS).</p>
+<p>Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.</p>
+<p>If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.</p>
 <h3 id="are-there-any-termination-fees">Are there any termination fees?</h3>
 <p>There are no termination costs for this service. You are responsible for extracting your data from the UKCloud for Microsoft Azure service if required.</p>
 <p>UKCloud may make an additional charge for transferring data out of the service.</p>
@@ -198,6 +220,8 @@ Microsoft Azure solution.</p>
 <h3 id="is-there-a-protective-monitoring-service">Is there a protective monitoring service?</h3>
 <p>Protective monitoring is included for our all our services and follows GPG 13.</p>
 <p>For more information about this service, see our <a href="../other/other-faq-promon.html"><em>Protective Monitoring FAQs</em></a>.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click Improve this Doc to suggest a change. If you have an idea for how we could improve any of our services, visit UKCloud Ideas. Alternatively, you can contact us at products@ukcloud.com.</p>
 
 
                   <div class="row">
@@ -207,13 +231,6 @@ Microsoft Azure solution.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-faq.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -232,11 +249,24 @@ Microsoft Azure solution.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

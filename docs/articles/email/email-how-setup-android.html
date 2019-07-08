@@ -8,7 +8,7 @@
     <title>How to set up Email and Collaboration on Android, Windows or Blackberry mobile devices | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to set up Email and Collaboration on Android, Windows or Blackberry mobile devices | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/email/email-how-setup-android.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -94,20 +103,27 @@
 <h2 id="before-you-begin">Before you begin</h2>
 <p>Android-based smart phones can natively synchronise email, contacts and calendars to Zimbra accounts. The two prerequisites to configure this are:</p>
 <ul>
-<li>The Zimbra email system used by your organisation or service provider is a paid Network Edition license (ask your administrator if you're not sure)</li>
-<li>Your administrator has enabled mobility on your account</li>
+<li><p>The Zimbra email system used by your organisation or service provider is a paid Network Edition license (ask your administrator if you're not sure)</p>
+</li>
+<li><p>Your administrator has enabled mobility on your account</p>
+</li>
 </ul>
 <p>Assuming these two requirements are met, you can configure Zimbra just like you would a Microsoft Exchange account on the device (this is the name used for any ActiveSync‑based service).</p>
 <p>To complete the set up you will need to know the following:</p>
 <ul>
-<li><strong>Email</strong> - This is your company email address</li>
-<li><strong>Password</strong> - This is your Zimbra password (the same one used for the Zimbra Web Client)</li>
+<li><p><strong>Email</strong> - This is your company email address</p>
+</li>
+<li><p><strong>Password</strong> - This is your Zimbra password (the same one used for the Zimbra Web Client)</p>
+</li>
 </ul>
 <p>You may also need to know:</p>
 <ul>
-<li><strong>Server</strong> - The Server FQDN or IP (best practice is to always use a valid FQDN, such as <code>mail.example.com</code>)</li>
-<li><strong>Security</strong> - If you want to use SSL</li>
-<li><strong>Port</strong> - If your server does not use the default port (443)</li>
+<li><p><strong>Server</strong> - The Server FQDN or IP (best practice is to always use a valid FQDN, such as <code>mail.example.com</code>)</p>
+</li>
+<li><p><strong>Security</strong> - If you want to use SSL</p>
+</li>
+<li><p><strong>Port</strong> - If your server does not use the default port (443)</p>
+</li>
 </ul>
 <h2 id="installation-and-setup">Installation and setup</h2>
 <ol>
@@ -116,9 +132,6 @@
 </li>
 <li><p>Under <em>Accounts</em>, tap <strong>Add account</strong>.</p>
 <p><img src="images/email-android-mnu-add-account.png" alt="Add account option"></p>
-</li>
-<li><p>Select <strong>Corporate Account</strong> from the other options</p>
-<p><img src="images/email-android-mnu-corporate.png" alt="Corporate account option"></p>
 </li>
 <li><p>Enter your <strong>Email address</strong> and <strong>Password</strong> to add an account, then tap <strong>Next</strong></p>
 <p><img src="images/email-android-account-setup-email.png" alt="Enter email account details"></p>
@@ -132,14 +145,18 @@
 </li>
 <li><p>Complete the following fields in the Server Settings screen and then click <strong>Next</strong></p>
 <ul>
-<li><strong>Username</strong> - Your full email address (For example, <code>jane@coolexample.com</code>)</li>
-<li><strong>Password</strong> - Your email password</li>
-<li><strong>Server</strong> - <code>mail.example.com</code> (same URL you use for Zimbra webmail)</li>
-<li><strong>Security type</strong> and <strong>Port</strong> - Ask your administrator</li>
+<li><p><strong>Username</strong> - Your full email address (For example, <code>jane@coolexample.com</code>)</p>
+</li>
+<li><p><strong>Password</strong> - Your email password</p>
+</li>
+<li><p><strong>Server</strong> - <code>mail.example.com</code> (same URL you use for Zimbra webmail)</p>
+</li>
+<li><p><strong>Security type</strong> and <strong>Port</strong> - Ask your administrator</p>
+</li>
 </ul>
 <p><img src="images/email-android-account-setup-incoming-server.png" alt="Server Settings screen"></p>
 </li>
-<li><p>Configure your desired email account options (figure 8) and then tap <strong>Next</strong></p>
+<li><p>Configure your desired email account options and then tap <strong>Next</strong></p>
 <p><img src="images/email-android-account-setup-options.png" alt="Account options"></p>
 </li>
 <li><p>Your account set up is complete. You can optionally give this account a name. Click <strong>Done</strong></p>
@@ -159,8 +176,10 @@
 </li>
 <li><p>Choose to <strong>configure a new account</strong>:</p>
 <ul>
-<li>If no account is configured for ActiveSync, select the option to <strong>Set up your device to sync with it</strong> [the server].</li>
-<li>If you're replacing a pre-existing account, select Menu and then select <strong>Configure Server</strong></li>
+<li><p>If no account is configured for ActiveSync, select the option to <strong>Set up your device to sync with it</strong> [the server].</p>
+</li>
+<li><p>If you're replacing a pre-existing account, select Menu and then select <strong>Configure Server</strong></p>
+</li>
 </ul>
 </li>
 <li><p>In the <strong>Server address</strong>, enter the publicly accessible hostname of the server (<code>zimbra.example.com</code>).</p>
@@ -266,8 +285,10 @@
 <h3 id="provisioning-accounts">Provisioning accounts</h3>
 <p>Before you can provision accounts, the following must be set up:</p>
 <ul>
-<li>Create a Zimbra administrator account for BES. For ZCS 5.0.19 or earlier you create a Zimbra administrator. For 6.0.0 or later, you create a global administrator account. (This is the same administrator account, but in 6.0 the name was changed to global administrator).</li>
-<li>Recreate the BlackBerry Manager and BlackBerry Server mail profiles.</li>
+<li><p>Create a Zimbra administrator account for BES. For ZCS 5.0.19 or earlier you create a Zimbra administrator. For 6.0.0 or later, you create a global administrator account. (This is the same administrator account, but in 6.0 the name was changed to global administrator).</p>
+</li>
+<li><p>Recreate the BlackBerry Manager and BlackBerry Server mail profiles.</p>
+</li>
 </ul>
 <p>Following this, you can provision user accounts. After user accounts have been provisioned, restart your BlackBerry Controller service.</p>
 <h4 id="creating-a-bes-zimbra-administrator-account-on-zcs">Creating a BES Zimbra administrator account on ZCS</h4>
@@ -345,10 +366,14 @@
 </li>
 <li><p>In the <em>Zimbra Server Configuration Settings</em> dialog box, on the <strong>Server Configuration</strong> tab, enter the following information:</p>
 <ul>
-<li><strong>Server Name</strong> - This should be set to your Zimbra Server name and port number. This should be in the form of <code>example.domain.com:7071</code>.</li>
-<li>Select <strong>Secure Connection</strong>.</li>
-<li><strong>Email Address</strong> - This should be the name of the BES administrator account that you created on the ZCS server. This should be in the form of <code>adminname@example.com</code>.</li>
-<li><strong>Password</strong> - This should be the password of the BES administrator account that you created on the ZCS server.</li>
+<li><p><strong>Server Name</strong> - This should be set to your Zimbra Server name and port number. This should be in the form of <code>example.domain.com:7071</code>.</p>
+</li>
+<li><p>Select <strong>Secure Connection</strong>.</p>
+</li>
+<li><p><strong>Email Address</strong> - This should be the name of the BES administrator account that you created on the ZCS server. This should be in the form of <code>adminname@example.com</code>.</p>
+</li>
+<li><p><strong>Password</strong> - This should be the password of the BES administrator account that you created on the ZCS server.</p>
+</li>
 </ul>
 </li>
 <li><p>Click <strong>OK</strong>.</p>
@@ -373,7 +398,7 @@ configuration, processing of users provisioned on BES is distributed among multi
 <p>If users reprovision their BlackBerry mobile device, they must first wipe the device before activating their accounts.</p>
 </div>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -383,13 +408,6 @@ configuration, processing of users provisioned on BES is distributed among multi
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/email/email-how-setup-android.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -408,11 +426,24 @@ configuration, processing of users provisioned on BES is distributed among multi
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

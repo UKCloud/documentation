@@ -3,6 +3,8 @@ title: How to license Windows VMs using the UKCloud Key Management Server | UKC
 description: Shows how to register virtual machines with the KMS within vCloud Director
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 
 toc_rootlink: How To
 toc_sub1:
@@ -26,6 +28,8 @@ Before product activation, make sure your VMs can communicate with the UKCloud K
 
 To allow this communication, you need to create a source network address translation (SNAT) and firewall rule on your edge gateway:
 
+# [Using vCloud Director 8.20](#tab/tabid-1)
+
 1. In vCloud Director, click the **Administration** tab.
 
     ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
@@ -40,9 +44,7 @@ To allow this communication, you need to create a source network address transla
 
 4. Right-click the edge gateway and select **Edge Gateway Services**.
 
-5. Select the **NAT** tab and click **Add SNAT**
-
-    ![Add SNAT button](images/vmw-vcd-btn-add-snat-reg.png)
+5. Select the **NAT** tab and create a new SNAT rule.
 
 6. Make sure that the **Applied On** field is set to reflect your network.
 
@@ -50,10 +52,43 @@ To allow this communication, you need to create a source network address transla
 
 8. For the translated address, enter the external IP address of your edge gateway or one of your external IP address assignments.
 
+    For more information about creating SNAT rules, see [*How to create NAT rules*](vmw-how-create-nat-rules.md).
+
 9. Select the **Firewall** tab and make sure that an outbound rule exists on your firewall.
 
-    - **For Assured:** Set the **Destination IP** to `37.26.89.8` and the **Destination Port** to `any` or `1688`
-    - **For Elevated:** Set the **Destination IP** to `172.26.x.x` (contact support for IP) and the **Destination Port** to `any` or `1688`
+    Contact UKCloud Support for details of the **Destination IP** and **Destination Port**.
+
+    For more information about creating firewall rules, see [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
+
+# [Using vCloud Director 9.1](#tab/tabid-2)
+
+1. In vCloud Director, select the VDC for which server activation is required.
+
+2. In the left navigation panel, click **Edges**.
+
+    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
+
+3. Select the edge that you want to configure and click the **Configure Services** button.
+
+    ![Configure Services button](images/vmw-vcd91-btn-configure-services.png)
+
+4. In the *Edge Gateway* dialog box, select the **NAT** tab and create a new SNAT rule.
+
+5. Make sure that the **Applied On** field is set to reflect your network firewall tenant (NFT).
+
+6. In the **Original Source IP/Range** field, enter the IP address, CIDR or range of addresses you want to SNAT out.
+
+7. For the translated address, enter the external IP address of your edge gateway or one of your external IP address assignments.
+
+    For more information about creating SNAT rules, see [*How to create NAT rules*](vmw-how-create-nat-rules.md).
+
+8. Select the **Firewall** tab and make sure that an outbound rule exists on your firewall.
+
+    Contact UKCloud Support for details of the **Destination IP** and **Destination Port**.
+
+    For more information about creating firewall rules, see [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
+
+***
 
 ## Activating your Windows licence
 
@@ -81,6 +116,10 @@ To allow this communication, you need to create a source network address transla
 
     ![Product successfully activated](images/vmw-windows-kms-activate-success.png)
 
+## Related videos
+
+- [*Licensing Windows VMs using the UKCloud Key Management Server video*](vmw-vid-licensing-kms.md)
+
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

@@ -8,7 +8,7 @@
     <title>How to create a DHCP pool | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a DHCP pool | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-dhcp-pool.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -87,30 +96,16 @@
 <h2 id="overview">Overview</h2>
 <p>With VDC networks you have the option of creating an IP pool of addresses to be assigned automatically or manually (known as a static IP pool). These addresses are injected into virtual machines (VMs) via VMware Tools during Guest Customisation. They appear in the usual places in Windows and Linux where you would interrogate IP settings, and show as static addresses.</p>
 <p>In some situations, you may require true DHCP functionality in your VMs, so that IP addresses are shown as dynamically defined. As with an IP pool, you're defining a non-overlapping range of IP addresses to use on the network.</p>
-<p>The steps for creating a DHCP pool vary depending on what type of edge gateway you're working with:</p>
-<ul>
-<li><p><a href="#creating-a-dhcp-pool-for-an-advanced-gateway"><em>Creating a DHCP pool for an advanced gateway</em></a></p>
-</li>
-<li><p><a href="#creating-a-dhcp-pool-for-a-standard-edge"><em>Creating a DHCP pool for a standard edge</em></a></p>
-</li>
-</ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>We recommend that you convert your edge to an advanced gateway to access the latest vCloud Director functionality. For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
-</div>
 <h2 id="creating-a-dhcp-pool-for-an-advanced-gateway">Creating a DHCP pool for an advanced gateway</h2>
-<p>To create DHCP pools on an advanced gateway:</p>
+<p>To create a DHCP pool:</p>
 <ol>
-<li><p>In vCloud Director, select the <strong>Administration</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
-<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway in which you to create the DHCP pool.</p>
 </li>
-<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
+<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd91-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
 </li>
-<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
-</li>
-<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
+<li><p>Select the edge that you want to configure and click <strong>Configure Services</strong>.</p>
+<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services button"></p>
 </li>
 <li><p>Select the <strong>DHCP</strong> tab.</p>
 <p><img src="images/vmw-vcd-adv-edge-tab-dhcp.png" alt="DHCP tab"></p>
@@ -124,43 +119,22 @@
 <li><p>When you're finished, click <strong>Keep</strong>.</p>
 </li>
 </ol>
-<h2 id="creating-a-dhcp-pool-for-a-standard-edge">Creating a DHCP pool for a standard edge</h2>
-<p>To create DHCP pools on a standard edge:</p>
-<ol>
-<li><p>In vCloud Director, select the <strong>Administration</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
-<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
-</li>
-<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
-</li>
-<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
-</li>
-<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
-</li>
-<li><p>Select the <strong>DHCP</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-dhcp-reg.png" alt="DHCP tab"></p>
-</li>
-<li><p>Click <strong>Add</strong>.</p>
-<p><img src="images/vmw-vcd-btn-add-dhcp-reg.png" alt="Add DHCP button"></p>
-</li>
-<li><p>Select the network to which you want to apply the DHCP pool, then define an IP range for the pool. You can leave the lease times as default or change them.</p>
-<p><img src="images/vmw-vcd-add-dhcp-pool-reg.png" alt="Add DHCP Pool dialog box"></p>
-</li>
-<li><p>When you're finished, click <strong>OK</strong>.</p>
-</li>
-</ol>
 <h2 id="next-steps">Next steps</h2>
 <p>In this article you've learned how to create a DHCP pool. For other edge gateway configuration tasks, see:</p>
 <ul>
-<li><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></li>
-<li><a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a></li>
-<li><a href="vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a></li>
-<li><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></li>
-<li><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></li>
+<li><p><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a></p>
+</li>
+<li><p><a href="vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a></p>
+</li>
+<li><p><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></p>
+</li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -170,13 +144,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-dhcp-pool.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -195,11 +162,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

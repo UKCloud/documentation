@@ -8,7 +8,7 @@
     <title>How to create a catalog | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a catalog | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-catalog.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -84,99 +93,111 @@
                   
 <h1 id="how-to-create-a-catalog">How to create a catalog</h1>
 
-<p>Overview</p>
-<p>UKCloud provides a public catalogue for you to use that contains standard virtual machine (VM) sizes and operating systems. The public catalogue is a good place to start when you first deploy VMs into the UKCloud platform. However, you may want to create your own catalogues, containing specific applications or gold images, which you can then use to deploy VMs quickly.</p>
-<p>The first step is to create an empty catalogue.</p>
+<h2 id="overview">Overview</h2>
+<p>UKCloud provides a public catalog for you to use that contains standard virtual machine (VM) sizes and operating systems. The public catalog is a good place to start when you first deploy VMs into the UKCloud platform. However, you may want to create your own catalogs, containing specific applications or gold images, which you can then use to deploy VMs quickly.</p>
 <h2 id="creating-a-catalog">Creating a catalog</h2>
-<p>To create an empty catalogue:</p>
+<p>The first step is to create an empty catalog:</p>
 <ol>
-<li><p>In vCloud Director, select the <em>Catalogs</em> tab.</p>
-<p><img src="images/vmw-vcd-tab-catalogs.png" alt="Catalogs tab in vCloud Director"></p>
+<li><p>In vCloud Director, click the menu icon and select <strong>Libraries</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-libraries.png" alt="Libraries menu option in vCloud Director"></p>
 </li>
-<li><p>Click the <strong>+</strong> button to add a new catalogue.</p>
-<p><img src="images/vmw-vcd-btn-add-catalog.png" alt="Add catalog icon"></p>
+<li><p>In the left navigation panel, click <strong>Catalogs</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-catalogs.png" alt="Catalogs menu option"></p>
 </li>
-<li><p>Name the catalogue and give it a description if needed.</p>
-<p>There's also an option to add a Subscribed Catalog, a read-only copy of an externally published catalogue. If you want to do this, you'll need to know the URL, and the password if there is one.</p>
-<p><img src="images/vmw-vcd-new-catalog.png" alt="Name this Catalog page of New Catalog dialog box"></p>
+<li><p>Click <strong>New</strong> to create a new catalog.</p>
+<p><img src="images/vmw-vcd-catalog-btn-add.png" alt="Add catalog button"></p>
 </li>
-<li><p>When you're done, click <strong>Next</strong>.</p>
+<li><p>In the <em>Create Catalog</em> dialog box, <strong>Name</strong> the catalog and give it a <strong>Description</strong> if needed.</p>
 </li>
-<li><p>You now have the option to select the storage type used to store the catalog.</p>
+<li><p>From the <strong>Storage Policy</strong> list, select the storage type used to store the catalog.</p>
 <ul>
-<li>The default is <strong>Use any storage</strong>. Leave this selected if you don't need to store catalog items on specific storage.</li>
-<li>Alternatively, you can indicate where your catalog items should be stored if they need to be stored on a specific storage policy.</li>
-</ul>
-<p><img src="images/vmw-vcd-new-catalog-storage.png" alt="Select Storage Type options"></p>
+<li><p><strong>Tier1</strong> is for high performance, high IOPS VMs</p>
 </li>
-<li><p>When you're done, click <strong>Next</strong>.</p>
-</li>
-<li><p>To make the catalog visible to others, add specific people or your entire organisation.</p>
-<p><img src="images/vmw-vcd-new-catalog-sharing.png" alt="Sharing catalog options"></p>
-</li>
-<li><p>Click the <strong>Add Members</strong> button to add everyone in the organisation or individual users. You can give individuals different access levels.</p>
-<p><img src="images/vmw-vcd-new-catalog-add-members.png" alt="Add members options"></p>
-</li>
-<li><p>When you've added all the people who can access the catalogue, click <strong>OK</strong>, then review each individual's access level and adjust it if needed.</p>
-</li>
-<li><p>When you're done, click <strong>Next</strong>.</p>
-</li>
-<li><p>You now have the choice to publish your catalog for the use of external organisations.</p>
-<ul>
-<li><p>To enable external publishing, select the checkbox and add a password if needed.</p>
-</li>
-<li><p>If you don't want to share your catalog externally, just click <strong>Next</strong>.</p>
+<li><p><strong>Tier2</strong> is for everything else less demanding (recommended for ISO and templates)</p>
 </li>
 </ul>
-<p><img src="images/vmw-vcd-new-catalog-publish.png" alt="Publish settings"></p>
+<p><img src="images/vmw-vcd-create-catalog.png" alt="Create Catalog dialog box"></p>
 </li>
-<li><p>Review the settings and click <strong>Finish</strong>.</p>
+<li><p>When you're done, click <strong>OK</strong>.</p>
+</li>
+<li><p>To make the catalog visible to others within your organisation, click the three vertical dots and select <strong>Share</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-share-catalog.png" alt="Share catalog menu option"></p>
+</li>
+<li><p>In the <em>Share Catalog</em> dialog box, click the <strong>Add</strong> button.</p>
+<p><img src="images/vmw-vcd-share-catalog.png" alt="Share Catalog dialog box"></p>
+</li>
+<li><p>In the <em>Share With Users and Groups</em> dialog box, select:</p>
+<ul>
+<li><p><strong>Share with everyone in the organisation</strong> to add everyone in the organisation</p>
+</li>
+<li><p><strong>Share with specific users or groups</strong> to add individual users or groups of users</p>
+</li>
+</ul>
+<p>You can give users different access levels: <strong>Read Only</strong>, <strong>Full Control</strong> or <strong>Change</strong>. Change allows users to change permissions.</p>
+<p><img src="images/vmw-vcd91-share-users-groups.png" alt="Share With Users and Groups dialog box"></p>
+</li>
+<li><p>When you've added all the people who you want to access the catalog, click <strong>OK</strong>.</p>
+</li>
+<li><p>When you're done, click <strong>Save</strong>.</p>
 </li>
 </ol>
 <h2 id="populating-a-catalog">Populating a catalog</h2>
 <p>There are two ways to populate a catalog:</p>
 <ul>
-<li>By <a href="#uploading-an-ovf-package">uploading an OVF package</a></li>
-<li>By <a href="#adding-an-existing-vapp">creating a template from an existing vApp</a></li>
+<li><p>By <a href="#uploading-an-ovf-package">uploading an OVF package</a></p>
+</li>
+<li><p>By <a href="#adding-an-existing-vapp">creating a template from an existing vApp</a></p>
+</li>
 </ul>
 <h3 id="uploading-an-ovf-package">Uploading an OVF package</h3>
-<p>To upload an OVF package and assign it to a catalogue:</p>
+<p>To upload an OVF package and assign it to a catalog:</p>
 <ol>
-<li><p>On the <em>Catalogs</em> tab, select the <em>vApp Templates</em> tab.</p>
-<p><img src="images/vmw-vcd-tab-vapp-templates.png" alt="vApp Templates tab"></p>
+<li><p>In the <em>Libraries</em> page, in the left navigation panel, select <strong>vApp Templates</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-vapp-templates.png" alt="vApp Templates menu option"></p>
 </li>
-<li><p>Click the <strong>Upload</strong> button to open an OVF upload window.</p>
-<p><img src="images/vmw-vcd-btn-upload.png" alt="Upload button"></p>
+<li><p>Click <strong>Add</strong> to open an OVF upload window.</p>
+<p><img src="images/vmw-vcd-btn-add-vapp-template.png" alt="Add vApp template button"></p>
 </li>
-<li><p>In the <em>Upload OVF package as a vApp Template</em> dialog box, select the source of the OVF: either a <strong>URL</strong> or a <strong>Local file</strong>.</p>
+<li><p>In the <em>Create vApp template from OVF</em> dialog box, select the source of the OVF: either enter a <strong>URL</strong> or <strong>Browse</strong> for a local file.</p>
+<p><img src="images/vmw-create-vapp-template-source.png" alt="Select Source step of the Create vApp template from OVF dialog box"></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can select multiple files by pressing the CTRL key and selecting other files.</p>
+</div>
 </li>
-<li><p>Give a destination for the OVF, and give the OVF a name.</p>
+<li><p>Click <strong>Next</strong>.</p>
 </li>
-<li><p>From the <strong>Catalog</strong> list, select the catalog you want to put the OVF in.</p>
-<p><img src="images/vmw-vcd-upload-ovf.png" alt="Upload OVF package as a vApp Template dialog box"></p>
+<li><p>Review the details of the OVF template and then click <strong>Next</strong>.</p>
 </li>
-<li><p>When you're done, click <strong>Upload</strong> to import the OVF into the catalog.</p>
+<li><p>Enter a <strong>Name</strong> and <strong>Description</strong> for the template and from the <strong>Catalog</strong> list, select the catalog in which you want to put the OVF. Click <strong>Next</strong> to continue.</p>
+<p><img src="images/vmw-create-vapp-template-catalog.png" alt="Select vApp Template Name step of the Create vApp template from OVF dialog box"></p>
+</li>
+<li><p>Review the details of the vApp template and when you're done, click <strong>Finish</strong> to deploy.</p>
 <p>Depending on template size and network speed, the upload may take some time.</p>
 </li>
 </ol>
 <h3 id="adding-an-existing-vapp">Adding an existing vApp</h3>
 <p>To create a catalog from an existing vApp:</p>
 <ol>
-<li><p>In vCloud Director, select the <em>My Cloud</em> tab.</p>
-<p><img src="images/vmw-vcd-tab-my-cloud.png" alt="My Cloud tab in vCloud Director"></p>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC where the vApp is located.</p>
 </li>
-<li><p>Right-click the vApp you want to add to the catalog and select <strong>Add to Catalog</strong>.</p>
+<li><p>In the left navigation panel, click <strong>vApps</strong>.</p>
+<p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps menu option"></p>
+</li>
+<li><p>In the card for the vApp that you want to add to the catalog, select <strong>Actions</strong> then <strong>Add to Catalog</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-add-to-catalog.png" alt="Add to Catalog menu option"></p>
 <p>You can add both running and stopped vApps to the catalog, although it's worth noting that creating a catalog image from a running vApp could affect performance.</p>
 </li>
 <li><p>You can now choose the catalog you want to add the vApp to, give the vApp a new name, assign a storage lease, and define whether vApps deployed using this template are identical or customisable.</p>
 <p>You can also overwrite an existing catalog item. If the catalog you are adding the vApp to is published externally, you'll see a warning.</p>
-<p><img src="images/vmw-vcd-add-to-catalog.png" alt="Add to Catalog dialog box"></p>
+<p><img src="images/vmw-vcd91-add-to-catalog.png" alt="Add to Catalog dialog box"></p>
 </li>
 <li><p>When you're done, click <strong>OK</strong>.</p>
+<p>A status bar will appear on top with the message: Please wait. You can close the window and check the progress under Libraries &gt; vApp Templates.</p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -186,13 +207,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-catalog.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -211,11 +225,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

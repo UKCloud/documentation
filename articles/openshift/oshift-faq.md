@@ -3,6 +3,8 @@ title: UKCloud for OpenShift FAQs | UKCloud Ltd
 description: Frequently asked questions for UKCloud for OpenShift
 services: openshift
 author: Matt Warner
+reviewer:
+lastreviewed: 20/07/2018 10:26:58
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -34,7 +36,7 @@ UKCloud for OpenShift is built as an isolated single-tenant platform on-top of U
 
 ### How is UKCloud for OpenShift billed?
 
-- **Red Hat OpenShift**. This service comprises of two charges elements:
+This service comprises of two main chargeable elements:
 
   - **Foundation Pack -** providing an initial footprint of 32GiB of RAM, billed by the month with a one-month minimum commitment
   - **Runtime Pack -** billed by the month with a one-month minimum commitment based upon the amour of additional RAM consumed
@@ -42,10 +44,6 @@ UKCloud for OpenShift is built as an isolated single-tenant platform on-top of U
 ### Does UKCloud offer a free trial?
 
 Free trials are currently available for UKCloud for OpenShift. Please get in touch with your Account Manager to raise this request.
-
-### Is there a free tier to your service?
-
-Due to the complexities of providing a dedicated, single-tenant environment, a free tier is currently not offered on UKCloud for OpenShift.
 
 ### Where is the service hosted?
 
@@ -79,7 +77,7 @@ We are now required to self-assert our services, with customers taking responsib
 
 We provide confidence that our OpenShift service still meets the highest level of information assurance, which is why we continue to have our platform independently tested and validated, and have the findings made available to customers and partners. This enables SIROs to make an informed decision about any service they choose to consume.
 
-### Can I use UKCloud for OpenShift over closed networks such as PSN and N3?
+### Can I use UKCloud for OpenShift over closed networks such as PSN and HSCN?
 
 UKCloud for OpenShift has been certified for use over both the PSN Assured and Protected networks.
 
@@ -96,12 +94,19 @@ Although UKCloud for OpenShift is designed to deploy and manage stateless apps (
 The service supports many popular development frameworks and languages such as:
 
 - Java
+
 - Spring
+
 - Ruby
+
 - Sinatra
+
 - Node.js
+
 - Python
+
 - PHP
+
 - GoLang
 
 For the full list please visit https://access.redhat.com/articles/2176281?hsLang=en-us
@@ -111,8 +116,11 @@ For the full list please visit https://access.redhat.com/articles/2176281?hsLang
 Our OpenShift service provides popular open source data service packages deployable within the platform, all supported by the global open source community, including:
 
 - MySQL, an open source relational database
+
 - Postgres, a relational database based on PostgreSQL
+
 - MongoDB, a scalable, open, document-based database
+
 - RabbitMQ, for reliable, scalable and portable messaging for applications
 
 Note that these services are offered 'as is' with no management, support or availability commitment from UKCloud. We strongly suggest customers ensure they maintain a master copy or backup copy of any persistent or dynamic data hosted on this service (such as MySQL DB) by using, for example, a data service provided by a managed service provider on our UKCloud for VMware platform.
@@ -131,7 +139,7 @@ In order to add new users, you will need to raise a [Service Request](https://po
 
 ### What monitoring of the services is provided by default in a trial?
 
-By default, a minimal Zabbix infrastructure gets deployed to enable customer monitoring of the nodes and other services. However, we recommend external monitoring services such as Datadog or Coscale for production-grade OpenShift hosted applications.
+By default, no specific monitoring service is integrated. However, we recommend external monitoring services such as Datadog or Coscale for production-grade OpenShift hosted applications. Alternatively, you can implement your own simple monitoring solution as described in [How to monitor your OpenShift cluster](oshift-how-monitor-cluster.md).
 
 ### What monitoring of the services is provided on a billable service?
 
@@ -163,4 +171,4 @@ Yes, it is possible to run a privileged container. However, this is not recommen
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

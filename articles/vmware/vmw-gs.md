@@ -3,6 +3,8 @@ title: Getting Started Guide for UKCloud for VMware | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for VMware
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -20,7 +22,7 @@ toc_mdlink: vmw-gs.md
 
 If you're new to UKCloud, you'll probably have received a link to this guide as part of your welcome email. It will help you to get started using UKCloud for VMware.
 
-The *Getting Started Guide* provides an overview of UKCloud for VMware and gives you basic information about how to log in and set up your environment.
+The Getting Started Guide provides an overview of UKCloud for VMware and gives you basic information about how to log in and set up your environment.
 
 ### Intended audience
 
@@ -51,7 +53,8 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
 1. Go to the appropriate URL, depending on the security domain in which your service is located:
 
     - **Assured OFFICIAL:** <https://portal.ukcloud.com>
-    - **Elevated OFFICIAL:** <https://portal.ukcloud.gsi.gov.uk>
+
+    - **Elevated OFFICIAL:** Contact your Portal administrator or Customer Success Manager (CSM)
 
 2. On the *Log in* page, enter your credentials and click **Sign in**.
 
@@ -62,13 +65,18 @@ The first thing you need to do to get started with UKCloud for VMware is to log 
 
     If this is the first time you've logged in, use the temporary password you were given by your Portal administrator or CSM. You'll be prompted to change this temporary password.
 
-3. If your Portal administrator has enabled memorable word authentication or Google Two Factor Authentication (2FA), you'll be prompted for the second step of your authentication process.
-
-    For example, for memorable word authentication, you'll be prompted to enter three randomly‑selected letters from your memorable word. (If this is the first time you've logged in, you'll be prompted to create a memorable word.)
+3. If your Portal administrator has enabled memorable word authentication, you'll be prompted to enter three randomly‑selected letters from your memorable word. (If this is the first time you've logged in, you'll be prompted to create a memorable word.)
 
     ![Memorable word dialog box](images/vmw-portal-memorable-word.png)
 
-    For more information about the UKCloud Portal and all the functionality it provides, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
+4. If your Portal administrator has enabled Two-Factor Authentication (2FA), you'll be prompted to enter a six digit code. Use your 2FA app to generate the code and enter it here. (If this is the first time you've logged in, you'll be prompted to set up 2FA.)
+
+    ![Two-Factor Authentication dialog box](images/vmw-portal-2fa.png)
+
+    > [!NOTE]
+    > If you incorrectly enter your password three times, you'll be prompted to enter a captcha code until you successfully log in. If you incorrectly enter the captcha code or your password another three times, a seventh unsuccessful login attempt will result in your account being locked. You'll need to contact your Portal administrator to unlock your account.
+
+For more information about the UKCloud Portal and all the functionality it provides, see the [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md).
 
 ## Creating your UKCloud for VMware estate
 
@@ -143,7 +151,9 @@ After creating your compute service, the next step is to create one or more VDCs
 3. On the *Build VDC* page, from the **VM Type** radio buttons, select the option that describes the characteristics of the workload of the VDC:
 
     - **ESSENTIAL**---For lower priority workloads, such as temporary applications, data processing or system modelling tasks. VMs in the VDC can have contended compute resource allocation (CPU/RAM) and automated rebalancing is enabled to ensure the workload receives the requested performance.
+
     - **POWER**---For key workloads that are resource intensive, such as web and application workloads, mid-sized databases and caching services. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is enabled to pre-emptively optimise performance and availability.
+
     - **PRIORITY**---For critical workloads that handle important business processes that benefit from a steady state of operation. VMs in the VDC have an uncontended compute resource allocation and automated rebalancing is configured to reduce workload movement around the platform.
 
 4. Enter a **VDC Name**.
@@ -184,55 +194,81 @@ After you've created your compute service and VDC, you can start to build up you
 
     ![vCloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
 
-3. vCloud Director launches in your browser window.
+3. vCloud Director launches in your browser window. What you see depends on the version of vCloud Director available in your environment.
+
+    **vCloud Director 8.20 Home page**
+
+    ![vCloud Director 8.20 Home page](images/vmw-vcd-home.png)
 
     > [!NOTE]
     > If this is the first time you've opened vCloud Director, you may be requested to download the vCloud Director Web Console plugin.
 
-    ![vCloud Director Home page](images/vmw-vcd-home.png)
-
     > [!TIP]
     > If you encounter any issues, make sure you're using the Firefox ESR 32-bit browser. For more information, see [*Browser requirements for services on the UKCloud Platform*](../other/other-ref-browsers.md).
+
+    **vCloud Director 9.1 Home page**
+
+    ![vCloud Director 9.1 Home page](images/vmw-vcd-home-91.png)
 
 4. The tasks you can perform in vCloud Director will depend on the permissions you have been granted.
 
     **More information!** [*How to manage permissions for vCloud Director*](vmw-how-manage-vcd-permissions.md)
 
-5. To return to the UKCloud platform, click the **Logout** link in the top right corner of vCloud Director.
+5. To return to the UKCloud Portal:
 
-    ![vCloud Director Logout option](images/vmw-vcd-logout.png)
+    - In vCloud Director 8.20, click the **Logout** link in the top right corner.
+
+    ![vCloud Director 8.20 Logout option](images/vmw-vcd-logout.png)
+
+    - In vCloud Director 9.1, click your user name in the top right corner, and select **Log out**.
+
+    ![vCloud Director 9.1 Logout option](images/vmw-vcd-logout-91.png) -->
 
 ## Next steps
 
 In this *Getting Started Guide*, you've learned:
 
 - About your UKCloud for VMware environment and how your estate is organised
+
 - How to log in to the UKCloud Portal
+
 - How to create a compute service and VDC to set up your environment
+
 - How to log in to vCloud Director so that you can start to build your applications
 
-Now that you've set up your basic environment, you can start building your applications. If you want to get up and running quickly, you can take a look at [*How to build a virtual machine with UKCloud for VMware*](vmw-how-build-vm.md), which provides a quick walkthrough of the process.
+Now that you've set up your basic environment, you can start building your applications. If you want to get up and running quickly, you can take a look at [*How to build a virtual machine with UKCloud for VMware*](vmw-gs-build-vm-vcd.md), which provides a quick walkthrough of the process.
 
 For more detailed information about the different aspects of your UKCloud for VMware environment, see:
 
 - To create virtual machines to define your applications:
 
   - [*How to create a virtual machine from scratch*](vmw-how-create-vm-from-scratch.md)
+
   - [*How to create a virtual machine from a template*](vmw-how-create-vm-from-template.md)
 
 - To create a VDC network to enable your virtual machines to communicate with each other and the outside world:
 
   - [*How to create a routed VDC network*](vmw-how-create-routed-network.md)
-  - [*How to create an isolated VDC networks](vmw-how-create-isolated-network.md)
+
+  - [*How to create an isolated VDC network*](vmw-how-create-isolated-network.md)
 
 - To configure your edge gateway to control access to your VMs:
 
   - [*How to create firewall rules*](vmw-how-create-firewall-rules.md)
+
   - [*How to create NAT rules*](vmw-how-create-nat-rules.md)
+
   - [*How to create a DHCP pool*](vmw-how-create-dhcp-pool.md)
+
   - [*How to configure IPsec VPN*](vmw-how-configure-ipsec-vpn.md)
+
   - [*How to configure a load balancer*](vmw-how-configure-load-balancer.md)
+
   - [*How to create a static route*](vmw-how-create-static-route.md)
+
+## Related videos
+
+- [*vCloud Director 9.1 overview video*](vmw-vid-vcd91.md)
 
 ## Glossary
 
@@ -241,6 +277,7 @@ This section provides a glossary of terms specific to UKCloud for VMware.
 **account**&nbsp;&nbsp;Within the UKCloud for VMware environment there are two types of account:
 
 - **customer account** --- A collection of related compute services associated with a particular customer or partner.
+
 - **user account** --- The account you use to log in to the UKCloud Portal or authenticate with the Portal API. Your user account determines which customer accounts you have access to. Each user account can be associated with multiple customer accounts.
 
 **company**&nbsp;&nbsp;A UKCloud construct to organise business accounts. Each company can own
@@ -271,4 +308,4 @@ resource requirements and the UKCloud platform optimises its placement to ensure
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

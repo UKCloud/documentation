@@ -3,6 +3,8 @@ title: How to view your VMs in the UKCloud Portal | UKCloud Ltd
 description: Shows how to view your virtual machines within the UKCloud portal
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 
 toc_rootlink: How To
 toc_sub1:
@@ -18,7 +20,7 @@ toc_mdlink: vmw-how-portal-view-vms.md
 
 ## Overview
 
-The My VMs page in the UKCloud Portal enables you to see, at a glance, the services currently operational within your environment. My VMs doesn't just cover virtual machines (VMs); it also covers deployed vApps, edge gateway settings and bandwidth monitoring.
+The My VMs page in the UKCloud Portal enables you to see, at a glance, the services currently operational within your environment. My VMs doesn't just cover virtual machines (VMs); it also covers deployed vApps, edge gateways and bandwidth monitoring.
 
 If your system administrator has enabled billing for your account, you can also look at near real-time costs; both current month-to-date and an estimated monthly cost. You can see costs on a per-VM and per-vApp
 basis.
@@ -85,17 +87,15 @@ The **VMs** tab displays a list of all VMs within your environment.
 
 ## Viewing information about edge gateways
 
-The **Edge Gateways** tab shows properties associates with the edge gateways that are deployed in your VDCs.
+The **Edge Gateways**  tab shows the version of the edge gateways in your VDCs.
 
 1. Select the **Edge Gateway** tab.
 
-2. From the **Select Edge** list, select the edge gateway you want to work with.
+2. From the **Select Edge** list, select the edge gateway you want to look at.
 
-    - The **Config** tab shows basic configuration information for the edge
-    - The **Firewall** tab shows you information about the firewall rules configured for the edge.
-    - The **NAT** tab shows you information about the NAT rules configured for the edge.
-    - The **VPN** tab displays any VPNs that have been created against the selected edge
-    - The **Events** tab displays any events associated with the edge.
+3. The **VM version** field shows the version of the selected edge gateway.
+
+4. For information about how to upgrade your edge gateway to the latest version, see [*How to upgrade your edge gateway*](vmw-how-upgrade-edge.md)
 
 ## Viewing bandwidth monitoring information
 
@@ -119,4 +119,4 @@ For more information about snapshot protection, see [*How to manage Snapshot Pro
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

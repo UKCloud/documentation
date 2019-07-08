@@ -3,6 +3,8 @@ title: Portal user access | UKCloud Ltd
 description: Guidance on UKCloud's Portal user access processes and procedures
 services: portal
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 12:12:33
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -26,9 +28,13 @@ Security of our services is paramount and we provide the facilities to enable cu
 Customers need to allocate administrators who are responsible for:
 
 - Adding and deleting new user accounts
+
 - Maintaining the appropriate permissions and access for users
+
 - Activating and locking individual user accounts where required
+
 - Resetting passwords and memorable words
+
 - Ensuring that only appropriate users are listed as administrators
 
 To avoid a situation where all administrators are unable to access services, UKCloud recommends that each customer assigns multiple administrators and ensures that memorable words are maintained.
@@ -57,4 +63,4 @@ UKCloud Support will advise you of the names of your administrators if required.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

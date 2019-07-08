@@ -3,6 +3,8 @@ title: How to set up Email and Collaboration on an iPhone or iPad | UKCloud Ltd
 description: Provides information on how to set up the UKCloud Email and Collaboration service on an iPhone or iPad
 services: email
 author: Sue Highmoor
+reviewer:
+lastreviewed: 24/07/2018 13:50:39
 
 toc_rootlink: How To
 toc_sub1:
@@ -39,7 +41,7 @@ For more information about ActiveSync, go to <http://en.wikipedia.org/wiki/Acti
 
     ![Settings icon on iPhone Home screen](images/email-iphone-home.png)
 
-2. Scroll down and select **Mail, Contacts, Calendars**.
+2. Scroll down and select **Passwords & Accounts**.
 
     ![Mail, Contacts, Calendars](images/email-iphone-settings.png)
 
@@ -83,7 +85,7 @@ You can now edit your global or account-specific settings as described in the ne
 
 When you have successfully set up your account, you should begin to see mail folders, contacts, and your calendar(s) appear on your device. When the synchronization completes, you can edit your global or account-specific settings.
 
-In **Settings > Mail, Contacts, Calendars** you can set global or account-specific usability controls for your email account(s), including setting the number of messages to show, how many lines of an email to preview, font size, how often to sync, and more.
+In **Passwords & Accounts** you can set global or account-specific usability controls for your email account(s), including setting the number of messages to show, how many lines of an email to preview, font size, how often to sync, and more.
 
 ![Zimbra settings](images/email-iphone-zimbra-settings.png)
 
@@ -184,4 +186,4 @@ Now the server will send you a text message when you receive a new email. Text m
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

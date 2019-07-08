@@ -8,7 +8,7 @@
     <title>Disaster Recovery as a Service FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Disaster Recovery as a Service FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/draas/draas-faq.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -164,9 +173,9 @@
 <p>Yes, all licensing for Zerto used within Disaster Recovery as a Service is included.</p>
 <p>The price of Disaster Recovery as a Service is based on the storage tier that the VM is being replicated to. For more information please see the Disaster Recovery as a Service Service Definition.</p>
 <h3 id="what-connectivity-options-do-i-have">What connectivity options do I have?</h3>
-<p>All UKCloud connectivity options are available including Internet, PSN-A, PSN-P, N3/HSCN, Janet and RLI.</p>
+<p>All UKCloud connectivity options are available including Internet, PSN, HSCN, Janet and RLI.</p>
 <h3 id="can-i-replicate-into-the-ukcloud-elevated-environment">Can I replicate into the UKCloud Elevated environment?</h3>
-<p>If you currently have a PSN-P connection in your primary site, then you would be able to replicate over PSN-P into the UKCloud Elevated environment. However, if you do not have a PSN-P connection at your primary site but would like to replicate into the Elevated environment, you can use an encrypted private line to do so. Contact your Cloud Architect for more details on this.</p>
+<p>If you currently have a PSN connection in your primary site, then you would be able to replicate over PSN into the UKCloud Elevated environment. However, if you do not have a PSN connection at your primary site but would like to replicate into the Elevated environment, you can use an encrypted private line to do so. Contact your Cloud Architect for more details on this.</p>
 <h3 id="how-do-i-invoke-a-recovery-if-my-zerto-console-becomes-unavailable">How do I invoke a recovery if my Zerto console becomes unavailable?</h3>
 <p>Once the initial configuration has been done using the Zerto Portal on the customer infrastructure, all additional configurations and management can be done using the Zerto Portal within the UKCloud Portal which includes invoking failover and any testing.</p>
 <h3 id="is-there-a-way-to-include-appliance-storage">Is there a way to include appliance storage?</h3>
@@ -174,14 +183,14 @@
 <h3 id="how-is-it-billed">How is it billed?</h3>
 <p>The pricing for Disaster Recovery as a Service is simple. You only pay for the data you have allocated to your local VMs. So, for example if your existing VMs use 100GiB of UKCloud protected storage, that's all you'll pay UKCloud to protect based on the Tier of storage and retention period chosen.</p>
 <h3 id="how-do-i-modify-replication-in-the-ukcloud-elevated-environment">How do I modify replication in the UKCloud Elevated environment?</h3>
-<p>Zerto replication to the UKCloud Assured environment can be controlled from the internet-facing Zerto Portal, however replication into the UKCloud Elevated environment can only be controlled via the Elevated Zerto Portal. To access the Elevated Zerto Portal, you need to be connected to it via the PSN-P, RLI, private encrypted connection or our Secure Remote Access (SRA) service.</p>
+<p>Zerto replication to the UKCloud Assured environment can be controlled from the internet-facing Zerto Portal, however replication into the UKCloud Elevated environment can only be controlled via the Elevated Zerto Portal. To access the Elevated Zerto Portal, you need to be connected to it via the PSN, RLI, private encrypted connection or our Secure Remote Access (SRA) service.</p>
 <h3 id="does-ukcloud-install-the-zerto-software-in-my-data-centre">Does UKCloud install the Zerto software in my data centre?</h3>
 <p>No, you are responsible for the installation and configuration of the Zerto software within your data centre. Additionally, you must ensure that the software version of Zerto running locally is the same as that running within UKCloud.</p>
 <p>UKCloud will make the appropriate Zerto software versions available via the Knowledge Centre.</p>
 <h3 id="can-i-failback-to-my-own-data-centre-or-third-party-data-centre">Can I failback to my own data centre or third party data centre?</h3>
 <p>Yes, once you have tested or performed a live failover you can failback onto your own infrastructure using the self-service Zerto portal.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -191,13 +200,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/draas/draas-faq.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -216,11 +218,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

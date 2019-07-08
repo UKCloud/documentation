@@ -3,6 +3,8 @@ title: Snapshot Protection Service Scope | UKCloud Ltd
 description: Outlines important details regarding the Snapshot Protection service
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 24/07/2018 13:50:39
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -55,7 +57,7 @@ We do not guarantee successful snapshots.
 
 We can provide you with guidance on suitable candidates for Snapshot Protection (data change rate/size).
 
-Large VMs of 2TiB+ with high change rates are not supported by Snapshot Protection, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up. Therefore, please contact your technical Account Manager if this scenario applies to one or more of your VMs.
+VMs larger than 2TiB or with high change rates are not supported by Snapshot Protection, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up. Therefore, please contact your Technical Account Manager (TAM) if this scenario applies to one or more of your VMs.
 
 VM snapshots may be attempted more than once to obtain successful status.
 
@@ -75,7 +77,7 @@ We will not rerun snapshots outside the window.
 
 Automated VM snapshots don't include an SLA. You should be aware that snapshots may occasionally fail for a variety of reasons. The status of automated VM snapshots is monitored continuously, and the UKCloud support team investigates all failures.
 
-It isn't always possible to rerun an automated VM snapshot, if this service doesn't meet your own protection requirements, we can also offer synchronous protection and journaling protection options.
+It isn't always possible to rerun an automated VM snapshot, if this service doesn't meet your own protection requirements, we can also offer Journaling Protection options.
 
 If none of these services meet your requirements, you can also implement and manage your own protection solution.
 
@@ -147,4 +149,4 @@ We'll proactively investigate failures on the platform on the following triggers
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

@@ -3,6 +3,8 @@ title: Smart Hands Service Scope | UKCloud Ltd
 description: Outlines important details regarding the Smart Hands service
 services: enablement
 author: Steve Hall
+reviewer:
+lastreviewed: 23/07/2018 11:55:40
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -43,6 +45,9 @@ The following are examples of the core tasks that Smart Hands can be requested f
 
 - Basic troubleshooting of customer equipment
 
+> [!NOTE]
+> The Smart Hands service is available only within the data centre halls and cannot be used for transporation of hardware between different areas of the data centre. UKCloud can assist with uninstalling and moving equipment to loading bays but cannot transport equipment between different areas of the data centre. 
+
 ## How do I use Smart Hands?
 
 ### Step 1: Raise a Service Request/Incident
@@ -50,6 +55,7 @@ The following are examples of the core tasks that Smart Hands can be requested f
 For routine non-urgent requirements, raise a Service Request in the [MyCalls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal providing your detailed needs of the activity you would like us to perform and if there are any specific needs to be co-ordinated with you.
 
 For urgent requirements following raising a Service Request and contact UKCloud Support on **01252 303300, option 2.**
+We will treat your urgent request as a Service Down event and act to help resolve as quickly as possible.
 
 ### Step 2: Confirm requirements
 
@@ -79,4 +85,4 @@ You will be charged to cover the time the engineer is on site to carry out the r
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

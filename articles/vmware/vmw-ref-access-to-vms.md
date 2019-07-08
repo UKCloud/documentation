@@ -3,6 +3,8 @@ title: Access to virtual machines on the UKCloud platform | UKCloud Ltd
 description: Outlines what access and controls UKCloud has in place with regards to customer virtual machines.
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -25,7 +27,7 @@ UKCloud personnel do have access to the vSphere hypervisors, physical servers an
 
 ## What controls do you have in place to prevent access to our data, either on disk or in memory?
 
-UKCloud was one of the first cloud service providers to achieve NCSC Pan Government Accreditation to host government data classified up to and including UK RESTRICTED (IL3 under the Government Protective Marking Scheme) and is one of the few cloud service providers who maintain PSN Accreditation, as well as the approval of the Health and Social Care Information Commission (HSCIC) to provide access to N3/HSCN and Personally Identifiable Data. This heritage means that we have mature and well developed security controls throughout our organisation. This encompasses robust and multi-tiered physical, logical and technical security systems and controls.
+UKCloud was one of the first cloud service providers to achieve NCSC Pan Government Accreditation to host government data classified up to and including UK RESTRICTED (IL3 under the Government Protective Marking Scheme) and is one of the few cloud service providers who maintain PSN Accreditation, as well as the approval of the Health and Social Care Information Commission (HSCIC) to provide access to HSCN and Personally Identifiable Data. This heritage means that we have mature and well developed security controls throughout our organisation. This encompasses robust and multi-tiered physical, logical and technical security systems and controls.
 
 Given the low-level access that UKCloud personnel have to the cloud platform, we have implemented a variety of interconnected controls which include people, process and technology.
 
@@ -45,4 +47,4 @@ UKCloud has produced extensive security collateral to explain how we provide an 
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

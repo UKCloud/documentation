@@ -8,7 +8,7 @@
     <title>How to use VM location in vCloud Director | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to use VM location in vCloud Director | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-use-vm-location.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -85,66 +94,49 @@
 <h1 id="how-to-use-vm-location-in-vcloud-director">How to use VM location in vCloud Director</h1>
 
 <h2 id="overview">Overview</h2>
-<p>The VM location function, now available within vCloud Director, enables you to identify where a specific virtual machine (VM) within your organisation is located within the UKCloud platform.</p>
-<p>This guide describes the step-by-step instructions for obtaining this information which is available for VMs in both the Assured OFFICIAL and Elevated OFFICIAL platforms.</p>
+<p>The VM location function in vCloud Director enables you to identify where a specific virtual machine (VM) within your organisation is located within the UKCloud platform.</p>
+<p>This article describes the step-by-step instructions for obtaining this information which is available for VMs in both the Assured OFFICIAL and Elevated OFFICIAL platforms.</p>
 <p>With regards to the supplied location, this is standardised to the following options:</p>
 <ul>
-<li>Corsham (located in the Corsham data centre)</li>
-<li>Farnborough (located in the Farnborough data centre)</li>
-<li>ENHANCED-Corsham (replicated in both data centres. Active in Corsham and standby in Farnborough)</li>
-<li>ENHANCED-Farnborough (replicated in both data centres. Active in Farnborough and standby in Corsham)</li>
+<li><p>Corsham (located in the Corsham data centre)</p>
+</li>
+<li><p>Farnborough (located in the Farnborough data centre)</p>
+</li>
+<li><p>ENHANCED-Corsham (replicated in both data centres. Active in Corsham and standby in Farnborough)</p>
+</li>
+<li><p>ENHANCED-Farnborough (replicated in both data centres. Active in Farnborough and standby in Corsham)</p>
+</li>
 </ul>
 <p>This feature is designed to show the location of VMs to assist you in optimising your infrastructure with regard to performance and availability. If you wish to change the location of a specific or group
-of VMs, please raise a support request from the &quot;My Calls&quot; section of the UKCloud Portal.</p>
-<h2 id="how-to-obtain-the-location-of-a-specific-vm-via-the-portal">How to obtain the location of a specific VM via the Portal</h2>
-<h3 id="using-the-html5-tenant-portal-in-vcloud-director-91">Using the HTML5 tenant portal in vCloud Director 9.1</h3>
+of VMs, raise a support request from the My Calls section of the UKCloud Portal.</p>
+<p>You can also use the <a href="#obtaining-the-location-of-a-specific-vm-using-the-vcloud-api">vCloud API</a>.</p>
+<h2 id="obtaining-the-location-of-a-vm">Obtaining the location of a VM</h2>
 <ol>
-<li><p>Login to the UKCloud Portal.</p>
-<p>For more detailed steps, see the <a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the <strong>VDC</strong> your VM is in.</p>
 </li>
-<li><p>If necessary, switch to the appropriate account.</p>
+<li><p>In the left navigation panel, select <strong>Virtual Machines</strong>.</p>
+<p><img src="images/vmw-vcd-tab-vms.png" alt="Virtual Machines menu option"></p>
+<p>For more detailed instructions on accessing vCloud Director, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can change the view from cards to list. If you need to search for the VM, click on the filter icon and enter the name of the VM.</p>
+<p><img src="images/vmw-vcd-vms-filter.png" alt="Filter virtual machines"></p>
+</div>
 </li>
-<li><p>In the Portal navigation panel expand <strong>VMware Cloud</strong> then select your compute service.</p>
-<p><img src="images/vmw-portal-mnu-compute-services.png" alt="Compute services menu option"></p>
+<li><p>In the card for the VM, click <strong>Details</strong>.</p>
 </li>
-<li><p>On the <strong>vCloud Director</strong> tab, enter your UKCloud Portal password and then click <strong>Confirm</strong>.</p>
-<p><img src="images/conver-image-2.png" alt="vCloud Director"></p>
-</li>
-<li><p>Select the <strong>VDC</strong> your VM is in and select <strong>Virtual Machines</strong>.</p>
-<p><img src="images/vmw-vcd-tp-vms.png" alt="Virtual Machines menu option"></p>
-<p>You can change the view from cards or list. If you need to search for the VM, click on the filter icon and enter the name of the VM.</p>
-<p><img src="images/vmw-vcd-tp-vms-filter.png" alt="Filter virtual machines"></p>
-</li>
-<li><p>Click the VM <strong>Name</strong> to view details about location.</p>
-</li>
-<li><p>Expand the <strong>Advanced</strong> section of VM properties to see <em>Metadata</em> information at the bottom.</p>
-<p><img src="images/vmw-vcd-tp-vm-metadata.png" alt="VM properties -- Metadata"></p>
+<li><p>Expand the <em>Advanced</em> section of the VM details to see <em>Metadata</em> information at the bottom.</p>
+<p><img src="images/vmw-vcd-vm-metadata.png" alt="VM details -- Metadata"></p>
 <p>The location of the VM is displayed in the <strong>Value</strong> column.</p>
 </li>
 </ol>
-<h3 id="using-the-flex-based-ui-in-vcloud-director-820">Using the Flex-based UI in vCloud Director 8.20</h3>
-<ol>
-<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
-<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
-</li>
-<li><p>Select the VM you want to find the location of.</p>
-<p><img src="images/vmw-vcd-vms.png" alt="List of virtual machines"></p>
-</li>
-<li><p>Right click your VM and select <strong>Properties</strong>.</p>
-</li>
-<li><p>Select the <strong>Metadata</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-vm-metatdata.png" alt="Metadata tab in VM Properties dialog box"></p>
-<p>The location of the VM is displayed in the <strong>Value</strong> column.</p>
-</li>
-</ol>
-<h2 id="how-to-obtain-the-location-of-a-specific-vm-via-the-api">How to obtain the location of a specific VM via the API</h2>
+<h2 id="obtaining-the-location-of-a-specific-vm-using-the-vcloud-api">Obtaining the location of a specific VM using the vCloud API</h2>
 <p>You can also obtain the location of a VM via the via the API, looking at the metadata against the applicable VM.</p>
 <p>The following has been created as an example script to obtain the VM location:</p>
 <p><a href="https://api.vcd.portal.ukcloud.com/api/vApp/vm-xxxxxxxx/metadata">https://api.vcd.portal.ukcloud.com/api/vApp/vm-xxxxxxxx/metadata</a></p>
 <p>Replace the &quot;xxxxxxxx&quot; with the relevant VM ID.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -154,13 +146,6 @@ of VMs, please raise a support request from the &quot;My Calls&quot; section of 
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-use-vm-location.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -179,11 +164,24 @@ of VMs, please raise a support request from the &quot;My Calls&quot; section of 
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

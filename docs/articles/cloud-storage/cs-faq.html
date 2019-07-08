@@ -8,7 +8,7 @@
     <title>Cloud Storage FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Cloud Storage FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/cloud-storage/cs-faq.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -102,6 +111,12 @@
 <p>Documentation on ways to interact with the platform is available from the <a href="cs-gs.html">Knowledge Centre</a>.</p>
 <h3 id="is-data-accessible-via-the-psn-assured-connection-also-accessible-via-the-internet">Is data accessible via the PSN Assured connection also accessible via the internet?</h3>
 <p>Cloud Storage in our Assured OFFICAL domain uses the same environment for both PSN Assured and internet connections. Although it is not possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.</p>
+<h3 id="can-i-restrict-cloud-storage-access-to-specific-networks">Can I restrict Cloud Storage access to specific networks?</h3>
+<p>It is possible to lock Cloud Storage accounts down so that buckets are only accessible via a single network (for example HSCN, PSN, Janet), but we cannot lock down a bucket to a customer-specified source IP address or range.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>As we impose this restriction at a Cloud Storage user account level rather than the bucket itself, any new users that you add to the ECS account will be able to access associated buckets from ANY network until you request that we update our blacklist. To request network restrictions, raise a support ticket through <a href="https://portal.skyscapecloud.com/support/my_calls">My Calls</a>. Alternatively, you can contact support by phone or email.</p>
+</div>
 <h3 id="which-apis-are-supported-by-the-platform">Which APIs are supported by the platform?</h3>
 <p>Our Cloud Storage supports an Elastic Cloud Storage S3-compatible API and the native ATMOS RESTful API.</p>
 <p>Documentation and user manuals for <a href="cs-gs.html">supported API calls</a> are available from the Knowledge Centre.</p>
@@ -125,7 +140,7 @@
 </ol>
 <p>Ultimately, it is down to the customer to select which encryption methodology should be used and understand the possible risks involved.</p>
 <h3 id="how-do-i-create-new-cloud-storage-users">How do I create new Cloud Storage users?</h3>
-<p>To create additional users, you must raise a service request through the UKCloud Portal. When requesting additional users, you can specify whether they should have read-write or read-only access to your buckets.</p>
+<p>You can create additional users in the UKCloud Portal. For more information, see <a href="cs-how-create-user.html"><em>How to create a new Cloud Storage user in the UKCloud Portal</em></a>.</p>
 <h2 id="support">Support</h2>
 <h3 id="how-do-i-raise-a-support-ticket">How do I raise a support ticket?</h3>
 <p>UKCloud's secure online Portal provides the most common service management functionality, enabling you to raise support tickets through <a href="https://portal.skyscapecloud.com/support/my_calls">My Calls</a>. Alternatively, you can contact support by phone or email.</p>
@@ -151,7 +166,14 @@
 <h3 id="what-is-the-smallest-unit-of-time-i-will-be-billed-for">What is the smallest unit of time I will be billed for?</h3>
 <p>Storage is billed on a per-GiB per-month basis, and is based on utilisation of the storage platform across the month. The minimum amount of time is one month.</p>
 <h3 id="how-is-my-storage-bill-calculated">How is my storage bill calculated?</h3>
-<p>Used storage is calculated on a daily basis. The data for a month is collected, and the average consumption calculated and rounded up to the next whole number to provide the number of GiB consumed in a month.</p>
+<p>Used storage is calculated on a daily basis. The data for a month is collected, and the average consumption calculated and rounded up to the next whole number to provide the number of GiB consumed in a month. The charge for the total storage is based on a tiering basis as per the Service Definition. When your storage consumption moves into the next tier, only the amount of storage above the previous tier threshold is charged at the lower price.</p>
+<p>As an example, if a customer uses 520TiB of storage in a month, their charges are calculated as:</p>
+<ul>
+<li>250TiB x £0.0200 = £5,000</li>
+<li>250TiB x £0.0180 = £4,500</li>
+<li>20TiB x £0.0162 = £324</li>
+<li>Total cost = £9,824</li>
+</ul>
 <h3 id="how-can-i-view-billing-information">How can I view billing information?</h3>
 <p>Billing information is provided in an evidence file on the first working day of the month for your previous months spend.</p>
 <h3 id="how-do-i-pay-for-the-service-and-what-are-the-termination-fees">How do I pay for the service and what are the termination fees?</h3>
@@ -177,13 +199,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/cloud-storage/cs-faq.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -202,11 +217,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

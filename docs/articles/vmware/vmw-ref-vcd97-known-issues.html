@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>vCloud Director 9.7 known issues | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="vCloud Director 9.7 known issues | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-vcd97-known-issues.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="vcloud-director-97-known-issues">vCloud Director 9.7 known issues</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This article describes some of the issues you may encounter when using vCloud Director 9.7 with UKCloud for VMware.</p>
+<h2 id="known-issues-with-virtual-machines">Known issues with virtual machines</h2>
+<h3 id="disk-sizes-are-in-mb">Disk sizes are in MB</h3>
+<h4 id="description">Description</h4>
+<p>When adding a disk in the <em>Hardware</em> section of the VM details page, you must enter disk size in MB rather than GB and values must be entered in MB.</p>
+<h4 id="solution">Solution</h4>
+<p>There is currently no workaround for this issue. You must enter disk sizes in MB. We have raised a bug with VMware.</p>
+<h3 id="can-enter-non-optimal-values-for-disks">Can enter non-optimal values for disks</h3>
+<h4 id="description-1">Description</h4>
+<p>The UI doesn't give default or suggested values for <strong>Bus Number</strong> or <strong>Unit Number</strong>, leading to the potential to enter non-optimal values.</p>
+<h4 id="solution-1">Solution</h4>
+<p>There is currently no workaround for this issue. We have raised a bug with VMware.</p>
+<h3 id="not-using-default-storage-policy-when-adding-a-new-disk">Not using default storage policy when adding a new disk</h3>
+<h4 id="description-2">Description</h4>
+<p>When adding a new disk, the storage <strong>Policy</strong> does not default to the VM or VDC default option.</p>
+<h4 id="solution-2">Solution</h4>
+<p>You must change the storage policy as required.</p>
+<h3 id="default-option-is-to-automatically-power-on-vms">Default option is to automatically power-on VMs</h3>
+<h4 id="description-3">Description</h4>
+<p>When you create a VM using the Tenant UI, the <strong>Power on</strong> check box is selected by default so that the newly created VM is powered on. In the Legacy UI, the default was for VMs to be powered off.</p>
+<h4 id="solution-3">Solution</h4>
+<p>If you do not want a newly created VM to be powered on, ensure that you deselect the <strong>Power on</strong> check box.</p>
+<h3 id="cannot-perform-some-tasks-on-a-shut-down-vm-such-as-upgrade-hardware-version">Cannot perform some tasks on a shut down VM, such as upgrade hardware version</h3>
+<h4 id="description-4">Description</h4>
+<p>When you select the <strong>Shut Down Guest OS</strong> option for a VM leaves the VM in a partially powered off state. However in the Tenant UI, the VM will show as <strong>Powered off</strong>. While in this partially powered off state, you will be unable to perform tasks that require the VM to be completely powered off.</p>
+<h4 id="solution-4">Solution</h4>
+<p>To make sure that a VM is fully powered off, select the <strong>Power Off</strong> option from the <strong>Actions</strong> menu.</p>
+<h3 id="cannot-select-nic-type-when-adding-a-new-nic">Cannot select NIC type when adding a new NIC</h3>
+<h4 id="description-5">Description</h4>
+<p>When adding a new NIC in the <em>Hardware</em> section of the VM details page, you cannot see or edit the NIC type.</p>
+<h4 id="solution-5">Solution</h4>
+<p>There is currently no workaround for this issue. We have raised a bug with VMware.</p>
+<h3 id="the-list-of-operating-systems-when-creating-a-vm-is-not-logically-ordered">The list of operating systems when creating a VM is not logically ordered</h3>
+<h4 id="description-6">Description</h4>
+<p>The list of operating systems is not sorted in a logical order.</p>
+<h4 id="solution-6">Solution</h4>
+<p>Make sure to scroll through the list of operating systems to find the one you want to use for your VM.</p>
+<h2 id="known-issues-with-edge-gateways">Known issues with edge gateways</h2>
+<h3 id="edge-with-vpn-shows-as-working-when-it-is-not">Edge with VPN shows as working when it is not</h3>
+<h4 id="description-7">Description</h4>
+<p>Status icon for edge does not change even though there are issues with IPsec VPN or load balancing.</p>
+<h4 id="solution-7">Solution</h4>
+<p>There is currently no workaround for this issue. We have raised a bug with VMware.</p>
+<h3 id="edge-with-a-vpn-using-aes-gcm-encryption-algorithm-cannot-be-managed-in-the-tenant-ui">Edge with a VPN using AES-GCM encryption algorithm cannot be managed in the Tenant UI</h3>
+<h4 id="description-8">Description</h4>
+<p>After setting up a VPN, if the encryption algorithm is set to <code>AES-GCM</code> the edge is no longer manageable in Tenant UI and errors with <code>&quot;class java.lang.NullPointerException&quot;</code>.</p>
+<h4 id="solution-8">Solution</h4>
+<p>Use the Legacy UI to change the algorithm in the VPN configuration with the Legacy UI, You can then manage the edge in the Tenant UI.</p>
+<h3 id="cannot-see-the-psk-for-my-ipsec-vpn">Cannot see the PSK for my IPsec VPN</h3>
+<h4 id="description-9">Description</h4>
+<p>In the Tenant UI, it is difficult to find the PSK for an IPSec VPN.</p>
+<h4 id="solution-9">Solution</h4>
+<p>This information is available, but to access it you need to select <strong>Change shared key</strong>, then select <strong>Display shared key</strong>. After making a note of the key, you can close the dialog box without making any changes.</p>
+<h2 id="other-known-issues">Other known issues</h2>
+<h3 id="cannot-see-vapp-description">Cannot see vApp description</h3>
+<h4 id="description-10">Description</h4>
+<p>In the Tenant UI, there is no way to see the description of a vApp template to see information such as the OS password or patch dates.</p>
+<h4 id="solution-10">Solution</h4>
+<p>To view the description of a vApp template, you must use the Legacy UI.</p>
+<h3 id="no-option-to-change-default-vdc-storage-profile">No option to change default VDC storage profile</h3>
+<h4 id="description-11">Description</h4>
+<p>On the <em>Storage Policies</em> page, there is no way to change the default storage policy for the VDC.</p>
+<h4 id="solution-11">Solution</h4>
+<p>There is currently no workaround for this issue. We have raised a bug with VMware.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

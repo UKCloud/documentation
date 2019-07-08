@@ -8,7 +8,7 @@
     <title>UKCloud for VMware Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for VMware Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-sco.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -104,16 +113,14 @@ ESSENTIAL | Contended | Configured to meet requested performance
 POWER | Uncontended (CPU/GiB) | Pre-emptively optimises performance and availability
 PRIORITY |Uncontended (CPU/GiB) | Configured to reduce workload movement around the platform, reducing workload disruption</p>
 <p><strong>VM size.</strong> There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through vCloud Director.</p>
-<p>Full details of the available service options are outlined in the <em>Service Definition</em> <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-service-definition-document-2018-05-21-1254.pdf">Elevated</a>.</p>
+<p>Full details of the available service options are outlined in the <a href="vmw-sd.html"><em>Service Definition</em></a>.</p>
 <h2 id="storage-options">Storage options</h2>
 <p>All workloads (except micro) include 60GiB of Tier 2 storage for free, all storage is persistent and resilient to local hardware failures. Micro sized VMs include 10GiB of Tier 2 storage.</p>
 <p>Additional storage can be purchased to support your application. Multiple storage options can be used to support different aspects of the application.</p>
 <ul>
-<li><p><strong>Tier 1.</strong> Our most performant block storage for workloads requiring consistently higher disk throughput.</p>
+<li><p><strong>Tier 1.</strong> Our most performant storage for workloads requiring consistently higher disk throughput.</p>
 </li>
 <li><p><strong>Tier 2.</strong> Persistent block storage with typical performance characteristics for use by production applications or storage.</p>
-</li>
-<li><p><strong>Geo-Resilient.</strong> Works in combination with Synchronous Protection to replicate storage across a SAN that spans site locations.</p>
 </li>
 </ul>
 <h2 id="storage-policies">Storage policies</h2>
@@ -134,15 +141,12 @@ PRIORITY |Uncontended (CPU/GiB) | Configured to reduce workload movement around 
 <p><strong>Catalogue and template-based recovery.</strong> All customers have access to catalogue and template-based recovery as standard. This is a configuration management solution that can re-provision stateless servers to a new VM when required, using standard, and catalogue-based VM templates.</p>
 <p><strong>Snapshot Protection.</strong> 14-day or 28-day snapshot policies available. Data protected by the snapshot has an RPO of 24 hours, with RTO determined by the time taken to restore the VM after the service request is raised. See the <a href="vmw-sco-snapshot-protection.html"><em>Snapshot Protection Service Scope</em></a> for full details.</p>
 <p><strong>Journaling Protection.</strong> A non-invasive, self-service disaster recovery solution with configurable recovery points, providing near real-time data protection. The standard journaling profile provides a target RPO of 5 minutes and a journal history of 2, 7, 14 or 28 days. The <a href="vmw-sco-journaling-protection.html"><em>Journaling Protection Service Scope</em></a> covers the full details of this protection option.</p>
-<p><strong>Synchronous Protection.</strong> Geographical protection of your live environments across both of our sites.</p>
-<ul>
-<li><p>Currently available in regions 1, 2, 7 and 8.</p>
-</li>
-<li><p>Provides an RPO of almost 0 seconds.</p>
-</li>
-<li><p>The RTO is variable and will be influenced by factors such as your application design and the ability to failover networks. For more information, see theh <a href="vmw-sco-synchronous-protection.html"><em>Synchronous Protection Service Scope</em></a>.</p>
-</li>
-</ul>
+<h2 id="advanced-management">Advanced management</h2>
+<p>This bundle includes Distributed Firewall (DFW), Distributed Logical Router (DLR), Layer 2 VPN and vROPs Tenant Monitoring and Metrics.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>These services may not be available in all regions and zones.</p>
+</div>
 <h2 id="service-availability">Service availability</h2>
 <p>UKCloud platform availability is based on the workload type you purchase.</p>
 <p>The service level agreement (SLA) for POWER workloads guarantees 99.99% availability.</p>
@@ -187,7 +191,7 @@ PRIORITY |Uncontended (CPU/GiB) | Configured to reduce workload movement around 
 <li><p>Red Hat Enterprise Linux licensing</p>
 </li>
 </ul>
-<p>For the latest available licences, please check the <em>Service Definition</em> <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-service-definition-document-2018-05-21-1254.pdf">Elevated</a> and the <em>Pricing Guide</em> <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-pricing-document-2018-05-23-0844.pdf">Elevated</a>.</p>
+<p>For the latest available licences, please check the <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf"><em>Service Definition</em></a> and the <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf"><em>Pricing Guide</em></a>.</p>
 <p>You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you're providing your own licensing for a retrospective discount.</p>
 <p>For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.</p>
 <p><strong>VM server images.</strong> We provide base VM images for the operating systems (OS) for which we provide licensing. You can access these from vCloud Director.</p>
@@ -199,7 +203,7 @@ PRIORITY |Uncontended (CPU/GiB) | Configured to reduce workload movement around 
 <p>We manage the physical firewalls that face public and secure networks.</p>
 <p><strong>Internet-facing solutions</strong> have 2 usable public IP addresses. You can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.</p>
 <p><strong>PSN-facing solutions.</strong> You should raise a Service Request or contact your Customer Success Manager (CSM) to be assigned your IP address. Contended bandwidth (uncapped).</p>
-<p><strong>Janet and N3/HSCN solutions</strong> have one usable IP address. You can request additional IP addresses via a Service Request.</p>
+<p><strong>Janet and HSCN solutions</strong> have one usable IP address. You can request additional IP addresses via a Service Request.</p>
 <p>From a customer management experience, you manage all your connectivity rules, such as firewall, IPsec VPN and NAT functionality, through your edge gateway, using either the UKCloud Portal GUI or API.</p>
 <h2 id="edge-gateway-previously-vshield-edge">Edge gateway (previously vShield Edge)</h2>
 <ul>
@@ -236,7 +240,7 @@ than as part of a regular end-user design.</p>
 </ul>
 <p>You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the vSphere environment.</p>
 <h2 id="service-migration">Service migration</h2>
-<p>You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the <em>Pricing Guide</em> <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-pricing-document-2018-05-23-0844.pdf">Elevated</a>.</p>
+<p>You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf"><em>Pricing Guide</em></a>.</p>
 <p>Customers are free to migrate their workloads. You can also request a migration through a Service Request. Migrations may be between:</p>
 <ul>
 <li><p>Services (for example, ESSENTIAL to POWER)</p>
@@ -261,7 +265,7 @@ than as part of a regular end-user design.</p>
 </li>
 <li><p>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.</p>
 </li>
-<li><p>If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.</p>
+<li><p>If access is required over government secure networks (HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.</p>
 </li>
 <li><p>Management and administration of layers above the hypervisor (OS patching, application performance monitoring, user administration).</p>
 </li>
@@ -284,7 +288,7 @@ than as part of a regular end-user design.</p>
 <h2 id="supporting-documents-and-resources">Supporting documents and resources</h2>
 <p>The following documents contain more information about UKCloud for VMware and the service options:</p>
 <ul>
-<li><p><em>UKCloud for VMware Service Definition</em> <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-service-definition-document-2018-05-21-1254.pdf">Elevated</a></p>
+<li><p><a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf"><em>UKCloud for VMware Service Definition</em></a></p>
 </li>
 <li><p><a href="vmw-faq.html"><em>UKCloud for VMware FAQ</em></a></p>
 </li>
@@ -294,19 +298,17 @@ than as part of a regular end-user design.</p>
 </li>
 <li><p><a href="vmw-sco-journaling-protection.html"><em>Journaling Protection Service Scope</em></a></p>
 </li>
-<li><p><a href="vmw-sco-synchronous-protection.html"><em>Synchronous Protection Service Scope</em></a></p>
-</li>
 <li><p><a href="vmw-sco-byof.html"><em>Bring Your Own Firewall Service Scope</em></a></p>
 </li>
 <li><p><a href="vmw-ref-connectivity-options.html"><em>Understanding connectivity options in UKCloud for VMware</em></a></p>
 </li>
-<li><p><em>UKCloud Terms and Conditions</em> <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf">Assured</a> | <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-terms-and-conditions-2018-05-21-1254.pdf">Elevated</a></p>
+<li><p><a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf"><em>UKCloud Terms and Conditions</em></a></p>
 </li>
 <li><p><a href="../other/other-ref-sla-definition.html"><em>SLA Definition</em></a></p>
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -316,13 +318,6 @@ than as part of a regular end-user design.</p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-sco.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -341,11 +336,24 @@ than as part of a regular end-user design.</p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

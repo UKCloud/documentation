@@ -3,6 +3,8 @@ title: Getting Started Guide for UKCloud for Oracle Software | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -37,9 +39,13 @@ UKCloud for Oracle Software enables you to start your cloud journey with your Or
 The service has been designed and tested for compatibility with the most popular Oracle applications used in citizen‑facing solutions today, including:
 
 - Oracle database (including features such as encryption and Data Guard)
+
 - Oracle WebLogic Server
+
 - Oracle Fusion Applications
+
 - Oracle Enterprise Manager
+
 - Oracle E-Business Suite
 
 UKCloud for Oracle Software provides workloads with an uncontended infrastructure optimised for the performance and availability of Oracle workloads. You can right‑size the allocated resources to suit the changing demands of your application; ensuring performance and avoiding over‑capacity. You can specify the resource allocation of each workload independently: simply choose the appropriate CPU cores, amount of memory and required storage from the catalogue.
@@ -47,11 +53,17 @@ UKCloud for Oracle Software provides workloads with an uncontended infrastructur
 The service offers the following technical benefits specific to Oracle workloads:
 
 - Use of core-pinning technology means that Oracle workloads operating on the UKCloud platform aren't subject to the types of movement that can unbalance Oracle applications running on other cloud platforms
+
 - The scalable nature of our service enables you to add or remove cores in line with your understanding of the performance requirements of your solution
+
 - Self-service management of your environment via our Customer Portal, which you can also use to programmatically control your Oracle environment
+
 - Virtual firewalls to manage connectivity into and out of your environment -- self-service and free of charge
+
 - IPsec and SSL VPN/SDN to create secure connections between users and other environments using a variety of included tunnelling technologies
+
 - Basic load balancing to configure active/active solutions that are resilient to outages and can handle high levels of activity, using our on‑platform, out‑of‑the‑box load balancers
+
 - Persistent storage so that your data remains, even when a virtual machine (VM) is turned off, ensuring that your application data remains consistent and available
 
 ### Oracle licensing compliance
@@ -69,6 +81,7 @@ If you require assistance building out your Oracle solution, we can put you in c
 The management of your Oracle estate is split between Oracle Enterprise Manager (OEM) and vCloud Director:
 
 - Use OEM to build and manage your VMs and templates
+
 - Use vCloud Director to create your VM networks and configure your edge gateway, including firewall rules and VPN connections
 
 ![UKCloud for Oracle Software architecture](images/orcl-architecture.png)
@@ -163,9 +176,13 @@ UKCloud uses The *Notification Center* to communicate alerts about the objects i
 From the user account menu, you can:
 
 - [Change your password](#changing-your-password)
+
 - [Change your accessibility preferences](#changing-your-accessibility-preferences)
+
 - [Change system broadcast preferences](#changing-system-broadcast-preferences)
+
 - [Change your console settings](#changing-your-console-settings)
+
 - [Log out of the console](#logging-out-of-the-cloud-control-console)
 
 You can also access online help and display information about your version of OEM.
@@ -323,13 +340,17 @@ For more detailed information about building Oracle applications in your UKCloud
 
 - [*How to build an Oracle virtual machine*](orcl-how-build-vm.md)
 
+## Related videos
+
+- [*Oracle Enterprise Manager Cloud Control console overview video*](orcl-vid-overview.md)
+
 ## Glossary
 
 This section provides a glossary of terms specific to UKCloud for Oracle Software.
 
 **assembly**&nbsp;&nbsp;A kind of infrastructure template containing a configuration of multiple virtual machines with their virtual disks and even the inter connectivity between them. Assemblies can be created as a set of .ovf (Open Virtualization Format) and .img (disk image) files, or may all be contained in a single .ova (Open Virtualization Format Archive) file.
 
-**Assured OFFICIAL**&nbsp;&nbsp;A security domain on the UKCloud platform that provides access to public networks, such as the internet, PSN Assured, N3 or Janet.
+**Assured OFFICIAL**&nbsp;&nbsp;A security domain on the UKCloud platform that provides access to public networks, such as the internet, PSN, HSCN or Janet.
 
 **Cloud Console**&nbsp;&nbsp;System management software from Oracle that delivers centralized monitoring, administration, and life-cycle management functionality for the complete IT infrastructure, including systems running Oracle and non-Oracle technologies.
 
@@ -337,7 +358,7 @@ This section provides a glossary of terms specific to UKCloud for Oracle Softwar
 
 **edge gateway**&nbsp;&nbsp;A virtual router that provides VDC network services such as DHCP, firewall, NAT, static routing, VPN and load balancing.
 
-**Elevated OFFICIAL**&nbsp;&nbsp;A security domain on the UKCloud platform that provides secure access to restricted networks such as PSN Protected.
+**Elevated OFFICIAL**&nbsp;&nbsp;A security domain on the UKCloud platform that provides secure access to restricted networks such as PSN.
 
 **Oracle Enterprise Manager (OEM)**&nbsp;&nbsp;Oracle's on-premises management platform, providing a single pane of glass for managing all of a customer's Oracle deployments, whether in their data centres or in the Oracle Cloud. OEM provides management and automation support for Oracle applications, databases, middleware, hardware and engineered systems.
 
@@ -354,4 +375,4 @@ resource requirements and the UKCloud platform optimises its placement to ensure
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

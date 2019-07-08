@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to convert a virtual machine to use managed disks using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to convert a virtual machine to use managed disks using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-convert-to-managed-disks-ps.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-convert-a-virtual-machine-to-use-managed-disks-using-powershell">How to convert a virtual machine to use managed disks using PowerShell</h1>
+
+<h2 id="overview">Overview</h2>
+<p>UKCloud for Microsoft Azure supports the use of managed disks on virtual machines (VMs). You can use managed disks as both OS disks and data disks.</p>
+<p>For more information, see <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/managed-disks-overview">Introduction to Azure managed disks</a>.</p>
+<p>The following article shows you how to convert a virtual machine from unmanaged to managed disks on UKCloud for Microsoft Azure.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>At the time of writing, the <a href="https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/convertto-azurermvmmanageddisk?view=azurermps-6.13.0">ConvertTo-AzureRmVMManagedDisk</a> cmdlet is not supported on Azure Stack and will result in your VM becoming unmanageable. Follow the process below to convert your unmanaged disks safely.</p>
+</div>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Running the script below will result in downtime for your virtual machine as it needs to be removed then recreated.</p>
+</div>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
+<h2 id="converting-a-virtual-machine-to-use-managed-disks">Converting a virtual machine to use managed disks</h2>
+<h3 id="declare-variables">Declare variables</h3>
+<p>Enter details below to provide values for the variables in the following script in this article:</p>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ArmEndpoint</td>
+<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td><form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
+</tr>
+<tr>
+<td>$RGName</td>
+<td>Name of the resource group that the VM exists in</td>
+<td><form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"></form></td>
+</tr>
+<tr>
+<td>$VMName</td>
+<td>Name of the virtual machine to convert to use managed disks</td>
+<td><form oninput="result.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"></form></td>
+</tr>
+</tbody>
+</table>
+<h3 id="convert-the-virtual-machine">Convert the virtual machine</h3>
+<p>From your PowerShell window:</p>
+<pre><code class="language-PowerShell"># Initialise environment and variables
+
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+## Add environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+
+## Login
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
+
+# Input Variables
+$RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
+
+# Retrieve virtual machine details
+$OldVM = Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+
+# Remove the VM, keeping the disks
+Write-Output -InputObject "Removing old virtual machine"
+Remove-AzureRmVM -Name $VMName -ResourceGroupName $RGName -Force
+
+# Create OS managed disk
+Write-Output -InputObject "Creating OS managed disk"
+$OSDiskConfig = New-AzureRmDiskConfig -AccountType "StandardLRS" -Location $Location -DiskSizeGB $OldVM.StorageProfile.OsDisk.DiskSizeGB `
+    -SourceUri $OldVM.StorageProfile.OsDisk.Vhd.Uri -CreateOption "Import"
+$OSDisk = New-AzureRmDisk -DiskName "$($OldVM.Name)_$($OldVM.StorageProfile.OsDisk.Name)" -Disk $OSDiskConfig -ResourceGroupName $RGName
+
+# Create data managed disks
+if ($OldVM.StorageProfile.DataDisks) {
+    $DataDiskArray = @()
+    foreach ($DataDisk in $OldVM.StorageProfile.DataDisks) {
+        Write-Output -InputObject "Creating data managed disk"
+        $DataDiskConfig = New-AzureRmDiskConfig -AccountType "StandardLRS" -Location $Location -DiskSizeGB $DataDisk.DiskSizeGB `
+            -SourceUri $DataDisk.Vhd.Uri -CreateOption "Import"
+        $DataDiskArray += New-AzureRmDisk -DiskName "$($OldVM.Name)_$($DataDisk.Name)" -Disk $DataDiskConfig -ResourceGroupName $RGName
+    }
+}
+
+# Create new virtual machine config
+$NewVMConfig = New-AzureRmVMConfig -VMName $VMName -VMSize $OldVM.HardwareProfile.VmSize
+
+# Add OS disk to the new virtual machine config
+if ($OldVM.OSProfile.LinuxConfiguration) {
+    $NewVMConfig = Set-AzureRmVMOSDisk -VM $NewVMConfig -ManagedDiskId $OSDisk.Id -CreateOption "Attach" -Linux
+}
+else {
+    $NewVMConfig = Set-AzureRmVMOSDisk -VM $NewVMConfig -ManagedDiskId $OSDisk.Id -CreateOption "Attach" -Windows
+}
+
+# Add data disk(s) to the new virtual machine config
+$Lun = 0
+foreach ($Disk in $DataDiskArray) {
+    $NewVMConfig = Add-AzureRmVMDataDisk -VM $NewVMConfig -ManagedDiskId $Disk.Id -CreateOption Attach -Lun $Lun -DiskSizeInGB $Disk.DiskSizeGB
+    $Lun++
+}
+
+# Add network interface card(s) to the new virtual machine config
+foreach ($Nic in $OldVM.NetworkProfile.NetworkInterfaces) {
+    if ($Nic.Primary -eq $true -or $Nic.Primary -eq $null) {
+        $NewVMConfig = Add-AzureRmVMNetworkInterface -VM $NewVMConfig -Id $Nic.Id -Primary
+    }
+    else {
+        $NewVMConfig = Add-AzureRmVMNetworkInterface -VM $NewVMConfig -Id $Nic.Id
+    }
+}
+
+# Create the new virtual machine
+Write-Output -InputObject "Creating new virtual machine"
+New-AzureRmVM -VM $NewVMConfig -ResourceGroupName $RGName -Location $Location
+Get-AzureRmVM -ResourceGroupName $RGName -Name $VMName
+Write-Output -InputObject "The virtual machine has been created successfully"
+</code></pre>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

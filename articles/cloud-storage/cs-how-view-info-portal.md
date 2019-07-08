@@ -3,6 +3,8 @@ title: How to view Cloud Storage information in the UKCloud Portal | UKCloud Ltd
 description: Describes how to access information about your Cloud Storage service in the UKCloud Portal
 services: cloud-storage
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: How To
 toc_sub1:
@@ -20,13 +22,17 @@ toc_mdlink: cs-how-view-info-portal.md
 
 Cloud Storage is UKCloud's object storage solution based on Dell EMC Elastic Cloud Storage (ECS). Although you'll mostly interact with Cloud Storage through the API, the UKCloud Portal provides access to some information about your service.
 
-Within the UKCloud Portal you can:
+Within the UKCloud Portal you can view:
 
-- View information about the namespaces within your Cloud Storage environment
-- View a list of users with access to a namespace
-- Reset the secret key for a Cloud Storage user
-- View information about the buckets within a namespace
-- View a graphical representation of the storage consumed over the last 30 days
+- Information about the namespaces within your Cloud Storage environment
+
+- A list of users with access to a namespace
+
+- Information about the buckets within a namespace
+
+- A graphical representation of the storage consumed over the last 30 days
+
+You can also use the UKCloud Portal to create new Cloud Storage users. For more information, see [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md).
 
 ### Intended audience
 
@@ -70,9 +76,13 @@ In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down
 2. The *Storage* tab lists the namespaces within the currently selected account. You can see:
 
     - The number of buckets in the namespace
+
     - The total amount of storage (in GiB) currently consumed by the objects in all the buckets in the namespace
+
     - The service level of the namespace:
+
         - STANDARD - data is stored in a single data centre
+
         - ENHANCED - data is stored in a primary named data centre and copied to a second geographically remote data centre
 
     ![Namespaces page](images/cs-portal-namespaces.png)
@@ -84,7 +94,9 @@ In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down
 4. On the *Buckets* tab, you can see the following information for each bucket in the selected namespace:
 
     - The type of bucket: S3 or ATMOS
+
     - The total amount of storage (in GiB) currently consumed by the objects in the bucket
+
     - The number of objects in the bucket
 
     ![Buckets page](images/cs-portal-buckets.png)
@@ -93,46 +105,22 @@ In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down
 
     ![Consumption information](images/cs-portal-consumption.png)
 
-## Resetting your secret key
-
-Each user who can access Cloud Storage has an associated secret key to enable secure authentication. When attempting to access Cloud Storage, you must specify the appropriate secret key. If you forget the secret key for your user ID, you can reset it in the UKCloud Portal.
-
-> [!NOTE]
-> For security purposes, the UKCloud Portal does not display secret keys, if you forget your secret key, you must reset it to generate a new one.
-
-1. In the Portal navigation panel, expand the **Cloud Storage** option and select **ECS**.
-
-2. Click the **Users** button for the namespace for which you want to reset the secret key.
-
-    ![Users button](images/cs-portal-btn-users.png)
-
-3. The *Users* tab lists the different user IDs associated with the namespace.
-
-    ![Users page](images/cs-portal-users.png)
-
-4. Click the **Reset Secret** button next to the appropriate user ID.
-
-5. Click **OK** to confirm that you want to reset the secret key.
-
-    ![Reset Secret dialog box](images/cs-portal-reset-secret.png)
-
-6. Stay on the current page until a popup dialog box displays the new secret key.
-
-    ![New secret key](images/cs-portal-new-key.png)
-
-7. Make a note of the key and then click **Close**.
-
-    > [!NOTE]
-    > After you close this dialog box, you will not be able to see the secret key again in the UKCloud Portal. If you do not make a note of the secret key or if you forget or lose it, you will need to reset it again.
-
 ## Next steps
 
-This guide has shown you how you can view information about your Cloud Storage service in the UKCloud Portal. For information about how to use the service, see the following articles in the Knowledge Centre:
+This guide has shown you how you can view information about your Cloud Storage service in the UKCloud Portal. For information about how to use the service, see the following articles:
 
 - [*Getting Started Guide for Cloud Storage*](cs-gs.md)
-- [*Blueprint -- Using storage gateways with Cloud Storage*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf)
-- [*Blueprint -- Using file browsers with Cloud Storage*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-575-Blueprint-Using-file-browsers-with-Cloud-Storage-ECS-v1.pdf)
+
+- [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
+
+- Cloud Storage Gateways
+
+  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+
+  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+
+- [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

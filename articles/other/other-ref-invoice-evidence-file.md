@@ -3,6 +3,8 @@ title: Understanding your invoice evidence file | UKCloud Ltd
 description: Describes the recent changes to the evidence file provided with your UKCloud invoice
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -15,37 +17,105 @@ toc_mdlink: other-ref-invoice-evidence-file.md
 
 # Understanding your invoice evidence file
 
-## Introduction
+## Overview
 
-The UKCloud evidence file is a CSV file provided with your invoice that contains data on your VMs per month and corroborates how the totals invoiced are derived.
+The UKCloud evidence file is a CSV file provided with your invoice that contains data on your hourly metered charges per month and corroborates how the totals invoiced are derived.
 
-## Viewing information about charges
+## Evidence file columns containing information about charges
 
 The evidence file includes information to help you understand how your usage of the UKCloud platform determines how the totals in your invoice are calculated. For a quick look at the different charges that contribute to the overall cost, see the columns listed in the table below.
 
-Charge | CSV column | Description
--------|------------|------------
-Independent Disks and Media | H | Specifies charges for UKCloud for VMware Independent Disk or Media
-Compute VM | U | The cost for the compute resources based on the amount of time it was powered on, security domain, workload type and VM size
-Cloud GPU | V, W, X and Y | Details and cost for  Cloud GPU compute resources. (Cost will be shown in column Y)
-vCloud snapshot | AA, AG and AM | Charges associated with manually taking a snapshot in vCloud Director
-Block Storage | AE and/or AK and/or AQ | The cost of storage based on the type of block storage used by the VM
-Protection costs | AT, AX, AY and AZ | AT – the cost of protection for the compute element <br> AX – the cost of protecting Tier 1 storage <br> AY – the cost of protecting Tier 2 storage <br> AZ – the cost of protecting Geo-Resilient storage
-Protection Option | BA | The cost of the selected protection option applied to the VM
-Licensing | BC | Any licensing costs associated with the VM
-Total | BD | The total cost
+Charge            | CSV column             | Description
+------------------|------------------------|------------
+Compute VM        | U                      | The cost for the compute resources based on the amount of time it was powered on, security domain, workload type and VM size
+Cloud GPU         | V, W, X and Y          | Details and cost for  Cloud GPU compute resources. (Cost will be shown in column Y)
+vCloud snapshot   | AA, AG and AM          | Charges associated with manually taking a snapshot in vCloud Director
+Block Storage     | AE and/or AK and/or AQ | The cost of storage based on the type of block storage used by the VM
+Protection costs  | AT, AX, AY and AZ      | AT – the cost of protection for the compute element <br> AX – the cost of protecting Tier 1 storage <br> AY – the cost of protecting Tier 2 storage <br> AZ – the cost of protecting Geo-Resilient storage
+Protection Option | BA                     | The cost of the selected protection option applied to the VM
+Licensing         | BC                     | Any licensing costs associated with the VM
+Total             | BD                     | The total cost
+
+## All evidence file columns
+
+For information about how to use the evidence file to answer common questions about your invoice, see the [*Invoice and billing FAQs*](other-faq-billing.md).
+
+Column | Name                              | Usage                                                              | Applies to
+-------|-----------------------------------|--------------------------------------------------------------------|-----------
+A      | EventDate                         | Date charges apply to, in UTC, so daylight savings are not applied | OpenStack, VMware
+B      | ProjectID                         | OpenStack Project ID | OpenStack
+C      | vAPP                              | Name of the vApp | VMware
+D      | vDC                               | Name of the virtual data centre | VMware
+E      | ResourceName                      | Client-friendly name of the resource | OpenStack, VMware
+F      | Resource Id                       | Identifier of the resource | OpenStack, VMware
+G      | OSID                              | Operating system | VMware
+H      | Service                           | The UKCloud service to which the charge applies:<br>OpenStack Virtual Machine<br>OpenStack Block Storage Tier 1<br>OpenStack Block Storage Tier 2<br>OpenStack Image<br>CDSZ Walled Garden<br>Disaster Recovery as a Service<br>High Performance Compute<br>Secure Remote Access<br>VMware Dedicated VM<br>VMware Independent Disk<br>VMware Media<br>VMware Template<br>VMware VM | OpenStack, VMware
+I      | Metadata                          | Customer VM metadata | VMware
+J      | StartTime                         | Charging period start time on the EventDate, in UTC | OpenStack, VMware
+K      | EndTime                           | Charging period end time on the EventDate, in UTC | OpenStack, VMware
+L      | PowerState                        | On or Off | VMware
+M      | UsageMinsWithinPeriod             | 60 x UsageHoursWithinPeriod (may not match difference between the start time and end time due to rounding) | OpenStack, VMware
+N      | UsageHoursWithinPeriod            | Typically rounded up usage hours matching start time to end time period | OpenStack, VMware
+O      | ComputeMachineType                | For example m1.medium (OpenStack), Medium High Memory (VMware) | OpenStack, VMware
+P      | PowerType                         | ESSENTIAL, POWER or PRIORITY | VMware
+Q      | Security Domain                   | ASSURED or ELEVATED | OpenStack, VMware
+R      | Compute vCPU                      | Number of CPUs | OpenStack, VMware
+S      | ComputeMemory                     | Memory in GiB | OpenStack, VMware
+T      | ComputePricePerHour               | Service catalogue price for the machine type, security domain, vCPU, memory and power level | OpenStack, VMware
+U      | ComputeTotalPrice                 | ComputePricePerHour * UsageHoursWithinPeriod | OpenStack, VMware
+V      | GPUType                           | compute or visual | VMware
+W      | GPUCount                          | Any positive integer (1 to 16) | VMware
+X      | GPUPricePerHour                   | As per current pricing guide | VMware
+Y      | GPUTotalPrice                     | GPUPricePerHour * GPUCount * UsageHoursWithinPeriod | VMware
+Z      | Tier1StorageUsed                  | Tier 1 storage allocated | OpenStack, VMware
+AA     | Tier1SnapshotStorageUsed          | Tier 1 storage allocated for vCloud snapshots | VMware
+AB     | Tier1StorageIncluded              | Tier 1 storage amount that is not charged | VMware
+AC     | Tier1StorageChargeable            | Tier1StorageUsed + Tier1SnapshotUsed - Tier1StorageIncluded | OpenStack, VMware
+AD     | Tier1StoragePricePerHour          | Service catalogue price for Tier 1 storage and security domain converted into hourly charge per GiB | OpenStack, VMware
+AE     | Tier1StoragePrice                 | Tier1StorageChargeable * Tier1StoragePricePerHour * UsageHoursWithinPeriod | OpenStack, VMware
+AF     | Tier2StorageUsed                  | Tier 2 torage allocated | OpenStack, VMware
+AG     | Tier2SnapshotStorageUsed          | Tier 2 storage allocated for vCloud snapshots | VMware
+AH     | Tier2StorageIncluded              | Tier 2 storage amount that is not charged (60GiB of Tier 2 storage is included if powered on (10GiB for Micro VMS)) | VMware
+AI     | Tier2StorageChargeable            | Tier2StorageUsed + Tier2SnapshotUsed - Tier2StorageIncluded | OpenStack, VMware
+AJ     | Tier2StoragePricePerHour          | Service catalogue price for Tier 2 storage and security domain converted into hourly charge per GiB | OpenStack, VMware
+AK     | Tier2StoragePrice                 | Tier2StorageChargeable * Tier2StoragePricePerHour * UsageHoursWithinPeriod | OpenStack, VMware
+AL     | Geo-resilientStorageUsed          | Storage used in GiB | VMware
+AM     | Geo-resilientSnapshotStorageUsed  | Geo-resilient storage allocated for vCloud snapshots | VMware
+AN     | Geo-resilientStorageIncluded      | Geo-resilient storage amount that is not charged (60GiB included if powered on (10GiB for Micro VMS)) | VMware
+AO     | Geo-resilientStorageChargeable    | Geo-resilientSnapshotStorageUsed + Geo-resilientSnapshotStorageUsed - Geo-resilientStorageIncluded | VMware
+AP     | Geo-resilientPricePerHour         | Service catalogue price for geo-resilient storage and security domain converted into hourly charge per GiB | VMware
+AQ     | Geo-resilientStoragePrice         | Geo-resilientStorageChargeable * Geo-resilientStoragePricePerHour * UsageHoursWithinPeriod | VMware
+AR     | Protection Type                   | Type of protection applied:<br>None<br>14 Day Snapshot Protection<br>28 Day Snapshot Protection<br>Synchronous Protection<br>2 Day Journaling Protection<br>7 Day Journaling Protection<br>14 Day Journaling Protection<br>28 Day Journaling Protection<br>Any combination of the above (apart from None) separated by & | VMware
+AS     | ComputeProtectionPerHour          | Price per hour dependent on values in Protection Type (taking into account free 14 day snapshot with synchronous) | VMware
+AT     | ComputeProtectionTotalPrice       | ComputeProtectionPerHour * UsageHoursWithinPeriod | VMware
+AU     | Tier1ProtectionPricePerHour       | Monthly charge from service catalogue (per GB per month) converted into hourly charge per GiB (0 if no protection; blank if not relevant) | VMware
+AV     | Tier2ProtectionPricePerHour       | Monthly charge from service catalogue (per GB per month) converted into hourly charge per GiB (0 if no protection; blank if not relevant) | VMware
+AW     | Geo-resilientProtectionPerHour    | Monthly charge from service catalogue (per GB per month) converted into hourly charge per GiB (0 if no protection or not relevant). This is either just geo-resilient storage protection or geo-resilient plus 28 day snapshot | VMware
+AX     | Tier1ProtectionTotalPrice         | The cost of protection for Tier 1 storage. This could be journaling or snapshot or both<br>(Tier1StorageChargeable - Tier1SnapshotUsed) * Tier1ProtectionPricePerHour * UsageHours | VMware
+AY     | Tier2ProtectionTotalPrice         | The cost of protection for Tier 2 storage. This could be journaling or snapshot or both<br>(Tier2StorageChargeable - Tier2SnapshotUsed) * Tier2ProtectionPricePerHour * UsageHours | VMware
+AZ     | Geo-resilientProtectionTotalPrice | The cost of protection for geo-resilient storage. As 14 day snapshot is included with synchronous protection, this is only for when 28 day snapshot protection is taken with geo-resilient storage.<br>(Geo-resilientStorageChargeable - Geo-resilientSnapshotUsed) * Geo-resilientProtectionPricePerHour * UsageHours | VMware
+BA     | ProtectionTotalPrice              | Total cost for protection in period (0 if no protection)<br>(ComputeProtectionTotalPrice + Tier1ProtectionTotalPrice + Tier2ProtectionTotalPrice + Geo-resilientProtectionTotalPrice)         | VMware
+BB     | LicensePricePerHour               | Licence charges for the VM | VMware
+BC     | LicenseTotalPrice                 | LicensePricePerHour * UsageHoursWithinPeriod
+BD     | TotalPrice                        | ComputeTotalPrice + GPUTotalPrice + Tier1StoragePrice + Tier2StoragePrice + Geo-resilientStoragePrice + ProtectionTotalPrice + LicenseTotalPrice | OpenStack, VMware
 
 ## Key changes to the Evidence File (November 2017 onwards)
 
-From November 2017, you will see the following changes to your evidence file. You'll receive the Evidence File for November at the start of December 2017, detailing your consumption during November.
+From December 2018, you'll see the following changes to your evidence file. You'll receive the Evidence File for December at the start of January 2019, detailing your consumption during December.
 
 The key changes to the evidence file are as follows:
 
-**New column**
+**Service type categories**
 
-- Column H - UKCloud for VMware Independent Disks and Media charges
+- In column H the OpenStack Instance service type has been renamed to OpenStack Virtual Machine
 
 ## Previous changes
+
+### November 2017
+
+**New column:**
+
+- Column H - UKCloud for VMware Independent Disks and Media charges
 
 ### October 2017
 
@@ -91,6 +161,4 @@ These initial changes to the Evidence File will be followed by further enhanceme
 
 ## Feedback
 
-If you have any feedback on the new format of the evidence file, or want to make suggestions for additional features or improvements, make your suggestions via the [UKCloud Ideas](http://ideas.ukcloud.com/) web site.
-
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

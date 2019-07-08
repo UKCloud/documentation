@@ -8,7 +8,7 @@
     <title>UKCloud for VMware FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for VMware FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.0.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-faq.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -91,7 +100,7 @@
 <h3 id="can-vms-have-different-characteristics">Can VMs have different characteristics?</h3>
 <p>Yes. We offer three VM Types: Essential, Power and Priority.</p>
 <p>VM characteristics are inherited from the VDC the VM is deployed in. It is not currently possible to have a VDC that has mixed VM types.</p>
-<p>However, customers can have multiple VDCS to deliver their solution.</p>
+<p>However, customers can use multiple VDCs to deliver their solution.</p>
 <h3 id="are-vms-contended">Are VMs contended?</h3>
 <p>Essential VMs are contended: VMs contend for memory and processor resources.</p>
 <p>Power &amp; Priority VMs: UKCloud has implemented a combination of technical and process controls (for example, an ISO 20000-certified capacity management process) to ensure that these VMs don't contend for memory or processor resources.</p>
@@ -107,10 +116,10 @@
 </li>
 <li><p>Production STANDARD = POWER VM Type</p>
 </li>
-<li><p>ENHANCED - Now available for all VM Types as an option - Synchronous Protection</p>
+<li><p>ENHANCED - This service level has been retired from sale as of 1 January 2019</p>
 </li>
 </ul>
-<p>The new pricing structure introduced in G-Cloud 8 enables customers to customise their VMs and any options without being tied to a specific package. Thus, options such as backups, Journaling Protection and Synchronous Protection can be added regardless of the VM type.</p>
+<p>The new pricing structure introduced in G-Cloud 8 enables customers to customise their VMs and any options without being tied to a specific package. Thus, options such as backups and Journaling Protection can be added regardless of the VM type.</p>
 <h3 id="can-a-vm-communicate-to-another-vm-at-of-a-different-type">Can a VM communicate to another VM at of a different type?</h3>
 <p>Yes. VMs can communicate with each other. In some cases, customers may need to use the built-in self-service IPsec VPN functionality to create a virtual private network within our Assured cloud platform.</p>
 <h3 id="can-vms-types-be-changed">Can VMs types be changed?</h3>
@@ -143,11 +152,11 @@
 <p>If you use FTPS to upload data to or download it from your environment, you can transfer up to 1TiB of data in a day.</p>
 <p>Alternatively, we offer the Mass Transfer Facility option enabling customers to import large quantities of data via HDDs or NAS devices that are plugged directly into your environment. Please check the <em>Mass Transfer Facility Service Scope</em> for <a href="../enablement/enbl-sco-mtf-nas.html">NAS</a> or <a href="../enablement/enbl-sco-mtf-hdd.html">HDD</a>, or the pricing guide further details.</p>
 <h3 id="does-ukcloud-offer-encryption-on-the-vm">Does UKCloud offer encryption on the VM?</h3>
-<p>Not by default but, if it's required, you can implement it using technology of your choice.</p>
+<p>Not by default but, if it's required, you can implement it using technology of your choice inside the VM's operating system.</p>
 <h3 id="is-ukclouds-encryption-service-available-for-ukcloud-for-vmware">Is UKCloud's encryption service available for UKCloud for VMware?</h3>
 <p>Not currently, but we are considering this as an option. Provide feedback via <a href="http://ideas.ukcloud.com">UKCloud Ideas</a>.</p>
 <h3 id="is-it-possible-to-non-fast-provision-vapps-and-to-convert-current-vapps-into-non-fast-provisioned-ones">Is it possible to non-fast-provision vApps, and to convert current vApps into non-fast provisioned ones?</h3>
-<p>Fast provisioning is done only by customer request - by default, all vApps are non-fast-provisioned. Customers can right-click on a VM and consolidate. This can also be done via a Service Request.</p>
+<p>Fast provisioning is enabled only by customer request - by default, all vApps are non-fast-provisioned. Customers can right-click on a VM and consolidate. This can also be done via a Service Request.</p>
 <h3 id="what-is-dedicated-compute">What is Dedicated Compute?</h3>
 <p>Dedicated Compute comprises of physical blades assigned to a customer for their sole use. They're managed using the standard tools and services in the UKCloud Assured cloud platform.</p>
 <p>Dedicated Compute allows customers to:</p>
@@ -161,20 +170,16 @@
 <p>There's a longer deployment lead time for Dedicated Compute, as well as a longer contractual commitment than our shared cloud platform (three months rather than one hour).</p>
 <p>For more details, please see the UKCloud for VMware Service Definition available via the Digital Marketplace.</p>
 <h3 id="can-i-utilise-multiple-storage-types-with-my-vm">Can I utilise multiple storage types with my VM?</h3>
-<p>UKCloud offer three storage types to customers:</p>
+<p>UKCloud offers two storage types to customers:</p>
 <ul>
 <li><p>Tier 1 which is a fast storage offering</p>
 </li>
 <li><p>Tier 2 which is a standard storage offering</p>
 </li>
-<li><p>Geo-resilient which is utilised by the synchronous protection technology</p>
-</li>
 </ul>
 <p>With Tier 1 and Tier 2 storage, customers can utilise both types to deliver their solutions - including running VMs utilising disks on different storage types.</p>
-<p>Customers can not mix geo-resilient storage with any other storage type attached to a VM. So, customers cannot leverage Geo-Resilient Storage in conjunction with Tier 1 or Tier 2 storage types.</p>
 <h3 id="can-i-change-between-storage-types-associated-with-the-vms-ive-deployed">Can I change between storage types associated with the VMs I've deployed?</h3>
 <p>If a customer has both Tier 1 and Tier 2 storage profiles available, they can self-migrate between these storage types.</p>
-<p>Migration from, or to, Geo-Resilient storage and other storage types (Tier 1 and Tier 2) is an activity that can only be performed by UKCloud.</p>
 <h3 id="what-happens-when-i-switch-off-my-vms-using-the-guest-operating-system">What happens when I switch off my VMs using the guest Operating System?</h3>
 <p>If you shut down your VM using the guest OS, we will recognise this as a 'Power Off' event and you will not be billed whilst the VM remains in this state. Billing will resume once the VM is powered on again.</p>
 <h3 id="how-do-i-change-the-workload-type-of-a-vdc">How do I change the workload type of a VDC?</h3>
@@ -193,29 +198,26 @@
 <p>UKCloud controls and manages a perimeter firewall on the edge of our Assured cloud platform which securely segregates traffic. Within the UKCloud for VMware environment, we provide you with a dedicated self-managed virtual firewall which delivers typical firewall functionality such as access control lists and network address translation, as well as basic load balancing and support for VPNs.</p>
 <p>You can also use your preferred firewall and security appliances, as long as they're compatible with the VMware virtual infrastructure used to power the UKCloud Assured cloud platform.</p>
 <h3 id="how-do-i-create-and-manage-firewall-rules">How do I create and manage firewall rules?</h3>
-<p>Your UKCloud-provided dedicated virtual firewall is managed exclusively by you. You can set and manage firewall rules via the UKCloud Portal and
-API.</p>
+<p>Your UKCloud-provided dedicated virtual firewall is managed exclusively by you. You can set and manage firewall rules via the UKCloud Portal and API.</p>
 <p>On-boarding guides and associated video tutorials are available to help
 customers configure and manage their firewalls.</p>
 <h3 id="can-i-bring-my-own-firewall">Can I bring my own firewall?</h3>
 <p>Customers can choose to deploy the firewall technology of their choice.</p>
-<p>This service, how to order it, and the constraints it may place on operation, is fully documented within our knowledge centre on the UKCloud Portal.</p>
+<p>This service, how to order it, and the constraints it may place on operation, is fully documented within our knowledge centre.</p>
 <h3 id="how-does-ukcloud-provide-urgent-maintenance-notifications-and-incident-reports">How does UKCloud provide urgent maintenance notifications and incident reports?</h3>
-<p>You can view these on the <a href="https://portal.ukcloud.com/notifications">notifications page</a> on the UKCloud Portal. In addition, Service Status reports are published on the <a href="http://status.skyscapecloud.com/">service status</a> page.</p>
-<h3 id="when-using-fault-tolerance-on-vcns-devices-is-the-tcp-session-state-replicated-between-the-devices">When using fault tolerance on vCNS devices, is the TCP session state replicated between the devices?</h3>
-<p>Yes, the TCP session data/connection tables are replicated, but there's no replication of the load-balancer.</p>
+<p>You can view these on the <a href="https://portal.ukcloud.com/notifications">notifications page</a> on the UKCloud Portal. In addition, Service Status reports are published on the <a href="http://status.ukcloud.com/">service status</a> page.</p>
 <h3 id="do-you-offer-dynamic-or-static-ip-addresses">Do you offer dynamic or static IP addresses?</h3>
 <p>The external IP addresses are static. Internal IPs can be assigned statically from a pool, manually or dynamically via DHCP.</p>
 <h3 id="are-external-domain-name-system-dns-services-available">Are external Domain Name System (DNS) services available?</h3>
-<p>No, we don't currently offer this service. You can implement your own DNS servers within your solution, or configure your virtual firewall to enable connectivity to an externally hosted DNS server - for example, one hosted on a government secure network such as PSN, Janet or N3/HSCN; or one available on the Internet such as Google <code>8.8.8.8</code>.</p>
+<p>No, we don't currently offer this service. You can implement your own DNS servers within your solution, or configure your virtual firewall to enable connectivity to an externally hosted DNS server - for example, one hosted on a government secure network such as PSN, Janet or HSCN; or one available on the Internet such as Google <code>8.8.8.8</code>.</p>
 <h3 id="are-domain-name-registration-services-available">Are domain name registration services available?</h3>
-<p>No, we don't currently offer this service. Some government secure networks (such as PSN and N3/HSCN) offer domain name registration and DNS hosting as part of their service.</p>
+<p>No, we don't currently offer this service. Some government secure networks (such as PSN and HSCN) offer domain name registration and DNS hosting as part of their service.</p>
 <p>For internet-facing services a third-party DNS provider will be required.</p>
 <h3 id="is-network-time-protocol-available-for-time-synchronisation">Is Network Time Protocol available for time synchronisation?</h3>
 <p>Yes this is available for Assured OFFICIAL and Elevated OFFICIAL. See <a href="vmw-ref-network-time-server.html"><em>Network Time Protocol server access</em></a> for details.</p>
 <h3 id="can-ukcloud-provide-ssl-certificates-or-can-existing-ssl-certificates-be-used">Can UKCloud provide SSL certificates or can existing SSL certificates be used?</h3>
 <p>UKCloud doesn't provide SSL certificates, but you can use your existing ones.</p>
-<p>Some government secure networks (such as PSN and N3/HSCN) provide SSL certificates as part of their service.</p>
+<p>Some government secure networks (such as PSN and HSCN) provide SSL certificates as part of their service.</p>
 <h3 id="do-you-offer-load-balancing">Do you offer load balancing?</h3>
 <p>Yes. Load balancing can be configured within the service and is included within the price.</p>
 <ul>
@@ -246,7 +248,7 @@ customers configure and manage their firewalls.</p>
 </li>
 </ul>
 <p>Existing applications can take advantage of Tier 1 Storage. A migration process maybe involved.</p>
-<p>Tier 1 Storage is available for use with all VM types and compatible with all protection technologies - with the exception of those using Synchronous protection (which has a specific requirement to use geo-resilient storage).</p>
+<p>Tier 1 Storage is available for use with all VM types and compatible with all protection technologies.</p>
 <p>Talk to your UKCloud Account Director or Cloud Architect to understand if Tier 1 storage can benefit your solution.</p>
 <h3 id="what-are-independent-disks">What are independent disks?</h3>
 <p>Independent disks are a technology provided natively by VMware vCloud Director, and are included as options by default in the UKCloud service. They can only be created via the API, and cannot be created though the user interface. UKCloud has provided some advice on how to create and control them <a href="https://github.com/UKCloud/vcloud-independent-disks">here</a>.</p>
@@ -259,11 +261,9 @@ customers configure and manage their firewalls.</p>
 <h3 id="what-if-i-use-my-independent-disks-with-the-same-vm-all-the-time">What if I use my independent disks with the same VM all the time?</h3>
 <p>We advise that you move the data in the independent disk into a disk associated with a single VM - this will allow you to take advantage of the free 60GiB of storage included with all UKCloud VMs.</p>
 <h3 id="what-rate-are-independent-disks-charged-at">What rate are independent disks charged at?</h3>
-<p>Independent disks will be charged at the rate of the storage they are stored on (Tier 1, Tier 2 or Geo-Resilient), along with any additional protection applied (such as Snapshot or synchronous protection) and charged at a rate of per GiB per month.</p>
+<p>Independent disks will be charged at the rate of the storage they are stored on, along with any additional protection applied (Journaling or Snapshot Protection) and charged at a rate per GiB per month.</p>
 <h3 id="can-i-use-the-60gib-included-with-my-vm-on-an-independent-disk">Can I use the 60GiB included with my VM on an independent disk?</h3>
 <p>No, as an independent disk can be mounted to any VMs inside a customer's VDC, so is not associated with a single VM.</p>
-<h3 id="do-i-still-get-60-gib-of-storage-10gib-for-micro-vms-included-with-my-vm-if-i-select-geo-resilient-storage">Do I still get 60 GiB of storage (10GiB for Micro VMs) included with my VM if I select Geo-Resilient storage?</h3>
-<p>Yes, you will still get 60GiB (10GiB for Micro VMs) included with the VM of Geo-Resilient storage. Please note, for VMs in a powered off state any storage consumed will be charged at the prevailing rate. Geo-resilient storage and Synchronous protection must be purchased together.</p>
 <h3 id="how-much-included-storage-do-i-get-with-dedicated-compute">How much included storage do I get with Dedicated Compute?</h3>
 <p>You will receive the same allowance as for UKCloud for VMware VMs. For example, 60GiB of Tier 2 storage when the VM is powered on for free. Please note, when the VM is in a powered off state any storage associated with the VM will be charged at the prevailing rate.</p>
 <h2 id="management">Management</h2>
@@ -280,9 +280,6 @@ customers configure and manage their firewalls.</p>
 <p>Additionally, UKCloud provides retrospective performance information via its Portal API.</p>
 <h3 id="does-ukcloud-patch-the-vms">Does UKCloud patch the VMs?</h3>
 <p>No, customers are responsible for the patching of their services. We make a patch repository available to customers for VMs on the Elevated OFFICIAL cloud platform (which cannot connect to the internet) for common operating systems that we provide.</p>
-<!-- ### How do I find the latest patches to the UKCloud infrastructure?
-
-UKCloud maintains a Knowledge Centre article advising the [current patch level](../other/other-ref-platform-patches.md) of the UKCloud infrastructure. -->
 <h3 id="how-do-i-access-support-and-patches-for-operating-systems-that-ukcloud-licenses">How do I access support and patches for operating systems that UKCloud licenses?</h3>
 <p>UKCloud provides a repository of patches for common operating systems for customers to access and update from. Please refer to the Knowledge Centre for details.</p>
 <p>For support, you'll need to log a request with UKCloud, who will log the ticket with the relevant supplier. UKCloud will then inform you about any updates. However, UKCloud isn't responsible for the actual resolution of non-IaaS issues.</p>
@@ -294,7 +291,7 @@ regarding the registration on VMs targeting the UKCloud KMS.</p>
 <h3 id="do-you-monitor-vms">Do you monitor VMs?</h3>
 <p>UKCloud monitors the underlying platform but doesn't monitor customers' OSs or applications. Customers can implement their own application performance monitoring solutions within the VDC.</p>
 <h3 id="do-you-offer-autoscaling">Do you offer autoscaling?</h3>
-<p>There's no standard product offering for autoscale, but the platform API can be used to do this with a little developer effort. UKCloud provides blueprints in the Knowledge Centre on the UKCloud Portal which offer guidance on this.</p>
+<p>There's no standard product offering for autoscale, but the platform API can be used to do this with a little developer effort. We provide blueprints on the UKCloud web site that offer guidance on this.</p>
 <h3 id="how-quickly-can-i-scale-my-service-up-or-down">How quickly can I scale my service up or down?</h3>
 <p>Horizontal scale can be achieved quickly by adding additional VMs (usually in just a few minutes). Vertical scaling can be achieved by 'hot adding' vCPU or RAM to a VM (where supported by the guest OS). This operation usually takes seconds.</p>
 <h2 id="licensing-software-and-anti-virus">Licensing, software and anti-virus</h2>
@@ -302,7 +299,7 @@ regarding the registration on VMs targeting the UKCloud KMS.</p>
 <p>UKCloud UKCloud for VMware is powered by VMware technology, so is compatible with a wide range of x86/x64 operating systems.</p>
 <p>VMware provides a compatibility matrix at: <a href="http://partnerweb.vmware.com/comp_guide2/pdf/VMware_GOS_Compatibility_Guide.pdf">http://partnerweb.vmware.com/comp_guide2/pdf/VMware_GOS_Compatibility_Guide.pdf</a>.</p>
 <p>You can use the UKCloud catalogue of operating systems or upload your own.</p>
-<p>We offer Windows Server 2008 R2 Enterprise, Windows 2012, Windows 2016, Red Hat Enterprise Linux 6.1 and CentOS 6.1.</p>
+<p>We offer Windows Server 2008 R2 Enterprise, Windows 2012, Windows 2016, Red Hat Enterprise Linux and CentOS.</p>
 <p>In addition, we provide access to common templates provided by the Bitnami service such as Drupal, Joomla, LAMP and Wordpress.</p>
 <h3 id="how-can-i-licence-an-operating-system">How can I licence an operating system?</h3>
 <h3 id="microsoft">Microsoft</h3>
@@ -313,12 +310,12 @@ regarding the registration on VMs targeting the UKCloud KMS.</p>
 <p>RHEL operating systems can be licensed by UKCloud or the customer.</p>
 <p>The customer is responsible for ensuring correct licensing for any other operating system they chose to install. If you wish to use your own RHEL licencing, please a Service request.</p>
 <h3 id="how-up-to-date-are-the-operating-system-images-and-mirrors">How up to date are the operating system images and mirrors?</h3>
-<p>All CentOS, Ubuntu, Red Hat and Debian distributions are automatically updated to contain the latest patches and releases. For a list of supported operating systems, and instructions on how to access these repositories, see the Knowledge Centre.</p>
+<p>All CentOS, Ubuntu, Red Hat and Debian distributions include update mechanisms to install the latest patches and releases. For a list of supported operating systems, and instructions on how to access these update repositories, see the Knowledge Centre.</p>
 <h3 id="what-anti-virus-do-you-offer-on-this-service">What anti-virus do you offer on this service?</h3>
 <p>UKCloud doesn't provide any anti-virus by default, so customers are advised to install their own anti-virus (AV) software to protect their workloads.</p>
 <h3 id="what-applications-are-available-as-part-of-the-default-service">What applications are available as part of the default service?</h3>
 <p>UKCloud does not offer any additional software other than what's included in the UKCloud Portal catalogue. Any additional software, including its licensing, is the customer's responsibility.</p>
-<h3 id="is-open-virtualisation-format-ovf-for-vm-images-supported">Is Open Virtualisation Format (OVF) for VM images supported?</h3>
+<h3 id="are-open-virtualisation-format-ovf-vm-images-supported">Are Open Virtualisation Format (OVF) VM images supported?</h3>
 <p>Yes, OVF images can be uploaded to the platform, and VMs built in the platform can be downloaded as OVF.</p>
 <h3 id="what-is-bring-your-own-byo-licensing-for-red-hat">What is Bring Your Own (BYO) licensing for Red Hat?</h3>
 <p>BYO licensing for Red Hat allows customers to select VMs running on the UKCloud Assured cloud platform for covering by their own commercial agreement with Red Hat.</p>
@@ -347,65 +344,46 @@ regarding the registration on VMs targeting the UKCloud KMS.</p>
 <p>You will be contacted by your Cloud Architect or CSM when your trial is due to end, either because you have run out of credits or reached 30 days (whichever is sooner).</p>
 <p>At the end of your trial, you have the option to transition to production or cease the trial.</p>
 <h2 id="protection">Protection</h2>
-<h3 id="which-protection-types-can-i-purchase-together">Which protection types can I purchase together?</h3>
-<ul>
-<li><p>Synchronous Protection &amp; 14/28 Day Snapshot Protection</p>
-</li>
-<li><p>Synchronous Protection &amp; 14/28 Day Journaling Protection</p>
-</li>
-<li><p>Synchronous Protection, 14 Day Journaling Protection &amp; 14 Day Snapshot Protection</p>
-</li>
-<li><p>Synchronous Protection, 28 Day Journaling Protection &amp; 28 Day Snapshot Protection</p>
-</li>
-<li><p>Synchronous Protection &amp; 14 Day Journaling Protection &amp; 28 Day Snapshot Protection</p>
-</li>
-<li><p>Synchronous Protection &amp; 28 Day Journaling Protection &amp; 14 Day Snapshot Protection</p>
-</li>
-</ul>
-<p>Please note - 14/28-day Snapshot Protection is included at no extra cost with Synchronous Protection.</p>
-<h3 id="what-is-the-enhanced-service">What is the ENHANCED service?</h3>
-<p>ENHANCED was a G-Cloud 7 service level option which has now been replaced with the G-Cloud 9 equivalent, a POWER VM with Synchronous Protection and Geo-resilient storage.</p>
 <h3 id="can-i-create-a-clone-of-my-environment">Can I create a clone of my environment?</h3>
-<p>Yes, you can do this through the UKCloud Portal by right-clicking on a VM and selecting 'Clone'. This operation can also be performed programmatically via the API.</p>
+<p>Yes, you can do this through the UKCloud Portal by right-clicking on a vApp and selecting 'Copy'. This operation can also be performed programmatically via the API.</p>
+<p>It's not possible to restrict the automated VM snapshot backup to specific files or directories. You can install your own backup service and use our Cloud Storage if you need more flexibility.</p>
+<h2 id="can-i-still-use-synchronous-protection-for-my-vms">Can I still use Synchronous Protection for my VMs?</h2>
+<p>Synchronous Protection is no longer available as protection option for UKCloud for VMware. We recommend using one of our other protection options: Journaling Protection or Snapshot Protection. We will continue to provide support to customers who previously added Synchronous Protection to their environment.</p>
+<h2 id="snapshot-protection">Snapshot Protection</h2>
+<h3 id="what-are-snapshots">What are snapshots?</h3>
+<p>A snapshot is NOT a copy of the VMDK. Creating a snapshot locks out the base VMDK file and any changes to the data are written to the snapshot delta VMDK. If you wish to &quot;roll back&quot; to the point in time that the snapshot was created and discard any changes since, you can &quot;revert&quot; the snapshot, which essentially deletes it and discards any changes. If you are happy with the changes made since the snapshot was created, you can &quot;delete&quot; the snapshot, which essentially consolidated all changes back into the base VMDK. Please see advice on best practice regarding snapshots in this <a href="vmw-ref-vmdk-limits.html">article</a>.</p>
+<p>Snapshots can be created using the vCloud Director portal and are stored in the same zone as the source VM. This is not to be confused with the UKCloud snapshot protection service, which uses a temporary snapshot in order to backup the VM to an external system in another UKCloud site. </p>
+<p>For further reference, this <a href="vmw-ref-vm-data-recovery.html">article</a> explains the different recovery options available to you through vCloud Director. In order to identify old snapshots, UKCloud have created this <a href="vmw-ref-vcd-healthcheck.html">article</a> which contains scripts to run a health check of your VMs.</p>
+<h3 id="can-i-restrict-automated-vm-snapshot-backup-to-specific-files-or-directories">Can I restrict automated VM snapshot backup to specific files or directories?</h3>
 <p>It's not possible to restrict the automated VM snapshot backup to specific files or directories. You can install your own backup service and use our Cloud Storage if you need more flexibility.</p>
 <h3 id="how-quickly-can-a-vm-be-restored">How quickly can a VM be restored?</h3>
 <p>This depends on the size of the VM, the location from which it's being restored, and the priority of the support ticket raised to request the restoration.</p>
 <p>Customers should expect recovery to take two to three days. If you require a faster recovery time, you must implement your own backup/restore solution which will be entirely under their control. Our Cloud Storage platform could be an appropriate target for self-managed backups using software such as CommVault and NetWorker.</p>
-<h3 id="if-i-have-synchronous-protection-which-includes-1428-day-snapshot-what-will-i-be-billed-for">If I have Synchronous Protection, which includes 14/28-day Snapshot, what will I be billed for?</h3>
-<p>VM's with synchronous protection and 14/28-day snapshot protection will not incur any snapshot protection compute/VM charges.</p>
-<h3 id="if-i-have-snapshot-protection-on-dedicated-compute-what-will-i-be-charged-for">If I have Snapshot Protection on Dedicated Compute, what will I be charged for?</h3>
-<p>You will only be charged for the protection of the storage consumed, not the VM.</p>
-<h2 id="snapshot-protection">Snapshot Protection</h2>
-<h3 id="what-are-snapshots">What are snapshots?</h3>
-<p>A snapshot is NOT a copy of the VMDK. Creating a snapshot locks out the base VMDK file and any changes to the data are written to the snapshot delta VMDK. If you wish to &quot;roll back&quot; to the point in time that the snapshot was created and discard any changes since, you can &quot;revert&quot; the snapshot, which essentially deletes it and discards any changes. If you are happy with the changes made since the snapshot was created, you can &quot;delete&quot; the snapshot, which essentially consolidated all changes back into the base VMDK. Please see advice on best practice regarding snapshots in this <a href="vmw-ref-vmdk-limits.html">article</a>.</p>
-<p>This can be performed using vCloud Director and is stored in the same zone as the source VM. This is not to be confused with the UKCloud snapshot protection service,
-which takes a snapshot of the VM and stores this in an external system
-in another UKCloud site. </p>
-<p>For further reference, this <a href="vmw-ref-vm-data-recovery.html">article</a> explains the different recovery options available to you through vCloud Director. In order to identify old snapshots, UKCloud have created this <a href="vmw-ref-vcd-healthcheck.html">article</a> which contains scripts to run a health check of your VMs.</p>
 <h3 id="what-rate-are-snapshots-charged-at">What rate are snapshots charged at?</h3>
-<p>Snapshots will be charged at the rate of the storage they are stored on (Tier 1, Tier 2 or Geo-Resilient), and charged at a rate of per GiB per month.</p>
+<p>Snapshots will be charged at the rate of the storage they are stored on (Tier 1 or Tier 2), and charged per GiB per month.</p>
 <h3 id="can-i-use-the-60gib-included-with-my-vm-for-snapshots">Can I use the 60GiB included with my VM for snapshots?</h3>
 <p>Yes, you can use the 60GiB included with the VM for snapshots.</p>
-<h2 id="synchronous-protection-dr">Synchronous Protection (DR)</h2>
-<h3 id="does-ukcloud-provide-a-dr-option">Does UKCloud provide a DR option?</h3>
-<p>An automated replication and failover service is included for VMs utilising the Synchronous protection capability. It provides synchronous data replication which enables a near-zero recovery point objective (RPO).</p>
-<p>The recovery time objective (RTO) depends on the nature of the disaster or failure scenario. In some scenarios, VMs utilising Synchronous protection will be automatically restarted at the other data centre. In other scenarios, manual intervention by UKCloud will be needed, and the recovery time might be extended from minutes to hours.</p>
-<p>If you need more control and assurance around how data is replicated, the DR service is tested, or the solution handles failover and failback, we recommend you create your own DR solution by using independent sets of VMs in the various regions offered by the UKCloud platform.</p>
+<h3 id="if-i-have-snapshot-protection-on-dedicated-compute-what-will-i-be-charged-for">If I have Snapshot Protection on Dedicated Compute, what will I be charged for?</h3>
+<p>You will only be charged for the protection of the storage consumed, not the VM.</p>
+<h2 id="disaster-recovery">Disaster Recovery</h2>
+<h3 id="does-ukcloud-provide-a-dr-service">Does UKCloud provide a DR service?</h3>
+<p><a href="../draas/draas-sco.html">Disaster Recovery as a Service</a> (powered by Zerto) can help you improve organisational resilience. It enables rapid migration of applications between your local VMware or Hyper-V based VMs and UKCloud for VMware disaster recovery-enabled regions.</p>
+<p>An alternative UKCloud solution to achieve DR with a low RPO and RTO is <a href="vmw-sco-journaling-protection.html">Journaling Protection</a>.</p>
 <h3 id="how-does-ukcloud-enable-customers-to-create-their-own-dr-solutions">How does UKCloud enable customers to create their own DR solutions?</h3>
-<p>Although we have engineered our cloud platform to tolerate failures and ensure customers services remain available, we encourage all our customers to design for failure and build DR capabilities into the system design, or in the application.</p>
+<p>Although we have engineered our cloud platform to tolerate failures and ensure customers' services remain available, we encourage all our customers to design for failure and build DR capabilities into the system design, or into the application.</p>
 <p>To help this process, the UKCloud platform has been designed to give you the options you need to design a disaster tolerant solution. UKCloud's platform is about providing customers with choice. Clearly, customers need to balance the low probability of these failure scenarios occurring with the cost and complexity involved in mitigating their impact.</p>
-<p>Depending on the type of failure you are trying to mitigate, UKCloud has been developed to allow you design appropriate resilience into your solution.</p>
+<p>Depending on the type of failure you are trying to mitigate, UKCloud services have been developed to enable you to design appropriate resilience into your solution.</p>
 <p>At a macro level, UKCloud operate out of two sites. Designing across multiple sites will provide resilience against even the most unlikely of scenarios - including natural disasters and mass WAN failure. UKCloud currently offer two sites:</p>
-<ol>
+<ul>
 <li><p>The independent cloud platform at our Corsham site</p>
 </li>
 <li><p>The independent cloud platform at our Farnborough site</p>
 </li>
-</ol>
+</ul>
 <p>Each site also offers independent regions. These are physically segregated parts of the UKCloud platform that have an independent power and networking components - allowing customers to architect resilient solutions out of a single site.</p>
 <p>Services in different regions also have independent control planes. By architecting for separate regions, you improve your resilience to outages that effect the control and management of your VMs.</p>
 <p>Finally, each region has a number of distinct hardware zones. For customers looking to architect against mass hardware failures. Zones can be utilised to provide additional confidence in your ability to tolerate outages. For example, you can load-balance across two zones to ensure that your service stays online in the event of an unlikely outage.</p>
-<p>In some rare failure scenarios (such as DDoS or Split Brain) the availability of the cloud platform at both our sites may be effected. These scenarios can be mitigated by deploying across multiple cloud providers.</p>
+<p>In some rare failure scenarios (such as DDoS or Split Brain) the availability of the cloud platform at both our sites may be affected. These scenarios can be mitigated by deploying across multiple cloud providers.</p>
 <h2 id="billing-and-legal">Billing and legal</h2>
 <h3 id="what-is-the-smallest-unit-of-time-i-will-be-billed-for">What is the smallest unit of time I will be billed for?</h3>
 <p>The minimum unit of time for use is one hour. Part hours will be rounded up.</p>
@@ -415,32 +393,14 @@ in another UKCloud site. </p>
 <h3 id="will-i-be-charged-even-if-my-virtual-machine-is-powered-off">Will I be charged even if my Virtual Machine is powered off?</h3>
 <p>You will not be charged for any Virtual Machines whilst they are turned off, however whilst the VM is in a powered off state, any storage associated with the VM will be charged for at the prevailing rate. This includes the 10GiB included with Micro machines and 60GiB in all other VM sizes of Tier 2 storage.</p>
 <h3 id="how-will-i-be-billed-for-additional-storage">How will I be billed for additional storage?</h3>
-<p>Customers can allocate additional storage to VMs on demand. UKCloud will bill customers for additional allocated storage, regardless of the powered on/off state.</p>
+<p>Customers can allocate additional storage to VMs on demand. UKCloud will bill customers for additional allocated storage, regardless of the powered on/off state. Additional storage will also include storage used for templates and media items.</p>
 <h3 id="what-is-a-template-or-media-item">What is a template or media item?</h3>
 <p>Within UKCloud for VMware Virtual Data Centres (VDC), you can deploy your own templates, media items or catalogue images. These include templates for applications and Operating Systems.</p>
-<h3 id="what-change-is-ukcloud-making-to-the-templates-and-media-items">What change is UKCloud making to the templates and media items?</h3>
-<p>From a technology perspective, there will be no changes. You can still deploy templates and media items on VMs. However, in-line with the UKCloud for VMware Service Definition and Pricing Guide, we will now be billing you for the storage element related to templates and media items on VMs.</p>
-<h3 id="why-is-ukcloud-making-this-change-now">Why is UKCloud making this change now?</h3>
-<p>As a result of continuous updates and improvements to the platform we now have better monitoring in place. Therefore, we are now able to monitor the media usage on VMs and bill accordingly as per the Service Definition and Pricing Guide. Historically, we have been unable to identify the amount of storage consumed associated with templates and media items on VMs and therefore, took the decision to not bill you as we were not comfortable with the data.</p>
-<h3 id="when-did-the-templatemedia-item-charges-come-into-effect">When did the template/media item charges come into effect?</h3>
-<p>Charges for Storage associated with templates and media items were billed from March 2017.</p>
-<h3 id="will-ukcloud-bill-retrospectively-for-the-templatesmedia-items-on-vms">Will UKCloud bill retrospectively for the templates/media items on VMs?</h3>
-<p>No, you will not be billed for any storage associated with templates and media items that occurred on any VMs prior to the 1 March 2017.</p>
-<h3 id="what-is-the-increased-cost">What is the increased cost?</h3>
-<p>As per the Pricing Guide, consumed storage includes any VM catalogue images. (for example, associated media items and templates on VMs). This will be billed per GiB/per month.</p>
 <h3 id="how-can-i-view-billing-information">How can I view billing information?</h3>
 <p>Billing information is available via the UKCloud Portal.</p>
 <h3 id="how-can-i-pay-for-the-services">How can I pay for the services?</h3>
-<p>UKCloud will issue invoices as follows:</p>
-<ul>
-<li><p>At point of order for upfront fees and service options</p>
-</li>
-<li><p>Annually in advance for pre-payment fees</p>
-</li>
-<li><p>Monthly in arrears for monthly fees</p>
-</li>
-</ul>
-<p>Payment can be made by direct bank transfer (BACS/CHAPS).</p>
+<p>Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.</p>
+<p>If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.</p>
 <h3 id="what-are-the-termination-fees">What are the termination fees?</h3>
 <p>There are no termination costs for this service. Customers are responsible for extracting their own data from the UKCloud for VMware if required.</p>
 <p>UKCloud may make an additional charge for transferring data out of the service.</p>
@@ -458,7 +418,7 @@ in another UKCloud site. </p>
 <h3 id="is-there-a-protective-monitoring-service">Is there a protective monitoring service?</h3>
 <p>Protective Monitoring is included for our IaaS platform and follows GPG 13.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
 
                   <div class="row">
@@ -468,13 +428,6 @@ in another UKCloud site. </p>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-faq.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -493,11 +446,24 @@ in another UKCloud site. </p>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

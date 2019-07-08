@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to configure an L2 VPN | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to configure an L2 VPN | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-configure-l2-vpn.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-configure-an-l2-vpn">How to configure an L2 VPN</h1>
+
+<h2 id="overview">Overview</h2>
+<p>UKCloud for VMware provides Layer 2 (L2) VPN functionality as part of its Enterprise Networking Bundle (additional charges apply). With L2 VPN you can stretch the same Layer 2 broadcast domain over an SSL tunnel across two edge gateways in different sites, meaning that you can move your workloads seamlessly between sites without having to change IP addresses.</p>
+<p>L2 VPN is an extension of the edge's SSL functionality. It enables you to configure a tunnel between two sites, extending a logical switch across both sites. The tunnel means that virtual machines (VMs) remain on the same subnet if they are moved between the two sites, enabling you to extend your data centre across multiple sites. An NSX edge at one site can provide all services to VMs on the other site.</p>
+<p>UKCloud L2 VPN functionality covers three scenarios:</p>
+<ul>
+<li><p>L2 connectivity between UKCloud regions</p>
+<p><img src="images/vmw-l2vpn-ukc-ukc.png" alt="L2 VPN between UKCloud regions"></p>
+</li>
+<li><p>Connectivity from your own on-premises site (with vSphere and NSX) to UKCloud</p>
+<p><img src="images/vmw-l2vpn-ukc-nsx.png" alt="L2 VPN from on-premises site to UKCloud - with vSphere/NSX"></p>
+</li>
+<li><p>L2 connectivity from any remote site (without vSphere and NSX) to UKCloud</p>
+<p><img src="images/vmw-l2vpn-ukc-no-nsx.png" alt="L2 VPN from on-premises site to UKCloud - no vSphere/NSX"></p>
+</li>
+</ul>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>Before enabling L2 VPN, consider the following:</p>
+<ul>
+<li>You must have purchased the Enterprise Networking Bundle for your UKCloud for VMware service</li>
+<li>You must have converted your edge gateway to an advanced gateway (see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>)</li>
+<li>This service takes up one of your allocated IP addresses (primary or secondary)</li>
+<li>L2 VPN can be enabled only on a routed Org VDC network</li>
+<li>You cannot use SSL VPN on any edge gateway running L2 VPN</li>
+<li>You may encounter issues with IPsec VPN</li>
+<li>You cannot use load balancers using HTTPS on primary or secondary edge gateway addresses once L2 VPN is enabled</li>
+<li>You'll need to change any existing NAT and firewall rules using the primary or secondary IP of the edge for HTTPS</li>
+<li>If your remote site does not have vSphere or NSX, you'll need to deploy a standalone edge as the L2 VPN client (see <a href="#deploying-a-standalone-edge-as-an-l2-vpn-client"><em>Deploying a standalone edge as an L2 VPN client</em></a>)</li>
+</ul>
+<h2 id="configuring-l2-vpn">Configuring L2 VPN</h2>
+<p>To set up L2 VPN, you need to configure an L2 VPN server on the destination edge and an L2 VPN client on the source edge. You must then enable the L2 VPN service on both the server and the client. If one of the sites that you want to stretch is not backed by NSX, you can deploy a standalone edge as the L2 VPN client on that site (see <a href="#deploying-a-standalone-edge-as-an-l2-vpn-client"><em>Deploying a standalone edge as an L2 VPN client</em></a>).</p>
+<h3 id="setting-up-the-network">Setting up the network</h3>
+<ol>
+<li><p>Create a routed VDC network on both the source and destination sites.</p>
+<p>For more detailed instructions, see <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>To stretch the subnet across the two sites, make sure you use the desired address space on both networks.</p>
+</div>
+</li>
+<li><p>For each network, select the network and click <strong>Convert To</strong>.</p>
+<p><img src="images/vmw-vcd91-l2vpn-btn-convert-network.png" alt="Convert network option"></p>
+</li>
+<li><p>Select <strong>Convert to Subinterface</strong> to connect the network as a subinterface to the trunk interface on the attached gateway, then click <strong>OK</strong>.</p>
+<p><img src="images/vmw-vcd91-l2vpn-btn-convert-interface.png" alt="Convert Interface dialog box"></p>
+</li>
+<li><p>To be able to move, your VMs need to be able to access your new network, so you need to attach them to it.</p>
+</li>
+</ol>
+<h3 id="creating-certificates">Creating certificates</h3>
+<ol>
+<li><p>In vCloud Director, access the edge gateway settings for the destination edge gateway.</p>
+<p>For more detailed instructions, see <a href="vmw-how-access-edge.html"><em>How to access edge gateway settings</em></a>.</p>
+</li>
+<li><p>Select the <strong>Certificates</strong> tab.</p>
+</li>
+<li><p>Click <strong>+ CA Certificate</strong>.</p>
+<p><img src="images/vmw-vcd91-l2vpn-btn-add-cert.png" alt="Add CA Certification button"></p>
+</li>
+<li><p>Add the certificate to use for the L2 VPN server then click <strong>Keep</strong>.</p>
+<p><img src="images/vmw-vcd91-l2vpn-create-ssl-trust-object.png" alt="Create SSL Trust Object dialog box"></p>
+</li>
+<li><p>Repeat this process for the source edge gateway.</p>
+</li>
+</ol>
+<h3 id="configuring-the-l2-vpn-server-on-the-destination-edge-gateway">Configuring the L2 VPN server on the destination edge gateway</h3>
+<p>The L2 VPN server is the destination edge gateway to which the client is to be connected.</p>
+<ol>
+<li><p>In vCloud Director, access the edge gateway settings for the destination edge gateway.</p>
+<p>For more detailed instructions, see <a href="vmw-how-access-edge.html"><em>How to access edge gateway settings</em></a>.</p>
+</li>
+<li><p>Select the <strong>VPN</strong> tab, then the <strong>L2 VPN</strong> tab.</p>
+</li>
+<li><p>For <strong>L2VPN Mode</strong>, select <strong>Server</strong>.</p>
+<p><img src="images/vmw-vcd91-l2vpn-server.png" alt="L2 VPN Server option"></p>
+</li>
+<li><p>On the <strong>Server Global</strong> tab, from the <strong>Listener IP</strong> list, select the primary or secondary IP address of an external interface of the NSX edge.</p>
+</li>
+<li><p>In the <strong>Listener Port</strong> field, enter the port to use for your L2 VPN. The default port is <code>443</code>.</p>
+</li>
+<li><p>Select the <strong>Encryption Algorithm</strong> to use for communication between the server and the client.</p>
+<p><img src="images/vmw-vcd91-l2vpn-server-config.png" alt="L2 VPN server configuration settings"></p>
+</li>
+<li><p>In the <em>Service Certificate Details</em> section, click <strong>Change Server Certificate</strong>.</p>
+<p><img src="images/vmw-vcd91-l2vpn-server-cert.png" alt="L2 VPN server certificate details"></p>
+</li>
+<li><p>Enable the <strong>Validate Server Certificate</strong> toggle, select the certificate you created earlier then click <strong>OK</strong>.</p>
+</li>
+<li><p>Click <strong>Save changes</strong>.</p>
+</li>
+<li><p>Select the <strong>Server Sites</strong> tab.</p>
+</li>
+<li><p>Click the <strong>+</strong> button.</p>
+<p><img src="images/vmw-vcd91-l2vpn-btn-add-site.png" alt="Add peer site button"></p>
+</li>
+<li><p>In the <em>Add Peer Site</em> dialog box, specify details for the peer site to enable other sites to connect to the L2 VPN server, then click <strong>Keep</strong>.</p>
+<p><img src="images/vmw-vcd91-l2vpn-add-peer-site.png" alt="Add Peer Site dialog box"></p>
+</li>
+<li><p>Click <strong>Save changes</strong>.</p>
+</li>
+</ol>
+<h3 id="configuring-the-l2-vpn-client-on-the-source-edge-gateway">Configuring the L2 VPN client on the source edge gateway</h3>
+<p>The L2 VPN client is the source edge gateway that initiates communication with the destination edge (L2 VPN server).</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If the source site is not backed by NSX, you can deploy a standalone edge as the L2 VPN client. For information see <a href="#deploying-a-standalone-edge-as-an-l2-vpn-client"><em>Deploying a standalone edge as an L2 VPN client</em></a>.</p>
+</div>
+<ol>
+<li><p>In vCloud Director, access the edge gateway settings.</p>
+<p>For more detailed instructions, see <a href="vmw-how-access-edge.html"><em>How to access edge gateway settings</em></a>.</p>
+</li>
+<li><p>Select the <strong>VPN</strong> tab, then the <strong>L2 VPN</strong> tab.</p>
+</li>
+<li><p>For <strong>L2VPN Mode</strong>, select <strong>Client</strong>.</p>
+<p><img src="images/vmw-vcd91-l2vpn-client.png" alt="L2 VPN Client option"></p>
+</li>
+<li><p>In the <strong>Server Address</strong> field, enter the address of the L2 VPN server that you set up in the previous section. The address can be the host name or IP address.</p>
+</li>
+<li><p>In the <strong>Server Port</strong> field, enter the port to use for your L2 VPN. The default port is <code>443</code>.</p>
+</li>
+<li><p>Select the <strong>Encryption Algorithm</strong> for communicating with the server.</p>
+</li>
+<li><p>Click <strong>Select Sub-Interfaces</strong> and select the sub interfaces to be stretched to the server.</p>
+</li>
+<li><p>In the <strong>Egress Optimization Gateway Address</strong> field, if the default gateway for VMs is the same across the two sites, enter the gateway IP addresses of the sub interfaces or the IP addresses to which traffic should not flow over the tunnel.</p>
+</li>
+<li><p>In the <em>User Details</em> section, enter the user credentials to connect to the L2 VPN server.</p>
+<p><img src="images/vmw-vcd91-l2vpn-client-config.png" alt="L2 VPN client configuration settings"></p>
+</li>
+<li><p>Click <strong>Save changes</strong>.</p>
+</li>
+</ol>
+<h3 id="completing-l2-vpn-configuration">Completing L2 VPN configuration</h3>
+<ol>
+<li><p>Configure TCP optimisation.</p>
+</li>
+<li><p>Configure firewall and NAT rules on both the destination and source edge gateways to allow traffic to pass between the L2 VPN server and the L2 VPN client.</p>
+</li>
+<li><p>Enable L2 VPN on the destination edge gateway.</p>
+<ol>
+<li><p>In vCloud Director, access the edge gateway settings.</p>
+<p>For more detailed instructions, see <a href="vmw-how-access-edge.html"><em>How to access edge gateway settings</em></a>.</p>
+</li>
+<li><p>Select the <strong>VPN</strong> tab, then the <strong>L2 VPN</strong> tab.</p>
+</li>
+<li><p>For <strong>L2VPN Mode</strong>, select <strong>Server</strong>.</p>
+</li>
+<li><p>Enable the <strong>Enabled</strong> toggle.</p>
+<p><img src="images/vmw-vcd91-l2vpn-enable.png" alt="Enable L2 VPN"></p>
+</li>
+<li><p>Click <strong>Save changes</strong>.</p>
+</li>
+</ol>
+</li>
+<li><p>Repeat the steps above to enable L2 VPN on the source edge gateway (setting <strong>L2VPN Mode</strong> to <strong>Client</strong>).</p>
+</li>
+</ol>
+<h3 id="deploying-a-standalone-edge-as-an-l2-vpn-client">Deploying a standalone edge as an L2 VPN client</h3>
+<p>If the source site is not backed by NSX, you can deploy a standalone edge as the L2 VPN client.</p>
+<ol>
+<li><p>Download <code>NSX-l2vpn-client.ovf</code> and deploy the standalone edge.</p>
+<p>For more information, see the following VMware article: <a href="https://pubs.vmware.com/NSX-61/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-C9E2B0E4-F1C1-44A7-B142-F814F801FA42.html">Configure Standalone Edge as L2 VPN Client</a>.</p>
+</li>
+<li><p>Convert the edge gateway to an advanced gateway.</p>
+<p>For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
+</li>
+<li><p>Create a port group and convert it to a sub interface.</p>
+</li>
+<li><p>You can now set up your L2 VPN by following the steps below, using the standalone edge as the source edge gateway.</p>
+<ul>
+<li><p><a href="#creating-certificates"><em>Creating certificates</em></a></p>
+</li>
+<li><p><a href="#configuring-the-l2-vpn-server-on-the-destination-edge-gateway"><em>Configuring the L2 VPN server on the destination edge gateway</em></a></p>
+</li>
+<li><p><a href="#configuring-the-l2-vpn-client-on-the-source-edge-gateway"><em>Configuring the L2 VPN client on the source edge gateway</em></a></p>
+</li>
+<li><p><a href="#completing-l2-vpn-configuration"><em>Completing L2 VPN configuration</em></a></p>
+</li>
+</ul>
+</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Make sure you change any existing NAT rules to use other addresses.</p>
+</div>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

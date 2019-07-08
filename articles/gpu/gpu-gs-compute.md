@@ -3,6 +3,8 @@ title: Getting Started Guide for Cloud GPU Compute | UKCloud Ltd
 description: Provides information to get up and running with Cloud GPU Compute
 services: gpu
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -49,9 +51,13 @@ With Cloud GPU, you can:
 - **Process large data sets** --- The significantly improved computational power provided by Cloud GPU means that you can gain insight into your data by using the massively parallelised capabilities to process large data sets. This enables:
 
   - Parallel processing of data in a fraction of the time of using just CPU
+
   - Machine learning, deep learning, artificial intelligence
+
   - Mathematical modelling and data sequencing
+
   - Healthcare modelling
+
   - Predictive threat analysis
 
 - **Bring any application to the cloud** --- Applications that have previously struggled to transition to the cloud because of GPU requirements can now be moved, improving manageability of your data and applications, while increasing collaborative opportunities.
@@ -61,7 +67,9 @@ With Cloud GPU, you can:
 - **Visualise data in real-time** --- Improved visualisation capabilities provided by Cloud GPU enables you to visualise data in real-time to render virtualised environments when you need them. This helps you to:
 
   - Design using Computer Aided Design applications in a centralised environment, enabling ease of collaboration
+
   - Create and run simulations
+
   - Render and analyse high resolution images and video
 
 ## Before you begin
@@ -69,9 +77,13 @@ With Cloud GPU, you can:
 When using our Cloud GPU service for compute workloads, you should consider the following:
 
 - Your Cloud GPU virtual machine (VM) must be in a PRIORITY virtual data centre (VDC).
+
 - You should create your Cloud GPU VM using the appropriate UKCloud template from the GPGPU public catalogue.
+
 - Your deployed Cloud GPU VM should be using hardware version 11. The shell VM in the Cloud GPU VM template uses hardware version 11.
+
 - Snapshot Protection is not available for your VM, so you must implement your own backup solution.
+
 - Currently, there is no high availability or disaster recovery option; your VM cannot be migrated to a different host in the event of host failure. In the event of a host failure, you must wait for the host to be returned to service.
 
 ## Creating your virtual machine
@@ -155,7 +167,9 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 When your VM is ready, use My Calls in the UKCloud Portal to raise a service request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can complete the setup of your service:
 
 - VDC name
+
 - vApp name
+
 - VM name
 
 UKCloud will confirm that you've set up your VM correctly and that it meets all the necessary prerequisites. If the VM meets all requirements, UKCloud will migrate the VM to a GPU‑enabled host and attach the GPU card to your VM.
@@ -185,12 +199,15 @@ To install NVIDIA drivers:
     **On Windows:**
 
     - From Explorer, double click the driver installer file (NVIDIA*.*.exe).
+
     - Select **Custom (Advanced)**.
+
     - Select **Perform a clean installation**.
 
         ![Custom installation options in NVIDIA Installer](images/gpu-nvidia-win-install-driver.png)
 
     - Click **Next**.
+
     - Restart and connect to the VM.
 
     **On Linux:**
@@ -247,9 +264,13 @@ To enable full functionality of the NVIDIA GPU card, your VM must obtain a valid
 To enable access to the NVIDIA GRID License Server from your network, you must create the following firewall rule on your edge gateway:
 
 - **Source/Source Port:** as appropriate for your source network
+
 - **Destination:** `51:179.197.53`
+
 - **Destination Port:** `7070`
+
 - **Protocol:** `TCP`
+
 - **Action:** `Allow`
 
 ![Add firewall rule dialog box](images/gpu-vcd-add-firewall-rule.png)
@@ -289,7 +310,9 @@ To license GRID Virtual GPU on Linux
 2. Edit the file and set the following values:
 
     - `ServerAddress=gpuls.ukcloud.com`
+
     - `ServerPort=7070`
+
     - `FeatureType=1`
 
 3. Save your changes.
@@ -320,6 +343,7 @@ To license GRID Virtual GPU on Linux
     - Select Manage License and input the following server details:
 
       - **License Server:** `gpuls.ukcloud.com`
+
       - **Port Number:** `7070`
 
 ## Next steps
@@ -345,4 +369,4 @@ device.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

@@ -3,6 +3,8 @@ title: Oversized VMs on the UKCloud platform | UKCloud Ltd
 description: Advisory statement on UKCloud's position on VMs that exceed the maximum configuration advertised through the G Cloud framework
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -24,6 +26,7 @@ UKCloud have configured the platform to dynamically move workloads to quieter ho
 The impact to a customer VM is twofold:
 
 - Reducing the reliability of performance
+
 - Potentially affecting VM availability in the case of a failure
 
 UKCloud must also consider the impact that these abnormally large VMs have on other users of the platform as the increased VMs consume additional resources and cause performance issues for other VMs.
@@ -34,4 +37,4 @@ In the first instance we will contact customers to help them overcome some of th
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

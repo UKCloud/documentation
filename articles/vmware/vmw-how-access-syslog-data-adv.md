@@ -3,6 +3,8 @@ title: How to access syslog data for your advanced gateway | UKCloud Ltd
 description: Explains the network configuration required to provision a syslog collector within your VDC to receive syslog information direct from your advanced gateway
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 
 toc_rootlink: How To
 toc_sub1:
@@ -21,7 +23,9 @@ toc_mdlink: vmw-how-access-syslog-data-adv.md
 Your NSX edge is globally configured to send syslog messages to a specific IP address (`100.127.255.250`). By configuring a new network or IP address within your virtual data centre (VDC) and deploying a collector with the syslog IP address, you can access your NSX edge syslog data. You can then use this data to check:
 
 - Allowed and denied network traffic
+
 - Load balancer statistics
+
 - Load balancer health
 
 This guide explains the network configuration required to provision a syslog collector within your VDC to receive syslog information direct from your NSX gateway.
@@ -31,6 +35,7 @@ This guide explains the network configuration required to provision a syslog col
 The simplest scenario is to gather syslog data from a single NSX edge into one collector. To do this you need to create a routable location for the syslog IP address, by either:
 
 - [*Adding the syslog IP address to an existing network interface card (NIC) on a routed subnet*](#adding-the-syslog-ip-address-to-an-existing-nic)
+
 - [*Configuring a new routed network*](#configuring-a-new-routed-network)
 
 ### Adding the syslog IP address to an existing NIC
@@ -39,7 +44,7 @@ The simplest scenario is to gather syslog data from a single NSX edge into one c
 
     For example, if your existing monitoring server has a NIC on **eth0** (for example, `10.0.1.10`), on routed VDC network `10.0.1.0/24`, you'd add the syslog IP address to **eth0**.
 
-2. Add a route on the NSX ddge that routes the syslog IP address via the subnet.
+2. Add a route on the NSX edge that routes the syslog IP address via the subnet.
 
     For example, route `100.127.255.250 MASK 255.255.255.255` via `10.0.1.10`.
 
@@ -53,9 +58,13 @@ The simplest scenario is to gather syslog data from a single NSX edge into one c
 1. Create a new routed network with the following details:
 
     - **Org Network Name:** Customer defined
+
     - **Gateway:** `100.127.255.249`
+
     - **Subnet Mask:** `255.255.255.248`
+
     - **DNS:** Customer defined
+
     - **Static IP Pool:** `100.127.255.250-100.127.255.254`
 
     You can find more detailed steps for creating a routed network in [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
@@ -81,14 +90,19 @@ If you have multiple NSX edges under a single NFT, you can gather the data from 
     You can create individual rules using the following suggestions:
 
     - *`SOURCE TRANSIT IP`*`:Any` to `100.127.255.250` on UDP
+
     - `Any:Any` to `100.127.255.250:514` on UDP
+
     - *`NFT TRANSIT CIDR/SUBNET`*`:Any` to `100.127.255.250:514` on UDP
 
 4. On each of the source edges, create a static route to direct traffic to the syslog edge. Use the following settings:
 
     - **Applied On:** *`nft_network`*
+
     - **Name:** Syslog traffic (or any other name you prefer)
+
     - **Network:** `100.127.255.248/29`
+
     - **Next Hop IP:** The TRANSIT IP address of the syslog edge
 
     Syslog packets from each source edge will now be forwarded to the syslog edge, with the source of the syslog traffic being the TRANSIT IP of the source edge.
@@ -104,15 +118,15 @@ If you have multiple NSX edges under a single NFT, you can gather the data from 
 
 After setting up your syslog collector, you need to make sure that your NSX edge sends network traffic to the log.
 
-1. In vCloud Director, select the **Administration** tab.
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC to which the NSX edge belongs.
 
-    ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
+2. In the left navigation panel, click **Edges**.
 
-2. Double-click the VDC to which the NSX edge belongs.
+    ![Edges menu option](images/vmw-vcd-mnu-edges.png)
 
-3. Select the **Edge Gateways** tab.
+3. Select the edge that you want to configure and click **Configure Services**.
 
-    ![Edge Gateways tab](images/vmw-vcd-tab-edge-gateways.png)
+    ![Configure Services](images/vmw-vcd-edge-btn-config.png)
 
 4. Select the **Edge Settings** tab.
 
@@ -126,22 +140,33 @@ After setting up your syslog collector, you need to make sure that your NSX edge
 
     ![Edit Syslog Server dialog box](images/vmw-vcd-edit-syslog-server.png)
 
-7. Currently, you cannot setup logging for firewall rules for NSX edges via the advanced gateway GUI. To setup logging for firewall rules, you must either use the API or raise a service request detailing the firewall rules for which you want to enable logging so that we can action it on your behalf. For more information about using the API to amend firewall rules, see the [*vCloud Director API for NSX Programming Guide*](https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf)
+7. Select the **Firewall Rules** tab.
 
-    > [!NOTE]
-    > Any firewall rules that were set up to send logs before conversion to an advanced gateway will continue to send logs. However if you want to disable logging for those firewall rules, you must use the API or raise a service request.
+8. For each firewall rule that you want to log, select the **Enable logging** check box.
 
-8. Select the **Load Balancer** tab.
+    ![Logging firewall rules](images/vmw-vcd-logging-firewall.png)
 
-9. On the *Global Configuration* page, select the **Enable Logging toggle**.
+9. When you're done, click **Save changes**.
 
-10. From the **Log Level** list, select the logging level.
+10. Select the **NAT** tab.
 
-    ![Global Configuration tab](images/vmw-vcd-logging-load-balancer.png)
+11. For each NAT rule that you want to log, select the rule, click the **Edit** icon, select the **Enable logging** option then click **Keep**.
 
-11. When you're done, click **Save changes**.
+    ![Logging NAT rules](images/vmw-vcd-logging-nat.png)
 
-You can find more detailed steps for editing load balancer settings in [*How to configure a load balancer*](vmw-how-configure-load-balancer.md).
+12. When you're done, click **Save changes**.
+
+13. Select the **Load Balancer** tab.
+
+14. On the **Global Configuration** tab, select the **Enable Logging** option.
+
+15. From the **Log Level** list, select the logging level.
+
+    ![Logging load balancer](images/vmw-vcd-logging-load-balancer.png)
+
+    You can find more detailed steps for editing load balancer settings in [*How to configure a load balancer*](vmw-how-configure-load-balancer.md).
+
+16. When you're done, click **Save changes**.
 
 ## Sample syslog captures
 
@@ -162,4 +187,4 @@ Refer to
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

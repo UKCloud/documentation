@@ -1,8 +1,11 @@
 ---
 title: UKCloud for Microsoft Azure FAQs | UKCloud Ltd
 description: Frequently asked questions for UKCloud for Microsoft Azure
-services: azure
+services: azure-stack
 author: Matt Warner
+reviewer: Mario Fedato
+lastreviewed: 25/06/2019
+
 toc_rootlink: Users
 toc_sub1: FAQs
 toc_sub2:
@@ -29,34 +32,45 @@ UKCloud's strategy is to provide a multi-cloud platform and UKCloud for Microsof
 
 ### What is provided in this service?
 
-The first release of UKCloud for Microsoft Azure IaaS provides:
+UKCloud for Microsoft Azure IaaS currently provides:
 
 #### Compute
 
-Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic compute building blocks in Azure Stack. Initial machine types supported are:
+Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic compute building blocks in Azure Stack. Virtual machine sizes supported are:
 
-- General purpose: Basic A series, Standard A & D Series
-- Memory enhanced: DS Series
-- Compute optimised: F Series
+- General purpose: Basic A series, standard A & Av2 series, D & Dv2 series, DS & DSv2 series
+
+- Memory optimised: Memory optimised D & Dv2 series, memory optimised DS & DSv2 series
+
+- Compute optimised: F series, Fs & Fsv2 series
+
+You can find the full list of supported virtual machine sizes [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
 
 #### Storage
 
-- Azure Blob Storage (page): Used to support virtual machine disks. Good for randomly accessed large files.
-- Azure Blob Storage (block): Object storage. Good for storing documents, videos and images for example.
-- Azure Blob Storage (append): Good for log files.
+- Azure Blob Storage (block): Object storage. Good for storing documents, videos and images.
+
+- Azure Blob Storage (page): Optimised for virtual machine disks. Good for randomly accessed large files.
+
+- Azure Blob Storage (append): Good for log files. Can only be updated by appending to the end of the file.
+
 - Azure Queue Storage: Message queue as a service. Good for asynchronous scale out micro-services.
-- Azure Table Storage: NoSQL database service. Good for highly scalable, eventually consistent database support
+
+- Azure Table Storage: NoSQL database service with schemaless design. Good for highly scalable, consistent database support.
 
 #### Network
 
-- Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure. This can be configured via the UI, API and other tooling. 
+- Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure Stack. This can be configured via the UI, API and other tooling.
+
 - Load balancers (IPv4 only) - Deploy basic load balancers.
+
 - VPN gateway - Use the Azure Stack VPN gateway to create site-to-site VPNs to remote infrastructure.
+
 - Routing - Configure basic custom defined routing on virtual networks.
 
 ### What technology is UKCloud for Microsoft Azure based on?
 
-UKCloud for Microsoft Azure is based on a CISCO implementation of Microsoft's Azure Stack.
+UKCloud for Microsoft Azure is based on a Cisco implementation of Microsoft's Azure Stack.
 
 ### Are there any differences between Azure and UKCloud for Microsoft Azure?
 
@@ -66,19 +80,23 @@ While UKCloud for Microsoft Azure is developed by Microsoft, some services will 
 
 The SLA for this service is 99.95%. For further details, review the UKCloud for Microsoft Azure Service Definition.
 
+### Where can I find additional resources to assist me in administering my UKCloud for Microsoft Azure environment?
+
+UKCloud maintains an Azure Stack repository, which contains ARM templates, custom script extensions and more. You can find this repository found [here](https://github.com/UKCloud/AzureStack).
+
 ## Networking
 
 ### How many IP addresses do I get?
 
-You're initially allocated three external IP addresses with a new compute service.
+You're initially allocated ten public IP addresses with a new compute service.
 
 ### Do you offer dynamic or static IP addresses?
 
-Dynamic internet IP addresses are selected from a pre-defined shared pool.
+Dynamic and static public IP addresses are available from a pre-defined shared pool.
 
 ### What firewall services are available?
 
-Firewall services are provided by Azure Security Groups. More information is available [here](https://docs.microsoft.com/en-gb/azure/virtual-network/virtual-network-vnet-plan-design-arm#security).
+Firewall services are provided by Azure network security groups. More information is available [here](https://docs.microsoft.com/en-gb/azure/virtual-network/virtual-network-vnet-plan-design-arm#security).
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
@@ -86,17 +104,17 @@ All production services are reported through the UKCloud [service status page](h
 
 ### Are external Domain Name System (DNS) services available?
 
-Yes. A similar service to Azure DNS is available. There are some limitations such as no AAAA support.
+Yes, a similar service to Azure DNS is available. There are some limitations such as no AAAA support.
 
 ### Do you offer load balancing?
 
-Yes. This will be offered as an option. You can also deploy your own load balancer.
+Yes, this is offered as an option. You can also deploy your own load balancer.
 
 ## Storage
 
 ### How much storage do I get?
 
-You'll get 4TiB, which will be shared between blob, page blob, table and queue storage.
+You'll get 4TiB unmanaged storage, which will be shared between blob, table and queue storage types. You will also get 2 TiB of managed disk storage.
 
 ### Is storage persistent?
 
@@ -106,30 +124,34 @@ Storage is persistent unless it is virtual machine temporary storage.
 
 ### How do I access my UKCloud for Microsoft Azure solution?
 
-Access to the UKCloud for Microsoft Azure portal is available via the UKCloud Portal. You'll be provided with login details once your account is provisioned.
+Access to the UKCloud Azure Stack portal is available via the UKCloud Portal. You'll be provided with login details once your account is provisioned.
+
+### Which ports need to be open to access my UKCloud for Microsoft Azure solution?
+
+The UKCloud Azure Stack portal requires port 80 (HTTP) and port 443 (HTTPS) to be open.
 
 ### How do I access my solutions via government networks?
 
-UKCloud for Microsoft Azure will be available on the internet, HSCN, Janet, RLI and PSN networks. Initial access will be from the appropriate UKCloud Portal.
+UKCloud for Microsoft Azure is currently available via the internet. Community network support such as HSCN, Janet, RLI and PSN is planned for the future.
 
 ### What reports can I get about my UKCloud for Microsoft Azure solution?
 
-All reporting is via the UKCloud for Microsoft Azure management portal, which provides a variety of reports on the dashboard.
+Reporting is via the UKCloud Azure Stack portal, which provides a variety of reports on the dashboard.
 
 You can also interact with the API to pull data into your own reporting solutions.
 
 ### Is this a managed service?
 
-No. UKCloud maintains and manages the underlying infrastructure that your solution is based on, but we do not manage your UKCloud for
+No, UKCloud maintains and manages the underlying infrastructure that your solution is based on, but we do not manage your UKCloud for
 Microsoft Azure solution.
 
 ### How do I manage my services?
 
-This service is designed to be managed using the UKCloud for Microsoft Azure portal. You can also manage it through a command line using the UKCloud for Microsoft Azure API.
+This service is designed to be managed using the UKCloud Azure Stack portal. You can also manage it through a command line using the UKCloud for Microsoft Azure API.
 
 ### What tools can I use to manage my service?
 
-You can use many common DevOps tools, such as ARM, Ansible, Terraform and PowerShell, to interface with UKCloud for Microsoft Azure. UKCloud for Microsoft Azure also provides a User Interface (UI) to manage the infrastructure via a browser with the same experience as Azure Public Cloud.
+You can use many common DevOps tools, such as ARM, Ansible, Terraform and PowerShell, to interface with UKCloud for Microsoft Azure. UKCloud for Microsoft Azure also provides a User Interface (UI) to manage the infrastructure via a browser with a similar experience to Azure Public Cloud.
 
 ### How long will it take to provision the service?
 
@@ -137,7 +159,7 @@ The current provisioning time for a new service is 4 hours from service request 
 
 ### How quickly can I scale my service up or down?
 
-You can scale your UKCloud for Microsoft Azure services either via the UKCloud for Microsoft Azure portal or using the Azure API. This will typically take a few minutes to action. However, if you are likely to increase your requirements significantly, you are advised to plan this with your allocated Technical Account Manager.
+You can scale your UKCloud for Microsoft Azure services either via the UKCloud Azure Stack portal or using the Azure API. This will typically take a few minutes to action. However, if you are likely to increase your requirements significantly, you are advised to plan this with your allocated Technical Account Manager.
 
 ## Support
 
@@ -153,7 +175,7 @@ As far as possible, emergency maintenance of UKCloud's infrastructure takes plac
 
 ### Can I configure email alerts from the portal?
 
-Yes. You can receive portal notifications to the email address associated with your UKCloud Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is currently not available in the Elevated Portal.
+Yes, you can receive portal notifications to the email address associated with your UKCloud Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is currently not available in the Elevated Portal.
 
 ## Onboarding
 
@@ -185,13 +207,9 @@ For infrastructure solutions, you'll be billed by the smallest unit of time whic
 
 ### How can I pay for the services?
 
-UKCloud will issue invoices as follows:
+Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
 
-- At point of order for upfront fees and service options
-- Annually in advance for pre-payment fees
-- Monthly in arrears for monthly fees
-
-Payment can be made by direct bank transfer (BACS/CHAPS).
+If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
 
 ### Are there any termination fees?
 
@@ -216,3 +234,7 @@ For more information, see our Cross Domain Security Zone documentation.
 Protective monitoring is included for our all our services and follows GPG 13.
 
 For more information about this service, see our [*Protective Monitoring FAQs*](../other/other-faq-promon.md).
+
+## Feedback
+
+If you find an issue with this article, click Improve this Doc to suggest a change. If you have an idea for how we could improve any of our services, visit UKCloud Ideas. Alternatively, you can contact us at products@ukcloud.com.

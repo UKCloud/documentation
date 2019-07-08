@@ -3,6 +3,8 @@ title: UKCloud Knowledge Centre article template | UKCloud Ltd
 description: Provides a template to help when you're creating new UKCloud Knowledge Centre articles
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 27/07/2018 17:59:14
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -18,8 +20,11 @@ toc_mdlink: other-ref-knowledge-template.md
 The first thing in your article after the metadata should be the main article title. Use the following to help you decide on the title for your article
 
 - Titles (and all other headings) should be in sentence caps (that is, the first word should start with an uppercase letter and all other words should be all lowercase unless they are proper nouns)
+
 - Use a single # for the article title (and don't forget the space after the #)
+
 - How To Guide titles should start with How to and then a verb to describe the task described in the article, for example *How to create a virtual machine*.
+
 - Reference Guides should start with a noun if possible
 
 Generally, you should not include any text below the article title, but should go straight to the first (*Overview*) heading. However, if the article is very short and does not require any subheadings, you can include the content directly below the article title.
@@ -45,10 +50,13 @@ Reference Guides can include as many sections as necessary to keep the content e
 ### Bulleted lists
 
 - Bulleted lists
+
 - Look
+
 - Like this
 
   - with sub lists
+
   - if required
 
 ### Numbered lists for How To Guides
@@ -62,6 +70,7 @@ Reference Guides can include as many sections as necessary to keep the content e
 4. Like this
 
     - you can include
+
     - bulleted lists
 
 ## More useful markdown
@@ -172,4 +181,4 @@ Looks like:
 
 Each article should end with a feedback section that includes the following text:
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

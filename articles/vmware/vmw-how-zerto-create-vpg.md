@@ -3,6 +3,8 @@ title: How to create a virtual protection group | UKCloud Ltd
 description: This guide describes how to create a virtual protection group (VPG) for Disaster Recovery as a Service, Journaling Protection or Migration to the Cloud
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -26,7 +28,9 @@ After the initial synchronisation completes, any writes to disk from the VMs in 
 This guide is intended for users who are:
 
 - Setting up Disaster Recovery as a Service
+
 - Setting up Journaling Protection
+
 - Migrating workloads onto the UKCloud platform
 
 For Journaling Protection, you must have access to the Zerto Self-Service Portal in the UKCloud zone in which the VMs that you want to protect are located.
@@ -76,7 +80,9 @@ If you're creating a VPG for Journaling Protection, you specify the vApp to prot
 11. From the **Priority** list, choose the priority of transferring data from the source site to the target site for this VPG when there is limited bandwidth and more than one VPG is defined on the source site.
 
     - **High** - Updates from VPGs with high priority are passed over the WAN first
+
     - **Medium** - Updates from VPGs with medium priority use whatever bandwidth is left after the high priority VPGs have used it
+
     - **Low** - Updates from VPGs with low priority use whatever bandwidth is left after the medium VPGs have used it
 
     ![priority list](images/vpg-image-4.png)
@@ -152,7 +158,9 @@ If you're creating a VPG for Disaster Recovery as a Service or Migration to the 
 4. From the **Priority** list, choose the priority of transferring data from the source site to the target site for this VPG when there is limited bandwidth and more than one VPG is defined on the source site.
 
     - **High** - Updates from VPGs with high priority are passed over the WAN first
+
     - **Medium** - Updates from VPGs with medium priority use whatever bandwidth is left after the high priority VPGs have used it
+
     - **Low** - Updates from VPGs with low priority use whatever bandwidth is left after the medium VPGs have used it
 
 5. Click **NEXT**.
@@ -199,4 +207,4 @@ For Migration to the Cloud, you can now migrate your selected VMs to the UKCloud
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

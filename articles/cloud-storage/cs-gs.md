@@ -3,6 +3,8 @@ title: Getting Started Guide for Cloud Storage | UKCloud Ltd
 description: Provides information to get up and running with Cloud Storage
 services: cloud-storage
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -33,11 +35,17 @@ This guide is intended for users who want to learn more about UKCloud's Cloud St
 Cloud Storage:
 
 - Is a secure and highly adaptable storage platform designed to address a wide variety of use cases
+
 - Is based on object storage technology that is natively optimised for cloud storage in terms of scale, resilience and accessibility
+
 - Removes the complexity of capacity management by utilising a pay‑as‑you‑go model, so you pay for what you use, when you use it, scaling indefinitely and on demand
+
 - Natively enables application deduplication and redundancy to ensure the highest level of data availability, while reducing the cost and management of on-premises storage solutions
+
 - Provides easy access to storage anywhere, any time, to any device, using HTTP(S) to simplify the integration of object storage systems into cloud‑based solutions by removing the need to rely on the availability of web, file or FTP servers
+
 - Offloads objects (files, media, images) from compute resources, reducing the load on server resources
+
 - Automatically replicates and distributes objects to give high levels of data durability and availability, eliminating the need for cloud backup and recovery
 
 ECS provides two APIs that you can use to manage your cloud storage: the S3‑compatible API and the EMC ECS Atmos API.
@@ -48,6 +56,7 @@ ECS provides two APIs that you can use to manage your cloud storage: the S3‑co
 The key differences between the two APIs are:
 
 - The ECS S3-compatible API enables you to easily migrate applications between Atmos, S3 and other S3‑compatible storage; but not all functionality available in S3 is available on ECS as shown in the *S3 Supported Features* chapter of the [*Elastic Cloud Storage (ECS) Data Access Guide*](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf)).
+
 - The ECS Atmos API provides backward compatibility with the EMC Atmos platform. It offers access to the majority of the features of the platform with certain exceptions as listed in the *Atmos Supported Features* chapter of the [*Elastic Cloud Storage (ECS) Data Access Guide*](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf).
 
 ### Cloud Storage use cases
@@ -59,14 +68,19 @@ We anticipate that most web applications can make good use of cloud storage for 
 For example, with an internet-facing application that enables users to download forms and guides in PDF, these items are often stored in primary storage attached to the web servers, which creates several challenges:
 
 - Whenever a PDF is updated, the updated copy must be replicated to all web servers
+
 - When an item is downloaded, the bandwidth usage of the web server in question increases
+
 - Multiple simultaneous downloads could overload the web servers or other components of the network infrastructure
+
 - Each object is stored multiple times in primary storage, increasing the overall cost of storage
 
 On the other hand, storing this content in cloud storage overcomes these challenges because:
 
 - Only one copy of each item is stored, so updates only need to be made in one place
+
 - End users connect directly to cloud storage to download PDFs, bypassing the web servers and associated network infrastructure
+
 - Objects are stored only once, and at a much lower price per GB, which substantially reduces the overall cost of storage
 
 The same principles apply to other static content, such as images and (especially) videos. The more workload you can offload onto an external system such as cloud storage, the leaner your application infrastructure
@@ -94,14 +108,11 @@ performance for your solution.
 **Corsham (Assured)** | |
 Internet | `cas.cor00005.ukcloud.com` | `atmos.cas.cor00005.ukcloud.com`
 PSN Assured | `cas.cor00005.psnassured.ukcloud.com` | `atmos.cas.cor00005.psnassured.ukcloud.com`
-N3 | `cas.cor00005.ukcloud.thirdparty.nhs.uk/` | `atmos.cas.cor00005.ukcloud.thirdparty.nhs.uk/`
+HSCN | `cas.cor00005.ukcloud.thirdparty.nhs.uk/` | `atmos.cas.cor00005.ukcloud.thirdparty.nhs.uk/`
 **Farnborough (Assured)** | |
 Internet | `cas.frn00006.ukcloud.com` | `atmos.cas.frn00006.ukcloud.com`
 PSN Assured | `cas.frn00006.psnassured.ukcloud.com` | `atmos.cas.frn00006.psnassured.ukcloud.com`
-N3 | `cas.frn00006.ukcloud.thirdparty.nhs.uk/` | `atmos.cas.frn00006.ukcloud.thirdparty.nhs.uk/`
-
-If you're using the ENHANCED option (geo-resilient storage), you can use either the Corsham or Farnborough endpoints. In the event of a site failure, there will be an outage to objects created on the failed site.
-UKCloud will bring these objects online in the other site within about 15 minutes.
+HSCN | `cas.frn00006.ukcloud.thirdparty.nhs.uk/` | `atmos.cas.frn00006.ukcloud.thirdparty.nhs.uk/`
 
 Contact UKCloud support if you are unsure which endpoint to use.
 
@@ -128,7 +139,7 @@ You may also find the *Elastic Cloud Storage (ECS) Data Access Guide* useful:
 <https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf>
 
 > [!NOTE]
-> Currently the N3 DNS service does not allow UKCloud to create wildcard DNS entries for our services. This means that S3 URLs that feature the bucket as part of the domain do not work (for example, `bucket01.cas.frn00006.ukcloud.thirdparty.nhs.uk`). With most S3 tools, you can choose whether to use prefix buckets or suffix buckets. If you are using the service via N3 you'll need to make sure your client tools support suffix buckets.
+> Currently the HSCN DNS service does not allow UKCloud to create wildcard DNS entries for our services. This means that S3 URLs that feature the bucket as part of the domain do not work (for example, `bucket01.cas.frn00006.ukcloud.thirdparty.nhs.uk`). With most S3 tools, you can choose whether to use prefix buckets or suffix buckets. If you are using the service via HSCN you'll need to make sure your client tools support suffix buckets.
 
 ### Amazon S3 Authentication Tool for Curl
 
@@ -163,6 +174,7 @@ To use S3Curl:
     Where:
 
     - `user_id` is your User ID (you can find this in the Storage section of the UKCloud Portal)
+
     - `secret_key` is your secret key (If you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)
 
 4. Change the permissions, otherwise the Perl script will refuse to run.
@@ -268,9 +280,13 @@ To use S3cmd:
 3. When prompted, provide the following information:
 
     - Access Key --- your User ID (you can find this in the Storage section of the UKCloud Portal)
+
     - Secret Key --- your secret key (If you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)
+
     - Encryption password --- create a secure password
+
     - Path to GPG program --- as appropriate for your system
+
     - Use HTTPS protocol --- Yes
 
 4. You'll be prompted to test the connection. After the test, even if it fails, save the configuration, which will be written to `~/.s3cfg`.
@@ -315,7 +331,9 @@ To use S3Express:
     Where:
 
     - `user_id` is your User ID (you can find this in the Storage section of the UKCloud Portal)
+
     - `secret_key` is your secret key (if you've forgotten or don't know your secret key, you can reset it in the Storage section of the UKCloud Portal)
+
     - `api_endpoint` is the appropriate endpoint, as shown in [Before you begin](#before-you-begin), for example:
 
         `setopt --endpoint:cas.cor00005.ukcloud.com`
@@ -335,6 +353,7 @@ Although you will mostly interact with your Cloud Storage service through the AP
 - View information about the namespaces within your Cloud Storage environment, including:
 
   - How many buckets are in each namespace
+
   - Storage consumed by each namespace
 
 - View a list of users with access to the namespace
@@ -344,7 +363,9 @@ Although you will mostly interact with your Cloud Storage service through the AP
 - View information about the buckets within a namespace, including:
 
   - API Type: Atmos or S3
+
   - Storage consumed by the bucket
+
   - Number of objects in the bucket
 
 - View a graphical representation of the storage consumed by a bucket over the last 30 days
@@ -368,8 +389,20 @@ To access your Cloud Storage service in the UKCloud Portal:
 In this Getting Started Guide, you've learned the basics about the Cloud Storage service. For more detailed information, see the following articles in the Knowledge Centre:
 
 - [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
-- [*Blueprint -- Using storage gateways with Cloud Storage (ECS)*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-574-Blueprint-Using-storage-gateways-with-Cloud-Storage-ECS-v1.pdf)
-- [*Blueprint -- Using file browsers with Cloud Storage (ECS)*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-575-Blueprint-Using-file-browsers-with-Cloud-Storage-ECS-v1.pdf)
+
+- [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
+
+- [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
+
+- Cloud Storage Gateways
+
+  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+
+  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+
+## Related videos
+
+- [*GeoDrive 2.0 overview video*](cs-vid-geodrive2-client-overview.md)
 
 ## Glossary
 
@@ -398,4 +431,4 @@ Storage.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

@@ -3,6 +3,8 @@ title: How to create a vApp network | UKCloud Ltd
 description: Shows how to create an isolated VDC network within vCloud Director
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 
 toc_rootlink: How To
 toc_sub1:
@@ -26,11 +28,15 @@ The example of a vApp network, below, shows the vApp edge.
 
 ![vApp network](images/vmw-vapp-network.png)
 
+> [!NOTE]
+> You cannot create vApp networks in the new vCloud Director 9.1 tenant portal. If your environment uses vCloud Director 9.1, you must first switch to the vCloud Director web console. For more information, see [*How to switch to the vCloud Director web console from the tenant portal*](vmw-how-switch-web-console.md).
+
 ## Creating a vApp network
 
 There are two ways to create a vApp network within vCloud Director:
 
 - [*During vApp creation*](#creating-a-vapp-network-during-vapp-creation)
+
 - [*After vApp creation*](#creating-a-vapp-network-after-vapp-creation)
 
 ### Creating a vApp network during vApp creation
@@ -193,7 +199,9 @@ Static routing at the vApp network level allows traffic to route between differe
 The prerequisites for static routing are as follows:
 
 - Static routing must be enabled for the VDC network you're connecting to (see [*How to create a static route*](vmw-how-create-static-route.md)).
+
 - The two vApp networks must be routed to the same VDC network.
+
 - The vApp networks must be in vApps that have been started at least once.
 
 To add a static route:
@@ -205,6 +213,7 @@ To add a static route:
 3. Enter the following details:
 
     - **Network** - The address of the first vApp network to which you're adding a static route
+
     - **Next Hop IP** - The external IP address of that vApp network's router
 
     ![Add Static Route dialog box](images/vmw-vcd-vapp-static-route.png)
@@ -249,4 +258,4 @@ If you're converting a vApp after creation, on the **My Cloud** tab, open the vA
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.

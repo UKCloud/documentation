@@ -8,8 +8,20 @@
     href: ostack-gs.md
 - name: How To
   items:
+  - name: Configure an instance using cloud-config
+    href: ostack-how-cloud-config.md
+  - name: Convert virtual machines
+    href: ostack-how-convert-vms.md
+  - name: 'Create and deploy a basic Heat template '
+    href: ostack-how-create-heat-template.md
   - name: Create load balancing services
     href: ostack-how-create-load-balancer.md
+  - name: Create new users
+    href: ostack-how-create-users.md
+  - name: Create static IPs for OpenStack instances
+    href: ostack-how-static-ip.md
+  - name: Install Red Hat Update Infrastructure on an existing OpenStack instance
+    href: ostack-how-install-rhui.md
   - name: Manage how your instance recovers from a host failure
     href: ostack-how-recover-instance.md
   - name: Manage UKCloud for OpenStack accounts in the UKCloud Portal
@@ -20,6 +32,8 @@
     href: ostack-how-retrieve-windows-password.md
   - name: Use OpenStack instance metadata
     href: ostack-how-use-instance-metadata.md
+  - name: Use the OpenStack API with an SSO user
+    href: ostack-how-use-api-sso.md
   - name: Use the OpenStack Command Line Client on Microsoft operating systems
     href: ostack-how-use-cli.md
 - name: Reference
@@ -32,9 +46,19 @@
     href: ostack-ref-ukcloud-outperforms.md
   - name: Introduction to the OpenStack dashboard
     href: ostack-ref-dashboard.md
+  - name: Live migrations
+    href: ostack-ref-live-migration.md
   - name: OpenStack public image versioning
     href: ostack-ref-public-image-versioning.md
+- name: Service Definition
+  items:
+  - name: UKCloud for OpenStack Service Definition
+    href: ostack-sd.md
 - name: Service Scope
   items:
   - name: UKCloud for OpenStack Service Scope
     href: ostack-sco.md
+- name: Videos
+  items:
+  - name: OpenStack Horizon dashboard overview
+    href: ostack-vid-overview.md

@@ -3,6 +3,8 @@ title: How to set up Email and Collaboration on Android, Windows or Blackberry m
 description: Contains an overview of mobility options for Zimbra Collaboration Suite (ZCS), as well as information on how to set up Zimbra Mobile for most smartphones on specific operating systems
 services: email
 author: Sue Highmoor
+reviewer:
+lastreviewed: 24/07/2018 13:50:39
 
 toc_rootlink: How To
 toc_sub1:
@@ -30,6 +32,7 @@ If you have an iPhone or iPad, see [*How to set up Email and Collaboration on an
 Android-based smart phones can natively synchronise email, contacts and calendars to Zimbra accounts. The two prerequisites to configure this are:
 
 - The Zimbra email system used by your organisation or service provider is a paid Network Edition license (ask your administrator if you're not sure)
+
 - Your administrator has enabled mobility on your account
 
 Assuming these two requirements are met, you can configure Zimbra just like you would a Microsoft Exchange account on the device (this is the name used for any ActiveSync‑based service).
@@ -37,12 +40,15 @@ Assuming these two requirements are met, you can configure Zimbra just like you 
 To complete the set up you will need to know the following:
 
 - **Email** - This is your company email address
+
 - **Password** - This is your Zimbra password (the same one used for the Zimbra Web Client)
 
 You may also need to know:
 
 - **Server** - The Server FQDN or IP (best practice is to always use a valid FQDN, such as `mail.example.com`)
+
 - **Security** - If you want to use SSL
+
 - **Port** - If your server does not use the default port (443)
 
 ## Installation and setup
@@ -55,35 +61,35 @@ You may also need to know:
 
     ![Add account option](images/email-android-mnu-add-account.png)
 
-3. Select **Corporate Account** from the other options
 
-    ![Corporate account option](images/email-android-mnu-corporate.png)
-
-4. Enter your **Email address** and **Password** to add an account, then tap **Next**
+3. Enter your **Email address** and **Password** to add an account, then tap **Next**
 
     ![Enter email account details](images/email-android-account-setup-email.png)
 
-5. Select **Exchange** from the type of account
+4. Select **Exchange** from the type of account
 
     ![Account type](images/email-android-account-setup-type-exchange.png)
 
     > [!NOTE]
     > ZCS 7.x does not support auto-discovery. If you want to perform auto-discovery, you need to enter the server name on the Server Settings screen.
 
-6. Complete the following fields in the Server Settings screen and then click **Next**
+5. Complete the following fields in the Server Settings screen and then click **Next**
 
     - **Username** - Your full email address (For example, `jane@coolexample.com`)
+
     - **Password** - Your email password
+
     - **Server** - `mail.example.com` (same URL you use for Zimbra webmail)
+
     - **Security type** and **Port** - Ask your administrator
 
     ![Server Settings screen](images/email-android-account-setup-incoming-server.png)
 
-7. Configure your desired email account options (figure 8) and then tap **Next**
+6. Configure your desired email account options and then tap **Next**
 
     ![Account options](images/email-android-account-setup-options.png)
 
-8. Your account set up is complete. You can optionally give this account a name. Click **Done**
+7. Your account set up is complete. You can optionally give this account a name. Click **Done**
 
 ## Configuring Zimbra Mobile for Smart Phones on Windows Mobile Devices
 
@@ -101,6 +107,7 @@ The following instructions are for configuring access to a ZCS account on a Wind
 3. Choose to **configure a new account**:
 
     - If no account is configured for ActiveSync, select the option to **Set up your device to sync with it** [the server].
+
     - If you're replacing a pre-existing account, select Menu and then select **Configure Server**
 
 4. In the **Server address**, enter the publicly accessible hostname of the server (`zimbra.example.com`).
@@ -218,6 +225,7 @@ The install program for ZCB is in the Windows Installer `.msi` format. To instal
 Before you can provision accounts, the following must be set up:
 
 - Create a Zimbra administrator account for BES. For ZCS 5.0.19 or earlier you create a Zimbra administrator. For 6.0.0 or later, you create a global administrator account. (This is the same administrator account, but in 6.0 the name was changed to global administrator).
+
 - Recreate the BlackBerry Manager and BlackBerry Server mail profiles.
 
 Following this, you can provision user accounts. After user accounts have been provisioned, restart your BlackBerry Controller service.
@@ -296,8 +304,11 @@ Before you can provision BES accounts, you must delete and recreate the BES `Bla
 6. In the *Zimbra Server Configuration Settings* dialog box, on the **Server Configuration** tab, enter the following information:
 
     - **Server Name** - This should be set to your Zimbra Server name and port number. This should be in the form of `example.domain.com:7071`.
+
     - Select **Secure Connection**.
+
     - **Email Address** - This should be the name of the BES administrator account that you created on the ZCS server. This should be in the form of `adminname@example.com`.
+
     - **Password** - This should be the password of the BES administrator account that you created on the ZCS server.
 
 7. Click **OK**.
@@ -327,4 +338,4 @@ OTA activation is performed through the Enterprise Activation application on use
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
