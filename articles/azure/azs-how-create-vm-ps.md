@@ -114,8 +114,8 @@ $PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Loc
 # Create network security group rule (SSH or RDP)
 Write-Output -InputObject "Creating SSH/RDP network security rule"
 $SecurityGroupRule = switch (<output form="vmtype" name="result" style="display: inline;">-Linux</output>) {
-    Linux { New-AzureRmNetworkSecurityRuleConfig -Name "Ssh-Rule" -Description "Allow SSH" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 22 -SourceAddressPrefix "Internet" -SourcePortRange "*" -DestinationAddressPrefix "*"}
-    Windows { New-AzureRmNetworkSecurityRuleConfig -Name "Rdp-Rule" -Description "Allow RDP" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 3389 -SourceAddressPrefix "Internet" -SourcePortRange "*" -DestinationAddressPrefix "*"}
+    -Linux { New-AzureRmNetworkSecurityRuleConfig -Name "Ssh-Rule" -Description "Allow SSH" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 22 -SourceAddressPrefix "Internet" -SourcePortRange "*" -DestinationAddressPrefix "*"}
+    -Windows { New-AzureRmNetworkSecurityRuleConfig -Name "Rdp-Rule" -Description "Allow RDP" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 3389 -SourceAddressPrefix "Internet" -SourcePortRange "*" -DestinationAddressPrefix "*"}
 }
 
 # Create a network security group
