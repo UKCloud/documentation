@@ -214,7 +214,7 @@ Returns a response with a list of up to 10 VMs
 ## My Calls API (Removed)
 
 > [!IMPORTANT]
-> With the move to the new My Calls service management tool this functionality is no longer available
+> With the move to the new My Calls service management tool, this functionality is no longer available.
 
 ### GET /api/my_calls
 
