@@ -86,7 +86,7 @@ $NICName = "<output form="nicname" name="result" style="display: inline;">MyNIC<
 $ComputerName = "<output form="compname" name="result" style="display: inline;">MyComputer</output>"
 $VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
 $VMSize = "<output form="vmsize" name="result" style="display: inline;">Basic_A0</output>"
-$VMImage = "*<output form="vmimage" name="result" style="display: inline;">/CentOS/Skus/6.10</output>"
+$VMImage = "<output form="vmimage" name="result" style="display: inline;">/CentOS/Skus/6.10</output>"
 
 # Create a new resource group
 Write-Output -InputObject "Creating resource group"
@@ -111,9 +111,16 @@ $VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location
 Write-Output -InputObject "Creating public IP address"
 $PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Location -AllocationMethod "Dynamic" -Name $PublicIPName
 
+# Create network security group rule (SSH or RDP)
+Write-Output -InputObject "Creating SSH/RDP network security rule"
+$SecurityGroupRule = switch (<output form="vmtype" name="result" style="display: inline;">-Linux</output>) {
+    Linux { New-AzureRmNetworkSecurityRuleConfig -Name "Ssh-Rule" -Description "Allow SSH" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 22 -SourceAddressPrefix "Internet" -SourcePortRange "*" -DestinationAddressPrefix "*"}
+    Windows { New-AzureRmNetworkSecurityRuleConfig -Name "Rdp-Rule" -Description "Allow RDP" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 3389 -SourceAddressPrefix "Internet" -SourcePortRange "*" -DestinationAddressPrefix "*"}
+}
+
 # Create a network security group
 Write-Output -InputObject "Creating network security group"
-$NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location $Location -Name $NSGName
+$NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location $Location -Name $NSGName -SecurityRules $SecurityGroupRule
 
 # Create a virtual network card and associate it with the public IP address and NSG
 Write-Output -InputObject "Creating network interface card"
