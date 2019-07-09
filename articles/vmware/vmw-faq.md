@@ -93,7 +93,7 @@ Yes, as this is a true IaaS cloud service, you have complete control and autonom
 
 UKCloud offers a variety of 'T-shirt sizes' to meet customers' needs. The smallest configuration is 512MiB and 1 vCPU. The largest is 128GiB memory with 12 vCPU.
 
-Check the UKCloud for VMware Service Definition for more details on the currently available sizes.
+Check the [*UKCloud for VMware Service Definition*](vmw-sd.md) for more details on the currently available sizes.
 
 Dedicated Compute provides the flexibility to build custom-sized VMs.
 
@@ -147,7 +147,7 @@ Dedicated Compute uses the same storage infrastructure as the shared compute pla
 
 There's a longer deployment lead time for Dedicated Compute, as well as a longer contractual commitment than our shared cloud platform (three months rather than one hour).
 
-For more details, please see the UKCloud for VMware Service Definition available via the Digital Marketplace.
+For more details, please see the [*Dedicated Compute v2 Service Definition*](../dedicated-compute/dc-sd.md) available via the Digital Marketplace.
 
 ### Can I utilise multiple storage types with my VM?
 
