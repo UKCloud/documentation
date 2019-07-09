@@ -164,7 +164,7 @@ System administrators and mobile workers can securely access workloads running o
 
 - If you have multiple certificates to renew or revoke, you can do this in a single service request by selecting the **Renew and/or Revoke multiple SRAS Certificates** option in the UKCloud Portal. Attach the *Secure Remote Access bulk renewal/revoke form* containing all the certificates.
 
-For more information, see the following articles: [*Secure Remote Access FAQs*](../sra/sra-faq.md), [*Secure Remote Access Factsheet*](https://ukcloud.com/wp-content/uploads/2018/01/SRA-Factsheet.pdf) and [*Secure Remote Access Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/153884335251015-service-definition-document-2018-05-21-1247.pdf).
+For more information, see the following articles: [*Secure Remote Access FAQs*](../sra/sra-faq.md), [*Secure Remote Access Factsheet*](https://ukcloud.com/wp-content/uploads/2018/01/SRA-Factsheet.pdf) and [*Secure Remote Access Service Definition*](../sra/sra-sd.md).
 
 ## Feedback
 

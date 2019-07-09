@@ -105,7 +105,7 @@ High Performance Compute is subject to the following:
 
 ## More information
 
-For more information, see the [*High Performance Compute Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/440356750870847-service-definition-document-2018-05-21-1302.pdf).
+For more information, see the [*High Performance Compute Service Definition*](hpc-sd.md).
 
 ## Feedback
 

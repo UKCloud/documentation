@@ -39,7 +39,7 @@ UKCloud deem a service to be unavailable if after five consecutive negative resp
 
 ### Are any periods of downtime excluded from the availability SLA?
 
-UKCloud excludes any time needed to complete planned or emergency maintenance from any time-based calculations related to service availability. In these events, you will be notified accordingly as described in the appropriate Service Definition. Other exceptions are outlined in UKCloud's Terms and Conditions.
+UKCloud excludes any time needed to complete planned or emergency maintenance from any time-based calculations related to service availability. In these events, you will be notified accordingly as described our [*Terms and Conditions*](other-ref-terms-and-conditions.md). Other exceptions are also outlined in the Terms and Conditions.
 
 ### Are there any reasons why you wouldn't pay a Service Credit if it was due?
 
@@ -89,7 +89,7 @@ UKCloud monitors the UKCloud for VMware data stores every minute using internal 
 
 ### Do you offer an SLA on the UKCloud-provided virtual firewall?
 
-Virtual firewalls are covered by the UKCloud management plane (IaaS layer or below) SLA. Customers can claim service credits for affected VMs in the event of an outage, where the fault is within UKCloud-controlled components. Further details are available in the Service Definition.
+Virtual firewalls are covered by the UKCloud management plane (IaaS layer or below) SLA. Customers can claim service credits for affected VMs in the event of an outage, where the fault is within UKCloud-controlled components. Further details are available in the [*SLA definition*](other-ref-sla-definition.md).
 
 ### Does UKCloud offer an SLA covering the performance of a VM or its storage?
 
@@ -381,7 +381,7 @@ No, you will only receive a Service Credit if the service provided was affected 
 
 ### Do you offer an SLA on the UKCloud-provided virtual firewall?
 
-Virtual firewalls are covered by the UKCloud management plane SLA. Customers can claim service credits for affected VMs in the event of an outage, where the fault is within UKCloud-controlled components. Further details are available in the Service Definition.
+Virtual firewalls are covered by the UKCloud management plane SLA. Customers can claim service credits for affected VMs in the event of an outage, where the fault is within UKCloud-controlled components. Further details are available in the [*SLA definition*](other-ref-sla-definition.md).
 
 ### Can you give me a worked example for the UKCloud for Oracle Software SLA?
 

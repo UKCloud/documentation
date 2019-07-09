@@ -33,7 +33,7 @@ Yes, you can test running applications on the UKCloud platform to ensure failove
 
 ### What is the cost to test failover?
 
-When you perform a test recovery, any VMs recovered are charged at the prices associated with recovered VM sizes. See the UKCloud for VMware Service Definition for details on VM prices. It is important to note that you will continue to be charged as long as the failover test is active. Once the failover test is stopped, you will no longer be charged for the VMs.
+When you perform a test recovery, any VMs recovered are charged at the prices associated with recovered VM sizes. See the [*UKCloud for VMware Service Definition*](../vmware/vmw-sd.md) for details on VM prices. It is important to note that you will continue to be charged as long as the failover test is active. Once the failover test is stopped, you will no longer be charged for the VMs.
 
 ### What VMware and Hyper-V versions are supported for recovery on UKCloud?
 
@@ -65,7 +65,7 @@ The Zerto technology that underpins the Disaster Recovery as a Service service o
 
 Yes, all licensing for Zerto used within Disaster Recovery as a Service is included.
 
-The price of Disaster Recovery as a Service is based on the storage tier that the VM is being replicated to. For more information please see the Disaster Recovery as a Service Service Definition.
+The price of Disaster Recovery as a Service is based on the storage tier that the VM is being replicated to. For more information please see the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 ### What connectivity options do I have?
 
