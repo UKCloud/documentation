@@ -25,7 +25,7 @@ We continue to enhance and evergreen our core multi-cloud technology stacks thro
 
 ### When will the changes take effect?
 
-All existing customer solutions will automatically benefit from the service improvements and new service options from 2nd July 2019. Updated Service Definitions for updated and new services are available via the [UKCloud Knowledge Centre](https://docs.ukcloud.com/) and the [Digital Marketplace](https://www.digitalmarketplace.service.gov.uk/).
+All existing customer solutions will automatically benefit from the service improvements and new service options from 2nd July 2019. Updated Service Definitions for updated and new services are available via the [UKCloud Knowledge Centre](https://docs.ukcloud.com/articles/other/other-ref-service-definitions.html) and the [Digital Marketplace](https://www.digitalmarketplace.service.gov.uk/).
 
 ### Can I retain my G10 service?
 
@@ -47,7 +47,7 @@ All of the G11 Service Definitions and Pricing Guides are available within the [
 
 ### What is Dedicated Compute v2?
 
-Dedicated Compute v2 is a flexible solution designed where guaranteed performance is required. Hosts are assigned for a customer’s sole use and enables granular configuration to meet individual workload requirements. Dedicated Compute v2 utilises our public VMWare storage and provides on-demand flexibility, with either Tier 1 or Tier 2 storage options available.
+Dedicated Compute v2 is a flexible solution designed where guaranteed performance is required. Hosts are assigned for a customer’s sole use and enables granular configuration to meet individual workload requirements. Dedicated Compute v2 utilises our public VMware storage and provides on-demand flexibility, with either Tier 1 or Tier 2 storage options available.
 
 ### What is Extended Network Support from UKCloud?
 
@@ -59,7 +59,7 @@ The Managed Monitoring service from UKCloud includes total application monitorin
 
 ### What is Cloud Optimisation from UKCloud?
 
-Cloud Optimisation from UKCloud draws on our expertise in optimising and managing large scale cloud implementations to help customers avoid cloud sprawl by realising value and optimising cloud spend, eliminating unused or underused resources and improving security and compliance stance. UKCloud are confident that this service can achieve initial savings of up to 30% on cloud spend. Please note this service is currently available for optimising workloads running on-premises, and on global public clouds such as Microsoft Azure, AWS and Google Cloud platform.
+Cloud Optimisation from UKCloud draws on our expertise in optimising and managing large scale cloud implementations to help customers avoid cloud sprawl by realising value and optimising cloud spend, eliminating unused or underused resources and improving security and compliance stance. UKCloud are confident that this service can achieve initial savings of up to 30% on cloud spend. Please note this service is currently available for optimising workloads running on-premises, and on global public clouds such as Microsoft Azure, AWS and the Google Cloud platform.
 
 ### What are the new 3rd party services?
 
@@ -123,7 +123,7 @@ We've also made a couple of name changes to connectivity products:
 
 ### What are the key changes to the UKCloud for OpenStack service?
 
-We've added a new Instance size to the portfolio: p1.medium. This instance comes with 12 vCPU, 128 GiB RAM and 60 GiB of ephemeral storage. Please view the [Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) for further information.
+We've added a new instance size to the portfolio: p1.medium. This instance comes with 12 vCPU, 128 GiB RAM and 60 GiB of ephemeral storage. Please view the [Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) for further information.
 
 Based on customer demand, we've now added a new backup and restoration tool from TrilioVault. For early access, speak to your Technical Account Manager.
 
@@ -141,7 +141,7 @@ This service has now had a minor name change and is now known as Basic Managed C
 
 ### What changes have been made to the UKCloud for Microsoft Azure service?
 
-We can now offer customers management of their Microsoft Public Azure environments. Please note, customers must purchase another UKCloud service to take advantage of this service.
+We can now offer customers management of their workloads running in Microsoft Public Azure environments. Please note, customers must purchase another UKCloud service to take advantage of this service.
 
 ## End of sale
 
@@ -159,7 +159,7 @@ This has been removed from sale. Existing customers with Synchronous Protection 
 
 ### What is happening to the UKCloud Guard?
 
-This has been removed from service. However, customers can still take advantage of the Cross Domain Security Zone functionality via the Walled Garden service.
+This has been removed from service. However, customers can still take advantage of the Cross Domain Security Zone (CDSZ) functionality via the Walled Garden service.
 
 ### What is happening to Dedicated Compute v1?
 
