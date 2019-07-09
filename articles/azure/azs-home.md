@@ -37,7 +37,7 @@ First, take a look at our [*Getting Started Guide*](azs-gs.md) to learn the basi
   <div class="col-md-3"><ul><li><a href="https://docs.ukcloud.com/articles/azure/azs-how-use-azure-api.html">Use the Azure Stack API</a></ul></div>
 </div>
 
-## Useful Videos
+## Azure Stack portal overview
 
 <div class="row">
   <div class="col-md-6">
