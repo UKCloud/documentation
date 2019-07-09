@@ -48,11 +48,11 @@ Use the following steps to connect to Azure Stack:
    To register the *user* environment, use:
 
       ```azurecli
-      az cloud register `
-        -n AzureStackUser `
-        --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" `
-        --suffix-storage-endpoint "frn00006.azure.ukcloud.com" `
-        --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" `
+      az cloud register \
+        -n "AzureStackUser" \
+        --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" \
+        --suffix-storage-endpoint "frn00006.azure.ukcloud.com" \
+        --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" \
         --endpoint-active-directory-graph-resource-id "https://graph.windows.net/"
       ```
 
@@ -91,10 +91,10 @@ Use the following steps to connect to Azure Stack:
    - Sign in as a *service principal*: Before you sign in, create a service principal through [the public Azure portal](azs-how-create-spn-portal.md), [PowerShell](azs-how-create-spn-powershell.md) or [CLI](azs-how-create-spn-cli.md) and assign it a role. Now, sign in by using the following command:
 
       ```azurecli
-      az login `
-        --tenant <Azure Active Directory Tenant name. For example: myazurestack.onmicrosoft.com> `
-        --service-principal `
-        -u <Application Id of the Service Principal> `
+      az login \
+        --tenant <Azure Active Directory Tenant name. For example: myazurestack.onmicrosoft.com> \
+        --service-principal \
+        -u <Application Id of the Service Principal> \
         -p <Key generated for the Service Principal>
       ```
 
