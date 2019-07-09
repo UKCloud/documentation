@@ -72,10 +72,15 @@ As stated, all Microsoft applications on the UKCloud platform must be licensed a
     > This is only possible with certain Microsoft applications and is not possible for Microsoft Windows Server as stated above. Before you install any Microsoft software onto a UKCloud VM, you must ensure that you purchase the correct licensing with software assurance and that you have completed the Microsoft Licence Mobility Verification process detailed in this document. The completion of the process is identified by a signed confirmation sent to you from Microsoft Ireland. Please note that if you do not have software assurance, you will not be able to use the Microsoft Mobility option.
 
     The Microsoft Mobility option involves transferring the use of your licensing to UKCloud VMs, and therefore they cannot be used on other Cloud Service Providers or on your own hardware. However, if you discontinue the use of the application on the UKCloud platform and no longer require the licensing, this can be reverted for your use elsewhere. The [Microsoft Mobility form](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx) is available on the Microsoft web site. Please note that this must be completed and posted to Microsoft and not to UKCloud. The correct information to use for UKCloud is:
+    
   - Partner entity status: Authorized Mobility Partner
+  
   - Authorized Mobility Partner Name: UKCloud
+  
   - Authorized Partner Website URL: https://ukcloud.com/
+  
   - Authorized Mobility Partner Email Address: nstewart@ukcloud.com
+  
   - Partner agreement number: 8392716
 
 ## Microsoft application list
