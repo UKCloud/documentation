@@ -35,7 +35,7 @@ Organisations can choose from two service levels:
 
 If you want more control and visibility of your disaster recovery solution, you can design your solution to write data independently to each data centre at our STANDARD service level, instead of using our ENHANCED service level.
 
-Full details of the available service options are outlined in the [Service Definition](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf).
+Full details of the available service options are outlined in the [*Service Definition*](cs-sd.md).
 
 ## Service availability
 
