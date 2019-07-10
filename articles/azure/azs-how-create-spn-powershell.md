@@ -279,6 +279,7 @@ $AppName = "<output form="appname" name="result2" style="display: inline;">TestA
 $AppURL = "<output form="appurl" name="result2" style="display: inline;">https://test.app</output>"
 $AppPassword = '<output form="apppassword" name="result2" style="display: inline;">Password123!</output>'
 $AppPasswordSecure = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
+$RoleAssignmentSuccessful = "false"
 
 $TenantDomain = "<output form="tenantdomain" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
 
@@ -316,13 +317,32 @@ $AppGet
 
 # Create a Service Principal Name (SPN) for the application you created earlier.
 $SPN = New-AzureADServicePrincipal -AppId $AppGet.AppId
-$SPNGet = Get-AzureADServicePrincipal -SearchString "$($AppGet.DisplayName)"
-$SPNGet
+$SPNAzsGet = Get-AzureADServicePrincipal -SearchString "$($AppGet.DisplayName)"
+$SPNAzsGet
 
 # Assign the Service Principal Name a role i.e. Owner, Contributor, Reader, etc. - In Azure Stack
 $RoleAssignmentAzs = New-AzureRmRoleAssignment -RoleDefinitionName $AzureStackRole -ServicePrincipalName $AzsApp.ApplicationId.Guid
 $RoleAssignmentGet = Get-AzureRmRoleAssignment -ObjectId $SPNAzsGet.Id.Guid
 $RoleAssignmentGet
+
+# Wait for the application and SPN to be created
+Write-Output -InputObject "Waiting for the application and SPN to be created..."
+Start-Sleep -Seconds 10
+
+# Find application details from Azure AD
+$AzsApp = Get-AzureRmADApplication -DisplayNameStartWith "$($AppGet.DisplayName)"
+
+# Assign the Service Principal Name a role i.e. Owner, Contributor, Reader, etc. - In Azure Stack
+Do {
+    try {
+        $RoleAssignmentAzs = New-AzureRmRoleAssignment -RoleDefinitionName $AzureStackRole -ServicePrincipalName $AzsApp.ApplicationId.Guid
+        $RoleAssignmentGet = Get-AzureRmRoleAssignment -ObjectId $SPNAzsGet.ObjectId
+        $RoleAssignmentGet
+        $RoleAssignmentSuccessful = "true"
+    } catch {
+        Start-Sleep -Seconds 3
+    } 
+} While($RoleAssignmentSuccessful -eq "false")
 
 # Create your SPN credentials login
 # Note: (Username is "ApplicationId")
