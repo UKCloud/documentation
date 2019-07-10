@@ -67,8 +67,42 @@ To complete the steps in this guide, you must have appropriate access to a subsc
         
     - Once deployment is complete, press the *refresh* button and you should now see your **Log Analytics workspace**.
 
-    - Click the newly create workspace. On the *new* blade, under settings, select *Advanced settings* and note down the **Workspace ID** and **Primary Key** values.
+    - Click the newly create workspace. On the *new* blade, under settings, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VMType* you created. 
+    Note down the **Workspace ID** and **Primary Key** values.
 
         ![Log Analytics workspace advanced settings](images\azs-browser-log-analytics-workspace-advanced-settings.PNG)
     
-3. Create an *Automation Account* 
+    > [!TIP]
+    > Leave the public azure portal open; it is still needed for later steps.
+    
+3. Login to the Azure Stack portal:
+
+    <https://portal.frn00006.azure.ukcloud.com>
+
+4. Navigate to the VM which you wish to enable **Update Management** on and under settings, select the *extensions* blade.
+
+5. Click **Add** at the top and select the resource `Azure Monitor, Update and Configuration Management`; click **Create**.
+
+    ![VM enable update management](images/azs-browser-log-analytics-enable-update-management.PNG)
+
+6. Once the deployment is finished. Head back to the public azure portal, navigate to the *Log Analytics workspace* -> *Advanced settings* -> *`VMType` Servers*.
+
+    - You should now see `x` number of `[VMType]` COMPUTERS CONNECTED. Depending on how many VMs you linked to the workspace.
+
+        ![Log Analytics workspace computers connected](images/azs-browser-log-analytics-workspace-computers-connected.PNG)
+    
+    - Click on *`x vmtype` COMPUTERS CONNECTED*. This will bring up logs for the *Log Analytics workspace*.
+
+7. Execute the following log query passing in your `VMTYPE`:
+
+    - `Heartbeat | where OSType == "VMTYPE" | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table`
+
+    - Example: 
+
+        `Heartbeat | where OSType == "Linux" | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table`
+    
+    - If your VM shows in the results, you have successfully linked your VM from Azure Stack to your *Log Analytics workspace*.
+
+        - [See here for more information; if required.](https://docs.microsoft.com/en-us/azure/automation/automation-update-management#confirm-that-non-azure-machines-are-onboarded)
+
+8. []
