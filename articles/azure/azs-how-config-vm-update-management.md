@@ -71,21 +71,43 @@ To complete the steps in this guide, you must have appropriate access to a subsc
     Note down the **Workspace ID** and **Primary Key** values.
 
         ![Log Analytics workspace advanced settings](images\azs-browser-log-analytics-workspace-advanced-settings.PNG)
+
+3. Create and configure an *Automation Account*:
+
+    - Click *+ Create a resource*.
+
+    - Search `automation` and click **Create**.
+
+        ![automation account](images\azs-browser-search-automation-account.PNG)
+
+    - Choose a *Name*, *Subscription*, *Resource Group*, *Location* and ensure *Create Azure Run As Account* is set to **Yes**.
+
+    - Click **Create**.
+
+        ![Add automation account](images/azs-browser-add-automation-account.PNG)
     
+    - Once deployed, navigate to the *Automation Account*. Under *Configuration Management*, select the solution to enable (Inventory, Change Tracking or Update management).
+
+    - Select the *Log Analytics workspace* to link the automation account too.
+
+    - Click **Enable**.
+
+    - Repeat the two previous steps for all three solutions (Inventory, Change Tracking or Update management).
+
     > [!TIP]
     > Leave the public azure portal open; it is still needed for later steps.
-    
-3. Login to the Azure Stack portal:
+
+4. Login to the Azure Stack portal:
 
     <https://portal.frn00006.azure.ukcloud.com>
 
-4. Navigate to the VM which you wish to enable **Update Management** on and under settings, select the *extensions* blade.
+5. Navigate to the VM which you wish to enable **Update & Management** on and under settings, select the *extensions* blade.
 
-5. Click **Add** at the top and select the resource `Azure Monitor, Update and Configuration Management`; click **Create**.
+6. Click **Add** at the top and select the resource `Azure Monitor, Update and Configuration Management`; click **Create**.
 
     ![VM enable update management](images/azs-browser-log-analytics-enable-update-management.PNG)
 
-6. Once the deployment is finished. Head back to the public azure portal, navigate to the *Log Analytics workspace* -> *Advanced settings* -> *`VMType` Servers*.
+7. Once the deployment is finished. Head back to the public azure portal, navigate to the *Log Analytics workspace* -> *Advanced settings* -> *`VMType` Servers*.
 
     - You should now see `x` number of `[VMType]` COMPUTERS CONNECTED. Depending on how many VMs you linked to the workspace.
 
@@ -93,7 +115,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
     
     - Click on *`x vmtype` COMPUTERS CONNECTED*. This will bring up logs for the *Log Analytics workspace*.
 
-7. Execute the following log query passing in your `VMTYPE`:
+8. Execute the following log query passing in your `VMTYPE`:
 
     - `Heartbeat | where OSType == "VMTYPE" | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table`
 
@@ -105,4 +127,6 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
         - [See here for more information; if required.](https://docs.microsoft.com/en-us/azure/automation/automation-update-management#confirm-that-non-azure-machines-are-onboarded)
 
-8. []
+## Feedback
+
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
