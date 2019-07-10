@@ -6,7 +6,7 @@ author: Matt Warner
 reviewer:
 lastreviewed: 19/07/2018 15:17:17
 toc_rootlink: FAQs
-toc_sub1: 
+toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -93,6 +93,8 @@ Yes, you can change instance size (processor, memory and storage allocations) to
 Increasing instance size may result in the instance being billed at a higher rate.
 
 Additional volume storage can be allocated instantly and will be billed on a per GiB basis.
+
+The instance will be rebooted as part of the resize operation.
 
 ### What is the speed of each vCPU?
 
@@ -296,7 +298,7 @@ You have the choice to either bring your own license using the Microsoft License
 
 ### How can I license an operating system?
 
-### Microsoft 
+### Microsoft
 
 Microsoft terms and conditions preclude customers from using their own licence agreements for Windows Server in the Cloud. That means all licensing for Windows Server operating systems must be provided by UKCloud.
 
@@ -320,7 +322,7 @@ Customers are advised to install their own anti-virus (AV) software, as UKCloud 
 
 UKCloud does not offer any additional software other than what's included in the UKCloud Portal catalogue. Any additional software, including its licensing, is your responsibility.
 
-### What is Bring Your Own (BYO) licensing for Red Hat? 
+### What is Bring Your Own (BYO) licensing for Red Hat?
 
 BYO licensing for Red Hat allows customers to select instances running on the UKCloud Assured cloud platform for covering by their own commercial agreement with Red Hat.
 
