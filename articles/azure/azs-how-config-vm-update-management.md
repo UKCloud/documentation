@@ -39,4 +39,36 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     <https://portal.azure.com>
 
-2. 
+2. Create a *LogAnalytics Workspace* in your Azure subscription:
+
+    - Click **All Services** and search `log analytics`.
+        
+        ![All Services](images/azs-browser-search-log-analytics.png)
+    
+    - Select **Log Analytics Workspaces**.
+    
+    - Click **Add** and in the *new* blade, select choices for the following items:
+
+        - *Name* for the **Log Analytics workspace**. Example: `DefaultLAWorkspace`
+        
+        - *Subscription* to link to the workspace.
+        
+        - *Resource Group* to link to the workspace. Can be an existing resource group or choose to create a new one.
+        
+        - *Location* available to host the workspace on.
+
+        - *Pricing Tier* to use.
+
+        Here is an example of the blade and all items filled out:
+
+        ![Log Analytics workspace creation](images/azs-browser-example-log-analytics-workspace.PNG)
+
+    - Press **OK** once finished. The **Log Analytics workspace** will now begin deployment. A notification will appear on the top right of the portal.
+        
+    - Once deployment is complete, press the *refresh* button and you should now see your **Log Analytics workspace**.
+
+    - Click the newly create workspace. On the *new* blade, under settings, select *Advanced settings* and note down the **Workspace ID** and **Primary Key** values.
+
+        ![Log Analytics workspace advanced settings](images\azs-browser-log-analytics-workspace-advanced-settings.PNG)
+    
+3. Create an *Automation Account* 
