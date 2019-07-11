@@ -1,5 +1,5 @@
 ---
-title: How to view UKCloud service status information | UKCloud Ltd
+title: How to view the UKCloud Service Status page | UKCloud Ltd
 description: Describes how to access the UKCloud Service Status page to view information on the status of the services on the platform
 services: other
 author: Sue Highmoor
@@ -11,12 +11,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: View service status information
+toc_title: View Service Status page
 toc_fullpath: How To/other-how-view-status-info.md
 toc_mdlink: other-how-view-status-info.md
 ---
 
-# How to view UKCloud service status information
+# How to view the UKCloud Service Status page
 
 ## Overview
 
