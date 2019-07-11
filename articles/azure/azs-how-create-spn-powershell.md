@@ -159,8 +159,8 @@ $SPNGet
 
 # Assign the Service Principal Name a role i.e. Owner, Contributor, Reader, etc. - In public Azure
 #### Requires a few seconds... before it can be run
-Write-Output "Wait 10s to finish Service Principal Name creation"
-Start-Sleep -Seconds 10
+Write-Output -InputObject "Waiting for the SPN to be created..."
+Start-Sleep -Seconds 30
 $RoleAssignment = New-AzureRmRoleAssignment -RoleDefinitionName $PublicAzureRole -ServicePrincipalName $AppGet.AppId
 
 # Grant Permission to Azure Active Directory to SPN
@@ -221,6 +221,10 @@ $AzsApp = Get-AzureRmADApplication -DisplayNameStartWith "$($AppGet.DisplayName)
 $SPNAzsGet = Get-AzureRmADServicePrincipal -SearchString "$($AzsApp.DisplayName)"
 $SPNAzsGet
 
+# Wait for the application and SPN to be created
+Write-Output -InputObject "Waiting for the application and SPN to be created..."
+Start-Sleep -Seconds 30
+
 # Assign the Service Principal Name a role i.e. Owner, Contributor, Reader, etc. - In Azure Stack
 $RoleAssignmentAzs = New-AzureRmRoleAssignment -RoleDefinitionName $AzureStackRole -ServicePrincipalName $AzsApp.ApplicationId.Guid
 $RoleAssignmentGet = Get-AzureRmRoleAssignment -ObjectId $SPNAzsGet.Id.Guid
@@ -243,7 +247,7 @@ $OutputObject = [PSCustomObject]@{
     ArmEndpoint    = $ArmEndpoint
     SubscriptionId = $SubId.SubscriptionId
     ClientId       = $AppGet.AppId
-    ClientSecret   = $AppPassword
+    ClientSecret   = $AppPassword.Value
     TenantId       = $SubId.TenantId
 }
 
