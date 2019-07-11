@@ -115,7 +115,9 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     ![VM enable update management](images/azs-browser-log-analytics-enable-update-management.PNG)
 
-7. Once the deployment is finished. Head back to the public azure portal, navigate to the *Log Analytics workspace* -> *Advanced settings* -> *`VMType` Servers*.
+    - Repeat this step for the `Azure Monitor Dependency Agent`.
+
+7. Once the deployment is finished. Head back to the public Azure portal, navigate to the *Log Analytics workspace* -> *Advanced settings* -> *`VMType` Servers*.
 
     - You should now see `x` number of `[VMType]` COMPUTERS CONNECTED. Depending on how many VMs you linked to the workspace.
 
@@ -129,7 +131,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     - `Heartbeat | where OSType == "VMTYPE" | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table`
 
-    - Example: 
+    - Example for Linux VM: 
 
         `Heartbeat | where OSType == "Linux" | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table`
     
@@ -157,8 +159,20 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
         > [!NOTE]
         > It can take between 30 minutes and 6 hours for the dashboard to display updated data from managed computers.
+
+Heading to the *Automation Account*, the blades **Inventory**, **Change Tracking** and **Update Management** will provide useful analytics.
+
+![azs-browser-example-inventory](images/azs-browser-example-inventory.PNG)
+
+![azs-browser-example-change-tracking](images/azs-browser-example-change-tracking.PNG)
+
+![azs-browser-example-update-management-compliant-ok](images/azs-browser-example-update-management-compliant-ok.PNG)
     
-10. On public Azure, click **Monitor**, in the *new* blade, under *Insights*, click **Virtual Machines (preview)**. You will see a variety of usage analytics for the VMs you have enabled **VM Update & Management** on.
+On public Azure, click **Monitor**, in the *new* blade, under *Insights*, click **Virtual Machines (preview)**. You will see a variety of usage analytics in the tabs **Health**, **Performance** and **Map** for the VMs you have enabled **VM Update & Management** on.
+
+Image 1 Placeholder.
+
+Image 2 Placeholder.
 
 ## Feedback
 
