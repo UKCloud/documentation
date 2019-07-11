@@ -95,7 +95,7 @@ UKCloud offers a variety of 'T-shirt sizes' to meet customers' needs. The smalle
 
 Check the UKCloud for VMware Service Definition for more details on the currently available sizes.
 
-Dedicated Compute provides the flexibility to build custom-sized VMs.
+**Please Note** On VMware you currently can't go outside of the 'T-shirt sizes', however if you require more flexibillity with regards to VM sizes, UKCloud advices the use of other multi-cloud technologies such as OpenStack, Oracle or Azure. Alternatively, you may consider the use of Dedicated Compute v2 to build a custom-sized VMs.
 
 ### Can I resize a VM?
 
