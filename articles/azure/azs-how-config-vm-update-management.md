@@ -120,7 +120,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 5. Navigate to the VM which you wish to enable **Update & Management** on and under settings, select the *extensions* blade.
 
-    > [!NOTE]
+    > [!WARNING]
     > For any monitoring to work correctly. The VM **must** have HTTPS (Port 443) enabled in the **Network Security Group** rules.
 
 6. Click **Add** at the top and select the resource `Azure Monitor, Update and Configuration Management`; click **Create**.
@@ -182,9 +182,7 @@ Heading to the *Automation Account*, the blades **Inventory**, **Change Tracking
     
 On public Azure, click **Monitor**, in the *new* blade, under *Insights*, click **Virtual Machines (preview)**. You will see a variety of usage analytics in the tabs **Health**, **Performance** and **Map** for the VMs you have enabled **VM Update & Management** on.
 
-Image 1 Placeholder.
-
-Image 2 Placeholder.
+![azs-browser-example-monitor-stats](images/azs-browser-example-monitor-stats.PNG)
 
 ## Feedback
 
