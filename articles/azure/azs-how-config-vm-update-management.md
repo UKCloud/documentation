@@ -71,6 +71,18 @@ To complete the steps in this guide, you must have appropriate access to a subsc
     Note down the **Workspace ID** and **Primary Key** values.
 
         ![Log Analytics workspace advanced settings](images\azs-browser-log-analytics-workspace-advanced-settings.PNG)
+    
+    - Within *Advanced settings*, Select the **Data** blade, and click *`VMType` Performance Counters.*
+
+    - Ensure all *counters* are selected and click **Add the selected performance counters**.
+
+    - Click **Save**.
+
+        ![Performance Counters](images/azs-browser-example-performance-counters.PNG)
+
+        > [!NOTE]
+        > For Linux Performance Counters, ensure **Apply below configuration to my machines** is selected.
+
 
 3. Create and configure an *Automation Account*:
 
@@ -109,7 +121,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 5. Navigate to the VM which you wish to enable **Update & Management** on and under settings, select the *extensions* blade.
 
     > [!NOTE]
-    > For monitoring to work correctly. The VM **must** have HTTPS (Port 443) enabled in the **Network Security Group** rules.
+    > For any monitoring to work correctly. The VM **must** have HTTPS (Port 443) enabled in the **Network Security Group** rules.
 
 6. Click **Add** at the top and select the resource `Azure Monitor, Update and Configuration Management`; click **Create**.
 
