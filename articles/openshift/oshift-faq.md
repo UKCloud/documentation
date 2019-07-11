@@ -39,7 +39,8 @@ UKCloud for OpenShift is built as an isolated single-tenant platform on top of U
 This service comprises of two main chargeable elements:
 
   - **Foundation Pack -** providing an initial footprint of 32GiB of RAM, billed by the month with a one-month minimum commitment
-  - **Runtime Pack -** billed by the month with a one-month minimum commitment based upon the amour of additional RAM consumed
+
+  - **Runtime Pack -** billed by the month with a one-month minimum commitment based upon the amount of additional RAM allocated
 
 ### Does UKCloud offer a free trial?
 
