@@ -66,9 +66,9 @@ We monitor, maintain and support our controlled UKCloud for OpenShift infrastruc
 
 - UKCloud-maintained OpenShift services (for example, router service, DEAs, health manager, cloud controller, Master Nodes, Worker Nodes, Routing Layer).
 
-### Can I use UKCloud for OpenShift in the UKCloud Elevated (previously IL3) domain?
+### Can I use UKCloud for OpenShift in the UKCloud Elevated domain?
 
-UKCloud for OpenShift services are available in both our Assured (previously IL2) and upon request in our Elevated (previously IL3) security domains.
+UKCloud for OpenShift services are available in both our Assured and upon request in our Elevated security domains.
 
 ### Is the service Pan Government Accredited?
 
@@ -80,9 +80,9 @@ We provide confidence that our OpenShift service still meets the highest level o
 
 ### Can I use UKCloud for OpenShift over closed networks such as PSN and HSCN?
 
-UKCloud for OpenShift has been certified for use over both the PSN Assured and Protected networks.
+UKCloud for OpenShift has been certified for use over the PSN network.
 
-Connectivity to the N3 network is available for customers and partners serving the healthcare community.
+Connectivity to the HSCN network is available for customers and partners serving the healthcare community.
 
 ### Does UKCloud offer any scheduled automated backups for UKCloud for OpenShift?
 
