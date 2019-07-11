@@ -111,7 +111,7 @@ The UKCloud assured cloud platform is connected to the HSCN in geographically di
 
 Billing for HSCN connectivity is monthly in arrears. Charges are included in your monthly invoice, along with charges for your UKCloud services.
 
-We charge for each separate connection on the UKCloud platform at the Service vOrg/Project level UKCloud pricing is available via the [G-Cloud Digital Marketplace](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/772343517162961-pricing-document-2018-05-23-0842.pdf)
+We charge for each separate connection on the UKCloud platform at the Service vOrg/Project level UKCloud pricing is available via the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf)
 
 ### Is there a minimum commitment period?
 

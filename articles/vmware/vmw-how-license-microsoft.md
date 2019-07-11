@@ -36,14 +36,14 @@ Please note that it is not possible for you to bring your own Microsoft Windows 
 
 The Microsoft Windows Server licence is invoiced each month, in addition to the cost of the VM, based on the VM's usage.
 
-We automatically bill the usage of Microsoft Windows Server per hour that the VM is powered on, and invoice you for your consumption of Microsoft Windows Server per month using the following pricing table for G-Cloud 10:
+We automatically bill the usage of Microsoft Windows Server per hour that the VM is powered on, and invoice you for your consumption of Microsoft Windows Server per month using the following pricing table:
 
 VM size | SPLA Per hour per VM | Academic Per hour per VM
 --------|----------------------|---------------------------
-Micro, Tiny VM | £0.012 | £0.002
-Small VM | £0.023 | £0.003
-Medium VM, Medium High Memory | £0.046 | £0.007
-Large VM, Large High Memory, Tier One Apps | £0.135 | £0.020
+Micro, Tiny VM | £0.013 | £0.002
+Small VM | £0.025 | £0.003
+Medium VM, Medium High Memory | £0.051 | £0.007
+Large VM, Large High Memory, Tier 1 Apps | £0.149 | £0.020
 
 Due to the elimination of the discount for G-SPLA, there is now price parity with corporate SPLA. As a result, customers who may not have previously been applicable for G-SPLA are not impacted.
 

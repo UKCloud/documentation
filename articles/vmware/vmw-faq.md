@@ -119,7 +119,7 @@ For a transfer time calculator, go to: <http://techinternets.com/copy_calc?do>
 
 If you use FTPS to upload data to or download it from your environment, you can transfer up to 1TiB of data in a day.
 
-Alternatively, we offer the Mass Transfer Facility option enabling customers to import large quantities of data via HDDs or NAS devices that are plugged directly into your environment. Please check the *Mass Transfer Facility Service Scope* for [NAS](../enablement/enbl-sco-mtf-nas.md) or [HDD](../enablement/enbl-sco-mtf-hdd.md), or the pricing guide further details.
+Alternatively, we offer the Mass Transfer Facility option enabling customers to import large quantities of data via HDDs or NAS devices that are plugged directly into your environment. Please check the *Mass Transfer Facility Service Scope* for [NAS](../enablement/enbl-sco-mtf-nas.md) or [HDD](../enablement/enbl-sco-mtf-hdd.md), or the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) further details.
 
 ### Does UKCloud offer encryption on the VM?
 
@@ -264,7 +264,7 @@ The exception is Micro sized VMs. These have a fixed 10GiB allocation which cann
 
 No, storage pooling isn't possible. Each VM must have a minimum of 60GiB (except Micro VMs).
 
-You can quickly and easily allocate additional storage via the self-service UKCloud Portal or API. Additional storage is charged on a per-GiB basis as listed in the UKCloud pricing guide.
+You can quickly and easily allocate additional storage via the self-service UKCloud Portal or API. Additional storage is charged on a per-GiB basis as listed in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 ### Is storage persistent?
 
@@ -585,7 +585,7 @@ For example, if a VM was switched off for a total of 890 minutes but was on for 
 
 ### Will I be charged for creating snapshots?
 
-Snapshot Protection can be purchased with any VM and will be charged for in accordance with the Pricing Guide. Self-service snapshots created within vCloud Director will incur charges as of November 2017. These will be accounted for in the invoices you receive at the beginning of December.
+Snapshot Protection can be purchased with any VM and will be charged for in accordance with the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf). Self-service snapshots created within vCloud Director will incur charges as of November 2017. These will be accounted for in the invoices you receive at the beginning of December.
 
 ## Security
 

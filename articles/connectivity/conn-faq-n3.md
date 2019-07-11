@@ -77,7 +77,7 @@ You can choose how you are charged:
 
 - Unlimited connections into environments - £3500 per month
 
-UKCloud pricing is available via the G-Cloud Digital Marketplace.
+UKCloud pricing is available via the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 ### Is there a minimum commitment period?
 
