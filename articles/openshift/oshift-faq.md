@@ -22,7 +22,7 @@ toc_mdlink: oshift-faq.md
 UKCloud for OpenShift is a Kubernetes based Platform as a Service (PaaS) solution providing container management and orchestration using Red Hat OpenShift to deliver a flexible, scalable cloud application platform. Unlike traditional managed PaaS offerings, it provides a modern application platform that accelerates end-to-end development, deployment and operation of digital applications, while raising overall application reliability and availability.
 
 ### Which version of OpenShift is the service based upon?
-UKCloud for OpenShift is built using Red Hat's OpenShift Container Platform v3.11, which is the Enterprise hardened version of OKD (previous Origins) v.3.11, which in turn is based upon Kubernetes v1.11
+UKCloud for OpenShift is built using Red Hat's OpenShift Container Platform v3.11, which is the Enterprise-hardened version of OKD (previously Origins) v.3.11, which is based upon Kubernetes v1.11.
 
 ### Why deliver UKCloud for OpenShift as a cloud service?
 
