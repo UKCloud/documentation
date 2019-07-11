@@ -93,7 +93,7 @@ HSCN will be provided free for one month per connection for existing customers w
 
 ### Will there be additional costs for migration?
 
-Migration assistance in-hours (8am-8pm) will be done free-of-charge, if out-of-hours (8pm-8am) migration support is required then a SFIA rate for engineer time may be applied to the migration.
+Migration assistance in-hours (8am-8pm) will be done free-of-charge, if out-of-hours (8pm-8am) migration support is required then a [SFIA](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) rate for engineer time may be applied to the migration.
 
 ## Service
 
@@ -121,7 +121,7 @@ UKCloud charges monthly for connectivity solutions, and requires a minimum commi
 
 Simple implementations of HSCN won't incur any additional setup or onboarding charges.
 
-For complex networking solutions, we reserve the right to charge SFIA rates. We'll always tell you in advance if an engagement will incur [SFIA rate card](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/772343517162961-sfia-rate-card-2018-05-21-1251.pdf) charges.
+For complex networking solutions, we reserve the right to charge SFIA rates. We'll always tell you in advance if an engagement will incur [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) charges.
 
 ### Does UKCloud provide data encryption?
 
@@ -195,7 +195,7 @@ You won't need a sponsor to connect to HSCN, however you may need a sponsor to c
 
 ### Do I need to complete a Connection Agreement for each HSCN service I have on your cloud platform?
 
-No. you only need one signed Connection Agreement or UKCloud's [terms and conditions](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/772343517162961-terms-and-conditions-2018-05-21-1251.pdf) to present multiple services to HSCN.
+No. you only need one signed Connection Agreement or UKCloud's [terms and conditions](../other/other-ref-terms-and-conditions.md) to present multiple services to HSCN.
 
 However, you may need to create an accreditation pack for each individual service to present to the Information Accreditors who are looking at the security of your application before customers will procure it.
 

@@ -73,7 +73,7 @@ If you don't have a compute service prior to testing to use for this purpose, yo
 
 ## Pricing
 
-For a test to commence, UKCloud must complete a number of administrative tasks to facilitate the activity. This may result in a cost, chargeable as one day's work from the [UKCloud SFIA rate card](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/585894882747037-sfia-rate-card-2019-01-18-1511.pdf) (Level 4 - Enable).
+For a test to commence, UKCloud must complete a number of administrative tasks to facilitate the activity. This may result in a cost, chargeable as one day's work from the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) (Level 4 - Enable).
 
 In some circumstances, additional time may be required but this will be outlined prior to tests commencing.
 

@@ -41,7 +41,7 @@ Exclusions are:
 
 - HSCN, unless you already have an HSCN connection
 
-- Services covered by the SFIA rate card
+- Services covered by the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)
 
 - Dedicated Compute option in UKCloud for VMware
 

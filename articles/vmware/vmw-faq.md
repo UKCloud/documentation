@@ -455,7 +455,7 @@ Yes, we offer a 30-day free trial so that you can test and evaluate our service 
 
 ### How do I request a trial? 
 
-You can request a trial via the UKCloud website: <http://www.UKCloud.com/free-trial-sign-up> and accept the trial terms and conditions. Your environment will then be set up and you will be given trial credits to the equivalent of £500.
+You can request a trial via the UKCloud website: <http://www.ukcloud.com/free-trial-sign-up> and accept the trial terms and conditions. Your environment will then be set up and you will be given trial credits to the equivalent of £500.
 
 ### What do I do when my trial comes to an end?
 

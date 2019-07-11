@@ -305,7 +305,7 @@ The following documents contain more information about UKCloud for VMware and th
 
 - [*Understanding connectivity options in UKCloud for VMware*](vmw-ref-connectivity-options.md)
 
-- [*UKCloud Terms and Conditions*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf)
+- [*UKCloud Terms and Conditions*](../other/other-ref-terms-and-conditions.md)
 
 - [*SLA Definition*](../other/other-ref-sla-definition.md)
 

@@ -119,7 +119,7 @@ As your service needs grow, we'll work with you to coordinate the installation o
 
 ### Your UKCloud Hosted responsibilities
 
-- If your engineers will require access to manage and maintain the hardware you will need to ensure they are booked in to visit UKCloud DCs. This can be done through a Service Request. Note that due to the secure nature of the site, at least 24 hours’ notice is required. Engineers must be escorted and this is charged at a SFIA day rate - https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf. 
+- If your engineers will require access to manage and maintain the hardware you will need to ensure they are booked in to visit UKCloud DCs. This can be done through a Service Request. Note that due to the secure nature of the site, at least 24 hours’ notice is required. Engineers must be escorted and this is charged at a [SFIA](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) day rate.
 
 ### Your CHDC Hosted responsibilities
 
