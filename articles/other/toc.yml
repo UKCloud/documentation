@@ -26,6 +26,10 @@
     href: other-how-delete-sso-user.md
   - name: Use the UKCloud Pricing Estimation Tool
     href: other-how-use-pricing-tool.md
+  - name: Use webhooks to receive service status notifications
+    href: other-how-use-webhooks.md
+  - name: View Service Status page
+    href: other-how-view-status-info.md
 - name: Reference
   items:
   - name: Best practice customer guide

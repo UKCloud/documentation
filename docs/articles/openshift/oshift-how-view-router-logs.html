@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>UKCloud Service Definitions and Pricing Guide | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to view your OpenShift router logs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="UKCloud Service Definitions and Pricing Guide | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to view your OpenShift router logs | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-service-definitions.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-view-router-logs.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,47 +91,66 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="ukcloud-service-definitions-and-pricing-guide">UKCloud Service Definitions and Pricing Guide</h1>
+<h1 id="how-to-view-your-openshift-router-logs">How to view your OpenShift router logs</h1>
 
-<p>This article provides a list of Service Definitions for UKCloud services. The list also includes our Pricing Guide, SFIA rate card and terms and conditions.</p>
-<h2 id="service-definitions">Service Definitions</h2>
-<h3 id="multi-cloud-technology-stacks">Multi-cloud technology stacks</h3>
-<p><a href="../azure/azs-sd.html">UKCloud for Microsoft Azure</a></p>
-<p><a href="../openshift/oshift-sd.html">UKCloud for OpenShift</a></p>
-<p><a href="../openstack/ostack-sd.html">UKCloud for OpenStack</a></p>
-<p><a href="../oracle/orcl-sd.html">UKCloud for Oracle Software</a></p>
-<p><a href="../vmware/vmw-sd.html">UKCloud for VMware</a></p>
-<h3 id="multi-cloud-enabling-services">Multi-cloud enabling services</h3>
-<p><a href="../managed-services/man-sd-compute.html">Basic Managed Compute from UKCloud</a></p>
-<p><a href="../managed-services/man-sd-optimisation.html">Cloud Optimisation from UKCloud</a></p>
-<p><a href="../cloud-storage/cs-sd.html">Cloud Storage</a></p>
-<p><a href="../cdsz/cdsz-sd.html">Cross Domain Security Zone</a></p>
-<p><a href="../dedicated-compute/dc-sd.html">Dedicated Compute v2</a></p>
-<p><a href="../draas/draas-sd.html">Disaster Recovery as a Service</a></p>
-<p><a href="../managed-services/man-sd-network.html">Extended Network Support from UKCloud</a></p>
-<p><a href="../hpc/hpc-sd.html">High Performance Compute</a></p>
-<p><a href="../managed-services/man-sd-monitoring.html">Managed Monitoring from UKCloud</a></p>
-<p><a href="../migration/migr-sd.html">Migration to the Cloud</a></p>
-<p><a href="../mcbs/mcbs-sd.html">Multi-Cloud Backup Storage</a></p>
-<p><a href="../private-cloud/prc-sd.html">Private Cloud</a></p>
-<p><a href="../private-cloud/prc-sd-orcl.html">Private Cloud for Oracle Software</a></p>
-<p><a href="../private-cloud/prc-sd-storage.html">Private Cloud for Storage</a></p>
-<p><a href="../sra/sra-sd.html">Secure Remote Access</a></p>
-<p><a href="../transition-services/trans-sd.html">Transition Services</a></p>
-<h3 id="3rd-party-software">3rd party software</h3>
-<p><a href="../third-party/third-sd-appdynamics.html">Cisco AppDynamics from UKCloud</a></p>
-<p><a href="../third-party/third-sd-cloudsoc.html">CloudSOC from UKCloud</a></p>
-<p><a href="../third-party/third-sd-hytrust.html">HyTrust DataControl from UKCloud</a></p>
-<p><a href="../third-party/third-sd-moogsoft.html">Moogsoft AIOps from UKCloud</a></p>
-<p><a href="../third-party/third-sd-portworx.html">Portworx Enterprise from UKCloud</a></p>
-<p><a href="../third-party/third-sd-cyberscore.html">XQ Cyber CyberScore from UKCloud</a></p>
-<h2 id="pricing-guide">Pricing Guide</h2>
-<p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">Pricing Guide</a></p>
-<p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf">3rd Party Software Pricing Guide</a></p>
-<h2 id="sfia-rate-card">SFIA rate card</h2>
-<p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf">Skills Framework for the Information Age (SFIA) UKCloud rate card and definitions</a></p>
-<h2 id="terms-and-conditions">Terms and conditions</h2>
-<p><a href="other-ref-terms-and-conditions.html">UKCloud Ltd G-Cloud 11 Terms and Conditions</a></p>
+<h2 id="overview">Overview</h2>
+<p>UKCloud for OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.</p>
+<p>This article explains how you can view the connection logs generated by the OpenShift routers in your environment.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This article assumes familiarity with the Linux command line, and with the <code>oc</code> command set to manage an OpenShift cluster.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>To complete the steps in this article, you must have the <code>oc</code> command installed and have a suitable account on your OpenShift cluster. Specifically, it is assumed you know the authentication credentials that need to be supplied to <code>oc login</code>.</p>
+<p>Your OpenShift cluster must be version 3.11 or later, and must be enabled for router logging. If your OpenShift routers do not have the &quot;syslog&quot; sidecar container enabled then raise a request on the UKCloud Portal requesting this functionality.</p>
+<h2 id="viewing-the-logs-for-a-specific-router">Viewing the logs for a specific router</h2>
+<ol>
+<li><p>Log in to OpenShift on the command line and change to the default project:</p>
+<pre><code>$ oc login ...
+$ oc project default
+</code></pre>
+</li>
+<li><p>Check if the routers have the syslog container enabled:</p>
+<pre><code>$ oc get pods | grep router
+router-4-45r2t             2/2       Running   0          12d
+router-4-n7jg2             2/2       Running   0          12d
+router-private-3-lvbg4     2/2       Running   0          12d
+router-private-3-s2nbr     2/2       Running   0          12d
+
+# Since the container count for each router shows 2/2, the syslog container is present
+</code></pre>
+<p>If your routers do not have the syslog sidecar container, raise a request in the UKCloud Portal to add this functionality. Your cluster must be v3.11 or later.</p>
+</li>
+<li><p>View the logs for a specific router:</p>
+<pre><code># For router &quot;router-4-45r2t&quot;:
+$ oc logs router-4-45r2t -c syslog
+2019-07-03T13:41:28.573805+00:00 worker-infra-0 haproxy[506]: 37.69.33.21:49342 [03/Jul/2019:13:41:28.570] fe_sni~ be_secure:openshift-logging:logging-kibana/pod:logging-kibana-1-r8rkj:logging-kibana:10.177.0.13:3000 0/0/0/3/3 200 22810 - - --VN 10/5/0/1/0 0/0 &quot;GET /bundles/2e90d5152ce92e3eb62ba053c7b9d2cb.woff HTTP/1.1&quot;
+2019-07-03T13:41:28.578731+00:00 worker-infra-0 haproxy[506]: 37.69.33.21:49345 [03/Jul/2019:13:41:28.575] fe_sni~ be_secure:openshift-logging:logging-kibana/pod:logging-kibana-1-r8rkj:logging-kibana:10.177.0.13:3000 0/0/0/2/2 200 23286 - - --VN 10/5/1/2/0 0/0 &quot;GET /bundles/697573f67bcfdd2c45e3e63c7380dd67.woff HTTP/1.1&quot;
+...
+</code></pre>
+</li>
+</ol>
+<p>The logs are shown in the HTTP haproxy log format. See <a href="https://cbonte.github.io/haproxy-dconv/1.7/configuration.html#8.2.3">https://cbonte.github.io/haproxy-dconv/1.7/configuration.html#8.2.3</a> for a guide on the fields.</p>
+<h2 id="viewing-logs-for-all-routers-in-the-cluster">Viewing logs for all routers in the cluster</h2>
+<p>The router syslog containers send their logs to the cluster's Elasticsearch database in the <code>openshift-logging</code> project. You can view this using Kibana as follows:</p>
+<ol>
+<li><p>Locate the URL to access Kibana. You can find this in the <code>openshift-logging</code> project using the Web UI or by using the command-line client as below:</p>
+<pre><code>$ oc describe route logging-kibana -n openshift-logging | grep Host
+Requested Host:         kibana.cnap-testing.frn00006.cna.ukcloud.com
+</code></pre>
+</li>
+<li><p>Access Kibana by opening the URL using HTTPS (for example, <a href="https://kibana.cnap-testing.frn00006.cna.ukcloud.com">https://kibana.cnap-testing.frn00006.cna.ukcloud.com</a>) in a web browser. Login with your OpenShift/SSO credentials if prompted.</p>
+</li>
+<li><p>In the query box, enter <code>kubernetes.pod_name:router*</code> and click the Search/Magnifying Glass button. This returns the logs for all routers. By default, logs for the last 15 minutes are shown. You can change this using the picker in the top right of the page.</p>
+</li>
+</ol>
+<p><img src="images/oshift-kibana.png" alt="Example Kibana Search"></p>
+<h2 id="next-steps">Next steps</h2>
+<p>For more information about the UKCloud for OpenShift service, see:</p>
+<ul>
+<li><p><a href="oshift-gs.html"><em>Getting Started Guide for UKCloud for OpenShift</em></a></p>
+</li>
+<li><p><a href="oshift-faq.html"><em>UKCloud for OpenShift FAQs</em></a></p>
+</li>
+</ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 

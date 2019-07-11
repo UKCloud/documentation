@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-configure-cli.html",
-          "hash": "MP4NaCBrA1wEKX1/a5eKuA=="
+          "hash": "ZrqSNOSlcRytJK2ut5eSZA=="
         }
       },
       "is_incremental": false,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-ps.html",
-          "hash": "U7WXCKvmbXjdT7ZJC9ruww=="
+          "hash": "cbKY7jRW0vAgXHBpdz556w=="
         }
       },
       "is_incremental": false,
@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-ref-overview.html",
-          "hash": "PX9lGZSCve1pG6NcLzHA+A=="
+          "hash": "FK8loUmDHVWFl8f+o7JT+Q=="
         }
       },
       "is_incremental": false,
@@ -2897,7 +2897,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-janet.html",
-          "hash": "+Cr5hoytUQ1XfYhkeoKnoQ=="
+          "hash": "UogTsDuaxmtDo1aB53ZePQ=="
         }
       },
       "is_incremental": false,
@@ -4933,6 +4933,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-kibana.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-kibana.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openshift/images/oshift-overview.png",
       "output": {
         "resource": {
@@ -5232,6 +5243,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-how-view-router-logs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-how-view-router-logs.html",
+          "hash": "3J/GUqYbdsMq4lzL0FbIlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-ref-cluster-monitoring.md",
       "output": {
         ".html": {
@@ -5272,7 +5295,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-security-best-practices.html",
-          "hash": "jbp6J5h5Ik5ABBLBKoGYQw=="
+          "hash": "rFrxriBtKIYqkouFzUY7AA=="
         }
       },
       "is_incremental": false,
@@ -5308,7 +5331,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "moPHUxrT7jRbNPVbmb07gA=="
+          "hash": "BlH41Ks26NaWrLn/3jBQ4Q=="
         }
       },
       "is_incremental": false,
@@ -7556,6 +7579,193 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-all-operational.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-all-operational.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-btn-subscribe.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-btn-subscribe.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-help.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-help.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-history.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-history.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-incident-subscribe.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-incident-subscribe.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-incident.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-incident.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-maintenance.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-maintenance.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-notification-email.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-notification-email.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-notification-rss.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-notification-rss.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-notification-text.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-notification-text.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-notification-webhook.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-notification-webhook.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-outage.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-outage.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-page.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-page.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-service.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-service.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-subscribe-incident.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-subscribe-incident.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-subscriptions.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-subscriptions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-status-webhook.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-status-webhook.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/other/images/pricing-bug-mac-1.png",
       "output": {
         "resource": {
@@ -7953,6 +8163,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-how-use-webhooks.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-how-use-webhooks.html",
+          "hash": "vNjOPOiLjKkAqxbj7PrvMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/other/other-how-view-status-info.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-how-view-status-info.html",
+          "hash": "PV4lHCQkPzgmaKaaueYL5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-best-practice-guide.md",
       "output": {
         ".html": {
@@ -8209,7 +8443,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "KMyNZLaHMK7Yk3xuatNC/w=="
+          "hash": "kDT2m2kRYlWImtovMHaQng=="
         }
       },
       "is_incremental": false,
@@ -8257,7 +8491,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
-          "hash": "+qcz3mHTTE+/KDxBaxe97A=="
+          "hash": "JjZ3PFXsOYOfML+OcJTTOQ=="
         }
       },
       "is_incremental": false,
@@ -8365,7 +8599,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "K/m/3ofRdMNo4ManKmPTjA=="
+          "hash": "vl4IH2LLarq1msI23eugHA=="
         }
       },
       "is_incremental": false,
@@ -16542,7 +16776,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-license-microsoft.html",
-          "hash": "nsBd0urlWga9u86PVgaFWg=="
+          "hash": "G56E0Mx1Rq1FjCN5iNS5aQ=="
         }
       },
       "is_incremental": false,
@@ -17489,17 +17723,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 403,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 400,
           "skipped_file_count": 0
         }
       }
