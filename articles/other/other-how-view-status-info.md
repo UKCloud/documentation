@@ -96,7 +96,7 @@ You can subscribe to the Service Status page to receive updates when information
 
     ![Subscribe via Webhook](images/other-status-notification-webhook.png)
 
-    You'll need to set up an endpoint to receive the webhook requests. For more information, see the Atlassian Statuspage documentation: [Webhook Notifications](https://help.statuspage.io/help/webhook-notifications).
+    You'll need to set up an endpoint to receive the webhook requests. For more information about webhooks, see the Atlassian Statuspage documentation: [Webhook Notifications](https://help.statuspage.io/help/webhook-notifications). For example code for setting up an endpoint, see [*How to use webhooks to receive service status notifications*](other-how-use-webhooks.md).
 
 5. To subscribe to the Atom/RSS feed, click the RSS icon and then click the **Atom Feed** or **RSS Feed** link.
 
