@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Janet connectivity FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to view your OpenShift router logs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Janet connectivity FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to view your OpenShift router logs | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/connectivity/conn-faq-janet.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-view-router-logs.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,43 +91,66 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="janet-connectivity-faqs">Janet connectivity FAQs</h1>
+<h1 id="how-to-view-your-openshift-router-logs">How to view your OpenShift router logs</h1>
 
-<h2 id="what-is-janet">What is Janet?</h2>
-<p>Janet is the UK's research and education network. It is connected to all education organisations and research councils.</p>
-<p>Janet is a free-of-charge network that eligible UKCloud customers can use; there are no ingress or egress charges for this network. It's presented from our Assured platform and has a current bandwidth capacity of 1Gbps from each of our data centres, scalable to 100s of Gbps. The Janet connections are diversely routed for resilience and utilise Border Gateway Protocol (BGP) between data centres to ensure high availability of connections.</p>
-<h2 id="who-is-entitled-to-connect-to-the-janet-network">Who is entitled to connect to the Janet network?</h2>
-<p>Any organisation that is either publicly funded or receives government or EU funding to drive digital initiatives are entitled to use the Janet network.</p>
-<h2 id="can-i-use-ukclouds-janet-connection-without-using-cloud-services-provided-by-ukcloud">Can I use UKCloud's Janet connection without using cloud services provided by UKCloud?</h2>
-<p>No. We can only provide a Janet connection to customers who use our cloud services, such as our Infrastructure as a Service (IaaS), Platform as a Service (PaaS) or Software as a Service (SaaS) offerings.</p>
-<h2 id="does-ukcloud-provide-local-connections-to-the-janet-network">Does UKCloud provide local connections to the Janet network?</h2>
-<p>No. We can't arrange Janet connections to third-party offices. We only enable our customers and partners to provide services via the Janet network, using applications and solutions hosted on the UKCloud Assured OFFICIAL cloud platform.</p>
-<h2 id="does-ukcloud-support-dedicated-janet-connections">Does UKCloud support dedicated Janet connections?</h2>
-<p>Yes. Our HybridConnect service option allows customers and partners to provide their own private circuits, including dedicated Janet connections. If you would like a dedicated Janet connection to our cloud platform, we can arrange for the installation of dedicated Janet circuits to each of our UK data centres.</p>
-<h2 id="which-ukcloud-data-centre-has-janet-connectivity">Which UKCloud data centre has Janet connectivity?</h2>
-<p>Currently only our Farnborough site is connected to Janet. However, customers whose environments are in Corsham can still connect via our secure data centre interconnectivity. We are working on making Janet connectivity available in our Corsham site and will keep all customers updated when the circuit is ready for service.</p>
-<h2 id="how-do-i-get-a-janet-connection-via-the-ukcloud-assured-official-security-domain">How do I get a Janet connection via the UKCloud Assured OFFICIAL security domain?</h2>
-<p>To place an order for a Janet connection, please raise a Service Request (SR) via the UKCloud Portal or speak to your Technical Account Manager (TAM).</p>
-<h2 id="can-i-get-a-janet-connection-via-the-ukcloud-elevated-official-security-domain">Can I get a Janet connection via the UKCloud Elevated OFFICIAL security domain?</h2>
-<p>No, Janet connections are only available in our Assured OFFICAL security domain.</p>
-<h2 id="i-have-multiple-vshield-edges-and-need-to-configure-a-specific-janet-route-how-do-i-set-this-up">I have multiple vShield Edges and need to configure a specific Janet route. How do I set this up?</h2>
-<p>To configure specific routing to allow access to each network, a routing table is available from UKCloud support.</p>
-<h2 id="if-i-already-have-a-janet-connection-can-i-use-cloud-services-provided-by-ukcloud">If I already have a Janet connection, can I use cloud services provided by UKCloud?</h2>
-<p>Yes. A pre-existing connection to Janet will reduce the amount of time required to provision services via the Janet network based on the UKCloud Assured OFFICIAL security domain.</p>
-<h2 id="is-there-an-sla-on-janet-connectivity">Is there an SLA on Janet connectivity?</h2>
-<p>We provide an SLA for availability of our core services such as UKCloud for VMware and UKCloud for OpenStack. We cannot provide an SLA on external services as they are outside of our control.</p>
-<h2 id="how-can-i-whitelist-source-janet-ip-addresses-on-the-edge-gateway">How can I whitelist source Janet IP addresses on the edge gateway?</h2>
-<p>You can log onto the UKCloud Portal and, within vCloud Director administration edit the firewall settings to allow or deny incoming connections from external IP addresses. See the <a href="../vmware/vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a> for more details.</p>
-<h2 id="can-i-use-ukcloud-as-a-transit-or-gateway-between-different-connections">Can I use UKCloud as a transit or gateway between different connections?</h2>
-<p>No. Our cloud platforms are designed so that all traffic either originates or terminates within our platform. We can't facilitate routing between connections. If your solution needs to service users on different networks, this will need to be implemented, managed and accredited within your application or through an authorised gateway service.</p>
-<h2 id="is-there-a-minimum-commitment-period">Is there a minimum commitment period?</h2>
-<p>There is no minimum commitment for Janet connectivity.</p>
-<h2 id="how-will-i-be-billed">How will I be billed?</h2>
-<p>There is no charge for Janet connectivity or for the first IP address for each data centre you are connected to the Janet network.</p>
-<p>Additional IP addresses will need to be justified and an admin fee will apply of £20 per additional IP address that is set up.</p>
-<p>There is no charge for bringing your own Janet IP addresses.</p>
-<h2 id="will-i-incur-an-upfront-cost-setup-fee">Will I incur an upfront cost (setup fee)?</h2>
-<p>UKCloud will set up new connections to the Janet network for you free of charge.</p>
+<h2 id="overview">Overview</h2>
+<p>UKCloud for OpenShift enables you to develop, deploy, and manage digital and container-based applications seamlessly across local physical or virtual environments, with full portability to and from UKCloud.</p>
+<p>This article explains how you can view the connection logs generated by the OpenShift routers in your environment.</p>
+<h3 id="intended-audience">Intended audience</h3>
+<p>This article assumes familiarity with the Linux command line, and with the <code>oc</code> command set to manage an OpenShift cluster.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>To complete the steps in this article, you must have the <code>oc</code> command installed and have a suitable account on your OpenShift cluster. Specifically, it is assumed you know the authentication credentials that need to be supplied to <code>oc login</code>.</p>
+<p>Your OpenShift cluster must be version 3.11 or later, and must be enabled for router logging. If your OpenShift routers do not have the &quot;syslog&quot; sidecar container enabled then raise a request on the UKCloud Portal requesting this functionality.</p>
+<h2 id="viewing-the-logs-for-a-specific-router">Viewing the logs for a specific router</h2>
+<ol>
+<li><p>Log in to OpenShift on the command line and change to the default project:</p>
+<pre><code>$ oc login ...
+$ oc project default
+</code></pre>
+</li>
+<li><p>Check if the routers have the syslog container enabled:</p>
+<pre><code>$ oc get pods | grep router
+router-4-45r2t             2/2       Running   0          12d
+router-4-n7jg2             2/2       Running   0          12d
+router-private-3-lvbg4     2/2       Running   0          12d
+router-private-3-s2nbr     2/2       Running   0          12d
+
+# Since the container count for each router shows 2/2, the syslog container is present
+</code></pre>
+<p>If your routers do not have the syslog sidecar container, raise a request in the UKCloud Portal to add this functionality. Your cluster must be v3.11 or later.</p>
+</li>
+<li><p>View the logs for a specific router:</p>
+<pre><code># For router &quot;router-4-45r2t&quot;:
+$ oc logs router-4-45r2t -c syslog
+2019-07-03T13:41:28.573805+00:00 worker-infra-0 haproxy[506]: 37.69.33.21:49342 [03/Jul/2019:13:41:28.570] fe_sni~ be_secure:openshift-logging:logging-kibana/pod:logging-kibana-1-r8rkj:logging-kibana:10.177.0.13:3000 0/0/0/3/3 200 22810 - - --VN 10/5/0/1/0 0/0 &quot;GET /bundles/2e90d5152ce92e3eb62ba053c7b9d2cb.woff HTTP/1.1&quot;
+2019-07-03T13:41:28.578731+00:00 worker-infra-0 haproxy[506]: 37.69.33.21:49345 [03/Jul/2019:13:41:28.575] fe_sni~ be_secure:openshift-logging:logging-kibana/pod:logging-kibana-1-r8rkj:logging-kibana:10.177.0.13:3000 0/0/0/2/2 200 23286 - - --VN 10/5/1/2/0 0/0 &quot;GET /bundles/697573f67bcfdd2c45e3e63c7380dd67.woff HTTP/1.1&quot;
+...
+</code></pre>
+</li>
+</ol>
+<p>The logs are shown in the HTTP haproxy log format. See <a href="https://cbonte.github.io/haproxy-dconv/1.7/configuration.html#8.2.3">https://cbonte.github.io/haproxy-dconv/1.7/configuration.html#8.2.3</a> for a guide on the fields.</p>
+<h2 id="viewing-logs-for-all-routers-in-the-cluster">Viewing logs for all routers in the cluster</h2>
+<p>The router syslog containers send their logs to the cluster's Elasticsearch database in the <code>openshift-logging</code> project. You can view this using Kibana as follows:</p>
+<ol>
+<li><p>Locate the URL to access Kibana. You can find this in the <code>openshift-logging</code> project using the Web UI or by using the command-line client as below:</p>
+<pre><code>$ oc describe route logging-kibana -n openshift-logging | grep Host
+Requested Host:         kibana.cnap-testing.frn00006.cna.ukcloud.com
+</code></pre>
+</li>
+<li><p>Access Kibana by opening the URL using HTTPS (for example, <a href="https://kibana.cnap-testing.frn00006.cna.ukcloud.com">https://kibana.cnap-testing.frn00006.cna.ukcloud.com</a>) in a web browser. Login with your OpenShift/SSO credentials if prompted.</p>
+</li>
+<li><p>In the query box, enter <code>kubernetes.pod_name:router*</code> and click the Search/Magnifying Glass button. This returns the logs for all routers. By default, logs for the last 15 minutes are shown. You can change this using the picker in the top right of the page.</p>
+</li>
+</ol>
+<p><img src="images/oshift-kibana.png" alt="Example Kibana Search"></p>
+<h2 id="next-steps">Next steps</h2>
+<p>For more information about the UKCloud for OpenShift service, see:</p>
+<ul>
+<li><p><a href="oshift-gs.html"><em>Getting Started Guide for UKCloud for OpenShift</em></a></p>
+</li>
+<li><p><a href="oshift-faq.html"><em>UKCloud for OpenShift FAQs</em></a></p>
+</li>
+</ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
 
