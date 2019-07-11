@@ -279,7 +279,6 @@ $AppName = "<output form="appname" name="result2" style="display: inline;">TestA
 $AppURL = "<output form="appurl" name="result2" style="display: inline;">https://test.app</output>"
 $AppPassword = '<output form="apppassword" name="result2" style="display: inline;">Password123!</output>'
 $AppPasswordSecure = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
-$RoleAssignmentSuccessful = "false"
 
 $TenantDomain = "<output form="tenantdomain" name="result2" style="display: inline;">contoso.onmicrosoft.com</output>"
 
@@ -289,7 +288,7 @@ $AzureStackResourceGroup = "<output form="azurestackrg" name="result2" style="di
 
 $AzureStackRole = "<output form="azurestackrole" name="result2" style="display: inline;">Owner</output>"
 
-# Create Azure Stack Environment so that you can log in to it
+# Create Azure Stack Environment so that you can$$ log in to it
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Create your Azure Stack Admin (Subscription Owner) credentials
@@ -320,29 +319,17 @@ $SPN = New-AzureADServicePrincipal -AppId $AppGet.AppId
 $SPNAzsGet = Get-AzureADServicePrincipal -SearchString "$($AppGet.DisplayName)"
 $SPNAzsGet
 
-# Assign the Service Principal Name a role i.e. Owner, Contributor, Reader, etc. - In Azure Stack
-$RoleAssignmentAzs = New-AzureRmRoleAssignment -RoleDefinitionName $AzureStackRole -ServicePrincipalName $AzsApp.ApplicationId.Guid
-$RoleAssignmentGet = Get-AzureRmRoleAssignment -ObjectId $SPNAzsGet.Id.Guid
-$RoleAssignmentGet
-
 # Wait for the application and SPN to be created
 Write-Output -InputObject "Waiting for the application and SPN to be created..."
-Start-Sleep -Seconds 10
+Start-Sleep -Seconds 30
 
 # Find application details from Azure AD
 $AzsApp = Get-AzureRmADApplication -DisplayNameStartWith "$($AppGet.DisplayName)"
 
 # Assign the Service Principal Name a role i.e. Owner, Contributor, Reader, etc. - In Azure Stack
-Do {
-    try {
-        $RoleAssignmentAzs = New-AzureRmRoleAssignment -RoleDefinitionName $AzureStackRole -ServicePrincipalName $AzsApp.ApplicationId.Guid
-        $RoleAssignmentGet = Get-AzureRmRoleAssignment -ObjectId $SPNAzsGet.ObjectId
-        $RoleAssignmentGet
-        $RoleAssignmentSuccessful = "true"
-    } catch {
-        Start-Sleep -Seconds 3
-    } 
-} While($RoleAssignmentSuccessful -eq "false")
+$RoleAssignmentAzs = New-AzureRmRoleAssignment -RoleDefinitionName $AzureStackRole -ServicePrincipalName $AzsApp.ApplicationId.Guid
+$RoleAssignmentGet = Get-AzureRmRoleAssignment -ObjectId $SPNAzsGet.ObjectId
+$RoleAssignmentGet
 
 # Create your SPN credentials login
 # Note: (Username is "ApplicationId")
@@ -365,7 +352,7 @@ $OutputObject = [PSCustomObject]@{
     ArmEndpoint    = $ArmEndpoint
     SubscriptionId = $SubId.SubscriptionId
     ClientId       = $AppGet.AppId
-    ClientSecret   = $AppPassword
+    ClientSecret   = $AppPassword.Value
     TenantId       = $SubId.TenantId
 }
 
