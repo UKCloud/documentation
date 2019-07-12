@@ -91,11 +91,12 @@ Yes, as this is a true IaaS cloud service, you have complete control and autonom
 
 ### What VM sizes are available?
 
-UKCloud offers a variety of 'T-shirt sizes' to meet customers' needs. The smallest configuration is 512MiB and 1 vCPU. The largest is 128GiB memory with 12 vCPU.
+UKCloud offers a variety of 'T-shirt sizes' to meet customers' needs. The smallest configuration is 0.5GiB and 1 vCPU. The largest is 128GiB memory with 12 vCPU.
 
 Check the UKCloud for VMware Service Definition for more details on the currently available sizes.
 
-**Please Note** On VMware you currently can't go outside of the 'T-shirt sizes', however if you require more flexibillity with regards to VM sizes, UKCloud advices the use of other multi-cloud technologies such as OpenStack, Oracle or Azure. Alternatively, you may consider the use of Dedicated Compute v2 to build a custom-sized VMs.
+> [!NOTE]
+> UKCloud for VMware does not currently support custom-sized VMs outside the 'T-shirt sizes', however if you require more flexibillity with regards to VM sizes, we advise the use of our other multi-cloud technologies such as OpenStack, Oracle or Azure. Alternatively, you may consider the use of Dedicated Compute v2 to build custom-sized VMs.
 
 ### Can I resize a VM?
 
