@@ -36,9 +36,9 @@ You will not be eligible to receive a Service Credit if your account has any und
 
 The following will be excluded from any time-based calculations related to the service being unavailable:
 
-- Service dependant — planned maintenance windows (as specified in the applicable service description)
+- Service dependant — planned maintenance windows (as specified in the applicable service definition)
 
-- Emergency maintenance (as specified in the applicable service description)
+- Emergency maintenance (as specified in the applicable service definition)
 
 - Your misuse of a particular service (as defined in the UKCloud [*Terms and Conditions*](../other/other-ref-terms-and-conditions.md) and the UKCloud System Interconnect Security Policy (SISP))
 

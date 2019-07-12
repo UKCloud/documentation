@@ -203,8 +203,8 @@
 <p>First, ensure that you've installed the relevant Azure PowerShell modules from the following link:</p>
 <p><a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a></p>
 <p>Then run the following commands:</p>
-<pre><code class="lang-powershell">Add-AzureRmEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
-Connect-AzureRmAccount -EnvironmentName &quot;AzureStackAdmin&quot;
+<pre><code class="lang-powershell">Add-AzureRmEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+Connect-AzureRmAccount -EnvironmentName &quot;AzureStackUser&quot;
 Get-AzureRmVMImagePublisher -Location &quot;frn00006&quot; | Get-AzureRmVMExtensionImageType | Get-AzureRmVMExtensionImage | `
   Select-Object -Property Type, Version | Format-Table -AutoSize
 </code></pre>
