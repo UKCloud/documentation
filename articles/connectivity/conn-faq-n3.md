@@ -85,7 +85,7 @@ UKCloud charges monthly for connectivity solutions, and requires a minimum commi
 
 ### Can I vary my usage of the N3 connection?
 
-You can change your connectivity solution monthly by raising a Service Request via the [UKCloud Portal](https://portal.ukcloud.com/).
+You can change your connectivity solution monthly by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
 
 ### Will I incur an upfront cost (setup fee)?
 

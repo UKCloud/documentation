@@ -20,7 +20,7 @@ toc_mdlink: ptl-how-use-api.md
 
 ## Overview
 
-The UKCloud Portal API enables you to interact programmatically with your UKCloud environment. For example, you can use API calls to create, manage and monitor Service Requests and view information about the components of your environment.
+The UKCloud Portal API enables you to interact programmatically with your UKCloud environment. For example, you can use API calls to view information about the components of your environment.
 
 This guide shows you how to use the API by providing a worked example that steps through the process of creating a new virtual data centre (VDC).
 

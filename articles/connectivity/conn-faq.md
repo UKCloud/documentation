@@ -27,7 +27,7 @@ As our Assured OFFICIAL cloud platform is PSN accredited, you can also connect t
 
 ## Can I connect to my solution using SSL VPN?
 
-Our Assured OFFICAL and Elevated OFFICAL cloud platforms both support SSL VPN (configured by UKCloud via a Service Request), but we don't recommend it other than for occasional remote administration purposes by a small number of administrators. If you need more extensive use of SSL VPN, we recommend you deploy a dedicated VPN appliance, such as OpenVPN.
+Our Assured OFFICAL and Elevated OFFICAL cloud platforms both support SSL VPN (configured by UKCloud by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal), but we don't recommend it other than for occasional remote administration purposes by a small number of administrators. If you need more extensive use of SSL VPN, we recommend you deploy a dedicated VPN appliance, such as OpenVPN.
 
 ## Can I use UKCloud as a transit or gateway between different connections?
 

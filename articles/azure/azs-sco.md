@@ -93,7 +93,7 @@ You can deploy multiple gateway devices and configure the following using either
 
 - Routing – basic custom defined routing can be configured on virtual networks
 
-**Internet-facing solutions** have 10 usable public IP addresses. You can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.
+**Internet-facing solutions** have 10 usable public IP addresses. You can ask for additional public IP addresses by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal. We reserve the right to decline the request if you have spare capacity in your existing deployment.
 
 ### Advanced features
 
@@ -158,7 +158,7 @@ We can provide:
 
 For the latest available licences, check the [Service Definition](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/322910045972626-service-definition-document-2018-09-28-1341.pdf).
 
-You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you're providing your own licensing for a retrospective discount.
+You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. If you're providing your own licensing, you should inform UKCloud (by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal) for a retrospective discount.
 
 For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.
 

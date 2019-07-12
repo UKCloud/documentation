@@ -45,7 +45,7 @@ UKCloud will cooperate with you to support external penetration testing requirem
 
 To request permission to perform a test, you must:
 
-1. Raise a Service Request within the UKCloud Portal for the test.
+1. Raise a Service Request within the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal for the test.
 
 2. Complete the External Security Review Test (ESRT) application form (UKC-FRM-231 - available on request) and attach the completed document (**in full**) to your Service Request. If you want to share any other relevant information (for example, a formal scope), you should also attach this to your Service Request.
 

@@ -103,7 +103,7 @@ You can also create your own assemblies and upload reusable software images.
 
 ### How do I increase or decrease resources?
 
-Currently, processor, memory and storage allocations are changed via a service request, raised through the UKCloud Portal. This is because of the resource pinning that OVM does on the underlying hypervisor.
+Currently, processor, memory and storage allocations are changed by raising a service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal. This is because of the resource pinning that OVM does on the underlying hypervisor.
 
 - Processors and memory can be added to or removed from VMs, although VMs will need to be shut down for this to happen.
 

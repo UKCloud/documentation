@@ -27,7 +27,7 @@ The internet gateway isn't designed to support general web access, rich web appl
 
 ## Gaining access to the gateway
 
-To gain access to the gateway, raise a service request containing the following information:
+To gain access to the gateway, raise a service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal containing the following information:
 
 - Business justification of the requirement
 

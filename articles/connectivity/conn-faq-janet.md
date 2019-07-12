@@ -45,7 +45,7 @@ Currently only our Farnborough site is connected to Janet. However, customers wh
 
 ## How do I get a Janet connection via the UKCloud Assured OFFICIAL security domain?
 
-To place an order for a Janet connection, please raise a Service Request (SR) via the UKCloud Portal or speak to your Technical Account Manager (TAM).
+To place an order for a Janet connection, please raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal or speak to your Technical Account Manager (TAM).
 
 ## Can I get a Janet connection via the UKCloud Elevated OFFICIAL security domain?
 

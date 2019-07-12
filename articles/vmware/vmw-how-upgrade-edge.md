@@ -19,7 +19,7 @@ toc_mdlink: vmw-how-upgrade-edge.md
 
 ## Overview
 
-This guide shows you how to check the existing version of your edge gateway and, if necessary, upgrade it to the latest available version. If you need any assistance with the upgrade process, contact the support team by raising a service request in the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+This guide shows you how to check the existing version of your edge gateway and, if necessary, upgrade it to the latest available version. If you need any assistance with the upgrade process, contact the support team by raising a Service Request in the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
 
 > [!NOTE]
 > In preparation for our planned upgrade to vCloud Director 9.7, you must convert your edges to advanced gateways. For more information, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md).

@@ -194,7 +194,7 @@ As soon as you have completed the form and the actions have been confirmed, your
 
 ## Support
 
-If you have any issues regarding updating, or the support of Microsoft Server, please contact the UKCloud support team by raising a Service Request.
+If you have any issues regarding updating, or the support of Microsoft Server, please contact the UKCloud support team by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 

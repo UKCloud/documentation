@@ -50,7 +50,7 @@ To create a new user:
 
     ![New Contact page](images/ptl-new-contact.png)
 
-6. After you've created the user account, you must raise a Service Request to grant the user access to the OpenShift cluster.
+6. After you've created the user account, you must raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal to grant the user access to the OpenShift cluster.
 
     a. In the navigation panel, expand **Support**, then select **My Calls**.
 

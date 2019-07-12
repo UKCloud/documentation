@@ -27,21 +27,21 @@ The Cloud Enablement service provides basic facilities for your own hardware ins
 
 The table provides an overview of the Cloud Enablement services available for CAPS and CPA-approved (or equivalent standard) VPN solutions. If the usage scenario you need isn't shown in the table, contact us to discuss your requirements.
 
-Use case | Chosen connectivity option:</br>CPA-approved (or equivalent standard) encryption is needed on the chosen line
+Use case | Chosen connectivity option:<br>CPA-approved (or equivalent standard) encryption is needed on the chosen line
 -------------|---------------------------------------
 **Service type** | Connectivity
 **Security level** | Elevated OFFICIAL
 **Hosted device** | VPN
 **Typical device size** | 1U / 2U
 **Service level (default)** | Single data centre, no automatic failover
-**Cloud Enablement requirement</br> (one bay = 10U, 1kW per month)** | One bay in one UKCloud data centre
+**Cloud Enablement requirement<br> (one bay = 10U, 1kW per month)** | One bay in one UKCloud data centre
 **Cost** | £2,000 setup fee plus £500 per month
 **Resilience available?** | We don\'t provide a resiliently connected environment. You can provision devices to both of our data centres to create a self-managed resilient solution (in which case, the resilience options below are required).
 **Failover responsibility** | Customer
-**Resilience requirement</br>(1 bay = 10U, 1kw per month)**| One bay in our Farnborough data centre</br>One bay in our Corsham data centre
+**Resilience requirement<br>(1 bay = 10U, 1kw per month)**| One bay in our Farnborough data centre<br>One bay in our Corsham data centre
 **Resilience cost** | £4,000 setup fee plus £1,000 per month
 **Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (e.g. Cloud Enablement in region 5 cannot be stretched to region 6).
-**Next steps** | Raise a service request via the UKCloud Portal.</br>You will also need to complete the Assurance Wrap form so that we can create a walled garden for you in the Cross Domain Security Zone.
+**Next steps** | Raise a service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.<br>You will also need to complete the Assurance Wrap form so that we can create a walled garden for you in the Cross Domain Security Zone.
 
 ## What connectivity does the VPN service provide?
 

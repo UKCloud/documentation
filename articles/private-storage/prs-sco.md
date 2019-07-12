@@ -109,7 +109,7 @@ As your storage needs grow, we'll work with you to coordinate the installation o
 
 - Performing capacity planning and working with us to plan upgrades
 
-- Raising service requests through the UKCloud Portal when you need configurations implemented
+- Raising service requests through the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal when you need configurations implemented
 
 - Raising incident tickets if you experience any issues with your service
 
@@ -143,7 +143,7 @@ As your storage needs grow, we'll work with you to coordinate the installation o
 
 - Performing capacity planning and working with us to plan upgrades
 
-- Raising service requests through the UKCloud Portal when you need configurations implemented
+- Raising service requests through the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal when you need configurations implemented
 
 - Raising incident tickets if you experience any issues with your service
 

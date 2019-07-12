@@ -44,7 +44,7 @@ The storage profiles are all at the same storage tier (for example, Basic) and a
 
 ## Limitations
 
-Customers with Optimised Storage enabled (service request via the UKCloud Portal) will be able to select their Optimised Storage policy within the drop-down box shown above. Beyond this, UKCloud only offer Storage1 and Storage2 storage policies, and don't scale this out further.
+Customers with Optimised Storage enabled (service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal) will be able to select their Optimised Storage policy within the drop-down box shown above. Beyond this, UKCloud only offer Storage1 and Storage2 storage policies, and don't scale this out further.
 
 Storage policies are only available for production environments; trial and test/dev environments do not have user-configurable storage policies.
 

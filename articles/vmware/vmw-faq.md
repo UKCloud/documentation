@@ -73,7 +73,7 @@ Customers can manage the migration between VM types. Customers can also move vAp
 
 More complex migrations, from the Assured to the Elevated platform, must be managed by UKCloud.
 
-If you want to migrate a vApp larger than 1.5TiB, you'll need to engage the UKCloud support team to facilitate the process. To do so, raise a Service Request on the UKCloud Portal.
+If you want to migrate a vApp larger than 1.5TiB, you'll need to engage the UKCloud support team to facilitate the process. To do so, raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
 
 ### What hypervisor do you use?
 
@@ -131,7 +131,7 @@ Not currently, but we are considering this as an option. Provide feedback via [U
 
 ### Is it possible to non-fast-provision vApps, and to convert current vApps into non-fast provisioned ones?
 
-Fast provisioning is enabled only by customer request - by default, all vApps are non-fast-provisioned. Customers can right-click on a VM and consolidate. This can also be done via a Service Request.
+Fast provisioning is enabled only by customer request - by default, all vApps are non-fast-provisioned. Customers can right-click on a VM and consolidate. This can also be done by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
 
 ### What is Dedicated Compute?
 
@@ -169,7 +169,7 @@ If you shut down your VM using the guest OS, we will recognise this as a 'Power 
 
 ### How do I change the workload type of a VDC?
 
-To change the workload type (for example, ESSENTIAL, POWER or PRIORITY) of a VDC, you must raise a [service request](https://portal.ukcloud.com/support/my_calls/new) from within [My Calls](https://portal.ukcloud.com/support/ivanti), and the support team will make the necessary changes.
+To change the workload type (for example, ESSENTIAL, POWER or PRIORITY) of a VDC, you must raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal, and the support team will make the necessary changes.
 
 Please note this change is disruptive and UKCloud will be required to power down all VMs in the VDC during this transition.
 
@@ -179,7 +179,7 @@ Please note this change is disruptive and UKCloud will be required to power down
 
 You're initially allocated five external IP addresses with a new compute service.
 
-You can ask for more external IP addresses via a Service Request. Please note that there is a £20 charge per additional IP address.
+You can ask for more external IP addresses by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal. Please note that there is a £20 charge per additional IP address.
 
 There's no limit to the number of internal IP addresses (RFC1918) you can allocate.
 
@@ -187,7 +187,7 @@ There's no limit to the number of internal IP addresses (RFC1918) you can alloca
 
 Customer organisations are initially allocated one external PSN IP address.
 
-Additional external PSN IP addresses can be requested via a Service Request should a valid business requirement arise. Please note that there is a £20 charge per additional IP address.
+Additional external PSN IP addresses can be requested by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal should a valid business requirement arise. Please note that there is a £20 charge per additional IP address.
 
 There's no limit to the number of internal IP addresses (RFC1918) customers can allocate.
 
@@ -393,7 +393,7 @@ If you require SQL licensing to be provided by UKCloud, this can be done by comp
 
 RHEL operating systems can be licensed by UKCloud or the customer.
 
-The customer is responsible for ensuring correct licensing for any other operating system they chose to install. If you wish to use your own RHEL licencing, please a Service request.
+The customer is responsible for ensuring correct licensing for any other operating system they chose to install. If you want to use your own RHEL licencing, please raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
 
 ### How up to date are the operating system images and mirrors?
 
@@ -415,7 +415,7 @@ Yes, OVF images can be uploaded to the platform, and VMs built in the platform c
 
 BYO licensing for Red Hat allows customers to select VMs running on the UKCloud Assured cloud platform for covering by their own commercial agreement with Red Hat.
 
-UKCloud will remove the cost of the Red Hat licence from the customer's monthly bill for the selected VMs. Customers need to raise a Service Request to let us know which VMs they will cover with their own Red Hat licence.
+UKCloud will remove the cost of the Red Hat licence from the customer's monthly bill for the selected VMs. Customers need to raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal to let us know which VMs they will cover with their own Red Hat licence.
 
 ## Support
 

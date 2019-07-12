@@ -58,7 +58,7 @@ Cloud Storage in our Assured OFFICAL domain uses the same environment for both P
 It is possible to lock Cloud Storage accounts down so that buckets are only accessible via a single network (for example HSCN, PSN, Janet), but we cannot lock down a bucket to a customer-specified source IP address or range. 
 
 > [!IMPORTANT]
-> As we impose this restriction at a Cloud Storage user account level rather than the bucket itself, any new users that you add to the ECS account will be able to access associated buckets from ANY network until you request that we update our blacklist. To request network restrictions, raise a support ticket through https://portal.ukcloud.com/support/ivanti. Alternatively, you can contact support by phone or email.
+> As we impose this restriction at a Cloud Storage user account level rather than the bucket itself, any new users that you add to the ECS account will be able to access associated buckets from ANY network until you request that we update our blacklist. To request network restrictions, raise a Service Request through https://portal.ukcloud.com/support/ivanti. Alternatively, you can contact support by phone or email.
 
 ### Which APIs are supported by the platform?
 

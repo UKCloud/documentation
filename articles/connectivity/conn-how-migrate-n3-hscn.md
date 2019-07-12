@@ -37,7 +37,7 @@ With the migration to HSCN, there are a few changes to the way UKCloud will pres
 
 Unlike existing N3 connections for VMware in regions 1 and 2, HSCN addresses will be presented directly down to your VMware edges. This enables you to have more visibility and control over the your assigned HSCN IP addresses. The addresses will be visible on your edges within vCloud, and you'll be able to create your own NAT and firewall rules against these addresses. For VMware and OpenStack customers in Regions 5 and 6, HSCN addresses will be presented to your edges in the same way as your existing N3 connectivity.
 
-Your allocated HSCN addresses for the HSCN network will be different from those you used on the N3 network. If you've previously purchased your own N3 addresses and brought them onto the UKCloud platform, raise a service request via the UKCloud Portal to discuss this further.
+Your allocated HSCN addresses for the HSCN network will be different from those you used on the N3 network. If you've previously purchased your own N3 addresses and brought them onto the UKCloud platform, raise a service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal to discuss this further.
 
 ## VMware migration plan
 
@@ -73,7 +73,7 @@ If you choose this option, UKCloud will add an HSCN interface to your existing N
 
 ##### Adding an HSCN interface: Customer actions
 
-1. When you're ready to begin testing on the HSCN network, log a service request with UKCloud to deploy an HSCN Edge into your environment.
+1. When you're ready to begin testing on the HSCN network, log a service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal to deploy an HSCN Edge into your environment.
 
 2. Create an Org VDC network and connect any required VMs to perform testing.
 
@@ -121,7 +121,7 @@ Depending on the connectivity types required on each of your VMs, it may be requ
 
 ##### New HSCN edge: Customer actions
 
-1. When you're ready to begin testing on the HSCN network, log a service request with UKCloud to deploy an HSCN edge into your environment.
+1. When you're ready to begin testing on the HSCN network, log a service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal to deploy an HSCN edge into your environment.
 
 2. Create an Org VDC network connected the HSCN edge and connect any VMs to perform testing to ensure that after the migration, all services will work successfully over HSCN rather than N3.
 
@@ -173,7 +173,7 @@ UKCloud will perform these required tasks prior to the migration. These tasks wi
 
 ### HSCN firewall implementation
 
-UKCloud will be replacing the existing N3 firewalls with new next-generation firewall devices for the HSCN network. UKCloud will not be blocking any ports but will have IDS, IPS and malware detection running across all ports as directed by NHS Digital. If you encounter any issues with legitimate packets being dropped or blocked, raise a service request so we can investigate, and if needed, update the next generation firewall rules.
+UKCloud will be replacing the existing N3 firewalls with new next-generation firewall devices for the HSCN network. UKCloud will not be blocking any ports but will have IDS, IPS and malware detection running across all ports as directed by NHS Digital. If you encounter any issues with legitimate packets being dropped or blocked, raise a service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal so we can investigate, and if needed, update the next generation firewall rules.
 
 > [!NOTE]
 > You should ensure that your firewall rules are suitable for controlling all traffic traversing them, and should not rely on UKCloud to control traffic to your environments.

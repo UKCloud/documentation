@@ -103,7 +103,7 @@ The PSN Protected Service also provides onward connectivity to other government 
 
 ### How long is the lead time for provisioning PSN service into my solution?
 
-You request connectivity to the PSN via a Service Request. We typically require two working days to provision the PSN service from receipt of an accepted request.
+You request connectivity to the PSN by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal. We typically require two working days to provision the PSN service from receipt of an accepted request.
 
 If your solution requires many PSN IP addresses, we may need more time to work with you to get your PSN IP addresses configured to work with your solution hosted on our cloud platform.
 

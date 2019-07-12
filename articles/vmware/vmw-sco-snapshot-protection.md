@@ -35,7 +35,7 @@ You can choose from the following Snapshot Protection policies:
 
 When you opt a virtual machine (VM) into a Snapshot Protection policy, the VM is added to a daily automated snapshot. The snapshot is of the entire VM running on your UKCloud for VMware service.
 
-Data protected by the snapshot has an RPO of 24 hours. RTO is determined by the time taken to restore the VM after you've raised a service request.
+Data protected by the snapshot has an RPO of 24 hours. RTO is determined by the time taken to restore the VM after you've raised a Service Request.
 
 Snapshot Protection is chargeable based on the number of VMs protected and the capacity utilised to store the data.
 
@@ -113,7 +113,7 @@ Alerting on individual VMs is not provided.
 
 ### Timing and process
 
-You can ask to restore a VM via a service request, which is subject to standard support SLA timescales.
+You can ask to restore a VM by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal, which is subject to standard support SLA timescales.
 
 Restores are performed outside of the backup window, unless a P1 incident is involved. You can find a definition of our support processes and severity categorisation in [*How to raise and escalate incidents and service requests*](../portal/ptl-how-raise-escalate-service-request.md).
 

@@ -37,7 +37,7 @@ Your HDD must be compatible with our eSATA enclosure: 3.5" SATA NAS hard drive, 
 
 ## Scheduling your transfer
 
-To schedule a transfer, raise a Service Request (SR) via the UKCloud Portal, providing us with at least 10 days' notice. You should also arrange delivery of your HDD(s) to the UKCloud office, quoting the SR number, no later than the working day before the scheduled transfer day.
+To schedule a transfer, raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal, providing us with at least 10 days' notice. You should also arrange delivery of your HDD(s) to the UKCloud office, quoting the SR number, no later than the working day before the scheduled transfer day.
 
 When you raise the SR, please provide the following information:
 
