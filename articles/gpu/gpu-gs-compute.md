@@ -149,7 +149,7 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
     ![Configure Networking page](images/gpu-vcd-vapp-networking.png)
 
-16. On the *Customize Hardware* page, add a hard disk of a size appropriate for the operating system that you plan to install on your VM and then click **Next**.
+16. On the *Customize Hardware* page, add an “LSI Logic SAS (SCSI)” hard disk of a size appropriate for the operating system that you plan to install on your VM and then click **Next**.
 
 17. On the *Ready to Complete* page, review your settings and then click **Finish** to start the deployment.
 
