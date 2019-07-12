@@ -95,7 +95,7 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 
 ## Other
 
-[G-Cloud 10 services FAQs](other-faq-g10.md)
+[G-Cloud 11 enhancements and additions FAQs](other-faq-g11.md)
 
 [Enterprise & Private Sector FAQs](other-faq-eps.md)
 
