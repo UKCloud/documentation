@@ -205,11 +205,11 @@
 <h3 id="enhanced-aggregated-logging">Enhanced aggregated logging</h3>
 <p>UKCloud will deploy, as part of your Foundation Pack, a simple EFK (Elasticsearch, Fluentd, Kibana) stack to aggregate logs for a range of OpenShift Enterprise services. Application developers can view the logs of the projects for which they have view access. The EFK stack aggregates logs from hosts and applications, whether coming from multiple containers or even deleted pods.</p>
 <p>To provide this service UKCloud will need to provision an initial 20GiB of Tier 2 Persistent Volume at the prevailing rate.</p>
-<p>As your workloads increase or become more critical and you want to increase the performance and resilience of your Elasticsearch cluster by scaling it across three nodes, you can deploy an additional Infrastructure Node (see below for <a href="#Infrastructure-nodes">Infrastructure Node</a> costs).</p>
+<p>As your workloads increase or become more critical and you want to increase the performance and resilience of your Elasticsearch cluster by scaling it across three nodes, you can deploy an additional Infrastructure Node (see below for <a href="#infrastructure-nodes">Infrastructure Node</a> costs).</p>
 <h3 id="enhanced-metric-collection">Enhanced metric collection</h3>
 <p>As part of your Foundation Pack, UKCloud will provision a single Hawkular metrics instance backed by a single Cassandra instance to collect and publish your cluster’s metrics from all containers and components in one user interface.</p>
 <p>To provide this service, UKCloud will need to provision an initial 10GiB of Tier 2 Persistent Volume at the prevailing rate.</p>
-<p>To provide resilience and added performance to your cluster’s metrics, you can deploy additional Infrastructure Nodes (see below for <a href="#Infrastructure-nodes">Infrastructure Node</a> costs).</p>
+<p>To provide resilience and added performance to your cluster’s metrics, you can deploy additional Infrastructure Nodes (see below for <a href="#infrastructure-nodes">Infrastructure Node</a> costs).</p>
 <h3 id="infrastructure-nodes">Infrastructure nodes</h3>
 <p>Additional nodes to support OpenShift core services such as OpenShift routers, registry, metric collection and aggregated logging. Each Foundation Pack is deployed with three Infrastructure Nodes. Where required, you can deploy additional Infrastructure Nodes for a flat monthly fee, with each Infrastructure Node providing an additional 2vCPUs and 16GiB RAM for OpenShift supporting services. You cannot use Infrastructure Nodes for containerised workloads.</p>
 <h3 id="ssl-certificates">SSL certificates</h3>
@@ -226,7 +226,7 @@
 <h2 id="customer-responsibilities">Customer responsibilities</h2>
 <p>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as HSCN, Janet, RLI or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.</p>
 <p>Self-managing the environment including container deployment, virtual network configuration, storage management, and so on.</p>
-<p>Maintaining a master copy or backup copy of the data used in the UKCloud for OpenShift service (see <a href="#Backuprecovery-and-disaster-recovery">below</a>).</p>
+<p>Maintaining a master copy or backup copy of the data used in the UKCloud for OpenShift service (see <a href="#backuprecovery-and-disaster-recovery">below</a>).</p>
 <p>Ensuring only appropriate data (for example OFFICIAL) is stored and processed by applications on this environment and that they comply with the UKCloud Security Operating Procedures (SyOps) and other Information Assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.</p>
 <p>Customers with requirements beyond these limits can raise a service request via My Calls to have these limits per project considered for raising.</p>
 <h2 id="backuprecovery-and-disaster-recovery">Backup/recovery and disaster recovery</h2>

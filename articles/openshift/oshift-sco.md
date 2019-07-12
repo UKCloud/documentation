@@ -134,7 +134,7 @@ UKCloud will deploy, as part of your Foundation Pack, a simple EFK (Elasticsearc
 
 To provide this service UKCloud will need to provision an initial 20GiB of Tier 2 Persistent Volume at the prevailing rate.
 
-As your workloads increase or become more critical and you want to increase the performance and resilience of your Elasticsearch cluster by scaling it across three nodes, you can deploy an additional Infrastructure Node (see below for [Infrastructure Node](#Infrastructure-nodes) costs).
+As your workloads increase or become more critical and you want to increase the performance and resilience of your Elasticsearch cluster by scaling it across three nodes, you can deploy an additional Infrastructure Node (see below for [Infrastructure Node](#infrastructure-nodes) costs).
 
 ### Enhanced metric collection
 
@@ -142,7 +142,7 @@ As part of your Foundation Pack, UKCloud will provision a single Hawkular metric
 
 To provide this service, UKCloud will need to provision an initial 10GiB of Tier 2 Persistent Volume at the prevailing rate.
 
-To provide resilience and added performance to your cluster’s metrics, you can deploy additional Infrastructure Nodes (see below for [Infrastructure Node](#Infrastructure-nodes) costs).
+To provide resilience and added performance to your cluster’s metrics, you can deploy additional Infrastructure Nodes (see below for [Infrastructure Node](#infrastructure-nodes) costs).
 
 ### Infrastructure nodes
 
@@ -176,7 +176,7 @@ The control and management of access and responsibilities for end users includin
 
 Self-managing the environment including container deployment, virtual network configuration, storage management, and so on.
 
-Maintaining a master copy or backup copy of the data used in the UKCloud for OpenShift service (see [below](#Backuprecovery-and-disaster-recovery)).
+Maintaining a master copy or backup copy of the data used in the UKCloud for OpenShift service (see [below](#backuprecovery-and-disaster-recovery)).
 
 Ensuring only appropriate data (for example OFFICIAL) is stored and processed by applications on this environment and that they comply with the UKCloud Security Operating Procedures (SyOps) and other Information Assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.
 
