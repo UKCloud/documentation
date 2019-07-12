@@ -43,7 +43,7 @@ After your Walled Garden application has been approved, a service request is rai
 > [!NOTE]
 > If a service request for this implementation already exists, the existing request is used and a new one is not raised.
 
-You can track the progress of the service request in the [My Calls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal.
+You can track the progress of the service request in the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
 
 During the provisioning of the Walled Garden service, we'll ask you for some additional information via the service request:
 
@@ -109,7 +109,7 @@ When you've built your VMs and networking, you can start to test the environment
 
 As part of the CDSZ application process, you're required to outline any IT Health Check (ITHC) you intend to perform on the environment. The ITHC should be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NCSC). You can search for appropriate providers on the [NCSC web site](https://www.ncsc.gov.uk/index/professional-service?f%5B0%5D=field_assurance_status%3AAssured&f%5B1%5D=field_assurance_scheme%3A213).
 
-Before beginning the ITHC, notify UKCloud by raising a service request in My Calls and completing the [*External Security Review Test (ESRT) application form*](https://portal.ukcloud.com/support/knowledge_centre/4f052cee-0400-4e12-9e90-827a768ea7ad). Ideally, we require five working days' notice before the work is due to be carried out.
+Before beginning the ITHC, notify UKCloud by raising a service request in [My Calls](https://portal.ukcloud.com/support/ivanti) and completing the [*External Security Review Test (ESRT) application form*](https://portal.ukcloud.com/support/knowledge_centre/4f052cee-0400-4e12-9e90-827a768ea7ad). Ideally, we require five working days' notice before the work is due to be carried out.
 
 The ITHC scope should be relevant to the environment. For example, if you're using the Walled Garden to pull application and antivirus updates from the internet, then security controls relevant to facilitate this should be in scope. Bear in mind that the end customer accreditor may dictate the scope of the ITHC.
 

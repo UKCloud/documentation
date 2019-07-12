@@ -51,7 +51,7 @@ If you have already deployed a Red Hat VM using the old templates, you can confi
 
 ## Additional resources
 
-High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services, you'll need to notify UKCloud for access to these repositories or will need to bring your own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a request via the My Calls section in the UKCloud Portal and it will be uploaded to your private catalog.
+High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services, you'll need to notify UKCloud for access to these repositories or will need to bring your own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section in the UKCloud Portal and it will be uploaded to your private catalog.
 
 ## Feedback
 

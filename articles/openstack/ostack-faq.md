@@ -330,7 +330,7 @@ UKCloud will remove the cost of the Red Hat licence from your monthly bill for t
 
 ### How do I raise a support ticket?
 
-The secure online [UKCloud Portal](https://portal.skyscapecloud.com/login) provides most common service management functionality. You can raise tickets within the My Calls section of the Portal. Alternatively, you can contact support by phone or email.
+The secure online [UKCloud Portal](https://portal.ukcloud.com/login) provides most common service management functionality. You can raise tickets within the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the Portal. Alternatively, you can contact support by phone or email.
 
 ### How do I manage my services?
 

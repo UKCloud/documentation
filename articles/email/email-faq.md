@@ -187,7 +187,7 @@ Yes, you'll need to register your email address with Vodafone to traverse the ga
 
 ## Can I arrange for a mailbox usage report?
 
-Yes, this can be created for you on request. You'll need to raise a Service Request in the 'My Calls' section of the UKCloud Portal.
+Yes, this can be created for you on request. You'll need to raise a Service Request in the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 

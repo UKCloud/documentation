@@ -169,7 +169,7 @@ If you shut down your VM using the guest OS, we will recognise this as a 'Power 
 
 ### How do I change the workload type of a VDC?
 
-To change the workload type (for example, ESSENTIAL, POWER or PRIORITY) of a VDC, you must raise a [service request](https://portal.ukcloud.com/support/my_calls/new) from within My Calls, and the support team will make the necessary changes.
+To change the workload type (for example, ESSENTIAL, POWER or PRIORITY) of a VDC, you must raise a [service request](https://portal.ukcloud.com/support/my_calls/new) from within [My Calls](https://portal.ukcloud.com/support/ivanti), and the support team will make the necessary changes.
 
 Please note this change is disruptive and UKCloud will be required to power down all VMs in the VDC during this transition.
 
@@ -387,7 +387,7 @@ Microsoft terms and conditions preclude customers from using their own licence a
 
 Microsoft offers License Mobility, a scheme that allows a customer to provide additional software such as Exchange, SQL and so on, as long as the customer has appropriate Microsoft licensing as per the licence terms and conditions and usage rights. In order to use License Mobility, you must complete the form that is available in the Knowledge Centre and send this by post to Microsoft.
 
-If you require SQL licensing to be provided by UKCloud, this can be done by completing a Service Request from the [My Calls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal. SQL standard licensing is charged per hour per VM, whilst SQL Enterprise is charged monthly per VM. It is essential that UKCloud are informed of every instance of SQL on the platform, and that you complete a Licence Mobility form for all licences that you use on the UKCloud platform.
+If you require SQL licensing to be provided by UKCloud, this can be done by completing a Service Request from the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal. SQL standard licensing is charged per hour per VM, whilst SQL Enterprise is charged monthly per VM. It is essential that UKCloud are informed of every instance of SQL on the platform, and that you complete a Licence Mobility form for all licences that you use on the UKCloud platform.
 
 ### RHEL
 

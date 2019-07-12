@@ -83,7 +83,7 @@ The UKCloud RHUI service supplies access to the following repository groups, eac
 
 ## High Availability and Extended Update Support
 
-High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services. Customers will need to notify UKCloud for access to these repositories or will need to bring their own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a UKCloud Support service request directly via the My Calls feature and it will be uploaded to your private catalogue.
+High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services. Customers will need to notify UKCloud for access to these repositories or will need to bring their own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a UKCloud Support service request directly via [My Calls](https://portal.ukcloud.com/support/ivanti) and it will be uploaded to your private catalogue.
 
 ## Feedback
 

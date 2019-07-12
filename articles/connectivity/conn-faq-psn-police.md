@@ -81,7 +81,7 @@ You should liaise with UKCloud to find a suitable time to do this, to minimise a
 
 If you are connected to a PSN for Policing CUG then you will be provided with an IP range by Vodafone.
 
-If you are connected to the Enhanced Regime, then you will be provided an IP range by Home Office. You will need to raise a service request with us via the UKCloud Portal within the [My Calls](https://portal.ukcloud.com/support/my_calls) section to have these IPs added to the UKCloud firewalls. This may have a lead time of a few days.
+If you are connected to the Enhanced Regime, then you will be provided an IP range by Home Office. You will need to raise a service request with us via the UKCloud Portal within the [My Calls](https://portal.ukcloud.com/support/ivanti) section to have these IPs added to the UKCloud firewalls. This may have a lead time of a few days.
 
 ## How long is the lead time to get a PSN for Policing network connected to my solution?
 

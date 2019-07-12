@@ -31,7 +31,7 @@ Knowing where your VDCs are located can be useful for:
 
 This guide describes how to use vCloud Director to find out where your VDC is within the UKCloud platform. You can use the vCloud Director UI or the API.
 
-The information provided by the VDC metadata is read-only. If you want to change the location of a VDC, raise a Support Request from the [My Calls](https://portal.skyscapecloud.com/support/my_calls) section of the UKCloud Portal.
+The information provided by the VDC metadata is read-only. If you want to change the location of a VDC, raise a Support Request from the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Finding the location of a VDC via the Portal
 

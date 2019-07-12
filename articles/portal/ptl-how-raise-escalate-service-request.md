@@ -93,13 +93,13 @@ Ticket priority | Initial response target | Resolution target
 &nbsp; | &nbsp;
 -----------|-----------
 **Priority 1** | **Priority 2**
-A significant outage or disruption to multiple users or locations is in progress</br></br>Confirmed or suspected compromise, loss or unavailability of data has occurred | Service is available but degraded or restricted for multiple users or locations
+A significant outage or disruption to multiple users or locations is in progress<br><br>Confirmed or suspected compromise, loss or unavailability of data has occurred | Service is available but degraded or restricted for multiple users or locations
 **Priority 3** | **Priority 4**
-A failure or degradation of redundant or non-critical components of service has occurred</br></br>Failure of a shared service, where alternative services remain available, or service disruption for single users | Documented housekeeping activities</br></br>Administration related requirements or an uncategorised incident
+A failure or degradation of redundant or non-critical components of service has occurred<br><br>Failure of a shared service, where alternative services remain available, or service disruption for single users | Documented housekeeping activities<br><br>Administration related requirements or an uncategorised incident
 
 ## Viewing tickets and service updates
 
-All incidents and service requests are visible within the UKCloud Portal under My Calls. The Portal is also used to provide notification of upcoming changes.
+All incidents and service requests are visible within the UKCloud Portal under [My Calls](https://portal.ukcloud.com/support/ivanti). The Portal is also used to provide notification of upcoming changes.
 
 During a Major Incident, updates are published to the Service Status page: <http://status.ukcloud.com/>.
 

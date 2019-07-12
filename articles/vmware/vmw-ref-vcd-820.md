@@ -50,7 +50,7 @@ For more information about using the advanced gateway API, see the [*vCloud Dire
 
 ### vCloud API testing sandboxes
 
-UKCloud provides sandboxes to enable you to test the next two versions of the vCloud API so that you can prepare for future vCloud Director upgrades. If you require access to one of our vCloud sandboxes, raise a service request via My Calls on the UKCloud Portal.
+UKCloud provides sandboxes to enable you to test the next two versions of the vCloud API so that you can prepare for future vCloud Director upgrades. If you require access to one of our vCloud sandboxes, raise a service request via [My Calls](https://portal.ukcloud.com/support/ivanti) on the UKCloud Portal.
 
 ## Known issues
 

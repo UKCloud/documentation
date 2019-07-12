@@ -88,7 +88,7 @@ UKCloud for OpenStack is managed directly by the customer, using OpenStack's Hor
 
 ## Service provisioning
 
-You can request UKCloud for OpenStack via your Technical Account Manager or by using the My Calls section of the UKCloud Portal.
+You can request UKCloud for OpenStack via your Technical Account Manager or by using the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
 
 Within 4 business hours of accepting an order, UKCloud will create the customer's Primary Administrator account and send a Welcome Pack which includes the URL for the UKCloud Portal, and the Getting Started Guide.
 
@@ -110,7 +110,7 @@ By default, we will place the following network limitations per project:
 
 - 2 x Network Routers
 
-Customers with requirements beyond these limits can raise a service request via My Calls to have these limits per project considered for raising.
+Customers with requirements beyond these limits can raise a service request via [My Calls](https://portal.ukcloud.com/support/ivanti) to have these limits per project considered for raising.
 
 ## Compute virtual resource limits
 
@@ -124,7 +124,7 @@ By default, we will place the following virtual resource limitations per project
 
 - 2 TiB Persistent block storage
 
-Customers with requirements beyond these limits can raise a service request via My Calls to have these limits per project considered for raising.
+Customers with requirements beyond these limits can raise a service request via [My Calls](https://portal.ukcloud.com/support/ivanti) to have these limits per project considered for raising.
 
 ## Platform Operation Request Limits
 

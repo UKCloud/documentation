@@ -56,7 +56,7 @@ While we do not offer the option of supplying Microsoft Desktop Operating System
 
 For more information regarding the QMTH program, we have further details on the [UKCloud web site](https://ukcloud.com/qualified-multitenant-hoster-program/)
 
-If you want to use this option, raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal, detailing the VM names.
+If you want to use this option, raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal, detailing the VM names.
 
 In addition, you can also bring your own Microsoft desktop licensing for use on a dedicated single tenant cloud server such as Private Cloud for Compute. In this instance, contact your Account Director or Technical Account Manager for further information.
 
@@ -64,7 +64,7 @@ In addition, you can also bring your own Microsoft desktop licensing for use on 
 
 As stated, all Microsoft applications on the UKCloud platform must be licensed appropriately by either UKCloud or by using your own existing licensing. There are two options available to you:
 
-- **UKCloud's Microsoft licensing and usage billing.** The standard licensing approach is for us to provide Microsoft licences on a per hour or monthly basis depending on the application. These are     retrospectively billed based on your usage of an associated VM for each month. For this option to be valid, you must ensure that you have informed us of all Microsoft installations by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal, detailing the VM names, the application and specific version/level. Please note that not all applications are available using this option, and the Microsoft application list within this document will state the eligibility of this option per application.
+- **UKCloud's Microsoft licensing and usage billing.** The standard licensing approach is for us to provide Microsoft licences on a per hour or monthly basis depending on the application. These are     retrospectively billed based on your usage of an associated VM for each month. For this option to be valid, you must ensure that you have informed us of all Microsoft installations by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal, detailing the VM names, the application and specific version/level. Please note that not all applications are available using this option, and the Microsoft application list within this document will state the eligibility of this option per application.
 
 - **Bring your own Microsoft licensing.** If your organisation has an existing SPLA or Academic licensing contract with Microsoft, or if you wish to licence your Microsoft software directly, we can offer the option of your organisation using your own Microsoft software licensing.
 
@@ -186,7 +186,7 @@ Microsoft may contact you to confirm that you have the correct number of licence
 
 ## Microsoft SQL Server images
 
-To install Microsoft SQL Server Standard or Enterprise edition, you can either use your own local images, or we can make an image available to you. To gain access to any images, you must either inform us so that we can bill you for the appropriate usage, or wait until we've received confirmation from Microsoft as per the mobility process. You can request access to images by raising a Service Request in the [My Calls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal.
+To install Microsoft SQL Server Standard or Enterprise edition, you can either use your own local images, or we can make an image available to you. To gain access to any images, you must either inform us so that we can bill you for the appropriate usage, or wait until we've received confirmation from Microsoft as per the mobility process. You can request access to images by raising a Service Request in the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Responsibilities
 

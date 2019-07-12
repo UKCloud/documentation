@@ -100,7 +100,7 @@ It's not currently possible to see the level of provisioned/utilised resources a
 
 ## Service provisioning
 
-You can request Dedicated Compute via your account manager or using the My Calls section of the UKCloud Portal.
+You can request Dedicated Compute via your account manager or using the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
 
 The minimum commitment period to the service is 90 days. The notice period is 90 days.
 
