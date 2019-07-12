@@ -136,9 +136,12 @@
 <h3 id="do-i-get-root-access-onto-the-local-vm">Do I get root access onto the local VM?</h3>
 <p>Yes, as this is a true IaaS cloud service, you have complete control and autonomy over each VM, and so have full 'root' or administrative access.</p>
 <h3 id="what-vm-sizes-are-available">What VM sizes are available?</h3>
-<p>UKCloud offers a variety of 'T-shirt sizes' to meet customers' needs. The smallest configuration is 512MiB and 1 vCPU. The largest is 128GiB memory with 12 vCPU.</p>
+<p>UKCloud offers a variety of 'T-shirt sizes' to meet customers' needs. The smallest configuration is 0.5GiB and 1 vCPU. The largest is 128GiB memory with 12 vCPU.</p>
 <p>Check the UKCloud for VMware Service Definition for more details on the currently available sizes.</p>
-<p>Dedicated Compute provides the flexibility to build custom-sized VMs.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>UKCloud for VMware does not currently support custom-sized VMs outside the 'T-shirt sizes', however if you require more flexibillity with regards to VM sizes, we advise the use of our other multi-cloud technologies such as OpenStack, Oracle or Azure. Alternatively, you may consider the use of Dedicated Compute v2 to build custom-sized VMs.</p>
+</div>
 <h3 id="can-i-resize-a-vm">Can I resize a VM?</h3>
 <p>Yes, you can change vCPU, RAM and storage allocations via the self-service UKCloud Portal and API.</p>
 <p>Processors and memory can be added to or removed from VMs if the OS supports the 'hot add' capability.</p>
