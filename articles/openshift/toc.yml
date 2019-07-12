@@ -48,3 +48,7 @@
   items:
   - name: UKCloud for OpenShift Service Definition
     href: oshift-sd.md
+- name: Service Scope
+  items:
+  - name: UKCloud for OpenShift Service Scope
+    href: oshift-sco.md

@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-create-vm-ps.html",
-          "hash": "cbKY7jRW0vAgXHBpdz556w=="
+          "hash": "hEJL1xJx3USWXS4lfzuihw=="
         }
       },
       "is_incremental": false,
@@ -5315,6 +5315,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-sco.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-sco.html",
+          "hash": "zy/xti4sSOdtaLt3g7UQqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-sd.md",
       "output": {
         ".html": {
@@ -5331,7 +5343,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "BlH41Ks26NaWrLn/3jBQ4Q=="
+          "hash": "jET4EOFjtLtaQH9qO78rqQ=="
         }
       },
       "is_incremental": false,
@@ -17723,17 +17735,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 403,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 404,
           "skipped_file_count": 0
         }
       }
