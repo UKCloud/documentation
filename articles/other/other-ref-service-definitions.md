@@ -93,7 +93,7 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 ## Terms and conditions
 
-[UKCloud Ltd G-Cloud 10 Terms and Conditions](other-ref-terms-and-conditions.md)
+[UKCloud Ltd G-Cloud 11 Terms and Conditions](other-ref-terms-and-conditions.md)
 
 ## Feedback
 

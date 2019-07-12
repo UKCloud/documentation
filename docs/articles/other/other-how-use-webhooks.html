@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>UKCloud Service Definitions and Pricing Guide | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to use webhooks to receive service status notifications | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="UKCloud Service Definitions and Pricing Guide | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to use webhooks to receive service status notifications | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-service-definitions.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-how-use-webhooks.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,49 +91,95 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="ukcloud-service-definitions-and-pricing-guide">UKCloud Service Definitions and Pricing Guide</h1>
+<h1 id="how-to-use-webhooks-to-receive-service-status-notifications">How to use webhooks to receive service status notifications</h1>
 
-<p>This article provides a list of Service Definitions for UKCloud services. The list also includes our Pricing Guide, SFIA rate card and terms and conditions.</p>
-<h2 id="service-definitions">Service Definitions</h2>
-<h3 id="multi-cloud-technology-stacks">Multi-cloud technology stacks</h3>
-<p><a href="../azure/azs-sd.html">UKCloud for Microsoft Azure</a></p>
-<p><a href="../openshift/oshift-sd.html">UKCloud for OpenShift</a></p>
-<p><a href="../openstack/ostack-sd.html">UKCloud for OpenStack</a></p>
-<p><a href="../oracle/orcl-sd.html">UKCloud for Oracle Software</a></p>
-<p><a href="../vmware/vmw-sd.html">UKCloud for VMware</a></p>
-<h3 id="multi-cloud-enabling-services">Multi-cloud enabling services</h3>
-<p><a href="../managed-services/man-sd-compute.html">Basic Managed Compute from UKCloud</a></p>
-<p><a href="../managed-services/man-sd-optimisation.html">Cloud Optimisation from UKCloud</a></p>
-<p><a href="../cloud-storage/cs-sd.html">Cloud Storage</a></p>
-<p><a href="../cdsz/cdsz-sd.html">Cross Domain Security Zone</a></p>
-<p><a href="../dedicated-compute/dc-sd.html">Dedicated Compute v2</a></p>
-<p><a href="../draas/draas-sd.html">Disaster Recovery as a Service</a></p>
-<p><a href="../managed-services/man-sd-network.html">Extended Network Support from UKCloud</a></p>
-<p><a href="../hpc/hpc-sd.html">High Performance Compute</a></p>
-<p><a href="../managed-services/man-sd-monitoring.html">Managed Monitoring from UKCloud</a></p>
-<p><a href="../migration/migr-sd.html">Migration to the Cloud</a></p>
-<p><a href="../mcbs/mcbs-sd.html">Multi-Cloud Backup Storage</a></p>
-<p><a href="../private-cloud/prc-sd.html">Private Cloud</a></p>
-<p><a href="../private-cloud/prc-sd-orcl.html">Private Cloud for Oracle Software</a></p>
-<p><a href="../private-cloud/prc-sd-storage.html">Private Cloud for Storage</a></p>
-<p><a href="../sra/sra-sd.html">Secure Remote Access</a></p>
-<p><a href="../transition-services/trans-sd.html">Transition Services</a></p>
-<h3 id="3rd-party-software">3rd party software</h3>
-<p><a href="../third-party/third-sd-appdynamics.html">Cisco AppDynamics from UKCloud</a></p>
-<p><a href="../third-party/third-sd-cloudsoc.html">CloudSOC from UKCloud</a></p>
-<p><a href="../third-party/third-sd-hytrust.html">HyTrust DataControl from UKCloud</a></p>
-<p><a href="../third-party/third-sd-moogsoft.html">Moogsoft AIOps from UKCloud</a></p>
-<p><a href="../third-party/third-sd-portworx.html">Portworx Enterprise from UKCloud</a></p>
-<p><a href="../third-party/third-sd-cyberscore.html">XQ Cyber CyberScore from UKCloud</a></p>
-<h2 id="pricing-guide">Pricing Guide</h2>
-<p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">Pricing Guide</a></p>
-<p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf">3rd Party Software Pricing Guide</a></p>
-<h2 id="sfia-rate-card">SFIA rate card</h2>
-<p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf">Skills Framework for the Information Age (SFIA) UKCloud rate card and definitions</a></p>
-<h2 id="terms-and-conditions">Terms and conditions</h2>
-<p><a href="other-ref-terms-and-conditions.html">UKCloud Ltd G-Cloud 11 Terms and Conditions</a></p>
+<h2 id="overview">Overview</h2>
+<p>The <a href="%5Bstatus%5D(https://status.ukcloud.com)">UKCloud Service Status page</a> enables you to subscribe to updates using webhook notifications. To use these notifications, you need to set up an endpoint to receive and process these notifications. For more information about webhooks, see the Atlassian Statuspage documentation: <a href="https://help.statuspage.io/help/webhook-notifications">Webhook Notifications</a>.</p>
+<p>This article provides sample PHP code that processes webhook HTTP POST updates from the UKCloud Service Status page in a JSON object.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Input directly from the internet should never be trusted! Before implementing this code please ensure you have safely sanitized all user input and taken the relevant security precautions to prevent yourself from being hacked. UKCloud takes no responsibility for any damage caused to any system by use of this code.</p>
+</div>
+<p>After you upload the file containing your code to your public web server, you can use the endpoint to subscribe to webhook notifications on the UKCloud Service Status page. For more information, see <a href="other-how-view-status-info.html"><em>How to view UKCloud service status information</em></a>.</p>
+<p><img src="images/other-status-webhook.png" alt="Webhook notifications"></p>
+<h2 id="sample-code">Sample code</h2>
+<pre><code class="lang-php">&lt;?php
+
+//Input directly from the internet should never be trusted!
+//Before implementing this please ensure you have safely sanitized all user input
+//and taken the relevant security precautions to prevent yourself from being hacked.
+//UKCloud takes no responsibility for any damage caused to any system by use of this code.
+
+$input = file_get_contents('php://input');
+
+$statusObject = json_decode($input);
+
+if(json_last_error() !== JSON_ERROR_NONE){
+  die('Invalid JSON');
+}
+
+if(!isset($statusObject-&gt;page-&gt;status_description)){
+  die('Invalid Input');
+}
+
+//Status page general information
+echo &quot;&lt;br&gt;&lt;br&gt;Status Description: &quot; . $statusObject-&gt;page-&gt;status_description;
+echo &quot;&lt;br&gt;Status Indicator: &quot; . $statusObject-&gt;page-&gt;status_indicator;
+
+//The below if statement catches component status changes
+if(isset($statusObject-&gt;component_update)){
+  echo &quot;&lt;br&gt;&lt;br&gt;Component Name: &quot; . $statusObject-&gt;component-&gt;name;
+  echo &quot;&lt;br&gt;Old Status: &quot; . $statusObject-&gt;component_update-&gt;old_status;
+  echo &quot;&lt;br&gt;New Status: &quot; . $statusObject-&gt;component_update-&gt;new_status;
+}
+
+//The below if statement catches incident status changes
+if(isset($statusObject-&gt;incident)){
+  echo &quot;&lt;br&gt;&lt;br&gt;Incident Name: &quot; . $statusObject-&gt;incident-&gt;name;
+  echo &quot;&lt;br&gt;Incident Impact: &quot; . $statusObject-&gt;incident-&gt;impact;
+  echo &quot;&lt;br&gt;Incident Status: &quot; . $statusObject-&gt;incident-&gt;status;
+  echo &quot;&lt;br&gt;Created At: &quot; . $statusObject-&gt;incident-&gt;created_at;
+  echo &quot;&lt;br&gt;Updated At: &quot; . $statusObject-&gt;incident-&gt;updated_at;
+  echo &quot;&lt;br&gt;Monitoring At: &quot; . $statusObject-&gt;incident-&gt;monitoring_at;
+
+  echo &quot;&lt;br&gt;&lt;br&gt;Incident Updates: &quot;;
+
+  //The below foreach loop goes through each component status update
+  foreach ($statusObject-&gt;incident-&gt;incident_updates as $indUpdate){
+    echo &quot;&lt;br&gt;&lt;br&gt;Incident Update Body: &lt;br&gt;&quot; . $indUpdate-&gt;body;
+    echo &quot;&lt;br&gt;Incident Update Created At: &quot; . $indUpdate-&gt;created_at;
+    echo &quot;&lt;br&gt;Incident Update Updated At: &quot; . $indUpdate-&gt;updated_at;
+    echo &quot;&lt;br&gt;Incident Update Displayed At:  &quot; . $indUpdate-&gt;display_at;
+    echo &quot;&lt;br&gt;Incident Update Status: &quot; . $indUpdate-&gt;status;
+  }
+
+  //The below switch statement allows you to perform your actions when an
+  //incident notification is updated
+  switch($statusObject-&gt;incident-&gt;status){
+    case &quot;investigating&quot;:
+    case &quot;identified&quot;:
+    case &quot;monitoring&quot;:
+    case &quot;resolved&quot;:
+      echo &quot;&lt;br&gt;&lt;br&gt;This is an incident!&quot;;
+      break;
+  }
+
+  //The below switch statement allows you to perform your actions when an
+  //maintenance notification is updated
+  switch($statusObject-&gt;incident-&gt;status){
+    case &quot;scheduled&quot;:
+    case &quot;in_progress&quot;:
+    case &quot;verifying&quot;:
+    case &quot;completed&quot;:
+      echo &quot;&lt;br&gt;&lt;br&gt;This is a maintenance piece!&quot;;
+      break;
+  }
+}
+
+?&gt;
+</code></pre>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
