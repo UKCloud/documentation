@@ -35,7 +35,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 ## Enabling VM Update & Management
 
-> ![WARNING]
+> [!WARNING]
 > Before proceeding, check **[here](https://docs.microsoft.com/en-gb/azure/azure-monitor/insights/vminsights-enable-overview#supported-operating-systems)** that your VMs OS version is supported.
 
 1. Login to the Azure portal:
@@ -60,8 +60,8 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
         - *Location* available to host the workspace on.
 
-            > ![NOTE]
-            > The currently supported locations include: *West Central US*, *East US*, *Canada Central*, *UK South*, *West Europe* and *Southeast Asia*.
+        > [!NOTE]
+        > The currently supported locations include: *West Central US*, *East US*, *Canada Central*, *UK South*, *West Europe* and *Southeast Asia*.
 
         - *Pricing Tier* to use.
 
