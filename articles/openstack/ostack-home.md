@@ -24,34 +24,38 @@ UKCloud for OpenStack is engineered specifically for organisations embracing dig
 First, take a look at our [*Getting Started Guide*](ostack-gs.md) to learn the basics, then you can:
 
 <div class="row">
-  <div class="col-md-3"><ul><li><a href="https://docs.ukcloud.com/articles/openstack/ostack-how-convert-vms.html">Convert virtual machines</a></ul></div>
-  <div class="col-md-3"><ul><li><a href="https://docs.ukcloud.com/articles/openstack/ostack-how-create-heat-template.html">Create and deploy a Heat template</a></ul></div>
-  <div class="col-md-3"><ul><li><a href="https://docs.ukcloud.com/articles/openstack/ostack-how-create-load-balancer.html">Create load balancing services</a></ul></div>
-  <div class="col-md-3"><ul><li><a href="https://docs.ukcloud.com/articles/openstack/ostack-how-recover-instance.html">Recover from failure</a></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/openstack/ostack-how-convert-vms.html">Convert virtual machines</a></p></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/openstack/ostack-how-create-heat-template.html">Create and deploy a Heat template</a></p></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/openstack/ostack-how-create-load-balancer.html">Create load balancing services</a></p></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/openstack/ostack-how-recover-instance.html">Recover from failure</a></p></ul></div>
 </div>
 
-## Useful Videos
+## OpenStack Horizone overview
 
 <div class="row">
   <div class="col-md-6">
-    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/305934797?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    <div style="padding:56.25% 0 0 0;position:relative;">
+      <iframe src="https://player.vimeo.com/video/305934797?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+      </iframe>
+    </div>
     <p><a href="https://vimeo.com/305934797">OpenStack Horizon Dashboard Overview</a></p>
   </div>
   <div class="col-md-6"></div>
 </div>
+<script src="https://player.vimeo.com/api/player.js"></script>
 
 ## Other resources
 
 <div class="row">
-  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/openstack/ostack-sd.md">Service Definition</a></ul></div>
-  <div class="col-md-4"><ul><li><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></ul></div>
-  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/other/other-ref-services-by-region.html">Services by region</a></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/openstack/ostack-sd.md">Service Definition</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/other/other-ref-services-by-region.html">Services by region</a></p></ul></div>
 </div>
 
 <div class="row">
-  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/openstack/ostack-sco.md">Service Scope</a></ul></div>
-  <div class="col-md-4"><ul><li><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></ul></div>
-  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html">SLA definition</a></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/openstack/ostack-sco.md">Service Scope</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html">SLA definition</a></p></ul></div>
 </div>
 
 ## Still have questions?

@@ -24,34 +24,38 @@ UKCloud for Oracle provides a proven Oracle Infrastructure as a Service that's t
 First, take a look at our [*Getting Started Guide*](orcl-gs.md) to learn the basics, then you can:
 
 <div class="row">
-  <div class="col-md-3"><ul><li><a href="https://docs.ukcloud.com/articles/oracle/orcl-how-enable-ha.html">Enable high availability</a></ul></div>
-  <div class="col-md-3"><ul><li><a href="https://docs.ukcloud.com/articles/oracle/orcl-ref-licensing.html">Oracle licensing on the UKCloud platform</a></ul></div>
-  <div class="col-md-3"><ul><li><a href="https://docs.ukcloud.com/articles/oracle/orcl-ref-vm-compatibility.html">VM compatibility with UKCloud for Oracle Software</a></ul></div>
-  <div class="col-md-3"><ul><li><a href="https://docs.ukcloud.com/articles/oracle/orcl-ref-rac.html">RAC on UKCloud for Oracle Software</a></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/oracle/orcl-how-enable-ha.html">Enable high availability</a></p></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/oracle/orcl-ref-licensing.html">Oracle licensing on the UKCloud platform</a></p></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/oracle/orcl-ref-vm-compatibility.html">VM compatibility with UKCloud for Oracle Software</a></p></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/oracle/orcl-ref-rac.html">RAC on UKCloud for Oracle Software</a></p></ul></div>
 </div>
 
-## Useful Videos
+## Oracle Enterprise Manager overview
 
 <div class="row">
   <div class="col-md-6">
-    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/307495809?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    <div style="padding:56.25% 0 0 0;position:relative;">
+      <iframe src="https://player.vimeo.com/video/307495809?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+      </iframe>
+    </div>
     <p><a href="https://vimeo.com/307495809">Oracle Enterprise Manager Cloud Control 13c Console Overview</a></p>
   </div>
   <div class="col-md-6"></div>
 </div>
+<script src="https://player.vimeo.com/api/player.js"></script>
 
 ## Other resources
 
 <div class="row">
-  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/oracle/orcl-sd.md">Service Definition</a></ul></div>
-  <div class="col-md-4"><ul><li><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></ul></div>
-  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/other/other-ref-services-by-region.html">Services by region</a></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/oracle/orcl-sd.md">Service Definition</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/other/other-ref-services-by-region.html">Services by region</a></p></ul></div>
 </div>
 
 <div class="row">
-  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/oracle/orcl-sco.md">Service Scope</a></ul></div>
-  <div class="col-md-4"><ul><li><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></ul></div>
-  <div class="col-md-4"><ul><li><a href="https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html">SLA definition</a></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/oracle/orcl-sco.md">Service Scope</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html">SLA definition</a></p></ul></div>
 </div>
 
 ## Still have questions?
