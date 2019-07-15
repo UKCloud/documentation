@@ -67,7 +67,7 @@ Choose the level of protection required for your workload
 
 ## Pricing and packaging
 
-UKCloud for VMware VMs start at 1p per hour, and full pricing with all options including licensing and connectivity available in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
+Disaster Recovery as a Service starts at 2.5p per hour, and full pricing with all options including licensing and connectivity is available in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 ## Accreditation and information assurance
 
