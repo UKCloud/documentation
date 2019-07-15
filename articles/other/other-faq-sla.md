@@ -39,7 +39,7 @@ UKCloud deem a service to be unavailable if after five consecutive negative resp
 
 ### Are any periods of downtime excluded from the availability SLA?
 
-UKCloud excludes any time needed to complete planned or emergency maintenance from any time-based calculations related to service availability. In these events, you will be notified accordingly as described our [*Terms and Conditions*](other-ref-terms-and-conditions.md). Other exceptions are also outlined in the Terms and Conditions.
+UKCloud excludes any time needed to complete planned or emergency maintenance from any time-based calculations related to service availability. In these events, you will be notified accordingly as described in our [*Terms and Conditions*](other-ref-terms-and-conditions.md). Other exceptions are also outlined in the Terms and Conditions.
 
 ### Are there any reasons why you wouldn't pay a Service Credit if it was due?
 
