@@ -128,7 +128,7 @@ Not by default but, if it's required, you can implement it using technology of y
 
 ### Is UKCloud's encryption service available for UKCloud for VMware?
 
-Not currently, but we are considering this as an option. Provide feedback via [UKCloud Ideas](http://ideas.ukcloud.com).
+Not currently, but we are considering this as an option. Provide feedback via the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
 
 ### Is it possible to non-fast-provision vApps, and to convert current vApps into non-fast provisioned ones?
 
@@ -606,4 +606,4 @@ Protective Monitoring is included for our IaaS platform and follows GPG 13.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

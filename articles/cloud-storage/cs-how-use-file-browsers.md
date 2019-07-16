@@ -92,7 +92,6 @@ To install and configure Cyberduck:
 5. Complete the fields in the new connection dialog box:
 
     - Ensure you enter the correct endpoint in the **Server** field, as shown in [API endpoints](#api-endpoints)
-  
 
     - The **Access Key ID** is your User ID, which you can find in the *Storage* section of the UKCloud Portal
 
@@ -226,12 +225,12 @@ This article has shown you how to browse Cloud Storage buckets using various dif
 
 - Cloud Storage Gateways
 
-    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
-    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com/). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
