@@ -59,7 +59,7 @@ Choose the security domain in which you want to run your workload
 
 - Public - Share the multi tenant cloud as trusted users of UKCloud for Oracle Software
 
-- Private - See [Private Cloud for Oracle Software Service Definition](../private-cloud/prc-sd-orcl.md) for more info
+- Private - See the [*Private Cloud for Oracle Software Service Definition*](../private-cloud/prc-sd-orcl.md) for more information
 
 - Dedicated - Private compute nodes on the public UKCloud for Oracle Software
 
@@ -99,13 +99,13 @@ Choose the local protection required for your application in the event of a loca
 
 UKCloud for Oracle Softwatre doesn't include infrastructure level backup and restore or remote protection products. Instead we offer an underpinning infrastructure that can support technologies that are compatible with Oracle VMs such as Oracle Data Guard and Oracle RMAN data protection solutions
 
-- Multi Cloud Backup Storage - Compatible with Oracle RMAN and other DDBoost aware backup applicatons. See [MCBS Service Definition](../mcbs/mcbs-sd.md) for more info
+- Multi Cloud Backup Storage - Compatible with Oracle RMAN and other DDBoost aware backup applicatons. See the [*Multi-Cloud Backup Storage Service Definition*](../mcbs/mcbs-sd.md) for more info
 
 - Second Oracle region - Use Oracle Data Guard or other Oracle compatible replication technologies to create a DR environment in a second Oracle region
 
 ## Pricing and packaging
 
-UKCloud for Oracle Software VMs start at 9p per hour, and full pricing with all options including licensing and connectivity available in the [*UKCloud Pricing Guide*](../other/other-ref-pricing-guide.md).
+UKCloud for Oracle Software VMs start at 9p per hour, and full pricing with all options including licensing and connectivity available in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 ## Accreditation and information assurance
 
@@ -113,7 +113,7 @@ The security of our platform is our number one priority. We’ve always been com
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [*UKCloud Pricing Guide*](../other/other-ref-pricing-guide.md) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
+UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
 
 ## An SLA you can trust
 

@@ -45,7 +45,7 @@ Our platform offers inherent resilience to mitigate hardware failure and even si
 
 ## Do you need dedicated blades to comply with application licensing requirements?
 
-UKCloud offers a variety of service options for compute resources, refer to the relevant service definitions and pricing guide for more information.
+UKCloud offers a variety of service options for compute resources, refer to the relevant [*Service Definitions and Pricing Guide*](other-ref-service-definitions.md) for more information.
 
 ## Feedback
 

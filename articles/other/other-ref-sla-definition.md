@@ -29,8 +29,7 @@ Subject to the Service Level Agreement (SLA) limitations detailed below, the ser
 
 If the availability of the service for a particular month falls below the Availability Commitment specified in the applicable SLA (subject to the SLA limitations provided below), customers will be eligible to request Service Credits. Service Credits will be calculated as a percentage of the fees billed for the monthly period during which the SLA event occurred (to be applied at the end of the billing cycle, or of the subsequent cycle if a claim is made after an invoice has been paid).
 
-You will not be eligible to receive a Service Credit if your account has any undisputed payments outstanding beyond their due
-date or you are in violation of UKCloud’s Terms and Conditions including the UKCloud System Interconnect Security Policy
+You will not be eligible to receive a Service Credit if your account has any undisputed payments outstanding beyond their due date or you are in violation of UKCloud’s [*Terms and Conditions*](../other/other-ref-terms-and-conditions.md) including the UKCloud System Interconnect Security Policy
 (SISP).
 
 ## Service Level Agreement limitations
@@ -41,7 +40,7 @@ The following will be excluded from any time-based calculations related to the s
 
 - Emergency maintenance (as specified in the applicable service definition)
 
-- Your misuse of a particular service (as defined in the UKCloud Terms and Conditions and the UKCloud System Interconnect Security Policy (SISP))
+- Your misuse of a particular service (as defined in the UKCloud [*Terms and Conditions*](../other/other-ref-terms-and-conditions.md) and the UKCloud System Interconnect Security Policy (SISP))
 
 - A *force majeure* event
 
@@ -51,7 +50,7 @@ The following will be excluded from any time-based calculations related to the s
 
 - Any customer-defined/customer-controlled event (for example, unavailability of service resulting from inadequate customer-subscribed services, resources or configuration)
 
-The customer will not be eligible to receive a Service Credit if the service account has any undisputed payments outstanding beyond their due date, or you are in violation of UKCloud’s Terms and Conditions including the UKCloud System Interconnect Security Policy (SISP).
+The customer will not be eligible to receive a Service Credit if the service account has any undisputed payments outstanding beyond their due date, or you are in violation of UKCloud’s [*Terms and Conditions*](../other/other-ref-terms-and-conditions.md) including the UKCloud System Interconnect Security Policy (SISP).
 
 ## Service level agreement claims
 

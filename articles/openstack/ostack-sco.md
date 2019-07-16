@@ -132,7 +132,7 @@ Although designed to be a large-scale cloud platform, we strongly advise that wh
 
 ## Published features not currently available
 
-The following features published in the UKCloud for OpenStack Service Definition are not currently available:
+The following features published in the [*UKCloud for OpenStack Service Definition*](ostack-sd.md) are not currently available:
 
 - Janet & RLI connectivity
 

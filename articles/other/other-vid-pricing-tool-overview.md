@@ -27,6 +27,7 @@ The following video provides an overview of the UKCloud Pricing Estimation tool'
 ## Related articles
 
 - [*How to use the UKCloud Pricing Estimation Tool*](other-how-use-pricing-tool.md)
+
 - [*Known bugs in the Pricing Estimation Tool*](other-ref-pricing-tool-bugs.md)
 
 ## Feedback

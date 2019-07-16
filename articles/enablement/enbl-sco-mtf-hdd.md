@@ -65,7 +65,7 @@ This service is based on the transfer of whole VMs, not individual files. Your V
 
 Use of the Mass Transfer Facility is charged per the current Standard Rate Card and Definitions, based on the Service Management 'Enable' rate. You will only be billed for the time it takes for the engineer to set up, manage and detach the HDD. Due to the nature of the service and the time to transfer data, you will not be charged for the time it takes to transfer the data. We reserve the right to add additional charges should any remediation work be required during the process. The minimum charge is half of a business day.
 
-**More information!** [*Standard Rate Card and Definitions*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/772343517162961-sfia-rate-card-2018-05-21-1251.pdf)
+**More information!** [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)
 
 ## Anticipated transfer speeds
 

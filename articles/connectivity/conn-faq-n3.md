@@ -77,7 +77,7 @@ You can choose how you are charged:
 
 - Unlimited connections into environments - £3500 per month
 
-UKCloud pricing is available via the G-Cloud Digital Marketplace.
+UKCloud pricing is available via the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 ### Is there a minimum commitment period?
 
@@ -93,7 +93,7 @@ Simple implementations of the N3 network won't incur any additional setup or onb
 
 For complex networking solutions, we reserve the right to charge SFIA rates. For example, applications that face both the N3 and the internet may require additional assistance to enable them on the N3, or a more extensive compliance engagement.
 
-We'll always tell you in advance if an engagement will incur [SFIA rate card](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/772343517162961-sfia-rate-card-2018-05-21-1251.pdf) charges.
+We'll always tell you in advance if an engagement will incur [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) charges.
 
 ### Does UKCloud provide data encryption?
 

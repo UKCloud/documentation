@@ -55,7 +55,7 @@ The service is designed to be flexible and allows you to choose from the options
 
 ## Pricing and packaging
 
-Prices start from £100 per month for a supported VLAN. Full pricing with all options including licensing and connectivity is available in the [*UKCloud Pricing Guide*](../other/other-ref-pricing-guide.md).
+Prices start from £100 per month for a supported VLAN. Full pricing with all options including licensing and connectivity is available in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 ## Accreditation and information assurance
 
@@ -63,7 +63,7 @@ The security of our platform is our number one priority. We’ve always been com
 
 ## Connectivity options
 
-UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [*UKCloud Pricing Guide*](../other/other-ref-pricing-guide.md) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
+UKCloud provides one of the best-connected cloud platforms for the UK Public Sector. We offer a range of flexible connectivity options detailed in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) which enable access to our secure platform by DDoS-protected internet, native PSN, Janet, HSCN and RLI and your own lease lines via our HybridConnect service.
 
 ## An SLA you can trust
 

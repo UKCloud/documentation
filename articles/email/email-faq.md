@@ -99,7 +99,7 @@ In addition, the solution includes Messaging Application Programming Interface (
 
 Yes. The solution includes a migration wizard to help you migrate from an existing solution to Email and Collaboration as a Service.
 
-We can help facilitate a bulk migration to the platform using local data import. This is priced on a time-and-materials basis from the UKCloud SFIA rate card.
+We can help facilitate a bulk migration to the platform using local data import. This is priced on a time-and-materials basis from the UKCloud [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf).
 
 We can also recommend partners who specialise in this service.
 
@@ -125,7 +125,7 @@ Yes, mail hygiene is provided via Cisco IronPort® for internet-facing solutions
 
 ## Is there a mail archive solution?
 
-Yes, an archive option is available at an additional cost per GB per month. Pricing is available in the Digital Marketplace, or via your partner or UKCloud account director.
+Yes, an archive option is available for existing Email customers at an additional cost per GiB per month. Pricing is available via your partner or UKCloud account director.
 
 ## Is there a backup and disaster recovery solution?
 

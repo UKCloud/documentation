@@ -129,7 +129,7 @@ This depends on the use case.
 
 - If your private circuits or co-located equipment need to use the data centre interconnection:
 
-  - Contact your account manager, as this will be a non-standard solution which may require support from our technical specialists (costs will be as per the SFIA rate card).
+  - Contact your account manager, as this will be a non-standard solution which may require support from our technical specialists (costs will be as per the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)).
 
 ## Does UKCloud support RLI connections?
 

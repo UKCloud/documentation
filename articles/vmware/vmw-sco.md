@@ -144,7 +144,7 @@ You are entitled to claim Service Credits for outages to services that take you 
 
 - Red Hat Enterprise Linux licensing
 
-For the latest available licences, please check the [*Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf) and the [*Pricing Guide*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf).
+For the latest available licences, please check the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you're providing your own licensing for a retrospective discount.
 
@@ -221,7 +221,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 ## Service migration
 
-You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the [*Pricing Guide*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf).
+You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 Customers are free to migrate their workloads. You can also request a migration through a Service Request. Migrations may be between:
 
@@ -291,7 +291,7 @@ If during Emergency Maintenance there is a loss of availability to the service, 
 
 The following documents contain more information about UKCloud for VMware and the service options:
 
-- [*UKCloud for VMware Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf)
+- [*UKCloud for VMware Service Definition*](vmw-sd.md)
 
 - [*UKCloud for VMware FAQ*](vmw-faq.md)
 
@@ -305,7 +305,7 @@ The following documents contain more information about UKCloud for VMware and th
 
 - [*Understanding connectivity options in UKCloud for VMware*](vmw-ref-connectivity-options.md)
 
-- [*UKCloud Terms and Conditions*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf)
+- [*UKCloud Terms and Conditions*](../other/other-ref-terms-and-conditions.md)
 
 - [*SLA Definition*](../other/other-ref-sla-definition.md)
 

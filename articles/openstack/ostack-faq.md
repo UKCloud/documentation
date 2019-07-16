@@ -79,8 +79,7 @@ Yes, as this is a true IaaS cloud service, you have complete control and autonom
 
 UKCloud offers a variety of predefined flavours to meet customers' needs. The smallest configuration is 512MiB memory and 1 vCPU. The largest is 440GiB memory with 56 vCPU.
 
-
-Check the service definition for more details on the currently available sizes.
+Check the [*Service Definition*](ostack-sd.md) for more details on the currently available sizes.
 
 ### Does UKCloud for OpenStack offer GPU optimised instances?
 
@@ -190,7 +189,7 @@ We currently do not offer any VPN/Tunnelling as a Service from within the UKClou
 
 ### How much storage do I get with an instance?
 
-The default amount of storage which comes with each instance starts from 10GiB of ephemeral storage and increases as larger instances are consumed. Full details can be found in the *UKCloud for OpenStack Service Definition* ([Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/284790846871896-service-definition-document-2018-05-21-1301.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/296846010254915-service-definition-document-2018-05-21-1300.pdf)).
+The default amount of storage which comes with each instance starts from 10GiB of ephemeral storage and increases as larger instances are consumed. Full details can be found in the [*UKCloud for OpenStack Service Definition*](ostack-sd.md).
 
 All ephemeral storage is fixed and cannot be increased.
 
