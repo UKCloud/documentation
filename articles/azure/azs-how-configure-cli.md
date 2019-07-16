@@ -39,6 +39,16 @@ az --version
 
 You should see the version of Azure CLI and other dependent libraries that are installed on your computer.
 
+## Declare variables
+
+Enter details below to provide values for the variables in the scripts in this article:
+
+| Variable  | Variable description                                      | Input            |
+|-----------------|-----------------------------------------------------------|------------------|
+| Azure Stack DNS Suffix | The DNS suffix for Azure Stack (&lt;region&gt;.&lt;External Domain Name&gt;)  | <form oninput="result.value=dnssuffix.value;result2.value=dnssuffix.value;result3.value=dnssuffix.value;result4.value=dnssuffix.value;result5.value=dnssuffix.value;result6.value=dnssuffix.value;result7.value=dnssuffix.value;result8.value=dnssuffix.value;result9.value=dnssuffix.value" id="dnssuffix" style="display: inline;"><input type="text" id="dnssuffix" name="dnssuffix" style="display: inline;" placeholder="frn00006.azure.ukcloud.com"/></form> |
+| Username               | Your AAD username                                                             | <form oninput="result.value=username.value;result2.value=username.value" id="username" style="display: inline;"><input type="text" id="username" name="username" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"/></form> |
+| Password               | Your AAD password                                                             | <form oninput="result.value=password.value;result2.value=password.value" id="password" style="display: inline;"><input type="text" id="password" name="password" style="display: inline;" placeholder="Password123!"/></form> |
+
 ## Connect to Azure Stack
 
 Use the following steps to connect to Azure Stack:
@@ -47,20 +57,16 @@ Use the following steps to connect to Azure Stack:
 
    To register the *user* environment, use:
 
-      ```azurecli
-      az cloud register \
+      <pre><code class="lang-azurecli hljs">az cloud register \
         -n "AzureStackUser" \
-        --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" \
-        --suffix-storage-endpoint "frn00006.azure.ukcloud.com" \
-        --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" \
-        --endpoint-active-directory-graph-resource-id "https://graph.windows.net/"
-      ```
+        --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result" style="display: inline;">frn00006.azure.ukcloud.com</output>" \
+        --suffix-storage-endpoint "<output form="dnssuffix" name="result2" style="display: inline;">frn00006.azure.ukcloud.com</output>" \
+        --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result3" style="display: inline;">frn00006.azure.ukcloud.com</output>" \
+        --endpoint-active-directory-graph-resource-id "https://graph.windows.net/"</code></pre>
 
    To register the *user* environment - One Liner:
 
-      ```azurecli
-      az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" --suffix-storage-endpoint "frn00006.azure.ukcloud.com" --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/"
-      ```
+      <pre><code class="lang-azurecli hljs">az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result4" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result5" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result6" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/"</code></pre>
 
 2. Set the active environment by using the following commands.
 
@@ -79,11 +85,9 @@ Use the following steps to connect to Azure Stack:
 4. Sign in to your Azure Stack environment by using the `az login` command. You can sign in to the Azure Stack environment either as a user or as a [service principal](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects).
 
    - Sign in as a *user*: You can either specify the username and password directly within the `az login` command or authenticate by using a browser. You have to do the latter if your account has multi-factor authentication enabled.
-   - Example of *username*: Active directory global administrator or user account i.e. username@\<aadtenant\>.onmicrosoft.com or username@domain.com
+   - Example of *username*: Active directory global administrator or user account i.e. username@&lt;aadtenant&gt;.onmicrosoft.com or username@domain.com
 
-      ```azurecli
-      az login -u "<username>@<tenantDomain>" -p '<password>'
-      ```
+      <pre><code class="lang-azurecli hljs">az login -u "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>" -p '<output form="password" name="result" style="display: inline;">Password123!</output>'</code></pre>
 
       > [!NOTE]
       > If your user account has multi-factor authentication enabled, you can use the `az login` command without providing the `-u` parameter. Running the command gives you a URL and a code that you must use to authenticate.
@@ -118,16 +122,14 @@ Use the following steps to connect to Azure Stack:
 
 ## Connect to Azure Stack - Quick Reference Guide
 
-```azurecli
-# Create your environment
-az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" --suffix-storage-endpoint "frn00006.azure.ukcloud.com" --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
+<pre><code class="lang-azurecli hljs"># Create your environment
+az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result7" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result8" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result9" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
 
 # Set your environment
 az cloud set -n AzureStackUser
 
 # Log in to Azure Stack with user credentials
-az login -u "<username>@<tenantDomain>" -p '<password>'
-```
+az login -u "<output form="username" name="result2" style="display: inline;">user@contoso.onmicrosoft.com</output>" -p '<output form="password" name="result2" style="display: inline;">Password123!</output>'</code></pre>
 
 ## Test the connectivity
 
