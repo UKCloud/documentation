@@ -89,6 +89,8 @@ Define the instance size needed to power your application which can be changed t
   
 - r1.large (8vCPU, 64 GiB)
   
+- p1.medium (12vCPU, 128 GiB)
+
 - b1.medium (28vCPU, 220 GiB)
   
 - b1.large (56vCPU, 440 GiB)
