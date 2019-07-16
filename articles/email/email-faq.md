@@ -125,7 +125,7 @@ Yes, mail hygiene is provided via Cisco IronPort® for internet-facing solutions
 
 ## Is there a mail archive solution?
 
-Yes, an archive option is available for existing Email customers at an additional cost per GiB per month. Pricing is available in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf), or via your partner or UKCloud account director.
+Yes, an archive option is available for existing Email customers at an additional cost per GiB per month. Pricing is available via your partner or UKCloud account director.
 
 ## Is there a backup and disaster recovery solution?
 

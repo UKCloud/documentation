@@ -135,19 +135,19 @@ Fast provisioning is enabled only by customer request - by default, all vApps ar
 
 ### What is Dedicated Compute?
 
-Dedicated Compute comprises of physical blades assigned to a customer for their sole use. They're managed using the standard tools and services in the UKCloud Assured cloud platform.
+Dedicated Compute comprises of physical blades assigned to a customer for their sole use. They're managed using the standard tools and services in the UKCloud platform.
 
 Dedicated Compute allows customers to:
 
-- Comply with legacy licensing requirements from software suppliers whose licensing is based on a physical CPU (such as Oracle or desktop OSs)
+- Comply with legacy licensing requirements from software suppliers whose licensing is based on a physical CPU (such as Oracle or desktop operating systems)
 
-- Build bespoke sized VMs on the UKCloud Assured cloud platform
+- Build bespoke sized VMs on the UKCloud platform
 
 Dedicated Compute uses the same storage infrastructure as the shared compute platform
 
-There's a longer deployment lead time for Dedicated Compute, as well as a longer contractual commitment than our shared cloud platform (three months rather than one hour).
+There's a longer deployment lead time for Dedicated Compute, as well as a longer contractual commitment than our shared cloud platform (30 days rather than one hour).
 
-For more details, please see the [*Dedicated Compute v2 Service Definition*](../dedicated-compute/dc-sd.md) available via the Digital Marketplace.
+For more details, please see the [*Dedicated Compute v2 Service Definition*](../dedicated-compute/dc-sd.md).
 
 ### Can I utilise multiple storage types with my VM?
 
@@ -543,7 +543,7 @@ In some rare failure scenarios (such as DDoS or Split Brain) the availability of
 
 The minimum unit of time for use is one hour. Part hours will be rounded up.
 
-Dedicated Compute has a minimum commit of three months.
+Dedicated Compute has a minimum commit of 30 days.
 
 ### What are the charges to transfer data between VMs within the same data centre?
 
