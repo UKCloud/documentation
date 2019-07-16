@@ -143,45 +143,6 @@ If the resource group is created successfully, the previous command outputs the 
 
 ![Resource group create output](https://docs.microsoft.com/en-us/azure/azure-stack/user/media/azure-stack-connect-cli/image1.png)
 
-## Get the virtual machine URNs
-
-Because of the known issue with Image Aliases we have not published the alias.json file yet. Instead please use the following command to obtain relevant image URNs for your VM deployment.
-
-```azurecli
-az vm image list --all --output table
-You are retrieving all the images from server which could take more than a minute. To shorten the wait, provide '--publisher', '--offer' or '--sku'. Partial name search is supported.
-Offer              Publisher               Sku                              Urn                                                                                     Version
------------------  ----------------------  -------------------------------  --------------------------------------------------------------------------------------  -----------------
-UbuntuServer       Canonical               17.10                            Canonical:UbuntuServer:17.10:17.10.201805090                                            17.10.201805090
-WindowsServer      MicrosoftWindowsServer  2016-Datacenter-with-Containers  MicrosoftWindowsServer:WindowsServer:2016-Datacenter-with-Containers:2016.127.20180412  2016.127.20180412
-jenkins            bitnami                 1-650                            bitnami:jenkins:1-650:2.46.21                                                           2.46.21
-CentOS             OpenLogic               7.4                              OpenLogic:CentOS:7.4:7.4.20180118                                                       7.4.20180118
-UbuntuServer       Canonical               14.04.5-LTS                      Canonical:UbuntuServer:14.04.5-LTS:14.04.201805090                                      14.04.201805090
-WindowsServer      MicrosoftWindowsServer  2016-Datacenter-Server-Core      MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core:2016.127.20180412      2016.127.20180412
-CentOS             OpenLogic               6.9                              OpenLogic:CentOS:6.9:6.9.20180118                                                       6.9.20180118
-UbuntuServer       Canonical               18.04-LTS                        Canonical:UbuntuServer:18.04-LTS:18.04.201804262                                        18.04.201804262
-nginxstack         bitnami                 1-9                              bitnami:nginxstack:1-9:1.10.14                                                          1.10.14
-WindowsServer      MicrosoftWindowsServer  2016-Datacenter                  MicrosoftWindowsServer:WindowsServer:2016-Datacenter:2016.127.20180412                  2016.127.20180412
-CentOS             OpenLogic               7.3                              OpenLogic:CentOS:7.3:7.3.20170925                                                       7.3.20170925
-UbuntuServer       Canonical               16.04-LTS                        Canonical:UbuntuServer:16.04-LTS:16.04.201804270                                        16.04.201804270
-WindowsServer      MicrosoftWindowsServer  2012-Datacenter                  MicrosoftWindowsServer:WindowsServer:2012-Datacenter:3.127.20180216                     3.127.20180216
-SQL2016SP1-WS2016  MicrosoftSQLServer      Enterprise                       MicrosoftSQLServer:SQL2016SP1-WS2016:Enterprise:13.1.900302                             13.1.900302
-SQL2016SP1-WS2016  MicrosoftSQLServer      Standard                         MicrosoftSQLServer:SQL2016SP1-WS2016:Standard:13.1.900302                               13.1.900302
-
-```
-
-For example, you can create a CentOS VM using the following command:
-
-```azurecli
-az vm create --resource-group testRG --name testVM --image OpenLogic:CentOS:6.9:6.9.20180105 --admin-username username --admin-password 'Password1234!'
-```
-
-> [!NOTE]
-> You need to create your Resource Group first.
->
-> admin-username and admin-password are given as examples above - these are the credentials which must be used to login to the VM once it is created.
->
-
 ## Known issues
 
 There are some known issues that you must be aware of when using CLI in Azure Stack:
