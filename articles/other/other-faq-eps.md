@@ -67,7 +67,7 @@ Enterprise & Private Sector customers receive the same pricing as our public sec
 
 ### Where do I find pricing?
 
-All of our UKCloud Service Definitions, Pricing Guide and Terms and Conditions are available from our [Knowledge Centre](other-ref-service-definitions.html), and are also linked from the Enterprise & Private Sector section of our [website](https://ukcloud.com/sectors/enterprise-private-sector/). Note that the pricing guide includes some services, security domains and connectivity options that are available only to public sector customers.
+All of our UKCloud Service Definitions, Pricing Guide and Terms and Conditions are available from our [Knowledge Centre](other-ref-service-definitions.md), and are also linked from the Enterprise & Private Sector section of our [website](https://ukcloud.com/sectors/enterprise-private-sector/). Note that the pricing guide includes some services, security domains and connectivity options that are available only to public sector customers.
 
 ### How do I order?
 
