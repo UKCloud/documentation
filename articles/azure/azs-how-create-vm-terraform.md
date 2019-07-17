@@ -750,7 +750,7 @@ resource "azurestack_virtual_machine" "vm" {
   vm_size         = "<output form="vm_size" name="result" style="display: inline;">Standard_D2_v2</output>"
   
   admin_username  = "<output form="vm_username" name="result" style="display: inline;">user</output>"
-  admin_password  = "<output form="vm_password" name="result" style="display: inline;">Password123!</output>"  
+  admin_password  = "<output form="vm_password" name="result" style="display: inline;">Password1234!</output>"  
 </code></pre>
 
 ### Declare the Variables Here in the `variables.tf` File For Use in the Main Script
