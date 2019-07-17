@@ -183,7 +183,7 @@ resource "azurestack_network_security_group" "nsg" {
     access                      = "Allow"
     protocol                    = "tcp"
     source_port_range           = "*"
-    destination_port_range      = "*"
+    destination_port_range      = "3389"
     source_address_prefix       = "*"
     destination_address_prefix  = "*"
   }
@@ -321,7 +321,7 @@ resource "azurestack_network_security_group" "nsg" {
     access                      = "Allow"
     protocol                    = "tcp"
     source_port_range           = "*"
-    destination_port_range      = "*"
+    destination_port_range      = "3389"
     source_address_prefix       = "*"
     destination_address_prefix  = "*"
   }
@@ -478,7 +478,7 @@ resource "azurestack_network_security_group" "nsg" {
     access                      = "Allow"
     protocol                    = "tcp"
     source_port_range           = "*"
-    destination_port_range      = "*"
+    destination_port_range      = "22"
     source_address_prefix       = "*"
     destination_address_prefix  = "*"
   }
@@ -617,7 +617,7 @@ resource "azurestack_network_security_group" "nsg" {
     access                      = "Allow"
     protocol                    = "tcp"
     source_port_range           = "*"
-    destination_port_range      = "*"
+    destination_port_range      = "22"
     source_address_prefix       = "*"
     destination_address_prefix  = "*"
   }
