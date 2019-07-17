@@ -137,7 +137,7 @@ The examples that follow show how to create VM's using Terraform. The code chang
 > [!IMPORTANT]
 > This example is only the `main.tf` file. You will still need the `variables.tf` and `terraform.tfvars` files as shown in the following section
 
-### Defining the Required Azure Stack Resources in the Main.tf File
+### Defining the Required Azure Stack Resources in the `main.tf` File
 
 > [!TIP]
 > Resource attributes such as "name" can also be hardcoded as opposed to through the use of variables, allowing for the use of `main.tf` without the external variable files.
@@ -736,7 +736,7 @@ resource "azurestack_virtual_machine" "vm" {
 
 ***
 
-### Assign Values to the Variables in the 'terraform.tfvars' File Through the Table Found at the Top of the Document
+### Assign Values to the Variables in the `terraform.tfvars` File Through the Table Found at the Top of the Document
 
 <pre><code class="language-hcl">
   arm_endpoint    = "<output form="arm_endpoint" name="result" style="display: inline;">https://management.{region}.{domain}</output>"
