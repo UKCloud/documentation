@@ -45,11 +45,11 @@ You can build a tailored solution to meet your requirements by mixing and matchi
 
 **Workload type.**
 
-Workload type | Resource allocation | Automated Rebalancing
--- -----------|---------------------|----------------------
-ESSENTIAL | Contended | Configured to meet requested performance
-POWER | Uncontended (CPU/GiB) | Pre-emptively optimises performance and availability
-PRIORITY |Uncontended (CPU/GiB) | Configured to reduce workload movement around the platform, reducing workload disruption
+Workload type | Resource allocation   | Automated Rebalancing
+--------------|-----------------------|----------------------
+ESSENTIAL     | Contended             | Configured to meet requested performance
+POWER         | Uncontended (CPU/GiB) | Pre-emptively optimises performance and availability
+PRIORITY      | Uncontended (CPU/GiB) | Configured to reduce workload movement around the platform, reducing workload disruption
 
 **VM size.** There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through vCloud Director.
 
