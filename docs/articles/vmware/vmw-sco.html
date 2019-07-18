@@ -107,11 +107,32 @@
 <h2 id="service-options">Service options</h2>
 <p>You can build a tailored solution to meet your requirements by mixing and matching service options. The choice does not lock you to one service or size, allowing you to scale resources up or down as your requirements change.</p>
 <p><strong>Workload type.</strong></p>
-<p>Workload type | Resource allocation | Automated Rebalancing
--- -----------|---------------------|----------------------
-ESSENTIAL | Contended | Configured to meet requested performance
-POWER | Uncontended (CPU/GiB) | Pre-emptively optimises performance and availability
-PRIORITY |Uncontended (CPU/GiB) | Configured to reduce workload movement around the platform, reducing workload disruption</p>
+<table>
+<thead>
+<tr>
+<th>Workload type</th>
+<th>Resource allocation</th>
+<th>Automated Rebalancing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESSENTIAL</td>
+<td>Contended</td>
+<td>Configured to meet requested performance</td>
+</tr>
+<tr>
+<td>POWER</td>
+<td>Uncontended (CPU/GiB)</td>
+<td>Pre-emptively optimises performance and availability</td>
+</tr>
+<tr>
+<td>PRIORITY</td>
+<td>Uncontended (CPU/GiB)</td>
+<td>Configured to reduce workload movement around the platform, reducing workload disruption</td>
+</tr>
+</tbody>
+</table>
 <p><strong>VM size.</strong> There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through vCloud Director.</p>
 <p>Full details of the available service options are outlined in the <a href="vmw-sd.html"><em>Service Definition</em></a>.</p>
 <h2 id="storage-options">Storage options</h2>
