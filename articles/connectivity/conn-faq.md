@@ -39,7 +39,7 @@ We provide an SLA for availability of our core services such as UKCloud for VMwa
 
 ## How is resiliency managed on the external networks?
 
-Networks such as the HSCN and Internet are brought into UKCloud via diverse routes to ensure resilience of the connections. In the case of internet connectivity, it also uses diverse supplier networks to ensure supplier resilience. Once within the UKCloud environment, we use Border Gateway Protocols (BGP) and our private inter-DC fibre networks to triangulate the network connections. This means that in the event of an issue with one of networks within a single DC, we can reroute external connectivity via the second DC.
+Networks such as the internet and HSCN are brought into UKCloud via diverse routes to ensure resilience of the connections. In the case of internet connectivity, we also use diverse supplier networks to ensure supplier resilience. Once within the UKCloud environment, we use Border Gateway Protocols (BGP) and our private inter-DC fibre networks to triangulate the network connections. This means that in the event of an issue with one of the networks within a single DC, we can reroute external connectivity via the second DC.
 
 ## Why doesn't the UKCloud SLA extend to external connectivity such as PSN and the internet?
 
