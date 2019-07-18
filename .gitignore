@@ -37,6 +37,7 @@ _exported_templates/
 *.sln.ide
 *.cache
 *.sln.metaproj
+*.tf
 *.tfstate
 .gitattributes
 .settings
