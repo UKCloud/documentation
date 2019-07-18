@@ -11,8 +11,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: UKCloud for VMware
-toc_fullpath: About/vmware-home.md
-toc_mdlink: vmware-home.md
+toc_fullpath: About/vmw-home.md
+toc_mdlink: vmw-home.md
 ---
 
 # UKCloud for VMware
