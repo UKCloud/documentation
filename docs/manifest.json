@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-home.html",
-          "hash": "BqHBalcisdJi4H9p+lefCQ=="
+          "hash": "feR2IBVeDj9Vol/mwadcDg=="
         }
       },
       "is_incremental": false,
@@ -5127,7 +5127,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-home.html",
-          "hash": "KRXI8yRdkGQoIkAM7Y1WIw=="
+          "hash": "0SU2KFq2nD5HKX2NygKn2A=="
         }
       },
       "is_incremental": false,
@@ -6558,7 +6558,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-home.html",
-          "hash": "5l6fT15dh6mIoUxtKDOjgQ=="
+          "hash": "GtXYJZDQF0QsVlIVsgc20Q=="
         }
       },
       "is_incremental": false,
@@ -7267,7 +7267,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-home.html",
-          "hash": "IPJqbq+zsHiaR1ofKx/APA=="
+          "hash": "4YPPhn6irC1USUXGBCfLrg=="
         }
       },
       "is_incremental": false,
@@ -16428,7 +16428,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-home.html",
-          "hash": "5T3tcWIiUID28FJNClkYVQ=="
+          "hash": "eroxYqoflNddXWd/1Ch8VQ=="
         }
       },
       "is_incremental": false,
