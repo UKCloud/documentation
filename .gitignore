@@ -19,6 +19,7 @@ target/
 .vscode/
 .vs/
 .DS_Store
+.terraform
 _exported_templates/
 
 ###############
