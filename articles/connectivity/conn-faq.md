@@ -37,6 +37,10 @@ No. Our cloud platforms are designed so that all traffic either originates or te
 
 We provide an SLA for availability of our core services such as UKCloud for VMware. We cannot provide an SLA on external services as they are outside our control. UKCloud can only provide assurance associated with the native SLAs that are offered as part of the core PSN framework.
 
+## How is resiliency managed on the external networks?
+
+Networks such as the HSCN and Internet are brought into UKCloud via diverse routes to ensure resilience of the connections. In the case of internet connectivity, it also uses diverse supplier networks to ensure supplier resilience. Once within the UKCloud environment, we use Border Gateway Protocols (BGP) and our private inter-DC fibre networks to triangulate the network connections. This means that in the event of an issue with one of networks within a single DC, we can reroute external connectivity via the second DC.
+
 ## Why doesn't the UKCloud SLA extend to external connectivity such as PSN and the internet?
 
 The UKCloud SLA provides our customers with assurance that our platform is designed, engineered and operated to deliver high levels of availability and uptime. We have invested in skilled and experienced people, ISO 20000-certified IT service management processes and best-in-class technology - all of which underpin our cloud services and allow us to deliver high availability.
