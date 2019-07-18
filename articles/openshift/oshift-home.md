@@ -21,7 +21,7 @@ UKCloud for OpenShift delivers a secure, private deployment of Red Hat&reg; Open
 
 ## Let's get started
 
-First, take a look at our [*Getting Started Guide*](oshift-gs.md) to learn the basics, then you can:
+First, take a look at our [Getting Started Guide](oshift-gs.md) to learn the basics, then you can:
 
 <div class="row">
   <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/openshift/oshift-how-expand-persistent-vols.html">Expand persistent volumes</a></p></ul></div>
@@ -33,13 +33,13 @@ First, take a look at our [*Getting Started Guide*](oshift-gs.md) to learn the b
 ## Other resources
 
 <div class="row">
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/openshift/oshift-sd.md">Service Definition</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/openshift/oshift-sd.html">Service Definition</a></p></ul></div>
   <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></p></ul></div>
   <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/other/other-ref-services-by-region.html">Services by region</a></p></ul></div>
 </div>
 
 <div class="row">
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/openshift/oshift-sco.md">Service Scope</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/openshift/oshift-sco.html">Service Scope</a></p></ul></div>
   <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></p></ul></div>
   <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html">SLA definition</a></p></ul></div>
 </div>
