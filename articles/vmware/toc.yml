@@ -1,3 +1,7 @@
+- name: About
+  items:
+  - name: UKCloud for VMware
+    href: vmware-home.md
 - name: FAQs
   items:
   - name: Journaling Protection FAQs

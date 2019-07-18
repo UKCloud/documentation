@@ -65,6 +65,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-home.html",
+          "hash": "BqHBalcisdJi4H9p+lefCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-add-managed-disks-portal.md",
       "output": {
         ".html": {
@@ -1702,7 +1714,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "gTREKC1jfChPYkmcU6pfNA=="
+          "hash": "vnxthM+ijiL8cVwQ6J1Gyg=="
         }
       },
       "is_incremental": false,
@@ -5111,6 +5123,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-home.html",
+          "hash": "KRXI8yRdkGQoIkAM7Y1WIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-how-add-domains-proxy-whitelist.md",
       "output": {
         ".html": {
@@ -5343,7 +5367,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "jET4EOFjtLtaQH9qO78rqQ=="
+          "hash": "+U4Kjb0hJ9Tn/xSD/K91Ug=="
         }
       },
       "is_incremental": false,
@@ -6530,6 +6554,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-home.html",
+          "hash": "5l6fT15dh6mIoUxtKDOjgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-how-cloud-config.md",
       "output": {
         ".html": {
@@ -6810,7 +6846,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "5oEa84cEsBuCF7fYLbHrHw=="
+          "hash": "mlBuCUXtvjXqJC5z20VThg=="
         }
       },
       "is_incremental": false,
@@ -7227,6 +7263,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/oracle/orcl-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/oracle/orcl-home.html",
+          "hash": "IPJqbq+zsHiaR1ofKx/APA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/oracle/orcl-how-build-vm.md",
       "output": {
         ".html": {
@@ -7363,7 +7411,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/toc.html",
-          "hash": "/yGcvMqaJEebJh0Kd9OFYw=="
+          "hash": "My0UNapjllhGRwSF/8kdZA=="
         }
       },
       "is_incremental": false,
@@ -16255,12 +16303,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/vmware/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "jUurkV14ZvkVRqlYL6vcKw=="
+          "hash": "cYoaLBWSGh/p5KJMZFszkA=="
         }
       },
       "is_incremental": false,
@@ -16369,6 +16420,18 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
           "hash": "U8d2NEm+aLzQWC1nLFBANQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-home.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-home.html",
+          "hash": "5T3tcWIiUID28FJNClkYVQ=="
         }
       },
       "is_incremental": false,
@@ -17675,7 +17738,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "KIAZG1tp0xKtaKMnsATGbg=="
+          "hash": "0oeXjJcKEwo2lCs13+80dQ=="
         }
       },
       "is_incremental": false,
@@ -17698,7 +17761,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "jhKl7rScv9X+veAGdnUHmA=="
+          "hash": "4YovjDfBAGbV9eSr2vJAPg=="
         }
       },
       "is_incremental": false,
@@ -17716,13 +17779,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -17733,7 +17789,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 403,
+          "total_file_count": 408,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }
