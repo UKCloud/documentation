@@ -96,7 +96,7 @@ Use the following steps to connect to Azure Stack:
 
       ```azurecli
       az login \
-        --tenant <Azure Active Directory Tenant name. For example: myazurestack.onmicrosoft.com> \
+        --tenant <Azure Active Directory Tenant name. For example: contoso.onmicrosoft.com> \
         --service-principal \
         -u <Application Id of the Service Principal> \
         -p <Key generated for the Service Principal>

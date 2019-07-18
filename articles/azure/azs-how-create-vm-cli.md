@@ -34,6 +34,7 @@ When you've created the resource group, you must choose which image template to 
 
 ```azurecli
 az vm image list --all --output table
+
 You are retrieving all the images from server which could take more than a minute. To shorten the wait, provide '--publisher', '--offer' or '--sku'. Partial name search is supported.
 Offer                Publisher               Sku                                   Urn                                                                                          Version
 -------------------  ----------------------  ------------------------------------  -------------------------------------------------------------------------------------------  -----------------

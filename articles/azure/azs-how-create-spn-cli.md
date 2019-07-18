@@ -94,7 +94,7 @@ az cloud set -n AzureStackUser
 az login -u "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>" -p '<output form="password" name="result" style="display: inline;">Password123!</output>'
 
 # Create Service Principal Name
-az ad sp create-for-rbac --name "<output form="spnname" name="result" style="display: inline;">ServicePrincipalName</output>" --password '<output form="spnpass" name="result" style="display: inline;">Password1234!</output>' --role="Owner"
+az ad sp create-for-rbac --name "<output form="spnname" name="result" style="display: inline;">ServicePrincipalName</output>" --role="Owner"
 
 # This command will output five values
 #  {
