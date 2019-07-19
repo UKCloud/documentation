@@ -20,7 +20,7 @@ toc_mdlink: azs-ref-known-issues.md
 
 ## Overview
 
-This guide describes some of the issues you may encounter when using UKCloud for Microsoft Azure. More known issues can be found [here](https://docs.microsoft.com/en-gb/azure-stack/operator/azure-stack-release-notes-known-issues-1904).
+This guide describes some of the issues you may encounter when using UKCloud for Microsoft Azure. More known issues can be found [here](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-release-notes-known-issues-1906).
 
 ## Diagnostics do not work for Linux VMs
 
