@@ -50,13 +50,7 @@ To configure a load balancer:
 
 7. Click **Save changes**.
 
-- [How to configure a load balancer](#how-to-configure-a-load-balancer)
-  - [Overview](#overview)
-  - [Configuring a load balancer](#configuring-a-load-balancer)
-    - [Configuring a pool server](#configuring-a-pool-server)
-    - [Configuring a virtual server](#configuring-a-virtual-server)
-  - [Next steps](#next-steps)
-  - [Feedback](#feedback)
+8. You need to configure two components of the load balancing service for it to function correctly: [pool servers](#configuring-a-pool-server) and [virtual servers](#configuring-a-virtual-server).
 
 ### Configuring a pool server
 
