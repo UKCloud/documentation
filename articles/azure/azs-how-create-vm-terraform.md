@@ -51,16 +51,16 @@ In order to authenticate with Terraform you will need to have a valid Service Pr
 
 The process of authentication can be handled in one of two ways, either as **Environment Variables** or in the **Provider Block**.
 
-[Environment Variables Option](#example-of-environment-variables) - you can create your **terraform plan** by putting only the plan itself into `example.tf` and then keep `variables.tf` separate. You have to declare the actual values in the `terraform.tfvars` file. This is the file that you will need to populate with your actual credential details.
+[Environment Variables Option](#example-of-how-variables-are-used-in-terraform) - you can create your **terraform plan** by putting only the plan itself into `main.tf` and then keep `variables.tf` separate. You have to declare the actual values in the `terraform.tfvars` file. This is the file that you will need to populate with your actual credential details.
 
 > [!NOTE]
-> You can also put the content of `variables.tf` in the `example.tf` at the top of the file.
+> You can also put the content of `variables.tf` in the `main.tf` at the top of the file.
 
-[Provider Block Option](#example-of-provider-block) - you can create your **terraform plan** by putting everything in one `example.tf` file, which then contains your Provider and variables settings explicitly in said plan.
+[Provider Block Option](#example-of-provider-block) - you can create your **terraform plan** by putting everything in one `main.tf` file, which then contains your Provider and variables settings explicitly in said plan.
 
 Official [Variables Guide](https://www.terraform.io/intro/getting-started/variables.html)
 
-### Example of How Variables are Used in Terraform
+### Example of how variables are used in Terraform
 
 #### `variables.tf`
 
@@ -97,7 +97,7 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
 
 ### Example of Provider Block
 
-- `example.tf`
+#### `main.tf`
 
   ```hcl
   # Configure the Azure Stack Provider
