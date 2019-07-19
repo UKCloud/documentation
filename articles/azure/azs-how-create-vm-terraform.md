@@ -109,7 +109,6 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
   tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
   ```
 
-
 #### Argument Reference
 
 - `arm_endpoint` - The Azure Resource Manager API Endpoint for your Azure Stack instance. This will be **`https://management.{region}.{domain}`**.
