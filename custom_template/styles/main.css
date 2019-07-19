@@ -514,6 +514,7 @@ mark{
   }
 
   .product-banner {
+    text-align: center;
     margin-left: 0;
   }
 }
