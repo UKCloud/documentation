@@ -126,7 +126,7 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
 
 ## Creating a VM
 
-The examples that follow show how to create VM's using Terraform. The code changes depending on whether you are creating a VM with an unmanaged disk or a managed disk. Select the the type of disk you want to use to update the examples below with the appropriate code.
+The examples that follow show how to create VMs using Terraform. The code changes depending on whether you are creating a VM with an unmanaged disk or a managed disk. Select the the type of disk you want to use to update the examples below with the appropriate code.
 
 ## Declare Variables
 
