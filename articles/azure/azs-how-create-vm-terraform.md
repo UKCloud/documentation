@@ -797,7 +797,7 @@ resource "azurestack_virtual_machine" "vm" {
 
   variable "admin_password" {
     type     = "string"
-    default  = "Password1234!"
+    default  = "Password123!"
   }
 
   variable "vm_count" {
@@ -810,7 +810,7 @@ resource "azurestack_virtual_machine" "vm" {
 
   variable "vm_size" {
     type    = "string"
-    default = "Standard_D2_v2"
+    default = "Standard_DS2_v2"
   }
 </code></pre>
 
