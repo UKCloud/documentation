@@ -51,12 +51,27 @@ In order to authenticate with Terraform you will need to have a valid Service Pr
 
 The process of authentication can be handled in one of two ways, either as **Environment Variables** or in the **Provider Block**.
 
-[Environment Variables Option](#example-of-how-variables-are-used-in-terraform) - you can create your **terraform plan** by putting only the plan itself into `main.tf` and then keep `variables.tf` separate. You have to declare the actual values in the `terraform.tfvars` file. This is the file that you will need to populate with your actual credential details.
+[Environment Variables Option](#example-of-how-variables-are-used-in-terraform) - you can create your **Terraform plan** by putting only the plan itself into `main.tf` and then keeping `variables.tf` separate. You have to declare the actual values in the `terraform.tfvars` file. This is the file that you will need to populate with your actual credential details.
 
 > [!NOTE]
-> You can also put the content of `variables.tf` in the `main.tf` at the top of the file.
-
-[Provider Block Option](#example-of-provider-block) - you can create your **terraform plan** by putting everything in one `main.tf` file, which then contains your Provider and variables settings explicitly in said plan.
+> You can also put the content of `variables.tf`  at the top of the `main.tf` file.
+>
+> [Provider Block Option](#example-of-provider-block) - you can create your **Terraform plan** by putting everything in one `main.tf` file, which then contains your Provider and variables' settings explicitly in said plan.
+> ### Example of Provider Block:
+>
+> #### `main.tf`
+>
+>  ```hcl
+>  # Configure the Azure Stack Provider
+>  provider "azurestack" {
+>   arm_endpoint    = "https://management.{region}.{domain}"
+>   subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+>   client_id       = "{applicationId}"
+>   client_secret   = "{applicationPassword}"
+>   tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+> }
+> Rest of the file (...)
+> ```
 
 Official [Variables Guide](https://www.terraform.io/intro/getting-started/variables.html)
 
@@ -95,20 +110,6 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
   tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
   ```
 
-### Example of Provider Block
-
-#### `main.tf`
-
-  ```hcl
-  # Configure the Azure Stack Provider
-  provider "azurestack" {
-    arm_endpoint    = "https://management.{region}.{domain}"
-    subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
-    client_id       = "{applicationId}"
-    client_secret   = "{applicationPassword}"
-    tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
-  }
-  ```
 
 #### Argument Reference
 
@@ -841,7 +842,7 @@ suggested below.
 
 Terraform has been successfully initialized!
 
-You may now begin working with Terraform. Try running "terraform plan" to see
+You may now begin working with Terraform. Try running "Terraform plan" to see
 any changes that are required for your infrastructure. All Terraform commands
 should now work.
 
