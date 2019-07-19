@@ -109,7 +109,7 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
   tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
   ```
 
-#### Argument Reference
+#### Argument reference
 
 - `arm_endpoint` - The Azure Resource Manager API Endpoint for your Azure Stack instance. This will be **`https://management.{region}.{domain}`**.
 
@@ -128,7 +128,7 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
 
 The examples that follow show how to create VMs using Terraform. The code changes depending on whether you are creating a VM with an unmanaged disk or a managed disk. Select the the type of disk you want to use to update the examples below with the appropriate code.
 
-## Declare Variables
+## Declare variables
 
 | Variable Name        | Variable Description                                                                                                        | Input                                                        |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
@@ -151,7 +151,7 @@ The examples that follow show how to create VMs using Terraform. The code change
 > [!IMPORTANT]
 > This example is only the `main.tf` file. You will still need the `variables.tf` and `terraform.tfvars` files as shown in the following section
 
-### Defining the Required Azure Stack Resources in the `main.tf` File
+### Defining the required Azure Stack resources in the `main.tf` file
 
 > [!TIP]
 > Resource attributes such as "name" can also be hardcoded as opposed to through the use of variables, allowing for the use of `main.tf` without the external variable files.
