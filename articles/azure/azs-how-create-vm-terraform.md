@@ -257,7 +257,7 @@ resource "azurestack_virtual_machine" "vm" {
     managed_disk_type   = "Standard_LRS"
     create_option       = "FromImage"
   }
-  
+
   # Optional data disks
   storage_data_disk {
     name                = "vm-${count.index + 1}-Data-Disk"
@@ -414,7 +414,7 @@ resource "azurestack_virtual_machine" "vm" {
     caching             = "ReadWrite"
     create_option       = "FromImage"
   }
-  
+
   # Optional data disks
   storage_data_disk {
     name                = "vm-${count.index + 1}-Data-Disk"
@@ -552,7 +552,7 @@ resource "azurestack_virtual_machine" "vm" {
     managed_disk_type   = "Standard_LRS"
     create_option       = "FromImage"
   }
-  
+
   # Optional data disks
   storage_data_disk {
     name                = "vm-${count.index + 1}-Data-Disk"
@@ -710,7 +710,7 @@ resource "azurestack_virtual_machine" "vm" {
     caching             = "ReadWrite"
     create_option       = "FromImage"
   }
-  
+
   # Optional data disks
   storage_data_disk {
     name                = "vm-${count.index + 1}-Data-Disk"
@@ -748,9 +748,9 @@ resource "azurestack_virtual_machine" "vm" {
   vm_count        = <output form="vm_count" name="result" style="display: inline;">1</output>
   vm_image_string = "<output form="vm_image" name="result" style="display: inline;">OpenLogic/CentOS/7.5/latest</output>"
   vm_size         = "<output form="vm_size" name="result" style="display: inline;">Standard_DS2_v2</output>"
-  
+
   admin_username  = "<output form="vm_username" name="result" style="display: inline;">user</output>"
-  admin_password  = "<output form="vm_password" name="result" style="display: inline;">Password123!</output>"  
+  admin_password  = "<output form="vm_password" name="result" style="display: inline;">Password123!</output>"
 </code></pre>
 
 ### Declare the Variables Here in the `variables.tf` File For Use in the Main Script
@@ -787,7 +787,7 @@ resource "azurestack_virtual_machine" "vm" {
   }
 
   variable "vm_count" {
-    default  = 1  
+    default  = 1
   }
 
   variable "vm_image_string" {
