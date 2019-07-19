@@ -792,7 +792,6 @@ resource "azurestack_virtual_machine" "vm" {
 
   variable "vm_image_string" {
     type    = "string"
-    default = "Canonical/UbuntuServer/16.04-LTS/latest"
   }
 
   variable "vm_size" {
