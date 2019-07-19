@@ -837,9 +837,9 @@ commands will detect it and remind you to do so if necessary.
 
 ```powershell
 # Verify your plan
-.\terraform.exe plan -var-file=C:\<DirectoryName>\testvars.tfvars
+.\terraform.exe plan -var-file=C:\<DirectoryName>\terraform.tfvars
 # Apply your plan
-.\terraform.exe apply -var-file=C:\<DirectoryName>\testvars.tfvars
+.\terraform.exe apply -var-file=C:\<DirectoryName>\terraform.tfvars
 ```
 
 > [!NOTE]
