@@ -23,7 +23,7 @@ This article outlines various system requirements for UKCloud services.
 
 ## Browser requirements
 
-To get the best interaction with the UKCloud platform, it's important to use a browser that is compatible with all aspects of the services with which you interact.
+To get the best interaction with the UKCloud platform, it's important to use a browser that's compatible with all aspects of the services with which you interact.
 
 ### UKCloud for VMware
 
@@ -35,7 +35,7 @@ To get the best interaction with the UKCloud platform, it's important to use a b
 
 #### vCloud Director 9.7
 
-For UKCloud for VMware, vCloud Director 9.7 is compatible with the current and last major browser revisions. Version 9.7 of vCloud Director was tested by VMware and supports:
+vCloud Director 9.7 is compatible with the current and last major browser revisions. Version 9.7 of vCloud Director was tested by VMware and supports:
 
 - Google Chrome 72.0.3626.109
 
@@ -47,7 +47,7 @@ For UKCloud for VMware, vCloud Director 9.7 is compatible with the current and l
 
 #### vCloud Director 9.1
 
-For UKCloud for VMware, vCloud Director 9.1 is compatible with many current and last major browser revisions. Version 9.1 of vCloud Director was tested by VMware and supports:
+vCloud Director 9.1 is compatible with many current and last major browser revisions. Version 9.1 of vCloud Director was tested by VMware and supports:
 
 - Google Chrome 64
 
@@ -88,7 +88,7 @@ For the most up to date list of supported browsers for Email and Collaboration a
 
 ## Software versions
 
-It is your responsibility to ensure that you are using supported versions of any software that you install in your environment on the UKCloud platform. If you encounter issues that relate to old and out-of-support versions of software, although we'll make our best efforts to assist, we cannot guarantee that we'll be able to resolve those issues.
+It is your responsibility to ensure that you are using supported versions of any software that you install in your environment on the UKCloud platform. If you encounter issues that relate to old and out-of-support versions of software, although we'll make our best efforts to assist, we cannot guarantee that we'll be able to resolve those issues. We reserve the right to request that any out-of-support software be updated before working on support tickets.
 
 ## Feedback
 
