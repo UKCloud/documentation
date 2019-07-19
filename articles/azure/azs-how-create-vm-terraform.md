@@ -750,7 +750,7 @@ resource "azurestack_virtual_machine" "vm" {
 
 ***
 
-### Assign Values to the Variables in the `terraform.tfvars` File Through the Table Found at the Top of the Document
+### Assign values to the variables in the `terraform.tfvars` file through the table Found at the top of the document
 
 <pre><code class="language-hcl">
   arm_endpoint    = "<output form="arm_endpoint" name="result" style="display: inline;">https://management.{region}.{domain}</output>"
@@ -767,7 +767,7 @@ resource "azurestack_virtual_machine" "vm" {
   admin_password  = "<output form="vm_password" name="result" style="display: inline;">Password123!</output>"
 </code></pre>
 
-### Declare the Variables Here in the `variables.tf` File For Use in the Main Script
+### Declare the variables here in the `variables.tf` file for use in the main script
 
 <pre><code class="language-hcl">
   variable "arm_endpoint" {
@@ -814,7 +814,7 @@ resource "azurestack_virtual_machine" "vm" {
   }
 </code></pre>
 
-## How to Execute a Terraform Plan
+## How to execute a Terraform plan
 
 > [!TIP]
 > Terraform by default scans your execution directory and looks for all `tf` files.
