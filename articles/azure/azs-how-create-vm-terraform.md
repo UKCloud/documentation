@@ -90,9 +90,24 @@ Official [Variables Guide](https://www.terraform.io/intro/getting-started/variab
   # Configure the Azure Stack Provider
   arm_endpoint    = "https://management.{region}.{domain}"
   subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
-  client_id       = "{applicationId}@{tenantDomain}"
+  client_id       = "{applicationId}"
   client_secret   = "{applicationSecret}"
   tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+  ```
+
+### Example of Provider Block
+
+- `example.tf`
+
+  ```hcl
+  # Configure the Azure Stack Provider
+  provider "azurestack" {
+    arm_endpoint    = "https://management.{region}.{domain}"
+    subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+    client_id       = "{applicationId}"
+    client_secret   = "{applicationPassword}"
+    tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+  }
   ```
 
 #### Argument Reference
@@ -120,7 +135,7 @@ The examples that follow show how to create VM's using Terraform. The code chang
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
 | \$arm_endpoint       | The Azure Resource Manager API Endpoint for your Azure Stack instance. This will be https://management.{region}.{domain}.   | <form oninput="result.value=arm_endpoint.value" id="arm_endpoint" style="display:inline;"><input type="text" id="arm_endpoint" name="arm_endpoint" style="display:inline;" placeholder="https://management.{region}.{domain}"/></form> |
 | \$subscription_id    | The ID of your Azure Stack Subscription.    | <form oninput="result.value=subscription_id.value" id="subscription_id" style="display:inline;"><input type="text" id="subscription_id" name="subscription_id" style="display:inline;" placeholder="xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"/></form> |
-| \$client_id    | The Application GUID that you configured your Service Principal Name (SPN) to use.    | <form oninput="result.value=client_id.value" id="client_id" style="display:inline;"><input type="text" id="client_id" name="client_id" style="display:inline;" placeholder="{applicationId}@{tenantDomain}"/></form> |
+| \$client_id    | The Application GUID that you configured your Service Principal Name (SPN) to use.    | <form oninput="result.value=client_id.value" id="client_id" style="display:inline;"><input type="text" id="client_id" name="client_id" style="display:inline;" placeholder="{applicationId}"/></form> |
 | \$client_secret    | The Application password that you configured your Service Principal Name (SPN) to use.    | <form oninput="result.value=client_secret.value" id="client_secret" style="display:inline;"><input type="text" id="client_secret" name="client_secret" style="display:inline;" placeholder="{applicationPassword}"/></form> |
 | \$tenant_id    | The tenant ID of your Azure Active Directory tenant domain. It can either be the actual GUID or your Azure Active Directory tenant domain name. | <form oninput="result.value=tenant_id.value" id="tenant_id" style="display:inline;"><input type="text" id="tenant_id" name="tenant_id" style="display:inline;" placeholder="xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"/></form> |
 | \$vm_count           | The number of VM's you wish to create    | <form oninput="result.value=vm_count.value" id="vm_count" style="display:inline;"><input type="text" id="vm_count" name="vm_count" style="display:inline;" placeholder="1"/></form> |
@@ -741,7 +756,7 @@ resource "azurestack_virtual_machine" "vm" {
 <pre><code class="language-hcl">
   arm_endpoint    = "<output form="arm_endpoint" name="result" style="display: inline;">https://management.{region}.{domain}</output>"
   subscription_id = "<output form="subscription_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
-  client_id       = "<output form="client_id" name="result" style="display: inline;">{applicationId}@{tenantDomain}</output>"
+  client_id       = "<output form="client_id" name="result" style="display: inline;">{applicationId}</output>"
   client_secret   = "<output form="client_secret" name="result" style="display: inline;">{applicationPassword}</output>"
   tenant_id       = "<output form="tenant_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
 
