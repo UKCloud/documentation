@@ -3,8 +3,8 @@ title: UKCloud Knowledge Centre guidelines | UKCloud Ltd
 description: Provides guidelines for what to consider when creating and editing Knowledge Centre articles
 services: other
 author: Sue Highmoor
-reviewer:
-lastreviewed: 27/07/2018 17:59:14
+reviewer: Sue Highmoor
+lastreviewed: 19/07/2019
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
