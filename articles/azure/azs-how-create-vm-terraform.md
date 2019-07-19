@@ -56,26 +56,25 @@ The process of authentication can be handled in one of two ways, either as **Env
 > [!NOTE]
 > You can also put the content of `variables.tf`  at the top of the `main.tf` file.
 >
-> [Provider Block Option](#example-of-provider-block) - you can create your **Terraform plan** by putting everything in one `main.tf` file, which then contains your Provider and variables' settings explicitly in said plan.
-> ### Example of Provider Block:
->
-> #### `main.tf`
->
->  ```hcl
->  # Configure the Azure Stack Provider
->  provider "azurestack" {
->   arm_endpoint    = "https://management.{region}.{domain}"
->   subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
->   client_id       = "{applicationId}"
->   client_secret   = "{applicationPassword}"
->   tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
-> }
-> Rest of the file (...)
-> ```
+[Provider Block Option](#example-of-provider-block) - you can create your **Terraform plan** by putting everything in one `main.tf` file, which then contains your Provider and variables' settings explicitly in said plan.
+
+### Example of Provider Block:
+#### `main.tf`
+ ```hcl
+ # Configure the Azure Stack Provider
+ provider "azurestack" {
+  arm_endpoint    = "https://management.{region}.{domain}"
+  subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+  client_id       = "{applicationId}"
+  client_secret   = "{applicationPassword}"
+  tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+}
+Rest of the file (...)
+```
 
 Official [Variables Guide](https://www.terraform.io/intro/getting-started/variables.html)
 
-### Example of how variables are used in Terraform
+### Example of how variables are used in Terraform:
 
 #### `variables.tf`
 
