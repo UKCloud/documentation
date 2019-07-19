@@ -87,6 +87,8 @@ foreach ($Article in $Articles) {
         Link         = $UrlPrefix + ($Article.DirectoryName).split("\")[-1] + "/" + ($Article.Name -replace ".md", ".html")
         LastModified = [String](Get-Date -Date (git -C $DocumentationFolder log -1 --format="%aD" $Article.FullName) -Format "dd/MM/yyyy HH:mm:ss")
         CreationDate = [String](Get-Date -Date (git -C $DocumentationFolder log --follow --format="%aD" -- $Article.FullName | tail -1) -Format "dd/MM/yyyy HH:mm:ss")
+        LastReviewed = ($Content | Select-String -Pattern "lastreviewed") -replace "lastreviewed: ", ""
+        Reviewer = ($Content | Select-String -Pattern "reviewer") -replace "reviewer: ", ""
     }
     $InfoArray += $ArticleInfo
 }
