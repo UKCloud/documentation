@@ -39,6 +39,7 @@ _exported_templates/
 *.sln.metaproj
 *.tf
 *.tfstate
+*.tfvars
 .gitattributes
 .settings
 log.txt
