@@ -3,8 +3,8 @@ title: How to configure the Azure Stack user's Azure CLI environment | Based on 
 description: Learn how to use the cross-platform command-line interface (CLI) to manage and deploy resources on Azure Stack
 services: azure-stack
 author: Chris Black
-reviewer: BaileyLawson
-lastreviewed: 14/03/2019 17:00:00
+reviewer: Alexa Evans
+lastreviewed: 08/07/2019 16:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -31,7 +31,7 @@ In this article, we will guide you through the process of installing and using t
 
 ## Install CLI
 
-Sign in to your development workstation and install CLI. Azure Stack requires the 2.0 version of Azure CLI. You can install that by using the steps described in the [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli) article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:
+Sign in to your development workstation and install CLI. Azure Stack requires at least version 2.0 of Azure CLI. You can install that by using the steps described in the [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli) article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:
 
 ```azurecli
 az --version
@@ -49,11 +49,11 @@ Use the following steps to connect to Azure Stack:
 
       ```azurecli
       az cloud register \
-        -n AzureStackUser \
+        -n "AzureStackUser" \
         --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" \
         --suffix-storage-endpoint "frn00006.azure.ukcloud.com" \
         --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" \
-        --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" \
+        --endpoint-active-directory-graph-resource-id "https://graph.windows.net/"
       ```
 
    To register the *user* environment - One Liner:
@@ -192,4 +192,4 @@ There are some known issues that you must be aware of when using CLI in Azure St
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

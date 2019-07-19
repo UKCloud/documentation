@@ -91,11 +91,12 @@ Yes, as this is a true IaaS cloud service, you have complete control and autonom
 
 ### What VM sizes are available?
 
-UKCloud offers a variety of 'T-shirt sizes' to meet customers' needs. The smallest configuration is 512MiB and 1 vCPU. The largest is 128GiB memory with 12 vCPU.
+UKCloud offers a variety of 'T-shirt sizes' to meet customers' needs. The smallest configuration is 0.5GiB and 1 vCPU. The largest is 128GiB memory with 12 vCPU.
 
-Check the UKCloud for VMware Service Definition for more details on the currently available sizes.
+Check the [*UKCloud for VMware Service Definition*](vmw-sd.md) for more details on the currently available sizes.
 
-Dedicated Compute provides the flexibility to build custom-sized VMs.
+> [!NOTE]
+> UKCloud for VMware does not currently support custom-sized VMs outside the 'T-shirt sizes', however if you require more flexibillity with regards to VM sizes, we advise the use of our other multi-cloud technologies such as OpenStack, Oracle or Azure. Alternatively, you may consider the use of Dedicated Compute v2 to build custom-sized VMs.
 
 ### Can I resize a VM?
 
@@ -119,7 +120,7 @@ For a transfer time calculator, go to: <http://techinternets.com/copy_calc?do>
 
 If you use FTPS to upload data to or download it from your environment, you can transfer up to 1TiB of data in a day.
 
-Alternatively, we offer the Mass Transfer Facility option enabling customers to import large quantities of data via HDDs or NAS devices that are plugged directly into your environment. Please check the *Mass Transfer Facility Service Scope* for [NAS](../enablement/enbl-sco-mtf-nas.md) or [HDD](../enablement/enbl-sco-mtf-hdd.md), or the pricing guide further details.
+Alternatively, we offer the Mass Transfer Facility option enabling customers to import large quantities of data via HDDs or NAS devices that are plugged directly into your environment. Please check the *Mass Transfer Facility Service Scope* for [NAS](../enablement/enbl-sco-mtf-nas.md) or [HDD](../enablement/enbl-sco-mtf-hdd.md), or the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) further details.
 
 ### Does UKCloud offer encryption on the VM?
 
@@ -127,7 +128,7 @@ Not by default but, if it's required, you can implement it using technology of y
 
 ### Is UKCloud's encryption service available for UKCloud for VMware?
 
-Not currently, but we are considering this as an option. Provide feedback via [UKCloud Ideas](http://ideas.ukcloud.com).
+Not currently, but we are considering this as an option. Provide feedback via the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
 
 ### Is it possible to non-fast-provision vApps, and to convert current vApps into non-fast provisioned ones?
 
@@ -135,19 +136,19 @@ Fast provisioning is enabled only by customer request - by default, all vApps ar
 
 ### What is Dedicated Compute?
 
-Dedicated Compute comprises of physical blades assigned to a customer for their sole use. They're managed using the standard tools and services in the UKCloud Assured cloud platform.
+Dedicated Compute comprises of physical blades assigned to a customer for their sole use. They're managed using the standard tools and services in the UKCloud platform.
 
 Dedicated Compute allows customers to:
 
-- Comply with legacy licensing requirements from software suppliers whose licensing is based on a physical CPU (such as Oracle or desktop OSs)
+- Comply with legacy licensing requirements from software suppliers whose licensing is based on a physical CPU (such as Oracle or desktop operating systems)
 
-- Build bespoke sized VMs on the UKCloud Assured cloud platform
+- Build bespoke sized VMs on the UKCloud platform
 
 Dedicated Compute uses the same storage infrastructure as the shared compute platform
 
-There's a longer deployment lead time for Dedicated Compute, as well as a longer contractual commitment than our shared cloud platform (three months rather than one hour).
+There's a longer deployment lead time for Dedicated Compute, as well as a longer contractual commitment than our shared cloud platform (30 days rather than one hour).
 
-For more details, please see the UKCloud for VMware Service Definition available via the Digital Marketplace.
+For more details, please see the [*Dedicated Compute v2 Service Definition*](../dedicated-compute/dc-sd.md).
 
 ### Can I utilise multiple storage types with my VM?
 
@@ -264,7 +265,7 @@ The exception is Micro sized VMs. These have a fixed 10GiB allocation which cann
 
 No, storage pooling isn't possible. Each VM must have a minimum of 60GiB (except Micro VMs).
 
-You can quickly and easily allocate additional storage via the self-service UKCloud Portal or API. Additional storage is charged on a per-GiB basis as listed in the UKCloud pricing guide.
+You can quickly and easily allocate additional storage via the self-service UKCloud Portal or API. Additional storage is charged on a per-GiB basis as listed in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 ### Is storage persistent?
 
@@ -455,7 +456,7 @@ Yes, we offer a 30-day free trial so that you can test and evaluate our service 
 
 ### How do I request a trial? 
 
-You can request a trial via the UKCloud website: <http://www.UKCloud.com/free-trial-sign-up> and accept the trial terms and conditions. Your environment will then be set up and you will be given trial credits to the equivalent of £500.
+You can request a trial via the UKCloud website: <http://www.ukcloud.com/free-trial-sign-up> and accept the trial terms and conditions. Your environment will then be set up and you will be given trial credits to the equivalent of £500.
 
 ### What do I do when my trial comes to an end?
 
@@ -543,7 +544,7 @@ In some rare failure scenarios (such as DDoS or Split Brain) the availability of
 
 The minimum unit of time for use is one hour. Part hours will be rounded up.
 
-Dedicated Compute has a minimum commit of three months.
+Dedicated Compute has a minimum commit of 30 days.
 
 ### What are the charges to transfer data between VMs within the same data centre?
 
@@ -585,7 +586,7 @@ For example, if a VM was switched off for a total of 890 minutes but was on for 
 
 ### Will I be charged for creating snapshots?
 
-Snapshot Protection can be purchased with any VM and will be charged for in accordance with the Pricing Guide. Self-service snapshots created within vCloud Director will incur charges as of November 2017. These will be accounted for in the invoices you receive at the beginning of December.
+Snapshot Protection can be purchased with any VM and will be charged for in accordance with the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf). Self-service snapshots created within vCloud Director will incur charges as of November 2017. These will be accounted for in the invoices you receive at the beginning of December.
 
 ## Security
 
@@ -605,4 +606,4 @@ Protective Monitoring is included for our IaaS platform and follows GPG 13.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

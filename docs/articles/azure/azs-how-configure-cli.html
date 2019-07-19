@@ -102,7 +102,7 @@
 <p>Azure Stack works with very specific <strong>API Profiles</strong> - you need to use <code>2018-03-01-hybrid</code> in order to interact with it. The biggest caveat is that it only support as small subset of commands from the <code>latest profile</code>.</p>
 </div>
 <h2 id="install-cli">Install CLI</h2>
-<p>Sign in to your development workstation and install CLI. Azure Stack requires the 2.0 version of Azure CLI. You can install that by using the steps described in the <a href="https://docs.microsoft.com/cli/azure/install-azure-cli">Install Azure CLI 2.0</a> article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:</p>
+<p>Sign in to your development workstation and install CLI. Azure Stack requires at least version 2.0 of Azure CLI. You can install that by using the steps described in the <a href="https://docs.microsoft.com/cli/azure/install-azure-cli">Install Azure CLI 2.0</a> article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:</p>
 <pre><code class="lang-azurecli">az --version
 </code></pre>
 <p>You should see the version of Azure CLI and other dependent libraries that are installed on your computer.</p>
@@ -112,11 +112,11 @@
 <li><p>Register your Azure Stack environment by running the <code>az cloud register</code> command.</p>
 <p>To register the <em>user</em> environment, use:</p>
 <pre><code class="lang-azurecli">az cloud register \
-  -n AzureStackUser \
+  -n &quot;AzureStackUser&quot; \
   --endpoint-resource-manager &quot;https://management.frn00006.azure.ukcloud.com&quot; \
   --suffix-storage-endpoint &quot;frn00006.azure.ukcloud.com&quot; \
   --suffix-keyvault-dns &quot;.vault.frn00006.azure.ukcloud.com&quot; \
-  --endpoint-active-directory-graph-resource-id &quot;https://graph.windows.net/&quot; \
+  --endpoint-active-directory-graph-resource-id &quot;https://graph.windows.net/&quot;
 </code></pre>
 <p>To register the <em>user</em> environment - One Liner:</p>
 <pre><code class="lang-azurecli">az cloud register -n AzureStackUser --endpoint-resource-manager &quot;https://management.frn00006.azure.ukcloud.com&quot; --suffix-storage-endpoint &quot;frn00006.azure.ukcloud.com&quot; --suffix-keyvault-dns &quot;.vault.frn00006.azure.ukcloud.com&quot; --endpoint-active-directory-graph-resource-id &quot;https://graph.windows.net/&quot;
@@ -224,7 +224,7 @@ SQL2016SP1-WS2016  MicrosoftSQLServer      Standard                         Micr
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">

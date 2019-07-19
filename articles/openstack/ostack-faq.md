@@ -6,7 +6,7 @@ author: Matt Warner
 reviewer:
 lastreviewed: 19/07/2018 15:17:17
 toc_rootlink: FAQs
-toc_sub1: 
+toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -79,8 +79,7 @@ Yes, as this is a true IaaS cloud service, you have complete control and autonom
 
 UKCloud offers a variety of predefined flavours to meet customers' needs. The smallest configuration is 512MiB memory and 1 vCPU. The largest is 440GiB memory with 56 vCPU.
 
-
-Check the service definition for more details on the currently available sizes.
+Check the [*Service Definition*](ostack-sd.md) for more details on the currently available sizes.
 
 ### Does UKCloud for OpenStack offer GPU optimised instances?
 
@@ -93,6 +92,8 @@ Yes, you can change instance size (processor, memory and storage allocations) to
 Increasing instance size may result in the instance being billed at a higher rate.
 
 Additional volume storage can be allocated instantly and will be billed on a per GiB basis.
+
+The instance will be rebooted as part of the resize operation.
 
 ### What is the speed of each vCPU?
 
@@ -188,7 +189,7 @@ We currently do not offer any VPN/Tunnelling as a Service from within the UKClou
 
 ### How much storage do I get with an instance?
 
-The default amount of storage which comes with each instance starts from 10GiB of ephemeral storage and increases as larger instances are consumed. Full details can be found in the *UKCloud for OpenStack Service Definition* ([Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/284790846871896-service-definition-document-2018-05-21-1301.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/296846010254915-service-definition-document-2018-05-21-1300.pdf)).
+The default amount of storage which comes with each instance starts from 10GiB of ephemeral storage and increases as larger instances are consumed. Full details can be found in the [*UKCloud for OpenStack Service Definition*](ostack-sd.md).
 
 All ephemeral storage is fixed and cannot be increased.
 
@@ -296,7 +297,7 @@ You have the choice to either bring your own license using the Microsoft License
 
 ### How can I license an operating system?
 
-### Microsoft 
+### Microsoft
 
 Microsoft terms and conditions preclude customers from using their own licence agreements for Windows Server in the Cloud. That means all licensing for Windows Server operating systems must be provided by UKCloud.
 
@@ -320,7 +321,7 @@ Customers are advised to install their own anti-virus (AV) software, as UKCloud 
 
 UKCloud does not offer any additional software other than what's included in the UKCloud Portal catalogue. Any additional software, including its licensing, is your responsibility.
 
-### What is Bring Your Own (BYO) licensing for Red Hat? 
+### What is Bring Your Own (BYO) licensing for Red Hat?
 
 BYO licensing for Red Hat allows customers to select instances running on the UKCloud Assured cloud platform for covering by their own commercial agreement with Red Hat.
 
@@ -476,4 +477,4 @@ Protective monitoring is included for our IaaS platform and follows GPG 13.
 
 ## Feedback
 
-If you find an issue with this article, click Improve this Doc to suggest a change. If you have an idea for how we could improve any of our services, visit UKCloud Ideas. Alternatively, you can contact us at products@ukcloud.com.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

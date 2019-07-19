@@ -78,7 +78,7 @@ While UKCloud for Microsoft Azure is developed by Microsoft, some services will 
 
 ### Does UKCloud offer an SLA for this service?
 
-The SLA for this service is 99.95%. For further details, review the UKCloud for Microsoft Azure Service Definition.
+The SLA for this service is 99.95%. For further details, review the [*UKCloud for Microsoft Azure Service Definition*[azs-sd.md].
 
 ### Where can I find additional resources to assist me in administering my UKCloud for Microsoft Azure environment?
 
@@ -193,7 +193,7 @@ This can be requested via the [UKCloud website trial page](https://ukcloud.com/f
 
 ### What do I do when my trial comes to an end?
 
-During your 30 day trial period, you will be contacted regularly by your Customer Success Manager who will be on hand to assist you with using the service. When your trial is nearing the 30 day limit, your Account Manager will contact you to discuss the outcome of the trial. If you wish to cancel the service, this will be done for you, and any data will be deleted and the service will be decommissioned. If you wish to commit to using the service, your trial will convert to a full paid service, and you will then be billed according to the Service Definition.
+During your 30 day trial period, you will be contacted regularly by your Customer Success Manager who will be on hand to assist you with using the service. When your trial is nearing the 30 day limit, your Account Manager will contact you to discuss the outcome of the trial. If you wish to cancel the service, this will be done for you, and any data will be deleted and the service will be decommissioned. If you wish to commit to using the service, your trial will convert to a full paid service, and you will then be billed according to the [*Service Definition*](azs-sd.md).
 
 ## Billing and legal
 
@@ -237,4 +237,4 @@ For more information about this service, see our [*Protective Monitoring FAQs*](
 
 ## Feedback
 
-If you find an issue with this article, click Improve this Doc to suggest a change. If you have an idea for how we could improve any of our services, visit UKCloud Ideas. Alternatively, you can contact us at products@ukcloud.com.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

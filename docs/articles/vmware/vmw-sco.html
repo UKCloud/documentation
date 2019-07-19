@@ -107,11 +107,32 @@
 <h2 id="service-options">Service options</h2>
 <p>You can build a tailored solution to meet your requirements by mixing and matching service options. The choice does not lock you to one service or size, allowing you to scale resources up or down as your requirements change.</p>
 <p><strong>Workload type.</strong></p>
-<p>Workload type | Resource allocation | Automated Rebalancing
--- -----------|---------------------|----------------------
-ESSENTIAL | Contended | Configured to meet requested performance
-POWER | Uncontended (CPU/GiB) | Pre-emptively optimises performance and availability
-PRIORITY |Uncontended (CPU/GiB) | Configured to reduce workload movement around the platform, reducing workload disruption</p>
+<table>
+<thead>
+<tr>
+<th>Workload type</th>
+<th>Resource allocation</th>
+<th>Automated Rebalancing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESSENTIAL</td>
+<td>Contended</td>
+<td>Configured to meet requested performance</td>
+</tr>
+<tr>
+<td>POWER</td>
+<td>Uncontended (CPU/GiB)</td>
+<td>Pre-emptively optimises performance and availability</td>
+</tr>
+<tr>
+<td>PRIORITY</td>
+<td>Uncontended (CPU/GiB)</td>
+<td>Configured to reduce workload movement around the platform, reducing workload disruption</td>
+</tr>
+</tbody>
+</table>
 <p><strong>VM size.</strong> There are 11 T-shirt sizes available for VMs, with varying vCPU and RAM configurations, ranging from 1vCPU and 512MiB RAM to 12vCPUs and 128GiB RAM. You can change the size of your VMs after creation through vCloud Director.</p>
 <p>Full details of the available service options are outlined in the <a href="vmw-sd.html"><em>Service Definition</em></a>.</p>
 <h2 id="storage-options">Storage options</h2>
@@ -191,7 +212,7 @@ PRIORITY |Uncontended (CPU/GiB) | Configured to reduce workload movement around 
 <li><p>Red Hat Enterprise Linux licensing</p>
 </li>
 </ul>
-<p>For the latest available licences, please check the <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf"><em>Service Definition</em></a> and the <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf"><em>Pricing Guide</em></a>.</p>
+<p>For the latest available licences, please check the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a>.</p>
 <p>You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you're providing your own licensing for a retrospective discount.</p>
 <p>For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.</p>
 <p><strong>VM server images.</strong> We provide base VM images for the operating systems (OS) for which we provide licensing. You can access these from vCloud Director.</p>
@@ -240,7 +261,7 @@ than as part of a regular end-user design.</p>
 </ul>
 <p>You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the vSphere environment.</p>
 <h2 id="service-migration">Service migration</h2>
-<p>You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf"><em>Pricing Guide</em></a>.</p>
+<p>You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a>.</p>
 <p>Customers are free to migrate their workloads. You can also request a migration through a Service Request. Migrations may be between:</p>
 <ul>
 <li><p>Services (for example, ESSENTIAL to POWER)</p>
@@ -288,7 +309,7 @@ than as part of a regular end-user design.</p>
 <h2 id="supporting-documents-and-resources">Supporting documents and resources</h2>
 <p>The following documents contain more information about UKCloud for VMware and the service options:</p>
 <ul>
-<li><p><a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf"><em>UKCloud for VMware Service Definition</em></a></p>
+<li><p><a href="vmw-sd.html"><em>UKCloud for VMware Service Definition</em></a></p>
 </li>
 <li><p><a href="vmw-faq.html"><em>UKCloud for VMware FAQ</em></a></p>
 </li>
@@ -302,13 +323,13 @@ than as part of a regular end-user design.</p>
 </li>
 <li><p><a href="vmw-ref-connectivity-options.html"><em>Understanding connectivity options in UKCloud for VMware</em></a></p>
 </li>
-<li><p><a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf"><em>UKCloud Terms and Conditions</em></a></p>
+<li><p><a href="../other/other-ref-terms-and-conditions.html"><em>UKCloud Terms and Conditions</em></a></p>
 </li>
 <li><p><a href="../other/other-ref-sla-definition.html"><em>SLA Definition</em></a></p>
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">

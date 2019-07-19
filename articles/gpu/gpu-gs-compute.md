@@ -149,7 +149,7 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
     ![Configure Networking page](images/gpu-vcd-vapp-networking.png)
 
-16. On the *Customize Hardware* page, add a hard disk of a size appropriate for the operating system that you plan to install on your VM and then click **Next**.
+16. On the *Customize Hardware* page, add an “LSI Logic SAS (SCSI)” hard disk of a size appropriate for the operating system that you plan to install on your VM and then click **Next**.
 
 17. On the *Ready to Complete* page, review your settings and then click **Finish** to start the deployment.
 
@@ -369,4 +369,4 @@ device.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

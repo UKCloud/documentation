@@ -6,23 +6,23 @@
 
 <section class="product-grid">
 
-  <a href="/articles/azure/azs-gs.html" class="product-grid__item">
+  <a href="/articles/azure/azs-home.html" class="product-grid__item">
     <span>Azure</span>
   </a>
 
-  <a href="/articles/openshift/oshift-gs.html" class="product-grid__item">
+  <a href="/articles/openshift/oshift-home.html" class="product-grid__item">
     <span>OpenShift</span>
   </a>
 
-  <a href="/articles/openstack/ostack-gs.html" class="product-grid__item">
+  <a href="/articles/openstack/ostack-home.html" class="product-grid__item">
     <span>OpenStack</span>
   </a>
 
-  <a href="/articles/oracle/orcl-gs.html" class="product-grid__item">
+  <a href="/articles/oracle/orcl-home.html" class="product-grid__item">
     <span>Oracle</span>
   </a>
 
-  <a href="/articles/vmware/vmw-gs.html" class="product-grid__item">
+  <a href="/articles/vmware/vmw-home.html" class="product-grid__item">
     <span>VMware</span>
   </a>
 

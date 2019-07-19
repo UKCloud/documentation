@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to view the UKCloud Service Status page | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to view the UKCloud Service Status page | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-how-view-status-info.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-view-the-ukcloud-service-status-page">How to view the UKCloud Service Status page</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The <a href="https://status.ukcloud.com">UKCloud Service Status page</a> enables you to monitor the availability and overall health of the services on the UKCloud platform.</p>
+<p><img src="images/other-status-page.png" alt="UKCloud Service Status page"></p>
+<h2 id="viewing-service-status-information">Viewing service status information</h2>
+<h3 id="platform-status">Platform status</h3>
+<p>Incidents are displayed at the top of the page and are indicated by a yellow (performance degraded) or red (outage) banner, with details of the incident and its current status.</p>
+<p><img src="images/other-status-incident.png" alt="Incident"></p>
+<p>Scheduled maintenance is indicated by a blue banner, with details of what the maintenance work involves and its current status.</p>
+<p><img src="images/other-status-maintenance.png" alt="Scheduled maintenance"></p>
+<p>If there are no incident or scheduled maintenance alerts, a green banner at the top displays <code>All Systems Operational</code>.</p>
+<p><img src="images/other-status-all-operational.png" alt="All Systems Operational"></p>
+<p>Below the alerts for incidents and maintenance, you can see any general information about the status of the platform.</p>
+<p>Click <strong>View historical uptime</strong> to view uptime and incident information for past months.</p>
+<p><img src="images/other-status-history.png" alt="Historic uptime"></p>
+<p>Upcoming maintenance work and recent incidents are listed at the bottom of the Service Status page.</p>
+<h3 id="service-status">Service status</h3>
+<p>As well as the overall status of the platform, the Service Status page also shows the status of each service on the UKCloud platform.</p>
+<p>For each service, you can see the availability over the last 90 days, with each day represented by a bar. Hover over a bar to see a popup with details for that day. If there are no issues with a service, the status is reported as <code>Operational</code>.</p>
+<p><img src="images/other-status-service.png" alt="Service status"></p>
+<p>The uptime figure indicates what percentage of the last 90 days the service was available for.</p>
+<p>Click the <strong>+</strong> icon to expand the service to see the status of specific components within the service. For example, for Connectivity, you can see the status of each connectivity type (Internet, PSN, HSCN, Janet, RLI); for UKCloud for VMware, you can see the status for each UKCloud zone.</p>
+<p>If service availability is impacted, the bar for that day displays in a different colour and the status is reported as <code>Under Maintenance</code>, <code>Degraded Performance</code> or <code>Outage</code>.</p>
+<p><img src="images/other-status-outage.png" alt="Service with degraded performance"></p>
+<h2 id="subscribing-to-the-service-status-page">Subscribing to the Service Status page</h2>
+<p>You can subscribe to the Service Status page to receive updates when information is updated.</p>
+<ol>
+<li><p>On the UKCloud Service Status page, click the <strong>Subscribe to Updates</strong> button.</p>
+<p><img src="images/other-status-btn-subscribe.png" alt="Subscribe to Updates button"></p>
+</li>
+<li><p>To receive email notifications:</p>
+<ol>
+<li><p>Click the envelope icon, enter your email address, then click <strong>Subscribe via Email</strong>.</p>
+<p><img src="images/other-status-notification-email.png" alt="Subscribe via Email"></p>
+</li>
+<li><p>Confirm your subscription by clicking the <strong>Confirm subscription</strong> button in the email you receive.</p>
+</li>
+<li><p>On the <em>Notifications Subscription</em> page, you can specify individual components for which you want to receive notifications.</p>
+<p><img src="images/other-status-subscriptions.png" alt="Notifications Subscription page"></p>
+</li>
+</ol>
+</li>
+<li><p>To receive text notifications:</p>
+<ol>
+<li><p>Click the telephone handset icon, enter your phone number, then click <strong>Subscribe via Text Message</strong>.</p>
+<p><img src="images/other-status-notification-text.png" alt="Subscribe via Text Message"></p>
+</li>
+<li><p>Click the link in the confirmation text message you receive to manage your subscriptions.</p>
+</li>
+</ol>
+</li>
+<li><p>To receive webhook notifications, click the code icon (<strong>&lt;&gt;</strong>), enter the URL of the endpoint to send the webhook to and the email address to send any associated error messages, then click <strong>Subscribe to Notifications</strong>.</p>
+<p><img src="images/other-status-notification-webhook.png" alt="Subscribe via Webhook"></p>
+<p>You'll need to set up an endpoint to receive the webhook requests. For more information about webhooks, see the Atlassian Statuspage documentation: <a href="https://help.statuspage.io/help/webhook-notifications">Webhook Notifications</a>. For example code for setting up an endpoint, see <a href="other-how-use-webhooks.html"><em>How to use webhooks to receive service status notifications</em></a>.</p>
+</li>
+<li><p>To subscribe to the Atom/RSS feed, click the RSS icon and then click the <strong>Atom Feed</strong> or <strong>RSS Feed</strong> link.</p>
+<p><img src="images/other-status-notification-rss.png" alt="Subscribe to RSS"></p>
+</li>
+<li><p>For more information about UKCloud Support, click the speech bubble icon, then click the <strong>support site</strong> link.</p>
+<p><img src="images/other-status-help.png" alt="Help"></p>
+</li>
+<li><p>You can also subscribe to notifications for a specific incident or maintenance window:</p>
+<ol>
+<li><p>Click the <strong>Subscribe</strong> link in the banner for that incident or maintenance alert.</p>
+<p><img src="images/other-status-incident-subscribe.png" alt="Subscribe link for incident"></p>
+</li>
+<li><p>Enter your email address or phone number, then click <strong>Subscribe to Incident</strong>.</p>
+<p><img src="images/other-status-subscribe-incident.png" alt="Subscribe to Incident dialog box"></p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

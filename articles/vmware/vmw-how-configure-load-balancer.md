@@ -50,13 +50,7 @@ To configure a load balancer:
 
 7. Click **Save changes**.
 
-- [How to configure a load balancer](#how-to-configure-a-load-balancer)
-  - [Overview](#overview)
-  - [Configuring a load balancer](#configuring-a-load-balancer)
-    - [Configuring a pool server](#configuring-a-pool-server)
-    - [Configuring a virtual server](#configuring-a-virtual-server)
-  - [Next steps](#next-steps)
-  - [Feedback](#feedback)
+8. You need to configure two components of the load balancing service for it to function correctly: [pool servers](#configuring-a-pool-server) and [virtual servers](#configuring-a-virtual-server).
 
 ### Configuring a pool server
 
@@ -134,4 +128,4 @@ In this article you've learned how to create firewall rules. For other edge gate
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

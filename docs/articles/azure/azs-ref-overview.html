@@ -203,8 +203,8 @@
 <p>First, ensure that you've installed the relevant Azure PowerShell modules from the following link:</p>
 <p><a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a></p>
 <p>Then run the following commands:</p>
-<pre><code class="lang-powershell">Add-AzureRmEnvironment -Name &quot;AzureStackAdmin&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
-Connect-AzureRmAccount -EnvironmentName &quot;AzureStackAdmin&quot;
+<pre><code class="lang-powershell">Add-AzureRmEnvironment -Name &quot;AzureStackUser&quot; -ArmEndpoint &quot;https://management.frn00006.azure.ukcloud.com&quot;
+Connect-AzureRmAccount -EnvironmentName &quot;AzureStackUser&quot;
 Get-AzureRmVMImagePublisher -Location &quot;frn00006&quot; | Get-AzureRmVMExtensionImageType | Get-AzureRmVMExtensionImage | `
   Select-Object -Property Type, Version | Format-Table -AutoSize
 </code></pre>
@@ -265,7 +265,7 @@ Get-AzureRmVMImagePublisher -Location &quot;frn00006&quot; | Get-AzureRmVMExtens
 <li><a href="https://github.com/UKCloud/AzureStack"><em>UKCloud Azure Stack Repository</em></a></li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this article, or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">

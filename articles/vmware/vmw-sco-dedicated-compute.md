@@ -44,7 +44,7 @@ The initial Dedicated Compute purchase is a starter pack consisting of two physi
 
 You can then scale your estate by purchasing expansion packs. After nine expansion packs, you must buy another starter pack.
 
-You choose between Tier 1 or Tier 2 storage for your VMs, both of which can include a backup service. Full details of service options and pricing are given in the Service Definition.
+You choose between Tier 1 or Tier 2 storage for your VMs, both of which can include a backup service. Full details of service options and pricing are given in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 The storage pool isn't a dedicated hardware resource: it is drawn from our Cloud Storage solutions.
 
@@ -122,4 +122,4 @@ You need to be aware of the following customer responsibilities relating to depl
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

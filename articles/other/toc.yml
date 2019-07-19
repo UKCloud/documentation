@@ -4,8 +4,8 @@
     href: other-faq-credit-card.md
   - name: Enterprise & Private Sector FAQs
     href: other-faq-eps.md
-  - name: G-Cloud 10 services FAQs
-    href: other-faq-g10.md
+  - name: G-Cloud 11 enhancements and additions
+    href: other-faq-g11.md
   - name: Invoice and billing FAQs
     href: other-faq-billing.md
   - name: Jumpstart FAQs
@@ -26,6 +26,10 @@
     href: other-how-delete-sso-user.md
   - name: Use the UKCloud Pricing Estimation Tool
     href: other-how-use-pricing-tool.md
+  - name: Use webhooks to receive service status notifications
+    href: other-how-use-webhooks.md
+  - name: View Service Status page
+    href: other-how-view-status-info.md
 - name: Reference
   items:
   - name: Best practice customer guide
@@ -70,8 +74,6 @@
     href: other-ref-offboarding.md
   - name: UKCloud complaints procedure
     href: other-ref-complaints.md
-  - name: UKCloud Ideas
-    href: other-ref-ideas.md
   - name: UKCloud Pricing Guides and SFIA Rate Card
     href: other-ref-pricing-guide.md
   - name: UKCloud response to Spectre and Meltdown

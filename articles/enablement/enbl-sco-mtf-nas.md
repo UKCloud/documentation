@@ -65,7 +65,7 @@ We'll send you a form to fill in and send back to us by email before sending the
 
 This service is based on the transfer of whole VMs, not individual files. Your VMs can be in OVF or OVA format. The hardware version must be 9 or lower, and you need to remove any network cards and any mounted media files such as ISOs from the VM's hardware configuration prior to the creation of the OVA or OVF files.
 
-Use of the Mass Transfer Facility is charged per the current SFIA rate card, based on the IT Operations 'Enable' rate and a minimum of half of a business day to cover the time taken to set up, manage the transfer and detach the NAS.
+Use of the Mass Transfer Facility is charged per the current [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf), based on the IT Operations 'Enable' rate and a minimum of half of a business day to cover the time taken to set up, manage the transfer and detach the NAS.
 
 ## Anticipated transfer speeds
 
@@ -81,4 +81,4 @@ We'll contact you to check that the transfer has been successful before we remov
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

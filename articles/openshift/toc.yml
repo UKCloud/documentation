@@ -1,3 +1,7 @@
+- name: About
+  items:
+  - name: UKCloud for OpenShift
+    href: oshift-home.md
 - name: FAQs
   items:
   - name: UKCloud for OpenShift FAQs
@@ -30,6 +34,8 @@
     href: oshift-how-use-netpol.md
   - name: Use the Hawkular Metrics API
     href: oshift-how-use-hawkular-metrics.md
+  - name: View your router logs
+    href: oshift-how-view-router-logs.md
 - name: Reference
   items:
   - name: Considerations when scaling an OpenShift cluster
@@ -46,3 +52,7 @@
   items:
   - name: UKCloud for OpenShift Service Definition
     href: oshift-sd.md
+- name: Service Scope
+  items:
+  - name: UKCloud for OpenShift Service Scope
+    href: oshift-sco.md
