@@ -23,41 +23,27 @@ This article documents the ability to forward DNS zones within OpenShift deploym
 
 ### Intended audience
 
-This article is best aimed at those with OpenShift deployments with connectivity to a VRF as other networks commonly have open resolvers available.
+This article is best aimed at those with OpenShift deployments with connectivity to a private network as other networks commonly have open resolvers available.
 
 ## OpenShift Cluster DNS Architecture
 
-We deploy HAProxy load balancer pairs as part of an OpenShift deployment; primarily to provide redundancy for inbound traffic. As a minimum, all clusters will have: 
+We deploy load balancer pairs as part of an OpenShift deployment; primarily to provide redundancy for inbound traffic but also to resolve DNS requests.
 
-- control plane load balancers forwarding to routes:
-  - OpenShift API/Web Console
-  - Docker Registry Console
-  - Grafana
-  - Hawkular Metrics
-  - Kibana
-  - Prometheus
+One pair resolves the local zone within the cluster (performing internal hostname resolution) and forwards all undefined zones outbound to an upstream open internet resolver. Zones can be configured to be forwarded to a separate upstream server. All internet OpenShift nodes reference this load balancer pair.
 
-- data plane load balancers forwarding to routes exposed on the default OpenShift routers
-
-Deployments with connectivity to government community networks have an additional data plane load balancer pair (forwarding to routes exposed on the secondary OpenShift routers) which only have inbound connectivity from the secondary network.
-
-On the control plane load balancers, we configure `BIND` (also referred to as `named`) to resolve the local zone within the cluster (performing internal hostname resolution) and all other zones are forwarded outbound to an open internet resolver. All internet OpenShift nodes reference the control plane load balancers as resolvers.
-
-Where a deployment has connectivity with government community networks, we forward the local zone and a small number of internet zones (required for provisioning and ongoing maintenance) to the control plane BIND service, with all remaining zones being forwarded to open resolvers on the secondary network. All secondary network nodes reference the secondary network data plane load balancers as resolvers.
+Where a deployment has connectivity with government community networks, another pair forwards the local zone and a small number of internet zones (required for provisioning and ongoing maintenance) to the previously mentioned load balancer pair, with all remaining zones being forwarded to upstream open resolvers on the secondary network. All secondary network nodes reference the secondary network load balancers as resolvers.
 
 ## Identifying Forward Zones
 
 A zone is a domain (for example domain.com) and configuring a forward zone will forward any DNS queries received for that domain and all sub-domains to the configured IP address. This allows different domains to be resolved by separate DNS servers at a granular level if required.
 
-In OpenShift deployments with connectivity to a VRF, you may want to resolve a pre-existing internal zone using a private resolver, instead of forwarding these requests to an external service (and therefore routing traffic over an external network) which gives you the benefit of being able to locate private services that may otherwise be restricted or inaccessible from these networks. Such examples of services that could be consumed from OpenShift include: container image registry, binary repository, version control system.
+In OpenShift deployments with connectivity to a private network, you may want to resolve a pre-existing internal zone using a private resolver, instead of forwarding these requests to an external service (and therefore routing traffic over an external network) which gives you the benefit of being able to locate private services that may otherwise be restricted or inaccessible from these networks. Such examples of services that could be consumed from OpenShift include: container image registry, binary repository, version control system.
 
 ## Requesting DNS Zone Forwarding
 
-When provisioning your environment (and provided you have highlighted that you require connectivity with a VRF) we'll contact you to ask if there are any zones which you want to forward and request the IP addresses of the corresponding DNS resolvers. To add forward zones, we add the provided details to the `named.conf` file on the control plane load balancers (and the secondary network load balancers if they exist) and restart the `named` service on these nodes to apply the changes.
+Any zones (including the IPs of the corresponding DNS resolvers) you want to forward DNS requests for can be provided within a Service Request. This can be as part of a deployment request or post-deployment, provided your environment has connectivity to a private network.
 
-We will test that queries are being replied to as expected and assist you in diagnosing issues. You may need to make firewall changes to permit your OpenShift cluster to both send DNS queries and to access the desired services. If you identify additional domains you want to be resolved internally during the day to day use of your cluster - these can be added post-deployment.
-
-Currently forward zones can only be configured by the OpenShift team as the load balancers cannot be managed from within OpenShift. 
+We will test that queries are being replied to as expected and assist you in diagnosing issues. You may need to make firewall changes to permit your OpenShift cluster to both send DNS queries and to access the desired services.
 
 ## Further Information
 
