@@ -58,7 +58,7 @@ The process of authentication can be handled in one of two ways, either as **Env
 
 <details><summary style="font-size: 20px">Provider Block Option</summary>
 
-[Provider Block Option](#example-of-provider-block) - you can create your **Terraform plan** by putting everything in one `main.tf` file, which then contains your Provider and variables' settings explicitly in said plan.
+[Provider Block Option](#example-of-provider-block) - you can create your **Terraform plan** by putting everything in one `main.tf` file, which then contains your Provider and variables settings explicitly in said plan.
 
 ### Example of Provider Block:
 #### `main.tf`
@@ -154,7 +154,7 @@ The examples that follow show how to create VMs using Terraform. The code change
 
 ***
 > [!IMPORTANT]
-> This example is only the `main.tf` file. You will still need the `variables.tf` and `terraform.tfvars` files as shown in the following section
+> This example is only the `main.tf` file. You will still need the `variables.tf` and `terraform.tfvars` files as shown in the following section.
 
 ### Defining the required Azure Stack resources in the `main.tf` file
 
