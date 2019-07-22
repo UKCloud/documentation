@@ -4,7 +4,7 @@ description: Provides guidelines for what to consider when creating and editing 
 services: other
 author: Sue Highmoor
 reviewer: Sue Highmoor
-lastreviewed: 19/07/2019
+lastreviewed: 22/07/2019
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -26,7 +26,7 @@ For a template to get you started, see [*UKCloud Knowledge Centre article templa
 ## Sensitive content
 
 > [!IMPORTANT]
-> Content in the Knowledge Centre is available over the internet to anybody, therefore it is extremely important to ensure that articles do not contain any sensitive information, including, but not limited to, user names, sensitive IP addresses. This includes information that may be in screenshots or images. If you're unsure about whether information in the article is sensitive, consult with a subject matter expert before creating your Pull Request.
+> Content in the Knowledge Centre is available over the internet to anybody, therefore it is extremely important to ensure that articles do not contain any sensitive information, including, but not limited to, user names and sensitive IP addresses. This includes information that may be in screenshots or images. If you're unsure about whether information in the article is sensitive, consult with a subject matter expert before creating your Pull Request.
 
 ## Submission of content
 
@@ -46,7 +46,7 @@ File names for images in Knowledge Centre articles should use the following file
 `<product>-<tool>-<ui>-<description>.png`
 
 > [!NOTE]
-> Each word in the file name should be separated by a hypen.
+> Each word in the file name should be separated by a hyphen.
 
 where:
 
