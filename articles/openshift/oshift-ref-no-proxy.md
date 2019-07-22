@@ -1,5 +1,5 @@
 ---
-title: Specifying endpoints to avoid being proxied in deployments with government community network connectivity | UKCloud Ltd
+title: Community network proxy configuration | UKCloud Ltd
 description: Provides information regarding proxy environment variables in v3.11 OpenShift clusters deployed with government community network connectivity.
 services: openshift
 author: Ben Bacon
@@ -8,12 +8,12 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Specifying endpoints to avoid being proxied in deployments with government community network connectivity
-toc_fullpath: Reference/oshift-ref-no_proxy.md
-toc_mdlink: oshift-ref-no_proxy.md
+toc_title: Community network proxy configuration
+toc_fullpath: Reference/oshift-ref-no-proxy.md
+toc_mdlink: oshift-ref-no-proxy.md
 ---
 
-# Specifying endpoints to avoid being proxied in deployments with government community network connectivity
+# Community network proxy configuration
 
 ## Overview
 
@@ -25,9 +25,7 @@ To follow the steps in this article you must have access to a cluster that is ru
 
 ## Squid
 
-Squid proxy is installed as a service on the control plane load balancers and enables containers running on worker nodes (with government community network access) to request resources from the internet. Our default configuration only permits access to specific endpoints to ensure compliance with network regulatory requirements. You can find more information regarding these endpoints in [*How to permit outbound access to internet hosts in deployments with government community network connectivity*](oshift-how-add-domains-proxy-whitelist.md).
-
-This article also provides steps for how you can add your own domains from within OpenShift.
+Squid proxy enables containers running on worker nodes (with government community network access) to request resources from the internet. Our default configuration only permits access to specific endpoints to ensure compliance with network regulatory requirements. You can find more information regarding these endpoints in [*How to permit outbound access to internet hosts in deployments with government community network connectivity*](oshift-how-add-domains-proxy-whitelist.md).
 
 ## Purpose of no_proxy
 
@@ -54,22 +52,21 @@ When building containers within OpenShift, these environment variables will be p
 
 ## Identifying where you might need to add entries to no_proxy
 
-Typically you can identify where the proxy is denying requests by looking for keywords such as `forbidden` or when receiving HTTP 403 status code responses. Below you can see an example where an HTTPS request to `registry-1.docker.io` has been blocked by the proxy.
+Typically you can identify where the proxy is denying requests by looking for keywords such as `forbidden` or when receiving HTTP 403 status code responses. Below you can see an example where an HTTPS request to `registry.exampleurl.com` has been blocked by the proxy.
 
 ```
 $ oc new-app centos/ruby-25-centos7~https://github.com/sclorg/ruby-ex.git
-warning: Cannot find git. Ensure that it is installed and in your path. Git is required to work with git repositories.
-W0412 13:52:16.288545   50288 dockerimagelookup.go:233] Docker registry lookup failed: Get https://registry-1.docker.io/v2/: Forbidden
+W0412 13:52:16.288545   50288 dockerimagelookup.go:233] Docker registry lookup failed: Get https://registry.exampleurl.com: Forbidden
 error: unable to locate any images in image streams, local docker images with name "centos/ruby-25-centos7"
 ```
 
-In the example above this is an internet URL so it would be best to add this domain (or all subdomains using `.docker.io`) to the `proxy-whitelist` configmap in the `whitelist` project, as documented in [*How to permit outbound access to internet hosts in deployments with government community network connectivity*](oshift-how-add-domains-proxy-whitelist.md). If this URL was accessible on another network other than the internet, this would be a good candidate to be added to `no_proxy` to ensure the proxy was bypassed.
-
-We're planning to develop functionality to allow showback of Squid access logs within future deployments to assist with diagnosing where the proxy may be denying requests that may not be as easy to trace.
+In the example above this is an internet URL so it would be best to add this specific domain (or all subdomains using `.exampleurl.com`) to the `proxy-whitelist` configmap in the `whitelist` project, as documented in [*How to permit outbound access to internet hosts in deployments with government community network connectivity*](oshift-how-add-domains-proxy-whitelist.md). If this URL was accessible on another network other than the internet, this would be a good candidate to be added to `no_proxy` to ensure the proxy was bypassed.
 
 ## Adding entries to no_proxy
 
-When provisioning your environment (and provided you have highlighted that you require connectivity with a government community network) we'll contact you to ask if there are any specific endpoints that you want to bypass the proxy. Examples of these could be:
+Entries can be added to `no_proxy` pre-deployment if included in the Service Request requesting the environment. Otherwise if you identify additional endpoints that you would like to bypass the proxy post-deployment, you will need to raise a Support Request via the UKCloud Portal as a restart of the master-services is required.
+
+Examples of domains you may want to bypass the proxy could be:
 
 - Private DNS Zone/CIDR
 
@@ -86,10 +83,6 @@ When supplying `no_proxy` items, you can reference any of the following types:
 - `subdomain.domain.tld`
 
 - `.domain.tld` (includes domain and all subdomains)
-
-Currently entries can only be added by the OpenShift team as doing so requires a restart of the master-services within your cluster. If you've identified any additional entries you'd like to add to `no_proxy`, raise a Support Request via the UKCloud Portal.
-
-We're planning to develop functionality to make this a self-service option within future deployments.
 
 ## Further information
 
