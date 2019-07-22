@@ -36,13 +36,13 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 ## Enabling VM Update & Management
 
 > [!WARNING]
-> Before proceeding, check **[here](https://docs.microsoft.com/en-gb/azure/azure-monitor/insights/vminsights-enable-overview#supported-operating-systems)** that your VMs OS version is supported.
+> Before proceeding, check **[here](https://docs.microsoft.com/en-gb/azure/azure-monitor/insights/vminsights-enable-overview#supported-operating-systems)** that your VMs' OS version is supported.
 
 1. Login to the Azure portal:
 
     <https://portal.azure.com>
 
-2. Create a *LogAnalytics Workspace* in your Azure subscription:
+2. Create a *Log Analytics Workspace* in your Azure subscription:
 
     - Click **All Services** and search `log analytics`.
 
@@ -52,16 +52,16 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     - Click **Add** and in the *new* blade, select choices for the following items:
 
-        - *Name* for the **Log Analytics workspace**. Example: `DefaultLAWorkspace`
+        - A *Name* for the **Log Analytics workspace**. Example: `DefaultLAWorkspace`.
 
-        - *Subscription* to link to the workspace.
+        - A *Subscription* to link the workspace to.
 
-        - *Resource Group* to link to the workspace. Can be an existing resource group or choose to create a new one.
+        - A *Resource Group* to link the workspace to.
 
-        - *Location* available to host the workspace on.
+        - A *Location* available to host the workspace on.
 
         > [!NOTE]
-        > The currently supported locations include: *West Central US*, *East US*, *Canada Central*, *UK South*, *West Europe* and *Southeast Asia*.
+        > The currently supported locations are: *West Central US*, *East US*, *Canada Central*, *UK South*, *West Europe* and *Southeast Asia*.
 
         - *Pricing Tier* to use.
 
@@ -69,7 +69,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
         ![Log Analytics workspace creation](images/azs-browser-example-log-analytics-workspace.PNG)
 
-    - Press **OK** once finished. The **Log Analytics workspace** will now begin deployment. A notification will appear on the top right of the portal.
+    - Press **OK** once finished. The **Log Analytics workspace** will now begin deploying. A notification will appear on the top right of the portal.
 
     - Once deployment is complete, navigate to the *resource group* you placed the **Log Analytics workspace** within.
 
@@ -128,7 +128,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
     > [!WARNING]
     > For any monitoring to work correctly. The VM **must** have HTTPS (Port 443) enabled in the **Network Security Group** rules.
 
-6. Click **Add** at the top and select the resource `Azure Monitor, Update and Configuration Management`; click **Create**.
+6. Click **Add** at the top and select the extension `Azure Monitor, Update and Configuration Management`; then click **Create**.
 
     ![VM enable update management](images/azs-browser-log-analytics-enable-update-management.PNG)
 
@@ -136,17 +136,17 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     - Repeat this step for the `Azure Monitor Dependency Agent`.
 
-7. Once the deployment is finished. Head back to the public Azure portal, navigate to the *Log Analytics workspace* -> *Advanced settings* -> *`VMType` Servers*.
+7. Once the deployment is finished. Head back to the public Azure portal, navigate to the *Log Analytics workspace* -> *Advanced settings* -> *`VM Type` Servers*.
 
-    - You will see `x` number of `[VMType]` COMPUTERS CONNECTED. Depending on how many VMs you linked to the workspace.
+    - You will see `x` number of `VM Type` COMPUTERS CONNECTED, depending on how many VMs you linked to the workspace.
 
         ![Log Analytics workspace computers connected](images/azs-browser-log-analytics-workspace-computers-connected.PNG)
 
-    - Click on *`x vmtype` COMPUTERS CONNECTED*. This will bring up logs for the *Log Analytics workspace*.
+    - Click on *`x VM Type` COMPUTERS CONNECTED*. This will bring up logs for the *Log Analytics workspace*.
 
     - Alter the time range to **Last 30 minutes**.
 
-8. Execute the following log query passing in your `VMTYPE`:
+8. Execute the following log query passing in your `VM TYPE`:
 
     - `Heartbeat | where OSType == "VMTYPE" | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table`
 
@@ -187,7 +187,7 @@ Within the *Automation Account*, the blades **Inventory**, **Change Tracking** a
 
 ![azs-browser-example-update-management-compliant-ok](images/azs-browser-example-update-management-compliant-ok.PNG)
 
-On public Azure, click **Monitor**, in the *new* blade, under *Insights*, click **Virtual Machines (preview)**. You will see a variety of usage analytics in the tabs **Health**, **Performance** and **Map** for the VMs you have enabled **VM Update & Management** on.
+On public Azure, click **Monitor**. In the *new* blade under *Insights*, click **Virtual Machines (preview)**. You will see three usage analytics tabs (**Health**, **Performance** and **Map**) for the VMs you have enabled **VM Update & Management** on.
 
 ![azs-browser-example-monitor-stats](images/azs-browser-example-monitor-stats.PNG)
 
