@@ -44,7 +44,7 @@ $ oc describe dc docker-registry -n default | grep PROXY
       HTTPS_PROXY:						http://10.2.1.10:3128
 ```
 
-- `NO_PROXY`: String containing hosts/addresses to not be requested via proxy
+- `NO_PROXY`: String containing hosts/addresses to be accessed without traversing the proxy
 
 - `HTTP_PROXY`: Cluster Proxy URL for HTTP requests
 
