@@ -760,8 +760,8 @@ resource "azurestack_virtual_machine" "vm" {
 <pre><code class="language-hcl">
   arm_endpoint    = "<output form="arm_endpoint" name="result" style="display: inline;">https://management.{region}.{domain}</output>"
   subscription_id = "<output form="subscription_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
-  client_id       = "<output form="client_id" name="result" style="display: inline;">{applicationId}</output>"
-  client_secret   = "<output form="client_secret" name="result" style="display: inline;">{applicationPassword}</output>"
+  client_id       = "<output form="client_id" name="result" style="display: inline;">applicationId</output>"
+  client_secret   = "<output form="client_secret" name="result" style="display: inline;">applicationPassword</output>"
   tenant_id       = "<output form="tenant_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
 
   vm_count        = <output form="vm_count" name="result" style="display: inline;">1</output>
