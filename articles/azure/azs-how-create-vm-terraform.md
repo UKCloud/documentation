@@ -823,10 +823,6 @@ resource "azurestack_virtual_machine" "vm" {
     type    = "string"
     default = "Standard_DS2_v2"
   }
-
-  variable "vm_location" {
-    type = "string"
-  }
 </code></pre>
 
 ## How to execute a Terraform plan
