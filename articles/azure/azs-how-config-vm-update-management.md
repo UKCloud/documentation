@@ -73,12 +73,12 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
     - Once deployment is complete, navigate to the *resource group* you placed the **Log Analytics workspace** within.
 
-    - Click the newly create workspace. On the *new* blade, under settings, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VMType* you wish to add analytics too. 
+    - Click the newly create workspace. On the *new* blade, under settings, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VM Type* you wish to add analytics too. 
     Note down the **Workspace ID** and **Primary Key** values.
 
         ![Log Analytics workspace advanced settings](images\azs-browser-log-analytics-workspace-advanced-settings.PNG)
 
-    - Within *Advanced settings*, Select the **Data** blade, and click *`VMType` Performance Counters.*
+    - Within *Advanced settings*, Select the **Data** blade, and click *`VM Type` Performance Counters.*
 
     - Ensure all *counters* are selected and click **Add the selected performance counters**.
 
