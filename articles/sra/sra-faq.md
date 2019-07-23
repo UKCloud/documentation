@@ -123,7 +123,7 @@ We aim to carry out the assessment within five days of receiving the business ca
 
 If you need help gathering appropriate evidence, or effectively designing your SRA solution, we offer an assurance wrap review to guide you towards an effective design that will help to maximise your chances of meeting compliance requirements.
 
-The variable nature of the engagement means we charge for the assurance wrap on an SFIA rate card basis, depending on the number of days' support needed.
+The variable nature of the engagement means we charge for the assurance wrap on a [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) basis, depending on the number of days' support needed.
 
 ### What is the assurance process for approving an SRA solution?
 
@@ -267,4 +267,4 @@ Consider PSN-compliant remote access services if you require access to the broad
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

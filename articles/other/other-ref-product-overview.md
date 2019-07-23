@@ -18,7 +18,7 @@ toc_mdlink: other-ref-product-overview.md
 
 # Services at a glance
 
-This article is designed to provide you with a top level comparison for our main products. For further information, refer to the appropriate Service Definition as listed in [UKCloud G-Cloud 10 Service Definitions](other-ref-service-definitions.md).
+This article is designed to provide you with a top level comparison for our main products. For further information, refer to the appropriate Service Definition as listed in [*UKCloud Service Definitions*](other-ref-service-definitions.md).
 
 ## [Onboarding and offboarding](#tab/tabid-1)
 
@@ -108,4 +108,4 @@ This article is designed to provide you with a top level comparison for our main
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

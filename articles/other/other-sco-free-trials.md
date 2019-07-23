@@ -41,7 +41,7 @@ Exclusions are:
 
 - HSCN, unless you already have an HSCN connection
 
-- Services covered by the SFIA rate card
+- Services covered by the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)
 
 - Dedicated Compute option in UKCloud for VMware
 
@@ -53,14 +53,13 @@ Exclusions are:
 
 - Products in alpha or beta testing - these will be treated differently to free trials
 
-
 ## Key Aspects of a Free Trial
 
 Free trials are:
 
 - Available to both new and existing customers
 
-- Available for 30 days from first use; any longer will be at our discretion or detailed in the Service Definition
+- Available for 30 days from first use; any longer will be at our discretion or detailed in the Service Scope
 
 - Available only for products that you haven't previously purchased or trialed
 
@@ -78,11 +77,11 @@ Requesting a trial:
 
 - Your environment is set up
 
-- You are given trial credits to the equivalent of £500, unless stated differently in the service definition
+- You are given trial credits to the equivalent of £500, unless stated differently in the Service Scope
 
 During your trial:
 
-- Use your credits for any eligible service within your environment within 30 days, unless stated differently in the service definition
+- Use your credits for any eligible service within your environment within 30 days, unless stated differently in the Service Scope
 
 - Contact your CSM with any issues or questions
 
@@ -94,4 +93,4 @@ Ending your trial
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

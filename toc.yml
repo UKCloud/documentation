@@ -1,18 +1,18 @@
 ﻿- name: Azure
   href: articles/azure/
-  topicHref: articles/azure/azs-gs.md
+  topicHref: articles/azure/azs-home.md
 - name: OpenShift
   href: articles/openshift/
-  topicHref: articles/openshift/oshift-gs.md
+  topicHref: articles/openshift/oshift-home.md
 - name: OpenStack
   href: articles/openstack/
-  topicHref: articles/openstack/ostack-gs.md
+  topicHref: articles/openstack/ostack-home.md
 - name: Oracle
   href: articles/oracle/
-  topicHref: articles/oracle/orcl-gs.md
+  topicHref: articles/oracle/orcl-home.md
 - name: VMware
   href: articles/vmware/
-  topicHref: articles/vmware/vmw-gs.md
+  topicHref: articles/vmware/vmw-home.md
 - name: More
   nav_dropdown: true
   items:

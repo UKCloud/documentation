@@ -36,14 +36,14 @@ Please note that it is not possible for you to bring your own Microsoft Windows 
 
 The Microsoft Windows Server licence is invoiced each month, in addition to the cost of the VM, based on the VM's usage.
 
-We automatically bill the usage of Microsoft Windows Server per hour that the VM is powered on, and invoice you for your consumption of Microsoft Windows Server per month using the following pricing table for G-Cloud 10:
+We automatically bill the usage of Microsoft Windows Server per hour that the VM is powered on, and invoice you for your consumption of Microsoft Windows Server per month using the following pricing table:
 
 VM size | SPLA Per hour per VM | Academic Per hour per VM
 --------|----------------------|---------------------------
 Micro, Tiny VM | £0.013 | £0.002
 Small VM | £0.025 | £0.003
 Medium VM, Medium High Memory | £0.051 | £0.007
-Large VM, Large High Memory, Tier One Apps | £0.149 | £0.020
+Large VM, Large High Memory, Tier 1 Apps | £0.149 | £0.020
 
 Due to the elimination of the discount for G-SPLA, there is now price parity with corporate SPLA. As a result, customers who may not have previously been applicable for G-SPLA are not impacted.
 
@@ -93,7 +93,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
   - SQL Developer can only be utilised on a shared platform to test the SQL element of a solution and cannot be used to provide end-user services. If you wish to provide SQL services to end-users, SQL Enterprise or SQL Standard must be purchased.
 
-  - We can provide Microsoft SQL Standard Server licences on a per hour basis, or Microsoft SQL Enterprise licences billed on a monthly basis. These are retrospectively billed based on your usage of an associated VM, and the pricing is available within the G10 Service definitions and pricing guide.
+  - We can provide Microsoft SQL Standard Server licences on a per hour basis, or Microsoft SQL Enterprise licences billed on a monthly basis. These are retrospectively billed based on your usage of an associated VM, and the pricing is available within the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
   - Microsoft Mobility - this is a valid option for both SQL Standard and Enterprise.
 
@@ -107,7 +107,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **Remote Desktop Server Access Licence**
 
-  - UKCloud licensing - we are able to provide Microsoft Remote Desktop (RDS) SAL on a monthly basis only. These are retrospectively billed, and the pricing is available within the G10 Service definitions and pricing guide. For these licences to be used, you must raise a service request prior to their use as they will need to be registered on the UKCloud platform and will need to provision a dedicated RDS licence server. To assign and validate the licences, we will need to arrange a session to connect to your server.
+  - UKCloud licensing - we are able to provide Microsoft Remote Desktop (RDS) SAL on a monthly basis only. These are retrospectively billed, and the pricing is available within the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf). For these licences to be used, you must raise a service request prior to their use as they will need to be registered on the UKCloud platform and will need to provision a dedicated RDS licence server. To assign and validate the licences, we will need to arrange a session to connect to your server.
 
   - Microsoft Mobility - this is a valid option for RDS licences.
 
@@ -125,7 +125,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **Office**
 
-  - UKCloud licensing - UKCloud can offer SALs for this software. You need to inform us as to how many users will be accessing the application and we will bill you on a per user, per month basis. This pricing is available on request as it is not currently stated in the G10 service definitions or pricing guide.
+  - UKCloud licensing - UKCloud can offer SALs for this software. You need to inform us as to how many users will be accessing the application and we will bill you on a per user, per month basis. This pricing is available on request as it is not currently stated in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
   - Microsoft Mobility - this is not available via Microsoft Mobility and must be provided by UKCloud.
 
@@ -198,4 +198,4 @@ If you have any issues regarding updating, or the support of Microsoft Server, p
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

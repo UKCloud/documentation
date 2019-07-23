@@ -120,7 +120,7 @@ UKCloud reserve the right to proactively move a GPU-enabled VM to another GPU-en
 
 **Licencing.** We provide the GRID licence which is included within the GPU price.
 
-UKCloud can also provide Operating Systems (OS) licensing, and is mandatory with respect to Windows Server. For more information, see the [*UKCloud for VMware Service Definition*](../vmware/vmw-sd.md).
+UKCloud can also provide Operating Systems (OS) licensing, and is mandatory with respect to Windows Server. For more information, see the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 **VM server images.** We provide base GPU-enabled VM images for the OS for which we provide licensing. You can access these from vCloud Director once the GPU-enabled image has been made available to you.
 
@@ -222,4 +222,4 @@ The following documents contain more information about Cloud GPU:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

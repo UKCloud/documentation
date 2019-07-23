@@ -67,11 +67,11 @@ Enterprise & Private Sector customers receive the same pricing as our public sec
 
 ### Where do I find pricing?
 
-All of our UKCloud Service Definitions, Pricing Guide and Terms and Conditions are available from our [Knowledge Centre](https://docs.ukcloud.com/articles/other/other-ref-service-definitions.html), and are also linked from the Enterprise & Private Sector section of our [website](https://ukcloud.com/sectors/enterprise-private-sector/). Note that the pricing guide includes some services, security domains and connectivity options that are available only to public sector customers.
+All of our UKCloud Service Definitions, Pricing Guide and Terms and Conditions are available from our [Knowledge Centre](other-ref-service-definitions.md), and are also linked from the Enterprise & Private Sector section of our [website](https://ukcloud.com/sectors/enterprise-private-sector/). Note that the pricing guide includes some services, security domains and connectivity options that are available only to public sector customers.
 
 ### How do I order?
 
-All of our customers, regardless of sector, can order the same way via our sales team who can be contacted by calling 01252 303300 (option 3) or by emailing <info@ukcloud.com>. There are also contact details on the Service Definitions and on the main website *Contact us* page. We'll shortly be launching a new credit card-based order system and further details will be made available closer to the launch date.
+All of our customers, regardless of sector, can order the same way via our sales team who can be contacted by calling 01252 303300 (option 3) or by emailing <info@ukcloud.com>. There are also contact details on the main website *Contact us* page. We'll shortly be launching a new credit card-based order system and further details will be made available closer to the launch date.
 
 ### Can I pay with my credit card?
 
@@ -95,4 +95,4 @@ You will be contacted by your Cloud Architect or CSM when your trial is due to e
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
