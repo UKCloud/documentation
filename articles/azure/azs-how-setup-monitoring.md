@@ -50,7 +50,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Click **Template deployment (deploy using custom templates)**.
 
-        ![Template Deployment Example](images\azs-browser-example-custom-template.png)
+        ![Template Deployment Example](images/azs-browser-example-custom-template.png)
 
     - Click **Create**
 
@@ -138,7 +138,7 @@ To complete the steps in this article, you must have appropriate access to a sub
     - Click the newly create workspace. On the new blade, under settings, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VM Type* you want to add analytics too.
     Note down the **Workspace ID** and **Primary Key** values.
 
-       ![Log Analytics workspace advanced settings](images\azs-browser-log-analytics-workspace-advanced-settings.png)
+       ![Log Analytics workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
 
     - Within *Advanced settings*, Select the *Data* blade, and click **VM Type Performance Counters.**
 

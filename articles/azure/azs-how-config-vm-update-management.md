@@ -79,7 +79,7 @@ To complete the steps in this article, you must have appropriate access to a sub
     - Select the newly create workspace. On the new blade, under settings, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VM Type* you want to add analytics too.
     Note down the **Workspace ID** and **Primary Key** values.
 
-       ![Log Analytics workspace advanced settings](images\azs-browser-log-analytics-workspace-advanced-settings.png)
+       ![Log Analytics workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
 
     - Within *Advanced settings*, Select the *Data* blade, and click **VM Type Performance Counters.**
 
@@ -98,7 +98,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Search for `automation` and click **Create**.
 
-        ![automation account](images\azs-browser-search-automation-account.png)
+        ![automation account](images/azs-browser-search-automation-account.png)
 
     - Choose a **Name**, **Subscription**, **Resource Group**, **Location** and ensure *Create Azure Run As Account* is set to **Yes**.
 
