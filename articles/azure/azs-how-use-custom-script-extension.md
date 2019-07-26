@@ -36,21 +36,20 @@ Enter details below to provide values for the variables in the following scripts
 |-----------------|--------------------------------------------------------------------|------------------|
 | \$ArmEndpoint    | The Azure Resource Manager endpoint for Azure Stack                 | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
 | \$RGName        | Name of the resource group                           | <form oninput="result.value=resourcegroup.value;result2.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
-| \$FileUri        | Url to the custom script                          | <form oninput="result.value=fileuri.value;result2.value=fileuri.value;result3.value=fileuri.value;result4.value=fileuri.value" id="fileuri" style="display: inline;"><input type="text" id="fileuri" name="fileuri" style="display: inline;" placeholder="https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh"/></form> |
+| \$VMName        | Name of the virtual machine                          | <form oninput="result.value=vmname.value;result2.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"/></form> |
+| \$SAName        | Name of the storage account                           | <form oninput="result.value=saname.value;result2.value=saname.value;" id="saname" style="display: inline;"><input type="text" id="saname" name="saname" style="display: inline;" placeholder="MyStorageAccount79161867"/></form> |
+| \$ContainerName        | The name of the container created in the storage blob                         | <form oninput="result.value=containername.value;result2.value=containername.value;" id="containername" style="display: inline;"><input type="text" id="containername" name="containername" style="display: inline;" placeholder="customscriptextension"/></form> |
+| \$CustomScriptStorageAccountName        | The name of the new storage account                         | <form oninput="result.value=customscriptstorageaccountname.value;result2.value=customscriptstorageaccountname.value;" id="customscriptstorageaccountname" style="display: inline;"><input type="text" id="customscriptstorageaccountname" name="customscriptstorageaccountname" style="display: inline;" placeholder="CustomScript79136774"/></form> |
+| \$CustomScriptFileName        | The name of the custom script file                         | <form oninput="result.value=customscriptfilename.value;result2.value=customscriptfilename.value;" id="customscriptfilename" style="display: inline;"><input type="text" id="customscriptfilename" name="customscriptfilename" style="display: inline;" placeholder="SetRootPassword.sh"/></form> |
+| \$CustomScriptExtensionName        | The name of the custom script extension                          | <form oninput="result.value=customscriptextensionname.value;result2.value=customscriptextensionname.value;result3.value=customscriptextensionname.value" id="customscriptextensionname" style="display: inline;"><input type="text" id="customscriptextensionname" name="customscriptextensionname" style="display: inline;" placeholder="SetPasswordExtension"/></form> |
+| \$FileUri        | URL to the custom script                          | <form oninput="result.value=fileuri.value;result2.value=fileuri.value;result3.value=fileuri.value;result4.value=fileuri.value" id="fileuri" style="display: inline;"><input type="text" id="fileuri" name="fileuri" style="display: inline;" placeholder="https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh"/></form> |
 | \$FilePath        | Path to the script on disk                          | <form oninput="result.value=filepath.value;result2.value=filepath.value" id="filepath" style="display: inline;"><input type="text" id="filepath" name="filepath" style="display: inline;" placeholder="C:\Users\User1\CustomExtensionSetup.ps1"/></form> |
 | \$CommandToExecute        | The command to execute                          | <form oninput="result.value=commandtoexecute.value;result2.value=commandtoexecute.value;result3.value=commandtoexecute.value" id="commandtoexecute" style="display: inline;"><input type="text" id="commandtoexecute" name="commandtoexecute" style="display: inline;" placeholder="sh SetRootPassword.sh Password123!"/></form> |
-| \$CustomScriptExtensionName        | The name of the custom script extension                          | <form oninput="result.value=customscriptextensionname.value;result2.value=customscriptextensionname.value;result3.value=customscriptextensionname.value" id="customscriptextensionname" style="display: inline;"><input type="text" id="customscriptextensionname" name="customscriptextensionname" style="display: inline;" placeholder="SRSetup"/></form> |
-| \$Run        | The command used to run the script.                           | <form oninput="result.value=run.value;result2.value=run.value;result3.value=run.value" id="run" style="display: inline;"><input type="text" id="run" name="run" style="display: inline;" placeholder="VMSetupForSR.ps1"/></form> |
 
-> [!IMPORTANT]
-> If you wish to use the **FilePath** option, the code snippet for each OS changes slightly; see below: <br><br>
-> Linux
-> <pre><code class="language-PowerShell">$Extensions = Get-AzureRmVMExtensionImage -Location "frn00006" -PublisherName Microsoft.Azure.Extensions -Type "CustomScript"
-> $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
-> $ScriptSettings = @{"fileName" = @("<output form="filepath" name="result" style="display: inline;">C:\Users\User1\SetRootPassword.sh</output>"); "commandToExecute" = "<output form="commandtoexecute" name="result" style="display: inline;">sh SetRootPassword.sh Password123!</output>"};
-> Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VirtualMachine.Name -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings</code></pre>
-> Windows
-> <pre><code class="language-PowerShell">Set-AzureRmVMCustomScriptExtension -FileName "<output form="filepath" name="result2" style="display: inline;">C:\Users\User1\CustomExtensionSetup.ps1</output>" -ResourceGroupName $RGName -Location $Location -VMName $VirtualMachine.Name -Name "<output form="customscriptextensionname" name="result" style="display: inline;">SRSetup</output>" -Run "<output form="run" name="result" style="display: inline;">VMSetupForSR.ps1</output>"</code></pre>
+There are two options for deploying custom script extensions:
+
+1. Deploy a custom script extension from your local disk
+2. Deploy a custom script extension using a fileuri
 
 ## Configure custom script extensions for new Azure Stack VMs
 
@@ -60,30 +59,107 @@ See documentation here on [how to create a new VM on Azure Stack](azs-how-create
 
 Add the following code to the end of the VM creation script when creating a Linux VM on Azure Stack.
 
-<pre><code class="language-PowerShell"># Initialise variables for custom script extension provisioning.
-$FileUri = "<output form="fileuri" name="result" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh</output>"
+## Option 1: Deploying from local disk
+
+<pre><code class="language-PowerShell">$CustomScriptExtensionName = "<output form="customscriptextensionname" name="result" style="display: inline;">SetPasswordExtension</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result" style="display: inline;">SetRootPassword.sh</output>"
+$ContainerName = "<output form="containername" name="result" style="display: inline;">customscriptextension</output>"
+$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result" style="display: inline;">CustomScript<span id="RandNum"></span></output>".ToLower()
+$FilePath = "<output form="filepath" name="result" style="display: inline;">C:\Users\User1\SetRootPassword.sh</output>"
+$CommandToExecute = "<output form="commandtoexecute" name="result" style="display: inline;">sh SetRootPassword.sh Password123!</output>"
+
+# Create a new storage account
+Write-Output -InputObject "Creating storage account and container"
+$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
+
+# Get storage account context
+$Ctx = $StorageAccount.Context
+$Container = New-AzureStorageContainer -Name $ContainerName -Context $Ctx
+
+# Retrieve storage account key
+$StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+
+# Retrieve storage blob endpoint
+$ScriptBlobUrl = $Container.Context.BlobEndPoint
+
+# Upload script extension to the storage account
+Write-Output -InputObject "Uploading custom script extension to storage account"
+Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptExtensionName -Context $Ctx
+
+# Fetch current Timestamp
+$TimeStamp = (Get-Date).Ticks
+
+# Creating script location string
+$ScriptLocation = $ScriptBlobUrl + "$ContainerName/" + $CustomScriptFileName
+
+# Add custom script extension to Linux VM
+Write-Output -InputObject "Adding custom script extension to VM"
+$Extensions = Get-AzureRmVMExtensionImage -Location "frn00006" -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
+$ExtensionVersion = $Extensions[0].Version[0..2] -join ""
+$ScriptSettings = @{"fileUris" = @("$ScriptLocation"); "timestamp" = $TimeStamp};
+$ProtectedSettings = @{"storageAccountName" = $CustomScriptStorageAccountName; "storageAccountKey" = $StorageAccountKey; "commandToExecute" = $CommandToExecute};
+Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
+</code></pre>
+
+## Option 2: Deploying using a fileuri
+
+<pre><code class="language-PowerShell">$FileUri = "<output form="fileuri" name="result" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh</output>"
 $CommandToExecute = "<output form="commandtoexecute" name="result2" style="display: inline;">sh SetRootPassword.sh Password123!</output>"
 
-# Add custom script extension to existing Linux VM.
-Write-Output -InputObject "Adding custom script extension to existing virtual machine"
-$Extensions = Get-AzureRmVMExtensionImage -Location "frn00006" -PublisherName Microsoft.Azure.Extensions -Type "CustomScript"
+# Fetch current Timestamp
+$TimeStamp = (Get-Date).Ticks
+
+# Add custom script extension to Linux VM
+Write-Output -InputObject "Adding custom script extension to VM"
+$Extensions = Get-AzureRmVMExtensionImage -Location "frn00006" -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
 $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
-$ScriptSettings = @{"fileUris" = @($FileUri); "commandToExecute" = $CommandToExecute};
-Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VirtualMachine.Name -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings
+$ScriptSettings = @{"fileUris" = @($FileUri); "timestamp" = $TimeStamp};
+$ProtectedSettings = @{"commandToExecute" = $CommandToExecute};
+Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
 </code></pre>
 
 # [Windows](#tab/tabid-2)
 
 Add the following code to the end of the VM creation script when creating a Windows VM on Azure Stack.
 
-<pre><code class="language-PowerShell"># Initialise variables for custom script extension provisioning.
-$FileUri = "<output form="fileuri" name="result2" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1</output>"
-$CustomScriptExtensionName = "<output form="customscriptextensionname" name="result2" style="display: inline;">SRSetup</output>"
-$Run = "<output form="run" name="result2" style="display: inline;">VMSetupForSR.ps1</output>"
+## Option 1: Deploying from local disk
 
-# Add custom script extension to existing Windows VM.
-Write-Output -InputObject "Adding custom script extension to existing virtual machine"
-Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -ResourceGroupName $RGName -Location $Location -VMName $VirtualMachine.Name -Name $CustomScriptExtensionName -Run $Run
+<pre><code class="language-PowerShell">$CustomScriptExtensionName = "<output form="customscriptextensionname" name="result2" style="display: inline;">SetupSR</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result2" style="display: inline;">VMSetupForSR.ps1</output>"
+$ContainerName = "<output form="containername" name="result2" style="display: inline;">customscriptextension</output>"
+$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result2" style="display: inline;">CustomScript<span id="RandNum2"></span></output>".ToLower()
+$FilePath = "<output form="filepath" name="result2" style="display: inline;">C:\Users\User1\VMSetupForSR.ps1</output>"
+$CommandToExecute = "<output form="commandtoexecute" name="result3" style="display: inline;">VMSetupForSR.ps1</output>"
+
+# Create a new storage account
+Write-Output -InputObject "Creating storage account and container"
+$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
+
+# Get storage account context
+$Ctx = $StorageAccount.Context
+New-AzureStorageContainer -Name $ContainerName -Context $Ctx
+
+# Retrieve storage account key
+$StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+
+# Upload script extension to the storage account
+Write-Output -InputObject "Uploading custom script extension to storage account"
+Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Ctx
+
+# Add custom script extension to Windows VM
+Write-Output -InputObject "Adding custom script extension to VM"
+Set-AzureRmVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptExtensionName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
+</code></pre>
+
+## Option 2: Deploying from a FileUri
+
+<pre><code class="language-PowerShell">$FileUri = "<output form="fileuri" name="result2" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1</output>"
+$CommandToExecute = "<output form="commandtoexecute" name="result4" style="display: inline;">VMSetupForSR.ps1</output>"
+$CustomScriptExtensionName = "<output form="customscriptextensionname" name="result3" style="display: inline;">SetupSR</output>"
+
+# Add custom script extension to Windows VM
+Write-Output -InputObject "Adding custom script extension to VM"
+Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptExtensionName -Location $Location -Run $CommandToExecute -SecureExecution
 </code></pre>
 
 ***
@@ -91,6 +167,8 @@ Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -ResourceGroupName $RGName 
 ## Configure custom script extensions for existing Azure Stack VMs
 
 # [Linux](#tab/tabid-1)
+
+## Option 1: Deploying from local disk
 
 <pre><code class="language-PowerShell"># Initialise environment and variables
 
@@ -108,25 +186,50 @@ $Location = (Get-AzureRmLocation).Location
 
 # Input Variables
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
-$FileUri = "<output form="fileuri" name="result3" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh</output>"
-$CommandToExecute = "<output form="commandtoexecute" name="result3" style="display: inline;">sh SetRootPassword.sh Password123!</output>"
+$VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
+$CustomScriptExtensionName = "<output form="customscriptextensionname" name="result4" style="display: inline;">SetPasswordExtension</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result3" style="display: inline;">SetRootPassword.sh</output>"
+$ContainerName = "<output form="containername" name="result3" style="display: inline;">customscriptextension</output>"
+$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result3" style="display: inline;">CustomScript<span id="RandNum3"></span></output>".ToLower()
+$FilePath = "<output form="filepath" name="result3" style="display: inline;">C:\Users\User1\SetRootPassword.sh</output>"
+$CommandToExecute = "<output form="commandtoexecute" name="result5" style="display: inline;">sh SetRootPassword.sh Password123!</output>"
 
-# Get virtual machine.
-Write-Output -InputObject "Fetching virtual machine object"
-$VirtualMachine = Get-AzureRmVM -Name $VMName -ResourceGroupName $RGName
+# Create a new storage account
+Write-Output -InputObject "Creating storage account and container"
+$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
 
-# Add custom script extension to existing Linux VM.
-Write-Output -InputObject "Adding custom script extension to existing virtual machine"
-$Extensions = Get-AzureRmVMExtensionImage -Location "frn00006" -PublisherName Microsoft.Azure.Extensions -Type "CustomScript"
+# Get storage account context
+$Ctx = $StorageAccount.Context
+$Container = New-AzureStorageContainer -Name $ContainerName -Context $Ctx
+
+# Retrieve storage account key
+$StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+
+# Retrieve storage blob endpoint
+$ScriptBlobUrl = $Container.Context.BlobEndPoint
+
+# Upload script extension to the storage account
+Write-Output -InputObject "Uploading custom script extension to storage account"
+Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptExtensionName -Context $Ctx
+
+# Fetch current Timestamp
+$TimeStamp = (Get-Date).Ticks
+
+# Creating script location string
+$ScriptLocation = $ScriptBlobUrl + "$ContainerName/" + $CustomScriptFileName
+
+# Add custom script extension to Linux VM
+Write-Output -InputObject "Adding custom script extension to VM"
+$Extensions = Get-AzureRmVMExtensionImage -Location "frn00006" -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
 $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
-$ScriptSettings = @{"fileUris" = @($FileUri); "commandToExecute" = $CommandToExecute};
-Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VirtualMachine.Name -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings
+$ScriptSettings = @{"fileUris" = @("$ScriptLocation"); "timestamp" = $TimeStamp};
+$ProtectedSettings = @{"storageAccountName" = $CustomScriptStorageAccountName; "storageAccountKey" = $StorageAccountKey; "commandToExecute" = $CommandToExecute};
+Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
 </code></pre>
 
-# [Windows](#tab/tabid-2)
+## Option 2: Deploying from a fileuri
 
-<pre><code class="language-PowerShell">
-# Initialise environment and variables
+<pre><code class="language-PowerShell"># Initialise environment and variables
 
 # Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
@@ -140,19 +243,99 @@ Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 # Get location of Azure Stack
 $Location = (Get-AzureRmLocation).Location
 
-# Input Variables
+# Input variables
 $RGName = "<output form="resourcegroup" name="result2" style="display: inline;">MyResourceGroup</output>"
-$FileUri = "<output form="fileuri" name="result4" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1</output>"
-$CustomScriptExtensionName = "<output form="customscriptextensionname" name="result3" style="display: inline;">SRSetup</output>"
-$Run = "<output form="run" name="result3" style="display: inline;">VMSetupForSR.ps1</output>"
+$VMName = "<output form="vmname" name="result2" style="display: inline;">MyVM</output>"
+$FileUri = "<output form="fileuri" name="result3" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh</output>"
+$CommandToExecute = "<output form="commandtoexecute" name="result6" style="display: inline;">sh SetRootPassword.sh Password123!</output>"
 
-# Get virtual machine.
-Write-Output -InputObject "Fetching virtual machine object"
-$VirtualMachine = Get-AzureRmVM -Name $VMName -ResourceGroupName $RGName
-
-# Add custom script extension to existing Windows VM.
+# Add custom script extension to existing Linux VM.
 Write-Output -InputObject "Adding custom script extension to existing virtual machine"
-Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -ResourceGroupName $RGName -Location $Location -VMName $VirtualMachine.Name -Name $CustomScriptExtensionName -Run $Run
+$Extensions = Get-AzureRmVMExtensionImage -Location "frn00006" -PublisherName Microsoft.Azure.Extensions -Type "CustomScript"
+$ExtensionVersion = $Extensions[0].Version[0..2] -join ""
+$ScriptSettings = @{"fileUris" = @($FileUri); "commandToExecute" = $CommandToExecute};
+Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings
+</code></pre>
+
+# [Windows](#tab/tabid-2)
+
+## Option 1: Deploying from local disk
+
+<pre><code class="language-PowerShell"># Initialise environment and variables
+
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result3" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+## Add environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+
+## Login
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
+
+# Input Variables
+$RGName = "<output form="resourcegroup" name="result3" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="vmname" name="result3" style="display: inline;">MyVM</output>"
+$CustomScriptExtensionName = "<output form="customscriptextensionname" name="result5" style="display: inline;">SetupSR</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result4" style="display: inline;">VMSetupForSR.ps1</output>"
+$ContainerName = "<output form="containername" name="result4" style="display: inline;">customscriptextension</output>"
+$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result4" style="display: inline;">CustomScript<span id="RandNum4"></span></output>".ToLower()
+$FilePath = "<output form="filepath" name="result4" style="display: inline;">C:\Users\User1\VMSetupForSR.ps1</output>"
+$CommandToExecute = "<output form="commandtoexecute" name="result7" style="display: inline;">VMSetupForSR.ps1</output>"
+
+# Create a new storage account
+Write-Output -InputObject "Creating storage account and container"
+$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
+
+# Get storage account context
+$Ctx = $StorageAccount.Context
+New-AzureStorageContainer -Name $ContainerName -Context $Ctx
+
+# Retrieve storage account key
+$StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+
+# Upload script extension to the storage account
+Write-Output -InputObject "Uploading custom script extension to storage account"
+Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Ctx
+
+# Add custom script extension to Windows VM
+Write-Output -InputObject "Adding custom script extension to VM"
+Set-AzureRmVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptExtensionName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
+</code></pre>
+
+## Option 2: Deploying from a fileuri
+
+<pre><code class="language-PowerShell"># Initialise environment and variables
+
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result4" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+## Add environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+
+## Login
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
+
+# Input variables
+$RGName = "<output form="resourcegroup" name="result4" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="vmname" name="result4" style="display: inline;">MyVM</output>"
+$FileUri = "<output form="fileuri" name="result4" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1</output>"
+$CommandToExecute = "<output form="commandtoexecute" name="result8" style="display: inline;">VMSetupForSR.ps1</output>"
+$CustomScriptExtensionName = "<output form="customscriptextensionname" name="result6" style="display: inline;">SetupSR</output>"
+
+# Add custom script extension to Windows VM
+Write-Output -InputObject "Adding custom script extension to VM"
+Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptExtensionName -Location $Location -Run $CommandToExecute -SecureExecution
 </code></pre>
 
 ***
+
+<script>document.getElementById("RandNum").innerHTML = Math.round(Math.random()*100000000)</script>
+<script>document.getElementById("RandNum2").innerHTML = Math.round(Math.random()*100000000)</script>
+<script>document.getElementById("RandNum3").innerHTML = Math.round(Math.random()*100000000)</script>
+<script>document.getElementById("RandNum4").innerHTML = Math.round(Math.random()*100000000)</script>
