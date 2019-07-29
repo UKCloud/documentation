@@ -83,6 +83,16 @@ If you want to raise a request or an incident, use the Service Catalogue.
     > [!NOTE]
     > You're automatically subscribed to any tickets that you create.
     
+## Raising a service request ticket
+1. Select the service request form that you want to use.
+
+2. Complete the fields in the form with as much information as possible, including any mandatory fields which are marked with a red asterisk. This is so that our Support Team can Address your ticket promptly. 
+
+3.When you're done, click **Review & Submit.** you can then edit the information in your request or submit it. 
+
+   >[!NOTE]
+   >You're automatically subscribed to any tickets that you create. 
+    
    
 ## Accessing an existing support ticket
 
