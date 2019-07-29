@@ -141,6 +141,11 @@ $VirtualMachine = New-AzureRmVMConfig -VMName $VMName -VMSize $VMSize
 # Set the VM Size and Type
 $VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result2" style="display: inline;">-Linux</output> -ComputerName $ComputerName -Credential $Credential
 
+# Enable the provisioning of the VM Agent
+if ($VirtualMachine.OSProfile.WindowsConfiguration) {
+    $VirtualMachine.OSProfile.WindowsConfiguration.ProvisionVMAgent = $true
+}
+
 # Get the VM Source Image
 $Image = Get-AzureRmVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object -FilterScript { $_.Id -like $VMImage }
 
@@ -245,6 +250,11 @@ $VirtualMachine = New-AzureRmVMConfig -VMName $VMName -VMSize $VMSize
 
 # Set the VM Size and Type
 $VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result4" style="display: inline;">-Linux</output> -ComputerName $ComputerName -Credential $Credential
+
+# Enable the provisioning of the VM Agent
+if ($VirtualMachine.OSProfile.WindowsConfiguration) {
+    $VirtualMachine.OSProfile.WindowsConfiguration.ProvisionVMAgent = $true
+}
 
 # Get the VM Source Image
 $Image = Get-AzureRmVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object -FilterScript { $_.Id -like $VMImage }
