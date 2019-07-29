@@ -41,7 +41,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 > [!WARNING]
 > Before proceeding, check [here](https://docs.microsoft.com/en-gb/azure/azure-monitor/insights/vminsights-enable-overview#supported-operating-systems) that your VMs' OS version is supported.
 
-1. Login to the Azure portal:
+1. Log in to the public Azure portal:
 
     <https://portal.azure.com>
 
@@ -57,18 +57,18 @@ To complete the steps in this article, you must have appropriate access to a sub
 
         - A **Name** for the Log Analytics workspace. Example: `DefaultLAWorkspace`
 
-        - A **Subscription** to link the workspace to
+        - A **Subscription** to link the workspace to.
 
-        - A **Resource Group** to link the workspace to
+        - A **Resource Group** to host the workspace in.
 
-        - A **Location** available to host the workspace on
+        - A **Location** to host the workspace in.
 
         > [!NOTE]
         > The currently supported locations are: *West Central US*, *East US*, *Canada Central*, *UK South*, *West Europe* and *Southeast Asia*.
 
-        - *Pricing Tier* to use
+        - A *Pricing Tier* to use.
 
-        The following example shows the the blade with all the items filled out:
+        The following example shows the blade with all items filled out:
 
         ![Log Analytics workspace creation](images/azs-browser-example-log-analytics-workspace.png)
 
@@ -76,7 +76,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Once deployment is complete, navigate to the resource group you placed the **Log Analytics workspace** in.
 
-    - Select the newly create workspace. On the new blade, under settings, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VM Type* you want to add analytics too.
+    - Select the newly create workspace. On the new blade, under settings, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VM Type* you want to add analytics to.
     Note down the **Workspace ID** and **Primary Key** values.
 
        ![Log Analytics workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
@@ -109,7 +109,7 @@ To complete the steps in this article, you must have appropriate access to a sub
         > [!NOTE]
         > The error "Azure Classic Run As account creation error" may occur. This **DOES NOT** effect the process.
 
-4. Once deployed, navigate to the *Automation Account*. In the new blade, Under *Configuration Management*, select the solution to enable (Inventory & Change Tracking or Update management).
+4. Once deployed, navigate to the *Automation Account*. In the new blade, Under *Configuration Management*, select the solution to enable (Inventory & Change Tracking or Update Management).
 
     - Select the *Log Analytics workspace* to link the automation account too.
 
