@@ -73,12 +73,13 @@ If you want to raise a request or an incident, use the Service Catalogue.
     ![Service Catalog tab](images/ptl-mycalls-service-catalogue.png)
 
 ## Raising an incident ticket
-    1.Select the incident form that you want to use (for example,VMWare).
+
+1.Select the incident form that you want to use (for example,VMWare).
     
-    2. Complete the fields in the form with as much information as possible, Including any mandatory fields which are marked with a red asterisk. This is so that our Support Team can address your ticket promptly.
+2. Complete the fields in the form with as much information as possible, Including any mandatory fields which are marked with a red asterisk. This is so that our Support Team can address your ticket promptly.
     
-    3. When you're done, click **Save Incident**
-    
+3. When you're done, click **Save Incident**
+
     > [!NOTE]
     > You're automatically subscribed to any tickets that you create.
     
@@ -87,8 +88,8 @@ If you want to raise a request or an incident, use the Service Catalogue.
 
 After raising a support ticket, you can view the ticket to monitor progress, add more information, add attachments, close or cancel the ticket.
 
-> [!NOTE]
-> The actions you can perform on a ticket depend on your Support permissions. You will always be able to update support tickets that you have raised. If you have the **Account Tickets** or **My Calls Admin** permissions, you can also view and edit tickets raised by other users on the account.
+   >[!NOTE]
+   >The actions you can perform on a ticket depend on your Support permissions. You will always be able to update support tickets that you have raised. If you have the **Account Tickets** or **My Calls Admin** permissions, you can also view and edit tickets raised by other users on the account.
 
 1. Log into My Calls and go into the home page.
 
@@ -112,19 +113,19 @@ After raising a support ticket, you can view the ticket to monitor progress, add
     
 ## Monitoring an existing Incident ticket
 
-    1. When you find your incident ticket, double click to open it. the top of the incident details who logged the ticket, ticket status, service that is being requested, a description of the incident, when it was raised and last modified. 
+1. When you find your incident ticket, double click to open it. the top of the incident details who logged the ticket, ticket status, service that is being requested, a description of the incident, when it was raised and last modified. 
     
-    2. The **Progress Notes** tab contains the following information:
+2. The **Progress Notes** tab contains the following information:
     
-    - **Add new note** allows you to provide additional information relating to your requests and respond to any questions from our engineers. You can also read updates on your requests from our engineers. Simply double click to open an update. You can see who provided the update and the date it was provided.
+- **Add new note** allows you to provide additional information relating to your requests and respond to any questions from our engineers. You can also read updates on your requests from our engineers. Simply double click to open an update. You can see who provided the update and the date it was provided.
     
-    - Click on **Attach** to attach documents to your service request. Any documents you attatch will be listed in the ticket. For Security purposes, some file attachment formats are not accepted. 
+- Click on **Attach** to attach documents to your service request. Any documents you attatch will be listed in the ticket. For Security purposes, some file attachment formats are not accepted. 
     
-    - Click 'Close Incident' to close an incident. You will be promoted to add a reason for closure. Then click ok.
+- Click 'Close Incident' to close an incident. You will be promoted to add a reason for closure. Then click ok.
     
-    - If you need to re-open an incident that has been closed, click 'Re-open Incident'. You will be prompted for a reason for re-opening the incident.
+- If you need to re-open an incident that has been closed, click 'Re-open Incident'. You will be prompted for a reason for re-opening the incident.
     
-    When you're done, click **Save**
+When you're done, click **Save**
     
 ## Managing My Calls user permissions
 
