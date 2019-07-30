@@ -28,11 +28,11 @@ Prerequisites from a Windows-based external client.
 
   - [Download Terraform](https://www.terraform.io/downloads.html)
 
-- An active Azure *Subscription* (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)
+- An active Azure Stack *Subscription* (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)
 
 - Service Principal Name
 
-  - [How To create Service Principal Name for Azure Stack](azs-how-create-spn-powershell.md)
+  - [How To create Service Principal Name for Azure Stack](azs-how-create-vm-terraform.md)
 
 ## Official Documentation
 
