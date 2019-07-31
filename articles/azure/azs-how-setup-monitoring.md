@@ -63,9 +63,6 @@ To complete the steps in this article, you must have appropriate access to a sub
             "parameters": {
                 "WorkspaceName": {
                     "type": "string"
-                },
-                "WorkspaceLocation": {
-                    "type": "string"
                 }
             },
             "resources": [
@@ -73,11 +70,11 @@ To complete the steps in this article, you must have appropriate access to a sub
                     "apiVersion": "2017-03-15-preview",
                     "type": "Microsoft.OperationalInsights/workspaces",
                     "name": "[parameters('WorkspaceName')]",
-                    "location": "[parameters('WorkspaceLocation')]",
+                    "location": "[resourceGroup().location]",
                     "resources": [
                         {
                             "apiVersion": "2015-11-01-preview",
-                            "location": "[parameters('WorkspaceLocation')]",
+                            "location": "[resourceGroup().location]",
                             "name": "[concat('ServiceMap', '(', parameters('WorkspaceName'),')')]",
                             "type": "Microsoft.OperationsManagement/solutions",
                             "dependsOn": [
@@ -95,7 +92,7 @@ To complete the steps in this article, you must have appropriate access to a sub
                         },
                         {
                             "apiVersion": "2015-11-01-preview",
-                            "location": "[parameters('WorkspaceLocation')]",
+                            "location": "[resourceGroup().location]",
                             "name": "[concat('InfrastructureInsights', '(', parameters('WorkspaceName'),')')]",
                             "type": "Microsoft.OperationsManagement/solutions",
                             "dependsOn": [
