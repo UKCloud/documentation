@@ -42,91 +42,33 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 2. Create a *Log Analytics workspace* in your Azure subscription:
 
-    - Click **Create a resource**.
+    - Click **All services** on the side bar.
 
-    - Search for `Template Deployment`.
+    - In the search bar, search for `log analytics`.
 
-    - Click **Template deployment (deploy using custom templates)**.
+        ![Log Analytics browser search](images/azs-browser-search-log-analytics.png)
 
-        ![Template Deployment Example](images/azs-browser-example-custom-template.png)
+    - Click **Log Analytics workspaces**.
+    - 
+    - Click **Add** at the top.
 
-    - Click **Create**
+    - Provide the following:
 
-    - Click **Build your own template in the editor**.
+        - A **Name** for the Log Analytics workspace. Example: `DefaultLAWorkspace`
 
-    - Copy and paste the following code into the editor:
+        - A **Subscription** to link the workspace to.
 
-        <pre><code class="language-json">
-        {
-            "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-            "contentVersion": "1.0.0.0",
-            "parameters": {
-                "WorkspaceName": {
-                    "type": "string"
-                }
-            },
-            "resources": [
-                {
-                    "apiVersion": "2017-03-15-preview",
-                    "type": "Microsoft.OperationalInsights/workspaces",
-                    "name": "[parameters('WorkspaceName')]",
-                    "location": "[resourceGroup().location]",
-                    "resources": [
-                        {
-                            "apiVersion": "2015-11-01-preview",
-                            "location": "[resourceGroup().location]",
-                            "name": "[concat('ServiceMap', '(', parameters('WorkspaceName'),')')]",
-                            "type": "Microsoft.OperationsManagement/solutions",
-                            "dependsOn": [
-                                "[concat('Microsoft.OperationalInsights/workspaces/', parameters('WorkspaceName'))]"
-                            ],
-                            "properties": {
-                                "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces/', parameters('WorkspaceName'))]"
-                            },
-                            "plan": {
-                                "name": "[concat('ServiceMap', '(', parameters('WorkspaceName'),')')]",
-                                "publisher": "Microsoft",
-                                "product": "[Concat('OMSGallery/', 'ServiceMap')]",
-                                "promotionCode": ""
-                            }
-                        },
-                        {
-                            "apiVersion": "2015-11-01-preview",
-                            "location": "[resourceGroup().location]",
-                            "name": "[concat('InfrastructureInsights', '(', parameters('WorkspaceName'),')')]",
-                            "type": "Microsoft.OperationsManagement/solutions",
-                            "dependsOn": [
-                                "[concat('Microsoft.OperationalInsights/workspaces/', parameters('WorkspaceName'))]"
-                            ],
-                            "properties": {
-                                "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces/', parameters('WorkspaceName'))]"
-                            },
-                            "plan": {
-                                "name": "[concat('InfrastructureInsights', '(', parameters('WorkspaceName'),')')]",
-                                "publisher": "Microsoft",
-                                "product": "[Concat('OMSGallery/', 'InfrastructureInsights')]",
-                                "promotionCode": ""
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    </code></pre>
+        - A **Resource Group** to host the workspace in.
 
-    - Click **Save**
+        - A **Location** to host the workspace in.
 
-    - Select a **Resource Group** or create a new one.
+        - A *Pricing Tier* to use.
 
-    - Select a **Location**
+        The following example shows the blade with all items filled out:
 
-    - Under the *Settings* heading. Fill in the parameters **Workspace Name** and **Workspace Location**.
+        ![Log Analytics workspace creation](images/azs-browser-example-log-analytics-workspace.png)
 
-    - Click *I agree to the terms and conditions stated above*.
-
-    - Click **Purchase**.
-
-    - The *Log Analytics Workspace* and required solutions will begin deploying.
+    - Click **OK** once finished. The **Log Analytics workspace** will now begin deploying. A notification will appear in the top right of the portal.
 
 3. Once deployment is complete, navigate to the resource group you placed the **Log Analytics workspace** in.
 
