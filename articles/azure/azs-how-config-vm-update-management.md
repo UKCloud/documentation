@@ -92,7 +92,7 @@ To complete the steps in this article, you must have appropriate access to a sub
         ![Performance counters](images/azs-browser-example-performance-counters.PNG)
 
         > [!NOTE]
-        > For Linux Performance counters, ensure **Apply below configuration to my machines** is selected.
+        > For Linux performance counters, ensure **Apply below configuration to my machines** is selected.
 
 3. Create and configure an *Automation Account*:
 

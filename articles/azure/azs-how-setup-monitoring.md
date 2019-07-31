@@ -20,7 +20,7 @@ toc_mdlink: azs-how-setup-monitoring.md
 
 ## Overview
 
-Azure Monitor is the platform service that provides a single source for monitoring Azure resources. With Azure Monitor, you can visualize, query, route, archive, and otherwise take action on the metrics and logs coming from resources in Azure.
+Azure Monitor is the platform service that provides a single source for monitoring Azure resources. With Azure Monitor, you can visualise, query, route, archive, and otherwise take action on the metrics and logs coming from resources in Azure.
 
 This article will enable the following solutions for Azure Stack VMs:
 
@@ -28,7 +28,7 @@ This article will enable the following solutions for Azure Stack VMs:
 
 ## Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription in the Azure** and Azure Stack portal.
+To complete the steps in this article, you must have appropriate access to a subscription in the Azure and Azure Stack portal.
 
 ## Enabling Azure Monitor for VMs
 
@@ -38,11 +38,9 @@ To complete the steps in this article, you must have appropriate access to a sub
 > [!NOTE]
 > The currently supported locations are: *West Central US*, *East US*, *Canada Central*, *UK South*, *West Europe* and *Southeast Asia*.
 
-1. Login to the Azure portal:
+1. Log in to the [public Azure portal](https://portal.azure.com).
 
-    <https://portal.azure.com>
-
-2. Create a *Log Analytics Workspace* in your Azure subscription:
+2. Create a *Log Analytics workspace* in your Azure subscription:
 
     - Click **Create a resource**.
 
@@ -135,45 +133,43 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 3. Once deployment is complete, navigate to the resource group you placed the **Log Analytics workspace** in.
 
-    - Click the newly create workspace. On the new blade, under settings, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VM Type* you want to add analytics too.
+    - Click the newly created workspace. On the new blade, under Settings, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VM Type* you want to add analytics too.
     Note down the **Workspace ID** and **Primary Key** values.
 
        ![Log Analytics workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
 
-    - Within *Advanced settings*, Select the *Data* blade, and click **VM Type Performance Counters.**
+    - Within *Advanced settings*, select the *Data* blade, and click **VM Type Performance Counters.**
 
     - Ensure all counters are selected and click **Add the selected performance counters**.
 
     - Click **Save**.
 
-        ![Performance Counters](images/azs-browser-example-performance-counters.png)
+        ![Performance counters](images/azs-browser-example-performance-counters.png)
 
         > [!NOTE]
-        > For Linux Performance Counters, ensure **Apply below configuration to my machines** is selected.
+        > For Linux performance counters, ensure **Apply below configuration to my machines** is selected.
 
-4. Login to the Azure Stack portal:
+4. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
 
-    <https://portal.frn00006.azure.ukcloud.com>
-
-5. Navigate to the VM that you want to enable **Azure Monitor** on and under settings, select the *extensions* blade.
+5. Navigate to the VM that you want to enable **Azure Monitor** on and under Settings, select the *Extensions* blade.
 
     > [!WARNING]
     > For any monitoring to work correctly, the VM **must** have HTTPS (Port 443) enabled in the **Network Security Group** rules.
 
-6. Click **Add** at the top and select the extension **Azure Monitor, Update and Configuration Management**; then click **Create**.
+6. Click **Add** at the top and select the extension **Azure Monitor, Update and Configuration Management**, then click **Create**.
 
     ![VM enable update management](images/azs-browser-log-analytics-enable-update-management.png)
 
     - Provide the extension with the **Workspace ID** and **Primary Key** values (noted down previously).
 
-    - Repeat step 6 for the **Azure Monitor Dependency Agent**).
+    - Repeat step 6 for the **Azure Monitor Dependency Agent**.
 
-7. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines (preview)**. You will see three usage analytics tabs (**Health**, **Performance** and **Map**) for the VMs you have enabled **Azure monitor for VMs** on.
+7. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines (preview)**. You will see three usage analytics tabs (**Health**, **Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
 
-   ![azs-browser-example-monitor-stats](images/azs-browser-example-monitor-stats.png)
+   ![Browser monitor stats example](images/azs-browser-example-monitor-stats.png)
 
     > [!NOTE]
-    > It can take between 30 minutes and 6 hours for the dashboard to display updated data from Azure monitor enabled VMs.
+    > It can take between 30 minutes and 6 hours for the dashboard to display updated data from Azure Monitor enabled VMs.
 
 ## Feedback
 
