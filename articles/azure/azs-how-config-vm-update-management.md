@@ -45,15 +45,15 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 2. Create a *Log Analytics workspace* in your Azure subscription:
 
-    - Click **All services** on the side bar.
+    - Click **Create a resource**.
 
     - In the search bar, search for `log analytics`.
 
-        ![Log Analytics browser search](images/azs-browser-search-log-analytics.png)
+        ![Log Analytics search](images/azs-browser-search-log-analytics.png)
 
-    - Click **Log Analytics workspaces**.
+    - Click **Log Analytics**.
 
-    - Click **Add** at the top.
+    - Click **Create**.
 
     - Provide the following:
 
@@ -131,7 +131,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 6. Navigate to the VM that you want to enable **Update & Management** on and under *Settings*, select the *Extensions* blade.
 
     > [!WARNING]
-    > For any monitoring to work correctly, the VM **must** have HTTPS (Port 443) enabled in the **Network Security Group** rules.
+    > For any monitoring to work correctly, the VM **must** have HTTPS (Port 443) enabled in its **Network Security Group** rules.
 
 7. Click **Add** at the top, select the extension **Azure Monitor, Update and Configuration Management** and then click **Create**.
 
@@ -147,7 +147,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
         ![Log Analytics workspace computers connected](images/azs-browser-log-analytics-workspace-computers-connected.png)
 
-    - Click *x VM Type COMPUTERS CONNECTED*. This will bring up logs for the *Log Analytics workspace*.
+    - Click *x VM Type COMPUTERS CONNECTED*. This will bring up the logs for that specific VM type.
 
     - Change the time range to **Last 30 minutes**.
 

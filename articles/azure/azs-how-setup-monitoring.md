@@ -35,22 +35,19 @@ To complete the steps in this article, you must have appropriate access to a sub
 > [!WARNING]
 > Before proceeding, check [here](https://docs.microsoft.com/en-gb/azure/azure-monitor/insights/vminsights-enable-overview#supported-operating-systems) that your VMs' OS version is supported.
 
-> [!NOTE]
-> The currently supported locations are: *West Central US*, *East US*, *Canada Central*, *UK South*, *West Europe* and *Southeast Asia*.
-
 1. Log in to the [public Azure portal](https://portal.azure.com).
 
 2. Create a *Log Analytics workspace* in your Azure subscription:
 
-    - Click **All services** on the side bar.
+    - Click **Create a resource**.
 
     - In the search bar, search for `log analytics`.
 
-        ![Log Analytics browser search](images/azs-browser-search-log-analytics.png)
+        ![Log Analytics search](images/azs-browser-search-log-analytics.png)
 
-    - Click **Log Analytics workspaces**.
+    - Click **Log Analytics**.
 
-    - Click **Add** at the top.
+    - Click **Create**.
 
     - Provide the following:
 
@@ -61,6 +58,9 @@ To complete the steps in this article, you must have appropriate access to a sub
         - A **Resource Group** to host the workspace in.
 
         - A **Location** to host the workspace in.
+
+        > [!NOTE]
+        > The currently supported locations are: *West Central US*, *East US*, *Canada Central*, *UK South*, *West Europe* and *Southeast Asia*.
 
         - A *Pricing Tier* to use.
 
