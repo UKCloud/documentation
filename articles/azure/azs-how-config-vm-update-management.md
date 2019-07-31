@@ -49,7 +49,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - In the search bar, search for `log analytics`.
 
-        ![All Services](images/azs-browser-search-log-analytics.png)
+        ![Log Analytics browser search](images/azs-browser-search-log-analytics.png)
 
     - Click **Log Analytics workspaces**.
     - 
