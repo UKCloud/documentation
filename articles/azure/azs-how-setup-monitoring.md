@@ -49,12 +49,12 @@ To complete the steps in this article, you must have appropriate access to a sub
         ![Log Analytics browser search](images/azs-browser-search-log-analytics.png)
 
     - Click **Log Analytics workspaces**.
-    - 
+
     - Click **Add** at the top.
 
     - Provide the following:
 
-        - A **Name** for the Log Analytics workspace. Example: `DefaultLAWorkspace`
+        - A **Name** for the Log Analytics workspace. Example: `DefaultLAWorkspace`.
 
         - A **Subscription** to link the workspace to.
 
@@ -72,12 +72,12 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 3. Once deployment is complete, navigate to the resource group you placed the **Log Analytics workspace** in.
 
-    - Click the newly created workspace. On the new blade, under Settings, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VM Type* you want to add analytics too.
+    - Click the newly created workspace. On the new blade, under *Settings*, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VM Type* you want to add analytics too.
     Note down the **Workspace ID** and **Primary Key** values.
 
        ![Log Analytics workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
 
-    - Within *Advanced settings*, select the *Data* blade, and click **VM Type Performance Counters.**
+    - Within *Advanced settings*, select the *Data* blade, and click **VM Type Performance Counters**.
 
     - Ensure all counters are selected and click **Add the selected performance counters**.
 
@@ -90,12 +90,12 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 4. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
 
-5. Navigate to the VM that you want to enable **Azure Monitor** on and under Settings, select the *Extensions* blade.
+5. Navigate to the VM that you want to enable **Azure Monitor** on and under *Settings*, select the *Extensions* blade.
 
     > [!WARNING]
     > For any monitoring to work correctly, the VM **must** have HTTPS (Port 443) enabled in the **Network Security Group** rules.
 
-6. Click **Add** at the top and select the extension **Azure Monitor, Update and Configuration Management**, then click **Create**.
+6. Click **Add** at the top, select the extension **Azure Monitor, Update and Configuration Management** and then click **Create**.
 
     ![VM enable update management](images/azs-browser-log-analytics-enable-update-management.png)
 
@@ -105,7 +105,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 7. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines (preview)**. You will see three usage analytics tabs (**Health**, **Performance** and **Map**) for the VMs you have enabled **Azure Monitor for VMs** on.
 
-   ![Browser monitor stats example](images/azs-browser-example-monitor-stats.png)
+   ![Monitor stats example](images/azs-browser-example-monitor-stats.png)
 
     > [!NOTE]
     > It can take between 30 minutes and 6 hours for the dashboard to display updated data from Azure Monitor enabled VMs.

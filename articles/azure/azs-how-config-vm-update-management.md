@@ -52,7 +52,7 @@ To complete the steps in this article, you must have appropriate access to a sub
         ![Log Analytics browser search](images/azs-browser-search-log-analytics.png)
 
     - Click **Log Analytics workspaces**.
-    - 
+
     - Click **Add** at the top.
 
     - Provide the following:
@@ -78,12 +78,12 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Once deployment is complete, navigate to the resource group you placed the **Log Analytics workspace** in.
 
-    - Select the newly created workspace. On the new blade, under Settings, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VM Type* you want to add analytics to.
+    - Select the newly created workspace. On the new blade, under *Settings*, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VM Type* you want to add analytics to.
     Note down the **Workspace ID** and **Primary Key** values.
 
        ![Log Analytics workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
 
-    - Within *Advanced settings*, select the *Data* blade, and click **VM Type Performance Counters.**
+    - Within *Advanced settings*, select the *Data* blade, and click **VM Type Performance Counters**.
 
     - Ensure all counters are selected and click **Add the selected performance counters**.
 
@@ -98,7 +98,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Click *Create a resource*.
 
-    - Search for `automation`
+    - Search for `automation`.
 
     - Select **Automation** and click **Create**.
 
@@ -113,7 +113,7 @@ To complete the steps in this article, you must have appropriate access to a sub
         > [!NOTE]
         > The error "Azure Classic Run As account creation error" may occur. This **DOES NOT** affect the process.
 
-4. Once deployed, navigate to the *Automation Account*. In the new blade, Under *Configuration Management*, select the solution to enable (Inventory & Change Tracking or Update Management).
+4. Once deployed, navigate to the *Automation Account*. In the new blade, under *Configuration Management*, select the solution to enable (Inventory & Change Tracking or Update Management).
 
     - Select the *Log Analytics workspace* to link the automation account to.
 
@@ -133,7 +133,7 @@ To complete the steps in this article, you must have appropriate access to a sub
     > [!WARNING]
     > For any monitoring to work correctly, the VM **must** have HTTPS (Port 443) enabled in the **Network Security Group** rules.
 
-7. Click **Add** at the top and select the extension **Azure Monitor, Update and Configuration Management**, then click **Create**.
+7. Click **Add** at the top, select the extension **Azure Monitor, Update and Configuration Management** and then click **Create**.
 
     ![VM enable Update and Management](images/azs-browser-log-analytics-enable-update-management.png)
 
@@ -141,7 +141,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Repeat step 7 for the **Azure Monitor Dependency Agent**.
 
-8. Once the deployment is finished, head back to the public Azure portal, navigate to the *Log Analytics workspace* -> *Advanced settings* -> *`VM Type` Servers*.
+8. Once the deployment is finished, head back to the public Azure portal and navigate to the *Log Analytics workspace* -> *Advanced settings* -> *`VM Type` Servers*.
 
     - You will see `x` number of `VM Type` COMPUTERS CONNECTED, depending on how many VMs you linked to the workspace.
 
@@ -159,11 +159,9 @@ To complete the steps in this article, you must have appropriate access to a sub
 
         `Heartbeat | where OSType == "Linux" | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table`
 
-    - If your VM shows in the results, you have successfully linked your VM from Azure Stack to your *Log Analytics workspace*.
+    - If your VM shows in the results, you have successfully linked your VM from Azure Stack to your *Log Analytics workspace* [(see here for more information)](https://docs.microsoft.com/en-us/azure/automation/automation-update-management#confirm-that-non-azure-machines-are-onboarded).
 
-        - [See here for more information](https://docs.microsoft.com/en-us/azure/automation/automation-update-management#confirm-that-non-azure-machines-are-onboarded)
-
-10. Navigate to the *Automation Account*. In the *new* blade, under *Configuration Management*, select **Update Management**.
+10. Navigate to the *Automation Account*. In the new blade, under *Update Management*, select **Update Management**.
 
     - You will see the following prompt:
 
@@ -186,15 +184,15 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 11. Within the *Automation Account*, the blades **Inventory**, **Change Tracking** and **Update Management** will provide useful analytics.
 
-    ![Browser Inventory example](images/azs-browser-example-inventory.png)
+    ![Inventory example](images/azs-browser-example-inventory.png)
 
-    ![Browser Change Tracking example](images/azs-browser-example-change-tracking.png)
+    ![Change Tracking example](images/azs-browser-example-change-tracking.png)
 
-    ![Browser Update and Management compliance example](images/azs-browser-example-update-management-compliant-ok.png)
+    ![Update and Management compliance example](images/azs-browser-example-update-management-compliant-ok.png)
 
 12. On public Azure, click **Monitor**. In the new blade under *Insights*, click **Virtual Machines (preview)**. You will see three usage analytics tabs (**Health**, **Performance** and **Map**) for the VMs you have enabled **VM updates and management** on.
 
-    ![Browser monitor stats example](images/azs-browser-example-monitor-stats.png)
+    ![Monitor stats example](images/azs-browser-example-monitor-stats.png)
 
     > [!NOTE]
     > It can take between 30 minutes and 6 hours for the dashboard to display updated data from Azure monitor enabled VMs.
