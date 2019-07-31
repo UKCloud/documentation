@@ -89,7 +89,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Click **Save**.
 
-        ![Performance counters](images/azs-browser-example-performance-counters.PNG)
+        ![Performance counters](images/azs-browser-example-performance-counters.png)
 
         > [!NOTE]
         > For Linux performance counters, ensure **Apply below configuration to my machines** is selected.
