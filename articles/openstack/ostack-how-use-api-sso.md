@@ -53,6 +53,9 @@ export OS_ACCESS_TOKEN_ENDPOINT=""
 | Corsham  | OS_CLIENT_ID | `cni.1.cor00005` |
 | &nbsp; | OS_CLIENT_SECRET | User defined |
 | &nbsp; | OS_ACCESS_TOKEN_ENDPOINT | `https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token` |
+| Corsham-2 (OSP13)  | OS_CLIENT_ID | `cni.2.cor00005` |
+| &nbsp; | OS_CLIENT_SECRET | User defined |
+| &nbsp; | OS_ACCESS_TOKEN_ENDPOINT | `https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token` |
 
 You have now updated your RC file.
 
