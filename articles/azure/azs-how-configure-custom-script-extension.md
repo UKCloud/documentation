@@ -95,7 +95,7 @@ $ScriptLocation = $ScriptBlobUrl + "$ContainerName/" + $CustomScriptFileName
 
 # Add custom script extension to Linux VM
 Write-Output -InputObject "Adding custom script extension to VM"
-$Extensions = Get-AzureRmVMExtensionImage -Location "frn00006" -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
+$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
 $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
 $ScriptSettings = @{"fileUris" = @("$ScriptLocation")};
 $ProtectedSettings = @{"storageAccountName" = $CustomScriptStorageAccountName; "storageAccountKey" = $StorageAccountKey; "commandToExecute" = $CommandToExecute};
@@ -109,7 +109,7 @@ $CommandToExecute = "<output form="commandtoexecute" name="result2" style="displ
 
 # Add custom script extension to Linux VM
 Write-Output -InputObject "Adding custom script extension to VM"
-$Extensions = Get-AzureRmVMExtensionImage -Location "frn00006" -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
+$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
 $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
 $ScriptSettings = @{"fileUris" = @($FileUri)};
 $ProtectedSettings = @{"commandToExecute" = $CommandToExecute};
@@ -211,7 +211,7 @@ $ScriptLocation = $ScriptBlobUrl + "$ContainerName/" + $CustomScriptFileName
 
 # Add custom script extension to existing Linux VM
 Write-Output -InputObject "Adding custom script extension to VM"
-$Extensions = Get-AzureRmVMExtensionImage -Location "frn00006" -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
+$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
 $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
 $ScriptSettings = @{"fileUris" = @("$ScriptLocation")};
 $ProtectedSettings = @{"storageAccountName" = $CustomScriptStorageAccountName; "storageAccountKey" = $StorageAccountKey; "commandToExecute" = $CommandToExecute};
@@ -242,7 +242,7 @@ $CommandToExecute = "<output form="commandtoexecute" name="result6" style="displ
 
 # Add custom script extension to existing Linux VM
 Write-Output -InputObject "Adding custom script extension to existing virtual machine"
-$Extensions = Get-AzureRmVMExtensionImage -Location "frn00006" -PublisherName Microsoft.Azure.Extensions -Type "CustomScript"
+$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName Microsoft.Azure.Extensions -Type "CustomScript"
 $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
 $ScriptSettings = @{"fileUris" = @($FileUri); "commandToExecute" = $CommandToExecute};
 Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings
