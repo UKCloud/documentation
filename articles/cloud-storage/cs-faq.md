@@ -177,7 +177,7 @@ Traffic in flight is encrypted in SSL packets.
 
 Data at rest encryption is an optional feature of our Cloud Storage product, with no additional cost. To enable this feature, when you raise your Service Request to create a new bucket, specify that encryption at rest is required.
 
-There are three options available to if you're looking to encrypt your data in Cloud Storage:
+There are three options available if you're looking to encrypt your data in Cloud Storage:
 
 - Customer-managed encryption. You encrypt your data prior to moving it into UKCloud Cloud Storage. This avoids having to do any additional development against the ECS S3 API and ensures that you retain the keys used to encrypt the data.
 
