@@ -78,14 +78,14 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Once deployment is complete, navigate to the resource group you placed the **Log Analytics workspace** in.
 
-    - Select the newly created workspace. On the new blade, under *Settings*, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VM Type* you want to add analytics to.
+    - Select the newly created workspace. On the new blade, under *Settings*, select *Advanced settings* and then select *Windows* or *Linux* servers depending on the *VM Type* you want to add analytics to.
     Note down the **Workspace ID** and **Primary Key** values.
 
        ![Log Analytics workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
 
-    - Within *Advanced settings*, select the *Data* blade, and click **VM Type Performance Counters**.
+    - Within *Advanced settings*, select the *Data* blade and click **VM Type Performance Counters**.
 
-    - Ensure all counters are selected and click **Add the selected performance counters**.
+    - Ensure all counters are selected, then click **Add the selected performance counters**.
 
     - Click **Save**.
 
@@ -100,7 +100,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Search for `automation`.
 
-    - Select **Automation** and click **Create**.
+    - Select **Automation** and then click **Create**.
 
         ![Automation Account](images/azs-browser-search-automation-account.png)
 
@@ -147,11 +147,11 @@ To complete the steps in this article, you must have appropriate access to a sub
 
         ![Log Analytics workspace computers connected](images/azs-browser-log-analytics-workspace-computers-connected.png)
 
-    - Click *x VM Type COMPUTERS CONNECTED*. This will bring up the logs for that specific VM type.
+    - Click *`x` `VM Type` COMPUTERS CONNECTED*. This will bring up the logs for that specific VM type.
 
     - Change the time range to **Last 30 minutes**.
 
-9. Execute the following log query, passing in your `VM TYPE`:
+9. Execute the following log query, passing in your `VM Type`:
 
     - `Heartbeat | where OSType == "VMTYPE" | summarize arg_max(TimeGenerated, *) by SourceComputerId | top 500000 by Computer asc | render table`
 
