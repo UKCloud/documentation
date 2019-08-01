@@ -21,7 +21,7 @@ toc_mdlink: cdsz-ref-application-process.md
 
 The UKCloud Cross Domain Security Zone (CDSZ) enables you to securely transfer data between our Assured OFFICIAL and Elevated OFFICIAL security domains using NCSC-approved cross-domain security patterns. Using the CDSZ you can create applications that are accessible to citizens, but ensure data safety.
 
-This document provides an overview of the UKCloud process to be used by customers wanting to purchase CDSZ services (UKCloud Guard, Walled Garden and Secure Remote Access).
+This document provides an overview of the UKCloud process to be used by customers wanting to purchase CDSZ services (Walled Garden and Secure Remote Access).
 
 There are two approaches to applying for CDSZ services:
 
@@ -68,7 +68,7 @@ When you apply for a CDSZ service, you must provide the following documents to s
 
 If you want to use the CDSZ, you can initiate the application process in one of two ways:
 
-- Raise a Service Request through [My Calls](https://portal.skyscapecloud.com/support/ivanti), specifying the relevant CDSZ product (UKCloud Guard, Walled Garden or Secure Remote Access). One of our Sales representatives, TAMs, or Cloud Architects will arrange a call to discuss your requirements and then close the Service Request.
+- Raise a Service Request through [My Calls](https://portal.skyscapecloud.com/support/ivanti), specifying the relevant CDSZ product (Walled Garden or Secure Remote Access). One of our Sales representatives, TAMs, or Cloud Architects will arrange a call to discuss your requirements and then close the Service Request.
 
 - Contact one of our Sales representatives, TAMs, or Cloud Architects directly to arrange a call to discuss your requirements.
 
@@ -129,7 +129,7 @@ The design review is facilitated by a Cloud Architect and will gather a clearer 
 
 ## Stage 4: Application submission
 
-Raise a Service Request, via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, specifying the relevant CDSZ product (UKCloud Guard, Walled Garden or Secure Remote Access) and attach all the [required documents](#required-documents), as well as any review notes from the assurance wrap review. This request will then be assigned to a UKCloud representative to verify that all required information has been provided.
+Raise a Service Request, via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, specifying the relevant CDSZ product (Walled Garden or Secure Remote Access) and attach all the [required documents](#required-documents), as well as any review notes from the assurance wrap review. This request will then be assigned to a UKCloud representative to verify that all required information has been provided.
 
 If any documents are missing or empty, a UKCloud representative will contact you to ensure that all required documents are provided before the service is provisioned.
 
