@@ -99,7 +99,7 @@ A failure or degradation of redundant or non-critical components of service has 
 
 ## Viewing tickets and service updates
 
-All incidents and service requests are visible within the UKCloud Portal under [My Calls](https://portal.ukcloud.com/support/ivanti). The Portal is also used to provide notification of upcoming changes.
+All incidents and service requests are visible within the UKCloud Portal under [My Calls](https://portal.skyscapecloud.com/support/ivanti). The Portal is also used to provide notification of upcoming changes.
 
 During a Major Incident, updates are published to the Service Status page: <http://status.ukcloud.com/>.
 

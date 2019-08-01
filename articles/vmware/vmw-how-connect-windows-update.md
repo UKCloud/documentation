@@ -43,7 +43,7 @@ In this section you'll need to use the appropriate address depending on the loca
     - For Elevated OFFICIAL, raise a Service Request via the My Calls section of the Elevated UKCloud Portal to get the appropriate IP address
 
     > [!NOTE]
-    > Ensure that you can resolve this name via DNS or via a host entry you have manually put into your VMs. If you require details on what IP address you need to put into your host file, raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+    > Ensure that you can resolve this name via DNS or via a host entry you have manually put into your VMs. If you require details on what IP address you need to put into your host file, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 3. Ensure that you have the full certificate chain installed. If not, you may have to install the certificates into your VM manually.
 
@@ -107,7 +107,7 @@ These settings will depend on your current setup. The following article provides
 <https://technet.microsoft.com/en-us/library/cc720539(v=ws.10).aspx>
 
 > [!NOTE]
-> UKCloud are not responsible for content published on the URLs in the above guide. If you believe the link is broken or is no longer relevant, contact UKCloud Customer Support via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+> UKCloud are not responsible for content published on the URLs in the above guide. If you believe the link is broken or is no longer relevant, contact UKCloud Customer Support via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 

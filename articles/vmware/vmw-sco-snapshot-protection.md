@@ -113,7 +113,7 @@ Alerting on individual VMs is not provided.
 
 ### Timing and process
 
-You can ask to restore a VM by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal, which is subject to standard support SLA timescales.
+You can ask to restore a VM by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, which is subject to standard support SLA timescales.
 
 Restores are performed outside of the backup window, unless a P1 incident is involved. You can find a definition of our support processes and severity categorisation in [*How to raise and escalate incidents and service requests*](../portal/ptl-how-raise-escalate-service-request.md).
 

@@ -31,7 +31,7 @@ If you want to bring in more than 500GiB of VMs, we also offer a Mass Transfer f
 
 ## Booking and booking conditions
 
-To use the Data Transfer Facility, you need to book. The first step is to raise a service request through the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+To use the Data Transfer Facility, you need to book. The first step is to raise a service request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 The Data Transfer Facility is available on a whole-day basis, between 0900 and 1700 on normal business days. The minimum booking period is one day at a cost of £500 per day.
 

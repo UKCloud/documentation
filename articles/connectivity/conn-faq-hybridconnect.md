@@ -72,7 +72,7 @@ The way that HybridConnect connects to your UKCloud environment depends on the r
 
 ## How do I initiate and process a HybridConnect installation?
 
-You need to either contact your account director or raise a service request via [My Calls](https://portal.ukcloud.com/support/ivanti) in the UKCloud Portal.
+You need to either contact your account director or raise a service request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) in the UKCloud Portal.
 
 ## How much do you charge for a HybridConnect connection?
 

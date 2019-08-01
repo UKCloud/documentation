@@ -41,7 +41,7 @@ You can extend your use of the memorable word feature to also prompt users for l
 
 5. To disable memorable word authentication on account switch, deselect the **Prompt for memorable word check on account switch** check box. You can also completely disable memorable word authentication by deselecting the **Enable memorable word authentication** check box.
 
-If you require any further assistance, contact UKCloud by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+If you require any further assistance, contact UKCloud by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 

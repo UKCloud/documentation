@@ -31,7 +31,7 @@ You will have visibility of usage per edge gateway, where you have the options f
 
 ## I clicked on the edge gateway and I can't see any usage information?
 
-If your edge gateway does not have a connection to the internet you will not be able to see any usage information. If your VDC has just been provisioned, it can take up to 4 hours to show utilisation metrics. If these cases do not apply to you, please contact us by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+If your edge gateway does not have a connection to the internet you will not be able to see any usage information. If your VDC has just been provisioned, it can take up to 4 hours to show utilisation metrics. If these cases do not apply to you, please contact us by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Are other bandwidth monitoring types available?
 

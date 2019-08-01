@@ -81,7 +81,7 @@ There are two options that you can choose from to manage your projects and end c
 
 ## Creating multiple accounts
 
-When you bring a new workload to UKCloud, your Technical Account Manager (TAM) or Customer Success Manager (CSM) will discuss your requirements and whether you want to create an additional account. If you decide that an additional account is best for your setup, UKCloud will create it for you. Once the additional account is created, the Portal administrator for the account can then add existing UKCloud Portal users to the account by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal or add new users to the UKCloud Portal onto the new account, which the administrator can add themselves.
+When you bring a new workload to UKCloud, your Technical Account Manager (TAM) or Customer Success Manager (CSM) will discuss your requirements and whether you want to create an additional account. If you decide that an additional account is best for your setup, UKCloud will create it for you. Once the additional account is created, the Portal administrator for the account can then add existing UKCloud Portal users to the account by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or add new users to the UKCloud Portal onto the new account, which the administrator can add themselves.
 
 ## Related articles
 

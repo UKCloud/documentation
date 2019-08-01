@@ -364,7 +364,7 @@ To disable the default account:
 
 ## More help
 
-If you have any issues regarding the updating or support of Microsoft Server, contact the UKCloud support team by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+If you have any issues regarding the updating or support of Microsoft Server, contact the UKCloud support team by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 

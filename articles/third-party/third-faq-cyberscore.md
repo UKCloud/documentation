@@ -39,7 +39,7 @@ The service is available on our Assured security domain, however, due to the nee
 
 ### How can I get support?
 
-If you need any assistance, you can raise a service request from [My Calls](https://portal.ukcloud.com/support/ivanti) within the UKCloud Portal.
+If you need any assistance, you can raise a service request from [My Calls](https://portal.skyscapecloud.com/support/ivanti) within the UKCloud Portal.
 
 ## Installation and Configuration
 

@@ -214,7 +214,7 @@ Returns a response with a list of up to 10 VMs
 ## My Calls API (Removed)
 
 > [!IMPORTANT]
-> With the move to the new [My Calls](https://portal.ukcloud.com/support/ivanti) service management tool, this functionality is no longer available.
+> With the move to the new [My Calls](https://portal.skyscapecloud.com/support/ivanti) service management tool, this functionality is no longer available.
 
 ### GET /api/my_calls
 
@@ -3251,7 +3251,7 @@ Returns a CSV report for the period specified.
 
 ## Further information
 
-If you want to discuss any aspect of the service or settings specific to your domain, log a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+If you want to discuss any aspect of the service or settings specific to your domain, log a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 

@@ -194,7 +194,7 @@ Failover test are generally seamless for customers, making it difficult for you 
 
 ## Requesting a Test Scenario
 
-To request a Test Scenario, you need to raise a Service Request within the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal indicating that you want to complete the test and provide the following details:
+To request a Test Scenario, you need to raise a Service Request within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal indicating that you want to complete the test and provide the following details:
 
 - VDC name
 

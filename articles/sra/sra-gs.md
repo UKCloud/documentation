@@ -32,7 +32,7 @@ This document is for customers who have:
 
 Once the SRA Assurance Wrap has been approved, we'll raise a Service Request for the implementation of the SRA virtual data centre (VDC) and, if needed, an Elevated VDC. (If a service request for this VDC implementation already exists, a new one won't be raised.)
 
-You can track the progress of the Service Request using the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+You can track the progress of the Service Request using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 During creation of the UKCloud SRA VDC, we'll ask you for some additional information
 via the Service Request:
@@ -262,7 +262,7 @@ There is no direct access to the Elevated portal once the AnyConnect client conn
 
 In most instances we'll create a virtual machine (VM) within the SRA VDC that you can VPN into in order to log in to the Elevated portal to provision and manage your SRA and Elevated VDC. Once this VM is deployed, it becomes your responsibility to manage and maintain it. This VM will be billed according to standard UKCloud billing process.
 
-Addresses to hit the Elevated portal and vCloud Director API can be obtained by raising a Service Request through the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+Addresses to hit the Elevated portal and vCloud Director API can be obtained by raising a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 

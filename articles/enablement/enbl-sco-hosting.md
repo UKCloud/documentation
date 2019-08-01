@@ -44,7 +44,7 @@ Please note that ANY device placed within the UKCloud estate must be done so to 
 **Resilience requirement</br>(1 bay = 10U, 1kw per month)** | Depends on solution               |
 **Resilience cost** | Depends on solution
 **Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (e.g. Cloud Enablement in region 5 cannot be stretched to region 6)
-**Next steps** | Raise a service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal                    |
+**Next steps** | Raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal                    |
 
 ## What connectivity does the server/storage hosting service provide?
 

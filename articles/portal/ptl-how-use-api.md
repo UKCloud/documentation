@@ -423,7 +423,7 @@ Now that you have your VDC URN, you can use the Portal API to create your edge g
 
 For more information about any of the API endpoints used in this guide, see the [*UKCloud Portal API User Guide*](ptl-ref-portal-api.md).
 
-If you need any further assistance, contact our support team via the [My Calls](https://portal.ukcloud.com/support/ivanti) area of the UKCloud Portal.
+If you need any further assistance, contact our support team via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) area of the UKCloud Portal.
 
 ## Feedback
 

@@ -59,7 +59,7 @@ For more information about booking and using this service, see the [Data Transfe
 
 ### Customer-hosted equipment
 
-Where you have hosted equipment at a UKCloud data centre for part of the solution, for example the hosting of communications equipment, you can also leverage this in a similar way to the data load room. If you have equipment hosted at UKCloud, you may request access using a normal Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+Where you have hosted equipment at a UKCloud data centre for part of the solution, for example the hosting of communications equipment, you can also leverage this in a similar way to the data load room. If you have equipment hosted at UKCloud, you may request access using a normal Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 

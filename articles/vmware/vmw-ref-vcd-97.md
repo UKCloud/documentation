@@ -32,7 +32,7 @@ After 31 May 2019, UKCloud will convert any remaining standard edge gateways at 
 
 ## Sandbox for testing vCloud API
 
-UKCloud provides sandboxes to enable you to test the next versions of the vCloud API so that you can prepare for vCloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/cloud/>) has been upgraded to vCloud Director 9.7. If you already have an account on a previous sandbox, you can continue to use this account in the 9.7 sandbox. If you haven't previously used one of our vCloud sandboxes, raise a Service Request via [My Calls](https://portal.ukcloud.com/support/ivanti) on the UKCloud Portal to gain access.
+UKCloud provides sandboxes to enable you to test the next versions of the vCloud API so that you can prepare for vCloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/cloud/>) has been upgraded to vCloud Director 9.7. If you already have an account on a previous sandbox, you can continue to use this account in the 9.7 sandbox. If you haven't previously used one of our vCloud sandboxes, raise a Service Request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) on the UKCloud Portal to gain access.
 
 ## Changes to APIs
 

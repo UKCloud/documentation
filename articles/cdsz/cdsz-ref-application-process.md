@@ -41,7 +41,7 @@ The following table provides more detail about each stage:
 
 Stage | Name | Description
 ----- | ---- | -----------
-1 | Initial Contact | Customer contacts UKCloud to register interest in CDSZ service. This can be through [My Calls](https://portal.ukcloud.com/support/ivanti) or direct contact with a Sales representative, Technical Account Manager (TAM) or Cloud Architect.
+1 | Initial Contact | Customer contacts UKCloud to register interest in CDSZ service. This can be through [My Calls](https://portal.skyscapecloud.com/support/ivanti) or direct contact with a Sales representative, Technical Account Manager (TAM) or Cloud Architect.
 2a | Self-Assessment | Customer creates document pack to illustrate the solution design and provide evidence that all necessary sign-offs and compliance have been obtained.
 2b | Assurance Wrap Review | Customer creates document pack with assistance from the UKCloud compliance team and Cloud Architect.
 3 | Design Review | Customer presents the technical solution to Cloud Architect for advice and feedback.
@@ -68,7 +68,7 @@ When you apply for a CDSZ service, you must provide the following documents to s
 
 If you want to use the CDSZ, you can initiate the application process in one of two ways:
 
-- Raise a Service Request through [My Calls](https://portal.ukcloud.com/support/ivanti), specifying the relevant CDSZ product (UKCloud Guard, Walled Garden or Secure Remote Access). One of our Sales representatives, TAMs, or Cloud Architects will arrange a call to discuss your requirements and then close the Service Request.
+- Raise a Service Request through [My Calls](https://portal.skyscapecloud.com/support/ivanti), specifying the relevant CDSZ product (UKCloud Guard, Walled Garden or Secure Remote Access). One of our Sales representatives, TAMs, or Cloud Architects will arrange a call to discuss your requirements and then close the Service Request.
 
 - Contact one of our Sales representatives, TAMs, or Cloud Architects directly to arrange a call to discuss your requirements.
 
@@ -129,7 +129,7 @@ The design review is facilitated by a Cloud Architect and will gather a clearer 
 
 ## Stage 4: Application submission
 
-Raise a Service Request, via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal, specifying the relevant CDSZ product (UKCloud Guard, Walled Garden or Secure Remote Access) and attach all the [required documents](#required-documents), as well as any review notes from the assurance wrap review. This request will then be assigned to a UKCloud representative to verify that all required information has been provided.
+Raise a Service Request, via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, specifying the relevant CDSZ product (UKCloud Guard, Walled Garden or Secure Remote Access) and attach all the [required documents](#required-documents), as well as any review notes from the assurance wrap review. This request will then be assigned to a UKCloud representative to verify that all required information has been provided.
 
 If any documents are missing or empty, a UKCloud representative will contact you to ensure that all required documents are provided before the service is provisioned.
 

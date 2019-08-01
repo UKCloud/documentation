@@ -125,11 +125,11 @@ As a true cloud platform, UKCloud for OpenShift provides full elasticity and sca
 
 ### Which ports are open to the platform from the internet by default?
 
-By default, ports 80 and 443 are open for customer application traffic. Further ports can be opened on request either at time of deployment or post-deployment by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+By default, ports 80 and 443 are open for customer application traffic. Further ports can be opened on request either at time of deployment or post-deployment by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ### How do I add users?
 
-In order to add new users, you will need to raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portall.
+In order to add new users, you will need to raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portall.
 
 ### What monitoring of the services is provided by default in a trial?
 
@@ -145,7 +145,7 @@ We will happily work with customers during a trial period to integrate an extern
 
 ### How do I add extra capacity to my cluster?
 
-To add extra capacity to you cluster, you will need to raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal. We hope to provide portal integration to enable customers to be in control of this in the future.
+To add extra capacity to you cluster, you will need to raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. We hope to provide portal integration to enable customers to be in control of this in the future.
 
 ### Can I have integrated container logging deployed with the platform?
 

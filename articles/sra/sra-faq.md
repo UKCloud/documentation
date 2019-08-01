@@ -181,17 +181,17 @@ SRA certificates last for 12 months. You'll need to renew certificates no later 
 
 ### How do I order additional SRA certificates?
 
-To add additional certificates, raise a service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal, selecting the "Request Additional SRA Certificate(s)" option.
+To add additional certificates, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the "Request Additional SRA Certificate(s)" option.
 
 ### How do I renew or revoke an old certificate?
 
-To renew or revoke your certificate, raise a service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal, selecting the "Renew and/or Revoke SRA Certificate" option.
+To renew or revoke your certificate, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the "Renew and/or Revoke SRA Certificate" option.
 
 For renewals, it's important you give us at least two weeks' notice to prevent a break in your service.
 
 ### Can I renew or revoke my certificates in bulk?
 
-Yes. To renew or revoke your certificates in bulk, raise a service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal, selecting the "Renew and/or Revoke multiple SRA Certificates" option.
+Yes. To renew or revoke your certificates in bulk, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the "Renew and/or Revoke multiple SRA Certificates" option.
 
 Attach the Secure Remote Access bulk renewal/revoke form containing all the certificates you need renewing and/or revoking with details including User ID (UID) and certificate name. It would also be useful to provide host name or machine name.
 

@@ -53,7 +53,7 @@ Workload type | Resource allocation | Automated Rebalancing
 --------------|---------------------|----------------------
 PRIORITY | Uncontended (CPU/GiB) | Configured to reduce workload movement around the platform, reducing workload disruption
 
-To have GPU enabled in your environment, you will need to raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+To have GPU enabled in your environment, you will need to raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 When you raise a service request, you will need to specify the profile that you want to be made available from the following options:
 

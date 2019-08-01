@@ -169,7 +169,7 @@ There's currently no SLA associated with the snapshot backup service, although i
 
 You can request restoration of VMs only if you have access to the support ticketing system.
 
-To restore data, administrators can access the UKCloud Portal and, using [My Calls](https://portal.ukcloud.com/support/ivanti), create a support ticket stating the VM and the backup schedule they want to restore. UKCloud operations then complete this task, restoring the entire VM image.
+To restore data, administrators can access the UKCloud Portal and, using [My Calls](https://portal.skyscapecloud.com/support/ivanti), create a support ticket stating the VM and the backup schedule they want to restore. UKCloud operations then complete this task, restoring the entire VM image.
 
 ### How quickly can you restore a VM?
 

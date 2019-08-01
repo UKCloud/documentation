@@ -77,7 +77,7 @@ If you want to create a VPG for Journaling Protection, run a test or live failov
     ![Zerto log in page](images/vmw-zerto-login.png)
 
     > [!NOTE]
-    > These credentials are different from the ones you use to log in to the UKCloud Portal. If you're not sure what they are, raise a Service Request through [My Calls](https://portal.ukcloud.com/support/ivanti).
+    > These credentials are different from the ones you use to log in to the UKCloud Portal. If you're not sure what they are, raise a Service Request through [My Calls](https://portal.skyscapecloud.com/support/ivanti).
 
 5. After you log in, you'll see the main ZSSP page.
 

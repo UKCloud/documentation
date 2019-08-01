@@ -38,7 +38,7 @@ If you want to terminate your whole account with UKCloud, you must raise separat
 
 - When you decide to terminate a service, you should first contact your Technical Account Manager (TAM) or Cloud Delivery Manager (CDM). Your TAM or CDM will help you to determine the relevant environment details for termination and the Effective Date of Termination.
 
-- After speaking to your TAM or CDM, an administrator of your Portal account must raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal, following the relevant prompts for information to enable our support team to action the request as quickly as possible.
+- After speaking to your TAM or CDM, an administrator of your Portal account must raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, following the relevant prompts for information to enable our support team to action the request as quickly as possible.
 
     > [!NOTE]
     > If you do not raise a Service Request to initiate a formal termination of service, your environment may not be completely decommissioned and you may end up still being charged for objects remaining on the platform.

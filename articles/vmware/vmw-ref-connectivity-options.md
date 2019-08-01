@@ -147,7 +147,7 @@ When you create a new vOrg, we'll provide you with a number of usable IP address
 
 - PSN Protected - 1 x usable IP
 
-You can request additional IP addresses as required by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal. If you ask for a large number of IP addresses in a single request, we may ask you to provide further information to support your request.
+You can request additional IP addresses as required by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. If you ask for a large number of IP addresses in a single request, we may ask you to provide further information to support your request.
 
 ## Cloud Fabric and gateway architecture
 
@@ -221,9 +221,9 @@ If you change from a UKCloud‑provided firewall to your own firewall, we'll red
 
 The number of public IP addresses we provide depends on whether you are using a UKCloud‑provided firewall or bringing your own:
 
-- **UKCloud provided firewall** - If you're using a UKCloud‑provided firewall, we'll allocate you a single usable IP per VDC edge. You can request additional IP addresses as required by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal. If you ask for a large number of IP addresses in a single request, we may ask you to provide further information to support your request.
+- **UKCloud provided firewall** - If you're using a UKCloud‑provided firewall, we'll allocate you a single usable IP per VDC edge. You can request additional IP addresses as required by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. If you ask for a large number of IP addresses in a single request, we may ask you to provide further information to support your request.
 
-- **BYOF** - If you're using your own firewall technology, when you provision your VDC, we initially allocate you five public IP addresses. After this initial allocation, you can request more IP addresses by opening a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+- **BYOF** - If you're using your own firewall technology, when you provision your VDC, we initially allocate you five public IP addresses. After this initial allocation, you can request more IP addresses by opening a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Maintaining compliance with multiple networks
 

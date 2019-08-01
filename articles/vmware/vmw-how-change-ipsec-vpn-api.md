@@ -331,7 +331,7 @@ When you've updated the relevant sections of the configuration, you can apply it
 
 ## Next steps
 
-If you need any further assistance, or if you want to discuss any aspect of this service or settings specific to your domain, log a support ticket via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+If you need any further assistance, or if you want to discuss any aspect of this service or settings specific to your domain, log a support ticket via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 

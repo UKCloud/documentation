@@ -29,7 +29,7 @@ By default, VMs deployed on the UKCloud platform do not come with any protection
 
 When you add Snapshot Protection to a VM, the VM is added to a daily automated backup. Backups are automatically taken for the VM once every 24 hours, sometime between the hours of 2000 and 0800. The status of a VM's backup is reported daily in the UKCloud Portal by 1000, but typically within minutes of the close of the backup window.
 
-If you encounter a problem with your VM, raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal and we can use one of your VM backups to restore the whole VM image to a new VM in your VDC. You can then use this image to restore the VM or restore any required data to your original VM.
+If you encounter a problem with your VM, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal and we can use one of your VM backups to restore the whole VM image to a new VM in your VDC. You can then use this image to restore the VM or restore any required data to your original VM.
 
 For more detailed information, see the [*Snapshot Protection Service Scope*](vmw-sco-snapshot-protection.md).
 
@@ -126,7 +126,7 @@ You can use the UKCloud Portal to see whether a VM uses Snapshot Protection, fin
 
     - **Action** - The type of policy change request
 
-14. Click **Manage my Backups** to raise a Service Request related to your backups via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal, for example, to restore a backup.
+14. Click **Manage my Backups** to raise a Service Request related to your backups via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, for example, to restore a backup.
 
     ![Manage my Backups button](images/snapshot-image-5.png)
 

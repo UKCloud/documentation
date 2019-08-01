@@ -82,7 +82,7 @@ When using our Cloud GPU service for visualisation workloads, you should conside
 
 ## Provisioning your Cloud GPU service
 
-When your VM is ready, make sure it is powered off and then use [My Calls](https://portal.ukcloud.com/support/ivanti) in the UKCloud Portal to raise a service request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can
+When your VM is ready, make sure it is powered off and then use [My Calls](https://portal.skyscapecloud.com/support/ivanti) in the UKCloud Portal to raise a service request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can
 complete the setup of your service:
 
 - Service type: GPU -- Visualisation

@@ -85,7 +85,7 @@ You can add any VM to the automated snapshot backup schedule so that it is autom
 
 ### Use case
 
-If you accidentally delete or amend a file that should not be modified, you can restore the file in question from backup by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+If you accidentally delete or amend a file that should not be modified, you can restore the file in question from backup by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ### Pros
 

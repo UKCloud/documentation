@@ -42,7 +42,7 @@ The table provides an overview of the Cloud Enablement services available for VP
 **Resilience requirement<br>(1 bay = 10U, 1kw per month)** | One bay in our Farnborough data centre<br>One bay in our Corsham data centre
 **Resilience cost** | £4,000 setup fee plus £1,000 per month
 **Notes** | Devices must be hosted in the same region as your compute environment. We cannot stretch connectivity from local Cloud Enablement into other regions (eg Cloud Enablement in region 5 cannot be stretched to region 6)
-**Next steps** | Raise a service request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal
+**Next steps** | Raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal
 
 ## What connectivity does the VPN service provide?
 

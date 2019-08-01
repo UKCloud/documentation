@@ -27,7 +27,7 @@ These applications run their components on the infrastructure nodes (these are t
 
 We recommend having a minimum of three infrastructure nodes with a production deployment where you expect to make use of these additional services, especially with v3.11 deployments onwards as there are now more infrastructure components. As well as having more resource available to the infrastructure applications, running your infrastructure nodes at a scale of three or more will give you increased resilience for these components during patching as the applications will be able to scale up on the two available nodes while the third is being patched.
 
-Additionally, scaling of the infrastructure applications to make them more resilient is possible but may require additional infrastructure nodes to be deployed. For example to scale Elasticsearch to three nodes/containers we recommend having a minimum of four infrastructure nodes. To have these applications scaled up or down raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+Additionally, scaling of the infrastructure applications to make them more resilient is possible but may require additional infrastructure nodes to be deployed. For example to scale Elasticsearch to three nodes/containers we recommend having a minimum of four infrastructure nodes. To have these applications scaled up or down raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 Finally, you'll want to consider the storage usage of the infrastructure applications. As previously mentioned, the more applications and nodes you have in your environment the more logs will be gathered off the nodes by fluentd and sent off to Elasticsearch for indexing. This means the persistent volume used by Elasticsearch will have more data to store. By default, we provide 14 days retention and a 20GB persistent volume with Elasticsearch. If this volume fills to 100% then the EFK stack will not work until indices are deleted or more space is provided. If you're relying on the EFK stack for your logs then you'll want to determine an average of how much storage your cluster is consuming on logs per day and request an increase of the persistent volume to fit your desired retention.
 
@@ -37,7 +37,7 @@ You'll want to estimate how many pods you are expecting to fit on a node. Things
 
 ### Scaling
 
-If you'd like to scale up your cluster, raise a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal and provide us with the size, network connectivity and quantity of nodes you'd like to add. The same process should be followed to scale a cluster down, this time providing the details of the node(s) you want to remove.
+If you'd like to scale up your cluster, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal and provide us with the size, network connectivity and quantity of nodes you'd like to add. The same process should be followed to scale a cluster down, this time providing the details of the node(s) you want to remove.
 
 > [!NOTE]
 > The network connectivity you request for the scaled up nodes must be present in the cluster.

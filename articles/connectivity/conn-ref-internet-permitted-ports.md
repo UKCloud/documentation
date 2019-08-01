@@ -30,7 +30,7 @@ The security of your estate is your responsibility and we highly recommend that 
 
 This whitelist policy applies to the Assured OFFICIAL security domain only, where connectivity is established using internet routable addresses and where access is to and from the internet or other customers on the UKCloud platform. Other whitelists are maintained for other connectivity types. The Elevated OFFICIAL security domain is completely locked down by default with no ports open by default.
 
-If you require access outside of the standard whitelist, you can request this via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+If you require access outside of the standard whitelist, you can request this via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 The following diagram shows the status of standard internet ports. The permitted ports are also listed in the sections below.
 

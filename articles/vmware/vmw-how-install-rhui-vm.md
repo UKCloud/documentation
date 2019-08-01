@@ -37,7 +37,7 @@ There are two pre-requisites for performing this operation:
 
 You can find the installer RPM files in the UKCloud public catalog under **media**, for example, **UKCloud-RHUI-Standard-Assured**.
 
-If you require the high availability (HA) package, raise a Service Request directly via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal and it will be uploaded to your private catalog.
+If you require the high availability (HA) package, raise a Service Request directly via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal and it will be uploaded to your private catalog.
 
 1. Mount the `UKCloud RHUI-***.iso` to the VM (or place the contents in an accessible location such as NFS share, FTP, and so on).
 

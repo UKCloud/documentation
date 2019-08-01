@@ -166,7 +166,7 @@ UKCloud maintains responsibility for routine patching and upgrades of the OpenSh
 
 ## Service provisioning
 
-You can request UKCloud for OpenShift via your Technical Account Manager (TAM) or by using the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal.
+You can request UKCloud for OpenShift via your Technical Account Manager (TAM) or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 Within 5 business days of accepting an order, UKCloud will create the customer’s primary account and send a Welcome Pack, which includes the URL for the UKCloud Portal, and the [Getting Started Guide](oshift-gs.md).
 
@@ -180,7 +180,7 @@ Maintaining a master copy or backup copy of the data used in the UKCloud for Ope
 
 Ensuring only appropriate data (for example OFFICIAL) is stored and processed by applications on this environment and that they comply with the UKCloud Security Operating Procedures (SyOps) and other Information Assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.
 
-Customers with requirements beyond these limits can raise a service request via [My Calls](https://portal.ukcloud.com/support/ivanti) to have these limits per project considered for raising.
+Customers with requirements beyond these limits can raise a service request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) to have these limits per project considered for raising.
 
 ## Backup/recovery and disaster recovery
 

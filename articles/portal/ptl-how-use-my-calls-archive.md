@@ -23,7 +23,7 @@ toc_mdlink: ptl-how-use-my-calls-archive.md
 The My Calls Archive area of the UKCloud Portal provides access to older tickets raised using the previous version of My Calls.
 
 > [!IMPORTANT]
-> To raise new support tickets you must use the new [My Calls](https://portal.ukcloud.com/support/ivanti).
+> To raise new support tickets you must use the new [My Calls](https://portal.skyscapecloud.com/support/ivanti).
 
 ### Intended audience
 
