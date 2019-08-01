@@ -8,7 +8,7 @@
     <title>Making the most of your UKCloud for OpenShift trial | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Making the most of your UKCloud for OpenShift trial | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -109,7 +109,7 @@
 <p>In addition to GUI access, you can also access OpenShift through the CLI. To do this, you need to install the <code>oc</code> client on your machines. To avoid any compatibility issues please install the same version of the <code>oc</code> client as your OpenShift cluster.</p>
 <p><strong>OpenShift documentation:</strong> <a href="https://docs.openshift.com/container-platform/3.11/cli_reference/get_started_cli.html#installing-the-cli"><em>Installing the OC CLI</em></a></p>
 <h2 id="storage">Storage</h2>
-<p>Each trial deployment has a block storage quota of 2TB across either Tier 1 or Tier 2 storage. This is enforced at the OpenStack project layer. This storage is available to the projects you create within OpenShift and you can consume the storage by creating Persistent Volume Claims (PVCs) for your applications. It is good practice to use PVCs for any persistent storage requirements as any data stored within local volumes will be lost when pods are moved from one node to another; for example as a result of node evacuations during patching. You can increase your storage quotas by creating a service request in the UKCloud Portal.</p>
+<p>Each trial deployment has a block storage quota of 2TB across either Tier 1 or Tier 2 storage. This is enforced at the OpenStack project layer. This storage is available to the projects you create within OpenShift and you can consume the storage by creating Persistent Volume Claims (PVCs) for your applications. It is good practice to use PVCs for any persistent storage requirements as any data stored within local volumes will be lost when pods are moved from one node to another; for example as a result of node evacuations during patching. You can increase your storage quotas by creating a service request in the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <p>OpenShift is deployed with an internal image registry making use of UKCloud's object storage service for persistence.  This includes 60GB of free storage capacity which does not consume your 2TB block storage quota; rather this is in addition to the 2TB data limit. UKCloud do provision an Elasticsearch, Fluentd and Kibana stack which uses 40GB, Hawkular Metrics backed by a Cassandra database which uses 10GB and the Prometheus Operator which uses 106GB of Tier 2 storage (which consumes some of the 2TB storage limit).</p>
 <h2 id="image-security">Image Security</h2>
 <p>You should take care when creating your container images to ensure the images do not run as root. You should set up containers to run as a user who has just enough rights to run the container workload.</p>

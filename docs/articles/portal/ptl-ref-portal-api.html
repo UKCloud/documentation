@@ -8,7 +8,7 @@
     <title>UKCloud Portal API Reference Guide | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud Portal API Reference Guide | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -292,7 +292,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 <h2 id="my-calls-api-removed">My Calls API (Removed)</h2>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>With the move to the new My Calls service management tool, this functionality is no longer available.</p>
+<p>With the move to the new <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> service management tool, this functionality is no longer available.</p>
 </div>
 <h3 id="get-apimy_calls">GET /api/my_calls</h3>
 <p>Returns a complete list of support calls (similar to the MyCalls view in the UKCloud Portal).</p>
@@ -1264,7 +1264,7 @@ cookies = resp.env[:response_headers]['set-cookie']
 <tr>
 <td>state</td>
 <td>String</td>
-<td>The state of the build<br>Valid values:</br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created</br>- completed -- vOrg has been successfully created<br>-   failed -- vOrg creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>The state of the build<br>Valid values:<br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created<br>-   failed -- vOrg creation has failed (raise a Service Request to resolve and rerun)</td>
 <td> </td>
 </tr>
 <tr>
@@ -1404,7 +1404,7 @@ type | String | Vorg-build |  
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser@example.com
-state | String | The state of the build<br>Valid values:</br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created</br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) |  
+state | String | The state of the build<br>Valid values:<br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created<br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) |  
 serviceName | String | The name of the vOrg (as specified in the build request) | My compute service
 zoneId | String | The zone in which the vOrg is located (as specified in the build request) | B</p>
 <h4 id="example-response-9">Example response</h4>
@@ -1571,7 +1571,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 <tr>
 <td>state</td>
 <td>String</td>
-<td>The state of the build<br>Valid values:</br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created</br>- completed -- vOrg has been successfully created<br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>The state of the build<br>Valid values:<br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created<br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun)</td>
 <td> </td>
 </tr>
 <tr>
@@ -2012,7 +2012,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 <tr>
 <td>state</td>
 <td>String</td>
-<td>The state of the build<br>Valid valudes:</br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>The state of the build<br>Valid valudes:<br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created<br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun)</td>
 <td> </td>
 </tr>
 <tr>
@@ -2024,7 +2024,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 <tr>
 <td>vmType</td>
 <td>String</td>
-<td>The type of VM workloads in the VDC (as specified in the build request)<br>Valid values:</br>- POWER<br>- ESSENTIAL</br>- PRIORITY</td>
+<td>The type of VM workloads in the VDC (as specified in the build request)<br>Valid values:<br>- POWER<br>- ESSENTIAL<br>- PRIORITY</td>
 <td>POWER</td>
 </tr>
 <tr>
@@ -2181,9 +2181,9 @@ type | String | VDC-build |  
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created    | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser@example.com
-state | String | The state of the build<br>Valid values:</br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) |  
+state | String | The state of the build<br>Valid values:<br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created<br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) |  
 vdcName | String | The name of the VDC (as specified in the build request) | My VDC
-vmType | String | The type of VM workloads used in the VDC (as specified in the build request)</br>Valid values:<br>- POWER</br>- ESSENTIAL<br>- PRIORITY  | POWER
+vmType | String | The type of VM workloads used in the VDC (as specified in the build request)<br>Valid values:<br>- POWER<br>- ESSENTIAL<br>- PRIORITY  | POWER
 serviceName | String | The name of the vOrg to which the VDC belongs | My Compute Service</p>
 <h4 id="example-response-13">Example response</h4>
 <pre><code>{
@@ -2361,7 +2361,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 <tr>
 <td>state</td>
 <td>String</td>
-<td>The state of the build<br>Valid values:</br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>The state of the build<br>Valid values:<br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created<br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun)</td>
 <td> </td>
 </tr>
 <tr>
@@ -2373,7 +2373,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 <tr>
 <td>vmType</td>
 <td>String</td>
-<td>The type of VM workloads used in the VDC (as specified in the build request)<br>Valid values:</br>- POWER<br>- ESSENTIAL</br>- PRIORITY</td>
+<td>The type of VM workloads used in the VDC (as specified in the build request)<br>Valid values:<br>- POWER<br>- ESSENTIAL<br>- PRIORITY</td>
 <td>POWER</td>
 </tr>
 <tr>
@@ -2826,7 +2826,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 <tr>
 <td>state</td>
 <td>String</td>
-<td>The state of the build<br>Valid values:</br>-approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>The state of the build<br>Valid values:<br>-approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created<br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
 <td>completed</td>
 </tr>
 </tbody>
@@ -2967,7 +2967,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 <tr>
 <td>state</td>
 <td>String</td>
-<td>The state of the build<br>Valid values:</br>- approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>The state of the build<br>Valid values:<br>- approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created<br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
 <td>completed</td>
 </tr>
 </tbody>
@@ -3106,7 +3106,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 <tr>
 <td>state</td>
 <td>String</td>
-<td>The state of the build<br>Valid values:</br>- approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>The state of the build<br>Valid values:<br>- approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created<br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
 <td>completed</td>
 </tr>
 </tbody>
@@ -3695,7 +3695,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tbody>
 </table>
 <h2 id="further-information">Further information</h2>
-<p>If you want to discuss any aspect of the service or settings specific to your domain, log a Service Request via the <a href="https://portal.ukcloud.com/support/my_calls">My Calls</a> section of the UKCloud Portal.</p>
+<p>If you want to discuss any aspect of the service or settings specific to your domain, log a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
