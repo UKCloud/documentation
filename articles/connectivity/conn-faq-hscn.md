@@ -55,8 +55,9 @@ UKCloud will validate that you have signed up to the terms of the HSCN Connectio
 
 ### What is UKCloud's ODS code? 
 
-The UKCloud ODS code is 8J561
-All ODS and connection agreements can be found at https://crm.digital.nhs.uk/hscnconnectionagreementsearch/ 
+The UKCloud ODS code is 8J561.
+
+You can find all ODS and connection agreements at <https://crm.digital.nhs.uk/hscnconnectionagreementsearch/>.
 
 ## Migration
 
