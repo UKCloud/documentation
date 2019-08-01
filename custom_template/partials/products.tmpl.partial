@@ -6,23 +6,23 @@
 
 <section class="product-grid">
 
-  <a href="/articles/azure/azs-gs.html" class="product-grid__item">
+  <a href="/articles/azure/azs-home.html" class="product-grid__item">
     <span>Azure</span>
   </a>
 
-  <a href="/articles/openshift/oshift-gs.html" class="product-grid__item">
+  <a href="/articles/openshift/oshift-home.html" class="product-grid__item">
     <span>OpenShift</span>
   </a>
 
-  <a href="/articles/openstack/ostack-gs.html" class="product-grid__item">
+  <a href="/articles/openstack/ostack-home.html" class="product-grid__item">
     <span>OpenStack</span>
   </a>
 
-  <a href="/articles/oracle/orcl-gs.html" class="product-grid__item">
+  <a href="/articles/oracle/orcl-home.html" class="product-grid__item">
     <span>Oracle</span>
   </a>
 
-  <a href="/articles/vmware/vmw-gs.html" class="product-grid__item">
+  <a href="/articles/vmware/vmw-home.html" class="product-grid__item">
     <span>VMware</span>
   </a>
 
@@ -48,7 +48,7 @@
 
   <a href="/articles/dedicated-compute/dc-sd.html" class="product-grid__item">
     <span>Dedicated Compute</span>
-  </a>  
+  </a>
 
   <a href="/articles/draas/draas-gs.html" class="product-grid__item">
     <span>Disaster Recovery as a Service</span>
@@ -64,7 +64,7 @@
 
   <a href="/articles/managed-services/man-sd-compute.html" class="product-grid__item">
     <span>Managed Services</span>
-  </a> 
+  </a>
 
   <a href="/articles/migration/migr-how-zerto-migrate-to-ukcloud.html" class="product-grid__item">
     <span>Migration to the Cloud</span>
@@ -72,7 +72,7 @@
 
   <a href="/articles/mcbs/mcbs-gs.html" class="product-grid__item">
     <span>Multi-Cloud Backup Storage</span>
-  </a>  
+  </a>
 
   <a href="/articles/private-cloud/prc-sd.html" class="product-grid__item">
     <span>Private Cloud</span>
@@ -107,3 +107,9 @@
   </a>
 
 </section>
+
+<div class="product-banner">
+  <a class="banner-link" href="https://community.ukcloud.com/?">
+    <img class="banner" src="{{_rel}}styles/assets/banner.png" srcset="{{_rel}}styles/assets/banner.png 2x" width="1436px" alt="{{_appName}}" >
+  </a>
+</div>

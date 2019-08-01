@@ -472,6 +472,15 @@ mark{
   width: 100%;
 }
 
+.product-banner {
+  margin-top: 30px;
+  margin-left: -15px;
+}
+
+.product-banner>.banner-link{
+  width: 100%;
+}
+
 @media (min-width: 718px){
 
   .product-grid{
@@ -504,6 +513,10 @@ mark{
     flex: 0 0 20%;
   }
 
+  .product-banner {
+    text-align: center;
+    margin-left: 0;
+  }
 }
 
 .product-grid__item{

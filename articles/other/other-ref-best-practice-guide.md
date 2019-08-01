@@ -110,7 +110,7 @@ For more information, see [*How to access syslog data for your edge gateway*](..
 
 At UKCloud, we're proud to provide a range of products, solutions and pricing tailored to suit the needs of your business. We've designed our compute 't-shirt' sizes with the optimum level of RAM and CPU to deliver ideal performance. However, if these levels are increased, this may degrade performance over time.
 
-For more information on the range of VM sizes that we offer, see our latest [*Pricing Guide*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf) on the Digital Marketplace.
+For more information on the range of VM sizes that we offer, see our latest [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 ## Best Practices - general information
 
@@ -164,7 +164,7 @@ System administrators and mobile workers can securely access workloads running o
 
 - If you have multiple certificates to renew or revoke, you can do this in a single service request by selecting the **Renew and/or Revoke multiple SRAS Certificates** option in the UKCloud Portal. Attach the *Secure Remote Access bulk renewal/revoke form* containing all the certificates.
 
-For more information, see the following articles: [*Secure Remote Access FAQs*](../sra/sra-faq.md), [*Secure Remote Access Factsheet*](https://ukcloud.com/wp-content/uploads/2018/01/SRA-Factsheet.pdf) and [*Secure Remote Access Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/153884335251015-service-definition-document-2018-05-21-1247.pdf).
+For more information, see the following articles: [*Secure Remote Access FAQs*](../sra/sra-faq.md), [*Secure Remote Access Factsheet*](https://ukcloud.com/wp-content/uploads/2018/01/SRA-Factsheet.pdf) and [*Secure Remote Access Service Definition*](../sra/sra-sd.md).
 
 ## Feedback
 

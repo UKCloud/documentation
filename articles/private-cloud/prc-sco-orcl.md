@@ -93,7 +93,7 @@ Your compute solution can be:
 
 ## Upfront deployment charges
 
-You will be charged an upfront design and deployment fee before hardware is procured and installation is scheduled. See the [*Pricing Guide*](../other/other-ref-pricing-guide.md).
+You will be charged an upfront design and deployment fee before hardware is procured and installation is scheduled. See the [*Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 ## Installation
 
@@ -119,7 +119,7 @@ As your service needs grow, we'll work with you to coordinate the installation o
 
 ### Your UKCloud Hosted responsibilities
 
-- If your engineers will require access to manage and maintain the hardware you will need to ensure they are booked in to visit UKCloud DCs. This can be done by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal. Note that due to the secure nature of the site, at least 24 hours’ notice is required. Engineers must be escorted and this is charged at a SFIA day rate - https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf. 
+- If your engineers will require access to manage and maintain the hardware you will need to ensure they are booked in to visit UKCloud DCs. This can be done by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal. Note that due to the secure nature of the site, at least 24 hours’ notice is required. Engineers must be escorted and this is charged at a [SFIA](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) day rate.
 
 ### Your CHDC Hosted responsibilities
 

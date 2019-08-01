@@ -62,7 +62,7 @@ After you've removed all of the items from your account that you're responsible 
 
 - Remove your account (and company, if necessary).
 
-- Return any prepaid sums for services that you have not consumed (unless otherwise required by the associated Service Definition).
+- Return any prepaid sums for services that you have not consumed (unless otherwise identified in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf)).
 
 - Arrange to return all confidential information.
 
@@ -202,4 +202,4 @@ Customer co-lo'd kit | Private VLANs/VRFs
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

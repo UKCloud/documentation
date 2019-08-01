@@ -1,3 +1,7 @@
+- name: About
+  items:
+  - name: UKCloud for OpenShift
+    href: oshift-home.md
 - name: FAQs
   items:
   - name: UKCloud for OpenShift FAQs

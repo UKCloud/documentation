@@ -35,7 +35,7 @@ Organisations can choose from two service levels:
 
 If you want more control and visibility of your disaster recovery solution, you can design your solution to write data independently to each data centre at our STANDARD service level, instead of using our ENHANCED service level.
 
-Full details of the available service options are outlined in the [Service Definition](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf).
+Full details of the available service options are outlined in the [*Service Definition*](cs-sd.md).
 
 ## Service availability
 
@@ -186,4 +186,4 @@ The following documents contain more information about Cloud Storage and the ser
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

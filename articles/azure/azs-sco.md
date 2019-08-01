@@ -156,7 +156,7 @@ We can provide:
 
 - Red Hat Enterprise Linux licensing
 
-For the latest available licences, check the [Service Definition](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/322910045972626-service-definition-document-2018-09-28-1341.pdf).
+For the latest available licences, check the [*Service Definition*](azs-sd.md).
 
 You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. If you're providing your own licensing, you should inform UKCloud (by raising a Service Request via the [My Calls](https://portal.ukcloud.com/support/ivanti) section of the UKCloud Portal) for a retrospective discount.
 
@@ -264,4 +264,4 @@ The following documents contain more information about UKCloud for Microsoft Azu
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

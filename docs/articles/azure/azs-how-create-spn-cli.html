@@ -8,7 +8,7 @@
     <title>How to create a service principal name (SPN) for Azure Stack using Azure CLI | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a service principal name (SPN) for Azure Stack using Azure CLI | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="generator" content="docfx 2.43.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -146,32 +146,64 @@
 <li><p>Remove the resource group you just created from Azure Stack.</p>
 </li>
 </ol>
+<h2 id="declare-variables">Declare variables</h2>
+<p>Enter details below to provide values for the variables in the scripts in this article:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Azure Stack DNS Suffix</td>
+<td>The DNS suffix for Azure Stack (&lt;region&gt;.&lt;External Domain Name&gt;)</td>
+<td><form oninput="result.value=dnssuffix.value;result2.value=dnssuffix.value;result3.value=dnssuffix.value" id="dnssuffix" style="display: inline;"><input type="text" id="dnssuffix" name="dnssuffix" style="display: inline;" placeholder="frn00006.azure.ukcloud.com"></form></td>
+</tr>
+<tr>
+<td>Username</td>
+<td>Your AAD username</td>
+<td><form oninput="result.value=username.value" id="username" style="display: inline;"><input type="text" id="username" name="username" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"></form></td>
+</tr>
+<tr>
+<td>Password</td>
+<td>Your AAD password</td>
+<td><form oninput="result.value=password.value" id="password" style="display: inline;"><input type="text" id="password" name="password" style="display: inline;" placeholder="Password123!"></form></td>
+</tr>
+<tr>
+<td>SPN Name</td>
+<td>The name of the SPN to be created</td>
+<td><form oninput="result.value=spnname.value" id="spnname" style="display: inline;"><input type="text" id="spnname" name="spnname" style="display: inline;" placeholder="ServicePrincipalName"></form></td>
+</tr>
+<tr>
+<td>SPN Password</td>
+<td>The password of the SPN to be created</td>
+<td><form oninput="result.value=spnpass.value" id="spnpass" style="display: inline;"><input type="text" id="spnpass" name="spnpass" style="display: inline;" placeholder="Password1234!"></form></td>
+</tr>
+</tbody>
+</table>
 <h2 id="create-service-principal-name-for-azure-stack-with-set-password">Create service principal name for Azure Stack with <strong>Set Password</strong></h2>
-<pre><code class="lang-azurecli"># Create your environment
-az cloud register -n AzureStackUser --endpoint-resource-manager &quot;https://management.frn00006.azure.ukcloud.com&quot; --suffix-storage-endpoint &quot;frn00006.azure.ukcloud.com&quot; --suffix-keyvault-dns &quot;.vault.frn00006.azure.ukcloud.com&quot; --endpoint-active-directory-graph-resource-id &quot;https://graph.windows.net/&quot; --profile 2018-03-01-hybrid
+<pre><code class="lang-azurecli hljs"># Create your environment
+az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result2" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result3" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
 
 # Set your environment
 az cloud set -n AzureStackUser
 
 # Log in to Azure Stack with user credentials
-az login -u &quot;&lt;username&gt;@&lt;tenantDomain&gt;&quot; -p '&lt;password&gt;'
-
-# Set Azure Stack Environment
-az cloud set --n AzureStackUser
-
-# Log in to Azure Stack using your Administrator account
-az login -u &quot;&lt;username&gt;@&lt;tenantDomain&gt;&quot; -p '&lt;password&gt;'
+az login -u "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>" -p '<output form="password" name="result" style="display: inline;">Password123!</output>'
 
 # Create Service Principal Name
-az ad sp create-for-rbac --name &quot;ServicePrincipalName&quot; --password 'Password1234!' --role=&quot;Owner&quot;
+az ad sp create-for-rbac --name "<output form="spnname" name="result" style="display: inline;">ServicePrincipalName</output>" --role="Owner"
 
 # This command will output five values
 #  {
-#    &quot;appId&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,
-#    &quot;displayName&quot;: &quot;azure-cli-2017-06-05-10-41-15&quot;,
-#    &quot;name&quot;: &quot;http://azure-cli-2017-06-05-10-41-15&quot;,
-#    &quot;password&quot;: &quot;Password1234!&quot;,
-#    &quot;tenant&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;
+#    "appId": "00000000-0000-0000-0000-000000000000",
+#    "displayName": "azure-cli-2017-06-05-10-41-15",
+#    "name": "http://azure-cli-2017-06-05-10-41-15",
+#    "password": "Password1234!",
+#    "tenant": "00000000-0000-0000-0000-000000000000"
 #  }
 
 # Log in to Azure Stack using Service Principal Name (SPN)
@@ -182,8 +214,7 @@ az login --service-principal -u CLIENT_ID -p CLIENT_SECRET --tenant TENANT_ID
 az group create --name rg01 --location frn00006
 
 # Remove test resource group
-az group delete --name rg01 -y
-</code></pre>
+az group delete --name rg01 -y</code></pre>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Arguments for service principal login can be derived from the output of its creation:</p>
@@ -206,7 +237,7 @@ az group delete --name rg01 -y
 <p>This is yet another difference between PowerShell creation as there is no auto-generation of passwords built-in</p>
 </div>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">

@@ -123,7 +123,7 @@ This service is hosted in the UK and operated by SC-cleared staff. It has extens
 
 UKCloud's Cross Domain Security Zone allows you to use the UKCloud-defined and managed UKCloud Guard, or a customer-designed and managed Walled Garden, to enable communication between platforms.
 
-For more information, see the [*Cross Domain Security Zone Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/781113344072781-service-definition-document-2018-05-21-1257.pdf).
+For more information, see the [*Cross Domain Security Zone Service Definition*](../cdsz/cdsz-sd.md).
 
 ## Feedback
 

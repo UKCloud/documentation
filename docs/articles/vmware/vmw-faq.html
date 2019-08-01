@@ -8,7 +8,7 @@
     <title>UKCloud for VMware FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for VMware FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="generator" content="docfx 2.43.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -136,9 +136,12 @@
 <h3 id="do-i-get-root-access-onto-the-local-vm">Do I get root access onto the local VM?</h3>
 <p>Yes, as this is a true IaaS cloud service, you have complete control and autonomy over each VM, and so have full 'root' or administrative access.</p>
 <h3 id="what-vm-sizes-are-available">What VM sizes are available?</h3>
-<p>UKCloud offers a variety of 'T-shirt sizes' to meet customers' needs. The smallest configuration is 512MiB and 1 vCPU. The largest is 128GiB memory with 12 vCPU.</p>
-<p>Check the UKCloud for VMware Service Definition for more details on the currently available sizes.</p>
-<p>Dedicated Compute provides the flexibility to build custom-sized VMs.</p>
+<p>UKCloud offers a variety of 'T-shirt sizes' to meet customers' needs. The smallest configuration is 0.5GiB and 1 vCPU. The largest is 128GiB memory with 12 vCPU.</p>
+<p>Check the <a href="vmw-sd.html"><em>UKCloud for VMware Service Definition</em></a> for more details on the currently available sizes.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>UKCloud for VMware does not currently support custom-sized VMs outside the 'T-shirt sizes', however if you require more flexibillity with regards to VM sizes, we advise the use of our other multi-cloud technologies such as OpenStack, Oracle or Azure. Alternatively, you may consider the use of Dedicated Compute v2 to build custom-sized VMs.</p>
+</div>
 <h3 id="can-i-resize-a-vm">Can I resize a VM?</h3>
 <p>Yes, you can change vCPU, RAM and storage allocations via the self-service UKCloud Portal and API.</p>
 <p>Processors and memory can be added to or removed from VMs if the OS supports the 'hot add' capability.</p>
@@ -150,25 +153,25 @@
 <p>The speed of data transfer to the UKCloud platform isn't guaranteed. However, during tests of the upload and download speeds, an average of 8 Mbit/s was achieved for VM import/export and 40 Mbit/s for data transferred over FTPS.</p>
 <p>For a transfer time calculator, go to: <a href="http://techinternets.com/copy_calc?do">http://techinternets.com/copy_calc?do</a></p>
 <p>If you use FTPS to upload data to or download it from your environment, you can transfer up to 1TiB of data in a day.</p>
-<p>Alternatively, we offer the Mass Transfer Facility option enabling customers to import large quantities of data via HDDs or NAS devices that are plugged directly into your environment. Please check the <em>Mass Transfer Facility Service Scope</em> for <a href="../enablement/enbl-sco-mtf-nas.html">NAS</a> or <a href="../enablement/enbl-sco-mtf-hdd.html">HDD</a>, or the pricing guide further details.</p>
+<p>Alternatively, we offer the Mass Transfer Facility option enabling customers to import large quantities of data via HDDs or NAS devices that are plugged directly into your environment. Please check the <em>Mass Transfer Facility Service Scope</em> for <a href="../enablement/enbl-sco-mtf-nas.html">NAS</a> or <a href="../enablement/enbl-sco-mtf-hdd.html">HDD</a>, or the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a> further details.</p>
 <h3 id="does-ukcloud-offer-encryption-on-the-vm">Does UKCloud offer encryption on the VM?</h3>
 <p>Not by default but, if it's required, you can implement it using technology of your choice inside the VM's operating system.</p>
 <h3 id="is-ukclouds-encryption-service-available-for-ukcloud-for-vmware">Is UKCloud's encryption service available for UKCloud for VMware?</h3>
-<p>Not currently, but we are considering this as an option. Provide feedback via <a href="http://ideas.ukcloud.com">UKCloud Ideas</a>.</p>
+<p>Not currently, but we are considering this as an option. Provide feedback via the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 <h3 id="is-it-possible-to-non-fast-provision-vapps-and-to-convert-current-vapps-into-non-fast-provisioned-ones">Is it possible to non-fast-provision vApps, and to convert current vApps into non-fast provisioned ones?</h3>
 <p>Fast provisioning is enabled only by customer request - by default, all vApps are non-fast-provisioned. Customers can right-click on a VM and consolidate. This can also be done via a Service Request.</p>
 <h3 id="what-is-dedicated-compute">What is Dedicated Compute?</h3>
-<p>Dedicated Compute comprises of physical blades assigned to a customer for their sole use. They're managed using the standard tools and services in the UKCloud Assured cloud platform.</p>
+<p>Dedicated Compute comprises of physical blades assigned to a customer for their sole use. They're managed using the standard tools and services in the UKCloud platform.</p>
 <p>Dedicated Compute allows customers to:</p>
 <ul>
-<li><p>Comply with legacy licensing requirements from software suppliers whose licensing is based on a physical CPU (such as Oracle or desktop OSs)</p>
+<li><p>Comply with legacy licensing requirements from software suppliers whose licensing is based on a physical CPU (such as Oracle or desktop operating systems)</p>
 </li>
-<li><p>Build bespoke sized VMs on the UKCloud Assured cloud platform</p>
+<li><p>Build bespoke sized VMs on the UKCloud platform</p>
 </li>
 </ul>
 <p>Dedicated Compute uses the same storage infrastructure as the shared compute platform</p>
-<p>There's a longer deployment lead time for Dedicated Compute, as well as a longer contractual commitment than our shared cloud platform (three months rather than one hour).</p>
-<p>For more details, please see the UKCloud for VMware Service Definition available via the Digital Marketplace.</p>
+<p>There's a longer deployment lead time for Dedicated Compute, as well as a longer contractual commitment than our shared cloud platform (30 days rather than one hour).</p>
+<p>For more details, please see the <a href="../dedicated-compute/dc-sd.html"><em>Dedicated Compute v2 Service Definition</em></a>.</p>
 <h3 id="can-i-utilise-multiple-storage-types-with-my-vm">Can I utilise multiple storage types with my VM?</h3>
 <p>UKCloud offers two storage types to customers:</p>
 <ul>
@@ -235,7 +238,7 @@ customers configure and manage their firewalls.</p>
 <p>The exception is Micro sized VMs. These have a fixed 10GiB allocation which cannot be increased. If this allocation is exceeded, the VM is treated as Tiny.</p>
 <h3 id="can-i-reallocate-storage-across-vms">Can I reallocate storage across VMs?</h3>
 <p>No, storage pooling isn't possible. Each VM must have a minimum of 60GiB (except Micro VMs).</p>
-<p>You can quickly and easily allocate additional storage via the self-service UKCloud Portal or API. Additional storage is charged on a per-GiB basis as listed in the UKCloud pricing guide.</p>
+<p>You can quickly and easily allocate additional storage via the self-service UKCloud Portal or API. Additional storage is charged on a per-GiB basis as listed in the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a>.</p>
 <h3 id="is-storage-persistent">Is storage persistent?</h3>
 <p>Yes, unlike some other cloud platforms, storage is persistent.</p>
 <p>This means that your data and VM configuration remain available to you even if the VM is switched off or restarted.</p>
@@ -339,7 +342,7 @@ regarding the registration on VMs targeting the UKCloud KMS.</p>
 <h3 id="is-there-a-free-trial">Is there a free trial?</h3>
 <p>Yes, we offer a 30-day free trial so that you can test and evaluate our service without commitment. Your trial provides you with a live environment on the UKCloud platform to test our services and verify whether they are suited to your needs.</p>
 <h3 id="how-do-i-request-a-trial">How do I request a trial?</h3>
-<p>You can request a trial via the UKCloud website: <a href="http://www.UKCloud.com/free-trial-sign-up">http://www.UKCloud.com/free-trial-sign-up</a> and accept the trial terms and conditions. Your environment will then be set up and you will be given trial credits to the equivalent of £500.</p>
+<p>You can request a trial via the UKCloud website: <a href="http://www.ukcloud.com/free-trial-sign-up">http://www.ukcloud.com/free-trial-sign-up</a> and accept the trial terms and conditions. Your environment will then be set up and you will be given trial credits to the equivalent of £500.</p>
 <h3 id="what-do-i-do-when-my-trial-comes-to-an-end">What do I do when my trial comes to an end?</h3>
 <p>You will be contacted by your Cloud Architect or CSM when your trial is due to end, either because you have run out of credits or reached 30 days (whichever is sooner).</p>
 <p>At the end of your trial, you have the option to transition to production or cease the trial.</p>
@@ -387,7 +390,7 @@ regarding the registration on VMs targeting the UKCloud KMS.</p>
 <h2 id="billing-and-legal">Billing and legal</h2>
 <h3 id="what-is-the-smallest-unit-of-time-i-will-be-billed-for">What is the smallest unit of time I will be billed for?</h3>
 <p>The minimum unit of time for use is one hour. Part hours will be rounded up.</p>
-<p>Dedicated Compute has a minimum commit of three months.</p>
+<p>Dedicated Compute has a minimum commit of 30 days.</p>
 <h3 id="what-are-the-charges-to-transfer-data-between-vms-within-the-same-data-centre">What are the charges to transfer data between VMs within the same data centre?</h3>
 <p>None. Data transfer between VMs in this scenario is free.</p>
 <h3 id="will-i-be-charged-even-if-my-virtual-machine-is-powered-off">Will I be charged even if my Virtual Machine is powered off?</h3>
@@ -408,7 +411,7 @@ regarding the registration on VMs targeting the UKCloud KMS.</p>
 <p>Actual real-time resource usage is measured to the nearest second. At the end of each day, periods of time in identical VM state are grouped together and the total for each group in seconds is rounded up to the nearest hour. An identical VM state has the same power status, VM size, service level, storage size, protection and licence. Where rounding up of multiple periods in differing states during the same day would result in more than 24 hours of charges, the period with the lowest price per hour is rounded down.</p>
 <p>For example, if a VM was switched off for a total of 890 minutes but was on for 550 minutes, the billable hours would be rounded up to 10 hours for when the VM was on and the off period would be rounded down to 14 hours to cap the day at 24 hours.</p>
 <h3 id="will-i-be-charged-for-creating-snapshots">Will I be charged for creating snapshots?</h3>
-<p>Snapshot Protection can be purchased with any VM and will be charged for in accordance with the Pricing Guide. Self-service snapshots created within vCloud Director will incur charges as of November 2017. These will be accounted for in the invoices you receive at the beginning of December.</p>
+<p>Snapshot Protection can be purchased with any VM and will be charged for in accordance with the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a>. Self-service snapshots created within vCloud Director will incur charges as of November 2017. These will be accounted for in the invoices you receive at the beginning of December.</p>
 <h2 id="security">Security</h2>
 <h3 id="what-data-is-suitable-for-the-ukcloud-assured-cloud-platform">What data is suitable for the UKCloud assured cloud platform?</h3>
 <p>The service is hosted in the UK and operated by UK government security-cleared staff. It has extensive independent validation (including NCSC design reviews) that it is fully aligned with the 14 NCSC Cloud Security Principles, and is therefore ideal for all data classified at OFFICIAL (including OFFICIAL SENSITIVE).</p>
@@ -418,7 +421,7 @@ regarding the registration on VMs targeting the UKCloud KMS.</p>
 <h3 id="is-there-a-protective-monitoring-service">Is there a protective monitoring service?</h3>
 <p>Protective Monitoring is included for our IaaS platform and follows GPG 13.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
