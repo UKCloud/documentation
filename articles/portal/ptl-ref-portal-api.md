@@ -214,7 +214,7 @@ Returns a response with a list of up to 10 VMs
 ## My Calls API (Removed)
 
 > [!IMPORTANT]
-> With the move to the new My Calls service management tool, this functionality is no longer available.
+> With the move to the new [My Calls](https://portal.skyscapecloud.com/support/ivanti) service management tool, this functionality is no longer available.
 
 ### GET /api/my_calls
 
@@ -1238,7 +1238,7 @@ type | String | Vorg-build | &nbsp;
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example. com
-state | String | The state of the build</br>Valid values:</br>- approved -- vOrg creation process has been approved</br>- running -- vOrg is in the process of being created</br>- completed -- vOrg has been successfully created</br>-   failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
+state | String | The state of the build<br>Valid values:<br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created<br>-   failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
 serviceName | String | The name of the vOrg (as specified in the build request) | My compute service
 zoneId | String | The zone in which the vOrg is located (as specified in the build request) | B
 
@@ -1374,7 +1374,7 @@ type | String | Vorg-build | &nbsp;
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid values:</br>- approved -- vOrg creation process has been approved</br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created</br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
+state | String | The state of the build<br>Valid values:<br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created<br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
 serviceName | String | The name of the vOrg (as specified in the build request) | My compute service
 zoneId | String | The zone in which the vOrg is located (as specified in the build request) | B
 
@@ -1525,7 +1525,7 @@ type | String | Vorg-build | &nbsp;
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid values:</br>- approved -- vOrg creation process has been approved</br>- running -- vOrg is in the process of being created</br>- completed -- vOrg has been successfully created</br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
+state | String | The state of the build<br>Valid values:<br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created<br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
 serviceName | String | The name of the vOrg (as specified in the build request) | My compute service
 zoneId | String | The zone in which the vOrg is located (as specified in the build request) | B
 
@@ -1895,9 +1895,9 @@ type | String | VDC-build | &nbsp;
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created   | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid valudes:</br>- approved -- VDC creation process has been approved</br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created</br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
+state | String | The state of the build<br>Valid valudes:<br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created<br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
 vdcName | String | The name of the VDC (as specified in the build request) | My VDC
-vmType | String | The type of VM workloads in the VDC (as specified in the build request)</br>Valid values:</br>- POWER</br>- ESSENTIAL</br>- PRIORITY | POWER
+vmType | String | The type of VM workloads in the VDC (as specified in the build request)<br>Valid values:<br>- POWER<br>- ESSENTIAL<br>- PRIORITY | POWER
 serviceName | String | The name of the vOrg to which the VDC belongs | My Compute Service
 
 #### Example response
@@ -2057,9 +2057,9 @@ type | String | VDC-build | &nbsp;
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created    | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid values:</br>- approved -- VDC creation process has been approved</br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created</br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
+state | String | The state of the build<br>Valid values:<br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created<br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
 vdcName | String | The name of the VDC (as specified in the build request) | My VDC
-vmType | String | The type of VM workloads used in the VDC (as specified in the build request)</br>Valid values:</br>- POWER</br>- ESSENTIAL</br>- PRIORITY  | POWER
+vmType | String | The type of VM workloads used in the VDC (as specified in the build request)<br>Valid values:<br>- POWER<br>- ESSENTIAL<br>- PRIORITY  | POWER
 serviceName | String | The name of the vOrg to which the VDC belongs | My Compute Service
 
 #### Example response
@@ -2221,9 +2221,9 @@ type | String | VDC-build | &nbsp;
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid values:</br>- approved -- VDC creation process has been approved</br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created</br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
+state | String | The state of the build<br>Valid values:<br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created<br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
 vdcName | String | The name of the VDC (as specified in the build request) | My VDC
-vmType | String | The type of VM workloads used in the VDC (as specified in the build request)</br>Valid values:</br>- POWER</br>- ESSENTIAL</br>- PRIORITY | POWER
+vmType | String | The type of VM workloads used in the VDC (as specified in the build request)<br>Valid values:<br>- POWER<br>- ESSENTIAL<br>- PRIORITY | POWER
 serviceName | String | The name of the vOrg to which the VDC belongs | My Compute Service
 
 #### Example response
@@ -2601,7 +2601,7 @@ type | String | EdgeGateway-build | &nbsp;
 id | String | The unique identifier of the build | 23
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid values:</br>-approved -- edge gateway creation process has been approved</br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created</br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun) | completed
+state | String | The state of the build<br>Valid values:<br>-approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created<br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun) | completed
 
 #### Example response
 
@@ -2719,7 +2719,7 @@ type | String | EdgeGateway-build | &nbsp;
 id | String | The unique identifier of the build | 23
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid values:</br>- approved -- edge gateway creation process has been approved</br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created</br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun) | completed
+state | String | The state of the build<br>Valid values:<br>- approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created<br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun) | completed
 
 #### Example response
 
@@ -2838,7 +2838,7 @@ type | String | EdgeGateway-build | &nbsp;
 id | String | The unique identifier of the build | 23
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid values:</br>- approved -- edge gateway creation process has been approved</br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created</br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun) | completed
+state | String | The state of the build<br>Valid values:<br>- approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created<br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun) | completed
 
 #### Example response
 
@@ -3251,7 +3251,7 @@ Returns a CSV report for the period specified.
 
 ## Further information
 
-If you want to discuss any aspect of the service or settings specific to your domain, log a Service Request via the [My Calls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal.
+If you want to discuss any aspect of the service or settings specific to your domain, log a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 

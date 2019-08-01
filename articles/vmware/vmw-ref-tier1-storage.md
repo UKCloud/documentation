@@ -113,7 +113,7 @@ If the workload is currently running on any environment, it's possible to run a 
 
 Tier 1 workloads are available with the Essential, Power and Priority VM types.
 
-Initially, moving a workload to and from the Tier 1 platform will be a manual process that may involve raising a service request via My Calls on the UKCloud Portal.
+Initially, moving a workload to and from the Tier 1 platform will be a manual process that may involve raising a Service Request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) on the UKCloud Portal.
 
 ## Realistic performance expectations
 

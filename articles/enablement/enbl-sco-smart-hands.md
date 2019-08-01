@@ -52,10 +52,9 @@ The following are examples of the core tasks that Smart Hands can be requested f
 
 ### Step 1: Raise a Service Request/Incident
 
-For routine non-urgent requirements, raise a Service Request in the [MyCalls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal providing your detailed needs of the activity you would like us to perform and if there are any specific needs to be co-ordinated with you.
+For routine non-urgent requirements, raise a Service Request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal providing your detailed needs of the activity you would like us to perform and if there are any specific needs to be co-ordinated with you.
 
-For urgent requirements following raising a Service Request and contact UKCloud Support on **01252 303300, option 2.**
-We will treat your urgent request as a Service Down event and act to help resolve as quickly as possible.
+For urgent requirements following raising a Service Request and contact UKCloud Support on **01252 303300, option 2**. We will treat your urgent request as a Service Down event and act to help resolve as quickly as possible.
 
 ### Step 2: Confirm requirements
 

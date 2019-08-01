@@ -36,7 +36,7 @@ Before making network changes to your environment, you'll need the following inf
 
 - The IP of the service you require.
 
-To get the last two octets of the IP addresses for the service you require, please raise a support ticket on the UKCloud Elevated Portal.
+To get the last two octets of the IP addresses for the service you require, please raise a Service Request on the UKCloud Elevated Portal.
 
 ## Setting up access to UKCloud services
 

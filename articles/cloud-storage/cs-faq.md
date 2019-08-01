@@ -58,7 +58,7 @@ Cloud Storage in our Assured OFFICAL domain uses the same environment for both P
 It is possible to lock Cloud Storage accounts down so that buckets are only accessible via a single network (for example HSCN, PSN, Janet), but we cannot lock down a bucket to a customer-specified source IP address or range.
 
 > [!IMPORTANT]
-> As we impose this restriction at a Cloud Storage user account level rather than the bucket itself, any new users that you add to the ECS account will be able to access associated buckets from ANY network until you request that we update our blacklist. To request network restrictions, raise a support ticket through [My Calls](https://portal.skyscapecloud.com/support/my_calls). Alternatively, you can contact support by phone or email.
+> As we impose this restriction at a Cloud Storage user account level rather than the bucket itself, any new users that you add to the ECS account will be able to access associated buckets from ANY network until you request that we update our blacklist. To request network restrictions, raise a Service Request through https://portal.skyscapecloud.com/support/ivanti. Alternatively, you can contact support by phone or email.
 
 ### Which APIs are supported by the platform?
 
@@ -90,7 +90,7 @@ You can create additional users in the UKCloud Portal. For more information, see
 
 ### How do I raise a support ticket?
 
-UKCloud's secure online Portal provides the most common service management functionality, enabling you to raise support tickets through [My Calls](https://portal.skyscapecloud.com/support/my_calls). Alternatively, you can contact support by phone or email.
+UKCloud's secure online Portal provides the most common service management functionality, enabling you to raise support tickets through [My Calls](https://portal.skyscapecloud.com/support/ivanti). Alternatively, you can contact support by phone or email.
 
 ### How do I manage my services?
 

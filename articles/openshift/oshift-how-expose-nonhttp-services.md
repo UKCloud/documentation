@@ -30,7 +30,7 @@ This article assumes familiarity with services and routes in OpenShift and acces
 
 ## Prerequisites
 
-To complete the steps in this guide, your cluster must have been deployed from a version of our code that enables our non-http functionality. You can raise a support ticket to: 
+To complete the steps in this guide, your cluster must have been deployed from a version of our code that enables our non-http functionality. You can raise a Service Request to:
 
 - Check if your cluster already provides non-http functionality
 
@@ -38,7 +38,7 @@ To complete the steps in this guide, your cluster must have been deployed from a
 
 ## Getting the external IP
 
-You'll need to raise a support ticket with us that provides the network you'd like to expose services on and the ports/protocols of the services you'll be exposing. We'll update your environment to create the virtual infrastructure needed and provide you with the publicly accessible IP and the local IP this maps to. The local IP will be important for the upcoming steps.
+You'll need to raise a Service Request with us that provides the network you'd like to expose services on and the ports/protocols of the services you'll be exposing. We'll update your environment to create the virtual infrastructure needed and provide you with the publicly accessible IP and the local IP this maps to. The local IP will be important for the upcoming steps.
 
 > [!NOTE]
 > You can request multiple ports/protocols and networks for external services.

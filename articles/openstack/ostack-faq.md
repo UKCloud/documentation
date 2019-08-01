@@ -113,13 +113,13 @@ Not currently, but we are considering options based upon customer feedback.
 
 You're initially allocated three external IP addresses with each OpenStack project.
 
-You can ask for more external IP addresses via a Service Request in the UKCloud Portal.
+You can ask for more external IP addresses via a Service Request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ### How many network routers do I get?
 
 You're initially able to create up to two network routers in each OpenStack project.
 
-You can ask the router quota to be increased via a Service Request in the UKCloud Portal.
+You can ask the router quota to be increased via a Service Request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ### How many PSN IP addresses do I get?
 
@@ -325,13 +325,13 @@ UKCloud does not offer any additional software other than what's included in the
 
 BYO licensing for Red Hat allows customers to select instances running on the UKCloud Assured cloud platform for covering by their own commercial agreement with Red Hat.
 
-UKCloud will remove the cost of the Red Hat licence from your monthly bill for the selected instances. You need to raise a Service Request to let us know which instances you will cover with your own Red Hat licence.
+UKCloud will remove the cost of the Red Hat licence from your monthly bill for the selected instances. You need to raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal to let us know which instances you will cover with your own Red Hat licence.
 
 ## Support
 
 ### How do I raise a support ticket?
 
-The secure online [UKCloud Portal](https://portal.skyscapecloud.com/login) provides most common service management functionality. You can raise tickets within the My Calls section of the Portal. Alternatively, you can contact support by phone or email.
+The secure online [UKCloud Portal](https://portal.ukcloud.com/login) provides most common service management functionality. You can raise tickets within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. Alternatively, you can contact support by phone or email.
 
 ### How do I manage my services?
 
@@ -357,11 +357,11 @@ Although designed to be a large-scale cloud platform, we strongly advise that wh
 
 ### How can I create additional OpenStack Projects?
 
-Unfortunately, we are currently unable to offer customers of UKCloud for OpenStack the ability to create their own additional OpenStack Projects. Additional projects are allowed, however these need to be created by UKCloud via a Service Request from within the UKCloud Portal.
+Unfortunately, we are currently unable to offer customers of UKCloud for OpenStack the ability to create their own additional OpenStack Projects. Additional projects are allowed, however these need to be created by UKCloud via a Service Request from within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ### How can I create additional OpenStack Users?
 
-Unfortunately, we are currently unable to offer customers of UKCloud for OpenStack the ability to create their own additional OpenStack users. Additional users are allowed, however these need to be created by UKCloud via a Service Request from within the UKCloud Portal.
+Unfortunately, we are currently unable to offer customers of UKCloud for OpenStack the ability to create their own additional OpenStack users. Additional users are allowed, however these need to be created by UKCloud via a Service Request from within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Onboarding
 

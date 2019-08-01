@@ -67,7 +67,7 @@ UKCloud's secure online Portal provides the most common service management funct
 
 ### How do I manage my services?
 
-Private Cloud for Storage on the Assured OFFICIAL (formerly IL2) domain can be managed over the internet (or other connectivity) by raising a Service Request via the My Calls section of the UKCloud Portal.
+Private Cloud for Storage on the Assured OFFICIAL (formerly IL2) domain can be managed over the internet (or other connectivity) by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 For the Elevated OFFICIAL (formerly IL3) domain, the security requirements are much stricter and require either a PSN-approved connection, UKCloud Secure Remote Access, or CAPS-approved encryption.
 

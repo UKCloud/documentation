@@ -85,7 +85,7 @@ Customers have a range of automated, on-platform protection options to choose fr
 
 **Catalogue and template-based recovery.** All customers have access to catalogue and template-based recovery as standard. This is a configuration management solution that can re-provision stateless servers to a new VM when required, using standard, and catalogue-based VM templates.
 
-**Snapshot Protection.** 14-day or 28-day snapshot policies available. Data protected by the snapshot has an RPO of 24 hours, with RTO determined by the time taken to restore the VM after the service request is raised. See the [*Snapshot Protection Service Scope*](vmw-sco-snapshot-protection.md) for full details.
+**Snapshot Protection.** 14-day or 28-day snapshot policies available. Data protected by the snapshot has an RPO of 24 hours, with RTO determined by the time taken to restore the VM after the Service Request is raised. See the [*Snapshot Protection Service Scope*](vmw-sco-snapshot-protection.md) for full details.
 
 **Journaling Protection.** A non-invasive, self-service disaster recovery solution with configurable recovery points, providing near real-time data protection. The standard journaling profile provides a target RPO of 5 minutes and a journal history of 2, 7, 14 or 28 days. The [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md) covers the full details of this protection option.
 
@@ -146,7 +146,7 @@ You are entitled to claim Service Credits for outages to services that take you 
 
 For the latest available licences, please check the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
-You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you're providing your own licensing for a retrospective discount.
+You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. If you're providing your own licensing, you should inform UKCloud by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal for a retrospective discount.
 
 For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.
 
@@ -164,11 +164,11 @@ A full overview of the connectivity options and network architecture is availabl
 
 We manage the physical firewalls that face public and secure networks.
 
-**Internet-facing solutions** have 2 usable public IP addresses. You can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.
+**Internet-facing solutions** have 2 usable public IP addresses. You can ask for additional public IP addresses by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. We reserve the right to decline the request if you have spare capacity in your existing deployment.
 
-**PSN-facing solutions.** You should raise a Service Request or contact your Customer Success Manager (CSM) to be assigned your IP address. Contended bandwidth (uncapped).
+**PSN-facing solutions.** You should raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or contact your Customer Success Manager (CSM) to be assigned your IP address. Contended bandwidth (uncapped).
 
-**Janet and HSCN solutions** have one usable IP address. You can request additional IP addresses via a Service Request.
+**Janet and HSCN solutions** have one usable IP address. You can request additional IP addresses by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 From a customer management experience, you manage all your connectivity rules, such as firewall, IPsec VPN and NAT functionality, through your edge gateway, using either the UKCloud Portal GUI or API.
 
@@ -223,7 +223,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 You can move your workloads from a local VMware or Hyper-V powered environment onto the UKCloud platform using Migration to the Cloud (powered by Zerto). You can find pricing information in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
-Customers are free to migrate their workloads. You can also request a migration through a Service Request. Migrations may be between:
+Customers are free to migrate their workloads. You can also request a migration through a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. Migrations may be between:
 
 - Services (for example, ESSENTIAL to POWER)
 

@@ -98,7 +98,7 @@ This process provides a relatively simple transition to cloud storage. The appli
 
 When you request your Cloud Storage service, UKCloud Support creates a namespace in the specified account. If you have requested an Atmos subtenant, this is also created.
 
-To create S3 buckets, use any S3-compliant tool. To create additional namespaces or Atmos subtenants, you must raise a service request. You can have S3 buckets and Atmos subtentants in the same namespace.
+To create S3 buckets, use any S3-compliant tool. To create additional namespaces or Atmos subtenants, you must raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. You can have S3 buckets and Atmos subtentants in the same namespace.
 
 Cloud Storage provides different API endpoints to access your storage, depending on the UKCloud site and connectivity type you are using. Make sure you use the correct endpoint to ensure the best possible
 performance for your solution.

@@ -164,7 +164,7 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
 ## Provisioning your Cloud GPU service
 
-When your VM is ready, use My Calls in the UKCloud Portal to raise a service request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can complete the setup of your service:
+When your VM is ready, use [My Calls](https://portal.skyscapecloud.com/support/ivanti) in the UKCloud Portal to raise a service request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can complete the setup of your service:
 
 - VDC name
 
