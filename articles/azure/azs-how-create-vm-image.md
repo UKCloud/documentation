@@ -112,7 +112,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 18. Click **OK**
 
-19. Review the *Summary* blade and click **OK**. The new VM will begin deployment.
+19. Review the *Summary* blade and click **OK**. The new VM will now begin deployment.
 
 ### [PowerShell](#tab/tabid-d/tabid-2)
 
