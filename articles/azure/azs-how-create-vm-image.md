@@ -33,7 +33,10 @@ To complete the steps in this article, you must have appropriate access to a sub
 > [!WARNING]
 > Once a VM has been generalised, you **can not** log back into it.
 
-## [2. Create the image](#tab/tabid-2)
+## [2. Creating the image](#tab/tabid-2)
+
+> [!WARNING]
+> Capturing a VM image will make it unusable and cannot be undone.
 
 ***
 
@@ -54,19 +57,29 @@ To complete the steps in this article, you must have appropriate access to a sub
 ### [Linux](#tab/tabid-b/tabid-1)
 
 1. Log in to your Linux VM.
-2. Run the following command: `sudo su && shutdown && waagent -deprovision+user -force`
-3. Enter your sudo password.
+2. Run the following command: `sudo su` and enter your sudo password.
+3. Run the following command: `shutdown && waagent -deprovision+user -force`
 4. Wait for the VM to shutdown. Your session will be closed.
-
-***
 
 ### [Portal](#tab/tabid-c/tabid-2)
 
-1. []
-2. []
-3. []
+1. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com/)
+2. Click **Virtual Machines** on the left menu.
+3. Click the VM that you want to capture.
+4. At the top, click **Capture**.
 
-### [PowerShell](#tab/tabid-c/tabid-2)
+    ![Capture VM image](images/azs-browser-capture-vm.png)
+
+5. In the *new* blade, provide a **Name** for the new image.
+6. Select a **Resource Group** from the dropdown menu or create a new one.
+7. Select **Automatically delete this virtual machine after creating the image**.
+8. Click **Create**.
+
+    ![Create VM image](images/azs-browser-create-image.png)
+
+8. Wait for the image creation process to finish.
+
+### [PowerShell](#tab/tabid-d/tabid-2)
 
 #### Declare variables
 
