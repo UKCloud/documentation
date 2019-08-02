@@ -43,9 +43,13 @@ To complete the steps in this article, you must have appropriate access to a sub
 ### [Windows](#tab/tabid-a/tabid-1)
 
 1. Log in to your Windows VM.
+
 2. Run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
+
 3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the dropdown menu.
+
 4. Ensure the **Generalise** tick box is selected.
+
 5. Under *Shutdown Options*, select **Shutdown** from the dropdown menu.
 
     See the image below for an example:
@@ -57,27 +61,58 @@ To complete the steps in this article, you must have appropriate access to a sub
 ### [Linux](#tab/tabid-b/tabid-1)
 
 1. Log in to your Linux VM.
+
 2. Run the following command: `sudo su` and enter your sudo password.
+
 3. Run the following command: `shutdown && waagent -deprovision+user -force`
+
 4. Wait for the VM to shutdown. Your session will be closed.
 
 ### [Portal](#tab/tabid-c/tabid-2)
 
-1. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com/)
+1. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com/).
+
 2. Click **Virtual Machines** on the left menu.
+
 3. Click the VM that you want to capture.
+
 4. At the top, click **Capture**.
 
     ![Capture VM image](images/azs-browser-capture-vm.png)
 
 5. In the *new* blade, provide a **Name** for the new image.
+
 6. Select a **Resource Group** from the dropdown menu or create a new one.
+
 7. Select **Automatically delete this virtual machine after creating the image**.
+
 8. Click **Create**.
 
     ![Create VM image](images/azs-browser-create-image.png)
 
-8. Wait for the image creation process to finish.
+9. Wait for the image creation process to finish.
+
+10. Once complete, your VM image should now appear in the resource group your VM was in.
+
+    ![Custom image resource group](images/azs-browser-custom-image-resource-group.png)
+
+11. Click the VM image.
+
+12. In the *new* page, click **Create VM**.
+
+13. Enter a **Name**, **Username**, **Authentication type**, **Password** and **Resource group** for the new VM.
+
+14. Click **OK**.
+
+15. Select a VM size.
+
+16. Click **Select**.
+
+17. In *Configure optional features*, under *Select public inbound ports*, select the ports you wish to provision.
+
+18. Click **OK**
+
+19. Review the *Summary* blade and click **OK**. The new VM will begin deployment.
 
 ### [PowerShell](#tab/tabid-d/tabid-2)
 
