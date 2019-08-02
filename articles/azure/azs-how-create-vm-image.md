@@ -110,7 +110,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 17. In *Configure optional features*, under *Select public inbound ports*, select the ports you wish to provision.
 
-18. Click **OK**
+18. Click **OK**.
 
 19. Review the *Summary* blade and click **OK**. The new VM will now begin deployment.
 
