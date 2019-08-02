@@ -241,14 +241,14 @@ Although we don't offer an SLA relating the performance of the Zerto software, w
 
 ### UKCloud for Oracle Software
 
-&nbsp; | &nbsp;
--------|-------
-**Service level agreement** | **Non-HA OVM:** 99.95%<br>**HA OVM:** 99.99%
-**Portal level agreement**  | 99.90%
-**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any planned and emergency maintenance.
-**Measurement of SLA**      | Unavailability applies to existing workloads that become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical infrastructure availability, storage, power and internal networking such as physical firewalls and routers. <br> Owing to the nature of Oracle workloads and the need to pin them to processor cores, workloads will be moved only in the event of a hardware failure. This will not be a live migration and an application restart is likely to be required.
-**Key exclusions**          | The following are examples of what is not covered by the SLA: <br>- Faults within your control, such as client application issues<br>- Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components colocated at UKCloud
-**Service Credit**         | 10% of monthly spend <br> 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal
+&nbsp;                       | UKCloud for Oracle Software
+-----------------------------|----------------------------
+**Service level agreement**  | **Non-HA x86:** 99.95%<br>**HA x86:** 99.99%<br>**SPARC / Dedicated SPARC with resilience:** 99.95%<br>**Dedicated SPARC without resilience:** 95.00%
+**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
+**Planned maintenance**      | Excluded
+**Measurement of SLA**       | The service is deemed unavailable if a customer is unable to restart a VM after it becomes unresponsive due to a fault recognised as the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical infrastructure availability, storage, power and internal networking, such as physical firewalls and routers.<br>Oracle workloads are pinned to processor cores and will power off in the event of a host failure. Migrations are not live and VM restart will be required. UKCloud will advise customers if VM restart is required.<br><b>HA-enabled x86 VMs</b> will be automatically moved to a new host in the event of a host failure, but may require restarting. Automatic movement of VMs is covered by the HA x86 SLA. Customers are responsible for enabling the HA feature on x86 VMs and for restarting VMs.<br><b>Non-HA x86 VMs</b> require UKCloud to move Oracle VMs to a new host so they can be restarted. UKCloud's manual movement of VMs is covered by the Non-HA x86 SLA. Customers are responsible for restarting VMs<br><b>SPARC VMs</b> require UKCloud to move Oracle VMs to a new host so they can be restarted. UKCloud's manual movement of VMs is covered by the SPARC SLAs. Customers are responsible for restarting VMs.
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
+**Service Credit**           | 10% of monthly spend.
 
 ### UKCloud for VMware
 
