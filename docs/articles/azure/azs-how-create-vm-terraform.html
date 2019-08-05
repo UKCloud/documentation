@@ -8,7 +8,7 @@
     <title>How to create a virtual machine using Terraform | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual machine using Terraform | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="generator" content="docfx 2.44.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -102,11 +102,11 @@
 <li><a href="https://www.terraform.io/downloads.html">Download Terraform</a></li>
 </ul>
 </li>
-<li><p>An active Azure <em>Subscription</em> (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)</p>
+<li><p>An active Azure Stack <em>Subscription</em> (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)</p>
 </li>
 <li><p>Service Principal Name</p>
 <ul>
-<li><a href="azs-how-create-spn-powershell.html">How To create Service Principal Name for Azure Stack</a></li>
+<li><a href="azs-how-create-spn-powershell.html">How To create Service Principal Name for Azure Stack in Powershell</a></li>
 </ul>
 </li>
 </ul>
@@ -119,30 +119,22 @@
 </ul>
 <h1 id="how-to-use-terraform-with-azure-stack">How to use Terraform with Azure Stack</h1>
 <h2 id="authentication">Authentication</h2>
-<p>In order to authenticate with Terraform you will need to have a valid Service Principal Name (SPN) - how to create one is described in <a href="#prerequisites">Prerequisites</a>.</p>
+<p>In order to authenticate with Terraform you will need to have a valid Service Principal Name (SPN) - how to create one is described in the <a href="#prerequisites">Prerequisites</a>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>You only need your Service Principal Name (SPN) to be assigned to your Azure Stack subscription, despite what official Terraform documentation says.</p>
 </div>
 <p>The process of authentication can be handled in one of two ways, either as <strong>Environment Variables</strong> or in the <strong>Provider Block</strong>.</p>
-<p><a href="#example-of-environment-variables">Environment Variables Option</a> - you can create your <strong>terraform plan</strong> by putting only the plan itself into <code>example.tf</code> and then keep <code>variables.tf</code> separate. You have to declare the actual values in the <code>terraform.tfvars</code> file. This is the file that you will need to populate with your actual credential details.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>You can also put the content of <code>variables.tf</code> in the <code>example.tf</code> at the top of the file.</p>
-</div>
-<p><a href="#example-of-provider-block">Provider Block Option</a> - you can create your <strong>terraform plan</strong> by putting everything in one <code>example.tf</code> file, which then contains your Provider settings explicitly in said plan.</p>
-<p>Official <a href="https://www.terraform.io/intro/getting-started/variables.html">Variables Guide</a></p>
-<h3 id="example-of-environment-variables">Example of Environment Variables</h3>
-<ul>
-<li><p><code>variables.tf</code></p>
+<p><a href="#example-of-how-variables-are-used-in-terraform">Environment Variables Option</a> - you can create your <strong>Terraform plan</strong> by putting only the plan itself into <code>main.tf</code> and then keeping <code>variables.tf</code> separate. You have to declare the actual values in the <code>terraform.tfvars</code> file. This is the file that you will need to populate with your actual credential details.</p>
+<h3 id="example-of-how-variables-are-used-in-terraform">Example of how variables are used in Terraform:</h3>
+<h4 id="variablestf"><code>variables.tf</code></h4>
 <pre><code class="lang-hcl">variable &quot;arm_endpoint&quot; {}
 variable &quot;subscription_id&quot; {}
 variable &quot;client_id&quot; {}
 variable &quot;client_secret&quot; {}
 variable &quot;tenant_id&quot; {}
 </code></pre>
-</li>
-<li><p><code>example.tf</code></p>
+<h4 id="maintf"><code>main.tf</code></h4>
 <pre><code class="lang-hcl">provider &quot;azurestack&quot; {
   arm_endpoint    = &quot;${var.arm_endpoint}&quot;
   subscription_id = &quot;${var.subscription_id}&quot;
@@ -151,38 +143,21 @@ variable &quot;tenant_id&quot; {}
   tenant_id       = &quot;${var.tenant_id}&quot;
 }
 </code></pre>
-</li>
-<li><p><code>terraform.tfvars</code></p>
+<h4 id="terraformtfvars"><code>terraform.tfvars</code></h4>
 <pre><code class="lang-hcl"># Configure the Azure Stack Provider
 arm_endpoint    = &quot;https://management.{region}.{domain}&quot;
 subscription_id = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
-client_id       = &quot;{applicationId}@{tenantDomain}&quot;
+client_id       = &quot;{applicationId}&quot;
 client_secret   = &quot;{applicationSecret}&quot;
 tenant_id       = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
 </code></pre>
-</li>
-</ul>
-<h3 id="example-of-provider-block">Example of Provider Block</h3>
-<ul>
-<li><p><code>example.tf</code></p>
-<pre><code class="lang-hcl"># Configure the Azure Stack Provider
-provider &quot;azurestack&quot; {
-  arm_endpoint    = &quot;https://management.{region}.{domain}&quot;
-  subscription_id = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
-  client_id       = &quot;{applicationId}@{tenantDomain}&quot;
-  client_secret   = &quot;{applicationPassword}&quot;
-  tenant_id       = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
-}
-</code></pre>
-</li>
-</ul>
-<h4 id="argument-reference">Argument Reference</h4>
+<h4 id="argument-reference">Argument reference</h4>
 <ul>
 <li><code>arm_endpoint</code> - The Azure Resource Manager API Endpoint for your Azure Stack instance. This will be <strong><code>https://management.{region}.{domain}</code></strong>.</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>For UKCloud Region it is <strong><code>https://management.frn00006.azure.ukcloud.com</code></strong>.</p>
+<p>For UKCloud, the arm_endpoint is <strong><code>https://management.frn00006.azure.ukcloud.com</code></strong>.</p>
 </div>
 <ul>
 <li><p><code>subscription_id</code> - The ID of your Azure Stack Subscription.</p>
@@ -194,32 +169,140 @@ provider &quot;azurestack&quot; {
 <li><p><code>tenant_id</code> - The tenant ID of your Azure Active Directory tenant domain. It can either be the actual GUID or your Azure Active Directory tenant domain name.</p>
 </li>
 </ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can also put the content of <code>variables.tf</code>  at the top of the <code>main.tf</code> file.</p>
+</div>
+<details><summary style="font-size: 20px">Provider Block Option</summary>
+<p><a href="#example-of-provider-block">Provider Block Option</a> - you can create your <strong>Terraform plan</strong> by putting everything in one <code>main.tf</code> file, which then contains your Provider and variables settings explicitly in said plan.</p>
+<h3 id="example-of-provider-block">Example of Provider Block:</h3>
+<h4 id="maintf-1"><code>main.tf</code></h4>
+<pre><code class="lang-hcl"># Configure the Azure Stack Provider
+provider &quot;azurestack&quot; {
+ arm_endpoint    = &quot;https://management.{region}.{domain}&quot;
+ subscription_id = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
+ client_id       = &quot;{applicationId}&quot;
+ client_secret   = &quot;{applicationPassword}&quot;
+ tenant_id       = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
+}
+Rest of the file (...)
+</code></pre>
+<p>Official <a href="https://www.terraform.io/intro/getting-started/variables.html">Variables Guide</a></p>
+</details>
 <h2 id="creating-a-vm">Creating a VM</h2>
-<p>The examples that follow show how to create a VM using Terraform. The code changes depending on whether you are creating a VM with an unmanaged disk or a managed disk. Select the the type of disk you want to use to update the examples below with the appropriate code.</p>
-<form id="diskType" onchange="result.value=name.value;result2.value=name.value">
-  <p>
-    <input type="radio" name="name" value='storage_os_disk {
-    name          = "myosdisk1"
-    vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
-    caching       = "ReadWrite"
-    create_option = "FromImage"
-  }' checked="">An unmanaged disk
-  </p>
-  <div></div>
-  <p>
-    <input type="radio" name="name" value='storage_os_disk {
-    name              = "myosdisk1"
-    caching           = "ReadWrite"
-    create_option     = "FromImage"
-    managed_disk_type = "Standard_LRS"
-  }'>A managed disk
-  </p>
-</form>
-<h3 id="create-a-vm-with-public-ip-template---using-environment-variables-option">Create a VM with Public IP template - using <strong>Environment Variables</strong> option</h3>
+<p>The examples that follow show how to create VMs using Terraform. The code changes depending on whether you are creating a VM with an unmanaged or managed disk. You can select the type of disk you want to use, which will then update the examples below with the appropriate code.</p>
+<h2 id="declare-variables">Declare variables</h2>
+<table>
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Variable Description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arm_endpoint</td>
+<td>The Azure Resource Manager API endpoint for your Azure Stack instance. This will be https://management.{region}.{domain}.</td>
+<td><form oninput="result.value=arm_endpoint.value" id="arm_endpoint" style="display:inline;"><input type="text" id="arm_endpoint" name="arm_endpoint" style="display:inline;" placeholder="https://management.{region}.{domain}"></form></td>
+</tr>
+<tr>
+<td>subscription_id</td>
+<td>The ID of your Azure Stack subscription.</td>
+<td><form oninput="result.value=subscription_id.value" id="subscription_id" style="display:inline;"><input type="text" id="subscription_id" name="subscription_id" style="display:inline;" placeholder="xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"></form></td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>The application GUID that you configured your Service Principal Name (SPN) to use.</td>
+<td><form oninput="result.value=client_id.value" id="client_id" style="display:inline;"><input type="text" id="client_id" name="client_id" style="display:inline;" placeholder="{applicationId}"></form></td>
+</tr>
+<tr>
+<td>client_secret</td>
+<td>The application password that you have configured your Service Principal Name (SPN) to use.</td>
+<td><form oninput="result.value=client_secret.value" id="client_secret" style="display:inline;"><input type="text" id="client_secret" name="client_secret" style="display:inline;" placeholder="{applicationPassword}"></form></td>
+</tr>
+<tr>
+<td>rg_name</td>
+<td>The name of the resource group you wish to create</td>
+<td><form oninput="result.value=rg_name.value" id="rg_name" style="display:inline;"><input type="text" id="rg_name" name="rg_name" style="display:inline;" placeholder="MyResourceGroup"></form></td>
+</tr>
+<tr>
+<td>tenant_id</td>
+<td>The tenant ID of your Azure Active Directory tenant domain. It can either be the actual GUID or your Azure Active Directory tenant domain name.</td>
+<td><form oninput="result.value=tenant_id.value" id="tenant_id" style="display:inline;"><input type="text" id="tenant_id" name="tenant_id" style="display:inline;" placeholder="xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"></form></td>
+</tr>
+<tr>
+<td>vm_count</td>
+<td>The number of VMs you wish to create</td>
+<td><form oninput="result.value=vm_count.value" id="vm_count" style="display:inline;"><input type="text" id="vm_count" name="vm_count" style="display:inline;" placeholder="1"></form></td>
+</tr>
+<tr>
+<td>vm_username</td>
+<td>The username you wish to assign to the VM</td>
+<td><form oninput="result.value=vm_username.value" id="vm_username" style="display:inline;"><input type="text" id="vm_username" name="vm_username" style="display:inline;" placeholder="user"></form></td>
+</tr>
+<tr>
+<td>vm_password</td>
+<td>The password you wish to assign to the VM</td>
+<td><form oninput="result.value=vm_password.value" id="vm_password" style="display:inline;"><input type="text" id="vm_password" name="vm_password" style="display:inline;" placeholder="Password123!"></form></td>
+</tr>
+<tr>
+<td>vm_image</td>
+<td>The operating system you wish to use</td>
+<td><form onchange="result.value=vm_image.value" id="vm_image" style="display: inline;"><select name="vm_image" id="vm_image" style="display: inline;"><option value="OpenLogic/CentOS/6.10/latest">CentOS-based 6.10<option value="OpenLogic/CentOS/6.9/latest">CentOS-based 6.9<option value="OpenLogic/CentOS/7.3/latest">CentOS-based 7.3<option value="OpenLogic/CentOS/7.5/latest" selected="">CentOS-based 7.5<option value="Canonical/UbuntuServer/14.04.5-LTS/latest">Ubuntu Server 14.04 LTS<option value="Canonical/UbuntuServer/16.04-LTS/latest">Ubuntu Server 16.04 LTS<option value="Canonical/UbuntuServer/18.04-LTS/latest">Ubuntu Server 18.04 LTS<option value="MicrosoftWindowsServer/WindowsServerSemiAnnual/Datacenter-Core-1709-with-Containers-smalldisk/latest">Windows Server, version 1709 with Containers - Pay as you use<option value="MicrosoftSQLServer/SQL2016SP1-WS2016/SQLDEV/latest">Free License: SQL Server 2016 SP1 Developer on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP2-WS2016/SQLDEV/latest">Free License: SQL Server 2016 SP2 Developer on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP2-WS2016/Express/latest">Free License: SQL Server 2016 SP2 Express on Windows Server 2016<option value="MicrosoftSQLServer/SQL2017-SLES12SP2/SQLDEV/latest">Free SQL Server License: SQL Server 2017 Developer on SLES 12 SP2<option value="MicrosoftSQLServer/SQL2017-WS2016/SQLDEV/latest">Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016<option value="MicrosoftSQLServer/SQL2017-SLES12SP2/Express/latest">Free SQL Server License: SQL Server 2017 Express on SLES 12 SP2<option value="MicrosoftSQLServer/SQL2017-WS2016/Express/latest">Free SQL Server License: SQL Server 2017 Express on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP1-WS2016/Enterprise/latest">SQL Server 2016 SP1 Enterprise on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP1-WS2016/Standard/latest">SQL Server 2016 SP1 Standard on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP2-WS2016/Enterprise/latest">SQL Server 2016 SP2 Enterprise on Windows Server 2016<option value="MicrosoftSQLServer/SQL2016SP2-WS2016/Standard/latest">SQL Server 2016 SP2 Standard on Windows Server 2016<option value="MicrosoftSQLServer/SQL2017-SLES12SP2/Enterprise/latest">SQL Server 2017 Enterprise on SLES 12 SP2<option value="MicrosoftSQLServer/SQL2017-WS2016/Enterprise/latest">SQL Server 2017 Enterprise Windows Server 2016<option value="MicrosoftSQLServer/SQL2017-SLES12SP2/Standard/latest">SQL Server 2017 Standard on SLES 12 SP2<option value="/MicrosoftSQLServer/SQL2017-WS2016/Standard/latest">SQL Server 2017 Standard on Windows Server 2016<option value="MicrosoftWindowsServer/WindowsServer/2012-Datacenter/latest">Windows Server 2012 Datacenter - Pay as you use<option value="MicrosoftWindowsServer/WindowsServer/2012-R2-Datacenter/latest">Windows Server 2012 R2 Datacenter - Pay as you use<option value="MicrosoftWindowsServer/WindowsServer/2016-Datacenter/latest">Windows Server 2016 Datacenter - Pay-as-you-use<option value="MicrosoftWindowsServer/WindowsServer/2016-Datacenter-Server-Core/latest">Windows Server 2016 Datacenter - Server Core - Pay as you use<option value="MicrosoftWindowsServer/WindowsServer/2016-Datacenter-with-Containers/latest">Windows Server 2016 Datacenter - with Containers - Pay as you use<option value="MicrosoftWindowsServer/WindowsServer/2019-Datacenter/latest">Windows Server 2019 Datacenter<option value="MicrosoftWindowsServer/WindowsServer/2019-Datacenter-with-Containers/latest">Windows Server 2019 Datacenter with Containers<option value="MicrosoftWindowsServer/WindowsServer/2019-Datacenter-Core/latest">Windows Server 2019 Datacenter Core<option value="MicrosoftWindowsServer/WindowsServer/2019-Datacenter-Core-with-Containers/latest">Windows Server 2019 Datacenter Core with Containers</select></form></td>
+</tr>
+<tr>
+<td>instance_size</td>
+<td>Size of the virtual machine to be created</td>
+<td><form onchange="result.value=vm_size.value" id="vm_size" style="display: inline;"><select name="vm_size" id="vm_size" style="display: inline;"><optgroup label="Basic A"><option value="Basic_A0">Basic A0<option value="Basic_A1">Basic A1<option value="Basic_A2">Basic A2<option value="Basic_A3">Basic A3<option value="Basic_A4">Basic A4</optgroup><optgroup label="Standard A"><option value="Standard_A0">Standard A0<option value="Standard_A1">Standard A1<option value="Standard_A2">Standard A2<option value="Standard_A3">Standard A3<option value="Standard_A4">Standard A4<option value="Standard_A5">Standard A5<option value="Standard_A6">Standard A6<option value="Standard_A7">Standard A7</optgroup><optgroup label="Av2-Series"><option value="Standard_A1_v2">Standard A1 v2<option value="Standard_A2_v2">Standard A2 v2<option value="Standard_A4_v2">Standard A4 v2<option value="Standard_A8_v2">Standard A8 v2<option value="Standard_A2m_v2">Standard A2m v2<option value="Standard_A4m_v2">Standard A4m v2<option value="Standard_A8m_v2">Standard A8m v2</optgroup><optgroup label="D-Series"><option value="Standard_D1">Standard D1<option value="Standard_D2">Standard D2<option value="Standard_D3">Standard D3<option value="Standard_D4">Standard D4<option value="Standard_D11">Standard D11<option value="Standard_D12">Standard D12<option value="Standard_D13">Standard D13<option value="Standard_D14">Standard D14</optgroup><optgroup label="Dv2-Series"><option value="Standard_D1_v2">Standard D1 v2<option value="Standard_D2_v2">Standard D2 v2<option value="Standard_D3_v2">Standard D3 v2<option value="Standard_D4_v2">Standard D4 v2<option value="Standard_D5_v2">Standard D5 v2<option value="Standard_D11_v2">Standard D11 v2<option value="Standard_D12_v2">Standard D12 v2<option value="Standard_D13_v2">Standard D13 v2<option value="Standard_D14_v2">Standard D14 v2</optgroup><optgroup label="DS-Series"><option value="Standard_DS1">Standard DS1<option value="Standard_DS2">Standard DS2<option value="Standard_DS3">Standard DS3<option value="Standard_DS4">Standard DS4<option value="Standard_DS11">Standard DS11<option value="Standard_DS12">Standard DS12<option value="Standard_DS13">Standard DS13<option value="Standard_DS14">Standard DS14</optgroup><optgroup label="DSv2-Series"><option value="Standard_DS1_v2">Standard DS1 v2<option value="Standard_DS2_v2" selected="">Standard DS2 v2<option value="Standard_DS3_v2">Standard DS3 v2<option value="Standard_DS4_v2">Standard DS4 v2<option value="Standard_DS5_v2">Standard DS5 v2<option value="Standard_DS11_v2">Standard DS11 v2<option value="Standard_DS12_v2">Standard DS12 v2<option value="Standard_DS13_v2">Standard DS13 v2<option value="Standard_DS14_v2">Standard DS14 v2</optgroup><optgroup label="F-Series"><option value="Standard_F1">Standard F1<option value="Standard_F2">Standard F2<option value="Standard_F4">Standard F4<option value="Standard_F8">Standard F8<option value="Standard_F16">Standard F16</optgroup><optgroup label="Fs-Series"><option value="Standard_F1s">Standard F1s<option value="Standard_F2s">Standard F2s<option value="Standard_F4s">Standard F4s<option value="Standard_F8s">Standard F8s<option value="Standard_F16s">Standard F16s</optgroup><optgroup label="Fsv2-Series"><option value="Standard_F2s_v2">Standard F2s v2<option value="Standard_F4s_v2">Standard F4s v2<option value="Standard_F8s_v2">Standard F8s v2<option value="Standard_F16s_v2">Standard F16s v2<option value="Standard_F32s_v2">Standard F32s v2<option value="Standard_F64s_v2">Standard F64s v2</optgroup></select></form></td>
+</tr>
+<tr>
+<td>rg_tag</td>
+<td>An optional tag to help categorize the resource group, e.g. &quot;Production&quot;</td>
+<td><form oninput="result.value=rg_tag.value" id="rg_tag" style="display:inline;"><input type="text" id="rg_tag" name="rg_tag" style="display:inline;" placeholder="Production"></form></td>
+</tr>
+</tbody>
+</table>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Windows VM</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Linux VM</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+</section>
+</div>
+
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>This is only the <code>example.tf</code> file. You will still need the <code>variables.tf</code> and <code>terraform.tfvars</code> files in your folder.</p>
+<p>This example is only the <code>main.tf</code> file. You will still need the <code>variables.tf</code> and <code>terraform.tfvars</code> files as shown in the following section.</p>
 </div>
+<h3 id="defining-the-required-azure-stack-resources-in-the-maintf-file">Defining the required Azure Stack resources in the <code>main.tf</code> file</h3>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Resource attributes such as &quot;name&quot; can be hardcoded as opposed to using variables from the external files for the declaration.</p>
+</div>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" data-tab="tabid-a" data-condition="tabid-1" tabindex="0" aria-selected="true">Windows VM with Managed Disks</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" data-tab="tabid-b" data-condition="tabid-1" tabindex="-1">Windows VM with Unmanaged Disks</a>
+</li>
+<li role="presentation" aria-hidden="true" hidden="hidden">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" data-tab="tabid-a" data-condition="tabid-2" tabindex="-1">Linux VM with Managed Disks</a>
+</li>
+<li role="presentation" aria-hidden="true" hidden="hidden">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" data-tab="tabid-b" data-condition="tabid-2" tabindex="-1">Linux VM with Unmanaged Disks</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tabpanel" data-tab="tabid-a" data-condition="tabid-1">
 <pre><code class="language-hcl">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
@@ -230,74 +313,81 @@ provider "azurestack" {
 }
 
 # Create a resource group
-resource "azurestack_resource_group" "test" {
-  name     = "rg01"
-  location = "frn00006"
-}
+resource "azurestack_resource_group" "rg" {
+  name     = "${var.rg_name}"
+  location = "${element(split(".", var.arm_endpoint), 1)}"
 
-resource "azurestack_public_ip" "test" {
-  name                         = "acceptanceTestPublicIp1"
-  location                     = "${azurestack_resource_group.test.location}"
-  resource_group_name          = "${azurestack_resource_group.test.name}"
-  public_ip_address_allocation = "static"
-
-  tags {
-    environment = "Production"
+  tags = {
+    environment = "${var.rg_tag}"
   }
 }
 
-resource "azurestack_virtual_network" "test" {
-  name                = "acctvn"
+resource "azurestack_network_security_group" "nsg" {
+  name                = "${azurestack_resource_group.rg.name}-SecurityGroup"
+  location            = "${azurestack_resource_group.rg.location}"
+  resource_group_name = "${azurestack_resource_group.rg.name}"
+
+  security_rule {
+    name                        = "rdp"
+    priority                    = "100"
+    direction                   = "Inbound"
+    access                      = "Allow"
+    protocol                    = "tcp"
+    source_port_range           = "*"
+    destination_port_range      = "3389"
+    source_address_prefix       = "*"
+    destination_address_prefix  = "*"
+  }
+
+  tags = "${azurestack_resource_group.rg.tags}"
+}
+
+resource "azurestack_virtual_network" "virtual-network" {
+  name                = "${azurestack_resource_group.rg.name}-VirtualNetwork"
   address_space       = ["10.0.0.0/16"]
-  location            = "${azurestack_resource_group.test.location}"
-  resource_group_name = "${azurestack_resource_group.test.name}"
+  location            = "${azurestack_resource_group.rg.location}"
+  resource_group_name = "${azurestack_resource_group.rg.name}"
 }
 
-resource "azurestack_subnet" "test" {
-  name                 = "acctsub"
-  resource_group_name  = "${azurestack_resource_group.test.name}"
-  virtual_network_name = "${azurestack_virtual_network.test.name}"
-  address_prefix       = "10.0.2.0/24"
+resource "azurestack_subnet" "subnet1" {
+  name                            = "${azurestack_resource_group.rg.name}-Subnet1"
+  resource_group_name             = "${azurestack_resource_group.rg.name}"
+  virtual_network_name            = "${azurestack_virtual_network.virtual-network.name}"
+  address_prefix                  = "10.0.2.0/24"
+  network_security_group_id       = "${azurestack_network_security_group.nsg.id}"
 }
 
-resource "azurestack_network_interface" "test" {
-  name                = "acctni"
-  location            = "${azurestack_resource_group.test.location}"
-  resource_group_name = "${azurestack_resource_group.test.name}"
+resource "azurestack_public_ip" "public-ip" {
+  count                         = "${var.vm_count}"
+  name                          = "public-ip-${count.index + 1}"
+  location                      = "${azurestack_resource_group.rg.location}"
+  resource_group_name           = "${azurestack_resource_group.rg.name}"
+  public_ip_address_allocation  = "static"
+}
+
+resource "azurestack_network_interface" "nic" {
+  name                                  = "${azurestack_resource_group.rg.name}-NIC${count.index + 1}"
+  count                                 = "${var.vm_count}"
+  location                              = "${azurestack_resource_group.rg.location}"
+  resource_group_name                   = "${azurestack_resource_group.rg.name}"
 
   ip_configuration {
-    name                          = "testconfiguration1"
-    subnet_id                     = "${azurestack_subnet.test.id}"
-    private_ip_address_allocation = "dynamic"
-    public_ip_address_id          = "${azurestack_public_ip.test.id}"
+    name                            = "nic-ip-config1"
+    subnet_id                       = "${azurestack_subnet.subnet1.id}"
+    private_ip_address_allocation   = "dynamic"
+    public_ip_address_id            = "${element(azurestack_public_ip.public-ip.*.id, count.index)}"
   }
+
+  tags = "${azurestack_resource_group.rg.tags}"
 }
 
-resource "azurestack_storage_account" "test" {
-  name                     = "accsa001"
-  resource_group_name      = "${azurestack_resource_group.test.name}"
-  location                 = "${azurestack_resource_group.test.location}"
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
-
-  tags {
-    environment = "staging"
-  }
-}
-
-resource "azurestack_storage_container" "test" {
-  name                  = "vhds"
-  resource_group_name   = "${azurestack_resource_group.test.name}"
-  storage_account_name  = "${azurestack_storage_account.test.name}"
-  container_access_type = "private"
-}
-
-resource "azurestack_virtual_machine" "test" {
-  name                  = "acctvm"
-  location              = "${azurestack_resource_group.test.location}"
-  resource_group_name   = "${azurestack_resource_group.test.name}"
-  network_interface_ids = ["${azurestack_network_interface.test.id}"]
-  vm_size               = "Standard_D2_v2"
+resource "azurestack_virtual_machine" "vm" {
+  count                 = "${var.vm_count}"
+  name                  = "vm-${count.index + 1}"
+  location              = "${azurestack_resource_group.rg.location}"
+  resource_group_name   = "${azurestack_resource_group.rg.name}"
+  network_interface_ids = ["${element(azurestack_network_interface.nic.*.id, count.index)}"]
+  vm_size               = "${var.vm_size}"
 
   # Uncomment this line to delete the OS disk automatically when deleting the VM
   # delete_os_disk_on_termination = true
@@ -306,124 +396,146 @@ resource "azurestack_virtual_machine" "test" {
   # delete_data_disks_on_termination = true
 
   storage_image_reference {
-    publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "16.04-LTS"
-    version   = "latest"
+    publisher = "${element(split("/", var.vm_image_string), 0)}"
+    offer     = "${element(split("/", var.vm_image_string), 1)}"
+    sku       = "${element(split("/", var.vm_image_string), 2)}"
+    version   = "${element(split("/", var.vm_image_string), 3)}"
   }
 
-  <output form="diskType" name="result" style="display: inline;" class="output-code">
   storage_os_disk {
-    name          = "myosdisk1"
-    vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
-    caching       = "ReadWrite"
-    create_option = "FromImage"
+    name                = "vm-${count.index + 1}-OS-Disk"
+    caching             = "ReadWrite"
+    managed_disk_type   = "Standard_LRS"
+    create_option       = "FromImage"
   }
-  </output>
 
   # Optional data disks
   storage_data_disk {
-    name          = "datadisk0"
-    vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/datadisk0.vhd"
-    disk_size_gb  = "1023"
-    create_option = "Empty"
-    lun           = 0
+    name                = "vm-${count.index + 1}-Data-Disk"
+    disk_size_gb        = "100"
+    managed_disk_type   = "Standard_LRS"
+    create_option       = "Empty"
+    lun                 = 0
   }
 
   os_profile {
-    computer_name  = "hostname"
-    admin_username = "testadmin"
-    admin_password = "Password1234!"
+    computer_name  = "host${count.index + 1}"
+    admin_username = "${var.admin_username}"
+    admin_password = "${var.admin_password}"
   }
 
-  os_profile_linux_config {
-    disable_password_authentication = false
+  os_profile_windows_config {
   }
 
-  tags {
-    environment = "staging"
-  }
+  tags = "${azurestack_resource_group.rg.tags}"
 }
 </code></pre>
-<h3 id="create-a-vm-with-public-ip-template---using-provider-block-option">Create a VM with Public IP template - using <strong>Provider Block</strong> option</h3>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
 <pre><code class="language-hcl">
 provider "azurestack" {
-  arm_endpoint    = "https://management.{region}.{domain}"
-  subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
-  client_id       = "{applicationId}@{tenantDomain}"
-  client_secret   = "{applicationPassword}"
-  tenant_id       = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
+  arm_endpoint    = "${var.arm_endpoint}"
+  subscription_id = "${var.subscription_id}"
+  client_id       = "${var.client_id}"
+  client_secret   = "${var.client_secret}"
+  tenant_id       = "${var.tenant_id}"
 }
 
 # Create a resource group
-resource "azurestack_resource_group" "test" {
-  name     = "rg01"
-  location = "frn00006"
-}
+resource "azurestack_resource_group" "rg" {
+  name     = "${var.rg_name}"
+  location = "${element(split(".", var.arm_endpoint), 1)}"
 
-resource "azurestack_public_ip" "test" {
-  name                         = "acceptanceTestPublicIp1"
-  location                     = "${azurestack_resource_group.test.location}"
-  resource_group_name          = "${azurestack_resource_group.test.name}"
-  public_ip_address_allocation = "static"
-
-  tags {
-    environment = "Production"
+  tags = {
+    environment = "${var.rg_tag}"
   }
 }
 
-resource "azurestack_virtual_network" "test" {
-  name                = "acctvn"
+resource "azurestack_network_security_group" "nsg" {
+  name                = "${azurestack_resource_group.rg.name}-SecurityGroup"
+  location            = "${azurestack_resource_group.rg.location}"
+  resource_group_name = "${azurestack_resource_group.rg.name}"
+
+  security_rule {
+    name                        = "rdp"
+    priority                    = "100"
+    direction                   = "Inbound"
+    access                      = "Allow"
+    protocol                    = "tcp"
+    source_port_range           = "*"
+    destination_port_range      = "3389"
+    source_address_prefix       = "*"
+    destination_address_prefix  = "*"
+  }
+
+  tags = "${azurestack_resource_group.rg.tags}"
+}
+
+resource "azurestack_virtual_network" "virtual-network" {
+  name                = "${azurestack_resource_group.rg.name}-VirtualNetwork"
   address_space       = ["10.0.0.0/16"]
-  location            = "${azurestack_resource_group.test.location}"
-  resource_group_name = "${azurestack_resource_group.test.name}"
+  location            = "${azurestack_resource_group.rg.location}"
+  resource_group_name = "${azurestack_resource_group.rg.name}"
 }
 
-resource "azurestack_subnet" "test" {
-  name                 = "acctsub"
-  resource_group_name  = "${azurestack_resource_group.test.name}"
-  virtual_network_name = "${azurestack_virtual_network.test.name}"
-  address_prefix       = "10.0.2.0/24"
+resource "azurestack_subnet" "subnet1" {
+  name                            = "${azurestack_resource_group.rg.name}-Subnet1"
+  resource_group_name             = "${azurestack_resource_group.rg.name}"
+  virtual_network_name            = "${azurestack_virtual_network.virtual-network.name}"
+  address_prefix                  = "10.0.2.0/24"
+  network_security_group_id       = "${azurestack_network_security_group.nsg.id}"
 }
 
-resource "azurestack_network_interface" "test" {
-  name                = "acctni"
-  location            = "${azurestack_resource_group.test.location}"
-  resource_group_name = "${azurestack_resource_group.test.name}"
+resource "azurestack_public_ip" "public-ip" {
+  count                         = "${var.vm_count}"
+  name                          = "public-ip-${count.index + 1}"
+  location                      = "${azurestack_resource_group.rg.location}"
+  resource_group_name           = "${azurestack_resource_group.rg.name}"
+  public_ip_address_allocation  = "static"
+}
+
+resource "azurestack_network_interface" "nic" {
+  name                                  = "${azurestack_resource_group.rg.name}-NIC${count.index + 1}"
+  count                                 = "${var.vm_count}"
+  location                              = "${azurestack_resource_group.rg.location}"
+  resource_group_name                   = "${azurestack_resource_group.rg.name}"
 
   ip_configuration {
-    name                          = "testconfiguration1"
-    subnet_id                     = "${azurestack_subnet.test.id}"
-    private_ip_address_allocation = "dynamic"
-    public_ip_address_id          = "${azurestack_public_ip.test.id}"
+    name                            = "nic-ip-config1"
+    subnet_id                       = "${azurestack_subnet.subnet1.id}"
+    private_ip_address_allocation   = "dynamic"
+    public_ip_address_id            = "${element(azurestack_public_ip.public-ip.*.id, count.index)}"
   }
+
+  tags = "${azurestack_resource_group.rg.tags}"
 }
 
-resource "azurestack_storage_account" "test" {
-  name                     = "accsa001"
-  resource_group_name      = "${azurestack_resource_group.test.name}"
-  location                 = "${azurestack_resource_group.test.location}"
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
+resource "azurestack_storage_account" "storage-account" {
+  count                             = "${var.vm_count}"
+  name                              = "${azurestack_resource_group.rg.name}accsa${count.index + 1}"
+  resource_group_name               = "${azurestack_resource_group.rg.name}"
+  location                          = "${azurestack_resource_group.rg.location}"
+  account_tier                      = "Standard"
+  account_replication_type          = "LRS"
 
-  tags {
-    environment = "staging"
-  }
+  tags = "${azurestack_resource_group.rg.tags}"
 }
 
-resource "azurestack_storage_container" "test" {
-  name                  = "vhds"
-  resource_group_name   = "${azurestack_resource_group.test.name}"
-  storage_account_name  = "${azurestack_storage_account.test.name}"
-  container_access_type = "private"
+resource "azurestack_storage_container" "storage-container" {
+  count                             = "${var.vm_count}"
+  name                              = "vhds${count.index + 1}"
+  resource_group_name               = "${azurestack_resource_group.rg.name}"
+  storage_account_name              = "${element(azurestack_storage_account.storage-account.*.name, count.index)}"
+  container_access_type             = "private"
 }
 
-resource "azurestack_virtual_machine" "test" {
-  name                  = "acctvm"
-  location              = "${azurestack_resource_group.test.location}"
-  resource_group_name   = "${azurestack_resource_group.test.name}"
-  network_interface_ids = ["${azurestack_network_interface.test.id}"]
-  vm_size               = "Standard_D2_v2"
+resource "azurestack_virtual_machine" "vm" {
+  count                 = "${var.vm_count}"
+  name                  = "vm-${count.index + 1}"
+  location              = "${azurestack_resource_group.rg.location}"
+  resource_group_name   = "${azurestack_resource_group.rg.name}"
+  network_interface_ids = ["${element(azurestack_network_interface.nic.*.id, count.index)}"]
+  vm_size               = "${var.vm_size}"
 
   # Uncomment this line to delete the OS disk automatically when deleting the VM
   # delete_os_disk_on_termination = true
@@ -432,51 +544,394 @@ resource "azurestack_virtual_machine" "test" {
   # delete_data_disks_on_termination = true
 
   storage_image_reference {
-    publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "16.04-LTS"
-    version   = "latest"
+    publisher = "${element(split("/", var.vm_image_string), 0)}"
+    offer     = "${element(split("/", var.vm_image_string), 1)}"
+    sku       = "${element(split("/", var.vm_image_string), 2)}"
+    version   = "${element(split("/", var.vm_image_string), 3)}"
   }
 
-  <output form="diskType" name="result2" style="display: inline;" class="output-code">
   storage_os_disk {
-    name          = "myosdisk1"
-    vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/myosdisk1.vhd"
-    caching       = "ReadWrite"
-    create_option = "FromImage"
+    name                = "vm-${count.index + 1}-OS-Disk"
+    vhd_uri             = "${element(azurestack_storage_account.storage-account.*.primary_blob_endpoint, count.index)}${element(azurestack_storage_container.storage-container.*.name, count.index)}/vm-${count.index + 1}-osdisk.vhd"
+    caching             = "ReadWrite"
+    create_option       = "FromImage"
   }
-  </output>
 
   # Optional data disks
   storage_data_disk {
-    name          = "datadisk0"
-    vhd_uri       = "${azurestack_storage_account.test.primary_blob_endpoint}${azurestack_storage_container.test.name}/datadisk0.vhd"
-    disk_size_gb  = "1023"
-    create_option = "Empty"
-    lun           = 0
+    name                = "vm-${count.index + 1}-Data-Disk"
+    vhd_uri             = "${element(azurestack_storage_account.storage-account.*.primary_blob_endpoint, count.index)}${element(azurestack_storage_container.storage-container.*.name, count.index)}/vm-${count.index} + 1}-datadisk.vhd"
+    disk_size_gb        = "100"
+    create_option       = "Empty"
+    lun                 = 0
   }
 
   os_profile {
-    computer_name  = "hostname"
-    admin_username = "testadmin"
-    admin_password = "Password1234!"
+    computer_name  = "host${count.index + 1}"
+    admin_username = "${var.admin_username}"
+    admin_password = "${var.admin_password}"
+  }
+
+  os_profile_windows_config {
+  }
+
+  tags = "${azurestack_resource_group.rg.tags}"
+}
+</code></pre>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tabpanel" data-tab="tabid-a" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="language-hcl">
+provider "azurestack" {
+  arm_endpoint    = "${var.arm_endpoint}"
+  subscription_id = "${var.subscription_id}"
+  client_id       = "${var.client_id}"
+  client_secret   = "${var.client_secret}"
+  tenant_id       = "${var.tenant_id}"
+}
+
+# Create a resource group
+resource "azurestack_resource_group" "rg" {
+  name     = "${var.rg_name}"
+  location = "${element(split(".", var.arm_endpoint), 1)}"
+
+  tags = {
+    environment = "${var.rg_tag}"
+  }
+}
+
+resource "azurestack_network_security_group" "nsg" {
+  name                = "${azurestack_resource_group.rg.name}-SecurityGroup"
+  location            = "${azurestack_resource_group.rg.location}"
+  resource_group_name = "${azurestack_resource_group.rg.name}"
+
+  security_rule {
+    name                        = "ssh"
+    priority                    = "100"
+    direction                   = "Inbound"
+    access                      = "Allow"
+    protocol                    = "tcp"
+    source_port_range           = "*"
+    destination_port_range      = "22"
+    source_address_prefix       = "*"
+    destination_address_prefix  = "*"
+  }
+
+  tags = "${azurestack_resource_group.rg.tags}"
+}
+
+resource "azurestack_virtual_network" "virtual-network" {
+  name                = "${azurestack_resource_group.rg.name}-VirtualNetwork"
+  address_space       = ["10.0.0.0/16"]
+  location            = "${azurestack_resource_group.rg.location}"
+  resource_group_name = "${azurestack_resource_group.rg.name}"
+}
+
+resource "azurestack_subnet" "subnet1" {
+  name                            = "${azurestack_resource_group.rg.name}-Subnet1"
+  resource_group_name             = "${azurestack_resource_group.rg.name}"
+  virtual_network_name            = "${azurestack_virtual_network.virtual-network.name}"
+  address_prefix                  = "10.0.2.0/24"
+  network_security_group_id       = "${azurestack_network_security_group.nsg.id}"
+}
+
+resource "azurestack_public_ip" "public-ip" {
+  count                         = "${var.vm_count}"
+  name                          = "public-ip-${count.index + 1}"
+  location                      = "${azurestack_resource_group.rg.location}"
+  resource_group_name           = "${azurestack_resource_group.rg.name}"
+  public_ip_address_allocation  = "static"
+}
+
+resource "azurestack_network_interface" "nic" {
+  name                                  = "${azurestack_resource_group.rg.name}-NIC${count.index + 1}"
+  count                                 = "${var.vm_count}"
+  location                              = "${azurestack_resource_group.rg.location}"
+  resource_group_name                   = "${azurestack_resource_group.rg.name}"
+
+  ip_configuration {
+    name                            = "nic-ip-config1"
+    subnet_id                       = "${azurestack_subnet.subnet1.id}"
+    private_ip_address_allocation   = "dynamic"
+    public_ip_address_id            = "${element(azurestack_public_ip.public-ip.*.id, count.index)}"
+  }
+
+  tags = "${azurestack_resource_group.rg.tags}"
+}
+
+resource "azurestack_virtual_machine" "vm" {
+  count                 = "${var.vm_count}"
+  name                  = "vm-${count.index + 1}"
+  location              = "${azurestack_resource_group.rg.location}"
+  resource_group_name   = "${azurestack_resource_group.rg.name}"
+  network_interface_ids = ["${element(azurestack_network_interface.nic.*.id, count.index)}"]
+  vm_size               = "${var.vm_size}"
+
+  # Uncomment this line to delete the OS disk automatically when deleting the VM
+  # delete_os_disk_on_termination = true
+
+  # Uncomment this line to delete the data disks automatically when deleting the VM
+  # delete_data_disks_on_termination = true
+
+  storage_image_reference {
+    publisher = "${element(split("/", var.vm_image_string), 0)}"
+    offer     = "${element(split("/", var.vm_image_string), 1)}"
+    sku       = "${element(split("/", var.vm_image_string), 2)}"
+    version   = "${element(split("/", var.vm_image_string), 3)}"
+  }
+
+  storage_os_disk {
+    name                = "vm-${count.index + 1}-OS-Disk"
+    caching             = "ReadWrite"
+    managed_disk_type   = "Standard_LRS"
+    create_option       = "FromImage"
+  }
+
+  # Optional data disks
+  storage_data_disk {
+    name                = "vm-${count.index + 1}-Data-Disk"
+    disk_size_gb        = "100"
+    managed_disk_type   = "Standard_LRS"
+    create_option       = "Empty"
+    lun                 = 0
+  }
+
+  os_profile {
+    computer_name  = "host${count.index + 1}"
+    admin_username = "${var.admin_username}"
+    admin_password = "${var.admin_password}"
   }
 
   os_profile_linux_config {
     disable_password_authentication = false
   }
 
-  tags {
-    environment = "staging"
-  }
+  tags = "${azurestack_resource_group.rg.tags}"
 }
 </code></pre>
-<h3 id="how-to-execute-a-plan---using-environment-variables-option">How to execute a plan - using <strong>Environment Variables</strong> option</h3>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tabpanel" data-tab="tabid-b" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="language-hcl">
+provider "azurestack" {
+  arm_endpoint    = "${var.arm_endpoint}"
+  subscription_id = "${var.subscription_id}"
+  client_id       = "${var.client_id}"
+  client_secret   = "${var.client_secret}"
+  tenant_id       = "${var.tenant_id}"
+}
+
+# Create a resource group
+resource "azurestack_resource_group" "rg" {
+  name     = "${var.rg_name}"
+  location = "${element(split(".", var.arm_endpoint), 1)}"
+
+  tags = {
+    environment = "${var.rg_tag}"
+  }
+}
+
+resource "azurestack_network_security_group" "nsg" {
+  name                = "${azurestack_resource_group.rg.name}-SecurityGroup"
+  location            = "${azurestack_resource_group.rg.location}"
+  resource_group_name = "${azurestack_resource_group.rg.name}"
+
+  security_rule {
+    name                        = "ssh"
+    priority                    = "100"
+    direction                   = "Inbound"
+    access                      = "Allow"
+    protocol                    = "tcp"
+    source_port_range           = "*"
+    destination_port_range      = "22"
+    source_address_prefix       = "*"
+    destination_address_prefix  = "*"
+  }
+
+  tags = "${azurestack_resource_group.rg.tags}"
+}
+
+resource "azurestack_virtual_network" "virtual-network" {
+  name                = "${azurestack_resource_group.rg.name}-VirtualNetwork"
+  address_space       = ["10.0.0.0/16"]
+  location            = "${azurestack_resource_group.rg.location}"
+  resource_group_name = "${azurestack_resource_group.rg.name}"
+}
+
+resource "azurestack_subnet" "subnet1" {
+  name                            = "${azurestack_resource_group.rg.name}-Subnet1"
+  resource_group_name             = "${azurestack_resource_group.rg.name}"
+  virtual_network_name            = "${azurestack_virtual_network.virtual-network.name}"
+  address_prefix                  = "10.0.2.0/24"
+  network_security_group_id       = "${azurestack_network_security_group.nsg.id}"
+}
+
+resource "azurestack_public_ip" "public-ip" {
+  count                         = "${var.vm_count}"
+  name                          = "public-ip-${count.index + 1}"
+  location                      = "${azurestack_resource_group.rg.location}"
+  resource_group_name           = "${azurestack_resource_group.rg.name}"
+  public_ip_address_allocation  = "static"
+}
+
+resource "azurestack_network_interface" "nic" {
+  name                                  = "${azurestack_resource_group.rg.name}-NIC${count.index + 1}"
+  count                                 = "${var.vm_count}"
+  location                              = "${azurestack_resource_group.rg.location}"
+  resource_group_name                   = "${azurestack_resource_group.rg.name}"
+
+  ip_configuration {
+    name                            = "nic-ip-config1"
+    subnet_id                       = "${azurestack_subnet.subnet1.id}"
+    private_ip_address_allocation   = "dynamic"
+    public_ip_address_id            = "${element(azurestack_public_ip.public-ip.*.id, count.index)}"
+  }
+
+  tags = "${azurestack_resource_group.rg.tags}"
+}
+
+resource "azurestack_storage_account" "storage-account" {
+  count                             = "${var.vm_count}"
+  name                              = "${azurestack_resource_group.rg.name}accsa${count.index + 1}"
+  resource_group_name               = "${azurestack_resource_group.rg.name}"
+  location                          = "${azurestack_resource_group.rg.location}"
+  account_tier                      = "Standard"
+  account_replication_type          = "LRS"
+
+  tags = "${azurestack_resource_group.rg.tags}"
+}
+
+resource "azurestack_storage_container" "storage-container" {
+  count                             = "${var.vm_count}"
+  name                              = "vhds${count.index + 1}"
+  resource_group_name               = "${azurestack_resource_group.rg.name}"
+  storage_account_name              = "${element(azurestack_storage_account.storage-account.*.name, count.index)}"
+  container_access_type             = "private"
+}
+
+resource "azurestack_virtual_machine" "vm" {
+  count                 = "${var.vm_count}"
+  name                  = "vm-${count.index + 1}"
+  location              = "${azurestack_resource_group.rg.location}"
+  resource_group_name   = "${azurestack_resource_group.rg.name}"
+  network_interface_ids = ["${element(azurestack_network_interface.nic.*.id, count.index)}"]
+  vm_size               = "${var.vm_size}"
+
+  # Uncomment this line to delete the OS disk automatically when deleting the VM
+  # delete_os_disk_on_termination = true
+
+  # Uncomment this line to delete the data disks automatically when deleting the VM
+  # delete_data_disks_on_termination = true
+
+  storage_image_reference {
+    publisher = "${element(split("/", var.vm_image_string), 0)}"
+    offer     = "${element(split("/", var.vm_image_string), 1)}"
+    sku       = "${element(split("/", var.vm_image_string), 2)}"
+    version   = "${element(split("/", var.vm_image_string), 3)}"
+  }
+
+  storage_os_disk {
+    name                = "vm-${count.index + 1}-OS-Disk"
+    vhd_uri             = "${element(azurestack_storage_account.storage-account.*.primary_blob_endpoint, count.index)}${element(azurestack_storage_container.storage-container.*.name, count.index)}/vm-${count.index + 1}-osdisk.vhd"
+    caching             = "ReadWrite"
+    create_option       = "FromImage"
+  }
+
+  # Optional data disks
+  storage_data_disk {
+    name                = "vm-${count.index + 1}-Data-Disk"
+    vhd_uri             = "${element(azurestack_storage_account.storage-account.*.primary_blob_endpoint, count.index)}${element(azurestack_storage_container.storage-container.*.name, count.index)}/vm-${count.index} + 1}-datadisk.vhd"
+    disk_size_gb        = "100"
+    create_option       = "Empty"
+    lun                 = 0
+  }
+
+  os_profile {
+    computer_name  = "host${count.index + 1}"
+    admin_username = "${var.admin_username}"
+    admin_password = "${var.admin_password}"
+  }
+
+  os_profile_linux_config {
+    disable_password_authentication = false
+  }
+
+  tags = "${azurestack_resource_group.rg.tags}"
+}
+</code></pre>
+</section>
+</div>
+<h3 id="assign-values-to-the-variables-in-the-terraformtfvars-file-through-the-table-found-at-the-top-of-the-document">Assign values to the variables in the <code>terraform.tfvars</code> file through the table found at the top of the document</h3>
+<pre><code class="language-hcl">
+  arm_endpoint    = "<output form="arm_endpoint" name="result" style="display: inline;">https://management.{region}.{domain}</output>"
+  subscription_id = "<output form="subscription_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
+  client_id       = "<output form="client_id" name="result" style="display: inline;">applicationId</output>"
+  client_secret   = "<output form="client_secret" name="result" style="display: inline;">applicationPassword</output>"
+  tenant_id       = "<output form="tenant_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
+
+  vm_count        = <output form="vm_count" name="result" style="display: inline;">1</output>
+  vm_image_string = "<output form="vm_image" name="result" style="display: inline;">OpenLogic/CentOS/7.5/latest</output>"
+  vm_size         = "<output form="vm_size" name="result" style="display: inline;">Standard_DS2_v2</output>"
+  rg_name         = "<output form="rg_name" name="result" style="display: inline;">MyResourceGroup</output>"
+  rg_tag          = "<output form="rg_tag" name="result" style="display: inline;">Production</output>"
+
+  admin_username  = "<output form="vm_username" name="result" style="display: inline;">user</output>"
+  admin_password  = "<output form="vm_password" name="result" style="display: inline;">Password123!</output>"
+</code></pre>
+<h3 id="declare-the-variables-here-in-the-variablestf-file-for-use-in-the-main-script">Declare the variables here in the <code>variables.tf</code> file for use in the main script</h3>
+<pre><code class="language-hcl">
+  variable "arm_endpoint" {
+    type = "string"
+  }
+
+  variable "subscription_id" {
+    type = "string"
+  }
+
+  variable "client_id" {
+    type = "string"
+  }
+
+  variable "client_secret" {
+    type = "string"
+  }
+
+  variable "tenant_id" {
+    type = "string"
+  }
+
+  variable "admin_username" {
+    type     = "string"
+    default  = "username"
+  }
+
+  variable "admin_password" {
+    type     = "string"
+    default  = "Password123!"
+  }
+
+  variable "rg_tag" {
+    type    = "string"
+    default = "production"
+  }
+
+  variable "vm_count" {
+    default  = 1
+  }
+
+  variable "vm_image_string" {
+    type    = "string"
+  }
+
+  variable "vm_size" {
+    type    = "string"
+    default = "Standard_DS2_v2"
+  }
+</code></pre>
+<h2 id="how-to-execute-a-terraform-plan">How to execute a Terraform plan</h2>
 <div class="TIP">
 <h5>Tip</h5>
 <p>Terraform by default scans your execution directory and looks for all <code>tf</code> files.</p>
 </div>
-<p>From a PowerShell prompt, navigate to the directory that contains your <code>tf</code> files and run the following commands:</p>
+<p>From a PowerShell prompt, navigate to the directory that contains your <code>tf</code> files (including your variable files) and run the following commands:</p>
 <pre><code class="lang-powershell"># Check if your environment is setup correctly
 .\terraform.exe init
 
@@ -490,11 +945,12 @@ changes, it is recommended to add version = &quot;...&quot; constraints to the
 corresponding provider blocks in configuration, with the constraint strings
 suggested below.
 
-* provider.azurestack: version = &quot;~&gt; 0.1&quot;
+* provider.azurestack: version = &quot;~&gt; 0.8&quot;
+* provider.random: version = &quot;~&gt; 2.1&quot;
 
 Terraform has been successfully initialized!
 
-You may now begin working with Terraform. Try running &quot;terraform plan&quot; to see
+You may now begin working with Terraform. Try running &quot;Terraform plan&quot; to see
 any changes that are required for your infrastructure. All Terraform commands
 should now work.
 
@@ -503,49 +959,9 @@ rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 </code></pre>
 <pre><code class="lang-powershell"># Verify your plan
-.\terraform.exe plan -var-file=C:\&lt;DirectoryName&gt;\testvars.tfvars
+.\terraform.exe plan -var-file=C:\&lt;DirectoryName&gt;\terraform.tfvars
 # Apply your plan
-.\terraform.exe apply -var-file=C:\&lt;DirectoryName&gt;\testvars.tfvars
-</code></pre>
-<div class="NOTE">
-<h5>Note</h5>
-<p>You can also add <code>-auto-approve</code> to the apply command for it to not ask you to apply changes for full automation.</p>
-</div>
-<h3 id="how-to-execute-a-plan---using-provider-block-option">How to execute a plan - using <strong>Provider Block</strong> option</h3>
-<div class="TIP">
-<h5>Tip</h5>
-<p>Terraform by default scans your execution directory and looks for all <code>tf</code> files.</p>
-</div>
-<p>From a PowerShell prompt, navigate to the directory that contains your <code>tf</code> files and run the following commands:</p>
-<pre><code class="lang-powershell"># Check if your environment is setup correctly
-.\terraform.exe init
-
-Initializing provider plugins...
-
-The following providers do not have any version constraints in configuration,
-so the latest version was installed.
-
-To prevent automatic upgrades to new major versions that may contain breaking
-changes, it is recommended to add version = &quot;...&quot; constraints to the
-corresponding provider blocks in configuration, with the constraint strings
-suggested below.
-
-* provider.azurestack: version = &quot;~&gt; 0.1&quot;
-
-Terraform has been successfully initialized!
-
-You may now begin working with Terraform. Try running &quot;terraform plan&quot; to see
-any changes that are required for your infrastructure. All Terraform commands
-should now work.
-
-If you ever set or change modules or backend configuration for Terraform,
-rerun this command to reinitialize your working directory. If you forget, other
-commands will detect it and remind you to do so if necessary.
-</code></pre>
-<pre><code class="lang-powershell"># Verify your plan
-.\terraform.exe plan
-# Apply your plan
-.\terraform.exe apply
+.\terraform.exe apply -var-file=C:\&lt;DirectoryName&gt;\terraform.tfvars
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
