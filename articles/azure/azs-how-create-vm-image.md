@@ -139,7 +139,7 @@ Run the following PowerShell code:
 <pre><code class="language-PowerShell"># Initialise environment and variables
 
 # Declare endpoint
-$ArmEndpoint = "https://management.frn00006.azure.ukcloud.com"
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">"https://management.frn00006.azure.ukcloud.com"</output>"
 
 # Add environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
