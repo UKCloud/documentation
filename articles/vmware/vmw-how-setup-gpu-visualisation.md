@@ -1,24 +1,24 @@
 ---
-title: Getting Started Guide for Cloud GPU Visualisation | UKCloud Ltd
-description: Provides information to get up and running with Cloud GPU Visualisation
-services: gpu
+title: How to set up Cloud GPU Visualisation for UKCloud for VMware | UKCloud Ltd
+description: Provides information to get up and running with Cloud GPU Visualistaion in UKCloud for VMware
+services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: mhodgetts
+lastreviewed: 05/08/2019
 
-toc_rootlink: Getting Started
+toc_rootlink: How To
 toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Cloud GPU Visualisation
-toc_fullpath: Getting Started/gpu-gs-visualisation.md
-toc_mdlink: gpu-gs-visualisation.md
+toc_title: Set up Cloud GPU Visualisation for VMware
+toc_fullpath: How To/vmw-how-setup-gpu-visualisation.md
+toc_mdlink: vmw-how-setup-gpu-visualisation.md
 ---
 
-# Getting Started Guide for Cloud GPU Visualisation
+# How to set up Cloud GPU Visualisation for UKCloud for VMware
 
-## Introduction
+## Overview
 
 Cloud GPU enables you to supplement your on-platform compute resources with GPU capabilities.
 
@@ -29,11 +29,11 @@ workloads:
 
 - **Visualisation workloads.** Describes the traditional use cases for GPU processing --- these include simulation, powering desktop applications with graphics content (such as computer aided design), video encoding, rendering or streaming.
 
-This Getting Started Guide provides an introduction for how to use Cloud GPU for visualisation workloads and describes the tasks you need to perform to get the service up and running.
+This article provides an introduction for how to use Cloud GPU for visualisation workloads and describes the tasks you need to perform to get the service up and running.
 
 ### Intended audience
 
-To complete the steps in this guide you must have access to the UKCloud Portal and vCloud Director.
+To complete the steps in this article you must have access to the UKCloud Portal and vCloud Director.
 
 ## Cloud GPU overview
 
@@ -151,19 +151,27 @@ To install NVIDIA drivers:
 
     - Update the system:
 
-            # yum update
+        ``` none
+        # yum update
+        ```
 
     - Install gcc with Kernel Modules:
 
-            # yum install kernel-devel gcc
+        ``` none
+        # yum install kernel-devel gcc
+        ```
 
     - Make the driver package executable:
 
-            # chmod +x NVIDIA-Linux-x86_64-384.73-grid.run
+        ``` none
+        # chmod +x NVIDIA-Linux-x86_64-384.73-grid.run
+        ```
 
     - Run the driver installer:
 
-            # ./NVIDIA-Linux-x86_64-384.73-grid.run
+        ``` none
+        # ./NVIDIA-Linux-x86_64-384.73-grid.run
+        ```
 
     - Accept the defaults.
 
@@ -172,7 +180,7 @@ To install NVIDIA drivers:
 
     - Confirm that the driver is installed and the card is detected:
 
-        ```
+        ``` none
         # nvidia-smi
         Thu Oct 5 14:57:43 2017
         +------------------------------------------------------------------------------+
@@ -242,7 +250,9 @@ To license GRID Virtual GPU on Linux
 
 1. Copy the template grid licensing config file:
 
-        # cp /etc/nvidia/gridd.conf.template /etc/nvidia/gridd.conf
+    ``` none
+    # cp /etc/nvidia/gridd.conf.template /etc/nvidia/gridd.conf
+    ```
 
 2. Edit the file and set the following values:
 
@@ -256,11 +266,13 @@ To license GRID Virtual GPU on Linux
 
 4. Restart the GRID service:
 
-        # service nvidia-gridd restart
+    ``` none
+    # service nvidia-gridd restart
+    ```
 
 5. Check the log messages to confirm the licence is enabled (this may take a minute or two):
 
-    ```
+    ``` none
     #tail -f /var/log/messages
 
     Oct 5 15:04:45 localhost systemd: Starting NVIDIA Grid Daemon...
@@ -275,7 +287,9 @@ To license GRID Virtual GPU on Linux
 
     - Open the settings tools from your desktop or from the command line:
 
-            # nvidia-settings
+        ``` none
+        # nvidia-settings
+        ```
 
     - Select Manage License and input the following server details:
 
@@ -300,24 +314,11 @@ We've tested the following applications against our Cloud GPU service to confirm
 
 ## Next steps
 
-In this guide, you've learned how to set up your environment to enable the provisioning of your Cloud GPU service and you can now start creating your GPU‑powered applications.
+In this article, you've learned how to set up your environment to enable the provisioning of your Cloud GPU service and you can now start creating your GPU‑powered applications.
 
 For information about NVIDIA virtual GPU software specific to your OS, see:
 
 <https://docs.nvidia.com/grid/latest/index.html>
-
-## Glossary
-
-This section provides a glossary of terms specific to Cloud GPU.
-
-**Cloud GPU**&nbsp;&nbsp;A UKCloud IaaS service that enables you to supplement your on-platform compute resources with GPU capabilities that help meet specialist requirements of advanced applications, such as visualisation workloads or large-scale mathematical modelling.
-
-**GPU**&nbsp;&nbsp;Graphics processing unit.
-
-**NVIDIA GRID**&nbsp;&nbsp;The software that enables the GPU card to be exposed as a shared PCI
-device.
-
-**PRIORITY VM**&nbsp;&nbsp;A UKCloud for VMware type with uncontended compute resource allocation (CPU/RAM). Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption.
 
 ## Feedback
 

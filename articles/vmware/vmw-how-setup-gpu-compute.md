@@ -1,24 +1,24 @@
 ---
-title: Getting Started Guide for Cloud GPU Compute | UKCloud Ltd
-description: Provides information to get up and running with Cloud GPU Compute
-services: gpu
+title: How to set up Cloud GPU Compute for UKCloud for VMware | UKCloud Ltd
+description: Provides information to get up and running with Cloud GPU Compute for UKCloud for VMware
+services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: mhodgetts
+lastreviewed: 05/08/2019
 
-toc_rootlink: Getting Started
+toc_rootlink: How To
 toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Cloud GPU Compute
-toc_fullpath: Getting Started/gpu-gs-compute.md
-toc_mdlink: gpu-gs-compute.md
+toc_title: Set up Cloud GPU Compute for VMware
+toc_fullpath: How To/vmw-how-setup-gpu-compute.md
+toc_mdlink: vmw-how-setup-gpu-compute.md
 ---
 
-# Getting Started Guide for Cloud GPU Compute
+# How to set up Cloud GPU Compute for UKCloud for VMware
 
-## Introduction
+## Overview
 
 Cloud GPU enables you to supplement your on-platform compute resources with GPU capabilities.
 
@@ -27,13 +27,13 @@ workloads:
 
 - **Compute workloads.** GPUs have become prevalent in a world that needs a lot of data processing, fast. The parallel nature of GPU cores lends itself perfectly to supporting initiatives such as deep or machine learning and large-scale mathematical modelling.
 
-- **Visualisation workloads.** Describes the traditional use cases for GPU processing --- these include simulation, powering desktop applications with graphics content (such as computer aided design), video encoding, rendering or streaming.
+- **Visualisation workloads.** Describes the traditional use cases for GPU processing. These include simulation, powering desktop applications with graphics content (such as computer aided design), video encoding, rendering or streaming.
 
-This Getting Started Guide provides an introduction for how to use Cloud GPU for compute workloads and describes the tasks you need to perform to get the service up and running.
+This article provides an introduction for how to use Cloud GPU for compute workloads and describes the tasks you need to perform to get the service up and running.
 
 ### Intended audience
 
-To complete the steps in this guide you must have access to the UKCloud Portal and vCloud Director.
+To complete the steps in this article you must have access to the UKCloud Portal and vCloud Director.
 
 ## Cloud GPU overview
 
@@ -48,7 +48,7 @@ Delivery model | vGPU | vGPU
 
 With Cloud GPU, you can:
 
-- **Process large data sets** --- The significantly improved computational power provided by Cloud GPU means that you can gain insight into your data by using the massively parallelised capabilities to process large data sets. This enables:
+- **Process large data sets.** The significantly improved computational power provided by Cloud GPU means that you can gain insight into your data by using the massively parallelised capabilities to process large data sets. This enables:
 
   - Parallel processing of data in a fraction of the time of using just CPU
 
@@ -60,11 +60,11 @@ With Cloud GPU, you can:
 
   - Predictive threat analysis
 
-- **Bring any application to the cloud** --- Applications that have previously struggled to transition to the cloud because of GPU requirements can now be moved, improving manageability of your data and applications, while increasing collaborative opportunities.
+- **Bring any application to the cloud.** Applications that have previously struggled to transition to the cloud because of GPU requirements can now be moved, improving manageability of your data and applications, while increasing collaborative opportunities.
 
-- **Centralise your applications** --- Cloud GPU enables you to centralise your applications to improve access to them. By doing so, users can access the tools they need from anywhere, anytime on commodity devices.
+- **Centralise your applications.** Cloud GPU enables you to centralise your applications to improve access to them. By doing so, users can access the tools they need from anywhere, anytime on commodity devices.
 
-- **Visualise data in real-time** --- Improved visualisation capabilities provided by Cloud GPU enables you to visualise data in real-time to render virtualised environments when you need them. This helps you to:
+- **Visualise data in real-time.** Improved visualisation capabilities provided by Cloud GPU enables you to visualise data in real-time to render virtualised environments when you need them. This helps you to:
 
   - Design using Computer Aided Design applications in a centralised environment, enabling ease of collaboration
 
@@ -78,7 +78,7 @@ When using our Cloud GPU service for compute workloads, you should consider the 
 
 - Your Cloud GPU virtual machine (VM) must be in a PRIORITY virtual data centre (VDC).
 
-- You should create your Cloud GPU VM using the appropriate UKCloud template from the GPGPU public catalogue.
+- You should create your Cloud GPU VM using the appropriate UKCloud template from the GPGPU public catalog.
 
 - Your deployed Cloud GPU VM should be using hardware version 11. The shell VM in the Cloud GPU VM template uses hardware version 11.
 
@@ -98,66 +98,60 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
 3. Click **My VMs**.
 
-    ![My VMs on the UKCloud Portal home page](images/gpu-portal-my-vms.png)
+    ![My VMs on the UKCloud Portal home page](images/myvms.png)
 
 4. Click the compute service (vOrg) that contains the VDC in which you want to create the VM.
 
     > [!IMPORTANT]
-    > You must create your VM in a PRIORITY VDC. If you don't already have a VDC for this type of workload, you can create one using the steps in the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md).
+    > You must create your VM in a PRIORITY VDC. If you don't already have a VDC for this type of workload, you can create one using the steps in the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md#building-a-virtual-data-centre).
 
 5. On the *vCloud Director* tab, enter your password and click **Confirm**.
 
-    ![vCloud Director tab in the UKCloud Portal](images/gpu-portal-vcd-password.png)
+    ![vCloud Director tab in the UKCloud Portal](images/vmw-portal-vcd-login.png)
 
-6. On the vCloud Director *Home* tab, click **Add vApp from Catalog**.
+6. In vCloud Director, click the menu icon and select **Libraries**.
 
-    ![Add vApp from Catalog option](images/gpu-vcd-add-vapp.png)
+    ![Libraries menu option](images/vmw-vcd-mnu-libraries.png)
 
-7. On the *Select vApp Template* page of the *Add vApp from Catalog* dialog box, from the **Look in** list, select **Public Catalogs**.
+7. In the left navigation panel, click **vApp Templates**.
 
-    ![Public Catalogs option in Select vApp Template page](images/gpu-vcd-vapp-public-catalog.png)
+    ![vApp Templates menu option](images/vmw-vcd-mnu-vapp-templates.png)
 
-8. Select **All Templates**.
+8. Click the triple-dot icon next to the **GPGPU** template and select **Create vApp**.
 
-    ![All Templates option in Select vApp Template page](images/gpu-vcd-vapp-all-templates.png)
-
-9. In the search field, enter GPGPU and click the **Refresh** icon.
-
-    ![Search field in Select vApp Template page](images/gpu-vcd-vapp-search.png)
-
-10. Select the **GPGPU** template and click **Next**.
+    ![Create vApp menu option](images/vmw-vcd-mnu-create-vapp-from-template.png)
 
     > [!NOTE]
     > The GPGPU template provides a shell VM with no disks attached, hence no operating system installed. You'll need add the necessary disks so that you can install your preferred operating system on the VM.
 
-11. On the *Select Name and Location* page, give the vApp a **Name** and **Description**.
+9. On the *Select Name* page of the *Create vApp from Template* dialog box, give the vApp a **Name** and **Description**, select the appropriate **Runtime lease** and **Storage lease** then click **Next**.
 
-12. From the **Virtual Datacenter** list, select the VDC in which you want to create the VM and click **Next**.
+    ![Select Name page of Create vApp from Template dialog box](images/vmw-vcd-vapp-from-template-name.png)
+
+10. On the *Configure Resources* page, from the list of VDCs, select the VDC in which you want to create the VM and click **Next**.
 
     > [!NOTE]
     > You must create your VM in a PRIORITY VDC.
 
-    ![Select Name and Location page](images/gpu-vcd-vapp-name.png)
+11. From the **Storage Policy** list, for optimal performance, select Tier 1 storage and click **Next**.
 
-13. On the *Configure Resources* page, in the **Virtual Machine** field, enter a meaningful name for your VM.
+    ![Configure Resources page](images/vmw-vcd-vapp-from-template-resources.png)
 
-14. From the **Storage Policy** list, for optimal performance, select Tier 1 storage and click **Next**.
+12. On the *Configure Networking* page, from the **Networks** list, select the network that you want to attach your VM to and click **Next**.
 
-    ![Configure Resources page](images/gpu-vcd-vapp-resources.png)
+    ![Configure Networking page](images/vmw-vcd-vapp-from-template-network.png)
 
-15. On the *Configure Networking* page, from the **Networks** list, select the network that you want to attach your VM to and click **Next**.
+13. On the *Customize Hardware* page, add an **LSI Logic SAS (SCSI)** hard disk of a size appropriate for the operating system that you plan to install on your VM and then click **Next**.
 
-    ![Configure Networking page](images/gpu-vcd-vapp-networking.png)
+    ![Customize Hardware page](images/vmw-vcd-vapp-from-template-hardware.png)
 
-16. On the *Customize Hardware* page, add an “LSI Logic SAS (SCSI)” hard disk of a size appropriate for the operating system that you plan to install on your VM and then click **Next**.
+14. On the *Ready to Complete* page, review your settings and then click **Finish** to start the deployment.
 
-17. On the *Ready to Complete* page, review your settings and then click **Finish** to start the deployment.
+15. After the VM has been deployed, right-click it and select **Power On**, then use the popout console to go through the setup procedure.
 
-18. After the VM has been deployed, right-click it and select **Power On**, then use the popout console to go through the setup procedure.
+16. When your VM is ready, install your preferred operating system.
 
-19. When your VM is ready, install your preferred operating system.
-
-20. When you're finished, right-click the vApp that contains your VM and select **Power Off**.
+17. When you're finished, right-click the vApp that contains your VM and select **Power Off**.
 
     > [!IMPORTANT]
     > It is essential that you power off the vApp so that UKCloud can migrate the VM to a GPU‑enabled server.
@@ -214,19 +208,27 @@ To install NVIDIA drivers:
 
     - Update the system:
 
-            # yum update
+        ``` none
+        # yum update
+        ```
 
     - Install gcc with Kernel Modules:
 
-            # yum install kernel-devel gcc
+        ``` none
+        # yum install kernel-devel gcc
+        ```
 
     - Make the driver package executable:
 
-            # chmod +x NVIDIA-Linux-x86\_64-384.73-grid.run
+        ``` none
+        # chmod +x NVIDIA-Linux-x86\_64-384.73-grid.run
+        ```
 
     - Run the driver installer:
 
-            # ./NVIDIA-Linux-x86_64-384.73-grid.run
+        ``` none
+        # ./NVIDIA-Linux-x86_64-384.73-grid.run
+        ```
 
     - Accept the defaults.
 
@@ -235,7 +237,7 @@ To install NVIDIA drivers:
 
     - Confirm that the driver is installed and the card is detected:
 
-        ```
+        ``` none
         # nvidia-smi
         Thu Oct 5 14:57:43 2017
         +------------------------------------------------------------------------------+
@@ -305,7 +307,9 @@ To license GRID Virtual GPU on Linux
 
 1. Copy the template grid licensing config file:
 
-        # cp /etc/nvidia/gridd.conf.template /etc/nvidia/gridd.conf
+    ``` none
+    # cp /etc/nvidia/gridd.conf.template /etc/nvidia/gridd.conf
+    ```
 
 2. Edit the file and set the following values:
 
@@ -319,11 +323,13 @@ To license GRID Virtual GPU on Linux
 
 4. Restart the GRID service:
 
-        # service nvidia-gridd restart
+    ``` none
+    # service nvidia-gridd restart
+    ```
 
 5. Check the log messages to confirm the licence is enabled (this may take a minute or two):
 
-    ```
+    ``` none
     #tail -f /var/log/messages
 
     Oct 5 15:04:45 localhost systemd: Starting NVIDIA Grid Daemon...
@@ -338,7 +344,9 @@ To license GRID Virtual GPU on Linux
 
     - Open the settings tools from your desktop or from the command line:
 
-            # nvidia-settings
+        ```none
+        # nvidia-settings
+        ```
 
     - Select Manage License and input the following server details:
 
@@ -348,24 +356,11 @@ To license GRID Virtual GPU on Linux
 
 ## Next steps
 
-In this guide, you've learned how to set up your environment to enable the provisioning of your Cloud GPU service and you can now start creating your GPU‑powered applications.
+In this article, you've learned how to set up your environment to enable the provisioning of your Cloud GPU service and you can now start creating your GPU‑powered applications.
 
 For information about NVIDIA virtual GPU software specific to your OS, see:
 
 <https://docs.nvidia.com/grid/latest/index.html>
-
-## Glossary
-
-This section provides a glossary of terms specific to Cloud GPU.
-
-**Cloud GPU**&nbsp;&nbsp;A UKCloud IaaS service that enables you to supplement your on-platform compute resources with GPU capabilities that help meet specialist requirements of advanced applications, such as visualisation workloads or large-scale mathematical modelling.
-
-**GPU**&nbsp;&nbsp;Graphics processing unit.
-
-**NVIDIA GRID**&nbsp;&nbsp;The software that enables the GPU card to be exposed as a shared PCI
-device.
-
-**PRIORITY VM**&nbsp;&nbsp;A UKCloud for VMware VM type with uncontended compute resource allocation (CPU/RAM). Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption.
 
 ## Feedback
 
