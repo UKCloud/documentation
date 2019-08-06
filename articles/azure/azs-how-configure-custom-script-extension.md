@@ -32,7 +32,7 @@ There are two options for deploying custom script extensions:
 
 ## Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription in the **Azure Stack** portal.
+To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.
 
 ### Declare variables
 
