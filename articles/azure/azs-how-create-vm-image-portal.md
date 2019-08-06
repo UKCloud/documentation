@@ -1,7 +1,7 @@
 ---
-title: How to create a custom image from a VM on Azure Stack - Portal | UKCloud Ltd
+title: How to create a custom image from a VM on Azure Stack using the UKCloud Azure Stack portal | UKCloud Ltd
 description: Provides details on how to create a custom image from a VM using the portal
-services: 
+services: azure-stack
 author: Daniel Brennand
 reviewer:
 lastreviewed:
@@ -16,24 +16,24 @@ toc_fullpath: Users/How To/azs-how-create-vm-image-portal.md
 toc_mdlink: azs-how-create-vm-image-portal.md
 ---
 
-# How to create a custom image from a VM on Azure Stack - Portal
+# How to create a custom image from a VM on Azure Stack using the UKCloud Azure Stack portal
 
 ## Overview
 
-An image resource can be created from a generalised virtual machine (VM) that is stored as either a managed disk or an unmanaged disk in a storage account. The image can then be used to create multiple VMs.
+You can create an image resource from a generalised virtual machine (VM) that is stored as either a managed disk or an unmanaged disk in a storage account. You can then use the image to create multiple VMs.
 
-This article will explain how to create a custom image from a VM on Azure Stack, which you can then use to deploy other VMs.
+This article explains how to create a custom image from a VM on Azure Stack, which you can then use to deploy other VMs.
 
 ## Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription in the **Azure Stack** portal.
+To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.
 
 ## [1. Generalise your VM](#tab/tabid-1)
 
 > [!WARNING]
-> Once a VM has been generalised, you **can not** log back into it.
+> Once you've generalised a VM, you **cannot** log back into it.
 
-## [2. Creating the image - Portal](#tab/tabid-2)
+## [2. Creating the image](#tab/tabid-2)
 
 > [!WARNING]
 > Capturing a VM image will make it unusable and cannot be undone.
@@ -50,7 +50,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 5. In the *new* blade, provide a **Name** for the new image.
 
-6. Select a **Resource Group** from the dropdown menu or create a new one.
+6. Select a **Resource group** from the dropdown menu or create a new one.
 
 7. Select **Automatically delete this virtual machine after creating the image**.
 
@@ -76,11 +76,13 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 16. Click **Select**.
 
-17. In *Configure optional features*, under *Select public inbound ports*, select the ports you wish to provision.
+17. In *Configure optional features*, under *Select public inbound ports*, select the ports you want to provision.
 
 18. Click **OK**.
 
 19. Review the *Summary* blade and click **OK**. The new VM will now begin deployment.
+
+![Custom image VM summary](images/azs-browser-custom-image-vm-summary.png)
 
 ***
 
@@ -90,17 +92,17 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 2. Run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
 
-3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the dropdown menu.
+3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the **System Cleanup Action** list.
 
 4. Ensure the **Generalise** tick box is selected.
 
-5. Under *Shutdown Options*, select **Shutdown** from the dropdown menu.
+5. Under *Shutdown Options*, select **Shutdown** from the **Shutdown Options** list.
 
     See the image below for an example:
 
     ![Windows sysprep example](images/azs-windows-sys-prep.png)
 
-6. Select **OK** and wait for the generalisation process to complete.
+6. Click **OK** and wait for the generalisation process to complete.
 
 ### [Linux](#tab/tabid-b/tabid-1)
 
@@ -108,7 +110,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 2. Run the following command: `sudo su` and enter your sudo password.
 
-3. Run the following command: `shutdown && waagent -deprovision+user -force`
+3. Run the following command: `shutdown && waagent -deprovision+user -force`.
 
 4. Wait for the VM to shutdown. Your session will be closed.
 
