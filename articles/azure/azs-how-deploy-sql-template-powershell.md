@@ -221,8 +221,8 @@ Change the required variables as per your environment and run the following scri
 
 ```powershell
 # Declare login variables
-$AppGUID = "<ClientID of your SPN Application>"
-$AppPassword = "<YourPassword>"
+$AppGUID = "<ClientID of your SPN application>"
+$AppPassword = "<ClientSecret of your SPN application>"
 
 $TenantDomain = "<MyDirectoryTenantName>"
 $ArmEndpoint = "https://management.frn00006.azure.ukcloud.com"
