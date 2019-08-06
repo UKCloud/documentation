@@ -1,7 +1,7 @@
 ---
-title: How to create a custom image from a VM on Azure Stack - PowerShell | UKCloud Ltd
+title: How to create a custom image from a VM on Azure Stack using PowerShell | UKCloud Ltd
 description: Provides details on how to create a custom image from a VM using Powershell
-services: 
+services: azure-stack
 author: Daniel Brennand
 reviewer:
 lastreviewed:
@@ -16,24 +16,24 @@ toc_fullpath: Users/How To/azs-how-create-vm-image-powershell.md
 toc_mdlink: azs-how-create-vm-image-powershell.md
 ---
 
-# How to create a custom image from a VM on Azure Stack - PowerShell
+# How to create a custom image from a VM on Azure Stack using PowerShell
 
 ## Overview
 
-An image resource can be created from a generalised virtual machine (VM) that is stored as either a managed disk or an unmanaged disk in a storage account. The image can then be used to create multiple VMs.
+You can create an image resource from a generalised virtual machine (VM) that is stored as either a managed disk or an unmanaged disk in a storage account. You can then use the image to create multiple VMs.
 
-This article will explain how to create a custom image from a VM on Azure Stack, which you can then use to deploy other VMs.
+This article explains how to create a custom image from a VM on Azure Stack, which you can then use to deploy other VMs.
 
 ## Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription in the **Azure Stack** portal.
+To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.
 
 ## [1. Generalise your VM](#tab/tabid-1)
 
 > [!WARNING]
-> Once a VM has been generalised, you **can not** log back into it.
+> Once you've generalised a VM, you **cannot** log back into it.
 
-## [2. Creating the image - PowerShell](#tab/tabid-2)
+## [2. Creating the image](#tab/tabid-2)
 
 > [!WARNING]
 > Capturing a VM image will make it unusable and cannot be undone.
@@ -61,7 +61,7 @@ Run the following PowerShell code:
 <pre><code class="language-PowerShell"># Initialise environment and variables
 
 # Declare endpoint
-$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">"https://management.frn00006.azure.ukcloud.com"</output>"
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
 # Add environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
@@ -142,11 +142,11 @@ New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -I
 
 2. Run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
 
-3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the dropdown menu.
+3. In the **System Preparation Tool**, under *System Cleanup Action*, select **Enter System Out-of-Box Experience (OOBE)** from the **System Cleanup Action** list.
 
 4. Ensure the **Generalise** tick box is selected.
 
-5. Under *Shutdown Options*, select **Shutdown** from the dropdown menu.
+5. Under *Shutdown Options*, select **Shutdown** from the **Shutdown Options** list.
 
     See the image below for an example:
 
@@ -160,7 +160,7 @@ New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -I
 
 2. Run the following command: `sudo su` and enter your sudo password.
 
-3. Run the following command: `shutdown && waagent -deprovision+user -force`
+3. Run the following command: `shutdown && waagent -deprovision+user -force`.
 
 4. Wait for the VM to shutdown. Your session will be closed.
 
