@@ -134,7 +134,7 @@ The images used to create this deployment are:
 
 ### Configuration
 
-- Each SQL VM will have the number and size of data disks specified, of up to 1TiB each. The SQL extension will configured these into a single volume using Storage Spaces.
+- Each SQL VM will have the number and size of data disks specified, of up to 1TiB each. The SQL extension will configure these into a single volume using Storage Spaces.
 
 - The template configures the SQL instances with contained database authentication set to **true**.
 
@@ -167,14 +167,14 @@ The images used to create this deployment are:
 | AdminUsername                   | The name of the administrator of the new VMs and domain                       |                                                                       | localadmin                                                                                     |
 | AdPDCNICIPAddress               | The IP address of the new AD VM                                               |                                                                       | 10.0.0.250                                                                             |
 | AdVMSize                        | The size of the AD VMs created                                                | {Standard_D1_v2, Standard_D2_v2}                            | Standard_D2_v2                                                                         |
-| AutoPatchingDay                 | The day of a week for auto patching                                           | {Never, Everyday, Sunday, Monday...}                                  | Sunday                                                                                |
-| AutoPatchingStartHour           | The start hour of a day for auto patching                                     | {0, 1, 2, 3... 23}                                                       | 2                                                                                    |
+| AutoPatchingDay                 | The day of the week for auto patching                                           | {Never, Everyday, Sunday, Monday...}                                  | Sunday                                                                                |
+| AutoPatchingStartHour           | The start hour of the day for auto patching                                     | {0, 1, 2, 3... 23}                                                       | 2                                                                                    |
 | DeploymentPrefix                | The DNS Prefix for the Public IP Address for the always on cluster            |                                                                       | aodns                                                                                |
 | DnsSuffix                       | The DNS Suffix for reverse lookup of public IPAddresses                       | azure.ukcloud.com                                                     |                                                                  |
 | DomainName                      | The FQDN of the AD domain created                                             |                                                                       | fabrikam.local                                                                        |
 | SqlAOAGName                     | The Sql AlwaysOn group name                                                   |                                                                       | sqlaa-ag                                                                          |
 | SqlAOListenerName               | The Sql AG listener name                                                      |                                                                       |[tolower(concat('ao-listen-' , resourceGroup().name))]                          |
-| SqlAOListenerPort               | The Sql AG Listener port                                                      |                                                                       | 1433                                                                                 |
+| SqlAOListenerPort               | The Sql AG listener port                                                      |                                                                       | 1433                                                                                 |
 | SqlAuthPassword                 | The SQL server auth account password                                          |                                                                       |                                                                                      |
 | SqlAuthUserName                 | The SQL server auth account name                                              |                                                                       | sqlsa                                                                               |
 | SqlServerServiceAccountPassword | The SQL server service account password                                       |                                                                       |                                                                                      |
@@ -213,10 +213,10 @@ Change the required variables as per your environment and run the following scri
 >
 > In the example below it has been already set accordingly.
 >
-> To change which SQL server version to deploy, set **$SqlServerOffer** accordingly: **`SQL2016SP1-WS2016`**, **`SQL2016SP2-WS2016`**.
+> To change the SQL server version that is deployed, set **$SqlServerOffer** accordingly: **`SQL2016SP1-WS2016`**, **`SQL2016SP2-WS2016`**.
 > The current default is set to **`SQL2016SP2-WS2016`**.
 >
-> To change which SQL server SKU to deploy, set **SqlServerSKU** accordingly: **`Enterprise`**, **`Standard`**, **`SQLDEV`**.
+> To change the SQL server SKU that is deployed, set **SqlServerSKU** accordingly: **`Enterprise`**, **`Standard`**, **`SQLDEV`**.
 > The current default is set to **`Enterprise`**.
 
 ```powershell
