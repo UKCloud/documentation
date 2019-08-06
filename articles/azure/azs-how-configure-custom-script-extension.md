@@ -26,9 +26,9 @@ This article explains how to add custom script extensions to new and existing VM
 
 There are two options for deploying custom script extensions:
 
-1. Deploy a custom script extension from your local disk.
+* Deploy a custom script extension from your local disk.
 
-2. Deploy a custom script extension using a file URI.
+* Deploy a custom script extension using a file URI.
 
 ## Prerequisites
 
