@@ -1,7 +1,7 @@
 ---
 title: How to configure custom script extensions for new and existing VMs on Azure Stack | UKCloud Ltd
 description: Describes how to configure custom script extensions for new and existing VMs on Azure Stack
-services:
+services: azure-stack
 author: Daniel Brennand
 reviewer: 
 lastreviewed: 
@@ -22,11 +22,12 @@ toc_mdlink: azs-how-configure-custom-script-extension.md
 
 Custom script extensions download and execute scripts on Azure Stack virtual machines. Custom script extensions are useful for post deployment configuration, software installation, or any other configuration or management tasks.
 
-This article will explain how to add custom script extensions to new and existing VMs on Azure Stack.
+This article explains how to add custom script extensions to new and existing VMs on Azure Stack.
 
 There are two options for deploying custom script extensions:
 
 1. Deploy a custom script extension from your local disk.
+
 2. Deploy a custom script extension using a file URI.
 
 ## Prerequisites
