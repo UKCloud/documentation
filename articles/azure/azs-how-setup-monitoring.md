@@ -1,7 +1,7 @@
 ---
 title: How to configure Azure Monitor for VMs on Azure Stack | UKCloud Ltd
 description: Describes how to configure Azure Monitor for VMs on Azure Stack
-services:
+services: azure-stack
 author: Daniel Brennand
 reviewer:
 lastreviewed:
