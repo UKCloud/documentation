@@ -44,6 +44,11 @@ export OS_CLIENT_ID=""
 export OS_CLIENT_SECRET=""
 export OS_ACCESS_TOKEN_ENDPOINT=""
 ```
+And remove the following 
+
+```bash
+export OS_USER_DOMAIN_NAME="Federated"
+```
 
 | Site | Variable | Value|
 | ---  | ---------|------|
@@ -54,7 +59,7 @@ export OS_ACCESS_TOKEN_ENDPOINT=""
 | &nbsp; | OS_CLIENT_SECRET | User defined |
 | &nbsp; | OS_ACCESS_TOKEN_ENDPOINT | `https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token` |
 | Corsham-2 (OSP13)  | OS_CLIENT_ID | `cni.2.cor00005` |
-| &nbsp; | OS_CLIENT_SECRET | User defined |
+| &nbsp; | OS_CLIENT_SECRET | '56160ec2-17d1-4047-a42a-e6f9f70a3179' |
 | &nbsp; | OS_ACCESS_TOKEN_ENDPOINT | `https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token` |
 
 You have now updated your RC file.
