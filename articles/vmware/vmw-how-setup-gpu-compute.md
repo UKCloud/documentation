@@ -147,6 +147,8 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
 14. On the *Ready to Complete* page, review your settings and then click **Finish** to start the deployment.
 
+    This creates a vApp with a shell VM.
+
 15. After the VM has been deployed, right-click it and select **Power On**, then use the popout console to go through the setup procedure.
 
 16. When your VM is ready, install your preferred operating system.
@@ -176,7 +178,7 @@ To install NVIDIA drivers:
 
 1. Power on your VM.
 
-2. Right-click your VM and select **Insert CD/DVD from Catalog**.
+2. In the card for the VM, select **Actions** then **Insert Media**.
 
     ![Insert CD/DVD from Catalog menu option](images/gpu-vcd-vm-mnu-insert-cd.png)
 
