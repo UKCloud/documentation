@@ -11,7 +11,7 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Create a custom image from a VM - PowerShell
+toc_title: Create a custom image from a VM using PowerShell
 toc_fullpath: Users/How To/azs-how-create-vm-image-powershell.md
 toc_mdlink: azs-how-create-vm-image-powershell.md
 ---
