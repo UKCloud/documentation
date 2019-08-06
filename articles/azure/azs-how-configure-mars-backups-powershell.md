@@ -41,7 +41,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ## Setup the MARS agent using PowerShell
 
-The script used in this article can be found [here](https://github.com/UKCloud/AzureStack/blob/master/Users/Extensions/Windows/AzureBackupConfig.ps1). It provides docstrings on additional parameters which are not used in article.
+The script used in this article can be found [here](https://github.com/UKCloud/AzureStack/blob/master/Users/Extensions/Windows/AzureBackupConfig.ps1). It provides docstrings on additional parameters which are not used in this article.
 
 ### Declare variables
 
