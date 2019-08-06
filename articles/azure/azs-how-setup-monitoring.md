@@ -37,7 +37,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 1. Log in to the [public Azure portal](https://portal.azure.com).
 
-2. Create a *Log Analytics workspace* in your Azure subscription:
+2. Create a Log Analytics workspace in your Azure subscription:
 
     - Click **Create a resource**.
 
@@ -51,33 +51,33 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Provide the following:
 
-        - A **Name** for the Log Analytics workspace. Example: `DefaultLAWorkspace`.
+        - A name for the **Log Analytics Workspace**, for example: `DefaultLAWorkspace`
 
-        - A **Subscription** to link the workspace to.
+        - A **Subscription** to link the workspace to
 
-        - A **Resource Group** to host the workspace in.
+        - A **Resource group** to host the workspace in
 
-        - A **Location** to host the workspace in.
+        - A **Location** to host the workspace in
 
         > [!NOTE]
         > The currently supported locations are: *West Central US*, *East US*, *Canada Central*, *UK South*, *West Europe* and *Southeast Asia*.
 
-        - A *Pricing Tier* to use.
+        - A **Pricing tier** to use
 
         The following example shows the blade with all items filled out:
 
         ![Log Analytics workspace creation](images/azs-browser-example-log-analytics-workspace.png)
 
-    - Click **OK** once finished. The **Log Analytics workspace** will now begin deploying. A notification will appear in the top right of the portal.
+    - Click **OK** once finished. The Log Analytics workspace will now begin deploying. A notification will appear in the top right of the portal.
 
-3. Once deployment is complete, navigate to the resource group you placed the **Log Analytics workspace** in.
+3. Once deployment is complete, navigate to the resource group you placed the Log Analytics workspace in.
 
-    - Click the newly created workspace. On the new blade, under *Settings*, select *Advanced settings*, then select *Windows* or *Linux* servers depending on the *VM Type* you want to add analytics too.
+    - Select the newly created workspace. On the new blade, under *Settings*, select **Advanced settings**, then select **Windows Servers** or **Linux Servers** depending on the VM type you want to add analytics too.
     Note down the **Workspace ID** and **Primary Key** values.
 
        ![Log Analytics workspace advanced settings](images/azs-browser-log-analytics-workspace-advanced-settings.png)
 
-    - Within *Advanced settings*, select the *Data* blade, and click **VM Type Performance Counters**.
+    - Within *Advanced settings*, select the *Data* blade, and click **Windows Performance Counters** or **Linux Performance Counters**.
 
     - Ensure all counters are selected and click **Add the selected performance counters**.
 
@@ -90,7 +90,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 4. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
 
-5. Navigate to the VM that you want to enable **Azure Monitor** on and under *Settings*, select the *Extensions* blade.
+5. Navigate to the VM that you want to enable Azure Monitor on and under *Settings*, select the *Extensions* blade.
 
     > [!WARNING]
     > For any monitoring to work correctly, the VM **must** have HTTPS (Port 443) enabled in the **Network Security Group** rules.
