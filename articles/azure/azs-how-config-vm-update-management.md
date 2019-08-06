@@ -1,7 +1,7 @@
 ---
 title: How to configure VM updates and management on Azure Stack | UKCloud Ltd
 description: Describes how to use Azure Monitor to configure VM updates and management on Azure Stack
-services:
+services: azure-stack
 author: Daniel Brennand
 reviewer: 
 lastreviewed: 
@@ -57,18 +57,18 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     - Provide the following:
 
-        - A name for the **Log Analytics Workspace**. Example: `DefaultLAWorkspace`
+        - A name for the **Log Analytics Workspace**. Example: `DefaultLAWorkspace`.
 
-        - A **Subscription** to link the workspace to
+        - A **Subscription** to link the workspace to.
 
-        - A **Resource group** to host the workspace in
+        - A **Resource group** to host the workspace in.
 
-        - A **Location** to host the workspace in
+        - A **Location** to host the workspace in.
 
         > [!NOTE]
         > The currently supported locations are: *West Central US*, *East US*, *Canada Central*, *UK South*, *West Europe* and *Southeast Asia*.
 
-        - A **Pricing tier** to use
+        - A **Pricing tier** to use.
 
         The following example shows the blade with all items filled out:
 
