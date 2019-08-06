@@ -36,7 +36,7 @@ This article explains how to setup the MARS agent to backup file(s) and folder(s
 
 To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > The MARS agent is **only** supported on Windows VMs. Linux is **not** supported.
 
 ## Setup the MARS agent using PowerShell
