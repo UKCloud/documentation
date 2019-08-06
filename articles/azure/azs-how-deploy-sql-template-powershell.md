@@ -18,7 +18,7 @@ toc_mdlink: azs-how-deploy-sql-template-powershell.md
 
 # How to deploy an SQL template to Azure Stack using PowerShell
 
-This document explains how to deploy SQL Always On Cluster using ARM Template to Azure Stack using PowerShell.
+This article explains how to deploy SQL Always On Cluster using ARM Template to Azure Stack using PowerShell.
 
 It will guide you through the process of:
 
@@ -57,7 +57,7 @@ Prerequisites from a Windows-based external client are:
 SQL Always On Repository - [sql-2016-alwayson](https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master/sql-2016-alwayson)
 
 > [!NOTE]
-> This will download just sql-2016-alwayson folder from the repository instead of downloading all of it.
+> This will download just the sql-2016-alwayson folder from the repository instead of downloading all of it.
 >
 > Change **RepoDirectory** to the desired folder.
 
@@ -77,7 +77,7 @@ SQL Always On Repository - [sql-2016-alwayson](https://github.com/Azure/AzureSta
 
 ## What does it deploy?
 
-This template deploys two SQL Server 2016 SP1 or SP2 Enterprise / Standard / Developer instances in the Always On Availability Group using the PowerShell DSC Extension. It creates the following resources:
+This template deploys two SQL Server 2016 SP1 or SP2 Enterprise / Standard / Developer instances in the Always On Availability Group using the PowerShell DSC extension. It creates the following resources:
 
 - A network security group.
 
@@ -152,11 +152,11 @@ The images used to create this deployment are:
 
 3. Log in to your Azure Stack *Subscription* with Service Principal Name (SPN)
 
-4. Check if Resource Group exits and create one if it does not.
+4. Check if resource group exits and create one if it does not.
 
-5. Test Deployment JSON
+5. Test deployment JSON.
 
-6. Deploy Resources from ARM Template
+6. Deploy resources from ARM Template.
 
 ## List of parameters you can define in the template
 
@@ -214,50 +214,48 @@ Change the required variables as per your environment and run the following scri
 > In the example below it has been already set accordingly.
 >
 > To change which SQL server version to deploy, set **$SqlServerOffer** accordingly: **`SQL2016SP1-WS2016`**, **`SQL2016SP2-WS2016`**.
-> Current default is set to **`SQL2016SP2-WS2016`**.
+> The current default is set to **`SQL2016SP2-WS2016`**.
 >
 > To change which SQL server SKU to deploy, set **SqlServerSKU** accordingly: **`Enterprise`**, **`Standard`**, **`SQLDEV`**.
 > The current default is set to **`Enterprise`**.
 
 ```powershell
 # Declare login variables
-$AppGUID = "<GUID of your SPN Application>"
-$AppPassword = '<your password>'
+$AppGUID = "<ClientID of your SPN Application>"
+$AppPassword = "<YourPassword>"
 
-$TenantDomain = "<myDirectoryTenantName>"
+$TenantDomain = "<MyDirectoryTenantName>"
 $ArmEndpoint = "https://management.frn00006.azure.ukcloud.com"
 $AzureStackEnvironment = "AzureStackUser"
 
-# Declare Variables for the template
-$AdminPassword = '<your password>'
+# Declare variables for the template
+$AdminPassword = "<YourPassword>"
 $AdminPasswordCred = ConvertTo-SecureString -String "$AdminPassword" -AsPlainText -Force
 
-$SqlServerServiceAccountPassword = '<your password>'
+$SqlServerServiceAccountPassword = "<YourPassword>"
 $SqlServerServiceAccountPasswordCred = ConvertTo-SecureString -String "$SqlServerServiceAccountPassword" -AsPlainText -Force
 
-$SqlAuthPassword = '<your password>'
+$SqlAuthPassword = "<YourPassword>"
 $SqlAuthPasswordCred = ConvertTo-SecureString -String "$SqlAuthPassword" -AsPlainText -Force
 
 $DomainName = "<ActiveDirectoryDomainName>"
 $AdminUsername = "<AdminUsername>"
 $SqlServerServiceAccountUserName = "<ServiceAccountUsername>"
 
-$CustomTemplateJSON = "<directory>\azuredeploy.json"
-$CustomTemplateParamJSON = "<directory>\azuredeploy.parameters.json"
+$CustomTemplateJSON = "<Directory>\azuredeploy.json"
 
 $DnsSuffix = "azure.ukcloud.com"
-$ResourceGroupName = "SqlAlwaysOnRG01"
+$ResourceGroupName = "Sql2016AlwaysOnRG01"
 $Location = (Get-AzureRmLocation).Location
 
-$SqlServerVersion  = "SQL2016SP1-WS2016-STD"
-$PlatformFaultDomainCount = 3
-$PlatformUpdateDomainCount = 5
-$ArmDeploymentName = "SqlAlwaysOnDeployment"
+$SqlServerOffer = "SQL2016SP2-WS2016"
+$SqlServerSKU = "Enterprise"
+$ArmDeploymentName = "Sql2016AlwaysOnDeployment"
 
-# Create Azure Stack Environment so that you can log in to it
+# Create Azure Stack environment so that you can log in to it
 Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
-# Create your SPN  Credentials Login
+# Create your SPN Credentials Login
 # Note: (Username is "<ApplicationId>@<AAD Domain>")
 $AzsUsername = $AppGUID + "@" + $TenantDomain
 $AzsUserPassword = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
@@ -266,11 +264,11 @@ $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -Argum
 # Log in to Azure Stack using SPN account
 Connect-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $TenantDomain
 
-# Create New ResourceGroup if it does not exist
+# Create a new resource group if it does not exist
 try {
     $RG = Get-AzureRmResourceGroup -Name $ResourceGroupName -Location $Location -ErrorAction 'SilentlyContinue'
     if ( -not $RG) {
-        Write-Output -InputObject "Didn't find the resource group."
+        Write-Output -InputObject "Could not find the resource group, creating now..."
         New-AzureRmResourceGroup -Name $ResourceGroupName -Location $Location -Verbose
     }
     else {
@@ -282,13 +280,13 @@ catch {
     exit
 }
 
-# Test Deployment
-Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -Verbose
+# Test deployment
+Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -Verbose
 
-# Start Deployment
-New-AzureRmResourceGroupDeployment -Name $ArmDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -Verbose
+# Start deployment
+New-AzureRmResourceGroupDeployment -Name $ArmDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -Verbose
 
-# Verify Deployment
+# Verify deployment
 ## Note: $ArmDeploymentName can be changed to query each deployment in your resource group
 Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $ResourceGroupName
 ```
@@ -297,22 +295,16 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 > Every parameter in the [parameter list](#list-of-the-parameters-you-can-define) can be defined in the **`New-AzureRmResourceGroupDeployment`** by simply adding *`-<ParameterName>`*
 >
 > For example:
-> `-SqlVMSize "Standard_A3"`
+> `-WitnessVMSize "Standard_D1_v2"`
 
 > [!NOTE]
-> If the template fails validation and you need to see detailed error message you can do:
+> If the template fails validation, PowerShell will output the reason for the failure (see below):
 >
 > ```powershell
-> Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -SqlVMSize "Standard_A4"
->
-> Code    : MultipleErrorsOccurred
-> Message : Multiple error occurred: BadRequest. Please see details.
-> Details : {Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResourceManagerError}
->
->(Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -TemplateParameterFile $CustomTemplateParamJSON -DnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerVersion $SqlServerVersion -PlatformFaultDomainCount $PlatformFaultDomainCount -PlatformUpdateDomainCount $PlatformUpdateDomainCount -SqlVMSize "Standard_A4").Details
+>Test-AzureRmResourceGroupDeployment -ResourceGroupName $ResourceGroupName -TemplateFile $CustomTemplateJSON -dnsSuffix $DnsSuffix -AdminPassword $AdminPasswordCred -SqlServerServiceAccountPassword $SqlServerServiceAccountPasswordCred -SqlAuthPassword $SqlAuthPasswordCred -DomainName $DomainName -AdminUsername $AdminUsername -SqlServerServiceAccountUserName $SqlServerServiceAccountUserName -SqlServerOffer $SqlServerOffer -SqlServerSku $SqlServerSKU -WitnessVMSize "Standard_232" -Verbose
 >
 > Code    : InvalidTemplate
-> Message : Deployment template validation failed: 'The provided value 'Standard_A4' for the template parameter 'sqlVMSize' at line '31' and column '23' is not valid. The parameter value is not part of the allowed value(s): > 'Standard_A1,Standard_A2,Standard_A3'.'.
+> Message : Deployment template validation failed: 'The provided value 'Standard_232' for the template parameter 'witnessVMSize' at line '39' and column '26' is not valid. The parameter value is not part of the allowed value(s): 'Standard_D1_v2,Standard_D2_v2'.'.
 > Details :
 > ```
 
