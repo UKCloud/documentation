@@ -60,30 +60,29 @@ Enter details below to provide values for the variables in the scripts in this a
 
 From an elevated (administrator) PowerShell console, run the following script to download and execute the backup process:
 
-    ```powershell
-    # Declare variables
-    $ModulePath = "C:\Users\$env:UserName\Documents\WindowsPowerShell\Modules\"
-    $ModuleName = "AzureBackupConfig.ps1"
+<pre><code class="language-PowerShell"># Declare variables
+$ModulePath = "C:\Users\$env:UserName\Documents\WindowsPowerShell\Modules\"
+$ModuleName = "AzureBackupConfig.ps1"
 
-    $ClientID = ""
-    $ClientSecret = ""
-    $TenantID = ""
-    $VaultName = ""
-    $EncryptionKey = ""
-    $BackupDays = ""
-    $BackupTimes = ""
-    $FoldersToBackup = ""
+$ClientID = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
+$ClientSecret = "<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk|]=</output>"
+$TenantID = "<output form="tenantid" name="result" style="display: inline;">31537af4-6d77-4bb9-a681-d2394888ea26</output>"
+$VaultName = "<output form="vaultname" name="result" style="display: inline;">AzureStackVault</output>"
+$EncryptionKey = "<output form="encryptionkey" name="result" style="display: inline;">ExampleEncryptionKey</output>"
+$BackupDays = "<output form="backupdays" name="result" style="display: inline;">Wednesday", "Sunday</output>"
+$BackupTimes = "<output form="backuptimes" name="result" style="display: inline;">16:00", "20:00</output>"
+$FoldersToBackup = "<output form="folderstobackup" name="result" style="display: inline;">C:\Users", "C:\Important</output>"
 
-    # Download the AzureBackupConfig script
-    Write-Output -InputObject "Downloading AzureBackupConfig.ps1 script"
-    $OutPath = Join-Path -Path $ModulePath -ChildPath $ModuleName
-    $WebClient = New-Object System.Net.WebClient
-    $WebClient.DownloadFile("https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1", $OutPath)
+# Download the AzureBackupConfig script
+Write-Output -InputObject "Downloading AzureBackupConfig.ps1 script"
+$OutPath = Join-Path -Path $ModulePath -ChildPath $ModuleName
+$WebClient = New-Object System.Net.WebClient
+$WebClient.DownloadFile("https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1", $OutPath)
 
-    # Run the AzureBackupConfig script
-    Write-Output -InputObject "Running AzureBackupConfig with provided parameters"
-    . "$ModulePath\$ModuleName" -ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -BackupDays $BackupDays -BackupTimes $BackupTimes -FoldersToBackup $FoldersToBackup
-    ```
+# Run the AzureBackupConfig script
+Write-Output -InputObject "Running AzureBackupConfig with provided parameters"
+. "$ModulePath\$ModuleName" -ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -BackupDays $BackupDays -BackupTimes $BackupTimes -FoldersToBackup $FoldersToBackup -BackupNow
+</code></pre>
 
 ## Feedback
 
