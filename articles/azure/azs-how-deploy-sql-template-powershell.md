@@ -83,19 +83,19 @@ This template deploys two SQL Server 2016 SP1 or SP2 Enterprise / Standard / Dev
 
 - A virtual network.
 
-- Four storage accounts (One for AD, One for SQL, one for file share witness and one for VM diagnostic).
+- Four storage accounts (One for AD, one for SQL, one for file share witness and one for VM diagnostic).
 
-- Four public IP address (One for AD, Two for each SQL VM and one for public LB bound to SQL always on listener).
+- Four public IP address (One for AD, two for each SQL VM and one for public LB bound to SQL always on listener).
 
 - One external load balancer for SQL VMs with public IP bound to the SQL always on listener.
 
 - One VM (WS2016) configured as domain controller for a new forest with a single domain.
 
-- Two VM (WS2016) configured as SQL Server 2016 SP1 or SP2 enterprise/standard/developer and clustered.
+- Two VMs (WS2016) configured as SQL Server 2016 SP1 or SP2 Enterprise/Standard/Developer.
 
 - One VM (WS2016) configured as file share witness for the cluster.
 
-- One Availability Set containing the SQL and FSW 2016 VMs.
+- One availability set containing the SQL and FSW 2016 VMs.
 
 ### Notes
 
@@ -134,7 +134,7 @@ The images used to create this deployment are:
 
 ### Configuration
 
-- Each SQL VM will have the number and size of data disks specified, of up to 1TiB each. The SQL extension will configure these into a single volume using Storage Spaces.
+- Each SQL VM will have the number and size of data disks specified, of up to 1TiB each. The SQL extension will configure these into a single volume using storage spaces.
 
 - The template configures the SQL instances with contained database authentication set to **true**.
 
@@ -255,7 +255,7 @@ $ArmDeploymentName = "Sql2016AlwaysOnDeployment"
 # Create Azure Stack environment so that you can log in to it
 Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
-# Create your SPN Credentials Login
+# Create your SPN credentials login
 # Note: (Username is "<ApplicationId>@<AAD Domain>")
 $AzsUsername = $AppGUID + "@" + $TenantDomain
 $AzsUserPassword = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
