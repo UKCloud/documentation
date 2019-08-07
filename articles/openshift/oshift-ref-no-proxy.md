@@ -29,7 +29,7 @@ Squid proxy enables containers running on worker nodes (with government communit
 
 ## Purpose of no_proxy
 
-`no_proxy` is an environment variable used in conjunction with `http_proxy` and `https_proxy`. If an HTTP(S) connection attempt is destined for an address or hostname listed in `no_proxy`, the traffic will not be requested via the proxy and will instead use the routes on the current node, ensuring connectivity is not lost with alternate community or private networks.
+`no_proxy` is an environment variable used in conjunction with `http_proxy` and `https_proxy`. If an HTTP(S) connection attempt is destined for an address or hostname listed in `no_proxy`, the traffic will not be requested via the proxy and will instead use the routes on the current node, ensuring connectivity is not lost with community or private networks.
 
 ## Viewing proxy environment variables
 
