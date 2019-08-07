@@ -22,7 +22,7 @@ toc_mdlink: azs-how-configure-mars-backups-powershell.md
 
 This article explains how to setup the MARS agent to backup file(s) and folder(s) from Azure Stack VMs to Microsoft Azure recovery services vaults.
 
-* Recovery Services vaults store all backups and recovery points you create over time, and contains the backup policy applied to backed up machines.
+Recovery Services vaults store all backups and recovery points you create over time, and contains the backup policy applied to backed up machines.
 
 ## Official documentation
 
@@ -34,7 +34,7 @@ This article explains how to setup the MARS agent to backup file(s) and folder(s
 
 ## Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.
+To complete the steps in this article, you must have appropriate access to a subscription in both public Azure and Azure Stack portals.
 
 > [!IMPORTANT]
 > The MARS agent is **only** supported on Windows VMs. Linux is **not** supported.
