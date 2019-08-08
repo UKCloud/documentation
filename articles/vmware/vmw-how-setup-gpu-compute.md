@@ -29,7 +29,7 @@ workloads:
 
 - **Visualisation workloads.** Describes the traditional use cases for GPU processing. These include simulation, powering desktop applications with graphics content (such as computer aided design), video encoding, rendering or streaming.
 
-This article provides an introduction for how to use Cloud GPU for compute workloads and describes the tasks you need to perform to get the service up and running.
+This article provides an introduction for how to use Cloud GPU for compute workloads and describes the tasks you need to perform to get the service up and running for UKCloud for VMware.
 
 ### Intended audience
 
@@ -103,7 +103,7 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 4. Click the compute service (vOrg) that contains the VDC in which you want to create the VM.
 
     > [!IMPORTANT]
-    > You must create your VM in a PRIORITY VDC. If you don't already have a VDC for this type of workload, you can create one using the steps in the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md#building-a-virtual-data-centre).
+    > You must create your VM in a PRIORITY VDC. If you don't already have a VDC for this type of workload, you can create one using the steps in the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md#building-a-virtual-data-centre).
 
 5. On the *vCloud Director* tab, enter your password and click **Confirm**.
 
@@ -117,12 +117,12 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
     ![vApp Templates menu option](images/vmw-vcd-mnu-vapp-templates.png)
 
-8. Click the triple-dot icon next to the **GPGPU** template and select **Create vApp**.
+8. Click the triple-dot icon next to the **GPGPU** template for your preferred operating system (for example **CentOS7x64-GPGPU-Blank**) and select **Create vApp**.
 
     ![Create vApp menu option](images/vmw-vcd-mnu-create-vapp-from-template.png)
 
     > [!NOTE]
-    > The GPGPU template provides a shell VM with no disks attached, hence no operating system installed. You'll need add the necessary disks so that you can install your preferred operating system on the VM.
+    > The GPGPU templates provides a shell VM with no disks attached, hence no operating system installed. You'll need add the necessary disks so that you can install your preferred operating system on the VM.
 
 9. On the *Select Name* page of the *Create vApp from Template* dialog box, give the vApp a **Name** and **Description**, select the appropriate **Runtime lease** and **Storage lease** then click **Next**.
 
@@ -137,30 +137,41 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
     ![Configure Resources page](images/vmw-vcd-vapp-from-template-resources.png)
 
-12. On the *Configure Networking* page, from the **Networks** list, select the network that you want to attach your VM to and click **Next**.
+12. On the *Ready to Complete* page, review your settings and then click **Finish** to start the deployment.
 
-    ![Configure Networking page](images/vmw-vcd-vapp-from-template-network.png)
+    You can check progress by expanding the *Recent Tasks* section at the bottom of the vCloud Director interface.
 
-13. On the *Customize Hardware* page, add an **LSI Logic SAS (SCSI)** hard disk of a size appropriate for the operating system that you plan to install on your VM and then click **Next**.
+13. After the VM has been deployed, click the menu icon and select **Datacenters**.
 
-    ![Customize Hardware page](images/vmw-vcd-vapp-from-template-hardware.png)
+    ![Datacenters menu option](images/vmw-vcd-mnu-dcs.png)
 
-14. On the *Ready to Complete* page, review your settings and then click **Finish** to start the deployment.
+14. Select your VDC, then in the card for your newly-deployed VM, select **Details**.
 
-    This creates a vApp with a shell VM.
+15. Expand the *Hardware* section.
 
-15. After the VM has been deployed, right-click it and select **Power On**, then use the popout console to go through the setup procedure.
+16. In the *Hard Disks* section, click **Add** and add a hard disk of an appropriate size for your operating system.
 
-16. When your VM is ready, install your preferred operating system.
+    > [!NOTE]
+    > We recommend using **Paravirtual (SCSI)** disk controllers, but for older operating systems, you may need to use **LSI Logic SAS (SCSI)**.
 
-17. When you're finished, right-click the vApp that contains your VM and select **Power Off**.
+17. In the card for the VM, select **Actions** then **Power On**.
+
+18. Use the popout console to go through the setup procedure.
+
+    ![Popout console icon](images/vmw-vcd-ico-console-gpu.png)
+
+19. When your VM is ready, install your preferred operating system.
+
+    For detailed steps, see [*Installing an operating system into the VM*](vmw-how-create-vm-from-scratch.md#installing-an-operating-system-into-the-vm)
+
+20. When you're finished, select **Actions** then **Power Off**.
 
     > [!IMPORTANT]
-    > It is essential that you power off the vApp so that UKCloud can migrate the VM to a GPU‑enabled server.
+    > It is essential that you power off the VM so that UKCloud can migrate it to a GPU‑enabled server.
 
 ## Provisioning your Cloud GPU service
 
-When your VM is ready, use [My Calls](https://portal.skyscapecloud.com/support/ivanti) in the UKCloud Portal to raise a service request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can complete the setup of your service:
+When your VM is ready, use [My Calls](https://portal.skyscapecloud.com/support/ivanti) in the UKCloud Portal to raise a Service Request for the Cloud GPU service. Provide the following details in the request so that UKCloud can complete the setup of your service:
 
 - VDC name
 
@@ -180,27 +191,25 @@ To install NVIDIA drivers:
 
 2. In the card for the VM, select **Actions** then **Insert Media**.
 
-    ![Insert CD/DVD from Catalog menu option](images/gpu-vcd-vm-mnu-insert-cd.png)
+    ![Insert CD/DVD from Catalog menu option](images/vmw-vcd-mnu-insert-media.png)
 
-3. In the *Insert CD* dialog box, in the search field, enter vGPU and click the **Refresh** icon.
+3. In the *Insert CD* dialog box, select the vGPU driver ISO and click **Insert**.
 
-    ![Insert CD dialog box](images/gpu-vcd-vm-insert-cd.png)
+    ![Insert CD dialog box](images/vmw-vcd-insert-cd.png)
 
-4. Select the vGPU driver ISO and click **Insert**.
+4. Check the console of VM to ensure that the ISO is mounted.
 
-5. Check the console of VM to ensure that the ISO is mounted.
-
-6. Run the appropriate executable (Windows) or binary (Linux).
+5. Run the appropriate executable (Windows) or binary (Linux).
 
     **On Windows:**
 
-    - From Explorer, double click the driver installer file (NVIDIA*.*.exe).
+    - From Explorer, double click the driver installer file (`NVIDIA*.*.exe`).
 
     - Select **Custom (Advanced)**.
 
     - Select **Perform a clean installation**.
 
-        ![Custom installation options in NVIDIA Installer](images/gpu-nvidia-win-install-driver.png)
+        ![Custom installation options in NVIDIA Installer](images/vmw-nvidia-win-install-driver.png)
 
     - Click **Next**.
 
@@ -263,7 +272,7 @@ To install NVIDIA drivers:
 
 To enable full functionality of the NVIDIA GPU card, your VM must obtain a valid licence from the NVIDIA GRID License Server. To do this, you must configure your edge gateway to allow traffic to and from the license server.
 
-#### Configuring the edge gateway
+### Configuring the edge gateway
 
 To enable access to the NVIDIA GRID License Server from your network, you must create the following firewall rule on your edge gateway:
 
@@ -277,11 +286,11 @@ To enable access to the NVIDIA GRID License Server from your network, you must c
 
 - **Action:** `Allow`
 
-![Add firewall rule dialog box](images/gpu-vcd-add-firewall-rule.png)
+![Add firewall rule dialog box](images/vmw-vcd-firewall-gpu-licence.png)
 
-For more detailed instructions for creating firewall rules, see [*How to create firewall rules*](../vmware/vmw-how-create-firewall-rules.md).
+For more detailed instructions for creating firewall rules, see [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
 
-#### Retrieving a licence (Windows)
+### Retrieving a licence (Windows)
 
 To license GRID Virtual GPU on Windows:
 
@@ -289,7 +298,7 @@ To license GRID Virtual GPU on Windows:
 
 2. In the *NVIDIA Control Panel*, under **Licensing**, select **Manage License**.
 
-    ![Manage License page](images/gpu-nvidia-manage-license.png)
+    ![Manage License page](images/vmw-nvidia-manage-license.png)
 
 3. In the **License Server** field, enter `gpuls.ukcloud.com`.
 
@@ -299,7 +308,7 @@ To license GRID Virtual GPU on Windows:
 
 6. The server will attempt to connect to the license server and pull a licence from the available pool.
 
-    ![License acquired message](images/gpu-nvidia-licence-acquired.png)
+    ![License acquired message](images/vmw-nvidia-licence-acquired.png)
 
 7. Once configured, licensing settings persist across reboots.
 
@@ -358,7 +367,7 @@ To license GRID Virtual GPU on Linux
 
 ## Next steps
 
-In this article, you've learned how to set up your environment to enable the provisioning of your Cloud GPU service and you can now start creating your GPU‑powered applications.
+In this article, you've learned how to set up your UKCloud for VMware environment to enable the provisioning of your Cloud GPU service and you can now start creating your GPU‑powered applications.
 
 For information about NVIDIA virtual GPU software specific to your OS, see:
 
