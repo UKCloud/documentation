@@ -10,7 +10,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: DNS zone forwarding in OpenShift Clusters
+toc_title: DNS zone forwarding in OpenShift clusters
 toc_fullpath: Reference/oshift-ref-dns-zone-forwarding.md
 toc_mdlink: oshift-ref-dns-zone-forwarding.md
 ---
@@ -37,7 +37,7 @@ Where a deployment has connectivity with government community networks, another 
 
 A zone is a domain (for example domain.com) and configuring a forward zone will forward any DNS queries received for that domain and all sub-domains to the configured IP address. This allows different domains to be resolved by separate DNS servers at a granular level if required.
 
-In OpenShift deployments with connectivity to a private network, you may want to resolve a pre-existing internal zone using a private resolver, instead of forwarding these requests to an external service (and therefore routing traffic over an external network.) This gives you the benefit of being able to locate private services that may otherwise be restricted or inaccessible from these networks. Examples of services that could be consumed from OpenShift include: container image registry, binary repository, version control system.
+In OpenShift deployments with connectivity to a private network, you may want to resolve a pre-existing internal zone using a private resolver, instead of forwarding these requests to an external service (and therefore routing traffic over an external network). This gives you the benefit of being able to locate private services that may otherwise be restricted or inaccessible from these networks. Examples of services that could be consumed from OpenShift include: container image registry, binary repository, version control system.
 
 ## Requesting DNS zone forwarding
 
