@@ -113,9 +113,9 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **System Center**
 
-  - UKCloud licensing - we are currently unable to offer this as standard or at an additional cost due to our current Microsoft Windows Server licences.
-
-  - Microsoft Mobility - as per Microsoft's terms, you can use your own licensing to cover this software as long as you have active software assurance in place. If you have System Center Datacentre licensing in place this can be used on up to 10 VMs on the UKCloud platform. However, if you own a standard licence, this only covers 2 VMs. The licence can be used for High Availability, Disaster Recovery Solutions and vMotion events giving you full autonomy to design solutions with resilience in mind whilst being fully licensed.
+  - We are unable to offer this on our public cloud platform in any form.
+  
+  - It is available for customers running dedicated or Private cloud environments in which case it can be purchased via SPLA or BYO licensing using Microsoft mobility with Software Assurance. 
 
 - **SharePoint**
 
