@@ -1,6 +1,6 @@
 ---
-title: How to backup file(s) and folder(s) on Azure Stack VMs using Microsoft Azure recovery services (MARS) - PowerShell | UKCloud Ltd
-description: Provides details on how to install and configure the MARS agent to backup file(s) and folder(s) on Azure Stack
+title: How to back up files and folders on Azure Stack VMs using PowerShell | UKCloud Ltd
+description: Provides details on how to install and configure the Microsoft Azure Recovery Services (MARS) agent to backup files and folders on Azure Stack
 services: azure-stack
 author: Daniel Brennand
 reviewer:
@@ -11,16 +11,16 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: How to backup file(s) and folder(s) on Azure Stack VMs using Microsoft Azure recovery services (MARS) - PowerShell
+toc_title: Back up files and folders - PowerShell
 toc_fullpath: Users/How To/azs-how-configure-mars-backups-powershell.md
 toc_mdlink: azs-how-configure-mars-backups-powershell.md
 ---
 
-# Backing up file(s) and folder(s) on Azure Stack VMs using Microsoft Azure recovery services (MARS) - PowerShell
+# How to back up files and folders on Azure Stack VMs using PowerShell
 
 # Overview
 
-This article explains how to setup the MARS agent to backup file(s) and folder(s) from Azure Stack VMs to Microsoft Azure recovery services vaults.
+This article explains how to setup the Microsoft Azure Recovery Services (MARS) agent to backup files and folders from Azure Stack VMs to Recovery Services vaults.
 
 Recovery Services vaults store all backups and recovery points you create over time, and contains the backup policy applied to backed up machines.
 
@@ -62,29 +62,29 @@ Enter details below to provide values for the variables in the scripts in this a
 
 2. From an elevated (administrator) PowerShell console, run the following script to download the required module and execute the backup process:
 
-<pre><code class="language-PowerShell"># Declare variables
-$ModulePath = "C:\Users\$env:UserName\Documents\WindowsPowerShell\Modules\"
-$ModuleName = "AzureBackupConfig.ps1"
+    <pre><code class="language-PowerShell"># Declare variables
+    $ModulePath = "C:\Users\$env:USERNAME\Documents\WindowsPowerShell\Modules\"
+    $ModuleName = "AzureBackupConfig.ps1"
 
-$ClientID = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
-$ClientSecret = "<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk|]=</output>"
-$TenantID = "<output form="tenantid" name="result" style="display: inline;">31537af4-6d77-4bb9-a681-d2394888ea26</output>"
-$VaultName = "<output form="vaultname" name="result" style="display: inline;">AzureStackVault</output>"
-$EncryptionKey = "<output form="encryptionkey" name="result" style="display: inline;">ExampleEncryptionKey</output>"
-$BackupDays = "<output form="backupdays" name="result" style="display: inline;">Wednesday", "Sunday</output>"
-$BackupTimes = "<output form="backuptimes" name="result" style="display: inline;">16:00", "20:00</output>"
-$FoldersToBackup = "<output form="folderstobackup" name="result" style="display: inline;">C:\Users", "C:\Important</output>"
+    $ClientID = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
+    $ClientSecret = "<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk|]=</output>"
+    $TenantID = "<output form="tenantid" name="result" style="display: inline;">31537af4-6d77-4bb9-a681-d2394888ea26</output>"
+    $VaultName = "<output form="vaultname" name="result" style="display: inline;">AzureStackVault</output>"
+    $EncryptionKey = "<output form="encryptionkey" name="result" style="display: inline;">ExampleEncryptionKey</output>"
+    $BackupDays = "<output form="backupdays" name="result" style="display: inline;">Wednesday", "Sunday</output>"
+    $BackupTimes = "<output form="backuptimes" name="result" style="display: inline;">16:00", "20:00</output>"
+    $FoldersToBackup = "<output form="folderstobackup" name="result" style="display: inline;">C:\Users", "C:\Important</output>"
 
-# Download the AzureBackupConfig script
-Write-Output -InputObject "Downloading AzureBackupConfig.ps1 script"
-$OutPath = Join-Path -Path $ModulePath -ChildPath $ModuleName
-$WebClient = New-Object System.Net.WebClient
-$WebClient.DownloadFile("https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1", $OutPath)
+    # Download the AzureBackupConfig script
+    Write-Output -InputObject "Downloading AzureBackupConfig.ps1 script"
+    $OutPath = Join-Path -Path $ModulePath -ChildPath $ModuleName
+    $WebClient = New-Object System.Net.WebClient
+    $WebClient.DownloadFile("https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1", $OutPath)
 
-# Run the AzureBackupConfig script
-Write-Output -InputObject "Running AzureBackupConfig with provided parameters"
-. "$ModulePath\$ModuleName" -ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -BackupDays $BackupDays -BackupTimes $BackupTimes -FoldersToBackup $FoldersToBackup -BackupNow
-</code></pre>
+    # Run the AzureBackupConfig script
+    Write-Output -InputObject "Running AzureBackupConfig with provided parameters"
+    . "$ModulePath\$ModuleName" -ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -BackupDays $BackupDays -BackupTimes $BackupTimes -FoldersToBackup $FoldersToBackup -BackupNow
+    </code></pre>
 
 ## Feedback
 
