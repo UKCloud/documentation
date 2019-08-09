@@ -11,7 +11,7 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Create a custom image from a VM using PowerShell
+toc_title: Create a custom image from a VM - PowerShell
 toc_fullpath: Users/How To/azs-how-create-vm-image-powershell.md
 toc_mdlink: azs-how-create-vm-image-powershell.md
 ---
@@ -138,7 +138,7 @@ New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -I
 
 ### [Windows](#tab/tabid-a/tabid-1)
 
-1. Log in to your Windows VM.
+1. Log in to your Windows VM using remote desktop protocol (RDP).
 
 2. Run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
 
@@ -156,9 +156,9 @@ New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -I
 
 ### [Linux](#tab/tabid-b/tabid-1)
 
-1. Log in to your Linux VM.
+1. Log in to your Linux VM using secure shell (SSH).
 
-2. Run the following command: `sudo su` and enter your sudo password.
+2. Run the following command: `sudo su` and enter your root password.
 
 3. Run the following command: `shutdown && waagent -deprovision+user -force`.
 

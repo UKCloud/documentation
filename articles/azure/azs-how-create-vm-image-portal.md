@@ -11,7 +11,7 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Create a custom image from a VM using the UKCloud Azure Stack portal
+toc_title: Create a custom image from a VM - Portal
 toc_fullpath: Users/How To/azs-how-create-vm-image-portal.md
 toc_mdlink: azs-how-create-vm-image-portal.md
 ---
@@ -60,7 +60,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 9. Wait for the image creation process to finish.
 
-10. Once complete, your VM image should now appear in the resource group your VM was in.
+10. Once complete, your VM image will appear in the resource group you selected in step 6.
 
     ![Custom image resource group](images/azs-browser-custom-image-resource-group.png)
 
@@ -68,19 +68,15 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 12. In the *new* page, click **Create VM**.
 
-13. Enter a **Name**, **Username**, **Authentication type**, **Password** and **Resource group** for the new VM.
+13. Enter a **Name**, **Username**, **Authentication type**, **Password** and **Resource group** for the new VM. Click **OK**.
 
-14. Click **OK**.
+14. Select a VM size. Click **Select**.
 
-15. Select a VM size.
+15. In *Configure optional features*, under *Select public inbound ports*, select the ports you want to provision.
 
-16. Click **Select**.
+16. Click **OK**.
 
-17. In *Configure optional features*, under *Select public inbound ports*, select the ports you want to provision.
-
-18. Click **OK**.
-
-19. Review the *Summary* blade and click **OK**. The new VM will now begin deployment.
+17. Review the *Summary* blade and click **OK**. The new VM will now begin deployment.
 
 ![Custom image VM summary](images/azs-browser-custom-image-vm-summary.png)
 
@@ -88,7 +84,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ### [Windows](#tab/tabid-a/tabid-1)
 
-1. Log in to your Windows VM.
+1. Log in to your Windows VM using remote desktop protocol (RDP).
 
 2. Run the following command: `C:\Windows\System32\Sysprep\sysprep.exe`.
 
@@ -106,9 +102,9 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 ### [Linux](#tab/tabid-b/tabid-1)
 
-1. Log in to your Linux VM.
+1. Log in to your Linux VM using secure shell (SSH).
 
-2. Run the following command: `sudo su` and enter your sudo password.
+2. Run the following command: `sudo su` and enter your root password.
 
 3. Run the following command: `shutdown && waagent -deprovision+user -force`.
 
