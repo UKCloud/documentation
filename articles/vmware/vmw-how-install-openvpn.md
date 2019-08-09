@@ -71,63 +71,17 @@ To ensure you're running the latest release of OpenVPN, we recommend that you do
 
 ## Deploying the OpenVPN appliance
 
-The steps for deploying the OpenVPN appliance depend on the version of vCloud Director available in your environment:
-
-- [vCloud Director 8.20](#vcloud-director-820)
-
-- [vCloud Director 9.1](#vcloud-director-91)
-
-### vCloud Director 8.20
-
-To deploy the OpenVPN appliance:
-
-1. In vCloud Director, select the **My Cloud** tab.
-
-    ![vCloud Director My Cloud tab](images/vmw-vcd-tab-my-cloud.png)
-
-2. In the left navigation panel, select **vApps**.
-
-3. In the toolbar, click the **Add vApp from OVF** icon.
-
-    ![Add vApp from OVF button](images/vmw-vcd-openvpn-btn-vapp-from-ovf.png)
-
-4. In the *Add vApp from OVF* wizard, on the *Select Source* page, select **Local file** and browse to the OVA file that you downloaded, then click **Next**.
-
-    The appliance will be deployed as a single VM inside the vApp.
-
-5. On the *Review Details* page, confirm the details of the OVA file and then click **Next**
-
-6. On the *Select Name and Location* page, enter a meaningful **Name** and **Description** for your vApp
-
-7. From the **Virtual Datacenter** list, select the VDC in which you want to create the vApp and then click **Next**.
-
-8. On the *Configure Resources* page, select your desired storage policy and then click **Next**.
-
-9. On the *Configure Networking* page, provide a name for the VM.
-
-10. Select the **Switch to the advanced networking workflow** check box.
-
-    ![Advanced networking option](images/vmw-vcd-openvpn-advanced-networking.png)
-
-    This enables you to select your desired network and change the IP assignment method. Typically, we recommend that you deploy the VPN appliance to its own network segment (as described in [Preparing your virtual data centre](#preparing-your-virtual-data-centre), and use the Static IP Pool method of IP assignment.
-
-11. Continue through the wizard and click **Finish**. There are no further changes necessary unless you want to customise the vApp further to suit your environment.
-
-12. When the vApp has deployed and is powered on, you'll need to reset (reboot) the VM before logging in for the first time to force the networking changes made during VMWare's guest customisations to take effect before you start configuring OpenVPN.
-
-### vCloud Director 9.1
-
 To deploy the OpenVPN appliance:
 
 1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC in which you want to depoly the OpenVPN appliance.
 
 2. In the left navigation panel, select **vApps**.
 
-    ![vApps tab in vCloud Director](images/vmw-vcd91-tab-vapps.png)
+    ![vApps tab in vCloud Director](images/vmw-vcd-tab-vapps.png)
 
 3. Click **Add vApp from OVF**.
 
-    ![Add vApp from OVF option](images/vmw-vcd-tp-vapp-from-ovf.png)
+    ![Add vApp from OVF option](images/vmw-vcd-btn-vapp-from-ovf.png)
 
 4. Select the OVA that you downloaded then click **Next**.
 

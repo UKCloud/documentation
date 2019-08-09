@@ -26,7 +26,6 @@ The following video provides an overview of the vCloud Director 9.1 user interfa
 
 ## Related articles
 
-- [*Upgrade to vCloud Director 9.1*](vmw-ref-vcd-91.md)
 - [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
 - [*How to build a virtual machine with UKCloud for VMware*](vmw-gs-build-vm-vcd.md)
 
