@@ -136,56 +136,15 @@
 </li>
 </ol>
 <h2 id="deploying-the-openvpn-appliance">Deploying the OpenVPN appliance</h2>
-<p>The steps for deploying the OpenVPN appliance depend on the version of vCloud Director available in your environment:</p>
-<ul>
-<li><p><a href="#vcloud-director-820">vCloud Director 8.20</a></p>
-</li>
-<li><p><a href="#vcloud-director-91">vCloud Director 9.1</a></p>
-</li>
-</ul>
-<h3 id="vcloud-director-820">vCloud Director 8.20</h3>
-<p>To deploy the OpenVPN appliance:</p>
-<ol>
-<li><p>In vCloud Director, select the <strong>My Cloud</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-my-cloud.png" alt="vCloud Director My Cloud tab"></p>
-</li>
-<li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
-</li>
-<li><p>In the toolbar, click the <strong>Add vApp from OVF</strong> icon.</p>
-<p><img src="images/vmw-vcd-openvpn-btn-vapp-from-ovf.png" alt="Add vApp from OVF button"></p>
-</li>
-<li><p>In the <em>Add vApp from OVF</em> wizard, on the <em>Select Source</em> page, select <strong>Local file</strong> and browse to the OVA file that you downloaded, then click <strong>Next</strong>.</p>
-<p>The appliance will be deployed as a single VM inside the vApp.</p>
-</li>
-<li><p>On the <em>Review Details</em> page, confirm the details of the OVA file and then click <strong>Next</strong></p>
-</li>
-<li><p>On the <em>Select Name and Location</em> page, enter a meaningful <strong>Name</strong> and <strong>Description</strong> for your vApp</p>
-</li>
-<li><p>From the <strong>Virtual Datacenter</strong> list, select the VDC in which you want to create the vApp and then click <strong>Next</strong>.</p>
-</li>
-<li><p>On the <em>Configure Resources</em> page, select your desired storage policy and then click <strong>Next</strong>.</p>
-</li>
-<li><p>On the <em>Configure Networking</em> page, provide a name for the VM.</p>
-</li>
-<li><p>Select the <strong>Switch to the advanced networking workflow</strong> check box.</p>
-<p><img src="images/vmw-vcd-openvpn-advanced-networking.png" alt="Advanced networking option"></p>
-<p>This enables you to select your desired network and change the IP assignment method. Typically, we recommend that you deploy the VPN appliance to its own network segment (as described in <a href="#preparing-your-virtual-data-centre">Preparing your virtual data centre</a>, and use the Static IP Pool method of IP assignment.</p>
-</li>
-<li><p>Continue through the wizard and click <strong>Finish</strong>. There are no further changes necessary unless you want to customise the vApp further to suit your environment.</p>
-</li>
-<li><p>When the vApp has deployed and is powered on, you'll need to reset (reboot) the VM before logging in for the first time to force the networking changes made during VMWare's guest customisations to take effect before you start configuring OpenVPN.</p>
-</li>
-</ol>
-<h3 id="vcloud-director-91">vCloud Director 9.1</h3>
 <p>To deploy the OpenVPN appliance:</p>
 <ol>
 <li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to depoly the OpenVPN appliance.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
-<p><img src="images/vmw-vcd91-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
+<p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
 </li>
 <li><p>Click <strong>Add vApp from OVF</strong>.</p>
-<p><img src="images/vmw-vcd-tp-vapp-from-ovf.png" alt="Add vApp from OVF option"></p>
+<p><img src="images/vmw-vcd-btn-vapp-from-ovf.png" alt="Add vApp from OVF option"></p>
 </li>
 <li><p>Select the OVA that you downloaded then click <strong>Next</strong>.</p>
 </li>
@@ -216,10 +175,7 @@
 <div class="TIP">
 <h5>Tip</h5>
 <p>To obtain the root password:</p>
-<ul>
-<li>In vCloud Director 8.20, right-click the VM, select <strong>Properties</strong>, click the <strong>Guest OS Customization</strong> tab and make a note of the password.</li>
-<li>In vCloud Director 9.1, in the card for the VM, click <strong>Details</strong> then select <strong>Guest OS Customization</strong> and make a note of the password.</li>
-</ul>
+<p>In the card for the VM, click <strong>Details</strong> then select <strong>Guest OS Customization</strong> and make a note of the password.</p>
 </div>
 </li>
 <li><p>You'll be prompted to answer a series of questions:</p>

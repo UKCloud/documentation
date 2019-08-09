@@ -8299,7 +8299,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-customer-admin.html",
-          "hash": "+lwAykWW/1W1SYaZ0odHnw=="
+          "hash": "TmFuTbzUx1MCOidQ6OO9Ug=="
         }
       },
       "is_incremental": false,
@@ -10727,17 +10727,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/manage-image-4.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/vmware/images/manage-image-4.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/vmware/images/manage-image-5.png",
       "output": {
         "resource": {
@@ -11094,6 +11083,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/powershellandpython2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/ptl-contact-permissions-vapp-user.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/ptl-contact-permissions-vapp-user.png"
         }
       },
       "is_incremental": false,
@@ -13411,10 +13411,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-btn-vapp-from-ovf.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-btn-vapp-from-ovf.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-btn-vapp-networking-apply.png",
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-btn-vapp-networking-apply.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-build-vapp.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-build-vapp.png"
         }
       },
       "is_incremental": false,
@@ -13675,10 +13697,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/vmware/images/vmw-vcd-home-91.png",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-home-page.png",
       "output": {
         "resource": {
-          "relative_path": "articles/vmware/images/vmw-vcd-home-91.png"
+          "relative_path": "articles/vmware/images/vmw-vcd-home-page.png"
         }
       },
       "is_incremental": false,
@@ -13899,6 +13921,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-logout-91.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-logout-link.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-logout-link.png"
         }
       },
       "is_incremental": false,
@@ -14339,6 +14372,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-storage-usage.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-storage.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-storage.png"
         }
       },
       "is_incremental": false,
@@ -16517,7 +16561,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "8uLyQkoG5qMa+gyL/WlR9g=="
+          "hash": "ZXqMzeB2H5NTTKLG4CpqEA=="
         }
       },
       "is_incremental": false,
@@ -16553,7 +16597,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq-sharing-catalogs.html",
-          "hash": "JtYJItUigPrJs7K4yDBCLA=="
+          "hash": "GSSGvMd4Koh/EDNqKq8lbA=="
         }
       },
       "is_incremental": false,
@@ -16625,7 +16669,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "U8d2NEm+aLzQWC1nLFBANQ=="
+          "hash": "Z3oVzOy8DtbeW3+IMzFrNg=="
         }
       },
       "is_incremental": false,
@@ -16829,7 +16873,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-convert-edge.html",
-          "hash": "XfeQt4X+D6dnYDI5Ld60bQ=="
+          "hash": "o4s2MsWv6E8WDGU3uQoKrA=="
         }
       },
       "is_incremental": false,
@@ -16937,7 +16981,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-create-vapp.html",
-          "hash": "M7whnuMBERfZFWCeAWK1vw=="
+          "hash": "GdbgjjvVLlerG8byn+zx1A=="
         }
       },
       "is_incremental": false,
@@ -16985,7 +17029,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-find-ip-addresses.html",
-          "hash": "nroxlbs1W6e0e9aHOEz7+A=="
+          "hash": "ptNL9SEE8vLnoaOIuVKXIA=="
         }
       },
       "is_incremental": false,
@@ -16997,7 +17041,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-install-openvpn.html",
-          "hash": "aY1XPGixbJOXgzm/OEwFYQ=="
+          "hash": "0PrFSkgaPf8ioeEbjS0+fQ=="
         }
       },
       "is_incremental": false,
@@ -17045,7 +17089,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-license-microsoft.html",
-          "hash": "WJLXgpOhxkgCDRIoV2NIfQ=="
+          "hash": "8IDOORh5iuncPOIjMK1Bhg=="
         }
       },
       "is_incremental": false,
@@ -17093,7 +17137,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-manage-vapp-permissions.html",
-          "hash": "isBAYdnwfMni+gArks2DAQ=="
+          "hash": "8Zvo0wTvba2dvg8ToIg4Dg=="
         }
       },
       "is_incremental": false,
@@ -17117,7 +17161,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-migrate-vapp.html",
-          "hash": "m3oVdcJ9svYv99loBmyzqA=="
+          "hash": "p4BIm4nfm088+8AtJCmJow=="
         }
       },
       "is_incremental": false,
@@ -17165,7 +17209,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-setup-kms.html",
-          "hash": "O1imdhX5YPlRmvArh35/vA=="
+          "hash": "InlJko6lXY+zAoizABhaXA=="
         }
       },
       "is_incremental": false,
@@ -17184,12 +17228,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-update-vm-settings.md",
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-update-vm-settings.html",
-          "hash": "gucy3jct1Picdp3r/dE2ew=="
+          "hash": "XyYnMly8SbI5lmRGTSVVyQ=="
         }
       },
       "is_incremental": false,
@@ -17201,7 +17248,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-upgrade-edge.html",
-          "hash": "0uNj3cA+a+ljhFYdncWJbQ=="
+          "hash": "mVZ/6On4bYQVaL9dP1wQbQ=="
         }
       },
       "is_incremental": false,
@@ -17213,7 +17260,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-upload-media-iso-flp.html",
-          "hash": "tajI5IpjAJ49W6m+tmfoZg=="
+          "hash": "TZ37eKfxRgMsGRcedH4+Yg=="
         }
       },
       "is_incremental": false,
@@ -17225,7 +17272,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-affinity-rules.html",
-          "hash": "A3DQneU34C37is0DUloAOA=="
+          "hash": "QhZk2tLvQeLYuM8bIJ+MOg=="
         }
       },
       "is_incremental": false,
@@ -17237,7 +17284,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-ovf-tool.html",
-          "hash": "GzxFes0i0kdZfmEHvQb7Ow=="
+          "hash": "8QzOULDmpOn4rgVEEYFFZQ=="
         }
       },
       "is_incremental": false,
@@ -17261,7 +17308,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-view-storage-usage.html",
-          "hash": "/bYX1NxqPzOoyn1tLnNnRA=="
+          "hash": "KuYv36TTqpE6bEgoSodfNA=="
         }
       },
       "is_incremental": false,
@@ -17370,18 +17417,6 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-byof-working-firewalls.html",
           "hash": "pk+2R98LulHNJQbzFk1UvQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-cant-manage-edge.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-cant-manage-edge.html",
-          "hash": "gnFyL+3kO+wBzRy/TocW4w=="
         }
       },
       "is_incremental": false,
@@ -17569,18 +17604,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-storage-policies.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-storage-policies.html",
-          "hash": "iPEmGI3L1ayHu4UjrYUqFw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-system-center.md",
       "output": {
         ".html": {
@@ -17658,30 +17681,6 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-twreuse.html",
           "hash": "9PjUPV+8LqwQ9lmdt0+jCQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-vcd-820.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-vcd-820.html",
-          "hash": "MUvnuWSgA6EmiM2WDL+zsQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-vcd-91.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-vcd-91.html",
-          "hash": "euTlk1jdcHwtQcJqsDEl7Q=="
         }
       },
       "is_incremental": false,
@@ -17921,7 +17920,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-vid-vcd91.html",
-          "hash": "x/P/HuyJpaKGYcsN0KEfTQ=="
+          "hash": "64S3L6hcAeUGfJWw5zJOXw=="
         }
       },
       "is_incremental": false,
@@ -17992,17 +17991,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 404,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 408,
           "skipped_file_count": 0
         }
       }
