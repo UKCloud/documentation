@@ -90,6 +90,9 @@ Within your compute service, you create VDCs to contain your VMs. VMs in the sam
 
 If you have the appropriate permissions, you can use the Portal to create a compute service in your account, without having to raise a support ticket.
 
+> [!NOTE]
+> You can also create a compute service using the Portal API. For more information, see [*UKCloud Portal API Reference Guide*](../portal/ptl-ref-portal-api.md#post-apiaccountsaccount_idvorgs)
+
 1. In the UKCloud Portal, select the account in which you want to create the compute service.
 
 2. In the navigation panel, expand **Tools** and then select **Create Compute Service**.
@@ -130,6 +133,9 @@ If you have the appropriate permissions, you can use the Portal to create a comp
 ### Building a virtual data centre
 
 After creating your compute service, the next step is to create one or more VDCs.
+
+> [!NOTE]
+> You can also create a VDC using the Portal API. For more information, see [*UKCloud Portal API Reference Guide*](../portal/ptl-ref-portal-api.md#post-apiaccountsaccount_idvorgsvorg_idvdcs)
 
 > [!NOTE]
 > You can build VDCs in any of your compute services in regions 5 and 6, including those created by support tickets or the Portal API, not just those you created using the Portal.
@@ -194,35 +200,17 @@ After you've created your compute service and VDC, you can start to build up you
 
     ![vCloud Director tab in UKCloud Portal](images/vmw-portal-vcd-login.png)
 
-3. vCloud Director launches in your browser window. What you see depends on the version of vCloud Director available in your environment.
+3. vCloud Director launches in your browser window.
 
-    **vCloud Director 8.20 Home page**
-
-    ![vCloud Director 8.20 Home page](images/vmw-vcd-home.png)
-
-    > [!NOTE]
-    > If this is the first time you've opened vCloud Director, you may be requested to download the vCloud Director Web Console plugin.
-
-    > [!TIP]
-    > If you encounter any issues, make sure you're using the Firefox ESR 32-bit browser. For more information, see [*Browser requirements for services on the UKCloud Platform*](../other/other-ref-browsers.md).
-
-    **vCloud Director 9.1 Home page**
-
-    ![vCloud Director 9.1 Home page](images/vmw-vcd-home-91.png)
+    ![vCloud Director Home page](images/vmw-vcd-home-page.png)
 
 4. The tasks you can perform in vCloud Director will depend on the permissions you have been granted.
 
     **More information!** [*How to manage permissions for vCloud Director*](vmw-how-manage-vcd-permissions.md)
 
-5. To return to the UKCloud Portal:
+5. To return to the UKCloud Portal, click your user name in the top right corner, and select **Log out**.
 
-    - In vCloud Director 8.20, click the **Logout** link in the top right corner.
-
-    ![vCloud Director 8.20 Logout option](images/vmw-vcd-logout.png)
-
-    - In vCloud Director 9.1, click your user name in the top right corner, and select **Log out**.
-
-    ![vCloud Director 9.1 Logout option](images/vmw-vcd-logout-91.png) -->
+    ![vCloud Director 9.1 Logout option](images/vmw-vcd-logout-link.png)
 
 ## Next steps
 
@@ -265,10 +253,6 @@ For more detailed information about the different aspects of your UKCloud for VM
   - [*How to configure a load balancer*](vmw-how-configure-load-balancer.md)
 
   - [*How to create a static route*](vmw-how-create-static-route.md)
-
-## Related videos
-
-- [*vCloud Director 9.1 overview video*](vmw-vid-vcd91.md)
 
 ## Glossary
 

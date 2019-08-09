@@ -72,7 +72,6 @@ For Windows VMs, there is an option for guest customisation to change the SID of
 
 ![Virtual Machines: Guest OS Customization section](images/vmw-vcd-vm-guestos.png)
 
-
 ## Feedback
 
 If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

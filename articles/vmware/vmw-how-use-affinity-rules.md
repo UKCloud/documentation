@@ -79,7 +79,7 @@ To create an affinity or anti-affinity rule:
 
     ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
 
-    For information about how to access the Legacy UI, see [*How to switch to the vCloud Director Legacy UI](vmw-how-switch-web-console.md).
+    For information about how to access the Legacy UI, see [*How to switch to the vCloud Director Legacy UI*](vmw-how-switch-web-console.md).
 
 2. Right-click the VDC that you want to work with and select **Open**.
 

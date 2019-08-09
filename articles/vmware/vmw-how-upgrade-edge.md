@@ -82,7 +82,7 @@ The following steps show how to upgrade your edge gateway using vCloud Director.
 
 2. In the left navigation panel, select **Edges**.
 
-    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
+    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
 
 3. Select the edge that you want to configure and click **Redeploy**.
 
