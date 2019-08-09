@@ -74,9 +74,10 @@ where:
 
     For example:
 
+    - `conn-ref-<psn-core-services>.md`
     - `vmw-how-<create-vm-from-template>.md`
 
-    - `conn-ref-<psn-core-services>.md`
+    
 
 - `tool` (optional) indicates if the topic is specific to a particular tool (for example, a CLI or API).
 
