@@ -53,13 +53,19 @@ Alternatively, you can request a new UKCloud Master Services Agreement (MSA v11.
 
 UKCloud will validate that you have signed up to the terms of the HSCN Connection Agreement before connecting you to HSCN.
 
+### What is UKCloud's ODS code? 
+
+The UKCloud ODS code is 8J561.
+
+You can find all ODS and connection agreements at <https://crm.digital.nhs.uk/hscnconnectionagreementsearch/>.
+
 ## Migration
 
 ### How do I migrate my existing UKCloud N3 workload onto HSCN?
 
 First you need to align with the HSCN Connection Agreement. You can do this by either signing your own Connection Agreement and having NHS Digital counter-sign. You can then supply us with a copy of it. Alternatively, you can sign the UKCloud Master Services Agreement (MSA version 11.0 onwards) and be covered by the flow-down of the Connection Agreement terms.
 
-Once you have a Connection Agreement in place, you will need to raise a service request for HSCN.
+Once you have a Connection Agreement in place, you will need to raise a service request for HSCN via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 We will give you a new Edge or Router with as many HSCN IPs as you are currently using for N3 assigned to it.
 

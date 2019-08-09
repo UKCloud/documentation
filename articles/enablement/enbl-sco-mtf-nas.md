@@ -33,7 +33,7 @@ Your NAS will be securely installed in the MTF bay and connected into your compu
 
 ## Scheduling your transfer
 
-To schedule a transfer, raise a Service Request (SR), via the UKCloud Portal, providing us with at least 10 days' notice. You should also arrange delivery of your NAS device to the UKCloud office, quoting the SR number, no later than the working day before the scheduled transfer day.
+To schedule a transfer, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, providing us with at least 10 days' notice. You should also arrange delivery of your NAS device to the UKCloud office, quoting the SR number, no later than the working day before the scheduled transfer day.
 
 When raising the SR, please provide the following:
 

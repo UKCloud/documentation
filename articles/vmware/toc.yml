@@ -150,8 +150,6 @@
     href: vmw-ref-virtual-hardware-v11.md
   - name: Blocked vCloud Director API calls
     href: vmw-ref-block-vcd-calls.md
-  - name: Cannot manage 5.5.4 edge gateway firewall rules after upgrade to vCloud Director 8.20
-    href: vmw-ref-cant-manage-edge.md
   - name: Cloning vApps using PowerCLI
     href: vmw-ref-cloning-vapps.md
   - name: Comparison of UKCloud for VMware against hyperscalers
@@ -182,8 +180,6 @@
     href: vmw-ref-rhui.md
   - name: Shared Secret Length Issues IPSec VPN
     href: vmw-ref-shared-secret-issues.md
-  - name: Storage policies
-    href: vmw-ref-storage-policies.md
   - name: System Center on the UKCloud platform
     href: vmw-ref-system-center.md
   - name: TCP_TW_REUSE and TCP_TW_RECYCLE settings
@@ -196,10 +192,6 @@
     href: vmw-ref-service-options.md
   - name: Understanding connectivity options in UKCloud for VMware
     href: vmw-ref-connectivity-options.md
-  - name: Upgrade to vCloud Director 8.20
-    href: vmw-ref-vcd-820.md
-  - name: Upgrade to vCloud Director 9.1
-    href: vmw-ref-vcd-91.md
   - name: vCloud Director 9.7 known issues
     href: vmw-ref-vcd97-known-issues.md
   - name: vCloud Director Healthcheck

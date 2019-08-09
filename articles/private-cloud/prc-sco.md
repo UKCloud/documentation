@@ -99,7 +99,7 @@ As your service needs grow, we'll work with you to coordinate the installation o
 
 - Managing the performance of your workload by right-sizing your VMs and their usage
 
-- Raising Service Requests through the UKCloud Portal when you need configurations implemented
+- Raising Service Requests through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal when you need configurations implemented
 
 - Raising incident tickets if you experience any issues with your service
 
@@ -145,7 +145,7 @@ As per All-Inclusive plus:
 
 #### Important CHDC considerations
 
-You need to ensure that UKCloud control the physical access to the hardware in your CHDC environment. A Service Request via the UKCloud Portal must be raised for anyone else requiring access to the hardware, with full details of the activities they wish to carry out. These requests are subject to our approval. This is to ensure that there is no disruption to your service.
+You need to ensure that UKCloud control the physical access to the hardware in your CHDC environment. You must raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal for anyone else requiring access to the hardware, with full details of the activities they wish to carry out. These requests are subject to our approval. This is to ensure that there is no disruption to your service.
 
 We cannot be responsible for any service affecting issues resulting from non-escorted access.
 

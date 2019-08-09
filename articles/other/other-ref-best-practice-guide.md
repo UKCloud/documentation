@@ -156,7 +156,7 @@ System administrators and mobile workers can securely access workloads running o
 
 - SRA certificates last for 12 months. You'll need to renew certificates no later than two weeks before the certificates expire to avoid any interruption to your service.
 
-- To add additional certificates, raise a service request via the UKCloud Portal, selecting the **Request Additional SRAS Certificate(s)** option.
+- To add additional certificates, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the **Request Additional SRAS Certificate(s)** option.
 
 - To renew or revoke your certificate, raise a service request via the UKCloud Portal, selecting the **Renew and/or Revoke SRAS Certificate** option.
 

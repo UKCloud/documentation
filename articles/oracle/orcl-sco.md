@@ -39,7 +39,7 @@ You can also use accounts to separate users based on access requirements or perm
 
 **Organisation.** This represents your UKCloud for Oracle Software service inside Oracle Enterprise Manager and on the UKCloud Portal. There is a 1:1 mapping of service to Organisation.
 
-**Oracle Tenant.** An Oracle Tenant is where you define your workload type and build your OVMs. You can create Oracle Tenants via a service request.
+**Oracle Tenant.** An Oracle Tenant is where you define your workload type and build your OVMs. You can create Oracle Tenants by raising a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Service configuration
 
@@ -102,7 +102,7 @@ UKCloud for Oracle Software is underpinned by Oracle compute infrastructure. UKC
 
 Infomentum will provision your Oracle Tenant environment and UKCloud will present it to you through the Oracle Enterprise Manager.
 
-VM creation is currently available via service request to ensure that the platform remains balanced &mdash; this is due to the core-pinning technology that Oracle OVM uses. You'll need to submit a service request with the VM details, including resource allocation, and we'll create the VM. You can then manage the created VM. You must also raise a service request to change the size of a VM. For more information, see [*Oracle cloud self-service funtionality*](orcl-ref-bug-self-service.md).
+VM creation is currently available via service request to ensure that the platform remains balanced &mdash; this is due to the core-pinning technology that Oracle OVM uses. You'll need to submit a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal with the VM details, including resource allocation, and we'll create the VM. You can then manage the created VM. You must also raise a service request to change the size of a VM. For more information, see [*Oracle cloud self-service funtionality*](orcl-ref-bug-self-service.md).
 
 All service requests will be triaged by UKCloud. We reserve the right to escalate a request to Infomentum for support. If you have not have a managed service contract with Infomentum, please do not contact them directly.
 
@@ -138,11 +138,11 @@ As the underlying platform is powered by OVM technology, you can either transfer
 
 ## Networks
 
-**Internet-facing solutions.** You are provided with 2 usable public IP addresses, but you can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.
+**Internet-facing solutions.** You are provided with 2 usable public IP addresses, but you can ask for additional public IP addresses by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. We reserve the right to decline the request if you have spare capacity in your existing deployment.
 
-**PSN-facing solutions.** You should raise a Service Request or contact your Customer Success Manager (CSM) to be assigned your IP address. This solution also comes with shared bandwidth (uncapped).
+**PSN-facing solutions.** You should raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or contact your Customer Success Manager (CSM) to be assigned your IP address. This solution also comes with shared bandwidth (uncapped).
 
-**Janet and HSCN solutions.** You have one usable IP address, but you can request additional IP addresses via a Service Request.
+**Janet and HSCN solutions.** You have one usable IP address, but you can request additional IP addresses by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 UKCloud for Oracle Software does not have a native external connectivity functionality. Therefore, UKCloud have enabled customers to manage connectivity rules, such as firewall, IPsec VPN and NAT functionality, through a VMware NSX Edge. This Edge is provisioned within the UKCloud for VMware environment and is managed using either the UKCloud Portal GUI or API.
 

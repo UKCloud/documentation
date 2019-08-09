@@ -694,33 +694,33 @@
 <thead>
 <tr>
 <th> </th>
-<th> </th>
+<th>UKCloud for Oracle Software</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Service level agreement</strong></td>
-<td><strong>Non-HA OVM:</strong> 99.95%<br><strong>HA OVM:</strong> 99.99%</td>
-</tr>
-<tr>
-<td><strong>Portal level agreement</strong></td>
-<td>99.90%</td>
+<td><strong>Non-HA x86:</strong> 99.95%<br><strong>HA x86:</strong> 99.99%<br><strong>SPARC / Dedicated SPARC with resilience:</strong> 99.95%<br><strong>Dedicated SPARC without resilience:</strong> 95.00%</td>
 </tr>
 <tr>
 <td><strong>Availability calculation</strong></td>
-<td>Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any planned and emergency maintenance.</td>
+<td>Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.</td>
+</tr>
+<tr>
+<td><strong>Planned maintenance</strong></td>
+<td>Excluded</td>
 </tr>
 <tr>
 <td><strong>Measurement of SLA</strong></td>
-<td>Unavailability applies to existing workloads that become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical infrastructure availability, storage, power and internal networking such as physical firewalls and routers. <br> Owing to the nature of Oracle workloads and the need to pin them to processor cores, workloads will be moved only in the event of a hardware failure. This will not be a live migration and an application restart is likely to be required.</td>
+<td>The service is deemed unavailable if a customer is unable to restart a VM after it becomes unresponsive due to a fault recognised as the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical infrastructure availability, storage, power and internal networking, such as physical firewalls and routers.<br>Oracle workloads are pinned to processor cores and will power off in the event of a host failure. Migrations are not live and VM restart will be required. UKCloud will advise customers if VM restart is required.<br><b>HA-enabled x86 VMs</b> will be automatically moved to a new host in the event of a host failure, but may require restarting. Automatic movement of VMs is covered by the HA x86 SLA. Customers are responsible for enabling the HA feature on x86 VMs and for restarting VMs.<br><b>Non-HA x86 VMs</b> require UKCloud to move Oracle VMs to a new host so they can be restarted. UKCloud's manual movement of VMs is covered by the Non-HA x86 SLA. Customers are responsible for restarting VMs<br><b>SPARC VMs</b> require UKCloud to move Oracle VMs to a new host so they can be restarted. UKCloud's manual movement of VMs is covered by the SPARC SLAs. Customers are responsible for restarting VMs.</td>
 </tr>
 <tr>
 <td><strong>Key exclusions</strong></td>
-<td>The following are examples of what is not covered by the SLA: <br>- Faults within your control, such as client application issues<br>- Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components colocated at UKCloud</td>
+<td>The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</li></li></ul></td>
 </tr>
 <tr>
 <td><strong>Service Credit</strong></td>
-<td>10% of monthly spend <br> 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal</td>
+<td>10% of monthly spend.</td>
 </tr>
 </tbody>
 </table>

@@ -127,7 +127,7 @@
 <h3 id="can-i-convert-from-one-vm-type-to-another-without-having-to-move-vms-between-vdcs">Can I convert from one VM type to another, without having to move VMs between vDCs?</h3>
 <p>Customers can manage the migration between VM types. Customers can also move vApps and VMs between VDCs as long as they're in the same assurance domain, for example Assured to Assured.</p>
 <p>More complex migrations, from the Assured to the Elevated platform, must be managed by UKCloud.</p>
-<p>If you want to migrate a vApp larger than 1.5TiB, you'll need to engage the UKCloud support team to facilitate the process. To do so, raise a Service Request on the UKCloud Portal.</p>
+<p>If you want to migrate a vApp larger than 1.5TiB, you'll need to engage the UKCloud support team to facilitate the process. To do so, raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <h3 id="what-hypervisor-do-you-use">What hypervisor do you use?</h3>
 <p>UKCloud's environment is built using VMware vSphere, the most ubiquitous and mature hypervisor available. Secure multi-tenancy is achieved with VMware vCloud Director.</p>
 <h3 id="can-i-have-a-read-only-account-in-vcloud-for-monitoring">Can I have a read-only account in vCloud for monitoring?</h3>
@@ -159,7 +159,7 @@
 <h3 id="is-ukclouds-encryption-service-available-for-ukcloud-for-vmware">Is UKCloud's encryption service available for UKCloud for VMware?</h3>
 <p>Not currently, but we are considering this as an option. Provide feedback via the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 <h3 id="is-it-possible-to-non-fast-provision-vapps-and-to-convert-current-vapps-into-non-fast-provisioned-ones">Is it possible to non-fast-provision vApps, and to convert current vApps into non-fast provisioned ones?</h3>
-<p>Fast provisioning is enabled only by customer request - by default, all vApps are non-fast-provisioned. Customers can right-click on a VM and consolidate. This can also be done via a Service Request.</p>
+<p>Fast provisioning is enabled only by customer request - by default, all vApps are non-fast-provisioned. Customers can right-click on a VM and consolidate. This can also be done by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <h3 id="what-is-dedicated-compute">What is Dedicated Compute?</h3>
 <p>Dedicated Compute comprises of physical blades assigned to a customer for their sole use. They're managed using the standard tools and services in the UKCloud platform.</p>
 <p>Dedicated Compute allows customers to:</p>
@@ -186,16 +186,16 @@
 <h3 id="what-happens-when-i-switch-off-my-vms-using-the-guest-operating-system">What happens when I switch off my VMs using the guest Operating System?</h3>
 <p>If you shut down your VM using the guest OS, we will recognise this as a 'Power Off' event and you will not be billed whilst the VM remains in this state. Billing will resume once the VM is powered on again.</p>
 <h3 id="how-do-i-change-the-workload-type-of-a-vdc">How do I change the workload type of a VDC?</h3>
-<p>To change the workload type (for example, ESSENTIAL, POWER or PRIORITY) of a VDC, you must raise a <a href="https://portal.ukcloud.com/support/my_calls/new">service request</a> from within My Calls, and the support team will make the necessary changes.</p>
+<p>To change the workload type (for example, ESSENTIAL, POWER or PRIORITY) of a VDC, you must raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal, and the support team will make the necessary changes.</p>
 <p>Please note this change is disruptive and UKCloud will be required to power down all VMs in the VDC during this transition.</p>
 <h2 id="networking">Networking</h2>
 <h3 id="how-many-ip-addresses-do-i-get">How many IP addresses do I get?</h3>
 <p>You're initially allocated five external IP addresses with a new compute service.</p>
-<p>You can ask for more external IP addresses via a Service Request. Please note that there is a £20 charge per additional IP address.</p>
+<p>You can ask for more external IP addresses by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal. Please note that there is a £20 charge per additional IP address.</p>
 <p>There's no limit to the number of internal IP addresses (RFC1918) you can allocate.</p>
 <h3 id="how-many-psn-ip-addresses-do-i-get">How many PSN IP addresses do I get?</h3>
 <p>Customer organisations are initially allocated one external PSN IP address.</p>
-<p>Additional external PSN IP addresses can be requested via a Service Request should a valid business requirement arise. Please note that there is a £20 charge per additional IP address.</p>
+<p>Additional external PSN IP addresses can be requested by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal should a valid business requirement arise. Please note that there is a £20 charge per additional IP address.</p>
 <p>There's no limit to the number of internal IP addresses (RFC1918) customers can allocate.</p>
 <h3 id="what-firewall-services-are-available">What firewall services are available?</h3>
 <p>UKCloud controls and manages a perimeter firewall on the edge of our Assured cloud platform which securely segregates traffic. Within the UKCloud for VMware environment, we provide you with a dedicated self-managed virtual firewall which delivers typical firewall functionality such as access control lists and network address translation, as well as basic load balancing and support for VPNs.</p>
@@ -308,10 +308,10 @@ regarding the registration on VMs targeting the UKCloud KMS.</p>
 <h3 id="microsoft">Microsoft</h3>
 <p>Microsoft terms and conditions preclude customers from using their own licence agreements for Windows Server in the Cloud. That means all licensing for Windows Server operating systems must be provided by UKCloud.</p>
 <p>Microsoft offers License Mobility, a scheme that allows a customer to provide additional software such as Exchange, SQL and so on, as long as the customer has appropriate Microsoft licensing as per the licence terms and conditions and usage rights. In order to use License Mobility, you must complete the form that is available in the Knowledge Centre and send this by post to Microsoft.</p>
-<p>If you require SQL licensing to be provided by UKCloud, this can be done by completing a Service Request from the <a href="https://portal.ukcloud.com/support/my_calls">My Calls</a> section of the UKCloud Portal. SQL standard licensing is charged per hour per VM, whilst SQL Enterprise is charged monthly per VM. It is essential that UKCloud are informed of every instance of SQL on the platform, and that you complete a Licence Mobility form for all licences that you use on the UKCloud platform.</p>
+<p>If you require SQL licensing to be provided by UKCloud, this can be done by completing a Service Request from the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal. SQL standard licensing is charged per hour per VM, whilst SQL Enterprise is charged monthly per VM. It is essential that UKCloud are informed of every instance of SQL on the platform, and that you complete a Licence Mobility form for all licences that you use on the UKCloud platform.</p>
 <h3 id="rhel">RHEL</h3>
 <p>RHEL operating systems can be licensed by UKCloud or the customer.</p>
-<p>The customer is responsible for ensuring correct licensing for any other operating system they chose to install. If you wish to use your own RHEL licencing, please a Service request.</p>
+<p>The customer is responsible for ensuring correct licensing for any other operating system they chose to install. If you want to use your own RHEL licencing, please raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <h3 id="how-up-to-date-are-the-operating-system-images-and-mirrors">How up to date are the operating system images and mirrors?</h3>
 <p>All CentOS, Ubuntu, Red Hat and Debian distributions include update mechanisms to install the latest patches and releases. For a list of supported operating systems, and instructions on how to access these update repositories, see the Knowledge Centre.</p>
 <h3 id="what-anti-virus-do-you-offer-on-this-service">What anti-virus do you offer on this service?</h3>
@@ -322,7 +322,7 @@ regarding the registration on VMs targeting the UKCloud KMS.</p>
 <p>Yes, OVF images can be uploaded to the platform, and VMs built in the platform can be downloaded as OVF.</p>
 <h3 id="what-is-bring-your-own-byo-licensing-for-red-hat">What is Bring Your Own (BYO) licensing for Red Hat?</h3>
 <p>BYO licensing for Red Hat allows customers to select VMs running on the UKCloud Assured cloud platform for covering by their own commercial agreement with Red Hat.</p>
-<p>UKCloud will remove the cost of the Red Hat licence from the customer's monthly bill for the selected VMs. Customers need to raise a Service Request to let us know which VMs they will cover with their own Red Hat licence.</p>
+<p>UKCloud will remove the cost of the Red Hat licence from the customer's monthly bill for the selected VMs. Customers need to raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal to let us know which VMs they will cover with their own Red Hat licence.</p>
 <h2 id="support">Support</h2>
 <h3 id="how-do-i-raise-a-support-ticket">How do I raise a support ticket?</h3>
 <p>The secure online UKCloud Portal provides most common service management functionality. Alternatively, you can contact support by phone or email.</p>

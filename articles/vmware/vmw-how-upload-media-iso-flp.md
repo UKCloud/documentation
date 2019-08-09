@@ -28,9 +28,9 @@ You may find you need to upload ISO (DVD/CD) or FLP (floppy disk) media to vClou
 
 ## Uploading media
 
-To upload media to the catalog:
+If you want to upload media [from a file on your local machine](#uploading-media-from-a-local-file), you can use the Tenant UI. To upload media [from a URL](#uploading-media-from-a-url), you'll need to use the Legacy UI.
 
-# [Using vCloud Director Tenant UI](#tab/tabid-1)
+### Uploading media from a local file
 
 1. In vCloud Director, click the menu icon and select **Libraries**.
 
@@ -46,22 +46,27 @@ To upload media to the catalog:
 
 4. In the *Upload Media* dialog box, select the **Catalog** to which you want to upload the media.
 
+    > [!TIP]
+    > You can change the **Name** to be more user-friendly if necessary.
+
 5. Click the **Upload** icon and browse to the ISO or FLP file that you want to upload.
 
     ![Upload Media dialog box](images/vmw-vcd91-upload-media.png)
 
-    > [!TIP]
-    > You can change the **Name** to be more user-friendly if necessary.
+    > [!NOTE]
+    > If you want to upload media from a URL, you must use the Legacy UI.
 
 6. When you're done, click **OK**.
 
     In the *Media & Other* page, you can monitor the progress of the upload. You can carry on with other work while the upload takes place.
 
-# [Using vCloud Director Legacy UI](#tab/tabid-2)
+### Uploading media from a URL
 
-1. In vCloud Director, select the **Catalogs** tab.
+1. In the vCloud Director Legacy UI, select the **Catalogs** tab.
 
     ![Catalogs tab in vCloud Director](images/vmw-vcd-tab-catalogs.png)
+
+    For information about how to access the Legacy UI, see [*How to switch to the vCloud Director Legacy UI*](vmw-how-switch-web-console.md).
 
 2. Select the **Media & Other** tab.
 
@@ -94,8 +99,6 @@ To upload media to the catalog:
     This opens the *Transfer process* dialog box.
 
     ![Transfer process dialog box](images/vmw-vcd-transfer-process.png)
-
-***
 
 ## Feedback
 

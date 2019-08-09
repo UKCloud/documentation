@@ -39,6 +39,16 @@ az --version
 
 You should see the version of Azure CLI and other dependent libraries that are installed on your computer.
 
+## Declare variables
+
+Enter details below to provide values for the variables in the scripts in this article:
+
+| Variable  | Variable description                                      | Input            |
+|-----------------|-----------------------------------------------------------|------------------|
+| Azure Stack DNS Suffix | The DNS suffix for Azure Stack (&lt;region&gt;.&lt;External Domain Name&gt;)  | <form oninput="result.value=dnssuffix.value;result2.value=dnssuffix.value;result3.value=dnssuffix.value;result4.value=dnssuffix.value;result5.value=dnssuffix.value;result6.value=dnssuffix.value;result7.value=dnssuffix.value;result8.value=dnssuffix.value;result9.value=dnssuffix.value" id="dnssuffix" style="display: inline;"><input type="text" id="dnssuffix" name="dnssuffix" style="display: inline;" placeholder="frn00006.azure.ukcloud.com"/></form> |
+| Username               | Your AAD username                                                             | <form oninput="result.value=username.value;result2.value=username.value" id="username" style="display: inline;"><input type="text" id="username" name="username" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"/></form> |
+| Password               | Your AAD password                                                             | <form oninput="result.value=password.value;result2.value=password.value" id="password" style="display: inline;"><input type="text" id="password" name="password" style="display: inline;" placeholder="Password123!"/></form> |
+
 ## Connect to Azure Stack
 
 Use the following steps to connect to Azure Stack:
@@ -47,20 +57,16 @@ Use the following steps to connect to Azure Stack:
 
    To register the *user* environment, use:
 
-      ```azurecli
-      az cloud register \
+      <pre><code class="lang-azurecli hljs">az cloud register \
         -n "AzureStackUser" \
-        --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" \
-        --suffix-storage-endpoint "frn00006.azure.ukcloud.com" \
-        --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" \
-        --endpoint-active-directory-graph-resource-id "https://graph.windows.net/"
-      ```
+        --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result" style="display: inline;">frn00006.azure.ukcloud.com</output>" \
+        --suffix-storage-endpoint "<output form="dnssuffix" name="result2" style="display: inline;">frn00006.azure.ukcloud.com</output>" \
+        --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result3" style="display: inline;">frn00006.azure.ukcloud.com</output>" \
+        --endpoint-active-directory-graph-resource-id "https://graph.windows.net/"</code></pre>
 
    To register the *user* environment - One Liner:
 
-      ```azurecli
-      az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" --suffix-storage-endpoint "frn00006.azure.ukcloud.com" --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/"
-      ```
+      <pre><code class="lang-azurecli hljs">az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result4" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result5" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result6" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/"</code></pre>
 
 2. Set the active environment by using the following commands.
 
@@ -79,11 +85,9 @@ Use the following steps to connect to Azure Stack:
 4. Sign in to your Azure Stack environment by using the `az login` command. You can sign in to the Azure Stack environment either as a user or as a [service principal](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects).
 
    - Sign in as a *user*: You can either specify the username and password directly within the `az login` command or authenticate by using a browser. You have to do the latter if your account has multi-factor authentication enabled.
-   - Example of *username*: Active directory global administrator or user account i.e. username@\<aadtenant\>.onmicrosoft.com or username@domain.com
+   - Example of *username*: Active directory global administrator or user account i.e. username@&lt;aadtenant&gt;.onmicrosoft.com or username@domain.com
 
-      ```azurecli
-      az login -u "<username>@<tenantDomain>" -p '<password>'
-      ```
+      <pre><code class="lang-azurecli hljs">az login -u "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>" -p '<output form="password" name="result" style="display: inline;">Password123!</output>'</code></pre>
 
       > [!NOTE]
       > If your user account has multi-factor authentication enabled, you can use the `az login` command without providing the `-u` parameter. Running the command gives you a URL and a code that you must use to authenticate.
@@ -92,7 +96,7 @@ Use the following steps to connect to Azure Stack:
 
       ```azurecli
       az login \
-        --tenant <Azure Active Directory Tenant name. For example: myazurestack.onmicrosoft.com> \
+        --tenant <Azure Active Directory Tenant name. For example: contoso.onmicrosoft.com> \
         --service-principal \
         -u <Application Id of the Service Principal> \
         -p <Key generated for the Service Principal>
@@ -118,16 +122,14 @@ Use the following steps to connect to Azure Stack:
 
 ## Connect to Azure Stack - Quick Reference Guide
 
-```azurecli
-# Create your environment
-az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" --suffix-storage-endpoint "frn00006.azure.ukcloud.com" --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
+<pre><code class="lang-azurecli hljs"># Create your environment
+az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result7" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result8" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result9" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
 
 # Set your environment
 az cloud set -n AzureStackUser
 
 # Log in to Azure Stack with user credentials
-az login -u "<username>@<tenantDomain>" -p '<password>'
-```
+az login -u "<output form="username" name="result2" style="display: inline;">user@contoso.onmicrosoft.com</output>" -p '<output form="password" name="result2" style="display: inline;">Password123!</output>'</code></pre>
 
 ## Test the connectivity
 
@@ -140,45 +142,6 @@ az group create -n MyResourceGroup -l frn00006
 If the resource group is created successfully, the previous command outputs the following properties of the newly created resource:
 
 ![Resource group create output](https://docs.microsoft.com/en-us/azure/azure-stack/user/media/azure-stack-connect-cli/image1.png)
-
-## Get the virtual machine URNs
-
-Because of the known issue with Image Aliases we have not published the alias.json file yet. Instead please use the following command to obtain relevant image URNs for your VM deployment.
-
-```azurecli
-az vm image list --all --output table
-You are retrieving all the images from server which could take more than a minute. To shorten the wait, provide '--publisher', '--offer' or '--sku'. Partial name search is supported.
-Offer              Publisher               Sku                              Urn                                                                                     Version
------------------  ----------------------  -------------------------------  --------------------------------------------------------------------------------------  -----------------
-UbuntuServer       Canonical               17.10                            Canonical:UbuntuServer:17.10:17.10.201805090                                            17.10.201805090
-WindowsServer      MicrosoftWindowsServer  2016-Datacenter-with-Containers  MicrosoftWindowsServer:WindowsServer:2016-Datacenter-with-Containers:2016.127.20180412  2016.127.20180412
-jenkins            bitnami                 1-650                            bitnami:jenkins:1-650:2.46.21                                                           2.46.21
-CentOS             OpenLogic               7.4                              OpenLogic:CentOS:7.4:7.4.20180118                                                       7.4.20180118
-UbuntuServer       Canonical               14.04.5-LTS                      Canonical:UbuntuServer:14.04.5-LTS:14.04.201805090                                      14.04.201805090
-WindowsServer      MicrosoftWindowsServer  2016-Datacenter-Server-Core      MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core:2016.127.20180412      2016.127.20180412
-CentOS             OpenLogic               6.9                              OpenLogic:CentOS:6.9:6.9.20180118                                                       6.9.20180118
-UbuntuServer       Canonical               18.04-LTS                        Canonical:UbuntuServer:18.04-LTS:18.04.201804262                                        18.04.201804262
-nginxstack         bitnami                 1-9                              bitnami:nginxstack:1-9:1.10.14                                                          1.10.14
-WindowsServer      MicrosoftWindowsServer  2016-Datacenter                  MicrosoftWindowsServer:WindowsServer:2016-Datacenter:2016.127.20180412                  2016.127.20180412
-CentOS             OpenLogic               7.3                              OpenLogic:CentOS:7.3:7.3.20170925                                                       7.3.20170925
-UbuntuServer       Canonical               16.04-LTS                        Canonical:UbuntuServer:16.04-LTS:16.04.201804270                                        16.04.201804270
-WindowsServer      MicrosoftWindowsServer  2012-Datacenter                  MicrosoftWindowsServer:WindowsServer:2012-Datacenter:3.127.20180216                     3.127.20180216
-SQL2016SP1-WS2016  MicrosoftSQLServer      Enterprise                       MicrosoftSQLServer:SQL2016SP1-WS2016:Enterprise:13.1.900302                             13.1.900302
-SQL2016SP1-WS2016  MicrosoftSQLServer      Standard                         MicrosoftSQLServer:SQL2016SP1-WS2016:Standard:13.1.900302                               13.1.900302
-
-```
-
-For example, you can create a CentOS VM using the following command:
-
-```azurecli
-az vm create --resource-group testRG --name testVM --image OpenLogic:CentOS:6.9:6.9.20180105 --admin-username username --admin-password 'Password1234!'
-```
-
-> [!NOTE]
-> You need to create your Resource Group first.
->
-> admin-username and admin-password are given as examples above - these are the credentials which must be used to login to the VM once it is created.
->
 
 ## Known issues
 

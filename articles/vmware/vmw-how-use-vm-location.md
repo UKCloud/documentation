@@ -33,8 +33,7 @@ With regards to the supplied location, this is standardised to the following opt
 
 - ENHANCED-Farnborough (replicated in both data centres. Active in Farnborough and standby in Corsham)
 
-This feature is designed to show the location of VMs to assist you in optimising your infrastructure with regard to performance and availability. If you wish to change the location of a specific or group
-of VMs, raise a support request from the My Calls section of the UKCloud Portal.
+This feature is designed to show the location of VMs to assist you in optimising your infrastructure with regard to performance and availability. If you wish to change the location of a specific or group of VMs, raise a support request from the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 You can also use the [vCloud API](#obtaining-the-location-of-a-specific-vm-using-the-vcloud-api).
 

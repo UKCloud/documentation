@@ -112,6 +112,9 @@ export OS_AUTH_TYPE=&quot;v3oidcpassword&quot;
 export OS_CLIENT_SECRET=&quot;&quot;
 export OS_ACCESS_TOKEN_ENDPOINT=&quot;&quot;
 </code></pre>
+<p>And remove the following</p>
+<pre><code class="lang-bash">export OS_USER_DOMAIN_NAME=&quot;Federated&quot;
+</code></pre>
 <table>
 <thead>
 <tr>
@@ -145,6 +148,21 @@ export OS_ACCESS_TOKEN_ENDPOINT=&quot;&quot;
 <td> </td>
 <td>OS_CLIENT_SECRET</td>
 <td>User defined</td>
+</tr>
+<tr>
+<td> </td>
+<td>OS_ACCESS_TOKEN_ENDPOINT</td>
+<td><code>https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token</code></td>
+</tr>
+<tr>
+<td>Corsham-2 (OSP13)</td>
+<td>OS_CLIENT_ID</td>
+<td><code>cni.2.cor00005</code></td>
+</tr>
+<tr>
+<td> </td>
+<td>OS_CLIENT_SECRET</td>
+<td>'56160ec2-17d1-4047-a42a-e6f9f70a3179'</td>
 </tr>
 <tr>
 <td> </td>

@@ -32,7 +32,7 @@ In order to verify if the cluster has the ovs-networkpolicy SDN you can use the 
 
 ```oc get clusternetwork```
 
-This will show redhat/openshift-ovs-networkpolicy under the PLUGIN NAME. If this shows ovs-multitenant instead and you wish to use NetworkPolicy objects you will need to raise a service request to look at the options for switching SDN.
+This will show redhat/openshift-ovs-networkpolicy under the PLUGIN NAME. If this shows ovs-multitenant instead and you wish to use NetworkPolicy objects you will need to raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal to look at the options for switching SDN.
 > [!NOTE]
 > You need to have cluster-reader or higher privilege in the cluster for this command to work.
 

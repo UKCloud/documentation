@@ -25,7 +25,7 @@ Due to a bug that has been identified within the Oracle cloud placement engine, 
 
 - Modify the compute and storage resources available to existing VMs
 
-Until this issue is resolved, we ask that customers raise a Service Request so that UKCloud can provision Oracle VMs and VM resources on your behalf.
+Until this issue is resolved, we ask that customers raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal so that UKCloud can provision Oracle VMs and VM resources on your behalf.
 
 > [!NOTE]
 > All other features within the Oracle portal will continue to function as normal. However, if you do experience any issues, raise a support request so that we can investigate.
