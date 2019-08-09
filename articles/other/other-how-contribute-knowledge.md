@@ -19,7 +19,7 @@ toc_mdlink: other-how-contribute-knowledge.md
 
 ## Overview
 
-Content for the UKCloud Knowledge Center is stored in a GitHub repository, which means that anyone with a GitHub account can submit changes to articles and even add new articles.
+Content for the UKCloud Knowledge Centre is stored in a GitHub repository, which means that anyone with a GitHub account can submit changes to articles and even add new articles.
 
 This article explains how to submit changes to UKCloud Knowledge Centre articles.
 
@@ -32,7 +32,7 @@ To submit changes or new articles you must have a GitHub account.
 
 ## Submitting minor changes to an existing article
 
-1. Go to the UKCloud Knowledge Center at:
+1. Go to the UKCloud Knowledge Centre at:
 
     <http://docs.ukcloud.com>
 
@@ -77,7 +77,7 @@ For a template to get you started with a new article, see [*UKCloud Knowledge Ce
 
 ## Suggesting significant changes
 
-If you want to suggest significant changes to the Knowledge Centre, contact <products@ukcloud.com> to discuss your ideas.
+If you want to suggest significant changes to the Knowledge Centre, raise an issue within GitHub or contact <products@ukcloud.com> to discuss your ideas.
 
 ## Related videos
 
