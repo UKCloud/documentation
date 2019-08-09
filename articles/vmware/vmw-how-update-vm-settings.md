@@ -39,7 +39,7 @@ After you've deployed a virtual machine (VM), you can view and update its config
 
 ## General
 
-View and changes properties such as the VM/host name, OS type and version. You can also see if VMware Tools is installed on the VM and change the storage policy for the VM. For more information on storage policies, see [*Storage policies*](vmw-ref-storage-policies.md).
+View and changes properties such as the VM/host name, OS type and version. You can also see if VMware Tools is installed on the VM and change the storage policy for the VM.
 
 ![Virtual Machines: General section](images/vmw-vcd91-vm-general.png)
 
