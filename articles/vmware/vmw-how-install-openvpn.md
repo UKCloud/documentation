@@ -114,8 +114,7 @@ To perform initial configuration:
     > [!TIP]
     > To obtain the root password:
     >
-    > - In vCloud Director 8.20, right-click the VM, select **Properties**, click the **Guest OS Customization** tab and make a note of the password.
-    > - In vCloud Director 9.1, in the card for the VM, click **Details** then select **Guest OS Customization** and make a note of the password.
+    > In the card for the VM, click **Details** then select **Guest OS Customization** and make a note of the password.
 
 3. You'll be prompted to answer a series of questions:
 
