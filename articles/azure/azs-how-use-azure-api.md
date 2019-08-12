@@ -22,11 +22,13 @@ toc_mdlink: azs-how-use-azure-api.md
 
 The Azure Stack API enables you to interact programmatically with your UKCloud for Microsoft Azure environment. For example, you can use API calls to manage your UKCloud for Microsoft Azure tenancy.
 
-This guide shows you how to get started with the Azure Stack API.
+This article will show you how to get started with the Azure Stack API.
 
-### Intended audience
+When interacting with Azure Stack resources via the API, they require specifying an API version. A full list of supported API versions can be found [here](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-profiles-azure-resource-manager-versions).
 
-To complete the steps in this guide you must have the appropriate permissions on the resource you are trying to access.
+### Prerequisites
+
+To complete the steps in this article, you must have appropriate access to a subscription on Azure Stack and permissions on the resources you are trying to access.
 
 ## Authenticating to the API
 
@@ -36,62 +38,50 @@ To obtain an access token:
 
 1. Send a POST request to the Azure REST authentication/login endpoint:
 
-    `https://login.microsoftonline.com/<tenant_id>/oauth2/token`
+    `https://login.microsoftonline.com/<tenant_id>/oauth2/token`.
 
-    where `tenant_id` is one of:
+    where **tenant_id** is one of:
 
-    - Your tenant domain, for example, `ukcloud.onmicrosoft.com`, `ukcloud.com`, `example.mydomain.com`
+    - Your tenant domain, for example, `ukcloud.onmicrosoft.com`, `ukcloud.com`, `example.mydomain.com`.
 
-    - Your tenant ID, for example `8eaef023-2b34-4da1-9baa-8bc8c9d6a490`
+    - Your tenant ID, for example `8eaef023-2b34-4da1-9baa-8bc8c9d6a490`.
 
-    - The default value for tenant independent keys: `common`
+    - The default value for tenant independent keys: `common`.
 
 2. Pass the following parameters in the request body:
 
-    - `grant_type` - The type of authentication scheme to use: `password`
+    - **grant_type** - The type of authentication scheme to use: `password`.
 
-    - `client_id` - Hard-coded to a default value of `1950a258-227b-4e31-a9cf-717495945fc2`
+    - **client_id** - Hard-coded to a default value of `1950a258-227b-4e31-a9cf-717495945fc2`.
 
         Other options for specific scenarios are:
 
-        - LegacyPowerShell - `0a7bdc5c-7b57-40be-9939-d4c5fc7cd417*`
+        - LegacyPowerShell - `0a7bdc5c-7b57-40be-9939-d4c5fc7cd417*`.
 
-        - PowerShell - `1950a258-227b-4e31-a9cf-717495945fc2`
+        - PowerShell - `1950a258-227b-4e31-a9cf-717495945fc2`.
 
-        - WindowsAzureActiveDirectory - `00000002-0000-0000-c000-000000000000`
+        - WindowsAzureActiveDirectory - `00000002-0000-0000-c000-000000000000`.
 
-        - VisualStudio - `872cd9fa-d31f-45e0-9eab-6e460a02d1f1`
+        - VisualStudio - `872cd9fa-d31f-45e0-9eab-6e460a02d1f1`.
 
-        - AzureCLI - `04b07795-8ddb-461a-bbee-02f9e1bf7b46`
+        - AzureCLI - `04b07795-8ddb-461a-bbee-02f9e1bf7b46`.
 
-    - `resource` - The endpoint of the resource the token will be used to access, for example,
-    `https://management.ukcloud.onmicrosoft.com/4de154de-a8a8-4017-af41-df619da68154`
+    - **resource** - The endpoint of the resource the token will be used to access, for example,
+    `https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1`.
 
-        You can obtain the resource endpoint by querying the Azure Stack management metadata endpoint. The resource endpoint is returned in the `audiences` section of the response.
+       >[!NOTE]
+       > You can obtain the resource endpoint by querying the Azure Stack management metadata endpoint. The resource endpoint is returned in the `audiences` section of the response. <br> For example, to find the endpoint for the `operators` resource, send a request to `https://management.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2016-05-01`.
 
-        For example, to find the endpoint for the `operators` resource send a request to `https://adminmanagement.<region>.<AzureStackdomain>/metadata/endpoints?api-version=2015-01-01`
+    - **username** - The Azure Stack AAD account, for example `azurestackadmin@ukcloud.onmicrosoft.com`.
 
-    - `username` - The Azure Stack AAD account, for example `azurestackadmin@ukcloud.onmicrosoft.com`
+    - **password** - The password for the Azure Stack AAD account.
 
-    - `password` - The password for the Azure Stack AAD account
-
-    - `scope` - optional, such as `openid` to get the ID token
-
-    For example:
-
-    ```http
-    grant_type=password
-    &client_id=1950a258-227b-4e31-a9cf-717495945fc2
-    &resource=(endpoint returned in the audiences section below)
-    &username=admin@ukcloud.onmicrosoft.com
-    &password=Password123
-    &scope=openid
-    ```
+    - **scope** - optional, such as `openid` to get the ID token.
 
     > [!NOTE]
     > Format the request body using the Content-Type `x-www-form-urlencoded`.
 
-3. An example request might look something like the following
+    ### [Curl](#tab/tabid-1)
 
     ```bash
     curl -X "POST" "https://login.windows.net/160f539f-8571-4c96-9361-797645c24e75/oauth2/token" \
@@ -100,9 +90,33 @@ To obtain an access token:
     --data-urlencode "grant_type=password" \
     --data-urlencode "username=admin@ukcloud.onmicrosoft.com" \
     --data-urlencode 'password=Password12345' \
-    --data-urlencode "resource=https://management.ukcloud.onmicrosoft.com/c0a3a144-57ae-42e2-a5da-19e945a25deb"
+    --data-urlencode "resource=https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
+    ```
 
-4. If the authentication is successful, the endpoint returns an access token. For example:
+    ### [PowerShell](#tab/tabid-2)
+    
+    ```powershell
+    # Declare variables
+    $TenantID = "<TenantID>"
+    $UserName = "<UserName>@$TenantID"
+    $UserPassword = "<Password>"
+    $AuthRequestBody = @{
+        "grant_type" = "password"
+        "client_id" = "1950a258-227b-4e31-a9cf-717495945fc2"
+        "resource" = "https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1"
+        "username" = $UserName
+        "password" = $UserPassword
+    }
+
+    # Send POST to Azure REST authentication/login endpoint to retrieve access token.
+    $AuthResp = Invoke-RestMethod -Method "POST" -Uri "https://login.microsoftonline.com/$TenantID/oauth2/token" -Body $AuthRequestBody -ContentType "application/x-www-form-urlencoded"
+
+    $AuthResp
+    ```
+
+    ***
+
+3. If the authentication is successful, the endpoint returns an access token. For example:
 
     ```json
     {
@@ -112,36 +126,54 @@ To obtain an access token:
       "ext_expires_in": "0",
       "expires_on": "1512574780",
       "not_before": "1512570880",
-      "resource": "https://management.ukcloud.onmicrosoft.com/c0a3a144-57ae-42e2-a5da-19e945a25deb",
-      "access_token": "eyJ0eXAiOi...truncated for readability..."
+      "resource": "https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1",
+      "access_token": "eyJ0eXAiOi...truncated for readability...",
+      "refresh_token": "AQABAAAAAA...truncated for readability..."
     }
     ```
 
 5. You must include this token in the Authorization header of each subsequent API request. For example:
 
+    ### [Curl](#tab/tabid-3)
+
     ```bash
-    curl -H "Authorization: Bearer eyJ0eXAiOi...truncated for readability..." 'https://management.local.azurestack.external/subscriptions?api-version=2016-05-01'
+    curl -H "Authorization: Bearer eyJ0eXAiOi...truncated for readability..." 'https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2016-05-01'
     ```
+
+    ### [PowerShell](#tab/tabid-4)
+
+    ```powershell
+    # Add access token to header object for subsequent API requests
+    $AuthHeader = @{"Authorization" = "Bearer $($AuthResp.access_token)"}
+
+    # Query the Azure Stack API for subscriptions
+    Invoke-RestMethod -Method "GET" -Uri "https://management.frn00006.azure.ukcloud.com/subscriptions" -Headers $AuthHeader -Body @{"api-version" = "2016-05-01"} -ContentType "application/x-www-form-urlencoded"
+    ```
+
+    ***
 
 ## Calling Azure Stack API endpoints
 
 A REST request URI consists of:
 
-`<URI-scheme>://<URI-host>/<resource-path>?<query-string>`
+   `<URI-scheme>://<URI-host>/<resource-path>?<query-string>`
 
 where:
 
-- `URI-scheme` is the protocol used to transmit the request, for example `http` or `https`.
+- **URI-scheme** is the protocol used to transmit the request, for example `http` or `https`.
 
-- `URI-host` is the domain name or IP address of the server where the REST service endpoint is hosted, for example `management.local.azurestack.external`.
+- **URI-host** is the domain name or IP address of the server where the REST service endpoint is hosted, for example `management.frn00006.azure.ukcloud.com`.
 
-- `resource-path` is the resource or resource collection, which may include multiple segments, used by the service in determining the selection of those resources. For example `beta/applications/00003f25-7e1f-4278-9488-efc7bac53c4a/owners` is the resource path to a specific application's owners within the applications collection.
+- **resource-path** is the resource or resource collection, which may include multiple segments, used by the service in determining the selection of those resources. For example `beta/applications/00003f25-7e1f-4278-9488-efc7bac53c4a/owners` is the resource path to a specific application's owners within the applications collection.
 
-- `query-string` provides additional simple parameters, such as the API version or resource selection criteria.
+- **query-string** provides additional simple parameters, such as the API version or resource selection criteria.
+
+    >[!NOTE]
+    > For Curl, the **query-string** can be added to the end of the request URI following a question mark. For example, to specify use of a specific API version: `https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2016-05-01`. <br>For PowerShell, **query-string** can be provided in the **-Body** parameter hash table. For example: `-Body @{"api-version" = "2016-05-01"}`.
 
 The syntax of an Azure Stack request URI is:
 
-`https://management.local.azurestack.external/<subscription-id>/resourcegroups/<resource-group>/providers/<provider>/<resource-path>?<filter-expression>&api-version=<api-version>`
+`https://management.frn00006.azure.ukcloud.com/<subscription-id>/resourcegroups/<resource-group>/providers/<provider>/<resource-path>?<filter-expression>&api-version=<api-version>`
 
 where:
 
@@ -159,7 +191,7 @@ where:
 
 For example, the following API call returns information about region health:
 
-`https://management.local.azurestack.external/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/resourcegroups/system.local/providers/microsoft.infrastructureinsights.admin/regionhealths/local/Alerts?$filter=(Properties/State eq 'Active') and (Properties/Severity eq 'Critical')&$orderby=Properties/CreatedTimestamp desc&api-version=2016-05-01"`
+`https://management.frn00006.azure.ukcloud.com/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/resourcegroups/system.local/providers/microsoft.infrastructureinsights.admin/regionhealths/local/Alerts?$filter=(Properties/State eq 'Active') and (Properties/Severity eq 'Critical')&$orderby=Properties/CreatedTimestamp desc&api-version=2016-05-01"`
 
 ## Next steps
 
@@ -177,9 +209,9 @@ In particular, you may find the following documents useful:
 
 - <https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-v2-protocols-oauth-code>
 
-- <https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/azure-stack-provider-resource-api.md>
+- <https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-provider-resource-api>
 
-There is not currently an API reference guide for Azure Stack Users; however, there is an Admin API guide that you can find [here]("https://docs.microsoft.com/en-us/rest/api/azure-stack/"). We'll update this guide when one becomes available.
+There is not currently an API reference guide for Azure Stack Users; however, there is an Admin API guide that you can find [here](https://docs.microsoft.com/en-us/rest/api/azure-stack/). We'll update this guide when one becomes available.
 
 For more information about UKCloud for Microsoft Azure, see:
 
