@@ -32,7 +32,7 @@ By offering this service, we take on all that complexity so that customers can i
 
 ### Is UKCloud for OpenShift a single-tenant or multi-tenant solution?
 
-UKCloud for OpenShift is built as an isolated single-tenant platform on top of UKCloud's secure, assured multi-tenant UKCloud for OpenStack IaaS platform, helping to deliver the benefits of single-tenant isolation with the economics and flexibility of multi-tenant infrastructure.
+UKCloud for OpenShift is built as an isolated single-tenant environment on top of UKCloud's secure, assured multi-tenant UKCloud for OpenStack IaaS platform, helping to deliver the benefits of single-tenant isolation with the economics and flexibility of multi-tenant infrastructure.
 
 ### How is UKCloud for OpenShift billed?
 
