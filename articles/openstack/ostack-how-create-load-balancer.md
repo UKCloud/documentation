@@ -18,6 +18,9 @@ toc_mdlink: ostack-how-create-load-balancer.md
 
 # Creating load-balancing services on UKCloud for OpenStack
 
+> [!NOTE]
+> This article only applies to OpenStack Regions running the Newton release and lower (currently COR00005 and FRN00006). All newer Regions offer native Load Balancing as a Service (LBaaS)
+
 ## Overview
 
 Although OpenStack's Neutron project does support load-balancing natively, our testing has shown that this is not a highly available solution which could result in the loss of traffic flow to a project in the event of a host failure, this view has been echoed by many other OpenStack vendors. In order to mitigate against this scenario, we have created the following article, which enables you to easily deploy our load-balancing solution within your OpenStack projects.
