@@ -58,7 +58,7 @@ Enter details below to provide values for the variables in the scripts in this a
 | \$BackupTimes    | A comma separated list of the times to backup at on the backup days.                 | <form oninput="result.value=backuptimes.value" id="backuptimes" style="display: inline;"><input type="text" id="backuptimes" name="backuptimes" style="display: inline;" placeholder="16:00, 20:00"/></form> |
 | \$FoldersToBackup    | A comma separated list of folders to backup. By default backs up all drives excluding temporary storage.                 | <form oninput="result.value=folderstobackup.value" id="folderstobackup" style="display: inline;"><input type="text" id="folderstobackup" name="folderstobackup" style="display: inline;" placeholder="C:\Users, C:\Important"/></form> |
 
-1. Create a [public Azure and Azure Stack service principle name (SPN)](https://docs.ukcloud.com/articles/azure/azs-how-create-spn-powershell.html?tabs=tabid-1).
+1. Create a [public Azure and Azure Stack service principle name (SPN)](azs-how-create-spn-powershell.md).
 
 2. From an elevated (administrator) PowerShell console, run the following script to download the required module and execute the backup process:
 
