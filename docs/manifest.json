@@ -6558,7 +6558,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-home.html",
-          "hash": "RnJ2FEvELHUuwogLb9SJwg=="
+          "hash": "6zZJyr0ozsuBq6Z2tEh/Cg=="
         }
       },
       "is_incremental": false,
@@ -18000,17 +18000,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 405,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 405,
           "skipped_file_count": 0
         }
       }
