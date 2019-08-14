@@ -22,9 +22,9 @@ toc_mdlink: azs-home.md
 UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure platform delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners.
 
 <div class="flex-box">
-  <strong><ul><li><p><a href="https://docs.ukcloud.com/articles/azure/azs-sd.html">Service Definition</a></p></ul></strong>
+  <strong><ul><li><p>[Service Definition](azs-sd.md)</p></ul></strong>
   <strong><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></p></ul></strong>
-  <strong><ul><li><p><a href="https://docs.ukcloud.com/articles/azure/azs-sco.html">Service Scope</a></p></ul></strong>
+  <strong><ul><li><p>[Service Scope](azs-sco.md)</p></ul></strong>
 </div>
 
 ## Let's get started
@@ -32,24 +32,24 @@ UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure plat
 First, take a look at our [Getting Started Guide](azs-gs.md) to learn the basics, then you can:
 
 <div class="row">
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/azure/azs-how-create-vm-portal.html">Create a VM (using the Portal)</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/azure/azs-how-create-vm-cli.html">Create a VM (using the Azure CLI)</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/azure/azs-how-create-vm-ps.html">Create a VM (using PowerShell)</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/azure/azs-how-create-vm-terraform.html">Create a VM (using Terraform)</a></p></ul></div>
+  <div class="col-md-3"><ul><li><p>[Create a VM (using the Portal)](azs-how-create-vm-portal.md)</p></ul></div>
+  <div class="col-md-3"><ul><li><p>[Create a VM (using the Azure CLI)](azs-how-create-vm-cli.md)</p></ul></div>
+  <div class="col-md-3"><ul><li><p>[Create a VM (using PowerShell)](azs-how-create-vm-ps.md)</p></ul></div>
+  <div class="col-md-3"><ul><li><p>[Create a VM (using Terraform)](azs-how-create-vm-terraform.md)</p></ul></div>
 </div>
 
 <div class="row">
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/azure/azs-how-manage-azure-group.html">Manage groups and permissions</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/azure/azs-how-retrieve-quota-ps.html">Retrieve your subscription quotas (using PowerShell)</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/azure/azs-how-configure-powershell-users.html">Configure PowerShell environment</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/azure/azs-how-use-azure-api.html">Use the Azure Stack API</a></p></ul></div>
+  <div class="col-md-3"><ul><li><p>[Manage groups and permissions](azs-how-manage-azure-group.md)</p></ul></div>
+  <div class="col-md-3"><ul><li><p>[Retrieve your subscription quotas (using PowerShell)](azs-how-retrieve-quota-ps.md)</p></ul></div>
+  <div class="col-md-3"><ul><li><p>[Configure PowerShell environment](azs-how-configure-powershell-users.md)</p></ul></div>
+  <div class="col-md-3"><ul><li><p>[Use the Azure Stack API](azs-how-use-azure-api.md)</p></ul></div>
 </div>
 
 <div class="row">
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/azure/azs-how-create-spn-portal.html">Create a Service Principle Name (SPN) (using the Portal)</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/azure/azs-how-create-spn-powershell.html">Create a Service Principle Name (SPN) (using PowerShell)</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/azure/azs-how-deploy-sql-template-powershell.html">Deploy an SQL template (using PowerShell)</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/azure/azs-how-add-managed-disks-portal.html">Add a managed disk to a VM (using the Portal)</a></p></ul></div>
+  <div class="col-md-3"><ul><li><p>[Create a Service Principle Name (SPN) (using the Portal)](azs-how-create-spn-portal.md)</p></ul></div>
+  <div class="col-md-3"><ul><li><p>[Create a Service Principle Name (SPN) (using PowerShell)](azs-how-create-spn-powershell.md)</p></ul></div>
+  <div class="col-md-3"><ul><li><p>[Deploy an SQL template (using PowerShell)](azs-how-deploy-sql-template-powershell.md)</p></ul></div>
+  <div class="col-md-3"><ul><li><p>[Add a managed disk to a VM (using the Portal)](azs-how-add-managed-disks-portal.md)</p></ul></div>
 </div>
 
 ## Azure Stack portal overview
@@ -69,9 +69,9 @@ First, take a look at our [Getting Started Guide](azs-gs.md) to learn the basics
 ## Other resources
 
 <div class="flex-box" style="justify-content: flex-start;">
-  <ul><li><p><a href="https://docs.ukcloud.com/articles/other/other-ref-services-by-region.html">Services by region</a></p></ul>
+  <ul><li><p>[Services by region](../other/other-ref-services-by-region.md)</p></ul>
   <ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></p></ul>
-  <ul><li><p><a href="https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html">SLA definition</a></p></ul>
+  <ul><li><p>[SLA definition](../other/other-ref-sla-definition.md)</p></ul>
 </div>
 
 ## Still have questions?
