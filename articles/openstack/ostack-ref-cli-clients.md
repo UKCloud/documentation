@@ -21,7 +21,7 @@ You can use the OpenStack command-line clients to run simple commands that make 
 
 The following Red Hat document collects the help content from the OpenStack command-line clients to provide guidance when using UKCloud for OpenStack.
 
-[*Red Hat OpenStack Platform 10 Command-Line Interface Reference*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/html-single/command-line_interface_reference_guide/index){target="_blank"}
+[*Red Hat OpenStack Platform 10 Command-Line Interface Reference*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/html-single/command-line_interface_reference_guide/index)
 
 ## Feedback
 
