@@ -34,6 +34,8 @@
     href: ostack-how-move-resources.md
   - name: Retrieve your Windows password on UKCloud for OpenStack
     href: ostack-how-retrieve-windows-password.md
+  - name: Use Barbican Key Management as a Service
+    href: ostack-how--use-barbican.md
   - name: Use OpenStack instance metadata
     href: ostack-how-use-instance-metadata.md
   - name: Use the OpenStack API with an SSO user

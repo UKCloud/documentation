@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to use Barbican Key Management as a Service (KMaaS) on UKCloud for OpenStack | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to use Barbican Key Management as a Service (KMaaS) on UKCloud for OpenStack | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.44.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openstack/ostack-how-use-barbican.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="using-barbican-key-management-as-a-service-kmaas">Using Barbican Key Management as a Service (KMaaS)</h1>
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>This article does not apply to OpenStack Regions running the Pike release and lower (currently COR00005 and FRN00006). All newer Regions offer native Key Management as a Service</p>
+</div>
+<h2 id="overview">Overview</h2>
+<p>OpenStack Key Manager (barbican) is the secrets manager for Red Hat OpenStack Platform. You can use the barbican API and command line to centrally manage the certificates, keys, and passwords used
+by OpenStack services.</p>
+<p>Barbican currently supports the following use cases described in this guide:</p>
+<ul>
+<li>Symmetric encryption keys - used for Block Storage (cinder) volume encryption, ephemeral disk encryption, and Object Storage (swift) encryption, among others.</li>
+<li>Asymmetric keys and certificates- used for glance image signing and verification, among others.</li>
+</ul>
+<h2 id="managing-secrets-in-barbican">MANAGING SECRETS IN BARBICAN</h2>
+<h3 id="adding-new-secrets">ADDING NEW SECRETS</h3>
+<p>Create a test secret. For example:</p>
+<pre><code class="lang-none">$ openstack secret store --name testSecret --payload 'TestPayload'
+</code></pre>
+<pre><code class="lang-none">+--------------+------------------------------------------------------------------------------------+
+| Field | Value |
++--------------+------------------------------------------------------------------------------------+
+| Secret href | https://192.168.123.163:9311/v1/secrets/ecc7b2a4-f0b0-47ba-b451-0f7d42bc1746 |
+| Name | testSecret |
+| Created | None |
+| Status | None |
+| Content types | None |
+| Algorithm | aes |
+| Bit length | 256 |
+| Secret type | opaque |
+| Mode | cbc |
+| Expiration | None |
+---------------------------------------------------------------------------------------------------+
+</code></pre>
+<h3 id="updating-secrets">UPDATING SECRETS</h3>
+<p>You cannot change the payload of a secret (other than deleting the secret), but if you initially created a secret without specifying a payload, you can later add a payload to it by using the <strong>update</strong> function. For example:</p>
+<pre><code class="lang-none">$ openstack secret update https://192.168.123.163:9311/v1/secrets/ca34a264-fd09-44a1-8856-c6e7116c3b16 'TestPayload-updated'
+</code></pre>
+<h3 id="deleting-secrets">DELETING SECRETS</h3>
+<p>You can delete a secret by specifying its URI. For example:</p>
+<pre><code class="lang-none">$ openstack secret delete https://192.168.123.163:9311/v1/secrets/ecc7b2a4-f0b0-47ba-b451-0f7d42bc1746
+</code></pre>
+<h3 id="generate-a-symmetric-key">GENERATE A SYMMETRIC KEY</h3>
+<p>Symmetric keys are suitable for certain tasks, such as nova disk encryption and swift object encryption.</p>
+<ol>
+<li>Generate a new 256-bit key using <strong>order create</strong> and store it in barbican. For example:</li>
+</ol>
+<pre><code class="lang-none">$ openstack secret order create --name swift_key --algorithm aes --mode ctr --bit-length 256 --payload-content-type=application/octet-stream key
+</code></pre>
+<pre><code class="lang-none">+----------------+-----------------------------------------------------------------------------------+
+| Field | Value |
++----------------+-----------------------------------------------------------------------------------+
+| Order href | https://192.168.123.173:9311/v1/orders/043383fe-d504-42cf-a9b1-bc328d0b4832 |
+| Type | Key |
+| Container href | N/A |
+| Secret href | None |
+| Created | None |
+| Status | None |
+| Error code | None |
+| Error message | None |
++----------------+-----------------------------------------------------------------------------------+
+</code></pre>
+<ul>
+<li><strong>--mode</strong> - Generated keys can be configured to use a particular mode, such as <strong>ctr</strong> or <strong>cbc</strong>. For more information, see <em>NIST SP 800-38A</em>.</li>
+</ul>
+<ol start="2">
+<li>View the details of the order to identify the location of the generated key, shown here as the
+<strong>Secret href</strong> value:</li>
+</ol>
+<pre><code class="lang-none">$ openstack secret order get https://192.168.123.173:9311/v1/orders/043383fe-d504-42cfa9b1-bc328d0b4832
+</code></pre>
+<pre><code class="lang-none">+----------------------------------------------------------------------------------------------------+
+| Field | Value |
++----------------+------------------------------------------------------------------------------------+
+| Order href | https://192.168.123.173:9311/v1/orders/043383fe-d504-42cf-a9b1-
+bc328d0b4832 |
+| Type | Key |
+| Container href | N/A |
+| Secret href | https://192.168.123.173:9311/v1/secrets/efcfec49-b9a3-4425-a9b6-
+5ba69cb18719 |
+| Created | 2018-01-24T04:24:33+00:00 |
+| Status | ACTIVE |
+| Error code | None |
+| Error message | None |
++----------------+------------------------------------------------------------------------------------+
+</code></pre>
+<ol start="3">
+<li>Retrieve the details of the secret:</li>
+</ol>
+<pre><code class="lang-none">$ openstack secret get https://192.168.123.173:9311/v1/secrets/efcfec49-b9a3-4425-a9b6-5ba69cb18719
+</code></pre>
+<pre><code class="lang-none">+---------------+------------------------------------------------------------------------------------+
+| Field | Value |
++---------------+------------------------------------------------------------------------------------+
+| Secret href | https://192.168.123.173:9311/v1/secrets/efcfec49-b9a3-4425-a9b6-
+5ba69cb18719 |
+| Name | swift_key |
+| Created | 2018-01-24T04:24:33+00:00 |
+| Status | ACTIVE |
+| Content types | {u'default': u'application/octet-stream'} |
+| Algorithm | aes |
+| Bit length | 256 |
+| Secret type | symmetric |
+| Mode | ctr |
+| Expiration | None |
++---------------+------------------------------------------------------------------------------------+
+</code></pre>
+<h3 id="listing-secrets">LISTING SECRETS</h3>
+<p>Secrets are identified by their URI, indicated as a href value. This example shows the secret you created in the previous steps:</p>
+<pre><code class="lang-none">$ openstack secret list
+</code></pre>
+<pre><code class="lang-none">+------------------------------------------------------------------------------------+------+---------------------------+--------+-------------------------------------------+-----------+------------+-------------+------+------------+
+| Secret href | Name | Created | Status | Content types | Algorithm | Bit length | Secret type | Mode | Expiration |
++------------------------------------------------------------------------------------+------+---------------------------+--------+-------------------------------------------+-----------+------------+-------------+------+------------+
+| https://192.168.123.169:9311/v1/secrets/24845e6d-64a5-4071-ba99-0fdd1046172e | None | 2018-01-22T02:23:15+00:00 | ACTIVE | {u'default': u'application/octet-stream'} | aes | 256 | symmetric | None | None |
++------------------------------------------------------------------------------------+------+---------------------------+--------+-------------------------------------------+-----------+------------+-------------+------+------------+
+</code></pre>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>
