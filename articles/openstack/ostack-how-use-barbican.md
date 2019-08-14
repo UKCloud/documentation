@@ -13,7 +13,7 @@ toc_sub3:
 toc_sub4:
 toc_title: Use Barbican Key Management as a Service
 toc_fullpath: How To/ostack-how-use-barbican.md
-toc_mdlink: ostack-how--use-barbican.md
+toc_mdlink: ostack-how-use-barbican.md
 ---
 
 # Using Barbican Key Management as a Service (KMaaS)
