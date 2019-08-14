@@ -31,6 +31,23 @@ Barbican currently supports the following use cases described in this guide:
 - Symmetric encryption keys - used for Block Storage (cinder) volume encryption, ephemeral disk encryption, and Object Storage (swift) encryption, among others.
 - Asymmetric keys and certificates- used for glance image signing and verification, among others.
 
+## Prerequisites
+
+* Barbican uses port 13311 for communication. This port will need to be open for Barbican to work
+* Running a recent version of the OpenStackCLI . To check for an update run:
+```none
+pip install --upgrade python-openstackclient
+```
+
+
+## Use Cases
+
+Use cases for Barbican include;
+* Image signature verification
+* LBaaS services
+* Volume encryption (coming soon)
+* Ephemeral disk encryption (coming soon)
+
 ## MANAGING SECRETS IN BARBICAN
 
 ### ADDING NEW SECRETS
