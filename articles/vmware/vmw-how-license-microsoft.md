@@ -81,7 +81,7 @@ As stated, all Microsoft applications on the UKCloud platform must be licensed a
   
   - Authorized Mobility Partner Email Address: nstewart@ukcloud.com
   
-  - Partner agreement number: 8392716
+  - Partner agreement number: 82685361
 
 ## Microsoft application list
 
