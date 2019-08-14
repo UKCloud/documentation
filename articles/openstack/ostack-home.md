@@ -30,7 +30,7 @@ First, take a look at our [Getting Started Guide](ostack-gs.md) to learn the bas
   <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/openstack/ostack-how-recover-instance.html">Recover from failure</a></p></ul></div>
 </div>
 
-## OpenStack Horizone overview
+## OpenStack Horizon overview
 
 <div class="row">
   <div class="col-md-6">
