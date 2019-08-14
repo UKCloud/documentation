@@ -19,7 +19,10 @@ toc_mdlink: oshift-faq.md
 
 ### What is UKCloud for OpenShift?
 
-UKCloud for OpenShift is a Platform as a Service (PaaS) solution providing container management and orchestration powered by Red Hat OpenShift Container Platform to deliver a flexible, scalable cloud application platform. Unlike traditional managed PaaS offerings, it provides a modern application platform that accelerates end-to-end development, deployment and operation of digital applications, while raising overall application reliability and availability.
+UKCloud for OpenShift is a Kubernetes based Platform as a Service (PaaS) solution providing container management and orchestration using Red Hat OpenShift to deliver a flexible, scalable cloud application platform. Unlike traditional managed PaaS offerings, it provides a modern application platform that accelerates end-to-end development, deployment and operation of digital applications, while raising overall application reliability and availability.
+
+### Which version of OpenShift is the service based upon?
+UKCloud for OpenShift is built using Red Hat's OpenShift Container Platform v3.11, which is the Enterprise-hardened version of OKD (previously Origins) v.3.11, which is based upon Kubernetes v1.11.
 
 ### Why deliver UKCloud for OpenShift as a cloud service?
 
@@ -29,15 +32,15 @@ By offering this service, we take on all that complexity so that customers can i
 
 ### Is UKCloud for OpenShift a single-tenant or multi-tenant solution?
 
-UKCloud for OpenShift is built as a single-tenant platform on-top of UKCloud's secure, assured multi-tenant UKCloud for OpenStack IaaS platform, helping to deliver the benefits of single tenant isolation with the economics and flexibility of multi-tenant infrastructure.
+UKCloud for OpenShift is built as an isolated single-tenant environment on top of UKCloud's secure, assured multi-tenant UKCloud for OpenStack IaaS platform, helping to deliver the benefits of single-tenant isolation with the economics and flexibility of multi-tenant infrastructure.
 
 ### How is UKCloud for OpenShift billed?
 
 This service comprises of two main chargeable elements:
 
-  - **Foundation Pack -** provides the foundation OpenShift services to support the orchestration and management of the container runtime environments. Each customer environment requires only a single Foundation Pack
+  - **Foundation Pack -** providing an initial footprint of 32GiB of RAM, billed by the month with a one-month minimum commitment
 
-  - **Runtime Pack -** Provides the footprint to host customer’s containerised applications and services. Customers can choose to mix and match their Runtime Packs, and Runtime Packs can be called off individually, however UKCloud strongly recommends the initial deployment of two or more Runtime Packs for production environments to provide resilience to your workloads in the event of the failure of a single Runtime Pack.
+  - **Runtime Pack -** billed by the month with a one-month minimum commitment based upon the amount of additional RAM allocated
 
 ### Does UKCloud offer a free trial?
 
@@ -63,9 +66,9 @@ We monitor, maintain and support our controlled UKCloud for OpenShift infrastruc
 
 - UKCloud-maintained OpenShift services (for example, router service, DEAs, health manager, cloud controller, Master Nodes, Worker Nodes, Routing Layer).
 
-### Can I use UKCloud for OpenShift in the UKCloud Elevated (previously IL3) domain?
+### Can I use UKCloud for OpenShift in the UKCloud Elevated domain?
 
-UKCloud for OpenShift services are available in both our Assured (previously IL2) and Elevated (previously IL3) security domains.
+UKCloud for OpenShift services are available in both our Assured and upon request in our Elevated security domains.
 
 ### Is the service Pan Government Accredited?
 
@@ -77,7 +80,9 @@ We provide confidence that our OpenShift service still meets the highest level o
 
 ### Can I use UKCloud for OpenShift over closed networks such as PSN and HSCN?
 
-UKCloud for OpenShift is available on the PSN, HSCN and Janet networks.
+UKCloud for OpenShift has been certified for use over the PSN network.
+
+Connectivity to the HSCN network is available for customers and partners serving the healthcare community.
 
 ### Does UKCloud offer any scheduled automated backups for UKCloud for OpenShift?
 
@@ -104,6 +109,8 @@ The service supports many popular development frameworks and languages such as:
 - PHP
 
 - GoLang
+
+For the full list please visit https://access.redhat.com/articles/2176281?hsLang=en-us
 
 ### Does UKCloud for OpenShift support any data services?
 
