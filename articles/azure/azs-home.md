@@ -15,17 +15,11 @@ toc_fullpath: About/azs-home.md
 toc_mdlink: azs-home.md
 ---
 
-<style>.col-md-3 {padding-top: 1em;} .flex-box {display: flex; width: 100%; height: 100%; justify-content: space-evenly; flex-flow: row nowrap; padding-top: 0.5em;}</style>
+<style>.col-md-3 {padding-top: 1em; font-weight: bold;} .flex-box {display: flex; width: 100%; height: 100%; justify-content: space-between; flex-flow: row nowrap; padding-top: 0.5em;}</style>
 
 # UKCloud for Microsoft Azure
 
 UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure platform delivered from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners.
-
-<div class="flex-box">
-  <strong><ul><li><p><a href="azs-sd.md">Service Definition</a></li></p></ul></strong>
-  <strong><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></li></p></ul></strong>
-  <strong><ul><li><p><a href="azs-sco.md">Service Scope</a></li></p></ul></strong>
-</div>
 
 ## Let's get started
 
@@ -52,6 +46,17 @@ First, take a look at our [Getting Started Guide](azs-gs.md) to learn the basics
   <div class="col-md-3"><ul><li><p><a href="azs-how-add-managed-disks-portal.md">Add a managed disk to a VM (using the Portal)</a></li></p></ul></div>
 </div>
 
+## Other resources
+
+<div class="flex-box">
+  <strong><ul><li><p><a href="azs-sd.md">Service Definition</a></li></p></ul></strong>
+  <strong><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></li></p></ul></strong>
+  <strong><ul><li><p><a href="azs-sco.md">Service Scope</a></li></p></ul></strong>
+  <strong><ul><li><p><a href="../other/other-ref-services-by-region.md">Services by region</li></p></ul></strong>
+  <strong><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></li></p></ul></strong>
+  <strong><ul><li><p><a href="../other/other-ref-sla-definition.md">SLA definition</li></p></ul></strong>
+</div>
+
 ## Azure Stack portal overview
 
 <div class="row">
@@ -65,14 +70,6 @@ First, take a look at our [Getting Started Guide](azs-gs.md) to learn the basics
   <div class="col-md-6"></div>
 </div>
 <script src="https://player.vimeo.com/api/player.js"></script>
-
-## Other resources
-
-<div class="flex-box" style="justify-content: flex-start;">
-  <ul><li><p><a href="../other/other-ref-services-by-region.md">Services by region</li></p></ul>
-  <ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></li></p></ul>
-  <ul><li><p><a href="../other/other-ref-sla-definition.md">SLA definition</li></p></ul>
-</div>
 
 ## Still have questions?
 
