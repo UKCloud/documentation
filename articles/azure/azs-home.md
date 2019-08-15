@@ -15,7 +15,13 @@ toc_fullpath: About/azs-home.md
 toc_mdlink: azs-home.md
 ---
 
-<style>.col-md-3 {padding-top: 1em;} .flex-box {display: flex; width: 100%; height: 100%; justify-content: space-between; flex-flow: row wrap; padding-top: 0.5em;}</style>
+<style>.col-md-3 {padding-top: 1em;} .flex-box {display: flex; width: 100%; height: 100%; justify-content: space-between; flex-flow: row wrap; padding-top: 0.5em;}
+/* Mobile Devices */
+@media only screen and (max-width: 667px) {
+  .flex-box {
+    flex-flow: column wrap;
+  }
+}</style>
 
 # UKCloud for Microsoft Azure
 
