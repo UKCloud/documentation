@@ -15,7 +15,7 @@ toc_fullpath: About/azs-home.md
 toc_mdlink: azs-home.md
 ---
 
-<style>.col-md-3 {padding-top: 1em; font-weight: bold;} .flex-box {display: flex; width: 100%; height: 100%; justify-content: space-between; flex-flow: row nowrap; padding-top: 0.5em;}</style>
+<style>.col-md-3 {padding-top: 1em;} .flex-box {display: flex; width: 100%; height: 100%; justify-content: space-between; flex-flow: row nowrap; padding-top: 0.5em;}</style>
 
 # UKCloud for Microsoft Azure
 
@@ -26,24 +26,24 @@ UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure plat
 First, take a look at our [Getting Started Guide](azs-gs.md) to learn the basics, then you can:
 
 <div class="row">
-  <div class="col-md-3"><ul><li><p><a href="azs-how-create-vm-portal.md">Create a VM (using the Portal)</a></li></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="azs-how-create-vm-cli.md">Create a VM (using the Azure CLI)</a></li></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="azs-how-create-vm-ps.md">Create a VM (using PowerShell)</a></p></li></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="azs-how-create-vm-terraform.md">Create a VM (using Terraform)</a></li></p></ul></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-create-vm-portal.md">Create a VM (using the Portal)</a></li></p></ul></strong></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-create-vm-cli.md">Create a VM (using the Azure CLI)</a></li></p></ul></strong></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-create-vm-ps.md">Create a VM (using PowerShell)</a></p></li></ul></strong></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-create-vm-terraform.md">Create a VM (using Terraform)</a></li></p></ul></strong></div>
 </div>
 
 <div class="row">
-  <div class="col-md-3"><ul><li><p><a href="azs-how-manage-azure-group.md">Manage groups and permissions</a></li></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="azs-how-retrieve-quota-ps.md">Retrieve your subscription quotas (using PowerShell)</a></li></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="azs-how-configure-powershell-users.md">Configure PowerShell environment</a></li></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="azs-how-use-azure-api.md">Use the Azure Stack API</a></li></p></ul></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-manage-azure-group.md">Manage groups and permissions</a></li></p></ul></strong></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-retrieve-quota-ps.md">Retrieve your subscription quotas (using PowerShell)</a></li></p></ul></strong></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-configure-powershell-users.md">Configure PowerShell environment</a></li></p></ul></strong></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-use-azure-api.md">Use the Azure Stack API</a></li></p></ul></strong></div>
 </div>
 
 <div class="row">
-  <div class="col-md-3"><ul><li><p><a href="azs-how-create-spn-portal.md">Create a Service Principle Name (SPN) (using the Portal)</a></li></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="azs-how-create-spn-powershell.md">Create a Service Principle Name (SPN) (using PowerShell)</a></li></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="azs-how-deploy-sql-template-powershell.md">Deploy an SQL template (using PowerShell)</a></li></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="azs-how-add-managed-disks-portal.md">Add a managed disk to a VM (using the Portal)</a></li></p></ul></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-create-spn-portal.md">Create a Service Principle Name (SPN) (using the Portal)</a></li></p></ul></strong></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-create-spn-powershell.md">Create a Service Principle Name (SPN) (using PowerShell)</a></li></p></ul></strong></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-deploy-sql-template-powershell.md">Deploy an SQL template (using PowerShell)</a></li></p></ul></strong></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-add-managed-disks-portal.md">Add a managed disk to a VM (using the Portal)</a></li></p></ul></strong></div>
 </div>
 
 ## Other resources
