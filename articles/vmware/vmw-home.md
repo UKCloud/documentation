@@ -24,15 +24,15 @@ UKCloud for VMware is a trusted, connected and flexible cloud, based on VMware t
 First, take a look at our [Getting Started Guide](vmw-gs.md) to learn the basics, then you can:
 
 <div class="row">
-  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-routed-network.md">Create a routed network</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-vm-from-template.md">Create a VM using a template</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-firewall-rules.md">Create firewall rules</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-routed-network.md">Create a routed network</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-vm-from-template.md">Create a VM using a template</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-firewall-rules.md">Create firewall rules</a></p></li></ul></div>
 </div>
 
 <div class="row">
-  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-isolated-network.md">Create an isolated network</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-vm-from-scratch.md">Create a VM from scratch<a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-nat-rules.md">Create NAT rules<a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-isolated-network.md">Create an isolated network</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-vm-from-scratch.md">Create a VM from scratch<a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-how-create-nat-rules.md">Create NAT rules<a></p></li></ul></div>
 </div>
 
 ## Useful videos
@@ -62,7 +62,6 @@ First, take a look at our [Getting Started Guide](vmw-gs.md) to learn the basics
     </div>
     <p><a href="https://vimeo.com/308877124">Licensing Windows VMs using the KMS</a></p>
   </div>
-  <div class="col-md-6"></div>
 </div>
 
 <script src="https://player.vimeo.com/api/player.js"></script>
@@ -70,15 +69,15 @@ First, take a look at our [Getting Started Guide](vmw-gs.md) to learn the basics
 ## Other resources
 
 <div class="row">
-  <div class="col-md-4"><ul><li><p><a href="vmw-sd.md">Service Definition</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="../other/other-ref-services-by-region.md">Services by region</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-sd.md">Service Definition</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="../other/other-ref-services-by-region.md">Services by region</a></p></li></ul></div>
 </div>
 
 <div class="row">
-  <div class="col-md-4"><ul><li><p><a href="vmw-sco.md">Service Scope</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="../other/other-ref-sla-definition.md">SLA definition</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="vmw-sco.md">Service Scope</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="../other/other-ref-sla-definition.md">SLA definition</a></p></li></ul></div>
 </div>
 
 ## Still have questions?
