@@ -15,7 +15,7 @@ toc_fullpath: About/azs-home.md
 toc_mdlink: azs-home.md
 ---
 
-<style>.col-md-3 {padding-top: 1em;} .flex-box {display: flex; width: 100%; height: 100%; justify-content: space-between; flex-flow: row nowrap; padding-top: 0.5em;}</style>
+<style>.col-md-3 {padding-top: 1em;} .flex-box {display: flex; width: 100%; height: 100%; justify-content: space-between; flex-flow: row wrap; padding-top: 0.5em;}</style>
 
 # UKCloud for Microsoft Azure
 
@@ -52,9 +52,9 @@ First, take a look at our [Getting Started Guide](azs-gs.md) to learn the basics
   <strong><ul><li><p><a href="azs-sd.md">Service Definition</a></li></p></ul></strong>
   <strong><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></li></p></ul></strong>
   <strong><ul><li><p><a href="azs-sco.md">Service Scope</a></li></p></ul></strong>
-  <strong><ul><li><p><a href="../other/other-ref-services-by-region.md">Services by region</li></p></ul></strong>
+  <strong><ul><li><p><a href="../other/other-ref-services-by-region.md">Services by region</a></li></p></ul></strong>
   <strong><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></li></p></ul></strong>
-  <strong><ul><li><p><a href="../other/other-ref-sla-definition.md">SLA definition</li></p></ul></strong>
+  <strong><ul><li><p><a href="../other/other-ref-sla-definition.md">SLA definition</a></li></p></ul></strong>
 </div>
 
 ## Azure Stack portal overview
