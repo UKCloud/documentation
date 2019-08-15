@@ -75,7 +75,7 @@ Have the alerts from your monitored estate triaged and managed by highly trained
 
 ## Pricing and packaging
 
-Pricing from £1.96 per asset per month. Full pricing with all options including licensing and connectivity is available in the [*3rd Party Software Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf). Customer will need to also purchase the appropriate UKCloud infrastructure to host the CloudSOC solution.
+Pricing from £1.96 per asset per month. Full pricing with all options including licensing and connectivity is available in the [*3rd Party Software Pricing Guide*](https://ukcloud.com/3rd-party-pricing-guide). Customer will need to also purchase the appropriate UKCloud infrastructure to host the CloudSOC solution.
 
 ## Free trial
 
