@@ -5127,7 +5127,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-home.html",
-          "hash": "U9IGEUt4+6+lkhN/Dl0cPQ=="
+          "hash": "KrYSgW4HzZriXt59Ue4P6w=="
         }
       },
       "is_incremental": false,
@@ -6558,7 +6558,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-home.html",
-          "hash": "6zZJyr0ozsuBq6Z2tEh/Cg=="
+          "hash": "UD+fQc9ndH+y6V92s9f9PA=="
         }
       },
       "is_incremental": false,
@@ -7279,7 +7279,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-home.html",
-          "hash": "fe1HBzXDviFPMjO5C8xO7A=="
+          "hash": "LRl82G5PEZbeS2KVKAoCcw=="
         }
       },
       "is_incremental": false,
@@ -16693,7 +16693,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-home.html",
-          "hash": "MtfOvWl1khcYN13Gcws5XA=="
+          "hash": "4tu0ScRCigS6ZoaY+oqmyg=="
         }
       },
       "is_incremental": false,
@@ -18000,17 +18000,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 405,
+          "skipped_file_count": 0
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 405,
           "skipped_file_count": 0
         }
       }
