@@ -24,10 +24,10 @@ UKCloud for OpenStack is engineered specifically for organisations embracing dig
 First, take a look at our [Getting Started Guide](ostack-gs.md) to learn the basics, then you can:
 
 <div class="row">
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/openstack/ostack-how-convert-vms.html">Convert virtual machines</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/openstack/ostack-how-create-heat-template.html">Create and deploy a Heat template</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/openstack/ostack-how-create-load-balancer.html">Create load balancing services</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/openstack/ostack-how-recover-instance.html">Recover from failure</a></p></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="ostack-how-convert-vms.md">Convert virtual machines</a></p></li></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="ostack-how-create-heat-template.md">Create and deploy a Heat template</a></p></li></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="ostack-how-create-load-balancer.md">Create load balancing services</a></p></li></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="ostack-how-recover-instance.md">Recover from failure</a></p></li></ul></div>
 </div>
 
 ## OpenStack Horizon overview
@@ -47,15 +47,15 @@ First, take a look at our [Getting Started Guide](ostack-gs.md) to learn the bas
 ## Other resources
 
 <div class="row">
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/openstack/ostack-sd.html">Service Definition</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/other/other-ref-services-by-region.html">Services by region</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="ostack-sd.md">Service Definition</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="../other/other-ref-services-by-region.md">Services by region</a></p></li></ul></div>
 </div>
 
 <div class="row">
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/openstack/ostack-sco.html">Service Scope</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html">SLA definition</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="ostack-sco.md">Service Scope</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="../other/other-ref-sla-definition.md">SLA definition</a></p></li></ul></div>
 </div>
 
 ## Still have questions?
