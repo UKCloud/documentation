@@ -49,7 +49,7 @@ First, take a look at our [Getting Started Guide](azs-gs.md) to learn the basics
   <div class="col-md-3"><strong><ul><li><p><a href="azs-how-create-spn-portal.md">Create a Service Principle Name (SPN) (using the Portal)</a></li></p></ul></strong></div>
   <div class="col-md-3"><strong><ul><li><p><a href="azs-how-create-spn-powershell.md">Create a Service Principle Name (SPN) (using PowerShell)</a></li></p></ul></strong></div>
   <div class="col-md-3"><strong><ul><li><p><a href="azs-how-deploy-sql-template-powershell.md">Deploy an SQL template (using PowerShell)</a></li></p></ul></strong></div>
-  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-link-storage-explorer.html">Link Azure Storage Explorer to Azure Stack</a></li></p></ul></strong></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-link-storage-explorer.md">Link Azure Storage Explorer to Azure Stack</a></li></p></ul></strong></div>
 </div>
 
 ## Other resources
