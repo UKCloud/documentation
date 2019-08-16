@@ -24,7 +24,7 @@ The Azure Stack API enables you to interact programmatically with your UKCloud f
 
 This article will show you how to get started with the Azure Stack API.
 
-When interacting with Azure Stack resources via the API, they require specifying an API version. A full list of supported API versions can be found [here](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-profiles-azure-resource-manager-versions).
+When interacting with Azure Stack resources via the API, you must specify an API version. A full list of supported API versions can be found [here](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-profiles-azure-resource-manager-versions).
 
 ### Prerequisites
 
@@ -40,11 +40,11 @@ To obtain an access token:
 
     `https://login.microsoftonline.com/<tenant_id>/oauth2/token`.
 
-    where **tenant_id** is one of:
+    where **tenant_id** is one of the following:
 
-    - Your tenant domain, for example, `ukcloud.onmicrosoft.com`, `ukcloud.com`, `example.mydomain.com`.
+    - Your tenant domain. For example: `ukcloud.onmicrosoft.com`, `ukcloud.com`, `example.mydomain.com`.
 
-    - Your tenant ID, for example `8eaef023-2b34-4da1-9baa-8bc8c9d6a490`.
+    - Your tenant ID. For example: `8eaef023-2b34-4da1-9baa-8bc8c9d6a490`.
 
     - The default value for tenant independent keys: `common`.
 
@@ -66,22 +66,20 @@ To obtain an access token:
 
         - AzureCLI - `04b07795-8ddb-461a-bbee-02f9e1bf7b46`.
 
-    - **resource** - The endpoint of the resource the token will be used to access, for example,
+    - **resource** - The endpoint of the resource that the token will be used to access. For example:
     `https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1`.
 
        >[!NOTE]
        > You can obtain the resource endpoint by querying the Azure Stack management metadata endpoint. The resource endpoint is returned in the `audiences` section of the response. <br> For example, to find the endpoint for the `operators` resource, send a request to `https://management.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2016-05-01`.
 
-    - **username** - The Azure Stack AAD account, for example `azurestackadmin@ukcloud.onmicrosoft.com`.
+    - **username** - The Azure Stack AAD account. For example: `azurestackadmin@ukcloud.onmicrosoft.com`.
 
     - **password** - The password for the Azure Stack AAD account.
 
-    - **scope** - optional, such as `openid` to get the ID token.
-
     > [!NOTE]
-    > Format the request body using the Content-Type `x-www-form-urlencoded`.
+    > Ensure you format the request body using Content-Type `x-www-form-urlencoded`.
 
-    ### [Curl](#tab/tabid-1)
+    ### [Bash](#tab/tabid-1)
 
     ```bash
     curl -X "POST" "https://login.windows.net/160f539f-8571-4c96-9361-797645c24e75/oauth2/token" \
@@ -94,7 +92,7 @@ To obtain an access token:
     ```
 
     ### [PowerShell](#tab/tabid-2)
-    
+
     ```powershell
     # Declare variables
     $TenantID = "<TenantID>"
@@ -134,7 +132,7 @@ To obtain an access token:
 
 5. You must include this token in the Authorization header of each subsequent API request. For example:
 
-    ### [Curl](#tab/tabid-3)
+    ### [Bash](#tab/tabid-3)
 
     ```bash
     curl -H "Authorization: Bearer eyJ0eXAiOi...truncated for readability..." 'https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2016-05-01'
@@ -162,14 +160,14 @@ where:
 
 - **URI-scheme** is the protocol used to transmit the request, for example `http` or `https`.
 
-- **URI-host** is the domain name or IP address of the server where the REST service endpoint is hosted, for example `management.frn00006.azure.ukcloud.com`.
+- **URI-host** is the domain name or IP address of the server where the REST service endpoint is hosted. For example: `management.frn00006.azure.ukcloud.com`.
 
-- **resource-path** is the resource or resource collection, which may include multiple segments, used by the service in determining the selection of those resources. For example `beta/applications/00003f25-7e1f-4278-9488-efc7bac53c4a/owners` is the resource path to a specific application's owners within the applications collection.
+- **resource-path** is the resource or resource collection, which may include multiple segments used by the service in determining the selection of those resources. For example: `beta/applications/00003f25-7e1f-4278-9488-efc7bac53c4a/owners` is the resource path to a specific application's owners within the applications collection.
 
-- **query-string** provides additional simple parameters, such as the API version or resource selection criteria.
+- **query-string** provides additional parameters, such as the API version or resource selection criteria.
 
     >[!NOTE]
-    > For Curl, the **query-string** can be added to the end of the request URI following a question mark. For example, to specify use of a specific API version: `https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2016-05-01`. <br>For PowerShell, **query-string** can be provided in the **-Body** parameter hash table. For example: `-Body @{"api-version" = "2016-05-01"}`.
+    > For Bash, the **query-string** can be added to the end of the request URI following a question mark. For example, to specify use of a specific API version: `https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2016-05-01`. <br>For PowerShell, **query-string** can be provided in the **-Body** parameter hash table. For example: `-Body @{"api-version" = "2016-05-01"}`.
 
 The syntax of an Azure Stack request URI is:
 
@@ -191,7 +189,7 @@ where:
 
 For example, the following API call returns information about region health:
 
-`https://management.frn00006.azure.ukcloud.com/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/resourcegroups/system.local/providers/microsoft.infrastructureinsights.admin/regionhealths/local/Alerts?$filter=(Properties/State eq 'Active') and (Properties/Severity eq 'Critical')&$orderby=Properties/CreatedTimestamp desc&api-version=2016-05-01"`
+`https://adminmanagement.frn00006.azure.ukcloud.com/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/resourcegroups/system.local/providers/microsoft.infrastructureinsights.admin/regionhealths/local/Alerts?$filter=(Properties/State eq 'Active') and (Properties/Severity eq 'Critical')&$orderby=Properties/CreatedTimestamp desc&api-version=2016-05-01"`
 
 ## Next steps
 
@@ -211,7 +209,7 @@ In particular, you may find the following documents useful:
 
 - <https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-provider-resource-api>
 
-There is not currently an API reference guide for Azure Stack Users; however, there is an Admin API guide that you can find [here](https://docs.microsoft.com/en-us/rest/api/azure-stack/). We'll update this guide when one becomes available.
+This is guidance for Azure Stack users. Currently, there is no official API reference guide for Azure Stack users; however, there is an admin API guide that you can find [here](https://docs.microsoft.com/en-us/rest/api/azure-stack/). We'll update this guide when one becomes available.
 
 For more information about UKCloud for Microsoft Azure, see:
 
