@@ -19,7 +19,7 @@ toc_mdlink: ostack-ref-cli-clients.md
 
 You can use the OpenStack command-line clients to run simple commands that make API calls. You can run these commands from the command line or in scripts to automate tasks. If you provide OpenStack credentials, you can run these commands on any computer. Internally, each client command runs cURL commands that embed API requests. The OpenStack APIs are RESTful APIs that use the HTTP protocol, including methods, URIs, media types, and response codes.
 
-The following Red Hat document collects the help content from the OpenStack command-line clients to provide guidance when using UKCloud for OpenStack.
+The following Red Hat documents collects the help content from the OpenStack command-line clients to provide guidance when using UKCloud for OpenStack.
 
 
 
