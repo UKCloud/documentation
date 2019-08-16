@@ -18,7 +18,7 @@ toc_mdlink: azs-how-deploy-sql-template-powershell.md
 
 # How to deploy an SQL template to Azure Stack using PowerShell
 
-This article explains how to deploy SQL Always On Cluster using ARM Template to Azure Stack using PowerShell.
+This article explains how to deploy an SQL Always On Cluster using an ARM Template to Azure Stack using PowerShell.
 
 It will guide you through the process of:
 
@@ -40,7 +40,7 @@ Prerequisites from a Windows-based external client are:
 
   - [Configure PowerShell Environment and Azure Stack Module](azs-how-configure-powershell-users.md)
 
-- Active Azure *Subscription* (required to create an [SPN](azs-how-create-spn-portal.md) if you want to use the same SPN for both Azure and Azure Stack).
+- An active Azure Stack *Subscription* (required to create an [SPN](azs-how-create-spn-portal.md) on Azure Stack).
 
 ## Official documentation
 
@@ -83,9 +83,9 @@ This template deploys two SQL Server 2016 SP1 or SP2 Enterprise / Standard / Dev
 
 - A virtual network.
 
-- Four storage accounts (One for AD, one for SQL, one for file share witness and one for VM diagnostic).
+- Four storage accounts (One for AD, one for SQL, one for file share witness and one for VM diagnostics).
 
-- Four public IP address (One for AD, two for each SQL VM and one for public LB bound to SQL always on listener).
+- Four public IP address (One for AD, one for each SQL VM and one for public LB bound to SQL always on listener).
 
 - One external load balancer for SQL VMs with public IP bound to the SQL always on listener.
 
@@ -152,7 +152,7 @@ The images used to create this deployment are:
 
 3. Log in to your Azure Stack *Subscription* with Service Principal Name (SPN)
 
-4. Check if resource group exits and create one if it does not.
+4. Check if the resource group exists and create one if it does not.
 
 5. Test deployment JSON.
 
@@ -169,12 +169,12 @@ The images used to create this deployment are:
 | AdVMSize                        | The size of the AD VMs created                                                | {Standard_D1_v2, Standard_D2_v2}                            | Standard_D2_v2                                                                         |
 | AutoPatchingDay                 | The day of the week for auto patching                                           | {Never, Everyday, Sunday, Monday...}                                  | Sunday                                                                                |
 | AutoPatchingStartHour           | The start hour of the day for auto patching                                     | {0, 1, 2, 3... 23}                                                       | 2                                                                                    |
-| DeploymentPrefix                | The DNS Prefix for the Public IP Address for the always on cluster            |                                                                       | aodns                                                                                |
-| DnsSuffix                       | The DNS Suffix for reverse lookup of public IPAddresses                       | azure.ukcloud.com                                                     |                                                                  |
+| DeploymentPrefix                | The DNS Prefix for the public IP address for the always on cluster            |                                                                       | aodns                                                                                |
+| DnsSuffix                       | The DNS Suffix for reverse lookup of public IP addresses                  | azure.ukcloud.com                                                     |                                                                  |
 | DomainName                      | The FQDN of the AD domain created                                             |                                                                       | fabrikam.local                                                                        |
-| SqlAOAGName                     | The Sql AlwaysOn group name                                                   |                                                                       | sqlaa-ag                                                                          |
-| SqlAOListenerName               | The Sql AG listener name                                                      |                                                                       |[tolower(concat('ao-listen-' , resourceGroup().name))]                          |
-| SqlAOListenerPort               | The Sql AG listener port                                                      |                                                                       | 1433                                                                                 |
+| SqlAOAGName                     | The SQL AlwaysOn group name                                                   |                                                                       | sqlaa-ag                                                                          |
+| SqlAOListenerName               | The SQL AG listener name                                                      |                                                                       |[tolower(concat('ao-listen-' , resourceGroup().name))]                          |
+| SqlAOListenerPort               | The SQL AG listener port                                                      |                                                                       | 1433                                                                                 |
 | SqlAuthPassword                 | The SQL server auth account password                                          |                                                                       |                                                                                      |
 | SqlAuthUserName                 | The SQL server auth account name                                              |                                                                       | sqlsa                                                                               |
 | SqlServerServiceAccountPassword | The SQL server service account password                                       |                                                                       |                                                                                      |
@@ -182,16 +182,16 @@ The images used to create this deployment are:
 | SqlServerOffer                | The SQL server version                                                        | {SQL2016SP1-WS2016, SQL2016SP2-WS2016} | SQL2016SP2-WS2016              |
 | SqlServerSku                | The name of the SQL Server SKU                                                        | {Enterprise, Standard, SQLDEV}              | Enterprise
 | SqlStorageAccountName           | The name of SQL server storage account                                        |                                                                       |[tolower(concat(take(uniqueString(resourceGroup().id),8),'sql'))]
-| SqlStorageAccountType           | The type of the Sql server storage account created                            | {Premium_LRS, Standard_LRS}                                         | Premium_LRS                                                                        |
+| SqlStorageAccountType           | The type of the SQL server storage account created                            | {Premium_LRS, Standard_LRS}                                         | Premium_LRS                                                                        |
 | SqlSubnet                       | The address range of the SQL subnet created in the new VNET                   |                                                                       | 10.0.1.0/26                                                                          |
 | SqlVMSize                       | The size of the SQL VMs created                                               | {Standard_DS2_v2, Standard_DS3_v2, Standard_DS4_v2, Standard_DS5_v2, Standard_DS11_v2, Standard_DS12_v2, Standard_DS13_v2}                            | Standard_DS2_v2                                                                         |
 | NumberOfSqlVMDisks                       | The number of data disks                                               | {1...32}                            | 2                             |
-| StaticSubnet                    | The address range of the subnet static IPs are allocated from in the new VNET |                                                                       | 10.0.0.0/24                                                                          |
+| StaticSubnet                    | The address range of the subnet static IPs which are allocated from within the new VNET |                                                                       | 10.0.0.0/24                                                                          |
 | VirtualNetworkAddressRange      | The address range of the new VNET in CIDR format                              |                                                                       | 10.0.0.0/16                                                                          |
 | VirtualNetworkName              | Name of virtual network to be created                                         |                                                                       | sqlhaVNET                                                                         |
-| VMDiskSize                      | The size of the SQL VMs data disk in GB.                                          | {128, 256, 512, 1023}                                                 | 128                                                                                  |
+| VMDiskSize                      | The size of the SQL VMs' data disk in GB.                                          | {128, 256, 512, 1023}                                                 | 128                                                                                  |
 | WitnessVMSize                   | The size of the witness VM created                                            | {Standard_D1_v2, Standard_D2_v2}                           | Standard_D1_v2                                                                         |
-| WorkloadType                    | The Sql VM work load type                        | {GENERAL, OLTP, DW}                                                               | GENERAL        |
+| WorkloadType                    | The SQL VM work load type                        | {GENERAL, OLTP, DW}                                                               | GENERAL        |
 | SampleDatabaseName              | Sample HA database                              | | AutoHa-sample |
 
 ## Deploy ARM Template code
@@ -213,10 +213,10 @@ Change the required variables as per your environment and run the following scri
 >
 > In the example below it has been already set accordingly.
 >
-> To change the SQL server version that is deployed, set **$SqlServerOffer** accordingly: **`SQL2016SP1-WS2016`**, **`SQL2016SP2-WS2016`**.
+> To change the SQL server version that is deployed or set **$SqlServerOffer** accordingly: **`SQL2016SP1-WS2016`**, **`SQL2016SP2-WS2016`**.
 > The current default is set to **`SQL2016SP2-WS2016`**.
 >
-> To change the SQL server SKU that is deployed, set **SqlServerSKU** accordingly: **`Enterprise`**, **`Standard`**, **`SQLDEV`**.
+> To change the SQL server SKU that is deployed, set **SqlServerSKU** accordingly: **`Enterprise`** or **`Standard`** or **`SQLDEV`**.
 > The current default is set to **`Enterprise`**.
 
 ```powershell
