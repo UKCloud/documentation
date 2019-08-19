@@ -24,10 +24,10 @@ UKCloud for Oracle provides a proven Oracle Infrastructure as a Service that's t
 First, take a look at our [Getting Started Guide](orcl-gs.md) to learn the basics, then you can:
 
 <div class="row">
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/oracle/orcl-how-enable-ha.html">Enable high availability</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/oracle/orcl-ref-licensing.html">Oracle licensing on the UKCloud platform</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/oracle/orcl-ref-vm-compatibility.html">VM compatibility with UKCloud for Oracle Software</a></p></ul></div>
-  <div class="col-md-3"><ul><li><p><a href="https://docs.ukcloud.com/articles/oracle/orcl-ref-rac.html">RAC on UKCloud for Oracle Software</a></p></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="orcl-how-enable-ha.md">Enable high availability</a></p></li></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="orcl-ref-licensing.md">Oracle licensing on the UKCloud platform</a></p></li></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="orcl-ref-vm-compatibility.md">VM compatibility with UKCloud for Oracle Software</a></p></li></ul></div>
+  <div class="col-md-3"><ul><li><p><a href="orcl-ref-rac.md">RAC on UKCloud for Oracle Software</a></p></li></ul></div>
 </div>
 
 ## Oracle Enterprise Manager overview
@@ -47,15 +47,15 @@ First, take a look at our [Getting Started Guide](orcl-gs.md) to learn the basic
 ## Other resources
 
 <div class="row">
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/oracle/orcl-sd.html">Service Definition</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/other/other-ref-services-by-region.html">Services by region</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="orcl-sd.md">Service Definition</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">UKCloud Pricing Guide</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="../other/other-ref-services-by-region.md">Services by region</a></p></li></ul></div>
 </div>
 
 <div class="row">
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/oracle/orcl-sco.html">Service Scope</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></p></ul></div>
-  <div class="col-md-4"><ul><li><p><a href="https://docs.ukcloud.com/articles/other/other-ref-sla-definition.html">SLA definition</a></p></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="orcl-sco.md">Service Scope</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="https://ukcloud.com/how-to-buy/">How to Buy</a></p></li></ul></div>
+  <div class="col-md-4"><ul><li><p><a href="../other/other-ref-sla-definition.md">SLA definition</a></p></li></ul></div>
 </div>
 
 ## Still have questions?

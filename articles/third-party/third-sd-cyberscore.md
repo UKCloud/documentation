@@ -63,7 +63,7 @@ Using CyberScore is free and provides your “CyberScore” and high-level infor
 
 To unlock the full CyberScore data, sort vulnerabilities, generate or share your Get Well Plans, patch reports and Technical Reports, you will be required to pay for CyberScore.
 
-CyberScore is charged per credit, from £1.80 per credit, where a credit gives access to the full CyberScore report for one scanned device. Full pricing is available in the [*3rd Party Software Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf).
+CyberScore is charged per credit, from £1.80 per credit, where a credit gives access to the full CyberScore report for one scanned device. Full pricing is available in the [*3rd Party Software Pricing Guide*](https://ukcloud.com/3rd-party-pricing-guide).
 
 ## Accreditation and information assurance
 
