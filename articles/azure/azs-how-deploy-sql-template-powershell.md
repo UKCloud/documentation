@@ -95,7 +95,7 @@ This template deploys two SQL Server 2016 SP1 or SP2 Enterprise / Standard / Dev
 
 - One VM (WS2016) configured as file share witness for the cluster.
 
-- One availability set containing the SQL and FSW 2016 VMs.
+- Two availability sets, one containing the SQL and FSW 2016 VMs, the other containing the domain controller VM.
 
 ### Notes
 
