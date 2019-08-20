@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Cloning vApps using PowerCLI | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Managed Monitoring from UKCloud Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Cloning vApps using PowerCLI | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="Managed Monitoring from UKCloud Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-ref-cloning-vapps.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/managed-services/man-monitoring-sco.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,21 +91,77 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="cloning-vapps-using-powercli">Cloning vApps using PowerCLI</h1>
+<h1 id="managed-monitoring-from-ukcloud-service-scope">Managed Monitoring from UKCloud Service Scope</h1>
 
-<p>The vApp can be cloned whilst it is running as long as there is enough storage available on the source storage profiles, associated with the existing vApp. There is a manual GUI option where the vApp can be copied on the UKCloud Portal however this can be a lengthy process if there are number of vApps needing to be copied over. A good use case for this example would be if a customer was utilising like for like copies of production for pre-production environments.</p>
-<p>In order to do the cloning efficiently a PowerCLI script is required. This article will guide you through the scripts required to automate the process of cloning, as well as removing this once a vApp is no longer required. The PowerCLI scripts can be plugged into various different configuration like tools such as Puppet or Chef and can also be integrated into orchestration tools such as Jenkins.</p>
-<h3 id="script-to-clone-vapps">Script to clone vApps</h3>
-<p>You can find an example of the PowerCLI script to clone and remove a vApp on UKCloud's GitHub repository: <a href="https://github.com/ukcloud/knowledge_centre/tree/master/CloningvAPPsUsingPowerCLI">https://github.com/ukcloud/knowledge_centre/tree/master/CloningvAPPsUsingPowerCLI</a></p>
-<p>The example script clones the specified vApp into an existing catalogue within the appropriate vDC. The script provides an option for deployment once it has been cloned. If you select this option, the vApp is deployed by the script.</p>
-<h3 id="stop-and-remove-vapp-using-powercli">Stop and remove vApp using PowerCLI</h3>
-<p>When a vApp has been used and is no longer required, there is a remove PowerCLI script that provides an automated way of removing the cloned environment. This script stops the vAPP and then deletes it from the catalogue specified.</p>
-<p>The scripts are executed using VMware vSphere PowerCLI. VMware vSphere PowerCLI is a command-line interface (CLI) tool for automating vSphere and vCloud management.</p>
-<p>You can download the tool from: <a href="https://my.vmware.com/web/vmware/details?downloadGroup=PCLI600R3&amp;productId=536">https://my.vmware.com/web/vmware/details?downloadGroup=PCLI600R3&amp;productId=536</a>.</p>
-<p><img src="images/vsphere_powercli.png" alt="Screenshot of vSphere PowerCLI"></p>
-<h3 id="typical-use-case">Typical Use Case</h3>
-<p>The figure below shows the flow between cloning a production environment to be re-used as pre-production and the environment being stopped and removed - using the scripts in UKCloud Github repository.</p>
-<p><img src="images/vapp_clone.jpg" alt="vApp Clone use case"></p>
+<h2 id="about-this-document">About this document</h2>
+<p>This document is for customers considering purchasing our Managed Monitoring from UKCloud service.</p>
+<p>It describes the boundaries of the service, along with the division of responsibilities between UKCloud and the customer to facilitate the service.</p>
+<h2 id="about-managed-monitoring-from-ukcloud">About Managed Monitoring from UKCloud</h2>
+<p>Managed Monitoring from UKCloud is UKCloud's multi-cloud monitoring service, designed for customers who want to:</p>
+<ul>
+<li><p>Incorporate, consolidate and extend your current monitoring platforms and any new requirements in to a single, as a service, solution</p>
+</li>
+<li><p>Gain a reliable and trusted view of the health of your entire IT infrastructure</p>
+</li>
+<li><p>Monitor any device from anywhere, via the internet or the various community networks UKCloud supports</p>
+</li>
+<li><p>Concentrate on creating and managing applications and increasing business value rather than managing virtual infrastructure</p>
+</li>
+<li><p>Reduce the number of ‘false-positive’ alerts and associated out of hours call-outs. Utilise UKCloud’s 24x7x365 Network Operations Centre to be the initial responder to events, only escalating those that genuinely need further investigation</p>
+</li>
+<li><p>Increase the uptime of your IT estate through faster identification, triage and alert escalations</p>
+</li>
+<li><p>Leverage the insights that UKCloud’s AIOps platform can provide in identifying trends and anomalies</p>
+</li>
+</ul>
+<h2 id="scope-of-managed-monitoring-from-ukcloud">Scope of Managed Monitoring from UKCloud</h2>
+<p>The following table outlines the scope of the Managed Monitoring from UKCloud service:</p>
+<table>
+<thead>
+<tr>
+<th>Monitoring Element</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Event Monitors</td>
+<td>- Ping check <br> - SNMP check  <br> - Application port checks <br> - Webhooks (only HTTP/HTTPS RestAPI inbound to UKCloud) <br> - Operating system service status change</td>
+</tr>
+<tr>
+<td>Compute, Disk, Memory (CDM) Monitoring</td>
+<td>Reactive monitoring and alerting  of Compute, Disk and Memory capacity events. <br> Thresholds will initially be set with default values unless otherwise advised by the customer. <br> Changes to default thresholds can be requested via a service request from within the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</td>
+</tr>
+<tr>
+<td>Alerting</td>
+<td>UKCloud will alert customers via a support ticket based on above triggers.</td>
+</tr>
+<tr>
+<td>Automated Remediation</td>
+<td>Pre-approved reboots of compute resources in response to an alert to help ensure service availability. <br> UKCloud is currently unable to offer this element of the service to any compute resources being monitored outside of a UKCloud operated cloud stack.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="service-provisioning">Service provisioning</h2>
+<p>You can request Managed Monitoring from UKCloud via your Technical Account Manager or by using the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<p>Within 5 business days of accepting an order, UKCloud will create the customer's monitoring environment with default thresholds (unless otherwise specified) and commence monitoring any environments that have been elected by the customer to be monitored.</p>
+<h2 id="customer-responsibilities">Customer responsibilities</h2>
+<p>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as HSCN, Janet, RLI or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.</p>
+<p>Allowing UKCloud access into your environments to capture any necessary metrics, alerts or triggers within the customer's environment required to provide accurate and reliable monitoring.</p>
+<p>Ensuring only appropriate data (for example OFFICIAL) is stored and processed by applications on this environment and that they comply with the UKCloud Security Operating Procedures (SyOps) and other Information Assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.</p>
+<h2 id="published-features-not-currently-available">Published features not currently available</h2>
+<p>The following features published in the <a href="man-sd-monitoring.html"><em>Managed Monitoring from UKCloud Service Definition</em></a> are not currently available:</p>
+<ul>
+<li><p>Application Performance Management (APM)</p>
+</li>
+<li><p>Pulling metrics or events from resources deployed outside of a UKCloud operated cloud stack (client-side push events may be considered)</p>
+</li>
+<li><p>Network performance and availability monitoring</p>
+</li>
+<li><p>Execution of customer defined ‘playbook’</p>
+</li>
+</ul>
+<p>We are actively working on delivering these features.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
