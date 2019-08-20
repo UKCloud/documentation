@@ -39,7 +39,7 @@ Your HDD is securely installed in an eSATA enclosure and connected to our NAS de
 
 ### USB
 
-Your USB will be connected to our NAS device in the Mass Trasfer bay. Our NAS is connected into your compute environment to carry out the transfer. Your HDD must be compatible with our eSATA enclosure: 3.5" SATA NAS hard drive, and optimised for use in one to five-bay enclosures.
+Your USB will be connected to our NAS device in the Mass Transfer bay. Our NAS is connected into your compute environment to carry out the transfer.
 
 ## Scheduling your transfer
 
@@ -67,21 +67,21 @@ When raising the SR, please provide the following:
 
 - Network connection details (IPs) to connect to the device
 
-## Before sending us your NAS
+## Before sending us your device
 
 Your SIRO, compliance officer or other person responsible for your IT security, must provide confirmation that your device is free of any viruses or malware.
 
-We'll send you a form to fill in and send back to us by email before sending the NAS, HDDs or USBs, to ensure there are no issues ahead of its delivery.
+We'll send you a form to fill in and send back to us by email before sending the NAS, HDD or USB, to ensure there are no issues ahead of its delivery.
 
 ## Booking conditions
 
 This service is based on the transfer of whole VMs, not individual files. Your VMs can be in OVF or OVA format. The hardware version must be 9 or lower, and you need to remove any network cards and any mounted media files such as ISOs from the VM's hardware configuration prior to the creation of the OVA or OVF files.
 
-Use of the Mass Transfer Facility is charged per the current Standard Rate Card and Definitions, based on the Service Management 'Enable' rate which is currently £750 per day. You will only be billed for the time it takes for the engineer to set up, manage and detach the device. Due to the nature of the service and the time to transfer data, you will not be charged for the time it takes to transfer the data. We reserve the right to add additional charges should any remediation work be required during the process. The minimum charge is half of a business day which is currently £375.
+Use of the Mass Transfer Facility is charged per the current Standard Rate Card and Definitions, based on the Service Management 'Enable' rate, which is currently £750 per day. You will only be billed for the time it takes for the engineer to set up, manage and detach the device. Due to the nature of the service and the time to transfer data, you will not be charged for the time it takes to transfer the data. We reserve the right to add additional charges should any remediation work be required during the process. The minimum charge is half of a business day, which is currently £375.
 
 ## Anticipated transfer speeds
 
-VM are transferred to and from your VDC over a 1GB connection running at approximately 110mbps. We have established that it's quicker to upload/download many smaller VMs than fewer large ones.
+VMs are transferred to and from your VDC over a 1GB connection running at approximately 110mbps. We have established that it's quicker to upload/download many smaller VMs than fewer large ones.
 
 VMs will be put into batches that can be completed during the business day. This will continue until the transfer is completed.
 
