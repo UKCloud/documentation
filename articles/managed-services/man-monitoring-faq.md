@@ -27,12 +27,12 @@ With Managed Monitoring from UKCloud, we become your first line of support, 24 h
 
 ### What technologies do you use?
 
-UKCloud uses the same technologies we use in house to monitor events across our public clouds to deliver our Managed Monitoring service, providing you with the confidence that well proven and understood technologies are being use to underpin this service
+UKCloud uses the same technologies we use in house to monitor events across our public clouds to deliver our Managed Monitoring service, providing you with the confidence that well proven and understood technologies are being use to underpin this service.
 
-This service also leverages the benefits of AIOps (see below)
+This service also leverages the benefits of AIOps (see below).
 
 ### What is AIOps?
-The term “AIOps” stands for “artificial intelligence for IT operations. AIOps platforms utilise big data, modern machine learning and other advanced analytics technologies to directly and indirectly enhance IT operations (monitoring, automation and service desk) functions with proactive, personal and dynamic insight. AIOps platforms enable the concurrent use of multiple data sources, data collection methods, analytical (real-time and deep) technologies, and presentation technologies. 
+The term “AIOps” stands for “artificial intelligence for IT operations". AIOps platforms utilise big data, modern machine learning and other advanced analytics technologies to directly and indirectly enhance IT operations (monitoring, automation and service desk) functions with proactive, personal and dynamic insight. AIOps platforms enable the concurrent use of multiple data sources, data collection methods, analytical (real-time and deep) technologies, and presentation technologies. 
 
 ### Do I get access to a dashboard or reports?
 
@@ -88,23 +88,23 @@ Within 5 business days of accepting an order, UKCloud will create the customer's
 
 ### Is there a free trial?
 
-Due to the initial complexity of creating monitoring environment, UKCloud is currently unable to offer a free trial of this service
+Due to the initial complexity of creating monitoring environment, UKCloud is currently unable to offer a free trial of this service.
 
 ## Backup
 
 ### Does UKCloud back up the Managed Monitoring from UKCloud service?
 
-UKCloud will perform a nightly backup of the configuration of any thresholds or triggers defined as part of this service. All event data eventually stored within UKCloud's highly resilient centralised monitoring data lake.
+UKCloud will perform a nightly backup of the configuration of any thresholds or triggers defined as part of this service. All event data is eventually stored within UKCloud's highly resilient centralised monitoring data lake.
 
 ## Billing and legal
 
 ### What is the smallest unit of time I will be billed for?
 
-The minimum unit of time for use is monthly. Part moths will be rounded up.
+The minimum unit of time for use is monthly. Part months will be rounded up.
 
 ### Will I be charged for resources in a 'Shut Off' state?
 
-UKCloud will continue to charge for any resources that you have elected to be monitored regardless of the state they're in. In order to stop any charges you will need to raise a ticket within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. Alternatively, you can contact support by phone or email.
+UKCloud will continue to charge for any resources that you have elected to be monitored regardless of the state they're in. In order to stop any charges, you will need to raise a ticket within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. Alternatively, you can contact support by phone or email.
 
 ### How can I view billing information?
 Online visibility of real-time or historic billing information is currently not available as a service provided by UKCloud.
