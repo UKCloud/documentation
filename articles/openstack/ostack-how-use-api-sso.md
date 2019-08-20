@@ -25,11 +25,17 @@ If your OpenStack user account is SSO-enabled, and you want to use the OpenStack
 See the *Bind your OpenStack credentials* section of [*How to use the OpenStack Command Line*](ostack-how-use-cli.md) for details on where to get your RC file. 
 
 > [!NOTE]
-> You will require the v3 version. 
+> You will require the v3 version of the OpenStack RC file. 
 
 ## Modifying your RC file
 
-Once you've downloaded your RC file, add the following lines to the bottom of the file:
+Once you've downloaded your RC file, open it in your editor of choice and remove the following line: 
+
+```bash
+export OS_USER_DOMAIN_NAME="Federated"
+```
+
+now add the following lines to the bottom of the file:
 
 ```bash 
 export OS_IDENTITY_PROVIDER="sso"
@@ -37,18 +43,14 @@ export OS_PROTOCOL="oidc"
 export OS_AUTH_TYPE="v3oidcpassword"
 ```
 
-You also need to add the following items, substituting the appropriate values from the table below depending on the OpenStack regions you're connecting to:
+You also need to add the following items to the bottom of the file, substituting the appropriate values from the table below depending on the OpenStack regions you're connecting to:
 
 ```bash
 export OS_CLIENT_ID=""
 export OS_CLIENT_SECRET=""
 export OS_ACCESS_TOKEN_ENDPOINT=""
 ```
-And remove the following 
 
-```bash
-export OS_USER_DOMAIN_NAME="Federated"
-```
 
 | Site | Variable | Value|
 | ---  | ---------|------|
@@ -59,10 +61,12 @@ export OS_USER_DOMAIN_NAME="Federated"
 | &nbsp; | OS_CLIENT_SECRET | User defined |
 | &nbsp; | OS_ACCESS_TOKEN_ENDPOINT | `https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token` |
 | Corsham-2 (OSP13)  | OS_CLIENT_ID | `cni.2.cor00005` |
-| &nbsp; | OS_CLIENT_SECRET | '56160ec2-17d1-4047-a42a-e6f9f70a3179' |
+| &nbsp; | OS_CLIENT_SECRET | 56160ec2-17d1-4047-a42a-e6f9f70a3179 |
 | &nbsp; | OS_ACCESS_TOKEN_ENDPOINT | `https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token` |
 
-You have now updated your RC file.
+**Now save your changes and close the file.**
+
+Your OpenStack RC file is now ready to be used as normal.
 
 ## Feedback
 

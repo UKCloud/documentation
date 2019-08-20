@@ -23,21 +23,46 @@ toc_mdlink: ostack-how-use-barbican.md
 
 ## Overview
 
-OpenStack Key Manager (barbican) is the secrets manager for Red Hat OpenStack Platform. You can use the barbican API and command line to centrally manage the certificates, keys, and passwords used
-by OpenStack services. 
+OpenStack Key Manager (Barbican) is the secrets manager for Red Hat OpenStack Platform. You can use the barbican API and command line to centrally manage the certificates, keys, and passwords used by OpenStack services. 
 
 Barbican currently supports the following use cases described in this guide:
 
 - Symmetric encryption keys - used for Block Storage (cinder) volume encryption, ephemeral disk encryption, and Object Storage (swift) encryption, among others.
+
 - Asymmetric keys and certificates- used for glance image signing and verification, among others.
 
-## MANAGING SECRETS IN BARBICAN
+## Prerequisites
 
-### ADDING NEW SECRETS
+- Barbican uses port 13311 for communication. This port will need to be open for Barbican to work
+
+- Running a recent version of the OpenStackCLI . To check for an update run:
+
+```none
+pip install --upgrade python-openstackclient
+```
+
+## Use Cases
+
+Use cases for Barbican include:
+
+- Image signature verification
+
+- LBaaS services
+
+- Volume encryption (coming soon)
+
+- Ephemeral disk encryption (coming soon)
+
+## Managing secrets in Barbican
+
+### Adding new secrets
+
 Create a test secret. For example:
+
 ```none
 $ openstack secret store --name testSecret --payload 'TestPayload'
 ```
+
 ```none
 +--------------+------------------------------------------------------------------------------------+
 | Field | Value |
@@ -55,93 +80,100 @@ $ openstack secret store --name testSecret --payload 'TestPayload'
 ---------------------------------------------------------------------------------------------------+
 ```
 
-### UPDATING SECRETS
-You cannot change the payload of a secret (other than deleting the secret), but if you initially created a secret without specifying a payload, you can later add a payload to it by using the **update** function. For example:
+### Updating secrets
+
+You cannot change the payload of a secret (other than deleting the secret), but if you initially created a secret without specifying a payload, you can later add a payload to it by using the `update` function. For example:
+
 ```none
 $ openstack secret update https://192.168.123.163:9311/v1/secrets/ca34a264-fd09-44a1-8856-c6e7116c3b16 'TestPayload-updated'
 ```
 
-### DELETING SECRETS
+### Deleting secrets
+
 You can delete a secret by specifying its URI. For example:
+
 ```none
 $ openstack secret delete https://192.168.123.163:9311/v1/secrets/ecc7b2a4-f0b0-47ba-b451-0f7d42bc1746
 ```
 
-### GENERATE A SYMMETRIC KEY
+### Generating a symmetric key
+
 Symmetric keys are suitable for certain tasks, such as nova disk encryption and swift object encryption.
 
-1. Generate a new 256-bit key using **order create** and store it in barbican. For example:
-```none
-$ openstack secret order create --name swift_key --algorithm aes --mode ctr --bit-length 256 --payload-content-type=application/octet-stream key
-```
+1. Generate a new 256-bit key using `order create` and store it in Barbican. For example:
 
-```none
-+----------------+-----------------------------------------------------------------------------------+
-| Field | Value |
-+----------------+-----------------------------------------------------------------------------------+
-| Order href | https://192.168.123.173:9311/v1/orders/043383fe-d504-42cf-a9b1-bc328d0b4832 |
-| Type | Key |
-| Container href | N/A |
-| Secret href | None |
-| Created | None |
-| Status | None |
-| Error code | None |
-| Error message | None |
-+----------------+-----------------------------------------------------------------------------------+
-```
+    ```none
+    $ openstack secret order create --name swift_key --algorithm aes --mode ctr --bit-length 256 --payload-content-type=application/octet-stream key
+    ```
 
-- **--mode** - Generated keys can be configured to use a particular mode, such as **ctr** or **cbc**. For more information, see *NIST SP 800-38A*.
+    ```none
+    +----------------+-----------------------------------------------------------------------------------+
+    | Field | Value |
+    +----------------+-----------------------------------------------------------------------------------+
+    | Order href | https://192.168.123.173:9311/v1/orders/043383fe-d504-42cf-a9b1-bc328d0b4832 |
+    | Type | Key |
+    | Container href | N/A |
+    | Secret href | None |
+    | Created | None |
+    | Status | None |
+    | Error code | None |
+    | Error message | None |
+    +----------------+-----------------------------------------------------------------------------------+
+    ```
+
+    - **--mode** - Generated keys can be configured to use a particular mode, such as `ctr` or `cbc`. For more information, see *NIST SP 800-38A*.
 
 2. View the details of the order to identify the location of the generated key, shown here as the
-**Secret href** value:
+`Secret href` value:
 
-```none
-$ openstack secret order get https://192.168.123.173:9311/v1/orders/043383fe-d504-42cfa9b1-bc328d0b4832
-```
+    ```none
+    $ openstack secret order get https://192.168.123.173:9311/v1/orders/043383fe-d504-42cfa9b1-bc328d0b4832
+    ```
 
-```none
-+----------------------------------------------------------------------------------------------------+
-| Field | Value |
-+----------------+------------------------------------------------------------------------------------+
-| Order href | https://192.168.123.173:9311/v1/orders/043383fe-d504-42cf-a9b1-
-bc328d0b4832 |
-| Type | Key |
-| Container href | N/A |
-| Secret href | https://192.168.123.173:9311/v1/secrets/efcfec49-b9a3-4425-a9b6-
-5ba69cb18719 |
-| Created | 2018-01-24T04:24:33+00:00 |
-| Status | ACTIVE |
-| Error code | None |
-| Error message | None |
-+----------------+------------------------------------------------------------------------------------+
-```
+    ```none
+    +----------------------------------------------------------------------------------------------------+
+    | Field | Value |
+    +----------------+------------------------------------------------------------------------------------+
+    | Order href | https://192.168.123.173:9311/v1/orders/043383fe-d504-42cf-a9b1-
+    bc328d0b4832 |
+    | Type | Key |
+    | Container href | N/A |
+    | Secret href | https://192.168.123.173:9311/v1/secrets/efcfec49-b9a3-4425-a9b6-
+    5ba69cb18719 |
+    | Created | 2018-01-24T04:24:33+00:00 |
+    | Status | ACTIVE |
+    | Error code | None |
+    | Error message | None |
+    +----------------+------------------------------------------------------------------------------------+
+    ```
 
 3. Retrieve the details of the secret:
    
-```none
-$ openstack secret get https://192.168.123.173:9311/v1/secrets/efcfec49-b9a3-4425-a9b6-5ba69cb18719
-```
+    ```none
+    $ openstack secret get https://192.168.123.173:9311/v1/secrets/efcfec49-b9a3-4425-a9b6-5ba69cb18719
+    ```
 
-```none
-+---------------+------------------------------------------------------------------------------------+
-| Field | Value |
-+---------------+------------------------------------------------------------------------------------+
-| Secret href | https://192.168.123.173:9311/v1/secrets/efcfec49-b9a3-4425-a9b6-
-5ba69cb18719 |
-| Name | swift_key |
-| Created | 2018-01-24T04:24:33+00:00 |
-| Status | ACTIVE |
-| Content types | {u'default': u'application/octet-stream'} |
-| Algorithm | aes |
-| Bit length | 256 |
-| Secret type | symmetric |
-| Mode | ctr |
-| Expiration | None |
-+---------------+------------------------------------------------------------------------------------+
-```
+    ```none
+    +---------------+------------------------------------------------------------------------------------+
+    | Field | Value |
+    +---------------+------------------------------------------------------------------------------------+
+    | Secret href | https://192.168.123.173:9311/v1/secrets/efcfec49-b9a3-4425-a9b6-
+    5ba69cb18719 |
+    | Name | swift_key |
+    | Created | 2018-01-24T04:24:33+00:00 |
+    | Status | ACTIVE |
+    | Content types | {u'default': u'application/octet-stream'} |
+    | Algorithm | aes |
+    | Bit length | 256 |
+    | Secret type | symmetric |
+    | Mode | ctr |
+    | Expiration | None |
+    +---------------+------------------------------------------------------------------------------------+
+    ```
 
-### LISTING SECRETS
-Secrets are identified by their URI, indicated as a href value. This example shows the secret you created in the previous steps:
+### Listing secrets
+
+Secrets are identified by their URI, indicated as a `href` value. This example shows the secret you created in the previous steps:
 
 ```none
 $ openstack secret list
