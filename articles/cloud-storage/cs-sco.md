@@ -80,7 +80,7 @@ Users can access, manage and view their Cloud Storage service, in any of the fol
 
 To create additional namespaces or users, you must raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. When requesting additional users, you can specify whether you want these users to have read-write or read-only permissions.
 
-## Technology Constraints
+## Technology constraints
 
 We do not currently offer access as an Network File System (NFS) or a Hadoop Distributed File System (HDFS) enabled account or bucket.
 
