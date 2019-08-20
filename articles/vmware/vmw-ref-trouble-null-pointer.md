@@ -23,9 +23,11 @@ To complete the steps in this article, you must have access to vCloud Director.
 
 To fix your edge to enable viewing of its properties:
 
-1. Right-click your edge gateway and select **Edge Gateway Services**.
+1. In vCloud Director, access the edge gateway settings for the edge with the broken VPN.
 
-2. In the new tenant portal, select the **Routing** tab.
+    For more detailed instructions, see [*How to access edge gateway settings*](vmw-how-access-edge.md).
+
+2. Select the **Routing** tab.
 
 3. Select **Routing Configuration**.
 
@@ -33,7 +35,7 @@ To fix your edge to enable viewing of its properties:
 
 5. When you're done, click **Save Changes** at the top of the page.
 
-6. Close the tenant portal and attempt to view the properties of the edge gateway in vCloud.
+6. Close vCloud Director and attempt to view the properties of the edge gateway in vCloud.
 
     You should no longer get the `NullPointerException` error and the properties should be displayed.
 

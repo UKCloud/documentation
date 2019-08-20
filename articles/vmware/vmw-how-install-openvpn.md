@@ -85,7 +85,7 @@ To deploy the OpenVPN appliance:
 
 4. Select the OVA that you downloaded then click **Next**.
 
-5. Review the details of the OVA to confirm that it's the right images then click **Next**.
+5. Review the details of the OVA to confirm that it's the right image then click **Next**.
 
 6. The appliance will be deployed as a single VM inside a vApp. Provide a name for the vApp then click **Next**.
 

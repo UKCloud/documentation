@@ -43,13 +43,21 @@ UKCloud L2 VPN functionality covers three scenarios:
 Before enabling L2 VPN, consider the following:
 
 - You must have purchased the Enterprise Networking Bundle for your UKCloud for VMware service
+
 - You must have converted your edge gateway to an advanced gateway (see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md))
+
 - This service takes up one of your allocated IP addresses (primary or secondary)
+
 - L2 VPN can be enabled only on a routed Org VDC network
+
 - You cannot use SSL VPN on any edge gateway running L2 VPN
+
 - You may encounter issues with IPsec VPN
+
 - You cannot use load balancers using HTTPS on primary or secondary edge gateway addresses once L2 VPN is enabled
+
 - You'll need to change any existing NAT and firewall rules using the primary or secondary IP of the edge for HTTPS
+
 - If your remote site does not have vSphere or NSX, you'll need to deploy a standalone edge as the L2 VPN client (see [*Deploying a standalone edge as an L2 VPN client*](#deploying-a-standalone-edge-as-an-l2-vpn-client))
 
 ## Configuring L2 VPN
@@ -65,15 +73,15 @@ To set up L2 VPN, you need to configure an L2 VPN server on the destination edge
     > [!NOTE]
     > To stretch the subnet across the two sites, make sure you use the desired address space on both networks.
 
-2. For each network, select the network and click **Convert To**.
+2. For each network, select the network and, on the *General* tab, click **Edit**
 
-    ![Convert network option](images/vmw-vcd91-l2vpn-btn-convert-network.png)
+3. In the *Edit network* dialog box, select the **Connection** tab.
 
-3. Select **Convert to Subinterface** to connect the network as a subinterface to the trunk interface on the attached gateway, then click **OK**.
+4. From the **Interface Type** list, select **Subinterface** to connect the network as a subinterface to the trunk interface on the attached gateway, then click **Save**.
 
-    ![Convert Interface dialog box](images/vmw-vcd91-l2vpn-btn-convert-interface.png)
+    ![Convert network to subinterface](images/vmw-vcd-network-subinterface.png)
 
-4. To be able to move, your VMs need to be able to access your new network, so you need to attach them to it.
+5. To be able to move, your VMs need to be able to access your new network, so you need to attach them to it.
 
 ### Creating certificates
 
@@ -119,7 +127,7 @@ The L2 VPN server is the destination edge gateway to which the client is to be c
 
     ![L2 VPN server certificate details](images/vmw-vcd91-l2vpn-server-cert.png)
 
-8. Enable the **Validate Server Certificate** toggle, select the certificate you created earlier then click **OK**.
+8. Select the **Validate Server Certificate** option, select the certificate you created earlier then click **OK**.
 
 9. Click **Save changes**.
 
@@ -184,7 +192,7 @@ The L2 VPN client is the source edge gateway that initiates communication with t
 
     3. For **L2VPN Mode**, select **Server**.
 
-    4. Enable the **Enabled** toggle.
+    4. Select the **Enabled** option.
 
         ![Enable L2 VPN](images/vmw-vcd91-l2vpn-enable.png)
 

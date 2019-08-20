@@ -51,15 +51,15 @@ To convert your edge to an advanced gateway, see [*How to convert your edge to a
 
 To change the DH setting on your broken VPN:
 
-1. Right-click your edge gateway and select **Edge Gateway Services**.
+1. In vCloud Director, access the edge gateway settings for the edge with the broken VPN.
 
-2. In the new tenant portal, select the **VPN** tab.
+    For more detailed instructions, see [*How to access edge gateway settings*](vmw-how-access-edge.md).
+
+2. Select the **VPN** tab.
 
 3. On the *IPsec VPN Configuration* page, select the **IPsec VPN Sites** tab.
 
 4. Select the VPN tunnel that is broken and click the edit icon.
-
-    ![IPsec VPN Sites tab](images/vmw-tp-ipsec-fix1.png)
 
 5. From the **Diffee-Hellman Group** list, select DH2.
 
