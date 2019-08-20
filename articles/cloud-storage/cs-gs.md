@@ -59,6 +59,9 @@ The key differences between the two APIs are:
 
 - The ECS Atmos API provides backward compatibility with the EMC Atmos platform. It offers access to the majority of the features of the platform with certain exceptions as listed in the *Atmos Supported Features* chapter of the [*Elastic Cloud Storage (ECS) Data Access Guide*](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf).
 
+> [!NOTE]
+> The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API
+
 ### Cloud Storage use cases
 
 The low cost of cloud storage per GB, as well as its almost unlimited scalability, means there\'s a large variety of use cases for it. For example, it\'s ideal for data archives, backups, log files, and media repositories.
@@ -89,7 +92,9 @@ can become.
 There are often questions around how best to implement this. Ultimately, it's up to the application developers, but a popular approach is as follows:
 
 1. Handle content uploads and creation on the web servers.
+
 2. Perform any required modifications or transformations using on-demand processing servers (usually from a message queue).
+
 3. Write the content into cloud storage, storing the resulting object IDs, external URLs and any other relevant metadata in the application database.
 
 This process provides a relatively simple transition to cloud storage. The application still knows about all the objects, but rather than retrieving, for example, a relative path for an item from the database, its entire URL is retrieved, pointing to cloud storage.
@@ -228,6 +233,9 @@ To use S3Curl:
     ```
 
 ## Using the ECS Atmos API
+
+> [!NOTE]
+> The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API
 
 The Atmos API is at:
 
