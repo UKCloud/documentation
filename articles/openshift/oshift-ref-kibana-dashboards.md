@@ -20,10 +20,13 @@ toc_mdlink: oshift-ref-kibana-dashboard.md
 
 ## Overview
 
+This documentation contains an explanation of the two custom dashboards we configure with the Kibana deployment in your cluster, these are called "Hosts Logging" and "Response Codes". It explains what data is being shown and what information you can derive from this. 
 
 ### Intended audience
 
+The "Hosts Logging" dashboard is available in 3.9-3.11 clusters and the "Response Codes" dashboard is available in 3.11 clusters.
 
+## Dashboards
 
 
 
