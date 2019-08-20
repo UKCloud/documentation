@@ -3,7 +3,7 @@ title: UKCloud for OpenStack FAQs | UKCloud Ltd
 description: Frequently asked questions for UKCloud for OpenStack
 services: openstack
 author: Matt Warner
-reviewer:
+reviewer: stevedicko
 lastreviewed: 16/08/2019 15:17:17
 toc_rootlink: FAQs
 toc_sub1:
@@ -79,7 +79,7 @@ Check the [*Service Definition*](ostack-sd.md) for more details on the currently
 
 ### Does UKCloud offer dedicated, bare-metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?
 
-UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack product. We do however provide "large" instances, with up to 56 vCpus and 440Gb Ram, with no overcommit. UKCloud also offers its 'Private Cloud for Compute' product which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.
+UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack service. We do however provide large instances, with up to 56 vCPUs and 440GiB RAM, with no overcommit. UKCloud also offers its Private Cloud for Compute service, which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.
 
 ### Can I resize an instance?
 
@@ -175,10 +175,10 @@ Some government secure networks (such as PSN and HSCN) provide SSL certificates 
 
 The answer to this depends on which of UKCloud's OpenStack platforms you are using:
 
-| Region              | OpenStack Version                      | LBaaS Supported?                                                                                                                                                                                                               |
-|---------------------|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Region              | OpenStack Version                      | LBaaS Supported? |
+|---------------------|----------------------------------------|------------------|
 | COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | No, as OpenStack Neutron does not support highly-available load balancing services <BR> UKCloud has created [*How to creating load balancing services on UKCloud for OpenStack*](ostack-how-create-load-balancer.md), which describes how to deploy a HA load balancing solution |
-| COR00005-2          | OpenStack Platform 13 <BR> (Queens Release) | Yes           |
+| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | Yes |
 
 ### Can I deploy my own load balancer?
 
@@ -244,10 +244,10 @@ OpenStack environments in our Elevated OFFICIAL security domain can be managed v
 
 The answer to this depends on which of UKCloud's OpenStack platforms you are using:
 
-| Region              | OpenStack Version                      | KMaaS Supported?                                                                                                                                                                                                               |
-|---------------------|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Region              | OpenStack Version                      | KMaaS Supported? |
+|---------------------|----------------------------------------|------------------|
 | COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | No, customers will need to deploy their own Key Management solution |
-| COR00005-2          | OpenStack Platform 13 <BR> (Queens Release) | Yes, using OpenStack's Barbican service. Further information can be found [here](https://docs.ukcloud.com/articles/openstack/ostack-how-use-barbican.html).        |
+| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | Yes, using OpenStack's Barbican service. Further information can be found [here](https://docs.ukcloud.com/articles/openstack/ostack-how-use-barbican.html). |
 
 ### What reports can I get about instances performance?
 
