@@ -20,13 +20,13 @@ toc_mdlink: oshift-ref-kibana-dashboard.md
 
 ## Overview
 
-This documentation contains an explanation of the two custom dashboards we configure with the Kibana deployment in your cluster, these are called "Hosts Logging" and "Response Codes". It explains what data is being shown and what information you can derive from this. 
+This documentation contains an explanation of the two custom dashboards we configure with the Kibana deployment in your cluster, these are called "Hosts Logging" and "Response Codes". It explains what data is being shown and what information you can derive from this.  
 
-### Intended audience
+## Intended audience
 
 The "Hosts Logging" dashboard is available in 3.9-3.11 clusters and the "Response Codes" dashboard is available in 3.11 clusters.
 
-### How to Access
+## How to Access
 
 Open the kibana route, depending on your cluster version it will have the following format:
 `https://kibana.xxxx-xxxxx.region.cna.ukcloud.com` or `https://kibana.xxx-xxx-xx-xxxxx.region.cna.ukcloud.com` 
@@ -39,7 +39,13 @@ On 3.10+ clusters:
 
 ![3.1+ Kibana screenshot](images/oshift-kibana-dash-311.png)
 
-### Dashboards
+## Dashboards
+
+### Hosts Logging
+
+
+
+### Response Codes
 
 
 
