@@ -527,27 +527,12 @@ Whatever library or automation tools you choose to use, you'll need to know a fe
 
     You can also download your user's OpenStack RC file for use in the following section.
     
-    > [!NOTE]
-    > If your account is SSO-enabled, download the v3 RC file.
+    
 
     ![Download OpenStack RC File button on Access & Security page](images/ostack-horizon-btn-download-rc-file.png)
 
-4. If your account is enabled for SSO, you'll need to add the following items to the RC file you downloaded in the previous step.
-
-   ``` none
-   export OS_AUTH_TYPE="v3oidcpassword"
-   export OS_IDENTITY_PROVIDER="sso"
-   export OS_PROTOCOL="oidc"
-   export OS_CLIENT_ID=""
-   export OS_CLIENT_SECRET=""
-   export OS_DISCOVERY_ENDPOINT="https://idp.ukcloud.com/auth/realms/client-assured/.well-known/openid-configuration
-   ```
-   
-    - The `client_id` for Corsham is `cni.1.cor00005`
-
-    - The `client_id` for Farnborough is `cni.1.frn00006`
-
-    - You can set the `client_secret` to any value
+> [!NOTE]
+    > If your account is SSO-enabled, download the v3 RC file and make the modifications stated [HERE](https://docs.ukcloud.com/articles/openstack/ostack-how-use-api-sso.html).
 
 ## Using the OpenStack command-line client
 
