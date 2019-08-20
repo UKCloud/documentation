@@ -26,7 +26,20 @@ This documentation contains an explanation of the two custom dashboards we confi
 
 The "Hosts Logging" dashboard is available in 3.9-3.11 clusters and the "Response Codes" dashboard is available in 3.11 clusters.
 
-## Dashboards
+### How to Access
+
+Open the kibana route, depending on your cluster version it will have the following format:
+`https://kibana.xxxx-xxxxx.region.cna.ukcloud.com` or `https://kibana.xxx-xxx-xx-xxxxx.region.cna.ukcloud.com` 
+
+This will take you to the Kibana UI, from here you can select the dashboards option. On 3.9 clusters:
+
+![3.9 Kibana screenshot](images/oshift-kibana-dash-39.png)
+
+On 3.10+ clusters:
+
+![3.1+ Kibana screenshot](images/oshift-kibana-dash-311.png)
+
+### Dashboards
 
 
 
