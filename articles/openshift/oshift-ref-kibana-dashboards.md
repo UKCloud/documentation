@@ -37,16 +37,17 @@ This will take you to the Kibana UI, from here you can select the dashboards opt
 
 On 3.10+ clusters:
 
-![3.1+ Kibana screenshot](images/oshift-kibana-dash-311.png)
+![3.10+ Kibana screenshot](images/oshift-kibana-dash-311.png)
 
 ## Dashboards
 
 ### Hosts Logging
 
-This dasboard contains a graph for each host in the cluster that shows amount of messages on the Y axis and time on the X axis. It can be used to look for an increase in messages being generated on hosts when new applications are deployed, this can help determine that you will need to expand the persistent storage of your Elasticsearch: [*Expand OpenShift persistent storage*](https://docs.ukcloud.com/articles/openshift/oshift-how-expand-persistent-vols.html)
+This dashboard contains a graph for each host in the cluster that shows amount of messages on the Y axis and time on the X axis. It can be used to look for an increase in messages being generated on hosts when new applications are deployed, this can help determine that you will need to expand the persistent storage of your Elasticsearch: [*Expand OpenShift persistent storage*](https://docs.ukcloud.com/articles/openshift/oshift-how-expand-persistent-vols.html)
 
 It can also be used to ensure that all hosts are sending logs to Elasticsearch. If a host is not showing it may indicate a problem with the fluentd container on that node. 
 
+![Hosts Logging Dashboard](images/oshift-kibana-hosts.png)
 
 ### Response Codes
 
