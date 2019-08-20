@@ -39,7 +39,7 @@ For full information regarding this product, we have Service Scopes, FAQs and ot
 
 - Monitor any device from anywhere, via the internet or various community networks UKCloud supports
 
-- Concentrate on creating and managing applications in increasing business value rather than managing virtual infrastructure
+- Concentrate on creating and managing applications and increasing business value rather than managing virtual infrastructure
 
 - Reduce the number of ‘false-positive’ alerts and associated out of hours call-outs. Utilise UKCloud’s 24x7x365 Network Operations Centre to be the initial responder to events, only escalating those which genuinely need further investigation
 
