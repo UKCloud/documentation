@@ -22,7 +22,7 @@ If your OpenStack user account is SSO-enabled, and you want to use the OpenStack
 
 ## Downloading your RC file
 
-See the ***Bind your OpenStack credentials*** section of [*How to use the OpenStack Command Line*](ostack-how-use-cli.md) for details on where to get your RC file. 
+See the *Bind your OpenStack credentials* section of [*How to use the OpenStack Command Line*](ostack-how-use-cli.md) for details on where to get your RC file. 
 
 > [!NOTE]
 > You will require the v3 version of the OpenStack RC file. 
@@ -64,7 +64,7 @@ export OS_ACCESS_TOKEN_ENDPOINT=""
 | &nbsp; | OS_CLIENT_SECRET | 56160ec2-17d1-4047-a42a-e6f9f70a3179 |
 | &nbsp; | OS_ACCESS_TOKEN_ENDPOINT | `https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token` |
 
-**Now save your changes and close the file**
+**Now save your changes and close the file.**
 
 Your OpenStack RC file is now ready to be used as normal.
 
