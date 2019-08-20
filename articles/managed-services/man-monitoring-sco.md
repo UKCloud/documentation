@@ -5,7 +5,7 @@ services: managed-services
 author: Steve Dixon
 reviewer:
 lastreviewed: 20/28/2019 15:17:17
-toc_rootlink: Service Scope
+toc_rootlink: Managed Monitoring
 toc_sub1: 
 toc_sub2:
 toc_sub3:
@@ -31,11 +31,11 @@ Managed Monitoring from UKCloud is UKCloud's multi-cloud monitoring service, des
 
 - Gain a reliable and trusted view of the health of your entire IT infrastructure
 
-- Monitor any device from anywhere, via the internet or various community networks UKCloud supports
+- Monitor any device from anywhere, via the internet or the various community networks UKCloud supports
 
 - Concentrate on creating and managing applications and increasing business value rather than managing virtual infrastructure
 
-- Reduce the number of ‘false-positive’ alerts and associated out of hours call-outs. Utilise UKCloud’s 24x7x365 Network Operations Centre to be the initial responder to events, only escalating those which genuinely need further investigation
+- Reduce the number of ‘false-positive’ alerts and associated out of hours call-outs. Utilise UKCloud’s 24x7x365 Network Operations Centre to be the initial responder to events, only escalating those that genuinely need further investigation
 
 - Increase the uptime of your IT estate through faster identification, triage and alert escalations
 
@@ -56,7 +56,7 @@ The following table outlines the scope of the Managed Monitoring from UKCloud se
 
 You can request Managed Monitoring from UKCloud via your Technical Account Manager or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
-Within 5 business days of accepting an order, UKCloud will create the customer's monitoring environment with default thresholds (unless otherwise specified) and commence monitoring any environments which have been elected by the customer to be monitored.
+Within 5 business days of accepting an order, UKCloud will create the customer's monitoring environment with default thresholds (unless otherwise specified) and commence monitoring any environments that have been elected by the customer to be monitored.
 
 ## Customer responsibilities
 
