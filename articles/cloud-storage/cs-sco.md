@@ -4,7 +4,7 @@ description: Outlines important details regarding Cloud Storage
 services: cloud-storage
 author: Steve Hall
 reviewer:
-lastreviewed: 17/07/2018 16:46:31
+lastreviewed: 20/08/2019 16:46:31
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -65,6 +65,9 @@ Users can access, manage and view their Cloud Storage service, in any of the fol
 
 - **APIs.** You can use either the ECS S3-compatible API or the ECS Atmos API. The APIs are not interchangeable, so you need to choose carefully which API you want to use. Refer to the [EMC ECS Data Access Guide](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf) for more information on the features of both APIs.
 
+> [!NOTE]
+> The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API
+
 - **Command Line Interface (CLI).** CLI tools enable access from the command line by translating commands into the relevant API calls.
 
 - **Storage Gateways.** These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see the appropriate Cloud Storage Gateways Knowledge Centre article:
@@ -77,7 +80,9 @@ Users can access, manage and view their Cloud Storage service, in any of the fol
 
 To create additional namespaces or users, you must raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. When requesting additional users, you can specify whether you want these users to have read-write or read-only permissions.
 
-We do not currently offer access as an NFS or a HDFS.
+## Technology Constraints
+
+We do not currently offer access as an Network File System (NFS) or a Hadoop Distributed File System (HDFS) enabled account or bucket.
 
 You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the ECS Portal.
 
@@ -95,7 +100,7 @@ You can protect against accidental deletion or modification of data by using ret
 
 Cloud Storage is available on a range of Assured and Elevated networks. An overview of the available networks in each region is available in [*UKCloud Services By Region*](../other/other-ref-services-by-region.md).
 
-Cloud Storage in our Assured OFFICAL domain uses the same environment for both PSN Assured and internet connections. Although it isn't possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.
+Cloud Storage in our Assured OFFICIAL domain uses the same environment for both PSN Assured and internet connections. Although it isn't possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.
 
 We manage the physical firewalls that face public and secure networks.
 
