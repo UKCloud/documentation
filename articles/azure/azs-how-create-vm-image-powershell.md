@@ -75,7 +75,7 @@ $Location = (Get-AzureRmLocation).Location
 # Declare variables
 $VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
 $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
-$ImageName "<output form="imagename" name="result" style="display: inline;">MyCustomImage</output>"
+$ImageName = "<output form="imagename" name="result" style="display: inline;">MyCustomImage</output>"
 
 # Get VM details
 $VM = Get-AzureRmVM -Name $VMName -ResourceGroupName $RGName
