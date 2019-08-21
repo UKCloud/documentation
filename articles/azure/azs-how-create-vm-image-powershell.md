@@ -158,7 +158,7 @@ New-AzureRmVM -ResourceGroupName $RGName -Location $Location -Name $NewVMName -I
 
 1. Log in to your Linux VM using secure shell (SSH).
 
-2. Run the following command: `sudo su` and enter your root password.
+2. Run the following command: `sudo su` and enter your user password.
 
 3. Run the following command: `shutdown && waagent -deprovision+user -force`.
 

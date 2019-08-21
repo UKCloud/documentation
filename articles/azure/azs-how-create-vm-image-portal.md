@@ -104,7 +104,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 1. Log in to your Linux VM using secure shell (SSH).
 
-2. Run the following command: `sudo su` and enter your root password.
+2. Run the following command: `sudo su` and enter your user password.
 
 3. Run the following command: `shutdown && waagent -deprovision+user -force`.
 
