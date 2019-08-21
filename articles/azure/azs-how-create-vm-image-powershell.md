@@ -83,7 +83,7 @@ $VM = Get-AzureRmVM -Name $VMName -ResourceGroupName $RGName
 if ($VM) {
     # Stop the VM
     Write-Output -InputObject "Stopping VM and marking as generalised..."
-    Stop-AzureRmVM -Name $VMName -ResourceGroupName $RGName
+    Stop-AzureRmVM -Name $VMName -ResourceGroupName $RGName -Force
 
     # Mark VM as Generalised
     Set-AzureRmVM -Name $VMName -ResourceGroupName $RGName -Generalized
