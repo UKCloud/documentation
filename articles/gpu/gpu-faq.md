@@ -86,7 +86,7 @@ If a card failure occurs, our support team will identify the issue and re-instan
 
 ### Can I have multiple GPUs associated with a single VM?
 
-Yes.
+No.
 
 ### Can the GPU service be added to one of our existing servers or would it require a new server?
 
