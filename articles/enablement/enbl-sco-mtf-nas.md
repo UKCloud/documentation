@@ -1,6 +1,6 @@
 ---
-title: Mass Transfer Facility - NAS Service Scope | UKCloud Ltd
-description: Outlines how you can use your NAS to move data into your compute environment
+title: Mass Transfer Facility Service Scope | UKCloud Ltd
+description: Outlines how you can use your NAS, HDD or USB to move data into your compute environment
 services: enablement
 author: Steve Hall
 reviewer:
@@ -10,7 +10,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Mass Transfer Facility - NAS Service Scope
+toc_title: Mass Transfer Facility Service Scope
 toc_fullpath: Service Scope/enbl-sco-mtf-nas.md
 toc_mdlink: enbl-sco-mtf-nas.md
 ---
