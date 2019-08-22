@@ -130,6 +130,10 @@ and provides information about some command-line tools that you can use to inter
 <li><p>The ECS Atmos API provides backward compatibility with the EMC Atmos platform. It offers access to the majority of the features of the platform with certain exceptions as listed in the <em>Atmos Supported Features</em> chapter of the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf"><em>Elastic Cloud Storage (ECS) Data Access Guide</em></a>.</p>
 </li>
 </ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API</p>
+</div>
 <h3 id="cloud-storage-use-cases">Cloud Storage use cases</h3>
 <p>The low cost of cloud storage per GB, as well as its almost unlimited scalability, means there's a large variety of use cases for it. For example, it's ideal for data archives, backups, log files, and media repositories.</p>
 <p>We anticipate that most web applications can make good use of cloud storage for static content, such as images and downloadable binaries. Storing these items in cloud storage—rather than in primary storage attached to web servers, inside the database or on a traditional file share—can provide significant benefits in terms of cost savings, agility and performance.</p>
@@ -157,9 +161,12 @@ and provides information about some command-line tools that you can use to inter
 can become.</p>
 <p>There are often questions around how best to implement this. Ultimately, it's up to the application developers, but a popular approach is as follows:</p>
 <ol>
-<li>Handle content uploads and creation on the web servers.</li>
-<li>Perform any required modifications or transformations using on-demand processing servers (usually from a message queue).</li>
-<li>Write the content into cloud storage, storing the resulting object IDs, external URLs and any other relevant metadata in the application database.</li>
+<li><p>Handle content uploads and creation on the web servers.</p>
+</li>
+<li><p>Perform any required modifications or transformations using on-demand processing servers (usually from a message queue).</p>
+</li>
+<li><p>Write the content into cloud storage, storing the resulting object IDs, external URLs and any other relevant metadata in the application database.</p>
+</li>
 </ol>
 <p>This process provides a relatively simple transition to cloud storage. The application still knows about all the objects, but rather than retrieving, for example, a relative path for an item from the database, its entire URL is retrieved, pointing to cloud storage.</p>
 <h2 id="before-you-begin">Before you begin</h2>
@@ -300,6 +307,10 @@ my @endpoints = ('cas.cor00005.ukcloud.com',
 </li>
 </ol>
 <h2 id="using-the-ecs-atmos-api">Using the ECS Atmos API</h2>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API</p>
+</div>
 <p>The Atmos API is at:</p>
 <p><code>https://&lt;api_endpoint&gt;</code></p>
 <p>Check which <code>api_endpoint</code> to use in <a href="#before-you-begin">Before you begin</a>, for example:</p>

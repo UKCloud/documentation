@@ -117,8 +117,13 @@
 <h2 id="platform-management">Platform management</h2>
 <p>Users can access, manage and view their Cloud Storage service, in any of the following ways:</p>
 <ul>
-<li><p><strong>APIs.</strong> You can use either the ECS S3-compatible API or the ECS Atmos API. The APIs are not interchangeable, so you need to choose carefully which API you want to use. Refer to the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf">EMC ECS Data Access Guide</a> for more information on the features of both APIs.</p>
-</li>
+<li><strong>APIs.</strong> You can use either the ECS S3-compatible API or the ECS Atmos API. The APIs are not interchangeable, so you need to choose carefully which API you want to use. Refer to the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf">EMC ECS Data Access Guide</a> for more information on the features of both APIs.</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API</p>
+</div>
+<ul>
 <li><p><strong>Command Line Interface (CLI).</strong> CLI tools enable access from the command line by translating commands into the relevant API calls.</p>
 </li>
 <li><p><strong>Storage Gateways.</strong> These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see the appropriate Cloud Storage Gateways Knowledge Centre article:</p>
@@ -133,7 +138,8 @@
 </li>
 </ul>
 <p>To create additional namespaces or users, you must raise a service request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal. When requesting additional users, you can specify whether you want these users to have read-write or read-only permissions.</p>
-<p>We do not currently offer access as an NFS or a HDFS.</p>
+<h2 id="technology-constraints">Technology constraints</h2>
+<p>We do not currently offer access as an Network File System (NFS) or a Hadoop Distributed File System (HDFS) enabled account or bucket.</p>
 <p>You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the ECS Portal.</p>
 <h2 id="protection">Protection</h2>
 <p>You can protect against accidental deletion or modification of data by using retention policies or versioning.</p>
@@ -142,7 +148,7 @@
 <p><strong>Encryption at rest</strong> can be enabled when creating a new namespace or bucket. This encrypts data inline, using an AES 256-bit algorithm, before it is stored on drives. If you want your data to be encrypted at the namespace level, you must request this functionality before your namespace is created, as encryption cannot be enabled or disabled after a namespace is created.</p>
 <h2 id="networks">Networks</h2>
 <p>Cloud Storage is available on a range of Assured and Elevated networks. An overview of the available networks in each region is available in <a href="../other/other-ref-services-by-region.html"><em>UKCloud Services By Region</em></a>.</p>
-<p>Cloud Storage in our Assured OFFICAL domain uses the same environment for both PSN Assured and internet connections. Although it isn't possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.</p>
+<p>Cloud Storage in our Assured OFFICIAL domain uses the same environment for both PSN Assured and internet connections. Although it isn't possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.</p>
 <p>We manage the physical firewalls that face public and secure networks.</p>
 <h2 id="protective-monitoring">Protective monitoring</h2>
 <p>We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the perimeter of your estate.</p>
