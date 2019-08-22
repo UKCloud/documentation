@@ -33,7 +33,7 @@ Other enablement services that we provide to help you work with our cloud platfo
 
 - Data Transfer Facility - Enables you to use the secure network connections at our Farnborough office to manage systems or transfer data into or out of your environments. For more information, see the [*Data Transfer Facility Service Scope*](enbl-sco-dtf.md).
 
-- Mass Data Transfer (HDD) - Enables you to move virtualised environments, in the form of VMs, into or out of your UKCloud environment using your own NAS, HDD, or USB devices. For more information, see the [*Mass Transfer Facility Service Scope*](enbl-sco-mtf-nas.md).
+- Mass Data Transfer - Enables you to move virtualised environments, in the form of VMs, into or out of your UKCloud environment using your own NAS, HDD, or USB devices. For more information, see the [*Mass Transfer Facility Service Scope*](enbl-sco-mtf-nas.md).
 
 - Smart Hands - This service can be used for a number of different requirements such as a physical 'push-button' task, replacing hardware and checking equipment statuses. For more information, see the [*Smart Hands Service Scope*](enbl-sco-smart-hands.md).
 
