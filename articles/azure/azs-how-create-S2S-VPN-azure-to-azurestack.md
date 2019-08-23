@@ -159,7 +159,7 @@ The local network gateway refers to your on-premises network. The following step
 
    - **IP address** - This is the public IP address of the VPN device that you want Azure to connect to. Specify a dummy IP address, as this will need to updated once you have generated the public ip with the connection.
 
-   - **Address space** - One or more IP address ranges (in CIDR notation) that define your local network's address space. If you plan to use this local network gateway in a BGP-enabled connection, then the minimum prefix you need to declare is the host address of your BGP Peer IP address on your VPN device.
+   - **Address space** - One or more IP address ranges (in CIDR notation) that define your local network's address space. For example: 192.168.0.0/16. If you plan to use this local network gateway in a BGP-enabled connection, then the minimum prefix you need to declare is the host address of your BGP Peer IP address on your VPN device.
 
    - **Configure BGP settings** - Use only when configuring BGP.
 
@@ -179,7 +179,7 @@ Create the Site-to-Site VPN connection between your virtual network gateway and 
 
 2. Select your virtual network gateway from the list.
 
-3. In the blade for your virtual network gateway, select **Connections** under the **Settings** section.
+3. In the blade for your virtual network gateway, under the **Settings** section, select **Connections**.
 
 4. Click the **+Add** button.
 
