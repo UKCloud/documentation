@@ -22,9 +22,9 @@ toc_mdlink: azs-how-use-azure-api.md
 
 The Azure Stack API enables you to interact programmatically with your UKCloud for Microsoft Azure environment. For example, you can use API calls to manage your UKCloud for Microsoft Azure tenancy.
 
-This article will show you how to get started with the Azure Stack API.
+This article shows you how to get started with the Azure Stack API.
 
-When interacting with Azure Stack resources via the API, you must specify an API version. A full list of supported API versions can be found [here](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-profiles-azure-resource-manager-versions).
+When interacting with Azure Stack resources via the API, you must specify an API version. You can find a full list of supported API versions [here](https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-profiles-azure-resource-manager-versions).
 
 ### Prerequisites
 
@@ -158,7 +158,7 @@ A REST request URI consists of:
 
 where:
 
-- **URI-scheme** is the protocol used to transmit the request, for example `http` or `https`.
+- **URI-scheme** is the protocol used to transmit the request. For example `http` or `https`.
 
 - **URI-host** is the domain name or IP address of the server where the REST service endpoint is hosted. For example: `management.frn00006.azure.ukcloud.com`.
 
@@ -167,7 +167,7 @@ where:
 - **query-string** provides additional parameters, such as the API version or resource selection criteria.
 
     >[!NOTE]
-    > For Bash, the **query-string** can be added to the end of the request URI following a question mark. For example, to specify use of a specific API version: `https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2016-05-01`. <br>For PowerShell, **query-string** can be provided in the **-Body** parameter hash table. For example: `-Body @{"api-version" = "2016-05-01"}`.
+    > For Bash, you can add the **query-string** to the end of the request URI following a question mark. For example, to specify use of a specific API version: `https://management.frn00006.azure.ukcloud.com/subscriptions?api-version=2016-05-01`. <br>For PowerShell, you can provide a **query-string** in the **-Body** parameter hash table. For example: `-Body @{"api-version" = "2016-05-01"}`.
 
 The syntax of an Azure Stack request URI is:
 
@@ -209,7 +209,7 @@ In particular, you may find the following documents useful:
 
 - <https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-provider-resource-api>
 
-This is guidance for Azure Stack users. Currently, there is no official API reference guide for Azure Stack users; however, there is an admin API guide that you can find [here](https://docs.microsoft.com/en-us/rest/api/azure-stack/). We'll update this guide when one becomes available.
+This is guidance for Azure Stack users. Currently, there is no official API reference guide for Azure Stack users; however, there is an admin API guide that you can find [here](https://docs.microsoft.com/en-us/rest/api/azure-stack/). We'll update this guide when an API guide becomes available.
 
 For more information about UKCloud for Microsoft Azure, see:
 
