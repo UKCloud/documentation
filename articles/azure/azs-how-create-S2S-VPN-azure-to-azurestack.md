@@ -227,9 +227,9 @@ You'll also need to create a virtual network in Public Azure. This virtual netwo
 
    - **Address Range** - The subnet's address range in CIDR notation (for example, 192.168.1.0). It must be contained by the address space of the virtual network. The address range of a subnet which is in use can't be edited.
 
-   - **DDoS protection** - Select the DDoS protection you would like, for more information please see the [Azure DDoS Protection Standard overview](https://docs.microsoft.com/en-gb/azure/virtual-network/ddos-protection-overview)
+   - **DDoS protection** - Select the DDoS protection you would like, for more information please see the [Azure DDoS Protection Standard overview](https://docs.microsoft.com/en-gb/azure/virtual-network/ddos-protection-overview).
 
-   - **Service endpoints** - This allows you to enable one or more service endpoints for more information please see [Virtual Network Service Endpoints](https://docs.microsoft.com/en-gb/azure/virtual-network/virtual-network-service-endpoints-overview)
+   - **Service endpoints** - This allows you to enable one or more service endpoints for more information please see [Virtual Network Service Endpoints](https://docs.microsoft.com/en-gb/azure/virtual-network/virtual-network-service-endpoints-overview).
 
    - **Firewall** - This allows you to enable Azure Firewall, which is a managed cloud-based network security service that protects your Azure Virtual Network resources.
 
