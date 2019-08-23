@@ -3,8 +3,8 @@ title: Getting Started Guide for UKCloud for OpenStack | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: Steve Dixon
+lastreviewed: 20/08/2019
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -525,14 +525,12 @@ Whatever library or automation tools you choose to use, you'll need to know a fe
 
 3. On the *API Access* tab, you can see all the relevant API endpoints for making connections to the various OpenStack subsystems, including the **Identify** endpoint, which provides the initial authentication process that you'll typically need when configuring connections.
 
-    You can also download your user's OpenStack RC file for use in the following section.
-    
-    
+    You can also download your user's OpenStack RC file for use in the following section. 
 
     ![Download OpenStack RC File button on Access & Security page](images/ostack-horizon-btn-download-rc-file.png)
 
-> [!NOTE]
-    > If your account is SSO-enabled, download the v3 RC file and make the modifications stated [HERE](https://docs.ukcloud.com/articles/openstack/ostack-how-use-api-sso.html).
+    > [!NOTE]
+    > If your account is SSO-enabled, download the v3 RC file and make the modifications stated [here](ostack-how-use-api-sso.md).
 
 ## Using the OpenStack command-line client
 
