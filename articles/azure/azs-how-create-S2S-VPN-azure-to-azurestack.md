@@ -430,7 +430,7 @@ In order to establish the connection you will need to identify the public IPs th
 
 ### Update the local Gateway IPs in Azure Stack
 
-1. In The Public Azure portal, navigate to the Connections blade by clicking **All services** in the favourites panel, then selecting **Connections** under the *networking* section.
+1. In the Public Azure portal, navigate to the Connections blade by clicking **All services** in the favourites panel, then selecting **Connections** under the *networking* section.
 
     ![Connections button under all services in public Azure](images/azs-public-browser-services-connections-button.png)
 
@@ -452,7 +452,7 @@ In order to establish the connection you will need to identify the public IPs th
 
     ![Azure Stack local network gateway configuration](images/azs-browser-local-network-gateway-configuration.png)
 
-8. Change the *IP address* field to the IP taken from the Azure Stack connection. ### May need changing. The final step doesn't work yet.
+8. Change the *IP address* field to the IP taken from the Public Azure connection.
 
     ![Azure Stack local network gateway IP address](images/azs-browser-local-network-gateway-ip-address.png)
 
