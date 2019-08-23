@@ -68,7 +68,9 @@ To import a `.vmx` file:
 
 1. In your UKCloud environment, create a catalog to contain the vApp template.
 
-   ![catalogue](images/ovf-image-1.png)
+   ![Catalog for OVF Tool](images/vmw-vcd-ovf-catalog.png)
+
+   For detailed instructions, see [*How to create a catalog*](vmw-how-create-catalog.png).
 
 2. Make sure you are in the correct directory, that is, the directory containing the file you want to import.
 

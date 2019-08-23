@@ -69,11 +69,11 @@ The roles exposed are:
 
 - vApp User
 
-- Console Only 
+- Console Only
 
-You can find further details of these roles in Chapter 11 of the vCloud Director Administrator's Guide.
+You can find further details of these roles in the [vCloud Director Administrator's Guide](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.admin.doc/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html).
 
-In addition, UKCloud have created an API Only role, that restricts users to accessing vCloud Director solely via the API - no GUI access. 
+In addition, UKCloud have created an API Only role, that restricts users to accessing vCloud Director solely via the API, with no GUI access.
 
 ## Permissions for Cloud Storage
 

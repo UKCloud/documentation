@@ -3,8 +3,8 @@ title: How to license Windows VMs using the UKCloud Key Management Server | UKC
 description: Shows how to register virtual machines with the KMS within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: Sue Highmoor
+lastreviewed: 19/08/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -36,7 +36,7 @@ To allow this communication, you need to create a source network address transla
 
 3. Select the edge that you want to configure and click the **Configure Services** button.
 
-    ![Configure Services button](images/vmw-vcd91-btn-configure-services.png)
+    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
 
 4. In the *Edge Gateway* dialog box, select the **NAT** tab and create a new SNAT rule.
 
@@ -64,7 +64,7 @@ To allow this communication, you need to create a source network address transla
 
         C:\ > slmgr /skms  kms.ukcloud.com:1688
 
-4. You\'ll see the following pop-up box:
+4. You'll see the following pop-up box:
 
     ![Windows Script Host dialog box](images/vmw-windows-kms-activate.png)
 
