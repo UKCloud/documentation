@@ -64,7 +64,7 @@ In the example above this is an internet URL so it would be best to add this spe
 
 ## Adding entries to no_proxy
 
-Entries can be added to `no_proxy` pre-deployment if included in the Service Request requesting the environment. Otherwise if you identify additional endpoints that you would like to bypass the proxy post-deployment, you will need to raise a Support Request via the UKCloud Portal as a restart of the master-services is required.
+Entries can be added to `no_proxy` pre-deployment if included in the Service Request requesting the environment. Otherwise if you identify additional endpoints that you would like to bypass the proxy post-deployment, you will need to raise a Support Request via the UKCloud Portal and arrange a suitable maintenance window as a restart of the master, node and Docker services are required.
 
 Examples of domains you may want to bypass the proxy could be:
 
