@@ -20,19 +20,20 @@ toc_mdlink: azs-how-create-S2S-VPN-azure-to-azurestack.md
 
 ## Overview
 
-This guide shows you how to use the Azure Stack portal and Public Azure portal to create a Site-to-Site VPN between your UKCloud for Microsoft Azure environment and Public Azure environment.
+This article shows you how to use the Azure Stack portal and Public Azure portal to create a Site-to-Site VPN between your UKCloud for Microsoft Azure environment and Public Azure environment.
 
 ### Intended audience
 
-To complete the steps in this guide, you must have appropriate access to a subscription in both the Azure Stack portal and Public Azure portal.
+To complete the steps in this article, you must have appropriate access to a subscription in both the Azure Stack portal and Public Azure portal.
 
 ## Create a virtual network in Azure stack
 
-First, you'll need to create a virtual network. This virtual network will be able to send and receive traffic through the virtual network gateway. You cannot associate a virtual network with more than one gateway.
+First, you'll need to create a virtual network. This virtual network will be able to send and receive traffic through the virtual network gateway. 
 
-1. Log in to the Azure Stack portal.
+> [!NOTE]
+> You cannot associate a virtual network with more than one gateway.
 
-   For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
+1. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
 
 2. In the favourites panel, select **Create a resource**.
 
@@ -116,9 +117,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
    - **Public IP address** - The public IP address to assign to this virtual network gateway. Only dynamic public IP addresses are supported. To create a new public IP address:
 
-      - Click **Public IP address** on the **Create virtual network gateway** blade.
-
-      - Select **Create new** on the **Choose public IP address** blade.
+      - Under **Public IP address** on the **Create virtual network gateway** blade, select **Create new** on the **Choose public IP address** blade.
 
       - Enter a name for the public IP address and click **OK**.
 
@@ -160,7 +159,7 @@ The local network gateway refers to your on-premises network. The following step
 
    - **IP address** - This is the public IP address of the VPN device that you want Azure to connect to. Specify a dummy IP address, as this will need to updated once you have generated the public ip with the connection.
 
-   - **Address space** - One or more IP address ranges (in CIDR notation) that define your local network's address space. For example: 192.168.0.0/16. If you plan to use this local network gateway in a BGP-enabled connection, then the minimum prefix you need to declare is the host address of your BGP Peer IP address on your VPN device.
+   - **Address space** - One or more IP address ranges (in CIDR notation) that define your local network's address space. If you plan to use this local network gateway in a BGP-enabled connection, then the minimum prefix you need to declare is the host address of your BGP Peer IP address on your VPN device.
 
    - **Configure BGP settings** - Use only when configuring BGP.
 
