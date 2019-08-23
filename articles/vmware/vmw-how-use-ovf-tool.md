@@ -70,7 +70,7 @@ To import a `.vmx` file:
 
    ![Catalog for OVF Tool](images/vmw-vcd-ovf-catalog.png)
 
-   For detailed instructions, see [*How to create a catalog*](vmw-how-create-catalog.png).
+   For detailed instructions, see [*How to create a catalog*](vmw-how-create-catalog.md).
 
 2. Make sure you are in the correct directory, that is, the directory containing the file you want to import.
 

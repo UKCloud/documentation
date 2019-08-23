@@ -63,7 +63,7 @@ To ensure you're running the latest release of OpenVPN, we recommend that you do
 
 2. In vCloud Director, click the menu icon and select **Libraries**.
 
-3. To upload the OVA file to a catalog, see [*How to create a catalog*](vwm-how-create-catalog.md).
+3. To upload the OVA file to a catalog, see [*How to create a catalog*](vmw-how-create-catalog.md).
 
 ## Deploying the OpenVPN appliance
 
