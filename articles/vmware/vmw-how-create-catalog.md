@@ -58,7 +58,7 @@ The first step is to create an empty catalog:
 
     ![Share Catalog dialog box](images/vmw-vcd-share-catalog.png)
 
-9.  In the *Share With Users and Groups* dialog box, select:
+9. In the *Share With Users and Groups* dialog box, select:
 
     - **Share with everyone in the organisation** to add everyone in the organisation
 
