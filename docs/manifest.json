@@ -4061,7 +4061,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-ref-services.html",
-          "hash": "5xV/SCNvG2V97ymziD2fbw=="
+          "hash": "plqIjOIhcQNL5GplKpK9jg=="
         }
       },
       "is_incremental": false,
@@ -4085,7 +4085,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-dtf.html",
-          "hash": "aDI/VI8Y5/RjfLcu0yqE2A=="
+          "hash": "f16+kGnrOfEfSZ+kvxKvnA=="
         }
       },
       "is_incremental": false,
@@ -4105,23 +4105,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/enablement/enbl-sco-mtf-hdd.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/enablement/enbl-sco-mtf-hdd.html",
-          "hash": "p7vB7fswkYUTlQ7OM7Su3w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/enablement/enbl-sco-mtf-nas.md",
       "output": {
         ".html": {
           "relative_path": "articles/enablement/enbl-sco-mtf-nas.html",
-          "hash": "og/+ES4oI8XaoormvjqnnA=="
+          "hash": "gOk0ry9OxrxXQi6JFUGRZg=="
         }
       },
       "is_incremental": false,
@@ -4388,7 +4376,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/enablement/toc.html",
-          "hash": "dAelu2qlBvmKWIVx1Dscjw=="
+          "hash": "ebjmUTvh7JzMDb3g1qmqnA=="
         }
       },
       "is_incremental": false,
@@ -16669,7 +16657,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-faq.html",
-          "hash": "rwDmW9WcV+jdK0eZS4vJ4g=="
+          "hash": "ICLASEFw5BJNlZnGWzdkag=="
         }
       },
       "is_incremental": false,
@@ -18034,7 +18022,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 407,
+          "total_file_count": 406,
           "skipped_file_count": 0
         }
       }
