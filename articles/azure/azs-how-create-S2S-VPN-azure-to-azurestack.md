@@ -462,26 +462,24 @@ In order to establish the connection you will need to identify the public IPs th
 
 After configuring the VPN device on your local network, you can verify the VPN connection with the following steps:
 
-1. Navigate to your virtual network gateway by clicking **All services** in the favourites panel, then selecting **Virtual network gateways** under the networking section.
+1. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com).
 
-    ![](images/)
+2. Navigate to your virtual network gateway by clicking **All services** in the favourites panel, then selecting **Virtual network gateways** under the networking section.
 
-2. Select your virtual network gateway from the list.
+    ![Azure Stack virtual network gateways](images/azs-browser-virtual-network-gateway-all-services.png)
 
-    ![](images/)
+3. Select your virtual network gateway from the list.
 
-3. In the blade for your virtual network gateway, select **Connections** under the **Settings** section.
+4. In the blade for your virtual network gateway, select **Connections** under the **Settings** section.
 
-    ![](images/)
+    ![Azure Stack virtual network gateway connections](images/azs-browser-virtual-network-gateway-connections.png)
 
-4. Select your connection from the list.
+5. Select your connection from the list.
 
-    ![](images/)
+6. In the *new* blade, you can view more information about your connection. The connection status will be **Connected** if there is a successful connection.
 
-5. In the blade that has opened, you can view more information about your connection. The connection status will be **Succeeded** or **Connected** if there is a successful connection.
-
-    ![](images/)
+    ![Azure Stack virtual network gateway connection status](images/azs-browser-virtual-network-gateway-connected.png)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
