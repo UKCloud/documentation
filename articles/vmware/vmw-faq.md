@@ -120,7 +120,7 @@ For a transfer time calculator, go to: <http://techinternets.com/copy_calc?do>
 
 If you use FTPS to upload data to or download it from your environment, you can transfer up to 1TiB of data in a day.
 
-Alternatively, we offer the Mass Transfer Facility option enabling customers to import large quantities of data via HDDs or NAS devices that are plugged directly into your environment. Please check the *Mass Transfer Facility Service Scope* for [NAS](../enablement/enbl-sco-mtf-nas.md) or [HDD](../enablement/enbl-sco-mtf-hdd.md), or the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) further details.
+Alternatively, we offer the Mass Transfer Facility option enabling customers to import large quantities of data via NAS, HDD or USB devices that are plugged directly into your environment. Please check the [*Mass Transfer Facility Service Scope*](../enablement/enbl-sco-mtf-nas.md) or the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) further details.
 
 ### Does UKCloud offer encryption on the VM?
 
