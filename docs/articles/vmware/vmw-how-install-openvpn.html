@@ -104,7 +104,7 @@
 <h2 id="preparing-your-virtual-data-centre">Preparing your virtual data centre</h2>
 <h3 id="create-a-new-vdc-network">Create a new VDC network</h3>
 <p>To secure your environment, we recommend that you deploy the OpenVPN appliance into a new, routed VDC network. Ideally, no other virtual machines (VMs) should connect to this network. This enables you to tightly control access from VPN clients to the VMs in your environment using firewall rules on the edge gateway. However, if you're approaching the network interface limit of your edge gateway, it's possible to deploy the OpenVPN appliance into an existing network.</p>
-<p><strong>More information!</strong> <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a></p>
+<p>For more information, see <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a>.</p>
 <h3 id="configuring-the-edge-gateway">Configuring the edge gateway</h3>
 <p>After you've created the network, you'll need to configure the edge gateway to control access to the VMs in your environment by creating:</p>
 <ul>
@@ -119,26 +119,22 @@
 <li><p>One or more firewall rules to allow access from trusted environments to the OpenVPN appliance on the admin port (<code>943</code> by default, but can be changed).</p>
 </li>
 </ul>
-<p><strong>More information!</strong> <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a> and <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
+<p>For more information, see <a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a> and <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
 <h2 id="obtaining-the-latest-openvpn-appliance">Obtaining the latest OpenVPN appliance</h2>
 <p>To ensure you're running the latest release of OpenVPN, we recommend that you download the latest version of the appliance directly from the OpenVPN website:</p>
 <ol>
 <li><p>Go to the following location to download the latest OVA file:</p>
 <p><a href="https://swupdate.openvpn.org/appliances/AS2.ova">https://swupdate.openvpn.org/appliances/AS2.ova</a></p>
 </li>
-<li><p>In vCloud Director, select the <strong>Catalogs</strong> tab.</p>
+<li><p>In vCloud Director, click the menu icon and select <strong>Libraries</strong>.</p>
 </li>
-<li><p>In the left navigation panel, select <strong>My Organization's Catalogs</strong>.</p>
-</li>
-<li><p>Open the catalog you'd like to add the appliance to, or create a new catalog.</p>
-</li>
-<li><p>Click the <strong>Upload</strong> button and upload the OVA file to the catalog.</p>
+<li><p>To upload the OVA file to a catalog, see <a href="vwm-how-create-catalog.md"><em>How to create a catalog</em></a>.</p>
 </li>
 </ol>
 <h2 id="deploying-the-openvpn-appliance">Deploying the OpenVPN appliance</h2>
 <p>To deploy the OpenVPN appliance:</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to depoly the OpenVPN appliance.</p>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to deploy the OpenVPN appliance.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>vApps</strong>.</p>
 <p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
@@ -148,14 +144,13 @@
 </li>
 <li><p>Select the OVA that you downloaded then click <strong>Next</strong>.</p>
 </li>
-<li><p>Review the details of the OVA to confirm that it's the right images then click <strong>Next</strong>.</p>
+<li><p>Review the details of the OVA to confirm that it's the right image then click <strong>Next</strong>.</p>
 </li>
-<li><p>The appliance will be deployed as a single VM inside a vApp. Provide a name for the vApp then click <strong>Next</strong>.</p>
+<li><p>The appliance will be deployed as a single VM inside a vApp. Provide a <strong>Name</strong> and (optinal) <strong>Description</strong> for the vApp then click <strong>Next</strong>.</p>
 </li>
 <li><p>Provide a valid NetBIOS host name and your desired storage policy then click <strong>Next</strong>.</p>
 </li>
-<li><p>Configure the network by selecting <strong>Switch to advanced networking workflow</strong>.</p>
-<p><img src="images/vmw-vcd-tp-vapp-from-ovf-network.png" alt="Configure Networking page of Create vApp from OVF wizard"></p>
+<li><p>Configure the network by selecting <strong>Switch to the advanced networking workflow</strong>.</p>
 </li>
 <li><p>Select the network adapter type, network and IP pool assignment (<strong>Manual</strong>) then click <strong>Next</strong>.</p>
 </li>

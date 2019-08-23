@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to locate your virtual data centre on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>vCloud Director 9.7 useful videos | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to locate your virtual data centre on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="vCloud Director 9.7 useful videos | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -55,7 +55,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-locate-vdc.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-vid-vcd97.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -91,57 +91,26 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-locate-your-virtual-data-centre-on-the-ukcloud-platform">How to locate your virtual data centre on the UKCloud platform</h1>
+<h1 id="vcloud-director-97-useful-videos">vCloud Director 9.7 useful videos</h1>
 
-<h2 id="overview">Overview</h2>
-<p>Each virtual data centre (VDC) exists in a particular location within the UKCloud platform. UKCloud stores metadata against each VDC to indicate where within the platform the VDC resides. Using this metadata, you can locate your VDC by site, region and zone. For more information about the organisation of the UKCloud platform, see <a href="../other/other-ref-sites-regions-zones.html"><em>Understanding sites, regions and zones</em></a>.</p>
-<p>Knowing where your VDCs are located can be useful for:</p>
-<ul>
-<li><p>Determining how resilient your applications are</p>
-</li>
-<li><p>Determining how scheduled or emergency maintenance or an unplanned outage may affect your applications</p>
-</li>
-<li><p>Providing additional information to help with support call resolution</p>
-</li>
-</ul>
-<p>This guide describes how to use vCloud Director to find out where your VDC is within the UKCloud platform. You can use the vCloud Director UI or the API.</p>
-<p>The information provided by the VDC metadata is read-only. If you want to change the location of a VDC, raise a Support Request from the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
-<h2 id="finding-the-location-of-a-vdc-using-the-vcloud-director-tenant-ui">Finding the location of a VDC using the vCloud Director Tenant UI</h2>
-<ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that you want to locate.</p>
-<p>For more detailed instructions on accessing vCloud Director, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
-</li>
-<li><p>In the left navigation panel, select <strong>Metadata</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-vdc-metadata.png" alt="VDC Metadata menu option"></p>
-</li>
-<li><p>The following fields indicate the location of your VDC:</p>
-<ul>
-<li><p><strong>provider-site</strong> - indicates the site in which your VDC is located: <strong>Farnborough</strong> or <strong>Corsham</strong></p>
-</li>
-<li><p><strong>provider-region</strong> - indicates the region in which your VDC is located, for example <strong>1</strong> or <strong>5</strong>.</p>
-</li>
-<li><p><strong>provider-zone</strong> - indicates the zone in which your VDC is located, for example <strong>1(AF2)</strong> or <strong>B</strong></p>
-</li>
-</ul>
-<p><img src="images/vmw-vcd-vdc-location-metadata.png" alt="VDC location metadata"></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>If you set up your VDC to use Synchronous Protection, then the VDC is stretched across multiple sites. The metadata indicates this as follows:</p>
-<ul>
-<li><strong>provider-protection-synchronous</strong> is <strong>Yes</strong></li>
-<li><strong>provider-site</strong> - indicates that your VDC is stretched across both sites: <strong>Farnborough or Corsham</strong></li>
-<li><strong>provider-region</strong> - indicates that your VDC is stretched across multiple regions, for example <strong>1 or 2</strong></li>
-<li><strong>provider-zone</strong> - indicates that your VDC is stretched across multiple zones, for example <strong>1(AE1) or 2(AE2)</strong></li>
-</ul>
+<p>The following videos from VMware provide useful information about working with vCloud Director 9.7.</p>
+<div style="padding:56.25% 0 0 0;position:relative;">
+  <iframe src="https://www.youtube.com/embed/XE6bQriXdcw" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+  </iframe>
 </div>
-<p>You can use VM location to locate individual VMs within the VDC. For more information, see <a href="vmw-how-use-vm-location.html"><em>How to use VM location in vCloud Director</em></a>.</p>
-</li>
-<li><p>When you're done, click <strong>Cancel</strong>.</p>
-</li>
-</ol>
-<h2 id="finding-the-location-of-a-vdc-using-the-vcloud-director-api">Finding the location of a VDC using the vCloud Director API</h2>
-<p>You can also find the location of your VDC by calling the vCloud Director API. For more information about the vCloud Director API, see <a href="https://code.vmware.com/apis/553/vcloud-director">vCloud Director API Guide</a>.</p>
-<p>For example, to retrieve all the metadata for a specified VDC, call the <code>GET /vcd/&lt;id&gt;/metadata</code> endpoint.</p>
+<p><a href="https://youtu.be/XE6bQriXdcw">vCloud Director: Working with vApps</a></p>
+<div style="padding:56.25% 0 0 0;position:relative;">
+  <iframe src="https://www.youtube.com/embed/ezuM_VbzFHI" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+  </iframe>
+</div>
+<p><a href="https://youtu.be/ezuM_VbzFHI">vCloud Director: Working with vApp Templates</a></p>
+<h2 id="related-articles">Related articles</h2>
+<ul>
+<li><a href="vmw-ref-vcd-97.html"><em>Preparing for vCloud Director 9.7 upgrade</em></a></li>
+<li><a href="vmw-ref-vcd97-known-issues.html"><em>vCloud Director 9.7 known issues</em></a></li>
+<li><a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></li>
+<li><a href="vmw-gs-build-vm-vcd.html"><em>How to build a virtual machine with UKCloud for VMware</em></a></li>
+</ul>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 

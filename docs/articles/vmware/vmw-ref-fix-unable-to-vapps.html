@@ -93,51 +93,7 @@
                   
 <h1 id="fix-for-customers-unable-to-upload-and-download-vapps-or-catalog-items">Fix for customers unable to upload and download vApps or catalog items</h1>
 
-<p>This article is divided into two sections: A Windows and MAC set of instructions:</p>
-<h2 id="fix-for-customers-unable-to-upload-and-download-vapps-of-catalog-items-in-windows">Fix for customers unable to upload and download vApps of catalog items in Windows</h2>
-<p>The client integration plugin requires to be updated on the client machine performing the upload/download.</p>
-<h3 id="step-1">Step 1</h3>
-<p>Close all internet browsers.</p>
-<h3 id="step-2">Step 2</h3>
-<p>Go to control panel and uninstall: VMware Client Integration Plug-in 5.5.0</p>
-<div class="IMPORTANT">
-<h5>Important</h5>
-<p>Remove the file <code>.csp_ovftool_settings.js</code> located in <code>C:\users\&lt;username&gt;</code></p>
-</div>
-<h3 id="step-3">Step 3</h3>
-<p>Connect to the UKCloud Portal and log in to vCloud Director. Right click the vApp and select download, the following screen will appear:</p>
-<p><img src="images/integration_plugin.jpg" alt="Client Integration Plug-in download page"></p>
-<p>Download and install this plugin.</p>
-<h3 id="step-4">Step 4</h3>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Close all browsers prior to install.</p>
-</div>
-<p>Once installed, log back in to the Portal.</p>
-<p>You should now find you are able to initialise a vApp download.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>This is the same fix for catalog item upload/download.</p>
-</div>
-<h2 id="fix-for-customers-unable-to-upload-and-download-vapps-of-catalog-items-in-mac-os">Fix for customers unable to upload and download vApps of catalog items in Mac OS</h2>
-<h3 id="step-1-1">Step 1</h3>
-<p>Shut down all browsers.</p>
-<h3 id="step-2-1">Step 2</h3>
-<p>Remove the installed plugin with this command:</p>
-<pre><code>sudo rm -rf '/Library/Internet Plug-Ins/VMwareClientSupportPlugin55.plugin
-</code></pre>
-<h3 id="step-3-1">Step 3</h3>
-<p>Remove local settings created by the plugin:</p>
-<pre><code>rm ~/.csp_ovftool_settings.js
-</code></pre>
-<h3 id="step-4-1">Step 4</h3>
-<p>Re-install the plugin.</p>
-<h3 id="step-5">Step 5</h3>
-<p>Ensure the plugin is set to &quot;Always activate&quot; in about:addons.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>This plugin only works in Firefox. It does not work in Safari, and no longer works in Chrome as it requires NPAPI extensions.</p>
-</div>
+<p>To avoid issues with incorrect versions of the Client Integration Plug-in, we recommend that all customers use the vCloud Director HTML5-based Tenant UI.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
