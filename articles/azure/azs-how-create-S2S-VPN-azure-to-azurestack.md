@@ -67,19 +67,11 @@ First, you'll need to create a virtual network. This virtual network will be abl
 
 6. Click **Create**.
 
-7. You can monitor the progress of your virtual network's deployment by clicking the **Notifications** icon.
+7. After your virtual network has deployed, you can view it by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the networking section.
 
-   ![!Notification showing VM deployment in progress](images/azsp_createvm_progress.png)
+8. Select your virtual network from the list.
 
-8. Click the deployment notification for the deployment to view details of the deployment of the virtual network.
-
-9. When the deployment is finished, the notification will change to **Deployment succeeded**.
-
-10. After your virtual network has deployed, you can view it by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the networking section.
-
-11. Select your virtual network from the list.
-
-12. In the blade for your virtual network, you can view and monitor the virtual network, change its settings and perform diagnostics and troubleshooting.
+9. In the blade for your virtual network, you can view and monitor the virtual network, change its settings and perform diagnostics and troubleshooting.
 
 ## Create the gateway subnet in Azure Stack
 
@@ -133,10 +125,6 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
 5. Click **Create**.
 
-6. You can monitor the progress of your virtual network's deployment by clicking the **Notifications** icon.
-
-   ![!Notification showing VM deployment in progress](images/azsp_createvm_progress.png)
-
 ## Create the local network gateway in Azure Stack
 
 The local network gateway refers to your on-premises network. The following steps outline how to create a local network gateway:
@@ -181,7 +169,7 @@ Create the Site-to-Site VPN connection between your virtual network gateway and 
 
 3. In the blade for your virtual network gateway, under the **Settings** section, select **Connections**.
 
-4. Click the **+Add** button.
+4. Click the **+ Add** button.
 
 5. In the **Add connection** blade, enter the following information:
 
@@ -249,23 +237,15 @@ You'll also need to create a virtual network in Public Azure. This virtual netwo
 
 6. Click **Create**.
 
-7. You can monitor the progress of your virtual network's deployment by clicking the **Notifications** icon.
-
-   ![Notification showing VM deployment in progress](images/azs-public-browser-notification-deployement-progress.png)
-
-8. Click the deployment notification for the deployment to view details of the deployment of the virtual network.
-
-9. When the deployment is finished, the notification will change to **Deployment succeeded**.
-
-10. After your virtual network has deployed, you can view it by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the networking section.
+7. After your virtual network has deployed, you can view it by clicking **All services** in the favourites panel, then selecting **Virtual networks** under the networking section.
 
     ![Virtual networks button in all services](images/azs-public-browser-services-virtual-networks.png)
 
-11. Select your virtual network from the list.
+8. Select your virtual network from the list.
 
-12. In the blade for your virtual network, you can view and monitor the virtual network, change its settings and perform diagnostics and troubleshooting.
+9. In the blade for your virtual network, you can view and monitor the virtual network, change its settings and perform diagnostics and troubleshooting.
 
-    ![Virtual networks blade](images/azs-public-browser-virtual-network-blade.png)
+    ![Virtual networks blade](images/azs-public-browser-virtual-network-blade.png) # Done up to here.
 
 ## Create the gateway subnet in Public Azure
 
@@ -332,10 +312,6 @@ To associate a virtual network with a gateway, it must first contain a valid gat
      ![Create new virtual network gateway](images/azs-public-browser-create-virtual-network-gateway.png)
 
 5. Click **Create**.
-
-6. You can monitor the progress of your virtual network's deployment by clicking the **Notifications** icon.
-
-   ![!Notification showing VM deployment in progress](images/azs-public-browser-notification-deployement-progress.png)
 
 ## Create the local network gateway in Public Azure
 
