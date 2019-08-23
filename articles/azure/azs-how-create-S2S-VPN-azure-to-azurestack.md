@@ -259,11 +259,11 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
 3. On the **Subnets** page, click the **Gateway Subnet** button.
 
-    ![Add gateway subnet button](images/)
+    ![Gateway subnet button in virtual networks blade](images/azs-public-browser-virtual-network-gateway-subnet-button.png)
 
 4. Fill in the **Address range** and add a route table if required, then click **OK**. The subnet should now have appeared.
 
-    ![Add gateway subnet blade](images/)
+    ![Add gateway subnet blade](images/azs-public-browser-virtual-network-add-gateway-subnet.png)
 
 ## Create the VPN gateway in Public Azure
 
@@ -275,43 +275,46 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
    ![Networking option in New blade](images/azs-public-browser-new-networking-button.png)
 
-3. In the **Featured** section, select **Virtual network gateway**.
+3. In the **Featured** section, select **See all**, then **Virtual network gateway**.
 
    ![Create new networking resource](images/azs-public-browser-new-virtual-network-gateway.png)
 
-4. In the **Create virtual network gateway** blade, enter the following information:
+4. Click **Create**.
+
+5. In the **Create virtual network gateway** blade, enter the following information:
+
+   - **Subscription** - This is your Microsoft Azure subscription.
 
    - **Name** - The name of the virtual network gateway.
 
-   - **Gateway type** - To connect with an existing ExpressRoute circuit, select "ExpressRoute".
+   - **Region** - The region to place the virtual network gateway in.
+
+   - **Gateway type** - The type of virtual network gateway to create.
+
+       - To connect with an existing ExpressRoute circuit, select "ExpressRoute".
 
    - **VPN type** - The type of VPN you can choose depends on the make and model of your VPN device, and the kind of VPN connection you intend to create. Choose a route-based gateway if you intend to use point-to-site, inter-virtual network, or multiple site-to-site connections; if you are creating a VPN type gateway to coexist with an ExpressRoute gateway; or if you need to use IKEv2. Policy-based gateways support only IKEv1.
 
    - **SKU** - Route-based VPN gateway types are offered in three SKUs: Basic, Standard, and High performance. You must select Standard or High performance if you are creating the network to coexist with an ExpressRoute gateway. You must select High performance SKU to enable active-active mode. You can find more information about SKUs here: [Azure Stack SKUs](https://docs.microsoft.com/en-gb/azure/vpn-gateway/vpn-gateway-about-skus-legacy).
 
-   - **Enable active-active mode** - The gateway SKU must be VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ, VpnGw3Az, or HighPerformance (legacy SKU).
+   - **Virtual Network** - This is the virtual network that you created earlier in Public Azure.
 
-   - **Virtual Network** - This is the virtual network that you created earlier in public Azure.
+   - **Public IP address** - The public IP address to assign to this virtual network gateway. Only dynamic public IP addresses are supported.
 
-   - **Public IP address** - The public IP address to assign to this virtual network gateway. Only dynamic public IP addresses are supported. To create a new public IP address:
+       - Click **Create new**.
 
-      - Click **Public IP address** on the **Create virtual network gateway** blade.
+       - In the **Public IP address name** field, Enter a public IP address name.
 
-      - Select **Create new** on the **Choose public IP address** blade.
-
-      - Enter a name for the public IP address and click **OK**.
+   - **Enable active-active mode** - The gateway SKU must be either **VpnGw1**, **VpnGw2**, **VpnGw3**, **VpnGw1AZ**, **VpnGw2AZ**, **VpnGw3Az** or HighPerformance (legacy SKU).
 
    - **Configure BGP ASN** - BGP is the standard routing protocol commonly used on the internet to exchange routing information between two or more networks. BGP enables the Azure VPN Gateways and your on-premises VPN devices, called BGP peers or neighbours, to exchange "routes" that will inform both gateways on the availability and reachability for those prefixes to go through the gateways or routers involved. You should also make sure your on-premises VPN devices support BGP before you enable this feature.
 
-   - **Subscription** - This is your Microsoft Azure subscription.
+   > [!NOTE]
+   > The virtual network gateway will be created in the same resource group as the chosen virtual network.
 
-   - **Resource Group** - The virtual network gateway will be created in the same resource group as the chosen virtual network.
+   ![Create new virtual network gateway](images/azs-public-browser-create-virtual-network-gateway.png)
 
-   - **Location** - Select the location of the Azure resource.
-
-     ![Create new virtual network gateway](images/azs-public-browser-create-virtual-network-gateway.png)
-
-5. Click **Create**.
+6. Click **Review + create**.
 
 ## Create the local network gateway in Public Azure
 
