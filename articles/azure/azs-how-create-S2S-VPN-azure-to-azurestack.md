@@ -81,7 +81,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
 2. In the **Settings** section of the virtual network blade, select **Subnets**.
 
-3. On the **Subnets** page, click the **+ Gateway Subnet** button.
+3. On the **Subnets** page, click the **Gateway Subnet** button.
 
 4. Fill in the **Address range** and add a route table if required, then click **OK**. The subnet should now have appeared.
 
@@ -169,7 +169,7 @@ Create the Site-to-Site VPN connection between your virtual network gateway and 
 
 3. In the blade for your virtual network gateway, under the **Settings** section, select **Connections**.
 
-4. Click the **+ Add** button.
+4. Click the **Add** button.
 
 5. In the **Add connection** blade, enter the following information:
 
@@ -245,7 +245,7 @@ You'll also need to create a virtual network in Public Azure. This virtual netwo
 
 9. In the blade for your virtual network, you can view and monitor the virtual network, change its settings and perform diagnostics and troubleshooting.
 
-    ![Virtual networks blade](images/azs-public-browser-virtual-network-blade.png) # Done up to here.
+    ![Virtual networks blade](images/azs-public-browser-virtual-network-blade.png)
 
 ## Create the gateway subnet in Public Azure
 
@@ -257,7 +257,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
     ![Subnets button in virtual networks blade](images/azs-public-browser-virtual-network-subnets-button.png)
 
-3. On the **Subnets** page, click the **+ Gateway Subnet** button.
+3. On the **Subnets** page, click the **Gateway Subnet** button.
 
     ![Add gateway subnet button](images/)
 
@@ -361,7 +361,7 @@ Create the Site-to-Site VPN connection between your virtual network gateway and 
 
     ![Connections for virtual network gateway](imgaes/azs-public-browser-virtual-network-gateway-connections-button.png)
 
-4. Click the **+Add** button.
+4. Click the **Add** button.
 
     ![Add virtual network button](imgaes/azs-public-browser-connection-add-button.png)
 
