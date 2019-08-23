@@ -26,7 +26,7 @@ This article shows you how to use the Azure Stack portal and Public Azure portal
 
 To complete the steps in this article, you must have appropriate access to a subscription in both the Azure Stack portal and Public Azure portal.
 
-## Create a virtual network in Azure stack
+## Create a virtual network in Azure Stack
 
 First, you'll need to create a virtual network. This virtual network will be able to send and receive traffic through the virtual network gateway. 
 
@@ -303,7 +303,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
        - Click **Create new**.
 
-       - In the **Public IP address name** field, Enter a public IP address name.
+       - In the **Public IP address name** field, enter a public IP address name.
 
    - **Enable active-active mode** - The gateway SKU must be either **VpnGw1**, **VpnGw2**, **VpnGw3**, **VpnGw1AZ**, **VpnGw2AZ**, **VpnGw3Az** or HighPerformance (legacy SKU).
 
