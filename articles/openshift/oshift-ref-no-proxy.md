@@ -48,7 +48,7 @@ $ oc describe dc docker-registry -n default | grep PROXY
 
 - `HTTPS_PROXY`: Cluster Proxy URL for HTTPS requests
 
-When building containers within OpenShift, these environment variables will be passed through to the image pushed to your local registry. When working with images that have been imported from an external source, you may need to apply these environment values to ensure that you can access whitelisted internet resources from your community network nodes.
+When building container images within OpenShift, these environment variables will be passed through to the image pushed to your local registry. When working with images that have been imported from an external source, you may need to apply these environment values to ensure that you can access whitelisted internet resources from your community network nodes.
 
 ## Identifying where you might need to add entries to no_proxy
 
