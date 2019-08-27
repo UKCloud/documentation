@@ -20,15 +20,15 @@ toc_mdlink: azs-how-create-S2S-VPN-azure-to-azurestack.md
 
 ## Overview
 
-This article shows you how to use the Azure Stack portal and Public Azure portal to create a Site-to-Site VPN between your UKCloud for Microsoft Azure environment and Public Azure environment.
+This article shows you how to use the Azure Stack and Public Azure portals to create a Site-to-Site VPN between your UKCloud for Microsoft Azure environment and Public Azure environment.
 
 ### Intended audience
 
-To complete the steps in this article, you must have appropriate access to a subscription in both the Azure Stack portal and Public Azure portal.
+To complete the steps in this article, you must have appropriate access to a subscription in both the Azure Stack and Public Azure portals.
 
 ## Create a virtual network in Azure Stack
 
-First, you'll need to create a virtual network. This virtual network will be able to send and receive traffic through the virtual network gateway. 
+First, you'll need to create a virtual network. This virtual network will be able to send and receive traffic through a virtual network gateway. 
 
 > [!NOTE]
 > You cannot associate a virtual network with more than one gateway.
@@ -145,11 +145,11 @@ The local network gateway refers to your on-premises network. The following step
 
    - **Name** - The name of the local network gateway.
 
-   - **IP address** - This is the public IP address of the VPN device that you want Azure to connect to. Specify a dummy IP address, as this will need to updated once you have generated the public ip with the connection.
+   - **IP address** - This is the public IP address of the VPN device that you want Azure to connect to. Specify a dummy IP address, as this will need to be updated once you have generated the public ip with the connection.
 
    - **Address space** - One or more IP address ranges (in CIDR notation) that define your local network's address space. For example: 192.168.0.0/16. If you plan to use this local network gateway in a BGP-enabled connection, then the minimum prefix you need to declare is the host address of your BGP Peer IP address on your VPN device.
 
-   - **Configure BGP settings** - Use only when configuring BGP.
+   - **Configure BGP settings (Optional)** - Used only for when configuring BGP.
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
@@ -185,7 +185,7 @@ Create the Site-to-Site VPN connection between your virtual network gateway and 
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
 
-   - **Resource Group** - When adding a connection for an existing peer, the resource group can't be changed.
+   - **Resource Group** - The resource group cannot be changed if you are adding a connection for an existing peer.
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
 
@@ -225,7 +225,7 @@ You'll also need to create a virtual network in Public Azure. This virtual netwo
 
    - **Subnet Name** - The name of the first subnet within the virtual network.
 
-   - **Address Range** - The subnet's address range in CIDR notation (for example, 192.168.1.0). It must be contained by the address space of the virtual network. The address range of a subnet which is in use can't be edited.
+   - **Address Range** - The subnet's address range in CIDR notation (for example, 192.168.1.0). It must be within the address range of the virtual network. It should be noted that the address range of a subnet currently in use cannot be edited.
 
    - **DDoS protection** - Select the DDoS protection you would like, for more information please see the [Azure DDoS Protection Standard overview](https://docs.microsoft.com/en-gb/azure/virtual-network/ddos-protection-overview).
 
@@ -243,7 +243,7 @@ You'll also need to create a virtual network in Public Azure. This virtual netwo
 
 8. Select your virtual network from the list.
 
-9. In the blade for your virtual network, you can view and monitor the virtual network, change its settings and perform diagnostics and troubleshooting.
+9. In the blade for your virtual network you can; view and monitor the virtual network, change its settings and perform diagnostics and troubleshooting.
 
     ![Virtual networks blade](images/azs-public-browser-virtual-network-blade.png)
 
@@ -326,7 +326,7 @@ The local network gateway refers to your on-premises network. The following step
 
    ![Create a resource option in favourites panel](images/azs-public-browser-create-resource-button.png)
 
-2. In the **New** blade, search `Local network gateway`.
+2. In the **New** blade, search for `Local network gateway`.
 
    ![Create new networking resource](images/azs-public-browser-new-local-network-gateway-search.png)
 
