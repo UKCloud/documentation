@@ -27,21 +27,21 @@ HybridConnect enables you to bring private connectivity into service provider lo
 
 The current core network locations are: Farnborough A9 and Corsham SQ17.
 
-Known Service Providers with presence* within A9 and SQ17:
+Known Service Providers with presence<sup>*</sup> within A9 and SQ17:
 
-BT
+- BT
 
-Vodafone
+- Vodafone
 
-CenturyLink
+- CenturyLink
 
-Virgin Media
+- Virgin Media
 
-Interoute
+- Interoute
 
-GTT
+- GTT
 
-\* This does not necessarily mean your private connection will be terminated within these locations. You should check the planned termination location with your provider.
+<sup>*</sup> This does not necessarily mean your private connection will be terminated within these locations. You should check the planned termination location with your provider.
 
 UKCloud is not responsible for procuring the private connection or arranging any service provider activity on your behalf.
 
@@ -63,8 +63,8 @@ There are different pricing models for both products. These charges are applied 
 
 &nbsp; | HybridConnect | CrownConnect (Private Connectivity)
 -------|---------------|------------------------------------
-One-off charge | £2000 | £1000
-Monthly charge | £0 | £200 (1Gb port)<br>£500 (10Gb port)
+One-off charge | £1000 | £1000
+Monthly charge | £150 (1Gb bandwidth)<br>£300 (10Gb bandwidth) | £200 (1Gb port)<br>£500 (10Gb port)
 
 ## Lead times
 
@@ -75,7 +75,7 @@ Lead times vary depending on product. HybridConnect can normally be delivered wi
 &nbsp; | HybridConnect | CrownConnect (Private Connectivity)
 -------|---------------|------------------------------------
 Service provider termination locations | A9<br>SQ17 | A101<br>A102<br>A103<br>P1<br>P2<br>P3
-Costs | One-off installation | One-off installation + monthly charge
+Costs | One-off installation + monthly charge | One-off installation + monthly charge
 Lead times | A few days (approx) | Dependent on termination location
 Cloud Enablement use | Yes | Yes
 
