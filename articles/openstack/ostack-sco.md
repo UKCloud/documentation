@@ -49,6 +49,10 @@ The following OpenStack projects/services are available with UKCloud for OpenSta
 
 - Neutron Networking Services
 
+- Barbican Key Management Services (*Excludes COR00005 & FRN00006 Regions*)
+
+- Octavia Load Balancing as a Service (*Excludes COR00005 & FRN00006 Regions*)
+
 UKCloud will look to add additional OpenStack projects to this service through future releases.
 
 ## Default setup
@@ -138,7 +142,9 @@ The following features published in the [*UKCloud for OpenStack Service Definiti
 
 - UKCloud provided Red Hat licences
 
-We are actively working on delivering these features and aim to have them delivered by Q4 2018.
+- OpenStack within UKCloud's Elevated security domain
+
+We are actively working on delivering these features.
 
 ## Feedback
 
