@@ -110,9 +110,9 @@ The images used to create this deployment are:
 - Latest DSC Extension (2.76.0 or higher).
 
 > [!WARNING]
-> If you deploy SQL STANDARD your Availability Group has got limitations as per [Basic Availability Groups](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017)
+> If you deploy SQL STANDARD your Availability Group will have limitations as per [Basic Availability Groups](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017)
 > ## Basic Availability Group Limitations
-> Basic availability groups use a subset of features compared to advanced availability groups on SQL Server 2016 Enterprise Edition. Basic availability groups include the following limitations:
+> Basic availability groups use a subset of features compared to those normally found in advanced availability groups on SQL Server 2016 Enterprise Edition. Basic availability groups include the following limitations:
 >
 > - Limit of two replicas (primary and secondary).
 >  
@@ -126,7 +126,7 @@ The images used to create this deployment are:
 >
 > - Support for one availability database.
 >
-> - Basic availability groups cannot be upgraded to advanced availability groups. The group must > be dropped and re-added to a group that contains servers running only SQL Server 2016 Enterprise > Edition.
+> - Basic availability groups cannot be upgraded to advanced availability groups. The group must be dropped and re-added to a group that contains servers running only SQL Server 2016 Enterprise Edition.
 >
 > - Basic availability groups are only supported for Standard Edition servers.
 >
@@ -310,7 +310,7 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
 
 ## Known issues
 
-- Sometimes Domain Account does not get correctly created and you will get the following error:
+- Sometimes the Domain Account does not get correctly created and you will get the following error:
 
   ```powershell
   "statusMessage":
