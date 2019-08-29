@@ -3,8 +3,8 @@ title: UKCloud for VMware FAQs | UKCloud Ltd
 description: Frequently asked questions for UKCloud for VMware
 services: vmware
 author: Matt Warner
-reviewer:
-lastreviewed: 25/07/2018 15:32:54
+reviewer: Guy Martin
+lastreviewed: 20/08/2019
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -23,7 +23,7 @@ toc_mdlink: vmw-faq.md
 
 UKCloud for VMware is an Infrastructure as a Service (IaaS) offering which enables organisations to rapidly provision and scale secure virtual machines (VMs) in minutes, in a flexible and autonomous manner.
 
-UKCloud provides this service across two security domains, Assured OFFICIAL (formerly PGA IL2) and Elevated OFFICIAL (formerly PGA IL3), and with a range of service levels offering up to 99.99% availability. This choice allows customers to precisely match application and user needs to an appropriate security domain, service level and cost, instead of designing to the highest level which may not always be needed.
+UKCloud provides this service across two security domains, Assured OFFICIAL and Elevated OFFICIAL, and with a range of service levels offering up to 99.99% availability. This choice allows customers to precisely match application and user needs to an appropriate security domain, service level and cost, instead of designing to the highest level which may not always be needed.
 
 ### Can VMs have different characteristics?
 
@@ -43,23 +43,7 @@ Power VMs operate where automated rebalancing is enabled to pre-emptively optimi
 
 Priority VMs differ from other VM types. Automated rebalancing is configured to reduce workload movement around the platform, reducing workload disruption.
 
-### How do the new VM types align with the previous VM SLA types?
-
-Before the change to the new VM types in G-Cloud 8, VMs and VDCs were set by their SLA level such as Test and Dev and Production.
-
-To help, the transition to VM types is explained below:
-
-- DEV & TEST BASIC = ESSENTIAL VM Type
-
-- Production BASIC = POWER VM Type
-
-- Production STANDARD = POWER VM Type
-
-- ENHANCED - This service level has been retired from sale as of 1 January 2019
-
-The new pricing structure introduced in G-Cloud 8 enables customers to customise their VMs and any options without being tied to a specific package. Thus, options such as backups and Journaling Protection can be added regardless of the VM type.
-
-### Can a VM communicate to another VM at of a different type?
+### Can a VM communicate to another VM of a different type?
 
 Yes. VMs can communicate with each other. In some cases, customers may need to use the built-in self-service IPsec VPN functionality to create a virtual private network within our Assured cloud platform.
 
@@ -96,7 +80,7 @@ UKCloud offers a variety of 'T-shirt sizes' to meet customers' needs. The smalle
 Check the [*UKCloud for VMware Service Definition*](vmw-sd.md) for more details on the currently available sizes.
 
 > [!NOTE]
-> UKCloud for VMware does not currently support custom-sized VMs outside the 'T-shirt sizes', however if you require more flexibillity with regards to VM sizes, we advise the use of our other multi-cloud technologies such as OpenStack, Oracle or Azure. Alternatively, you may consider the use of Dedicated Compute v2 to build custom-sized VMs.
+> UKCloud for VMware does not currently support custom-sized VMs outside the 'T-shirt sizes', however if you require more flexibillity with regards to VM sizes, we advise the use of our other multi-cloud technologies such as OpenStack, Oracle or Azure. Alternatively, you may consider the use of [*Dedicated Compute v2*](../dedicated-compute/dc-sd.md) to build custom-sized VMs.
 
 ### Can I resize a VM?
 
@@ -124,11 +108,13 @@ Alternatively, we offer the Mass Transfer Facility option enabling customers to 
 
 ### Does UKCloud offer encryption on the VM?
 
-Not by default but, if it's required, you can implement it using technology of your choice inside the VM's operating system.
+Not by default however, UKCloud can supply licensing for [*HyTrust DataControl*](../third-party/third-sd-hytrust.md). This solution offers powerful data-at-rest encryption with integrated key management to secure VMs and their data throughout their lifecycle - from deployment to decommission.
+
+Alternatively, you can implement encryption using technology of your choice inside the VM's operating system.
 
 ### Is UKCloud's encryption service available for UKCloud for VMware?
 
-Not currently, but we are considering this as an option. Provide feedback via the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
+Not currently as a service (see above). We are considering this as an option, please provide feedback via the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
 
 ### Is it possible to non-fast-provision vApps, and to convert current vApps into non-fast provisioned ones?
 
@@ -136,7 +122,7 @@ Fast provisioning is enabled only by customer request - by default, all vApps ar
 
 ### What is Dedicated Compute?
 
-Dedicated Compute comprises of physical blades assigned to a customer for their sole use. They're managed using the standard tools and services in the UKCloud platform.
+Dedicated Compute comprises of physical hosts assigned to a customer for their sole use. They're managed using the standard tools and services in the UKCloud platform.
 
 Dedicated Compute allows customers to:
 
@@ -144,11 +130,14 @@ Dedicated Compute allows customers to:
 
 - Build bespoke sized VMs on the UKCloud platform
 
-Dedicated Compute uses the same storage infrastructure as the shared compute platform
+Dedicated Compute uses the same storage infrastructure as the shared compute platform.
 
-There's a longer deployment lead time for Dedicated Compute, as well as a longer contractual commitment than our shared cloud platform (30 days rather than one hour).
+There's a longer deployment lead time for Dedicated Compute, as well as a longer contractual commitment than our shared cloud platform (one month rather than one hour).
 
 For more details, please see the [*Dedicated Compute v2 Service Definition*](../dedicated-compute/dc-sd.md).
+
+> [!NOTE]
+> Dedicated Compute is available only in UKCloud regions 5 and 6.
 
 ### Can I utilise multiple storage types with my VM?
 
@@ -198,9 +187,11 @@ UKCloud controls and manages a perimeter firewall on the edge of our Assured clo
 
 You can also use your preferred firewall and security appliances, as long as they're compatible with the VMware virtual infrastructure used to power the UKCloud Assured cloud platform.
 
+UKCloud also offers the additional benefits of a Distributed Firewall (DFW). An advanced security feature, DFW enables you to create security groups based on VM names, IP address and groups, which in turn enable the creation of firewall rules that are pinned to the VM. This makes firewall rules portable and simplifies the configuration and application. DFW is part of UKCloud for VMware's Advanced Management bundle.
+
 ### How do I create and manage firewall rules?
 
-Your UKCloud-provided dedicated virtual firewall is managed exclusively by you. You can set and manage firewall rules via the UKCloud Portal and API.
+Your UKCloud-provided dedicated virtual firewall is managed exclusively by you. You can set and manage firewall rules via the vCloud Director tenant portal and API.
 
 On-boarding guides and associated video tutorials are available to help
 customers configure and manage their firewalls.
@@ -251,7 +242,7 @@ Yes. Load balancing can be configured within the service and is included within 
 
 Yes, you can deploy your own load-balancing virtual appliance (for example, F5, Stingray, Zeus) if support for other algorithms is required.
 
-In addition, UKCloud offer Global Load Balancing from Neustar which can be customised for your own specific requirements. An FAQ and Service Scope are available in the Knowledge Centre.
+In addition, UKCloud offers UltraDNS - an authoritative DNS and Global Load Balancing service from Neustar, which can be customised for your own specific requirements. An [*FAQ*](../connectivity/conn-faq-glb.md) and [*Service Scope*](../connectivity/conn-sco-glb.md) are available in the Knowledge Centre.
 
 ## Storage
 
@@ -440,6 +431,8 @@ As far as possible, emergency maintenance of UKCloud's infrastructure takes plac
 
 Yes, you can have Portal notifications sent to you at the email address associated with your Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is available in both the Assured and Elevated Portals.
 
+You can also sign up to service status notifications from the [UKCloud Service Status page](https://status.ukcloud.com/). For more information, see [*How to view the UKCloud Service Status page*](../other/other-how-view-status-info.md)
+
 ## Onboarding
 
 ### How can I get started with the service?
@@ -454,7 +447,7 @@ At the time of order, you can specify which of our two UK data centres you'd lik
 
 Yes, we offer a 30-day free trial so that you can test and evaluate our service without commitment. Your trial provides you with a live environment on the UKCloud platform to test our services and verify whether they are suited to your needs.
 
-### How do I request a trial? 
+### How do I request a trial?
 
 You can request a trial via the UKCloud website: <http://www.ukcloud.com/free-trial-sign-up> and accept the trial terms and conditions. Your environment will then be set up and you will be given trial credits to the equivalent of £500.
 
@@ -480,11 +473,11 @@ Synchronous Protection is no longer available as protection option for UKCloud f
 
 ### What are snapshots?
 
-A snapshot is NOT a copy of the VMDK. Creating a snapshot locks out the base VMDK file and any changes to the data are written to the snapshot delta VMDK. If you wish to "roll back" to the point in time that the snapshot was created and discard any changes since, you can "revert" the snapshot, which essentially deletes it and discards any changes. If you are happy with the changes made since the snapshot was created, you can "delete" the snapshot, which essentially consolidated all changes back into the base VMDK. Please see advice on best practice regarding snapshots in this [article](vmw-ref-vmdk-limits.md). 
+A snapshot is NOT a copy of the VMDK. Creating a snapshot locks out the base VMDK file and any changes to the data are written to the snapshot delta VMDK. If you wish to "roll back" to the point in time that the snapshot was created and discard any changes since, you can "revert" the snapshot, which essentially deletes it and discards any changes. If you are happy with the changes made since the snapshot was created, you can "delete" the snapshot, which essentially consolidated all changes back into the base VMDK. Please see advice on best practice regarding snapshots in this [article](vmw-ref-vmdk-limits.md).
 
-Snapshots can be created using the vCloud Director portal and are stored in the same zone as the source VM. This is not to be confused with the UKCloud snapshot protection service, which uses a temporary snapshot in order to backup the VM to an external system in another UKCloud site. 
+Snapshots can be created using the vCloud Director portal and are stored in the same zone as the source VM. This is not to be confused with the UKCloud snapshot protection service, which uses a temporary snapshot in order to backup the VM to an external system in another UKCloud site.
 
-For further reference, this [article](vmw-ref-vm-data-recovery.md) explains the different recovery options available to you through vCloud Director. In order to identify old snapshots, UKCloud have created this [article](vmw-ref-vcd-healthcheck.md) which contains scripts to run a health check of your VMs.
+For further reference, this [article](vmw-ref-vm-data-recovery.md) explains the different recovery options available to you through vCloud Director.
 
 ### Can I restrict automated VM snapshot backup to specific files or directories?
 
@@ -544,7 +537,7 @@ In some rare failure scenarios (such as DDoS or Split Brain) the availability of
 
 The minimum unit of time for use is one hour. Part hours will be rounded up.
 
-Dedicated Compute has a minimum commit of 30 days.
+Dedicated Compute v2 has a minimum commit of on month.
 
 ### What are the charges to transfer data between VMs within the same data centre?
 
