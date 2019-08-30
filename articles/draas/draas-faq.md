@@ -59,9 +59,9 @@ All UKCloud connectivity options are available including internet, PSN, HSCN, Ja
 
 If you currently have a PSN connection in your primary site, then you would be able to replicate over PSN into the UKCloud Elevated environment. However, if you do not have a PSN connection at your primary site but would like to replicate into the Elevated environment, you can use an encrypted private line to do so. Contact your Cloud Architect for more details on this.
 
-### How do I invoke a recovery if my Zerto console becomes unavailable?
+### How do I invoke a recovery if my local Zerto console becomes unavailable?
 
-Once the initial configuration has been done using the Zerto Portal on the customer infrastructure, all additional configurations and management can be done using the Zerto Portal within the UKCloud Portal, which includes invoking failover and any testing.
+Once the initial configuration has been done using the Zerto Portal on the customer infrastructure, all additional configurations and management, including invoking failover and any testing, can be done in the UKCloud target environment, accessing the Zerto Portal via the UKCloud Portal.
 
 ### Is there a way to include appliance storage?
 
