@@ -29,7 +29,7 @@ UKCloud provides this service across two security domains, Assured OFFICIAL and 
 
 Yes. We offer three VM Types: ESSENTIAL, POWER and PRIORITY.
 
-VM characteristics are inherited from the virtual data center (VDC) the VM is deployed in. It is not currently possible to have a VDC that has mixed VM types.
+VM characteristics are inherited from the virtual data centre (VDC) the VM is deployed in. It is not currently possible to have a VDC that has mixed VM types.
 
 However, customers can use multiple VDCs to deliver their solution.
 
@@ -283,7 +283,7 @@ Independent disks are a technology provided natively by VMware vCloud Director, 
 
 Independent disks are stand-alone virtual disks that you create in organization VDCs. Administrators and users who have adequate rights can create, remove, and update independent disks, and connect them to virtual machines.
 
-When you create an independent disk, it is associated with an organization VDC but not with a VM. After the disk has been created in a VDC, the disk owner or an administrator can attach it to any VM deployed in that VDC. The disk owner can also modify disk properties, detach it from a VM, and remove it from the VDC. The system administrator and organization administrator of the organization that contains the VDC have the same rights to use and modify the disk as the disk owner.
+When you create an independent disk, it is associated with an organisation VDC but not with a VM. After the disk has been created in a VDC, the disk owner or an administrator can attach it to any VM deployed in that VDC. The disk owner can also modify disk properties, detach it from a VM, and remove it from the VDC. The system administrator and organisation administrator of the organisation that contains the VDC have the same rights to use and modify the disk as the disk owner.
 
 Only one VM can be connected to an independent disk at a time.
 
@@ -337,8 +337,7 @@ For support, you'll need to log a request with UKCloud, who will log the ticket 
 
 ### Do you have a Key Management System (KMS) for activating Windows?
 
-Yes, a step-by-step guide on configuring and using this service is included in [*How to license Windows VMs using the UKCloud Key Management Server*](vmw-how-setup-kms.md). There are additional supporting documents
-regarding the registration on VMs targeting the UKCloud KMS.
+Yes, a step-by-step guide on configuring and using this service is included in [*How to license Windows VMs using the UKCloud Key Management Server*](vmw-how-setup-kms.md). 
 
 ### How do I control a VM?
 
