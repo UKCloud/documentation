@@ -536,7 +536,7 @@ In some rare failure scenarios (such as DDoS or Split Brain) the availability of
 
 The minimum unit of time for use is one hour. Part hours will be rounded up.
 
-Dedicated Compute v2 has a minimum commit of on month.
+Dedicated Compute v2 has a minimum commit of one month.
 
 ### What are the charges to transfer data between VMs within the same data centre?
 
