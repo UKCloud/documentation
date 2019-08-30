@@ -32,13 +32,13 @@ This allows solutions hosted on the Elevated OFFICIAL security domain that are c
 
 Yes. UKCloud cross-domain services are available only to customers purchasing other UKCloud services, such as IaaS (compute and storage) or PaaS (UKCloud for OpenShift).
 
-### Is there a free trial available for either service option?
+### Is there a free trial available for CDSZ?
 
 The complex assurance requirements mean that trials aren't available.
 
 ### What is the process for applying for a service in the CDSZ?
 
-You can find the information you need in the UKCloud Knowledge Centre, including a detailed description of the assurance process, [here](cdsz-ref-application-process.md).
+You can find the information you need in the UKCloud Knowledge Centre, including a detailed description of the assurance process, in [*UKCloud Cross Domain Security Zone application process*](cdsz-ref-application-process.md).
 
 ### How do I enable access from the internet to my solution hosted on the Elevated OFFICIAL security domain?
 
@@ -74,7 +74,7 @@ We provide an assurance wrap by ensuring that customers use appropriate risk man
 
 No.
 
-### What is the assurance wrap? 
+### What is the assurance wrap?
 
 Because a Walled Garden solution is bespoke, we offer an assurance wrap to guide customers towards an effective design that will help to maximise their chances of meeting compliance requirements.
 
