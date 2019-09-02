@@ -44,7 +44,7 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
         $webclient.Headers.Add("x-vcloud-authorization",$EdgeView.Client.SessionKey)
 
-        $webclient.Headers.Add("accept",$EdgeView.Type + ";version=5.5")
+        $webclient.Headers.Add("accept",$EdgeView.Type + ";version=30.0")
 
         [xml]$EGWConfXML = $webclient.DownloadString($EdgeView.href)
 
