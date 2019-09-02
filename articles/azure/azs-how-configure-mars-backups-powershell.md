@@ -68,114 +68,116 @@ Enter details below to provide values for the variables in the scripts in this a
 
 2. From an elevated (administrator) PowerShell console, run either the custom script extension or script to download the required module and execute the backup process:
 
-    # [PowerShell script](#tab/tabid-1)
+## [Custom Script Extension](#tab/tabid-1)
 
-    <pre><code class="language-PowerShell"># Declare variables
-    $ModulePath = "C:\Users\$env:USERNAME\Documents\WindowsPowerShell\Modules\"
-    $ModuleName = "AzureBackupConfig.ps1"
+Select the operating system:
 
-    $ClientID = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
-    $ClientSecret = "<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
-    $TenantID = "<output form="tenantid" name="result" style="display: inline;">31537af4-6d77-4bb9-a681-d2394888ea26</output>"
-    $VaultName = "<output form="vaultname" name="result" style="display: inline;">AzureStackVault</output>"
-    $EncryptionKey = "<output form="encryptionkey" name="result" style="display: inline;">ExampleEncryptionKey</output>"
-    $BackupDays = "<output form="backupdays" name="result" style="display: inline;">Wednesday", "Sunday</output>"
-    $BackupTimes = "<output form="backuptimes" name="result" style="display: inline;">16:00", "20:00</output>"
-    $FoldersToBackup = "<output form="folderstobackup" name="result" style="display: inline;">C:\Users", "C:\Important</output>"
+## [PowerShell script](#tab/tabid-2)
 
-    # Download the AzureBackupConfig script
-    Write-Output -InputObject "Downloading AzureBackupConfig.ps1 script"
-    $OutPath = Join-Path -Path $ModulePath -ChildPath $ModuleName
-    $WebClient = New-Object System.Net.WebClient
-    $WebClient.DownloadFile("https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1", $OutPath)
+<pre><code class="language-PowerShell"># Declare variables
+$ModulePath = "C:\Users\$env:USERNAME\Documents\WindowsPowerShell\Modules\"
+$ModuleName = "AzureBackupConfig.ps1"
 
-    # Run the AzureBackupConfig script
-    Write-Output -InputObject "Running AzureBackupConfig with provided parameters"
-    . "$ModulePath\$ModuleName" -ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -BackupDays $BackupDays -BackupTimes $BackupTimes -FoldersToBackup $FoldersToBackup -BackupNow
-    </code></pre>
+$ClientID = "<output form="clientid" name="result" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
+$ClientSecret = "<output form="clientsecret" name="result" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
+$TenantID = "<output form="tenantid" name="result" style="display: inline;">31537af4-6d77-4bb9-a681-d2394888ea26</output>"
+$VaultName = "<output form="vaultname" name="result" style="display: inline;">AzureStackVault</output>"
+$EncryptionKey = "<output form="encryptionkey" name="result" style="display: inline;">ExampleEncryptionKey</output>"
+$BackupDays = "<output form="backupdays" name="result" style="display: inline;">Wednesday", "Sunday</output>"
+$BackupTimes = "<output form="backuptimes" name="result" style="display: inline;">16:00", "20:00</output>"
+$FoldersToBackup = "<output form="folderstobackup" name="result" style="display: inline;">C:\Users", "C:\Important</output>"
 
-    # [Custom Script Extension](#tab/tabid-2)
+# Download the AzureBackupConfig script
+Write-Output -InputObject "Downloading AzureBackupConfig.ps1 script"
+$OutPath = Join-Path -Path $ModulePath -ChildPath $ModuleName
+$WebClient = New-Object System.Net.WebClient
+$WebClient.DownloadFile("https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1", $OutPath)
 
-    ***
+# Run the AzureBackupConfig script
+Write-Output -InputObject "Running AzureBackupConfig with provided parameters"
+. "$ModulePath\$ModuleName" -ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -BackupDays $BackupDays -BackupTimes $BackupTimes -FoldersToBackup $FoldersToBackup -BackupNow
+</code></pre>
 
-    # [Linux](#tab/tabid-a/tabid-2)
+***
 
-    <pre><code class="language-PowerShell"># Initialise environment and variables
+### [Linux](#tab/tabid-a/tabid-1)
 
-    # Declare endpoint
-    $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+<pre><code class="language-PowerShell"># Initialise environment and variables
 
-    # Add environment
-    Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-    # Login
-    Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+# Add environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
-    # Get location of Azure Stack
-    $Location = (Get-AzureRmLocation).Location
+# Login
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-    # Input variables
-    $ClientID = "<output form="clientid" name="result2" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
-    $ClientSecret = "<output form="clientsecret" name="result2" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
-    $TenantID = "<output form="tenantid" name="result2" style="display: inline;">31537af4-6d77-4bb9-a681-d2394888ea26</output>"
-    $VaultName = "<output form="vaultname" name="result2" style="display: inline;">AzureStackVault</output>"
-    $EncryptionKey = "<output form="encryptionkey" name="result2" style="display: inline;">ExampleEncryptionKey</output>"
-    $BackupDays = "<output form="backupdays" name="result2" style="display: inline;">Wednesday", "Sunday</output>"
-    $BackupTimes = "<output form="backuptimes" name="result2" style="display: inline;">16:00", "20:00</output>"
-    $FoldersToBackup = "<output form="folderstobackup" name="result2" style="display: inline;">/usr/bin", "/Important</output>"
-    $RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
-    $VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
-    $CustomScriptFileName = "<output form="customscriptfilename" name="result" style="display: inline;">AzureBackupConfig.ps1</output>"
-    $FileUri = "<output form="fileuri" name="result" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1</output>"
-    $ScriptArguments = "<output form="scriptargs" name="result" style="display: inline;">-ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -BackupDays $BackupDays -BackupTimes $BackupTimes -FoldersToBackup $FoldersToBackup -BackupNow</output>"
-    $CommandToExecute = "pwsh $CustomScriptFileName $ScriptArguments"
+# Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
 
-    # Add custom script extension to existing Linux VM
-    Write-Output -InputObject "Adding custom script extension to existing virtual machine"
-    $Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName Microsoft.Azure.Extensions -Type "CustomScript"
-    $ExtensionVersion = $Extensions[0].Version[0..2] -join ""
-    $ScriptSettings = @{"fileUris" = @($FileUri); "commandToExecute" = $CommandToExecute};
-    Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings
-    </code></pre>
+# Input variables
+$ClientID = "<output form="clientid" name="result2" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
+$ClientSecret = "<output form="clientsecret" name="result2" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
+$TenantID = "<output form="tenantid" name="result2" style="display: inline;">31537af4-6d77-4bb9-a681-d2394888ea26</output>"
+$VaultName = "<output form="vaultname" name="result2" style="display: inline;">AzureStackVault</output>"
+$EncryptionKey = "<output form="encryptionkey" name="result2" style="display: inline;">ExampleEncryptionKey</output>"
+$BackupDays = "<output form="backupdays" name="result2" style="display: inline;">Wednesday", "Sunday</output>"
+$BackupTimes = "<output form="backuptimes" name="result2" style="display: inline;">16:00", "20:00</output>"
+$FoldersToBackup = "<output form="folderstobackup" name="result2" style="display: inline;">/usr/bin", "/Important</output>"
+$RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result" style="display: inline;">AzureBackupConfig.ps1</output>"
+$FileUri = "<output form="fileuri" name="result" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1</output>"
+$ScriptArguments = "<output form="scriptargs" name="result" style="display: inline;">-ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -BackupDays $BackupDays -BackupTimes $BackupTimes -FoldersToBackup $FoldersToBackup -BackupNow</output>"
+$CommandToExecute = "pwsh $CustomScriptFileName $ScriptArguments"
 
-    # [Windows](#tab/tabid-b/tabid-2)
+# Add custom script extension to existing Linux VM
+Write-Output -InputObject "Adding custom script extension to existing virtual machine"
+$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName Microsoft.Azure.Extensions -Type "CustomScript"
+$ExtensionVersion = $Extensions[0].Version[0..2] -join ""
+$ScriptSettings = @{"fileUris" = @($FileUri); "commandToExecute" = $CommandToExecute};
+Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings
+</code></pre>
 
-    <pre><code class="language-PowerShell"># Initialise environment and variables
+### [Windows](#tab/tabid-b/tabid-1)
 
-    # Declare endpoint
-    $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+<pre><code class="language-PowerShell"># Initialise environment and variables
 
-    # Add environment
-    Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-    # Login
-    Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+# Add environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
-    # Get location of Azure Stack
-    $Location = (Get-AzureRmLocation).Location
+# Login
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-    # Input variables
-    $ClientID = "<output form="clientid" name="result3" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
-    $ClientSecret = "<output form="clientsecret" name="result3" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
-    $TenantID = "<output form="tenantid" name="result3" style="display: inline;">31537af4-6d77-4bb9-a681-d2394888ea26</output>"
-    $VaultName = "<output form="vaultname" name="result3" style="display: inline;">AzureStackVault</output>"
-    $EncryptionKey = "<output form="encryptionkey" name="result3" style="display: inline;">ExampleEncryptionKey</output>"
-    $BackupDays = "<output form="backupdays" name="result3" style="display: inline;">Wednesday", "Sunday</output>"
-    $BackupTimes = "<output form="backuptimes" name="result3" style="display: inline;">16:00", "20:00</output>"
-    $FoldersToBackup = "<output form="folderstobackup" name="result3" style="display: inline;">C:\Users", "C:\Important</output>"
-    $RGName = "<output form="resourcegroup" name="result2" style="display: inline;">MyResourceGroup</output>"
-    $VMName = "<output form="vmname" name="result2" style="display: inline;">MyVM</output>"
-    $CustomScriptFileName = "<output form="customscriptfilename" name="result2" style="display: inline;">AzureBackupConfig.ps1</output>"
-    $FileUri = "<output form="fileuri" name="result2" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1</output>"
-    $ScriptArguments = "<output form="scriptargs" name="result2" style="display: inline;">-ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -BackupDays $BackupDays -BackupTimes $BackupTimes -FoldersToBackup $FoldersToBackup -BackupNow</output>"
-    $CommandToExecute = "$CustomScriptFileName $ScriptArguments"
+# Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
 
-    # Add custom script extension to existing Windows VM
-    Write-Output -InputObject "Adding custom script extension to VM"
-    Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
-    </code></pre>
+# Input variables
+$ClientID = "<output form="clientid" name="result3" style="display: inline;">00000000-0000-0000-0000-000000000000</output>"
+$ClientSecret = "<output form="clientsecret" name="result3" style="display: inline;">ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jk]=</output>"
+$TenantID = "<output form="tenantid" name="result3" style="display: inline;">31537af4-6d77-4bb9-a681-d2394888ea26</output>"
+$VaultName = "<output form="vaultname" name="result3" style="display: inline;">AzureStackVault</output>"
+$EncryptionKey = "<output form="encryptionkey" name="result3" style="display: inline;">ExampleEncryptionKey</output>"
+$BackupDays = "<output form="backupdays" name="result3" style="display: inline;">Wednesday", "Sunday</output>"
+$BackupTimes = "<output form="backuptimes" name="result3" style="display: inline;">16:00", "20:00</output>"
+$FoldersToBackup = "<output form="folderstobackup" name="result3" style="display: inline;">C:\Users", "C:\Important</output>"
+$RGName = "<output form="resourcegroup" name="result2" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="vmname" name="result2" style="display: inline;">MyVM</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result2" style="display: inline;">AzureBackupConfig.ps1</output>"
+$FileUri = "<output form="fileuri" name="result2" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/AzureBackupConfig.ps1</output>"
+$ScriptArguments = "<output form="scriptargs" name="result2" style="display: inline;">-ClientID $ClientID -ClientSecret $ClientSecret -TenantID $TenantID -VaultName $VaultName -EncryptionKey $EncryptionKey -BackupDays $BackupDays -BackupTimes $BackupTimes -FoldersToBackup $FoldersToBackup -BackupNow</output>"
+$CommandToExecute = "$CustomScriptFileName $ScriptArguments"
 
-    ***
+# Add custom script extension to existing Windows VM
+Write-Output -InputObject "Adding custom script extension to VM"
+Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
+</code></pre>
+
+***
 
 ## Feedback
 
