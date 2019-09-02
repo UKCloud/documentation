@@ -197,19 +197,19 @@ For example, the following API call returns a list of all virtual machines in th
 
 For general information about the Azure API, see the *Azure REST API Reference* at:
 
-<https://docs.microsoft.com/en-gb/rest/api/?view=Azure>
+[Azure API documentation page](https://docs.microsoft.com/en-gb/rest/api/?view=Azure)
 
 In particular, you may find the following documents useful:
 
-- <https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-rest-api-use>
+- [Azure Stack REST API](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-rest-api-use)
 
-- <https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-protocols-oauth-code>
+- [AD protocols oauth](https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-protocols-oauth-code)
 
-- <https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-authentication-scenarios>
+- [AD auth scenarios](https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-authentication-scenarios)
 
-- <https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-v2-protocols-oauth-code>
+- [AD V2 protocol oauth](https://docs.microsoft.com/en-gb/azure/active-directory/develop/active-directory-v2-protocols-oauth-code)
 
-- <https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-provider-resource-api>
+- [Azure Stack resource provider API](https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-provider-resource-api)
 
 This is guidance for Azure Stack users. Currently, there is no official API reference guide for Azure Stack users; however, there is an admin API guide that you can find [here](https://docs.microsoft.com/en-us/rest/api/azure-stack/). We'll update this guide when an API guide becomes available.
 
