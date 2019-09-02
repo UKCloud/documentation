@@ -68,9 +68,10 @@ Enter details below to provide values for the variables in the scripts in this a
 
 2. From an elevated (administrator) PowerShell console, run either the custom script extension or script to download the required module and execute the backup process:
 
-## [Custom Script Extension](#tab/tabid-1)
+## [Custom script extension](#tab/tabid-1)
 
-Select the operating system:
+> [!TIP]
+> Select the operating system:
 
 ## [PowerShell script](#tab/tabid-2)
 
