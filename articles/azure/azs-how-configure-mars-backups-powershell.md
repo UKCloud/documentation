@@ -16,9 +16,9 @@ toc_fullpath: Users/How To/azs-how-configure-mars-backups-powershell.md
 toc_mdlink: azs-how-configure-mars-backups-powershell.md
 ---
 
-# How to back up files and folders on Azure Stack VMs using PowerShell
+# How to automatically back up files and folders on Azure Stack VMs using PowerShell
 
-# Overview
+## Overview
 
 This article explains how to setup the Microsoft Azure Recovery Services (MARS) agent to backup files and folders from Azure Stack VMs to Recovery Services vaults.
 
