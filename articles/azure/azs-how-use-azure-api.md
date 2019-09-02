@@ -173,7 +173,7 @@ where:
 
 The syntax of an Azure Stack request URI is:
 
-`https://management.frn00006.azure.ukcloud.com/<subscription-id>/resourcegroups/<resource-group>/providers/<provider>/<resource-path>?<filter-expression>&api-version=<api-version>`
+`https://management.frn00006.azure.ukcloud.com/<subscription-id>/resourcegroups/<resource-group>/providers/<provider>/<resource-path>&api-version=<api-version>?<filter-expression>`
 
 where:
 
