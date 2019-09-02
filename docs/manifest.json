@@ -1935,7 +1935,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-how-install-geodrive2-client.html",
-          "hash": "Wlds02gCHYTqp8CTdJD97Q=="
+          "hash": "YI0hZ65TqGYT+njxGTeQ+A=="
         }
       },
       "is_incremental": false,
@@ -8563,7 +8563,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-sla-definition.html",
-          "hash": "3QXZItWR+xI8AFDwp70HAQ=="
+          "hash": "WiII5pXZhXeYgBKMzEOH5g=="
         }
       },
       "is_incremental": false,
@@ -10063,10 +10063,76 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/third-party/images/third-cyberscore-btn-new-vm.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/third-party/images/third-cyberscore-btn-new-vm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/third-party/images/third-cyberscore-cyber-essentials.png",
       "output": {
         "resource": {
           "relative_path": "articles/third-party/images/third-cyberscore-cyber-essentials.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/third-party/images/third-cyberscore-mnu-setup.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/third-party/images/third-cyberscore-mnu-setup.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/third-party/images/third-cyberscore-registration-complete.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/third-party/images/third-cyberscore-registration-complete.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/third-party/images/third-cyberscore-vm-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/third-party/images/third-cyberscore-vm-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/third-party/images/third-cyberscore-vm-network.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/third-party/images/third-cyberscore-vm-network.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/third-party/images/third-cyberscore-vm.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/third-party/images/third-cyberscore-vm.png"
         }
       },
       "is_incremental": false,
@@ -10089,6 +10155,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/third-party/images/ukc-services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/third-party/images/vmw-vcd-tab-vms.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/third-party/images/vmw-vcd-tab-vms.png"
         }
       },
       "is_incremental": false,
@@ -10125,6 +10202,18 @@
         ".html": {
           "relative_path": "articles/third-party/third-faq-moogsoft.html",
           "hash": "T/p02btS8T74/9eSkQFTKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/third-party/third-how-deploy-cyberscore-vm.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/third-party/third-how-deploy-cyberscore-vm.html",
+          "hash": "Yaf+9Ckn+r4i5rbtGveV+A=="
         }
       },
       "is_incremental": false,
@@ -10268,7 +10357,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/third-party/toc.html",
-          "hash": "bCdS/IlqIPQkX5tNs5RmEA=="
+          "hash": "g/SkV0bIhdiDW+NbGHI4AA=="
         }
       },
       "is_incremental": false,
@@ -17352,7 +17441,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-ps-export-edge-data.html",
-          "hash": "4qqLInuvWYvOlGGFXV0vog=="
+          "hash": "4ESlGpBiJftbyzaWdEo6pw=="
         }
       },
       "is_incremental": false,
@@ -18148,13 +18237,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -18162,10 +18244,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 406,
+          "total_file_count": 407,
           "skipped_file_count": 0
         }
       }

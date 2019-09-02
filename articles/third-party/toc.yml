@@ -34,6 +34,8 @@
   items:
   - name: CyberScore scanner deployment environment requirements
     href: third-ref-cyberscore-prereqs.md
+  - name: Deploy a CyberScore scanner VM - vCloud Director
+    href: third-how-deploy-cyberscore-vm.md
   - name: XQ Cyber CyberScore from UKCloud FAQs
     href: third-faq-cyberscore.md
   - name: XQ Cyber CyberScore from UKCloud Service Definition
