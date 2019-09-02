@@ -189,9 +189,9 @@ where:
 
 - `api-version` is the version of the Azure Stack API being called, for example `api-version=2016-05-01`
 
-For example, the following API call returns information about region health:
+For example, the following API call returns a list of all virtual machines in the specified Azure Stack subscription:
 
-`https://adminmanagement.frn00006.azure.ukcloud.com/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/resourcegroups/system.local/providers/microsoft.infrastructureinsights.admin/regionhealths/local/Alerts?$filter=(Properties/State eq 'Active') and (Properties/Severity eq 'Critical')&$orderby=Properties/CreatedTimestamp desc&api-version=2016-05-01"`
+`https://management.frn00006.azure.ukcloud.com/subscriptions/800c4168-3eb1-405b-a4ca-919fe7ee42e9/providers/providers/Microsoft.Compute/virtualMachines?api-version=2016-05-01"`
 
 ## Next steps
 
