@@ -1,6 +1,6 @@
 ---
 title: How to deploy a CyberScore scanner virtual machine in vCloud Director | UKCloud Ltd
-description: Provides information about deploying a virtual machine in vCloud Director to use for CyberScore
+description: Provides information about deploying a virtual machine in vCloud Director for performing CyberScore scans in your UKCloud for VMware environment
 services: third-party
 author: Sue Highmoor
 reviewer:
@@ -10,16 +10,16 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Deploy a CyberScore scanner VM
+toc_title: Deploy a CyberScore scanner VM - vCloud Director
 toc_fullpath: XQ Cyber CyberScore/third-how-deploy-cyberscore-vm.md
 toc_mdlink: third-how-deploy-cyberscore-vm.md
 ---
 
-# How to deploy a CyberScore virtual machine
+# How to deploy a CyberScore virtual machine in vCloud Director
 
 ## Overview
 
-To run CyberScore against your environment, you need to deploy a virtual machine (VM) and set it up as a CyberScore scanner.
+To run CyberScore against your UKCloud for VMware environment, you need to deploy a virtual machine (VM) and set it up as a CyberScore scanner.
 
 ## Prerequisites
 
