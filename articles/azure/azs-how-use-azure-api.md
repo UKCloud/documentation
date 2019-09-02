@@ -70,7 +70,9 @@ To obtain an access token:
     `https://management.as2ukcloud.onmicrosoft.com/90ada28c-5aed-4248-90c7-0538504217f1`.
 
        >[!NOTE]
-       > You can obtain the resource endpoint by querying the Azure Stack management metadata endpoint. The resource endpoint is returned in the `audiences` section of the response. <br> For example, to find the endpoint for the `operators` resource, send a request to `https://management.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2016-05-01`.
+       > You can obtain the resource endpoint by querying the Azure Stack management metadata endpoint. The resource endpoint is returned in the `audiences` section of the response.
+       >
+       > For example, to find the endpoint for the `users` resource, send a request to `https://management.frn00006.azure.ukcloud.com/metadata/endpoints?api-version=2016-05-01`.
 
     - **username** - The Azure Stack AAD account. For example: `azurestackadmin@ukcloud.onmicrosoft.com`.
 
