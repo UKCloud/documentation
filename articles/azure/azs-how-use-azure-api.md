@@ -164,7 +164,7 @@ where:
 
 - **URI-host** is the domain name or IP address of the server where the REST service endpoint is hosted. For example: `management.frn00006.azure.ukcloud.com`.
 
-- **resource-path** is the resource or resource collection, which may include multiple segments used by the service in determining the selection of those resources. For example: `beta/applications/00003f25-7e1f-4278-9488-efc7bac53c4a/owners` is the resource path to a specific application's owners within the applications collection.
+- **resource-path** is the resource or resource collection, which may include multiple segments used by the service in determining the selection of those resources. For example: `/subscriptions` is the resource path to obtain information about Azure Stack subscriptions.
 
 - **query-string** provides additional parameters, such as the API version or resource selection criteria.
 
