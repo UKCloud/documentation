@@ -76,7 +76,7 @@ There are no termination costs associated with cancelling UKCloud services. Howe
 
 - We reserve the right to pass through third-party price rises that are not within our direct control.
 
-- If you use service options with minimum terms, such as Global Load Balancing or SiteProtect Advanced DDoS Mitigation, you will continue to be charged for these until the end of those terms.
+- If you use service options with minimum terms, such as UltraDNS or SiteProtect Advanced DDoS Mitigation, you will continue to be charged for these until the end of those terms.
 
 - We reserve the right to charge for any content that you leave in your environment or for retrieving and returning your content.
 
