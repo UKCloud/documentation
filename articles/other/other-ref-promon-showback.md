@@ -25,19 +25,41 @@ The document also includes examples of the security events that are displayed in
 
 You can find UKCloud's Protective Monitoring Portal showback information on the *My Security Events* page. To view this page, you must have **Read** monitoring permissions on the page.
 
-## What is supported for Portal showback?
+## Supported clouds, networks and security domains
 
-### Clouds and security domains
+### Clouds
 
-Multi-cloud for VMWare, Assured-OFFICIAL
+- UKCloud for VMWare
+
+- UKCloud for OpenStack
+
+- UKCloud for OpenShift
+
+- UKCloud for Microsoft Azure
+
+- UKCloud for Oracle Software
 
 ### Networks
 
-Internet
+- Internet
+
+- PSN
+
+- HSCN
+
+- Janet
+
+- RLI
+
+### Security domains
+
+- Assured OFFICIAL
+
+- Elevated OFFICIAL SENSITIVE
 
 ### All other clouds and networks
 
-Note that all other clouds and networks are supported by UKCloud's standard Protective Monitoring service. UKCloud's security team will inform you of any security incidents for anything other than Multi-cloud for VMWare on the Assured security domain, using internet connectivity in the usual way (that is, via email or phone call).
+UKCloud's security team will inform you of any security incidents in the usual way (that is, via the Portal).
 
 ## Example security incidents
 
@@ -58,10 +80,6 @@ Note that all other clouds and networks are supported by UKCloud's standard Prot
 - Machines being used for personal use (if you're running a VPN server, UKCloud will capture internet browsing)
 
 - Any traffic that is encrypted will not be spotted by UKCloud unless it's contacting known malicious domains
-
-## What to do when a security incident appears
-
-If a security incident appears on the *My Security Events* page, then UKCloud will contact you via email or a phone call.
 
 ## Feedback
 
