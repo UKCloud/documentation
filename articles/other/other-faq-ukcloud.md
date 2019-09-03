@@ -71,7 +71,7 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 
 [General connectivity FAQs](../connectivity/conn-faq.md)
 
-[Application-tuned DDoS protection FAQs](../connectivity/conn-faq-app-ddos.md)
+[SiteProtect Advanced DDoS Mitigation FAQs](../connectivity/conn-faq-app-ddos.md)
 
 [Bandwidth monitoring FAQs](../connectivity/conn-faq-bandwidth-monitoring.md)
 

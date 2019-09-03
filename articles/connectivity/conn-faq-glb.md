@@ -25,7 +25,7 @@ It enables customers to direct Internet traffic between multiple end-points whic
 
 ## Who supplies the Global Load Balancing service?
 
-UKCloud have partnered with Neustar for the provision of this service along with the additional option of Application-tuned DDoS protection for a complete traffic protection solution.
+UKCloud has partnered with Neustar for the provision of this service along with the additional option of [*SiteProtect Advanced DDoS Mitigation*](conn-sco-app-ddos.md) for a complete traffic protection solution.
 
 ## Who are Neustar?
 
