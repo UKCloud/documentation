@@ -8,7 +8,7 @@
     <title>UKCloud Knowledge Centre article template | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud Knowledge Centre article template | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-knowledge-template.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -86,10 +95,14 @@
 
 <p>The first thing in your article after the metadata should be the main article title. Use the following to help you decide on the title for your article</p>
 <ul>
-<li>Titles (and all other headings) should be in sentence caps (that is, the first word should start with an uppercase letter and all other words should be all lowercase unless they are proper nouns)</li>
-<li>Use a single # for the article title (and don't forget the space after the #)</li>
-<li>How To Guide titles should start with How to and then a verb to describe the task described in the article, for example <em>How to create a virtual machine</em>.</li>
-<li>Reference Guides should start with a noun if possible</li>
+<li><p>Titles (and all other headings) should be in sentence caps (that is, the first word should start with an uppercase letter and all other words should be all lowercase unless they are proper nouns)</p>
+</li>
+<li><p>Use a single # for the article title (and don't forget the space after the #)</p>
+</li>
+<li><p>How To Guide titles should start with How to and then a verb to describe the task described in the article, for example <em>How to create a virtual machine</em>.</p>
+</li>
+<li><p>Reference Guides should start with a noun if possible</p>
+</li>
 </ul>
 <p>Generally, you should not include any text below the article title, but should go straight to the first (<em>Overview</em>) heading. However, if the article is very short and does not require any subheadings, you can include the content directly below the article title.</p>
 <h2 id="overview">Overview</h2>
@@ -102,68 +115,66 @@
 <p>In How To articles, you may just have a single additional section describing the task being described in the article -- you should use gerunds for the section headings (words ending in -ing). For example <em>Logging into the OpenStack Horizon dashboard</em>. If the article includes multiple tasks, put each task into its own section.</p>
 <p>Reference Guides can include as many sections as necessary to keep the content easy to read. But don't use too many levels of subsections as it can be difficult for users to keep track of where they are if the subsections go too deep.</p>
 <h3 id="bulleted-lists">Bulleted lists</h3>
-<ul>
-<li><p>Bulleted lists</p>
-</li>
-<li><p>Look</p>
-</li>
-<li><p>Like this</p>
-<ul>
-<li>with sub lists</li>
-<li>if required</li>
-</ul>
-</li>
-</ul>
+<p>Include an empty line in between each item in the list.</p>
+<pre><code class="lang-none">- Bulleted lists
+
+- Look
+
+- Like this
+
+  - with sub lists
+
+  - if required
+</code></pre>
 <h3 id="numbered-lists-for-how-to-guides">Numbered lists for How To Guides</h3>
-<ol>
-<li><p>Numbered lists</p>
-</li>
-<li><p>In a How To Guide</p>
-</li>
-<li><p>Look</p>
-</li>
-<li><p>Like this</p>
-<ul>
-<li>you can include</li>
-<li>bulleted lists</li>
-</ul>
-</li>
-</ol>
+<p>Include an empty line in between each item in the list.</p>
+<pre><code class="lang-none">1. Numbered lists
+
+2. In a How To Guide
+
+3. Look
+
+4. Like this
+
+    - you can include
+
+    - bulleted lists
+</code></pre>
 <h2 id="more-useful-markdown">More useful markdown</h2>
 <h3 id="images">Images</h3>
 <p>Markdown for images looks like:</p>
-<pre><code>![alt-text](images/image-filename.png)
+<pre><code class="lang-none">![alt-text](images/image-filename.png)
 </code></pre>
 <p>The <code>alt-text</code> is read out by screen readers and provides a brief description of the image to help visually impaired users determine what the image is illustrating. Image files should be located in an <code>images</code> directory underneath the main product directory.</p>
 <h2 id="links-to-web-pages">Links to web pages</h2>
 <p>To link to a web page, use the following markdown:</p>
-<pre><code>&lt;https://ukcloud.com/&gt;
+<pre><code class="lang-none">&lt;https://ukcloud.com/&gt;
 </code></pre>
 <p><a href="https://ukcloud.com/">https://ukcloud.com/</a></p>
 <p>To use descriptive text for the link, rather than just the URL, use the following markdown:</p>
-<pre><code>[UKCloud](https://ukcloud.com/)
+<pre><code class="lang-none">[UKCloud](https://ukcloud.com/)
 </code></pre>
 <p><a href="https://ukcloud.com/">UKCloud</a></p>
 <h2 id="links-to-other-knowledge-centre-articles">Links to other Knowledge Centre articles</h2>
 <p>Links to other articles for the same product look like:</p>
-<pre><code>[*topic-title*](topic-filename.md)
+<pre><code class="lang-none">[*topic-title*](topic-filename.md)
 </code></pre>
 <p>For example:</p>
-<pre><code>[*UKCloud Knowledge Centre guidelines*](other-ref-knowledge-guidelines.md)
+<pre><code class="lang-none">[*UKCloud Knowledge Centre guidelines*](other-ref-knowledge-guidelines.md)
 </code></pre>
 <p><a href="other-ref-knowledge-guidelines.html"><em>UKCloud Knowledge Centre guidelines</em></a></p>
 <p>Links to other articles for a different product look like:</p>
-<pre><code>[*topic-title*](../product/topic-filename.md)
+<pre><code class="lang-none">[*topic-title*](../product/topic-filename.md)
 </code></pre>
 <p>For example:</p>
-<pre><code>[*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
+<pre><code class="lang-none">[*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
 </code></pre>
 <p><a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a></p>
 <h3 id="tips-notes-and-warnings">Tips, notes and warnings</h3>
 <h4 id="tips">Tips</h4>
 <p>A tip provides helpful, but not necessarily important, information.</p>
 <p>Markdown:</p>
-<pre><code>&gt; [!TIP]
+<pre><code class="lang-none">&gt; [!TIP]
 &gt; This is a tip, which provides helpful, but not necessarily important, information.
 </code></pre>
 <p>Looks like:</p>
@@ -174,7 +185,7 @@
 <h4 id="notes">Notes</h4>
 <p>A note provides important information.</p>
 <p>Markdown:</p>
-<pre><code>&gt; [!NOTE]
+<pre><code class="lang-none">&gt; [!NOTE]
 &gt; This is a note, which provides important information.
 </code></pre>
 <p>Looks like:</p>
@@ -185,7 +196,7 @@
 <h4 id="important-notes">Important notes</h4>
 <p>Important notes provide important information that requires particular attention.</p>
 <p>Markdown:</p>
-<pre><code>&gt; [!IMPORTANT]
+<pre><code class="lang-none">&gt; [!IMPORTANT]
 &gt; This is an important note, which requires particular attention.
 </code></pre>
 <p>Looks like:</p>
@@ -196,7 +207,7 @@
 <h4 id="warnings">Warnings</h4>
 <p>Warnings provide important information about something which could have significant implications if ignored.</p>
 <p>Markdown:</p>
-<pre><code>&gt; [!WARNING]
+<pre><code class="lang-none">&gt; [!WARNING]
 &gt; This is a warning, which provides users with information about something which could have significant implications if ignored.
 </code></pre>
 <p>Looks like:</p>
@@ -206,7 +217,7 @@
 </div>
 <h2 id="feedback">Feedback</h2>
 <p>Each article should end with a feedback section that includes the following text:</p>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -216,13 +227,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-knowledge-template.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -241,11 +245,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

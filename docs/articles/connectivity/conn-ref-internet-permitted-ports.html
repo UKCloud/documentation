@@ -8,7 +8,7 @@
     <title>Internet - permitted standard ports in regions 1 and 2  | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Internet - permitted standard ports in regions 1 and 2  | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/connectivity/conn-ref-internet-permitted-ports.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -93,66 +102,101 @@
 </div>
 <p>The security of your estate is your responsibility and we highly recommend that you review your edge gateway configuration, regardless of the region in which it is located, to verify that the access controls in place are in accordance with your own required security policy. We also recommend that you do not disable your firewall, even in test environments.</p>
 <p>This whitelist policy applies to the Assured OFFICIAL security domain only, where connectivity is established using internet routable addresses and where access is to and from the internet or other customers on the UKCloud platform. Other whitelists are maintained for other connectivity types. The Elevated OFFICIAL security domain is completely locked down by default with no ports open by default.</p>
-<p>If you require access outside of the standard whitelist, you can request this via the My Calls section of the UKCloud Portal.</p>
+<p>If you require access outside of the standard whitelist, you can request this via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <p>The following diagram shows the status of standard internet ports. The permitted ports are also listed in the sections below.</p>
 <p><img src="images/internet_whitelist_ports_v1_3.png" alt="Internet whitelist ports (regions 1 and 2)"></p>
 <h2 id="inbound-access-from-the-internet-to-your-edge-gateway">Inbound access from the internet to your edge gateway</h2>
 <h3 id="tcp-ports">TCP ports</h3>
 <ul>
-<li>SSH - 22</li>
-<li>SMTP - 25</li>
-<li>DNS - 53</li>
-<li>HTTP - 80 &amp; 8080</li>
-<li>HTTPS - 443,444 &amp; 8443</li>
-<li>Secure SMTP - 465 &amp; 587</li>
-<li>FTPS (Data) - 989</li>
-<li>FTPS (Control) - 990</li>
-<li>IMAPS - 993</li>
-<li>POP3S - 995</li>
-<li>RDP - 3389</li>
+<li><p>SSH - 22</p>
+</li>
+<li><p>SMTP - 25</p>
+</li>
+<li><p>DNS - 53</p>
+</li>
+<li><p>HTTP - 80 &amp; 8080</p>
+</li>
+<li><p>HTTPS - 443,444 &amp; 8443</p>
+</li>
+<li><p>Secure SMTP - 465 &amp; 587</p>
+</li>
+<li><p>FTPS (Data) - 989</p>
+</li>
+<li><p>FTPS (Control) - 990</p>
+</li>
+<li><p>IMAPS - 993</p>
+</li>
+<li><p>POP3S - 995</p>
+</li>
+<li><p>RDP - 3389</p>
+</li>
 </ul>
 <h3 id="udp-ports">UDP ports</h3>
 <ul>
-<li>DNS - 53</li>
-<li>OpenVPN - 1194</li>
+<li><p>DNS - 53</p>
+</li>
+<li><p>OpenVPN - 1194</p>
+</li>
 </ul>
 <h3 id="vpn-ports">VPN ports</h3>
 <ul>
-<li>AH</li>
-<li>ESP</li>
-<li>IPSEC - UDP 4500</li>
-<li>ISAKMP - UDP 500</li>
+<li><p>AH</p>
+</li>
+<li><p>ESP</p>
+</li>
+<li><p>IPSEC - UDP 4500</p>
+</li>
+<li><p>ISAKMP - UDP 500</p>
+</li>
 </ul>
 <h2 id="outbound-access-to-the-internet-from-your-edge-gateway">Outbound access to the internet from your edge gateway</h2>
 <h3 id="tcp-ports-1">TCP ports</h3>
 <ul>
-<li>SSH - 22</li>
-<li>SMTP - 25</li>
-<li>DNS - 53</li>
-<li>HTTP - 80 &amp; 8080</li>
-<li>HTTPS - 443, 444 &amp; 8443</li>
-<li>Secure SMTP - 465 &amp; 587</li>
-<li>FTPS (Data) - 989</li>
-<li>FTPS (Control) - 990</li>
-<li>IMAPS - 993</li>
-<li>POP3S - 995</li>
-<li>Windows KMS - 1688</li>
+<li><p>SSH - 22</p>
+</li>
+<li><p>SMTP - 25</p>
+</li>
+<li><p>DNS - 53</p>
+</li>
+<li><p>HTTP - 80 &amp; 8080</p>
+</li>
+<li><p>HTTPS - 443, 444 &amp; 8443</p>
+</li>
+<li><p>Secure SMTP - 465 &amp; 587</p>
+</li>
+<li><p>FTPS (Data) - 989</p>
+</li>
+<li><p>FTPS (Control) - 990</p>
+</li>
+<li><p>IMAPS - 993</p>
+</li>
+<li><p>POP3S - 995</p>
+</li>
+<li><p>Windows KMS - 1688</p>
+</li>
 </ul>
 <h3 id="udp-ports-1">UDP ports</h3>
 <ul>
-<li>DNS - 53</li>
-<li>NTP - 123</li>
-<li>OpenVPN - 1194</li>
+<li><p>DNS - 53</p>
+</li>
+<li><p>NTP - 123</p>
+</li>
+<li><p>OpenVPN - 1194</p>
+</li>
 </ul>
 <h3 id="vpn-ports-1">VPN ports</h3>
 <ul>
-<li>AH</li>
-<li>ESP</li>
-<li>IPSEC - UDP 4500</li>
-<li>ISAKMP - UDP 500</li>
+<li><p>AH</p>
+</li>
+<li><p>ESP</p>
+</li>
+<li><p>IPSEC - UDP 4500</p>
+</li>
+<li><p>ISAKMP - UDP 500</p>
+</li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -162,13 +206,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/connectivity/conn-ref-internet-permitted-ports.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -187,11 +224,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

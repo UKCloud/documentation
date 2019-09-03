@@ -3,6 +3,8 @@ title: Getting Started Guide for the Cross Domain Security Zone Walled Garden | 
 description: Provides information to get up and running with the Cross Domain Security Zone
 services: cdsz
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -29,26 +31,32 @@ This guide covers the steps you need to follow to get your Walled Garden up and 
 This guide is intended for customers who have:
 
 - Completed the CDSZ Walled Garden assurance wrap
+
 - Been approved to have a Base Implementation of the Walled Garden to allow data to pass between the Assured and Elevated security domains on the UKCloud platform
 
 ## Before you begin
 
-Before you can start to implement a walled garden, you must have completed and passed the appropriate application process. For more information, see the [*UKCloud Cross Domain Security Zone application process*](cdsz-application-process.md).
+Before you can start to implement a walled garden, you must have completed and passed the appropriate application process. For more information, see the [*UKCloud Cross Domain Security Zone application process*](cdsz-ref-application-process.md).
 
 After your Walled Garden application has been approved, a service request is raised to implement the Walled Garden virtual data centre (VDC) and, if necessary, Elevated and Assured VDCs.
 
 > [!NOTE]
 > If a service request for this implementation already exists, the existing request is used and a new one is not raised.
 
-You can track the progress of the service request in the [My Calls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal.
+You can track the progress of the service request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 During the provisioning of the Walled Garden service, we'll ask you for some additional information via the service request:
 
 - The customer account in which you would like the Walled Garden VDC to be provisioned, if different from the customer completing the Walled Garden application.
+
 - Whether you plan to have a single or dual site solution.
+
 - How many VDCs you need to be set up in each security domain.
+
 - If you're connecting new or existing VDCs to the Walled Garden VDC.
+
   - If you're connecting to existing VDCs, we'll need to know information such as NFT details, customer account, and so on.
+
 - The external source IP addresses from which you'd like to access the Assured VDC (up to a maximum of 50).
 
     These IP addresses are the locations from which you can build and test the environment (for example, offices or end user premises).
@@ -63,7 +71,7 @@ It is important to remember that while the UKCloud Portal for the Assured securi
 
 ### Setting up your networking
 
-First, you need to replicate the networking that you set out in your Walled Garden application diagrams. This involves the creation of external and internal networking, as well as the creation of rules on the virtual firewall within your environment. For information about creating networks and firewall rules, see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md) and [*How to build a virtual machine with UKCloud for VMware*](../vmware/vmw-how-build-vm.md).
+First, you need to replicate the networking that you set out in your Walled Garden application diagrams. This involves the creation of external and internal networking, as well as the creation of rules on the virtual firewall within your environment. For information about creating networks and firewall rules, see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md) and [*How to build a virtual machine with UKCloud for VMware*](../vmware/vmw-gs-build-vm-vcd.md).
 
 You also need to create the rules that allow connectivity between the different VDCs through the Walled Garden. This involves the creation of firewall rules, static routes and/or NAT rules.
 
@@ -72,6 +80,7 @@ You also need to create the rules that allow connectivity between the different 
 There are two options for networking between the VDCs in the Walled Garden service:
 
 - **Option 1:** Create static routes between the VDCs; this is the simplest option for connecting VDCs
+
 - **Option 2:** Use NAT rules on top of the static routes; this option may be appropriate if you want to abstract the static routes
 
 The diagrams below provide examples for both options.
@@ -100,7 +109,7 @@ When you've built your VMs and networking, you can start to test the environment
 
 As part of the CDSZ application process, you're required to outline any IT Health Check (ITHC) you intend to perform on the environment. The ITHC should be conducted by an independent CHECK Service Provider, approved and classified as Green Light by the National Cyber Security Centre (NCSC). You can search for appropriate providers on the [NCSC web site](https://www.ncsc.gov.uk/index/professional-service?f%5B0%5D=field_assurance_status%3AAssured&f%5B1%5D=field_assurance_scheme%3A213).
 
-Before beginning the ITHC, notify UKCloud by raising a service request in My Calls and completing the [*External Security Review Test (ESRT) application form*](https://portal.ukcloud.com/support/knowledge_centre/4f052cee-0400-4e12-9e90-827a768ea7ad). Ideally, we require five working days' notice before the work is due to be carried out.
+Before beginning the ITHC, notify UKCloud by raising a service request in [My Calls](https://portal.skyscapecloud.com/support/ivanti) and completing the [*External Security Review Test (ESRT) application form*](https://portal.ukcloud.com/support/knowledge_centre/4f052cee-0400-4e12-9e90-827a768ea7ad). Ideally, we require five working days' notice before the work is due to be carried out.
 
 The ITHC scope should be relevant to the environment. For example, if you're using the Walled Garden to pull application and antivirus updates from the internet, then security controls relevant to facilitate this should be in scope. Bear in mind that the end customer accreditor may dictate the scope of the ITHC.
 
@@ -138,4 +147,4 @@ Garden.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

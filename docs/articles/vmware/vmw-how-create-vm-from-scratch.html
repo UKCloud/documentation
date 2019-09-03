@@ -8,7 +8,7 @@
     <title>How to create a virtual machine from scratch | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual machine from scratch | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-vm-from-scratch.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -87,144 +96,40 @@
 <h2 id="overview">Overview</h2>
 <p>As well as deploying pre-built VMs from a catalog, you can build your own VMs from scratch, as you would do on a physical machine, using an ISO image in place of a physical CD or DVD.</p>
 <p>For information about creating a VM from a template, see <a href="vmw-how-create-vm-from-template.html"><em>How to create a VM from a template</em></a>.</p>
-<p>The steps for creating a VM depend on the version of vCloud Director available in your environment:</p>
-<ul>
-<li><p><a href="#creating-a-vm-from-scratch-vcloud-director-820">vCloud Director 8.20</a></p>
-</li>
-<li><p><a href="#creating-a-vm-from-scratch-vcloud-director-91">vCloud Director 9.1</a></p>
-</li>
-</ul>
-<h2 id="creating-a-vm-from-scratch-vcloud-director-820">Creating a VM from scratch (vCloud Director 8.20)</h2>
-<ol>
-<li><p>In vCloud Director, select the <strong>My Cloud</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-my-cloud.png" alt="My Cloud tab in vCloud Director"></p>
-</li>
-<li><p>Open the vApp in which you want to create the VM.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>To create a new vApp, see <a href="vmw-how-create-vapp.html"><em>How to create a vApp</em></a></p>
-</div>
-</li>
-<li><p>On the <strong>Virtual Machines</strong> tab, click the <strong>Add VM</strong> icon.</p>
-<p><img src="images/vmw-vcd-ico-add-vm.png" alt="Add VM icon"></p>
-</li>
-<li><p>On the <em>Add Virtual Machines</em> page of the <em>New Virtual Machine</em> wizard, click <strong>New Virtual Machine</strong>.</p>
-<p><img src="images/vmw-vcd-btn-new-virtual-machine.png" alt="New Virtual Machine button in New Virtual Machine wizard"></p>
-</li>
-<li><p>In the <em>New Virtual Machine</em> dialog box, enter a <strong>Virtual Machine name</strong> and, in the <strong>Computer name</strong> field, enter a name for the server within the operating system (OS) once built.</p>
-</li>
-<li><p>Leave the <strong>Virtual hardware version</strong> at the default value, unless you have a particular reason to change it.</p>
-</li>
-<li><p>Select the <strong>Operating System Family</strong> to use for your VM, then from the <strong>Operating System</strong> list, select the specific OS that you want to use.</p>
-</li>
-<li><p>Select the <strong>Number of virtual CPUs</strong> for your VM</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>With a Windows OS, select at least two vCPUs if you think you'll need two or more in the future, as the multi-processor HAL will be loaded as part of the OS build.</p>
-</div>
-</li>
-<li><p>You can additionally select the number of <strong>Cores per socket</strong>. This may be useful if you're deploying software that uses sockets for its licensing model.</p>
-</li>
-<li><p>If you want to run virtualisation servers as a VM, select the <strong>Expose hardware-assisted CPU virtualisation</strong> check box.</p>
-<p>For example, you can run a Windows 2008 or 2012 server with Hyper‑V, or a VMware ESX host.</p>
-</li>
-<li><p>Select the amount of <strong>Memory</strong> (RAM) and the *<em>Hard disk size</em>.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Although you can build a VM to your own specification in terms of the number of vCPUs, and amount of memory and disk space, you'll be billed based on the closest (next highest) match to a UKCloud pre-defined VM size.</p>
-<p>Given the flexibility of VMs, and the ability to change the number of vCPUs and amount of memory and disk space on the fly, it's often better to start small as you're not tied by the constraints of a physical server. Remember too that more vCPUs or RAM won't necessarily make a server faster, and could cost a lot more. You need to understand how well your application can make use of multi-threading.</p>
-</div>
-</li>
-<li><p>Leave <strong>Bus type</strong> as the default.</p>
-</li>
-<li><p>Select the <strong>Number of NICs</strong> (network interface cards) you need in the first instance.</p>
-<p><img src="images/vmw-vcd-new-virtual-machine.png" alt="New Virtual Machine dialog box"></p>
-</li>
-<li><p>When you're finished, click <strong>OK</strong> then click <strong>Next</strong>.</p>
-</li>
-<li><p>On the <em>Configure Resources</em> page, select the <strong>Storage Policy</strong> for the VM and click <strong>Next</strong>.</p>
-<p>We recommend using the <code>*-*-*-Any</code> option as this will assume your VMs are balanced evenly across all storage pools. However, you could use this option to specifically separate VMs on different storage if required for high availability purposes. In this example, two VMs could be specifically placed on <code>*.*.*-Storage1</code> as opposed to <code>*.*.*-Storage2</code>.</p>
-<p><img src="images/vmw-vcd-new-virtual-machine-resources.png" alt="Configure Resources page of New Virtual Machine wizard"></p>
-</li>
-<li><p>On the <em>Configure Virtual Machines</em> page, select which <strong>Network</strong> to connect the VM to.</p>
-</li>
-<li><p>Select an <em>IP Assignment</em> method:</p>
-<ul>
-<li><strong>Static - IP Pool</strong> is the usual method, which injects an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a checkbox to keep IP address assignments elsewhere within the UI once the VMs are
-created.</li>
-<li><strong>Static - Manual</strong> is similar to Static - IP Pool, but you need to type in a valid IP address from the pool, which the VM will then keep.</li>
-<li><strong>DHCP</strong> vCloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.</li>
-</ul>
-<p><img src="images/vmw-vcd-new-virtual-machine-vms.png" alt="Configure Virtual Machines page of New Virtual Machine wizard"></p>
-</li>
-<li><p>Click <strong>Next</strong>.</p>
-</li>
-<li><p>On the <em>Configure Networking</em> page you can change how the vApp and its virtual machines connect to the VDC networks.</p>
-<p>You can find out about network fencing in <a href="vmw-how-create-vapp-network.html"><em>How to create a vApp network</em></a>.</p>
-</li>
-<li><p>Click <strong>Next</strong>.</p>
-</li>
-<li><p>Review the information on the summary page and then click <strong>Finish</strong>.</p>
-<p>The VM will then be deployed as bare metal.</p>
-</li>
-</ol>
-<h3 id="installing-an-operating-system-into-a-bare-metal-vm-vcloud-director-820">Installing an operating system into a bare metal VM (vCloud Director 8.20)</h3>
-<ol>
-<li><p>On the <strong>Home</strong> or <strong>My Cloud</strong> page, right-click the vApp and select <strong>Start</strong>.</p>
-<p>This starts the vApp and all the VMs within it. The vApp shows a status of <strong>Starting</strong>, then <strong>Running</strong>.</p>
-</li>
-<li><p>Click the monitor icon, or right-click on the VM within the vApp and select <strong>Popout Console</strong>.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>The first time you use vCloud Director, you'll be asked to download a Remote Console client, which is a Windows installable file. You'll only need to do this once. The Remote Console client is available only on Windows, under Internet Explorer (compatibility mode) and Firefox.</p>
-</div>
-</li>
-<li><p>As with a physical server, no virtual CD or DVD is available at first boot, so the server will attempt to PXE boot.</p>
-<p><img src="images/vmw-vcd-vm-console.png" alt="VM popout console"></p>
-</li>
-<li><p>Right-click on the VM within the main vCloud Director interface (not the popout console) and select <strong>Insert CD/DVD from Catalog</strong>.</p>
-</li>
-<li><p>Select the ISO image you want, then click <strong>OK</strong>.</p>
-</li>
-<li><p>In the popout console, click the <strong>Reset</strong> icon then click <strong>OK</strong> to reset the VM so that it picks up the virtual CD/DVD.</p>
-<p><img src="images/vmw-vcd-ico-reset-vm.png" alt="Reset VM icon in popout console"></p>
-<p>After a short while the VM will start the boot process and pick up the CD/DVD. Resize the VM window if necessary to see the whole screen.</p>
-</li>
-<li><p>Carry out the operating system install as normal. When you've finished, remember to install VMware Tools.</p>
-<p>For more information, see <a href="vmw-ref-vmware-tools-installation.html"><em>VMware Tools Installation</em></a>.</p>
-</li>
-</ol>
-<h2 id="creating-a-vm-from-scratch-vcloud-director-91">Creating a VM from scratch (vCloud Director 9.1)</h2>
+<h2 id="creating-an-empty-vm">Creating an empty VM</h2>
 <ol>
 <li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the vApp in which you want to create the VM.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>vApps</strong> to view a list of vApps within the VDC.</p>
-<p><img src="images/vmw-vcd91-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
+<p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
 </li>
-<li><p>In the card for the vApp in which you want to create the VM, click <strong>More</strong> then select <strong>Add VM</strong>.</p>
-<p><img src="images/vmw-vcd91-mnu-add-vm.png" alt="Add VM icon"></p>
+<li><p>In the card for the vApp in which you want to create the VM, select <strong>Actions</strong> then <strong>Add VM</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-add-vm.png" alt="Add VM icon"></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>To create a new vApp, see <a href="vmw-how-create-vapp.html"><em>How to create a vApp</em></a>.</p>
+<p>To create a standalone VM, in the left navigation panel, select <strong>Virtual Machines</strong>, then click <strong>New VM</strong>.</p>
 </div>
 </li>
-<li><p>In the <em>Add VMs to &lt;vApp&gt;</em> page, click <strong>Add Virtual Machine</strong>.</p>
+<li><p>In the <em>Add VMs</em> dialog box, click <strong>Add Virtual Machine</strong>.</p>
 <p><img src="images/vmw-vcd91-btn-add-vm.png" alt="Add Virtual Machine button"></p>
 </li>
-<li><p>In the <em>Create VM</em> dialog box, from the <strong>Type</strong> radio buttons, select <strong>New</strong>.</p>
+<li><p>In the <em>New VM</em> dialog box, from the <strong>Type</strong> radio buttons, select <strong>New</strong>.</p>
 </li>
 <li><p>Enter a <strong>Name</strong>, <strong>Computer Name</strong> and <strong>Description</strong> for your VM.</p>
-<div class="TIP">
-<h5>Tip</h5>
+<div class="NOTE">
+<h5>Note</h5>
 <p><strong>Name</strong> is a name to identify the VM, <strong>Computer Name</strong> is the host name of the VM.</p>
+<p>The <strong>Computer Name</strong> is copied from the <strong>Name</strong> field but can contain only alphanumeric characters and hyphens so you may need to edit it if your VM <strong>Name</strong> contains spaces or special characters.</p>
 </div>
 </li>
 <li><p>Select the <strong>OS Family</strong> to use for your VM, then from the <strong>Operating System</strong> list, select the specific OS that you want to use.</p>
+<p><img src="images/vmw-vcd-new-vm-scratch.png" alt="New VM dialog box - Type"></p>
 </li>
 <li><p>Select a <strong>Size</strong> for your VM based on the number of vCPUs and cores you require.</p>
-<p>You can select a predefined size or click <strong>Customize</strong> to enter specific compute, memory and storage settings.</p>
-<div class="NOTE">
-<h5>Note</h5>
+<p>You can select from <strong>Pre-defined Sizing Options</strong> or select <strong>Custom Sizing Options</strong> to enter specific compute, memory and storage settings.</p>
+<div class="TIP">
+<h5>Tip</h5>
 <ul>
 <li><p>Although you can build a VM to your own specification in terms of the number of vCPUs, and amount of memory and disk space, you'll be billed based on the closest (next highest) match to a UKCloud pre-defined VM size.</p>
 </li>
@@ -235,47 +140,58 @@ created.</li>
 </ul>
 </div>
 </li>
-<li><p>If you want to run virtualisation servers as a VM, you can edit the properties of the VM after it has been deployed to select the <strong>Expose hardware-assisted CPU virtualisation</strong> check box.</p>
+<li><p>If you want to run virtualisation servers as a VM, you can edit the properties of the VM after it has been deployed and, in the <em>Hardware</em> section, select the <strong>Expose hardware-assisted CPU virtualization to guest OS</strong> check box.</p>
 <p>For example, you can run a Windows 2008 or 2012 server with Hyper‑V, or a VMware ESX host.</p>
 </li>
-<li><p>Select which <strong>Network</strong> to connect the VM to and select an <strong>IP Mode</strong> to determine how IP addresses are assigned:</p>
-<ul>
-<li><strong>Static - IP Pool</strong> is the usual method, which injects an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a checkbox to keep IP address assignments elsewhere within the UI once the VMs are
-created.</li>
-<li><strong>Static - Manual</strong> is similar to Static - IP Pool, but you need to type in a valid IP address from the pool, which the VM will then keep.</li>
-<li><strong>DHCP</strong> vCloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.11. how many network interface controllers (NICs) you need in the first instance.</li>
-</ul>
+<li><p>In the <em>Storage</em> section, set the <strong>Storage Policy</strong> and <strong>Size</strong> (in GB) of storage for the VM. You can also add more disks.</p>
 </li>
-<li><p>Click <strong>Add</strong> to create more NICs.</p>
-<p><img src="images/vmw-vcd91-create-vm-new.png" alt="Create VM dialog box"></p>
+<li><p>In the <em>Network</em> section, specify which <strong>Network</strong> to connect the VM to and select an <strong>IP Mode</strong> to determine how IP addresses are assigned:</p>
+<ul>
+<li><p><strong>DHCP</strong> vCloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.11. how many network interface controllers (NICs) you need in the first instance.</p>
+</li>
+<li><p><strong>IP Pool</strong> is the usual method, which injects an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a check box to keep IP address assignments elsewhere within the UI once the VMs are
+created.</p>
+</li>
+<li><p><strong>Manual IP</strong> is similar to IP Pool, but you need to enter a valid <strong>IP Address</strong> from the pool, which the VM will then keep.</p>
+</li>
+</ul>
+<p><img src="images/vmw-vcd-new-vm-size.png" alt="Create VM dialog box"></p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can the VM to multiple networks, by clicking <strong>Add</strong>.</p>
+</div>
 </li>
 <li><p>When you're done, click <strong>OK</strong>.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>By default, the <strong>Power on</strong> check box is selected. If you do not want the VM to power on and start incurring charges immediately, make sure to deselect this check box.</p>
+</div>
 </li>
-<li><p>In the <em>Add VMs to &lt;vApp&gt;</em> dialog box, you can create more VMs or click <strong>Add</strong> when you're done.</p>
-<p>You can stay in the dialog box to monitor progress or click <strong>Cancel</strong> to return to the list of vApps.</p>
-<p>The VM will be deployed as bare metal.</p>
+<li><p>Back in the <em>Add VMs</em> dialog box, you can add more VMs or click <strong>Add</strong> when you're done.</p>
+<p>You can monitor progress in the <em>Add VMs</em> dialog box, or click <strong>Cancel</strong> to return to the list of vApps while the VM is created in the background.</p>
+<p>The VM will be deployed without any operating system.</p>
 </li>
 </ol>
-<h3 id="installing-an-operating-system-into-a-bare-metal-vm-vcloud-director-91">Installing an operating system into a bare metal VM (vCloud Director 9.1)</h3>
+<h3 id="installing-an-operating-system-into-the-vm">Installing an operating system into the VM</h3>
 <ol>
 <li><p>On the card for the vApp that contains the VM, click <strong>Power</strong> then select <strong>Power On</strong>.</p>
-<p>This starts the vApp and all the VMs within it. The vApp shows a status of <strong>Starting</strong>, then <strong>Running</strong>.</p>
+<p>This starts the vApp and all the VMs within it. The vApp shows a status of <strong>Powering on</strong>, then <strong>Running</strong>.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>Virtual Machines</strong> to view a list of VMs within the VDC.</p>
 </li>
-<li><p>Click the picture of the monitor to launch the VM console.</p>
+<li><p>In the card for your VM, click the picture of the monitor to launch the VM console.</p>
 <p><img src="images/vmw-vcd91-ico-console.png" alt="Monitor icon for launching VM console"></p>
 </li>
 <li><p>As with a physical server, no virtual CD or DVD is available at first boot, so the server will attempt to PXE boot.</p>
-<p><img src="images/vmw-vcd91-vm-console.png" alt="VM console"></p>
+<p><img src="images/vmw-vcd-vm-console-bare-metal.png" alt="VM console"></p>
 </li>
-<li><p>In the main vCloud Director interface (not the console), in the card for the VM you want to work with, click <strong>More</strong> then select <strong>Insert Media</strong>.</p>
-<p><img src="images/vmw-vcd91-mnu-insert-media.png" alt="Insert Media menu option"></p>
+<li><p>In the main vCloud Director interface (not the console), in the card for the VM you want to work with, select <strong>Actions</strong> then <strong>Insert Media</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-insert-media.png" alt="Insert Media menu option"></p>
 </li>
 <li><p>Select the ISO image you want to mount from a catalog, then click <strong>Insert</strong>.</p>
 </li>
-<li><p>In the card for the VM, click <strong>Power</strong> then select <strong>Reset</strong> to reset the VM so that it picks up the virtual CD/DVD.</p>
-<p><img src="images/vmw-vcd91-mnu-reset-vm.png" alt="Reset VM menu option"></p>
+<li><p>In the card for the VM, select <strong>Actions</strong> then <strong>Reset</strong> to reset the VM so that it picks up the virtual CD/DVD.</p>
+<p><img src="images/vmw-vcd-mnu-reset-vm.png" alt="Reset VM menu option"></p>
 <p>After a short while the VM will start the boot process and pick up the CD/DVD. Resize the VM console if necessary or go to full screen.</p>
 <p><img src="images/vmw-vcd91-vm-install-os.png" alt="Installing CentOS Linux 7"></p>
 </li>
@@ -284,7 +200,7 @@ created.</li>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -294,13 +210,6 @@ created.</li>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-vm-from-scratch.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -319,11 +228,24 @@ created.</li>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

@@ -3,6 +3,8 @@ title: How to view Cloud Storage information in the UKCloud Portal | UKCloud Ltd
 description: Describes how to access information about your Cloud Storage service in the UKCloud Portal
 services: cloud-storage
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: How To
 toc_sub1:
@@ -23,8 +25,11 @@ Cloud Storage is UKCloud's object storage solution based on Dell EMC Elastic Clo
 Within the UKCloud Portal you can view:
 
 - Information about the namespaces within your Cloud Storage environment
+
 - A list of users with access to a namespace
+
 - Information about the buckets within a namespace
+
 - A graphical representation of the storage consumed over the last 30 days
 
 You can also use the UKCloud Portal to create new Cloud Storage users. For more information, see [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md).
@@ -71,9 +76,13 @@ In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down
 2. The *Storage* tab lists the namespaces within the currently selected account. You can see:
 
     - The number of buckets in the namespace
+
     - The total amount of storage (in GiB) currently consumed by the objects in all the buckets in the namespace
+
     - The service level of the namespace:
+
         - STANDARD - data is stored in a single data centre
+
         - ENHANCED - data is stored in a primary named data centre and copied to a second geographically remote data centre
 
     ![Namespaces page](images/cs-portal-namespaces.png)
@@ -85,7 +94,9 @@ In ECS, objects are stored in buckets. In the UKCloud Portal, you can drill down
 4. On the *Buckets* tab, you can see the following information for each bucket in the selected namespace:
 
     - The type of bucket: S3 or ATMOS
+
     - The total amount of storage (in GiB) currently consumed by the objects in the bucket
+
     - The number of objects in the bucket
 
     ![Buckets page](images/cs-portal-buckets.png)
@@ -103,11 +114,13 @@ This guide has shown you how you can view information about your Cloud Storage s
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
 - Cloud Storage Gateways
-  - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+
+  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+
   - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

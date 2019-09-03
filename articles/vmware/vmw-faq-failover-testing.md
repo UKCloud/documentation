@@ -3,6 +3,8 @@ title: Service failover testing FAQs | UKCloud Ltd
 description: Details service failover test related Frequently Asked Questions (FAQs)
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 12/10/2018 17:42:06
 
 toc_rootlink: FAQs
 toc_sub1:
@@ -76,7 +78,7 @@ It's highly likely that the testing of a failover will be seamless to the custom
 
 ### Are there charges for a service failover test?
 
-Typically, UKCloud will only allow a test to last for 1 business day with a charge (based on the SFIA rate card) of £660 per day. If you require longer testing periods, this needs to be approved by UKCloud.
+Typically, UKCloud will only allow a test to last for 1 business day with a charge (based on the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) - level 3 Apply). If you require longer testing periods, this needs to be approved by UKCloud.
 
 ### Why is the DR failover Test Scenario not fully automatic and self service?
 
@@ -84,4 +86,4 @@ This is part of the service roadmap.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

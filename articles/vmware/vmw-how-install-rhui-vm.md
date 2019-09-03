@@ -3,6 +3,8 @@ title: How to install Red Hat Update Infrastructure on an existing VMware virtua
 description: Shows you how to update your existing hosts to target UKCloud's approved Red Hat Update Infrastructure (RHUI)
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 17/08/2018 13:00:56
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -35,7 +37,7 @@ There are two pre-requisites for performing this operation:
 
 You can find the installer RPM files in the UKCloud public catalog under **media**, for example, **UKCloud-RHUI-Standard-Assured**.
 
-If you require the high availability (HA) package, raise a Service Request directly via the [My Calls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal and it will be uploaded to your private catalog.
+If you require the high availability (HA) package, raise a Service Request directly via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal and it will be uploaded to your private catalog.
 
 1. Mount the `UKCloud RHUI-***.iso` to the VM (or place the contents in an accessible location such as NFS share, FTP, and so on).
 
@@ -56,6 +58,7 @@ If you require the high availability (HA) package, raise a Service Request direc
 5. The first time you update from RHUI you will be prompted to accept the following two certificates:
 
     - The Red Hat entitlement certificate
+
     - The Client entitlement certificate
 
 ## Troubleshooting
@@ -78,4 +81,4 @@ Ensure you have installed the correct RPM for your release.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

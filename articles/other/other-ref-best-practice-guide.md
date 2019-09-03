@@ -3,6 +3,8 @@ title: Best practice customer guide | UKCloud Ltd
 description: Provides useful best practice information and other helpful advice to ensure good performance from our products
 services: vmware
 author: Dan Baker
+reviewer:
+lastreviewed: 17/08/2018 13:00:42
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -36,7 +38,9 @@ Snapshot Protection automatically takes an image of the protected VM every 24 ho
 You should remove snapshots that are no longer needed within 24-48 hours. If snapshots aren't removed, this can cause the following issues:
 
 - Depending on the size of the snapshot, it may delay the time it takes your virtual machine to power on
+
 - Snapshot back-ups are likely to fail
+
 - You may be billed for additional storage due to the size of the snapshot
 
 To reduce this potential impact, ensure that you remove any old snapshots within 48 hours once they are no longer needed. For more information, see the following articles: [*Virtual machine disk limits and considerations*](../vmware/vmw-ref-vmdk-limits.md)
@@ -53,6 +57,7 @@ For more information, see the following articles: [*Snapshot Protection Service 
 Affinity and anti-affinity rules determine if VMs are kept together as they are moved around within an environment.
 
 - Affinity rules keep VMs together on the same host
+
 - Anti-affinity rules ensure that VMs are distributed across different hosts
 
 For example, if it is important that your application has very low latency, you can create affinity rules to make sure that the application's VMs are always kept on the same host. If you want your application to be robust in the event of host failures, you can create anti‑affinity rules to spread the VMs across multiple hosts.
@@ -94,7 +99,9 @@ If you'd like to retain your VMware logs and are planning to redeploy an edge, r
 Your edge gateway is globally configured to send syslog messages to a specific IP address. By configuring a new network or IP address within your virtual data centre (VDC) and deploying a collector with the syslog IP address, you can access your edge gateway syslog data. You can then use this data to check:
 
 - Allowed and denied network traffic
+
 - Load balancer statistics
+
 - Load balancer health
 
 For more information, see [*How to access syslog data for your edge gateway*](../vmware/vmw-how-access-syslog-data.md).
@@ -103,7 +110,7 @@ For more information, see [*How to access syslog data for your edge gateway*](..
 
 At UKCloud, we're proud to provide a range of products, solutions and pricing tailored to suit the needs of your business. We've designed our compute 't-shirt' sizes with the optimum level of RAM and CPU to deliver ideal performance. However, if these levels are increased, this may degrade performance over time.
 
-For more information on the range of VM sizes that we offer, see our latest [*Pricing Guide*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf) on the Digital Marketplace.
+For more information on the range of VM sizes that we offer, see our latest [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 ## Best Practices - general information
 
@@ -112,6 +119,7 @@ For more information on the range of VM sizes that we offer, see our latest [*Pr
 In the event of an incident, it's important that we have the correct contact details for you. Ensure that:
 
 - Your account has two nominated administrators. The administrator has access rights to create and set up new users and reset passwords. In the event of an incident, our support team will always contact the administrator first to resolve the issue.
+
 - Your contact details are up to date. Please review account permissions regularly when people leave your business or change roles to ensure they are correct
 
 There are contact details listed for both primary and secondary technical contacts. We proactively create support tickets for these contacts when an action is required in your environment so it's important these are up to date.
@@ -131,8 +139,11 @@ For more information on finding the region and zone, see [*How to locate your vi
 UKCloud provides information about the location of a VDC in the VDC metadata. Using this metadata, you can locate a VDC by site, region and zone. Knowing where your VDCs are located can be useful for:
 
 - Determining how resilient your applications are
+
 - Determining how maintenance or an unplanned outage may affect your applications
+
 - Providing additional information to help with support call resolution
+
 - More detailed billing information per VM
 
 For more information, see [*How to locate your virtual data centre on the UKCloud platform*](../vmware/vmw-how-locate-vdc.md).
@@ -141,15 +152,19 @@ For more information, see [*How to locate your virtual data centre on the UKClou
 
 Secure Remote Access (SRA) certificates enable you to securely connect to UKCloud's Elevated OFFICIAL security domain using NCSC-approved internet virtual private network (VPN) technologies and the walled garden architectural pattern.
 
-System administrators and mobile workers can securely access workloads running on Elevated OFFICIAL from locations that don't have alternative secure network connections such as PSN or N3/HSCN.
+System administrators and mobile workers can securely access workloads running on Elevated OFFICIAL from locations that don't have alternative secure network connections such as PSN or HSCN.
 
 - SRA certificates last for 12 months. You'll need to renew certificates no later than two weeks before the certificates expire to avoid any interruption to your service.
-- To add additional certificates, raise a service request via the UKCloud Portal, selecting the **Request Additional SRAS Certificate(s)** option.
+
+- To add additional certificates, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the **Request Additional SRAS Certificate(s)** option.
+
 - To renew or revoke your certificate, raise a service request via the UKCloud Portal, selecting the **Renew and/or Revoke SRAS Certificate** option.
+
 - For renewals, it's important you give us at least two weeks' notice to prevent a break in your service.
+
 - If you have multiple certificates to renew or revoke, you can do this in a single service request by selecting the **Renew and/or Revoke multiple SRAS Certificates** option in the UKCloud Portal. Attach the *Secure Remote Access bulk renewal/revoke form* containing all the certificates.
 
-For more information, see the following articles: [*Secure Remote Access FAQs*](../sra/sra-faq.md), [*Secure Remote Access Factsheet*](https://ukcloud.com/wp-content/uploads/2018/01/SRA-Factsheet.pdf) and [*Secure Remote Access Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/153884335251015-service-definition-document-2018-05-21-1247.pdf).
+For more information, see the following articles: [*Secure Remote Access FAQs*](../sra/sra-faq.md), [*Secure Remote Access Factsheet*](https://ukcloud.com/wp-content/uploads/2018/01/SRA-Factsheet.pdf) and [*Secure Remote Access Service Definition*](../sra/sra-sd.md).
 
 ## Feedback
 

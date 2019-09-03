@@ -3,6 +3,8 @@ title: Private Cloud for Storage FAQs | UKCloud Ltd
 description: Frequently asked questions for Private Cloud for Storage
 services: private-storage
 author: Matt Warner
+reviewer:
+lastreviewed: 19/07/2018 17:56:05
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -65,7 +67,7 @@ UKCloud's secure online Portal provides the most common service management funct
 
 ### How do I manage my services?
 
-Private Cloud for Storage on the Assured OFFICIAL (formerly IL2) domain can be managed over the internet (or other connectivity) by raising a Service Request via the My Calls section of the UKCloud Portal.
+Private Cloud for Storage on the Assured OFFICIAL (formerly IL2) domain can be managed over the internet (or other connectivity) by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 For the Elevated OFFICIAL (formerly IL3) domain, the security requirements are much stricter and require either a PSN-approved connection, UKCloud Secure Remote Access, or CAPS-approved encryption.
 
@@ -125,4 +127,4 @@ For more information, see the [*Cross Domain Security Zone Service Definition*](
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

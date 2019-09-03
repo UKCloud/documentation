@@ -1,33 +1,36 @@
 ---
-title: How to create a Site-to-Site connection in Azure Stack | UKCloud Ltd
-description: Create a S2S VPN gateway connection from an on-premises network to UKCLoud for Microsoft Azure 
+title: How to create a site-to-site VPN connection using the UKCloud Azure Stack portal | UKCloud Ltd
+description: Create a site-to-site (S2S) VPN gateway connection from an on-premises network to UKCloud for Microsoft Azure 
 services: azure-stack
 author: Bailey Lawson
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
+
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2:
+toc_sub2: Create a Site-to-Site VPN Connection
 toc_sub3:
 toc_sub4:
-toc_title: Create a Site-to-Site connection in Azure Stack
-toc_fullpath: Users/How To/azs-how-create-S2S-VPN.md
+toc_title: Create a site-to-site VPN connection - Portal
+toc_fullpath: Users/How To/Create a Site-to-Site VPN Connection/azs-how-create-S2S-VPN.md
 toc_mdlink: azs-how-create-S2S-VPN.md
 ---
 
-# How to create a Site-to-Site connection in Azure Stack
+# How to create a site-to-site VPN connection using the UKCloud Azure Stack portal
 
 ## Overview
 
-This guide shows you how to use the UKCloud Azure Stack portal to create a Site-to-Site VPN from your on-premises network to your UKCloud for Microsoft Azure environment. 
+This guide shows you how to use the Azure Stack portal to create a site-to-site VPN from your on-premises network to your UKCloud for Microsoft Azure environment.
 
 ### Intended audience
 
-To complete the steps in this guide, you must have appropriate access to a subscription in the UKCloud Azure Stack portal.
+To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.
 
 ## Create a virtual network
 
 First, you'll need to create a virtual network. This virtual network will be able to send and receive traffic through the virtual network gateway. You cannot associate a virtual network with more than one gateway.
 
-1. Log in to the UKCloud Azure Stack portal.
+1. Log in to the Azure Stack portal.
 
    For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
@@ -112,8 +115,11 @@ To associate a virtual network with a gateway, it must first contain a valid gat
    - **Virtual Network** - This is the virtual network that you created earlier.
 
    - **Public IP address** - The public IP address to assign to this virtual network gateway. Only dynamic public IP addresses are supported. To create a new public IP address:
+
       - Click **Public IP address** on the **Create virtual network gateway** blade.
+
       - Select **Create new** on the **Choose public IP address** blade.
+
       - Enter a name for the public IP address and click **OK**.
 
    - **Configure BGP ASN** - BGP is the standard routing protocol commonly used on the internet to exchange routing information between two or more networks. BGP enables the Azure VPN Gateways and your on-premises VPN devices, called BGP peers or neighbours, to exchange "routes" that will inform both gateways on the availability and reachability for those prefixes to go through the gateways or routers involved. You should also make sure your on-premises VPN devices support BGP before you enable this feature.
@@ -218,4 +224,4 @@ After configuring the VPN device on your local network, you can verify the VPN c
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

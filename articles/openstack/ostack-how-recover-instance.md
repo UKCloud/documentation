@@ -3,6 +3,8 @@ title: How to manage how your instance recovers from a host failure | UKCloud Lt
 description: Describes how to control what happens to your instances in the event of a service interruption to the availability of a host
 services: openstack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 15:17:17
 
 toc_rootlink: How To
 toc_sub1:
@@ -27,6 +29,7 @@ This guide outlines UKCloud's policy for handling OpenStack instances in the eve
 If a host restarts, or if we have to reboot a host before live migrating your instances, any instances running on that host will be shut off. When we recover a host, there are two options for the recovery state of any instances that may have been affected:
 
 - Manual restart of instance (default) - you must restart any affected instances when the host has been recovered
+
 - Automatic restart of an instance - UKCloud will automatically restart any shut off instances on a recovered host
 
 You can set the recovery option for each of your instances in the instance metadata.
@@ -114,8 +117,9 @@ As a result, you must ensure that the applications you deploy on OpenStack have 
 For more information about UKCloud for OpenStack, see the following articles in the Knowledge Centre:
 
 - [*Getting Started Guide for UKCloud for OpenStack*](ostack-gs.md)
+
 - [*UKCloud for OpenStack FAQs*](ostack-faq.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

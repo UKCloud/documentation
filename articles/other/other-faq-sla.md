@@ -3,6 +3,8 @@ title: Service Level Agreement FAQs | UKCloud Ltd
 description: Frequently asked questions for Service Level Agreements
 services: other
 author: Matt Warner
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -37,7 +39,7 @@ UKCloud deem a service to be unavailable if after five consecutive negative resp
 
 ### Are any periods of downtime excluded from the availability SLA?
 
-UKCloud excludes any time needed to complete planned or emergency maintenance from any time-based calculations related to service availability. In these events, you will be notified accordingly as described in the appropriate Service Definition. Other exceptions are outlined in UKCloud's Terms and Conditions.
+UKCloud excludes any time needed to complete planned or emergency maintenance from any time-based calculations related to service availability. In these events, you will be notified accordingly as described in our [*Terms and Conditions*](other-ref-terms-and-conditions.md). Other exceptions are also outlined in the Terms and Conditions.
 
 ### Are there any reasons why you wouldn't pay a Service Credit if it was due?
 
@@ -49,7 +51,7 @@ No, UKCloud's monitoring tools, data and records (including support tickets) wil
 
 ### How do I request a Service Credit?
 
-To request a Service Credit, customers must raise a support call on the [UKCloud Portal](https://portal.ukcloud.com/support/my_calls/new) within thirty (30) calendar days of the suspected SLA Event. UKCloud will review the request and issue a Service Credit if applicable either during that billing cycle or the subsequent one if the claim is made just after an invoice has been paid.
+To request a Service Credit, customers must raise a Service Request the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal within thirty (30) calendar days of the suspected SLA Event. UKCloud will review the request and issue a Service Credit if applicable either during that billing cycle or the subsequent one if the claim is made just after an invoice has been paid.
 
 ### Does UKCloud have an SLA that covers customer-owned hardware or appliances such as routers?
 
@@ -87,7 +89,7 @@ UKCloud monitors the UKCloud for VMware data stores every minute using internal 
 
 ### Do you offer an SLA on the UKCloud-provided virtual firewall?
 
-Virtual firewalls are covered by the UKCloud management plane (IaaS layer or below) SLA. Customers can claim service credits for affected VMs in the event of an outage, where the fault is within UKCloud-controlled components. Further details are available in the Service Definition.
+Virtual firewalls are covered by the UKCloud management plane (IaaS layer or below) SLA. Customers can claim service credits for affected VMs in the event of an outage, where the fault is within UKCloud-controlled components. Further details are available in the [*SLA definition*](other-ref-sla-definition.md).
 
 ### Does UKCloud offer an SLA covering the performance of a VM or its storage?
 
@@ -379,7 +381,7 @@ No, you will only receive a Service Credit if the service provided was affected 
 
 ### Do you offer an SLA on the UKCloud-provided virtual firewall?
 
-Virtual firewalls are covered by the UKCloud management plane SLA. Customers can claim service credits for affected VMs in the event of an outage, where the fault is within UKCloud-controlled components. Further details are available in the Service Definition.
+Virtual firewalls are covered by the UKCloud management plane SLA. Customers can claim service credits for affected VMs in the event of an outage, where the fault is within UKCloud-controlled components. Further details are available in the [*SLA definition*](other-ref-sla-definition.md).
 
 ### Can you give me a worked example for the UKCloud for Oracle Software SLA?
 
@@ -423,7 +425,7 @@ The following are examples of what is not covered by the SLA:
 
 - Faults within your control, such as client applications and mailbox configuration
 
-- Faults within external connectivity providers (for example DDoS protected internet, PSN, Janet or N3/HSCN) and components collocated at UKCloud 
+- Faults within external connectivity providers (for example DDoS protected internet, PSN, Janet or HSCN) and components collocated at UKCloud 
 
 ### Can you give me a worked example for the Email and Collaboration as a Service SLA?
 
@@ -459,4 +461,4 @@ How much is payable?
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

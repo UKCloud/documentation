@@ -3,6 +3,8 @@ title: Fixing your IPsec VPN following upgrade to NSX 6.4 | UKCloud Ltd
 description: Describes how to resolve issues with IPsec VPN after upgrading to NSX 6.4
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 04/09/2018 10:58:14
 toc_rootlink: Troubleshooting
 toc_sub1: 
 toc_sub2:
@@ -18,9 +20,13 @@ toc_mdlink: vmw-ref-trouble-ipsec-nsx64.md
 With the upgrade to NSX version 6.4, VMware have made a security change to the default settings of the NSX edge gateway's IPsec VPN service. The new default for IPsec VPN service is to use the DH-14 (Diffie–Hellman group 14) algorithm during phase 1 negotiation of the VPN tunnel. You have the option of selecting a different version of Diffie-Hellman in the advanced gateway GUI. The following versions are supported:
 
 - DH-2 (Diffie–Hellman group 2)
+
 - DH-5 (Diffie–Hellman group 5)
+
 - DH-14 (Diffie–Hellman group 14)
+
 - DH-15 (Diffie–Hellman group 15)
+
 - DH-16 (Diffie–Hellman group 16)
 
 However, during the upgrade of one of our regions we discovered that for edges that have not been converted to advanced gateways that have VPNs configured, the upgrade changes the config on the VPN tunnels to use the DH-14 algorithm instead of the previously only available DH-2.
@@ -28,6 +34,7 @@ However, during the upgrade of one of our regions we discovered that for edges t
 As a result, VPN tunnels are then broken until either of the following is performed:
 
 - The edge with the affected VPN is upgraded to an advanced gateway and the VPN config is changed from DH-14 back to DH-2
+
 - The peer end config is amended to use DH-14 for its ike negotiation
 
 UKCloud support staff can change the VPN config back to DH-2 on a temporary basis until the edge is converted, however the setting is not persistent, and under certain configuration changes to an edge, the setting of DH-14 may be reapplied. Converting to an advanced gateway does not require any downtime nor cause any outage during the conversion.
@@ -44,15 +51,15 @@ To convert your edge to an advanced gateway, see [*How to convert your edge to a
 
 To change the DH setting on your broken VPN:
 
-1. Right-click your edge gateway and select **Edge Gateway Services**.
+1. In vCloud Director, access the edge gateway settings for the edge with the broken VPN.
 
-2. In the new tenant portal, select the **VPN** tab.
+    For more detailed instructions, see [*How to access edge gateway settings*](vmw-how-access-edge.md).
+
+2. Select the **VPN** tab.
 
 3. On the *IPsec VPN Configuration* page, select the **IPsec VPN Sites** tab.
 
 4. Select the VPN tunnel that is broken and click the edit icon.
-
-    ![IPsec VPN Sites tab](images/vmw-tp-ipsec-fix1.png)
 
 5. From the **Diffee-Hellman Group** list, select DH2.
 
@@ -68,4 +75,4 @@ To change the DH setting on your broken VPN:
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -4,6 +4,8 @@
     href: ptl-gs.md
 - name: How To
   items:
+  - name: Create a new user
+    href: ptl-how-create-users.md
   - name: Raise and escalate incidents and service requests
     href: ptl-how-raise-escalate-service-request.md
   - name: Reset your UKCloud Portal password or memorable word
@@ -16,6 +18,8 @@
     href: ptl-how-unlock-account.md
   - name: Use My Calls in the UKCloud Portal
     href: ptl-how-use-my-calls.md
+  - name: Use the My Calls Archive
+    href: ptl-how-use-my-calls-archive.md
   - name: Use the UKCloud Portal API
     href: ptl-how-use-api.md
   - name: View login information
@@ -26,11 +30,17 @@
     href: ptl-ref-portal-api.md
   - name: Enable memorable word on account switch
     href: ptl-ref-memorable-word.md
+  - name: Partitioning projects or end customers using accounts
+    href: ptl-ref-multiple-accounts.md
   - name: Portal permissions
-    href: ptl-overview-permissions.md
+    href: ptl-ref-overview-permissions.md
   - name: Portal release notes
     href: ptl-ref-release-notes.md
   - name: Portal user access
     href: ptl-ref-user-access.md
   - name: Resetting Two-Factor Authentication for SSO
     href: ptl-ref-reset-2fa-sso.md
+- name: Videos
+  items:
+  - name: UKCloud Portal
+    href: ptl-vid-portal.md

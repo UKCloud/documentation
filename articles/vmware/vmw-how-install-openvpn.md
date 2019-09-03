@@ -3,6 +3,8 @@ title: How to install and configure OpenVPN | UKCloud Ltd
 description: Details the steps required to obtain, deploy and configure an OpenVPN virtual appliance to obtain remote access to your virtual data centres running on the UKCloud platform
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: How To
 toc_sub1:
@@ -33,19 +35,23 @@ This article details the steps required to obtain, deploy and configure an OpenV
 
 To secure your environment, we recommend that you deploy the OpenVPN appliance into a new, routed VDC network. Ideally, no other virtual machines (VMs) should connect to this network. This enables you to tightly control access from VPN clients to the VMs in your environment using firewall rules on the edge gateway. However, if you're approaching the network interface limit of your edge gateway, it's possible to deploy the OpenVPN appliance into an existing network.
 
-**More information!** [*How to create a routed VDC network*](vmw-how-create-routed-network.md)
+For more information, see [*How to create a routed VDC network*](vmw-how-create-routed-network.md).
 
 ### Configuring the edge gateway
 
 After you've created the network, you'll need to configure the edge gateway to control access to the VMs in your environment by creating:
 
 - A Source NAT rule to allow the OpenVPN appliance outbound access to the internet.
+
 - A Destination NAT rule to allow inbound access from the internet.
+
 - A firewall rule to allow inbound access from the internet on port `443`.
+
 - One or more firewall rules to allow users connected to the OpenVPN appliance to access VMs on other networks for administration purposes. Note that all VPN users will be NATed to the IP address of the OpenVPN appliance.
+
 - One or more firewall rules to allow access from trusted environments to the OpenVPN appliance on the admin port (`943` by default, but can be changed).
 
-**More information!** [*How to create NAT rules*](vmw-how-create-nat-rules.md) and [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
+For more information, see [*How to create NAT rules*](vmw-how-create-nat-rules.md) and [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
 
 ## Obtaining the latest OpenVPN appliance
 
@@ -55,85 +61,33 @@ To ensure you're running the latest release of OpenVPN, we recommend that you do
 
     <https://swupdate.openvpn.org/appliances/AS2.ova>
 
-2. In vCloud Director, select the **Catalogs** tab.
+2. In vCloud Director, click the menu icon and select **Libraries**.
 
-3. In the left navigation panel, select **My Organization's Catalogs**.
-
-4. Open the catalog you'd like to add the appliance to, or create a new catalog.
-
-5. Click the **Upload** button and upload the OVA file to the catalog.
+3. To upload the OVA file to a catalog, see [*How to create a catalog*](vmw-how-create-catalog.md).
 
 ## Deploying the OpenVPN appliance
 
-The steps for deploying the OpenVPN appliance depend on the version of vCloud Director available in your environment:
-
-- [vCloud Director 8.20](#vcloud-director-820)
-
-- [vCloud Director 9.1](#vcloud-director-91)
-
-### vCloud Director 8.20
-
 To deploy the OpenVPN appliance:
 
-1. In vCloud Director, select the **My Cloud** tab.
-
-    ![vCloud Director My Cloud tab](images/vmw-vcd-tab-my-cloud.png)
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC in which you want to deploy the OpenVPN appliance.
 
 2. In the left navigation panel, select **vApps**.
 
-3. In the toolbar, click the **Add vApp from OVF** icon.
-
-    ![Add vApp from OVF button](images/vmw-vcd-openvpn-btn-vapp-from-ovf.png)
-
-4. In the *Add vApp from OVF* wizard, on the *Select Source* page, select **Local file** and browse to the OVA file that you downloaded, then click **Next**.
-
-    The appliance will be deployed as a single VM inside the vApp.
-
-5. On the *Review Details* page, confirm the details of the OVA file and then click **Next**
-
-6. On the *Select Name and Location* page, enter a meaningful **Name** and **Description** for your vApp
-
-7. From the **Virtual Datacenter** list, select the VDC in which you want to create the vApp and then click **Next**.
-
-8. On the *Configure Resources* page, select your desired storage policy and then click **Next**.
-
-9. On the *Configure Networking* page, provide a name for the VM.
-
-10. Select the **Switch to the advanced networking workflow** check box.
-
-    ![Advanced networking option](images/vmw-vcd-openvpn-advanced-networking.png)
-
-    This enables you to select your desired network and change the IP assignment method. Typically, we recommend that you deploy the VPN appliance to its own network segment (as described in [Preparing your virtual data centre](#preparing-your-virtual-data-centre), and use the Static IP Pool method of IP assignment.
-
-11. Continue through the wizard and click **Finish**. There are no further changes necessary unless you want to customise the vApp further to suit your environment.
-
-12. When the vApp has deployed and is powered on, you'll need to reset (reboot) the VM before logging in for the first time to force the networking changes made during VMWare's guest customisations to take effect before you start configuring OpenVPN.
-
-### vCloud Director 9.1
-
-To deploy the OpenVPN appliance:
-
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC in which you want to depoly the OpenVPN appliance.
-
-2. In the left navigation panel, select **vApps**.
-
-    ![vApps tab in vCloud Director](images/vmw-vcd91-tab-vapps.png)
+    ![vApps tab in vCloud Director](images/vmw-vcd-tab-vapps.png)
 
 3. Click **Add vApp from OVF**.
 
-    ![Add vApp from OVF option](images/vmw-vcd-tp-vapp-from-ovf.png)
+    ![Add vApp from OVF option](images/vmw-vcd-btn-vapp-from-ovf.png)
 
 4. Select the OVA that you downloaded then click **Next**.
 
-5. Review the details of the OVA to confirm that it's the right images then click **Next**.
+5. Review the details of the OVA to confirm that it's the right image then click **Next**.
 
-6. The appliance will be deployed as a single VM inside a vApp. Provide a name for the vApp then click **Next**.
+6. The appliance will be deployed as a single VM inside a vApp. Provide a **Name** and (optinal) **Description** for the vApp then click **Next**.
 
 7. Provide a valid NetBIOS host name and your desired storage policy then click **Next**.
 
-8. Configure the network by selecting **Switch to advanced networking workflow**.
-
-    ![Configure Networking page of Create vApp from OVF wizard](images/vmw-vcd-tp-vapp-from-ovf-network.png)
+8. Configure the network by selecting **Switch to the advanced networking workflow**.
 
 9. Select the network adapter type, network and IP pool assignment (**Manual**) then click **Next**.
 
@@ -154,21 +108,30 @@ To perform initial configuration:
     > [!TIP]
     > To obtain the root password:
     >
-    > - In vCloud Director 8.20, right-click the VM, select **Properties**, click the **Guest OS Customization** tab and make a note of the password.
-    > - In vCloud Director 9.1, in the card for the VM, click **Details** then select **Guest OS Customization** and make a note of the password.
+    > In the card for the VM, click **Details** then select **Guest OS Customization** and make a note of the password.
 
 3. You'll be prompted to answer a series of questions:
 
     - **Licence agreement:** --- Enter `yes` to accept.
+
     - **Will this be the primary Access Server node?** --- Enter `yes`.
+
     - **Please specify the network interface and IP address to be used by the Admin Web UI** -- If the guest customisations were applied correctly, this should default to `eth0`, which should be configured with an IP address on the network you selected during deployment.
+
     - **Please specify the port number for the Admin Web UI** --- Enter your desired port number, or accept the default of `943`. A separate port is not strictly needed for administration but is recommended.
+
     - **Please specify the TCP port number for the OpenVPN Daemon** --- We recommend that you use the default of `443` where possible as the use of a non-standard port may cause problems when connecting from corporate networks.
+
     - **Should client traffic be routed by default through VPN?** --- Entering `yes` will prevent your client device from accessing any other networks (for example, your corporate network) while the VPN is connected. For ease of use, we suggest you answer `no` to this question.
+
     - **Should client DNS traffic be routed by default through the VPN?** --- If you answered `yes` to the previous question, all traffic will be routed through the VPN anyway, so your answer here will not matter. If you answered `no` to the previous question, you'll probably want to answer `no` to this question so that your DNS queries are answered by the usual servers.
+
     - **Use local authentication via internal DB?** --- Enter `yes` unless you want to authenticate users from an existing directory service (Active Directory/LDAP).
+
     - **Should private subnets be accessible to clients by default?** --- Answer `yes` to enable access to your cloud networks via the VPN.
+
     - **Do you wish to login to the Admin UI as "openvpn"?** --- Answer `yes` to create a local user account named `openvpn`. If you answer `no`, you'll need to set up a different user name and password.
+
     - **Please specify your OpenVPN-AS license key** --- If you've purchased a licence, enter the licence key, otherwise leave this blank.
 
 4. When you've completed the setup wizard, you'll need to create user accounts and passwords on the local operating system (unless you configured an LDAP directory).
@@ -348,8 +311,8 @@ To disable the default account:
 
 ## More help
 
-If you have any issues regarding the updating or support of Microsoft Server, contact the UKCloud support team by raising a Service Request.
+If you have any issues regarding the updating or support of Microsoft Server, contact the UKCloud support team by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

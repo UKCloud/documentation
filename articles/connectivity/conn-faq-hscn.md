@@ -3,6 +3,8 @@ title: HSCN connectivity FAQs | UKCloud Ltd
 description: Frequently asked questions for HSCN Connectivity
 services: connectivity
 author: Matt Warner
+reviewer:
+lastreviewed: 20/07/2018 18:37:23
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -51,13 +53,19 @@ Alternatively, you can request a new UKCloud Master Services Agreement (MSA v11.
 
 UKCloud will validate that you have signed up to the terms of the HSCN Connection Agreement before connecting you to HSCN.
 
+### What is UKCloud's ODS code? 
+
+The UKCloud ODS code is 8J561.
+
+You can find all ODS and connection agreements at <https://crm.digital.nhs.uk/hscnconnectionagreementsearch/>.
+
 ## Migration
 
 ### How do I migrate my existing UKCloud N3 workload onto HSCN?
 
 First you need to align with the HSCN Connection Agreement. You can do this by either signing your own Connection Agreement and having NHS Digital counter-sign. You can then supply us with a copy of it. Alternatively, you can sign the UKCloud Master Services Agreement (MSA version 11.0 onwards) and be covered by the flow-down of the Connection Agreement terms.
 
-Once you have a Connection Agreement in place, you will need to raise a service request for HSCN.
+Once you have a Connection Agreement in place, you will need to raise a service request for HSCN via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 We will give you a new Edge or Router with as many HSCN IPs as you are currently using for N3 assigned to it.
 
@@ -91,7 +99,7 @@ HSCN will be provided free for one month per connection for existing customers w
 
 ### Will there be additional costs for migration?
 
-Migration assistance in-hours (8am-8pm) will be done free-of-charge, if out-of-hours (8pm-8am) migration support is required then a SFIA rate for engineer time may be applied to the migration.
+Migration assistance in-hours (8am-8pm) will be done free-of-charge, if out-of-hours (8pm-8am) migration support is required then a [SFIA](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) rate for engineer time may be applied to the migration.
 
 ## Service
 
@@ -109,7 +117,7 @@ The UKCloud assured cloud platform is connected to the HSCN in geographically di
 
 Billing for HSCN connectivity is monthly in arrears. Charges are included in your monthly invoice, along with charges for your UKCloud services.
 
-We charge for each separate connection on the UKCloud platform at the Service vOrg/Project level UKCloud pricing is available via the [G-Cloud Digital Marketplace](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/772343517162961-pricing-document-2018-05-23-0842.pdf)
+We charge for each separate connection on the UKCloud platform at the Service vOrg/Project level UKCloud pricing is available via the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf)
 
 ### Is there a minimum commitment period?
 
@@ -119,7 +127,7 @@ UKCloud charges monthly for connectivity solutions, and requires a minimum commi
 
 Simple implementations of HSCN won't incur any additional setup or onboarding charges.
 
-For complex networking solutions, we reserve the right to charge SFIA rates. We'll always tell you in advance if an engagement will incur [SFIA rate card](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/772343517162961-sfia-rate-card-2018-05-21-1251.pdf) charges.
+For complex networking solutions, we reserve the right to charge SFIA rates. We'll always tell you in advance if an engagement will incur [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) charges.
 
 ### Does UKCloud provide data encryption?
 
@@ -193,7 +201,7 @@ You won't need a sponsor to connect to HSCN, however you may need a sponsor to c
 
 ### Do I need to complete a Connection Agreement for each HSCN service I have on your cloud platform?
 
-No. you only need one signed Connection Agreement or UKCloud's [terms and conditions](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/772343517162961-terms-and-conditions-2018-05-21-1251.pdf) to present multiple services to HSCN.
+No. you only need one signed Connection Agreement or UKCloud's [terms and conditions](../other/other-ref-terms-and-conditions.md) to present multiple services to HSCN.
 
 However, you may need to create an accreditation pack for each individual service to present to the Information Accreditors who are looking at the security of your application before customers will procure it.
 
@@ -253,4 +261,4 @@ Please note that IP changes are NOT instantaneous and may take some time to prop
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

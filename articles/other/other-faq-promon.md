@@ -3,6 +3,9 @@ title: Protective Monitoring FAQs | UKCloud Ltd
 description: Frequently asked questions for Protective Monitoring
 services: other
 author: Matt Warner
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
+
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -33,7 +36,7 @@ In the case of our compute products (UKCloud for VMware, UKCloud for OpenStack a
 
 The following demonstrates the scope of UKCloud's Protective Monitoring;
 
-- **External connectivity, for example, internet, PSN, N3/HSCN, Janet, RLI, leased lines** - responsibility of the Telecommunications provider.
+- **External connectivity, for example, internet, PSN, HSCN, Janet, RLI, leased lines** - responsibility of the Telecommunications provider.
 
 - **Perimeter Routes/Firewalls** - UKCloud protectively monitors and regularly assesses any potential vulnerabilities at the perimeter, alongside other mitigations including DDoS^ and active vulnerability scanning.
 
@@ -61,4 +64,4 @@ Yes. We have an active project working to expose some threat and intelligence in
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

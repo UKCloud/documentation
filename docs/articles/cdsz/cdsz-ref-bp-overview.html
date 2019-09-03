@@ -1,0 +1,383 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Cross Domain Security Zone Blueprint | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Cross Domain Security Zone Blueprint | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/cdsz/cdsz-ref-bp-overview.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="cross-domain-security-zone-blueprint">Cross Domain Security Zone Blueprint</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Our customers' requirements range from relatively low-security solutions that are natively accessible on the internet, to solutions that must be more restricted and accessible only over government community networks such as the PSN, JANET or HSCN.</p>
+<p>To meet these varying needs, we've implemented two security domains on our platform, both of which are accredited for hosting systems and data classified at OFFICIAL:</p>
+<ul>
+<li><p>Assured OFFICIAL security domain ― directly connected to our DDoS-protected internet, PSN, JANET and HSCN networks</p>
+</li>
+<li><p>Elevated OFFICIAL security domain — natively connected only to the PSN and RLI, it benefits from increased security as all users and devices that can access this security domain are known and trusted</p>
+</li>
+</ul>
+<p>The Government Digital Service (GDS) strategy of &quot;internet is okay&quot; is dividing opinion across government. On one hand, many applications that were initially PSN connected and only accessible by a closed community are now being connected to the internet, pushing security from the physical network layer to the services themselves, reducing cost and time to delivery. On the other hand, a lot of data is considered too sensitive to be stored in a directly internet-connected environment, where the attack vector of an internet connection creates too much risk.</p>
+<p>Where customers choose to host their sensitive data in a non-internet connected environment, but still require internet connectivity for some aspects of their service, they can connect their application components which are on Assured OFFICIAL to application components that on Elevated OFFICIAL.</p>
+<p>To connect these components, a customer must use a Cross Domain Security Zone (CDSZ), which provides a controlled interconnection between the lower-security domain (Assured OFFICIAL) and the higher-security domain (Elevated OFFICIAL).</p>
+<p>This Blueprint draws on our experience of working with government customers and NCSC to help architect cross-domain solutions.</p>
+<h2 id="key-principles">Key principles</h2>
+<h3 id="the-role-of-the-customers-accreditor">The role of the customer's accreditor</h3>
+<p>We provide our Assured OFFICIAL and Elevated OFFICIAL security domains. Our customers are responsible for the accreditation of the applications they run on either security domain, including any specific use of the UKCloud Cross Domain Security Zone.</p>
+<p>The customer's accreditor is responsible for identifying, assessing and mitigating the specific risks to their individual solution that are created by the use of the UKCloud Cross Domain Security Zone. As part of the customer's own assurance activities, we recommend engaging a CLAS or CCP Security Professional and have an IT Security Health Check carried out by a CHECK test provider.</p>
+<h3 id="effective-risk-mitigation">Effective risk mitigation</h3>
+<p>When reviewing a UKCloud Cross Domain Security Zone application document set, submitted for approval by a customer, UKCloud will expect to see a number of controls included in the solution to adequately mitigate the risks of exposing an application that uses particularly sensitive data to the internet.</p>
+<p>It isn't necessarily the case that all of these controls will be needed for a solution to be approved, but aiming to include as many of them as possible will help to ensure that the approval process requires less scrutiny, and that the solution can move to the implementation phase much more quickly.</p>
+<p>Listed below are the controls we believe UKCloud and customer SIROs will expect to see in place when they review a solution that requires the UKCloud Cross Domain Security Zone capability.</p>
+<h4 id="controls">Controls</h4>
+<ul>
+<li><p>Protective Monitoring and possibly a Security Operations Centre (SOC)</p>
+</li>
+<li><p>Information Assurance Standard (IS) 1 and IS2 Technical Risk Assessment</p>
+<ul>
+<li><p>IS1 is a government standard for risk assessment</p>
+</li>
+<li><p>IS2 is a government standard for risk management and accreditation</p>
+</li>
+</ul>
+</li>
+<li><p>Risk Management and Accreditation Documentation Set (RMADS)</p>
+</li>
+<li><p>Host-based intrusion detection (HIDS)</p>
+<ul>
+<li>Agents installed within virtual machines (VMs) that collect log data and alert on unusual behaviour or potentially forward to a SOC</li>
+</ul>
+</li>
+<li><p>IT Security Health Check (CHECK) test</p>
+<ul>
+<li>Penetration test performed by an NCSC CHECK-approved tester</li>
+</ul>
+</li>
+<li><p>Content type checking</p>
+<ul>
+<li>Security policy defining which content types are permitted (binary/xml/json etc)</li>
+</ul>
+</li>
+<li><p>Deep content inspection</p>
+<ul>
+<li>Inspection of an HTTP request/response body, including, for example, things such as XML Schema validation or field length checking</li>
+</ul>
+</li>
+<li><p>Data loss prevention</p>
+<ul>
+<li>Software that prevents data leaving an organisation without permission</li>
+</ul>
+</li>
+<li><p>Anti-virus</p>
+<ul>
+<li>Consider how definitions are downloaded and made available to VMs</li>
+</ul>
+</li>
+</ul>
+<h2 id="cross-domain-security-zone-service-options">Cross Domain Security Zone service options</h2>
+<p>The UKCloud Cross Domain Security Zone enables customers to securely transfer data between the UKCloud Assured OFFICIAL security domain and the UKCloud Elevated OFFICIAL security domain using NCSC-approved cross-domain security patterns.</p>
+<p>There were three options available within the Cross Domain Security Zone product set, however the UKCloud Guard is due to be retired from sale so there are now two service options available:</p>
+<ul>
+<li><p>Secure Remote Access. We provide a self-service remote access solution so that customers who do not have a PSN or RLI connection to their business premises may have a method of managing their environments within Elevated OFFICIAL. Note that this is for management purposes only, and not for end-user access to the Elevated security domain. This service is not covered within this Blueprint.</p>
+</li>
+<li><p>Walled Garden. Self-service management of a Cross Domain Security Zone Walled Garden, enabling customers to implement security applications of their choice. We provide an assurance wrap by ensuring customers use appropriate risk management to understand and mitigate identified risks.</p>
+</li>
+</ul>
+<h2 id="how-the-walled-garden-works">How the Walled Garden works</h2>
+<p>UKCloud Walled Garden is a single-tenant walled garden architecture, within a separate zone of the UKCloud platform that customers can populate with VMs to allow communication between applications on the Assured OFFICIAL and Elevated OFFICIAL security domains.</p>
+<p>Customers have full control of the services within their walled garden, enabling them to transmit communications between security domains using any protocols required. Protocols and traffic include RDP, SSH, binaries, and management protocols such as SNMP and NMI.</p>
+<p>When a customer implements a walled garden, they need to take precautions to ensure the integrity and availability of data across both security domains. These precautions must be documented in the Cross Domain Security Zone submission. Traffic through the walled garden can originate from either Assured or Elevated OFFICIAL.</p>
+<p>The walled garden can be a target for single or multiple application servers in either platform, and can contain as many virtual machines as are needed to service application requests across the walled garden. The figure below shows an example of a possible setup, but it should be used as a starting point only; customers may want to populate their walled garden with more services to meet their needs.</p>
+<p><img src="images/cdsz-example-setup.png" alt="Schematic of the Walled Garden"></p>
+<p>It's important to highlight that there is no pre-defined architectural pattern that a solution must fit into. To help, UKCloud can make recommendations about the architectures that are likely to be approved by the customer accreditors. However, this will be guidance only — each solution will be approved by the end-customer data owner before UKCloud will allow the customer to build.</p>
+<h3 id="assured-official-security-domain">Assured OFFICIAL security domain</h3>
+<p>The Assured OFFICIAL security domain should have:</p>
+<ul>
+<li><p>Firewall rules to tightly control traffic to the applications which will talk across the walled garden</p>
+</li>
+<li><p>Anti-virus</p>
+</li>
+<li><p>Protective monitoring</p>
+</li>
+</ul>
+<p>Additional techniques to further secure the solution should be used if possible:</p>
+<ul>
+<li><p>OS and application hardening to reduce services running on the server, decreasing the surface of vulnerability</p>
+</li>
+<li><p>Logging of events on the server for auditing purposes, with logs included in the protective monitoring solution</p>
+</li>
+<li><p>Content checking to ensure the integrity of data and provide a defence against content attacks</p>
+</li>
+</ul>
+<p>It is recommended that it should have an anti-virus product that differs from other anti-virus products used in the overall solution.</p>
+<h3 id="walled-garden">Walled Garden</h3>
+<p>The Walled Garden consists of a single-tenant walled garden architecture which should include:</p>
+<ul>
+<li><p>A protocol break and re-creation, for example by using a reverse proxy</p>
+</li>
+<li><p>Inspection of the data to validate the message structure or message content, to ensure the messages used to convey the application data are correctly encoded, and to confirm that the content within the messages are as expected</p>
+</li>
+<li><p>IDS and logging of events on the VMs for auditing purposes, and alert generation for messages that fail the validation process as part of a protective monitoring solution</p>
+</li>
+<li><p>Anti-virus</p>
+</li>
+</ul>
+<p>Other considerations for the Walled Garden include:</p>
+<ul>
+<li><p>OS and application hardening to reduce services running on the server, decreasing the surface of vulnerability</p>
+</li>
+<li><p>Implementation of release controls to enforce a whitelist of the data types and content permitted for release through the Walled Garden</p>
+</li>
+<li><p>Direction control for data moving from either high-to-low or low-to-high domains; for example, best practice is to prevent 'pull' requests from the application in the low domain</p>
+</li>
+</ul>
+<p>It's good practice to run non-SSL traffic so the Walled Garden doesn't need to decrypt and re-encrypt to inspect the messages.</p>
+<p>Customers can have different VMs within a single walled garden instance servicing different requests to span the two domains. For example, a customer could have software updates and protective monitoring traffic being serviced by the same VMs within the walled garden.</p>
+<h3 id="elevated-official-security-domain">Elevated OFFICIAL security domain</h3>
+<p>The Elevated OFFICIAL security domain should have:</p>
+<ul>
+<li><p>Firewall rules to tightly control traffic to the applications that will talk across the Walled Garden</p>
+</li>
+<li><p>Post-authentication to enable access control and auditing</p>
+</li>
+<li><p>Anti-virus</p>
+</li>
+<li><p>Protective monitoring with IDS</p>
+</li>
+</ul>
+<p>Additional techniques to further secure the solution should be used if possible:</p>
+<ul>
+<li><p>OS and application hardening to reduce services running on the server, decreasing the surface of vulnerability</p>
+</li>
+<li><p>Logging of events on the VMs for auditing purposes, with logs included in the protective monitoring solution</p>
+</li>
+<li><p>Content checking to ensure the integrity of data and provide a defence against content attacks</p>
+</li>
+</ul>
+<p>It should also be configured with an anti-virus product that differs from other anti-virus products used in the overall solution.</p>
+<h3 id="networking">Networking</h3>
+<p>Applications that communicate across the Walled Garden should be placed on a dedicated network segment that can be securely segregated from other segments using firewall rules, managed through the cloud technology's virtual firewalls such as NSX edges, or customers' own virtual firewalls.</p>
+<p>The inter-environment connections between the firewalls, from Assured OFFICIAL to the Walled Garden, and from the Walled Garden to Elevated OFFICIAL are all controlled by UKCloud to ensure that correct connectivity is maintained.</p>
+<p>The networking within the customer's environments, within Assured, Walled Garden and Elevated are the customer's responsibility.</p>
+<p>Customers can choose between two ways of routing traffic to the walled garden, and must state their choice before implementation:</p>
+<ul>
+<li><p>To terminate the connection to the walled garden at the edge, and then NAT the traffic into the walled garden</p>
+</li>
+<li><p>To route the traffic directly into the walled garden</p>
+</li>
+</ul>
+<p>The figure below shows the network topography for a typical walled garden.</p>
+<p><img src="images/cdsz-network-topography.png" alt="Walled Garden network topography"></p>
+<h2 id="high-availability">High availability</h2>
+<p>The UKCloud Cross Domain Security Zone is highly available within a single site. If site-level resilience is required, customers must buy a second Cross Domain Security Zone, which will be configured with the same policy as the primary site.</p>
+<p>The two instances can then be used:</p>
+<ul>
+<li><p>Active/passive via application configuration updates (for example change Walled Garden target in the event of a failure)</p>
+</li>
+<li><p>In active/active configuration, which is perhaps more useful</p>
+</li>
+</ul>
+<p>If Cross Domain Security Zone instances will be used in an active/active configuration, the customer needs to implement a load balancer in the Assured or Elevated tier (depending on the direction of the traffic flow) to send requests to both Cross Domain Security Zones.</p>
+<h2 id="the-approval-process">The approval process</h2>
+<p>Every UKCloud Cross Domain Security Zone implementation requires customer Data Owner and UKCloud approval before the customer can carry out any implementation work.</p>
+<p>The approval process is shown below. More information is available in the <a href="cdsz-ref-application-process.html"><em>UKCloud Cross Domain Security Zone application process</em></a>.</p>
+<p><img src="images/cdsz-process-overview.png" alt="Cross Domain Security Zone application process"></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 Initial Contact</td>
+<td>Customer contacts UKCloud to register interest in the CDSZ service. This can be through <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> or direct contact with a Sales representative, Technical Account Manager (TAM) or Cloud Architect.</td>
+</tr>
+<tr>
+<td>2a Self-Assessment</td>
+<td>Customer creates the document pack to illustrate the solution design and provide evidence that all necessary sign-offs and compliance have been obtained.</td>
+</tr>
+<tr>
+<td>2b Assurance Wrap Review</td>
+<td>Customer creates the document pack with assistance from the UKCloud compliance team and Cloud Architect.</td>
+</tr>
+<tr>
+<td>3 Design Review</td>
+<td>Customer presents the technical solution to the Cloud Architect for advice and feedback.</td>
+</tr>
+<tr>
+<td>4 Application Submission</td>
+<td>Customer raises a Service Request and submits the document pack.</td>
+</tr>
+<tr>
+<td>5 Service Implementation</td>
+<td>UKCloud provisions the service and the customer implements their solution.</td>
+</tr>
+<tr>
+<td>6 On-Going Compliance</td>
+<td>Once the implementation is in operation, the customer is responsible for ensuring continuing compliance with Security Operating procedures (SyOps) and other security obligations. UKCloud annually prompts customers to review the existing document pack and provide updated information for any changes to design or approvals.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="required-documents">Required documents</h3>
+<p>When you apply for a Cross Domain Security Zone service, you must provide the following documents to show that you have identified and mitigated for any risks:</p>
+<ul>
+<li><p>Details of your proposed implementation that covers the intended design in the CDSZ, the Assured and Elevated VDCs you are connecting to and data flows.</p>
+</li>
+<li><p>Evidence (for example, email or signed document) of acceptance of risk from the data owning organisation. This should also indicate if this acceptance is a Tell Us Once agreement that will also apply to future CDSZ implementations by the customer on behalf of the data owner.</p>
+<p>If a Tell Us Once agreement is already in place between the customer and the data owner, this evidence is not required, but the customer should indicate that such an agreement is in place so that UKCloud can confirm against our list of trusted partners for the data owner.</p>
+</li>
+<li><p>An explicit statement, as part of the Service Request, that the solution has been reviewed by a named UKCloud Cloud Architect or that you do not require a review. The named Cloud Architect must provide review notes as evidence that the review took place.</p>
+</li>
+<li><p>If you're connecting to a PSN Protected enabled VDC, proof of PSN compliance (a copy of PSN CoCo or PSN CoP).</p>
+</li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

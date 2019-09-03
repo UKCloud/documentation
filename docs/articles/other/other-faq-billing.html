@@ -1,0 +1,417 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Invoice and billing FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Invoice and billing FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-faq-billing.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="invoice-and-billing-faqs">Invoice and billing FAQs</h1>
+
+<h2 id="general">General</h2>
+<h3 id="when-will-i-be-billed">When will I be billed?</h3>
+<p>We send out invoices on the first day of each month for the previous month's usage.</p>
+<h3 id="how-can-i-pay">How can I pay?</h3>
+<p>Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.</p>
+<p>If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.</p>
+<h3 id="how-is-my-invoice-formatted">How is my invoice formatted?</h3>
+<p>Your invoice includes a line for each chargeable service. For example, there might be a row for your UKCloud for VMware charges, one for Cloud Storage and another for HSCN connectivity.</p>
+<h3 id="what-is-the-evidence-file">What is the evidence file?</h3>
+<p>The UKCloud evidence file is a CSV file provided with your invoice that contains data on your hourly metered charges per month and corroborates how the totals invoiced are derived.</p>
+<p>Each row in the evidence file represents a chargeable period for a UKCloud service, for example, a VMware VM, OpenStack VM (or instance) or Cross Domain Security Zone Walled Garden. Each row includes usage hours/minutes and relevant charges for that service.</p>
+<h3 id="how-are-usage-hours-rounded">How are usage hours rounded?</h3>
+<p>Usage hours are typically rounded up, however there is a maximum of 24 hours total of usage hours per event date per resource ID. Billable hours are calculated as follows:</p>
+<ol>
+<li><p>Items with the same VM type, power type, protection type are grouped together.</p>
+</li>
+<li><p>For each group of items with the same VM type and protection type with the power state of <code>on</code> the total number of usage minutes is rounded up to the nearest hour (this is capped to a maximum of 24 hours). Billable hours are allocated to the first matching rated item.</p>
+</li>
+<li><p>The process is then repeated for each group of items with the same VM type and protection type, with the power state of <code>off</code>.</p>
+</li>
+</ol>
+<h3 id="what-about-services-that-arent-in-the-evidence-file">What about services that aren't in the evidence file?</h3>
+<p>Some metered services are not yet integrated into the evidence file. You can find details of these services on your invoice.</p>
+<h2 id="ukcloud-for-vmware-charges">UKCloud for VMware charges</h2>
+<h3 id="how-are-my-ukcloud-for-vmware-vm-charges-calculated">How are my UKCloud for VMware VM charges calculated?</h3>
+<p>The cost of your UKCloud for VMware VMs is determined by adding together the cost of your compute, storage, protection and licensing. You can find these individual costs in the following columns of the evidence file in rows of the service type (column H) of <code>VMware VM</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compute</td>
+<td>U</td>
+</tr>
+<tr>
+<td>Tier 1 Storage</td>
+<td>AE</td>
+</tr>
+<tr>
+<td>Tier 2 Storage</td>
+<td>AK</td>
+</tr>
+<tr>
+<td>Geo-resilient Storage</td>
+<td>AQ</td>
+</tr>
+<tr>
+<td>Protection</td>
+<td>BA</td>
+</tr>
+<tr>
+<td>Licensing</td>
+<td>BC</td>
+</tr>
+</tbody>
+</table>
+<p>The compute cost of a VM (column U) is determined by the amount of time the VM was powered on (column N), the VM size (column O), power level (column P) and security domain (column Q).</p>
+<h3 id="how-many-vms-do-i-have-and-what-t-shirt-size-are-they">How many VMs do I have and what t-shirt size are they?</h3>
+<p>Each VM is identified in the spreadsheet by its resource ID (column F). Each VM will have multiple rows depending on when it was created and its different power state during the billing period. The size of the VM is indicated by its Compute Machine Type (column O).</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For user-defined VMs, the highest resource closest to the VM size will dictate the cost. For example 2 vCPU and 16GiB will be charged at the Medium High Memory cost.</p>
+</div>
+<h3 id="do-i-have-any-vcloud-snapshots-that-im-being-charged-for">Do I have any vCloud snapshots that I'm being charged for?</h3>
+<p>If you've taken manual vCloud snapshots of your VM, you'll see these in the following columns of the evidence file:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tier 1 storage allocated for vCloud snapshots</td>
+<td>AA</td>
+</tr>
+<tr>
+<td>Tier 2 storage allocated for vCloud snapshots</td>
+<td>AG</td>
+</tr>
+<tr>
+<td>Geo-resilient storage allocated for vCloud snapshots</td>
+<td>AM</td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-many-hours-are-my-vms-on-per-month">How many hours are my VMs on per month?</h3>
+<p>Usage hours are listed in the evidence file in column N (UsageHours). To see how many hours your VMs are on for month, look for the usage hours in rows with a service type (column H) of <code>VMware VM</code> and a power state (column L) of <code>on</code>.</p>
+<h3 id="how-much-block-storage-are-my-vms-using">How much block storage are my VMs using?</h3>
+<p>The amount and cost of block storage for your VMs is listed in the evidence file under the following columns:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tier 1 Storage used</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>Tier 1 Storage cost</td>
+<td>AE</td>
+</tr>
+<tr>
+<td>Tier 2 Storage used</td>
+<td>AF</td>
+</tr>
+<tr>
+<td>Tier 2 Storage cost</td>
+<td>AK</td>
+</tr>
+<tr>
+<td>Geo-resilient Storage used</td>
+<td>AL</td>
+</tr>
+<tr>
+<td>Geo-resilient Storage cost</td>
+<td>AQ</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<p>60GiB of Tier 2 storage is included in the pricing for all VMs whilst they are powered on, except for Micro, which has 10giB of included storage. For VMs in powered-off state, consumed storage will be charged at the prevailing rate.</p>
+</div>
+<h3 id="what-are-the-protection-costs-for-my-vms">What are the protection costs for my VMs?</h3>
+<p>Protection costs for your VM are listed in the following columns of the evidence file:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Protection cost for the VM</td>
+<td>AT</td>
+</tr>
+<tr>
+<td>Protection cost for Tier 1 storage</td>
+<td>AX</td>
+</tr>
+<tr>
+<td>Protection cost for Tier 2 storage</td>
+<td>AY</td>
+</tr>
+<tr>
+<td>Protection cost for Geo-resilient storage</td>
+<td>AZ</td>
+</tr>
+<tr>
+<td>Total protection cost</td>
+<td>BA</td>
+</tr>
+</tbody>
+</table>
+<p>The cost of protection depends on the protection type (column AR) you have applied to your VM and block storage. The protection type for your VM and its block storage must be the same.</p>
+<h3 id="how-much-storage-am-i-using-for-independent-disks-media-and-templates">How much storage am I using for independent disks, media and templates?</h3>
+<p>UKCloud for VMware costs also include storage used by any independent disks, media and templates you have, which is listed as separate rows in the evidence file. Look for rows with the service type (column H) of VMware Independent Disk, VMware Media and VMware Template.</p>
+<h3 id="how-much-am-i-spending-on-windows-licensing-on-my-estate">How much am I spending on Windows licensing on my estate?</h3>
+<p>The operating system installed on your VM is shown in column G of the evidence file. Associated licensing costs are shown in column BC.</p>
+<h3 id="how-can-i-divide-up-the-costs-of-my-estate-for-example-between-different-projects-departments-or-cost-centres">How can I divide up the costs of my estate, for example between different projects, departments or cost centres?</h3>
+<p>You can add metadata to your individual VMs, which propagates to the evidence file (as a semi colon-separated list in column I). You can then add your own formulas to the evidence file spreadsheet to use that metadata to cross charge workloads. For example, if you use metadata to assign VMs to different cost centres or projects, you could add formulas to divide VM charges across those different cost centres or projects.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The VM metadata will be listed in the evidence file on the day after you tag the VM. For example, if you tag your VM on the 3rd, the metadata will be listed in the evidence file from the 4th, unless a VM power cycle occurs on the 3rd.</p>
+</div>
+<p>The <a href="../vmware/vmw-how-use-vm-location.html"><em>How to use VM location in vCloud Director</em></a> article includes information about how to access metadata for your VMs.</p>
+<h2 id="ukcloud-for-openstack-charges">UKCloud for OpenStack charges</h2>
+<h3 id="how-are-my-ukcloud-for-openstack-charges-calculated">How are my UKCloud for OpenStack charges calculated?</h3>
+<p>The cost of your UKCloud for OpenStack instances is determined by adding together the cost of your compute and storage. You can find these individual costs in the following columns of the evidence file in rows of the service type (column H) of <code>OpenStack Virtual Machine</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compute</td>
+<td>U</td>
+</tr>
+<tr>
+<td>Tier 1 Storage</td>
+<td>AE</td>
+</tr>
+<tr>
+<td>Tier 2 Storage</td>
+<td>AK</td>
+</tr>
+</tbody>
+</table>
+<p>The compute cost of an instance (column U) is determined by the instance size (column O), security domain (column Q), vCPU (column R), and memory (column S).</p>
+<h3 id="are-shelved-instances-included-in-the-evidence-file">Are shelved instances included in the evidence file?</h3>
+<p>When you shelve an OpenStack instance, all compute charges for that instance cease, so it no longer appears in the evidence file as an <code>OpenStack Virtual Machine</code> row. When an instance is shelved, a snapshot is taken, so the evidence file includes an <code>OpenStack Image</code> row for the instance, which details the storage charges for that snapshot.</p>
+<h3 id="how-much-block-storage-are-my-instances-using">How much block storage are my instances using?</h3>
+<p>Block storage for OpenStack instances is included in the evidence as separate line items with the service type (column H) of <code>OpenStack Block Storage Tier 1</code> or <code>OpenStack Block Storage Tier 2</code>.</p>
+<p>The amount and cost of block storage is provided in the following columns:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tier 1 Storage used</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>Tier 1 Storage cost</td>
+<td>AE</td>
+</tr>
+<tr>
+<td>Tier 2 Storage used</td>
+<td>AF</td>
+</tr>
+<tr>
+<td>Tier 2 Storage cost</td>
+<td>AK</td>
+</tr>
+</tbody>
+</table>
+<p>UKCloud for OpenStack storage costs also include any images you have, which are listed as separate rows in the evidence file. Look for rows with the service type (column H) of <code>OpenStack Image</code>.</p>
+<h2 id="cloud-gpu-charges">Cloud GPU charges</h2>
+<h3 id="how-are-my-cloud-gpu-charges-calculated">How are my Cloud GPU charges calculated?</h3>
+<p>Costs for Cloud GPU are shown against VMware VMs in the following columns of the evidence file:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPU type (compute or visualisation)</td>
+<td>V</td>
+</tr>
+<tr>
+<td>GPU cost</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<p>The cost of a GPU VM depends on whether it is for compute or visualisation (column X).</p>
+<h3 id="how-can-i-see-how-many-gpu-vms-i-have">How can I see how many GPU VMs I have?</h3>
+<p>To find out how many GPU VMs you have, look for rows with a service type (column H) of <code>VMware VM</code> that include a GPU count (column W).</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

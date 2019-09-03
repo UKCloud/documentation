@@ -3,6 +3,8 @@ title: Data Transfer Facility Service Scope | UKCloud Ltd
 description: Outlines important details regarding the Data Transfer Facility
 services: enablement
 author: Steve Hall
+reviewer:
+lastreviewed: 23/07/2018 11:55:40
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -25,11 +27,11 @@ Our Data Transfer Facility enables customers to use the secure network connectio
 
 It's useful if, for example, you don't have enough network bandwidth, or you're waiting for appropriately accredited connectivity to be installed.
 
-If you want to bring in more than 500GiB of VMs, we also offer a Mass Transfer facility, see the appropriate Service Scope for [NAS](enbl-sco-mtf-nas.md) or [HDD](enbl-sco-mtf-hdd.md).
+If you want to bring in more than 500GiB of VMs, we also offer a [Mass Transfer facility](enbl-sco-mtf-nas.md).
 
 ## Booking and booking conditions
 
-To use the Data Transfer Facility, you need to book. The first step is to raise a service request through the UKCloud Portal.
+To use the Data Transfer Facility, you need to book. The first step is to raise a service request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 The Data Transfer Facility is available on a whole-day basis, between 0900 and 1700 on normal business days. The minimum booking period is one day at a cost of £500 per day.
 
@@ -242,4 +244,4 @@ If the issue doesn't directly relate to the Data Transfer Facility, you'll need 
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

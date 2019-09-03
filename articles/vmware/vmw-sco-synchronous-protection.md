@@ -3,6 +3,8 @@ title: Synchronous Protection Service Scope | UKCloud Ltd
 description: Outlines important details regarding the Synchronous Protection service
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 03/08/2018 11:14:35
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -20,6 +22,11 @@ toc_mdlink: vmw-sco-synchronous-protection.md
 This Service Scope explains what is and isn't included in the scope of the UKCloud for VMware Synchronous Protection service option.
 
 Synchronous Protection is one of a variety of on‑platform protection options available from UKCloud. Use this service scope to understand what Synchronous Protection offers and whether it will meet your own recovery point objectives (RPO) and recovery time objectives (RTO).
+
+> [!NOTE]
+> Synchronous Protection is no longer available as a protection option for UKCloud for VMware. UKCloud offer two alternative data protection solutions: [Journaling Protection (Zerto)](vmw-sco-journaling-protection.md) and [Snapshot Protection](vmw-sco-snapshot-protection.md). Contact your Technical Account Manager (TAM) for more information.
+>
+> We will continue to provide support to customers who previously added Synchronous Protection to their environment, although we would encourage considering using Journaling Protection instead.
 
 ## About Synchronous Protection
 
@@ -187,7 +194,7 @@ Failover test are generally seamless for customers, making it difficult for you 
 
 ## Requesting a Test Scenario
 
-To request a Test Scenario, you need to raise a Service Request within the UKCloud Portal indicating that you want to complete the test and provide the following details:
+To request a Test Scenario, you need to raise a Service Request within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal indicating that you want to complete the test and provide the following details:
 
 - VDC name
 
@@ -205,8 +212,8 @@ If we accept your request, we'll schedule the work to start at the time you spec
 
 ## Failover testing charges
 
-We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the SFIA rate card) of £660 per day. Longer testing periods will need to be approved by UKCloud.
+We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) - level 3 Apply). Longer testing periods will need to be approved by UKCloud.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

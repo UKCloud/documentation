@@ -3,6 +3,8 @@ title: Windows Server activation | UKCloud Ltd
 description: A point of reference regarding activating Windows Server against UKCloud's Key Management Server (KMS), along with how to resolve any failures
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -55,9 +57,11 @@ This error can usually be attributed to the software license key being assigned 
 The steps in the attachment should help to successfully rectify the error being returned by the UKCloud KMS server but, before starting, please ensure: 
 
 - You must have full admin access to the Windows VM you are activating
+
 - You must know the exact version of Windows you are running
+
 - You reference the following Microsoft KB article: http://technet.microsoft.com/en-us/library/ff793409.aspx#E4IAC
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

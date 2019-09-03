@@ -8,7 +8,7 @@
     <title>How to configure IPsec VPN | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure IPsec VPN | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-configure-ipsec-vpn.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -87,167 +96,107 @@
 <h2 id="overview">Overview</h2>
 <p>vCloud Director supports the following types of site-to-site VPN:</p>
 <ul>
-<li>Another edge gateway in the same organisation</li>
-<li>An edge gateway in another organisation (UKCloud or another vCloud service provider)</li>
-<li>A remote network offering IPsec VPN endpoint capability</li>
+<li><p>Another edge gateway in the same organisation</p>
+</li>
+<li><p>An edge gateway in another organisation (UKCloud or another vCloud service provider)</p>
+</li>
+<li><p>A remote network offering IPsec VPN endpoint capability</p>
+</li>
 </ul>
 <p>Depending on the type of connection required, you'll need to complete IP addressing for both ends, together with a shared secret, and indicate which VDC networks are allowed to connect to the VPN link.</p>
 <h2 id="before-you-begin">Before you begin</h2>
 <p>Before you start configuring IPsec VPN settings, you'll need to make a note of the IP address of your edge gateway to use as your tunnel endpoint address:</p>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Using vCloud Director 8.20</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Using vCloud Director 9.1</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
-
-<ol>
-<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
-<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
-</li>
-<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
-</li>
-<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
-</li>
-<li><p>Right-click the edge gateway and select <strong>Properties</strong>.</p>
-</li>
-<li><p>In the <em>Edge Gateway Properties</em> dialog box, select the <strong>Configure IP Settings</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-configure-ip-settings.png" alt="Configure IP Settings tab of Edge Gateway Properties dialog box"></p>
-</li>
-<li><p>Make a note of the IP address in the <strong>IP Addresses</strong> column then click <strong>OK</strong>.</p>
-<p><img src="images/vmw-vcd-tunnel-ip-address.png" alt="IP Addresses column"></p>
-</li>
-</ol>
-</section>
-<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-
 <ol>
 <li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway you want to configure.</p>
 </li>
 <li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
-<p><img src="images/vmw-vcd91-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+<p><img src="images/vmw-vcd-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
 </li>
-<li><p>Select the edge that you want to configure.</p>
+<li><p>On the <em>Edges</em> page, select the edge that you want to configure.</p>
 </li>
 <li><p>In the <em>Edge Gateway Settings</em> section, in the <em>IP Addresses</em> table, make a note of the IP address in the <strong>IP Addresses</strong> column.</p>
-<p><img src="images/vmw-vcd91-edge-ip-addresses.png" alt="IP Addresses column"></p>
+<p><img src="images/vmw-vcd-edge-ip-addresses.png" alt="IP Addresses column"></p>
 </li>
 </ol>
-</section>
-</div>
 <h2 id="configuring-edge-gateway-ipsec-vpn-settings">Configuring edge gateway IPsec VPN settings</h2>
-<p>The steps for configuring edge gateway IPsec VPN settings vary depending on what type of edge gateway you're working with:</p>
-<ul>
-<li><a href="#configuring-edge-gateway-ipsec-vpn-settings-for-an-advanced-gateway">Configuring edge gateway IPsec VPN settings for an advanced gateway</a></li>
-<li><a href="#configuring-edge-gateway-ipsec-vpn-settings-for-a-standard-edge">Configuring edge gateway IPsec VPN settings for a standard edge</a></li>
-</ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>We recommend that you convert your edge to an advanced gateway to access the latest vCloud Director functionality. For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
-</div>
-<h3 id="configuring-edge-gateway-ipsec-vpn-settings-for-an-advanced-gateway">Configuring edge gateway IPsec VPN settings for an advanced gateway</h3>
 <ol>
-<li><p>In vCloud Director, access the edge gateway settings.</p>
-<p>For more detailed instructions, see <a href="vmw-how-access-edge.html"><em>How to access edge gateway settings</em></a></p>
+<li><p>On the <em>Edges</em> page, select the edge that you want to configure and click <strong>Configure Services</strong>.</p>
+<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services option"></p>
 </li>
-<li><p>Select the <strong>VPN</strong> tab.</p>
-<p><img src="images/vmw-vcd-adv-edge-tab-vpn.png" alt="VPN tab"></p>
-</li>
-<li><p>Select the <strong>IPsec VPN</strong> tab.</p>
+<li><p>Select the <strong>VPN</strong> tab, then the <strong>IPsec VPN</strong> tab.</p>
 <p><img src="images/vmw-vcd-adv-edge-tab-ipsec-vpn.png" alt="IPsec VPN tab"></p>
 </li>
-<li><p>On the <strong>Activation Status</strong> tab, select the <strong>IPsec VPN Service Status</strong> toggle.</p>
-<p><img src="images/vmw-vcd-adv-edge-tab-ipsec-vpn-enabled.png" alt="Enable IPsec VPN"></p>
+<li><p>On the <strong>Activation Status</strong> tab, enable the <strong>IPsec VPN Service Status</strong> option.</p>
+<p><img src="images/vmw-vcd-edge-ipsec-enabled.png" alt="Enable IPsec VPN"></p>
 </li>
 <li><p>Select the <strong>IPsec VPN Sites</strong> tab.</p>
 </li>
 <li><p>Click the <strong>+</strong> icon.</p>
 </li>
-<li><p>In the <em>Add IPsec VPN</em> dialog box, select the <strong>Enabled</strong> toggle.</p>
+<li><p>In the <em>Add IPsec VPN</em> dialog box, enable the <strong>Enabled</strong> option.</p>
 </li>
 <li><p>Complete the configuration as follows:</p>
-<ul>
-<li>Enable perfect forward secrecy (PFS) - Select this if your on-premises/remote site has that capability.</li>
-<li>Name</li>
-<li>Local Id</li>
-<li>Local Endpoint - The external IP of your edge gateway (refer to the first steps of this procedure for more information).</li>
-<li>Local Subnets - Enter the organisation networks that can access the VPN (separate multiple local subnets with commas).</li>
-<li>Peer Id</li>
-<li>Peer Endpoint - The external IP of your remote site or on-premises firewall or edge where VPN is being set up.</li>
-<li>Peer Subnets - This is the subnet on your on-premises network that you want to make accessible from your UKCloud VDC. For example, if your on-premises networks sit inside the <code>10.20.0.0/16</code> range, you could enter <code>10.20.0.0/16</code> here or limit your entry to a smaller subnet of that, for example <code>10.20.0.0/25</code>.</li>
-<li>Encryption Algorithm - Select the most secure protocol that is supported by your on-premises gateway.</li>
-<li>Authentication - Select the authentication method that is supported by your on-premises gateway. If you want to use certificates, then you need to configure those first on the <strong>Certificates</strong> tab.</li>
-<li>Pre-Shared Key - The shared secret used to authenticate and encrypt the connection. It must be an alphanumeric string between 32 and 128 characters that includes at least one uppercase letter, one lowercase letter and one number. This must be the same on both sites.</li>
-<li>Diffie-Hellmann Group - We recommend setting this to DH14 or higher if your on-premises environment can support it.</li>
-</ul>
-<p><img src="images/vmw-vcd-adv-edge-ipsec-vpn-config.png" alt="Add IPsec VPN dialog box"></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enable perfect forward secrecy (PFS)</td>
+<td>Select this if your on-premises/remote site has that capability.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td></td>
+</tr>
+<tr>
+<td>Local Id</td>
+<td></td>
+</tr>
+<tr>
+<td>Local Endpoint</td>
+<td>The external IP of your edge gateway (refer to the first steps of this procedure for more information).</td>
+</tr>
+<tr>
+<td>Local Subnets</td>
+<td>Enter the organisation networks that can access the VPN (separate multiple local subnets with commas).</td>
+</tr>
+<tr>
+<td>Peer Id</td>
+<td></td>
+</tr>
+<tr>
+<td>Peer Endpoint</td>
+<td>The external IP of your remote site or on-premises firewall or edge where VPN is being set up.</td>
+</tr>
+<tr>
+<td>Peer Subnets</td>
+<td>This is the subnet on your on-premises network that you want to make accessible from your UKCloud VDC. For example, if your on-premises networks sit inside the <code>10.20.0.0/16</code> range, you could enter <code>10.20.0.0/16</code> here or limit your entry to a smaller subnet of that, for example <code>10.20.0.0/25</code>.</td>
+</tr>
+<tr>
+<td>Encryption Algorithm</td>
+<td>Select the most secure protocol that is supported by your on-premises gateway.</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>Select the authentication method that is supported by your on-premises gateway. If you want to use certificates, then you need to configure those first on the <strong>Certificates</strong> tab.</td>
+</tr>
+<tr>
+<td>Pre-Shared Key</td>
+<td>The shared secret used to authenticate and encrypt the connection. It must be an alphanumeric string between 32 and 128 characters that includes at least one uppercase letter, one lowercase letter and one number. This must be the same on both sites.</td>
+</tr>
+<tr>
+<td>Diffie-Hellmann Group</td>
+<td>We recommend setting this to DH14 or higher if your on-premises environment can support it.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/vmw-vcd-edge-ipsec-add.png" alt="Add IPsec VPN dialog box"></p>
 </li>
 <li><p>When you're done, click <strong>Keep</strong> to create the edge end of the VPN tunnel then click <strong>Save changes</strong>.</p>
-</li>
-</ol>
-<h3 id="configuring-edge-gateway-ipsec-vpn-settings-for-a-standard-edge">Configuring edge gateway IPsec VPN settings for a standard edge</h3>
-<div class="NOTE">
-<h5>Note</h5>
-<p>You can only manage advanced gateways in the new vCloud Director 9.1 tenant portal. If you're working with a standard edge gateway, you must first switch to the vCloud Director web console to manage the edge. For more information, see <a href="vmw-how-switch-web-console.html"><em>How to switch to the vCloud Director web console from the tenant portal</em></a>.</p>
-</div>
-<ol>
-<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
-<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
-</li>
-<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
-</li>
-<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
-</li>
-<li><p>Right-click the edge gateway and select <strong>Properties</strong>.</p>
-</li>
-<li><p>In the <em>Edge Gateway Properties</em> dialog box, select the <strong>Configure IP Settings</strong></p>
-<p><img src="images/vmw-vcd-tab-configure-ip-settings.png" alt="Configure IP Settings of Edge Gateway Properties dialog box"></p>
-</li>
-<li><p>Make a note of the IP address in the <strong>IP Addresses</strong> column then click <strong>OK</strong>.</p>
-<p>You'll need to use this IP address later to use as your tunnel endpoint address.</p>
-<p><img src="images/vmw-vcd-tunnel-ip-address.png" alt="IP Addresses column"></p>
-</li>
-<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
-</li>
-<li><p>Select the <strong>VPN</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-vpn-reg.png" alt="VPN tab"></p>
-</li>
-<li><p>Select the <strong>Enable VPN</strong> check box.</p>
-<p><img src="images/vmw-vcd-enable-vpn-reg.png" alt="Enable VPN check box"></p>
-</li>
-<li><p>Click <strong>Add</strong>.</p>
-<p><img src="images/vmw-vcd-btn-add-vpn-reg.png" alt="Add VPN button"></p>
-</li>
-<li><p>In the <em>Add a Site-to-Site VPN configuration</em> dialog box, complete the configuration as follows:</p>
-<ul>
-<li><strong>Name</strong></li>
-<li><strong>Description</strong></li>
-<li><strong>Establish VPN to</strong> - Choose between:
-<ul>
-<li>A remote network</li>
-<li>A network in this organisation</li>
-<li>A network in another organisation</li>
-</ul>
-</li>
-<li><strong>Local Networks</strong> - Choose the organisation networks that can access the VPN. If you have only one, select that.</li>
-<li><strong>Peer Networks</strong> - This is the subnet on your on-premises network that you want to make accessible from your VDC. For example, if your on-premises networks sit inside the <code>10.20.0.0/16</code> range, you could enter <code>10.20.0.0/16</code> here, or limit your entry to
-a smaller subnet of that, for example <code>10.20.6.0/25</code></li>
-<li><strong>Local Endpoint</strong> - The external network of your Edge Gateway. Only one option should be available.</li>
-<li><strong>Encryption protocol</strong> - Choose the most secure protocol that is supported by your on-premises gateway</li>
-<li><strong>Shared Key</strong> - The shared secret to use to authenticate and encrypt the connection. It must be an alphanumeric string between 32 and 128 characters long and include at least one upper-case letter, one lower-case letter, and one number.</li>
-<li><strong>MTU</strong> - Reduce from default to <code>1350</code>.</li>
-</ul>
-<p><img src="images/vmw-vcd-vpn-config-reg.png" alt="Add Site-to-Site VPN configuration dialog box"></p>
-</li>
-<li><p>When you're finished, click <strong>OK</strong>.</p>
 </li>
 </ol>
 <h2 id="creating-the-second-vpn-gateway">Creating the second VPN gateway</h2>
@@ -258,62 +207,57 @@ a smaller subnet of that, for example <code>10.20.6.0/25</code></li>
 <h3 id="ike-phase-1-and-phase-2">IKE Phase 1 and Phase 2</h3>
 <p>IKE is a standard method for arranging secure, authenticated communications.</p>
 <h4 id="phase-1-parameters">Phase 1 parameters</h4>
-<p>Phase 1 sets up mutual authentication of the peers, negotiates cryptographic parameters, and creates session keys.</p>
-<p>The Phase 1 parameters used by an advanced gateway are:</p>
+<p>Phase 1 sets up mutual authentication of the peers, negotiates cryptographic parameters, and creates session keys. The supported Phase 1 parameters are:</p>
 <ul>
-<li>Main mode</li>
-<li>AES/AES256/AES-GCM (user configurable)</li>
-<li>Diffie-Hellman Group</li>
-<li>Pre-shared secret (user configurable)</li>
-<li>SA lifetime of 28800 seconds (eight hours) with no kbytes rekeying</li>
-<li>ISAKMP aggressive mode disabled</li>
-</ul>
-<p>The Phase 1 parameters used by a standard edge are:</p>
-<ul>
-<li>Main mode</li>
-<li>TripleDES / AES (user configurable)</li>
-<li>SHA-1</li>
-<li>MODP group 2 (1024 bits)</li>
-<li>Pre-shared secret (user configurable)</li>
-<li>SA lifetime of 28800 seconds (eight hours) with no kbytes rekeying</li>
-<li>ISAKMP aggressive mode disabled</li>
+<li><p>Main mode</p>
+</li>
+<li><p>AES/AES256/AES-GCM (user configurable)</p>
+</li>
+<li><p>Diffie-Hellman Group</p>
+</li>
+<li><p>Pre-shared secret (user configurable)</p>
+</li>
+<li><p>SA lifetime of 28800 seconds (eight hours) with no kbytes rekeying</p>
+</li>
+<li><p>ISAKMP aggressive mode disabled</p>
+</li>
 </ul>
 <h4 id="phase-2-parameters">Phase 2 parameters</h4>
-<p>IKE Phase 2 negotiates an IPSec tunnel by creating keying material for the IPSec tunnel to use (either by using the IKE phase 1 keys as a base or by performing a new key exchange).</p>
-<p>The IKE Phase 2 parameters supported by an advanced gateway are:</p>
+<p>IKE Phase 2 negotiates an IPSec tunnel by creating keying material for the IPSec tunnel to use (either by using the IKE phase 1 keys as a base or by performing a new key exchange). The supported IKE Phase 2 parameters are:</p>
 <ul>
-<li>AES/AES256/AES-GCM (Will match the Phase 1 setting)</li>
-<li>ESP tunnel mode</li>
-<li>Diffie-Hellman Group</li>
-<li>Perfect forward secrecy for rekeying (only if it was turned on in both endpoints)</li>
-<li>SA lifetime of 3600 seconds (one hour) with no kbytes rekeying</li>
-<li>Selectors for all IP protocols, all ports, between the two networks, using IPv4 subnets</li>
-</ul>
-<p>The IKE Phase 2 parameters supported by a standard edge are:</p>
-<ul>
-<li>TripleDES / AES (will match the Phase 1 setting)</li>
-<li>SHA-1</li>
-<li>ESP tunnel mode</li>
-<li>MODP group 2 (1024 bits)</li>
-<li>Perfect forward secrecy for rekeying</li>
-<li>SA lifetime of 3600 seconds (one hour) with no kbytes rekeying</li>
-<li>Selectors for all IP protocols, all ports, between the two networks, using IPv4 subnets</li>
+<li><p>AES/AES256/AES-GCM (Will match the Phase 1 setting)</p>
+</li>
+<li><p>ESP tunnel mode</p>
+</li>
+<li><p>Diffie-Hellman Group</p>
+</li>
+<li><p>Perfect forward secrecy for rekeying (only if it was turned on in both endpoints)</p>
+</li>
+<li><p>SA lifetime of 3600 seconds (one hour) with no kbytes rekeying</p>
+</li>
+<li><p>Selectors for all IP protocols, all ports, between the two networks, using IPv4 subnets</p>
+</li>
 </ul>
 <h2 id="configuring-the-edge-gateway-firewall">Configuring the edge gateway firewall</h2>
 <p>When the VPN tunnel is up and running, you'll need to create firewall rules on the edge gateway for any traffic passing over the tunnel. For how to do this, see <a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a>.</p>
 <p>Key points to note:</p>
 <ul>
-<li>You need to create a firewall rule for both directions, that is, from data centre to VDC and from VDC to data centre.</li>
-<li>For data centre to VDC, set:
+<li><p>You need to create a firewall rule for both directions, that is, from data centre to VDC and from VDC to data centre.</p>
+</li>
+<li><p>For data centre to VDC, set:</p>
 <ul>
-<li>Source as the source IP range for your external VDC/data centre network</li>
-<li>Destination as the destination IP range for your VDC network</li>
+<li><p>Source as the source IP range for your external VDC/data centre network</p>
+</li>
+<li><p>Destination as the destination IP range for your VDC network</p>
+</li>
 </ul>
 </li>
-<li>For VDC to data centre, set:
+<li><p>For VDC to data centre, set:</p>
 <ul>
-<li>Source as the source IP range for your VDC network</li>
-<li>Destination as the destination IP range for your data centre/VDC network</li>
+<li><p>Source as the source IP range for your VDC network</p>
+</li>
+<li><p>Destination as the destination IP range for your data centre/VDC network</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -323,43 +267,39 @@ a smaller subnet of that, for example <code>10.20.6.0/25</code></li>
 <p>When you've configured both ends of the IPSec tunnel, the connection should start without any issues.</p>
 <p>To verify the tunnel status in vCloud Director:</p>
 <ol>
-<li><p>In vCloud Director, access the edge gateway settings.</p>
-<p>For more detailed instructions, see <a href="vmw-how-access-edge.html"><em>How to access edge gateway settings</em></a></p>
+<li><p>On the <em>Edges</em> page, select the edge that you want to configure and click <strong>Configure Services</strong>.</p>
 </li>
-<li><p>For advanced gateways:</p>
-<ul>
-<li>Select the <strong>Statistics</strong> tab and then the <strong>IPsec VPN</strong> tab.</li>
-<li>For each configured tunnel, if you can see a tick, the tunnel is up and running and operational. If any other status is shown, you'll need to review your configuration and any firewall rules.</li>
-</ul>
-<p><img src="images/vmw-vcd-adv-edge-ipsec-vpn-config.png" alt="IPsec VPN Statistics tab"></p>
+<li><p>Select the <strong>Statistics</strong> tab and then the <strong>IPsec VPN</strong> tab.</p>
 </li>
-</ol>
-<p>For standard edges:</p>
-<pre><code>- Select the **VPN** tab.
-- For each configured tunnel you should see an entry in the **Status** column. If it's a green tick, the tunnel is up and operational. If any other status is shown, you'll need to review your configuration and any firewall rules.
-</code></pre>
+<li><p>For each configured tunnel, if you can see a tick, the tunnel is up and running and operational. If any other status is shown, you'll need to review your configuration and any firewall rules.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>It can take up to two minutes after the tunnel is established to show that the VPN  connection is active.</p>
 </div>
-<ol start="3">
-<li>You should now be able to send traffic via the VPN.</li>
+</li>
+<li><p>You should now be able to send traffic via the VPN.</p>
+</li>
 </ol>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Logs from the vCNS IPsec VPN cannot currently be used to aid fault finding.</p>
+<p>Logs from the IPsec VPN cannot currently be used to aid fault finding.</p>
 </div>
 <h2 id="next-steps">Next steps</h2>
 <p>In this article you've learned how to configure IPsec VPN. For other edge gateway configuration tasks, see:</p>
 <ul>
-<li><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></li>
-<li><a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a></li>
-<li><a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></li>
-<li><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></li>
-<li><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></li>
+<li><p><a href="vmw-how-create-firewall-rules.html"><em>How to create firewall rules</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-nat-rules.html"><em>How to create NAT rules</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-dhcp-pool.html"><em>How to create a DHCP pool</em></a></p>
+</li>
+<li><p><a href="vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a></p>
+</li>
+<li><p><a href="vmw-how-create-static-route.html"><em>How to create a static route</em></a></p>
+</li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -369,13 +309,6 @@ a smaller subnet of that, for example <code>10.20.6.0/25</code></li>
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-configure-ipsec-vpn.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -394,11 +327,24 @@ a smaller subnet of that, for example <code>10.20.6.0/25</code></li>
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

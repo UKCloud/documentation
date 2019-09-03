@@ -3,6 +3,8 @@ title: UKCloud for VMware options | UKCloud Ltd
 description: Provides information about the different choices you can make when building your UKCloud for VMware service
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -29,9 +31,9 @@ Each enterprise application has its own set of technical and service requirement
 
 The UKCloud provides two security domains:
 
-- Assured OFFICIAL provides access to public networks, such as the internet, PSN Assured, N3/HCSN and Janet
+- Assured OFFICIAL provides access to public networks, such as the internet, PSN, HCSN and Janet
 
-- Elevated OFFICIAL provides access to restricted networks such as PSN Protected
+- Elevated OFFICIAL provides access to restricted networks such as PSN
 
 Choose the security domain your workload needs to use.
 
@@ -57,8 +59,6 @@ Choose any additional storage needed to support your application and add as many
 
 - **Tier 2** storage provides general all-purpose block storage, providing a balance of performance and cost.
 
-- **Geo-Resilient** storage works in combination with synchronous protection to replicate storage across a SAN that spans both UKCloud sites.
-
 ## Data protection options
 
 Whether you're driven by recovery point (RPO) or recovery time (RTO), you can choose the right level of automated, on-platform protection for your environments.
@@ -71,10 +71,8 @@ The UKCloud for VMware service offers three different protection options for you
 
 - **Journaling Protection** uses journals to store all write operations made to your VMs on a separate UKCloud site.
 
-- **Synchronous Protection** provides geographical protection of your live environments across both UKCloud sites by synchronously replicating VMs between both sites. This ensures that any changes made to your environment are committed to both arrays in both sites simultaneously.
-
 Choose the application and data protection needed for your solution. You can choose only one protection option to cover both VMs and storage. For example, if you choose Journaling Protection for your VMs, you cannot then choose 14-day Snapshot Protection for your storage; Journaling Protection will apply to both.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

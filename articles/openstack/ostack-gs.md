@@ -3,6 +3,8 @@ title: Getting Started Guide for UKCloud for OpenStack | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor
+reviewer: Steve Dixon
+lastreviewed: 20/08/2019
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -26,19 +28,36 @@ This guide is intended for users who want to learn more about UKCloud for OpenSt
 
 ## Logging in to the OpenStack Horizon dashboard
 
-1. Go to the URL provided in your welcome email.
+To manage your OpenStack projects, you can log in to the OpenStack Horizon dashboard via our Single Sign-On (SSO) service, using your UKCloud Portal credentials. Additionally, if you've set up two-factor authentication (2FA) in the Portal, when logging in using your Portal credentials, you'll be prompted for a 2FA code.
 
-    The examples in this guide use `https://cor00005.cni.ukcloud.com/`.
+1. Go to the URL provided in your welcome email, for example, `https://cor00005.cni.ukcloud.com/`.
 
-2. Enter your login credentials and click **Connect**.
+2. From the **Authenticate using** list, select:
+
+    - **Keystone Credentials** if your account has not been migrated to SSO
+    
+    - **UKCloud SSO** if your account has been migrated to SSO
+
+    > [!NOTE]
+    > If you're using **UKCloud SSO**, you'll require the v3 version of the OpenStack RC file. You can find more details about the OpenStack RC file in [*How to use the OpenStack API using an SSO enabled user*](ostack-how-use-api-sso.md).
 
     ![Horizon login page](images/ostack-horizon-login.png)
 
-3. After logging in, the first screen you'll see is the *Overview* page.
+3. If you selected **Keystone Credentials**, enter your UKCloud Portal login credentials and click **Connect**.
+
+    If you selected **UKCloud SSO** click **Connect**. You'll be redirected to the SSO login page, where you can enter your username and password and click **Log in**.
+
+    ![SSO Login Page](images/ostack-horizon-sso-login.PNG)
+
+    If you've set up two-factor authentication (2FA) in the Portal, you'll be prompted for a 2FA code.
+
+4. After logging in, the first screen you'll see is the *Overview* page.
 
     From here you can get a summary of your project and view your resource usage and the quotas configured on the project.
 
     ![Horizon Overview page](images/ostack-horizon-welcome.png)
+
+For more information about the Horizon dashboard, see the [*Red Hat OpenStack Platform 10 Introduction to the OpenStack Dashboard*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/pdf/introduction_to_the_openstack_dashboard/Red_Hat_OpenStack_Platform-10-Introduction_to_the_OpenStack_Dashboard-en-US.pdf).
 
 ## Creating your network infrastructure
 
@@ -47,7 +66,9 @@ Before you can begin creating instances, you must first build the required netwo
 You need to create the following minimum set of resources:
 
 - A router using the internet external network
+
 - A network and associated subnet, specifying the network address using CIDR notation (for example, 192.168.1.0/24), and DHCP settings for DNS, any static routes, and so on.
+
 - A router interface to connect the router to your new subnet
 
 When you have created these elements, you can view them in the *Network Topology* page in the Horizon dashboard.
@@ -57,8 +78,11 @@ When you have created these elements, you can view them in the *Network Topology
 You can create your network infrastructure in one of the following ways:
 
 - Using Horizon to manually create your infrastructure (see [Using Horizon to manually create your infrastructure](#using-horizon-to-manually-create-your-infrastructure))
+
 - Using the OpenStack Heat orchestration tool to create stacks (see [Using the OpenStack Heat orchestration tool to create stacks](#using-the-openstack-heat-orchestration-tool-to-create-stacks))
+
 - Using the OpenStack API and automation (see [Using the OpenStack API and automation](#using-the-openstack-api-and-automation))
+
 - Using the OpenStack CLI clients (see [Command-line clients for UKCloud for OpenStack](ostack-ref-cli-clients.md))
 
 ### Using Horizon to manually create your infrastructure
@@ -133,9 +157,13 @@ A security group consists of one or more rules. Each rule is composed of
 five elements:
 
 - **Role** --- Custom or predefined protocol type (for example, TCP, UDP or ICMP)
+
 - **Direction** --- Ingress or Egress
+
 - **Open Port or Port Range** --- Open either a single port or a range of ports
+
 - **Remote** --- The source of the traffic to be allowed via this rule (source address for an inbound rule, or destination address for an outbound rule)
+
 - The ether type (that is IPv4 or IPv6) --- Not currently available
 
 ![Add Rule page](images/ostack-horizon-add-rule.png)
@@ -164,6 +192,7 @@ To see what public keys have already been set up for your use:
 3. If you want OpenStack to create a key pair for you:
 
     - Click the **Create Key Pair** button.
+
     - In the *Create Key Pair* dialog box, enter a **Key Pair Name** and then click **Create Key Pair**.
 
         OpenStack creates the key pair and downloads it in your web browser. Save the file somewhere safe as you will need it when connecting your SSH client to your instances.
@@ -173,6 +202,7 @@ To see what public keys have already been set up for your use:
 4. To import an existing public key:
 
     - On the *Key Pairs* tab of the *Access & Security* page, click the **Import Key Pair** button.
+
     - In the *Import Key Pair* dialog box, enter a **Key Pair Name** and paste the contents of your existing public key file into the **Public Key** field.
 
         ![Import Key Pair page](images/ostack-horizon-import-key-pair.png)
@@ -221,7 +251,7 @@ You can see the images that are available for you to use by expanding the **Comp
 
 ### Choosing your instance size
 
-If you're already familiar with UKCloud's vCloud Director-based Enterprise Compute Cloud service, then you may be used to being able to choose exactly how many vCPUs and how much memory a VM is allocated.
+If you're already familiar with UKCloud's vCloud Director-based UKCloud for VMWare service, then you may be used to being able to choose exactly how many vCPUs and how much memory a VM is allocated.
 
 In OpenStack, you choices are restricted to a number of pre-defined *flavors* that define how many vCPUs, how much memory and how much storage an instance may use. Although full details for each flavor are
 available through the Horizon UI, there's no overall list available showing all the different flavors and sizes of instances. However, if you've installed the OpenStack CLI tools (see
@@ -237,6 +267,7 @@ you can run the following command to retrieve a list of the flavors and their ma
 There are two storage options available for use with your instances:
 
 - Ephemeral storage (default)
+
 - Persistent volume storage
 
 #### Ephemeral storage
@@ -258,7 +289,9 @@ You can create a new instance in the Horizon UI.
 1. Click or select **Launch Instance** on one of the following pages:
 
     - *Images* page (under the **Compute** menu)
+
     - *Instances* page (under the **Compute** menu)
+
     - *Network Topology* page (under the **Networks** menu)
 
 2. On the *Details* tab of the *Launch Instance* dialog box, enter an **Instance Name** and select a **Flavor**.
@@ -270,6 +303,7 @@ You can create a new instance in the Horizon UI.
 3. From the **Instance Boot Source** list, select:
 
     - **Boot from image** to create an instance that boots from the local ephemeral storage.
+
     - **Boot from image (creates a new volume)** to create an instance that boots from a volume
 
 4. From the **Image Name** list, select your preferred image.
@@ -321,6 +355,7 @@ To associate a floating IP address to your new instance:
         ![Allocate Floating IP page](images/ostack-horizon-allocate-floating-ip.png)
 
     - Click **Allocate IP** to allocate the new floating IP address to your project.
+
     - Back in the *Manage Floating IP Associations* dialog box, associate the new address with your instance.
 
 3. Click **Allocate IP**.
@@ -346,11 +381,13 @@ Volumes are block devices that you can attach to instances. Because volumes are 
 4. From the **Volume Source** list, select:
 
     - **No source, empty volume** to create a totally empty volume for customer to populate with their data (this is the default option)
+
     - **Image** to enable customer to create a prepopulated volume from a previously created image
 
 5. From the Volume Type list, select:
 
     - **Tier 1** for our most performant block storage for workloads requiring consistently higher disk throughput
+
     - **Tier 2** for block storage with typical performance characteristics for use by production applications or storage (this is the default option)
 
 6. From the **Size** list, select the size of your volume in GiB.
@@ -430,6 +467,7 @@ To retype a volume using the OpenStack CLI, use the following command:
 Where:
 
 - *`volume`* is the name or ID of the volume that you want to retype
+
 - *`volume-type`* is the new volume type
 
 ## Working with the API and automation
@@ -489,15 +527,18 @@ Whatever library or automation tools you choose to use, you'll need to know a fe
 
 2. On the *Access and Security* page, select the *API Access* tab.
 
-3. On the *API Access* tab, you can see all the relevant API endpoints for making connections to the various OpenStack subsystems, including the **Identify** endpoint, which provides the initial authentication process, that you'll typically need when configuring connections.
+3. On the *API Access* tab, you can see all the relevant API endpoints for making connections to the various OpenStack subsystems, including the **Identify** endpoint, which provides the initial authentication process that you'll typically need when configuring connections.
 
-    You can also download your user's OpenStack RC file for use in the following section.
+    You can also download your user's OpenStack RC file for use in the following section. 
 
     ![Download OpenStack RC File button on Access & Security page](images/ostack-horizon-btn-download-rc-file.png)
 
+    > [!NOTE]
+    > If your account is SSO-enabled, download the v3 RC file and make the modifications stated [here](ostack-how-use-api-sso.md).
+
 ## Using the OpenStack command-line client
 
-The OpenStack project provides a command‑line client that enables you to access the project API through easy‑to‑use commands. For example, the Compute service provides a NOVA command‑line client.
+The OpenStack project provides a command‑line client that enables you to access the project API through easy‑to‑use commands. For example, the compute service provides a NOVA command‑line client.
 
 You can run the commands from the command line, or include the commands in scripts to automate tasks. If you provide OpenStack credentials, such as your user name and password, you can run these commands on any computer.
 
@@ -517,10 +558,18 @@ In this Getting Started Guide, you've learned how to use the OpenStack Horizon U
 You can find additional information in the following places:
 
 - **OpenStack API** --- For more information about using the API, see the OpenStack documentation at <http://developer.openstack.org/api-guide/quick-start/>
+
 - **OpenStack Client** --- For more information about using the OpenStack Client, see the OpenStack documentation at <http://docs.openstack.org/user-guide/cli.html>
+
 - **HEAT templates** --- You can find more information about the Heat orchestration tool and the resources you can use in the YAML format templates in the OpenStack documentation at <https://wiki.openstack.org/wiki/Heat> and <http://docs.openstack.org/developer/heat/template_guide/index.html>
+
 - **Terraform** --- For information about using Terraform and the OpenStack provider, see the Terraform documentation at <https://www.terraform.io/intro/> and <https://www.terraform.io/docs/providers/openstack/index.html>
+
 - **Ansible** --- For information on Ansible's support for working with OpenStack resources, see the Ansible documentation at <http://docs.ansible.com/ansible/list_of_cloud_modules.html#openstack>
+
+## Related videos
+
+- [*OpenStack Horizon dashboard overview video*](ostack-vid-overview.md)
 
 ## Glossary
 
@@ -562,4 +611,4 @@ network mounted onto the host hypervisor.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

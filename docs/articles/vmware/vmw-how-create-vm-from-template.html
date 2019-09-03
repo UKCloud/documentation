@@ -8,7 +8,7 @@
     <title>How to create a virtual machine from a template | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual machine from a template | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-vm-from-template.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -87,165 +96,91 @@
 <h2 id="overview">Overview</h2>
 <p>To simplify the process of creating a VM, you can use a pre-built VM template from a catalog.</p>
 <p>For information about creating a VM from scratch, see <a href="vmw-how-create-vm-from-scratch.html"><em>How to create a VM from scratch</em></a>.</p>
-<p>The steps for creating a VM depend on the version of vCloud Director available in your environment:</p>
-<ul>
-<li><p><a href="#creating-a-vm-from-a-template-vcloud-director-820">vCloud Director 8.20</a></p>
-</li>
-<li><p><a href="#creating-a-vm-from-a-template-vcloud-director-91">vCloud Director 9.1</a></p>
-</li>
-</ul>
-<h2 id="creating-a-vm-from-a-template-vcloud-director-820">Creating a VM from a template (vCloud Director 8.20)</h2>
-<ol>
-<li><p>In vCloud Director, select the <strong>My Cloud</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-my-cloud.png" alt="My Cloud tab in vCloud Director"></p>
-</li>
-<li><p>Open the vApp in which you want to create the VM.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>To create a new vApp, see <a href="vmw-how-create-vapp.html"><em>How to create a vApp</em></a>.</p>
-</div>
-</li>
-<li><p>On the <strong>Virtual Machines</strong> tab, click the <strong>Add VM</strong> icon.</p>
-<p><img src="images/vmw-vcd-ico-add-vm.png" alt="Add VM icon"></p>
-</li>
-<li><p>On the <em>Add Virtual Machines</em> page, you can create a VM using a template in your own organisation's catalog (creating vApp catalogs is covered in <a href="vmw-how-create-catalog.html"><em>How to create a vApp catalog</em></a>) or from UKCloud's public catalog.</p>
-<p>For example, to create a VM from the UKCloud public catalog, from the <strong>Look in</strong> list, select <strong>Public Catalogs</strong>.</p>
-<p><img src="images/vmw-vcd-vm-public-catalog.png" alt="Public Catalogs option"></p>
-</li>
-<li><p>Select the template you want to use depending on the operating system and VM size.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>You can use the search field to find the template you're looking for, or use the arrows to scroll through the available choices.</p>
-</div>
-</li>
-<li><p>When you've found the template you want to use, click <strong>Add</strong> to add a VM based on that template to the vApp. The VM should now be visible in the lower box.</p>
-<p><img src="images/vmw-vcd-vm-add-vm-template.png" alt="Add VM button"></p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>You can add multiple VMs to the vApp at the same time using the catalogs.</p>
-</div>
-</li>
-<li><p>When you've finished adding VMs, click <strong>Next</strong>.</p>
-</li>
-<li><p>On the <em>Configure Resources</em> page, in the <strong>Virtual Machine</strong> field, enter a name your VM.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>This is the name of the VM, not the actual OS host name.</p>
-</div>
-</li>
-<li><p>From the <strong>Storage Policy</strong> list, select a storage policy to assign the VM to.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>We recommend using the <code>*-*-*-Any</code> option as this will ensure your VMs are balanced evenly across all storage pools. However, you could use this option to specifically separate VMs on different storage if required for high availability purposes. For example, you could specifically place VMs on <code>*.*.*-Storage1</code> as opposed to <code>*.*.*-Storage2</code>. For more information, visit the Knowledge Centre.</p>
-</div>
-<p><img src="images/vmw-vcd-vm-configure-resources.png" alt="Configure Resources page"></p>
-</li>
-<li><p>Click <strong>Next</strong>.</p>
-</li>
-<li><p>On the <em>Configure Virtual Machines</em> page, in the <strong>Computer Name</strong> field, define the host name of the VM.</p>
-</li>
-<li><p>From the <strong>Network</strong> list, select the network to connect the VM to.</p>
-</li>
-<li><p>From the <strong>IP Assignment</strong> list, select:</p>
-<ul>
-<li><strong>Static - IP Pool</strong> (the usual method) to inject an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a checkbox to keep
-IP address assignments elsewhere within the UI once the VMs are created.</li>
-<li><strong>Static - Manual</strong> to specify a valid IP address from the pool that the VM will then keep.</li>
-<li><strong>DHCP</strong> to specify that vCloud Director should interact with the OS via VMware Tools to
-use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway.</li>
-</ul>
-<p><img src="images/vmw-vcd-vm-configure-vms.png" alt="Configure Virtual Machines page"></p>
-</li>
-<li><p>Click <strong>Next</strong>.</p>
-</li>
-<li><p>On the <em>Configure Networking</em> page, configure the networking for your VM and then click <strong>Next</strong>.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>For information about vApp network fencing, see <a href="vmw-how-create-vapp-network.html"><em>How to create a vApp network</em></a>.</p>
-</div>
-<p><img src="images/vmw-vcd-vm-configure-networking.png" alt="Configure Networking tab"></p>
-</li>
-<li><p>On the summary page, review your settings and then click <strong>Finish</strong>.</p>
-<p>The platform will start creating your VM.</p>
-</li>
-<li><p>When your VM has finished deploying, right-click the newly created VM within the vApp and select <strong>Power On</strong>.</p>
-<p><img src="images/vmw-vcd-mnu-vm-power-on.png" alt="Power On menu option for VM"></p>
-</li>
-</ol>
-<h2 id="creating-a-vm-from-a-template-vcloud-director-91">Creating a VM from a template (vCloud Director 9.1)</h2>
+<h2 id="creating-a-vm-from-a-template">Creating a VM from a template</h2>
 <ol>
 <li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the vApp in which you want to create the VM.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>vApps</strong> to view a list of vApps within the VDC.</p>
-<p><img src="images/vmw-vcd91-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
+<p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
 </li>
-<li><p>In the card for the vApp in which you want to create the VM, click <strong>More</strong> then select <strong>Add VM</strong>.</p>
-<p><img src="images/vmw-vcd91-mnu-add-vm.png" alt="Add VM icon"></p>
+<li><p>In the card for the vApp in which you want to create the VM, select <strong>Actions</strong> then <strong>Add VM</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-add-vm.png" alt="Add VM icon"></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>To create a new vApp, see <a href="vmw-how-create-vapp.html"><em>How to create a vApp</em></a>.</p>
+<p>To create a standalone VM, in the left navigation panel, select <strong>Virtual Machines</strong>, then click <strong>New VM</strong>.</p>
 </div>
 </li>
-<li><p>In the <em>Add VMs to &lt;vApp&gt;</em> page, click <strong>Add Virtual Machine</strong>.</p>
+<li><p>In the <em>Add VMs</em> dialog box, click <strong>Add Virtual Machine</strong>.</p>
 <p><img src="images/vmw-vcd91-btn-add-vm.png" alt="Add Virtual Machine button"></p>
 </li>
-<li><p>In the <em>Create VM</em> dialog box, from the <strong>Type</strong> radio buttons, select <strong>From Template</strong>.</p>
+<li><p>In the <em>New VM</em> dialog box, from the <strong>Type</strong> radio buttons, select <strong>From Template</strong>.</p>
 </li>
 <li><p>Enter a <strong>Name</strong>, <strong>Computer Name</strong> and <strong>Description</strong> for your VM.</p>
-<div class="TIP">
-<h5>Tip</h5>
+<div class="NOTE">
+<h5>Note</h5>
 <p><strong>Name</strong> is a name to identify the VM, <strong>Computer Name</strong> is the host name of the VM.</p>
+<p>The <strong>Computer Name</strong> is copied from the <strong>Name</strong> field but can contain only alphanumeric characters and hyphens so you may need to edit it if your VM <strong>Name</strong> contains spaces or special characters.</p>
 </div>
 </li>
-<li><p>From the list of <strong>Templates</strong>, select the template that you want to use for your VM, depending on your required operating system and VM size.</p>
-<p><img src="images/vmw-vcd91-create-vm-template.png" alt="Create VM dialog box"></p>
+<li><p>In the <em>Templates</em> section, select the template that you want to use for your VM, depending on your required operating system and VM size.</p>
+<p><img src="images/vmw-vcd-new-vm-template.png" alt="Create VM dialog box"></p>
 <div class="TIP">
 <h5>Tip</h5>
 <p>Creating vApp catalogs is covered in <a href="vmw-how-create-catalog.html"><em>How to create a vApp catalog</em></a></p>
 </div>
 </li>
 <li><p>When you're done, click <strong>OK</strong>.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>By default, the <strong>Power on</strong> check box is selected. If you do not want the VM to power on and start incurring charges immediately, make sure to deselect this check box.</p>
+</div>
 </li>
-<li><p>In the <em>Add VMs to &lt;vApp&gt;</em> dialog box, you can create more VMs or click <strong>Add</strong> when you're done.</p>
-<p>You can stay in the dialog box to monitor progress or click <strong>Cancel</strong> to return to the list of vApps.</p>
+<li><p>Back in the <em>Add VMs</em> dialog box, you can create more VMs or click <strong>Add</strong> when you're done.</p>
+<p>You can monitor progress in the <em>Add VMs</em> dialog box, or click <strong>Cancel</strong> to return to the list of vApps while the VM is created in the background.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>Virtual Machines</strong> to view a list of VMs within the VDC.</p>
-<p><img src="images/vmw-vcd91-tab-vms.png" alt="Virtual Machines tab"></p>
+<p><img src="images/vmw-vcd-tab-vms.png" alt="Virtual Machines tab"></p>
 </li>
-<li><p>In the card for your new VM, click <strong>Details</strong> then select <strong>General</strong>.</p>
+<li><p>In the card for your new VM, select <strong>Details</strong>.</p>
 </li>
-<li><p>On the <strong>General</strong> tab, from the <strong>Storage Policy</strong> list, select a storage policy to assign the VM to.</p>
+<li><p>In the <em>General</em> section, from the <strong>Storage Policy</strong> list, select a storage policy to assign the VM to.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>We recommend using the <code>*-*-*-Any</code> option as this will ensure your VMs are balanced evenly across all storage pools. However, you could use this option to specifically separate VMs on different storage if required for high availability purposes. For example, you could specifically place VMs on <code>*.*.*-Storage1</code> as opposed to <code>*.*.*-Storage2</code>. For more information, visit the Knowledge Centre.</p>
 </div>
-<p><img src="images/vmw-vcd91-vm-details-general.png" alt="VM details General tab"></p>
+<p><img src="images/vmw-vcd-vm-details-general.png" alt="VM details - General"></p>
 </li>
-<li><p>Select the <strong>Hardware</strong> tab.</p>
-<p><img src="images/vmw-vcd91-vm-details-tab-hardware.png" alt="VM details Hardware tab"></p>
-<p>On this tab you can configure CPU, memory, hard disks and networking.</p>
-</li>
-<li><p>To add a new network interface controller (NIC), in the <em>NICs</em> section, click <strong>Add</strong>, configure the parameters as required, then select the <strong>Connected</strong> check box.</p>
-<p>From the <strong>IP Mode</strong> list, select:</p>
+<li><p>Expand the <em>Hardware</em> section.</p>
+<p>Here, you can:</p>
 <ul>
-<li><strong>Static - IP Pool</strong> (the usual method) to inject an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a check box to keep IP address assignments elsewhere within the UI once the VMs are created.</li>
-<li><strong>Static - Manual</strong> to specify a valid IP address from the pool that the VM will then keep.</li>
-<li><strong>DHCP</strong> to specify that vCloud Director should interact with the OS via VMware Tools to
-use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway.</li>
+<li><p>Configure <em>CPU</em> and <em>Memory</em>.</p>
+</li>
+<li><p>In the <em>Storage</em> section, you can configure storage or <strong>Add</strong> more disks.</p>
+</li>
+<li><p>In the <em>NICs</em> section, you can <strong>Add</strong> the VM to a network and select an <strong>IP Mode</strong> to determine how IP addresses are assigned:</p>
+<ul>
+<li><p><strong>DHCP</strong> vCloud Director interacts with the OS via VMware Tools to use DHCP rather than static IPs. You'll need to define a DHCP server on your edge gateway. Check with UKCloud or your organisation administrator that this is set up before you use it.11. how many network interface controllers (NICs) you need in the first instance.</p>
+</li>
+<li><p><strong>Static - IP Pool</strong> is the usual method, which injects an IP address into the VM via VMware Tools from a list of available IP addresses. The address may vary with each boot, but there is a check box to keep IP address assignments elsewhere within the UI once the VMs are
+created.</p>
+</li>
+<li><p><strong>Static - Manual</strong> is similar to IP Pool, but you need to enter a valid <strong>IP Address</strong> from the pool, which the VM will then keep.</p>
+</li>
+</ul>
+</li>
 </ul>
 <div class="TIP">
 <h5>Tip</h5>
 <p>If the MAC address for a newly added NIC is blank, click <strong>Save</strong> to generate one.</p>
 </div>
-<p><img src="images/vmw-vcd91-vm-details-hardware.png" alt="VM details Hardware tab"></p>
+<p><img src="images/vmw-vcd-vm-details-hardware.png" alt="VM details - Hardware"></p>
 </li>
 <li><p>When you're done, click <strong>Save</strong>.</p>
 </li>
-<li><p>To power on your new VM, click <strong>Power</strong> then select <strong>Power On</strong>.</p>
-</li>
 </ol>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -255,13 +190,6 @@ use DHCP rather than static IPs. You'll need to define a DHCP server on your edg
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-vm-from-template.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -280,11 +208,24 @@ use DHCP rather than static IPs. You'll need to define a DHCP server on your edg
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

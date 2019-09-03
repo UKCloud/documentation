@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UKCloud for OpenShift Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UKCloud for OpenShift Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-sco.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="ukcloud-for-openshift-service-scope">UKCloud for OpenShift Service Scope</h1>
+
+<h2 id="about-this-document">About this document</h2>
+<p>This document is for customers considering purchasing our UKCloud for OpenShift service.</p>
+<p>It describes the boundaries of the service, along with the division of responsibilities between UKCloud and the customer to facilitate the changes required.</p>
+<h2 id="about-ukcloud-for-openshift">About UKCloud for OpenShift</h2>
+<p>UKCloud for OpenShift is UKCloud’s OpenShift powered Kubernetes Platform as a Service (PaaS).</p>
+<p>This service is designed for customers who want to:</p>
+<ul>
+<li><p>Deliver new software features faster, focusing on customer value rather than infrastructure complexities</p>
+</li>
+<li><p>Cope with unpredictable spikes in traffic and customer demand</p>
+</li>
+<li><p>Realise more value from your DevOps team by allowing them to focus on the 'Dev' rather than 'Ops'</p>
+</li>
+<li><p>Create a standard approach to deployment, ensuring consistency across all users</p>
+</li>
+<li><p>Perform platform maintenance with less disruption to applications</p>
+</li>
+<li><p>Try out new ideas in a low-risk sandbox environment</p>
+</li>
+<li><p>Remove the cost and complexity of provisioning, managing and scaling the underlying infrastructure, OS and middleware components</p>
+</li>
+<li><p>Avoid lock-in — you can deploy OpenShift on a wide choice of IaaS platforms</p>
+</li>
+</ul>
+<h2 id="openshift-technical-features-available-in-ukcloud-for-openshift">OpenShift technical features available in UKCloud for OpenShift</h2>
+<p>The following OpenShift technical features are available with UKCloud for OpenShift:</p>
+<ul>
+<li><p>UKCloud for OpenShift is built upon Red Hat OpenShift Container Platform v3.11</p>
+</li>
+<li><p>Based upon OKD 3.11 with an Enterprise security and stability wrap</p>
+</li>
+<li><p>Kubernetes 1.11</p>
+</li>
+<li><p>UKCloud for OpenStack is the underlying Infrastructure-as-a-Service (IaaS) platform</p>
+</li>
+</ul>
+<h2 id="default-setup">Default setup</h2>
+<p>UKCloud for OpenShift is delivered as a private Platform-as-a-Service (PaaS).</p>
+<p>Each customer will be provided with an isolated OpenShift cluster within which they can build their containerized solutions.</p>
+<p>By default, only a single user account will be created per project, this user can then create additional users within the project.</p>
+<h2 id="ukcloud-for-openshift-deployment-options">UKCloud for OpenShift deployment options</h2>
+<p>The UKCloud for OpenShift service is packaged to provide you with a high level of flexibility to scale your environments in-line with your workloads. Your OpenShift service is built using the following model:</p>
+<table>
+  <tr>
+    <th colspan="6">Foundation Pack<th>
+  </th></th></tr>
+  <tr>
+    <td colspan="3" align="center">Assured OFFICIAL</td>
+    <td colspan="3" align="center">Elevated OFFICIAL</td>
+  </tr>
+  <tr>
+    <th colspan="6">Runtime Packs</th>
+  </tr>
+  <tr>
+    <td align="center">Small<br>16GiB RAM</td>
+    <td align="center">Medium<br>32GiB RAM</td>
+    <td align="center">Large<br>64GiB RAM</td>
+    <td align="center">Small<br>16GiB RAM</td>
+    <td align="center">Medium<br>32GiB RAM</td>
+    <td align="center">Large<br>64GiB RAM</td>
+  </tr>
+</table>
+<div class="NOTE">
+<h5>Note</h5>
+<p>An operational OpenShift cluster must consist of a minimum of a Foundation Pack plus a single Runtime Pack, however we strongly recommend the use of two or more Runtime Packs for application resilience.</p>
+</div>
+<h3 id="foundation-pack">Foundation Pack</h3>
+<p>Provides the foundation OpenShift services to support the orchestration and management of the container runtime environments and include certain <a href="#optional-extras">optional extras</a> free of charge as defined below. Each customer environment requires only a single Foundation Pack.</p>
+<h3 id="runtime-pack">Runtime Pack</h3>
+<p>Provides the footprint to host customer’s containerised applications and services. Customers can choose to mix and match their Runtime Packs, and Runtime Packs can be called off individually, however UKCloud strongly recommends the initial deployment of two or more Runtime Packs for production environments to provide resilience to your workloads in the event of the failure of a single Runtime Pack.</p>
+<h2 id="storage-options">Storage options</h2>
+<p>Containers in OpenShift by default don’t persist data. Every time an application is started, it creates a new container with an immutable image. Hence, any persisted data in the file systems is lost when the container stops or is destroyed. Use Persistent Volumes within your OpenShift environment to provide data persistence independent of containers. You can purchase Persistent Volumes for your cluster as stated below:</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>Tier 1 Persistent Volume</th>
+<th>Tier 2 Persistent Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Overview</strong></td>
+<td>Provides our most performant block storage for workloads requiring consistently higher disk throughput</td>
+<td>Block storage with typical performance characteristics for use by production applications or storage</td>
+</tr>
+<tr>
+<td><strong>Number of file copies</strong></td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Use cases</strong></td>
+<td>Web caching<br>Containerised analytics<br>Highly performant, real-time web/mobile applications</td>
+<td>Standard, containerised web/mobile applications<br>Storing OpenShift logs and metrics</td>
+</tr>
+</tbody>
+</table>
+<h2 id="optional-extras">Optional extras</h2>
+<p>To complement your UKCloud for OpenShift service, UKCloud offers the following value-added options:</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Some of these extras will carry supplementary charges; please see UKCloud’s current <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf">Pricing Guide</a> for full details.)</p>
+</div>
+<h3 id="additional-networks">Additional networks</h3>
+<p>By default, your OpenShift cluster will only be connected to the internet. Your OpenShift environment can be provisioned on other networks such as HSCN, Janet, RLI and PSN at a flat fee month per network plus the additional network charges.</p>
+<h3 id="registry-storage">Registry storage</h3>
+<p>A benefit of OpenShift is its ability to build Docker images directly from your source code, deploy them, and manage their lifecycle. To enable this, OpenShift utilises an integrated Docker registry to locally manage images. This registry is stored securely outside of your OpenShift environment to help ensure the resilience and availability of your images.</p>
+<p>UKCloud provides you with an initial 60GB of registry storage as part of your Foundation Pack; with any additional registry storage being chargeable.</p>
+<h3 id="enhanced-aggregated-logging">Enhanced aggregated logging</h3>
+<p>UKCloud will deploy, as part of your Foundation Pack, a simple EFK (Elasticsearch, Fluentd, Kibana) stack to aggregate logs for a range of OpenShift Enterprise services. Application developers can view the logs of the projects for which they have view access. The EFK stack aggregates logs from hosts and applications, whether coming from multiple containers or even deleted pods.</p>
+<p>To provide this service UKCloud will need to provision an initial 20GiB of Tier 2 Persistent Volume at the prevailing rate.</p>
+<p>As your workloads increase or become more critical and you want to increase the performance and resilience of your Elasticsearch cluster by scaling it across three nodes, you can deploy an additional Infrastructure Node (see below for <a href="#infrastructure-nodes">Infrastructure Node</a> costs).</p>
+<h3 id="enhanced-metric-collection">Enhanced metric collection</h3>
+<p>As part of your Foundation Pack, UKCloud will provision a single Hawkular metrics instance backed by a single Cassandra instance to collect and publish your cluster’s metrics from all containers and components in one user interface.</p>
+<p>To provide this service, UKCloud will need to provision an initial 10GiB of Tier 2 Persistent Volume at the prevailing rate.</p>
+<p>To provide resilience and added performance to your cluster’s metrics, you can deploy additional Infrastructure Nodes (see below for <a href="#infrastructure-nodes">Infrastructure Node</a> costs).</p>
+<h3 id="infrastructure-nodes">Infrastructure nodes</h3>
+<p>Additional nodes to support OpenShift core services such as OpenShift routers, registry, metric collection and aggregated logging. Each Foundation Pack is deployed with three Infrastructure Nodes. Where required, you can deploy additional Infrastructure Nodes for a flat monthly fee, with each Infrastructure Node providing an additional 2vCPUs and 16GiB RAM for OpenShift supporting services. You cannot use Infrastructure Nodes for containerised workloads.</p>
+<h3 id="ssl-certificates">SSL certificates</h3>
+<p>By default, UKCloud will provide 90 day Let’s Encrypt SSL certificates for your OpenShift cluster. At the point of deployment, you can to provide your own certificates for use with OpenShift.</p>
+<h3 id="container-native-storage">Container native storage</h3>
+<p>Kubernetes was not designed with stateful applications like databases in mind. For enterprise applications, these systems have non-negotiable business requirements like high availability, data security, disaster recovery, strict performance SLAs and hybrid/multi-cloud operations.</p>
+<p>In order to address the challenge above, UKCloud offers a <a href="../third-party/third-sd-portworx.html">Portworx Enterprise</a> service, assisting with the adoption of Kubernetes for mission critical enterprise and traditional/legacy applications.</p>
+<h2 id="platform-management">Platform management</h2>
+<p>UKCloud for OpenShift is managed directly by the customer, using OpenShift’s dashboard, the UKCloud Portal, and APIs associated with both.</p>
+<p>UKCloud maintains responsibility for routine patching and upgrades of the OpenShift platform in-line with the published <a href="oshift-ref-lifecycle.html">OpenShift life cycle and patch management process</a>.</p>
+<h2 id="service-provisioning">Service provisioning</h2>
+<p>You can request UKCloud for OpenShift via your Technical Account Manager (TAM) or by using the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<p>Within 5 business days of accepting an order, UKCloud will create the customer’s primary account and send a Welcome Pack, which includes the URL for the UKCloud Portal, and the <a href="oshift-gs.html">Getting Started Guide</a>.</p>
+<h2 id="customer-responsibilities">Customer responsibilities</h2>
+<p>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as HSCN, Janet, RLI or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.</p>
+<p>Self-managing the environment including container deployment, virtual network configuration, storage management, and so on.</p>
+<p>Maintaining a master copy or backup copy of the data used in the UKCloud for OpenShift service (see <a href="#backuprecovery-and-disaster-recovery">below</a>).</p>
+<p>Ensuring only appropriate data (for example OFFICIAL) is stored and processed by applications on this environment and that they comply with the UKCloud Security Operating Procedures (SyOps) and other Information Assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.</p>
+<p>Customers with requirements beyond these limits can raise a service request via <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> to have these limits per project considered for raising.</p>
+<h2 id="backuprecovery-and-disaster-recovery">Backup/recovery and disaster recovery</h2>
+<p>As standard, localised component failures are tolerated within the infrastructure through elimination of single points of failure (including physical server failure or disk failure).</p>
+<p>Although OpenShift is designed to deploy and manage stateless apps (applications that can be destroyed and re-instantiated without risk of data loss), you should maintain a master copy or backup copy of any persistent or dynamic data hosted on this service (such as MySQL DB) by using, for example, UKCloud’s <a href="../cloud-storage/cs-sd.html">Cloud Storage</a>.</p>
+<h2 id="published-features-not-currently-available">Published features not currently available</h2>
+<p>The following features published in the <a href="oshift-sd.html">UKCloud for OpenShift Service Definition</a> are not currently available:</p>
+<ul>
+<li>Janet, PSN and RLI connectivity</li>
+</ul>
+<p>Although these features are not currently available, they will be considered upon request.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

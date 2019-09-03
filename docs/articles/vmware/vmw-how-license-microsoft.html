@@ -8,7 +8,7 @@
     <title>How to license Microsoft applications/software on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to license Microsoft applications/software on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-license-microsoft.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -96,7 +105,7 @@
 <p>The standard licensing approach is for us to provide Microsoft Windows Server licences on a per hour basis. This is retrospectively billed based on your usage of an associated VM.</p>
 <p>Please note that it is not possible for you to bring your own Microsoft Windows Server licences for use on the UKCloud platform. For your Microsoft Windows Server‑based VMs to use a UKCloud-purchased licence, you must create all your Microsoft VMs using a Microsoft template from the UKCloud product catalogue. If you prefer to create your Microsoft VMs using your own template, you must then register these VMs with our Key Management Server (KMS). A <a href="vmw-how-setup-kms.html">document</a> is available on the UKCloud Knowledge Centre to explain how this is done.</p>
 <p>The Microsoft Windows Server licence is invoiced each month, in addition to the cost of the VM, based on the VM's usage.</p>
-<p>We automatically bill the usage of Microsoft Windows Server per hour that the VM is powered on, and invoice you for your consumption of Microsoft Windows Server per month using the following pricing table for G-Cloud 10:</p>
+<p>We automatically bill the usage of Microsoft Windows Server per hour that the VM is powered on, and invoice you for your consumption of Microsoft Windows Server per month using the following pricing table:</p>
 <table>
 <thead>
 <tr>
@@ -108,40 +117,59 @@
 <tbody>
 <tr>
 <td>Micro, Tiny VM</td>
-<td>£0.012</td>
+<td>£0.013</td>
 <td>£0.002</td>
 </tr>
 <tr>
 <td>Small VM</td>
-<td>£0.023</td>
+<td>£0.025</td>
 <td>£0.003</td>
 </tr>
 <tr>
 <td>Medium VM, Medium High Memory</td>
-<td>£0.046</td>
+<td>£0.051</td>
 <td>£0.007</td>
 </tr>
 <tr>
-<td>Large VM, Large High Memory, Tier One Apps</td>
-<td>£0.135</td>
+<td>Large VM, Large High Memory, Tier 1 Apps</td>
+<td>£0.149</td>
 <td>£0.020</td>
 </tr>
 </tbody>
 </table>
 <p>Due to the elimination of the discount for G-SPLA, there is now price parity with corporate SPLA. As a result, customers who may not have previously been applicable for G-SPLA are not impacted.</p>
 <h2 id="microsoft-desktop-licensing">Microsoft desktop licensing</h2>
-<p>It is not currently possible for you to use Microsoft desktop operating systems on the UKCloud platform. This includes both your own licensing or via UKCloud. However, it is possible for you to bring your own Microsoft desktop licensing for use on a dedicated cloud server such as Private Cloud for Compute. In this instance, please contact your Account Director or your Technical Account Manager for further information.</p>
+<p>While we do not offer the option of supplying Microsoft Desktop Operating System licensing, we are now an authorised partner on the  Qualified MultiTenant Hoster (QMTH) program. The QMTH program enables you to purchase Microsoft 10 Enterprise licences, and use these on our multi-tenant cloud platform.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>You <strong>must</strong> inform Microsoft by completing a <a href="https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx">Microsoft Licence Mobility Verification form</a> for the licensing to be valid.</p>
+</div>
+<p>For more information regarding the QMTH program, we have further details on the <a href="https://ukcloud.com/qualified-multitenant-hoster-program/">UKCloud web site</a></p>
+<p>If you want to use this option, raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal, detailing the VM names.</p>
+<p>In addition, you can also bring your own Microsoft desktop licensing for use on a dedicated single tenant cloud server such as Private Cloud for Compute. In this instance, contact your Account Director or Technical Account Manager for further information.</p>
 <h2 id="options-for-all-other-microsoft-applications">Options for all other Microsoft applications</h2>
 <p>As stated, all Microsoft applications on the UKCloud platform must be licensed appropriately by either UKCloud or by using your own existing licensing. There are two options available to you:</p>
 <ul>
-<li><p><strong>UKCloud's Microsoft licensing and usage billing.</strong> The standard licensing approach is for us to provide Microsoft licences on a per hour or monthly basis depending on the application. These are     retrospectively billed based on your usage of an associated VM for each month. For this option to be valid, you must ensure that you have informed us of all Microsoft installations by raising a Service Request via the <a href="https://portal.ukcloud.com/support/my_calls">My Calls</a> section of the UKCloud Portal, detailing the VM names, the application and specific version/level. Please note that not all applications are available using this option, and the Microsoft application list within this document will state the eligibility of this option per application.</p>
+<li><p><strong>UKCloud's Microsoft licensing and usage billing.</strong> The standard licensing approach is for us to provide Microsoft licences on a per hour or monthly basis depending on the application. These are     retrospectively billed based on your usage of an associated VM for each month. For this option to be valid, you must ensure that you have informed us of all Microsoft installations by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal, detailing the VM names, the application and specific version/level. Please note that not all applications are available using this option, and the Microsoft application list within this document will state the eligibility of this option per application.</p>
 </li>
 <li><p><strong>Bring your own Microsoft licensing.</strong> If your organisation has an existing SPLA or Academic licensing contract with Microsoft, or if you wish to licence your Microsoft software directly, we can offer the option of your organisation using your own Microsoft software licensing.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>This is only possible with certain Microsoft applications and is not possible for Microsoft Windows Server as stated above. Before you install any Microsoft software onto a UKCloud VM, you must ensure that you purchase the correct licensing with software assurance and that you have completed the Microsoft Licence Mobility Verification process detailed in this document. The completion of the process is identified by a signed confirmation sent to you from Microsoft Ireland. Please note that if you do not have software assurance, you will not be able to use the Microsoft Mobility option.</p>
 </div>
-<p>The Microsoft Mobility option involves transferring the use of your licensing to UKCloud VMs, and therefore they cannot be used on other Cloud Service Providers or on your own hardware. However, if you discontinue the use of the application on the UKCloud platform and no longer require the licensing, this can be reverted for your use elsewhere. The <a href="https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx">Microsoft Mobility form</a> is available on the Microsoft web site. Please note that this must be completed and posted to Microsoft and not to UKCloud. The correct UKCloud partner agreement number to use is 8392716.</p>
+<p>The Microsoft Mobility option involves transferring the use of your licensing to UKCloud VMs, and therefore they cannot be used on other Cloud Service Providers or on your own hardware. However, if you discontinue the use of the application on the UKCloud platform and no longer require the licensing, this can be reverted for your use elsewhere. The <a href="https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-license-mobility.aspx">Microsoft Mobility form</a> is available on the Microsoft web site. Please note that this must be completed and posted to Microsoft and not to UKCloud. The correct information to use for UKCloud is:</p>
+<ul>
+<li><p>Partner entity status: Authorized Mobility Partner</p>
+</li>
+<li><p>Authorized Mobility Partner Name: UKCloud</p>
+</li>
+<li><p>Authorized Partner Website URL: <a href="https://ukcloud.com/">https://ukcloud.com/</a></p>
+</li>
+<li><p>Authorized Mobility Partner Email Address: nstewart@ukcloud.com</p>
+</li>
+<li><p>Partner agreement number: 82685361</p>
+</li>
+</ul>
 </li>
 </ul>
 <h2 id="microsoft-application-list">Microsoft application list</h2>
@@ -153,7 +181,7 @@
 </li>
 <li><p>SQL Developer can only be utilised on a shared platform to test the SQL element of a solution and cannot be used to provide end-user services. If you wish to provide SQL services to end-users, SQL Enterprise or SQL Standard must be purchased.</p>
 </li>
-<li><p>We can provide Microsoft SQL Standard Server licences on a per hour basis, or Microsoft SQL Enterprise licences billed on a monthly basis. These are retrospectively billed based on your usage of an associated VM, and the pricing is available within the G9 Service definitions and pricing guide.</p>
+<li><p>We can provide Microsoft SQL Standard Server licences on a per hour basis, or Microsoft SQL Enterprise licences billed on a monthly basis. These are retrospectively billed based on your usage of an associated VM, and the pricing is available within the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a>.</p>
 </li>
 <li><p>Microsoft Mobility - this is a valid option for both SQL Standard and Enterprise.</p>
 </li>
@@ -161,9 +189,17 @@
 </li>
 </ul>
 </li>
+<li><p><strong>Office 365</strong></p>
+<ul>
+<li><p>UKCloud licensing - we are not able to provide Microsoft Office 365 licensing.</p>
+</li>
+<li><p>Microsoft Mobility - this is a valid option for Office 365 ProPlus licences as long as you have valid Software Assurance in place. To take advantage of this option, you must manage your Office 365 implementation and ensure you have the correct number of licences to reflect your user count. This option is available via the QMTH program, and more information is available on the <a href="https://ukcloud.com/qualified-multitenant-hoster-program/">UKCloud web site</a>.</p>
+</li>
+</ul>
+</li>
 <li><p><strong>Remote Desktop Server Access Licence</strong></p>
 <ul>
-<li><p>UKCloud licensing - we are able to provide Microsoft Remote Desktop (RDS) SAL on a monthly basis only. These are retrospectively billed, and the pricing is available within the G10 Service definitions and pricing guide. For these licences to be used, you must raise a service request prior to their use as they will need to be registered on the UKCloud platform and will need to provision a dedicated RDS licence server. To assign and validate the licences, we will need to arrange a session to connect to your server.</p>
+<li><p>UKCloud licensing - we are able to provide Microsoft Remote Desktop (RDS) SAL on a monthly basis only. These are retrospectively billed, and the pricing is available within the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a>. For these licences to be used, you must raise a service request prior to their use as they will need to be registered on the UKCloud platform and will need to provision a dedicated RDS licence server. To assign and validate the licences, we will need to arrange a session to connect to your server.</p>
 </li>
 <li><p>Microsoft Mobility - this is a valid option for RDS licences.</p>
 </li>
@@ -171,9 +207,9 @@
 </li>
 <li><p><strong>System Center</strong></p>
 <ul>
-<li><p>UKCloud licensing - we are currently unable to offer this as standard or at an additional cost due to our current Microsoft Windows Server licences.</p>
+<li><p>We are unable to offer this on our public cloud platform in any form.</p>
 </li>
-<li><p>Microsoft Mobility - as per Microsoft's terms, you can use your own licensing to cover this software as long as you have active software assurance in place. If you have System Center Datacentre licensing in place this can be used on up to 10 VMs on the UKCloud platform. However, if you own a standard licence, this only covers 2 VMs. The licence can be used for High Availability, Disaster Recovery Solutions and vMotion events giving you full autonomy to design solutions with resilience in mind whilst being fully licensed.</p>
+<li><p>It is available for customers running dedicated or Private cloud environments in which case it can be purchased via SPLA or BYO licensing using Microsoft mobility with Software Assurance.</p>
 </li>
 </ul>
 </li>
@@ -187,7 +223,7 @@
 </li>
 <li><p><strong>Office</strong></p>
 <ul>
-<li><p>UKCloud licensing - UKCloud can offer SALs for this software. You need to inform us as to how many users will be accessing the application and we will bill you on a per user, per month basis. This pricing is available on request as it is not currently stated in the G9 service definitions or pricing guide.</p>
+<li><p>UKCloud licensing - UKCloud can offer SALs for this software. You need to inform us as to how many users will be accessing the application and we will bill you on a per user, per month basis. This pricing is available on request as it is not currently stated in the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a>.</p>
 </li>
 <li><p>Microsoft Mobility - this is not available via Microsoft Mobility and must be provided by UKCloud.</p>
 </li>
@@ -223,8 +259,10 @@
 <li><p>From the <strong>Select Product</strong> list, select <strong>Enterprise Compute Cloud (vCloud/VMware)</strong></p>
 <p>From the <strong>What is the nature of your query?</strong> list, select either:</p>
 <ul>
-<li><strong>I want UKCloud to invoice me for the licensing of Microsoft software on one or more VMs</strong>.</li>
-<li><strong>I want to bring my own Microsoft licences to my UKCloud environment</strong></li>
+<li><p><strong>I want UKCloud to invoice me for the licensing of Microsoft software on one or more VMs</strong>.</p>
+</li>
+<li><p><strong>I want to bring my own Microsoft licences to my UKCloud environment</strong></p>
+</li>
 </ul>
 </li>
 <li><p>Once you have selected one of the two options above, you will need to fill out <strong>a Request summary</strong> and provide the information outlined below:</p>
@@ -244,13 +282,13 @@
 <p>If you request to use your own licensing, let us know when you have submitted the Mobility Verification form and the support team will update our records. As soon as Microsoft confirm with us that the licences are available, your own Microsoft licensing will be utilised. If you were previously using UKCloud-provided SQL licensing, this will be stopped and you will no longer be billed by us for SQL.</p>
 <p>Microsoft may contact you to confirm that you have the correct number of licences in place to cover the number of Microsoft-based provisioned VMs supplied by UKCloud.</p>
 <h2 id="microsoft-sql-server-images">Microsoft SQL Server images</h2>
-<p>To install Microsoft SQL Server Standard or Enterprise edition, you can either use your own local images, or we can make an image available to you. To gain access to any images, you must either inform us so that we can bill you for the appropriate usage, or wait until we've received confirmation from Microsoft as per the mobility process. You can request access to images by raising a Service Request in the <a href="https://portal.ukcloud.com/support/my_calls">My Calls</a> section of the UKCloud Portal.</p>
+<p>To install Microsoft SQL Server Standard or Enterprise edition, you can either use your own local images, or we can make an image available to you. To gain access to any images, you must either inform us so that we can bill you for the appropriate usage, or wait until we've received confirmation from Microsoft as per the mobility process. You can request access to images by raising a Service Request in the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <h2 id="responsibilities">Responsibilities</h2>
 <p>As soon as you have completed the form and the actions have been confirmed, your organisation is responsible for ensuring that there are enough eligible licences to cover the specified Microsoft-based VMs on the UKCloud platform.</p>
 <h2 id="support">Support</h2>
-<p>If you have any issues regarding updating, or the support of Microsoft Server, please contact the UKCloud support team by raising a Service Request.</p>
+<p>If you have any issues regarding updating, or the support of Microsoft Server, please contact the UKCloud support team by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -260,13 +298,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-license-microsoft.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -285,11 +316,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

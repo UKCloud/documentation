@@ -3,6 +3,8 @@ title: How to move resources between OpenStack regions | UKCloud Ltd
 description: Helps you understand how you can move resources between OpenStack regions
 services: openstack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/08/2018 14:45:48
 
 toc_rootlink: How To
 toc_sub1:
@@ -106,6 +108,7 @@ To achieve this across different regions, the use of a VPN may be required. Deta
     a. To show a list of all volumes in your project:
 
     - Source the originating region's `cred rc` file
+
     - Enter the following command:
 
           openstack volume list
@@ -152,4 +155,4 @@ You can find full details for the OpenStack command-line interface (OpenStack CL
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

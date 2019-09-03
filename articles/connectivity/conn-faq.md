@@ -3,6 +3,8 @@ title: General connectivity FAQs | UKCloud Ltd
 description: Frequently asked questions for general connectivity
 services: connectivity
 author: Matt Warner
+reviewer:
+lastreviewed: 19/07/2018 17:56:05
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -17,29 +19,33 @@ toc_mdlink: conn-faq.md
 
 ## What options do I have to connect to my solution hosted on the UKCloud Assured OFFICIAL (previously PGA IL2) cloud platform?
 
-The UKCloud Assured OFFICAL cloud platform previously achieved CESG Pan Government Accreditation (PGA) and is PSN Accredited to host OFFICIAL data (including OFFICIAL SENSITIVE) which is accessible via the internet or the PSN Assured Service. You can also connect via internet, N3/HSCN and Janet dependant on relevant accreditation.
+The UKCloud Assured OFFICAL cloud platform previously achieved CESG Pan Government Accreditation (PGA) and is PSN accredited to host OFFICIAL data (including OFFICIAL SENSITIVE) which is accessible via the internet or the PSN service. You can also connect via internet, HSCN and Janet dependant on relevant accreditation.
 
 Our Assured OFFICAL cloud platform follows best commercial practice, so certain insecure traffic types are restricted. In general, it's good practice to connect to your Assured OFFICIAL solution via an IPsec VPN (using commercial-grade encryption) which you configure via your self-managed virtual firewall. Within the VPN tunnel, you can use any protocol, giving you maximum flexibility. You can also configure your solution to allow other traffic encrypted using SSL or TLS. Use of non-encrypted traffic should be minimised.
 
-As our Assured OFFICIAL cloud platform is PSN Accredited, you can also connect to your solution via our resilient and scalable PSN Assured Service connections. Alternatively, you can use HybridConnect options by, for example, installing your own CAS(T)-compliant private circuit.
+As our Assured OFFICIAL cloud platform is PSN accredited, you can also connect to your solution via our resilient and scalable PSN service connections. Alternatively, you can use HybridConnect options by, for example, installing your own CAS(T)-compliant private circuit.
 
 ## Can I connect to my solution using SSL VPN?
 
-Our Assured OFFICAL and Elevated OFFICAL cloud platforms both support SSL VPN (configured by UKCloud via a Service Request), but we don't recommend it other than for occasional remote administration purposes by a small number of administrators. If you need more extensive use of SSL VPN, we recommend you deploy a dedicated VPN appliance, such as OpenVPN.
+Our Assured OFFICAL and Elevated OFFICAL cloud platforms both support SSL VPN (configured by UKCloud by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal), but we don't recommend it other than for occasional remote administration purposes by a small number of administrators. If you need more extensive use of SSL VPN, we recommend you deploy a dedicated VPN appliance, such as OpenVPN.
 
 ## Can I use UKCloud as a transit or gateway between different connections?
 
 No. Our cloud platforms are designed so that all traffic either originates or terminates within our platform. We can't facilitate routing between connections. If your solution needs to service users on different networks, this will need to be implemented, managed and accredited within your application or an authorised gateway service.
 
-## Do you provide an SLA on internet/PSN/N3(HSCN)/Janet connectivity?
+## Do you provide an SLA on internet/PSN/HSCN/Janet connectivity?
 
 We provide an SLA for availability of our core services such as UKCloud for VMware. We cannot provide an SLA on external services as they are outside our control. UKCloud can only provide assurance associated with the native SLAs that are offered as part of the core PSN framework.
+
+## How is resiliency managed on external networks?
+
+Networks such as the internet and HSCN are brought into UKCloud via diverse routes to ensure resilience of the connections. In the case of internet connectivity, we also use diverse supplier networks to ensure supplier resilience. Once within the UKCloud environment, we use Border Gateway Protocols (BGP) and our private inter-DC fibre networks to triangulate the network connections. This means that in the event of an issue with one of the networks within a single DC, we can reroute external connectivity via the second DC.
 
 ## Why doesn't the UKCloud SLA extend to external connectivity such as PSN and the internet?
 
 The UKCloud SLA provides our customers with assurance that our platform is designed, engineered and operated to deliver high levels of availability and uptime. We have invested in skilled and experienced people, ISO 20000-certified IT service management processes and best-in-class technology - all of which underpin our cloud services and allow us to deliver high availability.
 
-When it comes to external connectivity, we depend on services provided by third parties. In some cases (such as PSN, Janet and N3/HSCN), we have no choice about which connectivity provider to work with, as this is mandated by the government framework. These services are available only as managed connections, so our SLA can only extend to the inside interface of the managed router deployed and maintained by the third party. Although we work closely with third-party providers to engineer a highly available solution, the actual delivery of the service is not within our control.
+When it comes to external connectivity, we depend on services provided by third parties. In some cases (such as PSN, Janet and HSCN), we have no choice about which connectivity provider to work with, as this is mandated by the government framework. These services are available only as managed connections, so our SLA can only extend to the inside interface of the managed router deployed and maintained by the third party. Although we work closely with third-party providers to engineer a highly available solution, the actual delivery of the service is not within our control.
 
 For more open networks such as the internet, we use multiple connectivity providers to further mitigate the impact of a service failure on the part an individual connectivity provider. Even so, failure scenarios can still occur beyond the UKCloud boundary, which can affect the service that customers receive (for example, congestion on the internet, localised failures within the provider's network or their peering agreement).
 
@@ -95,15 +101,11 @@ We continue to work with our service providers and technology partners to ensure
 
 UKCloud operates high-bandwidth (multi-Gigabit), low-latency (typically sub-5ms round-trip time) dark fibre connectivity between our two data centres. It's highly resilient as it takes diverse northerly and southerly routes.
 
-This data centre interconnectivity is highly scalable, as spare fibre capacity is in place to meet future demand. It uses [CAS(T) compliant](http://www.cesg.gov.uk/servicecatalogue/service_assurance/CAS/Pages/Service-Requirements.aspx) circuits; and within our Elevated OFFICIAL cloud platform, we provide additional overlay encryption using a CPA-approved solution. These have previously achieved Pan Government Accreditation and are PSN accredited to carry OFFICIAL data (including OFFICIAL SENSITIVE), as well as the PSN Assured service and the encrypted PSN Protected service.
+This data centre interconnectivity is highly scalable, as spare fibre capacity is in place to meet future demand. It uses [CAS(T) compliant](http://www.cesg.gov.uk/servicecatalogue/service_assurance/CAS/Pages/Service-Requirements.aspx) circuits; and within our Elevated OFFICIAL cloud platform, we provide additional overlay encryption using a CPA-approved solution. These have previously achieved Pan Government Accreditation and are PSN accredited to carry OFFICIAL data (including OFFICIAL SENSITIVE), as well as the PSN service.
 
 ## If I have reserved bandwidth, how do I uplift this?
 
 We actively monitor and manage our connections to ensure there is appropriate connectivity to the platform. Customers looking to provide 'guaranteed' connection capacity should include a HybridConnect leased line in their solution.
-
-## If I use VMs with Geo-resilience (formerly ENHANCED service level), am I still charged for connectivity between data centres?
-
-No. The cost of bandwidth required for replication of VMs is included in the hourly cost of the Geo-resilient VM and the monthly cost of additional geo-resilient storage.
 
 ## Can UKCloud help me if I don't have a suitable connection for the Elevated OFFICIAL cloud platform?
 
@@ -121,7 +123,7 @@ If you're interested in either of these services, please contact our sales team 
 
 This depends on the use case.
 
-- If you have a non geo-resilient VDC in each UKCloud data centre:
+- If you have a VDC in each UKCloud data centre:
 
   - Configure an IPsec VPN between the edge gateway instances of each VDC. Once the VPN has been established, VMs within the VDC can connect to each another using their private (RFC 1918) IP addresses.
 
@@ -131,7 +133,7 @@ This depends on the use case.
 
 - If your private circuits or co-located equipment need to use the data centre interconnection:
 
-  - Contact your account manager, as this will be a non-standard solution which may require support from our technical specialists (costs will be as per the SFIA rate card).
+  - Contact your account manager, as this will be a non-standard solution which may require support from our technical specialists (costs will be as per the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)).
 
 ## Does UKCloud support RLI connections?
 
@@ -149,6 +151,12 @@ No, we don't currently offer this service. Customers can implement their own DNS
 
 Yes, UKCloud provides a Janet connection provided free for our customers. In order to utilise this network, you will need to be authorised by Jisc. There is no inbound or outbound usage charge for using the Janet connection to access the UKCloud platform.
 
+## Is there a bandwidth restriction on a VRF?
+
+Like all our connectivity options, there is no set bandwidth cap on our VRFs, and we will capacity manage our VRF network in order to ensure our customers can consume as much as required, however we do operate a Networks Fair Use Policy which protects all our users of the networks from being impacted by particularly spiky/unpredictable network loads. To that end, if a customer thinks that they will use large amounts of bandwidth we always appreciate a heads-up so we can proactively increase bandwidth of the network in order to avoid having to lean on any policy to protect all our users.
+
+Outside of the VRF, customers may need to consider the impact of things such as IPSec VPN tunnels over the VRF, which decrease the bandwidth of the network because of Edge throughput limits.
+
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

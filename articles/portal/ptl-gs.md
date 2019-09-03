@@ -3,6 +3,8 @@ title: Getting Started Guide for the UKCloud Portal | UKCloud Ltd
 description: Provides information to get up and running with the UKCloud Portal
 services: portal
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -21,10 +23,15 @@ toc_mdlink: ptl-gs.md
 The UKCloud Portal is the gateway to your UKCloud services. In the Portal, you can:
 
 - View information about your UKCloud services, including UKCloud for VMware, UKCloud for OpenStack and Cloud Storage
+
 - View notifications relating to the UKCloud platform
+
 - Create compute services, virtual data centres (VDCs) and edge gateways within your UKCloud for VMware environment
+
 - Access vCloud Director to work with your UKCloud for VMware environment, for example to create and manage virtual machines (VMs), build VDC networks or configure your firewall
+
 - Raise and monitor support tickets
+
 - Access Knowledge Centre articles to help you understand and work with the UKCloud platform
 
 This Getting Started Guide provides an overview of the functionality available within the Portal.
@@ -51,6 +58,7 @@ The first thing you need to do is log in.
 1. Go to the appropriate URL, depending on the security domain in which your service is located:
 
     - **Assured OFFICIAL:** <https://portal.ukcloud.com>
+
     - **Elevated OFFICIAL:** Contact your Portal administrator or Customer Success Manager (CSM)
 
 2. On the *Log in* page, enter your credentials and click **Sign in**.
@@ -81,7 +89,9 @@ The first thing you need to do is log in.
 After you log in, you'll see the Portal *Home* page. A Portal page is made up of three main areas:
 
 - Toolbar
+
 - Navigation panel
+
 - Content area
 
 ![UKCloud Portal home page](images/ptl-home-page.png)
@@ -145,7 +155,7 @@ The Portal navigation panel provides access to all the functionality available i
 
 - **Settings** - Change various Portal settings, including key contacts, password expiration period, two factor authentication and IP address restrictions (Portal administrators only).
 
-- **Contacts** - Lists the user accounts with access to the current customer account. You can view a list of all user accounts (**All Contacts**) or just those with administration permissions (**Admin Contacts**). Portal administrators can create new users, reset other users' passwords and change other users' Portal permissions (see [*An Overview of Portal Permissions*](ptl-overview-permissions.md)).
+- **Contacts** - Lists the user accounts with access to the current customer account. You can view a list of all user accounts (**All Contacts**) or just those with administration permissions (**Admin Contacts**). Portal administrators can create new users, reset other users' passwords and change other users' Portal permissions (see [*An Overview of Portal Permissions*](ptl-ref-overview-permissions.md)).
 
 - **VMware Cloud** - Provides access to UKCloud for VMware compute services. Expand this option and then select the compute service with which you want to work (see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md)).
 
@@ -162,17 +172,21 @@ The Portal navigation panel provides access to all the functionality available i
 - **Monitoring** - Provides access to:
 
   - The **Cyber Security News** page where you can view general threat briefs and security news (see [*Understanding the Cyber Security News page*](../other/other-ref-cyber-security-news.md)).
+
   - **My Security Events**, which displays security events specific to your environment (see [*Understanding UKCloud's Protective Monitoring Portal showback*](../other/other-ref-promon-showback.md))
 
 - **Support** - Provides access to:
 
   - The Knowledge Centre
+
   - My Calls (see [*How to use My Calls in the UKCloud Portal*](ptl-how-use-my-calls.md))
+
   - Service status information
 
 - **Tools** - Provides access to:
 
   - Self-service creation of compute services (see [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md)).
+
   - The Zerto Self-Service Portal (ZSSP) where you can manage Journaling Protection, Disaster Recovery to the Cloud and Workload Migration to the Cloud (see [*How to perform a failover*](../vmware/vmw-how-zerto-perform-failover.md)).
 
 - **Communities** - Access the UKCloud site on GitHub and UKCloud Ideas.
@@ -210,6 +224,10 @@ For more information about how to use the API, including examples showing how to
 
 In this Getting Started Guide, you've learned the basics about the Portal and the functionality it provides to help you interact with your UKCloud environment. For more details about a specific service, see the appropriate Getting Started Guide.
 
+## Related videos
+
+- [*UKCloud Portal overview video*](ptl-vid-portal.md)
+
 ## Glossary
 
 This section provides a glossary of terms specific to the UKCloud Portal.
@@ -217,6 +235,7 @@ This section provides a glossary of terms specific to the UKCloud Portal.
 **account**&nbsp;&nbsp;Within the UKCloud VMware environment there are two types of account:
 
 - **customer account** - A collection of related compute services associated with a particular customer or partner.
+
 - **user account** - The account you use to log in to the Portal or authenticate with the Portal API. Your user account determines which customer accounts you have access to. Each user account can be associated with multiple customer accounts.
 
 **compute service**&nbsp;&nbsp;An Enterprise Compute Cloud top-level container within a customer
@@ -228,12 +247,19 @@ a UKCloud service.
 **Knowledge Centre**&nbsp;&nbsp;UKCloud's repository of articles created in collaboration with subject matter experts to provide information about how to use our products and services. Article types include:
 
 - **Service Definitions** describe what a service does
+
 - **Service Scopes** provide technical detail for a service or service option
+
 - **Factsheets** provide a brief overview of a service or service option
+
 - **FAQs** answer commonly asked questions about a service or service option
+
 - **Blueprints** explain how our platform helps address business needs
+
 - **Getting Started Guides** step through the basic tasks required to get a service or service option up and running
+
 - **How To Guides** provide step-by-step instructions for performing specific tasks within our platform
+
 - **Quick Ref Guides** to provide general information to help understand a particular aspect of our platform
 
 **Memorable word**&nbsp;&nbsp;An optional second level of authentication to provide an additional layer of security for the Portal. Users are prompted to enter random letters from their memorable word after they have entered their log in credentials.
@@ -248,4 +274,4 @@ a UKCloud service.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

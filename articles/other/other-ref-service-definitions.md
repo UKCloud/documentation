@@ -1,82 +1,100 @@
 ---
-title: UKCloud G-Cloud 10 Service Definitions and Pricing Guide | UKCloud Ltd
-description: List of Service Definitions for G-Cloud 10 (G10) UKCloud services, including terms and conditions, SFIA rate card, and pricing guide
+title: UKCloud Service Definitions and Pricing Guide | UKCloud Ltd
+description: List of Service Definitions for UKCloud services, including terms and conditions, SFIA rate card, and pricing guide
 services: Other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 28/06/2018
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: G10 Service Definitions and Pricing Guide
+toc_title: UKCloud Service Definitions and Pricing Guide
 toc_fullpath: Reference/other-ref-service-definitions.md
 toc_mdlink: other-ref-service-definitions.md
 ---
 
-# UKCloud G-Cloud 10 Service Definitions and Pricing Guide
+# UKCloud Service Definitions and Pricing Guide
 
-This article provides a list of Service Definitions for G-Cloud 10 (G10) UKCloud services. The list also includes our G10 Pricing Guide, SFIA rate card and terms and conditions.
+This article provides a list of Service Definitions for UKCloud services. The list also includes our Pricing Guide, SFIA rate card and terms and conditions.
 
 ## Service Definitions
 
-[Basic Managed VM](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/825105569387990-service-definition-document-2018-05-21-1304.pdf)
+### Multi-cloud technology stacks
 
-[Cloud GPU](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/619924782710146-service-definition-document-2018-05-21-1304.pdf)
+[UKCloud for Microsoft Azure](../azure/azs-sd.md)
 
-[Cloud Storage](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf)
+[UKCloud for OpenShift](../openshift/oshift-sd.md)
 
-[Cross Domain Security Zone](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/781113344072781-service-definition-document-2018-05-21-1257.pdf)
+[UKCloud for OpenStack](../openstack/ostack-sd.md)
 
-[Disaster Recovery as a Service](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/791404642257406-service-definition-document-2018-05-21-1257.pdf)
+[UKCloud for Oracle Software](../oracle/orcl-sd.md)
 
-[Email and Collaboration as a Service](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/101552075715489-service-definition-document-2018-05-21-1322.pdf)
+[UKCloud for VMware](../vmware/vmw-sd.md)
 
-[End User Compute](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/986620270950665-service-definition-document-2018-05-21-1256.pdf)
+### Multi-cloud enabling services
 
-[High Performance Compute](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/440356750870847-service-definition-document-2018-05-21-1302.pdf)
+[Basic Managed Compute from UKCloud](../managed-services/man-sd-compute.md)
 
-[Migration to the Cloud](https://www.digitalmarketplace.service.gov.uk/g-cloud/services/669894810662231)
+[Cloud Optimisation from UKCloud](../managed-services/man-sd-optimisation.md)
 
-[Multi-Cloud Backup Storage](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/165765244734042-service-definition-document-2018-05-21-1231.pdf)
+[Cloud Storage](../cloud-storage/cs-sd.md)
 
-[Private Cloud for Compute](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/386916122749029-service-definition-document-2018-05-21-1252.pdf)
+[Cross Domain Security Zone](../cdsz/cdsz-sd.md)
 
-[Private Cloud for Oracle Software](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/772343517162961-service-definition-document-2018-05-21-1251.pdf)
+[Dedicated Compute v2](../dedicated-compute/dc-sd.md)
 
-[Private Cloud for Storage](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/345262879242270-service-definition-document-2018-05-21-1248.pdf)
+[Disaster Recovery as a Service](../draas/draas-sd.md)
 
-[Secure Remote Access](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/153884335251015-service-definition-document-2018-05-21-1247.pdf)
+[Extended Network Support from UKCloud](../managed-services/man-sd-network.md)
 
-[UKCloud for Microsoft Azure](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/322910045972626-service-definition-document-2018-09-28-1341.pdf)
+[High Performance Compute](../hpc/hpc-sd.md)
 
-[UKCloud for OpenShift](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/248991245857940-service-definition-document-2018-05-21-1259.pdf)
+[Managed Monitoring from UKCloud](../managed-services/man-sd-monitoring.md)
 
-[UKCloud for OpenStack](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/284790846871896-service-definition-document-2018-05-21-1301.pdf)
+[Migration to the Cloud](../migration/migr-sd.md)
 
-[UKCloud for Oracle Software](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf)
+[Multi-Cloud Backup Storage](../mcbs/mcbs-sd.md)
 
-[UKCloud for VMware](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf)
+[Private Cloud](../private-cloud/prc-sd.md)
 
-[Cloud Assessment Service](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/296757947202588-service-definition-document-2018-05-21-1318.pdf)
+[Private Cloud for Oracle Software](../private-cloud/prc-sd-orcl.md)
 
-[Cloud Migration Service](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/711870496090105-service-definition-document-2018-05-21-1317.pdf)
+[Private Cloud for Storage](../private-cloud/prc-sd-storage.md)
 
-[Cloud Optimisation Service](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/113527390782629-service-definition-document-2018-05-21-1316.pdf)
+[Secure Remote Access](../sra/sra-sd.md)
 
-[Cloud Transformation Service](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/944391452929750-service-definition-document-2018-05-21-1316.pdf)
+[Transition Services](../transition-services/trans-sd.md)
+
+### 3rd party software
+
+[Cisco AppDynamics from UKCloud](../third-party/third-sd-appdynamics.md)
+
+[CloudSOC from UKCloud](../third-party/third-sd-cloudsoc.md)
+
+[HyTrust DataControl from UKCloud](../third-party/third-sd-hytrust.md)
+
+[Moogsoft AIOps from UKCloud](../third-party/third-sd-moogsoft.md)
+
+[Portworx Enterprise from UKCloud](../third-party/third-sd-portworx.md)
+
+[XQ Cyber CyberScore from UKCloud](../third-party/third-sd-cyberscore.md)
 
 ## Pricing Guide
 
-[Pricing Guide](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf)
+[Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf)
+
+[3rd Party Software Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf)
 
 ## SFIA rate card
 
-[Skills Framework for the Information Age (SFIA) UKCloud rate card and definitions](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-sfia-rate-card-2018-05-21-1255.pdf)
+[Skills Framework for the Information Age (SFIA) UKCloud rate card and definitions](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)
 
 ## Terms and conditions
 
-[UKCloud Ltd G-Cloud 10 Terms and Conditions](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf)
+[UKCloud Ltd G-Cloud 11 Terms and Conditions](other-ref-terms-and-conditions.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

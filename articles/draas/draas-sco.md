@@ -3,6 +3,8 @@ title: Disaster Recovery as a Service Service Scope | UKCloud Ltd
 description: outlines important details regarding the Disaster Recovery to the Cloud service
 services: draas
 author: Steve Hall
+reviewer: Guy Martin
+lastreviewed: 28/06/2019
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -147,4 +149,4 @@ UKCloud provides licensing for VMs protected by Zerto that utilise UKCloud as th
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

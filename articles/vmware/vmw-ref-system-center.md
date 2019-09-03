@@ -3,6 +3,8 @@ title: System Center on the UKCloud platform | UKCloud Ltd
 description: Explains how System Center software can be used on the UKCloud platform 
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -22,10 +24,13 @@ Licensing for System Center is not provided by UKCloud. Therefore, if you wish t
 Please note the following limitations apply to System Center:
 
 - If you have System Center Datacentre licensing in place this can be used on up to 10 VMs on the UKCloud platform
+
 - If you have a Standard license this covers 2 VMs on the UKCloud platform
+
 - Configuration Manager Console SAL and EndPoint protection cannot be used on our platform as these are only available for laptops and desktops as per Microsoft's terms
+
 - To license this software you need to license based on either the number of cores or processors on a host server. Please contact UKCloud via <products@ukcloud.com> to discuss this prior to the purchase of any licensing or completion of a Mobility form
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

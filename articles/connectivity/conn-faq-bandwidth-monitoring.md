@@ -3,6 +3,8 @@ title: Bandwidth monitoring FAQs | UKCloud Ltd
 description: Frequently asked questions for bandwidth monitoring
 services: connectivity
 author: Matt Warner
+reviewer:
+lastreviewed: 20/07/2018 18:37:23
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -29,7 +31,7 @@ You will have visibility of usage per edge gateway, where you have the options f
 
 ## I clicked on the edge gateway and I can't see any usage information?
 
-If your edge gateway does not have a connection to the internet you will not be able to see any usage information. If your VDC has just been provisioned, it can take up to 4 hours to show utilisation metrics. If these cases do not apply to you, please contact us by raising a Service Request.
+If your edge gateway does not have a connection to the internet you will not be able to see any usage information. If your VDC has just been provisioned, it can take up to 4 hours to show utilisation metrics. If these cases do not apply to you, please contact us by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Are other bandwidth monitoring types available?
 
@@ -50,4 +52,4 @@ on how to use the Portal API, please see the [*UKCloud Portal API Reference Guid
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

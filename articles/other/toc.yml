@@ -1,7 +1,15 @@
 - name: FAQs
   items:
-  - name: G-Cloud 10 services FAQs
-    href: other-faq-g10.md
+  - name: Credit card payment FAQ
+    href: other-faq-credit-card.md
+  - name: Enterprise & Private Sector FAQs
+    href: other-faq-eps.md
+  - name: G-Cloud 11 enhancements and additions
+    href: other-faq-g11.md
+  - name: Invoice and billing FAQs
+    href: other-faq-billing.md
+  - name: Jumpstart FAQs
+    href: other-faq-jumpstart.md
   - name: MISO rebate FAQs
     href: other-faq-miso-rebate.md
   - name: Protective Monitoring FAQs
@@ -14,26 +22,40 @@
   items:
   - name: Contribute to the UKCloud Knowledge Centre
     href: other-how-contribute-knowledge.md
+  - name: Remove access rights from Single Sign-On users
+    href: other-how-delete-sso-user.md
+  - name: Use the UKCloud Pricing Estimation Tool
+    href: other-how-use-pricing-tool.md
+  - name: Use webhooks to receive service status notifications
+    href: other-how-use-webhooks.md
+  - name: View Service Status page
+    href: other-how-view-status-info.md
 - name: Reference
   items:
   - name: Best practice customer guide
     href: other-ref-best-practice-guide.md
-  - name: Browser requirements for services on the UKCloud platform
-    href: other-ref-browsers.md
+  - name: Big Data & Hadoop Service Proposition
+    href: other-ref-hadoop-proposition.md
   - name: Cloud economics
     href: other-ref-cloud-economics.md
   - name: Customer administration page
     href: other-ref-customer-admin.md
   - name: Data centre advance notice requirements
     href: other-ref-dc-notice.md
-  - name: G10 Service Definitions and Pricing Guide
-    href: other-ref-service-definitions.md
+  - name: External security review testing
+    href: other-ref-external-security-review-testing.md
+  - name: Identity & Access Management API
+    href: other-ref-idam.md
   - name: Knowledge Centre article template
     href: other-ref-knowledge-template.md
   - name: Knowledge Centre guidelines
     href: other-ref-knowledge-guidelines.md
+  - name: Known bugs with the UKCloud Pricing Estimation Tool
+    href: other-ref-pricing-tool-bugs.md
   - name: Methods for exporting data
     href: other-ref-export-data.md
+  - name: Monitoring the UKCloud platform
+    href: other-ref-ukcloud-monitoring.md
   - name: Protective Monitoring information in the UKCloud Portal
     href: other-ref-promon-showback.md
   - name: Services at a glance
@@ -46,18 +68,26 @@
     href: other-ref-srz-table.md
   - name: SLA definition
     href: other-ref-sla-definition.md
+  - name: System requirements for services on the UKCloud platform
+    href: other-ref-browsers.md
+  - name: Terminating your UKCloud services
+    href: other-ref-offboarding.md
   - name: UKCloud complaints procedure
     href: other-ref-complaints.md
-  - name: UKCloud Ideas
-    href: other-ref-ideas.md
-  - name: UKCloud Ideas competition terms and conditions
-    href: other-ref-ideas-competition.md
+  - name: UKCloud Pricing Guides and SFIA Rate Card
+    href: other-ref-pricing-guide.md
   - name: UKCloud response to Spectre and Meltdown
     href: other-ref-spectre-meltdown.md
+  - name: UKCloud Service Definitions and Pricing Guide
+    href: other-ref-service-definitions.md
+  - name: UKCloud Terms & Conditions for G-Cloud 11
+    href: other-ref-terms-and-conditions.md
   - name: Understanding sites, regions and zones
     href: other-ref-sites-regions-zones.md
   - name: Understanding the Cyber Security News page
     href: other-ref-cyber-security-news.md
+  - name: Understanding the difference between GB and GiB
+    href: other-ref-gib.md
   - name: Understanding your invoice evidence file
     href: other-ref-invoice-evidence-file.md
   - name: Windows Server 2016 templates
@@ -66,3 +96,9 @@
   items:
   - name: Free trials Service Scope
     href: other-sco-free-trials.md
+- name: Videos
+  items:
+  - name: Editing Knowledge Centre articles video
+    href: other-vid-kc-contribution.md
+  - name: Pricing Estimation Tool overview video
+    href: other-vid-pricing-tool-overview.md

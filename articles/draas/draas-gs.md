@@ -3,6 +3,8 @@ title: Getting Started Guide for Disaster Recovery as a Service | UKCloud Ltd
 description: Provides information to get up and running with Disaster Recovery as a Service
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 17:56:05
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -47,6 +49,7 @@ Every few seconds, a checkpoint is written to every journal for each VM in the V
 Two terms you may hear in connection with disaster recovery are recovery point objective (RPO) and recovery time objective (RTO).
 
 - The RPO indicates the amount of data you can afford to lose in the event of a disaster. For example, if your application data changes fairly infrequently, your RPO can be higher as the data remains fairly static. However, if your application data is constantly changing, you'll need your RPO to be smaller to avoid significant loss of data in the event of a disaster.
+
 - The RTO is the amount of time you can tolerate your application being unavailable in the event of a disaster. For example, if your application provides critical functionality, you'll need to bring it back online very quickly. However, for a less critical application, you may be able to tolerate a longer outage.
 
 Because of the use of regular checkpoints (every few seconds), our Zerto-powered DRaaS provides a minimal RPO. The ability to use recovered VMs even before all the journal data has been promoted provides a good RTO as well.
@@ -56,15 +59,21 @@ Because of the use of regular checkpoints (every few seconds), our Zerto-powered
 When you order DRaaS, UKCloud provides you with:
 
 - The IP address (from the IP range you provided to UKCloud) of the Zerto Cloud Connector (ZCC) deployed in your recovery VDC; you'll need this to complete the setup of the site-to-site VPN between your local environment and your recovery VDC
+
 - A link to the appropriate version of the Zerto Virtual Manager (ZVM) for you to deploy in your local environment
+
 - A ZORG ID to identify your Zerto environment within the UKCloud platform
+
 - Access to the Zerto Self-Service Portal (ZSSP) in the appropriate UKCloud zone, where you can trigger a failover
 
 You should consider the following:
 
 - VMs must be powered on to be synchronised.
+
 - The operating system used by the protected VMs must also be supported in the recovery site.
+
 - Disaster Recovery as a Service captures every action. When a VM is deleted, the associated journal is also deleted.
+
 - We provide a single default service profile. The details of this are available in the DRaaS Service Scope. We do not currently provide the option for you to create custom profiles.
 
 ### System requirements
@@ -108,6 +117,7 @@ To get DRaaS up and running in your environment, follow the steps below:
 To recover your VMs to the UKCloud platform, you must have a VDC in the intended recovery site. If you already have a compute service in the UKCloud site, you can use an existing VDC or you can create a new one using:
 
 - The UKCloud Portal (for more information see the [*Getting Started Guide for UKCloud for VMware*](../vmware/vmw-gs.md))
+
 - The UKCloud Portal API (for more information see the [*How to use the UKCloud Portal API*](../portal/ptl-how-use-api.md))
 
 If you don't already have a compute service in the UKCloud site or you'd prefer UKCloud to create the VDC for you, you can request this as part of your DRaaS Service Request.
@@ -117,6 +127,7 @@ If you don't already have a compute service in the UKCloud site or you'd prefer 
 Before you can start using DRaaS, you need to prepare your local environment by:
 
 - Installing the appropriate version of Zerto Virtual Manager (ZVM) in your local environment
+
 - Creating a secure site-to-site VPN between your local environment and the UKCloud platform
 
 For more information, see [*How to install and configure Zerto in your local environment*](../vmware/vmw-how-zerto-install-local.md).
@@ -179,4 +190,4 @@ This section provides a glossary of terms specific to UKCloud's DRaaS.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

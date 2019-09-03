@@ -3,6 +3,8 @@ title: Portal release notes | UKCloud Ltd
 description: Information on latest features included in a Portal update
 services: portal
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 12:12:33
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -16,6 +18,46 @@ toc_mdlink: ptl-ref-release-notes.md
 # Portal release notes
 
 This article provides a list of completed Portal releases.
+
+## Release 1.88.2
+
+Date: 29th October 2018
+
+Bug fix
+
+Details: Fixed error when managing IPsec VPN configuration in Elevated.
+
+## Release 1.84.3
+
+Date: 16th August 2018
+
+Bug fix
+
+Details: Fixed date pickers on monitoring pages.
+
+## Release 1.84.1
+
+Date: 2nd August 2018
+
+Bug fix and feature update
+
+Details: Changing links to point to new Knowledge Centre content, change 2FA setup to use new seed.
+
+## Release 1.82.0
+
+Date: 3rd July 2018
+
+Feature update
+
+Details: Update product names to reflect G-Cloud 10 names, enable self-service ECS user creation.
+
+## Release 1.78.0
+
+Date: 7th June 2018
+
+Bug fix and feature update
+
+Details: Remove power status from My VMs page for VMs and vApps, remove BETA references from UKCloud for Azure.
 
 ## Release 1.76.0
 
@@ -699,4 +741,4 @@ Details: Fixes to "My VMs" and export improvements to notifications
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

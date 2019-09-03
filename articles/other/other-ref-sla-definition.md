@@ -3,6 +3,8 @@ title: SLA definition | UKCloud Ltd
 description: Definition of the UKCloud Service Level Agreement (SLA)
 services: other
 author: Sue Highmoor
+reviewer: Sue Highmoor
+lastreviewed: 05/08/2019
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -27,17 +29,26 @@ Subject to the Service Level Agreement (SLA) limitations detailed below, the ser
 
 If the availability of the service for a particular month falls below the Availability Commitment specified in the applicable SLA (subject to the SLA limitations provided below), customers will be eligible to request Service Credits. Service Credits will be calculated as a percentage of the fees billed for the monthly period during which the SLA event occurred (to be applied at the end of the billing cycle, or of the subsequent cycle if a claim is made after an invoice has been paid).
 
+> [!NOTE]
+> You will not be eligible to receive a Service Credit if your account has any undisputed payments outstanding beyond their due date or you are in violation of UKCloud’s Terms and Conditions including the UKCloud System Interconnect Security Policy (SISP).
+
 ## Service Level Agreement limitations
 
 The following will be excluded from any time-based calculations related to the service being unavailable:
 
-- Service dependant — planned maintenance windows (as specified in the applicable service description)
-- Emergency maintenance (as specified in the applicable service description)
+- Service dependent — planned maintenance windows (as specified in the applicable service definition)
+
+- Emergency maintenance (as specified in the applicable service definition)
+
 - Your misuse of a particular service (as defined in the UKCloud Terms and Conditions and the UKCloud System Interconnect Security Policy (SISP))
+
 - A *force majeure* event
-- Denial of service attacks, virus or hacking attacks for which there is no commercially reasonable, known solution; or any other events that are not within the direct control of UKCloud or that could not have been avoided with commercially reasonable care
+
+- Denial of service attacks, virus or hacking attacks for which there is no commercially reasonable known solution; or any other events that are not within the direct control of UKCloud or that could not have been avoided with commercially reasonable care
+
 - Packet loss, network or connectivity (for example, internet, MPLS) problems beyond UKCloud’s management boundary (for example, border router) supporting our connectivity to the public internet or government secure networks
-- Any customer-defined/customer-controlled event (for example, unavailability of service resulting from inadequate customer-subscribed services, resources or configuration)
+
+- Any customer-defined or customer-controlled event (for example, unavailability of service resulting from inadequate customer-subscribed services, resources or configuration)
 
 The customer will not be eligible to receive a Service Credit if the service account has any undisputed payments outstanding beyond their due date, or you are in violation of UKCloud’s Terms and Conditions including the UKCloud System Interconnect Security Policy (SISP).
 
@@ -45,224 +56,236 @@ The customer will not be eligible to receive a Service Credit if the service acc
 
 To request a Service Credit, the customer must file a Support Request within thirty (30) calendar days of the relevant suspected SLA event. UKCloud will review the request and issue a Service Credit if applicable.
 
-Service Credits will be issued only to the customer that UKCloud invoices for the applicable instance of the service, as a separate credit note that can be applied towards a future invoice for that service only. If the customer’s contract term for the service expires or is terminated prior to a Service Credit being issued, the Service Credit will become void as of the date of the expiration or termination.
+Service Credits will be issued only to the customer that UKCloud invoices for the applicable instance of the service as a separate credit note that can be applied towards a future invoice for that service only. If the customer’s contract term for the service expires or is terminated prior to a Service Credit being issued, the Service Credit will become void as of the date of the expiration or termination.
 
 ## UKCloud SLA monitoring
 
+### Generic service components
+
 UKCloud monitors various elements across the service to ensure that availability can be measured appropriately and realistically. Some elements are generic across all services others are service specific.
 
-&nbsp; | &nbsp;
--------|-------
-**Generic service component monitored** | UKCloud Portal: UKCloud monitors the customer self-service portal, (https://portal.ukcloud.com (or Elevated equivalent)). This includes the UKCloud for VMware API which provides programmatic control of the UKCloud Compute service.
-**Availability Commitment** | 99.90%
-**Service Credits** | % of monthly spend per 1% below the Availability Commitment or part thereof for services.
+&nbsp;                                  | Generic service components
+----------------------------------------|---------------------------
+**Generic service component monitored** | UKCloud Portal: UKCloud monitors the customer self-service portal, (<https://portal.ukcloud.com> (or Elevated equivalent)). This includes the UKCloud for VMware API which provides programmatic control of the UKCloud Compute service.
+**Availability commitment**             | 99.90%
+**Service Credit**                      | 1% of monthly spend per 1% below the Availability Commitment or part thereof for services.
 
-### Basic Managed VM
+### UKCloud for Microsoft Azure
 
-&nbsp; | &nbsp;
--------|-------
-**Service level agreement** | Depends on VM service level: <br>- 99.95% (contended)<br>- >99.99% (uncontended)
-**Portal level agreement**  | 99.90%
-**Availability calculation**| Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
-**Measurement of SLA**      | Unavailability applies to existing VMs that become unresponsive due to a fault recognised at the infrastructure, storage, power, internal networking (such as physical firewalls and routers) or hypervisor layer, or lower level.
-**Key exclusions**          | The following are examples of what is not covered by the SLA:<br>- Faults within your control, such as client applications<br>- Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud
-**Service Credit**          | 0% of monthly spend per 5% below service level target or part thereof for the service. <br>1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal.
-
-### Cloud GPU
-
-&nbsp; | &nbsp;
--------|-------
-**Service level agreement** | 99.90%
-**Portal level agreement**  | 99.90%
-**Availability calculation**| Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days).
-**Emergency and Planned Maintenance** | Excluded from calculations
-**Measurement of SLA** | Unavailability applies to inability to connect to a new GPU resource in the event of a failure of a GPU service within a single zone. Failure condition is following a hardware fault recognised at the IaaS layer or below and within UKCloud-controlled components.
-**Key exclusions** | The following are examples of what is not covered by the SLA: <br>- Faults within your control, such as client application issues<br>- Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud
-**Service Credit** | 3% of monthly spend per 5% below service level target or part thereof for affected compute platform. <br> 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal.
+&nbsp;                       | UKCloud for Microsoft Azure (public multi-tenant)
+-----------------------------|--------------------------------------------------
+**Service level agreement**  | 99.90% (single VM - deployed inside an availability zone).<br>99.95% (single VM - two instances deployed inside an availability zone).
+**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
+**Planned maintenance**      | Included
+**Measurement of SLA**       | Unavailability applies to existing VMs that become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical host availability, storage, power and internal networking such as physical firewalls and routers.
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
+**Service Credit**           | 5% of monthly spend per 5% below service level target or part thereof for affected compute platform.
 
 ### UKCloud for OpenShift
 
-&nbsp; | &nbsp;
--------|-------
-**Service level agreement** | 99.50%
-**Portal level agreement**  | 99.90%
-**Availability calculation**| Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any planned and emergency maintenance.
-**Measurement of SLA**      | Unavailability applies when the OpenShift environment becomes unresponsive owing to a fault in the UKCloud-controlled OpenShift infrastructure and services which lies with:<br>- UKCloud-controlled components such as the virtual infrastructure, storage, power, and physical firewalls and routers<br>- UKCloud-maintained OpenShift services (Master Nodes, Worker Nodes, Routing Layer)
-**Key exclusions** | The following are examples of what is not covered by the SLA: <br>- Faults within user control, that is, any code owned and controlled by the customer<br>- Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud<br>- Issues arising from bugs introduced as part of any new releases published by Red Hat (UKCloud will conduct thorough testing prior to applying any new releases)
-**Service Credit** | 3% of monthly spend for affected UKCloud deployed OpenShift platform. <br> 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal.
-
-### UKCloud for OpenStack at Tier 2
-
-&nbsp; | Non-production | Production | Business Critical
--------|----------------|------------|------------------
-**Service level agreement** | 99.90% | 99.95% | 99.99%
-**Portal level agreement**  | 99.90% | 99.90% | 99.90%
-**Availability calculation** <td colspan=3>Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance. |
-**Planned maintenance** | Excluded from calculations | Excluded from calculations | Excluded from calculations
-**Measurement of SLA** <td colspan=3> Infrastructure platform — inability to deploy/re-instantiate an Instance via the API at the same time as an existing Instance failing. <br> Control plane — inability to receive a response to any valid requests submitted to the appropriate OpenStack API endpoint after seven retries in any consecutive 10-minute period. |
-**Key exclusions**  <td colspan=3> The following are examples of what is not covered by the SLA:<br>- Faults within your control, such as client application issues<br>- Faults within external connectivity providers (for example DDoS- protected internet, SLI, Foxhound) and components colocated at UKCloud |
-**Service Credit** <td colspan=3> Infrastructure platform: <br>Per region: 2% of monthly spend<br>Global: 10% of monthly spend<br>  Control plane: <br>Global: 1% of monthly spend per 1% below service level target or part thereof |
+&nbsp;                       | UKCloud for OpenShift
+-----------------------------|----------------------
+**Service level agreement**  | 99.50
+**Portal level agreement**   | 99.90%
+**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
+**Planned maintenance**      | Excluded
+**Measurement of SLA**       | Unavailability applies when the OpenShift environment becomes unresponsive owing to a fault in the UKCloud-controlled OpenShift infrastructure and services which lies with:<ul><li>UKCloud-controlled components such as the virtual infrastructure, storage, power, and physical firewalls and routers<li>UKCloud-maintained OpenShift services (Master Nodes, Worker Nodes, Routing Layer)</ul>
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within user control, that is, any code owned and controlled by the customer<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Issues arising from bugs introduced as part of any new releases published by Red Hat (UKCloud will conduct thorough testing prior to applying any new releases)</ul>
+**Service Credit**           | 3% of monthly spend for affected UKCloud deployed OpenShift platform.
 
 ### UKCloud for OpenStack
 
-&nbsp; | &nbsp; | &nbsp; | &nbsp;
--------|--------|--------|-------
-**Service level agreement** | **Infrastructure platform per region** <br> 99.95% | **Control plane (OpenStack API and Horizon GUI)** <br> 99.95% | **UKCloud Portal** <br> 99.90%
-&nbsp; <td colspan=3>*Customers should increase the availability of their solutions by engineering them across multiple regions* |
-**Availability calculation** <td colspan=3> Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days). Planned and emergency maintenance periods are **excluded from any downtime calculation.** |
-**SLA event** <td colspan=3> Infrastructure platform — inability to deploy/re-instantiate an Instance via the API at the same time as an existing Instance failing. <br> Control plane — inability to receive a response to any valid requests submitted to the appropriate OpenStack API endpoint after seven retries in any consecutive 10-minute period. |
-**Key exclusions** <td colspan=3> The following are examples of what is not covered by the SLA: <br>- Faults within your control, such as client applications and custom configurations (for example customer-defined networks)<br>- Faults within external connectivity providers (for example DDoS- protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud |
-**Service Credit** <td colspan=3>Infrastructure platform: <br>Per region: 2% of monthly spend<br>Global: 10% of monthly spend <br>Control plane: Global: 1% of monthly spend per 1% below service level target or part thereof |
+&nbsp;                       | UKCloud for OpenStack
+-----------------------------|----------------------
+**Service level agreement**  | **Data plane per region (Instances):** 99.95%<br>**Control plane (OpenStack API and Horizon GUI):** 99.95%<br>*Customers should increase the availability of their solutions by engineering them across multiple regions*
+**GPU**                      | 99.90% - see [Cloud GPU](#cloud-gpu)
+**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
+**Planned maintenance**      | Excluded where a customer solution has ben engineered to a single region.
+**Measurement of SLA**       | **Data plane:** Inability to deploy/re-instantiate an Instance via the API at the same time as an existing Instance failing.<br>**Control plane:** Inability to receive a response to any valid requests submitted to the appropriate OpenStack API endpoint after seven retries in any consecutive 10-minute period.
+**Key exclusions** | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client applications and custom configurations (for example customer-defined networks)<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
+**Service Credit** | **Data plane:** Per region: 2% of monthly spend. Global: 10% of monthly spend.<br>**Control plane:** Global: 1% of monthly spend per 1% below service level target or part thereof.
+
+### UKCloud for Oracle Software
+
+&nbsp;                       | UKCloud for Oracle Software
+-----------------------------|----------------------------
+**Service level agreement**  | **Non-HA x86:** 99.95%<br>**HA x86:** 99.99%<br>**SPARC / Dedicated SPARC with resilience:** 99.95%<br>**Dedicated SPARC without resilience:** 95.00%
+**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
+**Planned maintenance**      | Excluded
+**Measurement of SLA**       | The service is deemed unavailable if a customer is unable to restart a VM after it becomes unresponsive due to a fault recognised as the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical infrastructure availability, storage, power and internal networking, such as physical firewalls and routers.<br>Oracle workloads are pinned to processor cores and will power off in the event of a host failure. Migrations are not live and VM restart will be required. UKCloud will advise customers if VM restart is required.<br><b>HA-enabled x86 VMs</b> will be automatically moved to a new host in the event of a host failure, but may require restarting. Automatic movement of VMs is covered by the HA x86 SLA. Customers are responsible for enabling the HA feature on x86 VMs and for restarting VMs.<br><b>Non-HA x86 VMs</b> require UKCloud to move Oracle VMs to a new host so they can be restarted. UKCloud's manual movement of VMs is covered by the Non-HA x86 SLA. Customers are responsible for restarting VMs<br><b>SPARC VMs</b> require UKCloud to move Oracle VMs to a new host so they can be restarted. UKCloud's manual movement of VMs is covered by the SPARC SLAs. Customers are responsible for restarting VMs.
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
+**Service Credit**           | 10% of monthly spend.
+
+### UKCloud for VMware
+
+&nbsp;                                  | UKCloud for VMware
+----------------------------------------|-------------------
+**Service level agreement**             | **ESSENTIAL:** 99.95%<br>**POWER:** 99.99%<br>**PRIORITY:** 99.95%
+**GPU**                                 | 99.90% - see [Cloud GPU](#cloud-gpu)
+**Availability calculation**            | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
+**Planned maintenance**                 | **ESSENTIAL:** Included<br>**POWER:** Included<br>**PRIORITY:** Excluded
+**Measurement of SLA**                  | Unavailability applies to existing VMs that become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical host availability, storage, power and internal networking such as physical firewalls and routers.
+**Key exclusions**                      | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
+**Service Credit**                      | **ESSENTIAL:** 3% of monthly spend per 5% below service level target or part thereof for affected compute platform.<br>**POWER:** 5% of monthly spend per 5% below service level target or part thereof for affected compute platform.<br>**PRIORITY:** 5% of monthly spend per 5% below service level target or part thereof for affected compute platform.
+**Protection-improved Service Credit** | Combination of **Snapshot Protection** with the **POWER** service type increases Service Credits to 10% of monthly spend per 5% below service level target or part thereof for affected compute platform.<br>Inclusion of **Synchronous Protection** increases Service Credits to 15% of monthly spend per 5% below service level target or part thereof for affected compute platform.
+
+### Basic Managed Compute from UKCloud
+
+SLA varies based on the chosen cloud technology. See the appropriate section of this article for more information.
+
+### CloudSOC from UKCloud
+
+SLA varies based on the chosen cloud technology. See the appropriate section of this article for more information.
+
+### Cloud GPU
+
+&nbsp;                       | Cloud GPU
+-----------------------------|----------
+**Service level agreement**  | 99.90%
+**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
+**Planned maintenance**      | Excluded
+**Measurement of SLA**       | Unavailability applies to inability to connect to a new GPU resource in the event of a failure of a GPU service within a single zone. Failure condition is following a hardware fault recognised at the IaaS layer or below and within UKCloud-controlled components.
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
+**Service Credit**           | 3% of monthly spend per 5% below service level target or part thereof for affected compute platform.
 
 ### Cloud Storage
 
-&nbsp; | &nbsp;
--------|-------
-**Service level agreement** | **STANDARD:** 99.95% | **ENHANCED:** 99.99% | **ENHANCED PLUS:** 99.99%
-**Portal level agreement**  <td colspan=3> 99.90% |
-**Availability calculation** <td colspan=3> Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any planned and emergency maintenance. |
-**Measurement of SLA** <td colspan=3> Unavailability applies to existing data where the data becomes inaccessible due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the messaging infrastructure, storage, power and internal networking such as physical firewalls and routers. |
-**Key exclusions** <td colspan=3> The following are examples of what is not covered by the SLA: <br>- The fault is within the customer's control (applications and user networks)<br>- Faults within external connectivity providers (for example DDoS- protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud |
-**Service Credit**  | **STANDARD:** 10% of monthly spend | **ENHANCED:** 15% of monthly spend | **ENHANCED PLUS:** 15% of monthly spend
-&nbsp; <td colspan=3> 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal. |
-
-### Cloud Storage at Tier 2
-
-&nbsp; | Non-production | Production | Business Critical
--------|----------------|------------|------------------
-**Service level agreement** | 99.90% | 99.95% | 99.99% |
-**Portal level agreement**  | 99.90% | 99.90% | 99.90% |
-**Availability calculation** <td colspan=3> Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance. |
-**Planned maintenance** | Excluded from calculations | Excluded from calculations | Excluded from calculations
-**Measurement of SLA** <td colspan=3>Unavailability applies to existing data where the data becomes inaccessible due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the messaging infrastructure, storage, power and internal networking such as physical firewalls and routers. |
-**Key exclusions** <td colspan=3>The following are examples of what is not covered by the SLA: <br>- Faults within your control, such as client application issues<br>- Faults within external connectivity providers (for example DDoS- protected internet, SLI, Foxhound) and components colocated at UKCloud |
-**Service Credit** | 5% of monthly spend | 10% of monthly spend | 10% of monthly spend
-&nbsp; <td colspan=3>1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal. |
-
-### High Performance Compute
-
-&nbsp; | &nbsp;
--------|-------
-**Service level agreement** | 99.90%
-**Portal level agreement**  | 99.90%
-**Availability calculation** | Availability is calculated based on processor core hours. This is calculated by dividing the actual number of processor core hours that were available by the potential number of processor core hours that could have been available. <br> This is based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any planned and emergency maintenance.
-**Measurement of SLA** | Unavailability applies to processor cores that become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical host availability, storage, power and internal networking such as physical firewalls and routers.
-**Key exclusions** | The following are examples of what is not covered by the SLA: <br>- Faults within your control, such as client application issues and dependency on individual VMs<br>- Routine failures of individual hosts<br>- Faults within external connectivity providers (for example DDoS- protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud<br>- Specific VMs and data using ephemeral storage
-**Service Credit** | 5% of monthly spend for the affected compute platform
+&nbsp;                       | Cloud Storage
+-----------------------------|--------------
+**Service level agreement**  | **STANDARD:** 99.95%<br>**ENHANCED:** 99.99%
+**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
+**Planned maintenance**      | Excluded
+**Measurement of SLA**       | Unavailability applies to existing data where the data becomes inaccessible due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the messaging infrastructure, storage, power and internal networking such as physical firewalls and routers.
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>The fault is within the customer's control (applications and user networks)<li>Faults within external connectivity providers (for example DDoS- protected internet, PSN, Janet or HSCN) and components colocated at UKCloud</ul>
+**Service Credit**           | **STANDARD:** 10% of monthly spend.<br>**ENHANCED:** 15% of monthly spend.
 
 ### Cross Domain Security Zone
 
-&nbsp; | &nbsp;
--------|-------
-**Service level agreement** | 99.90%
-**Portal level agreement**  | 99.90%
-**Availability calculation**| Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any planned and emergency maintenance.
-**Measurement of SLA** | Unavailability applies to the UKCloud Guard or the underlying Cross Domain Security Zone infrastructure due to a fault recognised at the IaaS layer, data centre facilities, physical firewalls or routers.
-**Key exclusions** | The following are examples of what is not covered by the SLA: <br>- The fault is within the customer's control (such as VM configuration, customer networks, application logic)<br>- Faults within external connectivity providers (for example DDoS- protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud
-**Service Credit** | 10% of monthly spend on the Cross Domain Security Zone. <br> 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal.
+&nbsp;                       | Cross Domain Security Zone
+-----------------------------|---------------------------
+**Service level agreement**  | 99.90%
+**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
+**Planned maintenance**      | Excluded
+**Measurement of SLA**       | Unavailability applies to the underlying Cross Domain Security Zone infrastructure due to a fault recognised at the IaaS layer, data centre facilities, physical firewalls or routers.
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>The fault is within the customer's control (such as VM configuration, customer networks, application logic)<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
+**Service Credit**           | 10% of monthly spend on the Cross Domain Security Zone.
+
+### Dedicated Compute v2
+
+&nbsp;                       | Dedicated Compute v2
+-----------------------------|---------------------
+**Service level agreement**  | 99.99%
+**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
+**Planned maintenance**      | Excluded
+**Measurement of SLA**       | Unavailability applies to existing VMs when the compute platform becomes inaccessible due to a fault recognised at the IaaS layer or lower:<ul><li>Fault is not within the customer’s control (OS configuration, customer applications and customer networks)<li>Fault is within UKCloud-controlled components such as the dedicated compute infrastructure, UKCloud data centre facilities, physical firewalls and routers</ul>
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
 
 ### Disaster Recovery as a Service (DRaaS)
 
 Although we don't offer an SLA relating the performance of the Zerto software, we do provide one relating to the availability of the UKCloud for VMware platform that hosts the solution.
 
-&nbsp; | UKCloud for VMware (POWER)
--------|---------------------------
-**Service level agreement** | 99.99%
-**Portal level agreement**  | 99.90%
+&nbsp;                       | UKCloud for VMware (POWER)
+-----------------------------|---------------------------
+**Service level agreement**  | 99.99%
 **Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
-**Planned maintenance** | Included in calculations
-**Measurement of SLA** | Unavailability applies to existing storage that has become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical host availability, storage, power and internal networking such as physical firewalls and routers. Although we don't offer an SLA relating to the performance of the Zerto software, we do offer an SLA around the availability of the self-service portal, and one relating to the availability of the UKCloud for VMware platform that hosts the solution.
-**Key exclusions** | The following are examples of what is not covered by the SLA: <br>- Faults within your control, such as client application issues<br>- Faults within external connectivity providers (for example DDoS- protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud<br>- Replication faults introduced by your environment, or your implementation of Zerto
-**Service Credit** | 5% of monthly spend per 5% below service level target or part thereof for affected compute platform. <br> 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal.
+**Planned maintenance**      | Included
+**Measurement of SLA**       | Unavailability applies to existing storage that has become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical host availability, storage, power and internal networking such as physical firewalls and routers. Although we don't offer an SLA relating to the performance of the Zerto software, we do offer an SLA around the availability of the self-service portal, and one relating to the availability of the UKCloud for VMware platform that hosts the solution.
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Replication faults introduced by your environment, or your implementation of Zerto</ul>
+**Service Credit**           | 5% of monthly spend per 5% below service level target or part thereof for affected compute platform.
 
-### Email and Collaboration as a Service (Assured)
+### Email and Collaboration as a Service
 
-&nbsp; | &nbsp;
--------|-------
-**Service level agreement** | 99.99%
-**Portal level agreement**  | 99.90%
-**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any planned and emergency maintenance.
-**Measurement of SLA** | Unavailability applies to existing mailboxes that become unresponsive due to a fault recognised at the SaaS layer or below. That is, the fault is within UKCloud-controlled components, such as the messaging infrastructure, storage, power or internal networking (such as physical firewalls and routers).
-**Key exclusions** | The following are examples of what is not covered by the SLA: <br>- Faults within your control, such as client applications and mailbox configuration<br>- Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud<
-**Service Credit** | 10% of monthly spend per 5% below service level target or part thereof for the service. <br> 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal.
+&nbsp;                       | Email and Collaboration as a Service
+-----------------------------|-------------------------------------
+**Service level agreement**  | 99.99%
+**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
+**Planned maintenance**      | Excluded
+**Measurement of SLA**       | Unavailability applies to existing mailboxes that become unresponsive due to a fault recognised at the SaaS layer or below. That is, the fault is within UKCloud-controlled components, such as the messaging infrastructure, storage, power or internal networking (such as physical firewalls and routers).
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client applications and mailbox configuration<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud.</ul>
+**Service Credit**           | 10% of monthly spend per 5% below service level target or part thereof for the service.
 
-### Enterprise Cloud Hosting at Tier 2
+### Extended Network Support from UKCloud
 
-&nbsp; | Non-Production | Production | Business Critical
--------|----------------|------------|------------------
-**Service level agreement**  | 99.90% | 99.95% | 99.99%
-**Portal level agreement**   <td colspan=3> 99.90% |
-**Availability calculation** <td colspan=3> Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.|
-**Planned maintenance** | Excluded from calculations | Excluded from calculations | Excluded from calculations
-**Measurement of SLA**  <td colspan=3> Unavailability applies to existing VMs that become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical host availability, storage, power and internal networking such as physical firewalls and routers. |
-**Key exclusions** <td colspan=3> The following are examples of what is not covered by the SLA: <br>- Faults within your control, such as client application issues<br>- Faults within external connectivity providers (for example DDoS-protected internet, SLI, Foxhound) and components colocated at UKCloud</li> </ul> |
-**Service Credit** | 3% of monthly spend per 5% below service level target or part thereof for affected compute platform. | 5% of monthly spend per 5% below service level target or part thereof for affected compute platform. | 5% of monthly spend per 5% below service level target or part thereof for affected compute platform.
-&nbsp; <td colspan=3> 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal. |
+SLA varies based on the chosen cloud technology. See the appropriate section of this article for more information.
 
-### UKCloud for VMware
+### High Performance Compute
 
-&nbsp; | ESSENTIAL | POWER | PRIORITY
--------|-----------|-------|---------
-**Service level agreement** | 99.95% | 99.99% | 99.95% |
-**Portal level agreement**   <td colspan=3> 99.90% |
-**Availability calculation** <td colspan=3> Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.|
-**Planned maintenance** | Included in calculations | Included in calculations | Included in calculations
-**Measurement of SLA** <td colspan=3> Unavailability applies to existing VMs that become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical host availability, storage, power and internal networking such as physical firewalls and routers. |
-**Key exclusions** <td colspan=3> The following are examples of what is not covered by the SLA: <br>- Faults within your control, such as client application issues<br>- Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud |
-**Service Credit** | 3% of monthly spend per 5% below service level target or part thereof for affected compute platform. | 5% of monthly spend per 5% below service level target or part thereof for affected compute platform. | 5% of monthly spend per 5% below service level target or part thereof for affected compute platform.
-&nbsp; <td colspan=3> 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal. |
-**Protection-improved Service Credits** <td colspan=3> Combination of Snapshot Protection with the POWER service type increases Service Credits to 10% of monthly spend per 5% below service level target or part thereof for affected compute platform. <br> Inclusion of Synchronous Protection increases Service Credits to 15% of monthly spend per 5% below service level target or part thereof for affected compute platform. |
+&nbsp;                       | High Performance Compute
+-----------------------------|-------------------------
+**Service level agreement**  | 99.90%
+**Availability calculation** | Availability is calculated based on processor core hours. This is calculated by dividing the actual number of processor core hours that were available by the potential number of processor core hours that could have been available.<br>This is based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
+**Planned maintenance**      | Excluded
+**Measurement of SLA**       | Unavailability applies to processor cores that become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical host availability, storage, power and internal networking such as physical firewalls and routers.
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>Faults within your control, such as client application issues and dependency on individual VMs<li>Routine failures of individual hosts<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Specific VMs and data using ephemeral storage</ul>
+**Service Credit**           | 5% of monthly spend for the affected compute platf
 
-### UKCloud for Oracle Software
+### Managed Monitoring from UKCloud
 
-&nbsp; | &nbsp;
--------|-------
-**Service level agreement** | 99.95%
-**Portal level agreement**  | 99.90%
-**Availability calculation**| Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any planned and emergency maintenance.
-**Measurement of SLA**      | Unavailability applies to existing workloads that become unresponsive due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the physical infrastructure availability, storage, power and internal networking such as physical firewalls and routers. <br> Owing to the nature of Oracle workloads and the need to pin them to processor cores, workloads will be moved only in the event of a hardware failure. This will not be a live migration and an application restart is likely to be required.
-**Key exclusions**          | The following are examples of what is not covered by the SLA: <br>- Faults within your control, such as client application issues<br>- Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud
-**Service Credit**         | 10% of monthly spend <br> 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal.
+SLA varies based on the chosen cloud technology. See the appropriate section of this article for more information.
 
-### Private Cloud for Compute
+### Migration to the Cloud
 
-&nbsp; | &nbsp; | &nbsp;
--------|--------|-------
-**Service level agreement** <td colspan=2> 99.99% |
-**Portal level agreement**  <td colspan=2> 99.90% |
-**Availability calculation** <td colspan=2> Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any planned and emergency maintenance. |
-**Measurement of SLA** <td colspan=2> Unavailability applies to existing VMs when the compute platform becomes inaccessible due to a fault recognised at the IaaS layer or lower: <br>- Fault is not within the customer’s control (OS configuration, customer applications and customer networks)<br>- Fault is within UKCloud-controlled components such as the dedicated compute infrastructure, UKCloud data centre facilities, physical firewalls and routers |
-**Key exclusions** <td colspan=2> The following are examples of what is not covered: |
-&nbsp; | **All-inclusive, platform only and platform only in CHDC** | Deletion or modification of VM by customer.<br>- Any access provided by you to your user base that takes the compute system beyond its recommended performance and connectivity thresholds.<br>- Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud.<br>- Any connectivity between data centres that is out of the control of UKCloud.
-&nbsp; | **Customer-supplied hardware** | As above plus; any loss of connectivity or data including data corruption as a result of you or your suppliers installing new or additional capacity to the compute system.
-&nbsp; | **CHDC** | As above plus; any platform outages causing disruption to power and cooling (as they're out of UKCloud's control).
-**Service Credit** <td colspan=2> 10% of monthly spend for Private Cloud – Compute <br> 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal. |
+Due to the service being dependent on connectivity between the customer data centre and UKCloud, we are unable to offer an SLA relating to the performance of this service.
+
+### Multi-Cloud Backup Storage
+
+&nbsp;                       | Multi-Cloud Backup Storage
+-----------------------------|---------------------------
+**Service level agreement**  | **STANDARD:** 99.95%<br>**REPLICATED:** 99.99%
+**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
+**Planned maintenance**      | **STANDARD:** Excluded<br>**REPLICATED:** Included
+**Measurement of SLA**       | Unavailability applies to existing data where the data on the backup target becomes inaccessible due to a fault recognised at the IaaS layer or below, that is, the fault is within UKCloud-controlled components, such as the backup infrastructure, storage, power and internal networking such as physical firewalls and routers.
+**Key exclusions**           | The following are examples of what is not covered by the SLA:<ul><li>The fault is within the customer's control (for example, backup software or application and user networks)<li>Incompatible applications or backup software (for example, a change of backup software leading to incompatibility, or incompatible software versions)<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud</ul>
+**Service Credit** | **STANDARD:** 10% of monthly Backup Storage spend.<br>**REPLICATED:** 15% of monthly Backup Storage spend.
+
+### Private Cloud
+
+&nbsp;                       | Private Cloud
+-----------------------------|-------------
+**Service level agreement**  | 99.99%
+**Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
+**Planned maintenance**      | Excluded
+**Measurement of SLA**       | Unavailability applies to existing VMs when the compute platform becomes inaccessible due to a fault recognised at the IaaS layer or lower:<ul><li>Fault is not within the customer’s control (OS configuration, customer applications and customer networks)<li>Fault is within UKCloud-controlled components such as the dedicated compute infrastructure, UKCloud data centre facilities, physical firewalls and routers</ul>
+**Key exclusions**           | The following are examples of what is not covered:<br>**All-inclusive, platform only and platform only in CHDC:**<ul><li>Deletion or modification of VM by customer<li>Any access provided by you to your user base that takes the compute system beyond its recommended performance and connectivity thresholds<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Any connectivity between data centres that is out of the control of UKCloud</ul>**Customer-supplied hardware:**<ul><li>As above, plus any loss of connectivity or data including data corruption as a result of you or your suppliers installing new or additional capacity to the compute system</ul>**CHDC:**<ul><li>As above, plus any platform outages causing disruption to power and cooling (as they're out of UKCloud's control)</ul>
+**Service Credit**           | 10% of monthly spend for Private Cloud.
+
+### Private Cloud for Oracle Software
+
+&nbsp;                       | Private Cloud for Oracle Software
+-----------------------------|----------------------------------
+**Service level agreement**  | 99.99%
+**Availability calculation** | Availability indication is based on an average 730 hours per month, excluding any emergency maintenance.
+**Planned maintenance**      | Excluded
+**Measurement of SLA**          | **Applies to All-Inclusive and UKCloud Managed:** Availability of all or part of the Private Cloud for Oracle Software infrastructure.<br>**Applies to UKCloud Hosted:** Availability of power and cooling to your Private Cloud for Oracle Software infrastructure.
+**Key exclusions**           | The following are examples of what is not covered:<br>**Applies to All-Inclusive and UKCloud Managed:**<ul><li>Deletion or modification of files by customer resulting in data loss<li>Any access provided by you to your user base that takes the Oracle system beyond its recommended performance and connectivity thresholds<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Any connectivity between data centres that is out of the control of UKCloud</ul>**Applies to Customer Managed and UKCloud Managed**<ul><li>As above, plus: any loss of connectivity or data, including data corruption as a result of you or your suppliers installing new or additional components into the system</ul>**Applies to UKCloud Hosted:**<ul><li>As above, plus: any platform outages of the Private Cloud for Oracle Software infrastructure caused by the party managing the Oracle infrastructure hosted within UKCloud, or by failures at the physical or logical infrastructure layer outside of UKCloud's responsibility</ul>**Applies to CHDC hosted or On-Premises:**<ul><li>As above, plus: any platform outages of the Private Cloud for Oracle Software infrastructure caused by data centre failures outside of UKCloud control</ul>
+**Service credits**          | 10% of monthly spend for Private Cloud for Oracle Software.
 
 ### Private Cloud for Storage
 
-&nbsp; | &nbsp; | &nbsp;
--------|--------|-------
-**Platform SLA** <td colspan=2> 99.99% |
-**Portal SLA**   <td colspan=2> 99.90% |
-**Availability calculation** <td colspan=2> Availability indication is based on an average 730 hours per month. Excludes planned and emergency maintenance. |
-**SLA measurement** <td colspan=2> Availability of all or part of the storage infrastructure. |
-**Key exclusions** <td colspan=2> The following are examples of what is not covered: |
-&nbps; | **All-Inclusive, UKCloud Hosted and CHDC Hosted** | Deletion or modification of files by customer resulting in data loss.<br>- Any access provided by you to your user base that takes the storage system beyond its recommended performance and connectivity thresholds.<br>- Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or N3/HSCN) and components colocated at UKCloud.<br>- Any connectivity between data centres that is out of the control of UKCloud.
-&nbsp; | **Customer-supplied hardware** | As above plus; any loss of connectivity or data including data corruption as a result of you or your suppliers installing new or additional capacity to the compute system. 
-&nbsp; | **CHDC** | As above plus; any platform outages causing disruption to power and cooling (as they're out of UKCloud's control).
-**Service Credit** <td colspan=2> 10% of monthly spend for Private Cloud – Storage <br> 1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal. |
+&nbsp;                       | Private Cloud for Storage
+-----------------------------|--------------------------
+**Service level agreement**  | 99.99%
+**Availability calculation** | Availability indication is based on an average 730 hours per month, excluding any emergency maintenance.
+**Planned maintenance**      | Excluded
+**Measurement of SLA**          | Availability of all or part of the storage infrastructure.
+**Key exclusions**           | The following are examples of what is not covered:<br>**Applies to All-Inclusive, UKCloud Hosted and Crown Campus Hosted:**<ul><li>Deletion or modification of files by customer resulting in data loss<li>Any access provided by you to your user base that takes the storage system beyond its recommended performance and connectivity thresholds<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN) and components co-located at UKCloud<li>Any connectivity between data centres that is out of the control of UKCloud</ul>**Applies to customer-supplied hardware:**<ul><li>As above, plus: any loss of connectivity or data including data corruption as a result of you or your suppliers installing new or additional capacity to the compute system</ul>**Applies to Crown Campus Hosted:**<ul><li>As above, plus: any platform outages causing disruption to power and cooling (as they're out of UKCloud's control)</ul>
+**Service Credit** | 10% of monthly spend for Private Cloud for Storage.
 
 ### Secure Remote Access
 
-&nbsp; | &nbsp;
--------|-------
-**Service level agreement** | 99.90%
-**Portal level agreement** | 99.90%
+&nbsp;                       | Secure Remote Access
+-----------------------------|---------------------
+**Service level agreement**  | 99.90%
 **Availability calculation** | Availability is calculated based on the number of hours in the billing month (for example, 744 hours for months with 31 days), excluding any emergency maintenance.
-**Measurement of SLA** | Unavailability applies to the Secure Remote Access VPN endpoints due to a fault recognised at the IaaS layer or lower (such as the virtual infrastructure, storage, power, physical firewalls, routers or VPN concentrators).
-**Key exclusions** | The following are examples of what is not covered by the SLA: <br>- Faults within your control, such as operating systems, applications, user networks, local device failure or software failure<br>- Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or N3/HSCN) and components co-located at UKCloud
-**Service Credit** | 10% of monthly spend on the Secure Remote Access Service. <br>1% of monthly spend per 1% below service level target or part thereof for the UKCloud API and Portal.
+**Planned maintenance**      | Excluded
+**Measurement of SLA**       | Unavailability applies to the Secure Remote Access VPN endpoints due to a fault recognised at the IaaS layer or lower (such as the virtual infrastructure, storage, power, physical firewalls, routers or VPN concentrators).
+**Key exclusions**           | The following are examples of what is not covered:<ul><li>Faults within your control, such as operating systems, applications, user networks, local device failure or software failure<li>Faults within external connectivity providers (for example DDoS-protected internet, PSN, Janet or HSCN and components co-located at UKCloud</ul>
+**Service Credit**           | 10% of monthly spend on the Secure Remote Access Service.
+
+### Third-Party Software
+
+For third-party product service level agreements, refer to the [End User Licence Agreement](../third-party/third-ref-eula.md) or support agreement of the specific product.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -3,6 +3,8 @@ title: How to access vCloud Director through the vCloud API | UKCloud Ltd
 description: Describes how to get started with the vCloud API
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: How To
 toc_sub1:
@@ -81,4 +83,4 @@ Now that you have your API credentials, you can start interacting with the vClou
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

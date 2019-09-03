@@ -3,6 +3,8 @@ title: OpenStack public image versioning | UKCloud Ltd
 description: Describes how image versioning works in the UKCloud public catalog for UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 02/08/2018 14:45:48
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -28,6 +30,7 @@ In our public catalog, we keep the original version of the image in the catalog 
 This means that:
 
 - The LTS (original version) is predictable both in deployment state and UUID within OpenStack
+
 - The current version is not predictable in deployment as patches are applied and the UUID changes when the image is updated
 
 ## Image naming convention
@@ -44,4 +47,4 @@ For example:
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

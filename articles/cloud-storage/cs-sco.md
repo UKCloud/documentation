@@ -3,6 +3,8 @@ title: Cloud Storage Service Scope | UKCloud Ltd
 description: Outlines important details regarding Cloud Storage
 services: cloud-storage
 author: Steve Hall
+reviewer:
+lastreviewed: 20/08/2019 16:46:31
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -33,7 +35,7 @@ Organisations can choose from two service levels:
 
 If you want more control and visibility of your disaster recovery solution, you can design your solution to write data independently to each data centre at our STANDARD service level, instead of using our ENHANCED service level.
 
-Full details of the available service options are outlined in the [Service Definition](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf).
+Full details of the available service options are outlined in the [*Service Definition*](cs-sd.md).
 
 ## Service availability
 
@@ -45,7 +47,7 @@ The ENHANCED service level SLA guarantees 99.99% availability. In the event of a
 
 You are entitled to claim Service Credits for outages to services that take you out of SLA. For more about how we calculate SLAs, see the [*SLA Definition*](../other/other-ref-sla-definition.md).
 
-## Service background 
+## Service background
 
 We actively capacity-manage the cloud platform to ensure you have access to the resources you request.
 
@@ -57,24 +59,30 @@ You can specify Farnborough or Corsham as the site where you would like to have 
 
 We control the deployed versions of technology on the platform. This covers internal platform-supporting technologies, and any technology versions available to you.
 
-# Platform management
+## Platform management
 
 Users can access, manage and view their Cloud Storage service, in any of the following ways:
 
 - **APIs.** You can use either the ECS S3-compatible API or the ECS Atmos API. The APIs are not interchangeable, so you need to choose carefully which API you want to use. Refer to the [EMC ECS Data Access Guide](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf) for more information on the features of both APIs.
 
+> [!NOTE]
+> The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API
+
 - **Command Line Interface (CLI).** CLI tools enable access from the command line by translating commands into the relevant API calls.
 
 - **Storage Gateways.** These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see the appropriate Cloud Storage Gateways Knowledge Centre article:
 
-    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
-    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+
+  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
 - **UKCloud Portal.** Contains information about the namespaces and users within your Cloud Storage environment, as well as a graphical representation of your storage consumption. For more information on the Portal functionality, see [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md).
 
-To create additional namespaces or users, you must raise a service request. When requesting additional users, you can specify whether you want these users to have read-write or read-only permissions.
+To create additional namespaces or users, you must raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. When requesting additional users, you can specify whether you want these users to have read-write or read-only permissions.
 
-We do not currently offer access as an NFS or a HDFS.
+## Technology constraints
+
+We do not currently offer access as an Network File System (NFS) or a Hadoop Distributed File System (HDFS) enabled account or bucket.
 
 You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the ECS Portal.
 
@@ -92,7 +100,7 @@ You can protect against accidental deletion or modification of data by using ret
 
 Cloud Storage is available on a range of Assured and Elevated networks. An overview of the available networks in each region is available in [*UKCloud Services By Region*](../other/other-ref-services-by-region.md).
 
-Cloud Storage in our Assured OFFICAL domain uses the same environment for both PSN Assured and internet connections. Although it isn't possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.
+Cloud Storage in our Assured OFFICIAL domain uses the same environment for both PSN Assured and internet connections. Although it isn't possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.
 
 We manage the physical firewalls that face public and secure networks.
 
@@ -109,7 +117,9 @@ In line with UKCloud's SISP, we provide notification of customer-impacting secur
 You can request a migration through a Service Request. Migrations may be between:
 
 - Services (for example, STANDARD to ENHANCED)
+
 - UKCloud sites or availability zones
+
 - The Assured and Elevated platforms
 
 ## Customer service
@@ -125,15 +135,18 @@ You can request a migration through a Service Request. Migrations may be between
 ## Customer responsibilities
 
 - Assessing whether the UKCloud platform can support the various requirements of your application and storage needs.
+
 - The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.
-- If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.
+
+- If access is required over government secure networks (HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.
+
 - The customer is also responsible for ensuring only lawful data that supports the UK public sector is stored and processed by applications on this environment, and that they fully comply with the UKCloud Security Operating Procedures (SyOPs) and other information assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.
 
 ## Service provisioning
 
 Within 1 day of accepting an order (shorter deployment times are typically achieved and can be prioritised upon request), UKCloud will create the customer's Primary Administrator account and send a Welcome Pack which includes the URL for the UKCloud Customer Portal, and the getting started guide.
 
-The customer can then use these details to configure their application (for example GeoDrive, CIFS-ECS, Cloud Tiering Appliance and Documentum) or access Cloud Storage via the API to begin using the service.
+The customer can then use these details to configure their application (for example GeoDrive, Cloud Tiering Appliance and Documentum) or access Cloud Storage via the API to begin using the service.
 
 UKCloud has created a number of videos, help guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the Knowledge Centre, accessed via the UKCloud Portal.
 
@@ -169,7 +182,13 @@ The following documents contain more information about Cloud Storage and the ser
 - [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
 
 - Cloud Storage Gateways
-    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
-    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
-    
+
+  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+
+  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
+
+## Feedback
+
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

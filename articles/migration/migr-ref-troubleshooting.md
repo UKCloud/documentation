@@ -3,6 +3,8 @@ title: Troubleshooting Migration to the Cloud | UKCloud Ltd
 description: This article describes some of the issues you may encounter when using UKCloud's Workload Migration to the Cloud service (powered by Zerto)
 services: migration
 author: Dan Baker
+reviewer:
+lastreviewed: 04/09/2018 10:05:55
 toc_rootlink: Troubleshooting
 toc_sub1: 
 toc_sub2:
@@ -119,4 +121,4 @@ Before a migration, we recommend that you trigger a live failover as a practice 
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

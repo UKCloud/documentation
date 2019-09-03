@@ -1,3 +1,7 @@
+- name: About
+  items:
+  - name: UKCloud for Oracle Software
+    href: orcl-home.md
 - name: FAQs
   items:
   - name: UKCloud for Oracle Software FAQs
@@ -26,7 +30,15 @@
     href: orcl-ref-templates.md
   - name: VM compatibility with UKCloud for Oracle Software
     href: orcl-ref-vm-compatibility.md
+- name: Service Definition
+  items:
+  - name: UKCloud for Oracle Software Service Definition
+    href: orcl-sd.md
 - name: Service Scope
   items:
   - name: UKCloud for Oracle Software Service Scope
     href: orcl-sco.md
+- name: Videos
+  items:
+  - name: OEM Cloud Control console overview
+    href: orcl-vid-overview.md

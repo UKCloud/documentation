@@ -8,7 +8,7 @@
     <title>How to create a virtual machine using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual machine using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-create-vm-ps.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -90,251 +99,339 @@ As UKCloud for Microsoft Azure is built on UKCloud’s assured, UK-sovereign mul
 VMware and OpenStack, and benefit from native connectivity to non-cloud workloads in Crown Hosting and government community networks, including PSN, HSCN and RLI.
 Before creating the virtual machine, it is necessary to create storage and networking resources for the the VM to use.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Ensure your PowerShell environment is setup as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
+<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
 <h2 id="creating-a-virtual-machine">Creating a virtual machine</h2>
-<div class="IMPORTANT">
-<h5>Important</h5>
+<h3 id="declare-variables">Declare variables</h3>
 <p>Enter details below to provide values for the variables in the following script in this article:</p>
-<p>Resource Group Name: <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;">
-<input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="myResourceGroup"></form></p>
-<p>Storage Account Name: <form oninput="result.value=saname.value" id="saname" style="display: inline;">
-<input type="text" id="saname" name="saname" style="display: inline;" placeholder="myStorageAccount"></form></p>
-<p>Region Name: <form oninput="result.value=region.value" id="region" style="display: inline;">
-<input type="text" id="region" name="region" style="display: inline;" placeholder="frn00006" value="frn00006"></form></p>
-<p>Subnet Name: <form oninput="result.value=subnetname.value" id="subnetname" style="display: inline;">
-<input type="text" id="subnetname" name="subnetname" style="display: inline;" placeholder="mySubnet"></form></p>
-<p>Subnet Address Range (CIDR Notation): <form oninput="result.value=subaddrrange.value" id="subaddrrange" style="display: inline;">
-<input type="text" id="subaddrrange" name="subaddrrange" style="display: inline;" placeholder="192.168.1.0/24"></form></p>
-<p>Virtual Network Name: <form oninput="result.value=vnetname.value" id="vnetname" style="display: inline;">
-<input type="text" id="vnetname" name="vnetname" style="display: inline;" placeholder="myVNetwork"></form></p>
-<p>Virtual Network Address Range (CIDR Notation): <form oninput="result.value=vnetaddrrange.value" id="vnetaddrrange" style="display: inline;">
-<input type="text" id="vnetaddrrange" name="vnetaddrrange" style="display: inline;" placeholder="192.168.0.0/16"></form></p>
-<p>Public IP Name: <form oninput="result.value=publicipname.value" id="publicipname" style="display: inline;">
-<input type="text" id="publicipname" name="publicipname" style="display: inline;" placeholder="myPublicIP"></form></p>
-<p>Network Security Group Name: <form oninput="result.value=nsgname.value" id="nsgname" style="display: inline;">
-<input type="text" id="nsgname" name="nsgname" style="display: inline;" placeholder="myNSG"></form></p>
-<p>Network Interface Card Name: <form oninput="result.value=nicname.value" id="nicname" style="display: inline;">
-<input type="text" id="nicname" name="nicname" style="display: inline;" placeholder="myNIC"></form></p>
-<p>VM Username: <form oninput="result.value=vmusername.value" id="vmusername" style="display: inline;">
-<input type="text" id="vmusername" name="vmusername" style="display: inline;" placeholder="myUser"></form></p>
-<p>VM Password: <form oninput="result.value=vmpassword.value" id="vmpassword" style="display: inline;">
-<input type="text" id="vmpassword" name="vmpassword" style="display: inline;" placeholder="Password123!"></form></p>
-<p>VM Name: <form oninput="result.value=vmname.value;result2.value=vmname.value" id="vmname" style="display: inline;">
-<input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="myVM"></form></p>
-<p>VM Size <a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-vm-sizes">(More info)</a>: <form onchange="result.value=vmsize.value" id="vmsize" style="display: inline;">
-<select name="vmsize" id="vmsize" style="display: inline;"><p>
-  <optgroup label="Basic A">
-  <option value="Basic_A0">Basic A0
-  <option value="Basic_A1">Basic A1
-  <option value="Basic_A2">Basic A2
-  <option value="Basic_A3">Basic A3
-  <option value="Basic_A4">Basic A4
-  </optgroup>
-  <optgroup label="Standard A">
-  <option value="Standard_A0">Standard A0
-  <option value="Standard_A1">Standard A1
-  <option value="Standard_A2">Standard A2
-  <option value="Standard_A3">Standard A3
-  <option value="Standard_A4">Standard A4
-  <option value="Standard_A5">Standard A5
-  <option value="Standard_A6">Standard A6
-  <option value="Standard_A7">Standard A7
-  </optgroup>
-  <optgroup label="Av2-Series">
-  <option value="Standard_A1_v2">Standard A1 v2
-  <option value="Standard_A2_v2">Standard A2 v2
-  <option value="Standard_A4_v2">Standard A4 v2
-  <option value="Standard_A8_v2">Standard A8 v2
-  <option value="Standard_A2m_v2">Standard A2m v2
-  <option value="Standard_A4m_v2">Standard A4m v2
-  <option value="Standard_A8m_v2">Standard A8m v2
-  </optgroup>
-  <optgroup label="D-Series">
-  <option value="Standard_D1">Standard D1
-  <option value="Standard_D2">Standard D2
-  <option value="Standard_D3">Standard D3
-  <option value="Standard_D4">Standard D4
-  <option value="Standard_D11">Standard D11
-  <option value="Standard_D12">Standard D12
-  <option value="Standard_D13">Standard D13
-  <option value="Standard_D14">Standard D14
-  </optgroup>
-  <optgroup label="Dv2-Series">
-  <option value="Standard_D1_v2">Standard D1 v2
-  <option value="Standard_D2_v2">Standard D2 v2
-  <option value="Standard_D3_v2">Standard D3 v2
-  <option value="Standard_D4_v2">Standard D4 v2
-  <option value="Standard_D5_v2">Standard D5 v2
-  <option value="Standard_D11_v2">Standard D11 v2
-  <option value="Standard_D12_v2">Standard D12 v2
-  <option value="Standard_D13_v2">Standard D13 v2
-  <option value="Standard_D14_v2">Standard D14 v2
-  </optgroup>
-  <optgroup label="DS-Series">
-  <option value="Standard_DS1">Standard DS1
-  <option value="Standard_DS2">Standard DS2
-  <option value="Standard_DS3">Standard DS3
-  <option value="Standard_DS4">Standard DS4
-  <option value="Standard_DS11">Standard DS11
-  <option value="Standard_DS12">Standard DS12
-  <option value="Standard_DS13">Standard DS13
-  <option value="Standard_DS14">Standard DS14
-  </optgroup>
-  <optgroup label="DSv2-Series">
-  <option value="Standard_DS1_v2">Standard DS1 v2
-  <option value="Standard_DS2_v2">Standard DS2 v2
-  <option value="Standard_DS3_v2">Standard DS3 v2
-  <option value="Standard_DS4_v2">Standard DS4 v2
-  <option value="Standard_DS5_v2">Standard DS5 v2
-  <option value="Standard_DS11_v2">Standard DS11 v2
-  <option value="Standard_DS12_v2">Standard DS12 v2
-  <option value="Standard_DS13_v2">Standard DS13 v2
-  <option value="Standard_DS14_v2">Standard DS14 v2
-  </optgroup>
-  <optgroup label="F-Series">
-  <option value="Standard_F1">Standard F1
-  <option value="Standard_F2">Standard F2
-  <option value="Standard_F4">Standard F4
-  <option value="Standard_F8">Standard F8
-  <option value="Standard_F16">Standard F16
-  </optgroup>
-  <optgroup label="Fs-Series">
-  <option value="Standard_F1s">Standard F1s
-  <option value="Standard_F2s">Standard F2s
-  <option value="Standard_F4s">Standard F4s
-  <option value="Standard_F8s">Standard F8s
-  <option value="Standard_F16s">Standard F16s
-  </optgroup>
-  <optgroup label="Fsv2-Series">
-  <option value="Standard_F2s_v2">Standard F2s v2
-  <option value="Standard_F4s_v2">Standard F4s v2
-  <option value="Standard_F8s_v2">Standard F8s v2
-  <option value="Standard_F16s_v2">Standard F16s v2
-  <option value="Standard_F32s_v2">Standard F32s v2
-  <option value="Standard_F64s_v2">Standard F64s v2
-  </optgroup>
-</select></form>
-<p>Windows/Linux: <form onchange="result.value=vmtype.value" id="vmtype" style="display: inline;">
-<select name="vmtype" id="vmtype" style="display: inline;"><p>
-  <option value="-Linux">Linux
-  <option value="-Windows">Windows
-</select></form>
-<p>Computer Name: <form oninput="result.value=compname.value" id="compname" style="display: inline;">
-<input type="text" id="compname" name="compname" style="display: inline;" placeholder="myComputer"></form></p>
-<p>VM Image: <form onchange="result.value=vmimage.value" id="vmimage" style="display: inline;">
-<select name="vmimage" id="vmimage" style="display: inline;"><p>
-  <option value="/CentOS/Skus/6.10">CentOS-based 6.10
-  <option value="/CentOS/Skus/6.9">CentOS-based 6.9
-  <option value="/CentOS/Skus/7.3">CentOS-based 7.3
-  <option value="/CentOS/Skus/7.5">CentOS-based 7.5
-  <option value="/UbuntuServer/Skus/14.04.5-LTS">Ubuntu Server 14.04 LTS
-  <option value="/UbuntuServer/Skus/16.04-LTS">Ubuntu Server 16.04 LTS
-  <option value="/UbuntuServer/Skus/18.04-LTS">Ubuntu Server 18.04 LTS
-  <option value="/WindowsServerSemiAnnual/Skus/Datacenter-Core-1709-with-Containers-smalldisk">Windows Server, version 1709 with Containers - Pay as you use
-  <option value="/SQL2016SP1-WS2016/Skus/SQLDEV">Free License: SQL Server 2016 SP1 Developer on Windows Server 2016
-  <option value="/SQL2016SP2-WS2016/Skus/SQLDEV">Free License: SQL Server 2016 SP2 Developer on Windows Server 2016
-  <option value="/SQL2016SP2-WS2016/Skus/Express">Free License: SQL Server 2016 SP2 Express on Windows Server 2016
-  <option value="/SQL2017-SLES12SP2/Skus/SQLDEV">Free SQL Server License: SQL Server 2017 Developer on SLES 12 SP2
-  <option value="/SQL2017-WS2016/Skus/SQLDEV">Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016
-  <option value="/SQL2017-SLES12SP2/Skus/Express">Free SQL Server License: SQL Server 2017 Express on SLES 12 SP2
-  <option value="/SQL2017-WS2016/Skus/Express">Free SQL Server License: SQL Server 2017 Express on Windows Server 2016
-  <option value="/SQL2016SP1-WS2016/Skus/Enterprise">SQL Server 2016 SP1 Enterprise on Windows Server 2016
-  <option value="/SQL2016SP1-WS2016/Skus/Standard">SQL Server 2016 SP1 Standard on Windows Server 2016
-  <option value="/SQL2016SP2-WS2016/Skus/Enterprise">SQL Server 2016 SP2 Enterprise on Windows Server 2016
-  <option value="/SQL2016SP2-WS2016/Skus/Standard">SQL Server 2016 SP2 Standard on Windows Server 2016
-  <option value="/SQL2017-SLES12SP2/Skus/Enterprise">SQL Server 2017 Enterprise on SLES 12 SP2
-  <option value="/SQL2017-WS2016/Skus/Enterprise">SQL Server 2017 Enterprise Windows Server 2016
-  <option value="/SQL2017-SLES12SP2/Skus/Standard">SQL Server 2017 Standard on SLES 12 SP2
-  <option value="/SQL2017-WS2016/Skus/Standard">SQL Server 2017 Standard on Windows Server 2016
-  <option value="/WindowsServer/Skus/2012-Datacenter">Windows Server 2012 Datacenter - Pay as you use
-  <option value="/WindowsServer/Skus/2016-Datacenter">Windows Server 2016 Datacenter - Pay-as-you-use
-  <option value="/WindowsServer/Skus/2016-Datacenter-Server-Core">Windows Server 2016 Datacenter - Server Core - Pay as you use
-  <option value="/WindowsServer/Skus/2016-Datacenter-with-Containers">Windows Server 2016 Datacenter - with Containers - Pay as you use
-</select></form>
-</div>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ArmEndpoint</td>
+<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td><form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
+</tr>
+<tr>
+<td>$RGName</td>
+<td>Name of the resource group to be created</td>
+<td><form oninput="result.value=resourcegroup.value;result2.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"></form></td>
+</tr>
+<tr>
+<td>$SAName</td>
+<td>Name of the storage account to be created</td>
+<td><form oninput="result.value=saname.value;result2.value=saname.value" id="saname" style="display: inline;"><input type="text" id="saname" name="saname" style="display: inline;" placeholder="MyStorageAccount"></form></td>
+</tr>
+<tr>
+<td>$SubnetName</td>
+<td>Name of the subnet to be created</td>
+<td><form oninput="result.value=subnetname.value;result2.value=subnetname.value" id="subnetname" style="display: inline;"><input type="text" id="subnetname" name="subnetname" style="display: inline;" placeholder="MySubnet"></form></td>
+</tr>
+<tr>
+<td>$SubnetRange</td>
+<td>Address range of the subnet to be createdin CIDR notation</td>
+<td><form oninput="result.value=subaddrrange.value;result2.value=subaddrrange.value" id="subaddrrange" style="display: inline;"><input type="text" id="subaddrrange" name="subaddrrange" style="display: inline;" placeholder="192.168.1.0/24"></form></td>
+</tr>
+<tr>
+<td>$VNetName</td>
+<td>Name of the virtual network to be created</td>
+<td><form oninput="result.value=vnetname.value;result2.value=vnetname.value" id="vnetname" style="display: inline;"><input type="text" id="vnetname" name="vnetname" style="display: inline;" placeholder="MyVNetwork"></form></td>
+</tr>
+<tr>
+<td>$VNetRange</td>
+<td>Address range of the virtual network to be createdin CIDR notation</td>
+<td><form oninput="result.value=vnetaddrrange.value;result2.value=vnetaddrrange.value" id="vnetaddrrange" style="display: inline;"><input type="text" id="vnetaddrrange" name="vnetaddrrange" style="display: inline;" placeholder="192.168.0.0/16"></form></td>
+</tr>
+<tr>
+<td>$PublicIPName</td>
+<td>Name of the public IP to be created</td>
+<td><form oninput="result.value=publicipname.value;result2.value=publicipname.value" id="publicipname" style="display: inline;"><input type="text" id="publicipname" name="publicipname" style="display: inline;" placeholder="MyPublicIP"></form></td>
+</tr>
+<tr>
+<td>$NSGName</td>
+<td>Name of the network security group to be created</td>
+<td><form oninput="result.value=nsgname.value;result2.value=nsgname.value" id="nsgname" style="display: inline;"><input type="text" id="nsgname" name="nsgname" style="display: inline;" placeholder="MyNSG"></form></td>
+</tr>
+<tr>
+<td>$NICName</td>
+<td>Name of the network interface controller to be created</td>
+<td><form oninput="result.value=nicname.value;result2.value=nicname.value" id="nicname" style="display: inline;"><input type="text" id="nicname" name="nicname" style="display: inline;" placeholder="MyNIC"></form></td>
+</tr>
+<tr>
+<td>$Username</td>
+<td>Username of the VM to be created</td>
+<td><form oninput="result.value=vmusername.value;result2.value=vmusername.value" id="vmusername" style="display: inline;"><input type="text" id="vmusername" name="vmusername" style="display: inline;" placeholder="MyUser"></form></td>
+</tr>
+<tr>
+<td>$Password</td>
+<td>Password of the VM to be created</td>
+<td><form oninput="result.value=vmpassword.value;result2.value=vmpassword.value" id="vmpassword" style="display: inline;"><input type="text" id="vmpassword" name="vmpassword" style="display: inline;" placeholder="Password123!"></form></td>
+</tr>
+<tr>
+<td>$ComputerName</td>
+<td>Computer name of the VM to be created</td>
+<td><form oninput="result.value=compname.value;result2.value=compname.value" id="compname" style="display: inline;"><input type="text" id="compname" name="compname" style="display: inline;" placeholder="MyComputer"></form></td>
+</tr>
+<tr>
+<td>$VMName</td>
+<td>Name of the virtual machine to be created</td>
+<td><form oninput="result.value=vmname.value;result2.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"></form></td>
+</tr>
+<tr>
+<td>$VMSize</td>
+<td>Size of the virtual machine to be created <a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-vm-sizes">(More info)</a></td>
+<td><form onchange="result.value=vmsize.value;result2.value=vmsize.value" id="vmsize" style="display: inline;"><select name="vmsize" id="vmsize" style="display: inline;"><optgroup label="Basic A"><option value="Basic_A0">Basic A0<option value="Basic_A1">Basic A1<option value="Basic_A2">Basic A2<option value="Basic_A3">Basic A3<option value="Basic_A4">Basic A4</optgroup><optgroup label="Standard A"><option value="Standard_A0">Standard A0<option value="Standard_A1">Standard A1<option value="Standard_A2">Standard A2<option value="Standard_A3">Standard A3<option value="Standard_A4">Standard A4<option value="Standard_A5">Standard A5<option value="Standard_A6">Standard A6<option value="Standard_A7">Standard A7</optgroup><optgroup label="Av2-Series"><option value="Standard_A1_v2">Standard A1 v2<option value="Standard_A2_v2">Standard A2 v2<option value="Standard_A4_v2">Standard A4 v2<option value="Standard_A8_v2">Standard A8 v2<option value="Standard_A2m_v2">Standard A2m v2<option value="Standard_A4m_v2">Standard A4m v2<option value="Standard_A8m_v2">Standard A8m v2</optgroup><optgroup label="D-Series"><option value="Standard_D1">Standard D1<option value="Standard_D2">Standard D2<option value="Standard_D3">Standard D3<option value="Standard_D4">Standard D4<option value="Standard_D11">Standard D11<option value="Standard_D12">Standard D12<option value="Standard_D13">Standard D13<option value="Standard_D14">Standard D14</optgroup><optgroup label="Dv2-Series"><option value="Standard_D1_v2">Standard D1 v2<option value="Standard_D2_v2">Standard D2 v2<option value="Standard_D3_v2">Standard D3 v2<option value="Standard_D4_v2">Standard D4 v2<option value="Standard_D5_v2">Standard D5 v2<option value="Standard_D11_v2">Standard D11 v2<option value="Standard_D12_v2">Standard D12 v2<option value="Standard_D13_v2">Standard D13 v2<option value="Standard_D14_v2">Standard D14 v2</optgroup><optgroup label="DS-Series"><option value="Standard_DS1">Standard DS1<option value="Standard_DS2">Standard DS2<option value="Standard_DS3">Standard DS3<option value="Standard_DS4">Standard DS4<option value="Standard_DS11">Standard DS11<option value="Standard_DS12">Standard DS12<option value="Standard_DS13">Standard DS13<option value="Standard_DS14">Standard DS14</optgroup><optgroup label="DSv2-Series"><option value="Standard_DS1_v2" selected="">Standard DS1 v2<option value="Standard_DS2_v2">Standard DS2 v2<option value="Standard_DS3_v2">Standard DS3 v2<option value="Standard_DS4_v2">Standard DS4 v2<option value="Standard_DS5_v2">Standard DS5 v2<option value="Standard_DS11_v2">Standard DS11 v2<option value="Standard_DS12_v2">Standard DS12 v2<option value="Standard_DS13_v2">Standard DS13 v2<option value="Standard_DS14_v2">Standard DS14 v2</optgroup><optgroup label="F-Series"><option value="Standard_F1">Standard F1<option value="Standard_F2">Standard F2<option value="Standard_F4">Standard F4<option value="Standard_F8">Standard F8<option value="Standard_F16">Standard F16</optgroup><optgroup label="Fs-Series"><option value="Standard_F1s">Standard F1s<option value="Standard_F2s">Standard F2s<option value="Standard_F4s">Standard F4s<option value="Standard_F8s">Standard F8s<option value="Standard_F16s">Standard F16s</optgroup><optgroup label="Fsv2-Series"><option value="Standard_F2s_v2">Standard F2s v2<option value="Standard_F4s_v2">Standard F4s v2<option value="Standard_F8s_v2">Standard F8s v2<option value="Standard_F16s_v2">Standard F16s v2<option value="Standard_F32s_v2">Standard F32s v2<option value="Standard_F64s_v2">Standard F64s v2</optgroup></select></form></td>
+</tr>
+<tr>
+<td>VMType (switch)</td>
+<td>The type of virtual machine to be created (Linux or Windows)</td>
+<td><form onchange="result.value=vmtype.value;result2.value=vmtype.value;result3.value=vmtype.value;result4.value=vmtype.value" id="vmtype" style="display: inline;"><select name="vmtype" id="vmtype" style="display: inline;"><option value="-Linux">Linux<option value="-Windows">Windows</select></form></td>
+</tr>
+<tr>
+<td>$VMImage</td>
+<td>The image template to deploy the virtual machine from</td>
+<td><form onchange="result.value=vmimage.value;result2.value=vmimage.value" id="vmimage" style="display: inline;"><select name="vmimage" id="vmimage" style="display: inline;"><option value="/CentOS/Skus/6.9">CentOS-based 6.9<option value="/CentOS/Skus/6.10">CentOS-based 6.10<option value="/CentOS/Skus/7.3">CentOS-based 7.3<option value="/CentOS/Skus/7.5" selected="">CentOS-based 7.5<option value="/UbuntuServer/Skus/14.04.5-LTS">Ubuntu Server 14.04 LTS<option value="/UbuntuServer/Skus/16.04-LTS">Ubuntu Server 16.04 LTS<option value="/UbuntuServer/Skus/18.04-LTS">Ubuntu Server 18.04 LTS<option value="/WindowsServerSemiAnnual/Skus/Datacenter-Core-1709-with-Containers-smalldisk">Windows Server, version 1709 with Containers - Pay as you use<option value="/SQL2016SP1-WS2016/Skus/SQLDEV">Free License: SQL Server 2016 SP1 Developer on Windows Server 2016<option value="/SQL2016SP2-WS2016/Skus/SQLDEV">Free License: SQL Server 2016 SP2 Developer on Windows Server 2016<option value="/SQL2016SP2-WS2016/Skus/Express">Free License: SQL Server 2016 SP2 Express on Windows Server 2016<option value="/SQL2017-SLES12SP2/Skus/SQLDEV">Free SQL Server License: SQL Server 2017 Developer on SLES 12 SP2<option value="/SQL2017-WS2016/Skus/SQLDEV">Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016<option value="/SQL2017-SLES12SP2/Skus/Express">Free SQL Server License: SQL Server 2017 Express on SLES 12 SP2<option value="/SQL2017-WS2016/Skus/Express">Free SQL Server License: SQL Server 2017 Express on Windows Server 2016<option value="/SQL2016SP1-WS2016/Skus/Enterprise">SQL Server 2016 SP1 Enterprise on Windows Server 2016<option value="/SQL2016SP1-WS2016/Skus/Standard">SQL Server 2016 SP1 Standard on Windows Server 2016<option value="/SQL2016SP2-WS2016/Skus/Enterprise">SQL Server 2016 SP2 Enterprise on Windows Server 2016<option value="/SQL2016SP2-WS2016/Skus/Standard">SQL Server 2016 SP2 Standard on Windows Server 2016<option value="/SQL2017-SLES12SP2/Skus/Enterprise">SQL Server 2017 Enterprise on SLES 12 SP2<option value="/SQL2017-WS2016/Skus/Enterprise">SQL Server 2017 Enterprise Windows Server 2016<option value="/SQL2017-SLES12SP2/Skus/Standard">SQL Server 2017 Standard on SLES 12 SP2<option value="/SQL2017-WS2016/Skus/Standard">SQL Server 2017 Standard on Windows Server 2016<option value="/WindowsServer/Skus/2012-Datacenter">Windows Server 2012 Datacenter - Pay as you use<option value="/WindowsServer/Skus/2012-R2-Datacenter">Windows Server 2012 R2 Datacenter - Pay as you use<option value="/WindowsServer/Skus/2016-Datacenter">Windows Server 2016 Datacenter - Pay-as-you-use<option value="/WindowsServer/Skus/2016-Datacenter-Server-Core">Windows Server 2016 Datacenter - Server Core - Pay as you use<option value="/WindowsServer/Skus/2016-Datacenter-with-Containers">Windows Server 2016 Datacenter - with Containers - Pay as you use<option value="/WindowsServer/Skus/2019-Datacenter">Windows Server 2019 Datacenter - Pay as you use<option value="/WindowsServer/Skus/2019-Datacenter-with-Containers">Windows Server 2019 Datacenter - with Containers - Pay as you use<option value="/WindowsServer/Skus/2019-Datacenter-Core">Windows Server 2019 Datacenter Core - Pay as you use<option value="/WindowsServer/Skus/2019-Datacenter-Core-with-Containers">Windows Server 2019 Datacenter Core - with Containers - Pay as you use</select></form></td>
+</tr>
+</tbody>
+</table>
+<h3 id="deploy-the-virtual-machine">Deploy the virtual machine</h3>
 <p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell">## Initialise environment and variables
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Unmanaged Disk</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Managed Disk</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+<pre><code class="language-PowerShell"># Initialise environment and variables
 
-# Add environment
-Add-AzureRMEnvironment -Name 'AzureStack' -ArmEndpoint 'https://management.frn00006.azure.ukcloud.com'
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Login
-Login-AzureRmAccount -EnvironmentName 'AzureStack'
+## Add environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+
+## Login
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
 
 # Input Variables
-$RGName = '<output form="resourcegroup" name="result" style="display: inline;">myResourceGroup</output>'
-$SAName = '<output form="saname" name="result" style="display: inline;">myStorageAccount<span id="RandNum"></span></output>'.ToLower()
-$Location = '<output form="region" name="result" style="display: inline;">frn00006</output>'
-$SubnetName = '<output form="subnetname" name="result" style="display: inline;">mySubnet</output>'
-$SubnetRange = '<output form="subaddrrange" name="result" style="display: inline;">192.168.1.0/24</output>'
-$VNetName = '<output form="vnetname" name="result" style="display: inline;">myVNetwork</output>'
-$VNetRange = '<output form="vnetaddrrange" name="result" style="display: inline;">192.168.0.0/16</output>'
-$PublicIPName = '<output form="publicipname" name="result" style="display: inline;">myPublicIP</output>'
-$NSGName = '<output form="nsgname" name="result" style="display: inline;">myNSG</output>'
-$NICName = '<output form="nicname" name="result" style="display: inline;">myNIC</output>'
-$VMName = '<output form="vmname" name="result" style="display: inline;">myVM</output>'
-$VMSize = '<output form="vmsize" name="result" style="display: inline;">Basic_A0</output>'
-$ComputerName = '<output form="compname" name="result" style="display: inline;">myComputer</output>'
-$VMImage = '*<output form="vmimage" name="result" style="display: inline;">/CentOS/Skus/6.10</output>'
+$RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+$SAName = "<output form="saname" name="result" style="display: inline;">MyStorageAccount<span id="RandNum"></span></output>".ToLower()
+$SubnetName = "<output form="subnetname" name="result" style="display: inline;">MySubnet</output>"
+$SubnetRange = "<output form="subaddrrange" name="result" style="display: inline;">192.168.1.0/24</output>"
+$VNetName = "<output form="vnetname" name="result" style="display: inline;">MyVNetwork</output>"
+$VNetRange = "<output form="vnetaddrrange" name="result" style="display: inline;">192.168.0.0/16</output>"
+$PublicIPName = "<output form="publicipname" name="result" style="display: inline;">MyPublicIP</output>"
+$NSGName = "<output form="nsgname" name="result" style="display: inline;">MyNSG</output>"
+$NICName = "<output form="nicname" name="result" style="display: inline;">MyNIC</output>"
+$ComputerName = "<output form="compname" name="result" style="display: inline;">MyComputer</output>"
+$VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
+$VMSize = "<output form="vmsize" name="result" style="display: inline;">Standard_DS1_v2</output>"
+$VMImage = "*<output form="vmimage" name="result" style="display: inline;">/CentOS/Skus/7.5</output>"
 
 # Create a new resource group
+Write-Output -InputObject "Creating resource group"
 New-AzureRmResourceGroup -Name $RGName -Location $Location
 
 ## Create storage resources
 
 # Create a new storage account
-$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type 'Standard_LRS' -Name $SAName
+Write-Output -InputObject "Creating storage account"
+$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $SAName
 
 ## Create network resources
 
 # Create a subnet configuration
+Write-Output -InputObject "Creating virtual network"
 $SubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetRange
 
 # Create a virtual network
 $VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location $Location -Name $VNetName -AddressPrefix $VNetRange -Subnet $SubnetConfig
 
 # Create a public IP address
-$PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Location -AllocationMethod 'Dynamic' -Name $PublicIPName
+Write-Output -InputObject "Creating public IP address"
+$PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Location -AllocationMethod "Dynamic" -Name $PublicIPName
+
+# Create network security group rule (SSH or RDP)
+Write-Output -InputObject "Creating SSH/RDP network security rule"
+$SecurityGroupRule = switch ("<output form="vmtype" name="result" style="display: inline;">-Linux</output>") {
+    "-Linux" { New-AzureRmNetworkSecurityRuleConfig -Name "SSH-Rule" -Description "Allow SSH" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 22 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" }
+    "-Windows" { New-AzureRmNetworkSecurityRuleConfig -Name "RDP-Rule" -Description "Allow RDP" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 3389 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" }
+}
 
 # Create a network security group
-$NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location $Location -Name $NSGName
+Write-Output -InputObject "Creating network security group"
+$NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location $Location -Name $NSGName -SecurityRules $SecurityGroupRule
 
 # Create a virtual network card and associate it with the public IP address and NSG
+Write-Output -InputObject "Creating network interface card"
 $NetworkInterface = New-AzureRmNetworkInterface -Name $NICName -ResourceGroupName $RGName -Location $Location -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
 
 ## Create the virtual machine
 
 # Define a credential object to store the username and password for the virtual machine
-$UserName = '<output form="vmusername" name="result" style="display: inline;">myUser</output>'
+$Username = "<output form="vmusername" name="result" style="display: inline;">MyUser</output>"
 $Password = '<output form="vmpassword" name="result" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
-$Credential = New-Object PSCredential($UserName,$Password)
+$Credential = New-Object -TypeName PSCredential -ArgumentList ($Username, $Password)
 
 # Create the virtual machine configuration object
 $VirtualMachine = New-AzureRmVMConfig -VMName $VMName -VMSize $VMSize
 
 # Set the VM Size and Type
-$VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result" style="display: inline;">-Linux</output> -ComputerName $ComputerName -Credential $Credential
+$VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result2" style="display: inline;">-Linux</output> -ComputerName $ComputerName -Credential $Credential
+
+# Enable the provisioning of the VM Agent
+if ($VirtualMachine.OSProfile.WindowsConfiguration) {
+    $VirtualMachine.OSProfile.WindowsConfiguration.ProvisionVMAgent = $true
+}
 
 # Get the VM Source Image
-$Image = Get-AzureRMVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object {$_.Id -like $VMImage}
+$Image = Get-AzureRmVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object -FilterScript { $_.Id -like $VMImage }
 
 # Set the VM Source Image
-$VirtualMachine =  Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version 'latest'
+$VirtualMachine = Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version "latest"
 
-#Set the OS Disk properties
+# Add Network Interface Card
+$VirtualMachine = Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id -VM $VirtualMachine
+
+# Set the OS Disk properties
 $OSDiskName = "OsDisk"
-$OSDiskUri = '{0}vhds/{1}-{2}.vhd' -f $StorageAccount.PrimaryEndpoints.Blob.ToString(), $VMName.ToLower(), $OSDiskName
+$OSDiskUri = "{0}vhds/{1}-{2}.vhd" -f $StorageAccount.PrimaryEndpoints.Blob.ToString(), $VMName.ToLower(), $OSDiskName
 
-# Applies the OS disk properties and NIC to the virtual machine.
-$VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -CreateOption FromImage | Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id
+# Applies the OS disk properties
+$VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -CreateOption "FromImage"
 
 # Create the virtual machine.
+Write-Output -InputObject "Creating virtual machine"
 $NewVM = New-AzureRmVM -ResourceGroupName $RGName -Location $Location -VM $VirtualMachine
 $NewVM
+Write-Output -InputObject "Virtual machine created successfully"
 </code></pre>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="language-PowerShell"># Initialise environment and variables
+
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+## Add environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+
+## Login
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
+
+# Input Variables
+$RGName = "<output form="resourcegroup" name="result2" style="display: inline;">MyResourceGroup</output>"
+$SAName = "<output form="saname" name="result2" style="display: inline;">MyStorageAccount<span id="RandNum2"></span></output>".ToLower()
+$SubnetName = "<output form="subnetname" name="result2" style="display: inline;">MySubnet</output>"
+$SubnetRange = "<output form="subaddrrange" name="result2" style="display: inline;">192.168.1.0/24</output>"
+$VNetName = "<output form="vnetname" name="result2" style="display: inline;">MyVNetwork</output>"
+$VNetRange = "<output form="vnetaddrrange" name="result2" style="display: inline;">192.168.0.0/16</output>"
+$PublicIPName = "<output form="publicipname" name="result2" style="display: inline;">MyPublicIP</output>"
+$NSGName = "<output form="nsgname" name="result2" style="display: inline;">MyNSG</output>"
+$NICName = "<output form="nicname" name="result2" style="display: inline;">MyNIC</output>"
+$ComputerName = "<output form="compname" name="result2" style="display: inline;">MyComputer</output>"
+$VMName = "<output form="vmname" name="result2" style="display: inline;">MyVM</output>"
+$VMSize = "<output form="vmsize" name="result2" style="display: inline;">Standard_DS1_v2</output>"
+$VMImage = "*<output form="vmimage" name="result2" style="display: inline;">/CentOS/Skus/7.5</output>"
+
+# Create a new resource group
+Write-Output -InputObject "Creating resource group"
+New-AzureRmResourceGroup -Name $RGName -Location $Location
+
+## Create storage resources
+
+# Create a new storage account
+Write-Output -InputObject "Creating storage account"
+$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $SAName
+
+## Create network resources
+
+# Create a subnet configuration
+Write-Output -InputObject "Creating virtual network"
+$SubnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetRange
+
+# Create a virtual network
+$VirtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName $RGName -Location $Location -Name $VNetName -AddressPrefix $VNetRange -Subnet $SubnetConfig
+
+# Create a public IP address
+Write-Output -InputObject "Creating public IP address"
+$PublicIP = New-AzureRmPublicIpAddress -ResourceGroupName $RGName -Location $Location -AllocationMethod "Dynamic" -Name $PublicIPName
+
+# Create network security group rule (SSH or RDP)
+Write-Output -InputObject "Creating SSH/RDP network security rule"
+$SecurityGroupRule = switch ("<output form="vmtype" name="result3" style="display: inline;">-Linux</output>") {
+    "-Linux" { New-AzureRmNetworkSecurityRuleConfig -Name "SSH-Rule" -Description "Allow SSH" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 22 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" }
+    "-Windows" { New-AzureRmNetworkSecurityRuleConfig -Name "RDP-Rule" -Description "Allow RDP" -Access "Allow" -Protocol "TCP" -Direction "Inbound" -Priority 100 -DestinationPortRange 3389 -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" }
+}
+
+# Create a network security group
+Write-Output -InputObject "Creating network security group"
+$NetworkSG = New-AzureRmNetworkSecurityGroup -ResourceGroupName $RGName -Location $Location -Name $NSGName -SecurityRules $SecurityGroupRule
+
+# Create a virtual network card and associate it with the public IP address and NSG
+Write-Output -InputObject "Creating network interface card"
+$NetworkInterface = New-AzureRmNetworkInterface -Name $NICName -ResourceGroupName $RGName -Location $Location -SubnetId $VirtualNetwork.Subnets[0].Id -PublicIpAddressId $PublicIP.Id -NetworkSecurityGroupId $NetworkSG.Id
+
+## Create the virtual machine
+
+# Define a credential object to store the username and password for the virtual machine
+$Username = "<output form="vmusername" name="result2" style="display: inline;">MyUser</output>"
+$Password = '<output form="vmpassword" name="result2" style="display: inline;">Password123!</output>' | ConvertTo-SecureString -Force -AsPlainText
+$Credential = New-Object -TypeName PSCredential -ArgumentList ($Username, $Password)
+
+# Create the virtual machine configuration object
+$VirtualMachine = New-AzureRmVMConfig -VMName $VMName -VMSize $VMSize
+
+# Set the VM Size and Type
+$VirtualMachine = Set-AzureRmVMOperatingSystem -VM $VirtualMachine <output form="vmtype" name="result4" style="display: inline;">-Linux</output> -ComputerName $ComputerName -Credential $Credential
+
+# Enable the provisioning of the VM Agent
+if ($VirtualMachine.OSProfile.WindowsConfiguration) {
+    $VirtualMachine.OSProfile.WindowsConfiguration.ProvisionVMAgent = $true
+}
+
+# Get the VM Source Image
+$Image = Get-AzureRmVMImagePublisher -Location $Location | Get-AzureRmVMImageOffer | Get-AzureRmVMImageSku | Where-Object -FilterScript { $_.Id -like $VMImage }
+
+# Set the VM Source Image
+$VirtualMachine = Set-AzureRmVMSourceImage -VM $VirtualMachine -PublisherName $Image.PublisherName -Offer $Image.Offer -Skus $Image.Skus -Version "latest"
+
+# Add Network Interface Card
+$VirtualMachine = Add-AzureRmVMNetworkInterface -Id $NetworkInterface.Id -VM $VirtualMachine
+
+# Applies the OS disk properties
+$VirtualMachine = Set-AzureRmVMOSDisk -VM $VirtualMachine -CreateOption "FromImage"
+
+# Enable boot diagnostics.
+$VirtualMachine = Set-AzureRmVMBootDiagnostics -VM $VirtualMachine -Enable -StorageAccountName $SAName -ResourceGroupName $RGName
+
+# Create the virtual machine.
+Write-Output -InputObject "Creating virtual machine"
+$NewVM = New-AzureRmVM -ResourceGroupName $RGName -Location $Location -VM $VirtualMachine
+$NewVM
+Write-Output -InputObject "Virtual machine created successfully"
+</code></pre>
+</section>
+</div>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 <script>document.getElementById("RandNum").innerHTML = Math.round(Math.random()*100000000)</script>
+<script>document.getElementById("RandNum2").innerHTML = Math.round(Math.random()*100000000)</script>
 
 
                   <div class="row">
@@ -344,13 +441,6 @@ $NewVM
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-create-vm-ps.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -369,11 +459,24 @@ $NewVM
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

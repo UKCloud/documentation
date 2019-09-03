@@ -3,6 +3,8 @@ title: UKCloud FAQs | UKCloud Ltd
 description: List of FAQs on UKCloud services, technology, connections and processes
 services: Other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 30/07/2018 11:15:54
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -25,7 +27,7 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 
 [Snapshot Protection FAQs](../vmware/vmw-faq-snapshot-protection.md)
 
-## UKcloud for OpenStack
+## UKCloud for OpenStack
 
 [UKCloud for OpenStack FAQs](../openstack/ostack-faq.md)
 
@@ -93,7 +95,9 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 
 ## Other
 
-[G-Cloud 10 services FAQs](other-faq-g10.md)
+[G-Cloud 11 enhancements and additions FAQs](other-faq-g11.md)
+
+[Enterprise & Private Sector FAQs](other-faq-eps.md)
 
 [MISO rebate FAQs](other-faq-miso-rebate.md)
 
@@ -103,4 +107,4 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

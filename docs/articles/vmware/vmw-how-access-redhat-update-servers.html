@@ -8,7 +8,7 @@
     <title>How to access Red Hat update servers | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to access Red Hat update servers | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-access-redhat-update-servers.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -90,24 +99,30 @@
 <h2 id="new-red-hat-vm-templates">New Red Hat VM templates</h2>
 <p>Certain Red Hat templates within the public catalog within vCloud Director are automatically configured to receive updates from UKCloud's RHUI. The templates are:</p>
 <ul>
-<li><strong>RHEL6.6</strong> - UKCloud-RHEL6.6-x86_64-RHUI-Template</li>
-<li><strong>RHEL7.1</strong> - UKCloud-RHEL7.1-x86_64-RHUI-Template</li>
+<li><p><strong>RHEL6.6</strong> - UKCloud-RHEL6.6-x86_64-RHUI-Template</p>
+</li>
+<li><p><strong>RHEL7.1</strong> - UKCloud-RHEL7.1-x86_64-RHUI-Template</p>
+</li>
 </ul>
 <p>These templates have the following properties:</p>
 <ul>
-<li>You can find the default root password in the VM Properties Description field (you can set the password using Guest Customization)</li>
-<li>Red Hat Update Infrastructure enabled for standard packages</li>
-<li>VMware Tools / Guest Customization enabled</li>
-<li>32GB disk space / 1 x vCPU / 2GB ram (default, adjust as required)</li>
+<li><p>You can find the default root password in the VM Properties Description field (you can set the password using Guest Customization)</p>
+</li>
+<li><p>Red Hat Update Infrastructure enabled for standard packages</p>
+</li>
+<li><p>VMware Tools / Guest Customization enabled</p>
+</li>
+<li><p>32GB disk space / 1 x vCPU / 2GB ram (default, adjust as required)</p>
+</li>
 </ul>
-<p>You can adjust the VM properties as required and you'll be billed as per the standard VM sizes as described in the UKCloud for VMware Service Definition. You will not be billed on additional storage until you reach the 60GB of provisioned disk space, unless you've chosen geo-resilient.</p>
+<p>You can adjust the VM properties as required and you'll be billed as per the standard VM sizes as described in the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a>. You will not be billed on additional storage until you reach the 60GiB of provisioned disk space.</p>
 <h2 id="old-red-hat-vm-templates">Old Red Hat VM templates</h2>
 <p>If you have already deployed a Red Hat VM using the old templates, you can configure it to access the RHUI by following this guide:</p>
 <p><a href="vmw-how-install-rhui-vm.html">How to install Red Hat Update Infrastructure (RHUI) on an existing virtual machine</a></p>
 <h2 id="additional-resources">Additional resources</h2>
-<p>High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services, you'll need to notify UKCloud for access to these repositories or will need to bring your own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a request via the My Calls section in the UKCloud Portal and it will be uploaded to your private catalog.</p>
+<p>High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services, you'll need to notify UKCloud for access to these repositories or will need to bring your own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section in the UKCloud Portal and it will be uploaded to your private catalog.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -117,13 +132,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-access-redhat-update-servers.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -142,11 +150,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

@@ -2,5 +2,5 @@
   items:
   - name: DocFX
     items:
-    - name: ' File naming conventions for UKCloud Knowledge Centre'
+    - name: File naming conventions for UKCloud Knowledge Centre
       href: sup-dfx-file-names.md

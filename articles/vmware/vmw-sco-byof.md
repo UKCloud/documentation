@@ -3,6 +3,8 @@ title: Bring Your Own Firewall Service Scope | UKCloud Ltd
 description: Outlines important details regarding Bring Your Own Firewall
 services: other
 author: Steve Hall
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -69,4 +71,4 @@ By requesting to have the edge gateway device removed and their own firewall tec
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -3,6 +3,8 @@ title: How to install CloudArray | UKCloud Ltd
 description: Installation guide for CloudArray
 services: cloud-storage
 author: Dan Baker
+reviewer:
+lastreviewed: 16/10/2018 11:28:15
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -24,7 +26,7 @@ CloudArray is a fully integrated appliance which uses object storage (raw unorga
 As CloudArray is a fully integrated appliance, you don't have to spend money and resources managing operating systems for the solutions. It uses a combination of object storage and a local cache reserve to provide unlimited storage with near local storage performance, using the cache to store frequently used files locally, while asynchronously replicating data to UKCloud's Cloud Storage platform. CloudArray also supports Amazon's REST S3 API to expand on-premises SANs and NAS solutions with on-demand elastic cloud capacity.
 
 > [!TIP]
-> If you do not need the features of CloudArray such as deduplication and location caching, or do not require a fully-integrated cloud gateway appliance, you may want to consider [CIFS-EFS](cs-how-install-cifs-ecs.md) as an alternative.
+> If you do not need the features of CloudArray such as deduplication and location caching, or do not require a fully-integrated cloud gateway appliance, you may want to consider the [GeoDrive Client 2.0](cs-how-install-geodrive2-client.md) as an alternative.
 
 ## Use cases
 
@@ -43,6 +45,7 @@ Potential use cases for CloudArray include:
 CloudArray supports the following hypervisors:
 
 - VMware vSphere 5.5 (ESXi) or higher
+
 - Microsoft Windows Server 2012 R2 with Hyper-V
 
 > [!NOTE]
@@ -53,7 +56,9 @@ CloudArray supports the following hypervisors:
 To run CloudArray Virtual Edition you must have the following minimum resources:
 
 - 60 GB of disk space
+
 - 1 virtual processor assigned to the CloudArray VE (two virtual processors is recommended)
+
 - 8 GB of RAM for the 3 TB base model
 
 For specific details about memory requirements, see [EMC CloudArray Best Practices](https://uk.emc.com/collateral/TechnicalDocument/docu60787.pdf).
@@ -63,10 +68,15 @@ For specific details about memory requirements, see [EMC CloudArray Best Practic
 CloudArray supports the following operating systems:
 
 - Mac OS X
+
 - OpenSolaris 2009.06
+
 - Red Hat Linux: 4.0 and higher
+
 - SUSE Linux: 10, 11
+
 - VMware ESX or ESXi
+
 - Windows: XP, Vista, 7, 8, Server 2003, 2008, 2012
 
 ### Supported web browsers
@@ -74,9 +84,13 @@ CloudArray supports the following operating systems:
 CloudArray supports the browsers:
 
 - Google Chrome v49 or higher
+
 - Microsoft Edge v25 or higher
+
 - Internet Explorer v11 or higher
+
 - Mozilla Firefox v45 or higher
+
 - Safari for Mac v6.1.6 or higher
 
 ### Network port requirements
@@ -84,20 +98,31 @@ CloudArray supports the browsers:
 CloudArray allows network traffic on the following TCP/IP ports:
 
 - 80 (HTTP)
+
 - 111 (NFS Portmapper TCP/UDP)
+
 - 137, 138, 139 (CIFS)
+
 - 443 (HTTPS)
+
 - 445 (CIFS)
 
 System requirements:
 
 - 662 (NFS Status TCP/UDP)
+
 - 875 (NFS rquotad TCP/UDP)
+
 - 892 (NFS mountd TCP/UDP)
+
 - 2049 (NFS nfsd TCP/UDP)
+
 - 3260 (iSCSI)
+
 - 8080 (HTTP)
+
 - 32803 (NFS nlockmgr TCP)
+
 - 41022 (EMC Support)
 
 ### Memory sharing
@@ -115,6 +140,7 @@ If you require a CloudArray license key, UKCloud will contact Dell EMC on your b
 The steps for installing CloudArray depend on your hypervisor:
 
 - [VMware vSphere](#installing-cloudarray-on-vmware-vsphere)
+
 - [Microsoft Hyper-V](#installing-cloudarray-on-microsoft-hyper-v)
 
 ### Installing CloudArray on VMware vSphere
@@ -205,6 +231,7 @@ To install CloudArray on Microsoft Hyper-V:
 You have two options to configure CloudArray:
 
 - [Using the CloudArray Appliance console](#configuring-cloudarray-using-the-cloudarray-appliance-console)
+
 - [Using the web browser interface](#configuring-cloudarray-using-the-web-browser-interface)
 
 ### Configuring CloudArray using the CloudArray Appliance console
@@ -220,6 +247,7 @@ To start the CloudArray Appliance console:
 2. Click **Sign in** and enter the following credentials:
 
     - Username: admin
+
     - Password: <admin_password>
 
     Upon first login, you are prompted to change the password.
@@ -331,6 +359,7 @@ To configure CloudArray:
 1. Once connected to CloudArray using a web browser, you have two options:
 
     - **Setup** - to setup and configure a new installation of CloudArray.
+
     - **Restore** - to restore a backup configuration of a previous CloudArray Installation.
 
     ![CloudArray Dashboard](images/cs-cloud-array-web-gui-configuration-step-1.png)
@@ -377,6 +406,7 @@ To configure CloudArray:
 9. You'll be presented with the initial dashboard of CloudArray, you have two options:
 
     - **Configuration Wizard**
+
     - **User Interface**
 
     ![CloudArray configuration options](images/cs-cloud-array-web-gui-configuration-step-9.png)
@@ -423,7 +453,7 @@ The CloudArray interface is comprised of the following major elements:
 
 - Main menu
 
-    The EMC CloudArray main menu is at the left side of the screen. Click menu items to move directly to the corresponding top-level panel and view related sub-menu items.
+    The EMC CloudArray main menu is on the left side of the screen. Click menu items to move directly to the corresponding top-level panel and view related sub-menu items.
 
     > [!NOTE]
     > If you reduce the window size, the main menu moves to the top of the screen.
@@ -473,7 +503,7 @@ If you are successful at this point, then CloudArray should be able to connect.
 
 ## Next steps
 
-This guide has shown you how to create a new Cloud Storage user. For more information about how to use the service, see the following articles:
+This guide has shown you how to install and configure CloudArray for use with Cloud Storage. For more information about how to use the service, see the following articles:
 
 - [*Getting Started Guide for Cloud Storage*](cs-gs.md)
 
@@ -482,10 +512,11 @@ This guide has shown you how to create a new Cloud Storage user. For more inform
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
 - Cloud Storage Gateways
-    - [*How to install CIFS-ECS*](cs-how-install-cifs-ecs.md)
+
+    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

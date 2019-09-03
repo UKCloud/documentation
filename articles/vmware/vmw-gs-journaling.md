@@ -3,6 +3,8 @@ title: Getting Started Guide for Journaling Protection | UKCloud Ltd
 description: Provides information to get up and running with Journaling Protection in UKCloud for VMware
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1: 
@@ -45,6 +47,7 @@ Every few seconds, a checkpoint is written to every journal for each VM in the V
 Two terms you may hear in connection with Journaling Protection are recovery point objective (RPO) and recovery time objective (RTO).
 
 - The RPO indicates the amount of data you can afford to lose in the event of an outage. For example, if your application data changes fairly infrequently, your RPO can be higher as the data remains fairly static. However, if your application data is constantly changing, you'll need your RPO to be smaller to avoid significant loss of data in the event of an outage.
+
 - The RTO is the amount of time you can tolerate your application being unavailable in the event of an outage. For example, if your application provides critical functionality, you'll need to bring it back online very quickly. However, for a less critical application, you may be able to tolerate a longer outage.
 
 Because of the use of regular checkpoints (every few seconds), our Zerto‑powered Journaling Protection option provides a minimal RPO. The ability to use recovered VMs even before all the journal data has been promoted provides a good RTO as well.
@@ -54,14 +57,19 @@ Because of the use of regular checkpoints (every few seconds), our Zerto‑power
 When you request Journaling Protection for your VMs, UKCloud provides you with:
 
 - A ZORG ID to identify your environment within Zerto
+
 - Access to the Zerto Self-Service Portal (ZSSP), where you can create and manage your VPGs
 
 You should consider the following:
 
 - Journaling Protection is provided on a vApp basis (not for individual VMs). When designing your application, you should use vApps to group related VMs together to ensure crash consistency between VMs in the event of a failover.
+
 - VMs must be powered on to be synchronised.
+
 - The operating system used by the protected VMs must also be supported in the recovery site.
+
 - Our Journaling Protection service option captures every action. When a VM is deleted from your vApp, the associated journal is also deleted. If you want to keep historic records of VMs that are no longer running on the platform, consider UKCloud's Snapshot Protection service option.
+
 - We provide a single default service profile. The details of this are available in the [*Journaling Protection Service Scope*](vmw-sco-journaling-protection.md). We do not currently provide the option for you to create custom profiles.
 
 ## Getting Journaling Protection up and running
@@ -78,6 +86,7 @@ To get Journaling Protection up and running for your VMs, follow the steps below
 To recover your VMs to a different UKCloud site, you must have a VDC in the intended recovery site. If you already have a compute service in the recovery site, you can use an existing VDC or you can create a new one using:
 
 - The UKCloud Portal (for more information see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md))
+
 - The UKCloud Portal API (for more information see the [*How to use the UKCloud Portal API*](../portal/ptl-how-use-api.md))
 
 If you don't already have a compute service in the recovery site or you'd prefer UKCloud to create the VDC for you, you can request this as part of your Journaling Protection Service Request.
@@ -142,4 +151,4 @@ Protection solution.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

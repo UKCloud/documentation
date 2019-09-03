@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Browser requirements for services on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>System requirements for services on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Browser requirements for services on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="title" content="System requirements for services on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-browsers.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -82,52 +91,71 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="browser-requirements-for-services-on-the-ukcloud-platform">Browser requirements for services on the UKCloud platform</h1>
+<h1 id="system-requirements-for-services-on-the-ukcloud-platform">System requirements for services on the UKCloud platform</h1>
 
 <h2 id="overview">Overview</h2>
-<p>To get the best interaction with the UKCloud platform, it's important to use a browser that is compatible with all aspects of the services with which you interact.</p>
-<p>This document outlines the browser requirement for UKCloud services.</p>
-<h2 id="ukcloud-for-vmware">UKCloud for VMware</h2>
-<p>For UKCloud for VMware, we recommend that you use the Mozilla Firefox Extended Support Release (ESR 52) 32-bit browser. This browser is supported by both the UKCloud Portal and by the Web Console for vCloud Director 8.20 (the version used by UKCloud for VMware).</p>
-<p>Firefox ESR 52 is an older version of Firefox, updated with new security patches, that remains compatible with the plugin type that the vCloud Director Web Console uses on our platform. You can find Firefox ESR at:</p>
-<p><a href="https://www.mozilla.org/en-US/firefox/organizations/">https://www.mozilla.org/en-US/firefox/organizations/</a></p>
+<p>This article outlines various system requirements for UKCloud services.</p>
+<h2 id="browser-requirements">Browser requirements</h2>
+<p>To get the best interaction with the UKCloud platform, it's important to use a browser that's compatible with all aspects of the services with which you interact.</p>
+<h3 id="ukcloud-for-vmware">UKCloud for VMware</h3>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Make sure you download ESR 52, which is the last ESR release to support legacy add-ons. Support for ESR 52 ends in August 2018. We plan to upgrade UKCloud for VMware to vCloud Director 9.1, which will eliminate the need for the Web Console plugin. For more information, see <a href="https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/">https://blog.mozilla.org/addons/2017/10/03/legacy-add-on-support-on-firefox-esr/</a>. You should also make sure that you download the 32-bit version of the browser.</p>
+<p>You must enable Flash in your browser to access the vCloud Director Legacy UI (Web Console).</p>
 </div>
-<p>Although Internet Explorer 8.<em>x</em> , 9.<em>x</em> and 10.<em>x</em> are supported by the vCloud Director 8.20 Web Console, if you've applied any group policy restrictions you may encounter problems.</p>
-<p>The vCloud Director Web Console has the following additional requirements:</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The Microsoft Edge browser does not support plugins, so functions such as console redirection and OVF upload using the Legacy UI do not work with Edge. To perform these functions, you must use a different browser.</p>
+</div>
+<h4 id="vcloud-director-97">vCloud Director 9.7</h4>
+<p>vCloud Director 9.7 is compatible with the current and last major browser revisions. Version 9.7 of vCloud Director was tested by VMware and supports:</p>
 <ul>
-<li><p>Adobe Flash Player version 11.2 or later (32-bit version only)</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>This is a known issue with Adobe Flash Player version 27.0.0.170. If you encounter problems, make sure you update to version 27.0.0.183 or later.</p>
-</div>
+<li><p>Google Chrome 72.0.3626.109</p>
 </li>
-<li><p>JRE 1.6.0 update 10 or later installed and enabled (32-bit version only)</p>
+<li><p>Mozilla Firefox 60.5.1ESR</p>
+</li>
+<li><p>Microsoft Edge 42.17134.1.0</p>
+</li>
+<li><p>Microsoft Internet Explorer 11.590.171340</p>
+</li>
+</ul>
+<h4 id="vcloud-director-91">vCloud Director 9.1</h4>
+<p>vCloud Director 9.1 is compatible with many current and last major browser revisions. Version 9.1 of vCloud Director was tested by VMware and supports:</p>
+<ul>
+<li><p>Google Chrome 64</p>
+</li>
+<li><p>Mozilla Firefox 58</p>
+</li>
+<li><p>Microsoft Edge 41</p>
+</li>
+<li><p>Microsoft Internet Explorer 11</p>
 </li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>VMware are redeveloping the Flash-based UI for vCloud Director and replacing it with a fully-featured HTML5-based interface. The first part of this redeveloped UI (provding HTML5 options for advanced networking features) has been made available in vCloud Director 8.20. More features will move to an HTML5-based UI in future releases.</p>
+<p>Although Internet Explorer is supported by vCloud Director 9.1, if you've applied any security or group policy restrictions, you may encounter problems.</p>
 </div>
-<h2 id="ukcloud-for-openstack">UKCloud for OpenStack</h2>
+<h3 id="ukcloud-for-openstack">UKCloud for OpenStack</h3>
 <p>UKCloud for OpenStack is powered by OpenStack and uses the Horizon project to provide its dashboard capabilities. Horizon is built around modern HTML5 standards and requires no auxiliary plugins to operate. Therefore, it is compatible with all latest browser versions.</p>
-<h2 id="ukcloud-for-microsoft-azure">UKCloud for Microsoft Azure</h2>
+<h3 id="ukcloud-for-microsoft-azure">UKCloud for Microsoft Azure</h3>
 <p>Interaction with UKCloud for Microsoft Azure is through the Azure Stack portal. Microsoft recommends using the most up-to-date browser for your operating system.</p>
-<h2 id="cloud-gpu">Cloud GPU</h2>
+<h3 id="cloud-gpu">Cloud GPU</h3>
 <p>Cloud GPU has the same browser requirements as <a href="#ukcloud-for-vmware">UKCloud for VMware</a>.</p>
-<h2 id="high-performance-compute">High Performance Compute</h2>
+<h3 id="high-performance-compute">High Performance Compute</h3>
 <p>High Performance Compute has the same browser requirements as <a href="#ukcloud-for-vmware">UKCloud for VMware</a>.</p>
-<h1 id="email-and-collaboration-as-a-service">Email and Collaboration as a Service</h1>
+<h3 id="email-and-collaboration-as-a-service">Email and Collaboration as a Service</h3>
 <p>For the most up to date list of supported browsers for Email and Collaboration as a Service, refer to the <a href="https://wiki.zimbra.com/wiki/Zimbra_Releases/8.7.0/Supported_Systems"><em>Zimbra Collaboration Supported Systems</em></a> document.</p>
 <ul>
-<li>Firefox and Chrome on Windows, Mac, Linux</li>
-<li>Internet Explorer on Windows</li>
-<li>Safari on Mac and Windows</li>
+<li><p>Firefox and Chrome on Windows, Mac, Linux</p>
+</li>
+<li><p>Internet Explorer on Windows</p>
+</li>
+<li><p>Safari on Mac and Windows</p>
+</li>
 </ul>
+<h2 id="software-versions">Software versions</h2>
+<p>It is your responsibility to ensure that you are using supported versions of any software that you install in your environment on the UKCloud platform. If you encounter issues that relate to old and out-of-support versions of software, although we'll make our best efforts to assist, we cannot guarantee that we'll be able to resolve those issues. We reserve the right to request that any out-of-support software be updated before working on support tickets.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -137,13 +165,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-browsers.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -162,11 +183,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

@@ -3,6 +3,8 @@ title: N3 connectivity FAQs | UKCloud Ltd
 description: Frequently asked questions for N3 Connectivity
 services: connectivity
 author: Matt Warner
+reviewer:
+lastreviewed: 20/07/2018 18:37:23
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -75,7 +77,7 @@ You can choose how you are charged:
 
 - Unlimited connections into environments - £3500 per month
 
-UKCloud pricing is available via the G-Cloud Digital Marketplace.
+UKCloud pricing is available via the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 ### Is there a minimum commitment period?
 
@@ -83,7 +85,7 @@ UKCloud charges monthly for connectivity solutions, and requires a minimum commi
 
 ### Can I vary my usage of the N3 connection?
 
-You can change your connectivity solution monthly by raising a Service Request via the [UKCloud Portal](https://portal.ukcloud.com/).
+You can change your connectivity solution monthly by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ### Will I incur an upfront cost (setup fee)?
 
@@ -91,7 +93,7 @@ Simple implementations of the N3 network won't incur any additional setup or onb
 
 For complex networking solutions, we reserve the right to charge SFIA rates. For example, applications that face both the N3 and the internet may require additional assistance to enable them on the N3, or a more extensive compliance engagement.
 
-We'll always tell you in advance if an engagement will incur [SFIA rate card](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/772343517162961-sfia-rate-card-2018-05-21-1251.pdf) charges.
+We'll always tell you in advance if an engagement will incur [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) charges.
 
 ### Does UKCloud provide data encryption?
 
@@ -207,4 +209,4 @@ There are two DNS servers on the N3 network. UKCloud permits access (outbound) o
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

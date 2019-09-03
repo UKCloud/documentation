@@ -3,6 +3,8 @@ title: Methods for exporting data | UKCloud Ltd
 description: Provides some general information in relation to the methods available to customers to export data away from UKCloud when needed
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 30/08/2018 14:10:25
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -23,7 +25,8 @@ This guide provides some general information about how you can export data away 
 
 You can package and export your data in a number of different ways, however we recommend that you read the following documents:
 
-- [Blueprint: Exporting and importing vApps and vApp templates](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-136-Exporting-and-Importing-vApps-and-vApp-Templates-Blueprint-v2.pdf) - A technical case for transfer of data in UKCloud for VMware
+- [Blueprint: Exporting and importing vApps and vApp templates](https://ukcloud.com/wp-content/uploads/2018/08/ukc-gen-136-exporting-and-importing-vapps-and-vapp-templates-blueprint-v2.pdf) - A technical case for transfer of data in UKCloud for VMware
+
 - [Getting Started Guide for Cloud Storage](../cloud-storage/cs-gs.md) - Covers the use APIs for access to our storage service
 
 ## Exporting data
@@ -31,8 +34,11 @@ You can package and export your data in a number of different ways, however we r
 You can use any of the following methods to export data:
 
 - Internet, government secure network or leased line data copy
+
 - Data load room (self-service)
+
 - Data load room (UKCloud SFIA)
+
 - Customer-hosted equipment
 
 ### Internet, government secure network or leased line data copy
@@ -53,8 +59,8 @@ For more information about booking and using this service, see the [Data Transfe
 
 ### Customer-hosted equipment
 
-Where you have hosted equipment at a UKCloud data centre for part of the solution, for example the hosting of communications equipment, you can also leverage this in a similar way to the data load room. If you have equipment hosted at UKCloud, you may request access using a normal Service Request via the UKCloud Portal.
+Where you have hosted equipment at a UKCloud data centre for part of the solution, for example the hosting of communications equipment, you can also leverage this in a similar way to the data load room. If you have equipment hosted at UKCloud, you may request access using a normal Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

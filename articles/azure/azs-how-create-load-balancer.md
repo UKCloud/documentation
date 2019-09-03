@@ -1,8 +1,11 @@
 ---
-title: How to create a load balancer | UKCloud Ltd
+title: How to create a load balancer using the UKCloud Azure Stack portal | UKCloud Ltd
 description: Provides help for creating a load balancer on UKCloud for Microsoft Azure
 services: azure-stack
 author: Bailey Lawson
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
+
 toc_rootlink: Users
 toc_sub1: How To
 toc_sub2:
@@ -13,7 +16,7 @@ toc_fullpath: Users/How To/azs-how-create-load-balancer.md
 toc_mdlink: azs-how-create-load-balancer.md
 ---
 
-# How to create a load balancer
+# How to create a load balancer using the UKCloud Azure Stack portal
 
 ## Overview
 
@@ -21,13 +24,13 @@ A load balancer provides scale and availability by spreading incoming requests a
 
 ### Intended audience
 
-To complete the steps in this guide, you must have appropriate access to a subscription in the UKCloud Azure Stack portal.
+To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.
 
 ## Creating a load balancer
 
 In this section we will create a load balancer with a public IP address.
 
-1. Log in to the UKCloud Azure Stack portal.
+1. Log in to the Azure Stack portal.
 
    For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
@@ -50,8 +53,11 @@ In this section we will create a load balancer with a public IP address.
    - **Type** - You can use internal load balancers to balance traffic from private IP addresses. Public load balancers can balance traffic originating from public IP addresses. For this example we will be creating a public load balancer.
 
    - **Public IP Address** - The public IP address that will be assigned to this load balancer. To create a new public IP address:
+
      - Click **Public IP address** on the **Create load balancer** blade.
+
      - Select **Create new** on the **Choose public IP address** blade.
+
      - Enter a name for the public IP address and click **OK**.
 
    - **Subscription** - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.
@@ -132,7 +138,9 @@ In this section we will create a virtual network and two virtual machines which 
 6. In the **Settings** step, change any of the optional settings as required for your VM, then click **OK**. Ensure that the virtual network created earlier is selected and that the VM belongs to an availability set. To create a new availability set:
 
    - Click **Availability set** on the **Create virtual machine** blade.
+
    - Select **Create new** on the **Change availability set** blade.
+
    - Enter a name for the availability set and the number of fault domains and update domains, then click **OK**.
 
    ![Create virtual machine > Settings](images/azs-browser-vm-settings-as.png)
@@ -257,9 +265,12 @@ A load balancer rule defines how traffic is distributed between VMs. The rule li
 
    - **Health probe** - The selected probe is used by this rule to determine which virtual machines in the back-end pool are healthy and can receive load-balanced traffic. Select the probe that you created in the previous section.
 
-   - **Session Persistence** - Session persistence specifies that traffic from a client should be handled by the same virtual machine in the back-end pool for the duration of a session. 
+   - **Session Persistence** - Session persistence specifies that traffic from a client should be handled by the same virtual machine in the back-end pool for the duration of a session.
+
       - **None** specifies that successive requests from the same client may be handled by any virtual machine.
-      - **Client IP** specifies that successive requests from the same client IP address will be handled by the same virtual machine. 
+
+      - **Client IP** specifies that successive requests from the same client IP address will be handled by the same virtual machine.
+
       - **Client IP and protocol** specifies that successive requests from the same client IP address and protocol combination will be handled by the same virtual machine.
 
    - **Idle timeout** - Keep a TCP or HTTP connection open without relying on clients to send keep-alive messages.
@@ -282,4 +293,4 @@ After installing the application that is being load-balanced on each of the VMs,
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

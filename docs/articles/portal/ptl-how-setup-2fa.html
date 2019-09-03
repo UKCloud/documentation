@@ -8,7 +8,7 @@
     <title>How to set up two-factor authentication in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to set up two-factor authentication in the UKCloud Portal | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/portal/ptl-how-setup-2fa.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -85,9 +94,9 @@
 <h1 id="how-to-set-up-two-factor-authentication-in-the-ukcloud-portal">How to set up two-factor authentication in the UKCloud Portal</h1>
 
 <h2 id="overview">Overview</h2>
-<p>To provide additional security, you may want to set up two-factor authentication (2FA) in the UKCloud Portal. Two-factor authentication in the Portal requires that users enter a randomly generated 2FA code, as well as their user name and and password, when logging in to the Portal.</p>
+<p>To provide additional security, you may want to set up two-factor authentication (2FA) in the UKCloud Portal. 2FA in the Portal requires that users enter a randomly generated code, as well as their user name and and password, when logging in to the Portal.</p>
 <p><img src="images/ptl-2fa.png" alt="Two-Factor Authentication dialog box in the UKCloud Portal"></p>
-<p>To set up 2FA, a Portal administrator must first enable 2FA for the Portal account. After enabling 2FA for the account, the next time a user attempts to log in, they will be prompted to set up 2FA for their user account by registering their Portal account with a 2FA authenticator app, such as Google Authenticator.</p>
+<p>To set up 2FA, a Portal administrator must first enable 2FA for the Portal account. After enabling 2FA for the account, the next time a user attempts to log in, they will be prompted to set up 2FA for their user account by registering their Portal account with an authenticator app, such as Google Authenticator.</p>
 <h2 id="enabling-2fa-in-the-ukcloud-portal-administrators">Enabling 2FA in the UKCloud Portal (administrators)</h2>
 <p>If you are a Portal administrator, you can enable 2FA for an account so that users must provide a 2FA code when they log in as well as their user name and password.</p>
 <p>To enable 2FA:</p>
@@ -110,10 +119,10 @@
 <h2 id="setting-up-2fa-for-a-user-account-all-users">Setting up 2FA for a user account (all users)</h2>
 <p>When you first log in to a Portal account that has 2FA enabled, you'll be prompted to set up 2FA:</p>
 <ol>
-<li><p>Log in to the UKCloud Portal.</p>
+<li><p>Log in to the UKCloud Portal, providing your user name and password as usual and memorable word, if required.</p>
 <p>For more detailed instructions, see the <a href="ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a>.</p>
 </li>
-<li><p>Per the instructions in the <em>Configure your two-factor authentication</em> dialog box, install a authenticator app and scan the provided QR code.</p>
+<li><p>Per the instructions in the <em>Configure your two-factor authentication</em> dialog box, install an authenticator app and scan the provided QR code.</p>
 <p><img src="images/ptl-2fa-setup.png" alt="Configure your two-factor authentication dialog box"></p>
 </li>
 <li><p>When you've installed and set up your authenticator app, enter the 6 digit code provided by the app in the <em>Configure your two-factor authentication</em> dialog box and click <strong>Confirm code</strong> to log in to the Portal.</p>
@@ -121,8 +130,12 @@
 <li><p>For future logins to the Portal, use your authenticator app to generate a 2FA code to confirm your identity and complete the log in process.</p>
 </li>
 </ol>
+<h2 id="related-videos">Related videos</h2>
+<ul>
+<li><a href="ptl-vid-portal.html"><em>UKCloud Portal overview video</em></a></li>
+</ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -132,13 +145,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/portal/ptl-how-setup-2fa.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -157,11 +163,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

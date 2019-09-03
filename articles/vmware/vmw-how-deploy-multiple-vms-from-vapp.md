@@ -3,6 +3,8 @@ title: How to deploy multiple VMs from a vApp template simultaneously using the 
 description: Outlines the options for deploying multiple VMs simultaneously from a single vApp template
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/09/2018 14:50:11
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -29,4 +31,4 @@ The following options are available to ensure reliable simultaneous deployment:
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

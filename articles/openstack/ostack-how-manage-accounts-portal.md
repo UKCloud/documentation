@@ -3,6 +3,8 @@ title: How to manage UKCloud for OpenStack accounts in the UKCloud Portal | UKCl
 description: Shows how Portal administrators can use the UKCloud Portal to create user accounts and set access permissions for UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 15:17:17
 
 toc_rootlink: How To
 toc_sub1:
@@ -159,8 +161,9 @@ To remove an OpenStack account:
 For more information about UKCloud for OpenStack, see the following articles in the Knowledge Centre:
 
 - [*Getting Started Guide for UKCloud for OpenStack*](ostack-gs.md)
+
 - [*UKCloud for OpenStack FAQs*](ostack-faq.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

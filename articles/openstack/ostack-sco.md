@@ -3,6 +3,8 @@ title: UKCloud for OpenStack Service Scope | UKCloud Ltd
 description: Outlines important details regarding Cloud Native Infrastructure
 services: openstack
 author: Steve Hall
+reviewer:
+lastreviewed: 19/07/2018 15:17:17
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -38,10 +40,18 @@ This service is designed for customers who:
 The following OpenStack projects/services are available with UKCloud for OpenStack:
 
 - Nova Compute
+
 - Glance Image Service
+
 - Cinder Block Storage
+
 - Keystone authentication
+
 - Neutron Networking Services
+
+- Barbican Key Management Services (*Excludes COR00005 & FRN00006 Regions*)
+
+- Octavia Load Balancing as a Service (*Excludes COR00005 & FRN00006 Regions*)
 
 UKCloud will look to add additional OpenStack projects to this service through future releases.
 
@@ -82,13 +92,13 @@ UKCloud for OpenStack is managed directly by the customer, using OpenStack's Hor
 
 ## Service provisioning
 
-You can request UKCloud for OpenStack via your Technical Account Manager or by using the My Calls section of the UKCloud Portal.
+You can request UKCloud for OpenStack via your Technical Account Manager or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 Within 4 business hours of accepting an order, UKCloud will create the customer's Primary Administrator account and send a Welcome Pack which includes the URL for the UKCloud Portal, and the Getting Started Guide.
 
 ## Customer responsibilities
 
-The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as N3/HSCN, Janet, RLI or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.
+The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required. If access is required over government secure networks such as HSCN, Janet, RLI or PSN (including legacy networks), the customer is responsible for adhering to the Code of Connection.
 
 Self-managing the environment including VM deployment, virtual network configuration, storage management, and so on.
 
@@ -101,20 +111,24 @@ Ensuring only appropriate data (for example OFFICIAL) is stored and processed by
 By default, we will place the following network limitations per project:
 
 - 3 x Floating IP Addresses
+
 - 2 x Network Routers
 
-Customers with requirements beyond these limits can raise a service request via My Calls to have these limits per project considered for raising.
+Customers with requirements beyond these limits can raise a service request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) to have these limits per project considered for raising.
 
 ## Compute virtual resource limits
 
 By default, we will place the following virtual resource limitations per project:
 
 - 100 Instances
+
 - 100 vCPU
+
 - 200 GiB RAM
+
 - 2 TiB Persistent block storage
 
-Customers with requirements beyond these limits can raise a service request via My Calls to have these limits per project considered for raising.
+Customers with requirements beyond these limits can raise a service request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) to have these limits per project considered for raising.
 
 ## Platform Operation Request Limits
 
@@ -122,13 +136,16 @@ Although designed to be a large-scale cloud platform, we strongly advise that wh
 
 ## Published features not currently available
 
-The following features published in the UKCloud for OpenStack Service Definition are not currently available:
+The following features published in the [*UKCloud for OpenStack Service Definition*](ostack-sd.md) are not currently available:
 
 - Janet & RLI connectivity
+
 - UKCloud provided Red Hat licences
 
-We are actively working on delivering these features and aim to have them delivered by Q4 2018.
+- OpenStack within UKCloud's Elevated security domain
+
+We are actively working on delivering these features.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

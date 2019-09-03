@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to create a load balancer | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to create a load balancer using the UKCloud Azure Stack portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to create a load balancer | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="title" content="How to create a load balancer using the UKCloud Azure Stack portal | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-create-load-balancer.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -82,16 +91,16 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-create-a-load-balancer">How to create a load balancer</h1>
+<h1 id="how-to-create-a-load-balancer-using-the-ukcloud-azure-stack-portal">How to create a load balancer using the UKCloud Azure Stack portal</h1>
 
 <h2 id="overview">Overview</h2>
 <p>A load balancer provides scale and availability by spreading incoming requests across multiple virtual machines within a load balancing pool. This guide shows you how to create a pool of back-end servers and a load balancer to spread traffic across them. In this example, the load balancer spreads traffic across two web servers.</p>
 <h3 id="intended-audience">Intended audience</h3>
-<p>To complete the steps in this guide, you must have appropriate access to a subscription in the UKCloud Azure Stack portal.</p>
+<p>To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.</p>
 <h2 id="creating-a-load-balancer">Creating a load balancer</h2>
 <p>In this section we will create a load balancer with a public IP address.</p>
 <ol>
-<li><p>Log in to the UKCloud Azure Stack portal.</p>
+<li><p>Log in to the Azure Stack portal.</p>
 <p>For more detailed instructions, see the <a href="azs-gs.html"><em>Getting Started Guide for UKCloud for Microsoft Azure</em></a>.</p>
 </li>
 <li><p>In the favourites panel, select <strong>Create a resource</strong>.</p>
@@ -111,9 +120,12 @@
 </li>
 <li><p><strong>Public IP Address</strong> - The public IP address that will be assigned to this load balancer. To create a new public IP address:</p>
 <ul>
-<li>Click <strong>Public IP address</strong> on the <strong>Create load balancer</strong> blade.</li>
-<li>Select <strong>Create new</strong> on the <strong>Choose public IP address</strong> blade.</li>
-<li>Enter a name for the public IP address and click <strong>OK</strong>.</li>
+<li><p>Click <strong>Public IP address</strong> on the <strong>Create load balancer</strong> blade.</p>
+</li>
+<li><p>Select <strong>Create new</strong> on the <strong>Choose public IP address</strong> blade.</p>
+</li>
+<li><p>Enter a name for the public IP address and click <strong>OK</strong>.</p>
+</li>
 </ul>
 </li>
 <li><p><strong>Subscription</strong> - This is your UKCloud for Microsoft Azure subscription and will be pre-populated by default.</p>
@@ -187,9 +199,12 @@
 </li>
 <li><p>In the <strong>Settings</strong> step, change any of the optional settings as required for your VM, then click <strong>OK</strong>. Ensure that the virtual network created earlier is selected and that the VM belongs to an availability set. To create a new availability set:</p>
 <ul>
-<li>Click <strong>Availability set</strong> on the <strong>Create virtual machine</strong> blade.</li>
-<li>Select <strong>Create new</strong> on the <strong>Change availability set</strong> blade.</li>
-<li>Enter a name for the availability set and the number of fault domains and update domains, then click <strong>OK</strong>.</li>
+<li><p>Click <strong>Availability set</strong> on the <strong>Create virtual machine</strong> blade.</p>
+</li>
+<li><p>Select <strong>Create new</strong> on the <strong>Change availability set</strong> blade.</p>
+</li>
+<li><p>Enter a name for the availability set and the number of fault domains and update domains, then click <strong>OK</strong>.</p>
+</li>
 </ul>
 <p><img src="images/azs-browser-vm-settings-as.png" alt="Create virtual machine &gt; Settings"></p>
 </li>
@@ -316,9 +331,12 @@
 </li>
 <li><p><strong>Session Persistence</strong> - Session persistence specifies that traffic from a client should be handled by the same virtual machine in the back-end pool for the duration of a session.</p>
 <ul>
-<li><strong>None</strong> specifies that successive requests from the same client may be handled by any virtual machine.</li>
-<li><strong>Client IP</strong> specifies that successive requests from the same client IP address will be handled by the same virtual machine.</li>
-<li><strong>Client IP and protocol</strong> specifies that successive requests from the same client IP address and protocol combination will be handled by the same virtual machine.</li>
+<li><p><strong>None</strong> specifies that successive requests from the same client may be handled by any virtual machine.</p>
+</li>
+<li><p><strong>Client IP</strong> specifies that successive requests from the same client IP address will be handled by the same virtual machine.</p>
+</li>
+<li><p><strong>Client IP and protocol</strong> specifies that successive requests from the same client IP address and protocol combination will be handled by the same virtual machine.</p>
+</li>
 </ul>
 </li>
 <li><p><strong>Idle timeout</strong> - Keep a TCP or HTTP connection open without relying on clients to send keep-alive messages.</p>
@@ -342,7 +360,7 @@
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -352,13 +370,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-create-load-balancer.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -377,11 +388,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

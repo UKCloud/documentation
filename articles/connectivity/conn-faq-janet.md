@@ -3,6 +3,8 @@ title: Janet connectivity FAQs | UKCloud Ltd
 description: Frequently asked questions for Janet connectivity
 services: connectivity
 author: Matt Warner
+reviewer:
+lastreviewed: 20/07/2018 18:37:23
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -18,6 +20,8 @@ toc_mdlink: conn-faq-janet.md
 ## What is Janet?
 
 Janet is the UK's research and education network. It is connected to all education organisations and research councils.
+
+Janet is a free-of-charge network that eligible UKCloud customers can use; there are no ingress or egress charges for this network. It's presented from our Assured platform and has a current bandwidth capacity of 1Gbps from each of our data centres, scalable to 100s of Gbps. The Janet connections are diversely routed for resilience and utilise Border Gateway Protocol (BGP) between data centres to ensure high availability of connections. 
 
 ## Who is entitled to connect to the Janet network?
 
@@ -41,7 +45,7 @@ Currently only our Farnborough site is connected to Janet. However, customers wh
 
 ## How do I get a Janet connection via the UKCloud Assured OFFICIAL security domain?
 
-To place an order for a Janet connection, please raise a Service Request (SR) via the UKCloud Portal or speak to your Technical Account Manager (TAM).
+To place an order for a Janet connection, please raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or speak to your Technical Account Manager (TAM).
 
 ## Can I get a Janet connection via the UKCloud Elevated OFFICIAL security domain?
 
@@ -85,4 +89,4 @@ UKCloud will set up new connections to the Janet network for you free of charge.
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

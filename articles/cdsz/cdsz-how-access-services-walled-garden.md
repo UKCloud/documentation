@@ -3,6 +3,8 @@ title: How to access UKCloud services from Walled Garden and Secure Remote Acces
 description: Shows how to access UKCloud services (such as WSUS, KMS or Red Hat Update Service) from Secure Remote Access or a Cross Domain Security Zone Walled Garden solution
 services: cdsz
 author: Sue Highmoor
+reviewer:
+lastreviewed: 17/07/2018 10:43:00
 
 toc_rootlink: How To
 toc_sub1:
@@ -29,10 +31,12 @@ To complete the steps in this guide you must have vCloud Director administrator 
 Before making network changes to your environment, you'll need the following information:
 
 - The Transit IP for the Elevated edge gateway of your CDSZ or SRA VDC
+
 - The Transit IP for the edge gateway of your Elevated VDC
+
 - The IP of the service you require.
 
-To get the last two octets of the IP addresses for the service you require, please raise a support ticket on the UKCloud Elevated Portal.
+To get the last two octets of the IP addresses for the service you require, please raise a Service Request on the UKCloud Elevated Portal.
 
 ## Setting up access to UKCloud services
 
@@ -59,8 +63,9 @@ The diagrams below show that you need to add two static routes and an SNAT rule 
 Now that you've set up access to UKCloud services, you can register your VMs with those services. For more information, see:
 
 - [*How to license Windows VMs using the UKCloud Key Management Server*](../vmware/vmw-how-setup-kms.md)
+
 - [*How to connect to the UKCloud Windows Server Update Services (WSUS)*](../vmware/vmw-how-connect-windows-update.md)
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

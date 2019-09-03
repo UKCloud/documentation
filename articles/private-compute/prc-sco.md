@@ -3,6 +3,8 @@ title: Private Cloud for Compute Service Scope | UKCloud Ltd
 description: Outlines important details regarding Private Cloud for Compute
 services: private-compute
 author: Steve Hall
+reviewer:
+lastreviewed: 03/08/2018 13:39:33
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -63,7 +65,7 @@ Your compute solution can be:
 
 - In either our Assured OFFICIAL or Elevated OFFICIAL security domain
 
-- Connected via the internet, HybridConnect, Janet, N3/HSCN, PSN Assured, PSN Protected, RLI or Secure Remote Access
+- Connected via the internet, HybridConnect, Janet, HSCN, PSN, RLI or Secure Remote Access
 
 ## Upfront deployment charges
 
@@ -97,7 +99,7 @@ As your service needs grow, we'll work with you to coordinate the installation o
 
 - Managing the performance of your workload by right-sizing your VMs and their usage
 
-- Raising service requests through the UKCloud Portal when you need configurations implemented
+- Raising service requests through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal when you need configurations implemented
 
 - Raising incident tickets if you experience any issues with your service
 
@@ -143,7 +145,7 @@ As per All-Inclusive plus:
 
 #### Important CHDC considerations
 
-You need to ensure that UKCloud control the physical access to the hardware in your CHDC environment. A service request via the UKCloud Portal must be raised for anyone else requiring access to the hardware, with full details of the activities they wish to carry out. These requests are subject to our approval. This is to ensure that there is no disruption to your service.
+You need to ensure that UKCloud control the physical access to the hardware in your CHDC environment. You must raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal for anyone else requiring access to the hardware, with full details of the activities they wish to carry out. These requests are subject to our approval. This is to ensure that there is no disruption to your service.
 
 We cannot be responsible for any service affecting issues resulting from non-escorted access.
 
@@ -205,7 +207,7 @@ We cannot be responsible for any service affecting issues resulting from non-esc
 
   - Any access provided by you to your user base that takes the compute system beyond its recommended performance and connectivity thresholds
 
-  - Faults within external connectivity providers (for example internet, PSN, Janet or N3/HSCN) and components co-located at UKCloud
+  - Faults within external connectivity providers (for example internet, PSN, Janet or HSCN) and components co-located at UKCloud
 
   - Any connectivity between data centres that is out of our control
 
@@ -221,4 +223,4 @@ For further information, contact your account manager to request more informatio
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

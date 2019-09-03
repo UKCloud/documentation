@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How create a vApp | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to create a vApp | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How create a vApp | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.36.1.0">
+    <meta name="title" content="How to create a vApp | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -51,7 +51,16 @@
         </nav>
         
         <div class="navbar-borderless subnav navbar navbar-default">
-          <div class="container-fluid hide-when-search subnav-margin-left" id="breadcrumb">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-vapp.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
             <ul class="breadcrumb">
               <li></li>
             </ul>
@@ -87,49 +96,17 @@
 <h2 id="overview">Overview</h2>
 <p>vCloud Director uses vApps to make virtual machine (VM) creation and management easy and flexible. vApps are essentially containers for VMs and can be used in many ways. One of the most common uses of a vApp is to group similar VMs together for easy management. Or you can put VMs that form a multi-tier application into the same vApp for greater control. Up to 128 vApps can be created within a virtual data centre (VDC) and intelligently networked to create complex architectures that can be managed easily.</p>
 <p>In this guide we'll look at how to create a vApp from scratch.</p>
-<p>The steps for creating a vApp depend on the version of vCloud Director available in your environment:</p>
-<ul>
-<li><p><a href="#creating-a-vapp-vcloud-director-820">vCloud Director 8.20</a></p>
-</li>
-<li><p><a href="#creating-a-vapp-vcloud-director-91">vCloud Director 9.1</a></p>
-</li>
-</ul>
-<h2 id="creating-a-vapp-vcloud-director-820">Creating a vApp (vCloud Director 8.20)</h2>
-<ol>
-<li><p>In vCloud Director, on the <em>Home</em> tab, click the Build New vApp button.</p>
-<p><img src="images/vmw-vcd-btn-new-vapp.png" alt="Build New vApp button"></p>
-</li>
-<li><p>Enter a name for your vApp. This should be a name that will easily identify it if you're building a large environment with multiple vApps. If you have multiple VDCs on the UKCloud platform, you can decide later which one the new vApp sits in. You can also choose how long the vApp can exist for, which is useful for test &amp; dev projects.</p>
-<p><img src="images/vmw-vcd-vapp-name.png" alt="Select Name and Location page of New vApp dialog box"></p>
-</li>
-<li><p>When you're happy with these settings, click <strong>Next</strong>.</p>
-</li>
-<li><p>You can now populate the vApp with VMs. There are several ways to create a VM:</p>
-<ul>
-<li><p>From an existing template. The template can be in your own organisation's catalogue or in UKClouds's public catalogue (see <a href="vmw-how-create-vm-from-template.html"><em>How to create a VM from a template</em></a>).</p>
-<p>Catalogue creation is covered in <a href="vmw-how-create-catalog.html"><em>How to create a catalog</em></a>.</p>
-</li>
-<li><p>From scratch, without using a template (see <a href="vmw-how-create-vm-from-scratch.html"><em>How to create a virtual machine from scratch</em></a>).</p>
-</li>
-</ul>
-</li>
-<li><p>When you've finished creating your vApp, click <strong>Finish</strong>.</p>
-</li>
-<li><p>When your vApp has finished deploying, on the <em>Home</em> page, right-click the newly created vApp and click <strong>Start</strong> to power it on.</p>
-</li>
-</ol>
-<h2 id="creating-a-vapp-vcloud-director-91">Creating a vApp (vCloud Director 9.1)</h2>
 <ol>
 <li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC in which you want to create the vApp.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>vApps</strong> to view a list of vApps within the VDC.</p>
-<p><img src="images/vmw-vcd91-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
+<p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps tab in vCloud Director"></p>
 </li>
-<li><p>Click <strong>Build New vApp</strong>.</p>
-<p><img src="images/vmw-vcd91-btn-new-vapp.png" alt="Build New vApp button"></p>
+<li><p>Click <strong>New vApp</strong>.</p>
+<p><img src="images/vmw-vcd-btn-new-vapp.png" alt="Build New vApp button"></p>
 </li>
-<li><p>In the <em>Build new vApp</em> dialog box, enter a <strong>Name</strong> and <strong>Description</strong> for your vApp. The name should be something that will easily identify it if you're building a large environment with multiple vApps.</p>
-<p><img src="images/vmw-vcd91-build-vapp.png" alt="Build new vApp dialog box"></p>
+<li><p>In the <em>New vApp</em> dialog box, enter a <strong>Name</strong> and <strong>Description</strong> for your vApp. The name should be something that will easily identify it if you're building a large environment with multiple vApps.</p>
+<p><img src="images/vmw-vcd-build-vapp.png" alt="Build new vApp dialog box"></p>
 </li>
 <li><p>You can now click <strong>Add Virtual Machine</strong> to populate the vApp with VMs. There are several ways to create a VM:</p>
 <ul>
@@ -140,13 +117,13 @@
 </li>
 </ul>
 </li>
-<li><p>When you've finished creating your vApp, click <strong>Build</strong>.</p>
+<li><p>When you've finished creating your vApp, click <strong>Create</strong>.</p>
 </li>
-<li><p>When your vApp has finished deploying, in the card for the vApp, click <strong>Power</strong> then <strong>Power On</strong> to power it on.</p>
+<li><p>When your vApp has finished deploying, in the card for the vApp, select <strong>Actions</strong> then <strong>Power On</strong> to power it on.</p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
-<p>If you have any comments on this document or any other aspect of your UKCloud experience, send them to <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -156,13 +133,6 @@
               
               <div class="hidden-sm col-md-2" role="complementary">
                 <div class="sideaffix">
-                  <div class="contribution">
-                    <ul class="nav">
-                      <li>
-                        <a href="https://github.com/UKCloud/documentation/blob/master/articles/vmware/vmw-how-create-vapp.md/#L1" class="contribution-link">Improve this Doc</a>
-                      </li>
-                    </ul>
-                  </div>
                   <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
                   <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
                   </nav>
@@ -181,11 +151,24 @@
               Generated by <strong>DocFX</strong><br>
               <a href="#top">Back to top</a>
             </span>
-            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2018. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to use the Hawkular Metrics API | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to use the Hawkular Metrics API | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/openshift/oshift-how-use-hawkular-metrics.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-use-the-hawkular-metrics-api">How to use the Hawkular Metrics API</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This guide is intended to give you enough information to forumulate basic memory usage or cpu queries against nodes in your cluster. For more advanced usage please refer to the Hawkular documentation at <a href="https://www.hawkular.org/hawkular-metrics/docs/user-guide/#_metrics">https://www.hawkular.org/hawkular-metrics/docs/user-guide/#_metrics</a> or the OpenShift Hawkular repository readme at <a href="https://github.com/openshift/origin-metrics/blob/master/docs/hawkular_metrics.adoc">https://github.com/openshift/origin-metrics/blob/master/docs/hawkular_metrics.adoc</a>.</p>
+<h2 id="using-the-api">Using the API</h2>
+<ol>
+<li><p>To query the API, you must be authenticated as a user that has reader permissions on the OpenShift project that contains the Hawkular-Tenant you are querying. If you are querying the _system tenant then you must also have cluster-reader permissions.</p>
+</li>
+<li><p>To get a list of all node level counters and gauges you can use, run the following:</p>
+<pre><code class="lang-bash">curl -X GET https://hawkular-metrics.$(cluster-url)/hawkular/metrics/metrics &quot;Content-Type: application/json&quot; -H &quot;Hawkular-Tenant: _system&quot; -H &quot;Authorization: Bearer $token&quot;
+</code></pre>
+<p>Where <code>$token</code> is a variable storing the output of <code>oc whoami -t</code> from an OpenShift user with the correct permissions to view metrics and <code>$cluster-url</code> is the domain suffix of your cluster.</p>
+<p>For example, if your cluster URL is <code>https://ocp.openshift-test.cna.ukcloud.com:8443</code>, your query would be the following:</p>
+<pre><code class="lang-bash">curl -X GET https://hawkular-metrics.openshift-test.cna.ukcloud.com/hawkular/metrics/metrics &quot;Content-Type: application/json&quot; -H &quot;Hawkular-Tenant: _system&quot; -H &quot;Authorization: Bearer $token&quot;
+</code></pre>
+</li>
+<li><p>You'll need to pass the output from the request into some form of JSON parser to get human readable results. It will return a series of JSON blocks similiar to the following:</p>
+<pre><code class="lang-json">{
+    &quot;dataRetention&quot;: 7,
+    &quot;id&quot;: &quot;cluster/memory/usage&quot;,
+    &quot;maxTimestamp&quot;: 1543500090000,
+    &quot;minTimestamp&quot;: 1543491120000,
+    &quot;tags&quot;: {
+        &quot;descriptor_name&quot;: &quot;memory/usage&quot;,
+        &quot;group_id&quot;: &quot;/memory/usage&quot;,
+        &quot;type&quot;: &quot;cluster&quot;,
+        &quot;units&quot;: &quot;bytes&quot;
+    },
+    &quot;tenantId&quot;: &quot;_system&quot;,
+    &quot;type&quot;: &quot;gauge&quot;
+}
+</code></pre>
+<p>This is the gauge for cluster memory usage and you can query the raw data using the id from the above block as follows:</p>
+<pre><code class="lang-bash">curl -X GET https://hawkular-metrics.openshift-test.cna.ukcloud.com/hawkular/metrics/gauges/cluster%2Fmemory%2Fusage/raw     &quot;Content-Type: application/json&quot; -H &quot;Hawkular-Tenant: _system&quot; -H &quot;Authorization: Bearer $token&quot;
+</code></pre>
+<p>This will return a series of data points like the following:</p>
+<pre><code class="lang-json">{
+    &quot;timestamp&quot;: 1543491120000,
+    &quot;value&quot;: 3593875456.0
+}
+</code></pre>
+<p>The timestamp is in Epoch and you can determine the value by looking at the gauge object. The code sample in step 3 shows that the value is in bytes (&quot;units&quot;: &quot;bytes&quot;).</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You must encode the ID returned in the first request (cluster/memory/usage) correctly in the second request by replacing the / with %2F.</p>
+</div>
+</li>
+</ol>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

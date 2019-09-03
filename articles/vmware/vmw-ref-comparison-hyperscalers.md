@@ -3,6 +3,8 @@ title: Comparison of UKCloud for VMware against hyperscalers  | UKCloud Ltd
 description: Analyses the performance of UKCloud for VMware and compares it against hyperscalers
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 16/10/2018 11:28:27
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -31,7 +33,9 @@ This article concentrates on performance benchmarking and introduces a compariso
 These results are important for several reasons:
 
 - **Cost control** – The superior performance of the UKCloud platform means that you can do more with less. To match our performance using the public cloud providers, you would need bigger instances, more instances or both – significantly increasing the cost of those platforms. A platform that appears 20% cheaper but has half the performance may mean you end up paying 60% more for the same performance.
+
 - **Business productivity** – UKCloud for VMware has been designed specifically for customers transitioning their legacy workloads to the cloud. The majority of legacy applications are running in virtualised environments using VMware and hence can be moved quickly, with less risk, and yet immediately benefit from the elasticity and scalability of the cloud. Superior performance means that you can achieve greater operational efficiency on our platform.
+
 - **User experience** – As digital systems are increasingly used by millions of users (for example, citizens), it's important that your platform can deliver superior performance when your users need it.
 
 ## Our approach to benchmarking
@@ -110,27 +114,41 @@ As with databases, these kinds of applications are often slowed down by their st
 These results show that UKCloud for VMware consistently outperforms both AWS and Azure across a variety of benchmarks; (UKCloud outperforms AWS on 80% of the benchmarks performed and Azure on 100%).
 
 - **Networking performance**
+
   - Almost 4 times higher than AWS
+
   - Over 6 times higher than Azure
+
   - **Users spend less time transferring data on the network, allowing applications to access their data faster and thus running faster also**
 
 - **MongoDB performance**
+
   - 2 times faster than AWS and Azure
+
   - **Better database performance allows for higher data availability to applications, therefore resulting in a better customer experience**
 
 - **Redis performance**
+
   - 2 times faster than AWS
+
   - Almost 2 times faster than Azure
+
   - **Smaller clusters of data are required for the same workload – this means fewer VMs are required and therefore saves you money**
 
 - **Random I/O performance**
+
   - Random Read is 2.5 times faster than AWS and over 15 times faster than Azure
+
   - Random Write is 9 times faster than AWS and almost 61 times faster than Azure
+
   - **Faster storage access allows applications to rapidly access and process data and thus results in faster applications**
 
 - **Sequential I/O performance**
+
   - Sequential Read is 8 times better than AWS and almost 4 times better than Azure
+
   - Sequential Write is over 3 times higher than AWS and 2 times higher than Azure
+
   - **High sequential IO performance is vital for data analysis and specifically for data warehouses, it is a core component of business intelligence and thus guides key management decisions**
 
 ## Summary
@@ -145,4 +163,4 @@ We are continuously investigating ways to improve the performance of our VMware 
 
 ## Feedback
 
-If you have any comments on this document or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
