@@ -65,7 +65,7 @@ We provide you with access to two storage policies: Tier 1 and Tier 2. Both poli
 
 - We do not guarantee storage performance, as it can be affected by many factors
 
-- We do not provide IOPs figures for our storage offerings
+- We do not provide IOPS figures for our storage offerings
 
 - Workloads can use multiple storage profiles
 
