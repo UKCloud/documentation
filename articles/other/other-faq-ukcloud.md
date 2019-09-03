@@ -79,8 +79,6 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 
 [Emergency Services Network FAQs](../connectivity/conn-faq-esn.md)
 
-[Global load balancing FAQs](../connectivity/conn-faq-glb.md)
-
 [HSCN connectivity FAQs](../connectivity/conn-faq-hscn.md)
 
 [HybridConnect FAQs](../connectivity/conn-faq-hybridconnect.md)
@@ -92,6 +90,8 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 [PSN connectivity FAQs](../connectivity/conn-faq-psn.md)
 
 [PSN for Policing and enhanced regime FAQs](../connectivity/conn-faq-psn-police.md)
+
+[UltraDNS FAQs](../connectivity/conn-faq-glb.md)
 
 ## Other
 

@@ -241,7 +241,7 @@ Yes, you can configure load balancing within the service and it is included with
 
 Yes, you can deploy your own load-balancing virtual appliance (for example, F5, Stingray, Zeus) if support for other algorithms is required.
 
-In addition, UKCloud offers UltraDNS - an authoritative DNS and Global Load Balancing service from Neustar, which you can customise for your own specific requirements. An [*FAQ*](../connectivity/conn-faq-glb.md) and [*Service Scope*](../connectivity/conn-sco-glb.md) are available in the Knowledge Centre.
+In addition, UKCloud offers UltraDNS - an authoritative DNS and global load balancing service from Neustar, which you can customise for your own specific requirements. An [*FAQ*](../connectivity/conn-faq-glb.md) and [*Service Scope*](../connectivity/conn-sco-glb.md) are available in the Knowledge Centre.
 
 ## Storage
 
