@@ -40,7 +40,7 @@ Prerequisites from a Windows-based external client are:
 
   - [Configure PowerShell Environment and Azure Stack Module](azs-how-configure-powershell-users.md)
 
-- An active Azure Stack *Subscription* (required to create an [SPN](azs-how-create-spn-portal.md) on Azure Stack).
+- An active Azure Stack *Subscription*. Required to create an [SPN](azs-how-create-spn-portal.md) on Azure Stack
 
 ## Official documentation
 
@@ -85,15 +85,15 @@ This template deploys two SQL Server 2016 SP1 or SP2 Enterprise / Standard / Dev
 
 - Four storage accounts (One for AD, one for SQL, one for file share witness and one for VM diagnostics).
 
-- Four public IP address (One for AD, one for each SQL VM and one for public LB bound to SQL always on listener).
+- Four public IP address (One for AD, one for each SQL VM and one for a public LB bound to SQL always on listener).
 
-- One external load balancer for SQL VMs with public IP bound to the SQL always on listener.
+- One external load balancer for SQL VMs with a public IP bound to the SQL always on listener.
 
-- One VM (WS2016) configured as domain controller for a new forest with a single domain.
+- One VM (WS2016) configured as a domain controller for a new forest with a single domain.
 
 - Two VMs (WS2016) configured as SQL Server 2016 SP1 or SP2 Enterprise/Standard/Developer.
 
-- One VM (WS2016) configured as file share witness for the cluster.
+- One VM (WS2016) configured as a file share witness for the cluster.
 
 - Two availability sets, one containing the SQL and FSW 2016 VMs, the other containing the domain controller VM.
 
@@ -110,7 +110,8 @@ The images used to create this deployment are:
 - Latest DSC Extension (2.76.0 or higher).
 
 > [!WARNING]
-> If you deploy SQL STANDARD your Availability Group will have limitations as per [Basic Availability Groups](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017)
+> If you deploy SQL STANDARD, your Availability Group will have limitations as per [Basic Availability Groups](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017):
+>
 > ## Basic Availability Group Limitations
 > Basic availability groups use a subset of features compared to those normally found in advanced availability groups on SQL Server 2016 Enterprise Edition. Basic availability groups include the following limitations:
 >
@@ -150,11 +151,11 @@ The images used to create this deployment are:
 
 2. Create your Azure Stack environment.
 
-3. Log in to your Azure Stack *Subscription* with Service Principal Name (SPN)
+3. Log in to your Azure Stack *Subscription* with Service Principal Name (SPN).
 
 4. Check if the resource group exists and create one if it does not.
 
-5. Test deployment JSON.
+5. Validate the JSON ARM template to ensure it is a valid deployment.
 
 6. Deploy resources from ARM Template.
 
@@ -163,10 +164,10 @@ The images used to create this deployment are:
 | Name                            | Description                                                                   | AllowedValues                                                         | DefaultValue                                                                         |
 | ------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- |------------------------------------------------------------------------------------ |
 | _artifactsLocation                   | The blob store where all deployment artifacts are stored          |                                                                       | https<!-- -->://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sql-2016-alwayson
-| AdminPassword                   | The password for the Administrator account of the new VMs and Domain          |                                                                       |                                                                                     |
+| AdminPassword                   | The password for the administrator account of the new VMs and domain          |                                                                       |                                                                                     |
 | AdminUsername                   | The name of the administrator of the new VMs and domain                       |                                                                       | localadmin                                                                                     |
 | AdPDCNICIPAddress               | The IP address of the new AD VM                                               |                                                                       | 10.0.0.250                                                                             |
-| AdVMSize                        | The size of the AD VMs created                                                | {Standard_D1_v2, Standard_D2_v2}                            | Standard_D2_v2                                                                         |
+| AdVMSize                        | The size of the AD VM created                                                | {Standard_D1_v2, Standard_D2_v2}                            | Standard_D2_v2                                                                         |
 | AutoPatchingDay                 | The day of the week for auto patching                                           | {Never, Everyday, Sunday, Monday...}                                  | Sunday                                                                                |
 | AutoPatchingStartHour           | The start hour of the day for auto patching                                     | {0, 1, 2, 3... 23}                                                       | 2                                                                                    |
 | DeploymentPrefix                | The DNS Prefix for the public IP address for the always on cluster            |                                                                       | aodns                                                                                |
@@ -180,16 +181,16 @@ The images used to create this deployment are:
 | SqlServerServiceAccountPassword | The SQL server service account password                                       |                                                                       |                                                                                      |
 | SqlServerServiceAccountUserName | The SQL server service account name                                           |                                                                       | sqlservice                                                                           |
 | SqlServerOffer                | The SQL server version                                                        | {SQL2016SP1-WS2016, SQL2016SP2-WS2016} | SQL2016SP2-WS2016              |
-| SqlServerSku                | The name of the SQL Server SKU                                                        | {Enterprise, Standard, SQLDEV}              | Enterprise
-| SqlStorageAccountName           | The name of SQL server storage account                                        |                                                                       |[tolower(concat(take(uniqueString(resourceGroup().id),8),'sql'))]
+| SqlServerSku                | The name of the SQL server SKU                                                        | {Enterprise, Standard, SQLDEV}              | Enterprise
+| SqlStorageAccountName           | The name of the SQL server storage account                                        |                                                                       |[tolower(concat(take(uniqueString(resourceGroup().id),8),'sql'))]
 | SqlStorageAccountType           | The type of the SQL server storage account created                            | {Premium_LRS, Standard_LRS}                                         | Premium_LRS                                                                        |
 | SqlSubnet                       | The address range of the SQL subnet created in the new VNET                   |                                                                       | 10.0.1.0/26                                                                          |
 | SqlVMSize                       | The size of the SQL VMs created                                               | {Standard_DS2_v2, Standard_DS3_v2, Standard_DS4_v2, Standard_DS5_v2, Standard_DS11_v2, Standard_DS12_v2, Standard_DS13_v2}                            | Standard_DS2_v2                                                                         |
-| NumberOfSqlVMDisks                       | The number of data disks                                               | {1...32}                            | 2                             |
+| NumberOfSqlVMDisks                       | The number of data disks for each SQL VM                                               | {1...32}                            | 2                             |
 | StaticSubnet                    | The address range of the subnet static IPs which are allocated from within the new VNET |                                                                       | 10.0.0.0/24                                                                          |
 | VirtualNetworkAddressRange      | The address range of the new VNET in CIDR format                              |                                                                       | 10.0.0.0/16                                                                          |
 | VirtualNetworkName              | Name of virtual network to be created                                         |                                                                       | sqlhaVNET                                                                         |
-| VMDiskSize                      | The size of the SQL VMs' data disk in GB.                                          | {128, 256, 512, 1023}                                                 | 128                                                                                  |
+| VMDiskSize                      | The size of the SQL VMs' data disk(s) in GB.                                          | {128, 256, 512, 1023}                                                 | 128                                                                                  |
 | WitnessVMSize                   | The size of the witness VM created                                            | {Standard_D1_v2, Standard_D2_v2}                           | Standard_D1_v2                                                                         |
 | WorkloadType                    | The SQL VM work load type                        | {GENERAL, OLTP, DW}                                                               | GENERAL        |
 | SampleDatabaseName              | Sample HA database                              | | AutoHa-sample |
@@ -213,7 +214,7 @@ Change the required variables as per your environment and run the following scri
 >
 > In the example below it has been already set accordingly.
 >
-> To change the SQL server version that is deployed or set **$SqlServerOffer** accordingly: **`SQL2016SP1-WS2016`**, **`SQL2016SP2-WS2016`**.
+> To change the SQL server version that is deployed, set **$SqlServerOffer** accordingly: **`SQL2016SP1-WS2016`**, **`SQL2016SP2-WS2016`**.
 > The current default is set to **`SQL2016SP2-WS2016`**.
 >
 > To change the SQL server SKU that is deployed, set **SqlServerSKU** accordingly: **`Enterprise`** or **`Standard`** or **`SQLDEV`**.
@@ -267,16 +268,17 @@ Connect-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsC
 # Create a new resource group if it does not exist
 try {
     $RG = Get-AzureRmResourceGroup -Name $ResourceGroupName -Location $Location -ErrorAction 'SilentlyContinue'
-    if ( -not $RG) {
+    if (-not $RG) {
         Write-Output -InputObject "Could not find the resource group, creating now..."
         New-AzureRmResourceGroup -Name $ResourceGroupName -Location $Location -Verbose
     }
     else {
-        Write-Output -InputObject "Exists."
+        Write-Output -InputObject "The resource group: $ResourceGroupName exists."
     }
 }
 catch {
-    Write-Output -InputObject "Could not query resource group."
+    Write-Output -InputObject "Could not query the resource group: $ResourceGroupName"
+    Write-Error -Message "$($_.Exception.Message)"
     exit
 }
 
