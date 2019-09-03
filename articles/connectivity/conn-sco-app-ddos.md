@@ -29,7 +29,7 @@ The cloud-based service mitigates attacks in the cloud, far away from your infra
 
 The Always-On Hybrid managed solution removes the burden of DDoS with an on-site Arbor appliance for smaller DDoS attacks combined with cloud-based failover for larger, sustained attacks. Remote management of monitoring, detecting and responding to DDoS attacks minimizes downtime and frees your valuable resources.
 
-UKCloud has partnered with Neustar for the provision of this service due to their global presence, experience, success in DDoS protection and traffic monitoring, established service and loyal customer base. In addition, we also offer a Global Load Balancing service with Neustar to offer a complete traffic monitoring and protection solution.
+UKCloud has partnered with Neustar for the provision of this service due to their global presence, experience, success in DDoS protection and traffic monitoring, established service and loyal customer base. In addition, we also offer our UltraDNS service with Neustar (previously Global Load Balancing) to offer a complete traffic monitoring and protection solution.
 
 ## Cloud-based scrubbing
 
