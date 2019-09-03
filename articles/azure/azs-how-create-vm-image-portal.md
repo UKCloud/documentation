@@ -40,6 +40,8 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 1. Log in to the [Azure Stack portal](https://portal.frn00006.azure.ukcloud.com/).
 
+    For more detailed instructions, see [Getting Started Guide for UKCloud for Microsoft Azure](azs-gs.md).
+
 2. Click **Virtual Machines** on the left menu.
 
 3. Click the VM that you want to capture.
@@ -48,7 +50,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
     ![Capture VM image](images/azs-browser-capture-vm.png)
 
-5. In the *new* blade, provide a **Name** for the new image.
+5. In the new blade, provide a **Name** for the new image.
 
 6. Select a **Resource group** from the dropdown menu or create a new one.
 
@@ -72,7 +74,7 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 14. Select a VM size. Click **Select**.
 
-15. In *Configure optional features*, under *Select public inbound ports*, select the ports you want to provision.
+15. In *Configure optional features*, under *Select public inbound ports*, select the ports you want to open.
 
 16. Click **OK**.
 
