@@ -20,3 +20,7 @@
   items:
   - name: Cross Domain Security Zone Service Definition
     href: cdsz-sd.md
+- name: Service Scope
+  items:
+  - name: Cross Domain Security Zone Service Scope
+    href: cdsz-sco.md
