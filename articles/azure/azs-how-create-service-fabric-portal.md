@@ -70,7 +70,7 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
 ### Adding a certificate to the key vault
 
-1. Once the key vault has been deployed, navigate to it by clicking **All services** in the favourites panel, then selecting **Key Vaults** under the *Security + Identity* section.
+1. Once the key vault has been deployed, navigate to it by clicking **All services** in the favourites panel, then selecting **Key Vaults** under the *Security* section.
 
 2. Select your key vault from the list.
 
@@ -102,7 +102,7 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
 During configuration of the Service Fabric cluster, you must provide several details relating to the key vault and certificates. You must also configure access to the key vault for virtual machines and the Azure Resource Manager.
 
-1. Once you have deployed the key vault, navigate to it by clicking **All services** in the favourites panel, then selecting **Key Vaults** under the *Security + Identity* section.
+1. Once you have deployed the key vault, navigate to it by clicking **All services** in the favourites panel, then selecting **Key Vaults** under the *Security* section.
 
 2. Select your key vault from the list.
 
