@@ -59,13 +59,13 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 
 [Email and Collaboration as a Service FAQs](../email/email-faq.md)
 
-## Private Cloud for Compute
+## Private Cloud
 
-[Private Cloud for Compute FAQs](../private-compute/prc-faq.md)
+[Private Cloud FAQs](../private-cloud/prc-faq.md)
 
 ## Private Cloud for Storage
 
-[Private Cloud for Storage FAQs](../private-storage/prs-faq.md)
+[Private Cloud for Storage FAQs](../private-cloud/prc-faq-storage.md)
 
 ## Connectivity
 
