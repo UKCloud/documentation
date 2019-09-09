@@ -44,7 +44,7 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
    ![Security option in New blade](images/azs-browser-new-security.png)
 
-4. In the *New* blade, select **Key Vault**.
+4. In the *Security + Identity* blade, select **Key Vault**.
 
    ![New Key Vault](images/azs-browser-new-key-vault.png)
 
@@ -56,7 +56,7 @@ Before creating a Service Fabric cluster, it is necessary to create a key vault 
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
+   - **Location** - This will be `frn00006`, which is the Azure Stack region.
 
    - **Access policies** - Configure who can access the key vault and what permissions they have.
 
@@ -164,7 +164,7 @@ You also need the thumbprint of the certificate(s). For information about how to
 
    - **Resource Group** - Select an existing resource group, or create a new one by typing a name for your new resource group. Note that to create a Service Fabric cluster, the resource group must contain no other resources.
 
-   - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
+   - **Location** - This will be `frn00006`, which is the Azure Stack region.
 
    ![Create Service Fabric cluster > Basics](images/azs-browser-create-sf-basics.png)
 
@@ -194,7 +194,7 @@ You also need the thumbprint of the certificate(s). For information about how to
 
    - **Source Key Vault** - The resource ID of the key vault that you gathered in the previous section. This should be in the format of **`/subscriptions/<SubscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.KeyVault/vaults/<VaultName>`**.
 
-   - **Cluster Certificate URL** - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of **`https://<VaultEndpoint>/secrets/\<SecretName>/<SecretVersion>`**.
+   - **Cluster Certificate URL** - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of **`https://<VaultEndpoint>/secrets/<SecretName>/<SecretVersion>`**.
 
    - **Cluster Certificate thumbprint** - Cluster certificate thumbprint that you gathered earlier. For example, **`1742635FBCC5F9A442582516A7292523686DE3D7`**.
 
@@ -203,7 +203,7 @@ You also need the thumbprint of the certificate(s). For information about how to
 
    - **Server Certificate thumbprint** - Server certificate thumbprint that you gathered earlier. For example, **`1742635FBCC5F9A442582516A7292523686DE3D7`**.
 
-   - **Use Reverse Proxy Certificate** - You may specify a SSL certificate to be used by the reverse proxy you have enabled. Doing so will cause the reverse proxy to communicate using HTTPS. If no certificate is specified, then the reverse proxy will communicate using HTTP instead.
+   - **Use Reverse Proxy Certificate** - You may specify an SSL certificate to be used by the reverse proxy you have enabled. Doing so will cause the reverse proxy to communicate using HTTPS. If no certificate is specified, then the reverse proxy will communicate using HTTP instead.
 
    - **Admin Client Certificate Thumbprints** - Comma separated list of admin client certificate thumbprints. For example, **`1742635FBCC5F9A442582516A7292523686DE3D7,0272251171BA32CEC7938A65B8A6A553AA2D3283`**.
 
