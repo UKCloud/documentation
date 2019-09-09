@@ -106,7 +106,7 @@ During configuration of the Service Fabric cluster, you must provide several det
 
 2. Select your key vault from the list.
 
-3. In the *Settings* section of the key vault's blade, select **Access Policies**.
+3. In the *Settings* section of the key vault's blade, select **Access policies**.
 
 4. On the *Access policies* page, click **Click to show advanced access policies**.
 
