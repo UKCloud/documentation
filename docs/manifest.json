@@ -2837,7 +2837,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-app-ddos.html",
-          "hash": "mIUH6/BqnNAGz48H8cLOIA=="
+          "hash": "yi7tInW+Y8VBDwjUaRvFEg=="
         }
       },
       "is_incremental": false,
@@ -2861,7 +2861,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-ddos.html",
-          "hash": "XICJcsVZZGG/PLoCTi4w9g=="
+          "hash": "otuCzaW3GG/T5IAnjmsiPw=="
         }
       },
       "is_incremental": false,
@@ -2885,7 +2885,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq-glb.html",
-          "hash": "ZVdo942WHiuGLKm2r5KbgQ=="
+          "hash": "9cVrLyUCWTjqK6Q5/+QU3Q=="
         }
       },
       "is_incremental": false,
@@ -3005,7 +3005,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-ref-ddos-protection.html",
-          "hash": "v1BM+BSj3DgSUOnzKCcDWQ=="
+          "hash": "a/C4z4Z/yMRHha7EtNpN0Q=="
         }
       },
       "is_incremental": false,
@@ -3173,7 +3173,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-sco-app-ddos.html",
-          "hash": "CFqa4B9tnffZ9haZwvieXw=="
+          "hash": "uBInaFn2ovHCID0xzQRN3g=="
         }
       },
       "is_incremental": false,
@@ -3185,7 +3185,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-sco-glb.html",
-          "hash": "EFRra+l4n+ee5xLz1EKDZw=="
+          "hash": "VgkKBgyXQfntjsbhmvM15Q=="
         }
       },
       "is_incremental": false,
@@ -3285,7 +3285,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/toc.html",
-          "hash": "XYqxAmV0YOhxnsvTBIw/Kw=="
+          "hash": "e0pTzN/OBdy7JpejDaGD1w=="
         }
       },
       "is_incremental": false,
@@ -8215,7 +8215,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "8khVBKBk0yeY4lPQLRubSw=="
+          "hash": "KXwCGgwi5xf/vgvijbxNGQ=="
         }
       },
       "is_incremental": false,
@@ -8312,6 +8312,18 @@
         ".html": {
           "relative_path": "articles/other/other-ref-cloud-economics.html",
           "hash": "U6lbL9mfwuL2mmiradEa3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-community-competition.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-community-competition.html",
+          "hash": "6nThXwsfKBfPL9ZD9XZsUA=="
         }
       },
       "is_incremental": false,
@@ -8683,7 +8695,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "dotNjNw9xJPPLphljMq3ZA=="
+          "hash": "38kfCBoT8m44aiFp7itybQ=="
         }
       },
       "is_incremental": false,
@@ -18165,13 +18177,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -18179,10 +18184,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 404,
+          "total_file_count": 405,
           "skipped_file_count": 0
         }
       }

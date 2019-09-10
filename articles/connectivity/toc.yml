@@ -1,7 +1,5 @@
 - name: FAQs
   items:
-  - name: Application-tuned DDoS protection FAQs
-    href: conn-faq-app-ddos.md
   - name: Bandwidth monitoring FAQs
     href: conn-faq-bandwidth-monitoring.md
   - name: DDoS mitigation service FAQs
@@ -22,6 +20,8 @@
     href: conn-faq-psn.md
   - name: PSN for Policing and enhanced regime FAQs
     href: conn-faq-psn-police.md
+  - name: SiteProtect Advanced DDoS Mitigation FAQs
+    href: conn-faq-app-ddos.md
   - name: UltraDNS FAQs
     href: conn-faq-glb.md
 - name: How To
@@ -60,7 +60,7 @@
     href: conn-ref-ids.md
 - name: Service Scope
   items:
-  - name: Application-tuned DDoS protection Service Scope
+  - name: SiteProtect Advanced DDoS Mitigation Service Scope
     href: conn-sco-app-ddos.md
   - name: UltraDNS Service Scope
     href: conn-sco-glb.md
