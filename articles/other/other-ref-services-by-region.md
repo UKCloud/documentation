@@ -28,7 +28,7 @@ Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, 
 &nbsp; | **Email and Collaboration**<br>*Connectivity:* Internet, PSN
 
 *Enablement services:* Mass Transfer Facility, Data Transfer Facility, Cloud Enablement, Smart Hands<br>
-*Cross Domain Security Zone:* UKCloud Guard, Walled Garden, Secure Remote Access
+*Cross Domain Security Zone:* Walled Garden, Secure Remote Access
 
 ### Region 7 (00007)
 
@@ -39,7 +39,7 @@ Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect<br>*VM t
 &nbsp; | **Email and Collaboration**<br>*Connectivity:* PSN
 
 *Enablement services:* Mass Transfer Facility, Data Transfer Facility, Cloud Enablement, Smart Hands<br>
-*Cross Domain Security Zone:* UKCloud Guard, Walled Garden, Secure Remote Access
+*Cross Domain Security Zone:* Walled Garden, Secure Remote Access
 
 ### Region 6 (00006)
 
@@ -57,7 +57,7 @@ Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect<br>*VM t
 &nbsp; | **Cloud Storage**<br>*Connectivity:* PSN
 
 *Enablement services:* Disaster Recovery as a Service, Migration to the Cloud, Mass Transfer Facility, Cloud Enablement<br>
-*Cross Domain Security Zone:* UKCloud Guard, Walled Garden, Secure Remote Access
+*Cross Domain Security Zone:* Walled Garden, Secure Remote Access
 
 ## Corsham
 
@@ -69,7 +69,7 @@ Assured | **UKCloud for VMware**<br>*Connectivity:* Internet, PSN, HSCN, Janet, 
 &nbsp; | **Cloud Storage**<br>*Connectivity:* Internet, PSN, HSCN, Janet
 
 *Enablement services:* Mass Transfer Facility, Data Transfer Facility (via Farnborough), Cloud Enablement<br>
-*Cross Domain Security Zone:* UKCloud Guard, Walled Garden, Secure Remote Access
+*Cross Domain Security Zone:* Walled Garden, Secure Remote Access
 
 ### Region 8 (00008)
 
@@ -79,7 +79,7 @@ Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect<br>*VM t
 &nbsp; | **Cloud Storage**<br>*Connectivity:* PSN
 
 *Enablement services:* Mass Transfer Facility, Data Transfer Facility (via Farnborough), Cloud Enablement<br>
-*Cross Domain Security Zone:* UKCloud Guard, Walled Garden, Secure Remote Access
+*Cross Domain Security Zone:* Walled Garden, Secure Remote Access
 
 ### Region 5 (00005)
 
@@ -96,7 +96,7 @@ Elevated | **UKCloud for VMware**<br>*Connectivity:* PSN, HybridConnect<br>*VM t
 &nbsp; | **Cloud Storage**<br>*Connectivity:* PSN
 
 *Enablement services:* Disaster Recovery as a Service, Migration to the Cloud, Mass Transfer Facility, Cloud Enablement<br>
-*Cross Domain Security Zone:* UKCloud Guard, Walled Garden, Secure Remote Access
+*Cross Domain Security Zone:* Walled Garden, Secure Remote Access
 
 ## Additional services
 

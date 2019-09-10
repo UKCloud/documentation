@@ -92,7 +92,7 @@ Listed below are the controls we believe UKCloud and customer SIROs will expect 
 
 The UKCloud Cross Domain Security Zone enables customers to securely transfer data between the UKCloud Assured OFFICIAL security domain and the UKCloud Elevated OFFICIAL security domain using NCSC-approved cross-domain security patterns.
 
-There were three options available within the Cross Domain Security Zone product set, however the UKCloud Guard is due to be retired from sale so there are now two service options available:
+There are two service options available:
 
 - Secure Remote Access. We provide a self-service remote access solution so that customers who do not have a PSN or RLI connection to their business premises may have a method of managing their environments within Elevated OFFICIAL. Note that this is for management purposes only, and not for end-user access to the Elevated security domain. This service is not covered within this Blueprint.
 

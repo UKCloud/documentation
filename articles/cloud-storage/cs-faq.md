@@ -194,7 +194,7 @@ Ultimately, it is down to you to select which encryption methodology should be u
 
 ### Can systems on different UKCloud platforms communicate with one another?
 
-UKCloud's Cross Domain Security Zone allows you to use the UKCloud-defined and managed UKCloud Guard or a customer-designed and managed Walled Garden to enable communication between platforms.
+UKCloud's Cross Domain Security Zone allows you to use a customer-designed and managed Walled Garden to enable communication between platforms.
 
 For more information, see the [*Cross Domain Security Zone Service Definition*](../cdsz/cdsz-sd.md) on the Digital Marketplace.
 
