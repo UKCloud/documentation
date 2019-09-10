@@ -27,11 +27,11 @@ Terms and conditions for the UKCloud Community competition running during Meet t
 
 4. The competition will be run via the UKCloud Community site (<https://community.ukcloud.com/>).
 
-5. A prize will be given to the first five people to sign up to the community.
+5. A prize will be given to the first five people to sign up to the community at the Meet the Team event.
 
-6. The winners will be announced at the Meet the Team event on 10th September 2019.  
+6. The competition term will commence on 10th September 2019 at 18:45 and close at 19:00 on 10th September 2019.
 
-7. The competition term will commence on 10th September 2019 at 18:45 and close at 19:00 on 10th September 2019.
+7. The winners will be announced at the Meet the Team event on 10th September 2019 at 19:00. If the winner cannot be contacted at the event, we reserve the right to withdraw the prize from the winner and a new winner will be selected at random.
 
 8. No responsibility can be accepted for entries not received for whatever reason.
 
@@ -39,17 +39,13 @@ Terms and conditions for the UKCloud Community competition running during Meet t
 
 10. The prize is as announced at the event and no alternatives will be offered. The prize is not transferable. We reserve the right to substitute any prize with another of equivalent value without giving notice.
 
-11. The winners will be announced on 10th September 2019 at the UKCloud Meet the Team event.
+11. UKCloud’s decision in respect of all matters to do with the competition will be final and no correspondence will be entered into.
 
-12. The winner will be notified at 19:00. If the winner cannot be contacted or does not claim the prize within 14 days of notification, we reserve the right to withdraw the prize from the winner and a new winner will be selected at random.
+12. The winner agrees to the use of his/her name by UKCloud in marketing activities (including social media) related to the announcement of the winner of this competition. Any personal data relating to the winner or any other entrants will be used solely in accordance with current UK data protection legislation.
 
-13. UKCloud’s decision in respect of all matters to do with the competition will be final and no correspondence will be entered into.
+13. The information provided will be used in conjunction with the following Privacy Policy: <https://ukcloud.com/legal/>.
 
-14. The winner agrees to the use of his/her name by UKCloud in marketing activities (including social media) related to the announcement of the winner of this competition. Any personal data relating to the winner or any other entrants will be used solely in accordance with current UK data protection legislation.
-
-15. The information provided will be used in conjunction with the following Privacy Policy: <https://ukcloud.com/legal/>.
-
-16. The competition and these terms and conditions will be governed by English law and any disputes will be subject to the exclusive jurisdiction of the courts of England.
+14. The competition and these terms and conditions will be governed by English law and any disputes will be subject to the exclusive jurisdiction of the courts of England.
 
 ## Feedback
 
