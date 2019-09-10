@@ -27,7 +27,7 @@ This service is aimed at providing a secure and reliable managed DNS service to 
 
 It enables customers to direct internet traffic between multiple end-points, which can be across different sites or different platforms.
 
-UKCloud have partnered with Neustar for the provision of this service along with the additional option of SiteProtect Advanced DDoS Mitigation for a complete traffic protection solution.
+UKCloud have partnered with Neustar for the provision of this service along with the additional option of [*SiteProtect Advanced DDoS Mitigation*](conn-sco-app-ddos.md) for a complete traffic protection solution.
 
 ## Traffic management services
 
