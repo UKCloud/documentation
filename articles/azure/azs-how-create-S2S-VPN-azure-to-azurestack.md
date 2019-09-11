@@ -32,8 +32,8 @@ To create a site-to-site VPN connection between Azure Stack and Public Azure, yo
 
 1. [Set up VPN on the Azure Stack side](#Set-up-VPN-on-the-Azure-Stack-side)
 2. [Set up VPN on the Public Azure side](#Set-up-VPN-on-the-Public-Azure-side)
-3. Update local gateway IPs
-4. Verify the VPN connection
+3. [Update local gateway IPs](#Update-the-local-gateway-IPs-in-Azure-Stack-and-Public-Azure)
+4. [Verify the VPN connection]()
 
 ## Set up VPN on the Azure Stack side
 
@@ -405,13 +405,13 @@ Create the site-to-site VPN connection between your virtual network gateway and 
 
 6. Click **OK**.
 
-## Update the local Gateway IPs in Azure Stack and Public Azure
+## Update the local gateway IPs in Azure Stack and Public Azure
 
-In order to establish the connection you will need to identify the public IPs that you created in Azure Stack and Public Azure, and then update both local gateways.
+To establish the connection you will need to identify the public IPs that you created in Azure Stack and Public Azure, and then update both local gateways.
 
 ### Update the local gateway in Public Azure
 
-1. In the Azure Stack portal, navigate to the *connections* blade by clicking **All services** in the favourites panel, then selecting **Connections** under the *networking* section.
+1. In the Azure Stack portal, navigate to the *Connections* blade by clicking **All services** in the favourites panel, then selecting **Connections** under the *Networking* section.
 
     ![All services connections networking section](images/azs-browser-all-services-connections-networking.png)
 
