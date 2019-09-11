@@ -20,7 +20,7 @@ toc_mdlink: azs-how-create-S2S-VPN-azure-to-azurestack.md
 
 ## Overview
 
-This article shows you how to use the Azure Stack and Public Azure portals to create a Site-to-Site VPN between your UKCloud for Microsoft Azure environment and Public Azure environment.
+This article shows you how to use the Azure Stack and Public Azure portals to create a site-to-site VPN between your UKCloud for Microsoft Azure environment and Public Azure environment.
 
 ### Intended audience
 
