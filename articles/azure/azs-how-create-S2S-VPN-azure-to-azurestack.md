@@ -240,11 +240,11 @@ You'll also need to create a virtual network in Public Azure. This virtual netwo
 
    - **Address Range** - The subnet's address range in CIDR notation (for example, 192.168.1.0). It must be within the address range of the virtual network. It should be noted that the address range of a subnet currently in use cannot be edited.
 
-   - **DDoS protection** - Select the DDoS protection you would like, for more information please see the [Azure DDoS Protection Standard overview](https://docs.microsoft.com/en-gb/azure/virtual-network/ddos-protection-overview).
+   - **DDoS protection** - Select the DDoS protection you would like. For more information, see the [Azure DDoS Protection Standard overview](https://docs.microsoft.com/en-gb/azure/virtual-network/ddos-protection-overview).
 
    - **Service endpoints** - This allows you to enable one or more service endpoints for more information please see [Virtual Network Service Endpoints](https://docs.microsoft.com/en-gb/azure/virtual-network/virtual-network-service-endpoints-overview).
 
-   - **Firewall** - This allows you to enable Azure Firewall, which is a managed cloud-based network security service that protects your Azure Virtual Network resources.
+   - **Firewall** - Select this option to enable Azure Firewall, which is a managed cloud-based network security service that protects your Azure Virtual Network resources.
 
      ![Create new virtual network](images/azs-public-browser-new-virtual-network-blade.png)
 
@@ -256,7 +256,7 @@ You'll also need to create a virtual network in Public Azure. This virtual netwo
 
 8. Select your virtual network from the list.
 
-9. In the blade for your virtual network you can; view and monitor the virtual network, change its settings and perform diagnostics and troubleshooting.
+9. In the blade for your virtual network, you can view and monitor the virtual network, change its settings and perform diagnostics and troubleshooting.
 
     ![Virtual networks blade](images/azs-public-browser-virtual-network-blade.png)
 
@@ -304,7 +304,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
    - **Gateway type** - The type of virtual network gateway to create.
 
-       - To connect with an existing ExpressRoute circuit, select "ExpressRoute".
+       - To connect with an existing ExpressRoute circuit, select **ExpressRoute**.
 
    - **VPN type** - The type of VPN you can choose depends on the make and model of your VPN device, and the kind of VPN connection you intend to create. Choose a route-based gateway if you intend to use point-to-site, inter-virtual network, or multiple site-to-site connections; if you are creating a VPN type gateway to coexist with an ExpressRoute gateway; or if you need to use IKEv2. Policy-based gateways support only IKEv1.
 
@@ -318,7 +318,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
        - In the **Public IP address name** field, enter a public IP address name.
 
-   - **Enable active-active mode** - The gateway SKU must be either **VpnGw1**, **VpnGw2**, **VpnGw3**, **VpnGw1AZ**, **VpnGw2AZ**, **VpnGw3Az** or HighPerformance (legacy SKU).
+   - **Enable active-active mode** - If you want to enable active-active mode, the gateway SKU must be one of: **VpnGw1**, **VpnGw2**, **VpnGw3**, **VpnGw1AZ**, **VpnGw2AZ**, **VpnGw3Az** or **HighPerformance** (legacy SKU).
 
    - **Configure BGP ASN** - BGP is the standard routing protocol commonly used on the internet to exchange routing information between two or more networks. BGP enables the Azure VPN Gateways and your on-premises VPN devices, called BGP peers or neighbours, to exchange "routes" that will inform both gateways on the availability and reachability for those prefixes to go through the gateways or routers involved. You should also make sure your on-premises VPN devices support BGP before you enable this feature.
 
@@ -351,7 +351,7 @@ The local network gateway refers to your on-premises network. The following step
 
    - **Name** - The name of the local network gateway.
 
-   - **IP address** - This is the public IP address of the VPN device that you want Azure to connect to. Specify a dummy IP address, as this will need to updated once you have generated the public IP with the connection.
+   - **IP address** - This is the public IP address of the VPN device that you want Azure to connect to. Enter a dummy IP address for now as you will generate the public IP later.
 
    - **Address space** - One or more IP address ranges (in CIDR notation) that define your local network's address space. For example: 192.168.0.0/16. If you plan to use this local network gateway in a BGP-enabled connection, then the minimum prefix you need to declare is the host address of your BGP Peer IP address on your VPN device.
 
@@ -369,7 +369,7 @@ The local network gateway refers to your on-premises network. The following step
 
 ### Create the VPN connection in Public Azure
 
-Create the Site-to-Site VPN connection between your virtual network gateway and your Azure Stack VPN:
+Create the site-to-site VPN connection between your virtual network gateway and your Azure Stack VPN:
 
 1. Navigate to your virtual network gateway by clicking **All services**, then select **Virtual network gateways** under the networking section.
 
@@ -377,7 +377,7 @@ Create the Site-to-Site VPN connection between your virtual network gateway and 
 
 2. Select your virtual network gateway from the list.
 
-3. In the *new* blade for your virtual network gateway, select **Connections** under the **Settings** section.
+3. In the **virtual network gateway** blade, select **Connections** under the **Settings** section.
 
     ![Connections for virtual network gateway](images/azs-public-browser-virtual-network-gateway-connections-button.png)
 
@@ -395,7 +395,7 @@ Create the Site-to-Site VPN connection between your virtual network gateway and 
 
    - **Shared Key** - A mixture of letters and numbers, used to establish encryption for the connection. You must use the same shared key in both the virtual network and local network gateways. If your gateway device doesn't provide one, you can make one up here and provide it to your device.
 
-   - **Subscription** - This is your UKCloud for Microsoft Azure subscription.
+   - **Subscription** - This is your Public Azure subscription.
 
    - **Resource Group** - When adding a connection for an existing peer, the resource group can't be changed.
 
