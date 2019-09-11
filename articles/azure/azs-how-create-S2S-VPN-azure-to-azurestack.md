@@ -26,7 +26,18 @@ This article shows you how to use the Azure Stack and Public Azure portals to cr
 
 To complete the steps in this article, you must have appropriate access to a subscription in both the Azure Stack and Public Azure portals.
 
-## Create a virtual network in Azure Stack
+## Process Overview
+
+To create a site-to-site VPN connection between Azure Stack and Public Azure, you should perform the following steps:
+
+1. [Set up VPN on the Azure Stack side](#Set-up-VPN-on-the-Azure-Stack-side)
+2. Set up VPN on the Public Azure side
+3. Update local gateway IPs
+4. Verify the VPN connection
+
+## Set up VPN on the Azure Stack side
+
+### Create a virtual network in Azure Stack
 
 First, you'll need to create a virtual network. This virtual network will be able to send and receive traffic through a virtual network gateway. 
 
@@ -85,7 +96,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
 4. Fill in the **Address range** and add a route table if required, then click **OK**. The subnet should now have appeared.
 
-## Create the VPN gateway
+## Create the VPN gateway in Azure Stack
 
 1. In the favourites panel, select **Create a resource**.
 
