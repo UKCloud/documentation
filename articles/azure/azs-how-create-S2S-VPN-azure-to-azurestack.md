@@ -172,7 +172,7 @@ The local network gateway refers to your on-premises network. The following step
 
 ## Create the VPN connection in Azure Stack
 
-Create the Site-to-Site VPN connection between your virtual network gateway and your public Azure VPN:
+Create the site-to-site VPN connection between your virtual network gateway and your public Azure VPN:
 
 1. Navigate to your virtual network gateway by clicking **All services** in the favourites panel, then selecting **Virtual network gateways** under the networking section.
 
