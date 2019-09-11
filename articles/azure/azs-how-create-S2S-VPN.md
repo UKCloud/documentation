@@ -6,11 +6,11 @@ author: Bailey Lawson
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Create a VPN connection
+toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Create a site-to-site VPN connection - portal
-toc_fullpath: Users/How To/azs-how-create-S2S-VPN.md
+toc_title: Create a site-to-site VPN connection - Portal
+toc_fullpath: Users/How To/Create a VPN connection/azs-how-create-S2S-VPN.md
 toc_mdlink: azs-how-create-S2S-VPN.md
 ---
 
