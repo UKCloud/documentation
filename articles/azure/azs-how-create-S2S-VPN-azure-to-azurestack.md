@@ -84,7 +84,7 @@ First, you'll need to create a virtual network. This virtual network will be abl
 
 9. In the blade for your virtual network, you can view and monitor the virtual network, change its settings and perform diagnostics and troubleshooting.
 
-## Create the gateway subnet in Azure Stack
+### Create the gateway subnet in Azure Stack
 
 To associate a virtual network with a gateway, it must first contain a valid gateway subnet. The following steps outline how to create a gateway subnet.
 
@@ -96,7 +96,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
 4. Fill in the **Address range** and add a route table if required, then click **OK**. The subnet should now have appeared.
 
-## Create the VPN gateway in Azure Stack
+### Create the VPN gateway in Azure Stack
 
 1. In the favourites panel, select **Create a resource**.
 
@@ -136,7 +136,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
 5. Click **Create**.
 
-## Create the local network gateway in Azure Stack
+### Create the local network gateway in Azure Stack
 
 The local network gateway refers to your on-premises network. The following steps outline how to create a local network gateway:
 
@@ -170,7 +170,7 @@ The local network gateway refers to your on-premises network. The following step
 
      ![Create new local network gateway](images/azs-browser-create-Lnetwork-gateway.png)
 
-## Create the VPN connection in Azure Stack
+### Create the VPN connection in Azure Stack
 
 Create the site-to-site VPN connection between your virtual network gateway and your public Azure VPN:
 
@@ -204,9 +204,9 @@ Create the site-to-site VPN connection between your virtual network gateway and 
 
 6. Click **OK**.
 
-## 
+## Set up VPN on the Azure Public side
 
-## Create a virtual network in Public Azure
+### Create a virtual network in Public Azure
 
 You'll also need to create a virtual network in Public Azure. This virtual network will be able to send and receive traffic through the virtual network gateway. You cannot associate a virtual network with more than one gateway.
 
