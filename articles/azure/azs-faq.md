@@ -225,7 +225,7 @@ The service is hosted in the UK and operated by UK government security-cleared s
 
 ### Can systems on different UKCloud security domains communicate with one another?
 
-UKCloud\'s Cross Domain Security Zone enables you to use the UKCloud-defined and managed UKCloud Guard, or a customer-designed and managed Walled Garden to enable communication between platforms.
+UKCloud's Cross Domain Security Zone enables you to use a customer-designed and managed Walled Garden to enable communication between platforms.
 
 For more information, see our Cross Domain Security Zone documentation.
 

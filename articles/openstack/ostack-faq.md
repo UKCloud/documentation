@@ -483,7 +483,7 @@ The service is hosted in the UK and operated by security-cleared staff. It has e
 
 ### Can systems on different UKCloud platforms communicate with one and another?
 
-UKCloud's Cross Domain Security Zone allows customers to use the UKCloud-defined and managed UKCloud Guard, or a customer-designed and managed Walled Garden to enable communication between platforms.
+UKCloud's Cross Domain Security Zone allows customers to use a customer-designed and managed Walled Garden to enable communication between platforms.
 
 For more information, see the Cross Domain Security Zone documentation.
 
