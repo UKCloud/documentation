@@ -8,15 +8,15 @@ lastreviewed:
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2:
+toc_sub2: Create a Site-to-Site VPN Connection
 toc_sub3:
 toc_sub4:
-toc_title: Create a site-to-site connection between Azure Stack and Public Azure - Portal
+toc_title: Create a site-to-site VPN connection between Azure Stack and Public Azure - Portal
 toc_fullpath: Users/How To/Create a VPN connection/azs-how-create-S2S-VPN-azurestack-to-azure.md
 toc_mdlink: azs-how-create-S2S-VPN-azurestack-to-azure.md
 ---
 
-# How to create a site-to-site connection between Azure Stack and Public Azure using the UKCloud Azure Stack portal
+# How to create a site-to-site VPN connection between Azure Stack and Public Azure using the UKCloud Azure Stack portal
 
 ## Overview
 
@@ -30,16 +30,16 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 To create a site-to-site VPN connection between Azure Stack and Public Azure, you should perform the following steps:
 
-1. [Set up VPN on the Azure Stack side](#Set-up-VPN-on-the-Azure-Stack-side)
-2. [Set up VPN on the Public Azure side](#Set-up-VPN-on-the-Public-Azure-side)
-3. [Update local gateway IPs](#Update-the-local-gateway-IPs-in-Azure-Stack-and-Public-Azure)
-4. [Verify the VPN connection](#Verify-the-VPN-connection)
+1. [Set up VPN on the Azure Stack side](#set-up-vpn-on-the-azure-stack-side)
+2. [Set up VPN on the Public Azure side](#set-up-vpn-on-the-public-azure-side)
+3. [Update local gateway IPs](#update-the-local-gateway-ips-in-azure-stack-and-public-azure)
+4. [Verify the VPN connection](#verify-the-vpn-connection)
 
 ## Set up VPN on the Azure Stack side
 
 ### Create a virtual network in Azure Stack
 
-First, you'll need to create a virtual network. This virtual network will be able to send and receive traffic through a virtual network gateway. 
+First, you'll need to create a virtual network. This virtual network will be able to send and receive traffic through a virtual network gateway.
 
 > [!NOTE]
 > You cannot associate a virtual network with more than one gateway.
@@ -415,7 +415,7 @@ To establish the connection you will need to identify the public IPs that you cr
 
     ![All services connections networking section](images/azs-browser-all-services-connections-networking.png)
 
-2. Select the VPN connection you created in [Create the VPN connection in Public Azure](#Create-the-VPN-connection-in-Public-Azure).
+2. Select the VPN connection you created in [Create the VPN connection in Public Azure](#create-the-vpn-connection-in-public-azure).
 
     ![VPN connections](images/azs-browser-vpn-connection-view.png)
 
@@ -429,7 +429,7 @@ To establish the connection you will need to identify the public IPs that you cr
 
     ![Azure Public virtual network button](images/azs-public-browser-services-virtual-network-gateway-button.png)
 
-6. Select the local network gateway that you created in [Create the local network gateway in Public Azure](#Create-the-local-network-gateway-in-Public-Azure).
+6. Select the local network gateway that you created in [Create the local network gateway in Public Azure](#create-the-local-network-gateway-in-public-azure).
 
 7. In the local gateway blade, under *Settings*, select **Configuration**.
 
@@ -447,7 +447,7 @@ To establish the connection you will need to identify the public IPs that you cr
 
     ![Connections button under all services in public Azure](images/azs-public-browser-services-connections-button.png)
 
-2. Select the VPN connection you created in [Create the VPN connection in Azure Stack](#Create-the-VPN-connection-in-Azure-Stack).
+2. Select the VPN connection you created in [Create the VPN connection in Azure Stack](#create-the-vpn-connection-in-azure-stack).
 
 3. Make a note of the public IP. You can find this in the *Virtual network gateway* section.
 
@@ -459,7 +459,7 @@ To establish the connection you will need to identify the public IPs that you cr
 
     ![Azure Stack portal local network gateway](images/azs-browser-local-network-gateway-all-services.png)
 
-6. Select the local network gateway that you created in [Create the local network gateway in Azure Stack](#Create-the-local-network-gateway-in-Azure-Stack)
+6. Select the local network gateway that you created in [Create the local network gateway in Azure Stack](#create-the-local-network-gateway-in-azure-stack)
 
 7. In the *Local Network Gateway* blade, under *Settings*, select **Configuration**.
 
