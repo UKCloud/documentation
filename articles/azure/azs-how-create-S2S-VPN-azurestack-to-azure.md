@@ -2,8 +2,8 @@
 title: How to create a site-to-site connection between Azure Stack and Public Azure using the UKCloud Azure Stack portal
 description: Create a site-to-site (S2S) VPN gateway connection from an on-premises network to UKCloud for Microsoft Azure 
 services: azure-stack
-author: Shaion O'Niel
-reviewer: Daniel Brennand
+author: Daniel Brennand
+reviewer: Alexa Evans
 lastreviewed: 
 
 toc_rootlink: Users
@@ -12,7 +12,7 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Create a site-to-site connection between Azure Stack and Public Azure - Portal
-toc_fullpath: Users/How To/Create a VPN connection/azs-how-create-S2S-VPN-azure-to-azurestack.md
+toc_fullpath: Users/How To/Create a VPN connection/azs-how-create-S2S-VPN-azurestack-to-azure.md
 toc_mdlink: azs-how-create-S2S-VPN-azure-to-azurestack.md
 ---
 
@@ -132,7 +132,7 @@ To associate a virtual network with a gateway, it must first contain a valid gat
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
 
-     ![Create new virtual network gateway](images/azs-browser-create-Vnetwork-gateway.png)
+     ![Create new virtual network gateway](images/azs-browser-create-vnetwork-gateway.png)
 
 5. Click **Create**.
 
@@ -168,7 +168,7 @@ The local network gateway refers to your on-premises network. The following step
 
    - **Location** - This will be `frn00006`, which is the location of the Azure Stack.
 
-     ![Create new local network gateway](images/azs-browser-create-Lnetwork-gateway.png)
+     ![Create new local network gateway](images/azs-browser-create-lnetwork-gateway.png)
 
 ### Create the VPN connection in Azure Stack
 
