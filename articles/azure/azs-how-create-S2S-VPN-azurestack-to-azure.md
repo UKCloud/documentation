@@ -8,7 +8,7 @@ lastreviewed:
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2:
+toc_sub2: Create a Site-to-Site VPN Connection
 toc_sub3:
 toc_sub4:
 toc_title: Create a site-to-site connection between Azure Stack and Public Azure - Portal
