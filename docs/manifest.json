@@ -101,6 +101,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azure/azs-how-configure-custom-script-extension.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azure/azs-how-configure-custom-script-extension.html",
+          "hash": "1nW3yx0SMbZlenMtx9BOBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-how-configure-powershell-operators.md",
       "output": {
         ".html": {
@@ -2055,7 +2067,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/toc.html",
-          "hash": "n5QEowIhyvp4tj1nqwHYhQ=="
+          "hash": "m0V4kC6zd+sd+IHyg2Qteg=="
         }
       },
       "is_incremental": false,
@@ -18525,17 +18537,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 405,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 406,
           "skipped_file_count": 0
         }
       }
