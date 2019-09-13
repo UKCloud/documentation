@@ -16,7 +16,7 @@ toc_fullpath: Users/How To/Create a VPN connection/azs-how-create-S2S-VPN-azures
 toc_mdlink: azs-how-create-S2S-VPN-azurestack-to-azure.md
 ---
 
-# How to create a site-to-site connection between Azure Stack and Public Azure using the UKCloud Azure Stack portal
+# How to create a site-to-site VPN connection between Azure Stack and Public Azure using the UKCloud Azure Stack portal
 
 ## Overview
 
