@@ -3,6 +3,8 @@ title: How to create new UKCloud for OpenStack users in the UKCloud Portal | UKC
 description: Shows how to create UKCloud for OpenStack users in the UKCloud Portal so that they can benefit from two-factor authentication (2FA)
 services: openstack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/10/2018 07:26:13
 
 toc_rootlink: How To
 toc_sub1: 
@@ -45,7 +47,7 @@ To create a new user:
 
     ![New Contact page](images/ptl-new-contact.png)
 
-6. After you've created the user account, you must raise a Service Request to grant the user access to the OpenStack project. Or your can use the self service IDAM API, information on how to use it can be seen here  [*Understanding UKCloud's Identity & Access Management API*](../other/other-ref-idam.md)
+6. After you've created the user account, you must raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal to grant the user access to the OpenStack project. Or your can use the self service IDAM API, information on how to use it can be seen here  [*Understanding UKCloud's Identity & Access Management API*](../other/other-ref-idam.md)
 
     a. In the navigation panel, expand **Support**, then select **My Calls**.
 
@@ -77,4 +79,4 @@ To create a new user:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

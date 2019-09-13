@@ -3,6 +3,8 @@ title: How to access syslog data for your advanced gateway | UKCloud Ltd
 description: Explains the network configuration required to provision a syslog collector within your VDC to receive syslog information direct from your advanced gateway
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 
 toc_rootlink: How To
 toc_sub1:
@@ -42,7 +44,7 @@ The simplest scenario is to gather syslog data from a single NSX edge into one c
 
     For example, if your existing monitoring server has a NIC on **eth0** (for example, `10.0.1.10`), on routed VDC network `10.0.1.0/24`, you'd add the syslog IP address to **eth0**.
 
-2. Add a route on the NSX ddge that routes the syslog IP address via the subnet.
+2. Add a route on the NSX edge that routes the syslog IP address via the subnet.
 
     For example, route `100.127.255.250 MASK 255.255.255.255` via `10.0.1.10`.
 
@@ -116,15 +118,15 @@ If you have multiple NSX edges under a single NFT, you can gather the data from 
 
 After setting up your syslog collector, you need to make sure that your NSX edge sends network traffic to the log.
 
-1. In vCloud Director, select the **Administration** tab.
+1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC to which the NSX edge belongs.
 
-    ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
+2. In the left navigation panel, click **Edges**.
 
-2. Double-click the VDC to which the NSX edge belongs.
+    ![Edges menu option](images/vmw-vcd-mnu-edges.png)
 
-3. Select the **Edge Gateways** tab.
+3. Select the edge that you want to configure and click **Configure Services**.
 
-    ![Edge Gateways tab](images/vmw-vcd-tab-edge-gateways.png)
+    ![Configure Services](images/vmw-vcd-edge-btn-config.png)
 
 4. Select the **Edge Settings** tab.
 
@@ -138,22 +140,33 @@ After setting up your syslog collector, you need to make sure that your NSX edge
 
     ![Edit Syslog Server dialog box](images/vmw-vcd-edit-syslog-server.png)
 
-7. Currently, you cannot setup logging for firewall rules for NSX edges via the advanced gateway GUI. To setup logging for firewall rules, you must either use the API or raise a service request detailing the firewall rules for which you want to enable logging so that we can action it on your behalf. For more information about using the API to amend firewall rules, see the [*vCloud Director API for NSX Programming Guide*](https://pubs.vmware.com/vcd-820/topic/com.vmware.ICbase/PDF/vcloud_nsx_api_guide_27_0.pdf)
+7. Select the **Firewall Rules** tab.
 
-    > [!NOTE]
-    > Any firewall rules that were set up to send logs before conversion to an advanced gateway will continue to send logs. However if you want to disable logging for those firewall rules, you must use the API or raise a service request.
+8. For each firewall rule that you want to log, select the **Enable logging** check box.
 
-8. Select the **Load Balancer** tab.
+    ![Logging firewall rules](images/vmw-vcd-logging-firewall.png)
 
-9. On the *Global Configuration* page, select the **Enable Logging toggle**.
+9. When you're done, click **Save changes**.
 
-10. From the **Log Level** list, select the logging level.
+10. Select the **NAT** tab.
 
-    ![Global Configuration tab](images/vmw-vcd-logging-load-balancer.png)
+11. For each NAT rule that you want to log, select the rule, click the **Edit** icon, select the **Enable logging** option then click **Keep**.
 
-11. When you're done, click **Save changes**.
+    ![Logging NAT rules](images/vmw-vcd-logging-nat.png)
 
-You can find more detailed steps for editing load balancer settings in [*How to configure a load balancer*](vmw-how-configure-load-balancer.md).
+12. When you're done, click **Save changes**.
+
+13. Select the **Load Balancer** tab.
+
+14. On the **Global Configuration** tab, select the **Enable Logging** option.
+
+15. From the **Log Level** list, select the logging level.
+
+    ![Logging load balancer](images/vmw-vcd-logging-load-balancer.png)
+
+    You can find more detailed steps for editing load balancer settings in [*How to configure a load balancer*](vmw-how-configure-load-balancer.md).
+
+16. When you're done, click **Save changes**.
 
 ## Sample syslog captures
 
@@ -174,4 +187,4 @@ Refer to
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

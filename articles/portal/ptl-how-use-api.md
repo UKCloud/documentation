@@ -3,6 +3,8 @@ title: How to use the UKCloud Portal API | UKCloud Ltd
 description: Demonstrates how to use the Portal API by stepping you through the process of creating a VDC
 services: portal
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 12:12:33
 
 toc_rootlink: How To
 toc_sub1:
@@ -18,7 +20,7 @@ toc_mdlink: ptl-how-use-api.md
 
 ## Overview
 
-The UKCloud Portal API enables you to interact programmatically with your UKCloud environment. For example, you can use API calls to create, manage and monitor Service Requests and view information about the components of your environment.
+The UKCloud Portal API enables you to interact programmatically with your UKCloud environment. For example, you can use API calls to view information about the components of your environment.
 
 This guide shows you how to use the API by providing a worked example that steps through the process of creating a new virtual data centre (VDC).
 
@@ -421,8 +423,8 @@ Now that you have your VDC URN, you can use the Portal API to create your edge g
 
 For more information about any of the API endpoints used in this guide, see the [*UKCloud Portal API User Guide*](ptl-ref-portal-api.md).
 
-If you need any further assistance, contact our support team via the My Calls area of the UKCloud Portal.
+If you need any further assistance, contact our support team via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) area of the UKCloud Portal.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

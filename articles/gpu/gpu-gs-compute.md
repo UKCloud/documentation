@@ -3,6 +3,8 @@ title: Getting Started Guide for Cloud GPU Compute | UKCloud Ltd
 description: Provides information to get up and running with Cloud GPU Compute
 services: gpu
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -147,7 +149,7 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
     ![Configure Networking page](images/gpu-vcd-vapp-networking.png)
 
-16. On the *Customize Hardware* page, add a hard disk of a size appropriate for the operating system that you plan to install on your VM and then click **Next**.
+16. On the *Customize Hardware* page, add an “LSI Logic SAS (SCSI)” hard disk of a size appropriate for the operating system that you plan to install on your VM and then click **Next**.
 
 17. On the *Ready to Complete* page, review your settings and then click **Finish** to start the deployment.
 
@@ -162,7 +164,7 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
 ## Provisioning your Cloud GPU service
 
-When your VM is ready, use My Calls in the UKCloud Portal to raise a service request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can complete the setup of your service:
+When your VM is ready, use [My Calls](https://portal.skyscapecloud.com/support/ivanti) in the UKCloud Portal to raise a service request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can complete the setup of your service:
 
 - VDC name
 
@@ -367,4 +369,4 @@ device.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

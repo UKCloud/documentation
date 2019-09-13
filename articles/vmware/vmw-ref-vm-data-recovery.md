@@ -3,6 +3,8 @@ title: Virtual machine data recovery options | UKCloud Ltd
 description: Provides an overview of the data recovery options available for your VMs
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -47,19 +49,9 @@ You can create only one snapshot for each VM, with each subsequent snapshot over
 
 ### How to create a VM snapshot
 
-# [Using vCloud Director 8.20](#tab/tabid-1)
+In the card for the VM that you want to create a snapshot for, select **Actions** then **Create Snapshot**.
 
-You can create a VM snapshot within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to create a snapshot for and selecting **Create Snapshot**.
-
-![Snapshot creation in vCloud Director 8.20](images/vcd_snapshot.png)
-
-# [Using vCloud Director 9.1](#tab/tabid-2)
-
-In the card for the VM that you want to create a snapshot for, click **More** and select **Create Snapshot**.
-
-![Snapshot creation in vCloud Director 9.1](images/vmw-vcd91-mnu-create-snapshot.png)
-
-***
+![Create Snapshot menu option](images/vmw-vcd-mnu-create-snapshot.png)
 
 ## VM copy
 
@@ -81,17 +73,9 @@ You must power down the VM prior to taking a copy. Each additional copy will con
 
 ### How to create a VM copy
 
-# [Using vCloud Director 8.20](#tab/tabid-1)
+In the card for the VM that you want to copy, select **Actions** then **Copy to**.
 
-You can create a VM copy within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to copy and selecting **Copy to**.
-
-![VM copy in vCloud Director 8.20](images/vcd_copy.png)
-
-# [Using vCloud Director 9.1](#tab/tabid-2)
-
-In the vCloud Director 9.1 tenant portal, you can only copy entire vApps. To copy a single VM, you need to switch to the vCloud Director Web Console and follow the steps for vCloud Director 8.20.
-
-***
+![Copy VM menu option](images/vmw-vcd-mnu-copy-vm.png)
 
 ## VM backup
 
@@ -101,7 +85,7 @@ You can add any VM to the automated snapshot backup schedule so that it is autom
 
 ### Use case
 
-If you accidentally delete or amend a file that should not be modified, you can restore the file in question from backup by raising a Service Request via the UKCloud Portal.
+If you accidentally delete or amend a file that should not be modified, you can restore the file in question from backup by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ### Pros
 
@@ -113,9 +97,8 @@ Time taken for a restoration request to be completed (dependent on the amount of
 
 ### How to add a VM to the automated snapshot backup schedule
 
-For information about how to add a VM to the automated backup schedule, see [*How to manage snapshot protection for your VMs*](vmw-how-manage-snapshot-protection.md)
-in the Knowledge Centre.
+For information about how to add a VM to the automated backup schedule, see [*How to manage snapshot protection for your VMs*](vmw-how-manage-snapshot-protection.md).
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

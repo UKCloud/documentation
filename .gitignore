@@ -18,6 +18,8 @@ target/
 /**/_site/
 .vscode/
 .vs/
+.DS_Store
+.terraform
 _exported_templates/
 
 ###############
@@ -35,6 +37,10 @@ _exported_templates/
 *.sln.ide
 *.cache
 *.sln.metaproj
+*.tf
+*.tfstate
+*.tfstate.*
+*.tfvars
 .gitattributes
 .settings
 log.txt

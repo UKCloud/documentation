@@ -8,7 +8,7 @@
     <title>How to create a key vault using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a key vault using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -97,41 +97,76 @@
 <p>Key Vault in Azure Stack helps safeguard cryptographic keys and secrets that cloud applications and services use. By using Key Vault, you can encrypt keys and secrets.</p>
 <p>The following process shows you how to setup a vault within Azure Stack's Key Vault, store a secret in the vault and how to extract the secret.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Ensure your PowerShell environment is setup as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
+<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
 <h2 id="creating-a-new-key-vault">Creating a new key vault</h2>
-<div class="IMPORTANT">
-<h5>Important</h5>
+<h3 id="declare-variables">Declare variables</h3>
 <p>Enter details below to provide values for the variables in the scripts in this article:</p>
-<p>Resource Group Name: <form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;">
-<input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="myResourceGroup"></form></p>
-<p>Vault Name: <form oninput="result.value=vaultname.value;result2.value=vaultname.value;result3.value=vaultname.value" id="vaultname" style="display: inline;">
-<input type="text" id="vaultname" name="vaultname" style="display: inline;" placeholder="myVault"></form></p>
-<p>Secret Value: <form oninput="result.value=secretvalue.value" id="secretvalue" style="display: inline;">
-<input type="text" id="secretvalue" name="secretvalue" style="display: inline;" placeholder="mySecretValue"></form></p>
-<p>Secret Name: <form oninput="result.value=secretname.value;result2.value=secretname.value" id="secretname" style="display: inline;">
-<input type="text" id="secretname" name="secretname" style="display: inline;" placeholder="mySecret"></form></p>
-</div>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ArmEndpoint</td>
+<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td><form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
+</tr>
+<tr>
+<td>$RGName</td>
+<td>Name of the resource group to create the key vault inside</td>
+<td><form oninput="result.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"></form></td>
+</tr>
+<tr>
+<td>$VaultName</td>
+<td>Name of the key vault to be created</td>
+<td><form oninput="result.value=vaultname.value;result2.value=vaultname.value;result3.value=vaultname.value" id="vaultname" style="display: inline;"><input type="text" id="vaultname" name="vaultname" style="display: inline;" placeholder="MyVault"></form></td>
+</tr>
+<tr>
+<td>$SecretValue</td>
+<td>Value of the secret to store inside of the key vault</td>
+<td><form oninput="result.value=secretvalue.value" id="secretvalue" style="display: inline;"><input type="text" id="secretvalue" name="secretvalue" style="display: inline;" placeholder="MySecretValue"></form></td>
+</tr>
+<tr>
+<td>$SecretName</td>
+<td>Name of the secret to store inside of the key vault</td>
+<td><form oninput="result.value=secretname.value;result2.value=secretname.value" id="secretname" style="display: inline;"><input type="text" id="secretname" name="secretname" style="display: inline;" placeholder="MySecret"></form></td>
+</tr>
+</tbody>
+</table>
+<h3 id="deploy-the-key-vault">Deploy the key vault</h3>
 <p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Add environment
-Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+<pre><code class="language-PowerShell"># Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+# Add environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Select Resource Group
-$RGName = "<output form="resourcegroup" name="result" style="display: inline;">&lt;Resource Group&gt;</output>"
+# Get location of Azure Stack
+$Location = (Get-AzureRmLocation).Location
 
-# Create a new vault in the Resource Group above
-New-AzureRmKeyVault -VaultName "<output form="vaultname" name="result" style="display: inline;">&lt;Vault Name&gt;</output>" -ResourceGroupName $RGName -Location "frn00006"
+# Select resource group
+$RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+$VaultName = "<output form="vaultname" name="result" style="display: inline;">MyVault</output>"
+
+# Create a new vault
+New-AzureRmKeyVault -VaultName $VaultName -ResourceGroupName $RGName -Location $Location
 </code></pre>
 <p>This will create a key vault in the specified resource group.</p>
-<h2 id="storing-a-secret-in-the-vault">Storing a secret in the vault</h2>
+<h3 id="storing-a-secret-in-the-vault">Storing a secret in the vault</h3>
 <p>From your PowerShell window:</p>
 <pre><code class="language-PowerShell"># Create a new secret
-$SecretValue = ConvertTo-SecureString -String '<output form="secretvalue" name="result" style="display: inline;">&lt;String&gt;</output>' -AsPlainText -Force
+$SecretValue = ConvertTo-SecureString -String '<output form="secretvalue" name="result" style="display: inline;">MySecretValue</output>' -AsPlainText -Force
+$SecretName = "<output form="secretname" name="result" style="display: inline;">MySecret</output>"
 
-# Store the secret in Azure Key Vault
-$Secret = Set-AzureKeyVaultSecret -VaultName "<output form="vaultname" name="result2" style="display: inline;">&lt;Vault Name&gt;</output>" -Name "<output form="secretname" name="result" style="display: inline;">&lt;Secret Name&gt;</output>" -SecretValue $SecretValue
+# Store the secret in Azure Stack Key Vault
+$Secret = Set-AzureKeyVaultSecret -VaultName $VaultName -Name $SecretName -SecretValue $SecretValue
 
 # Display URL
 $Secret.Id
@@ -140,16 +175,16 @@ $Secret.Id
 $Secret.SecretValue
 </code></pre>
 <p>The secret you created will be stored in your key vault.</p>
-<h2 id="extracting-a-secret-from-the-vault">Extracting a secret from the vault</h2>
+<h3 id="extracting-a-secret-from-the-vault">Extracting a secret from the vault</h3>
 <p>From your PowerShell window:</p>
 <pre><code class="language-PowerShell"># Extract the secret key value and store it in a variable
-$ExtractedSecret = (Get-AzureKeyVaultSecret –VaultName "<output form="vaultname" name="result3" style="display: inline;">&lt;Vault Name&gt;</output>" -Name "<output form="secretname" name="result2" style="display: inline;">&lt;Secret Name&gt;</output>").SecretValueText
+$ExtractedSecret = (Get-AzureKeyVaultSecret –VaultName $VaultName -Name $SecretName).SecretValueText
 
 # Display the secret key value
 $ExtractedSecret
 </code></pre>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -181,7 +216,20 @@ $ExtractedSecret
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

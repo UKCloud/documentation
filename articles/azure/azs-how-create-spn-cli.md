@@ -1,16 +1,18 @@
 ---
-title: How to create a service principal name for Azure Stack using Azure CLI | UKCloud Ltd
+title: How to create a service principal name (SPN) for Azure Stack using Azure CLI | UKCloud Ltd
 description: Learn how to create service principal name (SPN) to manage your Azure Stack using Azure CLI
 services: azure-stack
 author: Chris Black
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Create a Service Principal Name
+toc_sub2: Create a Service Principal Name (SPN)
 toc_sub3:
 toc_sub4:
-toc_title: Create a service principal name - CLI
-toc_fullpath: Users/How To/Create a Service Principal Name/azs-how-create-spn-cli.md
+toc_title: Create a service principal name (SPN) - CLI
+toc_fullpath: Users/How To/Create a Service Principal Name (SPN)/azs-how-create-spn-cli.md
 toc_mdlink: azs-how-create-spn-cli.md
 ---
 
@@ -67,26 +69,32 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 7. Remove the resource group you just created from Azure Stack.
 
+
+## Declare variables
+
+Enter details below to provide values for the variables in the scripts in this article:
+
+| Variable  | Variable description                                      | Input            |
+|-----------------|-----------------------------------------------------------|------------------|
+| Azure Stack DNS Suffix | The DNS suffix for Azure Stack (&lt;region&gt;.&lt;External Domain Name&gt;)  | <form oninput="result.value=dnssuffix.value;result2.value=dnssuffix.value;result3.value=dnssuffix.value" id="dnssuffix" style="display: inline;"><input type="text" id="dnssuffix" name="dnssuffix" style="display: inline;" placeholder="frn00006.azure.ukcloud.com"/></form> |
+| Username               | Your AAD username                                                             | <form oninput="result.value=username.value" id="username" style="display: inline;"><input type="text" id="username" name="username" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"/></form> |
+| Password               | Your AAD password                                                             | <form oninput="result.value=password.value" id="password" style="display: inline;"><input type="text" id="password" name="password" style="display: inline;" placeholder="Password123!"/></form> |
+| SPN Name               | The name of the SPN to be created                                             | <form oninput="result.value=spnname.value" id="spnname" style="display: inline;"><input type="text" id="spnname" name="spnname" style="display: inline;" placeholder="ServicePrincipalName"/></form> |
+| SPN Password           | The password of the SPN to be created                                         | <form oninput="result.value=spnpass.value" id="spnpass" style="display: inline;"><input type="text" id="spnpass" name="spnpass" style="display: inline;" placeholder="Password1234!"/></form> |
+
 ## Create service principal name for Azure Stack with **Set Password**
 
-```azurecli
-# Create your environment
-az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.frn00006.azure.ukcloud.com" --suffix-storage-endpoint "frn00006.azure.ukcloud.com" --suffix-keyvault-dns ".vault.frn00006.azure.ukcloud.com" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
+<pre><code class="lang-azurecli hljs"># Create your environment
+az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result2" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result3" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
 
 # Set your environment
 az cloud set -n AzureStackUser
 
 # Log in to Azure Stack with user credentials
-az login -u "<username>@<tenantDomain>" -p '<password>'
-
-# Set Azure Stack Environment
-az cloud set --n AzureStackUser
-
-# Log in to Azure Stack using your Administrator account
-az login -u "<username>@<tenantDomain>" -p '<password>'
+az login -u "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>" -p '<output form="password" name="result" style="display: inline;">Password123!</output>'
 
 # Create Service Principal Name
-az ad sp create-for-rbac --name "ServicePrincipalName" --password 'Password1234!' --role="Owner"
+az ad sp create-for-rbac --name "<output form="spnname" name="result" style="display: inline;">ServicePrincipalName</output>" --role="Owner"
 
 # This command will output five values
 #  {
@@ -105,8 +113,7 @@ az login --service-principal -u CLIENT_ID -p CLIENT_SECRET --tenant TENANT_ID
 az group create --name rg01 --location frn00006
 
 # Remove test resource group
-az group delete --name rg01 -y
-```
+az group delete --name rg01 -y</code></pre>
 
 > [!NOTE]
 > Arguments for service principal login can be derived from the output of its creation:
@@ -135,4 +142,4 @@ az group delete --name rg01 -y
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

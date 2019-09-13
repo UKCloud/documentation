@@ -1,0 +1,12 @@
+- name: FAQs
+  items:
+  - name: Multi-Cloud Backup Storage FAQs
+    href: mcbs-faq.md
+- name: Getting Started
+  items:
+  - name: Multi-Cloud Backup Storage
+    href: mcbs-gs.md
+- name: Service Definition
+  items:
+  - name: Multi-Cloud Backup Storage Service Definition
+    href: mcbs-sd.md

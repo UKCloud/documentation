@@ -8,7 +8,7 @@
     <title>How to use the OpenStack Command Line Client on Microsoft operating systems | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to use the OpenStack Command Line Client on Microsoft operating systems | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -174,7 +174,7 @@
 </ol>
 <h3 id="install-the-openstack-command-line-client">Install the OpenStack Command Line client</h3>
 <ol>
-<li><p>Install pip with the following command:</p>
+<li><p>Install the OpenStack client with the following command:</p>
 <pre><code> pip install python-openstackclient
 </code></pre>
 </li>
@@ -192,8 +192,12 @@
 </li>
 <li><p>Click <strong>Download OpenStack RC File</strong> and save the file in a convenient place.</p>
 <p><img src="images/ostack-horizon-download-rc-file.png" alt="Download OpenStack RC File button in Horizon dashboard"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If your OpenStack user account is SSO-enabled, see <a href="ostack-how-use-api-sso.html"><em>How to use the OpenStack API using an SSO enabled user</em></a> for the changes you need to make to the RC file for SSO.</p>
+</div>
 </li>
-<li><p>Download the <a href="https://raw.githubusercontent.com/naturalis/powershell/master/Source-OpenRC.ps1">Source-OpenRC.ps1</a> PowerShell script and save it locally.</p>
+<li><p>Download the <a href="https://raw.githubusercontent.com/UKCloud/PS-OpenRC/master/Source-OpenRC.ps1">Source-OpenRC.ps1</a> PowerShell script and save it locally.</p>
 </li>
 <li><p>As the downloaded PowerShell script is unsigned, you'll need to unblock it by right-clicking the file, selecting <strong>Properties</strong>, then clicking the <strong>Unblock</strong> button and clicking <strong>OK</strong>.</p>
 <p><img src="images/ostack-ps-openrc-unblock.png" alt="Unblock button for OpenRC PowerShell script"></p>
@@ -213,11 +217,13 @@
 </ol>
 <h3 id="test-your-configuration">Test your configuration</h3>
 <p>Now you've installed and configured the everything, you can start using the command line tools.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You'll need to run the PowerShell script defined above, and provide your OpenStack project credentials every time you relaunch PowerShell.</p>
+</div>
 <ol>
-<li><p>Start Windows PowerShell.</p>
-</li>
 <li><p>Test if everything is working with a simple list command:</p>
-<pre><code> nova list
+<pre><code> openstack server list
 </code></pre>
 </li>
 <li><p>If you've started with an empty project, you'll get output similar to the following:</p>
@@ -228,7 +234,8 @@
 </code></pre>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You'll need to run the PowerShell script defined above, and provide your OpenStack project credentials every time you relaunch PowerShell.</p>
+<p>If you enter your password incorrectly, you will see a message similar to:
+<code>The request you have made requires authentication. (HTTP 401) (Request-ID: req-..)</code></p>
 </div>
 </li>
 </ol>
@@ -257,7 +264,7 @@
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -289,7 +296,20 @@
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

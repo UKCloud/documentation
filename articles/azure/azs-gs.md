@@ -3,6 +3,8 @@ title: Getting Started Guide for UKCloud for Microsoft Azure | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: Getting Started
@@ -14,7 +16,7 @@ toc_fullpath: Users/Getting Started/azs-gs.md
 toc_mdlink: azs-gs.md
 ---
 
-# Getting started guide for UKCloud for Microsoft Azure
+# Getting Started Guide for UKCloud for Microsoft Azure
 
 ## Overview
 
@@ -57,6 +59,9 @@ Azure Active Directory is Microsoft's cloud-based Directory and Identity Access 
 
 ## How can I get started with UKCloud for Microsoft Azure?
 
+> [!Important]
+> By providing the information below, you agree to enter into a direct Microsoft Cloud Solution Provider Customer Agreement (for more information see [here](https://docs.microsoft.com/en-us/partner-center/agreements) (Europe/United Kingdom)). If you accept the terms of the agreement, when you provide the information below we are obliged to report your name, email address and date of acceptance to Microsoft.
+
 # [I have an existing Azure Active Directory Domain](#tab/tabid-1)
 
 If you've decided that UKCloud for Microsoft Azure is the right environment for you, contact your CSM with the following information:
@@ -86,6 +91,11 @@ After accepting the agreement you will be greeted with the following page. Tick 
 ![Microsoft Azure authorize CSP page](images/azs-browser-authorize-csp.png)
 
 Next, you should receive a welcome email from your CSM containing the details of your new UKCloud for Microsoft Azure environment.
+
+> [!IMPORTANT]
+> If you have conditional access policies enabled for your Azure Active Directory, follow the instructions from the invitation email to allow us access to your AAD.
+>
+> You can find more information about conditional access policies [here](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/location-condition#trusted-ips).
 
 # [I do not have an existing Azure Active Directory](#tab/tabid-2)
 
@@ -286,6 +296,10 @@ In this Getting Started Guide, you've learned the basics about UKCloud for Micro
 
 - [*Microsoft Azure Stack Portal overview video*](azs-vid-overview.md)
 
+## Related repositories
+
+- [*UKCloud Azure Stack Repository*](https://github.com/UKCloud/AzureStack)
+
 ## Glossary
 
 This section provides a glossary of terms specific to UKCloud for Microsoft Azure.
@@ -310,4 +324,4 @@ This section provides a glossary of terms specific to UKCloud for Microsoft Azur
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

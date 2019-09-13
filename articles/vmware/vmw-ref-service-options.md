@@ -3,6 +3,8 @@ title: UKCloud for VMware options | UKCloud Ltd
 description: Provides information about the different choices you can make when building your UKCloud for VMware service
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -29,9 +31,9 @@ Each enterprise application has its own set of technical and service requirement
 
 The UKCloud provides two security domains:
 
-- Assured OFFICIAL provides access to public networks, such as the internet, PSN Assured, N3/HCSN and Janet
+- Assured OFFICIAL provides access to public networks, such as the internet, PSN, HCSN and Janet
 
-- Elevated OFFICIAL provides access to restricted networks such as PSN Protected
+- Elevated OFFICIAL provides access to restricted networks such as PSN
 
 Choose the security domain your workload needs to use.
 
@@ -73,4 +75,4 @@ Choose the application and data protection needed for your solution. You can cho
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

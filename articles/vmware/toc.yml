@@ -1,3 +1,7 @@
+- name: About
+  items:
+  - name: UKCloud for VMware
+    href: vmw-home.md
 - name: FAQs
   items:
   - name: Journaling Protection FAQs
@@ -14,10 +18,8 @@
     href: vmw-faq.md
 - name: Getting Started
   items:
-  - name: Build a virtual machine (vCloud Director 8.20)
-    href: vmw-how-build-vm.md
-  - name: Build a virtual machine (vCloud Director 9.1)
-    href: vmw-gs-build-vm-vcd91.md
+  - name: Build a virtual machine
+    href: vmw-gs-build-vm-vcd.md
   - name: Journaling Protection
     href: vmw-gs-journaling.md
   - name: UKCloud for VMware
@@ -120,7 +122,7 @@
     href: vmw-how-retrieve-utilisation-metrics.md
   - name: Securely manage permissions for a specific vApp
     href: vmw-how-manage-vapp-permissions.md
-  - name: Switch to the vCloud Director web console
+  - name: Switch to the Legacy UI
     href: vmw-how-switch-web-console.md
   - name: Upgrade your edge gateway
     href: vmw-how-upgrade-edge.md
@@ -146,10 +148,6 @@
     href: vmw-ref-advanced-networking.md
   - name: Availability of Virtual Hardware version 11
     href: vmw-ref-virtual-hardware-v11.md
-  - name: Blocked vCloud Director API calls
-    href: vmw-ref-block-vcd-calls.md
-  - name: Cannot manage 5.5.4 edge gateway firewall rules after upgrade to vCloud Director 8.20
-    href: vmw-ref-cant-manage-edge.md
   - name: Cloning vApps using PowerCLI
     href: vmw-ref-cloning-vapps.md
   - name: Comparison of UKCloud for VMware against hyperscalers
@@ -174,28 +172,26 @@
     href: vmw-ref-oversized-vms.md
   - name: PowerCLI command for interacting with the vCloud API
     href: vmw-ref-powercli-vcloud.md
+  - name: Preparing for vCloud Director 9.7 upgrade
+    href: vmw-ref-vcd-97.md
   - name: Red Hat Update Infrastructure overview
     href: vmw-ref-rhui.md
   - name: Shared Secret Length Issues IPSec VPN
     href: vmw-ref-shared-secret-issues.md
-  - name: Storage policies
-    href: vmw-ref-storage-policies.md
   - name: System Center on the UKCloud platform
     href: vmw-ref-system-center.md
+  - name: TCP_TW_REUSE and TCP_TW_RECYCLE settings
+    href: vmw-ref-twreuse.md
   - name: Tier 1 storage
     href: vmw-ref-tier1-storage.md
-  - name: TW_REUSE and TW_RECYCLE settings
-    href: vmw-ref-twreuse.md
   - name: Two Factor Authentication
     href: vmw-ref-two-factor-auth.md
   - name: UKCloud for VMware options
     href: vmw-ref-service-options.md
   - name: Understanding connectivity options in UKCloud for VMware
     href: vmw-ref-connectivity-options.md
-  - name: Upgrade to vCloud Director 8.20
-    href: vmw-ref-vcd-820.md
-  - name: Upgrade to vCloud Director 9.1
-    href: vmw-ref-vcd-91.md
+  - name: vCloud Director 9.7 known issues
+    href: vmw-ref-vcd97-known-issues.md
   - name: vCloud Director Healthcheck
     href: vmw-ref-vcd-healthcheck.md
   - name: Virtual machine data recovery options
@@ -208,11 +204,15 @@
     href: vmw-ref-vcloud-connector.md
   - name: Windows Server activation
     href: vmw-ref-windows-server-activation.md
+- name: Service Definition
+  items:
+  - name: UKCloud for VMware Service Definition
+    href: vmw-sd.md
 - name: Service Scope
   items:
   - name: Bring Your Own Firewall Service Scope
     href: vmw-sco-byof.md
-  - name: Dedicated Compute Service Scope
+  - name: Dedicated Compute v1 Service Scope
     href: vmw-sco-dedicated-compute.md
   - name: Journaling Protection Service Scope
     href: vmw-sco-journaling-protection.md
@@ -238,5 +238,7 @@
     href: vmw-vid-licensing-kms.md
   - name: vCloud Director 9.1 overview
     href: vmw-vid-vcd91.md
+  - name: vCloud Director 9.7
+    href: vmw-vid-vcd97.md
   - name: VMware Distributed Firewall
     href: vmw-vid-dfw.md

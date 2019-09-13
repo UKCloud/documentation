@@ -1,16 +1,18 @@
 ---
-title: How to create a service principal name for Azure Stack using the Azure portal | UKCloud Ltd
+title: How to create a service principal name (SPN) for Azure Stack using the Azure portal | UKCloud Ltd
 description: Learn how to create a service principal name (SPN) to manage your Azure Stack resources using the Azure portal
 services: azure-stack
 author: Bailey Lawson
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
-toc_sub2: Create a Service Principal Name
+toc_sub2: Create a Service Principal Name (SPN)
 toc_sub3:
 toc_sub4:
-toc_title: Create a service principal name - Portal
-toc_fullpath: Users/How To/Create a Service Principal Name/azs-how-create-spn-portal.md
+toc_title: Create a service principal name (SPN) - Portal
+toc_fullpath: Users/How To/Create a Service Principal Name (SPN)/azs-how-create-spn-portal.md
 toc_mdlink: azs-how-create-spn-portal.md
 ---
 
@@ -36,7 +38,7 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 ## Prerequisites
 
-- <p>An active Azure Subscription</p>
+- <p>An active Azure subscription</p>
 
 ## Create an SPN
 
@@ -48,21 +50,21 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 3. In the *Azure Active Directory* blade, select **App registrations**.
 
+4. On the *App registrations* page, click the **+ New registration** button.
+
     ![Select App registrations](images/azs-browser-app-registrations.png)
 
-4. On the *App registrations* page, click the **+ New application registration** button.
-
-5. In the *Create* blade, enter the following information:
+5. In the *Register an application* blade, enter the following information:
 
    - **Name** - The name of the application. Should have a minimum of four characters.
 
-   - **Application Type** - Choose **Web app / API** to add an application that represents a web application, a web API, or both. Choose **Native** to add an application that can be installed on a user's device or computer. In this instance, you can use **Web app / API**.
+   - **Supported account types** - Lets you decide who can use the service principal.
 
-   - **Sign-on URL** - The URL where users can sign in and use your app. You can change this URL later. In this instance, you can use `http://localhost`.
+   - **Redirect URI (optional)** - The URL which the authentication response is sent to. In this instance, you can leave it blank.
 
     ![Create Service Principal](images/azs-browser-create-spn.png)
 
-6. Click **Create**.
+6. Click **Register**.
 
 ## Gathering SPN credentials
 
@@ -70,13 +72,11 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
     ![Copy Application ID](images/azs-browser-select-SPN-App-ID.png)
 
-2. On the same blade, click the **Settings** button.
+2. On the blade menu, click the **Certificates & secrets** button.
 
-3. In the *API Access* section of the *Settings* blade, select **Keys**.
+3. Under *Client secrets*, click the **+ New client secret** button.
 
-4. In the *Keys* blade, enter a description for a key as well as an expiry duration, then click **Save**.
-
-    ![Create SPN key](images/azs-browser-add-SPN-key.png)
+4. Enter a description for the key, select a expiry duration, then click **Add**.
 
 5. Copy the displayed value for the key and store it somewhere secure. This value is referred to as the SPN Client Secret.
 
@@ -108,4 +108,4 @@ The SPN will now have the appropriate permissions assigned to it and is ready fo
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

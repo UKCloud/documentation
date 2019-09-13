@@ -8,7 +8,7 @@
     <title>Cloud Storage Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Cloud Storage Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -102,7 +102,7 @@
 <p><strong>STANDARD</strong> - data is stored in a single named UK-sovereign data centre with data protection using erasure coding. This provides fault tolerance by storing three copies of the data across separate nodes, thus improving data durability.</p>
 <p><strong>ENHANCED</strong> - data is stored in two UK-sovereign data centres, with a copy maintained in a primary named UK data centre and copied to a geographically remote UK data centre. This provides a greater degree of fault tolerance than the STANDARD service level by storing an additional copy of the data in a separate site.</p>
 <p>If you want more control and visibility of your disaster recovery solution, you can design your solution to write data independently to each data centre at our STANDARD service level, instead of using our ENHANCED service level.</p>
-<p>Full details of the available service options are outlined in the <a href="https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/563281405917218-service-definition-document-2018-05-21-1258.pdf">Service Definition</a>.</p>
+<p>Full details of the available service options are outlined in the <a href="cs-sd.html"><em>Service Definition</em></a>.</p>
 <h2 id="service-availability">Service availability</h2>
 <p>UKCloud platform availability is based on the service level you purchase.</p>
 <p>The service level agreement (SLA) for the STANDARD service level guarantees 99.95% availability.</p>
@@ -114,11 +114,16 @@
 <p><img src="images/cloud-storage-image-1.png" alt="Geographical diversity"></p>
 <p>You can specify Farnborough or Corsham as the site where you would like to have your service provisioned. We will try to accommodate requests and will advise you if we are unable do so.</p>
 <p>We control the deployed versions of technology on the platform. This covers internal platform-supporting technologies, and any technology versions available to you.</p>
-<h1 id="platform-management">Platform management</h1>
+<h2 id="platform-management">Platform management</h2>
 <p>Users can access, manage and view their Cloud Storage service, in any of the following ways:</p>
 <ul>
-<li><p><strong>APIs.</strong> You can use either the ECS S3-compatible API or the ECS Atmos API. The APIs are not interchangeable, so you need to choose carefully which API you want to use. Refer to the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf">EMC ECS Data Access Guide</a> for more information on the features of both APIs.</p>
-</li>
+<li><strong>APIs.</strong> You can use either the ECS S3-compatible API or the ECS Atmos API. The APIs are not interchangeable, so you need to choose carefully which API you want to use. Refer to the <a href="https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf">EMC ECS Data Access Guide</a> for more information on the features of both APIs.</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API</p>
+</div>
+<ul>
 <li><p><strong>Command Line Interface (CLI).</strong> CLI tools enable access from the command line by translating commands into the relevant API calls.</p>
 </li>
 <li><p><strong>Storage Gateways.</strong> These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see the appropriate Cloud Storage Gateways Knowledge Centre article:</p>
@@ -132,8 +137,9 @@
 <li><p><strong>UKCloud Portal.</strong> Contains information about the namespaces and users within your Cloud Storage environment, as well as a graphical representation of your storage consumption. For more information on the Portal functionality, see <a href="cs-how-view-info-portal.html"><em>How to view Cloud Storage information in the UKCloud Portal</em></a>.</p>
 </li>
 </ul>
-<p>To create additional namespaces or users, you must raise a service request. When requesting additional users, you can specify whether you want these users to have read-write or read-only permissions.</p>
-<p>We do not currently offer access as an NFS or a HDFS.</p>
+<p>To create additional namespaces or users, you must raise a service request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal. When requesting additional users, you can specify whether you want these users to have read-write or read-only permissions.</p>
+<h2 id="technology-constraints">Technology constraints</h2>
+<p>We do not currently offer access as an Network File System (NFS) or a Hadoop Distributed File System (HDFS) enabled account or bucket.</p>
 <p>You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the ECS Portal.</p>
 <h2 id="protection">Protection</h2>
 <p>You can protect against accidental deletion or modification of data by using retention policies or versioning.</p>
@@ -142,7 +148,7 @@
 <p><strong>Encryption at rest</strong> can be enabled when creating a new namespace or bucket. This encrypts data inline, using an AES 256-bit algorithm, before it is stored on drives. If you want your data to be encrypted at the namespace level, you must request this functionality before your namespace is created, as encryption cannot be enabled or disabled after a namespace is created.</p>
 <h2 id="networks">Networks</h2>
 <p>Cloud Storage is available on a range of Assured and Elevated networks. An overview of the available networks in each region is available in <a href="../other/other-ref-services-by-region.html"><em>UKCloud Services By Region</em></a>.</p>
-<p>Cloud Storage in our Assured OFFICAL domain uses the same environment for both PSN Assured and internet connections. Although it isn't possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.</p>
+<p>Cloud Storage in our Assured OFFICIAL domain uses the same environment for both PSN Assured and internet connections. Although it isn't possible to bridge between these connections, any objects placed in Cloud Storage via PSN Assured will also be accessible via the internet using the appropriate customer credentials.</p>
 <p>We manage the physical firewalls that face public and secure networks.</p>
 <h2 id="protective-monitoring">Protective monitoring</h2>
 <p>We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated platforms at the perimeter of your estate.</p>
@@ -169,7 +175,7 @@
 </li>
 <li><p>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.</p>
 </li>
-<li><p>If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.</p>
+<li><p>If access is required over government secure networks (HSCN, Janet, RLI or PSN), the customer is responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.</p>
 </li>
 <li><p>The customer is also responsible for ensuring only lawful data that supports the UK public sector is stored and processed by applications on this environment, and that they fully comply with the UKCloud Security Operating Procedures (SyOPs) and other information assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.</p>
 </li>
@@ -210,6 +216,8 @@ notice of the Planned Maintenance.</p>
 <li><p><a href="cs-how-use-file-browsers.html"><em>How to use file browsers with Cloud Storage</em></a></p>
 </li>
 </ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -241,7 +249,20 @@ notice of the Planned Maintenance.</p>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

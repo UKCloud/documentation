@@ -3,6 +3,8 @@ title: How to use the UKCloud Pricing Estimation Tool | UKCloud Ltd
 description: Describes how to use the UKCloud Pricing Estimation Tool
 services: other
 author: Dan Baker
+reviewer:
+lastreviewed: 20/11/2018 14:29:01
 
 toc_rootlink: How To
 toc_sub1: 
@@ -18,7 +20,7 @@ toc_mdlink: other-how-use-pricing-tool.md
 
 ## Overview
 
-The UKCloud Pricing Estimation Tool has been created to assist in the cost estimation of our core G-Cloud 10 services. Refer to the G-Cloud 10 Pricing Guide for information regarding service options, pricing options, any required set up fees and product rules. To achieve the most accurate estimate please consult with one of our Cloud Architects.
+The UKCloud Pricing Estimation Tool has been created to assist in the cost estimation of our core services. Refer to the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf) for information regarding service options, pricing options, any required set up fees and product rules. To achieve the most accurate estimate please consult with one of our Cloud Architects.
 
 > [!IMPORTANT]
 > You should always ensure that you're using the latest version of the Pricing Estimation Tool by checking on the [UKCloud website](https://ukcloud.com/price-estimator-tool/). Also, note that this tool provides an estimate based on the selections you make. Your actual consumption of the service may be different, resulting in higher or lower actual costs.
@@ -115,4 +117,4 @@ Both the Mac and Windows versions of the tool operate the same way. This guide s
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -3,6 +3,8 @@ title: How to export edge gateway configuration data using PowerShell | UKCloud 
 description: This article describes how to use PowerCLI to extract Edge Gateway configuration data
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -42,7 +44,7 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
         $webclient.Headers.Add("x-vcloud-authorization",$EdgeView.Client.SessionKey)
 
-        $webclient.Headers.Add("accept",$EdgeView.Type + ";version=5.5")
+        $webclient.Headers.Add("accept",$EdgeView.Type + ";version=30.0")
 
         [xml]$EGWConfXML = $webclient.DownloadString($EdgeView.href)
 
@@ -93,4 +95,4 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -3,6 +3,8 @@ title: Understanding UKCloud's Identity & Access Management API | UKCloud Ltd
 description: Provides information on managing permissions using the Identity & Access Management API
 services: other
 author: Simon Fish
+reviewer:
+lastreviewed: 08/11/2018 10:25:23
 
 toc_rootlink: Reference
 toc_sub1:
@@ -84,4 +86,4 @@ curl -X DELETE -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/use
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at [products@ukcloud.com](mailto:products@ukcloud.com).
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

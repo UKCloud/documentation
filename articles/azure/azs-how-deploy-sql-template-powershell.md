@@ -3,6 +3,8 @@ title: How to deploy an SQL template to Azure Stack using PowerShell | UKCloud L
 description: Learn how to deploy an SQL template to Azure Stack using PowerShell
 services: azure-stack
 author: Chris Black
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -265,7 +267,7 @@ Connect-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsC
 try {
     $RG = Get-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -ErrorAction 'SilentlyContinue'
     if ( -not $RG) {
-        Write-Host -InputObject "Didn't find resource group"
+        Write-Output -InputObject "Didn't find resource group"
         New-AzureRmResourceGroup -Name $ResourceGroupName -Location $RegionAzureStack -Verbose
     }
     else {
@@ -273,7 +275,7 @@ try {
     }
 }
 catch {
-    Write-Host -InputObject "Could not query resource group"
+    Write-Output -InputObject "Could not query resource group"
     exit
 }
 
@@ -347,4 +349,4 @@ Get-AzureRmResourceGroupDeployment -Name $ARMDeploymentName -ResourceGroupName $
   
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

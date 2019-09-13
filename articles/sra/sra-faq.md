@@ -3,6 +3,8 @@ title: Secure Remote Access FAQs | UKCloud Ltd
 description: Frequently asked questions for Secure Remote Access
 services: sra
 author: Matt Warner
+reviewer:
+lastreviewed: 02/08/2018 16:00:52
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -19,9 +21,17 @@ toc_mdlink: sra-faq.md
 
 ### What is the service?
 
-The UKCloud Secure Remote Access (SRA) service enables you to securely connect to the UKCloud platform's Elevated OFFICIAL security domain using NCSC-approved internet virtual private network (VPN) technologies and the 'walled garden' architectural pattern.
+The UKCloud Secure Remote Access (SRA) service:
 
-System administrators and mobile workers can securely access workloads running on Elevated OFFICIAL from locations that don't have alternative secure network connections such as PSN or N3.
+- Is based on NCSC-approved CPA technology, including Cisco AnyConnect and Cisco VPN devices
+
+- Provides secure two-factor authentication based on UKCloud-assured device certificates
+
+- Has a walled garden architecture that enables you to deploy and manage appropriate systems in a DMZ, allowing secure, controlled onward access to workloads hosted on the UKCloud Elevated OFFICIAL security domain
+
+- Is integrated with the UKCloud Protective Monitoring solution (aligned with GPG13)
+
+System administrators and mobile workers can securely access workloads running on Elevated OFFICIAL from locations that don't have alternative secure network connections such as PSN or HSCN.
 
 ### Do I have to buy other UKCloud services to use UKCloud SRA?
 
@@ -113,7 +123,7 @@ We aim to carry out the assessment within five days of receiving the business ca
 
 If you need help gathering appropriate evidence, or effectively designing your SRA solution, we offer an assurance wrap review to guide you towards an effective design that will help to maximise your chances of meeting compliance requirements.
 
-The variable nature of the engagement means we charge for the assurance wrap on an SFIA rate card basis, depending on the number of days' support needed.
+The variable nature of the engagement means we charge for the assurance wrap on a [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) basis, depending on the number of days' support needed.
 
 ### What is the assurance process for approving an SRA solution?
 
@@ -171,17 +181,17 @@ SRA certificates last for 12 months. You'll need to renew certificates no later 
 
 ### How do I order additional SRA certificates?
 
-To add additional certificates, raise a [service request via the UKCloud Portal](https://portal.skyscapecloud.com/support/my_calls), selecting the "Request Additional SRA Certificate(s)" option.
+To add additional certificates, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the "Request Additional SRA Certificate(s)" option.
 
 ### How do I renew or revoke an old certificate?
 
-To renew or revoke your certificate, raise a [service request via the UKCloud Portal](https://portal.skyscapecloud.com/support/my_calls), selecting the "Renew and/or Revoke SRA Certificate" option.
+To renew or revoke your certificate, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the "Renew and/or Revoke SRA Certificate" option.
 
 For renewals, it's important you give us at least two weeks' notice to prevent a break in your service.
 
 ### Can I renew or revoke my certificates in bulk?
 
-Yes. To renew or revoke your certificates in bulk, raise a [service request via the UKCloud Portal](https://portal.skyscapecloud.com/support/my_calls), selecting the "Renew and/or Revoke multiple SRA Certificates" option.
+Yes. To renew or revoke your certificates in bulk, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the "Renew and/or Revoke multiple SRA Certificates" option.
 
 Attach the Secure Remote Access bulk renewal/revoke form containing all the certificates you need renewing and/or revoking with details including User ID (UID) and certificate name. It would also be useful to provide host name or machine name.
 
@@ -208,6 +218,20 @@ The billing model has two parts:
 ### Is there a minimum term?
 
 The service is subject to a minimum term of three months. Termination within this initial term will incur an early exit charge.
+
+### What does the cost of SRA include?
+
+SRA prices include:
+
+- Access to managed NCSC-approved VPN gateways
+
+- A Cisco AnyConnect licence for the end-user device
+
+- Two-factor authentication using device certificates
+
+- A walled garden virtual data centre, where you can deploy your application services
+
+- A small VM to use as a bastion host (additional costs apply for larger or additional VMs)
 
 ## Security
 
@@ -243,4 +267,4 @@ Consider PSN-compliant remote access services if you require access to the broad
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -1,3 +1,7 @@
+- name: About
+  items:
+  - name: UKCloud for OpenShift
+    href: oshift-home.md
 - name: FAQs
   items:
   - name: UKCloud for OpenShift FAQs
@@ -14,6 +18,8 @@
     href: oshift-how-create-users.md
   - name: Expose non-http services externally
     href: oshift-how-expose-nonhttp-services.md
+  - name: How to expand OpenShift persistent volumes
+    href: oshift-how-expand-persistent-vols.md
   - name: Monitor your OpenShift cluster
     href: oshift-how-monitor-cluster.md
   - name: Obtain usage metrics to use for OpenShift capacity management
@@ -28,6 +34,8 @@
     href: oshift-how-use-netpol.md
   - name: Use the Hawkular Metrics API
     href: oshift-how-use-hawkular-metrics.md
+  - name: View your router logs
+    href: oshift-how-view-router-logs.md
 - name: Reference
   items:
   - name: Considerations when scaling an OpenShift cluster
@@ -36,3 +44,15 @@
     href: oshift-ref-lifecycle.md
   - name: Making the most of your UKCloud for OpenShift trial
     href: oshift-ref-trial.md
+  - name: OpenShift integrated cluster monitoring
+    href: oshift-ref-cluster-monitoring.md
+  - name: Security best practices
+    href: oshift-ref-security-best-practices.md
+- name: Service Definition
+  items:
+  - name: UKCloud for OpenShift Service Definition
+    href: oshift-sd.md
+- name: Service Scope
+  items:
+  - name: UKCloud for OpenShift Service Scope
+    href: oshift-sco.md

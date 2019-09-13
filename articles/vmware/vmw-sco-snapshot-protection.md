@@ -3,6 +3,8 @@ title: Snapshot Protection Service Scope | UKCloud Ltd
 description: Outlines important details regarding the Snapshot Protection service
 services: vmware
 author: Steve Hall
+reviewer:
+lastreviewed: 24/07/2018 13:50:39
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -33,7 +35,7 @@ You can choose from the following Snapshot Protection policies:
 
 When you opt a virtual machine (VM) into a Snapshot Protection policy, the VM is added to a daily automated snapshot. The snapshot is of the entire VM running on your UKCloud for VMware service.
 
-Data protected by the snapshot has an RPO of 24 hours. RTO is determined by the time taken to restore the VM after you've raised a service request.
+Data protected by the snapshot has an RPO of 24 hours. RTO is determined by the time taken to restore the VM after you've raised a Service Request.
 
 Snapshot Protection is chargeable based on the number of VMs protected and the capacity utilised to store the data.
 
@@ -55,7 +57,7 @@ We do not guarantee successful snapshots.
 
 We can provide you with guidance on suitable candidates for Snapshot Protection (data change rate/size).
 
-Large VMs of 2TiB+ with high change rates are not supported by Snapshot Protection, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up. Therefore, please contact your technical Account Manager if this scenario applies to one or more of your VMs.
+VMs larger than 2TiB or with high change rates are not supported by Snapshot Protection, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up. Therefore, please contact your Technical Account Manager (TAM) if this scenario applies to one or more of your VMs.
 
 VM snapshots may be attempted more than once to obtain successful status.
 
@@ -111,7 +113,7 @@ Alerting on individual VMs is not provided.
 
 ### Timing and process
 
-You can ask to restore a VM via a service request, which is subject to standard support SLA timescales.
+You can ask to restore a VM by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, which is subject to standard support SLA timescales.
 
 Restores are performed outside of the backup window, unless a P1 incident is involved. You can find a definition of our support processes and severity categorisation in [*How to raise and escalate incidents and service requests*](../portal/ptl-how-raise-escalate-service-request.md).
 
@@ -147,4 +149,4 @@ We'll proactively investigate failures on the platform on the following triggers
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

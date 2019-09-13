@@ -3,6 +3,8 @@ title: Understanding sites, regions and zones | UKCloud Ltd
 description: Explains how we've designed the UKCloud platform using sites, regions and zones to enable you to design a highly-available and disaster-tolerant cloud solution
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -115,4 +117,4 @@ Depending on the services you consume, each zone may have its own management int
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

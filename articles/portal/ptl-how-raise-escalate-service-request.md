@@ -3,6 +3,8 @@ title: How to raise and escalate incidents and service requests | UKCloud Ltd
 description: Provides an overview of the process for raising incidents and service requests, as well as how to escalate them if necessary
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 23/07/2018 14:44:15
 
 toc_rootlink: How To
 toc_sub1:
@@ -91,13 +93,13 @@ Ticket priority | Initial response target | Resolution target
 &nbsp; | &nbsp;
 -----------|-----------
 **Priority 1** | **Priority 2**
-A significant outage or disruption to multiple users or locations is in progress</br></br>Confirmed or suspected compromise, loss or unavailability of data has occurred | Service is available but degraded or restricted for multiple users or locations
+A significant outage or disruption to multiple users or locations is in progress<br><br>Confirmed or suspected compromise, loss or unavailability of data has occurred | Service is available but degraded or restricted for multiple users or locations
 **Priority 3** | **Priority 4**
-A failure or degradation of redundant or non-critical components of service has occurred</br></br>Failure of a shared service, where alternative services remain available, or service disruption for single users | Documented housekeeping activities</br></br>Administration related requirements or an uncategorised incident
+A failure or degradation of redundant or non-critical components of service has occurred<br><br>Failure of a shared service, where alternative services remain available, or service disruption for single users | Documented housekeeping activities<br><br>Administration related requirements or an uncategorised incident
 
 ## Viewing tickets and service updates
 
-All incidents and service requests are visible within the UKCloud Portal under My Calls. The Portal is also used to provide notification of upcoming changes.
+All incidents and service requests are visible within the UKCloud Portal under [My Calls](https://portal.skyscapecloud.com/support/ivanti). The Portal is also used to provide notification of upcoming changes.
 
 During a Major Incident, updates are published to the Service Status page: <http://status.ukcloud.com/>.
 
@@ -113,4 +115,4 @@ To escalate an incident or service request, contact the Support Team:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

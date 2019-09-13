@@ -3,6 +3,8 @@ title: Editing Knowledge Centre articles video | UKCloud Ltd
 description: Shows a video that explains how to edit Knowledge Centre articles within GitHub
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 21/12/2018 11:22:38
 
 toc_rootlink: Videos
 toc_sub1: 
@@ -30,4 +32,4 @@ The following video shows you how you can make improvements to Knowledge Centre 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

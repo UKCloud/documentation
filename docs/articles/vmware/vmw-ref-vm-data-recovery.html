@@ -8,7 +8,7 @@
     <title>Virtual machine data recovery options | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Virtual machine data recovery options | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -114,26 +114,8 @@
 <h3 id="cons">Cons</h3>
 <p>You can create only one snapshot for each VM, with each subsequent snapshot overwriting the previous one. You should use snapshots only as a temporary solution, as the longer the snapshot is running, the more changes will be lost should the snapshot be restored. In addition, due to the way that snapshots capture all changes to a separate file, storage costs will increase as a result of having to store both the original master VM image and you may also encounter a negative impact to the overall performance of the VM.</p>
 <h3 id="how-to-create-a-vm-snapshot">How to create a VM snapshot</h3>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Using vCloud Director 8.20</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Using vCloud Director 9.1</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
-
-<p>You can create a VM snapshot within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to create a snapshot for and selecting <strong>Create Snapshot</strong>.</p>
-<p><img src="images/vcd_snapshot.png" alt="Snapshot creation in vCloud Director 8.20"></p>
-</section>
-<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-
-<p>In the card for the VM that you want to create a snapshot for, click <strong>More</strong> and select <strong>Create Snapshot</strong>.</p>
-<p><img src="images/vmw-vcd91-mnu-create-snapshot.png" alt="Snapshot creation in vCloud Director 9.1"></p>
-</section>
-</div>
+<p>In the card for the VM that you want to create a snapshot for, select <strong>Actions</strong> then <strong>Create Snapshot</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-create-snapshot.png" alt="Create Snapshot menu option"></p>
 <h2 id="vm-copy">VM copy</h2>
 <p>When you copy a VM, you create an exact replica of the VM in either the same vApp or a different vApp.</p>
 <p><img src="images/copy.png" alt="How Master and copy images differ with changes over time"></p>
@@ -144,39 +126,21 @@
 <h3 id="cons-1">Cons</h3>
 <p>You must power down the VM prior to taking a copy. Each additional copy will consume as much storage as the original and consume additional memory and CPU cycles while the VMs are running.</p>
 <h3 id="how-to-create-a-vm-copy">How to create a VM copy</h3>
-<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Using vCloud Director 8.20</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-2" data-tab="tabid-2" tabindex="-1">Using vCloud Director 9.1</a>
-</li>
-</ul>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-1" role="tabpanel" data-tab="tabid-1">
-
-<p>You can create a VM copy within the UKCloud vCloud Director Control Panel by right-clicking the VM that you want to copy and selecting <strong>Copy to</strong>.</p>
-<p><img src="images/vcd_copy.png" alt="VM copy in vCloud Director 8.20"></p>
-</section>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-
-<p>In the vCloud Director 9.1 tenant portal, you can only copy entire vApps. To copy a single VM, you need to switch to the vCloud Director Web Console and follow the steps for vCloud Director 8.20.</p>
-</section>
-</div>
+<p>In the card for the VM that you want to copy, select <strong>Actions</strong> then <strong>Copy to</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-copy-vm.png" alt="Copy VM menu option"></p>
 <h2 id="vm-backup">VM backup</h2>
 <p>You should view backup as a disaster recovery mechanism, whereby you can restore entire environments or individual files in the event of the original becoming unavailable as a result of corruption or accidental deletion.</p>
 <p>You can add any VM to the automated snapshot backup schedule so that it is automatically backed up on a daily basis. You can choose to retain snapshot backups for either 14 or 28 days. Data is backed up at the hypervisor level and provides a crash‑consistent image.</p>
 <h3 id="use-case-2">Use case</h3>
-<p>If you accidentally delete or amend a file that should not be modified, you can restore the file in question from backup by raising a Service Request via the UKCloud Portal.</p>
+<p>If you accidentally delete or amend a file that should not be modified, you can restore the file in question from backup by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <h3 id="pros-2">Pros</h3>
 <p>You gain peace of mind that data is backed up nightly for a rolling period of 14 or 28 days without any manual intervention.</p>
 <h3 id="cons-2">Cons</h3>
 <p>Time taken for a restoration request to be completed (dependent on the amount of data to be restored).</p>
 <h3 id="how-to-add-a-vm-to-the-automated-snapshot-backup-schedule">How to add a VM to the automated snapshot backup schedule</h3>
-<p>For information about how to add a VM to the automated backup schedule, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage snapshot protection for your VMs</em></a>
-in the Knowledge Centre.</p>
+<p>For information about how to add a VM to the automated backup schedule, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage snapshot protection for your VMs</em></a>.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -208,7 +172,20 @@ in the Knowledge Centre.</p>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

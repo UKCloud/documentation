@@ -8,7 +8,7 @@
     <title>How to view storage profile usage | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to view storage profile usage | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -95,25 +95,12 @@
 
 <h2 id="overview">Overview</h2>
 <p>Before allocating more disk space in your UKCloud for VMware account, it is useful to check how much of your allocated space has been used.</p>
-<h2 id="viewing-your-storage-usage-vcloud-director-820">Viewing your storage usage (vCloud Director 8.20)</h2>
-<ol>
-<li><p>In vCloud Director, select the <strong>Administration</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
-</li>
-<li><p>Right-click your virtual data centre and select <strong>Open</strong>.</p>
-</li>
-<li><p>Select the <strong>Storage Policies</strong> tab.</p>
-</li>
-<li><p>The <strong>Requested/Limit</strong> column shows how much storage has been used as well as your storage limit.</p>
-<p><img src="images/vmw-vcd-storage-usage.png" alt="Storage Policies tab"></p>
-</li>
-</ol>
-<h2 id="viewing-your-storage-usage-vcloud-director-91">Viewing your storage usage (vCloud Director 9.1)</h2>
+<h2 id="viewing-your-storage-usage-vcloud-director">Viewing your storage usage (vCloud Director)</h2>
 <ol>
 <li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, go to the card for your data centre.</p>
 </li>
 <li><p>The <em>Storage</em> section shows how much storage you're currently using as well as the amount of allocated storage.</p>
-<p><img src="images/vmw-vcd91-storage-usage.png" alt="VDC card showing storage usage and allocation"></p>
+<p><img src="images/vmw-vcd-storage.png" alt="VDC card showing storage usage and allocation"></p>
 </li>
 </ol>
 <h2 id="viewing-your-storage-usage-vcloud-api">Viewing your storage usage (vCloud API)</h2>
@@ -133,28 +120,28 @@
 </li>
 </ul>
 <p>The example makes two calls to the API. The first call authenticates the session:</p>
-<pre><code>curl -u %VCD_USERNAME%@%VCD_ORG%:%VCD_PASSWORD%  -H &quot;Accept: application/*+xml;version=5.6&quot; -X POST -i https://api.vcd.portal.skyscapecloud.com/api/sessions
+<pre><code class="lang-curl">curl -u %VCD_USERNAME%@%VCD_ORG%:%VCD_PASSWORD%  -H &quot;Accept: application/*+xml;version=5.6&quot; -X POST -i https://api.vcd.portal.skyscapecloud.com/api/sessions
 </code></pre>
 <div class="TIP">
 <h5>Tip</h5>
 <p>On Linux, use <code>$VCD_USERNAME</code> instead of <code>%VCD_USERNAME%</code>.</p>
 </div>
 <p>Having authenticated successfully and received an <code>x-vcloud-authorisation</code> header in the response, the second call passes the authentication token as a header on the request:</p>
-<pre><code>curl -H &quot;x-vcloud-authorization: a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6&quot; -H &quot;Accept: application/*+xml;version=5.6&quot; -i  https://api.vcd.portal.skyscapecloud.com/api/query?type=orgVdcStorageProfile
+<pre><code class="lang-curl">curl -H &quot;x-vcloud-authorization: a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6&quot; -H &quot;Accept: application/*+xml;version=5.6&quot; -i  https://api.vcd.portal.skyscapecloud.com/api/query?type=orgVdcStorageProfile
 </code></pre>
 <p>This call returns an XML structure, in which you can see an <code>OrgVdcStorageProfileRecord</code> element containing the following properties:</p>
-<pre><code>storageLimitMB=&quot;512000&quot; storageUsedMB=&quot;65536&quot;
+<pre><code class="lang-none">storageLimitMB=&quot;512000&quot; storageUsedMB=&quot;65536&quot;
 </code></pre>
 <p>The GitHub repository also provides a ruby example. Again, the script assumes the above environment variables have been set up with your user credentials.</p>
 <p>You can use the ruby script by running:</p>
-<pre><code>ruby storage_profile.rb
+<pre><code class="lang-none">ruby storage_profile.rb
 </code></pre>
 <p>The output will look similar to the following:</p>
-<pre><code>Name        Used GB   Total GB   Percent   VDC
+<pre><code class="lang-none">Name        Used GB   Total GB   Percent   VDC
 BASIC-Any   192       500        38.5%     XXXX
 </code></pre>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -186,7 +173,20 @@ BASIC-Any   192       500        38.5%     XXXX
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

@@ -3,6 +3,8 @@ title: How to create load balancing services on UKCloud for OpenStack | UKCloud 
 description: Provides information to deploy a load balancing solution (LBaaS) within your OpenStack environment
 services: openstack
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 15:17:17
 
 toc_rootlink: How To
 toc_sub1:
@@ -15,6 +17,9 @@ toc_mdlink: ostack-how-create-load-balancer.md
 ---
 
 # Creating load-balancing services on UKCloud for OpenStack
+
+> [!NOTE]
+> This article only applies to OpenStack Regions running the Newton release and lower (currently COR00005 and FRN00006). All newer Regions offer native Load Balancing as a Service (LBaaS)
 
 ## Overview
 
@@ -330,7 +335,7 @@ You may also wish to investigate keepalived ability to monitor applications on t
 
 ## First free load balancer
 
-To meet the UKCloud for OpenStack G-Cloud Service Definition commitment of one free load balancer per project, we will credit the first two instances in a project which match the following criteria:
+To meet the [*UKCloud for OpenStack Service Definition*](ostack-sd.md) commitment of one free load balancer per project, we will credit the first two instances in a project which match the following criteria:
 
   Region | Flavor ID | Image ID | Instance name prefix
   -------|-----------|----------|---------------------
@@ -341,4 +346,4 @@ To meet the UKCloud for OpenStack G-Cloud Service Definition commitment of one f
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

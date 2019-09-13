@@ -2,3 +2,7 @@
   items:
   - name: Understanding High Performance Compute
     href: hpc-ref-overview.md
+- name: Service Definition
+  items:
+  - name: High Performance Compute Service Definition
+    href: hpc-sd.md

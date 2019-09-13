@@ -8,7 +8,7 @@
     <title>How to configure a load balancer | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure a load balancer | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -93,40 +93,34 @@
                   
 <h1 id="how-to-configure-a-load-balancer">How to configure a load balancer</h1>
 
-<h1 id="overview">Overview</h1>
-<p>One of the functions of the edge gateway is to act as a basic layer 3 load balancer, distributing IP traffic to a pool of servers while appearing as a single virtual server. The load balancing methods offered are round-robin, IP hash, URI, HTTP header or least connected.</p>
+<h2 id="overview">Overview</h2>
+<p>One of the functions of the edge gateway is to act as a basic Layer 3 load balancer, distributing IP traffic to a pool of servers while appearing as a single virtual server. The load balancing methods offered are round-robin, IP hash, URI, HTTP header or least connected.</p>
 <p>Bear in mind, however, that the edge gateway load balancer is quite basic. If you need to meet more complex requirements, you'll need provide your own third-party virtual load balancer.</p>
-<p>The steps for configuring a load balancer vary depending on what type of edge gateway you're working with:</p>
-<ul>
-<li><p><a href="#configuring-a-load-balancer-for-an-advanced-gateway">Configuring a load balancer for an advanced gateway</a></p>
-</li>
-<li><p><a href="#configuring-a-load-balancer-for-a-standard-edge">Configuring a load balancer for a standard edge</a></p>
-</li>
-</ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>We recommend that you convert your edge to an advanced gateway to access the latest vCloud Director functionality. For more information, see <a href="vmw-how-convert-edge.html"><em>How to convert your edge to an advanced gateway</em></a>.</p>
-</div>
-<h2 id="configuring-a-load-balancer-for-an-advanced-gateway">Configuring a load balancer for an advanced gateway</h2>
-<p>To configure a load balancer for an advanced gateway:</p>
+<h2 id="configuring-a-load-balancer">Configuring a load balancer</h2>
+<p>To configure a load balancer:</p>
 <ol>
-<li><p>In vCloud Director, access the edge gateway settings.</p>
-<p>For more detailed instructions, see <a href="vmw-how-access-edge.html"><em>How to access edge gateway settings</em></a></p>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC that contains the edge gateway in which you to configure the load balancer.</p>
+</li>
+<li><p>In the left navigation panel, click <strong>Edges</strong>.</p>
+<p><img src="images/vmw-vcd91-mnu-edges.png" alt="Edges menu option in vCloud Director"></p>
+</li>
+<li><p>Select the edge that you want to configure and click <strong>Configure Services</strong>.</p>
+<p><img src="images/vmw-vcd-edge-btn-config.png" alt="Configure Services button"></p>
 </li>
 <li><p>Select the <strong>Load Balancer</strong> tab.</p>
 <p><img src="images/vmw-vcd-adv-edge-tab-load-balancer.png" alt="Load Balancer tab"></p>
 </li>
-<li><p>On the <strong>Global Configuration</strong> tab, select the <strong>Enabled</strong> toggle.</p>
+<li><p>On the <strong>Global Configuration</strong> tab, enable the <strong>Enabled</strong> option.</p>
 </li>
-<li><p>If you have a syslog server configured, select the <strong>Enable Logging</strong> toggle.</p>
+<li><p>If you have a syslog server configured, enable the <strong>Enable Logging</strong> option.</p>
 <p>For more information about syslog servers, see <a href="vmw-how-access-syslog-data-adv.html"><em>How to access syslog data for your advanced gateway</em></a></p>
 </li>
 <li><p>Click <strong>Save changes</strong>.</p>
 </li>
-<li><p>You need to configure two components of the load balancing service for it to function correctly: <a href="#configuring-a-pool-server-for-an-advanced-gateway">pool servers</a> and <a href="#configuring-a-virtual-server-for-an-advanced-gateway">virtual servers</a>.</p>
+<li><p>You need to configure two components of the load balancing service for it to function correctly: <a href="#configuring-a-pool-server">pool servers</a> and <a href="#configuring-a-virtual-server">virtual servers</a>.</p>
 </li>
 </ol>
-<h3 id="configuring-a-pool-server-for-an-advanced-gateway">Configuring a pool server for an advanced gateway</h3>
+<h3 id="configuring-a-pool-server">Configuring a pool server</h3>
 <p>Pool servers are the real servers that will be masked by the load balancer.</p>
 <div class="NOTE">
 <h5>Note</h5>
@@ -149,7 +143,7 @@
 </li>
 <li><p>From the <strong>Monitors</strong> list, select the monitors policy.</p>
 </li>
-<li><p>Select the <strong>Transparent</strong> toggle if you want IP addresses to be transparent.</p>
+<li><p>Enable the <strong>Transparent</strong> option if you want IP addresses to be transparent.</p>
 <p><img src="images/vmw-vcd-adv-edge-load-balancer-add-pool.png" alt="Add Pool dialog box"></p>
 </li>
 <li><p>In the <em>Members</em> section, click <strong>+</strong>.</p>
@@ -164,7 +158,7 @@
 <p><img src="images/vmw-vcd-adv-edge-load-balancer-pool-stats.png" alt="Show Pool Statistics button"></p>
 </li>
 </ol>
-<h3 id="configuring-a-virtual-server-for-an-advanced-gateway">Configuring a virtual server for an advanced gateway</h3>
+<h3 id="configuring-a-virtual-server">Configuring a virtual server</h3>
 <p>A virtual server masks the pool of real servers and presents a single IP address.</p>
 <ol>
 <li><p>Select the <strong>Virtual Servers</strong> tab.</p>
@@ -173,86 +167,10 @@
 <li><p>Click the <strong>+</strong> button.</p>
 <p><img src="images/vmw-vcd-load-balancer-btn-add-server-adv.png" alt="Add virtual server button"></p>
 </li>
-<li><p>In the <strong>Add Virtual Server</strong> dialog box, select the <strong>Enable Virtual Server</strong> toggle.</p>
+<li><p>In the <em>Add Virtual Server</em> dialog box, enable the <strong>Enable Virtual Server</strong> option.</p>
 </li>
 <li><p>Enter a <strong>Name</strong> for the virtual server, assign it a virtual <strong>IP Address</strong>, and assign it to the server pool you want to mask. You can also choose which services you want to apply to the virtual server. When you're done, click <strong>Keep</strong>.</p>
 <p><img src="images/vmw-vcd-load-balancer-add-virtual-server-adv.png" alt="Add Virtual Server dialog box"></p>
-</li>
-</ol>
-<h2 id="configuring-a-load-balancer-for-a-standard-edge">Configuring a load balancer for a standard edge</h2>
-<div class="NOTE">
-<h5>Note</h5>
-<p>You can only manage advanced gateways in the new vCloud Director 9.1 tenant portal. If you're working with a standard edge gateway, you must first switch to the vCloud Director web console to manage the edge. For more information, see <a href="vmw-how-switch-web-console.html"><em>How to switch to the vCloud Director web console from the tenant portal</em></a>.</p>
-</div>
-<p>To configure a load balancer for a standard edge:</p>
-<ol>
-<li><p>In vCloud Director, click the <strong>Administration</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab in vCloud Director"></p>
-<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a></p>
-</li>
-<li><p>Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select <strong>Open</strong>.</p>
-</li>
-<li><p>Select the <strong>Edge Gateways</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-edge-gateways.png" alt="Edge Gateways tab"></p>
-</li>
-<li><p>Right-click the edge gateway and select <strong>Edge Gateway Services</strong>.</p>
-</li>
-<li><p>Select the <strong>Load Balancer</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-load-balancer-reg.png" alt="Load Balancer tab"></p>
-</li>
-<li><p>You need to configure two components of the load balancing service for it to function correctly: <a href="#configuring-a-pool-server-for-a-standard-edge">pool servers</a> and <a href="#configuring-a-virtual-server-for-a-standard-edge">virtual servers</a>.</p>
-</li>
-</ol>
-<h3 id="configuring-a-pool-server-for-a-standard-edge">Configuring a pool server for a standard edge</h3>
-<p>Pool servers are the real servers that will be masked by the load balancer.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Before you configure the pool of servers, make a list of their IP addresses so that you can populate the pool later in the procedure.</p>
-</div>
-<ol>
-<li><p>On the <strong>Load Balancer</strong> tab, select the <strong>Pool Servers</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-lb-pool-servers-reg.png" alt="Pool Servers tab"></p>
-</li>
-<li><p>Click <strong>Add</strong>.</p>
-<p><img src="images/vmw-vcd-btn-lb-add-pool-reg.png" alt="Add pool server button"></p>
-</li>
-<li><p>In the <em>Add Load Balancer Member Pool</em> wizard, give the pool a <strong>Name</strong> and <strong>Description</strong> then click <strong>Next</strong>.</p>
-</li>
-<li><p>Select the service type for the pool then click <strong>Next</strong>.</p>
-<p>A service type consists of the protocol, port number and balancing method. You can enable multiple services for a pool.</p>
-<p><img src="images/vmw-vcd-add-load-balancer-member-service-reg.png" alt="Pool server service type"></p>
-</li>
-<li><p>Configure health check parameters for the services you're provisioning (or leave as the default), then click <strong>Next</strong>.</p>
-<p><img src="images/vmw-vcd-add-load-balancer-member-health-reg.png" alt="Pool server health check parameters"></p>
-</li>
-<li><p>Click <strong>Add</strong> to add members to the pool.</p>
-<p><img src="images/vmw-vcd-add-load-balancer-member-btn-add-reg.png" alt="Add pool server member button"></p>
-</li>
-<li><p>In the <em>Add Member</em> dialog box, enter the IP addresses of one of the servers that you want to include in the pool. You can also give the servers different weightings to modify the flow of traffic to each one. You can then add service and monitoring port numbers.</p>
-<p><img src="images/vmw-vcd-add-load-balancer-member-add-reg.png" alt="Add Member dialog box"></p>
-</li>
-<li><p>When you're happy with the settings, click <strong>OK</strong>.</p>
-</li>
-<li><p>Click <strong>Add</strong> to add another server to the pool and when you've added all the servers, click <strong>Next</strong>.</p>
-</li>
-<li><p>On the last page of the wizard, review your settings and click <strong>Finish</strong>.</p>
-<p>The pool you created will now be visible in the Pool Servers window.</p>
-<p><img src="images/vmw-vcd-load-balancer-pool-reg.png" alt="Pool server"></p>
-</li>
-</ol>
-<h3 id="configuring-a-virtual-server-for-a-standard-edge">Configuring a virtual server for a standard edge</h3>
-<p>A virtual server masks the pool of real servers and presents a single IP address.</p>
-<ol>
-<li><p>On the <strong>Load Balancer</strong> tab, select the <strong>Virtual Servers</strong> tab.</p>
-<p><img src="images/vmw-vcd-tab-lb-virtual-servers-reg.png" alt="Pool Servers tab"></p>
-</li>
-<li><p>Click <strong>Add</strong>.</p>
-<p><img src="images/vmw-vcd-btn-lb-add-virtual-server-reg.png" alt="Add virtual server button"></p>
-</li>
-<li><p>In the <em>Add Virtual Server</em> dialog box, name the virtual server, assign a virtual IP address to it and assign it to the server pool you want to mask. You can also choose which services you want to apply to the virtual server.</p>
-<p><img src="images/vmw-vcd-lb-add-virtual-server-reg.png" alt="Add Virtual Server dialog box"></p>
-</li>
-<li><p>When you're finished, click <strong>OK</strong>.</p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
@@ -270,7 +188,7 @@
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -302,7 +220,20 @@
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

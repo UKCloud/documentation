@@ -3,6 +3,8 @@ title: How to deploy and configure the Azure Stack Development Kit | UKCloud Ltd
 description: Deploy and configure the Azure Stack Development Kit (ASDK)
 services: azure-stack
 author: Paul Brown
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Operators
 toc_sub1: How To
@@ -69,12 +71,12 @@ Implement the following steps from the guide: [https://docs.microsoft.com/en-us/
 
 | Line Number | Current Code                                                                             | Details                                                                          |
 |-------------|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| 1372        | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'Virtual Disk') {` | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'null') {` |
+| 1372        | `elseif ((get-disk | Where-Object -FilterScript {$_.isboot -eq $true}).Model -match 'Virtual Disk') {` | `elseif ((get-disk | Where-Object -FilterScript {$_.isboot -eq $true}).Model -match 'null') {` |
 
 To run:
 
 ```powershell
-Get-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" | foreach {($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object {`$====_.isboot -eq `$true}).Model -match 'null') {") -replace "====",""} | Set-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Force
+Get-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" | foreach {($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object -FilterScript {`$====_.isboot -eq `$true}).Model -match 'null') {") -replace "====",""} | Set-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Force
 ```
 
 To verify:
@@ -237,4 +239,4 @@ If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes af
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

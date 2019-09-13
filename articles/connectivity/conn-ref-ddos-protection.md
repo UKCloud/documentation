@@ -3,6 +3,8 @@ title: Protection for Distributed Denial of Service (DDoS) attacks | UKCloud Ltd
 description: This article provides information regarding UKCloud's protection against Distributed Denial of Service (DDoS) attacks
 services: connectivity
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 18:37:23
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -17,11 +19,11 @@ toc_mdlink: conn-ref-ddos-protection.md
 
 ## Overview
 
-UKCloud services are designed to support and enable the government digital strategy and so we host citizen facing solutions for a number of government departments. Some of these high-profile solutions inevitably attract undesirable attention from malicious actors. Unfortunately, if these malicious actors launch a Distributed Denial of Service (DDoS)^ attack of sufficient size, it is possible to overwhelm the capacity of the UKCloud internet connections and affect the ability for users to access other internet facing systems (including those not specifically targeted by the attack).
+UKCloud services are designed to support and enable the government digital strategy and so we host citizen facing solutions for a number of government departments. Some of these high-profile solutions inevitably attract undesirable attention from malicious actors. Unfortunately, if these malicious actors launch a Distributed Denial of Service (DDoS)<sup>^</sup> attack of sufficient size, it is possible to overwhelm the capacity of the UKCloud internet connections and affect the ability for users to access other internet facing systems (including those not specifically targeted by the attack).
 
-UKCloud has enhanced the solutions used to protect the underlying internet-facing infrastructure used by all customers. To this end, UKCloud are focusing on mitigating broad, high-volume attacks, which are most likely to cause collateral damage and noisy neighbour characteristics. These enhancements do not provide adequate mitigation for low-level application-specific attacks or advanced persistent threats and these should be dealt with by customer-specific and customer-managed mitigation solutions. UKCloud customers can procure these customer-specific solutions via UKCloud's Digital Marketplace services (for more information, see the [*Application-tuned DDoS protection Service Scope*](conn-sco-app-ddos.md)).
+UKCloud has enhanced the solutions used to protect the underlying internet-facing infrastructure used by all customers. To this end, UKCloud are focusing on mitigating broad, high-volume attacks, which are most likely to cause collateral damage and noisy neighbour characteristics. These enhancements do not provide adequate mitigation for low-level application-specific attacks or advanced persistent threats and these should be dealt with by customer-specific and customer-managed mitigation solutions. UKCloud customers can procure these customer-specific solutions (for more information, see the [*SiteProtect Advanced DDoS Mitigation Service Scope*](conn-sco-app-ddos.md)).
 
-^ Distributed Denial of Service (DDoS) is a specific type of attack designed to cause the target system to become unavailable. Specifically, this type of attack is highly distributed as the attack traffic comes from a diverse global network of attackers. This is similar to the analogy 'death by a thousand daggers'.
+<sup>^</sup> Distributed Denial of Service (DDoS) is a specific type of attack designed to cause the target system to become unavailable. Specifically, this type of attack is highly distributed as the attack traffic comes from a diverse global network of attackers. This is similar to the analogy 'death by a thousand daggers'.
 
 ## Options considered
 
@@ -75,7 +77,7 @@ DDoS attacks can be extremely sophisticated in nature and there may be a depende
 
 UKCloud would like to emphasise that the protection that has been implemented is designed to defend the community of our customers rather than any individual customer. We are able to mitigate volumetric network level DDoS attacks that not only affect the target solution, but many other internet-connected solutions too (this is sometimes referred to as noisy neighbour or collateral damage). Hence, during a sustained volumetric attack, the solution is designed to provide cleansing to ensure legitimate users can continue to access the application or service.
 
-The solution is not designed to provide a comprehensive security solution for a specific application or service. This is important to understand because if your application or service needs to remain available regardless of the size of the DDoS attack then an additional, application-tuned DDoS service will be required. Further, it should be noted that volumetric DDoS attacks are often used as a smokescreen for more targeted low-and-slow attacks and advanced persistent threats (APT) that exploit application vulnerabilities higher up the stack (for example, Layer 7 exploits such as cross-site scripting). UKCloud recommends that customers consider mitigating these application specific threat vectors via appropriate solutions such as Web Application Firewalls, Content Delivery Networks, robust domain name services, on so on. UKCloud customers can procure an application-tuned DNS based DDoS mitigation solution via UKCloud's Digital Marketplace services (for more information, see the [*Application-tuned DDoS protection Service Scope*](conn-sco-app-ddos.md)).
+The solution is not designed to provide a comprehensive security solution for a specific application or service. This is important to understand because if your application or service needs to remain available regardless of the size of the DDoS attack then an additional, application-tuned DDoS service will be required. Further, it should be noted that volumetric DDoS attacks are often used as a smokescreen for more targeted low-and-slow attacks and advanced persistent threats (APT) that exploit application vulnerabilities higher up the stack (for example, Layer 7 exploits such as cross-site scripting). UKCloud recommends that customers consider mitigating these application specific threat vectors via appropriate solutions such as Web Application Firewalls, Content Delivery Networks, robust domain name services, on so on. UKCloud customers can procure an advanced DDoS mitigation solution (for more information, see the [*SiteProtect Advanced DDoS Mitigation Service Scope*](conn-sco-app-ddos.md)).
 
 ## More information
 
@@ -83,10 +85,10 @@ For more information about DDoS protection, see the following articles:
 
 - [*DDoS Mitigation Service FAQs*](conn-faq-ddos.md)
 
-- [*Application-tuned DDoS protection Service Scope*](conn-sco-app-ddos.md)
+- [*SiteProtect Advanced DDoS Mitigation Service Scope*](conn-sco-app-ddos.md)
 
-- [*Application-tuned DDoS protection FAQs*](conn-faq-app-ddos.md)
+- [*SiteProtect Advanced DDoS Mitigation FAQs*](conn-faq-app-ddos.md)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

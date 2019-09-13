@@ -3,6 +3,8 @@ title: Getting Started Guide for Cloud GPU Visualisation | UKCloud Ltd
 description: Provides information to get up and running with Cloud GPU Visualisation
 services: gpu
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -80,7 +82,7 @@ When using our Cloud GPU service for visualisation workloads, you should conside
 
 ## Provisioning your Cloud GPU service
 
-When your VM is ready, make sure it is powered off and then use My Calls in the UKCloud Portal to raise a service request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can
+When your VM is ready, make sure it is powered off and then use [My Calls](https://portal.skyscapecloud.com/support/ivanti) in the UKCloud Portal to raise a service request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can
 complete the setup of your service:
 
 - Service type: GPU -- Visualisation
@@ -319,4 +321,4 @@ device.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

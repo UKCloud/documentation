@@ -3,6 +3,8 @@ title: How to build an edge gateway using the UKCloud Portal | UKCloud Ltd
 description: Describes how to use the UKCloud Portal to build an edge gateway
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 18/07/2018 12:04:00
 
 toc_rootlink: How To
 toc_sub1:
@@ -72,7 +74,7 @@ If your VDC is located on the Assured OFFICIAL security domain, its edge gateway
 
 7. When the build is complete, the page displays either a success or fail message.
 
-    If the build is successful, you can now start configuring the edge gateway. For a quick guide on how to do this, see [*How to build a virtual machine with UKCloud for VMware*](vmw-how-build-vm.md).
+    If the build is successful, you can now start configuring the edge gateway. For a quick guide on how to do this, see [*How to build a virtual machine with UKCloud for VMware*](vmw-gs-build-vm-vcd.md).
 
     ![Build VDC Status - success](images/vmw-portal-build-edge-success.png)
 
@@ -100,4 +102,4 @@ For information about how to configure your new edge gateway, see:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

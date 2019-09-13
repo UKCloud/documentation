@@ -3,6 +3,8 @@ title: DDoS mitigation service FAQs | UKCloud Ltd
 description: Frequently asked questions for our DDoS mitigation service
 services: connectivity
 author: Matt Warner
+reviewer:
+lastreviewed: 20/07/2018 18:37:23
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -21,7 +23,7 @@ UKCloud has selected one of the leading providers of DDoS mitigation services an
 
 This mitigation service enhances UKCloud's current ability to absorb typical sized DDoS attacks by providing an additional layer of defence against larger and more complex volumetric DDoS attacks. UKCloud utilises a combination of specialist DDoS mitigation appliances hosted within our data centres and terabit scale scrubbing centres that together implement a suite of DDoS countermeasures as appropriate. This, along with superior incident reporting, enables UKCloud to provide you with the details you need when reporting to GovCERT.
 
-You are advised to ensure that suitable application specific protection is in place to mitigate threats at the application layer, such as advanced persistent threats. For this purpose, you can procure an application-tuned DNS based DDoS mitigation solution via UKCloud's Digital Marketplace services. For more information, see [*Application-tuned DDoS protection FAQs*](conn-faq-app-ddos.md).
+You are advised to ensure that suitable application specific protection is in place to mitigate threats at the application layer, such as advanced persistent threats. For this purpose, you can procure an advanced DDoS mitigation solution. For more information, see [*SiteProtect Advanced DDoS Mitigation FAQs*](conn-faq-app-ddos.md).
 
 ## DDoS mitigation services are expensive, will UKCloud be passing these costs onto customers?
 
@@ -33,7 +35,7 @@ This is commonly referred to as a 'false positive', where the DDoS mitigation te
 
 Due to the nature of the UKCloud service, normal interactions between your application and end users will be no different from how they are today. In the event of the UKCloud hosted DDoS mitigation appliances identifying an abnormal load, our specialist DDoS mitigation partner will deploy appropriate countermeasures.
 
-Impact on legitimate traffic has been a high priority consideration during our evaluation process and we are confident that the specialist provider of DDoS mitigation has appropriate controls across people, process and technology to make the likelihood of false positives almost zero.
+Impact on legitimate traffic was a high priority consideration during our evaluation process and we are confident that the specialist provider of DDoS mitigation has appropriate controls across people, process and technology to make the likelihood of false positives almost zero.
 
 That said, if your system is subject to a sustained, high volume attack, UKCloud may choose to deploy specific countermeasures against the attacked IP address (and sometimes adjacent IP addresses), which would affect both the attack traffic and legitimate traffic to that specific IP address. UKCloud will use all reasonable endeavours to contact affected customers if we take this action.
 
@@ -45,11 +47,11 @@ During a DDoS attack, there is negligible additional latency to outbound traffic
 
 ## What is the largest attack that the DDoS mitigation service can withstand?
 
-The specialist provider of DDoS mitigation is designed to withstand multiple simultaneous DDoS attacks. The service is continually being expanded in line with traffic volumes and the capacity of the scrubbing centres currently exceeds 1500 Gbit/s. The typical DDoS attack [1] is less than 2 Gbit/s but attacks of 50 to 60 Gbit/s are not uncommon and some attacks are beginning to exceed 100 Gbit/s.
+The specialist provider of DDoS mitigation is designed to withstand multiple simultaneous DDoS attacks. The service is continually being expanded in line with traffic volumes and the capacity of the scrubbing centres currently exceeds 1500 Gbit/s. The typical DDoS attack<sup>1</sup> is less than 2 Gbit/s but attacks of 50 to 60 Gbit/s are not uncommon and some attacks are beginning to exceed 100 Gbit/s.
 
 UKCloud subscribe to a tier of service designed to mitigate a specific level of attack. If the attack begins to exceed this level, UKCloud will work with the customer under attack and implement 'null routing' for the targeted IP address to ensure that all other customers continue to benefit from normal service.
 
-[1] <http://www.sans.org/reading-room/whitepapers/analyst/ddos-attacks-advancing-enduring-survey-34700>
+<sup>1</sup> <http://www.sans.org/reading-room/whitepapers/analyst/ddos-attacks-advancing-enduring-survey-34700>
 
 ## Does the DDoS mitigation service protect me against all types of 'denial of service' attacks?
 
@@ -57,7 +59,7 @@ No. The service is designed to specifically neutralise the impact of highly dist
 
 Further, if your service is subject to a particularly high volume attack, it is possible that UKCloud will deploy specific countermeasures against your targeted IP address that could effectively make the IP address inaccessible to legitimate users of your service.
 
-To ensure you are protected against all types of denial of service attacks, UKCloud recommends that you consider mitigating these application specific threat vectors via appropriate solutions such as Web Application Firewalls, Content Delivery Networks, robust domain name services, and so on. For this purpose, you can procure an application-tuned DNS based DDoS mitigation solution via UKCloud's Digital Marketplace services. For more information, see [*Application-tuned DDoS protection FAQs*](conn-faq-app-ddos.md).
+To ensure you are protected against all types of denial of service attacks, UKCloud recommends that you consider mitigating these application specific threat vectors via appropriate solutions such as Web Application Firewalls, Content Delivery Networks, robust domain name services, and so on. For this purpose, you can procure an advanced DNS based DDoS mitigation solution. For more information, see [*SiteProtect Advanced DDoS Mitigation FAQs FAQs*](conn-faq-app-ddos.md).
 
 ## What gives UKCloud the right to 'null route' traffic to my service?
 
@@ -65,11 +67,11 @@ In common with most cloud service providers and hosting organisations, the Terms
 
 ## Can I use my own DDoS mitigation service if I have more extensive requirements?
 
-Yes. Indeed UKCloud recommend that customers review their preparedness for DDoS attacks and other attacks such as advanced persistent threats and application layer threats. As an example, some customers choose to use a Content Delivery Network or DNS based DDoS mitigation service to provide additional protection against application layer and DNS layer attacks. Such a solution can absorb and mitigate customer specific attacks before the attack traffic hits the UKCloud platform. UKCloud customers are also able to procure an application tuned DNS based DDoS mitigation solution via UKCloud's Digital Marketplace services. For more information, see [*Application-tuned DDoS protection FAQs*](conn-faq-app-ddos.md).
+Yes. Indeed UKCloud recommends that customers review their preparedness for DDoS attacks and other attacks such as advanced persistent threats and application layer threats. As an example, some customers choose to use a Content Delivery Network or DNS based DDoS mitigation service to provide additional protection against application layer and DNS layer attacks. Such a solution can absorb and mitigate customer specific attacks before the attack traffic hits the UKCloud platform. UKCloud customers are also able to procure an advanced DDoS mitigation solution. For more information, see [*SiteProtect Advanced DDoS Mitigation FAQs*](conn-faq-app-ddos.md).
 
 ## Does the use of these third party DDoS mitigation services affect UKCloud's status as a PSN Accredited service provider?
 
-No. UKCloud has consulted with CESG and CERT-UK during our evaluation of the options. As it stands, traffic passed over the internet can be routed through various systems and countries by BGP, the native routing protocol of the internet. You are advised to ensure that your systems use appropriate encryption (for example, SSL, TLS or IPsec) to protect the confidentiality and integrity of your data. These same controls ensure security is maintained even when that data is passed through the scrubbing centres.
+No. UKCloud consulted with NCSC and CERT-UK during our evaluation of the options. As it stands, traffic passed over the internet can be routed through various systems and countries by BGP, the native routing protocol of the internet. You are advised to ensure that your systems use appropriate encryption (for example, SSL, TLS or IPsec) to protect the confidentiality and integrity of your data. These same controls ensure security is maintained even when that data is passed through the scrubbing centres.
 
 As with many ISPs, the DDoS mitigation service is not provided by a UK sovereign organisation.
 
@@ -85,4 +87,4 @@ If you experience a DDoS attack, you will be informed individually by UKCloud on
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

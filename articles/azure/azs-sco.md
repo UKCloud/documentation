@@ -2,7 +2,9 @@
 title: UKCloud for Microsoft Azure Service Scope | UKCloud Ltd
 description: Outlines important details regarding UKCloud for Microsoft Azure
 services: azure-stack
-author: Andy Webb
+author: Mario Fedato
+reviewer: Mario Fedato
+lastreviewed: 25/06/2019
 
 toc_rootlink: Users
 toc_sub1: Service Scope
@@ -40,7 +42,7 @@ Virtual machines (VMs) provide the basic building blocks of compute resource wit
 
 - Basic and Standard F-series. Optimised for CPU-intensive workloads so have a higher CPU to memory configurations.
 
-You can find the full list of supported machines [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
+You can find the full list of supported virtual machine sizes [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
 
 You can deploy VMs using the UKCloud Azure Stack portal and other tooling.
 
@@ -91,7 +93,7 @@ You can deploy multiple gateway devices and configure the following using either
 
 - Routing – basic custom defined routing can be configured on virtual networks
 
-**Internet-facing solutions** have 8 usable public IP addresses. You can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.
+**Internet-facing solutions** have 10 usable public IP addresses. You can ask for additional public IP addresses by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. We reserve the right to decline the request if you have spare capacity in your existing deployment.
 
 ### Advanced features
 
@@ -154,9 +156,9 @@ We can provide:
 
 - Red Hat Enterprise Linux licensing
 
-For the latest available licences, check the [Service Definition](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/322910045972626-service-definition-document-2018-09-28-1341.pdf).
+For the latest available licences, check the [*Service Definition*](azs-sd.md).
 
-You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you're providing your own licensing for a retrospective discount.
+You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. If you're providing your own licensing, you should inform UKCloud (by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal) for a retrospective discount.
 
 For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.
 
@@ -204,7 +206,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 **Technical Account Managers (TAM).** You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
 
-**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2017/07/UKCloud-Factsheet-Customer-Care.pdf).
+**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
 
 ## Customer responsibilities
 
@@ -214,7 +216,7 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 - The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.
 
-- If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), you ware responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of your CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where you have not provided the required evidence.
+- If access is required over government community networks (PSN, HSCN, Janet or RLI), you are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of your CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where you have not provided the required evidence.
 
 - Management and administration of layers above the hypervisor (OS patching, application performance monitoring, user administration).
 
@@ -250,16 +252,16 @@ If during Emergency Maintenance there is a loss of availability to the service, 
 
 The following documents contain more information about UKCloud for Microsoft Azure and the service options:
 
-- [*UKCloud for Microsoft Azure service definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/630346855069919-service-definition-document-2018-07-30-0941.pdf)
+- [*UKCloud for Microsoft Azure service definition*](azs-sd.md)
 
 - [*UKCloud for Microsoft Azure FAQ*](azs-faq.md)
 
 - [*Getting Started Guide for for Microsoft Azure*](azs-gs.md)
 
-- [UKCloud Terms and Conditions](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-terms-and-conditions-2018-05-21-1255.pdf)
+- [UKCloud Terms and Conditions](../other/other-ref-terms-and-conditions.md)
 
 - [*SLA Definition*](../other/other-ref-sla-definition.md)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

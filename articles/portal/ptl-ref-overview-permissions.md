@@ -3,6 +3,8 @@ title: Portal permissions | UKCloud Ltd
 description: A guide to the various permissions available to Portal users and what behaviours they enable
 services: portal
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 12:12:33
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -67,11 +69,11 @@ The roles exposed are:
 
 - vApp User
 
-- Console Only 
+- Console Only
 
-You can find further details of these roles in Chapter 11 of the vCloud Director Administrator's Guide.
+You can find further details of these roles in the [vCloud Director Administrator's Guide](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.admin.doc/GUID-BC504F6B-3D38-4F25-AACF-ED584063754F.html).
 
-In addition, UKCloud have created an API Only role, that restricts users to accessing vCloud Director solely via the API - no GUI access. 
+In addition, UKCloud have created an API Only role, that restricts users to accessing vCloud Director solely via the API, with no GUI access.
 
 ## Permissions for Cloud Storage
 
@@ -91,4 +93,4 @@ Users with **Read** permissions can view showback information from the Protectiv
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

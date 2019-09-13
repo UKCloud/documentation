@@ -10,3 +10,11 @@
   items:
   - name: Add and remove users
     href: sra-how-add-remove-users.md
+- name: Service Definition
+  items:
+  - name: Secure Remote Access Service Definition
+    href: sra-sd.md
+- name: Service Scope
+  items:
+  - name: Secure Remote Access Service Scope
+    href: sra-sco.md

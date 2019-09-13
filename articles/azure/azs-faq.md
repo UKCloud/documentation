@@ -3,6 +3,8 @@ title: UKCloud for Microsoft Azure FAQs | UKCloud Ltd
 description: Frequently asked questions for UKCloud for Microsoft Azure
 services: azure-stack
 author: Matt Warner
+reviewer: Mario Fedato
+lastreviewed: 25/06/2019
 
 toc_rootlink: Users
 toc_sub1: FAQs
@@ -30,33 +32,35 @@ UKCloud's strategy is to provide a multi-cloud platform and UKCloud for Microsof
 
 ### What is provided in this service?
 
-The first release of UKCloud for Microsoft Azure IaaS provides:
+UKCloud for Microsoft Azure IaaS currently provides:
 
 #### Compute
 
-Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic compute building blocks in Azure Stack. Initial machine types supported are:
+Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic compute building blocks in Azure Stack. Virtual machine sizes supported are:
 
-- General purpose: Basic A series, Standard A & D Series
+- General purpose: Basic A series, standard A & Av2 series, D & Dv2 series, DS & DSv2 series
 
-- Memory enhanced: DS Series
+- Memory optimised: Memory optimised D & Dv2 series, memory optimised DS & DSv2 series
 
-- Compute optimised: F Series
+- Compute optimised: F series, Fs & Fsv2 series
+
+You can find the full list of supported virtual machine sizes [here](https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes).
 
 #### Storage
 
-- Azure Blob Storage (page): Used to support virtual machine disks. Good for randomly accessed large files.
+- Azure Blob Storage (block): Object storage. Good for storing documents, videos and images.
 
-- Azure Blob Storage (block): Object storage. Good for storing documents, videos and images for example.
+- Azure Blob Storage (page): Optimised for virtual machine disks. Good for randomly accessed large files.
 
-- Azure Blob Storage (append): Good for log files.
+- Azure Blob Storage (append): Good for log files. Can only be updated by appending to the end of the file.
 
 - Azure Queue Storage: Message queue as a service. Good for asynchronous scale out micro-services.
 
-- Azure Table Storage: NoSQL database service. Good for highly scalable, eventually consistent database support
+- Azure Table Storage: NoSQL database service with schemaless design. Good for highly scalable, consistent database support.
 
 #### Network
 
-- Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure. This can be configured via the UI, API and other tooling.
+- Virtual networks - Configure virtual private clouds and create and manage your private address space within Azure Stack. This can be configured via the UI, API and other tooling.
 
 - Load balancers (IPv4 only) - Deploy basic load balancers.
 
@@ -66,7 +70,7 @@ Virtual machines (VMs), comprised of CPU, memory and storage, provide the basic
 
 ### What technology is UKCloud for Microsoft Azure based on?
 
-UKCloud for Microsoft Azure is based on a CISCO implementation of Microsoft's Azure Stack.
+UKCloud for Microsoft Azure is based on a Cisco implementation of Microsoft's Azure Stack.
 
 ### Are there any differences between Azure and UKCloud for Microsoft Azure?
 
@@ -74,21 +78,25 @@ While UKCloud for Microsoft Azure is developed by Microsoft, some services will 
 
 ### Does UKCloud offer an SLA for this service?
 
-The SLA for this service is 99.95%. For further details, review the UKCloud for Microsoft Azure Service Definition.
+The SLA for this service is 99.95%. For further details, review the [*UKCloud for Microsoft Azure Service Definition*[azs-sd.md].
+
+### Where can I find additional resources to assist me in administering my UKCloud for Microsoft Azure environment?
+
+UKCloud maintains an Azure Stack repository, which contains ARM templates, custom script extensions and more. You can find this repository found [here](https://github.com/UKCloud/AzureStack).
 
 ## Networking
 
 ### How many IP addresses do I get?
 
-You're initially allocated three external IP addresses with a new compute service.
+You're initially allocated ten public IP addresses with a new compute service.
 
 ### Do you offer dynamic or static IP addresses?
 
-Dynamic internet IP addresses are selected from a pre-defined shared pool.
+Dynamic and static public IP addresses are available from a pre-defined shared pool.
 
 ### What firewall services are available?
 
-Firewall services are provided by Azure Security Groups. More information is available [here](https://docs.microsoft.com/en-gb/azure/virtual-network/virtual-network-vnet-plan-design-arm#security).
+Firewall services are provided by Azure network security groups. More information is available [here](https://docs.microsoft.com/en-gb/azure/virtual-network/virtual-network-vnet-plan-design-arm#security).
 
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
@@ -96,17 +104,17 @@ All production services are reported through the UKCloud [service status page](h
 
 ### Are external Domain Name System (DNS) services available?
 
-Yes. A similar service to Azure DNS is available. There are some limitations such as no AAAA support.
+Yes, a similar service to Azure DNS is available. There are some limitations such as no AAAA support.
 
 ### Do you offer load balancing?
 
-Yes. This will be offered as an option. You can also deploy your own load balancer.
+Yes, this is offered as an option. You can also deploy your own load balancer.
 
 ## Storage
 
 ### How much storage do I get?
 
-You'll get 4TiB, which will be shared between blob, page blob, table and queue storage.
+You'll get 4TiB unmanaged storage, which will be shared between blob, table and queue storage types. You will also get 2 TiB of managed disk storage.
 
 ### Is storage persistent?
 
@@ -124,17 +132,17 @@ The UKCloud Azure Stack portal requires port 80 (HTTP) and port 443 (HTTPS) to b
 
 ### How do I access my solutions via government networks?
 
-UKCloud for Microsoft Azure will be available on the internet, HSCN, Janet, RLI and PSN networks. Initial access will be from the appropriate UKCloud Portal.
+UKCloud for Microsoft Azure is currently available via the internet. Community network support such as HSCN, Janet, RLI and PSN is planned for the future.
 
 ### What reports can I get about my UKCloud for Microsoft Azure solution?
 
-All reporting is via the UKCloud Azure Stack portal, which provides a variety of reports on the dashboard.
+Reporting is via the UKCloud Azure Stack portal, which provides a variety of reports on the dashboard.
 
 You can also interact with the API to pull data into your own reporting solutions.
 
 ### Is this a managed service?
 
-No. UKCloud maintains and manages the underlying infrastructure that your solution is based on, but we do not manage your UKCloud for
+No, UKCloud maintains and manages the underlying infrastructure that your solution is based on, but we do not manage your UKCloud for
 Microsoft Azure solution.
 
 ### How do I manage my services?
@@ -143,7 +151,7 @@ This service is designed to be managed using the UKCloud Azure Stack portal. You
 
 ### What tools can I use to manage my service?
 
-You can use many common DevOps tools, such as ARM, Ansible, Terraform and PowerShell, to interface with UKCloud for Microsoft Azure. UKCloud for Microsoft Azure also provides a User Interface (UI) to manage the infrastructure via a browser with the same experience as Azure Public Cloud.
+You can use many common DevOps tools, such as ARM, Ansible, Terraform and PowerShell, to interface with UKCloud for Microsoft Azure. UKCloud for Microsoft Azure also provides a User Interface (UI) to manage the infrastructure via a browser with a similar experience to Azure Public Cloud.
 
 ### How long will it take to provision the service?
 
@@ -167,7 +175,7 @@ As far as possible, emergency maintenance of UKCloud's infrastructure takes plac
 
 ### Can I configure email alerts from the portal?
 
-Yes. You can receive portal notifications to the email address associated with your UKCloud Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is currently not available in the Elevated Portal.
+Yes, you can receive portal notifications to the email address associated with your UKCloud Portal login. Notifications provide information about updates to UKCloud services, in addition to maintenance and incident notifications. This feature is currently not available in the Elevated Portal.
 
 ## Onboarding
 
@@ -185,7 +193,7 @@ This can be requested via the [UKCloud website trial page](https://ukcloud.com/f
 
 ### What do I do when my trial comes to an end?
 
-During your 30 day trial period, you will be contacted regularly by your Customer Success Manager who will be on hand to assist you with using the service. When your trial is nearing the 30 day limit, your Account Manager will contact you to discuss the outcome of the trial. If you wish to cancel the service, this will be done for you, and any data will be deleted and the service will be decommissioned. If you wish to commit to using the service, your trial will convert to a full paid service, and you will then be billed according to the Service Definition.
+During your 30 day trial period, you will be contacted regularly by your Customer Success Manager who will be on hand to assist you with using the service. When your trial is nearing the 30 day limit, your Account Manager will contact you to discuss the outcome of the trial. If you wish to cancel the service, this will be done for you, and any data will be deleted and the service will be decommissioned. If you wish to commit to using the service, your trial will convert to a full paid service, and you will then be billed according to the [*Service Definition*](azs-sd.md).
 
 ## Billing and legal
 
@@ -217,7 +225,7 @@ The service is hosted in the UK and operated by UK government security-cleared s
 
 ### Can systems on different UKCloud security domains communicate with one another?
 
-UKCloud\'s Cross Domain Security Zone enables you to use the UKCloud-defined and managed UKCloud Guard, or a customer-designed and managed Walled Garden to enable communication between platforms.
+UKCloud's Cross Domain Security Zone enables you to use a customer-designed and managed Walled Garden to enable communication between platforms.
 
 For more information, see our Cross Domain Security Zone documentation.
 
@@ -229,4 +237,4 @@ For more information about this service, see our [*Protective Monitoring FAQs*](
 
 ## Feedback
 
-If you find an issue with this article, click Improve this Doc to suggest a change. If you have an idea for how we could improve any of our services, visit UKCloud Ideas. Alternatively, you can contact us at products@ukcloud.com.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

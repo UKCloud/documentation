@@ -3,6 +3,8 @@ title: Understanding UKCloud for Microsoft Azure | UKCloud Ltd
 description: Overview of UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: Reference
@@ -17,7 +19,7 @@ toc_mdlink: azs-ref-overview.md
 
 ## Introduction
 
-UKCloud for Microsoft Azure provides you with new options to harness Microsoft Azure alongside other cloud platforms, including Oracle, VMware and OpenStack. This gives you the flexibility to accommodate diverse workloads within a low latency, accredited platform with native connectivity to non-cloud workloads in Crown Hosting and the networks that are vital to the public sector: from PSN Protected to N3/HSCN and RLI.
+UKCloud for Microsoft Azure provides you with new options to harness Microsoft Azure alongside other cloud platforms, including Oracle, VMware and OpenStack. This gives you the flexibility to accommodate diverse workloads within a low latency, accredited platform with native connectivity to non-cloud workloads in Crown Hosting and the networks that are vital to the public sector: from PSN to HSCN and RLI.
 
 This article provides an introduction to UKCloud for Microsoft Azure and helps you get up and running.
 
@@ -112,8 +114,8 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
     Then run the following commands:
 
     ```powershell
-    Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
-    Connect-AzureRmAccount -EnvironmentName "AzureStackAdmin"
+    Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+    Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
     Get-AzureRmVMImagePublisher -Location "frn00006" | Get-AzureRmVMExtensionImageType | Get-AzureRmVMExtensionImage | `
       Select-Object -Property Type, Version | Format-Table -AutoSize
     ```
@@ -170,6 +172,10 @@ For more information about UKCloud for Microsoft Azure, see:
 
 - [*UKCloud Azure Stack portal overview video*](azs-vid-overview.md)
 
+## Related repositories
+
+- [*UKCloud Azure Stack Repository*](https://github.com/UKCloud/AzureStack)
+
 ## Feedback
 
-If you have any comments on this article, or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -3,6 +3,8 @@ title: How to install the GeoDrive Client 2.0| UKCloud Ltd
 description: Installation Guide for the GeoDrive Client 2.0
 services: cloud-storage
 author: Dan Baker
+reviewer:
+lastreviewed: 05/10/2018 09:28:05
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -19,7 +21,7 @@ toc_mdlink: cs-how-install-geodrive2-client.md
 
 The GeoDrive 2.0 Client is a free application that runs on Windows and Windows Server, exposing UKCloud Cloud Storage as file systems. It’s designed as an easy way to use object storage by enabling Windows applications to interface with Cloud Storage servers using the popular S3 REST API.
 
-If you require a fully-integrated cloud gateway appliance with features like advanced deduplication and location caching, you may want to consider [CloudArrary](cs-how-install-cloudarray.md) as an alternative.
+If you require a fully-integrated cloud gateway appliance with features like advanced deduplication and location caching, you may want to consider [CloudArray](cs-how-install-cloudarray.md) as an alternative.
 
 > [!NOTE]
 > Unlike The GeoDrive 2.0 Client, CloudArray is not a free application.
@@ -42,7 +44,7 @@ The GeoDrive 2.0 Client offers a single caching option:
 
 ## Installing the GeoDrive 2.0 Client
 
-1. Navigate to the following URL to download the ZIP file that contains the [The GeoDrive 2.0 Client installer](https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/GeoDrive.2_x64.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1578565704&Signature=kVEbb9%2B%2FD0yJOgErtG9CAdsWqb0%3D).
+1. Navigate to the following URL to download the ZIP file that contains the [The GeoDrive 2.0 Client installer](https://cas.frn00006.ukcloud.com/Docs/Cloud_Storage/GeoDrive.2_x64.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1598978627&Signature=%2Bz9yC%2F2ZdRVrT7IOH6QG35%2Fm2H8%3D).
 
 2. Extract and run the setup launcher from the ZIP file.
 
@@ -82,7 +84,7 @@ The GeoDrive 2.0 Client offers a single caching option:
 
         - PSN Assured: `cas.cor00005.psnassured.ukcloud.com`
 
-        - N3/HSCN: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
+        - HSCN: `cas.cor00005.ukcloud.thirdparty.nhs.uk/`
   
 
     - **Farnborough (Assured)**
@@ -91,7 +93,7 @@ The GeoDrive 2.0 Client offers a single caching option:
 
         - PSN Assured: `cas.frn00006.psnassured.ukcloud.com`
 
-        - N3/HSCN: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
+        - HSCN: `cas.frn00006.ukcloud.thirdparty.nhs.uk/`
 
 10. Deselect the **Port Override** check box.
 
@@ -99,8 +101,10 @@ The GeoDrive 2.0 Client offers a single caching option:
 
 12. The rest of the fields on the *Settings* page enable you to configure the root directory, encryption and compression settings.
 
+    If not already selected, make sure to select the **Write all files and folders in lower case** check box.
+
     > [!TIP]
-    > Configure these fields appropriately for your environment, or accept the defaults. We suggest you give the root directory a friendlier name, so that you can more easily identify it.
+    > Configure the remaining fields appropriately for your environment, or accept the defaults. We suggest you give the root directory a friendlier name, so that you can more easily identify it.
 
     ![Settings page](images/cs-ecs-installtion-step-three.png)
 
@@ -145,4 +149,4 @@ This guide has shown you how to install and configure the GeoDrive Client 2.0 fo
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -1,7 +1,5 @@
 - name: FAQs
   items:
-  - name: Application-tuned DDoS protection FAQs
-    href: conn-faq-app-ddos.md
   - name: Bandwidth monitoring FAQs
     href: conn-faq-bandwidth-monitoring.md
   - name: DDoS mitigation service FAQs
@@ -10,8 +8,6 @@
     href: conn-faq-esn.md
   - name: General connectivity FAQs
     href: conn-faq.md
-  - name: Global load balancing FAQs
-    href: conn-faq-glb.md
   - name: HSCN connectivity FAQs
     href: conn-faq-hscn.md
   - name: HybridConnect FAQs
@@ -24,6 +20,10 @@
     href: conn-faq-psn.md
   - name: PSN for Policing and enhanced regime FAQs
     href: conn-faq-psn-police.md
+  - name: SiteProtect Advanced DDoS Mitigation FAQs
+    href: conn-faq-app-ddos.md
+  - name: UltraDNS FAQs
+    href: conn-faq-glb.md
 - name: How To
   items:
   - name: Migrate from N3 to HSCN
@@ -46,8 +46,12 @@
     href: conn-ref-ddos-protection.md
   - name: PSN Assured - permitted standard ports
     href: conn-ref-psn-permitted-ports.md
+  - name: PSN connection compliance
+    href: conn-ref-psn-connection.md
   - name: PSN flattening
     href: conn-ref-psn-flattening.md
+  - name: Requesting Janet connectivity
+    href: conn-ref-janet.md
   - name: Telecommunications Service Provider engagement
     href: conn-ref-telco-enagagement.md
   - name: Understanding PSN core services
@@ -56,9 +60,9 @@
     href: conn-ref-ids.md
 - name: Service Scope
   items:
-  - name: Application-tuned DDoS protection Service Scope
+  - name: SiteProtect Advanced DDoS Mitigation Service Scope
     href: conn-sco-app-ddos.md
-  - name: Global load balancing Service Scope
+  - name: UltraDNS Service Scope
     href: conn-sco-glb.md
 - name: Troubleshooting
   items:
