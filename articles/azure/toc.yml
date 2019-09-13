@@ -22,6 +22,8 @@
       href: azs-how-create-scale-set.md
     - name: Create a Service Fabric cluster
       href: azs-how-create-service-fabric-portal.md
+    - name: Create a site-to-site connection between Azure Stack and Public Azure - Portal
+      href: azs-how-create-S2S-VPN-azurestack-to-azure.md
     - name: Create an Azure Kubernetes Service cluster
       href: azs-how-create-aks.md
     - name: Deploy an Azure Site Recovery template to Azure Stack - PowerShell
