@@ -11,7 +11,7 @@ toc_sub1: How To
 toc_sub2: Create a Site-to-Site VPN Connection
 toc_sub3:
 toc_sub4:
-toc_title: Create a site-to-site connection between Azure Stack and Public Azure - Portal
+toc_title: Create a site-to-site VPN connection between Azure Stack and Public Azure - Portal
 toc_fullpath: Users/How To/Create a VPN connection/azs-how-create-S2S-VPN-azurestack-to-azure.md
 toc_mdlink: azs-how-create-S2S-VPN-azurestack-to-azure.md
 ---
