@@ -20,7 +20,7 @@ toc_mdlink: azs-how-configure-mars-backups-powershell.md
 
 ## Overview
 
-This article explains how to setup the Microsoft Azure Recovery Services (MARS) agent to backup files and folders from Azure Stack VMs to Recovery Services vaults.
+This article explains how to set up the Microsoft Azure Recovery Services (MARS) agent to backup files and folders from Azure Stack VMs to Recovery Services vaults.
 
 Recovery Services vaults store all backups and recovery points you create over time, and contains the backup policy applied to backed up machines.
 
