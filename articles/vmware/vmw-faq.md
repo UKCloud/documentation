@@ -201,6 +201,15 @@ Customers can choose to deploy the firewall technology of their choice.
 
 This service, how to order it, and the constraints it may place on operation, is fully documented within our Knowledge Centre.
 
+### What is the Advanced Management bundle ?
+
+The Advanced Management bundle includes Distributed Firewall (DFW), Distributed Logical Router (DLR), Layer 2 VPN and vROPs Tenant Monitoring and Metrics.
+
+> [!NOTE]
+> * The Advanced Management bundle may not be available in all regions and zones.
+> 
+> * The bundle is enabled at an organisation (vOrg) level, therefore all VMs within the organisation will be uplifted. See the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf) for details.
+
 ### How does UKCloud provide urgent maintenance notifications and incident reports?
 
 You can view these on the [Notifications page](https://portal.ukcloud.com/notifications) of the UKCloud Portal. In addition, you can view Service Status information on the [Service Status page](http://status.ukcloud.com/).
