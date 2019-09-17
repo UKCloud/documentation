@@ -3,8 +3,8 @@ title:  CyberScore from UKCloud Service Scope | UKCloud Ltd
 description: Outlines important details regarding CyberScore from UKCloud
 services: third-party
 author: Sophie Wake
-reviewer: 
-lastreviewed: 
+reviewer: Sue Highmoor
+lastreviewed: 17/09/2019
 toc_rootlink: CyberScore
 toc_sub1: 
 toc_sub2:

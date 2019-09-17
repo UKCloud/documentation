@@ -3,6 +3,8 @@ title: CyberScore from UKCloud Service Definition | UKCloud Ltd
 description: Provides an overview of what is provided by the CyberScore from UKCloud service
 services: third-party
 author: Sue Highmoor
+reviewer: Sue Highmoor
+lastreviewed: 17/09/2019
 toc_rootlink: CyberScore
 toc_sub1: 
 toc_sub2:
