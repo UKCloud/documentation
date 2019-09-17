@@ -79,7 +79,7 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 [Portworx Enterprise from UKCloud](../third-party/third-sd-portworx.md)
 
-[XQ Cyber CyberScore from UKCloud](../third-party/third-sd-cyberscore.md)
+[CyberScore from UKCloud](../third-party/third-sd-cyberscore.md)
 
 ## Pricing Guide
 
