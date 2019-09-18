@@ -37,7 +37,7 @@ This service provides a platform powered by Oracle VM (OVM) technology that is f
 
 ### UKCloud for VMware
 
-This compute service, powered by VMware, provides a trusted, connected and flexible cloud platform to deliver critical enterprise applications in the cloud. This service offers different service levels, virtual machine (VM) sizes, security domains (Assured OFFICIAL and Elevated OFFICIAL), connectivity and data protection options.
+This compute service, powered by VMware, provides a trusted, connected and flexible cloud platform to deliver critical enterprise applications in the cloud. UKCloud for VMware offers different service levels, virtual machine (VM) sizes, security domains (Assured OFFICIAL and Elevated OFFICIAL), connectivity and data protection options.
 
 ## Multi-cloud enabling services
 
@@ -47,11 +47,11 @@ This service offers routine operating system (OS) management for your VMs. It he
 
 ### Cloud GPU
 
-This service enables you to use UKCloud for VMware to meet the specialist requirements of some advanced applications, while supporting visualisation and compute workloads. It improves the computing power available to increase the speed at which certain applications are delivered.
+This service enables you to meet the specialist requirements of some advanced applications, while supporting visualisation and compute workloads. It improves the computing power available to increase the speed at which certain applications are delivered. This is a supporting service and is compatible with the UKCloud for VMware, UKCloud for OpenStack and High Performance Compute products.
 
 ### Cloud Storage
 
-This service is a secure and highly adaptable object storage platform, which is natively optimised for cloud storage in terms of scale, resilience and accessibility.
+A secure and highly adaptable object storage platform, which is natively optimised for cloud storage in terms of scale, resilience and accessibility.
 
 ### Cross Domain Security Zone (CDSZ)
 
@@ -63,11 +63,11 @@ Dedicated Compute v2 is a flexible solution designed for where guaranteed perfor
 
 ### Disaster Recovery as a Service (DRaaS)
 
-This service (powered by Zerto) makes it easy to replicate and recover VMs to the cloud, by failing over your own data centre to UKCloud.
+This service (powered by Zerto) makes it easy to replicate and recover VMs to the cloud, by failing over from your own data centre to UKCloud.
 
 ### Extended Network Support from UKCloud
 
-As a natural extension of the Basic Managed Compute from UKCloud service, our Extended Network Support from UKCloud enables you to choose from an extensive list of officially supported network appliances for which UKCloud undertakes the initial deployment (or assumes ownership of valid existing networks) and configuration of the various elements of your virtual network, along with the ongoing monitoring and support, further enabling you to focus on your applications and business outcomes rather than worry about your connectivity uptime.
+As a natural extension of the Basic Managed Compute from UKCloud service, our Extended Network Support from UKCloud enables you to choose from an extensive list of officially supported network appliances for which UKCloud undertakes the initial deployment (or assumes ownership of valid existing networks) and configuration of the various elements of your virtual network, along with the ongoing monitoring and support, further enabling you to focus on your applications and business outcomes rather than worrying about your connectivity uptime.
 
 ### High Performance Compute (HPC)
 
@@ -83,7 +83,7 @@ This service (powered by Zerto) makes it easy to replicate and migrate applicati
 
 ### Multi-Cloud Backup Storage (MCBS)
 
-UKCloud’s MCBS provides a backup target that is accessible from every cloud within UKCloud’s multi-cloud platform, as well as being an off-site target for any on-premises data back-up. This service utilises a technology that is common across backup products such as Veritas NetBackup/Backup Exec and Veeam, along with native hooks for databases backups from Oracle, DB2, SQL Server and Hadoop. In addition, this service can be attached as a backup target within your file system, enabling a wide array of applications to utilise this backup service.
+UKCloud’s MCBS provides a backup target that is accessible from every cloud within UKCloud’s multi-cloud platform, as well as being an off-site target for any on-premises data back-up. This service utilises a technology that is common across backup products such as Veritas NetBackup/Backup Exec and Veeam, along with native hooks for database backups from Oracle, DB2, SQL Server and Hadoop. In addition, this service can be attached as a backup target within your file system, enabling a wide array of applications to utilise this backup service.
 
 ### Multi-Cloud for Tier2
 
@@ -99,7 +99,7 @@ This service provides single-tenant compute, where your compute needs are hosted
 
 ### Private Cloud for Storage
 
-This service provides single-tenant storage, where your data is hosted in one of our data centres (to gain the benefits of our Assured OFFICIAL and Elevated OFFICIAL security domains), or in your Crown Hosting Data Centre (CHDC).
+This service provides single-tenant storage, where your data is hosted either in one of our data centres (to gain the benefits of our Assured OFFICIAL and Elevated OFFICIAL security domains), or in your Crown Hosting Data Centre (CHDC).
 
 ### Secure Remote Access (SRA)
 
@@ -127,7 +127,7 @@ Commvault Complete Backup & Recovery includes everything you need to conduct bac
 
 ### HyTrust DataControl from UKCloud
 
-HyTrust DataControl offers powerful, data-at-rest encryption with integrated key management to secure VMs and their data throughout their lifecycle - from deployment to decommission. HyTrust DataControl is easy to deploy and manage and allows for consistent approaches across all infrastructure environments, including support for any cloud platform. It also supports the highest levels of availability by offering the ability to rekey workloads without taking applications offline.
+HyTrust DataControl offers powerful, data-at-rest encryption with integrated key management to secure VMs and their data throughout their lifecycle - from deployment to decommission. HyTrust DataControl is easy to deploy and manage, and allows for consistent approaches across all infrastructure environments, including support for any cloud platform. It also supports the highest levels of availability by offering the ability to rekey workloads without taking applications offline.
 
 ### Moogsoft AIOps from UKCloud
 
@@ -161,7 +161,7 @@ A service that helps you review your current usage or understand how to optimise
 
 #### Cloud Transformation Service
 
-This service provides the help you might need to adopt and harness the power of cloud Native transformation. Cloud native applications fully utilise the features of platforms such as OpenStack, OpenShift and Azure Stack. This transformation service provides the expertise to introduce teams to new ways of developing and deploying applications.
+This service provides the help you might need to adopt and harness the power of cloud native transformation. Cloud native applications fully utilise the features of platforms such as OpenStack, OpenShift and Azure Stack. This transformation service provides the expertise to introduce teams to new ways of developing and deploying applications.
 
 ### Software-based support services
 
