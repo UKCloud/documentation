@@ -298,7 +298,7 @@ Snapshot Details displays the information regarding instances attached to the sn
 **Table 8: Snapshot Details Info. & Instance details tab.**
 |Details|	Description|
 |---|---|
-|Info.|
+|<center><b><i>Info.</center></b></i>|
 |Name|	Displays name of the snapshot.|
 |Description|	Displays brief description of the snapshot.|
 |Snapshot Type|	Displays the type of snapshot. Snapshot type can be Full or Incremental.|
@@ -309,7 +309,7 @@ Snapshot Details displays the information regarding instances attached to the sn
 |Restore Size|	Displays size of the restore, if user wants to restore this snapshot.|
 |Progress|	Displays the progress of snapshot as a percentage of completed task.|
 |VMs|	Displays the list of VMs in the selected snapshot.|
-|VMs – Instance Info.|
+|<center><b><i>VMs – Instance Info.</center></b></i>|
 |Name|	Displays the name of the Instance.|
 |Status|	Displays the status of the Instance.|
  
@@ -321,7 +321,7 @@ Security tab lists the security groups attached to the Instance. The Security ta
 **Table 9: Security tab.**
 |Details|	Description|
 |---|---|
-|Security Group	 |
+|<center><b><i>Security Group</center></b></i>	 |
 |Name|	Displays the name of the security group, which the VM is using.|
 |Type|	Displays the type of the security group.|
 Flavor tab describes the flavor attached to the Instance. The Flavor tab details are displayed in Figure 21 and described in Table 10.
@@ -361,7 +361,7 @@ Volume tab describes the volume attached to the instance. The Volume tab details
 
 Misc. tab gives information about the UUID of the Instance. The Misc. tab details are displayed in Figure 24.
  
-*Figure 24: Snapshot Details – Misc. tab.
+*Figure 24: Snapshot Details – Misc. tab.*
 ### 5.2 Mount a Snapshot
 TrilioVault allows you to view or download a file from the snapshot. Any changes to the files or directories when a snapshot is mounted are temporary and are discarded when the snapshot is unmounted. Mounting is a faster way to restore a single or multiple files. To mount a snapshot follow these steps.
 TrilioVault ships with a ubuntu based file manager image. This image includes a web based file manager application that helps with browsing and download files when snapshot is mounted. Before you create a File Manager instance, File Manager (a.k.a Recovery Manager) image needs to be uploaded to the Glance. The cloud administrator can upload the image to Glance and mark the image public so that every tenant will have access to the image. File Manager image includes a qemu guest agent. TrilioVault data mover communicates with the qemu agent to map backup images and discover file systems in the backup images. Since the file manager image includes qemu guest agent, the image should be uploaded to glance with property hw_qemu_guest_agent=yes so Nova will create a qmp channel when creating an instance from this image. TrilioVault horizon plugin uses a special property tvault_recovery_manager, when set to yes it will filter out instances that don’t have this property. If a tenant has a huge number of instances, setting this property on the image will help TrilioVault horizon plug-in present only the instances whose image has this property. In this release we only support launching File Manager instance with virtio bus so please set hw_disk_bus to virtio. Use the following command to upload the image to Glance and mark it as public image and set the property.
@@ -521,7 +521,7 @@ To obtain Restore details information, follow these steps.
 **Table 15: Restore Details and Description.**
 |Fields|	Description|
 |---|---|
-|Info	| 
+|<center><b><i>Info</center></b></i>	| 
 |Name|	Displays the name of Selective Restore.|
 |Description|	Displays the description of the Selective Restore.|
 |Restore Type|	Displays the type of restore. Restore can be One-click or Selective.|
@@ -531,7 +531,7 @@ To obtain Restore details information, follow these steps.
 |Progress Message|	Displays the progress message of the restore.|
 |Progress|	Displays the status of the progress.|
 |Host|	Displays the host name where the restore operation is taking place.|
-|VMs	 |
+|<Center><b><i>VMs</center></b></i>	 |
 |Status|	Displays the status of the instance.|
 |ID	|Displays the ID of the instance.|
 
