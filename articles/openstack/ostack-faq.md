@@ -4,7 +4,7 @@ description: Frequently asked questions for UKCloud for OpenStack
 services: openstack
 author: Matt Warner
 reviewer: stevedicko
-lastreviewed: 20/08/2019 15:17:17
+lastreviewed: 18/09/2019 15:17:17
 toc_rootlink: FAQs
 toc_sub1:
 toc_sub2:
@@ -401,7 +401,10 @@ At the end of your free trial, you can seamlessly move to a billed service, leve
 
 UKCloud for OpenStack is a cloud platform built specifically for cloud native applications which have been engineered to use stateless, disposable instances.
 
-UKCloud does not provide automated backups of projects or instances, however it does allow consumers to create snapshots of their instances via the OpenStack dashboard or programmatically via the API. These snapshots when used in conjunction with deployment orchestration tools or infrastructure as code templates such as HEAT allow for environments to be rapidly replicate, redeploy or scale environments.
+For customers looking to add a layer of data protection within their environments, UKCloud does offer the following;
+
+- **Snapshots** - Consumers can create snapshots of their instances via the OpenStack dashboard or programmatically via the API. These snapshots when used in conjunction with deployment orchestration tools or infrastructure as code templates such as HEAT allow for environments to be rapidly replicate, redeploy or scale environments.
+- **Self-service backup and recovery (Available November 2019)** - UKCloud has partnered with Trilio to deliver a fully OpenStack integrated, self-service backup & restoration capability that can be driven from within the Horizon dashboard or via the OpenStack API.
 
 ### Can I create scheduled snapshots?
 
@@ -419,7 +422,23 @@ The RPO is totally within the customers control. For example, you could programm
 
 By default, all snapshots are stored to our persistent block storage to provide data resilience.
 
-Persistent block storage will be charged by the GiB.
+### How much does UKCloud charge for snapshots?
+
+The functionality of snapshots is delivered free of charge to customers as part of the OpenStack service. The only charge for snapshots will be for the Persistent block storage your snapshots consumed, which will be charged by the GiB.
+
+### How can I use the TrilioVault self-service backup & restoration service?
+
+Please see [How to use TrilioVault self-service backup and restoration within OpenStack](test) for further details
+
+### Does UKCloud charge for the TrilioVault self-service backup & restoration service?
+
+UKCloud will charge a nominal monthly fee per instance being protected by this service. UKCloud will charge by the whole month for any part month consumption of this service.
+
+Pricing details can be found within the OpenStack section of the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf)
+
+### Are there any additional fees for the TrilioVault self-service backup & restoration service?
+
+This service utilises UKCloud's [Multi-Cloud Backup Storage](https://docs.ukcloud.com/articles/mcbs/mcbs-sd.html) service as an off-platform storage target for backups, therefore any storage your backups consume will be charged the prevailing rate per GiB in addition to the monthly fee for the self-service backup & restoration service.
 
 ### Can I use my own backup software?
 
