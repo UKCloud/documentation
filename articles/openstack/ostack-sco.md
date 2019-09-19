@@ -4,7 +4,7 @@ description: Outlines important details regarding Cloud Native Infrastructure
 services: openstack
 author: Steve Hall
 reviewer:
-lastreviewed: 19/07/2018 15:17:17
+lastreviewed: 18/09/2019 15:17:17
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -52,6 +52,8 @@ The following OpenStack projects/services are available with UKCloud for OpenSta
 - Barbican Key Management Services (*Excludes COR00005 & FRN00006 Regions*)
 
 - Octavia Load Balancing as a Service (*Excludes COR00005 & FRN00006 Regions*)
+
+- Self-service backup and restoration, powered by TrilioVault (*Generally available November 2019)
 
 UKCloud will look to add additional OpenStack projects to this service through future releases.
 
@@ -138,7 +140,7 @@ Although designed to be a large-scale cloud platform, we strongly advise that wh
 
 The following features published in the [*UKCloud for OpenStack Service Definition*](ostack-sd.md) are not currently available:
 
-- Janet & RLI connectivity
+- RLI connectivity
 
 - UKCloud provided Red Hat licences
 
