@@ -251,6 +251,8 @@ You can enable new users on your account with access to My Calls.
 
 5. To provide the user with access to My Calls, you must raise a service request using the **Setting up a user in My Calls** offering in the Service Catalog.
 
+    ![New User Request Offering](images/ptl-mycalls-new-user-request-offering.png)
+    
     For detailed steps, see [*Raising a service request ticket*](#raising-a-service-request-ticket).
 
 6. When UKCloud Support have set up the user in My Calls, you can manage their permission level to give them the appropriate access.
