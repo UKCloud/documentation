@@ -26,7 +26,7 @@ CommVault Complete Backup & Recovery | <https://documentation.commvault.com/comm
 HyTrust DataControl | <https://www.hytrust.com/resources/hytrust-datacontrol-eula/>
 Moogsoft AIOps | <https://www.moogsoft.com/eula/>
 Portworx Enterprise | <https://portworx.com/end-user-license-agreement/>
-XQ Cyber CyberScore | N/A
+CyberScore | N/A
 
 ## Feedback
 
