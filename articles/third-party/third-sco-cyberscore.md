@@ -55,9 +55,7 @@ CyberScore provides the following key features:
 
 - **Service Delivery Manager**.  You'll be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
 
-- **Support**. After the initial on-boarding, you can utilise the standard UKCloud support entitlement, which is documented in the [Customer Engagement Factsheet](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf). UKCloud can help with remediation of the service.
-
-- XQ Cyber have created help notes, set-up guides and support pages within the [CyberScore web interface](https://xqcyber.com/cyberscore)<sup>*</sup>.
+- **Support**. After the initial on-boarding, you can utilise the standard UKCloud support entitlement, which is documented in the [Customer Engagement Factsheet](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
 
 ## Customer responsibilities
 
