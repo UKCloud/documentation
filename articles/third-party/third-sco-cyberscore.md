@@ -17,8 +17,6 @@ toc_mdlink: third-sco-cyberscore.md
 
 # CyberScore from UKCloud Service Scope
 
-<sup>*</sup> All links to CyberScore support documents will require you to log in.
-
 ## About this document
 
 This document describes the boundaries of the CyberScore&trade; from UKCloud (CyberScore) service, along with the division of responsibilities between UKCloud, XQ Cyber and the customer, to facilitate the provisioning and ongoing use of the service.
