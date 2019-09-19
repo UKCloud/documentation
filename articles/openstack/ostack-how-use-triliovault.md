@@ -83,7 +83,7 @@ One click and selective restores creates brand new resources when restoring virt
 
 TrilioVault can be accessed via you OpenStack Horizon dashboard from within the ***Backups --> Workloads*** menu. An example of TrilioVault's user interface is displayed in Figure 2: TrilioVault Dashboard, and is described in Tables 3 and 4.
 
-![Figure 2: TrilioVault Dashboard](images/trilio/fig2-triliovault-dashboard.png)
+![Figure 2: TrilioVault Dashboard](images/fig2-triliovault-dashboard.png)
 
 *Figure 2: TrilioVault Dashboard.*
 
@@ -117,7 +117,7 @@ To create workload, follow the steps.
 
 1.	Click Project from the left panel. Navigate to Backups then click Create Workload. The Create Workload screen is displayed as shown in Figure 3.
 
-    ![Figure 3: Create Workload](images/trilio/fig3-create-workload.png)
+    ![Figure 3: Create Workload](images/fig3-create-workload.png)
 
     *Figure 3: Create Workload.*
 
@@ -147,7 +147,7 @@ To create workload, follow the steps.
 
 4.	The created workload will be seen listed the Workload Types in Backups under Project menu as shown in Figure 4.
 
-    ![Figure 4: Serial/Parallel Workload Created](images/trilio/fig4-workload-list.png)
+    ![Figure 4: Serial/Parallel Workload Created](images/fig4-workload-list.png)
 
     *Figure 4: Serial/Parallel Workload Created.*
 
@@ -157,13 +157,13 @@ Edit Workload allows user to change the workload name or workload details. The f
 
 1.	Click Edit Workload corresponding to the workload to be edited as shown in Figure 5.
 
-    ![Figure 5: Edit Workload Menu](images/trilio/fig5-edit-workload.png) 
+    ![Figure 5: Edit Workload Menu](images/fig5-edit-workload.png) 
 
     *Figure 5: Edit Workload Menu*
 
 2.	Update Workload screen is displayed as shown in Figure 6.
 
-    ![Figure 6: Edit Workload](images/trilio/fig6-update-workload.png) 
+    ![Figure 6: Edit Workload](images/fig6-update-workload.png) 
 
     *Figure 6: Edit Workload.*
 
@@ -185,7 +185,7 @@ To assign an instance to a workload follow these steps:
 
 2.	Select the tab Workload Members as seen in the screen diplayed in Figure 7.
  
-    ![Figure 7: Assigning Instance to Workload](images/trilio/fig7-update-workload-vmlist.png)
+    ![Figure 7: Assigning Instance to Workload](images/fig7-update-workload-vmlist.png)
 
     *Figure 7: Assigning Instance to Workload.*
 
@@ -211,7 +211,7 @@ To get the information about the workload details follow these steps.
 
 2.	Click _**WORKLOAD NAME**_. The Workload Details screen is displayed as shown in Figure 8.
  
-    ![Figure 8: Workload Details](images/trilio/fig8-workload-details.png)
+    ![Figure 8: Workload Details](images/fig8-workload-details.png)
 
     *Figure 8: Workload Details.*
 
@@ -226,7 +226,7 @@ To get the information about the workload details follow these steps.
     Policy    |	Displays information of the backup schedule and retention policy. Details such as Scheduler Enabled, Start Date, Start Time, End Date, Repeat every, Next snapshot runs at, Full Backup interval can be seen here. It also displays Number of snapshots to keep. Referto Figure 11 for details.
     Misc.     |	Displays information about the workload like Created at (time of creation), Last updated at (time of last update), Workload ID and Workload type ID. Refer to Figure 9 for details.
 
-    ![Figure 9: Workload Miscellaneous Information](images/trilio/fig9-workload-details-misc.png) 
+    ![Figure 9: Workload Miscellaneous Information](images/fig9-workload-details-misc.png) 
 
     *Figure 9: Workload Miscellaneous Information.*
 
@@ -242,7 +242,7 @@ To get the information about the Instance details follow these steps.
 
 4.	To easily navigate between workload and the instance members, TrilioVault adds metadata workload_id and workload_name keys to each instance that is part of a workload.
 
-    ![Figure 10: Instance Details](images/trilio/fig10-instance-details.png) 
+    ![Figure 10: Instance Details](images/fig10-instance-details.png) 
 
     *Figure 10: Instance Details.*
 
@@ -256,13 +256,13 @@ A previously created workload can be deleted from TrilioVault using Delete Workl
 
 3.	Click Delete Workloads. Refer to Figure 11 for details.
 
-    ![Figure 11: Delete Workload](images/trilio/fig11-delete-workloads.png) 
+    ![Figure 11: Delete Workload](images/fig11-delete-workloads.png) 
 
     *Figure 11: Delete Workload.*
 
 4.	A message will be displayed asking for the confirmation for deleting the workload as displayed in Figure 12.
 
-    ![Figure 12: Delete Confirmation Message](images/trilio/fig12-workload-delete-confirm.png) 
+    ![Figure 12: Delete Confirmation Message](images/fig12-workload-delete-confirm.png) 
 
     *Figure 12: Delete Confirmation Message.*
 
@@ -292,13 +292,13 @@ To create a persistent and automatic backup, retention policies are configurable
 
     The Schedule details are described in the section Creating a Workload.
 
-    ![Figure 13: Delete Confirmation Message](images/trilio/fig13-workload-schedule.png)  
+    ![Figure 13: Delete Confirmation Message](images/fig13-workload-schedule.png)  
 
     *Figure 13: Scheduling & Retention Policy.*
 
     To view the protection policy attached to the workload, navigate to the Policy tab as mentioned in section Workload Details. The policy details screen is displayed in Figure 14.
  
-    ![Figure 14: View Policy Details](images/trilio/fig14-workload-policy.png) 
+    ![Figure 14: View Policy Details](images/fig14-workload-policy.png) 
 
     *Figure 14: View Policy Details.*
 
@@ -327,13 +327,13 @@ TrilioVault creates a snapshot of the workload automatically as per the policy s
 
 2.	Click Create Snapshot corresponding to the workload for which snapshot is to be created as shown in Figure 15.
 
-    ![Figure 15: Creating snapshot for Workload](images/trilio/fig15-create-snapshot.png)  
+    ![Figure 15: Creating snapshot for Workload](images/fig15-create-snapshot.png)  
 
     *Figure 15: Creating snapshot for Workload.*
 
     A new Create Snapshot window is displayed as shown in Figure 16.
  
-    ![Figure 16: Create Full/Incremental Snapshot](images/trilio/fig16-create-snapshot-dialog.png) 
+    ![Figure 16: Create Full/Incremental Snapshot](images/fig16-create-snapshot-dialog.png) 
 
     *Figure 16: Create Full/Incremental Snapshot.*
 
@@ -359,7 +359,7 @@ To create a full snapshot follow these steps.
 
 4.	Click _**WORKLOAD NAME**_, click Snapshot tab. The created snapshot can be seen as displayed in Figure 17.
  
-    ![Figure 17: Full Snapshot Creation](images/trilio/fig17-snapshots-list.png) 
+    ![Figure 17: Full Snapshot Creation](images/fig17-snapshots-list.png) 
 
     *Figure 17: Full Snapshot Creation.*
 
@@ -378,7 +378,7 @@ An Incremental snapshot is the backup of the latest changes since the last backu
 
 4.	Click _**WORKLOAD NAME**_, click Snapshot tab. The created snapshot can be seen as displayed in Figure 18.
  
-    ![Figure 18: Incremental Snapshot Creation](images/trilio/fig18-snapshots-list1.png) 
+    ![Figure 18: Incremental Snapshot Creation](images/fig18-snapshots-list1.png) 
 
     *Figure 18: Incremental Snapshot Creation.*
 
@@ -405,13 +405,13 @@ _**VMs – Instance Info.**_ | &nbsp;
 Name          |	Displays the name of the Instance.
 Status        |	Displays the status of the Instance.
  
-![Figure 19: Snapshot Details – Instance Info tab](images/trilio/fig19-snapshot-details.png) 
+![Figure 19: Snapshot Details – Instance Info tab](images/fig19-snapshot-details.png) 
 
 *Figure 19: Snapshot Details – Instance Info tab.*
 
 Security tab lists the security groups attached to the Instance. The Security tab details are displayed in Figure 20 and described in Table 9.
  
-![Figure 20: Snapshot Details – Security Group tab](images/trilio/fig20-snapshot-details.png) 
+![Figure 20: Snapshot Details – Security Group tab](images/fig20-snapshot-details.png) 
 
 *Figure 20: Snapshot Details – Security Group tab.*
 
@@ -425,7 +425,7 @@ Type |	Displays the type of the security group.
 
 Flavor tab describes the flavor attached to the Instance. The Flavor tab details are displayed in Figure 21 and described in Table 10.
  
-![Figure 21: Snapshot Details – Flavor tab](images/trilio/fig21-snapshots-flavors.png) 
+![Figure 21: Snapshot Details – Flavor tab](images/fig21-snapshots-flavors.png) 
 
 *Figure 21: Snapshot Details – Flavor tab.*
 
@@ -439,7 +439,7 @@ RAM          | Displays the amount of memory that the VM is using.
 
 Network tab details the network on which Instance is created. The Network tab details are displayed in Figure 22 and described in Table 11.
  
-![Figure 22: Snapshot Details – Networks tab](images/trilio/fig22-snapshot-networks.png) 
+![Figure 22: Snapshot Details – Networks tab](images/fig22-snapshot-networks.png) 
 
 *Figure 22: Snapshot Details – Networks tab.*
 
@@ -453,7 +453,7 @@ Mac Address         | Displays the Mac Address of the VM.
 
 Volume tab describes the volume attached to the instance. The Volume tab details are displayed in Figure 23 and described in Table 12.
  
-![Figure 23: Snapshot Details – Volumes ta](images/trilio/fig23-snapshot-volumes.png) 
+![Figure 23: Snapshot Details – Volumes ta](images/fig23-snapshot-volumes.png) 
 
 *Figure 23: Snapshot Details – Volumes tab.*
 
@@ -469,7 +469,7 @@ Restore Size | Displays the size of the volume for restore.
 
 Misc. tab gives information about the UUID of the Instance. The Misc. tab details are displayed in Figure 24.
 
-![Figure 24: Snapshot Details – Misc. tab](images/trilio/fig24-snapshot-misc.png)  
+![Figure 24: Snapshot Details – Misc. tab](images/fig24-snapshot-misc.png)  
 
 *Figure 24: Snapshot Details – Misc. tab.*
 
@@ -495,7 +495,7 @@ Once the image is successfully loaded, a tenant can instantiate file manager ins
 
 1.	Launch the File Manager Instance. Refer to Figure 25 for details.
 
-    ![Figure 25: Launch File Manager Instance](images/trilio/fig25-filemanager-launch.png) 
+    ![Figure 25: Launch File Manager Instance](images/fig25-filemanager-launch.png) 
 
     *Figure 25: Launch File Manager Instance.*
 
@@ -507,7 +507,7 @@ Once the image is successfully loaded, a tenant can instantiate file manager ins
 
 5.	Click More drop-down, then click Mount Snapshot. Refer to Figure 26 for details.
 
-    ![Figure 26: Mounting Snapshot](images/trilio/fig26-mount-snapshot.png) 
+    ![Figure 26: Mounting Snapshot](images/fig26-mount-snapshot.png) 
 
     *Figure 26: Mounting Snapshot.*
 
@@ -515,19 +515,19 @@ Once the image is successfully loaded, a tenant can instantiate file manager ins
 
 7.	Click Mount.
 
-    ![Figure 27: Assigning File Manager Instance to snapshot](images/trilio/fig27-mount-snapshot-dialog.png) 
+    ![Figure 27: Assigning File Manager Instance to snapshot](images/fig27-mount-snapshot-dialog.png) 
 
     *Figure 27: Assigning File Manager Instance to snapshot.*
 
 8.	Access File Manager using <B><I>FLOATING IP</B></I> created in step 3. Refer to Figure 28 for details.
 
-    ![Figure 28: File Manager](images/trilio/fig28-file-browser.png) 
+    ![Figure 28: File Manager](images/fig28-file-browser.png) 
 
     *Figure 28: File Manager.*
 
 9.	Select the preferred action and double-click the selected action.
 
-    ![Figure 29: File Manager Options](images/trilio/fig29-file-download.png) 
+    ![Figure 29: File Manager Options](images/fig29-file-download.png) 
 
     *Figure 29: File Manager Options.*
 
@@ -545,7 +545,7 @@ Once the image is successfully loaded, a tenant can instantiate file manager ins
 
 11.	Choose appropriate action.
 
-    ![File Manager Metadata](images/trilio/fig29a-file-manager-metadata.png)
+    ![File Manager Metadata](images/fig29a-file-manager-metadata.png)
 
     File manager instance contains the metadata that describes what snapshot is currently mounted.
 
@@ -559,7 +559,7 @@ sshfs ubuntu@172.24.4.4:/home/ubuntu/tvault-mounts/mounts mnt
 
 In the above example, 172.24.4.4 is the floating IP address of recovery manager instance. mnt is the mount point. The mnt point can be browsed for VM images/file systems using standard Linux tools and copy required files.
 
-![sshfs Mount](images/trilio/fig29b-sshfs-mount.png)
+![sshfs Mount](images/fig29b-sshfs-mount.png)
 
 >[!Note]
 >sshfs-based mount operation is still subjected to standard Linux user permissions. For example a file that is owned by root and does not have read permissions to ssh user may not be copied
@@ -572,25 +572,25 @@ Snapshot can be unmounted when access to individual files/directories are no lon
 
 2.	Click Unmount Snapshot as shown in Figure 30.
 
-    ![Figure 30: Unmount Snapshot](images/trilio/fig30-umount-snapshot.png)  
+    ![Figure 30: Unmount Snapshot](images/fig30-umount-snapshot.png)  
 
     *Figure 30: Unmount Snapshot.*
 
 3.	On confirming the Unmount Snapshot action, TrilioVault will unmount the snapshot. Refer to Figure 31 for details.
 
-    ![Figure 31: Confirm Unmount](images/trilio/fig31-unmount-confirm.png)  
+    ![Figure 31: Confirm Unmount](images/fig31-unmount-confirm.png)  
 
     *Figure 31: Confirm Unmount.*
 
 4.	The snapshot gets unmounted successfully. Refer to Figure 32 for details.
 
-    ![Figure 32: Snapshot Unmounted](images/trilio/fig32-umount-success.png)  
+    ![Figure 32: Snapshot Unmounted](images/fig32-umount-success.png)  
 
     *Figure 32: Snapshot Unmounted.*
 
 Sometimes it becomes daunting to find the snapshot that is mounted, in particular when there are many workloads and many snapshots. When a snapshot is mounted, the file manager instance metadata includes the snapshot ID that is currently mounted with the file manager. Please see the following screen grab from the file manager instance details.
 
-![Figure 33: File Manager instance metadata with mounted snapshot id](images/trilio/fig33-file-manager-metadata.png)  
+![Figure 33: File Manager instance metadata with mounted snapshot id](images/fig33-file-manager-metadata.png)  
 
 *Figure 33: File Manager instance metadata with mounted snapshot id.*
 
@@ -610,7 +610,7 @@ One-click Restore is a single click restore of the snapshot irrespective of the 
 
 1.	Delete all original workload instances from the OpenStack cloud as shown in Figure 34. The Instances display the deleted workload instances.
 
-    ![Figure 34: VM(s) to be Deleted](images/trilio/fig34-oneclick-restore-delete-vms.png) 
+    ![Figure 34: VM(s) to be Deleted](images/fig34-oneclick-restore-delete-vms.png) 
 
     *Figure 34: VM(s) to be Deleted.*
 
@@ -618,13 +618,13 @@ One-click Restore is a single click restore of the snapshot irrespective of the 
 
 3.	Click One-click Restore menu option of the corresponding snapshot as shows in Figure 35.
 
-    ![Figure 35: Snapshot Selected for One-click Restore](images/trilio/fig35-oneclick-restore.png) 
+    ![Figure 35: Snapshot Selected for One-click Restore](images/fig35-oneclick-restore.png) 
 
     *Figure 35: Snapshot Selected for One-click Restore.*
 
 4.	One-click Restore screen as shown in Figure 36 is displayed.
 
-    ![Figure 36: One-click Restore](images/trilio/fig36-oneclick-dialog.png) 
+    ![Figure 36: One-click Restore](images/fig36-oneclick-dialog.png) 
 
     *Figure 36: One-click Restore.*
 
@@ -634,13 +634,13 @@ One-click Restore is a single click restore of the snapshot irrespective of the 
 
 7.	It will restore all the workload instances at the same location with the same settings on OpenStack as shown in Figure 37.
 
-    ![Figure 37: One-click Restore in progress](images/trilio/fig37-oneclick-progress.png)
+    ![Figure 37: One-click Restore in progress](images/fig37-oneclick-progress.png)
 
     *Figure 37: One-click Restore in progress.*
 
-    ![One-click Success](images/trilio/fig37b-oneclick-success.png)
+    ![One-click Success](images/fig37b-oneclick-success.png)
 
-    ![One-click Restored VMs](images/trilio/fig37a-oneclick-restored-vms.png)
+    ![One-click Restored VMs](images/fig37a-oneclick-restored-vms.png)
   
 #### Selective Restore
 
@@ -652,25 +652,25 @@ Selective Restore allows for lot of flexibility to recover instances. With the S
 
 3.	Click Selective Restore as shown in Figure 38.
 
-    ![Figure 38: Snapshot Selected for Selective Restore](images/trilio/fig38-selective-restore.png) 
+    ![Figure 38: Snapshot Selected for Selective Restore](images/fig38-selective-restore.png) 
 
     *Figure 38: Snapshot Selected for Selective Restore.*
 
 4.	Selective Restore screen will be displayed as shown in Figure 39.
 
-    ![Figure 39: Selective Restore Details](images/trilio/fig39-selective-restore-wizard1.png) 
+    ![Figure 39: Selective Restore Details](images/fig39-selective-restore-wizard1.png) 
 
     *Figure 39: Selective Restore Details.*
 
 5.	Enter the details and navigate to the Network Mapping tab. Refer to Figure 40 for details. Select the target network you want to restore the snapshot to.
 
-    ![Figure 40: Selective Restore-Network Mapping](images/trilio/fig40-selective-restore-networks.png) 
+    ![Figure 40: Selective Restore-Network Mapping](images/fig40-selective-restore-networks.png) 
 
     *Figure 40: Selective Restore-Network Mapping.*
 
 6.	Navigate to Volume Types Mapping tab and select the target volume type you want to restore to, as shown in Figure 41.
 
-    ![Figure 41: Selective Restore-Volume Types Mapping](images/trilio/fig41-selective-restore-volume-types.png) 
+    ![Figure 41: Selective Restore-Volume Types Mapping](images/fig41-selective-restore-volume-types.png) 
 
     *Figure 41: Selective Restore-Volume Types Mapping.*
 
@@ -678,11 +678,11 @@ Selective Restore allows for lot of flexibility to recover instances. With the S
 
 8.	Deselect the checkbox if you do not want to include that particular VM in the restore process as shown in Figure 42.
 
-    ![Figure 42: Selective Restore-VM not included in Restore](images/trilio/fig42-selective-restore-wizard-2.png) 
+    ![Figure 42: Selective Restore-VM not included in Restore](images/fig42-selective-restore-wizard-2.png) 
 
     *Figure 42: Selective Restore-VM not included in Restore.*
 
-    ![Selective Restore Wizard](images/trilio/fig42a-selective-restore-wizard-vm1.png) 
+    ![Selective Restore Wizard](images/fig42a-selective-restore-wizard-vm1.png) 
  
 9.	Select Flavor, Enter Instance Name. Instance Name if changed will restore the instance with the new name.
 
@@ -690,11 +690,11 @@ Selective Restore allows for lot of flexibility to recover instances. With the S
 
 11.	It will restore all the workload instances on OpenStack as shown in Figure 43. In the figure the restored VM in target IP can be seen.
 
-    ![Selective Restore Progress](images/trilio/fig43aselective-restore-progress.png)
+    ![Selective Restore Progress](images/fig43aselective-restore-progress.png)
 
-    ![Selective Restore Success](images/trilio/fig43b-selective-restore-success.png)   
+    ![Selective Restore Success](images/fig43b-selective-restore-success.png)   
 
-    ![Figure 43: Selective Restore instances](images/trilio/fig43c-selective-restore-vms.png)      
+    ![Figure 43: Selective Restore instances](images/fig43c-selective-restore-vms.png)      
 
     *Figure 43: Selective Restore instances.*
 
@@ -702,17 +702,17 @@ Selective Restore allows for lot of flexibility to recover instances. With the S
 
 Both OneClick Restore and Selective Restore create brand new resources as part of the restore process. In some cases, it is not desirable to create new resources. For example, an instance may have an application data residing on a Cinder volume and user only wanted to restore Cinder volume but leave the rest of the VM intact. In-Place Restore allows users to restore selected volume without the need to recreate the whole instance. In-Place restore was introduced in TrilioVault version 2.4.
 
-![Figure 44 In-place Restore Menu Item](images/trilio/fig44-inplace-restore.png) 
+![Figure 44 In-place Restore Menu Item](images/fig44-inplace-restore.png) 
 
 *Figure 44 In-place Restore Menu Item.*
 
 The current release added a new menu item called In-place Restore which opens a new dialog.
 
-![Figure 45 In-place Restore Wizard](images/trilio/fig45-inplace-restore-wizard-1.png) 
+![Figure 45 In-place Restore Wizard](images/fig45-inplace-restore-wizard-1.png) 
 
 *Figure 45 In-place Restore Wizard.*
 
-![Figure 46 Choice of resources to restore](images/trilio/fig46-inplace-restore-wizard-2.png) 
+![Figure 46 Choice of resources to restore](images/fig46-inplace-restore-wizard-2.png) 
 
 *Figure 46 Choice of resources to restore.*
 
@@ -720,15 +720,15 @@ The current release added a new menu item called In-place Restore which opens a 
 
 Another important introduced in 2.4 release is the ability to search for a file or list of files within a selected list of snapshots. TrilioVault takes image level backups, yet it provides file level/directory level recovery. However, if a user doesn’t know the latest snapshot where the desired file may reside, it is a painful process to mount numerous snapshots and look for the file. With file search feature, user can quickly find the list of snapshots that the file exists. File Search feature tab is added to workload details page as show below.
 
-![File Search](images/trilio/fig46a-file-search.png) 
+![File Search](images/fig46a-file-search.png) 
 
 Your workload may have more than one VM. First select the VM and then choose the file path. File path may include wildcards which allows listing of files within a directory. For example if you want to search all files with in/var/log/ directory, you can provide a search path /var/log/*.
 
-![File Search Query](images/trilio/fig46b-file-search-query.png) 
+![File Search Query](images/fig46b-file-search-query.png) 
 
 By default, it searches all the snapshots available for the workload. TrilioVault file search feature directly searches the backup images. TrilioVault backup images are fully formed and are instantly accessible without the need to restore backup images. TrilioVault leverage this ability to search files and directories on the backup image itself. Though this process appears little slow compared to using some index based solutions, our file search is radically simple and easy to maintain. Also, if you were to transfer a workload from one cloud to another cloud, you can still search backup images in the new cloud. Though it supports multiple snapshots search facility, the search slows down if the number of snapshots in the search increases. Our file search facility provides various filters to narrow down the list of snapshots. From the list of snapshots in the table, user can deselect any snapshots from search. User can also narrow the search by latest number snapshots or by time range. Once user clicks ‘Search’, the results are displayed in a format that looks like `ls –la`.
 
-![File Search Results](images/trilio/fig46c-file-search-results.png) 
+![File Search Results](images/fig46c-file-search-results.png) 
  
 #### Restore Details
 
@@ -740,13 +740,13 @@ To obtain Restore details information, follow these steps.
 
 3.	Navigate to the Snapshots tab and click the name of snapshot. The screen as shown in Figure 47 is displayed.
 
-    ![Figure 47: Snapshot Details](images/trilio/fig47-restore-snapshot-details.png) 
+    ![Figure 47: Snapshot Details](images/fig47-restore-snapshot-details.png) 
 
     *Figure 47: Snapshot Details.*
 
 4.	Navigate to the Restore tab and click <B><I>RESTORE NAME</B></I>. The Restore Details screen as shown in Figure 48 is displayed.
 
-    ![Figure 48: Restore Details](images/trilio/fig48-restore-restore-details.png) 
+    ![Figure 48: Restore Details](images/fig48-restore-restore-details.png) 
 
     *Figure 48: Restore Details.*
 
@@ -779,7 +779,7 @@ To delete a snapshot, follow these steps.
 
 3.	Select the snapshot to be deleted and click Delete Snapshots.
  
-    ![Figure 49: Delete Snapshot](images/trilio/fig49-delete-snapshot.png)
+    ![Figure 49: Delete Snapshot](images/fig49-delete-snapshot.png)
 
     *Figure 49: Delete Snapshot.*
 
