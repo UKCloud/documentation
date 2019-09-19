@@ -12,8 +12,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Use TrilioVault self-service backup and restoration
-toc_fullpath: How To/ostack-how-triliovault.md
-toc_mdlink: ostack-how-triliovault.md
+toc_fullpath: How To/ostack-how-use-triliovault.md
+toc_mdlink: ostack-how-use-triliovault.md
 ---
 
 # Using TrilioVault self-service backup and restoration within OpenStack
