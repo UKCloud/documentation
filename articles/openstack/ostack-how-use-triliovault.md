@@ -139,7 +139,7 @@ To create workload, follow the steps.
     Start Time |	The time when the backup process will begin. It has to be in the format hh:mm AM/PM. The default value is 09:00 PM UTC.
     Repeat Every |	The time interval in which the backup process will be repeated, for example, repeat every hour/day/week. It has to be in format 24 hrs, or 1 Day, or 1 week. The default value is 24 hrs.
     Snapshot Retention Type |	Can be either a Number of Snapshots to keep or Number of days to retain Snapshots.
-  Snapshot Retention Value |	Depending upon the Snapshot Retention Type, enter the value of Snapshot Retention Type. The default value is 30. For example, if the type is a Number of Snapshots to keep, the system will keep the last 30 snapshots and if the type is Number of days to retain Snapshots, then the Snapshots for the last 30 days will be retained. All other snapshots will be deleted.
+    Snapshot Retention Value |	Depending upon the Snapshot Retention Type, enter the value of Snapshot Retention Type. The default value is 30. For example, if the type is a Number of Snapshots to keep, the system will keep the last 30 snapshots and if the type is Number of days to retain Snapshots, then the Snapshots for the last 30 days will be retained. All other snapshots will be deleted.
     Full Backup Interval |	Frequency at which Full Backup should be taken. The options are: * Never (The default value selected is Never). * Always (Value 0 means Always). * No. of Days (Number of incremental snapshots to take full backup between 1 and 999). If this option is selected, enter the number provided in the text box.
     Pause at Snapshot |	TrilioVault will pause guest instances while snapshotting them, otherwise not. The default setting is not to pause the VM.
 
