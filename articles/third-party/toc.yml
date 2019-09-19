@@ -10,6 +10,18 @@
   items:
   - name: CloudSOC from UKCloud Service Definition
     href: third-sd-cloudsoc.md
+- name: CyberScore
+  items:
+  - name: CyberScore from UKCloud FAQs
+    href: third-faq-cyberscore.md
+  - name: CyberScore from UKCloud Service Definition
+    href: third-sd-cyberscore.md
+  - name: CyberScore from UKCloud Service Scope
+    href: third-sco-cyberscore.md
+  - name: CyberScore scanner deployment environment requirements
+    href: third-ref-cyberscore-prereqs.md
+  - name: Deploy a CyberScore scanner VM - vCloud Director
+    href: third-how-deploy-cyberscore-vm.md
 - name: HyTrust DataControl
   items:
   - name: HyTrust DataControl from UKCloud Service Definition
@@ -30,15 +42,3 @@
   items:
   - name: 3rd party software EULA information
     href: third-ref-eula.md
-- name: XQ Cyber CyberScore
-  items:
-  - name: CyberScore scanner deployment environment requirements
-    href: third-ref-cyberscore-prereqs.md
-  - name: Deploy a CyberScore scanner VM - vCloud Director
-    href: third-how-deploy-cyberscore-vm.md
-  - name: XQ Cyber CyberScore from UKCloud FAQs
-    href: third-faq-cyberscore.md
-  - name: XQ Cyber CyberScore from UKCloud Service Definition
-    href: third-sd-cyberscore.md
-  - name: XQ Cyber CyberScore from UKCloud Service Scope
-    href: third-sco-cyberscore.md

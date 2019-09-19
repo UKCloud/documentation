@@ -8508,7 +8508,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-g11.html",
-          "hash": "OEmztpDzW7a+GbmhZ9xlYw=="
+          "hash": "HxK5yCqacUN6aBAlCOsXSg=="
         }
       },
       "is_incremental": false,
@@ -8844,7 +8844,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-pricing-guide.html",
-          "hash": "CWvH1QaCLqfuFa1wt3VfDQ=="
+          "hash": "O5uG1HgobbSThFKB7v+/QA=="
         }
       },
       "is_incremental": false,
@@ -8876,6 +8876,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-products-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-products-overview.html",
+          "hash": "HFGCYDS3XCYb7CFHQDrkUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-promon-showback.md",
       "output": {
         ".html": {
@@ -8892,7 +8904,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "BoBQwIMTsNHACrcs6S4ymQ=="
+          "hash": "/M14Y8kSm9uMYYGU4d5Y4A=="
         }
       },
       "is_incremental": false,
@@ -9048,7 +9060,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "38kfCBoT8m44aiFp7itybQ=="
+          "hash": "e+cYXJsjyk2t9EhkEwXb8g=="
         }
       },
       "is_incremental": false,
@@ -10482,7 +10494,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-faq-cyberscore.html",
-          "hash": "P77/a877bneSFF83xBfoWg=="
+          "hash": "Ohirq4RvwnYnCFOGx0W9pg=="
         }
       },
       "is_incremental": false,
@@ -10506,7 +10518,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-how-deploy-cyberscore-vm.html",
-          "hash": "BPDQKtNNsFG20p6DZ9TWJQ=="
+          "hash": "UB6TGwflqV63ABwz5j4aMQ=="
         }
       },
       "is_incremental": false,
@@ -10518,7 +10530,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-ref-cyberscore-prereqs.html",
-          "hash": "Xy13txC9rn4vYHYu+YyCXg=="
+          "hash": "HhuaDEvMC1dmkmGkPHrQZA=="
         }
       },
       "is_incremental": false,
@@ -10530,7 +10542,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-ref-eula.html",
-          "hash": "YNJQz54+a3xGK5k3BV67cw=="
+          "hash": "C729YEv21krWzi2IB9+4vA=="
         }
       },
       "is_incremental": false,
@@ -10549,12 +10561,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/third-party/third-sco-cyberscore.md",
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-sco-cyberscore.html",
-          "hash": "8646tyWCaoBPdAGzvYwxUw=="
+          "hash": "XNy1fbaOLug8V0VhuzzWsQ=="
         }
       },
       "is_incremental": false,
@@ -10602,7 +10617,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-sd-cyberscore.html",
-          "hash": "auG9uQy3FXjitgqF0+YKlw=="
+          "hash": "wQCz/B66QsmzaJYbKTqGDg=="
         }
       },
       "is_incremental": false,
@@ -10650,7 +10665,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/third-party/toc.html",
-          "hash": "g/SkV0bIhdiDW+NbGHI4AA=="
+          "hash": "7ZD1gSkzgeFlxMKhm6aaZw=="
         }
       },
       "is_incremental": false,
@@ -17819,7 +17834,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-use-ovf-tool.html",
-          "hash": "uIHyuw0I0pC2ZIpwYDOqyQ=="
+          "hash": "oPjod+oZPMm3i3l32EwGVA=="
         }
       },
       "is_incremental": false,
@@ -18524,7 +18539,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 405,
+          "total_file_count": 406,
           "skipped_file_count": 0
         }
       }
