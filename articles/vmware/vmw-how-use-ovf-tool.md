@@ -31,7 +31,7 @@ The VMware OVF Tool is a conversion program freely downloadable from VMware that
 
 You can download the OVF Tool via the following link:
 
-<https://my.vmware.com/group/vmware/details?downloadGroup=OVFTOOL420&productId=491>
+<https://my.vmware.com/group/vmware/get-download?downloadGroup=OVFTOOL430UPDATE3>
 
 You must have a VMware account to download the tool. You can download the OVF Tool for Windows 32-bit and 64-bit, Linux 32-bit and 64-bit, or Mac OS X.
 
