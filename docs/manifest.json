@@ -6911,7 +6911,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-faq.html",
-          "hash": "myG7rg0PCHTMcUfbNtrszQ=="
+          "hash": "tp3HhES4kpVSGxTuqQwkow=="
         }
       },
       "is_incremental": false,
@@ -7122,6 +7122,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/openstack/ostack-how-use-triliovault.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openstack/ostack-how-use-triliovault.html",
+          "hash": "h4xnxzaWaBJC4ZCFiVOxWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-ref-auto-scaling.md",
       "output": {
@@ -7199,7 +7214,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-sco.html",
-          "hash": "oa2/mfbVx7RP50RH/Mc6nw=="
+          "hash": "wjebZN6n/L8x9EkVzldNew=="
         }
       },
       "is_incremental": false,
@@ -7235,7 +7250,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/toc.html",
-          "hash": "vcaePvFOeXUYxmltseP2Eg=="
+          "hash": "tfG0L1Qay08kvJKV9FvESA=="
         }
       },
       "is_incremental": false,
@@ -18519,13 +18534,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -18533,10 +18541,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 406,
+          "total_file_count": 407,
           "skipped_file_count": 0
         }
       }

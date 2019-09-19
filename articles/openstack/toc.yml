@@ -42,6 +42,8 @@
     href: ostack-how-use-api-sso.md
   - name: Use the OpenStack Command Line Client on Microsoft operating systems
     href: ostack-how-use-cli.md
+  - name: Use TrilioVault self-service backup and restoration
+    href: ostack-how-use-triliovault.md
 - name: Reference
   items:
   - name: Auto Scaling for UKCloud for OpenStack
