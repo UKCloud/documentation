@@ -85,7 +85,7 @@ CyberScore does not action any changes to remediate the vulnerabilities it ident
 
 - [*CyberScore scanner deployment environment requirements*](third-ref-cyberscore-prereqs.md)
 
-- [*How to deploy a CyberScore virtual machine in vCloud Director*](third-how-deploy-cyberscore.md)
+- [*How to deploy a CyberScore virtual machine in vCloud Director*](third-how-deploy-cyberscore-vm.md)
 
 ## Feedback
 
