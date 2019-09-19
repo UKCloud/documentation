@@ -5763,6 +5763,644 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig10-instance-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig10-instance-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig11-delete-workloads.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig11-delete-workloads.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig12-workload-delete-confirm.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig12-workload-delete-confirm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig13-workload-schedule.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig13-workload-schedule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig14-workload-policy.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig14-workload-policy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig15-create-snapshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig15-create-snapshot.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig16-create-snapshot-dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig16-create-snapshot-dialog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig17-snapshots-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig17-snapshots-list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig18-snapshots-list1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig18-snapshots-list1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig19-snapshot-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig19-snapshot-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig2-triliovault-dashboard.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig2-triliovault-dashboard.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig20-snapshot-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig20-snapshot-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig21-snapshots-flavors.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig21-snapshots-flavors.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig22-snapshot-networks.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig22-snapshot-networks.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig23-snapshot-volumes.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig23-snapshot-volumes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig24-snapshot-misc.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig24-snapshot-misc.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig25-filemanager-launch.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig25-filemanager-launch.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig26-mount-snapshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig26-mount-snapshot.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig27-mount-snapshot-dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig27-mount-snapshot-dialog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig28-file-browser.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig28-file-browser.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig29-file-download.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig29-file-download.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig29a-file-manager-metadata.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig29a-file-manager-metadata.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig29b-sshfs-mount.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig29b-sshfs-mount.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig3-create-workload.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig3-create-workload.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig30-umount-snapshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig30-umount-snapshot.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig31-unmount-confirm.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig31-unmount-confirm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig32-umount-success.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig32-umount-success.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig33-file-manager-metadata.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig33-file-manager-metadata.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig34-oneclick-restore-delete-vms.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig34-oneclick-restore-delete-vms.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig35-oneclick-restore.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig35-oneclick-restore.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig36-oneclick-dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig36-oneclick-dialog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig37-oneclick-progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig37-oneclick-progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig37a-oneclick-restored-vms.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig37a-oneclick-restored-vms.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig37b-oneclick-success.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig37b-oneclick-success.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig38-selective-restore.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig38-selective-restore.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig39-selective-restore-wizard1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig39-selective-restore-wizard1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig4-workload-list.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig4-workload-list.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig40-selective-restore-networks.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig40-selective-restore-networks.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig41-selective-restore-volume-types.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig41-selective-restore-volume-types.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig42-selective-restore-wizard-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig42-selective-restore-wizard-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig42a-selective-restore-wizard-vm1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig42a-selective-restore-wizard-vm1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig43aselective-restore-progress.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig43aselective-restore-progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig43b-selective-restore-success.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig43b-selective-restore-success.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig43c-selective-restore-vms.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig43c-selective-restore-vms.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig44-inplace-restore.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig44-inplace-restore.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig45-inplace-restore-wizard-1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig45-inplace-restore-wizard-1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig46-inplace-restore-wizard-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig46-inplace-restore-wizard-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig46a-file-search.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig46a-file-search.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig46b-file-search-query.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig46b-file-search-query.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig46c-file-search-results.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig46c-file-search-results.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig47-restore-snapshot-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig47-restore-snapshot-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig48-restore-restore-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig48-restore-restore-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig49-delete-snapshot.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig49-delete-snapshot.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig5-edit-workload.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig5-edit-workload.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig6-update-workload.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig6-update-workload.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig7-update-workload-vmlist.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig7-update-workload-vmlist.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig8-workload-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig8-workload-details.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/fig9-workload-details-misc.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/fig9-workload-details-misc.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/mongodb.PNG",
       "output": {
         "resource": {
@@ -7122,15 +7760,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/openstack/ostack-how-use-triliovault.md",
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-use-triliovault.html",
-          "hash": "h4xnxzaWaBJC4ZCFiVOxWA=="
+          "hash": "GIYsJgJSpNSkKY5ecFx4pA=="
         }
       },
       "is_incremental": false,
