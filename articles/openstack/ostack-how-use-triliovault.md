@@ -117,39 +117,39 @@ To create workload, follow the steps.
 
 1.	Click Project from the left panel. Navigate to Backups then click Create Workload. The Create Workload screen is displayed as shown in Figure 3.
 
-![Figure 3: Create Workload](images/trilio/fig3-create-workload.png)
+    ![Figure 3: Create Workload](images/trilio/fig3-create-workload.png)
 
-*Figure 3: Create Workload.*
+    *Figure 3: Create Workload.*
 
 2.	Select the desired values as explained in the following table:
 
-Field Name | Description
------------|------------
-Details tab |	Refer to Figure 3 for details.
-Workload Name |	Enter the name of the workload to be created.
-Workload Description |	Enter brief description.
-Workload Type |	Select either Serial or Parallel.
-Workload Policy |	Cloud Administrator defined workload policies to choose from.
-Workload Members tab |	Refer to Figure 7 for details.
-Instance checkbox |	Add the instances for your workload.
-Policy tab |	Refer to Figure 13 for details.
-Enabled |	This checkbox is selected by default. If it is deselected, Start Date, End Date, Start Time, Repeat Every cannot be entered.
-Start Date |	The date on which backup process will start. It is in mm/dd/yyyy format and the default value is always Today’s date.
-End Date |	The date until which the backup process will take place. It is in mm/dd/yyyy format and the default value is always No End Date.
-Start Time |	The time when the backup process will begin. It has to be in the format hh:mm AM/PM. The default value is 09:00 PM UTC.
-Repeat Every |	The time interval in which the backup process will be repeated, for example, repeat every hour/day/week. It has to be in format 24 hrs, or 1 Day, or 1 week. The default value is 24 hrs.
-Snapshot Retention Type |	Can be either a Number of Snapshots to keep or Number of days to retain Snapshots.
-Snapshot Retention Value |	Depending upon the Snapshot Retention Type, enter the value of Snapshot Retention Type. The default value is 30. For example, if the type is a Number of Snapshots to keep, the system will keep the last 30 snapshots and if the type is Number of days to retain Snapshots, then the Snapshots for the last 30 days will be retained. All other snapshots will be deleted.
-Full Backup Interval |	Frequency at which Full Backup should be taken. The options are: * Never (The default value selected is Never). * Always (Value 0 means Always). * No. of Days (Number of incremental snapshots to take full backup between 1 and 999). If this option is selected, enter the number provided in the text box.
-Pause at Snapshot |	TrilioVault will pause guest instances while snapshotting them, otherwise not. The default setting is not to pause the VM.
+    Field Name | Description
+    -----------|------------
+    Details tab |	Refer to Figure 3 for details.
+    Workload Name |	Enter the name of the workload to be created.
+    Workload Description |	Enter brief description.
+    Workload Type |	Select either Serial or Parallel.
+    Workload Policy |	Cloud Administrator defined workload policies to choose from.
+    Workload Members tab |	Refer to Figure 7 for details.
+    Instance checkbox |	Add the instances for your workload.
+    Policy tab |	Refer to Figure 13 for details.
+    Enabled |	This checkbox is selected by default. If it is deselected, Start Date, End Date, Start Time, Repeat Every cannot be entered.
+    Start Date |	The date on which backup process will start. It is in mm/dd/yyyy format and the default value is always Today’s date.
+    End Date |	The date until which the backup process will take place. It is in mm/dd/yyyy format and the default value is always No End Date.
+    Start Time |	The time when the backup process will begin. It has to be in the format hh:mm AM/PM. The default value is 09:00 PM UTC.
+    Repeat Every |	The time interval in which the backup process will be repeated, for example, repeat every hour/day/week. It has to be in format 24 hrs, or 1 Day, or 1 week. The default value is 24 hrs.
+    Snapshot Retention Type |	Can be either a Number of Snapshots to keep or Number of days to retain Snapshots.
+  Snapshot Retention Value |	Depending upon the Snapshot Retention Type, enter the value of Snapshot Retention Type. The default value is 30. For example, if the type is a Number of Snapshots to keep, the system will keep the last 30 snapshots and if the type is Number of days to retain Snapshots, then the Snapshots for the last 30 days will be retained. All other snapshots will be deleted.
+    Full Backup Interval |	Frequency at which Full Backup should be taken. The options are: * Never (The default value selected is Never). * Always (Value 0 means Always). * No. of Days (Number of incremental snapshots to take full backup between 1 and 999). If this option is selected, enter the number provided in the text box.
+    Pause at Snapshot |	TrilioVault will pause guest instances while snapshotting them, otherwise not. The default setting is not to pause the VM.
 
 3.	Click Create.
 
 4.	The created workload will be seen listed the Workload Types in Backups under Project menu as shown in Figure 4.
 
-![Figure 4: Serial/Parallel Workload Created](images/trilio/fig4-workload-list.png)
+    ![Figure 4: Serial/Parallel Workload Created](images/trilio/fig4-workload-list.png)
 
-*Figure 4: Serial/Parallel Workload Created.*
+    *Figure 4: Serial/Parallel Workload Created.*
 
 ### Edit Workload
 
@@ -157,25 +157,25 @@ Edit Workload allows user to change the workload name or workload details. The f
 
 1.	Click Edit Workload corresponding to the workload to be edited as shown in Figure 5.
 
-![Figure 5: Edit Workload Menu](images/trilio/fig5-edit-workload.png) 
+    ![Figure 5: Edit Workload Menu](images/trilio/fig5-edit-workload.png) 
 
-*Figure 5: Edit Workload Menu*
+    *Figure 5: Edit Workload Menu*
 
 2.	Update Workload screen is displayed as shown in Figure 6.
 
-![Figure 6: Edit Workload](images/trilio/fig6-update-workload.png) 
+    ![Figure 6: Edit Workload](images/trilio/fig6-update-workload.png) 
 
-*Figure 6: Edit Workload.*
+    *Figure 6: Edit Workload.*
 
-You can change all the fields except:
+    You can change all the fields except:
 
-- ID where workload ID is displayed.
+    - ID where workload ID is displayed.
 
-- Type where workload type is displayed.
+    - Type where workload type is displayed.
 
-- Start Time of the workload policy.
+    - Start Time of the workload policy.
 
-- Also if a policy template is associated with the workload, any individual elements of the policy cannot be modified.
+    - Also if a policy template is associated with the workload, any individual elements of the policy cannot be modified.
 
 #### Assigning Instances to Workload
 
@@ -185,11 +185,11 @@ To assign an instance to a workload follow these steps:
 
 2.	Select the tab Workload Members as seen in the screen diplayed in Figure 7.
  
-![Figure 7: Assigning Instance to Workload](images/trilio/fig7-update-workload-vmlist.png)
+    ![Figure 7: Assigning Instance to Workload](images/trilio/fig7-update-workload-vmlist.png)
 
-*Figure 7: Assigning Instance to Workload.*
+    *Figure 7: Assigning Instance to Workload.*
 
-To assign an instance to a workload, click + (plus) sign corresponding to the instances list displayed under All Instances. The selected instances will be displayed under Workload Members. Click Update.
+    To assign an instance to a workload, click + (plus) sign corresponding to the instances list displayed under All Instances. The selected instances will be displayed under Workload Members. Click Update.
 
 #### Removing Instances from a Workload
 
@@ -211,24 +211,24 @@ To get the information about the workload details follow these steps.
 
 2.	Click _**WORKLOAD NAME**_. The Workload Details screen is displayed as shown in Figure 8.
  
-![Figure 8: Workload Details](images/trilio/fig8-workload-details.png)
+    ![Figure 8: Workload Details](images/trilio/fig8-workload-details.png)
 
-*Figure 8: Workload Details.*
+    *Figure 8: Workload Details.*
 
-Workload Details displays the details mentioned in Table 5.
+    Workload Details displays the details mentioned in Table 5.
 
-**Table 5: Workload Details Description.**
+    **Table 5: Workload Details Description.**
 
-Tabs      |	Description
-----------|------------
-Details   |	Displays the details of workload such as Workload Name, Workload Description, Availability Zone, VM names attached to it and its ID.
-Snapshots |	Displays information of the snapshot attached to the workload. Refer to Figure 17 for details.
-Policy    |	Displays information of the backup schedule and retention policy. Details such as Scheduler Enabled, Start Date, Start Time, End Date, Repeat every, Next snapshot runs at, Full Backup interval can be seen here. It also displays Number of snapshots to keep. Referto Figure 11 for details.
-Misc.     |	Displays information about the workload like Created at (time of creation), Last updated at (time of last update), Workload ID and Workload type ID. Refer to Figure 9 for details.
+    Tabs      |	Description
+    ----------|------------
+    Details   |	Displays the details of workload such as Workload Name, Workload Description, Availability Zone, VM names attached to it and its ID.
+    Snapshots |	Displays information of the snapshot attached to the workload. Refer to Figure 17 for details.
+    Policy    |	Displays information of the backup schedule and retention policy. Details such as Scheduler Enabled, Start Date, Start Time, End Date, Repeat every, Next snapshot runs at, Full Backup interval can be seen here. It also displays Number of snapshots to keep. Referto Figure 11 for details.
+    Misc.     |	Displays information about the workload like Created at (time of creation), Last updated at (time of last update), Workload ID and Workload type ID. Refer to Figure 9 for details.
 
-![Figure 9: Workload Miscellaneous Information](images/trilio/fig9-workload-details-misc.png) 
+    ![Figure 9: Workload Miscellaneous Information](images/trilio/fig9-workload-details-misc.png) 
 
-*Figure 9: Workload Miscellaneous Information.*
+    *Figure 9: Workload Miscellaneous Information.*
 
 #### Instance Details
 
@@ -242,9 +242,9 @@ To get the information about the Instance details follow these steps.
 
 4.	To easily navigate between workload and the instance members, TrilioVault adds metadata workload_id and workload_name keys to each instance that is part of a workload.
 
-![Figure 10: Instance Details](images/trilio/fig10-instance-details.png) 
+    ![Figure 10: Instance Details](images/trilio/fig10-instance-details.png) 
 
-*Figure 10: Instance Details.*
+    *Figure 10: Instance Details.*
 
 ### Deleting Workload
 
@@ -256,15 +256,15 @@ A previously created workload can be deleted from TrilioVault using Delete Workl
 
 3.	Click Delete Workloads. Refer to Figure 11 for details.
 
-![Figure 11: Delete Workload](images/trilio/fig11-delete-workloads.png) 
+    ![Figure 11: Delete Workload](images/trilio/fig11-delete-workloads.png) 
 
-*Figure 11: Delete Workload.*
+    *Figure 11: Delete Workload.*
 
 4.	A message will be displayed asking for the confirmation for deleting the workload as displayed in Figure 12.
 
-![Figure 12: Delete Confirmation Message](images/trilio/fig12-workload-delete-confirm.png) 
+    ![Figure 12: Delete Confirmation Message](images/trilio/fig12-workload-delete-confirm.png) 
 
-*Figure 12: Delete Confirmation Message.*
+    *Figure 12: Delete Confirmation Message.*
 
 5.	The workload will be deleted and will no longer appear under Workload list.
 
@@ -290,26 +290,26 @@ To create a persistent and automatic backup, retention policies are configurable
 
 3.	Select Schedule tab. The Scheduling and Retaining Policy screen as shown in Figure 13 is displayed.
 
-The Schedule details are described in the section Creating a Workload.
+    The Schedule details are described in the section Creating a Workload.
 
-![Figure 13: Delete Confirmation Message](images/trilio/fig13-workload-schedule.png)  
+    ![Figure 13: Delete Confirmation Message](images/trilio/fig13-workload-schedule.png)  
 
-*Figure 13: Scheduling & Retention Policy.*
+    *Figure 13: Scheduling & Retention Policy.*
 
-To view the protection policy attached to the workload, navigate to the Policy tab as mentioned in section Workload Details. The policy details screen is displayed in Figure 14.
+    To view the protection policy attached to the workload, navigate to the Policy tab as mentioned in section Workload Details. The policy details screen is displayed in Figure 14.
  
-![Figure 14: View Policy Details](images/trilio/fig14-workload-policy.png) 
+    ![Figure 14: View Policy Details](images/trilio/fig14-workload-policy.png) 
 
-*Figure 14: View Policy Details.*
+    *Figure 14: View Policy Details.*
 
-The policy details screen is described in Table 6.
+    The policy details screen is described in Table 6.
 
-**Table 6: Policy Details.**
+    **Table 6: Policy Details.**
 
-Fields |	Description
--------|------------
-Snapshot Schedule |	<ul><li>Schedule Enabled - Displays the value True or False depending upon if it is enabled or not.</li><li>Start Date - Displays the start date of the snapshot schedule.</li><li>Start Time - Displays the start time of the snapshot schedule.</li><li>End Date - Displays the end date of the snapshot schedule.</li><li>Repeat Every - Displays the time interval of the snapshot to be taken.</li><li>Next snapshot runs at	- Displays the time in hours, minutes and seconds after which the next schedule will take place.</li><li>Full Backup interval	- Displays the value of full backup interval.</li></ul>
-Retention Policy |	<ul><li>Number of snapshots to keep	- Displays the number of snapshots to be retained.</li><li>Number of Days to Retain - Displays the number of days to retain a snapshot.</li></ul>
+    Fields |	Description
+    -------|------------
+    Snapshot Schedule |	<ul><li>Schedule Enabled - Displays the value True or False depending upon if it is enabled or not.</li><li>Start Date - Displays the start date of the snapshot schedule.</li><li>Start Time - Displays the start time of the snapshot schedule.</li><li>End Date - Displays the end date of the snapshot schedule.</li><li>Repeat Every - Displays the time interval of the snapshot to be taken.</li><li>Next snapshot runs at	- Displays the time in hours, minutes and seconds after which the next schedule will take place.</li><li>Full Backup interval	- Displays the value of full backup interval.</li></ul>
+    Retention Policy |	<ul><li>Number of snapshots to keep	- Displays the number of snapshots to be retained.</li><li>Number of Days to Retain - Displays the number of days to retain a snapshot.</li></ul>
 
 ### Workload Policy Template
 
@@ -327,25 +327,25 @@ TrilioVault creates a snapshot of the workload automatically as per the policy s
 
 2.	Click Create Snapshot corresponding to the workload for which snapshot is to be created as shown in Figure 15.
 
-![Figure 15: Creating snapshot for Workload](images/trilio/fig15-create-snapshot.png)  
+    ![Figure 15: Creating snapshot for Workload](images/trilio/fig15-create-snapshot.png)  
 
-*Figure 15: Creating snapshot for Workload.*
+    *Figure 15: Creating snapshot for Workload.*
 
-A new Create Snapshot window is displayed as shown in Figure 16.
+    A new Create Snapshot window is displayed as shown in Figure 16.
  
-![Figure 16: Create Full/Incremental Snapshot](images/trilio/fig16-create-snapshot-dialog.png) 
+    ![Figure 16: Create Full/Incremental Snapshot](images/trilio/fig16-create-snapshot-dialog.png) 
 
-*Figure 16: Create Full/Incremental Snapshot.*
+    *Figure 16: Create Full/Incremental Snapshot.*
 
-Create Snapshot in Table 7 gives the description of the Create Snapshot window.
+    Create Snapshot in Table 7 gives the description of the Create Snapshot window.
 
-**Table 7: Create Snapshot.**
+    **Table 7: Create Snapshot.**
 
-Field name           |	Description
----------------------|------------
-Snapshot Name        |	Name of the snapshot.
-Snapshot Description |	Description of the snapshot to be created.
-Snapshot Type        |	Type of snapshot Full or Incremental. The default value is Incremental.
+    Field name           |	Description
+    ---------------------|------------
+    Snapshot Name        |	Name of the snapshot.
+    Snapshot Description |	Description of the snapshot to be created.
+    Snapshot Type        |	Type of snapshot Full or Incremental. The default value is Incremental.
 
 #### Full Snapshot
 
@@ -359,9 +359,9 @@ To create a full snapshot follow these steps.
 
 4.	Click _**WORKLOAD NAME**_, click Snapshot tab. The created snapshot can be seen as displayed in Figure 17.
  
-![Figure 17: Full Snapshot Creation](images/trilio/fig17-snapshots-list.png) 
+    ![Figure 17: Full Snapshot Creation](images/trilio/fig17-snapshots-list.png) 
 
-*Figure 17: Full Snapshot Creation.*
+    *Figure 17: Full Snapshot Creation.*
 
 #### Incremental Snapshot
 
@@ -378,9 +378,9 @@ An Incremental snapshot is the backup of the latest changes since the last backu
 
 4.	Click _**WORKLOAD NAME**_, click Snapshot tab. The created snapshot can be seen as displayed in Figure 18.
  
-![Figure 18: Incremental Snapshot Creation](images/trilio/fig18-snapshots-list1.png) 
+    ![Figure 18: Incremental Snapshot Creation](images/trilio/fig18-snapshots-list1.png) 
 
-*Figure 18: Incremental Snapshot Creation.*
+    *Figure 18: Incremental Snapshot Creation.*
 
 #### Snapshot Details
 
@@ -495,9 +495,9 @@ Once the image is successfully loaded, a tenant can instantiate file manager ins
 
 1.	Launch the File Manager Instance. Refer to Figure 25 for details.
 
-![Figure 25: Launch File Manager Instance](images/trilio/fig25-filemanager-launch.png) 
+    ![Figure 25: Launch File Manager Instance](images/trilio/fig25-filemanager-launch.png) 
 
-*Figure 25: Launch File Manager Instance.*
+    *Figure 25: Launch File Manager Instance.*
 
 2.	Assign Security Group to open port 80
 
@@ -507,47 +507,47 @@ Once the image is successfully loaded, a tenant can instantiate file manager ins
 
 5.	Click More drop-down, then click Mount Snapshot. Refer to Figure 26 for details.
 
-![Figure 26: Mounting Snapshot](images/trilio/fig26-mount-snapshot.png) 
+    ![Figure 26: Mounting Snapshot](images/trilio/fig26-mount-snapshot.png) 
 
-*Figure 26: Mounting Snapshot.*
+    *Figure 26: Mounting Snapshot.*
 
 6.	Assign the File Manager instance to the snapshot launched in Step 1. Refer to Figure 27 for details.
 
 7.	Click Mount.
 
-![Figure 27: Assigning File Manager Instance to snapshot](images/trilio/fig27-mount-snapshot-dialog.png) 
+    ![Figure 27: Assigning File Manager Instance to snapshot](images/trilio/fig27-mount-snapshot-dialog.png) 
 
-*Figure 27: Assigning File Manager Instance to snapshot.*
+    *Figure 27: Assigning File Manager Instance to snapshot.*
 
 8.	Access File Manager using <B><I>FLOATING IP</B></I> created in step 3. Refer to Figure 28 for details.
 
-![Figure 28: File Manager](images/trilio/fig28-file-browser.png) 
+    ![Figure 28: File Manager](images/trilio/fig28-file-browser.png) 
 
-*Figure 28: File Manager.*
+    *Figure 28: File Manager.*
 
 9.	Select the preferred action and double-click the selected action.
 
-![Figure 29: File Manager Options](images/trilio/fig29-file-download.png) 
+    ![Figure 29: File Manager Options](images/trilio/fig29-file-download.png) 
 
-*Figure 29: File Manager Options.*
+    *Figure 29: File Manager Options.*
 
 10.	The web-interface displays 5 options as shown in Figure 29.
 
-**Table 14: File Manager Options.**
+    **Table 14: File Manager Options.**
 
-Option        |	Description
---------------|------------
-Parent Folder |	Allows end user to go back to parent folder of the selected file.
-Download      |	Allows end user to download the file.
-Rename        |	Allows end user to rename the file. (The change is local. It won’t change the backup copy.)
-Delete        |	Allows end user to delete the file. (This change is local. It won’t change the backup copy.)
-Replace file  |	Allows end user to replace the file with another file. (The change is local. It won’t change the backup copy.)
+    Option        |	Description
+    --------------|------------
+    Parent Folder |	Allows end user to go back to parent folder of the selected file.
+    Download      |	Allows end user to download the file.
+    Rename        |	Allows end user to rename the file. (The change is local. It won’t change the backup copy.)
+    Delete        |	Allows end user to delete the file. (This change is local. It won’t change the backup copy.)
+    Replace file  |	Allows end user to replace the file with another file. (The change is local. It won’t change the backup copy.)
 
 11.	Choose appropriate action.
 
-![File Manager Metadata](images/trilio/fig29a-file-manager-metadata.png)
+    ![File Manager Metadata](images/trilio/fig29a-file-manager-metadata.png)
 
-File manager instance contains the metadata that describes what snapshot is currently mounted.
+    File manager instance contains the metadata that describes what snapshot is currently mounted.
 
 #### In-place restore of a file/directory
 
@@ -572,21 +572,21 @@ Snapshot can be unmounted when access to individual files/directories are no lon
 
 2.	Click Unmount Snapshot as shown in Figure 30.
 
-![Figure 30: Unmount Snapshot](images/trilio/fig30-umount-snapshot.png)  
+    ![Figure 30: Unmount Snapshot](images/trilio/fig30-umount-snapshot.png)  
 
-*Figure 30: Unmount Snapshot.*
+    *Figure 30: Unmount Snapshot.*
 
 3.	On confirming the Unmount Snapshot action, TrilioVault will unmount the snapshot. Refer to Figure 31 for details.
 
-![Figure 31: Confirm Unmount](images/trilio/fig31-unmount-confirm.png)  
+    ![Figure 31: Confirm Unmount](images/trilio/fig31-unmount-confirm.png)  
 
-*Figure 31: Confirm Unmount.*
+    *Figure 31: Confirm Unmount.*
 
 4.	The snapshot gets unmounted successfully. Refer to Figure 32 for details.
 
-![Figure 32: Snapshot Unmounted](images/trilio/fig32-umount-success.png)  
+    ![Figure 32: Snapshot Unmounted](images/trilio/fig32-umount-success.png)  
 
-*Figure 32: Snapshot Unmounted.*
+    *Figure 32: Snapshot Unmounted.*
 
 Sometimes it becomes daunting to find the snapshot that is mounted, in particular when there are many workloads and many snapshots. When a snapshot is mounted, the file manager instance metadata includes the snapshot ID that is currently mounted with the file manager. Please see the following screen grab from the file manager instance details.
 
@@ -610,23 +610,23 @@ One-click Restore is a single click restore of the snapshot irrespective of the 
 
 1.	Delete all original workload instances from the OpenStack cloud as shown in Figure 34. The Instances display the deleted workload instances.
 
-![Figure 34: VM(s) to be Deleted](images/trilio/fig34-oneclick-restore-delete-vms.png) 
+    ![Figure 34: VM(s) to be Deleted](images/trilio/fig34-oneclick-restore-delete-vms.png) 
 
-*Figure 34: VM(s) to be Deleted.*
+    *Figure 34: VM(s) to be Deleted.*
 
 2.	Login to Horizon dashboard and navigate to Backups. Click <B><I>WORKLOAD NAME</B></I>, and then click Snapshots tab.
 
 3.	Click One-click Restore menu option of the corresponding snapshot as shows in Figure 35.
 
-![Figure 35: Snapshot Selected for One-click Restore](images/trilio/fig35-oneclick-restore.png) 
+    ![Figure 35: Snapshot Selected for One-click Restore](images/trilio/fig35-oneclick-restore.png) 
 
-*Figure 35: Snapshot Selected for One-click Restore.*
+    *Figure 35: Snapshot Selected for One-click Restore.*
 
 4.	One-click Restore screen as shown in Figure 36 is displayed.
 
-![Figure 36: One-click Restore](images/trilio/fig36-oneclick-dialog.png) 
+    ![Figure 36: One-click Restore](images/trilio/fig36-oneclick-dialog.png) 
 
-*Figure 36: One-click Restore.*
+    *Figure 36: One-click Restore.*
 
 5.	Enter the details OneClickRestore Name and OneClickRestore Description.
 
@@ -634,13 +634,13 @@ One-click Restore is a single click restore of the snapshot irrespective of the 
 
 7.	It will restore all the workload instances at the same location with the same settings on OpenStack as shown in Figure 37.
 
-![Figure 37: One-click Restore in progress](images/trilio/fig37-oneclick-progress.png)
+    ![Figure 37: One-click Restore in progress](images/trilio/fig37-oneclick-progress.png)
 
-*Figure 37: One-click Restore in progress.*
+    *Figure 37: One-click Restore in progress.*
 
-![One-click Success](images/trilio/fig37b-oneclick-success.png)
+    ![One-click Success](images/trilio/fig37b-oneclick-success.png)
 
-![One-click Restored VMs](images/trilio/fig37a-oneclick-restored-vms.png)
+    ![One-click Restored VMs](images/trilio/fig37a-oneclick-restored-vms.png)
   
 #### Selective Restore
 
@@ -652,37 +652,37 @@ Selective Restore allows for lot of flexibility to recover instances. With the S
 
 3.	Click Selective Restore as shown in Figure 38.
 
-![Figure 38: Snapshot Selected for Selective Restore](images/trilio/fig38-selective-restore.png) 
+    ![Figure 38: Snapshot Selected for Selective Restore](images/trilio/fig38-selective-restore.png) 
 
-*Figure 38: Snapshot Selected for Selective Restore.*
+    *Figure 38: Snapshot Selected for Selective Restore.*
 
 4.	Selective Restore screen will be displayed as shown in Figure 39.
 
-![Figure 39: Selective Restore Details](images/trilio/fig39-selective-restore-wizard1.png) 
+    ![Figure 39: Selective Restore Details](images/trilio/fig39-selective-restore-wizard1.png) 
 
-*Figure 39: Selective Restore Details.*
+    *Figure 39: Selective Restore Details.*
 
 5.	Enter the details and navigate to the Network Mapping tab. Refer to Figure 40 for details. Select the target network you want to restore the snapshot to.
 
-![Figure 40: Selective Restore-Network Mapping](images/trilio/fig40-selective-restore-networks.png) 
+    ![Figure 40: Selective Restore-Network Mapping](images/trilio/fig40-selective-restore-networks.png) 
 
-*Figure 40: Selective Restore-Network Mapping.*
+    *Figure 40: Selective Restore-Network Mapping.*
 
 6.	Navigate to Volume Types Mapping tab and select the target volume type you want to restore to, as shown in Figure 41.
 
-![Figure 41: Selective Restore-Volume Types Mapping](images/trilio/fig41-selective-restore-volume-types.png) 
+    ![Figure 41: Selective Restore-Volume Types Mapping](images/trilio/fig41-selective-restore-volume-types.png) 
 
-*Figure 41: Selective Restore-Volume Types Mapping.*
+    *Figure 41: Selective Restore-Volume Types Mapping.*
 
 7.	Each of the subsequent tabs correspond to workload instances created. There is a separate tab for each VM. Using these tabs you can edit restore settings of the respective VM. Select an instance’s tab. You will see options to choose to include/exclude that VM from restore, flavor type, and instance name.
 
 8.	Deselect the checkbox if you do not want to include that particular VM in the restore process as shown in Figure 42.
 
-![Figure 42: Selective Restore-VM not included in Restore](images/trilio/fig42-selective-restore-wizard-2.png) 
+    ![Figure 42: Selective Restore-VM not included in Restore](images/trilio/fig42-selective-restore-wizard-2.png) 
 
-*Figure 42: Selective Restore-VM not included in Restore.*
+    *Figure 42: Selective Restore-VM not included in Restore.*
 
-![Selective Restore Wizard](images/trilio/fig42a-selective-restore-wizard-vm1.png) 
+    ![Selective Restore Wizard](images/trilio/fig42a-selective-restore-wizard-vm1.png) 
  
 9.	Select Flavor, Enter Instance Name. Instance Name if changed will restore the instance with the new name.
 
@@ -690,13 +690,13 @@ Selective Restore allows for lot of flexibility to recover instances. With the S
 
 11.	It will restore all the workload instances on OpenStack as shown in Figure 43. In the figure the restored VM in target IP can be seen.
 
-![Selective Restore Progress](images/trilio/fig43aselective-restore-progress.png)
+    ![Selective Restore Progress](images/trilio/fig43aselective-restore-progress.png)
 
-![Selective Restore Success](images/trilio/fig43b-selective-restore-success.png)   
+    ![Selective Restore Success](images/trilio/fig43b-selective-restore-success.png)   
 
-![Figure 43: Selective Restore instances](images/trilio/fig43c-selective-restore-vms.png)      
+    ![Figure 43: Selective Restore instances](images/trilio/fig43c-selective-restore-vms.png)      
 
-*Figure 43: Selective Restore instances.*
+    *Figure 43: Selective Restore instances.*
 
 #### In-place restore
 
@@ -740,33 +740,33 @@ To obtain Restore details information, follow these steps.
 
 3.	Navigate to the Snapshots tab and click the name of snapshot. The screen as shown in Figure 47 is displayed.
 
-![Figure 47: Snapshot Details](images/trilio/fig47-restore-snapshot-details.png) 
+    ![Figure 47: Snapshot Details](images/trilio/fig47-restore-snapshot-details.png) 
 
-*Figure 47: Snapshot Details.*
+    *Figure 47: Snapshot Details.*
 
 4.	Navigate to the Restore tab and click <B><I>RESTORE NAME</B></I>. The Restore Details screen as shown in Figure 48 is displayed.
 
-![Figure 48: Restore Details](images/trilio/fig48-restore-restore-details.png) 
+    ![Figure 48: Restore Details](images/trilio/fig48-restore-restore-details.png) 
 
-*Figure 48: Restore Details.*
+    *Figure 48: Restore Details.*
 
-**Table 15: Restore Details and Description.**
+    **Table 15: Restore Details and Description.**
 
-Fields           |	Description
------------------|------------
-_**Info**_       | &nbsp;
-Name             |	Displays the name of Selective Restore.
-Description      |	Displays the description of the Selective Restore.
-Restore Type     |	Displays the type of restore. Restore can be One-click or Selective.
-Status      	    | Displays the status of the restore operation.
-Time taken	      | Displays the time taken for restore operation in seconds.
-Size             |	Displays the size of the restore.
-Progress Message |	Displays the progress message of the restore.
-Progress         |	Displays the status of the progress.
-Host             |	Displays the host name where the restore operation is taking place.
-_**VMs**_ | &nbsp;
-Status           |	Displays the status of the instance.
-ID              	| Displays the ID of the instance.
+    Fields           |	Description
+    -----------------|------------
+    _**Info**_       | &nbsp;
+    Name             |	Displays the name of Selective Restore.
+    Description      |	Displays the description of the Selective Restore.
+    Restore Type     |	Displays the type of restore. Restore can be One-click or Selective.
+    Status      	    | Displays the status of the restore operation.
+    Time taken	      | Displays the time taken for restore operation in seconds.
+    Size             |	Displays the size of the restore.
+    Progress Message |	Displays the progress message of the restore.
+    Progress         |	Displays the status of the progress.
+    Host             |	Displays the host name where the restore operation is taking place.
+    _**VMs**_ | &nbsp;
+    Status           |	Displays the status of the instance.
+    ID              	| Displays the ID of the instance.
 
 #### Deleting a Snapshot
 
@@ -775,13 +775,13 @@ To delete a snapshot, follow these steps.
 
 1.	Login to Horizon dashboard and navigate to Backups tab.
 
-2.	Select the _**WORKLOAD NAME**_. click Snapshots tab.
+2.	Select the _**WORKLOAD NAME**_. Click Snapshots tab.
 
 3.	Select the snapshot to be deleted and click Delete Snapshots.
  
-![Figure 49: Delete Snapshot](images/trilio/fig49-delete-snapshot.png)
+    ![Figure 49: Delete Snapshot](images/trilio/fig49-delete-snapshot.png)
 
-*Figure 49: Delete Snapshot.*
+    *Figure 49: Delete Snapshot.*
 
 ## Workload Manager API/CLI Documentation
 
