@@ -20,7 +20,7 @@ toc_mdlink: ostack-how-use-triliovault.md
 
 ## Overview
 
-TrilioVault is a tenant-driven Data Protection-as-a-Service (DPaaS) solution for OpenStack clouds. The TrilioVault solution takes point-in-time backup of workloads and supports multiple recovery options to recover your workloads in case of any outages. This article provides detailed instructions on the administration of the system from the [TrilioVault Administration Guide] relevant to UKCloud for OpenStack. The target audience of the TrilioVault are OpenStack tenants as well as OpenStack Administrators who are proficient with basic backup and recovery concepts.
+TrilioVault is a tenant-driven Data Protection-as-a-Service (DPaaS) solution for OpenStack clouds. The TrilioVault solution takes point-in-time backup of workloads and supports multiple recovery options to recover your workloads in case of any outages. This article provides detailed instructions from the [TrilioVault Administration Guide] on the system administration tasks relevant to UKCloud for OpenStack. The target audience of the TrilioVault are OpenStack tenants as well as OpenStack Administrators who are proficient with basic backup and recovery concepts.
 
 Benefits of this solution include:
 
