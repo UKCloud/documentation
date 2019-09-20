@@ -3,8 +3,8 @@ title: Benefits of VMware L2 VPN | UKCloud Ltd
 description: Shows a video that provides a technical explanation of VMware's L2 VPN feature
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 14/03/2019 13:05:29
+reviewer: Sue Highmoor
+lastreviewed: 20/09/2019
 
 toc_rootlink: Videos
 toc_sub1: 
@@ -20,9 +20,14 @@ toc_mdlink: vmw-vid-l2-vpn.md
 
 The following video provides a technical explanation of VMware's L2 VPN feature, which forms part of the UKCloud for VMware Enterprise Networking Bundle.
 
-<iframe src="https://player.vimeo.com/video/323161271" width="864" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-[Advanced Features: L2 VPN](https://vimeo.com/323161271) on [Vimeo](https://vimeo.com/ukcloud)
+<div class="row">
+  <div class="col-md-10">
+    <div style="padding:56.25% 0 0 0;position:relative;">
+      <iframe src="https://www.youtube.com/embed/Zdct0gy20-g" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p><a href="https://www.youtube.com/watch?v=Zdct0gy20-g">What are the Benefits of VMware L2 VPN?</a> on <a href="https://www.youtube.com/channel/UCnlFUyOWcS4iE_HK-ZEcNGw">YouTube</a>
+  </div>
+</div>
 
 ## Related articles
 

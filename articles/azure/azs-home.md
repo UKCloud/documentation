@@ -3,8 +3,8 @@ title: UKCloud for Microsoft Azure | UKCloud Ltd
 description: Home page for UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 
+reviewer: Sue Highmoor
+lastreviewed: 20/09/2019
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -68,14 +68,12 @@ First, take a look at our [Getting Started Guide](azs-gs.md) to learn the basics
 <div class="row">
   <div class="col-md-6">
     <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://player.vimeo.com/video/305064724?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-      </iframe>
+      <iframe src="https://www.youtube.com/embed/yPB4Oj_cu_A" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <p><a href="https://vimeo.com/305064724">Microsoft Azure Stack Portal Overview</a></p>
+    <p><a href="https://www.youtube.com/watch?v=yPB4Oj_cu_A">Microsoft Azure Stack Portal Overview</a></p>
   </div>
   <div class="col-md-6"></div>
 </div>
-<script src="https://player.vimeo.com/api/player.js"></script>
 
 ## Still have questions?
 
