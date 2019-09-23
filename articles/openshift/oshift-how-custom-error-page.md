@@ -68,3 +68,15 @@ To revert the above changes and return to the default error page, run the follow
        $ oc set volume dc/router --remove --name custom-configs 
        $ oc set volume dc/router-private --remove --name custom-configs # (if router-private was edited)
        $ oc delete configmap haproxy-custom-configs
+
+## Next steps
+
+For more information about the UKCloud for OpenShift service, see:
+
+- [*Getting Started Guide for UKCloud for OpenShift*](oshift-gs.md)
+
+- [*UKCloud for OpenShift FAQs*](oshift-faq.md)
+
+## Feedback
+
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
