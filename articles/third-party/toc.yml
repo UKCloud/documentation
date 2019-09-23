@@ -18,6 +18,8 @@
     href: third-sd-cyberscore.md
   - name: CyberScore from UKCloud Service Scope
     href: third-sco-cyberscore.md
+  - name: CyberScore overview video
+    href: third-vid-cyberscore.md
   - name: CyberScore scanner deployment environment requirements
     href: third-ref-cyberscore-prereqs.md
   - name: Deploy a CyberScore scanner VM - vCloud Director

@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-home.html",
-          "hash": "NW2b9qtfPbPOjW9Ee1RMoQ=="
+          "hash": "LreRHQRjdp7QuRcPurIDVQ=="
         }
       },
       "is_incremental": false,
@@ -537,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-vid-overview.html",
-          "hash": "b+L6cMmvKPNCR77VYUeupA=="
+          "hash": "8s0OKt7vOPxdnD0EHyKwBw=="
         }
       },
       "is_incremental": false,
@@ -2396,7 +2396,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-vid-geodrive2-client-overview.html",
-          "hash": "d5r9tW3r1qF30IK/Wx2LvA=="
+          "hash": "fgZ47SRy9op+nJtMLq3gOg=="
         }
       },
       "is_incremental": false,
@@ -3390,18 +3390,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/connectivity/conn-ref-ids.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/connectivity/conn-ref-ids.html",
-          "hash": "kmZs9g7L2+Ik8dpGHHDpMA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/connectivity/conn-ref-internet-access-elevated.md",
       "output": {
         ".html": {
@@ -3638,7 +3626,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/toc.html",
-          "hash": "e0pTzN/OBdy7JpejDaGD1w=="
+          "hash": "YCpFHxmTHR44lOg+hKcb2A=="
         }
       },
       "is_incremental": false,
@@ -7573,7 +7561,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-home.html",
-          "hash": "6gAHJVI0/7G490a3L8Xo7w=="
+          "hash": "QsiBrGaKBKI12EbzsVUeRA=="
         }
       },
       "is_incremental": false,
@@ -7873,7 +7861,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-vid-overview.html",
-          "hash": "ivn4qX4GCtAkkipXTgum1A=="
+          "hash": "BdBN21niM0/URxcoUVqJtg=="
         }
       },
       "is_incremental": false,
@@ -8306,7 +8294,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-home.html",
-          "hash": "5O578e9mKSehWLDjjb48UQ=="
+          "hash": "Gwvc+qRSyL/bbRElUC6AMw=="
         }
       },
       "is_incremental": false,
@@ -8438,7 +8426,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-vid-overview.html",
-          "hash": "Isliza1zYEU4pZOytfwCog=="
+          "hash": "3Fgklh0JKS0yTdq///otZQ=="
         }
       },
       "is_incremental": false,
@@ -9682,11 +9670,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-vid-community.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-vid-community.html",
+          "hash": "N53SYzIaAR6lV0z3mrQc9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-vid-kc-contribution.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-vid-kc-contribution.html",
-          "hash": "viYLtUvmRlDbJ8xvQirSCg=="
+          "hash": "bO4Q4QWs0V6QfS/teK4BHQ=="
         }
       },
       "is_incremental": false,
@@ -9710,7 +9710,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "e+cYXJsjyk2t9EhkEwXb8g=="
+          "hash": "/ayV4OHbofJB0PHhnw86YA=="
         }
       },
       "is_incremental": false,
@@ -10719,7 +10719,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-vid-portal.html",
-          "hash": "RAfvIXxzzG1K7/iQQoTjUA=="
+          "hash": "q6E/Mt3jmc/JVeNlVoo3nw=="
         }
       },
       "is_incremental": false,
@@ -11307,12 +11307,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "articles/third-party/third-vid-cyberscore.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/third-party/third-vid-cyberscore.html",
+          "hash": "SZUSo/UThuvaBg+4DNTAtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/third-party/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/third-party/toc.html",
-          "hash": "7ZD1gSkzgeFlxMKhm6aaZw=="
+          "hash": "8z3Uuga+K6/Gq6CmaY2aJg=="
         }
       },
       "is_incremental": false,
@@ -17881,7 +17893,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-home.html",
-          "hash": "OUJDbwI9XfF7o4fHOttoiQ=="
+          "hash": "7iW2FeYBnOKDo9y0Db+Ivw=="
         }
       },
       "is_incremental": false,
@@ -19057,7 +19069,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-vid-dfw.html",
-          "hash": "ZsUr+eOLuoXZdEExBJUyrw=="
+          "hash": "DceF96u5l70OVnJdqqTPJA=="
         }
       },
       "is_incremental": false,
@@ -19069,7 +19081,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-vid-l2-vpn.html",
-          "hash": "EtUjOFUL5XFdX1AFCZLdfA=="
+          "hash": "nlERq2XnD7nF2ygH7E4N2g=="
         }
       },
       "is_incremental": false,
@@ -19081,7 +19093,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-vid-licensing-kms.html",
-          "hash": "o7UPryKUS0QKtokGzV9ovw=="
+          "hash": "zgiQv9j+E9BLm4NsAa2GPw=="
         }
       },
       "is_incremental": false,
@@ -19093,7 +19105,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-vid-vcd91.html",
-          "hash": "yerRLzXPVGYTQuuu17dMNg=="
+          "hash": "hkYtGZMx5GHchbxw8PkyfA=="
         }
       },
       "is_incremental": false,
@@ -19186,7 +19198,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 407,
+          "total_file_count": 408,
           "skipped_file_count": 0
         }
       }

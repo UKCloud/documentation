@@ -56,8 +56,6 @@
     href: conn-ref-telco-enagagement.md
   - name: Understanding PSN core services
     href: conn-ref-psn-core-services.md
-  - name: What Intrusion Detection System (IDS) does UKCloud provide?
-    href: conn-ref-ids.md
 - name: Service Scope
   items:
   - name: SiteProtect Advanced DDoS Mitigation Service Scope
