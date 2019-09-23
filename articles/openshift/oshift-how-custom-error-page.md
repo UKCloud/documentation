@@ -30,7 +30,7 @@ This article assumes familiarity with the Linux command line, and with the `oc` 
 
 ### Prerequisites
 
-To complete the steps in this article, you must have the `oc` command installed and have a suitable account on your OpenShift cluster. Specifically, it is assumed you know the authentication credentials that need to be supplied to `oc login`.
+To complete the steps in this article, you must have the `oc` command installed and have a suitable account on your OpenShift cluster. Specifically, it is assumed you know the authentication credentials that need to be supplied to `oc login`. Your account must have access to edit objects in the "default" project. 
 
 Your OpenShift cluster must be version 3.x.
 
