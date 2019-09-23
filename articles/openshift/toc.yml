@@ -16,6 +16,8 @@
     href: oshift-how-build-app-private-repo.md
   - name: Create new users
     href: oshift-how-create-users.md
+  - name: Customise the router error page
+    href: oshift-how-customise-error-page.md
   - name: Expose non-http services externally
     href: oshift-how-expose-nonhttp-services.md
   - name: How to expand OpenShift persistent volumes
