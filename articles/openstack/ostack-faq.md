@@ -184,16 +184,19 @@ Yes, you can deploy your own load balancing virtual appliance provided it is com
 
 We currently do not offer any VPN/Tunnelling as a Service from within the UKCloud for OpenStack product. Customers can create their own VPN endpoints by deploying a software appliance such as pfSense on an instance within their project.
 
-### Can I create a network to connect two separate OpenStack Projects?
+### Can I create a network to connect two separate OpenStack projects?
 
-It is possible to create a network between two separate OpenStack Projects, however the implementation will vary based upon whether the OpenStack Projects are within the same UKCloud Region.
+You can have a network between two separate OpenStack projects, however the implementation will vary based on whether the OpenStack projects are within the same UKCloud region.
 
-- **Within the same Region** - UKCloud can create a network on the customer's behalf, but customers need to be aware of and agree to the following caveats:
-  -  This will allow any instance in both projects to speak to each other without any restriction, this is due to the way the "Default" security group is defined.
-  -  As this is non standard we would request that the customer test this solution thoroughly before relying upon it in production.
-- **Across two separate Regions** - UKCloud will create and configure a [VRF](https://en.wikipedia.org/wiki/Virtual_routing_and_forwarding) on the customer's behalf which can then be used to route traffic between OpenStack Projects.
+- **Within the same region** - UKCloud can create a network on your behalf, but you need to be aware of and agree to the following caveats:
 
-To request the implementation of either the options shown above, please raise a ticket within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. Alternatively, you can contact support by phone or email.
+  -  This will allow any instance in both projects to speak to each other without any restriction. This is due to the way the default security group is defined.
+
+-  As this is non-standard, we would request that you test this solution thoroughly before relying upon it in production.
+
+- **Across two separate regions** - UKCloud will create and configure a [VRF](https://en.wikipedia.org/wiki/Virtual_routing_and_forwarding) on your behalf, which you can then use to route traffic between OpenStack projects.
+
+To request the implementation of either the options shown above, raise a ticket within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. Alternatively, you can contact support by phone or email.
 
 ## Storage
 
@@ -286,7 +289,7 @@ UKCloud monitors the underlying platform but doesn't monitor your OSs or applica
 
 OpenStack offers built in autoscaling capabilities using the features of HEAT templates and Ceilometer event monitoring.
 
-For further details on autoscaling within OpenStack please view [this article](https://docs.ukcloud.com/articles/openstack/ostack-ref-auto-scaling.html).
+For further details on autoscaling within OpenStack, see [*Auto Scaling for UKCloud for OpenStack*](ostack-ref-auto-scaling.md).
 
 ### How quickly can I scale my service up or down?
 
