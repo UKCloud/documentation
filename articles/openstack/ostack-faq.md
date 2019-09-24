@@ -192,7 +192,7 @@ You can have a network between two separate OpenStack projects, however the impl
 
   -  This will allow any instance in both projects to speak to each other without any restriction. This is due to the way the default security group is defined.
 
--  As this is non-standard, we would request that you test this solution thoroughly before relying upon it in production.
+  -  As this is non-standard, we would request that you test this solution thoroughly before relying upon it in production.
 
 - **Across two separate regions** - UKCloud will create and configure a [VRF](https://en.wikipedia.org/wiki/Virtual_routing_and_forwarding) on your behalf, which you can then use to route traffic between OpenStack projects.
 
