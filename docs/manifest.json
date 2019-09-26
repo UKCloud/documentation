@@ -10324,6 +10324,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/portal/images/ptl-mycalls-new-user-request-offering.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/portal/images/ptl-mycalls-new-user-request-offering.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/portal/images/ptl-mycalls-request-submit.png",
       "output": {
         "resource": {
@@ -10623,7 +10634,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-my-calls.html",
-          "hash": "fziq2bnvMrOMgTgi/TiLGA=="
+          "hash": "q/IQ+UVnZt9zjK9iRyDrTw=="
         }
       },
       "is_incremental": false,
