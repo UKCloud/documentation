@@ -3,8 +3,8 @@ title: UKCloud Pricing Estimation Tool overview video | UKCloud Ltd
 description: Shows a video that provides an overview of the Pricing Estimation Tool
 services: other
 author: Dan Baker
-reviewer:
-lastreviewed: 20/11/2018 14:29:01
+reviewer: Sue Highmoor
+lastreviewed: 24/09/2019
 
 toc_rootlink: Videos
 toc_sub1: 
@@ -18,11 +18,16 @@ toc_mdlink: other-vid-pricing-tool-overview.md
 
 # UKCloud Pricing Estimation Tool overview video
 
-The following video provides an overview of the UKCloud Pricing Estimation tool's user interface.
+The following video provides an overview of the UKCloud [Pricing Estimation tool](https://ukcloud.com/price-estimator-tool/).
 
-<iframe src="https://player.vimeo.com/video/300701961?color=34d9c3" width="864" height="486" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-[Pricing Estimation Tool Overview](https://vimeo.com/300701961) on [Vimeo](https://vimeo.com/ukcloud)
+<div class="row">
+  <div class="col-md-10">
+    <div style="padding:56.25% 0 0 0;position:relative;">
+      <iframe src="https://www.youtube.com/embed/n3KOz5Usbuk" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p><a href="https://www.youtube.com/watch?v=n3KOz5Usbuk">UKCloud Pricing Estimation Tool Overview</a> on <a href="https://www.youtube.com/channel/UCnlFUyOWcS4iE_HK-ZEcNGw">YouTube</a>
+  </div>
+</div>
 
 ## Related articles
 
