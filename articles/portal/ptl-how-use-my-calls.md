@@ -249,7 +249,7 @@ You can enable new users on your account with access to My Calls.
     > [!NOTE]
     > It takes about 15 minutes for the user to be available within the Portal.
 
-5. To provide the user with access to My Calls, you must raise a service request using the **Setting up a user in My Calls** offering in the Service Catalog.
+5. To provide the user with access to My Calls, you must raise a service request using the **New user setup in My Calls** offering in the Service Catalog.
 
     ![New User Request Offering](images/ptl-mycalls-new-user-request-offering.png)
 
