@@ -25,7 +25,7 @@ This guide provides some general information about how you can export data away 
 
 You can package and export your data in a number of different ways, however we recommend that you read the following documents:
 
-- [Blueprint: Exporting and importing vApps and vApp templates](https://ukcloud.com/wp-content/uploads/2018/08/ukc-gen-136-exporting-and-importing-vapps-and-vapp-templates-blueprint-v2.pdf) - A technical case for transfer of data in UKCloud for VMware
+- [Using the OVF tool to export vApps and VMs](https://docs.ukcloud.com/articles/vmware/vmw-how-use-ovf-tool.html) - Guidance on using the OVF tool which can be used to export data from VMware
 
 - [Getting Started Guide for Cloud Storage](../cloud-storage/cs-gs.md) - Covers the use APIs for access to our storage service
 
