@@ -11,15 +11,15 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Submit ideas in the UKCloud Community
-toc_fullpath: How To/other-ref-ideas.md
-toc_mdlink: other-ref-ideas.md
+toc_fullpath: How To/other-how-submit-ideas.md
+toc_mdlink: other-how-submit-ideas.md
 ---
 
 # UKCloud Ideas
 
 ## Overview
 
-UKCloud Ideas is the place in our UKCloud Community where you can share your ideas and suggestions with us and help influence our product development. You can submit ideas, vote on your favourite ideas and comment on other member suggestions. Ideas can be big or small; if it will improve your UKCloud experience, we want to know. Each idea is assessed in line with our delivery roadmap. The higher the number of votes, the higher the priority for development.
+UKCloud Ideas is the place in our UKCloud Community where you can share your ideas and suggestions with us and help influence our product development. You can submit ideas, vote on your favourite ideas and comment on other member suggestions. Ideas can be big or small; if it will improve your UKCloud experience, we want to know. Each idea is assessed in line with our delivery roadmap. If selected for development, the higher the number of votes, the higher the priority.
 
 ![UKCloud Ideas](images/other-ideas-home.png)
 
@@ -37,7 +37,7 @@ To see what ideas community members have posted:
 
 4. If you see an idea you want to know more about, click it to see further details.
 
-5. If you like the idea, be sure to click the **Upvote** button; the more votes an idea receives, the more attention it will generate and the higher the priority it will have for development.
+5. If you like the idea, be sure to click the **Upvote** button; the more votes an idea receives, the more likely it will be selected for development and the higher the priority it will have.
 
    ![Upvote button](images/other-ideas-vote.png)
 
@@ -73,7 +73,7 @@ If you have an idea that you want to share with UKCloud and the community:
 
 We frequently monitor the Ideas section of the community to see what ideas are being added. When we see a new idea, we'll update it with the **New** status and initiate a conversation with the relevant UKCloud team to see if it is a viable idea. We may comment on the idea if we need more details. As soon as we have some information on your idea, we'll share it via the **Comments** tab and update the status. As and when we have updates on the progress of your idea, we'll add those to the **Comments** tab as well.
 
-In the meantime, other members of the community can vote for your idea if they like it and add their own comments and thoughts. The more votes and comments an idea gets, the higher the priority it will have for development.
+In the meantime, other members of the community can vote for your idea if they like it and add their own comments and thoughts. The more votes and comments an idea gets, the more likely it will be selected for development and the higher the priority it will have.
 
 ## Status of ideas
 
