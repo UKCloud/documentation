@@ -105,7 +105,7 @@ During a Major Incident, updates are published to the Service Status page: <http
 
 ## Escalation
 
-For onboarding issues, contact your allocated Customer Success Manager (CSM). For wider service issues, contact your Technical Account Manager (TAM) or Account Director.
+For onboarding issues, contact your allocated Customer Success Manager (CSM). For wider service issues, contact your Service Delivery Manager or Account Director.
 
 To escalate an incident or service request, contact the Support Team:
 

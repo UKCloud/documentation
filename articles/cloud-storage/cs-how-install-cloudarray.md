@@ -133,7 +133,7 @@ CloudArray is a memory-intensive application. Substantial performance degradatio
 
 ## Obtaining a CloudArray license
 
-If you require a CloudArray license key, UKCloud will contact Dell EMC on your behalf. Contact your Technical Account Manager (TAM) for further details.
+If you require a CloudArray license key, UKCloud will contact Dell EMC on your behalf. Contact your Service Delivery Manager for further details.
 
 ## Installing CloudArray Virtual Edition
 

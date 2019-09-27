@@ -58,7 +58,7 @@ For more information regarding the QMTH program, we have further details on the 
 
 If you want to use this option, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, detailing the VM names.
 
-In addition, you can also bring your own Microsoft desktop licensing for use on a dedicated single tenant cloud server such as Private Cloud for Compute. In this instance, contact your Account Director or Technical Account Manager for further information.
+In addition, you can also bring your own Microsoft desktop licensing for use on a dedicated single tenant cloud server such as Private Cloud for Compute. In this instance, contact your Account Director or Service Delivery Manager for further information.
 
 ## Options for all other Microsoft applications
 
@@ -85,7 +85,7 @@ As stated, all Microsoft applications on the UKCloud platform must be licensed a
 
 ## Microsoft application list
 
-The following list is aimed at providing you with a summary regarding the licensing options available to you for each specific application. This summary states whether UKCloud licensing and/or Microsoft Mobility is available. Please note that this is not intended to be a complete list, but covers the most frequently requested applications. If the application you are looking for is not on this list, please engage with your Account Director or Technical Account Manager who will be able to help and advise you as to whether the software can be licensed and if so how.
+The following list is aimed at providing you with a summary regarding the licensing options available to you for each specific application. This summary states whether UKCloud licensing and/or Microsoft Mobility is available. Please note that this is not intended to be a complete list, but covers the most frequently requested applications. If the application you are looking for is not on this list, please engage with your Account Director or Service Delivery Manager who will be able to help and advise you as to whether the software can be licensed and if so how.
 
 - **Microsoft SQL**
 
@@ -137,7 +137,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **Other Microsoft Products**
 
-  - Please engage with your Account Director or Technical Account Manager who will be able to help and advise you as to whether the software can be licensed, and if so, how.
+  - Please engage with your Account Director or Service Delivery Manager who will be able to help and advise you as to whether the software can be licensed, and if so, how.
 
 ## Submitting a request to use Microsoft applications on the UKCloud platform
 

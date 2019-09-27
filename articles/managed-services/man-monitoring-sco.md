@@ -54,7 +54,7 @@ The following table outlines the scope of the Managed Monitoring from UKCloud se
 
 ## Service provisioning
 
-You can request Managed Monitoring from UKCloud via your Technical Account Manager or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+You can request Managed Monitoring from UKCloud via your Service Delivery Manager or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 Within 5 business days of accepting an order, UKCloud will create the customer's monitoring environment with default thresholds (unless otherwise specified) and commence monitoring any environments that have been elected by the customer to be monitored.
 

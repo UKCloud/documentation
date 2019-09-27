@@ -94,7 +94,7 @@ UKCloud for OpenStack is managed directly by the customer, using OpenStack's Hor
 
 ## Service provisioning
 
-You can request UKCloud for OpenStack via your Technical Account Manager or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+You can request UKCloud for OpenStack via your Service Delivery Manager or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 Within 4 business hours of accepting an order, UKCloud will create the customer's Primary Administrator account and send a Welcome Pack which includes the URL for the UKCloud Portal, and the Getting Started Guide.
 
