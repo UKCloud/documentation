@@ -112,6 +112,8 @@
     href: vmw-how-manage-vcd-permissions.md
   - name: Manage Snapshot Protection for your VMs
     href: vmw-how-manage-snapshot-protection.md
+  - name: Manipulate power states with PowerCLI
+    href: vmw-how-manipulate-power-states-powercli.md
   - name: Migrate vApps between virtual data centres
     href: vmw-how-migrate-vapp.md
   - name: Migrate your workloads between UKCloud regions
