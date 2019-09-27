@@ -166,7 +166,7 @@ UKCloud maintains responsibility for routine patching and upgrades of the OpenSh
 
 ## Service provisioning
 
-You can request UKCloud for OpenShift via your Technical Account Manager (TAM) or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+You can request UKCloud for OpenShift via your Service Delivery Manager or by using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 Within 5 business days of accepting an order, UKCloud will create the customer’s primary account and send a Welcome Pack, which includes the URL for the UKCloud Portal, and the [Getting Started Guide](oshift-gs.md).
 

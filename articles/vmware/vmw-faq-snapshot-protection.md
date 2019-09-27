@@ -219,7 +219,7 @@ UKCloud's proactive corrective measures depend on the nature of the snapshot bac
 
 - Should the failure persist, we may suggest a customer review to try to resolve the issue.
 
-    If we identify that the snapshot backup service is incompatible with your application and intended usage, we'll recommend a session with a Technical Account Manager or solution architect to work through alternative protection options.
+    If we identify that the snapshot backup service is incompatible with your application and intended usage, we'll recommend a session with a Service Delivery Manager or solution architect to work through alternative protection options.
 
 ### How and when are reruns scheduled?
 

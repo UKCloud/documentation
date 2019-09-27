@@ -57,7 +57,7 @@ We do not guarantee successful snapshots.
 
 We can provide you with guidance on suitable candidates for Snapshot Protection (data change rate/size).
 
-VMs larger than 2TiB or with high change rates are not supported by Snapshot Protection, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up. Therefore, please contact your Technical Account Manager (TAM) if this scenario applies to one or more of your VMs.
+VMs larger than 2TiB or with high change rates are not supported by Snapshot Protection, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up. Therefore, please contact your Service Delivery Manager if this scenario applies to one or more of your VMs.
 
 VM snapshots may be attempted more than once to obtain successful status.
 

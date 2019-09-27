@@ -218,7 +218,7 @@ The approval process is shown below. More information is available in the [*UKCl
 
 Step | Description
 -----|------------
-1 Initial Contact | Customer contacts UKCloud to register interest in the CDSZ service. This can be through [My Calls](https://portal.skyscapecloud.com/support/ivanti) or direct contact with a Sales representative, Technical Account Manager (TAM) or Cloud Architect.
+1 Initial Contact | Customer contacts UKCloud to register interest in the CDSZ service. This can be through [My Calls](https://portal.skyscapecloud.com/support/ivanti) or direct contact with a Sales representative, Service Delivery Manager or Cloud Architect.
 2a Self-Assessment | Customer creates the document pack to illustrate the solution design and provide evidence that all necessary sign-offs and compliance have been obtained.
 2b Assurance Wrap Review | Customer creates the document pack with assistance from the UKCloud compliance team and Cloud Architect.
 3 Design Review | Customer presents the technical solution to the Cloud Architect for advice and feedback.

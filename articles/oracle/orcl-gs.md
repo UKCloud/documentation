@@ -72,7 +72,7 @@ UKCloud for Oracle Software does not include Oracle licensing but, because the p
 
 UKCloud ensures that hard partitioning is in place in all customer guest VMs in order to conform to Oracle licensing policies. When you create or modify a VM, automatic CPU pinning ensures that the VM won't use any CPUs other than the ones specifically pinned to the VM's vCPUs.
 
-If you have any questions about Oracle licensing, contact your Cloud Architect, Customer Success Manager or Technical Account Manager.
+If you have any questions about Oracle licensing, contact your Cloud Architect, Customer Success Manager or Service Delivery Manager.
 
 If you require assistance building out your Oracle solution, we can put you in contact with one or our partners who specialises in Oracle technologies.
 

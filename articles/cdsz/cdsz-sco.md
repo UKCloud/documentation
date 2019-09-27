@@ -206,9 +206,9 @@ For the first 90 days of the service, you have access to a UKCloud Customer Succ
 
 UKCloud Cloud Architects support you during the design of solutions for the cloud platform. UKCloud Cloud Architects are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing a CDSZ Walled Garden.
 
-### Technical Account Managers
+### Service Delivery Managers
 
-You'll be allocated with a Technical Account Manager (TAM) as an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
+You'll be allocated with a Service Delivery Manager as an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
 
 ### Support
 

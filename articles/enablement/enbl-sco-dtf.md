@@ -177,7 +177,7 @@ FTPS (Data) - 989 | &nbsp; | &nbsp;
 
 By default the Assured data upload PC is connected to your environment's internet gateway. You can connect from the PC to an external IP in your environment. The IP address of the data upload pc can be added to a firewall rule in your environment to secure access
 
-Access to environments on other networks (e.g HSCN or PSN) will require additional configuration. Please discuss this with your Cloud Delivery Manager or TAM if required
+Access to environments on other networks (e.g HSCN or PSN) will require additional configuration. Please discuss this with your Service Delivery Manager if required
 
 ## Platform performance
 
