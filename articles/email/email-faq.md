@@ -41,7 +41,7 @@ At the end of your free trial, you can seamlessly move to a billed service, leve
 
 Please note, this is for up to 500 users in a single organisation on request.
 
-## How do I request for a free trial?
+## How do I request a free trial?
 
 You can request a trial via the [UKCloud website](http://www.ukcloud.com/free-trial-sign-up) and accept the trial terms and conditions. Your environment will then be set up and you will receive trial credits to the equivalent of £500.
 
@@ -63,9 +63,9 @@ As the solution is delivered from UK data centres by a UK company, your data doe
 
 UKCloud manages and supports the platform in the UK. Depending on the mail client you choose, it may be supported by the third-party provider and not covered under our SLA. Wherever possible, UKCloud will also work with Zimbra to help resolve any compatibility issues.
 
-## Can I use Email and Collaboration in the UKCloud Elevated (previously PGA IL3) environment?
+## Can I use Email and Collaboration in the UKCloud Elevated security domain?
 
-Yes, Email and Collaboration as a Service is available on both the Assured and Elevated OFFICIAL platforms.
+Yes, Email and Collaboration as a Service is available on both the Assured and Elevated OFFICIAL security domains.
 
 ## Can I use Email and Collaboration over closed networks such as PSN, HSCN or Janet?
 
@@ -138,6 +138,10 @@ Yes, as standard, the service offers a dumpster folder which retains items (such
 ## What is the briefcase functionality?
 
 Briefcase is a document storing and sharing function that allows users to upload files to the mail store, so that they can access those files from anywhere via the Email and Collaboration as a Service mail client.
+
+## What are the default Class of Service settings?
+
+A Class of Service exists for each e-mail domain and defines the features, access privileges and default preferences that a new user account receives. For existing accounts, if a setting has been specified within the client’s Preferences tab, it will take precedence; otherwise the Class of Service setting will be applied. All new accounts will inherit the settings from the Class of Service. For information about the default Class of Service settings, or to request that a setting is changed from the default, raise a Service Request via the My Calls section of the UKCloud Portal.
 
 ## How long does it take to get the solution up and running?
 
