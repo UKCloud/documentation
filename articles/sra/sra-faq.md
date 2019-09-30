@@ -193,7 +193,7 @@ For renewals, it's important you give us at least two weeks' notice to prevent a
 
 Yes. To renew or revoke your certificates in bulk, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the "Renew and/or Revoke multiple SRA Certificates" option.
 
-Attach the Secure Remote Access bulk renewal/revoke form containing all the certificates you need renewing and/or revoking with details including User ID (UID) and certificate name. It would also be useful to provide host name or machine name.
+Attach the Secure Remote Access bulk renewal/revoke form (available [here](https://cas.frn00006.ukcloud.com/Docs/Documents/UKC-FRM-172%20UKCloud%20SRAS%20form.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1601391869&Signature=6Ri2onNvL6EjyKq0paFznAl4PT4%3D)) containing all the certificates you need renewing and/or revoking with details including User ID (UID) and certificate name. It would also be useful to provide host name or machine name.
 
 For renewals, it's important you give us at least two weeks' notice to prevent a break in your service.
 
