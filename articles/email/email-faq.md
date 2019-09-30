@@ -21,6 +21,9 @@ toc_mdlink: email-faq.md
 
 Email and Collaboration as a Service provides a range of productivity tools, including email, calendaring and tasks, which help an organisation's end users to work in a secure, efficient and effective way.
 
+> [!NOTE]
+> Email and Collaboration as a Service has been removed from sale. We'll continue to support and maintain this service for current customers. For new customers looking for a secure email service, please engage with our partner team at <partners@ukcloud.com>.
+
 ## What makes up Email and Collaboration as a Service?
 
 UKCloud manages the underlying infrastructure and application, ensuring the integrity of the email solution and mailbox availability. The customer is responsible for customising and managing the solution in terms of users, devices and client applications.
@@ -31,19 +34,7 @@ The service is charged per mailbox per month (or part thereof) which includes 1G
 
 ## Does UKCloud offer a free trial?
 
-Yes, we appreciate you might have various concerns about the suitability of our service to run your specific workloads. As we're confident that our service will exceed your expectations, we offer a 30-day free trial so that you can test and evaluate our service without commitment. Your trial provides you with a live environment on the UKCloud platform to test our services and verify whether they are suited to your needs.
-
-Before your trial, a Cloud Architect will engage with you to identify the goals you're working towards, to help ensure that your trial meets those goals.
-
-Throughout the trial period, a Customer Success Manager (CSM) will provide support for any issues you may encounter or questions you may have.
-
-At the end of your free trial, you can seamlessly move to a billed service, leveraging any of the work you've already completed in the live trial environment.
-
-Please note, this is for up to 500 users in a single organisation on request.
-
-## How do I request a free trial?
-
-You can request a trial via the [UKCloud website](http://www.ukcloud.com/free-trial-sign-up) and accept the trial terms and conditions. Your environment will then be set up and you will receive trial credits to the equivalent of £500.
+No. As Email and Collaboration has been removed from sale, a free trial is no longer available.
 
 ## What happens when my trial comes to an end?
 
