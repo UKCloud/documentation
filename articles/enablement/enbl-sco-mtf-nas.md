@@ -35,7 +35,8 @@ Your NAS will be securely installed in the MTF bay and connected into your compu
 
 ### HDD
 
-Your HDD is securely installed in an eSATA enclosure and connected to our NAS device in the Mass Trasfer bay. Our NAS is connected into your compute environment to carry out the transfer. Your HDD must be compatible with our eSATA enclosure: 3.5" SATA NAS hard drive, and optimised for use in one to five-bay enclosures.
+Your HDD is securely installed in an eSATA enclosure and connected to our NAS device in the Mass Trasfer bay. Our NAS is connected into your compute environment to carry out the transfer. Your HDD must be compatible with our eSATA enclosure: 3.5" SATA NAS hard drive, 
+optimised for use in one to five-bay enclosures and formatted as NTFS, Fat32, EXT3, EXT4, or HFS Plus (exFat is not currently supported).
 
 ### USB
 
