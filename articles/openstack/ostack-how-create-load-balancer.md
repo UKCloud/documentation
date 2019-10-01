@@ -31,7 +31,7 @@ Benefits of this solution include:
 
 - Advanced load-balancing services provided by HAProxy (for example, SSL support, session stickiness)
 
-- Fully scripted repeatable deployment (HEAT template available on the UKCloud Knowledge Centre alongside this article)
+- Fully scripted repeatable deployment (HEAT template available [here](https://cas.frn00006.ukcloud.com/Docs/Documents/OpenStack-LBaaS.zip?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1601391847&Signature=HUI%2Bp79N44gmGz2btqoFZTQsf%2Fc%3D))
 
 ## Caveats
 
