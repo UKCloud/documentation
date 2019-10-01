@@ -105,13 +105,15 @@ During a Major Incident, updates are published to the Service Status page: <http
 
 ## Escalation
 
-For onboarding issues, contact your allocated Customer Success Manager (CSM). For wider service issues, contact your Service Delivery Manager or Account Director.
+For onboarding issues, contact your allocated Customer Success Manager (CSM).
 
-To escalate an incident or service request, contact the Support Team:
+To escalate an incident or service request, contact the Support Team (by phone in the first instance):
 
 - Tel: 01252 303 300 (option 2)
 
-- Email: escalations@ukcloud.com (monitored 24 x 7)
+- Email: <escalations@ukcloud.com> (monitored 24 x 7)
+
+For wider service issues, contact your Service Delivery Manager during standard office hours.
 
 ## Feedback
 
