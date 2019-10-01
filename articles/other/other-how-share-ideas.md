@@ -1,5 +1,5 @@
 ---
-title: How to submit ideas in the UKCloud Community | UKCloud Ltd
+title: How to share your ideas in the UKCloud Community | UKCloud Ltd
 description: Provides information about how to use the Ideas area of the UKCloud Community to send us your feedback
 services: other
 author: Sue Highmoor
@@ -10,16 +10,16 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Submit ideas in the UKCloud Community
-toc_fullpath: How To/other-how-submit-ideas.md
-toc_mdlink: other-how-submit-ideas.md
+toc_title: Share your ideas in the UKCloud Community
+toc_fullpath: How To/other-how-share-ideas.md
+toc_mdlink: other-how-share-ideas.md
 ---
 
-# UKCloud Ideas
+# How to share your ideas in the UKCloud Community
 
 ## Overview
 
-UKCloud Ideas is the place in our UKCloud Community where you can share your ideas and suggestions with us and help influence our product development. You can submit ideas, vote on your favourite ideas and comment on other member suggestions. Ideas can be big or small; if it will improve your UKCloud experience, we want to know. Each idea is assessed in line with our delivery roadmap. If selected for development, the higher the number of votes, the higher the priority.
+UKCloud Ideas is the place in our UKCloud Community where you can share your ideas, suggestions and feedback with us and help influence our product development. You can submit ideas, vote on your favourite ideas and comment on other member suggestions. Ideas can be big or small; if it will improve your UKCloud experience, we want to know. For example, there might be an entirely new service you want us to provide, an additional feature for an existing service, a suggestion for a change in how a service or feature works or maybe just a small improvement to make a task easier to peform. Each idea is assessed in line with our delivery roadmap. If selected for development, the higher the number of votes, the higher the priority.
 
 ![UKCloud Ideas](images/other-ideas-home.png)
 
@@ -96,7 +96,11 @@ Occasionally, we'll issue challenges within UKCloud Ideas to solicit ideas about
 
 ![Challenges page](images/other-ideas-challenges.png)
 
-You can find the most recent challenges at the bottom of the Community *Home* page or by going directly to the [*Challenges*](https://community.ukcloud.com/challenges) page. Click the **View challenge** button to see more details and then click **Submit your idea**. Unlike regular ideas, ideas for challenges provide a set of questions to gather more targeted information, but there's also an area where you can provide additional information. Challenges usually have a time limit, so watch out for them and be sure to have your say before they're gone.
+You can find the most recent challenges at the bottom of the Community *Home* page or by going directly to the [*Challenges*](https://community.ukcloud.com/challenges) page.
+
+![Challenges menu option](images/other-ideas-mnu-challenges.png)
+
+Click the **View challenge** button to see more details and then click **Submit your idea**. Unlike regular ideas, ideas for challenges provide a set of questions to gather more targeted information, but there's also an area where you can provide additional information. Challenges usually have a time limit, so watch out for them and be sure to have your say before they're gone.
 
 ## Related videos
 
