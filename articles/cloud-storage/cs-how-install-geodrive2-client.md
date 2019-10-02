@@ -21,11 +21,6 @@ toc_mdlink: cs-how-install-geodrive2-client.md
 
 The GeoDrive 2.0 Client is a free application that runs on Windows and Windows Server, exposing UKCloud Cloud Storage as file systems. It’s designed as an easy way to use object storage by enabling Windows applications to interface with Cloud Storage servers using the popular S3 REST API.
 
-If you require a fully-integrated cloud gateway appliance with features like advanced deduplication and location caching, you may want to consider [CloudArray](cs-how-install-cloudarray.md) as an alternative.
-
-> [!NOTE]
-> Unlike The GeoDrive 2.0 Client, CloudArray is not a free application.
-
 ## Use cases
 
 You can use the GeoDrive 2.0 Client to:
@@ -138,10 +133,6 @@ This guide has shown you how to install and configure the GeoDrive Client 2.0 fo
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
-
-- Cloud Storage Gateways
-
-  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
 ## Related videos
 

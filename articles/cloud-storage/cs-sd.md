@@ -67,8 +67,6 @@ Storage Gateways enable simplified access and application integration to Cloud S
 
 - GeoDrive - A free gateway solution
 
-- CloudArray - A paid for, cloud gateway appliance
-
 ## Pricing and packaging
 
 UKCloud’s Cloud Storage starts from 1.46p per GiB per month, and full pricing with all options including licensing and connectivity available in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).

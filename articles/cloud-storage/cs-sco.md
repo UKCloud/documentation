@@ -74,8 +74,6 @@ Users can access, manage and view their Cloud Storage service, in any of the fol
 
   - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
-  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
-
 - **UKCloud Portal.** Contains information about the namespaces and users within your Cloud Storage environment, as well as a graphical representation of your storage consumption. For more information on the Portal functionality, see [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md).
 
 To create additional namespaces or users, you must raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. When requesting additional users, you can specify whether you want these users to have read-write or read-only permissions.
@@ -184,8 +182,6 @@ The following documents contain more information about Cloud Storage and the ser
 - Cloud Storage Gateways
 
   - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
-
-  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 

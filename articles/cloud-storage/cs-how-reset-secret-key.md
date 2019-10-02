@@ -71,8 +71,6 @@ This guide has shown you how to reset your Cloud Storage secret key. For informa
 
     - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
-    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
-
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback

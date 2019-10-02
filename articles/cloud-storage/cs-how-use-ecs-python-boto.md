@@ -155,8 +155,6 @@ This guide has shown you how to use the Boto package for Python to interact with
 
 - Cloud Storage Gateways
 
-  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
-
   - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
 ## Feedback

@@ -117,8 +117,6 @@ This guide has shown you how you can view information about your Cloud Storage s
 
   - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
-  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
-
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
