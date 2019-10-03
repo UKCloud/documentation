@@ -9598,18 +9598,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-ref-spectre-meltdown.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-ref-spectre-meltdown.html",
-          "hash": "dG4h5+2eLepPgCtjBkvr6g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-srz-table.md",
       "output": {
         ".html": {
@@ -9710,7 +9698,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "/ayV4OHbofJB0PHhnw86YA=="
+          "hash": "VtrAm6WxTjVBqXpX/VNQ1A=="
         }
       },
       "is_incremental": false,
@@ -19276,7 +19264,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 409,
+          "total_file_count": 408,
           "skipped_file_count": 0
         }
       }
