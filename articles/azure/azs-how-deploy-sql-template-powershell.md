@@ -40,7 +40,7 @@ Prerequisites from a Windows-based external client are:
 
   - [Configure PowerShell Environment and Azure Stack Module](azs-how-configure-powershell-users.md)
 
-- An active Azure Stack *Subscription*. Required to create an [SPN](azs-how-create-spn-portal.md) on Azure Stack
+- An active Azure Stack *Subscription*. Required to create an [SPN](azs-how-create-spn-portal.md) on Azure Stack.
 
 ## Official documentation
 
