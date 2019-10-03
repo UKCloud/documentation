@@ -225,9 +225,7 @@ This article has shown you how to browse Cloud Storage buckets using various dif
 
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
-- Cloud Storage Gateways
-
-  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
+- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
