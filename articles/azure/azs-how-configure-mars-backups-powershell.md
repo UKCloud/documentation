@@ -28,13 +28,13 @@ Recovery Services vaults store all backups and recovery points you create over t
 
 [MARS agent support matrix](https://docs.microsoft.com/en-us/azure/backup/backup-support-matrix-mars-agent)
 
-[Back up windows machines using MARS](https://docs.microsoft.com/en-us/azure/backup/backup-configure-vault)
+[Back up Windows machines using MARS](https://docs.microsoft.com/en-us/azure/backup/backup-configure-vault)
 
 [MARS agent backup process](https://docs.microsoft.com/en-us/azure/backup/backup-architecture#architecture-direct-backup-of-on-premises-windows-server-machines-or-azure-vm-files-or-folders)
 
 ## Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription in both public Azure and Azure Stack portals.
+To complete the steps in this article, you must have appropriate access to a subscription in both the public Azure and Azure Stack portals.
 
 > [!IMPORTANT]
 > The MARS agent is **only** supported on Windows VMs. Linux is **not** supported.
