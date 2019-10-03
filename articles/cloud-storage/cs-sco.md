@@ -70,11 +70,7 @@ Users can access, manage and view their Cloud Storage service, in any of the fol
 
 - **Command Line Interface (CLI).** CLI tools enable access from the command line by translating commands into the relevant API calls.
 
-- **Storage Gateways.** These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see the appropriate Cloud Storage Gateways Knowledge Centre article:
-
-  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
-
-  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+- **Storage Gateways.** These applications can interact with Cloud Storage via the native API on the back-end and translate it into a more traditional file or block storage protocol at the front-end, enabling a wide variety of use cases. For more information see [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md).
 
 - **UKCloud Portal.** Contains information about the namespaces and users within your Cloud Storage environment, as well as a graphical representation of your storage consumption. For more information on the Portal functionality, see [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md).
 
@@ -181,11 +177,7 @@ The following documents contain more information about Cloud Storage and the ser
 
 - [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
 
-- Cloud Storage Gateways
-
-  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
-
-  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
