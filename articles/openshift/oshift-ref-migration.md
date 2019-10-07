@@ -65,9 +65,70 @@ This will deploy a velero project and the required resources to backup/restore r
 
 ### Backup and Restore
 
+I've tested restoring a deleted namespace, called backup-test, that contains a ruby example build that uses S2I. This application uses a route and no persistent storage. Firstly to create a backup of the namespace I run:
+
+`
+velero backup create test1 --include-namespaces backup-test --wait
+`
+
+Once you have run this command you can check the backup exists and get some information on it with the following commands:
+
+```
+velero get backups
+
+velero describe backup test1
+```
+
+After confirming that the backup exists and completed successfully we're ready to restore the namespace. In my case I'm going to delete the project to simulate a mistake by an admin who has deleted the wrong namespace and needs to get it back asap. 
+
+`
+oc delete project backup-test
+`
+
+To restore the namespace:
+
+
+`velero create restore restore1 --from-backup test1`
+
+
+This recreates the namespace and all resources within it. If you watch the namespace however you will see that not everything is recreated correctly. In this example I have a ruby-example build which pulls a github repo and builds an image and deployment from this. The first thing I notice is that a new build is triggered and it goes directly into pending state. The error message I see in events is: 'MountVolume.SetUp failed for volume "builder-dockercfg-9589h-push" : secrets "builder-dockercfg-9589h" not found'. The problem appears to be that the build is referencing the secret that the buider service account had in the original namespace however when the namespace is restored the builder service account generates a new docker secret. In order to fix this you will need to cancel the build, delete the serviceaccount to allow it to be recreated and run the build again. In my environment the commands to achieve this are:
+
+```
+oc cancel-build ruby-ex-1
+
+oc delete build ruby-ex-1
+
+oc delete sa builder
+
+oc start-build ruby-ex
+```
+
+There may be extra steps needed to restore your namespaces depending on the resources within. It's recommended to test the restores and document the process required to get it back in a working state.
 
 ### Migration
 
+Velero also offers the ability to link multiple clusters to the same object storage and migrate resources/namespaces across. All that is needed is to deploy velero into your second cluster and set the same bucket as its BackupStorageLocation, backups should then be synched and be restorable into the new cluster. In this example I am going to migrate the backup-test namespace from the previous example into a new cluster in a different region.
+
+First we need to log into the new cluster via the CLI on your local machine:
+
+
+`oc login https://ocp.$domainSuffix:8443 --token=$api_token`
+
+
+Follow the installation steps to create your deploy file and run:
+
+
+`oc create -f deploy-velero.yml`
+
+Run the following to ensure that the namespaces are connected to the same backup location (You may need to allow a minute or so for backups to sync to your new cluster):
+
+`velero get backups`
+
+You should see any backups taken in your first cluster that are in the Object Storage bucket. If you can see them then you will be able to restore them into your new cluster. In my case I only have the test1 backup from earlier. Now we'll restore our backup to the new cluster:
+
+`velero create restore migration1 --from-backup test1`
+
+We will again have to sort out the issue with the builder accounts secret, once this is resolved we will have the application running in our new cluster. In my case I have a route unique to the domain of my cluster so I delete the route and expose the service in 'cluster 2' to create a route pointing to the right DNS record. For any production applications with a route rather than changing the route itself you would want to reconfigure your DNS to point to the new cluster IP.
 
 ### Further information
 
