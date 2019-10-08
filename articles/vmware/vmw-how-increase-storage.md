@@ -28,7 +28,7 @@ Before increasing the size of block storage for a VM, consider the following:
 
 - If the VM has a snapshot, you'll need to remove this before making changes to the hard disk size. You may need to perform a re-scan from the OS level.
 
-- To ensure optimal vMotion performance, each hard disks should not exceed 2TB. For more information, see [*Virtual machine disk limits and considerations*](vmw-ref-vmdk-limits.md).
+- To ensure optimal vMotion performance, each hard disk should not exceed 2TB. For more information, see [*Virtual machine disk limits and considerations*](vmw-ref-vmdk-limits.md).
 
 - There is an upper limit of 2TB per disk for any VM that uses UKCloud's Snapshot Protection.
 
