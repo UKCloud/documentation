@@ -128,9 +128,14 @@ You should see any backups taken in your first cluster that are in the Object St
 
 `velero create restore migration1 --from-backup test1`
 
-We will again have to sort out the issue with the builder accounts secret, once this is resolved we will have the application running in our new cluster. In my case I have a route unique to the domain of my cluster so I delete the route and expose the service in 'cluster 2' to create a route pointing to the right DNS record. For any production applications with a route rather than changing the route itself you would want to reconfigure your DNS to point to the new cluster IP.
+We will again have to sort out the issue with the builder accounts secret, once this is resolved we will have the application running in our new cluster. In my case I have a route unique to the domain of my cluster so I delete the route and expose the service in the new cluster to create a route pointing to the right DNS record. For any production applications with a route rather than changing the route itself you would want to reconfigure your DNS to point to the new cluster IP.
 
 ### Further information
+
+For further reading the docs can be found at:
+
+https://velero.io/docs/v1.1.0/
+
 
 
 ## Feedback
