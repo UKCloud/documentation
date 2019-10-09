@@ -8644,6 +8644,105 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/other/images/other-ideas-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-ideas-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-ideas-challenges.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-ideas-challenges.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-ideas-comment.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-ideas-comment.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-ideas-home.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-ideas-home.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-ideas-links.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-ideas-links.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-ideas-mnu-challenges.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-ideas-mnu-challenges.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-ideas-status.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-ideas-status.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-ideas-submit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-ideas-submit.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/other/images/other-ideas-vote.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/other/images/other-ideas-vote.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/other/images/other-improve-doc.png",
       "output": {
         "resource": {
@@ -9238,6 +9337,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/other/other-how-share-ideas.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-how-share-ideas.html",
+          "hash": "AyiI074KYLsRAwKIWsMfDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/other/other-how-use-pricing-tool.md",
       "output": {
         ".html": {
@@ -9698,7 +9809,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "VtrAm6WxTjVBqXpX/VNQ1A=="
+          "hash": "B/SJEGNbmGnUpFCNmPzuvA=="
         }
       },
       "is_incremental": false,
@@ -19247,13 +19358,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -19261,10 +19365,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 408,
+          "total_file_count": 409,
           "skipped_file_count": 0
         }
       }
