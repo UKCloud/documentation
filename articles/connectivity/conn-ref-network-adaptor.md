@@ -27,6 +27,8 @@ Symptoms include bluescreens of the operating system, random network dropouts.
 
 The fix is to install VMware Tools and replace the network adaptor with a VMXNET3 adaptor.
 
+Currently, you will need to navigate to the legacy UI in order to change the adapter type. To do this, please click on your user at the top right and select "Legacy UI".
+
 There are a couple of things you should be aware of when doing this:
 
 - Guest customisation - depending on the settings for each VM, this may cause the server to change its SID. (these can be adjusted when the VM is powered off).
