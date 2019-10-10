@@ -50,14 +50,6 @@ To configure a load balancer:
 
 7. Click **Save changes**.
 
-- [How to configure a load balancer](#how-to-configure-a-load-balancer)
-  - [Overview](#overview)
-  - [Configuring a load balancer](#configuring-a-load-balancer)
-    - [Configuring a pool server](#configuring-a-pool-server)
-    - [Configuring a virtual server](#configuring-a-virtual-server)
-  - [Next steps](#next-steps)
-  - [Feedback](#feedback)
-
 ### Configuring a pool server
 
 Pool servers are the real servers that will be masked by the load balancer.
