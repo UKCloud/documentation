@@ -12,7 +12,7 @@ toc_sub3:
 toc_sub4:
 toc_title: Create a virtual protection group
 toc_fullpath: How To/vmw-how-zerto-create-vpg.md
-toc_mdlink: vmw-how-upgrade-edge.md
+toc_mdlink: vmw-how-zerto-create-vpg.md
 ---
 
 # How to create a virtual protection group
