@@ -4,7 +4,7 @@ description: Provides an outline of the options available in the OpenStack dashb
 services: openstack
 author: Sue Highmoor
 reviewer:
-lastreviewed: 02/08/2018 14:45:48
+lastreviewed: 20/08/2019
 toc_rootlink: Reference
 toc_sub1:
 toc_sub2:
@@ -19,7 +19,7 @@ toc_mdlink: ostack-ref-dashboard.md
 
 UKCloud for OpenStack has been designed specifically for cloud native applications and is powered by Red Hat's Enterprise OpenStack Platform.
 
-For an overview on how to use OpenStack's Horizon dashboard (based upon the Newton release) to drive the platform, see the following OpenStack documents:
+For an overview on how to use OpenStack's Horizon dashboard to drive the platform, see the following OpenStack documents:
 
 
 | Region              | OpenStack Version                      | Documentation |
