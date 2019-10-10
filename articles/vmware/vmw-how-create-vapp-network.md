@@ -3,8 +3,8 @@ title: How to create a vApp network | UKCloud Ltd
 description: Shows how to create an isolated VDC network within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: lthangarajah
+lastreviewed: 22/08/2019
 
 toc_rootlink: How To
 toc_sub1:

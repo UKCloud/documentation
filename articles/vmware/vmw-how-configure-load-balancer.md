@@ -3,8 +3,8 @@ title: How to configure a load balancer | UKCloud Ltd
 description: Shows how to configure a load balancer within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: lthangarajah
+lastreviewed: 21/06/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -50,7 +50,13 @@ To configure a load balancer:
 
 7. Click **Save changes**.
 
-8. You need to configure two components of the load balancing service for it to function correctly: [pool servers](#configuring-a-pool-server) and [virtual servers](#configuring-a-virtual-server).
+- [How to configure a load balancer](#how-to-configure-a-load-balancer)
+  - [Overview](#overview)
+  - [Configuring a load balancer](#configuring-a-load-balancer)
+    - [Configuring a pool server](#configuring-a-pool-server)
+    - [Configuring a virtual server](#configuring-a-virtual-server)
+  - [Next steps](#next-steps)
+  - [Feedback](#feedback)
 
 ### Configuring a pool server
 
