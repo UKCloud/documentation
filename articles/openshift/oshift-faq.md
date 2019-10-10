@@ -4,7 +4,7 @@ description: Frequently asked questions for UKCloud for OpenShift
 services: openshift
 author: Matt Warner
 reviewer:
-lastreviewed: 20/07/2018 10:26:58
+lastreviewed: 08/07/2019
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
