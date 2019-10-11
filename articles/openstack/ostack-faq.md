@@ -79,7 +79,7 @@ Check the [*Service Definition*](ostack-sd.md) for more details on the currently
 
 ### Does UKCloud offer dedicated, bare-metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?
 
-UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack service. We do however provide large instances, with up to 56 vCPUs and 440GiB RAM, with no overcommit. UKCloud also offers its Private Cloud for Compute service, which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.
+UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack service. We do however provide large instances, with up to 56 vCPUs and 440GiB RAM, with no overcommit. UKCloud also offers its Private Compute service, which provides dedicated compute capabilities for use with OpenStack; please visit the [UKCloud Knowledge Centre](https://docs.ukcloud.com/) or contact your Account Director for further details.
 
 ### Can I resize an instance?
 
@@ -221,6 +221,10 @@ You can allocate additional persistent block storage via the self-service dashbo
 ### Is instance storage persistent? 
 
 No, the ephemeral storage provided with each instance is non-persistent and any data stored on it will be deleted at the point an instance is terminated. Persistent block storage volumes are persistent. If required, it is possible to deploy an instance using a block storage volume as its boot volume.
+
+### Are there any known limitations to Block Storage Volumes?
+
+Due to a current constraint within the OpenStack project, a maximum total of 25 block storage volumes (Tier 1 or Tier 2) can be attached to each OpenStack instance.
 
 ### Is Object Storage (OpenStack Swift) available?
 
