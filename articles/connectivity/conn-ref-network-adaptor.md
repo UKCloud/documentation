@@ -3,8 +3,8 @@ title: Network Adaptor Issue with Windows Server 2012 and 2012R2s | UKCloud Ltd
 description: Describes known issues with the e1000 and e1000e adaptors when using Microsoft Server 2012
 services: connectivity
 author: Sue Highmoor
-reviewer:
-lastreviewed: 12/10/2018 17:42:06
+reviewer: DudeleeG2 
+lastreviewed: 11/10/2109
 toc_rootlink: Troubleshooting
 toc_sub1: 
 toc_sub2:
@@ -27,7 +27,8 @@ Symptoms include bluescreens of the operating system, random network dropouts.
 
 The fix is to install VMware Tools and replace the network adaptor with a VMXNET3 adaptor.
 
-Currently, you will need to navigate to the legacy UI in order to change the adapter type. To do this, please click on your user at the top right and select "Legacy UI".
+> [!NOTE]
+> Currently, to change the adapter type, you'll need to navigate to the vCloud Director Legacy UI. To do this, in the top-right corner of the vCloud Director Tenant UI, click your user name, then select **Legacy UI**.
 
 There are a couple of things you should be aware of when doing this:
 
