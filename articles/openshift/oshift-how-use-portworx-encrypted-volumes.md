@@ -29,7 +29,7 @@ If you're interested in a free 30 day trial of Portworx, raise a Service Request
 
 ## Encryption Scope
 
-Portworx uses passphrase encryption to protect volume data, both at rest and in transit, using an AES-256 cipher. Passphrases are stored as OpenShift secrets and can be set both cluster-wide and per volume. In this article, we'll refer to passphrases as keys.
+Portworx uses passphrase encryption to protect volume data, both at rest and in transit, using an AES-256 cipher. Passphrases are stored as OpenShift secrets and you can set them either cluster-wide or per volume. In this article, we'll refer to passphrases as keys.
 
 ### Cluster-wide
 
@@ -49,7 +49,7 @@ $ PX_POD=$(oc get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].m
 $ oc exec $PX_POD -n kube-system -c portworx -- /opt/pwx/bin/pxctl secrets set-cluster-key --secret cluster-wide-secret-key
 ```
 
-Now that you've set the cluster key, pvcs created using a secure storage class will be encrypted with the key. Below is an example of a pvc spec using a storage class with encryption enabled:
+Now that you've set the cluster key, any pvc created using a secure storage class will be encrypted with the key. Below is an example of a pvc spec using a storage class with encryption enabled:
 
 ```
 kind: PersistentVolumeClaim
@@ -85,7 +85,7 @@ metadata:
     px/secret-key: specific-pvc-key
 ```
 
-`px/secret-name` refers to the secret object, `px/secret-namespace` should be portworx as the Portworx pods have privileges to read secrets in this project and `px/secret-key` refers to the specific key within the `px/secret-name` secret.
+`px/secret-name` refers to the secret object, `px/secret-namespace` should be `portworx` as the Portworx pods have privileges to read secrets in this project and `px/secret-key` refers to the specific key within the `px/secret-name` secret.
 
 Below is an example spec for a pvc that is encrypted using an individual secret:
 
