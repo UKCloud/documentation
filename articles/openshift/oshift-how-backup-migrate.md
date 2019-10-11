@@ -1,22 +1,22 @@
 ---
-title: OpenShift resource backup and cluster migration | UKCloud Ltd
+title: How to backup, restore and migrate OpenShift resources | UKCloud Ltd
 description: Provides a starting point for using Velero to backup and restore cluster resources and migrate between clusters
 services: openshift
 author: Kieran O'Neill
 reviewer: 
 lastreviewed: 11/09/2019
 
-toc_rootlink: Reference
+toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: OpenShift resource backup and cluster migration
-toc_fullpath: Reference/oshift-how-backup-migrate.md
+toc_title: Backup, restore and migrate OpenShift resources
+toc_fullpath: How To/oshift-how-backup-migrate.md
 toc_mdlink: oshift-how-backup-migrate.md
 ---
 
-# OpenShift resource backup and cluster migration
+# How to backup, restore and migrate OpenShift resources
 
 ### Overview
 
