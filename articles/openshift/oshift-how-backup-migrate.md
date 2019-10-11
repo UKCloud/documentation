@@ -12,8 +12,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: OpenShift resource backup and cluster migration
-toc_fullpath: Reference/oshift-ref-migration.md
-toc_mdlink: oshift-ref-migration.md
+toc_fullpath: Reference/oshift-how-backup-migrate.md
+toc_mdlink: oshift-how-backup-migrate.md
 ---
 
 # OpenShift resource backup and cluster migration
@@ -93,7 +93,7 @@ To create a backup of the namespace:
     velero describe backup test1
     ```
 
-3. After confirming that the backup exists and was completed successfully you're ready to restore the namespace. For example, if an administrator accidentally deletes the wrong namespace you'll want to get it back as soon as possible. To restore the namespace, run the following command:
+3. After confirming that the backup exists and was completed successfully you're ready to restore the namespace. To restore the namespace, run the following command:
 
     `velero create restore restore1 --from-backup test1`
 
