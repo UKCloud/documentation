@@ -126,6 +126,10 @@ By default, we will place the following virtual resource limitations per project
 
 Customers with requirements beyond these limits can raise a service request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) to have these limits per project considered for raising.
 
+## Block Storage Volume Limits
+
+Due to a current constraint within the OpenStack project, a maximum total of 25 block storage volumes (Tier1 or Tier 2) can be attached to each OpenStack instance.
+
 ## Platform Operation Request Limits
 
 Although designed to be a large-scale cloud platform, we strongly advise that when performing operations/requests against UKCloud for OpenStack you perform these actions in batches of no more than 30 (for example, only creating batches of up to 30 new instances in a single request). Additional requests can then be made to the platform for subsequent batches.

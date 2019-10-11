@@ -212,6 +212,10 @@ You can allocate additional persistent block storage via the self-service dashbo
 
 No, the ephemeral storage provided with each instance is non-persistent and any data stored on it will be deleted at the point an instance is terminated. Persistent block storage volumes are persistent. If required, it is possible to deploy an instance using a block storage volume as its boot volume.
 
+## Are there any know limitations to Block Storage Volumes?
+
+Due to a current constraint within the OpenStack project, a maximum total of 25 block storage volumes (Tier1 or Tier 2) can be attached to each OpenStack instance.
+
 ### Is Object Storage (OpenStack Swift) available?
 
 Unfortunately, the OpenStack Object Storage service (Swift) is not currently available on UKCloud for OpenStack. However, UKCloud offers Cloud Storage, a separate S3-compatible Object Storage service which can be used in conjunction with OpenStack; please visit the Digital Market place or contact your Account Director for further details.
