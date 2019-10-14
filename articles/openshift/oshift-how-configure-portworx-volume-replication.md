@@ -114,7 +114,7 @@ Update Volume Replication: Replication update started successfully for volume pv
 
 ## Failover
 
-During a failover event (when using non-Portworx provisioned persistent volumes) the backing block storage device requires reattaching to the node where a pod is rescheduled. This can lead to increased recovery times, which Portworx aims to reduce through replication and a storage-aware scheduler.
+During a failover event (when using non-Portworx provisioned persistent volumes) the backing block storage device requires reattaching to the node where a pod is rescheduled. This can lead to increased recovery times, which Portworx aims to reduce through replication and a storage-aware scheduler which can schedule pods to nodes where a replica exists.
 
 ### The STORK scheduler
 
