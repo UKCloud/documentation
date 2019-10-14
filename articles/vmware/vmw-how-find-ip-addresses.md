@@ -3,8 +3,8 @@ title: How to find your allocated external IP addresses | UKCloud Ltd
 description: Shows how to find your allocated external IP addresses within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: lthangarajah
+lastreviewed: 02/08/2019
 
 toc_rootlink: How To
 toc_sub1:

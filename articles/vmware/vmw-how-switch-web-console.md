@@ -3,8 +3,8 @@ title: How to switch to the vCloud Director Legacy UI | UKCloud Ltd
 description: Describes how to switch to the vCloud Director Legacy UI to perform tasks that are not possible in the tenant portal
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 21/09/2018 16:53:03
+reviewer: lthangarajah
+lastreviewed: 21/06/2019
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
