@@ -244,7 +244,9 @@
 </li>
 </ul>
 <p>Customers with requirements beyond these limits can raise a service request via <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> to have these limits per project considered for raising.</p>
-<h2 id="platform-operation-request-limits">Platform Operation Request Limits</h2>
+<h2 id="block-storage-volume-limits">Block storage volume limits</h2>
+<p>Due to a current constraint within the OpenStack project, a maximum total of 25 block storage volumes (Tier 1 or Tier 2) can be attached to each OpenStack instance.</p>
+<h2 id="platform-operation-request-llimits">Platform operation request lLimits</h2>
 <p>Although designed to be a large-scale cloud platform, we strongly advise that when performing operations/requests against UKCloud for OpenStack you perform these actions in batches of no more than 30 (for example, only creating batches of up to 30 new instances in a single request). Additional requests can then be made to the platform for subsequent batches.</p>
 <h2 id="published-features-not-currently-available">Published features not currently available</h2>
 <p>The following features published in the <a href="ostack-sd.html"><em>UKCloud for OpenStack Service Definition</em></a> are not currently available:</p>
