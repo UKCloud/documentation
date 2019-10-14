@@ -79,7 +79,7 @@
   - name: Create a virtual machine from scratch
     href: vmw-how-create-vm-from-scratch.md
   - name: Create a virtual protection group
-    href: vmw-how-upgrade-edge.md
+    href: vmw-how-zerto-create-vpg.md
   - name: Create an isolated VDC network
     href: vmw-how-create-isolated-network.md
   - name: Create firewall rules
