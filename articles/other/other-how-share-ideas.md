@@ -19,7 +19,7 @@ toc_mdlink: other-how-share-ideas.md
 
 ## Overview
 
-UKCloud Ideas is the place in our UKCloud Community where you can share your ideas, suggestions and feedback with us and help influence our product development. You can submit ideas, vote on your favourite ideas and comment on other member suggestions. Ideas can be big or small; if it will improve your UKCloud experience, we want to know. For example, there might be an entirely new service you want us to provide, an additional feature for an existing service, a suggestion for a change in how a service or feature works or maybe just a small improvement to make a task easier to peform. Each idea is assessed in line with our delivery roadmap and the higher the number of votes, the higher the priority for development. However, if an idea isn't in line with our overall platform strategy we may choose to not pursue it.
+UKCloud Ideas is the place in our UKCloud Community where you can share your ideas, suggestions and feedback with us and help influence our product development. You can submit ideas, vote on your favourite ideas and comment on other member suggestions. Ideas can be big or small; if it will improve your UKCloud experience, we want to know. For example, there might be an entirely new service you want us to provide, an additional feature for an existing service, a suggestion for a change in how a service or feature works or maybe just a small improvement to make a task easier to perform. Each idea is assessed in line with our delivery roadmap and the higher the number of votes, the higher the priority for development. However, if an idea isn't in line with our overall platform strategy we may choose to not pursue it.
 
 ![UKCloud Ideas](images/other-ideas-home.png)
 
