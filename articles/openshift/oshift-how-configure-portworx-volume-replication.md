@@ -75,7 +75,7 @@ $ oc exec $PX_POD -n kube-system -c portworx -- /opt/pwx/bin/pxctl volume inspec
 		  Node 		 : 10.254.254.12 (Pool 0)
 ```
 
-Excluding the IPs from the previous output we can retrieve the remaining node which the volume is not being replicated to:
+Excluding the IPs from the previous output will return the remaining node which the volume is not being replicated to:
 
 ```
 $ oc exec $PX_POD -n kube-system -c portworx -- /opt/pwx/bin/pxctl cluster list | grep -vE '10.254.254.14|10.254.254.12'
@@ -120,7 +120,7 @@ During a failover event (when using non-Portworx provisioned persistent volumes)
 
 STORK (STorage Operator Runtime for Kubernetes) is an open source storage scheduler plugin that extends the default scheduler by exposing information regarding the capabilities and state of the underlying storage provider. Using a storage-aware scheduler improves scheduling decisions resulting in improved performance and reduced recovery times for persistent volumes.
 
-To configure your pods to use the STORK scheduler, you should add the following to your pod spec:
+The following entry should be added to a pod spec in order to use the STORK scheduler:
 
 ```
 schedulerName: stork
