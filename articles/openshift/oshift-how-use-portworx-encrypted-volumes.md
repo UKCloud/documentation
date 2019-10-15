@@ -98,7 +98,6 @@ metadata:
     px/secret-name: volume-secrets
     px/secret-namespace: portworx
     px/secret-key: pvc-with-individual-key
-
 spec:
   storageClassName: portworx-repl1
   accessModes:
