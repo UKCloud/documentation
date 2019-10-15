@@ -36,7 +36,7 @@ Velero offers a tool called restic that enables backup of persistent volume data
 
 1. Download Velero from <https://github.com/vmware-tanzu/velero/releases>.
 
-    You can deploy Velero onto OpenShift with the `velero install` command. To deploy Velero, you'll need compatible object storage: <https://velero.io/docs/v1.1.0/support-matrix/>. In this article we use UKCloud's Cloud Storage product (based on Dell EMC's ECS).
+    You can deploy Velero onto OpenShift with the `velero install` command. To deploy Velero, you'll need compatible object storage: <https://velero.io/docs/v1.1.0/support-matrix/>. In this article we use UKCloud's Cloud Storage product.
 
 2. After logging in to the cluster via the CLI, run the following command to configure a `yaml` file that you can then edit and use to create the Velero deployment in the cluster:
 
