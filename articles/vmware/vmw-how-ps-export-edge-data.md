@@ -29,7 +29,7 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
 2. Open your PowerCLI session and connect to vCloud.
 
-    You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API.
+    You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API. For more information, see [*Finding your vCloud API credentials*(vmw-how-access-vcloud-api.md#finding-your-vcloud-api-credentials).
 
 3. Copy the following function and paste it into a .psm1 file:
 
@@ -70,7 +70,7 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
         Import-Module [PATH TO PSM1 FILE]
     
-5. Find your Edge Gateways by entering the following command:
+5. Find your edge gateways by entering the following command:
 
         $Gateways = Search-Cloud -QueryType EdgeGateway
 
@@ -94,8 +94,6 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
         $Config.Firewall | Export-csv -path c:\users\myaccount\desktop\firewallrules.csv
 
         $Config.Nat | Export-csv -path c:\users\myaccount\desktop\natrules.csv -notypeinformation
-
-
 
 ## Feedback
 
