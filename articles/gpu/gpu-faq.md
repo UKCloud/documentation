@@ -39,7 +39,6 @@ Cloud GPU enables UKCloud customers to supplement their cloud compute resources 
 
 - Streamline compute resources. Offload processing power to GPUs, reducing the CPU footprint needed to run applications.
 
-
 ### What technology does Cloud GPU use?
 
 The service is provisioned using NVIDIA cards in the required hosts. Different cards are utilised depending on the use case:
@@ -52,10 +51,6 @@ The service is provisioned using NVIDIA cards in the required hosts. Different c
 
 Cloud GPU utilises NVIDIA's GRID engine to expose GPU resources to client virtual machines (VMs). The GPU card is exposed as a shared PCI device which can then be used by the customer's VM.
 
-### Are there any prerequisites?
-
-Yes. To take advantage of the Cloud GPU service, you must also have UKCloud for VMware VMs running on the UKCloud platform. These VMs must be running in a 'Priority' virtual data centre as the GPU mapping requires 100% memory allocation to the VM. Further to this, VMs wishing to utilise GPGPUs (NVIDIA Tesla P100) must be built from specific GPGPU enabled templates providing specific BIOS settings.
-
 ### Does UKCloud require specific NVIDIA driver versions?
 
 Yes. VMs utilising the NVIDIA GRID solution must use the GRID driver matching the driver installed on the vSphere hosts (currently 385.41). This driver can be downloaded from the [UKCloud Knowledge Centre](https://portal.skyscapecloud.com/support/knowledge_centre/76dcd09f-3bd4-411f-8343-9fb21be0ceb1).
@@ -63,6 +58,18 @@ Yes. VMs utilising the NVIDIA GRID solution must use the GRID driver matching th
 ### Which compute services support Cloud GPU?
 
 Currently, Cloud GPU only supports environments provisioned on UKCloud for VMware in regions 5 and 6. There are future plans to enable the service on UKCloud for OpenStack and High Performance Compute.
+
+### Are there any prerequisites?
+
+Yes. To take advantage of the Cloud GPU service, you must also have UKCloud for VMware VMs running on the UKCloud platform. These VMs must be running in a 'Priority' virtual data centre as the GPU mapping requires 100% memory allocation to the VM. Further to this, VMs wishing to utilise GPGPUs (NVIDIA Tesla P100) must be built from specific GPGPU enabled templates providing specific BIOS settings.
+
+### How do I set up Cloud GPU for UKCloud for VMware?
+
+For information about how to set up Cloud GPU for UKCloud for VMware, see:
+
+- [*How to set up Cloud GPU Compute for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-compute.md)
+
+- [*How to set up Cloud GPU Visualisation for UKCloud for VMware*](/../vmware/vmw-how-setup-gpu-visualisation.md)
 
 ### How is it billed?
 

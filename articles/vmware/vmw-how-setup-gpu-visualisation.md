@@ -82,7 +82,7 @@ When using our Cloud GPU service for visualisation workloads, you should conside
 
 ## Provisioning your Cloud GPU service
 
-When your VM is ready, make sure it is powered off and then use [My Calls](https://portal.skyscapecloud.com/support/ivanti) in the UKCloud Portal to raise a Service Request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can complete the setup of your service:
+When your VM is ready, make sure it's powered off and then use [My Calls](https://portal.skyscapecloud.com/support/ivanti) in the UKCloud Portal to raise a Service Request for the Cloud GPU service. Provide the following details in the ticket so that UKCloud can complete the setup of your service:
 
 - Service type: GPU -- Visualisation
 
@@ -126,13 +126,13 @@ To install NVIDIA drivers:
 
     ![Insert CD dialog box](images/vmw-vcd-insert-cd.png)
 
-4. Check the console of VM to ensure that the ISO is mounted.
+4. Check the console of the VM to ensure that the ISO is mounted.
 
-6. Run the appropriate executable (Windows) or binary (Linux).
+5. Run the appropriate executable (Windows) or binary (Linux).
 
     **On Windows:**
 
-    - From Explorer, double click the driver installer file (NVIDIA*.*.exe).
+    - From Explorer, double click the driver installer file (`NVIDIA*.*.exe`).
 
     - Select **Custom (Advanced)**.
 
@@ -207,13 +207,13 @@ To enable access to the NVIDIA GRID License Server from your network, you must c
 
 - **Source/Source Port:** as appropriate for your source network
 
-- **Destination:** `51:179.197.53`
+- **Destination:** `51.179.197.53`
 
 - **Destination Port:** `7070`
 
 - **Protocol:** `TCP`
 
-- **Action:** `Allow`
+- **Action:** `Accept`
 
 ![Add firewall rule dialog box](images/vmw-vcd-firewall-gpu-licence.png)
 
@@ -243,7 +243,7 @@ To license GRID Virtual GPU on Windows:
 
 #### Retrieving a licence (Linux)
 
-To license GRID Virtual GPU on Linux
+To license GRID Virtual GPU on Linux:
 
 1. Copy the template grid licensing config file:
 

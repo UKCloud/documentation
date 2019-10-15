@@ -122,7 +122,7 @@ Before you request your Cloud GPU service, you must create a VM for the service 
     ![Create vApp menu option](images/vmw-vcd-mnu-create-vapp-from-template.png)
 
     > [!NOTE]
-    > The GPGPU templates provides a shell VM with no disks attached, hence no operating system installed. You'll need add the necessary disks so that you can install your preferred operating system on the VM.
+    > The GPGPU templates provide a shell VM with no disks attached, hence no operating system installed. You'll need to add the necessary disks so that you can install your preferred operating system on the VM.
 
 9. On the *Select Name* page of the *Create vApp from Template* dialog box, give the vApp a **Name** and **Description**, select the appropriate **Runtime lease** and **Storage lease** then click **Next**.
 
@@ -139,7 +139,7 @@ Before you request your Cloud GPU service, you must create a VM for the service 
 
 12. On the *Ready to Complete* page, review your settings and then click **Finish** to start the deployment.
 
-    You can check progress by expanding the *Recent Tasks* section at the bottom of the vCloud Director interface.
+    You can check progress by expanding the *Recent Tasks* section at the bottom of the vCloud Director Tenant UI.
 
 13. After the VM has been deployed, click the menu icon and select **Datacenters**.
 
@@ -197,7 +197,7 @@ To install NVIDIA drivers:
 
     ![Insert CD dialog box](images/vmw-vcd-insert-cd.png)
 
-4. Check the console of VM to ensure that the ISO is mounted.
+4. Check the console of the VM to ensure that the ISO is mounted.
 
 5. Run the appropriate executable (Windows) or binary (Linux).
 
@@ -278,13 +278,13 @@ To enable access to the NVIDIA GRID License Server from your network, you must c
 
 - **Source/Source Port:** as appropriate for your source network
 
-- **Destination:** `51:179.197.53`
+- **Destination:** `51.179.197.53`
 
 - **Destination Port:** `7070`
 
 - **Protocol:** `TCP`
 
-- **Action:** `Allow`
+- **Action:** `Accept`
 
 ![Add firewall rule dialog box](images/vmw-vcd-firewall-gpu-licence.png)
 
@@ -314,7 +314,7 @@ To license GRID Virtual GPU on Windows:
 
 ### Retrieving a licence (Linux)
 
-To license GRID Virtual GPU on Linux
+To license GRID Virtual GPU on Linux:
 
 1. Copy the template grid licensing config file:
 
