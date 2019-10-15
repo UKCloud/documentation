@@ -17938,7 +17938,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "ZGv/yir2zvhnU17lB8M7Aw=="
+          "hash": "mZX7xka2gBVUAEIsQXulxg=="
         }
       },
       "is_incremental": false,
@@ -18238,7 +18238,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-connect-windows-update.html",
-          "hash": "13+wJ6Ax5LXWORw7wtkNrA=="
+          "hash": "F9jR2kpbdb2SFaLFVm7Wbg=="
         }
       },
       "is_incremental": false,
@@ -19301,6 +19301,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-vid-wsus.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-vid-wsus.html",
+          "hash": "d+36DA0ptOWaotxWU0293w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "favicon.ico",
       "output": {
@@ -19375,7 +19390,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 409,
+          "total_file_count": 410,
           "skipped_file_count": 0
         }
       }
