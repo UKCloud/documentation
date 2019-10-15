@@ -32,7 +32,7 @@ Prerequisites from a Windows-based external client.
 
 - Service Principal Name
 
-  - [How To create Service Principal Name for Azure Stack in Powershell](azs-how-create-spn-powershell.md)
+  - [How to create Service Principal Name for Azure Stack in Powershell](azs-how-create-spn-powershell.md)
 
 ## Official Documentation
 
