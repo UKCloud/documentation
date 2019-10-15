@@ -25,7 +25,7 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
 1. Install PowerCLI from VMware:
 
-    <https://vmware.com/support/developer/PowerCLI>
+    <https://code.vmware.com/web/tool/11.4.0/vmware-powercli>
 
 2. Open your PowerCLI session and connect to vCloud.
 
