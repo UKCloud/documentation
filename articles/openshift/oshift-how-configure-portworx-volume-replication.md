@@ -49,7 +49,7 @@ kind: StorageClass
 apiVersion: storage.k8s.io/v1beta1
 metadata:
     name: portworx-repl3
-provisioner: com.openstorage.pxd
+provisioner: kubernetes.io/portworx-volume
 parameters:
    repl: "3"
 ```
