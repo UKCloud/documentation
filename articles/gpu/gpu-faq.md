@@ -3,8 +3,8 @@ title: Cloud GPU FAQs | UKCloud Ltd
 description: Frequently asked questions for Cloud GPU
 services: gpu
 author: Matt Warner
-reviewer:
-lastreviewed: 19/07/2018 17:56:05
+reviewer: Guy Martin
+lastreviewed: 20/08/2019
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -43,25 +43,25 @@ Cloud GPU enables UKCloud customers to supplement their cloud compute resources 
 
 The service is provisioned using NVIDIA cards in the required hosts. Different cards are utilised depending on the use case:
 
-- Visualisation - NVIDIA [M60](http://www.nvidia.com/object/tesla-m60.html) cards with GRID are designed to share virtual GPUs across multiple virtual desktop and application instances
+- Visualisation - NVIDIA [M60](https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/solutions/resources/documents1/nvidia-m60-datasheet.pdf) cards with GRID are designed to share virtual GPUs across multiple virtual desktop and application instances
 
-- Computational (GPGPU) - NVIDIA Tesla [P100](http://www.nvidia.com/object/tesla-p100.html) cards are designed to accelerate the compute-intensive elements of applications.
+- Computational (GPGPU) - NVIDIA Tesla [P100](https://www.nvidia.com/en-us/data-center/tesla-p100/) cards are designed to accelerate the compute-intensive elements of applications
 
 ### How does Cloud GPU work?
 
 Cloud GPU utilises NVIDIA's GRID engine to expose GPU resources to client virtual machines (VMs). The GPU card is exposed as a shared PCI device which can then be used by the customer's VM.
 
+### Are there any prerequisites?
+
+Yes. To take advantage of the Cloud GPU service, you must also have UKCloud for VMware VMs running on the UKCloud platform. These VMs must be running in a PRIORITY virtual data centre as the GPU mapping requires 100% memory allocation to the VM. Further to this, VMs wanting to utilise GPGPUs (NVIDIA Tesla P100) must be built from specific GPGPU enabled templates providing specific BIOS settings.
+
 ### Does UKCloud require specific NVIDIA driver versions?
 
-Yes. VMs utilising the NVIDIA GRID solution must use the GRID driver matching the driver installed on the vSphere hosts (currently 385.41). This driver can be downloaded from the [UKCloud Knowledge Centre](https://portal.skyscapecloud.com/support/knowledge_centre/76dcd09f-3bd4-411f-8343-9fb21be0ceb1).
+Yes. VMs utilising the NVIDIA GRID solution must use the GRID driver matching the driver installed on the vSphere hosts (currently 385.41). This driver can be downloaded from the [UKCloud Portal](https://portal.skyscapecloud.com/support/knowledge_centre/76dcd09f-3bd4-411f-8343-9fb21be0ceb1).
 
 ### Which compute services support Cloud GPU?
 
 Currently, Cloud GPU only supports environments provisioned on UKCloud for VMware in regions 5 and 6. There are future plans to enable the service on UKCloud for OpenStack and High Performance Compute.
-
-### Are there any prerequisites?
-
-Yes. To take advantage of the Cloud GPU service, you must also have UKCloud for VMware VMs running on the UKCloud platform. These VMs must be running in a 'Priority' virtual data centre as the GPU mapping requires 100% memory allocation to the VM. Further to this, VMs wishing to utilise GPGPUs (NVIDIA Tesla P100) must be built from specific GPGPU enabled templates providing specific BIOS settings.
 
 ### How do I set up Cloud GPU for UKCloud for VMware?
 
@@ -73,15 +73,15 @@ For information about how to set up Cloud GPU for UKCloud for VMware, see:
 
 ### How is it billed?
 
-Cloud GPU is billed per card per hour for GPGPU, and per vGPU per hour for visualisation. Please note that this is in addition to the UKCloud for VMware VM charge. You have the option to power off Cloud GPU when not required to avoid unnecessary costs. All usage is billed and invoiced at the end of each month.
+Cloud GPU is billed per card per hour for GPGPU, and per vGPU per hour for visualisation. This is in addition to the UKCloud for VMware VM charge. You have the option to power off Cloud GPU when not required to avoid unnecessary costs. All usage is billed and invoiced at the end of each month.
 
 ### Where can I find more information on NVIDIA GRID?
 
-The full NVIDIA GRID documentation is available on the NVIDIA website [here](http://www.nvidia.co.uk/object/grid-enterprise-resources-uk.html).
+You can find the latest information regarding GRID on the NVIDIA website [here](https://www.nvidia.com/en-gb/design-visualization/grid-vpc-vapps/).
 
 ### Where can I find more information on NVIDIA CUDA?
 
-You can find the latest information regarding CUDA on the NVIDIA website [here](http://www.nvidia.co.uk/object/cuda-parallel-computing-uk.html).
+You can find the latest information regarding CUDA on the NVIDIA website [here](https://developer.nvidia.com/cuda-zone).
 
 ### What is the SLA?
 
@@ -93,13 +93,13 @@ If a card failure occurs, our support team will identify the issue and re-instan
 
 ### Can I have multiple GPUs associated with a single VM?
 
-Yes.
+No. Each VM can only be mapped to a single GPU.
 
 ### Can the GPU service be added to one of our existing servers or would it require a new server?
 
-If you are using the GPU for Visualisation then yes, it could be added to an existing server, if the VM is in a GPU-enabled region. If your existing VM is not in the correct region then we would need to move it to a new server before enabling GPU for Visualisation on it.
+If you're using GPU for Visualisation then yes, it could be added to an existing server if the VM is in a GPU-enabled region. If your existing VM is not in the correct region then we would need to move it to a new server before enabling GPU for Visualisation on it.
 
-If you are planning on using GPU for Compute then you would need a new VM as a different BIOS is required.
+If you're planning on using GPU for Compute then you would need a new VM as a different BIOS is required.
 
 ## Feedback
 
