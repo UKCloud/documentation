@@ -119,7 +119,7 @@ For example, to migrate the `backup-test` namespace from our previous example in
 
 1. Log into the new cluster via the CLI on your local machine:
 
-    `oc login https://ocp.$domainSuffix:8443 --token=$api_token`
+    `oc login $cluster_url --token=$api_token`
 
 2. Follow the installation steps to create your deploy file and run:
 
