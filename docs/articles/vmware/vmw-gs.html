@@ -8,7 +8,7 @@
     <title>Getting Started Guide for UKCloud for VMware | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for UKCloud for VMware | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -144,6 +144,10 @@
 <p><img src="images/vmw-estate.png" alt="Organisation of UKCloud for VMware estate"></p>
 <h3 id="building-a-compute-service">Building a compute service</h3>
 <p>If you have the appropriate permissions, you can use the Portal to create a compute service in your account, without having to raise a support ticket.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can also create a compute service using the Portal API. For more information, see <a href="../portal/ptl-ref-portal-api.html#post-apiaccountsaccount_idvorgs"><em>UKCloud Portal API Reference Guide</em></a></p>
+</div>
 <ol>
 <li><p>In the UKCloud Portal, select the account in which you want to create the compute service.</p>
 </li>
@@ -181,6 +185,10 @@
 </ol>
 <h3 id="building-a-virtual-data-centre">Building a virtual data centre</h3>
 <p>After creating your compute service, the next step is to create one or more VDCs.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can also create a VDC using the Portal API. For more information, see <a href="../portal/ptl-ref-portal-api.html#post-apiaccountsaccount_idvorgsvorg_idvdcs"><em>UKCloud Portal API Reference Guide</em></a></p>
+</div>
 <div class="NOTE">
 <h5>Note</h5>
 <p>You can build VDCs in any of your compute services in regions 5 and 6, including those created by support tickets or the Portal API, not just those you created using the Portal.</p>
@@ -242,32 +250,14 @@
 <li><p>On the <strong>vCloud Director</strong> tab, for additional security, re-enter your UKCloud Portal password, then click <strong>Confirm</strong>.</p>
 <p><img src="images/vmw-portal-vcd-login.png" alt="vCloud Director tab in UKCloud Portal"></p>
 </li>
-<li><p>vCloud Director launches in your browser window. What you see depends on the version of vCloud Director available in your environment.</p>
-<p><strong>vCloud Director 8.20 Home page</strong></p>
-<p><img src="images/vmw-vcd-home.png" alt="vCloud Director 8.20 Home page"></p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>If this is the first time you've opened vCloud Director, you may be requested to download the vCloud Director Web Console plugin.</p>
-</div>
-<div class="TIP">
-<h5>Tip</h5>
-<p>If you encounter any issues, make sure you're using the Firefox ESR 32-bit browser. For more information, see <a href="../other/other-ref-browsers.html"><em>Browser requirements for services on the UKCloud Platform</em></a>.</p>
-</div>
-<p><strong>vCloud Director 9.1 Home page</strong></p>
-<p><img src="images/vmw-vcd-home-91.png" alt="vCloud Director 9.1 Home page"></p>
+<li><p>vCloud Director launches in your browser window.</p>
+<p><img src="images/vmw-vcd-home-page.png" alt="vCloud Director Home page"></p>
 </li>
 <li><p>The tasks you can perform in vCloud Director will depend on the permissions you have been granted.</p>
 <p><strong>More information!</strong> <a href="vmw-how-manage-vcd-permissions.html"><em>How to manage permissions for vCloud Director</em></a></p>
 </li>
-<li><p>To return to the UKCloud Portal:</p>
-<ul>
-<li>In vCloud Director 8.20, click the <strong>Logout</strong> link in the top right corner.</li>
-</ul>
-<p><img src="images/vmw-vcd-logout.png" alt="vCloud Director 8.20 Logout option"></p>
-<ul>
-<li>In vCloud Director 9.1, click your user name in the top right corner, and select <strong>Log out</strong>.</li>
-</ul>
-<p><img src="images/vmw-vcd-logout-91.png" alt="vCloud Director 9.1 Logout option"> --&gt;</p>
+<li><p>To return to the UKCloud Portal, click your user name in the top right corner, and select <strong>Log out</strong>.</p>
+<p><img src="images/vmw-vcd-logout-link.png" alt="vCloud Director 9.1 Logout option"></p>
 </li>
 </ol>
 <h2 id="next-steps">Next steps</h2>
@@ -317,10 +307,6 @@
 </li>
 </ul>
 </li>
-</ul>
-<h2 id="related-videos">Related videos</h2>
-<ul>
-<li><a href="vmw-vid-vcd91.html"><em>vCloud Director 9.1 overview video</em></a></li>
 </ul>
 <h2 id="glossary">Glossary</h2>
 <p>This section provides a glossary of terms specific to UKCloud for VMware.</p>

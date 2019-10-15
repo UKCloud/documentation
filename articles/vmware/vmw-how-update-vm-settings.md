@@ -3,8 +3,8 @@ title: How to view and update virtual machine settings | UKCloud Ltd
 description: Describes how to view and update the different virtual machine (VM) settings in vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/09/2018 14:50:11
+reviewer: lthangarajah
+lastreviewed: 02/08/2019
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -39,7 +39,7 @@ After you've deployed a virtual machine (VM), you can view and update its config
 
 ## General
 
-View and changes properties such as the VM/host name, OS type and version. You can also see if VMware Tools is installed on the VM and change the storage policy for the VM. For more information on storage policies, see [*Storage policies*](vmw-ref-storage-policies.md).
+View and changes properties such as the VM/host name, OS type and version. You can also see if VMware Tools is installed on the VM and change the storage policy for the VM.
 
 ![Virtual Machines: General section](images/vmw-vcd91-vm-general.png)
 
@@ -71,7 +71,6 @@ For guest customisation to work, VMware Tools must be installed and running in t
 For Windows VMs, there is an option for guest customisation to change the SID of the operating system. Bear in mind that changing the SID can corrupt VMs running applications, such as Active Directory, that rely on a known SID.
 
 ![Virtual Machines: Guest OS Customization section](images/vmw-vcd-vm-guestos.png)
-
 
 ## Feedback
 

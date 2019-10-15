@@ -8,7 +8,7 @@
     <title>How to create a Service Fabric cluster using the UKCloud Azure Stack portal | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a Service Fabric cluster using the UKCloud Azure Stack portal | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -110,7 +110,7 @@
 <li><p>In the <em>New</em> blade, select <strong>Security + Identity</strong>.</p>
 <p><img src="images/azs-browser-new-security.png" alt="Security option in New blade"></p>
 </li>
-<li><p>In the <em>New</em> blade, select <strong>Key Vault</strong>.</p>
+<li><p>In the <em>Security + Identity</em> blade, select <strong>Key Vault</strong>.</p>
 <p><img src="images/azs-browser-new-key-vault.png" alt="New Key Vault"></p>
 </li>
 <li><p>In the <em>Create key vault</em> blade, enter the following information:</p>
@@ -121,7 +121,7 @@
 </li>
 <li><p><strong>Resource Group</strong> - Select an existing resource group, or create a new one by typing a name for your new resource group.</p>
 </li>
-<li><p><strong>Location</strong> - This will be <code>frn00006</code>, which is the location of the Azure Stack.</p>
+<li><p><strong>Location</strong> - This will be <code>frn00006</code>, which is the Azure Stack region.</p>
 </li>
 <li><p><strong>Access policies</strong> - Configure who can access the key vault and what permissions they have.</p>
 <p><img src="images/azs-browser-create-key-vault.png" alt="Create new key vault"></p>
@@ -136,7 +136,7 @@
 </ol>
 <h3 id="adding-a-certificate-to-the-key-vault">Adding a certificate to the key vault</h3>
 <ol>
-<li><p>Once the key vault has been deployed, navigate to it by clicking <strong>All services</strong> in the favourites panel, then selecting <strong>Key Vaults</strong> under the <em>Security + Identity</em> section.</p>
+<li><p>Once the key vault has been deployed, navigate to it by clicking <strong>All services</strong> in the favourites panel, then selecting <strong>Key Vaults</strong> under the <em>Security</em> section.</p>
 </li>
 <li><p>Select your key vault from the list.</p>
 </li>
@@ -169,11 +169,11 @@
 <h3 id="gathering-key-vault-and-certificate-information">Gathering key vault and certificate information</h3>
 <p>During configuration of the Service Fabric cluster, you must provide several details relating to the key vault and certificates. You must also configure access to the key vault for virtual machines and the Azure Resource Manager.</p>
 <ol>
-<li><p>Once you have deployed the key vault, navigate to it by clicking <strong>All services</strong> in the favourites panel, then selecting <strong>Key Vaults</strong> under the <em>Security + Identity</em> section.</p>
+<li><p>Once you have deployed the key vault, navigate to it by clicking <strong>All services</strong> in the favourites panel, then selecting <strong>Key Vaults</strong> under the <em>Security</em> section.</p>
 </li>
 <li><p>Select your key vault from the list.</p>
 </li>
-<li><p>In the <em>Settings</em> section of the key vault's blade, select <strong>Access Properties</strong>.</p>
+<li><p>In the <em>Settings</em> section of the key vault's blade, select <strong>Access policies</strong>.</p>
 </li>
 <li><p>On the <em>Access policies</em> page, click <strong>Click to show advanced access policies</strong>.</p>
 </li>
@@ -229,7 +229,7 @@
 </li>
 <li><p><strong>Resource Group</strong> - Select an existing resource group, or create a new one by typing a name for your new resource group. Note that to create a Service Fabric cluster, the resource group must contain no other resources.</p>
 </li>
-<li><p><strong>Location</strong> - This will be <code>frn00006</code>, which is the location of the Azure Stack.</p>
+<li><p><strong>Location</strong> - This will be <code>frn00006</code>, which is the Azure Stack region.</p>
 </li>
 </ul>
 <p><img src="images/azs-browser-create-sf-basics.png" alt="Create Service Fabric cluster &gt; Basics"></p>
@@ -262,7 +262,7 @@
 <ul>
 <li><p><strong>Source Key Vault</strong> - The resource ID of the key vault that you gathered in the previous section. This should be in the format of <strong><code>/subscriptions/&lt;SubscriptionId&gt;/resourceGroups/&lt;ResourceGroupName&gt;/providers/Microsoft.KeyVault/vaults/&lt;VaultName&gt;</code></strong>.</p>
 </li>
-<li><p><strong>Cluster Certificate URL</strong> - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of <strong><code>https://&lt;VaultEndpoint&gt;/secrets/\&lt;SecretName&gt;/&lt;SecretVersion&gt;</code></strong>.</p>
+<li><p><strong>Cluster Certificate URL</strong> - The Secret Identifier of the cluster certificate that you gathered in the previous section. It should be in the format of <strong><code>https://&lt;VaultEndpoint&gt;/secrets/&lt;SecretName&gt;/&lt;SecretVersion&gt;</code></strong>.</p>
 </li>
 <li><p><strong>Cluster Certificate thumbprint</strong> - Cluster certificate thumbprint that you gathered earlier. For example, <strong><code>1742635FBCC5F9A442582516A7292523686DE3D7</code></strong>.</p>
 </li>
@@ -271,7 +271,7 @@
 </li>
 <li><p><strong>Server Certificate thumbprint</strong> - Server certificate thumbprint that you gathered earlier. For example, <strong><code>1742635FBCC5F9A442582516A7292523686DE3D7</code></strong>.</p>
 </li>
-<li><p><strong>Use Reverse Proxy Certificate</strong> - You may specify a SSL certificate to be used by the reverse proxy you have enabled. Doing so will cause the reverse proxy to communicate using HTTPS. If no certificate is specified, then the reverse proxy will communicate using HTTP instead.</p>
+<li><p><strong>Use Reverse Proxy Certificate</strong> - You may specify an SSL certificate to be used by the reverse proxy you have enabled. Doing so will cause the reverse proxy to communicate using HTTPS. If no certificate is specified, then the reverse proxy will communicate using HTTP instead.</p>
 </li>
 <li><p><strong>Admin Client Certificate Thumbprints</strong> - Comma separated list of admin client certificate thumbprints. For example, <strong><code>1742635FBCC5F9A442582516A7292523686DE3D7,0272251171BA32CEC7938A65B8A6A553AA2D3283</code></strong>.</p>
 </li>

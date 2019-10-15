@@ -36,9 +36,9 @@ If you want to terminate your whole account with UKCloud, you must raise separat
 
 ## Customer responsibilities
 
-- When you decide to terminate a service, you should first contact your Technical Account Manager (TAM) or Cloud Delivery Manager (CDM). Your TAM or CDM will help you to determine the relevant environment details for termination and the Effective Date of Termination.
+- When you decide to terminate a service, you should first contact your Service Delivery Manager. Your Service Delivery Manager will help you to determine the relevant environment details for termination and the Effective Date of Termination.
 
-- After speaking to your TAM or CDM, an administrator of your Portal account must raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, following the relevant prompts for information to enable our support team to action the request as quickly as possible.
+- After speaking to your Service Delivery Manager, an administrator of your Portal account must raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, following the relevant prompts for information to enable our support team to action the request as quickly as possible.
 
     > [!NOTE]
     > If you do not raise a Service Request to initiate a formal termination of service, your environment may not be completely decommissioned and you may end up still being charged for objects remaining on the platform.
@@ -76,7 +76,7 @@ There are no termination costs associated with cancelling UKCloud services. Howe
 
 - We reserve the right to pass through third-party price rises that are not within our direct control.
 
-- If you use service options with minimum terms, such as Global Load Balancing or Application-tuned DDoS Protection, you will continue to be charged for these until the end of those terms.
+- If you use service options with minimum terms, such as UltraDNS or SiteProtect Advanced DDoS Mitigation, you will continue to be charged for these until the end of those terms.
 
 - We reserve the right to charge for any content that you leave in your environment or for retrieving and returning your content.
 

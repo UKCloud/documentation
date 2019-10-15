@@ -3,8 +3,8 @@ title: How to use affinity and anti-affinity rules | UKCloud Ltd
 description: Describes how to use affinity and anti-affinity rules to control the movement of VMs around the UKCloud platform
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 26/07/2018 09:58:17
+reviewer: lthangarajah
+lastreviewed: 21/06/2019
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -79,7 +79,7 @@ To create an affinity or anti-affinity rule:
 
     ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
 
-    For information about how to access the Legacy UI, see [*How to switch to the vCloud Director Legacy UI](vmw-how-switch-web-console.md).
+    For information about how to access the Legacy UI, see [*How to switch to the vCloud Director Legacy UI*](vmw-how-switch-web-console.md).
 
 2. Right-click the VDC that you want to work with and select **Open**.
 

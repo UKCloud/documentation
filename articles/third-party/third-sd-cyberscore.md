@@ -1,15 +1,17 @@
 ---
-title: XQ Cyber CyberScore from UKCloud Service Definition | UKCloud Ltd
-description: Provides an overview of what is provided by the XQ Cyber CyberScore from UKCloud service
+title: CyberScore from UKCloud Service Definition | UKCloud Ltd
+description: Provides an overview of what is provided by the CyberScore from UKCloud service
 services: third-party
 author: Sue Highmoor
-toc_rootlink: XQ Cyber CyberScore
+reviewer: Sue Highmoor
+lastreviewed: 17/09/2019
+toc_rootlink: CyberScore
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: XQ Cyber CyberScore from UKCloud Service Definition
-toc_fullpath: XQ Cyber CyberScore/third-sd-cyberscore.md
+toc_title: CyberScore from UKCloud Service Definition
+toc_fullpath: CyberScore/third-sd-cyberscore.md
 toc_mdlink: third-sd-cyberscore.md
 ---
 
@@ -23,9 +25,9 @@ We recognise the importance of government services in making the country run smo
 
 ![UKCloud services](images/ukc-services.png)
 
-## What is XQ Cyber CyberScore from UKCloud?
+## What is CyberScore from UKCloud?
 
-CyberScore is a fully automated, rapid, scalable, cyber security testing and rating service. CyberScore helps organisations of all sizes improve their cybersecurity by scanning their network, highlighting vulnerabilities and providing advice on how to harden their IT infrastructure. It is a fully automated service which enables organisations to dramatically reduce penetration testing costs.
+CyberScore is a fully automated, rapid, scalable, cyber security testing and rating service. It helps organisations of all sizes improve their cybersecurity by scanning their network, highlighting vulnerabilities and providing advice on how to harden their IT infrastructure. It is a fully automated service which enables organisations to dramatically reduce penetration testing costs.
 
 CyberScore provides a fair, balanced and standardised assessment of your estate through automated scanning of devices within your network. CyberScore’s Get Well Plans and automated Technical Reports (pen tests) explain how to raise your security posture to a Pass level and where to focus security remediation efforts.
 
@@ -51,7 +53,7 @@ For full information regarding this product, visit our [Knowledge Centre](https:
 
 - Reduce compliance testing costs, employ penetration testing for strategic tasks
 
-- Receive a Cyber Essentials Plus Advisory recommendation
+- Complete your Cyber Essentials Plus certification
 
 ## Free trial
 
@@ -59,11 +61,7 @@ A free trial of CyberScore is available for a 2-week period to scan up to 20 dev
 
 ## Pricing and packaging
 
-Using CyberScore is free and provides your “CyberScore” and high-level information.
-
-To unlock the full CyberScore data, sort vulnerabilities, generate or share your Get Well Plans, patch reports and Technical Reports, you will be required to pay for CyberScore.
-
-CyberScore is charged per credit, from £1.80 per credit, where a credit gives access to the full CyberScore report for one scanned device. Full pricing is available in the [*3rd Party Software Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf).
+CyberScore requires an annual subscription, starting from £500. Full pricing for the packages on offer is detailed in the [*UKCloud 3rd Party Software Pricing Guide*](https://ukcloud.com/3rd-party-pricing-guide).
 
 ## Accreditation and information assurance
 

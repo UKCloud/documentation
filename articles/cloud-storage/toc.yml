@@ -10,8 +10,6 @@
   items:
   - name: Create a new Cloud Storage user
     href: cs-how-create-user.md
-  - name: Install CloudArray
-    href: cs-how-install-cloudarray.md
   - name: Install the GeoDrive Client 2.0
     href: cs-how-install-geodrive2-client.md
   - name: Interact with ECS using Python and Boto

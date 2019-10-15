@@ -57,7 +57,7 @@ Yes. To take advantage of the Cloud GPU service, you must also have UKCloud for 
 
 ### Does UKCloud require specific NVIDIA driver versions?
 
-Yes. VMs utilising the NVIDIA GRID solution must use the GRID driver matching the driver installed on the vSphere hosts (currently 385.41). This driver can be downloaded from the [UKCloud Portal](https://portal.skyscapecloud.com/support/knowledge_centre/76dcd09f-3bd4-411f-8343-9fb21be0ceb1).
+Yes. VMs utilising the NVIDIA GRID solution must use the GRID driver matching the driver installed on the vSphere hosts. For information about installing drivers, see the *Getting Started Guide* for [*GPU Compute*](gpu-gs-compute.md#installing-nvidia-drivers) or [*GPU Visualisation*](gpu-gs-visualisation.md#installing-nvidia-drivers).
 
 ### Which compute services support Cloud GPU?
 

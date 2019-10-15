@@ -3,8 +3,8 @@ title: How to license Windows VMs using the UKCloud Key Management Server | UKC
 description: Shows how to register virtual machines with the KMS within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: Sue Highmoor
+lastreviewed: 19/08/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -28,40 +28,6 @@ Before product activation, make sure your VMs can communicate with the UKCloud K
 
 To allow this communication, you need to create a source network address translation (SNAT) and firewall rule on your edge gateway:
 
-# [Using vCloud Director 8.20](#tab/tabid-1)
-
-1. In vCloud Director, click the **Administration** tab.
-
-    ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
-
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
-
-2. Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select **Open**.
-
-3. Select the **Edge Gateways** tab.
-
-    ![Edge Gateways tab](images/vmw-vcd-tab-edge-gateways.png)
-
-4. Right-click the edge gateway and select **Edge Gateway Services**.
-
-5. Select the **NAT** tab and create a new SNAT rule.
-
-6. Make sure that the **Applied On** field is set to reflect your network.
-
-7. For the **Original (Internal) source IP/range**, enter the IP address, CIDR or range of addresses you want to SNAT out.
-
-8. For the translated address, enter the external IP address of your edge gateway or one of your external IP address assignments.
-
-    For more information about creating SNAT rules, see [*How to create NAT rules*](vmw-how-create-nat-rules.md).
-
-9. Select the **Firewall** tab and make sure that an outbound rule exists on your firewall.
-
-    Contact UKCloud Support for details of the **Destination IP** and **Destination Port**.
-
-    For more information about creating firewall rules, see [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
-
-# [Using vCloud Director 9.1](#tab/tabid-2)
-
 1. In vCloud Director, select the VDC for which server activation is required.
 
 2. In the left navigation panel, click **Edges**.
@@ -70,7 +36,7 @@ To allow this communication, you need to create a source network address transla
 
 3. Select the edge that you want to configure and click the **Configure Services** button.
 
-    ![Configure Services button](images/vmw-vcd91-btn-configure-services.png)
+    ![Configure Services button](images/vmw-vcd-edge-btn-config.png)
 
 4. In the *Edge Gateway* dialog box, select the **NAT** tab and create a new SNAT rule.
 
@@ -88,8 +54,6 @@ To allow this communication, you need to create a source network address transla
 
     For more information about creating firewall rules, see [*How to create firewall rules*](vmw-how-create-firewall-rules.md).
 
-***
-
 ## Activating your Windows licence
 
 1. Open a console to the VM you want to license and activate.
@@ -100,7 +64,7 @@ To allow this communication, you need to create a source network address transla
 
         C:\ > slmgr /skms  kms.ukcloud.com:1688
 
-4. You\'ll see the following pop-up box:
+4. You'll see the following pop-up box:
 
     ![Windows Script Host dialog box](images/vmw-windows-kms-activate.png)
 

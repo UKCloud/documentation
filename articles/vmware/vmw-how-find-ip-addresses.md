@@ -3,8 +3,8 @@ title: How to find your allocated external IP addresses | UKCloud Ltd
 description: Shows how to find your allocated external IP addresses within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: lthangarajah
+lastreviewed: 02/08/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -26,47 +26,17 @@ To route traffic to your external network (for example internet, PSN), you need 
 
 To find your allocated external IP address range:
 
-# [Using vCloud Director 8.20](#tab/tabid-1)
-
-1. In vCloud Director, click the **Administration** tab.
-
-    ![Administration tab in vCloud Director](images/vmw-vcd-tab-admin.png)
-
-    For more detailed instructions, see the [*Getting Started Guide for UKCloud for VMware*](vmw-gs.md)
-
-2. Double-click the virtual data centre (VDC) that you want to work with, or right-click the VDC and select **Open**.
-
-3. Select the **Edge Gateways** tab.
-
-    ![Edge Gateways tab](images/vmw-vcd-tab-edge-gateways.png)
-
-4. Right-click the edge gateway and select **Properties**.
-
-5. In the *Edge Gateway Properties* dialog box, select the **Sub-Allocate IP Pools** tab.
-
-    ![Sub-Allocate IP Pools tab](images/vmw-vcd-tab-suballocate-ip-pools.png)
-
-6. At the bottom of the window you'll see a box containing the range of external IP addresses allocated for your use.
-
-    ![Allocated external IP addresses](images/vmw-vcd-allocated-ip-addresses.png)
-
-    You'll need to know this range when you configure settings such as NAT rules.
-
-# [Using vCloud Director 9.1](#tab/tabid-2)
-
 1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC that contains the edge gateway you want to configure.
 
 2. In the left navigation panel, click **Edges**.
 
-    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
+    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
 
 3. Select the edge that you want to configure.
 
 4. In the *Edge Gateway Settings* section, in the *Sub-allocated IP Addresses* table, you'll see the range of external IP addresses allocated for your use.
 
     You'll need to know this range when you configure settings such as NAT rules.
-
-***
 
 ## Next steps
 

@@ -58,7 +58,7 @@ For more information regarding the QMTH program, we have further details on the 
 
 If you want to use this option, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, detailing the VM names.
 
-In addition, you can also bring your own Microsoft desktop licensing for use on a dedicated single tenant cloud server such as Private Cloud for Compute. In this instance, contact your Account Director or Technical Account Manager for further information.
+In addition, you can also bring your own Microsoft desktop licensing for use on a dedicated single tenant cloud server such as Private Cloud for Compute. In this instance, contact your Account Director or Service Delivery Manager for further information.
 
 ## Options for all other Microsoft applications
 
@@ -81,11 +81,11 @@ As stated, all Microsoft applications on the UKCloud platform must be licensed a
   
   - Authorized Mobility Partner Email Address: nstewart@ukcloud.com
   
-  - Partner agreement number: 8392716
+  - Partner agreement number: 82685361
 
 ## Microsoft application list
 
-The following list is aimed at providing you with a summary regarding the licensing options available to you for each specific application. This summary states whether UKCloud licensing and/or Microsoft Mobility is available. Please note that this is not intended to be a complete list, but covers the most frequently requested applications. If the application you are looking for is not on this list, please engage with your Account Director or Technical Account Manager who will be able to help and advise you as to whether the software can be licensed and if so how.
+The following list is aimed at providing you with a summary regarding the licensing options available to you for each specific application. This summary states whether UKCloud licensing and/or Microsoft Mobility is available. Please note that this is not intended to be a complete list, but covers the most frequently requested applications. If the application you are looking for is not on this list, please engage with your Account Director or Service Delivery Manager who will be able to help and advise you as to whether the software can be licensed and if so how.
 
 - **Microsoft SQL**
 
@@ -113,9 +113,9 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **System Center**
 
-  - UKCloud licensing - we are currently unable to offer this as standard or at an additional cost due to our current Microsoft Windows Server licences.
-
-  - Microsoft Mobility - as per Microsoft's terms, you can use your own licensing to cover this software as long as you have active software assurance in place. If you have System Center Datacentre licensing in place this can be used on up to 10 VMs on the UKCloud platform. However, if you own a standard licence, this only covers 2 VMs. The licence can be used for High Availability, Disaster Recovery Solutions and vMotion events giving you full autonomy to design solutions with resilience in mind whilst being fully licensed.
+  - We are unable to offer this on our public cloud platform in any form.
+  
+  - It is available for customers running dedicated or Private cloud environments in which case it can be purchased via SPLA or BYO licensing using Microsoft mobility with Software Assurance. 
 
 - **SharePoint**
 
@@ -137,7 +137,7 @@ The following list is aimed at providing you with a summary regarding the licens
 
 - **Other Microsoft Products**
 
-  - Please engage with your Account Director or Technical Account Manager who will be able to help and advise you as to whether the software can be licensed, and if so, how.
+  - Please engage with your Account Director or Service Delivery Manager who will be able to help and advise you as to whether the software can be licensed, and if so, how.
 
 ## Submitting a request to use Microsoft applications on the UKCloud platform
 

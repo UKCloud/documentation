@@ -8,7 +8,7 @@
     <title>Fixing your IPsec VPN following upgrade to NSX 6.4 | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Fixing your IPsec VPN following upgrade to NSX 6.4 | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -122,14 +122,14 @@
 <h2 id="change-your-vpn-settings">Change your VPN settings</h2>
 <p>To change the DH setting on your broken VPN:</p>
 <ol>
-<li><p>Right-click your edge gateway and select <strong>Edge Gateway Services</strong>.</p>
+<li><p>In vCloud Director, access the edge gateway settings for the edge with the broken VPN.</p>
+<p>For more detailed instructions, see <a href="vmw-how-access-edge.html"><em>How to access edge gateway settings</em></a>.</p>
 </li>
-<li><p>In the new tenant portal, select the <strong>VPN</strong> tab.</p>
+<li><p>Select the <strong>VPN</strong> tab.</p>
 </li>
 <li><p>On the <em>IPsec VPN Configuration</em> page, select the <strong>IPsec VPN Sites</strong> tab.</p>
 </li>
 <li><p>Select the VPN tunnel that is broken and click the edit icon.</p>
-<p><img src="images/vmw-tp-ipsec-fix1.png" alt="IPsec VPN Sites tab"></p>
 </li>
 <li><p>From the <strong>Diffee-Hellman Group</strong> list, select DH2.</p>
 <p><img src="images/vmw-tp-ipsec-fix2.png" alt="Diffie-Helman Group list"></p>

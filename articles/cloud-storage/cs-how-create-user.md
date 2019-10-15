@@ -57,11 +57,7 @@ This guide has shown you how to create a new Cloud Storage user. For more inform
 
 - [*How to view Cloud Storage information in the UKCloud Portal*](cs-how-view-info-portal.md)
 
-- Cloud Storage Gateways
-
-    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
-
-    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 

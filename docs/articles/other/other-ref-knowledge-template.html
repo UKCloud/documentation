@@ -8,7 +8,7 @@
     <title>UKCloud Knowledge Centre article template | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud Knowledge Centre article template | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -115,72 +115,66 @@
 <p>In How To articles, you may just have a single additional section describing the task being described in the article -- you should use gerunds for the section headings (words ending in -ing). For example <em>Logging into the OpenStack Horizon dashboard</em>. If the article includes multiple tasks, put each task into its own section.</p>
 <p>Reference Guides can include as many sections as necessary to keep the content easy to read. But don't use too many levels of subsections as it can be difficult for users to keep track of where they are if the subsections go too deep.</p>
 <h3 id="bulleted-lists">Bulleted lists</h3>
-<ul>
-<li><p>Bulleted lists</p>
-</li>
-<li><p>Look</p>
-</li>
-<li><p>Like this</p>
-<ul>
-<li><p>with sub lists</p>
-</li>
-<li><p>if required</p>
-</li>
-</ul>
-</li>
-</ul>
+<p>Include an empty line in between each item in the list.</p>
+<pre><code class="lang-none">- Bulleted lists
+
+- Look
+
+- Like this
+
+  - with sub lists
+
+  - if required
+</code></pre>
 <h3 id="numbered-lists-for-how-to-guides">Numbered lists for How To Guides</h3>
-<ol>
-<li><p>Numbered lists</p>
-</li>
-<li><p>In a How To Guide</p>
-</li>
-<li><p>Look</p>
-</li>
-<li><p>Like this</p>
-<ul>
-<li><p>you can include</p>
-</li>
-<li><p>bulleted lists</p>
-</li>
-</ul>
-</li>
-</ol>
+<p>Include an empty line in between each item in the list.</p>
+<pre><code class="lang-none">1. Numbered lists
+
+2. In a How To Guide
+
+3. Look
+
+4. Like this
+
+    - you can include
+
+    - bulleted lists
+</code></pre>
 <h2 id="more-useful-markdown">More useful markdown</h2>
 <h3 id="images">Images</h3>
 <p>Markdown for images looks like:</p>
-<pre><code>![alt-text](images/image-filename.png)
+<pre><code class="lang-none">![alt-text](images/image-filename.png)
 </code></pre>
 <p>The <code>alt-text</code> is read out by screen readers and provides a brief description of the image to help visually impaired users determine what the image is illustrating. Image files should be located in an <code>images</code> directory underneath the main product directory.</p>
 <h2 id="links-to-web-pages">Links to web pages</h2>
 <p>To link to a web page, use the following markdown:</p>
-<pre><code>&lt;https://ukcloud.com/&gt;
+<pre><code class="lang-none">&lt;https://ukcloud.com/&gt;
 </code></pre>
 <p><a href="https://ukcloud.com/">https://ukcloud.com/</a></p>
 <p>To use descriptive text for the link, rather than just the URL, use the following markdown:</p>
-<pre><code>[UKCloud](https://ukcloud.com/)
+<pre><code class="lang-none">[UKCloud](https://ukcloud.com/)
 </code></pre>
 <p><a href="https://ukcloud.com/">UKCloud</a></p>
 <h2 id="links-to-other-knowledge-centre-articles">Links to other Knowledge Centre articles</h2>
 <p>Links to other articles for the same product look like:</p>
-<pre><code>[*topic-title*](topic-filename.md)
+<pre><code class="lang-none">[*topic-title*](topic-filename.md)
 </code></pre>
 <p>For example:</p>
-<pre><code>[*UKCloud Knowledge Centre guidelines*](other-ref-knowledge-guidelines.md)
+<pre><code class="lang-none">[*UKCloud Knowledge Centre guidelines*](other-ref-knowledge-guidelines.md)
 </code></pre>
 <p><a href="other-ref-knowledge-guidelines.html"><em>UKCloud Knowledge Centre guidelines</em></a></p>
 <p>Links to other articles for a different product look like:</p>
-<pre><code>[*topic-title*](../product/topic-filename.md)
+<pre><code class="lang-none">[*topic-title*](../product/topic-filename.md)
 </code></pre>
 <p>For example:</p>
-<pre><code>[*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
+<pre><code class="lang-none">[*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
 </code></pre>
 <p><a href="../portal/ptl-gs.html"><em>Getting Started Guide for the UKCloud Portal</em></a></p>
 <h3 id="tips-notes-and-warnings">Tips, notes and warnings</h3>
 <h4 id="tips">Tips</h4>
 <p>A tip provides helpful, but not necessarily important, information.</p>
 <p>Markdown:</p>
-<pre><code>&gt; [!TIP]
+<pre><code class="lang-none">&gt; [!TIP]
 &gt; This is a tip, which provides helpful, but not necessarily important, information.
 </code></pre>
 <p>Looks like:</p>
@@ -191,7 +185,7 @@
 <h4 id="notes">Notes</h4>
 <p>A note provides important information.</p>
 <p>Markdown:</p>
-<pre><code>&gt; [!NOTE]
+<pre><code class="lang-none">&gt; [!NOTE]
 &gt; This is a note, which provides important information.
 </code></pre>
 <p>Looks like:</p>
@@ -202,7 +196,7 @@
 <h4 id="important-notes">Important notes</h4>
 <p>Important notes provide important information that requires particular attention.</p>
 <p>Markdown:</p>
-<pre><code>&gt; [!IMPORTANT]
+<pre><code class="lang-none">&gt; [!IMPORTANT]
 &gt; This is an important note, which requires particular attention.
 </code></pre>
 <p>Looks like:</p>
@@ -213,7 +207,7 @@
 <h4 id="warnings">Warnings</h4>
 <p>Warnings provide important information about something which could have significant implications if ignored.</p>
 <p>Markdown:</p>
-<pre><code>&gt; [!WARNING]
+<pre><code class="lang-none">&gt; [!WARNING]
 &gt; This is a warning, which provides users with information about something which could have significant implications if ignored.
 </code></pre>
 <p>Looks like:</p>

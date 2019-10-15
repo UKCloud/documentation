@@ -159,7 +159,7 @@ The current provisioning time for a new service is 4 hours from service request 
 
 ### How quickly can I scale my service up or down?
 
-You can scale your UKCloud for Microsoft Azure services either via the UKCloud Azure Stack portal or using the Azure API. This will typically take a few minutes to action. However, if you are likely to increase your requirements significantly, you are advised to plan this with your allocated Technical Account Manager.
+You can scale your UKCloud for Microsoft Azure services either via the UKCloud Azure Stack portal or using the Azure API. This will typically take a few minutes to action. However, if you are likely to increase your requirements significantly, you are advised to plan this with your allocated Service Delivery Manager.
 
 ## Support
 
@@ -189,7 +189,7 @@ Yes, we offer a 30-day trial for this service.
 
 ### How do I request a trial?
 
-This can be requested via the [UKCloud website trial page](https://ukcloud.com/free-trial-sign-up) or via your Technical Account Manager if you an existing customer.
+This can be requested via the [UKCloud website trial page](https://ukcloud.com/free-trial-sign-up) or via your Service Delivery Manager if you an existing customer.
 
 ### What do I do when my trial comes to an end?
 
@@ -225,7 +225,7 @@ The service is hosted in the UK and operated by UK government security-cleared s
 
 ### Can systems on different UKCloud security domains communicate with one another?
 
-UKCloud\'s Cross Domain Security Zone enables you to use the UKCloud-defined and managed UKCloud Guard, or a customer-designed and managed Walled Garden to enable communication between platforms.
+UKCloud's Cross Domain Security Zone enables you to use a customer-designed and managed Walled Garden to enable communication between platforms.
 
 For more information, see our Cross Domain Security Zone documentation.
 

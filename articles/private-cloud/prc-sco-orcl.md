@@ -237,7 +237,7 @@ As per All-Inclusive plus:
 
 - Providing you with visibility of capacity utilisation to ensure capacity planning can be effectively performed
 
-- Your assigned Technical Account Manager will attend any required service reviews and project progress calls that you need
+- Your assigned Service Delivery Manager will attend any required service reviews and project progress calls that you need
 
 - Notifying you of any maintenance windows and agreeing a suitable time to implement
 
@@ -307,7 +307,7 @@ SLA excludes:
 
 ## To progress further
 
-For further information, contact your Technical Account Manager to request more information or to place an order.
+For further information, contact your Service Delivery Manager to request more information or to place an order.
 
 ## Feedback
 

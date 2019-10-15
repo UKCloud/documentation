@@ -8,7 +8,7 @@
     <title>How to create a catalog | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a catalog | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -109,7 +109,7 @@
 </li>
 <li><p>In the <em>Create Catalog</em> dialog box, <strong>Name</strong> the catalog and give it a <strong>Description</strong> if needed.</p>
 </li>
-<li><p>From the <strong>Storage Policy</strong> list, select the storage type used to store the catalog.</p>
+<li><p>To specify a particular storage policy for the catalog, select the <strong>Pre-provision on specific storage policy</strong> option then select the desired <strong>Storage Policy</strong>:</p>
 <ul>
 <li><p><strong>Tier1</strong> is for high performance, high IOPS VMs</p>
 </li>
@@ -179,7 +179,10 @@
 <h3 id="adding-an-existing-vapp">Adding an existing vApp</h3>
 <p>To create a catalog from an existing vApp:</p>
 <ol>
-<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select the VDC where the vApp is located.</p>
+<li><p>In vCloud Director, click the menu icon and select <strong>Datacenters</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-dcs.png" alt="Datacenters menu option in vCloud Director"></p>
+</li>
+<li><p>Select the VDC where the vApp is located.</p>
 </li>
 <li><p>In the left navigation panel, click <strong>vApps</strong>.</p>
 <p><img src="images/vmw-vcd-tab-vapps.png" alt="vApps menu option"></p>
@@ -190,10 +193,11 @@
 </li>
 <li><p>You can now choose the catalog you want to add the vApp to, give the vApp a new name, assign a storage lease, and define whether vApps deployed using this template are identical or customisable.</p>
 <p>You can also overwrite an existing catalog item. If the catalog you are adding the vApp to is published externally, you'll see a warning.</p>
-<p><img src="images/vmw-vcd91-add-to-catalog.png" alt="Add to Catalog dialog box"></p>
+<p><img src="images/vmw-vcd-add-to-catalog.png" alt="Add to Catalog dialog box"></p>
 </li>
 <li><p>When you're done, click <strong>OK</strong>.</p>
-<p>A status bar will appear on top with the message: Please wait. You can close the window and check the progress under Libraries &gt; vApp Templates.</p>
+<p>A status bar will appear on top with the message: <strong>Please wait</strong>. You can close the window and check the progress by expanding the <em>Recent Tasks</em> section at the bottom of the vCloud Director
+interface.</p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>

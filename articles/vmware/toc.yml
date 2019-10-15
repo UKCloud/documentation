@@ -79,7 +79,7 @@
   - name: Create a virtual machine from scratch
     href: vmw-how-create-vm-from-scratch.md
   - name: Create a virtual protection group
-    href: vmw-how-upgrade-edge.md
+    href: vmw-how-zerto-create-vpg.md
   - name: Create an isolated VDC network
     href: vmw-how-create-isolated-network.md
   - name: Create firewall rules
@@ -112,6 +112,8 @@
     href: vmw-how-manage-vcd-permissions.md
   - name: Manage Snapshot Protection for your VMs
     href: vmw-how-manage-snapshot-protection.md
+  - name: Manipulate power states with PowerCLI
+    href: vmw-how-manipulate-power-states-powercli.md
   - name: Migrate vApps between virtual data centres
     href: vmw-how-migrate-vapp.md
   - name: Migrate your workloads between UKCloud regions
@@ -148,10 +150,6 @@
     href: vmw-ref-advanced-networking.md
   - name: Availability of Virtual Hardware version 11
     href: vmw-ref-virtual-hardware-v11.md
-  - name: Blocked vCloud Director API calls
-    href: vmw-ref-block-vcd-calls.md
-  - name: Cannot manage 5.5.4 edge gateway firewall rules after upgrade to vCloud Director 8.20
-    href: vmw-ref-cant-manage-edge.md
   - name: Cloning vApps using PowerCLI
     href: vmw-ref-cloning-vapps.md
   - name: Comparison of UKCloud for VMware against hyperscalers
@@ -182,8 +180,6 @@
     href: vmw-ref-rhui.md
   - name: Shared Secret Length Issues IPSec VPN
     href: vmw-ref-shared-secret-issues.md
-  - name: Storage policies
-    href: vmw-ref-storage-policies.md
   - name: System Center on the UKCloud platform
     href: vmw-ref-system-center.md
   - name: TCP_TW_REUSE and TCP_TW_RECYCLE settings
@@ -196,14 +192,8 @@
     href: vmw-ref-service-options.md
   - name: Understanding connectivity options in UKCloud for VMware
     href: vmw-ref-connectivity-options.md
-  - name: Upgrade to vCloud Director 8.20
-    href: vmw-ref-vcd-820.md
-  - name: Upgrade to vCloud Director 9.1
-    href: vmw-ref-vcd-91.md
   - name: vCloud Director 9.7 known issues
     href: vmw-ref-vcd97-known-issues.md
-  - name: vCloud Director Healthcheck
-    href: vmw-ref-vcd-healthcheck.md
   - name: Virtual machine data recovery options
     href: vmw-ref-vm-data-recovery.md
   - name: Virtual machine disk limits and considerations
@@ -248,5 +238,7 @@
     href: vmw-vid-licensing-kms.md
   - name: vCloud Director 9.1 overview
     href: vmw-vid-vcd91.md
+  - name: vCloud Director 9.7
+    href: vmw-vid-vcd97.md
   - name: VMware Distributed Firewall
     href: vmw-vid-dfw.md

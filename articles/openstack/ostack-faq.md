@@ -3,8 +3,8 @@ title: UKCloud for OpenStack FAQs | UKCloud Ltd
 description: Frequently asked questions for UKCloud for OpenStack
 services: openstack
 author: Matt Warner
-reviewer:
-lastreviewed: 19/07/2018 15:17:17
+reviewer: stevedicko
+lastreviewed: 18/09/2019 15:17:17
 toc_rootlink: FAQs
 toc_sub1:
 toc_sub2:
@@ -28,10 +28,6 @@ UKCloud provides this service across two security domains, Assured OFFICIAL (for
 ### What hypervisor do you use?
 
 UKCloud for OpenStack is built using KVM hypervisor technology, a trusted solution for implementing virtualised environments.
-
-### Does UKCloud offer dedicated, bare-metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?
-
-UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack product. We do however provide "large" instances, with up to 56 vCpus and 440Gb Ram, with no overcommit. UKCloud also offers its 'Private Cloud for Compute' product which provides dedicated compute capabilities for use with OpenStack; please visit the Digital Marketplace or contact your Account Director for further details.
 
 ### Which Disk formats does UKCloud for OpenStack support?
 
@@ -81,9 +77,9 @@ UKCloud offers a variety of predefined flavours to meet customers' needs. The sm
 
 Check the [*Service Definition*](ostack-sd.md) for more details on the currently available sizes.
 
-### Does UKCloud for OpenStack offer GPU optimised instances?
+### Does UKCloud offer dedicated, bare-metal host capabilities (OpenStack Ironic) with UKCloud for OpenStack?
 
-Currently UKCloud does not offer GPU optimised OpenStack instances.
+UKCloud currently does not offer dedicated, bare metal host capabilities with its UKCloud for OpenStack service. We do however provide large instances, with up to 56 vCPUs and 440GiB RAM, with no overcommit. UKCloud also offers its Private Compute service, which provides dedicated compute capabilities for use with OpenStack; please visit the [UKCloud Knowledge Centre](https://docs.ukcloud.com/) or contact your Account Director for further details.
 
 ### Can I resize an instance?
 
@@ -98,6 +94,10 @@ The instance will be rebooted as part of the resize operation.
 ### What is the speed of each vCPU?
 
 This is set at 2.4 GHz across instances.
+
+### Does UKCloud for OpenStack offer GPU optimised instances?
+
+Currently UKCloud does not offer GPU optimised OpenStack instances.
 
 ### Does UKCloud offer encryption on instances?
 
@@ -139,11 +139,7 @@ You can also use your preferred software firewall and security appliances deploy
 
 To access the infrastructure via the dashboard and API you will need access through any firewalls on the following ports to the OpenStack endpoints you target.
 
-443, 13000, 13080, 13004, 13776, 13774, 13777, 13696, 13776
-
-### How does UKCloud provide urgent maintenance notifications and incident reports?
-
-Current Service Status reports are published on the [Status Page](https://status.ukcloud.com/). You can view past incident reports on the UKCloud Portal.
+443, 13000, 13080, 13004, 13311, 13776, 13774, 13777, 13696, 13776
 
 ### Do you offer dynamic or static IP addresses?
 
@@ -163,7 +159,7 @@ For internet-facing services a third-party domain provider will be required.
 
 ### Is Network Time Protocol available for time synchronisation?
 
-Network Time Protocol services will initially only be available via public NTP servers.
+Network Time Protocol services will initially only be available via public NTP servers. You can find a list of public NTP servers operated by NIST [here](https://tf.nist.gov/tf-cgi/servers.cgi).
 
 ### Can UKCloud provide SSL certificates or can existing SSL certificates be used?
 
@@ -171,11 +167,14 @@ UKCloud doesn't provide SSL certificates, but you can use your existing ones.
 
 Some government secure networks (such as PSN and HSCN) provide SSL certificates as part of their service.
 
-### Do you offer load balancing? 
+### Do you offer Load Balancing as a Service (LBaaS)? 
 
-Due to OpenStack Neutron not supporting highly-available load balancing services, UKCloud has created [*How to creating load balancing services on UKCloud for OpenStack*](ostack-how-create-load-balancer.md), which describes how to deploy a HA load balancing solution, of which the first deployed solution is free of charge.
+The answer to this depends on which of UKCloud's OpenStack platforms you are using:
 
-We will look to include more native OpenStack functionality once a highly-available solution is provided by the community.
+| Region              | OpenStack Version                      | LBaaS Supported? |
+|---------------------|----------------------------------------|------------------|
+| COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | No, as OpenStack Neutron does not support highly-available load balancing services. <BR> UKCloud has created [*How to creating load balancing services on UKCloud for OpenStack*](ostack-how-create-load-balancer.md), which describes how to deploy a HA load balancing solution. |
+| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | Yes. Uses the [*OpenStack Octavia*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia) project. |
 
 ### Can I deploy my own load balancer?
 
@@ -184,6 +183,20 @@ Yes, you can deploy your own load balancing virtual appliance provided it is com
 ### Do you have an IPSEC VPN connection for uploading sensitive data?
 
 We currently do not offer any VPN/Tunnelling as a Service from within the UKCloud for OpenStack product. Customers can create their own VPN endpoints by deploying a software appliance such as pfSense on an instance within their project.
+
+### Can I create a network to connect two separate OpenStack projects?
+
+You can have a network between two separate OpenStack projects, however the implementation will vary based on whether the OpenStack projects are within the same UKCloud region.
+
+- **Within the same region** - UKCloud can create a network on your behalf, but you need to be aware of and agree to the following caveats:
+
+  -  This will allow any instance in both projects to speak to each other without any restriction. This is due to the way the default security group is defined.
+
+  -  As this is non-standard, we would request that you test this solution thoroughly before relying upon it in production.
+
+- **Across two separate regions** - UKCloud will create and configure a [VRF](https://en.wikipedia.org/wiki/Virtual_routing_and_forwarding) on your behalf, which you can then use to route traffic between OpenStack projects.
+
+To request the implementation of either the options shown above, raise a ticket within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the Portal. Alternatively, you can contact support by phone or email.
 
 ## Storage
 
@@ -201,13 +214,17 @@ You can quickly and easily allocate additional persistent block storage volumes 
 
 ### Can I reallocate storage across instances?
 
-Persistent block storage volumes can be detached from one instance then attached to another (except those being used as OS boot volumes). It is not possible for a volume to be attached to multiple instances simulutaneously.
+You can detach persistent block storage volumes from one instance then attach them to another (except those being used as OS boot volumes). You cannot attach a volume to multiple instances simultaneously.
 
 You can allocate additional persistent block storage via the self-service dashboard or API, which will be charged on a per-GiB basis.
 
 ### Is instance storage persistent? 
 
 No, the ephemeral storage provided with each instance is non-persistent and any data stored on it will be deleted at the point an instance is terminated. Persistent block storage volumes are persistent. If required, it is possible to deploy an instance using a block storage volume as its boot volume.
+
+### Are there any known limitations to Block Storage Volumes?
+
+Due to a current constraint within the OpenStack project, a maximum total of 25 block storage volumes (Tier 1 or Tier 2) can be attached to each OpenStack instance.
 
 ### Is Object Storage (OpenStack Swift) available?
 
@@ -237,6 +254,15 @@ Although UKCloud allows you to make your customer-facing applications accessible
 
 OpenStack environments in our Elevated OFFICIAL security domain can be managed via the PSN network.
 
+### Does OpenStack offer Key Management as a Service (KMaaS)?
+
+The answer to this depends on which of UKCloud's OpenStack platforms you are using:
+
+| Region              | OpenStack Version                      | KMaaS Supported? |
+|---------------------|----------------------------------------|------------------|
+| COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | No, customers will need to deploy their own Key Management solution. |
+| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | Yes, using OpenStack's Barbican service. You can find further information [here](https://docs.ukcloud.com/articles/openstack/ostack-how-use-barbican.html). |
+
 ### What reports can I get about instances performance?
 
 UKCloud does not currently provide instance performance reports, but you can monitor their performance using standard tools within the operating system.
@@ -255,10 +281,6 @@ UKCloud provides a repository of patches for common operating systems for custom
 
 For support, you'll need to log a request with UKCloud, who will log the ticket with the relevant supplier. UKCloud will then inform you about any updates. However, UKCloud isn't responsible for the actual resolution of non-IaaS issues.
 
-### Do you have a Key Management System (KMS) for activating Windows?
-
-Yes. A we provide a [step-by-step guide](../vmware/vmw-how-setup-kms.md) on configuring and using this service.
-
 ### How do I control an instance?
 
 You control an instance via the OpenStack dashboard or API. Controls include stop, start, restart, load media, clone, snapshot, and so on.
@@ -271,7 +293,7 @@ UKCloud monitors the underlying platform but doesn't monitor your OSs or applica
 
 OpenStack offers built in autoscaling capabilities using the features of HEAT templates and Ceilometer event monitoring.
 
-Blueprints are available on the UKCloud web site to assist with creating autoscaling policies.
+For further details on autoscaling within OpenStack, see [*Auto Scaling for UKCloud for OpenStack*](ostack-ref-auto-scaling.md).
 
 ### How quickly can I scale my service up or down?
 
@@ -303,11 +325,15 @@ Microsoft terms and conditions preclude customers from using their own licence a
 
 Microsoft offers License Mobility, a scheme that allows a customer to provide additional software such as Exchange, SQL and so on, as long as the customer has appropriate Microsoft licensing as per the licence terms, conditions and usage rights.
 
-### RHEL
+### Do you have a Key Management System (KMS) for activating Windows?
 
-RHEL operating systems can be licensed by the customer directly with Red Hat. We are Currently unable to provide RHEL licences for UKCloud for OpenStack.
+Yes. A we provide a [step-by-step guide](../vmware/vmw-how-setup-kms.md) on configuring and using this service.
 
-The customer is responsible for ensuring correct licensing for any other operating system they chose to install.
+### How does RHEL licensing work?
+
+You can license RHEL operating systems yourself directly with Red Hat. We are currently unable to provide RHEL licences for UKCloud for OpenStack.
+
+Customers are responsible for ensuring correct licensing for any other operating system they chose to install.
 
 ### How up to date are the operating system images and mirrors?
 
@@ -328,6 +354,10 @@ BYO licensing for Red Hat allows customers to select instances running on the UK
 UKCloud will remove the cost of the Red Hat licence from your monthly bill for the selected instances. You need to raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal to let us know which instances you will cover with your own Red Hat licence.
 
 ## Support
+
+### How does UKCloud provide urgent maintenance notifications and incident reports?
+
+Current Service Status reports are published on the [Status Page](https://status.ukcloud.com/). You can view past incident reports on the UKCloud Portal.
 
 ### How do I raise a support ticket?
 
@@ -355,13 +385,13 @@ Yes, you can have Portal notifications sent to you at the email address associat
 
 Although designed to be a large-scale cloud platform, we strongly advise that when performing operations/requests against UKCloud for OpenStack you perform these actions in batches of no more than 30 (for example, only creating batches of up to 30 new instances in a single request). Additional requests can then be made to the platform for subsequent batches.
 
-### How can I create additional OpenStack Projects?
+### How can I create additional OpenStack projects?
 
-Unfortunately, we are currently unable to offer customers of UKCloud for OpenStack the ability to create their own additional OpenStack Projects. Additional projects are allowed, however these need to be created by UKCloud via a Service Request from within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+Unfortunately, we are currently unable to offer customers of UKCloud for OpenStack the ability to directly create their own additional OpenStack projects. Additional projects are allowed, however these need to be created by UKCloud via a Service Request from within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
-### How can I create additional OpenStack Users?
+### How can I create additional OpenStack users?
 
-Unfortunately, we are currently unable to offer customers of UKCloud for OpenStack the ability to create their own additional OpenStack users. Additional users are allowed, however these need to be created by UKCloud via a Service Request from within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+Unfortunately, we are currently unable to offer customers of UKCloud for OpenStack the ability to directly create their own additional OpenStack users. Additional users are allowed, however these need to be created by UKCloud via a Service Request from within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Onboarding
 
@@ -389,7 +419,11 @@ At the end of your free trial, you can seamlessly move to a billed service, leve
 
 UKCloud for OpenStack is a cloud platform built specifically for cloud native applications which have been engineered to use stateless, disposable instances.
 
-UKCloud does not provide automated backups of projects or instances, however it does allow consumers to create snapshots of their instances via the OpenStack dashboard or programmatically via the API. These snapshots when used in conjunction with deployment orchestration tools or infrastructure as code templates such as HEAT allow for environments to be rapidly replicate, redeploy or scale environments.
+For customers looking to add a layer of data protection within their environments, UKCloud offers the following:
+
+- **Snapshots** - You can create snapshots of your instances via the OpenStack dashboard or programmatically via the API. These snapshots, when used in conjunction with deployment orchestration tools or infrastructure as code templates such as HEAT, allow for environments to be rapidly replicated, redeployed or scaled.
+
+- **Self-service backup and recovery (Available November 2019)** - UKCloud has partnered with Trilio to deliver a fully OpenStack-integrated, self-service backup and restoration capability that you can drive from within the Horizon dashboard or via the OpenStack API.
 
 ### Can I create scheduled snapshots?
 
@@ -407,7 +441,23 @@ The RPO is totally within the customers control. For example, you could programm
 
 By default, all snapshots are stored to our persistent block storage to provide data resilience.
 
-Persistent block storage will be charged by the GiB.
+### How much does UKCloud charge for snapshots?
+
+The functionality of snapshots is delivered free of charge to customers as part of the OpenStack service. The only charge for snapshots is for the persistent block storage your snapshots consume, which is charged by the GiB.
+
+### How can I use the TrilioVault self-service backup and restoration service?
+
+See [*How to use TrilioVault self-service backup and restoration within OpenStack*](ostack-how-use-triliovault.md) for further details.
+
+### Does UKCloud charge for the TrilioVault self-service backup and restoration service?
+
+UKCloud charges a nominal monthly fee per instance being protected by this service. UKCloud charges by the whole month for any part month consumption of this service.
+
+You can find pricing details in the OpenStack section of the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf).
+
+### Are there any additional fees for the TrilioVault self-service backup and restoration service?
+
+This service utilises UKCloud's [*Multi-Cloud Backup Storage*](../mcbs/mcbs-sd.md) (MCBS) service as an off-platform storage target for backups. Any storage your backups consume are charged at the prevailing MCBS rate per GiB in addition to the monthly fee for the self-service backup and restoration service. For details of MCBS pricing, see the [UKCloud Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf).
 
 ### Can I use my own backup software?
 
@@ -423,7 +473,7 @@ The minimum unit of time for use is one hour. Part hours will be rounded up.
 
 ### Will I be charged for instances in a 'Shut Off' state?
 
-UKCloud will continue to charge for any resources that exist within your OpenStack project regardless of the state they're in. In order to stop any charges an instance must be fully 'Terminated'.
+You can [shelve](https://ask.openstack.org/en/question/32000/whats-the-difference-between-shelving-vs-shutting-down-an-instance/) an instance, at which stage all compute charges for the instance will cease and you are only charged at the prevailing rate for the storage the instance was consuming. For all other states, UKCloud will continue to charge for any resources that exist within your OpenStack project.
 
 ### What are the charges to transfer data between projects within the same data centre?
 
@@ -461,13 +511,17 @@ UKCloud may make an additional charge for transferring data out of the service.
 
 ## Security
 
+### Is two-factor authentication (2FA) available?
+
+Yes, it is possible to further protect access to OpenStack's management portal (Horizon) using 2FA. To enable this feature, OpenStack users need to be created in the UKCloud Portal as described [here](ostack-how-create-users.md).
+
 ### What data is suitable for the UKCloud assured cloud platform?
 
 The service is hosted in the UK and operated by security-cleared staff. It has extensive independent validation (including CESG) that it is fully aligned with the 14 CESG Cloud Security Principles, and is therefore ideal for all data classified at OFFICIAL (including OFFICIAL SENSITIVE).
 
 ### Can systems on different UKCloud platforms communicate with one and another?
 
-UKCloud's Cross Domain Security Zone allows customers to use the UKCloud-defined and managed UKCloud Guard, or a customer-designed and managed Walled Garden to enable communication between platforms.
+UKCloud's Cross Domain Security Zone allows customers to use a customer-designed and managed Walled Garden to enable communication between platforms.
 
 For more information, see the Cross Domain Security Zone documentation.
 

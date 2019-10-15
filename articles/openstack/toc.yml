@@ -34,12 +34,16 @@
     href: ostack-how-move-resources.md
   - name: Retrieve your Windows password on UKCloud for OpenStack
     href: ostack-how-retrieve-windows-password.md
+  - name: Use Barbican Key Management as a Service
+    href: ostack-how-use-barbican.md
   - name: Use OpenStack instance metadata
     href: ostack-how-use-instance-metadata.md
   - name: Use the OpenStack API with an SSO user
     href: ostack-how-use-api-sso.md
   - name: Use the OpenStack Command Line Client on Microsoft operating systems
     href: ostack-how-use-cli.md
+  - name: Use TrilioVault self-service backup and restoration
+    href: ostack-how-use-triliovault.md
 - name: Reference
   items:
   - name: Auto Scaling for UKCloud for OpenStack

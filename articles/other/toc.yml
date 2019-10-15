@@ -24,6 +24,8 @@
     href: other-how-contribute-knowledge.md
   - name: Remove access rights from Single Sign-On users
     href: other-how-delete-sso-user.md
+  - name: Share your ideas in the UKCloud Community
+    href: other-how-share-ideas.md
   - name: Use the UKCloud Pricing Estimation Tool
     href: other-how-use-pricing-tool.md
   - name: Use webhooks to receive service status notifications
@@ -72,12 +74,14 @@
     href: other-ref-browsers.md
   - name: Terminating your UKCloud services
     href: other-ref-offboarding.md
+  - name: UKCloud Community competition terms and conditions
+    href: other-ref-community-competition.md
   - name: UKCloud complaints procedure
     href: other-ref-complaints.md
   - name: UKCloud Pricing Guides and SFIA Rate Card
     href: other-ref-pricing-guide.md
-  - name: UKCloud response to Spectre and Meltdown
-    href: other-ref-spectre-meltdown.md
+  - name: UKCloud products and services
+    href: other-ref-products-overview.md
   - name: UKCloud Service Definitions and Pricing Guide
     href: other-ref-service-definitions.md
   - name: UKCloud Terms & Conditions for G-Cloud 11
@@ -102,3 +106,5 @@
     href: other-vid-kc-contribution.md
   - name: Pricing Estimation Tool overview video
     href: other-vid-pricing-tool-overview.md
+  - name: UKCloud Community overview video
+    href: other-vid-community.md

@@ -3,8 +3,8 @@ title: Getting Started Guide for UKCloud for OpenStack | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for OpenStack
 services: openstack
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: Steve Dixon
+lastreviewed: 20/08/2019
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -35,7 +35,11 @@ To manage your OpenStack projects, you can log in to the OpenStack Horizon dashb
 2. From the **Authenticate using** list, select:
 
     - **Keystone Credentials** if your account has not been migrated to SSO
+    
     - **UKCloud SSO** if your account has been migrated to SSO
+
+    > [!NOTE]
+    > If you're using **UKCloud SSO**, you'll require the v3 version of the OpenStack RC file. You can find more details about the OpenStack RC file in [*How to use the OpenStack API using an SSO enabled user*](ostack-how-use-api-sso.md).
 
     ![Horizon login page](images/ostack-horizon-login.png)
 
@@ -525,29 +529,12 @@ Whatever library or automation tools you choose to use, you'll need to know a fe
 
 3. On the *API Access* tab, you can see all the relevant API endpoints for making connections to the various OpenStack subsystems, including the **Identify** endpoint, which provides the initial authentication process that you'll typically need when configuring connections.
 
-    You can also download your user's OpenStack RC file for use in the following section.
-    
-    > [!NOTE]
-    > If your account is SSO-enabled, download the v3 RC file.
+    You can also download your user's OpenStack RC file for use in the following section. 
 
     ![Download OpenStack RC File button on Access & Security page](images/ostack-horizon-btn-download-rc-file.png)
 
-4. If your account is enabled for SSO, you'll need to add the following items to the RC file you downloaded in the previous step.
-
-   ``` none
-   export OS_AUTH_TYPE="v3oidcpassword"
-   export OS_IDENTITY_PROVIDER="sso"
-   export OS_PROTOCOL="oidc"
-   export OS_CLIENT_ID=""
-   export OS_CLIENT_SECRET=""
-   export OS_DISCOVERY_ENDPOINT="https://idp.ukcloud.com/auth/realms/client-assured/.well-known/openid-configuration
-   ```
-   
-    - The `client_id` for Corsham is `cni.1.cor00005`
-
-    - The `client_id` for Farnborough is `cni.1.frn00006`
-
-    - You can set the `client_secret` to any value
+    > [!NOTE]
+    > If your account is SSO-enabled, download the v3 RC file and make the modifications stated [here](ostack-how-use-api-sso.md).
 
 ## Using the OpenStack command-line client
 

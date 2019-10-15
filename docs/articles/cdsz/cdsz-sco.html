@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Cross Domain Security Zone Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Cross Domain Security Zone Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.45.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/cdsz/cdsz-sco.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="cross-domain-security-zone-service-scope">Cross Domain Security Zone Service Scope</h1>
+
+<h2 id="about-this-document">About this document</h2>
+<p>This document describes the boundaries of the Cross Domain Security Zone (CDSZ) service, along with the division of responsibilities between UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.</p>
+<h2 id="about-cross-domain-security-zone">About Cross Domain Security Zone</h2>
+<p>The CDSZ service provides a secure and flexible way to transfer data between your workloads hosted on the UKCloud Assured OFFICIAL security domain and the UKCloud non-internet connected Elevated OFFICIAL security domain.</p>
+<p>You can create your own VMs and data flows across the CDSZ in order to satisfy the requirements of your applications.</p>
+<h2 id="application-process">Application process</h2>
+<p>Customers wanting to use the CDSZ need to go through the CDSZ Application Process. This is documented in <a href="cdsz-ref-application-process.html"><em>UKCloud Cross Domain Security Zone application process</em></a>.</p>
+<h2 id="service-options">Service options</h2>
+<p>CDSZ includes a Walled Garden option that provides self-service access to the CDSZ so that customers can create and manage virtual machines to fulfil their requirements using the technology and application services of their choice.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>UKCloud Guard is no longer available as an option for CDSZ. All new CDSZ deployments must follow the Walled Garden design. We will continue to provide support to customers who previously added UKCloud Guard to their environment, although we would encourage using Walled Garden instead.</p>
+</div>
+<h2 id="service-architecture">Service architecture</h2>
+<p>The CDSZ Walled Garden is a VMware-only environment, utilizing VMware vCloud Director as the management orchestrator for the service. A CDSZ is a virtual datacenter (VDC) in which you can build virtual machines and virtual networks in order to inspect and protect data moving between Assured and Elevated cloud environments. You can find more information about architecting a CDSZ environment in the <a href="cdsz-gs-walled-garden.html"><em>Getting Started Guide for the Cross Domain Security Zone Walled Garden</em></a>.</p>
+<p><img src="images/cdsz-walled-garden.png" alt="CDSZ architecture"></p>
+<p>A CDSZ Walled Garden is a VMware only environment, however you can connect it to non-VMware cloud environments within UKCloud, such as Oracle or OpenStack.</p>
+<h2 id="storage-options">Storage options</h2>
+<p>All workloads (except Micro) include 60GiB of Tier 2 storage for free. All storage is persistent and resilient to local hardware failures.</p>
+<p>You can purchase additional storage to support your application. You can use multiple storage options to support different aspects of the application.</p>
+<ul>
+<li><p><strong>Tier 1.</strong> Our most performant storage for workloads requiring consistently higher disk throughput</p>
+</li>
+<li><p><strong>Tier 2.</strong> Persistent block storage with typical performance characteristics for use by production applications or storage</p>
+</li>
+</ul>
+<h2 id="storage-policies">Storage policies</h2>
+<p>We provide you with access to two storage policies: Tier 1 and Tier 2. Both policies have a 1TiB soft-quota of storage.</p>
+<ul>
+<li><p>We do not guarantee storage performance, as it can be affected by many factors</p>
+</li>
+<li><p>We do not provide IOPs figures for our storage offerings</p>
+</li>
+<li><p>Workloads can use multiple storage profiles</p>
+</li>
+</ul>
+<h2 id="protection">Protection</h2>
+<p>Customers have a range of automated, on-platform protection options to choose from for their environments:</p>
+<ul>
+<li><p><strong>Catalogue and template-based recovery.</strong> All customers have access to catalogue and template-based recovery as standard. This is a configuration management solution that can re-provision stateless servers to a new VM when required, using standard, and catalogue-based VM templates.</p>
+</li>
+<li><p><strong>Snapshot Protection.</strong> 14-day or 28-day snapshot policies available. Data protected by the snapshot has an RPO of 24 hours, with RTO determined by the time taken to restore the VM after the service request is raised. See the <a href="../vmware/vmw-sco-snapshot-protection.html"><em>Snapshot Protection Service Scope</em></a> for full details.</p>
+</li>
+</ul>
+<h2 id="service-availability">Service availability</h2>
+<p>The service level agreement (SLA) for CDSZ workloads guarantees 99.90% availability.</p>
+<p>You're entitled to claim Service Credits for outages to services that take you out of SLA. For more about how we calculate SLAs, see the <a href="../other/other-ref-sla-definition.html"><em>SLA Definition</em></a>.</p>
+<h2 id="service-background">Service background</h2>
+<ul>
+<li><p>We maintain the standard VM template sizes that control allocation of CPU and resources.</p>
+</li>
+<li><p>VMs are fully provisioned.</p>
+</li>
+<li><p>The system is configured to automatically balance resources, so your VMs may vMotion between physical hosts.</p>
+</li>
+<li><p>To maintain performance across the platform, UKCloud can perform movements/migrations of VMs, vApps or storage within the infrastructure assigned to a service.</p>
+</li>
+<li><p>We actively capacity-manage the cloud platform to ensure you have access to the resources you request.</p>
+</li>
+<li><p>We control the deployed versions of technology on the platform. This covers internal platform-supporting technologies, and any technology versions available to you.</p>
+<ul>
+<li><p>Internally this includes, but isn’t limited to, the vSphere and ESX versions, and the hardware version of the platform.</p>
+</li>
+<li><p>Externally this includes the available versions of the edge gateway and vCloud Director.</p>
+</li>
+</ul>
+</li>
+<li><p>Promiscuous mode is disabled.</p>
+<p>You can make additional configurations inside a VM (such as acting as a secondary hypervisor or implementing third-party software technologies). We do not support customer implementations inside a VM.</p>
+</li>
+</ul>
+<h2 id="service-resilience">Service resilience</h2>
+<ul>
+<li><p>You can specify Farnborough or Corsham as the site where you'd like to have your CDSZ service provisioned. We'll try to accommodate requests and will advise you if we are unable do so.</p>
+</li>
+<li><p>You can set affinity or anti-affinity rules through vCloud Director so that VMs do, or do not, run on the same physical host.</p>
+</li>
+</ul>
+<h2 id="operating-systems">Operating systems</h2>
+<h3 id="licensing">Licensing</h3>
+<p>We can provide:</p>
+<ul>
+<li><p>OS licensing through the SPLA and academic frameworks for Microsoft</p>
+</li>
+<li><p>Red Hat Enterprise Linux licensing</p>
+</li>
+</ul>
+<p>For the latest available licences, see the <a href="https://ukcloud.com/wp-content/uploads/2019/07/ukcloud-pricing-guide-11.0-4.pdf"><em>UKCloud Pricing Guide</em></a>.</p>
+<p>You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. You should inform UKCloud via a Service Request if you’re providing your own licensing for a retrospective discount.</p>
+<p>For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.</p>
+<h3 id="vm-server-images">VM server images</h3>
+<p>We provide base VM images for the operating systems for which we provide licensing. You can access these from vCloud Director.</p>
+<p>You can use your own images for non-Windows and RHEL services, where licensing stipulates that to use the VM on our platform it must be licensed (and reported back to the software vendor) by UKCloud.</p>
+<h3 id="update-services">Update services</h3>
+<p>We make update repositories available for all software for which we provide licensing. We don’t provide software update facilities for non-UKCloud licensed software.</p>
+<h3 id="anti-virus">Anti-virus</h3>
+<p>We do not provide anti-virus software as part of the service.</p>
+<h2 id="networks">Networks</h2>
+<p>From a customer management experience, you manage all your connectivity rules, such as firewall, IPsec VPN and NAT functionality, through your edge gateway, using either the vCloud Director tenant portal or vCloud API.</p>
+<p>You can find more information about networking within the CDSZ in the <a href="cdsz-gs-walled-garden.html"><em>Getting Started Guide for the Cross Domain Security Zone Walled Garden</em></a>.</p>
+<h2 id="edge-gateway">Edge gateway</h2>
+<ul>
+<li><p>By default, we assign two edge gateways per Walled Garden VDC: one facing Assured and one facing Elevated.</p>
+</li>
+<li><p>You can have up to nine Org VDC networks per edge gateway.</p>
+</li>
+</ul>
+<h3 id="vapp-edge">vApp edge</h3>
+<p>vApp networks enable you to create smaller networks within individual vApps that have a vApp edge, similar to the edge gateway on your VDC. Although a vApp edge isn't as feature rich as an edge gateway, it lets you create firewall and NAT rules to separate your VDC networks from your vApp VMs. See <a href="../vmware/vmw-how-create-vapp-network.html"><em>How to create a vApp network</em></a> for configuration details.</p>
+<h3 id="site-to-site-ipsec-vpn">Site-to-site IPsec VPN</h3>
+<p>You can create IPsec VPN tunnels to connect from CDSZ edges to virtual firewalls in Assured or Elevated. There is a limit of 64 tunnels per edge gateway.</p>
+<h3 id="load-balancing">Load balancing</h3>
+<p>The edge gateway acts as a basic layer 3 load balancer, including features such as session persistence and health checks. If you need more advanced load balancing, you should consider a third-party product.</p>
+<h2 id="protective-monitoring">Protective monitoring</h2>
+<p>We have implemented GPG 13-aligned Protective Monitoring across the Assured and Elevated security domains at the hypervisor level and below.</p>
+<p>We don't provide Protective Monitoring services above the hypervisor (for example, for your VM); it is your responsibility to act at this level.</p>
+<p>In line with UKCloud's SISP, we provide notification of customer-impacting security incidents. It is your responsibility to report similar incidents to us.</p>
+<h2 id="platform-management">Platform management</h2>
+<p>Users can access, manage and view the CDSZ service, accessing only those features allowed by their role, in any of the following ways:</p>
+<ul>
+<li><p><strong>vCloud Director API.</strong> Enables the programmatic creation and management of VMs inside the CDSZ.</p>
+</li>
+<li><p><strong>vCloud Director tenant portal.</strong> Provides a graphical interface to access the vCloud Director environment (depending on assigned permissions).</p>
+</li>
+<li><p><strong>UKCloud Portal.</strong> Enables the creation of compute services and subsequently VDCs and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the Portal.</p>
+</li>
+</ul>
+<p>You cannot access the underlying infrastructure. This includes (but isn’t limited to) the hardware and the vSphere environment.</p>
+<h2 id="service-reporting">Service reporting</h2>
+<h3 id="visibility">Visibility</h3>
+<p>We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the Portal.</p>
+<h3 id="reporting">Reporting</h3>
+<p>All service reporting is done via the UKCloud Portal.</p>
+<h3 id="billing">Billing</h3>
+<p>We provide you with monthly bills covering your monthly spend.</p>
+<h2 id="customer-service">Customer service</h2>
+<h3 id="customer-success-manager">Customer Success Manager</h3>
+<p>For the first 90 days of the service, you have access to a UKCloud Customer Success Manager (CSM), who will help you with your adoption of the CDSZ service, including finding relevant systems and using UKCloud tools and processes.</p>
+<h3 id="cloud-architects">Cloud Architects</h3>
+<p>UKCloud Cloud Architects support you during the design of solutions for the cloud platform. UKCloud Cloud Architects are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing a CDSZ Walled Garden.</p>
+<h3 id="service-delivery-managers">Service Delivery Managers</h3>
+<p>You'll be allocated with a Service Delivery Manager as an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.</p>
+<h3 id="support">Support</h3>
+<p>After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the <a href="https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf">Customer Engagement Factsheet</a>.</p>
+<h2 id="customer-responsibilities">Customer responsibilities</h2>
+<p>You are responsible for:</p>
+<ul>
+<li><p>Assessing whether the UKCloud platform can support the various requirements of your application.</p>
+</li>
+<li><p>Completing and submitting a CDSZ application form in order to be granted access to a CDSZ Walled Garden.</p>
+</li>
+<li><p>The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.</p>
+</li>
+<li><p>If access is required over government secure networks (HSCN, Janet, RLI or PSN), you are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of your CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided by the customer.</p>
+</li>
+<li><p>Management and administration of layers above the hypervisor (OS patching, application performance monitoring, user administration).</p>
+</li>
+<li><p>Ensuring only lawful data that supports the UK Public Sector is stored and processed by applications on this environment, and that you fully comply with the UKCloud Security Operating Procedures (SyOPs) and other information assurance requirements as specified in the UKCloud System Interconnect and Security Policy (SISP) and associated accreditation documentation sets.</p>
+</li>
+</ul>
+<h2 id="service-provisioning">Service provisioning</h2>
+<p>Within 4 hours of accepting an order (shorter deployment times are typically achieved and can be prioritised upon request), UKCloud will create the customer’s Primary Administrator account and send a Welcome Pack, which includes the URL for the UKCloud Customer Portal, and the Getting Started Guide.</p>
+<p>Customers will have two options when purchasing a CDSZ service.</p>
+<ul>
+<li><p>A light-touch design review/self-assessment route for customers with simple implementations, or those who are experienced at designing secure solutions.</p>
+</li>
+<li><p>An assurance-wrap style approach with UKCloud’s experienced professionals for more complex implementations or those customers who would like support and guidance when developing their solutions.</p>
+</li>
+</ul>
+<p>Both options require the same submission documentation to enable UKCloud to provision the service.</p>
+<p>Deployment time following validation of the assurance document set is 5 days. This includes the setup and configuration of customer specific firewall requirements.</p>
+<p>UKCloud has created several videos, help guides, manuals and FAQs to help train and instruct users so that they are up and running quickly and easily. These are available within the Knowledge Centre.</p>
+<p>In addition, you will be assigned a Customer Success Manager (CSM) to provide any assistance required during the first 90 days of the service.</p>
+<p>UKCloud also has a large ecosystem of partners who can deliver additional services, such as support and professional services. UKCloud would be pleased to introduce you to the right partner to suit your needs.</p>
+<h2 id="service-constraints">Service constraints</h2>
+<p>UKCloud will adhere to the following in terms of maintenance windows:</p>
+<ul>
+<li><p><em>Planned Maintenance</em> means any pre-planned disruptive maintenance to any of the infrastructure relating to the service. Planned Maintenance activity may result in periods of degradation or loss of availability depending on the nature of the activity required. In such cases, UKCloud shall provide affected customers with at least fourteen (14) days’ notice of the Planned Maintenance.</p>
+<p>If during Planned Maintenance there is a loss of availability outside the scope described in the planned maintenance notification to the service, an SLA event will be triggered.</p>
+</li>
+<li><p><em>Emergency Maintenance</em> means any urgent maintenance required to prevent or mitigate against any event compromising the infrastructure relating to the service. Whenever possible, UKCloud shall:</p>
+<p>a) provide affected customers with at least six (6) hours’ advance notice and</p>
+<p>b) carry out the emergency maintenance between the hours of 00:00 and 06:00 (UK local time) Monday to Friday or between the hours of Saturday 00:00 to 06:00 (UK local time) on Monday, (including bank holidays) unless there is an identified and demonstrable immediate risk to customer environment(s). Emergency Maintenance may result in periods of degradation or loss of availability depending on the nature of the activity required.</p>
+<p>If during Emergency Maintenance there is a loss of availability to the service, an SLA event will be triggered. This time will be excluded from the availability calculation but will be included in monthly service reporting related to the service.</p>
+</li>
+</ul>
+<h2 id="supporting-documents-and-resources">Supporting documents and resources</h2>
+<p>The following documents contain more information about the CDSZ and the service options:</p>
+<ul>
+<li><p><a href="cdsz-gs-walled-garden.html"><em>Getting Started Guide for the Cross Domain Security Zone Walled Garden</em></a></p>
+</li>
+<li><p><a href="cdsz-faq.html"><em>Cross Domain Security Zone FAQs</em></a></p>
+</li>
+<li><p><a href="cdsz-ref-application-process.html"><em>UKCloud Cross Domain Security Zone application process</em></a></p>
+</li>
+<li><p><a href="cdsz-ref-bp-overview.html"><em>Cross Domain Security Zone Blueprint</em></a></p>
+</li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

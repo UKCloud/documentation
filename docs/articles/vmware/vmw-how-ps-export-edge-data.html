@@ -8,7 +8,7 @@
     <title>How to export edge gateway configuration data using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to export edge gateway configuration data using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.43.2.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -114,7 +114,7 @@
 
     $webclient.Headers.Add(&quot;x-vcloud-authorization&quot;,$EdgeView.Client.SessionKey)
 
-    $webclient.Headers.Add(&quot;accept&quot;,$EdgeView.Type + &quot;;version=5.5&quot;)
+    $webclient.Headers.Add(&quot;accept&quot;,$EdgeView.Type + &quot;;version=30.0&quot;)
 
     [xml]$EGWConfXML = $webclient.DownloadString($EdgeView.href)
 
