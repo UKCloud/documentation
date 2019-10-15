@@ -787,6 +787,10 @@ resource "azurestack_virtual_machine" "vm" {
     default = "production"
   }
 
+  variable "rg_name" {
+    type    = "string"
+  }
+
   variable "vm_count" {
     default  = 1
   }
