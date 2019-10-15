@@ -32,7 +32,7 @@ Prerequisites from a Windows-based external client.
 
 - Service Principal Name
 
-  - [How to create Service Principal Name for Azure Stack in Powershell](azs-how-create-spn-powershell.md)
+  - [How To create Service Principal Name for Azure Stack in Powershell](azs-how-create-spn-powershell.md)
 
 ## Official Documentation
 
@@ -142,6 +142,7 @@ The examples that follow show how to create VMs using Terraform. The code change
 | client_secret    | The application password that you have configured your Service Principal Name (SPN) to use.    | <form oninput="result.value=client_secret.value" id="client_secret" style="display:inline;"><input type="text" id="client_secret" name="client_secret" style="display:inline;" placeholder="{applicationPassword}"/></form> |
 | rg_name    | The name of the resource group you wish to create    | <form oninput="result.value=rg_name.value" id="rg_name" style="display:inline;"><input type="text" id="rg_name" name="rg_name" style="display:inline;" placeholder="MyResourceGroup"/></form> |
 | tenant_id    | The tenant ID of your Azure Active Directory tenant domain. It can either be the actual GUID or your Azure Active Directory tenant domain name. | <form oninput="result.value=tenant_id.value" id="tenant_id" style="display:inline;"><input type="text" id="tenant_id" name="tenant_id" style="display:inline;" placeholder="xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"/></form> |
+| location    | The location of your Azure instance. | <form oninput="result.value=location.value" id="location" style="display:inline;"><input type="text" id="location" name="location" style="display:inline;" placeholder="frn00006"/></form> |
 | vm_count           | The number of VMs you wish to create    | <form oninput="result.value=vm_count.value" id="vm_count" style="display:inline;"><input type="text" id="vm_count" name="vm_count" style="display:inline;" placeholder="1"/></form> |
 | vm_username        | The username you wish to assign to the VM    | <form oninput="result.value=vm_username.value" id="vm_username" style="display:inline;"><input type="text" id="vm_username" name="vm_username" style="display:inline;" placeholder="user"/></form> |
 | vm_password        | The password you wish to assign to the VM    | <form oninput="result.value=vm_password.value" id="vm_password" style="display:inline;"><input type="text" id="vm_password" name="vm_password" style="display:inline;" placeholder="Password123!"/></form> |
@@ -176,7 +177,7 @@ provider "azurestack" {
 # Create a resource group
 resource "azurestack_resource_group" "rg" {
   name     = "${var.rg_name}"
-  location = "${element(split(".", var.arm_endpoint), 1)}"
+  location = "${var.location}"
 
   tags = {
     environment = "${var.rg_tag}"
@@ -306,7 +307,7 @@ provider "azurestack" {
 # Create a resource group
 resource "azurestack_resource_group" "rg" {
   name     = "${var.rg_name}"
-  location = "${element(split(".", var.arm_endpoint), 1)}"
+  location = "${var.location}"
 
   tags = {
     environment = "${var.rg_tag}"
@@ -455,7 +456,7 @@ provider "azurestack" {
 # Create a resource group
 resource "azurestack_resource_group" "rg" {
   name     = "${var.rg_name}"
-  location = "${element(split(".", var.arm_endpoint), 1)}"
+  location = "${var.location}"
 
   tags = {
     environment = "${var.rg_tag}"
@@ -586,7 +587,7 @@ provider "azurestack" {
 # Create a resource group
 resource "azurestack_resource_group" "rg" {
   name     = "${var.rg_name}"
-  location = "${element(split(".", var.arm_endpoint), 1)}"
+  location = "${var.location}"
 
   tags = {
     environment = "${var.rg_tag}"
@@ -733,6 +734,7 @@ resource "azurestack_virtual_machine" "vm" {
   client_secret   = "<output form="client_secret" name="result" style="display: inline;">applicationPassword</output>"
   tenant_id       = "<output form="tenant_id" name="result" style="display: inline;">xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx</output>"
 
+  location        = "<output form="location" name="result" style="display: inline;">frn00006</output>"
   vm_count        = <output form="vm_count" name="result" style="display: inline;">1</output>
   vm_image_string = "<output form="vm_image" name="result" style="display: inline;">OpenLogic/CentOS/7.5/latest</output>"
   vm_size         = "<output form="vm_size" name="result" style="display: inline;">Standard_DS2_v2</output>"
@@ -776,9 +778,17 @@ resource "azurestack_virtual_machine" "vm" {
     default  = "Password123!"
   }
 
+  variable "location" {
+    type     = "string"
+  }
+
   variable "rg_tag" {
     type    = "string"
     default = "production"
+  }
+
+  variable "rg_name" {
+    type    = "string"
   }
 
   variable "vm_count" {
