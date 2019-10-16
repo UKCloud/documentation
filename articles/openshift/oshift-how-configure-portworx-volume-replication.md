@@ -85,7 +85,7 @@ Status: OK
 
 Nodes in the cluster:
 ID					SCHEDULER_NODE_NAME		DATA IP		CPU		MEM TOTAL	MEM FREE	CONTAINERS	VERSION			Kernel				OS						STATUS
-6dcb56bc-9402-41ea-b819-56f2c9e1c742	worker-tenant-m-0.ben-sandbox	10.254.254.13	2.402023	17 GB		15 GB		N/A		2.1.3.0-651d5d4		3.10.0-957.21.2.el7.x86_64	Red Hat Enterprise Linux Atomic Host 7.6.5	Online
+6dcb56bc-9402-41ea-b819-56f2c9e1c742	worker-tenant-m-0.portworx-demo	10.254.254.13	2.402023	17 GB		15 GB		N/A		2.1.3.0-651d5d4		3.10.0-957.21.2.el7.x86_64	Red Hat Enterprise Linux Atomic Host 7.6.5	Online
 ```
 
 The volume can be replicated to the remaining node:
