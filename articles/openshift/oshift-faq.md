@@ -154,9 +154,9 @@ We will happily work with customers during a trial period to integrate an extern
 
 To add extra capacity to you cluster, you will need to raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. We hope to provide portal integration to enable customers to be in control of this in the future.
 
-### How many Persistent Volumes can I claim/attach to each worker node?
+### How many persistent volumes can I claim/attach to each worker node?
 
-Due to a current restriction on the OpenStack service underpinning OpenShift, 25 additional persistent volume claims (PVCs) can be made/attached to each worker node.
+In line with current restrictions on the OpenStack service underpinning OpenShift, you can claim/attach 25 additional persistent volume claims (PVCs) to each worker node.
 
 ### Can I have integrated container logging deployed with the platform?
 
