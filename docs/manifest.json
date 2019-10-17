@@ -5500,6 +5500,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-how-backup-migrate.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-how-backup-migrate.html",
+          "hash": "FeIS3fYg0yKb2gHtynawiw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-how-build-app-private-repo.md",
       "output": {
         ".html": {
@@ -5656,6 +5668,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-ref-dns-zone-forwarding.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-ref-dns-zone-forwarding.html",
+          "hash": "scBZrwAEww1gmCAOuNca4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-ref-lifecycle.md",
       "output": {
         ".html": {
@@ -5732,7 +5756,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "jiJvdMVw31tRpcj3Eun5yA=="
+          "hash": "nDY2vEumfB7o2MB9cht6eA=="
         }
       },
       "is_incremental": false,
@@ -19380,17 +19404,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 412,
+          "skipped_file_count": 0
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 410,
           "skipped_file_count": 0
         }
       }
