@@ -112,7 +112,7 @@ Containers in OpenShift by default don’t persist data. Every time an applicati
 **Use cases**             | Web caching<br>Containerised analytics<br>Highly performant, real-time web/mobile applications | Standard, containerised web/mobile applications<br>Storing OpenShift logs and metrics
 
 > [!NOTE]
-> Due to a current restriction on the OpenStack service underpinning OpenShift, 25 additional persistent volume claims (PVCs) can be made/attached to each worker node.
+> In line with current restrictions on the OpenStack service underpinning OpenShift, you can make/attach 25 additional persistent volume claims (PVCs) to each worker node.
 
 ## Optional extras
 
