@@ -226,7 +226,7 @@ Portworx enables you to backup snapshots to cloud storage. We can provide a buck
       persistentVolumeClaimName: test-cloudsnap" | oc create -f -
     ```
 
-    You can also provide the cloud credentials for your chosen cloud storage in the `portworx/cloud-cred-id` annotation, however this is only necessary when there are multiple configured. In our Portworx clusters out of the box you won't need to specify this but it would look like the below:
+    You can also provide the cloud credentials for your chosen cloud storage in the `portworx/cloud-cred-id` annotation, however this is only necessary when there are multiple cloud storage destinations. In our Portworx clusters out of the box you won't need to specify this but it would look like the below:
 
     ```none
     apiVersion: volumesnapshot.external-storage.k8s.io/v1
