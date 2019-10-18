@@ -74,7 +74,7 @@ You can increase or decrease the replication factor for a Portworx volume after 
     $ oc exec $PX_POD -n kube-system -c portworx -- /opt/pwx/bin/pxctl volume inspect pvc-e15d82b2-ed46-11e9-8422-fa163e52fd0e | grep -E 'HA|Node'
             HA                        :  2
                       Node            : 10.254.254.14 (Pool 0)
-                      Node            ,k: 10.254.254.12 (Pool 0)
+                      Node            : 10.254.254.12 (Pool 0)
     ```
 
 3. Excluding the IPs from the previous output will return the remaining node which the volume is not being replicated to:
