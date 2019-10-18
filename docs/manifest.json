@@ -5456,7 +5456,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-faq.html",
-          "hash": "l1W3xnntxxkIaDPMgIFqHg=="
+          "hash": "uImoAtAdaxhvIMXTHoodQA=="
         }
       },
       "is_incremental": false,
@@ -5732,7 +5732,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-sco.html",
-          "hash": "3BEMEfUH1wbK3doRlMlAzw=="
+          "hash": "/wVq4dn4ORTTPj42tNEn6g=="
         }
       },
       "is_incremental": false,
@@ -9677,7 +9677,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-service-definitions.html",
-          "hash": "/M14Y8kSm9uMYYGU4d5Y4A=="
+          "hash": "4onDo1aeyJZHacjNpdSqJw=="
         }
       },
       "is_incremental": false,

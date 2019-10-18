@@ -186,6 +186,8 @@
 <p>We will happily work with customers during a trial period to integrate an external monitoring service that enables customer monitoring of the cluster and applications where infrastructure level configuration is required.</p>
 <h3 id="how-do-i-add-extra-capacity-to-my-cluster">How do I add extra capacity to my cluster?</h3>
 <p>To add extra capacity to you cluster, you will need to raise a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal. We hope to provide portal integration to enable customers to be in control of this in the future.</p>
+<h3 id="how-many-persistent-volumes-can-i-claimattach-to-each-worker-node">How many persistent volumes can I claim/attach to each worker node?</h3>
+<p>In line with current restrictions on the OpenStack service underpinning OpenShift, you can claim/attach 25 additional persistent volume claims (PVCs) to each worker node.</p>
 <h3 id="can-i-have-integrated-container-logging-deployed-with-the-platform">Can I have integrated container logging deployed with the platform?</h3>
 <p>Yes, this can be requested at time of deployment, or added post-deployment. The services can be run on either the master nodes or the worker nodes in the cluster. By default, we would place them on the master nodes, but you may wish to change this placement to be more suitable for the specific cluster performance you desire.</p>
 <h3 id="how-much-control-do-i-have-over-the-policies-and-configuration-of-the-platform-once-it-has-been-deployed">How much control do I have over the policies and configuration of the platform once it has been deployed?</h3>
