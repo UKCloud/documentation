@@ -67,7 +67,7 @@ For pricing information for UKCloud services, see the following documents on the
 
   - Cloud Optimisation from UKCloud
 
-- [UKCloud 3rd Party Software Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf)
+- [UKCloud 3rd Party Software Pricing Guide](https://ukcloud.com/3rd-party-pricing-guide)
 
     This document provides the pricing for 3rd party products, options and other services:
 
