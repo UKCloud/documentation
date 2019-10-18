@@ -85,7 +85,7 @@ This article provides a list of Service Definitions for UKCloud services. The li
 
 [Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf)
 
-[3rd Party Software Pricing Guide](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-3rd-party-software-pricing-guide-11.0.pdf)
+[3rd Party Software Pricing Guide](https://ukcloud.com/3rd-party-pricing-guide)
 
 ## SFIA rate card
 
