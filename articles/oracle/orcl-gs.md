@@ -3,8 +3,8 @@ title: Getting Started Guide for UKCloud for Oracle Software | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: fbordacchini
+lastreviewed: 15/10/2019
 
 toc_rootlink: Getting Started
 toc_sub1:
