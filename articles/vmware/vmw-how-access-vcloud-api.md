@@ -3,7 +3,7 @@ title: How to access vCloud Director through the vCloud API | UKCloud Ltd
 description: Describes how to get started with the vCloud API
 services: vmware
 author: Sue Highmoor
-reviewer: 
+reviewer: gsmith
 lastreviewed: 21/10/2019 15:30:00
 
 toc_rootlink: How To
@@ -24,7 +24,7 @@ To perform some tasks within your UKCloud for VMware environment, you may need t
 
 ## Before you begin
 
-Before using the vCloud API to view and update IPsec VPN settings, we recommend that you install a REST client that enables you to access the API. The steps in this article use a Firefox plugin called RESTClient. For information about how to install this plugin, see [*How to install a REST client to access the vCloud API*](vmw-how-install-vcloud-api-rest-client.md).
+Before using the vCloud API, we recommend that you install a REST client that enables you to access the API. The steps in this article use a Firefox plugin called RESTClient. For information about how to install this plugin, see [*How to install a REST client to access the vCloud API*](vmw-how-install-vcloud-api-rest-client.md).
 
 ## Finding your vCloud API credentials
 
@@ -64,7 +64,7 @@ Before using the vCloud API, you first need to find your API credentials.
 
 ## Obtaining an authorisation token
 
-To start interacting with the vCloud API, you first need to obtain an `x-vcloud-authorization` token; to do this you need to adjust some settings in RESTClient.
+To start interacting with the vCloud API, you first need to obtain an `x-vcloud-authorization` token; to do this you need to adjust some settings in the RESTClient.
 
 1. In your browser, click the **RESTClient** icon.
 
@@ -80,7 +80,7 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 
     ![API URL](images/vmw-restclient-api-url.png)
 
-4. Next add a Basic Authentication header. To do this, from the **Authentication** menu at the top of the REST Client, select **Basic Authentication**.
+4. Next add a Basic Authentication header. To do this, from the **Authentication** menu at the top of the RESTClient, select **Basic Authentication**.
 
     ![Basic Authentication menu option](images/vmw-restclient-basic-authentication.png)
 
@@ -98,11 +98,11 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 
     ![Custom Header menu option](images/vmw-restclient-custom-header.png)
 
-9. In the *Request Header* dialog box, in the **Name** field, enter `Accept`
+9. In the *Request Header* dialog box, in the **Name** field, enter `Accept`.
 
 10. In the **Value** field enter `application/*+xml;version=32.0` and then click **Okay**.
 
-    ![Request Headers dialog box](images/Request_Headers_dialog_box_2.png)
+    ![Request Headers dialog box](images/Request_Headers_dialog_box_2.PNG)
 
 11. The *Headers* section should now be displayed, containing the Accept header.
 
@@ -117,7 +117,7 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 14. The `x-vcloud-authorization` token will replace the Basic Authentication header added earlier. To do this highlight and copy the string of characters displayed after the word `x-vcloud-authorization`.
 
     > [!NOTE]
-    > If at any point while following the instructions in this guide, the output displayed in the REST Client does not look similar to that shown in the images, you can use the value of the **Status Code** field to determine what went wrong and needs investigation. In this case above, **Status Code** received was HTTP 200 OK, which means that the request succeeded. For a list of HTTP response codes, see [HTTP Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+    > If at any point while following the instructions in this guide, the output displayed in the RESTClient does not look similar to that shown in the images, you can use the value of the **Status Code** field to determine what went wrong and needs investigation. In this case above, **Status Code** received was HTTP 200 OK, which means that the request succeeded. For a list of HTTP response codes, see [HTTP Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
 15. To add an `x-vcloud-authorization` header, from the **Headers** menu, select **Custom Header**.
 
@@ -129,7 +129,7 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 
 18. Now that you've obtained an `x-vcloud-authorization` token, you can remove the Basic Authentication Header. Click the **x** in the upper right-hand corner of the header.
 
-    ![Remove basic authentication](images/vmw-restclient-basic-authentication-remove.png)## Retrieving organisation details via the API
+    ![Remove basic authentication](images/vmw-restclient-basic-authentication-remove.png)
 
     You must send this token in a header with any subsequent requests to authenticate yourself with the vCloud API.
 
