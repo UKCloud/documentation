@@ -340,7 +340,49 @@ The following example creates a daily policy that creates snapshots at a certain
     test-schedule-default-schedule   1m
     ```
 
-5. You can run a describe on these objects to ensure that they have created successfully and will be able to take snapshots.
+5. You can run a describe on these objects to ensure that they have created successfully and will be able to take snapshots. If a creation is unsuccessful you will see the reason why in the events section of your describe. An example of a successful creation is:
+
+```
+Name:         test-schedule-default-schedule
+Namespace:    portworx-uat
+Labels:       <none>
+Annotations:  portworx/snapshot-type=local
+API Version:  stork.libopenstorage.org/v1alpha1
+Kind:         VolumeSnapshotSchedule
+Metadata:
+  Creation Timestamp:  2019-10-22T15:54:02Z
+  Generation:          1
+  Owner References:
+    API Version:     v1
+    Kind:            PersistentVolumeClaim
+    Name:            test-schedule
+    UID:             243ecfab-f4e4-11e9-a977-fa163ec75c17
+  Resource Version:  67635247
+  Self Link:         /apis/stork.libopenstorage.org/v1alpha1/namespaces/portworx-uat/volumesnapshotschedules/test-schedule-default-schedule
+  UID:               2b424719-f4e4-11e9-a34e-fa163e60d86d
+Spec:
+  Post Exec Rule:
+  Pre Exec Rule:
+  Reclaim Policy:        Retain
+  Schedule Policy Name:  ten-minute
+  Suspend:               <nil>
+  Template:
+    Spec:
+      Persistent Volume Claim Name:  test-schedule
+      Snapshot Data Name:
+Status:
+  Items:
+    Interval:
+      Creation Timestamp:  2019-10-22T15:54:02Z
+      Finish Timestamp:    2019-10-22T15:54:32Z
+      Name:                test-schedule-default-schedule-interval-2019-10-22-155402
+      Status:              Ready
+Events:
+  Type    Reason  Age   From   Message
+  ----    ------  ----  ----   -------
+  Normal  Ready   9s    stork  Scheduled snapshot (test-schedule-default-schedule-interval-2019-10-22-155402) completed successfully
+  ```
+  
 
 ## Further reading
 
