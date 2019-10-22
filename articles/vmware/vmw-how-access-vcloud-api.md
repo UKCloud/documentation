@@ -3,7 +3,7 @@ title: How to access vCloud Director through the vCloud API | UKCloud Ltd
 description: Describes how to get started with the vCloud API
 services: vmware
 author: Sue Highmoor
-reviewer: 
+reviewer: gsmith
 lastreviewed: 21/10/2019 15:30:00
 
 toc_rootlink: How To
@@ -129,7 +129,7 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 
 18. Now that you've obtained an `x-vcloud-authorization` token, you can remove the Basic Authentication Header. Click the **x** in the upper right-hand corner of the header.
 
-    ![Remove basic authentication](images/vmw-restclient-basic-authentication-remove.png)## Retrieving organisation details via the API
+    ![Remove basic authentication](images/vmw-restclient-basic-authentication-remove.png)
 
     You must send this token in a header with any subsequent requests to authenticate yourself with the vCloud API.
 
