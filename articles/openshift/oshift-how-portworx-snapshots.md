@@ -24,9 +24,13 @@ Portworx is a cloud-native storage solution that is now available as an add-on t
 
 ### Intended audience
 
-This article assumes you have access to a Portworx-enabled OpenShift 3.11 cluster and that you have cluster-admin rights. It also assumes familiarity with `oc`, the OpenShift command-line client. 
+This article assumes you have access to a Portworx-enabled OpenShift 3.11 or greater cluster and that you have cluster-admin rights. It also assumes familiarity with `oc`, the OpenShift command-line client. 
 
 If you're interested in a free 30 day trial of Portworx, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
+
+## Pre-Requisites
+
+This article uses PVCs backed by volumes provisioned by portworx. For information on creating PVCs backed by portworx please see <https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/>
 
 ## Creating on-demand snapshots
 
@@ -96,7 +100,7 @@ You can also restore snapshots to different namespaces, however you must declare
       persistentVolumeClaimName: test-snapshot-pvc" | oc create -f -
     ```
 
-2. You can verify the snapshot was created successfully by running the same `describe` commands from the same namespace section.
+2. You can verify the snapshot was created successfully by running the same `describe` commands from the [same namespace](#same-namespace) section.
 
 3. To restore this snapshot in the `test-snapshot-2` namespace, create a PVC object in the `test-snapshot-2` namespace that references the snapshot and has the `stork.libopenstorage.org/snapshot-source-namespace: <source-namespace>` annotation:
 
