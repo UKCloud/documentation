@@ -197,6 +197,7 @@ Portworx enables you to backup snapshots to cloud storage. We can provide a buck
 > To find the ID of the cloud credentials provided with your cluster run:
 > `PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')`
 > `kubectl exec $PX_POD -n kube-system -- /opt/pwx/bin/pxctl credentials list`
+> This gets the name of a portworx pod and executes a pxctl credential list inside it.
 
 1. Create a PVC to use for the cloudsnap:
 
@@ -269,7 +270,7 @@ You can create snapshot schedules that take recurring backups at a certain time 
 
 The following example creates a daily policy that creates snapshots at a certain time each day:
 
-1. Create some `SchedulePolicy` objects:
+1. Create some `SchedulePolicy` objects. These objects are referenced in storage classes and any PVCs created from that storage class will have all schedule policies applied:
 
     ```none
     echo "apiVersion: stork.libopenstorage.org/v1alpha1
@@ -293,7 +294,7 @@ The following example creates a daily policy that creates snapshots at a certain
         retain: 3" | oc create -f -
     ```
 
-2. Create a storage class that references one or more schedule policies. Any PVCs created from the storage class will have all schedule policies applied, For example, to backup the PVC locally every ten minutes and at 10:00PM daily to cloud-storage:
+2. Create a storage class that references one or more schedule policies to backup PVCs locally every ten minutes and at 10:00PM daily to cloud-storage:
 
     ```none
     echo "kind: StorageClass
