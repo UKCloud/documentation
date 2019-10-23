@@ -20,7 +20,7 @@ toc_mdlink: ptl-how-setup-2fa.md
 
 ## Overview
 
-To provide additional security, you may want to set up two-factor authentication (2FA) in the UKCloud Portal. 2FA in the Portal requires that users enter a randomly generated code, as well as their user name and and password, when logging in to the Portal.
+To provide additional security, you may want to set up two-factor authentication (2FA) in the UKCloud Portal. 2FA in the Portal requires that users enter a randomly generated code, as well as their user name and and password, when logging in to the Portal. This service is free of charge.
 
 ![Two-Factor Authentication dialog box in the UKCloud Portal](images/ptl-2fa.png)
 
