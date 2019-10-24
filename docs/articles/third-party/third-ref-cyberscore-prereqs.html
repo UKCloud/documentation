@@ -102,21 +102,21 @@
 <h2 id="permit-outbound-access-from-scanner">Permit outbound access from scanner</h2>
 <p>The CyberScore scanner talks to the CyberScore service to download the latest vulnerability data and to upload scan results for analysis. To do this, it requires outbound connectivity from within your organisation to the following URLs on ports <code>80</code> or <code>443</code> unless otherwise specified:</p>
 <ul>
-<li><p><code>github.com</code></p>
+<li><p><code>https://github.com</code></p>
 </li>
-<li><p><code>auth.docker.io</code></p>
+<li><p><code>https://auth.docker.io</code></p>
 </li>
-<li><p><code>registry-1.docker.io</code></p>
+<li><p><code>https://registry-1.docker.io</code></p>
 </li>
-<li><p><code>production.cloudflare.docker.com</code></p>
+<li><p><code>https://production.cloudflare.docker.com</code></p>
 </li>
-<li><p><code>secure-api.cyberscore.com</code></p>
+<li><p><code>https://secure-api.cyberscore.com</code></p>
 </li>
-<li><p><code>heartbeat.cyberscore.com</code> (<code>4505-4506/tcp</code>)</p>
+<li><p><code>https://updates.cyberscore.com</code></p>
 </li>
-<li><p><code>logging.cyberscore.com</code> (<code>5044/tcp</code> and <code>443/tcp</code>)</p>
+<li><p><code>heartbeat.cyberscore.com</code> <code>4505-4506/tcp</code></p>
 </li>
-<li><p><code>updates.cyberscore.com</code></p>
+<li><p><code>logging.cyberscore.com</code> <code>5044/tcp</code> and <code>443/tcp</code></p>
 </li>
 </ul>
 <h2 id="admin-credentials-for-the-scanning-profile">Admin credentials for the scanning profile</h2>
