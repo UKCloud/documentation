@@ -3,8 +3,8 @@ title: How to raise and escalate incidents and service requests | UKCloud Ltd
 description: Provides an overview of the process for raising incidents and service requests, as well as how to escalate them if necessary
 services: other
 author: Sue Highmoor
-reviewer:
-lastreviewed: 23/07/2018 14:44:15
+reviewer: aperrett
+lastreviewed: 23/10/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -40,7 +40,7 @@ Methods for contacting The UKCloud team are as follows:
 
 - Telephone &mdash; 01252 303 300 (select option 2)
 
-The UKCloud Portal is the preferred approach for raising requests and issues with UKCloud.
+The UKCloud Portal is the preferred approach for raising requests and issues with UKCloud. For information about raising requests, see [*How to use My Calls in the UKCloud Portal*](ptl-how-use-my-calls.md).
 
 Customers are asked to provide the following:
 
@@ -99,7 +99,7 @@ A failure or degradation of redundant or non-critical components of service has 
 
 ## Viewing tickets and service updates
 
-All incidents and service requests are visible within the UKCloud Portal under [My Calls](https://portal.skyscapecloud.com/support/ivanti). The Portal is also used to provide notification of upcoming changes.
+All incidents and service requests are visible within the UKCloud Portal under [My Calls](https://portal.skyscapecloud.com/support/ivanti)(for more information, see [*How to use My Calls in the UKCloud Portal*](ptl-how-use-my-calls.md)). The Portal also provides notification of upcoming changes.
 
 During a Major Incident, updates are published to the Service Status page: <http://status.ukcloud.com/>.
 
