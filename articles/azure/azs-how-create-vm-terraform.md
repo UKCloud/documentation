@@ -150,9 +150,9 @@ The examples that follow show how to create VMs using Terraform. The code change
 | instance_size    | Size of the virtual machine to be created    | <form onchange="result.value=vm_size.value" id="vm_size" style="display: inline;" ><select name="vm_size" id="vm_size" style="display: inline;"><optgroup label="Basic A"><option value="Basic_A0">Basic A0</option><option value="Basic_A1">Basic A1</option><option value="Basic_A2">Basic A2</option><option value="Basic_A3">Basic A3</option><option value="Basic_A4">Basic A4</option></optgroup><optgroup label="Standard A"><option value="Standard_A0">Standard A0</option><option value="Standard_A1">Standard A1</option><option value="Standard_A2">Standard A2</option><option value="Standard_A3">Standard A3</option><option value="Standard_A4">Standard A4</option><option value="Standard_A5">Standard A5</option><option value="Standard_A6">Standard A6</option><option value="Standard_A7">Standard A7</option></optgroup><optgroup label="Av2-Series"><option value="Standard_A1_v2">Standard A1 v2</option><option value="Standard_A2_v2">Standard A2 v2</option><option value="Standard_A4_v2">Standard A4 v2</option><option value="Standard_A8_v2">Standard A8 v2</option><option value="Standard_A2m_v2">Standard A2m v2</option><option value="Standard_A4m_v2">Standard A4m v2</option><option value="Standard_A8m_v2">Standard A8m v2</option></optgroup><optgroup label="D-Series"><option value="Standard_D1">Standard D1</option><option value="Standard_D2">Standard D2</option><option value="Standard_D3">Standard D3</option><option value="Standard_D4">Standard D4</option><option value="Standard_D11">Standard D11</option><option value="Standard_D12">Standard D12</option><option value="Standard_D13">Standard D13</option><option value="Standard_D14">Standard D14</option></optgroup><optgroup label="Dv2-Series"><option value="Standard_D1_v2">Standard D1 v2</option><option value="Standard_D2_v2">Standard D2 v2</option><option value="Standard_D3_v2">Standard D3 v2</option><option value="Standard_D4_v2">Standard D4 v2</option><option value="Standard_D5_v2">Standard D5 v2</option><option value="Standard_D11_v2">Standard D11 v2</option><option value="Standard_D12_v2">Standard D12 v2</option><option value="Standard_D13_v2">Standard D13 v2</option><option value="Standard_D14_v2">Standard D14 v2</option></optgroup><optgroup label="DS-Series"><option value="Standard_DS1">Standard DS1</option><option value="Standard_DS2">Standard DS2</option><option value="Standard_DS3">Standard DS3</option><option value="Standard_DS4">Standard DS4</option><option value="Standard_DS11">Standard DS11</option><option value="Standard_DS12">Standard DS12</option><option value="Standard_DS13">Standard DS13</option><option value="Standard_DS14">Standard DS14</option></optgroup><optgroup label="DSv2-Series"><option value="Standard_DS1_v2">Standard DS1 v2</option><option value="Standard_DS2_v2" selected>Standard DS2 v2</option><option value="Standard_DS3_v2">Standard DS3 v2</option><option value="Standard_DS4_v2">Standard DS4 v2</option><option value="Standard_DS5_v2">Standard DS5 v2</option><option value="Standard_DS11_v2">Standard DS11 v2</option><option value="Standard_DS12_v2">Standard DS12 v2</option><option value="Standard_DS13_v2">Standard DS13 v2</option><option value="Standard_DS14_v2">Standard DS14 v2</option></optgroup><optgroup label="F-Series"><option value="Standard_F1">Standard F1</option><option value="Standard_F2">Standard F2</option><option value="Standard_F4">Standard F4</option><option value="Standard_F8">Standard F8</option><option value="Standard_F16">Standard F16</option></optgroup><optgroup label="Fs-Series"><option value="Standard_F1s">Standard F1s</option><option value="Standard_F2s">Standard F2s</option><option value="Standard_F4s">Standard F4s</option><option value="Standard_F8s">Standard F8s</option><option value="Standard_F16s">Standard F16s</option></optgroup><optgroup label="Fsv2-Series"><option value="Standard_F2s_v2">Standard F2s v2</option><option value="Standard_F4s_v2">Standard F4s v2</option><option value="Standard_F8s_v2">Standard F8s v2</option><option value="Standard_F16s_v2">Standard F16s v2</option><option value="Standard_F32s_v2">Standard F32s v2</option><option value="Standard_F64s_v2">Standard F64s v2</option></optgroup></select></form> 
 | rg_tag   | An optional tag to help categorize the resource group, e.g. "Production"    | <form oninput="result.value=rg_tag.value" id="rg_tag" style="display:inline;"><input type="text" id="rg_tag" name="rg_tag" style="display:inline;" placeholder="Production"/></form>
 
-## [Windows VM](#tab/tabid-1)
+## [Linux VM](#tab/tabid-1)
 
-## [Linux VM](#tab/tabid-2)
+## [Windows VM](#tab/tabid-2)
 
 ***
 > [!IMPORTANT]
@@ -163,7 +163,7 @@ The examples that follow show how to create VMs using Terraform. The code change
 > [!TIP]
 > Resource attributes such as "name" can be hardcoded as opposed to using variables from the external files for the declaration.
 
-### [Windows VM with Managed Disks](#tab/tabid-a/tabid-1)
+### [Windows VM with Managed Disks](#tab/tabid-a/tabid-2)
 
 <pre><code class="language-hcl">
 provider "azurestack" {
@@ -293,7 +293,7 @@ resource "azurestack_virtual_machine" "vm" {
 }
 </code></pre>
 
-### [Windows VM with Unmanaged Disks](#tab/tabid-b/tabid-1)
+### [Windows VM with Unmanaged Disks](#tab/tabid-b/tabid-2)
 
 <pre><code class="language-hcl">
 provider "azurestack" {
@@ -442,7 +442,7 @@ resource "azurestack_virtual_machine" "vm" {
 }
 </pre></code>
 
-### [Linux VM with Managed Disks](#tab/tabid-a/tabid-2)
+### [Linux VM with Managed Disks](#tab/tabid-a/tabid-1)
 
 <pre><code class="language-hcl">
 provider "azurestack" {
@@ -573,7 +573,7 @@ resource "azurestack_virtual_machine" "vm" {
 }
 </code></pre>
 
-### [Linux VM with Unmanaged Disks](#tab/tabid-b/tabid-2)
+### [Linux VM with Unmanaged Disks](#tab/tabid-b/tabid-1)
 
 <pre><code class="language-hcl">
 provider "azurestack" {
