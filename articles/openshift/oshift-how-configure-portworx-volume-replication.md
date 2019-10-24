@@ -19,11 +19,11 @@ toc_mdlink: oshift-how-configure-portworx-volume-replication.md
 
 ## Overview
 
-Portworx is a cloud-native storage solution that is now available as an integration with our OpenShift offering. This article describes how to configure replication for Portworx volumes and provides an overview of Portworx failover capabilities.
+Portworx is a cloud-native storage solution that is now available as an integration with our OpenShift offering. This article describes how to configure replication for Portworx volumes and provides an overview of Portworx failover capabilities. 
 
 ### Intended audience
 
-This article assumes you have access to a Portworx integrated OpenShift 3.11 cluster and that you have cluster-admin rights. It also assumes familiarity with `oc`, the OpenShift command-line client. 
+This article assumes you have access to a Portworx integrated OpenShift 3.11 cluster and that you have cluster-admin rights. It also assumes familiarity with `oc`, the OpenShift command-line client. For one of the steps you will also need to have `jq` installed.
 
 If you're interested in a free 30 day trial of Portworx, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
@@ -56,61 +56,77 @@ parameters:
 
 ### Modifying a volume replication factor
 
-You can increase or decrease the replication factor for a Portworx volume after it has been created using the `pxctl` command.
+You can increase or decrease the replication factor for a Portworx volume after it has been created using the Portworx command line tool `pxctl`. For the purpose of this article, we will use a persistent volume claim named pvc-repl2.
 
-1. Before proceeding, identify the volume name for the persistent volume claim:
+1. Before proceeding, identify the volume name for the persistent volume claim and store this to an environment variable so it can be referenced in multiple commands:
 
     ```none
-    $ oc get pvc | awk '{print $1" "$3}'
-    NAME VOLUME
-    pvc-repl2 pvc-e15d82b2-ed46-11e9-8422-fa163e52fd0e
+    $ VOLUME=$(oc get pvc pvc-repl2 -o custom-columns=VOLUME:.spec.volumeName --no-headers)
+
+    $ echo $VOLUME
+    pvc-e15d82b2-ed46-11e9-8422-fa163e52fd0e
     ```
 
-2. Verify the current replication factor and the nodes storing the replicas, substituting the volume name returned in the previous step:
+> [!NOTE]
+> The `pxctl` binary is available within the Portworx container, therefore the easiest way to execute commands against the Portworx cluster is to do so remotely using the [`oc exec`](https://docs.openshift.com/container-platform/3.11/dev_guide/executing_remote_commands.html) command. 
+
+2. To reduce command complexity, we will set an environment variable named PX_POD containing the name of a Portworx pod so we can re-use it throughout the article.
 
     ```none
     $ PX_POD=$(oc get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')
-    
-    $ oc exec $PX_POD -n kube-system -c portworx -- /opt/pwx/bin/pxctl volume inspect pvc-e15d82b2-ed46-11e9-8422-fa163e52fd0e | grep -E 'HA|Node'
+
+    $ echo PX_POD
+    portworx-7cqq6
+    ```
+
+3. Verify the current replication factor and the IPs of the nodes storing the replicas:
+
+    ```none
+    $ oc exec $PX_POD -n kube-system -- /opt/pwx/bin/pxctl volume inspect $VOLUME | grep -E 'HA|Node'
             HA                        :  2
                       Node            : 10.254.254.14 (Pool 0)
                       Node            : 10.254.254.12 (Pool 0)
     ```
 
-3. Excluding the IPs from the previous output will return the remaining node which the volume is not being replicated to:
+4. To replicate the volume to an additional node, we need to determine its Portworx node ID. To do so we will export the ID and IP for each node. In this case, by eliminating the IPs returned in the previous step we can identify that the remaining node ID is 6dcb56bc-9402-41ea-b819-56f2c9e1c742:
 
     ```none
-    $ oc exec $PX_POD -n kube-system -c portworx -- /opt/pwx/bin/pxctl cluster list | grep -vE '10.254.254.14|10.254.254.12'
-    Cluster ID: px-cluster-0db6c5ee-f3e9-4773-a863-3eb77d8d30ca
-    Cluster UUID: 48f080dd-56f2-4d4e-8df4-99cf5dbfd8a9
-    Status: OK
-    
-    Nodes in the cluster:
-    ID					SCHEDULER_NODE_NAME		DATA IP		CPU		MEM TOTAL	MEM FREE	CONTAINERS	VERSION			Kernel				OS						STATUS
-    6dcb56bc-9402-41ea-b819-56f2c9e1c742	worker-tenant-m-0.portworx-demo	10.254.254.13	2.402023	17 GB		15 GB		N/A		2.1.3.0-651d5d4		3.10.0-957.21.2.el7.x86_64	Red Hat Enterprise Linux Atomic Host 7.6.5	Online
+    $ oc exec $PX_POD -n kube-system -- /opt/pwx/bin/pxctl cluster list -j | jq '(.cluster.Nodes[] | {"ID": .Id, "IP": .DataIp})'
+    {
+        "ID": "6dcb56bc-9402-41ea-b819-56f2c9e1c742",
+        "IP": "10.254.254.13"
+    }
+    {
+        "ID": "433f83c2-32d1-458e-a71c-b0d56cb29023",
+        "IP": "10.254.254.14"
+    }
+    {
+        "ID": "a1993b47-2c97-4847-94d7-3eb79962d3cc",
+        "IP": "10.254.254.12"
+    }
     ```
 
-4. You can then replicate the volume to the remaining node:
+5. You can then replicate the volume to the remaining node:
 
     ```none
-    $ oc exec $PX_POD -n kube-system -c portworx -- /opt/pwx/bin/pxctl volume ha-update --repl=3 --node 6dcb56bc-9402-41ea-b819-56f2c9e1c742 pvc-e15d82b2-ed46-11e9-8422-fa163e52fd0e
+    $ oc exec $PX_POD -n kube-system -- /opt/pwx/bin/pxctl volume ha-update --repl=3 --node 6dcb56bc-9402-41ea-b819-56f2c9e1c742 $VOLUME
     Update Volume Replication: Replication update started successfully for volume pvc-e15d82b2-ed46-11e9-8422-fa163e52fd0e
     ```
 
-5. Verify that the volume has been replicated to the additional node:
+6. Verify that the volume has been replicated to the additional node:
 
     ```none
-    $ oc exec $PX_POD -n kube-system -c portworx -- /opt/pwx/bin/pxctl volume inspect pvc-e15d82b2-ed46-11e9-8422-fa163e52fd0e | grep -E 'HA|Node'
+    $ oc exec $PX_POD -n kube-system -- /opt/pwx/bin/pxctl volume inspect $VOLUME | grep -E 'HA|Node'
             HA                       :  3
                        Node          : 10.254.254.14 (Pool 0)
                        Node          : 10.254.254.12 (Pool 0)
                        Node          : 10.254.254.13 (Pool 0)
     ```
 
-6. You can remove a replica from a node by specifying the node ID and reducing the replication factor:
+7. You can remove a replica from a node by specifying the node ID and reducing the replication factor:
 
     ```none
-    $ oc exec $PX_POD -n kube-system -c portworx -- /opt/pwx/bin/pxctl volume ha-update --repl=2 --node 6dcb56bc-9402-41ea-b819-56f2c9e1c742 pvc-e15d82b2-ed46-11e9-8422-fa163e52fd0e
+    $ oc exec $PX_POD -n kube-system -- /opt/pwx/bin/pxctl volume ha-update --repl=2 --node 6dcb56bc-9402-41ea-b819-56f2c9e1c742 $VOLUME
     Update Volume Replication: Replication update started successfully for volume pvc-e15d82b2-ed46-11e9-8422-fa163e52fd0e
     ```
 
@@ -127,6 +143,8 @@ To use the STORK scheduler, add the following entry to the pod spec:
 ```none
 schedulerName: stork
 ```
+
+The STORK scheduler should be used for any running pods that have a Portworx volume mounted to ensure most efficient recovery.
 
 ## Further reading
 
