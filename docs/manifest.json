@@ -10685,7 +10685,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-setup-2fa.html",
-          "hash": "38V2BaRKg2s5xMG+nSqEjA=="
+          "hash": "Dz8eUIcDQtf+/fE2A8njaQ=="
         }
       },
       "is_incremental": false,
@@ -17973,7 +17973,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "EPUI8S7smzLLW4b+g797Jw=="
+          "hash": "XJQqpvAkN9TfF5J+MU//4A=="
         }
       },
       "is_incremental": false,
@@ -19073,18 +19073,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/vmware/vmw-ref-two-factor-auth.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/vmware/vmw-ref-two-factor-auth.html",
-          "hash": "g7npOz4LFziVPpO6mPCXkQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-ref-twreuse.md",
       "output": {
         ".html": {
@@ -19412,17 +19400,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 412,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 411,
           "skipped_file_count": 0
         }
       }

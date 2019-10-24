@@ -186,8 +186,6 @@
     href: vmw-ref-twreuse.md
   - name: Tier 1 storage
     href: vmw-ref-tier1-storage.md
-  - name: Two Factor Authentication
-    href: vmw-ref-two-factor-auth.md
   - name: UKCloud for VMware options
     href: vmw-ref-service-options.md
   - name: Understanding connectivity options in UKCloud for VMware
