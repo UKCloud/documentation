@@ -11512,6 +11512,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/Request_Headers_dialog_box_2.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/Request_Headers_dialog_box_2.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/api_details.png",
       "output": {
         "resource": {
@@ -18166,7 +18177,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-access-vcloud-api.html",
-          "hash": "vjtmshU260CtPPbrcKfBSw=="
+          "hash": "YRA/Ea9z/ix+/nmTPER0dw=="
         }
       },
       "is_incremental": false,
@@ -18526,7 +18537,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-manage-snapshot-protection.html",
-          "hash": "4pi8FMv9sZGVjyBjWUJRXw=="
+          "hash": "HNwxBHRfcPCmXX4sg3d/nA=="
         }
       },
       "is_incremental": false,
@@ -18598,7 +18609,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-ps-export-edge-data.html",
-          "hash": "cYjFKfJgRjwt8nR2lAExiw=="
+          "hash": "7qOrQJJc9lKdOLcu77QRcg=="
         }
       },
       "is_incremental": false,

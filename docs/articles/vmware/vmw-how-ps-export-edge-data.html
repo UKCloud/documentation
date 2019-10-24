@@ -98,12 +98,12 @@
 <h2 id="exporting-edge-gateway-configuration-data">Exporting Edge Gateway configuration data</h2>
 <ol>
 <li><p>Install PowerCLI from VMware:</p>
-<p><a href="https://vmware.com/support/developer/PowerCLI">https://vmware.com/support/developer/PowerCLI</a></p>
+<p><a href="https://code.vmware.com/web/tool/11.4.0/vmware-powercli">https://code.vmware.com/web/tool/11.4.0/vmware-powercli</a></p>
 </li>
 <li><p>Open your PowerCLI session and connect to vCloud.</p>
-<p>You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API.</p>
+<p>You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API. For more information, see [<em>Finding your vCloud API credentials</em>(vmw-how-access-vcloud-api.md#finding-your-vcloud-api-credentials).</p>
 </li>
-<li><p>Copy the following function and paste it into your PowerCLI shell:</p>
+<li><p>Copy the following function and paste it into a .psm1 file:</p>
 <pre><code>Function Get-EdgeConfig ($EdgeGateway)
 
 {
@@ -138,7 +138,11 @@
 
 </code></pre>
 </li>
-<li><p>Find your Edge Gateways by entering the following command:</p>
+<li><p>Enter the below command to import the function.</p>
+<pre><code> Import-Module [PATH TO PSM1 FILE]
+</code></pre>
+</li>
+<li><p>Find your edge gateways by entering the following command:</p>
 <pre><code> $Gateways = Search-Cloud -QueryType EdgeGateway
 </code></pre>
 </li>
@@ -160,8 +164,6 @@
 <pre><code> $Config.Firewall | Export-csv -path c:\users\myaccount\desktop\firewallrules.csv
 
  $Config.Nat | Export-csv -path c:\users\myaccount\desktop\natrules.csv -notypeinformation
-</code></pre>
-<pre><code>
 </code></pre>
 </li>
 </ol>
