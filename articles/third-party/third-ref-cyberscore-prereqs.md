@@ -33,21 +33,21 @@ To install the CyberScore scanner, administrative permission on the virtualised 
 
 The CyberScore scanner talks to the CyberScore service to download the latest vulnerability data and to upload scan results for analysis. To do this, it requires outbound connectivity from within your organisation to the following URLs on ports `80` or `443` unless otherwise specified:
 
-- `github.com`
+- `https://github.com`
 
-- `auth.docker.io`
+- `https://auth.docker.io`
 
-- `registry-1.docker.io`
+- `https://registry-1.docker.io`
 
-- `production.cloudflare.docker.com`
+- `https://production.cloudflare.docker.com`
 
-- `secure-api.cyberscore.com`
+- `https://secure-api.cyberscore.com`
 
-- `heartbeat.cyberscore.com` (`4505-4506/tcp`)
+- `https://updates.cyberscore.com`
 
-- `logging.cyberscore.com` (`5044/tcp` and `443/tcp`)
+- `heartbeat.cyberscore.com` `4505-4506/tcp`
 
-- `updates.cyberscore.com`
+- `logging.cyberscore.com` `5044/tcp` and `443/tcp`
 
 ## Admin credentials for the scanning profile
 
