@@ -8,7 +8,7 @@
     <title>How to create a virtual machine using Terraform | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual machine using Terraform | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.46.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -271,10 +271,10 @@ Rest of the file (...)
 <div class="tabGroup" id="tabgroup_CeZOj-G++Q">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Windows VM</a>
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Linux VM</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Linux VM</a>
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Windows VM</a>
 </li>
 </ul>
 <section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
@@ -294,20 +294,20 @@ Rest of the file (...)
 </div>
 <div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
 <ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" data-tab="tabid-a" data-condition="tabid-1" tabindex="0" aria-selected="true">Windows VM with Managed Disks</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" data-tab="tabid-b" data-condition="tabid-1" tabindex="-1">Windows VM with Unmanaged Disks</a>
+<li role="presentation" aria-hidden="true" hidden="hidden">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" data-tab="tabid-a" data-condition="tabid-2" tabindex="-1">Windows VM with Managed Disks</a>
 </li>
 <li role="presentation" aria-hidden="true" hidden="hidden">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" data-tab="tabid-a" data-condition="tabid-2" tabindex="-1">Linux VM with Managed Disks</a>
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" data-tab="tabid-b" data-condition="tabid-2" tabindex="-1">Windows VM with Unmanaged Disks</a>
 </li>
-<li role="presentation" aria-hidden="true" hidden="hidden">
-<a href="#tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" data-tab="tabid-b" data-condition="tabid-2" tabindex="-1">Linux VM with Unmanaged Disks</a>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" data-tab="tabid-a" data-condition="tabid-1" tabindex="0" aria-selected="true">Linux VM with Managed Disks</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" data-tab="tabid-b" data-condition="tabid-1" tabindex="-1">Linux VM with Unmanaged Disks</a>
 </li>
 </ul>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tabpanel" data-tab="tabid-a" data-condition="tabid-1">
+<section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tabpanel" data-tab="tabid-a" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
 <pre><code class="language-hcl">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
@@ -436,7 +436,7 @@ resource "azurestack_virtual_machine" "vm" {
 }
 </code></pre>
 </section>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tabpanel" data-tab="tabid-b" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
 <pre><code class="language-hcl">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
@@ -584,7 +584,7 @@ resource "azurestack_virtual_machine" "vm" {
 }
 </code></pre>
 </section>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-2" role="tabpanel" data-tab="tabid-a" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tabpanel" data-tab="tabid-a" data-condition="tabid-1">
 <pre><code class="language-hcl">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
@@ -714,7 +714,7 @@ resource "azurestack_virtual_machine" "vm" {
 }
 </code></pre>
 </section>
-<section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-2" role="tabpanel" data-tab="tabid-b" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
 <pre><code class="language-hcl">
 provider "azurestack" {
   arm_endpoint    = "${var.arm_endpoint}"
