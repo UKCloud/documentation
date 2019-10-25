@@ -23,7 +23,7 @@ Portworx is a cloud-native storage solution that is now available as an integrat
 
 ### Intended audience
 
-This article assumes you have access to a Portworx integrated OpenShift 3.11 cluster and that you have cluster-admin rights. It also assumes familiarity with `oc`, the OpenShift command-line client. 
+This article assumes you have access to a Portworx integrated OpenShift 3.11 cluster (or later) and that you have cluster-admin rights. It also assumes familiarity with `oc`, the OpenShift command-line client. 
 
 If you're interested in a free 30 day trial of Portworx, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
@@ -33,25 +33,36 @@ Portworx uses passphrase encryption to protect volume data, both at rest and in 
 
 ### Cluster-wide
 
-Where a persistent volume claim (pvc) is created against a storage class that has the parameter `secure: "true"` set in its spec, the volume is encrypted using a cluster-wide key. 
+Where a persistent volume claim (pvc) is created against a storage class that has the parameter `secure: "true"` set in its spec, the volume is encrypted using a cluster-wide key. Below is an example of a storage class spec that enables volume encryption:
 
-You can set this key by using the following command to create a secret:
-
+```none
+kind: StorageClass
+apiVersion: storage.k8s.io/v1beta1
+metadata:
+    name: portworx-repl1-encrypted
+provisioner: kubernetes.io/portworx-volume
+parameters:
+   secure: "true"
+   repl: "1"
 ```
+
+You can set the cluster-wide key by using the following command to create a secret:
+
+```none
 $ oc create secret generic px-vol-encryption --from-literal=cluster-wide-secret-key='<desired-key>' -n portworx
 ```
 
 You need to pass the name of the key within the `px-vol-encryption` secret to Portworx, which you can do with the below commands:
 
-```
+```none
 $ PX_POD=$(oc get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}')
 
 $ oc exec $PX_POD -n kube-system -c portworx -- /opt/pwx/bin/pxctl secrets set-cluster-key --secret cluster-wide-secret-key
 ```
 
-Now that you've set the cluster key, any pvc created using a secure storage class will be encrypted with the key. Below is an example of a pvc spec using a storage class with encryption enabled:
+Now that you've set the cluster key, any pvc created using a secure storage class will be encrypted with the key. Below is an example of a pvc spec referencing the encrypted storage class created earlier:
 
-```
+```none
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
@@ -67,7 +78,7 @@ spec:
 
 Alternatively you can set a pvc to use the cluster key when using a non-secure storage class by adding the following annotation to the pvc spec:
 
-```
+```none
 metadata:
   annotations:
     px/secure: "true"
@@ -77,7 +88,7 @@ metadata:
 
 As an alternative to using a cluster-wide key, you can use a secret per persistent volume claim (pvc). You should store the desired key within a secret in the Portworx project and reference it in the pvc spec using the following annotations:
 
-```
+```none
 metadata:
   annotations:
     px/secret-name: volume-secrets-name
@@ -89,7 +100,7 @@ metadata:
 
 Below is an example spec for a pvc that is encrypted using an individual secret:
 
-```
+```none
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
