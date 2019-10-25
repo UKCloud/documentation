@@ -6,12 +6,12 @@ author: Ben Bacon
 reviewer:
 lastreviewed: 09/10/2019
 toc_rootlink: How To
-toc_sub1: 
+toc_sub1: Use Portworx with OpenShift
 toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Use Portworx encrypted volumes
-toc_fullpath: How To/oshift-how-use-portworx-encrypted-volumes.md
+toc_fullpath: How To/Use Portworx with OpenShift/oshift-how-use-portworx-encrypted-volumes.md
 toc_mdlink: oshift-how-use-portworx-encrypted-volumes.md
 ---
 
