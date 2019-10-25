@@ -134,8 +134,6 @@ You can increase or decrease the replication factor for a Portworx volume after 
 
 <https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/dynamic-provisioning/#using-dynamic-provisioning>
 
-<https://github.com/libopenstorage/stork/blob/master/README.md>
-
 ## Feedback
 
 If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
