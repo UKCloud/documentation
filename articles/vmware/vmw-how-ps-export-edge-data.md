@@ -3,8 +3,8 @@ title: How to export edge gateway configuration data using PowerShell | UKCloud 
 description: This article describes how to use PowerCLI to extract Edge Gateway configuration data
 services: vmware
 author: Steve Hall
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: Dylan Coombes
+lastreviewed: 14/10/2019 14:30:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -25,13 +25,13 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
 
 1. Install PowerCLI from VMware:
 
-    <https://vmware.com/support/developer/PowerCLI>
+    <https://code.vmware.com/web/tool/11.4.0/vmware-powercli>
 
 2. Open your PowerCLI session and connect to vCloud.
 
-    You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API.
+    You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API. For more information, see [*Finding your vCloud API credentials*(vmw-how-access-vcloud-api.md#finding-your-vcloud-api-credentials).
 
-3. Copy the following function and paste it into your PowerCLI shell:
+3. Copy the following function and paste it into a .psm1 file:
 
     ```
     Function Get-EdgeConfig ($EdgeGateway)
@@ -65,33 +65,35 @@ If you want to export your edge gateway configuration data (firewall rules, NAT 
         Return $Holder
 
     }
+
+4. Enter the below command to import the function.
+
+        Import-Module [PATH TO PSM1 FILE]
     
-4. Find your Edge Gateways by entering the following command:
+5. Find your edge gateways by entering the following command:
 
         $Gateways = Search-Cloud -QueryType EdgeGateway
 
-5. Inspect the `$Gateways` variable and identify the edge for which you want to export configuration data.
+6. Inspect the `$Gateways` variable and identify the edge for which you want to export configuration data.
 
-6. Retrieve the configuration data for your chosen edge.
+7. Retrieve the configuration data for your chosen edge.
 
     For example, to retrieve configuration data for the first edge in the `$Gateways` variable, enter the following command:
 
         $Config = Get-EdgeConfig -EdgeGateway $Gateways[0]
 
-7. Inspect the `$Config` variable. It will have the following properties:
+8. Inspect the `$Config` variable. It will have the following properties:
 
         $Config.Firewall = All the firewall rules
         $Config.NAT = All the NAT rules
         $Config.LoadBalancer = All load balancer rules
         $Config.DHCP = All DHCP pools
 
-8. You can export this data to a CSV file, by entering a command such as:
+9. You can export this data to a CSV file, by entering a command such as:
 
         $Config.Firewall | Export-csv -path c:\users\myaccount\desktop\firewallrules.csv
 
         $Config.Nat | Export-csv -path c:\users\myaccount\desktop\natrules.csv -notypeinformation
-
-    ```
 
 ## Feedback
 

@@ -102,7 +102,7 @@
     href: vmw-how-install-rhui-vm.md
   - name: Interact with the vCloud REST API using PowerShell and Python
     href: vmw-how-interact-vcd-api-powershell.md
-  - name: Licence Microsoft applications/software on the UKCloud platform
+  - name: License Microsoft applications/software on the UKCloud platform
     href: vmw-how-license-microsoft.md
   - name: License Windows VMs using the UKCloud Key Management Server
     href: vmw-how-setup-kms.md
@@ -186,8 +186,6 @@
     href: vmw-ref-twreuse.md
   - name: Tier 1 storage
     href: vmw-ref-tier1-storage.md
-  - name: Two Factor Authentication
-    href: vmw-ref-two-factor-auth.md
   - name: UKCloud for VMware options
     href: vmw-ref-service-options.md
   - name: Understanding connectivity options in UKCloud for VMware

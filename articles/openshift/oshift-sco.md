@@ -111,6 +111,9 @@ Containers in OpenShift by default don’t persist data. Every time an applicati
 **Number of file copies** | 3                        | 3
 **Use cases**             | Web caching<br>Containerised analytics<br>Highly performant, real-time web/mobile applications | Standard, containerised web/mobile applications<br>Storing OpenShift logs and metrics
 
+> [!NOTE]
+> In line with current restrictions on the OpenStack service underpinning OpenShift, you can make/attach 25 additional persistent volume claims (PVCs) to each worker node.
+
 ## Optional extras
 
 To complement your UKCloud for OpenShift service, UKCloud offers the following value-added options:

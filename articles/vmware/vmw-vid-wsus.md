@@ -30,7 +30,7 @@ In this short tutorial video, our Cloud Support Engineer steps you through the p
 
 ## Related articles
 
-- [*How to connect to the UKCloud Windows Server Update Services (WSUS)*](vmw-how-connect-windows-update.html)
+- [*How to connect to the UKCloud Windows Server Update Services (WSUS)*](vmw-how-connect-windows-update.md)
 
 ## Feedback
 

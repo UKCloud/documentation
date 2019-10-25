@@ -15,7 +15,7 @@ toc_fullpath: CyberScore/third-sd-cyberscore.md
 toc_mdlink: third-sd-cyberscore.md
 ---
 
-# XQ Cyber CyberScore from UKCloud Service Definition
+# CyberScore from UKCloud Service Definition
 
 ## Why UKCloud?
 
