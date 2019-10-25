@@ -19,7 +19,7 @@ toc_mdlink: oshift-how-configure-portworx-volume-replication.md
 
 ## Overview
 
-Portworx is a cloud-native storage solution that is now available as an integration with our OpenShift offering. This article describes how to configure replication for Portworx volumes and provides an overview of Portworx failover capabilities. 
+Portworx is a cloud-native storage solution that is now available as an integration with our OpenShift offering. This article describes how to configure replication for Portworx volumes. 
 
 ### Intended audience
 
@@ -129,22 +129,6 @@ You can increase or decrease the replication factor for a Portworx volume after 
     $ oc exec $PX_POD -n kube-system -- /opt/pwx/bin/pxctl volume ha-update --repl=2 --node 6dcb56bc-9402-41ea-b819-56f2c9e1c742 $VOLUME
     Update Volume Replication: Replication update started successfully for volume pvc-e15d82b2-ed46-11e9-8422-fa163e52fd0e
     ```
-
-## Failover
-
-During a failover event (when using non-Portworx provisioned persistent volumes) the backing block storage device requires reattaching to the node where a pod is rescheduled. This can lead to increased recovery times, which Portworx aims to reduce through replication and a storage-aware scheduler that can schedule pods to nodes where a replica exists.
-
-### The STORK scheduler
-
-STORK (STorage Operator Runtime for Kubernetes) is an open source storage scheduler plugin that extends the default scheduler by exposing information regarding the capabilities and state of the underlying storage provider. Using a storage-aware scheduler improves scheduling decisions, resulting in improved performance and reduced recovery times for persistent volumes.
-
-To use the STORK scheduler, add the following entry to the pod spec:
-
-```none
-schedulerName: stork
-```
-
-The STORK scheduler should be used for any running pods that have a Portworx volume mounted to ensure most efficient recovery.
 
 ## Further reading
 
