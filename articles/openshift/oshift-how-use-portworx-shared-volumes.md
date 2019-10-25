@@ -30,7 +30,7 @@ If you're interested in a free 30 day trial of Portworx, raise a Service Request
 
 ## Shared volumes
 
-Portworx enables persistent volumes claims to be mounted to multiple containers across multiple nodes enabling ease of pod-scaling.
+Portworx enables persistent volumes to be mounted to multiple containers across multiple nodes.
 
 ## Storage classes
 
