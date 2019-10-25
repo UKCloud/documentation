@@ -201,7 +201,7 @@ You can verify that a shared persistent volume is working as expected by creatin
                 done
     ```
 
-2. You can now create the deployments with te command: `oc create -f sharedvolumedemo.yaml`, which should output the following:
+2. You can now create the deployments with the command: `oc create -f sharedvolumedemo.yaml`, which should output the following:
 
     ```none
     deployment.extensions/portworx-sharedvolumedemo-a created
