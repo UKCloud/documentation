@@ -85,9 +85,26 @@ NAME             STATUS    VOLUME                                     CAPACITY  
 pvc-shared   Bound     pvc-3654b857-efa1-11e9-8422-fa163e52fd0e   10Gi       RWX            portworx-repl1-shared   1m
 ```
 
+You can also verify that the persistent volume backing the pvc has been created:
+
+```none
+$ oc get pv $(oc get pvc pvc-shared -o custom-columns=VOLUME:.spec.volumeName --no-headers)
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS    CLAIM                     STORAGECLASS            REASON    AGE
+pvc-3654b857-efa1-11e9-8422-fa163e52fd0e   10Gi       RWX            Delete           Bound     portworxdemo/pvc-shared   portworx-repl1-shared             2m
+```
+
 ## Verifying a shared volume
 
 You can verify that a shared persistent volume is working as expected by creating two deployments that schedule to different nodes and mount the same volume. The following example assumes that you've created a shared volume named `pvc-shared`.
+
+> [!TIP]
+> The below file contains two separate [Deployments](https://docs.openshift.com/container-platform/3.11/dev_guide/deployments/how_deployments_work.html#creating-a-deployment-configuration), as can be identified by the YAML document separator `---`. Each spec is near-identical, with the only difference being the command that the pod continually loops. 
+> 
+> [```nodeAffinity```](https://docs.openshift.com/container-platform/3.11/admin_guide/scheduling/node_affinity.html#admin-guide-configuring-affinity) is an affinity type used to determine which node a pod should be scheduled to, in this instance we only want the pod to be scheduled to compute nodes so the ```requiredDuringSchedulingIgnoredDuringExecution``` rule is used to check that a node contains the ```node-role.kubernetes.io/compute``` label, which is a label only applied to nodes with the compute role.
+> 
+> [```podAntiAffinity```](https://docs.openshift.com/container-platform/3.11/admin_guide/scheduling/pod_affinity.html#admin-guide-sched-affinity-pod-config) is used to keep pods separate from one another. For each deployment the created pod is labelled with: ```app: portworx-sharedvolumedemo```. The ```preferredDuringSchedulingIgnoredDuringExecution``` rule then checks when scheduling a new pod whether an existing pod has already been scheduled to the same node with the previous stated label. If it does, an alternate node will be selected if there is sufficient available resources.
+> 
+> You can view OpenShift object definitions using the [```oc explain```](https://blog.openshift.com/oc-command-newbies) command. More specifically to identify fields under the Deployment spec key, you would use: ```oc explain deployment.spec```. 
 
 1. On your machine, create a file named `sharedvolumedemo.yaml` with the following contents:
 
