@@ -85,7 +85,7 @@ The UKCloud Cloud Storage platform may be an appropriate target for self‑manag
 
 The service is not backed by service credits.
 
-### Maintenance Window
+### Planned Maintenance
 
 On occasion, planned maintenance will take precedence over VM snapshots. If there's a potential disruption, we'll highlight this to you via the service [status page](http://status.ukcloud.com/) and UKCloud Portal notifications system.
 
