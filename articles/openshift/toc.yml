@@ -42,6 +42,8 @@
     href: oshift-how-view-router-logs.md
 - name: Reference
   items:
+  - name: Community network proxy configuration
+    href: oshift-ref-no-proxy.md
   - name: Considerations when scaling an OpenShift cluster
     href: oshift-ref-scaling.md
   - name: DNS zone forwarding in OpenShift clusters
