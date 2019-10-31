@@ -35,11 +35,18 @@ This article provides examples using [`curl`](https://curl.haxx.se/) and [`jq`](
 Before you begin, you'll need to retrieve a single sign-on token to authenticate with IDAM. For ease of use, this is saved to a variable `token` in your current shell session using the below command.
 
 ```sh
+echo "enter your Portal email address"
+read username
+echo "enter your Portal password"
+read -s password
+
 token=$(curl -X POST "https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token" \
-     -d username="<username>" \
-     -d password="<password>"  \
-     -d grant_type=password    \
+     -d "username=$username" \
+     -d "password=$password" \
+     -d grant_type=password \
      -d client_id=portal.ukcloud | jq -r '.access_token')
+
+unset password
 ```
 
 This token is used in bearer authentication with IDAM. Requests to the IDAM API are prefaced with `curl -H "Authorization: Bearer $token"`.
