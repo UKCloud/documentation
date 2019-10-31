@@ -3,8 +3,8 @@ title: Snapshot Protection Service Scope | UKCloud Ltd
 description: Outlines important details regarding the Snapshot Protection service
 services: vmware
 author: Steve Hall
-reviewer:
-lastreviewed: 24/07/2018 13:50:39
+reviewer: George Smith
+lastreviewed: 28/10/2019 13:50:39
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -45,11 +45,11 @@ No protection products are automatically applied to VMs running on the UKCloud p
 
 Snapshots are scheduled to occur once in a 24-hour period.
 
-Snapshots take place 365 days of the year and are started inside the UKCloud‑defined window: 2000-0800. Snapshots are not started before 2000 or after 0800.
+Snapshots take place 365 days of the year and are started inside the UKCloud‑defined window: 20:00-08:00. Snapshots are not started before 20:00 or after 08:00.
 
 We cannot guarantee the time at which your VM will have a snapshot taken inside this window; the time may also vary from day to day. The time of a snapshot is reported via the UKCloud Portal the next day.
 
-There's a system hard stop at 0900, at which time any active snapshots are cancelled.
+There's a system hard stop at 09:00, at which time any active snapshots are cancelled.
 
 ### Success rate
 
@@ -63,7 +63,7 @@ VM snapshots may be attempted more than once to obtain successful status.
 
 Only the final state will count in our calculations.
 
-Any snapshots still in progress at 0900 are considered as failed.
+Any snapshots still in progress at 09:00 are considered as failed.
 
 Partial snapshots and those with errors count as failed.
 
@@ -83,9 +83,9 @@ If none of these services meet your requirements, you can also implement and man
 
 The UKCloud Cloud Storage platform may be an appropriate target for self‑managed solutions using software such as CommVault and NetWorker.
 
-### Other
-
 The service is not backed by service credits.
+
+### Planned maintenance
 
 On occasion, planned maintenance will take precedence over VM snapshots. If there's a potential disruption, we'll highlight this to you via the service [status page](http://status.ukcloud.com/) and UKCloud Portal notifications system.
 
@@ -103,7 +103,7 @@ You can make changes to your Snapshot Protection via the UKCloud Portal. You can
 
 ## Alerting and reporting
 
-Information about your backups is reported on the UKCloud Portal. Reports are updated daily and are available by 1000, but typically within minutes of the close of the backup window.
+Information about your backups is reported on the UKCloud Portal. Reports are updated daily and are available by 10:00, but typically within minutes of the close of the backup window.
 
 Reports are available covering every day of the retention period (14 or 28 days as appropriate).
 
