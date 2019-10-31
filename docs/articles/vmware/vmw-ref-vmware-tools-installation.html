@@ -95,11 +95,18 @@
 
 <p>VMware provide tools which should be installed into any virtual machines running on UKCloud. The tools provide additional features such as automated customisation as well as improved performance by implementing optimised drivers such as storage, network and display. Further information can be found <a href="http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=340">here</a>.</p>
 <h2 id="windows">Windows</h2>
-<p>The VMware tools from windows can be installed directly from within the vCloud director interface.</p>
-<p>Step 1 - Browse to the virtual machine within the vApp</p>
-<p>Step 2 - Right click the virtual machine and click install tools</p>
-<p>Step 3 - Login to the operating system and follow the wizard to install the tools</p>
-<p>Step 4 - Reboot</p>
+<ol>
+<li><p>Browse to the virtual machine within the vApp.</p>
+</li>
+<li><p>Identify the VM that requires VMware tools to be installed.</p>
+</li>
+<li><p>Click the <strong>Actions</strong> drop down and select <strong>Install VMware tools</strong>.</p>
+</li>
+<li><p>Login to the operating system and follow the wizard to install the tools.</p>
+</li>
+<li><p>Reboot.</p>
+</li>
+</ol>
 <h2 id="linux">Linux</h2>
 <p>There are two methods of installing the VMware tools for Linux, from within vCloud Director using the method above or installing the open-vm-tools, which are now supported by VMware. Not all distributions provide support for the open-vm-tools however the following well known distributions do:</p>
 <p>Centos 5/6/7</p>
@@ -108,26 +115,25 @@
 <p>Installing the VMware tools via vCloud Director requires modules to be built against the running kernel. If the kernel is updated the administrator needs to run the VMWare tools setup again to recompile the modules. UKCloud recommends using the open-vm-tools because this maintenance is handled by the package manager when the kernel is updated.</p>
 <h2 id="redhatcentos-567">Redhat/Centos 5/6/7</h2>
 <p>The open-vm-tools is available via the epel repository.</p>
-<p>Step 1 - Add epel repository</p>
-<pre><code>sudo yum install epel-release
-</code></pre>
+<ol>
+<li><p>Add epel repository.</p>
+<p><code>sudo yum install epel-release</code></p>
 <p>If the command above fails then you can run the following commands dependent on the version you are running:</p>
 <p><strong>Redhat/Centos 5</strong></p>
-<pre><code>wget http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm sudo rpm -Uvh epel-release-5*.rpm
-</code></pre>
+<p><code>wget http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm sudo rpm -Uvh epel-release-5*.rpm</code></p>
 <p><strong>Redhat/Centos 6</strong></p>
-<pre><code>wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm sudo rpm -Uvh epel-release-6*.rpm
-</code></pre>
+<p><code>wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm sudo rpm -Uvh epel-release-6*.rpm</code></p>
 <p><strong>Redhat/Centos 7</strong></p>
-<pre><code>wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm sudo rpm -Uvh epel-release-7*.rpm
-</code></pre>
-<p>Step 2 - Install open-vm-tools</p>
-<p>No reboot is required</p>
+<p><code>wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm sudo rpm -Uvh epel-release-7*.rpm</code></p>
+</li>
+<li><p>Install open-vm-tools</p>
+</li>
+</ol>
+<p>No reboot required.</p>
 <h2 id="ubuntu">Ubuntu</h2>
-<p>Step 1 - Install open-vm-tools</p>
-<pre><code>sudo apt-get install open-vm-tools
-</code></pre>
-<p>No reboot required</p>
+<p>Install open-vm-tools</p>
+<p><code>sudo apt-get install open-vm-tools</code></p>
+<p>No reboot required.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
