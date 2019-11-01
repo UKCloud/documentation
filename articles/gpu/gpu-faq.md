@@ -63,6 +63,14 @@ Yes. VMs utilising the NVIDIA GRID solution must use the GRID driver matching th
 
 Currently, Cloud GPU only supports environments provisioned on UKCloud for VMware in regions 5 and 6. There are future plans to enable the service on UKCloud for OpenStack and High Performance Compute.
 
+### How do I set up Cloud GPU for UKCloud for VMware?
+
+For information about how to set up Cloud GPU for UKCloud for VMware, see:
+
+- [*How to set up Cloud GPU Compute for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-compute.md)
+
+- [*How to set up Cloud GPU Visualisation for UKCloud for VMware*](/../vmware/vmw-how-setup-gpu-visualisation.md)
+
 ### How is it billed?
 
 Cloud GPU is billed per card per hour for GPGPU, and per vGPU per hour for visualisation. This is in addition to the UKCloud for VMware VM charge. You have the option to power off Cloud GPU when not required to avoid unnecessary costs. All usage is billed and invoiced at the end of each month.
