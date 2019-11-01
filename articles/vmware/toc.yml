@@ -92,6 +92,8 @@
     href: vmw-how-ps-export-edge-data.md
   - name: Find your allocated external IP addresses
     href: vmw-how-find-ip-addresses.md
+  - name: Increase block storage for a VM
+    href: vmw-how-increase-storage.md
   - name: Install a REST client to access the vCloud API
     href: vmw-how-install-vcloud-api-rest-client.md
   - name: Install and configure OpenVPN
@@ -124,6 +126,10 @@
     href: vmw-how-retrieve-utilisation-metrics.md
   - name: Securely manage permissions for a specific vApp
     href: vmw-how-manage-vapp-permissions.md
+  - name: Set up Cloud GPU Compute for VMware
+    href: vmw-how-setup-gpu-compute.md
+  - name: Set up Cloud GPU Visualisation for VMware
+    href: vmw-how-setup-gpu-visualisation.md
   - name: Switch to the Legacy UI
     href: vmw-how-switch-web-console.md
   - name: Upgrade your edge gateway
