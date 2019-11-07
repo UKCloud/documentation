@@ -160,7 +160,8 @@ try {
     Get-AzureRmRoleAssignment -ObjectId $SPN.Id.Guid
 }
 catch {
-    Write-Error -Message $_ -ErrorAction "Stop"
+    Write-Error -Message "$($_.Exception.Message)"
+    break
 }
 
 # Grant permission to Azure Active Directory to SPN
@@ -322,7 +323,8 @@ try {
     Get-AzureRmRoleAssignment -ObjectId $SPN.Id.Guid
 }
 catch {
-    Write-Error -Message $_ -ErrorAction "Stop"
+    Write-Error -Message "$($_.Exception.Message)"
+    break
 }
 
 # Create your SPN credentials login
