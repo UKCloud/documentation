@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-use-azure-api.html",
-          "hash": "heD6iHEaH4OpDmW/wxNZ/w=="
+          "hash": "O4NxEOGjsQI677AivPTsig=="
         }
       },
       "is_incremental": false,
@@ -4741,7 +4741,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/gpu-sco.html",
-          "hash": "YOSBkVfc6zzjcxEl9Hi0bA=="
+          "hash": "VYHeTv+RezV4u/01hPuzyA=="
         }
       },
       "is_incremental": false,
@@ -9212,7 +9212,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-how-use-webhooks.html",
-          "hash": "EiI7mk8ERoVKrmW5AL7isg=="
+          "hash": "64apZfs7LD/WXMuZPrclzw=="
         }
       },
       "is_incremental": false,
@@ -9369,6 +9369,18 @@
         ".html": {
           "relative_path": "articles/other/other-ref-hadoop-proposition.html",
           "hash": "taDMgqJGK726iVzRVX4dCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-high-availability.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-high-availability.html",
+          "hash": "P2JZjaT9joGZcSlcYV1qfw=="
         }
       },
       "is_incremental": false,
@@ -9656,7 +9668,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "B/SJEGNbmGnUpFCNmPzuvA=="
+          "hash": "D5tHcrcvouoOSZ1i/fOXuA=="
         }
       },
       "is_incremental": false,
@@ -19091,7 +19103,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcd-97.html",
-          "hash": "hrQLxebSDOrkDFN1zngshA=="
+          "hash": "5O/ADKJ6xZhZoo0PbYuPcA=="
         }
       },
       "is_incremental": false,
@@ -19187,7 +19199,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-byof.html",
-          "hash": "NpzQ8qRLXNS1iqqYN/xFLQ=="
+          "hash": "P0TNGQO0+d90L3cgdSknIw=="
         }
       },
       "is_incremental": false,
@@ -19247,7 +19259,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco.html",
-          "hash": "xTXIyYWvTeaJaWntcdIPLA=="
+          "hash": "FvgHhhUNK0yv+JAIeXV68Q=="
         }
       },
       "is_incremental": false,
@@ -19402,17 +19414,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 413,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 414,
           "skipped_file_count": 0
         }
       }

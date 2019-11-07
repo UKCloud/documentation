@@ -46,6 +46,8 @@
     href: other-ref-dc-notice.md
   - name: External security review testing
     href: other-ref-external-security-review-testing.md
+  - name: High availability on the UKCloud platform
+    href: other-ref-high-availability.md
   - name: Identity & Access Management API
     href: other-ref-idam.md
   - name: Knowledge Centre article template
