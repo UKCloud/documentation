@@ -151,7 +151,6 @@ try {
 
     # Create a Service Principal Name (SPN) for the application created earlier
     $SPN = New-AzureRmADServicePrincipal -ApplicationId $AppGet.AppId
-    $SPN
 
     Write-Output -InputObject "Waiting for the SPN to be created..."
     Start-Sleep -Seconds 35
@@ -246,8 +245,7 @@ $SPN = [PSCustomObject]@{
     TenantId       = $SubId.TenantId
 }
 
-Write-Output -InputObject "SPN credentials are:"
-$SPN
+Write-Output -InputObject "SPN credentials are: $SPN"
 </code></pre>
 
 ## [Azure Stack SPN](#tab/tabid-2)
@@ -315,7 +313,6 @@ try {
 
     # Create a Service Principal Name (SPN) for the application created earlier
     $SPN = New-AzureRmADServicePrincipal -ApplicationId $AppGet.AppId
-    $SPN
 
     Write-Output -InputObject "Waiting for the SPN to be created..."
     Start-Sleep -Seconds 35
@@ -353,7 +350,7 @@ $SPN = [PSCustomObject]@{
     TenantId       = $SubId.TenantId
 }
 
-$SPN
+Write-Output -InputObject "SPN credentials are: $SPN"
 </code></pre>
 
 ***
