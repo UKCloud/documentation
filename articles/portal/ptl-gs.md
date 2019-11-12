@@ -237,12 +237,11 @@ Within the UKCloud VMware environment there are two types of account:
 
 ### compute service
 
-An Enterprise Compute Cloud top-level container within a customer
-account that includes a vCloud Director organization and its VDCs, catalogues, users and resources.
+A UKCloud for VMware top-level container within a customer account that includes a vCloud Director organization and its VDCs, catalogs, users and resources.
 
 ### Customer Success Manager (CSM)
 
-A UKCloud Customer Services role aimed at  providing you with any assistance you require during onboarding and the first 90 days of using
+A UKCloud Customer Services role aimed at providing you with any assistance you require during onboarding and the first 90 days of using
 a UKCloud service.
 
 ### Knowledge Centre
