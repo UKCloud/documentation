@@ -86,7 +86,7 @@ Product | Supported Version
 --------|------------------
 **Management Plane** | &nbsp;
 VMWare vCenter | vCenter Server 5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1
-Microsoft SCVMM | 2012 R2 and Server Core: Update Rollup 1-5, 6-11, 12-14<br>2012 R2 and Server Core: RTM & RTM Rollup 3-5, 6
+Microsoft SCVMM | 2012 R2 and Server Core: Update Rollup 1-5, 6-11, 12-14<br>2012 R2 and Server Core: RTM<br>2016 and Server Core: RTM Rollup 3-5, 6
 **Hosts** | &nbsp;
 VMWare ESXi | 5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1
 Microsoft Hyper-V | 2012 R2 and Server Core<br>Windows 2016 Server
