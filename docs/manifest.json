@@ -2360,7 +2360,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-sco.html",
-          "hash": "T7hM2YJBU412hrC2Jp7D2Q=="
+          "hash": "ykoXIIGxsHwITqKbvc1Log=="
         }
       },
       "is_incremental": false,
@@ -5109,6 +5109,50 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-kibana-dash-311.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-kibana-dash-311.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-kibana-dash-39.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-kibana-dash-39.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-kibana-hosts.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-kibana-hosts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-kibana-returncodes.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-kibana-returncodes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openshift/images/oshift-kibana.png",
       "output": {
         "resource": {
@@ -5491,6 +5535,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-ref-kibana-dashboards.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-ref-kibana-dashboards.html",
+          "hash": "+pwaNrlNF4ulrNqtHnQwLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-ref-lifecycle.md",
       "output": {
         ".html": {
@@ -5574,12 +5630,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "articles/openshift/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "mrkWNbDRSVyeqVcnDj/lOw=="
+          "hash": "HqB1aJh6dIWz0zSJ6C9OoQ=="
         }
       },
       "is_incremental": false,
@@ -7504,7 +7563,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-move-resources.html",
-          "hash": "OjZhc7QYRabLd4q33QtuuA=="
+          "hash": "VxmCy5nMBArYZliyQPlEMw=="
         }
       },
       "is_incremental": false,
@@ -8249,7 +8308,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco.html",
-          "hash": "Y10KuuPeTOAzNDGYn4Nf9g=="
+          "hash": "+/4EQCypqzYO+sIbYFigXQ=="
         }
       },
       "is_incremental": false,
@@ -19407,13 +19466,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -19421,10 +19473,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 414,
+          "total_file_count": 415,
           "skipped_file_count": 0
         }
       }
