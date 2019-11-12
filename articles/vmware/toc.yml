@@ -176,7 +176,7 @@
     href: vmw-ref-nested-hypervisors.md
   - name: Network Time Protocol server access
     href: vmw-ref-network-time-server.md
-  - name: Oversized VMs on the UKCloud platform
+  - name: Oversized VMs on UKCloud for VMware
     href: vmw-ref-oversized-vms.md
   - name: PowerCLI command for interacting with the vCloud API
     href: vmw-ref-powercli-vcloud.md
