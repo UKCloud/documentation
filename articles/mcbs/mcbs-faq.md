@@ -72,7 +72,7 @@ As of BoostFS 1.3:
 
 ### How many copies of the data are made, and where are they stored?
 
-Three copies of the data will be stored in the opposite site as to the original data. For example, if the data is stored in the Farnborough site, then the copies will be sotred in the Corsham site. This increases the resiliency of the data as the sites are  100km apart.
+Three copies of the data can be stored in the opposite site as to the original data. For example, if the data is stored in the Farnborough site, then the copies will be stored in the Corsham site. This increases the resiliency of the data as the sites are  100km apart.
 
 ## Feedback
 
