@@ -99,7 +99,7 @@ As with instances, volumes have been engineered to be fully independent across r
 
 Once instances have been migrated (see above) and are running, data can be copied directly between the instances.
 
-To achieve this across different regions, the use of a VPN may be required. Details on how to deploy a VPN within the OpenStack platform can be found in [*Blueprint: Configuring IPsec VPN in UKCloud for OpenStack*](https://ukcloud.com/wp-content/uploads/2017/01/UKC-GEN-476-Configuring-IPsec-VPN-in-Cloud-Native-Infrastructure-Blueprint.pdf).
+To achieve this across different regions, the use of a VPN may be required. Details on how to deploy a VPN within the OpenStack platform can be found in [*Blueprint: Configuring IPsec VPN in UKCloud for OpenStack*](https://ukcloud.com/wp-content/uploads/2018/08/ukc-gen-476-configuring-ipsec-vpn-in-cloud-native-infrastructure-blueprint.pdf).
 
 ### Option 2 - Export and import of existing volumes
 
