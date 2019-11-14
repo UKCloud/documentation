@@ -12,8 +12,8 @@ toc_sub2:
 toc_sub3:
 toc_sub4:
 toc_title: Custom dashboards provided with aggregated logging Kibana
-toc_fullpath: Reference/oshift-ref-kibana-dashboard.md
-toc_mdlink: oshift-ref-kibana-dashboard.md
+toc_fullpath: Reference/oshift-ref-kibana-dashboards.md
+toc_mdlink: oshift-ref-kibana-dashboards.md
 ---
 
 # Custom dashboards provided with aggregated logging Kibana
