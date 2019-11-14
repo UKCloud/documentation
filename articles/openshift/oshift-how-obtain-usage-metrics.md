@@ -261,74 +261,15 @@ Object storage is used only for the OpenShift registry, therefore, you can calcu
 
 You can find a simple example of a custom monitoring application, using the REST API described above, in [*How to monitor your OpenShift cluster*](oshift-how-monitor-cluster.md) and as a [UKCloud blog post](https://ukcloud.com/hub/news/simple-openshift-monitoring/).
 
-You can also perform monitoring using Hawkular, which is built into the product. You can access Hawkular from the browser-based console at:
+You can also perform monitoring using Hawkular, which is built into the product. You can access Hawkular graphs and monitoring data from the browser-based console at:
 
 `https://ocp.<your-deployment-name>.cna.ukcloud.com:8443`
-
-Or directly at:
-
-`https://hawkular-metrics.<your-deployment-name>.cna.ukcloud.com/hawkular/metrics`
 
 ## Next steps
 
 Further cluster capacity management options are discussed at:
 
 <https://blog.openshift.com/full-cluster-capacity-management-monitoring-openshift>
-
-## Appendix - Example code for adding up storage contents
-
-You can use the following code to add up the values from `oc adm top`.
-
-``` python
-#!/usr/bin/env python3
-
-"""
-Add up storage values.
-
-oc adm top imagestreams gives us storage usage for each storage use for each imagestream, and oc adm top images gives us the same for images
-
-Storage is suffixed with 'MiB' or 'GiB', so each value needs converting to a number before we can add them up.
-
-Output from oc adm top is tabulated, so input-processing is needed.
-"""
-
-import re
-import subprocess
-import sys
-
-VERBOSE = False
-
-def add_sizes(command_output, size_column):
-    sum_sizes = 0
-    for row in command_output.split("\n"):
-        if row == '' or re.match('NAME\t+', row):
-            continue
-        values = re.split('\t+', row)
-        storage = values[size_column]
-
-        if 'MiB' in storage:
-            multiplier = 1
-        elif 'GiB' in storage:
-            multiplier = 1024
-        else:
-            print("ERROR: Found unexpected storage size {}".format(storage))
-            sys.exit(1)
-
-        mtch = re.match('([\d.]+)[MG]iB$', storage)
-        if mtch:
-            size = float(mtch.group(1)) * multiplier
-            sum_sizes += size
-            if VERBOSE:
-                print("{}\t{} ".format(storage, size))
-            else:
-                print("Did not match -- {}".format(storage))
-    return sum_sizes
-
-output = subprocess.run(['oc', 'adm', 'top', 'imagestreams'],
-                        stdout=subprocess.PIPE,
-                        stderr=subprocess.PIPE) 
-imagestream_size = add_sizes(output.stdout.decode('utf-8'), 1)
-```
 
 ## Feedback
 
