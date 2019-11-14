@@ -4,7 +4,7 @@ description: Shows you how to obtain various statistics about your UKCloud for O
 services: openshift
 author: Sue Highmoor
 reviewer:
-lastreviewed: 20/07/2018 10:26:58
+lastreviewed: 14/11/2019 18:21:38
 
 toc_rootlink: How To
 toc_sub1:
@@ -87,6 +87,9 @@ The OpenStack CLI provides the ability to list the nodes in your cluster and the
        worker-infra-1.5623-f84e8e      566m         31%       7946Mi          52%
        worker-tenant-s-0.5623-f84e8e   405m         22%       12229Mi         80%
        worker-tenant-s-1.5623-f84e8e   258m         14%       2451Mi          16%	   
+
+    > [!NOTE]
+    > For the `oc adm top` command to work, Hawkular metrics must be running in your cluster. This command can also report on images and pods.
 
 5. To find the detailed status of a node, enter the following command:
 
@@ -196,7 +199,17 @@ For capacity management, it's also useful to know much block storage your cluste
 
 2. The results will look similar to the following, where we can see there is one item consuming 50 GB of storage.
 
-    ![Results of oc get pv command](images/oshift-get-pv.png)
+       $ oc get pv
+       NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS    CLAIM                                                           STORAGECLASS   REASON    AGE
+       pvc-08237e69-cff9-11e9-a9ef-fa163e5c5959   5Gi        RWO            Delete           Bound     postgres/postgresql                                             tier2                    69d
+       pvc-4da7258e-12a6-11e9-ad9d-fa163e12bba5   22Gi       RWO            Delete           Bound     openshift-logging/logging-es-0                                  tier2                    310d
+       pvc-58268285-12a5-11e9-ad4e-fa163e5c5959   50Gi       RWO            Delete           Bound     openshift-monitoring/prometheus-k8s-db-prometheus-k8s-0         tier2                    310d
+       pvc-88a3dfdc-12a5-11e9-ad4e-fa163e5c5959   50Gi       RWO            Delete           Bound     openshift-monitoring/prometheus-k8s-db-prometheus-k8s-1         tier2                    310d
+       pvc-ac9597cc-12a5-11e9-ad4e-fa163e5c5959   2Gi        RWO            Delete           Bound     openshift-monitoring/alertmanager-main-db-alertmanager-main-0   tier2                    310d
+       pvc-bf06155b-12a5-11e9-ad4e-fa163e5c5959   2Gi        RWO            Delete           Bound     openshift-monitoring/alertmanager-main-db-alertmanager-main-1   tier2                    310d
+       pvc-bf2656a8-12a5-11e9-ad9d-fa163e12bba5   10Gi       RWO            Delete           Bound     openshift-infra/metrics-cassandra-1                             tier2                    310d
+       pvc-e61b15ac-12a5-11e9-ad4e-fa163e5c5959   2Gi        RWO            Delete           Bound     openshift-monitoring/alertmanager-main-db-alertmanager-main-2   tier2                    310d
+
 
 ## Identifying object storage consumption
 
@@ -209,10 +222,38 @@ Object storage is used only for the OpenShift registry, therefore, you can calcu
 
 2. The output from these commands will look something like the following:
 
-    ![Results of oc adm top commands](images/oshift-adm-top.png)
+       $ oc adm top images
+       NAME                                                                    IMAGESTREAMTAG                                                                                                                                                      P
+       ARENTS                                                                                                                            USAGE                                                                     METADATA STORAGE
+       sha256:d2e75dac02681ed5aded89115b736ba5e83011294686cd6d04780aebffc0ff5d openshift/fuse7-eap-openshift (1.0), openshift/jboss-fuse70-eap-openshift (1.0)                                                                                     <
+       none>                                                                                                                             <none>                                                                    no       869.2MiB
+       sha256:ba287c1998c4785d968b30862d0718b664ae755ad6d7eec316db91e4f835b29c backup-test/ruby-25-centos7 (latest), new-backup-test/ruby-25-centos7 (latest)                                                                                      <
+       none>                                                                                                                             <none>                                                                    no       193.8MiB
+       sha256:57fa0cb158aa31193908df27fc707afcfdd4bdaf93b3286f5602d5f804e1927f openshift/fuse7-java-openshift (1.0), openshift/jboss-fuse70-java-openshift (1.0)                                                                                   <
+       none>                                                                                                                             <none>                                                                    no       156.6MiB
+       sha256:be51ee43b1596078a17756f38a0017e9338c902f9094f1ad677844d165a02d43 openshift/fuse7-karaf-openshift (1.0), openshift/jboss-fuse70-karaf-openshift (1.0)                                                                                 <
+       none>                                                                                                                             <none>                                                                    no       156.6MiB
+       sha256:58fe06c9b5cf48bbaea47d18511958f51b6b50b764e6d879b65b4715477d0385 openshift/fuse7-console (1.0), openshift/jboss-fuse70-console (1.0)                                                                                                 <
+       none>                                                                                                                             <none>                                                                    no       91.88MiB
+       sha256:1f8e264d6fe3a1868e29ba2ad85612ccfc380707dd9f2026f2e5058224dced2c openshift/jboss-decisionserver62-openshift (1.2)	  
+       ...
+       
+       $ oc adm top imagestreams
+       NAME                                                   STORAGE  IMAGES LAYERS
+       openshift/jboss-eap64-openshift                        5.061GiB 9      48
+       openshift/fuse7-eap-openshift                          3.845GiB 5      29
+       openshift/jboss-processserver64-openshift              3.167GiB 7      41
+       openshift/jboss-decisionserver64-openshift             3.167GiB 7      41
+       openshift/rhpam70-businesscentral-openshift            2.948GiB 3      21
+       openshift/eap-cd-openshift                             2.856GiB 6      30
+       openshift/jboss-datavirt63-openshift                   2.607GiB 5      35
+       openshift/jboss-eap70-openshift                        2.595GiB 5      29
+       openshift/rhpam70-businesscentral-monitoring-openshift 2.569GiB 3      21
+       openshift/rhpam70-kieserver-openshift                  2.433GiB 3      21
+       openshift/rhpam70-controller-openshift                 2.14GiB  3      21
 
     > [!NOTE]
-    > For the `oc adm top` command to work, Hawkular must be running in your cluster. This command can also report on nodes and pods.
+    > For the `oc adm top` command to work, Hawkular metrics must be running in your cluster. This command can also report on nodes and pods.
 
 3. The appendix at the end of this guide provides some sample Python code to sum the sizes of resources from these two `oc adm top` commands.
 
