@@ -62,15 +62,123 @@ The OpenStack CLI provides the ability to list the nodes in your cluster and the
 
 2. The results show you the overall readiness of each node and how long they've been running. For example:
 
-    ![Results of oc get nodes command](images/oshift-get-nodes.png)
+       $ oc get nodes
+       NAME                            STATUS    ROLES     AGE       VERSION
+       master-infra-0.5623-f84e8e      Ready     master    310d      v1.11.0+d4cacc0
+       master-infra-1.5623-f84e8e      Ready     master    310d      v1.11.0+d4cacc0
+       master-infra-2.5623-f84e8e      Ready     master    310d      v1.11.0+d4cacc0
+       worker-infra-0.5623-f84e8e      Ready     infra     310d      v1.11.0+d4cacc0
+       worker-infra-1.5623-f84e8e      Ready     infra     310d      v1.11.0+d4cacc0
+       worker-tenant-s-0.5623-f84e8e   Ready     compute   310d      v1.11.0+d4cacc0
+       worker-tenant-s-1.5623-f84e8e   Ready     compute   310d      v1.11.0+d4cacc0
 
-3. To find the detailed status of a node, enter the following command:
+3. A summary of the resource usage on each node can be displayed using the following command:
+
+       oc adm top nodes
+
+4. The results show the percentage and absolute value of CPU and MEMORY usage on each node. For example:
+
+       $ oc adm top nodes
+       NAME                            CPU(cores)   CPU%      MEMORY(bytes)   MEMORY%
+       master-infra-0.5623-f84e8e      276m         7%        3367Mi          22%
+       master-infra-1.5623-f84e8e      258m         6%        3597Mi          23%
+       master-infra-2.5623-f84e8e      370m         9%        4167Mi          27%
+       worker-infra-0.5623-f84e8e      281m         15%       7697Mi          50%
+       worker-infra-1.5623-f84e8e      566m         31%       7946Mi          52%
+       worker-tenant-s-0.5623-f84e8e   405m         22%       12229Mi         80%
+       worker-tenant-s-1.5623-f84e8e   258m         14%       2451Mi          16%	   
+
+5. To find the detailed status of a node, enter the following command:
 
        oc describe node <nodename>
 
-4. The results show a large amount of information about disk status (pressure and out-of-disk), memory pressure and usage, CPU usage and resource consumption from any running pods. For example:
+6. The results show a large amount of information about disk status (pressure and out-of-disk), memory pressure and usage, CPU usage and resource consumption from any running pods. For example:
 
-    ![Results of oc describe node command](images/oshift-desc-node.png)
+       $ oc describe node worker-tenant-s-0.5623-f84e8e
+       Name:               worker-tenant-s-0.5623-f84e8e
+       Roles:              compute
+       Labels:             beta.kubernetes.io/arch=amd64
+                           beta.kubernetes.io/instance-type=363e3898-1fb5-4d7f-b0b6-9466fe2448c2
+                           beta.kubernetes.io/os=linux
+                           failure-domain.beta.kubernetes.io/region=regionOne
+                           failure-domain.beta.kubernetes.io/zone=00021-2
+                           internet=true
+                           kubernetes.io/hostname=worker-tenant-s-0.5623-f84e8e
+                           logging-infra-fluentd=true
+                           node-role.kubernetes.io/compute=true
+                           tenant=true
+       Annotations:        node.openshift.io/md5sum=5d575cf13ea3d2813ed294fa00e72234
+                           volumes.kubernetes.io/controller-managed-attach-detach=true
+       CreationTimestamp:  Mon, 07 Jan 2019 17:50:31 +0000
+       Taints:             <none>
+       Unschedulable:      false
+       Conditions:
+         Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+         ----             ------  -----------------                 ------------------                ------                       -------
+         OutOfDisk        False   Thu, 14 Nov 2019 10:13:12 +0000   Mon, 04 Nov 2019 14:44:23 +0000   KubeletHasSufficientDisk     kubelet has sufficient disk space available
+         MemoryPressure   False   Thu, 14 Nov 2019 10:13:12 +0000   Mon, 04 Nov 2019 14:44:23 +0000   KubeletHasSufficientMemory   kubelet has sufficient memory available
+         DiskPressure     False   Thu, 14 Nov 2019 10:13:12 +0000   Mon, 04 Nov 2019 14:44:23 +0000   KubeletHasNoDiskPressure     kubelet has no disk pressure
+         PIDPressure      False   Thu, 14 Nov 2019 10:13:12 +0000   Mon, 07 Jan 2019 17:50:31 +0000   KubeletHasSufficientPID      kubelet has sufficient PID available
+         Ready            True    Thu, 14 Nov 2019 10:13:12 +0000   Mon, 04 Nov 2019 14:44:23 +0000   KubeletReady                 kubelet is posting ready status
+       Addresses:
+         InternalIP:  10.3.1.7
+         Hostname:    worker-tenant-s-0.5623-f84e8e
+       Capacity:
+        cpu:            2
+        hugepages-1Gi:  0
+        hugepages-2Mi:  0
+        memory:         16266524Ki
+        pods:           250
+       Allocatable:
+        cpu:            1800m
+        hugepages-1Gi:  0
+        hugepages-2Mi:  0
+        memory:         15639836Ki
+        pods:           250
+       System Info:
+        Machine ID:                 4c43666486044496beef8fc81fdda75a
+        System UUID:                4C436664-8604-4496-BEEF-8FC81FDDA75A
+        Boot ID:                    e95bc874-b6d2-4284-9215-e589c91836a2
+        Kernel Version:             3.10.0-1062.4.1.el7.x86_64
+        OS Image:                   Red Hat Enterprise Linux Server 7.7 (Maipo)
+        Operating System:           linux
+        Architecture:               amd64
+        Container Runtime Version:  docker://1.13.1
+        Kubelet Version:            v1.11.0+d4cacc0
+        Kube-Proxy Version:         v1.11.0+d4cacc0
+       ProviderID:                  openstack:///4c436664-8604-4496-beef-8fc81fdda75a
+       Non-terminated Pods:         (58 in total)
+         Namespace                  Name                                                  CPU Requests  CPU Limits  Memory Requests  Memory Limits
+         ---------                  ----                                                  ------------  ----------  ---------------  -------------
+         argo                       argo-ui-78b65f59b5-s2fgh                              0 (0%)        0 (0%)      0 (0%)           0 (0%)
+         argo                       workflow-controller-685875596-4cttz                   0 (0%)        0 (0%)      0 (0%)           0 (0%)
+         backup-test                ruby-ex-2-gj927                                       0 (0%)        0 (0%)      0 (0%)           0 (0%)
+         bluegreen                  blue-1-nkgr5                                          0 (0%)        0 (0%)      0 (0%)           0 (0%)
+         bluegreen                  green-1-h2n6z                                         0 (0%)        0 (0%)      0 (0%)           0 (0%)
+         connect-test               ruby-ex-1-597fv                                       0 (0%)        0 (0%)      0 (0%)           0 (0%)
+         development                myapp-1-4sws5                                         0 (0%)        0 (0%)      0 (0%)           0 (0%)
+         locust-ingress             ruby-ex-1-l7dcc                                       0 (0%)        0 (0%)      0 (0%)           0 (0%)
+         locust                     locust-master-1-v6q69                                 0 (0%)        0 (0%)      0 (0%)           0 (0%)
+         pytest                     pytest-3-gfdt8                                        0 (0%)        0 (0%)      0 (0%)           0 (0%)
+         new-backup-test            ruby-ex-1-8fk75                                       0 (0%)        0 (0%)      0 (0%)           0 (0%)
+         openshift-logging          logging-fluentd-ktvkm                                 100m (5%)     0 (0%)      756Mi (4%)       756Mi (4%)
+         openshift-monitoring       node-exporter-h6czw                                   10m (0%)      20m (1%)    20Mi (0%)        40Mi (0%)
+         openshift-node             sync-krb68                                            0 (0%)        0 (0%)      0 (0%)           0 (0%)
+         openshift-sdn              ovs-nfbjx                                             100m (5%)     0 (0%)      300Mi (1%)       0 (0%)
+         openshift-sdn              sdn-lsbft                                             100m (5%)     0 (0%)      200Mi (1%)       0 (0%)
+         postgres                   postgresql-3-wr7gq                                    0 (0%)        0 (0%)      512Mi (3%)       512Mi (3%)
+         samplepipeline             jenkins-1-862f5                                       0 (0%)        0 (0%)      512Mi (3%)       512Mi (3%)
+         samplepipeline             mongodb-1-jzvgd                                       0 (0%)        0 (0%)      512Mi (3%)       512Mi (3%)
+         samplepipeline             nodejs-mongodb-example-1-74qlc                        0 (0%)        0 (0%)      512Mi (3%)       512Mi (3%)
+         testproject                cotd-2-cnkvq                                          0 (0%)        0 (0%)      0 (0%)           0 (0%)
+		 ...
+       Allocated resources:
+         (Total limits may be over 100 percent, i.e., overcommitted.)
+         Resource  Requests      Limits
+         --------  --------      ------
+         cpu       1060m (58%)   1020m (56%)
+         memory    4220Mi (27%)  3612Mi (23%)
+       Events:     <none>	   
 
 5. You can also obtain some of the above information via the REST API, by using something like:
 
