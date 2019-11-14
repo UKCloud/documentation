@@ -5630,15 +5630,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "articles/openshift/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "HqB1aJh6dIWz0zSJ6C9OoQ=="
+          "hash": "F7xPcNImFfgiFYIRUFgfDA=="
         }
       },
       "is_incremental": false,
@@ -10531,7 +10528,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "MS1OzG2p6IUeOBvG6aO/wg=="
+          "hash": "U7FAjZrjEGu+6/2mNmk6yw=="
         }
       },
       "is_incremental": false,
@@ -10555,7 +10552,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-raise-escalate-service-request.html",
-          "hash": "/tABanyuO74Zva9TbUPi8A=="
+          "hash": "Fwy6YHeNZQ7PndugxO1pQQ=="
         }
       },
       "is_incremental": false,
@@ -10615,7 +10612,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-api.html",
-          "hash": "1nsCOxVQC0/qx6IoE/HRSw=="
+          "hash": "bFy0JtF0q3hPSPilEDuXdA=="
         }
       },
       "is_incremental": false,
@@ -10687,7 +10684,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-overview-permissions.html",
-          "hash": "oWdRJ1M8Kxuv9Wm8xDpo/g=="
+          "hash": "NiJZuSS93Mw5fFrcnDlBZA=="
         }
       },
       "is_incremental": false,
@@ -18118,7 +18115,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "uHIsDdRxv5avuvDofBRQiQ=="
+          "hash": "yqMipaav9EYo7HQgBB58PQ=="
         }
       },
       "is_incremental": false,
