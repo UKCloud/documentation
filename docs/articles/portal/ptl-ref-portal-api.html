@@ -8,7 +8,7 @@
     <title>UKCloud Portal API Reference Guide | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud Portal API Reference Guide | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -289,8 +289,33 @@ cookies = resp.env[:response_headers]['set-cookie']
   }
 }
 </code></pre>
-<h2 id="get-apimy_calls">GET /api/my_calls</h2>
+<h2 id="my-calls-api-removed">My Calls API (Removed)</h2>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>With the move to the new <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> service management tool, this functionality is no longer available.</p>
+</div>
+<h3 id="get-apimy_calls">GET /api/my_calls</h3>
 <p>Returns a complete list of support calls (similar to the MyCalls view in the UKCloud Portal).</p>
+<h3 id="get-apimy_callsticket_id">GET /api/my_calls/:ticket_id</h3>
+<p>Returns a single ticket and its updates and changes.</p>
+<h3 id="put-apimy_callsticket_id">PUT /api/my_calls/:ticket_id</h3>
+<p>Adds a new note to a ticket.</p>
+<h3 id="post-apimy_calls">POST /api/my_calls</h3>
+<p>Adds a new ticket.</p>
+<h3 id="put-apimy_callsticket_idsubscribe">PUT /api/my_calls/:ticket_id/subscribe</h3>
+<p>Subscribes a user to a ticket.</p>
+<h3 id="put-apimy_callsticket_idunsubscribe">PUT /api/my_calls/:ticket_id/unsubscribe</h3>
+<p>Unsubscribes a user from a ticket.</p>
+<h3 id="put-apimy_callsticket_idreopen">PUT /api/my_calls/:ticket_id/reopen</h3>
+<p>Reopens a ticket.</p>
+<h3 id="put-apimy_callsticket_idchange_owner">PUT /api/my_calls/:ticket_id/change_owner</h3>
+<p>Change the owner of a ticket.</p>
+<h3 id="put-apimy_callsticket_idcancel">PUT /api/my_calls/:ticket_id/cancel</h3>
+<p>Cancels a ticket.</p>
+<h3 id="put-apimy_callsticket_idclose">PUT /api/my_calls/:ticket_id/close</h3>
+<p>Closes a ticket.</p>
+<h2 id="get-apiping">GET /api/ping</h2>
+<p>An endpoint to test API functionality.</p>
 <h3 id="api-version-2">API version</h3>
 <p>v1</p>
 <h3 id="request-2">Request</h3>
@@ -299,29 +324,12 @@ cookies = resp.env[:response_headers]['set-cookie']
 <h4 id="parameters-2">Parameters</h4>
 <p>None</p>
 <h4 id="uri-parameters-2">URI parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Mandatory (Default)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>for</td>
-<td>User or account</td>
-<td>String</td>
-<td>N</td>
-</tr>
-</tbody>
-</table>
+<p>None</p>
 <h4 id="example-request-curl-2">Example request (Curl)</h4>
-<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls?for=user
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/ping
 </code></pre>
 <h4 id="example-request-ruby-2">Example request (Ruby)</h4>
-<pre><code>resp = conn.get('/api/my_calls') { |req| req.headers['cookie'] = cookies }
+<pre><code>resp = conn.get('/api/ping') { |req| req.headers['cookie'] = cookies }
 </code></pre>
 <h3 id="response-2">Response</h3>
 <h4 id="successful-http-response-2">Successful HTTP response</h4>
@@ -329,14 +337,12 @@ cookies = resp.env[:response_headers]['set-cookie']
 <h4 id="unsuccessful-http-response-2">Unsuccessful HTTP response</h4>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <h4 id="response-body-2">Response body</h4>
-<p>Returns a structure of tickets with the following keys:</p>
-<pre><code>ticket_id,.summary, submitted, status
-</code></pre>
+<p>Returns OK if the user has been authenticated.</p>
 <h4 id="example-response-2">Example response</h4>
-<pre><code>[{&quot;ticket_id&quot;:&quot;INC1002183&quot;,&quot;summary&quot;:&quot;Test incident (Compute)&quot;,&quot;submitted&quot;:&quot;28/08/2014 15:42&quot;, &quot;status&quot;:&quot;Awaiting Review&quot;}, ...]
+<pre><code>{&quot;response&quot;:&quot;OK&quot;}
 </code></pre>
-<h2 id="get-apimy_callsticket_id">GET /api/my_calls/:ticket_id</h2>
-<p>Returns a single ticket and its updates and changes.</p>
+<h2 id="get-apiaccounts">GET /api/accounts</h2>
+<p>Returns a list of accounts associated with the current user.</p>
 <h3 id="api-version-3">API version</h3>
 <p>v1</p>
 <h3 id="request-3">Request</h3>
@@ -345,536 +351,21 @@ cookies = resp.env[:response_headers]['set-cookie']
 <h4 id="parameters-3">Parameters</h4>
 <p>None</p>
 <h4 id="uri-parameters-3">URI parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Mandatory (Default)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ticket_id</td>
-<td>The unique ID of the ticket</td>
-<td>String</td>
-<td>Y</td>
-</tr>
-<tr>
-<td>for</td>
-<td>User or account</td>
-<td>String</td>
-<td>N</td>
-</tr>
-</tbody>
-</table>
+<p>None</p>
 <h4 id="example-request-curl-3">Example request (Curl)</h4>
-<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001?for=user
+<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts
 </code></pre>
 <h4 id="example-request-ruby-3">Example request (Ruby)</h4>
-<pre><code>resp = conn.get('/api/my_calls/INC10001') { |req| req.headers['cookie'] = cookies }
+<pre><code>resp = conn.get('/api/accounts') { |req| req.headers['cookie'] = cookies }
 </code></pre>
 <h3 id="response-3">Response</h3>
 <h4 id="successful-http-response-3">Successful HTTP response</h4>
 <p>200 OK --- The request was successful</p>
 <h4 id="unsuccessful-http-response-3">Unsuccessful HTTP response</h4>
-<p>400 Bad request --- The ticket could not be found</p>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <h4 id="response-body-3">Response body</h4>
-<p>Returns a hash with ticket, updates and changes.</p>
-<h4 id="example-response-3">Example response</h4>
-<pre><code>{'ticket': {ticket details}, 'updates': [{updates}], 'changes': [{changes}]}
-</code></pre>
-<h2 id="put-apimy_callsticket_id">PUT /api/my_calls/:ticket_id</h2>
-<p>Adds a new note to a ticket.</p>
-<h3 id="api-version-4">API version</h3>
-<p>v1</p>
-<h3 id="request-4">Request</h3>
-<h4 id="request-body-4">Request body</h4>
-<pre><code>{&quot;description&quot;: &quot;My new update&quot;}
-</code></pre>
-<h4 id="parameters-4">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Mandatory (Default)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>description</td>
-<td>The note to add</td>
-<td>String</td>
-<td>Y</td>
-</tr>
-</tbody>
-</table>
-<h4 id="uri-parameters-4">URI parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Mandatory (Default)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ticket_id</td>
-<td>The unique ID of the ticket</td>
-<td>String</td>
-<td>Y</td>
-</tr>
-</tbody>
-</table>
-<h4 id="example-request-curl-4">Example request (Curl)</h4>
-<pre><code class="lang-bash">curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/my_calls/INC10001 -X PUT -d '{&quot;description&quot;: &quot;My new update&quot;}' -H 'Accept: application/json' -H 'Content-Type: application/json'
-</code></pre>
-<h4 id="example-request-ruby-4">Example request (Ruby)</h4>
-<pre><code>resp = conn.put('/api/my_calls/INC10001') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;description&quot;: &quot;My new update&quot;}' }
-</code></pre>
-<h3 id="response-4">Response</h3>
-<h4 id="successful-http-response-4">Successful HTTP response</h4>
-<p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-4">Unsuccessful HTTP response</h4>
-<p>400 Bad request --- The ticket could not be found</p>
-<p>401 Unauthorized --- The user could not be authenticated</p>
-<p>422 Unprocessable entity --- There was an error saving the updated</p>
-<h4 id="response-body-4">Response body</h4>
-<p>Returns all notes including your new note</p>
-<h2 id="post-apimy_calls">POST /api/my_calls</h2>
-<p>Adds a new ticket.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>If you encounter any problems making changes to a ticket after initial creation, for example, closing or cancelling an incorrect ticket, this is probably because the ticket is waiting for approval from a Customer Support Engineer. Check the status of your ticket and try performing the action again later.</p>
-</div>
-<h3 id="api-version-5">API version</h3>
-<p>v1</p>
-<h3 id="request-5">Request</h3>
-<h4 id="request-body-5">Request body</h4>
-<pre><code>{&quot;incident&quot;: {&quot;problem_area&quot;: &quot;compute&quot;, &quot;service&quot;: &quot;My Service&quot;, &quot;classification&quot;: &quot;Production Service &gt; unavailable or unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_details&quot;: &quot;My further details&quot;}}
-</code></pre>
-<p>Or</p>
-<pre><code>{&quot;service&quot;: {&quot;problem_area&quot;: &quot;compute&quot;, &quot;service&quot;: &quot;My Service&quot;, &quot;query_nature&quot;: &quot;Change a Configuration&quot;, &quot;summary&quot;: &quot;My Request&quot;, &quot;further_details&quot;: &quot;My further details&quot;}}
-</code></pre>
-<h4 id="parameters-5">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Mandatory (Default)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>incident</td>
-<td>If the ticket is an incident, then pass the following key/values</td>
-<td>Hash/Object</td>
-<td>N</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>problem_area | One of:<br>- compute</br>- storage<br>- email and collaboration</br>- other | String | Y
-service | The name of the service | String | Y
-classification | One of:<br>- Production Service &gt; unavailable or unresponsive</br>- Production Service &gt; available but performance degraded<br>- Production Service &gt; available, but client access to service restricted</br>- Test/Dev Service &gt; unavailable or unresponsive<br>- Test/Dev Service &gt; available, but performance degraded</br>- Test/Dev Service &gt; available, but client access to service restricted<br>- Service available, part of redundant infrastructure unavailable</br>- Confirmed data loss or breach<br>- Possible data loss or breach</br>- Other incident | String | Y
-summary | A summary of the incident | String | Y
-further_details | A more complete description of the incident | String | Y
-service | If the ticket is a service request, then pass the following key/values | Hash/Object | N
-problem_area | One of:<br>- compute</br>- storage<br>- email and collaboration</br>- Connectivity PSN or GSI<br>- Connectivity Leased Line</br>- Cloud Enablement Services<br>- IP Addresses</br>- Other | String | Y
-service | The name of the service | String | Y
-query_nature | One of:<br>- Change a Configuration</br>- Add a New Service<br>- Claim Service Credits</br>- Expand an Existing Service<br>- Information Required</br>- Other | String | Y
-summary | A summary of the service request | String | Y
-further_details | A more complete description of the service request | String | Y</p>
-</blockquote>
-<h4 id="uri-parameters-5">URI parameters</h4>
-<p>None</p>
-<h4 id="example-request-curl-5">Example request (Curl)</h4>
-<pre><code class="lang-bash">curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/my_calls -X POST -d '{&quot;incident&quot;: {&quot;problem_area&quot;: &quot;compute&quot;, &quot;service&quot;: &quot;My Service&quot;, &quot;classification&quot;: &quot;Production Service unavailable or unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_details&quot;: &quot;My further details&quot;}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
-</code></pre>
-<h4 id="example-request-ruby-5">Example request (Ruby)</h4>
-<pre><code>conn.post('/api/my_calls') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;incident&quot;: {&quot;problem_area&quot;: &quot;compute&quot;, &quot;service&quot;, &quot;classification&quot;: &quot;Production Service unavailable or unresponsive&quot;, &quot;summary&quot;: &quot;My Incident&quot;, &quot;further_details&quot;: &quot;My further details&quot;}}' }
-</code></pre>
-<h3 id="response-5">Response</h3>
-<h4 id="successful-http-response-5">Successful HTTP response</h4>
-<p>201 Created --- The ticket was successfully created</p>
-<h4 id="unsuccessful-http-response-5">Unsuccessful HTTP response</h4>
-<p>400 Bad request --- The ticket could not be found</p>
-<p>401 Unauthorized --- The user could not be authenticated</p>
-<p>422 Unprocessable entity --- There was an error saving the update</p>
-<h4 id="response-body-5">Response body</h4>
-<p>Returns the ticket created.</p>
-<h2 id="put-apimy_callsticket_idsubscribe">PUT /api/my_calls/:ticket_id/subscribe</h2>
-<p>Subscribes a user to a ticket.</p>
-<h3 id="api-version-6">API version</h3>
-<p>v1</p>
-<h3 id="request-6">Request</h3>
-<h4 id="request-body-6">Request body</h4>
-<pre><code>{&quot;email&quot;: &quot;myemail@example.com&quot;}
-</code></pre>
-<h4 id="parameters-6">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Mandatory (Default)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>email</td>
-<td>The email address of the user to add; the email address must exist as a user in your account</td>
-<td>String</td>
-<td>Y</td>
-</tr>
-</tbody>
-</table>
-<h4 id="uri-parameters-6">URI parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Mandatory (Default)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ticket_id</td>
-<td>The unique ID of the ticket</td>
-<td>String</td>
-<td>Y</td>
-</tr>
-</tbody>
-</table>
-<h4 id="example-request-curl-6">Example request (Curl)</h4>
-<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' -d '{&quot;email&quot;: &quot;myemail@example.com&quot;}' https://portal.skyscapecloud.com/api/my_calls/INC10001/subscribe
-</code></pre>
-<h4 id="example-request-ruby-6">Example request (Ruby)</h4>
-<pre><code>resp = conn.put('/api/my_calls/INC10001/subscribe') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;description&quot;: &quot;My new update&quot;}' }
-</code></pre>
-<h3 id="response-6">Response</h3>
-<h4 id="successful-http-response-6">Successful HTTP response</h4>
-<p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-6">Unsuccessful HTTP response</h4>
-<p>400 Bad request --- The ticket or user could not be found</p>
-<p>401 Unauthorized --- The user could not be authenticated</p>
-<p>422 Unprocessable entity --- There was an error saving the update</p>
-<h4 id="response-body-6">Response body</h4>
-<p>None --- Check the response status code</p>
-<h2 id="put-apimy_callsticket_idunsubscribe">PUT /api/my_calls/:ticket_id/unsubscribe</h2>
-<p>Unsubscribes a user from a ticket.</p>
-<h3 id="api-version-7">API version</h3>
-<p>v1</p>
-<h3 id="request-7">Request</h3>
-<h4 id="request-body-7">Request body</h4>
-<pre><code>{&quot;email&quot;: &quot;myemail@example.com&quot;}
-</code></pre>
-<h4 id="parameters-7">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Mandatory (Default)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>email</td>
-<td>The email address of the user to remove</td>
-<td>String</td>
-<td>Y</td>
-</tr>
-</tbody>
-</table>
-<h4 id="uri-parameters-7">URI parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Mandatory (Default)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ticket_id</td>
-<td>The unique ID of the ticket</td>
-<td>String</td>
-<td>Y</td>
-</tr>
-</tbody>
-</table>
-<h4 id="example-request-curl-7">Example request (Curl)</h4>
-<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' -d '{&quot;email&quot;: &quot;myemail@example.com&quot;}' https://portal.skyscapecloud.com/api/my_calls/INC10001/subscribe
-</code></pre>
-<h4 id="example-request-ruby-7">Example request (Ruby)</h4>
-<pre><code>resp = conn.put('/api/my_calls/INC10001/unsubscribe') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;email&quot;: &quot;myemail@example.com&quot;}' }
-</code></pre>
-<h3 id="response-7">Response</h3>
-<h4 id="successful-http-response-7">Successful HTTP response</h4>
-<p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-7">Unsuccessful HTTP response</h4>
-<p>400 Bad request --- The ticket or user could not be found</p>
-<p>401 Unauthorized --- The user could not be authenticated</p>
-<p>422 Unprocessable entity --- There was an error saving the update</p>
-<h4 id="response-body-7">Response body</h4>
-<p>None --- Check the response status code.</p>
-<h2 id="put-apimy_callsticket_idreopen">PUT /api/my_calls/:ticket_id/reopen</h2>
-<p>Reopens a ticket.</p>
-<h3 id="api-version-8">API version</h3>
-<p>v1</p>
-<h3 id="request-8">Request</h3>
-<h4 id="request-body-8">Request body</h4>
-<p>None</p>
-<h4 id="parameters-8">Parameters</h4>
-<p>None</p>
-<h4 id="uri-parameters-8">URI parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Mandatory (Default)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ticket_id</td>
-<td>The unique ID of the ticket</td>
-<td>String</td>
-<td>Y</td>
-</tr>
-</tbody>
-</table>
-<h4 id="example-request-curl-8">Example request (Curl)</h4>
-<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/reopen
-</code></pre>
-<h4 id="example-request-ruby-8">Example request (Ruby)</h4>
-<pre><code>resp = conn.put('/api/my_calls/INC10001/reopen') { |req| req.headers['cookie'] = cookies}
-</code></pre>
-<h3 id="response-8">Response</h3>
-<h4 id="successful-http-response-8">Successful HTTP response</h4>
-<p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-8">Unsuccessful HTTP response</h4>
-<p>400 Bad request --- The ticket or user could not be found</p>
-<p>401 Unauthorized --- The user could not be authenticated</p>
-<p>422 Unprocessable entity --- There was an error saving the update</p>
-<h4 id="response-body-8">Response body</h4>
-<p>None --- Check the response status code</p>
-<h2 id="put-apimy_callsticket_idchange_owner">PUT /api/my_calls/:ticket_id/change_owner</h2>
-<p>Change the owner of a ticket.</p>
-<h3 id="api-version-9">API version</h3>
-<p>v1</p>
-<h3 id="request-9">Request</h3>
-<h4 id="request-body-9">Request body</h4>
-<pre><code>{&quot;email&quot;: &quot;myemail@example.com&quot;}
-</code></pre>
-<h4 id="parameters-9">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Mandatory (Default)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>email</td>
-<td>The email address of the new owner for the ticket</td>
-<td>String</td>
-<td>Y</td>
-</tr>
-</tbody>
-</table>
-<h4 id="uri-parameters-9">URI parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Mandatory (Default)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ticket_id</td>
-<td>The unique ID of the ticket</td>
-<td>String</td>
-<td>Y</td>
-</tr>
-</tbody>
-</table>
-<h4 id="example-request-curl-9">Example request (Curl)</h4>
-<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' -d '{&quot;email&quot;: &quot;myemail@example.com&quot;}' https://portal.skyscapecloud.com/api/my_calls/INC10001/change_owner
-</code></pre>
-<h4 id="example-request-ruby-9">Example request (Ruby)</h4>
-<pre><code>resp = conn.put('/api/my_calls/INC10001/change_owner') { |req| req.headers['cookie'] = cookies; req.body = '{&quot;email&quot;: &quot;myemail@example.com&quot;}' }
-</code></pre>
-<h3 id="response-9">Response</h3>
-<h4 id="successful-http-response-9">Successful HTTP response</h4>
-<p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-9">Unsuccessful HTTP response</h4>
-<p>400 Bad request --- The ticket or user could not be found</p>
-<p>401 Unauthorized --- The user could not be authenticated</p>
-<p>422 Unprocessable entity --- There was an error saving the update</p>
-<h4 id="response-body-9">Response body</h4>
-<p>None -- Check the response status code</p>
-<h2 id="put-apimy_callsticket_idcancel">PUT /api/my_calls/:ticket_id/cancel</h2>
-<p>Cancels a ticket.</p>
-<h3 id="api-version-10">API version</h3>
-<p>v1</p>
-<h3 id="request-10">Request</h3>
-<h4 id="request-body-10">Request body</h4>
-<p>None</p>
-<h4 id="parameters-10">Parameters</h4>
-<p>None</p>
-<h4 id="uri-parameters-10">URI parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Mandatory (Default)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ticket_id</td>
-<td>The unique ID of the ticket</td>
-<td>String</td>
-<td>Y</td>
-</tr>
-</tbody>
-</table>
-<h4 id="example-request-curl-10">Example request (Curl)</h4>
-<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/cancel
-</code></pre>
-<h4 id="example-request-ruby-10">Example request (Ruby)</h4>
-<pre><code>resp = conn.put('/api/my_calls/INC10001/cancel') { |req| req.headers['cookie'] = cookies}
-</code></pre>
-<h3 id="response-10">Response</h3>
-<h4 id="successful-http-response-10">Successful HTTP response</h4>
-<p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-10">Unsuccessful HTTP response</h4>
-<p>400 Bad request --- The ticket or user could not be found</p>
-<p>401 Unauthorized --- The user could not be authenticated</p>
-<p>422 Unprocessable entity --- There was an error saving the update</p>
-<h4 id="response-body-10">Response body</h4>
-<p>None -- Check the response status code</p>
-<h2 id="put-apimy_callsticket_idclose">PUT /api/my_calls/:ticket_id/close</h2>
-<p>Closes a ticket.</p>
-<h3 id="api-version-11">API version</h3>
-<p>v1</p>
-<h3 id="request-11">Request</h3>
-<h4 id="request-body-11">Request body</h4>
-<p>None</p>
-<h4 id="parameters-11">Parameters</h4>
-<p>None</p>
-<h4 id="uri-parameters-11">URI parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Mandatory (Default)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ticket_id</td>
-<td>The unique ID of the ticket</td>
-<td>String</td>
-<td>Y</td>
-</tr>
-</tbody>
-</table>
-<h4 id="example-request-curl-11">Example request (Curl)</h4>
-<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/close
-</code></pre>
-<h4 id="example-request-ruby-11">Example request (Ruby)</h4>
-<pre><code>resp = conn.put('/api/my_calls/INC10001/close') { |req| req.headers['cookie'] = cookies}
-</code></pre>
-<h3 id="response-11">Response</h3>
-<h4 id="successful-http-response-11">Successful HTTP response</h4>
-<p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-11">Unsuccessful HTTP response</h4>
-<p>400 Bad request --- The ticket or user could not be found</p>
-<p>401 Unauthorized --- The user could not be authenticated</p>
-<p>422 Unprocessable entity --- There was an error saving the update</p>
-<h4 id="response-body-11">Response body</h4>
-<p>None -- Check the response status code.</p>
-<h2 id="get-apiping">GET /api/ping</h2>
-<p>An endpoint to test API functionality.</p>
-<h3 id="api-version-12">API version</h3>
-<p>v1</p>
-<h3 id="request-12">Request</h3>
-<h4 id="request-body-12">Request body</h4>
-<p>None</p>
-<h4 id="parameters-12">Parameters</h4>
-<p>None</p>
-<h4 id="uri-parameters-12">URI parameters</h4>
-<p>None</p>
-<h4 id="example-request-curl-12">Example request (Curl)</h4>
-<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/ping
-</code></pre>
-<h4 id="example-request-ruby-12">Example request (Ruby)</h4>
-<pre><code>resp = conn.get('/api/ping') { |req| req.headers['cookie'] = cookies }
-</code></pre>
-<h3 id="response-12">Response</h3>
-<h4 id="successful-http-response-12">Successful HTTP response</h4>
-<p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-12">Unsuccessful HTTP response</h4>
-<p>401 Unauthorized --- The user could not be authenticated</p>
-<h4 id="response-body-12">Response body</h4>
-<p>Returns OK if the user has been authenticated.</p>
-<h4 id="example-response-4">Example response</h4>
-<pre><code>{&quot;response&quot;:&quot;OK&quot;}
-</code></pre>
-<h2 id="get-apiaccounts">GET /api/accounts</h2>
-<p>Returns a list of accounts associated with the current user.</p>
-<h3 id="api-version-13">API version</h3>
-<p>v1</p>
-<h3 id="request-13">Request</h3>
-<h4 id="request-body-13">Request body</h4>
-<p>None</p>
-<h4 id="parameters-13">Parameters</h4>
-<p>None</p>
-<h4 id="uri-parameters-13">URI parameters</h4>
-<p>None</p>
-<h4 id="example-request-curl-13">Example request (Curl)</h4>
-<pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts
-</code></pre>
-<h4 id="example-request-ruby-13">Example request (Ruby)</h4>
-<pre><code>resp = conn.get('/api/accounts') { |req| req.headers['cookie'] = cookies }
-</code></pre>
-<h3 id="response-13">Response</h3>
-<h4 id="successful-http-response-13">Successful HTTP response</h4>
-<p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-13">Unsuccessful HTTP response</h4>
-<p>401 Unauthorized --- The user could not be authenticated</p>
-<h4 id="response-body-13">Response body</h4>
 <p>Returns an array of accounts with the ID and name.</p>
-<h4 id="example-response-5">Example response</h4>
+<h4 id="example-response-3">Example response</h4>
 <pre><code>[{&quot;name&quot;:&quot;UKCloud Development Team&quot;,&quot;id&quot;:48},{&quot;name&quot;:&quot;Demo&quot;,&quot;id&quot;:1}]
 </code></pre>
 <h3 id="json-schema">JSON schema</h3>
@@ -904,14 +395,14 @@ further_details | A more complete description of the service request | String | 
 </code></pre>
 <h2 id="get-apiaccountsaccount_idcompute_services">GET /api/accounts/:account_id/compute_services</h2>
 <p>Returns a list of compute services (vOrgs), VDCs, vApps and VMs associated with the specified account.</p>
-<h3 id="api-version-14">API version</h3>
+<h3 id="api-version-4">API version</h3>
 <p>v1</p>
-<h3 id="request-14">Request</h3>
-<h4 id="request-body-14">Request body</h4>
+<h3 id="request-4">Request</h3>
+<h4 id="request-body-4">Request body</h4>
 <p>None</p>
-<h4 id="parameters-14">Parameters</h4>
+<h4 id="parameters-4">Parameters</h4>
 <p>None</p>
-<h4 id="uri-parameters-14">URI parameters</h4>
+<h4 id="uri-parameters-4">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -942,22 +433,22 @@ further_details | A more complete description of the service request | String | 
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-14">Example request (Curl)</h4>
+<h4 id="example-request-curl-4">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/compute_services?page=10&amp;per_page=20
 </code></pre>
-<h4 id="example-request-ruby-14">Example request (Ruby)</h4>
+<h4 id="example-request-ruby-4">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/compute_services?page=10&amp;per_page=20&quot;) { |req| req.headers['cookie'] = cookies }
 </code></pre>
-<h3 id="response-14">Response</h3>
-<h4 id="successful-http-response-14">Successful HTTP response</h4>
+<h3 id="response-4">Response</h3>
+<h4 id="successful-http-response-4">Successful HTTP response</h4>
 <p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-14">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-4">Unsuccessful HTTP response</h4>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
-<h4 id="response-body-14">Response body</h4>
+<h4 id="response-body-4">Response body</h4>
 <p>Returns an array of compute services.</p>
 <p>To specify how many vOrgs to display per page of results, set the <code>per_page</code> URL parameter in the query string. To return a specific page of results, set the page parameter. If you do not set these parameters, all results are returned.</p>
-<h4 id="example-response-6">Example response</h4>
+<h4 id="example-response-4">Example response</h4>
 <pre><code>{
   &quot;account&quot;: {
     &quot;id&quot;: 1
@@ -1328,14 +819,14 @@ further_details | A more complete description of the service request | String | 
 </code></pre>
 <h2 id="get-apiaccountsaccount_idcompute_servicesvorg_id">GET /api/accounts/:account_id/compute_services/:vorg_id</h2>
 <p>Returns information about the VDCs, vApps and VMs associated with the specified compute service (vOrg).</p>
-<h3 id="api-version-15">API version</h3>
+<h3 id="api-version-5">API version</h3>
 <p>v1</p>
-<h3 id="request-15">Request</h3>
-<h4 id="request-body-15">Request body</h4>
+<h3 id="request-5">Request</h3>
+<h4 id="request-body-5">Request body</h4>
 <p>None</p>
-<h4 id="parameters-15">Parameters</h4>
+<h4 id="parameters-5">Parameters</h4>
 <p>None</p>
-<h4 id="uri-parameters-15">URI parameters</h4>
+<h4 id="uri-parameters-5">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1361,19 +852,19 @@ further_details | A more complete description of the service request | String | 
 </tbody>
 </table>
 <p>For information about how to find the vOrg ID, see <a href="#get-apiaccountsaccount_idvorgs"><em>GET /api/accounts/:account_id/vorgs</em></a></p>
-<h4 id="example-request-curl-15">Example request (Curl)</h4>
+<h4 id="example-request-curl-5">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/compute_services/12
 </code></pre>
-<h3 id="response-15">Response</h3>
-<h4 id="successful-http-response-15">Successful HTTP response</h4>
+<h3 id="response-5">Response</h3>
+<h4 id="successful-http-response-5">Successful HTTP response</h4>
 <p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-15">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-5">Unsuccessful HTTP response</h4>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
 <p>404 Not Found --- The vOrg does not exist in the specified account</p>
-<h4 id="response-body-15">Response body</h4>
+<h4 id="response-body-5">Response body</h4>
 <p>Returns a list of VDCs, vApps and VMs.</p>
-<h4 id="example-response-7">Example response</h4>
+<h4 id="example-response-5">Example response</h4>
 <pre><code>{&quot;compute_service_id&quot;: 12,
   &quot;name&quot;: &quot;Example Service Name&quot;,
   &quot;serviceId&quot;: &quot;Service ID&quot;,
@@ -1416,14 +907,14 @@ further_details | A more complete description of the service request | String | 
 </code></pre>
 <h2 id="get-apiaccountsaccount_idapi_credentials">GET /api/accounts/:account_id/api_credentials</h2>
 <p>Returns a list of vCloud API credentials associated with the specified account.</p>
-<h3 id="api-version-16">API version</h3>
+<h3 id="api-version-6">API version</h3>
 <p>v1</p>
-<h3 id="request-16">Request</h3>
-<h4 id="request-body-16">Request body</h4>
+<h3 id="request-6">Request</h3>
+<h4 id="request-body-6">Request body</h4>
 <p>None</p>
-<h4 id="parameters-16">Parameters</h4>
+<h4 id="parameters-6">Parameters</h4>
 <p>None</p>
-<h4 id="uri-parameters-16">URI parameters</h4>
+<h4 id="uri-parameters-6">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1442,21 +933,21 @@ further_details | A more complete description of the service request | String | 
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-16">Example request (Curl)</h4>
+<h4 id="example-request-curl-6">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/api_credentials
 </code></pre>
-<h4 id="example-request-ruby-15">Example request (Ruby)</h4>
+<h4 id="example-request-ruby-5">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/api_credentials&quot;) { |req| req.headers['cookie'] = cookies }
 </code></pre>
-<h3 id="response-16">Response</h3>
-<h4 id="successful-http-response-16">Successful HTTP response</h4>
+<h3 id="response-6">Response</h3>
+<h4 id="successful-http-response-6">Successful HTTP response</h4>
 <p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-16">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-6">Unsuccessful HTTP response</h4>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
-<h4 id="response-body-16">Response body</h4>
+<h4 id="response-body-6">Response body</h4>
 <p>Returns an array of vCloud Director API credentials.</p>
-<h4 id="example-response-8">Example response</h4>
+<h4 id="example-response-6">Example response</h4>
 <pre><code>{
   &quot;UKCloud Demo (1-1-1-9836cf)&quot;: {
     &quot;service_id&quot;: &quot;1-1-1-9836cf&quot;,
@@ -1492,14 +983,14 @@ further_details | A more complete description of the service request | String | 
 </code></pre>
 <h2 id="get-apiaccountsaccount_idvorgs">GET /api/accounts/:account_id/vorgs</h2>
 <p>Returns a list of basic information about VMware compute services (vOrgs) associated with the specified account.</p>
-<h3 id="api-version-17">API version</h3>
+<h3 id="api-version-7">API version</h3>
 <p>v1</p>
-<h3 id="request-17">Request</h3>
-<h4 id="request-body-17">Request body</h4>
+<h3 id="request-7">Request</h3>
+<h4 id="request-body-7">Request body</h4>
 <p>None</p>
-<h4 id="parameters-17">Parameters</h4>
+<h4 id="parameters-7">Parameters</h4>
 <p>None</p>
-<h4 id="uri-parameters-17">URI parameters</h4>
+<h4 id="uri-parameters-7">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1518,19 +1009,19 @@ further_details | A more complete description of the service request | String | 
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-17">Example request (Curl)</h4>
+<h4 id="example-request-curl-7">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs
 </code></pre>
-<h4 id="example-request-ruby-16">Example request (Ruby)</h4>
+<h4 id="example-request-ruby-6">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/vorgs&quot;) { |req| req.headers['cookie'] = cookies }
 </code></pre>
-<h3 id="response-17">Response</h3>
-<h4 id="successful-http-response-17">Successful HTTP response</h4>
+<h3 id="response-7">Response</h3>
+<h4 id="successful-http-response-7">Successful HTTP response</h4>
 <p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-17">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-7">Unsuccessful HTTP response</h4>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
-<h4 id="response-body-17">Response body</h4>
+<h4 id="response-body-7">Response body</h4>
 <table>
 <thead>
 <tr>
@@ -1561,7 +1052,7 @@ further_details | A more complete description of the service request | String | 
 </tr>
 </tbody>
 </table>
-<h4 id="example-response-9">Example response</h4>
+<h4 id="example-response-7">Example response</h4>
 <pre><code>{
     &quot;data&quot;: [
         {
@@ -1667,13 +1158,13 @@ further_details | A more complete description of the service request | String | 
 <h5>Note</h5>
 <p>This API endpoint is available only in Regions 5 and 6 (for information about regions, see <a href="../other/other-ref-sites-regions-zones.html"><em>Understanding sites, regions and zones</em></a>).</p>
 </div>
-<h3 id="api-version-18">API version</h3>
+<h3 id="api-version-8">API version</h3>
 <p>v1</p>
-<h3 id="request-18">Request</h3>
-<h4 id="request-body-18">Request body</h4>
+<h3 id="request-8">Request</h3>
+<h4 id="request-body-8">Request body</h4>
 <pre><code>{&quot;data&quot;: {&quot;type&quot;: &quot;Vorg&quot;, &quot;attributes&quot;: {&quot;zoneId&quot;: &quot;B&quot;, &quot;name&quot;: &quot;DEMO&quot;}}}
 </code></pre>
-<h4 id="parameters-18">Parameters</h4>
+<h4 id="parameters-8">Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1704,7 +1195,7 @@ further_details | A more complete description of the service request | String | 
 </tr>
 </tbody>
 </table>
-<h4 id="uri-parameters-18">URI parameters</h4>
+<h4 id="uri-parameters-8">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1723,19 +1214,19 @@ further_details | A more complete description of the service request | String | 
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-18">Example request (Curl)</h4>
+<h4 id="example-request-curl-8">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs -X POST -d '{&quot;data&quot;: {&quot;type&quot;: &quot;Vorg&quot;, &quot;attributes&quot;: {&quot;zoneId&quot;: &quot;B&quot;, &quot;name&quot;: &quot;DEMO&quot;}}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
 </code></pre>
-<h3 id="response-18">Response</h3>
-<h4 id="successful-http-response-18">Successful HTTP response</h4>
+<h3 id="response-8">Response</h3>
+<h4 id="successful-http-response-8">Successful HTTP response</h4>
 <p>202 Accepted --- Includes a location header (for example Location: /api/vorg-builds/10)</p>
-<h4 id="unsuccessful-http-response-18">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-8">Unsuccessful HTTP response</h4>
 <p>400 Invalid --- The data uploaded does not match the expected schema or there is a validation problem</p>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>403 Forbidden --- The user is not an administrator for the account</p>
 <p>404 Not Found --- The user does not have access to the account or the account does not exist</p>
 <p>500 Server Error --- There was a problem creating the vOrg in the specified zone, either because the specified zone was not valid or because of a problem with UKCloud's systems</p>
-<h4 id="response-body-18">Response body</h4>
+<h4 id="response-body-8">Response body</h4>
 <table>
 <thead>
 <tr>
@@ -1773,7 +1264,7 @@ further_details | A more complete description of the service request | String | 
 <tr>
 <td>state</td>
 <td>String</td>
-<td>The state of the build<br>Valid values:</br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created</br>- completed -- vOrg has been successfully created<br>-   failed -- vOrg creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>The state of the build<br>Valid values:<br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created<br>-   failed -- vOrg creation has failed (raise a Service Request to resolve and rerun)</td>
 <td> </td>
 </tr>
 <tr>
@@ -1790,7 +1281,7 @@ further_details | A more complete description of the service request | String | 
 </tr>
 </tbody>
 </table>
-<h3 id="example-response-10">Example response</h3>
+<h3 id="example-response-8">Example response</h3>
 <pre><code>{
   &quot;data&quot;:{
     &quot;type&quot;: &quot;Vorg-build&quot;,
@@ -1874,12 +1365,12 @@ further_details | A more complete description of the service request | String | 
 <h5>Note</h5>
 <p>This API endpoint is available only in Region 5 and 6 (for information about regions, see <a href="../other/other-ref-sites-regions-zones.html"><em>Understanding sites, regions and zones</em></a>).</p>
 </div>
-<h3 id="api-version-19">API version</h3>
+<h3 id="api-version-9">API version</h3>
 <p>v1</p>
-<h3 id="request-19">Request</h3>
-<h4 id="request-body-19">Request body</h4>
+<h3 id="request-9">Request</h3>
+<h4 id="request-body-9">Request body</h4>
 <p>None</p>
-<h4 id="uri-parameters-19">URI parameters</h4>
+<h4 id="uri-parameters-9">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1901,22 +1392,22 @@ further_details | A more complete description of the service request | String | 
 <h4 id="example-request">Example request</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -H 'Accept: application/json' -H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/vorg-builds/10 -X GET
 </code></pre>
-<h3 id="response-19">Response</h3>
-<h4 id="successful-http-response-19">Successful HTTP response</h4>
+<h3 id="response-9">Response</h3>
+<h4 id="successful-http-response-9">Successful HTTP response</h4>
 <p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-19">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-9">Unsuccessful HTTP response</h4>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>404 Not Found --- The vOrg build could not be found or the user does not have access to the vOrg build</p>
-<h4 id="response-body-19">Response body</h4>
+<h4 id="response-body-9">Response body</h4>
 <p>Attribute | Type | Value | Example
 type | String | Vorg-build |  
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser@example.com
-state | String | The state of the build<br>Valid values:</br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created</br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) |  
+state | String | The state of the build<br>Valid values:<br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created<br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) |  
 serviceName | String | The name of the vOrg (as specified in the build request) | My compute service
 zoneId | String | The zone in which the vOrg is located (as specified in the build request) | B</p>
-<h4 id="example-response-11">Example response</h4>
+<h4 id="example-response-9">Example response</h4>
 <pre><code>{
   &quot;data&quot;:{
     &quot;type&quot;: &quot;Vorg-build&quot;,
@@ -2005,12 +1496,12 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 </code></pre>
 <h2 id="get-apiaccountsaccount_idvorg-builds">GET /api/accounts/:account_id/vorg-builds</h2>
 <p>Returns information about all self-service vOrg builds for an account.</p>
-<h3 id="api-version-20">API version</h3>
+<h3 id="api-version-10">API version</h3>
 <p>v1</p>
-<h3 id="request-20">Request</h3>
-<h4 id="request-body-20">Request body</h4>
+<h3 id="request-10">Request</h3>
+<h4 id="request-body-10">Request body</h4>
 <p>None</p>
-<h4 id="uri-parameters-20">URI parameters</h4>
+<h4 id="uri-parameters-10">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -2029,19 +1520,19 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-19">Example request (Curl)</h4>
+<h4 id="example-request-curl-9">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorg-builds
 </code></pre>
-<h4 id="example-request-ruby-17">Example request (Ruby)</h4>
+<h4 id="example-request-ruby-7">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/vorg-builds&quot;) {|req| Req.headers['cookie'] = cookies }
 </code></pre>
-<h3 id="response-20">Response</h3>
-<h4 id="successful-http-response-20">Successful HTTP response</h4>
+<h3 id="response-10">Response</h3>
+<h4 id="successful-http-response-10">Successful HTTP response</h4>
 <p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-20">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-10">Unsuccessful HTTP response</h4>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
-<h4 id="response-body-20">Response body</h4>
+<h4 id="response-body-10">Response body</h4>
 <p>Returns an array of vOrg builds</p>
 <table>
 <thead>
@@ -2080,7 +1571,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 <tr>
 <td>state</td>
 <td>String</td>
-<td>The state of the build<br>Valid values:</br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created</br>- completed -- vOrg has been successfully created<br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>The state of the build<br>Valid values:<br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created<br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun)</td>
 <td> </td>
 </tr>
 <tr>
@@ -2097,7 +1588,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 </tr>
 </tbody>
 </table>
-<h4 id="example-response-12">Example response</h4>
+<h4 id="example-response-10">Example response</h4>
 <pre><code>{
   &quot;data&quot;: [
     {
@@ -2238,14 +1729,14 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 </code></pre>
 <h2 id="get-apiaccountsaccount_idvorgsvorg_idvdcs">GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs</h2>
 <p>Returns a list of basic information about the virtual data centres (VDCs) in the specified account under the specified vOrg.</p>
-<h3 id="api-version-21">API version</h3>
+<h3 id="api-version-11">API version</h3>
 <p>v1</p>
-<h3 id="request-21">Request</h3>
-<h4 id="request-body-21">Request body</h4>
+<h3 id="request-11">Request</h3>
+<h4 id="request-body-11">Request body</h4>
 <p>None</p>
-<h4 id="parameters-19">Parameters</h4>
+<h4 id="parameters-9">Parameters</h4>
 <p>None</p>
-<h4 id="uri-parameters-21">URI parameters</h4>
+<h4 id="uri-parameters-11">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -2270,17 +1761,17 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-20">Example request (Curl)</h4>
+<h4 id="example-request-curl-10">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs
 </code></pre>
-<h3 id="response-21">Response</h3>
-<h4 id="successful-http-response-21">Successful HTTP response</h4>
+<h3 id="response-11">Response</h3>
+<h4 id="successful-http-response-11">Successful HTTP response</h4>
 <p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-21">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-11">Unsuccessful HTTP response</h4>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>403 Forbidden --- The user does not have permissions for the vOrg</p>
 <p>404 Not Found --- The user does not have access to the account, the account does not exist or the vOrg does not exist</p>
-<h4 id="response-body-21">Response body</h4>
+<h4 id="response-body-11">Response body</h4>
 <table>
 <thead>
 <tr>
@@ -2311,7 +1802,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 </tr>
 </tbody>
 </table>
-<h4 id="example-response-13">Example response</h4>
+<h4 id="example-response-11">Example response</h4>
 <pre><code>{
     &quot;data&quot;: [
         {
@@ -2416,13 +1907,13 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 <h5>Note</h5>
 <p>This API endpoint is available only in Region 5 and 6 (for information about regions, see <a href="../other/other-ref-sites-regions-zones.html"><em>Understanding sites, regions and zones</em></a>).</p>
 </div>
-<h3 id="api-version-22">API version</h3>
+<h3 id="api-version-12">API version</h3>
 <p>v1</p>
-<h3 id="request-22">Request</h3>
-<h4 id="request-body-22">Request body</h4>
+<h3 id="request-12">Request</h3>
+<h4 id="request-body-12">Request body</h4>
 <pre><code>{&quot;data&quot;: {&quot;type&quot;: &quot;VDC&quot;, &quot;attributes&quot;: {&quot;vmType&quot;: &quot;POWER&quot;, &quot;name&quot;: &quot;DEMO&quot;}}}
 </code></pre>
-<h4 id="parameters-20">Parameters</h4>
+<h4 id="parameters-10">Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -2447,7 +1938,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 </tr>
 </tbody>
 </table>
-<h4 id="uri-parameters-22">URI parameters</h4>
+<h4 id="uri-parameters-12">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -2472,18 +1963,18 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-21">Example request (Curl)</h4>
+<h4 id="example-request-curl-11">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs -X POST -d '{&quot;data&quot;: {&quot;type&quot;: &quot;VDC&quot;, &quot;attributes&quot;: {&quot;vmType&quot;: &quot;POWER&quot;, &quot;name&quot;: &quot;DEMO&quot;}}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
 </code></pre>
-<h3 id="response-22">Response</h3>
-<h4 id="successful-http-response-22">Successful HTTP response</h4>
+<h3 id="response-12">Response</h3>
+<h4 id="successful-http-response-12">Successful HTTP response</h4>
 <p>202 Accepted --- Includes a location header (for example Location: /api/vdc-builds/10)</p>
-<h4 id="unsuccessful-http-response-22">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-12">Unsuccessful HTTP response</h4>
 <p>400 Invalid --- The data uploaded does not match the expected schema or there is a validation problem</p>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>403 Forbidden --- The user is not an administrator for the vOrg</p>
 <p>404 Not Found --- The VDC could not be found, the user does not have access to the account or the account does not exist</p>
-<h4 id="response-body-22">Response body</h4>
+<h4 id="response-body-12">Response body</h4>
 <table>
 <thead>
 <tr>
@@ -2521,7 +2012,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 <tr>
 <td>state</td>
 <td>String</td>
-<td>The state of the build<br>Valid valudes:</br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>The state of the build<br>Valid valudes:<br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created<br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun)</td>
 <td> </td>
 </tr>
 <tr>
@@ -2533,7 +2024,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 <tr>
 <td>vmType</td>
 <td>String</td>
-<td>The type of VM workloads in the VDC (as specified in the build request)<br>Valid values:</br>- POWER<br>- ESSENTIAL</br>- PRIORITY</td>
+<td>The type of VM workloads in the VDC (as specified in the build request)<br>Valid values:<br>- POWER<br>- ESSENTIAL<br>- PRIORITY</td>
 <td>POWER</td>
 </tr>
 <tr>
@@ -2544,7 +2035,7 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 </tr>
 </tbody>
 </table>
-<h4 id="example-response-14">Example response</h4>
+<h4 id="example-response-12">Example response</h4>
 <pre><code>{
   &quot;data&quot;:{
     &quot;type&quot;: &quot;VDC-build&quot;,
@@ -2649,14 +2140,14 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 <h5>Note</h5>
 <p>This API endpoint is available only in Region 5 and 6 (for information about regions, see <a href="../other/other-ref-sites-regions-zones.html"><em>Understanding sites, regions and zones</em></a>).</p>
 </div>
-<h3 id="api-version-23">API version</h3>
+<h3 id="api-version-13">API version</h3>
 <p>v1</p>
-<h3 id="request-23">Request</h3>
-<h4 id="request-body-23">Request body</h4>
+<h3 id="request-13">Request</h3>
+<h4 id="request-body-13">Request body</h4>
 <p>None</p>
-<h4 id="parameters-21">Parameters</h4>
+<h4 id="parameters-11">Parameters</h4>
 <p>None</p>
-<h4 id="uri-parameters-23">URI parameters</h4>
+<h4 id="uri-parameters-13">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -2675,26 +2166,26 @@ zoneId | String | The zone in which the vOrg is located (as specified in the bui
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-22">Example request (Curl)</h4>
+<h4 id="example-request-curl-12">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -H 'Accept: application/json' -H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/vdc-builds/10 -X GET
 </code></pre>
-<h3 id="response-23">Response</h3>
-<h4 id="successful-http-response-23">Successful HTTP response</h4>
+<h3 id="response-13">Response</h3>
+<h4 id="successful-http-response-13">Successful HTTP response</h4>
 <p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-23">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-13">Unsuccessful HTTP response</h4>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>404 Not Found --- The VDC build cannot be found or the user does not have access to the VDC build</p>
-<h4 id="response-body-23">Response body</h4>
+<h4 id="response-body-13">Response body</h4>
 <p>Attribute | Type | Value | Example
 type | String | VDC-build |  
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created    | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser@example.com
-state | String | The state of the build<br>Valid values:</br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) |  
+state | String | The state of the build<br>Valid values:<br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created<br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) |  
 vdcName | String | The name of the VDC (as specified in the build request) | My VDC
-vmType | String | The type of VM workloads used in the VDC (as specified in the build request)</br>Valid values:<br>- POWER</br>- ESSENTIAL<br>- PRIORITY  | POWER
+vmType | String | The type of VM workloads used in the VDC (as specified in the build request)<br>Valid values:<br>- POWER<br>- ESSENTIAL<br>- PRIORITY  | POWER
 serviceName | String | The name of the vOrg to which the VDC belongs | My Compute Service</p>
-<h4 id="example-response-15">Example response</h4>
+<h4 id="example-response-13">Example response</h4>
 <pre><code>{
   &quot;data&quot;:{
     &quot;type&quot;: &quot;VDC-build&quot;,
@@ -2795,12 +2286,12 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </code></pre>
 <h2 id="get-apiaccountsaccount_idvdc-builds">GET /api/accounts/:account_id/vdc-builds</h2>
 <p>Returns information about all self-service VDC builds for an account.</p>
-<h3 id="api-version-24">API version</h3>
+<h3 id="api-version-14">API version</h3>
 <p>v1</p>
-<h3 id="request-24">Request</h3>
-<h4 id="request-body-24">Request body</h4>
+<h3 id="request-14">Request</h3>
+<h4 id="request-body-14">Request body</h4>
 <p>None</p>
-<h4 id="uri-parameters-24">URI parameters</h4>
+<h4 id="uri-parameters-14">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -2819,19 +2310,19 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-23">Example request (Curl)</h4>
+<h4 id="example-request-curl-13">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vdc-builds
 </code></pre>
-<h4 id="example-request-ruby-18">Example request (Ruby)</h4>
+<h4 id="example-request-ruby-8">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/vdc-builds&quot;) {|req| Req.headers['cookie'] = cookies }
 </code></pre>
-<h3 id="response-24">Response</h3>
-<h4 id="successful-http-response-24">Successful HTTP response</h4>
+<h3 id="response-14">Response</h3>
+<h4 id="successful-http-response-14">Successful HTTP response</h4>
 <p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-24">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-14">Unsuccessful HTTP response</h4>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
-<h4 id="response-body-24">Response body</h4>
+<h4 id="response-body-14">Response body</h4>
 <p>Returns an array of VDC builds</p>
 <table>
 <thead>
@@ -2870,7 +2361,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 <tr>
 <td>state</td>
 <td>String</td>
-<td>The state of the build<br>Valid values:</br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>The state of the build<br>Valid values:<br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created<br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun)</td>
 <td> </td>
 </tr>
 <tr>
@@ -2882,7 +2373,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 <tr>
 <td>vmType</td>
 <td>String</td>
-<td>The type of VM workloads used in the VDC (as specified in the build request)<br>Valid values:</br>- POWER<br>- ESSENTIAL</br>- PRIORITY</td>
+<td>The type of VM workloads used in the VDC (as specified in the build request)<br>Valid values:<br>- POWER<br>- ESSENTIAL<br>- PRIORITY</td>
 <td>POWER</td>
 </tr>
 <tr>
@@ -2893,7 +2384,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tr>
 </tbody>
 </table>
-<h4 id="example-response-16">Example response</h4>
+<h4 id="example-response-14">Example response</h4>
 <pre><code>{
   &quot;data&quot;: [
     {
@@ -3046,14 +2537,14 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </code></pre>
 <h2 id="get-apiaccountsaccount_idvorgsvorg_idvdcsvdc_urnedge-gateways">GET /api/accounts/:account_id/vorgs/:vorg_id/vdcs/:vdc_urn/edge-gateways</h2>
 <p>Returns basic information about the edge gateways in the specified account under the specified VDC.</p>
-<h3 id="api-version-25">API version</h3>
+<h3 id="api-version-15">API version</h3>
 <p>v1</p>
-<h3 id="request-25">Request</h3>
-<h4 id="request-body-25">Request body</h4>
+<h3 id="request-15">Request</h3>
+<h4 id="request-body-15">Request body</h4>
 <p>None</p>
-<h4 id="parameters-22">Parameters</h4>
+<h4 id="parameters-12">Parameters</h4>
 <p>None</p>
-<h4 id="uri-parameters-25">URI parameters</h4>
+<h4 id="uri-parameters-15">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -3084,17 +2575,17 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-24">Example request (Curl)</h4>
+<h4 id="example-request-curl-14">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/vorgs/12/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways
 </code></pre>
-<h3 id="response-25">Response</h3>
-<h4 id="successful-http-response-25">Successful HTTP response</h4>
+<h3 id="response-15">Response</h3>
+<h4 id="successful-http-response-15">Successful HTTP response</h4>
 <p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-25">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-15">Unsuccessful HTTP response</h4>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>403 Forbidden --- The user does not have permissions for the vOrg</p>
 <p>404 Not Found --- The user does not have access to the account, the account does not exist or the vOrg does not exist</p>
-<h4 id="response-body-25">Response body</h4>
+<h4 id="response-body-15">Response body</h4>
 <p>If the call returns an empty list, check that the specified VDC URN is correct.</p>
 <table>
 <thead>
@@ -3126,7 +2617,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tr>
 </tbody>
 </table>
-<h4 id="example-response-17">Example response</h4>
+<h4 id="example-response-15">Example response</h4>
 <pre><code>{
     &quot;data&quot;: [
         {
@@ -3224,13 +2715,13 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 <h5>Note</h5>
 <p>This API endpoint is available only in Region 5 and 6 (for information about regions, see <a href="../other/other-ref-sites-regions-zones.html"><em>Understanding sites, regions and zones</em></a>).</p>
 </div>
-<h3 id="api-version-26">API version</h3>
+<h3 id="api-version-16">API version</h3>
 <p>v1</p>
-<h3 id="request-26">Request</h3>
-<h4 id="request-body-26">Request body</h4>
+<h3 id="request-16">Request</h3>
+<h4 id="request-body-16">Request body</h4>
 <pre><code>{&quot;data&quot;: {&quot;type&quot;: &quot;EdgeGateway&quot;, &quot;attributes&quot;: {&quot;connectivityType&quot;: &quot;Internet&quot;}}}
 </code></pre>
-<h4 id="parameters-23">Parameters</h4>
+<h4 id="parameters-13">Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -3255,7 +2746,7 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tr>
 </tbody>
 </table>
-<h4 id="uri-parameters-26">URI parameters</h4>
+<h4 id="uri-parameters-16">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -3286,18 +2777,18 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-25">Example request (Curl)</h4>
+<h4 id="example-request-curl-15">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/accounts/53/vorgs/1/vdcs/urn:vcloud:vdc:345a5d90-1c8c-4fb2-bf4f-f480de82c594/edge-gateways -X POST -d '{&quot;data&quot;: {&quot;type&quot;: &quot;EdgeGateway&quot;, &quot;attributes&quot;: {&quot;connectivityType&quot;: &quot;Internet&quot;}}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
 </code></pre>
-<h3 id="response-26">Response</h3>
-<h4 id="successful-http-response-26">Successful HTTP response</h4>
+<h3 id="response-16">Response</h3>
+<h4 id="successful-http-response-16">Successful HTTP response</h4>
 <p>202 Accepted --- Includes a location header (for example Location: /api/edge-gateway-builds/23)</p>
-<h4 id="unsuccessful-http-response-26">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-16">Unsuccessful HTTP response</h4>
 <p>400 Invalid --- The data uploaded does not match the expected schema or there is a validation problem</p>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>403 Forbidden --- The user is not an administrator for the vOrg</p>
 <p>404 Not Found --- The VDC could not be found, the user does not have access to the account or the account does not exist</p>
-<h4 id="response-body-26">Response body</h4>
+<h4 id="response-body-16">Response body</h4>
 <table>
 <thead>
 <tr>
@@ -3335,12 +2826,12 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 <tr>
 <td>state</td>
 <td>String</td>
-<td>The state of the build<br>Valid values:</br>-approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>The state of the build<br>Valid values:<br>-approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created<br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
 <td>completed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="example-response-18">Example response</h4>
+<h4 id="example-response-16">Example response</h4>
 <pre><code>{
   &quot;data&quot;:{
     &quot;type&quot;: &quot;EdgeGateway-build&quot;,
@@ -3403,14 +2894,14 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 <h5>Note</h5>
 <p>This API endpoint is available only in Region 5 and 6 (for information about regions, see <a href="../other/other-ref-sites-regions-zones.html"><em>Understanding sites, regions and zones</em></a>).</p>
 </div>
-<h3 id="api-version-27">API version</h3>
+<h3 id="api-version-17">API version</h3>
 <p>v1</p>
-<h3 id="request-27">Request</h3>
-<h4 id="request-body-27">Request body</h4>
+<h3 id="request-17">Request</h3>
+<h4 id="request-body-17">Request body</h4>
 <p>None</p>
-<h4 id="parameters-24">Parameters</h4>
+<h4 id="parameters-14">Parameters</h4>
 <p>None</p>
-<h4 id="uri-parameters-27">URI parameters</h4>
+<h4 id="uri-parameters-17">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -3429,16 +2920,16 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-26">Example request (Curl)</h4>
+<h4 id="example-request-curl-16">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -H 'Accept: application/json' -H 'Content-Type: application/json' https://portal.skyscapecloud.com/api/edge-gateway-builds/23 -X GET
 </code></pre>
-<h3 id="response-27">Response</h3>
-<h4 id="successful-http-response-27">Successful HTTP response</h4>
+<h3 id="response-17">Response</h3>
+<h4 id="successful-http-response-17">Successful HTTP response</h4>
 <p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-27">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-17">Unsuccessful HTTP response</h4>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>404 Not Found --- The edge gateway build could not be found or the user does not have access to the edge gateway build</p>
-<h4 id="response-body-27">Response body</h4>
+<h4 id="response-body-17">Response body</h4>
 <table>
 <thead>
 <tr>
@@ -3476,12 +2967,12 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 <tr>
 <td>state</td>
 <td>String</td>
-<td>The state of the build<br>Valid values:</br>- approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>The state of the build<br>Valid values:<br>- approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created<br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
 <td>completed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="example-response-19">Example response</h4>
+<h4 id="example-response-17">Example response</h4>
 <pre><code>{
   &quot;data&quot;:{
     &quot;type&quot;: &quot;EdgeGateway-build&quot;,
@@ -3540,12 +3031,12 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </code></pre>
 <h2 id="get-apiaccountsaccount_idedge-gateway-builds">GET /api/accounts/:account_id/edge-gateway-builds</h2>
 <p>Returns information about all self-service edge gateway builds for an account.</p>
-<h3 id="api-version-28">API version</h3>
+<h3 id="api-version-18">API version</h3>
 <p>v1</p>
-<h3 id="request-28">Request</h3>
-<h4 id="request-body-28">Request body</h4>
+<h3 id="request-18">Request</h3>
+<h4 id="request-body-18">Request body</h4>
 <p>None</p>
-<h4 id="uri-parameters-28">URI parameters</h4>
+<h4 id="uri-parameters-18">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -3564,19 +3055,19 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-27">Example request (Curl)</h4>
+<h4 id="example-request-curl-17">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/edge-gateway-builds
 </code></pre>
-<h4 id="example-request-ruby-19">Example request (Ruby)</h4>
+<h4 id="example-request-ruby-9">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/edge-gateway-builds&quot;) {|req| Req.headers['cookie'] = cookies }
 </code></pre>
-<h3 id="response-28">Response</h3>
-<h4 id="successful-http-response-28">Successful HTTP response</h4>
+<h3 id="response-18">Response</h3>
+<h4 id="successful-http-response-18">Successful HTTP response</h4>
 <p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-28">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-18">Unsuccessful HTTP response</h4>
 <p>401 Unauthorized --- The user could not be authenticated</p>
 <p>403 Forbidden --- The user does not have access to the account or the account does not exist</p>
-<h4 id="response-body-28">Response body</h4>
+<h4 id="response-body-18">Response body</h4>
 <p>Returns an array of edge gateway builds</p>
 <table>
 <thead>
@@ -3615,12 +3106,12 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 <tr>
 <td>state</td>
 <td>String</td>
-<td>The state of the build<br>Valid values:</br>- approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
+<td>The state of the build<br>Valid values:<br>- approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created<br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun)</td>
 <td>completed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="example-response-20">Example response</h4>
+<h4 id="example-response-18">Example response</h4>
 <pre><code>{
   &quot;data&quot;: [
     {
@@ -3745,14 +3236,14 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </code></pre>
 <h2 id="get-apiaccountsaccount_idplatform_visibilityvmotion_events">GET /api/accounts/:account_id/platform_visibility/vmotion_events</h2>
 <p>Returns a list of VMotion events that occurred in the specified account over the last 12 hours.</p>
-<h3 id="api-version-29">API version</h3>
+<h3 id="api-version-19">API version</h3>
 <p>v1</p>
-<h3 id="request-29">Request</h3>
-<h4 id="request-body-29">Request body</h4>
+<h3 id="request-19">Request</h3>
+<h4 id="request-body-19">Request body</h4>
 <p>None</p>
-<h4 id="parameters-25">Parameters</h4>
+<h4 id="parameters-15">Parameters</h4>
 <p>None</p>
-<h4 id="uri-parameters-29">URI parameters</h4>
+<h4 id="uri-parameters-19">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -3771,24 +3262,24 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-28">Example request (Curl)</h4>
+<h4 id="example-request-curl-18">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/accounts/1/platform_visibility/vmotion_events
 </code></pre>
-<h4 id="example-request-ruby-20">Example request (Ruby)</h4>
+<h4 id="example-request-ruby-10">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/accounts/#{account_id}/platform_visibility/vmotion_events&quot;) { |req| req.headers['cookie'] = cookies }
 </code></pre>
-<h3 id="response-29">Response</h3>
-<h4 id="successful-http-response-29">Successful HTTP response</h4>
+<h3 id="response-19">Response</h3>
+<h4 id="successful-http-response-19">Successful HTTP response</h4>
 <p>200 OK --- The request was successful</p>
-<h4 id="unsuccessful-http-response-29">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-19">Unsuccessful HTTP response</h4>
 <p>403 Forbidden --- The user does not have access to the account or any compute services</p>
-<h4 id="response-body-29">Response body</h4>
+<h4 id="response-body-19">Response body</h4>
 <p>Returns an array of VMotion events for the last 12 hours.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The maximum number of characters displayed for the VM and vApp names is 32 characters. If your VM or vApp names are longer than this, only the first 32 characters will be shown.</p>
 </div>
-<h4 id="example-response-21">Example response</h4>
+<h4 id="example-response-19">Example response</h4>
 <pre><code>{
     &quot;event_created_time&quot;: &quot;2016-10-04T00:08:01+01:00&quot;,
     &quot;service_id&quot;: 12,
@@ -3832,14 +3323,14 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </code></pre>
 <h2 id="get-apibillingcloud-storage-report">GET /api/billing/cloud-storage-report</h2>
 <p>Returns billing information for Cloud Storage.</p>
-<h3 id="api-version-30">API version</h3>
+<h3 id="api-version-20">API version</h3>
 <p>v1</p>
-<h3 id="request-30">Request</h3>
-<h4 id="request-body-30">Request body</h4>
+<h3 id="request-20">Request</h3>
+<h4 id="request-body-20">Request body</h4>
 <p>None</p>
-<h4 id="parameters-26">Parameters</h4>
+<h4 id="parameters-16">Parameters</h4>
 <p>None</p>
-<h4 id="uri-parameters-30">URI parameters</h4>
+<h4 id="uri-parameters-20">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -3864,19 +3355,19 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-29">Example request (Curl)</h4>
+<h4 id="example-request-curl-19">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H &quot;Accept: application/json&quot; -k https://portal.skyscapecloud.com/api/billing/cloud-storage-report?date=2018-01-01&amp;org_id=xx-xx-xx-xxxxxxx
 </code></pre>
-<h4 id="example-request-ruby-21">Example request (Ruby)</h4>
+<h4 id="example-request-ruby-11">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/billing/cloud-storage-report?date=#{date}&amp;org_id=#{org_id}&quot;) { |req| req.headers['cookie'] = cookies }
 </code></pre>
-<h3 id="response-30">Response</h3>
-<h4 id="successful-http-response-30">Successful HTTP response</h4>
+<h3 id="response-20">Response</h3>
+<h4 id="successful-http-response-20">Successful HTTP response</h4>
 <p>200 OK --- The request was successful<br>Content-Type (text/csv)</p>
-<h4 id="unsuccessful-http-response-30">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-20">Unsuccessful HTTP response</h4>
 <p>400 Bad Request</p>
 <p>401 Unauthorized --- The user could not be authenticated</p>
-<h4 id="response-body-30">Response body</h4>
+<h4 id="response-body-20">Response body</h4>
 <p>Returns a CSV report for the whole month specified including the date provided.</p>
 <table>
 <thead>
@@ -3923,14 +3414,14 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 <h2 id="get-apibillingbilling-csv">GET /api/billing/billing-csv</h2>
 <p>Returns a CSV containing billing data for the period given.</p>
 <p>For more information about this CSV, see <a href="../other/other-ref-invoice-evidence-file.html"><em>Understanding your invoice evidence file</em></a> and the <a href="../other/other-faq-billing.html"><em>Invoice and billing FAQs</em></a>.</p>
-<h3 id="api-version-31">API version</h3>
+<h3 id="api-version-21">API version</h3>
 <p>v1</p>
-<h3 id="request-31">Request</h3>
-<h4 id="request-body-31">Request body</h4>
+<h3 id="request-21">Request</h3>
+<h4 id="request-body-21">Request body</h4>
 <p>None</p>
-<h4 id="parameters-27">Parameters</h4>
+<h4 id="parameters-17">Parameters</h4>
 <p>None</p>
-<h4 id="uri-parameters-31">URI parameters</h4>
+<h4 id="uri-parameters-21">URI parameters</h4>
 <table>
 <thead>
 <tr>
@@ -3955,19 +3446,19 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tr>
 </tbody>
 </table>
-<h4 id="example-request-curl-30">Example request (Curl)</h4>
+<h4 id="example-request-curl-20">Example request (Curl)</h4>
 <pre><code class="lang-bash">curl -b /tmp/cookies.txt -X GET -H &quot;Accept: application/json&quot; -k https://portal.skyscapecloud.com/api/billing/billing-csv?period=2018-01&amp;org_id=xx-xx-xx-xxxxxxx
 </code></pre>
-<h4 id="example-request-ruby-22">Example request (Ruby)</h4>
+<h4 id="example-request-ruby-12">Example request (Ruby)</h4>
 <pre><code>resp = conn.get(&quot;/api/billing/billing-csv?period=#{period}&amp;org_id=#{org_id}&quot;) { |req| req.headers['cookie'] = cookies }
 </code></pre>
-<h3 id="response-31">Response</h3>
-<h4 id="successful-http-response-31">Successful HTTP response</h4>
+<h3 id="response-21">Response</h3>
+<h4 id="successful-http-response-21">Successful HTTP response</h4>
 <p>200 OK --- The request was successful<br>Content-Type (text/csv)</p>
-<h4 id="unsuccessful-http-response-31">Unsuccessful HTTP response</h4>
+<h4 id="unsuccessful-http-response-21">Unsuccessful HTTP response</h4>
 <p>400 Bad Request</p>
 <p>401 Unauthorized --- The user could not be authenticated</p>
-<h4 id="response-body-31">Response body</h4>
+<h4 id="response-body-21">Response body</h4>
 <p>Returns a CSV report for the period specified.</p>
 <table>
 <thead>
@@ -4204,9 +3695,9 @@ serviceName | String | The name of the vOrg to which the VDC belongs | My Comput
 </tbody>
 </table>
 <h2 id="further-information">Further information</h2>
-<p>If you want to discuss any aspect of the service or settings specific to your domain, log a Service Request via the <a href="https://portal.ukcloud.com/support/my_calls">My Calls</a> section of the UKCloud Portal.</p>
+<p>If you want to discuss any aspect of the service or settings specific to your domain, log a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">

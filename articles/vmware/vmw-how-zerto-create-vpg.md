@@ -12,7 +12,7 @@ toc_sub3:
 toc_sub4:
 toc_title: Create a virtual protection group
 toc_fullpath: How To/vmw-how-zerto-create-vpg.md
-toc_mdlink: vmw-how-upgrade-edge.md
+toc_mdlink: vmw-how-zerto-create-vpg.md
 ---
 
 # How to create a virtual protection group
@@ -207,4 +207,4 @@ For Migration to the Cloud, you can now migrate your selected VMs to the UKCloud
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

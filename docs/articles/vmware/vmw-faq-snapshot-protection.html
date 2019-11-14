@@ -8,7 +8,7 @@
     <title>Snapshot Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Snapshot Protection FAQs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -145,7 +145,7 @@
 <h3 id="how-long-does-it-take-before-the-first-snapshot-is-taken">How long does it take before the first snapshot is taken?</h3>
 <p>The time it takes to add snapshot protection to a VM varies depending on how many other requests are in the queue. While the request is processed, the button in the <strong>Snapshot Protection</strong> column changes to an amber <strong>Processing</strong> button.</p>
 <p>When the process has completed, the button changes back to green and will indicate the snapshot policy you chose for the VM (<strong>14‑day</strong> or <strong>28‑day</strong>). If the process fails, the button changes to a red <strong>Failed</strong> button. In this situation, contact the UKCloud support team to resolve the issue.</p>
-<p>The first snapshot will be taken in the next available backup window. Backup status information is typically updated daily on the UKCloud Portal by 10:00am, but typically within minutes of the close of the backup window.</p>
+<p>The first snapshot will be taken in the next available backup window. Backup status information is typically updated daily on the UKCloud Portal by 10:00, but typically within minutes of the close of the backup window.</p>
 <h3 id="can-i-change-the-snapshot-policy-for-my-vm-at-any-time">Can I change the snapshot policy for my VM at any time?</h3>
 <p>Yes, there are no restrictions. After your changes have been processed, they will be applied to the snapshot taken in the next backup window.</p>
 <h3 id="how-are-my-automated-vm-snapshots-restored">How are my automated VM snapshots restored?</h3>
@@ -187,7 +187,7 @@
 <p>There's currently no SLA associated with the snapshot backup service, although it is monitored 24x7.</p>
 <h3 id="how-do-i-restore-data">How do I restore data?</h3>
 <p>You can request restoration of VMs only if you have access to the support ticketing system.</p>
-<p>To restore data, administrators can access the UKCloud Portal and, using My Calls, create a support ticket stating the VM and the backup schedule they want to restore. UKCloud operations then complete this task, restoring the entire VM image.</p>
+<p>To restore data, administrators can access the UKCloud Portal and, using <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a>, create a support ticket stating the VM and the backup schedule they want to restore. UKCloud operations then complete this task, restoring the entire VM image.</p>
 <h3 id="how-quickly-can-you-restore-a-vm">How quickly can you restore a VM?</h3>
 <p>The larger the VM, the longer the restore time:</p>
 <ul>
@@ -202,7 +202,7 @@
 <h3 id="if-a-vm-is-deleted-how-long-will-existing-snapshot-backups-be-retained">If a VM is deleted, how long will existing snapshot backups be retained?</h3>
 <p>The UKCloud platform automates the deletion of backups as they reach their retention date. Therefore, 14 or 28 days after the VM is deleted, depending on your chosen profile, the last snapshot backup will automatically be removed from the platform and consequently be unavailable for restore.</p>
 <h3 id="how-and-when-am-i-notified-of-snapshot-backup-failures">How and when am I notified of snapshot backup failures?</h3>
-<p>Backup information, including failures, is updated daily on the UKCloud platform by 10:00am, but typically within minutes of the close of the backup window.</p>
+<p>Backup information, including failures, is updated daily on the UKCloud platform by 10:00, but typically within minutes of the close of the backup window.</p>
 <p>For the steps required to access the status of a VM's snapshot backup, see <a href="vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
 <p>Note that we do not presently provide real-time alerting on individual VMs.</p>
 <h3 id="what-is-the-process-for-dealing-with-failures">What is the process for dealing with failures?</h3>
@@ -224,11 +224,11 @@
 <li><p>We'll conduct an investigation into the snapshot backup failure, and take appropriate mitigation steps.</p>
 </li>
 <li><p>Should the failure persist, we may suggest a customer review to try to resolve the issue.</p>
-<p>If we identify that the snapshot backup service is incompatible with your application and intended usage, we'll recommend a session with a Technical Account Manager or solution architect to work through alternative protection options.</p>
+<p>If we identify that the snapshot backup service is incompatible with your application and intended usage, we'll recommend a session with a Service Delivery Manager or solution architect to work through alternative protection options.</p>
 </li>
 </ul>
 <h3 id="how-and-when-are-reruns-scheduled">How and when are reruns scheduled?</h3>
-<p>Backups are attempted during the hours of 2000 and 0800.</p>
+<p>Backups are attempted during the hours of 20:00 and 08:00.</p>
 <p>A backup will not be reattempted in the same backup window, but will be included as normal in the next window.</p>
 <p>If a snapshot backup attempt is returned as a failure this will be reported to the UKCloud support team, and any remedial actions will be in place for the backup attempt in the next window.</p>
 <h3 id="how-is-the-automated-vm-snapshot-backup-service-charged">How is the automated VM snapshot backup service charged?</h3>
@@ -252,7 +252,7 @@
 <h3 id="are-snapshot-policies-automatically-applied-to-vms">Are Snapshot policies automatically applied to VMs?</h3>
 <p>Protection products are not automatically applied to VMs running on the UKCloud platform, therefore you must explicitly select the protection option that best meets your requirements.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">

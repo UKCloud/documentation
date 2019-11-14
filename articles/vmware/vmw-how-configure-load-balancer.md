@@ -3,8 +3,8 @@ title: How to configure a load balancer | UKCloud Ltd
 description: Shows how to configure a load balancer within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: lthangarajah
+lastreviewed: 21/06/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -49,14 +49,6 @@ To configure a load balancer:
     For more information about syslog servers, see [*How to access syslog data for your advanced gateway*](vmw-how-access-syslog-data-adv.md)
 
 7. Click **Save changes**.
-
-- [How to configure a load balancer](#how-to-configure-a-load-balancer)
-  - [Overview](#overview)
-  - [Configuring a load balancer](#configuring-a-load-balancer)
-    - [Configuring a pool server](#configuring-a-pool-server)
-    - [Configuring a virtual server](#configuring-a-virtual-server)
-  - [Next steps](#next-steps)
-  - [Feedback](#feedback)
 
 ### Configuring a pool server
 
@@ -134,4 +126,4 @@ In this article you've learned how to create firewall rules. For other edge gate
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

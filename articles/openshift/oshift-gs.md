@@ -77,7 +77,7 @@ In addition, we recommend the installation of the OpenShift CLI on your device.
 
 UKCloud will provision you with an OpenShift Foundation Pack, providing you with 32GiB of container resources to deploy your applications.
 
-You can expand your cluster by requesting Runtime Packs. Runtime Packs come in three sizes: small (16GiB 2vCPU), medium (32GiB 4vCPU) and large (64GiB 8vCPU) and are deployed by UKCloud via a Service Request through the UKCloud Portal.
+You can expand your cluster by requesting Runtime Packs. Runtime Packs come in three sizes: small (16GiB 2vCPU), medium (32GiB 4vCPU) and large (64GiB 8vCPU) and are deployed by UKCloud via a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Using the web console
 
@@ -157,4 +157,4 @@ This section provides a glossary of terms specific to UKCloud for OpenShift.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

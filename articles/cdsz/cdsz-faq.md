@@ -3,8 +3,8 @@ title: Cross Domain Security Zone FAQs | UKCloud Ltd
 description: Frequently asked questions for Cross Domain Security Zone
 services: cdsz
 author: Matt Warner
-reviewer:
-lastreviewed: 17/07/2018 10:43:00
+reviewer: Bart Challis
+lastreviewed: 20/08/2019
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -21,97 +21,52 @@ toc_mdlink: cdsz-faq.md
 
 ### What is the service?
 
-The UKCloud Cross Domain Security Zone (CDSZ) enables customers to transfer data securely between the UKCloud Assured OFFICIAL (formerly IL2) cloud platform and the UKCloud Elevated OFFICIAL (formerly IL3) cloud platform using CESG-approved cross-domain security patterns.
+The UKCloud Cross Domain Security Zone (CDSZ) enables customers to transfer data securely between the UKCloud Assured OFFICIAL and UKCloud Elevated OFFICIAL security domains using NCSC-approved cross-domain security patterns.
 
-This allows solutions hosted on the Elevated OFFICIAL cloud platform that are citizen facing to be accessed securely from the internet.
+This allows solutions hosted on the Elevated OFFICIAL security domain that are citizen-facing to be accessed securely from the internet.
 
-Two service options are available to enable use of the CDSZ:
-
-- UKCloud Guard
-
-- Walled Garden
+> [!NOTE]
+> UKCloud Guard is no longer available as an option for CDSZ. All new CDSZ deployments must follow the Walled Garden design. We will continue to provide support to customers who previously added UKCloud Guard to their environment, although we would encourage using Walled Garden instead.
 
 ### Do I have to buy other UKCloud services to use services in the CDSZ?
 
 Yes. UKCloud cross-domain services are available only to customers purchasing other UKCloud services, such as IaaS (compute and storage) or PaaS (UKCloud for OpenShift).
 
-### Is there a free trial available for either service option?
+### Is there a free trial available for CDSZ?
 
 The complex assurance requirements mean that trials aren't available.
 
 ### What is the process for applying for a service in the CDSZ?
 
-You can find the information you need in the UKCloud Knowledge Centre, including a detailed description of the assurance process.
+You can find the information you need in the UKCloud Knowledge Centre, including a detailed description of the assurance process, in [*UKCloud Cross Domain Security Zone application process*](cdsz-ref-application-process.md).
 
-### How do I enable access from the internet to my solution hosted on the Elevated OFFICIAL cloud platform?
+### How do I enable access from the internet to my solution hosted on the Elevated OFFICIAL security domain?
 
-For citizen-facing solutions hosted on the Elevated OFFICIAL cloud platform that need to be accessible from the internet, you can use the UKCloud Guard, or build your own solution using the Walled Garden.
+For citizen-facing solutions hosted on the Elevated OFFICIAL security domain that need to be accessible from the internet, you can build your own solution using the Walled Garden.
 
-If you use the UKCloud Guard, you'll need to deploy additional web servers on the Assured OFFICIAL cloud platform to perform pre-authentication, validation checking and initial anti-virus. The web servers can then communicate with your application server hosted on the Elevated OFFICIAL cloud platform via HTTP web services through the UKCloud Guard. Use of the UKCloud Guard is subject to approval by the UKCloud SIRO.
+With the Walled Garden, you can create your own inspection, anti-malware and security services in the CDSZ between the internet-facing components on the Assured OFFICIAL security domain and the higher-security components hosted on the Elevated OFFICIAL security domain. Use of CDSZ Walled Garden is subject to approval by the data owner SIRO.
 
-With the Walled Garden, you can create your own inspection, anti-malware and security services in the CDSZ between the internet-facing components on the Assured OFFICIAL cloud platform and the higher-security components hosted on the Elevated OFFICIAL cloud platform. Use of a self-managed Walled garden is subject to approval by the UKCloud SIRO.
+Direct connectivity into the UKCloud Elevated OFFICIAL security domain via the internet is possible using a CAPS-approved VPN solution utilising government-grade encryption products (for example, Kryptor). CPA-approved (or equivalent standard) VPN solutions may be used subject to approval by the UKCloud SIRO. UKCloud can host the IPsec VPN gateway device within the Elevated OFFICIAL security domain, but procurement, configuration and ongoing management of the solution are your responsibility.
 
-Direct connectivity into the UKCloud Elevated OFFICIAL cloud platform via the internet is possible using a CAPS-approved VPN solution using government-grade encryption products (for example, Kryptor). CPA-approved (or equivalent standard) VPN solutions may be used subject to approval by the UKCloud SIRO. UKCloud can host the IPsec VPN gateway device within the Elevated OFFICIAL cloud platform, but procurement, configuration and ongoing management of the solution are your responsibility.
-
-UKCloud also offers Secure Remote Access, a CPA-approved VPN solution that allows access to the Elevated OFFICIAL cloud platform via a self-managed walled garden within the CDSZ. For more information, see the UKCloud Secure Remote Access service description on the Digital Marketplace.
+UKCloud also offers [*Secure Remote Access*](../sra/sra-gs.md), a CPA-approved VPN solution that allows access to the Elevated OFFICIAL security domain via a self-managed walled garden within the CDSZ.
 
 ### Are there any bandwidth limitations for traffic traversing the walled garden firewalls in and out of the CDSZ?
 
-Yes, there is a 1GB throughput limitation to the CDSZ in both Farnborough and Corsham.
+Yes, there is a 10Gbps throughput limitation to the CDSZ in both Farnborough and Corsham.
 
 ### Is there storage capacity on CDSZ virtual machines (VMs)?
 
 The storage capacity of a VM in the CDSZ is 60GB.
 
-UKCloud cannot provide additional storage in the CDSZ for designs involving patch repositories. We advise customers to engage a UKCloud solutions architect to create a design that allows use of storage on the Assured or the Elevated platform.
+UKCloud cannot provide additional storage in the CDSZ for designs involving patch repositories. We advise customers to engage a UKCloud solutions architect to create a design that allows use of storage on the Assured or the Elevated security domain.
 
 ### What information do I need to include in my application for a service in the CDSZ?
 
-As a minimum the application must include:
+You can find detailed information about how to apply for CDSZ in [*UKCloud Cross Domain Security Zone application process*](cdsz-ref-application-process.md).
 
-- A business case explaining why a cross-domain solution is required
+### What is Walled Garden?
 
-- The technical architecture of the solution - incorporating either the UKCloud Guard or your proposed Walled Garden solution
-
-- An assurance plan - your proposed approach to ensuring that risks are correctly identified, appropriate mitigation is implemented and residual risks are accepted, so that both the UKCloud and customer SIROs can make an informed decision about the risks of the solution
-
-## UKCloud Guard
-
-### What is the UKCloud Guard?
-
-UKCloud provides a secure and scalable Guard which supports structured and inspectable HTTP-based data flows.
-
-This service offers an immediately available (subject to the assurance process) multi-tenant Guard to support simple use cases.
-
-### What data can the UKCloud Guard inspect?
-
-It can inspect structured and inspectable HTTP-based data such as XML and JSON.
-
-### Does UKCloud support JSON and are there any 'rules' around it?
-
-Both guards (IWSVA and Deep Secure) can currently pass through JSON content. This is currently based on both products recognising the content as text.
-
-### Can I change the data that's allowed to flow through the UKCloud Guard?
-
-No. Any changes to what is and isn't allowed through the guard will be decided at a service level by UKCloud.
-
-If you need a different solution, we recommend you use the Walled Garden.
-
-### Can I design a redundant UKCloud Guard?
-
-Yes. You can implement a dual-site option that provides a secondary guard route in case the primary one fails.
-
-### How long will the assurance process take?
-
-Each business case and proposed solution will be assessed by the UKCloud team, and must be approved by the UKCloud SIRO.
-
-We aim to carry out the assessment within five days of receiving the business case and proposed solution, but we can't commit to timelines for approval.
-
-## Self-managed Walled Garden
-
-### What is the self-managed Walled Garden?
-
-We provide self-service access to the CDSZ so that customers can create their own Walled gardens using the technology and application services of their choice.
+We provide self-service access to the CDSZ so that customers can create their own walled gardens using the technology and application services of their choice.
 
 We provide an assurance wrap by ensuring that customers use appropriate risk management techniques to understand and mitigate identified risks.
 
@@ -119,27 +74,15 @@ We provide an assurance wrap by ensuring that customers use appropriate risk man
 
 No.
 
-### What is the assurance wrap? 
+### What is the assurance wrap?
 
-Because a Walled Garden Solution is bespoke, we offer an assurance wrap to guide customers towards an effective design that will help to maximise their chances of meeting compliance requirements.
+Because a Walled Garden solution is bespoke, we offer an assurance wrap to guide customers towards an effective design that will help to maximise their chances of meeting compliance requirements.
 
-The variable nature of Walled Garden Solutions means we may charge for the assurance wrap on an SFIA rate card basis, according to the number of days' support needed.
+The variable nature of Walled Garden solutions means we may charge for complex assurance wraps. This is done on a [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) basis, according to the number of days' assistance needed.
 
 ### What is the process for approving a Walled Garden?
 
-Broadly, the process is as follows:
-
-- Initial application
-
-- UKCloud design review (with a cloud architect)
-
-- Proposed evidence pack submission (by the customer)
-
-- Full evidence pack submission (by the customer)
-
-- UKCloud SIRO review and approval or rejection
-
-Full details of each stage are available in the UKCloud Knowledge Centre or from your account director.
+You can find detailed information about how to apply for CDSZ Walled Garden in [*UKCloud Cross Domain Security Zone application process*](cdsz-ref-application-process.md).
 
 ### What type of evidence is required to allow use of the Walled Garden?
 
@@ -157,19 +100,25 @@ The evidence pack will generally consist of:
 
 - We need an accreditor's statement confirming their acceptance of the risk assessment, mitigating controls and residual risks, and their understanding of the customer's obligations relating to the use of UKCloud services
 
+You can find more information in [*UKCloud Cross Domain Security Zone application process*](cdsz-ref-application-process.md).
+
 ### What are the ongoing requirements?
 
 When the Walled Garden is in operation, the customer is responsible for ensuring continuing compliance with security operating procedures (SyOps) and other security obligations.
 
+Customers will also be expected to perform an annual ITHC on the environment.
+
 ### How long will the assurance process take?
 
-The bespoke nature of the Walled Garden means we can't provide committed timescales for each phase in the process.
-
-However, we aim to provide feedback from a named source within five days of each submission.
+The bespoke nature of the Walled Garden means we can't provide committed timescales for each phase in the process. However, we aim to provide feedback from a named source within five days of each submission.
 
 ### Who makes the final decision to allow or deny the use of a Walled Garden?
 
 The UKCloud SIRO is ultimately responsible for deciding which solutions and configurations are allowed.
+
+### What is the UKCloud Guard?
+
+UKCloud Guard is no longer available as an option for CDSZ. All new CDSZ deployments must follow the Walled Garden design. We will continue to provide support to customers who previously added UKCloud Guard to their environment, although we would encourage using Walled Garden instead.
 
 ## Support
 
@@ -197,30 +146,32 @@ Any emergency maintenance of any infrastructure relating to the services. Whenev
 
 ### How will I be billed?
 
-Both solutions have a minimum commitment period of one month. The billing models are as follows:
+CDSZ has a minimum commitment period of one month.
 
-#### UKCloud Guard
+Walled Garden billing is based on the solution design. You pay a monthly rental fee, with additional charges based on the number of VMs required to run the solution.
 
-Billing is based on the amount of data transferred between domains. You buy a starter pack which includes an amount of data that can be transferred. You're billed at an incremental rate for data transferred above the starter pack threshold.
-
-#### Walled Garden
-
-Billing is based on the solution design. You pay a monthly rental fee, with additional charges based on the number of VMs required to run the solution.
+For existing UKCloud Guard customers, billing is based on the amount of data transferred between domains. You buy a starter pack which includes an amount of data that can be transferred. You're billed at an incremental rate for data transferred above the starter pack threshold.
 
 ### How do I pay for the service?
 
-Payment can be made by direct bank transfer (BACS/CHAPS).
+Payment for UKCloud services can be made by direct bank transfer (BACS/CHAPS). You can find bank details for payment on your invoice.
+
+If you signed up with a credit or debit card, your payment card will be automatically charged no sooner than seven (7) days after the invoice date.
 
 ### What are the termination fees?
 
-There are no termination fees for most services. We may make an additional charge for transferring data out of the service if this is required.
+There are no termination fees for CDSZ. We may make an additional charge for professional services associated with transferring data out of the service if this is required.
 
 ## Security
 
-### What data is suitable for the UKCloud assured cloud platform?
+### What data is suitable for the UKCloud assured security domain?
 
-The platform is hosted in the UK and operated by SC-cleared staff. It has extensive independent validation (including CESG PGA) that it is fully aligned with NCSC Cloud Security Principles, making it ideal for all data classified at OFFICIAL (including OFFICIAL SENSITIVE) and legacy IL0-IL4 solutions.
+The platform is hosted in the UK and operated by SC-cleared staff. It has extensive independent validation that it is fully aligned with NCSC Cloud Security Principles, making it ideal for all data classified at OFFICIAL (including OFFICIAL SENSITIVE).
 
 ### Is there a protective monitoring service?
 
 Protective monitoring is included for our IaaS platform and follows GPG 13.
+
+## Feedback
+
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

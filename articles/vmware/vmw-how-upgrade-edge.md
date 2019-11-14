@@ -19,7 +19,7 @@ toc_mdlink: vmw-how-upgrade-edge.md
 
 ## Overview
 
-This guide shows you how to check the existing version of your edge gateway and, if necessary, upgrade it to the latest available version. If you need any assistance with the upgrade process, contact the support team by raising a service request in the [My Calls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal.
+This guide shows you how to check the existing version of your edge gateway and, if necessary, upgrade it to the latest available version. If you need any assistance with the upgrade process, contact the support team by raising a Service Request in the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 > [!NOTE]
 > In preparation for our planned upgrade to vCloud Director 9.7, you must convert your edges to advanced gateways. For more information, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md).
@@ -82,7 +82,7 @@ The following steps show how to upgrade your edge gateway using vCloud Director.
 
 2. In the left navigation panel, select **Edges**.
 
-    ![Edges menu option in vCloud Director](images/vmw-vcd91-mnu-edges.png)
+    ![Edges menu option in vCloud Director](images/vmw-vcd-mnu-edges.png)
 
 3. Select the edge that you want to configure and click **Redeploy**.
 
@@ -122,4 +122,4 @@ We recommend that you convert your edge gateway to an advanced gateway to take a
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

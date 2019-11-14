@@ -3,8 +3,8 @@ title: How to access vCloud Director through the vCloud API | UKCloud Ltd
 description: Describes how to get started with the vCloud API
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: gsmith
+lastreviewed: 21/10/2019 15:30:00
 
 toc_rootlink: How To
 toc_sub1:
@@ -21,6 +21,10 @@ toc_mdlink: vmw-how-access-vcloud-api.md
 ## Overview
 
 To perform some tasks within your UKCloud for VMware environment, you may need to access vCloud Director through the vCloud API. This guide shows you how to access the vCloud API.
+
+## Before you begin
+
+Before using the vCloud API, we recommend that you install a REST client that enables you to access the API. The steps in this article use a Firefox plugin called RESTClient. For information about how to install this plugin, see [*How to install a REST client to access the vCloud API*](vmw-how-install-vcloud-api-rest-client.md).
 
 ## Finding your vCloud API credentials
 
@@ -60,27 +64,75 @@ Before using the vCloud API, you first need to find your API credentials.
 
 ## Obtaining an authorisation token
 
-Now that you have your API credentials, you can start interacting with the vCloud API. First you need to obtain an `x-vcloud-authorization` token.
+To start interacting with the vCloud API, you first need to obtain an `x-vcloud-authorization` token; to do this you need to adjust some settings in the RESTClient.
 
-1. Send the following request to the vCloud API:
+1. In your browser, click the **RESTClient** icon.
 
-        POST https://<vcloud_api_url>/api/sessions Authorization: Basic <encoded_credentials> Accept: application/*+xml; version=5.6
+    ![RESTClient icon](images/vmw-firefox-restclient-icon.png)
 
-    Parameter | Description | Example
-    ----------|-------------|--------
-    `vcloud_api_url` | The URL you use to access the vCloud API that you noted in [Finding your vCloud API credentials](#finding-your-vcloud-api-credentials) | `api.vcd.portal.skyscapecloud.com`
-    `encoded_credentials` | Your login credentials that you noted in [Finding your vCloud API credentials](#finding-your-vcloud-api-credentials) in the format:</br>`<username>@<compute_service_id>:<password>`</br>These credentials must be supplied in a MIME Base64 encoding, as specified in RFC 1421 | `auser@mycompute:pA5#word`
+2. From the **Method** menu, select **POST**.
 
-    For example:
+    ![POST request method](images/vmw-restclient-request-method-post.png)
 
-        POST https://api.vcd.portal.skyscapecloud.com/api/sessions Authoriziation: Basic dXN1cjpwYXNzCg== Accept: application/*+xml; version=5.6
+3. In the **API** field, enter the API URL you recorded earlier and append the following to the end of the URL:
 
-2. The vCloud API response includes your `x-vcloud-authorization` token, for example:
+        /api/sessions
 
-        x-vcloud-authorization: cn9uYmdugN8E2j96+5Lqrc3YBvFsEgDHXzyfJrJ/6bM=\ Content-Type: application/vnd.vmware.vcloud.session+xml;version=5.6
+    ![API URL](images/vmw-restclient-api-url.png)
+
+4. Next add a Basic Authentication header. To do this, from the **Authentication** menu at the top of the RESTClient, select **Basic Authentication**.
+
+    ![Basic Authentication menu option](images/vmw-restclient-basic-authentication.png)
+
+5. In the *Basic Authentication* dialog box, in the **Username** field, enter your API username recorded earlier from the API page.
+
+6. In the **Password** field enter your UKCloud Portal password and then click **Okay**.
+
+    ![Basic Authentication dialog box](images/vmw-restclient-authentication-details.png)
+
+7. The *Request* section now includes an Authorization header.
+
+    ![Authorization header](images/vmw-restclient-authentication-header.png)
+
+8. Next add an Accept header. To do this, from the **Headers** menu, select **Custom Header**.
+
+    ![Custom Header menu option](images/vmw-restclient-custom-header.png)
+
+9. In the *Request Header* dialog box, in the **Name** field, enter `Accept`.
+
+10. In the **Value** field enter `application/*+xml;version=32.0` and then click **Okay**.
+
+    ![Request Headers dialog box](images/Request_Headers_dialog_box_2.PNG)
+
+11. The *Headers* section should now be displayed, containing the Accept header.
+
+    ![Headers section with Accept header](images/vmw-restclient-accept-header.png)
+
+12. The RESTClient has now got all the required settings in place to make a request to the vCloud API to obtain a `x-vcloud-authorization` token, so click the **Send** button.
+
+13. When a response is received the **Headers** tab in the *Response* section will be populated, including an `x-vcloud-authorization` token.
+
+    ![API response with authentication token](images/vmw-restclient-authentication-token.png)
+
+14. The `x-vcloud-authorization` token will replace the Basic Authentication header added earlier. To do this highlight and copy the string of characters displayed after the word `x-vcloud-authorization`.
+
+    > [!NOTE]
+    > If at any point while following the instructions in this guide, the output displayed in the RESTClient does not look similar to that shown in the images, you can use the value of the **Status Code** field to determine what went wrong and needs investigation. In this case above, **Status Code** received was HTTP 200 OK, which means that the request succeeded. For a list of HTTP response codes, see [HTTP Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+
+15. To add an `x-vcloud-authorization` header, from the **Headers** menu, select **Custom Header**.
+
+16. In the *Request Header* dialog box, in the **Name** field enter `x-vcloud-authorization`.
+
+17. In the **Value** field, paste the string of characters copied in the previous step, then click **Okay**.
+
+    ![Authorization token in request headers](images/vmw-restclient-request-headers-token.png)
+
+18. Now that you've obtained an `x-vcloud-authorization` token, you can remove the Basic Authentication Header. Click the **x** in the upper right-hand corner of the header.
+
+    ![Remove basic authentication](images/vmw-restclient-basic-authentication-remove.png)
 
     You must send this token in a header with any subsequent requests to authenticate yourself with the vCloud API.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

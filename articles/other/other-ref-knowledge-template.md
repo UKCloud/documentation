@@ -3,8 +3,8 @@ title: UKCloud Knowledge Centre article template | UKCloud Ltd
 description: Provides a template to help when you're creating new UKCloud Knowledge Centre articles
 services: other
 author: Sue Highmoor
-reviewer:
-lastreviewed: 27/07/2018 17:59:14
+reviewer: Sue Highmoor
+lastreviewed: 22/07/2019
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -49,6 +49,9 @@ Reference Guides can include as many sections as necessary to keep the content e
 
 ### Bulleted lists
 
+Include an empty line in between each item in the list.
+
+``` none
 - Bulleted lists
 
 - Look
@@ -58,9 +61,13 @@ Reference Guides can include as many sections as necessary to keep the content e
   - with sub lists
 
   - if required
+```
 
 ### Numbered lists for How To Guides
 
+Include an empty line in between each item in the list.
+
+``` none
 1. Numbered lists
 
 2. In a How To Guide
@@ -72,6 +79,7 @@ Reference Guides can include as many sections as necessary to keep the content e
     - you can include
 
     - bulleted lists
+```
 
 ## More useful markdown
 
@@ -79,7 +87,9 @@ Reference Guides can include as many sections as necessary to keep the content e
 
 Markdown for images looks like:
 
-    ![alt-text](images/image-filename.png)
+``` none
+![alt-text](images/image-filename.png)
+```
 
 The `alt-text` is read out by screen readers and provides a brief description of the image to help visually impaired users determine what the image is illustrating. Image files should be located in an `images` directory underneath the main product directory.
 
@@ -87,13 +97,17 @@ The `alt-text` is read out by screen readers and provides a brief description of
 
 To link to a web page, use the following markdown:
 
-    <https://ukcloud.com/>
+``` none
+<https://ukcloud.com/>
+```
 
 <https://ukcloud.com/>
 
 To use descriptive text for the link, rather than just the URL, use the following markdown:
 
-    [UKCloud](https://ukcloud.com/)
+``` none
+[UKCloud](https://ukcloud.com/)
+```
 
 [UKCloud](https://ukcloud.com/)
 
@@ -101,21 +115,29 @@ To use descriptive text for the link, rather than just the URL, use the followin
 
 Links to other articles for the same product look like:
 
-    [*topic-title*](topic-filename.md)
+``` none
+[*topic-title*](topic-filename.md)
+```
 
 For example:
 
-    [*UKCloud Knowledge Centre guidelines*](other-ref-knowledge-guidelines.md)
+``` none
+[*UKCloud Knowledge Centre guidelines*](other-ref-knowledge-guidelines.md)
+```
 
 [*UKCloud Knowledge Centre guidelines*](other-ref-knowledge-guidelines.md)
 
 Links to other articles for a different product look like:
 
-    [*topic-title*](../product/topic-filename.md)
+``` none
+[*topic-title*](../product/topic-filename.md)
+```
 
 For example:
 
-    [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
+``` none
+[*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
+```
 
 [*Getting Started Guide for the UKCloud Portal*](../portal/ptl-gs.md)
 
@@ -127,8 +149,10 @@ A tip provides helpful, but not necessarily important, information.
 
 Markdown:
 
-    > [!TIP]
-    > This is a tip, which provides helpful, but not necessarily important, information.
+``` none
+> [!TIP]
+> This is a tip, which provides helpful, but not necessarily important, information.
+```
 
 Looks like:
 
@@ -141,8 +165,10 @@ A note provides important information.
 
 Markdown:
 
-    > [!NOTE]
-    > This is a note, which provides important information.
+``` none
+> [!NOTE]
+> This is a note, which provides important information.
+```
 
 Looks like:
 
@@ -155,8 +181,10 @@ Important notes provide important information that requires particular attention
 
 Markdown:
 
-    > [!IMPORTANT]
-    > This is an important note, which requires particular attention.
+``` none
+> [!IMPORTANT]
+> This is an important note, which requires particular attention.
+```
 
 Looks like:
 
@@ -169,8 +197,10 @@ Warnings provide important information about something which could have signific
 
 Markdown:
 
-    > [!WARNING]
-    > This is a warning, which provides users with information about something which could have significant implications if ignored.
+``` none
+> [!WARNING]
+> This is a warning, which provides users with information about something which could have significant implications if ignored.
+```
 
 Looks like:
 
@@ -181,4 +211,4 @@ Looks like:
 
 Each article should end with a feedback section that includes the following text:
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

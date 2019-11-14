@@ -21,7 +21,7 @@ toc_mdlink: cdsz-ref-application-process.md
 
 The UKCloud Cross Domain Security Zone (CDSZ) enables you to securely transfer data between our Assured OFFICIAL and Elevated OFFICIAL security domains using NCSC-approved cross-domain security patterns. Using the CDSZ you can create applications that are accessible to citizens, but ensure data safety.
 
-This document provides an overview of the UKCloud process to be used by customers wanting to purchase CDSZ services (UKCloud Guard, Walled Garden and Secure Remote Access).
+This document provides an overview of the UKCloud process to be used by customers wanting to purchase CDSZ services (Walled Garden and Secure Remote Access).
 
 There are two approaches to applying for CDSZ services:
 
@@ -41,7 +41,7 @@ The following table provides more detail about each stage:
 
 Stage | Name | Description
 ----- | ---- | -----------
-1 | Initial Contact | Customer contacts UKCloud to register interest in CDSZ service. This can be through My Calls or direct contact with a Sales representative, Technical Account Manager (TAM) or Cloud Architect.
+1 | Initial Contact | Customer contacts UKCloud to register interest in CDSZ service. This can be through [My Calls](https://portal.skyscapecloud.com/support/ivanti) or direct contact with a Sales representative, Service Delivery Manager or Cloud Architect.
 2a | Self-Assessment | Customer creates document pack to illustrate the solution design and provide evidence that all necessary sign-offs and compliance have been obtained.
 2b | Assurance Wrap Review | Customer creates document pack with assistance from the UKCloud compliance team and Cloud Architect.
 3 | Design Review | Customer presents the technical solution to Cloud Architect for advice and feedback.
@@ -68,9 +68,9 @@ When you apply for a CDSZ service, you must provide the following documents to s
 
 If you want to use the CDSZ, you can initiate the application process in one of two ways:
 
-- Raise a Service Request through My Calls, specifying the relevant CDSZ product (UKCloud Guard, Walled Garden or Secure Remote Access). One of our Sales representatives, TAMs, or Cloud Architects will arrange a call to discuss your requirements and then close the Service Request.
+- Raise a Service Request through [My Calls](https://portal.skyscapecloud.com/support/ivanti), specifying the relevant CDSZ product (Walled Garden or Secure Remote Access). One of our Sales representatives, Service Delivery Managers, or Cloud Architects will arrange a call to discuss your requirements and then close the Service Request.
 
-- Contact one of our Sales representatives, TAMs, or Cloud Architects directly to arrange a call to discuss your requirements.
+- Contact one of our Sales representatives, Service Delivery Managers, or Cloud Architects directly to arrange a call to discuss your requirements.
 
 During your initial conversation, our Cloud Architect will discuss your proposed implementation and help determine the best approach for your situation:
 
@@ -108,7 +108,7 @@ If you choose an assurance wrap review for your proposed implementation, the UKC
 > UKCloud takes no ownership or responsibility for the implementation or running of your proposed solution or ownership for any risks to the data.
 
 > [!NOTE]
-> UKCloud reserves the right to charge SFIA day rate charges for time spent on customer projects if you disengage with the assurance wrap review process before completion.
+> UKCloud reserves the right to charge [SFIA](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) day rate charges for time spent on customer projects if you disengage with the assurance wrap review process before completion.
 
 At the end of the review period, you will have generated all the necessary documents to apply for your CDSZ service (as listed in [Required documents](#required-documents)).
 
@@ -129,7 +129,7 @@ The design review is facilitated by a Cloud Architect and will gather a clearer 
 
 ## Stage 4: Application submission
 
-Raise a Service Request specifying the relevant CDSZ product (UKCloud Guard, Walled Garden or Secure Remote Access) and attach all the [required documents](#required-documents), as well as any review notes from the assurance wrap review. This request will then be assigned to a UKCloud representative to verify that all required information has been provided.
+Raise a Service Request, via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, specifying the relevant CDSZ product (Walled Garden or Secure Remote Access) and attach all the [required documents](#required-documents), as well as any review notes from the assurance wrap review. This request will then be assigned to a UKCloud representative to verify that all required information has been provided.
 
 If any documents are missing or empty, a UKCloud representative will contact you to ensure that all required documents are provided before the service is provisioned.
 
@@ -141,7 +141,7 @@ When your service has been provisioned, you can implement your proposed solution
 
 ## Stage 6: On-going compliance
 
-On an annual basis, UKCloud requires evidence of on-going compliance. You will be contacted by your Technical Account Manager (TAM) to review the existing documents and inform us if any of the details or approvals have changed.
+On an annual basis, UKCloud requires evidence of on-going compliance. You will be contacted by your Service Delivery Manager to review the existing documents and inform us if any of the details or approvals have changed.
 
 If you're connecting to a PSN Protected enabled VDC, proof of PSN compliance (a copy of PSN CoCo or PSN CoP) must be provided on a yearly basis.
 
@@ -151,4 +151,4 @@ If, after examination of the existing documents, you identify that there have be
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

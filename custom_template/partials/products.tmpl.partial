@@ -5,76 +5,89 @@
 
 
 <section class="product-grid">
-  <a href="/articles/vmware/vmw-gs.html" class="product-grid__item">
-    <span>VMware</span>
-  </a>
 
-  <a href="/articles/openstack/ostack-gs.html" class="product-grid__item">
-    <span>OpenStack</span>
-  </a>
-
-  <a href="/articles/azure/azs-gs.html" class="product-grid__item">
+  <a href="/articles/azure/azs-home.html" class="product-grid__item">
     <span>Azure</span>
   </a>
 
-  <a href="/articles/oracle/orcl-gs.html" class="product-grid__item">
-    <span>Oracle</span>
-  </a>
-
-  <a href="/articles/openshift/oshift-gs.html" class="product-grid__item">
+  <a href="/articles/openshift/oshift-home.html" class="product-grid__item">
     <span>OpenShift</span>
   </a>
 
-  <a href="/articles/cloud-storage/cs-gs.html" class="product-grid__item">
-    <span>Cloud Storage</span>
+  <a href="/articles/openstack/ostack-home.html" class="product-grid__item">
+    <span>OpenStack</span>
   </a>
 
-  <a href="/articles/mcbs/mcbs-gs.html" class="product-grid__item">
-    <span>Multi-Cloud Backup Storage</span>
-  </a>  
-
-  <a href="/articles/gpu/gpu-faq.html" class="product-grid__item">
-    <span>Cloud GPU</span>
+  <a href="/articles/oracle/orcl-home.html" class="product-grid__item">
+    <span>Oracle</span>
   </a>
 
-  <a href="/articles/cdsz/cdsz-gs-walled-garden.html" class="product-grid__item">
-    <span>Cross Domain Security Zone</span>
-  </a>
-
-  <a href="/articles/sra/sra-gs.html" class="product-grid__item">
-    <span>Secure Remote Access</span>
-  </a>
-
-  <a href="/articles/email/email-gs.html" class="product-grid__item">
-    <span>Email and Collaboration</span>
-  </a>
-
-  <a href="/articles/draas/draas-gs.html" class="product-grid__item">
-    <span>Disaster Recovery as a Service</span>
-  </a>
-
-  <a href="/articles/private-compute/prc-faq.html" class="product-grid__item">
-    <span>Private Cloud for Compute</span>
-  </a>
-
-  <a href="/articles/private-storage/prs-faq.html" class="product-grid__item">
-    <span>Private Cloud for Storage</span>
-  </a>
-
-  <a href="/articles/hpc/hpc-ref-overview.html" class="product-grid__item">
-    <span>High Performance Compute</span>
-  </a>
-
-  <a href="/articles/connectivity/conn-faq.html" class="product-grid__item">
-    <span>Connectivity</span>
+  <a href="/articles/vmware/vmw-home.html" class="product-grid__item">
+    <span>VMware</span>
   </a>
 
   <a href="/articles/enablement/enbl-ref-services.html" class="product-grid__item">
     <span>Cloud Enablement</span>
   </a>
 
+  <a href="/articles/gpu/gpu-faq.html" class="product-grid__item">
+    <span>Cloud GPU</span>
+  </a>
+
+  <a href="/articles/cloud-storage/cs-gs.html" class="product-grid__item">
+    <span>Cloud Storage</span>
+  </a>
+
+  <a href="/articles/connectivity/conn-faq.html" class="product-grid__item">
+    <span>Connectivity</span>
+  </a>
+
+  <a href="/articles/cdsz/cdsz-gs-walled-garden.html" class="product-grid__item">
+    <span>Cross Domain Security Zone</span>
+  </a>
+
+  <a href="/articles/dedicated-compute/dc-sd.html" class="product-grid__item">
+    <span>Dedicated Compute</span>
+  </a>
+
+  <a href="/articles/draas/draas-gs.html" class="product-grid__item">
+    <span>Disaster Recovery as a Service</span>
+  </a>
+
+  <a href="/articles/email/email-gs.html" class="product-grid__item">
+    <span>Email and Collaboration</span>
+  </a>
+
+  <a href="/articles/hpc/hpc-ref-overview.html" class="product-grid__item">
+    <span>High Performance Compute</span>
+  </a>
+
+  <a href="/articles/managed-services/man-sd-compute.html" class="product-grid__item">
+    <span>Managed Services</span>
+  </a>
+
   <a href="/articles/migration/migr-how-zerto-migrate-to-ukcloud.html" class="product-grid__item">
     <span>Migration to the Cloud</span>
+  </a>
+
+  <a href="/articles/mcbs/mcbs-gs.html" class="product-grid__item">
+    <span>Multi-Cloud Backup Storage</span>
+  </a>
+
+  <a href="/articles/private-cloud/prc-sd.html" class="product-grid__item">
+    <span>Private Cloud</span>
+  </a>
+
+  <a href="/articles/sra/sra-gs.html" class="product-grid__item">
+    <span>Secure Remote Access</span>
+  </a>
+
+  <a href="/articles/third-party/third-ref-eula.html" class="product-grid__item">
+    <span>Third-Party Software</span>
+  </a>
+
+  <a href="/articles/transition-services/trans-sd.html" class="product-grid__item">
+    <span>Transition Services</span>
   </a>
 
   <a href="/articles/portal/ptl-gs.html" class="product-grid__item">
@@ -85,4 +98,18 @@
     <span>Other</span>
   </a>
 
+  <a href="https://status.ukcloud.com/" class="product-grid__item">
+    <span>Service Status</span>
+  </a>
+
+  <a href="https://ukcloud.com/" class="product-grid__item">
+    <span>ukcloud.com</span>
+  </a>
+
 </section>
+
+<div class="product-banner">
+  <a class="banner-link" href="https://community.ukcloud.com/?">
+    <img class="banner" src="{{_rel}}styles/assets/banner.png" srcset="{{_rel}}styles/assets/banner.png 2x" width="1436px" alt="{{_appName}}" >
+  </a>
+</div>

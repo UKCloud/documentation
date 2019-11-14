@@ -6,7 +6,7 @@ author: Sue Highmoor
 reviewer:
 lastreviewed: 20/07/2018 12:12:33
 toc_rootlink: Reference
-toc_sub1: 
+toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -211,594 +211,50 @@ Returns a response with a list of up to 10 VMs
 }
 ```
 
-## GET /api/my_calls
+## My Calls API (Removed)
+
+> [!IMPORTANT]
+> With the move to the new [My Calls](https://portal.skyscapecloud.com/support/ivanti) service management tool, this functionality is no longer available.
+
+### GET /api/my_calls
 
 Returns a complete list of support calls (similar to the MyCalls view in the UKCloud Portal).
 
-### API version
-
-v1
-
-### Request
-
-#### Request body
-
-None
-
-#### Parameters
-
-None
-
-#### URI parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  for | User or account | String | N
-
-#### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls?for=user
-```
-
-#### Example request (Ruby)
-
-```
-resp = conn.get('/api/my_calls') { |req| req.headers['cookie'] = cookies }
-```
-
-### Response
-
-#### Successful HTTP response
-
-200 OK --- The request was successful
-
-#### Unsuccessful HTTP response
-
-401 Unauthorized --- The user could not be authenticated
-
-#### Response body
-
-Returns a structure of tickets with the following keys:
-
-```
-ticket_id,.summary, submitted, status
-```
-
-#### Example response
-
-```
-[{"ticket_id":"INC1002183","summary":"Test incident (Compute)","submitted":"28/08/2014 15:42", "status":"Awaiting Review"}, ...]
-```
-
-## GET /api/my_calls/:ticket_id
+### GET /api/my_calls/:ticket_id
 
 Returns a single ticket and its updates and changes.
 
-### API version
-
-v1
-
-### Request
-
-#### Request body
-
-None
-
-#### Parameters
-
-None
-
-#### URI parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  ticket_id | The unique ID of the ticket | String | Y
-  for | User or account | String | N
-
-#### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt -X GET -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001?for=user
-```
-
-#### Example request (Ruby)
-
-```
-resp = conn.get('/api/my_calls/INC10001') { |req| req.headers['cookie'] = cookies }
-```
-
-### Response
-
-#### Successful HTTP response
-
-200 OK --- The request was successful
-
-#### Unsuccessful HTTP response
-
-400 Bad request --- The ticket could not be found
-
-401 Unauthorized --- The user could not be authenticated
-
-#### Response body
-
-Returns a hash with ticket, updates and changes.
-
-#### Example response
-
-```
-{'ticket': {ticket details}, 'updates': [{updates}], 'changes': [{changes}]}
-```
-
-## PUT /api/my_calls/:ticket_id
+### PUT /api/my_calls/:ticket_id
 
 Adds a new note to a ticket.
 
-### API version
-
-v1
-
-### Request
-
-#### Request body
-
-```
-{"description": "My new update"}
-```
-
-#### Parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  description | The note to add | String | Y
-
-#### URI parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  ticket_id | The unique ID of the ticket | String | Y
-
-#### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/my_calls/INC10001 -X PUT -d '{"description": "My new update"}' -H 'Accept: application/json' -H 'Content-Type: application/json'
-```
-
-#### Example request (Ruby)
-
-```
-resp = conn.put('/api/my_calls/INC10001') { |req| req.headers['cookie'] = cookies; req.body = '{"description": "My new update"}' }
-```
-
-### Response
-
-#### Successful HTTP response
-
-200 OK --- The request was successful
-
-#### Unsuccessful HTTP response
-
-400 Bad request --- The ticket could not be found
-
-401 Unauthorized --- The user could not be authenticated
-
-422 Unprocessable entity --- There was an error saving the updated
-
-#### Response body
-
-Returns all notes including your new note
-
-## POST /api/my_calls
+### POST /api/my_calls
 
 Adds a new ticket.
 
-> [!NOTE]
-> If you encounter any problems making changes to a ticket after initial creation, for example, closing or cancelling an incorrect ticket, this is probably because the ticket is waiting for approval from a Customer Support Engineer. Check the status of your ticket and try performing the action again later.
-
-### API version
-
-v1
-
-### Request
-
-#### Request body
-
-```
-{"incident": {"problem_area": "compute", "service": "My Service", "classification": "Production Service > unavailable or unresponsive", "summary": "My Incident", "further_details": "My further details"}}
-```
-
-Or
-
-```
-{"service": {"problem_area": "compute", "service": "My Service", "query_nature": "Change a Configuration", "summary": "My Request", "further_details": "My further details"}}
-```
-
-#### Parameters
-
-Parameter name | Description | Type | Mandatory (Default)
----------------|--------|------------|------|--------------------
-incident | If the ticket is an incident, then pass the following key/values | Hash/Object | N
-> problem_area | One of:</br>- compute</br>- storage</br>- email and collaboration</br>- other | String | Y
-> service | The name of the service | String | Y
-> classification | One of:</br>- Production Service > unavailable or unresponsive</br>- Production Service > available but performance degraded</br>- Production Service > available, but client access to service restricted</br>- Test/Dev Service > unavailable or unresponsive</br>- Test/Dev Service > available, but performance degraded</br>- Test/Dev Service > available, but client access to service restricted</br>- Service available, part of redundant infrastructure unavailable</br>- Confirmed data loss or breach</br>- Possible data loss or breach</br>- Other incident | String | Y
-> summary | A summary of the incident | String | Y
-> further_details | A more complete description of the incident | String | Y
-service | If the ticket is a service request, then pass the following key/values | Hash/Object | N
-> problem_area | One of:</br>- compute</br>- storage</br>- email and collaboration</br>- Connectivity PSN or GSI</br>- Connectivity Leased Line</br>- Cloud Enablement Services</br>- IP Addresses</br>- Other | String | Y
-> service | The name of the service | String | Y
-> query_nature | One of:</br>- Change a Configuration</br>- Add a New Service</br>- Claim Service Credits</br>- Expand an Existing Service</br>- Information Required</br>- Other | String | Y
-> summary | A summary of the service request | String | Y
-> further_details | A more complete description of the service request | String | Y
-
-#### URI parameters
-
-None
-
-#### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt https://portal.skyscapecloud.com/api/my_calls -X POST -d '{"incident": {"problem_area": "compute", "service": "My Service", "classification": "Production Service unavailable or unresponsive", "summary": "My Incident", "further_details": "My further details"}}' -H 'Accept: application/json' -H 'Content-Type: application/json'
-```
-
-#### Example request (Ruby)
-
-```
-conn.post('/api/my_calls') { |req| req.headers['cookie'] = cookies; req.body = '{"incident": {"problem_area": "compute", "service", "classification": "Production Service unavailable or unresponsive", "summary": "My Incident", "further_details": "My further details"}}' }
-```
-
-### Response
-
-#### Successful HTTP response
-
-201 Created --- The ticket was successfully created
-
-#### Unsuccessful HTTP response
-
-400 Bad request --- The ticket could not be found
-
-401 Unauthorized --- The user could not be authenticated
-
-422 Unprocessable entity --- There was an error saving the update
-
-#### Response body
-
-Returns the ticket created.
-
-## PUT /api/my_calls/:ticket_id/subscribe
+### PUT /api/my_calls/:ticket_id/subscribe
 
 Subscribes a user to a ticket.
 
-### API version
-
-v1
-
-### Request
-
-#### Request body
-
-```
-{"email": "myemail@example.com"}
-```
-
-#### Parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  email | The email address of the user to add; the email address must exist as a user in your account | String | Y
-
-#### URI parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  ticket_id | The unique ID of the ticket | String | Y
-
-#### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' -d '{"email": "myemail@example.com"}' https://portal.skyscapecloud.com/api/my_calls/INC10001/subscribe
-```
-
-#### Example request (Ruby)
-
-```
-resp = conn.put('/api/my_calls/INC10001/subscribe') { |req| req.headers['cookie'] = cookies; req.body = '{"description": "My new update"}' }
-```
-
-### Response
-
-#### Successful HTTP response
-
-200 OK --- The request was successful
-
-#### Unsuccessful HTTP response
-
-400 Bad request --- The ticket or user could not be found
-
-401 Unauthorized --- The user could not be authenticated
-
-422 Unprocessable entity --- There was an error saving the update
-
-#### Response body
-
-None --- Check the response status code
-
-## PUT /api/my_calls/:ticket_id/unsubscribe
+### PUT /api/my_calls/:ticket_id/unsubscribe
 
 Unsubscribes a user from a ticket.
 
-### API version
-
-v1
-
-### Request
-
-#### Request body
-
-```
-{"email": "myemail@example.com"}
-```
-
-#### Parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  email | The email address of the user to remove | String | Y
-
-#### URI parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  ticket_id | The unique ID of the ticket | String | Y
-
-#### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' -d '{"email": "myemail@example.com"}' https://portal.skyscapecloud.com/api/my_calls/INC10001/subscribe
-```
-
-#### Example request (Ruby)
-
-```
-resp = conn.put('/api/my_calls/INC10001/unsubscribe') { |req| req.headers['cookie'] = cookies; req.body = '{"email": "myemail@example.com"}' }
-```
-
-### Response
-
-#### Successful HTTP response
-
-200 OK --- The request was successful
-
-#### Unsuccessful HTTP response
-
-400 Bad request --- The ticket or user could not be found
-
-401 Unauthorized --- The user could not be authenticated
-
-422 Unprocessable entity --- There was an error saving the update
-
-#### Response body
-
-None --- Check the response status code.
-
-## PUT /api/my_calls/:ticket_id/reopen
+### PUT /api/my_calls/:ticket_id/reopen
 
 Reopens a ticket.
 
-### API version
-
-v1
-
-### Request
-
-#### Request body
-
-None
-
-#### Parameters
-
-None
-
-#### URI parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  ticket_id | The unique ID of the ticket | String | Y
-
-#### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/reopen
-```
-
-#### Example request (Ruby)
-
-```
-resp = conn.put('/api/my_calls/INC10001/reopen') { |req| req.headers['cookie'] = cookies}
-```
-
-### Response
-
-#### Successful HTTP response
-
-200 OK --- The request was successful
-
-#### Unsuccessful HTTP response
-
-400 Bad request --- The ticket or user could not be found
-
-401 Unauthorized --- The user could not be authenticated
-
-422 Unprocessable entity --- There was an error saving the update
-
-#### Response body
-
-None --- Check the response status code
-
-## PUT /api/my_calls/:ticket_id/change_owner
+### PUT /api/my_calls/:ticket_id/change_owner
 
 Change the owner of a ticket.
 
-### API version
-
-v1
-
-### Request
-
-#### Request body
-
-```
-{"email": "myemail@example.com"}
-```
-
-#### Parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  email | The email address of the new owner for the ticket | String | Y
-
-#### URI parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  ticket_id | The unique ID of the ticket | String | Y
-
-#### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' -d '{"email": "myemail@example.com"}' https://portal.skyscapecloud.com/api/my_calls/INC10001/change_owner
-```
-
-#### Example request (Ruby)
-
-```
-resp = conn.put('/api/my_calls/INC10001/change_owner') { |req| req.headers['cookie'] = cookies; req.body = '{"email": "myemail@example.com"}' }
-```
-
-### Response
-
-#### Successful HTTP response
-
-200 OK --- The request was successful
-
-#### Unsuccessful HTTP response
-
-400 Bad request --- The ticket or user could not be found
-
-401 Unauthorized --- The user could not be authenticated
-
-422 Unprocessable entity --- There was an error saving the update
-
-#### Response body
-
-None -- Check the response status code
-
-## PUT /api/my_calls/:ticket_id/cancel
+### PUT /api/my_calls/:ticket_id/cancel
 
 Cancels a ticket.
 
-### API version
-
-v1
-
-### Request
-
-#### Request body
-
-None
-
-#### Parameters
-
-None
-
-#### URI parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  ticket_id | The unique ID of the ticket | String | Y
-
-#### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/cancel
-```
-
-#### Example request (Ruby)
-
-```
-resp = conn.put('/api/my_calls/INC10001/cancel') { |req| req.headers['cookie'] = cookies}
-```
-
-### Response
-
-#### Successful HTTP response
-
-200 OK --- The request was successful
-
-#### Unsuccessful HTTP response
-
-400 Bad request --- The ticket or user could not be found
-
-401 Unauthorized --- The user could not be authenticated
-
-422 Unprocessable entity --- There was an error saving the update
-
-#### Response body
-
-None -- Check the response status code
-
-## PUT /api/my_calls/:ticket_id/close
+### PUT /api/my_calls/:ticket_id/close
 
 Closes a ticket.
-
-### API version
-
-v1
-
-### Request
-
-#### Request body
-
-None
-
-#### Parameters
-
-None
-
-#### URI parameters
-
-  Parameter name | Description | Type | Mandatory (Default)
-  ---------------|-------------|------|--------------------
-  ticket_id | The unique ID of the ticket | String | Y
-
-#### Example request (Curl)
-
-```bash
-curl -b /tmp/cookies.txt -X PUT -H 'Accept: application/json' https://portal.skyscapecloud.com/api/my_calls/INC10001/close
-```
-
-#### Example request (Ruby)
-
-```
-resp = conn.put('/api/my_calls/INC10001/close') { |req| req.headers['cookie'] = cookies}
-```
-
-### Response
-
-#### Successful HTTP response
-
-200 OK --- The request was successful
-
-#### Unsuccessful HTTP response
-
-400 Bad request --- The ticket or user could not be found
-
-401 Unauthorized --- The user could not be authenticated
-
-422 Unprocessable entity --- There was an error saving the update
-
-#### Response body
-
-None -- Check the response status code.
 
 ## GET /api/ping
 
@@ -1782,7 +1238,7 @@ type | String | Vorg-build | &nbsp;
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example. com
-state | String | The state of the build</br>Valid values:</br>- approved -- vOrg creation process has been approved</br>- running -- vOrg is in the process of being created</br>- completed -- vOrg has been successfully created</br>-   failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
+state | String | The state of the build<br>Valid values:<br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created<br>-   failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
 serviceName | String | The name of the vOrg (as specified in the build request) | My compute service
 zoneId | String | The zone in which the vOrg is located (as specified in the build request) | B
 
@@ -1918,7 +1374,7 @@ type | String | Vorg-build | &nbsp;
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid values:</br>- approved -- vOrg creation process has been approved</br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created</br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
+state | String | The state of the build<br>Valid values:<br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created<br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
 serviceName | String | The name of the vOrg (as specified in the build request) | My compute service
 zoneId | String | The zone in which the vOrg is located (as specified in the build request) | B
 
@@ -2069,7 +1525,7 @@ type | String | Vorg-build | &nbsp;
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid values:</br>- approved -- vOrg creation process has been approved</br>- running -- vOrg is in the process of being created</br>- completed -- vOrg has been successfully created</br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
+state | String | The state of the build<br>Valid values:<br>- approved -- vOrg creation process has been approved<br>- running -- vOrg is in the process of being created<br>- completed -- vOrg has been successfully created<br>- failed -- vOrg creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
 serviceName | String | The name of the vOrg (as specified in the build request) | My compute service
 zoneId | String | The zone in which the vOrg is located (as specified in the build request) | B
 
@@ -2439,9 +1895,9 @@ type | String | VDC-build | &nbsp;
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created   | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid valudes:</br>- approved -- VDC creation process has been approved</br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created</br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
+state | String | The state of the build<br>Valid valudes:<br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created<br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
 vdcName | String | The name of the VDC (as specified in the build request) | My VDC
-vmType | String | The type of VM workloads in the VDC (as specified in the build request)</br>Valid values:</br>- POWER</br>- ESSENTIAL</br>- PRIORITY | POWER
+vmType | String | The type of VM workloads in the VDC (as specified in the build request)<br>Valid values:<br>- POWER<br>- ESSENTIAL<br>- PRIORITY | POWER
 serviceName | String | The name of the vOrg to which the VDC belongs | My Compute Service
 
 #### Example response
@@ -2601,9 +2057,9 @@ type | String | VDC-build | &nbsp;
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created    | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid values:</br>- approved -- VDC creation process has been approved</br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created</br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
+state | String | The state of the build<br>Valid values:<br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created<br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
 vdcName | String | The name of the VDC (as specified in the build request) | My VDC
-vmType | String | The type of VM workloads used in the VDC (as specified in the build request)</br>Valid values:</br>- POWER</br>- ESSENTIAL</br>- PRIORITY  | POWER
+vmType | String | The type of VM workloads used in the VDC (as specified in the build request)<br>Valid values:<br>- POWER<br>- ESSENTIAL<br>- PRIORITY  | POWER
 serviceName | String | The name of the vOrg to which the VDC belongs | My Compute Service
 
 #### Example response
@@ -2765,9 +2221,9 @@ type | String | VDC-build | &nbsp;
 id | String | The unique identifier of the build | 10
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid values:</br>- approved -- VDC creation process has been approved</br>- running -- VDC is in the process of being created</br>- completed -- VDC has been successfully created</br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
+state | String | The state of the build<br>Valid values:<br>- approved -- VDC creation process has been approved<br>- running -- VDC is in the process of being created<br>- completed -- VDC has been successfully created<br>- failed -- VDC creation has failed (raise a Service Request to resolve and rerun) | &nbsp;
 vdcName | String | The name of the VDC (as specified in the build request) | My VDC
-vmType | String | The type of VM workloads used in the VDC (as specified in the build request)</br>Valid values:</br>- POWER</br>- ESSENTIAL</br>- PRIORITY | POWER
+vmType | String | The type of VM workloads used in the VDC (as specified in the build request)<br>Valid values:<br>- POWER<br>- ESSENTIAL<br>- PRIORITY | POWER
 serviceName | String | The name of the vOrg to which the VDC belongs | My Compute Service
 
 #### Example response
@@ -3145,7 +2601,7 @@ type | String | EdgeGateway-build | &nbsp;
 id | String | The unique identifier of the build | 23
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid values:</br>-approved -- edge gateway creation process has been approved</br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created</br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun) | completed
+state | String | The state of the build<br>Valid values:<br>-approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created<br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun) | completed
 
 #### Example response
 
@@ -3263,7 +2719,7 @@ type | String | EdgeGateway-build | &nbsp;
 id | String | The unique identifier of the build | 23
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid values:</br>- approved -- edge gateway creation process has been approved</br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created</br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun) | completed
+state | String | The state of the build<br>Valid values:<br>- approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created<br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun) | completed
 
 #### Example response
 
@@ -3382,7 +2838,7 @@ type | String | EdgeGateway-build | &nbsp;
 id | String | The unique identifier of the build | 23
 createdAt | Date | The date and time when the build was created | 2016-07-08T10:42:14+01:00
 createdBy | String | The user who created the build | auser\@example.com
-state | String | The state of the build</br>Valid values:</br>- approved -- edge gateway creation process has been approved</br>- running -- edge gateway is in the process of being created</br>- completed -- edge gateway has been successfully created</br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun) | completed
+state | String | The state of the build<br>Valid values:<br>- approved -- edge gateway creation process has been approved<br>- running -- edge gateway is in the process of being created<br>- completed -- edge gateway has been successfully created<br>- failed -- edge gateway creation has failed (raise a Service Request to resolve and rerun) | completed
 
 #### Example response
 
@@ -3795,8 +3251,8 @@ Returns a CSV report for the period specified.
 
 ## Further information
 
-If you want to discuss any aspect of the service or settings specific to your domain, log a Service Request via the [My Calls](https://portal.ukcloud.com/support/my_calls) section of the UKCloud Portal.
+If you want to discuss any aspect of the service or settings specific to your domain, log a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -27,11 +27,11 @@ Our Data Transfer Facility enables customers to use the secure network connectio
 
 It's useful if, for example, you don't have enough network bandwidth, or you're waiting for appropriately accredited connectivity to be installed.
 
-If you want to bring in more than 500GiB of VMs, we also offer a Mass Transfer facility, see the appropriate Service Scope for [NAS](enbl-sco-mtf-nas.md) or [HDD](enbl-sco-mtf-hdd.md).
+If you want to bring in more than 500GiB of VMs, we also offer a [Mass Transfer facility](enbl-sco-mtf-nas.md).
 
 ## Booking and booking conditions
 
-To use the Data Transfer Facility, you need to book. The first step is to raise a service request through the UKCloud Portal.
+To use the Data Transfer Facility, you need to book. The first step is to raise a service request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 The Data Transfer Facility is available on a whole-day basis, between 0900 and 1700 on normal business days. The minimum booking period is one day at a cost of £500 per day.
 
@@ -177,7 +177,7 @@ FTPS (Data) - 989 | &nbsp; | &nbsp;
 
 By default the Assured data upload PC is connected to your environment's internet gateway. You can connect from the PC to an external IP in your environment. The IP address of the data upload pc can be added to a firewall rule in your environment to secure access
 
-Access to environments on other networks (e.g HSCN or PSN) will require additional configuration. Please discuss this with your Cloud Delivery Manager or TAM if required
+Access to environments on other networks (e.g HSCN or PSN) will require additional configuration. Please discuss this with your Service Delivery Manager if required
 
 ## Platform performance
 
@@ -244,4 +244,4 @@ If the issue doesn't directly relate to the Data Transfer Facility, you'll need 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

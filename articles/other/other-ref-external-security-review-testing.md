@@ -45,7 +45,7 @@ UKCloud will cooperate with you to support external penetration testing requirem
 
 To request permission to perform a test, you must:
 
-1. Raise a Service Request within the UKCloud Portal for the test.
+1. Raise a Service Request within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal for the test.
 
 2. Complete the External Security Review Test (ESRT) application form (UKC-FRM-231 - available on request) and attach the completed document (**in full**) to your Service Request. If you want to share any other relevant information (for example, a formal scope), you should also attach this to your Service Request.
 
@@ -73,7 +73,7 @@ If you don't have a compute service prior to testing to use for this purpose, yo
 
 ## Pricing
 
-For a test to commence, UKCloud must complete a number of administrative tasks to facilitate the activity. This may result in a cost, chargeable as one day's work from the [UKCloud SFIA rate card](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/585894882747037-sfia-rate-card-2019-01-18-1511.pdf) (Level 4 - Enable).
+For a test to commence, UKCloud must complete a number of administrative tasks to facilitate the activity. This may result in a cost, chargeable as one day's work from the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) (Level 4 - Enable).
 
 In some circumstances, additional time may be required but this will be outlined prior to tests commencing.
 
@@ -83,4 +83,4 @@ To receive a copy of the External Security Review Test (ESRT) application form, 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

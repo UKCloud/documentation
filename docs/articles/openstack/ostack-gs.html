@@ -8,7 +8,7 @@
     <title>Getting Started Guide for UKCloud for OpenStack | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for UKCloud for OpenStack | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -104,9 +104,15 @@
 </li>
 <li><p>From the <strong>Authenticate using</strong> list, select:</p>
 <ul>
-<li><strong>Keystone Credentials</strong> if your account has not been migrated to SSO</li>
-<li><strong>UKCloud SSO</strong> if your account has been migrated to SSO</li>
+<li><p><strong>Keystone Credentials</strong> if your account has not been migrated to SSO</p>
+</li>
+<li><p><strong>UKCloud SSO</strong> if your account has been migrated to SSO</p>
+</li>
 </ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you're using <strong>UKCloud SSO</strong>, you'll require the v3 version of the OpenStack RC file. You can find more details about the OpenStack RC file in <a href="ostack-how-use-api-sso.html"><em>How to use the OpenStack API using an SSO enabled user</em></a>.</p>
+</div>
 <p><img src="images/ostack-horizon-login.png" alt="Horizon login page"></p>
 </li>
 <li><p>If you selected <strong>Keystone Credentials</strong>, enter your UKCloud Portal login credentials and click <strong>Connect</strong>.</p>
@@ -524,28 +530,11 @@ use the template to create a <em>stack</em>. The stack contains the instantiatio
 </li>
 <li><p>On the <em>API Access</em> tab, you can see all the relevant API endpoints for making connections to the various OpenStack subsystems, including the <strong>Identify</strong> endpoint, which provides the initial authentication process that you'll typically need when configuring connections.</p>
 <p>You can also download your user's OpenStack RC file for use in the following section.</p>
+<p><img src="images/ostack-horizon-btn-download-rc-file.png" alt="Download OpenStack RC File button on Access &amp; Security page"></p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If your account is SSO-enabled, download the v3 RC file.</p>
+<p>If your account is SSO-enabled, download the v3 RC file and make the modifications stated <a href="ostack-how-use-api-sso.html">here</a>.</p>
 </div>
-<p><img src="images/ostack-horizon-btn-download-rc-file.png" alt="Download OpenStack RC File button on Access &amp; Security page"></p>
-</li>
-<li><p>If your account is enabled for SSO, you'll need to add the following items to the RC file you downloaded in the previous step.</p>
-<pre><code class="lang-none">export OS_AUTH_TYPE=&quot;v3oidcpassword&quot;
-export OS_IDENTITY_PROVIDER=&quot;sso&quot;
-export OS_PROTOCOL=&quot;oidc&quot;
-export OS_CLIENT_ID=&quot;&quot;
-export OS_CLIENT_SECRET=&quot;&quot;
-export OS_DISCOVERY_ENDPOINT=&quot;https://idp.ukcloud.com/auth/realms/client-assured/.well-known/openid-configuration
-</code></pre>
-<ul>
-<li><p>The <code>client_id</code> for Corsham is <code>cni.1.cor00005</code></p>
-</li>
-<li><p>The <code>client_id</code> for Farnborough is <code>cni.1.frn00006</code></p>
-</li>
-<li><p>You can set the <code>client_secret</code> to any value</p>
-</li>
-</ul>
 </li>
 </ol>
 <h2 id="using-the-openstack-command-line-client">Using the OpenStack command-line client</h2>
@@ -598,7 +587,7 @@ template.</p>
 <p><strong>volume</strong>  A persistent storage option backed by a Ceph storage array that is
 network mounted onto the host hypervisor.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">

@@ -47,7 +47,7 @@ The ZSSP you use depends on what you are trying to do:
 - To create a VPG for Journaling Protection, use the ZSSP in the zone where the VMs you are protecting are located
 
     > [!NOTE]
-    > To create a VPG for Disaster Recovery to the Cloud or Workload Migration, use the Zerto Virtual Manager (ZVM) Web Client in your local environment.
+    > To create a VPG for Disaster Recovery to the Cloud or Workload Migration, use the Zerto Virtual Manager (ZVM) Web Client in your local environment. For the latest version of the ZVM Web Client, contact UKCloud Customer Support.
 
 - To perform a test or live failover for Disaster Recovery to the Cloud, Journaling Protection or Workload Migration, use the ZSSP in the zone where your target VDC (for recovery or migration) is located
 
@@ -77,7 +77,7 @@ If you want to create a VPG for Journaling Protection, run a test or live failov
     ![Zerto log in page](images/vmw-zerto-login.png)
 
     > [!NOTE]
-    > These credentials are different from the ones you use to log in to the UKCloud Portal. If you're not sure what they are, raise a service request through My Calls.
+    > These credentials are different from the ones you use to log in to the UKCloud Portal. If you're not sure what they are, raise a Service Request through [My Calls](https://portal.skyscapecloud.com/support/ivanti).
 
 5. After you log in, you'll see the main ZSSP page.
 
@@ -97,4 +97,4 @@ After you have logged in to the ZSSP, you can:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

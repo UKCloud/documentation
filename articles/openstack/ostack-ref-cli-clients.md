@@ -19,10 +19,15 @@ toc_mdlink: ostack-ref-cli-clients.md
 
 You can use the OpenStack command-line clients to run simple commands that make API calls. You can run these commands from the command line or in scripts to automate tasks. If you provide OpenStack credentials, you can run these commands on any computer. Internally, each client command runs cURL commands that embed API requests. The OpenStack APIs are RESTful APIs that use the HTTP protocol, including methods, URIs, media types, and response codes.
 
-The following Red Hat document collects the help content from the OpenStack command-line clients to provide guidance when using UKCloud for OpenStack.
+The following Red Hat documents collects the help content from the OpenStack command-line clients to provide guidance when using UKCloud for OpenStack.
 
-[*Red Hat OpenStack Platform 10 Command-Line Interface Reference*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/html-single/command-line_interface_reference_guide/index){target="_blank"}
+
+
+| Region              | OpenStack Version                      | Documentation |
+|---------------------|----------------------------------------|---------------|
+| COR00005 <BR> FRN00006 | OpenStack Platform 10 <BR>(Newton Release) | [*Red Hat OpenStack Platform 10 Command-Line Interface Reference*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/html-single/command-line_interface_reference_guide/index) |
+| COR00005-2 | OpenStack Platform 13 <BR> (Queens Release) | [*Red Hat OpenStack Platform 13 Command-Line Interface Reference*](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/command_line_interface_reference/index) |
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

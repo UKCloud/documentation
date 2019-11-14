@@ -64,7 +64,7 @@ Yes. You can deploy a private circuit into each data centre and use the UKCloud 
 
 If the primary private circuit were to fail, you could get to the primary data centre (DC1) via the private circuit into the second data centre (DC2) and across the UKCloud DCI. In this case, you must use 'reserved bandwidth'.
 
-There may be setup costs (aligned to the SFIA rate card), depending on the complexity of the requirement.
+There may be setup costs (aligned to the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)), depending on the complexity of the requirement.
 
 ## How will HybridConnect connect to my UKCloud environment?
 
@@ -72,7 +72,7 @@ The way that HybridConnect connects to your UKCloud environment depends on the r
 
 ## How do I initiate and process a HybridConnect installation?
 
-You need to either contact your account director or raise a service request via [My Calls](https://portal.ukcloud.com/support/my_calls) in the UKCloud Portal.
+You need to either contact your account director or raise a service request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) in the UKCloud Portal.
 
 ## How much do you charge for a HybridConnect connection?
 
@@ -84,4 +84,4 @@ If you have questions about connectivity in general, please see the [*General co
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -37,6 +37,10 @@ No. Our cloud platforms are designed so that all traffic either originates or te
 
 We provide an SLA for availability of our core services such as UKCloud for VMware. We cannot provide an SLA on external services as they are outside our control. UKCloud can only provide assurance associated with the native SLAs that are offered as part of the core PSN framework.
 
+## How is resiliency managed on external networks?
+
+Networks such as the internet and HSCN are brought into UKCloud via diverse routes to ensure resilience of the connections. In the case of internet connectivity, we also use diverse supplier networks to ensure supplier resilience. Once within the UKCloud environment, we use Border Gateway Protocols (BGP) and our private inter-DC fibre networks to triangulate the network connections. This means that in the event of an issue with one of the networks within a single DC, we can reroute external connectivity via the second DC.
+
 ## Why doesn't the UKCloud SLA extend to external connectivity such as PSN and the internet?
 
 The UKCloud SLA provides our customers with assurance that our platform is designed, engineered and operated to deliver high levels of availability and uptime. We have invested in skilled and experienced people, ISO 20000-certified IT service management processes and best-in-class technology - all of which underpin our cloud services and allow us to deliver high availability.
@@ -129,7 +133,7 @@ This depends on the use case.
 
 - If your private circuits or co-located equipment need to use the data centre interconnection:
 
-  - Contact your account manager, as this will be a non-standard solution which may require support from our technical specialists (costs will be as per the SFIA rate card).
+  - Contact your account manager, as this will be a non-standard solution which may require support from our technical specialists (costs will be as per the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf)).
 
 ## Does UKCloud support RLI connections?
 
@@ -155,4 +159,4 @@ Outside of the VRF, customers may need to consider the impact of things such as 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

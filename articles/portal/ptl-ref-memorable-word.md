@@ -3,10 +3,10 @@ title: How to enable memorable word on account switch | UKCloud Ltd
 description: Describes how to enable and disable the second level of authentication through a memorable word when switching accounts
 services: portal
 author: Sue Highmoor
-reviewer:
-lastreviewed: 12/10/2018 17:42:06
+reviewer: Lewis Dean
+lastreviewed: 16/10/2019 11:00:00
 toc_rootlink: Reference
-toc_sub1: 
+toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
@@ -41,8 +41,8 @@ You can extend your use of the memorable word feature to also prompt users for l
 
 5. To disable memorable word authentication on account switch, deselect the **Prompt for memorable word check on account switch** check box. You can also completely disable memorable word authentication by deselecting the **Enable memorable word authentication** check box.
 
-If you require any further assistance, contact UKCloud by raising a Service Request.
+If you require any further assistance, contact UKCloud by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

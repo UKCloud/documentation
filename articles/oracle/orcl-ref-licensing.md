@@ -3,8 +3,8 @@ title: Oracle licensing on the UKCloud platform | UKCloud Ltd
 description: Outlines the licensing options for customers wanting to use Oracle on the UKCloud Platform
 services: oracle
 author: Sue Highmoor
-reviewer:
-lastreviewed: 16/07/2018 12:32:29
+reviewer: bchallis
+lastreviewed: 31/10/2019
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -19,46 +19,57 @@ toc_mdlink: orcl-ref-licensing.md
 
 ## Overview
 
-Due to the licensing rules regarding Oracle, it is not possible to install and run Oracle software on the UKCloud public cloud platform. However, there are currently two ways for customers to install and run Oracle software with UKCloud:
+Due to the licensing rules regarding Oracle, it is not possible to install and run processor-based Oracle software on UKCloud for VMware, UKCloud for OpenStack or UKCloud for Microsoft Azure. However, you can use UKCloud for Oracle Software to run Oracle applications and databases. This is a solution specifically designed using Oracle VM hypervisor technology to enable Oracle licensing to be used correctly. It is also financially efficient as you only need to license software for resources used.
 
-- **Private Cloud for Compute**. This is a dedicated hardware solution that limits the number of cores, RAM and storage that would require Oracle licensing. Note that this may not be financially efficient for all customers, and this will be a bare metal environment that has not been prepared for Oracle.
-
-- **UKCloud for Oracle Software**. This is a solution specifically designed to host Oracle solutions on a separate platform. This enables Oracle licensing to be used correctly, and is also financially efficient.
-
-The remainder of this article is regarding general Oracle licensing.
+However, you still need to be mindful of Oracle licensing when using UKCloud for Oracle Software. UKCloud can resell all Oracle software and support contracts and can provide advice where required to help.
 
 > [!IMPORTANT]
-> Licensing rules from vendors such as Oracle can change frequently and so customers should validate their specific requirement with Oracle at the time of ordering. This information is correct as of June 2015.
+> Licensing rules from vendors such as Oracle can change frequently, so you should validate your specific requirements with Oracle at the time of ordering. The information in this article is correct as of November 2019.
 
-For customers wishing to licence Oracle software on virtual machines within the UKCloud platform, there are some important issues to consider with regards to the four licensing options available which are described below.
+If you want to license Oracle software on virtual machines within the UKCloud platform, there are some important issues to consider with regards to the licensing options available, which are described below.
 
-## Named User
+## Per host (x86)
 
-By implementing this licensing option, the customer can run as many Oracle servers as they want for a fixed fee ‘per named user’. As this licence model is independent of the size or number of servers, it is preferable for use in multi-tenant cloud environments such as the UKCloud platform.
+Oracle Enterprise Linux (OEL) is a free x86 operating system (OS) that Oracle provides for customers to run Oracle software on. While the OS itself is free to use, the support associated with the OS is not free, and is charged per-host being used. In a cloud environment, this cost model is a bit of a challenge as we have many hosts and customers will not be using all of them for their workloads. So, to work out how many support contracts you should get for OEL, you should use the following formula:
 
-UKCloud appreciate that this solution may not be valid for customers that already have ‘per processor” licensing.
+`Number of cores used = Total number of vCPUs running OEL (i.e., add up all OEL VMs vCPUs) / 2`
 
-## Per Processor
+`Number of hosts you need OEL support contracts for (rounded up to nearest whole number) = Number of cores used / 20 (the number of useable cores per host)`
 
-This type of licence allows the customer to have as many users as they need for a fixed cost ‘per processor’ that the servers run on.
+## Per processor
 
-In a traditional physical or virtualised estate, it is possible to isolate a small subset of the overall physical servers to specifically run Oracle. In this way, only those specific servers need to be licensed for Oracle.
+This type of licence is typical of Oracle Database (both Enterprise and Standard) and enables you to have as many users as you need for a fixed cost ‘per processor’ that the servers run on.
 
-In most multi-tenant cloud environments such as the UKCloud platform, the per processor virtual machines can run on any physical server and so, practically, Oracle requires all of those servers to be licensed – which is simply not cost effective.
+As UKCloud runs Oracle VM (OVM) as the hypervisor technology for UKCloud for Oracle Software, you can simply license the processors (cores) that you require for your application and database VMs, rather than *all* the processors within the cluster.
 
-Oracle software within a cloud based environment can also be licensed via the per-processor option if the cloud environment is running Oracle Virtual Machine (OVM) as the hypervisor. However, due to the design of the cloud environment, this is not something UKCloud can provide or support.
+The VMs are pinned to host cores to maintain licence compliance so you should be aware of licensing implications of using features such as High Availability (HA) or clustering technologies, such as Real Application Clusters (RAC). With the HA feature (see [*How to enable high availability for your Oracle VMs*](orcl-how-enable-ha.md)), VMs will power off in the event of a host failure and will be restarted on another host in the cluster. Typically, processor-based licences will allow a certain number of 'failover days' per year (typically 10 days), including maintenance scenarios, so you should be aware of this number and remove VMs from any HA policy if your VM has moved due to maintenance or server downtime for close to the number of days stated in the licence agreement.
 
-Oracle has negotiated an agreement with a few public cloud providers (at the time of writing, only Amazon Web Services and Microsoft Azure) to allow customers to license only specific host servers, but this is not yet a widely available licensing agreement.
+If you're replicating using technologies like RAC, you'll need to make sure you're licensing enough processors to cover the additional VMs within the cluster.
 
-### Dedicated Compute platform
+To work out the number of processors (cores) you need to license within UKCloud, perform the following simple calculation:
 
-Customers can take advantage of the 'per processor' licensing model, by using the UKCloud Dedicated Compute platform which will provide the customer with a set hardware configuration. The Dedicated Compute option enables a customer to specify a dedicated hardware cluster of a certain number of physical servers, and this option can help customers who need more certainty as to the configuration and capacity of the cluster which underpins part of their application, whilst being also able to accommodate the compromises of having a dedicated cluster with regards to reduced levels of agility and flexibility.
+`Number of cores used = Total number of vCPUs running Oracle Database / 2`
 
-## Application Specific Full Use Licensing
+There is a core-factor that needs to be applied when it comes to licensing Oracle database licences. For the purposes of this, use the Intel Xeon core factor in the [Oracle Processor Core Factor Table](http://www.oracle.com/us/corporate/contracts/processor-core-factor-table-070634.pdf).
+
+## Named User Plus
+
+By implementing this licensing option, you may achieve better economics, but this option is generally only applicable when the application or database is used by a known, limited pool of users. You should also be able quantify how many people are accessing these databases and be aware if that user base grows beyond the user you have got licensed. There are some complexities here around minimum numbers of users and cores within the various database options, so make sure you follow the guidance on licensing published by Oracle. For databases, you can find this in the [Database Licensing](https://www.oracle.com/assets/databaselicensing-070584.pdf) document.
+
+Our Cloud Architects can help you understand the most cost-effective method for licensing.
+
+## Special agreements
+
+In certain circumstances an organisation may have a special agreement with Oracle. Generally, these are big government or private organisations who have gone through serious negotiations to get those agreements - an example of this being a Perpetual Licence Agreement (PULA), which enables an organisation to consume as many Oracle licences for particular software as they require. If you have a special agreement with Oracle, let us know as it comes with benefits such as live VM migration, which generally isn't allowed in other scenarios.
+
+## Application Specific Full Use licensing
 
 An Application Specific Full Use (ASFU) licence is a restricted type of licence sold by a Solution Provider in conjunction with its third-party Application Package.
 
-For example, you can buy an ASFU licence from SAP AG to use Oracle with the SAP/R3 system. This licence would then be application specific and cannot be used for anything else.
+For example, you can buy an ASFU licence from SAP AG to use Oracle with the SAP/R3 system. This licence would then be application-specific and cannot be used for anything else.
+
+> [!NOTE]
+> The ASFU licensing option is outside the scope of UKCloud control.
 
 ## Embedded Software License
 
@@ -67,8 +78,8 @@ An Embedded Software License (ESL) is a very restrictive licence type available 
 An example of this licensing model in use may be a Point of Sale system that requires a database to log transactions.
 
 > [!NOTE]
-> The ASFU and ESL licensing options are outside the scope of UKCloud control.
+> The ESL licensing option is outside the scope of UKCloud control.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

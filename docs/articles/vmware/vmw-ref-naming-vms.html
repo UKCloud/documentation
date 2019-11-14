@@ -8,7 +8,7 @@
     <title>Naming virtual machines | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Naming virtual machines | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -93,16 +93,26 @@
                   
 <h1 id="naming-virtual-machines">Naming virtual machines</h1>
 
-<p>We're currently in the process of rolling out updates to the ESXi hosts on the UKCloud platform to version 6 to ensure platform stability and enable future feature sets. This new version implements stricter restrictions on the characters permitted for virtual machines (VMs), so you should be aware of the following:</p>
+<p>The current version of ESXi hosts on the UKCloud platform implements stricter restrictions on the characters permitted for virtual machines (VMs), so you should be aware of the following:</p>
+<p>When naming VM’s in your infrastructure we would advise not using special characters.</p>
+<p>When creating a new VM, make sure that the name includes only uppercase and lowercase alphanumeric characters and the hyphen (-) character. Using any other special characters will cause deployment to fail.</p>
+<p>Virtual machines with strings in square brackets [] in their name might not deploy successfully, because of possible leading spaces added or missing. For example: ‘[username]vmname’ or ‘[username] vmname’ (note 2 spaces prefixed to vmname).</p>
+<p>The following VM operations may be impacted when a VM name contain square brackets []:</p>
 <ul>
-<li><p>When creating a new VM, make sure that the name includes only uppercase and lowercase alphanumeric characters and the hyphen (-) character. Using any other special characters will cause deployment to fail.</p>
+<li><p>Performing a vMotion, relocate or a clone operation</p>
 </li>
-<li><p>You must update any existing VMs that have names that include other special characters to make sure that they comply with the new restrictions. VMs with special characters in their names may go offline if they're moved to an upgraded host.</p>
+<li><p>Creating a template, converting a template, or deploying a VM from a template</p>
+</li>
+<li><p>Enabling Fault Tolerance on a virtual machine</p>
+</li>
+<li><p>During a HA event VM failover may not succeed</p>
+</li>
+<li><p>DRS operations (Fully Automated) may not succeed</p>
 </li>
 </ul>
-<p>For more information, see the following VMware Knowledge Base article: <a href="https://kb.vmware.com/s/article/2046088">https://kb.vmware.com/s/article/2046088</a>, although note that the article does not provide an exhaustive list of restricted characters.</p>
+<p>You must update any existing VMs with names that include other special characters to make sure that they comply with these restrictions. VMs with special characters in their names may go offline if they're moved to an upgraded host.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">

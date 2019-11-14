@@ -57,7 +57,7 @@ By requesting to have the edge gateway device removed and their own firewall tec
 
 - Customers are responsible for sourcing their own licensing arrangement with the 3rd party firewall provider.
 
-- Customers are responsible for installing and configuring the firewall device. Guidance on how this might be done can be found in the [*UKCloud Blueprint*](https://ukcloud.com/wp-content/uploads/2016/04/UKC-GEN-310-Bring-Your-Own-Firewall-Blueprint.pdf).
+- Customers are responsible for installing and configuring the firewall device. Guidance on how this might be done can be found in the [*Bring your own firewall to UKCloud Blueprint*](https://ukcloud.com/wp-content/uploads/2018/08/ukc-gen-310-bring-your-own-firewall-blueprint.pdf).
 
 - UKCloud do not offer any support of customer installed firewall replacements. This includes but not limited to install, configuration and troubleshooting issues.
 
@@ -71,4 +71,4 @@ By requesting to have the edge gateway device removed and their own firewall tec
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

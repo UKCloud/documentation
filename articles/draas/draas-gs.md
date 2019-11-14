@@ -80,37 +80,39 @@ You should consider the following:
 
 To use DRaaS, you must have a valid, centrally managed vSphere or HyperV estate. A single hypervisor is not sufficient.
 
-The following table lists the minimum requirements for DRaaS, based on the currently deployed version of Zerto Virtual Replication (4.5U4) on the UKCloud platform:
+The following table lists the requirements for DRaaS, based on the currently deployed version of Zerto Virtual Replication (6.5U3) on the UKCloud platform:
 
 Product | Supported Version
 --------|------------------
 **Management Plane** | &nbsp;
-VMWare vCenter | 4.0U1 -- 6.0U2
-Microsoft SCVMM | 2012 R2 and Server Core: Update Rollup 6-11 (recommended)</br>2012 R2 and Server Core: RTM
+VMWare vCenter | vCenter Server 5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1
+Microsoft SCVMM | 2012 R2 and Server Core: Update Rollup 1-5, 6-11, 12-14<br>2012 R2 and Server Core: RTM<br>2016 and Server Core: RTM Rollup 3-5, 6
 **Hosts** | &nbsp;
-VMWare ESX/ESXi | 4.0U1-4.0U3, 4.0U4 , 4.1-6.0U1, 6.0U2
-Microsoft Hyper-V | 2012 R2 and Server Core
+VMWare ESXi | 5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1
+Microsoft Hyper-V | 2012 R2 and Server Core<br>Windows 2016 Server
 **Virtual Machines Hardware Version** | &nbsp;
-VMWare | Up to Version 10
-Hyper-V | Generation 1&2
+VMWare | 7-11, 13, 14
+Hyper-V | Generation 1 & 2
 **Disaster Recovery as a Service** | &nbsp;
 **Connectivity** | &nbsp;
-Full Duplex Internet connection | 5Mb/s minimum
-IPSEC VPN | NA
+Full duplex internet connection | 5Mb/s minimum
+IPsec VPN | NA
 
-For a complete list of hypervisor features supported when using DRaaSe, see:
-
-<http://s3.amazonaws.com/zertodownload_docs/4.5U4/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf>
+For a complete list of hypervisor features supported when using DRaaS, see the [Interoperability Matrix for All Zerto Software Versions](http://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf).
 
 ## Getting Disaster Recovery as a Service up and running
 
 To get DRaaS up and running in your environment, follow the steps below:
 
 1. [Create a recovery VDC](#create-a-recovery-vdc)
+
 2. [Set up your local environment](#set-up-your-local-environment)
+
 3. [Configure networking on the recovery site](#configure-networking-on-the-recovery-site)
+
 4. [Create a virtual protection group](#create-a-virtual-protection-group)
-5. [Perform a test failover](#perform-a-test-failover)
+
+5. [Perform a failover test](#perform-a-test-failover)
 
 ### Create a recovery VDC
 
@@ -190,4 +192,4 @@ This section provides a glossary of terms specific to UKCloud's DRaaS.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

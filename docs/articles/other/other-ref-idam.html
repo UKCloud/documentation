@@ -8,7 +8,7 @@
     <title>Understanding UKCloud's Identity &amp; Access Management API | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Understanding UKCloud's Identity &amp; Access Management API | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -101,11 +101,18 @@
 <p>This article provides examples using <a href="https://curl.haxx.se/"><code>curl</code></a> and <a href="https://stedolan.github.io/jq/"><code>jq</code></a>.</p>
 <h3 id="authentication">Authentication</h3>
 <p>Before you begin, you'll need to retrieve a single sign-on token to authenticate with IDAM. For ease of use, this is saved to a variable <code>token</code> in your current shell session using the below command.</p>
-<pre><code class="lang-sh">token=$(curl -X POST &quot;https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token&quot; \
-     -d username=&quot;&lt;username&gt;&quot; \
-     -d password=&quot;&lt;password&gt;&quot;  \
-     -d grant_type=password    \
+<pre><code class="lang-sh">echo &quot;enter your Portal email address&quot;
+read username
+echo &quot;enter your Portal password&quot;
+read -s password
+
+token=$(curl -X POST &quot;https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token&quot; \
+     -d &quot;username=$username&quot; \
+     -d &quot;password=$password&quot; \
+     -d grant_type=password \
      -d client_id=portal.ukcloud | jq -r '.access_token')
+
+unset password
 </code></pre>
 <p>This token is used in bearer authentication with IDAM. Requests to the IDAM API are prefaced with <code>curl -H &quot;Authorization: Bearer $token&quot;</code>.</p>
 <h3 id="listing-users">Listing users</h3>
@@ -129,7 +136,7 @@
 <pre><code class="lang-sh">curl -X DELETE -H &quot;Authorization: Bearer $token&quot; https://idam.ukcloud.com/v1/users/{{user_id}}/groups/{{group_id}}
 </code></pre>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">

@@ -41,7 +41,7 @@ There are two windows per year when you can submit a claim: March and September.
 
 ### How do I apply for the MISO rebate?
 
-Send UKCloud evidence of the charges you have incurred by selling our services through G-Cloud. We have created a [form](https://portal.skyscapecloud.com/support/knowledge_centre/0389ef75-581a-4f11-acfe-becbf60a1f55) for you to use which is available on the portal.
+Send UKCloud evidence of the charges you have incurred by selling our services through G-Cloud. We have created a [form](https://cas.frn00006.ukcloud.com/Docs/Documents/UKC-FRM-159%20UKCloud%20Partner%20Miso%20Claim.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1601391861&Signature=bhZn8dUA4rO9Uikk5Qra0eAfgF8%3D) for you to use which is available on the portal.
 
 Please note, this is solely for an element of the overall MISO charge. We're not under any obligation to offer any rebate where the claim is not substantiated by sufficient evidence.
 
@@ -55,4 +55,4 @@ The MISO rebate that we offer to our partners will be limited to 0.5%, irrespect
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -123,7 +123,7 @@ We aim to carry out the assessment within five days of receiving the business ca
 
 If you need help gathering appropriate evidence, or effectively designing your SRA solution, we offer an assurance wrap review to guide you towards an effective design that will help to maximise your chances of meeting compliance requirements.
 
-The variable nature of the engagement means we charge for the assurance wrap on an SFIA rate card basis, depending on the number of days' support needed.
+The variable nature of the engagement means we charge for the assurance wrap on a [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) basis, depending on the number of days' support needed.
 
 ### What is the assurance process for approving an SRA solution?
 
@@ -181,19 +181,19 @@ SRA certificates last for 12 months. You'll need to renew certificates no later 
 
 ### How do I order additional SRA certificates?
 
-To add additional certificates, raise a [service request via the UKCloud Portal](https://portal.skyscapecloud.com/support/my_calls), selecting the "Request Additional SRA Certificate(s)" option.
+To add additional certificates, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the "Request Additional SRA Certificate(s)" option.
 
 ### How do I renew or revoke an old certificate?
 
-To renew or revoke your certificate, raise a [service request via the UKCloud Portal](https://portal.skyscapecloud.com/support/my_calls), selecting the "Renew and/or Revoke SRA Certificate" option.
+To renew or revoke your certificate, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the "Renew and/or Revoke SRA Certificate" option.
 
 For renewals, it's important you give us at least two weeks' notice to prevent a break in your service.
 
 ### Can I renew or revoke my certificates in bulk?
 
-Yes. To renew or revoke your certificates in bulk, raise a [service request via the UKCloud Portal](https://portal.skyscapecloud.com/support/my_calls), selecting the "Renew and/or Revoke multiple SRA Certificates" option.
+Yes. To renew or revoke your certificates in bulk, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the "Renew and/or Revoke multiple SRA Certificates" option.
 
-Attach the Secure Remote Access bulk renewal/revoke form containing all the certificates you need renewing and/or revoking with details including User ID (UID) and certificate name. It would also be useful to provide host name or machine name.
+Attach the Secure Remote Access bulk renewal/revoke form (available [here](https://cas.frn00006.ukcloud.com/Docs/Documents/UKC-FRM-172%20UKCloud%20SRAS%20form.xlsx?AWSAccessKeyId=438-1048-5-aefff7-1&Expires=1601391869&Signature=6Ri2onNvL6EjyKq0paFznAl4PT4%3D)) containing all the certificates you need renewing and/or revoking with details including User ID (UID) and certificate name. It would also be useful to provide host name or machine name.
 
 For renewals, it's important you give us at least two weeks' notice to prevent a break in your service.
 
@@ -267,4 +267,4 @@ Consider PSN-compliant remote access services if you require access to the broad
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

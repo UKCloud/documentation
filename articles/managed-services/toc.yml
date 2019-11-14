@@ -1,0 +1,20 @@
+- name: Basic Managed Compute
+  items:
+  - name: Basic Mangaged Compute from UKCloud Service Definition
+    href: man-sd-compute.md
+- name: Cloud Optimisation
+  items:
+  - name: Cloud Optimisation from UKCloud Service Definition
+    href: man-sd-optimisation.md
+- name: Extended Network Support
+  items:
+  - name: Extended Network Support from UKCloud Service Definition
+    href: man-sd-network.md
+- name: Managed Monitoring
+  items:
+  - name: Managed Monitoring from UKCloud FAQs
+    href: man-monitoring-faq.md
+  - name: Managed Monitoring from UKCloud Service Definition
+    href: man-sd-monitoring.md
+  - name: Managed Monitoring from UKCloud Service Scope
+    href: man-monitoring-sco.md

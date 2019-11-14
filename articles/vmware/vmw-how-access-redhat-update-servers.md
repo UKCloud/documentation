@@ -41,7 +41,7 @@ These templates have the following properties:
 
 - 32GB disk space / 1 x vCPU / 2GB ram (default, adjust as required)
 
-You can adjust the VM properties as required and you'll be billed as per the standard VM sizes as described in the UKCloud for VMware Service Definition. You will not be billed on additional storage until you reach the 60GiB of provisioned disk space.
+You can adjust the VM properties as required and you'll be billed as per the standard VM sizes as described in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf). You will not be billed on additional storage until you reach the 60GiB of provisioned disk space.
 
 ## Old Red Hat VM templates
 
@@ -51,8 +51,8 @@ If you have already deployed a Red Hat VM using the old templates, you can confi
 
 ## Additional resources
 
-High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services, you'll need to notify UKCloud for access to these repositories or will need to bring your own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a request via the My Calls section in the UKCloud Portal and it will be uploaded to your private catalog.
+High Availability (HA) and Extended Update Support (EUS) are premium Red Hat services, you'll need to notify UKCloud for access to these repositories or will need to bring your own licenses to support these additional services. If required, we can provide access to additional repositories such as Scalable File System, Load Balancer or Resilient Storage. To access these services, please raise a request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section in the UKCloud Portal and it will be uploaded to your private catalog.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

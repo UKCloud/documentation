@@ -3,8 +3,8 @@ title: Fixing your IPsec VPN following upgrade to NSX 6.4 | UKCloud Ltd
 description: Describes how to resolve issues with IPsec VPN after upgrading to NSX 6.4
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 04/09/2018 10:58:14
+reviewer: lthangarajah
+lastreviewed: 20/08/2019
 toc_rootlink: Troubleshooting
 toc_sub1: 
 toc_sub2:
@@ -51,15 +51,15 @@ To convert your edge to an advanced gateway, see [*How to convert your edge to a
 
 To change the DH setting on your broken VPN:
 
-1. Right-click your edge gateway and select **Edge Gateway Services**.
+1. In vCloud Director, access the edge gateway settings for the edge with the broken VPN.
 
-2. In the new tenant portal, select the **VPN** tab.
+    For more detailed instructions, see [*How to access edge gateway settings*](vmw-how-access-edge.md).
+
+2. Select the **VPN** tab.
 
 3. On the *IPsec VPN Configuration* page, select the **IPsec VPN Sites** tab.
 
 4. Select the VPN tunnel that is broken and click the edit icon.
-
-    ![IPsec VPN Sites tab](images/vmw-tp-ipsec-fix1.png)
 
 5. From the **Diffee-Hellman Group** list, select DH2.
 
@@ -75,4 +75,4 @@ To change the DH setting on your broken VPN:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

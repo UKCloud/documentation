@@ -70,6 +70,10 @@ As of BoostFS 1.3:
 
 - MongoDB Community 2.6, 3.0, and 3.2
 
+### How many copies of the data are made, and where are they stored?
+
+Three copies of the data can be stored in the opposite site as to the original data. For example, if the data is stored in the Farnborough site, then the copies will be stored in the Corsham site. This increases the resiliency of the data as the sites are  100km apart.
+
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com/). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

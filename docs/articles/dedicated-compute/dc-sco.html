@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dedicated Compute v2 Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Dedicated Compute v2 Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.45.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/dedicated-compute/dc-sco.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="dedicated-compute-v2-service-scope">Dedicated Compute v2 Service Scope</h1>
+
+<h2 id="about-this-document">About this document</h2>
+<p>This document is for customers considering purchasing our Dedicated Compute v2 service.</p>
+<p>It describes the boundaries of the service, along with the division of responsibilities between UKCloud and the customer to facilitate the changes required.</p>
+<h2 id="about-dedicated-compute-v2">About Dedicated Compute v2</h2>
+<p>Dedicated Compute v2 enables you to run VMware compute workloads as a reserved, single-tenanted section of our cloud, where the physical CPU and RAM allocations are known.</p>
+<p>This service is designed for customers who:</p>
+<ul>
+<li><p>Are looking to run abnormal sized VMs - such as those larger than our standard T-shirt sizes</p>
+</li>
+<li><p>Looking to meet specific software licensing requirements</p>
+</li>
+<li><p>Have an increased security requirement that can be met by Dedicated Compute infrastructure</p>
+</li>
+</ul>
+<h2 id="default-setup">Default setup</h2>
+<p>We deliver Dedicated Compute v2 by providing you with dedicated physical hosts on which you control resource allocation.</p>
+<p>The initial Dedicated Compute purchase is a starter pack consisting of two physical hosts. The standard host specification is dual 16 core and 512 GiB of RAM.</p>
+<p>You can then scale your estate by purchasing additional upgrade packs (an upgrade pack consists of  1 x dual 16 core and 512 GiB of RAM compute host). After nine expansion packs, you must buy another starter pack.</p>
+<p>You choose between Tier 1 or Tier 2 storage for your VMs, both of which can include a backup service. Full details of service options are given in the <a href="dc-sd.html"><em>Service Definition</em></a>. For pricing, see the <a href="https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf"><em>UKCloud Pricing Guide</em></a>.</p>
+<p>The storage pool isn’t a dedicated hardware resource; it's drawn from our UKCloud for VMware block storage solutions.</p>
+<p>These resources are grouped in a private virtual data centre (pVDC) which is available only to the individual Dedicated Compute customer.</p>
+<h2 id="resilience-and-resource-reservations">Resilience and resource reservations</h2>
+<p>We operate at least N+1 for hardware resilience on our Dedicated Compute v2 service. However, we recommend sizing your resilience according to your workload profile.</p>
+<p>We will reserve at least one physical hosts worth of resources from your allocation to ensure that, in the event of a hardware failure, the service can continue to run and support your workload.</p>
+<p>During a failure scenario, VMs will be restarted on surviving hosts within the Dedicated Compute v2 cluster. UKCloud is not responsible for any performance degradation of VMs in the Dedicated Compute v2 cluster caused during a failure scenario due to over contention in the remaining hosts.</p>
+<p>The table below shows the configuration, the resources available to a customer, the number of physical blades in the configuration, and the UKCloud resources reserved to run it.</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>Customer available resources</th>
+<th>Physical blades</th>
+<th>Resource reservation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Starter pack</strong></td>
+<td>32 cores, 512 GiB RAM</td>
+<td>2</td>
+<td>50% (32 core , 512 GiB RAM)</td>
+</tr>
+<tr>
+<td><strong>Starter pack + 1 expansion pack</strong></td>
+<td>64 cores, 1024 GiB RAM</td>
+<td>3</td>
+<td>33% (32 core , 512 GiB RAM)</td>
+</tr>
+<tr>
+<td><strong>Starter pack + 2 expansion packs</strong></td>
+<td>96 cores, 1536 GiB RAM</td>
+<td>4</td>
+<td>25% (32 core , 512 GiB RAM)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resource-utilisation">Resource utilisation</h2>
+<p>To improve performance, Dedicated Compute v2 uses all physical resources available in the installation and balances the load across them, without consuming the reserved capacity mentioned above.</p>
+<p>This means that in general operation within the starter pack, there is a 50% utilisation of both physical hosts:</p>
+<p><img src="images/vmw-dc-contingency1.png" alt="50% utilisation of blades"></p>
+<p>However, you can create VMs of any size and shape you require, up to the maximum size of the physical capacity of one host - 32 cores 512 GiB RAM.</p>
+<p>A VM cannot span across physical hosts so, if you create a VM larger than 50% of the host capacity, the Dedicated Compute v2 installation may carry more of the contingency capacity of one physical host than of the others:</p>
+<p><img src="images/vmw-dc-contingency2.png" alt="Greater than 50% utilisation of blade"></p>
+<p>You can over-contend the resources on your Dedicated Compute v2 as you see fit.</p>
+<h2 id="deployment-options">Deployment options</h2>
+<p>There are two deployment options for Dedicated Compute v2:</p>
+<ul>
+<li><p><strong>UKCloud-defined</strong> - You select a workload type for your VDC based on UKCloud for VMware VM types (ESSENTIAL, POWER or PRIORITY). Any VMs will inherit the characteristics and reservation levels of that service when deployed.</p>
+</li>
+<li><p><strong>Customer-defined</strong> - You can set reservation levels on a per-VM basis.</p>
+</li>
+</ul>
+<h2 id="platform-management">Platform management</h2>
+<p>Dedicated Compute v2 is managed in the same way as our other cloud services, using vCloud Director, the UKCloud Portal, and APIs associated with both.</p>
+<p>The Dedicated Compute v2 service will be maintained to the same software patch revisions as our main platform.</p>
+<p>It's not currently possible to see the level of provisioned/utilised resources against the Dedicated Compute v2 service on the UKCloud Portal. (This is a development item on the UKCloud Portal roadmap.) In the meantime, we can provide this information on request.</p>
+<h2 id="service-provisioning">Service provisioning</h2>
+<p>You can request Dedicated Compute v2 via your Service Delivery Manager or using the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal.</p>
+<p>The minimum commitment period to the service is 30 days. The notice period is 30 days.</p>
+<p>On receipt of all relevant information, we will deploy the service within 10 working days for standard configurations.</p>
+<p>Dedicated Compute v2 is available only in UKCloud Regions 5 and 6.</p>
+<h2 id="customer-responsibilities">Customer responsibilities</h2>
+<p>You need to be aware of the following customer responsibilities relating to deployment of, configuration of and migration into the Dedicated Compute v2 service, which are in addition to the usual responsibilities placed on customers of our UKCloud for VMware service:</p>
+<ul>
+<li><p>Creating VMs in the new environment</p>
+</li>
+<li><p>Migrating VMs from existing environments by cloning and copying turned-off VMs, or by moving turned-off vApps to the new environment</p>
+</li>
+<li><p>Ensuring you have the right licensing in place for the applications in use in your Dedicated Compute v2 environment</p>
+</li>
+<li><p>If you select the customer-defined deployment option, you must manage your own reservation levels</p>
+</li>
+<li><p>It is your responsibility to purchase enough Dedicated Compute v2 modules to ensure that there is enough resource available to your VMs in the event that one or more hosts fail. If you need any help ensuring you have enough resource in your Dedicated Compute v2 cluster, contact your Cloud Architect.</p>
+</li>
+</ul>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

@@ -29,7 +29,7 @@ To facilitate a HybridConnect or CrownConnect order, UKCloud expects that:
 
 1. The end customer or partner will order the connection directly with the service provider that they wish to contract with.
 
-2. At the same time, the customer or partner will raise a Service Request through the UKCloud Portal to make UKCloud support aware of the need for HybridConnect or CrownConnect.
+2. At the same time, the customer or partner will raise a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal to make UKCloud support aware of the need for HybridConnect or CrownConnect.
 
 3. UKCloud will provide information where needed to help the customer or partner complete forms that the telco provider requires in order to progress the order.
 
@@ -116,4 +116,4 @@ The customer/partner is responsible for any customer owned equipment that has be
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

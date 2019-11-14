@@ -23,7 +23,7 @@ Ahead of our upgrade to vCloud Director 9.7, there are some key points for you t
 
 ## Upgrade to advanced edge gateways
 
-vCloud Director 9.7 supports only advanced edge gateways. In preparation for the upgrade, before 31 May 2019 you must convert any legacy standard edge gateways to advanced edge gateways. For more information, see [*How to convert your edge to an advanced gateway*](https://docs.ukcloud.com/articles/vmware/vmw-how-convert-edge.md).
+vCloud Director 9.7 supports only advanced edge gateways. In preparation for the upgrade, before 31 May 2019 you must convert any legacy standard edge gateways to advanced edge gateways. For more information, see [*How to convert your edge to an advanced gateway*](vmw-how-convert-edge.md).
 
 > [!IMPORTANT]
 > The conversion process will cause the gateway to redeploy. Therefore, you should schedule the conversion during an outage window.
@@ -32,7 +32,7 @@ After 31 May 2019, UKCloud will convert any remaining standard edge gateways at 
 
 ## Sandbox for testing vCloud API
 
-UKCloud provides sandboxes to enable you to test the next versions of the vCloud API so that you can prepare for vCloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/cloud/>) has been upgraded to vCloud Director 9.7. If you already have an account on a previous sandbox, you can continue to use this account in the 9.7 sandbox. If you haven't previously used one of our vCloud sandboxes, raise a Service Request via My Calls on the UKCloud Portal to gain access.
+UKCloud provides sandboxes to enable you to test the next versions of the vCloud API so that you can prepare for vCloud Director upgrades. Our latest sandbox (<https://vcd.latest.ukcloud.com/cloud/>) has been upgraded to vCloud Director 9.7. If you already have an account on a previous sandbox, you can continue to use this account in the 9.7 sandbox. If you haven't previously used one of our vCloud sandboxes, raise a Service Request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) on the UKCloud Portal to gain access.
 
 ## Changes to APIs
 
@@ -50,4 +50,4 @@ We're currently evaluating the new features provided with vCloud Director 9.7 to
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -67,7 +67,7 @@ You should be careful not to misconfigure self-managed components of the solutio
 
 ## What if I have been given some IPs for connection to the Enhanced Regime?
 
-You will need to liaise with Vodafone to ensure that these IPs are associated with your service within UKCloud. You may be asked by Vodafone for your circuit reference numbers, please raise a service request via the UKCloud portal to obtain these.
+You will need to liaise with Vodafone to ensure that these IPs are associated with your service within UKCloud. You may be asked by Vodafone for your circuit reference numbers, please raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal to obtain these.
 
 You will then need to have these IPs added to your accounts, you can do this via a service request. UKCloud may need to work with Vodafone to advertise these IPs this process can take up to 10 days to facilitate. Once complete, you will then be able to provide your service over the new IPs.
 
@@ -81,7 +81,7 @@ You should liaise with UKCloud to find a suitable time to do this, to minimise a
 
 If you are connected to a PSN for Policing CUG then you will be provided with an IP range by Vodafone.
 
-If you are connected to the Enhanced Regime, then you will be provided an IP range by Home Office. You will need to raise a service request with us via the UKCloud Portal within the [My Calls](https://portal.ukcloud.com/support/my_calls) section to have these IPs added to the UKCloud firewalls. This may have a lead time of a few days.
+If you are connected to the Enhanced Regime, then you will be provided an IP range by Home Office. You will need to raise a service request with us via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal to have these IPs added to the UKCloud firewalls. This may have a lead time of a few days.
 
 ## How long is the lead time to get a PSN for Policing network connected to my solution?
 
@@ -103,4 +103,4 @@ If you have questions about connectivity in general, please see the [*General co
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

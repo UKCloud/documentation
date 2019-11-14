@@ -30,17 +30,14 @@ This document is for customers who have:
 
 ## Post approval
 
-Once the SRA Assurance Wrap has been approved, we'll raise a service request for the
-implementation of the SRA virtual data centre (vDC) and, if needed, an Elevated (formerly
-IL3) vDC. (If a service request for this vDC implementation already exists, a new one
-won't be raised.)
+Once the SRA Assurance Wrap has been approved, we'll raise a Service Request for the implementation of the SRA virtual data centre (VDC) and, if needed, an Elevated VDC. (If a service request for this VDC implementation already exists, a new one won't be raised.)
 
-You can track the progress of the service request using the UKCloud Portal.
+You can track the progress of the Service Request using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
-During creation of the UKCloud SRA vDC, we'll ask you for some additional information
-via the service request:
+During creation of the UKCloud SRA VDC, we'll ask you for some additional information
+via the Service Request:
 
-- Confirm the customer account number in Elevated as a new Org will be created under the account to contain the SRA vDC. The Org number will be used as an identifier when signing certificates.
+- Confirm the customer account number in Elevated as a new Org will be created under the account to contain the SRA VDC. The Org number will be used as an identifier when signing certificates.
 
 - The preferred IP pool you want to use for your client devices. If the IP Pool you'd prefer is in use by another customer then another will have to be chosen. We'll inform you if this is the case.
 
@@ -61,17 +58,25 @@ To enable SRA access, we'll need the certificate-signing request (CSR) from each
 Follow the steps below to generate the CSR for a Windows device.
 
 1. Open the Certificates MMC snap-in (click **Start**, click **Run**, type **mmc** and then press **Enter**) select **Certificates** and then **Computer Account**.
+
 2. In the console tree, double-click **Personal** and then click **Certificates**.
+
 3. On the **Actions** menu, point to **All Tasks**, point to **Advanced Options** and then click **Create Custom Request** to start the Certificate Enrolment wizard. Click **Next**.
+
 4. On the Custom request page, in the **Templates** list, we recommend using the **Custom Request** option as your domain policy may be incompatible with the SRA service.
 
     - Select **Proceed without enrolment policy** and click **Next**.
+
 5. Select **(No template) CNG key** and ensure the **PKCS#10** radio button is selected, then click **Next**.
+
 6. At the **Certificate Information** page, click the down arrow next to **Details** then click the **Properties** button.
+
 7. Click the **Private Key** tab, then the down arrow to the right of **Key options**.
+
 8. Change the **Key size** to **2048** and click **Apply**.
 
     - **Optional:** If you want to back up the certificate (to protect against client device failure) click the check boxes for the **private key**. You'll be asked for a password.
+
 9. For the file format, select **Base 64** and then save the CSR.
 
 ### Linux
@@ -80,7 +85,7 @@ For Linux, an equivalent OpenSSL command would be the following:
 
     openssl req -nodes -newkey rsa:2048 -keyout myserver.key -out server.csr
 
-Ensure that the key file is preserved for the later installation steps below, as withouth this the AnyConnect client will not be able to connect the SRA service.
+Ensure that the key file is preserved for the later installation steps below, as without this the AnyConnect client will not be able to connect the SRA service.
 
 ## CSR submission to UKCloud
 
@@ -159,7 +164,7 @@ Once you've copied the connection profile and local policy to the correct locati
 
 ## SRA certificates
 
-Once the SRA vDC has been set up (and Elevated vDC, if needed), we'll send you an email containing the certificates we've generated (based on the CSR sent to us as above) which you need to install onto your remote access devices.
+Once the SRA VDC has been set up (and Elevated VDC, if needed), we'll send you an email containing the certificates we've generated (based on the CSR sent to us as above) which you need to install onto your remote access devices.
 
 For each customer SRA service a unique IssuingCA certificate is generated and used to sign each individual device certificates. The IssuingCA certificate along with the specific certificate for the device will be emailed. Both the certificates need to be installed.
 
@@ -174,13 +179,21 @@ The certificates sent through will named as below:
 Follow the steps below to import the certificates into the Windows certificate store. This assumes that you have the certificates we sent accessible to the MMC:
 
 1. Open the Certificates MMC snap-in (click **Start**, click **Run**, type **mmc**, and then press **Enter**) select **Certificates** and then **Computer Account**.
+
 2. In the console tree, open **Trusted Root Certification Authorities**, right click **Certificates** and select **All tasks – Import - Next**.
+
 3. Click **Browse**, change the filter from **X.509 Certificate (*.cer, *.crt)** to **All files**.
+
 4. Find the IssuingCA sent to you, double click **clientcert.pem** and click **Next**.
+
 5. Ensure that the **Place all certificates** radio button has **Trusted Root Certification Authorities** selected then click **Next** then **Finish**.
+
 6. In the console tree, open **Personal**, right click **Certificates** and select **All tasks – Import - Next**.
+
 7. Click **Browse**, change the filter from **X.509 Certificate (*.cer, *.crt)** to **All files**.
+
 8. Find the device certificate sent to you, double click **E51FFC7D50C<HEX VALUE>.pem** and click **Next**.
+
 9. Ensure that the **Place all certificates** radio button has **Personal** selected then click **Next** then **Finish**.
 
 Using the example customer **SRAS-1-1-2** you should now see the client certificate in the **Personal** store.
@@ -249,8 +262,8 @@ There is no direct access to the Elevated portal once the AnyConnect client conn
 
 In most instances we'll create a virtual machine (VM) within the SRA VDC that you can VPN into in order to log in to the Elevated portal to provision and manage your SRA and Elevated VDC. Once this VM is deployed, it becomes your responsibility to manage and maintain it. This VM will be billed according to standard UKCloud billing process.
 
-Addresses to hit the Elevated portal and vCloud Director API can be obtained by raising a support ticket through the UKCloud Portal.
+Addresses to hit the Elevated portal and vCloud Director API can be obtained by raising a Service Request through the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

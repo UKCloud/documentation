@@ -3,8 +3,8 @@ title: Getting Started Guide for UKCloud for Oracle Software | UKCloud Ltd
 description: Provides information to get up and running with UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/07/2018 12:06:26
+reviewer: fbordacchini
+lastreviewed: 15/10/2019
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -72,7 +72,7 @@ UKCloud for Oracle Software does not include Oracle licensing but, because the p
 
 UKCloud ensures that hard partitioning is in place in all customer guest VMs in order to conform to Oracle licensing policies. When you create or modify a VM, automatic CPU pinning ensures that the VM won't use any CPUs other than the ones specifically pinned to the VM's vCPUs.
 
-If you have any questions about Oracle licensing, contact your Cloud Architect, Customer Success Manager or Technical Account Manager.
+If you have any questions about Oracle licensing, contact your Cloud Architect, Customer Success Manager or Service Delivery Manager.
 
 If you require assistance building out your Oracle solution, we can put you in contact with one or our partners who specialises in Oracle technologies.
 
@@ -375,4 +375,4 @@ resource requirements and the UKCloud platform optimises its placement to ensure
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

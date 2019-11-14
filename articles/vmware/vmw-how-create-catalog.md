@@ -3,8 +3,8 @@ title: How to create a catalog | UKCloud Ltd
 description: Shows you how to create a catalog within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 18/07/2018 12:04:00
+reviewer: lthangarajah
+lastreviewed: 20/08/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -40,7 +40,7 @@ The first step is to create an empty catalog:
 
 4. In the *Create Catalog* dialog box, **Name** the catalog and give it a **Description** if needed.
 
-5. From the **Storage Policy** list, select the storage type used to store the catalog.
+5. To specify a particular storage policy for the catalog, select the **Pre-provision on specific storage policy** option then select the desired **Storage Policy**: 
 
     - **Tier1** is for high performance, high IOPS VMs
 
@@ -115,28 +115,33 @@ To upload an OVF package and assign it to a catalog:
 
 To create a catalog from an existing vApp:
 
-1. In the vCloud Director *Virtual Datacenters* dashboard, select the VDC where the vApp is located.
+1. In vCloud Director, click the menu icon and select **Datacenters**.
 
-2. In the left navigation panel, click **vApps**.
+    ![Datacenters menu option in vCloud Director](images/vmw-vcd-mnu-dcs.png)
+
+2. Select the VDC where the vApp is located.
+
+3. In the left navigation panel, click **vApps**.
 
     ![vApps menu option](images/vmw-vcd-tab-vapps.png)
 
-3. In the card for the vApp that you want to add to the catalog, select **Actions** then **Add to Catalog**.
+4. In the card for the vApp that you want to add to the catalog, select **Actions** then **Add to Catalog**.
 
     ![Add to Catalog menu option](images/vmw-vcd-mnu-add-to-catalog.png)
 
     You can add both running and stopped vApps to the catalog, although it's worth noting that creating a catalog image from a running vApp could affect performance.
 
-4. You can now choose the catalog you want to add the vApp to, give the vApp a new name, assign a storage lease, and define whether vApps deployed using this template are identical or customisable.
+5. You can now choose the catalog you want to add the vApp to, give the vApp a new name, assign a storage lease, and define whether vApps deployed using this template are identical or customisable.
 
     You can also overwrite an existing catalog item. If the catalog you are adding the vApp to is published externally, you'll see a warning.
 
-    ![Add to Catalog dialog box](images/vmw-vcd91-add-to-catalog.png)
+    ![Add to Catalog dialog box](images/vmw-vcd-add-to-catalog.png)
 
-5. When you're done, click **OK**.
+6. When you're done, click **OK**.
 
-    A status bar will appear on top with the message: Please wait. You can close the window and check the progress under Libraries > vApp Templates.
+    A status bar will appear on top with the message: **Please wait**. You can close the window and check the progress by expanding the *Recent Tasks* section at the bottom of the vCloud Director
+interface.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

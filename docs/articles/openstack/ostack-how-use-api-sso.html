@@ -8,7 +8,7 @@
     <title>How to use the OpenStack API using an SSO enabled user | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to use the OpenStack API using an SSO enabled user | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -99,15 +99,18 @@
 <p>See the <em>Bind your OpenStack credentials</em> section of <a href="ostack-how-use-cli.html"><em>How to use the OpenStack Command Line</em></a> for details on where to get your RC file.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You will require the v3 version.</p>
+<p>You will require the v3 version of the OpenStack RC file.</p>
 </div>
 <h2 id="modifying-your-rc-file">Modifying your RC file</h2>
-<p>Once you've downloaded your RC file, add the following lines to the bottom of the file:</p>
+<p>Once you've downloaded your RC file, open it in your editor of choice and remove the following line:</p>
+<pre><code class="lang-bash">export OS_USER_DOMAIN_NAME=&quot;Federated&quot;
+</code></pre>
+<p>now add the following lines to the bottom of the file:</p>
 <pre><code class="lang-bash">export OS_IDENTITY_PROVIDER=&quot;sso&quot;
 export OS_PROTOCOL=&quot;oidc&quot;
 export OS_AUTH_TYPE=&quot;v3oidcpassword&quot;
 </code></pre>
-<p>You also need to add the following items, substituting the appropriate values from the table below depending on the OpenStack regions you're connecting to:</p>
+<p>You also need to add the following items to the bottom of the file, substituting the appropriate values from the table below depending on the OpenStack regions you're connecting to:</p>
 <pre><code class="lang-bash">export OS_CLIENT_ID=&quot;&quot;
 export OS_CLIENT_SECRET=&quot;&quot;
 export OS_ACCESS_TOKEN_ENDPOINT=&quot;&quot;
@@ -151,11 +154,27 @@ export OS_ACCESS_TOKEN_ENDPOINT=&quot;&quot;
 <td>OS_ACCESS_TOKEN_ENDPOINT</td>
 <td><code>https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token</code></td>
 </tr>
+<tr>
+<td>Corsham-2 (OSP13)</td>
+<td>OS_CLIENT_ID</td>
+<td><code>cni.2.cor00005</code></td>
+</tr>
+<tr>
+<td> </td>
+<td>OS_CLIENT_SECRET</td>
+<td>56160ec2-17d1-4047-a42a-e6f9f70a3179</td>
+</tr>
+<tr>
+<td> </td>
+<td>OS_ACCESS_TOKEN_ENDPOINT</td>
+<td><code>https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token</code></td>
+</tr>
 </tbody>
 </table>
-<p>You have now updated your RC file.</p>
+<p><strong>Now save your changes and close the file.</strong></p>
+<p>Your OpenStack RC file is now ready to be used as normal.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">

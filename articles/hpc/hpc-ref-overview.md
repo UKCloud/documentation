@@ -77,7 +77,7 @@ High Performance Compute includes as standard:
 
 - DDoS-protected internet
 
-- Personalised support via Customer Success Managers, Technical Account Managers and a telephone support desk
+- Personalised support via Customer Success Managers, Service Delivery Managers and a telephone support desk
 
 To model a total cost of ownership, you may also want to consider additional elements, such as connectivity, and service options, such as cloud enablement and cross-domain services.
 
@@ -91,7 +91,7 @@ High Performance Compute is subject to the following:
 
 - If using Tier 0 storage is configured with two local disks in a RAID 10 configuration. All available storage in the cluster will be allocated to the customer with a 6-month minimum commitment.
 
-- If any VMs are deployed with MS Windows Server OS, all provisioned cores must be licensed and will be charged at the current rate (as shown in the Pricing Guide).
+- If any VMs are deployed with MS Windows Server OS, all provisioned cores must be licensed and will be charged at the current rate (as shown in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf)).
 
 - There is a two-year (24-month) fixed-term commitment, which can be continued via a further 24-month call-off contract subject to the standard procedures.
 
@@ -105,8 +105,8 @@ High Performance Compute is subject to the following:
 
 ## More information
 
-For more information, see the [*High Performance Compute Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/440356750870847-service-definition-document-2018-05-21-1302.pdf).
+For more information, see the [*High Performance Compute Service Definition*](hpc-sd.md).
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

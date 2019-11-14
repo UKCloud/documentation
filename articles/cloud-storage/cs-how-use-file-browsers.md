@@ -32,6 +32,8 @@ Web applications can easily interact with the API, but the ability to browse the
 ECS provides two APIs that you can use to manage Cloud Storage: the S3 compatible API and the EMC ECS Atmos API.
 
 > [!NOTE]
+> The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API.
+> 
 > If you write content to Cloud Storage using one of the APIs, you cannot subsequently access that content using the other API. Choose carefully which API you want to use before beginning a project, as it will be difficult to move between them.
 
 In this article, we'll look at some of the many applications that enable you to browse an object storage system. We'll look at two categories:
@@ -92,7 +94,6 @@ To install and configure Cyberduck:
 5. Complete the fields in the new connection dialog box:
 
     - Ensure you enter the correct endpoint in the **Server** field, as shown in [API endpoints](#api-endpoints)
-  
 
     - The **Access Key ID** is your User ID, which you can find in the *Storage* section of the UKCloud Portal
 
@@ -224,14 +225,10 @@ This article has shown you how to browse Cloud Storage buckets using various dif
 
 - [*How to create a new Cloud Storage user in the UKCloud Portal*](cs-how-create-user.md)
 
-- Cloud Storage Gateways
-
-    - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
-
-    - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com/). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

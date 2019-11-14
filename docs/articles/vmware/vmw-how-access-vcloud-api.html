@@ -8,7 +8,7 @@
     <title>How to access vCloud Director through the vCloud API | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to access vCloud Director through the vCloud API | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -95,6 +95,8 @@
 
 <h2 id="overview">Overview</h2>
 <p>To perform some tasks within your UKCloud for VMware environment, you may need to access vCloud Director through the vCloud API. This guide shows you how to access the vCloud API.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>Before using the vCloud API, we recommend that you install a REST client that enables you to access the API. The steps in this article use a Firefox plugin called RESTClient. For information about how to install this plugin, see <a href="vmw-how-install-vcloud-api-rest-client.html"><em>How to install a REST client to access the vCloud API</em></a>.</p>
 <h2 id="finding-your-vcloud-api-credentials">Finding your vCloud API credentials</h2>
 <p>Before using the vCloud API, you first need to find your API credentials.</p>
 <ol>
@@ -133,44 +135,66 @@
 </li>
 </ol>
 <h2 id="obtaining-an-authorisation-token">Obtaining an authorisation token</h2>
-<p>Now that you have your API credentials, you can start interacting with the vCloud API. First you need to obtain an <code>x-vcloud-authorization</code> token.</p>
+<p>To start interacting with the vCloud API, you first need to obtain an <code>x-vcloud-authorization</code> token; to do this you need to adjust some settings in the RESTClient.</p>
 <ol>
-<li><p>Send the following request to the vCloud API:</p>
-<pre><code> POST https://&lt;vcloud_api_url&gt;/api/sessions Authorization: Basic &lt;encoded_credentials&gt; Accept: application/*+xml; version=5.6
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>vcloud_api_url</code></td>
-<td>The URL you use to access the vCloud API that you noted in <a href="#finding-your-vcloud-api-credentials">Finding your vCloud API credentials</a></td>
-<td><code>api.vcd.portal.skyscapecloud.com</code></td>
-</tr>
-<tr>
-<td><code>encoded_credentials</code></td>
-<td>Your login credentials that you noted in <a href="#finding-your-vcloud-api-credentials">Finding your vCloud API credentials</a> in the format:<br><code>&lt;username&gt;@&lt;compute_service_id&gt;:&lt;password&gt;</code></br>These credentials must be supplied in a MIME Base64 encoding, as specified in RFC 1421</td>
-<td><code>auser@mycompute:pA5#word</code></td>
-</tr>
-</tbody>
-</table>
-<p>For example:</p>
-<pre><code> POST https://api.vcd.portal.skyscapecloud.com/api/sessions Authoriziation: Basic dXN1cjpwYXNzCg== Accept: application/*+xml; version=5.6
-</code></pre>
+<li><p>In your browser, click the <strong>RESTClient</strong> icon.</p>
+<p><img src="images/vmw-firefox-restclient-icon.png" alt="RESTClient icon"></p>
 </li>
-<li><p>The vCloud API response includes your <code>x-vcloud-authorization</code> token, for example:</p>
-<pre><code> x-vcloud-authorization: cn9uYmdugN8E2j96+5Lqrc3YBvFsEgDHXzyfJrJ/6bM=\ Content-Type: application/vnd.vmware.vcloud.session+xml;version=5.6
+<li><p>From the <strong>Method</strong> menu, select <strong>POST</strong>.</p>
+<p><img src="images/vmw-restclient-request-method-post.png" alt="POST request method"></p>
+</li>
+<li><p>In the <strong>API</strong> field, enter the API URL you recorded earlier and append the following to the end of the URL:</p>
+<pre><code> /api/sessions
 </code></pre>
+<p><img src="images/vmw-restclient-api-url.png" alt="API URL"></p>
+</li>
+<li><p>Next add a Basic Authentication header. To do this, from the <strong>Authentication</strong> menu at the top of the RESTClient, select <strong>Basic Authentication</strong>.</p>
+<p><img src="images/vmw-restclient-basic-authentication.png" alt="Basic Authentication menu option"></p>
+</li>
+<li><p>In the <em>Basic Authentication</em> dialog box, in the <strong>Username</strong> field, enter your API username recorded earlier from the API page.</p>
+</li>
+<li><p>In the <strong>Password</strong> field enter your UKCloud Portal password and then click <strong>Okay</strong>.</p>
+<p><img src="images/vmw-restclient-authentication-details.png" alt="Basic Authentication dialog box"></p>
+</li>
+<li><p>The <em>Request</em> section now includes an Authorization header.</p>
+<p><img src="images/vmw-restclient-authentication-header.png" alt="Authorization header"></p>
+</li>
+<li><p>Next add an Accept header. To do this, from the <strong>Headers</strong> menu, select <strong>Custom Header</strong>.</p>
+<p><img src="images/vmw-restclient-custom-header.png" alt="Custom Header menu option"></p>
+</li>
+<li><p>In the <em>Request Header</em> dialog box, in the <strong>Name</strong> field, enter <code>Accept</code>.</p>
+</li>
+<li><p>In the <strong>Value</strong> field enter <code>application/*+xml;version=32.0</code> and then click <strong>Okay</strong>.</p>
+<p><img src="images/Request_Headers_dialog_box_2.PNG" alt="Request Headers dialog box"></p>
+</li>
+<li><p>The <em>Headers</em> section should now be displayed, containing the Accept header.</p>
+<p><img src="images/vmw-restclient-accept-header.png" alt="Headers section with Accept header"></p>
+</li>
+<li><p>The RESTClient has now got all the required settings in place to make a request to the vCloud API to obtain a <code>x-vcloud-authorization</code> token, so click the <strong>Send</strong> button.</p>
+</li>
+<li><p>When a response is received the <strong>Headers</strong> tab in the <em>Response</em> section will be populated, including an <code>x-vcloud-authorization</code> token.</p>
+<p><img src="images/vmw-restclient-authentication-token.png" alt="API response with authentication token"></p>
+</li>
+<li><p>The <code>x-vcloud-authorization</code> token will replace the Basic Authentication header added earlier. To do this highlight and copy the string of characters displayed after the word <code>x-vcloud-authorization</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If at any point while following the instructions in this guide, the output displayed in the RESTClient does not look similar to that shown in the images, you can use the value of the <strong>Status Code</strong> field to determine what went wrong and needs investigation. In this case above, <strong>Status Code</strong> received was HTTP 200 OK, which means that the request succeeded. For a list of HTTP response codes, see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP Response Codes</a>.</p>
+</div>
+</li>
+<li><p>To add an <code>x-vcloud-authorization</code> header, from the <strong>Headers</strong> menu, select <strong>Custom Header</strong>.</p>
+</li>
+<li><p>In the <em>Request Header</em> dialog box, in the <strong>Name</strong> field enter <code>x-vcloud-authorization</code>.</p>
+</li>
+<li><p>In the <strong>Value</strong> field, paste the string of characters copied in the previous step, then click <strong>Okay</strong>.</p>
+<p><img src="images/vmw-restclient-request-headers-token.png" alt="Authorization token in request headers"></p>
+</li>
+<li><p>Now that you've obtained an <code>x-vcloud-authorization</code> token, you can remove the Basic Authentication Header. Click the <strong>x</strong> in the upper right-hand corner of the header.</p>
+<p><img src="images/vmw-restclient-basic-authentication-remove.png" alt="Remove basic authentication"></p>
 <p>You must send this token in a header with any subsequent requests to authenticate yourself with the vCloud API.</p>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">

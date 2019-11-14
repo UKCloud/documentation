@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>High availability on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="High availability on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.45.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/other/other-ref-high-availability.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="high-availability-on-the-ukcloud-platform">High availability on the UKCloud platform</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Delivering high availability and ensuring recovery from disaster are vital elements of any organisation's business continuity plan (BCP). Proper planning is more cost-effective in the long run by reducing response and recovery costs as well as minimizing any disruption.</p>
+<p>For general information for what to consider when designing highly-available applications, see our <a href="https://ukcloud.com/hub/news/6-things-you-should-consider-when-designing-for-high-availability/">Multi-cloud experts blog for high availability</a>.</p>
+<p>This article aims to inform and assist you as you specify your high availability plans. It details measures put in place by UKCloud to protect against failures, how our platform has been designed with service continuity in mind and how we offer extensive capabilities that you can use to protect your business against a disaster.</p>
+<h2 id="platform-high-availability-features">Platform high-availability features</h2>
+<p>When designing for high availability and disaster recovery, it's useful to understand how our cloud platform protects against the many sources of failure that may occur.</p>
+<p>The following table shows how the UKCloud platform is architected to mitigate against potential failures.</p>
+<table>
+<thead>
+<tr>
+<th>High-availability consideration</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Major data centre failure</td>
+<td>Multiple sites provide additional locations for you to deploy disaster recovery or always-on availability services</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>Dual power supplies into data centres from different national grid providers<br>N+1 UPS equipment<br>N+1 diesel generators<br></td>
+</tr>
+<tr>
+<td>Physical network infrastructure</td>
+<td>Fully redundant routers and switches<br>Diversely routed cabling, fibre and ducting</td>
+</tr>
+<tr>
+<td>Server/device infrastructure</td>
+<td>Redundant power supplies and fans<br>Redundant internal disks using RAID; hot-swappable<br>Device/host clustering<br>Virtualised contexts</td>
+</tr>
+<tr>
+<td>Storage infrastructure</td>
+<td>Redundant power supplies and fans<br>Redundant dual storage fabrics<br>Redundant disk configuration (RAID); hot-swappable</td>
+</tr>
+</tbody>
+</table>
+<h3 id="connectivity">Connectivity</h3>
+<p>We offer a number of different connectivity options for you to gain access to our services.</p>
+<table>
+<thead>
+<tr>
+<th>Connectivity option</th>
+<th>High-availability considerations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internet</td>
+<td>Multiple, redundant, high-speed internet links with DDoS mitigation to protect the platform as a whole.<br>No additional services are required to ensure high availability.<br>We recommend that you couple this with deploying your services into multiple sites to ensure that your services are available via different RIPE IP addresses (ideally on different IP network ranges).</td>
+</tr>
+<tr>
+<td>PSN/HSCN/Janet</td>
+<td>Redundant, high-speed connectivity with automatic failover.<br>No additional services are required to ensure high availability.<br>We recommend that you couple this with deploying your services into multiple sites to ensure that your services are available.</td>
+</tr>
+<tr>
+<td>HybridConnect</td>
+<td>Enables you to bring your own secure connectivity into the UKCloud environment.<br>We provide colocation services for hardware and can assist in the design.<br>We recommend that you deploy an additional HybridConnect service in another site to ensure that you have redundant connectivity into a second site.<br>We recommend that you use routing protocols to enable automated failover.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supplementary-services-for-high-availability">Supplementary services for high availability</h3>
+<p>In addition to the high-availability features provided as-standard on our platform, we also offer the following additional services:</p>
+<table>
+<thead>
+<tr>
+<th>High-availability consideration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../connectivity/conn-sco-glb.html">UltraDNS</a></td>
+<td>Enables you to load balance inbound connections to your services and perform health checking. If one site becomes unavailable, users are automatically redirected to an alternative available location.</td>
+</tr>
+<tr>
+<td><a href="../connectivity/conn-sco-app-ddos.html">SiteProtect Advanced DDoS Mitigation</a></td>
+<td>A fully-managed DDoS protection solution backed by an industry-leading Security Operations Team that scrubs your website's malicious traffic - delivering only clean, legitimate traffic to your site.</td>
+</tr>
+<tr>
+<td><a href="../draas/draas-sd.html">Disaster Recovery as a Service</a></td>
+<td>A powerful, self-service replication and recovery tool that can improve organisational resilience and enable seamless migration of applications between your local VMware or Hyper-V powered data centre and the UKCloud platform.</td>
+</tr>
+<tr>
+<td>Replicated backup</td>
+<td>Enables your services to be backed up and the backup data replicated to another site.</td>
+</tr>
+<tr>
+<td><a href="../cloud-storage/cs-sd.html">Cloud Storage</a></td>
+<td>Enables you to take regular backups of your database data (or transaction data) to meet your specific Recovery Point Objective (RPO).</td>
+</tr>
+<tr>
+<td><a href="../mcbs/mcbs-gs.html">Multi-Cloud Backup Storage</a></td>
+<td>Provides a backup target that is accessible from every cloud within UKCloud’s multi-cloud platform, utilizing a technology that is common across backup products, enabling open-source backup applications to utilize the backup service as a target. You can also use MCBS as a remote backup target for your on-premises data.</td>
+</tr>
+<tr>
+<td>Third-Party Software</td>
+<td>Provides software from third-party providers, including <a href="../third-party/third-sd-cyberscore.html">CyberScore</a> and <a href="../third-party/third-sd-moogsoft.html">Moogsoft</a>, to help with cyber security and monitoring.</td>
+</tr>
+<tr>
+<td><a href="../transition-services/trans-sd.html">Transition Services</a></td>
+<td>Our multi-cloud experts can assess your cloud environment and help you ensure its availability.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="application-design-considerations">Application design considerations</h2>
+<p>If you're designing your application specifically for the cloud, we recommend reviewing the <a href="http://12factor.net/">12-factor cloud application design model</a>.</p>
+<p>There are some high-level considerations to think about when deploying to a cloud environment.</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>High-availability consideration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web services</td>
+<td>Utilise an N+1 model, either with multiple web servers running underneath a load balancer or reverse proxy, or with at least one web server running in hot standby. Also use this approach in conjunction with UltraDNS to deliver multi-site resilience.</td>
+</tr>
+<tr>
+<td>Application services</td>
+<td>As per web services, utilize an N+1 model.</td>
+</tr>
+<tr>
+<td>Inter-service messaging</td>
+<td>Utilise a resilient message queuing architecture to handle messages between services. This enables messages to be load balanced between sites. It also means that messages are not lost in the event of a server crash and restart.</td>
+</tr>
+<tr>
+<td>Databases</td>
+<td>Every database has a high availability option. We recommend that you adopt an N+1 clustered database model (but avoid shared disk architectures), in conjunction with sharding or asynchronous replication technologies, to create a replica of this database in another location.</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>Make sure you take a copy of your application or database data at appropriate intervals to meet your Recovery Point Objective (RPO) and store the copy somewhere outside your current site.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ukcloud-for-microsoft-azure">UKCloud for Microsoft Azure</h3>
+<p>In UKCloud for Microsoft Azure, you can use availability sets to spread VMs across multiple fault domains and update domains. In the event of downtime in one domain due to a hardware failure or planned maintenance, VMs in the affected domain are restarted in another domain. For more information, see <a href="https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-overview?view=azs-1908#providing-high-availability">Providing high availability</a>.</p>
+<p>A load balancer spreads incoming requests across multiple VMs, helping with scale and availability. For more information, see <a href="../azure/azs-how-create-load-balancer.html"><em>How to create a load balancer using the UKCloud Azure Stack portal</em></a>.</p>
+<p>With Azure Site Recovery, you can replicate a VM to a different region for disaster recovery. For more information, see <a href="../azure/azs-how-deploy-asr-template-powershell.html"><em>How to deploy an Azure Site Recovery template to Azure Stack using PowerShell</em></a>.</p>
+<p>Use SQL Always On to ensure the availability of SQL server. For more information, see <a href="../azure/azs-how-deploy-sql-template-powershell.html"><em>How to deploy an SQL template to Azure Stack using PowerShell</em></a>.</p>
+<h3 id="ukcloud-for-openshift">UKCloud for OpenShift</h3>
+<p>Each OpenShift cluster is deployed in a single UKCloud region. To achieve region-level resilience, we recommend having a cluster in at least two separate regions, utilizing a global load balancer or DNS failover service (such as the one from UltraDNS) to ensure traffic is redirected should a region or cluster level availability issue occur.</p>
+<p>We also offer the option to have the Portworx storage solution configured in your cluster by UKCloud during deployment. This enables further resilience for your applications by offering highly-available storage, which significantly reduces container failover times, adds multi-attach storage to enable multiple containers to read/write the same volume on different nodes and the ability to replicate and migrate workloads between clusters to aid disaster recovery.</p>
+<p>Within each OpenShift cluster deployment there are a number of features that support high availability and resilience:</p>
+<ul>
+<li><p>Each OpenShift cluster is deployed with at least three master nodes responsible for the availability of the cluster API, etcd and other core components.</p>
+</li>
+<li><p>Ingress traffic comes via resilient UKCloud managed load balancers into the cluster. It enters the cluster via resilient router pods deployed on the OpenShift infrastructure nodes.</p>
+</li>
+<li><p>We recommend always having more than one application node deployed in each cluster. If you only have one node for your application containers, a single host failure could affect all applications deployed in the cluster as they’d have nowhere to fail over to within the cluster until the node is recovered and returned to service.</p>
+</li>
+<li><p>You should also take measures within the configuration of your applications to ensure they run in a resilient fashion. These measures include running applications at a scale of &gt;1 replicas wherever possible (so multiple pods satisfy the needs of inbound requests) and configuring liveness and readiness checks to aid the platform’s understanding of any problematic containers.</p>
+</li>
+</ul>
+<h3 id="ukcloud-for-openstack">UKCloud for OpenStack</h3>
+<p>OpenStack Platform 13 (OSP13) provides Load Balancing-as-a-Service (LBaaS) as a native feature. For more information see the <a href="https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/13/html/networking_guide/sec-octavia"><em>Load Balancing-as-a-Service (LBaaS) with Octavia</em></a> chapter of the OpenStack Networking Guide. For information about creating a load balancer in OPS10, see <a href="../openstack/ostack-how-create-load-balancer.html"><em>Creating load-balancing services on UKCloud for OpenStack</em></a>.</p>
+<p>To improve the resilience of your UKCloud for OpenStack applications, you can move resources (for example, instance images and volumes) between the different regions currently offered by UKCloud. For more information, see <a href="../openstack/ostack-how-move-resources.html"><em>How to move resources between OpenStack regions</em></a>.</p>
+<p>UKCloud monitors UKCloud for OpenStack at regular intervals, checking for issues with the hardware or software services supporting the service. When a host experiences problems, our engineers take steps to live migrate any instances on the affected host to an alternative one. For information about how this works and how you can control what happens when a host is migrated, see <a href="../openstack/ostack-how-recover-instance.html"><em>How to manage how your instance recovers from a host failure</em></a>.</p>
+<p>To help your applications cope with variable demand, you can configure Orchestration (HEAT) to automatically add and remove instances as needed. For more information, see <a href="../openstack/ostack-ref-auto-scaling.html"><em>Auto Scaling for UKCloud for OpenStack</em></a>.</p>
+<h3 id="ukcloud-for-oracle-software">UKCloud for Oracle Software</h3>
+<p>In UKCloud for Oracle Software, you can enable HA on a virtual machine so that it can be automatically migrated to a surviving node in the event of a failure. For more information, see <a href="../oracle/orcl-how-enable-ha.html"><em>How to enable high availability for your Oracle VMs</em></a>.</p>
+<p>If your VM is running an Oracle database and you’re using hard partitioning to reduce licensing costs, virtual CPUs are pinned to physical cores and the HA option is not available. In the event of a failure, VMs must be manually migrated to a new host and will require restarting.</p>
+<p>To achieve high availability for your Oracle database, you can use Real Application Clusters to share the database across multiple servers. For more information, see <a href="../oracle/orcl-ref-rac.html"><em>RAC on UKCloud for Oracle Software</em></a>.</p>
+<h3 id="ukcloud-for-vmware">UKCloud for VMware</h3>
+<p>UKCloud for VMware provides Snapshot Protection as a protection option for your applications. Snapshot Protection automatically takes an image of your VMs every 24 hours and stores the image outside the core platform for either 14 or 28 days. For more information, see <a href="../vmware/vmw-how-manage-snapshot-protection.html"><em>How to manage Snapshot Protection for your VMs</em></a>.</p>
+<p>As an alternative to Snapshot Protection, you could consider Journaling Protection, a powerful self-service protection option, powered by Zerto, that protects your applications by replicating them to another zone. For more information, see the <a href="../vmware/vmw-gs-journaling.html"><em>Getting Started Guide for Journaling Protection</em></a>.</p>
+<p>The edge gateway for your VDC provides basic load balancing functionality to help distribute traffic. For more information, see <a href="../vmware/vmw-how-configure-load-balancer.html"><em>How to configure a load balancer</em></a>. However, for more complex requirements, you’ll need to provide your own third-party virtual load balancer.</p>
+<p>Affinity and anti-affinity rules determine whether or not VMs are kept together as they are move around within your environment. If you want your applications to be robust in the event of host failures, you can create anti-affinity rules to make sure that when VMs are moved, they remain spread across multiple hosts. For more information, see <a href="../vmware/vmw-how-use-affinity-rules.html"><em>How to use affinity and anti‑affinity rules</em></a>.</p>
+<p>For information about the data recovery options available for different use cases, see <a href="../vmware/vmw-ref-vm-data-recovery.html"><em>Virtual machine data recovery options</em></a>.</p>
+<p>IPsec site-to-site VPN provides a secure way to share resources across multiple locations. For more information, see <a href="../vmware/vmw-how-configure-ipsec-vpn.html"><em>How to configure IPsec VPN</em></a>.</p>
+<p>Alternatively, L2 VPN, available as part of the UKCloud for VMware Enterprise Networking Bundle, enables you to stretch the same Layer 2 broadcast domain over an SSL tunnel across two edge gateways in different sites, meaning that you can extend your data centre across multiple sites and move your workloads seamlessly between them. For more information, see <a href="../vmware/vmw-how-configure-l2-vpn.html"><em>How to configure an L2 VPN</em></a>.</p>
+<h3 id="cloud-storage">Cloud Storage</h3>
+<p>We offer our Cloud Storage service at different service levels dependent on your requirements.</p>
+<ul>
+<li><p>If you select the STANDARD service level, we strongly recommend that you deploy an additional service in a second site that your application can target if one becomes unavailable.</p>
+</li>
+<li><p>The ENHANCED service level ensures that your data is synchronised across two different sites and that there is a minimum of six effective copies.</p>
+</li>
+</ul>
+<h3 id="cross-domain-security-zone">Cross Domain Security Zone</h3>
+<p>Each Cross Domain Security Zone (CDSZ) service is deployed into only one site so we strongly recommend that you deploy an additional walled garden in a second site to provide an additional cross domain solution that your application can target if one becomes available.</p>
+<p>We recommend that you implement some form of automated failover solution between your two cross domain solutions. You can deliver this directly within the application, or preferably using some form of load balancing service, such as HAProxy. This enables the application to continue using the cross domain solution services in the event of an issue.</p>
+<p>For your walled garden, we recommend that you follow standard N+1 availability architectures to enable high availability for the application, as per any standard cloud deployment.</p>
+<h3 id="private-cloud">Private Cloud</h3>
+<p>By default, the Private Cloud service is deployed to a single site, so we strongly recommend that you use automated site replication and failover to ensure that all data is synced to another site and can still be accessed in the event of a failover.</p>
+<h3 id="secure-remote-access">Secure Remote Access</h3>
+<p>Each Secure Remote Access (SRA) service is deployed into only one site so we highly recommend that you deploy an additional SRA service that your end users can target if one becomes unavailable.</p>
+<p>To facilitate automatic failover of the VPN solution for end users, we recommend the use of a load balancing or DNS failover solution that automatically directs end users to the current functioning endpoint.</p>
+<p>For the secure VDC that contains the jump boxes or bastion hosts, we recommend that you follow standard N+1 availability architectures to enable high availability for the application, as per any standard IaaS compute deployment.</p>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

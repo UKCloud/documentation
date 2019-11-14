@@ -103,7 +103,7 @@ The PSN Protected Service also provides onward connectivity to other government 
 
 ### How long is the lead time for provisioning PSN service into my solution?
 
-You request connectivity to the PSN via a Service Request. We typically require two working days to provision the PSN service from receipt of an accepted request.
+You request connectivity to the PSN by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. We typically require two working days to provision the PSN service from receipt of an accepted request.
 
 If your solution requires many PSN IP addresses, we may need more time to work with you to get your PSN IP addresses configured to work with your solution hosted on our cloud platform.
 
@@ -171,13 +171,13 @@ Changes depend on whether you're on PSN Assured or PSN Protected and whether you
 
 - If you're on PSN Assured, you'll be charged for outbound data used in the month once you have exceeded 1TB.
 
-- If you're on PSN Protected, you'll be charged a monthly starter pack fee for the outbound data used which provides 250GB per month. Additional usage will be charged as per the UKCloud pricing guide.
+- If you're on PSN Protected, you'll be charged a monthly starter pack fee for the outbound data used which provides 250GB per month. Additional usage will be charged as per the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 - For either service, if you have the Unmetered Data Transfer option, you'll be charged a set fee for the month.
 
 We charge for each separate connection on the UKCloud platform.
 
-UKCloud pricing is available via the G-Cloud Digital Marketplace.
+UKCloud pricing is available via the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 ### How does PSN for Policing work?
 
@@ -233,4 +233,4 @@ For solutions requiring many PSN IPs we would encourage you to bring your own ra
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

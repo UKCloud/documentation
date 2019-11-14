@@ -8,7 +8,7 @@
     <title>How to export edge gateway configuration data using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to export edge gateway configuration data using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -98,12 +98,12 @@
 <h2 id="exporting-edge-gateway-configuration-data">Exporting Edge Gateway configuration data</h2>
 <ol>
 <li><p>Install PowerCLI from VMware:</p>
-<p><a href="https://vmware.com/support/developer/PowerCLI">https://vmware.com/support/developer/PowerCLI</a></p>
+<p><a href="https://code.vmware.com/web/tool/11.4.0/vmware-powercli">https://code.vmware.com/web/tool/11.4.0/vmware-powercli</a></p>
 </li>
 <li><p>Open your PowerCLI session and connect to vCloud.</p>
-<p>You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API.</p>
+<p>You can find your credentials in the UKCloud Portal by clicking your username in the top right hand corner and selecting API. For more information, see [<em>Finding your vCloud API credentials</em>(vmw-how-access-vcloud-api.md#finding-your-vcloud-api-credentials).</p>
 </li>
-<li><p>Copy the following function and paste it into your PowerCLI shell:</p>
+<li><p>Copy the following function and paste it into a .psm1 file:</p>
 <pre><code>Function Get-EdgeConfig ($EdgeGateway)
 
 {
@@ -114,7 +114,7 @@
 
     $webclient.Headers.Add(&quot;x-vcloud-authorization&quot;,$EdgeView.Client.SessionKey)
 
-    $webclient.Headers.Add(&quot;accept&quot;,$EdgeView.Type + &quot;;version=5.5&quot;)
+    $webclient.Headers.Add(&quot;accept&quot;,$EdgeView.Type + &quot;;version=30.0&quot;)
 
     [xml]$EGWConfXML = $webclient.DownloadString($EdgeView.href)
 
@@ -138,7 +138,11 @@
 
 </code></pre>
 </li>
-<li><p>Find your Edge Gateways by entering the following command:</p>
+<li><p>Enter the below command to import the function.</p>
+<pre><code> Import-Module [PATH TO PSM1 FILE]
+</code></pre>
+</li>
+<li><p>Find your edge gateways by entering the following command:</p>
 <pre><code> $Gateways = Search-Cloud -QueryType EdgeGateway
 </code></pre>
 </li>
@@ -161,12 +165,10 @@
 
  $Config.Nat | Export-csv -path c:\users\myaccount\desktop\natrules.csv -notypeinformation
 </code></pre>
-<pre><code>
-</code></pre>
 </li>
 </ol>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
