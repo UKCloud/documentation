@@ -4,7 +4,7 @@ description: Shows you how to obtain various statistics about your UKCloud for O
 services: openshift
 author: Sue Highmoor
 reviewer:
-lastreviewed: 14/11/2019 18:21:38
+lastreviewed: 14/11/2019 11:15:38
 
 toc_rootlink: How To
 toc_sub1:
