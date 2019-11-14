@@ -23,7 +23,7 @@ When you create an instance in OpenStack, its disk is cloned from an image manag
 
 During deployment of a Windows instance, you need to provide your public key to encrypt the password. After deployment, you can retrieve the password for the instance using the nova command line interface (CLI).
 
-## Retrieving your Windows password
+## Retrieving your Windows password with nova CLI
 
 To retrieve your Windows password, use the following nova CLI command:
 
@@ -32,6 +32,16 @@ To retrieve your Windows password, use the following nova CLI command:
 For example:
 
     nova get-password testVM ~/.ssh/id_rsa
+
+## Retrieving your Windows password through the Horizon GUI
+
+To retrieve your Windows password via the GUI, click on the drop down next to the instance, and click "Retrieve Instance Password"
+
+![Retrieve-Password](./images/ostack-horizon-retrieve-password.png)
+
+Now use the private key associated with the instance, and upload the file or paste the contents of the key into the box provided. Click "Decrypt Password", and the administrator password will be shown.
+
+![Retrieve-Password-Decrypt](./images/ostack-horizon-retrieve-password-decrypt.png)
 
 ## Feedback
 
