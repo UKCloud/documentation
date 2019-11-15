@@ -6853,6 +6853,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-retrieve-password-decrypt.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-retrieve-password-decrypt.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openstack/images/ostack-horizon-retrieve-password.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openstack/images/ostack-horizon-retrieve-password.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/openstack/images/ostack-horizon-select-template.png",
       "output": {
         "resource": {
@@ -7584,7 +7606,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-retrieve-windows-password.html",
-          "hash": "Ke7X8Kh33nI7zbYpBoW/bw=="
+          "hash": "ZhSfd11CEnjY9szIwIMUFA=="
         }
       },
       "is_incremental": false,
@@ -18007,7 +18029,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "HBq1err94EJIT5Gqr6BBNQ=="
+          "hash": "a+tQjlX3mZ88eq7Tylinow=="
         }
       },
       "is_incremental": false,
@@ -18235,7 +18257,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-change-ipsec-vpn-api.html",
-          "hash": "H2w/RLV/pyBnyZ+qm8YvTQ=="
+          "hash": "c39eYgUSubq5cp4OPihi5g=="
         }
       },
       "is_incremental": false,
@@ -18535,7 +18557,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-how-interact-vcd-api-powershell.html",
-          "hash": "a5cNYJWCQQfb3oiCmAXjZg=="
+          "hash": "nnAl7VZaMo7yH/91uyKx+Q=="
         }
       },
       "is_incremental": false,
@@ -19159,7 +19181,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcd-97.html",
-          "hash": "5O/ADKJ6xZhZoo0PbYuPcA=="
+          "hash": "NEdlma0+tf787vGH61aH9g=="
         }
       },
       "is_incremental": false,
@@ -19470,17 +19492,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 415,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 415,
           "skipped_file_count": 0
         }
       }

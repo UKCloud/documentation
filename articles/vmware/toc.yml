@@ -156,6 +156,8 @@
     href: vmw-ref-advanced-networking.md
   - name: Availability of Virtual Hardware version 11
     href: vmw-ref-virtual-hardware-v11.md
+  - name: Changes in vCloud Director 9.7
+    href: vmw-ref-vcd-97.md
   - name: Cloning vApps using PowerCLI
     href: vmw-ref-cloning-vapps.md
   - name: Comparison of UKCloud for VMware against hyperscalers
@@ -180,8 +182,6 @@
     href: vmw-ref-oversized-vms.md
   - name: PowerCLI command for interacting with the vCloud API
     href: vmw-ref-powercli-vcloud.md
-  - name: Preparing for vCloud Director 9.7 upgrade
-    href: vmw-ref-vcd-97.md
   - name: Red Hat Update Infrastructure overview
     href: vmw-ref-rhui.md
   - name: Shared Secret Length Issues IPSec VPN
