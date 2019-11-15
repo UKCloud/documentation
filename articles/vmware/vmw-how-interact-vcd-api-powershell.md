@@ -20,14 +20,9 @@ toc_mdlink: vmw-how-interact-vcd-api-powershell.md
 ## Pre Work
 
 ### Useful Links
+You can find the sched reference for version 32.0 of the vCloud API here:
 
-You can look up all of the different object types here:
-
-http://pubs.vmware.com/vcd-55/index.jsp#doc/index.html
-
-### Examples of all typed queries
-
-http://pubs.vmware.com/vcloud-api-1-5/wwhelp/wwhimpl/js/html/wwhelp.htm#href=api_prog/GUID-43DFF30E-391F-42DC-87B3-5923ABCEB366.html
+https://code.vmware.com/apis/553/vcloud
 
 ### PowerShell
 
@@ -39,9 +34,9 @@ If `PSVersion` is less than 3.0, you'll need to upgrade. The v4 package is avail
 
 ### Python
 
-You'll need to install Python 2.7: https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi
+You'll need to install Python 2.7: https://www.python.org/downloads/release/python-2716/
 
-You'll then need to install the package: http://www.python-requests.org/en/latest/user/install/#install
+You'll then need to install the package: https://pypi.org/project/requests/
 
 ### Getting your credentials
 
@@ -57,13 +52,13 @@ For more detailed instructions, see [*How to access vCloud Director through the 
 
 ### PowerShell
 
-1. Copy and paste the following script into your PowerShell session:
+1. Copy and paste the following script into a .psm1 file:
 
-       $Global:SkyscapeURL = "https://api.vcd.portal.skyscapecloud.com/api"
+       $Global:SkyscapeURL = "https://<API URL from portal>/api"
 
        $Global:Authorization = ""
 
-       $Global:Accept = "application/*+xml;version=5.1"
+       $Global:Accept = "application/*+xml;version=32.0"
 
        $Global:xvCloudAuthorization = ""
 
@@ -101,15 +96,20 @@ For more detailed instructions, see [*How to access vCloud Director through the 
 
     You will now have two new functions available to you; `New-vCloudLogin` and `Get-vCloudRequest`.
 
-2. To log in enter:
+2. In a new Powershell window, run the below to import the file with the below
+
+        Import-Module <Path to .psm1 file>
+
+
+3. To log in enter:
 
        New-vCloudLogin –Username “myuser@org” –Password “yourportalpassword”
 
-3. Use the username that you copied from the Portal earlier and your Portal password. This will login to vCloud and add your authorisation header to a global variable for use in the next function:
+4. Use the username that you copied from the Portal earlier and your Portal password. This will login to vCloud and add your authorisation header to a global variable for use in the next function:
 
        $VMS = Get-vCloudRequest –EndPoint “query?type=vm”
 
-4. This will get the first 25 VMs in your Org and store them in `$VMS`, which you can inspect. Just enter `$vms` and see what you get.
+5. This will get the first 25 VMs in your Org and store them in `$VMS`, as an XML output which you can inspect, or export as you wish
 
 #### Other examples
 
@@ -129,11 +129,11 @@ For more detailed instructions, see [*How to access vCloud Director through the 
 
        import requests
 
-       SkyscapeURL = "https://api.vcd.portal.skyscapecloud.com/api"
+       SkyscapeURL = "https://<API URL from portal>/api"
 
        Authorization = ""
 
-       Accept = "application/*+xml;version=5.1"
+       Accept = "application/*+xml;version=32.0"
 
        xvCloudAuthorization = ""
 
