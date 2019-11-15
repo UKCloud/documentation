@@ -3,8 +3,8 @@ title: How to interact with the vCloud REST API using PowerShell and Python | UK
 description: A brief introduction on how to start interacting with the vCloud Director REST API with PowerShell and Python
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/09/2018 14:50:11
+reviewer: Dylan Coombes
+lastreviewed: 15/11/2019 15:05:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -20,7 +20,7 @@ toc_mdlink: vmw-how-interact-vcd-api-powershell.md
 ## Pre Work
 
 ### Useful Links
-You can find the sched reference for version 32.0 of the vCloud API here:
+You can find the schema reference for version 32.0 of the vCloud API here:
 
 https://code.vmware.com/apis/553/vcloud
 
