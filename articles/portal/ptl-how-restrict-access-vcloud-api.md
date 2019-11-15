@@ -1,26 +1,26 @@
 ---
-title: How to restrict access to the vCloud API via IP address | UKCloud Ltd
-description: Shows how to restrict users from accessing the vCloud API from specified IP addresses
+title: How to restrict access to the vCloud API | UKCloud Ltd
+description: Shows how to create a whitelist of IP addresses to restrict access to the vCloud API
 services: portal
 author: Sue Highmoor
 reviewer:
-lastreviewed: 08/11/2019
+lastreviewed: 15/11/2019
 
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Restrict access to the vCloud API via IP address
-toc_fullpath: How To/ptl-how-restrict-ip-access-vcloud-api.md
-toc_mdlink: ptl-how-restrict-ip-access-vcloud-api.md
+toc_title: Restrict access to the vCloud API
+toc_fullpath: How To/ptl-how-restrict-access-vcloud-api.md
+toc_mdlink: ptl-how-restrict-access-vcloud-api.md
 ---
 
-# How to restrict access to the vCloud API via IP address
+# How to restrict access to the vCloud API
 
 ## Overview
 
-You can restrict access so that specific IP addresses are unable to access the vCloud API. This helps to prevent access to the API from unauthorised sources.
+You can restrict access to the vCloud API by creating a whitelist of acceptable IP addresses. This helps to prevent access to the API from unauthorised sources as users will only be able to access the API if their request originates from an IP address on the whitelist.
 
 > [!NOTE]
 > When specifying IP addresses, you must use individual IP addresses. You cannot restrict access to groups of IP addresses, for example by range or subnet.
@@ -47,13 +47,13 @@ To restrict access to the vCloud API:
 
 6. Select **Enable vCloud Director API IP address access restriction**.
 
-7. To restrict access from the specified IP addresses for all users of the account, click **Add IP** in the *Account wide* section and enter the IP addresses that you want to prevent from accessing the API.
+7. To add an IP address to the whitelist, click **Add IP** in the *Account wide* section and enter the IP addresses that you want to whitelist.
 
-    ![Account-wide IP access restriction security setting for the vCloud API](images/ptl-settings-ip-api-account.png)
+    ![Account-wide IP address whitelist security setting for the vCloud API](images/ptl-settings-ip-api-account.png)
 
-8. To restrict access from the specified IP addresses for specific users, click **Add IP** in the *Individual users* section and enter the email address for the user and the IP addresses that you want to prevent that user accessing the API from.
+8. To whitelist an IP address for a specific user, in addition to the account-wide IP addresses, click **Add IP** in the *Individual users* section, enter the email address for the user and the IP addresses that you want to whitelist.
 
-    ![Individual user IP access restriction security setting for the vCloud API](images/ptl-settings-ip-api-user.png)
+    ![Individual user IP address whitelist security setting for the vCloud API](images/ptl-settings-ip-api-user.png)
 
     > [!NOTE]
     > When specifying IP addresses, you must use individual IP addresses. You cannot restrict access to groups of IP addresses, for example by range or subnet.
@@ -62,7 +62,7 @@ To restrict access to the vCloud API:
 
 ## Next steps
 
-You can also restrict IP access to the UKCloud Portal. For more information, see [*How to restrict access to the UKCloud Portal via IP address*](ptl-how-restrict-ip-access-portal.md)
+You can also restrict access to the UKCloud Portal. For more information, see [*How to restrict access to the UKCloud Portal*](ptl-how-restrict-access-portal.md)
 
 ## Feedback
 

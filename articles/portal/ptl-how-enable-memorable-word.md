@@ -4,7 +4,7 @@ description: Describes how to enable an additional level of authentication throu
 services: portal
 author: Sue Highmoor
 reviewer: 
-lastreviewed: 07/11/2019
+lastreviewed: 15/11/2019
 
 toc_rootlink: Reference
 toc_sub1:
@@ -52,14 +52,14 @@ To enable memorable word authentication:
 
 ## Enabling memorable word on account switch
 
-You can extend your use of the memorable word feature to also prompt users for letters from their memorable word when they switch to a different account within the Portal.
+You can extend your use of the memorable word feature to also prompt users for letters from their memorable word when they switch to this account from a different account within the Portal.
 
 1. Select the **Prompt for memorable word check on account switch** check box.
 
     ![Enable memorable word on account switch security setting](images/ptl-security-memorable-word-switch.png)
 
     > [!NOTE]
-    > If you cannot see the **Prompt for memorable word check on account switch** check box, this means that you have not yet enabled memorable word authentication for the account (see [*Enabling memorable word authentication*](#enabling-memorable-word-authentication)).
+    > If you cannot see the **Prompt for memorable word check on account switch** check box, this means that you've not yet enabled memorable word authentication for the account (see [*Enabling memorable word authentication*](#enabling-memorable-word-authentication)).
 
 2. When you're done, click **Save**.
 
@@ -67,14 +67,14 @@ You can extend your use of the memorable word feature to also prompt users for l
 
 ## Excluding users from memorable word authentication
 
-You can disable memorable word authentication for specific users if required.
+You can disable memorable word authentication on login for specific users if required.
+
+> [!NOTE]
+> If you've enabled memorable word on account switch, users will still be prompted for letters from their memorable word when switching to the account.
 
 1. In the *Excluded users* section, click **Add user**.
 
-2. Enter the email address of the user you want to exclude from memorable word authentication.
-
-    > [!TIP]
-    > As soon as you enter a few characters, you'll be presented with a list of users to select from.
+2. Start entering the email address of the user you want to exclude from memorable word authentication, then select the user from the presented list.
 
     ![Excluding users from memorable word authentication](images/ptl-security-memorable-word-exclude.png)
 
