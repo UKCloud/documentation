@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-how-use-azure-api.html",
-          "hash": "heD6iHEaH4OpDmW/wxNZ/w=="
+          "hash": "O4NxEOGjsQI677AivPTsig=="
         }
       },
       "is_incremental": false,
@@ -2360,7 +2360,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-sco.html",
-          "hash": "T7hM2YJBU412hrC2Jp7D2Q=="
+          "hash": "ykoXIIGxsHwITqKbvc1Log=="
         }
       },
       "is_incremental": false,
@@ -3310,7 +3310,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connectivity/conn-faq.html",
-          "hash": "2GVYhDzZY7oGxrHK/IH+fg=="
+          "hash": "IZiDT+Gfh50PMU16IO4zuw=="
         }
       },
       "is_incremental": false,
@@ -3695,7 +3695,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-faq.html",
-          "hash": "zDf+Kn/wmSrvYzVu++KKNQ=="
+          "hash": "SS98Z+FjhCbMj/x69Mmk3A=="
         }
       },
       "is_incremental": false,
@@ -3707,7 +3707,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/draas/draas-gs.html",
-          "hash": "gbGmHre4EqhaYjPBZJwiDw=="
+          "hash": "flkGxVmwzHj8wWOrH4wZGQ=="
         }
       },
       "is_incremental": false,
@@ -4729,31 +4729,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/gpu-faq.html",
-          "hash": "PhkFTX0ogjBUfnlq3MEoNw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/gpu/gpu-gs-compute.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/gpu/gpu-gs-compute.html",
-          "hash": "l16t2KDL/GQd/au1RX/Vcw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/gpu/gpu-gs-visualisation.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/gpu/gpu-gs-visualisation.html",
-          "hash": "IC6kibF0uDwK/829rw632Q=="
+          "hash": "orq0/gQ7wpOlYW87p5xMFA=="
         }
       },
       "is_incremental": false,
@@ -4765,172 +4741,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/gpu-sco.html",
-          "hash": "DBRRVaBLMwX+sPnfr28P3w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-nvidia-licence-acquired.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-nvidia-licence-acquired.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-nvidia-manage-license.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-nvidia-manage-license.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-nvidia-win-install-driver.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-nvidia-win-install-driver.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-portal-my-vms.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-portal-my-vms.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-portal-vcd-password.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-portal-vcd-password.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-vcd-add-firewall-rule.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-vcd-add-firewall-rule.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-vcd-add-vapp.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-vcd-add-vapp.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-vcd-vapp-all-templates.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-vcd-vapp-all-templates.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-vcd-vapp-name.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-vcd-vapp-name.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-vcd-vapp-networking.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-vcd-vapp-networking.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-vcd-vapp-public-catalog.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-vcd-vapp-public-catalog.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-vcd-vapp-resources.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-vcd-vapp-resources.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-vcd-vapp-search.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-vcd-vapp-search.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-vcd-vm-insert-cd.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-vcd-vm-insert-cd.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/gpu/images/gpu-vcd-vm-mnu-insert-cd.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/gpu/images/gpu-vcd-vm-mnu-insert-cd.png"
+          "hash": "VYHeTv+RezV4u/01hPuzyA=="
         }
       },
       "is_incremental": false,
@@ -4942,7 +4753,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gpu/toc.html",
-          "hash": "sJnw8oUwjB6hxysNuv4beg=="
+          "hash": "rwERFhunMzGPoZY5/FRpgQ=="
         }
       },
       "is_incremental": false,
@@ -5107,7 +4918,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/mcbs/mcbs-faq.html",
-          "hash": "+nA2xXW2FQ+BZEJ1n2nRqw=="
+          "hash": "Qwmu0/YLNr51HIguL/LTaA=="
         }
       },
       "is_incremental": false,
@@ -5199,7 +5010,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/migration/migr-how-zerto-migrate-to-ukcloud.html",
-          "hash": "/RbrV4fPFGcL/vBysFzcyA=="
+          "hash": "II6VW1c0QLzLnqVKGCvprA=="
         }
       },
       "is_incremental": false,
@@ -5291,6 +5102,50 @@
       "output": {
         "resource": {
           "relative_path": "articles/openshift/images/oshift-get-pv.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-kibana-dash-311.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-kibana-dash-311.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-kibana-dash-39.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-kibana-dash-39.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-kibana-hosts.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-kibana-hosts.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/openshift/images/oshift-kibana-returncodes.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/openshift/images/oshift-kibana-returncodes.png"
         }
       },
       "is_incremental": false,
@@ -5680,6 +5535,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/openshift/oshift-ref-kibana-dashboards.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/openshift/oshift-ref-kibana-dashboards.html",
+          "hash": "+pwaNrlNF4ulrNqtHnQwLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/openshift/oshift-ref-lifecycle.md",
       "output": {
         ".html": {
@@ -5720,7 +5587,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-ref-security-best-practices.html",
-          "hash": "gY2JDa8b/LUWZnsXJcvP2g=="
+          "hash": "sKjCXJzsN4RIFaIqjearCQ=="
         }
       },
       "is_incremental": false,
@@ -5768,7 +5635,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/toc.html",
-          "hash": "mrkWNbDRSVyeqVcnDj/lOw=="
+          "hash": "F7xPcNImFfgiFYIRUFgfDA=="
         }
       },
       "is_incremental": false,
@@ -7693,7 +7560,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openstack/ostack-how-move-resources.html",
-          "hash": "OjZhc7QYRabLd4q33QtuuA=="
+          "hash": "VxmCy5nMBArYZliyQPlEMw=="
         }
       },
       "is_incremental": false,
@@ -8378,7 +8245,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-ref-licensing.html",
-          "hash": "uORIYhd/3irOZSv5+JV3cw=="
+          "hash": "vk1cU8uw6ERIfcUnm25ZcA=="
         }
       },
       "is_incremental": false,
@@ -8438,7 +8305,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/oracle/orcl-sco.html",
-          "hash": "Y10KuuPeTOAzNDGYn4Nf9g=="
+          "hash": "+/4EQCypqzYO+sIbYFigXQ=="
         }
       },
       "is_incremental": false,
@@ -9389,7 +9256,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-how-use-pricing-tool.html",
-          "hash": "EPstfztcS0tRbZfmxEUEIQ=="
+          "hash": "wOOddcb81IfJtvfj8vYOiQ=="
         }
       },
       "is_incremental": false,
@@ -9401,7 +9268,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-how-use-webhooks.html",
-          "hash": "EiI7mk8ERoVKrmW5AL7isg=="
+          "hash": "64apZfs7LD/WXMuZPrclzw=="
         }
       },
       "is_incremental": false,
@@ -9509,7 +9376,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-dc-notice.html",
-          "hash": "QUUmWE/qfeMXTodQG2i4CQ=="
+          "hash": "WeaNzAY458sR8KcdoLr3aw=="
         }
       },
       "is_incremental": false,
@@ -9558,6 +9425,18 @@
         ".html": {
           "relative_path": "articles/other/other-ref-hadoop-proposition.html",
           "hash": "taDMgqJGK726iVzRVX4dCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/other/other-ref-high-availability.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/other/other-ref-high-availability.html",
+          "hash": "P2JZjaT9joGZcSlcYV1qfw=="
         }
       },
       "is_incremental": false,
@@ -9845,7 +9724,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "B/SJEGNbmGnUpFCNmPzuvA=="
+          "hash": "D5tHcrcvouoOSZ1i/fOXuA=="
         }
       },
       "is_incremental": false,
@@ -10649,7 +10528,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "MS1OzG2p6IUeOBvG6aO/wg=="
+          "hash": "U7FAjZrjEGu+6/2mNmk6yw=="
         }
       },
       "is_incremental": false,
@@ -10661,7 +10540,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-create-users.html",
-          "hash": "4BCjtjq1kIViFMKyGgrnPw=="
+          "hash": "2Ma1dGg0dQPOFogQ4QWiIg=="
         }
       },
       "is_incremental": false,
@@ -10673,7 +10552,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-raise-escalate-service-request.html",
-          "hash": "/tABanyuO74Zva9TbUPi8A=="
+          "hash": "Fwy6YHeNZQ7PndugxO1pQQ=="
         }
       },
       "is_incremental": false,
@@ -10733,7 +10612,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-how-use-api.html",
-          "hash": "1nsCOxVQC0/qx6IoE/HRSw=="
+          "hash": "bFy0JtF0q3hPSPilEDuXdA=="
         }
       },
       "is_incremental": false,
@@ -10805,7 +10684,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-overview-permissions.html",
-          "hash": "oWdRJ1M8Kxuv9Wm8xDpo/g=="
+          "hash": "NiJZuSS93Mw5fFrcnDlBZA=="
         }
       },
       "is_incremental": false,
@@ -11085,7 +10964,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/sra/sra-faq.html",
-          "hash": "/nrQ9/e/ssdN4ruP2Jfsvw=="
+          "hash": "9Kxt6UwO+xrFozCgpyUH5g=="
         }
       },
       "is_incremental": false,
@@ -11290,7 +11169,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/third-party/third-faq-cyberscore.html",
-          "hash": "Ohirq4RvwnYnCFOGx0W9pg=="
+          "hash": "/thaGEe6o6wPOJrM9oGNww=="
         }
       },
       "is_incremental": false,
@@ -13163,6 +13042,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-nvidia-licence-acquired.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-nvidia-licence-acquired.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-nvidia-manage-license.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-nvidia-manage-license.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-nvidia-win-install-driver.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-nvidia-win-install-driver.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-organisation.png",
       "output": {
         "resource": {
@@ -15000,6 +14912,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-firewall-gpu-licence.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-firewall-gpu-licence.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-home-page.png",
       "output": {
         "resource": {
@@ -15077,6 +15000,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-ico-console-gpu.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-ico-console-gpu.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-ico-reset-vm.png",
       "output": {
         "resource": {
@@ -15103,6 +15037,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-ico-upload-progress.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-insert-cd.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-insert-cd.png"
         }
       },
       "is_incremental": false,
@@ -15330,6 +15275,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-create-vapp-from-template.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-mnu-create-vapp-from-template.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-dcs.png",
       "output": {
         "resource": {
@@ -15455,6 +15411,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-mnu-share-catalog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-mnu-storage-policies.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-mnu-storage-policies.png"
         }
       },
       "is_incremental": false,
@@ -15752,6 +15719,17 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-share-catalog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-storage-limit.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-storage-limit.png"
         }
       },
       "is_incremental": false,
@@ -16335,6 +16313,50 @@
       "output": {
         "resource": {
           "relative_path": "articles/vmware/images/vmw-vcd-vapp-filter-templates.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-vapp-from-template-hardware.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-vapp-from-template-hardware.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-vapp-from-template-name.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-vapp-from-template-name.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-vapp-from-template-network.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-vapp-from-template-network.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/vmware/images/vmw-vcd-vapp-from-template-resources.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/vmware/images/vmw-vcd-vapp-from-template-resources.png"
         }
       },
       "is_incremental": false,
@@ -17985,7 +18007,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/toc.html",
-          "hash": "XJQqpvAkN9TfF5J+MU//4A=="
+          "hash": "HBq1err94EJIT5Gqr6BBNQ=="
         }
       },
       "is_incremental": false,
@@ -18093,7 +18115,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-gs.html",
-          "hash": "uHIsDdRxv5avuvDofBRQiQ=="
+          "hash": "yqMipaav9EYo7HQgBB58PQ=="
         }
       },
       "is_incremental": false,
@@ -18461,6 +18483,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-increase-storage.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-increase-storage.html",
+          "hash": "5ijjOzboHoRGwRmGoGisrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/vmware/vmw-how-install-openvpn.md",
       "output": {
         ".html": {
@@ -18634,6 +18668,30 @@
         ".html": {
           "relative_path": "articles/vmware/vmw-how-retrieve-utilisation-metrics.html",
           "hash": "Nqkeq6dU5gqFvLE18g5jxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-setup-gpu-compute.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-setup-gpu-compute.html",
+          "hash": "1sKNAmu3auEznzg/ZIa1YQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/vmware/vmw-how-setup-gpu-visualisation.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/vmware/vmw-how-setup-gpu-visualisation.html",
+          "hash": "FXBT/OwcIYJ0sf+aF1sTbw=="
         }
       },
       "is_incremental": false,
@@ -18969,7 +19027,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-oversized-vms.html",
-          "hash": "Xi89JtbQFQUUtcsz/HFzaQ=="
+          "hash": "AzriLLckcr0+6QJgWDuxrA=="
         }
       },
       "is_incremental": false,
@@ -19101,7 +19159,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-ref-vcd-97.html",
-          "hash": "hrQLxebSDOrkDFN1zngshA=="
+          "hash": "5O/ADKJ6xZhZoo0PbYuPcA=="
         }
       },
       "is_incremental": false,
@@ -19197,7 +19255,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco-byof.html",
-          "hash": "NpzQ8qRLXNS1iqqYN/xFLQ=="
+          "hash": "P0TNGQO0+d90L3cgdSknIw=="
         }
       },
       "is_incremental": false,
@@ -19257,7 +19315,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/vmware/vmw-sco.html",
-          "hash": "xTXIyYWvTeaJaWntcdIPLA=="
+          "hash": "FvgHhhUNK0yv+JAIeXV68Q=="
         }
       },
       "is_incremental": false,
@@ -19405,13 +19463,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -19419,10 +19470,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 412,
+          "total_file_count": 415,
           "skipped_file_count": 0
         }
       }

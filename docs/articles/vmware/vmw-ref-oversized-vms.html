@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Oversized VMs on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>Oversized VMs on UKCloud for VMware | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Oversized VMs on the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="Oversized VMs on UKCloud for VMware | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -91,21 +91,20 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="oversized-vms-on-the-ukcloud-platform">Oversized VMs on the UKCloud platform</h1>
+<h1 id="oversized-vms-on-ukcloud-for-vmware">Oversized VMs on UKCloud for VMware</h1>
 
-<p>Although UKCloud recommend a maximum permitted configuration of 8vCPU and 96GB RAM for Virtual machines (VMs), a small number of customers have been creating customised VM's that exceed this configuration. We understand that customers may have been doing this in an effort to increase VM performance, and in the most extreme scenarios customers have assigned more vCPU and Memory than is physically available on the host.</p>
+<p>Although UKCloud recommend a maximum permitted configuration of 12 vCPU and 128 GiB RAM for virtual machines (VMs), a small number of customers have been creating customised VMs that exceed this configuration. We understand that customers may have been doing this in an effort to increase VM performance, and in the most extreme scenarios customers have assigned more vCPU and memory than is physically available on the host.</p>
 <p>Unfortunately, this approach does not necessarily increase VM performance and in many circumstances this has the opposite effect.</p>
-<p>UKCloud have configured the platform to dynamically move workloads to quieter hosts when the current host experiences a sustained level of increased activity. By increasing the resource requirements, the ability to move a VM from a busy host to quieter host is significantly impacted. As the VM resources are increased, the likelihood of that amount being free on another host is significantly diminished which effectively locks the VM to the current host.</p>
+<p>UKCloud have configured the service to dynamically move workloads to quieter hosts when the current host experiences a sustained level of increased activity. By increasing the resource requirements, the ability to move a VM from a busy host to a quieter host is significantly impacted. As the VM resources are increased, the likelihood of that amount being free on another host is significantly diminished, which effectively locks the VM to the current host.</p>
 <p>The impact to a customer VM is twofold:</p>
 <ul>
-<li><p>Reducing the reliability of performance</p>
+<li><p>Reduces the reliability of performance</p>
 </li>
-<li><p>Potentially affecting VM availability in the case of a failure</p>
+<li><p>Potentially affects VM availability in the case of a failure</p>
 </li>
 </ul>
-<p>UKCloud must also consider the impact that these abnormally large VMs have on other users of the platform as the increased VMs consume additional resources and cause performance issues for other VMs.</p>
-<p>With this mind, UKCloud advises customers that VMs that exceed the maximum available in our current G Cloud service description for UKCloud for VMware are not allowed. We are currently scoping a technical fix to stop further creation of VMs that exceed the maximum permitted configuration. In the interim, we will be running regular reports to identify customers with VMs that breach these limits.</p>
-<p>In the first instance we will contact customers to help them overcome some of the issues they are experiencing, but we reserve the right to terminate excessively large VMs should they start to affect the stability of the platform for other UKCloud customers.</p>
+<p>UKCloud must also consider the impact that these abnormally large VMs have on other users of the service as oversized VMs consume additional resources and cause performance issues for other VMs.</p>
+<p>With this mind, UKCloud advises customers that VMs that exceed the maximum resources permitted for UKCloud for VMware are not allowed. We run regular reports to identify customers with VMs that breach these limits. In the first instance, we will contact customers to help them overcome some of the issues they are experiencing, but we reserve the right to terminate excessively large VMs should they start to affect the stability of the platform for other UKCloud customers.</p>
 <h2 id="feedback">Feedback</h2>
 <p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 

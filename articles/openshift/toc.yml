@@ -46,6 +46,8 @@
     href: oshift-ref-no-proxy.md
   - name: Considerations when scaling an OpenShift cluster
     href: oshift-ref-scaling.md
+  - name: Custom dashboards provided with aggregated logging Kibana
+    href: oshift-ref-kibana-dashboards.md
   - name: DNS zone forwarding in OpenShift clusters
     href: oshift-ref-dns-zone-forwarding.md
   - name: Lifecycle and patch management

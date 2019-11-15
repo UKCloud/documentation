@@ -32,10 +32,6 @@ To complete the steps in this guide you must have access to the UKCloud Portal a
 
 You should have received your UKCloud Portal login credentials from your Customer Success Manager (CSM).
 
-We recommend that you use the Mozilla Firefox ESR 32-bit browser as this is supported by both the UKCloud Portal and by the Web Console for the version of vCloud Director used by UKCloud for VMware.
-
-**More information!** [*Browser requirements for services on the UKCloud Platform*](../other/other-ref-browsers.md)
-
 ## Introductions to UKCloud for VMware
 
 We understand that each enterprise application has its own set of technical and service requirements that must be addressed on an individual basis. UKCloud for VMware is highly configurable, and gives you the flexibility to use different service levels, VM sizes, security domains, connectivity and data protection options.

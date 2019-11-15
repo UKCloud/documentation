@@ -3,8 +3,8 @@ title: CyberScore from UKCloud FAQs | UKCloud Ltd
 description: Frequently asked questions for CyberScore from UKCloud
 services: third-party
 author: Sue Highmoor
-reviewer: Sue Highmoor
-lastreviewed: 17/09/2019
+reviewer: George Smith
+lastreviewed: 13/11/2019
 toc_rootlink: CyberScore
 toc_sub1: 
 toc_sub2:
@@ -23,7 +23,7 @@ toc_mdlink: third-faq-cyberscore.md
 
 ### What is CyberScore?
 
-CyberScore&trade; is a fully-automated security testing and rating service from XQ Cyber that scores a virtual machine’s cyber security posture and explains potential impacts. Results are presented in a range of reports and action plans that help customers rank and rate vulnerabilities and identify key remediations. You can run the service as often as required and CyberScore will show your progress over time.
+CyberScore&trade; is a fully-automated security testing and rating service, that scores a virtual machine’s cyber security posture and explains potential impacts. Results are presented in a range of reports and action plans that help customers rank and rate vulnerabilities and identify key remediations. You can run the service as often as required and CyberScore will show your progress over time.
 
 ### What is provided in the service?
 
@@ -101,9 +101,9 @@ Vulnerabilities are sorted into Application Patching, OS Patching, Misconfigurat
 
 ### How secure is my data with CyberScore?
 
-To minimise the risk to the client organisation, all vulnerability data is removed from a CyberScore scanner once the data has been successfully uploaded. Exposure of the CyberScore platform to insider threats is minimised by stringently limiting the number of XQ staff with any form of access to the live platform environment.
+To minimise the risk to the client organisation, all vulnerability data is removed from a CyberScore scanner once the data has been successfully uploaded. Exposure of the CyberScore platform to insider threats is minimised by stringently limiting the number of staff with any form of access to the live platform environment.
 
-All cryptographically-derived credentials, such as VPN and SSH certificates, are generated using strong cryptography, contain unique identifiers, and are signed by a central XQ certification authority with a limited period of validity.  These credentials can be immediately revoked using certificate revocation lists distributed to individual devices and endpoints.
+All cryptographically-derived credentials, such as VPN and SSH certificates, are generated using strong cryptography, contain unique identifiers, and are signed by a central certification authority with a limited period of validity.  These credentials can be immediately revoked using certificate revocation lists distributed to individual devices and endpoints.
 
 ## Billing
 

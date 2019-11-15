@@ -22,7 +22,7 @@ toc_mdlink: ptl-how-create-users.md
 
 You can create users in the UKCloud Portal to enable them to work with UKCloud services.
 
-## Creating a new OpenStack user
+## Creating a new user
 
 To create a new user:
 

@@ -130,10 +130,12 @@ use the Portal API. For more information about UKCloud regions, see <a href="../
 </li>
 <li><p>password - the password you use to log in to the UKCloud Portal</p>
 <p>For example:</p>
-<pre><code>curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d
-'{
-  &quot;email&quot;: &quot;user@example.com&quot;,
-  &quot;password&quot;: &quot;password&quot;
+<pre><code>read portal_email # Enter your Portal email address
+read -s portal_password # Enter your Portal password
+
+curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d '{
+  &quot;email&quot;: &quot;'&quot;$portal_email&quot;'&quot;,
+  &quot;password&quot;: &quot;'&quot;$portal_password&quot;'&quot;
 }' -H 'Content-Type: application/json'
 </code></pre>
 </li>
@@ -341,7 +343,7 @@ Location: /api/vdc-builds/9
 <li><p><code>vorg_id</code> - the ID of the vOrg to which the VDC belongs</p>
 <p>To find a vOrg ID, see <a href="#requesting-a-list-of-vorgs">Requesting a list of vOrgs</a>.</p>
 <p>For example:</p>
-<pre><code>curl --b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' | json_pp
+<pre><code>curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' | json_pp
 </code></pre>
 </li>
 </ul>
@@ -400,7 +402,7 @@ Location: /api/vdc-builds/9
 </li>
 </ul>
 <p>For example:</p>
-<pre><code>curl -b cookies.txt -i 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways' -X POST -d \'{\
+<pre><code>curl -b cookies.txt -i 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways' -X POST -d '{
   &quot;data&quot;: {
     &quot;type&quot;: &quot;EdgeGateway&quot;,
     &quot;attributes&quot;: {

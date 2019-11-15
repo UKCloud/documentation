@@ -212,9 +212,11 @@ The following documents contain more information about Cloud GPU:
 
 - [*Cloud GPU FAQ*](gpu-faq.md)
 
-- Getting Started Guide for Cloud GPU [*Compute*](gpu-gs-compute.md) and [*Visualisation*](gpu-gs-visualisation.md)
+- [*Cloud GPU Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/cloud-gpu-factsheet.pdf)
 
-- [*Cloud GPU Factsheet*](https://ukcloud.com/wp-content/uploads/2017/12/Cloud-GPU-factsheet.pdf)
+- [*How to set up Cloud GPU Compute for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-compute.md)
+
+- [*How to set up Cloud GPU Visualisation for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-visualisation.md)
 
 - [*UKCloud Terms & Conditions for G-Cloud 11*](../other/other-ref-terms-and-conditions.md)
 

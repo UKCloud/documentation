@@ -57,11 +57,19 @@ Yes. To take advantage of the Cloud GPU service, you must also have UKCloud for 
 
 ### Does UKCloud require specific NVIDIA driver versions?
 
-Yes. VMs utilising the NVIDIA GRID solution must use the GRID driver matching the driver installed on the vSphere hosts. For information about installing drivers, see the *Getting Started Guide* for [*GPU Compute*](gpu-gs-compute.md#installing-nvidia-drivers) or [*GPU Visualisation*](gpu-gs-visualisation.md#installing-nvidia-drivers).
+Yes. VMs utilising the NVIDIA GRID solution must use the GRID driver matching the driver installed on the vSphere hosts. For information about installing drivers, see [*How to set up Cloud GPU Compute for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-compute.md#installing-nvidia-drivers) or [*How to set up Cloud GPU Visualisation for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-visualisation.md#installing-nvidia-drivers).
 
 ### Which compute services support Cloud GPU?
 
 Currently, Cloud GPU only supports environments provisioned on UKCloud for VMware in regions 5 and 6. There are future plans to enable the service on UKCloud for OpenStack and High Performance Compute.
+
+### How do I set up Cloud GPU for UKCloud for VMware?
+
+For information about how to set up Cloud GPU for UKCloud for VMware, see:
+
+- [*How to set up Cloud GPU Compute for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-compute.md)
+
+- [*How to set up Cloud GPU Visualisation for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-visualisation.md)
 
 ### How is it billed?
 
