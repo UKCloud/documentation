@@ -25,6 +25,9 @@ You can restrict access to the vCloud API by creating a whitelist of acceptable 
 > [!NOTE]
 > When specifying IP addresses, you must use individual IP addresses. You cannot restrict access to groups of IP addresses, for example by range or subnet.
 
+> [!IMPORTANT]
+> Be careful when entering IP addresses. Entering the wrong address may make the vCloud API inaccessible and you will be unable to change the settings. If you lose access to the API, contact UKCloud Support.
+
 ## Restricting access to the vCloud API
 
 To restrict access to the vCloud API:

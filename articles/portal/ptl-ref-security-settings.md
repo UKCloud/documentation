@@ -4,7 +4,7 @@ description: Provides information about the various security settings available 
 services: portal
 author: Sue Highmoor
 reviewer:
-lastreviewed: 07/11/2019
+lastreviewed: 15/11/2019
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -33,9 +33,9 @@ The UKCloud Portal provides various settings to enable you to provide additional
 
 - **Google two-factor authentication (2FA)** - Add an extra level of authentication whereby users provide a security code from an authenticator app (such as Google Authenticator or Authy) as well as their password to confirm their identity. For more information, see [*How to enable two-factor authentication in the UKCloud Portal*](ptl-how-setup-2fa.md).
 
-- **Portal access restriction by IP address** - Restrict access so that specific IP addresses are unable to log in to the Portal. For more information, see [*How to restrict access to the Portal via IP address*](ptl-how-restrict-ip-access-portal.md).
+- **Portal access restriction by IP address** - Restrict access so that users can only log in to the Portal from specific IP addresses. For more information, see [*How to restrict access to the Portal*](ptl-how-restrict-access-portal.md).
 
-- **vCloud Director API access restriction by IP address** - Restrict access so that specific IP addresses are unable to authenticate with the vCloud API. For more information, see [*How to restrict access to the vCloud API via IP address*](ptl-how-restrict-ip-access-vcloud-api.md).
+- **vCloud Director API access restriction by IP address** - Restrict access so that users can only access the vCloud API from specific IP addresses. For more information, see [*How to restrict access to the vCloud API*](ptl-how-restrict-access-vcloud-api.md).
 
 To change Portal security settings:
 

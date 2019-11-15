@@ -25,6 +25,9 @@ You can restrict access to the UKCloud Portal by creating a whitelist of accepta
 > [!NOTE]
 > When specifying IP addresses, you must use individual IP addresses. You cannot restrict access to groups of IP addresses, for example by range or subnet.
 
+> [!IMPORTANT]
+> Be careful when entering IP addresses. Entering the wrong address may make the Portal inaccessible and you will be unable to change the settings. If you lose access to the Portal, contact UKCloud Support.
+
 ## Restricting access to the Portal
 
 To restrict access to the Portal:
