@@ -3,7 +3,7 @@ title: How to obtain usage metrics to use for OpenShift capacity management | UK
 description: Shows you how to obtain various statistics about your UKCloud for OpenShift cluster that you can use to help with capacity management
 services: openshift
 author: Sue Highmoor
-reviewer:
+reviewer: gellner
 lastreviewed: 14/11/2019 11:15:38
 
 toc_rootlink: How To
@@ -72,7 +72,7 @@ The OpenStack CLI provides the ability to list the nodes in your cluster and the
        worker-tenant-s-0.5623-f84e8e   Ready     compute   310d      v1.11.0+d4cacc0
        worker-tenant-s-1.5623-f84e8e   Ready     compute   310d      v1.11.0+d4cacc0
 
-3. A summary of the resource usage on each node can be displayed using the following command:
+3. You can display a summary of the resource usage on each node using the following command:
 
        oc adm top nodes
 
@@ -183,7 +183,7 @@ The OpenStack CLI provides the ability to list the nodes in your cluster and the
          memory    4220Mi (27%)  3612Mi (23%)
        Events:     <none>	   
 
-5. You can also obtain some of the above information via the REST API, by using something like:
+7. You can also obtain some of the above information via the REST API, by using something like:
 
        curl -H "Authorization: Bearer $token" -H 'Accept: application/json' https://ocp.\$clustername:8443/api/v1/nodes
 
