@@ -10,7 +10,7 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: UKCloud Glossary
+toc_title: Glossary
 toc_fullpath: Reference/other-ref-glossary.md
 toc_mdlink: other-ref-glossary.md
 ---
