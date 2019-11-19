@@ -13,7 +13,7 @@ toc_fullpath: Hystax Acura Cloud Migration/third-sd-hystax.md
 toc_mdlink: third-sd-hystax.md
 ---
 
-# Portworx Enterprise from UKCloud Service Definition
+# Hystax Acura Cloud Migration from UKCloud Service Definition
 
 ## Why UKCloud?
 
@@ -79,7 +79,7 @@ The service is designed to be flexible to enable you to select the right type of
 
 ## Pricing and packaging
 
-UKCloud for Portworx Enterprise starts from £2,200 per month, and full pricing with all options including licensing and connectivity available in the [*3rd Party Software Pricing Guide*](https://ukcloud.com/3rd-party-pricing-guide).
+UKCloud for Portworx Enterprise starts from £2,200 per month, and full pricing with all options, including licensing and connectivity, is available in the [*3rd Party Software Pricing Guide*](https://ukcloud.com/3rd-party-pricing-guide).
 
 ## Accreditation and information assurance
 
