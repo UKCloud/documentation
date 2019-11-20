@@ -30,7 +30,7 @@ logged in to your OpenShift cluster with `oc login`.
 
 
 ## Building an OpenShift application from a private GitHub repository
-1. Create a ssh key-pair
+1. Create an ssh key-pair
 
     > [!NOTE]
     > Don't use your regular one, and make sure you don't overwrite your regular one either.
