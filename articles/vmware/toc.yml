@@ -238,6 +238,8 @@
   items:
   - name: Benefits of VMware L2 VPN
     href: vmw-vid-l2-vpn.md
+  - name: Build a VDC using the Portal
+    href: vmw-vid-build-vdc-portal.md
   - name: Connecting a VM to WSUS
     href: vmw-vid-wsus.md
   - name: Licensing Windows VMs using the KMS
