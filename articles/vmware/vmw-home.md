@@ -4,7 +4,7 @@ description: Home page for UKCloud for VMware
 services: vmware
 author: Sue Highmoor
 reviewer: Sue Highmoor
-lastreviewed: 20/09/2019
+lastreviewed: 21/11/2019
 toc_rootlink: About
 toc_sub1: 
 toc_sub2:
@@ -58,6 +58,12 @@ First, take a look at our [Getting Started Guide](vmw-gs.md) to learn the basics
       <iframe src="https://www.youtube.com/embed/bFB74pj_00E" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <p><a href="https://www.youtube.com/watch?v=bFB74pj_00E">Licensing Windows VMs using the KMS</a></p>
+  </div>
+  <div class="col-md-6">
+    <div style="padding:56.25% 0 0 0;position:relative;">
+      <iframe src="https://www.youtube.com/embed/bnpF3B6XmOQ" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p><a href="https://www.youtube.com/watch?v=bnpF3B6XmOQ">Building a virtual data centre</a></p>
   </div>
 </div>
 
