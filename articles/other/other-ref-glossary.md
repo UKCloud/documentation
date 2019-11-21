@@ -85,7 +85,7 @@ A UKCloud Pre-Sales role aimed at helping you design your cloud solution so that
 
 A UKCloud purchase scheme whereby you can purchase Cloud Credits upfront and redeem them against UKCloud services over a maximum two year period. This enables you to effectively commit your CAPEX or budget spend in advance, with monthly usage deducted from the balance until depleted.
 
-*See also:* [Service Credits](#service-edits)
+*See also:* [Service Credits](#service-credits)
 
 ### Cloud Enablement
 
@@ -185,7 +185,7 @@ A virtual router that provides VDC network services such as DHCP, firewall, NAT,
 
 A security domain on the UKCloud platform that provides secure access to restricted networks such as PSN.
 
-*See also:* [Assured OFFICIAL](#assured-official), [OFFICIAL](#official), [OFFICIAL SENSITIVE](#offical-sensitive)
+*See also:* [Assured OFFICIAL](#assured-official), [OFFICIAL](#official), [OFFICIAL SENSITIVE](#official-sensitive)
 
 ### Email and Collaboration as a Service
 
@@ -503,7 +503,7 @@ For more information, see the [SiteProtect Advanced DDoS Mitigation service scop
 
 A UKCloud enablement service that you can use for activities that require physical interaction with components in a data centre, such as physical "push-button" tasks, replacing hardware or checking equipment status.
 
-For more information, see the [Smart Hands service scope](../enbl-sco-smart-hands.md).
+For more information, see the [Smart Hands service scope](../enablement/enbl-sco-smart-hands.md).
 
 ### Snapshot Protection
 
@@ -553,7 +553,7 @@ A site where you can share information about delivering digital transformation w
 
 A UKCloud IaaS service that harnesses the innovation of Microsoft’s Azure platform delivered from within our award-winning government-grade multi-cloud environment.
 
-For more information, see the [UKCloud for Microsoft Azure service definition](../azure-stack/azs-sd.md).
+For more information, see the [UKCloud for Microsoft Azure service definition](../azure/azs-sd.md).
 
 ### UKCloud for OpenShift
 
