@@ -3,8 +3,8 @@ title: How to use NetworkPolicy objects to connect services between projects | U
 description: Shows how to create a basic NetworkPolicy object to connect services in two projects
 services: openshift
 author: Kieran O'Neill
-reviewer:
-lastreviewed: 02/04/2019 13:29:38
+reviewer: George Smith
+lastreviewed: 21/11/2019
 
 toc_rootlink: How To
 toc_sub1: 
@@ -24,7 +24,7 @@ In OpenShift v3.11 clusters deployed from mid-February 2019, the default SDN plu
 
 By default, we create a NetworkPolicy object, named `allow-from-same-and-privileged-namespaces`, in every project, including those created after the cluster is deployed. This object allows all pods to communicate with each other inside the same project and allows communication from all pods and services to the default and openshift-monitoring projects. This mirrors the default pod security provided with the ovs-multitenant plugin.
 
-This document refers to namespaces and projects. A project is an OpenShift construct on top of a Kuberenetes namespace. For the purpose of this guide they can be thought of as the same thing, however, the `oc label` commands that are performed on a namespace must be applied to the namespace object, they will not work if you attempt to apply them to the project object.
+This document refers to namespaces and projects. A project is an OpenShift construct on top of a Kubernetes namespace. For the purpose of this guide they can be thought of as the same thing, however, the `oc label` commands that are performed on a namespace must be applied to the namespace object, they will not work if you attempt to apply them to the project object.
 
 ## Verifying the cluster SDN
 
@@ -101,7 +101,7 @@ spec:
           database: "true"
 ```
 
-We now have a template for a NetworkPolicy object that matches any pods labeled `role=webserver` inside the webserver project and allows them to communicate out to any projects labeled `database=true`. This is only half the work; we still need the ingress allowance inside the database project. Our example template for that object looks like the following:
+We now have a template for a NetworkPolicy object that matches any pods labelled `role=webserver` inside the webserver project and allows them to communicate out to any projects labelled `database=true`. This is only half the work; we still need the ingress allowance inside the database project. Our example template for that object looks like the following:
 
 ```
 apiVersion: extensions/v1beta1
@@ -120,7 +120,7 @@ spec:
           webserver: "true"
 ```
 
-This object is created in the database project and matches any pods in the project with the label `role=database` and allows ingress traffic from any project labeled `webserver=true`. To achieve our desired outcome, we need to label our webserver project as follows:
+This object is created in the database project and matches any pods in the project with the label `role=database` and allows ingress traffic from any project labelled `webserver=true`. To achieve our desired outcome, we need to label our webserver project as follows:
 
 > [!NOTE]
 > The cluster administrator role is required to add labels to namespaces.
