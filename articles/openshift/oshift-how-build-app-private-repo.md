@@ -1,7 +1,7 @@
 ---
 title: How to build an OpenShift application from a private GitHub repository | UKCloud Ltd
 description: Shows how to build an OpenShift application where the source code is in a private GitHub repository secured with an SSH key pair
-services: OpenShift
+services: openshift
 author: Andy Watkins
 reviewer: George Smith
 lastreviewed: 20/11/2019 16:51:00
