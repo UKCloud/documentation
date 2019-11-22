@@ -133,7 +133,7 @@ For example, to migrate the `backup-test` namespace from our previous example in
 
     `velero create restore migration1 --from-backup test1`
 
-5. As previously, we'll have to sort out the issue with the builder accounts secret. Once this is resolved, we'll have the application running in our new cluster. In our example, we have a route unique to the domain of the cluster, so we need to delete the route and expose the service in the new cluster to create a route pointing to the right DNS record. For any production applications with a route, rather than changing the route itself, you would want to reconfigure your DNS to point to the new cluster IP.
+5. As previously, we'll have to sort out the issue with the builder account's secret. Once this is resolved, we'll have the application running in our new cluster. In our example, we have a route unique to the domain of the cluster, so we need to delete the route and expose the service in the new cluster to create a route pointing to the right DNS record. For any production applications with a route, rather than changing the route itself, you would want to reconfigure your DNS to point to the new cluster IP.
 
 ### Further information
 
