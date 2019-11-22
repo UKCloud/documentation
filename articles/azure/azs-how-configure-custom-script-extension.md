@@ -1,6 +1,6 @@
 ---
-title: How to configure custom script extensions for new and existing VMs on Azure Stack | UKCloud Ltd
-description: Describes how to configure custom script extensions for new and existing VMs on Azure Stack
+title: How to configure custom script extensions for new and existing VMs on Azure Stack Hub | UKCloud Ltd
+description: Describes how to configure custom script extensions for new and existing VMs on Azure Stack Hub
 services: azure-stack
 author: Daniel Brennand
 reviewer: 
@@ -16,13 +16,13 @@ toc_fullpath: Users/How To/azs-how-configure-custom-script-extension.md
 toc_mdlink: azs-how-configure-custom-script-extension.md
 ---
 
-# How to configure custom script extensions for new and existing VMs on Azure Stack
+# How to configure custom script extensions for new and existing VMs on Azure Stack Hub
 
 ## Overview
 
-Custom script extensions download and execute scripts on Azure Stack virtual machines. Custom script extensions are useful for post deployment configuration, software installation, or any other configuration or management tasks.
+Custom script extensions download and execute scripts on Azure Stack Hub virtual machines. Custom script extensions are useful for post deployment configuration, software installation, or any other configuration or management tasks.
 
-This article explains how to add custom script extensions to new and existing VMs on Azure Stack.
+This article explains how to add custom script extensions to new and existing VMs on Azure Stack Hub.
 
 There are two options for deploying custom script extensions:
 
@@ -32,7 +32,7 @@ There are two options for deploying custom script extensions:
 
 ## Prerequisites
 
-To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.
+To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack Hub portal.
 
 ### Declare variables
 
@@ -40,7 +40,7 @@ Enter details below to provide values for the variables in the following scripts
 
 | Variable name   | Variable description                                               | Input            |
 |-----------------|--------------------------------------------------------------------|------------------|
-| \$ArmEndpoint    | The Azure Resource Manager endpoint for Azure Stack                 | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value;result3.value=armendpoint.value;result4.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$ArmEndpoint    | The Azure Resource Manager endpoint for Azure Stack Hub                 | <form oninput="result.value=armendpoint.value;result2.value=armendpoint.value;result3.value=armendpoint.value;result4.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
 | \$RGName        | Name of the resource group                           | <form oninput="result.value=resourcegroup.value;result2.value=resourcegroup.value;result3.value=resourcegroup.value;result4.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"/></form> |
 | \$VMName        | Name of the virtual machine                          | <form oninput="result.value=vmname.value;result2.value=vmname.value;result3.value=vmname.value;result4.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"/></form> |
 | \$ContainerName        | The name of the container created in the storage blob                         | <form oninput="result.value=containername.value;result2.value=containername.value;result3.value=containername.value;result4.value=containername.value" id="containername" style="display: inline;"><input type="text" id="containername" name="containername" style="display: inline;" placeholder="customscriptextension"/></form> |
@@ -54,7 +54,7 @@ Select the desired deployment option:
 
 ## [New VM](#tab/tabid-1)
 
-See documentation here on [how to create a new VM on Azure Stack](azs-how-create-vm-ps.md).
+See documentation here on [how to create a new VM on Azure Stack Hub](azs-how-create-vm-ps.md).
 
 ## [Existing VM](#tab/tabid-2)
 
@@ -62,7 +62,7 @@ See documentation here on [how to create a new VM on Azure Stack](azs-how-create
 
 ### [Linux](#tab/tabid-a/tabid-1)
 
-Add the following code to the end of the VM creation script when creating a Linux VM on Azure Stack.
+Add the following code to the end of the VM creation script when creating a Linux VM on Azure Stack Hub.
 
 #### Local disk
 
@@ -123,7 +123,7 @@ Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $V
 
 ### [Windows](#tab/tabid-b/tabid-1)
 
-Add the following code to the end of the VM creation script when creating a Windows VM on Azure Stack.
+Add the following code to the end of the VM creation script when creating a Windows VM on Azure Stack Hub.
 
 #### Local disk
 
@@ -185,7 +185,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Input variables
@@ -241,7 +241,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Input variables
@@ -277,7 +277,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Input Variables
@@ -323,7 +323,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Input variables

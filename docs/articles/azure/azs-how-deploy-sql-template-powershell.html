@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to deploy an SQL template to Azure Stack using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to deploy an SQL template to Azure Stack Hub using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to deploy an SQL template to Azure Stack using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to deploy an SQL template to Azure Stack Hub using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -91,9 +91,9 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-deploy-an-sql-template-to-azure-stack-using-powershell">How to deploy an SQL template to Azure Stack using PowerShell</h1>
+<h1 id="how-to-deploy-an-sql-template-to-azure-stack-using-powershell">How to deploy an SQL template to Azure Stack Hub using PowerShell</h1>
 
-<p>This document explains how to deploy SQL Always On Cluster using ARM Template to Azure Stack using PowerShell.</p>
+<p>This document explains how to deploy SQL Always On Cluster using ARM Template to Azure Stack Hub using PowerShell.</p>
 <p>It will guide you through the process of:</p>
 <ul>
 <li><p>Obtaining an ARM Template</p>
@@ -103,24 +103,24 @@
 </ul>
 <h2 id="what-is-an-arm-template">What is an ARM Template?</h2>
 <p>You can use Azure Resource Manager templates to deploy and provision all the resources for your application in a single, coordinated operation. You can also redeploy templates to make changes to the resources in a resource group.
-These templates can be deployed via the Azure Stack portal, PowerShell, Azure CLI, REST API and Visual Studio.
+These templates can be deployed via the Azure Stack Hub portal, PowerShell, Azure CLI, REST API and Visual Studio.
 The following quick-start templates are available on <a href="https://aka.ms/AzureStackGitHub">GitHub</a>.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Prerequisites from a Windows-based external client are:</p>
 <ul>
 <li><p>PowerShell 5.1 and AzureStack PowerShell Module</p>
 <ul>
-<li><a href="azs-how-configure-powershell-users.html">Configure PowerShell Environment and Azure Stack Module</a></li>
+<li><a href="azs-how-configure-powershell-users.html">Configure PowerShell Environment and Azure Stack Hub Module</a></li>
 </ul>
 </li>
-<li><p>Active Azure <em>Subscription</em> (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)</p>
+<li><p>Active Azure <em>Subscription</em> (required to create SPN if you want to use the same SPN for both Azure and Azure Stack Hub)</p>
 </li>
 </ul>
 <h2 id="official-documentation">Official documentation</h2>
 <ul>
-<li><p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-arm-templates">Azure Stack ARM Templates Overview</a></p>
+<li><p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-arm-templates">Azure Stack Hub ARM Templates Overview</a></p>
 </li>
-<li><p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-deploy-template-powershell">Deploy a template to Azure Stack using PowerShell</a></p>
+<li><p><a href="https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-deploy-template-powershell">Deploy a template to Azure Stack Hub using PowerShell</a></p>
 </li>
 <li><p><a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates">Understand the structure and syntax of Azure Resource Manager Templates</a></p>
 </li>
@@ -215,13 +215,13 @@ git checkout master
 <li><p>The DNS suffix for public IP addresses by default will be <code>azurestack.external</code> unless you change it to <code>azure.ukcloud.com</code></p>
 </li>
 </ul>
-<h2 id="overview-of-the-arm-template-deployment-process-for-azure-stack-using-service-principal-name-spn-authentication">Overview of the ARM Template deployment process for Azure Stack using Service Principal Name (SPN) authentication</h2>
+<h2 id="overview-of-the-arm-template-deployment-process-for-azure-stack-using-service-principal-name-spn-authentication">Overview of the ARM Template deployment process for Azure Stack Hub using Service Principal Name (SPN) authentication</h2>
 <ol>
 <li><p>Declare your variables accordingly.</p>
 </li>
-<li><p>Create your Azure Stack environment.</p>
+<li><p>Create your Azure Stack Hub environment.</p>
 </li>
-<li><p>Log in to your Azure Stack <em>Subscription</em> with Service Principal Name (SPN)</p>
+<li><p>Log in to your Azure Stack Hub <em>Subscription</em> with Service Principal Name (SPN)</p>
 </li>
 <li><p>Check if Resource Group exits and create one if it does not.</p>
 </li>
@@ -480,7 +480,7 @@ $PlatformFaultDomainCount = 3
 $PlatformUpdateDomainCount = 5
 $ArmDeploymentName = &quot;SqlAlwaysOnDeployment&quot;
 
-# Create Azure Stack Environment so that you can log in to it
+# Create Azure Stack Hub Environment so that you can log in to it
 Add-AzureRmEnvironment -Name $AzureStackEnvironment -ArmEndpoint $ArmEndpoint
 
 # Create your SPN  Credentials Login
@@ -489,7 +489,7 @@ $AzsUsername = $AppGUID + &quot;@&quot; + $TenantDomain
 $AzsUserPassword = ConvertTo-SecureString -String $AppPassword -AsPlainText -Force
 $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AzsUsername, $AzsUserPassword
 
-# Log in to Azure Stack using SPN account
+# Log in to Azure Stack Hub using SPN account
 Connect-AzureRmAccount -EnvironmentName $AzureStackEnvironment -Credential $AzsCred -ServicePrincipal -TenantId $TenantDomain
 
 # Create New ResourceGroup if it does not exist

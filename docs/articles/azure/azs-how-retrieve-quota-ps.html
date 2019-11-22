@@ -97,7 +97,7 @@
 <p>Quotas define the limit of the number of resources that a subscription can provision or consume.</p>
 <p>The following process shows you how to retrieve the quotas for your subscription, as well as the current usage.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Ensure your PowerShell environment is setup as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
+<p>Ensure your PowerShell environment is setup as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack Hub user's PowerShell environment</a>.</p>
 <h2 id="declare-variables">Declare variables</h2>
 <p>Enter details below to provide values for the variables in the scripts in this article:</p>
 <table>
@@ -111,7 +111,7 @@
 <tbody>
 <tr>
 <td>$ArmEndpoint</td>
-<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td>The Azure Resource Manager endpoint for Azure Stack Hub</td>
 <td><form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
 </tr>
 </tbody>
@@ -127,7 +127,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Retrieve Compute quota

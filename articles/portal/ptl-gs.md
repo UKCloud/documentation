@@ -158,7 +158,7 @@ The Portal navigation panel provides access to all the functionality available i
 
 - **OpenShift** - Provides information about UKCloud for OpenShift (see the [*Getting Started Guide for UKCloud for OpenShift*](../openshift/oshift-gs.md)).
 
-- **Azure Cloud** - Provides access to the Azure Stack portal for UKCloud for Microsoft Azure (see the [*Getting Started Guide for UKCloud for Microsoft Azure*](../azure/azs-gs.md)).
+- **Azure Cloud** - Provides access to the Azure Stack Hub portal for UKCloud for Microsoft Azure (see the [*Getting Started Guide for UKCloud for Microsoft Azure*](../azure/azs-gs.md)).
 
 - **Cloud Storage** - View information about your Cloud Storage service, including secret keys and storage consumption (see the [*Getting Started Guide for Cloud Storage*](../cloud-storage/cs-gs.md)).
 

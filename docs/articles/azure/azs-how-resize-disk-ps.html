@@ -103,7 +103,7 @@
 <h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this article you must have the appropriate permissions on the resource you are trying to access.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
+<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack Hub user's PowerShell environment</a>.</p>
 <div class="tabGroup" id="tabgroup_CeZOj-G++Q">
 <ul role="tablist">
 <li role="presentation">
@@ -127,12 +127,12 @@
 <tbody>
 <tr>
 <td>$ArmEndpoint</td>
-<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td>The Azure Resource Manager endpoint for Azure Stack Hub</td>
 <td><form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
 </tr>
 <tr>
 <td>$RGName</td>
-<td>Name of the resource group which the VM is inside in Azure Stack</td>
+<td>Name of the resource group which the VM is inside in Azure Stack Hub</td>
 <td><form oninput="result.value=ResourceGroupInput.value; result2.value=ResourceGroupInput.value" id="ResourceGroup" style="display: inline;"><input type="text" id="ResourceGroupInput" name="ResourceGroupInput" style="display: inline;" placeholder="MyResourceGroup"></form></td>
 </tr>
 <tr>
@@ -162,12 +162,12 @@
 <tbody>
 <tr>
 <td>$ArmEndpoint</td>
-<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td>The Azure Resource Manager endpoint for Azure Stack Hub</td>
 <td><form oninput="result.value=armendpoint2.value;result2.value=armendpoint2.value" id="armendpoint2" style="display: inline;"><input type="text" id="armendpoint2" name="armendpoint2" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
 </tr>
 <tr>
 <td>$RGName</td>
-<td>Name of the resource group which the VM is inside in Azure Stack</td>
+<td>Name of the resource group which the VM is inside in Azure Stack Hub</td>
 <td><form oninput="result.value=ResourceGroupInput2.value; result2.value=ResourceGroupInput2.value" id="ResourceGroup2" style="display: inline;"><input type="text" id="ResourceGroupInput2" name="ResourceGroupInput2" style="display: inline;" placeholder="MyResourceGroup"></form></td>
 </tr>
 <tr>
@@ -212,7 +212,7 @@
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Sign in to your Azure Stack environment
+# Sign in to your Azure Stack Hub environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
@@ -241,7 +241,7 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Sign in to your Azure Stack environment
+# Sign in to your Azure Stack Hub environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
@@ -269,7 +269,7 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint2" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Sign in to your Azure Stack environment
+# Sign in to your Azure Stack Hub environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
@@ -299,7 +299,7 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 <pre><code class="language-PowerShell"># Declare endpoint
 $ArmEndpoint = "<output form="armendpoint2" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
 
-# Sign in to your Azure Stack environment
+# Sign in to your Azure Stack Hub environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 

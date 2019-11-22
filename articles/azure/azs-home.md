@@ -42,14 +42,14 @@ First, take a look at our [Getting Started Guide](azs-gs.md) to learn the basics
   <div class="col-md-3"><strong><ul><li><p><a href="azs-how-manage-azure-group.md">Manage groups and permissions</a></li></p></ul></strong></div>
   <div class="col-md-3"><strong><ul><li><p><a href="azs-how-retrieve-quota-ps.md">Retrieve your subscription quotas (using PowerShell)</a></li></p></ul></strong></div>
   <div class="col-md-3"><strong><ul><li><p><a href="azs-how-configure-powershell-users.md">Configure PowerShell environment</a></li></p></ul></strong></div>
-  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-use-azure-api.md">Use the Azure Stack API</a></li></p></ul></strong></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-use-azure-api.md">Use the Azure Stack Hub API</a></li></p></ul></strong></div>
 </div>
 
 <div class="row">
   <div class="col-md-3"><strong><ul><li><p><a href="azs-how-create-spn-portal.md">Create a Service Principle Name (SPN) (using the Portal)</a></li></p></ul></strong></div>
   <div class="col-md-3"><strong><ul><li><p><a href="azs-how-create-spn-powershell.md">Create a Service Principle Name (SPN) (using PowerShell)</a></li></p></ul></strong></div>
   <div class="col-md-3"><strong><ul><li><p><a href="azs-how-deploy-sql-template-powershell.md">Deploy an SQL template (using PowerShell)</a></li></p></ul></strong></div>
-  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-link-storage-explorer.md">Link Azure Storage Explorer to Azure Stack</a></li></p></ul></strong></div>
+  <div class="col-md-3"><strong><ul><li><p><a href="azs-how-link-storage-explorer.md">Link Azure Storage Explorer to Azure Stack Hub</a></li></p></ul></strong></div>
 </div>
 
 ## Other resources
@@ -63,14 +63,14 @@ First, take a look at our [Getting Started Guide](azs-gs.md) to learn the basics
   <strong><ul><li><p><a href="../other/other-ref-sla-definition.md">SLA definition</a></li></p></ul></strong>
 </div>
 
-## Azure Stack portal overview
+## Azure Stack Hub portal overview
 
 <div class="row">
   <div class="col-md-6">
     <div style="padding:56.25% 0 0 0;position:relative;">
       <iframe src="https://www.youtube.com/embed/yPB4Oj_cu_A" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <p><a href="https://www.youtube.com/watch?v=yPB4Oj_cu_A">Microsoft Azure Stack Portal Overview</a></p>
+    <p><a href="https://www.youtube.com/watch?v=yPB4Oj_cu_A">Microsoft Azure Stack Hub Portal Overview</a></p>
   </div>
   <div class="col-md-6"></div>
 </div>
