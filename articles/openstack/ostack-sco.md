@@ -136,7 +136,7 @@ Customers with requirements beyond these limits can raise a service request via 
 
 Due to a current constraint within the OpenStack project, a maximum total of 25 block storage volumes (Tier 1 or Tier 2) can be attached to each OpenStack instance.
 
-## Platform operation request lLimits
+## Platform operation request limits
 
 Although designed to be a large-scale cloud platform, we strongly advise that when performing operations/requests against UKCloud for OpenStack you perform these actions in batches of no more than 30 (for example, only creating batches of up to 30 new instances in a single request). Additional requests can then be made to the platform for subsequent batches.
 
