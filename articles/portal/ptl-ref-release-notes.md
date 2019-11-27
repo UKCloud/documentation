@@ -41,7 +41,7 @@ Date: 13th September 2019
 
 Bug fix
 
-De0tails: Fixed bug where newly created VMs on vCloud Director 9.7 cannot be added to a snapshot backup policy.
+Details: Fixed bug where newly created VMs on vCloud Director 9.7 cannot be added to a snapshot backup policy.
 
 ## Release 1.111.0
 
