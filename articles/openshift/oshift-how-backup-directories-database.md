@@ -37,13 +37,17 @@ Begin by logging into your UKCloud for OpenShift envrionment using the following
 oc login --server {server} --token {token here}
 ```
 
-* NOTE: The `--token` can be retrieved by logging into the OpenShift web interface, clicking your username in the top right and clicking **Copy Login Command**.
+> [!NOTE]
+> The `--token` can be retrieved by logging into the OpenShift web interface, 
+> clicking your username in the top right and clicking **Copy Login Command**.
 
 ## Backing up container directories to your localhost
 
 1. Create a directory on your localhost for files to be backed up to:
 
-    `mkdir ~/oshiftbackups`
+    ```bash
+    mkdir ~/oshiftbackups
+    ```
 
 2. Switch to the project which the container you want to backup a directory from is located:
 
@@ -51,12 +55,14 @@ oc login --server {server} --token {token here}
     oc project {project name}
     ```
 
-    * NOTE: To list all projects use: `oc projects`.
+    > [!NOTE]
+    > To list all projects use: `oc projects`.
 
 3. Identify the pod which the container you want to backup resides in:
 
     ```bash
-    oc get pods```
+    oc get pods
+    ```
 
 4. Using `oc rsync`, copy the directory you wish to backup:
 
@@ -80,12 +86,14 @@ oc login --server {server} --token {token here}
     oc project {project name}
     ```
 
-    * NOTE: To list all projects use: `oc projects`.
+    > [!NOTE]
+    > To list all projects use: `oc projects`.
 
 2. Identify the pod which the container you want to upload a directory to resides in:
 
     ```bash
-    oc get pods```
+    oc get pods
+    ```
 
 4. Using `oc rsync`, upload the directory to the container:
 
@@ -107,7 +115,9 @@ In this example, the type of database which will be backed up is PostgreSQL. Sub
 
 1. Create a directory on your localhost for files to be backed up to:
 
-    `mkdir ~/oshiftdatabasebackup`
+    ```bash
+    mkdir ~/oshiftdatabasebackup
+    ```
 
 2. Switch to the project where your database pod is located:
 
@@ -115,7 +125,8 @@ In this example, the type of database which will be backed up is PostgreSQL. Sub
     oc project {project name}
     ```
 
-    * NOTE: To list all projects use: `oc projects`.
+    > [!NOTE]
+    > To list all projects use: `oc projects`.
 
 3. Identify the pod which the database container you want to backup resides in:
 
