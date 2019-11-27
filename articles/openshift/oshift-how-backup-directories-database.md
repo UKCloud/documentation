@@ -111,7 +111,7 @@ oc login --server {server} --token {token here}
 
 ## Backing up a database on OpenShift
 
-In this example, the type of database which will be backed up is PostgreSQL. Substitute the commands executed in this guide (using `oc exec`) with commands which are appropirate to the database type you're using.
+In this example, the type of database which will be backed up is PostgreSQL. Substitute the commands executed in this guide (using `oc exec`) with commands which are appropriate to the database type you're using.
 
 1. Create a directory on your localhost for files to be backed up to:
 
@@ -186,7 +186,7 @@ Your database is now backed up onto your localhost at `/home/oshiftdatabasebacku
 
 2. Using `oc exec`, extract the database archive and restore the database:
 
-In this example, the type of database which will be restored is PostgreSQL. Substitute the commands executed in this guide (using `oc exec`) with commands which are appropirate to the database type you're using.
+In this example, the type of database which will be restored is PostgreSQL. Substitute the commands executed in this guide (using `oc exec`) with commands which are appropriate to the database type you're using.
 
     ```bash
     # Import the database backup and remove the backup directory from the container
