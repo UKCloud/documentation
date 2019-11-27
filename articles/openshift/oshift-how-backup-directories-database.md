@@ -107,7 +107,7 @@ oc login --server {server} --token {token here}
 
     > [!NOTE]
     > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name.
-    > `oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}`
+    > Example: `oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}`
 
 ## Backing up a database on OpenShift
 
