@@ -75,7 +75,7 @@ oc login --server {server} --token {token here}
     ```
 
     > [!NOTE]
-    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name.
+    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name. <br>
     > Example: `oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}`
 
 ## Upload a directory to a container
@@ -106,7 +106,7 @@ oc login --server {server} --token {token here}
     ```
 
     > [!NOTE]
-    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name.
+    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name. <br>
     > Example: `oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}`
 
 ## Backing up a database on OpenShift
@@ -163,7 +163,7 @@ In this example, the type of database which will be backed up is PostgreSQL. Sub
     ```
 
     > [!NOTE]
-    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name.
+    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name. <br>
     > Example: `oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}`
 
 Your database is now backed up onto your localhost at `/home/oshiftdatabasebackup`.
@@ -181,7 +181,7 @@ Your database is now backed up onto your localhost at `/home/oshiftdatabasebacku
     ```
 
     > [!NOTE]
-    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name.
+    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name. <br>
     > Example: `oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}`
 
 2. Using `oc exec`, extract the database archive and restore the database:
