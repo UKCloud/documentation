@@ -145,7 +145,7 @@ Date: 17th December 2018
 
 Feature update
 
-Details: Updated the contact removal process to remind administrators that additional steps are required to fully remove the users access rights if there using the Single Sign-on enabled service for OpenShift or OpenStack.
+Details: Updated the contact removal process to remind administrators that additional steps are required to fully remove the users access rights if they're using the Single Sign-on enabled service for OpenShift or OpenStack.
 
 ## Release 1.92.0
 
