@@ -1,5 +1,5 @@
 ---
-title: How to add a managed disk to a virtual machine using the UKCloud Azure Stack portal | UKCloud Ltd
+title: How to add a managed disk to a virtual machine using the UKCloud Azure Stack Hub portal | UKCloud Ltd
 description: Provides help adding managed disks to a virtual machine on UKCloud for Microsoft Azure
 services: azure-stack
 author: Shaion O'Niel
@@ -16,7 +16,7 @@ toc_fullpath: Users/How To/Add a Managed Disk to a VM/azs-how-add-managed-disks-
 toc_mdlink: azs-how-add-managed-disks-portal.md
 ---
 
-# How to add a managed disk to a virtual machine using the UKCloud Azure Stack portal
+# How to add a managed disk to a virtual machine using the UKCloud Azure Stack Hub portal
 
 ## Overview
 
@@ -24,15 +24,15 @@ UKCloud for Microsoft Azure supports the use of managed disks on virtual machine
 
 For more information, see [Introduction to Azure managed disks](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/managed-disks-overview).
 
-The following article shows you how to add a managed disk to a VM using the UKCloud Azure Stack portal.
+The following article shows you how to add a managed disk to a VM using the UKCloud Azure Stack Hub portal.
 
 ## Intended audience
 
-To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.
+To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack Hub portal.
 
-## Adding a disk to an existing virtual machine using the Azure Stack portal
+## Adding a disk to an existing virtual machine using the Azure Stack Hub portal
 
-1. Log in to the Azure Stack portal.
+1. Log in to the Azure Stack Hub portal.
 
     For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
@@ -94,7 +94,7 @@ If you're adding a new disk:
 
     - **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
-    - **Location** - This will be frn00006, which is the location of the Azure Stack.
+    - **Location** - This will be frn00006, which is the location of the Azure Stack Hub.
 
     - **Account type** - Standard disks (HDD) are backed by magnetic drives and are preferable for applications where data is accessed infrequently.
 

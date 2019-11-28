@@ -1,6 +1,6 @@
 ---
-title: How to create a service principal name (SPN) for Azure Stack using the Azure portal | UKCloud Ltd
-description: Learn how to create a service principal name (SPN) to manage your Azure Stack resources using the Azure portal
+title: How to create a service principal name (SPN) for Azure Stack Hub using the Azure portal | UKCloud Ltd
+description: Learn how to create a service principal name (SPN) to manage your Azure Stack Hub resources using the Azure portal
 services: azure-stack
 author: Bailey Lawson
 reviewer: BaileyLawson
@@ -16,9 +16,9 @@ toc_fullpath: Users/How To/Create a Service Principal Name (SPN)/azs-how-create-
 toc_mdlink: azs-how-create-spn-portal.md
 ---
 
-# How to create a service principal name for Azure Stack using the Azure portal
+# How to create a service principal name for Azure Stack Hub using the Azure portal
 
-This document explains how to create a service principal name to manage Azure and Azure Stack using the Azure portal.
+This document explains how to create a service principal name to manage Azure and Azure Stack Hub using the Azure portal.
 
 It will guide you through the creation of:
 
@@ -80,9 +80,9 @@ To log in and manage your resources via SPN you'll need to create an Azure appli
 
 5. Copy the displayed value for the key and store it somewhere secure. This value is referred to as the SPN Client Secret.
 
-## Configure role-based access control for the SPN on Azure Stack
+## Configure role-based access control for the SPN on Azure Stack Hub
 
-1. Log in to the UKCloud Azure Stack portal.
+1. Log in to the UKCloud Azure Stack Hub portal.
 
     For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 

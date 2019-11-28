@@ -53,7 +53,7 @@ A security domain on the UKCloud platform that provides access to public network
 
 *See:* [UKCloud for Microsoft Azure](#ukcloud-for-microsoft-azure)
 
-### Azure Stack
+### Azure Stack Hub
 
 *See:* [UKCloud for Microsoft Azure](#ukcloud-for-microsoft-azure)
 

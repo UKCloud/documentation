@@ -1,6 +1,6 @@
 ---
 title: How to create a virtual machine using Terraform | UKCloud Ltd
-description: Learn how to create a VM using Terraform on Azure Stack
+description: Learn how to create a VM using Terraform on Azure Stack Hub
 services: azure-stack
 author: Chris Black
 reviewer: Alexa Evans
@@ -16,7 +16,7 @@ toc_fullpath: Users/How To/Create a Virtual Machine/azs-how-create-vm-terraform.
 toc_mdlink: azs-how-create-vm-terraform.md
 ---
 
-# How to create a virtual machine using Terraform on Azure Stack
+# How to create a virtual machine using Terraform on Azure Stack Hub
 
 This document explains how to create a VM using the **azurestack** Terraform provider with Service Principal Name authentication.
 
@@ -28,26 +28,26 @@ Prerequisites from a Windows-based external client.
 
   - [Download Terraform](https://www.terraform.io/downloads.html)
 
-- An active Azure Stack *Subscription* (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)
+- An active Azure Stack Hub *Subscription* (required to create SPN if you want to use the same SPN for both Azure and Azure Stack Hub)
 
 - Service Principal Name
 
-  - [How to create Service Principal Name for Azure Stack in Powershell](azs-how-create-spn-powershell.md)
+  - [How to create Service Principal Name for Azure Stack Hub in Powershell](azs-how-create-spn-powershell.md)
 
 ## Official Documentation
 
-- [Azure Stack Provider Website](https://www.terraform.io/docs/providers/azurestack)
+- [Azure Stack Hub Provider Website](https://www.terraform.io/docs/providers/azurestack)
 
-- [Azure Stack Provider GitHub Repository](https://github.com/terraform-providers/terraform-provider-azurestack)
+- [Azure Stack Hub Provider GitHub Repository](https://github.com/terraform-providers/terraform-provider-azurestack)
 
-# How to use Terraform with Azure Stack
+# How to use Terraform with Azure Stack Hub
 
 ## Authentication
 
 In order to authenticate with Terraform you will need to have a valid Service Principal Name (SPN) - how to create one is described in the [Prerequisites](#prerequisites).
 
 > [!NOTE]
-> You only need your Service Principal Name (SPN) to be assigned to your Azure Stack subscription, despite what official Terraform documentation says.
+> You only need your Service Principal Name (SPN) to be assigned to your Azure Stack Hub subscription, despite what official Terraform documentation says.
 
 The process of authentication can be handled in one of two ways, either as **Environment Variables** or in the **Provider Block**.
 
@@ -80,7 +80,7 @@ The process of authentication can be handled in one of two ways, either as **Env
 #### `terraform.tfvars`
 
   ```hcl
-  # Configure the Azure Stack Provider
+  # Configure the Azure Stack Hub Provider
   arm_endpoint    = "https://management.{region}.{domain}"
   subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
   client_id       = "{applicationId}"
@@ -90,12 +90,12 @@ The process of authentication can be handled in one of two ways, either as **Env
 
 #### Argument reference
 
-- `arm_endpoint` - The Azure Resource Manager API Endpoint for your Azure Stack instance. This will be **`https://management.{region}.{domain}`**.
+- `arm_endpoint` - The Azure Resource Manager API Endpoint for your Azure Stack Hub instance. This will be **`https://management.{region}.{domain}`**.
 
 > [!NOTE]
 > For UKCloud, the arm_endpoint is **`https://management.frn00006.azure.ukcloud.com`**.
 
-- `subscription_id` - The ID of your Azure Stack Subscription.
+- `subscription_id` - The ID of your Azure Stack Hub Subscription.
 
 - `client_id` - The Application GUID that you configured your Service Principal Name (SPN) to use.
 
@@ -113,7 +113,7 @@ The process of authentication can be handled in one of two ways, either as **Env
 ### Example of Provider Block:
 #### `main.tf`
  ```hcl
- # Configure the Azure Stack Provider
+ # Configure the Azure Stack Hub Provider
  provider "azurestack" {
   arm_endpoint    = "https://management.{region}.{domain}"
   subscription_id = "xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"
@@ -136,13 +136,13 @@ The examples that follow show how to create VMs using Terraform. The code change
 
 | Variable Name        | Variable Description                                                                                                        | Input                                                        |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
-| arm_endpoint       | The Azure Resource Manager API endpoint for your Azure Stack instance. This will be https://management.{region}.{domain}.   | <form oninput="result.value=arm_endpoint.value" id="arm_endpoint" style="display:inline;"><input type="text" id="arm_endpoint" name="arm_endpoint" style="display:inline;" placeholder="https://management.{region}.{domain}"/></form> |
-| subscription_id    | The ID of your Azure Stack subscription.    | <form oninput="result.value=subscription_id.value" id="subscription_id" style="display:inline;"><input type="text" id="subscription_id" name="subscription_id" style="display:inline;" placeholder="xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"/></form> |
+| arm_endpoint       | The Azure Resource Manager API endpoint for your Azure Stack Hub instance. This will be https://management.{region}.{domain}.   | <form oninput="result.value=arm_endpoint.value" id="arm_endpoint" style="display:inline;"><input type="text" id="arm_endpoint" name="arm_endpoint" style="display:inline;" placeholder="https://management.{region}.{domain}"/></form> |
+| subscription_id    | The ID of your Azure Stack Hub subscription.    | <form oninput="result.value=subscription_id.value" id="subscription_id" style="display:inline;"><input type="text" id="subscription_id" name="subscription_id" style="display:inline;" placeholder="xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"/></form> |
 | client_id    | The application GUID that you configured your Service Principal Name (SPN) to use.    | <form oninput="result.value=client_id.value" id="client_id" style="display:inline;"><input type="text" id="client_id" name="client_id" style="display:inline;" placeholder="{applicationId}"/></form> |
 | client_secret    | The application password that you have configured your Service Principal Name (SPN) to use.    | <form oninput="result.value=client_secret.value" id="client_secret" style="display:inline;"><input type="text" id="client_secret" name="client_secret" style="display:inline;" placeholder="{applicationPassword}"/></form> |
 | rg_name    | The name of the resource group you want to create    | <form oninput="result.value=rg_name.value" id="rg_name" style="display:inline;"><input type="text" id="rg_name" name="rg_name" style="display:inline;" placeholder="MyResourceGroup"/></form> |
 | tenant_id    | The tenant ID of your Azure Active Directory tenant domain. It can either be the actual GUID or your Azure Active Directory tenant domain name. | <form oninput="result.value=tenant_id.value" id="tenant_id" style="display:inline;"><input type="text" id="tenant_id" name="tenant_id" style="display:inline;" placeholder="xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"/></form> |
-| location    | The name of the Azure/Azure Stack region. | <form oninput="result.value=location.value" id="location" style="display:inline;"><input type="text" id="location" name="location" style="display:inline;" placeholder="frn00006"/></form> |
+| location    | The name of the Azure/Azure Stack Hub region. | <form oninput="result.value=location.value" id="location" style="display:inline;"><input type="text" id="location" name="location" style="display:inline;" placeholder="frn00006"/></form> |
 | vm_count           | The number of VMs you want to create    | <form oninput="result.value=vm_count.value" id="vm_count" style="display:inline;"><input type="text" id="vm_count" name="vm_count" style="display:inline;" placeholder="1"/></form> |
 | vm_username        | The username you want to assign to the VM    | <form oninput="result.value=vm_username.value" id="vm_username" style="display:inline;"><input type="text" id="vm_username" name="vm_username" style="display:inline;" placeholder="user"/></form> |
 | vm_password        | The password you want to assign to the VM    | <form oninput="result.value=vm_password.value" id="vm_password" style="display:inline;"><input type="text" id="vm_password" name="vm_password" style="display:inline;" placeholder="Password123!"/></form> |
@@ -158,7 +158,7 @@ The examples that follow show how to create VMs using Terraform. The code change
 > [!IMPORTANT]
 > This example is only the `main.tf` file. You will still need the `variables.tf` and `terraform.tfvars` files as shown in the following section.
 
-### Defining the required Azure Stack resources in the `main.tf` file
+### Defining the required Azure Stack Hub resources in the `main.tf` file
 
 > [!TIP]
 > Resource attributes such as "name" can be hardcoded as opposed to using variables from the external files for the declaration.

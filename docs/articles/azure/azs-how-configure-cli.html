@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to configure the Azure Stack user's Azure CLI environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to configure the Azure Stack Hub user's Azure CLI environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to configure the Azure Stack user's Azure CLI environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="title" content="How to configure the Azure Stack Hub user's Azure CLI environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre ">
     <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -91,18 +91,18 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-configure-the-azure-stack-users-azure-cli-environment">How to configure the Azure Stack user's Azure CLI environment</h1>
+<h1 id="how-to-configure-the-azure-stack-users-azure-cli-environment">How to configure the Azure Stack Hub user's Azure CLI environment</h1>
 
-<p>In this article, we will guide you through the process of installing and using the Azure command-line interface (CLI) to manage Azure Stack. Azure CLI can be used to manage resources such as create virtual machines, deploy Azure Resource Manager templates, etc.</p>
+<p>In this article, we will guide you through the process of installing and using the Azure command-line interface (CLI) to manage Azure Stack Hub. Azure CLI can be used to manage resources such as create virtual machines, deploy Azure Resource Manager templates, etc.</p>
 <h2 id="official-documentation">Official Documentation</h2>
 <p><a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-2018-03-01-hybrid">Azure CLI command reference for 2018-03-01-hybrid profile</a></p>
 <p><a href="https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-command-line.md">Deploy templates with Azure CLI</a></p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>Azure Stack works with very specific <strong>API Profiles</strong> - you need to use <code>2018-03-01-hybrid</code> in order to interact with it. The biggest caveat is that it only support as small subset of commands from the <code>latest profile</code>.</p>
+<p>Azure Stack Hub works with very specific <strong>API Profiles</strong> - you need to use <code>2018-03-01-hybrid</code> in order to interact with it. The biggest caveat is that it only support as small subset of commands from the <code>latest profile</code>.</p>
 </div>
 <h2 id="install-cli">Install CLI</h2>
-<p>Sign in to your development workstation and install CLI. Azure Stack requires at least version 2.0 of Azure CLI. You can install that by using the steps described in the <a href="https://docs.microsoft.com/cli/azure/install-azure-cli">Install Azure CLI 2.0</a> article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:</p>
+<p>Sign in to your development workstation and install CLI. Azure Stack Hub requires at least version 2.0 of Azure CLI. You can install that by using the steps described in the <a href="https://docs.microsoft.com/cli/azure/install-azure-cli">Install Azure CLI 2.0</a> article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:</p>
 <pre><code class="lang-azurecli">az --version
 </code></pre>
 <p>You should see the version of Azure CLI and other dependent libraries that are installed on your computer.</p>
@@ -118,8 +118,8 @@
 </thead>
 <tbody>
 <tr>
-<td>Azure Stack DNS Suffix</td>
-<td>The DNS suffix for Azure Stack (&lt;region&gt;.&lt;External Domain Name&gt;)</td>
+<td>Azure Stack Hub DNS Suffix</td>
+<td>The DNS suffix for Azure Stack Hub (&lt;region&gt;.&lt;External Domain Name&gt;)</td>
 <td><form oninput="result.value=dnssuffix.value;result2.value=dnssuffix.value;result3.value=dnssuffix.value;result4.value=dnssuffix.value;result5.value=dnssuffix.value;result6.value=dnssuffix.value;result7.value=dnssuffix.value;result8.value=dnssuffix.value;result9.value=dnssuffix.value" id="dnssuffix" style="display: inline;"><input type="text" id="dnssuffix" name="dnssuffix" style="display: inline;" placeholder="frn00006.azure.ukcloud.com"></form></td>
 </tr>
 <tr>
@@ -134,10 +134,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="connect-to-azure-stack">Connect to Azure Stack</h2>
-<p>Use the following steps to connect to Azure Stack:</p>
+<h2 id="connect-to-azure-stack">Connect to Azure Stack Hub</h2>
+<p>Use the following steps to connect to Azure Stack Hub:</p>
 <ol>
-<li><p>Register your Azure Stack environment by running the <code>az cloud register</code> command.</p>
+<li><p>Register your Azure Stack Hub environment by running the <code>az cloud register</code> command.</p>
 <p>To register the <em>user</em> environment, use:</p>
    <pre><code class="lang-azurecli hljs">az cloud register \
      -n "AzureStackUser" \
@@ -153,11 +153,11 @@
 <pre><code class="lang-azurecli">az cloud set -n AzureStackUser
 </code></pre>
 </li>
-<li><p>Update your environment configuration to use the Azure Stack specific API version profile. To update the configuration, run the following command:</p>
+<li><p>Update your environment configuration to use the Azure Stack Hub specific API version profile. To update the configuration, run the following command:</p>
 <pre><code class="lang-azurecli">az cloud update --profile 2018-03-01-hybrid
 </code></pre>
 </li>
-<li><p>Sign in to your Azure Stack environment by using the <code>az login</code> command. You can sign in to the Azure Stack environment either as a user or as a <a href="https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects">service principal</a>.</p>
+<li><p>Sign in to your Azure Stack Hub environment by using the <code>az login</code> command. You can sign in to the Azure Stack Hub environment either as a user or as a <a href="https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects">service principal</a>.</p>
 <ul>
 <li><p>Sign in as a <em>user</em>: You can either specify the username and password directly within the <code>az login</code> command or authenticate by using a browser. You have to do the latter if your account has multi-factor authentication enabled.</p>
 </li>
@@ -191,29 +191,29 @@
 </code></pre>
 </li>
 </ol>
-<h2 id="connect-to-azure-stack---quick-reference-guide">Connect to Azure Stack - Quick Reference Guide</h2>
+<h2 id="connect-to-azure-stack---quick-reference-guide">Connect to Azure Stack Hub - Quick Reference Guide</h2>
 <pre><code class="lang-azurecli hljs"># Create your environment
 az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result7" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result8" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result9" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
 
 # Set your environment
 az cloud set -n AzureStackUser
 
-# Log in to Azure Stack with user credentials
+# Log in to Azure Stack Hub with user credentials
 az login -u "<output form="username" name="result2" style="display: inline;">user@contoso.onmicrosoft.com</output>" -p '<output form="password" name="result2" style="display: inline;">Password123!</output>'</code></pre>
 <h2 id="test-the-connectivity">Test the connectivity</h2>
-<p>Now that we've got everything setup, let's use CLI to create resources within Azure Stack. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named &quot;MyResourceGroup&quot;:</p>
+<p>Now that we've got everything setup, let's use CLI to create resources within Azure Stack Hub. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named &quot;MyResourceGroup&quot;:</p>
 <pre><code class="lang-azurecli">az group create -n MyResourceGroup -l frn00006
 </code></pre>
 <p>If the resource group is created successfully, the previous command outputs the following properties of the newly created resource:</p>
 <p><img src="https://docs.microsoft.com/en-us/azure/azure-stack/user/media/azure-stack-connect-cli/image1.png" alt="Resource group create output"></p>
 <h2 id="known-issues">Known issues</h2>
-<p>There are some known issues that you must be aware of when using CLI in Azure Stack:</p>
+<p>There are some known issues that you must be aware of when using CLI in Azure Stack Hub:</p>
 <ul>
-<li><p>The CLI interactive mode i.e the <code>az interactive</code> command is not yet supported in Azure Stack.</p>
+<li><p>The CLI interactive mode i.e the <code>az interactive</code> command is not yet supported in Azure Stack Hub.</p>
 </li>
-<li><p>To get the list of virtual machine images available in Azure Stack, use the <code>az vm images list --all</code> command instead of the <code>az vm image list</code> command. Specifying the <code>--all</code> option makes sure that response returns only the images that are available in your Azure Stack environment.</p>
+<li><p>To get the list of virtual machine images available in Azure Stack Hub, use the <code>az vm images list --all</code> command instead of the <code>az vm image list</code> command. Specifying the <code>--all</code> option makes sure that response returns only the images that are available in your Azure Stack Hub environment.</p>
 </li>
-<li><p>Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the <code>az vm images list</code> command.</p>
+<li><p>Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack Hub. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the <code>az vm images list</code> command.</p>
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>

@@ -21,7 +21,7 @@ toc_mdlink: other-ref-products-overview.md
 
 ### UKCloud for Microsoft Azure
 
-This compute service can be powered by either a UKCloud-based Microsoft Azure Stack, or Azure Public Cloud depending on your needs. The UKCloud-based version of Azure Stack offers similar features and functionality, but with native connectivity to government networks, a trusted community and our security assurance.
+This compute service can be powered by either a UKCloud-based Microsoft Azure Stack Hub, or Azure Public Cloud depending on your needs. The UKCloud-based version of Azure Stack Hub offers similar features and functionality, but with native connectivity to government networks, a trusted community and our security assurance.
 
 ### UKCloud for OpenShift
 
@@ -161,7 +161,7 @@ A service that helps you review your current usage or understand how to optimise
 
 #### Cloud Transformation Service
 
-This service provides the help you might need to adopt and harness the power of cloud native transformation. Cloud native applications fully utilise the features of platforms such as OpenStack, OpenShift and Azure Stack. This transformation service provides the expertise to introduce teams to new ways of developing and deploying applications.
+This service provides the help you might need to adopt and harness the power of cloud native transformation. Cloud native applications fully utilise the features of platforms such as OpenStack, OpenShift and Azure Stack Hub. This transformation service provides the expertise to introduce teams to new ways of developing and deploying applications.
 
 ### Software-based support services
 
