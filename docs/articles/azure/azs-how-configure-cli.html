@@ -8,7 +8,7 @@
     <title>How to configure the Azure Stack Hub user's Azure CLI environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure the Azure Stack Hub user's Azure CLI environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,7 +91,7 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-configure-the-azure-stack-users-azure-cli-environment">How to configure the Azure Stack Hub user's Azure CLI environment</h1>
+<h1 id="how-to-configure-the-azure-stack-hub-users-azure-cli-environment">How to configure the Azure Stack Hub user's Azure CLI environment</h1>
 
 <p>In this article, we will guide you through the process of installing and using the Azure command-line interface (CLI) to manage Azure Stack Hub. Azure CLI can be used to manage resources such as create virtual machines, deploy Azure Resource Manager templates, etc.</p>
 <h2 id="official-documentation">Official Documentation</h2>
@@ -134,7 +134,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="connect-to-azure-stack">Connect to Azure Stack Hub</h2>
+<h2 id="connect-to-azure-stack-hub">Connect to Azure Stack Hub</h2>
 <p>Use the following steps to connect to Azure Stack Hub:</p>
 <ol>
 <li><p>Register your Azure Stack Hub environment by running the <code>az cloud register</code> command.</p>
@@ -191,7 +191,7 @@
 </code></pre>
 </li>
 </ol>
-<h2 id="connect-to-azure-stack---quick-reference-guide">Connect to Azure Stack Hub - Quick Reference Guide</h2>
+<h2 id="connect-to-azure-stack-hub---quick-reference-guide">Connect to Azure Stack Hub - Quick Reference Guide</h2>
 <pre><code class="lang-azurecli hljs"># Create your environment
 az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result7" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result8" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result9" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
 

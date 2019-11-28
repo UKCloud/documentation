@@ -8,7 +8,7 @@
     <title>How to configure the Azure Stack Hub user's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure the Azure Stack Hub user's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,7 +91,7 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-configure-the-azure-stack-users-powershell-environment">How to configure the Azure Stack Hub user's PowerShell environment</h1>
+<h1 id="how-to-configure-the-azure-stack-hub-users-powershell-environment">How to configure the Azure Stack Hub user's PowerShell environment</h1>
 
 <p>As an Azure Stack Hub user, you can use PowerShell to manage Azure Stack Hub resources such as create virtual machines, deploy Azure Resource Manager templates, etc. This topic is scoped to use with the user environments only. In order to interact with Azure Stack Hub PowerShell, you will need to set up your environment. To do so follow the below guide:</p>
 <h2 id="prerequisites">Prerequisites</h2>
@@ -133,7 +133,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="install-azure-stack-powershell">Install Azure Stack Hub PowerShell</h2>
+<h2 id="install-azure-stack-hub-powershell">Install Azure Stack Hub PowerShell</h2>
 <pre><code class="language-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
   
@@ -161,7 +161,7 @@ Install-Module -Name AzureRM.Storage -RequiredVersion 5.0.4 -AllowClobber -Force
 # Remove incompatible storage module installed by AzureRM.Storage
 Uninstall-Module Azure.Storage -RequiredVersion 4.6.1 -Force -Verbose
 </code></pre>
-<h2 id="configure-the-user-environment-and-sign-in-to-azure-stack">Configure the user environment and sign in to Azure Stack Hub</h2>
+<h2 id="configure-the-user-environment-and-sign-in-to-azure-stack-hub">Configure the user environment and sign in to Azure Stack Hub</h2>
 <h3 id="azure-active-directory-aad-based-deployments">Azure Active Directory (AAD) based deployments</h3>
 <pre><code class="language-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
