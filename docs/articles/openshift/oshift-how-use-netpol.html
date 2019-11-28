@@ -96,7 +96,7 @@
 <h2 id="overview">Overview</h2>
 <p>In OpenShift v3.11 clusters deployed from mid-February 2019, the default SDN plugin has been changed from ovs-multitenant to ovs-networkpolicy. This gives you the ability to create NetworkPolicy objects which allow granular control over the flow of communication between the pods, services and projects inside your cluster.</p>
 <p>By default, we create a NetworkPolicy object, named <code>allow-from-same-and-privileged-namespaces</code>, in every project, including those created after the cluster is deployed. This object allows all pods to communicate with each other inside the same project and allows communication from all pods and services to the default and openshift-monitoring projects. This mirrors the default pod security provided with the ovs-multitenant plugin.</p>
-<p>This document refers to namespaces and projects. A project is an OpenShift construct on top of a Kuberenetes namespace. For the purpose of this guide they can be thought of as the same thing, however, the <code>oc label</code> commands that are performed on a namespace must be applied to the namespace object, they will not work if you attempt to apply them to the project object.</p>
+<p>This document refers to namespaces and projects. A project is an OpenShift construct on top of a Kubernetes namespace. For the purpose of this guide they can be thought of as the same thing, however, the <code>oc label</code> commands that are performed on a namespace must be applied to the namespace object, they will not work if you attempt to apply them to the project object.</p>
 <h2 id="verifying-the-cluster-sdn">Verifying the cluster SDN</h2>
 <p>In order to verify if the cluster has the ovs-networkpolicy SDN you can use the following command:</p>
 <p><code>oc get clusternetwork</code></p>
@@ -153,7 +153,7 @@ spec:
         matchLabels:
           database: &quot;true&quot;
 </code></pre>
-<p>We now have a template for a NetworkPolicy object that matches any pods labeled <code>role=webserver</code> inside the webserver project and allows them to communicate out to any projects labeled <code>database=true</code>. This is only half the work; we still need the ingress allowance inside the database project. Our example template for that object looks like the following:</p>
+<p>We now have a template for a NetworkPolicy object that matches any pods labelled <code>role=webserver</code> inside the webserver project and allows them to communicate out to any projects labelled <code>database=true</code>. This is only half the work; we still need the ingress allowance inside the database project. Our example template for that object looks like the following:</p>
 <pre><code>apiVersion: extensions/v1beta1
 kind: NetworkPolicy
 metadata:
@@ -169,7 +169,7 @@ spec:
         matchLabels:
           webserver: &quot;true&quot;
 </code></pre>
-<p>This object is created in the database project and matches any pods in the project with the label <code>role=database</code> and allows ingress traffic from any project labeled <code>webserver=true</code>. To achieve our desired outcome, we need to label our webserver project as follows:</p>
+<p>This object is created in the database project and matches any pods in the project with the label <code>role=database</code> and allows ingress traffic from any project labelled <code>webserver=true</code>. To achieve our desired outcome, we need to label our webserver project as follows:</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>The cluster administrator role is required to add labels to namespaces.</p>
