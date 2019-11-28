@@ -30,9 +30,9 @@ To complete the steps in this article, you must have appropriate access to a sub
 
 To create a site-to-site VPN connection between Azure Stack Hub and Public Azure, you should perform the following steps:
 
-1. [Set up VPN on the Azure Stack Hub side](#set-up-vpn-on-the-azure-stack-side)
+1. [Set up VPN on the Azure Stack Hub side](#set-up-vpn-on-the-azure-stack-hub-side)
 2. [Set up VPN on the Public Azure side](#set-up-vpn-on-the-public-azure-side)
-3. [Update local gateway IPs](#update-the-local-gateway-ips-in-azure-stack-and-public-azure)
+3. [Update local gateway IPs](#update-the-local-gateway-ips-in-azure-stack-hub-and-public-azure)
 4. [Verify the VPN connection](#verify-the-vpn-connection)
 
 ## Set up VPN on the Azure Stack Hub side
@@ -447,7 +447,7 @@ To establish the connection you will need to identify the public IPs that you cr
 
     ![Connections button under all services in public Azure](images/azs-public-browser-services-connections-button.png)
 
-2. Select the VPN connection you created in [Create the VPN connection in Azure Stack Hub](#create-the-vpn-connection-in-azure-stack).
+2. Select the VPN connection you created in [Create the VPN connection in Azure Stack Hub](#create-the-vpn-connection-in-azure-stack-hub).
 
 3. Make a note of the public IP. You can find this in the *Virtual network gateway* section.
 
@@ -459,7 +459,7 @@ To establish the connection you will need to identify the public IPs that you cr
 
     ![Azure Stack Hub portal local network gateway](images/azs-browser-local-network-gateway-all-services.png)
 
-6. Select the local network gateway that you created in [Create the local network gateway in Azure Stack Hub](#create-the-local-network-gateway-in-azure-stack)
+6. Select the local network gateway that you created in [Create the local network gateway in Azure Stack Hub](#create-the-local-network-gateway-in-azure-stack-hub)
 
 7. In the *Local Network Gateway* blade, under *Settings*, select **Configuration**.
 
