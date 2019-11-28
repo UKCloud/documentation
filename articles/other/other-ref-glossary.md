@@ -17,6 +17,12 @@ toc_mdlink: other-ref-glossary.md
 
 # UKCloud glossary
 
+This article provides definitions of commonly used UKCloud terms.
+
+[A](#a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[B](#b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[C](#c)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[D](#d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[E](#e)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[F](#f)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[G](#g)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[H](#h)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[I](#i)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[J](#j)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[K](#k)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[L](#l)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[M](#m)
+
+[N](#n)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[O](#o)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[P](#p)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Q](#q)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[R](#r)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[S](#s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[T](#t)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[U](#u)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[V](#v)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[W](#w)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[X](#x)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Y](#y)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Z](#z)
+
 ## A
 
 ### Account
@@ -305,7 +311,9 @@ UKCloud’s repository of articles created in collaboration with subject matter 
 
 *See:* <https://docs.ukcloud.com/>
 
-Let us know if you can’t find something you're looking for by posting an idea on the [UKCloud Community](https://community.ukcloud.com/ideas).
+## L
+
+Let us know your thoughts and ideas by posting on the [UKCloud Community](https://community.ukcloud.com/ideas).
 
 ## M
 
@@ -453,7 +461,7 @@ For more information, see the [Public Services Network (PSN) FAQs](../connectivi
 
 ## Q
 
-Quickly find more information about our platform and services in our [Knowledge Centre](https://docs.ukcloud.com/).
+Quickly check on the availability and overall health of the services on the UKCloud platform on the [UKCloud Service Status page](https://status.ukcloud.com).
 
 ## R
 

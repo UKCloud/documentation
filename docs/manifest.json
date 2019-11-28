@@ -5479,7 +5479,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-use-hawkular-metrics.html",
-          "hash": "79WyjiK7FoNzYr7Jmpi74g=="
+          "hash": "G9nqe+bsRUTE34jEjiuYEw=="
         }
       },
       "is_incremental": false,
@@ -5491,7 +5491,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/openshift/oshift-how-use-netpol.html",
-          "hash": "p5fdNPpsD6nvKQdZ6lAuwg=="
+          "hash": "OTAREYARhli2tRP3zA58+g=="
         }
       },
       "is_incremental": false,
@@ -9446,7 +9446,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "0ZHMyDdHRiIDF4xDjRHMXw=="
+          "hash": "6hQv9D4Sx9ueGLowxZhrIg=="
         }
       },
       "is_incremental": false,
@@ -10742,7 +10742,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-ref-release-notes.html",
-          "hash": "hkpmlqixjXecerZVvg4PwA=="
+          "hash": "rN4OtVD37g9KgD1ANOjVQQ=="
         }
       },
       "is_incremental": false,
