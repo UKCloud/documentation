@@ -34,6 +34,8 @@ In multinetwork 3.11 clusters we run a squid proxy on the controlplane loadbalan
 
 As a customer you have no access to the controlplane loadbalancers so we now send the logs through to a set of fluentd pods in a project called squid-showback, they are then forwarded on to the clusters Aggregated Logging and can be viewed in the Kibana dashboard in the openshift-logging project.
 
+Set a filter of kubernetes_namespace_name: "squid-showback" to filter only for the logs from the pods receiving the proxy logs and show only the message. You can then query the message field for the particular IP/endpoint you're looking for.
+
 
 ## Next steps
 
