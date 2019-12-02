@@ -30,7 +30,7 @@ Your OpenShift cluster must have access to multiple networks, be version 3.11 or
 
 ## Viewing logs
 
-In multinetwork 3.11 clusters we run a squid proxy on the controlplane loadbalancers in order to authenticate to Red Hats container registry 'registry.redhat.io'. This also allows you to hit internet endpoints from community network nodes providing you pass the correct variables to your pods and have whitelisted the endpoint. You may inadvertently be traversing the proxy where you do not want to or attempting to hit endpoints that are not whitelisted which will cause you to get 403 forbidden errors. 
+In multinetwork 3.11 clusters we run a squid proxy on the controlplane loadbalancers in order to access Red Hat's container registry 'registry.redhat.io'. The proxy also allows you to hit internet endpoints from community network nodes providing you pass the correct variables to your pods and have whitelisted the endpoint. You may inadvertently be traversing the proxy where you do not want to or attempting to hit endpoints that are not whitelisted which will cause you to get 403 forbidden errors. 
 
 As a customer you have no access to the controlplane loadbalancers so we now send the logs through to a set of fluentd pods in a project called squid-showback, they are then forwarded on to the clusters Aggregated Logging and can be viewed in the Kibana dashboard in the openshift-logging project.
 
