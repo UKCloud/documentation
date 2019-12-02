@@ -39,6 +39,7 @@ Set a filter of kubernetes_namespace_name: "squid-showback" to filter only for t
 ## Further reading
 
 <https://docs.ukcloud.com/articles/openshift/oshift-how-add-domains-proxy-whitelist.html>
+
 <https://docs.ukcloud.com/articles/openshift/oshift-ref-no-proxy.html>
 
 <https://docs.openshift.com/container-platform/3.11/install_config/http_proxies.html>
