@@ -81,7 +81,7 @@ oc login --server {server} --token {token here}
 
 ## Uploading a directory to a container
 
-1. Switch to the project in which the container you want to upload a directory to is located:
+1. Switch to the project in which the container you want to upload the directory to is located:
 
     ```bash
     oc project {project name}
@@ -90,7 +90,7 @@ oc login --server {server} --token {token here}
     > [!TIP]
     > To list all projects use: `oc projects`.
 
-2. Identify the pod in which the container you want to upload a directory to resides:
+2. Identify the pod in which the container you want to upload the directory to resides:
 
     ```bash
     oc get pods
