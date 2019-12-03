@@ -14,6 +14,8 @@
   items:
   - name: Configure an instance using cloud-config
     href: ostack-how-cloud-config.md
+  - name: Configure IPsec VPN in OpenStack
+    href: ostack-how-configure-ipsec-vpn.md
   - name: Convert virtual machines
     href: ostack-how-convert-vms.md
   - name: 'Create and deploy a basic Heat template '

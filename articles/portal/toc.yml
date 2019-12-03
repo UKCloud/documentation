@@ -6,12 +6,20 @@
   items:
   - name: Create a new user
     href: ptl-how-create-users.md
+  - name: Enable 2FA in the Portal
+    href: ptl-how-enable-2fa.md
   - name: Raise and escalate incidents and service requests
     href: ptl-how-raise-escalate-service-request.md
   - name: Reset your UKCloud Portal password or memorable word
     href: ptl-how-reset-password.md
-  - name: Set up two-factor authentication
+  - name: Restrict access to the Portal
+    href: ptl-how-restrict-access-portal.md
+  - name: Restrict access to the vCloud API
+    href: ptl-how-restrict-access-vcloud-api.md
+  - name: Set up 2FA for a user account
     href: ptl-how-setup-2fa.md
+  - name: Set up password expiration
+    href: ptl-how-setup-password-expiration.md
   - name: Sign up for Portal notifications
     href: ptl-how-signup-notifications.md
   - name: Unlock a user account
@@ -28,8 +36,8 @@
   items:
   - name: API Reference Guide
     href: ptl-ref-portal-api.md
-  - name: Enable memorable word on account switch
-    href: ptl-ref-memorable-word.md
+  - name: Enable memorable word authentication
+    href: ptl-how-enable-memorable-word.md
   - name: Partitioning projects or end customers using accounts
     href: ptl-ref-multiple-accounts.md
   - name: Portal permissions
@@ -40,6 +48,8 @@
     href: ptl-ref-user-access.md
   - name: Resetting Two-Factor Authentication for SSO
     href: ptl-ref-reset-2fa-sso.md
+  - name: UKCloud Portal security settings
+    href: ptl-ref-security-settings.md
 - name: Videos
   items:
   - name: UKCloud Portal
