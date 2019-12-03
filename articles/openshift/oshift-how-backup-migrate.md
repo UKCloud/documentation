@@ -3,8 +3,8 @@ title: How to backup, restore and migrate OpenShift resources | UKCloud Ltd
 description: Provides a starting point for using Velero to backup and restore cluster resources and migrate between clusters
 services: openshift
 author: Kieran O'Neill
-reviewer: 
-lastreviewed: 11/09/2019
+reviewer: George Smith
+lastreviewed: 20/11/2019
 
 toc_rootlink: How To
 toc_sub1: 
@@ -20,13 +20,13 @@ toc_mdlink: oshift-how-backup-migrate.md
 
 ### Overview
 
-Velero is an open-source tool set that provides the ability to backup and restore kubernetes resources. The GitHub repository is avaialble at: <https://github.com/vmware-tanzu/velero>.
+Velero is an open-source tool set that provides the ability to backup and restore Kubernetes resources. The GitHub repository is available at: <https://github.com/vmware-tanzu/velero>.
 
 This guide outlines how to:
 
 - Install Velero in your cluster (using our Elastic Cloud Storage product as the backup location)
 
-- Back up and restore namespaces to the same cluster
+- Backup and restore namespaces to the same cluster
 
 - Restore a namespace to a new cluster
 
@@ -97,7 +97,7 @@ To create a backup of the namespace:
 
     `velero create restore restore1 --from-backup test1`
 
-4. This recreates the namespace and all resources within it. If you watch the namespace however, you'll see that not everything is recreated correctly. In our example we have a ruby-example build that pulls a GitHub repository and builds an image and deployment from this. The first thing we notice is that a new build is triggered and it goes directly into pending state. The error message in events is: `'MountVolume.SetUp failed for volume "builder-dockercfg-9589h-push" : secrets "builder-dockercfg-9589h" not found'`. The problem appears to be that the build is referencing the secret that the buider service account had in the original namespace. However, when the namespace is restored, the builder service account generates a new docker secret. To fix this you'll need to cancel the build, delete the serviceaccount to allow it to be recreated and run the build again. In our example, the commands to achieve this are:
+4. This recreates the namespace and all resources within it. If you watch the namespace however, you'll see that not everything is recreated correctly. In our example we have a ruby-example build that pulls a GitHub repository and builds an image and deployment from this. The first thing we notice is that a new build is triggered, and it goes directly into pending state. The error message in events is: `'MountVolume.SetUp failed for volume "builder-dockercfg-9589h-push" : secrets "builder-dockercfg-9589h" not found'`. The problem appears to be that the build is referencing the secret that the builder service account had in the original namespace. However, when the namespace is restored, the builder service account generates a new docker secret. To fix this you'll need to cancel the build, delete the service account to allow it to be recreated and run the build again. In our example, the commands to achieve this are:
 
     ```
     oc cancel-build ruby-ex-1
@@ -133,7 +133,7 @@ For example, to migrate the `backup-test` namespace from our previous example in
 
     `velero create restore migration1 --from-backup test1`
 
-5. As previously, we'll have to sort out the issue with the builder accounts secret. Once this is resolved, we'll have the application running in our new cluster. In our example, we have a route unique to the domain of the cluster so we need to delete the route and expose the service in the new cluster to create a route pointing to the right DNS record. For any production applications with a route, rather than changing the route itself, you would want to reconfigure your DNS to point to the new cluster IP.
+5. As previously, we'll have to sort out the issue with the builder account's secret. Once this is resolved, we'll have the application running in our new cluster. In our example, we have a route unique to the domain of the cluster, so we need to delete the route and expose the service in the new cluster to create a route pointing to the right DNS record. For any production applications with a route, rather than changing the route itself, you would want to reconfigure your DNS to point to the new cluster IP.
 
 ### Further information
 

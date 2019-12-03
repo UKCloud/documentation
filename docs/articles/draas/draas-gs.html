@@ -8,7 +8,7 @@
     <title>Getting Started Guide for Disaster Recovery as a Service | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started Guide for Disaster Recovery as a Service | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -140,7 +140,7 @@
 </ul>
 <h3 id="system-requirements">System requirements</h3>
 <p>To use DRaaS, you must have a valid, centrally managed vSphere or HyperV estate. A single hypervisor is not sufficient.</p>
-<p>The following table lists the minimum requirements for DRaaS, based on the currently deployed version of Zerto Virtual Replication (4.5U4) on the UKCloud platform:</p>
+<p>The following table lists the requirements for DRaaS, based on the currently deployed version of Zerto Virtual Replication (6.5U3) on the UKCloud platform:</p>
 <table>
 <thead>
 <tr>
@@ -155,23 +155,23 @@
 </tr>
 <tr>
 <td>VMWare vCenter</td>
-<td>4.0U1 -- 6.0U2</td>
+<td>vCenter Server 5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1</td>
 </tr>
 <tr>
 <td>Microsoft SCVMM</td>
-<td>2012 R2 and Server Core: Update Rollup 6-11 (recommended)<br>2012 R2 and Server Core: RTM</td>
+<td>2012 R2 and Server Core: Update Rollup 1-5, 6-11, 12-14<br>2012 R2 and Server Core: RTM<br>2016 and Server Core: RTM Rollup 3-5, 6</td>
 </tr>
 <tr>
 <td><strong>Hosts</strong></td>
 <td> </td>
 </tr>
 <tr>
-<td>VMWare ESX/ESXi</td>
-<td>4.0U1-4.0U3, 4.0U4 , 4.1-6.0U1, 6.0U2</td>
+<td>VMWare ESXi</td>
+<td>5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1</td>
 </tr>
 <tr>
 <td>Microsoft Hyper-V</td>
-<td>2012 R2 and Server Core</td>
+<td>2012 R2 and Server Core<br>Windows 2016 Server</td>
 </tr>
 <tr>
 <td><strong>Virtual Machines Hardware Version</strong></td>
@@ -179,11 +179,11 @@
 </tr>
 <tr>
 <td>VMWare</td>
-<td>Up to Version 10</td>
+<td>7-11, 13, 14</td>
 </tr>
 <tr>
 <td>Hyper-V</td>
-<td>Generation 1&amp;2</td>
+<td>Generation 1 &amp; 2</td>
 </tr>
 <tr>
 <td><strong>Disaster Recovery as a Service</strong></td>
@@ -194,25 +194,29 @@
 <td> </td>
 </tr>
 <tr>
-<td>Full Duplex Internet connection</td>
+<td>Full duplex internet connection</td>
 <td>5Mb/s minimum</td>
 </tr>
 <tr>
-<td>IPSEC VPN</td>
+<td>IPsec VPN</td>
 <td>NA</td>
 </tr>
 </tbody>
 </table>
-<p>For a complete list of hypervisor features supported when using DRaaSe, see:</p>
-<p><a href="http://s3.amazonaws.com/zertodownload_docs/4.5U4/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf">http://s3.amazonaws.com/zertodownload_docs/4.5U4/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf</a></p>
+<p>For a complete list of hypervisor features supported when using DRaaS, see the <a href="http://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf">Interoperability Matrix for All Zerto Software Versions</a>.</p>
 <h2 id="getting-disaster-recovery-as-a-service-up-and-running">Getting Disaster Recovery as a Service up and running</h2>
 <p>To get DRaaS up and running in your environment, follow the steps below:</p>
 <ol>
-<li><a href="#create-a-recovery-vdc">Create a recovery VDC</a></li>
-<li><a href="#set-up-your-local-environment">Set up your local environment</a></li>
-<li><a href="#configure-networking-on-the-recovery-site">Configure networking on the recovery site</a></li>
-<li><a href="#create-a-virtual-protection-group">Create a virtual protection group</a></li>
-<li><a href="#perform-a-test-failover">Perform a test failover</a></li>
+<li><p><a href="#create-a-recovery-vdc">Create a recovery VDC</a></p>
+</li>
+<li><p><a href="#set-up-your-local-environment">Set up your local environment</a></p>
+</li>
+<li><p><a href="#configure-networking-on-the-recovery-site">Configure networking on the recovery site</a></p>
+</li>
+<li><p><a href="#create-a-virtual-protection-group">Create a virtual protection group</a></p>
+</li>
+<li><p><a href="#perform-a-test-failover">Perform a failover test</a></p>
+</li>
 </ol>
 <h3 id="create-a-recovery-vdc">Create a recovery VDC</h3>
 <p>To recover your VMs to the UKCloud platform, you must have a VDC in the intended recovery site. If you already have a compute service in the UKCloud site, you can use an existing VDC or you can create a new one using:</p>

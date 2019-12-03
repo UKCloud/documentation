@@ -8,7 +8,7 @@
     <title>How to create a virtual machine using Terraform | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual machine using Terraform | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,7 +91,7 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-create-a-virtual-machine-using-terraform-on-azure-stack">How to create a virtual machine using Terraform on Azure Stack</h1>
+<h1 id="how-to-create-a-virtual-machine-using-terraform-on-azure-stack-hub">How to create a virtual machine using Terraform on Azure Stack Hub</h1>
 
 <p>This document explains how to create a VM using the <strong>azurestack</strong> Terraform provider with Service Principal Name authentication.</p>
 <h2 id="prerequisites">Prerequisites</h2>
@@ -102,27 +102,27 @@
 <li><a href="https://www.terraform.io/downloads.html">Download Terraform</a></li>
 </ul>
 </li>
-<li><p>An active Azure Stack <em>Subscription</em> (required to create SPN if you want to use the same SPN for both Azure and Azure Stack)</p>
+<li><p>An active Azure Stack Hub <em>Subscription</em> (required to create SPN if you want to use the same SPN for both Azure and Azure Stack Hub)</p>
 </li>
 <li><p>Service Principal Name</p>
 <ul>
-<li><a href="azs-how-create-spn-powershell.html">How to create Service Principal Name for Azure Stack in Powershell</a></li>
+<li><a href="azs-how-create-spn-powershell.html">How to create Service Principal Name for Azure Stack Hub in Powershell</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="official-documentation">Official Documentation</h2>
 <ul>
-<li><p><a href="https://www.terraform.io/docs/providers/azurestack">Azure Stack Provider Website</a></p>
+<li><p><a href="https://www.terraform.io/docs/providers/azurestack">Azure Stack Hub Provider Website</a></p>
 </li>
-<li><p><a href="https://github.com/terraform-providers/terraform-provider-azurestack">Azure Stack Provider GitHub Repository</a></p>
+<li><p><a href="https://github.com/terraform-providers/terraform-provider-azurestack">Azure Stack Hub Provider GitHub Repository</a></p>
 </li>
 </ul>
-<h1 id="how-to-use-terraform-with-azure-stack">How to use Terraform with Azure Stack</h1>
+<h1 id="how-to-use-terraform-with-azure-stack-hub">How to use Terraform with Azure Stack Hub</h1>
 <h2 id="authentication">Authentication</h2>
 <p>In order to authenticate with Terraform you will need to have a valid Service Principal Name (SPN) - how to create one is described in the <a href="#prerequisites">Prerequisites</a>.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>You only need your Service Principal Name (SPN) to be assigned to your Azure Stack subscription, despite what official Terraform documentation says.</p>
+<p>You only need your Service Principal Name (SPN) to be assigned to your Azure Stack Hub subscription, despite what official Terraform documentation says.</p>
 </div>
 <p>The process of authentication can be handled in one of two ways, either as <strong>Environment Variables</strong> or in the <strong>Provider Block</strong>.</p>
 <p><a href="#example-of-how-variables-are-used-in-terraform">Environment Variables Option</a> - you can create your <strong>Terraform plan</strong> by putting only the plan itself into <code>main.tf</code> and then keeping <code>variables.tf</code> separate. You have to declare the actual values in the <code>terraform.tfvars</code> file. This is the file that you will need to populate with your actual credential details.</p>
@@ -144,7 +144,7 @@ variable &quot;tenant_id&quot; {}
 }
 </code></pre>
 <h4 id="terraformtfvars"><code>terraform.tfvars</code></h4>
-<pre><code class="lang-hcl"># Configure the Azure Stack Provider
+<pre><code class="lang-hcl"># Configure the Azure Stack Hub Provider
 arm_endpoint    = &quot;https://management.{region}.{domain}&quot;
 subscription_id = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
 client_id       = &quot;{applicationId}&quot;
@@ -153,14 +153,14 @@ tenant_id       = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
 </code></pre>
 <h4 id="argument-reference">Argument reference</h4>
 <ul>
-<li><code>arm_endpoint</code> - The Azure Resource Manager API Endpoint for your Azure Stack instance. This will be <strong><code>https://management.{region}.{domain}</code></strong>.</li>
+<li><code>arm_endpoint</code> - The Azure Resource Manager API Endpoint for your Azure Stack Hub instance. This will be <strong><code>https://management.{region}.{domain}</code></strong>.</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
 <p>For UKCloud, the arm_endpoint is <strong><code>https://management.frn00006.azure.ukcloud.com</code></strong>.</p>
 </div>
 <ul>
-<li><p><code>subscription_id</code> - The ID of your Azure Stack Subscription.</p>
+<li><p><code>subscription_id</code> - The ID of your Azure Stack Hub Subscription.</p>
 </li>
 <li><p><code>client_id</code> - The Application GUID that you configured your Service Principal Name (SPN) to use.</p>
 </li>
@@ -177,7 +177,7 @@ tenant_id       = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
 <p><a href="#example-of-provider-block">Provider Block Option</a> - you can create your <strong>Terraform plan</strong> by putting everything in one <code>main.tf</code> file, which then contains your Provider and variables settings explicitly in said plan.</p>
 <h3 id="example-of-provider-block">Example of Provider Block:</h3>
 <h4 id="maintf-1"><code>main.tf</code></h4>
-<pre><code class="lang-hcl"># Configure the Azure Stack Provider
+<pre><code class="lang-hcl"># Configure the Azure Stack Hub Provider
 provider &quot;azurestack&quot; {
  arm_endpoint    = &quot;https://management.{region}.{domain}&quot;
  subscription_id = &quot;xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx&quot;
@@ -203,12 +203,12 @@ Rest of the file (...)
 <tbody>
 <tr>
 <td>arm_endpoint</td>
-<td>The Azure Resource Manager API endpoint for your Azure Stack instance. This will be https://management.{region}.{domain}.</td>
+<td>The Azure Resource Manager API endpoint for your Azure Stack Hub instance. This will be https://management.{region}.{domain}.</td>
 <td><form oninput="result.value=arm_endpoint.value" id="arm_endpoint" style="display:inline;"><input type="text" id="arm_endpoint" name="arm_endpoint" style="display:inline;" placeholder="https://management.{region}.{domain}"></form></td>
 </tr>
 <tr>
 <td>subscription_id</td>
-<td>The ID of your Azure Stack subscription.</td>
+<td>The ID of your Azure Stack Hub subscription.</td>
 <td><form oninput="result.value=subscription_id.value" id="subscription_id" style="display:inline;"><input type="text" id="subscription_id" name="subscription_id" style="display:inline;" placeholder="xxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx"></form></td>
 </tr>
 <tr>
@@ -233,7 +233,7 @@ Rest of the file (...)
 </tr>
 <tr>
 <td>location</td>
-<td>The name of the Azure/Azure Stack region.</td>
+<td>The name of the Azure/Azure Stack Hub region.</td>
 <td><form oninput="result.value=location.value" id="location" style="display:inline;"><input type="text" id="location" name="location" style="display:inline;" placeholder="frn00006"></form></td>
 </tr>
 <tr>
@@ -287,7 +287,7 @@ Rest of the file (...)
 <h5>Important</h5>
 <p>This example is only the <code>main.tf</code> file. You will still need the <code>variables.tf</code> and <code>terraform.tfvars</code> files as shown in the following section.</p>
 </div>
-<h3 id="defining-the-required-azure-stack-resources-in-the-maintf-file">Defining the required Azure Stack resources in the <code>main.tf</code> file</h3>
+<h3 id="defining-the-required-azure-stack-hub-resources-in-the-maintf-file">Defining the required Azure Stack Hub resources in the <code>main.tf</code> file</h3>
 <div class="TIP">
 <h5>Tip</h5>
 <p>Resource attributes such as &quot;name&quot; can be hardcoded as opposed to using variables from the external files for the declaration.</p>

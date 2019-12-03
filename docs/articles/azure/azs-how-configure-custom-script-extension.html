@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to configure custom script extensions for new and existing VMs on Azure Stack | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to configure custom script extensions for new and existing VMs on Azure Stack Hub | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to configure custom script extensions for new and existing VMs on Azure Stack | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="title" content="How to configure custom script extensions for new and existing VMs on Azure Stack Hub | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,11 +91,11 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-configure-custom-script-extensions-for-new-and-existing-vms-on-azure-stack">How to configure custom script extensions for new and existing VMs on Azure Stack</h1>
+<h1 id="how-to-configure-custom-script-extensions-for-new-and-existing-vms-on-azure-stack-hub">How to configure custom script extensions for new and existing VMs on Azure Stack Hub</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Custom script extensions download and execute scripts on Azure Stack virtual machines. Custom script extensions are useful for post deployment configuration, software installation, or any other configuration or management tasks.</p>
-<p>This article explains how to add custom script extensions to new and existing VMs on Azure Stack.</p>
+<p>Custom script extensions download and execute scripts on Azure Stack Hub virtual machines. Custom script extensions are useful for post deployment configuration, software installation, or any other configuration or management tasks.</p>
+<p>This article explains how to add custom script extensions to new and existing VMs on Azure Stack Hub.</p>
 <p>There are two options for deploying custom script extensions:</p>
 <ul>
 <li><p>Deploy a custom script extension from your local disk.</p>
@@ -104,7 +104,7 @@
 </li>
 </ul>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack portal.</p>
+<p>To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack Hub portal.</p>
 <h3 id="declare-variables">Declare variables</h3>
 <p>Enter details below to provide values for the variables in the following scripts in this article:</p>
 <table>
@@ -118,7 +118,7 @@
 <tbody>
 <tr>
 <td>$ArmEndpoint</td>
-<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td>The Azure Resource Manager endpoint for Azure Stack Hub</td>
 <td><form oninput="result.value=armendpoint.value;result2.value=armendpoint.value;result3.value=armendpoint.value;result4.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
 </tr>
 <tr>
@@ -175,7 +175,7 @@
 </ul>
 <section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
 
-<p>See documentation here on <a href="azs-how-create-vm-ps.html">how to create a new VM on Azure Stack</a>.</p>
+<p>See documentation here on <a href="azs-how-create-vm-ps.html">how to create a new VM on Azure Stack Hub</a>.</p>
 </section>
 <section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 </section>
@@ -197,7 +197,7 @@
 </ul>
 <section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tabpanel" data-tab="tabid-a" data-condition="tabid-1">
 
-<p>Add the following code to the end of the VM creation script when creating a Linux VM on Azure Stack.</p>
+<p>Add the following code to the end of the VM creation script when creating a Linux VM on Azure Stack Hub.</p>
 <h4 id="local-disk">Local disk</h4>
 <pre><code class="language-PowerShell"># Declare variables
 $CustomScriptFileName = "<output form="customscriptfilename" name="result" style="display: inline;">SetRootPassword.sh</output>"
@@ -254,7 +254,7 @@ Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $V
 </section>
 <section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
 
-<p>Add the following code to the end of the VM creation script when creating a Windows VM on Azure Stack.</p>
+<p>Add the following code to the end of the VM creation script when creating a Windows VM on Azure Stack Hub.</p>
 <h4 id="local-disk-1">Local disk</h4>
 <pre><code class="language-PowerShell"># Declare variables
 $CustomScriptFileName = "<output form="customscriptfilename" name="result3" style="display: inline;">VMSetupForSR.ps1</output>"
@@ -310,7 +310,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Input variables
@@ -364,7 +364,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Input variables
@@ -398,7 +398,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Input Variables
@@ -442,7 +442,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 # Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Input variables

@@ -1,6 +1,6 @@
 ---
-title: How to perform an Azure Stack Update | UKCloud Ltd
-description: Azure Stack update procedure guide for support
+title: How to perform an Azure Stack Hub Update | UKCloud Ltd
+description: Azure Stack Hub update procedure guide for support
 services: azure-stack
 author: Chris Black
 reviewer: BaileyLawson
@@ -11,15 +11,15 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Perform an Azure Stack update
+toc_title: Perform an Azure Stack Hub update
 toc_fullpath: Operators/How To/azs-how-ps-update-azure-stack.md
 toc_mdlink: azs-how-ps-update-azure-stack.md
 ---
-# How to perform an Azure Stack update
+# How to perform an Azure Stack Hub update
 
-This guide is intended to provide a reference on how can we perform Azure Stack Updates.
+This guide is intended to provide a reference on how can we perform Azure Stack Hub Updates.
 
-Loosely based on [Azure Stack Apply Updates](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-apply-updates).
+Loosely based on [Azure Stack Hub Apply Updates](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-apply-updates).
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ Prerequisites from a Windows-based external client.
 
 * PowerShell 5.1
 
-* Azure Stack PowerShell Modules -> [Configure PowerShell Environment](azs-how-configure-powershell-operators.md)
+* Azure Stack Hub PowerShell Modules -> [Configure PowerShell Environment](azs-how-configure-powershell-operators.md)
 
 > [!IMPORTANT]
 > Always consult Microsoft documentation for your specific Update Version
@@ -47,7 +47,7 @@ Prerequisites from a Windows-based external client.
     > [!IMPORTANT]
     > From 1807 onwards you no longer need to download Update and Hotfix packages manually.
     >
-    > They are automatically pulled by Azure Stack itself and will show as **update available** in the portal.
+    > They are automatically pulled by Azure Stack Hub itself and will show as **update available** in the portal.
 
 3. Start the Update process.
 

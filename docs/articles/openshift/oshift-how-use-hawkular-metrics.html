@@ -8,7 +8,7 @@
     <title>How to use the Hawkular Metrics API | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to use the Hawkular Metrics API | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -94,7 +94,7 @@
 <h1 id="how-to-use-the-hawkular-metrics-api">How to use the Hawkular Metrics API</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This guide is intended to give you enough information to forumulate basic memory usage or cpu queries against nodes in your cluster. For more advanced usage please refer to the Hawkular documentation at <a href="https://www.hawkular.org/hawkular-metrics/docs/user-guide/#_metrics">https://www.hawkular.org/hawkular-metrics/docs/user-guide/#_metrics</a> or the OpenShift Hawkular repository readme at <a href="https://github.com/openshift/origin-metrics/blob/master/docs/hawkular_metrics.adoc">https://github.com/openshift/origin-metrics/blob/master/docs/hawkular_metrics.adoc</a>.</p>
+<p>This guide is intended to give you enough information to formulate basic memory usage or cpu queries against nodes in your cluster. For more advanced usage please refer to the Hawkular documentation at <a href="https://www.hawkular.org/hawkular-metrics/docs/user-guide/#_metrics">https://www.hawkular.org/hawkular-metrics/docs/user-guide/#_metrics</a> or the OpenShift Hawkular repository readme at <a href="https://github.com/openshift/origin-metrics/blob/master/docs/hawkular_metrics.adoc">https://github.com/openshift/origin-metrics/blob/master/docs/hawkular_metrics.adoc</a>.</p>
 <h2 id="using-the-api">Using the API</h2>
 <ol>
 <li><p>To query the API, you must be authenticated as a user that has reader permissions on the OpenShift project that contains the Hawkular-Tenant you are querying. If you are querying the _system tenant then you must also have cluster-reader permissions.</p>
@@ -107,7 +107,7 @@
 <pre><code class="lang-bash">curl -X GET https://hawkular-metrics.openshift-test.cna.ukcloud.com/hawkular/metrics/metrics &quot;Content-Type: application/json&quot; -H &quot;Hawkular-Tenant: _system&quot; -H &quot;Authorization: Bearer $token&quot;
 </code></pre>
 </li>
-<li><p>You'll need to pass the output from the request into some form of JSON parser to get human readable results. It will return a series of JSON blocks similiar to the following:</p>
+<li><p>You'll need to pass the output from the request into some form of JSON parser to get human readable results. It will return a series of JSON blocks similar to the following:</p>
 <pre><code class="lang-json">{
     &quot;dataRetention&quot;: 7,
     &quot;id&quot;: &quot;cluster/memory/usage&quot;,

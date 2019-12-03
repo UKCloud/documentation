@@ -59,7 +59,7 @@ When you have accepted the design and provided a purchase order, we'll start to 
 
 Your compute solution can be:
 
-- Based on VMware, OpenStack, Azure Stack or Oracle
+- Based on VMware, OpenStack, Azure Stack Hub or Oracle
 
 - Located in either or both of our two sites - Farnborough and Corsham, or in a CHDC
 

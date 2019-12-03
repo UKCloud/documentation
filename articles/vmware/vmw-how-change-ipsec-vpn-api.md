@@ -76,7 +76,7 @@ To start interacting with the vCloud API, you first need to obtain an `x-vcloud-
 
 9. In the *Request Header* dialog box, in the **Name** field, enter `Accept`
 
-10. In the **Value** field enter `application/*+xml;version=5.5` and then click **Okay**.
+10. In the **Value** field enter `application/*+xml;version=32.0` and then click **Okay**.
 
     ![Request Headers dialog box](images/vmw-restclient-request-headers.png)
 

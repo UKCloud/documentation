@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to configure the Azure Stack operator's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to configure the Azure Stack Hub operator's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to configure the Azure Stack operator's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="title" content="How to configure the Azure Stack Hub operator's PowerShell environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -91,9 +91,9 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-configure-the-azure-stack-operators-powershell-environment">How to configure the Azure Stack operator's PowerShell environment</h1>
+<h1 id="how-to-configure-the-azure-stack-hub-operators-powershell-environment">How to configure the Azure Stack Hub operator's PowerShell environment</h1>
 
-<p>As an Azure Stack operator, you can use PowerShell to manage Azure Stack resources such as create virtual machines, deploy Azure Resource Manager templates, etc. This topic is scoped to use with the operator environments only. In order to interact with Azure Stack PowerShell you will need to set up your environment. To do so follow the below guide:</p>
+<p>As an Azure Stack Hub operator, you can use PowerShell to manage Azure Stack Hub resources such as create virtual machines, deploy Azure Resource Manager templates, etc. This topic is scoped to use with the operator environments only. In order to interact with Azure Stack Hub PowerShell you will need to set up your environment. To do so follow the below guide:</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>Prerequisites from a Windows-based external client.</p>
 <ul>
@@ -118,7 +118,7 @@
 <tbody>
 <tr>
 <td>$ArmEndpoint</td>
-<td>The Azure Resource Manager admin endpoint for Azure Stack</td>
+<td>The Azure Resource Manager admin endpoint for Azure Stack Hub</td>
 <td><form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://adminmanagement.frn00006.azure.ukcloud.com"></form></td>
 </tr>
 <tr>
@@ -133,21 +133,21 @@
 </tr>
 </tbody>
 </table>
-<h2 id="install-azure-stack-powershell">Install Azure Stack PowerShell</h2>
+<h2 id="install-azure-stack-hub-powershell">Install Azure Stack Hub PowerShell</h2>
 <pre><code class="language-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
   
-# PowerShell commands for Azure Stack are installed through the PSGallery repository
+# PowerShell commands for Azure Stack Hub are installed through the PSGallery repository
 # To register the PSGallery repository, open an elevated PowerShell session and run the following command:
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
   
-# Uninstall existing versions of Azure/Azure Stack PowerShell
+# Uninstall existing versions of Azure/Azure Stack Hub PowerShell
 Get-Module -Name Azs.*, Azure* -ListAvailable | Uninstall-Module -Force -Verbose
   
 # Install the AzureRM.BootStrapper module. Select Yes when prompted to install NuGet
 Install-Module -Name AzureRM.BootStrapper -Verbose
 
-# Install and import the API Version Profile required by Azure Stack into the current PowerShell session
+# Install and import the API Version Profile required by Azure Stack Hub into the current PowerShell session
 Use-AzureRmProfile -Profile 2019-03-01-hybrid -Force
 Install-Module -Name AzureStack -RequiredVersion 1.7.2 -Verbose
 </code></pre>
@@ -161,7 +161,7 @@ Install-Module -Name AzureRM.Storage -RequiredVersion 5.0.4 -AllowClobber -Force
 # Remove incompatible storage module installed by AzureRM.Storage
 Uninstall-Module Azure.Storage -RequiredVersion 4.6.1 -Force -Verbose
 </code></pre>
-<h2 id="configure-the-operator-environment-and-sign-in-to-azure-stack">Configure the operator environment and sign in to Azure Stack</h2>
+<h2 id="configure-the-operator-environment-and-sign-in-to-azure-stack-hub">Configure the operator environment and sign in to Azure Stack Hub</h2>
 <h3 id="azure-active-directory-aad-based-deployments">Azure Active Directory (AAD) based deployments</h3>
 <pre><code class="language-PowerShell"># Set Execution Policy
 Set-ExecutionPolicy RemoteSigned
@@ -169,7 +169,7 @@ Set-ExecutionPolicy RemoteSigned
 # Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
 
-# Register an AzureRM environment that targets your Azure Stack instance
+# Register an AzureRM environment that targets your Azure Stack Hub instance
 Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint $ArmEndpoint
 
 # Sign in to your environment
@@ -182,7 +182,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 # Declare endpoint
 $ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://adminmanagement.frn00006.azure.ukcloud.com</output>"
 
-# Register an AzureRM environment that targets your Azure Stack instance
+# Register an AzureRM environment that targets your Azure Stack Hub instance
 Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint $ArmEndpoint
 
 # Create your Credentials
@@ -195,8 +195,8 @@ $AzsCred = New-Object -TypeName System.Management.Automation.PSCredential -Argum
 Connect-AzureRmAccount -Credential $AzsCred -EnvironmentName "AzureStackAdmin"
 </code></pre>
 <h2 id="test-the-connectivity">Test the connectivity</h2>
-<p>Now that we've got everything set-up, let's use PowerShell to create resources within Azure Stack. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named &quot;MyResourceGroup&quot;:</p>
-<pre><code class="language-PowerShell"># Get location of Azure Stack
+<p>Now that we've got everything set-up, let's use PowerShell to create resources within Azure Stack Hub. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named &quot;MyResourceGroup&quot;:</p>
+<pre><code class="language-PowerShell"># Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 New-AzureRmResourceGroup -Name "MyResourceGroup" -Location $Location

@@ -1,6 +1,6 @@
 ---
-title: How to deploy an Azure Site Recovery template to Azure Stack using PowerShell | UKCloud Ltd
-description: Learn how to deploy an Azure Site Recovery template to Azure Stack using PowerShell
+title: How to deploy an Azure Site Recovery template to Azure Stack Hub using PowerShell | UKCloud Ltd
+description: Learn how to deploy an Azure Site Recovery template to Azure Stack Hub using PowerShell
 services: azure-stack
 author: Bailey Lawson
 reviewer: BaileyLawson
@@ -11,14 +11,14 @@ toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Deploy an Azure Site Recovery template to Azure Stack - PowerShell
+toc_title: Deploy an Azure Site Recovery template to Azure Stack Hub - PowerShell
 toc_fullpath: Users/How To/azs-how-deploy-asr-template-powershell.md
 toc_mdlink: azs-how-deploy-asr-template-powershell.md
 ---
 
-# How to deploy an Azure Site Recovery template to Azure Stack using PowerShell
+# How to deploy an Azure Site Recovery template to Azure Stack Hub using PowerShell
 
-This document explains how to deploy an Azure Site Recovery configuration server Azure Resource Manager (ARM) template to Azure Stack using PowerShell.
+This document explains how to deploy an Azure Site Recovery configuration server Azure Resource Manager (ARM) template to Azure Stack Hub using PowerShell.
 
 It will guide you through the process of:
 
@@ -28,7 +28,7 @@ It will guide you through the process of:
 
 ## What is an ARM template?
 
-You can use ARM templates to deploy and provision all the resources for your application in a single, coordinated operation. You can also redeploy templates to make changes to the resources in a resource group. You can deploy these templates via the Azure Stack portal, PowerShell, Azure CLI, REST API and Visual Studio. Microsoft provides some quick-start templates on [GitHub](https://aka.ms/AzureStackGitHub).
+You can use ARM templates to deploy and provision all the resources for your application in a single, coordinated operation. You can also redeploy templates to make changes to the resources in a resource group. You can deploy these templates via the Azure Stack Hub portal, PowerShell, Azure CLI, REST API and Visual Studio. Microsoft provides some quick-start templates on [GitHub](https://aka.ms/AzureStackGitHub).
 
 ## Prerequisites
 
@@ -36,15 +36,15 @@ Prerequisites from a Windows-based external client are:
 
 - PowerShell 5.1 and AzureStack PowerShell Module.
 
-  - [Configure PowerShell Environment and Azure Stack Module](azs-how-configure-powershell-users.md)
+  - [Configure PowerShell Environment and Azure Stack Hub Module](azs-how-configure-powershell-users.md)
 
-- A service principal with contributor permissions on both Azure and Azure Stack.
+- A service principal with contributor permissions on both Azure and Azure Stack Hub.
 
   - [How to create a service principal name (SPN) using PowerShell](azs-how-create-spn-powershell.md)
 
-- A virtual network in Azure Stack to deploy the Azure Site Recovery configuration server to.
+- A virtual network in Azure Stack Hub to deploy the Azure Site Recovery configuration server to.
 
-- For any VMs that you want protecting, be sure to add the relevant custom script extension. These are required as specified in the [Azure Stack Site Recovery documentation](https://docs.microsoft.com/en-us/azure/site-recovery/azure-stack-site-recovery#step-1-prepare-azure-stack-vms).
+- For any VMs that you want protecting, be sure to add the relevant custom script extension. These are required as specified in the [Azure Stack Hub Site Recovery documentation](https://docs.microsoft.com/en-us/azure/site-recovery/azure-stack-site-recovery#step-1-prepare-azure-stack-vms).
 
   - [Windows](https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1) - This extension disables Remote User Access control and allows WMI and File and Printer sharing on the firewall
 
@@ -52,15 +52,15 @@ Prerequisites from a Windows-based external client are:
 
 ## Microsoft documentation
 
-- [Azure Stack ARM Templates Overview](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-arm-templates)
+- [Azure Stack Hub ARM Templates Overview](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-arm-templates)
 
-- [Deploy a template to Azure Stack using PowerShell](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-deploy-template-powershell)
+- [Deploy a template to Azure Stack Hub using PowerShell](https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-deploy-template-powershell)
 
 - [Understand the structure and syntax of Azure Resource Manager Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates)
 
-- [GitHub Azure Stack Quick-Start Template Repository](https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master)
+- [GitHub Azure Stack Hub Quick-Start Template Repository](https://github.com/Azure/AzureStack-QuickStart-Templates/tree/master)
 
-- [UKCloud Azure Stack Repository](https://github.com/UKCloud/AzureStack)
+- [UKCloud Azure Stack Hub Repository](https://github.com/UKCloud/AzureStack)
 
 ## What does the template deploy?
 
@@ -88,13 +88,13 @@ The images used to create this deployment are:
 
 - The configuration server will have a 127 GB OS disk, and two 600 GB data disks.
 
-## Overview of the ARM template deployment process for Azure Stack using service principal name (SPN) authentication
+## Overview of the ARM template deployment process for Azure Stack Hub using service principal name (SPN) authentication
 
 1. Declare your variables accordingly.
 
-2. Create your Azure Stack environment.
+2. Create your Azure Stack Hub environment.
 
-3. Log in to your Azure Stack *Subscription* with the service principal name (SPN).
+3. Log in to your Azure Stack Hub *Subscription* with the service principal name (SPN).
 
 4. Check if a resource group and virtual network exist.
 
@@ -104,13 +104,13 @@ The images used to create this deployment are:
 
 | Variable name   | Variable description                                               | Input            |
 |-----------------|--------------------------------------------------------------------|------------------|
-| \$StackArmEndpoint | The Azure Resource Manager endpoint for Azure Stack | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
-| \$StackResourceGroup | The resource group to deploy the ASR configuration server to on Azure Stack | <form oninput="result.value=AzsRGName.value" id="AzsRGName" style="display: inline;"><input type="text" id="AzsRGName" name="AzsRGName" style="display: inline;" placeholder="MyResourceGroup"/></form> |
-| \$ClientId | The application ID of a service principal with contributor permissions on Azure Stack and Azure | <form oninput="result.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="00000000-0000-0000-0000-000000000000"/></form> |
+| \$StackArmEndpoint | The Azure Resource Manager endpoint for Azure Stack Hub | <form oninput="result.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"/></form> |
+| \$StackResourceGroup | The resource group to deploy the ASR configuration server to on Azure Stack Hub | <form oninput="result.value=AzsRGName.value" id="AzsRGName" style="display: inline;"><input type="text" id="AzsRGName" name="AzsRGName" style="display: inline;" placeholder="MyResourceGroup"/></form> |
+| \$ClientId | The application ID of a service principal with contributor permissions on Azure Stack Hub and Azure | <form oninput="result.value=clientid.value" id="clientid" style="display: inline;"><input type="text" id="clientid" name="clientid" style="display: inline;" placeholder="00000000-0000-0000-0000-000000000000"/></form> |
 | \$ClientSecret | A password of the service principal specified in the ClientID parameter | <form oninput="result.value=clientsecret.value" id="clientsecret" style="display: inline;"><input type="text" id="clientsecret" name="clientsecret" style="display: inline;" placeholder="ftE2u]iVLs_J4+i-:q^Ltf4!&{!w3-%=3%4+}F2jkx]="/></form> |
-| \$StackVNetName | The name of the existing virtual network to connect the configuration server to on Azure Stack | <form oninput="result.value=AzsVNetName.value" id="AzsVNetName" style="display: inline;" ><input type="text" id="AzsVNetName" name="AzsVNetName" style="display: inline;" placeholder="SiteRecoveryVNet"/></form> |
-| \$StackSubnetName | The name of the existing virtual network subnet to connect the configuration server to on Azure Stack | <form oninput="result.value=AzsSubnetName.value" id="AzsSubnetName" style="display: inline;"><input type="text" id="AzsSubnetName" name="AzsSubnetName" style="display: inline;" placeholder="default"/></form> |
-| \$StackStorageAccount | The name of the storage account to be created on Azure Stack (Must be unique across Azure Stack)  | <form oninput="result.value=AzsSAName.value" id="AzsSAName" style="display: inline;"><input type="text" id="AzsSAName" name="AzsSAName" style="display: inline;" placeholder="siterecoverycssa"/></form> |
+| \$StackVNetName | The name of the existing virtual network to connect the configuration server to on Azure Stack Hub | <form oninput="result.value=AzsVNetName.value" id="AzsVNetName" style="display: inline;" ><input type="text" id="AzsVNetName" name="AzsVNetName" style="display: inline;" placeholder="SiteRecoveryVNet"/></form> |
+| \$StackSubnetName | The name of the existing virtual network subnet to connect the configuration server to on Azure Stack Hub | <form oninput="result.value=AzsSubnetName.value" id="AzsSubnetName" style="display: inline;"><input type="text" id="AzsSubnetName" name="AzsSubnetName" style="display: inline;" placeholder="default"/></form> |
+| \$StackStorageAccount | The name of the storage account to be created on Azure Stack Hub (Must be unique across Azure Stack Hub)  | <form oninput="result.value=AzsSAName.value" id="AzsSAName" style="display: inline;"><input type="text" id="AzsSAName" name="AzsSAName" style="display: inline;" placeholder="siterecoverycssa"/></form> |
 | \$AzureResourceGroup | The name of the resource group to be created on public Azure | <form oninput="result.value=AzureRGName.value" id="AzureRGName" style="display: inline;" ><input type="text" id="AzureRGName" name="AzureRGName" style="display: inline;" placeholder="SiteRecoveryRG"/></form> |
 | \$ExistingAzureRG | Select **True** if the resource group already exists in public Azure | <form onchange="result.value=ExistingRG.value" id="ExistingRG" style="display: inline;"><select name="ExistingRG" id="ExistingRG" style="display: inline;"><option value="&#36;false">False</option><option value="&#36;true">True</option></select></form> |
 | \$AzureLocation | The location of the recovery services vault on public Azure | <form oninput="result.value=AzureLocation.value" id="AzureLocation" style="display: inline;" ><input type="text" id="AzureLocation" name="AzureLocation" style="display: inline;" placeholder="ukwest"/></form> |
@@ -162,7 +162,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $StackArmEndpoint
 ## Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Declare template variables

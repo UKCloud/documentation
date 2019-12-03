@@ -8,7 +8,7 @@
     <title>UKCloud for Microsoft Azure Service Scope | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="UKCloud for Microsoft Azure Service Scope | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,7 +96,7 @@
 <h2 id="about-this-document">About this document</h2>
 <p>This document describes the boundaries of the UKCloud for Microsoft Azure service, along with the division of responsibilities between UKCloud and the customer, to facilitate the provisioning and ongoing use of the service.</p>
 <h2 id="about-ukcloud-for-microsoft-azure">About UKCloud for Microsoft Azure</h2>
-<p>UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure platform and we deliver this service from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners. The service is based on the Microsoft Azure Stack product, which has been developed by Microsoft as an extension of the Azure public cloud.</p>
+<p>UKCloud for Microsoft Azure harnesses the innovation of Microsoft’s Azure platform and we deliver this service from within our award-winning government-grade multi-cloud environment – addressing the service, connectivity and diversity requirements of UK public sector organisations and their industry partners. The service is based on the Microsoft Azure Stack Hub product, which has been developed by Microsoft as an extension of the Azure public cloud.</p>
 <h2 id="service-options">Service options</h2>
 <p>You can build a tailored solution to meet your requirements by mixing and matching service options. The choice does not lock you to one service or size, enabling you to scale resources up or down as your requirements change.</p>
 <p>The options below are all currently available within the service:</p>
@@ -111,7 +111,7 @@
 </li>
 </ul>
 <p>You can find the full list of supported virtual machine sizes <a href="https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes">here</a>.</p>
-<p>You can deploy VMs using the UKCloud Azure Stack portal and other tooling.</p>
+<p>You can deploy VMs using the UKCloud Azure Stack Hub portal and other tooling.</p>
 <div class="WARNING">
 <h5>Warning</h5>
 <p>Each VM contains a temporary disk. The temporary disk provides short-term storage for applications and processes and is intended to only store data such as page or swap files. Data on the temporary disk may be lost during a maintenance event or when you redeploy a VM.</p>
@@ -120,7 +120,7 @@
 <p>There are several ways in which storage can be addressed in UKCloud for Microsoft Azure:</p>
 <ul>
 <li><p>Azure Blob Storage (Page)
-Page blobs are optimized for representing IaaS disks and supporting random writes that are up to 1 TB in size. An Azure Stack virtual machine attached IaaS disk is a Virtual Hard Disk (VHD) stored as a page blob. At present only unmanaged disks can be offered in the service.</p>
+Page blobs are optimized for representing IaaS disks and supporting random writes that are up to 1 TB in size. An Azure Stack Hub virtual machine attached IaaS disk is a Virtual Hard Disk (VHD) stored as a page blob. At present only unmanaged disks can be offered in the service.</p>
 </li>
 <li><p>Azure Blob Storage (Block)
 Block blobs (generically known as object storage) are optimised for streaming and storing cloud objects, and are a good choice for storing documents, media files, backups, and so on.</p>
@@ -137,7 +137,7 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>All storage in Azure Stack is taken from a common pool. When designing your service for UKCloud for Microsoft Azure, consider the best usage of your storage. For example, if you have a large object storage requirement, consider using the UKCloud's Cloud storage platform as part of your solution.</p>
+<p>All storage in Azure Stack Hub is taken from a common pool. When designing your service for UKCloud for Microsoft Azure, consider the best usage of your storage. For example, if you have a large object storage requirement, consider using the UKCloud's Cloud storage platform as part of your solution.</p>
 </div>
 <h3 id="service-management">Service management</h3>
 <ul>
@@ -152,7 +152,7 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 </ul>
 <h3 id="network">Network</h3>
 <p>UKCloud manages the physical firewalls that face public and secure networks.</p>
-<p>You can deploy multiple gateway devices and configure the following using either the UKCloud Azure Stack portal or API:</p>
+<p>You can deploy multiple gateway devices and configure the following using either the UKCloud Azure Stack Hub portal or API:</p>
 <ul>
 <li><p>Virtual networks – UKCloud for Microsoft Azure enables you to configure virtual private clouds, and create and manage your private address space within Azure. You can configure this via the UI, API or other tooling</p>
 </li>
@@ -193,13 +193,13 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 </li>
 <li><p>The UKCloud for Microsoft Azure service is updated regularly with the latest code release from Microsoft - typically, this is once a month and notified via the <a href="https://status.ukcloud.com/">UKCloud service status page</a> and the <a href="https://portal.ukcloud.com">UKCloud Portal</a>. UKCloud aim to be within two updates from Microsoft, however, we will control the release of the patches into the live service.</p>
 </li>
-<li><p>Through the UKCloud Azure Stack portal you can use availability sets so that VMs do not run on the same physical host.</p>
+<li><p>Through the UKCloud Azure Stack Hub portal you can use availability sets so that VMs do not run on the same physical host.</p>
 </li>
 <li><p>You can make additional configurations inside a VM (such as acting as a secondary hypervisor or implementing third-party software technologies), however, we do not support these customer implementations.</p>
 </li>
 </ul>
 <h3 id="azure-marketplace">Azure Marketplace</h3>
-<p>UKCloud for Microsoft Azure includes access to a local version of the Azure Marketplace. The Marketplace contains a collection of services, applications, and resources customized for Azure Stack that you can deploy in your environment. Every Marketplace item has:</p>
+<p>UKCloud for Microsoft Azure includes access to a local version of the Azure Marketplace. The Marketplace contains a collection of services, applications, and resources customized for Azure Stack Hub that you can deploy in your environment. Every Marketplace item has:</p>
 <ul>
 <li><p>An Azure Resource Manager template for resource provisioning</p>
 </li>
@@ -208,7 +208,7 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 <li><p>Formatting information to display the item in the portal</p>
 </li>
 </ul>
-<p>We've pre-populated the Marketplace with a variety of images and templates that have been identified as the most useful services. You can request additional resources are added, provided they are approved for use on Azure Stack. A full list of available items can be found <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-marketplace-azure-items">here</a>.</p>
+<p>We've pre-populated the Marketplace with a variety of images and templates that have been identified as the most useful services. You can request additional resources are added, provided they are approved for use on Azure Stack Hub. A full list of available items can be found <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-marketplace-azure-items">here</a>.</p>
 <p>You are responsible for ensuring that you have appropriate licensing and support in place for any item deployed from the Marketplace not licensed by UKCloud.</p>
 <h2 id="operating-systems">Operating systems</h2>
 <h3 id="licensing">Licensing</h3>
@@ -223,7 +223,7 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 <p>You can bring your own licensing for Red Hat and certain Microsoft application licensing under Microsoft Mobility using software assurance. If you're providing your own licensing, you should inform UKCloud (by raising a Service Request via the <a href="https://portal.skyscapecloud.com/support/ivanti">My Calls</a> section of the UKCloud Portal) for a retrospective discount.</p>
 <p>For non-UKCloud issued software, you must obey the licensing requirements of the software provider. This includes being aware of any constraints around using the software in a virtualised environment.</p>
 <h3 id="vm-server-images">VM server images</h3>
-<p>We provide base VM images for the operating systems (OS) for which we provide licensing, along with images for various free Linux distributions (such as Ubuntu, CentOS &amp; Debian). You can access these from the Marketplace available within the UKCloud Azure Stack portal.</p>
+<p>We provide base VM images for the operating systems (OS) for which we provide licensing, along with images for various free Linux distributions (such as Ubuntu, CentOS &amp; Debian). You can access these from the Marketplace available within the UKCloud Azure Stack Hub portal.</p>
 <p>You can use your own images for non-Windows and RHEL services, where licensing stipulates that to use the VM on our platform it must be licensed (and reported back to the software vendor) by UKCloud.</p>
 <p><strong>Anti-virus.</strong> We do not provide anti-virus software as part of the service.</p>
 <h2 id="protective-monitoring">Protective monitoring</h2>
@@ -233,16 +233,16 @@ Table storage is Microsoft's NoSQL key/attribute store - it has a schemaless des
 <h2 id="platform-management">Platform management</h2>
 <p>Users can access, manage and view the UKCloud for Microsoft Azure service, accessing only those features allowed by your role, in any of the following ways:</p>
 <ul>
-<li><p><strong>Azure Stack API.</strong> Enables the programmatic creation and management of the services inside the platform.</p>
+<li><p><strong>Azure Stack Hub API.</strong> Enables the programmatic creation and management of the services inside the platform.</p>
 </li>
-<li><p><strong>Azure Stack graphical UI.</strong> Provides a graphical interface to access the Azure Stack environment (depending on assigned permissions).</p>
+<li><p><strong>Azure Stack Hub graphical UI.</strong> Provides a graphical interface to access the Azure Stack Hub environment (depending on assigned permissions).</p>
 </li>
 <li><p><strong>UKCloud Portal.</strong> Access to service reporting and incident and request management.</p>
 </li>
 </ul>
 <p>You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware.</p>
 <h2 id="service-reporting">Service reporting</h2>
-<p><strong>Visibility.</strong> You can use the UKCloud Azure Stack portal to configure multiple views of your estate and monitor the health of your services in real time. This includes utilisation of individual components, alerts and recent operations.</p>
+<p><strong>Visibility.</strong> You can use the UKCloud Azure Stack Hub portal to configure multiple views of your estate and monitor the health of your services in real time. This includes utilisation of individual components, alerts and recent operations.</p>
 <p><strong>Reporting.</strong> We provide a monthly service report via the UKCloud Portal. This includes a summary of platform availability and a retrospective of the interactions with UKCloud support during the previous month. Maintenance notifications and Service Status reports are also delivered through the Portal and via the <a href="https://status.ukcloud.com/">UKCloud status page</a>.</p>
 <p><strong>Billing.</strong> We provide you with monthly bills covering your monthly spend.</p>
 <h2 id="customer-service">Customer service</h2>

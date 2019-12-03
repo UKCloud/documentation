@@ -8,7 +8,7 @@
     <title>How to create a virtual machine using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to create a virtual machine using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.45.0.0">
+    <meta name="generator" content="docfx 2.47.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -99,7 +99,7 @@ As UKCloud for Microsoft Azure is built on UKCloud’s assured, UK-sovereign mul
 VMware and OpenStack, and benefit from native connectivity to non-cloud workloads in Crown Hosting and government community networks, including PSN, HSCN and RLI.
 Before creating the virtual machine, it is necessary to create storage and networking resources for the the VM to use.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
+<p>Before you begin, ensure your PowerShell environment is set up as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack Hub user's PowerShell environment</a>.</p>
 <h2 id="creating-a-virtual-machine">Creating a virtual machine</h2>
 <h3 id="declare-variables">Declare variables</h3>
 <p>Enter details below to provide values for the variables in the following script in this article:</p>
@@ -114,7 +114,7 @@ Before creating the virtual machine, it is necessary to create storage and netwo
 <tbody>
 <tr>
 <td>$ArmEndpoint</td>
-<td>The Azure Resource Manager endpoint for Azure Stack</td>
+<td>The Azure Resource Manager endpoint for Azure Stack Hub</td>
 <td><form oninput="result.value=armendpoint.value;result2.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
 </tr>
 <tr>
@@ -222,7 +222,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 ## Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Input Variables
@@ -331,7 +331,7 @@ Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
 ## Login
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
-# Get location of Azure Stack
+# Get location of Azure Stack Hub
 $Location = (Get-AzureRmLocation).Location
 
 # Input Variables

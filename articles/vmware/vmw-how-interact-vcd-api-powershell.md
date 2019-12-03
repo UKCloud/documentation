@@ -3,8 +3,8 @@ title: How to interact with the vCloud REST API using PowerShell and Python | UK
 description: A brief introduction on how to start interacting with the vCloud Director REST API with PowerShell and Python
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 10/09/2018 14:50:11
+reviewer: Dylan Coombes
+lastreviewed: 15/11/2019 15:05:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -21,35 +21,31 @@ toc_mdlink: vmw-how-interact-vcd-api-powershell.md
 
 ### Useful Links
 
-You can look up all of the different object types here:
+You can find the schema reference for version 32.0 of the vCloud API here:
 
-http://pubs.vmware.com/vcd-55/index.jsp#doc/index.html
-
-### Examples of all typed queries
-
-http://pubs.vmware.com/vcloud-api-1-5/wwhelp/wwhimpl/js/html/wwhelp.htm#href=api_prog/GUID-43DFF30E-391F-42DC-87B3-5923ABCEB366.html
+<https://code.vmware.com/apis/553/vcloud>
 
 ### PowerShell
 
-With PowerShell, you will need v3 or higher. To check this, open PowerShell and enter `$psversiontable` at the prompt. You should see something like the following:
+With PowerShell, you'll need v3 or higher. To check this, open PowerShell and enter `$psversiontable` at the prompt. You should see something like the following:
 
 ![PowerShell version details](images/powershellandpython1.png)
 
-If `PSVersion` is less than 3.0, you'll need to upgrade. The v4 package is available here: https://www.microsoft.com/en-gb/download/details.aspx?id=40855
+If `PSVersion` is less than 3.0, you'll need to upgrade. The v4 package is available here: <https://www.microsoft.com/en-gb/download/details.aspx?id=40855>.
 
 ### Python
 
-You'll need to install Python 2.7: https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi
+You'll need to install Python 2.7: <https://www.python.org/downloads/release/python-2716/>
 
-You'll then need to install the package: http://www.python-requests.org/en/latest/user/install/#install
+You'll then need to install the package: <https://pypi.org/project/requests/>
 
 ### Getting your credentials
 
-The first thing you will need to do is login to the portal and get your API credentials:
+The first thing you'll need to do is log in to the Portal and get your API credentials:
 
 ![Link to API credentials in the Portal](images/api_menu.png)
 
-Select API from the menu on the top right, you will then get all of the credentials for each of the vCloud Orgs that you have access to. Note down the username field for the one you are going to interact with.
+Select API from the menu on the top right, you'll then get all of the credentials for each of the vCloud Orgs that you have access to. Note down the username field for the one you are going to interact with.
 
 For more detailed instructions, see [*How to access vCloud Director through the vCloud API*](vmw-how-access-vcloud-api.md).
 
@@ -57,59 +53,65 @@ For more detailed instructions, see [*How to access vCloud Director through the 
 
 ### PowerShell
 
-1. Copy and paste the following script into your PowerShell session:
+1. Copy and paste the following script into a .psm1 file:
 
-       $Global:SkyscapeURL = "https://api.vcd.portal.skyscapecloud.com/api"
+   ```none
+   $Global:SkyscapeURL = "https://<API URL from Portal>/api"
 
-       $Global:Authorization = ""
+   $Global:Authorization = ""
 
-       $Global:Accept = "application/*+xml;version=5.1"
+   $Global:Accept = "application/*+xml;version=32.0"
 
-       $Global:xvCloudAuthorization = ""
+   $Global:xvCloudAuthorization = ""
 
-       Function New-vCloudLogin($Username,$Password)
+   Function New-vCloudLogin($Username,$Password)
 
-       {
+   {
 
-           $Pair = "$($Username):$($Password)"
+       $Pair = "$($Username):$($Password)"
 
-           $Bytes = [System.Text.Encoding]::ASCII.GetBytes($Pair)
+       $Bytes = [System.Text.Encoding]::ASCII.GetBytes($Pair)
 
-           $Base64 = [System.Convert]::ToBase64String($Bytes)
+       $Base64 = [System.Convert]::ToBase64String($Bytes)
 
-           $Global:Authorization = "Basic $base64"
+       $Global:Authorization = "Basic $base64"
 
-           $headers = @{ Authorization = $Global:Authorization; Accept = $Global:Accept}
+       $headers = @{ Authorization = $Global:Authorization; Accept = $Global:Accept}
 
-           $Res = Invoke-WebRequest -Method Post -Headers $headers -Uri "$($Global:SkyscapeURL)/sessions"
+       $Res = Invoke-WebRequest -Method Post -Headers $headers -Uri "$($Global:SkyscapeURL)/sessions"
 
-           $Global:xvCloudAuthorization = $res.headers["x-vcloud-authorization"].tostring()
+       $Global:xvCloudAuthorization = $res.headers["x-vcloud-authorization"].tostring()
 
-       }
+   }
 
-       Function Get-vCloudRequest($EndPoint)
+   Function Get-vCloudRequest($EndPoint)
 
-       {
+   {
 
-           $headers = @{"Accept" = $Global:Accept; "x-vcloud-authorization" = $Global:xvCloudAuthorization}
+       $headers = @{"Accept" = $Global:Accept; "x-vcloud-authorization" = $Global:xvCloudAuthorization}
 
-           [xml]$Response = Invoke-WebRequest -Method Get -Headers $headers -Uri "$($Global:SkyscapeURL)/$EndPoint"
+       [xml]$Response = Invoke-WebRequest -Method Get -Headers $headers -Uri "$($Global:SkyscapeURL)/$EndPoint"
 
-           Return $Response
+       Return $Response
 
-       }
+   }
+   ```
 
-    You will now have two new functions available to you; `New-vCloudLogin` and `Get-vCloudRequest`.
+    You'll now have two new functions available to you; `New-vCloudLogin` and `Get-vCloudRequest`.
 
-2. To log in enter:
+2. In a new PowerShell window, run the following command to import the file:
 
-       New-vCloudLogin –Username “myuser@org” –Password “yourportalpassword”
+    `Import-Module <Path to .psm1 file>`
 
-3. Use the username that you copied from the Portal earlier and your Portal password. This will login to vCloud and add your authorisation header to a global variable for use in the next function:
+3. To log in enter:
 
-       $VMS = Get-vCloudRequest –EndPoint “query?type=vm”
+   `New-vCloudLogin –Username "myuser@org" –Password "yourportalpassword"`
 
-4. This will get the first 25 VMs in your Org and store them in `$VMS`, which you can inspect. Just enter `$vms` and see what you get.
+4. Use the username that you copied from the Portal earlier and your Portal password. This will log in to vCloud and add your authorisation header to a global variable for use in the next function:
+
+   `$VMS = Get-vCloudRequest –EndPoint "query?type=vm"`
+
+5. This will get the first 25 VMs in your Org and store them in `$VMS` as an XML output, which you can inspect or export as you want.
 
 #### Other examples
 
@@ -125,73 +127,75 @@ For more detailed instructions, see [*How to access vCloud Director through the 
 
 1. Save the following into a file, for example: `c:\vcloud_demo.py`:
 
-       import base64
+    ```none
+   import base64
 
-       import requests
+   import requests
 
-       SkyscapeURL = "https://api.vcd.portal.skyscapecloud.com/api"
+   SkyscapeURL = "https://<API URL from portal>/api"
 
-       Authorization = ""
+   Authorization = ""
 
-       Accept = "application/*+xml;version=5.1"
+   Accept = "application/*+xml;version=32.0"
 
-       xvCloudAuthorization = ""
+   xvCloudAuthorization = ""
 
-       def New_vCloudLogin(username,password):
+   def New_vCloudLogin(username,password):
 
-           global Authorization
+       global Authorization
 
-           global Accept
+       global Accept
 
-           global SkyscapeURL
+       global SkyscapeURL
 
-           global xvCloudAuthorization
+       global xvCloudAuthorization
 
-           Pair = "{username}:{password}".format(username=username,password=password)
+       Pair = "{username}:{password}".format(username=username,password=password)
 
-           EncodedPair = base64.b64encode(Pair)
+       EncodedPair = base64.b64encode(Pair)
 
-           Authorization = "Basic %s" % str(EncodedPair)
+       Authorization = "Basic %s" % str(EncodedPair)
 
-           apiheaders = {"Authorization" : Authorization, "Accept" : Accept}  
+       apiheaders = {"Authorization" : Authorization, "Accept" : Accept}  
 
-           res = requests.post(SkyscapeURL + '/sessions',headers=apiheaders, verify=False)
+       res = requests.post(SkyscapeURL + '/sessions',headers=apiheaders, verify=False)
 
-           xvCloudAuthorization = res.headers['x-vcloud-authorization']
+       xvCloudAuthorization = res.headers['x-vcloud-authorization']
 
-       def Get_vCloudRequest(endpoint):
+    def Get_vCloudRequest(endpoint):
 
-           global Authorization
+       global Authorization
 
-           global Accept
+       global Accept
 
-           global SkyscapeURL
+       global SkyscapeURL
 
-           global xvCloudAuthorization
+       global xvCloudAuthorization
 
-           apiheaders = {"Accept" : Accept, "x-vcloud-authorization" : xvCloudAuthorization}  
+       apiheaders = {"Accept" : Accept, "x-vcloud-authorization" : xvCloudAuthorization}  
 
-           res = requests.get(SkyscapeURL + '/' + endpoint,headers=apiheaders, verify=False)
+       res = requests.get(SkyscapeURL + '/' + endpoint,headers=apiheaders, verify=False)
 
-           return (res.content)
+       return (res.content)
 
-       # login to vcloud
+    # login to vcloud
 
-       New_vCloudLogin("user@org","mypassword")
+    New_vCloudLogin("user@org","mypassword")
 
-       # demo query, get all VM's and print them to screen
+    # demo query, get all VM's and print them to screen
 
-       data = Get_vCloudRequest("query?type=vm")
+    data = Get_vCloudRequest("query?type=vm")
 
-       print data
+    print data
+    ```
 
 2. Now, click **Start** and enter `cmd`. This will bring up a command prompt.
 
 3. You can run this script by entering:
 
-       C:\python27\python.exe c:\vcloud_demo.py
+    `C:\python27\python.exe c:\vcloud_demo.py`
 
-    The above example will log you into vCloud and return an XML representation of the first 25 VMs in your VDC. You can adjust the script to use the same params as the examples in the Powershell script above.
+    The above example will log you into vCloud and return an XML representation of the first 25 VMs in your VDC. You can adjust the script to use the same parameters as the examples in the PowerShell script above.
 
 ## Feedback
 

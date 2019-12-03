@@ -66,7 +66,7 @@ UKCloud for OpenStack is powered by OpenStack and uses the Horizon project to pr
 
 ### UKCloud for Microsoft Azure
 
-Interaction with UKCloud for Microsoft Azure is through the Azure Stack portal. Microsoft recommends using the most up-to-date browser for your operating system.
+Interaction with UKCloud for Microsoft Azure is through the Azure Stack Hub portal. Microsoft recommends using the most up-to-date browser for your operating system.
 
 ### Cloud GPU
 
