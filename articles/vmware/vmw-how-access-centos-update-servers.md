@@ -3,8 +3,8 @@ title: How to access CentOS Update servers | UKCloud Ltd
 description: Shows you how to access CentOS updates within vCloud Director
 services: vmware
 author: Sue Highmoor
-reviewer:
-lastreviewed: 19/07/2018 12:45:48
+reviewer: pcantle
+lastreviewed: 03/12/2019
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -31,47 +31,105 @@ UKCloud's Assured OFFICIAL security domain is internet facing, so you need to co
 
 ## Elevated OFFICIAL platform
 
-Our Elevated OFFICIAL security domain doesn't natively connect to the internet, and the PSN Protected network doesn't have any CentOS repo servers. To receive CentOS updates, you can use UKCloud-managed repository servers or a Walled Garden. Both options are described below.
+Our Elevated OFFICIAL security domain doesn't natively connect to the internet, and the PSN network doesn't have any CentOS repo servers. To receive CentOS updates, you can use UKCloud-managed repository servers or a Walled Garden. Both options are described below.
 
 ### Option 1. UKCloud-managed repository servers
 
-We provide repositories for CentOS 6 and 7 on our Elevated OFFICIAL security domain. To access them:
+We provide repositories and EPEL (Extra Packages for Enterprise Linux) for CentOS 6 and 7 on our Elevated OFFICIAL security domain.
 
-Create a file called `il3-repos.repo` in `/etc/yum.repos.d`, and populate it with the following:
+To access CentOS base files, create a file called `centos_<x>_il3.repo` in `/etc/yum.repos.d`, where `<x>` is either 6 or 7 depending on your version of CentOS, and populate it with the following:
 
-```
+**CentOS 6:**
+
+```none
 [base]
-name=UKCloud CentOS Repository - Base
-baseurl=http://<elevated-public-ip-address>/centos/<x>.<y>/os/x86_64
+name=CentOS-6-Base
+baseurl=http://<elevated-public-ip-address>/centos-base/
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<x>
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
 
+#released updates
 [updates]
-name=UKCloud CentOS Repository - Updates
-baseurl=http://<elevated-public-ip-address>/centos/centos-updates
+name=CentOS-6-Updates
+baseurl=http://<elevated-public-ip-address>/centos-updates/
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<x>
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
 
+#additional packages that may be useful
 [extras]
-name=UKCloud CentOS Repository - Extras
-baseurl=http://<elevated-public-ip-address>/centos/centos-extras
+name=CentOS-6-Extras
+baseurl=http://<elevated-public-ip-address>/centos-extras/
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<x>
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
 ```
 
-Where:
+**CentOS 7:**
 
-- `<elevated-public-ip-address>` is the Elevated OFFICIAL public IP address (if you're not sure what this is, contact UKCloud Support)
+```none
+[base]
+name=CentOS-7-Base
+baseurl=http://<elevated-public-ip-address>/centos-7-base/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
-- `<x>.<y>` is your version of CentOS
+#released updates
+[updates]
+name=CentOS-7-Updates
+baseurl=http://<elevated-public-ip-address>/centos-7-updates/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
-Or use the following command to download the repo file directly from the server:
-
+#additional packages that may be useful
+[extras]
+name=CentOS-7-Extras
+baseurl=http://<elevated-public-ip-address>/centos-7-extras/
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 ```
-wget -P /etc/yum.repos.d http://<elevated-public-ip-address>/repos/ukcloud_centos<x>.repo
+
+Where `<elevated-public-ip-address>` is the Elevated OFFICIAL public IP address (if you're not sure what this is, contact UKCloud Support).
+
+To access CentOS EPEL files, create a file called `epel_<x>_il3.repo` in `/etc/yum.repos.d`, where `<x>` is either 6 or 7 depending on your version of CentOS, and populate it with the following:
+
+**CentOS 6:**
+
+```none
+[epel]
+name=Extra Packages for Enterprise Linux 6
+baseurl=http://<elevated-public-ip-address>/epel/
+enabled=1
+metadata_expire=7d
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
 ```
 
-Remove all other `*.repo` files in this directory.
+**CentOS 7:**
+
+```none
+[epel]
+name=Extra Packages for Enterprise Linux 7
+baseurl=http://<elevated-public-ip-address>/epel-7/
+enabled=1
+metadata_expire=7d
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+```
+
+To download the repo file directly from the server, use the following command (`<x>` is either 6 or 7 depending on your version of CentOS):
+
+**CentOS base updates and extras:**
+
+```none
+wget -P /etc/yum.repos.d/ http:///<customer_repo_files>/centos_<x>_il3.repo
+```
+
+**CentOS EPEL:**
+
+```none
+wget -P /etc/yum.repos.d/ http:///<customer_repo_files>/epel_<x>_il3.repo
+```
+
+Remove all other `*.repo` files in this directory then execute `yum repolist`.
 
 ### Option 2. Walled Garden
 
