@@ -8,7 +8,7 @@
     <title>How to resize an OS drive using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to resize an OS drive using PowerShell | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.42.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../..//styles/assets/logo.png" srcset="../..//styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -103,7 +103,7 @@
 <h3 id="intended-audience">Intended audience</h3>
 <p>To complete the steps in this guide you must have the appropriate permissions on the resource you are trying to access.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Ensure your PowerShell environment is setup as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack user's PowerShell environment</a>.</p>
+<p>Ensure your PowerShell environment is setup as detailed in <a href="azs-how-configure-powershell-users.html">Configure the Azure Stack Hub user's PowerShell environment</a>.</p>
 <h2 id="resizing-an-os-drive">Resizing an OS drive</h2>
 <div class="IMPORTANT">
 <h5>Important</h5>
@@ -129,7 +129,7 @@
 <section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
 
 <p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Sign in to your Azure Stack environment
+<pre><code class="language-PowerShell"># Sign in to your Azure Stack Hub environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 
@@ -155,7 +155,7 @@ Start-AzureRmVM -ResourceGroupName $RGName -Name $VMName
 <section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 
 <p>From your PowerShell window:</p>
-<pre><code class="language-PowerShell"># Sign in to your Azure Stack environment
+<pre><code class="language-PowerShell"># Sign in to your Azure Stack Hub environment
 Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
 Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
 

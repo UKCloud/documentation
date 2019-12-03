@@ -8,7 +8,7 @@
     <title>How to use UKCloud's email service with your application | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to use UKCloud's email service with your application | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -94,7 +94,7 @@
 <h1 id="how-to-use-ukclouds-email-service-with-your-application">How to use UKCloud's email service with your application</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Many customers who use UKCloud's IaaS need to be able to send email from, or receive email into, their applications. Although we don't have an SMTP relay service dedicated to this purpose, you can use our Email and Collaboration service to meet your needs. This can be particularly valuable if you're using the UKCloud Elevated OFFICIAL (formerly PGA IL3) platform, as it doesn't connect directly to the internet, but to secure government networks such as PSN and N3/HSCN, where few mail relay providers are available.</p>
+<p>Many customers who use UKCloud's IaaS need to be able to send email from, or receive email into, their applications. Although we don't have an SMTP relay service dedicated to this purpose, you can use our Email and Collaboration service to meet your needs. This can be particularly valuable if you're using the UKCloud Elevated OFFICIAL (formerly PGA IL3) platform, as it doesn't connect directly to the internet, but to secure government networks such as PSN and HSCN, where few mail relay providers are available.</p>
 <p>In this guide, we'll walk you through the process for configuring your application to use our Email &amp; Collaboration service.</p>
 <h2 id="ukcloud-email-and-collaboration-as-a-service">UKCloud Email and Collaboration as a Service</h2>
 <p>The service provides enterprise-class functionality for end-users, on a per-mailbox, per- month pricing model. It offers several options for mailbox access, including POP3, IMAP4 and SMTP --- all with TLS (SSL) encryption --- as well as HTTPS. Exchange ActiveSync is also supported.</p>
@@ -118,7 +118,7 @@
 <p>A mailbox will be needed for each email address you want to be able to send from, or receive to.</p>
 <h2 id="configuring-a-mailbox-for-use-with-an-application">Configuring a mailbox for use with an application</h2>
 <p>This section takes you through the process of configuring a mailbox on UKCloud's Email and Collaboration platform for use with an application.</p>
-<p>The first step is to create a mailbox for this purpose. Once your domain name and administrator accounts have been configured, you can do this by logging on to the Administrator console at <a href="https://mail.skyscapecs.net:7071">https://mail.skyscapecs.net:7071</a></p>
+<p>The first step is to create a mailbox for this purpose. Once your domain name and administrator accounts have been configured, you can do this by logging on to the Administrator console at <a href="https://mail.ukcloud.com:9071/zimbraAdmin/">https://mail.ukcloud.com:9071/zimbraAdmin/</a></p>
 <p>Create a new mailbox --- configure the account name and password as you normally would, but make sure you <strong>don't</strong> choose the option to force a password change:</p>
 <p><img src="images/email-console-new-account.png" alt="Create mailbox"></p>
 <p>Configure the remaining options in the New Account wizard to suit, then click <strong>Finish</strong> to complete the mailbox creation.</p>
@@ -126,7 +126,7 @@
 <h3 id="sending-outbound-email">Sending outbound email</h3>
 <p>To send outbound email, your application needs to support SMTP authentication and TLS encryption. Provided this is the case, simply configure the following settings in your application:</p>
 <ul>
-<li><p>SMTP Server/Mail relay host: mail.skyscapecs.net</p>
+<li><p>SMTP Server/Mail relay host: mail.ukcloud.com</p>
 </li>
 <li><p>Port number: 465</p>
 </li>
@@ -145,7 +145,7 @@
 <p>To receive inbound email, your application needs to support POP3 or IMAP4 over TLS.</p>
 <p>Provided this is the case, simply configure the following settings in your application:</p>
 <ul>
-<li><p>Mailbox server: mail.skyscapecs.net</p>
+<li><p>Mailbox server: mail.ukcloud.com</p>
 </li>
 <li><p>Protocol: POP3S or IMAPS</p>
 </li>
@@ -176,17 +176,17 @@
 <h5>Note</h5>
 <p>An example working stunnel config is below to send smtp traffic on port 25 to zimbra on TLS port 465</p>
 </div>
-<pre><code>[smtp]
+<pre><code class="lang-none">[smtp]
 accept = 25
 client = yes
-connect = mail.skyscapecs.net:465
+connect = mail.ukcloud.com:465
 ;delay = yes
 </code></pre>
 <p>You can get full documentation, how to and FAQ guides from the stunnel website.</p>
 <h2 id="for-more-help">For more help</h2>
 <p>If you need more help, contact UKCloud Support.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -218,7 +218,20 @@ connect = mail.skyscapecs.net:465
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

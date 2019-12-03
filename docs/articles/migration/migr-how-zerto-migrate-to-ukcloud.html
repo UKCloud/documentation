@@ -8,7 +8,7 @@
     <title>How to migrate your workloads to the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to migrate your workloads to the UKCloud platform | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -119,53 +119,53 @@
 </ul>
 <h3 id="system-requirements">System requirements</h3>
 <p>To use our Workload Migration service, you must have a valid, centrally managed vSphere or HyperV estate. A single hypervisor is not sufficient.</p>
-<p>The following table lists the minimum requirements for Workload Migration, based on the currently deployed version of Zerto Virtual Replication (4.5U4) on the UKCloud platform:</p>
+<p>The following table lists the requirements for Workload Migration, based on the currently deployed version of Zerto Virtual Replication (6.5U3) on the UKCloud platform:</p>
 <table>
 <thead>
 <tr>
 <th>Product</th>
-<th>Supported version</th>
+<th>Supported Version</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Management plane</strong></td>
+<td><strong>Management Plane</strong></td>
 <td> </td>
 </tr>
 <tr>
-<td>VMware vCenter</td>
-<td>4.0U1 -- 6.0U2</td>
+<td>VMWare vCenter</td>
+<td>vCenter Server 5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1</td>
 </tr>
 <tr>
 <td>Microsoft SCVMM</td>
-<td>2012 R2 and Server Core: Update Rollup 6-11 (recommended)<br>2012 R2 and Server Core: RTM</td>
+<td>2012 R2 and Server Core: Update Rollup 1-5, 6-11, 12-14<br>2012 R2 and Server Core: RTM<br>2016 and Server Core: RTM Rollup 3-5, 6</td>
 </tr>
 <tr>
 <td><strong>Hosts</strong></td>
 <td> </td>
 </tr>
 <tr>
-<td>VMWare ESX/ESXi</td>
-<td>4.0U1-4.0U3, 4.0U4 , 4.1-6.0U1, 6.0U2</td>
+<td>VMWare ESXi</td>
+<td>5.0, 5.1, 5.5, 6.0, 6.5, 6.5U1, 6.5U2, 6.7, 6.7U1</td>
 </tr>
 <tr>
 <td>Microsoft Hyper-V</td>
-<td>2012 R2 and Server Core</td>
+<td>2012 R2 and Server Core<br>Windows 2016 Server</td>
 </tr>
 <tr>
 <td><strong>Virtual Machines Hardware Version</strong></td>
 <td> </td>
 </tr>
 <tr>
-<td>VMware</td>
-<td>Up to Version 10</td>
+<td>VMWare</td>
+<td>7-11, 13, 14</td>
 </tr>
 <tr>
 <td>Hyper-V</td>
-<td>Generation 1&amp;2</td>
+<td>Generation 1 &amp; 2</td>
 </tr>
 <tr>
-<td><strong>VM migration service</strong></td>
+<td><strong>Disaster Recovery as a Service</strong></td>
 <td> </td>
 </tr>
 <tr>
@@ -173,7 +173,7 @@
 <td> </td>
 </tr>
 <tr>
-<td>Full Duplex internet connection</td>
+<td>Full duplex internet connection</td>
 <td>5Mb/s minimum</td>
 </tr>
 <tr>
@@ -182,15 +182,19 @@
 </tr>
 </tbody>
 </table>
-<p>For a complete list of hypervisor features supported when using Workload Migration, see:</p>
-<p><a href="http://s3.amazonaws.com/zertodownload_docs/4.5U4/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf">http://s3.amazonaws.com/zertodownload_docs/4.5U4/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf</a></p>
+<p>For a complete list of hypervisor features supported when using Workload Migration, see the <a href="http://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf">Interoperability Matrix for All Zerto Software Versions</a>.</p>
 <h2 id="migrating-workloads-to-ukcloud">Migrating workloads to UKCloud</h2>
 <ol>
-<li><a href="#create-a-target-vdc">Create a target VDC</a></li>
-<li><a href="#set-up-your-local-environment">Set up your local environment</a></li>
-<li><a href="#configure-networking-on-the-target-site">Configure networking on the target site</a></li>
-<li><a href="#create-a-virtual-protection-group">Create a virtual protection group</a></li>
-<li><a href="#migrate-your-workloads">Migrate your workloads</a></li>
+<li><p><a href="#create-a-target-vdc">Create a target VDC</a></p>
+</li>
+<li><p><a href="#set-up-your-local-environment">Set up your local environment</a></p>
+</li>
+<li><p><a href="#configure-networking-on-the-target-site">Configure networking on the target site</a></p>
+</li>
+<li><p><a href="#create-a-virtual-protection-group">Create a virtual protection group</a></p>
+</li>
+<li><p><a href="#migrate-your-workloads">Migrate your workloads</a></p>
+</li>
 </ol>
 <h3 id="create-a-target-vdc">Create a target VDC</h3>
 <p>To migrate your workloads to the UKCloud platform, you must have a VDC in the intended target site. If you already have a compute service in the UKCloud site, you can use an existing VDC or you can create a new one using:</p>
@@ -268,7 +272,7 @@ source VMs with the target site replicas.</p>
 <p>To see what you can do with your application now that it's on the UKCloud platform, see the <a href="../vmware/vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
 <p>If you used failover to migrate your workloads, when you've determined that the migration has been successful, you should remove the original VMs from the source site to remove any workloads that are no longer required.</p>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -300,7 +304,20 @@ source VMs with the target site replicas.</p>
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

@@ -3,6 +3,8 @@ title: How to use the VMware OVF Tool | UKCloud Ltd
 description: Describes how to use the VMware OVF Tool to assist in the distribution of virtual machines and vApps
 services: vmware
 author: Steve Hall
+reviewer: dcoombesukc
+lastreviewed: 18/09/2019
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -29,7 +31,7 @@ The VMware OVF Tool is a conversion program freely downloadable from VMware that
 
 You can download the OVF Tool via the following link:
 
-<https://my.vmware.com/group/vmware/details?downloadGroup=OVFTOOL420&productId=491>
+<https://my.vmware.com/group/vmware/get-download?downloadGroup=OVFTOOL430UPDATE3>
 
 You must have a VMware account to download the tool. You can download the OVF Tool for Windows 32-bit and 64-bit, Linux 32-bit and 64-bit, or Mac OS X.
 
@@ -64,9 +66,11 @@ Refer to the OVF Tool User Guide for further commands and switches.
 
 To import a `.vmx` file:
 
-1. In your UKCloud environment, create a catalogue to contain the vApp template.
+1. In your UKCloud environment, create a catalog to contain the vApp template.
 
-   ![catalogue](images/ovf-image-1.png)
+   ![Catalog for OVF Tool](images/vmw-vcd-ovf-catalog.png)
+
+   For detailed instructions, see [*How to create a catalog*](vmw-how-create-catalog.md).
 
 2. Make sure you are in the correct directory, that is, the directory containing the file you want to import.
 
@@ -103,13 +107,7 @@ To import a `.vmx` file:
 
 4. The `.vmx` file is uploaded as a vApp template into your environment.
 
-    ![template](images/ovf-image-2.png)
-
-    ![template 2](images/ovf-image-3.png)
-
-    In the vCloud Director 9.*x* HTML5 tenant portal, click the clipboard icon to see task status.
-
-    ![clipboard icon](images/vmw-vcd-tp-ico-status.png)
+    In vCloud Director, expand the *Recent Tasks* section to check the status.
 
 ## Importing an .iso file to a vApp template in vCloud Director
 
@@ -148,18 +146,6 @@ To upload an ISO image:
 
 3. When the `ovftool` command has finished, the source and target locations are listed and then you're prompted for your username and password. When you are authenticated, the upload process is initiated.
 
-4. The following example shows an upload in progress on the UKCloud target VDC.
-
-    ![catalogue](images/ovf-image-4.png)
-
-6. The next example shows an upload in progress on the UKCloud target catalog under the **Media & Other** tab.
-
-    ![catalogue](images/ovf-image-5.png)
-
-7. In the vCloud Director 9.*x* HTML5 tenant portal, you will see this under **Libraries**.
-
-    ![Libraries option](images/vmw-vcd-tp-mnu-libraries.png)
-
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

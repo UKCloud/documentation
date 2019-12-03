@@ -3,6 +3,8 @@ title: Protective Monitoring information in the UKCloud Portal | UKCloud Ltd
 description: Describes the showback information you can view in the UKCloud Portal about the different clouds, networks and security domains supported by UKCloud's Protective Monitoring service
 services: other
 author: Matt Warner
+reviewer:
+lastreviewed: 24/07/2018 13:50:39
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -23,19 +25,41 @@ The document also includes examples of the security events that are displayed in
 
 You can find UKCloud's Protective Monitoring Portal showback information on the *My Security Events* page. To view this page, you must have **Read** monitoring permissions on the page.
 
-## What is supported for Portal showback?
+## Supported clouds, networks and security domains
 
-### Clouds and security domains
+### Clouds
 
-Multi-cloud for VMWare, Assured-OFFICIAL
+- UKCloud for VMWare
+
+- UKCloud for OpenStack
+
+- UKCloud for OpenShift
+
+- UKCloud for Microsoft Azure
+
+- UKCloud for Oracle Software
 
 ### Networks
 
-Internet
+- Internet
+
+- PSN
+
+- HSCN
+
+- Janet
+
+- RLI
+
+### Security domains
+
+- Assured OFFICIAL
+
+- Elevated OFFICIAL SENSITIVE
 
 ### All other clouds and networks
 
-Note that all other clouds and networks are supported by UKCloud's standard Protective Monitoring service. UKCloud's security team will inform you of any security incidents for anything other than Multi-cloud for VMWare on the Assured security domain, using internet connectivity in the usual way (that is, via email or phone call).
+UKCloud's security team will inform you of any security incidents in the usual way (that is, via the Portal).
 
 ## Example security incidents
 
@@ -57,12 +81,8 @@ Note that all other clouds and networks are supported by UKCloud's standard Prot
 
 - Any traffic that is encrypted will not be spotted by UKCloud unless it's contacting known malicious domains
 
-## What to do when a security incident appears
-
-If a security incident appears on the *My Security Events* page, then UKCloud will contact you via email or a phone call.
-
 ## Feedback
 
 If you would like to request that other clouds, networks or security domains are supported, contact <products@ukcloud.com>.
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

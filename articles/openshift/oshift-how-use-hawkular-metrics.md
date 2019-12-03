@@ -3,6 +3,8 @@ title: How to use the Hawkular Metrics API | UKCloud Ltd
 description: Shows how to structure basic queries to the Hawkular Metrics API in order to get resource statistics back
 services: openshift
 author: Kieran O'Neill
+reviewer: George Smith
+lastreviewed: 22/11/2019 12:39:20
 
 toc_rootlink: How To
 toc_sub1: 
@@ -18,7 +20,7 @@ toc_mdlink: oshift-how-use-hawkular-metrics.md
 
 ## Overview
 
-This guide is intended to give you enough information to forumulate basic memory usage or cpu queries against nodes in your cluster. For more advanced usage please refer to the Hawkular documentation at <https://www.hawkular.org/hawkular-metrics/docs/user-guide/#_metrics> or the OpenShift Hawkular repository readme at <https://github.com/openshift/origin-metrics/blob/master/docs/hawkular_metrics.adoc>.
+This guide is intended to give you enough information to formulate basic memory usage or cpu queries against nodes in your cluster. For more advanced usage please refer to the Hawkular documentation at <https://www.hawkular.org/hawkular-metrics/docs/user-guide/#_metrics> or the OpenShift Hawkular repository readme at <https://github.com/openshift/origin-metrics/blob/master/docs/hawkular_metrics.adoc>.
 
 ## Using the API
 
@@ -38,7 +40,7 @@ This guide is intended to give you enough information to forumulate basic memory
     curl -X GET https://hawkular-metrics.openshift-test.cna.ukcloud.com/hawkular/metrics/metrics "Content-Type: application/json" -H "Hawkular-Tenant: _system" -H "Authorization: Bearer $token"
     ```
 
-3. You'll need to pass the output from the request into some form of JSON parser to get human readable results. It will return a series of JSON blocks similiar to the following:
+3. You'll need to pass the output from the request into some form of JSON parser to get human readable results. It will return a series of JSON blocks similar to the following:
 
     ``` json
     {
@@ -79,4 +81,4 @@ This guide is intended to give you enough information to forumulate basic memory
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

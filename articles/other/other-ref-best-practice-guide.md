@@ -3,6 +3,8 @@ title: Best practice customer guide | UKCloud Ltd
 description: Provides useful best practice information and other helpful advice to ensure good performance from our products
 services: vmware
 author: Dan Baker
+reviewer:
+lastreviewed: 17/08/2018 13:00:42
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -108,7 +110,7 @@ For more information, see [*How to access syslog data for your edge gateway*](..
 
 At UKCloud, we're proud to provide a range of products, solutions and pricing tailored to suit the needs of your business. We've designed our compute 't-shirt' sizes with the optimum level of RAM and CPU to deliver ideal performance. However, if these levels are increased, this may degrade performance over time.
 
-For more information on the range of VM sizes that we offer, see our latest [*Pricing Guide*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-pricing-document-2018-05-23-0844.pdf) on the Digital Marketplace.
+For more information on the range of VM sizes that we offer, see our latest [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 ## Best Practices - general information
 
@@ -150,11 +152,11 @@ For more information, see [*How to locate your virtual data centre on the UKClou
 
 Secure Remote Access (SRA) certificates enable you to securely connect to UKCloud's Elevated OFFICIAL security domain using NCSC-approved internet virtual private network (VPN) technologies and the walled garden architectural pattern.
 
-System administrators and mobile workers can securely access workloads running on Elevated OFFICIAL from locations that don't have alternative secure network connections such as PSN or N3/HSCN.
+System administrators and mobile workers can securely access workloads running on Elevated OFFICIAL from locations that don't have alternative secure network connections such as PSN or HSCN.
 
 - SRA certificates last for 12 months. You'll need to renew certificates no later than two weeks before the certificates expire to avoid any interruption to your service.
 
-- To add additional certificates, raise a service request via the UKCloud Portal, selecting the **Request Additional SRAS Certificate(s)** option.
+- To add additional certificates, raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, selecting the **Request Additional SRAS Certificate(s)** option.
 
 - To renew or revoke your certificate, raise a service request via the UKCloud Portal, selecting the **Renew and/or Revoke SRAS Certificate** option.
 
@@ -162,7 +164,7 @@ System administrators and mobile workers can securely access workloads running o
 
 - If you have multiple certificates to renew or revoke, you can do this in a single service request by selecting the **Renew and/or Revoke multiple SRAS Certificates** option in the UKCloud Portal. Attach the *Secure Remote Access bulk renewal/revoke form* containing all the certificates.
 
-For more information, see the following articles: [*Secure Remote Access FAQs*](../sra/sra-faq.md), [*Secure Remote Access Factsheet*](https://ukcloud.com/wp-content/uploads/2018/01/SRA-Factsheet.pdf) and [*Secure Remote Access Service Definition*](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/153884335251015-service-definition-document-2018-05-21-1247.pdf).
+For more information, see the following articles: [*Secure Remote Access FAQs*](../sra/sra-faq.md), [*Secure Remote Access Factsheet*](https://ukcloud.com/wp-content/uploads/2018/01/SRA-Factsheet.pdf) and [*Secure Remote Access Service Definition*](../sra/sra-sd.md).
 
 ## Feedback
 

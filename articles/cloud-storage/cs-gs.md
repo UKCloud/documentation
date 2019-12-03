@@ -3,6 +3,8 @@ title: Getting Started Guide for Cloud Storage | UKCloud Ltd
 description: Provides information to get up and running with Cloud Storage
 services: cloud-storage
 author: Sue Highmoor
+reviewer:
+lastreviewed: 10/07/2018 12:06:26
 
 toc_rootlink: Getting Started
 toc_sub1:
@@ -57,6 +59,9 @@ The key differences between the two APIs are:
 
 - The ECS Atmos API provides backward compatibility with the EMC Atmos platform. It offers access to the majority of the features of the platform with certain exceptions as listed in the *Atmos Supported Features* chapter of the [*Elastic Cloud Storage (ECS) Data Access Guide*](https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf).
 
+> [!NOTE]
+> The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API
+
 ### Cloud Storage use cases
 
 The low cost of cloud storage per GB, as well as its almost unlimited scalability, means there\'s a large variety of use cases for it. For example, it\'s ideal for data archives, backups, log files, and media repositories.
@@ -87,7 +92,9 @@ can become.
 There are often questions around how best to implement this. Ultimately, it's up to the application developers, but a popular approach is as follows:
 
 1. Handle content uploads and creation on the web servers.
+
 2. Perform any required modifications or transformations using on-demand processing servers (usually from a message queue).
+
 3. Write the content into cloud storage, storing the resulting object IDs, external URLs and any other relevant metadata in the application database.
 
 This process provides a relatively simple transition to cloud storage. The application still knows about all the objects, but rather than retrieving, for example, a relative path for an item from the database, its entire URL is retrieved, pointing to cloud storage.
@@ -96,7 +103,7 @@ This process provides a relatively simple transition to cloud storage. The appli
 
 When you request your Cloud Storage service, UKCloud Support creates a namespace in the specified account. If you have requested an Atmos subtenant, this is also created.
 
-To create S3 buckets, use any S3-compliant tool. To create additional namespaces or Atmos subtenants, you must raise a service request. You can have S3 buckets and Atmos subtentants in the same namespace.
+To create S3 buckets, use any S3-compliant tool. To create additional namespaces or Atmos subtenants, you must raise a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. You can have S3 buckets and Atmos subtentants in the same namespace.
 
 Cloud Storage provides different API endpoints to access your storage, depending on the UKCloud site and connectivity type you are using. Make sure you use the correct endpoint to ensure the best possible
 performance for your solution.
@@ -106,11 +113,11 @@ performance for your solution.
 **Corsham (Assured)** | |
 Internet | `cas.cor00005.ukcloud.com` | `atmos.cas.cor00005.ukcloud.com`
 PSN Assured | `cas.cor00005.psnassured.ukcloud.com` | `atmos.cas.cor00005.psnassured.ukcloud.com`
-N3 | `cas.cor00005.ukcloud.thirdparty.nhs.uk/` | `atmos.cas.cor00005.ukcloud.thirdparty.nhs.uk/`
+HSCN | `cas.cor00005.ukcloud.thirdparty.nhs.uk/` | `atmos.cas.cor00005.ukcloud.thirdparty.nhs.uk/`
 **Farnborough (Assured)** | |
 Internet | `cas.frn00006.ukcloud.com` | `atmos.cas.frn00006.ukcloud.com`
 PSN Assured | `cas.frn00006.psnassured.ukcloud.com` | `atmos.cas.frn00006.psnassured.ukcloud.com`
-N3 | `cas.frn00006.ukcloud.thirdparty.nhs.uk/` | `atmos.cas.frn00006.ukcloud.thirdparty.nhs.uk/`
+HSCN | `cas.frn00006.ukcloud.thirdparty.nhs.uk/` | `atmos.cas.frn00006.ukcloud.thirdparty.nhs.uk/`
 
 Contact UKCloud support if you are unsure which endpoint to use.
 
@@ -137,7 +144,7 @@ You may also find the *Elastic Cloud Storage (ECS) Data Access Guide* useful:
 <https://www.emc.com/collateral/TechnicalDocument/docu79368.pdf>
 
 > [!NOTE]
-> Currently the N3 DNS service does not allow UKCloud to create wildcard DNS entries for our services. This means that S3 URLs that feature the bucket as part of the domain do not work (for example, `bucket01.cas.frn00006.ukcloud.thirdparty.nhs.uk`). With most S3 tools, you can choose whether to use prefix buckets or suffix buckets. If you are using the service via N3 you'll need to make sure your client tools support suffix buckets.
+> Currently the HSCN DNS service does not allow UKCloud to create wildcard DNS entries for our services. This means that S3 URLs that feature the bucket as part of the domain do not work (for example, `bucket01.cas.frn00006.ukcloud.thirdparty.nhs.uk`). With most S3 tools, you can choose whether to use prefix buckets or suffix buckets. If you are using the service via HSCN you'll need to make sure your client tools support suffix buckets.
 
 ### Amazon S3 Authentication Tool for Curl
 
@@ -226,6 +233,9 @@ To use S3Curl:
     ```
 
 ## Using the ECS Atmos API
+
+> [!NOTE]
+> The ECS Atmos API has been deprecated, we therefore suggest customers re-engineer their solutions to make use of the defacto S3-compatible API
 
 The Atmos API is at:
 
@@ -392,11 +402,7 @@ In this Getting Started Guide, you've learned the basics about the Cloud Storage
 
 - [*How to use file browsers with Cloud Storage*](cs-how-use-file-browsers.md)
 
-- Cloud Storage Gateways
-
-  - [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
-
-  - [*How to install CloudArray*](cs-how-install-cloudarray.md)
+- [*How to install the GeoDrive Client 2.0*](cs-how-install-geodrive2-client.md)
 
 ## Related videos
 
@@ -429,4 +435,4 @@ Storage.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

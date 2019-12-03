@@ -3,6 +3,8 @@ title: How to reset your UKCloud Portal password or memorable word | UKCloud Ltd
 description: Explains how to reset or update your UKCloud Portal password or memorable word
 services: portal
 author: Sue Highmoor
+reviewer: Lewis Dean
+lastreviewed: 16/10/2019 11:00:00
 
 toc_rootlink: How To
 toc_sub1:
@@ -49,4 +51,4 @@ In the event that an administrator requires a password or memorable word reset, 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

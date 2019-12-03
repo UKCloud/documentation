@@ -3,6 +3,8 @@ title: Portal release notes | UKCloud Ltd
 description: Information on latest features included in a Portal update
 services: portal
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 12:12:33
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -16,6 +18,158 @@ toc_mdlink: ptl-ref-release-notes.md
 # Portal release notes
 
 This article provides a list of completed Portal releases.
+
+## Release 1.119.0
+
+Date: 6th November 2019
+
+Feature update
+
+Details: Added better validation when setting up IP address whitelisting to restrict access to the vCloud Director API.
+
+## Release 1.117.0
+
+Date: 7th October 2019
+
+Bug fix and feature update
+
+Details: Fixed left hand menu spacing bug for Support options. Integrated Single Sign-on access management when contacts are added and removed in the Portal.
+
+## Release 1.116.0
+
+Date: 13th September 2019
+
+Bug fix
+
+Details: Fixed bug where newly created VMs on vCloud Director 9.7 cannot be added to a snapshot backup policy.
+
+## Release 1.111.0
+
+Date: 29th July 2019
+
+Feature update
+
+Details: Updated Elevated Knowledge Centre links.
+
+## Release 1.110.0
+
+Date: 18th July 2019
+
+Feature update
+
+Details: Updated links to support the launch of the new UKCloud Communities platorm (https://community.ukcloud.com) which also includes changes to UKCloud Ideas.
+
+## Release 1.109.1
+
+Date: 16th July 2019
+
+Bug fix and feature update
+
+Details: Fixed vCloud Director login timeout issue which made it difficult for users to access vCloud Director after the initial session expired. Removed ability for users to raise support tickets directly in the Portal, this is now done via Ivanti Service Manager.
+
+## Release 1.106.0
+
+Date: 4th June 2019
+
+Feature update
+
+Details: Removed VMware Edge showback functionality from Portal as this is now supported in vCloud Director 9.7 via the Advanced Gateway features.
+
+## Release 1.105.0
+
+Date: 29th May 2019
+
+Feature update
+
+Details: Added new OpenStack Permissions tab behind a feature flag to support user access management of Single Sign-on enabled services. Updated status page links to support move to https://status.ukcloud.com.
+
+## Release 1.104.0
+
+Date: 13th May 2019
+
+Feature update
+
+Details: Added new OpenShift Permissions tab behind a feature flag to support user access management of Single Sign-on enabled services.
+
+## Release 1.102.0
+
+Date: 17th April 2019
+
+Feature update
+
+Details: Added new /api/billing/billing-csv endpoint to provide customers with monthly billing data for OpenStack and VMware. The information included the CSV is the same as the invoice evidence file.
+
+## Release 1.100.0
+
+Date: 28th March 2019
+
+Feature update
+
+Details: Added Single Sign-on (SSO) authentication token request during login to enable the Portal to access SSO related services.
+
+## Release 1.99.0
+
+Date: 21st February 2019
+
+Feature update
+
+Details: Added new My Calls Permissions tab behind a feature flag to support the roll out of the new Ivanti Service Management tool.
+
+## Release 1.98.0
+
+Date: 21st February 2019
+
+Feature update
+
+Details: Added new My Calls Archive tab behind a feature flag to support the roll out of the new Ivanti Service Management tool.
+
+## Release 1.96.1
+
+Date: 22nd January 2019
+
+Feature update
+
+Details: Updated punctuation in Two factor authentication confirmation email.
+
+## Release 1.96.0
+
+Date: 8th January 2019
+
+Bug fix and feature update
+
+Details: Fixed issue stopping the selected protection policy being applied to all VMs when managing the Default VM Snapshot Protection Policy for a VDC. Removed Two factor authentication lockout period option in account security setup.
+
+## Release 1.93.0
+
+Date: 17th December 2018
+
+Feature update
+
+Details: Updated the contact removal process to remind administrators that additional steps are required to fully remove the users access rights if they're using the Single Sign-on enabled service for OpenShift or OpenStack.
+
+## Release 1.92.0
+
+Date: 11th December 2018
+
+Feature update
+
+Details: Added Knowledge Centre banner in Elevated to support move to https://docs.ukcloud.com.
+
+## Release 1.90.0
+
+Date: 21st November 2018
+
+Bug fix
+
+Details: Updated additional Portal Knowledge Centre links following move to https://docs.ukcloud.com.
+
+## Release 1.89.0
+
+Date: 6th November 2018
+
+Bug fix
+
+Details: Fixed account locking issue for administrators under certain circumstances. Updated incorrect Portal Knowledge Centre links.
 
 ## Release 1.88.2
 
@@ -739,4 +893,4 @@ Details: Fixes to "My VMs" and export improvements to notifications
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -3,6 +3,8 @@ title: How to manage Snapshot Protection for your VMs | UKCloud Ltd
 description: Explains how to use the self-service Snapshot Protection tool to add, change or remove Snapshot Protection for your VMs
 services: vmware
 author: Steve Hall
+reviewer: George Smith
+lastreviewed: 22/10/2018 12:05:00
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -25,9 +27,9 @@ The UKCloud platform offers a variety of protection options, including Snapshot 
 
 By default, VMs deployed on the UKCloud platform do not come with any protection services enabled. If you want Snapshot Protection for your VM, you must explicitly add it.
 
-When you add Snapshot Protection to a VM, the VM is added to a daily automated backup. Backups are automatically taken for the VM once every 24 hours, sometime between the hours of 2000 and 0800. The status of a VM's backup is reported daily in the UKCloud Portal by 1000, but typically within minutes of the close of the backup window.
+When you add Snapshot Protection to a VM, the VM is added to a daily automated backup. Backups are automatically taken for the VM once every 24 hours, sometime between the hours of 20:00 and 08:00. The status of a VM's backup is reported daily in the UKCloud Portal by 10:00, but typically within minutes of the close of the backup window.
 
-If you encounter a problem with your VM, raise a Service Request and we can use one of your VM backups to restore the whole VM image to a new VM in your VDC. You can then use this image to restore the VM or restore any required data to your original VM.
+If you encounter a problem with your VM, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal and we can use one of your VM backups to restore the whole VM image to a new VM in your VDC. You can then use this image to restore the VM or restore any required data to your original VM.
 
 For more detailed information, see the [*Snapshot Protection Service Scope*](vmw-sco-snapshot-protection.md).
 
@@ -124,7 +126,7 @@ You can use the UKCloud Portal to see whether a VM uses Snapshot Protection, fin
 
     - **Action** - The type of policy change request
 
-14. Click **Manage my Backups** to raise a service request related to your backups, for example, to restore a backup.
+14. Click **Manage my Backups** to raise a Service Request related to your backups via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, for example, to restore a backup.
 
     ![Manage my Backups button](images/snapshot-image-5.png)
 
@@ -177,7 +179,7 @@ By default, VMs deployed on the UKCloud platform do not come with any protection
 
     The amount of time it takes for your changes to take place depends on how many requests are in the queue. If there are any problems with the request, the button in the **Snapshot Protection** column changes to a red **Failed** button; in this situation, contact UKCloud Support for further assistance.
 
-    Backup status information is updated daily on the UKCloud Portal by 1000, but typically within minutes of the close of the backup window.
+    Backup status information is updated daily on the UKCloud Portal by 10:00, but typically within minutes of the close of the backup window.
 
     > [!NOTE]
     > If you remove a VM from backups, the status icon for the VM will display as a red cross until the end of the previously selected retention period. When the end of the retention period is reached, the status icon will change to the grey minus sign.
@@ -231,7 +233,7 @@ You can specify a snapshot retention policy to apply to all the VMs in a VDC. Yo
 
     If you selected **Apply to all existing VMs**, the button changes to an amber **Processing** button. When the changes have been applied, the button changes back to green with a label indicating the VDC's snapshot retention policy (**14-day** or **28-day**) or **Manage** if you have turned off Snapshot Protection. If the VDC contains a lot of VMs, the process of updating the policy for all existing VMs may take several minutes to complete.
 
-    Backup status information is updated daily on the UKCloud Portal by 1000, but typically within minutes of the close of the backup window.
+    Backup status information is updated daily on the UKCloud Portal by 10:00, but typically within minutes of the close of the backup window.
 
     > [!NOTE]
     > When you exit the *Snapshot Protection Policy* dialog box, the **Currently viewing for VDC** list on the *My VMs* tab resets to the first VDC listed under the compute service. You'll need to reselect your VDC from the list before continuing.
@@ -276,4 +278,4 @@ For more information about working with your VMs, see the [*Getting Started Guid
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

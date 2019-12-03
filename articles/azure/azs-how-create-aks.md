@@ -1,8 +1,10 @@
 ---
-title: How to create an Azure Kubernetes Service cluster using the UKCloud Azure Stack portal | UKCloud Ltd
-description: Create an Azure Kubernetes Service cluster using Azure Stack
+title: How to create an Azure Kubernetes Service cluster using the UKCloud Azure Stack Hub portal | UKCloud Ltd
+description: Create an Azure Kubernetes Service cluster using Azure Stack Hub
 services: azure-stack
 author: Bailey Lawson
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
@@ -14,19 +16,19 @@ toc_fullpath: Users/How To/azs-how-create-aks.md
 toc_mdlink: azs-how-create-aks.md
 ---
 
-# How to create an Azure Kubernetes Service cluster using the UKCloud Azure Stack portal
+# How to create an Azure Kubernetes Service cluster using the UKCloud Azure Stack Hub portal
 
 ## Overview
 
-Azure Kubernetes Service (AKS) makes it simple to deploy a managed Kubernetes cluster in Azure Stack. AKS reduces the complexity and operational overhead of managing Kubernetes by offloading much of that responsibility to Azure Stack. As a hosted Kubernetes service, Azure Stack handles critical tasks like health monitoring and maintenance for you.
+Azure Kubernetes Service (AKS) makes it simple to deploy a managed Kubernetes cluster in Azure Stack Hub. AKS reduces the complexity and operational overhead of managing Kubernetes by offloading much of that responsibility to Azure Stack Hub. As a hosted Kubernetes service, Azure Stack Hub handles critical tasks like health monitoring and maintenance for you.
 
 ### Intended audience
 
-To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack portal.
+To complete the steps in this guide, you must have appropriate access to a subscription in the Azure Stack Hub portal.
 
 ## Creating an Azure Kubernetes Service cluster
 
-1. Log in to the Azure Stack portal.
+1. Log in to the Azure Stack Hub portal.
 
    For more detailed instructions, see the [*Getting Started Guide for UKCloud for Microsoft Azure*](azs-gs.md).
 
@@ -48,7 +50,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
    **Resource group** - Select an existing resource group, or create a new one by typing a name for your new resource group.
 
-   **Location** - This will be `frn00006`, which is the location of the Azure Stack.
+   **Location** - This will be `frn00006`, which is the location of the Azure Stack Hub.
 
    ![Create Kubernetes Cluster > Basics](images/azs-browser-create-aks-basics.png)
 
@@ -70,7 +72,7 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
    **The Storage Profile** - The storage profile for the Kubernetes cluster.
 
-   **Azure Stack identity system** - Azure Stack identity provider - defaults to AzureAD
+   **Azure Stack Hub identity system** - Azure Stack Hub identity provider - defaults to AzureAD
 
    **Service principal clientId** - The Service Principal application ID (used by the Kubernetes Azure cloud provider). More help [here](https://github.com/Azure/acs-engine/blob/master/docs/serviceprincipal.md).
 
@@ -92,4 +94,4 @@ To complete the steps in this guide, you must have appropriate access to a subsc
 
 ## Feedback
 
-If you have any comments on this article, or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

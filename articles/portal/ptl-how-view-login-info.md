@@ -3,6 +3,8 @@ title: How to view login information | UKCloud Ltd
 description: Explains how to access a report of who has logged into your environment
 services: portal
 author: Sue Highmoor
+reviewer: Lewis Dean
+lastreviewed: 16/10/2019 11:00:00
 
 toc_rootlink: How To
 toc_sub1:
@@ -33,7 +35,7 @@ The UKCloud Portal provides a report of who has logged into your account over th
 
 1. Log into the UKCloud Portal.
 
-2. In the navigation panel, click **Account** and then **Login history**.
+2. In the navigation panel, click **Reports** and then **Login history**.
 
 3. The resulting table provides a list of all the users who have logged in to your environment over the last 30 days.
 
@@ -49,4 +51,4 @@ The UKCloud Portal provides a report of who has logged into your account over th
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -3,6 +3,8 @@ title: Understanding connectivity options in UKCloud for VMware | UKCloud Ltd
 description: Describes the two different architecture designs used in UKCloud for VMware so that you can better understand your environment and more effectively design your solutions
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -91,7 +93,7 @@ Networking in the Elevated platform is very similar to the Assured platform. All
 
 #### PSN Protected
 
-In the diagram above, Customer 1's PSN Protected connection is routed to their NFT sitting in the multi-tenant NFW. This then provides the onward connection to Customer 1's edge. The same NFT also handles the connections in from Cross Domain Security Zone products (Walled Garden, UKCloud Guard and SRA).
+In the diagram above, Customer 1's PSN Protected connection is routed to their NFT sitting in the multi-tenant NFW. This then provides the onward connection to Customer 1's edge. The same NFT also handles the connections in from Cross Domain Security Zone products (Walled Garden and SRA).
 
 It's worth noting that UKCloud translates the PSN Protected IP address to one of the external IP ranges that are available on the edge. Your users will target the PSN Protected IP address, however you'll see only your UKCloud allocated external range on your edge, so it's important to know what your PSN Protected IP has been translated to.
 
@@ -145,7 +147,7 @@ When you create a new vOrg, we'll provide you with a number of usable IP address
 
 - PSN Protected - 1 x usable IP
 
-You can request additional IP addresses as required via a Service Request. If you ask for a large number of IP addresses in a single request, we may ask you to provide further information to support your request.
+You can request additional IP addresses as required by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. If you ask for a large number of IP addresses in a single request, we may ask you to provide further information to support your request.
 
 ## Cloud Fabric and gateway architecture
 
@@ -219,9 +221,9 @@ If you change from a UKCloud‑provided firewall to your own firewall, we'll red
 
 The number of public IP addresses we provide depends on whether you are using a UKCloud‑provided firewall or bringing your own:
 
-- **UKCloud provided firewall** - If you're using a UKCloud‑provided firewall, we'll allocate you a single usable IP per VDC edge. You can request additional IP addresses as required via a Service Request. If you ask for a large number of IP addresses in a single request, we may ask you to provide further information to support your request.
+- **UKCloud provided firewall** - If you're using a UKCloud‑provided firewall, we'll allocate you a single usable IP per VDC edge. You can request additional IP addresses as required by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. If you ask for a large number of IP addresses in a single request, we may ask you to provide further information to support your request.
 
-- **BYOF** - If you're using your own firewall technology, when you provision your VDC, we initially allocate you five public IP addresses. After this initial allocation, you can request more IP addresses by opening a Service Request.
+- **BYOF** - If you're using your own firewall technology, when you provision your VDC, we initially allocate you five public IP addresses. After this initial allocation, you can request more IP addresses by opening a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Maintaining compliance with multiple networks
 
@@ -241,7 +243,7 @@ In the Elevated platform:
 
 - For RLI you'll need to get approval from the MOD
 
-- For Cross Domain Security Zone services (Walled Garden, UKCloud Guard or SRA) you'll need to get the authorisation from your end-customer IA as well as the UKCloud SIRO
+- For Cross Domain Security Zone services (Walled Garden or SRA) you'll need to get the authorisation from your end-customer IA as well as the UKCloud SIRO
 
 The application processes haven't changed for any of these services, however it's important to be mindful about how you may have to design your architecture based on the network architecture you'll be deployed on. As an example, when connecting to the N3 network, you'll need to ensure that the N3 and internet networks aren't bridged. With the Cloud Fabric architecture and NFT architecture (shown in the two diagrams below respectively), you should ensure that VMs are not connected to both the internet and to N3
 at the same time.
@@ -252,4 +254,4 @@ at the same time.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

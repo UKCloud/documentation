@@ -3,6 +3,8 @@ title: Understanding UKCloud's Identity & Access Management API | UKCloud Ltd
 description: Provides information on managing permissions using the Identity & Access Management API
 services: other
 author: Simon Fish
+reviewer:
+lastreviewed: 08/11/2018 10:25:23
 
 toc_rootlink: Reference
 toc_sub1:
@@ -33,11 +35,18 @@ This article provides examples using [`curl`](https://curl.haxx.se/) and [`jq`](
 Before you begin, you'll need to retrieve a single sign-on token to authenticate with IDAM. For ease of use, this is saved to a variable `token` in your current shell session using the below command.
 
 ```sh
+echo "enter your Portal email address"
+read username
+echo "enter your Portal password"
+read -s password
+
 token=$(curl -X POST "https://idp.ukcloud.com/auth/realms/client-assured/protocol/openid-connect/token" \
-     -d username="<username>" \
-     -d password="<password>"  \
-     -d grant_type=password    \
+     -d "username=$username" \
+     -d "password=$password" \
+     -d grant_type=password \
      -d client_id=portal.ukcloud | jq -r '.access_token')
+
+unset password
 ```
 
 This token is used in bearer authentication with IDAM. Requests to the IDAM API are prefaced with `curl -H "Authorization: Bearer $token"`.
@@ -84,4 +93,4 @@ curl -X DELETE -H "Authorization: Bearer $token" https://idam.ukcloud.com/v1/use
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at [products@ukcloud.com](mailto:products@ukcloud.com).
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

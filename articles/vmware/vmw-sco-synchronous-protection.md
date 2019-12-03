@@ -3,6 +3,8 @@ title: Synchronous Protection Service Scope | UKCloud Ltd
 description: Outlines important details regarding the Synchronous Protection service
 services: vmware
 author: Steve Hall
+reviewer: Guy Martin
+lastreviewed: 22/03/2019
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -22,7 +24,7 @@ This Service Scope explains what is and isn't included in the scope of the UKClo
 Synchronous Protection is one of a variety of on‑platform protection options available from UKCloud. Use this service scope to understand what Synchronous Protection offers and whether it will meet your own recovery point objectives (RPO) and recovery time objectives (RTO).
 
 > [!NOTE]
-> Synchronous Protection is no longer available as a protection option for UKCloud for VMware. UKCloud offer two alternative data protection solutions: [Journaling Protection (Zerto)](vmw-sco-journaling-protection.md) and [Snapshot Protection](vmw-sco-snapshot-protection.md). Contact your Technical Account Manager (TAM) for more information.
+> Synchronous Protection is no longer available as a protection option for UKCloud for VMware. UKCloud offer two alternative data protection solutions: [Journaling Protection (Zerto)](vmw-sco-journaling-protection.md) and [Snapshot Protection](vmw-sco-snapshot-protection.md). Contact your Service Delivery Manager for more information.
 >
 > We will continue to provide support to customers who previously added Synchronous Protection to their environment, although we would encourage considering using Journaling Protection instead.
 
@@ -192,7 +194,7 @@ Failover test are generally seamless for customers, making it difficult for you 
 
 ## Requesting a Test Scenario
 
-To request a Test Scenario, you need to raise a Service Request within the UKCloud Portal indicating that you want to complete the test and provide the following details:
+To request a Test Scenario, you need to raise a Service Request within the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal indicating that you want to complete the test and provide the following details:
 
 - VDC name
 
@@ -210,8 +212,8 @@ If we accept your request, we'll schedule the work to start at the time you spec
 
 ## Failover testing charges
 
-We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the [SFIA rate card](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/832543392527475-sfia-rate-card-2019-01-18-1501.pdf) - level 3 Apply). Longer testing periods will need to be approved by UKCloud.
+We generally allow a test to be conducted during office hours (0900 - 1730) with a charge (based on the [*SFIA Rate Card*](https://ukcloud.com/wp-content/uploads/2019/06/ukc-gen-759-ukcloud-g-cloud-11-standard-rate-card-and-definitions.pdf) - level 3 Apply). Longer testing periods will need to be approved by UKCloud.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

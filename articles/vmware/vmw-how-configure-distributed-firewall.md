@@ -3,6 +3,8 @@ title: How to configure a Distributed Firewall | UKCloud Ltd
 description: Describes how to configure a Distributed Firewall (DFW), available as an advanced networking option with UKCloud for VMware
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 21/12/2018 15:47:05
 
 toc_rootlink: How To
 toc_sub1: 
@@ -49,13 +51,13 @@ To access the DFW:
 
 3. In the left navigation panel, click **Security**.
 
-    ![Security menu in vCloud Director](images/vmw-vcd91-mnu-security.png)
+    ![Security menu in vCloud Director](images/vmw-vcd-mnu-security.png)
 
 4. Select the **Security Services** for your VDC, then click **Configure Services**.
 
     Even though other VDC security policies are listed in this section, you cannot launch the configuration until you switch to the relevant VDC. You can confirm which VDC you are in by looking in the top right corner. To go back to all VDCs, click the back arrow.
 
-    ![Configure Services for Security Services](images/vmw-vcd91-btn-configure-services-security.png)
+    ![Configure Services for Security Services](images/vmw-vcd-btn-configure-services-security.png)
 
 5. In the **Distributed Firewall > General** tab of the *Services* dialog box, select **Enable Distributed Firewall**.
 
@@ -196,4 +198,4 @@ Security groups enable you to categorise based on the access level required. If 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

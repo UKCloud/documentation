@@ -3,6 +3,8 @@ title: How to set up Email and Collaboration on Android, Windows or Blackberry m
 description: Contains an overview of mobility options for Zimbra Collaboration Suite (ZCS), as well as information on how to set up Zimbra Mobile for most smartphones on specific operating systems
 services: email
 author: Sue Highmoor
+reviewer:
+lastreviewed: 24/07/2018 13:50:39
 
 toc_rootlink: How To
 toc_sub1:
@@ -59,22 +61,19 @@ You may also need to know:
 
     ![Add account option](images/email-android-mnu-add-account.png)
 
-3. Select **Corporate Account** from the other options
 
-    ![Corporate account option](images/email-android-mnu-corporate.png)
-
-4. Enter your **Email address** and **Password** to add an account, then tap **Next**
+3. Enter your **Email address** and **Password** to add an account, then tap **Next**
 
     ![Enter email account details](images/email-android-account-setup-email.png)
 
-5. Select **Exchange** from the type of account
+4. Select **Exchange** from the type of account
 
     ![Account type](images/email-android-account-setup-type-exchange.png)
 
     > [!NOTE]
     > ZCS 7.x does not support auto-discovery. If you want to perform auto-discovery, you need to enter the server name on the Server Settings screen.
 
-6. Complete the following fields in the Server Settings screen and then click **Next**
+5. Complete the following fields in the Server Settings screen and then click **Next**
 
     - **Username** - Your full email address (For example, `jane@coolexample.com`)
 
@@ -86,11 +85,11 @@ You may also need to know:
 
     ![Server Settings screen](images/email-android-account-setup-incoming-server.png)
 
-7. Configure your desired email account options (figure 8) and then tap **Next**
+6. Configure your desired email account options and then tap **Next**
 
     ![Account options](images/email-android-account-setup-options.png)
 
-8. Your account set up is complete. You can optionally give this account a name. Click **Done**
+7. Your account set up is complete. You can optionally give this account a name. Click **Done**
 
 ## Configuring Zimbra Mobile for Smart Phones on Windows Mobile Devices
 
@@ -339,4 +338,4 @@ OTA activation is performed through the Enterprise Activation application on use
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

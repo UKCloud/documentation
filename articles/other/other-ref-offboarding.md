@@ -3,6 +3,8 @@ title: Terminating your UKCloud services | UKCloud Ltd
 description: Provides useful information for offboarding UKCloud services, including key customer and UKCloud responsibilities
 services: other
 author: Sue Highmoor
+reviewer:
+lastreviewed: 06/12/2018 16:00:29
 
 toc_rootlink: Reference
 toc_sub1: 
@@ -34,9 +36,9 @@ If you want to terminate your whole account with UKCloud, you must raise separat
 
 ## Customer responsibilities
 
-- When you decide to terminate a service, you should first contact your Technical Account Manager (TAM) or Cloud Delivery Manager (CDM). Your TAM or CDM will help you to determine the relevant environment details for termination and the Effective Date of Termination.
+- When you decide to terminate a service, you should first contact your Service Delivery Manager. Your Service Delivery Manager will help you to determine the relevant environment details for termination and the Effective Date of Termination.
 
-- After speaking to your TAM or CDM, an administrator of your Portal account must raise a Service Request via the Portal, following the relevant prompts for information to enable our support team to action the request as quickly as possible.
+- After speaking to your Service Delivery Manager, an administrator of your Portal account must raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal, following the relevant prompts for information to enable our support team to action the request as quickly as possible.
 
     > [!NOTE]
     > If you do not raise a Service Request to initiate a formal termination of service, your environment may not be completely decommissioned and you may end up still being charged for objects remaining on the platform.
@@ -44,7 +46,7 @@ If you want to terminate your whole account with UKCloud, you must raise separat
 - Before the decommissioning of the services can take place, you are responsible for the removal of all the data within the environment. Refer to [*Responsibilities by service*](#responsibilities-by-service) below for a list of environment items that you need to clear ahead of UKCloud decommissioning the service.
 
     > [!NOTE]
-    > If you do not removal all the environment items listed, UKCloud will not be able to complete the termination process and you may still be charged for those remaining items.
+    > If you do not remove all the environment items listed, UKCloud will not be able to complete the termination process and you may still be charged for those remaining items.
 
 - All users with access to the service being terminated must be removed from the Portal by an administrator within the customer organisation.
 
@@ -60,7 +62,7 @@ After you've removed all of the items from your account that you're responsible 
 
 - Remove your account (and company, if necessary).
 
-- Return any prepaid sums for services that you have not consumed (unless otherwise required by the associated Service Definition).
+- Return any prepaid sums for services that you have not consumed (unless otherwise identified in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf)).
 
 - Arrange to return all confidential information.
 
@@ -74,13 +76,13 @@ There are no termination costs associated with cancelling UKCloud services. Howe
 
 - We reserve the right to pass through third-party price rises that are not within our direct control.
 
-- If you use service options with minimum terms, such as Global Load Balancing or Application-tuned DDoS Protection, you will continue to be charged for these until the end of those terms.
+- If you use service options with minimum terms, such as UltraDNS or SiteProtect Advanced DDoS Mitigation, you will continue to be charged for these until the end of those terms.
 
 - We reserve the right to charge for any content that you leave in your environment or for retrieving and returning your content.
 
 ## Responsibilities by service
 
-### Multi-cloud platforms
+### Multi-cloud technology stacks
 
 #### [UKCloud for Microsoft Azure](#tab/tabid-1)
 
@@ -200,4 +202,4 @@ Customer co-lo'd kit | Private VLANs/VRFs
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

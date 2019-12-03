@@ -16,3 +16,11 @@
     href: cdsz-ref-bp-overview.md
   - name: UKCloud Cross Domain Security Zone application process
     href: cdsz-ref-application-process.md
+- name: Service Definition
+  items:
+  - name: Cross Domain Security Zone Service Definition
+    href: cdsz-sd.md
+- name: Service Scope
+  items:
+  - name: Cross Domain Security Zone Service Scope
+    href: cdsz-sco.md

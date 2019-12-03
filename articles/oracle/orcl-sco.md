@@ -3,6 +3,8 @@ title: UKCloud for Oracle Software Service Scope | UKCloud Ltd
 description: Outlines important details regarding UKCloud for Oracle Software
 services: oracle
 author: Steve Hall
+reviewer: Bart Challis
+lastreviewed: 01/07/2019
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -13,7 +15,7 @@ toc_fullpath: Service Scope/orcl-sco.md
 toc_mdlink: orcl-sco.md
 ---
 
-# UKCloud for Oracle Software
+# UKCloud for Oracle Software Service Scope
 
 ## About this document
 
@@ -37,7 +39,7 @@ You can also use accounts to separate users based on access requirements or perm
 
 **Organisation.** This represents your UKCloud for Oracle Software service inside Oracle Enterprise Manager and on the UKCloud Portal. There is a 1:1 mapping of service to Organisation.
 
-**Oracle Tenant.** An Oracle Tenant is where you define your workload type and build your OVMs. You can create Oracle Tenants via a service request.
+**Oracle Tenant.** An Oracle Tenant is where you define your workload type and build your OVMs. You can create Oracle Tenants by raising a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 ## Service configuration
 
@@ -47,8 +49,7 @@ Customers can self-configure OVMs by the number of cores, and amount of memory a
 
 Self-service management is done through the Oracle Enterprise Management Portal, accessed through the UKCloud Portal.
 
-Full details of the available service options are outlined in the Service Definition
-([Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/177331567371441-service-definition-document-2018-07-11-1146.pdf)).
+Full details of the available service options are outlined in the [*Service Definition*](orcl-sd.md).
 
 ## Storage options
 
@@ -87,17 +88,21 @@ UKCloud's Cloud Storage can be used as an S3-addressable target for Oracle prote
 
 ## Service availability
 
-UKCloud for Oracle Software offers an SLA guarantee of 99.95% availability.
+UKCloud for Oracle Software offers an SLA guarantee of 99.95% availability for VMs without high availability (HA) enabled.
+
+VMs with HA enabled have an SLA of 99.99%. Having HA enabled will not consume any additional resource on the platform, and is therefore free-of-charge, however, as this setting is not enabled by default, you must configure this through the UI. For more information, see [*How to enable high availability for your Oracle VMs*](orcl-how-enable-ha.md).
 
 You are entitled to claim Service Credits for outages to services that take you out of the SLA. For more about how we calculate SLAs, see the [*SLA Definition*](../other/other-ref-sla-definition.md) document.
 
-Our SLA does not cover faults within your control, such as client application issues, or faults within external connectivity providers (for example, internet, PSN or N3/HSCN).
+Our SLA does not cover faults within your control, such as client application issues, or faults within external connectivity providers (for example, internet, PSN or HSCN).
 
 ## Service background
 
 UKCloud for Oracle Software is underpinned by Oracle compute infrastructure. UKCloud manage the physical infrastructure and utilise our partner, Infomentum, to provide support and management from the hypervisor level and above.
 
-Infomentum will provision your Oracle Tenant environment and UKCloud will present it to you through the Oracle Enterprise Manager. You will be responsible for OVM creation and maintenance.
+Infomentum will provision your Oracle Tenant environment and UKCloud will present it to you through the Oracle Enterprise Manager.
+
+VM creation is currently available via service request to ensure that the platform remains balanced &mdash; this is due to the core-pinning technology that Oracle OVM uses. You'll need to submit a service request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal with the VM details, including resource allocation, and we'll create the VM. You can then manage the created VM. You must also raise a service request to change the size of a VM. For more information, see [*Oracle cloud self-service funtionality*](orcl-ref-bug-self-service.md).
 
 All service requests will be triaged by UKCloud. We reserve the right to escalate a request to Infomentum for support. If you have not have a managed service contract with Infomentum, please do not contact them directly.
 
@@ -113,7 +118,7 @@ We control the deployed versions of technology on the platform. This covers inte
 
 - Internally this includes, but isn't limited to, the Oracle Virtual Machine Manager and Oracle Virtual Machine Server versions, and the hardware version of the platform.
 
-- Externally this includes the available versions of the edge gateway and Oracle Enterprise Manager.
+- Externally this includes the available versions of the NSX Edge and Oracle Enterprise Manager.
 
 - You can make additional configurations inside an OVM (such as implementing third-party software technologies). We do not support customer implementations inside a VM.
 
@@ -123,31 +128,31 @@ UKCloud for Oracle Software includes the base OVM platform licences, which provi
 
 Our service does not include licences for the Oracle applications and databases you choose to run.
 
-As the underlying platform is powered by OVM technology, you can either transfer your existing licences, or purchase new licences based on the quantity of virtual processors (cores) you allocate within each VM. Please note that UKCloud does not have the functionality to provide Oracle licensing, and this must be sourced via an appropriate partner.
+As the underlying platform is powered by OVM technology, you can either transfer your existing licences, or purchase new licences based on the quantity of cores you allocate within each VM. Please note that UKCloud does not have the functionality to provide Oracle licensing, and this must be sourced via an appropriate partner.
 
-'Cores' refers to OVM vCPUs pinned to physical processor cores (excluding hyper-threading). Your Oracle licensing will be based on the cores consumed by your OVM.
+*Cores* refers to physical processor cores (excluding hyper-threading). OVM cores have two threads, or *vCPUs*. Your Oracle licensing will be based on the cores consumed by your OVM.
 
-**Update services.** We make update repositories available for OVM containers. We don't provide software update facilities for non-UKCloud licensed software, including all Oracle applications.
+**Update services.** We make update repositories available for OVM containers. We don't provide software update facilities for non-UKCloud licensed software, including all Oracle applications or databases.
 
 **Anti-virus.** We do not provide anti-virus software as part of the service.
 
 ## Networks
 
-**Internet-facing solutions.** You are provided with 2 usable public IP addresses, but you can ask for additional public IP addresses via a Service Request. We reserve the right to decline the request if you have spare capacity in your existing deployment.
+**Internet-facing solutions.** You are provided with 2 usable public IP addresses, but you can ask for additional public IP addresses by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal. We reserve the right to decline the request if you have spare capacity in your existing deployment.
 
-**PSN-facing solutions.** You should raise a Service Request or contact your Customer Success Manager (CSM) to be assigned your IP address. This solution also comes with contended bandwidth (uncapped).
+**PSN-facing solutions.** You should raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal or contact your Customer Success Manager (CSM) to be assigned your IP address. This solution also comes with shared bandwidth (uncapped).
 
-**Janet and N3/HSCN solutions.** You have one usable IP address, but you can request additional IP addresses via a Service Request.
+**Janet and HSCN solutions.** You have one usable IP address, but you can request additional IP addresses by raising a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
-UKCloud for Oracle Software does not have a native external connectivity functionality. Therefore, UKCloud have enabled customers to manage connectivity rules, such as firewall, IPsec VPN and NAT functionality, through a VMware edge gateway. This edge is provisioned within the UKCloud for VMware environment and is managed using either the UKCloud Portal GUI or API.
+UKCloud for Oracle Software does not have a native external connectivity functionality. Therefore, UKCloud have enabled customers to manage connectivity rules, such as firewall, IPsec VPN and NAT functionality, through a VMware NSX Edge. This Edge is provisioned within the UKCloud for VMware environment and is managed using either the UKCloud Portal GUI or API.
 
-This edge can be an existing edge in a customer's UKCloud for VMware environment, or can be provisioned as a completely new entity, specific for Oracle.
+This Edge can be an existing edge in a customer's UKCloud for VMware environment, or can be provisioned as a completely new entity, specific for Oracle.
 
-## Edge gateway
+## NSX Edge
 
-By default, we assign one edge gateway per connectivity type. You can choose which external network you would like to enable your Oracle environment to connect to. Note that the Oracle environment does **not** have to connect to an external network, however an external network will need to be connected to the edge.
+By default, we assign one Edge per connectivity type. You can choose which external network you would like to enable your Oracle environment to connect to. Note that the Oracle environment does **not** have to connect to an external network, however an external network will need to be connected to the Edge.
 
-**Site-to-site IPsec VPN.** You can create IPsec VPN tunnels to connect different environments, both internal and external, to UKCloud. There is a limit of 64 tunnels per edge gateway.
+**Site-to-site IPsec VPN.** You can create IPsec VPN tunnels to connect different environments, both internal and external, to UKCloud. There is a limit of 64 tunnels per Edge.
 
 ## Bring Your Own Firewall
 
@@ -169,9 +174,9 @@ Users can access, manage and view the UKCloud for Oracle Software service, acces
 
 - **vCloud Director API.** Enables the programmatic creation and management of the Oracle edge gateway.
 
-- **vCloud Director graphical UI.** Provides a graphical interface to access the vCloud Director environment to manage the Oracle edge gateway (depending on assigned permissions).
+- **vCloud Director Graphical UI.** Provides a graphical interface to access the vCloud Director environment to manage the Oracle NSX Edge (depending on assigned permissions).
 
-- **UKCloud Portal.** Enables the creation of Oracle compute services and edge gateways. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the Portal.
+- **UKCloud Portal.** Enables access to the vCloud Director and Oracle Enterprise Manager services. The Portal also includes an overview of actual and estimated spend, along with service configuration information. Access to service reporting and incident and request management is also possible through the Portal.
 
 You cannot access the underlying infrastructure. This includes (but isn't limited to) the hardware and the Oracle Virtual Machine Manager environment.
 
@@ -193,9 +198,9 @@ UKCloud do not currently provide migration services, however customers are free 
 
 **Cloud Architects.** UKCloud Cloud Architects support you during the design of solutions for the cloud platform. UKCloud Cloud Architects are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing Oracle solutions.
 
-**Technical Account Managers (TAM).** You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
+**Service Delivery Managers.** You will be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
 
-**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2017/07/UKCloud-Factsheet-Customer-Care.pdf).
+**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is documented in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
 
 ## Customer responsibilities
 
@@ -203,7 +208,7 @@ UKCloud do not currently provide migration services, however customers are free 
 
 - The control and management of access and responsibilities for end users including appropriate connectivity, security and accreditation if required.
 
-    If access is required over government secure networks (N3/HSCN, Janet, RLI or PSN), you are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided.
+    If access is required over government secure networks (HSCN, Janet, RLI or PSN), you are responsible for adhering to the relevant Code of Connection (CoCo) and for providing evidence of their CoCo to UKCloud upon request. UKCloud is unable to provide access to secure networks where such evidence has not been provided.
 
 - Management and administration of layers above the Oracle hypervisor (OS patching, application performance monitoring, user administration).
 
@@ -211,7 +216,7 @@ UKCloud do not currently provide migration services, however customers are free 
 
 ## Service provisioning
 
-Within 4 hours of accepting an order (shorter deployment times are typically achieved and can be prioritised upon request), UKCloud will create the customer's Primary Administrator account and send a welcome pack  which includes the URL for the UKCloud Customer Portal, and the getting started guide.
+Within four (4) working hours of accepting an order (shorter deployment times are typically achieved and can be prioritised upon request), UKCloud will create the customer's Primary Administrator account and send a welcome pack  which includes the URL for the UKCloud Customer Portal, and the getting started guide.
 
 UKCloud and Infomentum will provision the Oracle Tenant environment. UKCloud will request information such as private subnets before creating the environment. Once the build is complete, UKCloud will provide you with access to provision Oracle virtual machines and Oracle networks.
 
@@ -239,10 +244,14 @@ If during Emergency Maintenance there is a loss of availability to the service, 
 
 The following documents contain more information about UKCloud for Oracle Software and the service options:
 
-- *UKCloud for Oracle Software Service Definition* ([Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-service-definition-document-2018-07-11-1146.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/177331567371441-service-definition-document-2018-07-11-1146.pdf))
+- [*UKCloud for Oracle Software Service Definition*](orcl-sd.md)
 
-- *UKCloud Terms and Conditions for G10* ([Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/941484459470712-terms-and-conditions-2018-05-21-1254.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/177331567371441-terms-and-conditions-2018-05-21-1253.pdf))
+- [*UKCloud Terms & Conditions for G-Cloud 11*](../other/other-ref-terms-and-conditions.md)
 
 - [*Understanding connectivity options in UKCloud for VMware*](../vmware/vmw-ref-connectivity-options.md)
 
 - [*UKCloud SLA Definition*](../other/other-ref-sla-definition.md)
+
+## Feedback
+
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

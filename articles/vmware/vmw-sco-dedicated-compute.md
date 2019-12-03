@@ -1,25 +1,28 @@
 ---
-title: Dedicated Compute Service Scope | UKCloud Ltd
-description: Outlines important details regarding UKCloud for VMware Dedicated Compute
+title: Dedicated Compute v1 Service Scope | UKCloud Ltd
+description: Outlines important details regarding Dedicated Compute v1
 services: vmware
 author: Steve Hall
+reviewer: Guy Martin
+lastreviewed: 01/07/2019
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Dedicated Compute Service Scope
+toc_title: Dedicated Compute v1 Service Scope
 toc_fullpath: Service Scope/vmw-sco-dedicated-compute.md
 toc_mdlink: vmw-sco-dedicated-compute.md
 ---
 
-# Dedicated Compute Service Scope
+# Dedicated Compute v1 Service Scope
 
 ## About this document
 
-This document is for customers considering purchasing our Dedicated Compute service.
+This document describes the boundaries of the Dedicated Compute v1 service, along with the division of responsibilities between UKCloud and the customer to facilitate the changes required.
 
-It describes the boundaries of the service, along with the division of responsibilities between UKCloud and the customer to facilitate the changes required.
+> [!NOTE]
+> This article provides information for existing customers of our Dedicated Compute v1 service. If you're looking to purchase Dedicated Compute, refer to the [Dedicated Compute v2 Service Scope](../dedicated-compute/dc-sco.md).
 
 ## About Dedicated Compute
 
@@ -41,7 +44,7 @@ The initial Dedicated Compute purchase is a starter pack consisting of two physi
 
 You can then scale your estate by purchasing expansion packs. After nine expansion packs, you must buy another starter pack.
 
-You choose between Tier 1 or Tier 2 storage for your VMs, both of which can include a backup service. Full details of service options and pricing are given in the Service Definition.
+You choose between Tier 1 or Tier 2 storage for your VMs, both of which can include a backup service. Full details of service options and pricing are given in the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 The storage pool isn't a dedicated hardware resource: it is drawn from our Cloud Storage solutions.
 
@@ -57,11 +60,11 @@ During a failure scenario, VMs will be restarted on surviving hosts within the D
 
 The table below shows the configuration, the resources available to a customer, the number of physical blades in the configuration, and the UKCloud resources reserved to run it.
 
-&nbsp; | Customer available resources | Physical blades | Resource reservation
-------|------------------------------|-----------------|---------------------
-**Starter pack** | 20 cores, 300 GiB RAM | 2 | 50% (20 cores, 300 GiB RAM)
-**Starter pack + 1 expansion pack** | 40 cores, 600 GiB RAM | 3 | 33% (20 cores, 300 GiB RAM)
-**Starter pack + 2 expansion packs** | 60 cores, 900 GiB RAM | 4 | 25% (20 cores, 300 GiB RAM)
+&nbsp;                               | Customer available resources | Physical blades | Resource reservation
+-------------------------------------|------------------------------|-----------------|---------------------
+**Starter pack**                     | 20 cores, 300 GiB RAM        | 2               | 50% (20 cores, 300 GiB RAM)
+**Starter pack + 1 expansion pack**  | 40 cores, 600 GiB RAM        | 3               | 33% (20 cores, 300 GiB RAM)
+**Starter pack + 2 expansion packs** | 60 cores, 900 GiB RAM        | 4               | 25% (20 cores, 300 GiB RAM)
 
 ## Resource utilisation
 
@@ -83,7 +86,7 @@ You can over-contend the resources on your Dedicated Compute as you see fit.
 
 There are two deployment options for Dedicated Compute:
 
-- **UKCloud-defined** - You select a workload type for your VDC based on UKCloud's Enterprise Compute Cloud VM types (ESSENTIAL, POWER or PRIORITY). Any VMs will inherit the characteristics and reservation levels of that service when deployed.
+- **UKCloud-defined** - You select a workload type for your VDC based on UKCloud for VMware VM types (ESSENTIAL, POWER or PRIORITY). Any VMs will inherit the characteristics and reservation levels of that service when deployed.
 
 - **Customer-defined** - You can set reservation levels on a per-VM basis.
 
@@ -97,7 +100,7 @@ It's not currently possible to see the level of provisioned/utilised resources a
 
 ## Service provisioning
 
-You can request Dedicated Compute via your account manager or using the My Calls section of the UKCloud Portal.
+You can request Dedicated Compute via your account manager or using the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 The minimum commitment period to the service is 90 days. The notice period is 90 days.
 
@@ -119,4 +122,4 @@ You need to be aware of the following customer responsibilities relating to depl
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

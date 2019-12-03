@@ -3,6 +3,8 @@ title: How to expose non-http services externally | UKCloud Ltd
 description: Explains how to expose services outside of your OpenShift cluster without using HTTP or HTTPS
 services: openshift
 author: Kieran O'Neill
+reviewer:
+lastreviewed: 26/02/2019 10:11:16
 
 toc_rootlink: How To
 toc_sub1:
@@ -28,7 +30,7 @@ This article assumes familiarity with services and routes in OpenShift and acces
 
 ## Prerequisites
 
-To complete the steps in this guide, your cluster must have been deployed from a version of our code that enables our non-http functionality. You can raise a support ticket to: 
+To complete the steps in this guide, your cluster must have been deployed from a version of our code that enables our non-http functionality. You can raise a Service Request to:
 
 - Check if your cluster already provides non-http functionality
 
@@ -36,7 +38,7 @@ To complete the steps in this guide, your cluster must have been deployed from a
 
 ## Getting the external IP
 
-You'll need to raise a support ticket with us that provides the network you'd like to expose services on and the ports/protocols of the services you'll be exposing. We'll update your environment to create the virtual infrastructure needed and provide you with the publicly accessible IP and the local IP this maps to. The local IP will be important for the upcoming steps.
+You'll need to raise a Service Request with us that provides the network you'd like to expose services on and the ports/protocols of the services you'll be exposing. We'll update your environment to create the virtual infrastructure needed and provide you with the publicly accessible IP and the local IP this maps to. The local IP will be important for the upcoming steps.
 
 > [!NOTE]
 > You can request multiple ports/protocols and networks for external services.
@@ -87,4 +89,4 @@ OpenShift documentation on ipfailover: <https://docs.openshift.com/container-pla
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

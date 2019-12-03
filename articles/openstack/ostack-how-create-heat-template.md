@@ -3,6 +3,8 @@ title: How to create and deploy a basic Heat template  | UKCloud Ltd
 description: Instructions on how to deploy a basic heat template
 services: openstack
 author: Bryce Nicholls
+reviewer:
+lastreviewed: 15/02/2019 16:36:23
 toc_rootlink: How to
 toc_sub1:
 toc_sub2:
@@ -168,4 +170,4 @@ The following document provides more options for configuring and creating Heat t
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at [products@ukcloud.com](mailto:products@ukcloud.com).
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

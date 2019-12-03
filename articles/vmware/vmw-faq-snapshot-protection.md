@@ -3,6 +3,8 @@ title: Snapshot Protection FAQs | UKCloud Ltd
 description: Frequently asked questions for Snapshot Protection
 services: vmware
 author: Matt Warner
+reviewer: George Smith
+lastreviewed: 23/10/2019 16:00
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -83,7 +85,7 @@ The time it takes to add snapshot protection to a VM varies depending on how man
 
 When the process has completed, the button changes back to green and will indicate the snapshot policy you chose for the VM (**14‑day** or **28‑day**). If the process fails, the button changes to a red **Failed** button. In this situation, contact the UKCloud support team to resolve the issue.
 
-The first snapshot will be taken in the next available backup window. Backup status information is typically updated daily on the UKCloud Portal by 10:00am, but typically within minutes of the close of the backup window.
+The first snapshot will be taken in the next available backup window. Backup status information is typically updated daily on the UKCloud Portal by 10:00, but typically within minutes of the close of the backup window.
 
 ### Can I change the snapshot policy for my VM at any time?
 
@@ -143,7 +145,7 @@ For the steps required to do this, see [*How to manage Snapshot Protection for y
 
 The service is suitable for data certified as OFFICIAL and OFFICIAL-SENSITIVE and is available on both UKCloud platforms: Assured OFFICIAL (formerly IL2) and Elevated OFFICIAL (formerly IL3).
 
-### Do large virtual disk (2 TiB+) configurations affect snapshot backups?
+### Do large VMs (2 TiB+) affect snapshot backups?
 
 Yes. Snapshot‑based backups are not supported for large VMs with high change rates, as the protection service will spend longer trying to establish what has changed and then attempt to back all of it up.
 
@@ -167,7 +169,7 @@ There's currently no SLA associated with the snapshot backup service, although i
 
 You can request restoration of VMs only if you have access to the support ticketing system.
 
-To restore data, administrators can access the UKCloud Portal and, using My Calls, create a support ticket stating the VM and the backup schedule they want to restore. UKCloud operations then complete this task, restoring the entire VM image.
+To restore data, administrators can access the UKCloud Portal and, using [My Calls](https://portal.skyscapecloud.com/support/ivanti), create a support ticket stating the VM and the backup schedule they want to restore. UKCloud operations then complete this task, restoring the entire VM image.
 
 ### How quickly can you restore a VM?
 
@@ -189,7 +191,7 @@ The UKCloud platform automates the deletion of backups as they reach their reten
 
 ### How and when am I notified of snapshot backup failures?
 
-Backup information, including failures, is updated daily on the UKCloud platform by 10:00am, but typically within minutes of the close of the backup window.
+Backup information, including failures, is updated daily on the UKCloud platform by 10:00, but typically within minutes of the close of the backup window.
 
 For the steps required to access the status of a VM's snapshot backup, see [*How to manage Snapshot Protection for your VMs*](vmw-how-manage-snapshot-protection.md).
 
@@ -217,11 +219,11 @@ UKCloud's proactive corrective measures depend on the nature of the snapshot bac
 
 - Should the failure persist, we may suggest a customer review to try to resolve the issue.
 
-    If we identify that the snapshot backup service is incompatible with your application and intended usage, we'll recommend a session with a Technical Account Manager or solution architect to work through alternative protection options.
+    If we identify that the snapshot backup service is incompatible with your application and intended usage, we'll recommend a session with a Service Delivery Manager or solution architect to work through alternative protection options.
 
 ### How and when are reruns scheduled?
 
-Backups are attempted during the hours of 2000 and 0800.
+Backups are attempted during the hours of 20:00 and 08:00.
 
 A backup will not be reattempted in the same backup window, but will be included as normal in the next window.
 
@@ -260,4 +262,4 @@ Protection products are not automatically applied to VMs running on the UKCloud 
 ## Feedback
 
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

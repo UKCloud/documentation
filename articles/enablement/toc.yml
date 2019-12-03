@@ -12,9 +12,7 @@
     href: enbl-sco-vpn.md
   - name: Data Transfer Facility Service Scope
     href: enbl-sco-dtf.md
-  - name: Mass Transfer Facility - HDD Service Scope
-    href: enbl-sco-mtf-hdd.md
-  - name: Mass Transfer Facility - NAS Service Scope
+  - name: Mass Transfer Facility Service Scope
     href: enbl-sco-mtf-nas.md
   - name: Smart Hands Service Scope
     href: enbl-sco-smart-hands.md

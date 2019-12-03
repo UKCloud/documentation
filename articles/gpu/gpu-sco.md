@@ -3,6 +3,8 @@ title: Cloud GPU Service Scope | UKCloud Ltd
 description: Outlines important details regarding Cloud GPU
 services: gpu
 author: Steve Hall
+reviewer: Guy Martin
+lastreviewed: 28/06/2019
 toc_rootlink: Service Scope
 toc_sub1: 
 toc_sub2:
@@ -51,13 +53,13 @@ Workload type | Resource allocation | Automated Rebalancing
 --------------|---------------------|----------------------
 PRIORITY | Uncontended (CPU/GiB) | Configured to reduce workload movement around the platform, reducing workload disruption
 
-To have GPU enabled in your environment, you will need to raise a [Service Request](https://portal.skyscapecloud.com/support/my_calls/new).
+To have GPU enabled in your environment, you will need to raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 When you raise a service request, you will need to specify the profile that you want to be made available from the following options:
 
 Workload type | Presentation | Memory size
 --------------|--------------|------------
-Visualisation | Profile</br>(slice of card) | 1GB</br>2GB</br>4GB</br>8GB
+Visualisation | Profile<br>(slice of card) | 1GB<br>2GB<br>4GB<br>8GB
 Compute | Card | 16GB
 
 ## Storage
@@ -118,7 +120,7 @@ UKCloud reserve the right to proactively move a GPU-enabled VM to another GPU-en
 
 **Licencing.** We provide the GRID licence which is included within the GPU price.
 
-UKCloud can also provide Operating Systems (OS) licensing, and is mandatory with respect to Windows Server. For more information, see the *UKCloud for VMware Service Definition* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/258024001448268-service-definition-document-2018-05-21-1255.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/865239482528840-service-definition-document-2018-05-21-1254.pdf).
+UKCloud can also provide Operating Systems (OS) licensing, and is mandatory with respect to Windows Server. For more information, see the [*UKCloud Pricing Guide*](https://ukcloud.com/wp-content/uploads/2019/06/ukcloud-pricing-guide-11.0.pdf).
 
 **VM server images.** We provide base GPU-enabled VM images for the OS for which we provide licensing. You can access these from vCloud Director once the GPU-enabled image has been made available to you.
 
@@ -166,9 +168,9 @@ You cannot access the underlying infrastructure. This includes (but isn't limite
 
 **Cloud Architects.** UKCloud Cloud Architects support you during the design of solutions for the cloud platform. They are ideally placed to help reconcile your requirements with the UKCloud platform. We recommend engagement with a Cloud Architect when implementing complex solutions, such as those using HybridConnect or a Walled Garden.
 
-**Technical Account Managers (TAM).** After the initial 90 days, you'll be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
+**Service Delivery Manager.** After the initial 90 days, you'll be allocated with an assigned point of contact who will provide ongoing assistance with reporting and incident escalation.
 
-**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is outlined in the *Cloud GPU Service Definition* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/619924782710146-service-definition-document-2018-05-21-1304.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/906087077560438-service-definition-document-2018-05-21-1303.pdf).
+**Support.** After the initial on-boarding and design phase, you can utilise the standard UKCloud support entitlement, which is outlined in the [*Customer Engagement Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/ukcloud-factsheet-customer-care.pdf).
 
 ## Customer responsibilities
 
@@ -208,20 +210,18 @@ You should be aware that by adding a Cloud GPU to a VM, the SLA for the core com
 
 The following documents contain more information about Cloud GPU:
 
-- *Cloud GPU Service Definition* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/619924782710146-service-definition-document-2018-05-21-1304.pdf) | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/906087077560438-service-definition-document-2018-05-21-1303.pdf)
-
 - [*Cloud GPU FAQ*](gpu-faq.md)
 
-- [*Getting Started Guide for Cloud GPU Compute*](gpu-gs-compute.md)
+- [*Cloud GPU Factsheet*](https://ukcloud.com/wp-content/uploads/2018/08/cloud-gpu-factsheet.pdf)
 
-- [*Getting Started Guide for Cloud GPU Visualisation*](gpu-gs-visualisation.md)
+- [*How to set up Cloud GPU Compute for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-compute.md)
 
-- [*Cloud GPU Factsheet*](https://ukcloud.com/wp-content/uploads/2017/12/Cloud-GPU-factsheet.pdf)
+- [*How to set up Cloud GPU Visualisation for UKCloud for VMware*](../vmware/vmw-how-setup-gpu-visualisation.md)
 
-- *UKCloud Terms and Conditions for G10* [Assured](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/619924782710146-terms-and-conditions-2018-05-21-1304.pdf | [Elevated](https://assets.digitalmarketplace.service.gov.uk/g-cloud-10/documents/92406/906087077560438-terms-and-conditions-2018-05-21-1303.pdf)
+- [*UKCloud Terms & Conditions for G-Cloud 11*](../other/other-ref-terms-and-conditions.md)
 
 - [*UKCloud SLA Definition*](../other/other-ref-sla-definition.md)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

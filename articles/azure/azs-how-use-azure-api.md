@@ -1,26 +1,28 @@
 ---
-title: How to use the Azure Stack API | UKCloud Ltd
-description: Describes how to use the Azure Stack API with UKCloud for Microsoft Azure
+title: How to use the Azure Stack Hub API | UKCloud Ltd
+description: Describes how to use the Azure Stack Hub API with UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Use the Azure Stack API
+toc_title: Use the Azure Stack Hub API
 toc_fullpath: Users/How To/azs-how-use-azure-api.md
 toc_mdlink: azs-how-use-azure-api.md
 ---
 
-# How to use the Azure Stack API
+# How to use the Azure Stack Hub API
 
 ## Overview
 
-The Azure Stack API enables you to interact programmatically with your UKCloud for Microsoft Azure environment. For example, you can use API calls to manage your UKCloud for Microsoft Azure tenancy.
+The Azure Stack Hub API enables you to interact programmatically with your UKCloud for Microsoft Azure environment. For example, you can use API calls to manage your UKCloud for Microsoft Azure tenancy.
 
-This guide shows you how to get started with the Azure Stack API.
+This guide shows you how to get started with the Azure Stack Hub API.
 
 ### Intended audience
 
@@ -28,7 +30,7 @@ To complete the steps in this guide you must have the appropriate permissions on
 
 ## Authenticating to the API
 
-Azure Stack API authentication uses access tokens to validate requests.
+Azure Stack Hub API authentication uses access tokens to validate requests.
 
 To obtain an access token:
 
@@ -65,13 +67,13 @@ To obtain an access token:
     - `resource` - The endpoint of the resource the token will be used to access, for example,
     `https://management.ukcloud.onmicrosoft.com/4de154de-a8a8-4017-af41-df619da68154`
 
-        You can obtain the resource endpoint by querying the Azure Stack management metadata endpoint. The resource endpoint is returned in the `audiences` section of the response.
+        You can obtain the resource endpoint by querying the Azure Stack Hub management metadata endpoint. The resource endpoint is returned in the `audiences` section of the response.
 
         For example, to find the endpoint for the `operators` resource send a request to `https://adminmanagement.<region>.<AzureStackdomain>/metadata/endpoints?api-version=2015-01-01`
 
-    - `username` - The Azure Stack AAD account, for example `azurestackadmin@ukcloud.onmicrosoft.com`
+    - `username` - The Azure Stack Hub AAD account, for example `azurestackadmin@ukcloud.onmicrosoft.com`
 
-    - `password` - The password for the Azure Stack AAD account
+    - `password` - The password for the Azure Stack Hub AAD account
 
     - `scope` - optional, such as `openid` to get the ID token
 
@@ -121,7 +123,7 @@ To obtain an access token:
     curl -H "Authorization: Bearer eyJ0eXAiOi...truncated for readability..." 'https://management.local.azurestack.external/subscriptions?api-version=2016-05-01'
     ```
 
-## Calling Azure Stack API endpoints
+## Calling Azure Stack Hub API endpoints
 
 A REST request URI consists of:
 
@@ -137,7 +139,7 @@ where:
 
 - `query-string` provides additional simple parameters, such as the API version or resource selection criteria.
 
-The syntax of an Azure Stack request URI is:
+The syntax of an Azure Stack Hub request URI is:
 
 `https://management.local.azurestack.external/<subscription-id>/resourcegroups/<resource-group>/providers/<provider>/<resource-path>?<filter-expression>&api-version=<api-version>`
 
@@ -153,7 +155,7 @@ where:
 
 - `filter-expression` is an optional list of arguments to filter the results of the query
 
-- `api-version` is the version of the Azure Stack API being called, for example `api-version=2016-05-01`
+- `api-version` is the version of the Azure Stack Hub API being called, for example `api-version=2016-05-01`
 
 For example, the following API call returns information about region health:
 
@@ -177,7 +179,7 @@ In particular, you may find the following documents useful:
 
 - <https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/azure-stack-provider-resource-api.md>
 
-There is not currently an API reference guide for Azure Stack Users; however, there is an Admin API guide that you can find [here]("https://docs.microsoft.com/en-us/rest/api/azure-stack/"). We'll update this guide when one becomes available.
+There is not currently an API reference guide for Azure Stack Hub Users; however, there is an Admin API guide that you can find [here](https://docs.microsoft.com/en-us/rest/api/azure-stack/). We'll update this guide when one becomes available.
 
 For more information about UKCloud for Microsoft Azure, see:
 
@@ -187,4 +189,4 @@ For more information about UKCloud for Microsoft Azure, see:
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -3,6 +3,8 @@ title: How to use the UKCloud Portal API | UKCloud Ltd
 description: Demonstrates how to use the Portal API by stepping you through the process of creating a VDC
 services: portal
 author: Sue Highmoor
+reviewer: wllewellyn
+lastreviewed: 24/10/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -18,7 +20,7 @@ toc_mdlink: ptl-how-use-api.md
 
 ## Overview
 
-The UKCloud Portal API enables you to interact programmatically with your UKCloud environment. For example, you can use API calls to create, manage and monitor Service Requests and view information about the components of your environment.
+The UKCloud Portal API enables you to interact programmatically with your UKCloud environment. For example, you can use API calls to view information about the components of your environment.
 
 This guide shows you how to use the API by providing a worked example that steps through the process of creating a new virtual data centre (VDC).
 
@@ -64,10 +66,12 @@ The Portal API uses session authentication. Before calling any of the API endpoi
         For example:
 
         ```
-        curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d
-        '{
-          "email": "user@example.com",
-          "password": "password"
+        read portal_email # Enter your Portal email address
+        read -s portal_password # Enter your Portal password
+        
+        curl -c cookies.txt 'https://portal.skyscapecloud.com/api/authenticate' -X POST -d '{
+          "email": "'"$portal_email"'",
+          "password": "'"$portal_password"'"
         }' -H 'Content-Type: application/json'
         ```
 
@@ -295,7 +299,7 @@ The first thing you need to do is find the URN of the VDC for which you want to 
         For example:
 
         ```
-        curl --b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' | json_pp
+        curl -b cookies.txt 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs' | json_pp
         ```
 
 3. This returns a list of VDCs associated with the specified vOrg.
@@ -356,7 +360,7 @@ Now that you have your VDC URN, you can use the Portal API to create your edge g
     For example:
 
     ```
-    curl -b cookies.txt -i 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways' -X POST -d \'{\
+    curl -b cookies.txt -i 'https://portal.skyscapecloud.com/api/accounts/676/vorgs/2/vdcs/urn:vcloud:vdc:1a7570ea-29d9-4090-9714-75c262a123ad/edge-gateways' -X POST -d '{
       "data": {
         "type": "EdgeGateway",
         "attributes": {
@@ -421,8 +425,8 @@ Now that you have your VDC URN, you can use the Portal API to create your edge g
 
 For more information about any of the API endpoints used in this guide, see the [*UKCloud Portal API User Guide*](ptl-ref-portal-api.md).
 
-If you need any further assistance, contact our support team via the My Calls area of the UKCloud Portal.
+If you need any further assistance, contact our support team via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) area of the UKCloud Portal.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

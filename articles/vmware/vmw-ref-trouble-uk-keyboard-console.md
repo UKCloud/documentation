@@ -3,6 +3,8 @@ title: UK keyboard layout not supported in Web Console | UKCloud Ltd
 description: Intended for customers who are experiencing issues when using a UK keyboard to interact with the VMware Web Console
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 11/01/2019 12:28:38
 toc_rootlink: Troubleshooting
 toc_sub1: 
 toc_sub2:
@@ -30,13 +32,13 @@ In the meantime, the lack of support for the UK keyboard should not cause issues
 
 1. In the vCloud Director *Virtual Datacenters* dashboard, select your VDC.
 
-2. In the left navigation panel, click **Virtual Machines**.
+2. In the left navigation panel, select **Virtual Machines**.
 
-    ![Virtual Machines menu option](images/vmw-vcd91-tab-vms.png)
+    ![Virtual Machines menu option](images/vmw-vcd-tab-vms.png)
 
-3. In the card for your VM, select **More**, then **Download VMRC**.
+3. In the card for your VM, select **Actions**, then **Download VMRC**.
 
-    ![Download VMRC menu option for VM](images/vmw-vcd91-mnu-download-vmrc.png)
+    ![Download VMRC menu option for VM](images/vmw-vcd-mnu-download-vmrc.png)
 
 4. Click the **Download** button for the version of the console you want to download (Windows, Mac or Linux).
 
@@ -51,7 +53,7 @@ In the meantime, the lack of support for the UK keyboard should not cause issues
 
 7. In the card for your VM, select **More**, then **Launch VM Remote Console**.
 
-    ![Launch VM Remote Console menu option for VM](images/vmw-vcd91-mnu-launch-vmrc.png)
+    ![Launch VM Remote Console menu option for VM](images/vmw-vcd-mnu-launch-vmrc.png)
 
     The VM Remote Console works correctly with a UK keyboard.
 
@@ -60,4 +62,4 @@ In the meantime, the lack of support for the UK keyboard should not cause issues
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

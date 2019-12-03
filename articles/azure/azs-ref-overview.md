@@ -3,6 +3,8 @@ title: Understanding UKCloud for Microsoft Azure | UKCloud Ltd
 description: Overview of UKCloud for Microsoft Azure
 services: azure-stack
 author: Sue Highmoor
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Users
 toc_sub1: Reference
@@ -17,35 +19,35 @@ toc_mdlink: azs-ref-overview.md
 
 ## Introduction
 
-UKCloud for Microsoft Azure provides you with new options to harness Microsoft Azure alongside other cloud platforms, including Oracle, VMware and OpenStack. This gives you the flexibility to accommodate diverse workloads within a low latency, accredited platform with native connectivity to non-cloud workloads in Crown Hosting and the networks that are vital to the public sector: from PSN Protected to N3/HSCN and RLI.
+UKCloud for Microsoft Azure provides you with new options to harness Microsoft Azure alongside other cloud platforms, including Oracle, VMware and OpenStack. This gives you the flexibility to accommodate diverse workloads within a low latency, accredited platform with native connectivity to non-cloud workloads in Crown Hosting and the networks that are vital to the public sector: from PSN to HSCN and RLI.
 
 This article provides an introduction to UKCloud for Microsoft Azure and helps you get up and running.
 
 ## Supported features
 
-UKCloud for Microsoft Azure supports the following Azure Stack IaaS features:
+UKCloud for Microsoft Azure supports the following Azure Stack Hub IaaS features:
 
 ### Compute
 
-Virtual machines (VMs) provide the basic building block providing compute in Azure Stack. For a list of available VM sizes, see: <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>.
+Virtual machines (VMs) provide the basic building block providing compute in Azure Stack Hub. For a list of available VM sizes, see: <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-sizes>.
 
-You can deploy VMs using the UKCloud Azure Stack portal and other tooling. VMs have the following support:
+You can deploy VMs using the UKCloud Azure Stack Hub portal and other tooling. VMs have the following support:
 
 - API
 
-- Azure Stack Marketplace - Provides access to pre-created images that help speed up application delivery
+- Azure Stack Hub Marketplace - Provides access to pre-created images that help speed up application delivery
 
-- Azure Resource Manager - Enables you to write templates to deploy, update and delete Azure Stack resources in a single co-ordinated operation
+- Azure Resource Manager - Enables you to write templates to deploy, update and delete Azure Stack Hub resources in a single co-ordinated operation
 
 <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-vm-considerations>
 
 ### Network
 
-- Virtual networks - Azure Stack enables you to configure virtual private clouds, create and manage your private address space within Azure; you can configure this via the UI, API and other tooling
+- Virtual networks - Azure Stack Hub enables you to configure virtual private clouds, create and manage your private address space within Azure; you can configure this via the UI, API and other tooling
 
 - Load balancers (IPv4 only) — You can deploy basic load balancers
 
-- VPN gateway — You can use the Azure Stack VPN gateway to create site-to-site VPNs to remote infrastructure
+- VPN gateway — You can use the Azure Stack Hub VPN gateway to create site-to-site VPNs to remote infrastructure
 
 - Routing — You can configure basic custom defined routing on virtual networks; Vnet to Vnet peering is not yet supported
 
@@ -63,7 +65,7 @@ You can deploy VMs using the UKCloud Azure Stack portal and other tooling. VMs h
 
 ### Advanced features
 
-- Key Vault — Azure Stack provides cryptographic secret storage for applications and services. These services can be consumed via both portal and API.
+- Key Vault — Azure Stack Hub provides cryptographic secret storage for applications and services. These services can be consumed via both portal and API.
 
 <https://docs.microsoft.com/en-gb/azure/azure-stack/user/azure-stack-kv-intro>
 
@@ -73,7 +75,7 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
 
 ### Compute
 
-- Azure Stack supports a subset of Azure VM extensions; UKCloud for Microsoft Azure currently supports the following:
+- Azure Stack Hub supports a subset of Azure VM extensions; UKCloud for Microsoft Azure currently supports the following:
 
   - CustomScriptForLinux  v1.5.2.2 & v1.5.2.0
   
@@ -107,30 +109,30 @@ When designing your UKCloud for Microsoft Azure applications, consider the follo
 
     First, ensure that you've installed the relevant Azure PowerShell modules from the following link:
 
-    [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md)
+    [Configure the Azure Stack Hub user's PowerShell environment](azs-how-configure-powershell-users.md)
 
     Then run the following commands:
 
     ```powershell
-    Add-AzureRmEnvironment -Name "AzureStackAdmin" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
-    Connect-AzureRmAccount -EnvironmentName "AzureStackAdmin"
+    Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint "https://management.frn00006.azure.ukcloud.com"
+    Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
     Get-AzureRmVMImagePublisher -Location "frn00006" | Get-AzureRmVMExtensionImageType | Get-AzureRmVMExtensionImage | `
       Select-Object -Property Type, Version | Format-Table -AutoSize
     ```
 
 - Use load balancers to make the best use of IP address quota
 
-- Azure Stack API may be a couple of releases behind Azure
+- Azure Stack Hub API may be a couple of releases behind Azure
 
 - Single region and single state set (affects availability)
 
 - VM sets don't support auto-scale, so consider how to handle load
 
-- Check Azure Resource Manager (ARM) templates to see if they're compatible with Azure Stack
+- Check Azure Resource Manager (ARM) templates to see if they're compatible with Azure Stack Hub
 
 ### Storage
 
-Azure Stack storage is all served from the same pool of disks and does not provide “limitless” storage, so you should consider the following:
+Azure Stack Hub storage is all served from the same pool of disks and does not provide “limitless” storage, so you should consider the following:
 
 - Use blob storage (object storage) to support the application; not for multiple petabytes of data storage
 
@@ -140,7 +142,7 @@ Azure Stack storage is all served from the same pool of disks and does not provi
 
 - Consider use of temporary storage
 
-- There is a difference in maximum blob storage between Azure and Azure Stack
+- There is a difference in maximum blob storage between Azure and Azure Stack Hub
 
 - No guarantees around IOPs
 
@@ -154,11 +156,11 @@ You can access UKCloud for Microsoft Azure from the following location:
 
 ## Further information
 
-For more information about Azure Stack, see the following Microsoft resources:
+For more information about Azure Stack Hub, see the following Microsoft resources:
 
 - [*Get Started with Azure*](https://azure.microsoft.com/en-gb/get-started/)
 
-- [Configure the Azure Stack user's PowerShell environment](azs-how-configure-powershell-users.md)
+- [Configure the Azure Stack Hub user's PowerShell environment](azs-how-configure-powershell-users.md)
 
 For more information about UKCloud for Microsoft Azure, see:
 
@@ -168,8 +170,12 @@ For more information about UKCloud for Microsoft Azure, see:
 
 ## Related videos
 
-- [*UKCloud Azure Stack portal overview video*](azs-vid-overview.md)
+- [*UKCloud Azure Stack Hub portal overview video*](azs-vid-overview.md)
+
+## Related repositories
+
+- [*UKCloud Azure Stack Hub Repository*](https://github.com/UKCloud/AzureStack)
 
 ## Feedback
 
-If you have any comments on this article, or any other aspect of your UKCloud experience, send them to <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -3,6 +3,8 @@ title: Tier 1 storage | UKCloud Ltd
 description: Provides an overview of Tier 1 block storage
 services: vmware
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 12:45:48
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -111,7 +113,7 @@ If the workload is currently running on any environment, it's possible to run a 
 
 Tier 1 workloads are available with the Essential, Power and Priority VM types.
 
-Initially, moving a workload to and from the Tier 1 platform will be a manual process that may involve raising a service request via My Calls on the UKCloud Portal.
+Initially, moving a workload to and from the Tier 1 platform will be a manual process that may involve raising a Service Request via [My Calls](https://portal.skyscapecloud.com/support/ivanti) on the UKCloud Portal.
 
 ## Realistic performance expectations
 
@@ -125,4 +127,4 @@ If you need more help, contact UKCloud Support or engage with your Cloud Archite
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

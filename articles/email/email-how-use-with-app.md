@@ -3,6 +3,8 @@ title: How to use UKCloud's email service with your application | UKCloud Ltd
 description: Walks through the process for configuring your application to use our Email and Collaboration service
 services: email
 author: Sue Highmoor
+reviewer: mperry
+lastreviewed: 29/10/2019
 
 toc_rootlink: How To
 toc_sub1:
@@ -18,7 +20,7 @@ toc_mdlink: email-how-use-with-app.md
 
 ## Overview
 
-Many customers who use UKCloud's IaaS need to be able to send email from, or receive email into, their applications. Although we don't have an SMTP relay service dedicated to this purpose, you can use our Email and Collaboration service to meet your needs. This can be particularly valuable if you're using the UKCloud Elevated OFFICIAL (formerly PGA IL3) platform, as it doesn't connect directly to the internet, but to secure government networks such as PSN and N3/HSCN, where few mail relay providers are available.
+Many customers who use UKCloud's IaaS need to be able to send email from, or receive email into, their applications. Although we don't have an SMTP relay service dedicated to this purpose, you can use our Email and Collaboration service to meet your needs. This can be particularly valuable if you're using the UKCloud Elevated OFFICIAL (formerly PGA IL3) platform, as it doesn't connect directly to the internet, but to secure government networks such as PSN and HSCN, where few mail relay providers are available.
 
 In this guide, we'll walk you through the process for configuring your application to use our Email & Collaboration service.
 
@@ -56,7 +58,7 @@ A mailbox will be needed for each email address you want to be able to send from
 
 This section takes you through the process of configuring a mailbox on UKCloud's Email and Collaboration platform for use with an application.
 
-The first step is to create a mailbox for this purpose. Once your domain name and administrator accounts have been configured, you can do this by logging on to the Administrator console at <https://mail.skyscapecs.net:7071>
+The first step is to create a mailbox for this purpose. Once your domain name and administrator accounts have been configured, you can do this by logging on to the Administrator console at <https://mail.ukcloud.com:9071/zimbraAdmin/>
 
 Create a new mailbox --- configure the account name and password as you normally would, but make sure you **don't** choose the option to force a password change:
 
@@ -70,7 +72,8 @@ You're now ready to configure your application to connect to the mailbox to send
 
 To send outbound email, your application needs to support SMTP authentication and TLS encryption. Provided this is the case, simply configure the following settings in your application:
 
-- SMTP Server/Mail relay host: mail.skyscapecs.net
+- SMTP Server/Mail relay host: mail.ukcloud.com
+
 - Port number: 465
 
 - Use TLS*: Yes
@@ -88,7 +91,8 @@ To receive inbound email, your application needs to support POP3 or IMAP4 over T
 
 Provided this is the case, simply configure the following settings in your application:
 
-- Mailbox server: mail.skyscapecs.net
+- Mailbox server: mail.ukcloud.com
+
 - Protocol: POP3S or IMAPS
 
 - Port number: 993 (POP3S) or 995 (IMAPS)
@@ -120,11 +124,11 @@ The diagram below shows stunnel encrypting SMTP traffic.
 > [!NOTE]
 > An example working stunnel config is below to send smtp traffic on port 25 to zimbra on TLS port 465
 
-```
+```none
 [smtp]
 accept = 25
 client = yes
-connect = mail.skyscapecs.net:465
+connect = mail.ukcloud.com:465
 ;delay = yes
 ```
 
@@ -136,4 +140,4 @@ If you need more help, contact UKCloud Support.
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -8,7 +8,7 @@
     <title>How to configure a Distributed Logical Router | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to configure a Distributed Logical Router | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -120,13 +120,8 @@
 <h2 id="enabling-distributed-routing-for-distributed-logical-router">Enabling distributed routing for Distributed Logical Router</h2>
 <p>To enable distributed routing, you must use the vCloud Director Web Console.</p>
 <ol>
-<li><p>Log in to vCloud Director via the UKCloud Portal.</p>
-<p>For more detailed instructions, see the <a href="vmw-gs.html"><em>Getting Started Guide for UKCloud for VMware</em></a>.</p>
-</li>
-<li><p>In the <em>Virtual Datacenters</em> dashboard, select your VDC.</p>
-</li>
-<li><p>In the <em>Virtual Machines</em> tab, click <strong>See this page in the vCloud Director Web Console</strong>.</p>
-<p><img src="images/vmw-vcd91-web-console.png" alt="vCloud Director web console link"></p>
+<li><p>In the top-right corner of the vCloud Director Tenant UI, click your user name, then select <strong>Legacy UI</strong>.</p>
+<p><img src="images/vmw-vcd-mnu-legacy-ui.png" alt="Legacy UI menu option"></p>
 </li>
 <li><p>Select the <strong>Administration</strong> tab.</p>
 <p><img src="images/vmw-vcd-tab-admin.png" alt="Administration tab"></p>
@@ -139,23 +134,74 @@
 </li>
 <li><p>Click <strong>Yes</strong> to confirm your selection.</p>
 </li>
+<li><p>To return to the Tenant UI, click <strong>Try the new portal</strong> at the top of the page.</p>
+<p><img src="images/vmw-vcd-mnu-tenant-ui.png" alt="Tenant UI link"></p>
+</li>
 </ol>
 <h2 id="creating-a-distributed-network">Creating a distributed network</h2>
 <p>After you've enabled distributed routing, you can create your distributed networks. You can create up to 1000 distributed networks per edge gateway.</p>
-<div class="TIP">
-<h5>Tip</h5>
-<p>The following steps show how to create a distributed network in the vCloud Director tenant portal. If you prefer to use the web console, see the steps for vCloud Director 8.20 in <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a>, making sure to select the <strong>Create as distributed interface</strong> check box.</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">In vCloud Director 9.7</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">In vCloud Director 9.1</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+
+<ol>
+<li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select your VDC.</p>
+</li>
+<li><p>In the left navigation panel, select <strong>Networks</strong>.</p>
+<p><img src="images/vmw-vcd-tab-networks.png" alt="Network tab in vCloud Director"></p>
+</li>
+<li><p>Click <strong>Add</strong>.</p>
+<p><img src="images/vmw-vcd-btn-add-network.png" alt="Add network button"></p>
+</li>
+<li><p>In the <em>Network Type</em> page of the <em>New Organization VDC Network</em> dialog box, select <strong>Routed</strong> then click <strong>Next</strong>.</p>
+<p><img src="images/vmw-vcd-add-network-routed-type.png" alt="New Organization VDC Network dialog box - Network Type - Routed"></p>
+</li>
+<li><p>On the <em>General</em> page, enter a <strong>Name</strong> and <strong>Description</strong> for the network.</p>
+</li>
+<li><p>In the <strong>Gateway CIDR</strong> field, the gateway address for the network.</p>
+</li>
+<li><p>Select the <strong>Shared</strong> option to make the network available to other VDCs within the same region.</p>
+<p><img src="images/vmw-vcd-add-network-general.png" alt="New Organization VDC Network dialog box - General"></p>
+</li>
+<li><p>Click <strong>Next</strong>.</p>
+</li>
+<li><p>On the <em>Edge Connection</em> page, select the edge gateway that you want your network to connect to.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The edge must be an advanced gateway and must have distributed routing enabled.</p>
 </div>
+</li>
+<li><p>From the <strong>Interface Type</strong> list, select <strong>Distributed</strong>.</p>
+<p><img src="images/vmw-vcd-add-network-distributed-edge.png" alt="New Organization VDC Network dialog box - Edge Connection"></p>
+</li>
+<li><p>Click <strong>Next</strong>.</p>
+</li>
+<li><p>Complete the remaining fields in the dialog box as you would for any other routed network.</p>
+<p>For more detailed instructions, see <a href="vmw-how-create-routed-network.html"><em>How to create a routed VDC network</em></a>.</p>
+</li>
+<li><p>When you're done, click <strong>Finish</strong>.</p>
+</li>
+</ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
 <ol>
 <li><p>In the vCloud Director <em>Virtual Datacenters</em> dashboard, select your VDC.</p>
 </li>
 <li><p>In the left navigation panel, select <strong>Network</strong>.</p>
 <p><img src="images/vmw-vcd91-tab-network.png" alt="Network tab in vCloud Director"></p>
 </li>
-<li><p>Click the <strong>Add</strong> button.</p>
+<li><p>Click <strong>Add</strong>.</p>
 <p><img src="images/vmw-vcd91-btn-add-network.png" alt="Add network button"></p>
 </li>
-<li><p>In the <em>Add Org VDC Network</em> dialog box, from the <strong>Type</strong> radio buttons, select <strong>Routed network connecting to an existing edge gateway</strong>.</p>
+<li><p>In the <em>Add Org VDC Network</em> dialog box, select <strong>Routed network connecting to an existing edge gateway</strong>.</p>
 <p><img src="images/vmw-vcd91-add-network-routed-option.png" alt="Routed network option"></p>
 </li>
 <li><p>Select the <strong>Edge Gateway</strong> that you want your network to connect to.</p>
@@ -173,8 +219,10 @@
 <li><p>When you're done, click <strong>Save</strong>.</p>
 </li>
 </ol>
+</section>
+</div>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -206,7 +254,20 @@
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

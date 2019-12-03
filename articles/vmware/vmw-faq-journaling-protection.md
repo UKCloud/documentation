@@ -3,6 +3,8 @@ title: Journaling Protection FAQs | UKCloud Ltd
 description: Frequently asked questions for Journaling Protection (powered by Zerto)
 services: vmware
 author: Matt Warner
+reviewer:
+lastreviewed: 25/07/2018 15:32:54
 toc_rootlink: FAQs
 toc_sub1: 
 toc_sub2:
@@ -175,4 +177,4 @@ Find out more about how to migrate your workloads between UKCloud regions in [*H
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

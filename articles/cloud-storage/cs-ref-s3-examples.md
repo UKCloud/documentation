@@ -3,6 +3,8 @@ title: S3-compatible API examples for Cloud Storage | UKCloud Ltd
 description: Provides links to examples of how to use the S3-compatible API with UKCloud’s Cloud Storage service
 services: cloud-storage
 author: Sue Highmoor
+reviewer: George Smith
+lastreviewed: 15/11/2019 16:46:31
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -15,18 +17,12 @@ toc_mdlink: cs-ref-s3-examples.md
 
 # S3-compatible API examples for Cloud Storage
 
+UKCloud provides a project in our GitHub repository that contains sample code for common operations against UKCloud's ECS-based Cloud Storage service. While ECS itself supports both an S3 compatible and an EMC native API, the samples in this repository are designed to work with the S3-compatible endpoint only.
+
 These examples show common operations in different languages, including Ruby and Python.
 
-You can find the examples in our GitHub repository.
-
-**ECS examples:**
-
-<https://github.com/UKCloud/ecs-s3-examples>
-
-**Atmos examples:**
-
-<https://github.com/UKCloud/atmos-s3-examples>
+You can find the examples in our GitHub repository here: <https://github.com/UKCloud/ecs-s3-examples>
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

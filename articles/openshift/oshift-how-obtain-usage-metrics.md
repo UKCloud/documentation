@@ -3,6 +3,8 @@ title: How to obtain usage metrics to use for OpenShift capacity management | UK
 description: Shows you how to obtain various statistics about your UKCloud for OpenShift cluster that you can use to help with capacity management
 services: openshift
 author: Sue Highmoor
+reviewer:
+lastreviewed: 20/07/2018 10:26:58
 
 toc_rootlink: How To
 toc_sub1:
@@ -30,7 +32,7 @@ A UKCloud deployed OpenShift cluster comprises a single Starter Pack, plus a num
 
     You can call off Runtime Packs individually, however, we strongly recommend the initial deployment of two or more Runtime Packs for production environments to provide resilience to your workloads in the event of the failure of a single Runtime Pack.
 
-    To add or remove Runtime Packs, raise a Service Request via the UKCloud Portal.
+    To add or remove Runtime Packs, raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal.
 
 The sections in this guide, show you how to obtain various statistics about the platform, including:
 
@@ -181,4 +183,4 @@ imagestream_size = add_sizes(output.stdout.decode('utf-8'), 1)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

@@ -1,0 +1,528 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to configure custom script extensions for new and existing VMs on Azure Stack Hub | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to configure custom script extensions for new and existing VMs on Azure Stack Hub | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.45.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-margin-left">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="../../index.html">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="navbar-borderless subnav navbar navbar-default">
+          <div class="navbar-right subnav-margin-right">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/UKCloud/documentation/blob/master/articles/azure/azs-how-configure-custom-script-extension.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="hide-when-search subnav-margin-left" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <article class="content wrap" id="_content" data-uid="">
+                  
+<h1 id="how-to-configure-custom-script-extensions-for-new-and-existing-vms-on-azure-stack-hub">How to configure custom script extensions for new and existing VMs on Azure Stack Hub</h1>
+
+<h2 id="overview">Overview</h2>
+<p>Custom script extensions download and execute scripts on Azure Stack Hub virtual machines. Custom script extensions are useful for post deployment configuration, software installation, or any other configuration or management tasks.</p>
+<p>This article explains how to add custom script extensions to new and existing VMs on Azure Stack Hub.</p>
+<p>There are two options for deploying custom script extensions:</p>
+<ul>
+<li><p>Deploy a custom script extension from your local disk.</p>
+</li>
+<li><p>Deploy a custom script extension using a file URI.</p>
+</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>To complete the steps in this article, you must have appropriate access to a subscription in the Azure Stack Hub portal.</p>
+<h3 id="declare-variables">Declare variables</h3>
+<p>Enter details below to provide values for the variables in the following scripts in this article:</p>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ArmEndpoint</td>
+<td>The Azure Resource Manager endpoint for Azure Stack Hub</td>
+<td><form oninput="result.value=armendpoint.value;result2.value=armendpoint.value;result3.value=armendpoint.value;result4.value=armendpoint.value" id="armendpoint" style="display: inline;"><input type="text" id="armendpoint" name="armendpoint" style="display: inline;" placeholder="https://management.frn00006.azure.ukcloud.com"></form></td>
+</tr>
+<tr>
+<td>$RGName</td>
+<td>Name of the resource group</td>
+<td><form oninput="result.value=resourcegroup.value;result2.value=resourcegroup.value;result3.value=resourcegroup.value;result4.value=resourcegroup.value" id="resourcegroup" style="display: inline;"><input type="text" id="resourcegroup" name="resourcegroup" style="display: inline;" placeholder="MyResourceGroup"></form></td>
+</tr>
+<tr>
+<td>$VMName</td>
+<td>Name of the virtual machine</td>
+<td><form oninput="result.value=vmname.value;result2.value=vmname.value;result3.value=vmname.value;result4.value=vmname.value" id="vmname" style="display: inline;"><input type="text" id="vmname" name="vmname" style="display: inline;" placeholder="MyVM"></form></td>
+</tr>
+<tr>
+<td>$ContainerName</td>
+<td>The name of the container created in the storage blob</td>
+<td><form oninput="result.value=containername.value;result2.value=containername.value;result3.value=containername.value;result4.value=containername.value" id="containername" style="display: inline;"><input type="text" id="containername" name="containername" style="display: inline;" placeholder="customscriptextension"></form></td>
+</tr>
+<tr>
+<td>$CustomScriptStorageAccountName</td>
+<td>The name of the new storage account</td>
+<td><form oninput="result.value=customscriptstorageaccountname.value;result2.value=customscriptstorageaccountname.value;result3.value=customscriptstorageaccountname.value;result4.value=customscriptstorageaccountname.value" id="customscriptstorageaccountname" style="display: inline;"><input type="text" id="customscriptstorageaccountname" name="customscriptstorageaccountname" style="display: inline;" placeholder="customscript"></form></td>
+</tr>
+<tr>
+<td>$CustomScriptFileName</td>
+<td>The name of the custom script file</td>
+<td><form oninput="result.value=customscriptfilename.value;result2.value=customscriptfilename.value;result3.value=customscriptfilename.value;result4.value=customscriptfilename.value;result5.value=customscriptfilename.value;result6.value=customscriptfilename.value;result7.value=customscriptfilename.value;result8.value=customscriptfilename.value" id="customscriptfilename" style="display: inline;"><input type="text" id="customscriptfilename" name="customscriptfilename" style="display: inline;" placeholder="SetRootPassword.sh"></form></td>
+</tr>
+<tr>
+<td>$FileUri</td>
+<td>URL to the custom script</td>
+<td><form oninput="result.value=fileuri.value;result2.value=fileuri.value;result3.value=fileuri.value;result4.value=fileuri.value" id="fileuri" style="display: inline;"><input type="text" id="fileuri" name="fileuri" style="display: inline;" placeholder="https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh"></form></td>
+</tr>
+<tr>
+<td>$FilePath</td>
+<td>Path to the script on disk</td>
+<td><form oninput="result.value=filepath.value;result2.value=filepath.value;result3.value=filepath.value;result4.value=filepath.value" id="filepath" style="display: inline;"><input type="text" id="filepath" name="filepath" style="display: inline;" placeholder="C:\Users\User1\SetRootPassword.sh"></form></td>
+</tr>
+<tr>
+<td>$ScriptArguments</td>
+<td>The command to execute</td>
+<td><form oninput="result.value=scriptargs.value;result2.value=scriptargs.value;result3.value=scriptargs.value;result4.value=scriptargs.value;result5.value=scriptargs.value;result6.value=scriptargs.value;result7.value=scriptargs.value;result8.value=scriptargs.value" id="scriptargs" style="display: inline;"><input type="text" id="scriptargs" name="scriptargs" style="display: inline;" placeholder="Password123! or -FirewallPorts 80,443"></form></td>
+</tr>
+</tbody>
+</table>
+<p>Select the desired deployment option:</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">New VM</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q_tabid-2" data-tab="tabid-2" tabindex="-1">Existing VM</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_tabid-1" role="tabpanel" data-tab="tabid-1">
+
+<p>See documentation here on <a href="azs-how-create-vm-ps.html">how to create a new VM on Azure Stack Hub</a>.</p>
+</section>
+<section id="tabpanel_CeZOj-G++Q_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+</section>
+</div>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" data-tab="tabid-a" data-condition="tabid-1" tabindex="0" aria-selected="true">Linux</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" data-tab="tabid-b" data-condition="tabid-1" tabindex="-1">Windows</a>
+</li>
+<li role="presentation" aria-hidden="true" hidden="hidden">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-c_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-c_tabid-2" data-tab="tabid-c" data-condition="tabid-2" tabindex="-1">Linux</a>
+</li>
+<li role="presentation" aria-hidden="true" hidden="hidden">
+<a href="#tabpanel_CeZOj-G++Q-1_tabid-d_tabid-2" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_tabid-d_tabid-2" data-tab="tabid-d" data-condition="tabid-2" tabindex="-1">Windows</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-a_tabid-1" role="tabpanel" data-tab="tabid-a" data-condition="tabid-1">
+
+<p>Add the following code to the end of the VM creation script when creating a Linux VM on Azure Stack Hub.</p>
+<h4 id="local-disk">Local disk</h4>
+<pre><code class="language-PowerShell"># Declare variables
+$CustomScriptFileName = "<output form="customscriptfilename" name="result" style="display: inline;">SetRootPassword.sh</output>"
+$ContainerName = "<output form="containername" name="result" style="display: inline;">customscriptextension</output>"
+$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result" style="display: inline;">customscript<span id="RandNum"></span></output>".ToLower()
+$FilePath = "<output form="filepath" name="result" style="display: inline;">C:\Users\User1\SetRootPassword.sh</output>"
+$ScriptArguments = "<output form="scriptargs" name="result" style="display: inline;">Password123!</output>"
+$CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
+
+# Create a new storage account
+Write-Output -InputObject "Creating storage account and container"
+$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
+
+# Get storage account context
+$Context = $StorageAccount.Context
+$Container = New-AzureStorageContainer -Name $ContainerName -Context $Context
+
+# Retrieve storage account key
+$StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+
+# Retrieve storage blob endpoint
+$ScriptBlobUrl = $Container.Context.BlobEndPoint
+
+# Upload script extension to the storage account
+Write-Output -InputObject "Uploading custom script extension to storage account"
+Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
+
+# Creating script location string
+$ScriptLocation = $ScriptBlobUrl + "$ContainerName/" + $CustomScriptFileName
+
+# Add custom script extension to Linux VM
+Write-Output -InputObject "Adding custom script extension to VM"
+$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
+$ExtensionVersion = $Extensions[0].Version[0..2] -join ""
+$ScriptSettings = @{"fileUris" = @("$ScriptLocation")};
+$ProtectedSettings = @{"storageAccountName" = $CustomScriptStorageAccountName; "storageAccountKey" = $StorageAccountKey; "commandToExecute" = $CommandToExecute};
+Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
+</code></pre>
+<h4 id="file-uri">File URI</h4>
+<pre><code class="language-PowerShell"># Declare variables
+$FileUri = "<output form="fileuri" name="result" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result2" style="display: inline;">SetRootPassword.sh</output>"
+$ScriptArguments = "<output form="scriptargs" name="result2" style="display: inline;">Password123!</output>"
+$CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
+
+# Add custom script extension to Linux VM
+Write-Output -InputObject "Adding custom script extension to VM"
+$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
+$ExtensionVersion = $Extensions[0].Version[0..2] -join ""
+$ScriptSettings = @{"fileUris" = @($FileUri)};
+$ProtectedSettings = @{"commandToExecute" = $CommandToExecute};
+Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
+</code></pre>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-b_tabid-1" role="tabpanel" data-tab="tabid-b" data-condition="tabid-1" aria-hidden="true" hidden="hidden">
+
+<p>Add the following code to the end of the VM creation script when creating a Windows VM on Azure Stack Hub.</p>
+<h4 id="local-disk-1">Local disk</h4>
+<pre><code class="language-PowerShell"># Declare variables
+$CustomScriptFileName = "<output form="customscriptfilename" name="result3" style="display: inline;">VMSetupForSR.ps1</output>"
+$ContainerName = "<output form="containername" name="result2" style="display: inline;">customscriptextension</output>"
+$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result2" style="display: inline;">customscript<span id="RandNum2"></span></output>".ToLower()
+$FilePath = "<output form="filepath" name="result2" style="display: inline;">C:\Users\User1\VMSetupForSR.ps1</output>"
+$ScriptArguments = "<output form="scriptargs" name="result3" style="display: inline;">-FirewallPorts 80,443</output>"
+$CommandToExecute = "$CustomScriptFileName $ScriptArguments"
+
+# Create a new storage account
+Write-Output -InputObject "Creating storage account and container"
+$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
+
+# Get storage account context
+$Context = $StorageAccount.Context
+New-AzureStorageContainer -Name $ContainerName -Context $Context
+
+# Retrieve storage account key
+$StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+
+# Upload script extension to the storage account
+Write-Output -InputObject "Uploading custom script extension to storage account"
+Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
+
+# Add custom script extension to Windows VM
+Write-Output -InputObject "Adding custom script extension to VM"
+Set-AzureRmVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptFileName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
+</code></pre>
+<h4 id="file-uri-1">File URI</h4>
+<pre><code class="language-PowerShell"># Declare variables
+$FileUri = "<output form="fileuri" name="result2" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result4" style="display: inline;">VMSetupForSR.ps1</output>"
+$ScriptArguments = "<output form="scriptargs" name="result4" style="display: inline;">-FirewallPorts 80,443</output>"
+$CommandToExecute = "$CustomScriptFileName $ScriptArguments"
+
+# Add custom script extension to Windows VM
+Write-Output -InputObject "Adding custom script extension to VM"
+Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
+</code></pre>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-c_tabid-2" role="tabpanel" data-tab="tabid-c" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
+
+<p>In your PowerShell window:</p>
+<h4 id="local-disk-2">Local disk</h4>
+<pre><code class="language-PowerShell"># Initialise environment and variables
+
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+# Add environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+
+# Login
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Get location of Azure Stack Hub
+$Location = (Get-AzureRmLocation).Location
+
+# Input variables
+$RGName = "<output form="resourcegroup" name="result" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="vmname" name="result" style="display: inline;">MyVM</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result5" style="display: inline;">SetRootPassword.sh</output>"
+$ContainerName = "<output form="containername" name="result3" style="display: inline;">customscriptextension</output>"
+$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result3" style="display: inline;">customscript<span id="RandNum3"></span></output>".ToLower()
+$FilePath = "<output form="filepath" name="result3" style="display: inline;">C:\Users\User1\SetRootPassword.sh</output>"
+$ScriptArguments = "<output form="scriptargs" name="result5" style="display: inline;">Password123!</output>"
+$CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
+
+# Create a new storage account
+Write-Output -InputObject "Creating storage account and container"
+$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
+
+# Get storage account context
+$Context = $StorageAccount.Context
+$Container = New-AzureStorageContainer -Name $ContainerName -Context $Context
+
+# Retrieve storage account key
+$StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+
+# Retrieve storage blob endpoint
+$ScriptBlobUrl = $Container.Context.BlobEndPoint
+
+# Upload script extension to the storage account
+Write-Output -InputObject "Uploading custom script extension to storage account"
+Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
+
+# Creating script location string
+$ScriptLocation = $ScriptBlobUrl + "$ContainerName/" + $CustomScriptFileName
+
+# Add custom script extension to existing Linux VM
+Write-Output -InputObject "Adding custom script extension to VM"
+$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName "Microsoft.Azure.Extensions" -Type "CustomScript"
+$ExtensionVersion = $Extensions[0].Version[0..2] -join ""
+$ScriptSettings = @{"fileUris" = @("$ScriptLocation")};
+$ProtectedSettings = @{"storageAccountName" = $CustomScriptStorageAccountName; "storageAccountKey" = $StorageAccountKey; "commandToExecute" = $CommandToExecute};
+Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings -ProtectedSettings $ProtectedSettings
+</code></pre>
+<h4 id="file-uri-2">File URI</h4>
+<pre><code class="language-PowerShell"># Initialise environment and variables
+
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result2" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+# Add environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+
+# Login
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Get location of Azure Stack Hub
+$Location = (Get-AzureRmLocation).Location
+
+# Input variables
+$RGName = "<output form="resourcegroup" name="result2" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="vmname" name="result2" style="display: inline;">MyVM</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result6" style="display: inline;">SetRootPassword.sh</output>"
+$FileUri = "<output form="fileuri" name="result3" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Linux/SetRootPassword.sh</output>"
+$ScriptArguments = "<output form="scriptargs" name="result6" style="display: inline;">Password123!</output>"
+$CommandToExecute = "sh $CustomScriptFileName $ScriptArguments"
+
+# Add custom script extension to existing Linux VM
+Write-Output -InputObject "Adding custom script extension to existing virtual machine"
+$Extensions = Get-AzureRmVMExtensionImage -Location $Location -PublisherName Microsoft.Azure.Extensions -Type "CustomScript"
+$ExtensionVersion = $Extensions[0].Version[0..2] -join ""
+$ScriptSettings = @{"fileUris" = @($FileUri); "commandToExecute" = $CommandToExecute};
+Set-AzureRmVMExtension -ResourceGroupName $RGName -Location $Location -VMName $VMName -Name $Extensions[0].Type -Publisher $Extensions[0].PublisherName -ExtensionType $Extensions[0].Type -TypeHandlerVersion $ExtensionVersion -Settings $ScriptSettings
+</code></pre>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_tabid-d_tabid-2" role="tabpanel" data-tab="tabid-d" data-condition="tabid-2" aria-hidden="true" hidden="hidden">
+
+<p>In your PowerShell window:</p>
+<h4 id="local-disk-3">Local disk</h4>
+<pre><code class="language-PowerShell"># Initialise environment and variables
+
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result3" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+# Add environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+
+# Login
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Get location of Azure Stack Hub
+$Location = (Get-AzureRmLocation).Location
+
+# Input Variables
+$RGName = "<output form="resourcegroup" name="result3" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="vmname" name="result3" style="display: inline;">MyVM</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result7" style="display: inline;">VMSetupForSR.ps1</output>"
+$ContainerName = "<output form="containername" name="result4" style="display: inline;">customscriptextension</output>"
+$CustomScriptStorageAccountName = "<output form="customscriptstorageaccountname" name="result4" style="display: inline;">customscript<span id="RandNum4"></span></output>".ToLower()
+$FilePath = "<output form="filepath" name="result4" style="display: inline;">C:\Users\User1\VMSetupForSR.ps1</output>"
+$ScriptArguments = "<output form="scriptargs" name="result7" style="display: inline;">-FirewallPorts 80,443</output>"
+$CommandToExecute = "$CustomScriptFileName $ScriptArguments"
+
+# Create a new storage account
+Write-Output -InputObject "Creating storage account and container"
+$StorageAccount = New-AzureRmStorageAccount -Location $Location -ResourceGroupName $RGName -Type "Standard_LRS" -Name $CustomScriptStorageAccountName
+
+# Get storage account context
+$Context = $StorageAccount.Context
+New-AzureStorageContainer -Name $ContainerName -Context $Context
+
+# Retrieve storage account key
+$StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $RGName -Name $CustomScriptStorageAccountName).Value[0]
+
+# Upload script extension to the storage account
+Write-Output -InputObject "Uploading custom script extension to storage account"
+Set-AzureStorageBlobContent -File $FilePath -Container $ContainerName -Blob $CustomScriptFileName -Context $Context
+
+# Add custom script extension to existing Windows VM
+Write-Output -InputObject "Adding custom script extension to VM"
+Set-AzureRmVMCustomScriptExtension -ContainerName $ContainerName -FileName $CustomScriptFileName -Location $Location -Name $CustomScriptFileName -VMName $VMName -ResourceGroupName $RGName -StorageAccountName $CustomScriptStorageAccountName -StorageAccountKey $StorageAccountKey -Run $CommandToExecute -SecureExecution
+</code></pre>
+<h4 id="file-uri-3">File URI</h4>
+<pre><code class="language-PowerShell"># Initialise environment and variables
+
+# Declare endpoint
+$ArmEndpoint = "<output form="armendpoint" name="result4" style="display: inline;">https://management.frn00006.azure.ukcloud.com</output>"
+
+# Add environment
+Add-AzureRmEnvironment -Name "AzureStackUser" -ArmEndpoint $ArmEndpoint
+
+# Login
+Connect-AzureRmAccount -EnvironmentName "AzureStackUser"
+
+# Get location of Azure Stack Hub
+$Location = (Get-AzureRmLocation).Location
+
+# Input variables
+$RGName = "<output form="resourcegroup" name="result4" style="display: inline;">MyResourceGroup</output>"
+$VMName = "<output form="vmname" name="result4" style="display: inline;">MyVM</output>"
+$CustomScriptFileName = "<output form="customscriptfilename" name="result8" style="display: inline;">VMSetupForSR.ps1</output>"
+$FileUri = "<output form="fileuri" name="result4" style="display: inline;">https://raw.githubusercontent.com/UKCloud/AzureStack/master/Users/Extensions/Windows/VMSetupForSR.ps1</output>"
+$ScriptArguments = "<output form="scriptargs" name="result8" style="display: inline;">-FirewallPorts 80,443</output>"
+$CommandToExecute = "$CustomScriptFileName $ScriptArguments"
+
+# Add custom script extension to existing Windows VM
+Write-Output -InputObject "Adding custom script extension to VM"
+Set-AzureRmVMCustomScriptExtension -FileUri $FileUri -VMName $VMName -ResourceGroupName $RGName -Name $CustomScriptFileName -Location $Location -Run $CommandToExecute -SecureExecution
+</code></pre>
+</section>
+</div>
+<h2 id="feedback">Feedback</h2>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
+<script>document.getElementById("RandNum").innerHTML = Math.round(Math.random()*100000000)</script>
+<script>document.getElementById("RandNum2").innerHTML = Math.round(Math.random()*100000000)</script>
+<script>document.getElementById("RandNum3").innerHTML = Math.round(Math.random()*100000000)</script>
+<script>document.getElementById("RandNum4").innerHTML = Math.round(Math.random()*100000000)</script>
+
+
+                  <div class="row">
+                  </div>
+                </article>
+              </div>
+              
+              <div class="hidden-sm col-md-2" role="complementary">
+                <div class="sideaffix">
+                  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                  <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right text-right">
+              Generated by <strong>DocFX</strong><br>
+              <a href="#top">Back to top</a>
+            </span>
+            <span>&copy <a href="http://ukcloud.com">UKCloud Ltd</a>, 2019. All Rights Reserved.<br><a href="https://ukcloud.com/legal">Privacy Policy. </a><a href="https://ukcloud.com/terms-and-conditions">Terms of Use. </a><a href="http://docs.ukcloud.com/articles/other/other-how-contribute-knowledge.html">Contribute. </a></span>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/highlight.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-57433193-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-57433193-6');
+    </script>  </body>
+</html>

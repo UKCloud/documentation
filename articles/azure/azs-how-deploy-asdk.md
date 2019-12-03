@@ -1,22 +1,24 @@
 ---
-title: How to deploy and configure the Azure Stack Development Kit | UKCloud Ltd
-description: Deploy and configure the Azure Stack Development Kit (ASDK)
+title: How to deploy and configure the Azure Stack Hub Development Kit | UKCloud Ltd
+description: Deploy and configure the Azure Stack Hub Development Kit (ASDK)
 services: azure-stack
 author: Paul Brown
+reviewer: BaileyLawson
+lastreviewed: 14/03/2019 17:00:00
 
 toc_rootlink: Operators
 toc_sub1: How To
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Deploy and configure the Azure Stack Development Kit
+toc_title: Deploy and configure the Azure Stack Hub Development Kit
 toc_fullpath: Operators/How To/azs-how-deploy-asdk.md
 toc_mdlink: azs-how-deploy-asdk.md
 ---
 
-# How to deploy and configure the Azure Stack Development Kit
+# How to deploy and configure the Azure Stack Hub Development Kit
 
-The Azure Stack Development Kit (ASDK) is a single server instance of Azure Stack. It is not fit for production workloads and has some subtle differences vs the real Azure Stack integrate appliance, however for most test scenarios it will suffice.
+The Azure Stack Hub Development Kit (ASDK) is a single server instance of Azure Stack Hub. It is not fit for production workloads and has some subtle differences vs the real Azure Stack Hub integrate appliance, however for most test scenarios it will suffice.
 
 The ASDK is used in two modes within UKCloud:
 
@@ -69,12 +71,12 @@ Implement the following steps from the guide: [https://docs.microsoft.com/en-us/
 
 | Line Number | Current Code                                                                             | Details                                                                          |
 |-------------|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| 1372        | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'Virtual Disk') {` | `elseif ((get-disk | Where-Object {$_.isboot -eq $true}).Model -match 'null') {` |
+| 1372        | `elseif ((get-disk | Where-Object -FilterScript {$_.isboot -eq $true}).Model -match 'Virtual Disk') {` | `elseif ((get-disk | Where-Object -FilterScript {$_.isboot -eq $true}).Model -match 'null') {` |
 
 To run:
 
 ```powershell
-Get-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" | foreach {($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object {`$====_.isboot -eq `$true}).Model -match 'null') {") -replace "====",""} | Set-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Force
+Get-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" | foreach {($_ -replace "elseif \(\(get-disk \| Where-Object \`{\`$`_.isboot -eq \`$true\`}\).Model -match 'Virtual Disk'\) \`{", "elseif ((get-disk | Where-Object -FilterScript {`$====_.isboot -eq `$true}).Model -match 'null') {") -replace "====",""} | Set-Content -Path "C:\AzureStack_Installer\asdk-installer.ps1" -Force
 ```
 
 To verify:
@@ -107,7 +109,7 @@ The following details should be used:
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | NTP           | 13.79.239.69                                                                                                                                                           |
 | DNS Forwarder | 8.8.8.8                                                                                                                                                                |
-| Type          | Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack. e.g. joebloggsukcloud.onmicrosoft.com |
+| Type          | Azure AAD, this should be either your own Azure AD account where you are the system admin or one you have setup for Azure Stack Hub. e.g. joebloggsukcloud.onmicrosoft.com |
 | Static IP     | Different IP than what you currently have - eg. 10.0.0.101 was my box 10.0.0.191 I set up - or just current IP + 1                                                     |
 
 **Physical Note:** Before running the installation, make sure only one network adapter is enabled, otherwise install will fail.
@@ -231,10 +233,10 @@ cd C:\CloudDeployment\Setup
 
 If you do not set the InfraAzureDirectoryTenantAdminCredential, a few minutes after you run the script, you will get prompted for AAD Account - use azurestackadmin@\<domain\>.onmicrosoft.com
 
-- [Develop templates for Azure Stack](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
+- [Develop templates for Azure Stack Hub](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-develop-templates.md)
 
 - [Deploy templates with PowerShell](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-powershell.md)
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).

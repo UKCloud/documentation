@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>How to configure the Azure Stack user's Azure CLI environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre </title>
+    <title>How to configure the Azure Stack Hub user's Azure CLI environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="How to configure the Azure Stack user's Azure CLI environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre ">
-    <meta name="generator" content="docfx 2.40.12.0">
+    <meta name="title" content="How to configure the Azure Stack Hub user's Azure CLI environment | Based on Microsoft Docs | UKCloud Ltd | UKCloud Knowledge Centre ">
+    <meta name="generator" content="docfx 2.45.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -36,7 +36,7 @@
                 </button>
                 
                 <a class="navbar-brand" href="../../index.html">
-                  <img id="logo" class="svg" src="../../logo.png" alt="">
+                  <img id="logo" class="svg" src="../../styles/assets/logo.png" srcset="../../styles/assets/logo@2x.png 2x" width="300" height="49" alt="">
                 </a>
               </div>
               <div class="collapse navbar-collapse" id="navbar">
@@ -91,53 +91,78 @@
               <div class="col-lg-10">
                 <article class="content wrap" id="_content" data-uid="">
                   
-<h1 id="how-to-configure-the-azure-stack-users-azure-cli-environment">How to configure the Azure Stack user's Azure CLI environment</h1>
+<h1 id="how-to-configure-the-azure-stack-hub-users-azure-cli-environment">How to configure the Azure Stack Hub user's Azure CLI environment</h1>
 
-<p>In this article, we will guide you through the process of installing and using the Azure command-line interface (CLI) to manage Azure Stack. Azure CLI can be used to manage resources such as create virtual machines, deploy Azure Resource Manager templates, etc.</p>
+<p>In this article, we will guide you through the process of installing and using the Azure command-line interface (CLI) to manage Azure Stack Hub. Azure CLI can be used to manage resources such as create virtual machines, deploy Azure Resource Manager templates, etc.</p>
 <h2 id="official-documentation">Official Documentation</h2>
 <p><a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-2018-03-01-hybrid">Azure CLI command reference for 2018-03-01-hybrid profile</a></p>
 <p><a href="https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/azure-stack/user/azure-stack-deploy-template-command-line.md">Deploy templates with Azure CLI</a></p>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>Azure Stack works with very specific <strong>API Profiles</strong> - you need to use <code>2018-03-01-hybrid</code> in order to interact with it. The biggest caveat is that it only support as small subset of commands from the <code>latest profile</code>.</p>
+<p>Azure Stack Hub works with very specific <strong>API Profiles</strong> - you need to use <code>2018-03-01-hybrid</code> in order to interact with it. The biggest caveat is that it only support as small subset of commands from the <code>latest profile</code>.</p>
 </div>
 <h2 id="install-cli">Install CLI</h2>
-<p>Sign in to your development workstation and install CLI. Azure Stack requires the 2.0 version of Azure CLI. You can install that by using the steps described in the <a href="https://docs.microsoft.com/cli/azure/install-azure-cli">Install Azure CLI 2.0</a> article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:</p>
+<p>Sign in to your development workstation and install CLI. Azure Stack Hub requires at least version 2.0 of Azure CLI. You can install that by using the steps described in the <a href="https://docs.microsoft.com/cli/azure/install-azure-cli">Install Azure CLI 2.0</a> article. To verify if the installation was successful, open a terminal or a command prompt window and run the following command:</p>
 <pre><code class="lang-azurecli">az --version
 </code></pre>
 <p>You should see the version of Azure CLI and other dependent libraries that are installed on your computer.</p>
-<h2 id="connect-to-azure-stack">Connect to Azure Stack</h2>
-<p>Use the following steps to connect to Azure Stack:</p>
+<h2 id="declare-variables">Declare variables</h2>
+<p>Enter details below to provide values for the variables in the scripts in this article:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Variable description</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Azure Stack Hub DNS Suffix</td>
+<td>The DNS suffix for Azure Stack Hub (&lt;region&gt;.&lt;External Domain Name&gt;)</td>
+<td><form oninput="result.value=dnssuffix.value;result2.value=dnssuffix.value;result3.value=dnssuffix.value;result4.value=dnssuffix.value;result5.value=dnssuffix.value;result6.value=dnssuffix.value;result7.value=dnssuffix.value;result8.value=dnssuffix.value;result9.value=dnssuffix.value" id="dnssuffix" style="display: inline;"><input type="text" id="dnssuffix" name="dnssuffix" style="display: inline;" placeholder="frn00006.azure.ukcloud.com"></form></td>
+</tr>
+<tr>
+<td>Username</td>
+<td>Your AAD username</td>
+<td><form oninput="result.value=username.value;result2.value=username.value" id="username" style="display: inline;"><input type="text" id="username" name="username" style="display: inline;" placeholder="user@contoso.onmicrosoft.com"></form></td>
+</tr>
+<tr>
+<td>Password</td>
+<td>Your AAD password</td>
+<td><form oninput="result.value=password.value;result2.value=password.value" id="password" style="display: inline;"><input type="text" id="password" name="password" style="display: inline;" placeholder="Password123!"></form></td>
+</tr>
+</tbody>
+</table>
+<h2 id="connect-to-azure-stack-hub">Connect to Azure Stack Hub</h2>
+<p>Use the following steps to connect to Azure Stack Hub:</p>
 <ol>
-<li><p>Register your Azure Stack environment by running the <code>az cloud register</code> command.</p>
+<li><p>Register your Azure Stack Hub environment by running the <code>az cloud register</code> command.</p>
 <p>To register the <em>user</em> environment, use:</p>
-<pre><code class="lang-azurecli">az cloud register \
-  -n AzureStackUser \
-  --endpoint-resource-manager &quot;https://management.frn00006.azure.ukcloud.com&quot; \
-  --suffix-storage-endpoint &quot;frn00006.azure.ukcloud.com&quot; \
-  --suffix-keyvault-dns &quot;.vault.frn00006.azure.ukcloud.com&quot; \
-  --endpoint-active-directory-graph-resource-id &quot;https://graph.windows.net/&quot; \
-</code></pre>
+   <pre><code class="lang-azurecli hljs">az cloud register \
+     -n "AzureStackUser" \
+     --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result" style="display: inline;">frn00006.azure.ukcloud.com</output>" \
+     --suffix-storage-endpoint "<output form="dnssuffix" name="result2" style="display: inline;">frn00006.azure.ukcloud.com</output>" \
+     --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result3" style="display: inline;">frn00006.azure.ukcloud.com</output>" \
+     --endpoint-active-directory-graph-resource-id "https://graph.windows.net/"</code></pre>
 <p>To register the <em>user</em> environment - One Liner:</p>
-<pre><code class="lang-azurecli">az cloud register -n AzureStackUser --endpoint-resource-manager &quot;https://management.frn00006.azure.ukcloud.com&quot; --suffix-storage-endpoint &quot;frn00006.azure.ukcloud.com&quot; --suffix-keyvault-dns &quot;.vault.frn00006.azure.ukcloud.com&quot; --endpoint-active-directory-graph-resource-id &quot;https://graph.windows.net/&quot;
-</code></pre>
+   <pre><code class="lang-azurecli hljs">az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result4" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result5" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result6" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/"</code></pre>
 </li>
 <li><p>Set the active environment by using the following commands.</p>
 <p>For the <em>user</em> environment, use:</p>
 <pre><code class="lang-azurecli">az cloud set -n AzureStackUser
 </code></pre>
 </li>
-<li><p>Update your environment configuration to use the Azure Stack specific API version profile. To update the configuration, run the following command:</p>
+<li><p>Update your environment configuration to use the Azure Stack Hub specific API version profile. To update the configuration, run the following command:</p>
 <pre><code class="lang-azurecli">az cloud update --profile 2018-03-01-hybrid
 </code></pre>
 </li>
-<li><p>Sign in to your Azure Stack environment by using the <code>az login</code> command. You can sign in to the Azure Stack environment either as a user or as a <a href="https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects">service principal</a>.</p>
+<li><p>Sign in to your Azure Stack Hub environment by using the <code>az login</code> command. You can sign in to the Azure Stack Hub environment either as a user or as a <a href="https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects">service principal</a>.</p>
 <ul>
 <li><p>Sign in as a <em>user</em>: You can either specify the username and password directly within the <code>az login</code> command or authenticate by using a browser. You have to do the latter if your account has multi-factor authentication enabled.</p>
 </li>
 <li><p>Example of <em>username</em>: Active directory global administrator or user account i.e. username@&lt;aadtenant&gt;.onmicrosoft.com or username@domain.com</p>
-<pre><code class="lang-azurecli">az login -u &quot;&lt;username&gt;@&lt;tenantDomain&gt;&quot; -p '&lt;password&gt;'
-</code></pre>
+<pre><code class="lang-azurecli hljs">az login -u "<output form="username" name="result" style="display: inline;">user@contoso.onmicrosoft.com</output>" -p '<output form="password" name="result" style="display: inline;">Password123!</output>'</code></pre>
 <div class="NOTE">
 <h5>Note</h5>
 <p>If your user account has multi-factor authentication enabled, you can use the <code>az login</code> command without providing the <code>-u</code> parameter. Running the command gives you a URL and a code that you must use to authenticate.</p>
@@ -145,7 +170,7 @@
 </li>
 <li><p>Sign in as a <em>service principal</em>: Before you sign in, create a service principal through <a href="azs-how-create-spn-portal.html">the public Azure portal</a>, <a href="azs-how-create-spn-powershell.html">PowerShell</a> or <a href="azs-how-create-spn-cli.html">CLI</a> and assign it a role. Now, sign in by using the following command:</p>
 <pre><code class="lang-azurecli">az login \
-   --tenant &lt;Azure Active Directory Tenant name. For example: myazurestack.onmicrosoft.com&gt; \
+   --tenant &lt;Azure Active Directory Tenant name. For example: contoso.onmicrosoft.com&gt; \
    --service-principal \
    -u &lt;Application Id of the Service Principal&gt; \
    -p &lt;Key generated for the Service Principal&gt;
@@ -166,65 +191,33 @@
 </code></pre>
 </li>
 </ol>
-<h2 id="connect-to-azure-stack---quick-reference-guide">Connect to Azure Stack - Quick Reference Guide</h2>
-<pre><code class="lang-azurecli"># Create your environment
-az cloud register -n AzureStackUser --endpoint-resource-manager &quot;https://management.frn00006.azure.ukcloud.com&quot; --suffix-storage-endpoint &quot;frn00006.azure.ukcloud.com&quot; --suffix-keyvault-dns &quot;.vault.frn00006.azure.ukcloud.com&quot; --endpoint-active-directory-graph-resource-id &quot;https://graph.windows.net/&quot; --profile 2018-03-01-hybrid
+<h2 id="connect-to-azure-stack-hub---quick-reference-guide">Connect to Azure Stack Hub - Quick Reference Guide</h2>
+<pre><code class="lang-azurecli hljs"># Create your environment
+az cloud register -n AzureStackUser --endpoint-resource-manager "https://management.<output form="dnssuffix" name="result7" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-storage-endpoint "<output form="dnssuffix" name="result8" style="display: inline;">frn00006.azure.ukcloud.com</output>" --suffix-keyvault-dns ".vault.<output form="dnssuffix" name="result9" style="display: inline;">frn00006.azure.ukcloud.com</output>" --endpoint-active-directory-graph-resource-id "https://graph.windows.net/" --profile 2018-03-01-hybrid
 
 # Set your environment
 az cloud set -n AzureStackUser
 
-# Log in to Azure Stack with user credentials
-az login -u &quot;&lt;username&gt;@&lt;tenantDomain&gt;&quot; -p '&lt;password&gt;'
-</code></pre>
+# Log in to Azure Stack Hub with user credentials
+az login -u "<output form="username" name="result2" style="display: inline;">user@contoso.onmicrosoft.com</output>" -p '<output form="password" name="result2" style="display: inline;">Password123!</output>'</code></pre>
 <h2 id="test-the-connectivity">Test the connectivity</h2>
-<p>Now that we've got everything setup, let's use CLI to create resources within Azure Stack. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named &quot;MyResourceGroup&quot;:</p>
+<p>Now that we've got everything setup, let's use CLI to create resources within Azure Stack Hub. For example, you can create a resource group for an application and add a virtual machine. Use the following command to create a resource group named &quot;MyResourceGroup&quot;:</p>
 <pre><code class="lang-azurecli">az group create -n MyResourceGroup -l frn00006
 </code></pre>
 <p>If the resource group is created successfully, the previous command outputs the following properties of the newly created resource:</p>
 <p><img src="https://docs.microsoft.com/en-us/azure/azure-stack/user/media/azure-stack-connect-cli/image1.png" alt="Resource group create output"></p>
-<h2 id="get-the-virtual-machine-urns">Get the virtual machine URNs</h2>
-<p>Because of the known issue with Image Aliases we have not published the alias.json file yet. Instead please use the following command to obtain relevant image URNs for your VM deployment.</p>
-<pre><code class="lang-azurecli">az vm image list --all --output table
-You are retrieving all the images from server which could take more than a minute. To shorten the wait, provide '--publisher', '--offer' or '--sku'. Partial name search is supported.
-Offer              Publisher               Sku                              Urn                                                                                     Version
------------------  ----------------------  -------------------------------  --------------------------------------------------------------------------------------  -----------------
-UbuntuServer       Canonical               17.10                            Canonical:UbuntuServer:17.10:17.10.201805090                                            17.10.201805090
-WindowsServer      MicrosoftWindowsServer  2016-Datacenter-with-Containers  MicrosoftWindowsServer:WindowsServer:2016-Datacenter-with-Containers:2016.127.20180412  2016.127.20180412
-jenkins            bitnami                 1-650                            bitnami:jenkins:1-650:2.46.21                                                           2.46.21
-CentOS             OpenLogic               7.4                              OpenLogic:CentOS:7.4:7.4.20180118                                                       7.4.20180118
-UbuntuServer       Canonical               14.04.5-LTS                      Canonical:UbuntuServer:14.04.5-LTS:14.04.201805090                                      14.04.201805090
-WindowsServer      MicrosoftWindowsServer  2016-Datacenter-Server-Core      MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core:2016.127.20180412      2016.127.20180412
-CentOS             OpenLogic               6.9                              OpenLogic:CentOS:6.9:6.9.20180118                                                       6.9.20180118
-UbuntuServer       Canonical               18.04-LTS                        Canonical:UbuntuServer:18.04-LTS:18.04.201804262                                        18.04.201804262
-nginxstack         bitnami                 1-9                              bitnami:nginxstack:1-9:1.10.14                                                          1.10.14
-WindowsServer      MicrosoftWindowsServer  2016-Datacenter                  MicrosoftWindowsServer:WindowsServer:2016-Datacenter:2016.127.20180412                  2016.127.20180412
-CentOS             OpenLogic               7.3                              OpenLogic:CentOS:7.3:7.3.20170925                                                       7.3.20170925
-UbuntuServer       Canonical               16.04-LTS                        Canonical:UbuntuServer:16.04-LTS:16.04.201804270                                        16.04.201804270
-WindowsServer      MicrosoftWindowsServer  2012-Datacenter                  MicrosoftWindowsServer:WindowsServer:2012-Datacenter:3.127.20180216                     3.127.20180216
-SQL2016SP1-WS2016  MicrosoftSQLServer      Enterprise                       MicrosoftSQLServer:SQL2016SP1-WS2016:Enterprise:13.1.900302                             13.1.900302
-SQL2016SP1-WS2016  MicrosoftSQLServer      Standard                         MicrosoftSQLServer:SQL2016SP1-WS2016:Standard:13.1.900302                               13.1.900302
-
-</code></pre>
-<p>For example, you can create a CentOS VM using the following command:</p>
-<pre><code class="lang-azurecli">az vm create --resource-group testRG --name testVM --image OpenLogic:CentOS:6.9:6.9.20180105 --admin-username username --admin-password 'Password1234!'
-</code></pre>
-<div class="NOTE">
-<h5>Note</h5>
-<p>You need to create your Resource Group first.</p>
-<p>admin-username and admin-password are given as examples above - these are the credentials which must be used to login to the VM once it is created.</p>
-</div>
 <h2 id="known-issues">Known issues</h2>
-<p>There are some known issues that you must be aware of when using CLI in Azure Stack:</p>
+<p>There are some known issues that you must be aware of when using CLI in Azure Stack Hub:</p>
 <ul>
-<li><p>The CLI interactive mode i.e the <code>az interactive</code> command is not yet supported in Azure Stack.</p>
+<li><p>The CLI interactive mode i.e the <code>az interactive</code> command is not yet supported in Azure Stack Hub.</p>
 </li>
-<li><p>To get the list of virtual machine images available in Azure Stack, use the <code>az vm images list --all</code> command instead of the <code>az vm image list</code> command. Specifying the <code>--all</code> option makes sure that response returns only the images that are available in your Azure Stack environment.</p>
+<li><p>To get the list of virtual machine images available in Azure Stack Hub, use the <code>az vm images list --all</code> command instead of the <code>az vm image list</code> command. Specifying the <code>--all</code> option makes sure that response returns only the images that are available in your Azure Stack Hub environment.</p>
 </li>
-<li><p>Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the <code>az vm images list</code> command.</p>
+<li><p>Virtual machine image aliases that are available in Azure may not be applicable to Azure Stack Hub. When using virtual machine images, you must use the entire URN parameter (Canonical:UbuntuServer:14.04.3-LTS:1.0.0) instead of the image alias. This URN must match the image specifications as derived from the <code>az vm images list</code> command.</p>
 </li>
 </ul>
 <h2 id="feedback">Feedback</h2>
-<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit <a href="https://ideas.ukcloud.com">UKCloud Ideas</a>. Alternatively, you can contact us at <a href="mailto:products@ukcloud.com">products@ukcloud.com</a>.</p>
+<p>If you find an issue with this article, click <strong>Improve this Doc</strong> to suggest a change. If you have an idea for how we could improve any of our services, visit the <a href="https://community.ukcloud.com/ideas">Ideas</a> section of the <a href="https://community.ukcloud.com">UKCloud Community</a>.</p>
 
 
                   <div class="row">
@@ -256,7 +249,20 @@ SQL2016SP1-WS2016  MicrosoftSQLServer      Standard                         Micr
           </div>
         </div>
       </footer>
-    </div>
+      
+      <div id="cookie-cta" style="display: none;" aria-hidden="true">
+        <div class="cookie-cta-inner container">
+          <div class="cookie-cta-text">
+            <p>
+              <strong>UKCloud Knowledge Centre</strong> uses cookies to ensure that we give you the best experience on our website. If you continue we assume that you consent to receive all cookies on this website.
+            </p>
+          </div>
+      
+          <div class="cookie-cta-action">
+            <button class="cookie-cta-close button button--small">Accept</button>
+          </div>
+        </div>
+      </div>    </div>
     
     <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>

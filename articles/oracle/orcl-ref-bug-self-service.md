@@ -3,6 +3,8 @@ title: Oracle cloud self-service functionality (bug notification) | UKCloud Ltd
 description: Contains information about changes to the self-service functionality for UKCloud for Oracle Software
 services: oracle
 author: Sue Highmoor
+reviewer:
+lastreviewed: 19/07/2018 15:17:17
 toc_rootlink: Reference
 toc_sub1: 
 toc_sub2:
@@ -23,7 +25,7 @@ Due to a bug that has been identified within the Oracle cloud placement engine, 
 
 - Modify the compute and storage resources available to existing VMs
 
-Until this issue is resolved, we ask that customers raise a Service Request so that UKCloud can provision Oracle VMs and VM resources on your behalf.
+Until this issue is resolved, we ask that customers raise a Service Request via the [My Calls](https://portal.skyscapecloud.com/support/ivanti) section of the UKCloud Portal so that UKCloud can provision Oracle VMs and VM resources on your behalf.
 
 > [!NOTE]
 > All other features within the Oracle portal will continue to function as normal. However, if you do experience any issues, raise a support request so that we can investigate.
@@ -66,4 +68,4 @@ When raising a Service Request for additional resources on existing Oracle VMs, 
 
 ## Feedback
 
-If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit [UKCloud Ideas](https://ideas.ukcloud.com). Alternatively, you can contact us at <products@ukcloud.com>.
+If you find an issue with this article, click **Improve this Doc** to suggest a change. If you have an idea for how we could improve any of our services, visit the [Ideas](https://community.ukcloud.com/ideas) section of the [UKCloud Community](https://community.ukcloud.com).
