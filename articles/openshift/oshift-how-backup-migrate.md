@@ -30,7 +30,7 @@ This guide outlines how to:
 
 - Restore a namespace to a new cluster
 
-Velero offers a tool called Restic that enables backup of persistent volume data regardless of provider, however this guide doesn't cover Restic as the tool is considered beta-quality. If you'd like to test it you can find more on Restic here: <https://velero.io/docs/v1.1.0/restic/>.
+Velero offers a tool called restic that enables backup of persistent volume data regardless of provider, however this guide doesn't cover restic as the tool is considered beta-quality. If you'd like to test it you can find more on restic here: <https://velero.io/docs/v1.1.0/restic/>.
 
 ### Installing Velero
 
