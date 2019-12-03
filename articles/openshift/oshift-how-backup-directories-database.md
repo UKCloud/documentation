@@ -1,35 +1,36 @@
 ---
-title: How to backup container directories, databases and restore them on OpenShift | UKCloud Ltd
-description: Provides guidance on how customers can backup container directories, databases and restore them. 
+title: How to back up container directories and databases on OpenShift | UKCloud Ltd
+description: Provides guidance on how to back up container directories and databases and how to restore them
 services: openshift
 author: Daniel Brennand
 reviewer: 
-lastreviewed: 
+lastreviewed: 03/12/2019
 
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Backup container directories, databases and restore them.
+toc_title: Back up container directories and databases
 toc_fullpath: How To/oshift-how-backup-directories-database.md
 toc_mdlink: oshift-how-backup-directories-database.md
 ---
 
-# How to backup container directories, databases and restore them
+# How to back up container directories and databases on OpenShift
 
 ## Overview
 
-This article will explain how you can backup container directories, databases (specifically [PostgreSQL](https://www.postgresql.org/)) to your localhost. Furthermore, it will also go through how you can restore them.
+This article explains how you can back up container directories and databases (specifically [PostgreSQL](https://www.postgresql.org/)) to your localhost. It also goes through the process of how to restore them.
 
 ### Prerequisites
 
-This guide assumes that you have a UKCloud for OpenShift envrionment and can access it using the [OpenShift Container Platform command line interface](https://docs.openshift.com/container-platform/3.11/cli_reference/index.html#cli-reference-index).
+This article assumes that you have a UKCloud for OpenShift envrionment and can access it using the [OpenShift Container Platform command line interface](https://docs.openshift.com/container-platform/3.11/cli_reference/index.html#cli-reference-index).
 
-Two OC CLI commands will be utilised in this article:
+This article uses the following two OC CLI commands:
 
-1. [`oc exec`](https://docs.openshift.com/container-platform/3.11/dev_guide/executing_remote_commands.html)
-2. [`oc rsync`](https://docs.openshift.com/container-platform/3.11/dev_guide/copy_files_to_container.html#overview)
+- [`oc exec`](https://docs.openshift.com/container-platform/3.11/dev_guide/executing_remote_commands.html)
+
+- [`oc rsync`](https://docs.openshift.com/container-platform/3.11/dev_guide/copy_files_to_container.html#overview)
 
 Begin by logging into your UKCloud for OpenShift envrionment using the following command:
 
@@ -37,9 +38,8 @@ Begin by logging into your UKCloud for OpenShift envrionment using the following
 oc login --server {server} --token {token here}
 ```
 
-> [!NOTE]
-> The `--token` can be retrieved by logging into the OpenShift web interface, 
-> clicking your username in the top right and clicking **Copy Login Command**.
+> [!TIP]
+> You can retrieve the `--token` by logging into the OpenShift web interface, clicking your username in the top right and clicking **Copy Login Command**.
 
 ## Backing up container directories to your localhost
 
@@ -49,22 +49,22 @@ oc login --server {server} --token {token here}
     mkdir ~/oshiftbackups
     ```
 
-2. Switch to the project which the container you want to backup a directory from is located:
+2. Switch to the project in which the container you want to back up the directory from is located:
 
     ```bash
     oc project {project name}
     ```
 
-    > [!NOTE]
+    > [!TIP]
     > To list all projects use: `oc projects`.
 
-3. Identify the pod which the container you want to backup resides in:
+3. Identify the pod in which the container you want to back up resides:
 
     ```bash
     oc get pods
     ```
 
-4. Using `oc rsync`, copy the directory you wish to backup:
+4. Using `oc rsync`, copy the directory you want to back up:
 
     ```bash
     # oc rsync usage:
@@ -75,21 +75,22 @@ oc login --server {server} --token {token here}
     ```
 
     > [!NOTE]
-    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name. <br>
+    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name.
+    >
     > Example: `oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}`
 
-## Upload a directory to a container
+## Uploading a directory to a container
 
-1. Switch to the project which the container you want to upload a directory too is located:
+1. Switch to the project in which the container you want to upload a directory to is located:
 
     ```bash
     oc project {project name}
     ```
 
-    > [!NOTE]
+    > [!TIP]
     > To list all projects use: `oc projects`.
 
-2. Identify the pod which the container you want to upload a directory to resides in:
+2. Identify the pod in which the container you want to upload a directory to resides:
 
     ```bash
     oc get pods
@@ -106,12 +107,13 @@ oc login --server {server} --token {token here}
     ```
 
     > [!NOTE]
-    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name. <br>
+    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name.
+    >
     > Example: `oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}`
 
 ## Backing up a database on OpenShift
 
-In this example, the type of database which will be backed up is PostgreSQL. Substitute the commands executed in this guide (using `oc exec`) with commands which are appropriate to the database type you're using.
+In this example, the type of database being backed up is PostgreSQL. Substitute the commands executed in this article (using `oc exec`) with commands that are appropriate to the database type you're using.
 
 1. Create a directory on your localhost for files to be backed up to:
 
@@ -125,10 +127,10 @@ In this example, the type of database which will be backed up is PostgreSQL. Sub
     oc project {project name}
     ```
 
-    > [!NOTE]
+    > [!TIP]
     > To list all projects use: `oc projects`.
 
-3. Identify the pod which the database container you want to backup resides in:
+3. Identify the pod in which the database container you want to backup resides:
 
     ```bash
     oc get pods
@@ -163,7 +165,8 @@ In this example, the type of database which will be backed up is PostgreSQL. Sub
     ```
 
     > [!NOTE]
-    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name. <br>
+    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name.
+    >
     > Example: `oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}`
 
 Your database is now backed up onto your localhost at `/home/oshiftdatabasebackup`.
@@ -181,12 +184,13 @@ Your database is now backed up onto your localhost at `/home/oshiftdatabasebacku
     ```
 
     > [!NOTE]
-    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name. <br>
+    > If you have multiple containers in a pod, use the `-c {container name}` parameter to specify a specific container name.
+    >
     > Example: `oc rsync {podname}:{path/to/directory} {destination/on/host} -c {container name}`
 
 2. Using `oc exec`, extract the database archive and restore the database:
 
-In this example, the type of database which will be restored is PostgreSQL. Substitute the commands executed in this guide (using `oc exec`) with commands which are appropriate to the database type you're using.
+    In this example, the type of database being restored is PostgreSQL. Substitute the commands executed in this article (using `oc exec`) with commands that are appropriate to the database type you're using.
 
     ```bash
     # Import the database backup and remove the backup directory from the container
@@ -198,9 +202,9 @@ In this example, the type of database which will be restored is PostgreSQL. Subs
 
 ## Further information
 
-* [Transferring Files In and Out of Containers in OpenShift, Part 1: Manually Copying Files](https://blog.openshift.com/transferring-files-in-and-out-of-containers-in-openshift-part-1-manually-copying-files/)
+- [Transferring Files In and Out of Containers in OpenShift, Part 1: Manually Copying Files](https://blog.openshift.com/transferring-files-in-and-out-of-containers-in-openshift-part-1-manually-copying-files/)
 
-* [Migrating Database Applications](https://docs.openshift.com/container-platform/3.11/dev_guide/migrating_applications/database_applications.html)
+- [Migrating Database Applications](https://docs.openshift.com/container-platform/3.11/dev_guide/migrating_applications/database_applications.html)
 
 ## Feedback
 
