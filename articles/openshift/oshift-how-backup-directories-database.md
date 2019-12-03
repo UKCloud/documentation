@@ -1,5 +1,5 @@
 ---
-title: How to back up container directories and databases on OpenShift | UKCloud Ltd
+title: How to back up and restore container directories and databases on OpenShift | UKCloud Ltd
 description: Provides guidance on how to back up container directories and databases and how to restore them
 services: openshift
 author: Daniel Brennand
@@ -11,16 +11,16 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Back up container directories and databases
+toc_title: Back up and restore container directories and databases
 toc_fullpath: How To/oshift-how-backup-directories-database.md
 toc_mdlink: oshift-how-backup-directories-database.md
 ---
 
-# How to back up container directories and databases on OpenShift
+# How to back up and restore container directories and databases on OpenShift
 
 ## Overview
 
-This article explains how you can back up container directories and databases (specifically [PostgreSQL](https://www.postgresql.org/)) to your localhost. It also goes through the process of how to restore them.
+This article explains how you can back up container directories and databases (specifically [PostgreSQL](https://www.postgresql.org/)) to your localhost. It also goes through the process of how to restore from a backup.
 
 ### Prerequisites
 
