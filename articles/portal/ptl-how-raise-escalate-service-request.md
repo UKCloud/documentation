@@ -1,6 +1,6 @@
 ---
-title: How to raise and escalate incidents and service requests | UKCloud Ltd
-description: Provides an overview of the process for raising incidents and service requests, as well as how to escalate them if necessary
+title: How to raise and escalate incident and service request tickets with customer support | UKCloud Ltd
+description: Provides an overview of the process for raising incidents and service requests with UKCloud customer support (helpdesk), as well as how to escalate them if necessary
 services: other
 author: Sue Highmoor
 reviewer: aperrett
@@ -11,12 +11,19 @@ toc_sub1:
 toc_sub2:
 toc_sub3:
 toc_sub4:
-toc_title: Raise and escalate incidents and service requests
+toc_title: Raise and escalate incident and service request tickets
 toc_fullpath: How To/ptl-how-raise-escalate-service-request.md
 toc_mdlink: ptl-how-raise-escalate-service-request.md
 ---
 
-# How to raise and escalate incidents and service requests
+# How to raise and escalate incident and service request tickets with customer support
+
+## Overview
+
+This article provides information about how the support process works at UKCloud and what to expect when you raise a support ticket (incident or service request), including support hours, target response times and the escalation process.
+
+> [!NOTE]
+> Before raising an incident, you can check the [UKCloud Service Status page](https://status.ukcloud.com/) to see if there's a known issue on the platform that we're already working on.
 
 ## Contacting UKCloud
 
