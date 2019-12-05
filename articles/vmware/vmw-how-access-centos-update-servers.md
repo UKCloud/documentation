@@ -120,13 +120,13 @@ To download the repo file directly from the server, use the following command (`
 **CentOS base updates and extras:**
 
 ```none
-wget -P /etc/yum.repos.d/ http:///<customer_repo_files>/centos_<x>_il3.repo
+wget -P /etc/yum.repos.d/ http://<elevated-public-ip-address>/customer_repo_files/centos_<x>_il3.repo
 ```
 
 **CentOS EPEL:**
 
 ```none
-wget -P /etc/yum.repos.d/ http:///<customer_repo_files>/epel_<x>_il3.repo
+wget -P /etc/yum.repos.d/ http://<elevated-public-ip-address>/customer_repo_files/epel_<x>_il3.repo
 ```
 
 Remove all other `*.repo` files in this directory then execute `yum repolist`.
