@@ -40,15 +40,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "yKW9beECX2ZvA1DLgxJRdw=="
+          "hash": "ymB7vxDC0P/EzMflvF54jQ=="
         }
       },
       "is_incremental": false,
@@ -2250,15 +2247,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/cloud-storage/cs-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-faq.html",
-          "hash": "srRKmXOIC2AVeXPVIUgq0A=="
+          "hash": "4jvebCkhbng5Gt55JjZEiQ=="
         }
       },
       "is_incremental": false,
@@ -9253,15 +9247,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-faq-ukcloud.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "HM9XoegtuHtURNvTJDxDkw=="
+          "hash": "B8q3nsMhRq/XpF06qLI4Wg=="
         }
       },
       "is_incremental": false,
@@ -9460,15 +9451,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-glossary.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "UiCcXwc4m6aZLTGz1Cvw+A=="
+          "hash": "dzCkxthA8qgsPl0uiWOYhw=="
         }
       },
       "is_incremental": false,
@@ -10711,15 +10699,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "YB1wHIswCg+ylDDg5vlvsg=="
+          "hash": "0lmO+yIxXINOD9CdyOCbWg=="
         }
       },
       "is_incremental": false,
