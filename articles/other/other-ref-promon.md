@@ -62,7 +62,9 @@ The *Security Events* page in the UKCloud Portal, located under Monitoring, lets
 > [!NOTE]
 > To view the *Security Events* page, you must have **Read** monitoring permissions on the page. For more information, see [*Portal permissions*](../portal/ptl-ref-overview-permissions.md#permissions-for-monitoring).
 
-Currently, the *Security Events* page only includes information for internet connectivity to UKCloud for VMware in the Assured OFFICIAL security domain. All other services are supported by UKCloud's standard Protective Monitoring service. UKCloud's security team will inform you of security incidents for those other services in the usual way (that is, via the UKCloud Portal, email or phone call).
+Any threat information listed on the *Security Events* page is also raised as a My Calls ticket to ensure that it's seen in a timely manner by the relevant person.
+
+Currently, the *Security Events* page only includes information for internet connectivity to UKCloud for VMware in the Assured OFFICIAL security domain. All other services are still supported by UKCloud's Protective Monitoring service and our security team will inform you of security incidents for those other services via My Calls.
 
 If you'd like to request that other services are included on the *Security Events* page, post an idea on the [UKCloud Community](https://community.ukcloud.com/ideas).
 
