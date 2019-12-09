@@ -101,8 +101,6 @@ This article provides a list of FAQs on UKCloud services, technology, connection
 
 [MISO rebate FAQs](other-faq-miso-rebate.md)
 
-[Protective Monitoring FAQs](other-faq-promon.md)
-
 [Service Level Agreement FAQs](other-faq-sla.md)
 
 ## Feedback

@@ -451,7 +451,7 @@ For more information, see the [Private Cloud for Storage service definition](../
 
 A complimentary service from UKCloud that ensures our platform, up to the hypervisor level, adheres to Good Practice Guide 13 (GPG13) guidance.
 
-For more information, see the [Protective Monitoring FAQs](../other/other-faq-promon.md).
+For more information, see [Protective Monitoring from UKCloud](../other/other-ref-promon.md).
 
 ### Public Services Network (PSN)
 
