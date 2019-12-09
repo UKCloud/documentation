@@ -233,7 +233,7 @@ For more information, see our Cross Domain Security Zone documentation.
 
 Protective monitoring is included for our all our services and follows GPG 13.
 
-For more information about this service, see our [*Protective Monitoring FAQs*](../other/other-faq-promon.md).
+For more information about this service, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
 ## Feedback
 

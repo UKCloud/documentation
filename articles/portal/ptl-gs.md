@@ -164,9 +164,11 @@ The Portal navigation panel provides access to all the functionality available i
 
 - **Monitoring** - Provides access to:
 
-  - The **Cyber Security News** page where you can view general threat briefs and security news (see [*Understanding the Cyber Security News page*](../other/other-ref-cyber-security-news.md)).
+  - **Cyber Security News**, where you can view general threat briefs and security news
 
-  - **My Security Events**, which displays security events specific to your environment (see [*Understanding UKCloud's Protective Monitoring Portal showback*](../other/other-ref-promon-showback.md))
+  - **Security Events**, which displays security events specific to your environment
+
+  For more information, see [*Protective Monitoring from UKCloud*](../other/other-ref-promon.md).
 
 - **Support** - Provides access to:
 
