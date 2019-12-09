@@ -40,12 +40,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/azure/azs-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/azure/azs-faq.html",
-          "hash": "l/H44t3xlbNn6ycCLkIFCA=="
+          "hash": "yKW9beECX2ZvA1DLgxJRdw=="
         }
       },
       "is_incremental": false,
@@ -2247,12 +2250,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/cloud-storage/cs-faq.md",
       "output": {
         ".html": {
           "relative_path": "articles/cloud-storage/cs-faq.html",
-          "hash": "SEIME3srVtbjjamccdTpdg=="
+          "hash": "srRKmXOIC2AVeXPVIUgq0A=="
         }
       },
       "is_incremental": false,
@@ -8471,39 +8477,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/other/images/all_contacts.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/all_contacts.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/contact_permissions.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/contact_permissions.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/edit_contact.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/edit_contact.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/other/images/fig1_platform_overview.png",
       "output": {
         "resource": {
@@ -8585,17 +8558,6 @@
       "output": {
         "resource": {
           "relative_path": "articles/other/images/kms_client_info.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/monitoring_permissions.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/monitoring_permissions.png"
         }
       },
       "is_incremental": false,
@@ -9186,28 +9148,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/other/images/searching_filtering.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/searching_filtering.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "articles/other/images/security_brief.png",
-      "output": {
-        "resource": {
-          "relative_path": "articles/other/images/security_brief.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "articles/other/images/sites_regions_and_zones_map.png",
       "output": {
         "resource": {
@@ -9302,18 +9242,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-faq-promon.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-faq-promon.html",
-          "hash": "bOmp0BrKakFn0i4CJ5HgtQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/other/other-faq-sla.md",
       "output": {
         ".html": {
@@ -9325,12 +9253,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-faq-ukcloud.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-faq-ukcloud.html",
-          "hash": "KXwCGgwi5xf/vgvijbxNGQ=="
+          "hash": "HM9XoegtuHtURNvTJDxDkw=="
         }
       },
       "is_incremental": false,
@@ -9482,18 +9413,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-ref-cyber-security-news.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/other/other-ref-cyber-security-news.html",
-          "hash": "DIOBRBzD9/kQ2F1GPo38vA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-dc-notice.md",
       "output": {
         ".html": {
@@ -9541,12 +9460,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/other/other-ref-glossary.md",
       "output": {
         ".html": {
           "relative_path": "articles/other/other-ref-glossary.html",
-          "hash": "Xe1eWA8yZLUutixZn84oQw=="
+          "hash": "UiCcXwc4m6aZLTGz1Cvw+A=="
         }
       },
       "is_incremental": false,
@@ -9686,11 +9608,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/other/other-ref-promon-showback.md",
+      "source_relative_path": "articles/other/other-ref-promon.md",
       "output": {
         ".html": {
-          "relative_path": "articles/other/other-ref-promon-showback.html",
-          "hash": "T4CSE/vz2ChXL2zBmvQcrQ=="
+          "relative_path": "articles/other/other-ref-promon.html",
+          "hash": "mCDZ8BAjCpfDqs2r48xd3A=="
         }
       },
       "is_incremental": false,
@@ -9858,7 +9780,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/other/toc.html",
-          "hash": "4jzi6pYfjXYOfpHCKXzxvQ=="
+          "hash": "zmEa33porJqbV3hYb4xMHw=="
         }
       },
       "is_incremental": false,
@@ -10789,12 +10711,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/portal/ptl-gs.md",
       "output": {
         ".html": {
           "relative_path": "articles/portal/ptl-gs.html",
-          "hash": "/Ilo/7ndYW4c94Gv7/zVHQ=="
+          "hash": "YB1wHIswCg+ylDDg5vlvsg=="
         }
       },
       "is_incremental": false,
@@ -19801,6 +19726,13 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -19811,14 +19743,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 423,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 421,
           "skipped_file_count": 0
         }
       }
