@@ -107,7 +107,7 @@ Alternatively, you can obtain the CLI login command (including login token) from
 
 ## Using the API
 
-The OpenShift Container Platform distribution of Kubernetes includes the Kubernetes v1 REST API and the OpenShift v1 REST API. These are RESTful APIs accessible via HTTP(s) on the OpenShift Container Platform master servers.
+ The OpenShift Container Platform distribution of Kubernetes includes the Kubernetes v1 REST API and the OpenShift v1 REST API. These are RESTful APIs accessible via HTTPS on the OpenShift Container Platform master servers.
 
 These REST APIs can be used to manage end-user applications, the cluster, and the users of the cluster.
 
