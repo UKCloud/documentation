@@ -2,9 +2,9 @@
 title: How to restrict access to OpenShift routes by IP address
 description: Restrict access to OpenShift routes by IP address
 services: openshift
-author: Mudasar Hussain
+author: Kieran O'Neill
 reviewer:
-lastreviewed: 08/11/2018 10:46:43
+lastreviewed: 11/12/2019 10:46:43
 toc_rootlink: How To
 toc_sub1: 
 toc_sub2:
@@ -63,7 +63,7 @@ To delete the IPs from the annotation, you can run the command:
 
 ## More information
 
-For further infomation, see the following: [Openshift Documentation](https://docs.openshift.com/container-platform/3.9/architecture/networking/routes.html)
+For further infomation, see the following: [Openshift Documentation](https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html)
 
 > [!IMPORTANT]
 > This functionality is available by default in UKCloud OpenShift deployments of version 3.10 or newer. For all previous versions customers need to raise a request with UKCloud to have this functionality enabled. 
